@@ -956,10 +956,10 @@ zh-TW:
         mc_6_c: 你可以在`重複`積木裡頭放入多個程式積木。
       Overworld Move to Sheep:
         mc_1_a: "`移動-向前` 積木放在工具箱的最上面。"
-        mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
+        mc_1_b: 檢查兩個 `移動-向前` 積木是不是都黏貼在 `當運行時` 積木的下面了。
       Overworld Move to Sheep_2019:
         mc_1_a: "`移動-向前` 積木放在工具箱的最上面。"
-        mc_1_b: 確保兩個“向前移動”程式積木在“運行”程式積木的時候被捕捉了。
+        mc_1_b: 檢查兩個 `移動-向前` 積木是不是都黏貼在 `當運行時` 積木的下面了。
       Overworld Place Wall:
         mc_5_a: 先使用“放置”程式積木，然後使用“移動”程式積木。
         mc_5_b: 確保兩個積木都在`重複`積木裡頭，這樣才可以執行程式多次。
@@ -1428,6 +1428,10 @@ zh-TW:
         courseA_harvester_seq10_c: 試試照著這個路徑來摘取所有玉米。
       courseA_harvester_seq10_2019:
         courseA_harvester_seq10_c: 試試照著這個路徑來摘取所有玉米。
+      courseA_harvester_seq3:
+        courseA_harvester_seq3_b: 大聲的唸出每個步驟，看看這樣能不能幫你找到答案。
+      courseA_harvester_seq3_2019:
+        courseA_harvester_seq3_b: 大聲的唸出每個步驟，看看這樣能不能幫你找到答案。
       courseA_harvester_seq5:
         courseA_harvester_seq5_a: 是哪個積木害農夫走錯路？
         courseA_harvester_seq5_b: 你必須移除一個積木。
@@ -1438,6 +1442,184 @@ zh-TW:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
       courseA_harvester_seq9_2019:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
+      courseA_maze_ramp2_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp2_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3a_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3a_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3b_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3b_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp4a_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp4a_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp5a_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp5a_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseA_maze_seq1:
         courseA_maze_seq1_a: |-
           如果你不知道怎麼讓小鳥移動，請確認編程塊被放置於<xml>
@@ -1477,6 +1659,12 @@ zh-TW:
             <block type="when_run"/>
           </xml> 底下
         courseA_maze_seq1_b: 這隻小鳥需要網西移三次才能到小豬那裡。用這個編程塊：[blockly block] [0]
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: 這個程式少了 1 個積木，你知道是哪個嗎？
+      courseA_maze_seq5a_2018:
+        '1': 大聲的唸出每個步驟，看看這樣能不能幫你找到答案。
+      courseA_maze_seq5a_2019:
+        '1': 大聲的唸出每個步驟，看看這樣能不能幫你找到答案。
       courseA_maze_seq6:
         courseA_maze_seq6_a: 最後的程式應該要有 3 個移動積木。
       courseA_maze_seq6_2018:
@@ -1699,6 +1887,184 @@ zh-TW:
           </block>
           </next>
           </block></xml>
+      courseB_Scrat_ramp2_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp2_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3b_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019:
+        '1': |-
+          你的程式看起來要像這樣：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseB_artist_loops2:
         courseB_artist_loops2_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
       courseB_artist_loops2_2018:
@@ -2007,20 +2373,16 @@ zh-TW:
         courseB_iceage_loops9_b: 最後的程式應該要有 **4個**迴圈。
         courseB_iceage_loops9_c: 鼠奎特應該按照這個路徑才能拿到所有橡樹果實。
       courseB_maze_seq1:
-        courseB_maze_seq1_a: |-
-          拖曳三個往`南`移動的積木，然後把它們連接到`當運行時`積木下，讓憤怒鳥可以抓到這頭豬。
-
-          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
+        courseB_maze_seq1_a: 拖曳三個往 <xml><block type="when_run"/></xml> 移動的積木到 `當運行時`
+          積木的下面，讓憤怒鳥可以抓到豬豬！
       courseB_maze_seq1_2018:
-        courseB_maze_seq1_a: |-
-          拖曳三個往`南`移動的積木，然後把它們連接到`當運行時`積木下，讓憤怒鳥可以抓到這頭豬。
-
-          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
+        courseB_maze_seq1_a: 拖曳三個往 <xml><block type="when_run"/></xml> 移動的積木到 `當運行時`
+          積木的下面，讓鼠奎特可以拿到橡樹果實！
       courseB_maze_seq1_2019:
-        courseB_maze_seq1_a: |-
-          拖曳三個往`南`移動的積木，然後把它們連接到`當運行時`積木下，讓憤怒鳥可以抓到這頭豬。
-
-          <xml><block type="when_run" deletable="false" movable="false"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"><next><block type="maze_moveSouth"></block></next></block></next></block></next></block></xml>
+        courseB_maze_seq1_a: 拖曳三個往 <xml><block type="when_run"/></xml> 移動的積木到 `當運行時`
+          積木的下面，讓鼠奎特可以拿到橡樹果實！
+      courseB_maze_seq2:
+        courseB_maze_seq2_a: 這個程式少了 1 個積木，你知道是哪個嗎？
       courseB_maze_seq4:
         courseB_maze_seq4_b: 你會向東移動來過這一關。
       courseB_maze_seq4_2018:
@@ -2465,6 +2827,12 @@ zh-TW:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
       courseC_harvester_loops_challenge2_2019:
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
+      courseC_maze_debugging4:
+        courseC_maze_debugging4_b: 有個轉向積木害鼠奎特走錯方向了，你能找到是哪一個嗎？
+      courseC_maze_debugging4_2018:
+        courseC_maze_debugging4_b: 有個轉向積木害鼠奎特走錯方向了，你能找到是哪一個嗎？
+      courseC_maze_debugging4_2019:
+        courseC_maze_debugging4_b: 有個轉向積木害鼠奎特走錯方向了，你能找到是哪一個嗎？
       courseC_maze_debugging6:
         courseC_maze_debugging6_a: |-
           -   鼠奎特應該做什麼？
@@ -2490,11 +2858,11 @@ zh-TW:
         courseC_maze_debugging_challenge1_a: 左邊還是右邊？你決定就好！
         courseC_maze_debugging_challenge1_b: 鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！
       courseC_maze_debugging_challenge2:
-        courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
+        courseC_maze_debugging_challenge2_b: 如果你卡關了，試著調整一下程式，看看是哪裡出錯了！
       courseC_maze_debugging_challenge2_2018:
-        courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
+        courseC_maze_debugging_challenge2_b: 如果你卡關了，試著調整一下程式，看看是哪裡出錯了！
       courseC_maze_debugging_challenge2_2019:
-        courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
+        courseC_maze_debugging_challenge2_b: 如果你卡關了，試著調整一下程式，看看是哪裡出錯了！
       courseC_maze_programming6:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
         courseC_maze_programming6_d: 卡關了？試試走這條路！
@@ -2618,10 +2986,14 @@ zh-TW:
         courseD_bee_conditionals3_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals4:
         courseD_bee_conditionals4_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
         courseD_bee_conditionals4_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals4_2018:
         courseD_bee_conditionals4_hintVid1: 不知道怎麼開始？看看這個影片！
+        courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
         courseD_bee_conditionals4_hintVid2: 觀看影片以幫你完成關卡。
+      courseD_bee_conditionals4_2019:
+        courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
       courseD_bee_conditionals5:
         courseD_bee_conditionals5_hintVid1: 不知道怎麼開始？看看這個影片！
         courseD_bee_conditionals5_hintVid2: 觀看影片以幫你完成關卡。
@@ -2687,6 +3059,8 @@ zh-TW:
           這告訴你什麼？
       courseD_collector_debugging3:
         courseD_collector_debugging3_b: 試著用巢狀迴圈簡化程式。
+      courseD_collector_debugging4:
+        courseD_collector_debugging4_c: 這個迴圈裡少用了 1 個積木，你知道是哪個嗎？
       courseD_collector_debugging5:
         courseD_collector_debugging5_a: |-
           從觀察第一個循環開始。
@@ -2740,12 +3114,86 @@ zh-TW:
         courseD_farmer_while3_a: 迴圈能幫助你簡化這兒的程式。
       courseD_farmer_while3_2019:
         courseD_farmer_while3_a: 迴圈能幫助你簡化這兒的程式。
+      courseD_farmer_while5:
+        courseD_farmer_conditionals5a_c: 向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。
+      courseD_farmer_while5_2018:
+        courseD_farmer_conditionals5a_c: 向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。
+      courseD_farmer_while5_2019:
+        courseD_farmer_conditionals5a_c: 向前移動 5 次，每次移動時，用 `重複 判斷` 積木來移除土堆。
+      courseD_farmer_while6:
+        courseD_farmer_conditionals6_a: 檢查你正在使用的 `重複 判斷` 積木，想想要多少次才能填充到所有的坑洞。
+        courseD_farmer_conditionals6_c: |-
+          要通過階梯樣式的路徑會用到像這樣的程式規律
+
+          -   移動-向前
+          -   填充
+          -   轉向-右方
+          -   移動-向前
+          -   填充
+          -   轉向-左方
+
+          你知道要重複這個規律幾次嗎？
+
+          記得要確定你有使用 `重複 判斷 有沒有坑洞` 積木來填滿坑洞。
+      courseD_farmer_while6_2018:
+        courseD_farmer_conditionals6_a: 檢查你正在使用的 `重複 判斷` 積木，想想要多少次才能填充到所有的坑洞。
+        courseD_farmer_conditionals6_c: |-
+          要通過階梯樣式的路徑會用到像這樣的程式規律
+
+          -   移動-向前
+          -   填充
+          -   轉向-右方
+          -   移動-向前
+          -   填充
+          -   轉向-左方
+
+          你知道要重複這個規律幾次嗎？
+
+          記得要確定你有使用 `重複 判斷 有沒有坑洞` 積木來填滿坑洞。
+      courseD_farmer_while6_2019:
+        courseD_farmer_conditionals6_a: 檢查你正在使用的 `重複 判斷` 積木，想想要多少次才能填充到所有的坑洞。
+        courseD_farmer_conditionals6_c: |-
+          要通過階梯樣式的路徑會用到像這樣的程式規律
+
+          -   移動-向前
+          -   填充
+          -   轉向-右方
+          -   移動-向前
+          -   填充
+          -   轉向-左方
+
+          你知道要重複這個規律幾次嗎？
+
+          記得要確定你有使用 `重複 判斷 有沒有坑洞` 積木來填滿坑洞。
       courseD_farmer_while7:
         courseD_farmer_conditionals8_c: 在每個路徑的後面，你需要做什麼呢？
       courseD_farmer_while7_2018:
         courseD_farmer_conditionals8_c: 在每個路徑的後面，你需要做什麼呢？
       courseD_farmer_while7_2019:
         courseD_farmer_conditionals8_c: 在每個路徑的後面，你需要做什麼呢？
+      courseD_farmer_while8:
+        courseD_farmer_conditionals8_b: 在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用
+          `重複 判斷 有沒有路` 積木。
+        courseD_farmer_conditionals8_c: 注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複
+          6 次。
+      courseD_farmer_while8_2018:
+        courseD_farmer_conditionals8_b: 在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用
+          `重複 判斷 有沒有路` 積木。
+        courseD_farmer_conditionals8_c: 注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複
+          6 次。
+      courseD_farmer_while8_2019:
+        courseD_farmer_conditionals8_b: 在走到路的盡頭時才會有坑洞，所以在使用 `重複 判斷 有沒有坑洞` 之前，記得先用
+          `重複 判斷 有沒有路` 積木。
+        courseD_farmer_conditionals8_c: 注意，你需要使用 `重複 判斷 有沒有路` 與 `重複 判斷 有沒有坑洞` 積木，共重複
+          6 次。
+      courseD_farmer_while_challenge1:
+        courseD_farmer_while_challenge1_b: 如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。
+      courseD_farmer_while_challenge1_2018:
+        courseD_farmer_while_challenge1_b: 如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。
+      courseD_farmer_while_challenge1_2019:
+        courseD_farmer_while_challenge1_b: 如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。
+      courseD_farmer_while_challenge2:
+        courseD_farmer_while_challenge1_b: 如果你使用 `重複 判斷` 迴圈，就可以讓農夫知道什麼時候要移除土堆，什麼時候要填滿坑洞。
       courseD_iceage_loops10:
         courseB_iceage_loops10_c: 這是個蠻長的關卡！照著這個路徑走。
       courseD_iceage_loops10_2019:
@@ -2810,6 +3258,7 @@ zh-TW:
         courseC_maze_programming5_b: 記住，轉向角度是以鼠奎特為基準的。
       courseD_maze_ramp6:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
+        courseC_maze_programming6_b: 鳥兒剛開始是面對著牆，所以在移動之前記得要先轉彎。
       courseD_maze_ramp7:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
       courseD_maze_until1:
@@ -2839,6 +3288,8 @@ zh-TW:
         courseD_maze_until8_b: 利用 `如果 否則` 積木：如果前面有一條路，你應該怎麼做？
       courseD_maze_until9:
         courseD_maze_until8_b: 如果前面沒有路，你要轉向哪一邊？
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_a: 如果鼠奎特沒有拿到橡樹果實，請檢查這些積木是不是黏在一起，確定好後再點擊「運行」一次。
       courseD_scrat_ramp5:
         courseC_maze_programming5_b: 要走多遠才能到達轉角處？
       courseD_scrat_ramp6:
@@ -2956,6 +3407,10 @@ zh-TW:
           如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。
 
           添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！
+      courseE_farmer_concept1:
+        courseE_farmer_concept1_a: "`重複 判斷 有沒有坑洞` 積木能幫你填滿任何的坑洞。"
+      courseE_farmer_concept1_2018:
+        courseE_farmer_concept1_a: "`重複 判斷 有沒有坑洞` 積木能幫你填滿任何的坑洞。"
       courseE_farmer_functions10b:
         courseE_farmer_functions10b_a: 你必須要在一開始重新創建你的函式。
       courseE_farmer_functions4b:
@@ -3135,6 +3590,8 @@ zh-TW:
           **解決方案：**
 
           ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_bee_conditionals4:
+        courseD_bee_conditionals4_a: 即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。
       courseF_bee_conditionals8:
         courseF_bee_conditionals8_a: |-
           **記住：**這個關卡在每次運行時都會有變化。

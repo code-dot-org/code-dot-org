@@ -520,7 +520,7 @@ de-DE:
       CSD Problem Solving Process Video: |-
         ## Zu berücksichtigende Fragen
 
-        -   Wie hast di den Problemlösungsprozess in der letzten Lektion verfolgt?
+        -   Wie hast du den Problemlösungsprozess in der letzten Lektion verfolgt?
         -   Wie kannst du diesen Prozess bei einem Problem in deinem Alltag anwenden?
       CSD U1 - PixFilter 1x1 intro: |-
         # 3 Bit Farben
@@ -1694,8 +1694,8 @@ de-DE:
       CSDU4 Design Mode Video_2019: |-
         ## Zu berücksichtigende Fragen
 
-        -   Wo in App Lab können Sie die Benutzeroberfläche Ihrer App gestalten?
-        -   Welche Arten von Elementen können Sie Ihrer App hinzufügen?
+        -   Wo in App-Labor kannst du die Benutzeroberfläche Deiner App gestalten?
+        -   Welche Arten von Elementen kannst du Deiner App hinzufügen?
       CSDU4 Functionality visible: |-
         # Kontrolle der Sichtbarkeit
 
@@ -1858,6 +1858,10 @@ de-DE:
         <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
         <br/><br/>
         **Freispiel Inspiration:** Du hast jetzt alles gelernt, was du wissen musst um ein Muster wie dieses zu erstellen! Wenn dieses Bild Dich inspiriert, versuche, etwas Ähnliches zu machen. Ansonsten kannst du auch etwas ganz Eigenes erschaffen.
+      Course 4 Artist Vars 1: |-
+        Kannst du mir helfen, ein gleichseitiges Dreieck zu zeichnen? Es soll auf jeder Seite genau 100 Pixel lang sein.
+
+        <br/>
       Course 4 Artist Vars 12: |-
         Setzen wir die Variable "Seiten" auf 5. Je mehr Seiten wir zu diesem Algorithmus hinzufügen, desto größer wird das ganze Muster!
 
@@ -1870,6 +1874,9 @@ de-DE:
         die `Länge`-Variable manuell zu setzen, verwenden wir einen Mathematikblock
         mit der `Seiten`-Variablen im Inneren, um sicherzustellen, dass jede Form
         richtig passt.  \n\nDer Umfang jedes Polygons beträgt 300 Pixel."
+      Course 4 Artist Vars 2: Statt „um 150 vorwärts bewegen“ verwendet der „Bewegen“-Baustein
+        jetzt eine Variable namens „Länge“. Kannst du „Länge“ auf 150 einstellen,
+        um dieses neue Dreieck zu zeichnen?
       Course 4 Artist Vars 4: Nun möchte ich ein Rechteck zeichnen, das doppelt so
         lang wie breit ist. Dazu haben wir eine Variable namens „Breite“, die auf
         100 eingestellt werden muss. Kannst Du die Mathematik-Bausteine verwenden,
@@ -2156,7 +2163,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -2288,11 +2295,11 @@ de-DE:
       Dance_Party_extras_on_beat: |-
         # Bass, Mitten und Höhen
 
-        Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
+        Dieser Tanz verwendet Pegelspitzen-„Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
       Dance_Party_extras_on_beat_2019: |-
         # Bass, Mitten und Höhen
 
-        Dieser Tanz verwendet „Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
+        Dieser Tanz verwendet Pegelspitzen-„Peak“-Ereignisse, um den Code auszulösen, wenn verschiedene Teile der Musik laut werden. Versuche, mit verschiedenen Liedern herumzuexperimentieren, um zu sehen, wie sie den Tanz verändern.
       Dance_Party_extras_speed: |-
         # Beschleunigen, verlangsamen
 
@@ -2320,11 +2327,11 @@ de-DE:
       Escape Room Example: |-
         # Room Escape
 
-        In der heutigen Werkstatt wirst du daran arbeiten, eine Room-Escape-App zu entwickeln!  Diese Ebene hat eine Beispiel-App, mit der du herumspielen solltest, um das Gefühl dafür zu bekommen, was du erschaffen wirst.
+        In dem heutigen Workshop wirst du daran arbeiten, eine Room-Escape-App zu entwickeln!  Dieses Level hat eine Beispiel-App, mit der du herumspielen solltest, um ein Gefühl dafür zu bekommen, was du erschaffen kannst.
 
-        # Mache folgendes
+        # Mache Folgendes
 
-        -   Klicken Sie auf "▶ AUSFÜHREN", um die App zu starten.
+        -   Klicke auf "▶ AUSFÜHREN", um die App zu starten.
         -   Versuche den Schlüssel zu finden, der die Tür öffnet.
       Final Personal Website: |-
         # Persönliche Website
@@ -2367,8 +2374,8 @@ de-DE:
         Vergiss nicht, einen Screenshot von deiner Homepage zu machen und ihn irgendwo auf deinem Computer zu speichern, damit du ihn später finden kannst (*Brauchst du Hilfe bei der Erstellung eines Screenshot? Schau dir das an <a href="http://www.take-a-screenshot.org/" target="_new">Website </a>.*)
       Final Room Escape App: "# Du hast es geschafft!\n\nDu hast einen Escape Room
         erstellt! Jetzt ist es an der Zeit, diesen anzupassen. \n\nZiehe in Betracht:\n\n-
-        \  dem Raum mehr Stil zu geben\n-   weiterer Dinge hinzuzufügen, mit denen
-        Benutzer im Raum interagieren kann.\n-   versuche, Ihren Geheimcode zufällig
+        \  dem Raum mehr Stil zu geben\n-   weitere Dinge hinzuzufügen, mit denen
+        Benutzer im Raum interagieren kann.\n-   versuche den Geheimcode zufällig
         zu machen.\n-   füge weiterer Räume hinzu"
       Fish Tank 2-validated_2019: "Lasst uns ein Aquarium bauen!  \n\nVerwandle das
         Ambrosia-Sprite in jede Art von Fisch, indem du auf <xml><block type=\"gamelab_allSpritesWithAnimation\"
@@ -2701,6 +2708,13 @@ de-DE:
         hinzufügst?
       NEW Course 4 Artist Params 2: Erstelle eine Funktion „Zeichne ein Dreieck“ mit
         einer Seitenlänge von 50 Pixeln von Grund auf.
+      NEW Course 4 Artist Vars 4: 'Probieren wir es noch einmal. Kannst du die Variable
+        „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis:
+        Es ist ein Vielfaches von 10.'
+      NEW Course 4 Artist Vars 6: 'Zeichne dieses Muster, indem du die Längenvariable
+        an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst.
+        (Hinweis: Es ist ein Vielfaches von 10).So braucht man die Länge nur an einer
+        Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!'
       NetSim Standalone Freeplay: |-
         # Internet-Simulator-Freispiel
 
@@ -2710,28 +2724,24 @@ de-DE:
       OPD-K5 Closing: |-
         > Wenn Ihnen dieser Kurs gefallen hat, melden Sie sich für einen persönlichen Workshop an.
         >
-        > [Melden Sie sich jetzt an](http://code.org/professional-development-workshops), um weiterhin Informatik und ihre Didaktik zu lernen. Die kostenlosen persönlichen Workshops sind ein wertvoller Ort, um mit anderen leidenschaftlichen Pädagogen in Ihrer Nähe zusammenzuarbeiten und sich zu engagieren.
+        > [Melden Sie sich jetzt an][0], um weiterhin Informatik und ihre Didaktik zu lernen. Die kostenlosen persönlichen Workshops sind ein wertvoller Ort, um mit anderen leidenschaftlichen Pädagogen in Ihrer Nähe zusammenzuarbeiten und sich zu engagieren.
       OPD-K5 EventsVid: |-
         Sehen Sie sich dieses Video an, das "Ereignisse" definiert und zeigt, wie sie in den Informatik-Grundlagen funktionieren. Danach werden Sie einige Rätsel ausprobieren, bei denen Sie Ereignisse kodieren müssen.
 
         > Ein Ereignis ist eine Codezeile, die Ihren Computer anweist, auf etwas zu "hören" und dann eine Aktion durchzuführen. Zum Beispiel können Sie auf Webseiten oft ein Drop-Down-Menü anzeigen, wenn Sie mit der Maus über die Navigationsleiste fahren. Der "Maus-Rollover" ist ein "Ereignis", das eine Aktion auslöst.
       OPD-K5 FirstProgram: Sieh dir das Video unten an, das das allererste Programm
-        erklärt, das junge Studenten in [Kurs A](https://studio.code.org/s/coursea-2018?section_id=2042045)
-        schreiben werden. Auf der nächsten Seite kannst du ein ähnliches Programm
-        selbst schreiben!
+        erklärt, das junge Studenten in [Kurs A][0] schreiben werden. Auf der nächsten
+        Seite kannst du ein ähnliches Programm selbst schreiben!
       OPD-K5 LessonPlanning: "Bis jetzt haben Sie einige unserer Unplugged-Stundenpläne
         kennengelernt. Es gibt jedoch für jede einzelne Informatik-Grundlagen-Lektion
         Unterrichtspläne - sowohl plugged als auch online. Die vollständige Liste
         der Lektionen für jeden Kurs finden Sie unten:\n<br/>\n<br/> \n[Course A lesson
-        plans](https://curriculum.code.org/csf-18/coursea/)<br/> \n[Course B lesson
-        plans](https://curriculum.code.org/csf-18/courseb/)<br/>\n[Course C lesson
-        plans](https://curriculum.code.org/csf-18/coursec/)<br/> \n[Course D lesson
-        plans](https://curriculum.code.org/csf-18/coursed/)<br/> \n[Course E lesson
-        plans](https://curriculum.code.org/csf-18/coursee/)<br/> \n[Course F lesson
-        plans](https://curriculum.code.org/csf-18/coursef/)<br/> \n\nVielleicht möchten
-        Sie diese Lektionen jedoch anpassen oder Ihre eigenen erstellen! Das Video
-        unten erklärt die Struktur der Informatik-Grundlagen-Lektionen, gibt aber
-        auch Tipps, falls Sie eigene Lektionen entwickeln wollen."
+        plans][0]<br/> \n[Course B lesson plans][1]<br/>\n[Course C lesson plans][2]<br/>
+        \n[Course D lesson plans][3]<br/> \n[Course E lesson plans][4]<br/> \n[Course
+        F lesson plans][5]<br/> \n\nVielleicht möchten Sie diese Lektionen jedoch
+        anpassen oder Ihre eigenen erstellen! Das Video unten erklärt die Struktur
+        der Informatik-Grundlagen-Lektionen, gibt aber auch Tipps, falls Sie eigene
+        Lektionen entwickeln wollen."
       OPD-K5 RepeatBlock: Sehen Sie sich das folgende Video an, das die Funktionsweise
         von Schleifen erklärt und den 'Repeat'-Block in den Informatik-Grundlagen
         einführt.
@@ -2877,11 +2887,11 @@ de-DE:
 
         Richte nun den Code so ein, dass der Schlüssel und das graue Quadrat angezeigt werden, wenn der Benutzer den richtigen Code eingibt.
 
-        # Mach folgendes
+        # Mach Folgendes
 
         -   Innerhalb der `if`-Anweisung, die du im Befehl `onEvent` für den Safe erstellt hast, füge ein:
-            -   Der `showElement` Baustein um das graue Quadrat anzuzeigen
-            -   Der `showElement` Baustein um den Schlüssel anzuzeigen
+            -   Den `showElement` Baustein um das graue Quadrat anzuzeigen
+            -   Den `showElement` Baustein um den Schlüssel anzuzeigen
       Room Escape Workshop - 9-2: "# Schlüssel-Klick\n\n<img src=\"https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00
         PM.png\" style=\"width:170px;float:right\">\n\nSobald ein Benutzer auf den
         Schlüssel klickt, möchtest du zeigen, dass er den Schlüssel hält. Du kannst
@@ -2890,34 +2900,35 @@ de-DE:
         wenn der Benutzer auf den Schlüssel klickt. \n-   Innerhalb des Blocks `onEvent`:\n
         \   -   Verwende `setPosition`, um die Taste in die untere Ecke des Bildschirms
         zu bewegen"
-      Standalone_Artist_2: Zeichne diesen Diamanten indem du Winkel von 120 und 60
-        Grad, sowie 150 Pixel lange Seiten verwendest.
+      Standalone_Artist_2: Zeichne diesen Diamanten, indem du Winkel von 120° und
+        60°, sowie 150 Pixel lange Seiten verwendest.
       Standalone_Artist_3: Kannst du ein Hexagon (Sechseck) mit 100 Pixel Seitenlänge
-        und 60°-Drehungen zeichnen?
-      Standalone_Artist_4: 'Nun kannst du mit einem neuen Block experimentieren: Der
-        Schleife. Diese wird die Befehle die in dem Block der Schleife sind wiederholen.
-        Was passiert, wenn du die Befehle in der Schleife sechs mal wiederholst?'
-      Standalone_Artist_5: Wie oft musst du eine Schleife, die die Befehle enthält
-        um einen Diamanten zu zeichnen wiederholen, um eine Blume zu zeichnen?
+        und 60°-Winkeln zeichnen?
+      Standalone_Artist_4: 'Nun kannst du mit einem neuen Baustein experimentieren:
+        Die Schleife. Diese wird die Befehle, die in dem Baustein der Schleife eingebettet
+        sind, wiederholen. Was passiert, wenn du die Befehle in der Schleife sechsmal
+        wiederholst?'
+      Standalone_Artist_5: Wie oft musst du eine Schleife, die die Befehle enthält,
+        um einen Diamanten zu zeichnen, wiederholen, um dann eine Blume zu zeichnen?
       Standalone_Artist_5.5: "Schau mal, wie schön wir den Blumen-Code vereinfacht
         haben, indem wir eine Schleife verwendet haben. Du kannst die ganze Folge
         12 Mal wiederholen, um die Blume zu zeichnen. \nHinweis: Du musst vor dem
         Ende der Diamantschleife noch eine 30 Grad Drehung einbauen, damit du gerade
         gezeichneten Diamanten nicht wieder übermalst."
       Standalone_Artist_6: "Wiederhole diesen Sechseck-Code 6 Mal, um die Figur zu
-        zeichnen. Um wie viel Grad musst du jedesmal drehen? \nHinweis: Teile die
+        zeichnen. Um wie viel Grad musst du jedes Mal drehen? \nHinweis: Teile die
         Gradzahl in einem Kreis (360°) durch die Anzahl der Wiederholungen."
       Standalone_Artist_7: "Eine Funktion ist ein weiteres Programmierwerkzeug, dass
-        dir hilft nicht immer wieder viel Code zu wiederholen. Die Funktion in diesem
-        Beispiel zeichnet eine Blume. Du kannst sie also immer benutzen (man sagt
-        auch aufrufen), wenn du eine Blume zeichnen möchtest indem du die Funktion
-        die die Blume zeichnet aufrufst. Benutze jetzt diese Funktion und den neuen
+        dir hilft nicht immer und immer wieder Code zu wiederholen. Die Funktion in
+        diesem Beispiel zeichnet eine Blume. Du kannst sie also immer benutzen (man
+        sagt auch aufrufen), wenn du eine Blume zeichnen möchtest, indem du die Funktion,
+        die die Blume zeichnet, aufrufst. Benutze jetzt diese Funktion und den neuen
         Springen-Baustein, um drei Blumen zu zeichnen. \nHinweis: Die Blumen liegen
-        jeweils 150 Pixel auseinander."
-      Standalone_Artist_8: Hier ist eine Funktion die ein Sechseck zeichnet. Führe
-        den Code aus, um zu sehen was er macht und experimentiere dann mit der Funktion,
-        um zu sehen was passiert. Kannst du mit ihr ein Muster von Quadraten, Dreiecken
-        oder Fünfecken zeichnen?
+        jeweils 150 Pixel auseinander"
+      Standalone_Artist_8: Hier ist eine Funktion, die ein Sechseck zeichnet. Führe
+        den Code aus, um zu sehen, was dieser macht und experimentiere dann mit der
+        Funktion, um zu sehen, was passiert. Kannst du mit ihr ein Muster von Quadraten,
+        Dreiecken oder Fünfecken zeichnen?
       Standalone_Artist_9: Leg los und zeichne ein Bild deiner Wahl! Du erhältst dafür
         eine leere Funktion, mit der du machen kannst was du möchtest!
       U4 Model Program 1_2018: |-
@@ -2981,9 +2992,9 @@ de-DE:
 
         Benutze den `onEvent` Baustein, den Du erstellt hast, um Dein Programm auf den "Such"-Bildschirm zu wechseln, wenn der `home_search_btn` angeklickt wird.
 
-        -   Ziehe einen `setScreen`-Baustein heraus und setze ihn in den `onEvent`-Baustein.
-        -   Wähle "Suchen "\*\* aus dem `setScreen` Dropdown-Menü.
-        -   Starte Deine Anwendung und teste den "Home Search" Button.
+        -   **Ziehe einen `setScreen`-Baustein heraus** und setze ihn in den `onEvent`-Baustein.
+        -   **Wähle "Suchen"** aus dem `setScreen` Dropdown-Menü.
+        -   **Starte Deine Anwendung** und teste die `home_search_btn` Schaltfläche.
       U4 Model Program 4_2019: |-
         # Wechseln der Bildschirme bei Klick
 
@@ -2993,20 +3004,26 @@ de-DE:
 
         Benutze den `onEvent` Baustein, den Du erstellt hast, um Dein Programm auf den "Such"-Bildschirm zu wechseln, wenn der `home_search_btn` angeklickt wird.
 
-        -   Ziehe einen `setScreen`-Baustein heraus und setze ihn in den `onEvent`-Baustein.
-        -   Wähle "Suchen "\*\* aus dem `setScreen` Dropdown-Menü.
-        -   Starte Deine Anwendung und teste den "Home Search" Button.
+        -   **Ziehe einen `setScreen`-Baustein heraus** und setze ihn in den `onEvent`-Baustein.
+        -   **Wähle "Suchen"** aus dem `setScreen` Dropdown-Menü.
+        -   **Starte Deine Anwendung** und teste die `home_search_btn` Schaltfläche.
       U4 Model Program 5_2019: |-
-        # Wire Up the Other Buttons
+        # Andere Schaltflächen anschließen
 
         Nachdem du nun eine Taste zum Funktionieren gebracht hast, folgen nun einfach dem gleichen Muster für alle anderen.
 
-        # Mach folgendes
+        # Mach Folgendes
 
         -   Erstelle für jede Schaltfläche ein Ereignis, das beim Drücken der Taste auf den entsprechenden Bildschirm verweist.
-        -   Führe Deine App aus und teste, ob alle Schaltflächen funktionieren.
+        -   Führe deine App aus und teste, ob alle Schaltflächen funktionieren.
+      Underground If Statements: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
+        ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
+        über alle von dir entdeckte Lava zu platzieren.
+      Underground If Statements_2019: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
+        ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
+        über alle von dir entdeckte Lava zu platzieren.
       'Video: Intro to CSS Part 2_2019': |-
-        ## Zu berücksichtigend Frage
+        ## Zu berücksichtigende Frage
 
         -   Woher weiß die Webseite, welches Stylesheet sie verwenden soll?
       'Video: Intro to CSS_2019': |-
@@ -3442,16 +3459,16 @@ de-DE:
       courseA_collector_preLoops7: |-
         Sammle alle Schätze ein! Bewege Laurel zu jedem Edelstein und benutze dann diesen Block:
         <xml><block type="collector_collect"/></xml>
-      courseA_harvester_loops1: Hilf dem Mähdrescher, den ganzen Mais zu pflücken!
-      courseA_harvester_loops10: Hilf der Erntemaschine alle fünf Ähren Mais zu pflücken!
-      courseA_harvester_loops10_2019: Hilf der Erntemaschine alle fünf Ähren Mais
-        zu pflücken!
+      courseA_harvester_loops1: Hilf dem Mähdrescher, den gesamten Mais zu ernten!
+      courseA_harvester_loops10: Hilf dem Mähdrescher alle fünf Ähren Mais zu ernten!
+      courseA_harvester_loops10_2019: Hilf dem Mähdrescher alle fünf Ähren Mais zu
+        ernten!
       courseA_harvester_loops11: 'Versuchs noch einmal alleine! '
       courseA_harvester_loops11_2019: 'Versuchs noch einmal alleine! '
-      courseA_harvester_loops1_2019: Hilf dem Mähdrescher, den ganzen Mais zu pflücken!
-      courseA_harvester_loops2: Der Mähdrescher muss den ganzen Mais pflücken! Erkennst
+      courseA_harvester_loops1_2019: Hilf dem Mähdrescher, den gesamten Mais zu ernten!
+      courseA_harvester_loops2: Der Mähdrescher muss den gesamten Mais ernten! Erkennst
         du ein Muster?
-      courseA_harvester_loops2_2019: Der Mähdrescher muss den ganzen Mais pflücken!
+      courseA_harvester_loops2_2019: Der Mähdrescher muss den gesamten Mais ernten!
         Erkennst du ein Muster?
       courseA_harvester_loops3: Kannst du den ganzen Mais mit nur **einem** Gehe-Baustein
         pflücken?
@@ -3465,13 +3482,13 @@ de-DE:
         _"Ich brauche Hilfe, um zu herausfinden, was hier falsch läuft!"_
 
         Kannst du dem Mähdrescher helfen, den Fehler in ihrem Code zu finden?
-      courseA_harvester_loops5: Versuchs selbst! Kannst du auch den Mais am Ende pflücken?
+      courseA_harvester_loops5: Versuchs selbst! Kannst du auch den Mais am Ende ernten?
       courseA_harvester_loops5_2019: Versuchs selbst! Kannst du auch den Mais am Ende
-        pflücken?
-      courseA_harvester_loops5a: Sieh dir den ganzen Mais an? Kannst du ihn ganz alleine
         ernten?
-      courseA_harvester_loops5a_2019: Sieh dir den ganzen Mais an? Kannst du ihn ganz
+      courseA_harvester_loops5a: Sieh dir den gesamten Mais an? Kannst du ihn ganz
         alleine ernten?
+      courseA_harvester_loops5a_2019: Sieh dir den gesamten Mais an? Kannst du ihn
+        ganz alleine ernten?
       courseA_harvester_loops5b: Kannst du deinen Code ändern, damit der Mähdrescher
         den gesamten Mais pflückt?
       courseA_harvester_loops5b_2019: Kannst du deinen Code ändern, damit der Mähdrescher
@@ -3485,22 +3502,22 @@ de-DE:
       courseA_harvester_loops7: 'Probier es selbst aus! '
       courseA_harvester_loops7_2019: 'Probier es selbst aus! '
       courseA_harvester_loops9: Kannst du herausfinden, wie man den _gesamten_ Mais
-        pflückt?
+        erntet?
       courseA_harvester_loops9_2019: Kannst du herausfinden, wie man den _gesamten_
-        Mais pflückt?
+        Mais erntet?
       courseA_harvester_seq1: Hilf dem Mähdrescher, den Mais zu finden!
-      courseA_harvester_seq10: Der Mähdrescher muss den ganzen Mais pflücken! Erkennst
+      courseA_harvester_seq10: Der Mähdrescher muss den gesamten Mais ernten! Erkennst
         du ein Muster?
-      courseA_harvester_seq10_2019: Der Mähdrescher muss den ganzen Mais pflücken!
+      courseA_harvester_seq10_2019: Der Mähdrescher muss den gesamten Mais ernten!
         Erkennst du ein Muster?
-      courseA_harvester_seq11: Versuche es selbst! Pflück den ganzen Mais.
-      courseA_harvester_seq11_2019: Versuche es selbst! Pflück den ganzen Mais.
-      courseA_harvester_seq12: "_Danke, dass du mir hilfst!_ \n\nPflück den ganzen
+      courseA_harvester_seq11: Versuche es selbst! Ernte den gesamten Mais.
+      courseA_harvester_seq11_2019: Versuche es selbst! Ernte den gesamten Mais.
+      courseA_harvester_seq12: "_Danke, dass du mir hilfst!_ \n\nErnte den gesamten
         Mais."
-      courseA_harvester_seq12_2019: "_Danke, dass du mir hilfst!_ \n\nPflück den ganzen
+      courseA_harvester_seq12_2019: "_Danke, dass du mir hilfst!_ \n\nErnte den gesamten
         Mais."
-      courseA_harvester_seq13: Hilf der Erntemaschine Mais zu pflücken!
-      courseA_harvester_seq13_2019: Hilf der Erntemaschine Mais zu pflücken!
+      courseA_harvester_seq13: Hilf dem Mähdrescher den Mais zu ernten!
+      courseA_harvester_seq13_2019: Hilf dem Mähdrescher den Mais zu ernten!
       courseA_harvester_seq1_2019: Hilf dem Mähdrescher, den Mais zu finden!
       courseA_harvester_seq2: 'Verwende <xml><block type="maze_moveWest"/></xml> **drei**
         mal, um den Mähdrescher zum Mais zu bringen! '
@@ -3514,9 +3531,9 @@ de-DE:
         block-text="move north"/></xml> Bausteine, um die Erntemaschine zum Mais zu
         bringen! Vergiss nicht, den Mais am Ende aufzunehmen.
       courseA_harvester_seq4: Füge _einen_ Baustein hinzu, um dem Mähdrescher zu helfen,
-        den Mais zu sammeln.
+        den Mais zu ernten.
       courseA_harvester_seq4_2019: Füge _einen_ Baustein hinzu, um dem Mähdrescher
-        zu helfen, den Mais zu sammeln.
+        zu helfen, den Mais zu ernten.
       courseA_harvester_seq5: Kannst du herausfinden, was mit diesem Code nicht stimmt?
         Hilf dem Mähdrescher den Mais zu pflücken!
       courseA_harvester_seq5_2019: Kannst du herausfinden, was mit diesem Code nicht
@@ -3527,10 +3544,11 @@ de-DE:
         zu gelangen! Hilf dem Mähdrescher die richtige Richtung zu finden.
       courseA_harvester_seq7_2019: Man muss sich in zwei Richtungen bewegen, um zum
         Mais zu gelangen! Hilf dem Mähdrescher die richtige Richtung zu finden.
-      courseA_harvester_seq8: Jetzt muss der Erntemaschine zweimal Mais pflücken!
-      courseA_harvester_seq8_2019: Jetzt muss der Erntemaschine zweimal Mais pflücken!
-      courseA_harvester_seq9: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
-      courseA_harvester_seq9_2019: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
+      courseA_harvester_seq8: Jetzt muss der Mähdrescher zweimal Mais ernten!
+      courseA_harvester_seq8_2019: Jetzt muss der Mähdrescher zweimal Mais ernten!
+      courseA_harvester_seq9: Füge zwei Bausteine hinzu, um diese Aufgabe zu beenden!
+      courseA_harvester_seq9_2019: Füge zwei Bausteine hinzu, um diese Aufgabe zu
+        beenden!
       courseA_maze_ramp2_2018: Füge die beiden <xml><block type="maze_moveEast"/></xml>
         Bausteine an den <xml><block type="when_run"/></xml> Baustein an, um Deinen
         Code zu vervollständigen. Klicke dann auf "▶ Ausführen".
@@ -3744,6 +3762,10 @@ de-DE:
       courseB_Scrat_ramp3a_2019: Nimm einen <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> Baustein aus der Toolbox und füge ihn unten in die anderen
         Bausteine ein, um diesen Code abzuschließen. Dann klicke auf "▶ Ausführen".
+      courseB_Scrat_ramp3b_2018: "Es gibt einen zusätzlichen Baustein am Ende dieses
+        Codes! \n\nZieh ihn zurück in den Werkzeugkasten, um diesen wegzuwerfen."
+      courseB_Scrat_ramp3b_2019: "Es gibt einen zusätzlichen Baustein am Ende dieses
+        Codes! \n\nZieh ihn zurück in den Werkzeugkasten, um diesen wegzuwerfen."
       courseB_Scrat_ramp4a_2018: Kannst du herausfinden, welchen Block du am Ende
         der anderen Blöcke hinzufügen musst, um diesen Code zu vervollständigen?
       courseB_Scrat_ramp4a_2019: Kannst du herausfinden, welchen Block du am Ende
@@ -3804,12 +3826,18 @@ de-DE:
         zu gelangen!
       courseB_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
       courseB_iceage_loops10_2019: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
-      courseB_iceage_loops11: Hilf Skrat zur Eichel zu gelangen!
-      courseB_iceage_loops11_2019: Hilf Skrat zur Eichel zu gelangen!
+      courseB_iceage_loops11: Hilf Scrat zur Eichel zu gelangen!
+      courseB_iceage_loops11_2019: Hilf Scrat zur Eichel zu gelangen!
       courseB_iceage_loops12: Gehe zur Eichel, wie du kannst!
       courseB_iceage_loops12_2019: Gehe zur Eichel, wie du kannst!
       courseB_iceage_loops1_2019: Hilf Scrat über das glitschige Eis, um an die Eichel
         zu gelangen!
+      courseB_iceage_loops2: Verwende sowohl den <xml><block type="maze_moveWest"/></xml>
+        als auch den <xml><block type="maze_moveSouth"/></xml>, um an die Eichel zu
+        gelangen!
+      courseB_iceage_loops2_2019: Verwende sowohl den <xml><block type="maze_moveWest"
+        block_text="move west"/></xml> als auch den <xml><block type="maze_moveSouth"
+        block_text="move south"/></xml>, um an die Eichel zu gelangen!
       courseB_iceage_loops4: Füge einen weiteren Block hinzu, um Scrat bis zur Eichel
         zu bekommen!
       courseB_iceage_loops4_2019: Füge einen weiteren Block hinzu, um Scrat bis zur
@@ -3828,7 +3856,7 @@ de-DE:
         benutzen, um Scrat zu helfen, dorthin zu gelangen?
       courseB_maze_seq10_2019: Behebe die Fehler, um Scrat zur Eichel zu bringen.
       courseB_maze_seq11_2019: Es ist an Dir!  Bring Scrat zur Eichel.
-      courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
+      courseB_maze_seq12_2019: Erreiche die Eichel nun auf irgendeine Art und Weise!
       courseB_maze_seq3: _"Repariere den Code, damit ich das Schwein bekomme!_"
       courseB_maze_seq4_2019: Benutze **2** Bewegungsbausteine, um den Scrat zur Eichel
         zu bringen.
@@ -3839,6 +3867,20 @@ de-DE:
         damit Scrat an die Eichel kommt!
       courseB_maze_seq8_2019: Du bist dran!  Was musst du tun, um Scrat zur Eichel
         zu bringen?
+      courseB_maze_seq9_2018: "**Herausforderung:** Bewege dich um das gebrochene
+        Eis herum, um Scrat zur Eichel zu bringen."
+      courseB_maze_seq9_2019: "**Herausforderung:** Bewege dich um das gebrochene
+        Eis herum, um Scrat zur Eichel zu bringen."
+      courseB_playlab_events7_2018: "Mach dieses Spiel interessant, indem du mehr
+        Dinge hinzufügst!\n\n1.  Stelle den Ritter so ein, dass er verschwindet, wenn
+        er auf den Drachen trifft.   \n2.  Spiele ein Geräusch ab, wenn beide zusammenstoßen,
+        damit es sich realer anfühlt.   \n\n* * *\n\nBesuche alle Ziele und laufe
+        dann in den Drachen, um das Level zu bestehen."
+      courseB_playlab_events7_2019: "Mach dieses Spiel interessant, indem du mehr
+        Dinge hinzufügst!\n\n1.  Stelle den Ritter so ein, dass er verschwindet, wenn
+        er auf den Drachen trifft.   \n2.  Spiele ein Geräusch ab, wenn beide zusammenstoßen,
+        damit es sich realer anfühlt.   \n\n* * *\n\nBesuche alle Ziele und laufe
+        dann in den Drachen, um das Level zu bestehen."
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Mach weiter!"_'
       courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -4531,12 +4573,33 @@ de-DE:
         Nimm den gleichen Weg wie vorher, aber dieses Mal benutzte eine Wiederholungsschleife, um die Schätze zu sammeln, wenn du dort ankommst.
       courseD_collector_ramp9: Jetzt gibt es noch mehr Schätze.  Kannst du Laurel
         helfen, alles einzusammeln?
+      courseD_farmer_while1: "_\"Hallo, ich bin ein Bauer. Ich brauche deine Hilfe
+        beim Glätten meines Feldes um es für das Säen vorzubereiten!\"_  \n\nBewege
+        mich zu dem Erdblock und nutze den \"Entfernen\" Baustein um diesen zu entfernen."
+      courseD_farmer_while1_2018: "_\"Hallo, ich bin ein Bauer. Ich brauche deine
+        Hilfe beim Glätten meines Feldes um es für das Säen vorzubereiten!\"_  \n\nBewege
+        mich zu dem Erdblock und nutze den \"Entfernen\" Baustein um diesen zu entfernen."
+      courseD_farmer_while1_2019: "_\"Hallo, ich bin ein Bauer. Ich brauche deine
+        Hilfe beim Glätten meines Feldes um es für das Säen vorzubereiten!\"_  \n\nBewege
+        mich zu dem Erdblock und nutze den \"Entfernen\" Baustein um diesen zu entfernen."
+      courseD_farmer_while3: |-
+        _"Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. "_
+
+        Verwende dabei so wenig Bausteine wie möglich.
+      courseD_farmer_while3_2018: |-
+        _"Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. "_
+
+        Verwende dabei so wenig Bausteine wie möglich.
+      courseD_farmer_while3_2019: |-
+        _"Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. "_
+
+        Verwende dabei so wenig Bausteine wie möglich.
       courseD_iceage_loops1: Hilf Scrat über das glitschige Eis, um an die Eichel
         zu gelangen!
       courseD_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
       courseD_iceage_loops10_2019: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
-      courseD_iceage_loops11: Hilf Skrat zur Eichel zu gelangen!
-      courseD_iceage_loops11_2019: Hilf Skrat zur Eichel zu gelangen!
+      courseD_iceage_loops11: Hilf Scrat zur Eichel zu gelangen!
+      courseD_iceage_loops11_2019: Hilf Scrat zur Eichel zu gelangen!
       courseD_iceage_loops12: Gehe zur Eichel, wie du kannst!
       courseD_iceage_loops12_2019: Gehe zur Eichel, wie du kannst!
       courseD_iceage_loops1_2019: Hilf Scrat über das glitschige Eis, um an die Eichel
@@ -4607,7 +4670,7 @@ de-DE:
       courseD_scrat_ramp1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseD_scrat_ramp5: Vermeiden Sie das gerissene Eis!
-      courseD_scrat_ramp7: Hilf Skrat zur Eichel zu gelangen!
+      courseD_scrat_ramp7: Hilf Scrat zur Eichel zu gelangen!
       courseE_aboutme_1: "![](https://images.code.org/93e1c04857ff781bb5c4cc76b15ed563-image-1557179820861.png)
         _\"Hallo, Welt! Mein Name ist Rikki und hier sind einige Dinge, die ich über
         mich erzählen möchte!\"_\n\n**Freispiel**: Rikki verwendet Sprite Lab, um
@@ -4655,6 +4718,48 @@ de-DE:
         Blockzählung ermöglicht.
       courseE_farmer_functions4b: Benutze deine neue Funktion um dieses Puzzle zu
         lösen.
+      courseF_artist_variables2: "Jetzt nutze eine andere Schleife um drei dieser
+        Dreiecke nebeneinander zu zeichnen.   \n\nDu kann den Code aus dem letzten
+        Puzzle innerhalb einfügen."
+      courseF_artist_variables2_2018: "Jetzt nutze eine andere Schleife um drei dieser
+        Dreiecke nebeneinander zu zeichnen.   \n\nDu kann den Code aus dem letzten
+        Puzzle innerhalb einfügen."
+      courseF_artist_variables2_2019: "Jetzt nutze eine andere Schleife um drei dieser
+        Dreiecke nebeneinander zu zeichnen.   \n\nDu kann den Code aus dem letzten
+        Puzzle innerhalb einfügen."
+      courseF_artist_variables3: "Bevor die Sache knifflig wird, kannst du die Länge
+        von 50 in einer Variable festlegen, damit wir sie in den nächsten Puzzles
+        nutzen können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables3_2018: "Bevor die Sache knifflig wird, kannst du die
+        Länge von 50 in einer Variable festlegen, damit wir sie in den nächsten Puzzles
+        nutzen können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables3_2019: "Bevor die Sache knifflig wird, kannst du die
+        Länge von 50 in einer Variable festlegen, damit wir sie in den nächsten Puzzles
+        nutzen können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables4: Jetzt nutze die `length` Variable, damit der Künster
+        vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2018: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2019: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables6: "**OOPS!** \n\nDie Dreiecke sollen eigentlich 60
+        Pixel breit sein, mit 60 Pixel Sprüngen.  \n\nBist du nicht froh, eine Variable
+        zu nutzen?"
+      courseF_artist_variables6_2018: "**OOPS!** \n\nDie Dreiecke sollen eigentlich
+        60 Pixel breit sein, mit 60 Pixel Sprüngen.  \n\nBist du nicht froh, eine
+        Variable zu nutzen?"
+      courseF_artist_variables6_2019: "**OOPS!** \n\nDie Dreiecke sollen eigentlich
+        60 Pixel breit sein, mit 60 Pixel Sprüngen.  \n\nBist du nicht froh, eine
+        Variable zu nutzen?"
+      courseF_artist_variables6a: Nutze was du gelernt hast um dieses Design zu entwerfen,
+        bei dem die Quadrate 80 Pixel Seiten haben und der Künstler über 80 Pixel
+        zwischen jedem springt.
+      courseF_artist_variables6a_2018: Nutze was du gelernt hast um dieses Design
+        zu entwerfen, bei dem die Quadrate 80 Pixel Seiten haben und der Künstler
+        über 80 Pixel zwischen jedem springt.
+      courseF_artist_variables6a_2019: Nutze was du gelernt hast um dieses Design
+        zu entwerfen, bei dem die Quadrate 80 Pixel Seiten haben und der Künstler
+        über 80 Pixel zwischen jedem springt.
       courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen
         wie möglich.
@@ -4677,7 +4782,7 @@ de-DE:
         -   Wann möchtest du eine wenn-Anweisung verwenden?
       csd u5 recommender sample: "# Beispiel-App\n\nHier ist ein Beispiel für eine
         App, die Daten verwendet, um dem Benutzer bei der Lösung eines Problems zu
-        helfen.  Spiele die App mit einem Partner ein paar Mal durch, um zu sehen,
+        helfen. Spiele die App mit einem Partner ein paar Mal durch, um zu sehen,
         wie sie funktioniert.\n\nBespreche die folgenden Fragen mit Deinem Partner:\n\n-
         \  Bei welcher Wahl unterstützt die App den Benutzer? \n-   Welche Daten verwendet
         sie, um diese Empfehlung abzugeben?\n-   Wie haben sich die Entwickler der
@@ -4685,7 +4790,7 @@ de-DE:
         treffen?"
       csd u5 recommender sample_2019: "# Beispiel-App\n\nHier ist ein Beispiel für
         eine App, die Daten verwendet, um dem Benutzer bei der Lösung eines Problems
-        zu helfen.  Spiele die App mit einem Partner ein paar Mal durch, um zu sehen,
+        zu helfen. Spiele die App mit einem Partner ein paar Mal durch, um zu sehen,
         wie sie funktioniert.\n\nBespreche die folgenden Fragen mit Deinem Partner:\n\n-
         \  Bei welcher Wahl unterstützt die App den Benutzer? \n-   Welche Daten verwendet
         sie, um diese Empfehlung abzugeben?\n-   Wie haben sich die Entwickler der
@@ -4755,6 +4860,12 @@ de-DE:
       grade2_collector_A: Hilf Laurel alle Schätze einzusammeln.
       grade2_collector_A_2018: Hilf Laurel alle Schätze einzusammeln.
       grade2_collector_A_2019: Hilf Laurel alle Schätze einzusammeln.
+      grade5_artist_variables_triangles1: "Lass uns, ein gleichseitiges Dreieck zu
+        zeichnen. \n\nEs soll auf jeder Seite genau 50 Pixel lang sein."
+      grade5_artist_variables_triangles1_2018: "Lass uns, ein gleichseitiges Dreieck
+        zu zeichnen. \n\nEs soll auf jeder Seite genau 50 Pixel lang sein."
+      grade5_artist_variables_triangles1_2019: "Lass uns, ein gleichseitiges Dreieck
+        zu zeichnen. \n\nEs soll auf jeder Seite genau 50 Pixel lang sein."
       grade5_pixelation: |-
         # Erstelle dein eigenes Bild in beliebiger Größe
 

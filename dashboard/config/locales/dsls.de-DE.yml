@@ -53,7 +53,7 @@ de-DE:
         content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Nutze den Schlüssel, um jedem Code einen Buchstaben zuzuweisen
         questions:
-        - text: "<strong>N</strong>"
+        - text: "**N**"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
@@ -276,10 +276,10 @@ de-DE:
         content1: Weise die Schritte des Würfel-Rennspiels der Ordnung zu, in der
           sie im Algorithmus erscheinen sollte.
         questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
+        - text: "**1)**"
+        - text: "**2)**"
+        - text: "**3)**"
+        - text: "**4)**"
         title: Passend
       4-5 Algorithms Multi 1:
         answers:
@@ -392,8 +392,8 @@ de-DE:
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        - text: "**STERN**"
+        - text: "**RAMPE**"
         content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
           vorhandenen Fähigkeitsgruppen.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -628,22 +628,22 @@ de-DE:
         markdown: |
           # Übersicht
 
-          In dieser Lektion lernen Sie die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
+          In dieser Lektion lernst du die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
 
           ## Vokabular
 
-          * **Eingabe** - Eine Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
+          * **Eingabe** - Ein Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
           * **Ausgabe** - Ein Gerät oder eine Komponente, die Informationen von einem Computer empfängt.
 
 
-          ## Resourcen
+          ## Ressourcen
 
           * [Eingabe und Ausgabe - Aktivitätsleitfaden](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Übersicht
 
-          In dieser Lektion lernen Sie, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
+          In dieser Lektion lernst du, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
 
           ## Vokabuar
 
@@ -674,13 +674,13 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Für dieses Projekt entwerfen Sie Ihre eigene App, die ein Problem löst, das Sie definieren können.
+          Für dieses Projekt entwirfst du Deine eigene App, die ein Problem löst, das du definieren kannst.
 
-          ## Resourcen
+          ## Ressourcen
 
           * [Apps und Problemlösungen - Projektleitfaden](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
-          * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
-          * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+          * [Apps und Problemlösungen - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Apps und Problemlösungen - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: hier die Beschreibung
       CSD U2 Design Project_2018:
@@ -1014,10 +1014,8 @@ de-DE:
         - {}
       CSD U3 Sprites intro predict multi:
         answers:
-        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
-            style="width: 150px; border: 1px solid">'
+        - text: "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
           correct: true
@@ -2546,7 +2544,7 @@ de-DE:
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Übersicht
-          In dieser Lektion wenden Sie den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Ihnen hilft, Problemlösungen zu entwickeln und zu verbessern.
+          In dieser Lektion wendest du den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Dir hilft, Problemlösungen zu entwickeln und zu verbessern.
 
           ## Resourcen
           * [Problemlösung - Aktivitätsleitfaden](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
@@ -3048,7 +3046,10 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
+            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
+            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
+            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
@@ -3057,7 +3058,10 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
+            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
+            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
+            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
@@ -3066,7 +3070,10 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
+            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
+            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
+            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
@@ -3104,7 +3111,8 @@ de-DE:
           feedback: Richtig!
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -3113,7 +3121,8 @@ de-DE:
           feedback: Richtig!
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - {}
@@ -3122,7 +3131,8 @@ de-DE:
           feedback: Richtig!
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -3181,7 +3191,7 @@ de-DE:
           feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
             zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
             Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -3200,7 +3210,7 @@ de-DE:
           feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
             zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
             Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -3220,7 +3230,7 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
@@ -3250,31 +3260,46 @@ de-DE:
         - {}
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nichts wird passieren.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist.
+            Er stoppt, wenn der Haufen weg ist
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nichts wird passieren.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist.
+            Er stoppt, wenn der Haufen weg ist
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nichts wird passieren.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist.
+            Er stoppt, wenn der Haufen weg ist
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
@@ -3519,31 +3544,37 @@ de-DE:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -3551,6 +3582,11 @@ de-DE:
           feedback: Richtig!
         - {}
         - text: Ich weiß es nicht.
+        markdown: 'Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der
+          Wolke sein. Wenn dort eine Blume ist, wird die Biene den Nektar **einmal**
+          holen.
+
+'
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
@@ -3673,12 +3709,12 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Pennys wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Cent-Stücke wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
 
 
-          ## Resourcen
+          ## Ressourcen
 
-          * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.

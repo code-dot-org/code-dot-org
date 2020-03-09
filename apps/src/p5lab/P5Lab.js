@@ -1045,7 +1045,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
-    libraryCode: this.level.libraryCode,
+    projectLibraries: this.level.projectLibraries,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,

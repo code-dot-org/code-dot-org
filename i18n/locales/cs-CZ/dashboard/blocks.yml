@@ -1076,6 +1076,8 @@ cs:
             '"left"': vlevo
       gamelab_mouseLocation:
         text: umístění myši
+      gamelab_moveBackward:
+        text: pouň {SPRITE} {DISTANCE} pixelů zpátky
       gamelab_moveForward:
         text: posunout {SPRITE} {DISTANCE} pixelů dopředu
       gamelab_moveInDirection:
@@ -1171,6 +1173,8 @@ cs:
           DIRECTION:
             '"right"': vpravo
             '"left"': vlevo
+      gamelab_updateTitleWithColor:
+        text: ukaž titulní obrazovku {BREAK} nadpis {TITLE} barva {COLOR}
       gamelab_whenDownArrow:
         text: když stisknete šipku dolů
       gamelab_whenKey:

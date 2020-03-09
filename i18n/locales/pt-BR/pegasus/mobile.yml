@@ -17,7 +17,6 @@
   learn_now: "Aprenda Agora"
   petition_message: "Todos os alunos, em todas as escolas, devem ter a oportunidade de aprender ciência da computação"
   petition_sign_message: 'Se você concordar, assine seu nome e junte-se à nossa lista de e-mails junto com # outros.'
-  petition_sign_message_support: 'Se você nos apoia, assine seu nome e junte-se à nossa lista de e-mails juntamente com # outros.'
   petition_join_others: 'Junte-se a # outros'
   name: "Nome"
   email: "E-mail"
@@ -150,10 +149,12 @@
   personalize_certificate: "Personalize seu certificado"
   print_batch_certificates: "Imprimir um lote de certificados"
   print_certificates: "Imprimir certificados"
+  certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
   print_ice_art_from_frozen: "\nImprimir arte de gelo a partir dos tutoriais de Frozen"
-  want_a_blank_certificate_template: "\nQuer um modelo de certificado em branco para escrever os nomes dos seus alunos?"
-  landscape_recommended_certificates: "\nÉ recomendável escolher orientação ** Paisagem ** ao imprimir os certificados."
+  want_a_blank_certificate_template: "Quer um modelo de certificado em branco para escrever os nomes dos seus alunos?"
+  landscape_recommended_certificates: "É recomendável escolher orientação ** Paisagem ** ao imprimir os certificados."
   print_one_here_certificates: "Imprima um aqui."
+  enter_certificate_names: "Digite até 30 nomes, ** um por linha **. Uma página imprimível com personalizado%{script_name} de certificados será gerada."
   share_achievement: "Compartilhar sua conquista"
   beyond_hour_message: "Faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>."
   leaderboards_for_hoc: "Classificações para a Hora do Código."
@@ -953,6 +954,7 @@
   coursec-2019_name: Curso C (2019)
   coursed-2019_name: Curso D (2019)
   coursee-2019_name: Curso E (2019)
+  coursef-2019_name: Curso F (2019)
   express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)

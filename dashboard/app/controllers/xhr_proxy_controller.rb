@@ -26,6 +26,7 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
+    allrecipes.com
     apex.oracle.com
     api.data.gov
     api.datamuse.com
@@ -42,6 +43,7 @@ class XhrProxyController < ApplicationController
     api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
+    api.thingspeak.com
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
@@ -72,6 +74,7 @@ class XhrProxyController < ApplicationController
     maker.ifttt.com
     noaa.gov
     numbersapi.com
+    pastebin.com
     random.org
     restcountries.eu
     rhcloud.com

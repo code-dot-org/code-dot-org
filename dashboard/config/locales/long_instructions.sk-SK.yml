@@ -872,6 +872,11 @@ sk-SK:
         -   Kliknutím na tlačidlo <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
         -   Zmeň čísla vnútri bloku a program spusti znova.
         -   Skús umiestniť obdĺžnik do pravého dolného rohu obrazovky.
+      CSD U5 binary video_2019: |-
+        ## Otázky na zamyslenie
+
+        -   Prečo sú všetky typy dát v počítači uložené ako čísla?
+        -   Ak je všetko uložené ako číslo, ako si myslíte, že počítač rozlišuje medzi číslami, písmenami, obrázkami a zvukom?
       CSD sprite movement challenge_2018: |-
         # Vylepši svoj obrázok
 
@@ -1186,6 +1191,8 @@ sk-SK:
         id=\"callMe\"><mutation name=\"postav most\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
         fakli [redstone_torch]."
+      HOC 2018 Level_12: Blahoželáme! Čaká ťa otvorený vodný svet. Vybudujte koralový
+        útes! Sopka! Vrak lode! Je to len na tebe.
       InspirationalArtwork: |-
         Doteraz si sa naučil všetko, čo potrebuješ vedieť, aby si vytvoril takýto vzor!
 
@@ -1194,6 +1201,10 @@ sk-SK:
         Doteraz si sa naučil všetko, čo potrebuješ vedieť, aby si vytvoril takýto vzor!
 
         Ak ťa tento obrázok inšpiruje, tak skús spraviť niečo podobné. Inak, vytvor niečo vlastné.
+      MC HOC 2016 SCORE LEVEL: "Niektoré hry sa hraju na body. Zahraj si naháňačku
+        so železnými golemami a použi blok <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml>, aby si získal bod po
+        chytení každého golema. \n\n Získaj 5 bodov a vyhraj!"
       MC_HOC_2017_01_RETRY: "Dvere sú zamknuté, ale na pomoc prichádza agent. \n\nV
         pracovnom priestore prichyť blok 'posuň sa dopredu' k bloku 'pri spustení',
         aby sa agent dostal na prítlačnú dosku [PressurePlate_Up]. Potom stlač tlačidlo
@@ -1314,6 +1325,9 @@ sk-SK:
       Virtual Pet Freeplay: "Voľná hra: Čo viac dokážeš spraviť so svojou žirafou?\n\n-
         \  Dokážeš pridať viac špeciálnych vecí pre tvôjho virtuálneho miláčika?\n-
         \  Dokážěs jej dať nejakých priateľov?  "
+      'Widget: Text Compression': V texte hľadajte vzory (opakované slová alebo frázy).
+        Zadajte vzory, ktoré vidíte, do slovníka vpravo. Pri zadávaní položiek do
+        slovníka, symbol pre položku sa vloží do textu namiesto vzoru.
       comment_intro_maze_2018: |-
         _"Hmm, čo robí tento program?"_
 
@@ -1355,12 +1369,89 @@ sk-SK:
       course4_harvester_nested_loops_challenge1: _"Potrebujem pomoc na farme! Pomôž
         mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
         nástrojov."_
+      courseA_collector_loops2_2018: 'Pozbieraj všetky 3 kôpky! Posuň Laurel ku drahokamu
+        a potom použi tento blok: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops3: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2019: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
+      courseA_harvester_loops1: Pomôž záhradníčke pozbierať všetku kukuricu!
+      courseA_harvester_loops10: Pomôž záhradníčke pozbierať všetkých 5 klasov kukurice!
+      courseA_harvester_loops10_2019: Pomôž záhradníčke pozbierať všetkých 5 klasov
+        kukurice!
+      courseA_harvester_loops11: 'Vyskúšajte to ešte raz sami! '
+      courseA_harvester_loops11_2019: 'Vyskúšajte to ešte raz sami! '
+      courseA_harvester_loops1_2019: Pomôž záhradníčke pozbierať všetku kukuricu!
+      courseA_harvester_loops2: Záhradníčka musí pozbierať všetku kukuricu! Vidíš
+        tam nejaký vzor?
+      courseA_harvester_loops2_2019: Záhradníčka musí pozbierať všetku kukuricu! Vidíš
+        tam nejaký vzor?
+      courseA_harvester_loops3: Dokážeš pozbierať všetku kukuricu použitím len **jedného**
+        bloku posunúť?
+      courseA_harvester_loops3_2019: Dokážeš pozbierať všetku kukuricu použitím len
+        **jedného** bloku posunúť?
+      courseA_harvester_loops4: |-
+        _"Potrebujem pomôcť s nájdením chyby!"_
+
+        Dokážeš pomôcť záhradníčke nájsť chybu v kóde?
+      courseA_harvester_loops4_2019: |-
+        _"Potrebujem pomôcť s nájdením chyby!"_
+
+        Dokážeš pomôcť záhradníčke nájsť chybu v kóde?
+      courseA_harvester_loops5: Vyskúšaj to! Dokážeš zobrať aj tú kukuricu na konci?
+      courseA_harvester_loops5_2019: Vyskúšaj to! Dokážeš zobrať aj tú kukuricu na
+        konci?
+      courseA_harvester_loops5a: Pozri na všetku tú kukuricu! Dokážeš ju všetku pozbierať?
+      courseA_harvester_loops5a_2019: Pozri na všetku tú kukuricu! Dokážeš ju všetku
+        pozbierať?
+      courseA_harvester_loops5b: Dokážeš svoj kód zmeniť tak aby záhradníčka pozbierala
+        všetku kukricu?
+      courseA_harvester_loops5b_2019: Dokážeš svoj kód zmeniť tak aby záhradníčka
+        pozbierala všetku kukricu?
+      courseA_harvester_loops6: Budeš potrebovať blok **jeden** <xml><block type="maze_moveWest"
+        block-text="move west"></block></xml> a blok **jeden** <xml><block type="maze_moveNorth"
+        block-text="move north"></block></xml> block na dokončenie tejto úlohy!
+      courseA_harvester_loops6_2019: Budeš potrebovať blok **jeden** <xml><block type="maze_moveWest"
+        block-text="move west"></block></xml> a blok **jeden** <xml><block type="maze_moveNorth"
+        block-text="move north"></block></xml> block na dokončenie tejto úlohy!
+      courseA_harvester_loops7: 'Teraz to vyskúšajte sami! '
+      courseA_harvester_loops7_2019: 'Teraz to vyskúšajte sami! '
+      courseA_harvester_loops9: Dokážeš prísť na to pozbierať\_všetku kukuricu?
+      courseA_harvester_loops9_2019: Dokážeš prísť na to pozbierať\_všetku kukuricu?
+      courseA_harvester_seq1: Pomôž záhradníčke pozbierať kukuricu!
+      courseA_harvester_seq10: Záhradníčka musí pozbierať všetku kukuricu! Vidíš tam
+        nejaký vzor?
+      courseA_harvester_seq10_2019: Záhradníčka musí pozbierať všetku kukuricu! Vidíš
+        tam nejaký vzor?
+      courseA_harvester_seq11: Vyskúšaj to sám/a! Pozbieraj všetku kukuricu.
+      courseA_harvester_seq11_2019: Vyskúšaj to sám/a! Pozbieraj všetku kukuricu.
+      courseA_harvester_seq12: "_Ďakujem za pomoc!_ \n\nPozbieraj všetku kukuricu."
+      courseA_harvester_seq12_2019: "_Ďakujem za pomoc!_ \n\nPozbieraj všetku kukuricu."
+      courseA_harvester_seq13: Pomôž záhradníčke pozbierať kukuricu!
+      courseA_harvester_seq13_2019: Pomôž záhradníčke pozbierať kukuricu!
+      courseA_harvester_seq1_2019: Pomôž záhradníčke pozbierať kukuricu!
+      courseA_harvester_seq2: 'Použi **tri** krát <xml><block type="maze_moveWest"/></xml>
+        aby si dostal záhradníčku ku kukurici! '
+      courseA_harvester_seq3: Použi **tri** krát <xml><block type="maze_moveNorth"/></xml>
+        aby si dostal záhradníčku ku kukurici! Nezabudni na záver kukuricu zobrať.
+      courseA_harvester_seq4: Pridaj_jeden_blok, aby záhradníčka pozbierala kukuricu.
+      courseA_harvester_seq4_2019: Pridaj_jeden_blok, aby záhradníčka pozbierala kukuricu.
+      courseA_harvester_seq5: Dokážeš zistiť, prečo je tento kód nesprávny? Pomôž
+        záhradníčke pozbierať kukuricu!
+      courseA_harvester_seq5_2019: Dokážeš zistiť, prečo je tento kód nesprávny? Pomôž
+        záhradníčke pozbierať kukuricu!
+      courseA_harvester_seq6: Vyskúšaj to sám/sama!
+      courseA_harvester_seq6_2019: Vyskúšaj to sám/sama!
+      courseA_harvester_seq7: Musíš sa posunúť 2 smermi, aby si sa dostal ku kukurici!
+        Pomôž záhradníčke vybrať si ten správny smer.
+      courseA_harvester_seq7_2019: Musíš sa posunúť 2 smermi, aby si sa dostal ku
+        kukurici! Pomôž záhradníčke vybrať si ten správny smer.
+      courseA_harvester_seq8: Teraz záhradníčka musí kukuricu zobrať až 2-krát!
+      courseA_harvester_seq8_2019: Teraz záhradníčka musí kukuricu zobrať až 2-krát!
+      courseA_harvester_seq9: Na dokončenie úlohy pridaj ešte 2 bloky!
+      courseA_harvester_seq9_2019: Na dokončenie úlohy pridaj ešte 2 bloky!
       courseA_maze_ramp2_2018: Aby si dokončil tvoj kód, spoj oba bloky <xml><block
         type="maze_moveEast"/></xml> a <xml><block type="when_run"/></xml> a potom
         stlač "▶ Run".
@@ -1380,11 +1471,37 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
       courseA_maze_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
+      courseA_maze_seq10_2018: "**Výzva:** Aby si dostal vtáka k prasiatku, musíš
+        sa vyhnúť TNT!"
+      courseA_maze_seq10_2019: "**Výzva:** Aby si dostal vtáka k prasiatku, musíš
+        sa vyhnúť TNT!"
+      courseA_maze_seq11_2018: Čas na kratšiu úlohu! Aby ste dostali vtáka k prasiatku
+        sa najprv pohni jedným smerom a potom druhým.
+      courseA_maze_seq11_2019: Čas na kratšiu úlohu! Aby ste dostali vtáka k prasiatku
+        sa najprv pohni jedným smerom a potom druhým.
+      courseA_maze_seq12_2018: Dostaň to prasiatko!
+      courseA_maze_seq12_2019: Dostaň to prasiatko!
       courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq5_2018: Vyskúšaj si to ešte raz.
       courseA_maze_seq5_2019: Vyskúšaj si to ešte raz.
+      courseA_maze_seq5a_2018: |-
+        _"Nááá prasiatko!"_
+
+        Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a k prasiatku?
+      courseA_maze_seq5a_2019: |-
+        _"Nááá prasiatko!"_
+
+        Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a k prasiatku?
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
+      courseA_playLab_events4_2018: Teraz pridaj ešte jeden blok s udalosťou, aby
+        sa Jorge posunul doprava po kliknutí na šípku vpravo.
+      courseA_playLab_events4_2019: Teraz pridaj ešte jeden blok s udalosťou, aby
+        sa Jorge posunul doprava po kliknutí na šípku vpravo.
+      courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
+        Dokážeš aby dinosaurus zmizol potom, ako doňho Jorge narazí?
+      courseA_playLab_events7_2019: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
+        Dokážeš aby dinosaurus zmizol potom, ako doňho Jorge narazí?
       courseB_Scrat_ramp1_2018: Aby si dostal Scrata k žaluďu, pripoj blok <xml><block
         type="maze_moveEast"/></xml> na spodok bloku <xml><block type="when_run"/></xml>,
         potom stlač "▶ Spustiť"!
@@ -3362,13 +3479,13 @@ sk-SK:
         na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2019: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+      courseD_maze_ramp2: Aby sa vták dostal až k prasiatku, z panela nástrojov presuň
         ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
-      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov
+      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasiatku, z panela nástrojov
         presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
-      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasaťu, z panela nástrojov
+      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasiatku, z panela nástrojov
         presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
       courseD_maze_ramp3: |-
@@ -3492,7 +3609,7 @@ sk-SK:
         -   Vymyslieť vlastnú hru!
       courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+      courseD_scrat_ramp2: Aby sa vták dostal až k prasiatku, z panela nástrojov presuň
         ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
       courseD_scrat_ramp3: |-
@@ -3506,6 +3623,18 @@ sk-SK:
 
         Vyhni sa TNT.
       courseD_scrat_ramp7: Pomôž Scratovi dostať sa k žaluďu!
+      courseE_artist_functions2_2018: "Tu je funkcia `nakresli štvorec`. Použi ju
+        na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
+      courseE_artist_functions2_2019: "Tu je funkcia `nakresli štvorec`. Použi ju
+        na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
+      courseE_artist_functions9_2018: "**Výzva:** Vytvor tento obrázok len pomocou
+        limitovaných dostupných blokov. \n\n-   Každý trojuhlník má strany dlhé **50
+        pixelov:**  \n-   Aby si nakreslil/a diamant, musíš striedať otočky medzi
+        **60 stupňov a 120 stupňov**."
+      courseE_artist_functions9_2019: "**Výzva:** Vytvor tento obrázok len pomocou
+        limitovaných dostupných blokov. \n\n-   Každý trojuhlník má strany dlhé **50
+        pixelov:**  \n-   Aby si nakreslil/a diamant, musíš striedať otočky medzi
+        **60 stupňov a 120 stupňov**."
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
         mal ideálny počet blokov.

@@ -62,7 +62,7 @@ SQL
 
   def self.random_donor
     weight = SecureRandom.random_number
-    PEGASUS_DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
+    PEGASUS_DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
   end
 
   def self.sponsor_message(user)

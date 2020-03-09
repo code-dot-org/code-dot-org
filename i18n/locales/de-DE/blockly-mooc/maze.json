@@ -11,7 +11,7 @@
   "collectorCollectedSome": "Gute Arbeit! Du hast {count, plural, one {1 Element} other {# Elemente}} gesammelt.",
   "collectorCollectedNotEnough": "Bleib dran und programmiere weiter! Du musst noch mindestens {goal, plural, one {1 Objekt} other {# Objekte}} einsammeln.",
   "collectorCollectedTooMany": "Hier gibt es nicht genügend Elemente zum Aufsammeln.",
-  "collectorTooManyBlocks": "Du kannst nur {blockLimit} Blöcke nutzen. Schau Dir deinen Code genauer an und versuche es nochmal!",
+  "collectorTooManyBlocks": "Du kannst nur {blockLimit} Bausteine nutzen. Schau Dir deinen Code genauer an und versuche es nochmal!",
   "continue": "Fortfahren",
   "corn": "Mais",
   "cornTooltip": "Ernte etwas Mais",

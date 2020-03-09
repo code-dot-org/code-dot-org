@@ -182,8 +182,6 @@ fr:
     valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères.
     mismatch_password: Les deux mots de passe ne sont pas identiques.
-    under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation
-      de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
     student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
       tuteur légal pour utiliser les services de Code.org.
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
@@ -685,6 +683,7 @@ fr:
     download: Télécharger la vidéo
     show_notes: Afficher les notes
     show_video: Afficher la vidéo
+    label: Vidéo
   compatibility:
     upgrade:
       unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre à
@@ -985,6 +984,8 @@ fr:
       Politique de confidentialité</a>
     accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url})
       et de la[Politique de confidentialité](%{privacy_url})
+    accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url})
+      et [Privacy Policy](%{privacy_url}).
     accept: Accepter 
     print: Imprimer
     reminder_desc: Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions
@@ -1437,3 +1438,4 @@ fr:
   page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
     l’adresse web et réessayez, ou retournez à notre page d’accueil.
   page_not_found_button: Retourner à la page d’accueil
+  copy: Copier

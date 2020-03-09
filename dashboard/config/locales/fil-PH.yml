@@ -603,6 +603,7 @@ fil:
     download: I-download ang video
     show_notes: Ipakita ang mga Notes
     show_video: Ipakita ang Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Ang iyong browser ay hindi suportado. Paki-upgrade ang
@@ -896,6 +897,8 @@ fil:
       Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept_label_markdown: Ako ay sumang-ayon sa updated na [mga Palatuntunan](%{tos_url})
       at sa [Privacy Policy](%{privacy_url})
+    accept_tos: Sa pag-sign up sa Code.org, pumapayag ka sa aming [Mga Alituntunin
+      sa Serbisyo](%{tos_url}) at [Patakaran sa Pagkapribado](%{privacy_url}).
     accept: Tanggapin
     print: I-print
     reminder_desc: Nag-update kami sa aming <a href="%{tos_url}" target="_blank">mga
@@ -1200,3 +1203,4 @@ fil:
     accept: Ako ay sumasang-ayon
   gdpr_dialog:
     true: Oo
+  copy: Kopyahin

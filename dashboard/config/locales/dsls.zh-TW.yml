@@ -80,9 +80,9 @@ zh-TW:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: 將右邊的程式放到正確的格子中。
         questions:
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: 配對
       2-3 Graph Paper Multi 1:
         answers:
@@ -1019,10 +1019,12 @@ zh-TW:
 
           本課透過跳舞活動來介紹迴圈（Loop）的程式設計概念。
       GoingPlacesSafely-unplugged:
-        markdown: |
-          # 安全地去到地方
+        markdown: |-
+          # 安全的遨遊網路世界
 
-          網際網路是一個很強大，但有時很危險的地方。當你瀏覽網際網路時要保持安全。
+          網際網路很強大，但有時很危險的地方。當你在瀏覽網際網路時，要隨時注意安全。
+
+          <p align=center>
       HappyLoops-Unplugged:
         markdown: |
           # 開心迴圈（Loop）
@@ -1681,56 +1683,65 @@ zh-TW:
         - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
+        - feedback: 錯誤，沒有移除土堆的程式積木。
         - correct: true
           feedback: 正確！
-        - {}
+        - feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
+          feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
+        - feedback: 錯誤，沒有移除土堆的程式積木。
         - correct: true
           feedback: 正確！
-        - {}
+        - feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
+          feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
+        - feedback: 錯誤，沒有移除土堆的程式積木。
         - correct: true
           feedback: 正確！
-        - {}
+        - feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
         - text: 我不知道。
+          feedback: "`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。"
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 只要有土堆，農夫就會移除它，直到它消失。
+          correct: true
           feedback: 正確！
         - text: 我不知道。
+          feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 只要有土堆，農夫就會移除它，直到它消失。
+          correct: true
           feedback: 正確！
         - text: 我不知道。
+          feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 只要有土堆，農夫就會移除它，直到它消失。
+          correct: true
           feedback: 正確！
         - text: 我不知道。
+          feedback: 只要有土堆，農夫就會移除它，直到它消失。
         questions:
         - {}
       courseD_multi_maze_until10_predict2:

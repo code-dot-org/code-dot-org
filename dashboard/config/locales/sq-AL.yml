@@ -154,8 +154,6 @@ sq:
     valid_password: Fjalëkalimi i vlefshëm!
     invalid_password: Fjalëkalimi duhet të ketë të paktën 6 karaktere
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
-    under_13_consent: Nëse jam nën moshën 13 vjeç, konfirmoj se kam lejen e prindit
-      ose të kujdestarit ligjor për të përdorur shërbimet e Code.org.
     student_consent: Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për
       të përdorur shërbimet e Code.org.
     agree_us_website: Unë pajtohem me përdorimin e një faqe interneti të themeluar
@@ -936,3 +934,4 @@ sq:
     accept: Pranoj
   gdpr_dialog:
     true: Po
+  copy: Kopjo

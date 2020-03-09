@@ -4200,7 +4200,7 @@ de-DE:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -5017,7 +5017,7 @@ de-DE:
           Dein endgültiger Code wird **eine** `wiederhole`<xml><block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="2-10">6</title>
               </block></xml> Schleife, **einen** `Gehe nach Süden` <xml><block type="maze_moveSouth" limit="1"/></xml> Baustein und **einen** `Gehe nach Osten`<xml><block type="maze_moveEast" limit="1"/> </xml> Baustein haben.
-        courseA_harvester_loops5_c: Benutze diesen Weg, um den ganzen Mais zu pflücken!
+        courseA_harvester_loops5_c: Benutze diesen Weg, um den gesamten Mais zu ernten!
       courseA_harvester_loops5_2019:
         courseA_harvester_loops5_a: 'Wenn Du nicht mehr weiter kommst, teile die Aufgabe
           in 2 Teile und löse sie nacheinander: Der eine Teil ist vor der Ecke und
@@ -5026,7 +5026,7 @@ de-DE:
           Dein endgültiger Code wird **eine** `wiederhole`<xml><block type="controls_repeat_simplified_dropdown">
               <title name="TIMES" config="2-10">6</title>
               </block></xml> Schleife, **einen** `Gehe nach Süden` <xml><block type="maze_moveSouth" limit="1"/></xml> Baustein und **einen** `Gehe nach Osten`<xml><block type="maze_moveEast" limit="1"/> </xml> Baustein haben.
-        courseA_harvester_loops5_c: Benutze diesen Weg, um den ganzen Mais zu pflücken!
+        courseA_harvester_loops5_c: Benutze diesen Weg, um den gesamten Mais zu ernten!
       courseA_harvester_loops5a:
         courseA_harvester_loops5a_a: |-
           Du brauchst eine `wiederhole`<xml> <block type="controls_repeat_simplified_dropdown">
@@ -5050,21 +5050,21 @@ de-DE:
       courseA_harvester_loops5b:
         courseA_harvester_loops5b_a: Drücke `Ausführen` und schaue, was passiert!
         courseA_harvester_loops5b_b: Wiederholen sich deine Schleifen die richtige
-          Anzahl von Wiederholungen?
+          Anzahl an Wiederholungen?
         courseA_harvester_loops5b_c: Bewege dich in die eine Richtung, dann in die
           andere auf diesem Weg.
       courseA_harvester_loops5b_2019:
         courseA_harvester_loops5b_a: Drücke `Ausführen` und schaue, was passiert!
         courseA_harvester_loops5b_b: Wiederholen sich deine Schleifen die richtige
-          Anzahl von Wiederholungen?
+          Anzahl an Wiederholungen?
         courseA_harvester_loops5b_c: Bewege dich in die eine Richtung, dann in die
           andere auf diesem Weg.
       courseA_harvester_loops6:
         courseA_harvester_loops6_b: Dies ist der Weg, den du gehen solltest, um den
-          ganzen Mais zu pflücken.
+          gesamten Mais zu ernten.
       courseA_harvester_loops6_2019:
         courseA_harvester_loops6_b: Dies ist der Weg, den du gehen solltest, um den
-          ganzen Mais zu pflücken.
+          gesamten Mais zu ernten.
       courseA_harvester_loops7:
         courseA_harvester_loops7_a: |-
           Du brauchst zwei `wiederhole` <xml><block type="controls_repeat_simplified_dropdown">
@@ -5083,14 +5083,14 @@ de-DE:
           zum Ende.
         courseA_harvester_loops9_b: Habe keine Angst, den Code nach jedem Teil auszuführen,
           um zu sehen, was passiert!
-        courseA_harvester_loops9_c: Folge diesen Weg, um den ganzen Mais zu pflücken.
+        courseA_harvester_loops9_c: Folge diesen Weg, um den gesamten Mais zu ernten.
       courseA_harvester_loops9_2019:
         courseA_harvester_loops9_a: Unterteile dieses Rätsel in drei verschiedene
           Teile. Ein Teil zur ersten Ecke, ein Teil zur zweiten Ecke und ein Teil
           zum Ende.
         courseA_harvester_loops9_b: Habe keine Angst, den Code nach jedem Teil auszuführen,
           um zu sehen, was passiert!
-        courseA_harvester_loops9_c: Folge diesen Weg, um den ganzen Mais zu pflücken.
+        courseA_harvester_loops9_c: Folge diesen Weg, um den gesamten Mais zu ernten.
       courseA_harvester_seq1:
         courseA_harvester_seq1_a: |-
           Verwende diesen Baustein, um den Mais zu pflücken, wenn die Erntemaschine ihn findet!
@@ -5110,14 +5110,14 @@ de-DE:
         courseA_harvester_seq10_b: Du benötigst`Gehe nach Osten`, dann `Gehe nach
           Norden`. Beides zweimal. Vergiss nicht den Mais zu pflücken!
         courseA_harvester_seq10_c: Versuche, diesen Weg zu benutzen, um den gesamten
-          Mais zu pflücken.
+          Mais zu ernten.
       courseA_harvester_seq10_2019:
         courseA_harvester_seq10_a: Wenn Du nicht mehr weiter weißt, versuche zuerst
           einmal die einzelnen Schritte auf ein Blatt Papier zu schreiben.
         courseA_harvester_seq10_b: Du benötigst`Gehe nach Osten`, dann `Gehe nach
           Norden`. Beides zweimal. Vergiss nicht den Mais zu pflücken!
         courseA_harvester_seq10_c: Versuche, diesen Weg zu benutzen, um den gesamten
-          Mais zu pflücken.
+          Mais zu ernten.
       courseA_harvester_seq13:
         courseA_bee_seq1_a: |-
           Verwenden Sie diesen Baustein, um Mais zu pflücken, sobald der Mähdrescher ihn erreicht hat.
@@ -5184,16 +5184,16 @@ de-DE:
 
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_seq5:
-        courseA_harvester_seq5_a: Welcher Baustein bewegt die Erntemaschine in die
-          falsche Richtung?
+        courseA_harvester_seq5_a: Welcher Baustein bewegt den Mähdrescher in die falsche
+          Richtung?
         courseA_harvester_seq5_b: Du musst einen Baustein entfernen.
         courseA_harvester_seq5_c: |-
           Wirf diesen Baustein in den Müll!
 
           <xml><block type="maze_moveNorth"/></xml>
       courseA_harvester_seq5_2019:
-        courseA_harvester_seq5_a: Welcher Baustein bewegt die Erntemaschine in die
-          falsche Richtung?
+        courseA_harvester_seq5_a: Welcher Baustein bewegt den Mähdrescher in die falsche
+          Richtung?
         courseA_harvester_seq5_b: Du musst einen Baustein entfernen.
         courseA_harvester_seq5_c: |-
           Wirf diesen Baustein in den Müll!
@@ -5226,15 +5226,15 @@ de-DE:
           passiert. Wo hört der Mähdrescher auf?
         courseA_harvester_seq9_b: Vergiss nicht, den ganzen Mais zu pflücken! Du musst
           **3** Maiskolben pflücken.
-        courseA_harvester_seq9_c: Du solltest diesen Weg gehen, um den ganzen Mais
-          zu pflücken.
+        courseA_harvester_seq9_c: Du solltest diesen Weg gehen, um den gesamten Mais
+          zu ernten.
       courseA_harvester_seq9_2019:
         courseA_harvester_seq9_a: Führe den Code ein paar Mal aus, um zu sehen, was
           passiert. Wo hört der Mähdrescher auf?
         courseA_harvester_seq9_b: Vergiss nicht, den ganzen Mais zu pflücken! Du musst
           **3** Maiskolben pflücken.
-        courseA_harvester_seq9_c: Du solltest diesen Weg gehen, um den ganzen Mais
-          zu pflücken.
+        courseA_harvester_seq9_c: Du solltest diesen Weg gehen, um den gesamten Mais
+          zu ernten.
       courseA_maze_ramp2_2018:
         '1': |-
           Dein Code sollte so aussehen!
@@ -6929,7 +6929,7 @@ de-DE:
           ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
       courseC_artist_loopsPrePre1a_2018:
         courseC_artist_loopsPrePre1a_a: |-
-          Der erste Block, den du brauchst, ist:
+          Der erste Baustein, den du brauchst, ist:
 
           <xml>  <block type="jump_to_xy" id="callMe">
               <title name="XPOS">200</title>
@@ -6944,7 +6944,7 @@ de-DE:
             </block></xml>
       courseC_artist_loopsPrePre1a_2019:
         courseC_artist_loopsPrePre1a_a: |-
-          Der erste Block, den du brauchst, ist:
+          Der erste Baustein, den du brauchst, ist:
 
           <xml>  <block type="jump_to_xy" id="callMe">
               <title name="XPOS">200</title>
@@ -7877,14 +7877,14 @@ de-DE:
             </block>
           </xml>
       courseD_bounce_events5s_2018:
-        courseD_bounce_events5s_a: Sie müssen die Hand nicht bewegen, um dieses Rätsel
+        courseD_bounce_events5s_a: Du musst die Hand nicht bewegen, um dieses Rätsel
           zu lösen.
         courseD_bounce_events5s_b: |-
           Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:
 
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2019:
-        courseD_bounce_events5s_a: Sie müssen die Hand nicht bewegen, um dieses Rätsel
+        courseD_bounce_events5s_a: Du musst die Hand nicht bewegen, um dieses Rätsel
           zu lösen.
         courseD_bounce_events5s_b: |-
           Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:
@@ -7892,24 +7892,24 @@ de-DE:
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_2018:
         courseD_bounce_events6s_a: |-
-          Hast du eine Ereignis, das so aussieht?
+          Hast du ein Ereignis, das so aussieht?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Wenn du den Code richtig geschrieben hast, musst
           du nicht die Hand bewegen, um zu gewinnen.
       courseD_bounce_events6s_2019:
         courseD_bounce_events6s_a: |-
-          Hast du eine Ereignis, das so aussieht?
+          Hast du ein Ereignis, das so aussieht?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Wenn du den Code richtig geschrieben hast, musst
           du nicht die Hand bewegen, um zu gewinnen.
       courseD_bounce_events7s_2018:
         courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
-          wenn du Lust dazu hast!
+          wenn du magst!
       courseD_bounce_events7s_2019:
         courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
-          wenn du Lust dazu hast!
+          wenn du magst!
       courseD_collector_debugging2a_2018:
         courseD_collector_debugging2a_c: |-
           Was passiert dann?

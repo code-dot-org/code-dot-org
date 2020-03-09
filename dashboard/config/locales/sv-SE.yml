@@ -126,8 +126,6 @@ sv:
     valid_password: Giltigt lösenord!
     invalid_password: Lösenordet måste vara minst 6 tecken långt
     mismatch_password: De två lösenord du skrev matchar inte varandra
-    under_13_consent: Om jag är under 13 år bekräftar jag härmed att jag har min förälders
-      eller målsmans tillåtelse att använda tjänsterna på Code.org.
     agree_us_website: Jag samtycker till att använda en webbplats baserad i USA.
     my_data_to_us: När jag använder denna webbplats kan information om detta skickas
       till och lagras eller bearbetas i USA.
@@ -497,6 +495,7 @@ sv:
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
     show_video: Visa video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Din webbläsare stöds inte. Uppgradera din webbläsare till
@@ -739,6 +738,8 @@ sv:
       </a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>
     accept_label_markdown: Jag samtycker till att de uppdaterade [Användarvillkoren](%{tos_url})
       och [Sekretesspolicy](%{privacy_url})
+    accept_tos: Genom att registrera dig på Code.org godkänner du våra [Servicevillkor](%{tos_url})
+      och vår [Integritetspolicy](%{privacy_url}).
     accept: Godkänn
     print: Skriv ut
     reminder_desc: Vi har uppdaterat våra <a href="%{tos_url}" target="_blank"> Användarvillkor</a>
@@ -985,3 +986,4 @@ sv:
     privacy_policy: sekretesspolicy
     logout: Logga ut
     true: Ja
+  copy: Kopiera

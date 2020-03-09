@@ -111,6 +111,7 @@ class DeleteAccountsHelper
     Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
     Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
+    Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
 
     # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
     ActiveRecord::Base.connection.exec_query(

@@ -186,8 +186,6 @@ da:
     valid_password: Gyldig adgangskode!
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
-    under_13_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
-      eller værges tilladelse til at benytte tjenesterne fra Code.org.
     student_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
       eller værges tilladelse til at benytte tjenesterne fra Code.org.
     agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.
@@ -742,6 +740,8 @@ da:
     privacy: Privatlivspolitik
     accept_label_markdown: Eg godtar [tenestevilkåra](%{tos_url}) og[retningslinjer
       for personvern](%{privacy_url}).
+    accept_tos: Ved at tilmelde dig Code.org, accepterer du vores [Servicevilkår](%{tos_url})
+      og [Privatlivspolitik](%{privacy_url}).
     print: Udskriv
     reminder_desc_markdown: Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår
       for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer
@@ -913,3 +913,4 @@ da:
     privacy_policy: Privatlivspolitik
     logout: Log af
     true: Ja
+  copy: Kopier

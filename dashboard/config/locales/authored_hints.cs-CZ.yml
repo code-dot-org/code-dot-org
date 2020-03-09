@@ -247,6 +247,8 @@ cs-CZ:
           To znamená, že obě kratší strany mají dohromady 200 pixelů.
 
           \*\* Co znamená 200/2? \*\*
+        4-5_Artist_3_b: Pokud hned nevidíš, kde smyčka `opakuj` jde použít, zkus kódovat
+          celé řešení a hledej opakující se vzor.
       4-5 Artist 4:
         4-5_Artist_4_a: |-
           V kruhu je 360 stupňů!
@@ -294,6 +296,23 @@ cs-CZ:
           prostoru. V jakém pořadí by měly následovat?
         4-5 Bee Conditionals 6_b: Ujistěte se, že alespoň **3**krát zkontrolujete,
           zda má květ více než **0** nektaru.
+      4-5 Maze 10:
+        4-5_Maze_10_a: |-
+          Pokud nemůžeš hned přijít na to, jak vyřešit hádanku pomocí smyček, zkus ji vyřešit delší cestou a potom hledej vzor.
+
+          Co bys měl vložit do bloku `opakuj dokud`, aby se kód zkrátil?
+      4-5 Maze 5:
+        4-5_Maze_5_a: Zkus použít smyčku `opakuj` kdykoli budeš potřebovat použít
+          `posuň se vpřed` na více než dva kroky.
+        4-5_Maze_5_b: V hádance můžeš použít více než jednu smyčku `opakuj`.
+      4-5 Maze 6:
+        4-5_Maze_6_a: |-
+          Zkus sledovat cestu prstem.\
+          Je to nejkratší cesta, kterou můžeš najít?
+      4-5 Maze 7:
+        4-5_Maze_7_a: |-
+          **Chceš, aby tvůj kód byl co nejkratší?**
+          Hledej ve svých blocích vzory. Vidíš něco, co se opakuje? Zkus místo toho vložit smyčku!
       Course 4 Artist 11:
         Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka
           vpravo je o 120 stupňů. '
@@ -744,9 +763,64 @@ cs-CZ:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Můžeš použít podobnou smyčku k vytvoření zdí a střechy. Zkus opakovat různé bloky.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Vytvoř svoje vlastní nebo stiskni ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pro nějaké nápady!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Můžeš použít bloky `skoč` k přesunu na jiná místa.
+      course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_b: Když dokončíš jednu ptačí budku, `skoč`
+          na další!
+        courseA_artist_loops_challenge2_c: Pro tuto výzvu budete potřebovat SPOUSTU
+          bloků uvnitř smyčky.
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: Pokud se něco pokazí, zkus změnit čísla
+          v každé smyčce.
+        courseA_collector_loops_challenge1_c: Na pravé straně jeskyně je 6 drahokamů,
+          ale musíš se posunout a sbírat pouze 5 krát. Víš proč?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: K vyřešení této hádanky potřebuješ pouze
+          jeden \[] [0] blok.
+        courseA_collector_loops_challenge2_a: |-
+          Než se přesuneš na jih, můžeš se vrátit po stejné cestě.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Začni opakováním příkazů „posuň se na jih“ a „získej poklad“.
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          Severní vzor je mírně odlišný od jižního.
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
+      course1_maze_debugging_challenge1:
+        courseA_maze_seq_challenge1_a: Některé cesty povedou k TNT, pokud se posuneš
+          příliš daleko.
+      course1_maze_debugging_challenge2:
+        courseB_maze_seq_challenge2_b: Uspořádej bloky a jdi prostřední cestou.
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: Zkus začít pohybem na západ.
+      course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_e: |-
+          Nakonec udělej Wendel - kouzelníka po kliknutí na Spiff!
+
+          [blockly block] [0]
+      course2_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: 'Obdélník je široký 200 pixelů a vysoký
+          100 pixelů. '
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by
           tam byl jeden kousek pokladu na každé hromádce!
@@ -765,6 +839,11 @@ cs-CZ:
           různých úsecích. Každý z nich má vzor, který můžete opakovat.
         courseC_maze_loops_challenge1_b: Mezi bloky `opakuj` budete potřebovat bloky
           `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Když mě pošleš pozpátku, dávej dobrý
+          pozor, že správně zahnu!_
+        courseC_maze_programming_challenge2_b: Nejkratší řešení použije pouze 5 bloků,
+          ale využije blok "opakuj"!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
@@ -775,6 +854,26 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "Zkus použít  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\ncyklus!"
+      courseA_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Potřebuješ použít jen 1 blok, abys tohle
+          vyřešil.
+        courseA_collector_loops_challenge2_a: Můžeš se vrátit zpátky přes cestu předtím,
+          než se posuneš na jih.
+      courseA_collector_preLoops4:
+        courseA_collector_preLoops4_a: Abys získal poklad, zaklapni na konec programu
+          dva ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          bloky a jeden ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          blok a zmáčkni "Spustit"!
+      courseA_collector_preLoops5:
+        courseA_collector_preLoops5_a: Budeš muset jít dvěma různými směry, abys získal
+          aspoň jeden drahokam!
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: K vyřešení této úlohy budeš potřebovat využít
+          dva ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          bloky.
       courseA_harvester_seq2:
         courseA_harvester_seq2_b: Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_harvester_seq2_2019:
@@ -785,6 +884,16 @@ cs-CZ:
         '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_maze_seq5_2019:
         '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Použij tento nový blok!
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          Abys kód zopakoval, přetáhni  `opakuj` <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>cyklus, do kterého pak vlož blok, jaký chceš.
       courseB_maze_seq6:
         courseB_maze_seq5_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseB_maze_seq6_2018:
@@ -811,6 +920,15 @@ cs-CZ:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_harvester_loops3:
+        courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_harvester_loops3_2018:
+        courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_harvester_loops3_2019:
+        courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_maze_programming6:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseC_maze_programming6_2018:
@@ -832,6 +950,52 @@ cs-CZ:
           Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
+      courseD_bee_conditionals2:
+        courseD_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
+          chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
+      courseD_bee_conditionals2_2018:
+        courseD_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
+          chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
+      courseD_bee_conditionals2_2019:
+        courseD_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
+          chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
+      courseD_bee_conditionals3:
+        courseD_bee_conditionals3_a: 'Nezapomeň zkontrolovat každé pole pomocí příkazu
+          `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
+        courseD_bee_conditionals3_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_bee_conditionals3_2018:
+        courseD_bee_conditionals3_a: 'Nezapomeň zkontrolovat každé pole pomocí příkazu
+          `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
+        courseD_bee_conditionals3_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_bee_conditionals3_2019:
+        courseD_bee_conditionals3_a: 'Nezapomeň zkontrolovat každé pole pomocí příkazu
+          `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
+        courseD_bee_conditionals3_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_bee_conditionals4:
+        courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
+          byl mrak, ačkoliv můžeš vidět celou cestu.
+        courseD_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
+          každé pole a ujisti se, jestli na něm není nektar.
+      courseD_bee_conditionals4_2018:
+        courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
+          byl mrak, ačkoliv můžeš vidět celou cestu.
+        courseD_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
+          každé pole a ujisti se, jestli na něm není nektar.
+      courseD_bee_conditionals4_2019:
+        courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
+          byl mrak, ačkoliv můžeš vidět celou cestu.
+        courseD_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
+          každé pole a ujisti se, jestli na něm není nektar.
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: Když použiješ blok `pokud na květině`, můžeš
+          toto vyřešit použitím vnořených cyklů. Napiš program pro levou a spodní
+          cestu, pak všechno dvakrát zopakuj!
+        courseD_bee_conditionals5_c: 'Abys pokračoval po cestě, musíš říct včele `posuň
+          se vpřed`. Jak se posunuje, hledá včela květinu. Ví, že `pokud na květině`,
+          její pokyn zní: `získej nektar`.'
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_a: |-
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
@@ -883,8 +1047,38 @@ cs-CZ:
           <block type="maze_nectar"/>
           </statement>
           </block></xml>
+      courseD_farmer_condLoops6_2019:
+        courseD_farmer_condLoops6_a: Využij cyklus `když je cesta vpřed` nebo blok
+          `když je cesta vpřed / jinak`, abys posunul farmářku dále přes spirálu.
+      courseD_farmer_condLoops7_2019:
+        courseD_farmer_condLoops7_b: Zkus využít `pokud je cesta vpřed`, aby se sběračka
+          pohybovala po správný počet kroků.
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Použij tento nový blok!
+
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Můžeš zatočit doprava nebo doleva z Ruďákova
+          pohledu. Jestli jsi nasměrovaný doprava, po zatočení doprava budeš směřovat
+          dolů.
+        courseC_maze_programming4_b: Aby ses držel cesty, posuň se vpřed a jednou
+          zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě
+          jednou, abys získal žalud.
+      courseD_maze_intro5a_2019:
+        courseC_maze_programming5_b: Pamatuj si, že otočky jsou z Ruďákovy perspektivy.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_b: Aby ses držel cesty, posuň se vpřed a jednou
+          zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě
+          jednou, abys získal žalud.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_b: Aby ses držel cesty, posuň se vpřed a jednou
+          zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě
+          jednou, abys získal žalud.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_artist_concept_challenge1:
@@ -905,6 +1099,9 @@ cs-CZ:
           -   použít funkci
           -   posunout se vpřed o 100 + 75 pixelů
           -   použít funkci
+      courseE_artist_functions6:
+        grade4_artist_functions_windows0_c: Neboj se dělat chyby! Zkus používat bloky
+          a spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseE_artist_functions8:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2018:
@@ -937,15 +1134,59 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
+      courseE_farmer_functions4b:
+        courseE_farmer_functions4b_a: Neboj se dělat chyby! Zkus používat bloky a
+          spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseE_farmer_functions5c:
+        courseE_farmer_functions5c_b: Neboj se dělat chyby! Zkus používat bloky a
+          spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_artist_for3:
+        courseF_artist_for3_b: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_artist_for3_2018:
+        courseF_artist_for3_b: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_artist_for3_2019:
+        courseF_artist_for3_b: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_artist_for4:
+        courseF_artist_for4_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_artist_for4_2018:
+        courseF_artist_for4_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_artist_for4_2019:
+        courseF_artist_for4_c: Neboj se dělat chyby! Zkus používat bloky a spouštět
+          kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_bee_conditionals2:
+        courseF_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
+          chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
+      courseF_bee_conditionals3:
+        courseF_bee_conditionals3_a: 'Nezapomeň zkontrolovat každé pole pomocí příkazu
+          `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. '
+      courseF_bee_conditionals4:
+        courseD_bee_conditionals4_a: Můžeš brát každé pole tak, jako kdyby na něm
+          byl mrak, ačkoliv můžeš vidět celou cestu.
+        courseF_bee_conditionals4_b: Použij `když` příkaz uvnitř svého cyklu a zkontroluj
+          každé pole a ujisti se, jestli na něm není nektar.
       courseF_bee_conditionals8:
         courseF_bee_conditionals8_a: |-
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
           K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
+      courseF_bee_for5:
+        courseF_bee_for5_c: Neboj se dělat chyby! Zkus používat bloky a spouštět kód
+          a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_bee_for5_2018:
+        courseF_bee_for5_c: Neboj se dělat chyby! Zkus používat bloky a spouštět kód
+          a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseF_bee_for5_2019:
+        courseF_bee_for5_c: Neboj se dělat chyby! Zkus používat bloky a spouštět kód
+          a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.

@@ -375,8 +375,8 @@ es-ES:
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último
           puzzle, excepto que el medio hexágono es un poco más grande. '
         Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo
-          y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80
-          píxeles de largo y necesitas girar 120 grados "
+          y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen
+          80 píxeles de largo y necesitas girar 120 grados "
       Course 4 Artist 6:
         Course_4_Artist_6_a: Hay 3 triángulos dentro de la rotación de 360 grados...
           ¿Cuántas veces 3 entra en 360?
@@ -942,6 +942,12 @@ es-ES:
           **Desafío opcional**
 
           Cambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: |-
+          **¿Cómo se pasa este nivel?**
+
+          -   Tu bailarín tiene que realizar cuatro movimientos diferentes para pasar de nivel.
+              _Este nivel termina después de 12 compases._
       Dance_Party_06:
         validation: |-
           **¿Cómo paso este nivel?**
@@ -4433,11 +4439,6 @@ es-ES:
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
           al espacio de trabajo para resolver este puzle.
       courseC_PlayLab_eventsA_2019:
-        courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
-          `definir actor __ a una velocidad ___` para resolver este puzle.
-        courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
-          al espacio de trabajo para resolver este puzle.
-      courseC_PlayLab_eventsA_embed_2019:
         courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
           `definir actor __ a una velocidad ___` para resolver este puzle.
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`

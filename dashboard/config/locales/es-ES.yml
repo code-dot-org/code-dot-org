@@ -179,8 +179,6 @@ es:
     valid_password: Contraseña válida!
     invalid_password: La Contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas  introducidas no coinciden
-    under_13_consent: Si soy menor de 13 años, confirmo que tengo la autorización
-      de mis padres o tutores legales para utilizar los servicios de Code.org.
     student_consent: Confirmo que tengo la autorización de mis padres o guardianes
       legales para utilizar los servicios de Code.org.
     agree_us_website: Estoy de acuerdo con el uso de un sitio web con sede en los
@@ -671,6 +669,7 @@ es:
     download: Descargar vídeo
     show_notes: Mostrar notas
     show_video: Mostrar video
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Su navegador no es compatible. Por favor, actualice su
@@ -1405,3 +1404,4 @@ es:
   page_not_found_description: La página que busca no existe en esta dirección. Verifique
     la dirección web y vuelva a enviarla. O regrese nuestra página de inicio.
   page_not_found_button: Volver a la página de inicio
+  copy: Copiar

@@ -17,7 +17,6 @@
   learn_now: "Lær no"
   petition_message: "Alle elevar på alle skular burde få høve til å lære koding"
   petition_sign_message: 'Om du er einig, skriv under med namnet ditt. Gå saman med # andre.'
-  petition_sign_message_support: 'Signér om du støttar oss, registrer namnet ditt og bli med på epostlista vår med # andre.'
   petition_join_others: 'Bli med # andre'
   name: "Namn"
   email: "E-post"
@@ -149,6 +148,8 @@
   if_you_enjoyed: "Hvis du likte opplæringa, kan du be venane dine om å prøve det også!  Vi vil at heile verda skal lære."
   personalize_certificate: "Tilpass diplomet"
   print_certificates: "Skriv ut diplomar"
+  print_ice_art_from_frozen: "Print iskunst fra Frozen-opplæringen"
+  print_one_here_certificates: "Print en her."
   share_achievement: "Del det du har klart"
   beyond_hour_message: "Hald fram med dei <a href='http://studio.code.org'>andre kursa våre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir etter Kodetimen</a>."
   leaderboards_for_hoc: "Resultatliste for Kodetimen."

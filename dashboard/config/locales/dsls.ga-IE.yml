@@ -4,26 +4,26 @@ ga-IE:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: Tosaigh le cearnóg<br/>Cuir triantán os cionn na cearnóige<br/>Cuir
-            triantán faoin chearnóg
-        - {}
-        - text: Tosaigh le cearnóg<br/>Cuir comhthreomharán os cionn na cearnóige<br/>Cuir
-            triantán ar an taobh deas den chomhthreomharán
-        - text: Tosaigh le cearnóg<br/>Cuir triantán faoin chearnóg<br/>Cuir comhthreomharán
-            ar an taobh deas den triantán
+        - text: "Tosaigh le cearnóg \nCuir triantán os cionn na cearnóige \nCuir triantán
+            faoin chearnóg"
+        - correct: true
+        - text: "Tosaigh le cearnóg \nCuir comhthreomharán os cionn na cearnóige \nCuir
+            triantán ar an taobh deas den chomhthreomharán"
+        - text: "Tosaigh le cearnóg \nCuir triantán faoin chearnóg \nCuir comhthreomharán
+            ar an taobh deas den triantán"
         questions:
         - text: Roghnaigh an t-algartam a dhéanfadh an pictiúr.
         title: Ilroghnach
       2-3 Algorithms Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-        content1: Tosaigh le triantán<br/>Cuir cearnóg faoin triantán<br/>Cuir triantán
-          eile faoin chearnóg
+        content1: "Tosaigh le triantán \nCuir cearnóg faoin triantán \nCuir triantán
+          eile faoin chearnóg"
         questions:
-        - text: Cén pictiúr <em>nach</em> leanann an t-algartam seo?
+        - text: Cén pictiúr _nach_ leanann an t-algartam seo?
         title: Ilroghnach
       2-3 Big Event Match 1:
         answers:
@@ -46,23 +46,23 @@ ga-IE:
         - {}
         content2: Úsáid an eochair chun gach cód a mheaitseáil leis an litir cheart
         questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "**N**"
+        - text: "**O**"
+        - text: "**P**"
+        - text: "**Q**"
         title: Meaitseáil
       2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: De réir rialacha an chluiche, cad é an grúpa cártaí leis an scór ceart?
         title: Ilroghnach
       2-3 Getting Loopy Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -83,7 +83,7 @@ ga-IE:
       2-3 Graph Paper Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cén clár a dhéanfadh an pictiúr seo?
@@ -102,17 +102,17 @@ ga-IE:
       2-3 Maze Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
-        - {}
+        - text: Cé hiad na blocanna a chabhrófar liom an mhuc a bhaint amach?
         title: 'Cathair Ghríobháin: Ilroghnach'
       2-3 Relay Programming Multi 1:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
         title: Ilroghnach
@@ -120,21 +120,21 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Cad é an pictiúr+cód *nach bhfuil* botún ann?
         title: Ilroghnach
       2-3 artist debug multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       2-3 artist functions multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -157,7 +157,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cén cruth a dhéanfadh an lúb seo?
@@ -167,7 +167,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Cén cruth a dhéanfadh an clár seo?
         title: 'Ealaíontóir: Lúba: Ilroghnach'
@@ -188,21 +188,21 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cén chomparáid atá fíor?
       2-3 bee conditionals multi 3:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - text: Roghnaigh na blocanna is fearr.
       2-3 bee loops multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -223,7 +223,7 @@ ga-IE:
       2-3 maze multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -231,18 +231,18 @@ ga-IE:
         title: 'Cathair Ghríobháin: Ilroghnach a haon'
       4-5 Algorithms Match 1:
         answers:
-        - text: "<h4>Socraigh scór Imreoir 1 go 0</h4>"
-        - text: "<h4>Rollann Imreoir 1 dísle</h4>"
-        - text: "<h4>Cuir rolladh Imreoir 1 leis an scór iomlán</h4>"
-        - text: "<h4>Cuir scóir na n-imreoirí i gcomparáid lena chéile chun buaiteoir
-            a fháil</h4>"
+        - text: "**Socraigh scór Imreoir 1 go 0**"
+        - text: "**Rollann Imreoir 1 dísle**"
+        - text: "**Cuir rolladh Imreoir 1 leis an scór iomlán**"
+        - text: "**Cuir scóir na n-imreoirí i gcomparáid lena chéile chun buaiteoir
+            a fháil**"
         content1: Cuir na céimeanna sa gcluiche Díslí san ord ba chóir go ndéanfaí
           san algartam iad.
         questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
+        - text: "**1)**"
+        - text: "**2)**"
+        - text: "**3)**"
+        - text: "**4)**"
         title: Meaitseáil
       4-5 Algorithms Multi 1:
         answers:
@@ -250,6 +250,7 @@ ga-IE:
         - text: Brioscaí a bhácáil
         - text: Siopadóireacht ó liosta
         - text: Banana
+          correct: true
         questions:
         - text: Cad é an tasc is deacra le cur síos a dhéanamh air mar algartam?
         title: Ilroghnach
@@ -262,31 +263,33 @@ ga-IE:
         content1: Rinneadh píosaí beaga de gach ceann de na feithiclí seo. Meaitseáil
           gach feithicil lena liosta píosaí.
         questions:
-        - text: "<h3>Rothaí/taobh: 2<br/>Fuinneoga/taobh: 0</h3>"
-        - text: "<h3>Rothaí/taobh: 2<br/>Fuinneoga/taobh: 1</h3>"
-        - text: "<h3>Rothaí/taobh: 2<br/>Fuinneoga/taobh: 6</h3>"
-        - text: "<h3>Rothaí/taobh: 3<br/>Fuinneoga/taobh: 2</h3>"
+        - text: "**Rothaí/taobh: 2** \n**Fuinneoga/taobh: 0**"
+        - text: "**Rothaí/taobh: 2** \n**Fuinneoga/taobh: 1**"
+        - text: "**Rothaí/taobh: 2** \n**Fuinneoga/taobh: 6**"
+        - text: "**Rothaí/taobh: 3** \n**Fuinneoga/taobh: 2**"
         title: Meaitseáil
       4-5 Computational Thinking Multi 1:
         answers:
         - text: _____ _____ _____ é Cathair na Gaillimhe.
         - text: Is baile _____ é _____.
+          correct: true
         - text: Is _____ é _____ _____.
         - text: Is baile _____ é Cathair na Mart.
         questions:
-        - text: Is baile mór é Cathair na Gaillimhe.<br/>Is baile meánmhéide é Cathair
-            na Mart.<br/>Is baile beag é Gleann Cholm Cille.
+        - text: "Is baile mór é Cathair na Gaillimhe.  \nIs baile meánmhéide é Cathair
+            na Mart  \nIs baile beag é Gleann Cholm Cille."
         title: Ilroghnach
       4-5 Crowdsourcing Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         questions:
-        - text: Cén pictiúr a thaispeánann sluafhoinsiú?
+        - text: Cén pictiúr a thugann an léiriú is fearr ar shluafhoinsiú?
         title: Ilroghnach
       4-5 Crowdsourcing Multi 2:
         answers:
         - text: Do sheomra leapa a ghlanadh
+          correct: true
         - text: Do mhilseog a ithe
         - text: Do ghruaig a scuabadh
         - text: D'aghaidh a ní
@@ -297,6 +300,7 @@ ga-IE:
         answers:
         - text: Do bhreithlá
         - text: An bia is ansa leat
+          correct: true
         - text: Do sheoladh baile
         - text: Cárta creidmheasa do thuismitheoirí
         questions:
@@ -307,7 +311,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Dá ndéanfá iarracht logáil isteach i code.org, cad é an seoladh IP
             is dóichí a dtreoródh DNS chuige thú?
@@ -315,7 +319,7 @@ ga-IE:
       4-5 Internet Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -325,7 +329,7 @@ ga-IE:
       4-5 Songwriting Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -348,16 +352,16 @@ ga-IE:
       4-5 Suncatchers Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
-        - text: Cad é an clár <em>nach ndéanann</em> an seicheamh céanna a dhéanann
-            Clár 1?
+        - text: Cad é an clár _nach ndéanann_ an seicheamh céanna a dhéanann Clár
+            1?
         title: Ilroghnach
       4-5 artist loops multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -366,7 +370,7 @@ ga-IE:
       4-5 artist multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -376,7 +380,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cé acu an pictiúr siméadrach?
@@ -385,7 +389,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Roghnaigh na blocanna is fearr.
@@ -393,7 +397,7 @@ ga-IE:
       4-5 bee debug multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -401,7 +405,7 @@ ga-IE:
         title: 'Beach: Dífhabhtú: Ilroghnach'
       4-5 bee loops multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -410,7 +414,7 @@ ga-IE:
         title: 'Beach: Lúba: Ilroghnach'
       4-5 maze conditionals multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -430,7 +434,7 @@ ga-IE:
         title: 'Cathair Ghríobháin: Meaitseáil'
       4-5 maze multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -440,28 +444,33 @@ ga-IE:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         questions:
         - {}
         - {}
@@ -548,7 +557,7 @@ ga-IE:
         - {}
       CSD U3 Boolean MC:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -557,7 +566,7 @@ ga-IE:
         title: teideal
       CSD U3 Boolean MC_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -566,7 +575,7 @@ ga-IE:
         title: teideal
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -577,19 +586,19 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         answers:
@@ -622,7 +631,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -630,7 +639,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -638,7 +647,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -646,13 +655,13 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -660,7 +669,7 @@ ga-IE:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -693,7 +702,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 array multi_2018:
@@ -701,7 +710,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 array multi_2018_2019:
@@ -709,7 +718,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi:
@@ -717,7 +726,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
@@ -725,7 +734,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
@@ -733,13 +742,175 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Lean ort ag damhsa!
+
+          Anois, cruthóidh tú tionscadal de do chuid féin. Níl aon dúshláin anseo, ina áit sin, gheobhaidh tú tionscadail éagsúla a thaispeánann duit conas is féidir leat cóisirí damhsa níos casta a chruthú.
+
+          Is féidir leat na leibhéil seo a dhéanamh _in ord ar bith_. Léim thart le fáil amach cén chaoi a ndearnadh rud éigin i leibhéal eile, nó cuir coincheapa ó leibhéil éagsúla le chéile. Bain triail as gach ceann acu, roghnaigh an ceann is ansa leat, agus caith d'am ag obair chun an ceann sin a chur in oiriúint duit féin.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Ar Aghaidh</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Tagaimis le Chéile
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Cá ndeachaigh siad?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Foirne Damhsa
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Ceathrúna Nóta
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Dord, Meán-Raon, Tribil
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Níos Sciobtha, Níos Moille
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Lean ort ag damhsa!
+
+          Anois, cruthóidh tú tionscadal de do chuid féin. Níl aon dúshláin anseo, ina áit sin, gheobhaidh tú tionscadail éagsúla a thaispeánann duit conas is féidir leat cóisirí damhsa níos casta a chruthú.
+
+          Is féidir leat na leibhéil seo a dhéanamh _in ord ar bith_. Léim thart le fáil amach cén chaoi a ndearnadh rud éigin i leibhéal eile, nó cuir coincheapa ó leibhéil éagsúla le chéile. Bain triail as gach ceann acu, roghnaigh an ceann is ansa leat, agus caith d'am ag obair chun an ceann sin a chur in oiriúint duit féin.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Ar Aghaidh</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Anonn is Anall
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Tuilleadh Cnaipí
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Tagaimis le Chéile
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Cá ndeachaigh siad?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Foirne Damhsa
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ceathrúna Nóta
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Dord, Meán-Raon, Tribil
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Níos Sciobtha, Níos Moille
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       K-1 Artist 1 Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -747,7 +918,7 @@ ga-IE:
         title: Ilroghnach
       K-1 Artist 1 Multi 2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -770,20 +941,20 @@ ga-IE:
       K-1 Bee 1 Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
-        - text: Cé mhéad neachtar?
+        - text: Cé mhéad neachtar é seo?
         title: Ilroghnach
       K-1 Bee 1 Multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
-        - text: Cé mhéad neachtar?
+        - text: Cé mhéad neachtar é seo?
         title: Ilroghnach
       K-1 Bee Loops Match 1:
         answers:
@@ -813,14 +984,13 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
-        - text: Cad é an t-ainmhí a bhfuil an lorg digiteach <strong>is contúirtí</strong>
-            aige?
+        - text: Cad é an t-ainmhí a bhfuil an lorg digiteach **is contúirtí** aige?
         title: Ilroghnach
       K-1 Getting Loopy Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -829,7 +999,7 @@ ga-IE:
       K-1 Happy Maps Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -837,15 +1007,15 @@ ga-IE:
         title: Ilroghnach
       K-1 Keep it Private Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
-        - text: Cén t-eolas <strong>nár chóir duit</strong> comhroinnt ar líne?
+        - text: Cén t-eolas **nár chóir duit** comhroinnt ar líne?
         title: Ilroghnach
       K-1 Maze Debugging Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -854,7 +1024,7 @@ ga-IE:
         title: Ilroghnach
       K-1 Maze Loops Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -864,7 +1034,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Roghnaigh an bloc "athdhéan" ceart.
         title: Ilroghnach
@@ -885,7 +1055,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cad é an freagra a réiteodh an leibhéal seo?
@@ -893,7 +1063,7 @@ ga-IE:
       K-1 Move It Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -903,14 +1073,14 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Cén chéim a chuirfeá ag tús an algartaim?
         title: Ilroghnach
       K-1 Plant a Seed Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cén chéim a chuirfeá in áit an chomhartha ceiste?
@@ -918,7 +1088,7 @@ ga-IE:
       K-1 Word Search Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cad iad na blocanna a litreodh "MOVE"?
@@ -926,15 +1096,21 @@ ga-IE:
       K-1 Word Search Multi 3:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Cén focal a litreodh na blocanna seo?
         title: Ilroghnach
+      New Challenge Introduction:
+        content1: cur síos anseo
+      'Technique: Frequency Analysis':
+        content1: cur síos anseo
+      Terminology Recap:
+        content1: cur síos anseo
       behaviors 1 predict:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Mícheart
         questions:
@@ -942,7 +1118,7 @@ ga-IE:
       behaviors 4 predict:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Mícheart
         questions:
@@ -951,7 +1127,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -959,7 +1135,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -967,38 +1143,41 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1006,7 +1185,7 @@ ga-IE:
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1014,7 +1193,7 @@ ga-IE:
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1022,7 +1201,7 @@ ga-IE:
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1030,7 +1209,7 @@ ga-IE:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1038,7 +1217,7 @@ ga-IE:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1047,7 +1226,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Níl a fhios agam
         questions:
         - {}
@@ -1055,7 +1234,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Níl a fhios agam
         questions:
         - {}
@@ -1063,14 +1242,14 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Níl a fhios agam
         questions:
         - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1078,7 +1257,7 @@ ga-IE:
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1086,7 +1265,7 @@ ga-IE:
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1097,6 +1276,7 @@ ga-IE:
         - text: B
         - text: C
         - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1105,6 +1285,7 @@ ga-IE:
         - text: B
         - text: C
         - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1113,11 +1294,13 @@ ga-IE:
         - text: B
         - text: C
         - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1126,6 +1309,7 @@ ga-IE:
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1134,6 +1318,7 @@ ga-IE:
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
@@ -1142,7 +1327,7 @@ ga-IE:
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1150,7 +1335,7 @@ ga-IE:
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1158,14 +1343,14 @@ ga-IE:
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1173,7 +1358,7 @@ ga-IE:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1181,7 +1366,7 @@ ga-IE:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1191,7 +1376,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1199,7 +1384,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1207,31 +1392,34 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
         questions:
         - {}
@@ -1239,7 +1427,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1247,7 +1435,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1255,7 +1443,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1263,14 +1451,14 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1278,7 +1466,7 @@ ga-IE:
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1286,7 +1474,7 @@ ga-IE:
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1294,7 +1482,7 @@ ga-IE:
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1303,7 +1491,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1311,7 +1499,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1319,13 +1507,13 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1333,7 +1521,7 @@ ga-IE:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1341,7 +1529,7 @@ ga-IE:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1350,7 +1538,7 @@ ga-IE:
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1358,7 +1546,7 @@ ga-IE:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1366,7 +1554,7 @@ ga-IE:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1374,14 +1562,14 @@ ga-IE:
       courseD_multi_scrat_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1392,14 +1580,14 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1407,7 +1595,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1416,7 +1604,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_2018:
@@ -1424,7 +1612,7 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
@@ -1432,13 +1620,13 @@ ga-IE:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1446,7 +1634,7 @@ ga-IE:
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1455,7 +1643,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1463,7 +1651,7 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1471,13 +1659,13 @@ ga-IE:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1485,7 +1673,7 @@ ga-IE:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1493,7 +1681,7 @@ ga-IE:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1501,7 +1689,7 @@ ga-IE:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1510,14 +1698,14 @@ ga-IE:
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1526,7 +1714,7 @@ ga-IE:
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1534,7 +1722,7 @@ ga-IE:
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1542,7 +1730,7 @@ ga-IE:
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1550,14 +1738,14 @@ ga-IE:
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1566,7 +1754,7 @@ ga-IE:
       coursee_prediction_artistfunction2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1574,7 +1762,7 @@ ga-IE:
       coursee_prediction_artistfunction2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1582,7 +1770,7 @@ ga-IE:
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1590,7 +1778,7 @@ ga-IE:
       grade2_multi_collector_A_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1598,7 +1786,7 @@ ga-IE:
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1606,7 +1794,7 @@ ga-IE:
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:

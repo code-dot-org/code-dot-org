@@ -460,6 +460,7 @@ et:
     download: Lae video alla
     show_notes: Näita märkmeid
     show_video: Näita videot
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a
@@ -933,3 +934,4 @@ et:
     accept: Olen nõus
   gdpr_dialog:
     true: Jah
+  copy: Kopeeri

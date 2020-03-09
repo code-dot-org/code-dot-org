@@ -17,7 +17,6 @@
   learn_now: "Học ngay"
   petition_message: "Mỗi học sinh trong tất cả các trường nên có cơ hội để tìm hiểu khoa học máy tính"
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người khác.'
-  petition_sign_message_support: 'Nếu bạn hỗ trợ chúng tôi, hãy ký tên.  Tham gia cùng # những người khác.'
   petition_join_others: 'Tham gia cùng # những người khác'
   name: "Tên"
   email: "Thư điện tử"
@@ -50,7 +49,7 @@
   csedweek_map_legend_cs_tech_jam: "CS Tech Jam"
   cded_sign_up: "Đăng ký"
   cded_try_it: "Hãy thử nó"
-  try_now: "Thử ngay bây giờ"
+  try_now: "Thử ngay"
   california_heading: "Yêu cầu trường học của bạn giảng dạy khoa học máy tính"
   california_text: "Bất kỳ giáo viên có thể cung cấp các <a href='http://studio.code.org/'>khóa học miễn phí</a>.  Bất kỳ trường tiểu học có thể <a href='http://code.org/educate/k5'>dạy khoa học máy tính</a>. Yêu cầu trường trung học để <a href = 'http://code.org/educate/districts' >hợp tác với chúng tôi</a>."
   california_button: "Tìm hiểu thêm"
@@ -896,3 +895,5 @@
   hoc2018_dance_amazon_scholarship_programs_button: "Đăng ký ngay"
   hoc2018_dance_measure: "Nhịp"
   hoc2018_dance_measure_colon: 'Nhịp:'
+  hoc2018_mc_with_microsoft: "Hợp tác cùng"
+  hoc2018_mc_thank_microsoft: "Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ năng cần thiết để thành công trong thế kỷ 21."

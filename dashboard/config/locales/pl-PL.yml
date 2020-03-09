@@ -152,8 +152,6 @@ pl:
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
-    under_13_consent: Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub
-      opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services.
     student_consent: Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego
       rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie
       Code.org.
@@ -351,6 +349,7 @@ pl:
       district_dashboard: Panel dzielnicy/okręgu
       label: Witaj %{username}
       stats: Studio Kodowania (Code Studio)
+      my_projects: Moje projekty
       settings: Moje konto
       logout: Wyloguj się
       signin: Zaloguj się
@@ -608,6 +607,7 @@ pl:
     download: Pobierz wideo
     show_notes: Pokaż Notatki
     show_video: Pokaż Wideo
+    label: Wideo
   compatibility:
     upgrade:
       unsupported_message: Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić
@@ -885,6 +885,8 @@ pl:
       użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>
     accept_label_markdown: Akceptuję zaktualizowane [Warunki użytkowania](%{tos_url})
       i [Politykę prywatności](%{privacy_url})
+    accept_tos: Rejestrując się na Code.org, akceptujesz nasze [Terms of Service](%{tos_url})
+      oraz [Privacy Policy](%{privacy_url}).
     accept: Zaakceptuj
     print: Drukuj
     reminder_desc: Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki
@@ -1195,3 +1197,4 @@ pl:
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: Powrót do strony domowej
+  copy: Kopia/Kopiuj

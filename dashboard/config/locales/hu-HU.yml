@@ -10,9 +10,9 @@ hu:
         frissített Általános Szerződési Feltételeket, hogy hozzáférjen ehhez a tartalomhoz.
         A tanár ezt megteheti, ha bejelentkezik a Kód Stúdióba, ha rákattint a Kódex
         stúdió kezdőlapjának tetején található "Felülvizsgálat frissítések" gombra.
-      pair_programmer: Jelenleg páros programozást végzel olyan diákkal, aki nem fér
-        hozzá ehhez a tartalomhoz. A tartalom eléréséhez állítsd le a programozást,
-        és próbáld újra.
+      pair_programmer: Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez
+        a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros
+        programozást, és próbáld újra.
   activerecord:
     errors:
       messages:
@@ -23,7 +23,7 @@ hu:
     attributes:
       user:
         name: Megjelenítendő név
-        name_example: Megjelenítendő név (pl. hideg, Coder vagy Jane S.)
+        name_example: Megjelenítendő név (pl. Menő Kódoló)
         email: Email
         parent_email: Szülő/gondviselő e-mail
         personal_email: Személyes elektronikus levél cím <a href="%{url}">(kattintson
@@ -37,8 +37,8 @@ hu:
         locale: Nyelv
         age: Kor
         gender: Nem
-        edit_header: Felhasználói Adatok Szerkesztése
-        finish_sign_up_header: A profil létrehozásának befejezése
+        edit_header: Felhasználói adatok szerkesztése
+        finish_sign_up_header: A profilod létrehozásának befejezése
         finish_sign_up_subheader: Töltsd ki az alábbi adatokat <strong>%{email}</strong>
           Code.org fiókod létrehozásához.
         finish_sign_up_subheader_markdown: Töltsd ki az alábbi adatokat **%{email}**
@@ -65,7 +65,9 @@ hu:
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   join_section:
     code:
+      title: Csatlakozz egy csoporthoz a Code.org-on
       placeholder: Szakasz kód (ABCDEF)
+      submit: Csatlakozás
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
     submit: Írja le a véleményét
@@ -92,11 +94,12 @@ hu:
   prize: díj
   more_info: További információk
   auth:
-    continue_with: 'Bejelentkezés ezzel: %{provider}'
+    continue_with: 'Folytatás ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: Bejelentkezve!
+    signed_out_markdown: "### Kijelentkezett innen: [Code.org](%{url})."
     already_signedup: Már regisztrált?
-    notyet_signedup: Még nem csatlakozott?
+    notyet_signedup: Még nem csatlakoztál?
     google_oauth2: Google fiók
     twitter: Twitter
     facebook: Facebook
@@ -166,8 +169,6 @@ hu:
     valid_password: Érvényes jelszó!
     invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
     mismatch_password: A megadott két jelszó nem egyezik
-    under_13_consent: Ha 13 éves kor alatti vagyok, megerősítem, hogy a szülőm vagy
-      törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait.
     student_consent: Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt
       adott, hogy használjam Code.org szolgáltatásait.
     agree_us_website: Elfogadom, hogy egy Egyesült Államokban létrejött weboldalt
@@ -181,17 +182,21 @@ hu:
     user_type_student: Diák
     field_is_required: szükséges
     accept_terms: El kell fogadnia, hogy létre hozzon egy fiókot
+    error: Hiba lépett fel.
     email_preference_question: Küldhetünk neked email üzeneteket az új tanfolyamjainkról,
       helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)
     email_preference_privacy: "(Tekintsd át az adatvédelmi irányelveinket)"
     email_preference_yes: Igen
     email_preference_no: Nem
+    email_preference_required: Meg kell adnia egy e-mail címet.
   school_info:
     title: Az iskolai információ (opcionális)
     school_country: Iskola országa
     select_school_type: Iskola típusa
     private: Magán
     public: Nyilvános
+    homeschool: Bázisiskola
+    after_school: Iskola után
     other: Egyéb
     state: Állam
     district: Kerület
@@ -558,6 +563,7 @@ hu:
     notes_coming_soon: Ehhez a videóhoz hamarosan lesznek jegyzetek.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
+    label: Videó
   compatibility:
     upgrade:
       link: Tudj meg többet
@@ -754,6 +760,8 @@ hu:
       irányelveket</a>
     accept_label_markdown: Elfogadom a frissített [Felhasználási feltételeket](%{tos_url})
       és az [Adatvédelmi irányelveket](%{privacy_url})
+    accept_tos: A Code.org weboldalra történő feliratkozással elfogadod az [Általános
+      Szerződési Feltételeinket](%{tos_url}) és az [Adatvédelmi irányelveinket](%{privacy_url}).
     print: Nyomtatás
   school_info_interstitial:
     save: Mentés
@@ -916,3 +924,4 @@ hu:
     accept: Egyetértek
   gdpr_dialog:
     true: Igen
+  copy: Másol

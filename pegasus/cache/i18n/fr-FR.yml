@@ -27,8 +27,6 @@ fr-FR:
     l'informatique.
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres
     participants.'
-  petition_sign_message_support: 'Si vous nous soutenez, ajoutez votre nom. Rejoignez
-    # les autres.'
   petition_join_others: 'Rejoignez # les autres'
   name: Nom
   email: E-mail
@@ -2383,7 +2381,7 @@ fr-FR:
     amis !
   hoc2018_dance_party_specs: Langue | Format | De 6 à 106 ans
   hoc2018_dance_party_button: Commencer
-  hoc2018_dance_keep_on_dancing_box_title: Continuez à danser
+  hoc2018_dance_keep_on_dancing_box_title: Continuer de Danser
   hoc2018_dance_keep_on_dancing_description: Allez au-delà de la première heure avec
     de longues idées de projets.
   hoc2018_dance_keep_on_dancing_specs: Langue | Format | 13 ans et plus

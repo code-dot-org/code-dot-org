@@ -186,8 +186,6 @@ is:
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
-    under_13_consent: Ef ég er undir 13 ára aldri, staðfesti ég hér með að ég hef
-      samþykki foreldris eða forráðamanns til að nota þjónustur Code.org.
     student_consent: Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns
       til að nota þjónustur Code.org.
     agree_us_website: Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum.
@@ -668,6 +666,7 @@ is:
     download: Hala niður myndband
     show_notes: Sýna athugasemdir
     show_video: Sýna myndband
+    label: Myndband
   compatibility:
     upgrade:
       unsupported_message: Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a
@@ -1398,3 +1397,4 @@ is:
   page_not_found_description: Síðan sem þú ert að leita að finnst ekki á þessu veffangi.
     Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar.
   page_not_found_button: Aftur á heimasíðu
+  copy: Afrita

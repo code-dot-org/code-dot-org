@@ -171,6 +171,7 @@ ur:
     subtitle: 'یہ ویڈیوز اور اشارے دیکھیں'
   video:
     tab: 'ویڈیو.'
+    label: 'ویڈیو'
   compatibility:
     upgrade:
       link: "مزید سیکھے"
@@ -197,6 +198,7 @@ ur:
   terms_interstitial:
     tos: "سروس کی شرائط"
     privacy: "رازداری کی پالیسی"
+    accept_tos: "Code.org میں سائن اپ کرنے سے، آپ ہماری [سروس کی\nشرائط](%{tos_url}) اور [پرائیویسی پالیسی](%{privacy_url})\nسے اتفاق کرتے ہیں۔."
     print: "پرنٹ کریں"
   race_interstitial:
     races:
@@ -234,3 +236,4 @@ ur:
     accept: 'ma manta ho'
   gdpr_dialog:
     yes: 'جی'
+  copy: 'کاپی'

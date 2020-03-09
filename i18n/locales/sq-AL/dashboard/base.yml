@@ -135,7 +135,6 @@ sq:
     valid_password: "Fjalëkalimi i vlefshëm!"
     invalid_password: "Fjalëkalimi duhet të ketë të paktën 6 karaktere"
     mismatch_password: "Dy fjalëkalimet që vendosët nuk përputhen"
-    under_13_consent: "Nëse jam nën moshën 13 vjeç, konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
     student_consent: "Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
     agree_us_website: "Unë pajtohem me përdorimin e një faqe interneti të themeluar në Shtetet e Bashkuara."
     my_data_to_us: "Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe të ruhen ose përpunohen në Shtetet e Bashkuara."
@@ -765,3 +764,4 @@ sq:
     accept: 'Pranoj'
   gdpr_dialog:
     yes: 'Po'
+  copy: 'Kopjo'

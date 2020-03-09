@@ -494,6 +494,7 @@ fil:
     download: 'I-download ang video'
     show_notes: 'Ipakita ang mga Notes'
     show_video: 'Ipakita ang Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
@@ -702,6 +703,7 @@ fil:
     privacy_notice: "Pahayag sa Privacy"
     accept_label: 'Ako ay sumang-ayon sa updated na <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
     accept_label_markdown: Ako ay sumang-ayon sa updated na [mga Palatuntunan](%{tos_url}) at sa [Privacy Policy](%{privacy_url})
+    accept_tos: Sa pag-sign up sa Code.org, pumapayag ka sa aming [Mga Alituntunin sa Serbisyo](%{tos_url}) at [Patakaran sa Pagkapribado](%{privacy_url}).
     accept: "Tanggapin"
     print: "I-print"
     reminder_desc: 'Nag-update kami sa aming <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Pakibasa ng mabuti ang mga ito bago mo tanggapin. Tandaan na ang aming mga kagamitan na nagtuturo ng Javascript ay maaaring hindi magagamit ng iyong mga estudyante bago mo hayagang tanggapin ang mga binagong pamantayan.'
@@ -949,3 +951,4 @@ fil:
     accept: 'Ako ay sumasang-ayon'
   gdpr_dialog:
     yes: 'Oo'
+  copy: 'Kopyahin'

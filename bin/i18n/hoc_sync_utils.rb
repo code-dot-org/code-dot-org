@@ -33,27 +33,24 @@ class HocSyncUtils
   end
 
   def self.sync_out
-    rename_downloads_from_crowdin_code_to_locale
+    rename_yml_to_locale
     copy_from_i18n_source_to_hoc
     restore_sanitized_headers
   end
 
-  def self.rename_downloads_from_crowdin_code_to_locale
+  def self.rename_yml_to_locale
     puts "Updating crowdin codes to our locale codes..."
     Languages.get_hoc_languages.each do |prop|
       # move downloaded folders to root source directory and rename from
       # language to locale
-      crowdin_dir = File.join(I18N_SOURCE_DIR, "hourofcode", prop[:crowdin_name_s])
       dest_dir = "i18n/locales/#{prop[:locale_s]}"
-      next unless File.directory?(crowdin_dir)
-
-      FileUtils.cp_r File.join(crowdin_dir, '.'), dest_dir
-      FileUtils.rm_r crowdin_dir
+      next unless File.directory?(dest_dir)
 
       # replace the crowdin code in the file itself with our own unique
       # language code
       old_path = File.join(dest_dir, "hourofcode/en.yml")
       crowdin_translation_data = YAML.load_file(old_path)
+      next unless File.exist?(old_path)
       new_translation_data = {}
       new_translation_data[prop[:unique_language_s]] = crowdin_translation_data.values.first
 
@@ -62,17 +59,6 @@ class HocSyncUtils
       File.write(new_path, new_translation_data.to_yaml)
       FileUtils.rm old_path
     end
-
-    # Now, any remaining directories named after the language name (rather than
-    # the four-letter language code) represent languages downloaded from
-    # crowdin that aren't in our system. We expect this to happen whenever a
-    # language has been enabled for our project on crowdin before it gets added
-    # to our system; we do this pretty often because that allows us to start
-    # collecting translations for a language in advance of enabling it.
-    #
-    # So although these directories are neither bad nor unexpected, they're
-    # still unwanted. So we remove them.
-    FileUtils.rm_r(Dir.glob(File.join(I18N_SOURCE_DIR, "hourofcode", "[A-Z]*")))
   end
 
   def self.copy_from_i18n_source_to_hoc
@@ -100,8 +86,6 @@ class HocSyncUtils
         FileUtils.mkdir_p(dest_dir)
         FileUtils.cp(source_path, File.join(dest_dir, dest_name))
       end
-
-      puts "Copied locale #{prop[:unique_language_s]}"
     end
   end
 

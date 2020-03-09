@@ -27,8 +27,6 @@ de-DE:
     zu lernen
   petition_sign_message: 'Tragen Sie sich in der Liste ein, wenn Sie auch dieser Meinung
     sind. Werden Sie einer von # Unterstützern.'
-  petition_sign_message_support: 'Wenn Sie uns unterstützen möchten, tragen Sie sich
-    in der Liste ein. Werden Sie einer von # Unterstützern.'
   petition_join_others: 'Tritt # anderen bei'
   name: Name
   email: E-Mail
@@ -2249,6 +2247,7 @@ de-DE:
     of Code! Entdecke die Welt von Minecraft mit Code.
   hoc2018_mc_teacher_guide: Lehrer-Leitfaden anzeigen
   hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Weiterlernen mit Minecraft.
   hoc2018_mc_go_to_mc_education: Gehe zu Minecraft Education
   hoc2018_mc_short_description: Nutze deine Kreativität und Problemlösungsfähigkeiten,
     um Schätze zu finden und Unterwasserwelten mit der Kraft des Codes zu erkunden.
