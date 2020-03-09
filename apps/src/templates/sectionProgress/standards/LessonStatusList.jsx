@@ -23,7 +23,8 @@ class LessonStatusList extends Component {
     setSelectedLessons: PropTypes.func.isRequired,
     selectedLessons: PropTypes.array.isRequired,
     sectionId: PropTypes.number,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
+    dialog: PropTypes.string
   };
 
   componentWillMount() {
@@ -37,6 +38,20 @@ class LessonStatusList extends Component {
   }
 
   handleChange = selectedLessons => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'update_unplugged_lesson_list',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId,
+          selected_lessons: selectedLessons,
+          dialog: this.props.dialog
+        })
+      },
+      {includeUserId: true}
+    );
     this.props.setSelectedLessons(selectedLessons);
   };
 

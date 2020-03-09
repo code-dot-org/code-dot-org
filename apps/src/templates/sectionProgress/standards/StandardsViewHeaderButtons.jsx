@@ -48,7 +48,7 @@ class StandardsViewHeaderButtons extends Component {
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',
-        event: 'click_update_lessons',
+        event: 'click_update_unplugged_lessons',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           script_id: this.props.scriptId
