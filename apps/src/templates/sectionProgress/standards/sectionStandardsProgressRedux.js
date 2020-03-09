@@ -89,12 +89,21 @@ export function getUnpluggedLessonsForScript(state) {
     });
   }
 
+  unpluggedStages.forEach(stage => {
+    const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+    const selected = getLessonSelectionStatus(state, stage.id);
+    stage['selected'] = selected;
+    stage['completed'] = lessonCompletionStatus.completed;
+  });
+
   function filterStageData(stage) {
     return {
       id: stage.id,
       name: stage.name,
       number: stage.position,
-      url: stage.lesson_plan_html_url
+      url: stage.lesson_plan_html_url,
+      completed: stage.completed,
+      selected: stage.selected
     };
   }
 
@@ -209,6 +218,14 @@ export function getLessonCompletionStatus(state, stageId) {
   }
 }
 
+export function getLessonSelectionStatus(state, stageId) {
+  const selected = _.map(
+    state.sectionStandardsProgress.selectedLessons,
+    'id'
+  ).includes(stageId);
+  return selected;
+}
+
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
   let completionByLesson = {};
   completionByLesson['completed'] = false;
@@ -241,7 +258,11 @@ export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
     // it's marked complete for all students in the section.
     const completed = numStudentCompleted >= 1;
 
-    completionByLesson['completed'] = completed;
+    // If a teacher selects an unplugged lesson in one of the
+    // dialogs, it should display as completed.
+    const selected = getLessonSelectionStatus(state, stageId);
+
+    completionByLesson['completed'] = completed || selected;
     completionByLesson['numStudentsCompleted'] = numStudentCompleted;
   }
   return completionByLesson;
