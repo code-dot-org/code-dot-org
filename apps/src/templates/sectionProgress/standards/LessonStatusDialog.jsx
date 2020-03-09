@@ -35,7 +35,7 @@ class LessonStatusDialog extends Component {
         <h2>{i18n.updateUnpluggedLessonProgress()}</h2>
         <p>{i18n.updateUnpluggedLessonProgressSubHeading()}</p>
         <h3>{i18n.completedUnpluggedLessons()}</h3>
-        <LessonStatusList />
+        <LessonStatusList dialog={'LessonStatusDialog'} />
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
