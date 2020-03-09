@@ -118,6 +118,16 @@ export class LibraryManagerDialog extends React.Component {
     this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
+  updateLibraryInProject = libraryJson => {
+    let libraries = [...this.state.libraries];
+    const libIndex = libraries.findIndex(
+      library => library.channelId === libraryJson.channelId
+    );
+    libraries[libIndex] = libraryJson;
+    dashboard.project.setProjectLibraries(libraries);
+    this.setState({libraries: dashboard.project.getProjectLibraries()});
+  };
+
   onImportFailed = error => {
     this.setState({
       error: i18n.libraryImportError(),
@@ -182,7 +192,9 @@ export class LibraryManagerDialog extends React.Component {
         <LibraryListItem
           key={library.name}
           library={library}
-          onUpdate={undefined}
+          onUpdate={channelId =>
+            this.fetchLatestLibrary(channelId, this.updateLibraryInProject)
+          }
           onRemove={this.removeLibrary}
           onViewCode={() => this.viewCode(library)}
         />
