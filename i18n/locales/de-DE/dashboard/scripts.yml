@@ -5287,3 +5287,77 @@ de:
               name: Buchstabierwettbewerb
             Loops in Ice Age:
               name: Schleifen in Ice Age
+        csp1-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+            Welcome to CSP:
+              name: Willkommen bei CSP
+            Representing Information:
+              name: Darstellung von Informationen
+            Binary Numbers:
+              name: Binärzahlen
+            Black and White Images:
+              name: Schwarz/Weiß Bilder
+            Color Images:
+              name: Farbbilder
+            Lossless Compression:
+              name: Verlustlose Kompression
+            Lossy Compression:
+              name: Verlustbehaftete Kompression
+            Intellectual Property:
+              name: Geistiges Eigentum
+        csp2-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+            The Need for Addressing:
+              name: Die Notwendigkeit von Addressierung
+            Routers and Redundancy:
+              name: Router und Redundanz
+            Packets:
+              name: Pakete
+        csp3-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+            Project - Designing an App Part 1:
+              name: 'Projekt: Erstellen einer App (Teil 1)'
+            Project - Designing an App Part 2:
+              name: 'Projekt: Erstellen einer App (Teil 2)'
+            The Need for Programming Languages:
+              name: Die Notwendigkeit für Programmiersprachen
+            Debugging:
+              name: Debugging
+            Project - Designing an App Part 3:
+              name: 'Projekt: Erstellen einer App (Teil 3)'
+            Project - Designing an App Part 4:
+              name: 'Projekt: Erstellen einer App Teil 4'
+        csp6-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+        csp8-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+        csp9-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+        csp10-2020:
+          stages:
+            new stage:
+              name: neue Etappe
+            Security Risks Part 1:
+              name: Sicherheitsrisiken Teil 1
+            Security Risks Part 2:
+              name: Sicherheitsrisiken Teil 2
+            Protecting Data Part 1:
+              name: Datenschutz Teil 1
+            Protecting Data Part 2:
+              name: Datenschutz Teil 2
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: neue Etappe

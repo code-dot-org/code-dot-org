@@ -2019,3 +2019,37 @@ pt:
           stages:
             Spelling Bee:
               name: Escrever com a abelha
+        csp1-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Binary Numbers:
+              name: Números Binários
+        csp2-2020:
+          stages:
+            new stage:
+              name: nova fase
+        csp3-2020:
+          stages:
+            new stage:
+              name: nova fase
+        csp6-2020:
+          stages:
+            new stage:
+              name: nova fase
+        csp8-2020:
+          stages:
+            new stage:
+              name: nova fase
+        csp9-2020:
+          stages:
+            new stage:
+              name: nova fase
+        csp10-2020:
+          stages:
+            new stage:
+              name: nova fase
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nova fase

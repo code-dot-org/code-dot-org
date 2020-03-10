@@ -11999,6 +11999,8 @@ es-MX:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
+            'Lesson 11: Assessment Day':
+              name: 'Lección 11: día de evaluación'
         csp9-pilot:
           stages:
             new stage:
@@ -12887,3 +12889,117 @@ es-MX:
               name: Loops en Artista
             Tell a Story in Play Lab:
               name: Contar una historia en el Laboratorio de juegos
+        csp1-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Welcome to CSP:
+              name: Bienvenido a CSP
+            Representing Information:
+              name: Representación de la información
+            Circle Square Patterns:
+              name: Patrones cuadrados circulares
+            Binary Numbers:
+              name: Números binarios
+            Overflow and Rounding:
+              name: Desbordamiento y redondeo
+            Representing Text:
+              name: Representar texto
+            Black and White Images:
+              name: Imágenes en blanco y negro
+            Color Images:
+              name: Imágenes a color
+            Lossless Compression:
+              name: Compresión sin pérdidas
+            Lossy Compression:
+              name: Compresión perdida
+            Intellectual Property:
+              name: Propiedad intelectual
+            'Lesson 14: Assessment Day':
+              name: 'Lección 14: día de evaluación'
+        csp2-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Welcome to the Internet:
+              name: Bienvenidos a Internet
+            Building a Network:
+              name: Crear una red
+            The Need for Addressing:
+              name: La necesidad de direccionamiento
+            Routers and Redundancy:
+              name: Enrutadores y redundancia
+            Packets:
+              name: Paquetes
+            DNS and HTTP:
+              name: DNS y HTTP
+            'Lesson 9: Assessment Day':
+              name: 'Lección 9: día de evaluación'
+        csp3-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Introduction to Apps:
+              name: Introducción a las aplicaciones
+            Project - Designing an App Part 1:
+              name: Proyecto - Diseñar una aplicación Parte 1
+            Project - Designing an App Part 2:
+              name: Proyecto - Diseñar una aplicación Parte 2
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
+            Debugging:
+              name: Depuración
+            Project - Designing an App Part 3:
+              name: Proyecto - Diseñar una aplicación Parte 3
+            Project - Designing an App Part 4:
+              name: Proyecto - Diseñar una aplicación Parte 4
+            'Lesson 11: Assessment Day':
+              name: 'Lección 11: día de evaluación'
+        csp6-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Algorithms Solve Problems:
+              name: Los algoritmos resuelven problemas
+            Algorithm Efficiency:
+              name: Eficiencia del algoritmo
+            Unreasonable Time:
+              name: Tiempo poco razonable
+            The Limits of Algorithms:
+              name: Los límites de los algoritmos
+            Parallel and Distributed Algorithms:
+              name: Algoritmos paralelos y distribuidos
+        csp8-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Create PT - Complete the Task:
+              name: PT de creación - Completar la tarea
+        csp9-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            'Lesson 9: Assessment Day':
+              name: 'Lección 9: día de evaluación'
+        csp10-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Data Policies and Privacy:
+              name: Políticas y privacidad de datos 
+            The Value of Privacy:
+              name: El valor de la privacidad
+            Security Risks Part 1:
+              name: Riesgos de seguridad, parte 1
+            Security Risks Part 2:
+              name: Riesgos de seguridad Parte 2
+            Protecting Data Part 1:
+              name: Protección de datos, parte 1
+            Protecting Data Part 2:
+              name: Protección de datos, parte 2
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lección 14: día de evaluación de la unidad'
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nueva etapa
