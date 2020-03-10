@@ -132,8 +132,8 @@ def snapshot_summer_workshops_from_jotform(course)
 
     unless all_their_completed_workshops.empty?
       # Do workshop rollups, then facilitator rollups.
-      [false, true].each do |facilitator_rollups|
-        rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, facilitator_rollups)
+      [false, true].each do |only_facilitator_questions|
+        rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, only_facilitator_questions)
 
         key = "facilitator_#{id}_all_ws"
         rollup[:rollups][key][:averages].each do |string_key, average|
