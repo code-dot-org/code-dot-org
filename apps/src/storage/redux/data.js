@@ -65,7 +65,12 @@ export default function(state = initialState, action) {
       return state.set('tableListMap', map);
     }
     case UPDATE_KEY_VALUE_DATA:
-      return state.set('keyValueData', action.keyValueData);
+      // "if all of the keys are integers, and more than half of the keys between 0 and
+      // the maximum key in the object have non-empty values, then Firebase will render
+      // it as an array."
+      // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+      // For simplicity, always coerce it to an object.
+      return state.set('keyValueData', Object.assign({}, action.keyValueData));
     case UPDATE_TABLE_COLUMNS:
       if (state.tableName === action.tableName) {
         return state.set('tableColumns', action.tableColumns);
