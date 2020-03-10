@@ -82,7 +82,11 @@ export function castValue(inputString, allowUnquotedStrings) {
   if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
     // 1. Remove leading and trailing whitespace
     inputString = inputString.trim();
-    // 2. Check for undefined and null
+    // 2. Check for '', undefined, and null
+    if (inputString === '') {
+      // This happens when the text area is blank, so interpret as undefined.
+      return undefined;
+    }
     if (inputString === 'undefined') {
       return undefined;
     } else if (inputString === 'null') {
