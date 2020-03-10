@@ -14,6 +14,7 @@ export default class ChoiceResponses extends React.Component {
     numRespondents: PropTypes.number,
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
+    possibleAnswersMap: PropTypes.object,
     otherText: PropTypes.string
   };
 
@@ -75,10 +76,21 @@ export default class ChoiceResponses extends React.Component {
         <tr key={i}>
           <td>{this.formatPercentage(count / this.getTotalRespondents())}</td>
           <td style={{paddingLeft: '20px'}}>{count}</td>
-          <td style={{paddingLeft: '20px'}}>{possibleAnswer}</td>
+          <td style={{paddingLeft: '20px'}}>
+            {this.getPossibleAnswerText(possibleAnswer)}
+          </td>
         </tr>
       );
     });
+  }
+
+  getPossibleAnswerText(possibleAnswer) {
+    const {possibleAnswersMap} = this.props;
+    if (possibleAnswersMap && possibleAnswersMap[possibleAnswer]) {
+      return possibleAnswersMap[possibleAnswer];
+    } else {
+      return possibleAnswer;
+    }
   }
 
   renderPerFacilitatorAnswerCounts() {
@@ -120,7 +132,7 @@ export default class ChoiceResponses extends React.Component {
 
       return (
         <tr key={i}>
-          <td>{possibleAnswer}</td>
+          <td>{this.getPossibleAnswerText(possibleAnswer)}</td>
           {countsByFacilitator.map((count, j) => [
             <td style={{paddingLeft: '20px'}} key={`${j}.count`}>
               {count}

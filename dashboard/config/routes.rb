@@ -431,8 +431,8 @@ Dashboard::Application.routes.draw do
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
-        get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report_controller'
-        post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions_controller'
+        get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+        post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
       end
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index

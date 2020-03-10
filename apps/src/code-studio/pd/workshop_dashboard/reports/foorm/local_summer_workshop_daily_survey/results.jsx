@@ -24,49 +24,87 @@ export default class Results extends React.Component {
   renderResultsForSessionQuestionSection(section, questions, answers) {
     return _.compact(
       Object.keys(answers).map((surveyId, i) => {
+        console.log(`surveyId: ${surveyId}`);
         let surveyQuestions = questions[surveyId];
+        console.log(`surveyQuestions: ${surveyQuestions}`);
         if (!surveyQuestions) {
           return null;
         }
 
-        Object.keys(answers[surveyId]).map((questionId, j) => {
-          let question = surveyQuestions[questionId];
-          if (!question) {
-            return null;
-          }
+        return _.compact(
+          Object.keys(answers[surveyId]).map((questionId, j) => {
+            console.log(`questionId: ${questionId}`);
+            let question = surveyQuestions[questionId];
+            if (!question) {
+              return null;
+            }
 
-          let answer = answers[surveyId][questionId];
-          if (
-            ['scale', 'singleSelect', 'multiSelect'].includes(question['type'])
-          ) {
-            // numRespondents will get either a value (for multiSelect) or undefined.
-            const numRespondents = answer.num_respondents;
+            let answer = answers[surveyId][questionId];
 
-            // Make a copy of the answers without the num_respondents field.
-            const filteredAnswers = _.omit(answer, 'num_respondents');
+            if (
+              ['scale', 'singleSelect', 'multiSelect'].includes(
+                question['type']
+              )
+            ) {
+              // numRespondents will get either a value (for multiSelect) or undefined.
+              const numRespondents = answer.num_respondents;
 
-            return (
-              <ChoiceResponses
-                perFacilitator={section === 'facilitator'}
-                numRespondents={numRespondents}
-                question={question['title']}
-                answers={filteredAnswers}
-                possibleAnswers={question['choices']}
-                key={i * j}
-                answerType={question['type']}
-                /*otherText={question['other_text']}*/
-              />
-            );
-          } else if (question['type'] === 'text') {
-            return (
-              <TextResponses
-                question={question['text']}
-                answers={answer}
-                key={i}
-              />
-            );
-          }
-        });
+              // Make a copy of the answers without the num_respondents field.
+              const filteredAnswers = _.omit(answer, 'num_respondents');
+
+              let possibleAnswersMap = question['choices'];
+
+              return (
+                <ChoiceResponses
+                  perFacilitator={section === 'facilitator'}
+                  numRespondents={numRespondents}
+                  question={question['title'] || questionId}
+                  answers={filteredAnswers}
+                  possibleAnswers={Object.keys(possibleAnswersMap)}
+                  possibleAnswersMap={possibleAnswersMap}
+                  key={i * j}
+                  answerType={question['type']}
+                  /*otherText={question['other_text']}*/
+                />
+              );
+            } else if (question['type'] === 'matrix') {
+              // render choice response per question inside matrix
+              return Object.keys(answer).map(innerQuestionId => {
+                const innerAnswer = answer[innerQuestionId];
+                const numRespondents = answer.num_respondents;
+                let possibleAnswersMap = question['columns'];
+                let parsedQuestionName = innerQuestionId;
+                if (question['rows'] && question['rows'][innerQuestionId]) {
+                  parsedQuestionName = `${question['title']} -> ${
+                    question['rows'][innerQuestionId]
+                  }`;
+                }
+                return (
+                  <ChoiceResponses
+                    perFacilitator={section === 'facilitator'}
+                    numRespondents={numRespondents}
+                    question={parsedQuestionName}
+                    answers={innerAnswer}
+                    possibleAnswers={Object.keys(possibleAnswersMap)}
+                    possibleAnswersMap={possibleAnswersMap}
+                    key={i * j}
+                    answerType={'singleSelect'}
+                    /*otherText={question['other_text']}*/
+                  />
+                );
+              });
+            } else if (question['type'] === 'text') {
+              console.log(`question type is text`);
+              return (
+                <TextResponses
+                  question={question['title'] || questionId}
+                  answers={answer}
+                  key={i}
+                />
+              );
+            }
+          })
+        );
       })
     );
   }
