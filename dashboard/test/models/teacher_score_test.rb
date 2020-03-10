@@ -93,15 +93,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     assert_equal(teacher_scores_count_after, teacher_scores_count_before + student_count)
   end
 
-  test 'get scores for stage for student' do
-    TeacherScore.score_level_for_student(
-      @teacher.id, @student_1.id, @level_1.id, @script.id, @score
-    )
-
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id), {@level_1.id => @score})
-  end
-
-  test 'get scores for stage for student looks at most recent score' do
+  test 'get scores for stage looks at most recent score' do
     Timecop.freeze do
       TeacherScore.score_level_for_student(
         @teacher.id, @student_1.id, @level_1.id, @script.id, @score
@@ -114,7 +106,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
       )
     end
 
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id), {@level_1.id => @score_2})
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_section(@stage, @section.id), {@student_1.id => {@level_1.id => @score_2}})
   end
 
   test 'get scores for stage for section' do
@@ -124,7 +116,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
 
     assert_equal(
       TeacherScore.get_level_scores_for_stage_for_section(
-        @stage.id,
+        @stage,
         @section.id
       ),
       {
