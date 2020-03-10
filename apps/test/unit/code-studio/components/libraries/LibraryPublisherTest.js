@@ -104,6 +104,22 @@ describe('LibraryPublisher', () => {
       expect(checkboxes.last().prop('disabled')).to.be.true;
     });
 
+    it('disables checkbox for functions with duplicate names', () => {
+      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
+        [
+          {functionName: 'duplicate', comment: 'first dup!'},
+          {functionName: 'duplicate', comment: 'another dup!'}
+        ]
+      );
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+
+      let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
+      expect(checkboxes.at(0).prop('disabled')).to.be.false;
+      expect(checkboxes.at(1).prop('disabled')).to.be.true;
+    });
+
     it('checks checkboxes of selected functions', () => {
       libraryDetails.sourceFunctionList.push({
         functionName: 'bar',
