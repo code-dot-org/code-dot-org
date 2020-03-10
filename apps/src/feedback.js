@@ -1014,7 +1014,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       var annotatedShareLink = options.shareLink + '?qr=true';
       ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
 
-      if (sharingPhone && options.sendToPhone) {
+      if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
