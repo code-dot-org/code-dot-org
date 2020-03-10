@@ -245,6 +245,15 @@ tr-TR:
         draw a polygon: çokgen çiz
       NEW Course 4 Play Lab Params 11:
         jump: zıpla
+      New Artist Project:
+        draw a star: bir yıldız çiz
+        draw a circle: bir çember çiz
+        draw a triangle: bir üçgen çiz
+        draw a shape: bir şekil çiz
+        draw a house: bir ev çiz
+        draw a square: bir kare çiz
+      New Play Lab Project:
+        jump: zıpla
       Robot Doodle:
         draw head: kafa çiz
         draw eye: göz çiz
@@ -463,7 +472,6 @@ tr-TR:
         draw a house: bir ev çiz
       courseE_artist_functions7_2019:
         draw a window: pencere çiz
-        draw a house: bir ev çiz
       courseE_artist_functions8:
         do something: bir şeyler yap
         draw a line of squares: bir satır kareler çiz

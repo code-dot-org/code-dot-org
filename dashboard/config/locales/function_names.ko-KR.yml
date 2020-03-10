@@ -173,6 +173,17 @@ ko-KR:
         do something: 함수 이름
       NEW Course 4 Play Lab Params 11:
         jump: 점프
+      New Artist Project:
+        draw a star: 별 그리기
+        draw a circle: 원 그리기
+        draw a triangle: 삼각형 그리기
+        draw a house: 집 그리기
+        draw a square: 사각형 그리기
+      New Minecraft Hero Project:
+        function 1: 함수 1
+        function 2: 함수 2
+      New Play Lab Project:
+        jump: 점프
       Robot Doodle:
         draw head: 머리 그리기
       Robot Doodle_2018:
@@ -235,8 +246,6 @@ ko-KR:
       courseE_artist_functions7:
         draw a house: 집 그리기
       courseE_artist_functions7_2018:
-        draw a house: 집 그리기
-      courseE_artist_functions7_2019:
         draw a house: 집 그리기
       courseE_artist_functions8:
         do something: 함수 이름

@@ -5300,3 +5300,43 @@ es:
               name: Bucles en la Edad del Hielo
             Loops in Artist:
               name: Bucles en Artista
+        csp1-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            Binary Numbers:
+              name: Números binarios
+        csp2-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            The Need for Addressing:
+              name: La necesidad para el redireccionamiento
+            Routers and Redundancy:
+              name: Enrutadores y reiteración
+        csp3-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
+        csp6-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp8-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp9-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp10-2020:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nueva etapa

@@ -2537,3 +2537,7 @@ nn:
           stages:
             Spelling Bee:
               name: Stavekonkurranse
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binære tal
