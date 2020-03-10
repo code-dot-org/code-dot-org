@@ -506,6 +506,10 @@ ga:
               name: Tástáil
         cspunit2:
           stages:
+            Encryption Algorithms:
+              name: Eochracha agus Focail Fhaire
+            Tell Me a Secret - Encrypting Text:
+              name: An Gá le Criptiú
             The Internet:
               name: Is le cách an tIdirlíon
         algebraPD2a:
@@ -834,6 +838,8 @@ ga:
               name: Suirbhé Iarchúrsa
         csp4-2017:
           stages:
+            Encryption with Keys and Passwords:
+              name: Criptiú le hEochracha agus Focail Fhaire
             Simple Encryption:
               name: Criptiú Simplí
             Post-Course Survey:
@@ -1036,6 +1042,7 @@ ga:
             Bounce:
               name: Preabadh
         hoc-encryption:
+          title: 'An Uair Chódála: Criptiú Simplí'
           stages:
             Simple Encryption:
               name: Criptiú Simplí
@@ -1211,6 +1218,10 @@ ga:
               name: Réamhrá
             Sprites:
               name: Sprideanna
+        csd5-draft:
+          stages:
+            Encryption:
+              name: Criptiú
         coursed-ramp:
           stages:
             Introduction:
@@ -1245,6 +1256,10 @@ ga:
               name: Treoluas
             Functions:
               name: Feidhmeanna
+        csd5-2017:
+          stages:
+            Encryption:
+              name: Criptiú
         csd3-old:
           stages:
             Velocity:
@@ -1762,6 +1777,8 @@ ga:
           stages:
             Simple Encryption:
               name: Criptiú Simplí
+            Encryption with Keys and Passwords:
+              name: Criptiú le hEochracha agus Focail Fhaire
             CS Principles Post-Course Survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp5-2018:
@@ -1855,6 +1872,7 @@ ga:
             Dance Party:
               name: Cóisir Dhamhsa
         dance-extras:
+          title: Lean ort a damhsa (2018)
           description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
             a leanann Cóisir Dhamhsa Code.org.
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
@@ -2066,6 +2084,8 @@ ga:
           stages:
             Simple Encryption:
               name: Criptiú Simplí
+            Encryption with Keys and Passwords:
+              name: Criptiú le hEochracha agus Focail Fhaire
             CS Principles Post Course survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp5-2019:
@@ -2184,6 +2204,7 @@ ga:
             For Loops:
               name: Lúba "Do Gach"
         dance-extras-2019:
+          title: Lean ort ag damhsa (2019)
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
           description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
             a leanann Cóisir Dhamhsa Code.org.
@@ -2241,3 +2262,85 @@ ga:
               name: Treoluas
             Functions:
               name: Feidhmeanna
+        coursea-2020:
+          description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
+          stages:
+            Going Places Safely:
+              name: Ag Taisteal Slán Sábháilte
+            Loops in Ice Age:
+              name: Lúba in Ice Age
+        courseb-2020:
+          description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+            Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
+          stages:
+            Your Digital Footprint:
+              name: Do Lorg Digiteach
+            Move It, Move It:
+              name: Bog é, Bog é
+        coursec-2020:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
+            scéalta, agus cluichí.
+          stages:
+            Binary Bracelets:
+              name: Bráisléid Dhénártha
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Códáil Sealaíochta
+            Loops in Ice Age:
+              name: Lúba in Ice Age
+            Conditionals with Cards:
+              name: Coinníollacha le Cártaí
+            'Unplugged: Binary':
+              name: 'Díphlugáilte: Dénártha'
+            Artist Binary:
+              name: 'Ealaíontóir: Dénártha'
+            Digital Citizenship:
+              name: Saoránacht Dhigiteach
+            Dance Party:
+              name: Cóisir Dhamhsa
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Coinníollacha
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+            Alien Dance Party with Sprite Lab:
+              name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+        coursef-2020:
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
+            agus cruthaigh ealaín, scéal, nó cluiche.
+          stages:
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+            Envelope Variables:
+              name: Athróga i gClúdach Litreach
+            For Loop Fun:
+              name: Spraoi le Lúba
+            Internet:
+              name: An tIdirlíon
+            Crowdsourcing:
+              name: Sluafhoinsiú
+        express-2020:
+          stages:
+            Dance Party:
+              name: Cóisir Dhamhsa
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+            Alien Dance Party with Sprite Lab:
+              name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            Virtual Pet with Sprite Lab:
+              name: Peata Fíorúil i Saotharlann na Sprideanna
+        pre-express-2020:
+          description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí:
+            scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad
+            bhliain.'
+          stages:
+            Spelling Bee:
+              name: Comórtas Litrithe
+            Loops in Ice Age:
+              name: Lúba in Ice Age
+        csp3-2020:
+          stages:
+            Introduction to Design Mode:
+              name: Buneolas ar an Mód Deartha

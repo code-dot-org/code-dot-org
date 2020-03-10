@@ -1406,6 +1406,17 @@ es-ES:
         ## Pantalla Final
 
         La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
+      Gamelab StartScreen State: |-
+        # El variable del estado del juego
+
+        Nuestra muestra tuvo cuatro argumentos (o **estados**) de que tenemos que hacer un seguimiento para exponer la pantalla correcta: "empezando", "jugando", "ganado", "perdido". La primera etapa para añadir una pantalla de empiezo o fin al juego es crear un variable para registrar los cambios en el estado del juego.
+
+        ## Haz Esto
+
+        -   Declara un variable llamado `estadodeljuego` en el inicio del programa. (un buen lugar para hacerlo estaría cerca de dónde `marcador` y `vidas` son declarados.)
+        -   Asigna el valor inicial de tu `estadodeljuego` a "empezando"
+
+        (Porque no estás usando ya este variable, verás un triángulo de advertencia junto a la línea donde está declarado. También no afecta cómo corre el programa.)
       Gamelab StartScreen base code: |-
         # Código del Juego
 
@@ -1578,6 +1589,8 @@ es-ES:
       NEW Course 4 Bee For Loops 6: El último número en tu bucle for se llama el "incremento",
         y cada vez que el bucle se ejecuta la variable contador cambia al incrementarse.
         Trata de recoger estas flores con un incremento de 2.
+      New Minecraft Hero Project: "**Juego libre:** ¡Te toca! Utiliza el código del
+        Agent para ayudarte a explorar este mundo."
       Overworld House Frame Chosen: Construye el resto de tu casa con cualquier material
         que te guste. El comando "repetir" va a resultar util.
       Overworld House Frame Chosen_2019: Construye el resto de tu casa con cualquier

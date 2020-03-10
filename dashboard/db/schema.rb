@@ -364,10 +364,12 @@ ActiveRecord::Schema.define(version: 20200310000601) do
     t.datetime "earliest_section_at"
     t.datetime "latest_section_at"
     t.integer  "script_id"
+    t.index ["end_at"], name: "index_experiments_on_end_at", using: :btree
     t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
     t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
     t.index ["overflow_max_user_id"], name: "index_experiments_on_overflow_max_user_id", using: :btree
     t.index ["section_id"], name: "index_experiments_on_section_id", using: :btree
+    t.index ["start_at"], name: "index_experiments_on_start_at", using: :btree
   end
 
   create_table "featured_projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -742,6 +744,15 @@ ActiveRecord::Schema.define(version: 20200310000601) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
+  end
+
+  create_table "pd_legacy_survey_summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "facilitator_id"
+    t.string   "course"
+    t.string   "subject"
+    t.text     "data",           limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "pd_misc_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

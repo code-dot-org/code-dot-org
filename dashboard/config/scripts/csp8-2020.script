@@ -1,0 +1,10 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+has_verified_resources true
+has_lesson_plan true
+script_announcements [{"notice"=>"Lessons Not Available Until June", "details"=>"The details of the Create PT have not yet been released by the College Board and so our Create PT Prep unit is not yet available to share. The College Board plans to release the Create PT in early June and we will make this unit available immediately afterward.", "link"=>"", "type"=>"information", "visibility"=>"Teacher-only"}]
+pilot_experiment 'csp-2020-access'
+project_sharing true
+curriculum_umbrella 'CSP'
+

@@ -89,7 +89,7 @@ cs:
         text: "V poslední části si budeš moct vytvořit vlasntí hru asdílet ji se svými přáteli. Užij si to!"
     loop_times:
       1:
-        text: "Ahoj, jsem Mark! Seznámím tě se smyčkami. Pomocí smyček můžeš říct počítači, aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát."
+        text: "Ahoj, jsem Mark! Seznámím tě s cykly. Pomocí cyklů můžeš říct počítači, aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát."
       2:
         text: "V této hádance chceme, aby se ptáček posunul vpřed o 5 políček a dostal se k prasátku."
       3:
@@ -166,9 +166,9 @@ cs:
       1:
         text: "Ahoj, já jsem Trina a pracuji pro Pixar. Pracovala jsem na spoustě filmů včetně Shreka."
       2:
-        text: "Toto je naše nová smyčka \"čítač\". Bude provádět akce znovu a znovu a pokaždé můžete akci trošku pozměnit."
+        text: "Toto je náš nový cyklus \"čítač\". Bude provádět akce znovu a znovu a pokaždé můžete akci trošku pozměnit."
       3:
-        text: "V tomto případě, naše smyčka \"čítač\" říká, že budeme \"počítat s čítačem od 50 do 90 po 10\" a uvnitř něj máme náš blok \"nakreslit čtverec\". Přetáhni blok \"čítač\" ze sekce \"Proměnné\" na místo \"délka\"."
+        text: "V tomto případě náš cyklus \"čítač\" říká, že budeme \"počítat s čítačem od 50 do 90 po 10\" a uvnitř něj máme náš blok \"nakreslit čtverec\". Přetáhni blok \"čítač\" ze sekce \"Proměnné\" na místo \"délka\"."
       4:
         text: "To znamená, že náš malíř bude kreslit čtverec, který má stranu o délce 50 pixelů, poté k tomu přidá 10 a nakreslí čtverec se stranou o délce 60 pixelů. Pak bude pokaždé přidávat 10 pixelů a kreslit čtverce dokud nedosáhne 90 pixelů. Takže budeme mít čtverce o velikosti 50, 60, 70, 80 a 90 pixelů."
     parameters:
@@ -1156,7 +1156,7 @@ cs:
       2:
         text: "To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever."
       3:
-        text: "V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě. Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš vlastní hru."
+        text: "V této hádance je naším cílem pomoci aktérovi dělat práci nepřetržitě. Když se naučíš, jak povely opakování fungují, ušetříš později tuny času, když budeš vytvářet vlastní hru."
     iceage_intro:
       1:
         text: "Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co potřebuješ je jen pár základů programování a můžeš začít hrát hru, kterou jsi vytvořil."
@@ -1191,7 +1191,7 @@ cs:
       2:
         text: "To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever."
       3:
-        text: "V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě. Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš vlastní hru."
+        text: "V této hádance je naším cílem pomoci aktérovi dělat práci nepřetržitě. Když se naučíš, jak povely opakování fungují, ušetříš později tuny času, když budeš vytvářet vlastní hru."
     mc_2016_intro:
       1:
         text: "Ahoj, jmenuji se Jens a jsem hlavní kreativní designer Minecraftu. V následující hodině si vytvoříš svou vlastní hru Minecraft. Tohle vypadá jako Minecraft, ale svět se zastavil. Ovce se nehýbají, slepice přestaly snášet vejce a zombie stojí stranou. Je to jen na tobě, přidej kódy a rozhýbej svět Minecraftu."

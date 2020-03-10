@@ -7,6 +7,7 @@ exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org
 
 require 'cdo/aws/dms'
 require 'cdo/chat_client'
+require 'cdo/redshift_import'
 
 # Max time to wait for all tasks to complete import into staging tables.
 TASK_EXECUTION_TIME = 16.hours
@@ -29,9 +30,14 @@ def main
   end
   threads.each(&:join)
 
-  ChatClient.message'data', "Completed export from Aurora MySQL database to Redshift."
+  # The DMS tasks exported to staging (_import_) tables to avoid disrupting queries on the production Redshift tables
+  # during the lengthy table import process.  Rename the staging tables to the production table names to complete
+  # the import process
+  RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
+
+  ChatClient.message 'data', "Completed export from Aurora MySQL database to Redshift."
 rescue StandardError => error
-  ChatClient.message'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
+  ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
 end
 

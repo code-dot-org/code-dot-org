@@ -2528,3 +2528,67 @@ nn:
               name: Fart
             Functions:
               name: Funksjonar
+        coursea-2020:
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan
+            lese.
+          stages:
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binær armbånd
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programmeringsstafett
+            Conditionals with Cards:
+              name: Vilkår med kort
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Dance Party:
+              name: Dansefest
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Betingelser
+        coursef-2020:
+          description_short: Lær alle konspta i grunnleggande informatikk og skap
+            din eigen kunst, historie eller spel.
+          stages:
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansefest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stavekonkurranse
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binære tal

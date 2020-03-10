@@ -909,14 +909,6 @@ es-ES:
         content1: descripción aquí
       CSD U3 combining rep_2018_2019:
         content1: descripción aquí
-      CSD U3 complex sprite movement SFLP:
-        markdown: 'La clase aprende a combinar las propiedades de velocidad de los
-          sprites con el patrón de contador para crear un movimiento de sprite más
-          complejo, como simular la gravedad, hacer que un sprite salte y permitir
-          que un sprite flote hacia la izquierda o hacia la derecha. En los niveles
-          finales, la clase combina estos movimientos para animar y controlar un solo
-          sprite y construir un juego simple en el que un personaje vuela y recoge
-          monedas. '
       CSD U3 drawSprites placement match:
         answers:
         - {}

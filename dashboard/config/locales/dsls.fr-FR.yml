@@ -1386,6 +1386,11 @@ fr-FR:
           ### Clic sur continuer pour essayer !
 
 
+      'Overview: onEvent':
+        markdown: Vous devrez plonger dans le mode Code pour qu’il réponde réellement
+          aux utilisateurs. App Lab attend pour répondre à certains **événements**
+          qui se produisent dans un programme. Le bloc onEvent spécifie l’élément
+          de l’interface utilisateur sur lequel attendre un événement.
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant

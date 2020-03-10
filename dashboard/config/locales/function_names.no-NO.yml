@@ -162,6 +162,14 @@ no-NO:
         do something: gjør noe
       NEW Course 4 Play Lab Params 11:
         jump: Hopp
+      New Artist Project:
+        draw a star: tegn en stjerne
+        draw a circle: tegn en sirkel
+        draw a triangle: tegn en trekant
+        draw a house: tegn et hus
+        draw a square: tegn en firkant
+      New Play Lab Project:
+        jump: Hopp
       Robot Doodle:
         25 pixel square: 25 piksler stor firkant
       Robot Doodle_2018:
@@ -227,8 +235,6 @@ no-NO:
       courseE_artist_functions7:
         draw a house: tegn et hus
       courseE_artist_functions7_2018:
-        draw a house: tegn et hus
-      courseE_artist_functions7_2019:
         draw a house: tegn et hus
       courseE_artist_functions8:
         do something: gjør noe
