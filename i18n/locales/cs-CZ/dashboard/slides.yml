@@ -89,7 +89,7 @@ cs:
         text: "V poslední části si budeš moct vytvořit vlasntí hru asdílet ji se svými přáteli. Užij si to!"
     loop_times:
       1:
-        text: "Ahoj, jsem Mark! Seznámím tě se smyčkami. Pomocí smyček můžeš říct počítači, aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát."
+        text: "Ahoj, jsem Mark! Seznámím tě s cykly. Pomocí cyklů můžeš říct počítači, aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát."
       2:
         text: "V této hádance chceme, aby se ptáček posunul vpřed o 5 políček a dostal se k prasátku."
       3:
@@ -166,9 +166,9 @@ cs:
       1:
         text: "Ahoj, já jsem Trina a pracuji pro Pixar. Pracovala jsem na spoustě filmů včetně Shreka."
       2:
-        text: "Toto je naše nová smyčka \"čítač\". Bude provádět akce znovu a znovu a pokaždé můžete akci trošku pozměnit."
+        text: "Toto je náš nový cyklus \"čítač\". Bude provádět akce znovu a znovu a pokaždé můžete akci trošku pozměnit."
       3:
-        text: "V tomto případě, naše smyčka \"čítač\" říká, že budeme \"počítat s čítačem od 50 do 90 po 10\" a uvnitř něj máme náš blok \"nakreslit čtverec\". Přetáhni blok \"čítač\" ze sekce \"Proměnné\" na místo \"délka\"."
+        text: "V tomto případě náš cyklus \"čítač\" říká, že budeme \"počítat s čítačem od 50 do 90 po 10\" a uvnitř něj máme náš blok \"nakreslit čtverec\". Přetáhni blok \"čítač\" ze sekce \"Proměnné\" na místo \"délka\"."
       4:
         text: "To znamená, že náš malíř bude kreslit čtverec, který má stranu o délce 50 pixelů, poté k tomu přidá 10 a nakreslí čtverec se stranou o délce 60 pixelů. Pak bude pokaždé přidávat 10 pixelů a kreslit čtverce dokud nedosáhne 90 pixelů. Takže budeme mít čtverce o velikosti 50, 60, 70, 80 a 90 pixelů."
     parameters:

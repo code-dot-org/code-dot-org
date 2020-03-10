@@ -6421,6 +6421,8 @@ zh-TW:
               name: 單元 7 學生調查
             Unit 7 TEACHER Survey:
               name: 單元 7 教師調查
+            'Lesson 11: Assessment Day':
+              name: 課程 11：評量日
         csp9-pilot:
           stages:
             new stage:
@@ -6744,3 +6746,45 @@ zh-TW:
               name: 收藏家中的迴圈（Loops）
             Loops in Artist:
               name: 藝術家中的迴圈（Loops）
+        csp1-2020:
+          stages:
+            new stage:
+              name: 新的階段
+            Binary Numbers:
+              name: 二進位數
+            Intellectual Property:
+              name: 知識產權
+        csp2-2020:
+          stages:
+            new stage:
+              name: 新的階段
+        csp3-2020:
+          stages:
+            new stage:
+              name: 新的階段
+            Project - Designing an App Part 3:
+              name: 單元 3：應用程式開發簡介
+            'Lesson 11: Assessment Day':
+              name: 課程 11：評量日
+        csp6-2020:
+          stages:
+            new stage:
+              name: 新的階段
+            Algorithm Efficiency:
+              name: 演算法效率
+        csp8-2020:
+          stages:
+            new stage:
+              name: 新的階段
+        csp9-2020:
+          stages:
+            new stage:
+              name: 新的階段
+        csp10-2020:
+          stages:
+            new stage:
+              name: 新的階段
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: 新的階段

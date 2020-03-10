@@ -186,7 +186,7 @@ class StandardsReport extends Component {
                 </h2>
                 <SafeMarkdown
                   markdown={i18n.standardsGetInvolvedDetailsForPrint({
-                    adminLink: pegasus('/administrator'),
+                    adminLink: pegasus('/administrators'),
                     parentLink: pegasus('/help'),
                     teacherLink: '/courses'
                   })}

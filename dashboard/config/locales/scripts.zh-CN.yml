@@ -12833,6 +12833,8 @@ zh-CN:
               name: 第 7 单元教师问卷
             Variables Make Demo:
               name: 变量制作演示
+            'Lesson 11: Assessment Day':
+              name: 第 11 单元：评估日
         csd2-projects-temp:
           stages:
             HTML  Project:
@@ -13922,3 +13924,171 @@ zh-CN:
               name: 艺术家里的循环
             Tell a Story in Play Lab:
               name: 在游戏实验室中讲故事
+        csp1-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Welcome to CSP:
+              name: 欢迎来到计算机科学原理
+            Representing Information:
+              name: 代表信息
+            Circle Square Patterns:
+              name: 圆形方形图案
+            Binary Numbers:
+              name: 二进制数
+            Overflow and Rounding:
+              name: 溢出和舍入
+            Representing Text:
+              name: 表达文本
+            Black and White Images:
+              name: 黑白图画
+            Color Images:
+              name: 彩色图画
+            Lossless Compression:
+              name: 无损压缩
+            Lossy Compression:
+              name: 有损压缩
+            Intellectual Property:
+              name: 知识产权
+            Project - Digital Information Dilemmas Part 1:
+              name: 项目 - 数字信息困境 第 1 部分
+            Project - Digital Information Dilemmas Part 2:
+              name: 项目 - 数字信息困境 第 2 部分
+            'Lesson 14: Assessment Day':
+              name: 单元 14：评估日
+        csp2-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Welcome to the Internet:
+              name: 欢迎来到互联网
+            Building a Network:
+              name: 构建网络
+            The Need for Addressing:
+              name: 寻址的需要
+            Routers and Redundancy:
+              name: 路由和冗余
+            Packets:
+              name: 数据包
+            DNS and HTTP:
+              name: 域名解析服务（DNS）和超文本传输协议（HTTP）
+            Project - Internet Dilemmas Part 1:
+              name: 项目 - 互联网困境 第 1 部分
+            Project - Internet Dilemmas Part 2:
+              name: 项目 - 互联网困境 第 2 部分
+            'Lesson 9: Assessment Day':
+              name: 第 9 单元：评估日
+        csp3-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Introduction to Apps:
+              name: 应用程序介绍
+            Project - Designing an App Part 1:
+              name: 项目 - 设计一个应用，第 1 部分
+            Project - Designing an App Part 2:
+              name: 项目 - 设计一个应用，第 2 部分
+            The Need for Programming Languages:
+              name: 编程语言的需求
+            Intro to Programming:
+              name: 编程介绍
+            Debugging:
+              name: 调试
+            Project - Designing an App Part 3:
+              name: 项目 - 设计一个应用，第 3 部分
+            Project - Designing an App Part 4:
+              name: 项目 - 设计一个应用，第 4 部分
+            Project - Designing an App Part 5:
+              name: 项目 - 设计一个应用 第 5 部分
+            'Lesson 11: Assessment Day':
+              name: 第 11 单元：评估日
+        csp6-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Algorithms Solve Problems:
+              name: 算法解决问题
+            Algorithm Efficiency:
+              name: 算法效率
+            Unreasonable Time:
+              name: 不合理的时间
+            The Limits of Algorithms:
+              name: 算法的局限
+            Parallel and Distributed Algorithms:
+              name: 并行和分布式算法
+            'Lesson 6: Assessment Day':
+              name: 第 6 单元：评估日
+        csp8-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Create PT - Review the Task:
+              name: 创建表演任务 - 评审任务
+            Create PT - Make a Plan:
+              name: 创建表演任务 - 制定计划
+            Create PT - Complete the Task:
+              name: 创建 表演任务- 完成任务
+        csp9-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Learning From Data:
+              name: 从数据学习
+            Exploring One Column:
+              name: 探索一列
+            Filtering and Cleaning Data:
+              name: 过滤和清除数据
+            Exploring Two Columns:
+              name: 探索两列
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: 大数据、众包和机器学习
+            Machine Learning and Bias:
+              name: 机器学习和偏见
+            Project - Tell a Data Story - Part 1:
+              name: 项目 - 讲述数据的故事 - 第 1 部分
+            Project - Tell a Data Story - Part 2:
+              name: 项目 - 讲述数据的故事 - 第 2 部分
+            'Lesson 9: Assessment Day':
+              name: 第 9 单元：评估日
+        csp10-2020:
+          stages:
+            new stage:
+              name: 新的阶段
+            Project - Innovation Simulation Part 1:
+              name: 项目 - 创新模拟 第 1 部分
+            Project - Innovation Simulation Part 2:
+              name: 项目 - 创新模拟 第 2 部分
+            Project - Innovation Simulation Part 3:
+              name: 项目 - 创新模拟 第 3 部分
+            Data Policies and Privacy:
+              name: 数据政策和隐私
+            The Value of Privacy:
+              name: 隐私的价值
+            Project - Innovation Simulation Part 4:
+              name: 项目 - 创新模拟 第 4 部分
+            Security Risks Part 1:
+              name: 安全风险 第 1 部分
+            Security Risks Part 2:
+              name: 安全风险 第 2 部分
+            'Project: Innovation Simulation Part 4':
+              name: 项目：创新模拟 第 4 部分
+            Project - Innovation Simulation Part 6:
+              name: 项目 - 创新模拟 第 6 部分
+            Project - Innovation Simulation Part 7:
+              name: 项目 - 创新模拟 第 7 部分
+            Protecting Data Part 1:
+              name: 保护数据 第 1 部分
+            Protecting Data Part 2:
+              name: 保护数据 第 2 部分
+            'Project: Innovation Simulation Part 5':
+              name: 项目：创新模拟 第 5 部分
+            'Project: Innovation Simulation Part 6':
+              name: 项目：创新模拟 第 6 部分
+            'Project: Innovation Simulation Part 7':
+              name: 项目：创新模拟 第 7 部分
+            'Lesson 14: Unit Assessment Day':
+              name: 第 14 课：单元评估日
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: 新的阶段

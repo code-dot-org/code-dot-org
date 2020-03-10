@@ -355,6 +355,20 @@ zh-CN:
       NEW Course 4 Play Lab Params 11:
         jump: 跳跃
         patrol: 巡逻
+      New Artist Project:
+        draw a star: 画一个星星
+        draw a circle: 画一个圆圈
+        draw a pinwheel: 画一个风车
+        draw a triangle: 画一个三角形
+        draw a shape: 画一个图形
+        draw a house: 画一个房子
+        draw a square: 画一个正方形
+      New Minecraft Hero Project:
+        function 1: 函数1
+        function 2: 函数2
+      New Play Lab Project:
+        jump: 跳跃
+        patrol: 巡逻
       Robot Doodle:
         25 pixel square: 25像素正方形
         draw head: 画头
@@ -635,7 +649,6 @@ zh-CN:
         draw a house: 画一个房子
       courseE_artist_functions7_2019:
         draw a window: 画一个窗口
-        draw a house: 画一个房子
       courseE_artist_functions8:
         do something: 做点什么
         draw a line of squares: 画一条正方形线

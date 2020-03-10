@@ -4823,3 +4823,43 @@ is:
               name: Stafsetning
             Loops in Ice Age:
               name: Lykkjur í Ísöld
+        csp1-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Binary Numbers:
+              name: Tvíundartölur
+        csp2-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+            The Need for Addressing:
+              name: Þörfin fyrir vistföng
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+        csp3-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Debugging:
+              name: Villuleit
+        csp6-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp8-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp9-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp10-2020:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nýr áfangi

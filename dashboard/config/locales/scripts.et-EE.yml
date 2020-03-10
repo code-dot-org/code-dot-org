@@ -2017,3 +2017,7 @@ et:
               name: Sõnamesilane
             Loops in Ice Age:
               name: Tsüklik - Jääaeg
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binaararvud
