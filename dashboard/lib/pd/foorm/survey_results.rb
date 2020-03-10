@@ -66,20 +66,26 @@ module Pd::Foorm
           current_workshop_summary[name] << answer
         when ANSWER_SINGLE_SELECT, ANSWER_RATING
           # increment a counter
-          current_workshop_summary[name] ||= get_zero_counters_for_options(form_questions[name][:choices])
+          current_workshop_summary[name] ||= {}
+          current_workshop_summary[name][answer] ||= 0
           current_workshop_summary[name][answer] += 1
         when ANSWER_MULTI_SELECT
           # increment one or more counters
-          current_workshop_summary[name] ||= {num_respondents: 0}
+          current_workshop_summary[name] ||= {}
+          unless current_workshop_summary[name][:num_respondents]
+            current_workshop_summary[name][:num_respondents] = 0
+          end
           current_workshop_summary[name][:num_respondents] += 1
-          current_workshop_summary[name][:answers] ||= get_zero_counters_for_options(form_questions[name][:choices])
           answer.each do |single_answer|
-            current_workshop_summary[name][:answers][single_answer] += 1
+            current_workshop_summary[name][single_answer] ||= 0
+            current_workshop_summary[name][single_answer] += 1
           end
         when ANSWER_MATRIX
           # increment one or more counters
-          current_workshop_summary[name] ||= get_matrix_zero_counters(form_questions[name][:rows], form_questions[name][:columns])
+          current_workshop_summary[name] ||= {}
           answer.each do |row, column|
+            current_workshop_summary[name][row] ||= {}
+            current_workshop_summary[name][row][column] ||= 0
             current_workshop_summary[name][row][column] += 1
           end
         end
