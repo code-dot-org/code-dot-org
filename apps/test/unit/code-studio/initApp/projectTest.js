@@ -506,7 +506,7 @@ describe('project.js', () => {
     });
   });
 
-  describe('setLibraryDetails()', () => {
+  describe('setLibraryDetails(config)', () => {
     beforeEach(() => {
       sinon.stub(project, 'updateChannels_');
     });
@@ -524,7 +524,7 @@ describe('project.js', () => {
 
       expect(project.getCurrentLibraryName()).to.equal(oldName);
       expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
-      project.setLibraryDetails(newName, newDescription);
+      project.setLibraryDetails({newName, newDescription});
       expect(project.getCurrentLibraryName()).to.equal(newName);
       expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
       expect(project.updateChannels_).to.have.been.called;
@@ -555,7 +555,11 @@ describe('project.js', () => {
       });
 
       it('sets publishLibrary if true', () => {
-        project.setLibraryDetails(libraryName, libraryDescription, true);
+        project.setLibraryDetails({
+          newName: libraryName,
+          newDescription: libraryDescription,
+          publishing: true
+        });
         const currentProject = project.__TestInterface.getCurrent();
 
         expect(currentProject.publishLibrary).to.be.true;
@@ -567,7 +571,11 @@ describe('project.js', () => {
       });
 
       it('nullifies libraryPublishedAt if false', () => {
-        project.setLibraryDetails(libraryName, libraryDescription, false);
+        project.setLibraryDetails({
+          newName: libraryName,
+          newDescription: libraryDescription,
+          publishing: false
+        });
         const currentProject = project.__TestInterface.getCurrent();
 
         expect(currentProject.libraryPublishedAt).to.be.null;
@@ -579,7 +587,10 @@ describe('project.js', () => {
       });
 
       it('does nothing if undefined', () => {
-        project.setLibraryDetails(libraryName, libraryDescription);
+        project.setLibraryDetails({
+          newName: libraryName,
+          newDescription: libraryDescription
+        });
         const currentProject = project.__TestInterface.getCurrent();
 
         expect(currentProject.libraryName).to.equal(libraryName);
