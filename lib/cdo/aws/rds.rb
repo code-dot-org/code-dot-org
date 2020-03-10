@@ -7,7 +7,6 @@ module Cdo
     # @param source_cluster_id [String] DB cluster id of the cluster to clone.  Defaults to current environment's cluster.
     # @param clone_cluster_id [String] DB cluster id to assign to clone.  Defaults to source cluster id + "-clone"
     # @param instance_type [String]
-    # Returns [String] ARN of new cluster, if provisioned successfully.
     def self.clone_cluster(
       source_cluster_id: CDO.db_cluster_id,
       clone_cluster_id: "#{source_cluster_id}-clone",
@@ -110,9 +109,12 @@ module Cdo
         attempts += 1
         sleep delay
       end
-      raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
-      " #{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
-      )
+
+      unless cluster_state == 'deleted'
+        raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
+        " #{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
+        )
+      end
     end
   end
 end
