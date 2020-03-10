@@ -801,6 +801,7 @@
   "inProgress": "In progress",
   "inspireStudents": "Inspire students",
   "instructions": "Instructions",
+  "invalidDataEntryTypeError": "Value must be boolean, number, string, `undefined`, or `null`. Make sure to include quotes for strings like \"this\". ",
   "invalidRecordTypeError": "You attempted to add a record to the table that included a list or object. The data table can only store booleans, numbers, strings, null, and undefined.",
   "joinASection": "Join a section",
   "joinInstructions": "Joining Instructions",
