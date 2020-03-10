@@ -22,8 +22,9 @@ export default class Results extends React.Component {
    * answers: hash of {survey_name : {answers hash}}
    */
   renderResultsForSessionQuestionSection(section, questions, answers) {
+    let uniqueKey = -1;
     return _.compact(
-      Object.keys(answers).map((surveyId, i) => {
+      Object.keys(answers).map(surveyId => {
         console.log(`surveyId: ${surveyId}`);
         let surveyQuestions = questions[surveyId];
         console.log(`surveyQuestions: ${surveyQuestions}`);
@@ -32,7 +33,7 @@ export default class Results extends React.Component {
         }
 
         return _.compact(
-          Object.keys(answers[surveyId]).map((questionId, j) => {
+          Object.keys(answers[surveyId]).map(questionId => {
             console.log(`questionId: ${questionId}`);
             let question = surveyQuestions[questionId];
             if (!question) {
@@ -53,7 +54,7 @@ export default class Results extends React.Component {
               const filteredAnswers = _.omit(answer, 'num_respondents');
 
               let possibleAnswersMap = question['choices'];
-
+              uniqueKey++;
               return (
                 <ChoiceResponses
                   perFacilitator={section === 'facilitator'}
@@ -62,7 +63,7 @@ export default class Results extends React.Component {
                   answers={filteredAnswers}
                   possibleAnswers={Object.keys(possibleAnswersMap)}
                   possibleAnswersMap={possibleAnswersMap}
-                  key={i * j}
+                  key={uniqueKey}
                   answerType={question['type']}
                   /*otherText={question['other_text']}*/
                 />
@@ -79,6 +80,7 @@ export default class Results extends React.Component {
                     question['rows'][innerQuestionId]
                   }`;
                 }
+                uniqueKey++;
                 return (
                   <ChoiceResponses
                     perFacilitator={section === 'facilitator'}
@@ -87,19 +89,19 @@ export default class Results extends React.Component {
                     answers={innerAnswer}
                     possibleAnswers={Object.keys(possibleAnswersMap)}
                     possibleAnswersMap={possibleAnswersMap}
-                    key={i * j}
+                    key={uniqueKey}
                     answerType={'singleSelect'}
                     /*otherText={question['other_text']}*/
                   />
                 );
               });
             } else if (question['type'] === 'text') {
-              console.log(`question type is text`);
+              uniqueKey++;
               return (
                 <TextResponses
                   question={question['title'] || questionId}
                   answers={answer}
-                  key={i}
+                  key={uniqueKey}
                 />
               );
             }
