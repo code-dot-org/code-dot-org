@@ -115,16 +115,15 @@ export class LibraryPublisher extends React.Component {
         console.warn(`Error publishing library: ${error}`);
         this.setState({publishState: PublishState.ERROR_PUBLISH});
       },
-      () => {
+      data => {
+        // Write to projects database
+        dashboard.project.setLibraryDetails({
+          newName: libraryName,
+          newDescription: libraryDescription,
+          publishing: true
+        });
         onPublishSuccess(libraryName);
       }
-    );
-
-    // Write to projects database
-    dashboard.project.setLibraryDetails(
-      libraryName,
-      libraryDescription,
-      true /* publishing */
     );
   };
 
@@ -259,11 +258,11 @@ export class LibraryPublisher extends React.Component {
       this.setState({publishState: PublishState.ERROR_UNPUBLISH});
     } else {
       this.props.onUnpublishSuccess();
-      dashboard.project.setLibraryDetails(
-        undefined,
-        undefined,
-        false /* publishing */
-      );
+      dashboard.project.setLibraryDetails({
+        newName: undefined,
+        newDescription: undefined,
+        publishing: false
+      });
     }
   };
 
