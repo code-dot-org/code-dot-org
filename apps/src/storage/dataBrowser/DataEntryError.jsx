@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
+import color from '../../util/color';
 import SafeMarkdown from '../../templates/SafeMarkdown';
 
 const styles = {
@@ -13,7 +14,7 @@ const styles = {
   }
 };
 
-class DataEntryWarning extends React.Component {
+class DataEntryError extends React.Component {
   static propTypes = {
     isVisible: PropTypes.bool.isRequired
   };
@@ -21,13 +22,13 @@ class DataEntryWarning extends React.Component {
   render() {
     return this.props.isVisible ? (
       <div style={styles.visible}>
-        <SafeMarkdown markdown={msg.invalidDataEntryTypeWarning()} />
+        <SafeMarkdown markdown={msg.invalidDataEntryTypeError()} />
       </div>
     ) : (
-      // Blank space so layout stays the same whether or not warning is visible.
+      // Blank space so layout stays the same whether or not error is visible.
       <div style={styles.hidden} />
     );
   }
 }
 
-export default DataEntryWarning;
+export default DataEntryError;

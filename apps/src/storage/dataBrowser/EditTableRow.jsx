@@ -2,6 +2,7 @@ import FirebaseStorage from '../firebaseStorage';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
+import experiments from '@cdo/apps/util/experiments';
 import PendingButton from '../../templates/PendingButton';
 import {castValue, displayableValue, editableValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
@@ -20,7 +21,9 @@ class EditTableRow extends React.Component {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
     record: PropTypes.object.isRequired,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -48,14 +51,26 @@ class EditTableRow extends React.Component {
   }
 
   handleSave = () => {
-    this.setState({isSaving: true});
-    const newRecord = _.mapValues(this.state.newInput, castValue);
-    FirebaseStorage.updateRecord(
-      this.props.tableName,
-      newRecord,
-      this.resetState,
-      msg => console.warn(msg)
-    );
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      this.props.hideError();
+    }
+    try {
+      const newRecord = _.mapValues(this.state.newInput, inputString =>
+        castValue(inputString, /* allowUnquotedStrings */ false)
+      );
+      this.setState({isSaving: true});
+      FirebaseStorage.updateRecord(
+        this.props.tableName,
+        newRecord,
+        this.resetState,
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+        this.setState({isSaving: false});
+        this.props.showError();
+      }
+    }
   };
 
   resetState = () => {

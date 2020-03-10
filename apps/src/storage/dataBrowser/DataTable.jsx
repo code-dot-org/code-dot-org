@@ -4,6 +4,7 @@
 import AddTableRow from './AddTableRow';
 import EditTableRow from './EditTableRow';
 import ColumnHeader from './ColumnHeader';
+import DataEntryError from './DataEntryError';
 import FirebaseStorage from '../firebaseStorage';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
@@ -52,7 +53,8 @@ const INITIAL_STATE = {
   pendingAdd: false,
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
-  currentPage: 0
+  currentPage: 0,
+  showError: false
 };
 
 class DataTable extends React.Component {
@@ -81,6 +83,9 @@ class DataTable extends React.Component {
       this.setState(INITIAL_STATE);
     }
   }
+
+  showError = () => this.setState({showError: true});
+  hideError = () => this.setState({showError: false});
 
   addColumn = () => {
     const columnName = this.getNextColumnName();
@@ -224,6 +229,7 @@ class DataTable extends React.Component {
 
     return (
       <div>
+        <DataEntryError isVisible={this.state.showError} />
         <div style={styles.pagination}>
           <PaginationWrapper
             totalPages={numPages}
@@ -281,6 +287,8 @@ class DataTable extends React.Component {
               <AddTableRow
                 tableName={this.props.tableName}
                 columnNames={columnNames}
+                showError={this.showError}
+                hideError={this.hideError}
               />
             )}
 
@@ -291,6 +299,8 @@ class DataTable extends React.Component {
                 record={JSON.parse(rows[id])}
                 key={id}
                 readOnly={this.props.readOnly}
+                showError={this.showError}
+                hideError={this.hideError}
               />
             ))}
           </tbody>
