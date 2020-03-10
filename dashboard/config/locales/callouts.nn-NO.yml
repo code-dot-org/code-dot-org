@@ -277,6 +277,8 @@ nn-NO:
       NEW Course 4 Bee For Loops 5:
         actions_category: Verktøyboksen har fått ny utsjånad! "Handling"-blokkene
           er her inne nå.
+      New Frozen Project:
+        snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
       Overworld Chop Trees:
         craft_callout_preplaced: Vi har satt saman nokre blokker her for å hjelpe
           deg i gong

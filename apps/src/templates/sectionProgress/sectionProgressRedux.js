@@ -14,6 +14,11 @@ import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
+import {
+  fetchStandardsCoveredForScript,
+  fetchStudentLevelScores
+} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const SET_CURRENT_VIEW = 'sectionProgress/SET_CURRENT_VIEW';
 const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
@@ -338,8 +343,9 @@ export const getColumnWidthsForDetailView = state => {
  * Query the server for script data (info about the levels in the script) and
  * also for user progress on that script
  * @param {string} scriptId to load data for
+ * @param {string} sectionId to load data for
  */
-export const loadScript = scriptId => {
+export const loadScript = (scriptId, sectionId) => {
   return (dispatch, getState) => {
     const state = getState().sectionProgress;
     const sectionData = getState().sectionData.section;
@@ -359,6 +365,13 @@ export const loadScript = scriptId => {
       .then(response => response.json())
       .then(scriptData => {
         dispatch(addScriptData(scriptId, scriptData));
+        if (
+          scriptData.hasStandards &&
+          experiments.isEnabled(experiments.STANDARDS_REPORT)
+        ) {
+          dispatch(fetchStandardsCoveredForScript(scriptId));
+          dispatch(fetchStudentLevelScores(scriptId, sectionId));
+        }
       });
 
     const numStudents = sectionData.students.length;

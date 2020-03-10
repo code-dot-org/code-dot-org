@@ -51,5 +51,6 @@ stage 'Project - Tell a Data Story - Part 2', flex_category: 'csp_unit9_2020'
 level 'CSP U9L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U9 Data Story Day 2', progression: 'Data Story Workspace', assessment: true
 
-stage 'Lesson 9: Assessment Day'
+stage 'Lesson 9: Assessment Day', lockable: true
 level 'CSP U9L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 9 AP-Style Assessment _2020', progression: 'Unit 9 Exam', assessment: true

@@ -1,10 +1,12 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 import {combineReducers} from 'redux';
+import $ from 'jquery';
 import _ from 'lodash';
 import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 // Action types
 
@@ -14,6 +16,7 @@ const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
+const UPDATE_PERSONAL_PROJECT_DATA = 'projects/UPDATE_PERSONAL_PROJECT_DATA';
 
 const UNPUBLISH_REQUEST = 'projects/UNPUBLISH_REQUEST';
 const UNPUBLISH_SUCCESS = 'projects/UNPUBLISH_SUCCESS';
@@ -71,6 +74,10 @@ export function setHasOlderProjects(hasOlderProjects, projectType) {
 
 export function setPersonalProjectsList(personalProjectsList) {
   return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
+}
+
+export function updatePersonalProjectData(projectId, data) {
+  return {type: UPDATE_PERSONAL_PROJECT_DATA, projectId, data};
 }
 
 export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
@@ -192,6 +199,17 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return {
         ...state,
         projects: action.personalProjectsList
+      };
+    case UPDATE_PERSONAL_PROJECT_DATA:
+      var projectsList = [...state.projects];
+      var updatedProjectIndex = projectsList.findIndex(
+        project => project.channel === action.projectId
+      );
+      projectsList[updatedProjectIndex] = action.data;
+
+      return {
+        ...state,
+        projects: projectsList
       };
     case PUBLISH_SUCCESS:
       var publishedChannel = action.lastPublishedProjectData.channel;
@@ -388,18 +406,6 @@ const reducer = combineReducers({
 });
 export default reducer;
 
-// Selectors
-
-export const getProjectLibraries = state => {
-  const {personalProjectsList} = state.projects;
-
-  if (personalProjectsList && personalProjectsList.projects) {
-    return _.filter(personalProjectsList.projects, p => p.libraryName);
-  } else {
-    return [];
-  }
-};
-
 export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
@@ -462,6 +468,27 @@ export function unpublishProject(projectId) {
     });
   };
 }
+
+export const unpublishProjectLibrary = (
+  projectId,
+  libraryApi = new LibraryClientApi(projectId),
+  onComplete = () => {}
+) => {
+  return dispatch => {
+    fetchProjectToUpdate(projectId, (error, data) => {
+      if (error) {
+        onComplete(error, data);
+      } else {
+        libraryApi.unpublish(data, (error, serverData) => {
+          if (!error) {
+            dispatch(updatePersonalProjectData(projectId, serverData));
+          }
+          onComplete(error, serverData);
+        });
+      }
+    });
+  };
+};
 
 const updateProjectNameOnServer = project => {
   return dispatch => {

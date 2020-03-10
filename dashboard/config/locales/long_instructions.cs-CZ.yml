@@ -53,7 +53,7 @@ cs-CZ:
       2-3 Artist Nested Loops Free Play: Zahraj si zdarma, nakresli něco cool s vnořenými
         cykly.
       2-3 Bee Debugging 10: |-
-        S téhle hádanky se mi točí hlava!
+        Z téhle hádanky se mi točí hlava!
 
         Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
       2-3 Bee Debugging Assessment 1: |-
@@ -64,9 +64,9 @@ cs-CZ:
       2-3 Bee Loops 3B: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení
         veškerého medu.
       2-3 Bee Loops 4A: |-
-        Kolik smyček potřebuješ v této hádance?
+        Kolik cyklů potřebuješ v této úloze?
 
-        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
+        Cykly jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       2-3 Maze 1: "Můžeš mi pomoct chytit zlobivé prase? \n\nSlož dohromady několik
         bloků \"posuň se vpřed\" pod blok \"při spuštění\" a stiskni tlačítko \"Spustit\". "
       2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku
@@ -482,27 +482,28 @@ cs-CZ:
         v korálovém útesu.
       HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      K-1 Bee Loops 2: Pohybuj se pomocí smyčky `opakuj` a potom získej nektar a připrav
+      K-1 Bee Loops 2: Pohybuj se pomocí cyklu `opakuj` a potom získej nektar a připrav
         med!
-      K-1 Bee Loops 3: Použij tři smyčky `opakuj`, abys dostal nektar a udělal med!
-      K-1 Bee Loops 4: Použij smyčku `opakuj` pro získání nektaru, vyrobení medu a
+      K-1 Bee Loops 3: Použij tři cykly `opakuj`, abys dostal nektar a udělal med!
+      K-1 Bee Loops 4: Použij cyklus `opakuj` pro získání nektaru, vyrobení medu a
         pro pohyb!
-      K-1 Bee Loops 5: Použij smyčku `opakuj`, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij smyčku `opakuj`, abys dostal nektar, med a k pohybu!
+      K-1 Bee Loops 5: Použij cyklus `opakuj`, aby dostal nektar a med!
+      K-1 Bee Loops 6: Použij cyklus `opakuj`, abys získal nektar, med a pohyboval
+        se!
       K-1 Maze Loops 10: "Dostaň mě k prasátku!\\\rPoužití cyklu 'opakuj' to hodně
         zjednoduší."
       K-1 Maze Loops 11: |-
         Dostaň mě k prasátku!\
-        Smyčka `opakuj` to usnadní.
+        Cyklus `opakuj` to usnadní.
       K-1 Maze Loops 12: |-
         Dostaň mě k prasátku!\
-        Smyčka `opakuj` to usnadní.
+        Cyklus `opakuj` to usnadní.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
       K-1 Maze Loops 3: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 5: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 6: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 7: Dostaň mě k prasátku! Určitě použij 'opakuj'.
-      K-1 Maze Loops 8: Použij smyčku `opakuj`, abys mě dostal k prasátku.
+      K-1 Maze Loops 8: Použij cyklus `opakuj`, abys mě dostal k prasátku.
       K-1 Maze Loops Assessment 1: "Podívej na vše, co jsme se naučili!\\\rPoužij
         cyklus 'Opakuj' abys mě dostal k prasátku!"
       MC HOC 2016 SCORE LEVEL: "Některé hry počítají skóre. Zkus to také s těmito
@@ -577,6 +578,8 @@ cs-CZ:
       MC_HOC_2017_FP20x20: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět
         pomocí agentova kódu."
       MC_HOC_2017_FP20x20_2019: "**Volná hra:** Teď je to na vás! Prozkoumejte tento
+        svět pomocí agentova kódu."
+      New Minecraft Hero Project: "**Volná hra:** Teď je to na vás! Prozkoumejte tento
         svět pomocí agentova kódu."
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
@@ -960,6 +963,10 @@ cs-CZ:
         _"Ale ne! Vidím problém."_
 
         Oprav chyby a posbírej si poklad.
+      courseD_collector_debugging10_predict1: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
       courseD_collector_debugging1a_2018: |-
         _"Ale ne! Vidím problém."_
 
@@ -1004,6 +1011,55 @@ cs-CZ:
         _"Neboj. Ty to zvládneš!"_
 
         Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging5: |-
+        _"Z této úlohy se mi zamotala hlava!"_
+
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+      courseD_collector_debugging5a_2018: |-
+        _"Z této úlohy se mi zamotala hlava!"_
+
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+      courseD_collector_debugging5a_2019: |-
+        _"Z této úlohy se mi zamotala hlava!"_
+
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+      courseD_collector_debugging6a_2018: 'Výzva: Použij kód v pracovním prostoru
+        tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
+        tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_debugging8: |-
+        _"Tolik pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging8a_2018: |-
+        _"Tolik pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging8a_2019: |-
+        _"Tolik pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging9: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging9a_2018: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging9a_2019: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_farmer_while1: "_\"Ahoj, já jsem farmářka. Potřebuji tvou pomoc na statku
+        při zarovnání pole, aby bylo připravené na sazeničky\"_   \n\nPosuň se k hromádce
+        hlíny a využij blok `odstraň` pro její odstranění."
+      courseD_farmer_while1_2018: "_\"Ahoj, já jsem farmářka. Potřebuji tvou pomoc
+        na statku při zarovnání pole, aby bylo připravené na sazeničky\"_   \n\nPosuň
+        se k hromádce hlíny a využij blok `odstraň` pro její odstranění."
+      courseD_farmer_while1_2019: "_\"Ahoj, já jsem farmářka. Potřebuji tvou pomoc
+        na statku při zarovnání pole, aby bylo připravené na sazeničky\"_   \n\nPosuň
+        se k hromádce hlíny a využij blok `odstraň` pro její odstranění."
       courseD_iceage_loops1: Pomoz Scratovi přes kluzký led, aby se dostal k žaludu!
       courseD_iceage_loops10: Pomoz Scratovi projít celou cestu k žaludu!
       courseD_iceage_loops10_2019: Pomoz Scratovi projít celou cestu k žaludu!

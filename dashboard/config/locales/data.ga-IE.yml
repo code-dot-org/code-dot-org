@@ -692,6 +692,7 @@ ga:
         csp_applab_functions: Buneolas ar Fheidhmeanna
         csp_applab_functions_parameters: Feidhmeanna a ghlacann le Paraiméadair
         csp_applab_loops: Lúba
+        csp_concept_encryption: 'An tIdirlíon: Criptiú agus Eochracha Poiblí'
         csp_cs_is_changing_everything: Tá an Ríomheolaíocht ag athrú an domhain
         starwars_intro: 'Star Wars: Tóg do Réaltra Féin le Cód - Réamhrá'
         starwars_typing: 'Star Wars: Tóg do Réaltra Féin le Cód - JavaScript'

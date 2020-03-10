@@ -12152,6 +12152,8 @@ pt-BR:
               name: Unidade 7 Pesquisa com PROFESSORES
             Variables Make Demo:
               name: Variáveis ​​fazem demonstração
+            'Lesson 11: Assessment Day':
+              name: 'Lição 11: Dia de Avaliação'
         csd2-projects-temp:
           stages:
             HTML  Project:
@@ -13072,3 +13074,171 @@ pt-BR:
               name: Laços no Artista
             Tell a Story in Play Lab:
               name: Conte uma história no Play Lab
+        csp1-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Welcome to CSP:
+              name: Bem vindo ao CSP
+            Representing Information:
+              name: Representando informação
+            Circle Square Patterns:
+              name: Padrões Circulo Quadrado
+            Binary Numbers:
+              name: Números binários
+            Overflow and Rounding:
+              name: Estouro e arredondamento
+            Representing Text:
+              name: Representando texto
+            Black and White Images:
+              name: Imagens em preto e branco
+            Color Images:
+              name: Imagens coloridas
+            Lossless Compression:
+              name: Compressão sem perdas
+            Lossy Compression:
+              name: Compressão com perda
+            Intellectual Property:
+              name: Propriedade intelectual
+            Project - Digital Information Dilemmas Part 1:
+              name: Projeto - Dilemas da Informação Digital Parte 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Projeto - Dilemas da Informação Digital Parte 2
+            'Lesson 14: Assessment Day':
+              name: 'Lição 14: Dia da Avaliação'
+        csp2-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Welcome to the Internet:
+              name: Bem-vindo à Internet
+            Building a Network:
+              name: Construindo uma rede
+            The Need for Addressing:
+              name: A Necessidade de Endereçar
+            Routers and Redundancy:
+              name: Roteadores e redundância
+            Packets:
+              name: Pacotes
+            DNS and HTTP:
+              name: DNS e HTTP
+            Project - Internet Dilemmas Part 1:
+              name: Projeto - Dilemas da Internet Parte 1
+            Project - Internet Dilemmas Part 2:
+              name: Projeto - Dilemas da Internet - Parte 2
+            'Lesson 9: Assessment Day':
+              name: 'Lição 9: Dia da Avaliação'
+        csp3-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Introduction to Apps:
+              name: Introdução à apps
+            Project - Designing an App Part 1:
+              name: 'Projeto: Criando um aplicativo Parte 1'
+            Project - Designing an App Part 2:
+              name: 'Projeto: Criando um aplicativo Parte 2'
+            The Need for Programming Languages:
+              name: A necessidade das linguagens de programação
+            Intro to Programming:
+              name: Introdução à Programação
+            Debugging:
+              name: Analisando
+            Project - Designing an App Part 3:
+              name: 'Projeto: Criando um aplicativo Parte 3'
+            Project - Designing an App Part 4:
+              name: 'Projeto: Criando um aplicativo Parte 4'
+            Project - Designing an App Part 5:
+              name: Projeto - Criando um Aplicativo - Parte 5
+            'Lesson 11: Assessment Day':
+              name: 'Lição 11: Dia de Avaliação'
+        csp6-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Algorithms Solve Problems:
+              name: Algoritmos resolvem problemas
+            Algorithm Efficiency:
+              name: Eficiência de algoritmo
+            Unreasonable Time:
+              name: Tempo inadequado
+            The Limits of Algorithms:
+              name: Os limites dos algoritmos
+            Parallel and Distributed Algorithms:
+              name: Algoritmos Paralelos e Distribuídos
+            'Lesson 6: Assessment Day':
+              name: 'Lição 6: Dia da Avaliação'
+        csp8-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Create PT - Review the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT - Make a Plan:
+              name: Criar PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+        csp9-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Learning From Data:
+              name: Aprendendo com dados
+            Exploring One Column:
+              name: Explorando uma coluna
+            Filtering and Cleaning Data:
+              name: Filtrando e limpando dados
+            Exploring Two Columns:
+              name: Explorando duas colunas
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, e aprendizado de máquina
+            Machine Learning and Bias:
+              name: Aprendizado de máquina e tendencia
+            Project - Tell a Data Story - Part 1:
+              name: Projeto - Conte uma História de Dados - Parte 1
+            Project - Tell a Data Story - Part 2:
+              name: Projeto - Conte uma História de Dados - Parte 2
+            'Lesson 9: Assessment Day':
+              name: 'Lição 9: Dia da Avaliação'
+        csp10-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Project - Innovation Simulation Part 1:
+              name: 'Projeto: Simulação da Inovação - Parte 1'
+            Project - Innovation Simulation Part 2:
+              name: 'Projeto: Simulação da Inovação - Parte 2'
+            Project - Innovation Simulation Part 3:
+              name: 'Projeto: Simulação da Inovação - Parte 3'
+            Data Policies and Privacy:
+              name: Políticas de dados e privacidade
+            The Value of Privacy:
+              name: O valor da privacidade
+            Project - Innovation Simulation Part 4:
+              name: 'Projeto: Simulação da Inovação - Parte 4'
+            Security Risks Part 1:
+              name: Riscos de segurança Parte 1
+            Security Risks Part 2:
+              name: Riscos de segurança Parte 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Projeto: Simulação da Inovação - Parte 4'
+            Project - Innovation Simulation Part 6:
+              name: 'Projeto: Simulação da Inovação - Parte 6'
+            Project - Innovation Simulation Part 7:
+              name: 'Projeto: Simulação da Inovação - Parte 7'
+            Protecting Data Part 1:
+              name: Protegendo dados Parte 1
+            Protecting Data Part 2:
+              name: Protegendo dados Parte 2
+            'Project: Innovation Simulation Part 5':
+              name: 'Projeto: Simulação da Inovação - Parte 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Projeto: Simulação da Inovação - Parte 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Projeto: Simulação da Inovação - Parte 7'
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lição 14: Dia da Avaliação da Unidade'
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nova fase

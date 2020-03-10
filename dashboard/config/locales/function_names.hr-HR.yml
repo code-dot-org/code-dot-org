@@ -96,6 +96,14 @@ hr-HR:
         do something: radi nešto
       NEW Course 4 Play Lab Params 11:
         jump: skoči
+      New Artist Project:
+        draw a star: nacrtaj zvijezdu
+        draw a circle: nacrtaj krug
+        draw a triangle: nacrtaj trokut
+        draw a house: nacrtaj kuću
+        draw a square: nacrtaj kvadrat
+      New Play Lab Project:
+        jump: skoči
       Standalone_Artist_7:
         draw a flower: nacrtaj cvijet
       Standalone_Artist_9:
@@ -154,8 +162,6 @@ hr-HR:
       courseE_artist_functions7:
         draw a house: nacrtaj kuću
       courseE_artist_functions7_2018:
-        draw a house: nacrtaj kuću
-      courseE_artist_functions7_2019:
         draw a house: nacrtaj kuću
       courseE_artist_functions8:
         do something: radi nešto
