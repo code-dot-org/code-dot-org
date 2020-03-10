@@ -48,7 +48,7 @@
     "CONTROLS_IF_ELSEIF_TOOLTIP": "Füge dem \"Wenn\"-Baustein eine Bedingung hinzu.",
     "CONTROLS_IF_ELSE_TOOLTIP": "Füge eine letzte mögliche Option zum \"Wenn\"-Baustein hinzu.",
     "CONTROLS_IF_HELPURL": "http://de.wikipedia.org/wiki/Bedingte_Anweisung",
-    "CONTROLS_IF_IF_TOOLTIP": "Füge Abschnitte hinzu, entferne oder sortiere sie, um den \"Wenn\"-Baustein zu ändern.",
+    "CONTROLS_IF_IF_TOOLTIP": "Füge Bereiche hinzu, entferne oder sortiere sie, um den \"Wenn\"-Baustein zu ändern.",
     "CONTROLS_IF_MSG_ELSE": "ansonsten",
     "CONTROLS_IF_MSG_ELSEIF": "ansonsten wenn",
     "CONTROLS_IF_MSG_IF": "wenn",

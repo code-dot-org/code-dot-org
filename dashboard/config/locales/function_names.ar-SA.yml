@@ -304,6 +304,17 @@ ar-SA:
       NEW Course 4 Play Lab Params 11:
         jump: قفز
         patrol: دورية
+      New Artist Project:
+        draw a star: رسم نجمة
+        draw a circle: رسم دائرة
+        draw a pinwheel: ارسم دولاب الهواء
+        draw a triangle: رسم مثلث
+        draw a shape: ارسم شكل
+        draw a house: رسم منزل
+        draw a square: رسم مربع
+      New Play Lab Project:
+        jump: قفز
+        patrol: دورية
       Robot Doodle:
         draw head: ارسم رأس
       Robot Doodle_2018:
@@ -573,7 +584,6 @@ ar-SA:
         draw a house: رسم منزل
       courseE_artist_functions7_2019:
         draw a window: ارسم نافذة
-        draw a house: رسم منزل
       courseE_artist_functions8:
         do something: القيام بشيء ما
         draw a line of squares: ارسم خط من المربعات

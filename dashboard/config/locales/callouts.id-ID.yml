@@ -290,6 +290,8 @@ id-ID:
       NEW Course 4 Bee For Loops 5:
         actions_category: Kotak alat ini punya tampilan baru! Blok "Tindakan" berada
           di sini sekarang.
+      New Frozen Project:
+        snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
       Overworld Chop Trees:
         craft_callout_preplaced: Kami meletakkan beberapa balok di sini agar kamu
           dapat memulainya dengan mudah

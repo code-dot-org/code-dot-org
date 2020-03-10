@@ -355,6 +355,20 @@ sk-SK:
       NEW Course 4 Play Lab Params 11:
         jump: skoč
         patrol: hliadkuj
+      New Artist Project:
+        draw a star: nakresli hviezdu
+        draw a circle: nakresli kružnicu
+        draw a pinwheel: nakresli veterník
+        draw a triangle: nakresli trojuholník
+        draw a shape: nakresli tvar
+        draw a house: nakresli dom
+        draw a square: nakresli štvorec
+      New Minecraft Hero Project:
+        function 1: funkcia 1
+        function 2: funkcia 2
+      New Play Lab Project:
+        jump: skoč
+        patrol: hliadkuj
       Robot Doodle:
         25 pixel square: 25pixelový štvorec
         draw head: nakresli hlavu
@@ -635,7 +649,6 @@ sk-SK:
         draw a house: nakresli dom
       courseE_artist_functions7_2019:
         draw a window: nakresli okno
-        draw a house: nakresli dom
       courseE_artist_functions8:
         do something: urob niečo
         draw a line of squares: nakresli rad štvorcov

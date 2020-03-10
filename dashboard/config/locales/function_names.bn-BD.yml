@@ -84,6 +84,14 @@ bn-BD:
         do something: কিছু কর
       NEW Course 4 Play Lab Params 11:
         jump: লাফান
+      New Artist Project:
+        draw a star: একটি বর্গ আঁকুন
+        draw a circle: একটি বৃত্ত আঁকুন।
+        draw a triangle: একটি ত্রিভুজ আঁকুন।
+        draw a house: একটি ঘর আঁকুন।
+        draw a square: একটি বর্গ আঁকুন।
+      New Play Lab Project:
+        jump: লাফান
       Standalone_Artist_7:
         draw a flower: ফুল আঁকুন
       course3_artist_functions_challenge1:
@@ -137,8 +145,6 @@ bn-BD:
       courseE_artist_functions7:
         draw a house: একটি ঘর আঁকুন।
       courseE_artist_functions7_2018:
-        draw a house: একটি ঘর আঁকুন।
-      courseE_artist_functions7_2019:
         draw a house: একটি ঘর আঁকুন।
       courseE_artist_functions8:
         do something: কিছু কর

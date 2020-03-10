@@ -271,6 +271,18 @@ de-DE:
         draw a polygon: zeichne ein Vieleck
       NEW Course 4 Play Lab Params 11:
         jump: springen
+      New Artist Project:
+        draw a star: zeichne einen Stern
+        draw a circle: Zeichne einen Kreis
+        draw a triangle: zeichne ein Dreieck
+        draw a shape: zeichne eine Form
+        draw a house: Zeichne ein Haus
+        draw a square: zeichne ein Quadrat
+      New Minecraft Hero Project:
+        function 1: Funktion 1
+        function 2: Funktion 2
+      New Play Lab Project:
+        jump: springen
       Robot Doodle:
         draw head: zeichne Kopf
       Robot Doodle_2018:
@@ -505,7 +517,6 @@ de-DE:
         draw a house: Zeichne ein Haus
       courseE_artist_functions7_2019:
         draw a window: zeichne ein Fenster
-        draw a house: Zeichne ein Haus
       courseE_artist_functions8:
         do something: Funktionsblock
         draw square: zeichne Quadrat
