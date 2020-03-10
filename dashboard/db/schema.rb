@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200306044716) do
+ActiveRecord::Schema.define(version: 20200309214938) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -266,6 +266,14 @@ ActiveRecord::Schema.define(version: 20200306044716) do
     t.integer "level_id"
     t.index ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
+  end
+
+  create_table "contact_rollups_processed", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",      null: false
+    t.json     "data",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_contact_rollups_processed_on_email", unique: true, using: :btree
   end
 
   create_table "contained_level_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
