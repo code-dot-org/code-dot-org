@@ -28,11 +28,65 @@ gl-ES:
 
         -   Como seguiches o proceso de resolución de problemas na derradeira lección?
         -   Como poderías empregar este proceso nun problema da túa vida diaria?
+      CSD U2 Inspector Warm Up: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary><strong>Como emprego a Ferramenta de Inspección?</strong>
+
+        </summary>
+
+        A Ferramenta de Inspección é un gran xeito de aprender máis acerca de códigos descoñecidos no Laboratorio Web . Para activar a Ferramenta de inspección, prema en<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Saberás que a Ferramenta de Inspección está acesa porque o botón poñerase branco e dirá «Inspección: Acesa». Unha vez que acenda a Ferramenta de Inspección, pode pasar o cursor por encima de calquera cousa na área de vista previa e o Laboratorio Web resaltará o código que fai que esa parte da páxina apareza.
+
+        </details>
+        </div>
+
+        # Explora o HTML
+
+        Esta é unha páxina web escrita en HTML, a linguaxe da web. Aprenderás máis sobre como funciona, pero primeiro explóraa usando a Ferramenta de Inspección.
+
+        # Fai isto
+
+        -   Preme no consello «Como utilizo a Ferramenta de Inspección?» á dereita para aprender a utilizala.
+        -   Segue as instrucións da páxina web para explorala e analizar cun compañeiro como funciona.
       CSD What Makes a Computer a Computer Video_2019: |-
         ## Preguntas para pensar
 
         -   Que fai diferente aos ordenadores doutras máquinas anteriores?
         -   Pensa nalgo que fagas no ordenador. Que tipo de entrada, saída, almacenaxe e proceso acontece?
+      CSDU2 - Type Anything: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Benvido ao Laboratorio Web!
+
+        A plataforma na que estás chámase Laboratorio Web. Hai tres partes principais da pantalla no Laboratorio Web.
+
+        # Fai isto
+
+        -   Tenta escribir algo no espazo de traballo.
+        -   Preme<img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px">
+      CSDU2 - Type Anything_2018: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Benvido ao Laboratorio Web!
+
+        A plataforma na que estás chámase Laboratorio Web. Hai tres partes principais da pantalla no Laboratorio Web.
+
+        # Fai isto
+
+        -   Tenta escribir algo no espazo de traballo.
+        -   Preme<img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px">
+      CSDU2 - Type Anything_2019: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Benvido ao Laboratorio Web!
+
+        A plataforma na que estás chámase Laboratorio Web. Hai tres partes principais da pantalla no Laboratorio Web.
+
+        # Fai isto
+
+        -   Tenta escribir algo no espazo de traballo.
+        -   Preme<img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px">
       Course 4 Artist For Loops 6a: |-
         Fai tres pequenas alteracións no
         código do último nivel para conseguilo!

@@ -1770,3 +1770,7 @@ lt:
           stages:
             Spelling Bee:
               name: Rašanti bitė
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Dvejetainiai skaičiai

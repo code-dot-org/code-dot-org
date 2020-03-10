@@ -223,6 +223,16 @@ hi-IN:
         draw a polygon: बहुभुज खींचें
       NEW Course 4 Play Lab Params 11:
         jump: कूदें
+      New Artist Project:
+        draw a star: एक सितारा खींचे
+        draw a circle: एक चक्र बनाएं
+        draw a pinwheel: चकरी चित्रित करें
+        draw a triangle: एक त्रिकोण खींचें
+        draw a shape: आकृति खींचें
+        draw a house: एक घर खींचे
+        draw a square: एक वर्ग खींचें
+      New Play Lab Project:
+        jump: कूदें
       Robot Doodle:
         25 pixel square: 25 पिक्सल वर्ग
         draw head: सिर चित्रित करें
@@ -496,7 +506,6 @@ hi-IN:
         draw a house: एक घर खींचे
       courseE_artist_functions7_2019:
         draw a window: खिड़की चित्रित करें
-        draw a house: एक घर खींचे
       courseE_artist_functions8:
         do something: कुछ कीजिए
         draw a line of squares: वर्गों की लाइन खींचें

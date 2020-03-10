@@ -421,6 +421,9 @@ cs:
         title: Pohyb, pohyb
       RelayProgramming_2018:
         title: Štafetové programování
+        desc: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle
+          přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat
+          na napsání programu postupně po jednom pokynu.
       courseB_unplugged_MRF_2019:
         title: Mí robotičtí přátelé
       Conditionals_2019:
@@ -434,6 +437,9 @@ cs:
           na základě kterých spolužáci zreprodukují obrázek.
       RelayProgramming_2018_2019:
         title: Štafetové programování
+        desc: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle
+          přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat
+          na napsání programu postupně po jednom pokynu.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktivita bez počítače
       BinaryImages_2019:

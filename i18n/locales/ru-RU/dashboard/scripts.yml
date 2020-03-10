@@ -3261,3 +3261,17 @@ ru:
               name: Циклы в исполнителе Художник
             Loops in Artist:
               name: Циклы в исполнителе Художник
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Двоичные числа
+        csp2-2020:
+          stages:
+            The Need for Addressing:
+              name: Необходимость адресации
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
+        csp3-2020:
+          stages:
+            The Need for Programming Languages:
+              name: Необходимость языков программирования

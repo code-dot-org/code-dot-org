@@ -2376,3 +2376,7 @@ bs:
           stages:
             Spelling Bee:
               name: Spelovanje
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binarni Brojevi

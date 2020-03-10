@@ -178,6 +178,8 @@ sv-SE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken
           är här nu.
+      New Frozen Project:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
       Overworld Chop Trees:
         craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
           igång

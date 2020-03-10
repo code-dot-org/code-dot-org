@@ -44,7 +44,7 @@ hu-HU:
           Melyik szám mit csinál?\
           Ha túl belebonyolódsz, csak kattints az "Újrakezdés", és a kódod újraindul.
       2-3 Artist Debugging 2:
-        2-3_Artist_Debugging_2_a: 'Tipp: Minden egyes darukar 75 pixel hosszú.'
+        2-3_Artist_Debugging_2_a: 'Tipp: Minden egyes darukar 75 képpont hosszú.'
       2-3 Artist Debugging 3:
         2-3_Artist_Debugging_3_a: A 15 fokos elfordulás túl kicsi.
         2-3_Artist_Debugging_3_b: Ha a program túl gyorsan fut, hogy lásd mi történik,
