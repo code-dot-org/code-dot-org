@@ -278,6 +278,14 @@ ActiveRecord::Schema.define(version: 20200310000601) do
     t.index ["email", "sources"], name: "index_contact_rollups_raw_on_email_and_sources", unique: true, using: :btree
   end
 
+  create_table "contact_rollups_processed", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",      null: false
+    t.json     "data",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_contact_rollups_processed_on_email", unique: true, using: :btree
+  end
+
   create_table "contained_level_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
