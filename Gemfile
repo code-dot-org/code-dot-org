@@ -344,3 +344,5 @@ gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
 
 gem 'require_all', require: false
+
+gem 'dotiw'

@@ -397,6 +397,9 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    dotiw (4.0.1)
+      actionpack (>= 4)
+      i18n
     erubis (2.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
@@ -919,6 +922,7 @@ DEPENDENCIES
   dalli-elasticache
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
+  dotiw
   execjs
   eyes_selenium
   factory_girl_rails
