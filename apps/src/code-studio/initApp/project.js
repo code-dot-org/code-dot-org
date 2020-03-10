@@ -587,40 +587,39 @@ var projects = (module.exports = {
     }
   },
   /**
+   * Updates the current channel's library details.
    *
    * @param {Object} config - Object containing library details.
    * @param {string} config.newName
    * @param {string} config.newDescription
+   * @param {string} config.newVersionId - S3 version ID for the current library version.
    * @param {boolean} config.publishing - true if library is being published, false if library is being unpublished, undefined otherwise.
-   * @param {string} config.versionId - S3 version ID for the current library version.
-   *
-   * NOTE: One of the following must be true or the library channel will not be updated:
-   *  1. config.newName !== current.libraryName
-   *  2. config.newDescription !== current.libraryDescription
-   *  3. config.publishing is present
    */
   setLibraryDetails(config = {}) {
     current = current || {};
-    const {newName, newDescription, publishing} = config;
+    const {newName, newDescription, newVersionId, publishing} = config;
 
-    if (
-      current.libraryName !== newName ||
-      current.libraryDescription !== newDescription ||
-      publishing !== undefined
-    ) {
+    if (newName) {
       current.libraryName = newName;
-      current.libraryDescription = newDescription;
-
-      if (publishing) {
-        // Tells the server to set libraryPublishedAt timestamp.
-        current.publishLibrary = true;
-      } else if (publishing === false) {
-        // Unpublishing, so nullify libraryPublishedAt timestamp.
-        current.libraryPublishedAt = null;
-      }
-
-      this.updateChannels_();
     }
+
+    if (newDescription) {
+      current.libraryDescription = newDescription;
+    }
+
+    if (newVersionId) {
+      current.latestLibraryVersion = newVersionId;
+    }
+
+    if (publishing) {
+      // Tells the server to set libraryPublishedAt timestamp.
+      current.publishLibrary = true;
+    } else if (publishing === false) {
+      // Unpublishing, so nullify libraryPublishedAt timestamp.
+      current.libraryPublishedAt = null;
+    }
+
+    this.updateChannels_();
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
