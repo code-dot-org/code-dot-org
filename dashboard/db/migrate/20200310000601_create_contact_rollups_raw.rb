@@ -1,6 +1,6 @@
-class CreateRawContacts < ActiveRecord::Migration[5.0]
+class CreateContactRollupsRaw < ActiveRecord::Migration[5.0]
   def change
-    create_table :raw_contacts do |t|
+    create_table :contact_rollups_raw do |t|
       t.string :email, null: false
       t.string :sources, null: false
       t.json :data
@@ -8,6 +8,6 @@ class CreateRawContacts < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :raw_contacts, [:email, :sources], unique: true
+    add_index :contact_rollups_raw, [:email, :sources], unique: true
   end
 end
