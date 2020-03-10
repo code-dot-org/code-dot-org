@@ -201,6 +201,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: action.personalProjectsList
       };
     case UPDATE_PERSONAL_PROJECT_DATA:
+      debugger;
       var projectsList = [...state.projects];
       var updatedProjectIndex = projectsList.findIndex(
         project => project.channel === action.projectId
@@ -418,7 +419,7 @@ export const setPublicProjects = () => {
   };
 };
 
-export const setPersonalProjects = () => {
+export const setPersonalProjects = (callback) => {
   return dispatch => {
     $.ajax({
       method: 'GET',
@@ -426,11 +427,13 @@ export const setPersonalProjects = () => {
       dataType: 'json'
     }).done(personalProjectsList => {
       dispatch(setPersonalProjectsList(personalProjectsList));
+      callback();
     });
   };
 };
 
 const fetchProjectToUpdate = (projectId, onComplete) => {
+  debugger;
   $.ajax({
     url: `/v3/channels/${projectId}`,
     method: 'GET',
@@ -468,6 +471,30 @@ export function unpublishProject(projectId) {
     });
   };
 }
+
+export const updateProjectLibrary = (projectId, newData) => {
+  return dispatch => {
+    fetchProjectToUpdate(projectId, (error, project) => {
+      debugger;
+      if (error) {
+        console.error(error);
+      } else {
+        let updatedData = {...project, ...newData};
+        $.ajax({
+          url: `/v3/channels/${project.id}`,
+          method: 'POST',
+          type: 'json',
+          contentType: 'application/json;charset=UTF-8',
+          data: JSON.stringify(updatedData)
+        });
+        // the channels api returns `channel` as `id` but our redux object
+        // expects `channel`. Adding that here.
+        updatedData.channel = project.id;
+        dispatch(updatePersonalProjectData(project.id, updatedData));
+      }
+    });
+  };
+};
 
 export const unpublishProjectLibrary = (
   projectId,

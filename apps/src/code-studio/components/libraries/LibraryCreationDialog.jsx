@@ -122,7 +122,7 @@ class LibraryCreationDialog extends React.Component {
   render() {
     let subtitleContent, bodyContent;
     const {dialogState, libraryName, errorMessage} = this.state;
-    const {dialogIsOpen, channelId} = this.props;
+    const {dialogIsOpen, channelId, onClose} = this.props;
     switch (dialogState) {
       case DialogState.LOADING:
         bodyContent = <LoadingDisplay />;
@@ -147,7 +147,7 @@ class LibraryCreationDialog extends React.Component {
         bodyContent = this.displayPublisherContent();
         break;
       case DialogState.SHARE_TEACHER_LIBRARIES:
-        bodyContent = <ShareTeacherLibraries />;
+        bodyContent = <ShareTeacherLibraries onCancel={onClose} />;
         break;
       default:
         // If we get to this state, we've shipped a bug.
