@@ -120,8 +120,10 @@ export class LibraryPublisher extends React.Component {
         dashboard.project.setLibraryDetails({
           newName: libraryName,
           newDescription: libraryDescription,
-          publishing: true
+          publishing: true,
+          newVersionId: data.versionId
         });
+
         onPublishSuccess(libraryName);
       }
     );
