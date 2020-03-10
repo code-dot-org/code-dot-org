@@ -71,10 +71,10 @@
 
 <% /* Always show the "Send to phone" button, and when it's clicked to toggle
     * the section below into view, the QR Code, but only show the phone number
-    * in that section below when options.sendToPhone is true, which is done
+    * in that section below when options.isUS is true, which is done
     * for US users. */ %>
 <div id="send-to-phone" style="display: none">
-  <% if (options.sendToPhone) { %>
+  <% if (options.isUS) { %>
     <div id="send-to-phone-left">
       <label for="phone">Enter a US phone number:</label>
       <input type="tel" id="phone" name="phone" />
