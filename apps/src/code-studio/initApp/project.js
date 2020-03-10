@@ -586,8 +586,23 @@ var projects = (module.exports = {
       this.updateChannels_(callback);
     }
   },
-  setLibraryDetails(newName, newDescription, publishing = undefined) {
+  /**
+   *
+   * @param {Object} config - Object containing library details.
+   * @param {string} config.newName
+   * @param {string} config.newDescription
+   * @param {boolean} config.publishing - true if library is being published, false if library is being unpublished, undefined otherwise.
+   * @param {string} config.versionId - S3 version ID for the current library version.
+   *
+   * NOTE: One of the following must be true or the library channel will not be updated:
+   *  1. config.newName !== current.libraryName
+   *  2. config.newDescription !== current.libraryDescription
+   *  3. config.publishing is present
+   */
+  setLibraryDetails(config = {}) {
     current = current || {};
+    const {newName, newDescription, publishing} = config;
+
     if (
       current.libraryName !== newName ||
       current.libraryDescription !== newDescription ||
