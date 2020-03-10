@@ -50,6 +50,7 @@ module ActionViewSinatra
       super(*args)
 
       MarkdownHandler.register(MarkdownRenderer, MarkdownRenderer::OPTIONS)
+      MarkdownHandler.register_html_safe(Redcarpet::Render::Safe)
     end
 
     def response
