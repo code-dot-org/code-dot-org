@@ -592,34 +592,37 @@ var projects = (module.exports = {
    * @param {Object} config - Object containing library details.
    * @param {string} config.newName
    * @param {string} config.newDescription
-   * @param {string} config.newVersionId - S3 version ID for the current library version.
+   * @param {string} config.newVersionId - S3 version ID for the current library version. Passing this value as -1 will nullify libraryLatestVersion.
    * @param {boolean} config.publishing - true if library is being published, false if library is being unpublished, undefined otherwise.
    */
   setLibraryDetails(config = {}) {
     current = current || {};
     const {newName, newDescription, newVersionId, publishing} = config;
 
-    if (newName) {
+    if (
+      current.libraryName !== newName ||
+      current.libraryDescription !== newDescription ||
+      current.latestLibraryVersion !== newVersionId ||
+      publishing !== undefined
+    ) {
       current.libraryName = newName;
-    }
-
-    if (newDescription) {
       current.libraryDescription = newDescription;
-    }
 
-    if (newVersionId) {
-      current.latestLibraryVersion = newVersionId;
-    }
+      if (newVersionId) {
+        current.latestLibraryVersion =
+          newVersionId === -1 ? null : newVersionId;
+      }
 
-    if (publishing) {
-      // Tells the server to set libraryPublishedAt timestamp.
-      current.publishLibrary = true;
-    } else if (publishing === false) {
-      // Unpublishing, so nullify libraryPublishedAt timestamp.
-      current.libraryPublishedAt = null;
-    }
+      if (publishing) {
+        // Tells the server to set libraryPublishedAt timestamp.
+        current.publishLibrary = true;
+      } else if (publishing === false) {
+        // Unpublishing, so nullify libraryPublishedAt timestamp.
+        current.libraryPublishedAt = null;
+      }
 
-    this.updateChannels_();
+      this.updateChannels_();
+    }
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
