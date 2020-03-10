@@ -14303,6 +14303,20 @@ en:
               name: Post-Project Test
               description_student: ''
               description_teacher: ''
+            'Alternate Versions of Lesson 1: Intro to Problem Solving':
+              name: 'Alternate Versions of Lesson 1: Intro to Problem Solving'
+            'Alternate Versions of Lesson 3: Exploring Problem Solving':
+              name: 'Alternate Versions of Lesson 3: Exploring Problem Solving'
+            'Lesson 1: Intro to Problem Solving - Newspaper Table':
+              name: 'Lesson 1: Intro to Problem Solving - Newspaper Table'
+            'Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
+              name: 'Lesson 1: Intro to Problem Solving - Spaghetti Bridge'
+            'Lesson 1: Intro to Problem Solving - Paper Tower':
+              name: 'Lesson 1: Intro to Problem Solving - Paper Tower'
+            'Lesson 3: Exploring Problem Solving - Games Theme':
+              name: 'Lesson 3: Exploring Problem Solving - Games Theme'
+            'Lesson 3: Exploring Problem Solving - Animals Theme':
+              name: 'Lesson 3: Exploring Problem Solving - Animals Theme'
         csd4-2020:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
