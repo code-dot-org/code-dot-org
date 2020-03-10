@@ -1249,8 +1249,7 @@
       "courseD_artist_functions7_b": "To get from the top windows to the bottom windows, simply turn the artist right, jump 150 pixels, then turn the artist right again!  Now the artist will be facing the correct direction to finish the rest of the house!"
     },
     "function_names": {
-      "draw a window": "draw a window",
-      "draw a house": "draw a house"
+      "draw a window": "draw a window"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/17/puzzle/6": {

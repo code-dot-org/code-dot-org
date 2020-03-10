@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedStandardsViewHeaderButtons as StandardsViewHeaderButtons} from '@cdo/apps/templates/sectionProgress/standards/StandardsViewHeaderButtons';
 
 describe('StandardsViewHeaderButtons', () => {
-  it('opens lesson status dialog', () => {
+  it('does not show update unplugged progress button if no unplugged lessons', () => {
     const wrapper = shallow(
       <StandardsViewHeaderButtons
         sectionId={1}
@@ -12,6 +12,25 @@ describe('StandardsViewHeaderButtons', () => {
         scriptId={100}
         selectedLessons={[]}
         unpluggedLessons={[]}
+      />
+    );
+    expect(wrapper.find('Button')).to.have.lengthOf(1);
+  });
+  it('opens lesson status dialog', () => {
+    const wrapper = shallow(
+      <StandardsViewHeaderButtons
+        sectionId={1}
+        setTeacherCommentForReport={() => {}}
+        scriptId={100}
+        selectedLessons={[]}
+        unpluggedLessons={[
+          {
+            id: 2,
+            name: 'Lesson Name',
+            number: 1,
+            url: 'fakeurl.com'
+          }
+        ]}
       />
     );
 
@@ -28,7 +47,14 @@ describe('StandardsViewHeaderButtons', () => {
         setTeacherCommentForReport={() => {}}
         scriptId={100}
         selectedLessons={[]}
-        unpluggedLessons={[]}
+        unpluggedLessons={[
+          {
+            id: 2,
+            name: 'Lesson Name',
+            number: 1,
+            url: 'fakeurl.com'
+          }
+        ]}
       />
     );
 

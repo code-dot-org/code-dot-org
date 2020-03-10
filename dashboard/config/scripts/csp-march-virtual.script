@@ -1,0 +1,19 @@
+professional_learning_course 'CS Principles Curriculum Training for Facilitators'
+peer_reviews_to_complete 6
+login_required true
+student_detail_progress_view true
+
+stage 'Pre-work'
+level 'Mar20 Prework_0'
+level 'Mar20 Introduction'
+
+stage 'Curriculum Investigations'
+level 'Mar20 U1 U2 Dig_0'
+
+stage 'Reflections'
+level 'Mar20 Reflection_0'
+level 'Mar20 Reflection_1', progression: 'Scenarios'
+level 'Mar20 Reflection_2', progression: 'Scenarios'
+level 'Mar20 Reflection_3', progression: 'Scenarios'
+level 'Mar20 Make Plan_0'
+level 'Mar20 make Plan_2'
