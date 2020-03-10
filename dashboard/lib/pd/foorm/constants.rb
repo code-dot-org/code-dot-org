@@ -20,7 +20,7 @@ module Pd::Foorm
       ANSWER_SINGLE_SELECT = 'singleSelect'.freeze,
       ANSWER_MULTI_SELECT = 'multiSelect'.freeze,
       ANSWER_MATRIX = 'matrix'.freeze,
-      ANSWER_RATING = 'rating'.freeze,
+      ANSWER_RATING = 'scale'.freeze,
       # No answer, just question metadata, e.g. matrix heading
       ANSWER_NONE = 'none'.freeze,
       # Don't know answer type of a question

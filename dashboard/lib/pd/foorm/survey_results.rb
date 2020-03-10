@@ -42,8 +42,8 @@ module Pd::Foorm
       foorm_submissions.each do |submission|
         form_key = get_form_key(submission.form_name, submission.form_version)
         survey_key = get_survey_key(ws_submissions.where(foorm_submission_id: submission.id).first)
-        next unless parsed_forms[form_key] && parsed_forms[form_key][:questions]
-        form_questions = parsed_forms[form_key][:questions]
+        next unless parsed_forms[form_key] && parsed_forms[form_key]
+        form_questions = parsed_forms[form_key]
         workshop_summary[survey_key] ||= {response_count: 0}
         workshop_summary[survey_key][:response_count] += 1
         current_workshop_summary = workshop_summary[survey_key][form_key] || {}
@@ -104,8 +104,8 @@ module Pd::Foorm
 
     def self.get_matrix_zero_counters(rows, columns)
       result = {}
-      rows.each do |row|
-        result[row[:value]] = get_zero_counters_for_options(columns)
+      rows.keys.each do |row_value|
+        result[row_value] = get_zero_counters_for_options(columns)
       end
       result
     end
@@ -113,8 +113,8 @@ module Pd::Foorm
     # TODO: make sure options formatted correctly
     def self.get_zero_counters_for_options(options)
       result = {}
-      options.each do |choice|
-        result[choice[:value].to_s] = 0
+      options.keys.each do |choice_value|
+        result[choice_value] = 0
       end
       result
     end
