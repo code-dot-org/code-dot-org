@@ -245,28 +245,22 @@ export class LibraryPublisher extends React.Component {
   };
 
   unpublish = () => {
-    const {unpublishProjectLibrary, libraryClientApi} = this.props;
-
-    unpublishProjectLibrary(
-      libraryClientApi.channelId,
-      libraryClientApi,
-      this.onUnpublishComplete
+    const {libraryClientApi, onUnpublishSuccess} = this.props;
+    libraryClientApi.delete(
+      () => {
+        dashboard.project.setLibraryDetails({
+          newName: undefined,
+          newDescription: undefined,
+          publishing: false,
+          newVersionId: -1
+        });
+        onUnpublishSuccess();
+      },
+      error => {
+        console.warn(`Error unpublishing library: ${error}`);
+        this.setState({publishState: PublishState.ERROR_UNPUBLISH});
+      }
     );
-  };
-
-  onUnpublishComplete = (error, _) => {
-    if (error) {
-      console.warn(`Error unpublishing library: ${error}`);
-      this.setState({publishState: PublishState.ERROR_UNPUBLISH});
-    } else {
-      this.props.onUnpublishSuccess();
-      dashboard.project.setLibraryDetails({
-        newName: undefined,
-        newDescription: undefined,
-        publishing: false,
-        newVersionId: -1
-      });
-    }
   };
 
   render() {
