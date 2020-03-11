@@ -309,7 +309,7 @@ module Pd
       return render :no_attendance unless attended_workshop
 
       # Render a thanks message if already submitted.
-      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
+      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
         render :thanks
         return
       end
@@ -448,7 +448,7 @@ module Pd
     end
 
     def render_csf_survey_foorm(survey_name, workshop)
-      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
+      form, latest_version = ::Foorm::Form.get_form_and_latest_version_for_name(survey_name)
       form_questions = JSON.parse(form.questions)
 
       @script_data = {

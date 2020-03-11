@@ -15,7 +15,7 @@ import Header from '../components/header';
 import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
 import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
-//import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
+import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
 import {ResultsLoader as FoormDailySurveyResultsLoader} from './reports/foorm/local_summer_workshop_daily_survey/results_loader';
 import WorkshopIndex from './workshop_index';
 import WorkshopFilter from './workshop_filter';
@@ -119,6 +119,11 @@ export default class WorkshopDashboard extends React.Component {
             />
             <Route
               path="daily_survey_results(/:workshopId)"
+              breadcrumbs="Survey Results"
+              component={DailySurveyResultsLoader}
+            />
+            <Route
+              path="daily_survey_results_foorm(/:workshopId)"
               breadcrumbs="Survey Results"
               component={FoormDailySurveyResultsLoader}
             />
