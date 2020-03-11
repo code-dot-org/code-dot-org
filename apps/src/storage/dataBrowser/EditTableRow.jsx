@@ -36,6 +36,8 @@ class EditTableRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
+
   // Optimization: skip rendering when nothing has changed.
   shouldComponentUpdate(nextProps, nextState) {
     const propsChanged = !_.isEqual(this.props, nextProps);
@@ -51,7 +53,7 @@ class EditTableRow extends React.Component {
   }
 
   handleSave = () => {
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+    if (this.inExperiment) {
       this.props.hideError();
     }
     try {
@@ -66,7 +68,7 @@ class EditTableRow extends React.Component {
         msg => console.warn(msg)
       );
     } catch (e) {
-      if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      if (this.inExperiment) {
         this.setState({isSaving: false});
         this.props.showError();
       }

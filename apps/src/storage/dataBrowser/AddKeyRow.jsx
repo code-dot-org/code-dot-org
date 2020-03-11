@@ -24,6 +24,8 @@ class AddKeyRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
+
   handleKeyChange = event => {
     this.setState({key: event.target.value});
   };
@@ -34,7 +36,7 @@ class AddKeyRow extends React.Component {
 
   handleAdd = () => {
     if (this.state.key) {
-      if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      if (this.inExperiment) {
         this.props.hideError();
       }
       try {
@@ -60,7 +62,7 @@ class AddKeyRow extends React.Component {
           }
         );
       } catch (e) {
-        if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+        if (this.inExperiment) {
           this.setState({isAdding: false});
           this.props.showError();
         }
