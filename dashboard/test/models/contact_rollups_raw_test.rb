@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ContactRollupsRawTest < ActiveSupport::TestCase
-  test 'extract_email_preferences adds all email preferences' do
+  test 'extract_email_preferences creates records as we would expect' do
     email_preference = create :email_preference
     ContactRollupsRaw.extract_email_preferences
 
@@ -14,7 +14,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert_equal expected_data, result.data.symbolize_keys
   end
 
-  test 'bunch of email prefences works' do
+  test 'extract_email_preferences can import many email preferences' do
     3.times {|i| create :email_preference, email: "contact_#{i}@rollups.com"}
     ContactRollupsRaw.extract_email_preferences
     assert 3, ContactRollupsRaw.count
