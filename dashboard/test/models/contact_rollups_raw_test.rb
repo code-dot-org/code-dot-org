@@ -6,7 +6,10 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     ContactRollupsRaw.extract_email_preferences
 
     expected_data = {opt_in: email_preference.opt_in}
-    result = ContactRollupsRaw.find_by(email: email_preference.email, sources: "dashboard.#{email_preference.class.table_name}")
+    result = ContactRollupsRaw.find_by(
+      email: email_preference.email,
+      sources: "dashboard.#{email_preference.class.table_name}"
+    )
 
     assert_equal expected_data, result.data.symbolize_keys
   end
