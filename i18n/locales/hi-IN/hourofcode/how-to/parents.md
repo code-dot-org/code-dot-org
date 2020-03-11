@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: माता-पिता के लिए हाउ-टु गाइड
 ---
 
 {{ signup_button }}

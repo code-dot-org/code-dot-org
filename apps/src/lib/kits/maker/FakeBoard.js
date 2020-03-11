@@ -37,7 +37,7 @@ export default class FakeBoard extends EventEmitter {
       Led: FakeLed,
       Board: FakeComponent,
       NeoPixel: FakeColorLed,
-      Button: FakeButton,
+      PlaygroundButton: FakeButton,
       Switch: FakeToggleSwitch,
       Piezo: FakeBuzzer,
       Sensor: FakeSensor,

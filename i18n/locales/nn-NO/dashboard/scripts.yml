@@ -1078,6 +1078,8 @@ nn:
               name: Sende tal
             The Internet:
               name: Internett
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp2-2017:
           stages:
             Bytes and File Sizes:
@@ -1088,20 +1090,28 @@ nn:
               name: Kode fargebilete
             Lossy Compression and File Formats:
               name: Lossykomprimering og filformat
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp3-2017:
           stages:
             Creating Functions:
               name: Lag Funksjonar
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csp4-2017:
           stages:
             Simple Encryption:
               name: Enkel kryptering
+            Post-Course Survey:
+              name: Undersøking etter kurs
             Student Post-Course Survey:
               name: Elevundersøking etter kurs
         csp5-2017:
           stages:
             While Loops:
               name: Medan-løkker
+            Post-Course Survey:
+              name: Undersøking etter kurs
         CSDU3-Draft:
           stages:
             Functions:
@@ -1548,6 +1558,10 @@ nn:
               name: Velkomen!
             Wrap-Up:
               name: Oppsummering
+        csppostap-2017:
+          stages:
+            Post-Course Survey:
+              name: Undersøking etter kurs
         csd6-draft:
           stages:
             Lists:
@@ -1839,6 +1853,14 @@ nn:
           title: 'Minecraft: Helten si reise'
           description_short: Minecraft er tilbake med ein heilt ny aktivitet i Kodetimen!
           description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
+        csp-explore-2017:
+          stages:
+            Post-Course Survey:
+              name: Undersøking etter kurs
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Undersøking etter kurs
         course-e-2018:
           stages:
             Building a Foundation:
@@ -2148,8 +2170,7 @@ nn:
             Dance Party:
               name: Dansefest
         dance-extras:
-          title: Fortsett å danse
-          description: Fortsett etter den første timen med større prosjektideer.
+          description: Gå vidare etter den første timen med større prosjektidear.
         coursef-2019:
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
           stages:
@@ -2188,7 +2209,7 @@ nn:
             'Unplugged: Binary':
               name: Binære bilete
             Artist Binary:
-              name: 'Kunstnar: binær'
+              name: 'Kunstnar: Binærbilete'
             Dance Party:
               name: Dansefest
         coursee-2019:
@@ -2236,8 +2257,8 @@ nn:
             'null':
               name: 'null'
         dance-extras-gallery:
-          title: Fortsett å danse
-          description: Fortsett etter den første timen med større prosjektideer.
+          title: Dans vidare
+          description: Gå vidare etter den første timen med større prosjektidear.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -2365,6 +2386,10 @@ nn:
               name: Bygge eit fundament
             Nested Loops in Bee/Zombie:
               name: Løkker i løkker i Bie/Zombie
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Bibliotek
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -2402,6 +2427,8 @@ nn:
               name: Grunnleggande informatikk
             Next Steps:
               name: Neste steg
+            Sequencing:
+              name: Sekvensiering
             Loops:
               name: Løkker
             Conditionals:
@@ -2410,14 +2437,15 @@ nn:
               name: Hendingar
             Functions:
               name: Funksjonar
+            'Diving Deeper: Courses E and F':
+              name: 'Djupdykk: Kurs E og F'
             Variables:
               name: Variablar
             For Loops:
               name: For-løkker
         dance-extras-2019:
-          title: Fortsett å danse
-          description: Fortsett etter den første timen med større prosjektideer.
-        time4cs-control-unit-1:
+          description: Gå vidare etter den første timen med større prosjektidear.
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Betingelser
@@ -2427,3 +2455,89 @@ nn:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Vilkår med kort
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Betingelser
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funksjonar med parameter
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+        coursea-2020:
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+          stages:
+            Going Places Safely:
+              name: Går stader trygt
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Move It, Move It:
+              name: Flytt den, flytt den
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binær armbånd
+            Events in Play Lab:
+              name: Hendingar i Spel-lab
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programmeringsstafett
+            Conditionals with Cards:
+              name: Vilkår med kort
+            'Unplugged: Binary':
+              name: 'Trådlaust: Binær'
+            Artist Binary:
+              name: 'Kunstnar: binær'
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Dance Party:
+              name: Dansefest
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Betingelser
+        coursef-2020:
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+          stages:
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansefest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stavekonkurranse
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binære tal

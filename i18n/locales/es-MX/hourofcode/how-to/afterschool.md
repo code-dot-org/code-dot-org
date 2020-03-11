@@ -1,5 +1,5 @@
 ---
-title: Guía de instrucciones
+title: Guía práctica
 ---
 
 {{ signup_button }}
@@ -79,6 +79,6 @@ Para dar inicio a la Hora del Código, inspira a los participantes y habla acerc
 
 ## ¿Qué viene después de la Hora del Código?
 
-La Hora del Código es solo el primer paso para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. ¡Ayuda a los estudiantes a que sigan adelante y [aprendan más en línea](%= codeorg_url('/learn/beyond') %)!
+La Hora del Código es solo el primer paso para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. ¡Ayuda a los estudiantes a que sigan adelante y [aprendan más en línea](/beyond)!
 
 {{ signup_button }}

@@ -5,7 +5,7 @@ const dashboardPrefix = '/teacher_dashboard/sections/';
  */
 export const teacherDashboardUrl = (sectionId, path = '') => {
   // Prepend a forward slash to path if one is not supplied.
-  if (path && path.at(0) !== '/') {
+  if (path && path.charAt(0) !== '/') {
     path = '/${path}';
   }
 

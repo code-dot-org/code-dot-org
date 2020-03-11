@@ -2773,3 +2773,7 @@
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
+    hoc_dance_events_2019:
+      4:
+        text: Eksempler på hendelser er å lytte etter et museklikk, en piltast eller
+          trykk på skjermen.

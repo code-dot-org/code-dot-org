@@ -24,8 +24,7 @@ nav: promote_nav
 
 {{ promote_new_posters }}
 
-* تريد تحميل المزيد من نسخ مصغرة للملصقات؟ <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">حملها من هنا</a>.
-* تبحث عن ملصقاتنا للسنة الماضية؟ [اعثر عليها هنا]({{ promote/previous_posters_url }})!
+* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 

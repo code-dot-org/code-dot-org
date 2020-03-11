@@ -10,6 +10,8 @@ const ENABLE_LEVEL_BUILDER_SAVE_BUTTON =
   'header/ENABLE_LEVEL_BUILDER_SAVE_BUTTON';
 const REFRESH_PROJECT_NAME = 'header/REFRESH_PROJECT_NAME';
 const SHOW_TRY_AGAIN_DIALOG = 'header/SHOW_TRY_AGAIN_DIALOG';
+const SET_NAME_FAILURE = 'header/SET_NAME_FAILURE';
+const UNSET_NAME_FAILURE = 'header/UNSET_NAME_FAILURE';
 
 export const projectUpdatedStatuses = {
   default: 'default',
@@ -32,6 +34,7 @@ const initialState = {
   projectUpdatedAt: undefined,
   getLevelBuilderChanges: undefined,
   projectName: '',
+  projectNameFailure: undefined,
   includeExportInProjectHeader: false,
   showTryAgainDialog: false
 };
@@ -101,6 +104,20 @@ export default (state = initialState, action) => {
     };
   }
 
+  if (action.type === UNSET_NAME_FAILURE) {
+    return {
+      ...state,
+      projectNameFailure: undefined
+    };
+  }
+
+  if (action.type === SET_NAME_FAILURE) {
+    return {
+      ...state,
+      projectNameFailure: action.projectNameFailure
+    };
+  }
+
   return state;
 };
 
@@ -159,3 +176,12 @@ export const setShowTryAgainDialog = visible => ({
 export const retryProjectSave = () => {
   return dispatch => dashboard.project.save();
 };
+
+export const setNameFailure = projectNameFailure => ({
+  type: SET_NAME_FAILURE,
+  projectNameFailure
+});
+
+export const unsetNameFailure = () => ({
+  type: UNSET_NAME_FAILURE
+});

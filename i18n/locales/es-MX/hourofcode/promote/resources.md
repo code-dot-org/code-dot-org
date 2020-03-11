@@ -22,7 +22,6 @@ title: Recursos
 
 {{ promote_new_posters }}
 
-* ¿Quieres descargar versiones más pequeñas de estos carteles? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Hazlo aquí</a>.
 * ¿Buscas carteles de años anteriores? ¡[Encuéntralos aquí]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>

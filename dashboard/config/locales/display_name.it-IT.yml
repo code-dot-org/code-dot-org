@@ -21,6 +21,7 @@ it-IT:
       CDEF_video_SpritesInAction_2019: Come fare un Personaggio
       CSD Problem Solving Process Video: 'Video: Processo di Risoluzione Problemi'
       CSD U1L02 TFMD_2018: Panoramica della Lezione
+      CSD U1L02 TFMD_2019: Panoramica della Lezione
       CSD U1L03 TFMD_2018: Panoramica della Lezione
       CSD U1L03 TFMD_2019: Panoramica della Lezione
       CSD U1L04 TFMD_2018: Panoramica della Lezione
@@ -55,7 +56,9 @@ it-IT:
       CSD U2 Pair Programming Video_2018: Programmazione in coppia
       CSD U2 Pair Programming Video_2019: Programmazione in coppia
       CSD U2L01 TFMD_2018: Panoramica della Lezione
+      CSD U2L01 TFMD_2019: Panoramica della Lezione
       CSD U2L02 TFMD_2018: Panoramica della Lezione
+      CSD U2L02 TFMD_2019: Panoramica della Lezione
       CSD U2L03 TFMD_2018: Panoramica della Lezione
       CSD U2L03 TFMD_2019: Panoramica della Lezione
       CSD U2L04 TFMD_2018: Panoramica della Lezione
@@ -131,7 +134,10 @@ it-IT:
       CSD U3 collisions build isTouching: Rilevamento delle Collisioni
       CSD U3 collisions build isTouching_2018: Rilevamento delle Collisioni
       CSD U3 collisions build isTouching_2019: Rilevamento delle Collisioni
+      CSD U3L01 TFMD_2018: Panoramica della Lezione
+      CSD U3L01 TFMD_2019: Panoramica della Lezione
       CSD U3L02 TFMD_2018: Panoramica della Lezione
+      CSD U3L02 TFMD_2019: Panoramica della Lezione
       CSD U3L03 TFMD_2018: Panoramica della Lezione
       CSD U3L03 TFMD_2019: Panoramica della Lezione
       CSD U3L04 TFMD_2018: Panoramica della Lezione
@@ -173,7 +179,9 @@ it-IT:
       CSD U3L22 TFMD_2018: Panoramica della Lezione
       CSD U3L22 TFMD_2019: Panoramica della Lezione
       CSD U4L01 autoSFLP_2018: Panoramica della Lezione
+      CSD U4L01 autoSFLP_2019: Panoramica della Lezione
       CSD U4L02 autoSFLP_2018: Panoramica della Lezione
+      CSD U4L02 autoSFLP_2019: Panoramica della Lezione
       CSD U4L03 autoSFLP_2018: Panoramica della Lezione
       CSD U4L03 autoSFLP_2019: Panoramica della Lezione
       CSD U4L04 autoSFLP_2018: Panoramica della Lezione
@@ -203,7 +211,9 @@ it-IT:
       CSD U4L16 autoSFLP_2018: Panoramica della Lezione
       CSD U4L16 autoSFLP_2019: Panoramica della Lezione
       CSD U5L01 autoSFLP_2018: Panoramica della Lezione
+      CSD U5L01 autoSFLP_2019: Panoramica della Lezione
       CSD U5L02 autoSFLP_2018: Panoramica della Lezione
+      CSD U5L02 autoSFLP_2019: Panoramica della Lezione
       CSD U5L03 autoSFLP_2018: Panoramica della Lezione
       CSD U5L03 autoSFLP_2019: Panoramica della Lezione
       CSD U5L04 autoSFLP_2018: Panoramica della Lezione
@@ -238,9 +248,12 @@ it-IT:
       CSD U6 functions paramters video: Funzioni con parametri
       CSD U6 functions paramters video_2018: Funzioni con parametri
       CSD U6 functions paramters video_2019: Funzioni con parametri
+      CSD U6L01 TFMD: Panoramica della Lezione
       CSD U6L01 TFMD_2018: Panoramica della Lezione
+      CSD U6L01 TFMD_2019: Panoramica della Lezione
       CSD U6L02 TFMD: Panoramica della Lezione
       CSD U6L02 TFMD_2018: Panoramica della Lezione
+      CSD U6L02 TFMD_2019: Panoramica della Lezione
       CSD U6L03 TFMD: Panoramica della Lezione
       CSD U6L03 TFMD_2018: Panoramica della Lezione
       CSD U6L03 TFMD_2019: Panoramica della Lezione
@@ -307,16 +320,18 @@ it-IT:
         dei personaggi
       CourseF_Project_SpriteLab: 'Corso F: Progetto nel Laboratorio dei personaggi'
       CourseF_Project_SpriteLab_2019: 'Corso F: Progetto nel Laboratorio dei personaggi'
+      Dance_Party_extras_alternate_2019: Avanti e indietro!
       Dance_Party_extras_battle: Squadre di ballo
       Dance_Party_extras_battle_2019: Squadre di ballo
-      Dance_Party_extras_every_beat: Quattro Quarti
-      Dance_Party_extras_every_beat_2019: Quattro Quarti
-      Dance_Party_extras_layout: Tutti in Formazione!
-      Dance_Party_extras_layout_2019: Tutti in Formazione!
-      Dance_Party_extras_on_beat: Bassi, Medi e Alti
-      Dance_Party_extras_on_beat_2019: Bassi, Medi e Alti
-      Dance_Party_extras_speed: Accelerare, Rallentare
-      Dance_Party_extras_speed_2019: Accelerare, Rallentare
+      Dance_Party_extras_every_beat: Quartine
+      Dance_Party_extras_every_beat_2019: Quartine
+      Dance_Party_extras_layout: Tutti in formazione!
+      Dance_Party_extras_layout_2019: Tutti in formazione!
+      Dance_Party_extras_mixed_2019: Più pulsanti
+      Dance_Party_extras_on_beat: Bassi, medi e alti
+      Dance_Party_extras_on_beat_2019: Bassi, medi e alti
+      Dance_Party_extras_speed: Accelerare, rallentare
+      Dance_Party_extras_speed_2019: Accelerare, rallentare
       Dance_Party_extras_visible: Dove sono andati?
       Dance_Party_extras_visible_2019: Dove sono andati?
       Geometric Sun_2018: Sole geometrico
@@ -329,7 +344,12 @@ it-IT:
       Intro to Web Lab - Part 2_2019: 'Video: Introduzione a Web Lab - Parte 2'
       MC_HOC_2017_FP20x20: Tempo di giocare
       MC_HOC_2017_FP20x20_2019: Tempo di giocare
-      OPD-K5 WhatIsCS: Cos'é l'informatica?
+      New Minecraft Hero Project: Tempo di giocare
+      OPD-K5 WhatIsCS: Cos'è l'informatica?
+      Oceans_Video_Machine_Learning: 'Video: Cos''è l''Apprendimento Automatico (Machine
+        Learning)'
+      Oceans_Video_Societal_Implications: 'Video: Ripercussioni sociali'
+      Oceans_Video_Training_Data: 'Video: Dati di apprendimento e distorsioni'
       Robot Doodle_2018: Robot
       courseA_video_Stevie: Stefi e il grande progetto
       courseA_video_Stevie_2018: Stefi e il grande progetto

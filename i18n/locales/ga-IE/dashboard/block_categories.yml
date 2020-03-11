@@ -1,0 +1,30 @@
+ga:
+  data:
+    block_categories:
+      Actions: Gníomhartha
+      Advanced: Ardroghanna
+      Behaviors: Iompar
+      Brushes: Scuaba
+      Color: Dath
+      Comment: Nóta
+      Comments: Nótaí
+      Conditionals: Coinníollacha
+      Dancers: Damhsóirí
+      Default: Réamhshocrú
+      Events: Teagmhais
+      Functions: Feidhmeanna
+      'Functions ': 'Feidhmeanna '
+      Game/Score: Cluiche/Scór
+      Games/Score: Cluichí/Scór
+      Groups: Grúpaí
+      Locations: Áiteanna
+      Logic: Loighic
+      Loops: Lúba
+      Math: Matamaitic
+      Numbers: Uimhreacha
+      Properties: Airíonna
+      Sprites: Sprideanna
+      Text: Téacs
+      Variables: Athróga
+      'Variables ': 'Athróga '
+      World: Domhan

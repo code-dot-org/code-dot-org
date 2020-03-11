@@ -21,9 +21,9 @@ markdown <<MARKDOWN
 ## New Subgoals and Blocks
 
 * **Subgoal: [move turtle]** - `//move turtle`
-    *  **[moveForward](//docs.code.org/applab/moveForward/)** - `moveForward`
+    *  **[moveForward](//studio.code.org/docs/applab/moveForward/)** - `moveForward`
 * **Subgoal: [orient turtle]** - `//orient turtle`
-    *  **[turnLeft](//docs.code.org/applab/turnLeft/)** - `turnLeft`
+    *  **[turnLeft](//studio.code.org/docs/applab/turnLeft/)** - `turnLeft`
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

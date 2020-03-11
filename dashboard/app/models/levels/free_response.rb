@@ -53,4 +53,23 @@ class FreeResponse < Level
   def icon
     'fa fa-list-ul'
   end
+
+  # FND-985 Create shared API to get localized level properties.
+  # get_property takes a given level property_name and returns the localized
+  # version of it.
+  def get_property(property_name)
+    # Return the default English string from the database model if we shouldn't
+    # localize this property or we couldn't find a localized value.
+    default = try(property_name)
+    if should_localize?
+      I18n.t(
+        name,
+        scope: [:data, property_name],
+        default: nil,
+        smart: true
+      ) || default
+    else
+      default
+    end
+  end
 end

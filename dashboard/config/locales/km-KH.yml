@@ -411,6 +411,7 @@ km:
     notes: គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។
     autoplay_option: ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ
     download: ទាញយក​វីដេអូ
+    label: វីដេអូ
   compatibility:
     upgrade:
       link: សិក្សាបន្ថែម
@@ -526,3 +527,4 @@ km:
     accept: ខ្ញុំ​យល់​ព្រម
   gdpr_dialog:
     true: យល់ព្រម
+  copy: ចម្លង

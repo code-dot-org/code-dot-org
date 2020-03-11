@@ -2643,3 +2643,7 @@ gl:
           algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
           vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
           xogo.
+    hoc_dance_events_2019:
+      4:
+        text: 'Algúns exemplos de eventos son: oir o clic do rato, presionar unha
+          tecla de dirección ou tocar a pantalla.'

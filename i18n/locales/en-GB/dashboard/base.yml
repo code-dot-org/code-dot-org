@@ -86,3 +86,4 @@ en-GB:
         opt_in_no: 'No'
   gdpr_dialog:
     yes: 'Yes'
+  copy: 'Copy'

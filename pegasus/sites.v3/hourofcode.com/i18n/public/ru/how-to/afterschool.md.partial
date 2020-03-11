@@ -81,6 +81,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Час Кода: а что дальше?
 
-Час Программирования - это всего лишь первый шаг в освоении того, как работают технологии и как создавать приложения. Помогайте ученика продолжать свое путешествие в мире Ит и вдохновляйте их [больше обучаться онлайн](%= codeorg_url('/learn/beyond')%)!
+Час Программирования - это всего лишь первый шаг в освоении того, как работают технологии и как создавать приложения. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

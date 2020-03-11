@@ -3,13 +3,11 @@ ku:
   data:
     block_categories:
       Actions: کردەوەکان
-      Loops: گرێکان
       Color: ڕەنگ
-      Math: بیرکاری
+      Conditionals: مەرجیەکان
+      Functions: فرمانەکان
       Logic: لۆژيك
-      Variables: گۆڕاوەکان
+      Loops: گرێکان
+      Math: بیرکاری
       Text: دەق
-      Start: دەستپێبکە
-      test: تاقیکردنەوە
-      Name: ناو
-      Function: فرمان
+      Variables: گۆڕاوەکان

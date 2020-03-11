@@ -273,6 +273,31 @@ id-ID:
       Course 4 SCV 4: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
       Course 4 SCV 5: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
       Course 4 SCV 6: Klik disini untuk melihat petunjuk lagi.
+      CourseD_Dance_Party_01: Tarik blok `buat baru` ke ruang kerja, lalu hubungkan
+        di dalam blok `penyetelan`.
+      CourseD_Dance_Party_02: Buat rusa memulai gerakan baru setelah 4 birama!
+      CourseD_Dance_Party_03: Selanjutnya, buat penari memulai gerakan baru setelah
+        6 birama!
+      CourseD_Dance_Party_04: Tambahkan efek latar belakang ke program Anda.
+      CourseD_Dance_Party_05: Gunakan blok baru lainnya untuk membuat penari mengganti
+        gerakan setiap 2 birama.
+      CourseD_Dance_Party_06: Ciptakan penari cadangan yang disebut `penari_cadangan1`
+        untuk menari dengan kucing.
+      CourseD_Dance_Party_08: Dapatkah Anda membuat kedua penari cadangan berukuran
+        sama?
+      CourseD_Dance_Party_09: Gunakan blok `atur warna` untuk mengubah warna penari.
+      CourseD_Dance_Party_10: Buat penari lain untuk juga merespons musik dengan blok
+        `mulai ikuti`.
+      CourseD_Dance_Party_11: Blok `ketika atas ditekan` memungkinkan Anda menjalankan
+        kode saat panah atas ditekan. Cobalah membuat penari melakukan gerakan cepat
+        saat Anda menekan ke atas.
+      CourseD_Dance_Party_11_5: Gunakan blok "semua bebek" untuk membuat bebek menari
+        bersama.
+      CourseD_Dance_Party_11b: Buat Robot "jatuh" begitu Anda menekan tombol panah
+        kanan, dan "bertepuk tangan" begitu Anda menekan tombol panah atas. Lakukan
+        jatuh-bertepuk tangan secepat mungkin!
+      CourseD_Dance_Party_12: Hidupkan groove Anda! Ciptakan tarian Anda sendiri untuk
+        dibagikan ke teman-teman.
       CourseE_HOC 2018 Level_1: Kumpulkan perahu dari peti.
       CourseE_HOC 2018 Level_10: Menuju jalan masuk Ocean Monument.
       CourseE_HOC 2018 Level_11: Bangun pipa dengan prismarin di dalam Ocean Monument.
@@ -308,26 +333,60 @@ id-ID:
         untuk setiap penari atau aturlah ke "(Acak)" untuk sesuatu yang sama sekali
         tidak dapat diprediksi!
       Dance_2019_04: Buatlah penari Anda memulai gerakan baru setelah birama keempat.
+      Dance_2019_05: Selanjutnya, buat penari memulai gerakan baru setelah 6 birama!
       Dance_2019_06: Buatlah kelompok penari cadangan di sekitar penari utama di tengah.
       Dance_2019_07: Ubah ukuran kelompok penari cadangan.
+      Dance_2019_08: Cobalah mengubah warna salah satu penari Anda (atau seluruh kelompok)!
       Dance_2019_09: Berkreasilah dengan blok-blok baru ini!
-      Dance_Party_extras_battle: Kru menari ( klik"lainnya" untuk rincian)
-      Dance_Party_extras_battle_2019: Kru menari ( klik"lainnya" untuk rincian)
-      Dance_Party_extras_every_beat: Seperempat not ( klik" lainnya" untuk rincian)
-      Dance_Party_extras_every_beat_2019: Seperempat not ( klik" lainnya" untuk rincian)
+      Dance_2019_10: Hidupkan groove Anda! Ciptakan tarian Anda sendiri untuk dibagikan
+        ke teman-teman.
+      Dance_Party_01: Tarik blok `buat baru` ke ruang kerja, lalu hubungkan di dalam
+        blok `penyetelan`.
+      Dance_Party_02: Buat rusa memulai gerakan baru setelah 4 birama!
+      Dance_Party_03: Selanjutnya, buat penari memulai gerakan baru setelah 6 birama!
+      Dance_Party_04: Tambahkan efek latar belakang ke program Anda.
+      Dance_Party_05: Gunakan blok baru lainnya untuk membuat penari mengganti gerakan
+        setiap 2 birama.
+      Dance_Party_06: Ciptakan penari cadangan yang disebut `penari_cadangan1` untuk
+        menari dengan kucing.
+      Dance_Party_08: Dapatkah Anda membuat kedua penari cadangan berukuran sama?
+      Dance_Party_09: Gunakan blok `atur warna` untuk mengubah warna penari.
+      Dance_Party_10: Buat penari lain untuk juga merespons musik dengan blok `mulai
+        ikuti`.
+      Dance_Party_11: Blok `ketika atas ditekan` memungkinkan Anda menjalankan kode
+        saat panah atas ditekan. Cobalah membuat penari melakukan gerakan cepat saat
+        Anda menekan ke atas.
+      Dance_Party_11_5: Gunakan blok "semua bebek" untuk membuat bebek menari bersama.
+      Dance_Party_11b: Buat Robot "jatuh" begitu Anda menekan tombol panah kanan,
+        dan "bertepuk tangan" begitu Anda menekan tombol panah atas. Lakukan jatuh-bertepuk
+        tangan secepat mungkin!
+      Dance_Party_12: Hidupkan groove Anda! Ciptakan tarian Anda sendiri untuk dibagikan
+        ke teman-teman.
+      Dance_Party_extras_alternate_2019: Maju Mundur! (Klik "Selengkapnya" untuk melihat
+        detail)
+      Dance_Party_extras_battle: Kru Tari (Klik "Selengkapnya" untuk melihat detail)
+      Dance_Party_extras_battle_2019: Kru Tari (Klik "Selengkapnya" untuk melihat
+        detail)
+      Dance_Party_extras_every_beat: Not Seperempat (Klik "Selengkapnya" untuk melihat
+        detail)
+      Dance_Party_extras_every_beat_2019: Not Seperempat (Klik "Selengkapnya" untuk
+        melihat detail)
       Dance_Party_extras_layout: Ayo masuk formasi (klik"Lainnya" untuk rincian)
       Dance_Party_extras_layout_2019: Ayo masuk formasi (klik"Lainnya" untuk rincian)
-      Dance_Party_extras_on_beat: Suara rendah, pertengahan, tinggi(klik"Lainnya"untuk
-        rincian)
-      Dance_Party_extras_on_beat_2019: Suara rendah, pertengahan, tinggi(klik"Lainnya"untuk
-        rincian)
-      Dance_Party_extras_speed: Mempercepatnya, Memperlambat Down (Klik “Lainnya”
-        untuk rincian)
-      Dance_Party_extras_speed_2019: Mempercepatnya, Memperlambat Down (Klik “Lainnya”
-        untuk rincian)
-      Dance_Party_extras_visible: Kemana mereka pergi? (Klik "lainnya" untuk rincian)
-      Dance_Party_extras_visible_2019: Kemana mereka pergi? (Klik "lainnya" untuk
-        rincian)
+      Dance_Party_extras_mixed_2019: Lebih Banyak Tombol (Klik "Selengkapnya" untuk
+        melihat detail)
+      Dance_Party_extras_on_beat: Bas, Mid, dan Treble (Klik "Selengkapnya" untuk
+        melihat detail)
+      Dance_Party_extras_on_beat_2019: Bas, Mid, dan Treble (Klik "Selengkapnya" untuk
+        melihat detail)
+      Dance_Party_extras_speed: Percepat, Perlambat (Klik "Selengkapnya" untuk melihat
+        detail)
+      Dance_Party_extras_speed_2019: Percepat, Perlambat (Klik "Selengkapnya" untuk
+        melihat detail)
+      Dance_Party_extras_visible: Kemana mereka pergi? (Klik "Selengkapnya" untuk
+        melihat detail)
+      Dance_Party_extras_visible_2019: Kemana mereka pergi? (Klik "Selengkapnya" untuk
+        melihat detail)
       Fish Tank 2-validated_2019: Ubah tumbleweed ke berbagai macam ikan!
       Fish Tank 3-validated_2019: Ubah perilaku ikan sehingga ikannya berenang ke
         kiri dan kanan.
@@ -485,6 +544,14 @@ id-ID:
       MC_HOC_2017_FP20x20: "**Main bebas:**  Waktunya menjelajah sendiri!"
       MC_HOC_2017_FP20x20_2019: "**Main bebas:**  Waktunya menjelajah sendiri!"
       NEW Course 4 Artist Functions 14: 'Waktunya permainan bebas! '
+      New Gumball Project: Buat apapun yang Anda suka dan bagikanlah!
+      New Ice Age Project: Buat apapun yang Anda suka dan bagikanlah!
+      New Infinity Project: Buat apapun yang Anda suka dan bagikanlah!
+      New Minecraft Hero Project: "**Main bebas:**  Waktunya menjelajah sendiri!"
+      New Sports Project: 'Membuat permainan anda sendiri! Anda di sini: anda dapat
+        mengubah semua aturan, mencampur dan mencocokkan olahraga, mendapatkan kreatif!
+        Ketika anda sudah selesai, klik Finish untuk membiarkan teman-teman mencoba
+        permainan anda pada ponsel mereka.'
       Overworld Avoid Monsters: Berlari memasuki Creeper bukan ide yang bagus. Bergerak
         perlahan melewati Creeper dan capai keselamatan rumah kamu.
       Overworld Avoid Monsters_2019: Berlari memasuki Creeper bukan ide yang bagus.
@@ -681,6 +748,14 @@ id-ID:
         untuk melihat apa yang terjadi. Apa Anda mengerti cara kerjanya? (Coba hapus
         dan ganti dengan komposisi yang berbeda)
       courseA_maze_seq2: Ubah kode untuk membawa saya ke babi!
+      courseB_collector_loops_challenge2a: Bantu Laurel setidaknya mendapat **5**
+        harta karun untuk menyelesaikan teka-teki ini.
+      courseB_collector_loops_challenge2a_2018: Bantu Laurel setidaknya mendapat **5**
+        harta karun untuk menyelesaikan teka-teki ini.
+      courseB_collector_loops_challenge2a_2019: Bantu Laurel setidaknya mendapat **5**
+        harta karun untuk menyelesaikan teka-teki ini.
+      courseC_artist_loop1_2018: Ayo, tambahkan pizazz dengan blok `atur pola`.
+      courseC_artist_loop1_2019: Ayo, tambahkan pizazz dengan blok `atur pola`.
       courseC_artist_prog5: |-
         Rumah ini membutuhkan atap! Gambarkan segitiga. Petunjuk:
         semua tiga sisi panjangnya sama.
@@ -879,15 +954,3 @@ id-ID:
         menggambar - 16 piksel kali 16 piksel!\\\r \n\\\r\nLihat apa yang terjadi
         jika kita\nberkreasi dengan bit?"
       k-1 maze 1: Dapatkah Anda membuat saya pindah ke Barat untuk mendapatkan babi?
-      scrat 16: Acorn! Acorn! Acorn! gunakan sebuah blok"if" untuk membawa saya kesana
-        dengan sedikit jumlah blok.
-      scrat 17: Ok! mari kita coba lagi latihan itu-ini tidak terlalu berbeda, tetapi
-        waspada temboknya!
-      scrat 18: Block"if-else"(jika tidak) memeriksa sebuah kondisi, lalu melakukan
-        sesuatu Atau hal lain. Untuk membawa saya ke biji pohon ek coba gunakan blok
-        baru ini.
-      scrat 19: Cobalah sekali lagi praktekkan blok "jika tidak" (if-else), bisakah
-        Anda mendapatkannya jawaban yang benar pada percobaan pertama?
-      scrat 20: Dapatkah anda menambahkan hanya 3 blok untuk membantu saya menyelesaikan
-        labirin yang lebih rumit? Jika anda melakukannya dengan benar, saya bisa berjalan
-        di jalan melingkar berapapun panjangnya. Cepat! esnya mencair!

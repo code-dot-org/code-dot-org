@@ -30,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\r\n\r\n# If Statement\r\n\r\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\r\n\r\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \r\n\r\n# Do This\r\n\r\nThe race car program you wrote earlier is loaded here for you.\r\n\r\n* Add an `if` statement after you update the position of the race car.\r\n* Move the Boolean expression from the console.log statement to the condition of the if statement.\r\n* Inside the `if` statement add a statement to draw text on the screen to say \"Winner\".\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\r\n\r\n# If Statement\r\n\r\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\r\n\r\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \r\n\r\n# Do This\r\n\r\nThe race car program you wrote earlier is loaded here for you.\r\n\r\n* Add an `if` statement after you update the position of the race car.\r\n* Move the Boolean expression from the console.log statement to the condition of the if statement.\r\n* Inside the `if` statement add a console.log statement to print \"Winner\".\r\n",
     "callout_json": "[]",
     "project_template_level_name": "CSD U3 - car template_pilot",
     "instructions_important": "false",
@@ -101,11 +101,16 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-12 22:31:40 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-12 22:32:45 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:22:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-12 22:31:40 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-12 22:32:45 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:22:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-11-26 19:20:19 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

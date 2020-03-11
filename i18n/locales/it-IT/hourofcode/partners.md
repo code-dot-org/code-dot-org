@@ -22,7 +22,7 @@ Il lavoro e la dedizione dei Comitati hanno contribuito al successo dell'Ora del
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Partner per la realizzazione di esercitazioni e curriculum
 
 {{ partners/curriculum_tutorial_partners }}
 

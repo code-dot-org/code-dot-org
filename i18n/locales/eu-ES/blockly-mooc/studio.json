@@ -34,6 +34,7 @@
   "bird": "txoria",
   "calloutPutCommandsHereRunStart": "Jarri hemen programa hasterakoan exekutatuko diren aginduak",
   "calloutBlocklyPlaceGoUpHere": "Jarri \"joan gora\" bloke bat gora joateko",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Gertaeraren burukoan klik egin gertaeraren funtzio blokeak ikusteko.",
   "calloutUseArrowButtons": "Eutsi sakatuta botoi hauei edo zure teklatuko gezidun teklei mugitzeko gertaerak aktibatzeko",
   "calloutUseArrowButtonsAutoSteer": "Idatzi duzun kodea izkutatu dugu, baina oraindik gezidun teklak erabili ditzakezu mugitzeko",

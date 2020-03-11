@@ -404,6 +404,7 @@ sr:
     races:
       other: Други
     submit: Пошаљи
+    decline: Затвори
   project:
     name: Име
     saved: Сачувано у галерији!
@@ -447,3 +448,4 @@ sr:
     accept: Слажем се
   gdpr_dialog:
     true: Да
+  copy: Копирај

@@ -134,6 +134,7 @@ ka:
           GROUP:
             sprites: ყველა
           FORMAT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი
@@ -197,6 +198,7 @@ ka:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი

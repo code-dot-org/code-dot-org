@@ -346,6 +346,7 @@ es:
           FORMAT:
             '"border"': frontera
             '"inner"': cuadrado
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
@@ -447,6 +448,7 @@ es:
           LAYOUT:
             '"border"': frontera
             '"inner"': cuadrado
+            '"diamond"': diamante
             '"circle"': círculo
             '"grid"': cuadrícula
             '"row"': fila
@@ -970,7 +972,7 @@ es:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} encara {DIRECTION}"
         options:
@@ -1389,7 +1391,7 @@ es:
       aalab_addBehaviorForDuration:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
       aalab_addBehaviorUntilBoolean:
-        text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+        text: gráfico {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_goToScene:
         options:
           SCENE:

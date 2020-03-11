@@ -1442,7 +1442,7 @@ ne:
               name: Variables
             For Loops:
               name: For Loops
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Conditionals
@@ -1452,3 +1452,67 @@ ne:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Conditionals with Cards
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Conditionals
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Conditionals
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Functions with Parameters
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Going Places Safely
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Move It, Move It:
+              name: Move It, Move It
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binary Bracelets
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+            Digital Citizenship:
+              name: Digital Citizenship
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Conditionals
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spelling Bee

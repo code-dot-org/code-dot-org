@@ -20,33 +20,33 @@ Scopri alcune testimonianze dai volontari delle edizioni passate:
 
 ## Chiunque può offrirsi volontario
 
-### Volunteers and speakers in tech:
+### Volontari e testimonial in ambito tecnologico:
 
-Do you have a connection to CS or tech? Se lavori in ambito informatico, presso una società tecnologica in qualsiasi ruolo (più o meno tecnico) o hai seguito corsi di informatica, puoi aiutare ad ispirare gli studenti! Molti studenti non hanno mai incontrato qualcuno che lavora in settori tecnologici ed i nostri insegnanti desiderano mettere in contatto le proprie classi con professionisti e studenti universitari.
+La tua attività è legata all'informatica o alla tecnologia? Se lavori in ambito informatico, presso una società tecnologica in qualsiasi ruolo (più o meno tecnico) o hai seguito corsi di informatica, puoi aiutare ad ispirare gli studenti! Molti studenti non hanno mai incontrato qualcuno che lavora in settori tecnologici ed i nostri insegnanti desiderano mettere in contatto le proprie classi con professionisti e studenti universitari.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Puoi fare da testimonial per una classe o aiutare un insegnante a eseguire le esercitazioni. Visita una classe locale per stimolare gli studenti a continuare ad imparare informatica. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Iscriviti subito come volontario!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Qualsiasi persona interessata ad ampliare le opportunità delle prossime generazioni:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Aiuta una classe locale o organizza un evento nel doposcuola! Non hai bisogno di alcuna conoscenza specifica in informatica per ospitare un'Ora del Codice. La tua offerta di aiuto spesso è sufficiente a convincere l'insegnante di tuo figlio, un amico o un club a provare un'Ora del Codice.
+  Credi che l'apprendimento dell'informatica possa dare molte opportunità agli studenti? Aiuta una classe locale o organizza un evento nel doposcuola! Non hai bisogno di alcuna conoscenza specifica in informatica per ospitare un'Ora del Codice. La tua offerta di aiuto spesso è sufficiente a convincere l'insegnante di tuo figlio, un amico o un club a provare un'Ora del Codice.
 </p>
 
 <h3>
-  How do you get started?
+  Come iniziare?
 </h3>
 
 <ol>
   <li>
-    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Invia questa email</a> all'insegnante di tuo figlio offrendoti di aiutare a svolgere un'Ora del Codice.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
+    Proponi di ospitare un evento dell'Ora del Codice nel doposcuola in una scuola locale. Puoi seguire i suggerimenti di <a href="{{ urls/how_to_guide }}">questa guida</a> per pianificare l'evento.
   </li>
 </ol>
 
@@ -55,7 +55,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
+  Parla ai tuoi amici e colleghi di lavoro dell'Ora del Codice. Migliaia di insegnanti sono alla ricerca di volontari, quindi chiedi loro di <a href="https://code.org/volunteer"> iscriversi come volontari</a>. Proponi al tuo datore di lavoro di coinvolgere la tua organizzazione. <a href="{{ promote/sample_emails }}">Invia questo messaggio di posta elettronica</a> al tuo responsabile o all'Amministratore Delegato della tua azienda per diffondere il messaggio.
 </p>
 
 <h2>
@@ -64,13 +64,13 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="{{ promote/videos }}">Scegli un video</a> per catturare l'attenzione della classe ed entusiasmarli all'Ora del Codice. <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">Qui</a> trovi anche un video in italiano di Programma il Futuro.
   </li>
   <li>
     Guarda il <a href="/files/hoc-volunteer-toolkit.pdf">Kit per i volontari dell'Ora del Codice</a> (in inglese) che include un'introduzione, un modello di pianificazione, materiali per prepararsi e materiale promozionale. Tutto ciò di cui hai bisogno per essere pronto per la tua esperienza da volontario!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
+    Se svolgerai un'esercitazione in aula, dedica almeno 30 minuti per provare almeno una <a href="{{ urls/learn }}">Ora del codice</a>.
   </li>
   <li>
     Se sei presso una scuola, fai tutti i controlli burocratici preliminari e compila tutta la documentazione necessaria.
@@ -94,11 +94,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Nel condurre l'evento dell'Ora del Codice, segui il modello di pianificazione qui sotto per gestire al meglio la giornata. Prima di allora, assicurati di come accedere alla scuola e saluta gli insegnanti il giorno dell'evento. Conferma la data concordata e discuti di eventuali punti critici.
 </p>
 
 <h3>
-  Sample agenda:
+  Esempio di organizzazione:
 </h3>
 
 <table>
@@ -118,7 +118,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </td>
     
     <td>
-      <a href="{{ promote/videos }}">Show an inspirational video</a>.
+      <a href="{{ promote/videos }}">Proietta un video stimolante</a>.
     </td>
   </tr>
   
@@ -188,7 +188,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Dopo l'evento:
         </h3>
         <ul>
           <li>
@@ -225,22 +225,22 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           FAQ sul volontariato
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Non sono ancora stato contattato da alcun insegnante. Come posso procedere?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Prova a contattare le scuole locali, proponendoti direttamente agli insegnanti o alla segreteria.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Quanto durano le sessioni in classe?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Una visita di persona ad una classe normalmente dura 60-90 minuti, mentre una visita virtuale circa 20-30 minuti.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Per quali età sono adatte le esercitazioni dell'Ora del Codice?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org e i suoi partner progettano tutte le attività dell'Ora del Codice per coinvolgere studenti di tutti i livelli (dalla scuola dell'infanzia alle superiori), ragazzi e ragazze, di ogni provenienza. Tutti, anche gli adulti possono divertirsi!
         </p>
         <p>
           {{ signup_button }}

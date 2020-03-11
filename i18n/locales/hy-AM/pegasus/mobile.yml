@@ -17,7 +17,6 @@
   learn_now: "Սովորել հիմա"
   petition_message: "Յուրաքանչյուր աշակերտ յուրաքանչյուր դպրոցում պետք է հնարավորություն ունենա սովորելու համակարգչային գիտություն"
   petition_sign_message: 'Եթե համաձայն եք, գրեք Ձեր անունը։ Գրանցվել։ #Այլ'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: "Անուն"
   email: "Էլ. փոստ"
@@ -141,6 +140,7 @@
   thanks_for_submitting: "Thanks for submitting!"
   if_you_enjoyed: "If you enjoyed learning, ask friends to try it too!  We want the whole world to learn."
   personalize_certificate: "Personalize your certificate"
+  print_certificates: "Տպել վկայականը"
   share_achievement: "Share your achievement"
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: "Leaderboards for the Hour of Code."

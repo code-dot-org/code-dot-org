@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -24,6 +25,8 @@ class LevelsControllerTest < ActionController::TestCase
       type: 'toolbox_blocks',
       program: @program,
     }
+    stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
+      to_return({"status" => 200, "body" => "{}", "headers" => {}})
   end
 
   test "should get rubric" do
@@ -519,6 +522,50 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
     assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
     assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+  end
+
+  test "should allow rename of new level" do
+    get :edit, params: {id: @level.id}
+    assert_response :success
+    assert_includes @response.body, @level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of level in visible or pilot script" do
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.level
+    assert_equal script.hidden, false
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+
+    script.hidden = true
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
+
+    script.pilot_experiment = 'platformization-partners'
+    script.save!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
+  end
+
+  test "should prevent rename of stanadalone project level" do
+    level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
+    # standalone project levels are created when we generate fixtures
+    level = Level.find_by(name: level_name)
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_includes @response.body, 'level cannot be renamed'
   end
 
   test "should update level" do

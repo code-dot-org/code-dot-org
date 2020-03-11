@@ -96,6 +96,14 @@ kk-KZ:
         do something: Бірнәрсе істе
       NEW Course 4 Play Lab Params 11:
         jump: секіру
+      New Artist Project:
+        draw a star: жұлдыз салу
+        draw a circle: Шеңбер салу
+        draw a triangle: үшбұрыш салу
+        draw a house: үй салу
+        draw a square: төртбұрыш салу
+      New Play Lab Project:
+        jump: секіру
       Standalone_Artist_7:
         draw a flower: гүл салу
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ kk-KZ:
       courseE_artist_functions7:
         draw a house: үй салу
       courseE_artist_functions7_2018:
-        draw a house: үй салу
-      courseE_artist_functions7_2019:
         draw a house: үй салу
       courseE_artist_functions8:
         do something: Бірнәрсе істе

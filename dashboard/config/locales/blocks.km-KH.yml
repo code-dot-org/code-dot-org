@@ -98,6 +98,7 @@ km:
           GROUP:
             sprites: ទាំងអស់
           FORMAT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -148,6 +149,7 @@ km:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ

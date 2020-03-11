@@ -34,6 +34,7 @@
   "bird": "پرنده",
   "calloutPutCommandsHereRunStart": "قرار دادن دستورات به آنها را در هنگام شروع برنامه را اجرا کنید",
   "calloutBlocklyPlaceGoUpHere": "محل \"بالا\" بلوک اینجا به بالا برود",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "کلیک کنید در سرصفحه حوادث به بلوک تابع رویداد.",
   "calloutUseArrowButtons": "پایین این دکمه و یا کلید های arrow روی صفحه کلید خود را به ماشه حوادث حرکت",
   "calloutUseArrowButtonsAutoSteer": "ما کد نوشت شما پنهان است، اما شما هنوز هم می توانید استفاده از کلید های arrow به حرکت",

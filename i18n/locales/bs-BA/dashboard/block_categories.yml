@@ -1,0 +1,13 @@
+bs:
+  data:
+    block_categories:
+      Actions: Akcije
+      Color: Boja
+      Conditionals: Uvjeti
+      Events: Događaji
+      Functions: Funkcije
+      Logic: Logika
+      Loops: Petlje
+      Math: Matematika
+      Text: Tekst
+      Variables: Varijable

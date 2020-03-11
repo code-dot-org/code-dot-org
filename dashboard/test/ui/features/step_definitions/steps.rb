@@ -1641,6 +1641,13 @@ Then /^I navigate to teacher dashboard for the section I saved$/ do
   }
 end
 
+Then /^I navigate to teacher dashboard for the section I saved with experiment "([^"]*)"$/ do |experiment_name|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}?enableExperiments=#{experiment_name}"
+  }
+end
+
 Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
   expect(@section_id).to be > 0
   steps %{
@@ -1745,4 +1752,13 @@ end
 
 And(/^one year passes for user "([^"]*)"$/) do |name|
   pass_time_for_user name, 1.year.ago
+end
+
+Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
+  step_list = []
+  times.to_i.times do
+    step_list.push("Then I click selector \"#{selector}\" once I see it")
+    step_list.push("And I wait for 1 seconds")
+  end
+  steps step_list.join("\n")
 end

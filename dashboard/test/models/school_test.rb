@@ -62,42 +62,42 @@ class SchoolTest < ActiveSupport::TestCase
     refute school.maker_high_needs?
   end
 
-  test 'high needs false when null frl eligible below 40 percent of students' do
+  test 'high needs false when frl eligible below 50 percent of students' do
     school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
         school_year: '1998-1999',
         students_total: 1000,
-        frl_eligible_total: 399
+        frl_eligible_total: 499
       }
     )
     school.save!
     refute school.maker_high_needs?
   end
 
-  test 'high needs true when null frl eligible equal to 40 percent of students' do
+  test 'high needs true when frl eligible equal to 50 percent of students' do
     school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
         school_year: '1998-1999',
         students_total: 1000,
-        frl_eligible_total: 400
+        frl_eligible_total: 500
       }
     )
     school.save!
     assert school.maker_high_needs?
   end
 
-  test 'high needs true when null frl eligible above 40 percent of students' do
+  test 'high needs true when frl eligible above 50 percent of students' do
     school = create :school
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
         school_year: '1998-1999',
         students_total: 1000,
-        frl_eligible_total: 401
+        frl_eligible_total: 501
       }
     )
     school.save!

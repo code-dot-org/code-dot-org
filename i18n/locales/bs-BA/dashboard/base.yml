@@ -472,6 +472,8 @@ bs:
     support_url: "//support.code.org"
     help_support: "Pomoć i podrška"
     documentation: "Dokumentacija"
+  free_response:
+    placeholder: "Ovdje unesite vaš odgovor"
   multi:
     wrong_title: "Netačan odgovor"
     wrong_body: "Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!"
@@ -654,3 +656,4 @@ bs:
     accept: 'Slažem se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

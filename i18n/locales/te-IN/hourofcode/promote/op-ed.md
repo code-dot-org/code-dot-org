@@ -1,5 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+title: కంప్యూటర్ సైన్స్ ఎడ్యుకేషన్ వీక్ మరియు అవర్ ఆఫ్ కోడ్‌కు మద్దతుగా నమూనా Op-ed
 ---
 
 {{ signup_button }}

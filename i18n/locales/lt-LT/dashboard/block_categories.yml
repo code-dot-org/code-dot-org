@@ -1,0 +1,13 @@
+lt:
+  data:
+    block_categories:
+      Actions: Komandos
+      Color: Spalva
+      Conditionals: Sąlyginiai sakiniai
+      Events: Įvykiai
+      Functions: Komandų kūrimas
+      Logic: Logika
+      Loops: Kartojimas
+      Math: Matematika
+      Text: Tekstas
+      Variables: Kintamieji

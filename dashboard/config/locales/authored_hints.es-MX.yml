@@ -4058,6 +4058,8 @@ es-MX:
           -   Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.
 
           _Este nivel termina después de 8 medidas._
+      Dance_Party_extras_alternate_2019:
+        alternate: El bloque alternativo está en la categoría "Bailarines".
       Function intro Ryan:
         Function_intro_Ryan_b: Si llama a las funciones correctamente, este es el
           camino por el que viajará...
@@ -4558,6 +4560,15 @@ es-MX:
           ¡Intenta editar los comportamientos!
 
           -   ¿Qué valor controla la velocidad de cada sprite?
+      behaviors 7:
+        behaviors_hint1: Puedes crear un nuevo comportamiento que usa dos acciones
+          diferentes o combinar dos comportamientos existentes.
+        sprites_idea1: |-
+          Para divertirte, puedes usar un comportamiento similar para hacer el barco volar hacia el espacio o un figura correr hacia el primer plano. ¡Prueba de cambiar el fondo y disfraces de los sprites en tu escena!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
           personas intentan leer su código.
@@ -6237,9 +6248,17 @@ es-MX:
           solución.
         courseA_collector_loops_challenge2kp_a: "¿Puedes usar loops para resolver
           este puzzle?"
+      courseA_collector_preLoops4:
+        courseA_collector_preLoops4_a: Para agarrar el tesoro, encaja dos bloques
+          ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
+          y un bloque ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          en la parte inferior del programa y haz clic en "Ejecutar".
       courseA_collector_preLoops5:
         courseA_collector_preLoops5_a: "¡Tendrás que ir en dos direcciones diferentes
           para obtener incluso una gema!"
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: Necesitarás usar dos bloques ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          para resolver este desafío.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Luego que te hayas movido hacia un cuadrado con tesoro, usa este bloque para recogerlo.
@@ -9352,12 +9371,6 @@ es-MX:
           de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
           rompecabezas.
       courseC_PlayLab_eventsA_2019:
-        courseC_PlayLab_eventsA_a: Usa el bloque \` establecer fondo ' y el bloque
-          ' establecer agente a una velocidad de**\_** ' para resolver este desafío.
-        courseC_PlayLab_eventsA_b: Tendrás que arrastrar específicamente un bloque
-          de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
-          rompecabezas.
-      courseC_PlayLab_eventsA_embed_2019:
         courseC_PlayLab_eventsA_a: Usa el bloque \` establecer fondo ' y el bloque
           ' establecer agente a una velocidad de**\_** ' para resolver este desafío.
         courseC_PlayLab_eventsA_b: Tendrás que arrastrar específicamente un bloque

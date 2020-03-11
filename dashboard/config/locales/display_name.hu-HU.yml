@@ -35,6 +35,7 @@ hu-HU:
       CSD LEDs Map_2019: 'Áramkör játszótér: LED-EK'
       CSD Problem Solving Process Video: 'Videó: probléma-megoldási folyamat'
       CSD U1L02 TFMD_2018: Lecke áttekintése
+      CSD U1L02 TFMD_2019: Lecke áttekintése
       CSD U1L03 TFMD_2018: Lecke áttekintése
       CSD U1L03 TFMD_2019: Lecke áttekintése
       CSD U1L04 TFMD_2018: Lecke áttekintése
@@ -100,7 +101,9 @@ hu-HU:
       CSD U2 lists map_2019: HTML listák
       CSD U2 publish video: Webhelyének közzététele
       CSD U2L01 TFMD_2018: Lecke áttekintése
+      CSD U2L01 TFMD_2019: Lecke áttekintése
       CSD U2L02 TFMD_2018: Lecke áttekintése
+      CSD U2L02 TFMD_2019: Lecke áttekintése
       CSD U2L03 TFMD_2018: Lecke áttekintése
       CSD U2L03 TFMD_2019: Lecke áttekintése
       CSD U2L04 TFMD_2018: Lecke áttekintése
@@ -184,6 +187,7 @@ hu-HU:
       CSD U3 L9 Freeplay_2019: Ingyenes Játék
       CSD U3 Plotting Shapes Shape Lab: Síkidomok rajzolása
       CSD U3 Plotting Shapes Shape Lab_2018: Síkidomok rajzolása
+      CSD U3 Plotting Shapes Shape Lab_2019: Síkidomok rajzolása
       CSD U3 Random Number Map Level: Véletlen számok
       CSD U3 Random Number Map Level_2018: Véletlen számok
       CSD U3 Random Number Map Level_2019: Véletlen számok
@@ -226,7 +230,10 @@ hu-HU:
       CSD U3 velocity map: Sprite sebesség
       CSD U3 velocity map_2018: Sprite sebesség
       CSD U3 velocity map_2019: Sprite sebesség
+      CSD U3L01 TFMD_2018: Lecke áttekintése
+      CSD U3L01 TFMD_2019: Lecke áttekintése
       CSD U3L02 TFMD_2018: Lecke áttekintése
+      CSD U3L02 TFMD_2019: Lecke áttekintése
       CSD U3L03 TFMD_2018: Lecke áttekintése
       CSD U3L03 TFMD_2019: Lecke áttekintése
       CSD U3L04 TFMD_2018: Lecke áttekintése
@@ -268,7 +275,9 @@ hu-HU:
       CSD U3L22 TFMD_2018: Lecke áttekintése
       CSD U3L22 TFMD_2019: Lecke áttekintése
       CSD U4L01 autoSFLP_2018: Lecke áttekintése
+      CSD U4L01 autoSFLP_2019: Lecke áttekintése
       CSD U4L02 autoSFLP_2018: Lecke áttekintése
+      CSD U4L02 autoSFLP_2019: Lecke áttekintése
       CSD U4L03 autoSFLP_2018: Lecke áttekintése
       CSD U4L03 autoSFLP_2019: Lecke áttekintése
       CSD U4L04 autoSFLP_2018: Lecke áttekintése
@@ -301,7 +310,9 @@ hu-HU:
       CSD U5 Netflix Data Video_2019: Hogyan használja a Netflix az adatokat
       CSD U5 Waze Data Video_2019: Hogyan használja a Waze az adatokat
       CSD U5L01 autoSFLP_2018: Lecke áttekintése
+      CSD U5L01 autoSFLP_2019: Lecke áttekintése
       CSD U5L02 autoSFLP_2018: Lecke áttekintése
+      CSD U5L02 autoSFLP_2019: Lecke áttekintése
       CSD U5L03 autoSFLP_2018: Lecke áttekintése
       CSD U5L03 autoSFLP_2019: Lecke áttekintése
       CSD U5L04 autoSFLP_2018: Lecke áttekintése
@@ -344,9 +355,12 @@ hu-HU:
       CSD U6 functions paramters video: Paraméteres függvények
       CSD U6 functions paramters video_2018: Paraméteres függvények
       CSD U6 functions paramters video_2019: Paraméteres függvények
+      CSD U6L01 TFMD: Lecke áttekintése
       CSD U6L01 TFMD_2018: Lecke áttekintése
+      CSD U6L01 TFMD_2019: Lecke áttekintése
       CSD U6L02 TFMD: Lecke áttekintése
       CSD U6L02 TFMD_2018: Lecke áttekintése
+      CSD U6L02 TFMD_2019: Lecke áttekintése
       CSD U6L03 TFMD: Lecke áttekintése
       CSD U6L03 TFMD_2018: Lecke áttekintése
       CSD U6L03 TFMD_2019: Lecke áttekintése
@@ -417,12 +431,14 @@ hu-HU:
       CourseE_Project_SpriteLab_2019: Tanfolyam E Sprite labor projekt
       CourseF_Project_SpriteLab: Tanfolyam F Sprite labor projekt
       CourseF_Project_SpriteLab_2019: Tanfolyam F Sprite labor projekt
+      Dance_Party_extras_alternate_2019: Előre és hátra
       Dance_Party_extras_battle: Tánccsapatok
       Dance_Party_extras_battle_2019: Tánccsapatok
       Dance_Party_extras_every_beat: Negyedek
       Dance_Party_extras_every_beat_2019: Negyedek
       Dance_Party_extras_layout: Alakzatba állás
       Dance_Party_extras_layout_2019: Alakzatba állás
+      Dance_Party_extras_mixed_2019: Több gomb
       Dance_Party_extras_on_beat: Basszus, közép- és magashangok
       Dance_Party_extras_on_beat_2019: Basszus, közép- és magashangok
       Dance_Party_extras_speed: Gyorsítás, lassítás
@@ -448,6 +464,10 @@ hu-HU:
       MC_HOC_2017_Ali_2019: Alvilági erőd
       MC_HOC_2017_FP20x20: Szabad játék
       MC_HOC_2017_FP20x20_2019: Szabad játék
+      New Minecraft Hero Project: Szabad játék
+      Oceans_Video_Machine_Learning: 'Videó: Gépi tanulás'
+      Oceans_Video_Societal_Implications: 'Videó: Társadalmi vonatkozások'
+      Oceans_Video_Training_Data: 'Videó: Tréningadatok'
       'Video: Intro to CSS Part 2_2018': 'Videó: bevezetés a CSS-be, 2. rész'
       'Video: Intro to CSS Part 2_2019': 'Videó: bevezetés a CSS-be, 2. rész'
       'Video: Intro to CSS_2018': 'Videó: bevezetés a CSS-be'

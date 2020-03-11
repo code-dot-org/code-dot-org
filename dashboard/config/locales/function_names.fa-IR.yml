@@ -113,6 +113,14 @@ fa-IR:
         do something: یه کاری بکن
       NEW Course 4 Play Lab Params 11:
         jump: پرش
+      New Artist Project:
+        draw a star: رسم یک ستاره
+        draw a circle: یک دایره بکشید
+        draw a triangle: یک مثلث بکشید
+        draw a house: یک خانه بکشید
+        draw a square: یک مربع بکشید
+      New Play Lab Project:
+        jump: پرش
       Robot Doodle:
         draw head: سر را بکش
       Robot Doodle_2018:
@@ -173,8 +181,6 @@ fa-IR:
       courseE_artist_functions7:
         draw a house: یک خانه بکشید
       courseE_artist_functions7_2018:
-        draw a house: یک خانه بکشید
-      courseE_artist_functions7_2019:
         draw a house: یک خانه بکشید
       courseE_artist_functions8:
         do something: یه کاری بکن

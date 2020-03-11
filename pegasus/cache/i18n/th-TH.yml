@@ -25,8 +25,6 @@ th-TH:
   learn_now: เรียนตอนนี้
   petition_message: นักเรียนทุกคนจากทุกโรงเรียนควรมีโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์
   petition_sign_message: 'ถ้าคุณเห็นด้วย ลงชื่อของคุณได้เลย มาเข้าร่วม #'
-  petition_sign_message_support: 'ถ้าคุณสนับสนุนเรา ลงชื่อของคุณ เข้าร่วมกับคนอื่นอีก
-    # คน'
   petition_join_others: 'เข้าร่วม # อื่น'
   name: ชื่อ
   email: อีเมล
@@ -152,6 +150,7 @@ th-TH:
   thanks_for_submitting: ขอบคุณสำหรับการสมัคร!
   if_you_enjoyed: หากคุณชื่นชอบกับการเรียน ไม่ลองชวนเพื่อนๆมาเรียนด้วยหละ! เราอยากให้ทุกคนบนโลกได้เรียนแบบคุณ
   personalize_certificate: ออกแบบประกาศนียบัตรของคุณ
+  print_certificates: พิมพ์ใบรับรอง
   share_achievement: แบ่งปันความสำเร็จของคุณ
   beyond_hour_message: เรียนรู้เพิ่มเติมกับ<a href='http://studio.code.org'>คอร์สอื่นๆ</a>
     หรือศึกษาข้อมูล<a href='/learn/beyond'>การเรียนมากกว่า 1 ชั่วโมง</a>.
@@ -220,7 +219,7 @@ th-TH:
   studiobar_title_nolink: ทำความรู้จัก Code Studio
   studiobar_elementary_title: หลักสูตรพื้นฐาน
   studiobar_elementary_body: สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5
-  studiobar_dance_title: งานเต้นรำ
+  studiobar_dance_title: Dance Party
   studiobar_dance_body: สร้างและแชร์เกม Dance Party ของคุณเอง
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: เรียนรู้การเขียนโค้ดกับเกม Angry Birds
@@ -1203,7 +1202,7 @@ th-TH:
   user_header_logout: ออกจากระบบ
   user_header_signin: เข้าสู่ระบบ
   user_header_gamelab: เกมแล๊บ (Game Lab)
-  user_header_dance: งานเต้นรำ
+  user_header_dance: Dance Party
   user_header_minecraft: ไมน์คราฟท์
   user_header_view_my_projects: ดูโปรเจกต์ต่าง ๆของฉัน
   signing_in: เข้าสู่ระบบ
@@ -1213,7 +1212,12 @@ th-TH:
   aquatic_name: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
   account_sign_up_child_accept_terms: ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ
     Code.org ได้
-  hoc_overview_dance_title: งานเต้นรำ
+  hoc_overview_dance_title: Dance Party
+  hoc_overview_dance_subtitle: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณฟีเจอริ่งกับ
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และอีก 25 คน!
+  hoc_overview_dance_2019_subtitle: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ
+    ของคุณฟีเจอริ่งกับ Katy Perry, Shawn Mendes Panic! At The Disco, Lil Nas X, Jonas
+    Brothers, Nicki Minaj, และอีก 34 คน!
   hoc_overview_partner_activities_title: กิจกรรมเพิ่มเติมจากพันธมิตร
   hoc_overview_partner_activities_body: เว็บไซต์ Hour of Code มีกิจกรรมที่เกี่ยวกับวิทยาการด้านคอมพิวเตอร์มากกว่า
     100 กิจกรรมสำหรับทุกวัยและทุกระดับประสบการณ์ ได้รับการพัฒนาโดย Code.org และพันธมิตร
@@ -1252,9 +1256,9 @@ th-TH:
   hoc2018_mc_short_description_shorter: ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ
     เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!
   hoc2018_mc_journey: ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
-  hoc2018_dance_party_main_heading: งานเต้นรำ
+  hoc2018_dance_party_main_heading: Dance Party
   hoc2018_dance_create_your_own_dance_title: สร้างเกม Dance Party ของคุณเอง
-  hoc2018_dance_party_box_title: งานเต้นรำ
+  hoc2018_dance_party_box_title: Dance Party
   hoc2018_dance_party_box_description: สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ
     ของคุณ
   hoc2018_dance_party_button: เริ่มต้น

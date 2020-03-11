@@ -3,59 +3,29 @@ ga:
   data:
     block_categories:
       Actions: Gníomhartha
-      Loops: Lúba
-      Functions: Feidhmeanna
-      Color: Dath
-      Brushes: Scuaba
-      Math: Matamaitic
-      Logic: Loighic
-      Variables: Athróga
-      Number: Uimhir
-      String: Teaghrán
-      Image: Íomhá
-      Boolean: Luach Boole
-      Conditionals: Coinníollacha
-      Events: Teagmhais
-      Games/Score: Cluichí/Scór
-      Comments: Nótaí
-      Category: Catagóir
-      Prebuilt: Réamhdhéanta
-      Text: Téacs
-      Picker: Roghnóir
-      Comment: Nóta
-      World: Domhan
-      Sprites: Sprideanna
-      Behaviors: Iompar
-      'Variables ': 'Athróga '
-      Default: Réamhshocrú
-      Locations: Áiteanna
-      everythingelse: gachrudeile
-      Location: Áit
-      numbers: uimhreacha
-      Numbers: Uimhreacha
-      Input: Ionchur
-      Dancers: Damhsóirí
-      Groups: Grúpaí
       Advanced: Ardroghanna
-      Start: Tosaigh
-      Music: Ceol
-      Dancing: Damhsa
-      Sprite: Sprid
-      Brush: Scuab
-      Make Sprite: Déan Sprid
-      Movement: Gluaiseacht
-      Booleans: Luachanna Boole
-      Functional: Feidhmeach
-      While Events: Teagmhais "chomh fada is"
-      Sprite Properties: Airíonna na Spride
-      Predefined: Réamhshainithe
-      test: tástáil
-      test2: tástáil2
-      Use These Blocks: Úsáid na Blocanna seo
-      Do Not Use: Ná hÚsáid
-      Foo: Fú
-      Name: Ainm
-      NEW BLOCKS: BLOCANNA NUA
+      Behaviors: Iompar
+      Brushes: Scuaba
+      Color: Dath
+      Comment: Nóta
+      Comments: Nótaí
+      Conditionals: Coinníollacha
+      Dancers: Damhsóirí
+      Default: Réamhshocrú
+      Events: Teagmhais
+      Functions: Feidhmeanna
       'Functions ': 'Feidhmeanna '
       Game/Score: Cluiche/Scór
-      Function: Feidhm
+      Games/Score: Cluichí/Scór
+      Groups: Grúpaí
+      Locations: Áiteanna
+      Logic: Loighic
+      Loops: Lúba
+      Math: Matamaitic
+      Numbers: Uimhreacha
+      Properties: Airíonna
+      Sprites: Sprideanna
+      Text: Téacs
+      Variables: Athróga
+      'Variables ': 'Athróga '
+      World: Domhan

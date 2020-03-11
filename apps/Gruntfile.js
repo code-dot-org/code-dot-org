@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       : `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `/* eslint-disable */
 // Auto-generated from Gruntfile.js
-import 'babel-polyfill';
+import '@babel/polyfill';
 import 'whatwg-fetch';
 import Adapter from 'enzyme-adapter-react-15.4';
 import enzyme from 'enzyme';
@@ -197,7 +197,7 @@ describe('entry tests', () => {
         // blockly media, etc).
         {
           expand: true,
-          cwd: './node_modules/video.js/dist/video-js',
+          cwd: './node_modules/video.js/dist',
           src: ['**'],
           dest: 'build/package/video-js'
         }
@@ -208,12 +208,12 @@ describe('entry tests', () => {
         {
           expand: true,
           cwd: 'lib/blockly',
-          src: ['??_??.js'],
+          src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
-              /(.{2}_.{2})\.js/g,
+              /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
@@ -557,6 +557,7 @@ describe('entry tests', () => {
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
@@ -567,7 +568,6 @@ describe('entry tests', () => {
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
-    'projects/public': './src/sites/studio/pages/projects/public.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
@@ -581,9 +581,15 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
+    'admin_standards/index':
+      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'datasets/show': './src/sites/studio/pages/datasets/show.js',
+    'datasets/index': './src/sites/studio/pages/datasets/index.js',
+    'datasets/edit_manifest':
+      './src/sites/studio/pages/datasets/edit_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
@@ -653,6 +659,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
+    'code.org/views/professional_learning_apply_banner':
+      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -675,6 +683,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/fit_weekend_registration/new':
       './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    'pd/workshop_daily_survey/new_general_foorm':
+      './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
       './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel':
@@ -682,8 +692,6 @@ describe('entry tests', () => {
 
     'pd/professional_learning_landing/index':
       './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_contact/new.js',
     'pd/regional_partner_mini_contact/new':
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 
@@ -749,10 +757,7 @@ describe('entry tests', () => {
           otherEntries
         ),
         function(val) {
-          return [
-            './src/util/idempotent-babel-polyfill',
-            'whatwg-fetch'
-          ].concat(val);
+          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [
@@ -880,7 +885,7 @@ describe('entry tests', () => {
               },
               test(module) {
                 return [
-                  'babel-polyfill',
+                  '@babel/polyfill',
                   'immutable',
                   'lodash',
                   'moment',

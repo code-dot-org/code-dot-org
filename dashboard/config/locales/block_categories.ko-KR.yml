@@ -3,49 +3,30 @@ ko:
   data:
     block_categories:
       Actions: 동작
-      Loops: 반복
-      Functions: 함수
-      Color: 색
-      Brushes: 브러쉬
-      Math: 계산
-      Logic: 논리
-      Variables: 변수
-      Number: 번호
-      Conditionals: 조건
-      Events: 이벤트
-      Games/Score: 게임/점수
-      Comments: 의견
-      Prebuilt: 예시
-      Text: 문장
-      Comment: 댓글
-      World: 세계
-      Behaviors: 행동
-      'Variables ': '변수 '
-      Default: 기본값
-      Locations: 위치
-      everythingelse: 기준에 어긋나는 모든 것
-      Location: 위치
-      numbers: 숫자
-      Numbers: 숫자
-      Dancers: 댄서
-      Groups: 그룹
       Advanced: 고급
-      Start: '시작:'
-      Dancing: 춤을 추고 있는
-      Sprite: 스프라이트
-      Brush: 붓
-      Make Sprite: 스프라이트 만들기
-      Movement: 움직임
-      Booleans: 불(참 또는 거짓)값들
-      Functional: 함수
-      While Events: 이벤트가 일어나는 동안
-      Sprite Properties: 스프라이트 속성
-      test: 검사
-      test2: 두번째 테스트
-      Name: 이름
-      NEW BLOCKS: 새 블럭
+      Behaviors: 행동
+      Brushes: 브러쉬
+      Color: 색
+      Comment: 댓글
+      Comments: 의견
+      Conditionals: 조건
+      Dancers: 댄서
+      Default: 기본값
+      Events: 이벤트
+      Functions: 함수
       'Functions ': '함수
 
 '
       Game/Score: 게임/점수
-      Function: 함수
+      Games/Score: 게임/점수
+      Groups: 그룹
+      Locations: 위치
+      Logic: 논리
+      Loops: 반복
+      Math: 계산
+      Numbers: 숫자
+      Properties: 등록 정보
+      Text: 문장
+      Variables: 변수
+      'Variables ': '변수 '
+      World: 세계

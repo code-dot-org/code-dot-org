@@ -399,7 +399,37 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Shart buyruqlari
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
+        csd3-2020:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Estafetali dasturlash
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Bilimdon Ari

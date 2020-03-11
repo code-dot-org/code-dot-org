@@ -26,8 +26,6 @@ sk-SK:
   petition_message: Aby každý študent na každej škole dostal možnosť študovať informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu
     spolu s # ďalšími.'
-  petition_sign_message_support: 'Ak nás podporuješ, zapíš sa a pridaj sa k nášmu
-    mailing listu spolu s # ďalšími.'
   petition_join_others: 'Pridaj sa k # iným'
   name: Meno
   email: E-mail
@@ -217,6 +215,7 @@ sk-SK:
   if_you_enjoyed: Ak sa ti hodina páčila, opýtaj sa priateľov či to chcú skúsiť tiež!
     Chceme, aby sa celý svet mohol učiť.
   personalize_certificate: Prispôsob si svoj certifikát
+  print_certificates: Vytlačiť certifikáty
   share_achievement: Zdieľaj svoj úspech
   beyond_hour_message: Pokračujte s našimi <a href='http://studio.code.org'>ďalšími
     kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe
@@ -1224,8 +1223,11 @@ sk-SK:
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  csd2_name: 'Lekcia 2: Vývoj webových stránok'
+  csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
-  express_name: Zrýchlený kurz (2018)
+  express_name: Zrýchlený kurz
+  pre-express_name: Zrýchlený kurz pre predškolákov
   20-hour_name: Zrýchlený kurz
   algebra_name: Informatika v algebre - celý kurz
   AlgebraA_name: Informatika v algebre - Kurz A

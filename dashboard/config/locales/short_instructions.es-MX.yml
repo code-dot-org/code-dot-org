@@ -1057,6 +1057,8 @@ es-MX:
       Dance_2019_06: Establece un grupo de bailarines de respaldo alrededor del bailarín
         principal en el medio.
       Dance_2019_07: Cambia el tamaño del grupo de bailarines de respaldo.
+      Dance_2019_08: "¡Prueba con cambiar la tonalidad de tus bailarines (o de todo
+        un grupo)!"
       Dance_2019_09: "¡Sé creativo con estos nuevos bloques!"
       Dance_2019_10: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
@@ -1087,6 +1089,8 @@ es-MX:
       Dance_Party_12: |-
         ¡Vamos baila! Crea tu propio baile para compartir con tus
         amigos.
+      Dance_Party_extras_alternate_2019: ¡Idea y vuelta! (Haz clic en "Más" para obtener
+        más información)
       Dance_Party_extras_battle: Equipos de baile (haz clic en "Más" para obtener
         más detalles)
       Dance_Party_extras_battle_2019: Equipos de baile (haz clic en "Más" para obtener
@@ -1098,6 +1102,8 @@ es-MX:
         más detalles)
       Dance_Party_extras_layout_2019: ¡Vamos a organizarnos! (haz clic en "Más" para
         obtener más detalles)
+      Dance_Party_extras_mixed_2019: Más botones (Haz clic en "Más" para obtener más
+        información)
       Dance_Party_extras_on_beat: Graves, medios y agudos (haz clic en "Más" para
         obtener más detalles)
       Dance_Party_extras_on_beat_2019: Graves, medios y agudos (haz clic en "Más"
@@ -1529,6 +1535,15 @@ es-MX:
         de texto para enviar información basada en texto de un lado a otro. Con un
         protocolo basado en texto, puede representar y comunicar fácilmente todo tipo
         de información. '
+      New Gumball Project: "¡Crea cualquier cosa que desees compartir!"
+      New Ice Age Project: "¡Crea cualquier cosa que desees compartir!"
+      New Infinity Project: "¡Crea cualquier cosa que desees compartir!"
+      New Minecraft Hero Project: "**Improvisación:**  ¡Es hora de explorar por tu
+        cuenta!"
+      New Sports Project: '¡Crea tu propio juego! Ahora estás al mando: puedes cambiar
+        todas las reglas y combinar deportes. ¡Despliega toda tu creatividad! Cuando
+        estés listo, haz clic en "Finalizar" para que tus amigos prueben tu juego
+        en sus teléfonos.'
       Overworld Avoid Monsters: Ir contra un Creeper no es buena idea. Evítalos con
         cuidado y llega a casa para estar a salvo.
       Overworld Avoid Monsters_2019: Ir contra un Creeper no es buena idea. Evítalos
@@ -1572,23 +1587,25 @@ es-MX:
         lana de ambas ovejas.
       Overworld Shear Sheep_2019: ¡Hora de esquilar! Usa el comando "esquilar" para
         obtener lana de ambas ovejas.
-      Pixelation - Lesson 15 - Color Shades: Te iniciamos con la fila de sombras de
+      Pixelation - Lesson 15 - Color Shades: Comenzamos con la fila de sombras de
         rojo que Maddie creó en el video. Experimenta con color de 6 bits rellenando
         la fila inferior de la imagen con sombras de un color diferente. Aquí tienes
         un ejemplo con algunas sombras de azul. ¡Prueba tu propio color!
       Pixelation - Lesson 15 - Color Shades 4x4: 'Comenzamos con la imagen 4x4 que
-        Maddie creó en el video. Su tarea es llenar una cuadrícula de 4x4 con colores
-        utilizando 12 bits por píxel. Estos son los requisitos: Fila 1: llenar con
-        tonos de rojo. Fila 2: tonos de verde. Fila 3 - tonos de azul. Fila 4 - tonos
+        Maddie creó en el video. Tu tarea es llenar una cuadrícula de 4x4 con colores
+        utilizando 12 bits por pixel. Estos son los requisitos: Fila 1: llenar con
+        tonos de rojo. Fila 2: tonos de verde. Fila 3: tonos de azul. Fila 4: tonos
         de gris.'
       Pixelation - Lesson 15 - Complete 3-bit color: Comenzamos con la imagen de 4x2
-        que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termine
-        la imagen descubriendo los dos colores que faltan y codifíquelos.
+        que Maddie estaba creando, pero hemos omitido los dos últimos cuadrados. Termina
+        la imagen descubriendo los dos colores que faltan y codifícalos.
+      Pixelation 4x4 Empty: El ancho y la altura ahora están codificados en los datos
+        de pixeles. ¿Puedes descubrir cómo ajustar las dimensiones?
       Pixelation Bee: 'Esta imagen más grande de una abeja codifica el color con 12
-        bits por pixel, pero ver en hex hace más fácil ver el color de cada píxel.
-        Si cambias al modo binario (sujétate a tu sombrero), es un montón de bits.
-        Aquí hay otra cosa sorprendente para probar: desliza los bits por pixel hasta
-        24 bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
+        bits por pixel, pero ver en hex hace más fácil ver el color de cada pixel.
+        Si cambias al modo binario (sujétate el sombrero), es un montón de bits. Aquí
+        hay otra cosa sorprendente para probar: desliza los bits por pixel hasta 24
+        bits por pixel. ¿Qué sucede? ¿Puedes explicar este comportamiento?'
       Pixelation Flappy: Esta es una imagen más grande a 9 bits por pixel. Con 9 bits
         por pixel puedes expresar 512 colores diferentes. Haz clic para ver la siguiente
         imagen que es aún más sofisticada, pero más fácil de entender.
@@ -4746,6 +4763,18 @@ es-MX:
       iceage_warn_ice_age: Cambia la escena a un fondo con hielo y configura la velocidad
         de Sid (actor 1) en rápido.
       k-1 maze 1: "¿Me llevarías al Oeste para agarrar al cerdo? "
+      mike3bit: Comenzamos con la imagen de 4x2 que Maddie estaba creando, pero hemos
+        dejado de lado los últimos píxeles. Termina la imagen descubriendo qué colores
+        faltan y codificándolos.
+      mike3bitbird: Este es un ejemplo de una imagen hecha con color de 3 bits. Intenta
+        cambiarlo para entender cómo funciona. Si deseas restablecer la imagen, presiona
+        "Comenzar de nuevo".
+      mike3bitfreeplay: "¡Haz algo increíble y compártelo con tus compañeros de clase!
+        Puedes copiar y pegar el valor de un píxel para usarlo repetidamente."
+      mike3bitmario: |-
+        Un codificador binario descuidado escribió UN 0 o 1 adicional en algún lugar dentro de los datos de esta imagen. ¡La parte adicional que está causando que Mario falle!
+
+        ¡Elimina el bit adicional para restaurar a Mario a la normalidad!
       ramp_artist_loops1: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops1_2018: Avanza 60 pixeles para completar este desafío.
       ramp_artist_loops1_2019: Avanza 60 pixeles para completar este desafío.
@@ -4780,14 +4809,3 @@ es-MX:
       ramp_artist_loops9: Dibuja un cuadrado para resolver este desafío.
       ramp_artist_loops9_2018: Dibuja un cuadrado para resolver este desafío.
       ramp_artist_loops9_2019: Dibuja un cuadrado para resolver este desafío.
-      scrat 16: ¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque "si" para llevarme
-        hasta allí con el menor número de bloques.
-      scrat 17: Ok, vamos a hacerlo de nuevo para practicar - éste no es muy diferente,
-        ¡pero ten cuidado con la pared!
-      scrat 18: El bloque "If-else" verifica una condición y después hace una cosa
-        u otra. Para llevarme a la bellota intenta usar este nuevo bloque.
-      scrat 19: Una práctica más del bloque "si-sino", ¿puedes hacerlo bien en tu
-        primer intento?
-      scrat 20: "¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
-        más complejo? Si lo haces correctamente, puedo caminar cualquier camino curvo
-        sin importar su longitud. ¡Date prisa! ¡El hielo se está derritiendo!"

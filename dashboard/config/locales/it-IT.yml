@@ -70,6 +70,7 @@ it:
   previous_page: Pagina precedente
   next_page: Pagina successiva
   next_resource: Risorsa successiva
+  done_with_module: Lezione completata
   cancel: Annulla
   okay: Ok!
   or: o
@@ -139,6 +140,13 @@ it:
       di Code.org.
     already_linked: Il tuo account di %{provider} è già connesso al tuo account di
       Code.org.
+    existing_account:
+      account_exists: Buone notizie! Sei già registrato su Code.org con l'indirizzo
+        email %{email}
+      sign_in: Accedi e ti collegheremo al tuo profilo %{provider}.
+      sign_up: Non è il tuo indirizzo email? Vuoi creare un nuovo account con un altro
+        indirizzo email? Se scegli di creare un nuovo account, lo collegheremo anche
+        al tuo profilo %{provider}.
   signup_form:
     email_signup: Iscriviti con il tuo indirizzo email
     student_count: "%{count} studenti si sono già iscritti."
@@ -189,8 +197,6 @@ it:
     valid_password: Password valida!
     invalid_password: La password deve essere lunga almeno 6 caratteri
     mismatch_password: Le due password che hai inserito non corrispondono
-    under_13_consent: Se ho meno di 13 anni, confermo di avere l’autorizzazione dei
-      miei genitori o del mio tutore legale all’utilizzo dei servizi di Code.org.
     student_consent: Confermo che i miei genitori o chi ne fa le veci mi hanno dato
       il permesso di utilizzare i servizi di Code.org.
     agree_us_website: Accetto di utilizzare un sito Web con sede negli Stati Uniti.
@@ -681,6 +687,7 @@ it:
     download: Scarica il video
     show_notes: Mostra le spiegazioni
     show_video: Mostra il video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
@@ -866,6 +873,8 @@ it:
     help_support: Help and support
     documentation: Documentazione
     tutorials: Corsi
+  free_response:
+    placeholder: Inserisci qui la tua risposta
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
@@ -972,6 +981,8 @@ it:
       e <a href="%{privacy_url}" target="_blank"> Privacy Policy</a> aggiornati
     accept_label_markdown: Accetto i [Termini di servizio](%{tos_url}) e [Privacy
       Policy](%{privacy_url}) aggiornati
+    accept_tos: Registrandoti su Code.org, accetti i [Termini di servizio](%{tos_url})
+      e le [Norme sulla privacy](%{privacy_url}).
     accept: Accetto
     print: Stampa
     reminder_desc: Abbiamo aggiornato i nostri <a href="%{tos_url}" target="_blank">Termini
@@ -1182,6 +1193,7 @@ it:
     csp_traversals: Traversali
     csp_libraries: Librerie
     csp_parameters_return_values: Parametri e Valori di Ritorno
+    csp_unit2_2020: Princìpi dell'Informatica - Unità 2
     dlp: Punti di riflessione
     time4cs_c1: Everglades ed i Suoi Ecosistemi
     time4cs_c2: Catene Alimentari negli Everglades
@@ -1267,6 +1279,11 @@ it:
     tuo/a insegnante su quale lezione dovresti essere.
   hidden_script: Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore,
     chiedigli in quale lezione dovresti essere.
+  no_course_access_student: Non hai accesso a questo corso. Per favore chiedi al tuo
+    insegnante in quale corso dovresti essere.
+  no_course_access_teacher: Non hai accesso a questo corso. Se credi che dovresti
+    avere accesso a questo corso, sei pregato di scrivere a support@code.org così
+    che possiamo correggere la situazione.
   no_script_access_student: Non hai accesso a questa unità. Perfavore chiedi al tuo
     insegnante in quale unità dovresti essere.
   no_script_access_teacher: Non hai accesso a questa unità. Se credi che dovresti
@@ -1364,8 +1381,8 @@ it:
       workshop_course:
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
-        csd: Scoperte CS
-        csp: CS Principles
+        csd: Alla scoperta dell'informatica
+        csp: Principi di informatica
       email_opt_in:
         opt_in_yes: Sì
         opt_in_no: 'No'
@@ -1421,3 +1438,4 @@ it:
   page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.
     Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
   page_not_found_button: Ritorna alla homepage
+  copy: Copia

@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: పబ్లిక్ అధికారుల కోసం హౌ-టు గైడ్
 ---
 
 {{ signup_button }}

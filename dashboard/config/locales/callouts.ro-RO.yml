@@ -80,6 +80,8 @@ ro-RO:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Caută aici blocurile „toate rațele”
       Dance_2019_01:
         dance_callout_01: Adaugă acest bloc la programul tău!
       Dance_2019_02:
@@ -107,6 +109,8 @@ ro-RO:
       Dance_Party_11:
         dance_callout_11_a: Bloc nou!
         dance_callout_11_b: Bloc nou!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Caută aici blocurile „toate rațele”
       Infinity_move_collide:
         Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
       Infinity_move_directions:
@@ -146,6 +150,9 @@ ro-RO:
       NEW Course 4 Bee For Loops 5:
         actions_category: Caseta de instrumente are acum un nou aspect! Blocurile
           "Acţiuni" sunt aici acum.
+      New Frozen Project:
+        snowflake_dropdown: Utilizaţi acest meniu derulant pentru a crea diferiți
+          fulgi de zăpadă!
       Overworld Chop Trees:
         craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
       Overworld Chop Trees_2019:

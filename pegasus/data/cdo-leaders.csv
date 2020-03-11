@@ -1,4 +1,6 @@
 name_s,url_s,description_t,role_s,kind_s
+Alfred Lin,leadership/alfred_lin,"Partner, Sequoia Capital",,director
+Anne Dinning,leadership/anne_dinning,"Managing Director, D. E. Shaw & Co.",,director
 Bobby Schnabel,leadership/bobby_schnabel,"Professor of Computer Science, University of Colorado Boulder",,director
 Brad Smith,leadership/brad_smith,"President, Chief Legal Officer, Microsoft",,director
 Hadi Partovi,leadership/hadi_partovi,"Founder and CEO, Code.org",,director
@@ -19,7 +21,6 @@ Marina Taylor,leadership/marina_taylor,Director of Product,,LT
 Megan Godwin,,Director of People Ops,,LT
 Min Yoo,leadership/min_yoo,Director of Marketing & Development,,LT
 Pat Yongpradit,leadership/pat_yongpradit,Chief Academic Officer,,LT
-Sarah Filman,leadership/sarah_filman,VP of Education,,LT
 Alfred Thompson,http://blog.acthompson.net/,"Computer Science Teacher, Bishop Guertin High School",,education
 Angela Duckworth,https://angeladuckworth.com/,"Assistant Professor of Psychology, University of Pennsylvania",,education
 Anthony Owen,https://www.linkedin.com/in/anthonyaowen/,Arkansas Department of Education,,education

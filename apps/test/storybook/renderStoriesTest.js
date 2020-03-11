@@ -21,14 +21,18 @@ describe('react-storybook stories render without errors or warnings', function()
   throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
 
-  //Stub jquery fileupload library function
-  let fileupload;
+  // Stub jquery fileupload library function and window.Audio class.
+  let fileupload, windowAudio;
   before(() => {
     fileupload = $.fn.fileupload;
     $.fn.fileupload = () => {};
+
+    windowAudio = window.Audio;
+    window.Audio = FakeAudio;
   });
   after(() => {
     $.fn.fileupload = fileupload;
+    window.Audio = windowAudio;
   });
 
   // Test all the *.story.jsx files that aren't blacklisted
@@ -42,3 +46,14 @@ describe('react-storybook stories render without errors or warnings', function()
       });
     });
 });
+
+class FakeAudio {
+  play() {}
+  pause() {}
+  load() {}
+  // EventTarget interface
+  addEventListener() {}
+  removeEventListener() {}
+  dispatchEvent() {}
+  removeAttribute() {}
+}

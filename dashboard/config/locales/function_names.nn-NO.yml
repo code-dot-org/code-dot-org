@@ -280,6 +280,17 @@ nn-NO:
         do something: gjer noko
       NEW Course 4 Play Lab Params 11:
         jump: hopp
+      New Artist Project:
+        draw a star: teikn ei stjerne
+        draw a circle: teikn ein sirkel
+        draw a triangle: teikn ein trekant
+        draw a house: teikn eit hus
+        draw a square: teikn eit kvadrat
+      New Minecraft Hero Project:
+        function 1: funksjon 1
+        function 2: funksjon 2
+      New Play Lab Project:
+        jump: hopp
       Robot Doodle:
         25 pixel square: 25 piksler stor firkant
         draw head: teikn hovud
@@ -288,6 +299,8 @@ nn-NO:
         draw head: teikn hovud
       Standalone_Artist_7:
         draw a flower: teikn ein blome
+      Standalone_Artist_9:
+        my function: min funksjon
       course3_artist_functions_challenge1:
         do something: gjer noko
       course3_artist_functions_challenge2:
@@ -356,8 +369,6 @@ nn-NO:
       courseE_artist_functions7:
         draw a house: teikn eit hus
       courseE_artist_functions7_2018:
-        draw a house: teikn eit hus
-      courseE_artist_functions7_2019:
         draw a house: teikn eit hus
       courseE_artist_functions8:
         do something: gjer noko

@@ -551,6 +551,33 @@ ro-RO:
       AB_Debug_PlayLab3: Mută cavalerul la fiecare dintre steaguri. Dacă ceva nu merge
         bine, caută greşelile!
       CDEF_debugging_flappy2: Funcţionează acest joc?
+      CSD U5 black white images pixelation: Completează imaginea în forma literei
+        X tastând numai caracterele 0 sau 1
+      CSD U5 black white images pixelation 2: Desenează o față zâmbitoare (apasă aici
+        pentru a vedea imaginea)
+      CSD U5 black white images pixelation 2_2018: Desenează o față zâmbitoare (apasă
+        aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 2_2019: Desenează o față zâmbitoare (apasă
+        aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 3: Ajustează cursoarele de lungime și lățime
+        pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)
+      CSD U5 black white images pixelation 3_2018: Ajustează cursoarele de lungime
+        și lățime pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)
+      CSD U5 black white images pixelation 3_2019: Ajustează cursoarele de lungime
+        și lățime pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)
+      CSD U5 black white images pixelation 4: Adaugă sprâncene feței zâmbitoare (apasă
+        aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 4_2018: Adaugă sprâncene feței zâmbitoare
+        (apasă aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 4_2019: Adaugă sprâncene feței zâmbitoare
+        (apasă aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 5: Acum, desenează ce vrei tu
+      CSD U5 black white images pixelation 5_2018: Acum, desenează ce vrei tu
+      CSD U5 black white images pixelation 5_2019: Acum, desenează ce vrei tu
+      CSD U5 black white images pixelation_2018: Completează imaginea în forma literei
+        X tastând numai caracterele 0 sau 1
+      CSD U5 black white images pixelation_2019: Completează imaginea în forma literei
+        X tastând numai caracterele 0 sau 1
       Course 4 Artist 1: 'Ajută-mă să desenez o cutie. (Fiecare linie are lungimea
         de 200 pixeli) '
       Course 4 Artist 10: |-
@@ -919,6 +946,8 @@ ro-RO:
       Dance_2019_06: Creează un grup de dansatori de rezervă în jurul dansatorului
         principal din mijloc.
       Dance_2019_07: Modifică dimensiunea grupului de dansatori de rezervă.
+      Dance_2019_08: Încearcă să schimbi culoarea unuia dintre dansatorii tăi (sau
+        a întregului grup)!
       Dance_2019_09: Fii creativ cu aceste blocuri noi!
       Dance_2019_10: Dezlănțuiește-te! Creează un dans al tău pe care să-l dansezi
         cu prietenii.
@@ -946,15 +975,18 @@ ro-RO:
         cădere-aplaudare cât de repede poți!
       Dance_Party_12: Dezlănțuiește-te! Creează un dans al tău pe care să-l dansezi
         cu prietenii.
+      Dance_Party_extras_alternate_2019: Înainte și înapoi! (Apasă "Mai mult" pentru
+        detalii)
       Dance_Party_extras_battle: Dans pe echipe (apasă "Mai mult" pentru detalii)
       Dance_Party_extras_battle_2019: Dans pe echipe (apasă "Mai mult" pentru detalii)
       Dance_Party_extras_every_beat: Sfert de note (apasă pe "Mai mult" pentru detalii)
       Dance_Party_extras_every_beat_2019: Sfert de note (apasă pe "Mai mult" pentru
         detalii)
-      Dance_Party_extras_layout: '# Să trecem în formație! (Apasă "Mai mult" pentru
-        detalii)'
-      Dance_Party_extras_layout_2019: '# Să trecem în formație! (Apasă "Mai mult"
-        pentru detalii)'
+      Dance_Party_extras_layout: Hai să trecem în formaţie! (apasă pe "Mai mult" pentru
+        detalii)
+      Dance_Party_extras_layout_2019: '# Hai să trecem în formaţie! (apasă pe "Mai
+        mult" pentru detalii)'
+      Dance_Party_extras_mixed_2019: Mai multe butoane (Apasă „Mai mult" pentru detalii)
       Dance_Party_extras_on_beat: Sunete joase, medii şi înalte (apasă pe "Mai mult"
         pentru detalii)
       Dance_Party_extras_on_beat_2019: Sunete joase, medii şi înalte (apasă pe "Mai
@@ -1262,6 +1294,12 @@ ro-RO:
         3 ori nectar?
       NEW Course 4 Play Lab Params 11: 'Este timpul să te joci liberi! Distrează-te
         cu toate blocurile din bara de instrumente. '
+      New Gumball Project: Creează orice vrei tu şi distribuie-l/-o!
+      New Ice Age Project: Creează orice vrei tu şi distribuie-l/-o!
+      New Infinity Project: Creează orice vrei tu şi distribuie-l/-o!
+      New Sports Project: Crează propriul tău joc. Poți modifica toate imaginile şi
+        regulile, mixeaza sporturi, fii creativ. Când ai terminat, apasă Distribuie
+        pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
       Overworld Avoid Monsters: |-
         Intalnirea unui Vierme nu este o idee buna.
         Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.
@@ -1736,14 +1774,3 @@ ro-RO:
         - 16 pixeli 16 pixeli! \\\r \\\r Vezi ce se întâmplă atunci când începem sa
         cream cu biţi?"
       k-1 maze 1: Poţi să mă muţi spre vest pentru a ajunge la porc?
-      scrat 16: Ghindă! Ghindă! Ghindă! Utilizaţi un bloc "dacă" pentru a mă acolo
-        cu cel mai mic număr de blocuri.
-      scrat 17: Ok, haideți să exersăm din nou - nu este foarte diferit, dar uitați-vă
-        după perete!
-      scrat 18: Blocurile "dacă-altfel" verifică o condiţie, şi apoi execută un lucru
-        sau altul. Pentru a mă duce la ghindă încercaţi să utilizaţi acest bloc nou.
-      scrat 19: Încă un exercițiu de practică cu blocul "dacă-altfel", poate reușești
-        chiar prima încercare?
-      scrat 20: Puteți să mai adăugați doar 3 blocuri pentru a mă ajuta să rezolv
-        un labirint mai complex? Dacă o faceți bine, voi putea să merg pe orice traseu
-        curbat, indiferent de lungime. Uraaa! Gheața se topește!

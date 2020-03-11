@@ -65,6 +65,7 @@
   join_section:
     code:
       placeholder: Seksjonskode (ABCDEF)
+      submit: Bli med
   add_hint_form:
     placeholder: Skriv inn et hint her
     submit: Legg til hint
@@ -155,8 +156,6 @@
     valid_password: Gyldig passord!
     invalid_password: Passordet må bestå av minimum seks tegn
     mismatch_password: De to passordene du skrev inn samsvarer ikke
-    under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
-      foreldre eller verge til å bruke tjenestene til Code.org.
     student_consent: Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse
       til å bruke tjenestene fra Code.org.
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
@@ -324,6 +323,12 @@
       professional_learning: Profesjonell opplæring
       documentation: Dokumentasjon
       tutorials: Guide
+      app_lab_documentation: Programmerings lab dokumentasjon
+      app_lab_tutorials: Programmerings lab veiledning
+      game_lab_documentation: Spill lab dokumentasjon
+      game_lab_tutorials: Spill lab veiledning
+      sprite_lab_documentation: Animerte figurer lab dokumentasjon
+      sprite_lab_tutorials: Animerte figurer lab veiledning
       educate_overview: Oversikt for lærere
       educate_elementary: Barneskole
       educate_middle: Ungdomsskole
@@ -354,6 +359,7 @@
       district_dashboard: Distrikt skrivebord
       label: Hei %{username}
       stats: Min fremdrift
+      my_projects: Mine prosjekter
       settings: Min konto
       logout: Logg ut
       signin: Logg inn
@@ -391,6 +397,7 @@
       starwarsblocks: Star Wars (blokker)
       starwarsblocks_hour: Star Wars (blokker)
       weblab: Weblaboratoriet
+      view_all: Vis alle prosjekter...
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift
@@ -611,6 +618,7 @@
     download: Last ned video
     show_notes: Vis notat
     show_video: Vis video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Nettleseren din støttes ikke. Vennligst oppdater til <a
@@ -786,6 +794,8 @@
     help_support: Hjelp og støtte
     documentation: Dokumentasjon
     tutorials: Guide
+  free_response:
+    placeholder: Angi svaret her
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!
@@ -1208,3 +1218,9 @@
       behandles i USA.
     logout: Logg ut
     true: Ja
+  page_not_found_title: Side Ikke Funnet
+  page_not_found_header: '404: Side Ikke Funnet'
+  page_not_found_description: Siden du leter etter finnes ikke på denne adressen.
+    Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden.
+  page_not_found_button: Returner hjem
+  copy: Kopier

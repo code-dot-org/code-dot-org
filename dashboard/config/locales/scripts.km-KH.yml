@@ -340,7 +340,27 @@ km:
               name: អនុ​គមន៍
             Variables:
               name: អ​ថេរ
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ
         time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ
+        csd3-2020:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+        coursee-2020:
           stages:
             Conditionals:
               name: លក្ខខណ្ឌ

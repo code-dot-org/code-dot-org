@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: सरकारी अधिकाऱ्यांसाठी "कसे करावे” मार्गदर्शिका
 ---
 
 {{ signup_button }}

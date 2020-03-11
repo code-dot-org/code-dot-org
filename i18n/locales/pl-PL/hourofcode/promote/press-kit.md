@@ -61,7 +61,7 @@ Computers are everywhere, changing every industry on the planet, but fewer than 
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Dlatego właśnie każdy z [X number] uczniów szkoły [SCHOOL NAME] przyłącza się do największego wydarzenia edukacyjnego w historii: Godziny Kodowania w trakcie Tygodnia Edukacji Informatycznej (03-09.12.).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 

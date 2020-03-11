@@ -10,13 +10,13 @@ The class continues to explore ways to use conditional statements to take user i
 
 ## Introduced Code
 
-* [keyWentUp()](//docs.code.org/gamelab/keyWentUp/)
-* [mouseWentDown()](//docs.code.org/gamelab/mouseWentDown/)
-* [mouseWentUp()](//docs.code.org/gamelab/mouseWentUp/)
-* [keyWentDown()](//docs.code.org/gamelab/keyWentDown/)
-* [mouseDown()](//docs.code.org/gamelab/mouseDown/)
-* [mouseDidMove()](//docs.code.org/gamelab/mouseDidMove/)
-* [sprite.visible](//docs.code.org/gamelab/visible/)
-* [If/else statement](//docs.code.org/gamelab/ifElseBlock/)
+* [keyWentUp()](//studio.code.org/docs/gamelab/keyWentUp/)
+* [mouseWentDown()](//studio.code.org/docs/gamelab/mouseWentDown/)
+* [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)
+* [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)
+* [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)
+* [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)
+* [sprite.visible](//studio.code.org/docs/gamelab/visible/)
+* [If/else statement](//studio.code.org/docs/gamelab/ifElseBlock/)
 
 MARKDOWN

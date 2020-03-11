@@ -79,6 +79,6 @@ Sənin sinfiniz üçün qulaqlıq təmin edin və ya seçdiyiniz təlimçi səs 
 
 ## Kod Saatından sonra nə gəlir?
 
-Kod Saatı sadəcə texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını haqqında daha çox öyrənmə səyahətində atılan birinci addımdır. Tələbələrə səyahətlərinə davam etməyə kömək edir və onları [daha çox onlayn öyrənməyə](%= codeorg_url('/learn/beyond') %) cəsarətləndirir!
+Kod Saatı sadəcə texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını haqqında daha çox öyrənmə səyahətində atılan birinci addımdır. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

@@ -1,0 +1,29 @@
+sl:
+  data:
+    block_categories:
+      Actions: Dejanja
+      Advanced: Napredno
+      Behaviors: Vedenje
+      Brushes: Čopiči
+      Color: Barva
+      Comment: Komentar
+      Comments: Komentarji
+      Conditionals: Pogoji
+      Dancers: Plesalci
+      Default: Privzeto
+      Events: Dogodki
+      Functions: Funkcije
+      'Functions ': 'Funkcije '
+      Game/Score: Igra/rezultat
+      Games/Score: Igra/rezultat
+      Groups: Skupine
+      Locations: Lokacije
+      Logic: Logika
+      Loops: Zanke
+      Math: Matematika
+      Numbers: Številke
+      Properties: Lastnosti
+      Text: Besedilo
+      Variables: Spremenljivke
+      'Variables ': 'Spremenljivke '
+      World: Svet

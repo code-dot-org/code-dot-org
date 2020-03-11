@@ -22,7 +22,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
@@ -139,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Bawat Apple Store sa mundo ay nag-host na ng Hour of Code. Kahit si Presidente Obama ay sumulat ng kanyang unang linya ng code bilang bahagi ng kmpanya.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Kaya ang bawat isa sa \[X number\] (na) estudyante sa [SCHOOL NAME] ay sumasali sa pinakamalaking event na pampagkatuto sa kasaysayan. Ang Oras ng Code, sa Linggo ng Edukasyon ng Computer Science (Disyembre 3-9).
 
 Sumulat ako para imbitahin ka na dumalo sa aming kickoff na pagtitipon at makita ang mga batang mag-umpisa ng gawain sa [DATE].
 

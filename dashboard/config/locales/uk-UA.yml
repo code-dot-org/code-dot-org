@@ -166,8 +166,6 @@ uk:
     valid_password: Вірний пароль!
     invalid_password: Пароль має складатися хоча б із %d символів
     mismatch_password: Введені вами паролі не збігаються
-    under_13_consent: Якщо мені менше 13 років, я підтверджую, що у мене є дозвіл
-      моїх батьків або законного опікуна на використання Code.org.
     student_consent: Я підтверджую що у мене є згода моїх батьків і законних опікунів
       на дозвіл використання Code.org.
     agree_us_website: Я згоден використовувати веб-сайт, що знаходиться на території
@@ -326,8 +324,8 @@ uk:
       course_catalog: Каталог курсів
       project_gallery: Проекти
       sections: Секції
-      help_support: Допомога і підтримка
-      report_bug: Повідомити про помилку
+      help_support: Допомога та підтримка
+      report_bug: Сповістити про проблему
       teacher_community: Спільнота вчителів
       documentation: Документація
       tutorials: Навчальні матеріали
@@ -361,9 +359,10 @@ uk:
       district_dashboard: Панель області
       label: Привіт %{username}
       stats: Студія коду
+      my_projects: Мої проекти
       settings: Мій профіль
       logout: Вийти
-      signin: Вхід
+      signin: Увійти
       signup: Створити обліковий запис
       already_registered: Вже зареєстровані?
       pair_programming: Програмування в парах
@@ -795,9 +794,11 @@ uk:
     support: Отримати допомогу
     support_url: "//support.code.org"
     help_resources: Довідки та ресурси
-    help_support: Допомога і підтримка
+    help_support: Допомога та підтримка
     documentation: Документація
     tutorials: Навчальні матеріали
+  free_response:
+    placeholder: Введіть свою відповідь тут
   multi:
     wrong_title: Неправильна відповідь
     wrong_body: Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!
@@ -893,6 +894,8 @@ uk:
       сервісу</a> та <a href="%{privacy_url}" target="_blank">Політикою конфіденційності</a>.
     accept_label_markdown: Я погоджуюсь з [Умовами використання сервісу](%{tos_url})
       та [Політикою конфіденційності](%{privacy_url}).
+    accept_tos: Реєструючись на Code.org, ви погоджуєтесь з нашими [Умовами надання
+      послуг](%{tos_url}) та [Політикою конфіденційності](%{privacy_url}).
     accept: Підтвердити
     print: Друк
     reminder_desc: Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила
@@ -1253,3 +1256,6 @@ uk:
     accept: Погоджуюся
   gdpr_dialog:
     true: Так
+  page_not_found_title: Сторінка не знайдена
+  page_not_found_header: '404: Сторінка не знайдена'
+  copy: Скопіювати

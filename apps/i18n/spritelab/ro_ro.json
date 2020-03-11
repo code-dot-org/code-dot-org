@@ -1,3 +1,26 @@
 {
-  "shareGame": "condivide jocul tău:"
+  "errorLoadingAnimation": "Se pare că avem dificultăți la încărcarea animației tale \"{animationName}\". Asigură-te că ai o bună conexiune la internet și încearcă să reîncarci pagina. Dacă problema continuă, e posibil ca această animație să nu funcționeze. În cazul acesta, va fi necesar să ștergi animația pentru a putea continua.",
+  "reinfFeedbackMsg": "Ai terminat! Apasă \"Continuă\" pentru a avansa la nivelul următor.",
+  "shareGame": "condivide jocul tău:",
+  "spritelabFeedbackCreateFishWithBehavior": "Trebuie sa creezi cel puțin un pește și să îi dai un comportament.",
+  "spritelabFeedbackMoveFishLeftRight": "Peștele tău trebuie să se miște la stânga sau la dreapta. Încearcă să îi schimbi comportamentul.",
+  "spritelabFeedbackChangeBackgroundColor": "Trebuie să schimbi culoarea fundalului în ceva care nu e alb.",
+  "spritelabFeedbackCreateTwoSprites": "Trebuie să creezi exact două personaje.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Personajele tale au nevoie de costume diferite.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Trebuie să creezi două personaje cu costume diferite, fiecare cu comportamentul său.",
+  "spritelabFeedbackClickSprite": "Ai grijă să faci clic pe personajul tău după ce ai apăsat 'Execută'.",
+  "spritelabFeedbackUseSpinningBehavior": "Personajul tău trebuie să înceapă să se învârtească. Încearcă să îi schimbi comportamentul.",
+  "spritelabFeedbackPinkAlienBehavior": "Extraterestrul tău roz nu a început un comportament.",
+  "spritelabFeedbackCreateThreeAliens": "Trebuie să creezi un extraterestru albastru, unul roz, și unul galben.",
+  "spritelabFeedbackAliensNotInLine": "Cei trei extratereștri trebuie să fie aliniați orizontal (nu mai departe de 50 de pixeli).",
+  "spritelabFeedbackYellowAlienBehavior": "Extraterestrul galben nu și-a început comportamentul.",
+  "spritelabFeedbackNoAlienColor": "Cel puțin unul dintre extratereștrii tăi nu și-a schimbat culoarea.",
+  "spritelabFeedbackNeedAlienStopBehavior": "Extretereștrii tăi trebuie să își oprească toate acțiunile comportamentale.",
+  "spritelabFeedbackBlueAlienBehavior": "Extraterestrul tău albastru trebuie să înceapă un nou comportament.",
+  "spritelabFeedbackUseCostume": "Trebuie să folosești cel puțin un costum.",
+  "spritelabFeedbackThreeSpritesWithCostumes": "Trebuie să creezi trei personaje cu costume diferite.",
+  "spritelabFeedbackMoveUpNotDown": "Personajul tău trebuie să se miște în sus (nord), nu în jos (sud).",
+  "spritelabFeedbackRobotFasterThanRover": "Robotul a ajuns la marginea din dreapta a ecranului înaintea vehiculului.",
+  "spritelabFeedbackDifferentStarRotation": "Personajele care poartă cele două costume cu stele trebuie să se rotească în aceeași măsură.",
+  "spritelabFeedbackAstronautMoveToCorner": "Astronautul trebuie să se mute într-unul dintre cele patru colțuri."
 }

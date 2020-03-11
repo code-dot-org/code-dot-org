@@ -8,7 +8,7 @@ title: Internationale partnere
   }
 </style>
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Internationale partnere
 
@@ -39,8 +39,8 @@ www.program.ar                                                 |
 hello@kidsandcode.org                                                  |
 | Canada                                | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
-Peter.Oldreive@novascotia.ca                                            |
+| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                      | http://ednet.ns.ca   
+nicholas.baskwill@novascotia.ca                                         |
 | Canada                                | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
 | Canada                                | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |
@@ -77,7 +77,8 @@ tinasupport@gmail.com                                                |
 henrylee@i3dprinter.com.hk                                             |
 | Hong Kong                             | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                        | www.iamai.hk   
 johnson.chu@iamai.hk                                                          |
-| India                                 | CodeTigers                                                        | Sandeep Sheokand                   | sandeep.sheokand@gmail.com                                                                    |
+| India                                 | CodeTigers                                                        | Sandeep Sheokand                   | https://www.codetigers.com   
+sandeep.sheokand@gmail.com                                      |
 | India                                 | Mozilla Indore                                                    | Mrinal Jain                        | jain.mrinal140@gmail.com                                                                      |
 | India                                 | Pi Jam Foundation                                                 | Shoaib Dar                         | http://www.thepijam.org   
 shoaib.dar@thepijam.org                                            |
@@ -178,4 +179,4 @@ compatsch@bcs.uk                                       |
 nhile@microsoft.com                                        |
 
 
-{{ signup_button }}
+{{ tilmeld_knap }}

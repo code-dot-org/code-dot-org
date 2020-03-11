@@ -182,8 +182,6 @@ fr:
     valid_password: Mot de passe correct !
     invalid_password: Le mot de passe doit comporter au moins 6 caractères.
     mismatch_password: Les deux mots de passe ne sont pas identiques.
-    under_13_consent: Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation
-      de mes parents ou de mon tuteur légal pour utiliser les services de Code.org.
     student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
       tuteur légal pour utiliser les services de Code.org.
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
@@ -415,7 +413,7 @@ fr:
       basketball: Basket-ball
       bounce: Rebond
       calc: Calc
-      dance: Fête dansante
+      dance: Soirée Dansante
       eval: Eval
       flappy: Flappy
       frozen: La Reine des neiges
@@ -685,6 +683,7 @@ fr:
     download: Télécharger la vidéo
     show_notes: Afficher les notes
     show_video: Afficher la vidéo
+    label: Vidéo
   compatibility:
     upgrade:
       unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre à
@@ -750,9 +749,9 @@ fr:
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
     dance:
-      title: Fête dansante
+      title: Soirée Dansante
     dance-2019:
-      title: Fête dansante
+      title: Soirée Dansante
     hoc:
       title: Labyrinthe classique
       body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
@@ -873,6 +872,8 @@ fr:
     help_support: Aide et Support
     documentation: Documentation
     tutorials: Tutoriels
+  free_response:
+    placeholder: Entre ta réponse ici
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: La réponse que tu as saisie est incorrecte.  Merci de réessayer !
@@ -983,6 +984,8 @@ fr:
       Politique de confidentialité</a>
     accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url})
       et de la[Politique de confidentialité](%{privacy_url})
+    accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url})
+      et [Privacy Policy](%{privacy_url}).
     accept: Accepter 
     print: Imprimer
     reminder_desc: Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions
@@ -1190,6 +1193,7 @@ fr:
     csp_traversals: Parcours
     csp_libraries: Bibliothèques
     csp_parameters_return_values: Paramètres et Valeur de Retour
+    csp_unit2_2020: Principes de l'informatique, unité 2
     dlp: Sujets de réflexion
     time4cs_c1: Les Everglades et ses écosystèmes
     time4cs_c2: Les chaînes alimentaires dans les Everglades
@@ -1435,3 +1439,4 @@ fr:
   page_not_found_description: La page recherchée n’existe pas à cette adresse. Vérifiez
     l’adresse web et réessayez, ou retournez à notre page d’accueil.
   page_not_found_button: Retourner à la page d’accueil
+  copy: Copier

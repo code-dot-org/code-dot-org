@@ -408,6 +408,7 @@ ms:
             Dance Party:
               name: Majlis Tari-Menari
           title: Majlis Tari-Menari
+          description_short: Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 lagi!
         dance--draft:
           stages:
             Dance Party:
@@ -508,7 +509,45 @@ ms:
               name: Fungsi
             Variables:
               name: Pembolehubah
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Bersyarat
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Bersyarat
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Bersyarat
+        csd3-2020:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+            Dance Party:
+              name: Majlis Tari-Menari
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Bersyarat
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internet
+        express-2020:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Lebah Ejaan

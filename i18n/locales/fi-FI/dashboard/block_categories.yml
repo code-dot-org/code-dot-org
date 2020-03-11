@@ -1,0 +1,29 @@
+fi:
+  data:
+    block_categories:
+      Actions: Toiminnot
+      Advanced: Edistyneet
+      Behaviors: Käyttäytymiset
+      Brushes: Harjat
+      Color: Väri
+      Comment: Kommentti
+      Comments: Kommentit
+      Conditionals: Ehtolausekkeet
+      Dancers: Tanssijat
+      Default: Oletus
+      Events: Tapahtumat
+      Functions: Funktiot
+      'Functions ': 'Funktiot '
+      Game/Score: Peli/pistemäärä
+      Games/Score: Pelit/pistemäärä
+      Groups: Ryhmät
+      Locations: Sijainnit
+      Logic: Logiikka
+      Loops: Silmukat
+      Math: Matematiikka
+      Numbers: Numerot
+      Properties: Ominaisuudet
+      Text: teksti
+      Variables: Muuttujat
+      'Variables ': 'Muuttujat '
+      World: Maailma

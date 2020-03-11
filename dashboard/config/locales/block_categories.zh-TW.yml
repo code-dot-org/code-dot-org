@@ -3,43 +3,30 @@ zh-TW:
   data:
     block_categories:
       Actions: 動作
-      Loops: 迴圈
-      Functions: 函式
-      Color: 顏色
-      Brushes: 筆刷
-      Math: 運算
-      Logic: 邏輯
-      Variables: 變數
-      Number: 數字
-      String: 字串
-      Image: 圖像
-      Boolean: 布林值
-      Conditionals: 條件判斷（Conditionals）
-      Events: 事件
-      Games/Score: 遊戲/分數
-      Comments: 評論
-      Category: 類別
-      Text: 文字
-      World: 世界
-      Sprites: 角色
-      Behaviors: 行為
-      'Variables ': '變數 '
-      Default: 預設值
-      Locations: 座標
-      Location: 位置
-      numbers: 數字
-      Numbers: 數字
-      Input: 輸入
-      Dancers: 舞者
-      Groups: 群組
       Advanced: 進階設定
-      Start: 開始
-      Music: 音樂
-      Movement: 動作
-      Booleans: 布林值
-      test: 測試
-      test2: test2
-      Foo: Foo
-      Name: 你的名字
+      Behaviors: 行為
+      Brushes: 畫筆
+      Color: 顏色
+      Comment: 回應
+      Comments: 註解
+      Conditionals: 條件判斷
+      Dancers: 舞者
+      Default: 預設值
+      Events: 事件
+      Functions: 函式
+      'Functions ': '函式 '
       Game/Score: 遊戲/分數
-      Function: 函式
+      Games/Score: 遊戲/分數
+      Groups: 群組
+      Input: 輸入
+      Locations: 座標
+      Logic: 邏輯
+      Loops: 迴圈
+      Math: 運算
+      Numbers: 運算
+      Properties: 屬性
+      Sprites: 角色
+      Text: 文字
+      Variables: 變數
+      'Variables ': '變數 '
+      World: 世界

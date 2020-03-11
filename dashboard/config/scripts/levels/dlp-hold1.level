@@ -8,17 +8,17 @@
     "encrypted": "false",
     "title": "hold page",
     "instructions_important": "false",
-    "long_instructions": "#this is a temporary page as a placeholder",
+    "long_instructions": "> Prompt: Is a hot dog a sandwich?",
     "allow_user_uploads": "false",
     "submittable": "false",
-    "peer_reviewable": "false",
+    "peer_reviewable": "true",
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-06-27 17:21:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-06-27 17:21:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:16:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:17:58 +0000\",\"changed\":[\"long_instructions\",\"peer_reviewable\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-02-18 18:39:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

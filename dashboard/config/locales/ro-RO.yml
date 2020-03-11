@@ -16,6 +16,12 @@ ro:
         pereche si incepe din nou.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: e invalid. Fiecare link poate fi folosit o singură dată pentru
+                resetarea parolei, și numai linkul trimis cel mai recent va funcționa.
       messages:
         blank: este necesar
         blank_plural: sunt necesare
@@ -48,6 +54,7 @@ ro:
           a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Completează următoarele informații
           pentru a finaliza crearea unui cont Code.org cu **%{provider}** pentru**%{email}**.
+        reset_password_token: Linkul pentru resetarea parolei pe care l-ai folosit
         error:
           future: nu poate fi în viitor
   beta: beta
@@ -166,8 +173,6 @@ ro:
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
-    under_13_consent: Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui
-      sau tutorelui meu legal de a utiliza serviciile Code.org.
     student_consent: Confirm că am permisiunea părintelui sau tutorelui meu legal
       de a utiliza serviciile Code.org.
     agree_us_website: Sunt de acord să folosesc un site web din Statele Unite.
@@ -367,7 +372,7 @@ ro:
       stats: Studio-ul Code
       settings: Contul meu
       logout: Deloghează-te
-      signin: Loghează-te
+      signin: Autentificare
       signup: Creează un cont
       already_registered: Eşti deja înregistrat?
       pair_programming: Programare prin împerechere
@@ -645,6 +650,7 @@ ro:
     download: Descarcă Video
     show_notes: Arată note
     show_video: Arată video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade
@@ -823,6 +829,8 @@ ro:
     help_support: Ajutor şi suport
     documentation: Documentație
     tutorials: Tutoriale
+  free_response:
+    placeholder: Completează răspunsul tău aici
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!
@@ -885,7 +893,7 @@ ro:
     startover_title: Ești sigur că vrei să începi din nou?
     startover_body: Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge
       tot ce ai adăugat sau modificat.
-    startover_ok: Reîncepe
+    startover_ok: Începe din nou
     startover_cancel: Revocare
   time:
     hour: 1 oră
@@ -921,6 +929,8 @@ ro:
       Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>
     accept_label_markdown: Sunt de acord sa actualizez [Termenii](%{tos_url}) şi [Politica
       de confidenţialitate](%{privacy_url})
+    accept_tos: Prin înregistrarea pe Code.org, îți exprimi acordul față de [Condițiile
+      serviciului](%{tos_url}) și [Politica privind confidențialitatea](%{privacy_url}).
     accept: Accept
     print: Tipărire
     reminder_desc: Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a>
@@ -1267,3 +1277,4 @@ ro:
     privacy_policy: politică de confidențialitate
     logout: Deconectare
     true: Da
+  copy: Copiază

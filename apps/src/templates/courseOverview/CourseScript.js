@@ -152,7 +152,7 @@ class CourseScript extends Component {
             {!isAssigned &&
               viewAs === ViewType.Teacher &&
               showAssignButton &&
-              selectedSectionId && (
+              selectedSection && (
                 <AssignButton
                   sectionId={selectedSection.id}
                   scriptId={id}

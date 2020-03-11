@@ -1,5 +1,5 @@
 ---
-title: How-to Guide
+title: హౌ-టు గైడ్
 ---
 
 {{ signup_button }}

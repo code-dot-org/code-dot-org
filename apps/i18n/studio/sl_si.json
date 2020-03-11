@@ -585,6 +585,7 @@
   "throwTooltip": "Izstrelek poleti iz določenega igralca.",
   "turnLeft": "obrni se levo",
   "turnRight": "obrni se desno",
+  "turnTooltip": "Obrne me levo ali desno za 90 stopinj.",
   "vanish": "naredi nevidnega",
   "vanishActorN": "igralca {spriteIndex} naredi nevidnega",
   "vanishTooltip": "Igralca naredi nevidnega.",

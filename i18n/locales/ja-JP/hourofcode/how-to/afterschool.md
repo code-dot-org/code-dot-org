@@ -79,6 +79,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Hour of Codeを終えたら？
 
-Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

@@ -27,8 +27,6 @@ pl-PL:
   petition_message: Każdy uczeń w każdej szkole powinien móc uczyć się informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do
     # innych.'
-  petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz
-    do # innych.'
   petition_join_others: 'Dołącz do # innych'
   name: Imię/Nazwisko
   email: Adres e-mail
@@ -96,6 +94,7 @@ pl-PL:
   congratulations_volunteer: |-
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
+  congratulations_on_completing_course: Gratulacje za ukończenie %{course}
   congrats_next_tutorials_title: Przejdź na następny poziom
   congrats_next_tutorials_desc: Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj
     <a href="%{current_path}/next">samouczki partnerów</a>.
@@ -221,6 +220,8 @@ pl-PL:
   if_you_enjoyed: Jeśli spodobała Ci się nauka, to zaproś znajomych, aby też spróbowali!  Chcemy,
     aby cały świat się uczył.
   personalize_certificate: Spersonalizuj swój certyfikat
+  print_certificates: Drukuj certyfikaty
+  print_one_here_certificates: Wypisz jeden tutaj.
   share_achievement: Podziel się swoim osiągnięciem
   beyond_hour_message: Kontynuuj z naszymi <a href='http://studio.code.org'> innymi
     kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć
@@ -513,6 +514,7 @@ pl-PL:
   minecraft_adventurer: Poszukiwacz przygód z Minecraftem
   minecraft_tutorials: Samouczki Minecrafta w Godzinie Kodowania
   minecraft_specs: Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2 +
+  minecraft_start_tutorial: Rozpocznij samouczek
   minecraft_agent_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
   minecraft_agent_button: Rozpocznij
@@ -1222,6 +1224,7 @@ pl-PL:
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
   express-2018_name: Szybki Kurs (2018)
+  csd2_name: 'Rodział 2: Web Development'
   accelerated_name: Przyspieszony kurs
   20-hour_name: Przyspieszony kurs
   algebra_name: Pełny kurs Informatyka w algebrze
@@ -2081,6 +2084,7 @@ pl-PL:
   header_documentation: Dokumentacja
   user_header_label: Witaj %{username}
   user_header_team: Zespół
+  user_header_my_projects: Moje projekty
   user_header_settings: Moje konto
   user_header_logout: Wyloguj się
   user_header_signin: Zaloguj się
@@ -2164,14 +2168,17 @@ pl-PL:
   hoc_overview_dance_title: Potańcówka
   hoc_overview_dance_subtitle: Zakoduj potańcówkę, aby podzielić się nią ze znajomymi.
     Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i 25 innych!
+  hoc_overview_dance_2019_subtitle: 'Koduj Potańcówkę, aby podzielić się ze znajomymi.
+    Występują: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj i 34 innych!'
   hoc_overview_title: Aktywności Godziny Kodowania z Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com"> Godzina Kodowania (Hour
-    of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów studentów
+    of Code) </a> to globalna inicjatywa docierająca do dziesiątek milionów uczniów
     w ponad 180 krajach. Każdy, gdziekolwiek, może zorganizować wydarzenie Godziny
-    Kodowania lub wypróbować ponad 200 godzinnych samouczków dostępnych w ponad 45
+    Kodowania lub wypróbować ponad 500 godzinnych samouczków dostępnych w ponad 45
     językach.
   hoc_overview_partner_activities_title: Więcej aktywności od naszych partnerów
-  hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 100
+  hoc_overview_partner_activities_body: Strona Godziny Kodowania zawiera ponad 500
     aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla
     osób w każdym wieku i na każdym poziomie.
   hoc_overview_partner_activities_link: Zobacz aktywności
@@ -2192,6 +2199,8 @@ pl-PL:
   hoc2018_creativity_courses: Przejdź dalej z kursami Code.org
   hoc2018_creativity_courses_link: Przejdź dalej z kursami <a href="https://studio.code.org/courses">Code.org
     courses</a>
+  hoc2018_homepage: Zapisz swoją klasę, aby wypróbować jedną z ponad 150 NOWYCH aktywności
+    w Godzinie Kodowania (3-9 grudnia)!
   hoc2018_mc_page_title: Samouczki Minecrafta w Godzinie Kodowania
   hoc2018_mc_details: Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2
     +
@@ -2202,6 +2211,7 @@ pl-PL:
   hoc2018_mc_aquatic_title: 'Minecraft: Wodna podróż'
   hoc2018_mc_aquatic_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
+  hoc2019_mc_aquatic_description: Eksploruj i buduj podwodne światy za pomocą kodu.
   hoc2018_mc_hero_title: 'Minecraft: Podróż Bohatera'
   hoc2018_mc_hero_description: Minecraft powraca na Godzinę Kodowania z najnowszą
     serią zadań! Koduj podróżując po świecie Minecraftu.
@@ -2335,6 +2345,9 @@ pl-PL:
     wykorzystania ich muzyki przez Code.org.\n\n"
   hoc2018_dance_measure: Takt
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_aquatic_video1: Wodna Podróż z Minecraftem - Wprowadzenie
+  hoc2018_aquatic_video2: Wodna podróż z Minecraftem - Pętle
+  hoc2018_aquatic_video3: Wodna Podróż z Minecraftem - Warunki
   hoc2018_aquatic_video4: Wodna Podróż Minecrafta - Gratulacje
   hoc2018_dance_video1: Potańcówka - Wprowadzenie
   hoc2018_dance_video2: Potańcówka - Zdarzenia
@@ -2344,3 +2357,16 @@ pl-PL:
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: Powrót do strony domowej
   hoc2018_mc_with_microsoft: 'W partnerstwie z: '
+  hoc2018_mc_thank_microsoft: Dziękujemy Microsoft za wspieranie naszej wizji i misji,
+    aby zapewnić, że każde dziecko ma możliwość nauki informatyki i umiejętności,
+    by odnieść sukces w XXI wieku.
+  hoc2019_mc_mee_title: Sztuczna inteligencja z Minecraftem na dobre
+  hoc2019_mc_mee_description1: 'Nowy samouczek dla Minecraftu w ramach Godziny Kodowania
+    jest teraz dostępny w Minecraft: Education Edition dla Windows, Mac i iPad. Naucz
+    się podstaw programowania i odkrywaj sztuczną inteligencję ze swoimi uczniami!'
+  hoc2019_mc_mee_description2: 'Uzyskaj dostęp do bezpłatnych zasobów, w tym: planu
+    lekcji, filmów, programu informatyki i szkoleń dla nauczycieli.'
+  hoc2019_mc_more_coding_resources: Więcej zasobów do kodowania
+  hoc2019_dance_previous_versions: "Czy szukasz poprzedniej wersji Potańcówki?  \nKliknij
+    tutaj, aby zacząć [Część 1](%{dance_2018_link}) i [Część  2](%{dance_extras_2018_link})
+    z ostatniego roku."

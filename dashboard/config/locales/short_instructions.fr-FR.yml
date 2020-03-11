@@ -819,8 +819,8 @@ fr-FR:
       Course 4 SCV 4: Résous ce puzzle avec le moins de blocs possible.
       Course 4 SCV 5: Résous ce puzzle avec le moins de blocs possible.
       Course 4 SCV 6: Clique ici pour revoir les instructions.
-      CourseD_Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
-        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      CourseD_Dance_Party_01: Faites glisser le bloc `créer un nouveau` dans l'espace
+        de travail et connectez-le à l'intérieur du bloc `configuration`.
       CourseD_Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après
         4 mesures !
       CourseD_Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau
@@ -862,12 +862,29 @@ fr-FR:
       CourseE_HOC 2018 Level_9b: Suivez le corail pour atteindre le trésor.
       Crack Random Substitution: Consignes
       Crack a Caesar Cipher: Consignes
-      Dance_2019_05: Maintenant, demandez au danseur de commencer un nouveau mouvement
+      Dance_2019_01: 'Fais glisser le bloc <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        dans l''espace de travail et connecte-le à l''intérieur du bloc <xml><block
+        type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Fais danser le chat lorsque tu appuies sur une touche.
+      Dance_2019_03: 'Il est temps de danser ! Programme chaque danseur pour qu''il
+        bouge lorsque tu appuies sur des touches différentes. Choisis ton mouvement
+        préféré pour chaque danseur ou régle-le sur "(Aléatoire)" pour quelque chose
+        de totalement imprévisible ! '
+      Dance_2019_04: Ton danseur doit commencer un nouveau mouvement après la quatrième
+        mesure.
+      Dance_2019_05: Maintenant, demande au danseur de commencer un nouveau mouvement
         après 6 mesures !
-      Dance_2019_10: Prends ton rythme ! Créez votre propre danse à partager avec
-        vos amis.
-      Dance_Party_01: Faites glisser le bloc «\_créer un nouveau\_» dans l'espace
-        de travail et connectez-le à l'intérieur du bloc « configuration ».
+      Dance_2019_06: Configure un groupe de danseurs de secours autour du danseur
+        principal au milieu.
+      Dance_2019_07: Change la taille du groupe de danseurs de secours.
+      Dance_2019_08: Essaie de changer la teinte d'un de tes danseurs (ou du groupe
+        entier)!
+      Dance_2019_09: Soit créatif avec ces nouveaux blocs !
+      Dance_2019_10: A toi de jouer ! Crée ta propre danse à partager avec tes amis.
+      Dance_Party_01: Faites glisser le bloc `créer un nouveau` dans l'espace de travail
+        et connectez-le à l'intérieur du bloc `configuration`.
       Dance_Party_02: Faites que l'orignal commence un nouveau mouvement après 4 mesures
         !
       Dance_Party_03: Maintenant, demandez au danseur de commencer un nouveau mouvement
@@ -875,39 +892,44 @@ fr-FR:
       Dance_Party_04: Ajoutez un effet de fond à votre programme.
       Dance_Party_05: Utilisez un autre nouveau bloc pour que le danseur change de
         mouvement toutes les 2 mesures.
-      Dance_Party_06: Créez un danseur de sauvegarde appelé « backup\_dancer1 » pour
+      Dance_Party_06: Crée un danseur de sauvegarde appelé « backup\_dancer1 » pour
         danser avec le chat.
-      Dance_Party_08: Pouvez-vous donner la même taille aux deux danseurs de sauvegarde
+      Dance_Party_08: Peux-tu donner la même taille aux deux danseurs de sauvegarde
         ?
-      Dance_Party_09: Utilisez le bloc « définir la nuance » pour changer la couleur
+      Dance_Party_09: Utilise le bloc « définir la nuance » pour changer la couleur
         d'un danseur.
-      Dance_Party_10: Demandez également à l’autre danseur de répondre à la musique
+      Dance_Party_10: Demande également à l’autre danseur de répondre à la musique
         à l’aide du bloc « commencer à suivre ».
-      Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » vous permet d'exécuter
-        un programme lorsque vous appuyez sur la flèche vers le haut. Essayez de faire
-        faire un mouvement rapide au danseur lorsque vous appuyez vers le haut.
+      Dance_Party_11: Le bloc « lorsqu’on appuie vers le haut » te permet d'exécuter
+        un programme lorsque tu appuies sur la flèche vers le haut. Essaie de faire
+        faire un mouvement rapide au danseur lorsque tu appuies vers le haut.
       Dance_Party_11_5: Utiliser les blocs « tous les canards » pour faire danser
         les canards ensemble.
-      Dance_Party_11b: Faites le Robot faire le « drop » une fois lorsque vous appuyez
-        sur la touche fléchée droite et faire le « floss » une fois lorsque vous appuyez
-        sur la touche fléchée haut. Réalisez le « drop-floss » aussi vite que possible
+      Dance_Party_11b: Le Robot doit faire le « drop » une fois lorsque tu appuies
+        sur la touche fléchée droite et faire le « floss » une fois lorsque tu appuies
+        sur la touche fléchée haut. Fais le « drop-floss » aussi vite que possible
         !
-      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
-        vos amis.
+      Dance_Party_12: Prends ton rythme ! Crée ta propre danse à partager avec tes
+        amis.
+      Dance_Party_extras_alternate_2019: Va et viens! (Cliquez sur « Plus » pour les
+        détails)
       Dance_Party_extras_battle: Equipe de danse (Clic "Plus" pour les détails)
       Dance_Party_extras_battle_2019: Equipe de danse (Clic "Plus" pour les détails)
       Dance_Party_extras_every_beat: Noires (Clic "Plus" pour les détails)
       Dance_Party_extras_every_beat_2019: Noires (Clic "Plus" pour les détails)
-      Dance_Party_extras_layout: Allons en formation! (Clic "Plus" pour les détails)
-      Dance_Party_extras_layout_2019: Allons en formation! (Clic "Plus" pour les détails)
+      Dance_Party_extras_layout: Allons en formation ! (Clic "Plus" pour les détails)
+      Dance_Party_extras_layout_2019: Entrons en formation ! (Clic "Plus" pour les
+        détails)
+      Dance_Party_extras_mixed_2019: Plus de boutons (Cliquez sur "Plus" pour plus
+        de détails)
       Dance_Party_extras_on_beat: Grave, Medium et Aigü (Clic "Plus" pour les détails)
       Dance_Party_extras_on_beat_2019: Grave, Medium et Aigü (Clic "Plus" pour les
         détails)
       Dance_Party_extras_speed: Accélére la, Ralenti la (Clic "Plus" pour les détails)
       Dance_Party_extras_speed_2019: Accélére la, Ralenti la (Clic "Plus" pour les
         détails)
-      Dance_Party_extras_visible: Où iraient-ils? (Clic "Plus" pour les détails)
-      Dance_Party_extras_visible_2019: Où iraient-ils? (Clic "Plus" pour les détails)
+      Dance_Party_extras_visible: Où iraient-ils ? (Clic "Plus" pour les détails)
+      Dance_Party_extras_visible_2019: Où iraient-ils ? (Clic "Plus" pour les détails)
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       Function intro Ryan: Utilisez deux fois la fonction « construire un pont » pour
         créer un passage vers la torche.
@@ -1295,6 +1317,14 @@ fr-FR:
         ton augmentation pour recueillir 15, puis 12 et enfin 9, 6, 3 nectars ?
       NEW Course 4 Play Lab Params 11: 'C''est l''heure de la récréation ! Amuse-toi
         avec tous les blocs de ta boîte à outils. '
+      New Gumball Project: Crée ce que tu veux et partage-le !
+      New Ice Age Project: Crée ce que tu veux et partage-le !
+      New Infinity Project: Crée ce que tu veux et partage-le !
+      New Minecraft Hero Project: "**Jeu libre :**  c'est le moment pour vous d'explorer !"
+      New Sports Project: 'Crée ton propre jeu! Tu es responsable ici: Tu peux changer
+        toutes les règles, mélanger les sports entre eux, soyez créatifs! Lorsque
+        tu as terminé, clique sur Terminer pour laisser tes amis essayer ton jeu sur
+        leurs téléphones.'
       Overworld Avoid Monsters: Courir dans une plante grimpante est une mauvaise
         idée. Faufile-toi entre les plantes grimpantes avec précaution et mets-toi
         à l’abri dans ta maison.
@@ -3384,14 +3414,3 @@ fr-FR:
       ramp_artist_loops9: Résous ce puzzle en dessinant un carré.
       ramp_artist_loops9_2018: Résous ce puzzle en dessinant un carré.
       ramp_artist_loops9_2019: Résous ce puzzle en dessinant un carré.
-      scrat 16: Gland ! Gland ! Gland ! Utilise un bloc « Si » pour m'y amener avec
-        le plus petit nombre de blocs possible.
-      scrat 17: Ok, recommençons pour s'entraîner ! Ce n'est pas très différent, mais
-        attention au mur !
-      scrat 18: Les blocs « Si/Sinon » vérifient une condition et puis font une chose
-        OU une autre. Pour m'amener au gland, essaie d'utiliser ce nouveau bloc.
-      scrat 19: Encore un exercice avec le bloc « Si/Sinon » - peux-tu y arriver dès
-        le premier essai?
-      scrat 20: Peux-tu ajouter seulement 3 blocs pour m’aider à résoudre un labyrinthe
-        plus complexe? Si tu le fais bien, je peux emprunter n’importe quelle voie
-        sinueuse, peu importe sa longueur. Fais-vite ! La glace fond !

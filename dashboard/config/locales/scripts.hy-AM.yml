@@ -1637,7 +1637,7 @@ hy:
               name: փոփոխականների
             For Loops:
               name: For Loops
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: conditionals
@@ -1647,3 +1647,68 @@ hy:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Conditionals with Cards
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: conditionals
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: conditionals
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Գործառույթները պարամետրերով
+        csd3-2020:
+          description_short: Programming
+          stages:
+            Variables:
+              name: փոփոխականների
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Going Places Safely
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Move It, Move It:
+              name: Տեղափոխել այն, տեղափոխել այն
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binary Bracelets
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Artist Binary
+            Digital Citizenship:
+              name: Digital Citizenship
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: conditionals
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spelling Bee

@@ -1285,3 +1285,7 @@ vi:
       6:
         text: Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi
           bạn sẽ xây dựng chương trình.
+    hoc_dance_events_2019:
+      4:
+        text: 'Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột,
+          phím mũi tên hoặc phím tab được nhấn.'

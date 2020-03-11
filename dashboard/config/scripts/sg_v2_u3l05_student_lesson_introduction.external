@@ -16,9 +16,9 @@ markdown <<MARKDOWN
 
 ## New Subgoals and Blocks
 * **Subgoal: [Define a function]** - `//define a function`
-    *  **[Define a function](https://docs.code.org/applab/functionParams_none/)** - `define a function`
+    *  **[Define a function](https://studio.code.org/docs/applab/functionParams_none/)** - `define a function`
 * **Subgoal: [Call function]** - `//call a function`
-	*  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
+	*  **[Call a function](//studio.code.org/docs/applab/callMyFunction/)** - `Call a function`
 
 ## Resources
 * [College Board - Assessment Overview and Performance Task Directions for Students](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf)

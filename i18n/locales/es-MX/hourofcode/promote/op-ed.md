@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de un artículo de opinión que apoye la Semana por la Educación de las Ciencias de la Computación y la Hora del Código
+title: Ejemplo de un artículo de opinión que apoya la Semana por la Educación en Ciencias de la Computación y la Hora del Código
 ---
 
 {{ signup_button }}

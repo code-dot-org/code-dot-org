@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
-var craftMsg = require('./locale');
+var craftMsg = require('../locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,

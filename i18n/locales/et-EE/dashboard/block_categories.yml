@@ -1,0 +1,13 @@
+et:
+  data:
+    block_categories:
+      Actions: Tegevused
+      Color: Värv
+      Conditionals: Tingimuslaused
+      Events: Sündmused
+      Functions: Funktsioonid
+      Logic: Loogika
+      Loops: Tsüklid
+      Math: Matemaatika
+      Text: Tekst
+      Variables: Muutujad

@@ -408,6 +408,7 @@ fa:
     notes_coming_soon: یادداشت ها برای این ویدیو به زودی.
     autoplay_option: پخش خودکار فیلم ها
     download: دانلود ویدیو
+    label: ویدیو
   compatibility:
     upgrade:
       link: بیشتر بیاموزید
@@ -526,6 +527,8 @@ fa:
     support: کمک گرفتن
     support_url: support.code.org
     help_resources: کمک و منابع
+  free_response:
+    placeholder: پاسخ خود را اینجا وارد کنید
   multi:
     wrong_title: پاسخ اشتباه
     wrong_body: پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
@@ -727,3 +730,4 @@ fa:
     accept: موافقم
   gdpr_dialog:
     true: بله
+  copy: رونوشت‌

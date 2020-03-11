@@ -4,13 +4,6 @@ li.level_name {
   @include selectable;
 }
 
-.new_level {
-  input, textarea {
-    display: block;
-    margin: 20px 0;
-  }
-}
-
 .ani-gif-dropdown {
   min-width: 450px;
 }

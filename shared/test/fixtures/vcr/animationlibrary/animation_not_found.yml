@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-animation-library.s3.amazonaws.com/spritelab/animation_not_found.png?versionId=version
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 14 Jan 2020 21:34:09 GMT
+      Connection:
+      - close
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>InvalidArgument</Code><Message>Invalid version id specified</Message><ArgumentName>versionId</ArgumentName><ArgumentValue>version</ArgumentValue><RequestId>A24F36AA539E4E8C</RequestId><HostId>K3N/k3jrbjQDxkR+ferC99e8P3Np6ii6OkVKpQn3WiUywEe1Q0EziskbwJAO/oMoxQzA/WDO6pE=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 14 Jan 2020 21:34:09 GMT
+recorded_with: VCR 3.0.3

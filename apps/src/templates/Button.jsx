@@ -21,7 +21,8 @@ const ButtonColor = {
 
 const ButtonSize = {
   default: 'default',
-  large: 'large'
+  large: 'large',
+  narrow: 'narrow'
 };
 
 const styles = {
@@ -147,6 +148,12 @@ const styles = {
       height: 40,
       paddingLeft: 30,
       paddingRight: 30,
+      lineHeight: '40px'
+    },
+    [ButtonSize.narrow]: {
+      height: 40,
+      paddingLeft: 10,
+      paddingRight: 10,
       lineHeight: '40px'
     }
   }

@@ -370,3 +370,15 @@ az:
     hoc_dance_congrats:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Şənlik davam edir!'
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Kod Saatı | Rəqs şənliyi: Qızışma'
+    hoc_dance_events_2019:
+      1:
+        text: 'Kod Saatı | Rəqs şənliyi: Hadisələr'
+    hoc_dance_properties_2019:
+      1:
+        text: 'Kod Saatı | Rəqs şənliyi: Xüsusiyətlər'
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Kod Saatı | Rəqs şənliyi: Şənlik davam edir!'

@@ -127,8 +127,6 @@ th:
     valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
-    under_13_consent: ถ้าฉันมีอายุต่ำกว่า 13 ปี ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายเพื่อใช้บริการของ
-      Code.org แล้ว
     student_consent: ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ
       Code.org ได้
     additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
@@ -267,7 +265,7 @@ th:
       applab: แอ๊ปแล็บ
       artist: ศิลปิน
       bounce: กระเด้ง
-      dance: งานเต้นรำ
+      dance: Dance Party
       frozen: Frozen
       gamelab: เกมแล๊บ (Game Lab)
       gumball: โลกมหัศจรรย์ของ Gumball
@@ -425,9 +423,9 @@ th:
       title: แอ๊ปแล็บ
       audience: อายุ 13+
     dance:
-      title: งานเต้นรำ
+      title: Dance Party
     dance-2019:
-      title: งานเต้นรำ
+      title: Dance Party
     20-hour:
       body: This 20-hour คอร์ส covers the core computer science and programming concepts
         in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส
@@ -472,6 +470,8 @@ th:
   landing:
     support: ขอความช่วยเหลือ
     help_support: การช่วยเหลือและสนับสนุน
+  free_response:
+    placeholder: กรอกคำตอบของคุณที่นี่
   multi:
     wrong_title: คำตอบไม่ถูกต้อง
     wrong_body: คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!
@@ -516,6 +516,8 @@ th:
   terms_interstitial:
     tos: เงื่อนไขการให้บริการ
     privacy: นโยบายความเป็นส่วนตัว
+    accept_tos: เมื่อลงชื่อเข้าใช้ Code.org แสดงว่าคุณเห็นด้วยกับ [เงื่อนไขการใช้บริการ]
+      (%{tos_url}) และ [นโยบายความเป็นส่วนตัว](%{privacy_url}) ของเรา
     accept: ยอมรับ
     print: พิมพ์
   school_info_interstitial:
@@ -615,3 +617,4 @@ th:
   page_not_found_description: หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว
     เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา
   page_not_found_button: กลับไปที่หน้าแรก
+  copy: คัดลอก

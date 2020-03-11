@@ -1537,7 +1537,7 @@ gl:
               name: Variables
             For Loops:
               name: Bucles "Para" (For)
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Condicionais
@@ -1547,3 +1547,67 @@ gl:
               name: Colaboración Aberta
             Conditionals with Cards:
               name: Condicionais con cartas
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funcións con parámetros
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Ir a Sitios en modo Seguro
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: A túa pegada dixital
+            Move It, Move It:
+              name: Creando camiños
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Pulseiras Binarias
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Digital Citizenship:
+              name: Cidadanía dixital
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Condicionais
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Variábeis de sobre
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Aberta
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Abella que Soletrea

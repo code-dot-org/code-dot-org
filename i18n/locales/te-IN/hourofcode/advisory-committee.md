@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: అవర్ ఆఫ్ కోడ్ మరియు CSEdWeek సలహా కమిటీ
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# అవర్ ఆఫ్ కోడ్ మరియు CSEdWeek సలహా కమిటీ
 
 {{ advisory-committee/about_headshots }}
 

@@ -1,5 +1,5 @@
 ---
-title: பிரஸ் கிட்
+title: ப்ரஸ் கிட்
 ---
 
 {{signup_button}}

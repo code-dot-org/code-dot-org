@@ -172,7 +172,7 @@ progress.renderCourseProgress = function(scriptData) {
         id={scriptData.id}
         courseId={scriptData.course_id}
         onOverviewPage={true}
-        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning

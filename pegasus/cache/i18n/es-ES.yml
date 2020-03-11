@@ -26,8 +26,6 @@ es-ES:
   petition_message: Cada alumno de cada escuela debería tener la oportunidad de aprender
     Ciencias de la Computación
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # otros.'
-  petition_sign_message_support: 'Si usted nos apoya, firme su nombre.  Invite a #
-    otros.'
   petition_join_others: 'Únete a # otros'
   name: Nombre
   email: Correo electrónico
@@ -225,6 +223,7 @@ es-ES:
   if_you_enjoyed: "¡Si te ha gustado aprender, invita a amigos para que lo intenten
     también! Queremos que todo el mundo pueda aprender."
   personalize_certificate: Personaliza tu certificado
+  print_certificates: Imprimir certificados
   share_achievement: Comparte tu logro
   beyond_hour_message: Continúa con nuestros <a href='http://studio.code.org'>otros
     cursos</a>, o explora otras opciones en <a href='/learn/beyond'>Aprender más allá
@@ -666,9 +665,7 @@ es-ES:
     por enseñar Ciencias de la Computación</span>, que pueda ayudar en el aula, o
     alguien que pueda <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar
     </span> a sus alumnos hablando de la amplitud de posibilidades con las Ciencias
-    de la Computación (que podría hacerse a través de una vídeo conferencia). Si no
-    deseas ofrecerte como voluntario, <a href="%{url}"> obtén más información</a>
-    acerca de cómo organizar tu propio evento de Hora de Code.'
+    de la Computación (que podría hacerse a través de una vídeo conferencia). '
   volunteer_engineer_submission_intro_guide: Conozca más acerca de nuestro <a href="%{volunteer_guide}">programa
     de voluntariado aquí</a>.
   volunteer_engineer_submission_intro_signup: Por favor, introduce la siguiente información
@@ -1262,6 +1259,8 @@ es-ES:
   pre-express-2018_name: Curso rápido prescolar (2018)
   express-2019_name: Curso Rápido (2017)
   pre-express-2019_name: Curso rápido prescolar (2017)
+  csd2_name: 'Unidad 2: Desarrollo Web'
+  csd3_name: 'Unidad 3: Animación y Juegos'
   accelerated_name: Curso acelerado
   express_name: Curso Rápido
   pre-express_name: Curso rápido prescolar

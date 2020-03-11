@@ -2,11 +2,11 @@
 title: Vejledning
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Sådan griber du en times kodning an i fritidsordninger og klubber
 
-### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin. Hour of Code er nemt at afvikle - selv for begyndere! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin. Hour of Code er nemt at afvikle - selv for begyndere! Hvis du gerne vil have et par ekstra hænder til hjælp, kan du finde en [lokal frivillig](%= codeorg_url('/volunteer/local') %) til at hjælpe med at køre en Hour of Code i din fritidsordning eller klub.
 
 * * *
 
@@ -79,6 +79,6 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 ## Hvad er næste skridt efter Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
-{{ signup_button }}
+{{ tilmeld_knap }}

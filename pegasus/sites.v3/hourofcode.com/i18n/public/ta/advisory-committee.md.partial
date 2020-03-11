@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Hour of Code மற்றும் CSEdWeek ஆலோசனைக் குழு
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Hour of Code மற்றும் CSEdWeek ஆலோசனைக் குழு
 
 {{ஆலோசனைக் குழு / பற்றி_ஹெட்ஷாட்கள்}}
 

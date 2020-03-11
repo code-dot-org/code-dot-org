@@ -68,6 +68,7 @@ fa:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -112,6 +113,7 @@ fa:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': الماس
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی

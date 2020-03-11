@@ -149,11 +149,13 @@ ta:
   terms_interstitial:
     tos: "சேவையின் விதிமுறைகள்"
     privacy: "தனியுரிமை கொள்கை"
+    accept_tos: Code.org -க்காக பதிவுசெய்து கொள்வதன் மூலம், நீங்கள் எங்களின் [சேவை விதிமுறைகள்](%{tos_url}) மற்றும் [தனியுரிமை கொள்கை](%{privacy_url}) ஆகியவற்றை ஏற்றுக்கொள்கிறீர்கள்.
     print: "அச்சிடு"
   race_interstitial:
     races:
       other: "வேறு"
     submit: "சமர்ப்பிக்க"
+    decline: "மூடவும்"
   project:
     projects: "திட்டப்பணிகள்"
     project_gallery: "திட்டப்பணிகள்"
@@ -186,3 +188,4 @@ ta:
     accept: 'நான் ஒப்புக்கொள்கிறேன்'
   gdpr_dialog:
     yes: 'ஆம்'
+  copy: 'நகலெடு'

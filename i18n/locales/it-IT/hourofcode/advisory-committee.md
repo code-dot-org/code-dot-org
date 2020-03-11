@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Comitati esecutivi di "Hour of Code" e "CSEdWeek"
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Comitati esecutivi di "Hour of Code" e "CSEdWeek"
 
 {{ advisory-committee/about_headshots }}
 

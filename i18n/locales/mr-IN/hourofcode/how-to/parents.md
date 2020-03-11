@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: पालकांसाठी "कसे करावे” मार्गदर्शिका
 ---
 
 {{ signup_button }}

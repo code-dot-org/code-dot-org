@@ -138,6 +138,13 @@ es-MX:
     already_in_use: Tu %{provider} ya está conectado a otra cuenta de Code.org.
     already_linked: La cuenta con tu %{provider} ya está vinculada a tu cuenta de
       Code.org.
+    existing_account:
+      account_exists: "¡Buenas noticias! Ya tienes una cuenta de Code.org que utiliza
+        %{email}"
+      sign_in: Inicia sesión y te vincularemos con tu perfil de %{provider}.
+      sign_up: "¿No es tu correo electrónico? ¿Quieres crear una nueva cuenta con
+        una dirección de correo electrónico diferente? También vincularemos tu perfil
+        de %{provider} si quieres hacerlo."
   signup_form:
     email_signup: Regístrate con tu dirección de correo electrónico
     student_count: "%{count} estudiantes ya se han registrado."
@@ -184,8 +191,6 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: La contraseña debe tener al menos 6 caracteres
     mismatch_password: Las dos contraseñas ingresadas no coinciden
-    under_13_consent: Si soy menor de 13 años de edad, confirmo que tengo autorización
-      de mi padres o de mi tutor legal para utilizar los servicios de Code.org.
     student_consent: Confirmo que tengo la autorización de mis padres o tutores legales
       para utilizar los servicios de Code.org.
     agree_us_website: Acepto usar un sitio web con sede en Estados Unidos.
@@ -685,6 +690,7 @@ es-MX:
     download: Descargar el video
     show_notes: Mostrar notas
     show_video: Mostrar el video
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Tu navegador no es compatible. Por favor, actualízalo a
@@ -698,6 +704,8 @@ es-MX:
       gamelab_unsupported_tablet: El Laboratorio de juegos funciona mejor en una computadora
         de escritorio o portátil con un ratón o un teclado. Puede que experimentes
         problemas si usas esta herramienta en tu dispositivo actual.
+      oceans_unsupported_browser: Este navegador no es compatible con este tutorial.
+        Prueba visitar esta página en Edge, Chrome, Firefox u otro navegador moderno.
       weblab_unsupported_browser: Lamentablemente, estamos teniendo algunos problemas
         para cargar el Laboratorio web en este navegador. Prueba con otro navegador
         hasta que esto se resuelva. Disculpa las molestias.
@@ -871,6 +879,8 @@ es-MX:
     help_support: Ayuda y soporte
     documentation: Documentación
     tutorials: Tutoriales
+  free_response:
+    placeholder: Escribe aquí tu respuesta
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. ¡Intenta de nuevo!
@@ -1178,12 +1188,16 @@ es-MX:
     csp_traversals: Recorridos
     csp_libraries: Bibliotecas
     csp_parameters_return_values: Parámetros y valores de retorno
+    csp_unit2_2020: 'Unidad 2: Internet'
+    csp_unit6_2020: 'Unidad 6: Algoritmos'
+    csp_unit9_2020: 'Unidad 9: Datos'
     dlp: Preguntas para reflexionar
-    time4cs_c1: Everglades y sus ecosistemas
-    time4cs_c2: Cadenas de comida en Everglades
+    time4cs_c1: 'Colección 1: Everglades y sus ecosistemas'
+    time4cs_c2: 'Colección 2: Cadenas de comida (en Everglades)'
     time4cs_c3: Vivir en Everglades
-    time4cs_c4: Impactos invasivos en Everglades
-    time4cs_c5: Los ciudadanos efectúan cambios en Everglades
+    time4cs_c4: 'Colección 4: El impacto de las especies invasivas (en Everglades)'
+    time4cs_c5: 'Colección 5: Los ciudadanos toman medidas'
+    time4cs_c6: Condicionales (revisión)
     k5_getting_started: Primeros pasos
     k5_csf_intro: Conoce los Cursos de Fundamentos de Ciencias de la Computación
     k5_coding_concepts: Conceptos de programación y estrategias de enseñanza
@@ -1417,3 +1431,4 @@ es-MX:
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
     la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio.
   page_not_found_button: Volver a la página de inicio
+  copy: Copiar

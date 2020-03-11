@@ -34,6 +34,7 @@
   "bird": "طائر",
   "calloutPutCommandsHereRunStart": "ضع الأوامر هنا لتشغيلها عند بدء البرنامج",
   "calloutBlocklyPlaceGoUpHere": "ضع المربع البرمجي \"إذهب إلى الأعلى\" هنا لتحرك لأعلى",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "اضغط على اعلى الاحداث لترى وظيفة الحدث البرمجي.",
   "calloutUseArrowButtons": "اضغط باستمرار على هذه الأزرار أو مفاتيح الأسهم على لوحة المفاتيح لتفعيل أحداث التحرك",
   "calloutUseArrowButtonsAutoSteer": "لقد قمنا بإخفاء التعليمات البرمجية التي قمت بكتابتها، ولكن لا يزال بإمكانك استخدام مفاتيح الأسهم للتحرّك",

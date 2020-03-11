@@ -1199,7 +1199,7 @@ sl:
               name: Funkcije
             Variables:
               name: Spremenljivke
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Pogoji
@@ -1209,3 +1209,61 @@ sl:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Pogojniki s kartami
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Pogoji
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Pogoji
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funkcije s parametri
+        csd3-2020:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Kako varno potovati
+        courseb-2020:
+          stages:
+            Move It, Move It:
+              name: Premakni se, premakni
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            'Unplugged: Binary':
+              name: 'Brez prijave: Binarno'
+            Artist Binary:
+              name: Umetnik Binarno
+            Digital Citizenship:
+              name: Digitalno državljanstvo
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Pogoji
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Spremeljivke v ovojnicah
+            For Loop Fun:
+              name: Zabava s "for" zankami
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Čebelica črkuje besede

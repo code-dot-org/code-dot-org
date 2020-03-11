@@ -131,7 +131,6 @@ ja:
     valid_password: "有効なパスワード ！"
     invalid_password: "パスワードを%d文字以上で入力"
     mismatch_password: "入力した 2 つのパスワードが一致しません"
-    under_13_consent: "13歳未満の場合、Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。"
     agree_us_website: "米国に拠点を置くウェブサイトを使用することに同意します。"
     my_data_to_us: "当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。"
     additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
@@ -506,6 +505,7 @@ ja:
     download: 'ビデオのダウンロード'
     show_notes: 'コードの表示'
     show_video: '写真・動画'
+    label: 'ビデオ'
   compatibility:
     upgrade:
       unsupported_message: "お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}', target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。"
@@ -638,6 +638,8 @@ ja:
     help_support: "ヘルプとサポート"
     documentation: "ドキュメント"
     tutorials: "チュートリアル"
+  free_response:
+    placeholder: "ここに答えを入力"
   multi:
     wrong_title: "不正解"
     wrong_body: "不正解です。やりなおしてみてください。"
@@ -947,3 +949,4 @@ ja:
     privacy_policy: 'プライバシーポリシー'
     logout: 'ログアウト'
     yes: 'はい'
+  copy: 'コピー'

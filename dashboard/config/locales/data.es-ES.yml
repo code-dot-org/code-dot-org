@@ -110,8 +110,8 @@ es:
           bloque girar.'
         turtle_1_5: Ahora, para practicar, dibuja un triángulo y un cuadrado para
           dibujar un sobre.
-        turtle_1_6: "¿Puedes darte cuenta de cómo dibujar este triángulo y cuadrado?
-          Ayuda: haz el triángulo primero, y luego averigua cuánto girar antes de
+        turtle_1_6: "¿Puedes darte cuenta cómo dibujar este triángulo y cuadrado?
+          Ayuda: Haz el triángulo primero, y luego averigua cuánto girar antes de
           dibujar el cuadrado."
         turtle_1_7: Vale, vamos a hacerlo un poco más difícil; intenta dibujar estos
           anteojos verdes. Los cuadrados tienen 100 píxeles en cada lado, y están
@@ -816,6 +816,11 @@ es:
         CSF_SpriteLab_Intro_v2: Introduciendo laboratorio de codificadores
         CSF_Spritelab_MakeSprite_v2: Como hacer un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en accion
+        oceans_societal_implications: Implicaciones sociales
+        hoc_dance_congrats_2019: Fiesta de Baile - ¡Que siga la fiesta!
+        hoc_dance_warmup_2019: Fiesta de Baile - Calentamiento
+        hoc_dance_events_2019: Fiesta de Baile - Eventos
+        hoc_dance_properties_2019: Fiesta de Baile - Propiedades
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

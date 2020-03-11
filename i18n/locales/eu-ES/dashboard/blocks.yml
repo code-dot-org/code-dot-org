@@ -267,6 +267,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           FORMAT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -330,6 +331,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           LAYOUT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_randomColor:
         text: ausazko kolorea

@@ -30,6 +30,8 @@ ja-JP:
         set_length: このブロックを使い、「長さ」を適切な値にセットします。
       Course 4 Artist Vars 6:
         degrees_per_side: 360度を辺の数で割って、各角度の大きさを度で求めます。
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: もっとスペースが必要？このバーを引っ張れば、コーディングするエリアを広げることができます。
       Course 4 Bee 1:
         if_bee_nectar: '"if"ブロックを使用してミツバチが花の蜜をとるかどうかを決めます。'
       Course 4 Bee 3:
@@ -56,7 +58,7 @@ ja-JP:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
       CourseD_Dance_Party_11_5:
-        dance_party_11_5_groups: '"アヒル" は、すべて ここにあります。'
+        dance_party_11_5_groups: "`すべてのアヒル`ブロックを探してください"
       Dance_2019_01:
         dance_callout_01: プログラムにこのブロックを追加！
       Dance_2019_02:
@@ -85,7 +87,7 @@ ja-JP:
         dance_callout_11_a: 新しいブロック！
         dance_callout_11_b: 新しいブロック！
       Dance_Party_11_5:
-        dance_party_11_5_groups: '"アヒル" は、すべて ここにあります。'
+        dance_party_11_5_groups: "`すべてのアヒル`ブロックを探してください"
       Fish Tank 3-validated_2019:
         spritelab_comment: このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。
       Function intro Ryan:
@@ -142,6 +144,8 @@ ja-JP:
         place_length_variable: 長さ変数をドラッグして"???"を置きかえてください。
       NEW Course 4 Bee For Loops 5:
         actions_category: ツール ボックスが新しくなりました！「アクション」ブロックがここにあります。
+      New Frozen Project:
+        snowflake_dropdown: このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!
       Overworld Chop Trees:
         craft_callout_preplaced: 用意されたブロックを使って始めましょう
       Overworld Chop Trees_2019:

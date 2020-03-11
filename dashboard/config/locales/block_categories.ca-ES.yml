@@ -3,19 +3,14 @@ ca:
   data:
     block_categories:
       Actions: Accions
-      Loops: Bucles
-      Functions: Funcions
       Color: Color
-      Math: Matemàtiques
-      Logic: Lògic
-      Variables: Variables
       Conditionals: Condicionals
-      Events: Esdeveniments
-      Text: text
       Dancers: Dansaires
+      Events: Esdeveniments
+      Functions: Funcions
       Groups: Grups
-      Start: Inici
-      Booleans: Veritat o fals
-      test: prova
-      Name: Nom
-      Function: Funció
+      Logic: Lògic
+      Loops: Bucles
+      Math: Matemàtiques
+      Text: text
+      Variables: Variables

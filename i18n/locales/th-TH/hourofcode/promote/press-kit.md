@@ -61,7 +61,7 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 ด้วย Hour of Code วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Apple Store ทุกแห่งในโลกได้จัดงาน Hour of Code แล้ว แม้แต่ประธานาธิบดี Obama ก็ได้เขียนโปรแกรมบรรทัดแรกของเขาเป็นส่วนหนึ่งของการรณรงค์นี้
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+ทั้งหมดนั้นคือเหตุผลที่นักเรียนทุกคน [จำนวน X คน] ที่ [SCHOOL NAME] มาเข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์: Hour of Code ในระหว่างสัปดาห์การศึกษาเรื่องวิทยาศาสตร์คอมพิวเตอร์ (3-9 ธันวาคม)
 
 ฉันเขียนมาเพื่อเชิญชวนคุณให้เข้าร่วมการประชุมเริ่มต้นของเรา และมาดูเด็กๆเริ่มกิจกรรมในวันที่ [DATE]
 

@@ -765,15 +765,25 @@ pt-PT:
         ao tesouro.
       Crack Random Substitution: Instruções
       Crack a Caesar Cipher: Instruções
-      Dance_2019_02: O bloco `quando premido`, permite-te executar código quando o
-        botão da seta para cima é premida. Faz com que o teu dançarino aplauda quando
-        primes o botão ou experimenta outro movimento!
-      Dance_2019_03: 'Está na hora da dança! Programa cada dançarino de modo a mover-se
+      Dance_2019_01: 'Arrasta o bloco <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        para o ambiente de trabalho e liga-o dentro do bloco <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Faz com que o gato realize um movimento de dança quando primes
+        uma tecla.
+      Dance_2019_03: 'Está na hora da dança! Programa cada dançarino para se mover
         quando premires teclas diferentes. Escolhe o teu movimento preferido para
         cada dançarino ou defini-o para "(Aleatório)" para algo completamente imprevisível! '
+      Dance_2019_04: Faz o teu dançarino iniciar um novo movimento após o quarto compasso.
       Dance_2019_06: Forma um grupo de dançarinos secundários à volta do dançarino
         principal que está no meio.
+      Dance_2019_07: Altera o tamanho do grupo de dançarinos secundários.
+      Dance_2019_08: Experimenta trocar o tom de cor dum dos teus dançarinos (ou dum
+        grupo inteiro)!
       Dance_2019_09: Sê criativo com estes blocos novos!
+      Dance_Party_extras_alternate_2019: Para a frente e para trás! (Clica em "Mais"
+        para ver os detalhes)
       Dance_Party_extras_battle: Maltas da Dança (Clica em "Mais" para veres os detalhes)
       Dance_Party_extras_battle_2019: Maltas da Dança (Clica em "Mais" para veres
         os detalhes)
@@ -784,13 +794,14 @@ pt-PT:
         os detalhes)
       Dance_Party_extras_layout_2019: Ponham-se em formação! (Clica em "Mais" para
         veres os detalhes)
+      Dance_Party_extras_mixed_2019: Mais Botões (Clica em "Mais" para ver os detalhes)
       Dance_Party_extras_on_beat: Grave, Médio e Agudo (Clica em "Mais" para veres
         os detalhes)
       Dance_Party_extras_on_beat_2019: Grave, Médio e Agudo (Clica em "Mais" para
         veres os detalhes)
-      Dance_Party_extras_speed: Acelera-a, Abranda-a (Clica em "Mais" para veres os
+      Dance_Party_extras_speed: Acelera-a, abranda-a (Clica em "Mais" para veres os
         detalhes)
-      Dance_Party_extras_speed_2019: Acelera-a, Abranda-a (Clica em "Mais" para veres
+      Dance_Party_extras_speed_2019: Acelera-a, abranda-a (Clica em "Mais" para veres
         os detalhes)
       Dance_Party_extras_visible: Para onde é que eles foram? (Clica em "Mais" para
         veres os detalhes)
@@ -1132,6 +1143,10 @@ pt-PT:
       NEW Course 4 Play Lab Params 11: |-
         É hora da atividade livre! Divirta-se
         com todos os blocos da sua caixa de ferramentas.
+      New Gumball Project: Crie o que quiser e compartilhe!
+      New Ice Age Project: Crie o que quiser e compartilhe!
+      New Infinity Project: Crie o que quiser e compartilhe!
+      New Minecraft Hero Project: "**Jogo livre:**  É hora de explorar sozinho!"
       Overworld Avoid Monsters: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente
         dos Creepers e põe-te em segurança em casa.
       Overworld Avoid Monsters_2019: Esbarrar num Creeper é má ideia. Desvia-te cuidadosamente
@@ -1499,16 +1514,3 @@ pt-PT:
         ao invés de um rostinho triste?
       grade5_artist_binary8: Termine o desenho.
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
-      scrat 16: |-
-        Bolota! Bolota! Bolota! Use um bloco "se" para me levar até lá
-        com o menor número de blocos.
-      scrat 17: |-
-        Ok, vamos fazer novamente para pegar a prática - este não é
-        muito diferente, mas cuidado com a parede!
-      scrat 18: |-
-        Os blocos "se-senão" verificam uma condição e, em seguida,
-        fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.
-      scrat 19: Pratica mais uma vez o bloco "se-senão", consegues à primeira tentativa?
-      scrat 20: Podes adicionar mais 3 blocos para me ajudares a resolver um labirinto
-        mais complicado? Se o fizeres bem, eu consigo andar qualquer caminho com curvas,
-        não interessa o comprimento.  Despacha-te! O gelo está a derreter!

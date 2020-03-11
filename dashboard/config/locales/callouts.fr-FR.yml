@@ -95,8 +95,17 @@ fr-FR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Regardez ici les blocs « tous les canards »
+      Dance_2019_01:
+        dance_callout_01: Choisis le type de danseur ici.
+      Dance_2019_02:
+        dance_callout_11_a: Ajoute ce bloc à ton programme.
+        arrow_buttons: Appuie sur les boutons fléchés pour contrôler ton danseur.
       Dance_2019_04:
-        dance_callout_02: Ajoutez ce bloc à votre programme!
+        dance_callout_02: Ajoute ce bloc à ton programme !
+      Dance_2019_05:
+        dance_callout_05: Ajoute un nouvel événement à ton programme.
       Dance_2019_06:
         dance_party_11_5_groups: Nouveau bloc !
       Dance_2019_07:
@@ -107,14 +116,16 @@ fr-FR:
       Dance_Party_01:
         dance_callout_01: Ajoutez ce bloc à votre programme!
       Dance_Party_02:
-        dance_callout_02: Ajoutez ce bloc à votre programme!
+        dance_callout_02: Ajoute ce bloc à ton programme !
       Dance_Party_04:
         dance_callout_04: Ajoutez ce bloc à votre programme!
       Dance_Party_06:
-        dance_callout_06: Ajoutez votre nouveau danseur ici
+        dance_callout_06: Ajoute ton nouveau danseur ici
       Dance_Party_11:
         dance_callout_11_a: Nouveau bloc !
         dance_callout_11_b: Nouveau bloc !
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Regarde ici les blocs « tous les canards »
       Function intro Ryan:
         Function_intro_Ryan_1: Cette petite instruction indique à l'ordinateur d'exécuter
           un GROS morceau de code avec le même nom dans l'espace de travail.
@@ -184,6 +195,9 @@ fr-FR:
       NEW Course 4 Bee For Loops 5:
         actions_category: La boîte à outils a un nouvel aspect ! Les blocs «Actions
           » sont maintenant ici.
+      New Frozen Project:
+        snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
+          de neige !
       Overworld Chop Trees:
         craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
       Overworld Chop Trees_2019:

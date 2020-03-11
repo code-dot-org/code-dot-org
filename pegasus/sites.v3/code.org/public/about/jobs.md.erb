@@ -4,6 +4,7 @@ nav: about_nav
 video_player: true
 theme: responsive
 ---
+<link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/jobs.css" />
 
 # Job Openings at Code.org
 
@@ -11,6 +12,7 @@ theme: responsive
 
 <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
 <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+
 
 <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
 
@@ -26,8 +28,13 @@ Launched in 2013, Code.org&reg; is a nonprofit dedicated to expanding access to 
 **[Working at Code.org](#info)**
 
 **We are currently hiring for:**
-<div class="hire-jobs"></div>
-<script id="hire-embed-loader" async defer src="https://hire.withgoogle.com/s/embed/hire-jobs.js?company=codeorg"></script>
+<div id='lever-jobs-container'></div>
+<script type='text/javascript'>
+
+  window.leverJobsOptions = {accountName: 'Code.org'};
+
+</script>
+<script type='text/javascript' src='https://andreasmb.github.io/lever-jobs-embed/index.js'></script>
 
 ## <a name="info" href="#info">Working at Code.org</a>
 
@@ -42,7 +49,7 @@ We believe computer science and computer programming should be part of the core 
 We offer a comprehensive employee benefits package that includes:
 
 - Competitive Salary
-- Technology subsidy consistent with our Bring Your Own Device environment 
+- Technology subsidy consistent with our Bring Your Own Device environment
 - Flexible, engaging working environment
 - Monthly unlimited ORCA pass or equal value transit subsidy; located near public transit hub in Seattle, WA
 - Paid time off: 3 weeks vacation annually, sick leave, and 'winter break' office closure the two weeks that include Christmas and New Years.
@@ -56,5 +63,3 @@ We offer a comprehensive employee benefits package that includes:
 No relocation packages
 
 **Don't see a good fit? <a href="mailto:jobs@code.org">Drop us a line</a> and a resume and let us know why you want to work for us and what you would bring to our team.**
-
-

@@ -14,9 +14,9 @@
   = f.label :palette_category_at_start
   = f.select :palette_category_at_start, options_for_select(@level.class.palette_categories, @level.palette_category_at_start), {include_blank: true}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :droplet_tooltips_disabled, description: "Hide droplet documentation tooltips"}
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :lock_zero_param_functions, description: "Don't allow parameters to be added to user-defined functions with no parameters"}
 .field
   = f.label :text_mode_at_start, 'Code View When Level Starts'
   %p What mode the code is presented as when the level loads
@@ -30,7 +30,7 @@
     = f.radio_button :text_mode_at_start, 'true'
     = f.label :text_mode_at_start, 'Always start with text', :value => 'true'
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :libraries_enabled, description: "Enable Libraries"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :libraries_enabled, description: "Enable Libraries"}
 .field
   = f.label :start_libraries,'User-Created Toolbox Libraries (make sure that Enable Libraries ^ is checked)'
   = f.text_area :start_libraries, value: @level.start_libraries

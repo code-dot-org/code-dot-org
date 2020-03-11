@@ -136,7 +136,6 @@ gl:
     valid_password: "Contrasinal válido!"
     invalid_password: "O contrasinal  ten que ter, polo menos, 6 caracteres"
     mismatch_password: "Os dous contrasinais que metiches non se corresponden"
-    under_13_consent: "De ter menos de 13 anos, confirmo que teño autorización de meus pais ou titores legais para empregar os servizos de Code.org."
     student_consent: "Confirmo que teño autorización de meus pais ou titores legais para empregrar os servizos de Code.org."
     agree_us_website: "Estou de acordo en usar un sitio web localizado nos Estados Unidos."
     additional_information: "Necesitamos máis informacións para continuarmos o proceso de creacción da conta."
@@ -478,6 +477,7 @@ gl:
     download: 'Baixar Vídeo'
     show_notes: 'Amosar notas'
     show_video: 'Amosar video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       link: "Aprender máis"
@@ -565,6 +565,8 @@ gl:
   landing:
     report_bug: "Comunicar erro"
     support: "Obter axuda"
+  free_response:
+    placeholder: "Insira a súa resposta aquí"
   multi:
     wrong_title: "Resposta incorrecta"
     wrong_body: "A resposta que vostede tecleou non é correcta. Tente novamente!"
@@ -717,3 +719,4 @@ gl:
     accept: 'Acepto'
   gdpr_dialog:
     yes: 'Si'
+  copy: 'Copiar'

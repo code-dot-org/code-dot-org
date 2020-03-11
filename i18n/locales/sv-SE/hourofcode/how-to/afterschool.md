@@ -6,7 +6,7 @@ title: Så-gör-du guide
 
 # Hur man undervisar Hour of Code på fritids och i föreningar
 
-### Häng på och introducera en grupp elever i deras första programmeringstimme genom dessa steg. Hour of Code är lätt att delta i - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Häng på och introducera en grupp elever till deras första programmeringstimme med dessa steg. Hour of Code är enkelt att delta i - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
 * * *
 
@@ -79,6 +79,6 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 
 ## Vad kan jag göra efter Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

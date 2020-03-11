@@ -2182,6 +2182,13 @@ tr-TR:
           **İsteğe Bağlı Görev**
 
           Şarkının farklı yerlerinde <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> etkinliklerinin altına yeni blok ekleyerek arka plan efektini değiştirin.
+      Dance_Party_05:
+        validation: |-
+          **Bu seviyeyi nasıl geçerim?**
+
+          -   Dansçınızın, seviye sona ermeden en az 4 farklı dans hareketi boyunca hareket etmesi gerekir.
+
+          _Bu seviye 12 ölçütten sonra biter._
       Dance_Party_06:
         validation: |-
           **Bu seviyeyi nasıl geçerim?**
@@ -2240,6 +2247,8 @@ tr-TR:
           -   Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.
 
           _Bu seviye 8 ölçüden sonra biter._
+      Dance_Party_extras_alternate_2019:
+        alternate: Alternatif blok "Dansçılar" kategorisindedir.
       Function intro Ryan:
         Function_intro_Ryan_b: Fonksiyonları düzgün çağırırsanız, bu yolda seyahat
           edeceksiniz...
@@ -5496,9 +5505,6 @@ tr-TR:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
           çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_eventsA_2019:
-        courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
-          çalışma alanına sürüklemeye ihtiyacın olacak.
-      courseC_PlayLab_eventsA_embed_2019:
         courseC_PlayLab_eventsA_b: Bulmacayı çözmek için`çalıştığı zaman` olay bloğunu
           çalışma alanına sürüklemeye ihtiyacın olacak.
       courseC_PlayLab_events_challenge1:

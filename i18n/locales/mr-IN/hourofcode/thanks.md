@@ -1,8 +1,8 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
+title: कोडचा तास आयोजित करण्यास साइन अप केल्या बद्दल धन्यवाद!
 ---
 
-# Thanks for signing up to host an Hour of Code!
+# कोडचा तास आयोजित करण्यास साइन अप केल्या बद्दल धन्यवाद!
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

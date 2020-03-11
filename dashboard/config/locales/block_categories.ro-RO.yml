@@ -3,60 +3,28 @@ ro:
   data:
     block_categories:
       Actions: Acţiuni
-      Loops: Bucle
-      Functions: Funcţii
-      Color: Culoare
-      Brushes: Pensule
-      Math: Matematică
-      Logic: Logică
-      Variables: Variabile
-      Number: Număr
-      String: Șir de carcatere
-      Image: Imagine
-      Boolean: Boolean
-      Conditionals: Condiţionale
-      Events: Evenimente
-      Games/Score: Jocuri/Scor
-      Comments: Comentarii
-      Category: Categorie
-      Prebuilt: Precompilate
-      Text: Text
-      Picker: Selector
-      Comment: Comentariu
-      World: Lume
-      Sprites: Spiriduși
-      Behaviors: Comportamente
-      'Variables ': 'Variabile '
-      Default: Predefinit
-      Locations: Locaţii
-      Bunny Game: Joc cu iepuraș
-      everythingelse: toate celelalte
-      Location: Locatie
-      numbers: numere
-      Numbers: Numere
-      Input: Intrare
-      Dancers: Dansatori
-      Groups: Grupuri
       Advanced: Avansat
-      Start: Începe
-      Music: Muzică
-      Dancing: Dans
-      Sprite: Spiriduș
-      Brush: Periază
-      Make Sprite: Fă un spiriduș
-      Movement: Mișcare
-      Booleans: Booleene
-      Functional: Funcţionale
-      While Events: Evenimente `atâta timp` (while)
-      Sprite Properties: Proprietăți spiriduș
-      Predefined: Predefinite
-      test: test
-      test2: test2
-      Use These Blocks: Utilizează aceste blocuri
-      Do Not Use: Nu utilizaţi
-      Foo: Foo
-      Name: Nume
-      NEW BLOCKS: BLOCURI NOI
+      Behaviors: Comportamente
+      Brushes: Pensule
+      Color: Culoare
+      Comment: Comentariu
+      Comments: Comentarii
+      Conditionals: Condiţionale
+      Dancers: Dansatori
+      Default: Predefinit
+      Events: Evenimente
+      Functions: Funcţii
       'Functions ': 'Funcţii '
       Game/Score: Joc/Scor
-      Function: Funcţie
+      Games/Score: Jocuri/Scor
+      Groups: Grupuri
+      Locations: Locaţii
+      Logic: Logică
+      Loops: Bucle
+      Math: Matematică
+      Numbers: Numere
+      Properties: Proprietăţi
+      Text: Text
+      Variables: Variabile
+      'Variables ': 'Variabile '
+      World: Lume

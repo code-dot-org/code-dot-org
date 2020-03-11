@@ -640,10 +640,17 @@ da:
         iceage_events: Ice Age kodetime - begivenheder
         iceage_repeat: Ice Age kodetime - gentagelseskommandoer
         CSF_loops_AB: Løkker
-        hoc_dance_warmup: Dansefest - Opvarmning
-        hoc_dance_congrats: Dansefest - lad festen fortsætte!
+        hoc_dance_warmup: Dance Party - Opvarmning
+        hoc_dance_events: Danse fest - Events
+        hoc_dance_properties: Danse fest - Indstillinger
+        hoc_dance_congrats: Dance Party - Las os feste!
         csd_pair_programming: Par programmering
         csd_applab_parameters: Funktioner med parametre
+        hoc_dance_congrats_2019: Dance Party 2019 - Las os feste!
+        hoc_dance_warmup_2019: Dance Party 2019 - Opvarmning
+        hoc_dance_events_2019: Dance Party 2019 - Hændelser
+        hoc_dance_measures_2019: Dance Party 2019 - Takter
+        hoc_dance_properties_2019: Dance Party 2019 - Egenskaber
     callout:
       text:
         drag_blocks: Træk i en "flyt fremad" blok og fastgør den under den anden blok

@@ -15,6 +15,13 @@ id:
         Untuk mengakses layanan ini, hentikan program yang terpasang dan coba lagi.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: tidak valid. Perhatikan bahwa setiap tautan hanya dapat digunakan
+                satu kali untuk mereset kata sandi Anda, dan hanya tautan yang paling
+                baru terkirim akan berfungsi.
       messages:
         blank: diperlukan
         blank_plural: diperlukan
@@ -47,6 +54,7 @@ id:
           membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Mengisi informasi berikut untuk
           menyelesaikan membuat akun Code.org dengan **%{provider}** untuk **%{email}**.
+        reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         error:
           future: tidak mungkin di masa depan
   beta: Percobaan
@@ -65,7 +73,9 @@ id:
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   join_section:
     code:
+      title: Bergabunglah dengan bagian di Code.org
       placeholder: Kode Bagian (ABCDEF)
+      submit: Bergabung
   add_hint_form:
     placeholder: Masukkan pentunjuk anda disini
     submit: tambah petunjuk
@@ -76,7 +86,7 @@ id:
   trophies: Piala
   courses: Kursus
   courses_page:
-    title_student: Belajar di Code Studio
+    title_student: Belajar Ilmu Komputer
     title_teacher: Ajarin dengan kode studio
   unplugged_activity: Kegiatan tanpa komputer
   of: dari
@@ -166,8 +176,6 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    under_13_consent: Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa
-      saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org.
     student_consent: Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali
       hukum izin untuk menggunakan layanan Code.org.
     agree_us_website: Saya setuju untuk menggunakan sebuah situs web yang berbasis
@@ -323,14 +331,14 @@ id:
           password Anda
   nav:
     header:
-      finished_hoc: Saya telah menyelesaikan jam kode!
+      finished_hoc: Saya selesai!
       sign_in_to_save: Masuk untuk mencatat kemajuan belajar
       my_dashboard: Dasbor saya
-      course_catalog: Katalog kursus
+      course_catalog: Katalog Kursus
       project_gallery: Proyek
       sections: Sesi
       help_support: Bantuan dan dukungan
-      report_bug: Laporkan bug
+      report_bug: Laporkan masalah
       teacher_community: Komunitas guru
       professional_learning: Belajar profesional
       documentation: Dokumentasi
@@ -339,6 +347,8 @@ id:
       app_lab_tutorials: Tutorial aplikasi Lab
       game_lab_documentation: Dokumentasi lab permainan
       game_lab_tutorials: Tutorial lab permainan
+      sprite_lab_documentation: Dokumentasi Lab Sprite
+      sprite_lab_tutorials: Tutorial Lab Sprite
       educate_overview: Ikhtisar Pendidik
       educate_elementary: Sekolah Dasar
       educate_middle: Sekolah Menengah Pertama
@@ -387,6 +397,7 @@ id:
       basketball: Bola basket
       bounce: Terpental
       calc: Calc
+      dance: Pesta Tari
       eval: Eval
       flappy: Flappy
       frozen: Frozen
@@ -619,16 +630,16 @@ id:
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; adalah merk dagang dari Code.org."
     copyright: Hak cipta
-    more: Lebih
+    more: Selengkapnya
     feedback: Berikan pendapat
     translate: Bantu kami menerjemahkan ke bahasa anda
     support: Bantuan dan komunitas
     support_url: http://support.code.org
     tos_short: Ketentuan
-    tos: Syarat
+    tos: Ketentuan Layanan
     privacy: Kebijakan privasi
     secure: Versi yang aman
-    report_abuse: Laporkan penyalahgunaan
+    report_abuse: Laporkan Penyalahgunaan
     built_on_code_studio: Dibuat di Studio Kode
     make_my_own_app: Membuat aplikasiku sendiri
     how_it_works: Bagaimana hal tersebut bekerja
@@ -649,13 +660,14 @@ id:
     download: Ungah Video
     show_notes: Tampilkan Catatan
     show_video: Tampilkan Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Peramban kamu tidak didukung. Harap tingkatkan Peramban
         kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu peramban
         yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi beberapa
         fungsi tidak dapat bekerja.
-      link: Pelajari lebih banyak
+      link: Pelajari lebih lanjut
       applab_unsupported_tablet: Aplikasi Labotarium bekerja paling baik di komputer
         atau laptop dengan mouse dan papan ketik. Anda mungkin mengalami masalah dengan
         menggunakan alat ini pada perangkat Anda pada saat ini.
@@ -710,6 +722,10 @@ id:
         tersebut dapat bekerja, kemudian bagikan aplikasimu dalam hitungan detik.
       audience: Usia 13+
       cta: Pelajari caranya
+    dance:
+      title: Pesta Tari
+    dance-2019:
+      title: Pesta Tari
     hoc:
       title: Labirin klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
@@ -813,7 +829,7 @@ id:
     header: Galeri
     header_playlab: Play Lab/Lab Permainan
     header_artist: Artis
-    report_abuse: Laporkan penyalahgunaan
+    report_abuse: Laporkan Penyalahgunaan
   landing:
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
@@ -822,6 +838,8 @@ id:
     help_support: Bantuan dan dukungan
     documentation: Dokumentasi
     tutorials: Tutorial
+  free_response:
+    placeholder: Masukkan jawaban Anda di sini
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
@@ -915,13 +933,15 @@ id:
       Anda akan diminta untuk mengkonfirmasi bahwa sekolah Anda memiliki izin orang
       tua untuk pengumpulan informasi pribadi siswa untuk penggunaan dan manfaat dari
       sekolah, termasuk program-program pendidikan seperti Kode Studio.
-    tos: Syarat
+    tos: Ketentuan Layanan
     privacy: Kebijakan privasi
     privacy_notice: Pemberitahuan Privasi
     accept_label: Saya menyetujui <a href="%{tos_url}" target="_blank">Syarat dan
       Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>
     accept_label_markdown: Saya menyetujui [Syarat dan Ketentuan](%{tos_url}) dan
       [Kebijakan Pribadi](%{privacy_url})
+    accept_tos: Dengan mendaftar di Code.org, Anda setuju dengan [Ketentuan Layanan](%{tos_url})
+      dan [Kebijakan Privasi](%{privacy_url}) kami.
     accept: Terima
     print: Cetak
     reminder_desc: Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Syarat
@@ -1257,11 +1277,16 @@ id:
         ages_11_12: 11-12 tahun
         ages_13_14: 13-14 tahun
         ages_15_16: 15-16 tahun
+        ages_17_18: 17-18 tahun
+        ages_19_over: 19+ tahun
       subjects:
         cs: Ilmu komputer
+        ict: ICT
         math: Matematika
         science: Ilmu pengetahuan
         la: Seni Bahasa
+        music: Musik
+        art: Seni
       resources:
         kodable: Kodable
         lightbot: Lightbot
@@ -1283,3 +1308,4 @@ id:
   page_not_found_description: Halaman yang anda cari tidak ada di alamat ini. Periksa
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
+  copy: Salin
