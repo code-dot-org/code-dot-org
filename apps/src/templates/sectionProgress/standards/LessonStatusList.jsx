@@ -28,9 +28,7 @@ class LessonStatusList extends Component {
     const completedLessons = _.filter(unpluggedLessonList, function(lesson) {
       return lesson.completed;
     });
-    const alreadySelected = this.props.selectedLessons;
-    const displayAsSelected = alreadySelected.concat(completedLessons);
-    this.props.setSelectedLessons(displayAsSelected);
+    this.props.setSelectedLessons(completedLessons);
   }
 
   handleChange = selectedLessons => {
