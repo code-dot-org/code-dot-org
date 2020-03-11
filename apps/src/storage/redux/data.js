@@ -83,6 +83,9 @@ export default function(state = initialState, action) {
         // it as an array."
         // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
         // For simplicity, always coerce it to an array (list of records).
+        if (!action.tableRecords) {
+          return state.set('tableRecords', []);
+        }
         const records = Array.isArray(action.tableRecords)
           ? action.tableRecords
           : Object.values(action.tableRecords);
