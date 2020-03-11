@@ -17,22 +17,6 @@
         },
         {
           "type": "radiogroup",
-          "name": "consent_survey",
-          "title": "Your participation is voluntary but strongly encouraged. Do you consent to completing this survey?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "Yo"
-            }
-          ]
-        },
-        {
-          "type": "radiogroup",
           "name": "will_teach_csd_next_year",
           "title": "Will you be teaching/are you teaching CS Fundamentals 5-day Summer in the next school year? ",
           "isRequired": true,
