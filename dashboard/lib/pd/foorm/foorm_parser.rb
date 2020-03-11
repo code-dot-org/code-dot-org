@@ -1,5 +1,5 @@
-require 'pd/foorm/foorm_parser.rb'
-
+# Parses foorm forms and submissions into a useful format for the workshop_summarizer
+# and rollups (future work)
 module Pd::Foorm
   class FoormParser
     include Constants

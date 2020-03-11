@@ -7,6 +7,7 @@ module Pd::Foorm
       TYPE_RATING = 'rating'.freeze,
       TYPE_MATRIX = 'matrix'.freeze,
       TYPE_COMMENT = 'comment'.freeze
+      # TODO: cover dropdown
     ].freeze
 
     IGNORED_QUESTION_TYPES = [

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import ChoiceResponses from '../../../components/survey_results/choice_responses';
-import TextResponses from '../../../components/survey_results/text_responses';
+import ChoiceResponses from '../../components/survey_results/choice_responses';
+import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
 
 export default class Results extends React.Component {
@@ -119,16 +119,7 @@ export default class Results extends React.Component {
           this.props.questions,
           this.props.thisWorkshop[session]
         )}
-        {/* {!_.isEmpty(this.props.questions[session]['facilitator']) && (
-          <div>
-            <h3>Facilitator Specific Questions</h3>
-            {this.renderResultsForSessionQuestionSection(
-              'facilitator',
-              this.props.questions[session]['facilitator'],
-              this.props.thisWorkshop[session]['facilitator']
-            )}
-          </div>
-        )} */}
+        {/* TODO: add facilitator feedback per session once we have that data */}
       </div>
     );
   }
@@ -148,47 +139,8 @@ export default class Results extends React.Component {
     ));
   }
 
+  // TODO: Render rollups once they are sent
   // renderSurveyRollups() {
-  //   let tabs = [];
-  //   let key = 0;
-
-  //   if (this.props.workshopRollups) {
-  //     key += 1;
-  //     tabs.push(
-  //       <Tab
-  //         eventKey={this.props.sessions.length + key}
-  //         key={key}
-  //         title="Workshop Rollups"
-  //       >
-  //         <SurveyRollupTable
-  //           courseName={this.props.courseName}
-  //           rollups={this.props.workshopRollups.rollups}
-  //           questions={this.props.workshopRollups.questions}
-  //           facilitators={this.props.workshopRollups.facilitators}
-  //         />
-  //       </Tab>
-  //     );
-  //   }
-
-  //   if (this.props.facilitatorRollups) {
-  //     key += 1;
-  //     tabs.push(
-  //       <Tab
-  //         eventKey={this.props.sessions.length + key}
-  //         key={key}
-  //         title="Facilitator Rollups"
-  //       >
-  //         <SurveyRollupTable
-  //           courseName={this.props.courseName}
-  //           rollups={this.props.facilitatorRollups.rollups}
-  //           questions={this.props.facilitatorRollups.questions}
-  //           facilitators={this.props.facilitatorRollups.facilitators}
-  //         />
-  //       </Tab>
-  //     );
-  //   }
-
-  //   return tabs;
   // }
 
   render() {
