@@ -56,7 +56,12 @@ class VisualizerModal extends React.Component {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    tableRecords: PropTypes.array.isRequired
+    // "if all of the keys are integers, and more than half of the keys between 0 and
+    // the maximum key in the object have non-empty values, then Firebase will render
+    // it as an array."
+    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+      .isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -138,7 +143,13 @@ class VisualizerModal extends React.Component {
   }
 
   render() {
-    const parsedRecords = this.parseRecords(this.props.tableRecords);
+    // this.props.tableRecords is either an object or an array (see propTypes comment). If it's an object, we want to
+    // convert it to an array before trying to parse the records.
+    const parsedRecords = this.parseRecords(
+      Array.isArray(this.props.tableRecords)
+        ? this.props.tableRecords
+        : Object.values(this.props.tableRecords)
+    );
     let filteredRecords = parsedRecords;
     if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
       filteredRecords = this.filterRecords(
@@ -330,6 +341,6 @@ class VisualizerModal extends React.Component {
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({
   tableColumns: state.data.tableColumns || [],
-  tableRecords: state.data.tableRecords || [],
+  tableRecords: state.data.tableRecords || {},
   tableName: state.data.tableName || ''
 }))(VisualizerModal);
