@@ -1,13 +1,11 @@
 /*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
-import {unpublishProjectLibrary} from '@cdo/apps/templates/projects/projectsRedux';
 
 const styles = {
   alert: {
@@ -59,15 +57,12 @@ export const PublishState = {
  * An interactive page for a dialog that can be used to publish or unpublish
  * a library from a source project.
  */
-export class LibraryPublisher extends React.Component {
+export default class LibraryPublisher extends React.Component {
   static propTypes = {
     onPublishSuccess: PropTypes.func.isRequired,
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
-    libraryClientApi: PropTypes.object.isRequired,
-
-    // Provided by Redux
-    unpublishProjectLibrary: PropTypes.func.isRequired
+    libraryClientApi: PropTypes.object.isRequired
   };
 
   state = {
@@ -121,7 +116,7 @@ export class LibraryPublisher extends React.Component {
           newName: libraryName,
           newDescription: libraryDescription,
           publishing: true,
-          newVersionId: data.versionId
+          newVersionId: data && data.versionId
         });
 
         onPublishSuccess(libraryName);
@@ -295,12 +290,3 @@ export class LibraryPublisher extends React.Component {
     );
   }
 }
-
-export default connect(
-  state => ({}),
-  dispatch => ({
-    unpublishProjectLibrary(channelId, libraryApi, onComplete) {
-      dispatch(unpublishProjectLibrary(channelId, libraryApi, onComplete));
-    }
-  })
-)(LibraryPublisher);
