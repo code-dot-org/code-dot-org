@@ -115,7 +115,7 @@ class TestRDS < Minitest::Test
           "vpc_security_groups": [
             {
               # TODO: (suresh) This is not getting set correctly..
-              "vpc_security_group_id": @source_cluster[:vpc_security_group_id],
+              "vpc_security_group_id": @source_cluster[:db_clusters][0][:vpc_security_groups][0][:vpc_security_group_id],
               "status": "active"
             }
           ],
@@ -128,11 +128,11 @@ class TestRDS < Minitest::Test
           "availability_zone": "us-east-1d",
           "db_subnet_group": {
             # TODO: (suresh) This is not getting set correctly..
-            "db_subnet_group_name": @source_cluster[:db_subnet_group_name],
-            "db_subnet_group_description": @source_cluster[:db_subnet_group_description],
-            "vpc_id": @source_cluster[:vpc_id],
+            "db_subnet_group_name": @source_cluster[:db_clusters][0][:db_subnet_group_name],
+            "db_subnet_group_description": @source_cluster[:db_clusters][0][:db_subnet_group_description],
+            "vpc_id": @source_cluster[:db_clusters][0][:vpc_id],
             "subnet_group_status": "Complete",
-            "subnets": @source_cluster[:subnets]
+            "subnets": @source_cluster[:db_clusters][0][:subnets]
           },
           "preferred_maintenance_window": "thu:00:05-thu:00:35",
           "pending_modified_values": {},
