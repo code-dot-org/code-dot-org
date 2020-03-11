@@ -263,7 +263,8 @@ export class LibraryPublisher extends React.Component {
       dashboard.project.setLibraryDetails({
         newName: undefined,
         newDescription: undefined,
-        publishing: false
+        publishing: false,
+        newVersionId: -1
       });
     }
   };
