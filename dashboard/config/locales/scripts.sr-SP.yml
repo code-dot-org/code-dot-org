@@ -1427,3 +1427,41 @@ sr:
               name: Брзина
             Functions:
               name: Функције
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Сигурна путања
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Бинарне наруквице
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            'Unplugged: Binary':
+              name: 'Unplugged: Binary'
+            Artist Binary:
+              name: Уметник Бинарно
+            Digital Citizenship:
+              name: Дигитално држављанство
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Кондиционали
+        coursef-2020:
+          stages:
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Пчелица словарица

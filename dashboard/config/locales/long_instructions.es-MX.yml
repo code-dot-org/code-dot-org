@@ -17196,6 +17196,8 @@ es-MX:
         Ahora que has transmitido información representada como números decimales, puedes asignar esos números a caracteres de texto para enviar información basada en texto de un lado a otro. Con un protocolo basado en texto, puedes representar y comunicar fácilmente todo tipo de información.
 
         Tu profesor entregará instrucciones más específicas para esta actividad.
+      New Minecraft Hero Project: "**Improvisación:** ¡Ahora es cosa tuya! Usa el
+        código del Agent para ayudarte a explorar este mundo."
       OPD-K5 CS Video: |-
         ## Primeros pasos: ¿Por qué los fundamentos de la informática (CS)?
 
@@ -17207,10 +17209,10 @@ es-MX:
         >
         > ¿Cuáles son tus primeras impresiones de los Fundamentos de Ciencias de la Computación?
         >
-        > [Tuitea tus pensamientos](https://twitter.com/teachcode) y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        > [Tuitea tus pensamientos][0] y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
-        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook][1] o [Instagram][2].
       OPD-K5 Closing: |-
         > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
         >
@@ -17220,8 +17222,8 @@ es-MX:
 
         > Un evento es una línea de código que le dice a tu computadora que "escuche" que algo suceda y luego tome una acción. Por ejemplo, en las páginas web, a menudo puedes mostrar un menú desplegable cuando pasas el mouse sobre la barra de navegación. El "desplazamiento del mouse" es un "evento" que desencadena una acción.
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
-        que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
-        ¡En la página siguiente podrás escribir un programa similar!
+        que los estudiantes más jóvenes escribirán en [Course A][0]. ¡En la página
+        siguiente podrás escribir un programa similar!
       OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
         planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
         cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados

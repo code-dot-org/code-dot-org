@@ -63,6 +63,7 @@ it:
   previous_page: Pagina precedente
   next_page: Pagina successiva
   next_resource: Risorsa successiva
+  done_with_module: Lezione completata
   cancel: "Annulla"
   okay: "Ok!"
   or: "o"
@@ -942,6 +943,7 @@ it:
     csp_traversals: 'Traversali'
     csp_libraries: 'Librerie'
     csp_parameters_return_values: 'Parametri e Valori di Ritorno'
+    csp_unit2_2020: 'Princìpi dell''Informatica - Unità 2'
     dlp: 'Punti di riflessione'
     time4cs_c1: 'Everglades ed i Suoi Ecosistemi'
     time4cs_c2: 'Catene Alimentari negli Everglades'
@@ -1129,3 +1131,4 @@ it:
   page_not_found_header: '404 Pagina non trovata'
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
+  copy: 'Copia'

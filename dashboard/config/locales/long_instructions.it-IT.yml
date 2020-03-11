@@ -2207,6 +2207,76 @@ it-IT:
       NEW Course 4 Bee For Loops 8: Questo codice è da completare! Quale deve essere
         il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi
         di nettare?
+      New Minecraft Hero Project: "**Tempo di giocare:** ora tocca a te! Programma
+        l'Agente per farti aiutare ad esplorare questo mondo."
+      OPD-K5 CS Video: |-
+        ## Per cominciare - Perché Fondamenti di informatica?
+
+        Completerai questo corso gratuito in autoapprendimento utilizzando la stessa piattaforma che potrai usare in classe con i tuoi alunni.
+
+        Iniziamo mettendo a fuoco cosa sono i "Fondamenti di informatica" e come sono stati appresi da altri insegnanti e alunni in tutto il mondo. Nel prossimo livello vedremo come interagire con la piattaforma di studio che userai durante tutto il corso.
+
+        > ## Rifletti
+        >
+        > Quali sono le tue prime impressioni sui "Fondamenti di informatica"?
+        >
+        > Se sai l'inglese, [Twitta i tuoi pensieri][0] taggando @teachcode.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
+        > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook][1] o [Instagram][2].
+      OPD-K5 EventsVid: |-
+        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché proverai alcuni esercizi in qui devi programmare gli eventi.
+
+        > Un evento è una istruzione che dice al computer di "ascoltare" se succede un determinata cosa, e di conseguenza eseguire un'azione. Per esempio, in alcune  pagine web,  passando il mouse sopra un menù a tendina, esso si apre. Il "mouse sopra " è un evento che attiva un'azione.
+      OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
+        che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
+        sarai tu che dovrai scrivere un simile programma!
+      OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni dei piani di
+        sviluppo delle attività tradizionali. Tieni presente sono disponibili tutte
+        le pianificazioni per ogni lezione del corso \"Fondamenti di informatica\"
+        -- sia tradizionali che al computer. Puoi trovare la lista completa delle
+        strutture delle lezioni qui sotto:\n<br/>\n<br/> \n[Pianificazione delle lezioni
+        del corso A][0]<br/> \n[Pianificazione delle lezioni del corso B][1]<br/>\n[Pianificazione
+        delle lezioni del corso C][2]<br/> \n[Pianificazione delle lezioni del corso
+        D][3]<br/> \n[Pianificazione delle lezioni del corso E][4]<br/> \n[Pianificazione
+        delle lezioni del corso F][5]<br/> \n\nSentiti libero di adattare queste lezioni
+        o creare la tua specifica pianificazione della lezione che asseconda le tue
+        preferenze! Il video qui sotto spiega la struttura delle lezioni del corso
+        \"Fondamenti di informatica\" ed aggiunge anche suggerimenti se dovessi decidere
+        di creare una tua lezione."
+      OPD-K5 Problem Solving: |-
+        # Linee guida > Insegnare a risolvere i problemi
+
+        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Il metodo metacognitivo di risoluzione dei problemi implica di pensare sul ragionamento effettuato e di riflettere su come "tu" risolveresti il problema. Guarda il video sottostante per imparare come la "Ricetta per risolvere gli esercizi" di Code.org  può aiutare gli alunni ad affrontare con successo problemi difficili:
+
+        [Questa scheda][0] illustra i vari passi della "ricetta per risolvere gli esercizi".
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Riflettiamo:
+        >
+        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza?
+        >
+        > [Twitta i tuoi pensieri][1] taggando @teachcode.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Condividi su Twitter</h4></a>
+      OPD-K5 RepeatBlock: Guarda il video qui sotto che spiega come funzionano i cicli
+        ed introduce il blocco "Ripeti" nei corsi di "Fondamenti di informatica".
+      OPD-K5 Unplugged Video: |-
+        ## Uno sguardo avanti > "Senza computer"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Nell'insegnamento dell'informatica potresti pensare che sia fondamentale basarsi sulla miglior tecnologia disponibile -- computer nuovi, connessione internet veloce e le applicazioni più moderne. Ma in Code.org abbiamo scoperto che alcune delle lezioni di informatica di maggior successo sono in realtà di tipologia tradizionale, con pochissima tecnologia o del tutto prive. In queste lezioni gli studenti imparano i principi fondamentali dell'informatica senza l'uso di computer.
+
+        Ecco perché in tutti i nostri corsi di Fondamenti di informatica si sfruttano attività tradizionali per presentare i principi fondamentali dell'informatica con attività concrete, prima che gli studenti scrivano programmi al computer che sfruttano quegli  stessi concetti. Un esempio potrebbe essere un ballo con movimenti ripetitivi per far comprendere agli alunni come i cicli ripetono le istruzioni all'interno di un programma. In questo modo, quando gli studenti scriveranno programmi con i cicli, l'attività tradizionale avrà creato un'associazione preliminare con un'attività a loro familiare che potranno correlare con questo nuovo concetto.
+
+        Guarda il video sottostante per comprendere i benefici dell'uso delle lezioni tradizionali nell'insegnamento dell'informatica.
+
+        **Mentre percorrerai le lezioni da 4 a 8**, avrai l'occasione di conoscere alcune delle nostre attività tradizionali per ognuno dei concetti chiave trattati in questo corso.
+      OPD-K5 WhatIsCS: Ti sei mai chiesto "Cos'è esattamente l'informatica?" oppure
+        "Perché alcuni programmi informatici sono scritti con delle parole ed altri
+        usando delle immagini?" Guarda questo video, è un'ottima introduzione all'informatica.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
       Overworld Chop Tree_2019: 'Il legno è una risorsa molto importante: serve per

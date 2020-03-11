@@ -1,7 +1,12 @@
+- content_for(:head) do
+  -# only add a single script, even if this view is included multiple times in the page
+  - js_path = webpack_asset_path('js/levels/_teacher_markdown.js')
+  - unless content_for(:head) && content_for(:head).include?(js_path)
+    %script{src: js_path}
+
 / Teacher only markdown
 - if data['teacher_markdown'].present? && can_view_teacher_markdown?
   #markdown.teacher.hide-as-student
     %h3= t('teacher.for_teachers_only')
-    / Render markdown text through the ActionView template engine.
-    .content
-      = ActionView::Base.new.render(inline: data['teacher_markdown'], type: :md)
+    / Render markdown text clientside via _teacher_markdown.js
+    .content.markdown-container{data: {markdown: data['teacher_markdown']}}

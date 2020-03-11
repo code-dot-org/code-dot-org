@@ -65,6 +65,7 @@ hu:
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   join_section:
     code:
+      title: Csatlakozz egy csoporthoz a Code.org-on
       placeholder: Szakasz kód (ABCDEF)
       submit: Csatlakozás
   add_hint_form:
@@ -96,8 +97,8 @@ hu:
     continue_with: 'Folytatás ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: Bejelentkezve!
-    signed_out_markdown: "### Kijelentkezett innen: [Code.org](%{url})."
-    already_signedup: Már regisztrált?
+    signed_out_markdown: "### Kijelentkeztél innen: [Code.org](%{url})."
+    already_signedup: Már regisztráltál?
     notyet_signedup: Még nem csatlakoztál?
     google_oauth2: Google fiók
     twitter: Twitter
@@ -181,7 +182,7 @@ hu:
     user_type_student: Diák
     field_is_required: szükséges
     accept_terms: El kell fogadnia, hogy létre hozzon egy fiókot
-    error: Hiba lépett fel.
+    error: Hiba történt
     email_preference_question: Küldhetünk neked email üzeneteket az új tanfolyamjainkról,
       helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)
     email_preference_privacy: "(Tekintsd át az adatvédelmi irányelveinket)"
@@ -204,7 +205,7 @@ hu:
     school: Iskola
     other_school_not_listed: Más, fel nem sorolt iskola
     school_name: Iskola neve
-    school_zip: Iskola irányítószám
+    school_zip: Iskola irányítószáma
     school_address: Iskola címe
     school_organization_name: Iskola vagy szervezet neve
     school_organization_zip: Iskola/szervezet irányítószáma
@@ -222,7 +223,7 @@ hu:
   signinsection:
     welcome: 'Üdvözlünk itt: %{section_name}'
     name: Válaszd ki a neved
-    picture: Keress egy titkos képet
+    picture: Keresd meg a titkos képed
     words: Írd be a titkos szavaidat
     login: Bejelentkezés
     invalid_login: Érvénytelen bejelentkezés, kérjük próbáld meg újra
@@ -923,3 +924,4 @@ hu:
     accept: Egyetértek
   gdpr_dialog:
     true: Igen
+  copy: Másol
