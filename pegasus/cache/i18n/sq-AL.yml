@@ -28,8 +28,6 @@ sq-AL:
     rreth shkencave kompjuterike
   petition_sign_message: 'Nëse jeni dakort, nënshkruani emrin tuaj. Bashkohuni me
     # të tjerët.'
-  petition_sign_message_support: 'Në qoftë se ju na mbështesni, nënshkruaj emrin tënd.
-    Bashkohu # të tjerë.'
   petition_join_others: 'Bashkohu # të tjerë'
   name: Emri
   email: Email
@@ -217,6 +215,7 @@ sq-AL:
   if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu!
     Ne duam qe e gjithe bota te mesoje.
   personalize_certificate: Personalizoni certifikatën tuaj
+  print_certificates: Shtyp Certifikatat
   share_achievement: Shpërndaj arritjet tuaja
   beyond_hour_message: Vazhdo me <a href='http://studio.code.org'>kurse të tjera</a>,
     ose shiko më shumë mundësi tek <a href='/learn/beyond'>Mëso Përtej Një Ore</a>.

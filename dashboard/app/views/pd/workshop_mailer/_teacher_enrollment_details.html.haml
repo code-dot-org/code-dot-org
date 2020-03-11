@@ -27,6 +27,8 @@
     In order to save time during the workshop for more exploration, we ask that you install the Maker App
     before attending the workshop. Directions for setting up the Maker App can be found at
     = link_to('https://studio.code.org/maker/setup', 'https://studio.code.org/maker/setup') + '.'
+    School- or district-owned laptops may require administrator permission to download Maker App,
+    so we encourage you to start this process soon.
 
 - if @workshop.local_summer? && @is_reminder
   %h3
@@ -58,4 +60,6 @@
 %p
   P.S. Connect with other computer science teachers on Twitter
   = link_to '@TeachCode', 'https://twitter.com/teachcode', target: "_blank"
-  for inspiration and great tips on bringing computer science to every school. Speaking of social media, if you don't want your photo taken or posted at the workshop, make sure the facilitator knows before the workshop begins.
+  for inspiration and great tips on bringing computer science to every school. We encourage you and other workshop attendees to post photos from the workshop to social media, and help
+  = link_to 'spread awareness about computer science.', 'http://bit.ly/38Ivp20', target: "_blank"
+  However, if you don't want your photo taken, just make sure the facilitator knows before the workshop begins.

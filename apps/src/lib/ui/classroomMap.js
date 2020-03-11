@@ -3,6 +3,8 @@
  *   extracted to this file to be testable.
  */
 
+import {escapeHtml} from '@cdo/apps/utils';
+
 /**
  * Transform response into list of locations to display.
  * @param {Object} results
@@ -15,7 +17,7 @@ export function getLocations(results) {
 
   return results.response.docs.map((place, index) => {
     const [lat, lon] = place.location_p.split(',');
-    const title = place.school_name_s;
+    const title = escapeHtml(place.school_name_s);
     const html = compileHTML(index, place);
     return {
       lat,

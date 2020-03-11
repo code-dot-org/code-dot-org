@@ -1,0 +1,26 @@
+name 'CSD Header Size MC_2018_2019_pilot_2020'
+editor_experiment ''
+display_name 'Headings Quick Check'
+title 'Headings Quick Check'
+description 'Look at the code below and predict how the headings will be displayed. Choose from one of the options on the right.'
+height '125'
+
+wrong 'https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png'
+right 'https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png'
+wrong 'https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png'
+wrong 'https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png'
+markdown <<MARKDOWN
+<pre>
+&lt;h3&gt; Eggs &lt;/h3&gt;
+&lt;h1&gt; Bacon &lt;/h1&gt;
+&lt;h6&gt; Waffles &lt;/h6&gt;
+</pre>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+**Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side.  Students who have successfully answered the question will have a green bubble.  Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.
+
+<div class="clear"></div>
+MARKDOWN

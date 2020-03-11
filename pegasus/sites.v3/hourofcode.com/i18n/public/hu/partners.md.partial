@@ -2,39 +2,39 @@
 title: Partnerek
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+A Kódolás Óráját a Computer Science Education Week és Kódolás Órája tanácsadó és felülvizsgáló bizottsága vezeti.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
+A [Tanácsadó Bizottság]({{ urls/advisory_committee }}) középiskolai, egyetemi, közhasznú, profitorientált és nemzetközi szervezetek képviselőiből áll. Ez a bizottság irányítja a Kódolás Órája kampány stratégiáját.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+A [Felülvizsgáló Bizottság]({{ urls/review_committee }}) 15 általános iskolai és középiskolai oktatóból áll, akik a Tanácsadó Bizottság rovatának megfelelően mérik fel és tesznek javaslatot a tevékenységek kapcsán. Az oktatók véleményezik a több száz partner által leadott tevékenységeket, amelyeket diákok kezdeményeztek és az órákra készített oktatói terveket, felmérve a tevékenységek oktatási értékét, tanulói elkötelezési és érdeklődés fenntartási képességét.
 
-Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Mindkét bizottság munkája és odaadása hozzájárult a Kódolás Órájának sikeréhez és jövőképéhez, miszerint minden diáknak bevezetést szeretne nyújtani a számítástechnikába.
 
-# Major Partners and Corporate Supporters
+# Fő partnerek és vállalati támogatók
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Nemzetközi partnerek
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Curriculum és oktatási partnerek
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Infrastruktúra partnerek és eszközök
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# További partnerek
 
 {{ partners/additional_partners }}
 

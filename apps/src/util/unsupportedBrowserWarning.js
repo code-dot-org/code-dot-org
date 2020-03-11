@@ -20,6 +20,8 @@ export var checkForUnsupportedBrowsersOnLoad = function() {
         } else if (appOptions.app === 'gamelab') {
           textDivId = '#gamelab-unsupported-tablet';
         }
+      } else if (isIE11() && appOptions.app === 'fish') {
+        textDivId = '#oceans-unsupported-browser';
       } else if (isIE11() && appOptions.app === 'weblab') {
         textDivId = '#weblab-unsupported-browser';
       } else if (

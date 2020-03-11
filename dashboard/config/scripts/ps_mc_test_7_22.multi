@@ -2,10 +2,10 @@ name 'PS MC test 7-22'
 title 'Here is a title'
 question "Here is a question."
 description 'Here is a description'
-wrong '<b>A.</b>  wrong answer', feedback: 'feedback for this wrong answer.'
-right '<b>B.</b> right answer'
-wrong '<b>C.</b> another wrong answer'
-wrong '<b>D.</b>yet another wrong answer'
+wrong '**A.** wrong answer', feedback: 'feedback for this wrong answer.'
+right '**B.** right answer'
+wrong '**C.** another wrong answer'
+wrong '**D.**yet another wrong answer'
 
 markdown <<MARKDOWN
 Here is *some* **markdown**.  

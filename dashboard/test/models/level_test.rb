@@ -974,7 +974,6 @@ class LevelTest < ActiveSupport::TestCase
       name 'old multi level copy'
       editor_experiment 'new-level-editors'
       title 'Multiple Choice'
-
       question 'What is your favorite color?'
       wrong 'Red'
       wrong 'Green'

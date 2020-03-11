@@ -21,7 +21,6 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
-import Button from './Button';
 import Led from './Led';
 import {
   isNodeSerialAvailable,
@@ -29,6 +28,7 @@ import {
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
   CIRCUIT_PLAYGROUND_PID
 } from './portScanning';
+import {PlaygroundButton} from './Button';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -355,7 +355,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   createButton(pin) {
     pin = this.mappedPin(pin);
-    const newButton = new Button({board: this.fiveBoard_, pin});
+    const newButton = new PlaygroundButton({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newButton);
     return newButton;
   }

@@ -37,10 +37,10 @@ level 'U1L5 CSP Internet Simulator DNS', progression: 'Internet Simulator: DNS'
 level 'U2L4 CSP CFU scale', progression: 'Check For Understanding', assessment: true
 level 'U2L5 CSP CFU subgroups', progression: 'Check For Understanding', assessment: true
 
-stage 'Internet Dilemmas pt 1'
+stage 'Project - Internet Dilemmas Part 1'
 level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Internet Dilemmas, pt 2'
+stage 'Project - Internet Dilemmas Part 2'
 level 'CSP U2L9 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Lesson 9: Assessment Day', lockable: true

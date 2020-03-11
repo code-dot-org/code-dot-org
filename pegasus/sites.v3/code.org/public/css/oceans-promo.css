@@ -1,0 +1,42 @@
+.background-img,
+.mobile {
+  width: 100%;
+}
+
+.sea-creature {
+  position: absolute;
+  display: none;
+}
+
+.crab {
+  position: absolute;
+  width: 60px;
+  top: 245px;
+  left: 200px;
+}
+
+.scanning-bot {
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  top: 20px;
+  left: 670px;
+}
+
+.ai-bot {
+  width: 150px;
+}
+
+.ai-light {
+  width: 150px;
+  left: 670px;
+  top: 290px;
+  position: absolute;
+}
+
+.ai-fish {
+  position: absolute;
+  width: 80px;
+  top: 185px;
+  left: 705px;
+}

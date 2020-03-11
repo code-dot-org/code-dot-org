@@ -61,10 +61,18 @@ module Pd
         SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
         SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSP_WORKSHOP_5 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSP_WORKSHOP_6 => {min_days: 2, max_days: 2, max_hours: 12},
         SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5}
       },
       COURSE_CSD => {
         SUBJECT_CSD_SUMMER_WORKSHOP => {max_hours: 33.5},
+        SUBJECT_CSD_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+        SUBJECT_CSD_WORKSHOP_5 => {min_days: 2, max_days: 2, max_hours: 12},
+        SUBJECT_CSD_WORKSHOP_6 => {min_days: 2, max_days: 2, max_hours: 12},
         SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
       },
       COURSE_CSF => {
@@ -91,11 +99,5 @@ module Pd
       COURSE_CSD => {course_name: 'csd-2019'},
       COURSE_CSP => {course_name: 'csp-2019'}
     }.freeze
-
-    COURSE_KEY_MAP = {
-      COURSE_CSF => 'csf',
-      COURSE_CSD => 'csd',
-      COURSE_CSP => 'csp'
-    }
   end
 end

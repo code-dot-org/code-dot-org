@@ -1,4 +1,3 @@
-import {tables} from './datasetManifest.json';
 /** @file Utility functions for the data browser. */
 
 /**
@@ -11,8 +10,39 @@ export const ColumnType = {
   BOOLEAN: 'boolean'
 };
 
-export function getDatasetInfo(tableName) {
+export const ChartType = {
+  NONE: 0,
+  BAR_CHART: 1,
+  HISTOGRAM: 2,
+  SCATTER_PLOT: 3,
+  CROSS_TAB: 4
+};
+
+export function getDatasetInfo(tableName, tables = []) {
   return tables.find(table => table.name === tableName);
+}
+
+export function isBlank(value) {
+  return value === undefined || value === '' || value === null;
+}
+
+/**
+ * @param {Object[]} records
+ * @param {string[]} columns
+ * @return {Object[]} Returns array containing the records that have a
+ * value for all of the specified columns.
+ */
+export function ignoreMissingValues(records, columns) {
+  records = records || [];
+  columns = columns || [];
+  let filteredRecords = records;
+  columns.forEach(column => {
+    filteredRecords = filteredRecords.filter(
+      record => !isBlank(record[column])
+    );
+  });
+
+  return filteredRecords;
 }
 
 /**
@@ -87,8 +117,11 @@ export function editableValue(val) {
  * @returns {string}
  */
 export function displayableValue(val) {
-  if (val === null || val === undefined || val === '') {
-    return '';
+  if (val === null) {
+    return 'null';
+  } else if (val === undefined) {
+    return 'undefined';
+  } else {
+    return JSON.stringify(val);
   }
-  return JSON.stringify(val);
 }

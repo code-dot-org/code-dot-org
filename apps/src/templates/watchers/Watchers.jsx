@@ -28,6 +28,9 @@ const valueAndInputWidth = 'calc(100% - 41px)';
 const inputElementHeight = 29;
 
 const styles = {
+  autocompleteDropdown: {
+    zIndex: 2 // Needed so the dropdown appears over the coding space (z-index 1)
+  },
   watchContainer: {
     width: '100%',
     height: '100%'
@@ -411,6 +414,7 @@ class Watchers extends React.Component {
                   attachment: 'together'
                 }
               ]}
+              style={styles.autocompleteDropdown}
             >
               <input
                 placeholder="Variable / Property"

@@ -38,13 +38,12 @@ import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
 import getAchievements from './achievements';
-import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import userAgentParser from './code-studio/initApp/userAgentParser';
-import {KeyCodes, TestResults} from './constants';
+import {KeyCodes, TestResults, TOOLBOX_EDIT_MODE} from './constants';
 import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
@@ -788,34 +787,35 @@ StudioApp.prototype.handleSharing_ = function(options) {
 export function makeFooterMenuItems() {
   const footerMenuItems = [
     {
-      text: i18n.t('footer.try_hour_of_code'),
+      key: 'try-hoc',
+      text: msg.tryHourOfCode(),
       link: 'https://code.org/learn',
       newWindow: true
     },
     {
       key: 'how-it-works',
-      text: i18n.t('footer.how_it_works'),
+      text: msg.howItWorks(),
       link: project.getProjectUrl('/edit'),
       newWindow: false
     },
     {
       key: 'report-abuse',
-      text: i18n.t('footer.report_abuse'),
+      text: msg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
     {
-      text: i18n.t('footer.copyright'),
+      text: msg.copyright(),
       link: '#',
       copyright: true
     },
     {
-      text: i18n.t('footer.tos'),
+      text: msg.tos(),
       link: 'https://code.org/tos',
       newWindow: true
     },
     {
-      text: i18n.t('footer.privacy'),
+      text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
     }
@@ -852,7 +852,7 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
-    baseMoreMenuString: i18n.t('footer.built_on_code_studio'),
+    baseMoreMenuString: msg.builtOnCodeStudio(),
     baseStyle: {
       paddingLeft: 0,
       width: $('#visualization').width()
@@ -973,9 +973,13 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {boolean} options.noOverlap if true, will not start playing if the sound is already playing
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (options && options.noOverlap && Sounds.getSingleton().isPlaying(name)) {
+    return;
+  }
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
@@ -1838,6 +1842,32 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   }
   var width = Math.max(minWidth, desiredWidth);
   var scale = deviceWidth / width;
+
+  var content = [
+    'width=' + width,
+    'minimal-ui',
+    'initial-scale=' + scale,
+    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
+    'target-densityDpi=device-dpi',
+    'user-scalable=no'
+  ];
+  viewport.setAttribute('content', content.join(', '));
+};
+
+/**
+ *
+ */
+StudioApp.prototype.fixViewportForSpecificWidthForSmallScreens_ = function(
+  viewport,
+  width
+) {
+  // iOS sets the screen width to the min of width and height. Android sets the
+  // screen width to the landscape width. We take the min of width and height
+  // here to enforce consistent behavior.
+  let screenWidth = Math.min(screen.width, screen.height);
+  const scale = screenWidth / width;
+
   var content = [
     'width=' + width,
     'minimal-ui',
@@ -2008,7 +2038,7 @@ StudioApp.prototype.configureDom = function(config) {
       // If in level builder editing blocks, make workspace extra tall
       vizHeight = 3000;
       // Modify the arrangement of toolbox blocks so categories align left
-      if (config.level.edit_blocks === 'toolbox_blocks') {
+      if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
         config.blockArrangement = {category: {x: 20}};
       }
@@ -2145,10 +2175,13 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
     return;
   }
 
-  config.level.libraryCode = '';
+  config.level.projectLibraries = [];
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += createLibraryClosure(library);
+    config.level.projectLibraries.push({
+      name: library.name,
+      code: createLibraryClosure(library)
+    });
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',
@@ -2614,7 +2647,7 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     this.checkForEmptyBlocks_ = false;
     if (
       config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks' ||
+      config.level.edit_blocks === TOOLBOX_EDIT_MODE ||
       config.level.edit_blocks === 'recommended_blocks'
     ) {
       // Don't show when run block for toolbox/required/recommended block editing
@@ -2655,10 +2688,9 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
       config.level.topLevelProcedureAutopopulate,
       false
     ),
-    useModalFunctionEditor: utils.valueOr(
-      config.level.useModalFunctionEditor,
-      false
-    ),
+    useModalFunctionEditor:
+      config.level.edit_blocks !== TOOLBOX_EDIT_MODE &&
+      !!config.level.useModalFunctionEditor,
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(
@@ -2678,10 +2710,14 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     typeHints: utils.valueOr(config.level.showTypeHints, false)
   };
 
-  // Never show unused blocks or disable autopopulate in edit mode
+  // Never show unused blocks in edit mode. Procedure autopopulate should always
+  // be enabled in edit mode. Except in toolbox mode where functions/behaviors
+  // should never be created (and therefore the autopopulated blocks would be
+  // confusing).
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
-    options.disableProcedureAutopopulate = false;
+    options.disableProcedureAutopopulate =
+      options.editBlocks === TOOLBOX_EDIT_MODE;
   }
 
   [
@@ -3087,8 +3123,8 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: i18n.t('project.abuse.tos'),
-          contact_us: i18n.t('project.abuse.contact_us')
+          tos: msg.tosLong({url: 'http://code.org/tos'}),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );
@@ -3105,8 +3141,8 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       'error',
       <AbuseError
         i18n={{
-          tos: i18n.t('project.abuse.policy_violation'),
-          contact_us: i18n.t('project.abuse.contact_us')
+          tos: msg.policyViolation(),
+          contact_us: msg.contactUs({url: 'https://code.org/contact'})
         }}
       />
     );

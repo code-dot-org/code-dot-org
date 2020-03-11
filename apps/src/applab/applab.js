@@ -19,11 +19,7 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {
-  getColumnsRef,
-  onColumnNames,
-  addMissingColumns
-} from '../storage/firebaseMetadata';
+import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
 import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
@@ -53,7 +49,8 @@ import {
   deleteTableName,
   updateTableColumns,
   updateTableRecords,
-  updateKeyValueData
+  updateKeyValueData,
+  setLibraryManifest
 } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
@@ -76,7 +73,6 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import i18n from '../code-studio/i18n';
 import {
   expoGenerateApk,
   expoCheckApkBuild,
@@ -190,7 +186,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
       key: 'how-it-works',
-      text: i18n.t('footer.how_it_works'),
+      text: commonMsg.howItWorks(),
       link: project.getProjectUrl('/view'),
       newWindow: true
     },
@@ -297,8 +293,8 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function handleExecutionError(err, lineNumber, outputString) {
-  outputError(outputString, lineNumber);
+function handleExecutionError(err, lineNumber, outputString, libraryName) {
+  outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
 
   // prevent further execution
@@ -437,6 +433,7 @@ Applab.init = function(config) {
     channelId: config.channel,
     firebaseName: config.firebaseName,
     firebaseAuthToken: config.firebaseAuthToken,
+    firebaseSharedAuthToken: config.firebaseSharedAuthToken,
     firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
     showRateLimitAlert: studioApp().showRateLimitAlert
   });
@@ -787,11 +784,16 @@ async function initDataTab(levelOptions) {
     );
   }
   if (levelOptions.dataLibraryTables) {
-    let channelExists = await Applab.storage.channelExists();
+    const channelExists = await Applab.storage.channelExists();
+    const libraryManifest = await Applab.storage.getLibraryManifest();
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
-        if (getDatasetInfo(table).current) {
+        const datasetInfo = getDatasetInfo(table, libraryManifest.tables);
+        if (!datasetInfo) {
+          // We don't know what this table is, we should just skip it.
+          console.warn(`unknown table ${table}`);
+        } else if (datasetInfo.current) {
           Applab.storage.addCurrentTableToProject(
             table,
             () => console.log('success'),
@@ -888,6 +890,10 @@ function setupReduxSubscribers(store) {
     );
 
     if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
+      Applab.storage
+        .getLibraryManifest()
+        .then(result => store.dispatch(setLibraryManifest(result)));
       // /v3/channels/<channel_id>/current_tables tracks which
       // current tables the project has imported. Here we initialize the
       // redux list of current tables and keep it in sync
@@ -1269,7 +1275,7 @@ Applab.execute = function() {
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
-      libraryCode: level.libraryCode,
+      projectLibraries: level.projectLibraries,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true
@@ -1345,7 +1351,7 @@ function onInterfaceModeChange(mode) {
 }
 
 function onDataPreview(tableName) {
-  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
 
@@ -1393,10 +1399,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
       } else {
         storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
       }
-      if (newTableType === tableType.PROJECT) {
-        addMissingColumns(newTableName);
-      }
-      onColumnNames(
+      onColumnsChange(
         newTableType === tableType.PROJECT
           ? getProjectDatabase()
           : getSharedDatabase(),

@@ -8,8 +8,11 @@ import sinon from 'sinon';
 describe('Cohort Calculator', () => {
   describe('Initially', () => {
     let cohortCalculator;
+    let xhr;
     const regionalPartnerFilterValue = AllPartnersValue;
+
     before(() => {
+      xhr = sinon.useFakeXMLHttpRequest();
       cohortCalculator = shallow(
         <CohortCalculator
           regionalPartnerFilterValue={regionalPartnerFilterValue}
@@ -17,6 +20,10 @@ describe('Cohort Calculator', () => {
           accepted={0}
         />
       );
+    });
+
+    after(() => {
+      xhr.restore();
     });
 
     it('Is loading', () => {

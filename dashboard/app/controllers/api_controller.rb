@@ -342,6 +342,12 @@ class ApiController < ApplicationController
     render json: summary
   end
 
+  def script_standards
+    script = Script.get_from_cache(params[:script])
+    standards = script.standards
+    render json: standards
+  end
+
   use_database_pool user_progress: :persistent
 
   # Return a JSON summary of the user's progress for params[:script].

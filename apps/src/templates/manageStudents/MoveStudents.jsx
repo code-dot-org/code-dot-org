@@ -348,7 +348,6 @@ class MoveStudents extends Component {
 
   render() {
     const {studentData, transferData, transferStatus} = this.props;
-
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -367,6 +366,8 @@ class MoveStudents extends Component {
       sortingColumns,
       sort: orderBy
     })(decoratedRows);
+
+    const pendingTransfer = transferStatus.status === TransferStatus.PENDING;
 
     return (
       <div>
@@ -457,7 +458,9 @@ class MoveStudents extends Component {
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
-              disabled={this.isButtonDisabled()}
+              disabled={pendingTransfer || this.isButtonDisabled()}
+              isPending={pendingTransfer}
+              pendingText={i18n.movingStudents()}
             />
           </DialogFooter>
         </BaseDialog>

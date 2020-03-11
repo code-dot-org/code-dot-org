@@ -27,8 +27,6 @@ pt-PT:
   petition_message: Todos os alunos de todas as escolas deviam ter a oportunidade
     de ter uma disciplina de informática
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
-  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Junte-se aos
-    # outros.'
   petition_join_others: 'Junta-te a # pessoas'
   name: Nome
   email: E-mail
@@ -232,6 +230,7 @@ pt-PT:
   if_you_enjoyed: Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos
     que o mundo todo aprenda.
   personalize_certificate: Personaliza o teu certificado
+  print_certificates: Imprimir certificados
   share_achievement: Partilha a tua conquista
   beyond_hour_message: Faça nossos <a href='http://studio.code.org'>outros cursos</a>,
     ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
@@ -568,6 +567,7 @@ pt-PT:
   sports_athlete_Sarah: Sarah Quita Offringa, Campeã de Windsurf
   watch_inspirational_videos: Antes de começares, vê um destes vídeos inspiradores
   video_title_inspire_girl: Inspirar uma rapariga
+  video_title_anybody_can_learn: Qualquer pessoa pode aprender
   video_title_my_name_is_aracely: Chamo-me Aracely
   video_1min: 1 minuto
   video_2min: 2 minutos
@@ -1794,6 +1794,7 @@ pt-PT:
   hoc2018_mc_video_3min: 3 minutos
   hoc2018_mc_video_5min: 5 minutos
   hoc2018_mc_video_title_inspire_girl: Inspirar uma rapariga
+  hoc2018_mc_video_title_anybody_can_learn: Qualquer pessoa pode aprender
   hoc2018_mc_video_title_my_name_is_aracely: Chamo-me Aracely
   hoc2018_mc_homepage_hoc_coming: A Hora do Código está a chegar...
   hoc2018_mc_homepage_what_create: O que vais criar?

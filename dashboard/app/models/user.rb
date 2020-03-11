@@ -74,6 +74,8 @@ require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -99,6 +101,7 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
+    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -110,7 +113,6 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
@@ -174,6 +176,13 @@ class User < ActiveRecord::Base
         ao.errors.each {|k, v| user.errors.add k, v}
       end
     end
+  end
+
+  # Validate that a user with the same authentication credentials does not already exist.
+  validate on: :create, if: -> {uid.present?} do |user|
+    # If the user has a unique authentication ID, fail if there is an existing User with that ID.
+    other = User.find_by_credential(type: user.provider, id: user.uid)
+    user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
   end
 
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
@@ -485,23 +494,22 @@ class User < ActiveRecord::Base
     true
   end
 
-  # Implement validation that refuses to set admin:true attribute unless
-  # there's a Code.org google sso option present.  Unmigrated users are
-  # not allowed to be admins.
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
   validate :enforce_google_sso_for_admin
   def enforce_google_sso_for_admin
     return unless admin
 
     errors.add(:admin, 'must be a migrated user') unless migrated?
 
-    google_oauth = google_oauth_authentications
-    errors.add(:admin, 'must have Google OAuth') unless google_oauth&.present?
+    # Exception for development and adhoc environments where Google is not available as an authentication provider by default
+    return if rack_env?(:development, :adhoc)
 
-    errors.add(:admin, 'email must have code.org domain') unless google_oauth.any?(&:codeorg_email?)
-  end
+    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
+      errors.add(:admin, 'must be a code.org account with only google oauth')
+    end
 
-  def google_oauth_authentications
-    authentication_options&.where(credential_type: AuthenticationOption::GOOGLE)
+    # Code studio admins should not have a password
+    errors.add(:admin, 'cannot have a password') if password.present?
   end
 
   def fix_by_user_type
@@ -965,25 +973,21 @@ class User < ActiveRecord::Base
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_words: params[:secret_words],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_words: params[:secret_words],
+      followers: {section: section}
+    )
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_picture_id: params[:secret_picture_id],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_picture_id: params[:secret_picture_id],
+      followers: {section: section}
+    )
   end
 
   def user_levels_by_level(script)

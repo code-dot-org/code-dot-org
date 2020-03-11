@@ -5,6 +5,8 @@ dashboard_enable_pegasus: true
 
 firebase_name: cdo-v3-dev
 # provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
+firebase_secret: !Secret
+firebase_shared_secret: !Secret
 firebase_channel_id_suffix: -DEVELOPMENT-<%=ENV['USER']%>
 
 lint: true

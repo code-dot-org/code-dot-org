@@ -31,11 +31,11 @@ module Pd
       [
         {
           string: enrollment.try(:full_name) || '',
-          pointsize: 90,
-          height: 100,
+          pointsize: 70,
+          x: 0,
+          y: -240,
           width: 1200,
-          x: 570,
-          y: 570,
+          height: 100,
         }
       ]
     end
@@ -45,23 +45,26 @@ module Pd
         [
           {
             string: workshop.course_name,
-            y: 780,
-            pointsize: 90,
+            y: -30,
+            pointsize: 70,
+            width: 1600,
             height: 100,
           },
           {
             string: workshop.friendly_subject,
-            y: 870,
-            pointsize: 80,
-            height: 90,
+            y: 65,
+            pointsize: 60,
+            width: 1600,
+            height: 100,
           }
         ]
       else
         [
           {
             string: workshop.course_name,
-            y: 800,
-            pointsize: 90,
+            y: -10,
+            pointsize: 70,
+            width: 1600,
             height: 100,
           }
         ]
@@ -72,11 +75,11 @@ module Pd
       [
         {
           string: ActiveSupport::NumberHelper.number_to_rounded(workshop.effective_num_hours, precision: 1, strip_insignificant_zeros: true),
-          y: 978,
-          x: 880,
-          height: 40,
-          width: 50,
-          pointsize: 40,
+          y: 143,
+          x: -265,
+          pointsize: 30,
+          width: 60,
+          height: 50,
         }
       ]
     end
@@ -85,9 +88,10 @@ module Pd
       [
         {
           string: workshop.workshop_date_range_string,
-          y: 1054,
+          y: 228,
+          pointsize: 33,
+          width: 1000,
           height: 50,
-          pointsize: 45,
         }
       ]
     end
@@ -96,11 +100,11 @@ module Pd
       facilitator_names(workshop).each_with_index.map do |name, i|
         {
           string: name,
+          pointsize: 30,
+          y: 475 - (50 * i),
+          x: 330,
+          width: 500,
           height: 50,
-          pointsize: 40,
-          width: 420,
-          y: 1305 - (50 * i),
-          x: 1290,
         }
       end
     end

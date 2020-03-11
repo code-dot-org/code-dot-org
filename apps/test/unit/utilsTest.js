@@ -8,6 +8,7 @@ const {
   cloneWithoutFunctions,
   stripQuotes,
   wrapNumberValidatorsForLevelBuilder,
+  escapeHtml,
   escapeText,
   unescapeText,
   makeEnum,
@@ -295,6 +296,27 @@ describe('utils modules', () => {
         '???'
       );
       assert.equal(Blockly.FieldTextInput.numberValidator('???'), '???');
+    });
+  });
+
+  describe('escapeHtml', function() {
+    const unescaped = '&<>"\'/';
+    const escaped = '&amp;&lt;&gt;&quot;&#39;&#47;';
+
+    it('should handle null input', function() {
+      assert.strictEqual(escapeHtml(null), '');
+    });
+
+    it('should handle undefined input', function() {
+      assert.strictEqual(escapeHtml(undefined), '');
+    });
+
+    it('should escape special characters', function() {
+      assert.strictEqual(escapeHtml(unescaped), escaped);
+    });
+
+    it('should not escape regular characters', function() {
+      assert.strictEqual(escapeHtml('abc123'), 'abc123');
     });
   });
 

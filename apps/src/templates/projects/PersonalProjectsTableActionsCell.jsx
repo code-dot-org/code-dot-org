@@ -11,9 +11,11 @@ import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix
+  remix,
+  unsetNameFailure
 } from './projectsRedux';
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
 export const styles = {
   xIcon: {
@@ -21,7 +23,7 @@ export const styles = {
   }
 };
 
-class PersonalProjectsTableActionsCell extends Component {
+export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
     projectId: PropTypes.string.isRequired,
     projectType: PropTypes.string.isRequired,
@@ -32,7 +34,9 @@ class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired
+    remix: PropTypes.func.isRequired,
+    projectNameFailure: PropTypes.string,
+    unsetNameFailure: PropTypes.func.isRequired
   };
 
   onDelete = () => {
@@ -53,6 +57,10 @@ class PersonalProjectsTableActionsCell extends Component {
 
   onRemix = () => {
     this.props.remix(this.props.projectId, this.props.projectType);
+  };
+
+  handleNameFailureDialogClose = () => {
+    this.props.unsetNameFailure(this.props.projectId);
   };
 
   render() {
@@ -93,6 +101,11 @@ class PersonalProjectsTableActionsCell extends Component {
             />
           </div>
         )}
+        <NameFailureDialog
+          flaggedText={this.props.projectNameFailure}
+          isOpen={!!this.props.projectNameFailure}
+          handleClose={this.handleNameFailureDialogClose}
+        />
       </div>
     );
   }
@@ -115,6 +128,9 @@ export default connect(
     },
     remix(projectId, projectType) {
       dispatch(remix(projectId, projectType));
+    },
+    unsetNameFailure(projectId) {
+      dispatch(unsetNameFailure(projectId));
     }
   })
 )(PersonalProjectsTableActionsCell);

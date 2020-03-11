@@ -1,8 +1,8 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: Completamento di un'Ora del Codice con la tecnologia assistiva
 ---
 
-# Completing an Hour of Code with Assistive Technology
+# Completamento di un'Ora del Codice con la tecnologia assistiva
 
 Anyone can try an Hour of Code during Computer Science Education Week.
 

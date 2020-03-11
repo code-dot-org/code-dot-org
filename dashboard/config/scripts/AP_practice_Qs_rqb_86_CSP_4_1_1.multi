@@ -1,14 +1,17 @@
 name 'AP_practice_Qs_rqb_86_CSP_4_1_1'
-wrong '<br><img src="https://curriculum.code.org/media/uploads/csp/c7d593125a90ac3c790a78d5b5d098af" width="300"><br>'
-wrong '<br><img src="https://curriculum.code.org/media/uploads/csp/f9506ef1e6ea5e845699feaac9686a5d" width="300"><br>'
-wrong '<br><img src="https://curriculum.code.org/media/uploads/csp/2ffc72ca9ba682bcd443104de50ac8a5" width="300"><br>'
-right '<br><img src="https://curriculum.code.org/media/uploads/csp/6b450add4f3ff7310fa1a3c2d6a1b27a" width="300"><br>'
+editor_experiment ''
+wrong '![](https://curriculum.code.org/media/uploads/csp/c7d593125a90ac3c790a78d5b5d098af)'
+wrong '![](https://curriculum.code.org/media/uploads/csp/f9506ef1e6ea5e845699feaac9686a5d)'
+wrong '![](https://curriculum.code.org/media/uploads/csp/2ffc72ca9ba682bcd443104de50ac8a5)'
+right '![](https://curriculum.code.org/media/uploads/csp/6b450add4f3ff7310fa1a3c2d6a1b27a)'
 markdown <<MARKDOWN
-<br><img src="https://curriculum.code.org/media/uploads/csp/9b1b80fb7aeeda43777044012770a1e8" width="300"><br>
+![](https://curriculum.code.org/media/uploads/csp/9b1b80fb7aeeda43777044012770a1e8)
 
 What will the final image look like after this program runs?
-<br><img src="https://curriculum.code.org/media/uploads/csp/b919f0a3f52efe3abe7932c94701f121" width="300"><br>
+
+![](https://images.code.org/0a42976851d61ba1e4f772653c38f1d2-image-1579897571293.png)
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1D, 4.1.1A**
 <hr>

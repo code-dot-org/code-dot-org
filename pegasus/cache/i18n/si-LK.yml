@@ -28,8 +28,6 @@ si-LK:
     තිබිය යුතුය
   petition_sign_message: 'මීට එකඟ වේ නම්, ඔබගේ නම ඇතුලත් කරන්න. තවත් # දෙනෙකු සමග
     එකතුවෙන්න.'
-  petition_sign_message_support: 'අපට සහාය පළකිරීමට ඔබේ නම අත්සන් කරන්න. තවත් # ක්
-    දෙනා සමග එක් වන්න.'
   petition_join_others: 'තවත් # ක් සමග එක්වන්න'
   name: නම
   email: විද්‍යුත් තැපැල
@@ -207,6 +205,7 @@ si-LK:
   if_you_enjoyed: ඔබ මෙමගින් යමක්  ඉගෙනගත්තානම්, ඔබගේ අනිකුත් මිතුරන්ටද  මෙය උත්සාහ
     කිරීමට යොමු කරන්න. අපිට මුළු ලෝකයම ඉගෙනීමට යොමු කිරීමට සහය වන්න.
   personalize_certificate: ඔබගේ සහතිකය පුද්ගලිකරණය කරන්න
+  print_certificates: සහතික මුද්‍රණය කරන්න
   share_achievement: ඔබගේ ජයග්‍රාහණය Share කරන්න
   beyond_hour_message: දිගටම අපගේ <a href='http://studio.code.org'> අනිකුත් පාඨමාලාවන්</a>
     සමගින් රැදී සිටින්න නැතහොත් <a href='/learn/beyond'>පැයකට සීමා නොවී දිගටම ඉගෙන

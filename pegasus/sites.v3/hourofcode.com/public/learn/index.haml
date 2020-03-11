@@ -83,10 +83,10 @@ social:
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
       .bannerBeyond
-        = hoc_s(:learn_banner_beyond)
+        != hoc_s(:learn_banner_beyond)
       .bannerTeachers
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
-        = hoc_s(:learn_banner_teachers)
+        != hoc_s(:learn_banner_teachers)
     #studentImage.hidden-xs.col-sm-12.col-md-6
 
 -# Not ideal but we can pull the undigested files from /blockly.
@@ -121,11 +121,12 @@ social:
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorials_contents.to_json},
+      tutorials: #{raw tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
       showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
+      defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

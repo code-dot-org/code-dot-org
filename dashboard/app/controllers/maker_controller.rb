@@ -1,7 +1,7 @@
 require 'cdo/script_constants'
 
 class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: [:home, :setup]
+  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code]
 
   # Maker Toolkit is currently used in CSD unit 6.
   # Retrieves the current CSD unit 6 level that the user is working on.
@@ -57,7 +57,7 @@ class MakerController < ApplicationController
       script_data: {
         application: application_status,
         is_admin: current_user.admin?,
-        currently_distributing_discount_codes: false
+        currently_distributing_discount_codes: true
       }
     }
   end
@@ -70,7 +70,9 @@ class MakerController < ApplicationController
     # Ensure we have an existing application and the school is eligible
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
     return head :not_found unless application
-    return head :forbidden unless application.full_discount?
+
+    school = School.find(application.school_id)
+    return head :forbidden unless school.try(:maker_high_needs?)
 
     # validate that we're eligible (this should be visible already, but we should
     # never have submitted this request if not eligible in these ways
@@ -96,13 +98,29 @@ class MakerController < ApplicationController
     return head :forbidden if application && application.has_confirmed_school?
 
     # Create our application
-    application = CircuitPlaygroundDiscountApplication.create!(
+    # For 2020, applications by default get the non "full discount" (ie, without shipping)
+    CircuitPlaygroundDiscountApplication.create!(
       user: current_user,
       school_id: school_id,
-      full_discount: school.maker_high_needs?
+      full_discount: (%w(AK HI).include? school.state)
     )
 
-    render json: {full_discount: application.full_discount?}
+    render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}
+  end
+
+  # GET /maker/login_code
+  # renders a page for users to enter a login key
+  def login_code
+  end
+
+  # GET /maker/display_code
+  # renders a page for users to copy and paste a login key
+  def display_code
+    # Generate encrypted code to display to user
+    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+    @secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
   end
 
   # POST /maker/complete

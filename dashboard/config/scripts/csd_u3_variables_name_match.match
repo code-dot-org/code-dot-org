@@ -1,6 +1,6 @@
 name 'CSD U3 Variables name match'
 title 'Debug: Naming Variables'
-description 'This program has multiple errors caused by bad label names.  The errors prevent the program from being viewed in block mode.'
+description 'This program has multiple errors caused by bad label names. The errors prevent the program from being viewed in block mode.'
 question 'Labels can\'t have spaces.'
 answer 'size of circle'
 question 'Labels can\'t start with a number.'

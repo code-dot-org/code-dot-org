@@ -11,7 +11,7 @@ class HelpHeader
     if options[:level] && options[:level].game == Game.gamelab
       entries << {
         title: I18n.t("#{loc_prefix}game_lab_documentation"),
-        url: "https://docs.code.org/gamelab/",
+        url: "https://studio.code.org/docs/gamelab/",
         id: "gamelab-docs"
       }
 
@@ -25,7 +25,7 @@ class HelpHeader
     if options[:level] && options[:level].game == Game.applab
       entries << {
         title: I18n.t("#{loc_prefix}app_lab_documentation"),
-        url: "https://docs.code.org/applab/",
+        url: "https://studio.code.org/docs/applab/",
         id: "applab-docs"
       }
 
@@ -39,7 +39,7 @@ class HelpHeader
     if options[:level] && options[:level].game == Game.spritelab
       entries << {
         title: I18n.t("#{loc_prefix}sprite_lab_documentation"),
-        url: "https://docs.code.org/spritelab/",
+        url: "https://studio.code.org/docs/spritelab/",
         id: "spritelab-docs"
       }
 

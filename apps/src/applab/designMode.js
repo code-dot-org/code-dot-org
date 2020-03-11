@@ -32,6 +32,8 @@ export default designMode;
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
+let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
+
 var currentlyEditedElement = null;
 var clipboardElement = null;
 var clipboardElementTheme = null;
@@ -383,6 +385,8 @@ designMode.updateProperty = function(
 
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
+      } else if (DATA_PREFIX_REGEX.test(value)) {
+        element.src = value;
       } else {
         element.src =
           value === ''

@@ -3,7 +3,7 @@ import PendingButton from '../../templates/PendingButton';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
 const INITIAL_STATE = {
@@ -65,7 +65,7 @@ class ConfirmImportButton extends React.Component {
           onChange={this.handleSelectImportFile}
         />
         <Dialog
-          body={applabMsg.confirmImportOverwrite()}
+          body={msg.confirmImportOverwrite()}
           cancelText="Cancel"
           confirmText="Overwrite"
           confirmType="danger"

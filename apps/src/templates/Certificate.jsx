@@ -42,6 +42,7 @@ const styles = {
 
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
+  oceans: require('@cdo/static/oceans_hoc_certificate.png'),
   mc: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   minecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate.png'),
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
@@ -67,6 +68,7 @@ class Certificate extends Component {
   };
 
   isMinecraft = () => /mc|minecraft|hero|aquatic|mee/.test(this.props.tutorial);
+  isAIOceans = () => /oceans/.test(this.props.tutorial);
 
   personalizeCertificate(session) {
     $.ajax({
@@ -125,6 +127,10 @@ class Certificate extends Component {
 
     let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
     if (this.isMinecraft() && !this.state.personalized) {
+      // Correct the minecraft print url for non-personalized certificates.
+      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
+    }
+    if (this.isAIOceans() && !this.state.personalized) {
       // Correct the minecraft print url for non-personalized certificates.
       print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
     }
