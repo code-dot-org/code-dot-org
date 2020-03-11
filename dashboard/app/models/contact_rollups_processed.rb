@@ -16,7 +16,8 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  # Reads data from contact_rollups_raw table, processes them and saves the results.
+  # Aggregates data from contact_rollups_raw table by emails.
+  # Processes aggregated data and saves the results to the database, 1 row per email.
   def self.import_from_raw_table
     # Combines data and metadata for each record in contact_rollups_raw table into one JSON field.
     # The query result has the same number of rows as in contact_rollups_raw.
