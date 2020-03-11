@@ -580,6 +580,36 @@ describe('project.js', () => {
       currentProject = project.__TestInterface.getCurrent();
       expect(currentProject.libraryPublishedAt).to.be.null;
     });
+
+    it('does not call updateChannels_ if library details are unchanged', () => {
+      const lib = {
+        libraryName: 'my name',
+        libraryDescription: 'my description',
+        latestLibraryVersion: '123456',
+        libraryPublishedAt: new Date()
+      };
+      setData(lib);
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryName).to.equal(lib.libraryName);
+      expect(currentProject.libraryDescription).to.equal(
+        lib.libraryDescription
+      );
+      expect(currentProject.latestLibraryVersion).to.equal(
+        lib.latestLibraryVersion
+      );
+      expect(currentProject.libraryPublishedAt).to.equal(
+        lib.libraryPublishedAt
+      );
+
+      project.setLibraryDetails({
+        newName: lib.libraryName,
+        newDescription: lib.libraryDescription,
+        newVersionId: lib.latestLibraryVersion,
+        publishing: undefined
+      });
+
+      expect(project.updateChannels_).not.to.have.been.called;
+    });
   });
 
   describe('setProjectLibraries()', () => {
