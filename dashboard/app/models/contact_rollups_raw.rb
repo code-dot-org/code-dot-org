@@ -18,8 +18,8 @@
 class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
-  def self.truncate_raw_contacts
-    ActiveRecord::Base.connection.execute("TRUNCATE TABLE contact_rollups_raw")
+  def self.truncate_table
+    ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name}")
   end
 
   def self.extract_email_preferences
@@ -28,7 +28,7 @@ class ContactRollupsRaw < ApplicationRecord
       email_preference_batch.each do |email_preference|
         raw_contact = {
           email: email_preference.email,
-          sources: 'dashboard_production.email_preferences',
+          sources: EmailPreference.table_name,
           data: {opt_in: email_preference.opt_in}.to_json,
           data_updated_at: email_preference.updated_at
         }
