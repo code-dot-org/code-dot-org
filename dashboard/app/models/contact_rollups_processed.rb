@@ -16,9 +16,12 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  # Aggregates data from contact_rollups_raw table by emails.
-  # Processes aggregated data and saves the results to the database, 1 row per email.
-  def self.import_from_raw_table
+  DEFAULT_BATCH_SIZE = 10000
+
+  # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
+  #
+  # @param [Integer] batch_size number of records to save per INSERT statement.
+  def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
     # Combines data and metadata for each record in contact_rollups_raw table into one JSON field.
     # The query result has the same number of rows as in contact_rollups_raw.
     select_query = <<-SQL.squish
@@ -38,18 +41,26 @@ class ContactRollupsProcessed < ApplicationRecord
     SQL
 
     # Process the aggregated data row by row and save the results to DB.
+    batch = []
     ActiveRecord::Base.connection.exec_query(group_by_query).each do |contact|
       contact_data = parse_contact_data(contact['all_data_and_metadata'])
 
       processed_contact_data = {}
       processed_contact_data.merge!(extract_opt_in(contact_data) || {})
 
-      create({email: contact['email'], data: processed_contact_data})
+      batch << {email: contact['email'], data: processed_contact_data}
+
+      if batch.size == batch_size
+        import! batch, validate: false
+        batch = []
+      end
     end
+
+    import! batch, validate: false unless batch.empty?
   end
 
   # Parses a JSON string contains all data and metadata of a contact.
-  # It will throw exceptions if cannot parse the entire input string.
+  # It will throw exception if cannot parse the entire input string.
   #
   # @param [String] str represents a JSON array. Each array item is a hash {sources:String, data:Hash, data_updated_at:DateTime}.
   #
@@ -61,7 +72,7 @@ class ContactRollupsProcessed < ApplicationRecord
       parsed_items.each do |item|
         # In a valid item, only data value could be null
         sources = item['sources']
-        data = JSON.parse(item['data'] || '{}')
+        data = item['data'] || {}
         data_updated_at = Time.parse(item['data_updated_at'])
 
         output[sources] = data.merge('data_updated_at' => data_updated_at)
