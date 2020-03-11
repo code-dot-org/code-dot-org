@@ -63,19 +63,19 @@ def snapshot_csf_intro_post_workshop_from_pegasus
       facilitator_name_filter: f.name
     )
 
-    survey_reports[id] = {all_workshops_for_course: all_their_workshops_for_course}
+    survey_reports[id] = all_their_workshops_for_course
   end
 
   # delete all existing
   Pd::LegacySurveySummary.where.not(facilitator_id: nil).where(course: course, subject: subject).delete_all
 
   # write all entries
-  survey_reports.each do |id|
+  survey_reports.each_pair do |id, report|
     puts "f_id: #{id}, course: #{course}, subject: #{subject}"
-    pp survey_reports[id]
+    pp report.to_json
     puts
 
-    Pd::LegacySurveySummary.create(facilitator_id: id, course: course, subject: subject, data: survey_reports[id])
+    Pd::LegacySurveySummary.create(facilitator_id: id, course: course, subject: subject, data: report.to_json)
   end
 end
 
@@ -91,9 +91,9 @@ def snapshot_csf_intro_post_workshop_from_pegasus_for_all_workshops
 
   # write all entries
   puts "f_id: nil, course: #{course}, subject: #{subject}"
-  pp survey_report_all_workshops
+  pp survey_report_all_workshops.to_json
 
-  Pd::LegacySurveySummary.create(facilitator_id: nil, course: course, subject: subject, data: survey_report_all_workshops)
+  Pd::LegacySurveySummary.create(facilitator_id: nil, course: course, subject: subject, data: survey_report_all_workshops.to_json)
 end
 
 def snapshot_csd_summer_workshops_from_jotform
@@ -131,15 +131,17 @@ def snapshot_summer_workshops_from_jotform(course)
     facilitator_report = {}
 
     unless all_their_completed_workshops.empty?
-      rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, false)
+      # Do workshop rollups, then facilitator rollups.
+      [false, true].each do |only_facilitator_questions|
+        rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, only_facilitator_questions)
 
-      key = "facilitator_#{id}_all_ws"
-      rollup[:rollups][key][:averages].each do |string_key, average|
-        # We have found a string_key and an average, now find out the actual string for the key
-        question_text = rollup[:questions][string_key]
-        unless question_text.nil?
-          question_text.gsub!("{facilitatorName}", f.name)
-          facilitator_report[question_text] = average
+        key = "facilitator_#{id}_all_ws"
+        rollup[:rollups][key][:averages].each do |string_key, average|
+          # We have found a string_key and an average, now find out the actual string for the key
+          question_text = rollup[:questions][string_key]
+          unless question_text.nil?
+            facilitator_report[question_text] = average
+          end
         end
       end
     end
@@ -151,12 +153,12 @@ def snapshot_summer_workshops_from_jotform(course)
   Pd::LegacySurveySummary.where(facilitator_id: nil).where(course: course, subject: subject).delete_all
 
   # write all entries
-  survey_reports.each do |id|
+  survey_reports.each_pair do |id, report|
     puts "f_id: #{id}, course: #{course}, subject: #{subject}"
-    pp survey_reports[id]
+    pp report.to_json
     puts
 
-    Pd::LegacySurveySummary.create(facilitator_id: id, course: course, subject: subject, data: survey_reports[id])
+    Pd::LegacySurveySummary.create(facilitator_id: id, course: course, subject: subject, data: report.to_json)
   end
 end
 
