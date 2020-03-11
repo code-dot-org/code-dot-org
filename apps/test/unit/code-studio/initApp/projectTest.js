@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import * as utils from '@cdo/apps/utils';
@@ -581,7 +581,7 @@ describe('project.js', () => {
       expect(currentProject.libraryPublishedAt).to.be.null;
     });
 
-    it('does not call updateChannels_ if library details are unchanged', () => {
+    it('does not overwrite current with undefined/missing config properties', () => {
       const lib = {
         libraryName: 'my name',
         libraryDescription: 'my description',
@@ -590,23 +590,22 @@ describe('project.js', () => {
       };
       setData(lib);
       let currentProject = project.__TestInterface.getCurrent();
+      assert.deepEqual(currentProject, lib);
+
+      project.setLibraryDetails({
+        libraryDescription: 'new description',
+        latestLibraryVersion: undefined
+      });
+
+      currentProject = project.__TestInterface.getCurrent();
       expect(currentProject.libraryName).to.equal(lib.libraryName);
-      expect(currentProject.libraryDescription).to.equal(
-        lib.libraryDescription
-      );
+      expect(currentProject.libraryDescription).to.equal('new description');
       expect(currentProject.latestLibraryVersion).to.equal(
         lib.latestLibraryVersion
       );
       expect(currentProject.libraryPublishedAt).to.equal(
         lib.libraryPublishedAt
       );
-
-      project.setLibraryDetails({
-        ...lib,
-        publishing: undefined
-      });
-
-      expect(project.updateChannels_).not.to.have.been.called;
     });
   });
 
