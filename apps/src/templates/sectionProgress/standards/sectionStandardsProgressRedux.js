@@ -6,6 +6,8 @@ const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
 const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
+const SET_COMPLETED_LESSONS_IDS =
+  'sectionStandardsProgress/SET_COMPLETED_LESSONS_IDS';
 const SET_STUDENT_LEVEL_SCORES =
   'sectionStandardsProgress/SET_STUDENT_LEVEL_SCORES';
 
@@ -21,6 +23,10 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
+export const setCompletedLessonsIds = completed => ({
+  type: SET_COMPLETED_LESSONS_IDS,
+  completed
+});
 export const setStudentLevelScores = scoresData => ({
   type: SET_STUDENT_LEVEL_SCORES,
   scoresData
@@ -31,6 +37,7 @@ const initialState = {
   standardsData: [],
   teacherComment: null,
   selectedLessons: [],
+  completedUnpluggedLessonsIds: [],
   studentLevelScoresByStage: {}
 };
 
@@ -62,6 +69,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
     return {
       ...state,
       selectedLessons: action.selected
+    };
+  }
+  if (action.type === SET_COMPLETED_LESSONS_IDS) {
+    return {
+      ...state,
+      completedUnpluggedLessonsIds: action.completed
     };
   }
   if (action.type === SET_STUDENT_LEVEL_SCORES) {
@@ -108,19 +121,6 @@ export function getUnpluggedLessonsForScript(state) {
   }
 
   return _.map(unpluggedStages, filterStageData);
-}
-
-export function fetchStudentLevelScores(scriptId, sectionId) {
-  return (dispatch, getState) => {
-    $.ajax({
-      method: 'GET',
-      dataType: 'json',
-      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
-    }).then(data => {
-      const scoresData = data;
-      dispatch(setStudentLevelScores(scoresData));
-    });
-  };
 }
 
 export function getNumberLessonsCompleted(state) {
@@ -333,6 +333,19 @@ export function fetchStandardsCoveredForScript(scriptId) {
     }).then(data => {
       const standardsData = data;
       dispatch(setStandardsData(standardsData));
+    });
+  };
+}
+
+export function fetchStudentLevelScores(scriptId, sectionId) {
+  return (dispatch, getState) => {
+    $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
+    }).then(data => {
+      const scoresData = data;
+      dispatch(setStudentLevelScores(scoresData));
     });
   };
 }
