@@ -51,8 +51,61 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     ]
 
     test_cases.each_with_index do |test, index|
-      output = ContactRollupsProcessed.extract_opt_in(test[:input])
+      output = ContactRollupsProcessed.extract_opt_in test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'parse_contact_data parses valid input' do
+    time_str = '2020-03-11 15:01:26'
+    time_parsed = Time.parse(time_str)
+
+    test_cases = [
+      {
+        input: format('[{"sources": "table1", "data": null, "data_updated_at": "%s"}]', time_str),
+        expected_output: {'table1' => {'data_updated_at' => time_parsed}}
+      },
+      {
+        input: format('[{"sources": "table1", "data": {}, "data_updated_at": "%s"}]', time_str),
+        expected_output: {'table1' => {'data_updated_at' => time_parsed}}
+      },
+      {
+        input: format('[{"sources": "table1", "data": {"opt_in": 1}, "data_updated_at": "%s"}]', time_str),
+        expected_output: {'table1' => {'opt_in' => 1, 'data_updated_at' => time_parsed}}
+      },
+      {
+        input: format('['\
+          '{"sources": "table1", "data": {"opt_in": 1}, "data_updated_at": "%s"},'\
+          '{"sources": "table2", "data": {"state": "WA"}, "data_updated_at": "%s"}]',
+          time_str, time_str
+        ),
+        expected_output: {
+          'table1' => {'opt_in' => 1, 'data_updated_at' => time_parsed},
+          'table2' => {'state' => 'WA', 'data_updated_at' => time_parsed}
+        }
+      }
+    ]
+
+    test_cases.each_with_index do |test, index|
+      output = ContactRollupsProcessed.parse_contact_data test[:input]
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+  end
+
+  test 'parse_contact_data throws exception for invalid input' do
+    test_inputs = [
+      nil,
+      '',
+      '[{}]',
+      '[{"sources": "table"}]',
+      '[{"data_updated_at" => null}]',
+      '[{"data_updated_at" => "invalid date"}]'
+    ]
+
+    test_inputs.each do |input|
+      assert_raises do
+        ContactRollupsProcessed.parse_contact_data input
+      end
     end
   end
 
