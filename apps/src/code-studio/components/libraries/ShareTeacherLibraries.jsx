@@ -2,15 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+// import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
+// import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {
-  sectionsNameAndId, asyncLoadSectionData
+  sectionsNameAndId,
+  asyncLoadSectionData
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {setPersonalProjects, updateProjectLibrary} from '@cdo/apps/templates/projects/projectsRedux';
+import {
+  setPersonalProjects,
+  updateProjectLibrary
+} from '@cdo/apps/templates/projects/projectsRedux';
 
-import {getStore} from '@cdo/apps/redux';
+const styles = {
+  container: {
+    fontSize: 13,
+    lineHeight: '18px',
+    color: color.dark_charcoal
+  },
+  footer: {
+    display: 'flex',
+    flexFlow: 'row',
+    justifyContent: 'space-between',
+    margin: 2,
+    paddingTop: 10
+  }
+};
 
 class ShareTeacherLibraries extends React.Component {
   static propTypes = {
@@ -22,110 +41,131 @@ class ShareTeacherLibraries extends React.Component {
         id: PropTypes.number.isRequired
       })
     ).isRequired,
-    personalProjectsList: PropTypes.array.isRequired
-  }
-  state={
+    personalProjectsList: PropTypes.array.isRequired,
+    asyncLoadSectionData: PropTypes.func.isRequired,
+    setPersonalProjects: PropTypes.func.isRequired,
+    updateProjectLibrary: PropTypes.func.isRequired
+  };
+
+  state = {
     selectedSections: [],
     selectedLibraryId: null,
-    doneLoading: false,
     sharedSections: []
-  }
+  };
 
   componentDidMount() {
-    this.props.setPersonalProjects(() => this.setState({doneLoading: true}));
-    this.props.asyncLoadSectionData();
+    const {setPersonalProjects, asyncLoadSectionData} = this.props;
+    setPersonalProjects();
+    asyncLoadSectionData();
   }
 
   assignLibrary = () => {
     const {selectedSections, selectedLibraryId} = this.state;
-    this.props.updateProjectLibrary(selectedLibraryId, {sharedWith: selectedSections.map(section => section.id)});
-    console.log(this.state.selectedSections)
-    console.log(this.state.selectedLibraryId)
-    this.setState({sharedSections: [...selectedSections]})
-    // debugger;
-  }
+    const {updateProjectLibrary} = this.props;
+    updateProjectLibrary(selectedLibraryId, {
+      sharedWith: selectedSections.map(section => section.id)
+    });
+    this.setState({sharedSections: [...selectedSections]});
+  };
 
-  onChooseOption = (event) => {
-    debugger;
+  onChooseOption = event => {
+    const {personalProjectsList, sections} = this.props;
     const id = event.target.value;
-    const project = this.props.personalProjectsList.find(project => project.channel === id);
-    const sharedSections = (project && project.sharedWith) ? this.props.sections.filter(section => project.sharedWith.includes(section.id)) : [];
-    // const sharedSections = this.props.sections.filter(section => project.sharedWith.includes(section.id));
-    this.setState({selectedLibraryId: id, sharedSections: sharedSections, selectedSections: [...sharedSections]});
-  }
+    const project = personalProjectsList.find(
+      project => project.channel === id
+    );
+    const sharedSections =
+      project && project.sharedWith
+        ? sections.filter(section => project.sharedWith.includes(section.id))
+        : [];
+    this.setState({
+      selectedLibraryId: id,
+      sharedSections: sharedSections,
+      selectedSections: [...sharedSections]
+    });
+  };
 
   displaySharedSections = () => {
-    debugger;
     const {sharedSections} = this.state;
-    return (
-      sharedSections.map(section => {
-        return <li key={section.id}>{section.name}</li>;
-      })
-    );
-  }
+    if (sharedSections.length === 0) {
+      return <p>{i18n.libraryNotShared()}</p>;
+    } else {
+      return (
+        <div>
+          <p>{i18n.librarySharedSections()}</p>
+          <ul>
+            {sharedSections.map(section => {
+              return <li key={section.id}>{section.name}</li>;
+            })}
+          </ul>
+        </div>
+      );
+    }
+  };
 
   onSelectAll = shouldSelectAll => {
+    const {sections} = this.props;
     if (shouldSelectAll) {
-      this.setState({selectedSections: this.props.sections});
+      this.setState({selectedSections: sections});
     } else {
       this.setState({selectedSections: []});
     }
   };
 
   onSectionSelected = id => {
-    this.setState(
-      state => {
-        if (state.selectedSections.find(section => section.id === id)) {
-          state.selectedSections = state.selectedSections.filter(section => section.id !== id);
-        } else {
-          state.selectedSections.push(this.props.sections.find(section => section.id === id));
-        }
-        return state;
+    const {sections} = this.props;
+    this.setState(state => {
+      if (state.selectedSections.find(section => section.id === id)) {
+        state.selectedSections = state.selectedSections.filter(
+          section => section.id !== id
+        );
+      } else {
+        state.selectedSections.push(
+          sections.find(section => section.id === id)
+        );
       }
-    );
+      return state;
+    });
   };
 
   render() {
     const {sections, personalProjectsList, onCancel} = this.props;
-    const {doneLoading, selectedSections} = this.state;
-    // debugger;
-    // const projects = personalProjectsList.projects || [];
-    const libraries = personalProjectsList.filter(
-      project => project.libraryName
-    ).map(
-      project => {return {name: project.name, id: project.channel}}
-    );
+    const {selectedSections, selectedLibraryId} = this.state;
+    const libraries = personalProjectsList
+      .filter(project => project.libraryName)
+      .map(project => {
+        return {name: project.name, id: project.channel};
+      });
 
     const rowData = sections.map(section => ({
       ...section,
-      isChecked: !!selectedSections.find(selectedSection => selectedSection.id === section.id)
+      isChecked: !!selectedSections.find(selected => selected.id === section.id)
     }));
 
     return (
-      <div>
+      <div style={styles.container}>
+        <p>{i18n.shareTeacherLibraryDescription()}</p>
         <SortedTableSelect
           rowData={rowData}
-          onRowChecked={(selectedSectionId) => this.onSectionSelected(selectedSectionId)}
+          onRowChecked={id => this.onSectionSelected(id)}
           options={libraries}
           onChooseOption={this.onChooseOption}
-          onSelectAll={(shouldSelectAll) => this.onSelectAll(shouldSelectAll)}
+          onSelectAll={shouldSelectAll => this.onSelectAll(shouldSelectAll)}
+          optionsDescriptionText={i18n.libraryName()}
         >
-          <div>
-            <p>This library is shared with the following sections:</p>
-            <ul>{this.displaySharedSections()}</ul>
-            </div>
+          <div>{selectedLibraryId && this.displaySharedSections()}</div>
         </SortedTableSelect>
-        <Button
-          onClick={onCancel}
-          color={Button.ButtonColor.gray}
-          text={i18n.dialogCancel()}
-        >
-        </Button>
-        <Button
-          onClick={this.assignLibrary}
-          text={'assign library'}
-        >
-        </Button>
+        <div style={styles.footer}>
+          <Button
+            onClick={onCancel}
+            color={Button.ButtonColor.gray}
+            text={i18n.closeDialog()}
+          />
+          <Button
+            onClick={this.assignLibrary}
+            text={i18n.shareLibraryButton()}
+          />
+        </div>
       </div>
     );
   }

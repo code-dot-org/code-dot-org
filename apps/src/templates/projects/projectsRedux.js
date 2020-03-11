@@ -201,7 +201,6 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: action.personalProjectsList
       };
     case UPDATE_PERSONAL_PROJECT_DATA:
-      debugger;
       var projectsList = [...state.projects];
       var updatedProjectIndex = projectsList.findIndex(
         project => project.channel === action.projectId
@@ -419,7 +418,7 @@ export const setPublicProjects = () => {
   };
 };
 
-export const setPersonalProjects = (callback) => {
+export const setPersonalProjects = callback => {
   return dispatch => {
     $.ajax({
       method: 'GET',
@@ -427,13 +426,14 @@ export const setPersonalProjects = (callback) => {
       dataType: 'json'
     }).done(personalProjectsList => {
       dispatch(setPersonalProjectsList(personalProjectsList));
-      callback();
+      if (callback) {
+        callback();
+      }
     });
   };
 };
 
 const fetchProjectToUpdate = (projectId, onComplete) => {
-  debugger;
   $.ajax({
     url: `/v3/channels/${projectId}`,
     method: 'GET',
@@ -475,7 +475,6 @@ export function unpublishProject(projectId) {
 export const updateProjectLibrary = (projectId, newData) => {
   return dispatch => {
     fetchProjectToUpdate(projectId, (error, project) => {
-      debugger;
       if (error) {
         console.error(error);
       } else {
