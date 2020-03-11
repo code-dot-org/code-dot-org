@@ -25,6 +25,8 @@ class EditKeyRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
+
   componentDidMount() {
     this.isMounted_ = true;
   }
@@ -42,7 +44,7 @@ class EditKeyRow extends React.Component {
     });
 
   handleSave = () => {
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+    if (this.inExperiment) {
       this.props.hideError();
     }
     try {
@@ -58,7 +60,7 @@ class EditKeyRow extends React.Component {
         msg => console.warn(msg)
       );
     } catch (e) {
-      if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      if (this.inExperiment) {
         this.setState({isSaving: false});
         this.props.showError();
       }

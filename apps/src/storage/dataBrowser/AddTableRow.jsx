@@ -24,6 +24,8 @@ class AddTableRow extends React.Component {
 
   state = {...INITIAL_STATE};
 
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
+
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
       [columnName]: event.target.value
@@ -33,7 +35,7 @@ class AddTableRow extends React.Component {
 
   handleAdd = () => {
     try {
-      if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      if (this.inExperiment) {
         this.props.hideError();
       }
       const record = _.mapValues(this.state.newInput, inputString =>
@@ -47,7 +49,7 @@ class AddTableRow extends React.Component {
         msg => console.warn(msg)
       );
     } catch (e) {
-      if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      if (this.inExperiment) {
         this.setState({isSaving: false});
         this.props.showError();
       }
