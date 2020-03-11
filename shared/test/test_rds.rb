@@ -258,7 +258,7 @@ class TestRDS < Minitest::Test
       stub_responses: {
         describe_db_clusters: [@cluster_to_delete, 'DBClusterNotFoundFault'],
         delete_db_instance: @delete_instance_response,
-        describe_db_instances: Aws::RDS::Errors::DBInstanceNotFoundFault,
+        describe_db_instances: 'DBInstanceNotFoundFault',
         delete_db_cluster: @delete_cluster_response
       }
     }
