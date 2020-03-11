@@ -590,27 +590,32 @@ var projects = (module.exports = {
    * Updates the current channel's library details.
    *
    * @param {Object} config - Object containing library details.
-   * @param {string} config.newName
-   * @param {string} config.newDescription
-   * @param {string} config.newVersionId - S3 version ID for the current library version. Passing this value as -1 will nullify libraryLatestVersion.
+   * @param {string} config.libraryName
+   * @param {string} config.libraryDescription
+   * @param {string} config.latestLibraryVersion - S3 version ID for the current library version. Passing this value as -1 will nullify libraryLatestVersion.
    * @param {boolean} config.publishing - true if library is being published, false if library is being unpublished, undefined otherwise.
    */
   setLibraryDetails(config = {}) {
     current = current || {};
-    const {newName, newDescription, newVersionId, publishing} = config;
+    const {
+      libraryName,
+      libraryDescription,
+      latestLibraryVersion,
+      publishing
+    } = config;
 
     if (
-      current.libraryName !== newName ||
-      current.libraryDescription !== newDescription ||
-      current.latestLibraryVersion !== newVersionId ||
+      current.libraryName !== libraryName ||
+      current.libraryDescription !== libraryDescription ||
+      current.latestLibraryVersion !== latestLibraryVersion ||
       publishing !== undefined
     ) {
-      current.libraryName = newName;
-      current.libraryDescription = newDescription;
+      current.libraryName = libraryName;
+      current.libraryDescription = libraryDescription;
 
-      if (newVersionId) {
+      if (latestLibraryVersion) {
         current.latestLibraryVersion =
-          newVersionId === -1 ? null : newVersionId;
+          latestLibraryVersion === -1 ? null : latestLibraryVersion;
       }
 
       if (publishing) {

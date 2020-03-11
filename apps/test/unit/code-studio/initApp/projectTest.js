@@ -516,43 +516,43 @@ describe('project.js', () => {
       setData({});
     });
 
-    it('updates current library name if newName provided', () => {
+    it('updates current library name if libraryName provided', () => {
       let oldName = 'initialLibrary';
       let newName = 'newLibraryName';
       setData({libraryName: oldName});
       expect(project.getCurrentLibraryName()).to.equal(oldName);
 
-      project.setLibraryDetails({newName});
+      project.setLibraryDetails({libraryName: newName});
 
       expect(project.getCurrentLibraryName()).to.equal(newName);
       expect(project.updateChannels_).to.have.been.called;
     });
 
-    it('updates current library description if newDescription provided', () => {
+    it('updates current library description if libraryDescription provided', () => {
       let oldDescription = 'initialDescription';
       let newDescription = 'newLibraryDescription';
       setData({libraryDescription: oldDescription});
       expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
 
-      project.setLibraryDetails({newDescription});
+      project.setLibraryDetails({libraryDescription: newDescription});
 
       expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
       expect(project.updateChannels_).to.have.been.called;
     });
 
-    it('updates current latestLibraryVersion if newVersionId provided', () => {
+    it('updates current latestLibraryVersion if latestLibraryVersion provided', () => {
       let oldVersion = '123456';
       let newVersion = '654321';
       setData({latestLibraryVersion: oldVersion});
       let currentProject = project.__TestInterface.getCurrent();
       expect(currentProject.latestLibraryVersion).to.equal(oldVersion);
 
-      project.setLibraryDetails({newVersionId: newVersion});
+      project.setLibraryDetails({latestLibraryVersion: newVersion});
 
       currentProject = project.__TestInterface.getCurrent();
       expect(currentProject.latestLibraryVersion).to.equal(newVersion);
 
-      project.setLibraryDetails({newVersionId: -1});
+      project.setLibraryDetails({latestLibraryVersion: -1});
 
       currentProject = project.__TestInterface.getCurrent();
       expect(currentProject.latestLibraryVersion).to.be.null;
@@ -602,9 +602,7 @@ describe('project.js', () => {
       );
 
       project.setLibraryDetails({
-        newName: lib.libraryName,
-        newDescription: lib.libraryDescription,
-        newVersionId: lib.latestLibraryVersion,
+        ...lib,
         publishing: undefined
       });
 

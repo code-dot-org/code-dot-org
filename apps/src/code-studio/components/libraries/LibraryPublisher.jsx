@@ -113,10 +113,10 @@ export default class LibraryPublisher extends React.Component {
       data => {
         // Write to projects database
         dashboard.project.setLibraryDetails({
-          newName: libraryName,
-          newDescription: libraryDescription,
+          libraryName,
+          libraryDescription,
           publishing: true,
-          newVersionId: data && data.versionId
+          latestLibraryVersion: data && data.versionId
         });
 
         onPublishSuccess(libraryName);
@@ -244,10 +244,10 @@ export default class LibraryPublisher extends React.Component {
     libraryClientApi.delete(
       () => {
         dashboard.project.setLibraryDetails({
-          newName: undefined,
-          newDescription: undefined,
+          libraryName: undefined,
+          libraryDescription: undefined,
           publishing: false,
-          newVersionId: -1
+          latestLibraryVersion: -1
         });
         onUnpublishSuccess();
       },
