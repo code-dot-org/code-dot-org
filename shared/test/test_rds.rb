@@ -6,6 +6,7 @@ class TestRDS < Minitest::Test
   def setup
     @source_cluster_id = 'source-cluster'
     @clone_cluster_id = 'cluster-clone'
+    @cluster_to_delete_id = 'delete-me-cluster'
 
     @source_cluster = {
       "db_clusters": [
@@ -181,9 +182,7 @@ class TestRDS < Minitest::Test
       "db_instance": @source_instance[:db_instances][0].deep_merge(
         {
           "db_instance_identifier": "#{@clone_cluster_id}-0",
-          # TODO: (suresh) Temporarily setting this to 'available' so the 2nd describe instances call from the waiter works.
-          # "db_instance_status": "creating",
-          "db_instance_status": "available",
+          "db_instance_status": "creating",
           "db_cluster_identifier": @clone_cluster_id,
           "dbi_resource_id": "db-A1B2C3D4E5",
           "db_instance_arn": "arn:aws:rds:us-east-1:0987654321:db:#{@clone_cluster_id}-0"
@@ -200,6 +199,43 @@ class TestRDS < Minitest::Test
         )
       ]
     }
+
+    @cluster_to_delete = @source_cluster.deep_merge(
+      {
+        "db_clusters": [
+          {
+            "db_cluster_identifier": @cluster_to_delete_id,
+            "endpoint": "#{@cluster_to_delete_id}.cluster-abcdefghijk.us-east-1.rds.amazonaws.com",
+            "reader_endpoint": "#{@cluster_to_delete_id}.cluster-abcdefghijk.us-east-1.rds.amazonaws.com",
+            "db_cluster_resource_id": "cluster-A1B2C3D4E5",
+            "db_cluster_arn": "arn:aws:rds:us-east-1:0987654321:cluster:#{@cluster_to_delete_id}",
+            "clone_group_id": "9Z8Y7X6W5V",
+          }
+        ]
+      }
+    )
+
+    @delete_instance_response = {
+      "db_instance": @source_instance[:db_instances][0].deep_merge(
+        {
+          "db_instance_status": "deleting",
+          "db_cluster_identifier": "#{@cluster_to_delete_id}-0",
+          "dbi_resource_id": "db-Z9Y8X7W6V5",
+          "db_instance_arn": "arn:aws:rds:us-east-1:0987654321:db:#{@cluster_to_delete_id}-0"
+        }
+      )
+    }
+
+    @delete_cluster_response = {
+      "db_cluster": @source_cluster[:db_clusters][0].deep_merge(
+        "db_cluster_identifier": @cluster_to_delete_id,
+        "endpoint": "#{@cluster_to_delete_id}.cluster-abcdefghijk.us-east-1.rds.amazonaws.com",
+        "reader_endpoint": "#{@cluster_to_delete_id}.cluster-abcdefghijk.us-east-1.rds.amazonaws.com",
+        "db_cluster_resource_id": "cluster-Z1Y2X3W4V5",
+        "db_cluster_arn": "arn:aws:rds:us-east-1:0987654321:cluster:#{@cluster_to_delete_id}",
+        "clone_group_id": "1z2y3x4w5v",
+      )
+    }
   end
 
   def test_clone_cluster
@@ -207,7 +243,9 @@ class TestRDS < Minitest::Test
       stub_responses: {
         describe_db_clusters: @source_cluster,
         restore_db_cluster_to_point_in_time: @clone_cluster_response,
-        describe_db_instances: @source_instance,
+        # The 1st stub returns @source_instance when `clone_cluster` is getting information about the instance to clone.
+        # The 2nd stub returns @create_instance_complete when the waiter checks to see if it has been provisioned.
+        describe_db_instances: [@source_instance, @create_instance_complete],
         create_db_instance: @create_instance_response
       }
     }
@@ -215,10 +253,16 @@ class TestRDS < Minitest::Test
     Cdo::RDS.clone_cluster(source_cluster_id: @source_cluster_id, clone_cluster_id: @clone_cluster_id)
   end
 
-  def delete_cluster
-    # delete db instance
-    #   describe instance (waiter)
-    # delete db cluster
-    #   describe db cluster (custom waiter)
+  def test_delete_cluster
+    Aws.config[:rds] = {
+      stub_responses: {
+        describe_db_clusters: [@cluster_to_delete, 'DBClusterNotFoundFault'],
+        delete_db_instance: @delete_instance_response,
+        describe_db_instances: Aws::RDS::Errors::DBInstanceNotFoundFault,
+        delete_db_cluster: @delete_cluster_response
+      }
+    }
+
+    Cdo::RDS.delete_cluster(@cluster_to_delete_id)
   end
 end
