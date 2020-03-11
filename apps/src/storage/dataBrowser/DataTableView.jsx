@@ -127,7 +127,8 @@ class DataTableView extends React.Component {
   };
 
   getTableJson() {
-    const records = this.props.tableRecords.map(record => JSON.parse(record));
+    const records = [];
+    this.props.tableRecords.forEach(record => records.push(JSON.parse(record)));
     return JSON.stringify(records, null, 2);
   }
 
@@ -185,6 +186,7 @@ class DataTableView extends React.Component {
   }
 }
 
+export const UnconnectedDataTableView = DataTableView;
 export default connect(
   state => ({
     view: state.data.view,
