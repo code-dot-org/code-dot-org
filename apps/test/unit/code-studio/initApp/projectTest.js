@@ -551,6 +551,11 @@ describe('project.js', () => {
 
       currentProject = project.__TestInterface.getCurrent();
       expect(currentProject.latestLibraryVersion).to.equal(newVersion);
+
+      project.setLibraryDetails({newVersionId: -1});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.be.null;
     });
 
     it('updates current publishLibrary if publishing is true', () => {
