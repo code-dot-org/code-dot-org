@@ -21,6 +21,8 @@ export default class PrintReportButton extends Component {
           onClick={this.props.onClick}
           color={Button.ButtonColor.orange}
           text={i18n.printReport()}
+          icon="print"
+          iconClassName="fa"
           size={'narrow'}
           style={styles.button}
         />

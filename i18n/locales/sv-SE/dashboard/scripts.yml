@@ -2124,3 +2124,7 @@ sv:
           stages:
             Spelling Bee:
               name: Stavnings-bi
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binära tal

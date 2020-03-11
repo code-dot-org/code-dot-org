@@ -15254,3 +15254,51 @@ tr:
               name: Sanatçıların Döngüleri
             Loops in Artist:
               name: Sanatçı- Döngüler
+        csp1-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            Representing Information:
+              name: Sunulan Bilgi
+            Binary Numbers:
+              name: İkili Sayılar
+            Intellectual Property:
+              name: Fikri Mülkiyet
+        csp2-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            The Need for Addressing:
+              name: Adresleme için ihtiyaç
+            Routers and Redundancy:
+              name: Yönlendiriciler ve yedeklilik
+        csp3-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            The Need for Programming Languages:
+              name: Programlama dilleri ne duyulan ihtiyaç
+            Debugging:
+              name: Hata Ayıklama (Debugging)
+        csp6-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp8-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            Create PT - Complete the Task:
+              name: Performans Görevini Oluştur - Görevi Tamamla
+        csp9-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp10-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: yeni kademe
