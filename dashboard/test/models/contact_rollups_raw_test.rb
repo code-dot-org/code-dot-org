@@ -1,17 +1,19 @@
 require 'test_helper'
 
 class ContactRollupsRawTest < ActiveSupport::TestCase
-  test 'truncate_table removes all rows' do
-    create :email_preference
-    assert_equal 1, EmailPreference.count
+  test 'extract_email_preferences adds all email preferences' do
+    email_preference = create :email_preference
+    ContactRollupsRaw.extract_email_preferences
 
-    ContactRollupsRaw.truncate_table
-    assert_equal 0, EmailPreference.count
+    expected_data = {opt_in: email_preference.opt_in}
+    result = ContactRollupsRaw.find_by(email: email_preference.email, sources: "dashboard.#{email_preference.class.table_name}")
+
+    assert_equal expected_data, result.data.symbolize_keys
   end
 
-  test 'extract_email_preferences adds all email preferences' do
-    @email_preference = create :email_preference
+  test 'bunch of email prefences works' do
+    3.times {|i| create :email_preference, email: "contact_#{i}@rollups.com"}
     ContactRollupsRaw.extract_email_preferences
-    assert ContactRollupsRaw.exists? email: @email_preference.email, sources: @email_preference.class.table_name
+    assert 3, ContactRollupsRaw.count
   end
 end
