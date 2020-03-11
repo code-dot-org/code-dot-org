@@ -62,7 +62,12 @@ class DataTable extends React.Component {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    tableRecords: PropTypes.array.isRequired,
+    // "if all of the keys are integers, and more than half of the keys between 0 and
+    // the maximum key in the object have non-empty values, then Firebase will render
+    // it as an array."
+    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+      .isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired
@@ -191,10 +196,13 @@ class DataTable extends React.Component {
   };
 
   getRowsForCurrentPage(rowsPerPage) {
-    return this.props.tableRecords.slice(
-      this.state.currentPage * rowsPerPage,
-      (this.state.currentPage + 1) * rowsPerPage
-    );
+    if (this.props.tableRecords['slice']) {
+      return this.props.tableRecords.slice(
+        this.state.currentPage * rowsPerPage,
+        (this.state.currentPage + 1) * rowsPerPage
+      );
+    }
+    return this.props.tableRecords;
   }
 
   render() {
@@ -204,7 +212,7 @@ class DataTable extends React.Component {
     let rowsPerPage = this.props.rowsPerPage || MAX_ROWS_PER_PAGE;
     let numPages = Math.max(
       1,
-      Math.ceil(this.props.tableRecords.length / rowsPerPage)
+      Math.ceil(Object.keys(this.props.tableRecords).length / rowsPerPage)
     );
     let rows = this.getRowsForCurrentPage(rowsPerPage);
 
@@ -295,7 +303,7 @@ class DataTable extends React.Component {
 export default connect(
   state => ({
     tableColumns: state.data.tableColumns || [],
-    tableRecords: state.data.tableRecords || [],
+    tableRecords: state.data.tableRecords || {},
     tableName: state.data.tableName || ''
   }),
   dispatch => ({
