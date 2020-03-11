@@ -1,7 +1,6 @@
 require 'yaml'
 require 'cdo/erb'
 require 'cdo/pegasus/text_render'
-#require 'dynamic_config/dcdo'
 
 module Cdo
   # Extend YAML with customizations.
