@@ -19,4 +19,8 @@ class MarkdownHandler
   def self.register_html_safe(*args)
     ActionView::Template.register_template_handler :safe_md, MarkdownHandler.new(*args)
   end
+
+  def self.register_inline(*args)
+    ActionView::Template.register_template_handler :inline_md, MarkdownHandler.new(*args)
+  end
 end
