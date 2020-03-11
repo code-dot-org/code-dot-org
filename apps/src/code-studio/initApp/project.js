@@ -604,31 +604,29 @@ var projects = (module.exports = {
       publishing
     } = config;
 
-    if (
-      current.libraryName !== libraryName ||
-      current.libraryDescription !== libraryDescription ||
-      current.latestLibraryVersion !== latestLibraryVersion ||
-      publishing !== undefined
-    ) {
+    if (libraryName !== current.libraryName) {
       current.libraryName = libraryName;
-      current.libraryDescription = libraryDescription;
-
-      if (latestLibraryVersion) {
-        current.latestLibraryVersion =
-          latestLibraryVersion === -1 ? null : latestLibraryVersion;
-      }
-
-      if (publishing) {
-        // Tells the server to set libraryPublishedAt timestamp.
-        current.publishLibrary = true;
-      } else if (publishing === false) {
-        // Unpublishing, so nullify libraryPublishedAt timestamp.
-        current.libraryPublishedAt = null;
-        current.publishLibrary = false;
-      }
-
-      this.updateChannels_();
     }
+
+    if (libraryDescription !== current.libraryDescription) {
+      current.libraryDescription = libraryDescription;
+    }
+
+    if (latestLibraryVersion !== current.latestLibraryVersion) {
+      current.latestLibraryVersion =
+        latestLibraryVersion === -1 ? null : latestLibraryVersion;
+    }
+
+    if (publishing) {
+      // Tells the server to set libraryPublishedAt timestamp.
+      current.publishLibrary = true;
+    } else if (publishing === false) {
+      // Unpublishing, so nullify libraryPublishedAt timestamp.
+      current.libraryPublishedAt = null;
+      current.publishLibrary = false;
+    }
+
+    this.updateChannels_();
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
