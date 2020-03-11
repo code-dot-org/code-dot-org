@@ -23,7 +23,7 @@ social:
 
 %h1= I18n.t(:hoc_overview_title)
 
-!= I18n.t(:hoc_overview_subtitle)
+!= I18n.t(:hoc_overview_subtitle_markdown, markdown: true)
 
 - if request.language == 'en'
   %br/
