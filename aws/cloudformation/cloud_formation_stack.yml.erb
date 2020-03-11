@@ -622,6 +622,33 @@ Resources:
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
 <% if rack_env?(:production) -%>
+        # Grant scheduled processes (Contact Rollups, Export to Redshift, etc.) permission to clone/delete RDS clusters.
+        - PolicyName: CloneDeleteRDSClusters
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBClusters'
+                  - 'rds:RestoreDBClusterToPointInTime'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:DeleteDBCluster'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:CreateDBInstance'
+                  - 'rds:DeleteDBInstance'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                Resource: '*'
         - PolicyName: StopInactiveAdhocInstances
           PolicyDocument:
             Statement:
