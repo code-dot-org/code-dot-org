@@ -619,6 +619,7 @@ var projects = (module.exports = {
       } else if (publishing === false) {
         // Unpublishing, so nullify libraryPublishedAt timestamp.
         current.libraryPublishedAt = null;
+        current.publishLibrary = false;
       }
 
       this.updateChannels_();
