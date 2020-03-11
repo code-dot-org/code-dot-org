@@ -30,13 +30,14 @@ module Pd::Foorm
 
     # result format:
     # {<form_name> => { <form_version> => { num_respondents: 4,
-    # <question1-name> => { num_respondents: 3, answers: {<answer1-name>: 5, <answer2-name>: 3,...}},
+    # <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
     # <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
     # <question3-name> => ['abc', 'def']
     # }}
     # Where the value for a question name is an array answers for a text question or a summary of answer choices for select/matrix
     # questions. If question is a matrix responses will be nested.
-    # num_respondents/answers within the hash is used only for multi-select
+    # num_respondents within the hash is used only for multi-select. other_answers is used if the select question has
+    # a free text other field
     def self.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
       workshop_summary = {}
       foorm_submissions.each do |submission|
@@ -59,6 +60,15 @@ module Pd::Foorm
         # add answer to summary based on question type
         next unless form_questions[name]
         question_type = form_questions[name][:type]
+        if answer == 'other'
+          comment_text_key = "#{name}-Comment"
+          if answers[comment_text_key]
+            current_workshop_summary[name]['other_answers'] ||= []
+            current_workshop_summary[name]['other_answers'] << answers[comment_text_key]
+            next
+          end
+        end
+
         case question_type
         when ANSWER_TEXT
           # add text to list of answers

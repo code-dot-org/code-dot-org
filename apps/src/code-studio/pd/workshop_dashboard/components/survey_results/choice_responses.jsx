@@ -15,7 +15,8 @@ export default class ChoiceResponses extends React.Component {
     answerType: PropTypes.string.isRequired,
     possibleAnswers: PropTypes.array.isRequired,
     possibleAnswersMap: PropTypes.object,
-    otherText: PropTypes.string
+    otherText: PropTypes.string,
+    otherAnswers: PropTypes.array
   };
 
   getTotalRespondents() {
@@ -167,20 +168,22 @@ export default class ChoiceResponses extends React.Component {
       this.props.answerType === 'scale'
         ? this.props.possibleAnswers.map(x => x.split(' ')[0])
         : this.props.possibleAnswers;
-    let otherAnswers;
-    if (this.props.perFacilitator) {
-      let givenAnswers = Object.values(this.props.answers).reduce(
-        (set, answers) => {
-          return new Set(Object.keys(answers).concat(...set.values()));
-        },
-        new Set()
-      );
-      otherAnswers = _.difference(givenAnswers, possibleAnswers);
-    } else {
-      otherAnswers = _.difference(
-        Object.keys(this.props.answers),
-        possibleAnswers
-      );
+    let otherAnswers = this.props.otherAnswers;
+    if (!otherAnswers) {
+      if (this.props.perFacilitator) {
+        let givenAnswers = Object.values(this.props.answers).reduce(
+          (set, answers) => {
+            return new Set(Object.keys(answers).concat(...set.values()));
+          },
+          new Set()
+        );
+        otherAnswers = _.difference(givenAnswers, possibleAnswers);
+      } else {
+        otherAnswers = _.difference(
+          Object.keys(this.props.answers),
+          possibleAnswers
+        );
+      }
     }
 
     return (

@@ -25,22 +25,18 @@ export default class Results extends React.Component {
     let uniqueKey = -1;
     return _.compact(
       Object.keys(answers).map(surveyId => {
-        console.log(`surveyId: ${surveyId}`);
         let surveyQuestions = questions[surveyId];
-        console.log(`surveyQuestions: ${surveyQuestions}`);
         if (!surveyQuestions) {
           return null;
         }
 
         return _.compact(
-          Object.keys(answers[surveyId]).map(questionId => {
-            console.log(`questionId: ${questionId}`);
+          Object.keys(surveyQuestions).map(questionId => {
             let question = surveyQuestions[questionId];
-            if (!question) {
+            let answer = answers[surveyId][questionId];
+            if (!answer) {
               return null;
             }
-
-            let answer = answers[surveyId][questionId];
 
             if (
               ['scale', 'singleSelect', 'multiSelect'].includes(
@@ -50,8 +46,11 @@ export default class Results extends React.Component {
               // numRespondents will get either a value (for multiSelect) or undefined.
               const numRespondents = answer.num_respondents;
 
-              // Make a copy of the answers without the num_respondents field.
-              const filteredAnswers = _.omit(answer, 'num_respondents');
+              // Make a copy of the answers without the num_respondents and other_answers fields.
+              const filteredAnswers = _.omit(answer, [
+                'num_respondents',
+                'other_answers'
+              ]);
 
               let possibleAnswersMap = question['choices'];
               uniqueKey++;
@@ -65,21 +64,22 @@ export default class Results extends React.Component {
                   possibleAnswersMap={possibleAnswersMap}
                   key={uniqueKey}
                   answerType={question['type']}
-                  /*otherText={question['other_text']}*/
+                  otherText={question['other_text']}
+                  otherAnswers={answer['other_answers']}
                 />
               );
             } else if (question['type'] === 'matrix') {
               // render choice response per question inside matrix
-              return Object.keys(answer).map(innerQuestionId => {
+              if (!question['rows']) {
+                return null;
+              }
+              return Object.keys(question['rows']).map(innerQuestionId => {
                 const innerAnswer = answer[innerQuestionId];
                 const numRespondents = answer.num_respondents;
                 let possibleAnswersMap = question['columns'];
-                let parsedQuestionName = innerQuestionId;
-                if (question['rows'] && question['rows'][innerQuestionId]) {
-                  parsedQuestionName = `${question['title']} -> ${
-                    question['rows'][innerQuestionId]
-                  }`;
-                }
+                let parsedQuestionName = `${question['title']} -> ${
+                  question['rows'][innerQuestionId]
+                }`;
                 uniqueKey++;
                 return (
                   <ChoiceResponses
@@ -91,7 +91,6 @@ export default class Results extends React.Component {
                     possibleAnswersMap={possibleAnswersMap}
                     key={uniqueKey}
                     answerType={'singleSelect'}
-                    /*otherText={question['other_text']}*/
                   />
                 );
               });

@@ -21,6 +21,9 @@ module Pd::Foorm
             case question_data[:type]
             when TYPE_CHECKBOX, TYPE_RADIO
               parsed_question[:choices] = flatten_choices(question_data[:choices])
+              if question_data[:hasOther]
+                parsed_question[:other_text] = question_data[:otherPlaceHolder] || 'other'
+              end
             when TYPE_RATING
               parsed_question[:choices] = get_friendly_rating_choices(question_data)
             when TYPE_MATRIX
