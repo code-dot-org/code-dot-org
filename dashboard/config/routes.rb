@@ -432,7 +432,6 @@ Dashboard::Application.routes.draw do
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
-        post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
       end
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
@@ -455,6 +454,8 @@ Dashboard::Application.routes.draw do
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
       get 'regional_partners/find', to: 'regional_partners#find'
+
+      post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
