@@ -25,9 +25,10 @@ class YamlTest < Minitest::Test
       body content
     CONTENT
 
-    header, body = YAML.parse_yaml_header(content)
-    assert_equal({"key" => "<%= value %>"}, header)
-    assert_equal "body content\n", body
+    # undefined local variables will throw an error
+    assert_raises NameError do
+      YAML.parse_yaml_header(content)
+    end
 
     header, body = YAML.parse_yaml_header(content, {value: "foo"})
     assert_equal({"key" => "foo"}, header)
