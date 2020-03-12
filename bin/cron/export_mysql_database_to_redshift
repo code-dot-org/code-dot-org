@@ -6,6 +6,7 @@ require_relative '../../dashboard/config/environment'
 exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org'
 
 require 'cdo/aws/dms'
+require 'cdo/aws/rds'
 require 'cdo/chat_client'
 require 'cdo/redshift_import'
 
@@ -13,9 +14,19 @@ require 'cdo/redshift_import'
 TASK_EXECUTION_TIME = 16.hours
 # Delay between each check on task status.
 TASK_STATUS_DELAY = 10.minutes
+# TODO: (suresh) Can this dynamically reference the endpoint defined the in the production data stack?
+CLONE_CLUSTER_ID = 'production-clone-for-redshift-export-cluster'.freeze
+CLONE_DB_INSTANCE_ID = 'db.r4.4xlarge'.freeze
 
 def main
-  ChatClient.message 'data', 'Beginning export from Aurora MySQL database to Redshift.'
+  ChatClient.message 'data', 'Beginning daily export from Aurora MySQL database to Redshift.'
+  # Delete clone of production cluster if it was incorrectly left behind by a previous execution of the import process.
+  Cdo::RDS.delete_cluster(CLONE_CLUSTER_ID)
+  Cdo::RDS.clone_cluster(
+    source_cluster_id: CDO.db_cluster_id,
+    clone_cluster_id: CLONE_CLUSTER_ID,
+    instance_type: CLONE_DB_INSTANCE_ID
+  )
 
   # Get list of tasks that should be executed daily.
   daily_tasks = Cdo::DMS::ReplicationTask.tasks_by_frequency('daily')
@@ -35,10 +46,12 @@ def main
   # the import process
   RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
 
-  ChatClient.message 'data', "Completed export from Aurora MySQL database to Redshift."
+  ChatClient.message 'data', "Completed daily export from Aurora MySQL database to Redshift."
 rescue StandardError => error
   ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
+ensure
+  Cdo::RDS.delete_cluster(CLONE_CLUSTER_ID)
 end
 
 main
