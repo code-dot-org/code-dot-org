@@ -616,12 +616,4 @@ class Blockly < Level
       self.goal_override = JSON.parse(goal_override)
     end
   end
-
-  def self.goal_override
-    <<-JSON.strip_heredoc.chomp
-      {
-        "goalAnimation": null
-      }
-    JSON
-  end
 end
