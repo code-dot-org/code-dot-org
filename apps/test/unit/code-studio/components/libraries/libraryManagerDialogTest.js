@@ -163,31 +163,34 @@ describe('LibraryManagerDialog', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-
-      wrapper.instance().onImportFailed();
-      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+      wrapper.instance().setState({error: IMPORT_ERROR_MSG});
 
       wrapper.instance().setLibraryToImport({target: {value: 'id'}});
       expect(wrapper.state().error).to.be.null;
     });
 
-    it('onImportFailed displays an error', () => {
+    it('addLibraryById adds the library to the project if given libraryJson', () => {
+      let setProjectLibrariesSpy = sinon.spy(
+        window.dashboard.project,
+        'setProjectLibraries'
+      );
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      const getErrorEl = wrapper =>
-        wrapper
-          .find('BaseDialog')
-          .children()
-          .last();
+      const library = {libraryName: 'my favorite library'};
 
+      wrapper.instance().addLibraryById(library, null);
+      expect(setProjectLibrariesSpy).to.have.been.called;
+      setProjectLibrariesSpy.restore();
+    });
+
+    it('addLibraryById sets an error in state if given an error', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
       expect(wrapper.state().error).to.be.null;
-      expect(getErrorEl(wrapper).text()).to.equal('');
-
-      wrapper.instance().onImportFailed();
-
+      wrapper.instance().addLibraryById(null, 'an error occurred!');
       expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
-      expect(getErrorEl(wrapper).text()).to.equal(IMPORT_ERROR_MSG);
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
