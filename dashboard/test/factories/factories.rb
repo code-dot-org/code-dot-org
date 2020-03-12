@@ -1233,4 +1233,11 @@ FactoryGirl.define do
   end
 
   factory :donor_school
+
+  factory :contact_rollups_raw do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:sources) {|n| "dashboard.table_#{n}"}
+    data {{opt_in: 1}}
+    data_updated_at {Time.now}
+  end
 end
