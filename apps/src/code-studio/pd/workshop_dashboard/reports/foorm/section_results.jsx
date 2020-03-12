@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ChoiceResponses from '../../components/survey_results/choice_responses';
-import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
+import MatrixChoiceResponses from '../../components/survey_results/matrix_choice_responses';
+import SingleQuestionChoiceResponses from '../../components/survey_results/single_question_choice_responses';
+import TextResponses from '../../components/survey_results/text_responses';
 
 export default class SectionResults extends React.Component {
   static propTypes = {
@@ -20,58 +21,32 @@ export default class SectionResults extends React.Component {
     }
 
     if (['scale', 'singleSelect', 'multiSelect'].includes(question['type'])) {
-      // numRespondents will get either a value (for multiSelect) or undefined.
-      const numRespondents = answer.num_respondents;
-
-      // Make a copy of the answers without the num_respondents and other_answers fields.
-      const filteredAnswers = _.omit(answer, [
-        'num_respondents',
-        'other_answers'
-      ]);
-
-      let possibleAnswersMap = question['choices'];
       return (
-        <ChoiceResponses
-          perFacilitator={section === 'facilitator'}
-          numRespondents={numRespondents}
-          question={question['title'] || questionId}
-          answers={filteredAnswers}
-          possibleAnswers={Object.keys(possibleAnswersMap)}
-          possibleAnswersMap={possibleAnswersMap}
-          answerType={question['type']}
-          otherText={question['other_text']}
-          otherAnswers={answer['other_answers']}
+        <SingleQuestionChoiceResponses
+          question={question}
+          questionId={questionId}
+          answer={answer}
+          section={section}
         />
       );
     } else if (question['type'] === 'matrix') {
-      // render choice response per question inside matrix
       if (!question['rows']) {
         return null;
       }
-      return Object.keys(question['rows']).map(innerQuestionId => {
-        const innerAnswer = answer[innerQuestionId];
-        const numRespondents = answer.num_respondents;
-        let possibleAnswersMap = question['columns'];
-        let parsedQuestionName = `${question['title']} -> ${
-          question['rows'][innerQuestionId]
-        }`;
-        return (
-          <ChoiceResponses
-            perFacilitator={section === 'facilitator'}
-            numRespondents={numRespondents}
-            question={parsedQuestionName}
-            answers={innerAnswer}
-            possibleAnswers={Object.keys(possibleAnswersMap)}
-            possibleAnswersMap={possibleAnswersMap}
-            answerType={'singleSelect'}
-          />
-        );
-      });
+      return (
+        <MatrixChoiceResponses
+          question={question}
+          questionId={questionId}
+          answer={answer}
+          section={section}
+        />
+      );
     } else if (question['type'] === 'text') {
       return (
         <TextResponses
           question={question['title'] || questionId}
           answers={answer}
+          key={questionId}
         />
       );
     }
