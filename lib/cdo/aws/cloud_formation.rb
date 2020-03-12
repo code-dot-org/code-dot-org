@@ -103,7 +103,9 @@ module AWS
       # or prints the template description (if valid).
       def validate
         template = render_template(dry_run: true)
-        CDO.log.info template if ENV['VERBOSE']
+        if ENV['VERBOSE']
+          CDO.log.info template.lines.map.with_index(1) {|line, i| format("[%3d] %s", i, line)}.join
+        end
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
         options = stack_options(template)
