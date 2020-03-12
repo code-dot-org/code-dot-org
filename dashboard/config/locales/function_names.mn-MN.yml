@@ -329,6 +329,17 @@ mn-MN:
       NEW Course 4 Play Lab Params 11:
         jump: үсрэх
         patrol: эргүүл
+      New Artist Project:
+        draw a star: од зурах
+        draw a circle: тойрог зурах
+        draw a pinwheel: хавчаар зурах
+        draw a triangle: гурвалжин зурах
+        draw a shape: дүрс зурах
+        draw a house: байшин зурах
+        draw a square: квадрат зурах
+      New Play Lab Project:
+        jump: үсрэх
+        patrol: эргүүл
       Robot Doodle:
         25 pixel square: 25 пикселийн квадрат
         draw head: толгой зурах
@@ -606,7 +617,6 @@ mn-MN:
         draw a house: байшин зурах
       courseE_artist_functions7_2019:
         draw a window: цонх зурах
-        draw a house: байшин зурах
       courseE_artist_functions8:
         do something: ямар нэг юм хийх
         draw a line of squares: квадратуудын шугамын зураарай

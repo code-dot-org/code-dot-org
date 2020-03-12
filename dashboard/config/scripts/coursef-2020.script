@@ -180,6 +180,5 @@ stage 'Digital Sharing', flex_category: 'csf_digcit'
 level 'DigitalSharing-Unplugged_2020'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
-level 'courseF_project_exemplars_2019_2020', progression: 'Example Projects'
-level 'CourseF_Project_SpriteLab_2020', progression: 'Sprite Lab Project'
-level 'Course F: Artist Project_2020', progression: 'Artist Project'
+level 'courseF_project_exemplars_2019_2020', progression: 'Example projects'
+level 'courseF_EOC_2020', progression: 'Create your project'

@@ -6676,3 +6676,43 @@ ka:
               name: ციკლები მხატვარში
             Loops in Artist:
               name: ციკლები მხატვარში
+        csp1-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+            Representing Information:
+              name: ინფორმაციის წარმოდგენა
+            Binary Numbers:
+              name: ორობითი რიცხვები
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
+        csp2-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csp3-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+            Debugging:
+              name: გამართვა
+        csp6-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csp8-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csp9-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csp10-2020:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: ახალი დონე

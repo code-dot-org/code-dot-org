@@ -15,7 +15,7 @@ cs:
         course1:
           title: Kurz 1
           description: Kurz 1 je navržen tak, aby umožnil čerstvým čtenářům vytvářet počítačové programy, které jim pomohou se naučit spolupráci s ostatními, rozvinout dovednosti potřebné k řešení problémů a překonávání obtížných úkolů. Na konci tohoto kurzu studenti vytvoří jejich vlastní hru nebo příběh, který mohou sdílet. Doporučeno pro první třídu základní školy.
-          description_short: Začít s kurzem 1 pro čerstvé čtenáře.
+          description_short: Úvod do informatiky pro předškoláky.
           description_audience: Věk 4-6
           stages:
             'Artist: Loops':
@@ -56,8 +56,8 @@ cs:
               name: Velká událost
         course2:
           title: Kurz 2
-          description: Začni s 2 kurzy pro studenty, kteří mohou číst bez předchozí zkušenosti z programování. V tomto kurzu studenti vytváří programy k řešení problémů a rozvíjí interaktivní hry nebo příběhy, které mohou sdílet. Vhodné pro 2.-5. třídu.
-          description_short: Začni s 2 kurzy pro studenty, kteří mohou číst.
+          description: Kurz 2 je vhodný pro studenty, kteří umí číst a nemají předchozí zkušenosti s programováním. V tomto kurzu studenti vytváří programy, aby vyřešili problémy a vyvinuli interaktivní hry nebo příběhy, které mohou sdílet. Doporučeno pro 2. - 5. třídu.
+          description_short: Úvod do informatiky pro studenty, kteří umí číst.
           description_audience: Věk 6+ (požadováno čtení)
           stages:
             'Artist: Debugging':
@@ -101,8 +101,8 @@ cs:
         course3:
           title: Kurz 3
           description: Kurz 3 je určen pro studenty, kteří prošli kurzem 3. Studenti se hlouběji ponoří do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu studenti tvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné pro 4.-5. ročník ZŠ.
-          description_short: Kurz 3 navazuje na kurz 2.
-          description_audience: Ve věku 8-18
+          description_short: Ponořte se ještě hlouběji do programování při vytváření her a interaktivních příběhů. Tento kurz navazuje na Kurz 2. 
+          description_audience: Věk 8-18
           stages:
             Artist:
               name: Umělec
@@ -155,14 +155,14 @@ cs:
               name: Play Lab
         artist:
           title: Umělec
-          description: Bakresli v pohodě obrázky a vzory s umělcem!
-          description_short: Bakresli v pohodě obrázky a vzory s umělcem!
+          description: Nakresli úžasné obrázky a vzory s umělcem!
+          description_short: Nakresli úžasné obrázky a vzory s umělcem!
           stages:
             Artist:
               name: Umělec
         hourofcode:
           title: Klasické bludiště
-          description: Zkuste se základy informatiky s postavičkami z Angy Birds, Plants vs. Zombies a Scrat z doby ledové!
+          description: Vyzkoušejte základy informatiky s postavičkami z Angy Birds, Plants vs. Zombies a Scratem z Doby ledové!
           description_short: Zkuste základy informatiky s mnoha zábavnými postavami!
           stages:
             Maze:
@@ -176,9 +176,9 @@ cs:
               name: Umělec
         course4:
           title: Kurz 4
-          description: Kurz 4 je určen pro studenty, kteří se kurzy 2 a 3. Studenti se naučí řešit hádanky s rostoucí složitosti, jak se učí jak zkombinovat několik konceptů, při řešení každé výzvě. V době dokončení tohoto kurzu studenti budou vytvářet programy, které jim předvést více dovedností, včetně smyček a funkce s parametry. Doporučeno pro stupně 4-8.
-          description_short: Studenti z kurzu 4 by měli mít kurzy 2 a 3.
-          description_audience: Stáří 10-13
+          description: Kurz 4 je určen pro studenty, kteří prošli Kurzem 2 a 3. Studenti se naučí řešit úlohy s narůstající složitostí, když se při řešení každé výzvy učí zkombinovat několik konceptů. Než tento kurz dokončí, budou studenti vytvářet programy, pomocí nichž předvedou různé dovednosti včetně cyklů a funkcí s parametry. Doporučeno pro 4. - 8. třídu. 
+          description_short: Vytvořte složitější programy s cykly a funkcemi s parametry. Tento kurz navazuje na Kurz 3. 
+          description_audience: Věk 9-18
           stages:
             Artist:
               name: Umělec
@@ -296,7 +296,7 @@ cs:
           title: Zrychlený úvodní kurz informatiky
           description: Tento 20-ti hodinový kurz pokrývá základní koncepty informatiky a programování obsáhnuté v kurzích 2-4. Kurz je navrhnut pro žáky staré 10 - 18 let. Pokud máš zájem o detailnejší kurz, vyzkoušej kurzy 2-4!
           description_short: Tento 20 hodinový kurz zahrnuje základní pojmy informatiky a programování z kurzů 2-4.
-          description_audience: Stáří 10-13
+          description_audience: Věk 10-18
           stages:
             Abstraction:
               name: Abstrakce
@@ -360,15 +360,15 @@ cs:
               name: Studio
         flappy:
           title: Flappy
-          description: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušej náš výukový kurz tenkého kódu!
+          description: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušejte náš návod na hru Flappy Bird!
           description_short: Napiš si vlastní tenkou hru za méně než 10 minut!
           stages:
             Flappy Code:
               name: Flappy
         jigsaw:
           title: Skládačka
-          description: Vyzkoušej náš skládačkový výukový kurz
-          description_short: Vyzkoušej náš skládačkový výukový kurz
+          description: Vyzkoušej náš kurz na skládačky
+          description_short: Vyzkoušej náš kurz na skládačky
           stages:
             Jigsaw:
               name: Skládačka
@@ -399,6 +399,8 @@ cs:
           stages:
             Binary Numbers:
               name: Binární čísla
+            Text Compression:
+              name: Komprese textu
         algebraPD:
           stages:
             Evaluation Blocks:
@@ -413,6 +415,11 @@ cs:
               name: Bloky vyhodnocení
             Strings and Images:
               name: Řetězce a obrázky
+        text-compression:
+          title: Komprese textu
+          stages:
+            Text Compression:
+              name: Komprese textu
         cspunit3:
           description_short: Programování
           stages:
@@ -493,6 +500,8 @@ cs:
               name: Multi
             Studio:
               name: Studio
+            Text Compression:
+              name: Komprese textu
             Web Lab:
               name: Web Lab
         algebraPD2b:
@@ -519,8 +528,14 @@ cs:
               name: App Lab
             Internet Simulator:
               name: Simulátor Internetu
+            Text Compression Lesson:
+              name: Lekce komprese textu
             Welcome!:
               name: Vítejte!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Základy informatiky
         ECSPD2:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
@@ -624,9 +639,9 @@ cs:
             Wrap-Up:
               name: Rekapitulace
         Special Fun:
-          description_audience: Stáří 10-13
+          description_audience: Věk 10-18
         SpecialSeries:
-          description_audience: Stáří 10-13
+          description_audience: Věk 10-18
         iceage:
           title: Doba ledová Play Lab
           description: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
@@ -730,6 +745,10 @@ cs:
               name: Binární čísla
             The Internet:
               name: Internet
+        csp2-2017:
+          stages:
+            Text Compression:
+              name: Komprese textu
         csp3-2017:
           description_short: Programování
           stages:
@@ -751,13 +770,17 @@ cs:
         TEMP CSD Unit 3:
           description_short: Programování
         CSF_Secret_Sample:
-          description_audience: Ve věku 8-18
+          description_audience: Věk 8-18
         algebraFacilitator:
           stages:
             Evaluation Blocks:
               name: Bloky vyhodnocení
             Teacher Dashboard:
               name: Katedra učitele
+        csp-facilitators:
+          stages:
+            Introduction to Text Compression:
+              name: Úvod do komprese textu
         CSDU2-Draft:
           stages:
             Peer Review:
@@ -767,7 +790,11 @@ cs:
             Artist Functions:
               name: Umělec funkce
         artistExemplar:
-          description_audience: Ve věku 8-18
+          description_audience: Věk 8-18
+        teachercon:
+          stages:
+            Lesson 2,2:
+              name: 'Lekce 2.2: Komprese textu'
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -788,6 +815,8 @@ cs:
               name: 'Algoritmy ze života: Zasadit semínko'
         grade4:
           stages:
+            Build a Star Wars Game!:
+              name: Vytvoř Star Wars hru!
             Digital Citizenship:
               name: Digitální občanství
             Songwriting:
@@ -953,6 +982,8 @@ cs:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
             Binary Bracelets:
               name: Binární náramky
             Your Digital Footprint:
@@ -961,8 +992,14 @@ cs:
               name: Budování nadace
         coursed-draft:
           stages:
+            Events in Bounce:
+              name: Události při odrazu
+            Nested Loops in Maze:
+              name: Vnořené cykly v bludišti
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -979,6 +1016,8 @@ cs:
           stages:
             Digital Citizenship:
               name: Digitální občanství
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1013,6 +1052,9 @@ cs:
               name: Hodina kódu 2013
         sports:
           title: Naprogramuj svoji vlastní sportovní hru
+          stages:
+            Sports:
+              name: Sporty
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -1142,14 +1184,27 @@ cs:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
           title: Kurz C
           assignment_family_title: Kurz C
         coursed-2017:
           stages:
             Introduction:
               name: Představení online úloh
+            Events in Bounce:
+              name: Události při odrazu
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Nested Loops:
               name: Vnořené cykly
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
+              description_teacher: "Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit. \n\n_Cykly dokud (while)_ jsou cykly, které opakují příkazy, když je splněná podmínka. Cykly `dokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná."
+            Conditionals with Cards:
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží."
+            Conditionals in Bee:
+              description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             Debugging in Collector:
               description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
           title: Kurz D
@@ -1166,6 +1221,9 @@ cs:
               name: For cyklus zábavy
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
+              description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             Building a Foundation:
               name: Budování nadace
             Nested Loops:
@@ -1188,14 +1246,24 @@ cs:
               name: Internet
             Digital Citizenship:
               name: Digitální občanství
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
+            Events in Bounce:
+              name: Události při odrazu
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
             Conditionals with Cards:
               name: Podmínky s kartami
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
               name: For cyklus zábavy
             Songwriting with Parameters:
               name: Psaní písniček s parametry
+            Events with Flappy:
+              name: Události s Flappy Bird
             Building a Foundation:
               name: Budování nadace
             Nested Loops:
@@ -1223,6 +1291,8 @@ cs:
               name: Vnořené cykly
             Conditionals:
               name: Podmínky
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1231,10 +1301,14 @@ cs:
           stages:
             Introduction:
               name: Úvod
+            Events in Bounce:
+              name: Události při odrazu
             Nested Loops:
               name: Vnořené cykly
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1253,6 +1327,12 @@ cs:
               name: Úvod
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
+            Events with Flappy:
+              name: Události s Flappy Bird
+            Events in Bounce:
+              name: Události při odrazu
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
             Building a Foundation:
               name: Budování nadace
             Nested Loops:
@@ -1263,6 +1343,8 @@ cs:
               name: Budování nadace
             Conditionals:
               name: Podmínky
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1307,6 +1389,8 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
         course-f-2018:
           stages:
             Building a Foundation:
@@ -1376,12 +1460,22 @@ cs:
               name: Vnořené cykly
             'Events: The Big Event':
               name: Velká událost
+            Events with Flappy:
+              name: Události s Flappy Bird
+            Events in Bounce:
+              name: Události při odrazu
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
+            Conditionals in Bee:
+              name: Pokud/jinak se včelkou
             'Loops: Getting Loopy':
               name: Bláznit
             Conditionals with Cards:
               name: Podmínky s kartami
             'Functions: Songwriting':
               name: Skládání písniček
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -1421,8 +1515,18 @@ cs:
               name: Budování nadace
             Debugging in Collector:
               name: Ladění s Laurel
+            Events in Bounce:
+              name: Události při odrazu
+            Loops in Artist:
+              name: Kreslení tvarů s cykly
+            Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
+            Conditionals in Bee:
+              name: Pokud/jinak se včelkou
             Digital Citizenship:
               name: Digitální občanství
             'Unplugged: Binary':
@@ -1437,6 +1541,8 @@ cs:
               name: Štafetové programování
             Introduction to Online Puzzles:
               name: Představení online úloh
+            Nested Loops in Maze:
+              name: Vnořené cykly v bludišti
         coursec-2018:
           assignment_family_title: Kurz C
           stages:
@@ -1446,6 +1552,8 @@ cs:
               name: Bláznit
             'Events: The Big Event':
               name: Velká událost
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
             Binary Bracelets:
               name: Binární náramky
         csd6-2018:
@@ -1459,8 +1567,15 @@ cs:
               name: Mí robotičtí přátelé
             Building a Foundation:
               name: Budování nadace
+            Loops in Artist:
+              name: Kreslení tvarů s cykly
+            Nested Loops:
+              name: Vnořené cykly v bludišti
             Introduction:
               name: Úvod
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
+              description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             'Functions: Songwriting':
               name: Skládání písniček
             Internet:
@@ -1478,6 +1593,10 @@ cs:
               name: Mí robotičtí přátelé
             Building a Foundation:
               name: Budování nadace
+            Loops in Artist:
+              name: Kreslení tvarů s cykly
+            Nested Loops in Bee/Zombie:
+              name: Vnořené cykly v bludišti
             Introduction:
               name: Úvod
             Ice Age Play Lab:
@@ -1496,6 +1615,10 @@ cs:
               name: Binární čísla
             The Internet:
               name: Internet
+        csp2-2018:
+          stages:
+            Text Compression:
+              name: Komprese textu
         csp3-2018:
           description_short: Programování
           stages:
@@ -1548,7 +1671,7 @@ cs:
           stages:
             Aquatic:
               name: Vodní
-          description_short: Pomocí kreativity, schopnosti řešit problémy a sily kódu objav a vybuduj podvodní svět!
+          description_short: Pomocí kreativity, schopnosti řešit problémy a síly kódu objev a vybuduj podvodní svět!
         dance--draft:
           stages:
             Dance Party:
@@ -1572,6 +1695,11 @@ cs:
               name: For cyklus zábavy
             The Artist:
               name: Umělec
+            Nested Loops in the Maze:
+              name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+            Loops with the Artist:
+              name: Kreslení s cykly
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1592,19 +1720,40 @@ cs:
               name: Představení online úloh
             Relay Programming:
               name: Štafetové programování
+              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu. 
             Debugging in Collector:
               name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
+            Events in Bounce:
+              name: Události při odrazu
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
             Loops in Ice Age:
               name: Cykly v době ledové
+              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu. 
+            Loops in Artist:
+              name: Kreslení tvarů s cykly
+              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy. 
+            Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
+              description_teacher: "Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit.\n\\r\n\\r\n_Cykly dokud (while)_ jsou cykly, které opakují příkazy, když je splněná podmínka. Cykly `dokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná."
             Conditionals with Cards:
               name: Podmínky s kartami
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\r\n\\r "
+            Conditionals in Bee:
+              name: Pokud/jinak se včelkou
+              description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
             Digital Citizenship:
               name: Digitální občanství
             'Unplugged: Binary':
               name: Binární obrázky
             Artist Binary:
               name: Umělecké binární
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
+              description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             Dance Party:
               name: Dance Party
         coursee-2019:
@@ -1616,12 +1765,22 @@ cs:
               name: Vnořené cykly
             Conditionals with Cards:
               name: Podmínky s kartami
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
+              description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             'Functions: Songwriting':
               name: Skládání písniček
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+            Sequencing in the Maze:
+              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
+            Programming and Loops with the Artist:
+              name: Kreslení s cykly
             Simon Says:
               name: Kuba řekl
             Songwriting:
@@ -1631,8 +1790,16 @@ cs:
           stages:
             Relay Programming:
               name: Štafetové programování
+            Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
+            Conditionals in Bee:
+              name: Pokud/jinak se včelkou
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -1665,6 +1832,8 @@ cs:
               description_teacher: V těchto úlohách si studenti rozšíří porozumění algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel získat poklad na cestě.
             'Events: The Big Event':
               name: Velká událost
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
             Binary Bracelets:
               name: Binární náramky
             Powerful Passwords:
@@ -1727,6 +1896,10 @@ cs:
               name: Binární čísla
             The Internet:
               name: Internet
+        csp2-2019:
+          stages:
+            Text Compression:
+              name: Komprese textu
         csp3-2019:
           description_short: Programování
           stages:
@@ -1752,6 +1925,10 @@ cs:
               name: Podmínky s kartami
             Building a Foundation:
               name: Budování nadace
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -1793,6 +1970,8 @@ cs:
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
         k5-onlinepd-2019:
           stages:
+            Computer Science Fundamentals:
+              name: Základy informatiky
             Sequencing:
               name: Sekvence
             Loops:
@@ -1815,12 +1994,20 @@ cs:
               name: Podmínky
             Simon Says:
               name: Kuba řekl
+            Drawing with Loops:
+              name: Kreslení s cykly
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Podmínky s kartami
+            Nested Loops in the Maze:
+              name: Vnořené cykly v bludišti
+        time4cs-experiment-unit-2:
+          stages:
+            Nested Loops in Maze:
+              name: Vnořené cykly v bludišti
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -1872,6 +2059,8 @@ cs:
               description_teacher: V těchto úlohách si studenti rozšíří porozumění algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel získat poklad na cestě.
             Binary Bracelets:
               name: Binární náramky
+            Build a Flappy Game:
+              name: Vytvoř hru Flappy Bird
         coursed-2020:
           title: Kurz D (2019)
           description: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
@@ -1882,12 +2071,30 @@ cs:
               name: Představení online úloh
             Relay Programming:
               name: Štafetové programování
+              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu. 
             Debugging in Collector:
               description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
+            Events in Bounce:
+              name: Události při odrazu
+              description_teacher: V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. 
+            Build a Star Wars Game:
+              name: Vytvoř Star Wars hru
+              description_teacher: V této hodině si studenti procvičí události vystavěním hry, kterou mohou sdílet online. R2-D2 a další postavy ze Star Wars pomohou studentům projít událostmi. Studenti pak dostanou prostor pro vytvoření své vlastní hry.
             Loops in Ice Age:
               name: Cykly v době ledové
+              description_teacher: Pro krátké opakování (nebo představení) používání cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji dostali Scrata k žaludu. 
+            Loops in Artist:
+              description_teacher: Tato lekce staví na pochopení cyklů z předchozí lekce a dává studentům možnost být opravdu kreativní. Tato aktivita se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli svoje schopnosti řešit problémy. 
+            Nested Loops in Bee:
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
             Conditionals with Cards:
               name: Podmínky s kartami
+              description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité pro úpravu programu pro konkrétní informaci. Když píšeme program, nemáme vždy všechny informace, které potřebujeme. Někdy budete chtít udělat v jedné situaci něco jiného než ve druhé, i když nevíte, která situace nastane, až kód poběží. Tehdy využijete podmínky. Ty umožňují počítači rozhodnout se podle informace, která platí v čase, kdy kód poběží.\\r\n\\r "
+            Conditionals in Bee:
+              description_teacher: Dosud psali studenti kód, který fungoval pořád stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní. V této lekci začne vaše třída programovat s podmínkami, což jim umožní napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž se program setká.
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
+              description_teacher: "Když se studenti dostanou k této lekci, měli by už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu ztížit.\n\\r\n\\r\n_Cykly dokud (while)_ jsou cykly, které opakují příkazy, když je splněná podmínka. Cykly `dokud` se využívají, když programátor neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud nebude země rovná."
             'Unplugged: Binary':
               name: 'Nezapojené: binární'
             Artist Binary:
@@ -1899,13 +2106,20 @@ cs:
         coursee-2020:
           title: Kurz E (2019)
           stages:
+            Sequencing in the Maze:
+              description_teacher: "V této sadě úloh studenti začnou se seznámením se (případně podle stupně pokročilosti třídy se zopakováním si) s online rozhraním Code.org. Uvidíte videa, která ukazují základní funkcionalitu pracovní plochy včetně tlačítek `Spustit`, `Obnovit` a `Krok`. Ve videích se také probírá přetahování, mazání a spojování Blockly bloků. Studenti si dále procvičí svoje _sekvenční_ a _ladící_ schopnosti v bludišti. \\r\nLadění kodu (debugging) je základním kamenem učení se programovat. Studenti se setkají s několika úlohami, které byly vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky, které nefungují.  "
             Conditionals:
               name: Podmínky
             Simon Says:
               name: Kuba řekl
+            Nested Loops in Bee:
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
         coursef-2020:
           title: Kurz F (2019)
           stages:
+            Nested Loops in the Maze:
+              name: Vnořené cykly v bludišti
+              description_teacher: V této online aktivitě dostanou studenti příležitost posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -1919,9 +2133,19 @@ cs:
           stages:
             Dance Party:
               name: Dance Party
+            While Loops in Farmer:
+              name: Cykly dokud (while) s farmářkou
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Hláskovací včelka
             Loops in Ice Age:
               name: Cykly v době ledové
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binární čísla
+        csp3-2020:
+          stages:
+            Debugging:
+              name: Ladění

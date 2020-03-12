@@ -252,6 +252,20 @@ ru-RU:
       NEW Course 4 Play Lab Params 11:
         jump: прыгнуть
         patrol: проверка
+      New Artist Project:
+        draw a star: нарисовать звезду
+        draw a circle: нарисовать круг
+        draw a pinwheel: нарисовать вертушку
+        draw a triangle: нарисовать треугольник
+        draw a shape: нарисовать фигуру
+        draw a house: нарисовать дом
+        draw a square: нарисовать квадрат
+      New Minecraft Hero Project:
+        function 1: функция 1
+        function 2: функция 2
+      New Play Lab Project:
+        jump: прыгнуть
+        patrol: проверка
       Robot Doodle:
         draw head: нарисовать голову
         draw eye: нарисовать глаз
@@ -446,7 +460,6 @@ ru-RU:
         draw a house: нарисовать дом
       courseE_artist_functions7_2019:
         draw a window: нарисовать окно
-        draw a house: нарисовать дом
       courseE_artist_functions8:
         do something: выполнить что-то
         draw square: нарисовать квадрат
