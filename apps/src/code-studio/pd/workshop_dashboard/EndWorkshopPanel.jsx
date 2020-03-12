@@ -66,7 +66,7 @@ export default class EndWorkshopPanel extends React.Component {
             will generate a report to Code.org as well as email teachers a
             survey regarding the workshop.
           </p>
-          <Button onClick={this.handleEndWorkshopClick}>
+          <Button __useDeprecatedTag onClick={this.handleEndWorkshopClick}>
             End Workshop and Send Survey
           </Button>
           <ConfirmationDialog

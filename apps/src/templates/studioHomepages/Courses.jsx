@@ -69,6 +69,7 @@ class Courses extends Component {
         >
           {isSignedOut && (
             <Button
+              __useDeprecatedTag
               href="/users/sign_up"
               color={Button.ButtonColor.gray}
               text={i18n.createAccount()}

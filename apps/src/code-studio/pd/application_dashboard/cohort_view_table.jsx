@@ -316,6 +316,7 @@ export class CohortViewTable extends React.Component {
   formatViewButton = id => {
     return (
       <Button
+        __useDeprecatedTag
         bsSize="xsmall"
         target="_blank"
         // TODO: (mehal) Build a wrapper for react stories that lets us pass in a context with router

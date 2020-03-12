@@ -231,10 +231,12 @@ export class WorkshopAttendance extends React.Component {
         <Row>
           <Col sm={10}>
             <ButtonToolbar>
-              <Button onClick={this.handleDownloadCsvClick}>
+              <Button __useDeprecatedTag onClick={this.handleDownloadCsvClick}>
                 Download CSV
               </Button>
-              <Button onClick={this.handleBackClick}>Back</Button>
+              <Button __useDeprecatedTag onClick={this.handleBackClick}>
+                Back
+              </Button>
             </ButtonToolbar>
           </Col>
         </Row>

@@ -66,7 +66,11 @@ export default class ApplicantSearch extends React.Component {
             placeholder="Enter Email"
             onChange={this.handleChange}
           />
-          <Button type="submit" onClick={this.handleSearchClick}>
+          <Button
+            __useDeprecatedTag
+            type="submit"
+            onClick={this.handleSearchClick}
+          >
             Search
           </Button>
           {this.state.lastSearch && this.state.results.length === 0 && (

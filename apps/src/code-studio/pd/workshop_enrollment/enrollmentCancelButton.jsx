@@ -51,7 +51,9 @@ export default class EnrollmentCancelButton extends React.Component {
           {this.props.workshopFriendlyName}.
         </p>
         <p>
-          <Button onClick={this.handleCancelClick}>Cancel</Button>
+          <Button __useDeprecatedTag onClick={this.handleCancelClick}>
+            Cancel
+          </Button>
           <ConfirmationDialog
             show={this.state.showConfirmation}
             onOk={this.handleCancelConfirmed}

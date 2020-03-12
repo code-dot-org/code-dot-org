@@ -119,10 +119,15 @@ export default class FormDataEdit extends React.Component {
         </Table>
 
         <ButtonToolbar>
-          <Button bsSize="small" onClick={this.handleReset}>
+          <Button __useDeprecatedTag bsSize="small" onClick={this.handleReset}>
             Reset
           </Button>
-          <Button bsSize="small" bsStyle="primary" onClick={this.handleSave}>
+          <Button
+            __useDeprecatedTag
+            bsSize="small"
+            bsStyle="primary"
+            onClick={this.handleSave}
+          >
             Save
           </Button>
         </ButtonToolbar>

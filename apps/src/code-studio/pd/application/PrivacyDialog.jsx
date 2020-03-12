@@ -96,7 +96,11 @@ export default class PrivacyDialog extends React.Component {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button bsStyle="primary" onClick={this.props.onHide}>
+          <Button
+            __useDeprecatedTag
+            bsStyle="primary"
+            onClick={this.props.onHide}
+          >
             Close
           </Button>
         </Modal.Footer>

@@ -228,7 +228,7 @@ export class RegionalPartnerMiniContact extends React.Component {
             defaultValue={this.state.notes}
           />
           {!this.state.submitting && (
-            <Button id="submit" onClick={this.submit}>
+            <Button __useDeprecatedTag id="submit" onClick={this.submit}>
               Send
             </Button>
           )}

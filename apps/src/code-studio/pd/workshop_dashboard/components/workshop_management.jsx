@@ -111,6 +111,7 @@ export class WorkshopManagement extends React.Component {
   renderViewButton() {
     return (
       <Button
+        __useDeprecatedTag
         bsSize="xsmall"
         href={this.context.router.createHref(this.props.viewUrl)}
         onClick={this.handleViewClick}
@@ -127,6 +128,7 @@ export class WorkshopManagement extends React.Component {
 
     return (
       <Button
+        __useDeprecatedTag
         bsSize="xsmall"
         href={this.context.router.createHref(this.props.editUrl)}
         onClick={this.handleEditClick}
@@ -143,6 +145,7 @@ export class WorkshopManagement extends React.Component {
 
     return (
       <Button
+        __useDeprecatedTag
         bsSize="xsmall"
         href={this.context.router.createHref(this.surveyUrl)}
         onClick={this.handleSurveyClick}
@@ -158,7 +161,11 @@ export class WorkshopManagement extends React.Component {
     }
 
     return (
-      <Button bsSize="xsmall" onClick={this.handleDeleteClick}>
+      <Button
+        __useDeprecatedTag
+        bsSize="xsmall"
+        onClick={this.handleDeleteClick}
+      >
         Delete
       </Button>
     );
