@@ -67,6 +67,6 @@ class Standard < ActiveRecord::Base
   end
 
   def self.seed
-    seed_from_csv("test/fixtures/standards.csv")
+    seed_from_csv("config/standards.csv")
   end
 end
