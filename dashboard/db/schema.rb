@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200221223130) do
+ActiveRecord::Schema.define(version: 20200310000601) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -268,6 +268,24 @@ ActiveRecord::Schema.define(version: 20200221223130) do
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
   end
 
+  create_table "contact_rollups_processed", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",      null: false
+    t.json     "data",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_contact_rollups_processed_on_email", unique: true, using: :btree
+  end
+
+  create_table "contact_rollups_raw", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",           null: false
+    t.string   "sources",         null: false
+    t.json     "data"
+    t.datetime "data_updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["email", "sources"], name: "index_contact_rollups_raw_on_email_and_sources", unique: true, using: :btree
+  end
+
   create_table "contained_level_answers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
@@ -354,10 +372,12 @@ ActiveRecord::Schema.define(version: 20200221223130) do
     t.datetime "earliest_section_at"
     t.datetime "latest_section_at"
     t.integer  "script_id"
+    t.index ["end_at"], name: "index_experiments_on_end_at", using: :btree
     t.index ["max_user_id"], name: "index_experiments_on_max_user_id", using: :btree
     t.index ["min_user_id"], name: "index_experiments_on_min_user_id", using: :btree
     t.index ["overflow_max_user_id"], name: "index_experiments_on_overflow_max_user_id", using: :btree
     t.index ["section_id"], name: "index_experiments_on_section_id", using: :btree
+    t.index ["start_at"], name: "index_experiments_on_start_at", using: :btree
   end
 
   create_table "featured_projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -732,6 +752,15 @@ ActiveRecord::Schema.define(version: 20200221223130) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
+  end
+
+  create_table "pd_legacy_survey_summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "facilitator_id"
+    t.string   "course"
+    t.string   "subject"
+    t.text     "data",           limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "pd_misc_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1469,7 +1498,7 @@ ActiveRecord::Schema.define(version: 20200221223130) do
   end
 
   create_table "teacher_scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",              unsigned: true
     t.integer  "teacher_id"
     t.integer  "score"
     t.datetime "created_at",    null: false

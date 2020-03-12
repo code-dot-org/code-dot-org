@@ -88,7 +88,7 @@ ga:
   trophies: Duaiseanna
   courses: Cúrsaí
   courses_page:
-    title_student: Foghlaim sa Stiúideo Códála
+    title_student: Foghlaim an Ríomheolaíocht
     title_teacher: An Ríomheolaíocht a Mhúineadh
   unplugged_activity: Gníomhaíocht Dhíphlugáilte
   of: as
@@ -136,6 +136,9 @@ ga:
     existing_account:
       account_exists: Dea-scéal! Tá cuntas Code.org agat cheana féin a úsáideann %{email}
       sign_in: Logáil isteach agus ceanglóimid do chuntas %{provider}.
+      sign_up: Nach é seo do sheoladh r-phoist? Ar mhaith leat cuntas nua a chruthú
+        le seoladh r-phoist difriúil? Nascfaimid do phróifíl %{provider} freisin má
+        chruthaíonn tú cuntas nua.
   signup_form:
     email_signup: Cláraigh le do sheoladh ríomhphoist
     student_count: Tá %{count} dalta cláraithe cheana.
@@ -940,6 +943,11 @@ ga:
   age_interstitial:
     age: Cén aois thú?
     header: Nuashonrú an Chuntais
+    warning: Táimid i mbun oibre ar eispéireas nua a sholáthróidh cosaint príobháideachas
+      níos fearr duit. Dá bharr sin, ní mór do gach úsáideoir a aois a chur isteach
+      anseo.
+    disclaimer: Ní chuirfidh code.org an t-eolas seo ar fáil d'aon tríú páirtí riamh,
+      ar díol, ar cíos, nó ar aon bhealach eile.
     sign_out_markdown: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat [logáil
       amach](%{url}) anois.
   terms_interstitial:
@@ -1181,6 +1189,7 @@ ga:
     time4cs_c4: 'Bailiúchán 4: An tionchar a imríonn Speicis Ionracha (ar na Everglades)'
     time4cs_c5: 'Bailiúchán 5: Saoránaigh i mbun Gníomhaíochta'
     time4cs_c6: Ráitis Choinníollacha (athbhreithniú)
+    k5_csf_intro: Cuir eolas ar na cúrsaí Buntús na Ríomheolaíochta
     k5_coding_concepts: Coincheapa Códála agus Straitéis Múinteoireachta
     k5_basic_concepts: Bunchoincheapa Códála agus Cleachtadh Múinteoireachta
     k5_diving_deeper: 'Níos Doimhne: Cúrsaí E agus F'
@@ -1262,6 +1271,16 @@ ga:
     cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
   hidden_script: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
     cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
+  no_course_access_student: Níl cead agat an cúrsa seo a dhéanamh faoi láthair. Cuir
+    ceist ar do mhúinteoir cén cúrsa ba chóir duit a dhéanamh.
+  no_course_access_teacher: Níl cead agat an cúrsa seo a dhéanamh faoi láthair. Má
+    cheapann tú gur chóir rochtain a bheith agat ar an gcúrsa seo, cuir teachtaireacht
+    chuig support@code.org agus réiteoimid an fhadhb.
+  no_script_access_student: Níl cead agat an t-aonad seo a dhéanamh faoi láthair.
+    Cuir ceist ar do mhúinteoir cén t-aonad ba chóir duit a dhéanamh.
+  no_script_access_teacher: Níl cead agat an t-aonad seo a dhéanamh faoi láthair.
+    Má cheapann tú gur chóir rochtain a bheith agat ar an aonad seo, cuir teachtaireacht
+    chuig support@code.org agus réiteoimid an fhadhb.
   return_unit_overview: Féach ar fhoramharc an aonaid
   return_course_overview: Féach ar fhoramharc an aonaid
   view_all_units: Gach aonad
@@ -1279,8 +1298,25 @@ ga:
       school_country: Tír na Scoile
       ages: Cad iad na haoiseanna atá tú ag múineadh i mbliana?
       subjects: Cad iad na hábhair atá tú ag múineadh i mbliana?
+      resources: Cé acu de na hacmhainní ríomheolaíochta seo a leanas a úsáideann
+        tú?
+      robotics: Cé acu de na hacmhainní róbaitice seo a leanas a úsáideann tú?
+      workshop_organizer: Eagraí Ceardlainne
+      workshop_facilitator: Éascaitheoir Ceardlainne
+      workshop_course: Cúrsa Ceardlainne
       email_opt_in: An bhfuil cead againn ríomhphost a sheoladh chugat maidir le clár
         idirnáisiúnta Code.org, nuashonruithe ar na cúrsaí, nó nuacht eile faoin ríomheolaíocht?
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
+        share information on how you use Code.org and the Professional Learning resources
+        with the Code.org International Partner(s) in your country, school district,
+        and facilitators. We will share your contact information, which courses/units
+        you are using and aggregate data about your classes with these partners. This
+        includes the number of students in your classes, the demographic breakdown
+        of your classroom, and the name of your school and district. We will not share
+        any information about individual students with our partners: all student information
+        will be de-identified and aggregated. Our International Partners and facilitators
+        are contractually obliged to treat this information with the same level of
+        confidentiality as Code.org.'
     form_entries:
       gender:
         male: Fireannach
@@ -1306,6 +1342,7 @@ ga:
         ages_19_over: 19+ bliain d'aois
       subjects:
         cs: Ríomheolaíocht
+        ict: TFC (ICT)
         math: Matamaitic
         science: Eolaíocht
         history: Stair / Staidéar Sóisialta
@@ -1336,11 +1373,43 @@ ga:
         other: 'Eile:'
       workshop_course:
         csf_af: Buntús na Ríomheolaíochta (Cúrsaí A-F)
+        csf_express: Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)
         csd: Fionnachtana sa Ríomheolaíocht
         csp: Foras Feasa ar an Ríomheolaíocht
       email_opt_in:
         opt_in_yes: Tá
         opt_in_no: Níl
+    international_opt_in:
+      title: Freastal ar Cheardlann
+      intro: Go raibh maith agat as traenáil a dhéanamh ar churaclam Code.org. An
+        sprioc atá againn ná deiseanna oideachais ríomheolaíochta a chur ar fáil do
+        gach dalta i ngach scoil timpeall an domhain, agus ní bheimis in ann an sprioc
+        seo a bhaint amach de d'uireasa.
+      instructions: Líon isteach an fhoirm seo le cur in iúl dúinn 1) gur fhreastail
+        tú ar cheardlann a d'eagraigh páirtnéir idirnáisiúnta de chuid Code.org, agus
+        2) go bhfuil tú sásta do chuid eolais phearsanta a roinnt lenár bpáirtnéir
+        i do thír sa chaoi go mbeidh siad in ann tacaíocht a thabhairt duit ar do
+        thuras ríomheolaíochta.
+      thanks_markdown: Go raibh maith agat! Táimid ag súil go mór le tacaíocht a thabhairt
+        duit agus tusa ag dul i ngleic le curaclam agus le huirlisí Code.org. Fearaimid
+        fáilte roimh cheisteanna agus roimh aiseolas, trí ríomhphost ag [support@code.org](%{support_email_url}),
+        nó ar [fhóram na múinteoirí](%{teacher_forum_url})!
+    logged_out:
+      heading: Go raibh maith as spéis a léiriú sa Chlár Oideachais Ghairmiúil!
+      body: I dtús báire, ní mór duit a bheith logáilte isteach i do chuntas Code.org.
+        Má tá tú ag lorg níos mó eolais faoin chlár sula dtosóidh tú iarratas, féach
+        an <a href="%{url}">foramharc ar an gClár Oideachais Ghairmiúil</a>.
+    not_teacher:
+      body_markdown: Go raibh maith as spéis a léiriú sa Chlár Oideachais Ghairmiúil
+        ar Code.org! Tá tú logáilte isteach mar dhalta faoi láthair. Ní mór duit logáil
+        isteach mar mhúinteoir, nó do chuntas a uasghrádú ó dhalta go múinteoir sna
+        [socruithe](%{user_settings}).
+      more_markdown: Má tá tú ag lorg níos mó eolais faoin chlár sula dtosóidh tú
+        iarratas, féach an [foramharc ar an gClár Oideachais Ghairmiúil](%{pl_overview}).
+    no_teacher_email:
+      body_markdown: Níl aon seoladh ríomhphoist ceangailte le do chuntas. Ní mór
+        duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration})
+        sula líonfaidh tú an fhoirm seo isteach.
   courses_category: Cúrsaí Iomlána
   cookie_banner:
     message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
@@ -1360,3 +1429,11 @@ ga:
   page_not_found_description: Níl aon leathanach ag an seoladh seo. Deimhnigh go bhfuil
     an seoladh ceart agat agus bain triail eile as. Nó, fill ar an leathanach baile.
   page_not_found_button: Baile
+  copy: Cóipeáil
+  maker:
+    google_oauth:
+      login_with_google: Logáil isteach sa Maker App le Google
+      enter_code: Cuir isteach an cód a tugadh duit nuair a logáil tú isteach trí
+        Google i do bhrabhsálaí réamhshocraithe
+      copy_code: Cóipeáil agus greamaigh an cód seo isteach sa Maker App chun logáil
+        isteach i Code.org

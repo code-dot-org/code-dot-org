@@ -2721,31 +2721,29 @@ de-DE:
         In dieser Version des Internet-Simulators sind die meisten Optionen eingeschaltet und konfigurierbar. Nachrichten können an jeden Router innerhalb der Klasse gesendet werden, und die Nachrichten nehmen verschiedene Wege, um ihr Ziel zu erreichen.
 
         Dein Lehrer wird dir genauere Anweisungen für diese Aktivität geben.
+      New Minecraft Hero Project: "**Freies Spiel:** Jetzt bist du dran! Verwende
+        den Code des Agenten, um die Welt zu erkunden."
       OPD-K5 Closing: |-
         > Wenn Ihnen dieser Kurs gefallen hat, melden Sie sich für einen persönlichen Workshop an.
         >
-        > [Melden Sie sich jetzt an](http://code.org/professional-development-workshops), um weiterhin Informatik und ihre Didaktik zu lernen. Die kostenlosen persönlichen Workshops sind ein wertvoller Ort, um mit anderen leidenschaftlichen Pädagogen in Ihrer Nähe zusammenzuarbeiten und sich zu engagieren.
+        > [Melden Sie sich jetzt an][0], um weiterhin Informatik und ihre Didaktik zu lernen. Die kostenlosen persönlichen Workshops sind ein wertvoller Ort, um mit anderen leidenschaftlichen Pädagogen in Ihrer Nähe zusammenzuarbeiten und sich zu engagieren.
       OPD-K5 EventsVid: |-
         Sehen Sie sich dieses Video an, das "Ereignisse" definiert und zeigt, wie sie in den Informatik-Grundlagen funktionieren. Danach werden Sie einige Rätsel ausprobieren, bei denen Sie Ereignisse kodieren müssen.
 
         > Ein Ereignis ist eine Codezeile, die Ihren Computer anweist, auf etwas zu "hören" und dann eine Aktion durchzuführen. Zum Beispiel können Sie auf Webseiten oft ein Drop-Down-Menü anzeigen, wenn Sie mit der Maus über die Navigationsleiste fahren. Der "Maus-Rollover" ist ein "Ereignis", das eine Aktion auslöst.
       OPD-K5 FirstProgram: Sieh dir das Video unten an, das das allererste Programm
-        erklärt, das junge Studenten in [Kurs A](https://studio.code.org/s/coursea-2018?section_id=2042045)
-        schreiben werden. Auf der nächsten Seite kannst du ein ähnliches Programm
-        selbst schreiben!
+        erklärt, das junge Studenten in [Kurs A][0] schreiben werden. Auf der nächsten
+        Seite kannst du ein ähnliches Programm selbst schreiben!
       OPD-K5 LessonPlanning: "Bis jetzt haben Sie einige unserer Unplugged-Stundenpläne
         kennengelernt. Es gibt jedoch für jede einzelne Informatik-Grundlagen-Lektion
         Unterrichtspläne - sowohl plugged als auch online. Die vollständige Liste
         der Lektionen für jeden Kurs finden Sie unten:\n<br/>\n<br/> \n[Course A lesson
-        plans](https://curriculum.code.org/csf-18/coursea/)<br/> \n[Course B lesson
-        plans](https://curriculum.code.org/csf-18/courseb/)<br/>\n[Course C lesson
-        plans](https://curriculum.code.org/csf-18/coursec/)<br/> \n[Course D lesson
-        plans](https://curriculum.code.org/csf-18/coursed/)<br/> \n[Course E lesson
-        plans](https://curriculum.code.org/csf-18/coursee/)<br/> \n[Course F lesson
-        plans](https://curriculum.code.org/csf-18/coursef/)<br/> \n\nVielleicht möchten
-        Sie diese Lektionen jedoch anpassen oder Ihre eigenen erstellen! Das Video
-        unten erklärt die Struktur der Informatik-Grundlagen-Lektionen, gibt aber
-        auch Tipps, falls Sie eigene Lektionen entwickeln wollen."
+        plans][0]<br/> \n[Course B lesson plans][1]<br/>\n[Course C lesson plans][2]<br/>
+        \n[Course D lesson plans][3]<br/> \n[Course E lesson plans][4]<br/> \n[Course
+        F lesson plans][5]<br/> \n\nVielleicht möchten Sie diese Lektionen jedoch
+        anpassen oder Ihre eigenen erstellen! Das Video unten erklärt die Struktur
+        der Informatik-Grundlagen-Lektionen, gibt aber auch Tipps, falls Sie eigene
+        Lektionen entwickeln wollen."
       OPD-K5 RepeatBlock: Sehen Sie sich das folgende Video an, das die Funktionsweise
         von Schleifen erklärt und den 'Repeat'-Block in den Informatik-Grundlagen
         einführt.
@@ -2996,9 +2994,9 @@ de-DE:
 
         Benutze den `onEvent` Baustein, den Du erstellt hast, um Dein Programm auf den "Such"-Bildschirm zu wechseln, wenn der `home_search_btn` angeklickt wird.
 
-        -   Ziehe einen `setScreen`-Baustein heraus und setze ihn in den `onEvent`-Baustein.
-        -   Wähle "Suchen "\*\* aus dem `setScreen` Dropdown-Menü.
-        -   Starte Deine Anwendung und teste den "Home Search" Button.
+        -   **Ziehe einen `setScreen`-Baustein heraus** und setze ihn in den `onEvent`-Baustein.
+        -   **Wähle "Suchen"** aus dem `setScreen` Dropdown-Menü.
+        -   **Starte Deine Anwendung** und teste die `home_search_btn` Schaltfläche.
       U4 Model Program 4_2019: |-
         # Wechseln der Bildschirme bei Klick
 
@@ -3008,9 +3006,9 @@ de-DE:
 
         Benutze den `onEvent` Baustein, den Du erstellt hast, um Dein Programm auf den "Such"-Bildschirm zu wechseln, wenn der `home_search_btn` angeklickt wird.
 
-        -   Ziehe einen `setScreen`-Baustein heraus und setze ihn in den `onEvent`-Baustein.
-        -   Wähle "Suchen "\*\* aus dem `setScreen` Dropdown-Menü.
-        -   Starte Deine Anwendung und teste den "Home Search" Button.
+        -   **Ziehe einen `setScreen`-Baustein heraus** und setze ihn in den `onEvent`-Baustein.
+        -   **Wähle "Suchen"** aus dem `setScreen` Dropdown-Menü.
+        -   **Starte Deine Anwendung** und teste die `home_search_btn` Schaltfläche.
       U4 Model Program 5_2019: |-
         # Andere Schaltflächen anschließen
 
@@ -3189,7 +3187,7 @@ de-DE:
         _"Lasst uns nach Schätzen suchen - mit Schleifen!"_
 
         Hilf dem Sammler, indem du diesen Code debugst. Hol dir den ganzen Schatz!
-      course2_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+      course2_collector_prog_challenge1: Schau genau hin! Kannst du alle **10** Schätze
         einsammeln?
       course2_collector_prog_challenge2: Es gibt **20** Schätze in dieser Höhle zu
         finden. Sammle mindestens die Hälfte, um diese Herausforderung zu beenden!
@@ -4285,18 +4283,18 @@ de-DE:
       courseC_maze_programming3: |-
         _"Dieses Schwein ärgert mich."_
 
-        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
-        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+        Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
+        Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
       courseC_maze_programming3_2018: |-
         _"Dieses Schwein ärgert mich."_
 
-        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
-        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+        Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
+        Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
       courseC_maze_programming3_2019: |-
         _"Dieses Schwein ärgert mich."_
 
-        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
-        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+        Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
+        Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
       courseC_maze_programming6: |-
         _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
 

@@ -1,7 +1,6 @@
 ---
 from: 'Hadi Partovi (Code.org) <hadi_partovi@code.org>'
 subject: 'Thanks!'
-litmus_tracking_id: 'sfgaovfs'
 ---
 
 ## Thank you for signing your name to support computer science!

@@ -133,8 +133,14 @@ class I18nScriptUtils
 
       hash[new_url] =
         if matches.nil?
-          STDERR.puts "could not find level for url: #{new_url}"
-          nil
+          project_url_regex = %r{https://studio.code.org/p/(?<project_name>[A-Za-z0-9\s\-_]+)}
+          project_matches = new_url.match(project_url_regex)
+          if project_matches.nil?
+            STDERR.puts "could not find level for url: #{new_url}"
+            nil
+          else
+            Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[project_matches[:project_name]]['name'])
+          end
         elsif matches[:level_info].starts_with?("extras")
           level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
           level_name = matches[:level_info].match(level_info_regex)[:level_name]

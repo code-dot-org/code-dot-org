@@ -1134,26 +1134,6 @@ es-MX:
         content1: descripción aquí
       CSD U3 Card Examples_2018_2019:
         content1: descripción aquí
-      CSD U3 Collision Detection:
-        markdown: |
-          # Resumen
-
-          La clase aprende sobre la detección de colisiones en la computadora. Las parejas exploran cómo una computadora podría usar las propiedades de tamaño y ubicación de los sprites y las matemáticas para detectar si dos sprites se tocan. Luego, la clase usa el bloque seTocan() para crear diferentes efectos cuando los sprites colisionan, incluida la reproducción de sonidos. Por último, usan sus nuevas habilidades para mejorar el juego de desplazamiento lateral que iniciaron en la última lección.
-
-          ## Vocabulario
-
-          * **Abstracción**: extraer diferencias específicas para poder aplicar una solución a distintos problemas.
-          * **Depuración**: encontrar y corregir problemas en tu algoritmo o programa.
-          * **Sentencia si**: la estructura de programación común que implementa "sentencias condicionales".
-
-          ## Código presentado
-
-          * [sprite.debug](//docs.code.org/gamelab/debug/)
-          * [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
-
-          ## Recursos
-
-          * [Collision Detection - Activity Guide](https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
       CSD U3 Collisions SFLP:
         markdown: |+
           # Resumen
@@ -1644,13 +1624,6 @@ es-MX:
         content1: descripción aquí
       CSD U3 combining rep_2018_2019:
         content1: descripción aquí
-      CSD U3 complex sprite movement SFLP:
-        markdown: |+
-          # Resumen
-
-          La clase aprende a combinar las propiedades de velocidad de los sprites con el patrón del contador para crear un movimiento de sprite más complejo, como simular la gravedad, hacer que un sprite salte y permitir que un sprite flote hacia la izquierda o hacia la derecha. En los niveles finales, la clase combina estos movimientos para animar y controlar un solo sprite, y crear un juego simple en el que un personaje vuela y recoge monedas.
-
-
       CSD U3 drawSprites placement match:
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48

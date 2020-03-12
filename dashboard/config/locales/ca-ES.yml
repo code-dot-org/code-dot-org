@@ -756,3 +756,4 @@ ca:
     accept: D'acord
   gdpr_dialog:
     true: Sí
+  copy: Copiar

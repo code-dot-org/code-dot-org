@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'timecop'
 
 class TeacherScoreTest < ActiveSupport::TestCase
   setup do
@@ -11,16 +12,16 @@ class TeacherScoreTest < ActiveSupport::TestCase
     @section.add_student(@student_2)
     @section.add_student(@student_3)
     @script = create :script
-    @stage = create :stage
     @script_level = create(
       :script_level,
       script: @script,
-      stage: @stage,
       levels: [
         create(:maze, name: 'test level 1')
       ]
     )
+    @stage = @script_level.stage
     @score = 100
+    @score_2 = 0
     @level_1 = @script_level.levels[0]
   end
 
@@ -81,7 +82,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     student_count = @section.students.count
 
     TeacherScore.score_stage_for_section(
-      @teacher.id, @section.id, @stage.id, @score
+      @section.id, @stage.id, @score
     )
 
     teacher_scores_count_after = TeacherScore.all.count
@@ -90,5 +91,61 @@ class TeacherScoreTest < ActiveSupport::TestCase
     assert_equal(user_level_count_after, user_level_count_before + student_count)
 
     assert_equal(teacher_scores_count_after, teacher_scores_count_before + student_count)
+  end
+
+  test 'get scores for stage looks at most recent score' do
+    Timecop.freeze do
+      TeacherScore.score_level_for_student(
+        @teacher.id, @student_1.id, @level_1.id, @script.id, @score
+      )
+
+      Timecop.travel(1.day)
+
+      TeacherScore.score_level_for_student(
+        @teacher.id, @student_1.id, @level_1.id, @script.id, @score_2
+      )
+    end
+
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_section(@stage, @section.id), {@student_1.id => {@level_1.id => @score_2}})
+  end
+
+  test 'get scores for stage for section' do
+    TeacherScore.score_stage_for_section(
+      @section.id, @stage.id, @score
+    )
+
+    assert_equal(
+      TeacherScore.get_level_scores_for_stage_for_section(
+        @stage,
+        @section.id
+      ),
+      {
+        @student_1.id => {@level_1.id => @score},
+        @student_2.id => {@level_1.id => @score},
+        @student_3.id => {@level_1.id => @score}
+      }
+    )
+  end
+
+  test 'get scores for script for section' do
+    TeacherScore.score_stage_for_section(
+      @section.id, @stage.id, @score
+    )
+
+    assert_equal(
+      TeacherScore.get_level_scores_for_script_for_section(
+        @script.id,
+        @section.id
+      ),
+      {
+        @script.id => {
+          @stage.id => {
+            @student_1.id => {@level_1.id => @score},
+            @student_2.id => {@level_1.id => @score},
+            @student_3.id => {@level_1.id => @score}
+          }
+        }
+      }
+    )
   end
 end

@@ -1,7 +1,8 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import LibraryPublisher, {
+import {
+  LibraryPublisher,
   PublishState
 } from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
@@ -10,8 +11,15 @@ import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryPublisher', () => {
-  let publishSpy, libraryClientApi, libraryDetails;
-  let defaultSelectedFunctions, sourceFunctionList;
+  let publishSpy,
+    libraryClientApi,
+    libraryDetails,
+    onPublishSuccess,
+    onUnpublishSuccess,
+    unpublishProjectLibrary,
+    defaultSelectedFunctions,
+    sourceFunctionList,
+    DEFAULT_PROPS;
   const defaultDescription = '';
   const librarySource = '//comment\nfunction foo(){}';
   const libraryName = 'libraryName';
@@ -38,7 +46,6 @@ describe('LibraryPublisher', () => {
     restoreOnWindow('dashboard');
   });
 
-  let onPublishSuccess, onUnpublishSuccess;
   beforeEach(() => {
     defaultSelectedFunctions = {};
     sourceFunctionList = [{functionName: 'foo', comment: 'comment'}];
@@ -51,6 +58,15 @@ describe('LibraryPublisher', () => {
     };
     onPublishSuccess = sinon.stub();
     onUnpublishSuccess = sinon.stub();
+    unpublishProjectLibrary = sinon.stub();
+
+    DEFAULT_PROPS = {
+      onPublishSuccess,
+      onUnpublishSuccess,
+      libraryDetails,
+      libraryClientApi,
+      unpublishProjectLibrary
+    };
   });
 
   afterEach(() => {
@@ -62,12 +78,7 @@ describe('LibraryPublisher', () => {
     it('suggests a default library name', () => {
       libraryDetails.libraryName = 'foo';
       let wrapper = shallow(
-        <LibraryPublisher
-          onPublishSuccess={onPublishSuccess}
-          onUnpublishSuccess={onUnpublishSuccess}
-          libraryDetails={libraryDetails}
-          libraryClientApi={libraryClientApi}
-        />
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
       expect(wrapper.state().libraryName).to.equal(libraryName);
@@ -85,17 +96,28 @@ describe('LibraryPublisher', () => {
         comment: ''
       });
       let wrapper = shallow(
-        <LibraryPublisher
-          onPublishSuccess={onPublishSuccess}
-          onUnpublishSuccess={onUnpublishSuccess}
-          libraryDetails={libraryDetails}
-          libraryClientApi={libraryClientApi}
-        />
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
       expect(checkboxes.first().prop('disabled')).to.be.false;
       expect(checkboxes.last().prop('disabled')).to.be.true;
+    });
+
+    it('disables checkbox for functions with duplicate names', () => {
+      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
+        [
+          {functionName: 'duplicate', comment: 'first dup!'},
+          {functionName: 'duplicate', comment: 'another dup!'}
+        ]
+      );
+      let wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
+      );
+
+      let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
+      expect(checkboxes.at(0).prop('disabled')).to.be.false;
+      expect(checkboxes.at(1).prop('disabled')).to.be.true;
     });
 
     it('checks checkboxes of selected functions', () => {
@@ -109,12 +131,7 @@ describe('LibraryPublisher', () => {
       });
       libraryDetails.selectedFunctions = {bar: true, baz: true};
       let wrapper = shallow(
-        <LibraryPublisher
-          onPublishSuccess={onPublishSuccess}
-          onUnpublishSuccess={onUnpublishSuccess}
-          libraryDetails={libraryDetails}
-          libraryClientApi={libraryClientApi}
-        />
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
@@ -131,15 +148,9 @@ describe('LibraryPublisher', () => {
     let wrapper;
     const description = 'description';
     const selectedFunctions = {foo: true};
+
     beforeEach(() => {
-      wrapper = shallow(
-        <LibraryPublisher
-          onPublishSuccess={onPublishSuccess}
-          onUnpublishSuccess={onUnpublishSuccess}
-          libraryDetails={libraryDetails}
-          libraryClientApi={libraryClientApi}
-        />
-      );
+      wrapper = shallow(<LibraryPublisher {...DEFAULT_PROPS} />);
     });
 
     it('is disabled when no functions are checked', () => {
@@ -224,12 +235,7 @@ describe('LibraryPublisher', () => {
     let newFunction = {functionName: 'bar', comment: 'comment'};
     libraryDetails.sourceFunctionList.push(newFunction);
     let wrapper = shallow(
-      <LibraryPublisher
-        onPublishSuccess={onPublishSuccess}
-        onUnpublishSuccess={onUnpublishSuccess}
-        libraryDetails={libraryDetails}
-        libraryClientApi={libraryClientApi}
-      />
+      <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
     );
 
     wrapper.setState({
@@ -250,18 +256,13 @@ describe('LibraryPublisher', () => {
     libraryParser.createLibraryJson.restore();
   });
 
-  describe('unpublish', () => {
+  describe('onUnpublishComplete', () => {
     let wrapper, deleteSpy;
     beforeEach(() => {
       deleteSpy = sinon.stub(libraryClientApi, 'delete');
       libraryDetails.alreadyPublished = true;
       wrapper = shallow(
-        <LibraryPublisher
-          onPublishSuccess={onPublishSuccess}
-          onUnpublishSuccess={onUnpublishSuccess}
-          libraryDetails={libraryDetails}
-          libraryClientApi={libraryClientApi}
-        />
+        <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
     });
 
@@ -271,14 +272,14 @@ describe('LibraryPublisher', () => {
 
     it('calls onUnpublishSuccess when it succeeds', () => {
       deleteSpy.callsArg(0);
-      wrapper.instance().unpublish();
+      wrapper.instance().onUnpublishComplete(null, {});
       expect(onUnpublishSuccess.called).to.be.true;
     });
 
     it('sets ERROR_UNPUBLISH when it fails', () => {
       sinon.stub(console, 'warn');
       deleteSpy.callsArg(1);
-      wrapper.instance().unpublish();
+      wrapper.instance().onUnpublishComplete(new Error(), {});
       wrapper.update();
       expect(wrapper.state().publishState).to.equal(
         PublishState.ERROR_UNPUBLISH

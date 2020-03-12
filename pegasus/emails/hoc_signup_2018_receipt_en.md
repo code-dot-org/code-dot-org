@@ -1,7 +1,6 @@
 ---
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
 subject: "Get ready for the Hour of Code"
-litmus_tracking_id: "5g5lyi1a"
 ---
   <% hourofcode = CDO.canonical_hostname('hourofcode.com') %>
   <% codedotorg = CDO.canonical_hostname('code.org') %>

@@ -135,6 +135,8 @@ cs-CZ:
         place_length_variable: Přetáhni proměnnou délku k nahrazení otazníků
       NEW Course 4 Bee For Loops 5:
         actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
+      New Frozen Project:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
       Overworld Chop Trees:
         craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
           začít
@@ -165,6 +167,10 @@ cs-CZ:
         craft_what_is_iron: Vytěž toto železo!
       Underground Iron_2019:
         craft_what_is_iron: Vytěž toto železo!
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Klikni sem, abys viděl pracovat kód!
+      courseD_maze_ramp3_2019:
+        stone_block_2: Šedé bloky není možné zahodit.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.

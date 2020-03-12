@@ -17,7 +17,6 @@
   learn_now: "Učit se teď"
   petition_message: "Každý student v každé škole by měl mít možnost se naučit informatiku"
   petition_sign_message: 'Pokud souhlasíš, napiš své jméno. Přidej se mezi # dalších.'
-  petition_sign_message_support: 'Pokud nás podporujete, podepište se. Přidejte se k # ostatním.'
   petition_join_others: 'Připoj se k # ostatním'
   name: "Jméno"
   email: "Email"
@@ -40,7 +39,7 @@
   hoc2014_teachers: "Učitelé"
   hoc2014_host: "Uspořádejte"
   hoc2014_everyone: "Kdokoli"
-  hoc2014_support: "Podpořte ji &#x25BE;"
+  hoc2014_support: "Podpořte to &#x25BE;"
   hoc2014_whatishoc: "Co to je Hodina kódu?"
   csedweek_map_header: "# CSEdWeek / Hodina kódu událost ve světě"
   csedweek_map_signup: "Přihlaste svoji událost"
@@ -236,7 +235,7 @@
   studiobar_dance_body: "Vytvářej a sdílej své vlastní taneční večírky"
   studiobar_hoc_title: "Hodina kódu"
   studiobar_hoc_body: "Naučte se programovat s Angry Birds"
-  studiobar_flappy_title: "Tenký kód"
+  studiobar_flappy_title: "Flappy"
   studiobar_flappy_body: "Vytvořit a sdílej svojí vlastní hru Flappy"
   studiobar_teacher_title: "Připraveno pro učitele"
   studiobar_teacher_body: "Zaveďte studio programování (Code Studio) do vaší třídy"
@@ -300,7 +299,7 @@
   homepage_slot_text_studio: "Všechny naše výukové programy"
   homepage_slot_text_course4: "Kurz 4"
   homepage_slot_text_shop: "Obchod"
-  homepage_slot_text_flappy: "Tenký kód"
+  homepage_slot_text_flappy: "Flappy"
   homepage_action_text_hoc: "Hodina kódu pro každého studenta."
   homepage_action_text_num_served: "# si vyzkoušelo"
   homepage_action_text_join_us: "Připojte se k nám"
@@ -311,7 +310,7 @@
   homepage_action_text_teachervideo: "Podívejte se na video"
   homepage_action_text_watchvideo: "Podívejte se na video"
   homepage_action_text_girlvideo: "Inspirovat divku"
-  homepage_action_text_learn: "Zahájení výuky"
+  homepage_action_text_learn: "Začněte se učit"
   homepage_action_text_signpetition: "Podepište petici"
   homepage_action_text_wincelebritychat: "Vyhrajte chat se známou osobností"
   homepage_signpetition_dropdown: "Souhlasím &#x25BE;"
@@ -356,6 +355,7 @@
   homepage_slot_text_link_donate: "Přispějte"
   homepage_slot_text_link_shop: "Trička, čepice a další"
   homepage_slot_text_link_administrators: "Přineste informatiku do své školy"
+  homepage_gallery_header: "Vytvořeno více než %{project_count} milionů projektů Code.org"
   homepage_header_donors: "Code.org děkuje svým příznivcům"
   homepage_donors_seall: "Podívejte se na všechny"
   homepage_donors_donate: "Přispějte"
@@ -402,7 +402,7 @@
   careers_page_more: "Více <a href='%{careers_url}' target='_blank'> inspirativních vídeí </a> zobrazujících odborníky v technologiích"
   playlab_choose_theme: "Vyber si téma Play Lab"
   playlab_classic_title: "Klasické"
-  playlab_gumball_title: "Žvýkačku"
+  playlab_gumball_title: "Gumball"
   playlab_iceage_title: "Doba ledová - se blíží"
   playlab_iceage_title_live: "Doba ledová"
   starwars_subtitle: "Budování Galaxie s kódem"
@@ -596,7 +596,7 @@
   dashboard_hoc_courses_desc: "Vyzkoušejte některý z těchto kratších 1 hodinových cvičeních se svými studenty!"
   dashboard_hoc_courses_desc_and_cta: "Zkuste tyto krátké jednohodinová cvičení se studenty. <a href=\"https://hourofcode.com\"> připojte se k hnutí Hodina kódu</a> během týdne vzdělávání informatiky."
   dashboard_k5_courses: "20 hodinové  kurzy pro K-5"
-  dashboard_k5_courses_desc: "Tyto kurzy jsou směsí online, individuálně vedených a řízených výukových programů s \"izolovanou\" aktivitou nevyžadující počítač. Každý kurz se skládá z asi 20 lekcí, které mohou být implementovány jako jedna jednotka, nebo v průběhu semestru. Účastnit se mohou i mateřské školy. K zahájení nabízíme workshopy vysoce kvalitního profesního rozvoje bezplatně po celém Usa. <a href=\"/professional-development-workshops\"> Najít blízko vás!</a>"
+  dashboard_k5_courses_desc: "Tyto kurzy spojují online tutoriály pro samostatné studium podle vlastního tempa s aktivitami, které počítač nevyžadují. Každý kurz se skládá z asi 20 lekcí, které mohou být využity jako jedna jednotka nebo v průběhu pololetního kurzu. Dokonce i předškoláci se mohou zúčastnit. Abychom vám pomohli začít, nabízíme zdarma vysoce kvalitní workshopy pro profesní rozvoj po celém USA. \n<a href=\"/professional-development-workshops\">Najít nejbližší workshop!</a>"
   dashboard_middle_courses: "20 hodin kurzů pro střední školy"
   dashboard_middle_courses_desc: "Naše středoškolské kurikulum používá informatiku a programování v rámci kontextu středoškolské matematiky a vědy - jako nástroj pro výuku matematiky a pojmů vědy. Pro registraci pro workshopy profesního rozvoje požádejte <a href=\"/educate/districts\"> partnerství na okresní úrovni </a> s Code.org."
   dashboard_high_courses: "Roční kurzy pro střední školy"
@@ -623,7 +623,7 @@
   dashboard_assessments_answers: "Všechny odpovědi"
   dashboard_surveys_answers: "Průzkumy"
   dashboard_percent: "Procenta"
-  dashboard_filter_by_stage: 'Filtrovat podle fáze:'
+  dashboard_filter_by_stage: 'Filtrovat podle úrovně:'
   dashboard_filter_all: "Vše"
   dashboard_download_csv: "Stáhnout CSV"
   dashboard_navigation_home_page: "Učitelská domovská stránka"
@@ -901,6 +901,14 @@
   coursee_name: "Kurz E"
   coursef-draft_name: Kurz F
   coursef_name: "Kurz F"
+  coursea-2019_name: Kurz A (2019)
+  courseb-2019_name: Kurz B (2019)
+  coursec-2019_name: Kurz C (2019)
+  coursed-2019_name: Kurz D (2019)
+  coursee-2019_name: Kurz E (2019)
+  coursef-2019_name: Kurz F (2019)
+  express-2019_name: Rychlý kurz (2019)
+  pre-express-2019_name: Rychlý kurz pro předškoláky (2019)
   accelerated_name: "Zrychlený kurz"
   pre-express_name: Rychlý kurz pro předškoláky
   20-hour_name: Zrychlený kurz
@@ -913,6 +921,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Hvězdné války (kostky)"
   hoc-encryption_name: Jednoduché šifrování
+  text-compression_name: Komprese textu
   applab_name: "App Lab"
   basketball_name: "Vytvoř basketbalovou hru"
   sports_name: "Naprogramuj svoji vlastní sportovní hru"
@@ -957,7 +966,7 @@
   hourofcode_gradelevel: "Stáří 4-104"
   frozen_gradelevel: "Stáří 4-104"
   starwars_gradelevel: "Věk 6 +"
-  playlab_gradelevel: "Stáří 4-104"
+  playlab_gradelevel: "Věk 6-14"
   infinity_gradelevel: "Stáří 4-104"
   artist_gradelevel: "Stáří 4-104"
   monstercoding_gradelevel: "Stáří 5-13"
@@ -969,33 +978,33 @@
   teacherled_gradelevel: "Věk 5+"
   course1_gradelevel: "Věk 4-6"
   course2_gradelevel: "Věk 6-18"
-  course3_gradelevel: "Ve věku 8-18"
-  course4_gradelevel: "Stáří 10-13"
+  course3_gradelevel: "Věk 8-18"
+  course4_gradelevel: "Věk 10-18"
   coursea_gradelevel: "Věk 4 - 7"
   courseb_gradelevel: "Věk 5 - 8"
-  coursec_gradelevel: "Věk 6 - 10"
+  coursec_gradelevel: "Věk 6-10"
   coursed_gradelevel: "Známky 8+"
   coursee_gradelevel: "Věk 8-12"
   coursef_gradelevel: "Věk 9 - 13"
   coursea-2017_gradelevel: Věk 4 - 7
   courseb-2017_gradelevel: Věk 5 - 8
-  coursec-2017_gradelevel: Věk 6 - 10
+  coursec-2017_gradelevel: Věk 6-10
   coursed-2017_gradelevel: Známky 8+
   coursee-2017_gradelevel: Věk 8-12
   coursef-2017_gradelevel: Věk 9 - 13
   coursea-2018_gradelevel: Věk 4 - 7
   courseb-2018_gradelevel: Věk 5 - 8
-  coursec-2018_gradelevel: Věk 6 - 10
+  coursec-2018_gradelevel: Věk 6-10
   coursed-2018_gradelevel: Známky 8+
   coursee-2018_gradelevel: Věk 8-12
   coursef-2018_gradelevel: Věk 9 - 13
   coursea-2019_gradelevel: Věk 4 - 7
   courseb-2019_gradelevel: Věk 5 - 8
-  coursec-2019_gradelevel: Věk 6 - 10
+  coursec-2019_gradelevel: Věk 6-10
   coursed-2019_gradelevel: Známky 8+
   coursee-2019_gradelevel: Věk 8-12
   coursef-2019_gradelevel: Věk 9 - 13
-  accelerated_gradelevel: "Stáří 10-13"
+  accelerated_gradelevel: "Věk 10-18"
   codeorg_platformtext: "Moderní prohlížeče, smartphony, tablety"
   codeintl_platformtext: "Moderní prohlížeče, smartphony, tablety"
   thinkersmithspanish_platformtext: "Unplugged"
@@ -1271,7 +1280,7 @@
   processing_beyond_shortdescription: "Naučte se jazyk Processing"
   alice_beyond_shortdescription: "Učte programování v 3D prostředí"
   sphero_beyond_shortdescription: "SPRK lekce dají dětem zábavný rychlokurz programování robotů, zatímco si budou vylepšovat schopnosti v matematice a jiných vědách."
-  codeorg_beyond_longdescription: "Naučte se základní pojmy informatiky programováním založeném na tahání myší. Tři plné kurzy, každý skládající se z 15-20 lekcí, které se dobře kombinují s \"unplugged\" aktivitami do třídy. Vše proložené hravými, samostatně vedenými cvičeními a video přednáškami od Billa Gatese, Marka Zuckerberga, Angry Birds a Plants vs. Zombies. Naučte se smyčky, podmínky, základní algoritmy, funkce i proměnné."
+  codeorg_beyond_longdescription: "Naučte se základní pojmy informatiky programováním založeném na tahání myší. Tři nabité kurzy, každý skládající se z 15-20 lekcí, které se dobře kombinují s aktivitami bez počítače. Vše proložené hravými, samostatně vedenými cvičeními a video přednáškami od Billa Gatese, Marka Zuckerberga, Angry Birds a Plants vs. Zombies. Naučte se cykly, podmínky, základní algoritmy, funkce i proměnné."
   khan_beyond_longdescription: "Naučte se základy programování v jazyce JavaScript při vytváření zábavných kreseb s tvým vlastním programem. Spolupracuj ve třídě nebo udělej sám!"
   tynker_beyond_longdescription: "Tynker dělání učení se programování zábavným a snadným. Je vizuální. Děti tvoří hry a mobilních aplikace uspořádáním bloků kódu. To odstraňuje potřebu znát syntaxi programovacího jazyka. Děti okamžitě přetvářejí myšlenky do animovaných příběhů a matematického umění. Podporuje progresivní učení. Jak se děti učí základy, Tynker představuje pokročilejší koncepty, včetně programování řízeného syntaxí."
   scratch_beyond_longdescription: "Ve Scratchi můžeš vytvářet vlastní interaktivní hry, příběhy, animace a sdílet je s přáteli. Začni s animacemi svého jména, vytvořením pohlednice a hry ping-pong."
@@ -1326,7 +1335,7 @@
   header_educate_hoc: "Hodina kódu"
   header_educate_partner: "Navažte s námi partnerství"
   header_educate_beyond: "Nad rámec Code.org"
-  header_educate_inspire: "Inspirovat studenta"
+  header_educate_inspire: "Inspirujte studenta"
   header_educate_community: "Online komunita"
   header_educate_tools: "Nástroje a videa"
   header_about_us: "O nás"
@@ -1355,6 +1364,7 @@
   user_header_settings: "Můj účet"
   user_header_logout: "Odhlásit se"
   user_header_signin: "Přihlásit se"
+  user_header_create: 'Vytvoř '
   user_header_playlab: "Play Lab"
   user_header_dance: "Dance Party"
   user_header_minecraft: "Minecraft"
@@ -1368,8 +1378,9 @@
   hoc_overview_dance_title: "Dance Party"
   hoc_overview_dance_subtitle: "Naprogramuj Dance Party a sdílej ji s kamarády. Vystupují Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara a dalších 25 umělců!"
   hoc_overview_dance_2019_subtitle: "Naprogramuj Dance Party a sdílej ji s kamarády. Vystupují Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj a dalších 34 umělců!"
+  hoc_overview_title: "Aktivity pro Hodinu kódu od Code.org"
   hoc_overview_partner_activities_title: "Další aktivity partnerů"
-  hoc_overview_partner_activities_body: "Webové stránky hodiny kódu mají více než 100 aktivit počítačové vědy pro lidi v každém věku a na jakékoliv úrovni zkušeností vyvinuté Code.org a partnery."
+  hoc_overview_partner_activities_body: "Webové stránky Hodiny kódu mají více než 500 počítačových aktivit pro lidi v každém věku a na jakékoliv úrovni a jsou vyvinuté Code.org a partnery."
   hoc_overview_partner_activities_link: "Zobrazit aktivity"
   hoc_overview_start_tutorial: "Spustit"
   hoc_overview_view_teacher_guide: "Zobrazit příručku učitele"

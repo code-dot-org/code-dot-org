@@ -468,6 +468,9 @@ nn:
         what_is_an_event: Hva er en hendelse?
         csd_pair_programming: Parprogrammering
         csd_applab_parameters: Funksjonar med parameter
+        hoc_dance_congrats_2019: Danse Fest - Fortsett å feste!
+        hoc_dance_events_2019: Dansefest - hendingar
+        hoc_dance_properties_2019: Dansefest - eigenskapar
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

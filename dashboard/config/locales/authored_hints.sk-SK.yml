@@ -9705,6 +9705,38 @@ sk-SK:
         grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
           bloky a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil
           celú úlohu.
+      courseE_artist_functions8b_2018:
+        courseD_artist_functions8_f: Budeš potrebovať už len jeden blok `posuň sa
+          dopredu`, ak to máš správne!
+        courseD_artist_functions8_a: Začni s tým, že vytvoríš funkciu pre štvorec,
+          potom skús vytvoriť funkciu pre radu štvorcov.
+        courseD_artist_functions8_d: |-
+          Na vytvorenie rady štvorcov,
+
+          -   zopakuj 3-krát
+              -   nakresli štvroec
+              -   posuň sa dopredu o **100 pixelov**
+      courseE_artist_functions8b_2019:
+        courseD_artist_functions8_f: Budeš potrebovať už len jeden blok `posuň sa
+          dopredu`, ak to máš správne!
+        courseD_artist_functions8_a: Začni s tým, že vytvoríš funkciu pre štvorec,
+          potom skús vytvoriť funkciu pre radu štvorcov.
+        courseD_artist_functions8_d: |-
+          Na vytvorenie rady štvorcov,
+
+          -   zopakuj 3-krát
+              -   nakresli štvroec
+              -   posuň sa dopredu o **100 pixelov**
+      courseE_artist_functions8c_2018:
+        courseD_artist_functions8_f: Toto je jednoduchšie ako by sa mohlo zdať! Nie
+          sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!
+        courseD_artist_functions8_a: Druhý riadok štvrocov sa líši od prvého 180 stupňovou
+          otočkou!
+      courseE_artist_functions8c_2019:
+        courseD_artist_functions8_f: Toto je jednoduchšie ako by sa mohlo zdať! Nie
+          sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!
+        courseD_artist_functions8_a: Druhý riadok štvrocov sa líši od prvého 180 stupňovou
+          otočkou!
       courseE_artist_ramp9:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
@@ -9720,6 +9752,26 @@ sk-SK:
       courseE_farmer_functions1a_2019:
         courseE_farmer_functions1a_a: Uisti sa, že si prečítaš definíciu funkcie.
           Dokážeš povedať čo robí?
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions2b_a: Môžeš použiť  `opakuj pokiaľ tam sú tekvice`,
+          aby si sa dostal na koniec oboch ciest.
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions2b_a: Môžeš použiť  `opakuj pokiaľ tam sú tekvice`,
+          aby si sa dostal na koniec oboch ciest.
+      courseE_farmer_functions2ba_2018:
+        courseE_farmer_functions2ba_a: Použi zelený blok `získaj všetky tekvice`,
+          aby si určite všetky pozbieral/a!
+      courseE_farmer_functions2ba_2019:
+        courseE_farmer_functions2ba_a: Použi zelený blok `získaj všetky tekvice`,
+          aby si určite všetky pozbieral/a!
+      courseE_farmer_functions3c1_2018:
+        coursee_farmer_functions3c1_2018_a: Na vyriešenie úlohy budete musieť použiť
+          3-krát funkciu `pozbieraj po ceste`.
+        coursee_farmer_functions3c1_2018_b: Aký kód musíš pridať aby si mohol/la zahýbať?
+      courseE_farmer_functions3c1_2019:
+        coursee_farmer_functions3c1_2018_a: Na vyriešenie úlohy budete musieť použiť
+          3-krát funkciu `pozbieraj po ceste`.
+        coursee_farmer_functions3c1_2018_b: Aký kód musíš pridať aby si mohol/la zahýbať?
       courseE_farmer_functions4b:
         courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
@@ -9729,17 +9781,35 @@ sk-SK:
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
       courseE_farmer_functions7a1_2018:
+        courseE_farmer_functions7a1_2018_a: Vytvor svoju funkciu v časti `funkcie`,
+          ktorá sa nachádza v paneli nástrojov.
         courseE_farmer_functions7a1_2018_b: Nezabudni funkciu použiť potom ako si
           ju dokončil/a!
       courseE_farmer_functions7a1_2019:
+        courseE_farmer_functions7a1_2018_a: Vytvor svoju funkciu v časti `funkcie`,
+          ktorá sa nachádza v paneli nástrojov.
         courseE_farmer_functions7a1_2018_b: Nezabudni funkciu použiť potom ako si
           ju dokončil/a!
       courseE_farmer_functions8a1_2018:
         courseE_farmer_functions8a1_2018a: Začni túto úlohu naprogramovaním rovnakej
           funkcie, ako v poslednej úlohe.
+        courseE_farmer_functions8a1_2018b: Po prvom spustení funkcie, budeš musieť
+          urobiť jednu extra otočku, predtým ako funkciu znova spustíš.
       courseE_farmer_functions8a1_2019:
         courseE_farmer_functions8a1_2018a: Začni túto úlohu naprogramovaním rovnakej
           funkcie, ako v poslednej úlohe.
+        courseE_farmer_functions8a1_2018b: Po prvom spustení funkcie, budeš musieť
+          urobiť jednu extra otočku, predtým ako funkciu znova spustíš.
+      courseE_farmer_functions9a1_2018:
+        courseE_farmer_functions9a1_2018a: Použiješ tú istú funkciu, ktorú si si vytvoril/a
+          v predchádzajúcich úlohách.
+        courseE_farmer_functions9a1_2018b: Na vyriešenie prvej polovice úlohy, použi
+          kroky z predchádzajúcej úlohy.
+      courseE_farmer_functions9a1_2019:
+        courseE_farmer_functions9a1_2018a: Použiješ tú istú funkciu, ktorú si si vytvoril/a
+          v predchádzajúcich úlohách.
+        courseE_farmer_functions9a1_2018b: Na vyriešenie prvej polovice úlohy, použi
+          kroky z predchádzajúcej úlohy.
       courseE_farmer_ramp11b:
         courseE_farmer_ramp11b_a: Umiestniť cyklus `pokiaľ` vo vnútri cyklu `opakuj`,
           aby bol tvoj kód kratší.
@@ -9761,6 +9831,15 @@ sk-SK:
         courseE_farmer_ramp12_b: Stále budeš musieť použiť cyklus `opakuj` obalený
           okolo celého kódu, aby si farmárke povedal, koľkokrát musí ísť vpred a zobrať
           šalát.
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: Riešenie tejto úlohy je veľmi podobné tej predošlej,
+          musíš však zabočiť do inej strany.
+      courseE_farmer_ramp12e_2018:
+        courseE_farmer_ramp12e_b: Riešenie tejto úlohy je veľmi podobné tej predošlej,
+          musíš však zabočiť do inej strany.
+      courseE_farmer_ramp12e_2019:
+        courseE_farmer_ramp12e_b: Riešenie tejto úlohy je veľmi podobné tej predošlej,
+          musíš však zabočiť do inej strany.
       courseF_artist_for1:
         courseF_artist_for1_a: |-
           Vieš nakresliť niečo takéto?

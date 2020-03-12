@@ -74,9 +74,9 @@ de:
   join_section:
     code:
       title: Einem Abschitt von Code.org beitreten
-      placeholder: Code für diesen Abschnitt (ABCDEF)
-      instructions: Bitte gebe den Code ein, den der Lehrer Dir zugeteilt hat (Beispiel
-        "ABCDEF") um diesem Abschnitt beizutreten.
+      placeholder: Code für diese Lerngruppe (ABCDEF)
+      instructions: Bitte gib den Code ein, den der Lehrer Dir zugeteilt hat (Beispiel
+        "ABCDEF") um dieser Lerngruppe beizutreten.
       instructions_short: Gebe den Abschitts-Code ein (6 Buchstaben)
       submit: Beitreten
   add_hint_form:
@@ -298,7 +298,7 @@ de:
     code_with_teacher: "%{section_code} mit %{teacher_name}"
     confirm:
       remove: Bist du sicher, dass du diesen Bereich verlassen möchtest?
-    default_name: Unbenannte Sektion
+    default_name: Unbenannte Lerngruppe
     remove: "(Bereich löschen)"
     type:
       word: Geheimwort
@@ -316,14 +316,14 @@ de:
       no_teacher: Ein Benutzer mit der E-Mail oder dem Code '%{teacher_email_or_code}'
         konnte nicht gefunden werden. Lade sie ein, sich hier zu registrieren und
         versuche dann erneut, sie hinzuzufügen.
-      section_not_found: Es konnte kein Abschnitt mit dem Code '%{section_code}' gefunden
-        werden.
-      blank_code: Bitte gib einen Abschnittscode ein
-      cant_join_own_section: Es tut uns leid, aber du kannst nicht an deinem eigenen
-        Abschnitt teilnehmen.
-      provider_managed_section: Dieser Bereich wird von einem anderen Anbieter verwaltet
+      section_not_found: Es konnte keine Lerngruppe mit dem Code '%{section_code}'
+        gefunden werden.
+      blank_code: Bitte gib einen Lerngruppencode ein
+      cant_join_own_section: Es tut uns leid, aber du kannst nicht an deiner eigenen
+        Lerngruppe teilnehmen.
+      provider_managed_section: Diese Lerngruppe wird von einem anderen Anbieter verwaltet
         und kann nicht beitreten werden. Bitten deinen Lehrer, Dich über %{provider}
-        hinzuzufügen und diesen Abschnitt erneut zu synchronisieren.
+        hinzuzufügen und diese Lerngruppe erneut zu synchronisieren.
     mail:
       student_disassociated:
         subject: 'Code.org Benachrichtigung: %{student_name} ist nicht mehr als Ihr(e)
@@ -363,7 +363,7 @@ de:
       my_dashboard: Meine Übersicht
       course_catalog: Kurs Katalog
       project_gallery: Projekte
-      sections: Sektionen
+      sections: Lerngruppen
       help_support: Hilfe und Support
       report_bug: Einen Fehler melden
       teacher_community: Lehrer Community
@@ -599,19 +599,19 @@ de:
     choose_next_course: Wähle einen der Code-Studio-Kurse unten aus
     print_certificate: Zertifikat drucken
   move_students:
-    new_section_dne: Entschuldigung, aber die Sektion %{new_section_code} existiert
-      nicht. Bitte geben Sie einen anderen Sektionscode ein.
-    section_code_cant_be_current_section: Die derzeitige Sektion kann nicht gleich
-      mit der neuen Sektion sein.
-    current_section_dne: Entschuldigung, aber die Sektion %{current_section_code}
-      existiert nicht. Bitte geben Sie einen anderen Sektionscode ein.
+    new_section_dne: Entschuldigung, aber die Lerngruppe %{new_section_code} existiert
+      nicht. Bitte geben Sie einen anderen Lerngruppencode ein.
+    section_code_cant_be_current_section: Die derzeitige Lerngruppe kann nicht gleich
+      mit der neuen Lerngruppe sein.
+    current_section_dne: Entschuldigung, aber die Lerngruppe %{current_section_code}
+      existiert nicht. Bitte geben Sie einen anderen Lerngruppencode ein.
     student_ids_not_entered: Bitte student_ids angeben.
     student_not_found: Einer oder mehr Schüler konnte nicht gefunden werden.
-    all_students_must_be_in_current_section: Alle Schüler müssen zur Zeit in Ihrer
-      Sektion eingeschrieben sein.
+    all_students_must_be_in_current_section: Alle Studenten müssen derzeit in Ihrer
+      Lerngruppe eingeschrieben sein.
     already_enrolled_in_new_section: Sie können diese Schüler nicht bewegen, weil
-      dieser Lehrer sie bereits in einer anderen Sektion hat.
-    third_party_login: Sie können Schüler nicht in einen Abschnitt verschieben, der
+      dieser Lehrer sie bereits in einer anderen Lerngruppe hat.
+    third_party_login: Sie können Schüler nicht in eine Lerngruppe verschieben, der
       mit einem Drittanbieterwerkzeug synchronisiert ist.
   share:
     title: Mit Code Studio lernen
@@ -1138,6 +1138,7 @@ de:
     content: Inhalt
     practice: Lehrer Übungen
     peer_review: Peer Review
+    optional: Optional
     main_course: Hauptkurs
     extra_course_content: Extra Kurs Inhalte
     csf_e_2: Kurs E Inhalt
@@ -1148,7 +1149,9 @@ de:
     csf_events: Ereignisse
     csf_online_safety: Online-Sicherheit
     csf_binary: Binärdatei
+    csf_data: Daten
     csf_conditionals: Bedingungen
+    csf_sprites: Sprites
     csf_nested_loops: Verschachtelte Schleifen
     csf_functions: Funktionen
     csf_variables: Variablen
@@ -1188,6 +1191,9 @@ de:
     csp_loops: Schleifen
     csp_libraries: Bibliotheken
     csp_parameters_return_values: Parameter und Rückgabewerte
+    csp_unit2_2020: 'Lektion 2: Das Internet'
+    csp_unit6_2020: 'Lerneinheit 6: Algorithmen'
+    csp_unit9_2020: 'Lektion 9: Daten'
     time4cs_c1: Everglades und seine Ökosysteme
     time4cs_c2: Nahrungsketten in den Everglades
     time4cs_c3: Leben in den Everglades
@@ -1427,3 +1433,4 @@ de:
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
     Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen
     Sie zurück zu unserer Webseite.
+  copy: Kopieren

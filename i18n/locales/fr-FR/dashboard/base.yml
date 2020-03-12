@@ -936,6 +936,7 @@ fr:
     csp_traversals: 'Parcours'
     csp_libraries: 'Bibliothèques'
     csp_parameters_return_values: 'Paramètres et Valeur de Retour'
+    csp_unit2_2020: 'Principes de l''informatique, unité 2'
     dlp: 'Sujets de réflexion'
     time4cs_c1: 'Les Everglades et ses écosystèmes'
     time4cs_c2: 'Les chaînes alimentaires dans les Everglades'
@@ -1120,3 +1121,4 @@ fr:
   page_not_found_header: '404 : Page introuvable'
   page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse web et réessayez, ou retournez à notre page d’accueil."
   page_not_found_button: "Retourner à la page d’accueil"
+  copy: 'Copier'

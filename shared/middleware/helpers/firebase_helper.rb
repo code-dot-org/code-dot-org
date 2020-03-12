@@ -28,21 +28,50 @@ class FirebaseHelper
     table_to_csv(records, column_order: ['id'])
   end
 
+  def number?(num)
+    !Float(num).nil? rescue false
+  end
+
+  def csv_as_table(csv_data)
+    records = {}
+    id = 1
+    table = CSV.parse(csv_data, headers: true)
+    table.each do |row|
+      record = {}
+      record['id'] = id
+      table.headers.each do |col|
+        value = (number? row[col]) ? row[col].to_f : row[col]
+        record[col] = value
+      end
+      records[id] = record.to_json
+      id += 1
+    end
+    # add id as first column
+    columns = table.headers.unshift('id')
+    return records, columns
+  end
+
   def delete_shared_table(table_name)
     escaped_table_name = URI.escape(table_name)
-    @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}")
-    @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
+    response = @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}")
+    return response unless response.success?
+    response = @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
+    return response unless response.success?
     @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
   end
 
   def upload_shared_table(table_name, records, columns)
     escaped_table_name = URI.escape(table_name)
-    @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
-    @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
+    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
+    return response unless response.success?
+    response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
+    return response unless response.success?
+    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
+    return response unless response.success?
     columns.each do |column|
-      @firebase.push("v3/channels/shared/metadata/tables/#{escaped_table_name}/columns", {columnName: column})
+      response = @firebase.push("v3/channels/shared/metadata/tables/#{escaped_table_name}/columns", {columnName: column})
     end
+    return response
   end
 
   def upload_live_table(table_name, records, columns)

@@ -14,8 +14,8 @@ it:
   hoc2019_header: Impara l'informatica e cambia il mondo.
   hoc2019_header_line1_mobile: Impara l'informatica.
   hoc2019_header_line2_mobile: Cambia il mondo.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
+  social_hoc2019_every_sudent: 'Ogni studente può cambiare il mondo. Aiutalo ad essere
+    pronto. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
   social_hoc_is_coming: The Hour of Code is coming!
@@ -73,9 +73,10 @@ it:
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_what_is_ai: Che cosa è l'Intelligenza Artificiale?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_phone_knows_dog: In che modo il tuo telefono capisce che si tratta
+    di un cane?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
@@ -331,7 +332,7 @@ it:
   share_on_facebook: " Condividi su Facebook"
   share_on_twitter: " Condividi su Twitter"
   promote_additional_resources: Puoi trovare tutte le informazioni per l'Italia sul
-    sito <a href="https://programmailfuturo.it">www.programmailfuturo.it</a>
+    sito www.programmailfuturo.it
   front_join_us_heading: Un'Ora del Codice per ogni studente.
   front_join_us_announcements: Avvisi
   front_join_us_anybody_can_learn: Chiunque può imparare

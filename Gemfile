@@ -237,6 +237,7 @@ gem 'aws-sdk-cloudfront', '~> 1'
 gem 'aws-sdk-cloudwatch', '~> 1'
 gem 'aws-sdk-cloudwatchlogs', '~> 1'
 gem 'aws-sdk-core', '~> 3'
+gem 'aws-sdk-databasemigrationservice', '~> 1'
 gem 'aws-sdk-dynamodb', '~> 1'
 gem 'aws-sdk-ec2', '~> 1'
 gem 'aws-sdk-firehose', '~> 1.6'
@@ -343,3 +344,5 @@ gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true
 gem 'hammerspace'
 
 gem 'require_all', require: false
+
+gem 'dotiw'

@@ -8,7 +8,8 @@ zh-CN:
             从一个正方形开始
             在正方形上放置一个三角形
             再在正方形下放置一个三角形
-        - correct: true
+        - text: "从一个三角形开始  \n在正方形右边放一个三角形  \n在正方形下面放一个平行四边形  \n在平行四边形右边放一个三角形"
+          correct: true
         - text: |-
             从一个正方形开始
             在正方形上面放置一个平行四边形
@@ -385,14 +386,19 @@ zh-CN:
         title: 选择题
       4-5 Songwriting Multi 1:
         answers:
-        - text: 走，走，快点走吧，
-        - text: "走，走，快点走吧，\n走，走，快点走吧， \n走，走，快点走吧，\n快点走吧，亲爱的。"
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
           correct: true
-        - {}
-        - {}
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: 在这首歌里，哪一大段因为每次都能完全重复，所以能被称为副歌？
         title: 选择题
       4-5 Suncatchers Match 1:
         answers:
@@ -458,6 +464,7 @@ zh-CN:
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: 紫色花里可能有 3，2，或 1 个花蜜，但不知道有多少。哪个模块能从紫花里正确检查，并收集所有的花蜜？
         questions:
         - text: 选择最好的模块。
         title: 蜜蜂条件语句选择题
@@ -1549,25 +1556,6 @@ zh-CN:
           ## 示例
 
           [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
-      CSD U3 Collision Detection:
-        markdown: |
-          # 概述
-
-          学生学习计算机上的碰撞。团队探索了计算机如何使用精灵图的位置和尺寸属性，以及数学来检测两个精灵图是否碰到了。然后，会使用 isTouching() 模块，当精灵图碰到时来创造一些不同的效果，比如播放声音。最后，使用这些新技能来改进上节课开始的滑动游戏。
-          ## 词汇表
-
-          * **抽象（abstraction）** - 简化不同问题的差异，使得一个方法能解决多个问题。
-          * **调试（debug）** - 在算法或程序中找到并修复问题。
-          * **如果语句** - 大多数程序结构中实现的 "条件语句"。
-
-          ## 引入的代码
-
-          * [sprite.debug](//docs.code.org/gamelab/debug/)
-          * [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
-
-          ## 资源
-
-          * [碰撞检测 - 活动指南](https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
       CSD U3 Collisions SFLP:
         markdown: |+
           # 概述
@@ -1597,13 +1585,6 @@ zh-CN:
 
           * [项目指南 - 防守游戏 - 项目指南](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
-        markdown: |+
-          # 开始搜索
-
-          要了解计算机科学和编程是如何在娱乐中发挥作用的，需要做一些调查。搜索 "计算机科学和娱乐"，还可以找找不同类型的娱乐，比如电影，电视，音乐，游戏，动画，时尚等等。
-
-
-      CSD U3 Entertainment_2018:
         markdown: |+
           # 开始搜索
 
@@ -2057,13 +2038,6 @@ zh-CN:
 
 
           ### 什么信息能帮助解码？
-
-      CSD U3 complex sprite movement SFLP:
-        markdown: |+
-          # 概述
-
-          学生会学习组合精灵图的计数器模式和速度属性，来创建更复杂的精灵图的运动，比如模拟重力，跳跃，让精灵往左右飘。最后，学生会将这些运动组合到单个精灵图上，并创作一个来回飞，收集硬币的简单游戏。
-
 
       CSD U3 drawSprites placement match:
         answers:
@@ -4983,66 +4957,6 @@ zh-CN:
           # 西蒙说
 
           玩一玩游戏，想想需要什么命令来获得正确的结果。
-      Social Sleuth:
-        markdown: |+
-          # 社交侦探
-
-          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
-
-          ## 资料
-
-          点击图片来打开每个资料。
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
-      Social Sleuth_2018:
-        markdown: |+
-          # 社交侦探
-
-          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
-
-          ## 资料
-
-          点击图片来打开每个资料。
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
       Social Sleuth_2018_2019:
         markdown: |+
           # 社交侦探
