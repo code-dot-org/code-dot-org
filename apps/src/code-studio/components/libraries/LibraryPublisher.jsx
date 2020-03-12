@@ -289,9 +289,9 @@ export class LibraryPublisher extends React.Component {
           />
           {onShareTeacherLibrary && (
             <Button
-              style={{marginTop: 20}}
+              style={{marginTop: 20, marginLeft: 10}}
               onClick={onShareTeacherLibrary}
-              text={'Manage Sharing'}
+              text={i18n.manageLibraries()}
               color={Button.ButtonColor.gray}
             />
           )}

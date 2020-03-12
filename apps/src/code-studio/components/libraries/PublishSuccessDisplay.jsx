@@ -16,11 +16,11 @@ export default class PublishSuccessDisplay extends React.Component {
   static propTypes = {
     libraryName: PropTypes.string.isRequired,
     channelId: PropTypes.string.isRequired,
-    onTeacherShareLibrary: PropTypes.func
+    onShareTeacherLibrary: PropTypes.func
   };
 
   render = () => {
-    const {libraryName, channelId, onTeacherShareLibrary} = this.props;
+    const {libraryName, channelId, onShareTeacherLibrary} = this.props;
     return (
       <div>
         <Heading2>
@@ -31,8 +31,13 @@ export default class PublishSuccessDisplay extends React.Component {
           <p>{i18n.libraryPublishExplanation()}</p>
           <div style={styles.centerContent}>
             <LibraryIdCopier channelId={channelId} />
-            {onTeacherShareLibrary && (
-              <Button onClick={onTeacherShareLibrary} text={'manage sharing'} />
+            {onShareTeacherLibrary && (
+              <Button
+                color={Button.ButtonColor.gray}
+                onClick={onShareTeacherLibrary}
+                text={i18n.manageLibraries()}
+                useButtonTag
+              />
             )}
           </div>
         </div>

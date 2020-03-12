@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
-// import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import LibraryIdCopier from './LibraryIdCopier';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
-// import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {
@@ -28,12 +28,18 @@ const styles = {
     justifyContent: 'space-between',
     margin: 2,
     paddingTop: 10
+  },
+  libraryCopierLabel: {
+    color: color.purple,
+    marginBottom: 10,
+    fontStyle: 'italic'
   }
 };
 
 class ShareTeacherLibraries extends React.Component {
   static propTypes = {
     onCancel: PropTypes.func.isRequired,
+
     // from redux
     sections: PropTypes.arrayOf(
       PropTypes.shape({
@@ -44,7 +50,8 @@ class ShareTeacherLibraries extends React.Component {
     personalProjectsList: PropTypes.array.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
     setPersonalProjects: PropTypes.func.isRequired,
-    updateProjectLibrary: PropTypes.func.isRequired
+    updateProjectLibrary: PropTypes.func.isRequired,
+    loadingFinished: PropTypes.bool.isRequired
   };
 
   state = {
@@ -129,7 +136,12 @@ class ShareTeacherLibraries extends React.Component {
   };
 
   render() {
-    const {sections, personalProjectsList, onCancel} = this.props;
+    const {
+      sections,
+      personalProjectsList,
+      onCancel,
+      loadingFinished
+    } = this.props;
     const {selectedSections, selectedLibraryId} = this.state;
     const libraries = personalProjectsList
       .filter(project => project.libraryName)
@@ -144,28 +156,46 @@ class ShareTeacherLibraries extends React.Component {
 
     return (
       <div style={styles.container}>
-        <p>{i18n.shareTeacherLibraryDescription()}</p>
-        <SortedTableSelect
-          rowData={rowData}
-          onRowChecked={id => this.onSectionSelected(id)}
-          options={libraries}
-          onChooseOption={this.onChooseOption}
-          onSelectAll={shouldSelectAll => this.onSelectAll(shouldSelectAll)}
-          optionsDescriptionText={i18n.libraryName()}
-        >
-          <div>{selectedLibraryId && this.displaySharedSections()}</div>
-        </SortedTableSelect>
-        <div style={styles.footer}>
-          <Button
-            onClick={onCancel}
-            color={Button.ButtonColor.gray}
-            text={i18n.closeDialog()}
-          />
-          <Button
-            onClick={this.assignLibrary}
-            text={i18n.shareLibraryButton()}
-          />
-        </div>
+        {loadingFinished ? (
+          <div>
+            <p>{i18n.shareTeacherLibraryDescription()}</p>
+            <SortedTableSelect
+              rowData={rowData}
+              onRowChecked={id => this.onSectionSelected(id)}
+              options={libraries}
+              onChooseOption={this.onChooseOption}
+              onSelectAll={shouldSelectAll => this.onSelectAll(shouldSelectAll)}
+              optionsDescriptionText={i18n.libraryName() + ':'}
+              tableDescriptionText={i18n.selectAssignedLibrarySections()}
+            >
+              {selectedLibraryId ? (
+                <div>
+                  <LibraryIdCopier channelId={selectedLibraryId} />
+                  <p style={styles.libraryCopierLabel}>
+                    {i18n.shareLibraryAccess()}
+                  </p>
+                  <div>{this.displaySharedSections()}</div>
+                </div>
+              ) : (
+                <p>{i18n.selectLibraryForOptions()}</p>
+              )}
+            </SortedTableSelect>
+            <div style={styles.footer}>
+              <Button
+                onClick={onCancel}
+                color={Button.ButtonColor.gray}
+                text={i18n.closeDialog()}
+              />
+              <Button
+                disabled={!selectedLibraryId}
+                onClick={this.assignLibrary}
+                text={i18n.shareLibraryButton()}
+              />
+            </div>
+          </div>
+        ) : (
+          <Spinner />
+        )}
       </div>
     );
   }
@@ -174,7 +204,8 @@ class ShareTeacherLibraries extends React.Component {
 export default connect(
   state => ({
     personalProjectsList: state.projects.personalProjectsList.projects || [],
-    sections: sectionsNameAndId(state.teacherSections)
+    sections: sectionsNameAndId(state.teacherSections),
+    loadingFinished: state.teacherSections.asyncLoadComplete
   }),
   {
     asyncLoadSectionData,
