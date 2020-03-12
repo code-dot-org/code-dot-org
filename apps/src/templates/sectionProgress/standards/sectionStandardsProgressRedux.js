@@ -6,8 +6,6 @@ const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
 const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
-const SET_COMPLETED_LESSONS_IDS =
-  'sectionStandardsProgress/SET_COMPLETED_LESSONS_IDS';
 const SET_STUDENT_LEVEL_SCORES =
   'sectionStandardsProgress/SET_STUDENT_LEVEL_SCORES';
 
@@ -23,10 +21,6 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
-export const setCompletedLessonsIds = completed => ({
-  type: SET_COMPLETED_LESSONS_IDS,
-  completed
-});
 export const setStudentLevelScores = scoresData => ({
   type: SET_STUDENT_LEVEL_SCORES,
   scoresData
@@ -37,7 +31,6 @@ const initialState = {
   standardsData: [],
   teacherComment: null,
   selectedLessons: [],
-  completedUnpluggedLessonsIds: [],
   studentLevelScoresByStage: {}
 };
 
@@ -71,12 +64,6 @@ export default function sectionStandardsProgress(state = initialState, action) {
       selectedLessons: action.selected
     };
   }
-  if (action.type === SET_COMPLETED_LESSONS_IDS) {
-    return {
-      ...state,
-      completedUnpluggedLessonsIds: action.completed
-    };
-  }
   if (action.type === SET_STUDENT_LEVEL_SCORES) {
     return {
       ...state,
@@ -104,8 +91,6 @@ export function getUnpluggedLessonsForScript(state) {
 
   unpluggedStages.forEach(stage => {
     const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
-    const selected = getLessonSelectionStatus(state, stage.id);
-    stage['selected'] = selected;
     stage['completed'] = lessonCompletionStatus.completed;
   });
 
@@ -228,9 +213,16 @@ export function getLessonSelectionStatus(state, stageId) {
 
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
   let completionByLesson = {};
-  completionByLesson['completed'] = false;
-  completionByLesson['numStudentsCompleted'] = 0;
 
+  completionByLesson['completed'] = getLessonSelectionStatus(state, stageId);
+  completionByLesson[
+    'numStudentsCompleted'
+  ] = getNumberOfStudentsCompletedUnpluggedLesson(state, scriptId, stageId);
+  return completionByLesson;
+}
+
+function getNumberOfStudentsCompletedUnpluggedLesson(state, scriptId, stageId) {
+  let completionNumberByLesson = 0;
   if (
     state.sectionStandardsProgress.studentLevelScoresByStage &&
     state.sectionStandardsProgress.studentLevelScoresByStage[scriptId] &&
@@ -248,24 +240,9 @@ export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
       }
     );
 
-    const numStudentCompleted = studentScoresComplete.length;
-
-    // If any student in the section has a teacher score indicating
-    // completion for the lesson, the lesson is considered completed for the
-    // section. When a teacher marks a lesson complete for a section, the
-    // lesson is marked complete for each student in the section, so we can
-    // infer that if it's marked complete for one student in the section,
-    // it's marked complete for all students in the section.
-    const completed = numStudentCompleted >= 1;
-
-    // If a teacher selects an unplugged lesson in one of the
-    // dialogs, it should display as completed.
-    const selected = getLessonSelectionStatus(state, stageId);
-
-    completionByLesson['completed'] = completed || selected;
-    completionByLesson['numStudentsCompleted'] = numStudentCompleted;
+    completionNumberByLesson = studentScoresComplete.length;
   }
-  return completionByLesson;
+  return completionNumberByLesson;
 }
 
 export function getPluggedLessonCompletionStatus(state, stage) {
@@ -339,6 +316,7 @@ export function fetchStandardsCoveredForScript(scriptId) {
 
 export function fetchStudentLevelScores(scriptId, sectionId) {
   return (dispatch, getState) => {
+    let state = getState();
     $.ajax({
       method: 'GET',
       dataType: 'json',
@@ -346,6 +324,54 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
     }).then(data => {
       const scoresData = data;
       dispatch(setStudentLevelScores(scoresData));
+      let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
+        state,
+        scriptId,
+        scoresData
+      );
+      let unpluggedLessonList = getUnpluggedLessonsForScript(state);
+      const lessonsToSelect = _.filter(unpluggedLessonList, function(lesson) {
+        if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
+          return lesson;
+        }
+      });
+      dispatch(setSelectedLessons(lessonsToSelect));
     });
   };
+}
+
+export function getInitialUnpluggedLessonCompletionStatus(
+  state,
+  scriptId,
+  scoresData
+) {
+  let completedLessonIds = [];
+
+  if (scoresData[scriptId]) {
+    const levelScoresByStudentForScript = scoresData[scriptId];
+
+    Object.keys(levelScoresByStudentForScript).forEach(function(item) {
+      const studentScoresComplete = _.filter(
+        _.values(levelScoresByStudentForScript[item]),
+        function(studentScore) {
+          return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
+        }
+      );
+
+      const numStudentCompleted = studentScoresComplete.length;
+
+      // If any student in the section has a teacher score indicating
+      // completion for the lesson, the lesson is considered completed for the
+      // section. When a teacher marks a lesson complete for a section, the
+      // lesson is marked complete for each student in the section, so we can
+      // infer that if it's marked complete for one student in the section,
+      // it's marked complete for all students in the section.
+      const completed = numStudentCompleted >= 1;
+
+      if (completed) {
+        completedLessonIds.push(parseInt(item));
+      }
+    });
+  }
+  return completedLessonIds;
 }
