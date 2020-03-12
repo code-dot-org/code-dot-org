@@ -36,7 +36,6 @@ const styles = {
     marginLeft: PADDING / 2
   },
   sectionInput: {
-    marginLeft: PADDING / 2,
     width: INPUT_WIDTH
   },
   radioOption: {
@@ -193,11 +192,26 @@ class MoveStudents extends Component {
     }
   };
 
+  toggleAll = shouldSelectAll => {
+    let studentIds = [];
+
+    if (shouldSelectAll) {
+      studentIds = this.getStudentIds();
+    }
+
+    this.props.updateStudentTransfer({studentIds});
+  };
+
   render() {
     const {studentData, transferData, transferStatus} = this.props;
     // Define a sorting transform that can be applied to each column
 
     const pendingTransfer = transferStatus.status === TransferStatus.PENDING;
+
+    const selectedStudentData = studentData.map(row => ({
+      ...row,
+      isChecked: transferData.studentIds.includes(row.id)
+    }));
 
     return (
       <div>
@@ -213,15 +227,14 @@ class MoveStudents extends Component {
           handleClose={this.closeDialog}
         >
           <SortedTableSelect
-            rowData={studentData}
-            onRowChecked={studentIds =>
-              this.props.updateStudentTransfer({studentIds: studentIds})
-            }
+            rowData={selectedStudentData}
+            onRowChecked={id => this.toggleStudentSelected(id)}
             options={this.getOptions()}
             onChooseOption={this.onChangeSection}
             descriptionText={i18n.selectStudentsToMove()}
             optionsDescriptionText={`${i18n.moveToSection()}:`}
             titleText={i18n.moveStudents()}
+            onSelectAll={shouldSelectAll => this.toggleAll(shouldSelectAll)}
           >
             <div>
               {transferStatus.status === TransferStatus.FAIL && (
