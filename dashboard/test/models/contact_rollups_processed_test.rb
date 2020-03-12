@@ -15,6 +15,20 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     assert_equal 3, ContactRollupsProcessed.count
   end
 
+  test 'import_from_raw_table inserts records by batch' do
+    unique_email_count = 15
+    batch_sizes = [1, 5, 7, 11, 20]
+
+    ContactRollupsRaw.delete_all
+    create_list :contact_rollups_raw, unique_email_count
+
+    batch_sizes.each do |batch_size|
+      ContactRollupsProcessed.delete_all
+      ContactRollupsProcessed.import_from_raw_table(batch_size)
+      assert_equal unique_email_count, ContactRollupsProcessed.count, "Failed with batch size of #{batch_size}"
+    end
+  end
+
   test 'import_from_raw_table combines data from multiple records' do
     clean_tables
 
