@@ -12,6 +12,7 @@ import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
+import Snapshot from './Snapshot';
 
 const styles = {
   container: {
@@ -316,22 +317,19 @@ class VisualizerModal extends React.Component {
               }
               inlineLabel
             />
-            <DropdownField
-              displayName={msg.dataVisualizerCreateChart()}
-              options={[]}
-              disabledOptions={[]}
-              value={this.state.screen}
-              onChange={event => this.setState({screen: event.target.value})}
-              inlineLabel
-            />
-            <button
-              type="button"
-              style={dataStyles.grayButton}
-              onClick={this.handleOpen}
-            >
-              {msg.create()}
-            </button>
           </div>
+          <Snapshot
+            records={filteredRecords}
+            numericColumns={numericColumns}
+            chartType={this.state.chartType}
+            bucketSize={this.state.bucketSize}
+            chartTitle={this.state.chartTitle}
+            selectedColumn1={this.state.selectedColumn1}
+            selectedColumn2={this.state.selectedColumn2}
+            filterColumn={this.state.filterColumn}
+            filterValue={this.state.filterValue}
+            isMultiColumnChart={isMultiColumnChart}
+          />
         </BaseDialog>
       </span>
     );
