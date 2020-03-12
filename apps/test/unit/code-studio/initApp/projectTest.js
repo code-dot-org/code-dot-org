@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import * as utils from '@cdo/apps/utils';
@@ -513,80 +513,99 @@ describe('project.js', () => {
 
     afterEach(() => {
       project.updateChannels_.restore();
-    });
-
-    it('updates the current library name and description', () => {
-      let oldName = 'initialLibrary';
-      let oldDescription = 'initialDescription';
-      let newName = 'newLibraryName';
-      let newDescription = 'newLibraryDescription';
-      setData({libraryName: oldName, libraryDescription: oldDescription});
-
-      expect(project.getCurrentLibraryName()).to.equal(oldName);
-      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
-      project.setLibraryDetails(newName, newDescription);
-      expect(project.getCurrentLibraryName()).to.equal(newName);
-      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
-      expect(project.updateChannels_).to.have.been.called;
-
       setData({});
     });
 
-    it('does nothing if name and description are unchanged', () => {
-      expect(project.getCurrentLibraryName()).to.be.undefined;
-      expect(project.getCurrentLibraryDescription()).to.be.undefined;
-      project.setLibraryDetails();
-      expect(project.getCurrentLibraryName()).to.be.undefined;
-      expect(project.getCurrentLibraryDescription()).to.be.undefined;
-      expect(project.updateChannels_).to.have.not.been.called;
+    it('updates current library name if libraryName provided', () => {
+      let oldName = 'initialLibrary';
+      let newName = 'newLibraryName';
+      setData({libraryName: oldName});
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
+
+      project.setLibraryDetails({libraryName: newName});
+
+      expect(project.getCurrentLibraryName()).to.equal(newName);
+      expect(project.updateChannels_).to.have.been.called;
     });
 
-    describe('publishing param', () => {
-      const libraryName = 'myLib';
-      const libraryDescription = 'a cool library!';
-      const libraryPublishedAt = new Date();
+    it('updates current library description if libraryDescription provided', () => {
+      let oldDescription = 'initialDescription';
+      let newDescription = 'newLibraryDescription';
+      setData({libraryDescription: oldDescription});
+      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
 
-      beforeEach(() => {
-        setData({libraryName, libraryDescription, libraryPublishedAt});
+      project.setLibraryDetails({libraryDescription: newDescription});
+
+      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
+      expect(project.updateChannels_).to.have.been.called;
+    });
+
+    it('updates current latestLibraryVersion if latestLibraryVersion provided', () => {
+      let oldVersion = '123456';
+      let newVersion = '654321';
+      setData({latestLibraryVersion: oldVersion});
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.equal(oldVersion);
+
+      project.setLibraryDetails({latestLibraryVersion: newVersion});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.equal(newVersion);
+
+      project.setLibraryDetails({latestLibraryVersion: -1});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.latestLibraryVersion).to.be.null;
+    });
+
+    it('updates current publishLibrary if publishing is true', () => {
+      setData({publishLibrary: false});
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.publishLibrary).to.be.false;
+
+      project.setLibraryDetails({publishing: true});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.publishLibrary).to.be.true;
+    });
+
+    it('nullifies current libraryPublishedAt if publishing is false', () => {
+      const oldPublishedAt = new Date();
+      setData({libraryPublishedAt: oldPublishedAt});
+      let currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryPublishedAt).to.equal(oldPublishedAt);
+
+      project.setLibraryDetails({publishing: false});
+
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryPublishedAt).to.be.null;
+    });
+
+    it('does not overwrite current with undefined/missing config properties', () => {
+      const lib = {
+        libraryName: 'my name',
+        libraryDescription: 'my description',
+        latestLibraryVersion: '123456',
+        libraryPublishedAt: new Date()
+      };
+      setData(lib);
+      let currentProject = project.__TestInterface.getCurrent();
+      assert.deepEqual(currentProject, lib);
+
+      project.setLibraryDetails({
+        libraryDescription: 'new description',
+        latestLibraryVersion: undefined
       });
 
-      afterEach(() => {
-        setData({});
-      });
-
-      it('sets publishLibrary if true', () => {
-        project.setLibraryDetails(libraryName, libraryDescription, true);
-        const currentProject = project.__TestInterface.getCurrent();
-
-        expect(currentProject.publishLibrary).to.be.true;
-
-        // Make sure other properties are unaffected
-        expect(currentProject.libraryName).to.equal(libraryName);
-        expect(currentProject.libraryDescription).to.equal(libraryDescription);
-        expect(currentProject.libraryPublishedAt).to.equal(libraryPublishedAt);
-      });
-
-      it('nullifies libraryPublishedAt if false', () => {
-        project.setLibraryDetails(libraryName, libraryDescription, false);
-        const currentProject = project.__TestInterface.getCurrent();
-
-        expect(currentProject.libraryPublishedAt).to.be.null;
-
-        // Make sure other properties are unaffected
-        expect(currentProject.libraryName).to.equal(libraryName);
-        expect(currentProject.libraryDescription).to.equal(libraryDescription);
-        expect(currentProject.publishLibrary).to.be.undefined;
-      });
-
-      it('does nothing if undefined', () => {
-        project.setLibraryDetails(libraryName, libraryDescription);
-        const currentProject = project.__TestInterface.getCurrent();
-
-        expect(currentProject.libraryName).to.equal(libraryName);
-        expect(currentProject.libraryDescription).to.equal(libraryDescription);
-        expect(currentProject.publishLibrary).to.be.undefined;
-        expect(currentProject.libraryPublishedAt).to.equal(libraryPublishedAt);
-      });
+      currentProject = project.__TestInterface.getCurrent();
+      expect(currentProject.libraryName).to.equal(lib.libraryName);
+      expect(currentProject.libraryDescription).to.equal('new description');
+      expect(currentProject.latestLibraryVersion).to.equal(
+        lib.latestLibraryVersion
+      );
+      expect(currentProject.libraryPublishedAt).to.equal(
+        lib.libraryPublishedAt
+      );
     });
   });
 
