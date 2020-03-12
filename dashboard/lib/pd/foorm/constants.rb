@@ -4,10 +4,10 @@ module Pd::Foorm
       TYPE_TEXT = 'text'.freeze,
       TYPE_RADIO = 'radiogroup'.freeze,
       TYPE_CHECKBOX = 'checkbox'.freeze,
+      TYPE_DROPDOWN = 'dropdown'.freeze,
       TYPE_RATING = 'rating'.freeze,
       TYPE_MATRIX = 'matrix'.freeze,
       TYPE_COMMENT = 'comment'.freeze
-      # TODO: cover dropdown
     ].freeze
 
     IGNORED_QUESTION_TYPES = [
@@ -32,6 +32,7 @@ module Pd::Foorm
       TYPE_TEXT => ANSWER_TEXT,
       TYPE_COMMENT => ANSWER_TEXT,
       TYPE_RADIO => ANSWER_SINGLE_SELECT,
+      TYPE_DROPDOWN => ANSWER_SINGLE_SELECT,
       TYPE_CHECKBOX => ANSWER_MULTI_SELECT,
       TYPE_RATING => ANSWER_SINGLE_SELECT,
       TYPE_MATRIX => ANSWER_MATRIX,
