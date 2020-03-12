@@ -28,6 +28,8 @@ module Pd::Foorm
     # def self.get_rollup_for_facilitator(workshop_id, facilitator_id)
     # end
 
+    # get all WorkshopSurveyFoormSubmissions, FoormSubmissions and FoormFoorms for the
+    # given workshop id
     def self.get_raw_data_for_workshop(workshop_id)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
 

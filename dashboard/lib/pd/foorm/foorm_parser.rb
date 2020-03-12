@@ -1,10 +1,36 @@
-# Parses foorm forms and submissions into a useful format for the workshop_summarizer
-# and rollups (future work)
+# Parses Foorm forms into a useful format for looking up questions by form name, form version
+# and question name
+# Format is:
+# {
+#   <form-name>.<form-version: {
+#     <question_name>: {
+#       title: "sample title",
+#       type: "text/singleSelect/multiSelect/matrix/scale",
+#       # for singleSelect/multiSelect/scale
+#       choices: {
+#         choice_1_name: "choice 1 value",
+#         ...
+#       },
+#       # if has other choice
+#       other_text: "Other choice text",
+#       # for matrix
+#       rows: {
+#         row_1_name: "row 1 value",
+#         ...
+#       },
+#       columns: {
+##         column_1_name: "column 1 value",
+##         ...
+##       }
+#     }
+#   }
+# }
 module Pd::Foorm
   class FoormParser
     include Constants
     extend Helper
 
+    # parse all forms in given list and return object in format above
     def self.parse_forms(forms)
       parsed_forms = {}
       forms.each do |form|
@@ -20,6 +46,8 @@ module Pd::Foorm
       parsed_forms
     end
 
+    # parse a form element and add to existing parsed_form object
+    # Form element may be a panel which contains questions
     def self.parse_element(question_data, parsed_form)
       if question_data[:type] == 'panel'
         question_data[:elements].each do |panel_question_data|
@@ -31,6 +59,7 @@ module Pd::Foorm
       parsed_form
     end
 
+    # parse single question into standardized format
     def self.parse_question(question_data)
       return unless QUESTION_TYPES.include?(question_data[:type])
       parsed_question = {
@@ -52,8 +81,12 @@ module Pd::Foorm
       parsed_question
     end
 
+    # given a rating question, create choices from
+    # <min-rate>...<max-rate>, as form will only specify min and max
+    # Include min/max rate descriptions in min/max choices if specified in form
     def self.get_friendly_rating_choices(question_data)
       choices = {}
+      # survey js default min/max is 1/5
       min_rate = 1 || question_data[:rateMin]
       max_rate = 5 || question_data[:rateMax]
       min_rate_description = question_data[:minRateDescription] ?
@@ -70,6 +103,8 @@ module Pd::Foorm
       choices
     end
 
+    # given a list of choices in the format [{value: "value1", text: "text1"},{value: "value2", text: "text2"},...]
+    # convert to object in format {value1: "text1", value2: "text2",...}
     def self.flatten_choices(choices)
       choices_obj = {}
       choices.each do |choice_hash|
