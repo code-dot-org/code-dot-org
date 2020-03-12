@@ -1051,7 +1051,7 @@
   },
   "https://studio.code.org/s/coursef-2019/stage/15/puzzle/4": {
     "short_instructions": "Debug: Make all of the stars spin the same way!",
-    "long_instructions": "The [blockly block][0] block should be used instead of the `costume` block. This will make it work for any sprite, regardless of the costume it uses.\n\n**Debug:** Make all of the stars spin the same way!",
+    "long_instructions": "Edit the `spinning right` behavior. The [blockly block][0] block should be used instead of the `costume` block. This will make it work for any sprite, regardless of the costume it uses.\n\n**Debug:** Make all of the stars spin the same way!",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
     },

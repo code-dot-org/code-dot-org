@@ -6149,3 +6149,47 @@ vi:
               name: Vòng lặp trong câu chuyện về biển
             Tell a Story in Play Lab:
               name: Kể chuyện bằng Play Lab
+        csp1-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Representing Information:
+              name: Miêu tả thông tin
+            Binary Numbers:
+              name: Số nhị phân
+            Intellectual Property:
+              name: Sở hữu trí tuệ
+        csp2-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            The Need for Addressing:
+              name: Sự cần thiết cho các địa chỉ
+            Routers and Redundancy:
+              name: Bộ định tuyến và dự phòng
+        csp3-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csp6-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csp8-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Create PT - Complete the Task:
+              name: Tạo PT - hoàn thành nhiệm vụ
+        csp9-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csp10-2020:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: giai đoạn mới

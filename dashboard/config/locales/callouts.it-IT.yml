@@ -262,6 +262,9 @@ it-IT:
       NEW Course 4 Bee For Loops 5:
         actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
           "Azioni" ora sono qui.
+      New Frozen Project:
+        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
+          di varie forme!
       Overworld Chop Trees:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld Chop Trees_2019:

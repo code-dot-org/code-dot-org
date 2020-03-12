@@ -9386,3 +9386,49 @@ fil:
               name: Pag-Program kasama sina Rey at BB-8
             Spelling Bee:
               name: Spelling Bee
+        csp1-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+            Representing Information:
+              name: Pagrepresenta ng Impormasyon
+            Binary Numbers:
+              name: Binary na mga Numero
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+        csp2-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+            The Need for Addressing:
+              name: Ang Pangangailangan ng Addressing
+            Routers and Redundancy:
+              name: Mga Routers at Redundancy
+        csp3-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+            Debugging:
+              name: Pagdedebug
+        csp6-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp8-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+            Create PT - Complete the Task:
+              name: Lumkiha ng PT - Kompletuhin ang Gawain
+        csp9-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp10-2020:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: bagong yugto

@@ -171,6 +171,9 @@ mn-MN:
       NEW Course 4 Bee For Loops 5:
         actions_category: Хэрэгслийн хайрцаг шинэ дүр төрхтэй боллоо! "Үйл ажиллагаа"
           блокууд энд байна.
+      New Frozen Project:
+        snowflake_dropdown: Энэ доош урсах цэсийг ашиглан өөр өөр цасан ширхгийг бий
+          болго!
       Overworld Chop Trees:
         craft_callout_preplaced: Эхлэхийн тулд бид энд хэдэн блок тавьсан
       Overworld Chop Trees_2019:

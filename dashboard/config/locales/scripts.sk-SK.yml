@@ -5476,3 +5476,11 @@ sk:
               name: Cykly v Dobe ľadovej
             Ocean Scene with Loops:
               name: Na mori s cyklami
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binárne čísla
+        csp3-2020:
+          stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb

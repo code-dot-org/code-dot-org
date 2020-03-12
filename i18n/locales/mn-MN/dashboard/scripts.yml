@@ -11850,6 +11850,8 @@ mn:
               name: Номын сан судлах
             Libraries Investigate:
               name: Номын сангуудыг мөрдөх
+            'Lesson 11: Assessment Day':
+              name: 'Хичээл 11: Үнэлгээний өдөр'
         csp9-pilot:
           stages:
             new stage:
@@ -12730,3 +12732,117 @@ mn:
               name: Зураач дээрх гогцоо
             Tell a Story in Play Lab:
               name: Тоглоомын лаб дээр түүх ярих
+        csp1-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            Welcome to CSP:
+              name: CSP-д тавтай морил
+            Representing Information:
+              name: Мэдээллийг төлөөлөх
+            Circle Square Patterns:
+              name: Дугуй квадрат дүрсүүд
+            Binary Numbers:
+              name: Хоёртын тоо
+            Overflow and Rounding:
+              name: Хэт урсгал болон ойролцоолох
+            Representing Text:
+              name: Төлөөлөх текст
+            Black and White Images:
+              name: Хар ба цагаан зургууд
+            Color Images:
+              name: Өнгөт зураг
+            Lossless Compression:
+              name: Алдагдалгүй шахалт
+            Lossy Compression:
+              name: Алдагдалгүй шахалт
+            Intellectual Property:
+              name: Оюуны өмч
+            'Lesson 14: Assessment Day':
+              name: 'Хичээл 14: Үнэлгээний өдөр'
+        csp2-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            Welcome to the Internet:
+              name: Интернэтэд тавтай морил
+            Building a Network:
+              name: Сүлжээ байгуулах
+            The Need for Addressing:
+              name: Хаяглах хэрэгцээ
+            Routers and Redundancy:
+              name: Чиглүүлэгч ба бууруулагч
+            Packets:
+              name: Пакетууд
+            DNS and HTTP:
+              name: DNS ба HTTP
+            'Lesson 9: Assessment Day':
+              name: 'Хичээл 9: Үнэлгээний өдөр'
+        csp3-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            Introduction to Apps:
+              name: Аппын танилцуулга
+            Project - Designing an App Part 1:
+              name: Төсөл - Апп зохиох хэсэг 1
+            Project - Designing an App Part 2:
+              name: Төсөл - Апп зохиох хэсэг 2
+            The Need for Programming Languages:
+              name: Програмчлалын хэлний хэрэгцээ
+            Debugging:
+              name: Алдааг засах
+            Project - Designing an App Part 3:
+              name: Төсөл - Апп зохиох хэсэг 3
+            Project - Designing an App Part 4:
+              name: Төсөл - Апп зохиох хэсэг 4
+            'Lesson 11: Assessment Day':
+              name: 'Хичээл 11: Үнэлгээний өдөр'
+        csp6-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            Algorithms Solve Problems:
+              name: Алгоритмууд асуудлыг шийдвэрлэх
+            Algorithm Efficiency:
+              name: Алгоритмын үр ашиг
+            Unreasonable Time:
+              name: Үндэслэлгүй цаг хугацаа
+            The Limits of Algorithms:
+              name: Алгоритмын хязгаар
+            Parallel and Distributed Algorithms:
+              name: Зэрэгцээ ба тархсан алгоритмууд
+        csp8-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            Create PT - Complete the Task:
+              name: PT үүсгэх - Даалгаврыг дуусгах
+        csp9-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            'Lesson 9: Assessment Day':
+              name: 'Хичээл 9: Үнэлгээний өдөр'
+        csp10-2020:
+          stages:
+            new stage:
+              name: шинэ шат
+            Data Policies and Privacy:
+              name: Өгөгдлийн бодлого, нууцлал
+            The Value of Privacy:
+              name: Нууцлалын үнэ цэнэ
+            Security Risks Part 1:
+              name: Аюулгүй байдлын эрсдэл Хэсэг 1
+            Security Risks Part 2:
+              name: Аюулгүй байдлын эрсдэл Хэсэг 2
+            Protecting Data Part 1:
+              name: Өгөгдлийг хамгаалах 1-р хэсэг
+            Protecting Data Part 2:
+              name: Өгөгдлийг хамгаалах 2-р хэсэг
+            'Lesson 14: Unit Assessment Day':
+              name: 'Хичээл 14: Нэгжийн үнэлгээний өдөр'
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: шинэ шат

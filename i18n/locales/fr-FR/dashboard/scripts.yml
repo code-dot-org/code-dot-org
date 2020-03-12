@@ -3533,3 +3533,41 @@ fr:
               name: Concours d'orthographe
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
+        csp1-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+            Binary Numbers:
+              name: Nombres binaires
+            Intellectual Property:
+              name: Propriété intellectuelle
+        csp2-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp3-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+            The Need for Programming Languages:
+              name: Le besoin de langages de programmation
+        csp6-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp8-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp9-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp10-2020:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nouvelle étape

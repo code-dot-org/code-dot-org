@@ -1,5 +1,5 @@
 {
-  "fishvtrash-training-init1": "Odpad ve vodě ovlivňuje mořský život. V dnešním kurzu vycvičíte (či naprogramujete) A.I. (umělou inteligenci) tak, aby uměla odlišovat ryby od odpadu. Ukliďme spolu celý oceán! Pro pokračování klikni kdekoliv na obrazovku.",
+  "fishvtrash-training-init1": "Odpad ve vodě ovlivňuje mořský život. V dnešním kurzu spolu vycvičíme (či naprogramujeme) A.I. (artificial intelligence = umělou inteligenci) tak, aby uměla odlišovat ryby od odpadu. Ukliďme spolu celý oceán! Pro pokračování klikni kdekoliv na obrazovku.",
   "fishvtrash-training-init2": "Tohle je A.I. (umělá inteligence).",
   "fishvtrash-training-init3": "A.I. zatím neumí odlišit ryby od odpadu, ale dokáže zpracovávat obrázky a identifikovat opakující se vzory.",
   "fishvtrash-training-init4": "A.I. začneme trénovat pomocí tlačítek \"Ryba\" a \"Není Ryba\". Když správně označíš jednotlivé obrázky, A.I. se naučí rozpoznávat opakující se vzory. Tak pojďme na to!",
@@ -14,9 +14,9 @@
   "fishvtrash-pond-init1": "Zde jsou některé předměty, které A.I., na základě tvého tréninku,  označila jako „ryba“. Jak si A.I. vedla?",
   "fishvtrash-pond-recall": "Kliknutím vpravo nahoře můžeš přepínat mezi předměty označenými jako \"ryba\" a \"ne-ryba\".",
   "fishvtrash-pond-init2": "Můžeš A.I trénovat dál...",
-  "fishvtrash-pond-init3": "...nebo pokračovat.",
+  "fishvtrash-pond-init3": "...nebo pokračovat v kurzu.",
   "creaturesvtrashdemo-predicting-init1": "Prozatím jsme A.I. cvičili na rozpoznávaní mezi \"rybou\" nebo \"ne-rybou\".",
-  "creaturesvtrashdemo-predicting-init2": "Co kdyby tato data byla použita pro rozhodování co patří do vody?",
+  "creaturesvtrashdemo-predicting-init2": "Co kdyby tato data byla použita pro rozhodování o tom, co patří do vody?",
   "creaturesvtrashdemo-predicting-init3": "Co by se stalo ostatním mořským živočichům? Způsobuje náš tréninkový přístup nezamýšlené důsledky?",
   "creaturesvtrashdemo-predicting-init4": "Podívejme se.",
   "creaturesvtrashdemo-predicting-pause1": "Všimli jste si, že A.I. označila některé živočichy jako \"ne-ryba\"?",

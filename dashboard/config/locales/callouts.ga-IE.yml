@@ -330,6 +330,9 @@ ga-IE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Tá cuma nua ar an mbosca uirlisí! Gheobhaidh tú na blocanna
           "Gníomhartha" anseo anois.
+      New Frozen Project:
+        snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
+          a chruthú!
       Overworld Chop Trees:
         craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc
           sa chlár cheana

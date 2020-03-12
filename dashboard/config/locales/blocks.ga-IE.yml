@@ -3,22 +3,22 @@ ga:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "malartaíodh {GROUP} idir {MOVE1} \nagus {MOVE2} gach {N} tomhas"
+        text: "malartaíodh gach {GROUP} idir {MOVE1} \nagus {MOVE2} gach {N} tomhas"
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           MOVE1:
             MOVES.Roll: Tonn Choirp
             MOVES.ClapHigh: Bualadh Bos Ard
@@ -50,28 +50,29 @@ ga:
             '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_changeColorBy:
+        text: 'méadaigh {METHOD} de gach {COLOR}: {AMOUNT}'
         options:
           METHOD:
             '"hue"': lí
             '"saturation"': sáithiú
             '"brightness"': gile
       Dancelab_changeMoveEachLR:
-        text: déanadh {GROUP} {MOVE} {DIR} go brách
+        text: déanadh gach {GROUP} {MOVE} {DIR} go brách
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           MOVE:
             '"next"': "(Ar Aghaidh)"
             '"prev"': "(Siar)"
@@ -112,6 +113,7 @@ ga:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
+        text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
         options:
           PROPERTY:
             '"scale"': méid
@@ -121,21 +123,22 @@ ga:
             '"x"': ionad cothrománach
             '"y"': ionad ingearach
       Dancelab_changePropEachBy:
+        text: 'méadaigh {PROPERTY} de gach {GROUP}: {VAL}'
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
@@ -144,22 +147,22 @@ ga:
             '"x"': ionad cothrománach
             '"y"': ionad ingearach
       Dancelab_doMoveEachLR:
-        text: déanadh {GROUP} {MOVE} {DIR} uair amháin
+        text: déanadh gach {GROUP} {MOVE} {DIR} uair amháin
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           MOVE:
             '"rand"': "(Randamach)"
             MOVES.XBend: Cromadh
@@ -307,22 +310,22 @@ ga:
             "{x: 300, y: 300}": ag an mbun ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_jumpToEach:
-        text: cuir {GROUP} {LOCATION}
+        text: cuir gach {GROUP} {LOCATION}
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
             "{x: 200, y: 300}": ag an mbun
@@ -335,22 +338,22 @@ ga:
             "{x: 300, y: 300}": ag an mbun ar dheis
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": randamach
       Dancelab_layoutSprites:
-        text: leag {GROUP} amach {FORMAT}
+        text: leag gach {GROUP} amach {FORMAT}
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           FORMAT:
             '"border"': ar an imeall
             '"inner"': i gcearnóg
@@ -376,7 +379,7 @@ ga:
             '"DOG"': madra
             '"DUCK"': lacha
             '"FROG"': frog
-            '"MOOSE"': múis
+            '"MOOSE"': mús
             '"PINEAPPLE"': anann
             '"ROBOT"': róbat
             '"SHARK"': siorc
@@ -405,7 +408,7 @@ ga:
             '"DOG"': madra
             '"DUCK"': lacha
             '"FROG"': frog
-            '"MOOSE"': múis
+            '"MOOSE"': mús
             '"PINEAPPLE"': anann
             '"ROBOT"': róbat
             '"SHARK"': siorc
@@ -446,18 +449,18 @@ ga:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           LAYOUT:
             '"border"': ar an imeall
             '"inner"': i gcearnóg
@@ -567,22 +570,22 @@ ga:
             '0.5': mall
             '0.25': an-mhall
       Dancelab_setDanceSpeedEach:
-        text: 'socraigh luas an damhsa do {GROUP}: {SPEED}'
+        text: 'socraigh luas an damhsa do gach {GROUP}: {SPEED}'
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           SPEED:
             '1': gnáthmhód
             '2': sciobtha
@@ -641,22 +644,22 @@ ga:
             '"x"': ionad cothrománach
             '"y"': ionad ingearach
       Dancelab_setPropEach:
-        text: 'socraigh {PROPERTY} do {GROUP}: {VAL}'
+        text: 'socraigh {PROPERTY} do gach {GROUP}: {VAL}'
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
@@ -677,22 +680,22 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_setPropRandomEach:
-        text: socraigh {PROPERTY} {GROUP} go randamach
+        text: socraigh {PROPERTY} do gach {GROUP} go randamach
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
@@ -704,39 +707,39 @@ ga:
       Dancelab_setTint:
         text: 'socraigh imir ar {SPRITE}: {VAL}'
       Dancelab_setTintEach:
-        text: 'socraigh imir ar {THIS}: {VAL}'
+        text: 'socraigh imir ar gach {THIS}: {VAL}'
         options:
           THIS:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
       Dancelab_setTintEachInline:
-        text: 'socraigh imir ar {THIS}: {VAL}'
+        text: 'socraigh imir ar gach {THIS}: {VAL}'
         options:
           THIS:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
       Dancelab_setTintInline:
         text: 'socraigh imir ar {SPRITE}: {VAL}'
       Dancelab_setVisible:
@@ -750,18 +753,18 @@ ga:
         options:
           THIS:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           VISIBILITY:
             'true': infheicthe
             'false': dofheicthe
@@ -781,22 +784,22 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_startMappingEach:
-        text: athraigh {PROPERTY} {GROUP} ag leanúint {RANGE}
+        text: athraigh {PROPERTY} de gach {GROUP} ag leanúint {RANGE}
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
@@ -826,22 +829,22 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_stopMappingEach:
-        text: stop ag athrú {PROPERTY} {GROUP} ag leanúint {RANGE}
+        text: stop ag athrú {PROPERTY} de gach {GROUP} ag leanúint {RANGE}
         options:
           GROUP:
             sprites: uile
-            '"ALIEN"': eachtráin
-            '"BEAR"': béir
-            '"CAT"': cait
-            '"DOG"': madraí
-            '"DUCK"': lachain
-            '"FROG"': froganna
-            '"MOOSE"': múis
-            '"PINEAPPLE"': anainn
-            '"ROBOT"': róbait
-            '"SHARK"': siorcanna
-            '"SLOTH"': spadáin
-            '"UNICORN"': aonbheannaigh
+            '"ALIEN"': eachtrán
+            '"BEAR"': béar
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"FROG"': frog
+            '"MOOSE"': mús
+            '"PINEAPPLE"': anann
+            '"ROBOT"': róbat
+            '"SHARK"': siorc
+            '"SLOTH"': spadán
+            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
@@ -965,6 +968,7 @@ ga:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_changePropBy:
+        text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
         options:
           PROPERTY:
             '"scale"': méid
