@@ -125,6 +125,7 @@ class WindowsDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Windows (${
               installer.version
             })`}
@@ -176,6 +177,7 @@ class MacDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Mac (${installer.version})`}
             icon="download"
             color={ButtonColor.orange}
@@ -226,6 +228,7 @@ class LinuxDownloads extends React.Component {
         {!installer && !error && <FetchingLatestVersionMessage />}
         {installer && !error && (
           <Button
+            __useDeprecatedTag
             text={`Download Code.org Maker App for Linux (${
               installer.version
             })`}

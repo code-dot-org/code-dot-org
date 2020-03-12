@@ -498,6 +498,7 @@ export class DetailViewContents extends React.Component {
     );
     return (
       <Button
+        __useDeprecatedTag
         title={
           !statusIsLockable &&
           `Can only lock if status is one of ${ApplicationFinalStatuses.join(
@@ -592,6 +593,7 @@ export class DetailViewContents extends React.Component {
     if (this.state.editing) {
       return [
         <Button
+          __useDeprecatedTag
           onClick={this.handleSaveClick}
           bsStyle="primary"
           key="save"
@@ -599,7 +601,11 @@ export class DetailViewContents extends React.Component {
         >
           Save
         </Button>,
-        <Button onClick={this.handleCancelEditClick} key="cancel">
+        <Button
+          __useDeprecatedTag
+          onClick={this.handleCancelEditClick}
+          key="cancel"
+        >
           Cancel
         </Button>
       ];
@@ -651,7 +657,11 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     } else {
-      return <Button onClick={this.handleEditClick}>Edit</Button>;
+      return (
+        <Button __useDeprecatedTag onClick={this.handleEditClick}>
+          Edit
+        </Button>
+      );
     }
   };
 

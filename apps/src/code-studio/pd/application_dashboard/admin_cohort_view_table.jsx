@@ -270,6 +270,7 @@ export default class AdminCohortViewTable extends React.Component {
 
     return (
       <Button
+        __useDeprecatedTag
         bsSize="xsmall"
         target="_blank"
         href={this.context.router && this.context.router.createHref(`/${id}`)}

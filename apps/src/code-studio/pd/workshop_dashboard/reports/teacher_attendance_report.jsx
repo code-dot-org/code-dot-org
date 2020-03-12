@@ -232,6 +232,7 @@ export class TeacherAttendanceReport extends React.Component {
     return (
       <div>
         <Button
+          __useDeprecatedTag
           style={{marginBottom: 20}}
           onClick={this.handleDownloadCSVClick}
         >

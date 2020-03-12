@@ -476,7 +476,11 @@ export default class SurveyResultsHeader extends React.Component {
 
   renderDownloadCsvButton() {
     return (
-      <Button bsStyle="info" onClick={this.handleOnClickDownloadCsv}>
+      <Button
+        __useDeprecatedTag
+        bsStyle="info"
+        onClick={this.handleOnClickDownloadCsv}
+      >
         Download as CSV
       </Button>
     );

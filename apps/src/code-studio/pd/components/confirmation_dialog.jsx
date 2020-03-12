@@ -36,11 +36,15 @@ export default class ConfirmationDialog extends React.Component {
         </Modal.Header>
         <Modal.Body>{this.props.bodyText}</Modal.Body>
         <Modal.Footer>
-          <Button bsStyle="primary" onClick={this.props.onOk}>
+          <Button
+            __useDeprecatedTag
+            bsStyle="primary"
+            onClick={this.props.onOk}
+          >
             {this.props.okText}
           </Button>
           {this.props.onCancel && (
-            <Button onClick={this.props.onCancel}>
+            <Button __useDeprecatedTag onClick={this.props.onCancel}>
               {this.props.cancelText}
             </Button>
           )}

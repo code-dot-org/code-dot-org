@@ -106,6 +106,7 @@ class ManageStudentsLoginInfo extends Component {
         <h2>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <Button
+          __useDeprecatedTag
           color="white"
           id="uitest-privacy-link"
           target="_blank"

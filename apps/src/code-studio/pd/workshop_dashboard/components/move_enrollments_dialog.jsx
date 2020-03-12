@@ -55,10 +55,16 @@ export default class MoveEnrollmentsDialog extends React.Component {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button bsStyle="primary" onClick={this.handleClickMove}>
+          <Button
+            __useDeprecatedTag
+            bsStyle="primary"
+            onClick={this.handleClickMove}
+          >
             Move
           </Button>
-          <Button onClick={this.props.onCancel}>Cancel</Button>
+          <Button __useDeprecatedTag onClick={this.props.onCancel}>
+            Cancel
+          </Button>
         </Modal.Footer>
       </Modal>
     );

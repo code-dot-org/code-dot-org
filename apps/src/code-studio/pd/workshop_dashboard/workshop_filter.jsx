@@ -229,7 +229,11 @@ export class WorkshopFilter extends React.Component {
         </DropdownButton>
         {` of ${workshops.total_count} workshops.`}
         &nbsp;
-        <Button bsSize="xsmall" onClick={this.handleDownloadCSVClick}>
+        <Button
+          __useDeprecatedTag
+          bsSize="xsmall"
+          onClick={this.handleDownloadCSVClick}
+        >
           Download all as CSV
         </Button>
       </div>

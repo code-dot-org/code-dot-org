@@ -112,6 +112,7 @@ export class SummaryTable extends React.Component {
           <tbody>{this.tableBody()}</tbody>
         </Table>
         <Button
+          __useDeprecatedTag
           href={this.context.router.createHref(`/${this.props.path}`)}
           onClick={this.handleViewClick}
           style={styles.viewApplicationsButton}
@@ -119,6 +120,7 @@ export class SummaryTable extends React.Component {
           View all applications
         </Button>
         <Button
+          __useDeprecatedTag
           href={this.context.router.createHref(`/${this.props.path}_cohort`)}
           onClick={this.handleViewCohortClick}
         >

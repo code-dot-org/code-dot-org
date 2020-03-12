@@ -469,20 +469,27 @@ export default class FormController extends React.Component {
     let backButton;
     if (this.state.currentPage > 0) {
       backButton = (
-        <Button key="back" id="back" onClick={this.prevPage}>
+        <Button __useDeprecatedTag key="back" id="back" onClick={this.prevPage}>
           Back
         </Button>
       );
     }
 
     let nextButton = (
-      <Button bsStyle="primary" key="next" id="next" onClick={this.nextPage}>
+      <Button
+        __useDeprecatedTag
+        bsStyle="primary"
+        key="next"
+        id="next"
+        onClick={this.nextPage}
+      >
         Next
       </Button>
     );
     if (this.shouldShowSubmit()) {
       nextButton = (
         <Button
+          __useDeprecatedTag
           bsStyle="primary"
           disabled={this.state.submitting}
           key="submit"

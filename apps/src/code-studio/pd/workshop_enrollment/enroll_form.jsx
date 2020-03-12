@@ -650,7 +650,11 @@ export default class EnrollForm extends React.Component {
           are contractually obliged to treat this information with the same
           level of confidentiality as Code.org.
         </p>
-        <Button id="submit" onClick={this.handleClickRegister}>
+        <Button
+          __useDeprecatedTag
+          id="submit"
+          onClick={this.handleClickRegister}
+        >
           Register
         </Button>
         <br />

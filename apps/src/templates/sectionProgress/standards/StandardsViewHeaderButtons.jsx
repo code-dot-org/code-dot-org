@@ -125,6 +125,7 @@ class StandardsViewHeaderButtons extends Component {
         {this.props.unpluggedLessons.length > 0 && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.openLessonStatusDialog}
               color={Button.ButtonColor.gray}
               text={i18n.updateUnpluggedProgress()}
@@ -138,6 +139,7 @@ class StandardsViewHeaderButtons extends Component {
           </div>
         )}
         <Button
+          __useDeprecatedTag
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}
