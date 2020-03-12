@@ -1240,4 +1240,9 @@ FactoryGirl.define do
     data {{opt_in: 1}}
     data_updated_at {Time.now}
   end
+
+  factory :contact_rollups_processed do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
 end
