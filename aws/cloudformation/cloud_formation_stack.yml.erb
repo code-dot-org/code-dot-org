@@ -717,9 +717,7 @@ Resources:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: daemon,
           node_name: '$STACK',
-          run_list: [
-            local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
-          ],
+          run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
           commit: nil, # track branch
           shutdown: false,
           daemon: true,
