@@ -27,7 +27,6 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
-  // IMPORTANT! Check how adding this to the redux store will affect the dashboard page!
   projects,
   verifiedTeacher,
   currentUser

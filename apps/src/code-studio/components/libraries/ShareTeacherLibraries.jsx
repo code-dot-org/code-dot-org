@@ -36,7 +36,7 @@ const styles = {
   }
 };
 
-class ShareTeacherLibraries extends React.Component {
+export class ShareTeacherLibraries extends React.Component {
   static propTypes = {
     onCancel: PropTypes.func.isRequired,
 
