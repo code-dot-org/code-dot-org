@@ -190,7 +190,12 @@ export class LibraryPublisher extends React.Component {
     const {sourceFunctionList} = this.props.libraryDetails;
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
-      const shouldDisable = comment.length === 0;
+      const noComment = comment.length === 0;
+      const duplicateFunction =
+        sourceFunctionList.filter(
+          source => source.functionName === functionName
+        ).length > 1;
+      const shouldDisable = noComment || duplicateFunction;
       let checked = selectedFunctions[functionName] || false;
       if (shouldDisable && checked) {
         checked = false;
@@ -211,8 +216,13 @@ export class LibraryPublisher extends React.Component {
           />
           <span>{functionName}</span>
           <br />
-          {shouldDisable && (
+          {noComment && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
+          )}
+          {duplicateFunction && (
+            <p style={styles.alert}>
+              {i18n.libraryExportDuplicationFunctionError()}
+            </p>
           )}
           <pre style={styles.textInput}>{comment}</pre>
         </div>
