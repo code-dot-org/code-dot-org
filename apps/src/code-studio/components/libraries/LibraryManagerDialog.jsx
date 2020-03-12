@@ -102,6 +102,10 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   addLibraryToProject = libraryJson => {
+    if (!libraryJson) {
+      return;
+    }
+
     dashboard.project.setProjectLibraries([
       ...this.state.libraries,
       libraryJson
@@ -109,11 +113,15 @@ export default class LibraryManagerDialog extends React.Component {
     this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
-  onImportFailed = error => {
-    this.setState({
-      error: i18n.libraryImportError(),
-      isLoading: false
-    });
+  addLibraryById = (libraryJson, error) => {
+    if (error) {
+      this.setState({
+        error: i18n.libraryImportError(),
+        isLoading: false
+      });
+    } else if (libraryJson) {
+      this.addLibraryToProject(libraryJson);
+    }
   };
 
   fetchLatestLibrary = (channelId, callback) => {
@@ -122,10 +130,13 @@ export default class LibraryManagerDialog extends React.Component {
       library => library.channelId === channelId
     );
     if (cachedLibrary) {
-      callback(cachedLibrary);
+      callback(cachedLibrary, null);
       return;
     }
+
     let libraryClient = new LibraryClientApi(channelId);
+    const errorCallback = err => callback(null, err);
+
     libraryClient.fetchLatestVersionId(
       versionId =>
         // TODO: Check for naming collisions between libraries.
@@ -141,11 +152,11 @@ export default class LibraryManagerDialog extends React.Component {
               cachedClassLibraries: [...cachedClassLibraries, updatedjson],
               isLoading: false
             });
-            callback(updatedjson);
+            callback(updatedjson, null);
           },
-          this.onImportFailed
+          errorCallback
         ),
-      this.onImportFailed
+      errorCallback
     );
   };
 
@@ -208,6 +219,10 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   viewCode = library => {
+    if (!library) {
+      return;
+    }
+
     this.setState({viewingLibrary: library, isViewingCode: true});
   };
 
@@ -243,10 +258,7 @@ export default class LibraryManagerDialog extends React.Component {
               style={styles.add}
               onClick={() => {
                 this.setState({isLoading: true});
-                this.fetchLatestLibrary(
-                  importLibraryId,
-                  this.addLibraryToProject
-                );
+                this.fetchLatestLibrary(importLibraryId, this.addLibraryById);
               }}
               type="button"
             >

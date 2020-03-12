@@ -1,4 +1,5 @@
 name 'courseF_project_exemplars_2019_2020'
+editor_experiment ''
 title 'Test Markdown Textbook Page'
 description 'Test Markdown Textbook Page'
 markdown <<MARKDOWN
@@ -8,9 +9,9 @@ You are about to start your final project. Before you begin, spend some time loo
 
 ## Sprite Lab
 
-| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+| Cupcake Game (Sprite Lab) | Airplane Game (Sprite Lab) |
 |---|---|
-| [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+| [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
 | Try adding text or a score to this game! | Try adding text or a score to this game! |
 
 ## Artist

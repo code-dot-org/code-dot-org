@@ -182,7 +182,7 @@ class StudioApp extends EventEmitter {
     this.onContinue = undefined;
     this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
-    this.sendToPhone = undefined;
+    this.isUS = undefined;
     this.enableShowBlockCount = true;
 
     this.disableSocialShare = false;
@@ -1592,7 +1592,7 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
-  options.sendToPhone = this.sendToPhone;
+  options.isUS = this.isUS;
   options.channelId = project.getCurrentId();
 
   try {
@@ -1891,7 +1891,7 @@ StudioApp.prototype.setConfigValues_ = function(config) {
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
-  this.sendToPhone = config.sendToPhone;
+  this.isUS = config.isUS;
   this.noPadding = config.noPadding;
 
   // contract editor requires more vertical space. set height to 1250 unless
