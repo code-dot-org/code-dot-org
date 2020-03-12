@@ -67,7 +67,7 @@ module Pd::Foorm
         type: QUESTION_TO_ANSWER_TYPES[question_data[:type]]
       }
       case question_data[:type]
-      when TYPE_CHECKBOX, TYPE_RADIO
+      when TYPE_CHECKBOX, TYPE_RADIO, TYPE_DROPDOWN
         parsed_question[:choices] = flatten_choices(question_data[:choices])
         if question_data[:hasOther]
           parsed_question[:other_text] = question_data[:otherPlaceHolder] || 'other'
