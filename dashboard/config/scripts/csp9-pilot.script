@@ -24,6 +24,7 @@ level 'U9L3 CFU manually cleaning data', progression: 'Check For Understanding',
 
 stage 'Exploring Two Columns'
 level 'CSP U9L4 SFLP 20-21', progression: 'Lesson Overview'
+level 'Which Type of Chart', progression: 'What Type of Chart?'
 level 'U9L4 CFU Two Column vs One', progression: 'Check For Understanding', assessment: true
 
 stage 'Big Data, Crowdsourcing, and Machine Learning'
@@ -38,12 +39,16 @@ level 'Oceans_CreaturesVTrash', progression: 'AI for Oceans - Machine Learning'
 level 'Oceans_Video_Training_Data', progression: 'AI for Oceans - Machine Learning'
 level 'Oceans_Short', progression: 'AI for Oceans - Machine Learning'
 level 'Oceans_Long', progression: 'AI for Oceans - Machine Learning'
+level 'U9L6 CFU ML Bias', progression: 'Check for Understanding', assessment: true
 
 stage 'Project - Tell a Data Story - Part 1'
 level 'CSP U9L8 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9 Data Story Day 1', progression: 'Data Story Workspace'
 
 stage 'Project - Tell a Data Story - Part 2'
 level 'CSP U9L9 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9 Data Story Day 2', progression: 'Data Story Workspace', assessment: true
 
-stage 'Lesson 10: Assessment Day'
+stage 'Lesson 9: Assessment Day', lockable: true
 level 'CSP U9L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 9 AP-Style Assessment _2020', progression: 'Unit 9 Exam', assessment: true

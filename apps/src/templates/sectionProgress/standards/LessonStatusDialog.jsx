@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-export class LessonStatusDialog extends Component {
+export default class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired
@@ -45,5 +45,3 @@ export class LessonStatusDialog extends Component {
     );
   }
 }
-
-export const UnconnectedLessonStatusDialog = LessonStatusDialog;

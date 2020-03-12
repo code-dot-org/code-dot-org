@@ -178,6 +178,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Validate that a user with the same authentication credentials does not already exist.
+  validate on: :create, if: -> {uid.present?} do |user|
+    # If the user has a unique authentication ID, fail if there is an existing User with that ID.
+    other = User.find_by_credential(type: user.provider, id: user.uid)
+    user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
+  end
+
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info
@@ -966,25 +973,21 @@ class User < ActiveRecord::Base
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_words: params[:secret_words],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_words: params[:secret_words],
+      followers: {section: section}
+    )
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_picture_id: params[:secret_picture_id],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_picture_id: params[:secret_picture_id],
+      followers: {section: section}
+    )
   end
 
   def user_levels_by_level(script)

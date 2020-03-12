@@ -557,6 +557,7 @@ describe('entry tests', () => {
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
@@ -682,6 +683,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/fit_weekend_registration/new':
       './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    'pd/workshop_daily_survey/new_general_foorm':
+      './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
       './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel':
