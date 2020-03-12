@@ -107,7 +107,7 @@ class LibraryCreationDialog extends React.Component {
         onUnpublishSuccess={() =>
           this.setState({dialogState: DialogState.UNPUBLISHED})
         }
-        onShareTeacherLibrary={this.hasTeacherSections() ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES}) : undefined}
+        onShareTeacherLibrary={this.onShareTeacherLibrary()}
         libraryDetails={libraryDetails}
         libraryClientApi={libraryClientApi}
       />
@@ -115,9 +115,14 @@ class LibraryCreationDialog extends React.Component {
   };
 
   hasTeacherSections() {
-    // debugger;
     return getStore().getState().currentUser.userType === 'teacher';
   }
+
+  onShareTeacherLibrary = () => {
+    return this.hasTeacherSections()
+      ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES})
+      : undefined;
+  };
 
   render() {
     let subtitleContent, bodyContent;
@@ -132,7 +137,8 @@ class LibraryCreationDialog extends React.Component {
           <PublishSuccessDisplay
             libraryName={libraryName}
             channelId={channelId}
-            onShareTeacherLibrary={this.hasTeacherSections() ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES}) : undefined}
+            // Waiting for design guidance prior to enabling this functionality
+            // onShareTeacherLibrary={this.onShareTeacherLibrary()}
           />
         );
         break;
@@ -154,18 +160,23 @@ class LibraryCreationDialog extends React.Component {
         bodyContent = <ErrorDisplay message={i18n.libraryCreatorError()} />;
         break;
     }
+
+    const title =
+      dialogState === DialogState.SHARE_TEACHER_LIBRARIES
+        ? i18n.manageYourLibraries()
+        : i18n.libraryExportTitle();
     return (
       <Dialog
         isOpen={dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
         // fontSize is required for the table header in ShareTeacherLibraries.ShareTableSelect
-        style={{fontSize: '13px'}}
+        style={{fontSize: '13px', width: 800}}
       >
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>{i18n.libraryExportTitle()}</Heading1>
+              <Heading1>{title}</Heading1>
               {subtitleContent && (
                 <div style={styles.info}>{subtitleContent}</div>
               )}
