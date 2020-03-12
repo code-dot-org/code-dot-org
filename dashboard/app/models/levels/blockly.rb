@@ -612,7 +612,7 @@ class Blockly < Level
   end
 
   def update_goal_override
-    if goal_override.present? && goal_override.is_a?(String)
+    if goal_override&.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
   end
