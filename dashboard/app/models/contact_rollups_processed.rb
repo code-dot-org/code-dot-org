@@ -49,11 +49,12 @@ class ContactRollupsProcessed < ApplicationRecord
       processed_contact_data.merge!(extract_opt_in(contact_data) || {})
 
       batch << {email: contact['email'], data: processed_contact_data}
+      next if batch.size < batch_size
 
-      if batch.size == batch_size
-        import! batch, validate: false
-        batch = []
-      end
+      # Note: Skipping validation here because the only validation we need is that an email
+      # is unique, which will be done at the DB level anyway thanks to an unique index on email.
+      import! batch, validate: false
+      batch = []
     end
 
     import! batch, validate: false unless batch.empty?
