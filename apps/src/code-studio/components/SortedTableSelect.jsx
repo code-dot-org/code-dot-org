@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 import {Heading1} from '@cdo/apps/lib/ui/Headings';
+import color from '@cdo/apps/util/color';
 import {
   tableLayoutStyles,
   sortableOptions
@@ -30,10 +31,12 @@ const styles = {
     width: TABLE_WIDTH,
     margin: 2
   },
+  leftColumn: {
+    width: TABLE_WIDTH
+  },
   rightColumn: {
     flex: 1,
-    paddingLeft: PADDING,
-    paddingRight: PADDING
+    paddingLeft: PADDING
   },
   infoText: {
     paddingTop: PADDING / 4,
@@ -42,8 +45,8 @@ const styles = {
   label: {
     paddingTop: PADDING / 2
   },
-  input: {
-    marginLeft: PADDING / 2
+  italics: {
+    color: color.purple
   }
 };
 
@@ -68,41 +71,27 @@ export default class SortedTableSelect extends React.Component {
     descriptionText: PropTypes.string,
     optionsDescriptionText: PropTypes.string,
     titleText: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
+    onSelectAll: PropTypes.func,
+    tableDescriptionText: PropTypes.string
   };
 
   state = {
     sortingColumns: DEFAULT_SORT,
-    rowsChecked: [],
     selectedOption: undefined
   };
 
   areAllSelected = () => {
-    return this.state.rowsChecked.length === this.props.rowData.length;
+    const existsUncheckedRow = this.props.rowData.find(row => !row.isChecked);
+    return !existsUncheckedRow;
   };
 
   toggleSelectAll = () => {
-    let rowsToCheck = [];
-
-    if (!this.areAllSelected()) {
-      rowsToCheck = this.props.rowData.map(data => data.id);
-    }
-    this.setState({rowsChecked: rowsToCheck});
-    this.props.onRowChecked(rowsToCheck);
+    this.props.onSelectAll(!this.areAllSelected());
   };
 
   toggleRowChecked = id => {
-    this.setState(
-      state => {
-        if (state.rowsChecked.includes(id)) {
-          state.rowsChecked = state.rowsChecked.filter(rowId => rowId !== id);
-        } else {
-          state.rowsChecked.push(id);
-        }
-        return state;
-      },
-      () => this.props.onRowChecked(this.state.rowsChecked)
-    );
+    this.props.onRowChecked(id);
   };
 
   selectedRowHeaderFormatter = () => {
@@ -213,13 +202,9 @@ export default class SortedTableSelect extends React.Component {
       descriptionText,
       optionsDescriptionText,
       titleText,
-      children
+      children,
+      tableDescriptionText
     } = this.props;
-
-    const decoratedRows = rowData.map(row => ({
-      ...row,
-      isChecked: this.state.rowsChecked.includes(row.id)
-    }));
 
     const sortingColumns = this.getSortingColumns();
     const sortable = wrappedSortable(
@@ -232,15 +217,20 @@ export default class SortedTableSelect extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy
-    })(decoratedRows);
+    })(rowData);
     return (
       <div>
         {titleText && <Heading1>{titleText}</Heading1>}
         <div style={styles.container}>
-          <Table.Provider columns={columns} style={styles.table}>
-            <Table.Header />
-            <Table.Body rows={sortedRows} rowKey="id" />
-          </Table.Provider>
+          <div style={styles.leftColumn}>
+            <Table.Provider columns={columns} style={styles.table}>
+              <Table.Header />
+              <Table.Body rows={sortedRows} rowKey="id" />
+            </Table.Provider>
+            {tableDescriptionText && (
+              <i style={styles.italics}>{tableDescriptionText}</i>
+            )}
+          </div>
           <div style={styles.rightColumn}>
             {descriptionText && (
               <div style={styles.infoText}>{descriptionText}</div>
@@ -250,11 +240,7 @@ export default class SortedTableSelect extends React.Component {
                 {optionsDescriptionText}
               </label>
             )}
-            <select
-              name="selectOption"
-              style={styles.input}
-              onChange={onChooseOption}
-            >
+            <select name="selectOption" onChange={onChooseOption}>
               {this.renderOptions()}
             </select>
             {children}
