@@ -2,7 +2,6 @@ import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
-import sinon from 'sinon';
 
 const ROW_DATA = [
   {id: 1, name: 'itemb'},
@@ -51,71 +50,29 @@ describe('SortedTableSelect', () => {
     expect(wrapper.state().rowsChecked).to.be.empty;
   });
 
-  it('toggleRowChecked adds the row selected to rowsChecked', () => {
-    const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
-    expect(wrapper.state().rowsChecked).to.be.empty;
-    wrapper.instance().toggleRowChecked(1);
-    wrapper.update();
-    expect(wrapper.state().rowsChecked).to.include(1);
-    expect(wrapper.instance().areAllSelected()).to.be.false;
-  });
-
-  it('toggling all the rows sets areAllSelected to true', () => {
-    const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
-    expect(wrapper.state().rowsChecked).to.be.empty;
-    expect(wrapper.instance().areAllSelected()).to.be.false;
-    wrapper.instance().toggleRowChecked(1);
-    wrapper.instance().toggleRowChecked(3);
-    wrapper.instance().toggleRowChecked(0);
-    wrapper.update();
-    expect(wrapper.state().rowsChecked).to.include(1);
-    expect(wrapper.state().rowsChecked).to.include(3);
-    expect(wrapper.state().rowsChecked).to.include(0);
+  it('areAllSelected returns true when all rows are checked', () => {
+    const rowData = [
+      {id: 1, name: '1', isChecked: true},
+      {id: 2, name: '2', isChecked: true}
+    ];
+    const props = {
+      ...DEFAULT_PROPS,
+      ...{rowData: rowData}
+    };
+    const wrapper = shallow(<SortedTableSelect {...props} />);
     expect(wrapper.instance().areAllSelected()).to.be.true;
   });
 
-  it('calling toggleSelectAll adds all rows to rowsChecked', () => {
-    const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
-    expect(wrapper.state().rowsChecked).to.be.empty;
+  it('areAllSelected returns false when at least one row is unchecked', () => {
+    const rowData = [
+      {id: 1, name: '1', isChecked: true},
+      {id: 2, name: '2', isChecked: false}
+    ];
+    const props = {
+      ...DEFAULT_PROPS,
+      ...{rowData: rowData}
+    };
+    const wrapper = shallow(<SortedTableSelect {...props} />);
     expect(wrapper.instance().areAllSelected()).to.be.false;
-    wrapper.instance().toggleSelectAll();
-    wrapper.update();
-    expect(wrapper.state().rowsChecked).to.include(1);
-    expect(wrapper.state().rowsChecked).to.include(3);
-    expect(wrapper.state().rowsChecked).to.include(0);
-    expect(wrapper.instance().areAllSelected()).to.be.true;
-  });
-
-  it('toggleSelectAll unchecks all rows when all rows are checked', () => {
-    const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
-    expect(wrapper.state().rowsChecked).to.be.empty;
-    expect(wrapper.instance().areAllSelected()).to.be.false;
-    wrapper.instance().toggleSelectAll();
-    wrapper.update();
-    wrapper.instance().toggleSelectAll();
-    wrapper.update();
-    expect(wrapper.state().rowsChecked).to.be.empty;
-    expect(wrapper.instance().areAllSelected()).to.be.false;
-  });
-
-  describe('onRowChecked', () => {
-    let onRowChecked;
-    beforeEach(() => {
-      onRowChecked = sinon.spy();
-    });
-
-    it('is called once by toggleRowChecked', () => {
-      const props = {...DEFAULT_PROPS, ...{onRowChecked: onRowChecked}};
-      const wrapper = shallow(<SortedTableSelect {...props} />);
-      wrapper.instance().toggleRowChecked(0);
-      expect(onRowChecked).to.have.been.called.once;
-    });
-
-    it('is called once by toggleSelectAll', () => {
-      const props = {...DEFAULT_PROPS, ...{onRowChecked: onRowChecked}};
-      const wrapper = shallow(<SortedTableSelect {...props} />);
-      wrapper.instance().toggleSelectAll();
-      expect(onRowChecked).to.have.been.called.once;
-    });
   });
 });

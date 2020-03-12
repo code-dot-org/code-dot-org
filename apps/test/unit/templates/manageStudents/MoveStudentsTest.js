@@ -103,4 +103,40 @@ describe('MoveStudents', () => {
     expect(errorElement.exists()).to.be.true;
     expect(errorElement.text()).to.equal(transferStatus.error);
   });
+
+  it('toggleStudentSelected calls updateStudentTransfer with an updated set of IDs', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+    wrapper.instance().toggleStudentSelected(1);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: [1]});
+  });
+
+  it('toggleStudentSelected adds a missing ID', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+    wrapper.instance().toggleStudentSelected(1);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: [1]});
+  });
+
+  it('toggleStudentSelected removes an existing ID', () => {
+    const studentTransfer = {...blankStudentTransfer, studentIds: [1]};
+    const props = {...DEFAULT_PROPS, transferData: studentTransfer};
+    const wrapper = mount(<MoveStudents {...props} />);
+    wrapper.instance().toggleStudentSelected(1);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: []});
+  });
+
+  it('toggleAll true adds all IDs', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+    wrapper.instance().toggleAll(true);
+    expect(updateStudentTransfer).to.have.been.calledWith({
+      studentIds: [1, 3, 0]
+    });
+  });
+
+  it('toggleAll removes all ID', () => {
+    const studentTransfer = {...blankStudentTransfer, studentIds: [1, 3]};
+    const props = {...DEFAULT_PROPS, transferData: studentTransfer};
+    const wrapper = mount(<MoveStudents {...props} />);
+    wrapper.instance().toggleAll(false);
+    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: []});
+  });
 });

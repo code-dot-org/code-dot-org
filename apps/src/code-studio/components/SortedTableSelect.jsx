@@ -90,10 +90,6 @@ export default class SortedTableSelect extends React.Component {
     this.props.onSelectAll(!this.areAllSelected());
   };
 
-  toggleRowChecked = id => {
-    this.props.onRowChecked(id);
-  };
-
   selectedRowHeaderFormatter = () => {
     return (
       <input
@@ -106,12 +102,13 @@ export default class SortedTableSelect extends React.Component {
   };
 
   selectedRowFormatter = (_, {rowData}) => {
+    const {onRowChecked} = this.props;
     return (
       <input
         style={styles.checkbox}
         type="checkbox"
         checked={rowData.isChecked}
-        onChange={() => this.toggleRowChecked(rowData.id)}
+        onChange={() => onRowChecked(rowData.id)}
       />
     );
   };
