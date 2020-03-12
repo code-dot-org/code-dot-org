@@ -6,11 +6,15 @@ module Pd::Foorm
     extend Helper
 
     # result format:
-    # {<form_name> => { <form_version> => { num_respondents: 4,
-    # <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
-    # <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
-    # <question3-name> => ['abc', 'def']
-    # }}
+    # {
+    #   <form_name>.<form_version> =>
+    #   {
+    #     num_respondents: 4,
+    #     <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
+    #     <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
+    #     <question3-name> => ['abc', 'def']
+    #   }
+    # }
     # Where the value for a question name is an array answers for a text question or a summary of answer choices for select/matrix
     # questions. If question is a matrix responses will be nested.
     # num_respondents within the hash is used only for multi-select. other_answers is used if the select question has
@@ -39,11 +43,15 @@ module Pd::Foorm
         # add answer to summary based on question type
         next unless form_questions[name]
         question_type = form_questions[name][:type]
+
+        # check if this is an 'other' response and look for other
+        # text if it exists.
         if answer == 'other'
           comment_text_key = "#{name}-Comment"
           if answers[comment_text_key]
             current_workshop_summary[name]['other_answers'] ||= []
             current_workshop_summary[name]['other_answers'] << answers[comment_text_key]
+            # don't add to counter when putting result in other_answers
             next
           end
         end
@@ -61,9 +69,7 @@ module Pd::Foorm
         when ANSWER_MULTI_SELECT
           # increment one or more counters
           current_workshop_summary[name] ||= {}
-          unless current_workshop_summary[name][:num_respondents]
-            current_workshop_summary[name][:num_respondents] = 0
-          end
+          current_workshop_summary[name][:num_respondents] ||= 0
           current_workshop_summary[name][:num_respondents] += 1
           answer.each do |single_answer|
             current_workshop_summary[name][single_answer] ||= 0
