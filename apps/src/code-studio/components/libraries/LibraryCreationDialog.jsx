@@ -170,8 +170,7 @@ class LibraryCreationDialog extends React.Component {
         isOpen={dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
-        // fontSize is required for the table header in ShareTeacherLibraries.ShareTableSelect
-        style={{fontSize: '13px', width: 800}}
+        style={{width: 800}}
       >
         <Body>
           <PadAndCenter>

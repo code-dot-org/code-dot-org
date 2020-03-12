@@ -418,7 +418,7 @@ export const setPublicProjects = () => {
   };
 };
 
-export const setPersonalProjects = callback => {
+export const setPersonalProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
@@ -426,9 +426,6 @@ export const setPersonalProjects = callback => {
       dataType: 'json'
     }).done(personalProjectsList => {
       dispatch(setPersonalProjectsList(personalProjectsList));
-      if (callback) {
-        callback();
-      }
     });
   };
 };
