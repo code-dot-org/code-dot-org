@@ -14085,7 +14085,7 @@ en:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
-          title: Lists, Loops, and Traversals
+          title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
           description_audience: ''
           description_short: ''
           description: ''
@@ -14119,7 +14119,9 @@ en:
               name: Unit 7 TEACHER Survey
             Variables Make Demo:
               name: Variables Make Demo
-          title: ''
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
+          title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
           description_audience: ''
           description_short: ''
           description: ''
@@ -14653,7 +14655,7 @@ en:
         moneppo-1:
           stages: {}
         coursea-2020:
-          title: Course A (2019)
+          title: Course A (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
@@ -14707,7 +14709,7 @@ en:
               description_student: Create your own game or story.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
         courseb-2020:
-          title: Course B (2019)
+          title: Course B (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
@@ -14761,7 +14763,7 @@ en:
               description_student: Use events to create a story or make an interactive game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
         coursec-2020:
-          title: Course C (2019)
+          title: Course C (2020)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
@@ -14839,7 +14841,7 @@ en:
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
         coursed-2020:
-          title: Course D (2019)
+          title: Course D (2020)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
@@ -14921,7 +14923,7 @@ en:
             End of Course Project:
               name: End of Course Project
         coursee-2020:
-          title: Course E (2019)
+          title: Course E (2020)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
           description_short: Review concepts in Courses C & D, then go further by learning functions.
           description_audience: 'Ages: 8-12'
@@ -14999,7 +15001,7 @@ en:
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
         coursef-2020:
-          title: Course F (2019)
+          title: Course F (2020)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
@@ -15085,7 +15087,7 @@ en:
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
         express-2020:
-          title: Express Course (2019)
+          title: Express Course (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
@@ -15203,7 +15205,7 @@ en:
               description_student: ''
               description_teacher: ''
         pre-express-2020:
-          title: Pre-reader Express (2019)
+          title: Pre-reader Express (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
@@ -15256,3 +15258,217 @@ en:
               name: Make a Game in Play Lab
               description_student: ''
               description_teacher: ''
+        csp1-2020:
+          stages:
+            new stage:
+              name: new stage
+            Welcome to CSP:
+              name: Welcome to CSP
+            Representing Information:
+              name: Representing Information
+            Circle Square Patterns:
+              name: Circle Square Patterns
+            Binary Numbers:
+              name: Binary Numbers
+            Overflow and Rounding:
+              name: Overflow and Rounding
+            Representing Text:
+              name: Representing Text
+            Black and White Images:
+              name: Black and White Images
+            Color Images:
+              name: Color Images
+            Lossless Compression:
+              name: Lossless Compression
+            Lossy Compression:
+              name: Lossy Compression
+            Intellectual Property:
+              name: Intellectual Property
+            Project - Digital Information Dilemmas Part 1:
+              name: Project - Digital Information Dilemmas Part 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Project - Digital Information Dilemmas Part 2
+            'Lesson 14: Assessment Day':
+              name: 'Lesson 14: Assessment Day'
+          title: CSP Unit 1 - Digital Information ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp2-2020:
+          stages:
+            new stage:
+              name: new stage
+            Welcome to the Internet:
+              name: Welcome to the Internet
+            Building a Network:
+              name: Building a Network
+            The Need for Addressing:
+              name: The Need for Addressing
+            Routers and Redundancy:
+              name: Routers and Redundancy
+            Packets:
+              name: Packets
+            DNS and HTTP:
+              name: DNS and HTTP
+            Project - Internet Dilemmas Part 1:
+              name: Project - Internet Dilemmas Part 1
+            Project - Internet Dilemmas Part 2:
+              name: Project - Internet Dilemmas Part 2
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
+          title: CSP Unit 2 - The Internet ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-2020:
+          stages:
+            new stage:
+              name: new stage
+            Introduction to Apps:
+              name: Introduction to Apps
+            Introduction to Design Mode:
+              name: Introduction to Design Mode
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
+            Intro to Programming:
+              name: Intro to Programming
+            Debugging:
+              name: Debugging
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            Project - Designing an App Part 5:
+              name: Project - Designing an App Part 5
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
+          title: CSP Unit 3 - Intro to App Design ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp6-2020:
+          stages:
+            new stage:
+              name: new stage
+            Algorithms Solve Problems:
+              name: Algorithms Solve Problems
+            Algorithm Efficiency:
+              name: Algorithm Efficiency
+            Unreasonable Time:
+              name: Unreasonable Time
+            The Limits of Algorithms:
+              name: The Limits of Algorithms
+            Parallel and Distributed Algorithms:
+              name: Parallel and Distributed Algorithms
+            'Lesson 6: Assessment Day':
+              name: 'Lesson 6: Assessment Day'
+          title: CSP Unit 6 - Algorithms ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp8-2020:
+          stages:
+            new stage:
+              name: new stage
+            Create PT - Review the Task:
+              name: Create PT - Review the Task
+            Create PT - Make a Plan:
+              name: Create PT - Make a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: CSP Unit 8 - Create PT Prep ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp9-2020:
+          stages:
+            new stage:
+              name: new stage
+            Learning From Data:
+              name: Learning From Data
+            Exploring One Column:
+              name: Exploring One Column
+            Filtering and Cleaning Data:
+              name: Filtering and Cleaning Data
+            Exploring Two Columns:
+              name: Exploring Two Columns
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, and Machine Learning
+            Machine Learning and Bias:
+              name: Machine Learning and Bias
+            Project - Tell a Data Story - Part 1:
+              name: Project - Tell a Data Story - Part 1
+            Project - Tell a Data Story - Part 2:
+              name: Project - Tell a Data Story - Part 2
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
+          title: CSP Unit 9 - Data ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp10-2020:
+          stages:
+            new stage:
+              name: new stage
+            Project - Innovation Simulation Part 1:
+              name: Project - Innovation Simulation Part 1
+            Project - Innovation Simulation Part 2:
+              name: Project - Innovation Simulation Part 2
+            Project - Innovation Simulation Part 3:
+              name: Project - Innovation Simulation Part 3
+            Data Policies and Privacy:
+              name: Data Policies and Privacy
+            The Value of Privacy:
+              name: The Value of Privacy
+            Project - Innovation Simulation Part 4:
+              name: Project - Innovation Simulation Part 4
+            Security Risks Part 1:
+              name: Security Risks Part 1
+            Security Risks Part 2:
+              name: Security Risks Part 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Project: Innovation Simulation Part 4'
+            Project - Innovation Simulation Part 6:
+              name: Project - Innovation Simulation Part 6
+            Project - Innovation Simulation Part 7:
+              name: Project - Innovation Simulation Part 7
+            Protecting Data Part 1:
+              name: Protecting Data Part 1
+            Protecting Data Part 2:
+              name: Protecting Data Part 2
+            'Project: Innovation Simulation Part 5':
+              name: 'Project: Innovation Simulation Part 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Project: Innovation Simulation Part 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Project: Innovation Simulation Part 7'
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lesson 14: Unit Assessment Day'
+          title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-march-virtual:
+          stages:
+            Kick-off:
+              name: Kick-off
+            Changes:
+              name: Changes
+            Curriculum Investigations:
+              name: Curriculum Investigations
+            Wrap up:
+              name: Wrap up
+            new stage:
+              name: new stage
+            Pre-work:
+              name: Pre-work
+            Reflections:
+              name: Reflections
+          title: CS Principles Curriculum Training for Facilitators
+          description_audience: ''
+          description_short: ''
+          description: ''
