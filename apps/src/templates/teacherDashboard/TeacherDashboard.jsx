@@ -22,7 +22,15 @@ import {recordImpression} from './impressionHelpers';
 
 function Header(props) {
   if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-    recordImpression('teacher_dashboard_header_with_buttons');
+    if (
+      experiments.isEnabled(
+        experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT
+      )
+    ) {
+      recordImpression('teacher_dashboard_header_with_buttons_switch_section');
+    } else {
+      recordImpression('teacher_dashboard_header_with_buttons_select_section');
+    }
     return (
       <div>
         {/* TeacherDashboardNavigation must be outside of
