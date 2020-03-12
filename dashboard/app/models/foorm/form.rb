@@ -53,8 +53,8 @@ class Foorm::Form < ActiveRecord::Base
 
     # Substitute any questions from the library.
     questions = JSON.parse(form.questions)
-    questions["pages"].each do |page|
-      page["elements"].map! do |element|
+    questions["pages"]&.each do |page|
+      page["elements"]&.map! do |element|
         if element["type"] == "library_item"
           JSON.parse(
             Foorm::LibraryQuestion.where(
