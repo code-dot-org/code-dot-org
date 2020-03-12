@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import ChoiceResponses from '../../components/survey_results/choice_responses';
-import TextResponses from '../../components/survey_results/text_responses';
-import _ from 'lodash';
+import SectionResults from './section_results';
 
 export default class Results extends React.Component {
   static propTypes = {
@@ -15,139 +13,27 @@ export default class Results extends React.Component {
     // facilitatorRollups: PropTypes.object
   };
 
-  /**
-   * Render results for either the facilitator specific or general questions
-   * section: name of section
-   * questions: all questions, keyed by survey name
-   * answers: hash of {survey_name : {answers hash}}
-   */
-  renderResultsForSessionQuestionSection(section, questions, answers) {
-    let uniqueKey = -1;
-    return _.compact(
-      Object.keys(answers).map(surveyId => {
-        let surveyQuestions = questions[surveyId];
-        if (!surveyQuestions) {
-          return null;
-        }
-
-        return _.compact(
-          Object.keys(surveyQuestions).map(questionId => {
-            let question = surveyQuestions[questionId];
-            let answer = answers[surveyId][questionId];
-            if (!answer) {
-              return null;
-            }
-
-            if (
-              ['scale', 'singleSelect', 'multiSelect'].includes(
-                question['type']
-              )
-            ) {
-              // numRespondents will get either a value (for multiSelect) or undefined.
-              const numRespondents = answer.num_respondents;
-
-              // Make a copy of the answers without the num_respondents and other_answers fields.
-              const filteredAnswers = _.omit(answer, [
-                'num_respondents',
-                'other_answers'
-              ]);
-
-              let possibleAnswersMap = question['choices'];
-              uniqueKey++;
-              return (
-                <ChoiceResponses
-                  perFacilitator={section === 'facilitator'}
-                  numRespondents={numRespondents}
-                  question={question['title'] || questionId}
-                  answers={filteredAnswers}
-                  possibleAnswers={Object.keys(possibleAnswersMap)}
-                  possibleAnswersMap={possibleAnswersMap}
-                  key={uniqueKey}
-                  answerType={question['type']}
-                  otherText={question['other_text']}
-                  otherAnswers={answer['other_answers']}
-                />
-              );
-            } else if (question['type'] === 'matrix') {
-              // render choice response per question inside matrix
-              if (!question['rows']) {
-                return null;
-              }
-              return Object.keys(question['rows']).map(innerQuestionId => {
-                const innerAnswer = answer[innerQuestionId];
-                const numRespondents = answer.num_respondents;
-                let possibleAnswersMap = question['columns'];
-                let parsedQuestionName = `${question['title']} -> ${
-                  question['rows'][innerQuestionId]
-                }`;
-                uniqueKey++;
-                return (
-                  <ChoiceResponses
-                    perFacilitator={section === 'facilitator'}
-                    numRespondents={numRespondents}
-                    question={parsedQuestionName}
-                    answers={innerAnswer}
-                    possibleAnswers={Object.keys(possibleAnswersMap)}
-                    possibleAnswersMap={possibleAnswersMap}
-                    key={uniqueKey}
-                    answerType={'singleSelect'}
-                  />
-                );
-              });
-            } else if (question['type'] === 'text') {
-              uniqueKey++;
-              return (
-                <TextResponses
-                  question={question['title'] || questionId}
-                  answers={answer}
-                  key={uniqueKey}
-                />
-              );
-            }
-          })
-        );
-      })
-    );
-  }
-
-  renderResultsForSession(session) {
-    return (
-      <div>
-        <h3>General Questions</h3>
-        {this.renderResultsForSessionQuestionSection(
-          'general',
-          this.props.questions,
-          this.props.thisWorkshop[session]
-        )}
-        {/* TODO: add facilitator feedback per session once we have that data */}
-      </div>
-    );
-  }
-
-  renderAllSessionsResults() {
-    return this.props.sessions.map((session, i) => (
-      <Tab
-        eventKey={i + 1}
-        key={i}
-        title={`${session} (${this.props.thisWorkshop[session][
-          'response_count'
-        ] || 0})`}
-      >
-        <br />
-        {this.renderResultsForSession(session)}
-      </Tab>
-    ));
-  }
-
-  // TODO: Render rollups once they are sent
-  // renderSurveyRollups() {
-  // }
-
   render() {
     return (
       <Tabs id="SurveyTab">
-        {this.renderAllSessionsResults()}
-        {/*this.renderSurveyRollups()*/}
+        {this.props.sessions.map((session, i) => (
+          <Tab
+            eventKey={i + 1}
+            key={i}
+            title={`${session} (${this.props.thisWorkshop[session][
+              'response_count'
+            ] || 0})`}
+          >
+            <br />
+            <SectionResults
+              section="general"
+              questions={this.props.questions}
+              answers={this.props.thisWorkshop[session]}
+            />
+            {/* TODO: add facilitator feedback per session once we have that data */}
+          </Tab>
+        ))}
+        {/*TODO: Render rollups once they are sent*/}
       </Tabs>
     );
   }
