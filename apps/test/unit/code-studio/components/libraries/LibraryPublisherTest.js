@@ -1,8 +1,7 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import {
-  LibraryPublisher,
+import LibraryPublisher, {
   PublishState
 } from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
@@ -256,7 +255,7 @@ describe('LibraryPublisher', () => {
     libraryParser.createLibraryJson.restore();
   });
 
-  describe('onUnpublishComplete', () => {
+  describe('unpublish', () => {
     let wrapper, deleteSpy;
     beforeEach(() => {
       deleteSpy = sinon.stub(libraryClientApi, 'delete');
@@ -272,14 +271,14 @@ describe('LibraryPublisher', () => {
 
     it('calls onUnpublishSuccess when it succeeds', () => {
       deleteSpy.callsArg(0);
-      wrapper.instance().onUnpublishComplete(null, {});
+      wrapper.instance().unpublish();
       expect(onUnpublishSuccess.called).to.be.true;
     });
 
     it('sets ERROR_UNPUBLISH when it fails', () => {
       sinon.stub(console, 'warn');
       deleteSpy.callsArg(1);
-      wrapper.instance().onUnpublishComplete(new Error(), {});
+      wrapper.instance().unpublish();
       wrapper.update();
       expect(wrapper.state().publishState).to.equal(
         PublishState.ERROR_UNPUBLISH

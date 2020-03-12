@@ -217,4 +217,4 @@ stage 'Digital Citizenship', flex_category: 'csf_digcit'
 level 'DigitalCitizenship-Unplugged_2020'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
-level 'courseD_EOC_2020', named: true
+level 'courseD_EOC_2020', progression: 'Create your project'
