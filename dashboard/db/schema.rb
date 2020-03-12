@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200310000601) do
+ActiveRecord::Schema.define(version: 20200310203427) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -404,6 +404,16 @@ ActiveRecord::Schema.define(version: 20200310000601) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true, using: :btree
+  end
+
+  create_table "foorm_library_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "library_name",                  null: false
+    t.integer  "library_version",               null: false
+    t.string   "question_name",                 null: false
+    t.text     "question",        limit: 65535, null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.index ["library_name", "library_version", "question_name"], name: "index_foorm_library_questions_on_multiple_fields", unique: true, using: :btree
   end
 
   create_table "foorm_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
