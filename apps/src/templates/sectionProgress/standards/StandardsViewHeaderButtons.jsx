@@ -111,10 +111,6 @@ class StandardsViewHeaderButtons extends Component {
         stage_scores: selectedStageScores.concat(unselectedStageScores)
       })
     }).done(() => {
-      this.props.fetchStudentLevelScores(
-        this.props.scriptId,
-        this.props.sectionId
-      );
       this.closeLessonStatusDialog();
     });
   };
