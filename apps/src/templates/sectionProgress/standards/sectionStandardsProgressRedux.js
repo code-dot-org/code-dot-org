@@ -73,7 +73,7 @@ export default function sectionStandardsProgress(state = initialState, action) {
   return state;
 }
 
-function getStagesForScript(state) {
+function getStagesForCurrentScript(state) {
   if (
     state.scriptSelection.scriptId &&
     state.sectionProgress.scriptDataByScript &&
@@ -97,7 +97,7 @@ export function getLessonSelectionStatus(state, stageId) {
 
 export function getUnpluggedLessonsForScript(state) {
   let unpluggedStages = [];
-  const stages = getStagesForScript(state);
+  const stages = getStagesForCurrentScript(state);
 
   if (stages) {
     unpluggedStages = _.filter(stages, function(stage) {
@@ -126,7 +126,10 @@ export function getUnpluggedLessonsForScript(state) {
 
 export function getNumberLessonsCompleted(state) {
   let lessonsCompleted = 0;
-  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
+  const stages = getStagesForCurrentScript(
+    state,
+    state.scriptSelection.scriptId
+  );
 
   if (stages) {
     stages.forEach(stage => {
@@ -141,7 +144,10 @@ export function getNumberLessonsCompleted(state) {
 
 export function getNumberLessonsInScript(state) {
   let numStages = 0;
-  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
+  const stages = getStagesForCurrentScript(
+    state,
+    state.scriptSelection.scriptId
+  );
 
   if (stages) {
     numStages = stages.length;
@@ -151,7 +157,10 @@ export function getNumberLessonsInScript(state) {
 
 export const lessonsByStandard = state => {
   let lessonsByStandardId = {};
-  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
+  const stages = getStagesForCurrentScript(
+    state,
+    state.scriptSelection.scriptId
+  );
 
   if (stages && state.sectionStandardsProgress.standardsData) {
     const standards = state.sectionStandardsProgress.standardsData;
@@ -190,7 +199,7 @@ export const lessonsByStandard = state => {
 
 export function getLessonCompletionStatus(state, stageId) {
   const scriptId = state.scriptSelection.scriptId;
-  const stages = getStagesForScript(state, scriptId);
+  const stages = getStagesForCurrentScript(state, scriptId);
   if (stages) {
     const stage = _.find(stages, ['id', stageId]);
     if (stage.unplugged) {
