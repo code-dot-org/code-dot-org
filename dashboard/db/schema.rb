@@ -1513,6 +1513,8 @@ ActiveRecord::Schema.define(version: 20200310203427) do
     t.integer  "score"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["created_at"], name: "index_teacher_scores_on_created_at", using: :btree
+    t.index ["teacher_id"], name: "index_teacher_scores_on_teacher_id", using: :btree
     t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id", using: :btree
   end
 

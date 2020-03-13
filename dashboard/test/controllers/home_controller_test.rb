@@ -215,40 +215,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  def setup_user_with_gallery
-    @user = create(:user)
-    5.times do
-      create :gallery_activity,
-        level_source: create(:level_source, level_source_image: create(:level_source_image)),
-        user: @user,
-        autosaved: true
-    end
-    sign_in @user
-  end
-
-  test "do not show gallery activity pagination when not signed in" do
-    assert_queries 0 do
-      get :gallery_activities
-    end
-    assert_redirected_to_sign_in
-  end
-
-  test "show gallery activity pagination when signed in" do
-    setup_user_with_gallery
-
-    assert_queries 13 do
-      get :gallery_activities
-    end
-    assert_response :success
-
-    assert_select 'div.gallery_activity img', 5
-  end
-
-  test "do not show gallery when not logged in" do
-    get :index
-    assert_select 'h4', text: "Gallery", count: 0
-  end
-
   test "do not show admin links when not admin" do
     sign_in create(:user)
     get :index
