@@ -25,6 +25,7 @@ export default storybook => {
             isOpen
             handleConfirm={action('Confirm')}
             handleClose={action('Close')}
+            handleNext={action('Next')}
             onCommentChange={action('Comment')}
           />
         </Provider>
