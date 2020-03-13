@@ -249,16 +249,14 @@ describe('sectionStandardsProgressRedux', () => {
           name: 'Going Places Safely',
           number: 1,
           url: 'https://curriculum.code.org/csf-19/coursea/1',
-          completed: false,
-          selected: false
+          completed: false
         },
         {
           id: 664,
           name: 'Happy Maps',
           number: 3,
           url: 'https://curriculum.code.org/csf-19/coursea/3',
-          completed: false,
-          selected: false
+          completed: false
         }
       ]);
     });
