@@ -10,8 +10,6 @@ require 'cdo/aws/rds'
 require 'cdo/chat_client'
 require 'cdo/redshift_import'
 
-# Max time to wait for all tasks to complete import into staging tables.
-TASK_EXECUTION_TIME = 16.hours
 # Delay between each check on task status.
 TASK_STATUS_DELAY = 10.minutes
 # TODO: (suresh) Can this dynamically reference the endpoint defined the in the production data stack?
@@ -28,25 +26,42 @@ def main
     instance_type: CLONE_DB_INSTANCE_ID
   )
 
+  # Ensure that if any threads that are starting/monitoring DMS Tasks Raise an error, that the main thread here raises.
+  Thread.abort_on_exception = true
+
   # Get list of tasks that should be executed daily.
   daily_tasks = Cdo::DMS::ReplicationTask.tasks_by_frequency('daily')
-
   # Spawn one thread for each replication task, so we can start and monitor them independently.
-  threads = []
-  Thread.abort_on_exception = true
+  daily_threads = []
   daily_tasks.each do |task|
-    # Wait 16 hours (make 96 attempts, once every 10 minutes) for tasks to complete successfully.
-    # The user_levels task takes the longest (~10 hours).
-    threads << Thread.new {task.start(TASK_EXECUTION_TIME.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
+    daily_threads << Thread.new {task.start(16.hours.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
   end
-  threads.each(&:join)
+  daily_threads.each(&:join)
 
   # The DMS tasks exported to staging (_import_) tables to avoid disrupting queries on the production Redshift tables
   # during the lengthy table import process.  Rename the staging tables to the production table names to complete
-  # the import process
+  # the import process.
   RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
 
   ChatClient.message 'data', "Completed daily export from Aurora MySQL database to Redshift."
+
+  # Use the daily execution of this process on Friday nights Pacific Time (Saturday UTC) to kick off execution of tasks
+  # that can only be run once a week, such as the export of the level_sources table which takes > 1 day.
+  # Execution of this task will cause the Saturday PT (Sunday AM UTC) execution of this job to no-op due to
+  # the only_one_running? restriction.
+  if Date.today.saturday?
+    ChatClient.message 'data', "Beginning weekly export from Aurora MySQL database to Redshift."
+    weekly_tasks = Cdo::DMS::ReplicationTask.tasks_by_frequency('weekly')
+    weekly_threads = []
+    weekly_tasks.each do |task|
+      weekly_threads << Thread.new {task.start(40.hours.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
+    end
+    weekly_threads.each(&:join)
+    # Currently, the only weekly task (level_sources) is exported without using a staging table, so this won't find
+    # any temp tables to rename.
+    RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
+    ChatClient.message 'data', "Completed weekly export from Aurora MySQL database to Redshift."
+  end
 rescue StandardError => error
   ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
