@@ -149,7 +149,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
 
     // Note: These paths are defined in ApplicationDashboard component
     let path = course === CSD ? 'csd_teachers' : 'csp_teachers';
-    return `https://studio.code.org/pd/application_dashboard/${path}/${application_id}`;
+    return `/pd/application_dashboard/${path}/${application_id}`;
   }
 
   renderSelectCell(enrollment) {
@@ -208,7 +208,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             {application_url && (
               <p>
                 <a href={application_url} target="_blank">
-                  Application
+                  View Application
                 </a>
               </p>
             )}
