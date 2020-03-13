@@ -114,12 +114,12 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
-  hasTeacherSections() {
+  isTeacher() {
     return getStore().getState().currentUser.userType === 'teacher';
   }
 
   onShareTeacherLibrary = () => {
-    return this.hasTeacherSections()
+    return this.isTeacher()
       ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES})
       : undefined;
   };
@@ -138,7 +138,7 @@ class LibraryCreationDialog extends React.Component {
             libraryName={libraryName}
             channelId={channelId}
             // Waiting for design guidance prior to enabling this functionality
-            // onShareTeacherLibrary={this.onShareTeacherLibrary()}
+            // onShareTeacherLibrary={this.onShareTeacherLibrary}
           />
         );
         break;
