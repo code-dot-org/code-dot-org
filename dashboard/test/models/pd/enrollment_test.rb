@@ -612,4 +612,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
   end
+
+  test 'find matching application for an enrollment' do
+    workshop = create :workshop
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, user: teacher, workshop: workshop
+    application = create :pd_teacher2021_application, user: teacher
+
+    assert_nil enrollment.application_id
+
+    application.update(pd_workshop_id: workshop.id)
+
+    # Can only link an enrollment to an application when the application is assigned to the same workshop
+    assert_equal application.id, enrollment.application_id
+  end
 end
