@@ -120,10 +120,10 @@ export class LibraryManagerDialog extends React.Component {
 
   updateLibraryInProject = libraryJson => {
     let libraries = [...this.state.libraries];
-    const libIndex = libraries.findIndex(
+    const libraryIndex = libraries.findIndex(
       library => library.channelId === libraryJson.channelId
     );
-    libraries[libIndex] = libraryJson;
+    libraries[libraryIndex] = libraryJson;
     dashboard.project.setProjectLibraries(libraries);
     this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
