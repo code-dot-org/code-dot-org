@@ -111,7 +111,9 @@ class StandardsViewHeaderButtons extends Component {
         stage_scores: selectedStageScores.concat(unselectedStageScores)
       })
     }).done(() => {
-      this.closeLessonStatusDialog();
+      if (this.state.isLessonStatusDialogOpen) {
+        this.closeLessonStatusDialog();
+      }
     });
   };
 
@@ -144,6 +146,7 @@ class StandardsViewHeaderButtons extends Component {
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}
           handleConfirm={this.closeCreateReportDialogAndPrintReport}
+          handleNext={this.onSaveUnpluggedLessonStatus}
           handleClose={this.closeCreateReportDialog}
           onCommentChange={this.onCommentChange}
           sectionId={this.props.sectionId}
