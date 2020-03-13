@@ -16,4 +16,37 @@
 #
 
 class Foorm::LibraryQuestion < ApplicationRecord
+  include Seeded
+
+  def self.setup
+    library_questions = Dir.glob('config/foorm/library/**/*.json').sort.map do |path|
+      # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
+      # we get full_name: "surveys/pd/pre_workshop_survey"
+      #      and version: 0
+      unique_path = path.partition("config/foorm/library/")[2]
+      filename_and_version = File.basename(unique_path, ".json")
+      filename, version = filename_and_version.split(".")
+      version = version.to_i
+      full_name = File.dirname(unique_path) + "/" + filename
+
+      # Let's load the JSON text.
+      source_questions = JSON.parse(File.read(path))
+
+      source_questions["pages"].map do |page|
+        page["elements"].map do |element|
+          {
+            library_name: full_name,
+            library_version: version,
+            question_name: element["name"],
+            question: element.to_json
+          }
+        end
+      end
+    end.flatten
+
+    transaction do
+      reset_db
+      Foorm::LibraryQuestion.import! library_questions
+    end
+  end
 end
