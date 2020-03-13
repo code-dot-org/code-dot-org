@@ -975,7 +975,7 @@ function parseRecordsDataFromCsv(csvData) {
     records.forEach((record, index) => {
       const id = index + 1;
       for (const key in record) {
-        record[key] = castValue(record[key]);
+        record[key] = castValue(record[key], /* allowUnquotedStrings */ true);
       }
       record.id = id;
       recordsData[id] = JSON.stringify(record);
