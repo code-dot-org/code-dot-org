@@ -341,7 +341,7 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
   };
 }
 
-export function getInitialUnpluggedLessonCompletionStatus(
+function getInitialUnpluggedLessonCompletionStatus(
   state,
   scriptId,
   scoresData
