@@ -103,12 +103,12 @@ export function getUnpluggedLessonsForScript(state) {
     unpluggedStages = _.filter(stages, function(stage) {
       return stage.unplugged;
     });
-  }
 
-  unpluggedStages.forEach(stage => {
-    const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
-    stage['completed'] = lessonCompletionStatus.completed;
-  });
+    unpluggedStages.forEach(stage => {
+      const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+      stage['completed'] = lessonCompletionStatus.completed;
+    });
+  }
 
   function filterStageData(stage) {
     return {
@@ -162,24 +162,26 @@ export const lessonsByStandard = state => {
 
     standards.forEach(standard => {
       let lessons = [];
+
       stages.forEach(stage => {
         if (standard.lesson_ids.includes(stage.id)) {
-          let lessonDetails = {};
           const lessonCompletionStatus = getLessonCompletionStatus(
             state,
             stage.id
           );
-          lessonDetails['name'] = stage.name;
-          lessonDetails['lessonNumber'] = stage.relative_position;
-          lessonDetails['completed'] = lessonCompletionStatus.completed;
-          lessonDetails['numStudentsCompleted'] =
-            lessonCompletionStatus.numStudentsCompleted;
-          lessonDetails['numStudents'] = numStudents;
-          lessonDetails['url'] = stage.lesson_plan_html_url;
-          lessonDetails['unplugged'] = stage.unplugged;
+          const lessonDetails = {
+            name: stage.name,
+            lessonNumber: stage.relative_position,
+            completed: lessonCompletionStatus.completed,
+            numStudentsCompleted: lessonCompletionStatus.numStudentsCompleted,
+            numStudents: numStudents,
+            url: stage.lesson_plan_html_url,
+            unplugged: stage.unplugged
+          };
           lessons.push(lessonDetails);
         }
       });
+
       lessonsByStandardId[standard.id] = lessons;
     });
   }
@@ -187,15 +189,12 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
-  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
+  const scriptId = state.scriptSelection.scriptId;
+  const stages = getStagesForScript(state, scriptId);
   if (stages) {
     const stage = _.find(stages, ['id', stageId]);
     if (stage.unplugged) {
-      return getUnpluggedLessonCompletionStatus(
-        state,
-        state.scriptSelection.scriptId,
-        stageId
-      );
+      return getUnpluggedLessonCompletionStatus(state, scriptId, stageId);
     } else {
       return getPluggedLessonCompletionStatus(state, stage);
     }
@@ -203,12 +202,15 @@ export function getLessonCompletionStatus(state, stageId) {
 }
 
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
-  let completionByLesson = {};
+  const completionByLesson = {
+    completed: getLessonSelectionStatus(state, stageId),
+    numStudentsCompleted: getNumberOfStudentsCompletedUnpluggedLesson(
+      state,
+      scriptId,
+      stageId
+    )
+  };
 
-  completionByLesson['completed'] = getLessonSelectionStatus(state, stageId);
-  completionByLesson[
-    'numStudentsCompleted'
-  ] = getNumberOfStudentsCompletedUnpluggedLesson(state, scriptId, stageId);
   return completionByLesson;
 }
 
