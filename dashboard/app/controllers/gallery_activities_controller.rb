@@ -7,26 +7,8 @@ class GalleryActivitiesController < ApplicationController
 
   protect_from_forgery except: [:create]
 
-  INDEX_PER_PAGE = 30
-  MAX_PAGE = 100
-
   def index
-    page = params[:page].to_i rescue 0
-    if page < 0 || page > MAX_PAGE
-      redirect_to gallery_activities_path
-      return
-    end
-
-    if params[:app]
-      @gallery_activities = gallery_activities_for_app params[:app]
-    else
-      # if app is not specified, show both apps
-      @playlab_gallery_activities = gallery_activities_for_app Game::PLAYLAB
-      @artist_gallery_activities = gallery_activities_for_app Game::ARTIST
-    end
-
-    gallery_feature_ship_date = Date.new(2014, 4, 9)
-    @days = (Date.today - gallery_feature_ship_date).to_i
+    redirect_to '/projects'
   end
 
   # POST /gallery

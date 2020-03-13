@@ -39,78 +39,12 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
   end
 
-  test "index works with empty gallery" do
-    GalleryActivity.destroy_all
-
-    get :index
-    assert_response :success
+  test "index redirects for non-signed-in user" do
+    assert_redirected_to '/projects/public'
   end
 
-  test "should show index to non-signed-in user" do
-    sign_out @user
-
-    get :index
-
-    assert_response :success
-    # Does not include the autosaved one.
-    assert_equal [@gallery_activity], assigns(:artist_gallery_activities)
-    assert_equal [@playlab_gallery_activity], assigns(:playlab_gallery_activities)
-  end
-
-  test "should show index with only art to non-signed-in user" do
-    sign_out @user
-
-    get :index, params: {app: Game::ARTIST, page: 1}
-
-    assert_response :success
-    # Does not include the autosaved one.
-    assert_equal [@gallery_activity], assigns(:gallery_activities)
-  end
-
-  test "should show index with only apps to non-signed-in user" do
-    sign_out @user
-
-    get :index, params: {app: Game::PLAYLAB, page: 1}
-
-    assert_response :success
-    assert_equal [@playlab_gallery_activity], assigns(:gallery_activities)
-  end
-
-  test "annoying page number redirects to first page for non-signed-in user" do
-    sign_out @user
-
-    get :index, params: {app: Game::PLAYLAB, page: 100000}
-
-    assert_redirected_to '/gallery'
-  end
-
-  test "should show index if gallery activity belongs to hard-deleted user" do
-    sign_out @user
-    u = @playlab_gallery_activity.user
-    u.destroy
-    @playlab_gallery_activity.reload
-
-    get :index, params: {page: 1}
-
-    assert_response :success
-    assert_equal [@gallery_activity], assigns(:artist_gallery_activities)
-    assert_equal [@playlab_gallery_activity], assigns(:playlab_gallery_activities)
-  end
-
-  test "should show index with thousands of pictures with a delimiter in the count" do
-    # Mock because actually creating takes forever.
-    GalleryActivity.stubs(:pseudocount).returns(14320)
-
-    get :index
-
-    assert_response :success
-    assert_select 'b', '14,320'
-  end
-
-  test "should show index to user" do
-    get :index
-
-    assert_response :success
+  test "index redirects for signed-in user" do
+    assert_redirected_to '/projects'
   end
 
   test "user should create gallery_activity" do

@@ -27,12 +27,10 @@ Dashboard::Application.routes.draw do
 
   get "/congrats", to: "congrats#index"
 
-  resources :gallery_activities, path: '/gallery' do
-    collection do
-      get 'art', to: 'gallery_activities#index', app: Game::ARTIST
-      get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
-    end
-  end
+  # Redirects to /projects
+  # TODO: (ErinB) remove when gallery_activities are fully deleted
+  get "/gallery", to: "gallery_activities#index"
+
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]
