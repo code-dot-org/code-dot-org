@@ -54,14 +54,4 @@ class GalleryActivitiesController < ApplicationController
       permit(:level_source_id, :user_id, :user_level_id).
       tap {|param| param.require(:user_level_id)}
   end
-
-  def gallery_activities_for_app(app)
-    # When we show both apps, show half as many per app.
-    per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2
-    GalleryActivity.
-      where(autosaved: false, app: app).
-      order(id: :desc).
-      page(params[:page]).
-      per(per_page)
-  end
 end
