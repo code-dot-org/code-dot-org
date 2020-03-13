@@ -17,6 +17,9 @@ export default class MatrixChoiceResponses extends React.Component {
       <div>
         {Object.keys(question['rows']).map(innerQuestionId => {
           const innerAnswer = answer[innerQuestionId];
+          if (!innerAnswer) {
+            return null;
+          }
           const numRespondents = answer.num_respondents;
           let possibleAnswersMap = question['columns'];
           let parsedQuestionName = `${question['title']} -> ${
