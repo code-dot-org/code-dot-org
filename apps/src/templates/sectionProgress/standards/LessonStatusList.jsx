@@ -27,7 +27,7 @@ class LessonStatusList extends Component {
     scriptId: PropTypes.number
   };
 
-  handleChange = selectedLessons => {
+  handleChange = (selectedLessons, changedLesson) => {
     firehoseClient.putRecord(
       {
         study: 'teacher_dashboard_actions',
@@ -36,7 +36,8 @@ class LessonStatusList extends Component {
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           script_id: this.props.scriptId,
-          selected_lessons: selectedLessons,
+          changed_lesson_id: changedLesson.id,
+          lesson_selected: !changedLesson.completed,
           dialog: this.props.dialog
         })
       },
