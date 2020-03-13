@@ -21,8 +21,8 @@ module Pd::Foorm
     end
 
     # TODO: add rollups
-    # def self.get_rollup_for_workshop(workshop_id)
-    # end
+    def self.get_rollup_for_workshop(workshop_id)
+    end
 
     # TODO: once we store facilitator data
     # def self.get_rollup_for_facilitator(workshop_id, facilitator_id)
