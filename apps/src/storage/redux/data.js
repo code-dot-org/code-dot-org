@@ -32,7 +32,7 @@ const DataState = Record({
   tableListMap: {},
   tableName: '',
   tableColumns: [],
-  tableRecords: {},
+  tableRecords: [],
   keyValueData: {},
   warningTitle: '',
   warningMsg: '',
@@ -56,7 +56,7 @@ export default function(state = initialState, action) {
       // Discard table data when not viewing a table, so that we don't momentarily
       // show data for the wrong table when we return to the table view.
       if (action.view !== DataView.TABLE) {
-        state = state.set('tableRecords', {});
+        state = state.set('tableRecords', []);
       }
       return state.set('view', action.view).set('tableName', action.tableName);
     case DELETE_TABLE_NAME: {
@@ -65,7 +65,12 @@ export default function(state = initialState, action) {
       return state.set('tableListMap', map);
     }
     case UPDATE_KEY_VALUE_DATA:
-      return state.set('keyValueData', action.keyValueData);
+      // "if all of the keys are integers, and more than half of the keys between 0 and
+      // the maximum key in the object have non-empty values, then Firebase will render
+      // it as an array."
+      // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+      // For simplicity, always coerce it to an object.
+      return state.set('keyValueData', Object.assign({}, action.keyValueData));
     case UPDATE_TABLE_COLUMNS:
       if (state.tableName === action.tableName) {
         return state.set('tableColumns', action.tableColumns);
@@ -73,7 +78,18 @@ export default function(state = initialState, action) {
       return state;
     case UPDATE_TABLE_RECORDS:
       if (state.tableName === action.tableName) {
-        return state.set('tableRecords', action.tableRecords);
+        // "if all of the keys are integers, and more than half of the keys between 0 and
+        // the maximum key in the object have non-empty values, then Firebase will render
+        // it as an array."
+        // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
+        // For simplicity, always coerce it to an array (list of records).
+        if (!action.tableRecords) {
+          return state.set('tableRecords', []);
+        }
+        const records = Array.isArray(action.tableRecords)
+          ? action.tableRecords
+          : Object.values(action.tableRecords);
+        return state.set('tableRecords', records);
       }
       return state;
     case SHOW_WARNING:
@@ -94,7 +110,7 @@ export default function(state = initialState, action) {
       return state
         .set('isPreviewOpen', false)
         .set('tableName', '')
-        .set('tableRecords', {})
+        .set('tableRecords', [])
         .set('tableColumns', []);
     case SET_LIBRARY_MANIFEST:
       return state.set('libraryManifest', action.libraryManifest);
