@@ -73,17 +73,33 @@ export default function sectionStandardsProgress(state = initialState, action) {
   return state;
 }
 
-export function getUnpluggedLessonsForScript(state) {
-  let unpluggedStages = [];
+function getStagesForScript(state) {
   if (
-    state.sectionProgress.scriptDataByScript &&
     state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript &&
     state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
   ) {
     const stages =
       state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
         .stages;
 
+    return stages;
+  }
+}
+
+export function getLessonSelectionStatus(state, stageId) {
+  const selected = _.map(
+    state.sectionStandardsProgress.selectedLessons,
+    'id'
+  ).includes(stageId);
+  return selected;
+}
+
+export function getUnpluggedLessonsForScript(state) {
+  let unpluggedStages = [];
+  const stages = getStagesForScript(state);
+
+  if (stages) {
     unpluggedStages = _.filter(stages, function(stage) {
       return stage.unplugged;
     });
@@ -110,15 +126,9 @@ export function getUnpluggedLessonsForScript(state) {
 
 export function getNumberLessonsCompleted(state) {
   let lessonsCompleted = 0;
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-  ) {
-    const stages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages;
+  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
 
+  if (stages) {
     stages.forEach(stage => {
       const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
       if (lessonCompletionStatus.completed) {
@@ -131,31 +141,20 @@ export function getNumberLessonsCompleted(state) {
 
 export function getNumberLessonsInScript(state) {
   let numStages = 0;
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-  ) {
-    numStages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages.length;
+  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
+
+  if (stages) {
+    numStages = stages.length;
   }
   return numStages;
 }
 
 export const lessonsByStandard = state => {
   let lessonsByStandardId = {};
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId] &&
-    state.sectionStandardsProgress.standardsData
-  ) {
-    const standards = state.sectionStandardsProgress.standardsData;
+  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
 
-    const stages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages;
+  if (stages && state.sectionStandardsProgress.standardsData) {
+    const standards = state.sectionStandardsProgress.standardsData;
 
     const numStudents =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
@@ -188,27 +187,19 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
-  if (
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript
-  ) {
-    const scriptId = state.scriptSelection.scriptId;
-    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+  const stages = getStagesForScript(state, state.scriptSelection.scriptId);
+  if (stages) {
     const stage = _.find(stages, ['id', stageId]);
     if (stage.unplugged) {
-      return getUnpluggedLessonCompletionStatus(state, scriptId, stageId);
+      return getUnpluggedLessonCompletionStatus(
+        state,
+        state.scriptSelection.scriptId,
+        stageId
+      );
     } else {
       return getPluggedLessonCompletionStatus(state, stage);
     }
   }
-}
-
-export function getLessonSelectionStatus(state, stageId) {
-  const selected = _.map(
-    state.sectionStandardsProgress.selectedLessons,
-    'id'
-  ).includes(stageId);
-  return selected;
 }
 
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
