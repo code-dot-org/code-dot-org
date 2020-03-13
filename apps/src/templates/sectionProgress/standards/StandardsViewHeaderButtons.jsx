@@ -8,7 +8,8 @@ import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {
   setTeacherCommentForReport,
-  getUnpluggedLessonsForScript
+  getUnpluggedLessonsForScript,
+  fetchStudentLevelScores
 } from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../../lib/util/firehose';
@@ -32,7 +33,8 @@ class StandardsViewHeaderButtons extends Component {
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
     selectedLessons: PropTypes.array.isRequired,
-    unpluggedLessons: PropTypes.array.isRequired
+    unpluggedLessons: PropTypes.array.isRequired,
+    fetchStudentLevelScores: PropTypes.func
   };
 
   state = {
@@ -150,7 +152,9 @@ class StandardsViewHeaderButtons extends Component {
         stage_scores: selectedStageScores.concat(unselectedStageScores)
       })
     }).done(() => {
-      this.closeLessonStatusDialog();
+      if (this.state.isLessonStatusDialogOpen) {
+        this.closeLessonStatusDialog();
+      }
     });
   };
 
@@ -183,6 +187,7 @@ class StandardsViewHeaderButtons extends Component {
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}
           handleConfirm={this.closeCreateReportDialogAndPrintReport}
+          handleNext={this.onSaveUnpluggedLessonStatus}
           handleClose={this.closeCreateReportDialog}
           onCommentChange={this.onCommentChange}
           sectionId={this.props.sectionId}
@@ -203,6 +208,9 @@ export default connect(
   dispatch => ({
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
+    },
+    fetchStudentLevelScores(scriptId, sectionId) {
+      dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
   })
 )(StandardsViewHeaderButtons);
