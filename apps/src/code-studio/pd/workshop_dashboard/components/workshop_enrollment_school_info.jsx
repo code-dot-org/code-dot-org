@@ -13,6 +13,7 @@ import {
   SubjectNames,
   CourseKeyMap
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {CSD, CSP} from '../../application/ApplicationConstants';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
@@ -141,6 +142,16 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
+  getApplicationURL(application_id, course) {
+    if (!application_id || ![CSD, CSP].includes(course)) {
+      return null;
+    }
+
+    // Note: These paths are defined in ApplicationDashboard component
+    let path = course === CSD ? 'csd_teachers' : 'csp_teachers';
+    return `https://studio.code.org/pd/application_dashboard/${path}/${application_id}`;
+  }
+
   renderSelectCell(enrollment) {
     const checkBoxClass =
       this.props.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
@@ -179,6 +190,11 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         );
       }
 
+      let application_url = this.getApplicationURL(
+        enrollment.application_id,
+        this.props.workshopCourse
+      );
+
       return (
         <tr key={i}>
           {deleteCell}
@@ -188,7 +204,14 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{enrollment.first_name}</td>
           <td>{enrollment.last_name}</td>
           <td>
-            {enrollment.email} {enrollment.application_id}
+            {enrollment.email}
+            {application_url && (
+              <p>
+                <a href={application_url} target="_blank">
+                  Application
+                </a>
+              </p>
+            )}
           </td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
