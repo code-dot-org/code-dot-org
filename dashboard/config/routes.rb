@@ -27,10 +27,6 @@ Dashboard::Application.routes.draw do
 
   get "/congrats", to: "congrats#index"
 
-  # Redirects to /projects
-  # TODO: (ErinB) remove when gallery_activities are fully deleted
-  get "/gallery", to: "gallery_activities#index"
-
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]
@@ -184,6 +180,8 @@ Dashboard::Application.routes.draw do
       get '/', to: redirect('/projects')
     end
   end
+
+  get "/gallery", to: redirect("/projects")
 
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
