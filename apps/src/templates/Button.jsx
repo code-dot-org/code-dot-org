@@ -216,8 +216,10 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
-    let Tag = href ? 'a' : 'div';
-    Tag = __useDeprecatedTag ? Tag : 'button';
+    let Tag = 'button';
+    if (__useDeprecatedTag) {
+      Tag = href ? 'a' : 'div';
+    }
 
     const sizeStyle = __useDeprecatedTag
       ? styles.sizes[size]
