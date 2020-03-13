@@ -27,8 +27,6 @@ bn-BD:
     থাকা উচিত
   petition_sign_message: 'আপনি যদি সহমত হন, তবে আপনার নাম সই করুন।  # অন্যদের যোগ
     দিতে বলুন।'
-  petition_sign_message_support: আমাদের সমর্থন করলে, আপনার নাম সই করুন। অন্যদের যোগ
-    দিতে বলুন।
   petition_join_others: "# অন্যদের যোগ দিন"
   name: নাম
   email: ই-মেইল

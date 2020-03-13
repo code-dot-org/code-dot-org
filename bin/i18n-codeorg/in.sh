@@ -74,3 +74,7 @@ loc_dir=i18n/locales/source/markdown/public/educate/curriculum/
 mkdir -p $loc_dir
 orig_file=pegasus/sites.v3/code.org/public/educate/curriculum/csf-transition-guide.md
 cp_in $orig_file $loc_dir
+loc_dir=i18n/locales/source/markdown/public/
+mkdir -p $loc_dir
+orig_file=pegasus/sites.v3/code.org/public/csforgood.md
+cp_in $orig_file $loc_dir

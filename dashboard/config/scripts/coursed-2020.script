@@ -1,5 +1,5 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursed/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
@@ -68,7 +68,7 @@ skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_congrats'
 level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
 
-stage 'Dance Part', flex_category: 'csf_events'
+stage 'Dance Party', flex_category: 'csf_events'
 level 'CourseD_Dance_2020_vid1', progression: 'Warm Up'
 level 'CourseD_Dance_2020_01', progression: 'Practice'
 level 'CourseD_Dance_2020_vid2', progression: 'Events'
@@ -84,6 +84,8 @@ level 'CourseD_Dance_2020_08', progression: 'Properties'
 level 'CourseD_Dance_2020_09', progression: 'Properties'
 level 'CourseD_Dance_2020_vid5', progression: 'Wrap-up'
 level 'CourseD_Dance_2020_10', progression: 'Free Play'
+bonus 'CourseD_Dance_2020_bonus1'
+bonus 'CourseD_Dance_2020_bonus3'
 
 stage 'Loops in Ice Age', flex_category: 'csf_loops'
 level 'courseD_iceage_loops1_2020', progression: 'Practice'
@@ -215,4 +217,4 @@ stage 'Digital Citizenship', flex_category: 'csf_digcit'
 level 'DigitalCitizenship-Unplugged_2020'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
-level 'CourseD_Dance_Party_12_2020', progression: 'Free Play'
+level 'courseD_EOC_2020', progression: 'Create your project'
