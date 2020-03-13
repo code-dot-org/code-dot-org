@@ -372,6 +372,12 @@ export const loadScript = (scriptId, sectionId) => {
           dispatch(fetchStandardsCoveredForScript(scriptId));
           dispatch(fetchStudentLevelScores(scriptId, sectionId));
         }
+        if (
+          state.currentView === ViewType.STANDARDS &&
+          !scriptData.hasStandards
+        ) {
+          dispatch(setCurrentView(ViewType.SUMMARY));
+        }
       });
 
     const numStudents = sectionData.students.length;
