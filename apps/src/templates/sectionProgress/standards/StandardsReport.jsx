@@ -163,14 +163,6 @@ class StandardsReport extends Component {
                   </div>
                 )}
                 <h2 style={styles.headerColor}>
-                  {i18n.CSTAStandardsPracticed()}
-                </h2>
-                <StandardsProgressTable
-                  style={styles.table}
-                  isViewingReport={true}
-                />
-                <StandardsLegendForPrint />
-                <h2 style={styles.headerColor}>
                   {i18n.standardsHowToForPrint()}
                 </h2>
                 <SafeMarkdown
@@ -181,6 +173,14 @@ class StandardsReport extends Component {
                     cstaLink: cstaStandardsURL
                   })}
                 />
+                <h2 style={styles.headerColor}>
+                  {i18n.CSTAStandardsPracticed()}
+                </h2>
+                <StandardsProgressTable
+                  style={styles.table}
+                  isViewingReport={true}
+                />
+                <StandardsLegendForPrint />
                 <h2 style={styles.headerColor}>
                   {i18n.standardsGetInvolved()}
                 </h2>
