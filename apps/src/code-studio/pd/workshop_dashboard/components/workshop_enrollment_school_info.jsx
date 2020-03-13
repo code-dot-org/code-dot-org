@@ -187,7 +187,9 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{i + 1}</td>
           <td>{enrollment.first_name}</td>
           <td>{enrollment.last_name}</td>
-          <td>{enrollment.email}</td>
+          <td>
+            {enrollment.email} {enrollment.application_id}
+          </td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
           {this.props.workshopCourse === CSF && (
