@@ -23,8 +23,42 @@ class ProjectsControllerTest < ActionController::TestCase
     section.add_student @navigator
   end
 
-  test "get index" do
+  test "index" do
     get :index
+    assert_response :success
+
+    get :index, params: {tab_name: 'libraries'}
+    assert_response :success
+
+    get :index, params: {tab_name: 'public'}
+    assert_response :success
+  end
+
+  test "index: redirect to public tab if no user" do
+    sign_out :user
+
+    get :index
+    assert_redirected_to '/projects/public'
+
+    get :index, params: {tab_name: 'libraries'}
+    assert_redirected_to '/projects/public'
+
+    # Don't redirect if we're already on /projects/public
+    get :index, params: {tab_name: 'public'}
+    assert_response :success
+  end
+
+  test "index: redirect to '/' if user is admin" do
+    sign_in create(:admin)
+
+    get :index
+    assert_redirected_to '/'
+
+    get :index, params: {tab_name: 'libraries'}
+    assert_redirected_to '/'
+
+    # Don't redirect if we're already on /projects/public
+    get :index, params: {tab_name: 'public'}
     assert_response :success
   end
 

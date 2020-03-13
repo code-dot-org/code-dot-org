@@ -3,7 +3,7 @@
 # Table name: teacher_scores
 #
 #  id            :integer          not null, primary key
-#  user_level_id :integer
+#  user_level_id :integer          unsigned
 #  teacher_id    :integer
 #  score         :integer
 #  created_at    :datetime         not null
@@ -58,44 +58,42 @@ class TeacherScore < ApplicationRecord
 
   def self.get_level_scores_for_script_for_section(script_id, section_id)
     level_scores_by_student_by_stage_by_script = {}
-    stage_ids = Script.find(script_id).stages.pluck(:id)
+    stages = Script.find(script_id).stages
     stage_student_level_scores = {}
-    stage_ids.each do |stage_id|
-      level_scores = get_level_scores_for_stage_for_section(stage_id, section_id)
+    stages.each do |stage|
+      level_scores = get_level_scores_for_stage_for_section(stage, section_id)
       unless level_scores.empty?
-        stage_student_level_scores[stage_id] = level_scores
+        stage_student_level_scores[stage.id] = level_scores
       end
     end
     level_scores_by_student_by_stage_by_script[script_id] = stage_student_level_scores
     level_scores_by_student_by_stage_by_script
   end
 
-  def self.get_level_scores_for_stage_for_section(stage_id, section_id)
+  def self.get_level_scores_for_stage_for_section(stage, section_id)
+    script_id = stage.script_id
     student_ids = Section.find(section_id).students.pluck(:id)
-    student_level_scores = {}
-    student_ids.each do |student_id|
-      level_scores = get_level_scores_for_stage_for_student(stage_id, student_id)
-      unless level_scores.empty?
-        student_level_scores[student_id] = level_scores
-      end
-    end
-    student_level_scores
-  end
-
-  def self.get_level_scores_for_stage_for_student(stage_id, student_id)
-    stage = Stage.find(stage_id)
-    script_id = stage.script.id
     level_ids = stage.script_levels.map(&:level_id)
-    user_levels = UserLevel.where(user_id: student_id, level_id: level_ids, script_id: script_id)
-    level_scores = {}
-    user_levels.each do |user_level|
-      teacher_score = TeacherScore.where(
-        user_level_id: user_level.id
-      )&.order("created_at")&.last&.score
-      if teacher_score
-        level_scores[user_level.level_id] = teacher_score
+    user_levels = UserLevel.select(:id, :level_id, :user_id).where(user_id: student_ids, level_id: level_ids, script_id: script_id)
+
+    teacher_scores = TeacherScore.select(:score, :created_at, :user_level_id).where(
+      user_level_id: user_levels.pluck(:id)
+    )
+
+    level_scores_by_student = {}
+    student_ids.each do |student_id|
+      student_user_levels = user_levels.select {|u_l| u_l.user_id == student_id}
+      student_level_score = {}
+      student_user_levels.each do |u_l|
+        teacher_score = teacher_scores.select {|t_s| t_s.user_level_id == u_l.id}.sort_by(&:created_at).last&.score
+        if teacher_score
+          student_level_score[u_l.level_id] = teacher_score
+        end
+      end
+      unless student_level_score.empty?
+        level_scores_by_student[student_id] = student_level_score
       end
     end
-    level_scores
+    level_scores_by_student
   end
 end

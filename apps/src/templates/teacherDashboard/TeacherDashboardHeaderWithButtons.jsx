@@ -16,9 +16,6 @@ import DropdownButton from '../DropdownButton';
 import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
-  shortH1: {
-    lineHeight: '9px'
-  },
   sectionPrompt: {
     fontWeight: 'bold'
   },
@@ -110,9 +107,11 @@ class TeacherDashboardHeaderWithButtons extends React.Component {
         />
         <div style={styles.header}>
           <div>
-            <h1 style={styles.shortH1}>{this.selectedSection.name}</h1>
+            <h1>{this.selectedSection.name}</h1>
             <div>
-              <span style={styles.sectionPrompt}>Assigned to: </span>
+              <span style={styles.sectionPrompt}>
+                {i18n.assignedToWithColon()}{' '}
+              </span>
               {this.props.selectedSectionScript.name}
             </div>
           </div>

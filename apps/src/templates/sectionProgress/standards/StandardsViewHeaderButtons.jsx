@@ -8,7 +8,8 @@ import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {
   setTeacherCommentForReport,
-  getUnpluggedLessonsForScript
+  getUnpluggedLessonsForScript,
+  fetchStudentLevelScores
 } from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {TeacherScores} from './standardsConstants';
@@ -31,7 +32,8 @@ class StandardsViewHeaderButtons extends Component {
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
     selectedLessons: PropTypes.array.isRequired,
-    unpluggedLessons: PropTypes.array.isRequired
+    unpluggedLessons: PropTypes.array.isRequired,
+    fetchStudentLevelScores: PropTypes.func
   };
 
   state = {
@@ -109,6 +111,10 @@ class StandardsViewHeaderButtons extends Component {
         stage_scores: selectedStageScores.concat(unselectedStageScores)
       })
     }).done(() => {
+      this.props.fetchStudentLevelScores(
+        this.props.scriptId,
+        this.props.sectionId
+      );
       this.closeLessonStatusDialog();
     });
   };
@@ -116,17 +122,21 @@ class StandardsViewHeaderButtons extends Component {
   render() {
     return (
       <div style={styles.buttonsGroup}>
-        <Button
-          onClick={this.openLessonStatusDialog}
-          color={Button.ButtonColor.gray}
-          text={i18n.updateUnpluggedProgress()}
-          size={'narrow'}
-          style={styles.button}
-        />
-        <LessonStatusDialog
-          isOpen={this.state.isLessonStatusDialogOpen}
-          handleConfirm={this.onSaveUnpluggedLessonStatus}
-        />
+        {this.props.unpluggedLessons.length > 0 && (
+          <div>
+            <Button
+              onClick={this.openLessonStatusDialog}
+              color={Button.ButtonColor.gray}
+              text={i18n.updateUnpluggedProgress()}
+              size={'narrow'}
+              style={styles.button}
+            />
+            <LessonStatusDialog
+              isOpen={this.state.isLessonStatusDialogOpen}
+              handleConfirm={this.onSaveUnpluggedLessonStatus}
+            />
+          </div>
+        )}
         <Button
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
@@ -158,6 +168,9 @@ export default connect(
   dispatch => ({
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
+    },
+    fetchStudentLevelScores(scriptId, sectionId) {
+      dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
   })
 )(StandardsViewHeaderButtons);

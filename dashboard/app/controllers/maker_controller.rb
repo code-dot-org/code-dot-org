@@ -1,7 +1,7 @@
 require 'cdo/script_constants'
 
 class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: [:home, :setup]
+  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code]
 
   # Maker Toolkit is currently used in CSD unit 6.
   # Retrieves the current CSD unit 6 level that the user is working on.

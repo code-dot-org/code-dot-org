@@ -36,6 +36,11 @@ module Encryption
     cipher.update(string) + cipher.final
   end
 
+  def self.decrypt_string_utf8(string)
+    decrypted = Base64.decode64(string).encode('ascii-8bit')
+    decrypt_string(decrypted)
+  end
+
   def self.decrypt_object(encrypted)
     return encrypted if encrypted.blank?
 
