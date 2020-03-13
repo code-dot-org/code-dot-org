@@ -740,13 +740,6 @@ tr-TR:
         content1: açıklama burada
       CSD U3 combining rep_2018_2019:
         content1: açıklama burada
-      CSD U3 complex sprite movement SFLP:
-        markdown: 'Sınıf, yer çekimi simülasyonu, bir nesnenin zıplaması, sağa veya
-          sola süzülmek gibi, nesnelerin, daha karmaşık hareketlerini oluşturmak için
-          sayaç desenini kullanarak sürat özelliklerini birleştirmeyi öğrenir. Son
-          seviyelerde sınıf, bu hareketleri bir nesneyi hareket ettirmek ve kontrol
-          etmek için kullanır. Kontrol ettikleri nesneyi uçurarak etraftaki altınları
-          topladıkları basit bir oyun oluştururlar. '
       CSD U3 drawSprites placement match:
         answers:
         - {}
@@ -1206,6 +1199,17 @@ tr-TR:
         content1: açıklama burada
       Terminology Recap:
         content1: açıklama burada
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # Genel bakış
+
+          Bu derste, çeşitli sorunlara yaklaşımınızı yapılandırmanıza yardımcı olacak resmi bir problem çözme süreci öğreneceksiniz.
+
+
+          ## Kaynakça
+
+          *[Problem Çözme Süreci - Aktivite Rehberi]
+          (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
       behaviors 1 predict:
         answers:
         - {}
@@ -1874,6 +1878,22 @@ tr-TR:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
+      csd-post-survey-levelgroup-2018:
+        title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
+      csd-pre-survey-2017-levelgroup:
+        markdown: |-
+          # Genel bakış
+
+          Sınıf, mümkün olduğunca fazla bozuk parayı destekleyecek alüminyum folyo tekneler tasarlamak için gruplar halinde çalışır. Dersin sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtırlar ve dersin geri kalanında yapacakları problem çözme türleriyle bağlantı kurarlar.
+
+
+          ## Kaynakça
+
+          *[Alüminyum botlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Aktivite rehberi ([MS Word] olarak kopyala)
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Belgesi]
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         answers:
         - {}

@@ -158,7 +158,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/puma.git
-  revision: c0f187bc4eba3b1391b9e7c4c4ce39e3cc03fbac
+  revision: d37165cb72a0eb68c8ec2431db39a7693e616bb0
   branch: debugging
   specs:
     puma (3.12.0)
@@ -288,6 +288,9 @@ GEM
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
+    aws-sdk-databasemigrationservice (1.23.0)
+      aws-sdk-core (~> 3, >= 3.53.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-dynamodb (1.9.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
@@ -394,6 +397,9 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    dotiw (4.0.1)
+      actionpack (>= 4)
+      i18n
     erubis (2.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
@@ -889,6 +895,7 @@ DEPENDENCIES
   aws-sdk-cloudwatch (~> 1)
   aws-sdk-cloudwatchlogs (~> 1)
   aws-sdk-core (~> 3)
+  aws-sdk-databasemigrationservice (~> 1)
   aws-sdk-dynamodb (~> 1)
   aws-sdk-ec2 (~> 1)
   aws-sdk-firehose (~> 1.6)
@@ -915,6 +922,7 @@ DEPENDENCIES
   dalli-elasticache
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
+  dotiw
   execjs
   eyes_selenium
   factory_girl_rails

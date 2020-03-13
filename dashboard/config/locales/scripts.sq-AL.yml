@@ -1822,3 +1822,47 @@ sq:
               name: Kushtet
             Functions:
               name: funksione
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Gjurmët e Tua Dixhitale
+            Move It, Move It:
+              name: Lëvize atë, lëvize atë
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Byzylykët Binarë
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programimi i Besuar
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            'Unplugged: Binary':
+              name: 'Unplugged: Binare'
+            Artist Binary:
+              name: Artist Binar
+            Digital Citizenship:
+              name: Shtetësi Dixhitale
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Kushtet
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Variablat Zarf
+            For Loop Fun:
+              name: Qef me Ciklet For
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Bleta Gërmëzuese

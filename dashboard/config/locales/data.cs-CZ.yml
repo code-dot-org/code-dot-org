@@ -579,9 +579,13 @@ cs:
         C4_unplugged_binary: Binární
         CSF_artist_angles: Úhly s Malířem
         CSF_collector_k1_blocks: 'Základy informatiky: Sběračka'
-        CSF_collector_repeat_loops: Sběrač opakuje smyčku
+        CSF_collector_repeat_loops: Sběrač opakuje cyklus
         CSF_collector_text_blocks: 'Základy informatiky: Sběračka'
         CSF_create_functions: Vytváření funkcí
+        CSF_debugging_k1_blocks: Ladění
+        CSF_debugging_text_blocks: Ladění
+        CSF_maze_intro_k1_blocks: Úvod do Code studia
+        CSF_maze_intro_text_blocks: Úvod do Code studia
         CSF_my_robotic_friends: Mí robotičtí přátelé
         CSF_Power_of_Words: Síla slov
         CSF_Super_Digital_Citizen: Super digitální občan
@@ -613,10 +617,10 @@ cs:
         starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
         starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
-        starwars_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        starwars_congrats: 'Hvězdné války: Budování Galaxie s kódem - blahopřejeme'
         starwars_blocks_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_blocks_events: 'Hvězdné války: Budování Galaxy s kódem - události'
-        starwars_blocks_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        starwars_blocks_congrats: 'Hvězdné války: Budování Galaxie s kódem - blahopřejeme'
         mc_intro: Minecraft - Úvod
         mc_repeat: Minecraft - opakování
         mc_if_statements: Minecraft - if příkazy
@@ -641,15 +645,19 @@ cs:
         mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
+        CSF_scrat_loops_K1: Cykly v době ledové
+        CSF_scrat_loops_CF: Cykly v době ledové
         CSF_loops_AB: Cykly
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         hoc_dance_warmup: Dance Party - Na rozehřátí
         hoc_dance_congrats: Dance Party - Jedeme dál!
+        what_is_cs: Co je informatika?
         lesson_planning: Plánování hodiny
         writing_first_program: Psaní svého prvního počítačového programu
         csd_pair_programming: Párové programování
         csd_applab_parameters: Funkce s Parametry
         CSF_Going_Places_Safely: Mé online sousedství
+        csd_debugging: Ladění
         csp-pd-welcome: Vítej v rodině!
         oceans_machine_learning: Strojové učení
         hoc_dance_congrats_2019: Dance Party 2019 - Jedeme dál!
@@ -694,8 +702,8 @@ cs:
         which_equation: Která rovnost dává každé straně tvary kratší s více stranami?
         get_nectar: Používej nový blok "získat nektar".
         actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
-        draw_square_hint: 'Tip: Použij čtvercovou smyčku, právě provedenou v posledním
-          puzzlu.'
+        draw_square_hint: 'Tip: Použij čtvercový cyklus, který jsi právě udělal v
+          poslední úloze.'
         edit_function: Klepnutím sem upravíš svou funkci.
         create_function: Klepnutím sem se otevře vysouvací "Funkce", pak klepni na
           tlačítko "Vytvoř funkci".

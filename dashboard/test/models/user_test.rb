@@ -22,7 +22,13 @@ class UserTest < ActiveSupport::TestCase
       user_type: User::TYPE_STUDENT,
       age: 8
     }
-
+    @good_data_google_classroom_import = {
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 8,
+      provider: AuthenticationOption::GOOGLE,
+      uid: '110879982140384463192',
+    }
     @admin = create :admin
     @user = create :user
     @teacher = create :teacher
@@ -364,6 +370,20 @@ class UserTest < ActiveSupport::TestCase
     # Now create second user with duplicate username with different case
     user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email].upcase)))
     assert_equal ['Email has already been taken'], user.errors.full_messages
+  end
+
+  test 'cannot create user when a user with the same credentials exists' do
+    User.create(@good_data_google_classroom_import)
+    duplicate_user = User.create(@good_data_google_classroom_import)
+    assert_not_empty(duplicate_user.errors)
+    assert(duplicate_user.errors[:uid])
+  end
+
+  test 'cannot create user when an non-migrated user with the same credentials exists' do
+    User.create(@good_data_google_classroom_import).demigrate_from_multi_auth
+    duplicate_user = User.create(@good_data_google_classroom_import)
+    assert_not_empty(duplicate_user.errors)
+    assert(duplicate_user.errors[:uid])
   end
 
   #

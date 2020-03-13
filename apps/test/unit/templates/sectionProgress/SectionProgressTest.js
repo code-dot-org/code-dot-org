@@ -43,9 +43,7 @@ describe('SectionProgress', () => {
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
-      showStandardsIntroDialog: false,
-      fetchStandardsCoveredForScript: () => {},
-      fetchStudentLevelScores: () => {}
+      showStandardsIntroDialog: false
     };
   });
 

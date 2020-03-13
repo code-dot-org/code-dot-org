@@ -190,7 +190,7 @@ ga-IE:
       CourseD_Dance_Party_01: |-
         _Déanaimis damhsa!_
 
-        Tarraing an bloc `déan ... nua` go dtí an spás oibre, agus ceangail é laistigh den bhloc `socraigh` chun do chéad damhsóir a chruthú.
+        Tarraing an bloc `déan ... nua` go dtí an spás oibre, agus ceangail é laistigh den bhloc `socrú` chun do chéad damhsóir a chruthú.
 
         -   _Is féidir leat an bolgán solais ar chlé a chliceáil chun tuilleadh eolais nó dúshláin bhreise a fháil._
       CourseD_Dance_Party_02: |-
@@ -203,10 +203,59 @@ ga-IE:
         type=\"Dancelab_atTimestamp\" block-text=\"after 6 measures\"><title name=\"TIMESTAMP\">6</title><title
         name=\"UNIT\">\"measures\"</title></block></xml> leis an spás oibre ionas
         go dtosóidh an damhsóir steip nua tar éis sé thomhas."
+      CourseD_Dance_Party_04: |-
+        _Tá cuma leadránach ar an damhsa seo mar atá!_
+
+        Lorg an bloc nua sa mbosca uirlisí a chuireann éifeacht taobh thiar den damhsóir. Breathnaigh ar an mbealach a athraíonn na héifeachtaí in éineacht leis an gceol!
       CourseD_Dance_Party_05: |-
         Úsáid bloc nua eile le tabhairt ar an damhsóir a steip a athrú **gach dhá thomhas**!
 
         -   Má roghnaíonn tú `(Ar Aghaidh)`, `(Siar)`, nó `(Randamach)`, déanfaidh an damhsóir steip difriúil gach uair a ritheann tú an cód.
+      CourseD_Dance_Party_06: |-
+        _Teastaíonn tuilleadh damhsóirí uainn!_
+
+        Cruthaigh damhsóir tionlacain darb ainm `backup_dancer1` a dhéanfaidh damhsa leis an gcat.
+      CourseD_Dance_Party_08: |-
+        Tá tacar _airíonna_ ag gach damhsóir a rialaíonn an chuma atá air.
+
+        Is féidir leat damhsóir a chur sa chúlra trí _méid_ an damhsóra sin a laghdú. An bhfuil tú in ann an mhéid chéanna a chur ar an dá dhamhsóir tionlacain?
+      CourseD_Dance_Party_09: |-
+        Tá airí "imir" ag gach damhsóir lenar féidir leat sraith datha a chur leis. Athraigh an imir ar cheann de na damhsóirí.
+
+        -   Meascfar an imir a roghnaíonn tú le dathanna an damhsóra.
+      CourseD_Dance_Party_10: |-
+        Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
+          <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
+
+        Úsáideann an cód seo an leibhéal "dord" (na fuaimeanna ísle) chun airde damhsóra amháin a athrú. An bhfuil tú in ann airíonna an damhsóra eile a athrú bunaithe ar an gceol?
+      CourseD_Dance_Party_11b: |-
+        Tá sé in am comórtas damhsa a dhéanamh! Déanann an Cat daba nuair a bhrúnn tú an tsaighead chlé. Tabhair ar an Róbat "titim" a dhéanamh nuair a bhrúnn tú an tsaighead dheas, agus "bualadh bos" a dhéanamh nuair a bhrúnn tú an tsaigheas suas.
+
+        **Úsáid na heochracha agus tabhair ar an Róbat titim-bos-titim-bos a dhéanamh chomh gasta agus is féidir!**
+      CourseD_Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn
+        le cairde é.
+      Crack a Caesar Cipher: |-
+        # Bris sifear Chaesair!
+
+        Leis an uirlis seo, beidh tú in ann imirt le téacsanna agus sifir Chaesair a chruthú. Úsáid í chun teachtaireacht a chriptiú nó a dhíchriptiú.
+
+        # Déan é seo
+
+        -   Lódáil **Teachtaireacht shamplach** ón roghchlár aníos Teachtaireacht. Lódálfar teachtaireacht a criptíodh le sifear Chaesair.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Úsáid na cnaipí sa chluaisín Ionadú Chaesair chun an aibítir a aistriú ar aghaidh nó ar gcúl chun iarracht a dhéanamh an teachtaireacht a dhíchriptiú.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Cé chomh fada a thógann sé an sifear a bhriseadh? An modh criptithe éifeachtach é seo?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance Party 2: "Bhí an t-eachtrán bródúil as a scileanna damhsa ar Mhars, ach
         anois ní féidir leis ach dul anonn is anall. \n\nAn féidir leat an t-iompar
         taobh istigh den bhloc <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
@@ -264,10 +313,12 @@ ga-IE:
         Is féidir leat airíonna na ndamhsóirí a athrú go leanúnach trí na blocanna nua i do bhosca uirlisí a chur laistigh den bhloc Athdhéan. Bí cruthaitheach agus déan spraoi!
 
         _Brúigh an cnaipe Críochnaigh nuair a bheidh tú críochnaithe._
+      Dance_2019_10: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn le
+        cairde é.
       Dance_Party_01: |-
         _Déanaimis damhsa!_
 
-        Tarraing an bloc `déan ... nua` go dtí an spás oibre, agus ceangail é laistigh den bhloc `socraigh` chun do chéad damhsóir a chruthú.
+        Tarraing an bloc `déan ... nua` go dtí an spás oibre, agus ceangail é laistigh den bhloc `socrú` chun do chéad damhsóir a chruthú.
 
         -   _Is féidir leat an bolgán solais ar chlé a chliceáil chun tuilleadh eolais nó dúshláin bhreise a fháil._
       Dance_Party_02: |-
@@ -279,10 +330,35 @@ ga-IE:
       Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         leis an spás oibre ionas go dtosóidh an damhsóir steip nua tar éis sé thomhas."
+      Dance_Party_04: |-
+        _Tá cuma leadránach ar an damhsa seo mar atá!_
+
+        Lorg an bloc nua sa mbosca uirlisí a chuireann éifeacht taobh thiar den damhsóir. Breathnaigh ar an mbealach a athraíonn na héifeachtaí in éineacht leis an gceol!
       Dance_Party_05: |-
         Úsáid bloc nua eile le tabhairt ar an damhsóir a steip a athrú **gach dhá thomhas**!
 
         -   Má roghnaíonn tú `(Ar Aghaidh)`, `(Siar)`, nó `(Randamach)`, déanfaidh an damhsóir steip difriúil gach uair a ritheann tú an cód.
+      Dance_Party_06: |-
+        _Teastaíonn tuilleadh damhsóirí uainn!_
+
+        Cruthaigh damhsóir tionlacain darb ainm `backup_dancer1` a dhéanfaidh damhsa leis an gcat.
+      Dance_Party_08: |-
+        Tá tacar _airíonna_ ag gach damhsóir a rialaíonn an chuma atá air.
+
+        Is féidir leat damhsóir a chur sa chúlra trí _méid_ an damhsóra sin a laghdú. An bhfuil tú in ann an mhéid chéanna a chur ar an dá dhamhsóir tionlacain?
+      Dance_Party_09: |-
+        Tá airí "imir" ag gach damhsóir lenar féidir leat sraith datha a chur leis. Athraigh an imir ar cheann de na damhsóirí.
+
+        -   Meascfar an imir a roghnaíonn tú le dathanna an damhsóra.
+      Dance_Party_10: |-
+        Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
+          <block type="Dancelab_startMapping">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
+
+        Úsáideann an cód seo an leibhéal "dord" (na fuaimeanna ísle) chun airde damhsóra amháin a athrú. An bhfuil tú in ann airíonna an damhsóra eile a athrú bunaithe ar an gceol?
       Dance_Party_11: "Leis an mbloc <xml><block type=\"Dancelab_whenKey\"></block></xml>,
         is féidir leat cód a rith nuair a bhrúitear an tsaighead suas. \n\nD'fhéadfá
         an steip dhamhsa nó airíonna damhsóra a athrú, nó steip ghasta a dhéanamh
@@ -300,6 +376,12 @@ ga-IE:
         Ligeann sé duit grúpa damhsóirí a chruthú in aon iarraidh amháin!
 
         Bain triail as roinnt de na blocanna "gach lacha" chun cód a scríobh sa chaoi go ndéanfaidh na lachain damhsa le chéile.
+      Dance_Party_11b: |-
+        Tá sé in am comórtas damhsa a dhéanamh! Déanann an Cat daba nuair a bhrúnn tú an tsaighead chlé. Tabhair ar an Róbat "titim" a dhéanamh nuair a bhrúnn tú an tsaighead dheas, agus "bualadh bos" a dhéanamh nuair a bhrúnn tú an tsaigheas suas.
+
+        **Úsáid na heochracha agus tabhair ar an Róbat titim-bos-titim-bos a dhéanamh chomh gasta agus is féidir!**
+      Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn le
+        cairde é.
       Dance_Party_extras_alternate_2019: |-
         # Anonn agus Anall!
 

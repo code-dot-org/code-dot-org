@@ -1,5 +1,5 @@
 hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursee/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursee/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}'
@@ -202,5 +202,4 @@ bonus 'courseE_artist_functions_challenge2_2020'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseE_project_exemplars_2019_2020', progression: 'Example Projects'
-level 'CourseE_Project_SpriteLab_2020', progression: 'Sprite Lab Project'
-level 'Course E: Artist Project_2020', progression: 'Artist Project'
+level 'courseE_EOC_2020', progression: 'Create your project'

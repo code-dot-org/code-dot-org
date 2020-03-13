@@ -96,6 +96,14 @@ sq-AL:
         do something: bëj diqka
       NEW Course 4 Play Lab Params 11:
         jump: hidhu
+      New Artist Project:
+        draw a star: vizato një yll
+        draw a circle: vizato një rreth
+        draw a triangle: vizato nje trekendesh
+        draw a house: vizato një shtëpi
+        draw a square: vizato një katror
+      New Play Lab Project:
+        jump: hidhu
       Standalone_Artist_7:
         draw a flower: vizato një lule
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ sq-AL:
       courseE_artist_functions7:
         draw a house: vizato një shtëpi
       courseE_artist_functions7_2018:
-        draw a house: vizato një shtëpi
-      courseE_artist_functions7_2019:
         draw a house: vizato një shtëpi
       courseE_artist_functions8:
         do something: bëj diqka

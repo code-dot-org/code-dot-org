@@ -1023,3 +1023,4 @@
   page_not_found_header: '404: Side Ikke Funnet'
   page_not_found_description: "Siden du leter etter finnes ikke på denne adressen. Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden."
   page_not_found_button: "Returner hjem"
+  copy: 'Kopier'

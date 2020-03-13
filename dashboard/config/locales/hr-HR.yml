@@ -628,3 +628,4 @@ hr:
     accept: Slažem se
   gdpr_dialog:
     true: Da
+  copy: Kopiraj

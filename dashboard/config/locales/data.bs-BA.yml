@@ -550,6 +550,8 @@ bs:
         hoc_dance_properties: Plesna zabava - Osobenosti
         csd_pair_programming: Programiranje u Paru
         csd_applab_parameters: Funkcije sa Parametrima
+        hoc_dance_events_2019: Plesna zabava - Događaji
+        hoc_dance_properties_2019: Plesna zabava - Osobenosti
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka
