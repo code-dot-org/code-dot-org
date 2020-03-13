@@ -3103,6 +3103,8 @@ pt-BR:
               name: Ficando maluco com o cachorrinho
             Make a Dog Tag:
               name: Faça uma Coleira de Cachorro
+            More CS with Run Marco:
+              name: Mais CS com Run Marco
             New Home for My Pet:
               name: Nova casa para meu animal de estimação
             Online Internet Safety:
@@ -3717,6 +3719,8 @@ pt-BR:
               name: Segurança na Internet Online
             Build a Flappy Game:
               name: Crie um Flappy Game
+            More CS with Run Marco:
+              name: Mais CS com Run Marco
             Binary Bracelets:
               name: Pulseiras binárias
             Events in Play Lab:
@@ -4158,6 +4162,8 @@ pt-BR:
               name: Obtendo e configurando propriedades
             The Program Design Process:
               name: O processo de design de programa
+            Getters:
+              name: Getters
             Getting Properties:
               name: Obtendo propriedades
             Designing Screens with Code:
@@ -5246,7 +5252,7 @@ pt-BR:
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
               description_student: Aqui você aprenderá sobre algoritmos usando quebra-cabeças chamados tangrams!
-              description_teacher: "\nEsta lição nos mostra algo importante sobre algoritmos. Contanto que você mantenha um algoritmo simples, existem várias maneiras de usá-lo. No entanto, se você quiser garantir que todos produzam o mesmo resultado, seu algoritmo precisará de mais detalhes. Os alunos aprenderão a diferença entre um algoritmo detalhado e geral enquanto brincam com tangramas."
+              description_teacher: Esta lição nos mostra algo importante sobre algoritmos. Contanto que você mantenha um algoritmo simples, existem várias maneiras de usá-lo. No entanto, se você quiser garantir que todos produzam o mesmo resultado, seu algoritmo precisará de mais detalhes. Os alunos aprenderão a diferença entre um algoritmo detalhado e geral enquanto brincam com tangramas.
             Introduction:
               name: Introdução a quebra-cabeças online
               description_student: "\nEsta lição fornecerá uma breve introdução a algumas das coisas incríveis que você aprenderá neste curso!"
@@ -5258,7 +5264,7 @@ pt-BR:
             Ice Age Play Lab:
               name: Eventos na Era do Gelo
               description_student: Pense no seu videogame favorito. Já se perguntou como foi feito? Nesses quebra-cabeças, você desenvolverá um videogame com seus amigos da Era do Gelo!
-              description_teacher: "\nNesta lição, os alunos são guiados por uma história com personagens da Era do Gelo. Os alunos trabalharão com eventos e loops para fazer com que os personagens se movam na tela e terão a chance de criar seu próprio jogo ou história após os níveis guiados."
+              description_teacher: Nesta lição, os alunos são guiados por uma história com personagens da Era do Gelo. Os alunos trabalharão com eventos e loops para fazer com que os personagens se movam na tela e terão a chance de criar seu próprio jogo ou história após os níveis guiados.
             Envelope Variables:
               name: 'Variáveis: variáveis de envelope'
               description_student: "Envelopes e variáveis ​​têm algo em comum: ambos podem conter coisas valiosas. Aqui você aprenderá o que são variáveis ​​e as coisas impressionantes que podem fazer\n\nroot -> data -> script -> name -> coursef-2018 -> stages -> Envelope Variables -> description_student\nhttps://studio.code.org/s/coursef-2018 INTRO"
@@ -5324,7 +5330,7 @@ pt-BR:
             Conditionals in Minecraft:
               name: Condicionais no Minecraft
               description_student: "\nEvite a lava! Aqui você aprenderá sobre condicionais no mundo do Minecraft."
-              description_teacher: "\nEsta lição oferece aos alunos a chance de aprender e praticar condicionais. Possui caracteres e configurações do Minecraft, e os alunos concluirão tarefas como minerar e construir estruturas usando seus programas."
+              description_teacher: Esta lição oferece aos alunos a chance de aprender e praticar condicionais. Possui caracteres e configurações do Minecraft, e os alunos concluirão tarefas como minerar e construir estruturas usando seus programas.
             Functions in Bee:
               name: Funções na Abelha
             'Programming: My Robotic Friends':
@@ -5447,6 +5453,7 @@ pt-BR:
             CSD Thursday:
               name: CSD Quinta-feira
           title: ver respostas iniciantes
+          description_audience: brook, dani, mal
           description_short: N / D
           description: N / D
         csp1-dlp:
@@ -5705,6 +5712,7 @@ pt-BR:
             Spelling Bee:
               name: Soletrando
           title: Expresso de Pré-Leitor
+          assignment_family_title: Pré-leitor Express
           description_audience: 'Idades: 4-8'
           description_short: 'Uma introdução à ciência da computação para pré-leitores: combina o melhor do nosso jardim de infância e cursos de primeira série.'
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
@@ -6349,10 +6357,26 @@ pt-BR:
               name: CSP pré pesquisa de inspeção 2017
             CSD/P pulse check survey 2017:
               name: CSD/P pesquisa de verificação de pulso 2017
+            CSD mid and post survey 2017 staging:
+              name: CSD etapa intermediária e pós-pesquisa 2017
+            CSP mid and post survey 2017 staging:
+              name: CSP etapa intermediária e pós-pesquisa 2017
             CSP post survey 2018 staging:
               name: CSP pré pesquisa de inspeção 2018
             CSD post survey 2018 staging:
-              name: CSP pré pesquisa de inspeção 2018
+              name: CSP pós pesquisa de inspeção 2018
+            CSD pre survey 2018 staging:
+              name: CSD pré-pesquisa 2018 estadiamento
+            CSP pre survey 2018 staging:
+              name: CSP pré-pesquisa 2018 estadiamento
+            CSP mid survey 2018 stagin:
+              name: CSP pesquisa intermediária 2018 stagin
+            CSP mid survey 2018 staging:
+              name: CSP pesquisa intermediária 2018 staging
+            CSP post course survey 2019 staging:
+              name: CSP Pesquisa pós-curso 2019 staging
+            CSD post course survey 2019 staging:
+              name: CSD Pesquisa pós-curso 2019 staging
             Place for testing crazy stuff:
               name: Lugar para testar coisas loucas
           title: Todas as pesquisas
@@ -7166,6 +7190,8 @@ pt-BR:
           stages:
             Programming with Behaviors:
               name: Programação com comportamentos
+            Programming with Forever:
+              name: Programando com Forever
             Using Behaviors:
               name: Usando comportamentos
             Using Forever Loops:
@@ -7497,7 +7523,7 @@ pt-BR:
             'Algorithms: Tangrams':
               name: 'Algoritmos: Tangrams'
               description_student: Aqui você aprenderá sobre algoritmos usando quebra-cabeças chamados tangrams!
-              description_teacher: "\nEsta lição nos mostra algo importante sobre algoritmos. Contanto que você mantenha um algoritmo simples, existem várias maneiras de usá-lo. No entanto, se você quiser garantir que todos produzam o mesmo resultado, seu algoritmo precisará de mais detalhes. Os alunos aprenderão a diferença entre um algoritmo detalhado e geral enquanto brincam com tangramas."
+              description_teacher: Esta lição nos mostra algo importante sobre algoritmos. Contanto que você mantenha um algoritmo simples, existem várias maneiras de usá-lo. No entanto, se você quiser garantir que todos produzam o mesmo resultado, seu algoritmo precisará de mais detalhes. Os alunos aprenderão a diferença entre um algoritmo detalhado e geral enquanto brincam com tangramas.
             Introduction:
               name: Introdução
               description_student: "\nEsta lição fornecerá uma breve introdução a algumas das coisas incríveis que você aprenderá neste curso!"
@@ -7509,11 +7535,11 @@ pt-BR:
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
               description_student: Pense no seu videogame favorito. Já se perguntou como foi feito? Nesses quebra-cabeças, você desenvolverá um videogame com seus amigos da Era do Gelo!
-              description_teacher: "\nNesta lição, os alunos são guiados por uma história com personagens da Era do Gelo. Os alunos trabalharão com eventos e loops para fazer com que os personagens se movam na tela e terão a chance de criar seu próprio jogo ou história após os níveis guiados."
+              description_teacher: Nesta lição, os alunos são guiados por uma história com personagens da Era do Gelo. Os alunos trabalharão com eventos e loops para fazer com que os personagens se movam na tela e terão a chance de criar seu próprio jogo ou história após os níveis guiados.
             Conditionals in Minecraft:
               name: Condicionais no Minecraft
               description_student: "\nEvite a lava! Aqui você aprenderá sobre condicionais no mundo do Minecraft."
-              description_teacher: "\nEsta lição oferece aos alunos a chance de aprender e praticar condicionais. Possui caracteres e configurações do Minecraft, e os alunos concluirão tarefas como minerar e construir estruturas usando seus programas."
+              description_teacher: Esta lição oferece aos alunos a chance de aprender e praticar condicionais. Possui caracteres e configurações do Minecraft, e os alunos concluirão tarefas como minerar e construir estruturas usando seus programas.
             Envelope Variables:
               name: Variáveis do envelope
               description_student: "Envelopes e variáveis ​​têm algo em comum: ambos podem conter coisas valiosas. Aqui você aprenderá o que são variáveis ​​e as coisas impressionantes que podem fazer\n\nroot -> data -> script -> name -> coursef-2018 -> stages -> Envelope Variables -> description_student\nhttps://studio.code.org/s/coursef-2018 INTRO"
@@ -8170,14 +8196,17 @@ pt-BR:
           title: CS Princípios Unidade 2 Aprendizagem Mais Profunda 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
           description_short: 'Materiais de aprendizagem mais profundos para os facilitadores dos princípios de CS no treinamento '
+          description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 2 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 3 Deeper Learning Reflections:
               name: Unidade 3 - Reflexões de aprendizado mais profundo
+          title: CS Principios Unidade 3 Aprendizagem Mais Profunda 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
           description_short: 'Materiais de aprendizagem mais profundos para os facilitadores dos princípios de CS no treinamento '
+          description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 3 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8186,31 +8215,51 @@ pt-BR:
               name: Unidade 3 - Reflexões de aprendizado mais profundo
             Complete Unit 4 Deeper Learning Reflections:
               name: Unidade 4 - Reflexões de aprendizado mais profundo
+          title: CS Principios Unidade 4 Aprendizagem Mais Profunda 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
           description_short: 'Materiais de aprendizagem mais profundos para os facilitadores dos princípios de CS no treinamento '
+          description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para os facilitadores de CS do Code.org CS. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 4 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 5 Deeper Learning Reflections:
               name: Unidade 5 - Reflexões de aprendizado mais profundo
+          title: CS Principios Unidade 5 Aprendizado Mais Profundo 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
           description_short: 'Materiais de aprendizagem mais profundos para os facilitadores dos princípios de CS no treinamento '
+          description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios CS do Code.org. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade 5 do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 6 Deeper Learning Reflections:
               name: Unidade 6 - Reflexões de aprendizado mais profundo
+            Complete Explore AP Unit Deeper Learning Reflections:
+              name: Conclua as reflexões de aprendizado mais profundo da unidade AP
+            Complete Explore Deeper Learning Reflections:
+              name: Reflexões completas sobre a aprendizagem mais profunda
+          title: Princípios da CS exploram um aprendizado mais profundo 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
           description_short: 'Materiais de aprendizagem mais profundos para os facilitadores dos princípios de CS no treinamento '
+          description: 'Esta é a unidade Explore AP do Plano de Aprendizagem Mais Profunda para os facilitadores de Princípios CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade Explore AP do Currículo de Princípios CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Create Deeper Learning Reflections:
+              name: Conclua Crie Reflexões de Aprendizado Mais Profundo
+          title: Princípios do CS criam aprendizado mais profundo 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
           description_short: 'Materiais de aprendizagem mais profundos para os facilitadores dos princípios de CS no treinamento '
+          description: 'Esta é a unidade de criação de AP do plano de aprendizagem mais profunda para os facilitadores de princípios de CS do Code.org em treinamento. Aqui você encontrará orientações e orientações para demonstrar a proficiência como facilitador da Unidade Criar AP do Currículo de Princípios de CS do Code.org. Os itens de revisão por pares estão disponíveis na parte inferior desta página, depois de enviar suas próprias reflexões para a unidade. '
         csd-post-survey:
+          stages:
+            CSD post-course survey:
+              name: CSD pesquisa pós-curso
+          title: CSD pesquisa pós-curso de estudantes ('18'19)
+          description_audience: CSD estudantes
+          description_short: CSD pesquisa pós-curso de estudantes
           description: Bem-vindo à Pesquisa de Pós-Curso em Descobertas da CS do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
         csd-novice-18:
           stages:
@@ -8240,7 +8289,10 @@ pt-BR:
               name: Dia 3
             Day 4:
               name: Dia 4
+          title: CS Descobertas de Reflexões para Iniciantes 2018-2019
           description_audience: CS Descobertas facilitadoras em Treinamento 2
+          description_short: 'Materiais de reflexão iniciais para os facilitadores do CS Discoveries em treinamento '
+          description: Este é o conjunto de reflexões iniciantes para os facilitadores do CS das Descobertas do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -8253,6 +8305,8 @@ pt-BR:
               name: Quinta-feira
             Wrap Up:
               name: Resumo
+            Apprentice Reflection Overview:
+              name: Visão Geral da Reflexão do Aprendiz
             Day 1:
               name: Dia 1
             Day 2:
@@ -8261,7 +8315,10 @@ pt-BR:
               name: Dia 3
             Day 4:
               name: Dia 4
+          title: CS Descobertas de Reflexões do Aprendiz 2018-2019
           description_audience: CS Descobertas facilitadoras em Treinamento 2
+          description_short: 'Materiais de reflexão para aprendizes dos facilitadores do CS Discoveries em treinamento '
+          description: Este é o conjunto de reflexões de aprendizes para os facilitadores do Code.org CS Discoveries em treinamento durante o workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -8284,7 +8341,10 @@ pt-BR:
               name: Dia 3
             Day 4:
               name: Dia 4
+          title: Princípios do CS Reflexões para iniciantes 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
+          description_short: 'Materiais de reflexão iniciantes para os facilitadores dos Princípios de CS no treinamento '
+          description: Este é o conjunto de reflexões iniciantes para os facilitadores dos Princípios de CS do Code.org em treinamento durante o workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -8297,6 +8357,8 @@ pt-BR:
               name: Quinta-feira
             Wrap Up:
               name: Resumo
+            Apprentice Reflection Overview:
+              name: Visão Geral da Reflexão do Aprendiz
             Day 1:
               name: Dia 1
             Day 2:
@@ -8305,9 +8367,15 @@ pt-BR:
               name: Dia 3
             Day 4:
               name: Dia 4
+          title: CS Princípios de Aprendizagem Reflexões 2018-2019
           description_audience: Facilitadores dos princípios de CS no treinamento 2018-2019
+          description_short: 'Materiais de reflexão para os facilitadores dos Princípios de CS no treinamento '
+          description: Este é o conjunto de reflexões de aprendizes para os facilitadores dos Princípios de CS do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no fim de semana de treinamento de facilitadores.
         pre-express-2018:
+          title: Pré-leitor Express (2018)
+          assignment_family_title: Pré-leitor Express
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: 'Uma introdução à ciência da computação para pré-alfabetizados: combina o melhor do jardim de infância e cursos do ensino fundamental.'
           description_audience: 'Idades: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -8367,11 +8435,19 @@ pt-BR:
             Labyrinth:
               name: Labirinto
         deepdive-debugging:
+          stages:
+            Debugging for AB Educators:
+              name: Depuração para educadores da AB
+            Debugging for CDEF Educators:
+              name: Depuração para educadores da CDEF
           title: Lições de depuração para educadores
         fit-test:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Practice Question:
+              name: Questão de pratica completa
+          title: Curso PLC de Práticas de Treinamento FIT
           description_audience: Facilitadores no treinamento
           description_short: Curso de Treinamento FIT
           description: Para ser usado para demonstrar como os cursos de CLP funcionam.
@@ -8474,6 +8550,8 @@ pt-BR:
               name: Explorar Condicionais
             Conditionals Investigate:
               name: Investigar Condicionais
+            Teacher Surveys:
+              name: Pesquisa de Professor
             Conditionals Practice:
               name: Prática de Condicionais
             Conditional Make:
@@ -8647,8 +8725,13 @@ pt-BR:
               description_teacher: Na ciência da computação, enfrentamos alguns problemas grandes e assustadores. Desafios como encontrar grandes números primos ou sequenciar o DNA são quase impossíveis de serem feitos individualmente. Adicionar o poder de outras pessoas torna essas tarefas gerenciáveis. Esta lição mostrará aos alunos como o trabalho em equipe pode ser útil no setor de ciência da computação.
             Digital Sharing:
               name: Compartilhamento Digital
+              description_student: 'Nesta lição, você aprenderá sobre os desafios e benefícios da propriedade e dos direitos autorais. '
               description_teacher: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes a entenderem os desafios e benefícios de respeitar posse e direitos autorais, particularmente em ambientes digitais. Estudantes deveriam ser encorajados a respeitar os direitos dos artistas como uma parte importante de ser um cidadão digital ético.
+            Running Simulations:
+              name: Executar simulações
             Simulating Experiments:
+              name: Simulação de experimentos
+              description_student: Execute simulações no computador e experimente alterando variáveis.
               description_teacher: Ao executar uma simulação simples no Sprite Lab, os alunos experimentarão como a computação pode ser usada para coletar dados que identificam tendências ou padrões. Depois de executar a simulação várias vezes, os alunos terão a oportunidade de fazer uma previsão sobre como a alteração de uma variável na simulação pode impactar o resultado e depois testar essa hipótese.
         dance-low:
           stages:
@@ -9242,10 +9325,15 @@ pt-BR:
               description_teacher: Com base no conceito de repetir instruções de "Happy Loops", nesta etapa, os alunos usarão loops para chegar à bolota com mais eficiência no Code.org.
             Programming in Ice Age:
               name: Programação com Scrat
+              description_student: Escreva programas para ajudar Scrat a alcançar a bolota.
+              description_teacher: Usando personagens da Era do Gelo, os alunos desenvolverão algoritmos seqüenciais para mover o Scrat de um lado de um labirinto para a bolota do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.
             Programming with Rey and BB-8:
               name: Programação com Rey e BB-8
+              description_student: Ajude o BB-8 a coletar a sucata.
+              description_teacher: Nesta lição, os alunos usarão suas novas habilidades de programação de maneiras mais complicadas para navegar em um curso complicado com o BB-8.
             Sequencing with Scrat:
               name: Sequenciando com Scrat
+              description_student: Programe Scrat para alcançar a bolota.
               description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
         courseb-2019:
           title: Curso B (2019)
@@ -9255,10 +9343,14 @@ pt-BR:
           stages:
             Move It, Move It:
               name: Criando caminhos
+              description_student: Programe seus colegas de classe para caminhar com cuidado de um lugar para outro.
+              description_teacher: Esta lição trabalhará para preparar mentalmente os alunos para os exercícios de codificação que eles encontrarão ao longo deste curso. Em equipes pequenas, os alunos usarão atividade física para programar seus colegas de classe para que sigam com cuidado de um lugar para outro até que uma meta seja alcançada.
             Sequencing with Scrat:
               name: Sequenciando com Scrat
             Your Digital Footprint:
               name: Seu rastro digital
+              description_student: 'Aprenda sobre sua pegada digital e como se manter seguro ao visitar sites. '
+              description_teacher: Em colaboração com [r common-sense-media], esta lição ajuda os alunos a aprender sobre as semelhanças de permanecer seguro no mundo real e ao visitar sites. Os alunos também aprenderão que as informações que colocam on-line deixam uma pegada digital ou "trilha". Essa trilha pode ser grande ou pequena, útil ou prejudicial, dependendo de como eles a gerenciam.
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
             Programming in Ice Age:
@@ -9273,20 +9365,32 @@ pt-BR:
               name: Laços na Era do gelo
             Loops in Collector:
               name: Repetições com Laurel
+              description_student: Programe Laurel, o aventureiro, para coletar tesouros em uma caverna aberta.
+              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.
             Loops in Artist:
               name: Desenho jardins com repetições
+              description_student: Use padrões e loops para finalizar as imagens.
+              description_teacher: Voltando aos loops, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na lição on-line anterior, loops foram usados ​​para atravessar um labirinto e coletar tesouros. Aqui, os alunos usam loops para criar padrões. No final desta etapa, os alunos terão a oportunidade de criar suas próprias imagens usando loops.
             'Events: The Big Event':
               name: O Grande Evento Jr.
+              description_student: Mova-se ou grite quando o professor pressionar botões em um controle remoto gigante.
               description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
             Events in Play Lab:
               name: Um Battle Royal com eventos
+              description_student: Use eventos para criar uma história ou criar um jogo interativo.
+              description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
             'Loops: Getting Loopy':
               name: Repetindo
+              description_student: Nesta lição, teremos uma festa de dança usando repetidos loops!
+              description_teacher: Quando começamos a escrever programas mais longos e mais interessantes, nosso código geralmente contém muita repetição. Nesta lição, os alunos aprenderão sobre como os loops podem ser usados ​​para comunicar mais facilmente instruções que têm muita repetição, observando os padrões repetidos de movimento em uma dança.
             The Right App:
               name: O aplicativo correto
+              description_student: Esboce seu próprio aplicativo para smartphone.
+              description_teacher: 'Esta lição faz com que os alunos reconheçam que a ciência da computação pode ajudar as pessoas na vida real. Primeiro, os alunos simpatizam com vários usuários fictícios de smartphones, a fim de ajudá-los a encontrar o "aplicativo certo" que atenda às suas necessidades. Em seguida, os alunos exercitam empatia e criatividade para desenhar seu próprio aplicativo para smartphone que atenda às necessidades de um usuário adicional. '
             Loops in Harvester:
               name: Repetições com Colheitadeira
               description_student: Ajude a Colheitadeira a coletar ainda mais, usando loops!
+              description_teacher: Com base no conceito de repetir instruções de "Getting Loopy", nesta etapa, os alunos usarão loops para colher milho com mais eficiência no Code.org.
             Programming in Maze:
               name: Programando com Angry Birds
               description_student: Crie programas para ajudar o Angry Bird a se mover pelo labirinto.
@@ -9300,11 +9404,15 @@ pt-BR:
               description_student: Ajude o Angry Bird Vermelho a seguir o caminho para o porco travesso.
               description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
         pre-express-2019:
+          title: Pré-leitor Express (2019)
           description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: 'Uma introdução à ciência da computação para pré-alfabetizados: combina o melhor do jardim de infância e cursos do ensino fundamental.'
           description_audience: 'Idades: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistência e frustração: Stevie e o grande projeto'
             Move It, Move It:
               name: Criando caminhos
             Sequencing with Scrat:
@@ -9349,13 +9457,17 @@ pt-BR:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Depuração: Bugs não encontrados'
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: 'Persistência e frustração: Stevie e o grande projeto'
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da vida real: plante uma semente'
+          title: Removido do CSF ​​para 2019
         dani-test-script:
           stages:
             new stage:
               name: nova fase
         csd2-2019:
+          title: Unidade 2 de CSD - Desenvolvimento Web ('19 -'20)
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo em suas próprias páginas da web. Depois de decidir qual conteúdo você deseja compartilhar com o mundo, você aprenderá a estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação, como depuração e comentários. No final da unidade, você terá um site pessoal que poderá publicar na Internet."
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           stages:
@@ -9417,7 +9529,10 @@ pt-BR:
               description_teacher: "Os alunos passaram muito tempo em toda a unidade trabalhando no site pessoal. Nos últimos dias, os alunos finalizam seus sites. Eles trabalham com colegas para obter feedback, dar os retoques finais nos sites, revisar a rubrica e refletir sobre seu processo. Para fechar a unidade, eles compartilharão seus projetos e também uma visão geral do processo que levaram para chegar ao design final.\\r\n"
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd3-2019:
+          title: CSD Unidade 3 - Animações e jogos ('19 -'20)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
           description_short: "Programação"
           stages:
@@ -9516,7 +9631,10 @@ pt-BR:
               name: CS Discoveries - Pesquisa de fim de semestre
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd4-2019:
+          title: CDS Unidade 4 - O Processo de Design ('19 -'20)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
           description_short: "  Aprenda a criar um programa que atenda às necessidades de seus usuários."
           stages:
@@ -9584,9 +9702,12 @@ pt-BR:
               name: Projeto - Apresentação do App
               description_student: Cada equipe prepara uma apresentação para "apresentar" o aplicativo que eles desenvolveram. Este é o momento de compartilhar lutas, triunfos e planos para o futuro.
               description_teacher: Nesse ponto, as equipes pesquisaram um tópico de importância pessoal e social, desenvolveram e testaram um protótipo de papel e um protótipo digital e iteraram no aplicativo inicial para incorporar novos recursos e correções de bugs. Agora é a hora de rever o que fizeram e reunir uma apresentação coerente para demonstrar seu processo de criação. Usando o modelo de apresentação fornecido, as equipes se preparam para apresentar seu processo de desenvolvimento de aplicativos, incluindo o problema que se propuseram a resolver, as maneiras pelas quais incorporaram o feedback dos testes e seus planos para o futuro.
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
             Post-Project Test:
               name: Teste pós-projeto
         csd5-2019:
+          title: CSD Unidade 5 - Dados e sociedade ('19 -'20)
           description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
           stages:
@@ -9652,7 +9773,10 @@ pt-BR:
               description_teacher: Para concluir esta unidade, os alunos projetam um mecanismo de recomendação com base nos dados que eles coletam e analisam de seus colegas de classe. Depois de observar um exemplo de aplicativo de recomendação, os alunos seguem um guia do projeto para concluir esta atividade de vários dias. Nas primeiras etapas, os alunos escolhem a escolha que desejam ajudar o usuário a fazer, quais dados precisam dar à recomendação, criam uma pesquisa e coletam informações sobre as escolhas de seus colegas de classe. Eles então interpretam os dados e usam o que aprenderam para criar o algoritmo de recomendação. Por fim, eles usam seus algoritmos para fazer recomendações a alguns colegas de classe. Os alunos realizam uma revisão por pares e fazem as atualizações necessárias em seus projetos antes de preparar uma apresentação para a classe.
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd6-2019:
+          title: CDS Unidade 6 - Computação física ('19 -'20)
           description: A unidade 6 explora o papel das plataformas de hardware na computação e como diferentes sensores podem fornecer entradas e saídas mais eficazes do que o teclado, mouse e monitor tradicionais. Usando o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto acabado. A unidade conclui com um desafio de projeto para usar o Circuit Playground como base para uma inovação de seu próprio projeto.
           description_short: Aprenda a programar com dispositivos físicos.
           stages:
@@ -9690,6 +9814,8 @@ pt-BR:
               name: 'Projeto: Protótipo de Inovação'
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csp4-pilot:
           stages:
             Variables Explore:
@@ -9706,6 +9832,10 @@ pt-BR:
               name: Pesquisas
             Student Surveys:
               name: Questionários com Alunos
+            'Teacher Surveys: HIDE':
+              name: 'Pesquisa de Professor: Ocultar'
+            Teacher Surveys:
+              name: Pesquisa de Professor
             Conditionals Explore:
               name: Explorar Condicionais
             Conditionals Investigate:
@@ -9736,7 +9866,29 @@ pt-BR:
               name: Prática PT Parte 3
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lição 15: Avaliação da Unidade 4'
+            Unit 4 STUDENT Survey:
+              name: Unidade 4 Pesquisa de ESTUDANTES
+            Unit 4 TEACHER Survey:
+              name: Unidade 4 Pesquisa de PROFESSORES
+            'Lesson 15: Assessment Day':
+              name: 'Lição 15: Dia da Avaliação'
+            Project - Decision Maker App - Part 1:
+              name: Projeto - Aplicativo para tomada de decisão - Parte 1
+            Project - Decision Maker App - Part 2:
+              name: Projeto - Aplicativo para tomada de decisão - Parte 2
+            Project - Decision Maker App - Part 3:
+              name: Projeto - Aplicativo para tomada de decisão - Parte 3
+            Project - Decision Maker App Part 1:
+              name: Projeto - Aplicativo para tomada de decisão - Parte 1
+            Project - Decision Maker App Part 2:
+              name: Projeto - Aplicativo para tomada de decisão Parte 2
+            Project - Decision Maker App Part 3:
+              name: Projeto - Aplicativo para tomada de decisão Parte 3
+          title: CSP Unidade 4 Piloto - Variáveis, Condicionais e Funções
         csp1-2019:
+          title: CSP Unidade 1 - A Internet ('19-'20)
           description: Esta unidade explora os desafios e questões técnicas que surgem da necessidade de representar informações digitais em computadores e transferi-las entre pessoas e dispositivos computacionais. A unidade explora a estrutura e o design da Internet e as implicações dessas decisões de design.
           description_short: Explore os desafios de representar informações como bits e como obtê-los de um lugar para outro.
           stages:
@@ -9775,6 +9927,7 @@ pt-BR:
             Unit 1 Chapter 2 Assessment:
               name: Unidade 1 Capítulo 2 Avaliação
         csp2-2019:
+          title: CSP Unidade 2 - Informação Digital ('19-'20)
           description: Esta unidade explora ainda mais as maneiras pelas quais as informações digitais são codificadas, representadas e manipuladas. Ser capaz de manipular dados digitalmente, visualizá-los e identificar padrões, tendências e possíveis significados são importantes habilidades práticas que os cientistas da computação fazem todos os dias. Entender de onde vêm os dados, ter intuições sobre o que pode ser aprendido ou extraído deles e ser capaz de usar ferramentas computacionais para manipular dados e se comunicar sobre eles são as principais habilidades abordadas na unidade.
           description_short: Explore como informações digitais mais complexas são representadas e manipuladas por meio de computação e visualização.
           stages:
@@ -9792,6 +9945,8 @@ pt-BR:
               name: Pesquisa Rápida - Apresentação de Formato
             Unit 2 Assessment:
               name: Unidade 2 Avaliação
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csp3-2019:
           title: CSP Unidade 3 - Programação
           description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
@@ -9821,7 +9976,10 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             Mid-Year Survey:
               name: Pesquisa Semestral
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csp4-2019:
+          title: CSP Unidade 4 - Big Data e Privacidade ('19 -'20)
           description: O mundo rico em dados em que vivemos introduz muitas questões complexas relacionadas a políticas públicas, direito, ética e impacto social. Os objetivos desta unidade são desenvolver uma visão abrangente e equilibrada sobre os dados no mundo, incluindo os efeitos positivos e negativos dos mesmos, e entender o básico de como e por que a criptografia moderna funciona.
           description_short: Explore o mundo rico em dados em que vivemos e como os dados afetam as políticas públicas, a privacidade pessoal, a segurança, a lei e a ética.
           stages:
@@ -9849,7 +10007,12 @@ pt-BR:
               name: Unidade 4 Avaliação
             Mid-Year Survey:
               name: Pesquisa Semestral
+            'Optional: Data Questions':
+              name: 'Opcional: Perguntas sobre dados'
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csp5-2019:
+          title: CSP Unidade 5 - Criação de aplicativos ('19 -'20)
           description: Esta unidade continua a introdução de conceitos fundamentais de programação de computadores, que desbloqueiam a capacidade de criar aplicativos interativos e ricos. Este curso usa JavaScript como linguagem de programação e o App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
           description_short: Continue aprendendo conceitos fundamentais de programação de computadores em JavaScript, fazendo aplicativos ricos e interativos.
           stages:
@@ -9899,7 +10062,10 @@ pt-BR:
               name: Unidade 5 Avaliação 5 - Questões práticas sobre pseudocódigo AP
             Mid-Year Survey:
               name: Pesquisa Semestral
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csp-explore-2019:
+          title: Explorar - Preparação de tarefas de desempenho de AP ('19 -'20)
           description: 'Estas lições estão aqui para ajudá-lo a entender, se preparar e executar a tarefa de exploração do desempenho do AP. Cada "lição" contém links para documentos úteis pelos quais seu professor pode ajudá-lo. NOTA: o segundo item da primeira lição não está diretamente relacionado ao Explore PT, mas abrange as configurações e ferramentas técnicas gerais necessárias para executar vários elementos das tarefas Explorar e Criar.'
           description_short: Lições e recursos para ajudar os alunos a se preparar e concluir as tarefas de desempenho do AP Explore.
           stages:
@@ -9911,6 +10077,8 @@ pt-BR:
               name: Explorar PT - Complete a Tarefa
             Mid-Year Survey:
               name: Pesquisa Semestral
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csp-create-2019:
           title: Criar - Preparação da tarefa de desempenho do AP ('19 -'20)
           description: 'Estas lições estão aqui para ajudá-lo a entender, preparar e executar a tarefa de criação de desempenho do AP. Cada "lição" contém links para documentos úteis pelos quais seu professor pode ajudá-lo. NOTA: o primeiro item da primeira lição não está diretamente relacionado ao Criar PT, mas abrange a configuração e as ferramentas gerais de tecnologia necessárias para executar vários elementos das tarefas Explorar e Criar.'
@@ -9922,6 +10090,8 @@ pt-BR:
               name: Criar preparação PT - Fazendo um Plano
             Create PT - Complete the Task:
               name: Criar PT - Complete a Tarefa
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csppostap-2019:
           title: Pós AP - Ferramentas de dados ('19 -'20)
           description: "No primeiro capítulo desta unidade, os alunos desenvolvem habilidades para interpretar dados visuais e usar ferramentas de planilha e visualização para criar seus próprios artefatos digitais. Por meio de um projeto em andamento - o \"rastreador de dados de classe\" - os alunos aprendem como coletar e limpar dados e a usar algumas ferramentas comuns para computar agregações e criar visualizações. \\ r\n\\ r\nO segundo capítulo explora a importância dos dados nos aplicativos. O App Lab tem várias ferramentas que permitem coletar e usar dados em seus aplicativos. O segundo capítulo fornece uma visão geral de como essas ferramentas funcionam, uma amostra de projetos de exemplo que podem ser construídos usando essas ferramentas e um espaço para criar e enviar um projeto final."
@@ -9961,6 +10131,8 @@ pt-BR:
               name: Apps de exemplo
             Final Project:
               name: Projeto final
+            CS Principles Post Course survey:
+              name: CS Pesquisa de pós-curso sobre princípios
         csp1-pilot:
           stages:
             new stage:
@@ -10106,6 +10278,8 @@ pt-BR:
               name: Laços aninhados em Abelha/Zumbi
             Nested Loops with Frozen:
               name: Laços Aninhados com Frozen
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
             Alien Dance Party with Sprite Lab:
               name: Festa de dança alienígena com o Sprite Lab
             Pet Giraffe with Sprite Lab:
@@ -10114,8 +10288,24 @@ pt-BR:
               name: Crie um Flappy Game
             Build a Star Wars Game:
               name: Construa um jogo de Guerra nas estrelas
+            Invasive Species:
+              name: Espécies invasivas
             'Events: The Big Event':
               name: 'Eventos: O Grande Evento'
+            I'm in Big Trouble:
+              name: Estou com grandes problemas
+            Events in Sprite Lab:
+              name: Eventos no Sprite Lab
+            Fishy Business:
+              name: Negócio suspeito
+            Broadcast a Message:
+              name: Transmitir uma mensagem
+            Pythons & Mammals:
+              name: Pythons & Mammals
+            Broadcast in Scratch:
+              name: Transmissão em Scratch
+            Current Solutions:
+              name: Soluções Atuais
             'Functions: Songwriting':
               name: 'Funções: Composição musical'
             Functions in Minecraft:
@@ -10126,7 +10316,18 @@ pt-BR:
               name: Funções no Artista
             Determine the Concept:
               name: Determine o conceito
+            Debate:
+              name: Debate
+            Functions in Sprite Lab:
+              name: Funções no Sprite Lab
+            I'm in Big Trouble!:
+              name: Eu estou com grandes problemas!
+            I am in Big Trouble:
+              name: Eu estou com grandes problemas
+          title: Time4CS Diversidade na Flórida
           description_audience: 4º ano
+          description_short: Este módulo se concentra nos padrões de estudos sociais e científicos da 4ª série. Na ciência, eles veem os padrões de vida que abrangem habitats, ecossistemas, espécies nativas e espécies invasoras. Em estudos sociais, os alunos contemplam os ramos do governo da Flórida e como os cidadãos comuns podem impactar as políticas locais e estaduais.
+          description: Este módulo se concentra nos padrões de estudos sociais e científicos da 4ª série. Na ciência, eles veem os padrões de vida que abrangem habitats, ecossistemas, espécies nativas e espécies invasoras. Em estudos sociais, os alunos contemplam os ramos do governo da Flórida e como os cidadãos comuns podem impactar as políticas locais e estaduais.
         csp1-pilot-staging:
           stages:
             Variables Explore:
@@ -10167,6 +10368,7 @@ pt-BR:
               name: Prática PT Parte 3
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
+          title: 'Unidade 1: Bits e Bytes'
         csp2-pilot-staging:
           stages:
             Variables Explore:
@@ -10207,7 +10409,7 @@ pt-BR:
               name: Prática PT Parte 3
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
-          title: 'Unidade 2: A Internet'
+          title: 'Unidade 2: A internet'
         csp3-pilot-staging:
           stages:
             Variables Explore:
@@ -10248,6 +10450,37 @@ pt-BR:
               name: Prática PT Parte 3
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
+            Introduction to Apps:
+              name: Introdução à apps
+            'Project: Designing an App, pt. 1':
+              name: 'Projeto: Criando um aplicativo, pt. 1'
+            'Project: Designing an App, pt. 2':
+              name: 'Projeto: Criando um aplicativo, pt. 2'
+            Programs Investigate:
+              name: Programa de Investigação
+            Programs Practice:
+              name: Programa de Prática
+            'Project: Designing an App, pt. 3':
+              name: 'Projeto: Criando um aplicativo, pt. 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Projeto: Criando um aplicativo, pt. 4'
+            'Project: Share Your App':
+              name: 'Projeto: Compartilhe seu aplicativo'
+            'Project: Designing an App pt. 1':
+              name: 'Projeto: Criando um aplicativo, pt. 1'
+            'Project: Designing an App pt. 2':
+              name: 'Projeto: Criando um aplicativo, pt. 2'
+            Project - Designing an App Part 1:
+              name: 'Projeto: Criando um aplicativo Parte 1'
+            Project - Designing an App Part 2:
+              name: 'Projeto: Criando um aplicativo Parte 2'
+            Project - Designing an App Part 3:
+              name: 'Projeto: Criando um aplicativo Parte 3'
+            Project - Designing an App Part 4:
+              name: 'Projeto: Criando um aplicativo Parte 4'
+            The Need for Programming Languages:
+              name: A necessidade das linguagens de programação
+          title: 'Unidade 3: Introdução ao desenvolvimento de aplicativos'
         csp4-pilot-staging:
           stages:
             Variables Explore:
@@ -10288,6 +10521,7 @@ pt-BR:
               name: Prática PT Parte 3
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
+          title: 'Unidade 4: Variáveis, Condicionais e Funções'
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -10330,6 +10564,38 @@ pt-BR:
               name: Unidade 4 Avaliação
             Lists Explore:
               name: Lista Explorar
+            Lists Investigate:
+              name: Listas de Investigar
+            Loops Explore:
+              name: Explorar Loops
+            Traversals Explore:
+              name: Explorar travessias
+            Lists Practice:
+              name: Listas Práticas
+            'Loops Practice: While Loops':
+              name: 'Loops Prática: While Loops'
+            'Loops Practice: Simulations':
+              name: 'Loops Prática: Simulações'
+            Lists Make:
+              name: Criar listas
+            Traversals Investigate:
+              name: Investigação travessia
+            Traversals Practice:
+              name: Travessia pratica
+            Traversals Make:
+              name: Criar travessia
+            Unit 5 Mini Assessment:
+              name: Unidade 5 Mini Avaliação
+            Mini PT:
+              name: Mini PT
+            Student Survey (Lists):
+              name: Pesquisa de estudantes (Listas)
+            Teacher Survey (Lists):
+              name: Pesquisa de professores (Listas)
+            Student Survey (Traversals):
+              name: Pesquisa de estudantes (Transversais)
+            Teacher Survey (Traversals):
+              name: Pesquisa de professores (Transversais)
             Student Survey (Mini PT):
               name: Pesquisa de Alunos (Mini PT)
             Loops Investigate and Practice:
@@ -10442,6 +10708,10 @@ pt-BR:
               name: Biblioteca de Investigação
             Libraries Mini PT:
               name: Mini biblioteca PT
+            Student Survey (Lists):
+              name: Pesquisa de estudantes (Listas)
+            Teacher Survey (Lists):
+              name: Pesquisa de professores (Listas)
             Student Survey (Libraries):
               name: Pesquisa de estudante (Biblioteca)
             Teacher Survey (Libraries):
@@ -10586,7 +10856,14 @@ pt-BR:
             Loops with Rey and BB-8:
               name: Loops com Rey e BB-8
           title: Expresso para o Vietnã (2018)
+          description_short: Apresentando Ciência da Computação Básica a estudantes vietnamitas.
+          description: "Ciência da Computação (Ciência da Computação) é um assunto básico da economia digital e foi apresentada ao público em geral por escolas primárias nos Estados Unidos, Canadá, Reino Unido, Japão e outros países desenvolvidos. Este curso apresenta Ciência da Computação básica para estudantes vietnamitas. O programa é construído diretamente a partir do programa atual para estudantes do ensino fundamental nos EUA e é adequado para estudantes vietnamitas.\\r\n"
         csd-post-survey-2018:
+          stages:
+            CSD post-course survey:
+              name: CSD pesquisa pós-curso
+          title: CSD pesquisa pós-curso de estudantes ('18'19)
+          description_audience: CSD estudantes
           description_short: Inquérito Pós-Curso para Estudantes de CSD
           description: "A pesquisa pós-curso do CS Discoveries é uma ferramenta importante que usamos para obter feedback de você e fazer melhorias no curso.\\r\n A pesquisa é privada e anônima - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração."
         csp-post-survey-2018:
@@ -10603,6 +10880,38 @@ pt-BR:
               name: nova fase
             Lists Explore:
               name: Lista Explorar
+            Lists Investigate:
+              name: Listas de Investigar
+            Lists Practice:
+              name: Listas Práticas
+            Lists Make:
+              name: Criar listas
+            Loops Explore:
+              name: Explorar Loops
+            'Loops Practice: While Loops':
+              name: 'Loops Prática: While Loops'
+            'Loops Practice: Simulations':
+              name: 'Loops Prática: Simulações'
+            Traversals Explore:
+              name: Explorar travessias
+            Traversals Investigate:
+              name: Investigação travessia
+            Traversals Practice:
+              name: Travessia pratica
+            Traversals Make:
+              name: Criar travessia
+            Student Survey (Lists):
+              name: Pesquisa de estudantes (Listas)
+            Student Survey (Traversals):
+              name: Pesquisa de estudantes (Transversais)
+            Unit 5 Mini Assessment:
+              name: Unidade 5 Mini Avaliação
+            Mini PT:
+              name: Mini PT
+            Teacher Survey (Lists):
+              name: Pesquisa de professores (Listas)
+            Teacher Survey (Traversals):
+              name: Pesquisa de professores (Transversais)
             Student Survey (Mini PT):
               name: Pesquisa de Alunos (Mini PT)
             Loops Investigate and Practice:
@@ -10684,8 +10993,11 @@ pt-BR:
               name: O que é um computador?
             Problem Solving Process:
               name: Processo de resolução de problemas
+          title: Amostra de atividades online
         fit2019-apprentice:
           stages:
+            Apprentice Reflection Overview:
+              name: Visão Geral da Reflexão do Aprendiz
             Day 1:
               name: Dia 1
             Day 2:
@@ -10696,7 +11008,19 @@ pt-BR:
               name: Dia 4
             Wrap Up:
               name: Resumo
+          title: Workshop de Reflexões para Aprendizes de Verão 2019
+          description_audience: 6 - 12 Facilitadores Aprendizes em Treinamento
+          description_short: 'Materiais de reflexão para aprendizes facilitadores em treinamento de 2019 '
+          description: Este é o conjunto de reflexões de aprendizes para os facilitadores do Code.org em treinamento durante seu workshop de verão de cinco dias. Aqui, você encontrará dicas de reflexão para cada dia do seu workshop de verão de cinco dias em pessoa. Essas perguntas serão a base do trabalho que realizamos no Workshop de Treinamento do Facilitador
+        csd-sample-online:
+          stages:
+            What is a Computer? - sample progression:
+              name: O que é um computador? - progressão da amostra
+            Problem Solving Process - sample activities:
+              name: Processo de resolução de problemas - atividades de exemplo
+          title: Amostra de atividades on-line para o CS Discoveries
         csd1-pilot:
+          title: CSD Unidade 1 - solução de problemas (versão piloto)
           description: "Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa para o campo da ciência da computação, enquadrada na busca mais ampla de resolução de problemas. Você irá praticar usando um processo de solução de problemas para resolver uma série de enigmas, desafios e cenários do mundo real. Em seguida, você aprenderá como os computadores inserem, produzem, armazenam e processam informações para ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto em que você cria um aplicativo que ajuda a resolver um problema de sua escolha.\\r\n"
           description_short: "  Aprenda como os humanos trabalham com computadores para resolver problemas."
           stages:
@@ -10737,6 +11061,7 @@ pt-BR:
             Post-Project Test:
               name: Teste pós-projeto
         csd2-pilot:
+          title: CDS Unidade 2 - Desenvolvimento Web (Versão Piloto)
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo em suas próprias páginas da web. Depois de decidir qual conteúdo você deseja compartilhar com o mundo, você aprenderá a estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação, como depuração e comentários. No final da unidade, você terá um site pessoal que poderá publicar na Internet."
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           stages:
@@ -10798,13 +11123,42 @@ pt-BR:
               description_teacher: "Os alunos passaram muito tempo em toda a unidade trabalhando no site pessoal. Nos últimos dias, os alunos finalizam seus sites. Eles trabalham com colegas para obter feedback, dar os retoques finais nos sites, revisar a rubrica e refletir sobre seu processo. Para fechar a unidade, eles compartilharão seus projetos e também uma visão geral do processo que levaram para chegar ao design final.\\r\n"
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
             Intellectual Property:
               name: Propriedade intelectual
+            Project - Planning Layout and Style:
+              name: Projeto - Planejamento de layout e estilo
+            Project - Building a Webpage:
+              name: Projeto - Construindo uma Página da Web
+            Purpose of a  Websites:
+              name: Objetivo de um site
             Images:
               name: Imagens
+            Exploring Web Pages:
+              name: Explorando páginas da Web
             CSS Classes:
               name: Classes CSS
+            Searching and Research:
+              name: Procurando e Pesquisando
+            Sources and Research:
+              name: Fontes e Pesquisa
+            Team Problem Solving:
+              name: Solução de problemas da equipe
+            Wireframes and Planning:
+              name: Wireframes e Planejamento
+            Linking Pages:
+              name: Vinculando páginas
+            Planning a Multi-page Website:
+              name: Planejando um site com várias páginas
+            Linking and Navigation:
+              name: Vinculando e Navegando
+            Peer Review and Final Touches:
+              name: Revisão por pares e retoques finais
+            Project - Website for a Purpose:
+              name: Projeto - Site para uma finalidade
         csd3-pilot:
+          title: Unidade CSD 3 - Animações e Jogos (Versão Piloto)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
           description_short: "Programação"
           stages:
@@ -10901,20 +11255,72 @@ pt-BR:
               description_teacher: Os alunos planejam e constroem seu próprio jogo usando o guia do projeto das duas lições anteriores para orientar seu projeto. Trabalhando individualmente ou em pares, os alunos decidem primeiro sobre o tipo de jogo que gostariam de construir, tendo como inspiração um conjunto de exemplos de jogos. Eles então preencherão um guia de projeto em branco, onde descreverão o comportamento do jogo e analisarão as variáveis, sprites e funções que precisarão criar. No Code Studio, uma série de níveis solicita uma sequência geral que eles podem usar para implementar esse plano. No meio do processo, os alunos compartilharão seus projetos para revisão por pares e incorporarão feedback ao final do jogo. No final da lição, os alunos compartilharão seus jogos concluídos com seus colegas de classe. Este projeto abrange várias turmas e pode facilmente levar de 3 a 5 períodos de aulas.
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
             Shapes and Parameters:
               name: Formas e Parâmetros
             Random Numbers:
               name: Números Aleatórios
+            Sprites and Animations:
+              name: Sprites e animações
+            Create a Scene:
+              name: Criar uma cena
+            Text and Captioned Scenes:
+              name: Texto e cenas legendadas
             Sprite Properties:
               name: Propriedades do Sprite
+        csd-bugs:
+          stages:
+            Game Lab Bugs:
+              name: Game Lab Bugs
+            Immovable Crab:
+              name: Caranguejo imóvel
+          title: Exemplo de erros para professores de CSD
         maddie-test:
           stages:
+            stage 1:
+              name: etapa 1
             new stage:
               name: nova fase
         csp3-pilot:
           stages:
+            Introduction to Apps:
+              name: Introdução à apps
+            Project - Designing an App Part 1:
+              name: 'Projeto: Criando um aplicativo Parte 1'
+            Project - Designing an App Part 2:
+              name: 'Projeto: Criando um aplicativo Parte 2'
+            Programs Investigate:
+              name: Programa de Investigação
+            Programs Practice:
+              name: Programa de Prática
+            Project - Designing an App Part 3:
+              name: 'Projeto: Criando um aplicativo Parte 3'
+            Project - Designing an App Part 4:
+              name: 'Projeto: Criando um aplicativo Parte 4'
+            'Project: Share Your App':
+              name: 'Projeto: Compartilhe seu aplicativo'
+            The Need for Programming Languages:
+              name: A necessidade das linguagens de programação
+            'Project: Finish Your App':
+              name: 'Projeto: Finalize seu aplicativo'
+            Programs Explore:
+              name: Programas Explorar
+            Unit 3 STUDENT Survey:
+              name: Unidade 3 pesquisa de ESTUDANTES
+            Unit 3 TEACHER Survey:
+              name: Unidade 3 pesquisa de PROFESSORES
+            'Lesson 11: Unit Assessment':
+              name: 'Lição 11: Avaliação da Unidade'
+            'Lesson 11: Assessment Day':
+              name: 'Lição 11: Dia de Avaliação'
+            Project - Designing an App Part 5:
+              name: Projeto - Criando um Aplicativo - Parte 5
+            Intro to Programming:
+              name: Introdução à Programação
             Debugging:
               name: Analisando
+          title: CSP Unidade 3 Piloto - Introdução ao design de aplicativos
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -10927,15 +11333,33 @@ pt-BR:
               name: Laços na Era do gelo
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+            Tell a Story in Play Lab:
+              name: Conte uma história no Play Lab
+          title: Alfabetização em Ciência da Computação no Vietnã
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Understanding the Curriculum:
+              name: Compreendendo o currículo
+            Demonstrating Understanding:
+              name: Demonstrando entendimento
+          title: Módulo de descobertas mais profundas do CS Discoveries 2019 para FiT
+          description_audience: Facilitadores de descobertas da CS em treinamento 2019
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Understanding the Curriculum:
+              name: Compreendendo o currículo
+            Demonstrating Understanding:
+              name: Demonstrando entendimento
+          title: Princípios do CS Aprendizado Mais Profundo do Workshop FiT 2019
         pl-csd-bugs:
+          stages:
+            CSD Workshop 1 Bugs:
+              name: CSD Workshop 1 Bugs
+          title: CSD Workshop 1 Bugs
           description_short: Depuração no Game Lab - Workshop do Ano Acadêmico 1
         dlp19-csd-mod-w1:
           stages:
@@ -10947,8 +11371,13 @@ pt-BR:
               name: Passo 2
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+          title: 'Módulo de Descobertas Mais Profundas de Aprendizagem do CS Discoveries 2019 para o Workshop 1 '
+          description_audience: Facilitadores de descobertas da CS em treinamento 2019
+          description_short: Workshop Ano Acadêmico 1
         dlp19-csd-mod-w2:
           stages:
             new stage:
@@ -10959,7 +11388,10 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
           title: Módulo de aprendizado mais aprofundado do CS Discoveries para o Workshop 2
+          description_audience: Facilitadores de descobertas da CS em treinamento 2019
         dlp19-csd-mod-w3:
           stages:
             CS Discoveries Deeper Learning Module 3:
@@ -10968,7 +11400,10 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
           title: Módulo de aprendizado mais aprofundado do CS Discoveries para o Workshop 3
+          description_audience: Facilitadores de descobertas da CS em treinamento 2019
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
@@ -10977,13 +11412,18 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
           title: Módulo de aprendizado mais aprofundado do CS Discoveries para o Workshop 4
+          description_audience: Facilitadores de descobertas da CS em treinamento 2019
         dlp19-csp-mod-w1:
           stages:
             CS Principles Deeper Learning Module 1:
               name: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
           title: Princípios de CS Módulo de aprendizagem mais profunda para o workshop 1
@@ -10995,6 +11435,8 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
           title: Princípios de CS Módulo de aprendizado mais profundo para o Workshop 2
         dlp19-csp-mod-w3:
           stages:
@@ -11004,6 +11446,8 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
           title: Princípios de CS Módulo de aprendizagem mais profunda para o workshop 3
         dlp19-csp-mod-w4:
           stages:
@@ -11013,6 +11457,8 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             'Step 1: Develop Understanding':
               name: 'Etapa 1: Desenvolver a Compreensão'
+            'Step 2: Demonstrate Understanding':
+              name: 'Etapa 2: Demonstrar Entendimento'
           title: Princípios de CS Módulo de aprendizagem mais profunda para o Workshop 4
         csd-pilot:
           stages:
@@ -11182,6 +11628,8 @@ pt-BR:
               name: Pesquisa de estudantes Unidade 6
             Unit 6 TEACHER Survey:
               name: Pesquisa de PROFESSORES Unidade 6
+            'Lesson 6: Assessment Day':
+              name: 'Lição 6: Dia da Avaliação'
         denny-science-8:
           title: Detector de colisão
           stages:
@@ -11364,6 +11812,10 @@ pt-BR:
               name: Pratica PT Parte 2
             Practice PT Part 3:
               name: Prática PT Parte 3
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lição 15: Avaliação da Unidade 4'
+            'Lesson 15: Assessment Day':
+              name: 'Lição 15: Dia da Avaliação'
           title: 'Visualização do CSP: variáveis, condicionais e funções'
         time4cs-original-unit-1:
           stages:
@@ -11379,6 +11831,8 @@ pt-BR:
               name: 'Eventos: O Grande Evento'
             Simon Says:
               name: Simon diz
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
             Alien Dance Party with Sprite Lab:
               name: Festa de dança alienígena com o Sprite Lab
             Private and Personal Information:
@@ -11423,6 +11877,8 @@ pt-BR:
               name: Crowdsourcing (lição integrada)
             Everglades Habitats:
               name: Habitat pantanoso
+            Evaluating a Project in Sprite Lab:
+              name: Avaliando um projeto no Sprite Lab
             Food Chains:
               name: Cadeias alimentares
             Conditionals with Cards (Integrated Lesson)- Part 1:
@@ -11431,8 +11887,12 @@ pt-BR:
               name: Buracos de jacaré
             Food Chain Game:
               name: Jogo da Cadeia Alimentar
+            Invasive Species:
+              name: Espécies invasivas
             Conditionals with Cards (Integrated Lesson)- Part 2:
               name: Condicionais com Cartões (Lição Integrada) - Parte 2
+            I am in Big Trouble:
+              name: Eu estou com grandes problemas
             Conditionals in Sprite Lab:
               name: Condicionais no Sprite Lab
             Nested Loops in Maze:
@@ -11441,6 +11901,8 @@ pt-BR:
               name: Formas sofisticadas usando loops aninhados
             Nested Loops with Frozen:
               name: Laços Aninhados com Frozen
+            Fishy Business:
+              name: Negócio suspeito
             Songwriting (Integrated Lesson):
               name: Composição (Lição Integrada)
             Functions in Minecraft:
@@ -11451,12 +11913,17 @@ pt-BR:
               name: Funções com Artista
             Pythons impacting native populations:
               name: Cobras afetando populações nativas
+            Functions in Sprite Lab:
+              name: Funções no Sprite Lab
+            Python Problem- Current Solutions:
+              name: Problema em Python - Soluções atuais
             End of Course Project (integrated- project planning lesson):
               name: Projeto de fim de curso (lição de planejamento de projeto integrado)
             Debate- Pythons impacting native populations:
               name: Debate - Cobras afetando populações nativas
             Work on Project:
               name: Trabalho no Projeto
+          title: Time4CS Experimento Unidade 2
           description_short: "[Adicionar uma descrição]"
           description: "[Adicionar uma descrição]"
         time4cs-control-unit-1:
@@ -11474,6 +11941,8 @@ pt-BR:
               name: 'Eventos: O Grande Evento'
             Simon Says:
               name: Simon diz
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
             Alien Dance Party with Sprite Lab:
               name: Festa de dança alienígena com o Sprite Lab
             Private and Personal Information:
@@ -11485,6 +11954,7 @@ pt-BR:
             Conditionals Review:
               name: Revisão de Condicionais
         time4cs-experiment-unit-1:
+          title: Time4CS Experimento Unidade 1
           stages:
             Sequencing in Maze:
               name: Sequenciamento no labirinto
@@ -11498,6 +11968,8 @@ pt-BR:
               name: 'Eventos: O Grande Evento'
             Simon Says:
               name: Simon diz
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
             Alien Dance Party with Sprite Lab:
               name: Festa de dança alienígena com o Sprite Lab
             Private and Personal Information:
@@ -11524,12 +11996,16 @@ pt-BR:
               name: Biblioteca de Investigação
             Libraries Practice:
               name: Biblioteca Prática
+            Libraries Make:
+              name: Criar Bibliotecas
             Project - Libraries Part 1:
               name: Projeto - Bibliotecas Parte Parte 1
             Project - Libraries Part 2:
               name: Projeto - Bibliotecas Parte Parte 2
             Project - Libraries Part 3:
               name: Projeto - Bibliotecas Parte Parte 3
+            Assessment Day:
+              name: Dia de Avaliação
             Parameters and Return Explore:
               name: 'Explorar: Parâmetros e valores de retorno'
             Parameters and Return Investigate:
@@ -11550,6 +12026,15 @@ pt-BR:
               name: Projeto - Criar uma Biblioteca Parte 2
             Project - Make a Library Part 3:
               name: Projeto - Criar uma Biblioteca Parte 3
+            Variables Make Demo:
+              name: Variáveis ​​fazem demonstração
+            Unit 7 STUDENT Survey:
+              name: Unidade 7 Pesquisa com ESTUDANTES
+            Unit 7 TEACHER Survey:
+              name: Unidade 7 Pesquisa com PROFESSORES
+            'Lesson 11: Assessment Day':
+              name: 'Lição 11: Dia de Avaliação'
+          title: CSP Unidade 7 Piloto - Parâmetros, retorno e bibliotecas
         csp8-pilot:
           stages:
             new stage:
@@ -11585,16 +12070,41 @@ pt-BR:
               name: Prática de Funções
             Functions Make:
               name: Criar Funções
+            Project - Decision Maker App Part 1:
+              name: Projeto - Aplicativo para tomada de decisão - Parte 1
+            Project - Decision Maker App Part 2:
+              name: Projeto - Aplicativo para tomada de decisão Parte 2
+            Project - Decision Maker App Part 3:
+              name: Projeto - Aplicativo para tomada de decisão Parte 3
+            'Lesson 15: Assessment Day':
+              name: 'Lição 15: Dia da Avaliação'
+          title: CSP Unidade 4 - Variáveis, condicionais e funções ('20 -'21)
         csp5-2020:
           stages:
             Lists Explore:
               name: Lista Explorar
+            Lists Investigate:
+              name: Listas de Investigar
+            Lists Practice:
+              name: Listas Práticas
+            Lists Make:
+              name: Criar listas
+            Loops Explore:
+              name: Explorar Loops
             Loops Investigate:
               name: Investigação de Loops
             Loops Practice:
               name: Prática de Loops
             Loops Make:
               name: Fazer Loops
+            Traversals Explore:
+              name: Explorar travessias
+            Traversals Investigate:
+              name: Investigação travessia
+            Traversals Practice:
+              name: Travessia pratica
+            Traversals Make:
+              name: Criar travessia
             Semester Hackathon Part 1:
               name: Semestre Hackathon - Parte 1
             Semester Hackathon Part 2:
@@ -11611,6 +12121,7 @@ pt-BR:
               name: Pesquisa de Alunos da Unidade 5
             Unit 5 TEACHER Survey:
               name: Pesquisa do Professor da Unidade 5
+          title: Listas, Loops e Transversais
         csp7-2020:
           stages:
             Parameters and Return Explore:
@@ -11633,14 +12144,60 @@ pt-BR:
               name: Projeto - Criar uma Biblioteca Parte 2
             Project - Make a Library Part 3:
               name: Projeto - Criar uma Biblioteca Parte 3
+            Assessment Day:
+              name: Dia de Avaliação
+            Unit 7 STUDENT Survey:
+              name: Unidade 7 Pesquisa com ESTUDANTES
+            Unit 7 TEACHER Survey:
+              name: Unidade 7 Pesquisa com PROFESSORES
+            Variables Make Demo:
+              name: Variáveis ​​fazem demonstração
+            'Lesson 11: Assessment Day':
+              name: 'Lição 11: Dia de Avaliação'
+        csd2-projects-temp:
+          stages:
+            HTML  Project:
+              name: Projeto HTML
+            CSS Project:
+              name: CSS Projeto
+          title: CSD Projetos Web - Temporário
+          description: Local temporário para a realização dos novos miniprojetos de desenvolvimento de CSD Web
         csp9-pilot:
           stages:
             new stage:
               name: nova fase
+            Learning From Data:
+              name: Aprendendo com dados
+            Exploring One Column:
+              name: Explorando uma coluna
+            Filtering and Cleaning Data:
+              name: Filtrando e limpando dados
+            Exploring Two Columns - Discrete:
+              name: Explorando duas colunas - discreto
+            Exploring Two Columns - Continuous:
+              name: Explorando duas colunas - Continuo
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, e aprendizado de máquina
+            Machine Learning and Bias:
+              name: Aprendizado de máquina e tendencia
+            Project - Tell a Data Story - Part 1:
+              name: Projeto - Conte uma História de Dados - Parte 1
+            Project - Tell a Data Story - Part 2:
+              name: Projeto - Conte uma História de Dados - Parte 2
+            'Lesson 10: Assessment Day':
+              name: 'Lição 10: Dia de Avaliação'
+            Exploring Two Columns:
+              name: Explorando duas colunas
+            'Lesson 9: Assessment Day':
+              name: 'Lição 9: Dia da Avaliação'
+          title: CSP Unidade 9 Piloto - Dados
         csd2-2020:
+          title: CSD Unidade 2 - Desenvolvimento Web
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo em suas próprias páginas da web. Depois de decidir qual conteúdo você deseja compartilhar com o mundo, você aprenderá a estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação, como depuração e comentários. No final da unidade, você terá um site pessoal que poderá publicar na Internet."
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           stages:
+            Exploring Web Pages:
+              name: Explorando páginas da Web
             Intro to HTML:
               name: Introdução a HTML
               description_student: Esta lição apresenta o HTML como uma solução para o problema de como comunicar o conteúdo e a estrutura de um site para um computador. A lição começa com uma breve atividade desconectada, demonstrando os desafios de comunicar efetivamente a estrutura de uma página da web. A classe examina uma página HTML no Web Lab e discute como as tags HTML ajudam a resolver esse problema, depois usa o HTML para escrever as primeiras páginas da web da unidade.
@@ -11669,10 +12226,30 @@ pt-BR:
               name: Estilizando elementos com CSS
               description_student: Esta lição continua a introdução às propriedades de estilo CSS, desta vez focando mais em elementos que não são de texto. A aula começa investigando e modificando os novos estilos CSS na página Sobremesas do mundo. Depois, todos aplicam esse novo conhecimento a seus sites pessoais.
               description_teacher: Esta lição continua a introdução às propriedades de estilo CSS, desta vez focando mais em elementos que não são de texto. Os alunos começam esta lição consultando um site sobre Sobremesas do Mundo. Eles investigam e modificam os novos estilos CSS neste site, adicionando seus próprios estilos à página. Depois de trabalhar na página Sobremesas, os alunos aplicam seus conhecimentos sobre novas propriedades CSS para criar mais estilo em seus sites pessoais.
+            Project - Planning Layout and Style:
+              name: Projeto - Planejamento de layout e estilo
+            Project - Building a Webpage:
+              name: Projeto - Construindo uma Página da Web
+            Purpose of a  Websites:
+              name: Objetivo de um site
+            Team Problem Solving:
+              name: Solução de problemas da equipe
+            Sources and Research:
+              name: Fontes e Pesquisa
             CSS Classes:
               name: Classes CSS
+            Planning a Multi-page Website:
+              name: Planejando um site com várias páginas
+            Linking and Navigation:
+              name: Vinculando e Navegando
+            Project - Website for a Purpose:
+              name: Projeto - Site para uma finalidade
+            Peer Review and Final Touches:
+              name: Revisão por pares e retoques finais
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd1-2020:
           title: Unidade 1 de CSD - Solução de problemas e computação ('19 -'20)
           description: "Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa para o campo da ciência da computação, enquadrada na busca mais ampla de resolução de problemas. Você irá praticar usando um processo de solução de problemas para resolver uma série de enigmas, desafios e cenários do mundo real. Em seguida, você aprenderá como os computadores inserem, produzem, armazenam e processam informações para ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto em que você cria um aplicativo que ajuda a resolver um problema de sua escolha.\\r\n"
@@ -11715,6 +12292,7 @@ pt-BR:
             Post-Project Test:
               name: Teste pós-projeto
         csd4-2020:
+          title: CDS Unidade 4 - O Processo de Design ('19 -'20)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
           description_short: "  Aprenda a criar um programa que atenda às necessidades de seus usuários."
           stages:
@@ -11784,7 +12362,10 @@ pt-BR:
               description_teacher: Nesse ponto, as equipes pesquisaram um tópico de importância pessoal e social, desenvolveram e testaram um protótipo de papel e um protótipo digital e iteraram no aplicativo inicial para incorporar novos recursos e correções de bugs. Agora é a hora de rever o que fizeram e reunir uma apresentação coerente para demonstrar seu processo de criação. Usando o modelo de apresentação fornecido, as equipes se preparam para apresentar seu processo de desenvolvimento de aplicativos, incluindo o problema que se propuseram a resolver, as maneiras pelas quais incorporaram o feedback dos testes e seus planos para o futuro.
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd5-2020:
+          title: CSD Unidade 5 - Dados e sociedade ('19 -'20)
           description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
           stages:
@@ -11850,7 +12431,10 @@ pt-BR:
               description_teacher: Para concluir esta unidade, os alunos projetam um mecanismo de recomendação com base nos dados que eles coletam e analisam de seus colegas de classe. Depois de observar um exemplo de aplicativo de recomendação, os alunos seguem um guia do projeto para concluir esta atividade de vários dias. Nas primeiras etapas, os alunos escolhem a escolha que desejam ajudar o usuário a fazer, quais dados precisam dar à recomendação, criam uma pesquisa e coletam informações sobre as escolhas de seus colegas de classe. Eles então interpretam os dados e usam o que aprenderam para criar o algoritmo de recomendação. Por fim, eles usam seus algoritmos para fazer recomendações a alguns colegas de classe. Os alunos realizam uma revisão por pares e fazem as atualizações necessárias em seus projetos antes de preparar uma apresentação para a classe.
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd6-2020:
+          title: CDS Unidade 6 - Computação física ('19 -'20)
           description: A unidade 6 explora o papel das plataformas de hardware na computação e como diferentes sensores podem fornecer entradas e saídas mais eficazes do que o teclado, mouse e monitor tradicionais. Usando o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos inteligentes, observando como um simples protótipo bruto pode levar a um produto acabado. A unidade conclui com um desafio de projeto para usar o Circuit Playground como base para uma inovação de seu próprio projeto.
           description_short: Aprenda a programar com dispositivos físicos.
           stages:
@@ -11888,7 +12472,10 @@ pt-BR:
               name: 'Projeto: Protótipo de Inovação'
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
         csd3-2020:
+          title: Unidade CSD 3 - Animações e Jogos (Versão Piloto)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
           description_short: "Programação"
           stages:
@@ -11912,8 +12499,12 @@ pt-BR:
               description_teacher: Nesta lição, os alunos aprendem a usar variáveis para rotular um número em seu programa ou salvar um valor gerado aleatoriamente. Os alunos começam a lição com uma descrição muito básica do objetivo de uma variável. Os alunos concluem uma progressão de nível que reforça o modelo de uma variável como uma maneira de rotular ou nomear um número. Os alunos usam variáveis para salvar um número aleatório e ver que as variáveis realmente armazenam ou salvam seus valores, permitindo que usem o mesmo número aleatório várias vezes em seus programas.
             Random Numbers:
               name: Números Aleatórios
+            Sprites and Animations:
+              name: Sprites e animações
             Sprite Properties:
               name: Propriedades do Sprite
+            Text and Captioned Scenes:
+              name: Texto e cenas legendadas
             The Draw Loop:
               name: O laço de desenho
               description_student: Esta lição apresenta o loop de empate, um dos principais paradigmas de programação do Game Lab. A classe combina o loop de desenho com números aleatórios para manipular algumas animações simples com pontos e depois com sprites. Depois, todos usam o que aprenderam para atualizar a cena do sprite da lição anterior.
@@ -11985,3 +12576,669 @@ pt-BR:
               description_teacher: Os alunos planejam e constroem seu próprio jogo usando o guia do projeto das duas lições anteriores para orientar seu projeto. Trabalhando individualmente ou em pares, os alunos decidem primeiro sobre o tipo de jogo que gostariam de construir, tendo como inspiração um conjunto de exemplos de jogos. Eles então preencherão um guia de projeto em branco, onde descreverão o comportamento do jogo e analisarão as variáveis, sprites e funções que precisarão criar. No Code Studio, uma série de níveis solicita uma sequência geral que eles podem usar para implementar esse plano. No meio do processo, os alunos compartilharão seus projetos para revisão por pares e incorporarão feedback ao final do jogo. No final da lição, os alunos compartilharão seus jogos concluídos com seus colegas de classe. Este projeto abrange várias turmas e pode facilmente levar de 3 a 5 períodos de aulas.
             Post-Project Test:
               name: Teste pós-projeto
+            CS Discoveries Post Course survey:
+              name: Pesquisa do CS Discoveries pós curso
+        coursea-2020:
+          title: Curso A (2019)
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+          description_audience: 'Idade: de 4 a 7 anos'
+          stages:
+            Going Places Safely:
+              name: Navegando com segurança
+              description_student: Aprenda as regras para visitar locais on-line com segurança.
+              description_teacher: Em colaboração com [r common-sense-media], esta lição ajuda os alunos aprenderem que muitos websites pedem informações que são privadas e discute como lidar de forma responsável com tais situações. Os alunos também descobrem que podem ir a lugares incríveis online, mas que eles precisam de seguir certas regras para se manterem seguros.
+            Learn to Drag and Drop:
+              name: Aprenda a arrastar e soltar
+              description_student: Clique e arraste para finalizar os quebra-cabeças.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
+            'Programming: Happy Maps':
+              name: 'Programação: Mapas felizes'
+              description_student: Escreva instruções para levar o Flurb à fruta.
+              description_teacher: 'A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.'
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
+              description_student: Programe Scrat para alcançar a bolota.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
+            Programming in Ice Age:
+              name: Programação na Era do Gelo
+              description_student: Escreva programas para ajudar Scrat a alcançar a bolota.
+              description_teacher: Usando personagens da Era do Gelo, os alunos desenvolverão algoritmos seqüenciais para mover o Scrat de um lado de um labirinto para a bolota do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
+              description_student: Ajude o BB-8 a coletar a sucata.
+              description_teacher: Nesta lição, os alunos usarão suas novas habilidades de programação de maneiras mais complicadas para navegar em um curso complicado com o BB-8.
+            'Loops: Happy Loops':
+              name: 'Laços: Laços felizes'
+              description_student: Ajude o Flurb a resolver problemas maiores usando loops.
+              description_teacher: Repetições são uma ferramenta muito útil e poderosa em programação. Para entender como repetições úteis podem ser, os alunos precisarão ser levados a desejar uma maneira mais fácil de resolver problemas mundanos.
+            Loops in Ice Age:
+              name: Laços na Era do gelo
+              description_student: Ajude Scrat a cobrir mais terreno usando loops.
+              description_teacher: Com base no conceito de repetir instruções de "Happy Loops", nesta etapa, os alunos usarão loops para chegar à bolota com mais eficiência no Code.org.
+            Loops in Collector:
+              name: Laços em coletor
+              description_student: Ajude Laurel, o aventureiro, a coletar o tesouro no subsolo.
+              description_teacher: Aproveitando o conceito de repetição de instruções da aula "Repetições Felizes", este nível os alunos irão usar repetições para coletar tesouro de uma forma mais eficiente no Code.org.
+            Ocean Scene with Loops:
+              name: Cena do Oceano com Repetições
+              description_student: Use loops e padrões para finalizar as imagens.
+              description_teacher: Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.
+            'Events: The Big Event':
+              name: 'Eventos: O Grande Evento'
+              description_student: Mova-se e grite quando seus professores pressionam botões em um controle remoto gigante.
+              description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
+            Events in Play Lab:
+              name: Eventos no Laboratório de jogos
+              description_student: Crie seu próprio jogo ou história.
+              description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
+        courseb-2020:
+          title: Curso B (2019)
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
+          description_audience: 'Idades: 5-8'
+          stages:
+            Your Digital Footprint:
+              name: Seu rastro digital
+              description_student: 'Aprenda sobre sua pegada digital e como se manter seguro ao visitar sites. '
+              description_teacher: Em colaboração com [r common-sense-media], esta lição ajuda os alunos a aprender sobre as semelhanças de permanecer seguro no mundo real e ao visitar sites. Os alunos também aprenderão que as informações que colocam on-line deixam uma pegada digital ou "trilha". Essa trilha pode ser grande ou pequena, útil ou prejudicial, dependendo de como eles a gerenciam.
+            Move It, Move It:
+              name: Criando caminhos
+              description_student: Programe seus colegas de classe para caminhar com cuidado de um lugar para outro.
+              description_teacher: Esta lição trabalhará para preparar mentalmente os alunos para os exercícios de codificação que eles encontrarão ao longo deste curso. Em equipes pequenas, os alunos usarão atividade física para programar seus colegas de classe para que sigam com cuidado de um lugar para outro até que uma meta seja alcançada.
+            Sequencing in Maze:
+              name: Sequenciamento no labirinto
+              description_student: Ajude o Angry Bird Vermelho a seguir o caminho para o porco travesso.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
+            Programming in Maze:
+              name: Programação no labirinto
+              description_student: Crie programas para ajudar o Angry Bird a se mover pelo labirinto.
+              description_teacher: Usando os personagens do jogo Angry Birds, os alunos desenvolverão algoritmos sequenciais para mover um pássaro de um lado de um labirinto para o porco do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.
+            Programming in Harvester:
+              name: Programação em Harvester
+              description_student: Ajude a colheitadeira a coletar vegetais ao longo de um caminho.
+              description_teacher: 'Os alunos aplicarão os conceitos de programação que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir o objetivo, os alunos precisam coletar milho usando um novo bloco. Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial e começarão a usar o processo de depuração. '
+            'Loops: Getting Loopy':
+              name: 'Laços: Ficando Zonzo'
+              description_student: Nesta lição, teremos uma festa de dança usando repetidos loops!
+              description_teacher: Quando começamos a escrever programas mais longos e mais interessantes, nosso código geralmente contém muita repetição. Nesta lição, os alunos aprenderão sobre como os loops podem ser usados ​​para comunicar mais facilmente instruções que têm muita repetição, observando os padrões repetidos de movimento em uma dança.
+            Loops in Harvester:
+              name: Laços com Colheitadeira
+              description_student: Ajude a Colheitadeira a coletar ainda mais, usando loops!
+              description_teacher: Com base no conceito de repetir instruções de "Getting Loopy", nesta etapa, os alunos usarão loops para colher milho com mais eficiência no Code.org.
+            Loops in Collector:
+              name: Laços em coletor
+              description_student: Programe Laurel, o aventureiro, para coletar tesouros em uma caverna aberta.
+              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.
+            Loops in Artist:
+              name: Laços no Artista
+              description_student: Use padrões e loops para finalizar as imagens.
+              description_teacher: Voltando aos loops, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na lição on-line anterior, loops foram usados ​​para atravessar um labirinto e coletar tesouros. Aqui, os alunos usam loops para criar padrões. No final desta etapa, os alunos terão a oportunidade de criar suas próprias imagens usando loops.
+            The Right App:
+              name: O aplicativo correto
+              description_student: Esboce seu próprio aplicativo para smartphone.
+              description_teacher: 'Esta lição faz com que os alunos reconheçam que a ciência da computação pode ajudar as pessoas na vida real. Primeiro, os alunos simpatizam com vários usuários fictícios de smartphones, a fim de ajudá-los a encontrar o "aplicativo certo" que atenda às suas necessidades. Em seguida, os alunos exercitam empatia e criatividade para desenhar seu próprio aplicativo para smartphone que atenda às necessidades de um usuário adicional. '
+            'Events: The Big Event':
+              name: 'Eventos: O Grande Evento'
+              description_student: Mova-se ou grite quando o professor pressionar botões em um controle remoto gigante.
+              description_teacher: "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem."
+            Events in Play Lab:
+              name: Eventos no Laboratório de jogos
+              description_student: Use eventos para criar uma história ou criar um jogo interativo.
+              description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
+        coursec-2020:
+          title: Curso C (2019)
+          description: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
+          description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
+          description_audience: 'Idades: 6-10'
+          stages:
+            Screen Out the Mean:
+              name: Tela fora da média
+              description_student: Nesta lição, você aprenderá o que fazer se algo online fizer você se sentir irritado, triste ou assustado.
+              description_teacher: "Esta lição ajuda as crianças a reconhecerem que é essencial dizer a um adulto de confiança se algo online os faz sentir raiva, tristeza ou medo. \\r\n\\r\nOs alunos aprendem que outras pessoas às vezes podem agir como agressores quando estão online. Eles vão explorar o que significa cyberbullying e o que podem fazer quando o encontrarem. Depois de ler um cenário sobre o mau comportamento on-line, os alunos discutem o que é o cyberbullying, como ele pode fazer as pessoas se sentirem e como responder. Finalmente, eles usam seus conhecimentos para criar uma folha de dicas simples sobre cyberbullying em seus diários.\\r\n"
+            Powerful Passwords:
+              name: Senhas fortes
+              description_student: Nesta lição, você aprenderá sobre como as senhas protegem suas informações e como criar uma boa senha.
+              description_teacher: "Os alunos exploram por que as pessoas usam senhas, aprendem os benefícios do uso de senhas e descobrem estratégias para criar e manter senhas fortes e seguras.\\r\n\\r\nOs alunos aprendem dicas de senha, testam suas senhas existentes com um jogo interativo e criam novas senhas usando diretrizes para senhas poderosas.\\r\n"
+            'Programming: My Robotic Friends':
+              name: 'Programando: Meus amigos robôs'
+              description_student: Nesta lição, você fingirá que seus colegas de classe são robôs e os programará para criar padrões de copos empilhados.
+              description_teacher: Usando um conjunto de símbolos no lugar do código, os alunos projetam algoritmos para instruir um "robô" a empilhar copos em diferentes padrões. Os alunos se revezam participando como o robô, respondendo apenas ao algoritmo definido por seus colegas. Esse segmento ensina aos alunos a conexão entre símbolos e ações, a diferença entre um algoritmo e um programa e a valiosa habilidade de depuração.
+            Programming in Maze:
+              name: Programação no labirinto
+              description_student: Aprenda sobre sequências e algoritmos com o Angry Birds.
+              description_teacher: Usando os personagens do jogo Angry Birds, os alunos desenvolverão algoritmos sequenciais para mover um pássaro de um lado de um labirinto para o porco do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.
+            Debugging in Maze:
+              name: Depurando no Labirinto
+              description_student: Encontre problemas em quebra-cabeças e pratique suas habilidades de depuração.
+              description_teacher: A depuração é um elemento essencial para aprender a programar. Nesta lição, os alunos encontrarão quebra-cabeças que foram resolvidos incorretamente. Eles precisarão percorrer o código existente para identificar erros, incluindo loops incorretos, blocos ausentes, blocos extras e blocos fora de ordem.
+            Programming in Collector:
+              name: Programação com coletor
+              description_student: Escreva algoritmos para ajudar Laurel, o Aventureiro, a coletar muitas jóias!
+              description_teacher: Nesta série de quebra-cabeças, os alunos continuarão a desenvolver sua compreensão de algoritmos e depuração. Com um novo personagem, Laurel, o Aventureiro, os alunos criarão algoritmos sequenciais para que Laurel pegue um tesouro enquanto ela caminha por um caminho.
+            Programming in Artist:
+              name: Programação em Artista
+              description_student: Crie belas imagens programando o Artista.
+              description_teacher: Nesta lição, os alunos assumirão o controle do Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá que os alunos criem imagens de complexidade crescente usando novos blocos como "avançar em 100 pixels" e "virar à direita em 90 graus".
+            Binary Bracelets:
+              name: Pulseiras binárias
+              description_student: Crie sua própria pulseira binária e aprenda como os computadores lembram informações!
+              description_teacher: Binário é extremamente importante no mundo dos computadores. Atualmente, a maioria dos computadores armazena todos os tipos de informações em formato binário. Esta lição ajuda a demonstrar como é possível tirar algo da vida real e traduzi-lo em uma série de prós e contras.
+            'Loops: My Loopy Robotic Friends':
+              name: 'Repetições: Meus amigos robôs esquisitos'
+              description_student: Nesta lição, você programará seus colegas novamente, mas, usando loops, poderá resolver problemas maiores e mais complicados.
+              description_teacher: Com base na atividade inicial "Meus amigos robóticos", os alunos lidam com projetos maiores e mais complicados. Para programar seus "robôs" para concluir esses projetos maiores, os alunos precisarão identificar padrões repetidos em suas instruções que possam ser substituídos por um loop.
+            Loops with Rey and BB-8:
+              name: Loops com Rey e BB-8
+              description_student: 'Ajude o BB-8 através de labirintos usando loops! '
+              description_teacher: Com base no conceito de repetir instruções de "Getting Loopy", nesta etapa, os alunos usarão loops para ajudar o BB-8 a atravessar um labirinto com mais eficiência do que antes.
+            Loops in Harvester:
+              name: Laços com Colheitadeira
+              description_student: Vamos usar loops para ajudar a colheitadeira a coletar alguns vegetais!
+              description_teacher: "Na etapa anterior, os alunos usavam loops para criar desenhos fantásticos. Agora eles vão executar novas ações para ajudar a colheitadeira a coletar vários vegetais que crescem em grandes grupos.\\r\n"
+            Looking Ahead:
+              name: Olhando para o futuro
+              description_student: Evite a lava! Aqui você começará a aprender sobre condicionais no mundo do Minecraft.
+              description_teacher: Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!
+            Sticker Art with Loops:
+              name: Adesivo de arte com loops
+              description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
+              description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
+            'Events: The Big Event':
+              name: 'Eventos: O Grande Evento'
+              description_student: 'Jogue um jogo divertido para aprender sobre os eventos. '
+              description_teacher: Em breve, os alunos aprenderão que os eventos são uma ótima maneira de adicionar flexibilidade a um algoritmo pré-escrito. Às vezes, você deseja que seu programa seja capaz de responder ao usuário exatamente quando o usuário deseja. Os eventos podem tornar seu programa mais interessante e interativo.
+            Build a Flappy Game:
+              name: Crie um Flappy Game
+              description_student: Construa seu próprio jogo Flappy Bird da maneira que quiser e compartilhe com seus amigos!
+              description_teacher: Nesta etapa especial, os alunos constroem seu próprio jogo Flappy Bird usando manipuladores de eventos para detectar cliques do mouse e colisões de objetos. No final do nível, os alunos poderão personalizar seu jogo alterando os visuais ou regras.
+            Events in Play Lab:
+              name: Eventos no Laboratório de jogos
+              description_student: É hora de ser criativo e criar um jogo no Play Lab!
+              description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
+            Picturing Data:
+              name: Estruturação de dados
+              description_student: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
+              description_teacher: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
+              description_teacher: 'Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração! '
+        coursed-2020:
+          title: Curso D (2019)
+          description: Os alunos desenvolvem sua compreensão de loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania digital.
+          description_short: Aprenda sobre declarações condicionais. Crie sua própria arte, jogos e até uma festa de dança.
+          description_audience: 'Idades: 7-11'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritmos: Programação em papel milimétrico'
+              description_student: Nesta lição, você programará seu colega de classe para desenhar desenhos!
+              description_teacher: 'Ao "programar" uns aos outros para desenhar imagens, os alunos têm a oportunidade de experimentar alguns dos principais conceitos de programação de uma maneira divertida e acessível. A aula começará com os alunos usando símbolos para instruir uns aos outros a colorir quadrados em papel milimétrico, em um esforço para reproduzir uma imagem existente. Se houver tempo, a lição pode terminar com imagens criadas pelos alunos.  '
+            Introduction to Online Puzzles:
+              name: Introdução a quebra-cabeças online
+              description_student: Esta lição lhe permitirá praticar as habilidades necessárias para este curso.
+              description_teacher: 'Neste conjunto de quebra-cabeças, os alunos irão iniciar com uma introdução (ou revisão, dependendo da experiência da sua sala de aula) do espaço de trabalho online da Code.org. Haverá vídeos que apontam o funcionamento mais básico do espaço, incluindo os botôes "Executar", "Reiniciar" e "Passo". Também serão discutidos nestes vídeos: arrastando blocos Blockly, deletando blocos Blockly, e conectando blocos Blockly. Em seguida, os alunos irão praticar suas habilidades de _sequenciamento_ e _depuração_ no labirinto. Dali, os alunos irão conhecer novos tipos de quebra-cabeças como Coletor, Artista e Colheitador quando forem aprender o básico de _laços_.'
+            Relay Programming:
+              name: Programação por revezamento
+              description_student: Lembra no início do curso quando você fez desenhos com código? Nesta lição, você estará trabalhando com uma equipe para fazer algo muito semelhante!
+              description_teacher: Esta atividade começará com uma pequena aula sobre depuração e persistência, então irá mudar rapidamente para uma corrida contra o tempo à medida que os alunos se dividem em times e trabalham juntos para escrever um programa uma instrução por vez.
+            Debugging in Collector:
+              name: Depurando no coletor
+              description_student: Você já teve problemas durante a codificação? Nesta lição, você aprenderá sobre os segredos da depuração. Depuração é o processo de encontrar e corrigir problemas no seu código.
+              description_teacher: Nesta atividade online, os alunos praticarão a depuração no ambiente "coletor". Os alunos aprenderão a ler e editar código para corrigir quebra-cabeças com algoritmos simples, laços e laços aninhados.
+            Events in Bounce:
+              name: Eventos em salto
+              description_student: Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.
+            Build a Star Wars Game:
+              name: Construa um jogo de Guerra nas estrelas
+              description_student: Sinta a força ao construir seu próprio jogo Star Wars nesta lição.
+              description_teacher: Nesta lição, os alunos irão praticar o uso de eventos para criar um jogo que eles possam compartilhar on-line. Apresentando R2-D2 e outros personagens de Star Wars, os alunos serão guiados através de eventos e, em seguida, terão espaço para criar seu próprio jogo.
+            Loops in Ice Age:
+              name: Laços na Era do gelo
+              description_student: Nesta lição, você usará o bloco de repetição para ajudar o Scrat a alcançar a bolota da maneira mais eficiente possível.
+              description_teacher: Como uma rápida atualização (ou introdução) do uso de loops, nesta etapa, os alunos usam o bloco `repeat` para levar o Scrat à bolota com mais eficiência.
+            Loops in Artist:
+              name: Laços no Artista
+              description_student: Nesta lição, os loops facilitam a criação de imagens interessantes com o Artista!
+              description_teacher: Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade funciona como um exercício de depuração para prática extra de solução de problemas.
+            Nested Loops in Bee:
+              name: Laços Aninhados na abelha
+              description_student: Loops dentro de loops dentro de loops. O que isto significa? Esta lição ensinará o que acontece quando você cria um loop aninhado.
+              description_teacher: Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar '.
+            Conditionals with Cards:
+              name: Condicionais com cartas
+              description_student: É hora de jogar um jogo em que você ganha pontos apenas sob certas condições!
+              description_teacher: "Esta lição demonstra como os condicionais podem ser usados ​​para adaptar um programa a informações específicas. Nem sempre temos todas as informações necessárias ao escrever um programa. Às vezes, você desejará fazer algo diferente em uma situação do que em outra, mesmo que você não saiba qual situação será verdadeira quando o código for executado. É aí que entram os condicionais. Os condicionais permitem que um computador tome uma decisão, com base nas informações verdadeiras sempre que seu código for executado.\\r\n \\r\n"
+            Conditionals in Bee:
+              name: Estruturas condicionais em abelhas
+              description_student: 'Agora que você entende os condicionais, é hora de programar a Abelha para coletar mel e néctar. '
+              description_teacher: Até esse momento, os alunos escreviam um código que é executado exatamente da mesma maneira cada vez que é executado - confiável, mas não muito flexível. Nesta lição, sua classe começará a codificar com condicionais, permitindo que eles escrevam códigos que funcionem de maneira diferente, dependendo das condições específicas que o programa encontra.
+            While Loops in Farmer:
+              name: Laços Enquanto no Fazendeiro
+              description_student: 'Laços são muito úteis na codificação. Esta lição ensinará sobre um novo tipo de laço: laços enquanto!'
+              description_teacher: "Quando os alunos chegam a esta lição, eles já devem praticar bastante usando loops de repetição, então agora é hora de misturar as coisas. \\r\n\\r\n_Enquanto loops_ são loops que continuam repetindo comandos enquanto uma condição é atendida. Os loops `while` são usados ​​quando o programador não sabe o número exato de vezes que os comandos precisam ser repetidos, mas sabe qual condição precisa ser verdadeira para que o loop continue repetindo. Por exemplo, os alunos trabalharão para preencher buracos e cavar terra no Fazendeiro. Eles não saberão o tamanho dos buracos ou a altura das montanhas de terra, mas os alunos saberão que precisam continuar preenchendo os buracos e cavando a terra enquanto o chão não for plano."
+            Until Loops in Maze:
+              name: Até Loops no Labirinto
+              description_student: Você pode fazer coisas incríveis quando usar loops `até`!
+              description_teacher: Nesta lição, os alunos aprenderão sobre os loops `até '. Os alunos criarão programas que terão como personagem principal repetir ações até atingirem o ponto de parada desejado.
+            Conditionals & Loops in Harvester:
+              name: Condicionais e laços em colheitadeira
+              description_student: Nem sempre é claro quando usar cada condicional. Esta lição ajudará você a praticar o processo de decisão.
+              description_teacher: Os alunos irão praticar os laços `enquanto`,` ate` e `se / senao`. Todos esses blocos usam condicionais. Ao praticar todos os três, os alunos aprenderão a escrever código complexo e flexível.
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+              description_student: Aprenda como os computadores armazenam fotos usando um idioma com apenas duas opções.
+              description_teacher: Embora muitas pessoas pensem no binário como estritamente zeros e uns, os alunos serão apresentados à idéia de que as informações podem ser representadas em uma variedade de opções binárias. Esta lição leva esse conceito um passo adiante, pois ilustra como um computador pode armazenar informações ainda mais complexas (como imagens e cores) em binário também.
+            Artist Binary:
+              name: 'Artista: binário'
+              description_student: Nesta lição, você aprenderá como criar imagens usando apenas 0s e 1s.
+              description_teacher: Esta série de aulas on-line fará com que os alunos aprendam a criar imagens usando e desativando.
+            Digital Citizenship:
+              name: Cidadania digital
+              description_student: Algumas informações não são seguras para compartilhar online. Esta lição o ajudará a aprender a diferença entre informações seguras e privadas.
+              description_teacher: "Em colaboração com o Common Sense Education, esta lição ajuda os alunos a aprender a pensar criticamente sobre as informações do usuário que alguns sites solicitam ou exigem. Os alunos aprendem a diferença entre informações privadas e informações pessoais, distinguindo o que é seguro e inseguro para compartilhar on-line.\\r\n\\r\nOs alunos também explorarão o que significa ser responsável e respeitoso com suas comunidades offline e online como um passo para aprender a ser um bom cidadão digital."
+            Dance Party:
+              name: Festa dançante
+              description_student: Hora de celebrar! Nesta lição, você programa sua própria festa de dança interativa.
+              description_teacher: Nesta lição, os alunos irão programar sua própria festa de dança interativa. Esta atividade requer som, pois a ferramenta foi criada para responder à música.
+        coursee-2020:
+          title: Curso E (2019)
+          description: Comece a codificar com algoritmos, loops, condicionais e eventos e, em seguida, você passará às funções. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com seus amigos e familiares.
+          description_short: Revise os conceitos nos Cursos C & D e vá além, aprendendo funções.
+          description_audience: 'De 8 a 12 anos'
+          stages:
+            Sequencing in the Maze:
+              name: Sequenciamento no labirinto
+              description_student: Nesta lição, você aprenderá como escrever seus próprios programas!
+              description_teacher: "Neste conjunto de quebra-cabeças, os alunos começarão com uma introdução (ou revisão, dependendo da experiência da sua classe) do espaço de trabalho on-line do Code.org. Haverá vídeos apontando as funcionalidades básicas da área de trabalho, incluindo os botões `Executar`,` Redefinir` e `Etapa`. Também discutido nesses vídeos: arrastando blocos Blockly, excluindo blocos Blockly e conectando blocos Blockly. Em seguida, os alunos praticarão suas habilidades de sequenciamento e depuração no labirinto. \\r\nA depuração é um elemento essencial para aprender a programar. Os alunos encontrarão alguns quebra-cabeças que foram resolvidos incorretamente. Eles precisarão percorrer o código existente para identificar erros, incluindo loops incorretos, blocos ausentes, blocos extras e blocos fora de ordem."
+            Programming and Loops with the Artist:
+              name: Programação e Loops com o Artista
+              description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
+              description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionais no Minecraft: Viagem Aquática'
+              description_student: Aqui você aprenderá sobre condicionais no mundo do Minecraft.
+              description_teacher: Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!
+            Conditionals:
+              name: Condições
+              description_student: Você vai conseguir dizer ao computador o que fazer sob certas condições nesta série divertida e desafiadora.
+              description_teacher: Esta lição apresenta aos alunos loops `while` e declarações` if / else`. _Enquanto loops_ são loops que continuam repetindo comandos desde que uma condição seja verdadeira. Enquanto loops são usados ​​quando o programador não sabe o número exato de vezes que os comandos precisam ser repetidos, mas o programador sabe qual condição precisa ser verdadeira para que o loop continue em repetição. As instruções `If / Else` oferecem flexibilidade na programação executando seções inteiras de código apenas se algo for verdadeiro, caso contrário, ele executa outra coisa.
+            Simon Says:
+              name: Simon diz
+              description_student: Jogue um jogo e pense em quais comandos são necessários para obter o resultado certo.
+              description_teacher: 'Nesta lição, os alunos jogarão um jogo destinado a fazê-los pensar sobre a maneira como os comandos devem ser dados para produzir o resultado certo. Isso os ajudará a transportar o Sprite Lab com mais facilidade nas próximas lições. '
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
+              description_student: Aprenda a criar e editar sprites.
+              description_teacher: 'Nesta lição, os alunos aprenderão sobre os dois conceitos no coração do Sprite Lab: sprites e comportamentos. Sprites são personagens ou objetos na tela que os alunos podem mover, alterar e manipular. Comportamentos são ações que os sprites executarão continuamente até serem interrompidos.'
+            Alien Dance Party with Sprite Lab:
+              name: Festa de dança alienígena com o Sprite Lab
+              description_student: Crie um projeto interativo que possa ser compartilhado com os colegas de classe.
+              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma na qual os alunos podem criar suas próprias animações e jogos interativos. Além dos comportamentos, hoje os alunos incorporam a entrada do usuário como eventos para criar uma "festa de dança alienígena".  '
+            Private and Personal Information:
+              name: Informações Privadas e Pessoais
+              description_student: A internet é divertida mas é importante estar seguro também. Esta lição ensina a diferença entre informações seguras para compartilhar e informações particulares.
+              description_teacher: "Desenvolvido pela Common Sense Education, esta lição trata da diferença entre informações seguras para compartilhar on-line e informações que não são.\\r\n\\r\nÀ medida que os estudantes visitam sites que solicitam informações sobre suas identidades, aprendem a adotar um processo crítico de investigação que os capacita a proteger a si mesmos e suas famílias contra roubo de identidade. Nesta lição, os alunos aprendem a pensar criticamente sobre as informações do usuário que alguns sites solicitam ou exigem. Eles aprendem a diferença entre informações privadas e informações pessoais, bem como distinguir o que é seguro ou não compartilhar on-line."
+            About Me:
+              name: Sobre mim
+              description_student: Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.
+              description_teacher: "Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.\\r\n"
+            Access Ability:
+              name: Habilidade de acesso
+              description_student: 'Nesta lição, os alunos aprenderão sobre acessibilidade e o valor da empatia por meio de brainstorming e design de soluções acessíveis para aplicativos hipotéticos. '
+              description_teacher: 'Nesta lição, os alunos aprenderão sobre acessibilidade e o valor da empatia por meio de brainstorming e design de soluções acessíveis para aplicativos hipotéticos. '
+            Nested Loops in Bee:
+              name: Laços Aninhados na abelha
+              description_student: Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço.
+              description_teacher: Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar '.
+            Nested Loops in Artist:
+              name: Laços Aninhados no Artista
+              description_student: Mais laços aninhados! Desta vez, você pode fazer alguns desenhos INCRÍVEIS com laços aninhados.
+              description_teacher: Os alunos criarão designs complexos usando o Artista no conjunto de quebra-cabeças de hoje. Ao continuar praticando laços aninhados com novos objetivos, os alunos verão mais usos dos laços em geral. Esse conjunto de quebra-cabeças também oferece muito mais potencial de criatividade, com a oportunidade de os alunos criarem seu próprio design no final do estágio.
+            Nested Loops in Frozen:
+              name: Laços Aninhados na Frozen
+              description_student: 'Anna e Elsa têm excelentes habilidades de patinação no gelo, mas precisam de sua ajuda para criar padrões no gelo. Use loops aninhados para criar algo super legal. '
+              description_teacher: Agora que os alunos sabem como estratificar seus loops, eles podem criar tantas coisas bonitas. Esta lição levará os alunos a uma série de exercícios para ajudá-los a criar suas próprias imagens prontas para o portfólio, usando as excelentes habilidades de patinação no gelo de Anna e Elsa!
+            'Functions: Songwriting':
+              name: 'Funções: Composição musical'
+              description_student: Até as estrelas do rock precisam de habilidades de programação. Esta lição ensinará sobre funções usando letras de músicas.
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções pode ser uma prática útil.
+            Functions in Minecraft:
+              name: Funções com Minecraft
+              description_student: Você pode descobrir como usar funções para o código mais eficiente?
+              description_teacher: Os alunos começarão a entender como as funções podem ser úteis nesta divertida e interativa aventura de Minecraft!
+            Functions in Harvester:
+              name: Funções em Colheitadeira
+              description_student: As funções economizarão muito trabalho, pois você ajuda o fazendeiro com sua colheita!
+              description_teacher: Os alunos praticaram a criação de designs impressionantes no Artist e a navegar labirintos no Bee, mas hoje eles usarão funções para colher colheitas em Harvester. Esta lição levará os alunos a usar funções de novas maneiras, combinando-as com loops `while` e instruções` if/else`.
+            Functions in Artist:
+              name: Funções no Artista
+              description_student: Faça desenhos complexos mais facilmente com funções!
+              description_teacher: Os alunos serão apresentados ao uso de funções no Code.org. Imagens magníficas serão criadas e modificadas com funções no Artista. Para padrões mais complicados, os alunos aprenderão sobre aninhamento de funções, chamando uma função dentro de outra.
+            End of Course Project:
+              description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
+              description_teacher: "As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\r\n\\r\nNa fase de exploração, os alunos brincam com exemplos pré-criados de projetos no Artist e no Sprite Lab para se inspirar. Em seguida, os alunos aprenderão sobre o processo de design e como implementá-lo em seus próprios projetos. Eles terão espaço para criar seu próprio projeto no Artist, no Sprite Lab ou em outra interface com a qual se familiarizarem (esse é provavelmente o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar seus trabalhos concluídos aos colegas."
+        coursef-2020:
+          title: Curso F (2019)
+          description: Aprenda a usar diferentes tipos de loops, eventos, funções e condicionais. Investigue diferentes técnicas de solução de problemas e discuta os impactos sociais da computação e da Internet. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com amigos e familiares.
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+          description_audience: 'Idades: 9-13'
+          stages:
+            Functions in Minecraft:
+              name: Funções com Minecraft
+              description_student: Você pode descobrir como usar funções para o código mais eficiente?
+              description_teacher: Os alunos começarão a entender como as funções podem ser úteis nesta divertida e interativa aventura de Minecraft!
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
+              description_student: Aprenda a criar e editar sprites.
+              description_teacher: 'Nesta lição, os alunos aprenderão sobre os dois conceitos no coração do Sprite Lab: sprites e comportamentos. Sprites são personagens ou objetos na tela que os alunos podem mover, alterar e manipular. Comportamentos são ações que os sprites executarão continuamente até serem interrompidos.'
+            Events with Sprite Lab:
+              description_student: Crie um projeto interativo que possa ser compartilhado com os colegas de classe.
+              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma na qual os alunos podem criar suas próprias animações e jogos interativos. Além dos comportamentos, hoje os alunos incorporam a entrada do usuário como eventos para criar uma "festa de dança alienígena".   '
+            Loops with the Artist:
+              description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
+              description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
+            Nested Loops in the Maze:
+              name: Laços Aninhados no Labirinto
+              description_student: Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço.
+              description_teacher: Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar '.
+            Envelope Variables:
+              name: Variáveis do envelope
+              description_student: "Envelopes e variáveis ​​têm algo em comum: ambos podem conter coisas valiosas. Aqui você aprenderá o que são variáveis ​​e as coisas impressionantes que podem fazer\n\nroot -> data -> script -> name -> coursef-2018 -> stages -> Envelope Variables -> description_student\nhttps://studio.code.org/s/coursef-2018 INTRO"
+              description_teacher: As variáveis ​​são usadas como espaços reservados para valores como números ou palavras. Variáveis ​​permitem muita liberdade na programação. Em vez de digitar uma frase muitas vezes ou lembrar de um número obscuro, os cientistas da computação podem usar variáveis ​​para fazer referência a elas. Esta lição ajuda a explicar o que são variáveis ​​e como podemos usá-las de várias maneiras diferentes. A ideia de variáveis ​​não é um conceito fácil de entender; portanto, recomendamos que haja bastante tempo para discussão no final da lição.
+            Variables as Constant in Artist:
+              description_student: Não se esqueça de trazer criatividade para a aula! Nestes quebra-cabeças, você fará desenhos fantásticos usando variáveis.
+              description_teacher: Nesta lição, os alunos explorarão a criação de designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos aprenderão como as variáveis ​​podem ser usadas para tornar o código mais fácil de escrever e mais fácil de ler, mesmo quando os valores não mudam no tempo de execução.
+            Variables that Change in Bee:
+              description_student: Esta abelha adora variáveis!
+              description_teacher: 'Esta lição ajudará a ilustrar como as variáveis ​​podem tornar os programas mais poderosos, permitindo que os valores mudem enquanto o código está em execução. '
+            Variables that Change in Artist:
+              description_student: Nesta lição, você fará desenhos usando variáveis ​​que mudam à medida que o programa é executado.
+              description_teacher: Nesta lição, os alunos explorarão a criação de designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos aprenderão como as variáveis ​​podem ser usadas para tornar o código mais fácil de escrever e mais fácil de ler. Após quebra-cabeças guiados, os alunos terminam em um nível de freeplay para mostrar o que aprenderam e criar seus próprios designs.
+            Simulating Experiments:
+              name: Simulação de experimentos
+              description_student: Execute simulações no computador e experimente alterando variáveis.
+              description_teacher: Ao executar uma simulação simples no Sprite Lab, os alunos experimentarão como a computação pode ser usada para coletar dados que identificam tendências ou padrões. Depois de executar a simulação várias vezes, os alunos terão a oportunidade de fazer uma previsão sobre como a alteração de uma variável na simulação pode impactar o resultado e depois testar essa hipótese.
+            For Loop Fun:
+              name: Diversão com laços for
+              description_student: Você vai se divertir aprendendo muito sobre os loops `for`!
+              description_teacher: 'Sabemos que os loops nos permitem fazer as coisas repetidas vezes, mas agora vamos aprender a usar loops com estruturas extras integradas. Essas novas estruturas permitirão que os alunos criem código mais poderoso e dinâmico. '
+            For Loops in Bee:
+              name: Laços Para na abelha
+              description_student: Buzz buzz. Nestes quebra-cabeças, você guiará uma abelha para o néctar e o mel usando loops `for`!
+              description_teacher: Apresentando Bee, esta lição se concentra nos loops `for` e no uso de uma variável de incremento para resolver quebra-cabeças mais complicados. Os alunos começarão revisando os loops das lições anteriores e depois farão uma introdução aos loops `for` para que possam resolver de maneira mais eficaz problemas complicados.
+            For Loops in Artist:
+              name: Laços Para no Artista
+              description_student: Prepare-se para fazer sua próxima obra-prima. Aqui você usará loops `for` para fazer algumas fotos de cair o queixo.
+              description_teacher: Nesta lição, os alunos continuam praticando loops `for`, mas desta vez com o Artist. Os alunos irão completar quebra-cabeças combinando as idéias de variáveis, loops e loops `for` para criar designs complexos. No final, eles terão a chance de criar sua própria arte em um nível de freeplay.
+            Internet:
+              name: Internet
+              description_student: Já imaginou como a informação viaja pela Internet? Não é mágico! Esta lição ensinará os conceitos básicos de como a Internet funciona.
+              description_teacher: Embora muitas pessoas usem a Internet diariamente, poucas sabem como ela funciona. Nesta lição, os alunos fingirão fluir pela Internet, aprendendo o tempo todo sobre conexões, URLs, endereços IP e DNS.
+            Editing Behaviors:
+              description_student: Aprenda a programar seus próprios comportamentos de sprite!
+              description_teacher: Aqui, os alunos usarão o Sprite Lab para criar seus próprios comportamentos personalizados.
+            Virtual Pet:
+              description_student: Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!
+              description_teacher: Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!
+            The Power of Words:
+              name: O poder das palavras
+              description_student: Bullying nunca é bom. Esta lição ensinará sobre o que é e o que não é bom dizer on-line.
+              description_teacher: "Os alunos consideram que, enquanto desfrutam de seus sites favoritos, podem encontrar mensagens de outras crianças que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram maneiras de lidar com o cyberbullying e como responder em face da perturbadora linguagem on-line.\\r\n\\r\nOs alunos discutem todas as maneiras pelas quais usam a tecnologia para comunicação e exploram as semelhanças e diferenças entre a comunicação pessoal e online. Os alunos então discutem maneiras de responder ao cyberbullying. "
+            Crowdsourcing:
+              name: Crowdsourcing
+              description_student: Esta lição ensinará sobre crowdsourcing, o processo de construção de um projeto com uma equipe.
+              description_teacher: Na ciência da computação, enfrentamos alguns problemas grandes e assustadores. Desafios como encontrar grandes números primos ou sequenciar o DNA são quase impossíveis de serem feitos individualmente. Adicionar o poder de outras pessoas torna essas tarefas gerenciáveis. Esta lição mostrará aos alunos como o trabalho em equipe pode ser útil no setor de ciência da computação.
+            Digital Sharing:
+              name: Compartilhamento Digital
+              description_student: 'Nesta lição, você aprenderá sobre os desafios e benefícios da propriedade e dos direitos autorais. '
+              description_teacher: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes a entenderem os desafios e benefícios de respeitar posse e direitos autorais, particularmente em ambientes digitais. Estudantes deveriam ser encorajados a respeitar os direitos dos artistas como uma parte importante de ser um cidadão digital ético.
+            End of Course Project:
+              description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
+              description_teacher: "As próximas cinco lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto de referência. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Pretende-se que seja um projeto de várias lições ou de várias semanas em que os alunos passam um tempo discutindo, aprendendo sobre o processo de design, construindo e depois apresentando seu trabalho final. \\r\n\\r\nNo estágio \"Explorar\", os alunos brincam com os programas pré-criados para Artista e Sprite Lab, em busca de inspiração. Em seguida, os alunos aprenderão sobre o processo de design e como implementá-lo em seus próprios projetos. Eles terão espaço para criar seu próprio projeto no Artist, no Sprite Lab ou em qualquer outra interface que você esteja confortável em fornecer. (Este é provavelmente o estágio mais longo do projeto.) Os alunos revisarão seu código após o teste e a revisão por pares. Por fim, os alunos poderão apresentar seu trabalho final aos colegas de classe."
+        express-2020:
+          title: Curso Expresso (2019)
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
+          description_audience: '9-18 anos de idade'
+          stages:
+            Dance Party:
+              name: Festa dançante
+            Programming in Maze:
+              name: Programação no labirinto
+            Debugging in Maze:
+              name: Depurando no Labirinto
+            Programming in Collector:
+              name: Programação com coletor
+            Programming in Artist:
+              name: Programação em Artista
+            Loops with Rey and BB-8:
+              name: Loops com Rey e BB-8
+            Loops in Artist:
+              name: Laços no Artista
+            Nested Loops in Bee:
+              name: Laços Aninhados na abelha
+            Nested Loops in Frozen:
+              name: Laços Aninhados na Frozen
+            Conditionals in Bee:
+              name: Estruturas condicionais em abelhas
+            While Loops in Farmer:
+              name: Laços Enquanto no Fazendeiro
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionais no Minecraft: Viagem Aquática'
+            Until Loops in Maze:
+              name: Até Loops no Labirinto
+            Conditionals & Loops in Harvester:
+              name: Condicionais e laços em colheitadeira
+            Functions in Minecraft:
+              name: Funções com Minecraft
+            Functions in Harvester:
+              name: Funções em Colheitadeira
+            Functions in Artist:
+              name: Funções no Artista
+            For Loops in Bee:
+              name: Laços Para na abelha
+            For Loops in Artist:
+              name: Laços Para no Artista
+            Learning Sprites with Sprite Lab:
+              name: Aprendendo Sprites com o Sprite Lab
+            Alien Dance Party with Sprite Lab:
+              name: Festa de dança alienígena com o Sprite Lab
+            Virtual Pet with Sprite Lab:
+              name: Pet Virtual com Sprite Lab
+        pre-express-2020:
+          title: Pré-leitor Express (2019)
+          description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
+          description_short: 'Uma introdução à ciência da computação para pré-alfabetizados: combina o melhor do jardim de infância e cursos do ensino fundamental.'
+          description_audience: 'Idades: 4-8'
+          stages:
+            Learn to Drag and Drop:
+              name: Aprenda a arrastar e soltar
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
+            Programming in Maze:
+              name: Programação no labirinto
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
+            Programming in Harvester:
+              name: Programação em Harvester
+            Spelling Bee:
+              name: Soletrando
+            Loops in Ice Age:
+              name: Laços na Era do gelo
+            Loops in Collector:
+              name: Laços em coletor
+            Ocean Scene with Loops:
+              name: Cena do Oceano com Repetições
+            Loops in Artist:
+              name: Laços no Artista
+            Tell a Story in Play Lab:
+              name: Conte uma história no Play Lab
+        csp1-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Welcome to CSP:
+              name: Bem vindo ao CSP
+            Representing Information:
+              name: Representando informação
+            Circle Square Patterns:
+              name: Padrões Circulo Quadrado
+            Binary Numbers:
+              name: Números binários
+            Overflow and Rounding:
+              name: Estouro e arredondamento
+            Representing Text:
+              name: Representando texto
+            Black and White Images:
+              name: Imagens em preto e branco
+            Color Images:
+              name: Imagens coloridas
+            Lossless Compression:
+              name: Compressão sem perdas
+            Lossy Compression:
+              name: Compressão com perda
+            Intellectual Property:
+              name: Propriedade intelectual
+            Project - Digital Information Dilemmas Part 1:
+              name: Projeto - Dilemas da Informação Digital Parte 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Projeto - Dilemas da Informação Digital Parte 2
+            'Lesson 14: Assessment Day':
+              name: 'Lição 14: Dia da Avaliação'
+        csp2-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Welcome to the Internet:
+              name: Bem-vindo à Internet
+            Building a Network:
+              name: Construindo uma rede
+            The Need for Addressing:
+              name: A Necessidade de Endereçar
+            Routers and Redundancy:
+              name: Roteadores e redundância
+            Packets:
+              name: Pacotes
+            DNS and HTTP:
+              name: DNS e HTTP
+            Project - Internet Dilemmas Part 1:
+              name: Projeto - Dilemas da Internet Parte 1
+            Project - Internet Dilemmas Part 2:
+              name: Projeto - Dilemas da Internet - Parte 2
+            'Lesson 9: Assessment Day':
+              name: 'Lição 9: Dia da Avaliação'
+        csp3-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Introduction to Apps:
+              name: Introdução à apps
+            Project - Designing an App Part 1:
+              name: 'Projeto: Criando um aplicativo Parte 1'
+            Project - Designing an App Part 2:
+              name: 'Projeto: Criando um aplicativo Parte 2'
+            The Need for Programming Languages:
+              name: A necessidade das linguagens de programação
+            Intro to Programming:
+              name: Introdução à Programação
+            Debugging:
+              name: Analisando
+            Project - Designing an App Part 3:
+              name: 'Projeto: Criando um aplicativo Parte 3'
+            Project - Designing an App Part 4:
+              name: 'Projeto: Criando um aplicativo Parte 4'
+            Project - Designing an App Part 5:
+              name: Projeto - Criando um Aplicativo - Parte 5
+            'Lesson 11: Assessment Day':
+              name: 'Lição 11: Dia de Avaliação'
+        csp6-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Algorithms Solve Problems:
+              name: Algoritmos resolvem problemas
+            Algorithm Efficiency:
+              name: Eficiência de algoritmo
+            Unreasonable Time:
+              name: Tempo inadequado
+            The Limits of Algorithms:
+              name: Os limites dos algoritmos
+            Parallel and Distributed Algorithms:
+              name: Algoritmos Paralelos e Distribuídos
+            'Lesson 6: Assessment Day':
+              name: 'Lição 6: Dia da Avaliação'
+        csp8-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Create PT - Review the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT - Make a Plan:
+              name: Criar PT - Fazendo um Plano
+            Create PT - Complete the Task:
+              name: Criar PT - Complete a Tarefa
+        csp9-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Learning From Data:
+              name: Aprendendo com dados
+            Exploring One Column:
+              name: Explorando uma coluna
+            Filtering and Cleaning Data:
+              name: Filtrando e limpando dados
+            Exploring Two Columns:
+              name: Explorando duas colunas
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, e aprendizado de máquina
+            Machine Learning and Bias:
+              name: Aprendizado de máquina e tendencia
+            Project - Tell a Data Story - Part 1:
+              name: Projeto - Conte uma História de Dados - Parte 1
+            Project - Tell a Data Story - Part 2:
+              name: Projeto - Conte uma História de Dados - Parte 2
+            'Lesson 9: Assessment Day':
+              name: 'Lição 9: Dia da Avaliação'
+        csp10-2020:
+          stages:
+            new stage:
+              name: nova fase
+            Project - Innovation Simulation Part 1:
+              name: 'Projeto: Simulação da Inovação - Parte 1'
+            Project - Innovation Simulation Part 2:
+              name: 'Projeto: Simulação da Inovação - Parte 2'
+            Project - Innovation Simulation Part 3:
+              name: 'Projeto: Simulação da Inovação - Parte 3'
+            Data Policies and Privacy:
+              name: Políticas de dados e privacidade
+            The Value of Privacy:
+              name: O valor da privacidade
+            Project - Innovation Simulation Part 4:
+              name: 'Projeto: Simulação da Inovação - Parte 4'
+            Security Risks Part 1:
+              name: Riscos de segurança Parte 1
+            Security Risks Part 2:
+              name: Riscos de segurança Parte 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Projeto: Simulação da Inovação - Parte 4'
+            Project - Innovation Simulation Part 6:
+              name: 'Projeto: Simulação da Inovação - Parte 6'
+            Project - Innovation Simulation Part 7:
+              name: 'Projeto: Simulação da Inovação - Parte 7'
+            Protecting Data Part 1:
+              name: Protegendo dados Parte 1
+            Protecting Data Part 2:
+              name: Protegendo dados Parte 2
+            'Project: Innovation Simulation Part 5':
+              name: 'Projeto: Simulação da Inovação - Parte 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Projeto: Simulação da Inovação - Parte 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Projeto: Simulação da Inovação - Parte 7'
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lição 14: Dia da Avaliação da Unidade'
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nova fase

@@ -89,6 +89,9 @@ ca-ES:
       NEW Course 4 Bee For Loops 5:
         actions_category: La caixa d'eines té un nou look! Els blocs de "Accions"
           són aquí ara.
+      New Frozen Project:
+        snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
+          flocs de neu!
       Overworld Chop Trees:
         craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
       Overworld Chop Trees_2019:

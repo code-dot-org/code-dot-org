@@ -227,42 +227,7 @@ Resources:
 <% end -%>
 <% if load_balancer -%>
   # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
-  LoadBalancer:
-    Type: AWS::ElasticLoadBalancing::LoadBalancer
-    Properties:
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
-      LoadBalancerName: !Ref AWS::StackName
-      CrossZone: true
-      SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
-      Subnets: <%= public_subnets.to_json %>
-      LBCookieStickinessPolicy:
-        - PolicyName: CookieBasedPolicy
-          CookieExpirationPeriod: 30
-      Listeners:
-        - LoadBalancerPort: 80
-          InstancePort: 80
-          Protocol: HTTP
-          PolicyNames: [CookieBasedPolicy]
-        - LoadBalancerPort: 443
-          InstancePort: 80
-          Protocol: HTTPS
-          SSLCertificateId: <%=certificate_arn%>
-          PolicyNames: [CookieBasedPolicy]
-      HealthCheck:
-        Target: HTTP:80/health_check
-        HealthyThreshold: 2
-        UnhealthyThreshold: 5
-        Interval: 10
-        Timeout: 5
-      ConnectionDrainingPolicy:
-        Enabled: true
-        Timeout: 300
-<%   if !frontends && daemon_instance_id -%>
-      Instances: [<%=daemon_instance_id%>]
-<%   elsif daemon %>
-      Instances:
-        - !Ref <%=daemon%>
-<%   end -%>
 
   ALB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
@@ -359,7 +324,6 @@ Resources:
       DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
       HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
       HealthCheckGracePeriod: 2000
-      LoadBalancerNames: [Ref: LoadBalancer]
       TargetGroupARNs: [Ref: ALBTargetGroup]
       MetricsCollection:
         - Granularity: 1Minute
@@ -506,8 +470,8 @@ Resources:
             HostedZoneId: Z2FDTNDATAQYW2 # static ID for cloudfront aliases
 <%   elsif load_balancer -%>
           AliasTarget:
-            DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
-            HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
+            DNSName: !GetAtt [ALB, DNSName]
+            HostedZoneId: !GetAtt [ALB, CanonicalHostedZoneID]
 <%   else -%>
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
@@ -540,8 +504,8 @@ Resources:
           Type: A
 <%   if load_balancer -%>
           AliasTarget:
-            HostedZoneId: !GetAtt [LoadBalancer, CanonicalHostedZoneNameID]
-            DNSName: !GetAtt [LoadBalancer, CanonicalHostedZoneName]
+            HostedZoneId: !GetAtt [ALB, CanonicalHostedZoneID]
+            DNSName: !GetAtt [ALB, DNSName]
 <%   else -%>
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
@@ -675,6 +639,19 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
+        - PolicyName: DMSStartAndMonitorReplicationTasks
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dms:DescribeReplicationTasks
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - dms:DescribeTableStatistics
+                  - dms:ListTagsForResource
+                  - dms:StartReplicationTask
+                Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
@@ -704,9 +681,7 @@ Resources:
         Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
           resource_id: daemon,
           node_name: '$STACK',
-          run_list: [
-            local_mode ? 'recipe[cdo-apps]' : 'role[daemon]'
-          ],
+          run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
           commit: nil, # track branch
           shutdown: false,
           daemon: true,

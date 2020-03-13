@@ -266,6 +266,9 @@ ru-RU:
       NEW Course 4 Bee For Loops 5:
         actions_category: Панель инструментов теперь выглядит по-новому! Теперь здесь
           появился блок «Действия».
+      New Frozen Project:
+        snowflake_dropdown: Используй данный раскрывающийся список для создания разных
+          снежинок!
       Overworld Chop Trees:
         craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь
           тебе начать работу
