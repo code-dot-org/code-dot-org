@@ -77,48 +77,6 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
   };
 };
 
-export const jumpToLessonDetails = lessonOfInterest => {
-  return (dispatch, getState) => {
-    const state = getState();
-    dispatch(setLessonOfInterest(lessonOfInterest));
-    dispatch(setCurrentView(ViewType.DETAIL));
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'view_change_toggle',
-        data_json: JSON.stringify({
-          section_id: state.sectionData.section.id,
-          old_view: ViewType.SUMMARY,
-          new_view: ViewType.DETAIL,
-          script_id: state.scriptSelection.scriptId
-        })
-      },
-      {includeUserId: true}
-    );
-  };
-};
-export const processScriptAndProgress = scriptId => {
-  return (dispatch, getState) => {
-    const state = getState().sectionProgress;
-    const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
-    const studentLevelPairing = state.studentLevelPairingByScript[scriptId];
-    const scriptData = state.scriptDataByScript[scriptId];
-    let levelsByLessonByStudent = {};
-    for (const studentId of Object.keys(studentLevelProgress)) {
-      levelsByLessonByStudent[studentId] = levelsByLesson({
-        stages: scriptData.stages,
-        levelProgress: studentLevelProgress[studentId],
-        levelPairing: studentLevelPairing[studentId],
-        currentLevelId: null
-      });
-    }
-
-    dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
-    dispatch(finishLoadingProgress());
-  };
-};
-
 const NUM_STUDENTS_PER_PAGE = 50;
 
 // Types of views of the progress tab
@@ -254,6 +212,28 @@ export default function sectionProgress(state = initialState, action) {
   return state;
 }
 
+export const jumpToLessonDetails = lessonOfInterest => {
+  return (dispatch, getState) => {
+    const state = getState();
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'view_change_toggle',
+        data_json: JSON.stringify({
+          section_id: state.sectionData.section.id,
+          old_view: ViewType.SUMMARY,
+          new_view: ViewType.DETAIL,
+          script_id: state.scriptSelection.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+};
+
 // Selector functions
 
 /**
@@ -351,9 +331,12 @@ export const loadScript = (scriptId, sectionId) => {
     const sectionData = getState().sectionData.section;
 
     // Don't load data if it's already stored in redux.
+    // TODO: Save Standards data in a way that allows us
+    // not to reload all data to get correct standards data
     if (
       state.studentLevelProgressByScript[scriptId] &&
-      state.scriptDataByScript[scriptId]
+      state.scriptDataByScript[scriptId] &&
+      state.currentView !== ViewType.STANDARDS
     ) {
       return;
     }
@@ -407,6 +390,27 @@ export const loadScript = (scriptId, sectionId) => {
     Promise.all(requests).then(() =>
       dispatch(processScriptAndProgress(scriptId))
     );
+  };
+};
+
+export const processScriptAndProgress = scriptId => {
+  return (dispatch, getState) => {
+    const state = getState().sectionProgress;
+    const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
+    const studentLevelPairing = state.studentLevelPairingByScript[scriptId];
+    const scriptData = state.scriptDataByScript[scriptId];
+    let levelsByLessonByStudent = {};
+    for (const studentId of Object.keys(studentLevelProgress)) {
+      levelsByLessonByStudent[studentId] = levelsByLesson({
+        stages: scriptData.stages,
+        levelProgress: studentLevelProgress[studentId],
+        levelPairing: studentLevelPairing[studentId],
+        currentLevelId: null
+      });
+    }
+
+    dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
+    dispatch(finishLoadingProgress());
   };
 };
 
