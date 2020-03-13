@@ -10,20 +10,10 @@
           "html": "Please note that the facilitator of your session will see your responses. Your name and email will not be shared with your facilitator to protect your anonymity, however, it’s possible your facilitator could identify you from your written responses."
         },
         {
-          "type": "radiogroup",
-          "name": "consent_survey",
-          "title": "Your participation is voluntary but strongly encouraged. Do you consent to completing this survey?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "Yo"
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "consent_survey"
         },
         {
           "type": "radiogroup",
