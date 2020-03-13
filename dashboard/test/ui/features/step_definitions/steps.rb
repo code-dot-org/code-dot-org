@@ -1228,6 +1228,8 @@ end
 And(/^I make user "([^"]*)" an admin ?$/) do |name|
   require_rails_env
   user = User.find_by_email_or_hashed_email(@users[name][:email])
+  # Only users with multi auto can have admin privileges.
+  user.migrate_to_multi_auth
   user.admin = true
   user.save!
 end
