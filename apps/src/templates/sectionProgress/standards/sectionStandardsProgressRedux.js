@@ -116,8 +116,7 @@ export function getUnpluggedLessonsForScript(state) {
       name: stage.name,
       number: stage.position,
       url: stage.lesson_plan_html_url,
-      completed: stage.completed,
-      selected: stage.selected
+      completed: stage.completed
     };
   }
 
