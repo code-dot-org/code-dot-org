@@ -26,6 +26,7 @@ export class CreateStandardsReportDialog extends Component {
     sectionId: PropTypes.number,
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
+    handleNext: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     onCommentChange: PropTypes.func.isRequired
   };
@@ -35,7 +36,10 @@ export class CreateStandardsReportDialog extends Component {
   };
 
   handleNext = () => {
-    this.setState({currentPage: this.state.currentPage + 1});
+    this.setState(
+      {currentPage: this.state.currentPage + 1},
+      this.props.handleNext
+    );
   };
 
   handleBack = () => {
