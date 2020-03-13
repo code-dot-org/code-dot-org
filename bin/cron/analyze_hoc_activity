@@ -80,6 +80,10 @@ def main
   hoc_year = DCDO.get("hoc_year", 2017)
 
   # Compute the number of hoc events (the grand total and broken down by company and country).
+  # Note that these queries use the "DB" connection, which is set in lib/cdo/properties.rb to PEGASUS_DB
+  # PEGASUS_DB is defined in lib/cdo/db.rb using sequel with connections to the pegasus writer and reader.
+  # So, even though most of the script uses the reader connections (eg, DASHBOARD_DB_READER),
+  # the "DB" connection used here does include a connection to the writer.
   hoc_country_totals = Hash.new(0)
   hoc_company_totals = Hash.new(0)
   unique_hoc_events = DB[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
