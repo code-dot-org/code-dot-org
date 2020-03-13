@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Table} from 'react-bootstrap';
+import {Button, Table} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
@@ -207,9 +207,9 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             {enrollment.email}
             {application_url && (
               <p>
-                <a href={application_url} target="_blank">
+                <Button bsSize="xsmall" href={application_url} target="_blank">
                   View Application
-                </a>
+                </Button>
               </p>
             )}
           </td>
