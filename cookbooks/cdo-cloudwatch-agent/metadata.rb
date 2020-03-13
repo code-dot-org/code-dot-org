@@ -1,9 +1,9 @@
-name             'cdo-mysql'
+name             'cdo-cloudwatch-agent'
 maintainer       'Code.org'
 maintainer_email 'will@code.org'
 license          'All rights reserved'
-description      'Installs/Configures cdo-mysql'
+description      'Installs/Configures cdo-cloudwatch-agent'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.27'
+version          '0.1.1'
 
-depends 'apt', '~> 2.6.0'
+depends 'aws_cloudwatch'

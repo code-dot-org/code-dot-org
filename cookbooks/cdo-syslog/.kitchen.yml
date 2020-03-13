@@ -18,10 +18,9 @@ platforms:
   - recipe[apt]
   - recipe[sudo-user]
   attributes:
-    cdo-cloudwatch-logger:
-      dry_run: true
+    cdo-syslog:
       syslog_size: 256
 suites:
 - name: default
   run_list:
-  - recipe[cdo-cloudwatch-logger]
+  - recipe[cdo-syslog]
