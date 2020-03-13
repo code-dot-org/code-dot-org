@@ -212,6 +212,10 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: projectsList
       };
     case PUBLISH_SUCCESS:
+      if (!state.projects) {
+        // We haven't loaded the projects and therefore have nothing to update.
+        return state;
+      }
       var publishedChannel = action.lastPublishedProjectData.channel;
 
       var publishedProjectIndex = state.projects.findIndex(
