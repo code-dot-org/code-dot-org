@@ -94,28 +94,42 @@ export class LibraryManagerDialog extends React.Component {
   }
 
   onOpen = () => {
+    this.setState({libraries: dashboard.project.getProjectLibraries() || []});
+
     let libraryClient = new LibraryClientApi();
     libraryClient.getClassLibraries(
-      classLibraries => {
-        // Map userName from class libraries to project libraries.
-        // We only want users to see the author name for libraries from their classmates.
-        const projectLibraries = dashboard.project.getProjectLibraries() || [];
-        projectLibraries.forEach(projectLibrary => {
-          const classLibrary = classLibraries.find(
-            library => library.channel === projectLibrary.channelId
-          );
-          projectLibrary.userName = classLibrary && classLibrary.userName;
-        });
-
-        this.setState({
-          libraries: projectLibraries,
-          classLibraries
-        });
+      libraries => {
+        this.setState(
+          {classLibraries: libraries || []},
+          this.mapUserNameToProjectLibraries
+        );
       },
       error => {
         console.log('error: ' + error);
       }
     );
+  };
+
+  // Map userName from class libraries to project libraries so the author is displayed in the UI.
+  // We only want users to see the author name for libraries from their classmates.
+  mapUserNameToProjectLibraries = () => {
+    const {libraries, classLibraries} = this.state;
+
+    if (classLibraries.length === 0) {
+      return;
+    }
+
+    const projectLibraries = [
+      ...(libraries || dashboard.project.getProjectLibraries() || [])
+    ];
+    projectLibraries.forEach(projectLibrary => {
+      const classLibrary = classLibraries.find(
+        library => library.channel === projectLibrary.channelId
+      );
+      projectLibrary.userName = classLibrary && classLibrary.userName;
+    });
+
+    this.setState({libraries: projectLibraries});
   };
 
   setLibraryToImport = event => {
