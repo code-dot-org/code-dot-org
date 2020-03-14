@@ -95,10 +95,22 @@ export class LibraryManagerDialog extends React.Component {
 
   onOpen = () => {
     let libraryClient = new LibraryClientApi();
-    this.setState({libraries: dashboard.project.getProjectLibraries() || []});
     libraryClient.getClassLibraries(
-      libraries => {
-        this.setState({classLibraries: libraries});
+      classLibraries => {
+        // Map userName from class libraries to project libraries.
+        // We only want users to see the author name for libraries from their classmates.
+        const projectLibraries = dashboard.project.getProjectLibraries() || [];
+        projectLibraries.forEach(projectLibrary => {
+          const classLibrary = classLibraries.find(
+            library => library.channel === projectLibrary.channelId
+          );
+          projectLibrary.userName = classLibrary && classLibrary.userName;
+        });
+
+        this.setState({
+          libraries: projectLibraries,
+          classLibraries
+        });
       },
       error => {
         console.log('error: ' + error);
