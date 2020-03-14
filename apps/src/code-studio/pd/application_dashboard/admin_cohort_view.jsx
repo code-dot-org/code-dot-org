@@ -189,7 +189,6 @@ export default class AdminCohortView extends React.Component {
         <Row>
           <Col sm={2}>
             <Button
-              __useDeprecatedTag
               style={styles.downloadCsvButton}
               onClick={this.handleDownloadCsv}
             >

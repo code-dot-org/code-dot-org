@@ -58,7 +58,7 @@ export default class SessionFormPart extends React.Component {
   renderAddButton() {
     if (this.props.onAdd && !this.props.readOnly) {
       return (
-        <Button __useDeprecatedTag onClick={this.handleAddClick}>
+        <Button onClick={this.handleAddClick}>
           <i className="fa fa-plus" />
         </Button>
       );
@@ -68,7 +68,7 @@ export default class SessionFormPart extends React.Component {
   renderRemoveButton() {
     if (this.props.onRemove && !this.props.readOnly) {
       return (
-        <Button __useDeprecatedTag onClick={this.handleRemoveClick}>
+        <Button onClick={this.handleRemoveClick}>
           <i className="fa fa-minus" />
         </Button>
       );

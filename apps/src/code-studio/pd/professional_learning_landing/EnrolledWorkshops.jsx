@@ -68,7 +68,6 @@ class EnrolledWorkshopsTable extends React.Component {
       <div>
         {workshop.state === 'Not Started' && (
           <Button
-            __useDeprecatedTag
             onClick={() => this.showCancelModal(workshop.enrollment_code)}
             style={styles.button}
           >
@@ -77,7 +76,6 @@ class EnrolledWorkshopsTable extends React.Component {
         )}
         {workshop.state === 'Ended' && (
           <Button
-            __useDeprecatedTag
             onClick={() => this.openCertificate(workshop)}
             style={styles.button}
             disabled={!workshop.attended}
@@ -86,7 +84,6 @@ class EnrolledWorkshopsTable extends React.Component {
           </Button>
         )}
         <Button
-          __useDeprecatedTag
           onClick={() =>
             window.open(
               `/pd/workshop_enrollment/${workshop.enrollment_code}`,
@@ -170,14 +167,10 @@ class EnrolledWorkshopsTable extends React.Component {
             Are you sure you want to cancel your enrollment in this course?
           </Modal.Body>
           <Modal.Footer>
-            <Button
-              __useDeprecatedTag
-              onClick={this.cancelEnrollment}
-              bsStyle="primary"
-            >
+            <Button onClick={this.cancelEnrollment} bsStyle="primary">
               Yes - cancel my enrollment
             </Button>
-            <Button __useDeprecatedTag onClick={this.dismissCancelModal}>
+            <Button onClick={this.dismissCancelModal}>
               No - stay enrolled in this class
             </Button>
           </Modal.Footer>

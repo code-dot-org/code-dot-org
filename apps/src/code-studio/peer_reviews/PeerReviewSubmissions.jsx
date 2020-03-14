@@ -183,7 +183,6 @@ class PeerReviewSubmissions extends React.Component {
             )}
         </FormControl>
         <Button
-          __useDeprecatedTag
           id="DownloadCsvReport"
           style={{
             float: 'right',

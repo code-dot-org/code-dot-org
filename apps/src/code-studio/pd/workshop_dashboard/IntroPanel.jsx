@@ -130,7 +130,6 @@ export default class IntroPanel extends React.Component {
 
     return (
       <Button
-        __useDeprecatedTag
         onClick={() => this.handleAdminActionClick(action.toLowerCase())}
         bsSize="xsmall"
         style={{float: 'right'}}
@@ -171,7 +170,6 @@ export default class IntroPanel extends React.Component {
               below.
             </p>
             <Button
-              __useDeprecatedTag
               onClick={this.handleStartWorkshopClick}
               className={buttonClass}
             >

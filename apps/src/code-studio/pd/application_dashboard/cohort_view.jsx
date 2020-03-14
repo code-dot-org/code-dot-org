@@ -121,17 +121,12 @@ class CohortView extends React.Component {
           <Row>
             <Col md={6} sm={6}>
               <Button
-                __useDeprecatedTag
                 style={styles.button}
                 onClick={this.handleDownloadCsvClick}
               >
                 Download CSV
               </Button>
-              <Button
-                __useDeprecatedTag
-                style={styles.button}
-                onClick={this.handleViewAllClick}
-              >
+              <Button style={styles.button} onClick={this.handleViewAllClick}>
                 View all applications
               </Button>
             </Col>

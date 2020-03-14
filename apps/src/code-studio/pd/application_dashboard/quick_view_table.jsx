@@ -313,7 +313,6 @@ export class QuickViewTable extends React.Component {
   formatActionsCell = id => {
     return (
       <Button
-        __useDeprecatedTag
         bsSize="xsmall"
         target="_blank"
         href={this.context.router.createHref(`/${this.props.path}/${id}`)}
