@@ -70,6 +70,26 @@ const styles = {
   }
 };
 
+// Map userName from class libraries to project libraries so the author is displayed in the UI.
+// We only want users to see the author name for libraries from their classmates.
+export const mapUserNameToProjectLibraries = (
+  projectLibraries,
+  classLibraries
+) => {
+  if (classLibraries.length === 0) {
+    return projectLibraries;
+  }
+
+  projectLibraries.forEach(projectLibrary => {
+    const classLibrary = classLibraries.find(
+      library => library.channel === projectLibrary.channelId
+    );
+    projectLibrary.userName = classLibrary && classLibrary.userName;
+  });
+
+  return projectLibraries;
+};
+
 export class LibraryManagerDialog extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
@@ -98,38 +118,20 @@ export class LibraryManagerDialog extends React.Component {
 
     let libraryClient = new LibraryClientApi();
     libraryClient.getClassLibraries(
-      libraries => {
-        this.setState(
-          {classLibraries: libraries || []},
-          this.mapUserNameToProjectLibraries
+      classLibraries => {
+        const projectLibraries = mapUserNameToProjectLibraries(
+          this.state.libraries,
+          classLibraries
         );
+        this.setState({
+          classLibraries,
+          libraries: projectLibraries
+        });
       },
       error => {
         console.log('error: ' + error);
       }
     );
-  };
-
-  // Map userName from class libraries to project libraries so the author is displayed in the UI.
-  // We only want users to see the author name for libraries from their classmates.
-  mapUserNameToProjectLibraries = () => {
-    const {libraries, classLibraries} = this.state;
-
-    if (classLibraries.length === 0) {
-      return;
-    }
-
-    const projectLibraries = [
-      ...(libraries || dashboard.project.getProjectLibraries() || [])
-    ];
-    projectLibraries.forEach(projectLibrary => {
-      const classLibrary = classLibraries.find(
-        library => library.channel === projectLibrary.channelId
-      );
-      projectLibrary.userName = classLibrary && classLibrary.userName;
-    });
-
-    this.setState({libraries: projectLibraries});
   };
 
   setLibraryToImport = event => {
