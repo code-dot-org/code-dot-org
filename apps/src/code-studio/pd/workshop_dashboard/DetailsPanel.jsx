@@ -81,13 +81,9 @@ export default class DetailsPanel extends React.Component {
               <Col sm={4}>
                 <ButtonToolbar>
                   {workshop.state === 'Not Started' && (
-                    <Button __useDeprecatedTag onClick={this.handleEditClick}>
-                      Edit
-                    </Button>
+                    <Button onClick={this.handleEditClick}>Edit</Button>
                   )}
-                  <Button __useDeprecatedTag onClick={this.handleBackClick}>
-                    Back
-                  </Button>
+                  <Button onClick={this.handleBackClick}>Back</Button>
                 </ButtonToolbar>
               </Col>
             </Row>
@@ -135,12 +131,7 @@ const DetailsPanelHeader = ({children}) => (
 DetailsPanelHeader.propTypes = {children: PropTypes.node};
 
 const HeaderButton = ({text, bsStyle, onClick}) => (
-  <Button
-    __useDeprecatedTag
-    bsSize="xsmall"
-    bsStyle={bsStyle}
-    onClick={onClick}
-  >
+  <Button bsSize="xsmall" bsStyle={bsStyle} onClick={onClick}>
     {text}
   </Button>
 );

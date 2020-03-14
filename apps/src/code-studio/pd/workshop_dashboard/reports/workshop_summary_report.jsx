@@ -271,9 +271,7 @@ export class WorkshopSummaryReport extends React.Component {
 
     return (
       <div>
-        <Button __useDeprecatedTag onClick={this.handleDownloadCSVClick}>
-          Download CSV
-        </Button>
+        <Button onClick={this.handleDownloadCSVClick}>Download CSV</Button>
         <Checkbox
           checked={this.state.showFacilitatorDetails}
           onChange={this.handleFacilitatorDetailsChange}

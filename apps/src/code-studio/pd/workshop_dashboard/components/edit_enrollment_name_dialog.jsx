@@ -76,16 +76,10 @@ export default class EditEnrollmentNameDialog extends React.Component {
           </FormGroup>
         </Modal.Body>
         <Modal.Footer>
-          <Button
-            __useDeprecatedTag
-            bsStyle="primary"
-            onClick={this.handleClickUpdate}
-          >
+          <Button bsStyle="primary" onClick={this.handleClickUpdate}>
             Update
           </Button>
-          <Button __useDeprecatedTag onClick={this.props.onCancel}>
-            Cancel
-          </Button>
+          <Button onClick={this.props.onCancel}>Cancel</Button>
         </Modal.Footer>
       </Modal>
     );

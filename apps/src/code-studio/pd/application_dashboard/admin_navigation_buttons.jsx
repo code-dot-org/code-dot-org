@@ -25,7 +25,6 @@ export default class AdminNavigationButtons extends React.Component {
     return (
       <div style={styles.buttonContainer}>
         <Button
-          __useDeprecatedTag
           href={this.context.router.createHref('/fit_cohort')}
           onClick={this.handleFitClick}
           style={styles.button}

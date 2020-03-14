@@ -143,18 +143,10 @@ export class QuickView extends React.Component {
           <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
           <Col md={6} sm={6}>
-            <Button
-              __useDeprecatedTag
-              style={styles.button}
-              onClick={this.handleDownloadCsvClick}
-            >
+            <Button style={styles.button} onClick={this.handleDownloadCsvClick}>
               Download CSV
             </Button>
-            <Button
-              __useDeprecatedTag
-              style={styles.button}
-              onClick={this.handleViewCohortClick}
-            >
+            <Button style={styles.button} onClick={this.handleViewCohortClick}>
               View accepted cohort
             </Button>
           </Col>

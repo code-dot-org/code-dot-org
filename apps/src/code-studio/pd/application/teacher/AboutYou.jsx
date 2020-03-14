@@ -89,16 +89,10 @@ export default class AboutYou extends LabeledFormComponent {
           .
         </Modal.Body>
         <Modal.Footer>
-          <Button
-            __useDeprecatedTag
-            onClick={this.resetCountry}
-            bsStyle="primary"
-          >
+          <Button onClick={this.resetCountry} bsStyle="primary">
             Continue as United States Teacher
           </Button>
-          <Button __useDeprecatedTag onClick={this.exitApplication}>
-            Exit Application
-          </Button>
+          <Button onClick={this.exitApplication}>Exit Application</Button>
         </Modal.Footer>
       </Modal>
     );

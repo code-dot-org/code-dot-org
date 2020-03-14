@@ -844,16 +844,13 @@ export class WorkshopForm extends React.Component {
           {this.renderErrors()}
           <ButtonToolbar>
             <Button
-              __useDeprecatedTag
               bsStyle="primary"
               id="workshop-form-save-btn"
               onClick={this.handleSaveClick}
             >
               {saveText}
             </Button>
-            <Button __useDeprecatedTag onClick={this.handleCancelClick}>
-              Cancel
-            </Button>
+            <Button onClick={this.handleCancelClick}>Cancel</Button>
           </ButtonToolbar>
           <Modal
             show={this.state.showSaveConfirmation}
@@ -867,14 +864,10 @@ export class WorkshopForm extends React.Component {
               want to email an update?
             </Modal.Body>
             <Modal.Footer>
-              <Button
-                __useDeprecatedTag
-                bsStyle="primary"
-                onClick={this.handleSaveAndNotifyClick}
-              >
+              <Button bsStyle="primary" onClick={this.handleSaveAndNotifyClick}>
                 Email
               </Button>
-              <Button __useDeprecatedTag onClick={this.handleSaveNoNotifyClick}>
+              <Button onClick={this.handleSaveNoNotifyClick}>
                 Don't Email
               </Button>
             </Modal.Footer>

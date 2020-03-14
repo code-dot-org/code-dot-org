@@ -94,7 +94,6 @@ export class WorkshopIndex extends React.Component {
         <ButtonToolbar>
           {canCreate && (
             <Button
-              __useDeprecatedTag
               className="btn-primary"
               onClick={this.handleNewWorkshopClick}
             >
@@ -102,20 +101,16 @@ export class WorkshopIndex extends React.Component {
             </Button>
           )}
           {canSeeAttendanceReports && (
-            <Button
-              __useDeprecatedTag
-              onClick={this.handleAttendanceReportsClick}
-            >
+            <Button onClick={this.handleAttendanceReportsClick}>
               Attendance Reports
             </Button>
           )}
           {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (
-            <Button __useDeprecatedTag onClick={this.handleSurveyResultsClick}>
+            <Button onClick={this.handleSurveyResultsClick}>
               Facilitator Survey Results
             </Button>
           )}
           <Button
-            __useDeprecatedTag
             href={this.context.router.createHref('/workshops/filter')}
             onClick={this.handleFilterClick}
           >

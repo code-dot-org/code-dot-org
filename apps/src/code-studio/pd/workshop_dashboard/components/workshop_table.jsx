@@ -350,7 +350,6 @@ export default class WorkshopTable extends React.Component {
                 <tr>
                   <td>
                     <Button
-                      __useDeprecatedTag
                       bsSize="small"
                       href={this.props.moreUrl}
                       onClick={this.handleMoreClick}

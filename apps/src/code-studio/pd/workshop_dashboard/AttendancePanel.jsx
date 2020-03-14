@@ -81,7 +81,6 @@ export default class AttendancePanel extends React.Component {
                 </Col>
                 <Col md={4}>
                   <Button
-                    __useDeprecatedTag
                     className={
                       session['show_link?'] && session.attendance_count === 0
                         ? 'btn-orange'

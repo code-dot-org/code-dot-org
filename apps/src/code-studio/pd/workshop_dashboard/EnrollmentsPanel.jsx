@@ -192,7 +192,6 @@ export default class EnrollmentsPanel extends React.Component {
         Workshop Enrollment: {workshop.enrolled_teacher_count}/
         {workshop.capacity}
         <Button
-          __useDeprecatedTag
           bsStyle="link"
           style={styles.linkButton}
           onClick={this.handleEnrollmentRefresh}
@@ -200,7 +199,6 @@ export default class EnrollmentsPanel extends React.Component {
           <i className="fa fa-refresh" />
         </Button>
         <Button
-          __useDeprecatedTag
           bsStyle="link"
           style={styles.linkButton}
           onClick={this.handleEnrollmentDownloadClick}
@@ -209,7 +207,6 @@ export default class EnrollmentsPanel extends React.Component {
         </Button>
         {isWorkshopAdmin && (
           <Button
-            __useDeprecatedTag
             bsSize="xsmall"
             disabled={this.state.selectedEnrollments.length === 0}
             onClick={this.handleClickChangeEnrollments}
@@ -229,7 +226,6 @@ export default class EnrollmentsPanel extends React.Component {
         )}{' '}
         {isWorkshopAdmin && (
           <Button
-            __useDeprecatedTag
             bsSize="xsmall"
             disabled={this.state.selectedEnrollments.length !== 1}
             onClick={this.handleClickChangeEnrollments}

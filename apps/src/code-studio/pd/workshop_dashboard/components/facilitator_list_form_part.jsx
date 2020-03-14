@@ -50,7 +50,6 @@ export default class FacilitatorListFormPart extends React.Component {
   renderRemoveButton(i) {
     return (
       <Button
-        __useDeprecatedTag
         id={`remove-facilitator${i}-btn`}
         onClick={this.handleRemoveClick.bind(null, i)}
       >
@@ -138,11 +137,7 @@ export default class FacilitatorListFormPart extends React.Component {
       filteredAvailableFacilitators.length >= 1
     ) {
       addButton = (
-        <Button
-          __useDeprecatedTag
-          onClick={this.handleAddClick}
-          id="add-facilitator-btn"
-        >
+        <Button onClick={this.handleAddClick} id="add-facilitator-btn">
           <i className="fa fa-plus" />
         </Button>
       );

@@ -116,7 +116,6 @@ export default class PrincipalApprovalButtons extends React.Component {
     return (
       <div>
         <Button
-          __useDeprecatedTag
           bsSize="xsmall"
           target="_blank"
           onClick={buttonOnClick}
@@ -145,7 +144,6 @@ export default class PrincipalApprovalButtons extends React.Component {
 
     return (
       <Button
-        __useDeprecatedTag
         bsSize="xsmall"
         target="_blank"
         onClick={this.handleNotRequiredClick}
