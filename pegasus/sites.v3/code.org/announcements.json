@@ -1,9 +1,18 @@
 {
   "pages": {
-    "/home": "teacher-apps-open-2020",
+    "/home": "at-home-support-2020",
     "/courses": "teacher-apps-open-2020"
   },
   "banners": {
+    "at-home-support-2020": {
+      "image": "https://code.org/images/professional-learning-2019-3.png",
+      "title": " Learn computer science when schools are closed",
+      "body": "You can continue to learn at home while schools are closed. Try out fun computer science tutorials, watch videos about computer science concepts, and even build your own projects!",
+      "buttonText": "Get started",
+      "buttonUrl": "https://code.org/athome",
+      "buttonId": "at-home-support-2020-get-started"
+    },
+    {
     "teacher-apps-open-2020": {
       "image": "https://code.org/images/professional-learning-2019-3.png",
       "title": "Sign up for Professional Learning",
