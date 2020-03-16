@@ -28,6 +28,97 @@ gl-ES:
 
         -   Como seguiches o proceso de resolución de problemas na derradeira lección?
         -   Como poderías empregar este proceso nun problema da túa vida diaria?
+      CSD U2 HTML Adding Paragraphs: |-
+        # Agrega texto ao corpo
+
+        Cando inicies calquera proxecto do Laboratorio Web, automaticamente engadirá etiquetas `DOCTYPE>`, `<html>`, `<head>` e `<body>` ao seu proxecto. Cando engadas contido aos teus proxectos, terás que facelo entre as etiquetas `<body>` e `</body>` porque debería ser parte do corpo da túa páxina web.
+
+        # Fai isto
+
+        -   Escribe tres oracións separadas sobre calquera tema que che guste dentro das etiquetas do corpo da túa páxina web.
+        -   Preme «Actualizar e gardar» se non ves os cambios na área de vista previa.
+        -   Compara o teu traballo co dun compañeiro. Asegúrate de colocar o código no mesmo lugar.
+      CSD U2 HTML Adding Paragraphs pt 2: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Que é un elemento de parágrafo?</strong></summary>
+
+        Os parágrafos están marcados con etiquetas de apertura (`<p>`) e de peche (`</p>`). Os parágrafos en HTML poden ter calquera lonxitude de texto, dende unha palabra ata unha chea de frases. Os parágrafos agrupan conxuntos de oracións e poñen un espazo entre ese grupo de texto e o seguinte.
+
+        </details>
+        <details>
+        <summary>¿Cómo puedo hacer varios párrafos?</strong>
+
+        Aquí hai un exemplo de varias etiquetas de parágrafo nunha fila. Este código colocaríase dentro do corpo da túa páxina web.
+
+            <p>Isto é un parágrafo. Ten dúas frases.</p>
+            <p>Este é outro parágrafo.</p>
+
+        </details>
+        </div>
+
+        # Usa etiquetas de parágrafo
+
+        A etiqueta `<p>` ou «parágrafo» colócase ao redor do texto para indicar que é parte dun parágrafo. A colocación do texto nunha etiqueta de parágrafo permítelle ao ordenador saber que debe amosarse de maneira diferente, polo xeral só co espazamento doutro texto.
+
+        # Fai isto
+
+        -   Coloca o texto que acabas de escribir dentro de polo menos dous parágrafos separados rodeándoos coas etiquetas `<p>` and `</p>`.
+        -   Compara os resultados cun compañeiro. Que cambiou na forma en que se mostra o texto?
+      CSD U2 HTML Adding Paragraphs_2018: |-
+        # Agrega texto ao corpo
+
+        Cando inicies calquera proxecto do Laboratorio Web, automaticamente engadirá etiquetas `DOCTYPE>`, `<html>`, `<head>` e `<body>` ao seu proxecto. Cando engadas contido aos teus proxectos, terás que facelo entre as etiquetas `<body>` e `</body>` porque debería ser parte do corpo da túa páxina web.
+
+        # Fai isto
+
+        -   Escribe tres oracións separadas sobre calquera tema que che guste dentro das etiquetas do corpo da túa páxina web.
+        -   Preme «Actualizar e gardar» se non ves os cambios na área de vista previa.
+        -   Compara o teu traballo co dun compañeiro. Asegúrate de colocar o código no mesmo lugar.
+      CSD U2 HTML Adding Paragraphs_2019: |-
+        # Agrega texto ao corpo
+
+        Cando inicies calquera proxecto do Laboratorio Web, automaticamente engadirá etiquetas `DOCTYPE>`, `<html>`, `<head>` e `<body>` ao seu proxecto. Cando engadas contido aos teus proxectos, terás que facelo entre as etiquetas `<body>` e `</body>` porque debería ser parte do corpo da túa páxina web.
+
+        # Fai isto
+
+        -   Escribe tres oracións separadas sobre calquera tema que che guste dentro das etiquetas do corpo da túa páxina web.
+        -   Preme «Actualizar e gardar» se non ves os cambios na área de vista previa.
+        -   Compara o teu traballo co dun compañeiro. Asegúrate de colocar o código no mesmo lugar.
+      CSD U2 HTML Debug Paragraphs: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Que é un elemento de parágrafo?</strong>
+        </summary>
+        Os parágrafos están marcados con etiquetas de apertura ( `<p>` ) e de peche ( `</p>` ). Os parágrafos en HTML poden ter calquera lonxitude de texto, dende unha palabra ata unha chea de frases. Os parágrafos agrupan conxuntos de oracións e poñen un espazo entre ese grupo de texto e o seguinte grupo de texto.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que parece que o HTML funciona mesmo cando está roto?</strong>
+        </summary>
+        O navegador le o HTML para xerar páxinas web. Como a xente a miúdo comete pequenos erros ao escribir as súas páxinas web, os navegadores están programados para facer unha mellor suposición do que se pretende facer. Ás veces mesmo diferentes navegadores están programados para facer diferentes suposicións! O único xeito de asegurar que o teu código se vexa como o pretendes é asegurarte de que sempre estás a usar as etiquetas correctamente.
+        </details>
+        <details>
+        <summary>
+        <strong>Por que o código ás veces se volve rosa?</strong>
+        </summary>
+
+        O Laboratorio Web está programado para detectar automaticamente algúns erros no HTML. Cando nota un erro, pon ese código en cor rosa. O erro pode estar en rosa, ou pode estar nalgún lugar antes do código rosa. Terá que observar coidadosamente para atopar o seu erro.
+
+        </details>
+        </div>
+
+        # Depurar. Arranxar as etiquetas rotas
+
+        Esta sinxela páxina web ten algúns problemas que impiden que o contido se mostre correctamente. Identifica e arranxa os problemas. Esta práctica tamén se chama "depuración" do teu código.
+
+        # Fai isto
+
+        -   Arranxa o código roto para que a páxina web se mostre correctamente
+        -   Compara os problemas que arranxaches cun compañeiro
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
