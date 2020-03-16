@@ -75,6 +75,7 @@ class StandardDescriptionCell extends Component {
             <ProgressBoxForLessonNumber
               key={lesson.lessonNumber}
               completed={lesson.completed}
+              inProgress={lesson.inProgress}
               lessonNumber={lesson.lessonNumber}
               tooltipId={lesson.name}
               linkToLessonPlan={lesson.url}
