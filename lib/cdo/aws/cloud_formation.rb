@@ -635,6 +635,10 @@ module AWS
         }
         "AssumeRolePolicyDocument: #{document.to_json}"
       end
+
+      def component(name, vars = {})
+        erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars)
+      end
     end
   end
 end

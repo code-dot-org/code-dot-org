@@ -123,6 +123,7 @@ class ManifestEditor extends React.Component {
           onChange={() => {}}
         />
         <Button
+          __useDeprecatedTag
           text="Submit"
           onClick={this.handleSubmit}
           disabled={!isValidJson}

@@ -22,6 +22,9 @@ HOC_I18N = hoc_load_i18n
 # When called from the other sites, it uses request.locale and converts that XX-XX
 # locale code into a two-letter language code which notably involves a database hit to
 # do that conversion using information in the cdo-languages gsheet.
+#
+# Can be called with markdown: true to render the string as (HTML-safe)
+# markdown, or with markdown: :inline to render as inline markdown.
 def hoc_s(id, markdown: false, locals: nil)
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
@@ -34,7 +37,10 @@ def hoc_s(id, markdown: false, locals: nil)
     end
   end
 
-  string = @actionview.render(inline: string, type: :safe_md) if markdown
+  if markdown
+    type = markdown == :inline ? :inline_md : :safe_md
+    string = @actionview.render(inline: string, type: type)
+  end
 
   string
 end

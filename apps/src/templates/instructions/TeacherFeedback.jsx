@@ -314,6 +314,7 @@ export class TeacherFeedback extends Component {
               {this.props.viewAs === ViewType.Teacher && (
                 <div style={styles.button}>
                   <Button
+                    __useDeprecatedTag
                     id="ui-test-submit-feedback"
                     text={buttonText}
                     onClick={this.onSubmitFeedback}
