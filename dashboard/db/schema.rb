@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200310203427) do
+ActiveRecord::Schema.define(version: 20200316201644) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -266,6 +266,20 @@ ActiveRecord::Schema.define(version: 20200310203427) do
     t.integer "level_id"
     t.index ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
+  end
+
+  create_table "contact_rollups_pardot_memory", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",                null: false
+    t.integer  "pardot_id"
+    t.datetime "pardot_id_updated_at"
+    t.json     "data_synced"
+    t.datetime "data_synced_at"
+    t.datetime "data_rejected_at"
+    t.string   "data_rejected_reason"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["email"], name: "index_contact_rollups_pardot_memory_on_email", unique: true, using: :btree
+    t.index ["pardot_id"], name: "index_contact_rollups_pardot_memory_on_pardot_id", unique: true, using: :btree
   end
 
   create_table "contact_rollups_processed", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
