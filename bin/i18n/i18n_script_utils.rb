@@ -156,4 +156,23 @@ class I18nScriptUtils
 
     @levels_by_url[url]
   end
+
+  def self.write_markdown_with_header(markdown, header, path)
+    open(path, 'w') do |f|
+      unless header.empty?
+        f.write(I18nScriptUtils.to_crowdin_yaml(header))
+        f.write("---\n\n")
+      end
+      f.write(markdown)
+    end
+  end
+
+  # Reduce the header metadata we include in markdown files down to just the
+  # subset of content we want to allow translators to translate.
+  #
+  # Right now, this is just page titles but it could be expanded to include
+  # any English content (description, social share stuff, etc).
+  def self.sanitize_header!(header)
+    header.slice!("title")
+  end
 end
