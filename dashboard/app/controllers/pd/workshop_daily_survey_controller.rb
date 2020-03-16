@@ -447,7 +447,7 @@ module Pd
     end
 
     def render_csf_survey_foorm(survey_name, workshop)
-      form_questions, latest_version = Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
+      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
         props: {
