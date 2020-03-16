@@ -6,7 +6,8 @@ import sectionStandardsProgress, {
   lessonsByStandard,
   getNumberLessonsCompleted,
   getPluggedLessonCompletionStatus,
-  getUnpluggedLessonCompletionStatus
+  getUnpluggedLessonCompletionStatus,
+  getLessonSelectionStatus
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {
   stageId,
@@ -22,6 +23,22 @@ import {
 
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
+
+  describe('getLessonSelectionStatus', () => {
+    it('returns true if lesson is in selected list', () => {
+      expect(
+        getLessonSelectionStatus(stateForTeacherMarkedCompletedLesson, stageId)
+      ).to.equal(true);
+    });
+    it('returns false if lesson is not in selected', () => {
+      expect(
+        getLessonSelectionStatus(
+          stateForTeacherMarkedIncompletedLesson,
+          stageId
+        )
+      ).to.equal(false);
+    });
+  });
 
   describe('setTeacherCommentForReport', () => {
     it('can set the teacher comment', () => {
@@ -248,13 +265,15 @@ describe('sectionStandardsProgressRedux', () => {
           id: 662,
           name: 'Going Places Safely',
           number: 1,
-          url: 'https://curriculum.code.org/csf-19/coursea/1'
+          url: 'https://curriculum.code.org/csf-19/coursea/1',
+          completed: false
         },
         {
           id: 664,
           name: 'Happy Maps',
           number: 3,
-          url: 'https://curriculum.code.org/csf-19/coursea/3'
+          url: 'https://curriculum.code.org/csf-19/coursea/3',
+          completed: false
         }
       ]);
     });

@@ -42,12 +42,12 @@ class LessonStatusList extends Component {
   }
 }
 
-const ComplexLessonComponent = function({style, lesson}) {
+const ComplexLessonComponent = function({lesson}) {
   return (
     <div style={styles.lessonListItem}>
       <div>
         <ProgressBoxForLessonNumber
-          completed={false}
+          completed={lesson.completed}
           lessonNumber={lesson.number}
         />
       </div>
@@ -58,12 +58,12 @@ const ComplexLessonComponent = function({style, lesson}) {
   );
 };
 ComplexLessonComponent.propTypes = {
-  style: PropTypes.object,
   lesson: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
     number: PropTypes.number,
-    url: PropTypes.string
+    url: PropTypes.string,
+    completed: PropTypes.bool
   })
 };
 

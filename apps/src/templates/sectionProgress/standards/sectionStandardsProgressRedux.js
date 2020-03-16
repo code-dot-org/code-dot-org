@@ -73,19 +73,40 @@ export default function sectionStandardsProgress(state = initialState, action) {
   return state;
 }
 
-export function getUnpluggedLessonsForScript(state) {
-  let unpluggedStages = [];
+function getStagesForCurrentScript(state) {
   if (
-    state.sectionProgress.scriptDataByScript &&
     state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript &&
     state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
   ) {
     const stages =
       state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
         .stages;
 
+    return stages;
+  }
+}
+
+export function getLessonSelectionStatus(state, stageId) {
+  const selected = _.map(
+    state.sectionStandardsProgress.selectedLessons,
+    'id'
+  ).includes(stageId);
+  return selected;
+}
+
+export function getUnpluggedLessonsForScript(state) {
+  let unpluggedStages = [];
+  const stages = getStagesForCurrentScript(state);
+
+  if (stages) {
     unpluggedStages = _.filter(stages, function(stage) {
       return stage.unplugged;
+    });
+
+    unpluggedStages.forEach(stage => {
+      const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+      stage['completed'] = lessonCompletionStatus.completed;
     });
   }
 
@@ -94,37 +115,22 @@ export function getUnpluggedLessonsForScript(state) {
       id: stage.id,
       name: stage.name,
       number: stage.position,
-      url: stage.lesson_plan_html_url
+      url: stage.lesson_plan_html_url,
+      completed: stage.completed
     };
   }
 
   return _.map(unpluggedStages, filterStageData);
 }
 
-export function fetchStudentLevelScores(scriptId, sectionId) {
-  return (dispatch, getState) => {
-    $.ajax({
-      method: 'GET',
-      dataType: 'json',
-      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
-    }).then(data => {
-      const scoresData = data;
-      dispatch(setStudentLevelScores(scoresData));
-    });
-  };
-}
-
 export function getNumberLessonsCompleted(state) {
   let lessonsCompleted = 0;
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-  ) {
-    const stages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages;
+  const stages = getStagesForCurrentScript(
+    state,
+    state.scriptSelection.scriptId
+  );
 
+  if (stages) {
     stages.forEach(stage => {
       const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
       if (lessonCompletionStatus.completed) {
@@ -137,31 +143,26 @@ export function getNumberLessonsCompleted(state) {
 
 export function getNumberLessonsInScript(state) {
   let numStages = 0;
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-  ) {
-    numStages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages.length;
+  const stages = getStagesForCurrentScript(
+    state,
+    state.scriptSelection.scriptId
+  );
+
+  if (stages) {
+    numStages = stages.length;
   }
   return numStages;
 }
 
 export const lessonsByStandard = state => {
   let lessonsByStandardId = {};
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId] &&
-    state.sectionStandardsProgress.standardsData
-  ) {
-    const standards = state.sectionStandardsProgress.standardsData;
+  const stages = getStagesForCurrentScript(
+    state,
+    state.scriptSelection.scriptId
+  );
 
-    const stages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages;
+  if (stages && state.sectionStandardsProgress.standardsData) {
+    const standards = state.sectionStandardsProgress.standardsData;
 
     const numStudents =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
@@ -169,24 +170,26 @@ export const lessonsByStandard = state => {
 
     standards.forEach(standard => {
       let lessons = [];
+
       stages.forEach(stage => {
         if (standard.lesson_ids.includes(stage.id)) {
-          let lessonDetails = {};
           const lessonCompletionStatus = getLessonCompletionStatus(
             state,
             stage.id
           );
-          lessonDetails['name'] = stage.name;
-          lessonDetails['lessonNumber'] = stage.relative_position;
-          lessonDetails['completed'] = lessonCompletionStatus.completed;
-          lessonDetails['numStudentsCompleted'] =
-            lessonCompletionStatus.numStudentsCompleted;
-          lessonDetails['numStudents'] = numStudents;
-          lessonDetails['url'] = stage.lesson_plan_html_url;
-          lessonDetails['unplugged'] = stage.unplugged;
+          const lessonDetails = {
+            name: stage.name,
+            lessonNumber: stage.relative_position,
+            completed: lessonCompletionStatus.completed,
+            numStudentsCompleted: lessonCompletionStatus.numStudentsCompleted,
+            numStudents: numStudents,
+            url: stage.lesson_plan_html_url,
+            unplugged: stage.unplugged
+          };
           lessons.push(lessonDetails);
         }
       });
+
       lessonsByStandardId[standard.id] = lessons;
     });
   }
@@ -194,12 +197,9 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
-  if (
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript
-  ) {
-    const scriptId = state.scriptSelection.scriptId;
-    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+  const scriptId = state.scriptSelection.scriptId;
+  const stages = getStagesForCurrentScript(state, scriptId);
+  if (stages) {
     const stage = _.find(stages, ['id', stageId]);
     if (stage.unplugged) {
       return getUnpluggedLessonCompletionStatus(state, scriptId, stageId);
@@ -210,10 +210,20 @@ export function getLessonCompletionStatus(state, stageId) {
 }
 
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
-  let completionByLesson = {};
-  completionByLesson['completed'] = false;
-  completionByLesson['numStudentsCompleted'] = 0;
+  const completionByLesson = {
+    completed: getLessonSelectionStatus(state, stageId),
+    numStudentsCompleted: getNumberOfStudentsCompletedUnpluggedLesson(
+      state,
+      scriptId,
+      stageId
+    )
+  };
 
+  return completionByLesson;
+}
+
+function getNumberOfStudentsCompletedUnpluggedLesson(state, scriptId, stageId) {
+  let completionNumberByLesson = 0;
   if (
     state.sectionStandardsProgress.studentLevelScoresByStage &&
     state.sectionStandardsProgress.studentLevelScoresByStage[scriptId] &&
@@ -231,20 +241,9 @@ export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
       }
     );
 
-    const numStudentCompleted = studentScoresComplete.length;
-
-    // If any student in the section has a teacher score indicating
-    // completion for the lesson, the lesson is considered completed for the
-    // section. When a teacher marks a lesson complete for a section, the
-    // lesson is marked complete for each student in the section, so we can
-    // infer that if it's marked complete for one student in the section,
-    // it's marked complete for all students in the section.
-    const completed = numStudentCompleted >= 1;
-
-    completionByLesson['completed'] = completed;
-    completionByLesson['numStudentsCompleted'] = numStudentCompleted;
+    completionNumberByLesson = studentScoresComplete.length;
   }
-  return completionByLesson;
+  return completionNumberByLesson;
 }
 
 export function getPluggedLessonCompletionStatus(state, stage) {
@@ -314,4 +313,66 @@ export function fetchStandardsCoveredForScript(scriptId) {
       dispatch(setStandardsData(standardsData));
     });
   };
+}
+
+export function fetchStudentLevelScores(scriptId, sectionId) {
+  return (dispatch, getState) => {
+    let state = getState();
+    $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
+    }).then(data => {
+      const scoresData = data;
+      dispatch(setStudentLevelScores(scoresData));
+      let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
+        state,
+        scriptId,
+        scoresData
+      );
+      let unpluggedLessonList = getUnpluggedLessonsForScript(state);
+      const lessonsToSelect = _.filter(unpluggedLessonList, function(lesson) {
+        if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
+          return lesson;
+        }
+      });
+      dispatch(setSelectedLessons(lessonsToSelect));
+    });
+  };
+}
+
+function getInitialUnpluggedLessonCompletionStatus(
+  state,
+  scriptId,
+  scoresData
+) {
+  let completedLessonIds = [];
+
+  if (scoresData[scriptId]) {
+    const levelScoresByStudentForScript = scoresData[scriptId];
+
+    Object.keys(levelScoresByStudentForScript).forEach(function(item) {
+      const studentScoresComplete = _.filter(
+        _.values(levelScoresByStudentForScript[item]),
+        function(studentScore) {
+          return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
+        }
+      );
+
+      const numStudentCompleted = studentScoresComplete.length;
+
+      // If any student in the section has a teacher score indicating
+      // completion for the lesson, the lesson is considered completed for the
+      // section. When a teacher marks a lesson complete for a section, the
+      // lesson is marked complete for each student in the section, so we can
+      // infer that if it's marked complete for one student in the section,
+      // it's marked complete for all students in the section.
+      const completed = numStudentCompleted >= 1;
+
+      if (completed) {
+        completedLessonIds.push(parseInt(item));
+      }
+    });
+  }
+  return completedLessonIds;
 }

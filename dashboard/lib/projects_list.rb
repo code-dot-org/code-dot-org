@@ -228,6 +228,7 @@ module ProjectsList
         row_data[:libraryName] = project_value['libraryName']
         row_data[:libraryDescription] = project_value['libraryDescription']
         row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
+        row_data[:sharedWith] = project_value['sharedWith'] ? project_value['sharedWith'] : []
       end
 
       row_data.with_indifferent_access
