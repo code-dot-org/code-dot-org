@@ -36,6 +36,7 @@ export default class LessonStatusDialog extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}

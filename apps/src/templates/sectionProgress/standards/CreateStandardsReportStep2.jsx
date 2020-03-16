@@ -75,11 +75,13 @@ class CreateStandardsReportStep2 extends Component {
         />
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.back()}
             onClick={this.props.onBack}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}

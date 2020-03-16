@@ -133,6 +133,7 @@ class ManageStudentActionsCell extends Component {
         {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.onSave}
               color={Button.ButtonColor.orange}
               text={i18n.save()}
@@ -140,6 +141,7 @@ class ManageStudentActionsCell extends Component {
               style={styles.saveButton}
             />
             <Button
+              __useDeprecatedTag
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
@@ -149,6 +151,7 @@ class ManageStudentActionsCell extends Component {
         {rowType === RowType.ADD && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.onAdd}
               color={Button.ButtonColor.gray}
               text={i18n.add()}

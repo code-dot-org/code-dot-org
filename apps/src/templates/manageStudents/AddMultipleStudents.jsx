@@ -46,6 +46,7 @@ class AddMultipleStudents extends Component {
     return (
       <div>
         <Button
+          __useDeprecatedTag
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.addStudentsMultiple()}
@@ -66,11 +67,13 @@ class AddMultipleStudents extends Component {
           />
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.done()}
               onClick={this.add}
               color={Button.ButtonColor.orange}
