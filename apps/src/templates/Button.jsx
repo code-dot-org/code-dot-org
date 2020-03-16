@@ -178,7 +178,7 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
-    useButtonTag: PropTypes.bool
+    __useDeprecatedTag: PropTypes.bool
   };
 
   onKeyDown = event => {
@@ -206,7 +206,7 @@ class Button extends React.Component {
       tabIndex,
       isPending,
       pendingText,
-      useButtonTag
+      __useDeprecatedTag
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
@@ -216,12 +216,14 @@ class Button extends React.Component {
       throw new Error('Expect at least one of href/onClick');
     }
 
-    let Tag = href ? 'a' : 'div';
-    Tag = useButtonTag ? 'button' : Tag;
+    let Tag = 'button';
+    if (__useDeprecatedTag) {
+      Tag = href ? 'a' : 'div';
+    }
 
-    const sizeStyle = useButtonTag
-      ? {...styles.sizes[size], ...styles.updated}
-      : styles.sizes[size];
+    const sizeStyle = __useDeprecatedTag
+      ? styles.sizes[size]
+      : {...styles.sizes[size], ...styles.updated};
 
     return (
       <Tag
