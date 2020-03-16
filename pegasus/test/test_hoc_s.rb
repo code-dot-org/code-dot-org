@@ -65,4 +65,21 @@ class HocI18nTest < Minitest::Test
     assert_equal 200, resp.status
     assert_match "<h1><p>string with an <a href=\"http://test.com\">interpolated link</a></p>\n</h1>", resp.body
   end
+
+  def test_inline_markdown
+    HOC_I18N['en']['test'] = "basic string"
+    resp = get('/hoc_s/inline_markdown')
+    assert_equal 200, resp.status
+    assert_match "<h1>basic string</h1>", resp.body
+
+    HOC_I18N['en']['test'] = "string with\n\n- some\n- block\n\nmarkdown"
+    resp = get('/hoc_s/inline_markdown')
+    assert_equal 200, resp.status
+    assert_match "<h1>string withsome\nblock\nmarkdown</h1>", resp.body
+
+    HOC_I18N['en']['test'] = "string with <strong>embedded html</strong>"
+    resp = get('/hoc_s/inline_markdown')
+    assert_equal 200, resp.status
+    assert_match "<h1>string with embedded html</h1>", resp.body
+  end
 end

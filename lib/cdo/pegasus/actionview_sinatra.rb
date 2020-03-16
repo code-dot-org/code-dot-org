@@ -1,5 +1,6 @@
 require 'action_view'
 require 'cdo/markdown_handler'
+require 'cdo/redcarpet/inline'
 require 'haml'
 require 'haml/template'
 require 'redcarpet'
@@ -51,6 +52,7 @@ module ActionViewSinatra
 
       MarkdownHandler.register(MarkdownRenderer, MarkdownRenderer::OPTIONS)
       MarkdownHandler.register_html_safe(Redcarpet::Render::Safe)
+      MarkdownHandler.register_inline(Redcarpet::Render::Inline.new({filter_html: true}))
     end
 
     def response
