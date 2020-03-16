@@ -215,6 +215,7 @@ export function getLessonCompletionStatus(state, stageId) {
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
   const completionByLesson = {
     completed: getLessonSelectionStatus(state, stageId),
+    inProgress: false,
     numStudentsCompleted: getNumberOfStudentsCompletedUnpluggedLesson(
       state,
       scriptId,
