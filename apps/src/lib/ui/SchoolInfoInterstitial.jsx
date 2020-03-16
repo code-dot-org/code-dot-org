@@ -366,6 +366,7 @@ export default class SchoolInfoInterstitial extends React.Component {
           </div>
           <div style={styles.bottom}>
             <Button
+              __useDeprecatedTag
               onClick={this.dismissSchoolInfoForm}
               style={styles.button}
               color="gray"
@@ -374,6 +375,7 @@ export default class SchoolInfoInterstitial extends React.Component {
               id="dismiss-button"
             />
             <Button
+              __useDeprecatedTag
               onClick={this.handleSchoolInfoSubmit}
               style={styles.button}
               size="large"

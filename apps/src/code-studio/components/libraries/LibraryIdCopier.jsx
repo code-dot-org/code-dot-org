@@ -41,7 +41,6 @@ export default class LibraryIdCopier extends React.Component {
           onClick={this.copyChannelId}
           text={i18n.copyId()}
           style={styles.button}
-          useButtonTag
         />
       </div>
     );
