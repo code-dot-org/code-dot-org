@@ -54,7 +54,7 @@ def main
   today = Date.strptime('2020/02/01', '%Y/%m/%d')
   day = Date.strptime('2020/02/01', '%Y/%m/%d')
 
-  while day <= today
+  while day < today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
     if (day != today) && File.file?(cache_path)
       day_data = JSON.load(IO.read(cache_path))
