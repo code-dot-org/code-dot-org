@@ -355,6 +355,20 @@ zh-TW:
       NEW Course 4 Play Lab Params 11:
         jump: 定位到
         patrol: patrol
+      New Artist Project:
+        draw a star: 畫顆星星
+        draw a circle: 畫個圓形
+        draw a pinwheel: 畫個風車
+        draw a triangle: 畫個三角形
+        draw a shape: 畫個形狀
+        draw a house: 畫個房子
+        draw a square: 畫個正方形
+      New Minecraft Hero Project:
+        function 1: function 1
+        function 2: function 2
+      New Play Lab Project:
+        jump: 定位到
+        patrol: patrol
       Robot Doodle:
         25 pixel square: 25 pixel square
         draw head: draw head
@@ -635,7 +649,6 @@ zh-TW:
         draw a house: 畫個房子
       courseE_artist_functions7_2019:
         draw a window: draw a window
-        draw a house: 畫個房子
       courseE_artist_functions8:
         do something: 函式名稱
         draw a line of squares: draw a line of squares

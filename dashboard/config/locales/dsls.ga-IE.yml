@@ -1103,10 +1103,42 @@ ga-IE:
         title: Ilroghnach
       New Challenge Introduction:
         content1: cur síos anseo
+        markdown: "### Dúshlán Nua: Sifear Ionadaithe Randamaigh a Bhriseadh... le
+          cúnamh ó ghiuirléid nua\n\nCéard a tharlódh dá ndéanfaimis mapáil ó gach
+          litir den aibítir go dtí litir randamach, in áit aistriú simplí? Tugtar
+          **sifear ionadaithe randamaigh** air seo.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAnois,
+          caithfidh tú dul i ngleic le sifear a cuireadh i bhfeidhm le **hionadú randamach**
+          sa chaoi seo.  \n\n\n\nTá sé i bhfad níos deacra sifear den sórt seo a bhriseadh,
+          agus tá uirlis níos cumhachtaí ag teastáil. Dá bharr sin...\n\nNuair a chliceálfaidh
+          tú Ar Aghaidh, feicfidh tú **leagan nua níos cumhachtaí den uirlis chriptithe**
+          a bhfuil mórán gnéithe nua inti.\n\nAch is beagán den dúrún é cad a dhéanann
+          sé go díreach!  \n\n### An Dúshlán Romhatsa:\n\n * Oibriú amach cad a dhéanann
+          an leagan nua seo den uirlis\n * Cén t-eolas a thaispeánann sé duit?\n *
+          Cad is féidir leat a dhéanamh leis an uirlis?\n * Mar is gnáth, ní féidir
+          leat an uirlis a bhriseadh. Mar sin, breathnaigh thart agus cliceáil ar
+          rudaí.\n * Má éiríonn leat an uirlis a thuiscint, b'fhéidir go bhféadfá
+          teachtaireacht a criptíodh le hionadú randamach a léamh.\n \n### Leid\n\n*
+          An raibh a fhios agat gurb é **E** an litir is coitianta i mBéarla?\n\n###
+          Athchruinniú agus Díospóireacht\n Tar éis duit tréimhse a chaitheamh ag
+          imirt leis an uirlis, ba chóir duit suí síos le duine nó daoine eile - páirtnéir,
+          grúpa beag, rang iomlán - agus cúrsaí a phlé. Bí cinnte go dtuigeann tú
+          an uirlis agus na bealaí éagsúla í a úsáid.\n\n\n"
       'Technique: Frequency Analysis':
         content1: cur síos anseo
       Terminology Recap:
         content1: cur síos anseo
+        markdown: "# Sos agus Athbhreithniú\n\nTá sé an-éasca an **sifear Chaesair**
+          a bhriseadh, go háirithe le cúnamh ríomhaireachta. Anois ó tá taithí agat
+          ar shifir aistrithe a bhriseadh (an-éasca, huth?), bainimis triail as rud
+          éigin níos dúshlánaí.\n\n**Athbhreithniú ar théarmaí:**\n\n* **Criptiú**
+          - próiseas a athscríobhann teachtaireachtaí i gcód rúnda sa chaoi nach mbeadh
+          ach daoine \"údaraithe\" in ann iad a léamh\n* **Díchriptiú** - próiseas
+          a scaoileann an cód chun an buntéacs a fháil ó theachtaireacht chriptithe\n*
+          **Sifear** - téarma ginearálta do theicníc (nó algartam) a dhéanann criptiú\n*
+          **Sifear Chaesair** - algartam criptithe a aistríonn an aibítir trí líon
+          áirithe litreacha\n* **Criptiú a bhriseadh** - nuair a dhéantar iarracht
+          teachtaireacht rúnda a léamh *gan* eolas ar mhionsonraí an tsifir \n\n\nCliceáil
+          Ar Aghaidh chun **an chéad dúshlán eile** a fheiceáil...\n\n \n"
       behaviors 1 predict:
         answers:
         - {}

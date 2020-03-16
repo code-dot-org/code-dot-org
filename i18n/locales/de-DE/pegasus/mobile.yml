@@ -1364,7 +1364,7 @@
   header_courses: "Kurse"
   header_course_catalog: "Kurs Katalog"
   header_project_gallery: "Projekte"
-  header_sections: "Sektionen"
+  header_sections: "Lerngruppen"
   header_professional_learning: "Professionelles Lernen"
   header_educate_overview: "Lehrerübersicht"
   header_educate_elementary: "Grundschule"
@@ -1434,8 +1434,8 @@
   reset_student_password_instructions: "Sie können das Geheimnis <word/picture> für jeden Ihrer Schüler zurücksetzen, indem Sie auf die Registerkarte \"Schüler verwalten\" für den Abschnitt gehen, auf die Schaltfläche \"Geheimnis anzeigen\" unter der Spalte \"Passwort\" klicken und auf die Schaltfläche \"Geheimnis zurücksetzen\" klicken."
   login_cards: "Loginkarten"
   print_login_cards: "Drucke Loginkarten"
-  joining_section: "Ihrer Sektion beitreten (nur einmal)"
-  joining_section_overview: "Wenn ein Schüler noch nicht in Ihrer Sektion ist, bitten Sie ihn, die folgenden Schritte durchzuführen. Beachten Sie, dass dies nur einmal ausgeführt werden muss. Nach dem Beitritt in Ihre Sektion können die Schüler den ihnen zugewiesenen Kurs sehen und Sie können den Fortschritt der Arbeit verfolgen, die sie während ihrer Anmeldung erledigen."
+  joining_section: "Ihrer Lerngruppe beitreten (nur einmal)"
+  joining_section_overview: "Wenn ein Schüler noch nicht in Ihrer Lerngruppe ist, bitten Sie ihn, die folgenden Schritte durchzuführen. Beachten Sie, dass dies nur einmal ausgeführt werden muss. Nach dem Beitritt in Ihre Lerngruppe können die Schüler den ihnen zugewiesenen Kurs sehen und Sie können den Fortschritt der Arbeit verfolgen, die sie während Ihrer Anmeldung erledigen."
   joining_section_instruct_website: 'Erstellen Sie ein Code.org-Konto, falls dies noch nicht geschehen ist. Sie können dies unter https://studio.code.org/users/sign_up tun. Beachten Sie, dass sie sich entweder mit einer E-Mail-Adresse und einem Passwort anmelden oder sich über Google, Facebook oder Microsoft anmelden können, indem sie auf eine dieser Schaltflächen klicken:'
   joining_section_instruct_account: "Melden Sie sich in ihr Code.org-Konto an."
   joining_section_instruct_code: 'Navigieren Sie zu %{code_org_url} und geben Sie deren Abschnittscode ein: %{section_code}.'

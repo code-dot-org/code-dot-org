@@ -2486,3 +2486,43 @@ nl:
           stages:
             Spelling Bee:
               name: Spellingswedstrijd
+        csp1-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Binary Numbers:
+              name: Binaire getallen
+        csp2-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            The Need for Addressing:
+              name: De Nood aan Adressering
+        csp3-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            The Need for Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Debugging:
+              name: Foutopsporing
+        csp6-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp8-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp9-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp10-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nieuw niveau

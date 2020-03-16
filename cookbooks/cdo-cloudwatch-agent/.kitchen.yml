@@ -1,0 +1,25 @@
+# Note: EC2 driver with IAM Instance Profile required to run integration test successfully, e.g.:
+# IAM_PROFILE_NAME=[IAMProfileName] KITCHEN_LOCAL_YAML=../.kitchen.ec2.yml bundle exec kitchen verify
+---
+driver:
+  name: dokken
+  chef_version: 15.2.20
+  privileged: true
+verifier:
+  name: inspec
+transport:
+  name: dokken
+provisioner:
+  name: dokken
+platforms:
+  - name: ubuntu-18.04
+    driver:
+      image: dokken/ubuntu-18.04
+    run_list:
+      - recipe[apt]
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-cloudwatch-agent]
+    attributes:
+      cdo-cloudwatch-agent:

@@ -12707,3 +12707,109 @@ hi:
               name: आर्टिस्ट में लूप्स
             Tell a Story in Play Lab:
               name: प्ले लैब में कहानी सुनाएं
+        csp1-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            Welcome to CSP:
+              name: CSP में आपका स्वागत है
+            Representing Information:
+              name: जानकारी प्रस्तुत करना
+            Circle Square Patterns:
+              name: चक्कर वर्ग पैटर्न
+            Binary Numbers:
+              name: युग्मक संख्याएं
+            Overflow and Rounding:
+              name: ओवरफ्लो और राउंडिंग
+            Representing Text:
+              name: टेक्सट प्रस्तुत करना
+            Black and White Images:
+              name: काले व सफेद चित्र
+            Color Images:
+              name: रंगीन चित्र
+            Lossless Compression:
+              name: दोषरहित संक्षिप्तीकरण
+            Lossy Compression:
+              name: त्रुटिपूर्ण संक्षिप्तीकरण
+            Intellectual Property:
+              name: बौद्धिक विशेषता
+            'Lesson 14: Assessment Day':
+              name: 'पाठ 14: मूल्यांकन का दिन'
+        csp2-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            Welcome to the Internet:
+              name: इंटरनेट पर आपका स्वागत है
+            Building a Network:
+              name: नेटवर्क बनाना
+            The Need for Addressing:
+              name: एड्रेसिंग की जरूरत
+            Routers and Redundancy:
+              name: रूटर्स और अधिकता
+            Packets:
+              name: पैकेट्स
+            DNS and HTTP:
+              name: DNS और HTTP
+            'Lesson 9: Assessment Day':
+              name: 'पाठ 9: मूल्यांकन का दिन'
+        csp3-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            Introduction to Apps:
+              name: ऐप्स का परिचय
+            Project - Designing an App Part 1:
+              name: 'प्रोजेक्ट: ऐप डिज़ाइन करना, भाग 1'
+            Project - Designing an App Part 2:
+              name: 'प्रोजेक्ट: ऐप डिज़ाइन करना, भाग 2'
+            The Need for Programming Languages:
+              name: प्रोग्रामिंग भाषाओं की जरूरत
+            Debugging:
+              name: डीबगिंग
+            Project - Designing an App Part 3:
+              name: 'प्रोजेक्ट: ऐप डिज़ाइन करना, भाग 3'
+            Project - Designing an App Part 4:
+              name: 'प्रोजेक्ट: ऐप डिज़ाइन करना, भाग 4'
+        csp6-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            Algorithms Solve Problems:
+              name: कलन विधियां सवाल करना
+            Algorithm Efficiency:
+              name: कलन विधि क्षमता
+            Unreasonable Time:
+              name: अनुचित समय
+            The Limits of Algorithms:
+              name: कलन विधियों की सीमाएं
+            Parallel and Distributed Algorithms:
+              name: समानांतर और वितरित की गईं कलन विधियां
+        csp8-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            Create PT - Complete the Task:
+              name: PT बनाएं - कार्य पूरा करें
+        csp9-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            'Lesson 9: Assessment Day':
+              name: 'पाठ 9: मूल्यांकन का दिन'
+        csp10-2020:
+          stages:
+            new stage:
+              name: नया चरण
+            Data Policies and Privacy:
+              name: डेटा नीतियां व निजता
+            The Value of Privacy:
+              name: निजता का महत्व
+            Security Risks Part 1:
+              name: सुरक्षा जोखिम भाग 1
+            Security Risks Part 2:
+              name: सुरक्षा जोखिम भाग 2
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: नया चरण

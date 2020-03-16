@@ -5,6 +5,7 @@ import Button from './Button';
 import color from '@cdo/apps/util/color';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {putRecord} from '../lib/util/firehose';
 
 const styles = {
   heading: {
@@ -115,6 +116,12 @@ export default class DonorTeacherBanner extends Component {
 
   handleSubmit = event => {
     if (this.state.permission && this.state.participate) {
+      putRecord({
+        study: 'afe-schools',
+        event: 'submit',
+        data_string: $('input[name="nces-id"]').val()
+      });
+
       // Post to the external endpoint in a new tab.
       $('#hidden_form').submit();
     }

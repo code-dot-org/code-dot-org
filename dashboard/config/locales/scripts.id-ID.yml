@@ -6068,3 +6068,21 @@ id:
           stages:
             Spelling Bee:
               name: Spelling Bee
+        csp1-2020:
+          stages:
+            Representing Information:
+              name: Menunjukkan informasi
+            Binary Numbers:
+              name: Bilangan Biner
+            Intellectual Property:
+              name: Hak milik intelektual
+        csp2-2020:
+          stages:
+            The Need for Addressing:
+              name: Dibutuhkan untuk Pengalamatan
+            Routers and Redundancy:
+              name: Router dan Kualitas
+        csp8-2020:
+          stages:
+            Create PT - Complete the Task:
+              name: Membuat PT - Menyelesaikan tugas

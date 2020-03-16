@@ -240,6 +240,16 @@ const studentLevelScoresByStageIncomplete = {
   92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
 };
 
+const selectedLessons = [
+  {
+    id: 662,
+    completed: true,
+    name: 'Going Places Safely',
+    number: 1,
+    url: 'https://curriculum.code.org/csf-19/coursea/1'
+  }
+];
+
 // Construct state
 export const fakeState = {
   sectionProgress: {
@@ -294,7 +304,8 @@ export const stateForTeacherMarkedCompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete
+    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
 };
@@ -309,7 +320,8 @@ export const stateForTeacherMarkedIncompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageIncomplete
+    studentLevelScoresByStage: studentLevelScoresByStageIncomplete,
+    selectedLessons: []
   },
   teacherSections: teacherSections
 };
@@ -324,7 +336,8 @@ export const stateForTeacherMarkedAndProgress = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStageComplete
+    studentLevelScoresByStage: studentLevelScoresByStageComplete,
+    selectedLessons: selectedLessons
   },
   teacherSections: teacherSections
 };
