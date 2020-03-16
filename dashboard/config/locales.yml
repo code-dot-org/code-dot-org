@@ -271,7 +271,6 @@
 "mn-MN":
   english: "Mongolian"
   native: "Монгол хэл"
-  debug: true
   webfonts: false
 
 "mr": "mr-IN"
