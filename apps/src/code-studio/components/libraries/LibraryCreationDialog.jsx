@@ -8,11 +8,9 @@ import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
 import PublishSuccessDisplay from './PublishSuccessDisplay';
-import ShareTeacherLibraries from './ShareTeacherLibraries';
 import LibraryPublisher from './LibraryPublisher';
 import loadLibrary from './libraryLoader';
 import LibraryClientApi from './LibraryClientApi';
-import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   libraryBoundary: {
@@ -39,7 +37,6 @@ export const DialogState = {
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
-  SHARE_TEACHER_LIBRARIES: 'share_teacher_libraries',
   ERROR: 'error'
 };
 
@@ -94,7 +91,7 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  displayPublisherContent = () => {
+  displayContent = () => {
     const {libraryDetails, libraryClientApi} = this.state;
     return (
       <LibraryPublisher
@@ -107,27 +104,16 @@ class LibraryCreationDialog extends React.Component {
         onUnpublishSuccess={() =>
           this.setState({dialogState: DialogState.UNPUBLISHED})
         }
-        onShareTeacherLibrary={this.onShareTeacherLibrary()}
         libraryDetails={libraryDetails}
         libraryClientApi={libraryClientApi}
       />
     );
   };
 
-  isTeacher() {
-    return getStore().getState().currentUser.userType === 'teacher';
-  }
-
-  onShareTeacherLibrary = () => {
-    return this.isTeacher()
-      ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES})
-      : undefined;
-  };
-
   render() {
     let subtitleContent, bodyContent;
     const {dialogState, libraryName, errorMessage} = this.state;
-    const {dialogIsOpen, channelId, onClose} = this.props;
+    const {dialogIsOpen, channelId} = this.props;
     switch (dialogState) {
       case DialogState.LOADING:
         bodyContent = <LoadingDisplay />;
@@ -137,8 +123,6 @@ class LibraryCreationDialog extends React.Component {
           <PublishSuccessDisplay
             libraryName={libraryName}
             channelId={channelId}
-            // Waiting for design guidance prior to enabling this functionality
-            // onShareTeacherLibrary={this.onShareTeacherLibrary}
           />
         );
         break;
@@ -150,32 +134,23 @@ class LibraryCreationDialog extends React.Component {
         break;
       case DialogState.DONE_LOADING:
         subtitleContent = i18n.libraryExportSubtitle();
-        bodyContent = this.displayPublisherContent();
-        break;
-      case DialogState.SHARE_TEACHER_LIBRARIES:
-        bodyContent = <ShareTeacherLibraries onCancel={onClose} />;
+        bodyContent = this.displayContent();
         break;
       default:
         // If we get to this state, we've shipped a bug.
         bodyContent = <ErrorDisplay message={i18n.libraryCreatorError()} />;
         break;
     }
-
-    const title =
-      dialogState === DialogState.SHARE_TEACHER_LIBRARIES
-        ? i18n.manageYourLibraries()
-        : i18n.libraryExportTitle();
     return (
       <Dialog
         isOpen={dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
-        style={{width: 800}}
       >
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>{title}</Heading1>
+              <Heading1>{i18n.libraryExportTitle()}</Heading1>
               {subtitleContent && (
                 <div style={styles.info}>{subtitleContent}</div>
               )}

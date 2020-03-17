@@ -4,23 +4,13 @@ import {shallow} from 'enzyme';
 import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 
 describe('PublishSuccessDisplay', () => {
-  it('displays a button when onShareTeacherLibrary is passed', () => {
+  const CHANNEL_ID_SELECTOR = 'input[type="text"]';
+  const channelId = '123';
+  it('displays channel id when in published state', () => {
     let wrapper = shallow(
-      <PublishSuccessDisplay
-        libraryName="name"
-        channelId="123"
-        onShareTeacherLibrary={() => {}}
-      />
+      <PublishSuccessDisplay libraryName="name" channelId={channelId} />
     );
 
-    expect(wrapper.find('Button')).to.have.lengthOf(1);
-  });
-
-  it('does not display a button when onShareTeacherLibrary is passed', () => {
-    let wrapper = shallow(
-      <PublishSuccessDisplay libraryName="name" channelId="123" />
-    );
-
-    expect(wrapper.find('Button')).to.have.lengthOf(0);
+    expect(wrapper.find(CHANNEL_ID_SELECTOR).props().value).to.equal(channelId);
   });
 });
