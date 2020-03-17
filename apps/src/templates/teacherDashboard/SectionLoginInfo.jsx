@@ -277,6 +277,7 @@ class WordOrPictureLogins extends React.Component {
         {students.length >= 1 && (
           <span>
             <Button
+              __useDeprecatedTag
               text={i18n.printLoginCards_button()}
               color="orange"
               onClick={this.printLoginCards}

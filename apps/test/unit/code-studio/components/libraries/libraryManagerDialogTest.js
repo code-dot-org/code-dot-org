@@ -1,7 +1,9 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
+import LibraryManagerDialog, {
+  mapUserNameToProjectLibraries
+} from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -208,6 +210,21 @@ describe('LibraryManagerDialog', () => {
       expect(setProjectLibraries.withArgs([{name: 'second'}]).calledOnce).to.be
         .true;
       window.dashboard.project.setProjectLibraries.restore();
+    });
+  });
+
+  describe('mapUserNameToProjectLibraries', () => {
+    it('maps userName from classLibraries to project libraries', () => {
+      const projectLibraries = [{channelId: '123456'}, {channelId: '654321'}];
+      const classLibraries = [{channel: '123456', userName: 'Library Author'}];
+
+      const mappedProjectLibraries = mapUserNameToProjectLibraries(
+        projectLibraries,
+        classLibraries
+      );
+
+      expect(mappedProjectLibraries[0].userName).to.equal('Library Author');
+      expect(mappedProjectLibraries[1].userName).to.be.undefined;
     });
   });
 });
