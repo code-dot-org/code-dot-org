@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
+import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import RecentCourses from './RecentCourses';
 import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
@@ -10,6 +11,7 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class StudentHomepage extends Component {
   static propTypes = {
@@ -36,6 +38,22 @@ export default class StudentHomepage extends Component {
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
+
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/shared/images/fill-540x300/student-announcement/student_announcement_special2020.jpg'
+          )}
+          heading={i18n.studentAnnouncementSpecial2020Heading()}
+          description={i18n.studentAnnouncementSpecial2020Description()}
+          buttons={[
+            {
+              id: 'student_homepage_announcement_special2020',
+              url: pegasus('/athome'),
+              text: i18n.studentAnnouncementSpecial2020Button()
+            }
+          ]}
+        />
+
         {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
         <RecentCourses
           courses={courses}
