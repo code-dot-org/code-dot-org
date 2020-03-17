@@ -15673,3 +15673,93 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd2-virtual:
+          title: CSD Unit 2 - Web Development
+          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
+          description_short: "  Learn to build your own web site in Web Lab."
+          description_audience: ''
+          stages:
+            Exploring Web Pages:
+              name: Exploring Web Pages
+              description_student: ''
+              description_teacher: ''
+            Intro to HTML:
+              name: Intro to HTML
+              description_student: This lesson introduces to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. The class looks at an HTML page in Web Lab and discusses how HTML tags help solve this problem, then uses HTML to write the first web pages of the unit.
+              description_teacher: In this lesson students are introduced HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson.
+            Headings:
+              name: Headings
+              description_student: This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
+              description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
+            Digital Footprint:
+              name: Digital Footprint
+              description_student: This lesson takes a step back from creating the personal website to talk about personal information people choose to share digitally.  The class begins by discussing what types of information are good to share with other people, then looks at several sample social media pages to see what types of personal information could be shared intentionally or unintentionally.  Finally, the class comes up with a set of guidelines to follow when putting information online.
+              description_teacher: "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
+            Styling Text with CSS:
+              name: Styling Text with CSS
+              description_student: This lesson introduces CSS as a way to style elements on the page. The class learns the basic syntax for CSS rule-sets and then explores properties that impact HTML text elements.  Finally, everyone applies text styles to their personal websites.
+              description_teacher: "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\r\n\r\n"
+            Intellectual Property:
+              name: Intellectual Property
+              description_student: ''
+              description_teacher: ''
+            Images:
+              name: Images
+              description_student: ''
+              description_teacher: ''
+            'Websites for Expression ':
+              name: 'Websites for Expression '
+              description_student: 'This lesson introduces websites as a means of personal expression.  The class first discusses different ways that people express and share their interests and ideas, then looks at a few exemplar websites made by students from a previous course. Finally everyone brainstorms and shares a list of topics and interests to include, creating a resource for developing a personal website in the rest of the unit. '
+              description_teacher: In this lesson students investigate ways to use websites as a means of personal expression and develop a list of topics and interests that they would want to include on a personal website. To begin the lesson students brainstorm different ways that people express and share their interests and ideas. Students then look at a few exemplar websites made by students from a previous CS Discoveries course to identify ways they are expressing their ideas. Finally students brainstorm and share a list of topics and interests they might want to include on a personal website which they can reference for ideas as they progress through the unit.
+            Styling Elements with CSS:
+              name: Styling Elements with CSS
+              description_student: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
+              description_teacher: This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their personal websites.
+            Project - Planning Layout and Style:
+              name: Project - Planning Layout and Style
+              description_student: ''
+              description_teacher: ''
+            Project - Building a Webpage:
+              name: Project - Building a Webpage
+              description_student: ''
+              description_teacher: ''
+            Purpose of a  Websites:
+              name: Purpose of a  Websites
+              description_student: ''
+              description_teacher: ''
+            Team Problem Solving:
+              name: Team Problem Solving
+              description_student: ''
+              description_teacher: ''
+            Sources and Research:
+              name: Sources and Research
+              description_student: ''
+              description_teacher: ''
+            CSS Classes:
+              name: CSS Classes
+              description_student: ''
+              description_teacher: ''
+            Planning a Multi-page Website:
+              name: Planning a Multi-page Website
+              description_student: ''
+              description_teacher: ''
+            Linking and Navigation:
+              name: Linking and Navigation
+              description_student: ''
+              description_teacher: ''
+            Project - Website for a Purpose:
+              name: Project - Website for a Purpose
+              description_student: ''
+              description_teacher: ''
+            Peer Review and Final Touches:
+              name: Peer Review and Final Touches
+              description_student: ''
+              description_teacher: ''
+            Post-Project Test:
+              name: Post-Project Test
+              description_student: ''
+              description_teacher: ''
+            CS Discoveries Post Course survey:
+              name: CS Discoveries Post Course survey
+              description_student: ''
+              description_teacher: ''
