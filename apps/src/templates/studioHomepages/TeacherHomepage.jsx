@@ -17,6 +17,7 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
+import SpecialAnnouncement from './SpecialAnnouncement';
 
 const styles = {
   clear: {
@@ -180,7 +181,8 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {specialAnnouncement && (
+        <SpecialAnnouncement isTeacher={true} />
+        {specialAnnouncement && false && (
           <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
