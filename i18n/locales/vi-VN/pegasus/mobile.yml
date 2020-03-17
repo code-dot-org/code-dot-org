@@ -273,6 +273,7 @@
   homepage_action_text_learn: "Bắt đầu học"
   homepage_action_text_signpetition: "Ký vào bản kiến nghị"
   homepage_signpetition_dropdown: "Tôi đồng ý &#x25BE;"
+  homepage_signpetition_dropdown_text: "Tôi đồng ý"
   homepage_banner_text_prizes: 'The Hour of Code sắp diễn ra một lần nữa từ ngày 7 đến ngày 13 tháng mười hai'
   homepage_banner_link_prizes: 'Tham gia sự kiện học lập trình lớn nhất trong lịch sử. '
   homepage_banner_text_main: "Code.org và College Board tạo thành một liên minh để nâng cao sự đa dạng trong khoa học máy tính."
@@ -379,6 +380,7 @@
   minecraft_join_online_training: "Bạn đã sẵn sàng để thực hiện Giờ lập trình với Minecraft, nhưng không biết bắt đầu từ đâu? Hãy tham gia webinar của chúng tôi <a href='%{minecraft_webinar_url}'>tại đây</a>. Bạn sẽ được tìm hiểu và cung cấp tài liệu hỗ trợ để sẵn sàng tham gia hành trình Hero's Journey từ Minecraft team. Hãy bắt đầu bằng suy nghĩ sẽ mang Giờ lập trình đến với các bạn trẻ trong tuần lễ giáo dục khoa học máy tính (từ ngày 4/12 - 10/12) và hơn thế nữa."
   minecraft_og_agent: "Minecaft là nền tảng của Giờ lập trình, và bạn chính là anh hùng! Hãy viết các câu lệnh để lập trình hành trình trong thế giới Minecraft."
   sports_watch_video: "Xem video"
+  video_title_cs_is_everything: "Khoa học máy tính là Thay đổi Tất cả mọi thứ"
   video_title_inspire_girl: "Truyền cảm hứng cho một cô gái"
   video_5min: "5 phút"
   help_translate: "Giúp chúng tôi dịch."

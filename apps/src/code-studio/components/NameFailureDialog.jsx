@@ -37,6 +37,7 @@ export default class NameFailureDialog extends React.Component {
         </div>
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             text={i18n.ok()}
             onClick={this.props.handleClose}
             color={Button.ButtonColor.orange}

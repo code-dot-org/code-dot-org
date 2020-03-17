@@ -519,6 +519,12 @@ hu:
         text: Húzd a blokkokat az eszközkészletből a munkaterületre. Bizonyosodj meg
           róla, hogy a "futtatáskor" blokk alatt szerepel a helyes megoldásod, majd
           kattints a "Futtatás" gombra, és nézd meg, hogyan megy oda a madár a malachoz.
+    C1_maze_loops:
+      1:
+        text: A számítógépek különösen jók a parancsok ismétlésében. Emberként elég
+          hamar megunjuk, ha ugyanazokat a dolgokat sokszor kell megismételnünk. De
+          a számítógép ugyanazt a dolgot képes milliószor, vagy akár milliárdszor
+          is megcsinálni, és nem fogja megunni, hanem rendben végre fogja hajtani.
     C1_moveitmoveit_unplugged:
       3:
         text: A program egy olyan algoritmus, amit olyan formában kódoltak, hogy azt
@@ -557,6 +563,11 @@ hu:
           ekkor a macska megijedt, és elfutott. "Ahhh." Ha több időm lenne, akkor
           biztosan jól végződött volna. Vége!
     C1_zuck_repeat_loop:
+      1:
+        text: A számítógépek különösen jók a parancsok ismétlésében. Emberként elég
+          hamar megunjuk, ha ugyanazokat a dolgokat sokszor kell megismételnünk. De
+          a számítógép ugyanazt a dolgot képes milliószor, vagy akár milliárdszor
+          is megcsinálni, és nem fogja megunni, hanem rendben végre fogja hajtani.
       4:
         text: Ehhez húzd a "lépj előre" parancsot, majd tedd az "ismételd" blokkba.
           Ezután kattints rá, majd add meg, hogy mennyiszer kell ismételni a blokkot,
@@ -933,6 +944,12 @@ hu:
           (hossz) paraméter értéke. Húzz egy szám blokkot a Matematika (Math) kategóriából
           az üres helyre. Nézd meg, hogyan használhatod a függvényt újra és újra különböző
           hosszúságokkal, hogy különböző méretű négyzeteket rajzolj. Próbáld ki magad!
+    C4_intro:
+      4:
+        text: Most a "fordulj jobbra" blokkot fogom használni, és addig húzom, amíg
+          meg nem jelenik a sárga nyíl. Ekkor elengedem, és a két blokk összekapcsolódik.
+          Amikor újra megnyomom a "Futtatás" gombot, a madár felülről lefelé haladva
+          végrehajtja a munkaterületen egymás után pakolt parancsokat.
     C4_math_artist:
       1:
         text: Ha egy olyan téglalapot szeretnénk rajzolni, amely 50 képpont magas
@@ -1361,11 +1378,30 @@ hu:
       4:
         text: Most bármit építhetsz, amit csak szeretnél! Jó szórakozást!
     gumball_intro:
+      4:
+        text: 3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér,
+          ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak
+          odaírva.
       6:
         text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
+      7:
+        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "amikor
+          fut" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket
+          a sárga vonalig, és akkor majd összekapcsolódnak.
     iceage_intro:
+      4:
+        text: 3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér,
+          ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak
+          odaírva.
       6:
         text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
+      7:
+        text: Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga "amikor
+          fut" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket
+          a sárga vonalig, és akkor majd összekapcsolódnak.
+    mc_2016_intro:
+      8:
+        text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
     hoc_dance_warmup:
       1:
         text: 'Kódolás Órája | Táncos buli: Bemelegítés'
@@ -1514,6 +1550,11 @@ hu:
       2:
         text: Szia! Az én nevem Miral Kotb, táncos, szoftverfejlesztő, és az iLuminate
           megalkotója vagyok.
+      3:
+        text: A számítógép-tudomány a kreativitáshoz sokféleképpen kapcsolódik. Ezernyi
+          módon, tényleg. Úgy értem, ha képes vagy szoftvert írni, az ötleteidet bárhogy
+          megvalósíthatod. Én világító ruhákkal dolgozom. Rengeteg dolgot megtehetsz,
+          ha megvannak az eszközeid a szoftveríráshoz, és a lehetőségek végtelenek.
       4:
         text: A következő órában úgy ismerkedhetsz meg a számítógép-tudománnyal, hogy
           beprogramozod a saját táncos bulidat! Összeállítottuk a zenét néhány slágerrel,
@@ -1525,6 +1566,9 @@ hu:
       6:
         text: Látni fogod, hogy a képernyő három részre oszlik. Bal oldalt játszódnak
           az események. Itt fognak megjelenni a táncosaid.
+      7:
+        text: Középen van az eszköztárad. Az újabb kód-blokkok itt fognak megjelenni,
+          ahogy előrehaladsz a feladványokban.
       8:
         text: A jobb oldali rész a munkaterület. Az eszköztárból áthúzhatsz blokkokat
           a munkaterületre, hogy felépítsd belőlük a programod.
@@ -1538,9 +1582,17 @@ hu:
           választhatsz, és reméljük jó szórakozás lesz, amíg megtalálod a kedvenceidet.
           A játéktér alatt van a futtatás gomb. Ha ezt megnyomod, akkor megjelennek
           a programod táncosai a játéktéren és felhangzik a zene.
+      13:
+        text: Próbáld ki! Ha elakadsz, semmi gond! Csak pattanj fel és mozdulj rá,
+          és mielőtt felocsúdnál, már el is kezdted a táncos bulit! Szóval, mit fogsz
+          alkotni?
     hoc_dance_events_2019:
       1:
         text: 'Kódolás Órája | Táncos buli: Események'
+      3:
+        text: Hogy a különböző modulatok a zenével összhangban történjenek, használhatunk
+          egy dolgot, amit úgy hívnak, hogy "esemény". Az esemény megmondja a programodnak,
+          hogy figyeljen oda valamilyen történésre és reagáljon rá.
       4:
         text: Például eseményeknek tekintjük az egérkattintást, a nyilakat ábrázoló
           gombok leütését vagy a képernyő megérintését.
@@ -1580,6 +1632,14 @@ hu:
         text: Nem csak a táncos mozgását, de a tulajdonságait is meg lehet változtatni.
           A tulajdonságok olyan dolgokat írnak le, mint a táncos helye a képernyőn,
           a táncos mérete vagy színe.
+      9:
+        text: A beállítás blokkal megváltoztathatod a táncos méreteit, irányát, helyét
+          és színét. Próbálgathatod ezeket a tulajdonságokat, és különböző változásokat
+          kapcsolhatsz a dal egyes részeihez.
+      10:
+        text: Ne feledd, hogy csak már létező táncosok tulajdonságait változtathatod
+          meg. Győződj meg róla, hogy a beállítás blokk az új táncos készítése blokk
+          után jön. Kísérletezz bátran, legyél kreatív, érezd jól magad.
     hoc_dance_congrats_2019:
       1:
         text: 'Kódolás Órája | Táncos buli: Induljon a party!'

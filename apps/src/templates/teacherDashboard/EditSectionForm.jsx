@@ -172,6 +172,7 @@ class EditSectionForm extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             onClick={handleClose}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
@@ -179,6 +180,7 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
           <Button
+            __useDeprecatedTag
             className="uitest-saveButton"
             onClick={this.onSaveClick}
             text={i18n.save()}

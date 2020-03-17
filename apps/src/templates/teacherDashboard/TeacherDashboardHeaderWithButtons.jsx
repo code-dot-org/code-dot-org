@@ -118,6 +118,7 @@ class TeacherDashboardHeaderWithButtons extends React.Component {
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
               <Button
+                __useDeprecatedTag
                 onClick={() => {
                   this.props.openEditSectionDialog(this.selectedSection.id);
                   recordOpenEditSectionDetails(

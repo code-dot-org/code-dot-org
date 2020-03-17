@@ -953,9 +953,12 @@ pt-BR:
     csp_traversals: 'Traversais'
     csp_libraries: 'Bibliotecas'
     csp_parameters_return_values: 'Parâmetros e valores de retorno'
+    csp_unit1_2020: 'Unidade 1: Informação Digital'
     csp_unit2_2020: 'Unidade 2: A internet'
+    csp_unit3_2020: 'Unidade 3: Introdução ao desenho de aplicativos'
     csp_unit6_2020: 'Unidade 6: Algoritmos'
     csp_unit9_2020: 'Unidade 9: Dados'
+    csp_unit10_2020: 'Unidade 10: Cibersegurança e Impactos Globais'
     dlp: 'Prompts de reflexão'
     time4cs_c1: 'Everglades e seus ecossistemas'
     time4cs_c2: 'Cadeias de comida em Everglades'
@@ -1150,3 +1153,6 @@ pt-BR:
   page_not_found_description: "A página que você está procurando não existe neste endereço. Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa página inicial."
   page_not_found_button: "Volte para a página inicial"
   copy: 'Copiar'
+  maker:
+    google_oauth:
+      error_no_code: 'Por favor, digite seus detalhes de login.'
