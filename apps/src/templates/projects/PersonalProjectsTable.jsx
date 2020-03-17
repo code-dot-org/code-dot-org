@@ -8,10 +8,8 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {
-  personalProjectDataPropType,
-  PROJECT_TYPE_MAP
-} from './projectConstants';
+import {personalProjectDataPropType} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
   ConditionallyPublishableProjectTypes
