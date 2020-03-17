@@ -15661,6 +15661,26 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Shapes and Parameters:
+              name: Shapes and Parameters
+              description_student: ''
+              description_teacher: ''
+            Random Numbers:
+              name: Random Numbers
+              description_student: ''
+              description_teacher: ''
+            Sprites and Animations:
+              name: Sprites and Animations
+              description_student: ''
+              description_teacher: ''
+            Sprite Properties:
+              name: Sprite Properties
+              description_student: ''
+              description_teacher: ''
+            Text and Captioned Scenes:
+              name: Text and Captioned Scenes
+              description_student: ''
+              description_teacher: ''
         jess-test-script:
           stages:
             Our First Stage:
