@@ -251,7 +251,7 @@ cs:
       signed_in: 'Dříve než budeš pokračovat se, prosím, odhlas'
       username_not_found: 'Uživatelské jméno %{username} nebylo nalezeno'
       username_in_use: '%{username} je již obsazeno, vyber si jiný, prosím'
-      no_teacher: "Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím Požádejte je, prosím, aby se zde přihlásili a poté zkuste je znovu přidat"
+      no_teacher: "Nebyl nalezený nikdo přihlášený jako '%{teacher_email_or_code}'. Požádejte je prosím, aby se zde přihlásili a poté je zkuste znovu přidat"
       section_not_found: "Nelze nalézt sekci s kódem \"%{section_code}\"."
       blank_code: "Zadej prosím kód sekce"
       cant_join_own_section: "Lituji, ale nemůžete se připojit s vlastní sekcí."
@@ -343,7 +343,7 @@ cs:
       artist_k1: 'Umělec (předškolák)'
       basketball: 'Basketbal'
       bounce: 'Odraz'
-      dance: 'Dance Party'
+      dance: 'Taneční večírek'
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab_jr: 'Game Lab (beta)'
@@ -362,6 +362,7 @@ cs:
       starwarsblocks: 'Hvězdné války (kostky)'
       starwarsblocks_hour: 'Hvězdné války (kostky)'
       weblab: 'Web Lab'
+      view_all: 'Ukázat všechny projekty...'
     popup:
       progress_for_user: "Pokrok užívatele %{name}"
       progress: 'Tvůj pokrok'
@@ -494,7 +495,7 @@ cs:
     thank_you: 'Děkujeme, našim <a href="https://code.org/about/donors"> dárcům</a>, <a href="https://code.org/about/partners"> partnerům</a>, náš <a href="https://code.org/about/team"> rozšířený tým</a>, náše video obsazení a naši <a href="https://code.org/about/advisors"> poradci ve vzdělávání </a> za jejich podporu při vytváření Code studia.'
     help_from_html: 'Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit tento kurz.'
     help_from_html_old: 'Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit tyto materiály.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Všechna práva vyhrazena.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Všechna práva vyhrazena.<br />Frozen&#8482; &copy; %{current_year} Disney. Všechna práva vyhrazena.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Všechna práva vyhrazena.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Všechna práva vyhrazena.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Všechna práva vyhrazena.<br />The Amazing World of Gumball je značka a &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org používá p5.play, který je licencován pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Poháněn Amazon Web Services'
@@ -516,7 +517,7 @@ cs:
     try_hour_of_code: 'Vyzkoušejte Hodinu kódu!'
   reference_area:
     title: 'Potřebuješ pomoc?'
-    subtitle: 'Podívej se na tyto videa a tipy'
+    subtitle: 'Podívej se na tato videa a tipy'
     teacher: 'Zobraz řešení'
     teacher_no_solution: 'Skrýt řešení'
     auth_error: 'Nemáš oprávnění zobrazovat řešení.'
@@ -528,6 +529,7 @@ cs:
     notes_coming_soon: 'Poznámky pro toto video přijdou brzy.'
     autoplay_option: 'Automatické přehrávání videí'
     download: 'Stáhnout Video'
+    show_notes: 'Zobrazit poznámky'
     label: 'Video'
   compatibility:
     upgrade:
@@ -572,9 +574,9 @@ cs:
       audience: 'Věk 13 +'
       cta: 'Jak na to'
     dance:
-      title: 'Dance Party'
+      title: 'Taneční večírek'
     dance-2019:
-      title: 'Dance Party'
+      title: 'Taneční večírek'
     hoc:
       title: 'Klasické bludiště'
       body: 'Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.'
@@ -833,6 +835,7 @@ cs:
     csf_sequencing: 'Sekvence'
     csf_loops: 'Cykly'
     csf_events: 'Události'
+    csf_online_safety: 'Online bezpečnost'
     csf_binary: 'Binární'
     csf_conditionals: 'Podmínky'
     csf_nested_loops: 'Vnořené cykly'
@@ -855,6 +858,7 @@ cs:
     csp2_1: 'Kapitola 1: Kódování a komprese komplexních informací'
     csp2_2: 'Kapitola 2: Práce s daty a jejich zobrazení'
     csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
+    csp_postap_1: 'Kapitola 2: Práce s daty a jejich zobrazení'
     csp2_1_2018: '2. lekce: Digitální informace'
     csp3_1_2018: 'Jednotka 3: Úvod do programování'
     csp_variables: 'Proměnné'
@@ -862,6 +866,7 @@ cs:
     csp_functions: 'Funkce'
     csp_lists: 'Seznamy'
     csp_loops: 'Cykly'
+    csp_unit1_2020: '1. lekce: Digitální informace'
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností Code.org.
@@ -928,6 +933,8 @@ cs:
   view_teacher_guide: 'Zobrazit příručku učitele'
   pd:
     form_labels:
+      first_name: 'Křestní jméno'
+      last_name: 'Příjmení'
       email: 'E-mail'
       school_name: 'Název školy'
       school_country: 'Země školy'
@@ -937,6 +944,7 @@ cs:
         female: 'Žena'
         none: 'Raději bych neodpovídal/a'
       school_country:
+        canada: 'Kanada'
         chile: 'Chile'
         israel: 'Izrael'
         malaysia: 'Malajsie'
@@ -987,6 +995,9 @@ cs:
     more_information: "Zobrazte si zásady ochrany soukromí pro Code.org."
     accept: 'Souhlasím'
   gdpr_dialog:
+    heading: 'Souhlasíte s používáním webových stránek provozovaných ve Spojených státech?'
+    message: 'Informace ohledně Vašeho používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány.'
+    privacy_policy: 'zásady ochrany osobních údajů'
     yes: 'Ano'
   page_not_found_title: "Stránka nebyla nalezena"
   page_not_found_header: '404 - Stránka nebyla nalezena'

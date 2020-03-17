@@ -46,6 +46,7 @@ en-GB:
     type:
       email: 'Email'
   crud:
+    edit: 'editar'
     submit: 'Submit'
   nav:
     user:

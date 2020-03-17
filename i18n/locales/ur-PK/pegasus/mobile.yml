@@ -48,6 +48,7 @@
   csedweek_map_legend_event: "آور اف کوڈ ایونٹ"
   csedweek_map_legend_cs_tech_jam: "خاص موقع"
   cded_try_it: "یہ آزمائیے"
+  try_now: "مزید سیکھے"
   california_heading: "اپنے اسکول سے کمپیوٹر پڑھانے کے سلسلے میں بات کیجئے۔"
   view_english_site: "انگریزی ویب سائٹ دیکھئں"
   write_your_first_program: "Apna pehla Computer ka Program likhiye"
@@ -179,6 +180,7 @@
   homepage_action_text_learn: "سیکھنا شروع کریں"
   homepage_action_text_signpetition: "درخواست پر دستخط کریں"
   homepage_signpetition_dropdown: "میں اتفاق کرتا ہوں &#x25BE;"
+  homepage_signpetition_dropdown_text: "ma manta ho"
   homepage_diversity_pledge: "کوڈ کو پھیلانے کا عہد کریں"
   homepage_banner_text_prizes: 'کوڈ کی گھڑی آ رہا ہے پھر 7-13 دسمبر ہے.'
   homepage_banner_link_prizes: 'سب سے بڑا تعلیم ایونٹ کی تاریخ میں شامل ہوں. '
@@ -333,6 +335,7 @@
   dashboard_puzzle: "پزل(Puzzle)"
   stats_hoc_2013_image_alt: "کوڈ کی گھڑی کے شماریات 2013"
   dashboard_student: "Talib-e-ilm"
+  learn_more: "مزید سیکھے"
   hoc2014_try_frozen: "آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ"
   frozen_name: "اینا اور ایلسا کے ساتھ کوڈ"
   blockly_name: "بلاکلی"
