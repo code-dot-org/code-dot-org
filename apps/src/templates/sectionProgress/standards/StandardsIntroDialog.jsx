@@ -87,6 +87,7 @@ class StandardsIntroDialog extends Component {
         </div>
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             text={i18n.gotIt()}
             onClick={this.dismissStandardsDialog}
             color={Button.ButtonColor.orange}
