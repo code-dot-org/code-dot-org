@@ -182,6 +182,7 @@ export default class TeacherHomepage extends Component {
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
         <SpecialAnnouncement isTeacher={true} />
+        {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
         {specialAnnouncement && false && (
           <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
