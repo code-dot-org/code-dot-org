@@ -18,7 +18,7 @@ export default class SpecialAnnouncement extends Component {
     const descriptionText = isTeacher
       ? i18n.teacherAnnouncementSpecial2020Description()
       : i18n.studentAnnouncementSpecial2020Description();
-    const id = isTeacher
+    const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special2020'
       : 'student_homepage_announcement_special2020';
 
@@ -31,7 +31,7 @@ export default class SpecialAnnouncement extends Component {
         description={descriptionText}
         buttons={[
           {
-            id: id,
+            id: buttonId,
             url: pegasus('/athome'),
             text: i18n.studentAnnouncementSpecial2020Button()
           }
