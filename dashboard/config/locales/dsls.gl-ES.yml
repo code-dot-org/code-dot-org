@@ -500,6 +500,18 @@ gl-ES:
           * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
           * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
           * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
+      CSD U2 L4 Overview:
+        markdown: |-
+          # Resumo
+
+          Esta lección continúa a introdución ás etiquetas HTML, esta vez con encabezados. Na clase practicarás o uso de etiquetas de encabezado para crear títulos de páxina e de sección e aprenderás como se mostran por defecto os diferentes elementos de encabezado. Logo, a clase propón como organizar o contido das páxinas web persoais que se construirán ao longo da unidade e comeza a primeira páxina do proxecto.
+          ## Vocabulario
+
+          * **Cabeceira** - Un título ou resumo dun documento ou sección dun documento.
+
+          ## Código introducido
+
+          * **[Heading](//studio.code.org/docs/weblab/h/)** - `<h1></h1>`
       CSD U2 Top Websites:
         markdown: |-
           # Os mellores sitios web dos EE. UU.

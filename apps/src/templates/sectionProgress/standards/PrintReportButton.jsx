@@ -18,6 +18,7 @@ export default class PrintReportButton extends Component {
     return (
       <div>
         <Button
+          __useDeprecatedTag
           onClick={this.props.onClick}
           color={Button.ButtonColor.orange}
           text={i18n.printReport()}

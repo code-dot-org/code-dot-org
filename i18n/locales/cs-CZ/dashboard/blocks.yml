@@ -226,7 +226,7 @@ cs:
       Dancelab_everyMeasuresRange:
         text: 'opakovat každých {N} taktů po {START} '
       Dancelab_everySeconds:
-        text: 'opakovat každých {N} {UNIT} '
+        text: 'opakovat každé {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
@@ -917,7 +917,7 @@ cs:
             '"left"': vlevo
             '"down"': dolů
             '"right"': vpravo
-            '"space"': vesmír
+            '"space"': mezerník
             '"enter"': enter
             '"a"': a
             '"b"': b

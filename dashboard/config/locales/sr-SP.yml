@@ -210,6 +210,7 @@ sr:
       already_registered: Већ си регистрован?
       create: Креирај
       artist: Уметник
+      bounce: одбиј се
       flappy: Флапи
       frozen: Залеђено краљевство
       iceage: Ледено доба
@@ -253,6 +254,7 @@ sr:
     email_confirm_needed_required: 'Ваша електронска пошта %{email} није потврђена:'
     email_confirm_wrong_email: "(Погрешна електронска пошта?)"
     email_resend_confirm: Поново пошаљи упутства о потврди
+    new_email_hint: "(Проверите да ли сте у могућности да примате имејл на овој адреси.)"
     new_password_hint: "(остави празно ако не желиш промијенити)"
     current_password_hint: "(потребна нам је твоја тренутна лозинка како би потврдили
       твоје промјене)"
@@ -379,6 +381,8 @@ sr:
       title: Кондиционали
   gallery:
     header: Галерија
+    header_playlab: Играоница
+    header_artist: Уметник
     report_abuse: Пријави злоупотребу
   multi-submittable:
     wrong_title: Хвала
@@ -428,6 +432,8 @@ sr:
     csp_functions: Функције
     csp_lists: Листе
     csp_loops: Петље
+  hoc_download:
+    minecraft_name: Мајнкрафт час програмирања
   pd:
     form_labels:
       email: Електронска пошта

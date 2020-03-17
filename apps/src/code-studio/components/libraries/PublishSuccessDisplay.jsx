@@ -36,7 +36,6 @@ export default class PublishSuccessDisplay extends React.Component {
                 color={Button.ButtonColor.gray}
                 onClick={onShareTeacherLibrary}
                 text={i18n.manageLibraries()}
-                useButtonTag
               />
             )}
           </div>

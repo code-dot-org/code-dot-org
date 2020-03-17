@@ -807,6 +807,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
@@ -836,6 +837,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       Dancelab_whenPeak:
         text: kada {RANGE} vrhunac
@@ -899,6 +901,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_mirrorSprite:
         options:

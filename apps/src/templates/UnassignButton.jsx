@@ -46,6 +46,7 @@ class UnassignButton extends React.Component {
         className={'uitest-unassign-button'}
       >
         <Button
+          __useDeprecatedTag
           color={Button.ButtonColor.green}
           text={text}
           icon={icon}

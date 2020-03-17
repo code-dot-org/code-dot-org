@@ -321,6 +321,8 @@ sl:
               name: Hour of Code 2013
         cspunit3:
           stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
             While Loops:
               name: 'Zanka: dokler velja'
         sciencePD2:
@@ -431,6 +433,10 @@ sl:
           stages:
             The Internet:
               name: Internet
+        csp3-2017:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         csp5-2017:
           stages:
             While Loops:
@@ -791,6 +797,10 @@ sl:
           stages:
             Thanks:
               name: Hvala
+        csp3-research-mxghyt:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -847,6 +857,10 @@ sl:
               name: Zabava s "for" zankami
             Songwriting with Parameters:
               name: Pisanje pesmi s parametri
+        csp3-staging:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         hero:
           stages:
             Minecraft Hour of Code:
@@ -1013,6 +1027,10 @@ sl:
           stages:
             The Internet:
               name: Internet
+        csp3-2018:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         csp5-2018:
           stages:
             While Loops:
@@ -1151,6 +1169,10 @@ sl:
           stages:
             The Internet:
               name: Internet
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         csp5-2019:
           stages:
             While Loops:
