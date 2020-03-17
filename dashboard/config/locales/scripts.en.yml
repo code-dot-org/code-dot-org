@@ -15014,6 +15014,8 @@ en:
               name: End of Course Project
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
+            Digital Sharing:
+              name: Digital Sharing
         coursef-2020:
           title: Course F (2020)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -15100,6 +15102,8 @@ en:
               name: End of Course Project
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
+            AI for Oceans:
+              name: AI for Oceans
         express-2020:
           title: Express Course (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -15490,12 +15494,14 @@ en:
               name: Getting Familiar with Traversals EIPM
             Comparing Make Lessons:
               name: Comparing Make Lessons
-          title: CS Principles Curriculum Training for Facilitators
+            Prework and Saturday Session Resources:
+              name: Prework and Saturday Session Resources
+          title: CS Principles 20-21 Curriculum Training for Facilitators
           description_audience: ''
           description_short: ''
-          description: Welcome message here
+          description: Welcome to the CSP Facilitator Pre-work for the April call! This will be focused on deepening the understanding of EIPM, content in Unit 5, and the new datasets available in the course. This work is essential to completing before the April call since we will be processing and discussing the work together in the call.
         csp3-virtual:
-          title: CSP Unit 3 - Intro to Programming ('19-'20)
+          title: Self Paced Introduction to App Lab and Turtle
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -15549,8 +15555,8 @@ en:
               description_student: ''
               description_teacher: ''
         csd3-virtual:
-          title: CSD Unit 3 - Animations and Games ('19-'20)
-          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          title: Self Paced Introduction to Game Lab
+          description: You’ll program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
           stages:
