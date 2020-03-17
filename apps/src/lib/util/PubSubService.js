@@ -3,7 +3,7 @@
  */
 
 import Pusher from 'pusher-js';
-var PubSubChannel = require('./PubSubChannel');
+var PubSubChannel = require('../../netsim/PubSubChannel');
 
 /**
  * JavaScript interface for a publish/subscribe service provider.
