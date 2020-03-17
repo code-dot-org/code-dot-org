@@ -17,15 +17,10 @@ level 'csp_applab_functions_virtual', progression: 'Defining and Calling Functio
 level 'U3L03 Define and use turnAround_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Draw a T using turnAround_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 define turnRight and draw a rectangle_virtual', progression: 'Using Functions With Turtle Commands'
-level 'CSP Abstraction in Programming 2_2018_2019_virtual', progression: 'Abstraction in Programming', named: true
 level 'U3L03 - draw rect function_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 - draw step_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Three Steps_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 draw diamond_virtual', progression: 'Challenge: Draw a Diamond Using Functions'
-level 'U3L03 Assessment_2018_2019_virtual', progression: 'Check Your Understanding', assessment: true
-level 'csp_U3_plan_code_FR_virtual', progression: 'Check Your Understanding', assessment: true
-
-stage 'Functions and Top-Down Design', flex_category: 'csp3_1_2018'
 level 'U3L04 - snowflake_virtual', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions_virtual', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 Assessment1_virtual', progression: 'Check Your Understanding', assessment: true

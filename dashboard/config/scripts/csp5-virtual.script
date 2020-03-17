@@ -1,11 +1,9 @@
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp-19/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-19/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit5/standards/"], ["professionalLearning", "https://code.org/educate/professional-learning/middle-high"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}'
-family_name 'csp5'
 version_year '2019'
 project_sharing true
 curriculum_umbrella 'CSP'
@@ -33,7 +31,6 @@ level 'CSPU5_U3L16 - setPosition to move button_virtual', progression: 'How setP
 level 'CSPU5_AddLabelToChaserGame_virtual', progression: 'Using Labels'
 level 'How Images Work_2018_2019_virtual', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1_virtual', progression: 'Chaser Game v.1'
-level 'csp-pulse-check-survey-6-levelgroup-U5Ch1_2018_2019_virtual', progression: 'Quick Check-In', assessment: true
 
 stage 'Multi-screen Apps', flex_category: 'csp5_1'
 level 'CSP U5L02 SFLP_virtual', named: true
@@ -111,9 +108,6 @@ level 'CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual', 
 level 'CSPU5_U3L15 - Debug if never triggers in UpDown app_virtual', progression: 'Simple Decisions with if-statements'
 level 'CSPU5_U3L15 full clicker app_virtual', progression: 'Project: Clicker App', assessment: true
 level 'U5 AP Create Practice onEvent Doesnt Count_virtual', progression: 'AP Practice Response - Choosing an Abstraction', assessment: true
-
-stage 'Unit 5 Assessment 1', lockable: true, flex_category: 'csp5_1'
-level 'CSP Unit 5 Cumulative Assessment 1 MC_2018_2019_virtual', assessment: true
 
 stage 'User Input and Strings', flex_category: 'csp5_1'
 level 'CSP U5L06 SFLP_virtual', named: true
@@ -205,9 +199,6 @@ level 'U5 AP Practice Create Abstraction Color Sleuth_virtual', progression: 'AP
 level 'CSP U5 AP Practice Choose the Algorithm_virtual', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
 level 'U5 AP Practice Create Algorithm Color Sleuth_virtual', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
 
-stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
-level 'CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual', assessment: true
-
 stage 'While Loops', flex_category: 'csp5_2'
 level 'CSP U5L11 SFLP_virtual', named: true
 level 'CSPU5_U3 - Loops - 1_virtual', progression: 'Loops'
@@ -230,7 +221,6 @@ level 'CSPU5_U3 - Loops - plus and minus = operator_virtual', progression: 'Loop
 level 'CSPU5_U3 - Loops - minus = operator_virtual', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 14_virtual', progression: 'Loops Continued'
 level 'CSPU5_U3 - Loops - 15_virtual', progression: 'Loops Continued'
-level 'csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019_virtual', progression: 'Quick Check-In', assessment: true
 
 stage 'Loops and Simulations', flex_category: 'csp5_2'
 level 'CSP U5L12 SFLP_virtual', named: true
@@ -292,9 +282,6 @@ level 'CSPU5_U3 - Keys - Add Image URLs_virtual', progression: 'Adding Images Us
 level 'Project - Final Image Scroller_virtual', progression: 'Project: Image Scroller', assessment: true
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket_virtual', progression: 'My Favorite Things Reflection Question'
 
-stage 'Unit 5 Assessment 3', lockable: true, flex_category: 'csp5_2'
-level 'CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual', assessment: true
-
 stage 'Processing Arrays', flex_category: 'csp5_2'
 level 'CSP U5L15 SFLP_virtual', named: true
 level 'Processing Lists with Loops_virtual', progression: 'Processing Lists with Loops'
@@ -343,13 +330,3 @@ level 'CSPU5_U3 - Canvas - One Dot sprayPaint_virtual', progression: 'Adding Mor
 level 'CSPU5_U3 - Canvas - sprayPaint_virtual', progression: 'Adding More Features to Your App'
 level 'CSPU5_U3 - Canvas - sketch_virtual', progression: 'Using Stored Information'
 level 'CSPU5_U3 - Canvas - freePlay_virtual', progression: 'Project: Canvas Painter', assessment: true
-
-stage 'Unit 5 Assessment 4', lockable: true, flex_category: 'csp5_2'
-level 'CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual', assessment: true
-
-stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
-level 'CSP Cumulative Assess A_2018_2019_virtual', assessment: true
-
-stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
-level 'csp-post-survey-intro-2019_virtual'
-level 'csp-post-survey-levelgroup-2019.2_virtual', assessment: true
