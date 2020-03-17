@@ -61,6 +61,9 @@ class StandardDescriptionCell extends Component {
                 <div style={styles.tooltip}>
                   <div style={styles.tooltipLessonName}>{lesson.name}</div>
                   <div>
+                    {lesson.unplugged ? i18n.unplugged() : i18n.plugged()}
+                  </div>
+                  <div>
                     {lesson.completed ? i18n.completed() : i18n.notCompleted()}
                   </div>
                   <div>
