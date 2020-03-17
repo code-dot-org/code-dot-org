@@ -73,8 +73,9 @@ def get_i18n_strings(level)
 
       ## Function Names
       functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
-      i18n_strings['function_names'] = Hash.new unless functions.empty?
-      functions.each do |function|
+      behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
+      i18n_strings['function_names'] = Hash.new unless functions.empty? && behaviors.empty?
+      (functions + behaviors).each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
         i18n_strings['function_names'][name.content] = name.content if name
       end
