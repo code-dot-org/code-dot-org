@@ -1,17 +1,9 @@
 {
   "pages": {
-    "/home": "at-home-support-2020",
-    "/courses": "at-home-support-2020"
+    "/home": "teacher-apps-open-2020",
+    "/courses": "teacher-apps-open-2020"
   },
   "banners": {
-    "at-home-support-2020": {
-      "image": "https://code.org/images/at-home-support-2020.png",
-      "title": " Continued learning when schools are closed",
-      "body": "We want to support teachers and parents during the current widespread closures. Here are some resources to help students continue learning at home. We will continue to updat these over time.",
-      "buttonText": "Get started",
-      "buttonUrl": "https://code.org/athome",
-      "buttonId": "at-home-support-2020-get-started"
-    },
     "teacher-apps-open-2020": {
       "image": "https://code.org/images/professional-learning-2019-3.png",
       "title": "Sign up for Professional Learning",
