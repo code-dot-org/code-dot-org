@@ -18,6 +18,9 @@ export default class SpecialAnnouncement extends Component {
     const descriptionText = isTeacher
       ? i18n.teacherAnnouncementSpecial2020Description()
       : i18n.studentAnnouncementSpecial2020Description();
+    const id = isTeacher
+      ? 'teacher_homepage_announcement_special2020'
+      : 'student_homepage_announcement_special2020';
 
     return (
       <TwoColumnActionBlock
@@ -28,7 +31,7 @@ export default class SpecialAnnouncement extends Component {
         description={descriptionText}
         buttons={[
           {
-            id: 'teacher_homepage_announcement_special2020',
+            id: id,
             url: pegasus('/athome'),
             text: i18n.studentAnnouncementSpecial2020Button()
           }
