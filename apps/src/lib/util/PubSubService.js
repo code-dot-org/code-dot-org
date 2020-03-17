@@ -3,7 +3,7 @@
  */
 
 import Pusher from 'pusher-js';
-var PubSubChannel = require('./PubSubChannel');
+import {PusherChannel, NullChannel} from './PubSubChannel';
 
 /**
  * JavaScript interface for a publish/subscribe service provider.
@@ -59,7 +59,7 @@ PubSubService.NullService = function() {};
  * @returns {PubSubChannel}
  */
 PubSubService.NullService.prototype.subscribe = function(channelID) {
-  return new PubSubChannel.NullChannel();
+  return new NullChannel();
 };
 
 /**
@@ -94,7 +94,7 @@ PubSubService.PusherService = function(applicationKey) {
  * @returns {PubSubChannel}
  */
 PubSubService.PusherService.prototype.subscribe = function(channelID) {
-  return new PubSubChannel.PusherChannel(this.api_.subscribe(channelID));
+  return new PusherChannel(this.api_.subscribe(channelID));
 };
 
 /**
