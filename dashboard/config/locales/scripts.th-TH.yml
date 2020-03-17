@@ -85,6 +85,8 @@ th:
               name: 'เขาวงกต: การจัดลำดับ'
             'Real-life Algorithms: Paper Planes':
               name: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
+            Relay programming:
+              name: โปรแกรมการถ่ายทอดข้อมูล
             'Studio: Create a Story':
               name: 'เพลย์แลป: สร้างเรื่อง'
             The Big Event:

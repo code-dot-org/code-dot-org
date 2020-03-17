@@ -456,8 +456,8 @@ cs-CZ:
 
           V informatice jsou události akce, které počítač sleduje. V této lekci budeš reagovat různě podle toho, které tlačítko se zmáčkne.
       BinaryImages-Unplugged:
-        markdown: "# Binární obrázky\n\nVyjádřete, jak vytvořit obrázek za použití
-          jen dvou jednoduchých hodnot. \n"
+        markdown: "# Binární obrázky\n\nNaučte se, jak vytvořit obrázek využitím jen
+          dvou jednoduchých hodnot. \n"
       CSD Header Size MC:
         answers:
         - {}
@@ -1147,16 +1147,16 @@ cs-CZ:
           Rozdělte se do týmů a spolupracujte, abyste napsali programy, které malují obrázky.
       behaviors 1 predict:
         answers:
-        - {}
+        - feedback: Nesprávně.
         - correct: true
           feedback: Správně!
-        - {}
+        - feedback: Nesprávně.
         - feedback: Nesprávně
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
+        - feedback: Nesprávně.
         - text: Diagonálně
           correct: true
           feedback: Správně!
@@ -1252,7 +1252,8 @@ cs-CZ:
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
-        - correct: true
+        - text: Pták se dostane k praseti.
+          correct: true
           feedback: Správně!
         - {}
         - text: Nevím.
@@ -1261,7 +1262,8 @@ cs-CZ:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: Pták se dostane k praseti.
+          correct: true
           feedback: Správně!
         - {}
         - text: Nevím.
@@ -1270,7 +1272,8 @@ cs-CZ:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: Pták se dostane k praseti.
+          correct: true
           feedback: Správně!
         - {}
         - text: Nevím.
@@ -1330,36 +1333,81 @@ cs-CZ:
         - text: Nevím.
         questions:
         - {}
+      courseD_external_binary1:
+        markdown: "<h1>Kresleme pomocí binárního kódu</h1>\n \n<h3>Binární kód je
+          způsob, jak vyjádřit nějakou informaci pomocí dvou možností. V tomto případě
+          <b>vypnuto</b> a <b>zapnuto</b>.\n<br/>\nMy budeme používat číslo <b>0</b>
+          jako symbol pro \"vypnuto\" a číslo <b>1</b> jako symbol pro \"zapnuto\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>V této lekci dostaneš mřížku s \"pixely\", ve které
+          se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Kresleme pomocí binárního kódu</h1>\n \n<h3>Binární kód je
+          způsob, jak vyjádřit nějakou informaci pomocí dvou možností. V tomto případě
+          <b>vypnuto</b> a <b>zapnuto</b>.\n<br/>\nMy budeme používat číslo <b>0</b>
+          jako symbol pro \"vypnuto\" a číslo <b>1</b> jako symbol pro \"zapnuto\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>V této lekci dostaneš mřížku s \"pixely\", ve které
+          se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Kresleme pomocí binárního kódu</h1>\n \n<h3>Binární kód je
+          způsob, jak vyjádřit nějakou informaci pomocí dvou možností. V tomto případě
+          <b>vypnuto</b> a <b>zapnuto</b>.\n<br/>\nMy budeme používat číslo <b>0</b>
+          jako symbol pro \"vypnuto\" a číslo <b>1</b> jako symbol pro \"zapnuto\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>V této lekci dostaneš mřížku s \"pixely\", ve které
+          se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)"
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
+          feedback: Nesprávně.
         - text: B
+          feedback: Nesprávně.
         - text: C
+          feedback: Nesprávně.
         - text: D
           correct: true
           feedback: Správně!
         questions:
-        - {}
+        - text: Zaměř se na následující kód. Který z obrazců se vytvoří poté, co stiskneš
+            "Spustit"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
+          feedback: Nesprávně.
         - text: B
+          feedback: Nesprávně.
         - text: C
+          feedback: Nesprávně.
         - text: D
           correct: true
           feedback: Správně!
         questions:
-        - {}
+        - text: Zaměř se na následující kód. Který z obrazců se vytvoří poté, co stiskneš
+            "Spustit"?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
+          feedback: Nesprávně.
         - text: B
+          feedback: Nesprávně.
         - text: C
+          feedback: Nesprávně.
         - text: D
           correct: true
           feedback: Správně!
         questions:
-        - {}
+        - text: Zaměř se na následující kód. Který z obrazců se vytvoří poté, co stiskneš
+            "Spustit"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1368,8 +1416,16 @@ cs-CZ:
         - text: B
         - text: C
         - text: Nevím.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
-        - {}
+        - text: Dobře se podívej na kód dole. Který z obrazců se vytvoří poté, co
+            stiskneš "Spustit"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1378,8 +1434,16 @@ cs-CZ:
         - text: B
         - text: C
         - text: Nevím.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
-        - {}
+        - text: Dobře se podívej na kód dole. Který z obrazců se vytvoří poté, co
+            stiskneš "Spustit"?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -1388,8 +1452,16 @@ cs-CZ:
         - text: B
         - text: C
         - text: Nevím.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
         questions:
-        - {}
+        - text: Dobře se podívej na kód dole. Který z obrazců se vytvoří poté, co
+            stiskneš "Spustit"?
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: Včela se posune k mraku, ať se děje, co se děje.
@@ -1434,28 +1506,35 @@ cs-CZ:
             že se stane, když klikneš na tlačítko "Spustit"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - correct: true
+        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+        - text: Včela se pokusí získat med z květin i ze včelích pláství.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
+            zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
+            plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - correct: true
+        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+        - text: Včela se pokusí získat med z květin i ze včelích pláství.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
+            zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
+            plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+        - text: Včela se pokusí získat med z květin i ze včelích pláství.
         - text: Nevím.
         questions:
         - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
@@ -1553,31 +1632,56 @@ cs-CZ:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
-        - {}
+        - text: Zahradnice sesbírá všechnu úrodu.
+        - feedback: 'Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni. '
         - correct: true
           feedback: Správně!
         - text: Nevím.
+        markdown: |
+          Výhonky v této úloze budou buď kukuřice, nebo salát.
+          <br/>
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Zahradnice sesbírá všechnu úrodu.
+          feedback: Nesprávně. Není tam žádný kód pro sesbírání dýně.
+        - text: Zahradnice nesesbírá na cestě, po které půjde, žádné plodiny.
+          feedback: Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni.
+        - text: Zahradnice sesbírá všechny plodiny kromě dýně.
+          correct: true
           feedback: Správně!
         - text: Nevím.
+          feedback: Kód přiměje zahradnici opakovaně jít po schodovitém vzoru a sesbírat
+            tolik kukuřice nebo salátu, na kolik po cestě narazí. Nesebere dýni.
+        markdown: |
+          Výhonky v této úloze budou buď kukuřice, nebo salát.
+          <br/>
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Zahradnice sesbírá všechnu úrodu.
+          feedback: Nesprávně. Není tam žádný kód pro sesbírání dýně.
+        - text: Zahradnice nesesbírá na cestě, po které půjde, žádné plodiny.
+          feedback: Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni.
+        - text: Zahradnice sesbírá všechny plodiny kromě dýně.
+          correct: true
           feedback: Správně!
         - text: Nevím.
+          feedback: Kód přiměje zahradnici opakovaně jít po schodovitém vzoru a sesbírat
+            tolik kukuřice nebo salátu, na kolik po cestě narazí. Nesebere dýni.
+        markdown: |
+          Výhonky v této úloze budou buď kukuřice, nebo salát.
+          <br/>
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1589,112 +1693,172 @@ cs-CZ:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - correct: true
+        - text: Nic. Kód zanechá srovnanou zem.
+          feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+        - text: Kód nechá hromádky úplně nedotčené.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Kód nechá díry úplně nedotčené.
+          feedback: Nepsrávně. Cyklus `dokud` zvládne cyklus jakékoli velikosti, ale
+            není tam žádný kód, který by odstranil hlínu z hromady.
         - text: Nevím.
         questions:
-        - {}
+        - text: Dobře se podívej na kód níže. Co zůstane na konci této úlohy?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Nic. Kód zanechá srovnanou zem.
+          feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+        - text: Kód nechá hromádky úplně nedotčené.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Kód nechá díry úplně nedotčené.
+          feedback: Nepsrávně. Cyklus `dokud` zvládne cyklus jakékoli velikosti, ale
+            není tam žádný kód, který by odstranil hlínu z hromady.
         - text: Nevím.
         questions:
-        - {}
+        - text: Dobře se podívej na kód níže. Co zůstane na konci této úlohy?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Nic. Kód zanechá srovnanou zem.
+          feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+        - text: Kód nechá hromádky úplně nedotčené.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Kód nechá díry úplně nedotčené.
+          feedback: Nepsrávně. Cyklus `dokud` zvládne cyklus jakékoli velikosti, ale
+            není tam žádný kód, který by odstranil hlínu z hromady.
         - text: Nevím.
         questions:
-        - {}
+        - text: Dobře se podívej na kód níže. Co zůstane na konci této úlohy?
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nic se nestane.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka nikdy nepřestane odstraňovat hlínu.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane.
+          correct: true
           feedback: Správně!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nic se nestane.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka nikdy nepřestane odstraňovat hlínu.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane.
+          correct: true
           feedback: Správně!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nic se nestane.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka nikdy nepřestane odstraňovat hlínu.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane.
+          correct: true
           feedback: Správně!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
           feedback: Správně!
-        - {}
+        - text: Zombie se dostane ke slunečnici.
         - {}
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - correct: true
+        - text: 'Zombie mine správnou cestu a bude navždy chodit tam a zpět. '
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Zombie se dostane ke slunečnici.
+          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+            a zpět. '
+        - feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+            a zpět. '
         - text: Nevím.
+          feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
+            tam a zpět. '
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: 'Zombie mine správnou cestu a bude navždy chodit tam a zpět. '
+          correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Zombie se dostane ke slunečnici.
+          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+            a zpět. '
+        - feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+            a zpět. '
         - text: Nevím.
+          feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
+            tam a zpět. '
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Pták se nebude vůbec hýbat.
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
+            otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+        - text: Pták se dostane k praseti.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Pták se posune vpřed a narazí do TNT. '
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
+            pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
+            "Spustit"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Pták se nebude vůbec hýbat.
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
+            otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+        - text: Pták se dostane k praseti.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Pták se posune vpřed a narazí do TNT. '
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
+            pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
+            "Spustit"?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Pták se nebude vůbec hýbat.
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
+            otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+        - text: Pták se dostane k praseti.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Pták se posune vpřed a narazí do TNT. '
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
+            pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
+            "Spustit"?
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -1714,7 +1878,7 @@ cs-CZ:
         - {}
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
+        - text: Zahradnice posbírá dvě dýně.
         - {}
         - {}
         - correct: true
@@ -1723,7 +1887,7 @@ cs-CZ:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
+        - text: Zahradnice posbírá dvě dýně.
         - {}
         - correct: true
           feedback: Správně!
@@ -1732,7 +1896,7 @@ cs-CZ:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
+        - text: Zahradnice posbírá dvě dýně.
         - {}
         - correct: true
           feedback: Správně!
@@ -1861,11 +2025,12 @@ cs-CZ:
         answers:
         - correct: true
           feedback: Správně!
-        - {}
-        - {}
+        - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+        - text: Včela se pokusí získat med z květin i ze včelích pláství.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane, když zmáčkneš
+            "Spustit"?
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
