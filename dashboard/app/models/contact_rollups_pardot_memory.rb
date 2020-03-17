@@ -19,7 +19,7 @@
 #  index_contact_rollups_pardot_memory_on_pardot_id  (pardot_id) UNIQUE
 #
 
-require 'cdo/pardot'
+require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemory < ApplicationRecord
   self.table_name = 'contact_rollups_pardot_memory'
@@ -46,8 +46,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
       total_results = doc.xpath('/rsp/result/total_results').text.to_i
       results_in_response = 0
 
-      pp doc.xpath('/rsp/result/prospect')
-
       # Process every prospect in the response.
       doc.xpath('/rsp/result/prospect').each do |node|
         id = node.xpath("id").text.to_i
@@ -59,8 +57,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
         pardot_memory.pardot_id = id
         pardot_memory.save
       end
-
-      puts "Updated Pardot IDs in our database for #{results_in_response} contacts."
 
       # Stop if all the remaining results were in this response - we're done. Otherwise, keep repeating.
       break if results_in_response == total_results

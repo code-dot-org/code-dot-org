@@ -1250,4 +1250,10 @@ FactoryGirl.define do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
   end
+
+  factory :contact_rollups_pardot_memory do
+    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:pardot_id) {|n| n}
+    data_synced {{opt_in: 0}}
+  end
 end
