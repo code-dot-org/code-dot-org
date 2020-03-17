@@ -15661,3 +15661,15 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+        jess-test-script:
+          stages:
+            Our First Stage:
+              name: Our First Stage
+            new stage:
+              name: new stage
+            newer stage:
+              name: newer stage
+          title: Jess's Script
+          description_audience: ''
+          description_short: ''
+          description: ''
