@@ -44,6 +44,11 @@ class RedshiftClient
     # Source - https://github.com/ged/ruby-pg/blob/master/lib/pg/result.rb
     result_status = result.res_status(result.result_status)
     unless (QUERY_SUCCESS_CODES + QUERY_WARNING_CODES).include? result_status
+      # Postgres/Redshift can enter an `ABORT_STATE` when a statement fails execution and all subsequent statements
+      # executed in the same client session (even if they're not in the transaction block where the exception was
+      # raised) fail until the ABORT STATE is cleared with a COMMIT or a ROLLBACK. We share the same Redshift client
+      # connection through the Redshift singleton class, so default to explicitly rolling back whatever
+      # transaction we're in to clear the abort state.
       @conn.exec('ROLLBACK;')
       raise PostgreSQLQueryError.new(result_status)
     end
