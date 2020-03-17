@@ -1,0 +1,58 @@
+name 'Event Driven Programming Recap_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Event-Driven Programming Recap
+Before embarking on making your own app from scratch let's recap a few important things:
+
+## 1. Mental Note: UI elements  all function *basically* the same way
+
+<div style="width: 300px; text-align: left; float: right">
+
+<img src="https://images.code.org/1c583d7f9d5e9d651a0616e583ccc801-image-1477513803793.png"><br>
+<em>This example shows how buttons, labels and images can be made to look very similar. They can all behave similarly as well depending how you do event handling.</em>
+</div>
+
+All UI elements **have IDs** and can listen for user events and be used with `onEvent`.
+
+* **Labels** can have a background color, but are designed to be filled with more text.
+
+* **Buttons** have a default styling (green button) that changes *slightly* in color when you click it.  But buttons can also have a background image *and* background color at the same time which is convenient if your image is an icon (red thumbsup).
+* **Images** can act a lot like buttons, only they can't have text or a background color.
+
+**Screens** have IDs and you can use `onEvent` with them but they don't quite fit the mould because they have the special property that if you use `onEvent` with a screen, it will capture *every* event of the type you specify regardless of whatever other elements are clicked on.
+
+**What UI element *should* you use?** 
+
+There are no particular rules.  Use the UI element that makes the most sense to you and is easiest for you use and do what you want.  The UI elements actually aren't *exactly* the same, but the basic event-driven pattern fits.
+
+<div style="clear: both;">&nbsp;</div>
+
+## 2. There is a Pattern to Developing Event-Driven Programs in App Lab
+
+You will find yourself going through this process over and over again.  The point is not that it's boring or repetitive (far from it!), but rather that **when you have an idea** for something to make, you know you can apply this process to get it done.
+
+**Step 1 - Design Mode**
+
+**Step 2 - Add onEvent to Code**
+
+**Step 3 - Write the code for the event handling function**
+
+**Step 4 - Run. Test. Debug.**
+
+**Repeat**
+
+As you learn more, of course, you'll see there are nuances to these steps, but these are the big ones.
+
+### Click continue to see "Tips for Working on Your Own"
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tip
+
+Perhaps show/review this page as a warm-up just to tie up loose threads from previous lessons.
+MARKDOWN
