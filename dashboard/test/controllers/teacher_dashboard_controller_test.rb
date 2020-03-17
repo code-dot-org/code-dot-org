@@ -33,4 +33,11 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     get :show, params: {section_id: section.id}
     assert_response :success
   end
+
+  test 'index: returns success for large section with progress' do
+    sign_in @teacher
+    section = create :mega_section, user: @teacher
+    get :show, params: {section_id: section.id}
+    assert_response :success
+  end
 end

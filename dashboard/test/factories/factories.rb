@@ -422,6 +422,34 @@ FactoryGirl.define do
     login_type 'email'
 
     initialize_with {Section.new(attributes)}
+
+    factory :mega_section do
+      after(:create) do |mega_section|
+        200.times do
+          student = create :student
+          mega_section.students << student
+        end
+        script = create :script
+        mega_section.script = script
+        i = 0
+        100.times do
+          create(
+            :script_level,
+            script: script,
+            levels: [
+              create(:maze, name: "test level #{i}")
+            ]
+          )
+          i += 1
+        end
+        mega_section.students.each do |student|
+          script.script_levels.each do |script_level|
+            create :user_level, user: student, level: script_level.levels.first, script: script_level.script
+          end
+        end
+        mega_section.save
+      end
+    end
   end
 
   factory :game do
