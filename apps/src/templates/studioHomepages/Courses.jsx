@@ -85,6 +85,7 @@ class Courses extends Component {
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {isEnglish && isTeacher && (
           <div>
+            {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
             {specialAnnouncement && false && (
               <SpecialAnnouncementActionBlock
                 announcement={specialAnnouncement}

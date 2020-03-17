@@ -4,7 +4,9 @@ import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
-// This component differs from the SpecialAnnouncementActionBlock because it is // not managed by the json system and can therefore be fully translated and can // be shown to users viewing the site in languages other than English.
+/* This component differs from the SpecialAnnouncementActionBlock because it
+is not managed by the json system and can therefore be fully translated and
+can be shown to users viewing the site in languages other than English. */
 export default class SpecialAnnouncement extends Component {
   static propTypes = {
     isTeacher: PropTypes.bool
