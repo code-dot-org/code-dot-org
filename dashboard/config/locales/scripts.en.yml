@@ -15501,7 +15501,7 @@ en:
           description_short: ''
           description: Welcome to the CSP Facilitator Pre-work for the April call! This will be focused on deepening the understanding of EIPM, content in Unit 5, and the new datasets available in the course. This work is essential to completing before the April call since we will be processing and discussing the work together in the call.
         csp3-virtual:
-          title: Self Paced Introduction to App Lab and Turtle
+          title: Self Paced Introduction to Turtle Programming In App Lab
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description_audience: ''
@@ -15784,9 +15784,9 @@ en:
               description_student: ''
               description_teacher: ''
         csp5-virtual:
-          title: CSP Unit 5 - Building Apps ('19-'20)
-          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-          description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
+          title: Self Paced Introduction to App Lab
+          description: This unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This uni uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description_short: Learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           description_audience: ''
           stages:
             Buttons and Events:
