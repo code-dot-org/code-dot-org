@@ -1,32 +1,22 @@
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit3/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit3/code/"]]
 stage_extras_available true
 has_verified_resources true
-has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
-family_name 'csd3'
-version_year '2019'
 project_sharing true
-curriculum_umbrella 'CSD'
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
-level 'CSD U3L01 TFMD_virtual', named: true
-level 'CSD U3 Entertainment_2018_2019_virtual', named: true
 level 'CSD U3 Entertainment Sample 4_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 3_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 1_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_virtual', progression: 'Sample Programs'
 
 stage 'Plotting Shapes', flex_category: 'csd3_1'
-level 'CSD U3L02 TFMD_virtual', named: true
 level 'CSD U3 Plotting Shapes Shape Lab_virtual', named: true
 
 stage 'Drawing in Game Lab', flex_category: 'csd3_1'
-level 'CSD U3L03 TFMD_virtual', named: true
 level 'CSD U3 rect_virtual', named: true
 level 'CSD: Drawing in Game Lab 1_virtual', named: true
 level 'CSD U3 Drawing Squares to Corners_virtual', named: true
@@ -42,7 +32,6 @@ bonus 'CSD U3 challenge new shape_virtual', progression: 'Challenges'
 bonus 'CSD U3 L3 Freeplay_virtual'
 
 stage 'Shapes and Randomization', flex_category: 'csd3_1'
-level 'CSD U3L04 TFMD_virtual', named: true
 level 'CSD U3 Random Taller Rectangle_virtual', progression: 'New Shapes'
 level 'CSD U3 Random Ellipse Behind_2018_virtual', progression: 'More Parameters'
 level 'CSD U3 Random background_virtual', progression: 'More Parameters'
@@ -57,7 +46,6 @@ level 'CSD U3 Random Number Map Level_virtual', named: true
 bonus 'CSD U3 L4 Freeplay_virtual'
 
 stage 'Variables', flex_category: 'csd3_1'
-level 'CSD U3L05 TFMD_virtual', named: true
 level 'Introduction to Variables - Part 1_virtual', named: true
 level 'CSD U3 Variables Predict Where X_virtual', progression: 'Intro to Variables'
 level 'CSD U3 Variables Predict Where XY_virtual', progression: 'Intro to Variables'
@@ -72,7 +60,6 @@ bonus 'CSD U3 Variables Challenge_virtual'
 bonus 'CSD U3 L5 Freeplay_virtual'
 
 stage 'Sprites', flex_category: 'csd3_1'
-level 'CSD U3L06 TFMD_virtual', named: true
 level 'CSD: Sprites in Game Lab_virtual', named: true
 level 'CSD U3 Sprites Map_virtual', named: true
 level 'CSD U3 Sprites intro sprites_virtual', progression: 'Intro to Sprites'
@@ -94,7 +81,6 @@ bonus 'CSD U3 Sprites scene challenge_virtual'
 bonus 'CSD U3 L6 Freeplay_virtual'
 
 stage 'The Draw Loop', flex_category: 'csd3_1'
-level 'CSD U3L07 TFMD_virtual', named: true
 level 'CSD: Introduction to the Draw Loop_virtual', named: true
 level 'CSD U3 Draw Loop Plugged predict 1_virtual', progression: 'Shapes and the Draw Loop'
 level 'CSD U3 The Draw Loop Map_virtual', named: true
@@ -108,11 +94,7 @@ level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_virtual', progression: 'S
 level 'CSD U3 Draw Loop Plugged update your scene_virtual', progression: 'Animate Your Scene', assessment: true
 bonus 'CSD U3 L7 Freeplay_virtual'
 
-stage 'The Counter Pattern Unplugged', flex_category: 'csd3_1'
-level 'CSD U3L08 TFMD_virtual', named: true
-
 stage 'Sprite Movement', flex_category: 'csd3_1'
-level 'CSD U3L09 TFMD_virtual', named: true
 level 'CSD: Animating Sprite Movement_virtual', named: true
 level 'CSD U3 - Simple Counter Predict_virtual', progression: 'Movement with the Counter Pattern'
 level 'CSD U3 Sprite Movement Right_virtual', progression: 'Movement with the Counter Pattern'
@@ -131,11 +113,7 @@ bonus 'CSD sprite movement challenge_virtual'
 bonus 'CSD U3 Movement Fish challenge_virtual'
 bonus 'CSD U3 L9 Freeplay_virtual'
 
-stage 'Booleans Unplugged', flex_category: 'csd3_1'
-level 'CSD U3L10 TFMD_virtual', named: true
-
 stage 'Conditionals', flex_category: 'csd3_1'
-level 'CSD U3L11 TFMD_virtual', named: true
 level 'CSD U3 Boolean Predict_virtual', progression: 'Make a Prediction'
 level 'CSD U3 - Booleans Video_virtual', named: true
 level 'CSD U3 Boolean Modify_virtual', progression: 'Boolean Comparison'
@@ -151,7 +129,6 @@ bonus 'CSD U3 - conditionals - first conditional 2_2018_virtual'
 bonus 'CSD U3 L11 Freeplay_virtual'
 
 stage 'Keyboard Input', flex_category: 'csd3_1'
-level 'CSD U3L12 TFMD_virtual', named: true
 level 'CSD U3 Keypress Boolean_2018_virtual', progression: 'Keyboard Input'
 level 'CSD U3 keydown conditional_2018_virtual', progression: 'Keyboard Input'
 level 'CSD U3 UP_ARROW_2018_virtual', progression: 'Keyboard Input'
@@ -164,7 +141,6 @@ bonus 'CSD U3 Keyboard Input Challenge_2018_virtual'
 bonus 'CSD U3 L12 Freeplay_virtual'
 
 stage 'Other Forms of Input', flex_category: 'csd3_1'
-level 'CSD U3L13 TFMD_virtual', named: true
 level 'CSD U3 if else predict_virtual', named: true
 level 'CSD U3 - Conditionals Video_virtual', named: true
 level 'CSD U3 If Else_virtual', progression: 'Input with If-Else'
@@ -181,7 +157,6 @@ bonus 'CSD U3 Compound Nested Challenge_virtual'
 bonus 'CSD U3 L13 Freeplay_virtual'
 
 stage 'Project - Interactive Card', flex_category: 'csd3_1'
-level 'CSD U3L14 TFMD_virtual', named: true
 level 'CSD U3 Interactive Card Exemplar_virtual', named: true
 level 'CSD U3 Card Examples_2018_2019_virtual', named: true
 level 'CSD U3 Interactive Card Background_virtual', progression: 'Project Work'
@@ -189,10 +164,8 @@ level 'CSD U3 Interactive Card Sprites_virtual', progression: 'Project Work'
 level 'CSD U3 Interactive Card User Input_virtual', progression: 'Project Work'
 level 'CSD U3 Interactive Card Other Conditionals_virtual', progression: 'Project Work'
 level 'CSD U3 Interactive Card Final_virtual', progression: 'Project Work'
-level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_virtual', progression: 'Reflection', assessment: true
 
 stage 'Velocity', flex_category: 'csd3_2'
-level 'CSD U3L15 TFMD_virtual', named: true
 level 'CSD: Sprite Velocity_virtual', named: true
 level 'CSD U3 abstraction velocityX_virtual', progression: 'Velocity'
 level 'CSD U3 abstraction velocityY_virtual', progression: 'Velocity'
@@ -208,7 +181,6 @@ level 'CSD U3 abstraction looping_virtual', progression: 'Side Scroller'
 bonus 'CSD U3 L15 Freeplay_virtual'
 
 stage 'Collision Detection', flex_category: 'csd3_2'
-level 'CSD U3L16 TFMD_virtual', named: true
 level 'CSD U3 collisions car intro_virtual', named: true
 level 'CSD U3 collisions build isTouching_virtual', named: true
 level 'CSD U3 collisions isTouching intro_virtual', progression: 'isTouching'
@@ -222,7 +194,6 @@ level 'CSD U3 istouching map_virtual', named: true
 bonus 'CSD U3 L16 Freeplay_virtual'
 
 stage 'Complex Sprite Movement', flex_category: 'csd3_2'
-level 'CSD U3L17 TFMD_virtual', named: true
 level 'CSD U3 Complex Movement counter prediction gamelab_virtual', named: true
 level 'CSD U3 abstraction accelerateX_virtual', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction accelerateY_virtual', progression: 'Velocity and the Counter Pattern'
@@ -239,7 +210,6 @@ level 'CSD U3 acceleration map_virtual', named: true
 bonus 'CSD U3 L17 Freeplay_virtual'
 
 stage 'Collisions', flex_category: 'csd3_2'
-level 'CSD U3L18 TFMD_virtual', named: true
 level 'CSD U3 collisions predict set velocity code_virtual', named: true
 level 'CSD U3 collisions displace x_virtual', progression: 'Collisions'
 level 'CSD U3 collisions displace y_virtual', progression: 'Collisions'
@@ -259,7 +229,6 @@ level 'CSD U3 interactions map_virtual', named: true
 bonus 'CSD U3 L18 Freeplay_virtual'
 
 stage 'Functions', flex_category: 'csd3_2'
-level 'CSD U3L19 TFMD_virtual', named: true
 level 'CSD U3 function video_virtual', named: true
 level 'CSD U3 Functions Call Function_virtual', progression: 'Functions'
 level 'CSD U3 Functions Order Functions_virtual', progression: 'Functions'
@@ -275,7 +244,6 @@ level 'CSD U3 functions review_virtual', named: true
 bonus 'CSD U3 L19 Freeplay_virtual'
 
 stage 'The Game Design Process', flex_category: 'csd3_2'
-level 'CSD U3L20 TFMD_virtual', named: true
 level 'CSD U3 AnimationsMulti Play Defender_virtual', named: true
 level 'CSD U3 AnimationsMulti STOP project guide_2018_2019_virtual', named: true
 level 'CSD U3 AnimationsMulti introducing multiframe_virtual', progression: 'Multiframe Animations'
@@ -294,7 +262,6 @@ level 'CSD U3 AnimationsMulti defender touch water_virtual', progression: 'Cake 
 level 'CSD U3 AnimationsMulti defender make it your own_virtual', progression: 'Cake Defender'
 
 stage 'Using the Game Design Process', flex_category: 'csd3_2'
-level 'CSD U3L21 TFMD_virtual', named: true
 level 'CSD U3 platform sample1_virtual', named: true
 level 'CSD U3 platform intro_2018_2019_virtual', named: true
 level 'CSD U3 platform background1_virtual', progression: 'Platform Jumper - Background and Variables'
@@ -316,7 +283,6 @@ level 'CSD U3 platform sample3_virtual', named: true
 level 'CSD U3 platform challenge_virtual', assessment: true
 
 stage 'Project - Design a Game', flex_category: 'csd3_2'
-level 'CSD U3L22 TFMD_virtual', named: true
 level 'CSD U3 game intro_2018_2019_virtual', named: true
 level 'CSD U3 game variables_virtual', progression: 'Project - Background and Variables'
 level 'CSD U3 game backgrounds_virtual', progression: 'Project - Background and Variables'
@@ -328,11 +294,3 @@ level 'CSD U3 game sprite movement_virtual', progression: 'Project - Sprites and
 level 'CSD U3 game user controls_virtual', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 game interactions_virtual', progression: 'Project - Sprites and Interactions'
 level 'CSD U3 finishing touches_virtual', named: true
-level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_virtual', progression: 'Reflection', assessment: true
-
-stage 'Post-Project Test', lockable: true, flex_category: 'csd3_2'
-level 'CSD Interactive Animations and Games Post-Project Test_virtual', assessment: true
-
-stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
-level 'csd-post-survey-intro-2019_virtual'
-level 'csd-post-survey-levelgroup_2019_virtual', assessment: true
