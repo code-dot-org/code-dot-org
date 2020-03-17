@@ -47,7 +47,11 @@ namespace :seed do
     DonorSchool.setup
   end
 
-  timed_task foorms: :environment do
+  timed_task foorm_libraries: :environment do
+    Foorm::LibraryQuestion.setup
+  end
+
+  timed_task foorm_forms: :environment do
     Foorm::Form.setup
   end
 
@@ -359,7 +363,7 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards].freeze
+  FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards].freeze
   UI_TEST_SEED_TASKS = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :standards].freeze
   DEFAULT_SEED_TASKS = rack_env?(:adhoc) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
@@ -370,8 +374,8 @@ namespace :seed do
   timed_task ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards]
+  timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :foorms, :standards]
+  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :foorm_libraries, :foorm_forms, :standards]
 end

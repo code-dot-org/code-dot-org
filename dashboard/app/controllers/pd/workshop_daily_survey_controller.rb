@@ -99,8 +99,7 @@ module Pd
         return redirect_general(key_params)
       end
 
-      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
-      form_questions = JSON.parse(form.questions)
+      form_questions, latest_version = Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
         props: {
@@ -448,8 +447,7 @@ module Pd
     end
 
     def render_csf_survey_foorm(survey_name, workshop)
-      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
-      form_questions = JSON.parse(form.questions)
+      form_questions, latest_version = Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
         props: {
