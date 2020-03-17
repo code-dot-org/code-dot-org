@@ -6,5 +6,8 @@ class ContactRollupsV2
 
     log_collector.time!('ContactRollupsProcessed.delete_all') {ContactRollupsProcessed.delete_all}
     log_collector.time!('ContactRollupsProcessed.import_from_raw_table') {ContactRollupsProcessed.import_from_raw_table}
+
+    log_collector.time!('ContactRollupsComparison.delete_all') {ContactRollupsComparison.delete_all}
+    log_collector.time!('ContactRollupsComparison.compare_processed_data') {ContactRollupsComparison.compile_processed_data}
   end
 end
