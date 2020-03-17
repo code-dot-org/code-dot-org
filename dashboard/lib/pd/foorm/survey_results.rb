@@ -20,8 +20,25 @@ module Pd::Foorm
       }
     end
 
-    # TODO: add rollups
     def self.get_rollup_for_workshop(workshop_id)
+      return unless workshop_id
+
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
+
+      parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
+      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
+      rollup_configuration = JSON.parse(File.read('config/foorm/rollups/rollups_by_course.json'))
+
+      ws_data = Pd::Workshop.find(workshop_id)
+      unless rollup_configuration && rollup_configuration[ws_data.course]
+        return {course_name: ws_data.course,
+                questions: parsed_forms,
+                this_workshop: summarized_answers}
+      end
+
+      questions_to_summarize = rollup_configuration[ws_data.course]
+
+      Pd::Foorm::RollupCreator.calculate_average_rollup(parsed_forms, form_submissions, questions_to_summarize)
     end
 
     # TODO: once we store facilitator data

@@ -6,35 +6,35 @@
       "elements": [
         {
           "type": "matrix",
-          "name": "overall_workshop_experience",
+          "name": "overall_success",
           "title": "How much do you agree or disagree with the following statements about the workshop overall? ",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": 1,
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": 2,
               "text": "Disagree "
             },
             {
-              "value": "slightly_disagree",
+              "value": 3,
               "text": "Slightly Disagree "
             },
             {
-              "value": "neutral",
+              "value": 4,
               "text": "Neutral "
             },
             {
-              "value": "slightly_agree",
+              "value": 5,
               "text": "Slightly Agree "
             },
             {
-              "value": "agree",
+              "value": 6,
               "text": "Agree "
             },
             {
-              "value": "strongly_agree",
+              "value": 7,
               "text": "Strongly Agree "
             }
           ],
@@ -67,35 +67,35 @@
         },
         {
           "type": "matrix",
-          "name": "level_engagement",
+          "name": "teacher_engagement",
           "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": 1,
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": 2,
               "text": "Disagree "
             },
             {
-              "value": "slightly_disagree",
+              "value": 3,
               "text": "Slightly Disagree "
             },
             {
-              "value": "neutral",
+              "value": 4,
               "text": "Neutral "
             },
             {
-              "value": "slightly_agree",
+              "value": 5,
               "text": "Slightly Agree "
             },
             {
-              "value": "agree",
+              "value": 6,
               "text": "Agree "
             },
             {
-              "value": "strongly_agree",
+              "value": 7,
               "text": "Strongly Agree "
             }
           ],
