@@ -74,7 +74,7 @@
     "babel-plugin-syntax-async-functions": "^6.8.0",
     "bootstrap-sass": "^3.3.6",
     "browser-process-hrtime": "0.1.2",
-    "canvg": "gabelerner/canvg",
+    "canvg": "^3.0.5",
     "chai": "3.5.0",
     "chai-as-promised": "^7.1.1",
     "chai-enzyme": "^1.0.0-beta.1",
