@@ -41,9 +41,9 @@ export default class StudentHomepage extends Component {
 
         <TwoColumnActionBlock
           imageUrl={pegasus(
-            '/shared/images/fill-540x300/student-announcement/student_announcement_special2020.jpg'
+            '/shared/images/fill-540x300/announcement/announcement_special2020.jpg'
           )}
-          heading={i18n.studentAnnouncementSpecial2020Heading()}
+          subHeading={i18n.studentAnnouncementSpecial2020Heading()}
           description={i18n.studentAnnouncementSpecial2020Description()}
           buttons={[
             {
