@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import moment from 'moment';
 import msg from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import * as dataStyles from '../dataStyles';
 
 class Snapshot extends React.Component {
   static propTypes = {
-    chartTitle: PropTypes.string.isRequired
+    chartTitle: PropTypes.string.isRequired,
+    selectedOptions: PropTypes.string.isRequired,
+    // Provided via Redux
+    tableName: PropTypes.string.isRequired,
+    projectName: PropTypes.string.isRequired
   };
 
   state = {
@@ -33,10 +39,21 @@ class Snapshot extends React.Component {
           fullHeight
         >
           <h1>{this.props.chartTitle}</h1>
+          <p>
+            {msg.dataVisualizerSnapshotDescription({
+              date: moment().format('YYYY/MM/DD'),
+              table: this.props.tableName,
+              project: this.props.projectName
+            })}
+          </p>
+          <p>{this.props.selectedOptions}</p>
         </BaseDialog>
       </div>
     );
   }
 }
 
-export default Snapshot;
+export default connect(state => ({
+  tableName: state.data.tableName || '',
+  projectName: state.header.projectName || ''
+}))(Snapshot);

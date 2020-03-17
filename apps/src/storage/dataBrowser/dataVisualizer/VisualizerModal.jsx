@@ -138,6 +138,44 @@ class VisualizerModal extends React.Component {
     }
   }
 
+  chartOptionsToString(chartType) {
+    const options = [];
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        break;
+      case ChartType.HISTOGRAM:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerBucketSize()}: ${this.state.bucketSize}`
+        );
+        break;
+      case ChartType.SCATTER_PLOT:
+      case ChartType.CROSS_TAB:
+        options.push(
+          `${msg.dataVisualizerXValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerYValues()}: ${this.state.selectedColumn2}`
+        );
+        break;
+      default:
+    }
+    if (!!this.state.filterColumn && !!this.state.filterValue) {
+      options.push(
+        msg.dataVisualizerFilterDescription({
+          column: this.state.filterColumn,
+          value: this.state.filterValue
+        })
+      );
+    }
+    return options.join(', ');
+  }
+
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
     let filteredRecords = parsedRecords;
@@ -307,7 +345,10 @@ class VisualizerModal extends React.Component {
               inlineLabel
             />
           </div>
-          <Snapshot chartTitle={this.state.chartTitle} />
+          <Snapshot
+            chartTitle={this.state.chartTitle}
+            selectedOptions={this.chartOptionsToString(this.state.chartType)}
+          />
         </BaseDialog>
       </span>
     );
