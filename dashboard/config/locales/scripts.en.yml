@@ -15554,6 +15554,8 @@ en:
               name: CS Principles Post Course survey
               description_student: ''
               description_teacher: ''
+            Make your own Digital Scene:
+              name: Make your own Digital Scene
         csd3-virtual:
           title: Self Paced Introduction to Game Lab
           description: You’ll program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
@@ -15881,3 +15883,27 @@ en:
               name: CS Principles Post Course survey
               description_student: ''
               description_teacher: ''
+        virtual-holding-place:
+          stages:
+            Example Projects:
+              name: Example Projects
+            Velocity:
+              name: Velocity
+            Collision Detection:
+              name: Collision Detection
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+            Functions:
+              name: Functions
+            The Game Design Process:
+              name: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

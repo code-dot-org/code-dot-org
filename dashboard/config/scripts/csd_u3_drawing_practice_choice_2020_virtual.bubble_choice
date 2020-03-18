@@ -1,6 +1,7 @@
 name 'CSD U3 drawing practice choice_2020_virtual'
+editor_experiment ''
 display_name 'Practice'
-description 'Do lots of practice!'
+description 'This is a Choice Level. On this level you can pick which of the tasks you want to do! Try just one or do them all it is up to you! Click on the bubbles below to try a level.'
 
 sublevels
 level 'CSD U3 drawing practice 1'
