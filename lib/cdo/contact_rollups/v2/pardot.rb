@@ -125,9 +125,4 @@ class Pardot
       raise "Error in Pardot response: #{error_text}"
     end
   end
-
-  def self.log(s)
-    # puts s
-    CDO.log.info s
-  end
 end
