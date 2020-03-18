@@ -486,6 +486,8 @@ bn:
               name: ফর লুপ
             Functions:
               name: ফাংশনগুলি
+            Functions with Parameters:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
             Loops:
               name: চক্র
             Nested Loops:
@@ -543,6 +545,8 @@ bn:
               name: শর্তযুক্ত
         coursef-draft:
           stages:
+            Songwriting with Parameters:
+              name: গান লিখা
             Introduction:
               name: ভূমিকা
         2016_sciencePD-phase2b:
@@ -585,6 +589,8 @@ bn:
               name: তালিকা
             For Loops:
               name: ফর লুপ
+            Functions with Parameters:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         workshop-gamelab:
           stages:
             Introduction:
@@ -605,6 +611,10 @@ bn:
               name: তালিকা
             For Loops:
               name: ফর লুপ
+            Functions with Parameters:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+            Functions with Parameters_:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         csd3-draft:
           stages:
             Variables:
@@ -656,6 +666,8 @@ bn:
           assignment_family_title: কোর্স D
         coursee-2017:
           stages:
+            Songwriting with Parameters:
+              name: গান লিখা
             Nested Loops:
               name: নেষ্টেড লুপ
           title: কোর্স E
@@ -671,6 +683,8 @@ bn:
               name: ইন্টারনেট
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            Songwriting with Parameters:
+              name: গান লিখা
             Nested Loops:
               name: নেষ্টেড লুপ
         pre-express-2017:
@@ -713,6 +727,10 @@ bn:
               name: শর্তযুক্ত
             Internet:
               name: ইন্টারনেট
+        new-f:
+          stages:
+            Songwriting with Parameters:
+              name: গান লিখা
         pwc:
           stages:
             Simple Encryption:
@@ -735,6 +753,8 @@ bn:
           stages:
             Introduction:
               name: ভূমিকা
+            Songwriting with Parameters:
+              name: গান লিখা
         csd6-old:
           stages:
             Lists:
@@ -816,6 +836,10 @@ bn:
           stages:
             'Events: The Big Event':
               name: বড় ঘটনা
+        csd6-2018:
+          stages:
+            Functions with Parameters:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         coursee-2018:
           assignment_family_title: কোর্স E
           stages:
@@ -838,6 +862,8 @@ bn:
               name: আমার রোবোটিক্স বন্ধুরা
             Introduction:
               name: ভূমিকা
+            Songwriting with Parameters:
+              name: গান লিখা
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
         csp1-2018:
@@ -941,6 +967,10 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         csp1-2019:
           stages:
             The Internet:
@@ -1012,6 +1042,10 @@ bn:
           stages:
             Conditionals:
               name: শর্তযুক্ত
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
         csd3-2020:
           description_short: প্রোগ্রামিং
           stages:

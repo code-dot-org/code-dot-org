@@ -641,6 +641,16 @@ module AWS
       def component(name, vars = {})
         erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars)
       end
+
+      # Adds the specified properties to a YAML document.
+      def add_properties(properties)
+        properties.transform_values(&:to_json).map {|p| p.join(': ')}.join
+      end
+
+      # Indent all lines in the string by the specified number of characters.
+      def indent(string, chars)
+        string.gsub(/\n/, "\n#{' ' * chars}")
+      end
     end
   end
 end

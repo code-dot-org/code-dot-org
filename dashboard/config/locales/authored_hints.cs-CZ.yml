@@ -935,6 +935,12 @@ cs-CZ:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_artist_binary_challenge2_2018:
+        courseD_artist_binary_challenge2_a: V původním programu je pouze několik řádků
+          špatně.
+      courseD_artist_binary_challenge2_2019:
+        courseD_artist_binary_challenge2_a: V původním programu je pouze několik řádků
+          špatně.
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
@@ -996,6 +1002,30 @@ cs-CZ:
         courseD_bee_conditionals5_c: 'Abys pokračoval po cestě, musíš říct včele `posuň
           se vpřed`. Jak se posunuje, hledá včela květinu. Ví, že `pokud na květině`,
           její pokyn zní: `získej nektar`.'
+      courseD_bee_conditionals6:
+        courseD_bee_conditionals6_a: Použij  `když` příkaz, abys zkontroloval, jestli
+          se pod mrakem ukrývá včelí plástev.
+        courseD_bee_conditionals6_b: V tomto případě nemusíš hledat pod mrakama květiny.
+        courseD_bee_conditionals6_c: Je možné použít cyklus, který by tvůj kód zjednodušil?
+      courseD_bee_conditionals6_2018:
+        courseD_bee_conditionals6_a: Použij  `když` příkaz, abys zkontroloval, jestli
+          se pod mrakem ukrývá včelí plástev.
+        courseD_bee_conditionals6_b: V tomto případě nemusíš hledat pod mrakama květiny.
+        courseD_bee_conditionals6_c: Je možné použít cyklus, který by tvůj kód zjednodušil?
+      courseD_bee_conditionals6_2019:
+        courseD_bee_conditionals6_a: Použij  `když` příkaz, abys zkontroloval, jestli
+          se pod mrakem ukrývá včelí plástev.
+        courseD_bee_conditionals6_b: V tomto případě nemusíš hledat pod mrakama květiny.
+        courseD_bee_conditionals6_c: Je možné použít cyklus, který by tvůj kód zjednodušil?
+      courseD_bee_conditionals7:
+        courseD_bee_conditionals7_b: Pokud pod mrakem není květina, pak tam určitě
+          musí být včelí plást, není možné, aby tam nebylo nic.
+      courseD_bee_conditionals7_2018:
+        courseD_bee_conditionals7_b: Pokud pod mrakem není květina, pak tam určitě
+          musí být včelí plást, není možné, aby tam nebylo nic.
+      courseD_bee_conditionals7_2019:
+        courseD_bee_conditionals7_b: Pokud pod mrakem není květina, pak tam určitě
+          musí být včelí plást, není možné, aby tam nebylo nic.
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_a: |-
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
@@ -1047,11 +1077,48 @@ cs-CZ:
           <block type="maze_nectar"/>
           </statement>
           </block></xml>
+      courseD_collector_debugging2a_2018:
+        courseD_collector_debugging2a_c: |-
+          Co se děje?
+
+          Co se má stát?
+
+          Co ti to říká?
+      courseD_collector_debugging2a_2019:
+        courseD_collector_debugging2a_c: |-
+          Co se děje?
+
+          Co se má stát?
+
+          Co ti to říká?
+      courseD_collector_debugging5a_2018:
+        courseD_collector_debugging5a_a: |-
+          Co to dělá?
+
+          Co to má dělat?
+
+          Co ti to říká?
+        courseD_collector_debugging5a_b: Jakmile máš sesbíraný první řádek pokladu,
+          co ve tvém kódu zbývá?
+      courseD_collector_debugging5a_2019:
+        courseD_collector_debugging5a_a: |-
+          Co to dělá?
+
+          Co to má dělat?
+
+          Co ti to říká?
+        courseD_collector_debugging5a_b: Jakmile máš sesbíraný první řádek pokladu,
+          co ve tvém kódu zbývá?
+      courseD_farmer_condLoops6_2018:
+        courseD_farmer_condLoops6_b: Po většinu sklizně musíš kontrolovat jen kukuřici.
+          Úplně na konci programu sesbírej dýni.
       courseD_farmer_condLoops6_2019:
         courseD_farmer_condLoops6_a: Využij cyklus `pokud je cesta vpřed` nebo blok
           `když je cesta vpřed / jinak`, abys posunul farmářku dále přes spirálu.
+        courseD_farmer_condLoops6_b: Po většinu sklizně musíš kontrolovat jen kukuřici.
+          Úplně na konci programu sesbírej dýni.
       courseD_farmer_condLoops7_2019:
-        courseD_farmer_condLoops7_b: Zkus využít `pokud je cesta vpřed`, aby se sběračka
+        courseD_farmer_condLoops7_b: Zkus využít `pokud je cesta vpřed`, aby se zahradnice
           pohybovala po správný počet kroků.
       courseD_farmer_while1:
         courseD_farmer_while1_b: Použij blok `odstraň 1`, když stojíš na hromádce
