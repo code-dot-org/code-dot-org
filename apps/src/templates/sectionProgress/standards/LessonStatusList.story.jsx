@@ -7,15 +7,13 @@ import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
-import sectionData from '@cdo/apps/redux/sectionDataRedux';
 
 export default storybook => {
   const store = createStore(
     combineReducers({
       sectionProgress,
       sectionStandardsProgress,
-      scriptSelection,
-      sectionData
+      scriptSelection
     })
   );
 
