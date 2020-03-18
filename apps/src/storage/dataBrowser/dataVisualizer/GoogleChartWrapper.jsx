@@ -86,7 +86,12 @@ class GoogleChartWrapper extends React.Component {
   }
 
   render() {
-    return <div ref={element => (this.chartArea = element)} />;
+    return (
+      <div
+        id="googleChartContainer"
+        ref={element => (this.chartArea = element)}
+      />
+    );
   }
 }
 

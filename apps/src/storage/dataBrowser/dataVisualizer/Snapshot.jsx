@@ -62,7 +62,9 @@ class Snapshot extends React.Component {
   getImageFromCrossTab = () => {};
 
   getImageFromGoogleChart = () => {
-    const svg = document.getElementsByTagName('svg')[7];
+    const container = document.getElementById('googleChartContainer');
+    const svgList = container && container.querySelectorAll('svg');
+    const svg = svgList && svgList[0];
     if (!svg) {
       return;
     }
