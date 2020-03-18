@@ -4,13 +4,23 @@ module Pd::Foorm
     extend Helper
     include Constants
 
+    # Calculates survey summary for a given workshop id. Will return object of
+    # {
+    #        course_name: 'CS Principles',
+    #        questions: <parsed form, see FoormParser>,
+    #        this_workshop: <summarized survey answers, see WorkshopSummarizer>
+    #      }
     def self.get_summary_for_workshop(workshop_id)
       return unless workshop_id
 
+      # get workshop metadata
       ws_data = Pd::Workshop.find(workshop_id)
+      # get survey results and surveys for the workshop
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
 
+      # parse Foorm::Forms into format more usable by summarizer and friendlier for sending on
       parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
+      # summarize survey results by day and question
       summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
 
       {
@@ -28,8 +38,9 @@ module Pd::Foorm
     # def self.get_rollup_for_facilitator(workshop_id, facilitator_id)
     # end
 
-    # get all WorkshopSurveyFoormSubmissions, FoormSubmissions and FoormFoorms for the
-    # given workshop id
+    # given a workshop id, get the raw data needed for summarizing workshop survey results.
+    # Will return an array of [WorkshopSurveyFoormSubmissions, FoormSubmissions and FoormForms]
+    # for the given workshop id.
     def self.get_raw_data_for_workshop(workshop_id)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
 
