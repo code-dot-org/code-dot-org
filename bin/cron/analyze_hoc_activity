@@ -51,8 +51,8 @@ def main
   # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
   total_started += 14_861_327
 
-  today = Date.strptime('2020/02/01', '%Y/%m/%d')
-  day = Date.strptime('2020/02/01', '%Y/%m/%d')
+  today = Date.new(2020, 2, 2)
+  day = Date.new(2020, 2, 1)
 
   while day < today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
@@ -80,14 +80,10 @@ def main
   hoc_year = DCDO.get("hoc_year", 2017)
 
   # Compute the number of hoc events (the grand total and broken down by company and country).
-  # Note that these queries use the "DB" connection, which is set in lib/cdo/properties.rb to PEGASUS_DB
-  # PEGASUS_DB is defined in lib/cdo/db.rb using sequel with connections to the pegasus writer and reader.
-  # So, even though most of the script uses the reader connections (eg, DASHBOARD_DB_READER),
-  # the "DB" connection used here does include a connection to the writer.
   hoc_country_totals = Hash.new(0)
   hoc_company_totals = Hash.new(0)
-  unique_hoc_events = DB[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
-  total_hoc_count = DB[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:email, :name).count
+  unique_hoc_events = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
+  total_hoc_count = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:email, :name).count
 
   unique_hoc_events.each do |row|
     data = JSON.parse(row[:data])
