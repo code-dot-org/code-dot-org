@@ -25,7 +25,7 @@ export class ResultsLoader extends React.Component {
     })
   };
 
-  state = {loading: true, errors: null};
+  state = {loading: true, hasErrors: false};
 
   componentDidMount() {
     this.load();
@@ -46,16 +46,17 @@ export class ResultsLoader extends React.Component {
           loading: false,
           questions: data['questions'],
           thisWorkshop: data['this_workshop'],
-          sessions: Object.keys(data['this_workshop']),
+          workshopTabs: Object.keys(data['this_workshop']),
           courseName: data['course_name']
+          // TODO: add rollup data once it's sent by the backend
           // workshopRollups: data['workshop_rollups'],
           // facilitatorRollups: data['facilitator_rollups']
         });
       })
-      .fail(jqXHR => {
+      .error(() => {
         this.setState({
           loading: false,
-          errors: (jqXHR.responseJSON || {}).errors
+          hasErrors: true
         });
       });
   }
@@ -64,24 +65,13 @@ export class ResultsLoader extends React.Component {
     return (
       <div id="error_list" style={styles.errorContainer}>
         <h1>An error occurred</h1>
-        <p>
-          Unfortunately this request could not be processed. Our team has been
-          notified.
-        </p>
-        <div style={styles.errorDetailsBox}>
-          Error details:
-          <ul>
-            {this.state.errors.map((error, index) => (
-              <li key={index}>{error.message}</li>
-            ))}
-          </ul>
-        </div>
+        <p>Unfortunately this request could not be processed.</p>
       </div>
     );
   }
 
   render() {
-    const {loading, errors, ...data} = this.state;
+    const {loading, hasErrors, ...data} = this.state;
 
     if (loading) {
       return (
@@ -89,7 +79,7 @@ export class ResultsLoader extends React.Component {
           <Spinner />
         </div>
       );
-    } else if (errors) {
+    } else if (hasErrors) {
       return this.renderErrors();
     } else {
       return <Results {...data} />;

@@ -7,8 +7,9 @@ export default class Results extends React.Component {
   static propTypes = {
     questions: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
-    sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string
+    // TODO: add rollups once they are sent by the backend
     // workshopRollups: PropTypes.object,
     // facilitatorRollups: PropTypes.object
   };
@@ -16,11 +17,11 @@ export default class Results extends React.Component {
   render() {
     return (
       <Tabs id="SurveyTab">
-        {this.props.sessions.map((session, i) => (
+        {this.props.workshopTabs.map((workshopTab, i) => (
           <Tab
             eventKey={i + 1}
             key={i}
-            title={`${session} (${this.props.thisWorkshop[session][
+            title={`${workshopTab} (${this.props.thisWorkshop[workshopTab][
               'response_count'
             ] || 0})`}
           >
@@ -28,7 +29,7 @@ export default class Results extends React.Component {
             <SectionResults
               section="general"
               questions={this.props.questions}
-              answers={this.props.thisWorkshop[session]}
+              answers={this.props.thisWorkshop[workshopTab]}
             />
             {/* TODO: add facilitator feedback per session once we have that data */}
           </Tab>
