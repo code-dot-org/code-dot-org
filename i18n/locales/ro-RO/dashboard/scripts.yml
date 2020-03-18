@@ -4872,16 +4872,10 @@ ro:
           description: '[șir gol]'
         csp4-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp5-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp7-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csd2-projects-temp:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -5238,8 +5232,6 @@ ro:
             Binary Numbers:
               name: Numerele binare
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp2-2020:
           stages:
             The Need for Addressing:
@@ -5247,29 +5239,16 @@ ro:
             Routers and Redundancy:
               name: Routere și redundanță
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp3-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp6-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp8-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp9-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp10-2020:
           description_audience: '[șir gol]'
-          description_short: '[șir gol]'
-          description: '[șir gol]'
         csp-march-virtual:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
-          description: '[șir gol]'

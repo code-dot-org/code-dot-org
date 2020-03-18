@@ -7,11 +7,16 @@ import {
   getUnpluggedLessonsForScript,
   setSelectedLessons
 } from './sectionStandardsProgressRedux';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   lessonListItem: {
     display: 'flex',
     flexDirection: 'row'
+  },
+  links: {
+    paddingLeft: 10,
+    color: color.teal
   }
 };
 
@@ -48,10 +53,11 @@ const ComplexLessonComponent = function({lesson}) {
       <div>
         <ProgressBoxForLessonNumber
           completed={lesson.completed}
+          inProgress={lesson.inProgress}
           lessonNumber={lesson.number}
         />
       </div>
-      <a style={{paddingLeft: 10}} href={lesson.url} target={'_blank'}>
+      <a style={styles.links} href={lesson.url} target={'_blank'}>
         {lesson.name}
       </a>
     </div>
@@ -63,7 +69,8 @@ ComplexLessonComponent.propTypes = {
     name: PropTypes.string,
     number: PropTypes.number,
     url: PropTypes.string,
-    completed: PropTypes.bool
+    completed: PropTypes.bool,
+    inProgress: PropTypes.bool
   })
 };
 

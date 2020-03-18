@@ -169,8 +169,41 @@ cs-CZ:
         craft_what_is_iron: Vytěž toto železo!
       courseA_collector_preLoops1:
         courseA_collector_preLoops1_1: Klikni sem, abys viděl pracovat kód!
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
       courseD_maze_ramp3_2019:
         stone_block_2: Šedé bloky není možné zahodit.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.

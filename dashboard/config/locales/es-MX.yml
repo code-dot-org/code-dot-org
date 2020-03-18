@@ -986,6 +986,8 @@ es-MX:
       y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>.
     accept_label_markdown: Acepto los [términos de servicio](%{tos_url}) y la [política
       de privacidad](%{privacy_url}).
+    accept_tos: Al registrarse a Code.org, usted acepta los [Términos de Servicio](%{tos_url})
+      y nuestra [Póliza de Privacidad](%{privacy_url}).
     accept: Acepto
     print: Imprimir
     reminder_desc: Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos
@@ -1188,7 +1190,9 @@ es-MX:
     csp_traversals: Recorridos
     csp_libraries: Bibliotecas
     csp_parameters_return_values: Parámetros y valores de retorno
+    csp_unit1_2020: 'Tema 1: Información digital'
     csp_unit2_2020: 'Unidad 2: Internet'
+    csp_unit3_2020: 'Unidad 3: Introducción al diseño de aplicaciones'
     csp_unit6_2020: 'Unidad 6: Algoritmos'
     csp_unit9_2020: 'Unidad 9: Datos'
     dlp: Preguntas para reflexionar

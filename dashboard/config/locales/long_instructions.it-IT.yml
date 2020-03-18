@@ -2230,7 +2230,7 @@ it-IT:
         > Un evento è una istruzione che dice al computer di "ascoltare" se succede un determinata cosa, e di conseguenza eseguire un'azione. Per esempio, in alcune  pagine web,  passando il mouse sopra un menù a tendina, esso si apre. Il "mouse sopra " è un evento che attiva un'azione.
       OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
         che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
-        sarai tu che dovrai scrivere un simile programma!
+        ti verrà chiesto di scrivere un programma simile!
       OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni dei piani di
         sviluppo delle attività tradizionali. Tieni presente sono disponibili tutte
         le pianificazioni per ogni lezione del corso \"Fondamenti di informatica\"
@@ -2260,8 +2260,9 @@ it-IT:
         > [Twitta i tuoi pensieri][1] taggando @teachcode.
         >
         > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Condividi su Twitter</h4></a>
-      OPD-K5 RepeatBlock: Guarda il video qui sotto che spiega come funzionano i cicli
-        ed introduce il blocco "Ripeti" nei corsi di "Fondamenti di informatica".
+      OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
+        di ripetizione (cicli) ed introduce il blocco "ripeti ... volte" nei corsi
+        di "Fondamenti di informatica".
       OPD-K5 Unplugged Video: |-
         ## Uno sguardo avanti > "Senza computer"
 
@@ -3560,15 +3561,15 @@ it-IT:
       courseC_PlayLab_events_challenge1: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2018: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2019: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_artist_loop1: |-
         Fantastico!
 
