@@ -22,7 +22,7 @@ def sync_in
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
-  sanitize_markdown_headers
+  localize_markdown_content
 end
 
 def get_i18n_strings(level)
@@ -298,8 +298,18 @@ def redact_block_content
   RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
 end
 
-def sanitize_markdown_headers
-  Dir.glob(File.join(I18N_SOURCE_DIR, "markdown/**/*.{md,md.partial}")).each do |path|
+def localize_markdown_content
+  markdown_files_to_localize = ['international/about.md.partial',
+                                'educate/curriculum/csf-transition-guide.md',
+                                'csforgood.md']
+  markdown_files_to_localize.each do |path|
+    original_path = File.join('pegasus/sites.v3/code.org/public', path)
+    # Remove the .partial if it exists
+    source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
+    FileUtils.mkdir_p(File.dirname(source_path))
+    FileUtils.cp(original_path, source_path)
+  end
+  Dir.glob(File.join(I18N_SOURCE_DIR, "markdown/**/*.md")).each do |path|
     header, content, _line = Documents.new.helpers.parse_yaml_header(path)
     I18nScriptUtils.sanitize_header!(header)
     I18nScriptUtils.write_markdown_with_header(content, header, path)
