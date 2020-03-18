@@ -1,0 +1,62 @@
+name 'Worked Example: If-statements and Robot_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# A Worked Example
+
+The following shows a step-by-step, line-by-line execution of a 10-line program with if-statements that uses the AP pseudocode for if-statements and the robot.
+
+The purpose of the example is to show:
+
+* Code executes one line at a time from top to bottom.
+* Each if-statement condition is checked in the order of execution
+* The conditions of later if-statements may be affected by what did, or didn’t happen, in earlier lines of code.
+
+![](https://images.code.org/2ebce9f7eab42bdd2e6215c86edd3f93-image-1571330102314.png)
+
+<br><br>
+
+![](https://images.code.org/e04ee663081cc7a5e1482541b2df4ecd-image-1571330112758.png)
+
+<br><br>
+
+![](https://images.code.org/8c4a47a1b97e59f24b3f385e8c7883d6-image-1571330120128.png)
+
+<br><br>
+
+![](https://images.code.org/d859615bb8cc155d6a9325032dd35b15-image-1571330125541.png)
+
+<br><br>
+
+![](https://images.code.org/8b0897854a17f001aaba108073d66298-image-1571330130750.png)
+
+View the above as a separate document: [Worked Example - If-Statements and Robot](https://docs.google.com/document/d/1KGF-HxAP65bvQbzugKORXnzfplptWvw2eqCMntm8qS0)
+
+Before clicking continue:
+
+* Make sure you understand each step of the example
+* Have tried out the last one on your own? and compared results with a classmate?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Teaching Tip**    
+Again, this page is largely meant as reference.
+   
+You don't need to belabor the points here, as students will get **much more practice** with the "Will it crash?" activity.
+   
+Remind students that this is here if they need to refer back to it when doing the next activity.
+   
+You have a few options for how to review this worked example:
+
+* You may want to review this worked example as an entire class, projecting it on the screen.
+* Have students read, individually, or in pairs, then follow up with a partner, or review questions.
+* You may want to print - though it is a long-ish document to print, especially since the "will it crash" handout is long as well.
+
+**Don't miss the problem** at the very end of the document.  Students should try it and you can review as a class to verify that they understand.
+
+
+
+   
+MARKDOWN
