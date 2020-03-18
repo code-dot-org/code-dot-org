@@ -7,11 +7,16 @@ import {
   getUnpluggedLessonsForScript,
   setSelectedLessons
 } from './sectionStandardsProgressRedux';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   lessonListItem: {
     display: 'flex',
     flexDirection: 'row'
+  },
+  links: {
+    paddingLeft: 10,
+    color: color.teal
   }
 };
 
@@ -52,7 +57,7 @@ const ComplexLessonComponent = function({lesson}) {
           lessonNumber={lesson.number}
         />
       </div>
-      <a style={{paddingLeft: 10}} href={lesson.url} target={'_blank'}>
+      <a style={styles.links} href={lesson.url} target={'_blank'}>
         {lesson.name}
       </a>
     </div>
