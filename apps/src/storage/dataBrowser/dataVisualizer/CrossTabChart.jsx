@@ -107,7 +107,7 @@ class CrossTabChart extends React.Component {
     const max = Math.max(...numericValues);
 
     return (
-      <div>
+      <div id="crossTabContainer">
         <h1 style={styles.title}>{this.props.chartTitle}</h1>
         <table>
           <tbody>

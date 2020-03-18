@@ -59,7 +59,21 @@ class Snapshot extends React.Component {
     }
   };
 
-  getImageFromCrossTab = () => {};
+  getImageFromCrossTab = () => {
+    const element = document.getElementById('crossTabContainer');
+    if (!element) {
+      return;
+    }
+    const options = {
+      background: '#fff'
+    };
+    html2canvas(element, options).then(canvas => {
+      const dataSrc = canvas.toDataURL('image/png');
+      if (this.isMounted_) {
+        this.setState({imageSrc: dataSrc});
+      }
+    });
+  };
 
   getImageFromGoogleChart = () => {
     const container = document.getElementById('googleChartContainer');
