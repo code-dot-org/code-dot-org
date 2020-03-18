@@ -7,7 +7,6 @@ import {
   getUnpluggedLessonsForScript,
   setSelectedLessons
 } from './sectionStandardsProgressRedux';
-import firehoseClient from '../../../lib/util/firehose';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -23,43 +22,16 @@ const styles = {
 
 class LessonStatusList extends Component {
   static propTypes = {
-    dialog: PropTypes.string,
-    // redux
     unpluggedLessonList: PropTypes.array,
     setSelectedLessons: PropTypes.func.isRequired,
-    selectedLessons: PropTypes.array.isRequired,
-    sectionId: PropTypes.number,
-    scriptId: PropTypes.number
+    selectedLessons: PropTypes.array.isRequired
   };
 
-  handleChange = (selectedLessons, changedLesson) => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'standards',
-        event: 'update_unplugged_lesson_list',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-          changed_lesson_id: changedLesson.id,
-          lesson_selected: !changedLesson.completed,
-          dialog: this.props.dialog
-        })
-      },
-      {includeUserId: true}
-    );
+  handleChange = selectedLessons => {
     this.props.setSelectedLessons(selectedLessons);
   };
 
   render() {
-    // Add the scriptId and sectionId so that we can use them to log metrics
-    this.props.unpluggedLessonList.forEach(lesson =>
-      Object.assign(lesson, {
-        sectionId: this.props.sectionId,
-        scriptId: this.props.scriptId
-      })
-    );
-
     return (
       <MultiCheckboxSelector
         noHeader={true}
@@ -75,22 +47,6 @@ class LessonStatusList extends Component {
   }
 }
 
-const handleLessonLinkClick = function(lesson) {
-  firehoseClient.putRecord(
-    {
-      study: 'teacher_dashboard_actions',
-      study_group: 'standards',
-      event: 'click_unplugged_lesson_link',
-      data_json: JSON.stringify({
-        link: lesson.url,
-        section_id: lesson.sectionId,
-        script_id: lesson.scriptId
-      })
-    },
-    {includeUserId: true}
-  );
-};
-
 const ComplexLessonComponent = function({lesson}) {
   return (
     <div style={styles.lessonListItem}>
@@ -99,15 +55,9 @@ const ComplexLessonComponent = function({lesson}) {
           completed={lesson.completed}
           inProgress={lesson.inProgress}
           lessonNumber={lesson.number}
-          linkToLessonPlan={lesson.url}
         />
       </div>
-      <a
-        style={styles.links}
-        href={lesson.url}
-        target={'_blank'}
-        onClick={() => handleLessonLinkClick(lesson)}
-      >
+      <a style={styles.links} href={lesson.url} target={'_blank'}>
         {lesson.name}
       </a>
     </div>
@@ -121,9 +71,7 @@ ComplexLessonComponent.propTypes = {
     url: PropTypes.string,
     completed: PropTypes.bool,
     inProgress: PropTypes.bool
-  }),
-  sectionId: PropTypes.number,
-  scriptId: PropTypes.number
+  })
 };
 
 export const UnconnectedLessonStatusList = LessonStatusList;
@@ -131,9 +79,7 @@ export const UnconnectedLessonStatusList = LessonStatusList;
 export default connect(
   state => ({
     unpluggedLessonList: getUnpluggedLessonsForScript(state),
-    selectedLessons: state.sectionStandardsProgress.selectedLessons,
-    sectionId: state.sectionData.section.id,
-    scriptId: state.scriptSelection.scriptId
+    selectedLessons: state.sectionStandardsProgress.selectedLessons
   }),
   dispatch => ({
     setSelectedLessons(selected) {
