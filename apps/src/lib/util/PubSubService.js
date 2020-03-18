@@ -11,19 +11,23 @@ import {PusherChannel, NullChannel} from './PubSubChannel';
  */
 
 /**
+ * Subscribe to events on a particular channel.
  * @function
  * @name IPubSubService#subscribe
  * @param {string} channelID - Channel to which we subscribe.
- * @returns {PubSubChannel}
+ * @returns {IPubSubChannel}
  */
 
 /**
+ * Unsubscribe from events on a particular channel.
  * @function
  * @name IPubSubService#unsubscribe
  * @param {string} channelID - Channel from which we unsubscribe.
  */
 
 /**
+ * Disconnect from the Pusher service entirely.
+ * It's invalid to take any further action on this object after disconnecting.
  * @function
  * @name IPubSubService#disconnect
  */
@@ -54,24 +58,12 @@ export default function create(pubSubConfig) {
  * @implements IPubSubService
  */
 class NullService {
-  /**
-   * Subscribe to events on a particular channel.
-   * @param {string} channelID
-   * @returns {PubSubChannel}
-   */
-  subscribe(channelID) {
+  subscribe(_channelID) {
     return new NullChannel();
   }
 
-  /**
-   * Unsubscribe from events on a particular channel.
-   * @param {string} channelID
-   */
-  unsubscribe(channelID) {}
+  unsubscribe(_channelID) {}
 
-  /**
-   * Disconnect from the PubSub service entirely.
-   */
   disconnect() {}
 }
 
@@ -80,40 +72,18 @@ class NullService {
  * @implements IPubSubService
  */
 class PusherService {
-  /**
-   * @param {string} applicationKey
-   * @constructor
-   */
   constructor(applicationKey) {
-    /**
-     * Instance of actual Pusher JavaScript API.
-     * @type {Pusher}
-     * @private
-     */
     this.api_ = new Pusher(applicationKey, {encrypted: true});
   }
 
-  /**
-   * Subscribe to events on a particular channel.
-   * @param {string} channelID
-   * @returns {PubSubChannel}
-   */
   subscribe(channelID) {
     return new PusherChannel(this.api_.subscribe(channelID));
   }
 
-  /**
-   * Unsubscribe from events on a particular channel.
-   * @param {string} channelID
-   */
   unsubscribe(channelID) {
     this.api_.unsubscribe(channelID);
   }
 
-  /**
-   * Disconnect from the Pusher service entirely.
-   * It's invalid to take any further action on this object after disconnecting.
-   */
   disconnect() {
     this.api_.disconnect();
     this.api_ = null;

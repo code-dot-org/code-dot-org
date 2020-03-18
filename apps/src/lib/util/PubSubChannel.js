@@ -26,19 +26,8 @@
 
 /** @implements IPubSubChannel */
 export class NullChannel {
-  /**
-   * Subscribe to an event so the given callback is called when the event occurs.
-   * @param {string} eventName - The name of the event to bind to.
-   * @param {function} callback - A function to be called whenever the event is
-   *        triggered.
-   */
-  subscribe(eventName, callback) {}
-
-  /**
-   * Unsubscribe a given callback from a given event
-   * @param {string} eventName
-   */
-  unsubscribe(eventName) {}
+  subscribe(_eventName, _callback) {}
+  unsubscribe(_eventName) {}
 }
 
 /** @implements IPubSubChannel */
@@ -46,15 +35,12 @@ export class PusherChannel {
   constructor(pusherApiChannel) {
     /**
      * The actual Pusher API's channel.
-     * @private {Channel}
      */
     this.pusherChannel_ = pusherApiChannel;
 
     /**
      * Cache provided callbacks for easy unsubscribe.
      * Maps event name to callback.
-     * @type {Object}
-     * @private
      */
     this.callbacks_ = {};
   }
