@@ -1,0 +1,8 @@
+peer_reviews_to_complete 2
+hideable_stages true
+
+stage 'new stage'
+level 'CSD-U3-fill_2019-Jess'
+
+stage 'newer stage'
+level 'Jess - CSD U2 HTML Adding Paragraphs_2019'
