@@ -128,7 +128,7 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Students' solutions should involve writing multiple layers of functions following the principles of top-down design.",
+    "teacher_markdown": "Students' solutions should involve writing multiple layers of functions.",
     "parent_level_id": 16908,
     "name_suffix": "_virtual",
     "encrypted": "false",
@@ -139,7 +139,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:22:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2020-03-17 18:04:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 18:05:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 21:50:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:22:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2020-03-17 18:04:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 18:05:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 21:50:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-18 01:39:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
