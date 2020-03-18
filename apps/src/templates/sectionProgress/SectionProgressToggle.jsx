@@ -17,7 +17,7 @@ const styles = {
 };
 
 /**
- * A toggle that provides a way to switch between detail, summary, and standards views of
+ * A toggle that provides a way to switch between detail and summary views of
  * the progress a section of students have made in a course. Teacher view.
  */
 class SectionProgressToggle extends React.Component {
