@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 106,
   "properties": {
-    "long_instructions": "# Watching the Counter Pattern\r\n\r\nWatchers are a really useful tool for debugging programs that use the counter pattern.\r\n\r\n* **Read the program** and predict what the program will do.\r\n* **Run the program** to check your prediction.\r\n* **Look at the watchers** and explain to a neighbor what you are seeing.\r\n\r\n",
+    "long_instructions": "# Watching the Counter Pattern\r\n\r\nWatchers are a really useful tool for debugging programs that use the counter pattern.\r\n\r\n* **Read the program** and predict what the program will do.\r\n* **Run the program** to check your prediction.\r\n* **Look at the watchers** in the 'Watch' section in the lower right corner of the screen.\r\n* **Think about:** How could this tool be useful to you as a programmer?\r\n\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",
@@ -13,9 +13,14 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 16061,
-    "name_suffix": "_virtual"
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "optional": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-18 19:36:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

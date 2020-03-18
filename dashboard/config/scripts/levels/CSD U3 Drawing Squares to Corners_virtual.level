@@ -65,8 +65,8 @@
     "encrypted": "false",
     "encrypted_examples": "lHnUpJL7Iff5o2+OyQLKOJ2fj2YX/sSWmsH4cg1LTMBL046rMRD51gC4RkNW\nuL6JzoVaOcSwNy0wxCgDMiq1pg==\n",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
