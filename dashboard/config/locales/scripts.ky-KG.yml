@@ -388,6 +388,8 @@ ky:
               name: Окуялар
             Functions:
               name: Функциялар
+            Functions with Parameters:
+              name: Параметри бар функциялар
             Loops:
               name: Циклдер
             Variables:
@@ -498,6 +500,8 @@ ky:
           stages:
             Lists:
               name: Тизмелер
+            Functions with Parameters:
+              name: Параметри бар функциялар
         coursee-ramp:
           stages:
             Conditionals:
@@ -506,6 +510,10 @@ ky:
           stages:
             Lists:
               name: Тизмелер
+            Functions with Parameters:
+              name: Параметри бар функциялар
+            Functions with Parameters_:
+              name: Параметри бар функциялар
         csd3-draft:
           stages:
             Variables:
@@ -939,6 +947,10 @@ ky:
               name: Код менен Сүрөт жаратуу
             Loops in Artist:
               name: Чаптама өнөрү циклдар менен
+        csd6-2018:
+          stages:
+            Functions with Parameters:
+              name: Параметри бар функциялар
         coursee-2018:
           stages:
             Programming in Artist:
@@ -1284,6 +1296,10 @@ ky:
               name: Шартуулар
             Functions:
               name: Функциялар
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Параметри бар функциялар
         csp1-2019:
           stages:
             The Internet:
@@ -1366,6 +1382,10 @@ ky:
           stages:
             Conditionals:
               name: Шартуулар
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Параметри бар функциялар
         csd3-2020:
           stages:
             Variables:

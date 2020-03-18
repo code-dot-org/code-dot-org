@@ -64,6 +64,8 @@ uk:
   join_section:
     code:
       placeholder: "Код групи (ABCDEF)"
+      instructions_short: "Введіть ваші 6 букв коду класу"
+      submit: 'Приєднатися'
   add_hint_form:
     placeholder: 'Будь ласка, введіть сюди підказку'
     submit: 'Додати підказку'
@@ -893,6 +895,7 @@ uk:
     csp_traversals: 'Переходи'
     csp_libraries: 'Бібліотеки'
     csp_parameters_return_values: 'Параметри і значення, які повертаються'
+    csp_unit1_2020: 'Розділ 1: Цифрова інформація'
     dlp: 'Відображення підказок'
     time4cs_c1: 'Еверглейдс і його екосистеми'
     time4cs_c2: 'Харчові ланцюги в Еверглейдс'
@@ -1027,6 +1030,7 @@ uk:
   cookie_banner:
     accept: 'Погоджуюся'
   gdpr_dialog:
+    message: 'Дані про моє використання цього веб-сайту можуть направлятися в США, а також зберігатися або оброблятися на території США.'
     yes: 'Так'
   page_not_found_title: "Сторінка не знайдена"
   page_not_found_header: '404: Сторінка не знайдена'

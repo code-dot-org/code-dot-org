@@ -81,6 +81,8 @@ he:
               name: 'מבוך: רצף'
             'Real-life Algorithms: Paper Planes':
               name: 'אלגוריתמים מהחיים: מטוסי נייר'
+            Relay programming:
+              name: הרץ פעולה בשנית
             'Studio: Create a Story':
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
@@ -894,6 +896,8 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Songwriting with Parameters:
+              name: כתיבת שירים
             Introduction:
               name: מבוא
             Ice Age Play Lab:
@@ -1099,6 +1103,8 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Songwriting with Parameters:
+              name: כתיבת שירים
             Conditionals:
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
             Functions in Farmer:
@@ -1144,6 +1150,8 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Songwriting with Parameters:
+              name: כתיבת שירים
             Conditional Loops in Maze:
               name: ההתניות & לולאות במבוך
             Until Loops in Maze:
@@ -1231,6 +1239,8 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Songwriting with Parameters:
+              name: כתיבת שירים
         csd5-old:
           stages:
             ASCII and Binary Representation:
@@ -1280,6 +1290,8 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האמן
+            Songwriting with Parameters:
+              name: כתיבת שירים
         csd6-old:
           stages:
             Lists:
@@ -1470,6 +1482,8 @@ he:
               name: משתנים במעבדת הצעצועים
             For Loop Fun:
               name: כיף עם לולאת "עבור"
+            Songwriting with Parameters:
+              name: כתיבת שירים
             Functions with Parameters in Bee:
               description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו כתיבה ושימוש בפונקציות כדי ללכת בנתיבים מורכבים ובאיסוף תבניות של צוף ודבש.
             Conditionals with Cards:
