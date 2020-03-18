@@ -14,7 +14,7 @@ class ContactRollupsComparisonTest < ActiveSupport::TestCase
   test 'compile_processed_data when new data is empty' do
     clean_tables
     old_contact_count = 3
-    create_list :contact_rollups_processed, old_contact_count
+    create_list :contact_rollups_final, old_contact_count
 
     ContactRollupsComparison.compile_processed_data
 
@@ -23,10 +23,9 @@ class ContactRollupsComparisonTest < ActiveSupport::TestCase
 
   test 'compile_processed_data when new and old data overlap' do
     clean_tables
-
     total_contact_count = 9
-    (0..5).each {|index| create :contact_rollups_processed, email: "email#{index}@example.domain"}
-    (3..total_contact_count - 1).each {|index| create :contact_rollups_final, email: "email#{index}@example.domain"}
+    (1..5).each {|index| create :contact_rollups_processed, email: "email#{index}@example.domain"}
+    (3..total_contact_count).each {|index| create :contact_rollups_final, email: "email#{index}@example.domain"}
 
     ContactRollupsComparison.compile_processed_data
 
