@@ -428,7 +428,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    true
+    false
   end
 
   def self.show_courses_banner(request)

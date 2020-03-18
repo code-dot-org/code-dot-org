@@ -225,10 +225,22 @@ ga:
           casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
       VideoGamesCoordinatePlanes:
         title: Físchluichí agus Plánaí Comhordanáidí
+        desc: Foghlaim gur é an t-ailgéabar atá mar bhonn ag na cluichí ríomhaire
+          gur breá leat a bheith ag imirt! Pléigh an bealach go mbaintear úsáid as
+          sloinn ailgéabracha agus as an bplána comhordanáideach chun tuiscint a fháil
+          ar an tslí a n-oibríonn físchluichí. Ansin tosaigh ag pleanáil don fhíschluiche
+          a chruthóidh tú féin.
       Contracts:
         title: Conarthaí, Fearann, agus Raon
+        desc: Tugann conarthaí bealach dúinn chun feidhmeanna a thuiscint agus a phlé.
+          Sa cheacht seo, breathnóimid ar an gcaoi a chabhraíonn conarthaí linn tuiscint
+          a fháil ar theanga ríomhchlárúcháin nua, nó ar fheidhm nua.
       DesignRecipe:
         title: Oideas Dearaidh
+        desc: Sa chéim roimhe seo, cumadh feidhmeanna sách simplí - ach le feidhmeanna
+          níos casta, teastaíonn cur chuige níos machnamhaí. Is cur chuige struchtúrtha
+          é an Oideas Dearaidh chun feidhmeanna a chumadh. Cuirtear cásanna tástála
+          san áireamh chun deimhniú go n-oibríonn an fheidhm mar is ceart.
       Booleans:
         title: Athróga Boole agus Loighic
       ConditionalsPiecewiseFunctions:
@@ -422,15 +434,29 @@ ga:
           léiriú ar níos mó ná bealach amháin.
       MoveItMoveIt_2018:
         title: Bog é, Bog é
+      courseB_unplugged_CnC_2018:
+        title: Bí Cruthaitheach; Bí Cothrom.
       RelayProgramming_2018:
         title: Códáil Sealaíochta
       courseB_unplugged_MRF_2019:
         title: Mo Chairde Róbatacha
+      BuildingAFoundation_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Coinníollacha
         desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh
           siad rialacha do chluiche cártaí cosúil le "Má fhaighim cárta dearg, gnóthóidh
           mé pointe amháin", nó "Má fhaighim cárta dubh, gnóthóidh tú pointe amháin."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Ríomhchlárú ar Ghrafpháipéar
         desc: Scríobhfaidh na daltaí algartam (bailiúchán treoracha), ag baint úsáide
@@ -447,6 +473,15 @@ ga:
           a léiriú i mórán formáidí dénártha. Forbraíonn an ceacht seo an coincheap
           sin mar a thaispeánann sé an chaoi a stórálann an ríomhaire faisnéis níos
           casta (íomhánna agus dathanna mar shampla) mar chód dénártha chomh maith.
+      SongwritingParameters_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.Internet_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'aistriúchán ar iarraidh: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Bí Lúbach
         desc: Tugann an ceacht seo buneolas ar lúba (treoracha athdhéanta) sa ríomhchlárú
@@ -490,8 +525,12 @@ ga:
         desc: Foghlaimeoidh na daltaí go bhfágann siad "lorg digiteach" nuair a chuireann
           siad faisnéis fúthu féin ar líne, agus go mbaineann torthaí leis an lorg
           digiteach seo.
+      courseB_unplugged_CnC_2019:
+        title: Bí Cruthaitheach; Bí Cothrom.
       timeforcs_demo_crowdsourcing:
         title: Sluafhoinsiú
+        desc: '_Josh note: in contrast with the first lesson, I''ve formatted this
+          one just like a typical unplugged lesson._'
       timeforcs_demo_conditionals:
         title: Coinníollacha
         desc: Foghlaimeoidh na daltaí faoi ráitis choinníollacha sa gceacht seo. Cruthóidh
