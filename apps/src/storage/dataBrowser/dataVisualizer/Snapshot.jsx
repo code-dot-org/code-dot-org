@@ -21,10 +21,30 @@ class Snapshot extends React.Component {
   state = {
     isSnapshotOpen: false,
     isCopyPending: false,
-    isSavePending: false
+    isSavePending: false,
+    imageSrc: require('./placeholder.png')
   };
 
-  handleOpen = () => this.setState({isSnapshotOpen: true});
+  componentDidMount() {
+    this.isMounted_ = true;
+  }
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  }
+
+  handleOpen = () => {
+    this.setState({isSnapshotOpen: true});
+    setTimeout(() => {
+      if (this.isMounted_) {
+        this.setState({
+          imageSrc:
+            'https://studio.code.org/blockly/media/skins/studio/robot_spritesheet_200px.png'
+        });
+      }
+    }, 1000);
+  };
+
   handleClose = () => this.setState({isSnapshotOpen: false});
 
   getPngBlob = () => {
@@ -86,7 +106,7 @@ class Snapshot extends React.Component {
         >
           <div id="snapshot">
             <h1>{this.props.chartTitle}</h1>
-            <img src={require('./placeholder.png')} />
+            <img src={this.state.imageSrc} />
             <p>
               {msg.dataVisualizerSnapshotDescription({
                 date: moment().format('YYYY/MM/DD'),
