@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import {connect} from 'react-redux';
@@ -23,16 +22,6 @@ class LessonStatusList extends Component {
     selectedLessons: PropTypes.array.isRequired
   };
 
-  componentWillMount() {
-    const {unpluggedLessonList} = this.props;
-    const completedLessons = _.filter(unpluggedLessonList, function(lesson) {
-      return lesson.completed;
-    });
-    const alreadySelected = this.props.selectedLessons;
-    const displayAsSelected = alreadySelected.concat(completedLessons);
-    this.props.setSelectedLessons(displayAsSelected);
-  }
-
   handleChange = selectedLessons => {
     this.props.setSelectedLessons(selectedLessons);
   };
@@ -53,12 +42,12 @@ class LessonStatusList extends Component {
   }
 }
 
-const ComplexLessonComponent = function({style, lesson}) {
+const ComplexLessonComponent = function({lesson}) {
   return (
     <div style={styles.lessonListItem}>
       <div>
         <ProgressBoxForLessonNumber
-          completed={lesson.selected}
+          completed={lesson.completed}
           lessonNumber={lesson.number}
         />
       </div>
@@ -69,7 +58,6 @@ const ComplexLessonComponent = function({style, lesson}) {
   );
 };
 ComplexLessonComponent.propTypes = {
-  style: PropTypes.object,
   lesson: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,

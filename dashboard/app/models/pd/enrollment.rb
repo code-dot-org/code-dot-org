@@ -302,6 +302,22 @@ class Pd::Enrollment < ActiveRecord::Base
       FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
   end
 
+  def application_id
+    find_application_id(user_id, pd_workshop_id)
+  end
+
+  # Finds the application an user used for a workshop.
+  # Assumes that at most one application like that exists.
+  # @param [Integer] user_id
+  # @param [Integer] workshop_id
+  # @return [Integer, nil] application id or nil if cannot find any application
+  def find_application_id(user_id, workshop_id)
+    Pd::Application::ApplicationBase.where(user_id: user_id).each do |application|
+      return application.id if application.try(:pd_workshop_id) == workshop_id
+    end
+    nil
+  end
+
   # Removes the name and email information stored within this Pd::Enrollment.
   def clear_data
     write_attribute :name, nil

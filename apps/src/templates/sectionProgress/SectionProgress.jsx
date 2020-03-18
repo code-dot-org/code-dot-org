@@ -85,17 +85,6 @@ class SectionProgress extends Component {
     this.props.loadScript(this.props.scriptId, this.props.section.id);
   }
 
-  componentDidUpdate() {
-    // Check if we are on a script that does NOT have standards associations and
-    // currentView is Standards. If so re-set currentView to Summary since
-    // Standards doesn't apply.
-    const hasStandards =
-      this.props.scriptData && this.props.scriptData.hasStandards;
-    if (this.props.currentView === ViewType.STANDARDS && !hasStandards) {
-      this.props.setCurrentView(ViewType.SUMMARY);
-    }
-  }
-
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId, this.props.section.id);
@@ -211,7 +200,8 @@ class SectionProgress extends Component {
           )}
         </div>
 
-        <ProgressViewHeader />
+        {levelDataInitialized && <ProgressViewHeader />}
+
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
             <FontAwesome
@@ -231,15 +221,17 @@ class SectionProgress extends Component {
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-            <div id="uitest-standards-view" style={standardsStyle}>
-              <StandardsView
-                showStandardsIntroDialog={
-                  currentView === ViewType.STANDARDS && showStandardsIntroDialog
-                }
-              />
-            </div>
-          )}
+          {levelDataInitialized &&
+            experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+              <div id="uitest-standards-view" style={standardsStyle}>
+                <StandardsView
+                  showStandardsIntroDialog={
+                    currentView === ViewType.STANDARDS &&
+                    showStandardsIntroDialog
+                  }
+                />
+              </div>
+            )}
         </div>
       </div>
     );
