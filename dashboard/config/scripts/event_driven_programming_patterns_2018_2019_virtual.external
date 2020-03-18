@@ -1,0 +1,98 @@
+name 'Event-Driven Programming Patterns_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Event-Driven Programming Patterns
+
+Now you're getting the hang of it!
+
+What you have just done once will become a familiar pattern to you.  When making event-driven apps in App Lab you usually go through the following steps:
+
+### Step 1 - Design Mode
+
+Add a UI element (or a few) in Design Mode
+
+### Step 2 - Add onEvent to Code
+
+Set the id and event type to listen for some event on that element.</p>
+
+### Step 3 - Write the code for the event handling function
+
+The code describes what you want the app to do <em>WHEN</em> the specified type of event happens on the specified ID.
+
+### Step 4 - Run. Test. Debug.
+
+If the program doesn't work at first (this is very common) try-try again
+
+
+## Debugging
+
+We haven't had a ton of practice with debugging yet.  But if you have ever written any code and it threw an error, or didn't work for any other reason and you dug in and figured out why and fixed it, **you were debugging**.
+
+We'll do some debugging practice later on.
+
+The next tip we'll learn about will help make debugging easier for you later on.
+
+
+
+<!--
+
+
+ * If the program doesn't work at first (this is very common) try-try again
+ * You may run into **syntax** errors - things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say - fix these with careful reading.
+ * Or you may run into **logic** errors - the program runs but doesn't do what you think it should.
+
+<hr>
+
+### Here is an example of adding other button to make the turtle turn left
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Add a UI element to the screen in Design Mode</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Add another onEvent block to the code.  <strong>Note:</strong> you need new onEvent block <em>for every</em> event you want to capture.</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Add code to the event handler function you want.</p>
+
+</div>
+
+![](https://images.code.org/f695b83911560bf628750ed2a134a38c-image-1476818017592.png)
+
+<div style="column-count: 1; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 33%;">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+<strong>Debugging Tip:</strong> if you hover your mouse over a UI element while in code mode, it will show you the ID of the element.  This very useful when you have a lot of elements on the screen.
+
+</div>
+
+<div style="clear: both">
+&nbsp;
+</div>
+-->
+
+# Don't Worry!
+
+Even for professionals, it's very common to go through several cycles of run-test-debug to get it right even for *very* small programs or pieces of code.  It's the nature of the business.
+
+In the next few levels we'll practice this pattern of creating event-driven programs and also debugging.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Teaching Tips
+**Key Idea:** 
+
+* There is a pattern to how these programs are constructed and developed in App Lab.
+
+**Key Behavior:** 
+
+* Setting up the expectation that programs don't work on the first try. The Run-Test-Debug cycle is part of programming practice. As you get better you learn to write a small amount of code, verify that it works and then move on.
+
+* You can do a lot as a teacher to model this expectation. We call it acting as the "lead learner" in the classroom.  In the face of some problem or uncertainty, rather teacher-as-source-of-all-knowledge you model the behavior of a good learner, who says "I don't know, but with some effort and attention to detail, together, I'm sure we can find out."
+MARKDOWN

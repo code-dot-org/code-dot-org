@@ -1,0 +1,62 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:40.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Create an array of the even numbers from 0 to 10 and display its contents with console.log. (Click to see full instructions)",
+    "long_instructions": "# Creating an Array\r\n\r\nArrays have many features which make them different from variables, but **most of what you've learned about variables also applies to arrays**. For example, just like a variable:\r\n\r\n* Arrays should be given a **descriptive and meaningful** name.\r\n* Arrays are created using `var`.\r\n* Arrays can be initialized/set using `=`.\r\n\r\n**Example: Creating an Array**\r\n\r\n![](https://images.code.org/0b7d201db2990f0189963bb6a565a057-image-1447097600773.33.08 PM.png)\r\n\r\nThis array contains 3 values: 100, 250, 500. Notice that the values are separated with commas `,` and that the entire array is enclosed in brackets `[ ]` . We can use `console.log` to display the contents of an array just like we would a variable.\r\n\r\n![](https://images.code.org/7d4be70330108e3e5d6325fa4e721ef4-image-1447097904253.38.18 PM.png)\r\n\r\n# Do This:\r\n\r\n* Following the format described above **create an array** which contains **the even numbers from 0 to 10**.\r\n\r\n<img src=\"https://images.code.org/872be32ff4ba4e9c733435d524a95c9e-image-1448311800271.gif\" width=450px>\r\n\r\n* Make sure your array has a **descriptive and meaningful name**.\r\n* Use `console.log` to display the contents of your array. Below is an example of the output your program should generate.\r\n\r\n![](https://images.code.org/230d988cf99556db04a8a4ad6a8d8a47-image-1447364062049.33.53 PM.png)\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "encrypted_examples": "s8a6Lbmo539AsutaOsWJA/3cP+EuOFBiSnZq7gJs6N/5xfCHPIbAatWaRMWI\nEIdW\n",
+    "video_key": "csp_applab_lists_1",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17332,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

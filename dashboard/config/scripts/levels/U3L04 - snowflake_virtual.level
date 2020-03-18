@@ -37,7 +37,7 @@
     "encrypted_examples": "PUo+2/dKmiUZYqBWNLocpY5RzPOLuRv3spooQHKOxbKqIO8iJl+Kvu8a0Jg3\nY4Cs\n",
     "embed": "false",
     "short_instructions": "Create the design by breaking it down into layers of functions. (Click to see full instructions)",
-    "long_instructions": "# Do This:\r\n\r\n* Identify useful patterns that can be reused and give them **their own functions**.\r\n* Remember: The functions you design **can call one another**. This is how you create layers of abstraction.\r\n* Functions should be given names that are **descriptive and meaningful**.\r\n* Your program should be kicked off with a single call to a function that makes calls to subsequent functions.\r\n\r\n\r\n![](https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33 PM.png)",
+    "long_instructions": "# Do This:\r\n\r\n* Identify useful patterns that can be reused and give them **their own functions**.\r\n* Remember: The functions you design **can call one another**.\r\n* Functions should be given names that are **descriptive and meaningful**.\r\n* Your program should be kicked off with a single call to a function that makes calls to subsequent functions.\r\n\r\n\r\n![](https://images.code.org/afed66de9dc3cdb10f627a176139c58f-image-1441822234028.09.33 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -128,18 +128,18 @@
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Students' solutions should involve writing multiple layers of functions following the principles of top-down design.",
+    "teacher_markdown": "Students' solutions should involve writing multiple layers of functions.",
     "parent_level_id": 16908,
     "name_suffix": "_virtual",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:22:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2020-03-17 18:04:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 18:05:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:22:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2020-03-17 18:04:46 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 18:05:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-17 21:50:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-18 01:39:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

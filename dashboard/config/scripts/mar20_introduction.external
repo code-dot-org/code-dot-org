@@ -5,8 +5,9 @@ description 'description here'
 
 markdown <<MARKDOWN
 ##Coming Soon!
-Welcome session recording
-Live Demo recording
-Slides
-Notes
+### Resources from the Saturday, March 21 Call
++ Welcome session recording
++ Live Demo recording
++ Slides
++ Notes
 MARKDOWN
