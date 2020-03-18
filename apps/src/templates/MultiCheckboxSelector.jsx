@@ -79,7 +79,7 @@ class MultiCheckboxSelector extends Component {
       } else {
         selectedItems = _.concat(this.props.selected, item);
       }
-      this.props.onChange(selectedItems);
+      this.props.onChange(selectedItems, item);
     } else {
       const index = this.props.selected.indexOf(item);
       if (index >= 0) {
