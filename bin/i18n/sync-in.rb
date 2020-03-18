@@ -22,7 +22,7 @@ def sync_in
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
-  localize_markdown_headers
+  localize_markdown_content
 end
 
 def get_i18n_strings(level)
@@ -298,7 +298,7 @@ def redact_block_content
   RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
 end
 
-def localize_markdown_headers
+def localize_markdown_content
   markdown_files_to_localize = ['international/about.md.partial',
                                 'educate/curriculum/csf-transition-guide.md',
                                 'csforgood.md']
