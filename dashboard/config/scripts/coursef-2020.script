@@ -75,6 +75,9 @@ level 'courseD_bee_nestedLoops8_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
 
+stage 'The Power of Words', flex_category: 'csf_digcit'
+level 'PowerOfWords-Unplugged_2020'
+
 stage 'Envelope Variables', flex_category: 'csf_variables'
 level 'EnvelopeVariables-Unplugged_2020'
 
@@ -111,8 +114,21 @@ stage 'Simulating Experiments', flex_category: 'csf_data'
 level 'simstarter_2020', progression: 'Run a simulation'
 level 'simconfig_2020', progression: 'Modify simulation variables'
 
+stage 'AI for Oceans', flex_category: 'csf_data'
+level 'CourseF_Oceans_Video_Machine_Learning'
+level 'CourseF_Oceans_FishVTrash'
+level 'CourseF_Oceans_CreaturesVTrashDemo'
+level 'CourseF_Oceans_CreaturesVTrash'
+level 'CourseF_Oceans_Video_Training_Data'
+level 'CourseF_Oceans_Short'
+level 'CourseF_Oceans_Video_Societal_Implications'
+level 'CourseF_Oceans_Long'
+
 stage 'For Loop Fun', flex_category: 'csf_for_loops'
 level 'ForLoopFun-Unplugged_2020'
+
+stage 'Internet', flex_category: 'csf_data'
+level 'Internet-Unplugged_2020'
 
 stage 'For Loops in Bee', flex_category: 'csf_for_loops'
 level 'courseF_bee_for1_2020', progression: 'Practice'
@@ -146,9 +162,6 @@ level 'courseF_artist_for10_2020', progression: 'Free Play'
 bonus 'courseF_artist_for_challenge1_2020'
 bonus 'courseF_artist_for_challenge2_2020'
 
-stage 'Internet', flex_category: 'csf_internet'
-level 'Internet-Unplugged_2020'
-
 stage 'Editing Behaviors', flex_category: 'csf_sprites'
 level 'behaviors 1_2020', progression: 'Prediction'
 level 'behaviors 2_2020', progression: 'Practice'
@@ -169,15 +182,6 @@ level 'Virtual Pet 5_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 6_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 7_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 8_2020', progression: 'Mini-Project: Virtual Pet'
-
-stage 'The Power of Words', flex_category: 'csf_digcit'
-level 'PowerOfWords-Unplugged_2020'
-
-stage 'Crowdsourcing', flex_category: 'csf_digcit'
-level 'Crowdsourcing-Unplugged_2020'
-
-stage 'Digital Sharing', flex_category: 'csf_digcit'
-level 'DigitalSharing-Unplugged_2020'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseF_project_exemplars_2019_2020', progression: 'Example projects'
