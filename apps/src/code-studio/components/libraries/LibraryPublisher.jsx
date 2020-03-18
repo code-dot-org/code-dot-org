@@ -62,7 +62,8 @@ export default class LibraryPublisher extends React.Component {
     onPublishSuccess: PropTypes.func.isRequired,
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
-    libraryClientApi: PropTypes.object.isRequired
+    libraryClientApi: PropTypes.object.isRequired,
+    onShareTeacherLibrary: PropTypes.func
   };
 
   state = {
@@ -270,6 +271,7 @@ export default class LibraryPublisher extends React.Component {
 
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
+    const {onShareTeacherLibrary} = this.props;
 
     return (
       <div>
@@ -282,12 +284,23 @@ export default class LibraryPublisher extends React.Component {
         <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
           <Button
+            __useDeprecatedTag
             style={{marginTop: 20}}
             onClick={this.publish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
+          {onShareTeacherLibrary && (
+            <Button
+              __useDeprecatedTag
+              style={{marginTop: 20, marginLeft: 10}}
+              onClick={onShareTeacherLibrary}
+              text={i18n.manageLibraries()}
+              color={Button.ButtonColor.gray}
+            />
+          )}
           {alreadyPublished && (
             <Button
+              __useDeprecatedTag
               style={styles.unpublishButton}
               onClick={this.unpublish}
               text={i18n.unpublish()}

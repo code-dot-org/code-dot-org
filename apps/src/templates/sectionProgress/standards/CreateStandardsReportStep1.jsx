@@ -41,6 +41,7 @@ class CreateStandardsReportStep1 extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             text={i18n.next()}
             onClick={this.props.onNext}
             color={Button.ButtonColor.orange}

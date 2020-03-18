@@ -67,6 +67,7 @@ hu:
     code:
       title: Csatlakozz egy csoporthoz a Code.org-on
       placeholder: Szakasz kód (ABCDEF)
+      instructions_short: Add meg a 6 karakteres szakasz kódod
       submit: Csatlakozás
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -346,6 +347,7 @@ hu:
       signin: Bejelentkezés
       signup: Regisztrálj
       already_registered: Már regisztráltál?
+      pair_programming: Páros programozás
       team: Csapat
       driver: Vezető
       navigator: Navigátor
@@ -876,12 +878,14 @@ hu:
     csp5_2: '2. fejezet: Programozás adatszerkezetekkel'
     cspSurvey: Kérdőív
     cspAssessment: Fejezet végi értékelés
+    csp_postap_1: '2. fejezet: Adatok manipulálása és megjelenítése'
     csp2_1_2018: '2. fejezet: Digitális információ'
     csp_variables: változók
     csp_conditionals: Feltételek
     csp_functions: funkciók
     csp_lists: Listák
     csp_loops: hurkok
+    csp_unit1_2020: '2. fejezet: Digitális információ'
     k5_getting_started: Első lépések
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
@@ -891,6 +895,9 @@ hu:
     minecraft_name: Minecraft Kódolás Órája
     starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blocks)'
     starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
+    download_in_English: 'Letöltés angolul:'
+    download_in_Spanish: 'Letöltés spanyolul:'
+    windows: Windows
     mac: Mac OS X
   view_teacher_guide: Oktatói útmutató megtekintése
   pd:
@@ -912,6 +919,7 @@ hu:
         science: Tudományok
         la: Nyelvek
       resources:
+        khan: Khan Akadémia
         kodable: Kodable
       robotics:
         kodable: Kodable
@@ -923,5 +931,8 @@ hu:
   cookie_banner:
     accept: Egyetértek
   gdpr_dialog:
+    heading: Elfogadod, hogy egy Egyesült Államokban létrejött weboldalt használj?
+    message: A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen
+      az Egyesült Államokban történik.
     true: Igen
   copy: Másol

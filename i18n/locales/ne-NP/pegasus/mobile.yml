@@ -288,6 +288,7 @@
   homepage_action_text_learn: "Start learning"
   homepage_action_text_signpetition: "Sign the petition"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
+  homepage_signpetition_dropdown_text: "I agree"
   homepage_diversity_pledge: "Take the diversity pledge"
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '

@@ -57,6 +57,7 @@ sl:
   trophies: Trofeje
   courses: Predavanja
   courses_page:
+    title_student: Spoznaj Računalništvo
     title_teacher: Poučuj s studio Code
   unplugged_activity: Dejavnost brez prijave
   of: od
@@ -517,6 +518,7 @@ sl:
     caption_time_ago: pred %{time_ago}
     header: Galerija
     header_playlab: Zgodbe in igre
+    header_artist: Umetnik
     report_abuse: Prijavi zlorabo
   landing:
     report_bug: Sporoči napako
