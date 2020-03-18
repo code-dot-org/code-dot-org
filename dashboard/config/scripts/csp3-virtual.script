@@ -17,15 +17,10 @@ level 'csp_applab_functions_virtual', progression: 'Defining and Calling Functio
 level 'U3L03 Define and use turnAround_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Draw a T using turnAround_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 define turnRight and draw a rectangle_virtual', progression: 'Using Functions With Turtle Commands'
-level 'CSP Abstraction in Programming 2_2018_2019_virtual', progression: 'Abstraction in Programming', named: true
 level 'U3L03 - draw rect function_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 - draw step_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Three Steps_virtual', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 draw diamond_virtual', progression: 'Challenge: Draw a Diamond Using Functions'
-level 'U3L03 Assessment_2018_2019_virtual', progression: 'Check Your Understanding', assessment: true
-level 'csp_U3_plan_code_FR_virtual', progression: 'Check Your Understanding', assessment: true
-
-stage 'Functions and Top-Down Design', flex_category: 'csp3_1_2018'
 level 'U3L04 - snowflake_virtual', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions_virtual', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 Assessment1_virtual', progression: 'Check Your Understanding', assessment: true
@@ -49,7 +44,6 @@ level 'U3L07 - createTriangleParam_virtual', progression: 'Drawing Shapes With P
 level 'U3L08 - squareTwoParams_virtual', progression: 'Drawing Shapes With Parameters'
 level 'U3L08 - createTwoParamTriangle_virtual', progression: 'Drawing Shapes With Parameters'
 level 'csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual', progression: 'Check Your Understanding: Defining Functions', assessment: true
-level 'U3 whats a comment_2018_2019_virtual', progression: 'How to add comments to code'
 level 'U3L08 how to add comments_virtual', progression: 'How to add comments to code'
 level 'U3L08 - introUnderTheSea_virtual', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - paramsToStarfish_virtual', progression: 'Under the Sea Drawing with Parameters'
@@ -57,7 +51,6 @@ level 'U3L08 - seaGrass_virtual', progression: 'Under the Sea Drawing with Param
 level 'U3L08 - fish_virtual', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - multiParamFish_virtual', progression: 'Under the Sea Drawing with Parameters'
 level 'U3L08 - randomInput_virtual', progression: 'Under the Sea Drawing with Parameters'
-level 'csp_U3_subgoal_q4_mc_2018_2019_virtual', progression: 'Check Your Understanding: Using Random Numbers', assessment: true
 level 'U3L08 - freePlay_virtual', progression: 'Challenge: Continue Your Drawing With More Functions'
 level 'U3L08 Assessment1_2018_2019_virtual', progression: 'Check Your Understanding', assessment: true
 
@@ -75,3 +68,6 @@ level 'U3L07 - seaGrass_virtual', progression: 'Using Loops to Add Detail to You
 level 'U3L07 - allSeaGrass_virtual', progression: 'Using Loops to Add Detail to Your Drawing'
 level 'U3L07 - sunBeams_virtual', progression: 'Using Loops to Add Detail to Your Drawing'
 level 'U3L07 - Free Play Loops and Random_virtual', progression: 'Project: Under the Sea'
+
+stage 'Make your own Digital Scene', flex_category: 'csp3_1_2018'
+level 'Free_play_digital_scene_virtual', progression: 'Personal Digital Scene'
