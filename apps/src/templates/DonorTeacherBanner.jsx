@@ -282,6 +282,7 @@ export default class DonorTeacherBanner extends Component {
           </form>
 
           <Button
+            __useDeprecatedTag
             onClick={this.handleSubmit}
             style={styles.button}
             size="large"
@@ -291,6 +292,7 @@ export default class DonorTeacherBanner extends Component {
 
           {this.props.showPegasusLink && (
             <Button
+              __useDeprecatedTag
               href={pegasus('/amazon-future-engineer')}
               style={styles.button}
               color={Button.ButtonColor.gray}

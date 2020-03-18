@@ -133,6 +133,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
               {buttons.map((button, index) => (
                 <span key={index}>
                   <Button
+                    __useDeprecatedTag
                     href={button.url}
                     color={Button.ButtonColor.gray}
                     text={button.text}

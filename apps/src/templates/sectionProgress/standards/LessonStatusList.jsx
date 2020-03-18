@@ -8,11 +8,16 @@ import {
   setSelectedLessons
 } from './sectionStandardsProgressRedux';
 import firehoseClient from '../../../lib/util/firehose';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   lessonListItem: {
     display: 'flex',
     flexDirection: 'row'
+  },
+  links: {
+    paddingLeft: 10,
+    color: color.teal
   }
 };
 
@@ -92,12 +97,13 @@ const ComplexLessonComponent = function({lesson}) {
       <div>
         <ProgressBoxForLessonNumber
           completed={lesson.completed}
+          inProgress={lesson.inProgress}
           lessonNumber={lesson.number}
           linkToLessonPlan={lesson.url}
         />
       </div>
       <a
-        style={{paddingLeft: 10}}
+        style={styles.links}
         href={lesson.url}
         target={'_blank'}
         onClick={() => handleLessonLinkClick(lesson)}
@@ -113,7 +119,8 @@ ComplexLessonComponent.propTypes = {
     name: PropTypes.string,
     number: PropTypes.number,
     url: PropTypes.string,
-    completed: PropTypes.bool
+    completed: PropTypes.bool,
+    inProgress: PropTypes.bool
   }),
   sectionId: PropTypes.number,
   scriptId: PropTypes.number

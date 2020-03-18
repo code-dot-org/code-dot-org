@@ -1,18 +1,18 @@
 ---
 title: Computer Science for Good
 nav: csforgood_nav
-video_player: درست
-theme: پاسخگو
+video_player: true
+theme: responsive
 social:
-  "og:title": "Computer Science for Good in Your Classroom"
-  "og:description": "Resources and activities for talking to your students about #CSforGood"
-  "og:image": "http://code.org/images/marketing/talkingtoclass.jpg"
-  "og:image:width": 850
-  "og:image:height": 502
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
+  og:title: Computer Science for Good in Your Classroom
+  og:description: 'Resources and activities for talking to your students about #CSforGood'
+  og:image: http://code.org/images/marketing/talkingtoclass.jpg
+  og:image:width: 850
+  og:image:height: 502
+  og:video: ''
+  og:video:width: ''
+  og:video:height: ''
+  og:video:type: ''
 ---
 
 <center>

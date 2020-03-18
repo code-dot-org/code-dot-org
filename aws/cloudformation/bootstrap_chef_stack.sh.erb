@@ -1,12 +1,3 @@
-#!/bin/bash -x
-# UserData bootstrap script for CloudFormation stack instances.
-
-<% unless daemon -%>
-# Modify cloud-init to re-run this user-data script every time instance restarts.
-# Ref: http://stackoverflow.com/a/10455027
-sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
-<% end -%>
-
 # Bootstrap prerequisites
 apt-get update
 unattended-upgrade
@@ -147,17 +138,4 @@ sudo -u ubuntu bash -c "aws s3 cp s3://$S3_BUCKET/<%=CHEF_KEY%>/bootstrap-$STACK
 <% unless daemon -%>
 # Workaround for version-controlled files modified by seed.
 sudo -u ubuntu bash -c "cd /home/ubuntu/$ENVIRONMENT && git reset --hard"
-<% end -%>
-
-# Signal CloudFormation resource.
-aws cloudformation signal-resource \
-  --unique-id $INSTANCE_ID \
-  --stack-name $STACK \
-  --logical-resource-id $RESOURCE_ID \
-  --status $STATUS \
-  --region $REGION \
-  || true
-
-<% if shutdown -%>
-shutdown -h now
 <% end -%>
