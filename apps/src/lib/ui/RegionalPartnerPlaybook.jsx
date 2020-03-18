@@ -132,9 +132,12 @@ export default class RegionalPartnerPlaybook extends Component {
   render() {
     return (
       <ResourceCardResponsiveContainer>
-        {CARDS.map(card => (
+        {CARDS.map((card, index) => (
           <ResourceCard
             {...card}
+            // cards will not be reordered (or changed at all, for that
+            // matter), so we're fine to use the index as the key
+            key={index}
             buttonText="Learn More"
             allowWrap={true}
             allowMarkdown={true}
