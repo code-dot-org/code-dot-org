@@ -146,7 +146,7 @@
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "long_instructions": "# Free Play!\r\n(Optional)\r\n\r\nMess around with your \"Under the Sea\" scene to make it do different things.  \r\n\r\n**Ideas:**\r\n* Make different amounts of each component.\r\n* Play with the ranges of random values.\r\n* Add other creatures.\r\n* Play with color values to give the scene a different feel (nighttime? red dawn?).\r\n* Get creative!\r\n\r\n# Don't Worry... You Can't Screw It Up\r\n* Play around as much as you want - you can **always go back to a previous version**.\r\n* Each time you hit \"Run\" your code is saved in a way that lets you get back to it.\r\n* Notice that there is button at the top of the page called **Version History** that lets you see and use any previous version of your code.\r\n\r\n![](https://images.code.org/881d72d190c0637705f8021369962701-image-1443117323816.gif)",
+    "long_instructions": "# Free Play!\r\n\r\nMess around with your \"Under the Sea\" scene to make it do different things.  \r\n\r\n**Ideas:**\r\n* Make different amounts of each component.\r\n* Play with the ranges of random values.\r\n* Add other creatures.\r\n* Play with color values to give the scene a different feel (nighttime? red dawn?).\r\n* Get creative!\r\n\r\n# Don't Worry... You Can't Screw It Up\r\n* Play around as much as you want - you can **always go back to a previous version**.\r\n* Each time you hit \"Run\" your code is saved in a way that lets you get back to it.\r\n* Notice that there is button at the top of the page called **Version History** that lets you see and use any previous version of your code.\r\n\r\n![](https://images.code.org/881d72d190c0637705f8021369962701-image-1443117323816.gif)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate_virtual",
@@ -161,34 +161,27 @@
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
     "instructions_important": "false",
-    "log_conditions": [
-      {
-        "entries": [
-          "[forTest]"
-        ],
-        "matchType": "exact",
-        "minTimes": 100,
-        "message": "Are you looping enough to make a whole scene? We've detected that in total of all your loops iterate fewer than 100 times.  It should be more than that."
-      },
-      {
-        "entries": [
-          "[forInit]"
-        ],
-        "matchType": "inexact",
-        "minTimes": 5,
-        "message": "Are you looping enough to make a whole scene? We've detected that less than 5 loops ever get entered.  It should be more than that."
-      }
-    ],
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "**Validation Note:** We have turned off *most* validation here to allow for free play.  We check that the code isn't blank, but only the following:\r\n\r\n* At least 5 loop initializations (a full project would have ~50 or more)\r\n* At least 100 loop interations (a full project would have more than 500)\r\n\r\n",
     "parent_level_id": 16969,
     "name_suffix": "_virtual",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-18 01:54:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-18 01:55:02 +0000\",\"changed\":[\"code_functions\",\"log_conditions\",\"teacher_markdown\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
