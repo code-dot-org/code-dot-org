@@ -4,13 +4,23 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import msg from '@cdo/locale';
+import {svgToDataURI} from '@cdo/apps/imageUtils';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
+import {ChartType} from '../dataUtils';
 import * as dataStyles from '../dataStyles';
+
+const INITIAL_STATE = {
+  isSnapshotOpen: false,
+  isCopyPending: false,
+  isSavePending: false,
+  imageSrc: require('./placeholder.png')
+};
 
 class Snapshot extends React.Component {
   static propTypes = {
+    chartType: PropTypes.number.isRequired,
     chartTitle: PropTypes.string.isRequired,
     selectedOptions: PropTypes.string.isRequired,
     // Provided via Redux
@@ -18,12 +28,7 @@ class Snapshot extends React.Component {
     projectName: PropTypes.string.isRequired
   };
 
-  state = {
-    isSnapshotOpen: false,
-    isCopyPending: false,
-    isSavePending: false,
-    imageSrc: require('./placeholder.png')
-  };
+  state = {...INITIAL_STATE};
 
   componentDidMount() {
     this.isMounted_ = true;
@@ -35,17 +40,38 @@ class Snapshot extends React.Component {
 
   handleOpen = () => {
     this.setState({isSnapshotOpen: true});
-    setTimeout(() => {
-      if (this.isMounted_) {
-        this.setState({
-          imageSrc:
-            'https://studio.code.org/blockly/media/skins/studio/robot_spritesheet_200px.png'
-        });
-      }
-    }, 1000);
+    this.getImageFromChart();
   };
 
-  handleClose = () => this.setState({isSnapshotOpen: false});
+  handleClose = () => this.setState(INITIAL_STATE);
+
+  getImageFromChart = () => {
+    switch (this.props.chartType) {
+      case ChartType.BAR_CHART:
+      case ChartType.HISTOGRAM:
+      case ChartType.SCATTER_PLOT:
+        this.getImageFromGoogleChart();
+        break;
+      case ChartType.CROSS_TAB:
+        this.getImageFromCrossTab();
+        break;
+      default:
+    }
+  };
+
+  getImageFromCrossTab = () => {};
+
+  getImageFromGoogleChart = () => {
+    const svg = document.getElementsByTagName('svg')[7];
+    if (!svg) {
+      return;
+    }
+    svgToDataURI(svg, 'image/png', {renderer: 'native'}).then(imageURI => {
+      if (this.isMounted_) {
+        this.setState({imageSrc: imageURI});
+      }
+    });
+  };
 
   getPngBlob = () => {
     const element = document.getElementById('snapshot');

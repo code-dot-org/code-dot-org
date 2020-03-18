@@ -98,12 +98,13 @@ export function imageFromURI(uri) {
   });
 }
 
-export function svgToDataURI(svg, imageType) {
+export function svgToDataURI(svg, imageType, options) {
   imageType = imageType || 'image/png';
+  options = options || {};
   return new Promise(resolve => {
     // Use lazy-loading to keep canvg (60KB) out of the initial download.
     import('./util/svgelement-polyfill').then(() => {
-      svg.toDataURL(imageType, {callback: resolve});
+      svg.toDataURL(imageType, {...options, callback: resolve});
     });
   });
 }
