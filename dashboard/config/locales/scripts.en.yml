@@ -15496,8 +15496,10 @@ en:
               name: Comparing Make Lessons
             Prework and Saturday Session Resources:
               name: Prework and Saturday Session Resources
+            Saturday Session Resources:
+              name: Saturday Session Resources
           title: CS Principles 20-21 Curriculum Training for Facilitators
-          description_audience: ''
+          description_audience: CS Principles Facilitators
           description_short: ''
           description: Welcome to the CSP Facilitator Pre-work for the April call! This will be focused on deepening the understanding of EIPM, content in Unit 5, and the new datasets available in the course. This work is essential to completing before the April call since we will be processing and discussing the work together in the call.
         csp3-virtual:
@@ -15683,6 +15685,8 @@ en:
               name: Text and Captioned Scenes
               description_student: ''
               description_teacher: ''
+            Sample Programs:
+              name: Sample Programs
         jess-test-script:
           stages:
             Our First Stage:
@@ -15696,9 +15700,9 @@ en:
           description_short: ''
           description: ''
         csd2-virtual:
-          title: CSD Unit 2 - Web Development
-          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
-          description_short: "  Learn to build your own web site in Web Lab."
+          title: Self Paced Introduction to Web Lab
+          description: You’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet.
+          description_short: Learn to build your own web site in Web Lab.
           description_audience: ''
           stages:
             Exploring Web Pages:
@@ -15785,6 +15789,8 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Purpose of a Websites:
+              name: Purpose of a Websites
         csp5-virtual:
           title: Self Paced Introduction to App Lab
           description: This unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This uni uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
