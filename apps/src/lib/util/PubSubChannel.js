@@ -4,14 +4,14 @@
 
 /**
  * Javascript interface for a publish/subscribe channel.
- * @interface PubSubChannel
+ * @interface IPubSubChannel
  */
 
 /**
  * Subscribe to an event, so that the given callback is called when the
  * event occurs.
  * @function
- * @name PubSubChannel#subscribe
+ * @name IPubSubChannel#subscribe
  * @param {string} eventName - The name of the event to bind to.
  * @param {function} callback - A function to be called whenever the event is
  *        triggered.
@@ -20,11 +20,11 @@
 /**
  * Unsubscribe from a given event
  * @function
- * @name PubSubChannel#unsubscribe
+ * @name IPubSubChannel#unsubscribe
  * @param {string} eventName - The name of the event to bind to.
  */
 
-/** @implements PubSubChannel */
+/** @implements IPubSubChannel */
 export class NullChannel {
   /**
    * Subscribe to an event so the given callback is called when the event occurs.
@@ -41,7 +41,7 @@ export class NullChannel {
   unsubscribe(eventName) {}
 }
 
-/** @implements PubSubChannel */
+/** @implements IPubSubChannel */
 export class PusherChannel {
   constructor(pusherApiChannel) {
     /**
