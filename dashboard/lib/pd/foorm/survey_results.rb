@@ -20,25 +20,40 @@ module Pd::Foorm
       }
     end
 
-    def self.get_rollup_for_workshop(workshop_id)
+    def self.get_workshop_report(workshop_id)
       return unless workshop_id
 
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
-
-      parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
-      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
-      rollup_configuration = JSON.parse(File.read('config/foorm/rollups/rollups_by_course.json'))
+      parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
 
       ws_data = Pd::Workshop.find(workshop_id)
-      unless rollup_configuration && rollup_configuration[ws_data.course]
-        return {course_name: ws_data.course,
-                questions: parsed_forms,
-                this_workshop: summarized_answers}
-      end
+      result_data = {course_name: ws_data.course,
+                     questions: parsed_forms,
+                     this_workshop: summarized_answers}
+      rollup = get_rollup_from_parsed_data(parsed_forms, summarized_answers, ws_data.course)
+      return result_data unless rollup
 
-      questions_to_summarize = rollup_configuration[ws_data.course]
+      result_data[:rollups] = {}
+      result_data[:rollups][:single_workshop] = {
+        averages: rollup[:averages],
+        response_count: rollup[:response_count],
+        workshop_id: ws_data.id
+      }
+      return result_data
+    end
 
-      Pd::Foorm::RollupCreator.calculate_average_rollup(parsed_forms, form_submissions, questions_to_summarize)
+    def self.parse_and_summarize_forms(ws_submissions, form_submissions, forms)
+      parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
+      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
+      return [parsed_forms, summarized_answers]
+    end
+
+    def self.get_rollup_from_parsed_data(parsed_forms, summarized_answers, course_name)
+      rollup_configuration = JSON.parse(File.read('config/foorm/rollups/rollups_by_course.json'))
+      return unless rollup_configuration && rollup_configuration[course_name]
+
+      questions_to_summarize = rollup_configuration[course_name]
+      Pd::Foorm::RollupCreator.calculate_averaged_rollup(parsed_forms, summarized_answers, questions_to_summarize)
     end
 
     # TODO: once we store facilitator data
