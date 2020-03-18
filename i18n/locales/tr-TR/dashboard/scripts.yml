@@ -8660,6 +8660,10 @@ tr:
               name: Proje - Bir oyun tasarla
               description_student: Sınıf, önceki iki dersteki proje rehberi kullanarak orjinal oyunlar planlar ve oluşturur. Bireysel veya çiftler halinde çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir. Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları paylaşır.
               description_teacher: Öğrenciler, projelerini yönlendirmek için önceki iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun türüne karar verecekler. Ardından, oyunun davranışını açıklayacak ve oluşturmaları gereken değişkenleri, hareketli nesneleri ve işlevleri kapsam altına alacakları boş bir proje kılavuzu tamamlayacaklardır. Code Studio'da, bir dizi seviye, onlara bu planı uygulamak için kullanabilecekleri genel bir sıra üzerinde bilgi ister. Süreç boyunca, öğrenciler akran incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+            Shapes and Parameters:
+              name: Şekiller ve Parametreler
+            Random Numbers:
+              name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
         maddie-test:
@@ -9118,10 +9122,14 @@ tr:
               name: Game Lab' da Çizim
               description_student: Sınıf, bu bölüm için programlama ortamı olan Oyun Laboratuvarı ile tanıştırılır ve Oyun Laboratuvarı kullanmaya ekrandaki şekillerin pozisyonlarını ayarlamakla başlar. Bu ders, basit bir kaç komutla hata ayıklama ve sıralamanın temellerini içerir. Dersin sonunda, sınıf, önceki derste tasarladıkları resmin çevrim içi bir versiyonun oluşturur.
               description_teacher: Sınıf, bu bölüm için programlama ortamı olan Game Lab ile tanıştırılır ve ekrandaki şekillerin pozisyonları kullanmakla başlar. Öğrenciler basit bir kaç komutla hata ayıklama ve sıralamanın temellerini öğrenirler. Dersin sonunda, öğrenciler, önceki derste çizim aracı ile yaptıkları resmin bir benzerini yapabileceklerdir.
+            Shapes and Parameters:
+              name: Şekiller ve Parametreler
             Variables:
               name: Değişkenler
               description_student: Bu derste, rastgele üretilen bir numarayı kaydetmenin veya bir numarayı etiketlemenin bir yolu olarak değişkenler tanıtılır. Sınıf, değişkenlerin amacının basit bir açıklamasıyla derse başlar ve yeni blokları kullanarak alıştırma yapar. Daha sonra, sınıf, rastgele bir numarayı kaydetmek için değişkenleri kullanır, programların aynı rastgele sayıyı birden çok kez kullanmalarını sağlar.
               description_teacher: Bu derste, öğrenciler, rastgele üretilen bir sayıyı kaydetmek veya programlarındaki bir sayıyı etiketlemek için değişkenleri nasıl kullanacaklarını öğrenirler. Öğrenciler, bir değişkenin amacının basit bir açıklamasıyla derse başlar. Öğrenciler, bir sayıyı isimlendirmenin veya etiketlemenin bir yolu olarak bir değişken modelini pekiştirdikleri bir seviyeyi tamamlarlar. Öğrenciler, değişkenlerin gerçekten değerleri kaydettiğini veya depoladığı görmek için, rastgele bir sayıyı kaydetmek amacıyla değişkenleri kullanırlar, aynı rastgele numarayı kendi programlarında birden çok kez kullanırlar.
+            Random Numbers:
+              name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
             The Draw Loop:

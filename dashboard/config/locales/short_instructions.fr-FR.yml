@@ -482,6 +482,8 @@ fr-FR:
       CSD U5 black white images pixelation 5: Dessine ce que tu veux
       CSD U5 black white images pixelation 5_2018: Dessine ce que tu veux
       CSD U5 black white images pixelation 5_2019: Dessine ce que tu veux
+      Choose Your Own Adventure: Tu peux faire ce que tu veux dans Play Lab ! Voici
+        un exemple de Choisir ta propre aventure dans Play Lab.
       Course 4 Artist 1: 'Aide-moi à finir de dessiner ma boîte. (Chaque ligne fait
         200 pixels de long) '
       Course 4 Artist 10: |-
@@ -930,6 +932,8 @@ fr-FR:
         détails)
       Dance_Party_extras_visible: Où iraient-ils ? (Clic "Plus" pour les détails)
       Dance_Party_extras_visible_2019: Où iraient-ils ? (Clic "Plus" pour les détails)
+      Find the Wizard: Construis ce que tu veux. Ceci est un exemple d'un jeu de devinettes
+        portant sur les nombres !
       FoodFight: C'est un exemple de jeu que tu peux créer dans le Labo de jeux.
       Function intro Ryan: Utilisez deux fois la fonction « construire un pont » pour
         créer un passage vers la torche.
@@ -941,6 +945,8 @@ fr-FR:
       Geometric Sun_2018: |-
         Idée de projet: Crée un motif en utilisant des idées géométriques comme des moules.
         Cela demande de la persistance et de la planification!
+      Guess The Number: Construis ce que tu veux. Ceci est un exemple d'un jeu de
+        devinettes portant sur les nombres !
       HOC 2018 Level_1: Récupérez un bateau dans le coffre.
       HOC 2018 Level_10: Atteins l'entrée de ce monument sous-marin.
       HOC 2018 Level_11: Construis un conduit avec de la prismarine dans le monument
@@ -1309,9 +1315,9 @@ fr-FR:
         secret est dans la variable « compteur »! \\\r\n\\\r\nN'oubliez pas : Si ta
         boucle va en augmentant, l'incrément est ajouté à ta variable \"compteur\"
         à chaque boucle."
-      NEW Course 4 Bee For Loops 8: |-
-        Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
-        Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
+      NEW Course 4 Bee For Loops 8: 'Tu as compris ! Quelle doit être ton augmentation
+        pour recueillir 3, 6, 9, 12, 15 nectars ?Indice : que dois-tu ajouter à chaque
+        numéro pour obtenir le nombre suivant ?'
       NEW Course 4 Bee For Loops 9: Si ta boucle compte à rebours, l'augmentation
         est soustraite de ta variable «Compteur» à chaque boucle. Quelle doit être
         ton augmentation pour recueillir 15, puis 12 et enfin 9, 6, 3 nectars ?
@@ -1357,10 +1363,10 @@ fr-FR:
         pour atteindre le mouton.
       Overworld Place Wall: Chaque maison commence par un mur. Construis la première
         partie de ta maison en mettant les commandes « Poser » et « Avancer » à l'intérieur
-        de la boucle « Répéter ».
+        de la boucle répéter.
       Overworld Place Wall_2019: Chaque maison commence par un mur. Construis la première
         partie de ta maison en mettant les commandes « Poser » et « Avancer » à l'intérieur
-        de la boucle « Répéter ».
+        de la boucle répéter.
       Overworld Plant Crops: Il est toujours utile de prévoir à l'avance. Plantez
         des cultures sur les deux rives pour ne pas manquer de nourriture par la suite.
       Overworld Plant Crops_2019: Il est toujours utile de prévoir à l'avance. Plantez
@@ -1414,10 +1420,10 @@ fr-FR:
         !
       Underground Avoiding Lava: La lave se cache sous certains de ces blocs, que
         tu devras couvrir avant d'avancer. Une commande « Si » serait très utile ici.
-        Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
+        Ajoute une commande «avancer» au bon endroit pour extraire ces blocs.
       Underground Avoiding Lava_2019: La lave se cache sous certains de ces blocs,
         que tu devras couvrir avant d'avancer. Une commande « Si » serait très utile
-        ici. Ajoute une commande «Avancer» au bon endroit pour extraire ces blocs.
+        ici. Ajoute une commande «avancer» au bon endroit pour extraire ces blocs.
       Underground If Statements: Maintenant, les choses deviennent difficiles. Extrais
         3 pierres rouges mais ne tombe pas dans la lave. Utilise une commande « Si
         » pour placer des pavés sur toute la lave que tu découvres.
@@ -1523,11 +1529,18 @@ fr-FR:
         Peux-tu dessiner une maison ? Dessine-la comme tu préfères ! Essaie de trouver des motifs qui se répètent !
       course1_artist_loops_challenge2: Jouons à un jeu ! Dessine autant de X que tu
         peux. Est-ce que tu peux en avoir trois en ligne ?
+      course1_artist_loops_challenge4: '"C''est le moment de lancer les dés ! Peux-tu
+        m''aider à les dessiner ?"'
       course1_collector_loops_challenge1: _"Tu peux m'aider à identifier des erreurs?
         Je sais vers où je souhaite aller, mais je ne suis pas sur du nombre d'étapes
         que je dois faire."_
+      course1_collector_loops_challenge4: Allons chercher le trésor ! Aide-moi à travers
+        chaque ligne puis reviens pour commencer la ligne suivante. Peux-tu trouver
+        un schéma commun ?
       course1_maze_debugging_challenge1: Corrige ce niveau. Enlève les blocs en trop,
         et ajoute les blocs manquant. Amène l'oiseau jusqu'au cochon!
+      course1_maze_debugging_challenge2: Débogue ce niveau. Ce sont les bons blocs,
+        mais ils sont dans le désordre !
       course1_maze_seq_challenge1: Trace le chemin et amène-moi à ce stupide cochon.
         Évite le TNT ou les plumes vont voler !
       course1_maze_seq_challenge2: Tu peux seulement te déplacer jusqu'à quatre fois
@@ -1562,6 +1575,17 @@ fr-FR:
         le miel?
       course3_bee_functions_challenge1: Tu dois te débrouiller pour ce défi. Cela
         peut-être plus compliqué qu'il n'y parait!
+      course3_bee_functions_challenge3: Crée une nouvelle fonction pour collecter
+        tout le nectar et le miel tant qu'il y a un chemin à parcourir. Utilise-la
+        pour résoudre l'énigme !
+      course3_bee_functions_challenge4: Utilise tout ce que tu as appris pour résoudre
+        cette énigme !
+      course3_farmer_condLoops_challenge2: Récolte tout pour terminer le niveau.
+      course3_farmer_until_challenge2: Utilise les blocs Si/Sinon pour suivre le chemin
+        qui tourne. À chaque tournant, utilise la commande `supprimer 1` dans une
+        boucle pour enlever les tas.
+      course3_maze_until_challenge1: Aucun indice, simplement un défi. Amène le zombie
+        jusqu’au tournesol.
       course3_playLab_challenge1: Il doit se produire quelque chose lorsque tu as
         assez de points ou lorsque tu n'en as plus assez. Ajoute du code aux fonctions
         `gagner le jeu` et `perdre le jeu` pour faire fonctionner le jeu à ton gout.
@@ -1573,6 +1597,9 @@ fr-FR:
         des modifications pour voir quels changements sont produits. Comprenez-vous
         comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre
         quelque chose de totalement différent à la place.)
+      course4_bee_fwp_challenge1: Utilise une `boucle for` dans une fonction pour
+        récolter tout le maïs. La même `boucle for` peut compter jusqu'à différentes
+        valeurs maximales en utilisant le paramètre de 'longueur'.
       course4_collector_nested_loops_challenge2: Aide le collectioneur à atteindre
         au moins de piles de diamant en utilisant seulement les blocs de la boite
         à outils. C'est possible de ramasser les 4.
@@ -1819,10 +1846,28 @@ fr-FR:
       courseA_video_events_2019: Besoin d'un meilleur combo Labo de jeux/Evènements
       courseB_artist_loops1: C'est un nouveau puzzle appelé "Artiste". Joue avec ce
         niveau et dessine quelque chose d'amusant.
+      courseB_artist_loops10: Utilise ce que tu as appris pour dessiner une image
+        de ce que tu penses que l'artiste a vu quand il est rentré à la maison.
+      courseB_artist_loops10_2018: Utilise ce que tu as appris pour dessiner une image
+        de ce que tu penses que l'artiste a vu quand il est rentré à la maison.
+      courseB_artist_loops10_2019: Utilise ce que tu as appris pour dessiner une image
+        de ce que tu penses que l'artiste a vu quand il est rentré à la maison.
       courseB_artist_loops1_2018: C'est un nouveau puzzle appelé "Artiste". Joue avec
         ce niveau et dessine quelque chose d'amusant.
       courseB_artist_loops1_2019: C'est un nouveau puzzle appelé "Artiste". Joue avec
         ce niveau et dessine quelque chose d'amusant.
+      courseB_artist_loops2: L'Artiste essaie de tracer une ligne droite **6** fois,
+        mais n'y arrive pas.  Peux-tu l'aider?
+      courseB_artist_loops2_2018: L'Artiste essaie de tracer une ligne droite **6**
+        fois, mais n'y arrive pas.  Peux-tu l'aider?
+      courseB_artist_loops2_2019: L'Artiste essaie de tracer une ligne droite **6**
+        fois, mais n'y arrive pas.  Peux-tu l'aider?
+      courseB_artist_loops3: Aide l'artiste à tracer une ligne 7 fois pour faire un
+        mur de jardin.
+      courseB_artist_loops3_2018: Aide l'artiste à tracer une ligne 7 fois pour faire
+        un mur de jardin.
+      courseB_artist_loops3_2019: Aide l'artiste à tracer une ligne 7 fois pour faire
+        un mur de jardin.
       courseB_artist_loops4: Maintenant on a besoin que la terre soit prêt à être
         planté. Trouvez les bugs dans le code et aidez l'artiste à préparer le sol.
       courseB_artist_loops4_2018: Maintenant on a besoin que la terre soit prêt à
@@ -1831,6 +1876,47 @@ fr-FR:
       courseB_artist_loops4_2019: Maintenant on a besoin que la terre soit prêt à
         être planté. Trouvez les bugs dans le code et aidez l'artiste à préparer le
         sol.
+      courseB_artist_loops5: Il est temps de réparer les escaliers ! Répète ce modèle
+        **5** fois pour que l'artiste puisse atteindre le haut des buissons.
+      courseB_artist_loops5_2018: Il est temps de réparer les escaliers ! Répète ce
+        modèle **5** fois pour que l'artiste puisse atteindre le haut des buissons.
+      courseB_artist_loops5_2019: Il est temps de réparer les escaliers ! Répète ce
+        modèle **5** fois pour que l'artiste puisse atteindre le haut des buissons.
+      courseB_artist_loops6: Grimper à la vigne et voir où elle va ?
+      courseB_artist_loops6_2018: Grimper à la vigne et voir où elle va ?
+      courseB_artist_loops6_2019: Grimper à la vigne et voir où elle va ?
+      courseB_artist_loops7: "**Défi :** C'est un jardin caché ! Marchons autour."
+      courseB_artist_loops7_2018: "**Défi :** C'est un jardin caché ! Marchons autour."
+      courseB_artist_loops7_2019: "**Défi :** C'est un jardin caché ! Marchons autour."
+      courseB_artist_loops8: Il est temps de rentrer à la maison. Peux-tu réparer
+        cette échelle, en utilisant un seul bloc, pour aider l'artiste à descendre
+        ?
+      courseB_artist_loops8_2018: Il est temps de rentrer à la maison. Peux-tu réparer
+        cette échelle, en utilisant un seul bloc, pour aider l'artiste à descendre
+        ?
+      courseB_artist_loops8_2019: Il est temps de rentrer à la maison. Peux-tu réparer
+        cette échelle, en utilisant un seul bloc, pour aider l'artiste à descendre
+        ?
+      courseB_artist_loops9: Prenons le raccourci vers la maison en passant sur l'étang.
+        Peux-tu aider l'artiste à rester sur les pierres ?
+      courseB_artist_loops9_2018: Prenons le raccourci vers la maison en passant sur
+        l'étang. Peux-tu aider l'artiste à rester sur les pierres ?
+      courseB_artist_loops9_2019: Prenons le raccourci vers la maison en passant sur
+        l'étang. Peux-tu aider l'artiste à rester sur les pierres ?
+      courseB_artist_loops_challenge1: '"C''est le moment de lancer les dés ! Peux-tu
+        m''aider à les dessiner ?"'
+      courseB_artist_loops_challenge1_2018: '"C''est le moment de lancer les dés !
+        Peux-tu m''aider à les dessiner ?"'
+      courseB_artist_loops_challenge1_2019: '"C''est le moment de lancer les dés !
+        Peux-tu m''aider à les dessiner ?"'
+      courseB_artist_loops_challenge2: Dessine autant de X que possible. Peux-tu en
+        obtenir 3 dans une même rangée ?
+      courseB_artist_loops_challenge2_2018: Dessine autant de X que possible. Peux-tu
+        en obtenir 3 dans une même rangée ?
+      courseB_artist_loops_challenge2_2019: Dessine autant de X que possible. Peux-tu
+        en obtenir 3 dans une même rangée ?
+      courseB_collector_loops1: Voici Laurel l'Aventurière !  Peux-tu la déplacer
+        pour attraper un trésor?
       courseB_collector_loops10: Aide Laurel à récupérer tous les diamants de cette
         grotte.
       courseB_collector_loops10_2018: Aide Laurel à récupérer tous les diamants de
@@ -1842,29 +1928,172 @@ fr-FR:
         peux!
       courseB_collector_loops11_2019: Eurêka !  Récupère autant de trésors que tu
         peux!
+      courseB_collector_loops2: Récupère les quatre piles pour passer ce niveau.
+      courseB_collector_loops2_2018: Récupère les quatre piles pour passer ce niveau.
+      courseB_collector_loops2_2019: Récupère les quatre piles pour passer ce niveau.
+      courseB_collector_loops3: Comment Laurel peut-elle récupérer les 5 piles de
+        trésor en utilisant seulement un [blockly block][0]bloc ?
+      courseB_collector_loops3_2018: Comment Laurel peut-elle récupérer les 5 piles
+        de trésor en utilisant seulement un [blockly block][0]bloc ?
+      courseB_collector_loops3_2019: Comment Laurel peut-elle récupérer les 5 piles
+        de trésor en utilisant seulement un [blockly block][0]bloc ?
       courseB_collector_loops4: Modifie le chemin de Laurel pour récupérer tous les
         diamants.
       courseB_collector_loops4_2018: Modifie le chemin de Laurel pour récupérer tous
         les diamants.
       courseB_collector_loops4_2019: Modifie le chemin de Laurel pour récupérer tous
         les diamants.
+      courseB_collector_loops5: 'Ajoute au code du dernier casse-tête pour obtenir
+        tout le trésor. '
+      courseB_collector_loops5_2018: 'Ajoute au code du dernier casse-tête pour obtenir
+        tout le trésor. '
+      courseB_collector_loops5_2019: 'Ajoute au code du dernier casse-tête pour obtenir
+        tout le trésor. '
+      courseB_collector_loops6: Trouve le code pour aider Laurel à obtenir tout le
+        trésor !
+      courseB_collector_loops6_2018: Trouve le code pour aider Laurel à obtenir tout
+        le trésor !
+      courseB_collector_loops6_2019: Trouve le code pour aider Laurel à obtenir tout
+        le trésor !
+      courseB_collector_loops7: Écris le code pour obtenir tout ce trésor.
+      courseB_collector_loops7_2018: Écris le code pour obtenir tout ce trésor.
+      courseB_collector_loops7_2019: Écris le code pour obtenir tout ce trésor.
       courseB_collector_loops8: "**Défi.** Ces diamants montent en escalier! Ecris
         le code pour aider Laurel à tous les récupérer."
       courseB_collector_loops8_2018: "**Défi.** Ces diamants montent en escalier!
         Ecris le code pour aider Laurel à tous les récupérer."
       courseB_collector_loops8_2019: "**Défi.** Ces diamants montent en escalier!
         Ecris le code pour aider Laurel à tous les récupérer."
+      courseB_collector_loops9: _"Aide-moi à obtenir le trésor du fond de cette vallée."_
+      courseB_collector_loops9_2018: _"Aide-moi à obtenir le trésor du fond de cette
+        vallée."_
+      courseB_collector_loops9_2019: _"Aide-moi à obtenir le trésor du fond de cette
+        vallée."_
+      courseB_collector_loops_challenge1: 'Cette fois, tu as un nombre limité de blocs.
+        Collecte tout le trésor ! '
+      courseB_collector_loops_challenge1_2018: 'Cette fois, tu as un nombre limité
+        de blocs. Collecte tout le trésor ! '
+      courseB_collector_loops_challenge1_2019: 'Cette fois, tu as un nombre limité
+        de blocs. Collecte tout le trésor ! '
+      courseB_collector_loops_challenge2: Allons chercher le trésor ! Aide-moi à travers
+        chaque ligne puis reviens pour commencer la ligne suivante. Peux-tu trouver
+        un schéma commun ?
       courseB_collector_loops_challenge2a: Aide Laurel à obtenir au moins **5** diamants
         pour terminer le puzzle.
       courseB_collector_loops_challenge2a_2018: Aide Laurel à obtenir au moins **5**
         diamants pour terminer le puzzle.
       courseB_collector_loops_challenge2a_2019: Aide Laurel à obtenir au moins **5**
         diamants pour terminer le puzzle.
+      courseB_maze_seq1: Joue avec ces blocs pour voir ce qu'ils font faire à l'oiseau!
+        Il faut que tu amènes l'oiseau jusqu'au cochon pour terminer le niveau.
+      courseB_maze_seq10: Corrige les bugs pour amener l'oiseau jusqu'au cochon.
+      courseB_maze_seq11: À toi, maintenant ! Amène l'oiseau jusqu'au cochon.
+      courseB_maze_seq12: Maintenant attrape ce cochon comme tu !
       courseB_maze_seq2: _"Une Erreur! Modifie le code pour me faire arriver au cochon."_
+      courseB_maze_seq3: '"Corrige le code pour m''amener jusqu''au cochon !"'
+      courseB_maze_seq4: Ajoute 2 blocs pour amener l’oiseau jusqu'au cochon.
+      courseB_maze_seq5: Maintenant, essaie ce casse-tête depuis le début !
       courseB_maze_seq6: Bouge dans une direction, puis dans une autre pour amener
         l'oiseau jusqu'au cochon !
       courseB_maze_seq7: Trouve ce qui manque, puis ajoute des blocs pour amener l'oiseau
         jusqu'au cochon!
+      courseB_maze_seq8: À ton tour ! Que dois-tu faire pour amener l'oiseau jusqu'au
+        cochon?
+      courseB_maze_seq9: 'Défi : Déplace-toi autour de la TNT pour amener l''oiseau
+        jusqu''au cochon.'
+      courseB_maze_seq_challenge1: Peux-tu trouver un chemin avant d'épuiser tous
+        tes blocs ?
+      courseB_maze_seq_challenge1_2018: Peux-tu trouver un chemin avant d'épuiser
+        tous tes blocs ?
+      courseB_maze_seq_challenge1_2019: Peux-tu trouver un chemin avant d'épuiser
+        tous tes blocs ?
+      courseB_maze_seq_challenge2: Débogue ce niveau. Ce sont les bons blocs, mais
+        ils sont dans le désordre !
+      courseB_maze_seq_challenge2_2018: Débogue ce niveau. Ce sont les bons blocs,
+        mais ils sont dans le désordre !
+      courseB_maze_seq_challenge2_2019: Débogue ce niveau. Ce sont les bons blocs,
+        mais ils sont dans le désordre !
+      courseB_playLab_events1: Vois si tu peux deviner ce que fait chaque bloc.
+      courseB_playLab_events1_2018: Vois si tu peux deviner ce que fait chaque bloc.
+      courseB_playLab_events1_2019: Vois si tu peux deviner ce que fait chaque bloc.
+      courseB_playlab_events2: Fais dire quelque chose à Daisy le Dragon lorsque tu
+        cliques sur "Exécuter".
+      courseB_playlab_events2_2018: Fais dire quelque chose à Daisy le Dragon lorsque
+        tu cliques sur "Exécuter".
+      courseB_playlab_events2_2019: Fais dire quelque chose à Daisy le Dragon lorsque
+        tu cliques sur "Exécuter".
+      courseB_playlab_events3: Utilise un événement pour faire passer Daisy le Dragon
+        à une humeur aléatoire lorsque tu cliques sur elle.
+      courseB_playlab_events3_2018: Utilise un événement pour faire passer Daisy le
+        Dragon à une humeur aléatoire lorsque tu cliques sur elle.
+      courseB_playlab_events3_2019: Utilise un événement pour faire passer Daisy le
+        Dragon à une humeur aléatoire lorsque tu cliques sur elle.
+      courseB_playlab_events4: Le Temps des Chevaliers ! Ajoute un événement pour
+        que le chevalier se déplace vers le dragon lorsque l'on clique sur la flèche
+        gauche.
+      courseB_playlab_events5: À présent, ajoute un événement qui permet au chevalier
+        de fuir le dragon lorsque tu appuies sur la flèche droite.
+      courseB_playlab_events6: Aide ton chevalier à récupérer tous les drapeaux !
+        Pour cela, tu dois ajouter des événements pour aider le chevalier à monter,
+        descendre, aller à gauche et droite.
+      courseB_playlab_events6_2018: Aide ton chevalier à récupérer tous les drapeaux
+        ! Pour cela, tu dois ajouter des événements pour aider le chevalier à monter,
+        descendre, aller à gauche et droite.
+      courseB_playlab_events6_2019: Aide ton chevalier à récupérer tous les drapeaux
+        ! Pour cela, tu dois ajouter des événements pour aider le chevalier à monter,
+        descendre, aller à gauche et droite.
+      courseB_playlab_events7: Rends ce jeu amusant en faisant disparaître le chevalier
+        quand il se heurte au dragon, en chemin pour récupérer les drapeaux ! Joue
+        un son quand ils entrent en collision pour que ça semble plus réel.
+      courseB_playlab_eventsFP: Sois imaginatif. Que peux-tu faire pour rendre ce
+        jeu plus amusant ?
+      courseB_playlab_events_challenge1: Fais bouger les animaux vers le bas lorsque
+        tu appuies sur ▼.
+      courseB_playlab_events_challenge1_2018: Fais bouger les animaux vers le bas
+        lorsque tu appuies sur ▼.
+      courseB_playlab_events_challenge1_2019: Fais bouger les animaux vers le bas
+        lorsque tu appuies sur ▼.
+      courseB_playlab_events_challenge2: Fais disparaître les animaux lorsque tu cliques
+        dessus.
+      courseB_playlab_events_challenge2_2018: Fais disparaître les animaux lorsque
+        tu cliques dessus.
+      courseB_playlab_events_challenge2_2019: Fais disparaître les animaux lorsque
+        tu cliques dessus.
+      courseB_starWars_prog1: '"Vas chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog10: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog10_2018: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog10_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog11: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog11_2018: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog11_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog1_2018: '"Vas chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog1_2019: '"Vas chercher la ferraille, BB-8 !"'
+      courseB_starWars_prog2: Récupère tout le métal.
+      courseB_starWars_prog2_2018: Récupère tout le métal.
+      courseB_starWars_prog2_2019: Récupère tout le métal.
+      courseB_starWars_prog3: Récupère toute la ferraille
+      courseB_starWars_prog3_2018: Récupère toute la ferraille
+      courseB_starWars_prog3_2019: Récupère toute la ferraille
+      courseB_starWars_prog4: Récupère toute la ferraille
+      courseB_starWars_prog4_2018: Récupère toute la ferraille
+      courseB_starWars_prog4_2019: Récupère toute la ferraille
+      courseB_starWars_prog5: Récupère la ferraille.
+      courseB_starWars_prog5_2018: Récupère la ferraille.
+      courseB_starWars_prog5_2019: Récupère la ferraille.
+      courseB_starWars_prog6: Récupère toute la ferraille
+      courseB_starWars_prog6_2018: Récupère toute la ferraille
+      courseB_starWars_prog6_2019: Récupère toute la ferraille
+      courseB_starWars_prog7: Vas le chercher !
+      courseB_starWars_prog7_2018: Vas le chercher !
+      courseB_starWars_prog7_2019: Vas le chercher !
+      courseB_starWars_prog8: "**Défi :** Aide BB-8 à rassembler la ferraille rougeoyante"
+      courseB_starWars_prog8_2018: "**Défi :** Aide BB-8 à rassembler la ferraille
+        rougeoyante"
+      courseB_starWars_prog8_2019: "**Défi :** Aide BB-8 à rassembler la ferraille
+        rougeoyante"
+      courseB_starWars_prog9: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog9_2018: Aidez BB-8 à rassembler la ferraille rougeoyante
+      courseB_starWars_prog9_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseC19_playLab_EOC1: Choisis un arrière plan et un acteur qui sera ton héros
         dans le jeu.
       courseC19_playLab_EOC3: Ajoute 2 ou plus acteurs à ton jeu et fais les bouger.
@@ -2599,12 +2828,12 @@ fr-FR:
         pixels de large. Cela peut être n''importe quelle forme que tu aimes.  '
       courseD_artist_project1_2019: 'Dessine une petite forme, entre **20 et 50**
         pixels de large. Cela peut être n''importe quelle forme que tu aimes.  '
-      courseD_artist_project1a: Dessine un modèle d'escalier qui utilise des angles
+      courseD_artist_project1a: Dessine un modèle d'escalier qui utilise des tours
         entre 75 et 105 degrés.
       courseD_artist_project1a_2018: Dessine un modèle d'escalier qui utilise des
-        angles entre 75 et 105 degrés.
+        tours entre 75 et 105 degrés.
       courseD_artist_project1a_2019: Dessine un modèle d'escalier qui utilise des
-        angles entre 75 et 105 degrés.
+        tours entre 75 et 105 degrés.
       courseD_artist_project2: Maintenant prends ta forme et dessines en 2 ou 3 dans
         une rangée!
       courseD_artist_project2_2018: Maintenant prends ta forme et dessines en 2 ou
@@ -2629,24 +2858,21 @@ fr-FR:
       courseD_artist_project4: Il est temps de superposer ces formes!
       courseD_artist_project4_2018: Il est temps de superposer ces formes!
       courseD_artist_project4_2019: Il est temps de superposer ces formes!
-      courseD_artist_project4a: |-
-        Essaie de t'amuser avec ce que tu as créé. Dessine ce que tu veux!
-
-        -   Que se passe-t-il si tu utilises 2 angles différents dans ton modèle d'escalier ?
-        -   Que se passe-t-il si tu fais ton modèle de diamand plus ou moins long ?
-        -   A quoi ressemble le dessin de 2 flocons de neige l'un sur l'autre ?
-      courseD_artist_project4a_2018: |-
-        Essaie de t'amuser avec ce que tu as créé. Dessine ce que tu veux!
-
-        -   Que se passe-t-il si tu utilises 2 angles différents dans ton modèle d'escalier ?
-        -   Que se passe-t-il si tu fais ton modèle de diamand plus ou moins long ?
-        -   A quoi ressemble le dessin de 2 flocons de neige l'un sur l'autre ?
-      courseD_artist_project4a_2019: |-
-        Essaie de t'amuser avec ce que tu as créé. Dessine ce que tu veux!
-
-        -   Que se passe-t-il si tu utilises 2 angles différents dans ton modèle d'escalier ?
-        -   Que se passe-t-il si tu fais ton modèle de diamand plus ou moins long ?
-        -   A quoi ressemble le dessin de 2 flocons de neige l'un sur l'autre ?
+      courseD_artist_project4a: Essaie de t’amuser avec ce que tu as créé. Dessine
+        ce que tu veux !- Que se passe-t-il si tu utilises 2 angles différents dans
+        ton modèle d'escalier ?- Que se passe-t-il si tu fais ton modèle de diamant
+        plus ou moins long ?-  À quoi ressemble le dessin de 2 flocons de neige l'un
+        sur l'autre ?
+      courseD_artist_project4a_2018: Essaie de t’amuser avec ce que tu as créé. Dessine
+        ce que tu veux !- Que se passe-t-il si tu utilises 2 angles différents dans
+        ton modèle d'escalier ?- Que se passe-t-il si tu fais ton modèle de diamant
+        plus ou moins long ?-  À quoi ressemble le dessin de 2 flocons de neige l'un
+        sur l'autre ?
+      courseD_artist_project4a_2019: Essaie de t’amuser avec ce que tu as créé. Dessine
+        ce que tu veux !- Que se passe-t-il si tu utilises 2 angles différents dans
+        ton modèle d'escalier ?- Que se passe-t-il si tu fais ton modèle de diamant
+        plus ou moins long ?-  À quoi ressemble le dessin de 2 flocons de neige l'un
+        sur l'autre ?
       courseD_artist_project5: Joue avec les flocons de neige!
       courseD_artist_project5_2018: Joue avec les flocons de neige!
       courseD_artist_project5_2019: Joue avec les flocons de neige!
@@ -2668,6 +2894,15 @@ fr-FR:
         tu peux répéter pour dessiner cette image ?
       courseD_autorun_binary8_2019: Termine le code pour créer ce dessin.
       courseD_autorun_binary8_predict1_2019: Termine le code pour créer ce dessin.
+      courseD_bee_conditionals10: Recueile tout le nectar et fais tout le miel.
+      courseD_bee_conditionals10_2018: Recueile tout le nectar et fais tout le miel.
+      courseD_bee_conditionals10_2019: Recueile tout le nectar et fais tout le miel.
+      courseD_bee_conditionals1_predict1: Vérifie s'il y a une fleur sous le nuage.
+        S'il y a une fleur, prends du nectar.
+      courseD_bee_conditionals1_predict1_2018: Vérifie s'il y a une fleur sous le
+        nuage. S'il y a une fleur, prends du nectar.
+      courseD_bee_conditionals1_predict1_2019: Vérifie s'il y a une fleur sous le
+        nuage. S'il y a une fleur, prends du nectar.
       courseD_bee_conditionals2: 'Vérifie sous chaque nuage s''il cache une fleur
         avant de ramasser le nectar.  '
       courseD_bee_conditionals2_2018: 'Vérifie sous chaque nuage s''il cache une fleur
@@ -2686,6 +2921,12 @@ fr-FR:
         Aide l'abeille à ramasser tout le nectar.
 
         Tu peux seulement ramasser le nectar des fleurs, mais tu peux vérifier n'importe quel espacepour voir s'il contient une fleur.
+      courseD_bee_conditionals4: Recueille tout le nectar en utilisant le moins de
+        blocs possible.
+      courseD_bee_conditionals4_2018: Recueille tout le nectar en utilisant le moins
+        de blocs possible.
+      courseD_bee_conditionals4_2019: Recueille tout le nectar en utilisant le moins
+        de blocs possible.
       courseD_bee_conditionals5: Ramasse tous les nectars avec le moins possible de
         blocs.
       courseD_bee_conditionals5_2018: Ramasse tous les nectars avec le moins possible
@@ -2700,6 +2941,24 @@ fr-FR:
       courseD_bee_conditionals6_2019: Certains de ces nuages peuvent avoir des nids
         d'abeille sous eux. Vérifie bien si un nid d'abeille se cache derrière chaque
         nuage!
+      courseD_bee_conditionals7: Utilise le bloc `si/sinon` pour recueillir le nectar
+        des fleurs et faire du miel au nid d'abeille.
+      courseD_bee_conditionals7_2018: Utilise le bloc `si/sinon` pour recueillir le
+        nectar des fleurs et faire du miel au nid d'abeille.
+      courseD_bee_conditionals7_2019: Utilise le bloc `si/sinon` pour recueillir le
+        nectar des fleurs et faire du miel au nid d'abeille.
+      courseD_bee_conditionals7_predict2: Utilise le bloc `si/sinon` pour recueillir
+        le nectar des fleurs et faire du miel au nid d'abeille.
+      courseD_bee_conditionals7_predict2_2018: Utilise le bloc `si/sinon` pour recueillir
+        le nectar des fleurs et faire du miel au nid d'abeille.
+      courseD_bee_conditionals7_predict2_2019: Utilise le bloc `si/sinon` pour recueillir
+        le nectar des fleurs et faire du miel au nid d'abeille.
+      courseD_bee_conditionals8: Recueille le nectar s'il y a une fleur. Sinon, fais
+        du miel (car il y a un nid d'abeille).
+      courseD_bee_conditionals8_2018: Recueille le nectar s'il y a une fleur. Sinon,
+        fais du miel (car il y a un nid d'abeille).
+      courseD_bee_conditionals8_2019: Recueille le nectar s'il y a une fleur. Sinon,
+        fais du miel (car il y a un nid d'abeille).
       courseD_bee_conditionals9: Ramasse tous les nectars et fais du miel.
       courseD_bee_conditionals9_2018: Ramasse tous les nectars et fais du miel.
       courseD_bee_conditionals9_2019: Ramasse tous les nectars et fais du miel.
@@ -2713,34 +2972,34 @@ fr-FR:
         miel.
       courseD_bee_conditionals_challenge2_2019: Ramasse tous les nectars et fais du
         miel.
-      courseD_bee_debugging_challenge1: Regarde comment les abeilles récupèrent le
+      courseD_bee_debugging_challenge1: Regarde comment les abeilles recueillent le
         nectar. Peux-tu utiliser la même méthode pour aider l'abeille à faire tout
         le miel?
       courseD_bee_debugging_challenge1a: Regarde comment l'abeille attrape le nectar.
         Utilise le même modèle pour aider l'abeille à faire du miel.
-      courseD_bee_nestedLoops1: Aide l'abeille à ramasser tout le nectar.
-      courseD_bee_nestedLoops1_2018: Aide l'abeille à ramasser tout le nectar.
-      courseD_bee_nestedLoops1_2019: Aide l'abeille à ramasser tout le nectar.
-      courseD_bee_nestedLoops1a: Aide l'abeille à ramasser tout le nectar.
-      courseD_bee_nestedLoops1a_2018: Aide l'abeille à ramasser tout le nectar.
-      courseD_bee_nestedLoops1a_2019: Aide l'abeille à ramasser tout le nectar.
-      courseD_bee_nestedLoops2: Cette fois, aide l'abeille à ramasser tout le nectar
+      courseD_bee_nestedLoops1: Aide l'abeille à recueillir tout le nectar.
+      courseD_bee_nestedLoops1_2018: Aide l'abeille à recueillir tout le nectar.
+      courseD_bee_nestedLoops1_2019: Aide l'abeille à recueillir tout le nectar.
+      courseD_bee_nestedLoops1a: Aide l'abeille à recueillir tout le nectar.
+      courseD_bee_nestedLoops1a_2018: Aide l'abeille à recueillir tout le nectar.
+      courseD_bee_nestedLoops1a_2019: Aide l'abeille à recueillir tout le nectar.
+      courseD_bee_nestedLoops2: Cette fois, aide l'abeille à recueillir tout le nectar
         en utilisant le moins possible de blocs.
-      courseD_bee_nestedLoops2_2018: Cette fois, aide l'abeille à ramasser tout le
-        nectar en utilisant le moins possible de blocs.
-      courseD_bee_nestedLoops2_2019: Cette fois, aide l'abeille à ramasser tout le
-        nectar en utilisant le moins possible de blocs.
-      courseD_bee_nestedLoops2_predict1: Cette fois, aide l'abeille à ramasser tout
+      courseD_bee_nestedLoops2_2018: Cette fois, aide l'abeille à recueillir tout
         le nectar en utilisant le moins possible de blocs.
-      courseD_bee_nestedLoops2_predict1_2018: Cette fois, aide l'abeille à ramasser
+      courseD_bee_nestedLoops2_2019: Cette fois, aide l'abeille à recueillir tout
+        le nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_predict1: Cette fois, aide l'abeille à recueillir tout
+        le nectar en utilisant le moins possible de blocs.
+      courseD_bee_nestedLoops2_predict1_2018: Cette fois, aide l'abeille à recueillir
         tout le nectar en utilisant le moins possible de blocs.
-      courseD_bee_nestedLoops2_predict1_2019: Cette fois, aide l'abeille à ramasser
+      courseD_bee_nestedLoops2_predict1_2019: Cette fois, aide l'abeille à recueillir
         tout le nectar en utilisant le moins possible de blocs.
-      courseD_bee_nestedLoops7: 'Défi: Trouve comment ramasser tous les nectars en
-        utilisant seulement les blocs disponibles.'
-      courseD_bee_nestedLoops7_2018: 'Défi: Trouve comment ramasser tous les nectars
+      courseD_bee_nestedLoops7: 'Défi: Trouve comment recueillir tous les nectars
         en utilisant seulement les blocs disponibles.'
-      courseD_bee_nestedLoops7_2019: 'Défi: Trouve comment ramasser tous les nectars
+      courseD_bee_nestedLoops7_2018: 'Défi: Trouve comment recueillir tous les nectars
+        en utilisant seulement les blocs disponibles.'
+      courseD_bee_nestedLoops7_2019: 'Défi: Trouve comment recueillir tous les nectars
         en utilisant seulement les blocs disponibles.'
       courseD_bee_nestedLoops8: Recueille tout le nectar de chaque fleur et fabrique
         du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.
@@ -2801,6 +3060,78 @@ fr-FR:
       courseD_collector_ramp10: Aide Laurel à ramasser tous les diamants.
       courseD_collector_ramp8: Aide Laurel à ramasser tous les diamants.
       courseD_collector_ramp9: Aide Laurel à ramasser tous les diamants.
+      courseD_farmer_condLoops1: Utilise des conditions pour t’assurer que tu ramasses
+        le maïs uniquement lorsqu’il y en a.
+      courseD_farmer_condLoops1_2018: Utilise des conditions pour t’assurer que tu
+        ramasses le maïs uniquement lorsqu’il y en a.
+      courseD_farmer_condLoops1_2019: Utilise des conditions pour t’assurer que tu
+        ramasses le maïs uniquement lorsqu’il y en a.
+      courseD_farmer_condLoops2: Aide la moissonneuse à ramasser le maïs et la laitue
+        dans le champ.
+      courseD_farmer_condLoops2_2018: Aide la moissonneuse à ramasser le maïs et la
+        laitue dans le champ.
+      courseD_farmer_condLoops2_2019: Aide la moissonneuse à ramasser le maïs et la
+        laitue dans le champ.
+      courseD_farmer_condLoops3: \_ "Maïs, laitue ET citrouilles ! Aide-moi à tous
+        les récolter."\_
+      courseD_farmer_condLoops3_2018: \_ "Maïs, laitue ET citrouilles ! Aide-moi à
+        tous les récolter."\_
+      courseD_farmer_condLoops3_2019: \_ "Maïs, laitue ET citrouilles ! Aide-moi à
+        tous les récolter."\_
+      courseD_farmer_condLoops4: Aide la moissonneuse à ramasser toutes les laitues
+        de chaque lot avant de passer au lot suivant.
+      courseD_farmer_condLoops4_2018: Aide la moissonneuse à ramasser toutes les laitues
+        de chaque lot avant de passer au lot suivant.
+      courseD_farmer_condLoops4_2019: Aide la moissonneuse à ramasser toutes les laitues
+        de chaque lot avant de passer au lot suivant.
+      courseD_farmer_condLoops5: Ramasse tout le maïs et toute la laitue, et prends
+        la citrouille à la fin.
+      courseD_farmer_condLoops5_2018: Ramasse tout le maïs et toute la laitue, et
+        prends la citrouille à la fin.
+      courseD_farmer_condLoops5_2019: Ramasse tout le maïs et toute la laitue, et
+        prends la citrouille à la fin.
+      courseD_farmer_condLoops6: Peux-tu trouver comment ramasser la citrouille ?
+        Assure-toi de ramasser tout le maïs en chemin !
+      courseD_farmer_condLoops6_2018: Peux-tu trouver comment ramasser la citrouille
+        ? Assure-toi de ramasser tout le maïs en chemin !
+      courseD_farmer_condLoops6_2019: Peux-tu trouver comment ramasser la citrouille
+        ? Assure-toi de ramasser tout le maïs en chemin !
+      courseD_farmer_condLoops7: 'Défi : collecte tout le maïs et toute la laitue,
+        puis ramasse la citrouille.'
+      courseD_farmer_condLoops7_2018: 'Défi : collecte tout le maïs et toute la laitue,
+        puis ramasse la citrouille.'
+      courseD_farmer_condLoops7_2019: 'Défi : collecte tout le maïs et toute la laitue,
+        puis ramasse la citrouille.'
+      courseD_farmer_condLoops8: Collecte tout le maïs et toute la laitue, puis ramasse
+        la citrouille.
+      courseD_farmer_condLoops8_2018: Collecte tout le maïs et toute la laitue, puis
+        ramasse la citrouille.
+      courseD_farmer_condLoops8_2019: Collecte tout le maïs et toute la laitue, puis
+        ramasse la citrouille.
+      courseD_farmer_condLoops9: Collecte tout le maïs et toute la laitue, puis ramasse
+        la citrouille.
+      courseD_farmer_condLoops9_2018: Collecte tout le maïs et toute la laitue, puis
+        ramasse la citrouille.
+      courseD_farmer_condLoops9_2019: Collecte tout le maïs et toute la laitue, puis
+        ramasse la citrouille.
+      courseD_farmer_condLoops9_predict1: Collecte tout le maïs et toute la laitue,
+        puis ramasse la citrouille.
+      courseD_farmer_condLoops9_predict1_2018: Collecte tout le maïs et toute la laitue,
+        puis ramasse la citrouille.
+      courseD_farmer_condLoops9_predict1_2019: Collecte tout le maïs et toute la laitue,
+        puis ramasse la citrouille.
+      courseD_farmer_condLoops_challenge1: Ramasse tout pour terminer le niveau. Chaque
+        culture cachée n'a qu'un seul épi de maïs ou qu'une seule laitue.
+      courseD_farmer_condLoops_challenge1_2018: Ramasse tout pour terminer le niveau.
+        Chaque culture cachée n'a qu'un seul épi de maïs ou qu'une seule laitue.
+      courseD_farmer_condLoops_challenge1_2019: Ramasse tout pour terminer le niveau.
+        Chaque culture cachée n'a qu'un seul épi de maïs ou qu'une seule laitue.
+      courseD_farmer_condLoops_challenge2: Récolte tout pour terminer le niveau.
+      courseD_farmer_condLoops_challenge2_2018: Récolte tout pour terminer le niveau.
+      courseD_farmer_condLoops_challenge2_2019: Récolte tout pour terminer le niveau.
+      courseD_farmer_until_challenge2: Utilise les blocs Si/Sinon pour suivre le chemin
+        qui tourne. À chaque tournant, utilise la commande `supprimer 1` dans une
+        boucle pour enlever les tas.
       courseD_farmer_while1: Bouge jusqu'au tas de saletés et utilises le bloc `retirer`
         pour l'enlever.
       courseD_farmer_while10: 'Aplatis tous ces tas en utilisant le moins de blocs
@@ -2888,15 +3219,15 @@ fr-FR:
         le moins de blocs possible.
       courseD_maze_nestedLoops3_2019: Amène le zombie jusqu'au tournesol en utilisant
         le moins de blocs possible.
-      courseD_maze_nestedLoops4: |-
-        Amène-moi jusqu'au tournesol !
-        (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
-      courseD_maze_nestedLoops4_2018: |-
-        Amène-moi jusqu'au tournesol !
-        (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
-      courseD_maze_nestedLoops4_2019: |-
-        Amène-moi jusqu'au tournesol !
-        (Indice : tu devras utiliser une boucle « Répéter » à l'intérieur d'une autre boucle pour réussir ce niveau.)
+      courseD_maze_nestedLoops4: 'Amène-moi jusqu''au tournesol !(Indice : tu devras
+        utiliser une boucle « Répéter » à l''intérieur d''une autre boucle pour réussir
+        ce niveau.)'
+      courseD_maze_nestedLoops4_2018: 'Amène-moi jusqu''au tournesol !(Indice : tu
+        devras utiliser une boucle « Répéter » à l''intérieur d''une autre boucle
+        pour réussir ce niveau.)'
+      courseD_maze_nestedLoops4_2019: 'Amène-moi jusqu''au tournesol !(Indice : tu
+        devras utiliser une boucle « Répéter » à l''intérieur d''une autre boucle
+        pour réussir ce niveau.)'
       courseD_maze_nestedLoops5: Amène le zombie jusqu'au tournesol en utilisant le
         moins de blocs possible!
       courseD_maze_nestedLoops5_2018: Amène le zombie jusqu'au tournesol en utilisant
@@ -2982,6 +3313,8 @@ fr-FR:
         zombie à atteindre le tournesol."
       courseD_maze_until9_2019: "**Défi:** Evite les plantes carnivores et aide le
         zombie à atteindre le tournesol."
+      courseD_maze_until_challenge1: Aucun indice, simplement un défi. Amène le zombie
+        jusqu’au tournesol.
       courseD_playLab_cond1: Amène Pegleg au drapeau pour résoudre ce puzzle.
       courseD_playLab_cond1_2018: Amène Pegleg au drapeau pour résoudre ce puzzle.
       courseD_playLab_cond2: 'Donne un point à Pegleg à chaque fois qu''il atteint
@@ -3031,10 +3364,9 @@ fr-FR:
         le en le poussant dans la boite à outils.
       courseD_scrat_ramp4: Evite la glace craquelé pour garder Scrat sain et sauf!
       courseD_scrat_ramp5: Evite la glace craquelé.
-      courseD_scrat_ramp6: "_\"Keep calm and help me find the\nbad pig. Otherwise
-        I might get angry!\"_\\\r\n\\\r\nWhen you have several blocks\nin a row, try
-        moving them inside of a `repeat` loop.  This will do the same\nthing with
-        less code!"
+      courseD_scrat_ramp6: "_\"Keep calm and help me find thebad pig. Otherwise I
+        might get angry!\"_\\\r\\\rWhen you have several blocksin a row, try moving
+        them inside of a `repeat` loop.  This will do the samething with less code!"
       courseD_scrat_ramp8: Utilise ce que tu as appris pour emmener Scrat jusqu'au
         gland!
       courseE_artist_concept1: 'Recrée cette image. '
@@ -3172,6 +3504,8 @@ fr-FR:
         citrouilles en utilisant la fonction `maïs et citrouille`.
       courseE_farmer_functions3c: Maintenant, termine toi même la fonction en y ajoutant
         les blocs dans la **définition de la fonction**.
+      courseE_farmer_functions4b: Utilise ta nouvelle fonction pour résoudre cette
+        énigme.
       courseE_farmer_functions5c: Ta fonction sera utile ici.
       courseE_farmer_functions6c: Qu'est-ce que tu as besoin d'ajouter à ce programme
         pour vérifier qu'une pousse est un maïs ou une salade?
@@ -3216,12 +3550,77 @@ fr-FR:
         puis joue jusqu'à que tu rencontres une des 2 conditions.
       courseE_playLab_scaffold6: Tu as terminé! Maintenant tu peux jouer à ton jeu
         où le partager avec tes amis et camarades de classe!
+      courseE_video_createFunctions: Nous n'avons pas encore de vidéo pour la création
+        de fonctions. Ceci est un espace réservé.
+      courseE_video_createFunctions2: Nous n'avons pas encore de vidéo pour la création
+        de fonctions. Ceci est un espace réservé.
+      courseE_video_createFunctions2_2018: Nous n'avons pas encore de vidéo pour la
+        création de fonctions. Ceci est un espace réservé.
+      courseE_video_createFunctions2_2019: Nous n'avons pas encore de vidéo pour la
+        création de fonctions. Ceci est un espace réservé.
+      courseF_artist_for1: Expérimente avec la boucle 'for 'et joue avec la variable
+        'compteur'.
+      courseF_artist_for10: 'Jeu Libre : Essaie d''utiliser la variable `compteur`
+        avec d''autres outils de dessin pour créer des images magiques comme celle-ci.'
+      courseF_artist_for10_2018: 'Jeu Libre : Essaie d''utiliser la variable `compteur`
+        avec d''autres outils de dessin pour créer des images magiques comme celle-ci.'
+      courseF_artist_for10_2019: 'Jeu Libre : Essaie d''utiliser la variable `compteur`
+        avec d''autres outils de dessin pour créer des images magiques comme celle-ci.'
+      courseF_artist_for1_2018: Expérimente avec la boucle 'for 'et joue avec la variable
+        'compteur'.
+      courseF_artist_for1_2019: Expérimente avec la boucle 'for 'et joue avec la variable
+        'compteur'.
+      courseF_artist_for2: Crée cette pile de triangles dont les côtés mesurent entre
+        50 et 100 pixels.
+      courseF_artist_for2_2018: Crée cette pile de triangles dont les côtés mesurent
+        entre 50 et 100 pixels.
+      courseF_artist_for2_2019: Crée cette pile de triangles dont les côtés mesurent
+        entre 50 et 100 pixels.
+      courseF_artist_for3: Ces triangles vont de 20 pixels de côté jusqu'à 200 pixels
+        de côté, et chaque triangle est de 20 pixels plus grand que le précédent.
+      courseF_artist_for3_2018: Ces triangles vont de 20 pixels de côté jusqu'à 200
+        pixels de côté, et chaque triangle est de 20 pixels plus grand que le précédent.
+      courseF_artist_for3_2019: Ces triangles vont de 20 pixels de côté jusqu'à 200
+        pixels de côté, et chaque triangle est de 20 pixels plus grand que le précédent.
+      courseF_artist_for4: 'Le plus petit de ces carrés fait 15 pixels de long, le
+        plus grand fait 300 pixels de long, et chaque carré est 15 pixels plus grand
+        que le précédent. '
+      courseF_artist_for4_2018: 'Le plus petit de ces carrés fait 15 pixels de long,
+        le plus grand fait 300 pixels de long, et chaque carré est 15 pixels plus
+        grand que le précédent. '
+      courseF_artist_for4_2019: 'Le plus petit de ces carrés fait 15 pixels de long,
+        le plus grand fait 300 pixels de long, et chaque carré est 15 pixels plus
+        grand que le précédent. '
+      courseF_artist_for5: Juste un petit changement au code de la dernière image
+        peut créer ce dessin. Peux-tu définir ce changement ?
+      courseF_artist_for5_2018: Juste un petit changement au code de la dernière image
+        peut créer ce dessin. Peux-tu définir ce changement ?
+      courseF_artist_for5_2019: Juste un petit changement au code de la dernière image
+        peut créer ce dessin. Peux-tu définir ce changement ?
+      courseF_artist_for6: Recrée ton code à partir du dernier niveau, mais tourne
+        de 89 degrés pour créer cette spirale carrée torsadée.
+      courseF_artist_for6_2018: Recrée ton code à partir du dernier niveau, mais tourne
+        de 89 degrés pour créer cette spirale carrée torsadée.
+      courseF_artist_for6_2019: Recrée ton code à partir du dernier niveau, mais tourne
+        de 89 degrés pour créer cette spirale carrée torsadée.
       courseF_artist_for7: Effectue trois petits changements dans le code du niveau
         précédent pour obtenir ça !
       courseF_artist_for7_2018: Effectue trois petits changements dans le code du
         niveau précédent pour obtenir ça !
       courseF_artist_for7_2019: Effectue trois petits changements dans le code du
         niveau précédent pour obtenir ça !
+      courseF_artist_for8: Ramène l'angle à 72 degrés pour obtenir un pentagone en
+        spirale.
+      courseF_artist_for8_2018: Ramène l'angle à 72 degrés pour obtenir un pentagone
+        en spirale.
+      courseF_artist_for8_2019: Ramène l'angle à 72 degrés pour obtenir un pentagone
+        en spirale.
+      courseF_artist_for9: "**Inspiration :** utilise le compteur à l'intérieur du
+        bloc `set alpha` pour obtenir ce centre décoloré."
+      courseF_artist_for9_2018: "**Inspiration :** utilise le compteur à l'intérieur
+        du bloc `set alpha` pour obtenir ce centre décoloré."
+      courseF_artist_for9_2019: "**Inspiration :** utilise le compteur à l'intérieur
+        du bloc `set alpha` pour obtenir ce centre décoloré."
       courseF_artist_for_challenge1: Peux-tu trouver comment recréer ce dessin ?
       courseF_artist_for_challenge1_2018: Peux-tu trouver comment recréer ce dessin
         ?
@@ -3233,32 +3632,272 @@ fr-FR:
         avec une seule boucle?
       courseF_artist_for_challenge2_2019: Peux-tu trouver comment récréer ce dessin
         avec une seule boucle?
+      courseF_artist_fwp1: Édite la fonction 'dessiner un carré' pour trouver des
+        bugs.
+      courseF_artist_fwp2: Édite la fonction pour accepter un paramètre appelé `longueur`.
+      courseF_artist_fwp2_predict1: Édite la fonction pour accepter un paramètre appelé
+        `longueur`.
+      courseF_artist_fwp3: Crée une fonction appelée "dessiner un carré" et utilise-la
+        pour définir ces quatre boîtes à l'aide de paramètres.
+      courseF_artist_fwp4: Édite cette fonction pour ajouter un paramètre relatif
+        au nombre de côtés de ton polygone.
+      courseF_artist_fwp5: Utilise la fonction de la dernière énigme pour dessiner
+        cette série de formes.
+      courseF_artist_fwp6: 'Défi : Édite "dessiner un bord en spirale" pour utiliser
+        les paramètres "longueur" et "côtés", puis recrée ces formes.'
+      courseF_artist_fwp7: Termine la fonction "dessiner un bord en spirale" pour
+        demander également une longueur minimale pour le centre de la spirale.
+      courseF_artist_fwp8: Peux-tu trouver comment faire ce dessin en utilisant la
+        fonction que tu viens de créer ?
+      courseF_artist_fwp9: 'Jeu Libre : Dessine quelque chose de génial ! Joue avec
+        la largeur du stylo pour voir à quel point tes dessins peuvent changer !'
+      courseF_artist_fwp_challenge1: Peux-tu trouver comment fonctionne ce programme
+        ?
+      courseF_artist_fwp_challenge2: Utilise ce que tu as appris au niveau précédent
+        pour dessiner une image comme celle-ci.
+      courseF_artist_variables10: Voici ton code de la dernière énigme.  Essaie d'éditer
+        la variable de manières différentes.
+      courseF_artist_variables10_2018: Voici ton code de la dernière énigme.  Essaie
+        d'éditer la variable de manières différentes.
+      courseF_artist_variables10_2019: Voici ton code de la dernière énigme.  Essaie
+        d'éditer la variable de manières différentes.
+      courseF_artist_variables2: 'Maintenant, dessine trois de ces triangles, l''un
+        à côté de l''autre.  '
+      courseF_artist_variables2_2018: 'Maintenant, dessine trois de ces triangles,
+        l''un à côté de l''autre.  '
+      courseF_artist_variables2_2019: 'Maintenant, dessine trois de ces triangles,
+        l''un à côté de l''autre.  '
+      courseF_artist_variables3: Déplace la longueur de 50 dans une variable afin
+        de pouvoir l'utiliser dans les prochaines énigmes.
+      courseF_artist_variables3_2018: Déplace la longueur de 50 dans une variable
+        afin de pouvoir l'utiliser dans les prochaines énigmes.
+      courseF_artist_variables3_2019: Déplace la longueur de 50 dans une variable
+        afin de pouvoir l'utiliser dans les prochaines énigmes.
+      courseF_artist_variables4: Maintenant, utilise la variable 'longueur' pour que
+        l'artiste saute en avant et vers le bas de la `longueur` des pixels entre
+        les triangles.
+      courseF_artist_variables4_2018: Maintenant, utilise la variable 'longueur' pour
+        que l'artiste saute en avant et vers le bas de la `longueur` des pixels entre
+        les triangles.
+      courseF_artist_variables4_2019: Maintenant, utilise la variable 'longueur' pour
+        que l'artiste saute en avant et vers le bas de la `longueur` des pixels entre
+        les triangles.
+      courseF_artist_variables5: Ajoute un autre ensemble de boucles à la fin de ton
+        code pour ajouter trois triangles supplémentaires. Cette fois-ci, va en avant
+        et en haut !
+      courseF_artist_variables5_2018: Ajoute un autre ensemble de boucles à la fin
+        de ton code pour ajouter trois triangles supplémentaires. Cette fois-ci, va
+        en avant et en haut !
+      courseF_artist_variables5_2019: Ajoute un autre ensemble de boucles à la fin
+        de ton code pour ajouter trois triangles supplémentaires. Cette fois-ci, va
+        en avant et en haut !
+      courseF_artist_variables6: Maintenant, donne aux triangles une largeur de 60
+        pixels, avec des sauts de 60 pixels.
+      courseF_artist_variables6_2018: Maintenant, donne aux triangles une largeur
+        de 60 pixels, avec des sauts de 60 pixels.
+      courseF_artist_variables6_2019: Maintenant, donne aux triangles une largeur
+        de 60 pixels, avec des sauts de 60 pixels.
+      courseF_artist_variables6a: Construis ce motif où les carrés font 80 pixels
+        de côté et où l'artiste saute 80 pixels, par-dessus chacun d'eux.
+      courseF_artist_variables6a_2018: Construis ce motif où les carrés font 80 pixels
+        de côté et où l'artiste saute 80 pixels, par-dessus chacun d'eux.
+      courseF_artist_variables6a_2019: Construis ce motif où les carrés font 80 pixels
+        de côté et où l'artiste saute 80 pixels, par-dessus chacun d'eux.
+      courseF_artist_variables7: Dessine un triangle avec des côtés de 150 pixels.
+      courseF_artist_variables7_2018: Dessine un triangle avec des côtés de 150 pixels.
+      courseF_artist_variables7_2019: Dessine un triangle avec des côtés de 150 pixels.
+      courseF_artist_variables8: Reconstruis le code du triangle de la dernière énigme,
+        en utilisant, cette fois-ci, le bloc `établir la longueur à` pour réinitialiser
+        la variable `longueur' à`longueur\` +10 à la fin de chaque itération de boucle.
+      courseF_artist_variables8_2018: Reconstruis le code du triangle de la dernière
+        énigme, en utilisant, cette fois-ci, le bloc `établir la longueur à` pour
+        réinitialiser la variable `longueur' à`longueur\` +10 à la fin de chaque itération
+        de boucle.
+      courseF_artist_variables8_2019: Reconstruis le code du triangle de la dernière
+        énigme, en utilisant, cette fois-ci, le bloc `établir la longueur à` pour
+        réinitialiser la variable `longueur' à`longueur\` +10 à la fin de chaque itération
+        de boucle.
+      courseF_artist_variables9: Vois ce qui se passe lorsque tu répètes le code de
+        la dernière énigme 30 fois au lieu de seulement 3 !  N'hésite pas à utiliser
+        n’importe quels couleurs et motifs pour dessiner tes lignes et ajouter un
+        zeste supplémentaire.
+      courseF_artist_variables9_2018: Vois ce qui se passe lorsque tu répètes le code
+        de la dernière énigme 30 fois au lieu de seulement 3 !  N'hésite pas à utiliser
+        n’importe quels couleurs et motifs pour dessiner tes lignes et ajouter un
+        zeste supplémentaire.
+      courseF_artist_variables9_2019: Vois ce qui se passe lorsque tu répètes le code
+        de la dernière énigme 30 fois au lieu de seulement 3 !  N'hésite pas à utiliser
+        n’importe quels couleurs et motifs pour dessiner tes lignes et ajouter un
+        zeste supplémentaire.
+      courseF_artist_variablesFP: "**Jeu Libre :** Prends ce que tu as appris et fais
+        ton propre dessin. "
+      courseF_artist_variablesFP_2018: "**Jeu Libre :** Prends ce que tu as appris
+        et fais ton propre dessin. "
+      courseF_artist_variablesFP_2019: "**Jeu Libre :** Prends ce que tu as appris
+        et fais ton propre dessin. "
+      courseF_artist_variables_challenge1: Peux-tu créer une variable 'longueur' et
+        l'utiliser pour créer ce modèle ?
+      courseF_artist_variables_challenge1_2018: Peux-tu créer une variable 'longueur'
+        et l'utiliser pour créer ce modèle ?
+      courseF_artist_variables_challenge1_2019: Peux-tu créer une variable 'longueur'
+        et l'utiliser pour créer ce modèle ?
+      courseF_artist_variables_challenge2: Tu as maintenant appris tout ce que tu
+        dois savoir pour faire un modèle comme celui-ci !
+      courseF_artist_variables_challenge2_2018: Tu as maintenant appris tout ce que
+        tu dois savoir pour faire un modèle comme celui-ci !
+      courseF_artist_variables_challenge2_2019: Tu as maintenant appris tout ce que
+        tu dois savoir pour faire un modèle comme celui-ci !
+      courseF_bee_conditionals10: Recueile tout le nectar et fais tout le miel.
+      courseF_bee_conditionals1_predict1: Vérifie s'il y a une fleur sous le nuage.
+        S'il y a une fleur, prends du nectar.
       courseF_bee_conditionals2: 'Vérifie sous chaque nuage s''il cache une fleur
         avant de ramasser le nectar.  '
       courseF_bee_conditionals3: Aide l'abeille à ramasser tout le nectar.
+      courseF_bee_conditionals4: Recueille tout le nectar en utilisant le moins de
+        blocs possible.
       courseF_bee_conditionals5: Ramasse tous les nectars avec le moins possible de
         blocs.
-      courseF_bee_for4: Aide l'abeille à ramasser tout le nectar.
-      courseF_bee_for4_2018: Aide l'abeille à ramasser tout le nectar.
-      courseF_bee_for4_2019: Aide l'abeille à ramasser tout le nectar.
-      courseF_bee_for8: |-
-        Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
-        Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
-      courseF_bee_for8_2018: |-
-        Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
-        Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
-      courseF_bee_for8_2019: |-
-        Tu as compris ! Quelle doit être ton augmentation pour recueillir 3, 6, 9, 12, 15 nectars ?
-        Indice : que dois-tu ajouter à chaque numéro pour obtenir le nombre suivant ?
+      courseF_bee_conditionals7_predict2: Utilise le bloc `si/sinon` pour recueillir
+        le nectar des fleurs et faire du miel au nid d'abeille.
+      courseF_bee_conditionals8: Recueille le nectar s'il y a une fleur. Sinon, fais
+        du miel (car il y a un nid d'abeille).
+      courseF_bee_for1: Recueille le nectar de chaque fleur en utilisant le moins
+        de blocs possible.
+      courseF_bee_for10: '**Défi :** Sers-toi de ce que tu as appris sur les boucles
+        "for" et essaie de résoudre ce problème. '
+      courseF_bee_for10_2018: '**Défi :** Sers-toi de ce que tu as appris sur les
+        boucles "for" et essaie de résoudre ce problème. '
+      courseF_bee_for10_2019: '**Défi :** Sers-toi de ce que tu as appris sur les
+        boucles "for" et essaie de résoudre ce problème. '
+      courseF_bee_for11: Quel devrait être ton incrément pour recueillir 15, puis
+        12, puis 9, 6, 3 nectars ?
+      courseF_bee_for11_2018: Quel devrait être ton incrément pour recueillir 15,
+        puis 12, puis 9, 6, 3 nectars ?
+      courseF_bee_for11_2019: Quel devrait être ton incrément pour recueillir 15,
+        puis 12, puis 9, 6, 3 nectars ?
+      courseF_bee_for1_2018: Recueille le nectar de chaque fleur en utilisant le moins
+        de blocs possible.
+      courseF_bee_for1_2019: Recueille le nectar de chaque fleur en utilisant le moins
+        de blocs possible.
+      courseF_bee_for2: Écris le code pour aider l'abeille à recueillir tout le nectar.
+      courseF_bee_for2_2018: Écris le code pour aider l'abeille à recueillir tout
+        le nectar.
+      courseF_bee_for2_2019: Écris le code pour aider l'abeille à recueillir tout
+        le nectar.
+      courseF_bee_for4: Aide l'abeille à recueillir tout le nectar.
+      courseF_bee_for4_2018: Aide l'abeille à recueillir tout le nectar.
+      courseF_bee_for4_2019: Aide l'abeille à recueillir tout le nectar.
+      courseF_bee_for5: Utilise la variable "compteur" deux fois pour résoudre cette
+        énigme.
+      courseF_bee_for5_2018: Utilise la variable "compteur" deux fois pour résoudre
+        cette énigme.
+      courseF_bee_for5_2019: Utilise la variable "compteur" deux fois pour résoudre
+        cette énigme.
+      courseF_bee_for6: Essaie de recueillir ce nectar en comptant à rebours de 5
+        à1, avec un pas de 1.
+      courseF_bee_for6_2018: Essaie de recueillir ce nectar en comptant à rebours
+        de 5 à1, avec un pas de 1.
+      courseF_bee_for6_2019: Essaie de recueillir ce nectar en comptant à rebours
+        de 5 à1, avec un pas de 1.
+      courseF_bee_for7: Essaie de cueillir ces fleurs en utilisant un incrément de
+        2.
+      courseF_bee_for7_2018: Essaie de cueillir ces fleurs en utilisant un incrément
+        de 2.
+      courseF_bee_for7_2019: Essaie de cueillir ces fleurs en utilisant un incrément
+        de 2.
+      courseF_bee_for8: 'Tu as compris ! Quelle doit être ton augmentation pour recueillir
+        3, 6, 9, 12, 15 nectars ?Indice : que dois-tu ajouter à chaque numéro pour
+        obtenir le nombre suivant ?'
+      courseF_bee_for8_2018: 'Tu as compris ! Quelle doit être ton augmentation pour
+        recueillir 3, 6, 9, 12, 15 nectars ?Indice : que dois-tu ajouter à chaque
+        numéro pour obtenir le nombre suivant ?'
+      courseF_bee_for8_2019: 'Tu as compris ! Quelle doit être ton augmentation pour
+        recueillir 3, 6, 9, 12, 15 nectars ?Indice : que dois-tu ajouter à chaque
+        numéro pour obtenir le nombre suivant ?'
+      courseF_bee_for9: Utilise la variable \`compteur' pour traverser ce jardin avec
+        le moins de blocs possible.
+      courseF_bee_for9_2018: Utilise la variable \`compteur' pour traverser ce jardin
+        avec le moins de blocs possible.
+      courseF_bee_for9_2019: Utilise la variable \`compteur' pour traverser ce jardin
+        avec le moins de blocs possible.
+      courseF_bee_for_challenge1: 'Utilise ce `boucle for` pour recueillir tout le
+        nectar. '
+      courseF_bee_for_challenge1_2018: 'Utilise ce `boucle for` pour recueillir tout
+        le nectar. '
+      courseF_bee_for_challenge1_2019: 'Utilise ce `boucle for` pour recueillir tout
+        le nectar. '
       courseF_bee_for_challenge2: Résous ce puzzle en utilisant le moins de blocs
         possible.
       courseF_bee_for_challenge2_2018: Résous ce puzzle en utilisant le moins de blocs
         possible.
       courseF_bee_for_challenge2_2019: Résous ce puzzle en utilisant le moins de blocs
         possible.
+      courseF_bee_functions2: Utilise la fonction 'recueille seulement le nectar'
+        pour recueillir le nectar de chaque fleur.
+      courseF_bee_functions3: Clique sur `Éditer` pour mettre le code à l'intérieur
+        de la fonction `seulement faire du miel`, puis utilise-le pour résoudre cette
+        énigme.
+      courseF_bee_functions3a: Écrivez une fonction qui recueille du nectar si l'abeille
+        est à une fleur, sinon elle obtient du miel.  Utilise ta fonction pour résoudre
+        l'énigme !
       courseF_bee_functions4: La fonction «Déplacer et obtenir le nectar» déplace
         l'abeille, recueille le nectar et renvoie l'abeille là où elle a commencé.
         Utilise la fonction pour récolter tout le nectar.
+      courseF_bee_functions5a: Utilise la fonction `se déplacer et vérifier` pour
+        récolter tout le nectar.
+      courseF_bee_functions6: Aide l'abeille à travers le labyrinthe en tournant à
+        gauche aux fleurs et à droite au nid d'abeille.
+      courseF_bee_functions7: Reconstruis ta fonction à partir de la dernière énigme
+        pour décoder ce labyrinthe.
+      courseF_bee_functions8a: Recueile tout le nectar ou fais tout le miel !
+      courseF_bee_functionsPre7: Maintenant, essaie de construire une fonction pour
+        décoder ce labyrinthe. En quoi est-il différent de la dernière fois ?
+      courseF_bee_functions_challenge1: Crée une nouvelle fonction pour collecter
+        tout le nectar et le miel tant qu'il y a un chemin à parcourir.
+      courseF_bee_functions_challenge2: Utilise tout ce que tu as appris pour résoudre
+        cette énigme !
+      courseF_bee_fwp2: Amène ce code dans une fonction, puis appelle la fonction
+        pour vérifier si cette rangée a du nectar.
+      courseF_bee_fwp3: Voyons si la fonction facilite la récolte de ces trois rangées
+        de nectar.
+      courseF_bee_fwp4: Ajoute un paramètre 'longueur' à la fonction afin qu'elle
+        fonctionne encore lorsque la rangée a une longueur différente.
+      courseF_bee_fwp5: Utilise cette fonction pour recueillir le nectar.
+      courseF_bee_fwp6: Construis une solution courte et douce à cette énigme.
+      courseF_bee_fwp7: "**Défi :** Modifie ta fonction pour également faire du miel."
+      courseF_bee_fwp8: Utilise ta nouvelle fonction pour résoudre cette spirale.
+      courseF_bee_fwp9_predict1: Utilise ta nouvelle fonction pour résoudre cette
+        énigme.
+      courseF_bee_fwp_challenge1: Utilise une `boucle for` dans une fonction avec
+        un paramètre de "longueur" pour récolter tout le maïs.
+      courseF_bee_fwp_challenge2: Utilise une `boucle for` dans une fonction avec
+        un paramètre de "longueur" pour ramasser tous les légumes dans chaque rangée.
+      courseF_playlab_variables1a: Les variables peuvent être utilisées pour stocker
+        le texte que tu souhaite utiliser ultérieurement. Fais crier Kiki, le joueur
+        de football, "But !"en attribuant ce texte à la variable 'crier'.
+      courseF_playlab_variables2b: Insère la variable `couleur` au milieu d'une phrase
+        en la positionnant à l'emplacement vide du bloc `joindre`.
+      courseF_playlab_variables3b_josh: 'Aide Kiki à avoir une conversation avec Brian
+        en utilisant la variable "âge" partout où l''âge `12` devrait être utilisé. '
+      courseF_playlab_variables4b: Place les variables aux bons endroits pour créer
+        cette conversation.
+      courseF_playlab_variables5c: Combinons le bloc `demander` avec une déclaration
+        `si/sinon` pour nous amuser !
+      courseF_playlab_variables6c: Pour le reste de cette étape, nous allons construire
+        un jeu que tu contrôles !
+      courseF_playlab_variables7b: Crée des questions et tisse les réponses ensemble,
+        dans ta propre histoire.
+      courseF_playlab_variables7c: Fais faire quelque chose au jeu en demandant à
+        l'utilisateur de deviner une couleur.
+      courseF_playlab_variables8c: Utilise les variables pour rendre le jeu plus personnel.
+      courseF_playlab_variables_challenge1: 'Utilise ces blocs pour que les acteurs
+        partagent une blague toc toc - qui est là ? '
+      courseF_playlab_variables_challenge2: Ce jeu utilisera des variables pour comptabiliser
+        les points. Touche Chat pour obtenir 2 points. Touche Pingouin pour obtenir
+        3 points. Lorsque Chat et Pingouin se touchent, retire des points. Obtiens
+        exactement 10 points et tu gagnes !
+      courseF_video_createFunctions: Nous n'avons pas encore de vidéo pour la création
+        de fonctions. Ceci est un espace réservé.
       flappy_1: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
         ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
       flappy_11: Crée ton propre jeu Flappy. Tu peux modifier tous les visuels et

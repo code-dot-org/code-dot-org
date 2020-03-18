@@ -13381,6 +13381,10 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+            Shapes and Parameters:
+              name: Şekiller ve Parametreler
+            Random Numbers:
+              name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
         maddie-test:
@@ -14484,6 +14488,8 @@ tr:
                 başlar. Öğrenciler basit bir kaç komutla hata ayıklama ve sıralamanın
                 temellerini öğrenirler. Dersin sonunda, öğrenciler, önceki derste
                 çizim aracı ile yaptıkları resmin bir benzerini yapabileceklerdir.
+            Shapes and Parameters:
+              name: Şekiller ve Parametreler
             Variables:
               name: Değişkenler
               description_student: Bu derste, rastgele üretilen bir numarayı kaydetmenin
@@ -14501,6 +14507,8 @@ tr:
                 kaydettiğini veya depoladığı görmek için, rastgele bir sayıyı kaydetmek
                 amacıyla değişkenleri kullanırlar, aynı rastgele numarayı kendi programlarında
                 birden çok kez kullanırlar.
+            Random Numbers:
+              name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
             The Draw Loop:

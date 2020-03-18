@@ -148,6 +148,9 @@ fr-FR:
         Infinity_move_right_runbutton: Ajouter le bloc « Déplacer » ici
       Infinity_repeat:
         Infinity_repeat_callout: Place les bloc « Déplacer » ici à l'intérieur
+      InspirationalArtwork:
+        InspirationalArtwork_1: Essaie le nouveau bloc "commentaire" sous cette étiquette
+          pour te laisser des notes à l'intérieur de ton programme !
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Lorsque tu es prêt, appuie sur "Démarrer" pour
           tester ton programme.
@@ -210,12 +213,24 @@ fr-FR:
           maison. Peux-tu le finir?
       Overworld Move to Sheep:
         craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
+        craft_drag_block_callout: Fais glisser un bloc "avancer" et attache-le sous
+          l’autre bloc
       Overworld Move to Sheep_2019:
         craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
+        craft_drag_block_callout: Fais glisser un bloc "avancer" et attache-le sous
+          l’autre bloc
       Overworld Place Wall:
         craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
       Overworld Place Wall_2019:
         craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
+      Robot Doodle:
+        4-5_Artist_Patterns_Free_Play_2: Essaie le nouveau bloc "commentaire" sous
+          cette étiquette pour te laisser des notes à l'intérieur de ton programme
+          !
+      Robot Doodle_2018:
+        4-5_Artist_Patterns_Free_Play_2: Essaie le nouveau bloc "commentaire" sous
+          cette étiquette pour te laisser des notes à l'intérieur de ton programme
+          !
       Underground Avoiding Lava:
         craft_callout_moveforward: Ce code recherchera de la lave, peux-tu ajouter
           une commande pour avancer ?
@@ -242,6 +257,12 @@ fr-FR:
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
           reculer l'abeille.
+      course3_bee_functions_challenge3:
+        courseF_bee_functions_challenge1_1: Quel code devrais-tu mettre dans cette
+          fonction ?
+        courseF_bee_functions_challenge1_2: La fonction "vérifier le nectar ou le
+          miel" peut être utilisée ici si tu l'édites pour faire du miel plusieurs
+          fois.
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
           vers différentes parties de l'espace de jeu.
@@ -250,6 +271,9 @@ fr-FR:
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
           change le à ta convenance!
+      course4_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: Cette fonction fera un bon travail avec
+          le maïs, mais qu'en est-il des autres légumes ?
       courseA_artist_loops4:
         courseA_artist_loops4_1: Ce nombre t'indique combien de ces blocs tu peux
           utiliser dans ce puzzle.
@@ -358,6 +382,18 @@ fr-FR:
       courseB_Scrat_ramp3a_2019:
         courseC_maze_programming2_1: C'est la boite à outils. C'est ici que tu trouves
           les blocs supplémentaires pour compléter les puzzles.
+      courseB_artist_loops3:
+        courseB_artist_loops3_1: Il y a un seul de ces blocs dans la boîte à outils.
+          Comment vas-tu l'utiliser ?
+      courseB_artist_loops3_2018:
+        courseB_artist_loops3_1: Il y a un seul de ces blocs dans la boîte à outils.
+          Comment vas-tu l'utiliser ?
+      courseB_artist_loops3_2019:
+        courseB_artist_loops3_1: Il y a un seul de ces blocs dans la boîte à outils.
+          Comment vas-tu l'utiliser ?
+      courseB_artist_loops5:
+        courseB_artist_loops5_1: Ce nombre signifie qu'il n'y a plus aucun de ces
+          blocs dans la boîte à outils.
       courseB_collector_loops1:
         courseB_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
           Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
@@ -370,6 +406,18 @@ fr-FR:
       courseB_maze_seq2:
         courseB_maze_seq2_callout1: Utilise le bouton "Etape" pour avancer pas-à-pas
           dans le programme. Cela t'aidera à trouver le bug!
+      courseB_maze_seq3:
+        courseB_maze_seq3_1: Les blocs gris sont faits de pierre et ne peuvent pas
+          être jetés.
+      courseB_playlab_events6:
+        courseB_playlab_events6_a: Utilise la flèche déroulante verte pour changer
+          de direction.
+      courseB_playlab_events6_2018:
+        courseB_playlab_events6_a: Utilise la flèche déroulante verte pour changer
+          de direction.
+      courseB_playlab_events6_2019:
+        courseB_playlab_events6_a: Utilise la flèche déroulante verte pour changer
+          de direction.
       courseC19_playLab_EOC3:
         courseE_playLab_scaffold3_1: Amène l'acteur jusqu'au drapeau pour passer au
           niveau suivant.
@@ -742,6 +790,102 @@ fr-FR:
       courseE_playLab_scaffold3:
         courseE_playLab_scaffold3_1: Amène l'acteur jusqu'au drapeau pour passer au
           niveau suivant.
+      courseF_artist_for1:
+        courseF_artist_for1_1: La boîte à outils est en mode "catégorie" pour faire
+          plus de place pour ton code. Les boucles "for" vivent ici.
+      courseF_artist_for1_2018:
+        courseF_artist_for1_1: La boîte à outils est en mode "catégorie" pour faire
+          plus de place pour ton code. Les boucles "for" vivent ici.
+      courseF_artist_for1_2019:
+        courseF_artist_for1_1: La boîte à outils est en mode "catégorie" pour faire
+          plus de place pour ton code. Les boucles "for" vivent ici.
+      courseF_artist_fwp1:
+        courseF_artist_fwp1_1: Clique sur le bouton "Éditer " pour changer le code
+          à l'intérieur de la fonction.
+      courseF_artist_fwp4:
+        courseF_artist_fwp4_1: Pour compléter ton polygone, assure-toi de toujours
+          tourner de 360 ÷ "côtés" degrés.
+      courseF_artist_fwp5:
+        courseF_artist_fwp5_1: Tu trouveras la fonction polygone ici.
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: Utilise ceci pour établir la valeur de la variable
+          `longueur`
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: Utilise ceci pour établir la valeur de la variable
+          `longueur`
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: Utilise ceci pour établir la valeur de la variable
+          `longueur`
+      courseF_artist_variables6:
+        courseF_artist_variables6_1: Les variables peuvent être utiles lorsque tu
+          dois changer un nombre qui se répète souvent.
+      courseF_artist_variables6_2018:
+        courseF_artist_variables6_1: Les variables peuvent être utiles lorsque tu
+          dois changer un nombre qui se répète souvent.
+      courseF_artist_variables6_2019:
+        courseF_artist_variables6_1: Les variables peuvent être utiles lorsque tu
+          dois changer un nombre qui se répète souvent.
+      courseF_artist_variables6a:
+        courseF_artist_variables6a_1: Les variables peuvent être utiles lorsque tu
+          dois changer un nombre qui se répète souvent.
+      courseF_artist_variables6a_2018:
+        courseF_artist_variables6a_1: Les variables peuvent être utiles lorsque tu
+          dois changer un nombre qui se répète souvent.
+      courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: Les variables peuvent être utiles lorsque tu
+          dois changer un nombre qui se répète souvent.
+      courseF_bee_conditionals2:
+        courseF_bee_conditionals2_2: La boîte à outils est maintenant en mode catégorie.  Tous
+          les blocs dont tu as besoin sont sous ces étiquettes !
+      courseF_bee_conditionals5:
+        courseF_bee_conditionals5_1: Utilise ce bloc lorsque la longueur du chemin
+          change (comme sur les côtés du rectangle !)
+      courseF_bee_for4:
+        courseF_bee_for4_1: Tu trouveras la boucle `for` ici !
+      courseF_bee_for4_2018:
+        courseF_bee_for4_1: Tu trouveras la boucle `for` ici !
+      courseF_bee_for4_2019:
+        courseF_bee_for4_1: Tu trouveras la boucle `for` ici !
+      courseF_bee_for9:
+        courseF_bee_for9_1: Tu trouveras ton bloc `maths` ici.
+      courseF_bee_for9_2018:
+        courseF_bee_for9_1: Tu trouveras ton bloc `maths` ici.
+      courseF_bee_for9_2019:
+        courseF_bee_for9_1: Tu trouveras ton bloc `maths` ici.
+      courseF_bee_functions2:
+        courseF_bee_functions2_1: Ce bloc fait appel à une fonction. Clique sur ce
+          bouton `éditer` pour voir ce qui est à l'intérieur !
+      courseF_bee_functions6:
+        courseF_bee_functions6_1: N'oublie pas de regarder si d'autres de blocs, ici,
+          pourraient te rendre cela plus facile !
+      courseF_bee_functions_challenge1:
+        courseF_bee_functions_challenge1_1: Quel code devrais-tu mettre dans cette
+          fonction ?
+        courseF_bee_functions_challenge1_2: La fonction "vérifier le nectar ou le
+          miel" peut être utilisée ici si tu l'édites pour faire du miel plusieurs
+          fois.
+      courseF_bee_fwp1:
+        courseF_bee_fwp1_1: Tu peux trouver des déclarations `si` ici.
+      courseF_bee_fwp2:
+        courseF_bee_fwp2_a: Le bloc qui appelle ta fonction réside ici.
+      courseF_bee_fwp3:
+        courseF_bee_fwp3_1: Cette même fonction peut être utilisée pour vérifier les
+          espaces vides ainsi que les nuages.
+      courseF_bee_fwp4:
+        courseF_bee_fwp4_1: Appuie sur le bouton "éditer" pour ajouter un paramètre
+          à cette fonction.
+      courseF_bee_fwp_challenge2:
+        courseF_bee_fwp_challenge2_callout1: Cette fonction fera un bon travail avec
+          le maïs, mais qu'en est-il des autres légumes ?
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: La boîte à outils a été organisée en catégories
+          pour faciliter la recherche des blocs dont tu as besoin.
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_1: Vous trouverez votre bloc variable ici.
+      courseF_playlab_variables6c:
+        courseF_playlab_variables5c_1: Vous trouverez votre bloc variable ici.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: Trouve le bloc "demander" ici !
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Utilise le bloc « Créer un cercle »
           et change la taille.
@@ -777,3 +921,15 @@ fr-FR:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
       frozen square snowflake:
         replace_questions: Utilise le menu déroulant pour remplacer «???» par un nombre.
+      grade5_artist_variables_triangles1:
+        grade5_artist_variables_triangles1_1: Tu noteras que les blocs ont une nouvelle
+          façon d'entrer des chiffres. Ces blocs `mathématiques` peuvent être retirés
+          et déplacés !
+      grade5_artist_variables_triangles1_2018:
+        grade5_artist_variables_triangles1_1: Tu noteras que les blocs ont une nouvelle
+          façon d'entrer des chiffres. Ces blocs `mathématiques` peuvent être retirés
+          et déplacés !
+      grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: Tu noteras que les blocs ont une nouvelle
+          façon d'entrer des chiffres. Ces blocs `mathématiques` peuvent être retirés
+          et déplacés !
