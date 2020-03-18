@@ -6,7 +6,7 @@ free_play_level_urls = {
     'Bounce' => 'http://studio.code.org/s/course3/stage/15/puzzle/10?noautoplay=true',
     'CS in Algebra' => 'http://studio.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true',
     'Flappy' => 'http://studio.code.org/flappy/10?noautoplay=true',
-    'Sprite Lab' => 'http://studio.code.org/s/coursee-2018/stage/20/puzzle/9?noautoplay=true'
+    'Sprite Lab' => 'http://studio.code.org/s/coursee-2019/stage/9/puzzle/6?noautoplay=true'
   },
   'droplet' => {
     'App Lab' => 'http://studio.code.org/s/applab-intro/stage/1/puzzle/15?noautoplay=true',
