@@ -12,21 +12,29 @@ const styles = {
 export default class ProgressBoxForLessonNumber extends Component {
   static propTypes = {
     completed: PropTypes.bool,
+    inProgress: PropTypes.bool,
     lessonNumber: PropTypes.number,
     tooltipId: PropTypes.string,
     linkToLessonPlan: PropTypes.string
   };
 
   render() {
-    const {completed, lessonNumber, tooltipId, linkToLessonPlan} = this.props;
-
+    const {
+      completed,
+      inProgress,
+      lessonNumber,
+      tooltipId,
+      linkToLessonPlan
+    } = this.props;
+    const started = completed || inProgress;
+    const workingOn = inProgress && !completed;
     return (
       <a href={linkToLessonPlan} target="_blank" data-for={tooltipId} data-tip>
         <ProgressBox
           style={styles.lessonBox}
-          started={completed}
-          incomplete={completed ? 0 : 20}
-          imperfect={0}
+          started={started}
+          incomplete={started ? 0 : 20}
+          imperfect={workingOn ? 20 : 0}
           perfect={completed ? 20 : 0}
           lessonNumber={lessonNumber}
         />
