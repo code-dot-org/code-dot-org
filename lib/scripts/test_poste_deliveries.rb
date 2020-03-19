@@ -23,7 +23,7 @@ end.to_h
 deliveries = POSTE_DB[:poste_deliveries].where("sent_at > '2019-01-01'")
 total = deliveries.count
 i = 0
-deliveries.each do |delivery|
+deliveries.paged_each do |delivery|
   template = templates[delivery[:message_id]]
   raise ValueError, "poste_messages[#{delivery[:message_id]}] does not exist" unless template
   template.render(JSON.parse(delivery[:params]))
