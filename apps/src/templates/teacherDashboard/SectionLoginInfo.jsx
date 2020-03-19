@@ -223,23 +223,9 @@ class WordOrPictureLogins extends React.Component {
 
   componentDidMount() {
     if (this.props.singleStudent) {
-      this.prepareSingleStudentPDF();
+      this.printLoginCards();
     }
   }
-
-  prepareSingleStudentPDF = () => {
-    console.log('prepareSingleStudentPDF');
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
-
-    printWindow.document.open();
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-  };
 
   printLoginCards = () => {
     const printArea = document.getElementById('printArea').outerHTML;
@@ -309,8 +295,10 @@ class WordOrPictureLogins extends React.Component {
             <Button
               __useDeprecatedTag
               text={i18n.printLoginCards_button()}
-              color="orange"
+              color={Button.ButtonColor.orange}
               onClick={this.printLoginCards}
+              icon="print"
+              iconClassName="fa"
             />
             <br />
             <div id="printArea" style={styles.container}>
@@ -343,14 +331,16 @@ class LoginCard extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section, student} = this.props;
+    const {studioUrlPrefix, section, student} = this.props;
 
     return (
       <div style={styles.card}>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_sectionName()}</span>
-          {` ${section.name}`}
-        </p>
+        <SafeMarkdown
+          style={styles.text}
+          markdown={i18n.loginCardSectionName({
+            sectionName: section.name
+          })}
+        />
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint1({
@@ -377,11 +367,14 @@ class LoginCard extends React.Component {
             {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={`${pegasusUrlPrefix}/images/${student.secret_picture_path}`}
+              src={pegasus(`/images/${student.secret_picture_path}`)}
               style={styles.img}
             />
           </span>
         )}
+        <br />
+        <br />
+        <div>{i18n.loginCardForPrint4()}</div>
       </div>
     );
   }
