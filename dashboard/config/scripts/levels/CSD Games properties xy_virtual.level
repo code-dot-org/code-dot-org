@@ -85,11 +85,8 @@
     "start_blocks": "var pallette = createSprite();\r\npallette.setAnimation(\"paint_pallette\");\r\nvar brush = createSprite();\r\nbrush.setAnimation(\"paint_brush\");\r\npallette.x = 100;\r\npallette.y = 300;\r\nbrush.x= 300;\r\nbrush.y = 100;\r\ndrawSprites();",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"d329befe-7c2e-4c98-8b2e-0d8b62455bad\",\r\n    \"989afa6d-ef0d-4056-abe5-ed5b7dd2edad\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"d329befe-7c2e-4c98-8b2e-0d8b62455bad\": {\r\n      \"name\": \"paint_pallette\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/v5duIpBuwcSIAezC0HQcwSb2RjGb8cEO/category_generic_items/paint_pallette.png\",\r\n      \"frameSize\": {\r\n        \"x\": 116,\r\n        \"y\": 96\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"v5duIpBuwcSIAezC0HQcwSb2RjGb8cEO\"\r\n    },\r\n    \"989afa6d-ef0d-4056-abe5-ed5b7dd2edad\": {\r\n      \"name\": \"paint_brush\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/EUJMQOEr7AAtw2jKovM2ziK1JsuUvztD/category_generic_items/paint_brush_blue.png\",\r\n      \"frameSize\": {\r\n        \"x\": 50,\r\n        \"y\": 89\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"EUJMQOEr7AAtw2jKovM2ziK1JsuUvztD\"\r\n    }\r\n  }\r\n}",
     "long_instructions": "# Sprite Properties\r\n\r\nSprite properties keep track of all the information your program needs to know about a sprite, such as its size and location.  You saw examples of sprite properties on the last level. Sprite properties are written using the dot notation. For example `brush.x` and `brush.y` are setting the x and y properties for the brush sprite. You can change the values of these properties just like you do variables, and see the results when your sprite is drawn to the screen.\r\n\r\n# Do this\r\n\r\n* Run the program to see where the sprites appear.\r\n* Change the x and y properties of the paint brush sprite to move it to the palette.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

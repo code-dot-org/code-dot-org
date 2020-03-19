@@ -7,7 +7,7 @@ theme: responsive
 # Learning computer science when schools are closed
 <div class="col-66" style="padding-right: 20px;">
 
-<p>We are facing an incredibly challenging time with the global outbreak of Covid-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
+<p>We are facing an incredibly challenging time with the global outbreak of COVID-19, grappling with growing concerns over health, our communities, and the economy. Safety measures have brought widespread school closures across the country. </p>
 <p>We want to support teachers, students, and families in any way we can. Below is a set of resources to help your student learn computer science at home. <strong>Parents – if you're considering creating a Code.org account for your student or helping them access an existing account, <a href="https://support.code.org/hc/en-us/articles/360040703792">please read this primer</a>.</strong></p>
 <p>We are also working on <a href="#teacher-support">resources to help teachers mid-course</a> to continue teaching computer science when their students are remote. </p>
 <p><a href="#apps">No computer at home? See smartphone options</a></p>
@@ -147,7 +147,23 @@ A great option for students getting started on their own. You'll learn the funda
 <a id="teacher-support"></a>
 ## Support for teachers mid-course
 We are working to build out supports for teachers currently teaching our courses here and will update with resources and recommendations as we have them. 
-* [CS Principles](/athome/csp) A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
-* CS Discoveries (coming soon) -  We are developing guidance for teachers, please join us on the forum to share with other teachers how you are managing your school closure. We recommend using the resources above or Hour of Code activities to engage students in the short term.
-* CS Fundamentals (coming soon) - Please use the resources above. If your students are in a CS Fundamentals course, we recommend encouraging them to continue in that course if they have access to devices/internet and skip the unplugged lessons.
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+
+<a href="/athome/csp"><img src="images/athome/fit-275/csp-remote.png" style="width: 100%"></a><br><a href="/athome/csp"><h3 style="color:#7665a0"><strong>Supporting at-home learning for CS Principles</strong></h3></a>A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
+
+</div>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+
+<a href="/athome/csd"><img src="images/athome/fit-275/csd-remote.png" style="width: 100%"></a><br><a href="/athome/csd"><h3 style="color:#7665a0"><strong>Supporting at-home learning for CS Discoveries</strong></h3></a>A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
+
+</div>
+
+<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
+
+<a href="/athome/csf"><img src="images/athome/fit-275/csf-remote.png" style="width: 100%"></a><br><a href="/athome/csf"><h3 style="color:#7665a0"><strong>Supporting at-home learning for CS Principles</strong></h3></a>A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
+
+</div>
+
 <div style="clear: both; padding-top: 40px; "></div>
