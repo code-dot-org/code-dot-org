@@ -18,12 +18,12 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I close my eyes
     And I sign out
     Examples:
-      | url                                                      | test_name                 | stitch_mode | user_type
-      | http://studio.code.org/projects/applab/new               | new applab project        | scroll      | student
-      | http://studio.code.org/                                  | logged in studio homepage | css         | student
-      | http://studio.code.org/                                  | logged in studio homepage | css         | teacher
-      | http://studio.code.org/s/allthethings                    | logged in script progress | css         | student
-      | http://studio.code.org/s/course4/stage/1/puzzle/1        | unplugged video level     | css         | student
-      | http://studio.code.org/s/allthethings/stage/18/puzzle/14 | no iframe in dsl          | css         | student
-      | http://studio.code.org/s/allthethings/stage/26/puzzle/1  | rich long assessment      | css         | student
-      | http://studio.code.org/s/allthethings/stage/27/puzzle/1  | free response             | css         | student
+      | url                                                      | test_name                         | stitch_mode | user_type |
+      | http://studio.code.org/projects/applab/new               | new applab project                | scroll      | student   |
+      | http://studio.code.org/                                  | logged in student studio homepage | css         | student   |
+      | http://studio.code.org/                                  | logged in teacher studio homepage | css         | teacher   |
+      | http://studio.code.org/s/allthethings                    | logged in script progress         | css         | student   |
+      | http://studio.code.org/s/course4/stage/1/puzzle/1        | unplugged video level             | css         | student   |
+      | http://studio.code.org/s/allthethings/stage/18/puzzle/14 | no iframe in dsl                  | css         | student   |
+      | http://studio.code.org/s/allthethings/stage/26/puzzle/1  | rich long assessment              | css         | student   |
+      | http://studio.code.org/s/allthethings/stage/27/puzzle/1  | free response                     | css         | student   |
