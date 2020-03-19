@@ -20,8 +20,13 @@ end.to_h
 # We do this because many of our emails are seasonal, so if we want to test
 # this thoroughly with the existing passive approach, we'd have to wait like a
 # year to be sure.
-POSTE_DB[:poste_deliveries].where("sent_at > '2019-01-01'").each do |delivery|
+deliveries = POSTE_DB[:poste_deliveries].where("sent_at > '2019-01-01'")
+total = deliveries.count
+i = 0
+deliveries.each do |delivery|
   template = templates[delivery[:message_id]]
   raise ValueError, "poste_messages[#{delivery[:message_id]}] does not exist" unless template
   template.render(JSON.parse(delivery[:params]))
+  i += 1
+  puts "#{i}/#{total} finished (#{i * 100 / total}%)" if i % (total / 5) == 0
 end
