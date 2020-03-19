@@ -520,7 +520,7 @@ class Blockly < Level
       next unless behavior_name
       localized_name = I18n.t(
         behavior_name.content,
-        scope: [:data, :function_names, name],
+        scope: [:data, :behavior_names, name],
         default: nil,
         smart: true
       )
@@ -531,7 +531,7 @@ class Blockly < Level
       next unless behavior_name
       localized_name = I18n.t(
         behavior_name.content,
-        scope: [:data, :function_names, name],
+        scope: [:data, :behavior_names, name],
         default: nil,
         smart: true
       )
