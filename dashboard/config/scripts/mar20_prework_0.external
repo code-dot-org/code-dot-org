@@ -5,8 +5,8 @@ description 'Prework for the CS Principles March 2020 event'
 
 markdown <<MARKDOWN
 # Saturday Session Resources
+####These are the resources that participants reviewed for the Saturday sessions and recordings from the Saturday session.  
 
-###The following resources are available:
 + Prework instructions in the <a href="https://forum.code.org/t/about-the-2020-march-training-category/32439" target = "_blank"> Forum </a>
 
 + EIPM: A Short Introduction [ <a href = "https://forum.code.org/uploads/short-url/AnVLufGRy5hmv7mChhqpWve6STQ.pdf" target = "_blank" >link </a>]
@@ -15,6 +15,7 @@ markdown <<MARKDOWN
 
 ##Coming Soon!
 + Welcome session recording
++ Daily Digest
 + Live Demo recording
 + Slides
 + Notes
