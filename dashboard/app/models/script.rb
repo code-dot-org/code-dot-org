@@ -1527,7 +1527,8 @@ class Script < ActiveRecord::Base
       pilot_experiment: script_data[:pilot_experiment],
       editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
-      curriculum_umbrella: script_data[:curriculum_umbrella]
+      curriculum_umbrella: script_data[:curriculum_umbrella],
+      tts: script_data[:tts]
     }.compact
   end
 
