@@ -14,13 +14,13 @@ level 'CSD U2 Inspector Warm Up_virtual', named: true
 level 'Intro to Web Lab - Part 2_virtual', named: true
 level 'CSD U2 HTML Adding Paragraphs_virtual', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Adding Paragraphs pt 2_virtual', progression: 'Using HTML Tags', assessment: true
+level 'CSD Web Debugging_virtual', progression: 'Video: Debugging'
 level 'CSD U2 HTML Debug Paragraphs_virtual', progression: 'Using HTML Tags'
 level 'CSD U2 Heading debug_virtual', progression: 'Using HTML Tags'
 
 stage 'Headings', flex_category: 'csd2_1'
 level 'CSD U2 Heading Demo_virtual', progression: 'Headings'
 level 'CSD U2 Heading Sizes_virtual', progression: 'Headings'
-level 'CSD Web Debugging_virtual', progression: 'Video: Debugging'
 level 'CSD Web Headings practice_2020_virtual', progression: 'Headings'
 level 'CSD Header Size MC_2018_2019_pilot_2020_virtual', progression: 'Headings', assessment: true
 level 'CSD U2 Heading Test_virtual', progression: 'Headings', assessment: true
