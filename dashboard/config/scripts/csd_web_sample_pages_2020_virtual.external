@@ -1,9 +1,12 @@
 name 'CSD Web Sample Pages_2020_virtual'
+editor_experiment ''
 title 'Sample Web Pages'
 display_name 'Sample Personal Web Pages'
 description 'Look through these sample web pages and decide what purpose they serve their creators and visitors.'
 markdown <<MARKDOWN
 # Sample Personal Web Pages
+
+Below are a bunch of examples of personal web pages like the ones you could create at the end of this unit. Click on any of the web pages to explore how they were made.
 
 <div style="float: left; text-align:center;"><strong>The Cutest Dog</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
 <div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
