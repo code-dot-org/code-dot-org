@@ -122,10 +122,7 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.loginInfo}
             component={props => (
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
+              <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route
