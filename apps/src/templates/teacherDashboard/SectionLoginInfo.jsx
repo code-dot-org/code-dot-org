@@ -356,11 +356,12 @@ class LoginCard extends React.Component {
           })}
         />
         {section.loginType === SectionLoginType.word && (
-          <span>
-            {i18n.loginCardForPrint3Word()}
-            <br />
-            <span style={styles.bold}>{student.secret_words}</span>
-          </span>
+          <SafeMarkdown
+            style={styles.text}
+            markdown={i18n.loginCardForPrint3Word({
+              secretWords: student.secret_words
+            })}
+          />
         )}
         {section.loginType === SectionLoginType.picture && (
           <span>
@@ -370,10 +371,10 @@ class LoginCard extends React.Component {
               src={pegasus(`/images/${student.secret_picture_path}`)}
               style={styles.img}
             />
+            <br />
+            <br />
           </span>
         )}
-        <br />
-        <br />
         <div>{i18n.loginCardForPrint4()}</div>
       </div>
     );

@@ -901,7 +901,7 @@
   "loginCardForPrint1": "1.) Go to [{directLink}]({directLink}) or to [{joinLink}]({joinLink}) and type in your 6-letter section code: **{sectionCode}**",
   "loginCardForPrint2": "2.) Choose your name: **{studentName}**",
   "loginCardForPrint3Picture": "3.) Choose your secret picture:",
-  "loginCardForPrint3Word": "3.) Type in your secret words:",
+  "loginCardForPrint3Word": "3.) Type in your secret words: **{secretWords}**",
   "loginCardForPrint4": "4.) Click the sign in button.",
   "loginCardSectionName": "Section name: **{sectionName}**",
   "loginCard_directUrl": "Direct URL:",
