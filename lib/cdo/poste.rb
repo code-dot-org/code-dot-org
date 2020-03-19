@@ -298,8 +298,8 @@ module Poste
 
     def renderer
       @@renderer ||= begin
-        require 'cdo/pegasus/actionview_sinatra'
-        ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
+        require 'cdo/markdown_handler'
+        MarkdownHandler.register
         ActionView::Base.new
       end
     end
