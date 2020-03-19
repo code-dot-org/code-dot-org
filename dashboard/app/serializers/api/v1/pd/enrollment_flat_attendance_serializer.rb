@@ -3,11 +3,11 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializer < ActiveModel::Serializer
   attributes :first_name, :last_name, :email, :district_name, :school, :role, :grades_teaching
 
   def district_name
-    object.try(:school_info).try(:school_district).try(:name)
+    object.school_info&.school_district&.name
   end
 
   def school
-    object.try(:school_info).try {|si| si.school.try(:name) || si.school_name} || object.school
+    object.school_info&.school&.name || object.school_info&.school_name || object.school
   end
 
   # Add dynamic attributes for each session's date and attendance

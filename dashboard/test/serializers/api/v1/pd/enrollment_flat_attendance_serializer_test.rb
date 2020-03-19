@@ -164,13 +164,26 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
     assert_equal expected, serialized.slice(*expected.keys)
   end
 
-  test 'extract school and teacher info' do
-    enrollment = create :pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8']
+  test 'extract school and teacher info when they present' do
+    enrollment = build :pd_enrollment, role: 'Classroom Teacher', grades_teaching: ['Grade 6-8']
     expected = {
       district_name: enrollment.school_info.school_district.name,
       school: enrollment.school_info.school.name,
       role: enrollment.role,
       grades_teaching: enrollment.grades_teaching
+    }
+
+    serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(enrollment).attributes
+    assert_equal expected, serialized.slice(*expected.keys)
+  end
+
+  test 'extract school and teacher info when they are empty' do
+    enrollment = build :pd_enrollment, school_info: (build :school_info_us)
+    expected = {
+      district_name: nil,
+      school: nil,
+      role: nil,
+      grades_teaching: nil
     }
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(enrollment).attributes
