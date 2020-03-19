@@ -25,6 +25,8 @@ export class MicrobitStubBoard {
 
   setPinMode(pinNum, mode) {}
 
+  digitalWrite(pinNum, value) {}
+
   displayPlot() {}
 
   displayClear() {}

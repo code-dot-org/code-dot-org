@@ -570,7 +570,11 @@ class MicrobitFirmataClient {
 
     if ((pinNum < 0) || (pinNum > 20)) return;
     this.myPort.write([this.SET_PIN_MODE, pinNum, this.DIGITAL_OUTPUT]);
-    this.myPort.write([this.SET_DIGITAL_PIN, pinNum, (turnOn ? 1 : 0)]);
+    this.digitalWrite(pinNum, (turnOn ? 1 : 0));
+  }
+
+  digitalWrite(pin, value){
+    this.myPort.write([this.SET_DIGITAL_PIN, pin, value]);
   }
 
   setAnalogOutput(pinNum, level) {
