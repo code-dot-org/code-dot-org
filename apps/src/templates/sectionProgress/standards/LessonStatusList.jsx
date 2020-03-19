@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import {connect} from 'react-redux';
@@ -8,11 +7,16 @@ import {
   getUnpluggedLessonsForScript,
   setSelectedLessons
 } from './sectionStandardsProgressRedux';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   lessonListItem: {
     display: 'flex',
     flexDirection: 'row'
+  },
+  links: {
+    paddingLeft: 10,
+    color: color.teal
   }
 };
 
@@ -22,16 +26,6 @@ class LessonStatusList extends Component {
     setSelectedLessons: PropTypes.func.isRequired,
     selectedLessons: PropTypes.array.isRequired
   };
-
-  componentWillMount() {
-    const {unpluggedLessonList} = this.props;
-    const completedLessons = _.filter(unpluggedLessonList, function(lesson) {
-      return lesson.completed;
-    });
-    const alreadySelected = this.props.selectedLessons;
-    const displayAsSelected = alreadySelected.concat(completedLessons);
-    this.props.setSelectedLessons(displayAsSelected);
-  }
 
   handleChange = selectedLessons => {
     this.props.setSelectedLessons(selectedLessons);
@@ -53,29 +47,30 @@ class LessonStatusList extends Component {
   }
 }
 
-const ComplexLessonComponent = function({style, lesson}) {
+const ComplexLessonComponent = function({lesson}) {
   return (
     <div style={styles.lessonListItem}>
       <div>
         <ProgressBoxForLessonNumber
-          completed={lesson.selected}
+          completed={lesson.completed}
+          inProgress={lesson.inProgress}
           lessonNumber={lesson.number}
         />
       </div>
-      <a style={{paddingLeft: 10}} href={lesson.url} target={'_blank'}>
+      <a style={styles.links} href={lesson.url} target={'_blank'}>
         {lesson.name}
       </a>
     </div>
   );
 };
 ComplexLessonComponent.propTypes = {
-  style: PropTypes.object,
   lesson: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
     number: PropTypes.number,
     url: PropTypes.string,
-    completed: PropTypes.bool
+    completed: PropTypes.bool,
+    inProgress: PropTypes.bool
   })
 };
 

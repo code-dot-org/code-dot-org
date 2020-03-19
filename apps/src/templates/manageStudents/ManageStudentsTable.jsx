@@ -294,6 +294,7 @@ class ManageStudentsTable extends Component {
       <div>
         {numberOfEditingRows > 1 && (
           <Button
+            __useDeprecatedTag
             onClick={this.props.saveAllStudents}
             color={Button.ButtonColor.orange}
             text={i18n.saveAll()}

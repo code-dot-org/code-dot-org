@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import {connect} from 'react-redux';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
@@ -16,12 +15,10 @@ const styles = {
   }
 };
 
-class LessonStatusDialog extends Component {
+export default class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired,
-    // redux
-    selectedLessons: PropTypes.array.isRequired
+    handleConfirm: PropTypes.func.isRequired
   };
 
   render() {
@@ -39,6 +36,7 @@ class LessonStatusDialog extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
@@ -48,7 +46,3 @@ class LessonStatusDialog extends Component {
     );
   }
 }
-
-export default connect(state => ({
-  selectedLessons: state.sectionStandardsProgress.selectedLessons
-}))(LessonStatusDialog);

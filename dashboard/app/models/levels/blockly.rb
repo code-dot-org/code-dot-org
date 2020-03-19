@@ -26,7 +26,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
-  before_save :fix_examples
+  before_save :fix_examples, :update_goal_override
 
   serialized_attrs %w(
     level_url
@@ -78,6 +78,7 @@ class Blockly < Level
     preload_asset_list
     skip_autosave
     skip_run_save
+    goal_override
   )
 
   before_save :update_ideal_level_source
@@ -608,5 +609,11 @@ class Blockly < Level
       level_object[:config]["args"] = arguments
     end
     level_objects_copy
+  end
+
+  def update_goal_override
+    if goal_override&.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
   end
 end

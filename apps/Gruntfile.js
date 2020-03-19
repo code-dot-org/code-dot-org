@@ -374,6 +374,9 @@ describe('entry tests', () => {
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
+      options: {
+        dest: 'build/locales'
+      },
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
@@ -557,7 +560,8 @@ describe('entry tests', () => {
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
+    'levels/_teacher_markdown':
+      './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
