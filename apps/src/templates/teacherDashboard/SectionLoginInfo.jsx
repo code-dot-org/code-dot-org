@@ -57,6 +57,7 @@ class SectionLoginInfo extends React.Component {
             pegasusUrlPrefix={pegasusUrlPrefix}
             section={section}
             students={students}
+            singleStudent={!!singleStudentId}
           />
         )}
         {section.loginType === SectionLoginType.email && (
@@ -219,7 +220,27 @@ class WordOrPictureLogins extends React.Component {
     studioUrlPrefix: PropTypes.string.isRequired,
     pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
-    students: PropTypes.array.isRequired
+    students: PropTypes.array.isRequired,
+    singleStudent: PropTypes.bool
+  };
+
+  componentDidMount() {
+    if (this.props.singleStudent) {
+      this.prepareSingleStudentPDF();
+    }
+  }
+
+  prepareSingleStudentPDF = () => {
+    const printArea = document.getElementById('printArea').outerHTML;
+    // Adding a unique ID to the window name allows for multiple instances of this window
+    // to be open at once without affecting each other.
+    const windowName = `printWindow-${_.uniqueId()}`;
+    let printWindow = window.open('', windowName, '');
+
+    printWindow.document.open();
+    printWindow.document.write('<body onafterprint="self.close()">');
+    printWindow.document.write(printArea);
+    printWindow.document.write('</body></html>');
   };
 
   printLoginCards = () => {
