@@ -1,5 +1,5 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email, :application_id, :district_name, :school, :role,
+  attributes :id, :first_name, :last_name, :email, :alternate_email, :application_id, :district_name, :school, :role,
     :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
     :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
     :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
@@ -8,6 +8,16 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   def user_id
     user = object.resolve_user
     user ? user.id : nil
+  end
+
+  def alternate_email
+    application_id = object.application_id
+    return unless application_id
+
+    # Note: Use dig instead of [] because RuboCop doesn't like chaining ordinary method call after safe navigation operator.
+    Pd::Application::ApplicationBase.find(application_id)&.
+      sanitize_form_data_hash&.
+      dig(:alternate_email)
   end
 
   def school
