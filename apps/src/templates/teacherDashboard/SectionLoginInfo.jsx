@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
@@ -252,7 +252,7 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
+    const {pegasusUrlPrefix, section, students} = this.props;
     const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
@@ -305,8 +305,6 @@ class WordOrPictureLogins extends React.Component {
               {students.map(student => (
                 <LoginCard
                   key={student.id}
-                  studioUrlPrefix={studioUrlPrefix}
-                  pegasusUrlPrefix={pegasusUrlPrefix}
                   section={section}
                   student={student}
                 />
@@ -324,14 +322,12 @@ class WordOrPictureLogins extends React.Component {
  */
 class LoginCard extends React.Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     student: PropTypes.object.isRequired
   };
 
   render() {
-    const {studioUrlPrefix, section, student} = this.props;
+    const {section, student} = this.props;
 
     return (
       <div style={styles.card}>
@@ -344,7 +340,7 @@ class LoginCard extends React.Component {
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint1({
-            directLink: `${studioUrlPrefix}/sections/${section.code}`,
+            directLink: studio(`/sections/${section.code}`),
             joinLink: pegasus('/join'),
             sectionCode: section.code
           })}
