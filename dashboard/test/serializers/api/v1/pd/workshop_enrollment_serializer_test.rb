@@ -11,7 +11,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCa
       :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
       :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
       :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
-      :scholarship_status, :scholarship_ineligible_reason
+      :scholarship_status, :scholarship_ineligible_reason, :enrolled_date
     ]
 
     serialized = ::Api::V1::Pd::WorkshopEnrollmentSerializer.new(enrollment).attributes
