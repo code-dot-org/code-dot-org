@@ -17,6 +17,8 @@ import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
+import {navigateToHref} from '@cdo/apps/utils';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   xIcon: {
@@ -104,6 +106,13 @@ class ManageStudentActionsCell extends Component {
     this.props.addStudent(this.props.id);
   };
 
+  onPrintLoginInfo = () => {
+    const {id, sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?studentId=${id}`;
+    navigateToHref(url);
+  };
+
   render() {
     const {rowType, isEditing, loginType} = this.props;
     const canDelete = [
@@ -121,6 +130,9 @@ class ManageStudentActionsCell extends Component {
                 {i18n.edit()}
               </PopUpMenu.Item>
             )}
+            <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
+              {i18n.printLoginCard()}
+            </PopUpMenu.Item>
             {this.props.canEdit && canDelete && <MenuBreak />}
             {canDelete && (
               <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
