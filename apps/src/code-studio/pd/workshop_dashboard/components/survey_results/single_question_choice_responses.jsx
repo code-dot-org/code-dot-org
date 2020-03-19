@@ -1,3 +1,6 @@
+// This component renders a survey answer that consists of one question
+// Ex. checkbox or radio button question
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
@@ -13,7 +16,7 @@ export default class SingleQuestionChoiceResponses extends React.Component {
 
   render() {
     const {section, answer, question, questionId} = this.props;
-    /// numRespondents will get either a value (for multiSelect) or undefined.
+    // numRespondents will get either a value (for multiSelect) or undefined.
     const numRespondents = answer.num_respondents;
 
     // Make a copy of the answers without the num_respondents and other_answers fields.

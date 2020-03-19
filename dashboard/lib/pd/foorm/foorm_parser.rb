@@ -84,6 +84,9 @@ module Pd::Foorm
     # given a rating question, create choices from
     # <min-rate>...<max-rate>, as form will only specify min and max
     # Include min/max rate descriptions in min/max choices if specified in form
+    # Example choices for a rating from 1 to 5:
+    # '1 - Disagree', '2', '3', '4', '5 - Agree'
+    # the keys will be 1, 2, 3, 4, 5
     def self.get_friendly_rating_choices(question_data)
       choices = {}
       # survey js default min/max is 1/5
