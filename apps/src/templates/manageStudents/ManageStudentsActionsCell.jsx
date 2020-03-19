@@ -136,6 +136,11 @@ class ManageStudentActionsCell extends Component {
       SectionLoginType.email
     ].includes(loginType);
 
+    const showLoginCardOption = [
+      SectionLoginType.word,
+      SectionLoginType.picture
+    ].includes(loginType);
+
     return (
       <div>
         {!isEditing && (
@@ -145,9 +150,11 @@ class ManageStudentActionsCell extends Component {
                 {i18n.edit()}
               </PopUpMenu.Item>
             )}
-            <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
-              {i18n.printLoginCard()}
-            </PopUpMenu.Item>
+            {showLoginCardOption && (
+              <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
+                {i18n.printLoginCard()}
+              </PopUpMenu.Item>
+            )}
             {this.props.canEdit && canDelete && <MenuBreak />}
             {canDelete && (
               <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
