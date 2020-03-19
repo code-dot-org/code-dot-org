@@ -19,6 +19,7 @@ import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   xIcon: {
@@ -108,6 +109,20 @@ class ManageStudentActionsCell extends Component {
 
   onPrintLoginInfo = () => {
     const {id, sectionId} = this.props;
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-print-login-card',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
+
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?studentId=${id}`;
     navigateToHref(url);
