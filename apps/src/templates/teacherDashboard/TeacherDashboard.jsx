@@ -49,7 +49,6 @@ function Header(props) {
 class TeacherDashboard extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
@@ -83,7 +82,6 @@ class TeacherDashboard extends Component {
     const {
       location,
       studioUrlPrefix,
-      pegasusUrlPrefix,
       sectionId,
       sectionName,
       studentCount
@@ -113,10 +111,7 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.manageStudents}
             component={props => (
-              <ManageStudents
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route
