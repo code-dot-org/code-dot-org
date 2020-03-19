@@ -10,6 +10,7 @@ import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButt
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
@@ -34,7 +35,17 @@ class SectionLoginInfo extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, pegasusUrlPrefix, section} = this.props;
+    const singleStudentId = queryParams('studentId');
+
+    console.log('singleStudentId', singleStudentId);
+    console.log('students', this.props.students);
+
+    const students = singleStudentId
+      ? this.props.students.filter(
+          student => student.id.toString() === singleStudentId
+        )
+      : this.props.students;
 
     return (
       <div>
