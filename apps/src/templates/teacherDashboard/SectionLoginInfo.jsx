@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
@@ -37,10 +38,6 @@ class SectionLoginInfo extends React.Component {
   render() {
     const {studioUrlPrefix, pegasusUrlPrefix, section} = this.props;
     const singleStudentId = queryParams('studentId');
-
-    console.log('singleStudentId', singleStudentId);
-    console.log('students', this.props.students);
-
     const students = singleStudentId
       ? this.props.students.filter(
           student => student.id.toString() === singleStudentId
@@ -231,6 +228,7 @@ class WordOrPictureLogins extends React.Component {
   }
 
   prepareSingleStudentPDF = () => {
+    console.log('prepareSingleStudentPDF');
     const printArea = document.getElementById('printArea').outerHTML;
     // Adding a unique ID to the window name allows for multiple instances of this window
     // to be open at once without affecting each other.
@@ -350,38 +348,39 @@ class LoginCard extends React.Component {
     return (
       <div style={styles.card}>
         <p style={styles.text}>
-          {i18n.loginCard_instructions({
-            url: `${pegasusUrlPrefix}/join`,
-            code: section.code
-          })}
-        </p>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_directUrl()}</span>
-          {` ${studioUrlPrefix}/sections/${section.code}`}
-        </p>
-        <p style={styles.text}>
           <span style={styles.bold}>{i18n.loginCard_sectionName()}</span>
           {` ${section.name}`}
         </p>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_name()}</span>
-          {` ${student.name}`}
-        </p>
+        <SafeMarkdown
+          style={styles.text}
+          markdown={i18n.loginCardForPrint1({
+            directLink: `${studioUrlPrefix}/sections/${section.code}`,
+            joinLink: pegasus('/join'),
+            sectionCode: section.code
+          })}
+        />
+        <SafeMarkdown
+          style={styles.text}
+          markdown={i18n.loginCardForPrint2({
+            studentName: student.name
+          })}
+        />
+        {section.loginType === SectionLoginType.word && (
+          <span>
+            {i18n.loginCardForPrint3Word()}
+            <br />
+            <span style={styles.bold}>{student.secret_words}</span>
+          </span>
+        )}
         {section.loginType === SectionLoginType.picture && (
-          <p style={styles.text}>
-            <span style={styles.bold}>{i18n.loginCard_secretPicture()}</span>
+          <span>
+            {i18n.loginCardForPrint3Picture()}
             <br />
             <img
               src={`${pegasusUrlPrefix}/images/${student.secret_picture_path}`}
               style={styles.img}
             />
-          </p>
-        )}
-        {section.loginType === SectionLoginType.word && (
-          <p style={styles.text}>
-            <span style={styles.bold}>{i18n.loginCard_secretWords()}</span>
-            <span>{` ${student.secret_words}`}</span>
-          </p>
+          </span>
         )}
       </div>
     );
