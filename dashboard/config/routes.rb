@@ -47,6 +47,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  post 'pusher/auth', to: 'pusher#auth'
+
   get 'maker/home', to: 'maker#home'
   get 'maker/setup', to: 'maker#setup'
   get 'maker/discountcode', to: 'maker#discountcode'

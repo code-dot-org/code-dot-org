@@ -2,6 +2,7 @@
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
 
+import _ from 'lodash';
 import Pusher from 'pusher-js';
 import {PusherChannel, NullChannel} from './PubSubChannel';
 
@@ -47,7 +48,10 @@ import {PusherChannel, NullChannel} from './PubSubChannel';
  */
 export default function create(pubSubConfig) {
   if (pubSubConfig.usePusher) {
-    return new PusherService(pubSubConfig.pusherApplicationKey);
+    return new PusherService(
+      pubSubConfig.pusherApplicationKey,
+      _.pick(pubSubConfig, ['auth', 'authEndpoint', 'forceTLS'])
+    );
   }
 
   return new NullService();
@@ -72,8 +76,8 @@ class NullService {
  * @implements IPubSubService
  */
 class PusherService {
-  constructor(applicationKey) {
-    this.api_ = new Pusher(applicationKey, {encrypted: true});
+  constructor(applicationKey, config = {}) {
+    this.api_ = new Pusher(applicationKey, {encrypted: true, ...config});
   }
 
   subscribe(channelID) {

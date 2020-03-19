@@ -27,5 +27,10 @@
 - content_for(:body_scripts) do
   - script_data = {scriptName: {name: text,
     href: script_path(@script, section_id: section_id, user_id: user_id),
-    smallText: small_text}.to_json}
+    smallText: small_text}.to_json,
+    pubSub: {usePusher: CDO.use_pusher,
+    pusherApplicationKey: CDO.pusher_application_key,
+    forceTLS: true,
+    authEndpoint: '/pusher/auth',
+    auth: {headers: {'X-CSRF-Token' => form_authenticity_token}}}.to_json}
   %script{type: "text/javascript", src: webpack_asset_path('js/shared/_header_progress.js'), data: script_data}
