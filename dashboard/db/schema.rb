@@ -280,6 +280,7 @@ ActiveRecord::Schema.define(version: 20200317174030) do
     t.datetime "updated_at",           null: false
     t.index ["email"], name: "index_contact_rollups_pardot_memory_on_email", unique: true, using: :btree
     t.index ["pardot_id"], name: "index_contact_rollups_pardot_memory_on_pardot_id", unique: true, using: :btree
+  end
     
   create_table "contact_rollups_comparisons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "email",               null: false
