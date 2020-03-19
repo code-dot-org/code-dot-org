@@ -1225,15 +1225,6 @@ And(/^I create a teacher named "([^"]*)"( and go home)?$/) do |name, home|
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
-And(/^I make user "([^"]*)" an admin ?$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  # Only users with multi auto can have admin privileges.
-  user.migrate_to_multi_auth
-  user.admin = true
-  user.save!
-end
-
 And(/^I submit this level$/) do
   steps %Q{
     And I press "runButton"

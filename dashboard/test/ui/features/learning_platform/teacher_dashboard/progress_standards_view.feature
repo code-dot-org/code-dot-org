@@ -3,9 +3,8 @@
 Feature: Viewing and Printing Standards Progress
 
   Background:
-    Given I create a teacher named "Admin"
-    And I make user "Admin" an admin
-    Then I sign in as "Admin"
+    Given I create a teacher named "Standards Importer"
+    Then I sign in as "Standards Importer"
     Then I am on "http://studio.code.org/admin/standards"
     And I wait until element "#import-standards" is visible
     And I press "#import-standards" using jQuery

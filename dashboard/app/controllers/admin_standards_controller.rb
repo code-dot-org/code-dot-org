@@ -1,6 +1,10 @@
 class AdminStandardsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_admin
+  # Bypass enforce_google_sso_for_admin requirements so we can import standards
+  # associations on test for UI tests.
+  unless Rails.env.test?
+    before_action :require_admin
+  end
 
   def index
     @scripts_with_standards = Script.scripts_with_standards.sort
