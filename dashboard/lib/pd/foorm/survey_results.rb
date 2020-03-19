@@ -39,7 +39,19 @@ module Pd::Foorm
         response_count: rollup[:response_count],
         workshop_id: ws_data.id
       }
+      overall_rollup = get_rollup_for_course(ws_data.course)
+      result_data[:rollups][:overall] = {
+        averages: overall_rollup[:averages],
+        response_count: overall_rollup[:response_count]
+      }
       return result_data
+    end
+
+    def self.get_rollup_for_course(course_name)
+      workshop_ids = Pd::Workshop.where(course: course_name).where.not(started_at: nil, ended_at: nil).pluck(:id)
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids)
+      parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
+      return get_rollup_from_parsed_data(parsed_forms, summarized_answers, course_name)
     end
 
     def self.parse_and_summarize_forms(ws_submissions, form_submissions, forms)
