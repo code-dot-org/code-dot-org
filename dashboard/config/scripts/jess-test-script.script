@@ -1,8 +1,9 @@
 peer_reviews_to_complete 2
 hideable_stages true
 
-stage 'new stage'
+stage 'Welcome to CSD Virtual Professional Learning'
 level 'CSD-U3-fill_2019-Jess'
+level 'VirtualPLOverview'
 
-stage 'newer stage'
+stage 'Introduction to CSD'
 level 'Jess - CSD U2 HTML Adding Paragraphs_2019'
