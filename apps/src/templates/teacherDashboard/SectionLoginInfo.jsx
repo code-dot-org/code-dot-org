@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
@@ -25,7 +25,6 @@ const getManageStudentsUrl = sectionId => {
 class SectionLoginInfo extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
 
     // Provided by redux.
     section: PropTypes.shape({
@@ -36,7 +35,7 @@ class SectionLoginInfo extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section} = this.props;
+    const {studioUrlPrefix, section} = this.props;
     const singleStudentId = queryParams('studentId');
     const students = singleStudentId
       ? this.props.students.filter(
@@ -51,7 +50,6 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <WordOrPictureLogins
             studioUrlPrefix={studioUrlPrefix}
-            pegasusUrlPrefix={pegasusUrlPrefix}
             section={section}
             students={students}
             singleStudent={!!singleStudentId}
@@ -60,7 +58,6 @@ class SectionLoginInfo extends React.Component {
         {section.loginType === SectionLoginType.email && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            pegasusUrlPrefix={pegasusUrlPrefix}
             sectionCode={section.code}
             sectionId={section.id}
           />
@@ -137,18 +134,12 @@ class OAuthLogins extends React.Component {
 class EmailLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionCode: PropTypes.string.isRequired,
     sectionId: PropTypes.number.isRequired
   };
 
   render() {
-    const {
-      studioUrlPrefix,
-      pegasusUrlPrefix,
-      sectionCode,
-      sectionId
-    } = this.props;
+    const {studioUrlPrefix, sectionCode, sectionId} = this.props;
 
     return (
       <div>
@@ -165,7 +156,7 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
             {i18n.loginInfo_joinStep3({
-              url: `${pegasusUrlPrefix}/join`,
+              url: `${studioUrlPrefix}/join`,
               code: sectionCode
             })}
           </li>
@@ -215,7 +206,6 @@ const styles = {
 class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
     singleStudent: PropTypes.bool
@@ -252,7 +242,7 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {pegasusUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, section, students} = this.props;
     const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
@@ -261,7 +251,7 @@ class WordOrPictureLogins extends React.Component {
         <p>{i18n.loginInfo_signinSteps()}</p>
         <ol>
           <li>
-            {i18n.loginInfo_signinStep1({joinUrl: `${pegasusUrlPrefix}/join`})}
+            {i18n.loginInfo_signinStep1({joinUrl: `${studioUrlPrefix}/join`})}
           </li>
           <li>{i18n.loginInfo_signinStep2({code: section.code})}</li>
           <li>{i18n.loginInfo_signinStep3()}</li>
@@ -323,11 +313,12 @@ class WordOrPictureLogins extends React.Component {
 class LoginCard extends React.Component {
   static propTypes = {
     section: PropTypes.object.isRequired,
-    student: PropTypes.object.isRequired
+    student: PropTypes.object.isRequired,
+    studioUrlPrefix: PropTypes.string.isRequired
   };
 
   render() {
-    const {section, student} = this.props;
+    const {studioUrlPrefix, section, student} = this.props;
 
     return (
       <div style={styles.card}>
@@ -340,8 +331,8 @@ class LoginCard extends React.Component {
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint1({
-            directLink: studio(`/sections/${section.code}`),
-            joinLink: pegasus('/join'),
+            directLink: `${studioUrlPrefix}/sections/${section.code}`,
+            joinLink: `${studioUrlPrefix}/join`,
             sectionCode: section.code
           })}
         />
