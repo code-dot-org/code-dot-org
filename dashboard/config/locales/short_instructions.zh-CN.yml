@@ -963,6 +963,11 @@ zh-CN:
       NetSim Standalone SendAB: 你和伙伴共享了单条线路，它只能被设为状态 A 或状态 B。可以在任何时候都设置和读取线路状态。有没有办法只使用这个系统进行通信？
       NetSim Standalone Sending Numbers: '和伙伴可以可靠的来回发信息，不需要额外的协调了！当来回发送比特时，也可以用这些比特来表达十进制数据。可以用此系统表达什么样的信息？ '
       NetSim Standalone Sending Numbers Ascii: '现在，已经传输了以十进制数字表示的信息，可以将这些数字映射到文本字符，以来回发送基于文字的信息。使用基于文字的协议，可以很容易的表示和交流各种信息。 '
+      New Gumball Project: 创建并分享你想的任何东西！
+      New Ice Age Project: 创建并分享你想的任何东西！
+      New Infinity Project: 创建并分享你想的任何东西！
+      New Minecraft Hero Project: "**自由游戏时间：** 是时候自行探索了！"
+      New Sports Project: 创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，创造！当你完成后，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。
       Overworld Avoid Monsters: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Avoid Monsters_2019: 碰到苦力怕是个坏主意。小心避过苦力怕安全到家。
       Overworld Chop Tree: 木材是非常重要的资源。很多东西都是由它制成的。走到树边, 用 "摧毁模块" 指令把它砍下来。

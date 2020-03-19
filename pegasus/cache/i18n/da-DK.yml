@@ -269,6 +269,7 @@ da-DK:
   homepage_action_text_learn: Begynd at lære
   homepage_action_text_signpetition: Skriv under
   homepage_signpetition_dropdown: Jeg er enig &#x25BE;
+  homepage_signpetition_dropdown_text: Jeg er enig
   homepage_diversity_pledge: Afgiv et løfte om mangfoldighed
   homepage_banner_text_prizes: 'The Hour Of Code kommer igen, nemlig d. 7.-13. december
     2015. '
@@ -1520,10 +1521,12 @@ da-DK:
   compatibility_hide_this_warning: Skjul denne advarsel
   flappy_shortcode: bask
   header_home: Hjem
+  header_my_dashboard: Hjem
   header_courses: kurser
   header_course_catalog: Kursuskatalog
   header_project_gallery: Projekter
   header_sections: Sektioner
+  header_professional_learning: Professional learning
   header_educate_overview: Oversigt for undervisere
   header_educate_elementary: Grundskole
   header_educate_middle: Grundskole (mellemtrin/udskoling)

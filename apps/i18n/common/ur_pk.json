@@ -393,6 +393,7 @@
   "dropletBlock_return_signatureOverride": "واپس کرنا",
   "dropletBlock_stopSound_description": "رک جاتا ہے اگر کوئی URL دیا ہے تو آواز مسل اختصاصی URL یا سب آوازوں سے چلا رہا ہے ۔",
   "dropletBlock_stopSound_param0_description": "یو آر ایل کو ایک آواز مسل ۔ ایک پروجیکٹ اثاثہ نام یا خارجی URL ہو سکتا ہے ۔",
+  "edit": "تدوین کریں",
   "editAll": "تمام تدوین",
   "editSectionDetails": "اکاؤنٹ کی تفصیلات میں ترمیم کیجیے",
   "editable": "قابل تدوین",
@@ -950,5 +951,6 @@
   "workspaceHeaderShort": "جائے کار: ",
   "yes": "جی",
   "yourName": "آپ کا نام",
+  "yourSchoolHeading": "کمپیوٹر سائنس کے آپ کی اسکول یا ضلع میں توسیع کریں",
   "yourSchoolTellUs": "ہمیں اپنے اسکول کے بارے میں بتائیں"
 }

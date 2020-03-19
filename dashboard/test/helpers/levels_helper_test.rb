@@ -288,15 +288,15 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'send to phone enabled for US' do
     stub_country 'US'
-    assert app_options[:sendToPhone]
+    assert app_options[:isUS]
   end
 
   test 'send to phone disabled for non-US' do
     stub_country 'RU'
-    refute app_options[:sendToPhone]
+    refute app_options[:isUS]
   end
 
-  test 'send_to_phone_url provided when send to phone enabled' do
+  test 'send_to_phone_url provided when US' do
     stub_country 'US'
     assert_equal 'http://test.host/sms/send', app_options[:send_to_phone_url]
   end

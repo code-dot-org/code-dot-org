@@ -4200,7 +4200,7 @@ de-DE:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -7244,14 +7244,14 @@ de-DE:
         courseC_flappy_events5_a: Du musst den `Punkt`-Baustein benutzen, um diesen
           Level zu bestehen.
       courseC_flappy_events7:
-        courseC_flappy_events7_a: 'Du kannst den Hintergrund mit Hilfe des `Setze
-          Szene`-Bausteins ändern. '
+        courseC_flappy_events7_a: 'Du kannst den Hintergrund mit Hilfe des `Szene
+          einstellen`-Bausteins ändern. '
       courseC_flappy_events7_2018:
-        courseC_flappy_events7_a: 'Du kannst den Hintergrund mit Hilfe des `Setze
-          Szene`-Bausteins ändern. '
+        courseC_flappy_events7_a: 'Du kannst den Hintergrund mit Hilfe des `Szene
+          einstellen`-Bausteins ändern. '
       courseC_flappy_events7_2019:
-        courseC_flappy_events7_a: 'Du kannst den Hintergrund mit Hilfe des `Setze
-          Szene`-Bausteins ändern. '
+        courseC_flappy_events7_a: 'Du kannst den Hintergrund mit Hilfe des `Szene
+          einstellen`-Bausteins ändern. '
       courseC_flappy_events9:
         courseC_flappy_events9_a: Verbinde den Baustein `setze Punktzahl 0` mit dem
           Ereignis `wenn ein Hindernis getroffen wird`, um diesen Level zu passieren.

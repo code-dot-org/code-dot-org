@@ -919,6 +919,8 @@ pt:
     csp_functions: Funções
     csp_lists: Listas
     csp_loops: Ciclos
+    csp_unit1_2020: 'Unidade 1: Informação Digital'
+    csp_unit2_2020: 'Unidade 2: A Internet'
     k5_next_steps: Próximos Passos
   hoc_download:
     title: Hora das transferências de Código
@@ -974,6 +976,8 @@ pt:
   cookie_banner:
     accept: Concordar
   gdpr_dialog:
+    message: Os dados gerados do meu uso deste site poderão ser enviados e armazenados
+      ou processados nos Estados Unidos.
     true: Sim
   page_not_found_description: A página que estavas a procurar não existe neste endereço.
     Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página

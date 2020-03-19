@@ -13381,6 +13381,10 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+            Shapes and Parameters:
+              name: Şekiller ve Parametreler
+            Random Numbers:
+              name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
         maddie-test:
@@ -14484,6 +14488,8 @@ tr:
                 başlar. Öğrenciler basit bir kaç komutla hata ayıklama ve sıralamanın
                 temellerini öğrenirler. Dersin sonunda, öğrenciler, önceki derste
                 çizim aracı ile yaptıkları resmin bir benzerini yapabileceklerdir.
+            Shapes and Parameters:
+              name: Şekiller ve Parametreler
             Variables:
               name: Değişkenler
               description_student: Bu derste, rastgele üretilen bir numarayı kaydetmenin
@@ -14501,6 +14507,8 @@ tr:
                 kaydettiğini veya depoladığı görmek için, rastgele bir sayıyı kaydetmek
                 amacıyla değişkenleri kullanırlar, aynı rastgele numarayı kendi programlarında
                 birden çok kez kullanırlar.
+            Random Numbers:
+              name: Rastgele Sayılar
             Sprite Properties:
               name: Nesne özellikleri
             The Draw Loop:
@@ -15254,3 +15262,51 @@ tr:
               name: Sanatçıların Döngüleri
             Loops in Artist:
               name: Sanatçı- Döngüler
+        csp1-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            Representing Information:
+              name: Sunulan Bilgi
+            Binary Numbers:
+              name: İkili Sayılar
+            Intellectual Property:
+              name: Fikri Mülkiyet
+        csp2-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            The Need for Addressing:
+              name: Adresleme için ihtiyaç
+            Routers and Redundancy:
+              name: Yönlendiriciler ve yedeklilik
+        csp3-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            The Need for Programming Languages:
+              name: Programlama dilleri ne duyulan ihtiyaç
+            Debugging:
+              name: Hata Ayıklama (Debugging)
+        csp6-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp8-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+            Create PT - Complete the Task:
+              name: Performans Görevini Oluştur - Görevi Tamamla
+        csp9-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp10-2020:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: yeni kademe

@@ -16,6 +16,13 @@ fr:
         binôme et essayez à nouveau.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: n'est pas valide. Tu noteras que chaque lien ne peut être utilisé
+                qu'une seule fois pour réinitialiser ton mot de passe, et seul le
+                lien envoyé le plus récemment fonctionnera.
       messages:
         blank: est obligatoire
         blank_plural: est requis
@@ -49,6 +56,8 @@ fr:
           <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Remplissez les informations suivantes
           pour compléter la création d'un Code.org avec **%{provider}** de **%{email}**.
+        reset_password_token: Le lien que vous avez suivi pour réinitialiser le mot
+          de passe
         error:
           future: ne peut pas être dans le futur
   beta: beta
@@ -131,6 +140,13 @@ fr:
       de Code.org.
     already_linked: Votre compte de %{provider} est déjà associé à votre compte de
       Code.org.
+    existing_account:
+      account_exists: Bonnes nouvelles ! Tu as déjà un compte Code.org qui utilise
+        %{email}
+      sign_in: Veuillez vous connecter et nous lierons votre %{provider} profil.
+      sign_up: Pas votre adresse électronique ? Souhaitez-vous créer un nouveau compte
+        avec une adresse électronique différente ? Nous lierons votre %{provider}
+        profil si vous choisissez de créer un nouveau compte.
   signup_form:
     email_signup: Inscrivez-vous avec votre adresse email
     student_count: "%{count} élèves se sont déjà inscrits."
@@ -143,13 +159,13 @@ fr:
       [Vous pouvez parcourir les différentes étapes et les puzzles](/) sans compte,
       mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.
     hoc_already_signed_up_heading: Commencez sans vous connecter
-    hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une Heure du Code!
-      Vous et vos élèves n'avez pas besoin de vous connecter à Code Studio pour participer
-      à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez
+    hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une Hour of Code
+      ! Vous et vos élèves n'avez pas besoin de vous connecter à Code Studio pour
+      participer à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez
       un didacticiel</a> pour votre classe et partagez le lien avec eux. <br/> <br/>
-      Si vous avez apprécié l'Heure du Code et souhaitez aller plus loin, vous pouvez
+      Si vous avez apprécié Hour of Code et souhaitez aller plus loin, vous pouvez
       configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire
-      vos étudiants dans l'un de nos <a href="https://code.org/educate"> cours plus
+      vos étudiants dans l'un de nos cours <a href="https://code.org/educate">  plus
       longs </a >.
     hoc_already_signed_up_content_post_hoc: Je vous remercie d’avoir accueilli Une
       Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d' un mot
@@ -187,10 +203,11 @@ fr:
     agree_us_website: J’accepte d’utiliser un site Web basé aux États-Unis.
     my_data_to_us: Des informations sur mon utilisation de ce site peuvent être envoyées
       et enregistrées ou traitées aux États-Unis.
-    student_terms_markdown: |-
-      Les adresses de courriel ne sont pas stockées dans un format qui nous permet de contacter les étudiants.
-      Les étudiants ne recevront jamais de courriels de Code.org sauf lors de la procédure de récupération de mot de passe.
-      Voir notre [politique de confidatialité](http://code.org/privacy) pour plus d'informations.
+    student_terms_markdown: Les adresses de courriel ne sont pas stockées dans un
+      format qui nous permet de contacter les étudiants.Les étudiants ne recevront
+      jamais de courriels de Code.org sauf lors de la procédure de récupération de
+      mot de passe.Voir notre [politique de confidatialité](http://code.org/privacy)
+      pour plus d'informations.
     additional_information: Nous avons besoin de quelques informations supplémentaires
       pour continuer l’inscription.
     user_type_button: Mise à jour du type de compte
@@ -538,6 +555,9 @@ fr:
       (pour la récupération de mot de passe)
     update: Mise à jour du compte
     account_successfully_updated: Compte actualisé avec succès.
+    auth_option_saved: Vous avez réussi à lier votre %{provider} compte avec l'adresse
+      électronique %{email}.
+    auth_option_saved_no_email: Vous avez réussi à lier votre %{provider} compte.
     update_email: Mise à jour
   user_level:
     completed: Terminé
@@ -697,6 +717,9 @@ fr:
       gamelab_unsupported_tablet: Game Lab fonctionne mieux sur un ordinateur portable
         ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes
         avec cet outil sur votre appareil actuel.
+      oceans_unsupported_browser: Ce navigateur n'est pas pris en charge pour ce didacticiel.
+        Veuillez essayer de visiter cette page en utilisant Edge, Chrome, Firefox
+        ou un autre navigateur moderne.
       weblab_unsupported_browser: Malheureusement, Web Lab a quelques problèmes de
         chargement avec ce navigateur. Vous pouvez utiliser un autre navigateur jusqu'à
         ce que les soucis soient résolu. Désolé pour la gêne occasionnée.
@@ -1193,13 +1216,20 @@ fr:
     csp_traversals: Parcours
     csp_libraries: Bibliothèques
     csp_parameters_return_values: Paramètres et Valeur de Retour
+    csp_unit1_2020: 'Unité 1: L’Information numérique'
+    csp_unit2_2020: Principes de l'informatique, unité 2
     dlp: Sujets de réflexion
     time4cs_c1: Les Everglades et ses écosystèmes
     time4cs_c2: Les chaînes alimentaires dans les Everglades
     time4cs_c3: Vivre dans les Everglades
     time4cs_c4: Impact Invasif sur les Everglades
     time4cs_c5: Citoyens influent sur les changements dans les Everglades
+    time4cs_c6: Conditions (révision)
+    k5_csf_intro: Familiarisez-vous avec les cours sur les Fondamentaux de l'Informatique
+    k5_coding_concepts: Concepts de Codage et Stratégies D'Enseignement
     k5_next_steps: Prochaines étapes
+    k5_basic_concepts: Concepts de Codage de Base et Pratiques D'enseignement
+    k5_diving_deeper: 'Immersion Totale : Cours E et F'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas

@@ -133,6 +133,14 @@ vi-VN:
         do something: thực hiện
       NEW Course 4 Play Lab Params 11:
         jump: nhảy
+      New Artist Project:
+        draw a star: vẽ một ngôi sao
+        draw a circle: vẽ một hình tròn
+        draw a triangle: vẽ một hình tam giác
+        draw a house: vẽ một căn nhà
+        draw a square: vẽ một hình vuông
+      New Play Lab Project:
+        jump: nhảy
       Robot Doodle:
         draw head: vẽ đầu
       Robot Doodle_2018:
@@ -200,8 +208,6 @@ vi-VN:
       courseE_artist_functions7:
         draw a house: vẽ một căn nhà
       courseE_artist_functions7_2018:
-        draw a house: vẽ một căn nhà
-      courseE_artist_functions7_2019:
         draw a house: vẽ một căn nhà
       courseE_artist_functions8:
         do something: thực hiện

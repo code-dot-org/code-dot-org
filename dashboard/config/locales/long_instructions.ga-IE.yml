@@ -196,7 +196,7 @@ ga-IE:
       CourseD_Dance_Party_02: |-
         Cuirimis an mús seo ag damhsa!
 
-        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc teagmhais <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
+        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc teagmhais <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
 
         Úsáidtear **tomhais** chun am a mharcáil sa gceol. Sa chúrsa seo, tá ceithre bhuille i ngach tomhas.
       CourseD_Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc teagmhais <xml><block
@@ -226,7 +226,7 @@ ga-IE:
       CourseD_Dance_Party_10: |-
         Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -238,6 +238,24 @@ ga-IE:
         **Úsáid na heochracha agus tabhair ar an Róbat titim-bos-titim-bos a dhéanamh chomh gasta agus is féidir!**
       CourseD_Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn
         le cairde é.
+      Crack a Caesar Cipher: |-
+        # Bris sifear Chaesair!
+
+        Leis an uirlis seo, beidh tú in ann imirt le téacsanna agus sifir Chaesair a chruthú. Úsáid í chun teachtaireacht a chriptiú nó a dhíchriptiú.
+
+        # Déan é seo
+
+        -   Lódáil **Teachtaireacht shamplach** ón roghchlár aníos Teachtaireacht. Lódálfar teachtaireacht a criptíodh le sifear Chaesair.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Úsáid na cnaipí sa chluaisín Ionadú Chaesair chun an aibítir a aistriú ar aghaidh nó ar gcúl chun iarracht a dhéanamh an teachtaireacht a dhíchriptiú.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Cé chomh fada a thógann sé an sifear a bhriseadh? An modh criptithe éifeachtach é seo?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance Party 2: "Bhí an t-eachtrán bródúil as a scileanna damhsa ar Mhars, ach
         anois ní féidir leis ach dul anonn is anall. \n\nAn féidir leat an t-iompar
         taobh istigh den bhloc <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
@@ -306,7 +324,7 @@ ga-IE:
       Dance_Party_02: |-
         Cuirimis an mús seo ag damhsa!
 
-        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
+        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
 
         Úsáidtear **tomhais** chun am a mharcáil sa gceol. Sa chúrsa seo, tá ceithre bhuille i ngach tomhas.
       Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -335,7 +353,7 @@ ga-IE:
       Dance_Party_10: |-
         Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>

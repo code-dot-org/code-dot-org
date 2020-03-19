@@ -10,6 +10,7 @@
   "blockDestroyBlock": "musnahkan blok",
   "blockIf": "jika",
   "blockIfLavaAhead": "jika ada lava dihadapan",
+  "blockMoveBackward": "bergerak ke belakang dengan",
   "blockMoveForward": "bergerak ke hadapan",
   "blockPlace": "letakkan",
   "blockPlaceTorch": "letakkan obor",

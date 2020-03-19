@@ -1,0 +1,17 @@
+name 'curriculum-how-challenging_virtual'
+question 'How challenging were the lessons and topics in this course for you? I think this course was...'
+right 'way too easy.'
+right 'a little too easy.'
+right 'just about right.'
+right 'a little too difficult.'
+right 'way too difficult.'
+
+markdown <<MARKDOWN
+<!--
+right 'nothing'  
+right 'too little'
+right 'about the right amount'
+right 'too much'
+right 'way too much'-->
+
+MARKDOWN

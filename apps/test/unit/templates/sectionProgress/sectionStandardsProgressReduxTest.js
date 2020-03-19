@@ -6,7 +6,8 @@ import sectionStandardsProgress, {
   lessonsByStandard,
   getNumberLessonsCompleted,
   getPluggedLessonCompletionStatus,
-  getUnpluggedLessonCompletionStatus
+  getUnpluggedLessonCompletionStatus,
+  getLessonSelectionStatus
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {
   stageId,
@@ -22,6 +23,22 @@ import {
 
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
+
+  describe('getLessonSelectionStatus', () => {
+    it('returns true if lesson is in selected list', () => {
+      expect(
+        getLessonSelectionStatus(stateForTeacherMarkedCompletedLesson, stageId)
+      ).to.equal(true);
+    });
+    it('returns false if lesson is not in selected', () => {
+      expect(
+        getLessonSelectionStatus(
+          stateForTeacherMarkedIncompletedLesson,
+          stageId
+        )
+      ).to.equal(false);
+    });
+  });
 
   describe('setTeacherCommentForReport', () => {
     it('can set the teacher comment', () => {
@@ -48,6 +65,7 @@ describe('sectionStandardsProgressRedux', () => {
         4: [
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -57,6 +75,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 3,
             name: 'Happy Maps',
             numStudents: 4,
@@ -68,6 +87,7 @@ describe('sectionStandardsProgressRedux', () => {
         16: [
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
@@ -77,6 +97,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -88,6 +109,7 @@ describe('sectionStandardsProgressRedux', () => {
         17: [
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
@@ -97,6 +119,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -115,6 +138,7 @@ describe('sectionStandardsProgressRedux', () => {
         4: [
           {
             completed: true,
+            inProgress: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -124,6 +148,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 3,
             name: 'Happy Maps',
             numStudents: 4,
@@ -135,6 +160,7 @@ describe('sectionStandardsProgressRedux', () => {
         16: [
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
@@ -144,6 +170,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: true,
+            inProgress: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -155,6 +182,7 @@ describe('sectionStandardsProgressRedux', () => {
         17: [
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
@@ -164,6 +192,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: true,
+            inProgress: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -180,6 +209,7 @@ describe('sectionStandardsProgressRedux', () => {
         4: [
           {
             completed: true,
+            inProgress: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -189,6 +219,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: false,
+            inProgress: false,
             lessonNumber: 3,
             name: 'Happy Maps',
             numStudents: 4,
@@ -200,6 +231,7 @@ describe('sectionStandardsProgressRedux', () => {
         16: [
           {
             completed: true,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
@@ -209,6 +241,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: true,
+            inProgress: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -220,6 +253,7 @@ describe('sectionStandardsProgressRedux', () => {
         17: [
           {
             completed: true,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
@@ -229,6 +263,7 @@ describe('sectionStandardsProgressRedux', () => {
           },
           {
             completed: true,
+            inProgress: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
@@ -250,7 +285,7 @@ describe('sectionStandardsProgressRedux', () => {
           number: 1,
           url: 'https://curriculum.code.org/csf-19/coursea/1',
           completed: false,
-          selected: false
+          inProgress: false
         },
         {
           id: 664,
@@ -258,7 +293,7 @@ describe('sectionStandardsProgressRedux', () => {
           number: 3,
           url: 'https://curriculum.code.org/csf-19/coursea/3',
           completed: false,
-          selected: false
+          inProgress: false
         }
       ]);
     });
@@ -270,6 +305,7 @@ describe('sectionStandardsProgressRedux', () => {
         getUnpluggedLessonCompletionStatus(fakeState, scriptId, stageId)
       ).to.deep.equal({
         completed: false,
+        inProgress: false,
         numStudentsCompleted: 0
       });
     });
@@ -283,6 +319,7 @@ describe('sectionStandardsProgressRedux', () => {
         )
       ).to.deep.equal({
         completed: false,
+        inProgress: false,
         numStudentsCompleted: 0
       });
     });
@@ -296,6 +333,7 @@ describe('sectionStandardsProgressRedux', () => {
         )
       ).to.deep.equal({
         completed: true,
+        inProgress: false,
         numStudentsCompleted: 1
       });
     });
@@ -307,6 +345,7 @@ describe('sectionStandardsProgressRedux', () => {
         getPluggedLessonCompletionStatus(fakeState, pluggedStage)
       ).to.deep.equal({
         completed: false,
+        inProgress: false,
         numStudentsCompleted: 0
       });
     });
@@ -319,6 +358,7 @@ describe('sectionStandardsProgressRedux', () => {
         )
       ).to.deep.equal({
         completed: false,
+        inProgress: false,
         numStudentsCompleted: 2
       });
     });
@@ -328,6 +368,7 @@ describe('sectionStandardsProgressRedux', () => {
         getPluggedLessonCompletionStatus(stateForCompletedLesson, pluggedStage)
       ).to.deep.equal({
         completed: true,
+        inProgress: true,
         numStudentsCompleted: 4
       });
     });

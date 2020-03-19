@@ -1776,3 +1776,7 @@ ar:
               name: مسابقة التهجئة
             Loops in Ice Age:
               name: الحلقات في العصر الجليدي
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: أرقام ثنائية

@@ -471,22 +471,46 @@ tr-TR:
         content1: açıklama burada
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
       CSD U2 Design Project:
         content1: açıklama burada
       CSD U2 Design Project_2018:
@@ -528,43 +552,85 @@ tr-TR:
         - {}
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: 'https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+
+'
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Listeyi, onu oluşturan kod ile eşleştir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Hızlı Liste Taraması
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: 'https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+
+'
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Listeyi, onu oluşturan kod ile eşleştir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Hızlı Liste Taraması
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: 'https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+
+'
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Listeyi, onu oluşturan kod ile eşleştir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Hızlı Liste Taraması
       CSD U2 project guide:
         content1: açıklama burada
       CSD U2 project guide_2018:
@@ -688,36 +754,40 @@ tr-TR:
         - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
+        - text: "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)"
+          correct: true
+        - text: "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)"
         questions:
-        - {}
+        - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 Sprites intro predict multi_2018:
         answers:
         - correct: true
@@ -725,7 +795,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
         - correct: true
@@ -733,7 +803,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 combining rep:
         content1: açıklama burada
       CSD U3 combining rep_2018:
@@ -1199,6 +1269,17 @@ tr-TR:
         content1: açıklama burada
       Terminology Recap:
         content1: açıklama burada
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # Genel bakış
+
+          Bu derste, çeşitli sorunlara yaklaşımınızı yapılandırmanıza yardımcı olacak resmi bir problem çözme süreci öğreneceksiniz.
+
+
+          ## Kaynakça
+
+          *[Problem Çözme Süreci - Aktivite Rehberi]
+          (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
       behaviors 1 predict:
         answers:
         - {}
@@ -1867,6 +1948,22 @@ tr-TR:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
+      csd-post-survey-levelgroup-2018:
+        title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
+      csd-pre-survey-2017-levelgroup:
+        markdown: |-
+          # Genel bakış
+
+          Sınıf, mümkün olduğunca fazla bozuk parayı destekleyecek alüminyum folyo tekneler tasarlamak için gruplar halinde çalışır. Dersin sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtırlar ve dersin geri kalanında yapacakları problem çözme türleriyle bağlantı kurarlar.
+
+
+          ## Kaynakça
+
+          *[Alüminyum botlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Aktivite rehberi ([MS Word] olarak kopyala)
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Belgesi]
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         answers:
         - {}

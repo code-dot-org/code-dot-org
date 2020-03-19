@@ -2163,7 +2163,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -2721,6 +2721,8 @@ de-DE:
         In dieser Version des Internet-Simulators sind die meisten Optionen eingeschaltet und konfigurierbar. Nachrichten können an jeden Router innerhalb der Klasse gesendet werden, und die Nachrichten nehmen verschiedene Wege, um ihr Ziel zu erreichen.
 
         Dein Lehrer wird dir genauere Anweisungen für diese Aktivität geben.
+      New Minecraft Hero Project: "**Freies Spiel:** Jetzt bist du dran! Verwende
+        den Code des Agenten, um die Welt zu erkunden."
       OPD-K5 Closing: |-
         > Wenn Ihnen dieser Kurs gefallen hat, melden Sie sich für einen persönlichen Workshop an.
         >
@@ -3185,7 +3187,7 @@ de-DE:
         _"Lasst uns nach Schätzen suchen - mit Schleifen!"_
 
         Hilf dem Sammler, indem du diesen Code debugst. Hol dir den ganzen Schatz!
-      course2_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+      course2_collector_prog_challenge1: Schau genau hin! Kannst du alle **10** Schätze
         einsammeln?
       course2_collector_prog_challenge2: Es gibt **20** Schätze in dieser Höhle zu
         finden. Sammle mindestens die Hälfte, um diese Herausforderung zu beenden!
@@ -4281,18 +4283,18 @@ de-DE:
       courseC_maze_programming3: |-
         _"Dieses Schwein ärgert mich."_
 
-        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
-        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+        Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
+        Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
       courseC_maze_programming3_2018: |-
         _"Dieses Schwein ärgert mich."_
 
-        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
-        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+        Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
+        Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
       courseC_maze_programming3_2019: |-
         _"Dieses Schwein ärgert mich."_
 
-        Hier ist ein Block, der den Vogel gegen etwas krachen läßt.\
-        Wirf es weg indem du es von den grauen Blöcken losmachst und in den Werkzeugkasten zurückziehst.
+        Hier gibt es einen Baustein, der den Vogel gegen etwas krachen lässt.\
+        Wirf diesen weg indem du ihn von den grauen Bausteinen löst und in den Werkzeugkasten zurückziehst.
       courseC_maze_programming6: |-
         _"Bleib ruhig und hilf mir das böse Schwein zu finden. Sonst könnte ich wütend werden!"_
 

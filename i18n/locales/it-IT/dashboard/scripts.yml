@@ -4940,3 +4940,11 @@ it:
               name: Cicli con l'artista
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Numeri Binari
+        csp3-2020:
+          stages:
+            Debugging:
+              name: Correzione errori (debugging)

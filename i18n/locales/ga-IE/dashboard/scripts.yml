@@ -469,6 +469,10 @@ ga:
               name: Tástáil
         cspunit2:
           stages:
+            Encryption Algorithms:
+              name: Eochracha agus Focail Fhaire
+            Tell Me a Secret - Encrypting Text:
+              name: An Gá le Criptiú
             The Internet:
               name: Is le cách an tIdirlíon
         algebraPD2a:
@@ -789,6 +793,8 @@ ga:
               name: Suirbhé Iarchúrsa
         csp4-2017:
           stages:
+            Encryption with Keys and Passwords:
+              name: Criptiú le hEochracha agus Focail Fhaire
             Simple Encryption:
               name: Criptiú Simplí
             Post-Course Survey:
@@ -991,6 +997,7 @@ ga:
             Bounce:
               name: Preabadh
         hoc-encryption:
+          title: 'An Uair Chódála: Criptiú Simplí'
           stages:
             Simple Encryption:
               name: Criptiú Simplí
@@ -1159,6 +1166,10 @@ ga:
               name: Réamhrá
             Sprites:
               name: Sprideanna
+        csd5-draft:
+          stages:
+            Encryption:
+              name: Criptiú
         coursed-ramp:
           stages:
             Introduction:
@@ -1193,6 +1204,10 @@ ga:
               name: Treoluas
             Functions:
               name: Feidhmeanna
+        csd5-2017:
+          stages:
+            Encryption:
+              name: Criptiú
         csd3-old:
           stages:
             Velocity:
@@ -1571,6 +1586,8 @@ ga:
               name: Do Lorg Digiteach
             Move It, Move It:
               name: Bog é, Bog é
+            Copyright and Creativity:
+              name: Bí Cruthaitheach; Bí Cothrom.
         coursed-2018:
           assignment_family_title: Cúrsa D
           stages:
@@ -1688,6 +1705,8 @@ ga:
           stages:
             Simple Encryption:
               name: Criptiú Simplí
+            Encryption with Keys and Passwords:
+              name: Criptiú le hEochracha agus Focail Fhaire
             CS Principles Post-Course Survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp5-2018:
@@ -1724,6 +1743,8 @@ ga:
               name: Bog é, Bog é
             Your Digital Footprint:
               name: Do Lorg Digiteach
+            Copyright and Creativity:
+              name: Bí Cruthaitheach; Bí Cothrom.
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stiofán agus an Tionscadal Mór
         spritelab-validated:
@@ -1979,6 +2000,8 @@ ga:
           stages:
             Simple Encryption:
               name: Criptiú Simplí
+            Encryption with Keys and Passwords:
+              name: Criptiú le hEochracha agus Focail Fhaire
             CS Principles Post Course survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp5-2019:
@@ -2226,3 +2249,7 @@ ga:
               name: Comórtas Litrithe
             Loops in Ice Age:
               name: Lúba in Ice Age
+        csp3-2020:
+          stages:
+            Introduction to Design Mode:
+              name: Buneolas ar an Mód Deartha

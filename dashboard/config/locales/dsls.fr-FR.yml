@@ -854,26 +854,29 @@ fr-FR:
         content1: description ici
       CSD U6 setProperty predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       Dance_Party_extras_intro:
@@ -1386,6 +1389,11 @@ fr-FR:
           ### Clic sur continuer pour essayer !
 
 
+      'Overview: onEvent':
+        markdown: Vous devrez plonger dans le mode Code pour qu’il réponde réellement
+          aux utilisateurs. App Lab attend pour répondre à certains **événements**
+          qui se produisent dans un programme. Le bloc onEvent spécifie l’élément
+          de l’interface utilisateur sur lequel attendre un événement.
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant
@@ -2164,6 +2172,10 @@ fr-FR:
           feedback: Le bloc `Récolte citrouille` est à l'intérieur de la boucle, donc
             le fermieressaiera de ramasser la citrouille à chaque étape, au lieu de
             le faire seulement à la fin.
+        markdown: |+
+          Voici un nouveau type de puzzle qui utilise des blocs similaires à ce que tu as déjà vu. Essaie de dire ce qu’il va se passer quand tu exécuteras le code ci-dessous.
+
+
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -2855,3 +2867,8 @@ fr-FR:
             a provoqué une erreur.
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: '# Se comporter dans le Computer Lab <br / > <br / > < a href="https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing"
+          target= "_new" > < button > Aller au plan de la leçon</button > < / a >
+          <br / > <br / > < a class = "btn btn-large btn-primary next-stage submitButton"
+          >Continue< / a>'

@@ -1338,6 +1338,8 @@ bs:
               name: Napravite Vaš projekat
             Presentation Your Project:
               name: Predstavite Vaš projekat
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Introduction:
               name: Uvod
             Ice Age Play Lab:
@@ -1540,6 +1542,8 @@ bs:
           stages:
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1574,6 +1578,8 @@ bs:
               name: Digitalno Državljanstvo
             Conditionals with Cards:
               name: Uvjeti s Kartama
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1668,6 +1674,8 @@ bs:
               name: Izrada Temelja
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1713,6 +1721,8 @@ bs:
               name: Uvod
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1894,6 +1904,8 @@ bs:
                 likove iz Ledenog Doba. Učenici će raditi sa događajima i petljama
                 da učine da se likovi kreću po ekranu, i dobiti će šansi da naprave
                 vlastitu igru ili priču nakon razina na kojima su vođeni.
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -2376,3 +2388,7 @@ bs:
           stages:
             Spelling Bee:
               name: Spelovanje
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binarni Brojevi

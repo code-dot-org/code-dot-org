@@ -285,6 +285,8 @@ pl-PL:
       NEW Course 4 Bee For Loops 5:
         actions_category: Przybornik ma nowy wygląd! Pojawiły się bloki "Actions"
           (Akcje).
+      New Frozen Project:
+        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
       Overworld Chop Trees:
         craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
       Overworld Chop Trees_2019:

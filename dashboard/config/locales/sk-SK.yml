@@ -1151,6 +1151,7 @@ sk:
     csp_traversals: Prechody
     csp_libraries: Knižnice
     csp_parameters_return_values: Parametre a Hodnoty návratnosti
+    csp_unit1_2020: 'Lekcia 1: Digitálne informácie'
     dlp: Výzvy na zhodnotenie
     time4cs_c1: Everglades a jeho ekosystémy
     time4cs_c2: Potravové reťazce v Everglades
@@ -1239,6 +1240,10 @@ sk:
     sa svojho učiteľa na ktorú lekciu sa máš podľa správnosti prihlásiť.
   hidden_script: Podľa tvojho učiteľa by si tu nemal byť. Opýtaj sa ho prosím, na
     ktorej kapitole by si sa mal nachádzať.
+  no_course_access_student: Nemáš prístup k tejto lekcii. Opýtaj sa svojho učiteľa,
+    na ktorej lekcii by si mal pracovať.
+  no_course_access_teacher: Nemáte prístup k tejto lekcii. Ak si myslíte, že by ste
+    ho mali mať, napíšte prosím na support@code.org, aby sme túto situáciu mohli vyriešiť.
   no_script_access_student: Nemáš prístup k tejto lekcii. Opýtaj sa svojho učiteľa,
     na ktorej lekcii by si mal pracovať.
   no_script_access_teacher: Nemáte prístup k tejto lekcii. Ak si myslíte, že by ste
@@ -1389,3 +1394,10 @@ sk:
     adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku.
   page_not_found_button: Späť na domovskú stránku
   copy: Kopírovať
+  maker:
+    google_oauth:
+      login_with_google: Prihláste sa do aplikácie Maker s Googlom
+      enter_code: Prosím zadajte kód, ktorý ste dostali po prihlásení sa cez Google
+        na vašom domovskom prehliadači.
+      copy_code: Na prihlásenie do Code.org prosím skopírujte a prilepte tento kód
+        do aplikácie Maker.

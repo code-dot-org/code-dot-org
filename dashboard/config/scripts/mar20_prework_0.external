@@ -5,8 +5,10 @@ description 'Prework for the CS Principles March 2020 event'
 
 markdown <<MARKDOWN
 # Prework
-## Review the following documents:
-* EIPM One-pager
-* Unit summaries for Units 1 - 5
-* Lesson plans for Unit 4 Lessons 1 - 4
+
+###The following resources are available:
++ Prework instructions in the [Forum](https://forum.code.org/t/about-the-2020-march-training-category/32439)
++ EIPM: A Short Introduction [link](https://forum.code.org/uploads/short-url/AnVLufGRy5hmv7mChhqpWve6STQ.pdf)
++ What's New in CS Principles 20-21 [link](https://forum.code.org/uploads/short-url/3RPurggWewRdKk33nbklKVHWtiJ.pdf)
++ EIPM Video Series [link](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3)
 MARKDOWN

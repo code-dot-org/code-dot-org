@@ -9728,9 +9728,13 @@ sk-SK:
               -   nakresli štvroec
               -   posuň sa dopredu o **100 pixelov**
       courseE_artist_functions8c_2018:
+        courseD_artist_functions8_f: Toto je jednoduchšie ako by sa mohlo zdať! Nie
+          sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!
         courseD_artist_functions8_a: Druhý riadok štvrocov sa líši od prvého 180 stupňovou
           otočkou!
       courseE_artist_functions8c_2019:
+        courseD_artist_functions8_f: Toto je jednoduchšie ako by sa mohlo zdať! Nie
+          sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!
         courseD_artist_functions8_a: Druhý riadok štvrocov sa líši od prvého 180 stupňovou
           otočkou!
       courseE_artist_ramp9:
@@ -9754,9 +9758,19 @@ sk-SK:
       courseE_farmer_functions2b_2019:
         courseE_farmer_functions2b_a: Môžeš použiť  `opakuj pokiaľ tam sú tekvice`,
           aby si sa dostal na koniec oboch ciest.
+      courseE_farmer_functions2ba_2018:
+        courseE_farmer_functions2ba_a: Použi zelený blok `získaj všetky tekvice`,
+          aby si určite všetky pozbieral/a!
+      courseE_farmer_functions2ba_2019:
+        courseE_farmer_functions2ba_a: Použi zelený blok `získaj všetky tekvice`,
+          aby si určite všetky pozbieral/a!
       courseE_farmer_functions3c1_2018:
+        coursee_farmer_functions3c1_2018_a: Na vyriešenie úlohy budete musieť použiť
+          3-krát funkciu `pozbieraj po ceste`.
         coursee_farmer_functions3c1_2018_b: Aký kód musíš pridať aby si mohol/la zahýbať?
       courseE_farmer_functions3c1_2019:
+        coursee_farmer_functions3c1_2018_a: Na vyriešenie úlohy budete musieť použiť
+          3-krát funkciu `pozbieraj po ceste`.
         coursee_farmer_functions3c1_2018_b: Aký kód musíš pridať aby si mohol/la zahýbať?
       courseE_farmer_functions4b:
         courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
@@ -9779,9 +9793,13 @@ sk-SK:
       courseE_farmer_functions8a1_2018:
         courseE_farmer_functions8a1_2018a: Začni túto úlohu naprogramovaním rovnakej
           funkcie, ako v poslednej úlohe.
+        courseE_farmer_functions8a1_2018b: Po prvom spustení funkcie, budeš musieť
+          urobiť jednu extra otočku, predtým ako funkciu znova spustíš.
       courseE_farmer_functions8a1_2019:
         courseE_farmer_functions8a1_2018a: Začni túto úlohu naprogramovaním rovnakej
           funkcie, ako v poslednej úlohe.
+        courseE_farmer_functions8a1_2018b: Po prvom spustení funkcie, budeš musieť
+          urobiť jednu extra otočku, predtým ako funkciu znova spustíš.
       courseE_farmer_functions9a1_2018:
         courseE_farmer_functions9a1_2018a: Použiješ tú istú funkciu, ktorú si si vytvoril/a
           v predchádzajúcich úlohách.

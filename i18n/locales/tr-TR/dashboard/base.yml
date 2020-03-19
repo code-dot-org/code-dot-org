@@ -157,7 +157,7 @@ tr:
     student_consent: "Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
     agree_us_website: "Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyorum."
     my_data_to_us: "Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir."
-    student_terms_markdown: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](%{privacy_policy_url}) bakınız."
+    student_terms_markdown: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](http://code.org/privacy) bakınız."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_button: "Hesap türünü güncelle"
     user_type_label: "Hesap Türü"
@@ -304,6 +304,10 @@ tr:
       professional_learning: "Profesyonel öğrenme"
       documentation: "Belgeler"
       tutorials: "Eğitmler"
+      game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
+      game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
+      sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
+      sprite_lab_tutorials: "Peri Laboratuvar Eğitimi"
       educate_overview: "Eğitimci genel bakış"
       educate_elementary: "İlköğretim Okulu"
       educate_middle: "Ortaokul"
@@ -334,6 +338,7 @@ tr:
       district_dashboard: 'Kontrol Paneli Bölgesi'
       label: 'Merhaba %{username}'
       stats: 'Kod Stüdyosu'
+      my_projects: 'Projelerim'
       settings: 'Hesap Ayarları'
       logout: 'Çıkış Yap'
       signin: 'Giriş Yap'
@@ -915,6 +920,8 @@ tr:
     csp_lists: 'Listeler'
     csp_loops: 'Döngüler'
     csp_libraries: 'Kütüphaneler'
+    csp_unit1_2020: 'Ünite 1: Sayısal bilgi'
+    csp_unit2_2020: 'Ünite 2: Internet'
     dlp: 'Yansıma İstemleri'
     k5_getting_started: 'İlk adım'
     k5_next_steps: 'Sonraki Adımlar'
@@ -1019,4 +1026,7 @@ tr:
     message: 'Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.'
     yes: 'Evet'
   page_not_found_title: "Sayfa Bulunamadı"
+  page_not_found_header: '404: Sayfa Bulunamadı'
+  page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
+  page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'

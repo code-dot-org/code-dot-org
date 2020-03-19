@@ -53,20 +53,24 @@ cs-CZ:
       2-3 Artist Nested Loops Free Play: Zahraj si zdarma, nakresli něco cool s vnořenými
         cykly.
       2-3 Bee Debugging 10: |-
-        S téhle hádanky se mi točí hlava!
+        Z téhle hádanky se mi točí hlava!
 
         Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
       2-3 Bee Debugging Assessment 1: |-
         **Hodnocení:** Nyní je čas ukázat, co umíš!
 
         Oprav chybu/chyby k sesbírání všeho nektaru a vyrobení veškerého medu.
+      2-3 Bee Loops 13: "**Hodnocení** Posbírej všechen nektar za použití co nejméně
+        bloků."
       2-3 Bee Loops 3A: Použij cyklus `opakuj` k sesbírání všeho nektaru.
       2-3 Bee Loops 3B: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení
         veškerého medu.
       2-3 Bee Loops 4A: |-
-        Kolik smyček potřebuješ v této hádance?
+        Kolik cyklů potřebuješ v této úloze?
 
-        Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
+        Cykly jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
+      2-3 Bee Loops 5: "Tvar této cesty se liší od ostatních. \n\nMůžeš posbírat všechen
+        nektar za použití co nejméně bloků?"
       2-3 Maze 1: "Můžeš mi pomoct chytit zlobivé prase? \n\nSlož dohromady několik
         bloků \"posuň se vpřed\" pod blok \"při spuštění\" a stiskni tlačítko \"Spustit\". "
       2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku
@@ -132,6 +136,22 @@ cs-CZ:
 
         -   Kde v App Lab můžeš navrhnout uživatelské rozhraní svojí aplikace?
         -   Jaké typy prvků můžeš přidat do své aplikace?
+      Course 4 Artist Binary 1: |-
+        Následující funkce vezme řetězec binary složený z jedniček a nul a řekne malíři, že má podle řetězce postupovat zleva doprava, shora dolů.
+
+        Malíř vybarví čtverec, když je na řadě 1 a přeskočí čtverec, když vidí 0.
+
+        **Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.**
+      Course 4 Artist Binary pre1: |-
+        Binární kód je způsob, jak vyjádřit nějakou informaci pomocí dvou možností. V tomto případě <b>vypnuto</b> a <b>zapnuto</b>
+        <br/>
+        My budeme používat číslo <b>0</b> jako symbol pro "vypnuto" a číslo <b>1</b> jako symbol pro "zapnuto".
+
+        <hr/>
+
+        Dostaneš mřížku s "pixely", ve které se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců!
+
+        <b>Použij následující bloky tak, aby malíř nakreslil binární obraz kódu "01010101" do první řady mřížky.</b>
       Course 4 Artist For Loops 6a: Udělej tři malé změny do kódu z poslední úrovni,
         abys to dosáhl!
       CourseD_Dance_Party_01: |-
@@ -233,12 +253,14 @@ cs-CZ:
       CourseE_HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      Dance_2019_01: |-
-        _Pojďte si udělat taneční párty!_
-
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> a připoj ho dovnitř bloku <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>, abys vytvořil(a) svého prvního tanečníka.
-
-        -   _Pokud chceš více informací nebo další výzvy, můžeš také kliknout na žárovku vlevo._
+      Dance_2019_01: "Do pracovního prostoru přetáhni blok <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"
+        block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y:
+        200}</title></block></xml> a připoj ho dovnitř bloku <xml><block type=\"Dancelab_whenSetup2\"
+        next_connection_disabled=\"true\" block-text=\"setup\"></block></xml>, abys
+        vytvořil(a) svého prvního tanečníka.\n\n Vyber `kočku` or `lenochoda`, abys
+        vytvořil(a) svého prvního tanečníka. \n\n-   _Pokud chceš více informací nebo
+        další výzvy, můžeš také kliknout na žárovku vlevo._"
       Dance_2019_02: |-
         Blok <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> ti umožňuje spustit kód, když dojde ke stisknutí šipky nahoru. Použij blok <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>, aby tanečník tlesknul, když stiskneš šipku nahoru, nebo vyzkoušej jiný pohyb!
 
@@ -289,7 +311,7 @@ cs-CZ:
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Dance_Party_03: |-
@@ -482,27 +504,28 @@ cs-CZ:
         v korálovém útesu.
       HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      K-1 Bee Loops 2: Pohybuj se pomocí smyčky `opakuj` a potom získej nektar a připrav
+      K-1 Bee Loops 2: Pohybuj se pomocí cyklu `opakuj` a potom získej nektar a připrav
         med!
-      K-1 Bee Loops 3: Použij tři smyčky `opakuj`, abys dostal nektar a udělal med!
-      K-1 Bee Loops 4: Použij smyčku `opakuj` pro získání nektaru, vyrobení medu a
+      K-1 Bee Loops 3: Použij tři cykly `opakuj`, abys dostal nektar a udělal med!
+      K-1 Bee Loops 4: Použij cyklus `opakuj` pro získání nektaru, vyrobení medu a
         pro pohyb!
-      K-1 Bee Loops 5: Použij smyčku `opakuj`, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij smyčku `opakuj`, abys dostal nektar, med a k pohybu!
+      K-1 Bee Loops 5: Použij cyklus `opakuj`, aby dostal nektar a med!
+      K-1 Bee Loops 6: Použij cyklus `opakuj`, abys získal nektar, med a pohyboval
+        se!
       K-1 Maze Loops 10: "Dostaň mě k prasátku!\\\rPoužití cyklu 'opakuj' to hodně
         zjednoduší."
       K-1 Maze Loops 11: |-
         Dostaň mě k prasátku!\
-        Smyčka `opakuj` to usnadní.
+        Cyklus `opakuj` to usnadní.
       K-1 Maze Loops 12: |-
         Dostaň mě k prasátku!\
-        Smyčka `opakuj` to usnadní.
+        Cyklus `opakuj` to usnadní.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
       K-1 Maze Loops 3: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 5: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 6: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 7: Dostaň mě k prasátku! Určitě použij 'opakuj'.
-      K-1 Maze Loops 8: Použij smyčku `opakuj`, abys mě dostal k prasátku.
+      K-1 Maze Loops 8: Použij cyklus `opakuj`, abys mě dostal k prasátku.
       K-1 Maze Loops Assessment 1: "Podívej na vše, co jsme se naučili!\\\rPoužij
         cyklus 'Opakuj' abys mě dostal k prasátku!"
       MC HOC 2016 SCORE LEVEL: "Některé hry počítají skóre. Zkus to také s těmito
@@ -577,6 +600,8 @@ cs-CZ:
       MC_HOC_2017_FP20x20: "**Volná hra:** Teď je to na vás! Prozkoumejte tento svět
         pomocí agentova kódu."
       MC_HOC_2017_FP20x20_2019: "**Volná hra:** Teď je to na vás! Prozkoumejte tento
+        svět pomocí agentova kódu."
+      New Minecraft Hero Project: "**Volná hra:** Teď je to na vás! Prozkoumejte tento
         svět pomocí agentova kódu."
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
@@ -782,6 +807,58 @@ cs-CZ:
         \ \n\n**Inspirace:** Můžeš změnit svůj obrázek, jak chceš, ale tady je jeden
         nápad:\n\n-   Vyzkoušej prohodit druh tvarů uprostřed sněhové vločky s těmi
         na konci každé čáry!"
+      courseD_artist_binary1: |-
+        Tady je čtvercová síť, kde každý čtverec představuje jeden "pixel". V ní se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců.
+
+        Použij následující bloky tak, aby malíř nakreslil binární obraz kódu "01010101" do první řady mřížky.
+      courseD_artist_binary1_2018: |-
+        Tady je čtvercová síť, kde každý čtverec představuje jeden "pixel". V ní se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců.
+
+        Použij následující bloky tak, aby malíř nakreslil binární obraz kódu "01010101" do první řady mřížky.
+      courseD_artist_binary1_2019: |-
+        Tady je čtvercová síť, kde každý čtverec představuje jeden "pixel". V ní se budeš pohybovat a vytvářet různé tvary zapnutím některých čtverců.
+
+        Použij následující bloky tak, aby malíř nakreslil binární obraz kódu "01010101" do první řady mřížky.
+      courseD_artist_binary2: |-
+        Následující funkce vezme řetězec binary složený z jedniček a nul a řekne malíři, že má podle řetězce postupovat zleva doprava, shora dolů.
+
+        * * *
+
+        Malíř vybarví čtverec, když je na řadě 1 a přeskočí čtverec, když vidí 0.
+
+        * * *
+
+        **Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.**
+      courseD_artist_binary2_2018: |-
+        Následující funkce vezme řetězec binary složený z jedniček a nul a řekne malíři, že má podle řetězce postupovat zleva doprava, shora dolů.
+
+        * * *
+
+        Malíř vybarví čtverec, když je na řadě 1 a přeskočí čtverec, když vidí 0.
+
+        * * *
+
+        **Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.**
+      courseD_artist_binary2_2019: |-
+        Následující funkce vezme řetězec binary složený z jedniček a nul a řekne malíři, že má podle řetězce postupovat zleva doprava, shora dolů.
+
+        * * *
+
+        Malíř vybarví čtverec, když je na řadě 1 a přeskočí čtverec, když vidí 0.
+
+        * * *
+
+        **Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.**
+      courseD_autorun_binary2_2019: |-
+        Následující funkce vezme řetězec binary složený z jedniček a nul a řekne malíři, že má podle řetězce postupovat zleva doprava, shora dolů.
+
+        * * *
+
+        Malíř vybarví čtverec, když je na řadě 1 a přeskočí čtverec, když vidí 0.
+
+        * * *
+
+        **Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.**
       courseD_bee_conditionals2: |-
         Víc mraků!
 
@@ -821,6 +898,42 @@ cs-CZ:
         V této úloze víme, že každá květina má přesně jeden nektar. Květiny ale nejsou rovnoměrně rozmístěné.
 
         Zkus získat všechen nektar za použití co nejméně bloků.
+      courseD_bee_conditionals6: |-
+        _"A teď chci vyrábět med."_
+
+        Některé mraky pod sebou možná skrývají včelí plástev. Zkontroluj každý mrak a zjisti, jestli se za ním včelí plástev ukrývá. Pokud tam včelí plástev je, včela bude muset vyrobit med _jednou_.
+      courseD_bee_conditionals6_2018: |-
+        _"A teď chci vyrábět med."_
+
+        Některé mraky pod sebou možná skrývají včelí plástev. Zkontroluj každý mrak a zjisti, jestli se za ním včelí plástev ukrývá. Pokud tam včelí plástev je, včela bude muset vyrobit med _jednou_.
+      courseD_bee_conditionals6_2019: |-
+        _"A teď chci vyrábět med."_
+
+        Některé mraky pod sebou možná skrývají včelí plástev. Zkontroluj každý mrak a zjisti, jestli se za ním včelí plástev ukrývá. Pokud tam včelí plástev je, včela bude muset vyrobit med _jednou_.
+      courseD_bee_conditionals7: |-
+        Někdy mrak pod sebou ukrývá květinu a někdy včelí plást!
+
+        Použij `if/else` blok, abys nasbíral nektar z květin a vyrobil med ze včelího plástu. Nezapomeň: pokud je pod mrakem květina, včela musí získat nektar _jednou_. Pokud je tam včelí plást, pak by včela měla vyrobit med _jednou_.
+      courseD_bee_conditionals7_2018: |-
+        Někdy mrak pod sebou ukrývá květinu a někdy včelí plást!
+
+        Použij `if/else` blok, abys nasbíral nektar z květin a vyrobil med ze včelího plástu. Nezapomeň: pokud je pod mrakem květina, včela musí získat nektar _jednou_. Pokud je tam včelí plást, pak by včela měla vyrobit med _jednou_.
+      courseD_bee_conditionals7_2019: |-
+        Někdy mrak pod sebou ukrývá květinu a někdy včelí plást!
+
+        Použij `if/else` blok, abys nasbíral nektar z květin a vyrobil med ze včelího plástu. Nezapomeň: pokud je pod mrakem květina, včela musí získat nektar _jednou_. Pokud je tam včelí plást, pak by včela měla vyrobit med _jednou_.
+      courseD_bee_conditionals7_predict2: |-
+        Někdy mrak pod sebou ukrývá květinu a někdy včelí plástev!
+
+        Použij `pokud/jinak` blok, abys nasbíral nektar z květin a vyrobil med ze včelí plástve. Nezapomeň: za mrakem vždy bude _jedna_ včelí plástev nebo _jedna_květina.
+      courseD_bee_conditionals7_predict2_2018: |-
+        Někdy mrak pod sebou ukrývá květinu a někdy včelí plástev!
+
+        Použij `pokud/jinak` blok, abys nasbíral nektar z květin a vyrobil med ze včelí plástve. Nezapomeň: za mrakem vždy bude _jedna_ včelí plástev nebo _jedna_květina.
+      courseD_bee_conditionals7_predict2_2019: |-
+        Někdy mrak pod sebou ukrývá květinu a někdy včelí plástev!
+
+        Použij `pokud/jinak` blok, abys nasbíral nektar z květin a vyrobil med ze včelí plástve. Nezapomeň: za mrakem vždy bude _jedna_ včelí plástev nebo _jedna_květina.
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med. Nektar
         můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko,
         jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina
@@ -932,6 +1045,10 @@ cs-CZ:
         Dostaň se ke koši!
 
         Připoj blok k události `když šipka vlevo` a zmáčkni "Spustit", aby se hráč dostal ke koši.
+      courseD_bounce_events2s_2018: Nyní připoj blok k události `když šipka vpravo`,
+        aby se ruka dostala k oběma košům.
+      courseD_bounce_events2s_2019: Nyní připoj blok k události `když šipka vpravo`,
+        aby se ruka dostala k oběma košům.
       courseD_bounce_events5s_2018: Pošleme míč směrem dolů k ruce. Připoj nějaký
         blok k události "když míč udeří do ruky", aby se míč mohl dostat do koše.
       courseD_bounce_events5s_2019: Pošleme míč směrem dolů k ruce. Připoj nějaký
@@ -960,6 +1077,10 @@ cs-CZ:
         _"Ale ne! Vidím problém."_
 
         Oprav chyby a posbírej si poklad.
+      courseD_collector_debugging10_predict1: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
       courseD_collector_debugging1a_2018: |-
         _"Ale ne! Vidím problém."_
 
@@ -1004,6 +1125,202 @@ cs-CZ:
         _"Neboj. Ty to zvládneš!"_
 
         Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging5: |-
+        _"Z této úlohy se mi zamotala hlava!"_
+
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+      courseD_collector_debugging5a_2018: |-
+        _"Z této úlohy se mi zamotala hlava!"_
+
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+      courseD_collector_debugging5a_2019: |-
+        _"Z této úlohy se mi zamotala hlava!"_
+
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+      courseD_collector_debugging6a_2018: 'Výzva: Použij kód v pracovním prostoru
+        tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
+        tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_debugging8: |-
+        _"Tolik pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging8a_2018: |-
+        _"Tolik pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging8a_2019: |-
+        _"Tolik pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging9: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging9a_2018: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_collector_debugging9a_2019: |-
+        _"To je ostrov pokladů!"_
+
+        Pomož Laurel opravit kód, aby získala všechny poklady.
+      courseD_farmer_condLoops1: |-
+        _"Pomůžeš mi dneska sesbírat kukuřici?"_
+
+        Pomož zahradnici zkontrolovat řádku kukuřice, aby viděla, jestli už ji může sbírat. Použij podmínky, aby se zkontroloval každý výhonek. Každý stonek bude mít buď **0 nebo 1** zrno kukuřice, které je připravené na sklizeň.
+      courseD_farmer_condLoops1_2018: |-
+        _"Pomůžeš mi dneska sesbírat kukuřici?"_
+
+        Pomož zahradnici zkontrolovat řádku kukuřice, aby viděla, jestli už ji může sbírat. Použij podmínky, aby se zkontroloval každý výhonek. Každý stonek bude mít buď **0 nebo 1** zrno kukuřice, které je připravené na sklizeň.
+      courseD_farmer_condLoops1_2019: |-
+        _"Pomůžeš mi dneska sesbírat kukuřici?"_
+
+        Pomož zahradnici zkontrolovat řádku kukuřice, aby viděla, jestli už ji může sbírat. Použij podmínky, aby se zkontroloval každý výhonek. Každý stonek bude mít buď **0 nebo 1** zrno kukuřice, které je připravené na sklizeň.
+      courseD_farmer_condLoops2: "_\"Pojďme sesbírat obě plodiny z této řádky!\"_\n\nZahrada
+        je celá smíchaná, je na ní zároveň **kukuřice a salát**!  \n\nPomož zahradnici
+        sesbírat plodiny, které jsou zralé. Každá rostlina bude mít buď **jednu**
+        kukuřici, nebo **jeden** salát."
+      courseD_farmer_condLoops2_2018: "_\"Pojďme sesbírat obě plodiny z této řádky!\"_\n\nZahrada
+        je celá smíchaná, je na ní zároveň **kukuřice a salát**!  \n\nPomož zahradnici
+        sesbírat plodiny, které jsou zralé. Každá rostlina bude mít buď **jednu**
+        kukuřici, nebo **jeden** salát."
+      courseD_farmer_condLoops2_2019: "_\"Pojďme sesbírat obě plodiny z této řádky!\"_\n\nZahrada
+        je celá smíchaná, je na ní zároveň **kukuřice a salát**!  \n\nPomož zahradnici
+        sesbírat plodiny, které jsou zralé. Každá rostlina bude mít buď **jednu**
+        kukuřici, nebo **jeden** salát."
+      courseD_farmer_condLoops3: |-
+        _"Kukuřice, salát A dýně! Pomož mi je všechny posbírat."_
+
+        Každá rostlina bude mít buď jeden klas kukuřice, jednu hlávku salátu, nebo jednu dýni.
+      courseD_farmer_condLoops3_2018: |-
+        _"Kukuřice, salát A dýně! Pomož mi je všechny posbírat."_
+
+        Každá rostlina bude mít buď jeden klas kukuřice, jednu hlávku salátu, nebo jednu dýni.
+      courseD_farmer_condLoops3_2019: |-
+        _"Kukuřice, salát A dýně! Pomož mi je všechny posbírat."_
+
+        Každá rostlina bude mít buď jeden klas kukuřice, jednu hlávku salátu, nebo jednu dýni.
+      courseD_farmer_condLoops4: "_\"Jejda! Salát teď roste v několika svazcích pohromadě!_
+        \n\nZahradnice chce ze své salátové zahrady vše sesbírat. Každá rostlina bude
+        mít na sobě více než jednu hlávku salátu, takže zahradnice bude muset sbírat,
+        zatímco salát bude stále růst. \n\n##### (Pamatuj: Na této zahradě roste jen
+        salát!)"
+      courseD_farmer_condLoops4_2018: "_\"Jejda! Salát teď roste v několika svazcích
+        pohromadě!_ \n\nZahradnice chce ze své salátové zahrady vše sesbírat. Každá
+        rostlina bude mít na sobě více než jednu hlávku salátu, takže zahradnice bude
+        muset sbírat, zatímco salát bude stále růst. \n\n##### (Pamatuj: Na této zahradě
+        roste jen salát!)"
+      courseD_farmer_condLoops4_2019: "_\"Jejda! Salát teď roste v několika svazcích
+        pohromadě!_ \n\nZahradnice chce ze své salátové zahrady vše sesbírat. Každá
+        rostlina bude mít na sobě více než jednu hlávku salátu, takže zahradnice bude
+        muset sbírat, zatímco salát bude stále růst. \n\n##### (Pamatuj: Na této zahradě
+        roste jen salát!)"
+      courseD_farmer_condLoops5: |-
+        _"Jaká krásná úroda!"_
+
+        Na poli rostou svazky kukuřice a salátu zároveň - s jednou dýní na konci. Zvládneš to všechno sesbírat?
+      courseD_farmer_condLoops5_2018: |-
+        _"Jaká krásná úroda!"_
+
+        Na poli rostou svazky kukuřice a salátu zároveň - s jednou dýní na konci. Zvládneš to všechno sesbírat?
+      courseD_farmer_condLoops5_2019: |-
+        _"Jaká krásná úroda!"_
+
+        Na poli rostou svazky kukuřice a salátu zároveň - s jednou dýní na konci. Zvládneš to všechno sesbírat?
+      courseD_farmer_condLoops6: |-
+        _"Posuňme se o krok dál!"_
+
+        Dokážeš vymyslet, jak posbírat dýni? Zajisti, že sesbíráš všechnu kukuřici po cestě!
+      courseD_farmer_condLoops6_2018: |-
+        _"Posuňme se o krok dál!"_
+
+        Dokážeš vymyslet, jak posbírat dýni? Zajisti, že sesbíráš všechnu kukuřici po cestě!
+      courseD_farmer_condLoops6_2019: |-
+        _"Posuňme se o krok dál!"_
+
+        Dokážeš vymyslet, jak posbírat dýni? Zajisti, že sesbíráš všechnu kukuřici po cestě!
+      courseD_farmer_condLoops7: "**Výzva:** Sesbírej všechnu kukuřici a salát, pak
+        vezmi dýni."
+      courseD_farmer_condLoops7_2018: "**Výzva:** Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni."
+      courseD_farmer_condLoops7_2019: "**Výzva:** Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni."
+      courseD_farmer_condLoops8: Sesbírej všechnu kukuřici a salát, pak vezmi dýni.
+      courseD_farmer_condLoops8_2018: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops8_2019: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9: Sesbírej všechnu kukuřici a salát, pak vezmi dýni.
+      courseD_farmer_condLoops9_2018: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_2019: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_predict1: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_predict1_2018: Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni.
+      courseD_farmer_condLoops9_predict1_2019: Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni.
+      courseD_farmer_while1: "_\"Ahoj, já jsem farmářka. Potřebuji tvou pomoc na statku
+        při zarovnání pole, aby bylo připravené na sazeničky\"_   \n\nPosuň se k hromádce
+        hlíny a využij blok `odstraň` pro její odstranění."
+      courseD_farmer_while1_2018: "_\"Ahoj, já jsem farmářka. Potřebuji tvou pomoc
+        na statku při zarovnání pole, aby bylo připravené na sazeničky\"_   \n\nPosuň
+        se k hromádce hlíny a využij blok `odstraň` pro její odstranění."
+      courseD_farmer_while1_2019: "_\"Ahoj, já jsem farmářka. Potřebuji tvou pomoc
+        na statku při zarovnání pole, aby bylo připravené na sazeničky\"_   \n\nPosuň
+        se k hromádce hlíny a využij blok `odstraň` pro její odstranění."
+      courseD_farmer_while3: |-
+        _"Posuň mě na hromádku hlíny a řekni mi, kolik lopat mám odstranit."_
+
+        Pro vyřešení úlohy použij co nejméně bloků.
+      courseD_farmer_while3_2018: |-
+        _"Posuň mě na hromádku hlíny a řekni mi, kolik lopat mám odstranit."_
+
+        Pro vyřešení úlohy použij co nejméně bloků.
+      courseD_farmer_while3_2019: |-
+        _"Posuň mě na hromádku hlíny a řekni mi, kolik lopat mám odstranit."_
+
+        Pro vyřešení úlohy použij co nejméně bloků.
+      courseD_farmer_while4: |-
+        _"Nevím, kolik je na hromadě hlíny!"_
+
+        Pomoz farmářce odstranit celou hromadu za použití cyklu `dokud`.
+      courseD_farmer_while4_2018: |-
+        _"Nevím, kolik je na hromadě hlíny!"_
+
+        Pomoz farmářce odstranit celou hromadu za použití cyklu `dokud`.
+      courseD_farmer_while4_2019: |-
+        _"Nevím, kolik je na hromadě hlíny!"_
+
+        Pomoz farmářce odstranit celou hromadu za použití cyklu `dokud`.
+      courseD_farmer_while4_predict1: |-
+        _"Nevím, kolik je na hromadě hlíny!"_
+
+        Pomoz farmářce odstranit celou hromadu za použití cyklu `dokud`.
+      courseD_farmer_while4_predict1_2018: |-
+        _"Nevím, kolik je na hromadě hlíny!"_
+
+        Pomoz farmářce odstranit celou hromadu za použití cyklu `dokud`.
+      courseD_farmer_while4_predict1_2019: |-
+        _"Nevím, kolik je na hromadě hlíny!"_
+
+        Pomoz farmářce odstranit celou hromadu za použití cyklu `dokud`.
+      courseD_farmer_while6: "Podívej se na všechny tyhle díry! Každá z nich potřebuje
+        jiné množství hlíny. \n\nMůžeš využít cyklus `dokud`, abys je všechny jednoduše
+        zasypal!"
+      courseD_farmer_while6_2018: "Podívej se na všechny tyhle díry! Každá z nich
+        potřebuje jiné množství hlíny. \n\nMůžeš využít cyklus `dokud`, abys je všechny
+        jednoduše zasypal!"
+      courseD_farmer_while6_2019: "Podívej se na všechny tyhle díry! Každá z nich
+        potřebuje jiné množství hlíny. \n\nMůžeš využít cyklus `dokud`, abys je všechny
+        jednoduše zasypal!"
+      courseD_farmer_while8: "**Výzva:** Vyplň tyto díry za použití co nejméně bloků. "
+      courseD_farmer_while8_2018: "**Výzva:** Vyplň tyto díry za použití co nejméně
+        bloků. "
+      courseD_farmer_while8_2019: "**Výzva:** Vyplň tyto díry za použití co nejméně
+        bloků. "
       courseD_iceage_loops1: Pomoz Scratovi přes kluzký led, aby se dostal k žaludu!
       courseD_iceage_loops10: Pomoz Scratovi projít celou cestu k žaludu!
       courseD_iceage_loops10_2019: Pomoz Scratovi projít celou cestu k žaludu!
@@ -1110,6 +1427,54 @@ cs-CZ:
       courseD_maze_ramp5d: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
+      courseD_maze_until10: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until4: |-
+        _"Vážená osobo. Já být zombie. Já být hladová. Musím... dostat... ke slunečnici..."_
+
+        Můžeš dostat zombie ke slunečnici za použití jen těch bloků, které jsou k dispozici?
+      courseD_maze_until4_2018: |-
+        _"Vážená osobo. Já být zombie. Já být hladová. Musím... dostat... ke slunečnici..."_
+
+        Můžeš dostat zombie ke slunečnici za použití jen těch bloků, které jsou k dispozici?
+      courseD_maze_until4_2019: |-
+        _"Vážená osobo. Já být zombie. Já být hladová. Musím... dostat... ke slunečnici..."_
+
+        Můžeš dostat zombie ke slunečnici za použití jen těch bloků, které jsou k dispozici?
+      courseD_maze_until5: 'Použij blok `když`, abys pomohl zombie rozhodnout se,
+        kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until5_2018: 'Použij blok `když`, abys pomohl zombie rozhodnout
+        se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until5_2019: 'Použij blok `když`, abys pomohl zombie rozhodnout
+        se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until6: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until6_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until6_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until8: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until9: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
+      courseD_maze_until9_2018: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
+      courseD_maze_until9_2019: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
+      courseD_playLab_condFP_2018: |-
+        Teď můžeš vytvořit svou vlastní hru, aby ses mohl předvést před kamarády!
+
+        * * *
+
+        Můžeš:
+
+        -   Přimět piráta a ninju, aby spolupracovali a získali body od chobotnice
+        -   Navést obě chobotnice, aby pronásledovaly piráta a udělaly ninjovi dvojnásobnou škodu, když narazí
+        -   Nechat každou postavu zmizet, když se jí ninja dotkne
+        -   Vymyslet svou vlastní hru!
       courseD_scrat_ramp1: V této úloze připoj všechny bloky dohromady a klikni "Spustit",
         abys viděl, jak to funguje!
       courseD_scrat_ramp2: Přetáhni další blok `posuň se vpřed` z panelu bloků a připoj
@@ -1118,6 +1483,10 @@ cs-CZ:
       courseE_bee_functions3: Funkce jsou bloky kódu, provádějící úkol. Použij funkci
         "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus
         k získání ideálního počtu bloků.
+      courseE_farmer_functions6c: "_\"Pomož mi sesbírat celou úrodu!\"_\n\nNyní mohou
+        být výhonky buď kukuřice, **nebo** salát. Co musíš přidat do tohoto programu,
+        abys zkontroloval každý výhonek předtím, než začneš sbírat? \n\n* * *\n\n#####
+        Poznámka: Každý výhonek vyroste v buď **jednu** kukuřici, nebo **jeden** salát."
       courseF_bee_conditionals3: Nektar můžeš posbírat jen z květin, ale můžeš se
         podívat na jakékoliv pole a zjistit, jestli tam květina je. Pokud je květina
         pod některým z těchto mraků, pak bude muset včela sebrat nektar _jednou_.
@@ -1125,6 +1494,9 @@ cs-CZ:
         V této úloze víme, že každá květina má přesně jeden nektar. Květiny ale nejsou rovnoměrně rozmístěné.
 
         Zkus získat všechen nektar za použití co nejméně bloků.
+      courseF_bee_conditionals7_predict2: "Někdy mrak pod sebou ukrývá květinu a někdy
+        včelí plást!\n\nPoužij `pokud/jinak` blok, abys nasbíral nektar z květin a
+        vyrobil med ze včelího plástu. "
       courseF_bee_for_challenge2: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.
       courseF_bee_for_challenge2_2018: Vyřeš tento puzzle s co nejmenším možným počtem
