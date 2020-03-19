@@ -15701,6 +15701,12 @@ en:
               name: Introduction to CSD
             Tools:
               name: Tools
+            Curriculum Components:
+              name: Curriculum Components
+            Course Resources:
+              name: Course Resources
+            Debugging:
+              name: Debugging
           title: Jess's Script
           description_audience: ''
           description_short: ''
