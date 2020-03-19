@@ -60,7 +60,7 @@ The recommendations below are for classrooms in which students will primarily be
 * **Unit 3 - Intro to Programming**
     * If students are still in this unit we recommend they complete only lessons 4 - 10 of this unit which teach turtle programming and top-down-design.
 * **Unit 4 - Big Data and Privacy**
-    * If students need to review this content assign the [TLS: Secure data transport](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#tls-secure-data-transport), [Cybercrime and prevention](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#cybercrime-and-prevention), [The digital divide](https://www.khanacademy.org/computing/ap-computer-science-principles/global-impact-of-computing/the-digital-divide/a/the-global-digital-divide) resources from the Khan Academy course 
+    * If students need to review this content assign the [TLS: Secure data transport](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#tls-secure-data-transport), [Cybercrime and prevention](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#cybercrime-and-prevention), [The digital divide](https://www.khanacademy.org/computing/ap-computer-science-principles/global-impact-of-computing/the-digital-divide/a/the-global-digital-divide) and [Big data](https://www.khanacademy.org/computing/ap-computer-science-principles/data-analysis-101#big-data) resources from the Khan Academy course 
 * **Unit 5 - Building Apps:** Many of our teachers are in this unit right now and so we're offering more detailed recommendations. Most programming lessons in this unit can be completed independently if students have access to a computer and internet at home. Notable exceptions are highlighted below. Further down this document we have notes on how best to support students in a virtual setting and options for students with limited technology access.
 As a reminder students have learned every concept necessary for the Create PT at the end of Unit 5 Chapter 1. Unit 5 Chapter 2 content is only important covered on the AP exam. 
     * **Lesson 3 - Building an App: Multi-screen App:** Do not complete the peer review as part of this project.
@@ -73,7 +73,7 @@ As a reminder students have learned every concept necessary for the Create PT at
     * **Lesson 16 - Functions with Return Values:** - Skip the unplugged Getting Started activity.
     * **Lesson 17 - Building an App: Canvas Painter:** Students do not need to complete this project in order to prepare for the AP exam or Create PT. We recommend you save this for after the AP.
 * **Post AP - Data Tools**
-    * Chapter 1 content can be replaced by the "Data Analysis"  unit from Khan academy
+    * Chapter 1 content is not well-suited for students to complete independently. Consider using the [Data analysis](https://www.khanacademy.org/computing/ap-computer-science-principles/data-analysis-101)  unit from Khan Academy to cover these learning objectives.
     * Chapter 2 content does not have lesson plans associated with it and can be completed asynchronously by students following the completion of the course
 
 ## Supporting Student Learning - Your role as the teacher
@@ -115,5 +115,6 @@ We know many of our CS Principles students lack access to the internet or a lapt
 * [Abstracting CS](https://www.abstractingcs.com/bits-bytes-resources-page/) has created a fully unplugged activity packet for CS Principles students
 * The College Board has asked the community to help compile a list of resources, including [this list of non-programming resources](https://docs.google.com/spreadsheets/d/1WHtvxinAt_A-ld2FCopcrmZvFSqFG9sOiW6SvjOsRcE/edit?fbclid=IwAR2Li0vAIx_ziaqQP31TQMKTUYId-FIe_scORDcZxQEb26YL_RC10FJ0OAg#gid=0), some of which are also unplugged.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk3MDM0NjMyLDk2Njk0Mjg5NV19
+eyJoaXN0b3J5IjpbODA4MzAwNDcxLDg5NzAzNDYzMiw5NjY5ND
+I4OTVdfQ==
 -->
