@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# If/Else Predict\r\n\r\nRead through the following program, paying special attention to the `if/else` block on Line 10.  After discussing the following questions with your partner, write down your predictions and run the code to see what the program does.\r\n\r\n* What happens when you press the space bar?\r\n* What happens when you **don't** press the space bar?\r\n\r\n",
+    "long_instructions": "# If/Else Predict\r\n\r\nRead through the following program, paying special attention to the `if/else` block on Line 10.  Think about the following questions.\r\n\r\n* What happens when you press the space bar?\r\n* What happens when you **don't** press the space bar?\r\n\r\nThen write down your predictions and run the code to see what the program does.",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,6 +19,8 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-04-02 20:06:37 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-04-02 20:06:37 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-18 20:24:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>
