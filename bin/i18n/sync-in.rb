@@ -78,6 +78,14 @@ def get_i18n_strings(level)
         name = function.at_xpath('./title[@name="NAME"]')
         i18n_strings['function_names'][name.content] = name.content if name
       end
+
+      # Spritelab behaviors
+      behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
+      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      behaviors.each do |behavior|
+        name = behavior.at_xpath('./title[@name="NAME"]')
+        i18n_strings['behavior_names'][name.content] = name.content if name
+      end
     end
   end
 
