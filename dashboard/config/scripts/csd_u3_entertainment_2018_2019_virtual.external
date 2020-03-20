@@ -1,0 +1,63 @@
+name 'CSD U3 Entertainment_2018_2019_virtual'
+editor_experiment ''
+display_name 'Exploring CS in Entertainment'
+markdown <<MARKDOWN
+# Starting Your Search
+
+To find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for "Computer science and &#95;&#95;&#95;&#95;&#95;&#95;" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.
+
+[key]
+
+## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+### Overview
+
+This site is focused on news about Disney, but you might be surprised by the large role that CS plays in all of their different forms of entertainment. Because this isn't a CS focused site, you'll need to use the search function to find relevant articles.
+
+### Relevant fields
+
+* Film/TV
+* Animation
+* Robotics/Animatronics
+* Games
+
+## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+### Overview
+
+Videos featuring a range of people working in diverse areas of the game industry, talking about what they do.
+
+### Relevant Fields
+
+* Games
+* Animation
+* Art
+
+## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+### Overview
+
+Music Think Tank is a blog targeted at people working in the music industry. It's not a CS specific site, but searching for "computer science" or "programming" will reveal some interesting articles.
+
+### Relevant Fields
+
+* Music
+
+## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+### Overview
+
+While this podcast doesn't feature much in the way of formal professional programming (as in, people who do this for a living), it is a great resource to see the varied ways in which amateurs are making entertainment with code.
+
+### Relevant Fields
+
+* All
+
+[/key]
+MARKDOWN
