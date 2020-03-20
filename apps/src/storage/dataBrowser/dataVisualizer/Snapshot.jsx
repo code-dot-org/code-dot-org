@@ -10,17 +10,20 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
 import {ChartType} from '../dataUtils';
 import * as dataStyles from '../dataStyles';
+import {GOOGLE_CHART_AREA} from './constants';
+
+const PLACEHOLDER_IMAGE = require('./placeholder.png');
 
 const INITIAL_STATE = {
   isSnapshotOpen: false,
   isCopyPending: false,
   isSavePending: false,
-  imageSrc: require('./placeholder.png')
+  imageSrc: PLACEHOLDER_IMAGE
 };
 
 class Snapshot extends React.Component {
   static propTypes = {
-    chartType: PropTypes.number.isRequired,
+    chartType: PropTypes.oneOf(Object.values(ChartType)).isRequired,
     chartTitle: PropTypes.string.isRequired,
     selectedOptions: PropTypes.string.isRequired,
     // Provided via Redux
@@ -46,16 +49,10 @@ class Snapshot extends React.Component {
   handleClose = () => this.setState(INITIAL_STATE);
 
   getImageFromChart = () => {
-    switch (this.props.chartType) {
-      case ChartType.BAR_CHART:
-      case ChartType.HISTOGRAM:
-      case ChartType.SCATTER_PLOT:
-        this.getImageFromGoogleChart();
-        break;
-      case ChartType.CROSS_TAB:
-        this.getImageFromCrossTab();
-        break;
-      default:
+    if (this.props.chartType === ChartType.CROSS_TAB) {
+      this.getImageFromCrossTab();
+    } else {
+      this.getImageFromGoogleChart();
     }
   };
 
@@ -76,7 +73,7 @@ class Snapshot extends React.Component {
   };
 
   getImageFromGoogleChart = () => {
-    const container = document.getElementById('googleChartContainer');
+    const container = document.getElementById(GOOGLE_CHART_AREA);
     const svgList = container && container.querySelectorAll('svg');
     const svg = svgList && svgList[0];
     if (!svg) {
@@ -89,45 +86,36 @@ class Snapshot extends React.Component {
     });
   };
 
-  getPngBlob = () => {
-    const element = document.getElementById('snapshot');
+  getPngBlob = async () => {
+    const element = this.refs.snapshot;
+    if (!element) {
+      return;
+    }
     const options = {
       background: '#fff'
     };
-    return html2canvas(element, options).then(canvas => {
-      return new Promise(function(resolve, reject) {
-        canvas.toBlob(function(blob) {
-          resolve(blob);
-        });
-      });
-    });
+    const canvas = await html2canvas(element, options);
+    const blob = await new Promise(resolve => canvas.toBlob(resolve));
+    return blob;
   };
 
-  copy = () => {
+  copy = async () => {
     this.setState({isCopyPending: true});
-    this.getPngBlob().then(pngBlob => {
-      try {
-        navigator.clipboard.write([
-          new ClipboardItem({
-            'image/png': pngBlob
-          })
-        ]);
-        this.setState({isCopyPending: false});
-      } catch (error) {
-        console.error(error);
-      }
-    });
+    const pngBlob = await this.getPngBlob();
+    await navigator.clipboard.write([
+      new ClipboardItem({'image/png': pngBlob})
+    ]);
+    this.setState({isCopyPending: false});
   };
 
-  save = () => {
+  save = async () => {
     this.setState({isSavePending: true});
-    this.getPngBlob().then(pngBlob => {
-      const download = document.createElement('a');
-      download.href = URL.createObjectURL(pngBlob);
-      download.download = 'image.png';
-      download.click();
-      this.setState({isSavePending: false});
-    });
+    const pngBlob = await this.getPngBlob();
+    const download = document.createElement('a');
+    download.href = URL.createObjectURL(pngBlob);
+    download.download = 'image.png';
+    download.click();
+    this.setState({isSavePending: false});
   };
 
   render() {
@@ -146,7 +134,7 @@ class Snapshot extends React.Component {
           fullWidth
           fullHeight
         >
-          <div id="snapshot">
+          <div ref="snapshot">
             <h1>{this.props.chartTitle}</h1>
             <img src={this.state.imageSrc} />
             <p>
