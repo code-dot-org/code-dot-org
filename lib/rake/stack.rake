@@ -31,12 +31,13 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     AWS::CloudFormation.validate
   end
 
-  %I(vpc iam ami data lambda alerting).each do |stack|
+  %I(vpc iam ami data lambda alerting db_clone).each do |stack|
     namespace stack do
       task :environment do
         require_relative '../../deployment'
         ENV['TEMPLATE'] ||= "#{stack}.yml.erb"
         ENV['STACK_NAME'] ||= stack.to_s if [:lambda, :alerting].include? stack
+        ENV['STACK_NAME'] ||= "db-#{ENV['CLONE_CLUSTER_ID']}" if [:db_clone].include? stack
         ENV['STACK_NAME'] ||= "#{stack.upcase}#{"-#{rack_env}" if [:ami, :data].include? stack}"
         require 'cdo/aws/cloud_formation'
       end
