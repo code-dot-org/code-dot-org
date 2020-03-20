@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {CROSS_TAB_CHART_AREA} from './constants';
 
 const styles = {
   headerCell: {
@@ -107,7 +108,7 @@ class CrossTabChart extends React.Component {
     const max = Math.max(...numericValues);
 
     return (
-      <div id="crossTabContainer">
+      <div id={CROSS_TAB_CHART_AREA}>
         <h1 style={styles.title}>{this.props.chartTitle}</h1>
         <table>
           <tbody>
