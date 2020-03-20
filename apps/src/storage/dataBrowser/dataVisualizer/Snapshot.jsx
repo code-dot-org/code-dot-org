@@ -10,17 +10,20 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
 import {ChartType} from '../dataUtils';
 import * as dataStyles from '../dataStyles';
+import {GOOGLE_CHART_AREA} from './constants';
+
+const PLACEHOLDER_IMAGE = require('./placeholder.png');
 
 const INITIAL_STATE = {
   isSnapshotOpen: false,
   isCopyPending: false,
   isSavePending: false,
-  imageSrc: require('./placeholder.png')
+  imageSrc: PLACEHOLDER_IMAGE
 };
 
 class Snapshot extends React.Component {
   static propTypes = {
-    chartType: PropTypes.number.isRequired,
+    chartType: PropTypes.oneOf(Object.values(ChartType)).isRequired,
     chartTitle: PropTypes.string.isRequired,
     selectedOptions: PropTypes.string.isRequired,
     // Provided via Redux
@@ -46,23 +49,17 @@ class Snapshot extends React.Component {
   handleClose = () => this.setState(INITIAL_STATE);
 
   getImageFromChart = () => {
-    switch (this.props.chartType) {
-      case ChartType.BAR_CHART:
-      case ChartType.HISTOGRAM:
-      case ChartType.SCATTER_PLOT:
-        this.getImageFromGoogleChart();
-        break;
-      case ChartType.CROSS_TAB:
-        this.getImageFromCrossTab();
-        break;
-      default:
+    if (this.props.chartType === ChartType.CROSS_TAB) {
+      this.getImageFromCrossTab();
+    } else {
+      this.getImageFromGoogleChart();
     }
   };
 
   getImageFromCrossTab = () => {};
 
   getImageFromGoogleChart = () => {
-    const container = document.getElementById('googleChartContainer');
+    const container = document.getElementById(GOOGLE_CHART_AREA);
     const svgList = container && container.querySelectorAll('svg');
     const svg = svgList && svgList[0];
     if (!svg) {
