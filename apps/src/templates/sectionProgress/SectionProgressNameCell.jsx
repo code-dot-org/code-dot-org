@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {progressStyles} from './multiGridConstants';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getStudentTimestamp} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../lib/util/firehose';
 
@@ -14,7 +15,8 @@ class SectionProgressNameCell extends Component {
 
     // Provided by redux.
     scriptName: PropTypes.string,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
+    studentTimestamp: PropTypes.number // seconds since epoch
   };
 
   recordStudentNameClick = () => {
@@ -34,11 +36,18 @@ class SectionProgressNameCell extends Component {
   };
 
   render() {
-    const {name, studentId, sectionId, scriptName} = this.props;
+    const {
+      name,
+      studentId,
+      sectionId,
+      scriptName,
+      studentTimestamp
+    } = this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
+    const title = `Last Progress: ${studentTimestamp}`;
 
     return (
-      <div style={progressStyles.nameCell}>
+      <div style={progressStyles.nameCell} title={title}>
         {studentUrl && (
           <a
             href={studentUrl}
@@ -55,7 +64,8 @@ class SectionProgressNameCell extends Component {
 }
 
 export const UnconnectedSectionProgressNameCell = SectionProgressNameCell;
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   scriptName: getSelectedScriptName(state),
-  scriptId: state.scriptSelection.scriptId
+  scriptId: state.scriptSelection.scriptId,
+  studentTimestamp: getStudentTimestamp(state, ownProps.studentId)
 }))(SectionProgressNameCell);
