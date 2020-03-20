@@ -38,7 +38,7 @@ module Pd::Foorm
         form_questions = JSON.parse(form.questions, symbolize_names: true)
         form_questions[:pages].each do |page|
           page[:elements].each do |question_data|
-            parsed_form = parse_element(question_data, parsed_form)
+            parsed_form = parsed_form.merge(parse_element(question_data))
           end
         end
         parsed_forms[get_form_key(form.name, form.version)] = parsed_form
@@ -46,17 +46,19 @@ module Pd::Foorm
       parsed_forms
     end
 
-    # parse a form element and add to existing parsed_form object
-    # Form element may be a panel which contains questions
-    def self.parse_element(question_data, parsed_form)
+    # parse a form element and return hash of {question_name->question_data,...}
+    # Form element may be a panel which contains questions, therefore resulting hash
+    # may contain one or more questions
+    def self.parse_element(question_data)
+      parsed_questions = {}
       if question_data[:type] == 'panel'
         question_data[:elements].each do |panel_question_data|
-          parse_element(panel_question_data, parsed_form)
+          parsed_questions = parsed_questions.merge(parse_element(panel_question_data))
         end
       else
-        parsed_form[question_data[:name]] = parse_question(question_data)
+        parsed_questions[question_data[:name]] = parse_question(question_data)
       end
-      parsed_form
+      parsed_questions
     end
 
     # parse single question into standardized format
