@@ -98,9 +98,7 @@ export function imageFromURI(uri) {
   });
 }
 
-export function svgToDataURI(svg, imageType, options) {
-  imageType = imageType || 'image/png';
-  options = options || {};
+export function svgToDataURI(svg, imageType = 'image/png', options = {}) {
   return new Promise(resolve => {
     // Use lazy-loading to keep canvg (60KB) out of the initial download.
     import('./util/svgelement-polyfill').then(() => {

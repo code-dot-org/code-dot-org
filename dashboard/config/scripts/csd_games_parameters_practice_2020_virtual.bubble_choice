@@ -1,0 +1,9 @@
+name 'CSD Games parameters practice_2020_virtual'
+editor_experiment ''
+display_name 'Practice with Parameters'
+description 'Try out some or all of the levels below to practice using the different parameters on shapes.'
+
+sublevels
+level 'CSD U3 shapes behind_pilot'
+level 'CSD U3 shapes missing_pilot'
+level 'CSD U3 shapes scene_pilot'
