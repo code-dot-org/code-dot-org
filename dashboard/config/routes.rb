@@ -225,7 +225,12 @@ Dashboard::Application.routes.draw do
     resources :blocks, constraints: {id: /[^\/]+/}
   end
   resources :shared_blockly_functions, path: '/functions'
-  resources :libraries
+
+  resources :libraries do
+    collection do
+      get '/get_updates', to: 'libraries#get_updates'
+    end
+  end
 
   resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
     collection do
