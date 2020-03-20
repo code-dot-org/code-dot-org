@@ -13,7 +13,7 @@ stage 'Putting a STOP to Online Meanness', flex_category: 'csf_digcit'
 level 'csf_putting_a_stop_to_online_meanness'
 
 stage 'Password Power-Up', flex_category: 'csf_digcit'
-level 'PowerfulPasswords-Unplugged_2020'
+level 'csf_password_power-up'
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_sequencing'
 level 'MyRoboticFriends-Unplugged_2020'
