@@ -14257,6 +14257,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            'Mini-Project: HTML Web Page':
+              name: 'Mini-Project: HTML Web Page'
+            'Mini-Project: Your Personal Style':
+              name: 'Mini-Project: Your Personal Style'
         csd1-2020:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -14854,6 +14858,10 @@ en:
               name: 'End of Course Project: Create a Play Lab Game'
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
+            Putting a STOP to Online Meanness:
+              name: Putting a STOP to Online Meanness
+            Password Power-Up:
+              name: Password Power-Up
         coursed-2020:
           title: Course D (2020)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
