@@ -8,7 +8,10 @@ require 'cdo/poste'
 templates = POSTE_DB[:poste_messages].to_hash(:id, :name).map do |id, name|
   # copied from Deliverer.load_template
   path = Poste.resolve_template(name)
-  raise ArgumentError, "#{name.inspect} template wasn't found." unless path
+  unless path
+    puts "#{name.inspect} template (id: #{id}) wasn't found."
+    next
+  end
   template = Poste::Template.new path
   [id, template]
 end.to_h
@@ -25,8 +28,7 @@ total = deliveries.count
 i = 0
 deliveries.paged_each do |delivery|
   template = templates[delivery[:message_id]]
-  raise ValueError, "poste_messages[#{delivery[:message_id]}] does not exist" unless template
-  template.render(JSON.parse(delivery[:params]))
+  template.render(JSON.parse(delivery[:params])) if template
   i += 1
   puts "#{i}/#{total} finished (#{i * 100 / total}%)" if i % (total / 5) == 0
 end
