@@ -60,6 +60,8 @@ class VisualizerModal extends React.Component {
     tableRecords: PropTypes.array.isRequired
   };
 
+  placeholder = require('./placeholder.png');
+
   state = {...INITIAL_STATE};
 
   handleOpen = () => this.setState({isVisualizerOpen: true});
@@ -314,7 +316,7 @@ class VisualizerModal extends React.Component {
               <div style={styles.placeholderText}>
                 {msg.dataVisualizerPlaceholderText()}
               </div>
-              <img src={require('./placeholder.png')} />
+              <img src={this.placeholder} />
             </div>
           )}
           <div style={{paddingTop: 20}}>
