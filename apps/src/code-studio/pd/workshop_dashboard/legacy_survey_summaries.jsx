@@ -11,7 +11,7 @@ class LegacySurveySummaryTable extends React.Component {
   render() {
     return (
       <div>
-        <h2>{this.props.title}</h2>
+        <h3>{this.props.title}</h3>
         <table>
           <thead>
             <tr>
@@ -72,22 +72,22 @@ export default class LegacySurveySummaries extends React.Component {
     return (
       <div>
         <LegacySurveySummaryTable
-          title="CSF Intro post-workshop"
+          title="CSF Intro - my workshops"
           data={this.state.data.csf_intro_post_workshop_from_pegasus}
         />
         <LegacySurveySummaryTable
-          title="CSF Intro post-workshop for all workshops"
+          title="CSF Intro - all workshops"
           data={
             this.state.data
               .csf_intro_post_workshop_from_pegasus_for_all_workshops
           }
         />
         <LegacySurveySummaryTable
-          title="CSD summer workshops"
+          title="CSD summer - my workshops"
           data={this.state.data.csd_summer_workshops_from_jotform}
         />
         <LegacySurveySummaryTable
-          title="CSP summer workshops"
+          title="CSP summer - my workshops"
           data={this.state.data.csp_summer_workshops_from_jotform}
         />
       </div>
