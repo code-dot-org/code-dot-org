@@ -38,7 +38,7 @@ module Pd::Foorm
         form_questions = JSON.parse(form.questions, symbolize_names: true)
         form_questions[:pages].each do |page|
           page[:elements].each do |question_data|
-            parsed_form = parsed_form.merge(parse_element(question_data))
+            parsed_form.merge!(parse_element(question_data))
           end
         end
         parsed_forms[get_form_key(form.name, form.version)] = parsed_form
@@ -53,7 +53,7 @@ module Pd::Foorm
       parsed_questions = {}
       if question_data[:type] == 'panel'
         question_data[:elements].each do |panel_question_data|
-          parsed_questions = parsed_questions.merge(parse_element(panel_question_data))
+          parsed_questions.merge!(parse_element(panel_question_data))
         end
       else
         parsed_questions[question_data[:name]] = parse_question(question_data)
