@@ -4,13 +4,26 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import msg from '@cdo/locale';
+import {svgToDataURI} from '@cdo/apps/imageUtils';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
+import {ChartType} from '../dataUtils';
 import * as dataStyles from '../dataStyles';
+import {GOOGLE_CHART_AREA} from './constants';
+
+const PLACEHOLDER_IMAGE = require('./placeholder.png');
+
+const INITIAL_STATE = {
+  isSnapshotOpen: false,
+  isCopyPending: false,
+  isSavePending: false,
+  imageSrc: PLACEHOLDER_IMAGE
+};
 
 class Snapshot extends React.Component {
   static propTypes = {
+    chartType: PropTypes.oneOf(Object.values(ChartType)).isRequired,
     chartTitle: PropTypes.string.isRequired,
     selectedOptions: PropTypes.string.isRequired,
     // Provided via Redux
@@ -18,16 +31,46 @@ class Snapshot extends React.Component {
     projectName: PropTypes.string.isRequired
   };
 
-  placeholder = require('./placeholder.png');
+  state = {...INITIAL_STATE};
 
-  state = {
-    isSnapshotOpen: false,
-    isCopyPending: false,
-    isSavePending: false
+  componentDidMount() {
+    this.isMounted_ = true;
+  }
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  }
+
+  handleOpen = () => {
+    this.setState({isSnapshotOpen: true});
+    this.getImageFromChart();
   };
 
-  handleOpen = () => this.setState({isSnapshotOpen: true});
-  handleClose = () => this.setState({isSnapshotOpen: false});
+  handleClose = () => this.setState(INITIAL_STATE);
+
+  getImageFromChart = () => {
+    if (this.props.chartType === ChartType.CROSS_TAB) {
+      this.getImageFromCrossTab();
+    } else {
+      this.getImageFromGoogleChart();
+    }
+  };
+
+  getImageFromCrossTab = () => {};
+
+  getImageFromGoogleChart = () => {
+    const container = document.getElementById(GOOGLE_CHART_AREA);
+    const svgList = container && container.querySelectorAll('svg');
+    const svg = svgList && svgList[0];
+    if (!svg) {
+      return;
+    }
+    svgToDataURI(svg, 'image/png', {renderer: 'native'}).then(imageURI => {
+      if (this.isMounted_) {
+        this.setState({imageSrc: imageURI});
+      }
+    });
+  };
 
   getPngBlob = async () => {
     const element = this.refs.snapshot;
@@ -79,7 +122,7 @@ class Snapshot extends React.Component {
         >
           <div ref="snapshot">
             <h1>{this.props.chartTitle}</h1>
-            <img src={this.placeholder} />
+            <img src={this.state.imageSrc} />
             <p>
               {msg.dataVisualizerSnapshotDescription({
                 date: moment().format('YYYY/MM/DD'),
