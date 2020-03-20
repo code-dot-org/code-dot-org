@@ -1,0 +1,18 @@
+name 'csf_putting_a_stop_to_online_meanness'
+editor_experiment ''
+display_as_unplugged 'true'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# STOP Meanness
+
+## What should you do if someone is mean to you online?
+
+* **S**tep away.
+* **T**ell a trusted adult.
+* **O**K sites first.
+* **P**ause and think online.
+
+![](https://images.code.org/1cd421fa0e0f6b572e9b09381d1b7cad-image-1584736933623.png)
+MARKDOWN
