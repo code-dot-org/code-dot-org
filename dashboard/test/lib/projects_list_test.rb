@@ -406,6 +406,10 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal [updated_channel_id], updated_channel_ids
   end
 
+  test 'fetch_updated_library_channels returns empty array if no libraries given' do
+    assert_equal [], ProjectsList.fetch_updated_library_channels([])
+  end
+
   private
 
   def user_db_result(result)
