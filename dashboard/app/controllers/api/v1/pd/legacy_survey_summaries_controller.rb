@@ -4,7 +4,7 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/legacy_survey_summaries
     def legacy_survey_summaries
-      report = Pd::Foorm::LegacySurveySummaries.get_summaries(current_user.id)
+      report = Pd::Foorm::LegacySurveySummaries.get_summaries(current_user)
       render json: report
     end
   end

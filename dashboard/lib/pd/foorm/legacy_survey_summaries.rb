@@ -1,9 +1,9 @@
 # Retrieves, parses and summarizes Foorm Survey results for consumption by APIs.
 module Pd::Foorm
   class LegacySurveySummaries
-    def self.get_summaries(facilitator_id)
+    def self.get_summaries(facilitator)
       data = Pd::LegacySurveySummary.where(
-        facilitator_id: facilitator_id,
+        facilitator: facilitator,
         course: Pd::Workshop::COURSE_CSF,
         subject: Pd::Workshop::SUBJECT_CSF_101
       ).first&.data
@@ -15,7 +15,7 @@ module Pd::Foorm
       end
 
       data = Pd::LegacySurveySummary.where(
-        facilitator_id: nil,
+        facilitator: nil,
         course: Pd::Workshop::COURSE_CSF,
         subject: Pd::Workshop::SUBJECT_CSF_101
       ).first&.data
@@ -27,14 +27,14 @@ module Pd::Foorm
       end
 
       data = Pd::LegacySurveySummary.where(
-        facilitator_id: facilitator_id,
+        facilitator: facilitator,
         course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
       ).first&.data
       csd_summer_workshops_from_jotform = JSON.parse(data) if data
 
       data = Pd::LegacySurveySummary.where(
-        facilitator_id: facilitator_id,
+        facilitator: facilitator,
         course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
       ).first&.data
