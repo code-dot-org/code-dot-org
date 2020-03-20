@@ -18,6 +18,8 @@ class Snapshot extends React.Component {
     projectName: PropTypes.string.isRequired
   };
 
+  placeholder = require('./placeholder.png');
+
   state = {
     isSnapshotOpen: false,
     isCopyPending: false,
@@ -28,7 +30,10 @@ class Snapshot extends React.Component {
   handleClose = () => this.setState({isSnapshotOpen: false});
 
   getPngBlob = async () => {
-    const element = document.getElementById('snapshot');
+    const element = this.refs.snapshot;
+    if (!element) {
+      return;
+    }
     const options = {
       background: '#fff'
     };
@@ -72,9 +77,9 @@ class Snapshot extends React.Component {
           fullWidth
           fullHeight
         >
-          <div id="snapshot">
+          <div ref="snapshot">
             <h1>{this.props.chartTitle}</h1>
-            <img src={require('./placeholder.png')} />
+            <img src={this.placeholder} />
             <p>
               {msg.dataVisualizerSnapshotDescription({
                 date: moment().format('YYYY/MM/DD'),
