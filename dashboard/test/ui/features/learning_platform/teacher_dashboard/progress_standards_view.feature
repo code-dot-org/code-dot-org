@@ -52,7 +52,7 @@ Feature: Viewing and Printing Standards Progress
     # Generate PDF
     And I wait until element ".uitest-standards-generate-report" is visible
     And I press the first ".uitest-standards-generate-report" element
-    Then I wait until element ".modal" contains text "Create a CSTA Standards report"
+    Then I wait until element ".modal" contains text "Generate a PDF copy of this report"
     Then I wait until element ".modal" contains text "Step 1: Tell us which unplugged lessons* your class has completed"
     And I wait until element ".uitest-standards-generate-report-next" is visible
     And I press the first ".uitest-standards-generate-report-next" element
