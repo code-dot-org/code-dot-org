@@ -23,16 +23,6 @@ class CustomRewriter < Redcarpet::Render::HTML
     end
     doc.css('body').children.to_html
   end
-
-  # Open links in a new tab by default.
-  def link(link, title, content)
-    # `content` is already escaped by Redcarpet.
-    "<a target='_blank' href='#{Rack::Utils.escape_html(link)}' title='#{Rack::Utils.escape_html(title)}'>#{content}</a>"
-  end
-
-  def autolink(link, _)
-    link(link, nil, link)
-  end
 end
 
 MarkdownHandler.register(CustomRewriter, MARKDOWN_OPTIONS)
