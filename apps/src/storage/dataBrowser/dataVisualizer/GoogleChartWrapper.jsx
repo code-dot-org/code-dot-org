@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {ChartType, ignoreMissingValues} from '../dataUtils';
+import {GOOGLE_CHART_AREA} from './constants';
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 class GoogleChartWrapper extends React.Component {
@@ -87,10 +88,7 @@ class GoogleChartWrapper extends React.Component {
 
   render() {
     return (
-      <div
-        id="googleChartContainer"
-        ref={element => (this.chartArea = element)}
-      />
+      <div id={GOOGLE_CHART_AREA} ref={element => (this.chartArea = element)} />
     );
   }
 }
