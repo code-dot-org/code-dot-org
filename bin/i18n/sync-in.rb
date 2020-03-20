@@ -310,6 +310,7 @@ def localize_markdown_content
   markdown_files_to_localize = ['international/about.md.partial',
                                 'educate/curriculum/csf-transition-guide.md',
                                 'athome.md.partial',
+                                'athome/csf.md.partial',
                                 'break.md.partial',
                                 'csforgood.md']
   markdown_files_to_localize.each do |path|
