@@ -172,7 +172,7 @@
           ]
         },
         {
-          "type": "text",
+          "type": "comment",
           "name": "venue_logistics_feedback",
           "title": "Do you have feedback about the venue and the way logistics were run for the workshop this week? Please be specific and provide suggestions for improvement."
         }
@@ -855,16 +855,14 @@
       "name": "overall_feedback",
       "elements": [
         {
-          "type": "text",
+          "type": "comment",
           "name": "two_things_liked",
-          "title": "What were the one or two things you liked most about the activities you did in this workshop and why?",
-          "inputType": "text"
+          "title": "What were the one or two things you liked most about the activities you did in this workshop and why?"
         },
         {
-          "type": "text",
+          "type": "comment",
           "name": "two_things_changed",
-          "title": "What are the one or two things you would change about the activities you did in this workshop?",
-          "inputType": "text"
+          "title": "What are the one or two things you would change about the activities you did in this workshop?"
         },
         {
           "type": "radiogroup",
