@@ -6,7 +6,7 @@ end
 # https://stackoverflow.com/questions/45243992/verification-of-element-in-viewport-in-selenium
 And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
   is_in_viewport = <<-JAVASCRIPT
-    var elem = $("#{selector}")[0],  //arguments[0],
+    var elem = $("#{selector}")[0],
       box = elem.getBoundingClientRect(),
       cx = box.left + box.width / 2,
       cy = box.top + box.height / 2,
