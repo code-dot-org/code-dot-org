@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "Consider the figure below.  In the space provided write a list of **just the names** of the functions that you would write in a program that draws this figure.  (Assume that the long line segments are 6 turtle moves long).\r\n\r\n![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)\r\n\r\n",
+    "encrypted_solution": "D5d1hc2jRJAw6HgXPt/m3azcQaTBGWak0snIucwuYq0P+YjibFu1EO7zynoJ\nokp9T1NIk04f2jgzCJCOx92GbnL0n8k0DnY1dBhHC/O/8clWG6BO1ct3HCCG\nSBHAhpKyYjK1nXw1sSIYwDDpiTMcKvwk/FC24rw3i0Ut6BC+T52y/OP7/PYU\nYnvTRyO2Aw3e4S1fXuokMICTFThJ98jc8fLQn/m7yk1OhIGgKN545GgRD+ZA\nTTjbwu2iD2Zv9f9BScTmK2JsR9CKwvRjMzh5IA==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16911,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-18 01:40:39 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-18 01:41:13 +0000\",\"changed\":[\"title\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

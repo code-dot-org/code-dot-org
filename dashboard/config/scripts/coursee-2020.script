@@ -102,6 +102,9 @@ level 'courseE_aboutme_4_2020', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_5_2020', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_6_2020', progression: 'Mini-project: Interactive Poster'
 
+stage 'Digital Sharing', flex_category: 'csf_digcit'
+level 'DigitalSharing-Unplugged_2020'
+
 stage 'Access Ability', flex_category: 'csf_impacts'
 level 'DesigningForAccessibilityMarkdownLevel_2019_2020'
 

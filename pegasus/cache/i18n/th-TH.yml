@@ -305,6 +305,7 @@ th-TH:
   homepage_action_text_signpetition: ลงนามในคำร้อง
   homepage_action_text_wincelebritychat: ได้รับรางวัลเพื่อพูดคุยกับดารา
   homepage_signpetition_dropdown: ลงนามในคำร้อง &#x25BE;
+  homepage_signpetition_dropdown_text: ฉันเห็นด้วย
   homepage_diversity_pledge: รองรับความหลากหลาย
   homepage_banner_text_prizes: 'ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม '
   homepage_banner_link_prizes: 'เข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์ '
@@ -1183,6 +1184,7 @@ th-TH:
   header_courses: คอร์ส
   header_course_catalog: รายการหลักสูตร
   header_project_gallery: โปรเจกต์
+  header_sections: ส่วนต่างๆ ของชั้นเรียน
   header_professional_learning: การเรียนรู้อย่างมืออาชีพ
   header_educate_hoc: ช่วงเวลาของ Code
   header_about_us: เกี่ยวกับเรา

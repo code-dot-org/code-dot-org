@@ -1,0 +1,27 @@
+name 'U3L03 - multiselect - properties of functions_2018_2019_virtual'
+title 'Choose Two: True Statements about Functions'
+type 'multi2'
+question 'Choose the two (2) statements that are true about functions'
+
+right 'Meaningful function names help _people_ better understand programs.'
+wrong 'Meaningful function names help _computers_ better understand programs.'
+wrong 'Functions in programming are useful mathematical tools for doing complex computations.'
+right 'Functions in programming are named groupings of programming instructions.'
+teacher_markdown <<MARKDOWN
+**Correct answers:**
+
+* Meaningful function names help <em>people</em> better understand programs.
+	* Explanation: When a person is reading your program, it will be easier for them to understand what your program does (or is supposed to do) if your functions have clear and descriptive names.
+* Functions in programming are a named grouping of programming instructions.
+
+**Incorrect answers:**
+
+* Meaningful function names help *computers* better understand programs.
+	* Explanation: It doesn't matter to your computer what names your functions have, as long as you're consistent. Meaninful function names are strictly to make your code more understandable for humans.
+* Functions in programming are useful mathematical tools for doing complex computations.
+	* Explanation: Functions don't necessarily have to do *complex* computations. Functions can be any set of actions you want the computer to perform.
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

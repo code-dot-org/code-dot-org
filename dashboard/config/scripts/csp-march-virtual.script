@@ -1,19 +1,25 @@
 professional_learning_course 'CS Principles Curriculum Training for Facilitators'
-peer_reviews_to_complete 6
+peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
 
-stage 'Pre-work'
+stage 'Saturday Session Resources'
 level 'Mar20 Prework_0'
-level 'Mar20 Introduction'
 
-stage 'Curriculum Investigations'
-level 'Mar20 U1 U2 Dig_0'
+stage 'Getting Familiar with Traversals EIPM'
+level 'Mar20 Part1_1', progression: 'Overview and Setup'
+level 'Mar20 Part1_2', progression: 'Overview and Setup'
+level 'Mar20 Part1_Task1', progression: 'Tasks'
+level 'Mar20 Part1_Task2', progression: 'Tasks'
+level 'Mar20 Part1_Task3', progression: 'Tasks'
+level 'Mar20 Part1_Task4', progression: 'Tasks'
+level 'Mar20 Part1_Task5', progression: 'Tasks'
+level 'Mar20 Part1_Task6', progression: 'Tasks'
+level 'Mar20 Part1_Task7', progression: 'Reflection'
 
-stage 'Reflections'
-level 'Mar20 Reflection_0'
-level 'Mar20 Reflection_1', progression: 'Scenarios'
-level 'Mar20 Reflection_2', progression: 'Scenarios'
-level 'Mar20 Reflection_3', progression: 'Scenarios'
-level 'Mar20 Make Plan_0'
-level 'Mar20 make Plan_2'
+stage 'Comparing Make Lessons'
+level 'Mar20 Part2_1'
+level 'Mar20 Part2_Task1', progression: 'Tasks'
+level 'Mar20 Part2_Task2', progression: 'Tasks'
+level 'Mar20 Part2_Task3', progression: 'Tasks'
+level 'Mar20 Part2_Task4', progression: 'Reflection'
