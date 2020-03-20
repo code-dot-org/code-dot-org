@@ -163,6 +163,8 @@ module ProjectsList
         nil
       end.compact
 
+      return [] if project_ids.nil_or_empty?
+
       updated_library_channels = []
       PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
         library = libraries.find {|lib| lib['project_id'] == project[:id]}
