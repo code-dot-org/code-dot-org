@@ -19,6 +19,7 @@
 #  pairing_allowed   :boolean          default(TRUE), not null
 #  sharing_disabled  :boolean          default(FALSE), not null
 #  hidden            :boolean          default(FALSE), not null
+#  autoplay_enabled  :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -251,6 +252,7 @@ class Section < ActiveRecord::Base
       code: code,
       stage_extras: stage_extras,
       pairing_allowed: pairing_allowed,
+      autoplay_enabled: autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,

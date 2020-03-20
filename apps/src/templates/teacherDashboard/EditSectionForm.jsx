@@ -169,6 +169,11 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
+          {/*<AutoplayField*/}
+          {/*  value={section.autoplayEnabled}*/}
+          {/*  onChange={autoplayEnabled => editSectionProperties({autoplayEnabled})}*/}
+          {/*  disabled={isSaveInProgress}*/}
+          {/*/>*/}
         </div>
         <DialogFooter>
           <Button
@@ -325,6 +330,27 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
   </div>
 );
 PairProgrammingField.propTypes = FieldProps;
+
+const AutoplayField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>{i18n.enableAutoplay()}</FieldName>
+    <FieldDescription>
+      {i18n.explainAutoplay()}{' '}
+      <a
+        href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
+        target="_blank"
+      >
+        {i18n.explainLessonExtrasLearnMore()}
+      </a>
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={autoplayEnabled => onChange(autoplayEnabled)}
+      disabled={disabled}
+    />
+  </div>
+);
+AutoplayField.propTypes = FieldProps;
 
 const FieldName = props => (
   <div
