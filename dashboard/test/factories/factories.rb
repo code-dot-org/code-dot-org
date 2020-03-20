@@ -431,8 +431,7 @@ FactoryGirl.define do
         end
         script = create :script
         mega_section.script = script
-        i = 0
-        100.times do
+        100.times do |i|
           create(
             :script_level,
             script: script,
@@ -440,7 +439,6 @@ FactoryGirl.define do
               create(:maze, name: "test level #{i}")
             ]
           )
-          i += 1
         end
         mega_section.students.each do |student|
           script.script_levels.each do |script_level|
