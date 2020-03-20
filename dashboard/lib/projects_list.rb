@@ -161,7 +161,7 @@ module ProjectsList
         id
       rescue
         nil
-      end.compact
+      end.compact.uniq
 
       return [] if project_ids.nil_or_empty?
 
