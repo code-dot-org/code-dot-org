@@ -348,6 +348,7 @@ class VisualizerModal extends React.Component {
             />
           </div>
           <Snapshot
+            chartType={this.state.chartType}
             chartTitle={this.state.chartTitle}
             selectedOptions={this.chartOptionsToString(this.state.chartType)}
           />
