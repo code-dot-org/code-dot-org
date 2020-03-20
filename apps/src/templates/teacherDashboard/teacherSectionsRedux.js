@@ -13,6 +13,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'stageExtras',
   'pairingAllowed',
+  'autoplayEnabled',
   'courseId',
   'scriptId',
   'grade',
@@ -471,6 +472,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: true,
     pairingAllowed: true,
+    autoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
     code: '',
@@ -1021,6 +1023,7 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  autoplayEnabled: serverSection.autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
@@ -1056,6 +1059,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     stage_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    autoplay_enabled: section.autoplayEnabled,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined
