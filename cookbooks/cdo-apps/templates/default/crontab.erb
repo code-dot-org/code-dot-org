@@ -113,8 +113,7 @@
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'process_forms')
-      # temporarily commenting out to test this script manually
-      # cronjob at:'35 * * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
+      cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'analyze_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'deliver_poste_messages')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
@@ -122,7 +121,7 @@
       cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
       cronjob at:"0 8 * * *", do:deploy_dir('bin', 'cron', 'purge_expired_deleted_accounts')
       # temporarily commenting out to test this script manually
-      #cronjob at:'0 4 * * 0', do:deploy_dir('bin', 'cron', 'update_project_count')
+      cronjob at:'0 4 * * 0', do:deploy_dir('bin', 'cron', 'update_project_count')
     end
   end
 
