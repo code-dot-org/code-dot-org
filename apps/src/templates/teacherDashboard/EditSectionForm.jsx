@@ -169,11 +169,11 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          {/*<AutoplayField*/}
-          {/*  value={section.autoplayEnabled}*/}
-          {/*  onChange={autoplayEnabled => editSectionProperties({autoplayEnabled})}*/}
-          {/*  disabled={isSaveInProgress}*/}
-          {/*/>*/}
+          <AutoplayField
+            value={section.autoplayEnabled}
+            onChange={autoplayEnabled => editSectionProperties({autoplayEnabled})}
+            disabled={isSaveInProgress}
+          />
         </div>
         <DialogFooter>
           <Button
