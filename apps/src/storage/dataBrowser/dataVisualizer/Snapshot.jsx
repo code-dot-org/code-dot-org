@@ -27,45 +27,33 @@ class Snapshot extends React.Component {
   handleOpen = () => this.setState({isSnapshotOpen: true});
   handleClose = () => this.setState({isSnapshotOpen: false});
 
-  getPngBlob = () => {
+  getPngBlob = async () => {
     const element = document.getElementById('snapshot');
     const options = {
       background: '#fff'
     };
-    return html2canvas(element, options).then(canvas => {
-      return new Promise(function(resolve, reject) {
-        canvas.toBlob(function(blob) {
-          resolve(blob);
-        });
-      });
-    });
+    const canvas = await html2canvas(element, options);
+    const blob = await new Promise(resolve => canvas.toBlob(resolve));
+    return blob;
   };
 
-  copy = () => {
+  copy = async () => {
     this.setState({isCopyPending: true});
-    this.getPngBlob().then(pngBlob => {
-      try {
-        navigator.clipboard.write([
-          new ClipboardItem({
-            'image/png': pngBlob
-          })
-        ]);
-        this.setState({isCopyPending: false});
-      } catch (error) {
-        console.error(error);
-      }
-    });
+    const pngBlob = await this.getPngBlob();
+    await navigator.clipboard.write([
+      new ClipboardItem({'image/png': pngBlob})
+    ]);
+    this.setState({isCopyPending: false});
   };
 
-  save = () => {
+  save = async () => {
     this.setState({isSavePending: true});
-    this.getPngBlob().then(pngBlob => {
-      const download = document.createElement('a');
-      download.href = URL.createObjectURL(pngBlob);
-      download.download = 'image.png';
-      download.click();
-      this.setState({isSavePending: false});
-    });
+    const pngBlob = await this.getPngBlob();
+    const download = document.createElement('a');
+    download.href = URL.createObjectURL(pngBlob);
+    download.download = 'image.png';
+    download.click();
+    this.setState({isSavePending: false});
   };
 
   render() {
