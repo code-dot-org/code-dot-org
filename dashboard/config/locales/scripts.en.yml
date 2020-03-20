@@ -15701,6 +15701,12 @@ en:
               name: Introduction to CSD
             Tools:
               name: Tools
+            Curriculum Components:
+              name: Curriculum Components
+            Course Resources:
+              name: Course Resources
+            Debugging:
+              name: Debugging
           title: Jess's Script
           description_audience: ''
           description_short: ''
@@ -15916,6 +15922,26 @@ en:
             Project - Design a Game:
               name: Project - Design a Game
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        code-break:
+          stages:
+            new stage:
+              name: new stage
+            Beginner Challenges:
+              name: Beginner Challenges
+            Intermediate Challenges:
+              name: Intermediate Challenges
+            'Episode 1: Algorithms':
+              name: 'Episode 1: Algorithms'
+            'Episode 2: Events':
+              name: 'Episode 2: Events'
+            Algorithms:
+              name: Algorithms
+            Events:
+              name: Events
+          title: Code Break
           description_audience: ''
           description_short: ''
           description: ''

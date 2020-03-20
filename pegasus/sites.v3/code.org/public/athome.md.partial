@@ -83,7 +83,7 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 ## Learn the fundamentals with our express courses
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <i>Note: Express courses are available in English only. To see what's available in your language, visit <a href="https://studio.code.org/courses">studio.code.org</a>.</i>
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <i>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. To see what's available in your language, visit <a href="https://studio.code.org/courses">studio.code.org</a>.</i>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:40px">
@@ -150,25 +150,22 @@ We are working to build out supports for teachers currently teaching our courses
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="/athome/csp"><div class="solid-block-header"><p>Computer Science Principles</p></div></a>
-<br>
-<a href="/athome/csp"><h3 style="color:#7665a0"><strong>Supporting at-home learning for CS Principles</strong></h3></a>A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
+<div class="solid-block-header" style="margin-top:10px"><a href="/athome/csp" style="color:#ffffff; text-decoration: none"><p>Computer Science Principles</p></a></div>
+A guide for teachers with resources to materials that students can use at home to continue learning and prepare for the upcoming AP exam
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="/athome/csd"><div class="solid-block-header" style="background-color:#b9bf15"><p>Computer Science Discoveries</p></div></a>
-<br>
-<a href="/athome/csd"><h3 style="color:#7665a0"><strong>Supporting at-home learning for CS Discoveries</strong></h3></a>A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
+<div class="solid-block-header" style="background-color:#b9bf15; margin-top:10px"><a href="/athome/csd" style="color:#ffffff; text-decoration: none"><p>Computer Science Discoveries</p></a></div>
+A guide for teachers with resources to materials that students can use at home to continue learning CS Discoveries
 
 </div>
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="/athome/csf"><div class="solid-block-header" style="background-color:#ffa400"><p>Computer Science Fundamentals</p></div></a>
-<br>
-<a href="/athome/csf"><h3 style="color:#7665a0"><strong>Supporting at-home learning for CS Fundamentals</strong></h3></a>A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
+A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
 
 </div>
 
