@@ -25,6 +25,7 @@ const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
 const ADD_STUDENT_LEVEL_PAIRING = 'sectionProgress/ADD_STUDENT_LEVEL_PAIRING';
+const ADD_STUDENT_TIMESTAMPS = 'sectionProgress/ADD_STUDENT_TIMESTAMPS';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
@@ -76,6 +77,11 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
     studentLevelPairing
   };
 };
+export const addStudentTimestamps = (scriptId, studentTimestamps) => ({
+  type: ADD_STUDENT_TIMESTAMPS,
+  scriptId,
+  studentTimestamps
+});
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
@@ -122,6 +128,7 @@ const initialState = {
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
   studentLevelPairingByScript: {},
+  studentTimestampsByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: true
@@ -204,6 +211,17 @@ export default function sectionProgress(state = initialState, action) {
         [action.scriptId]: {
           ...state.studentLevelPairingByScript[action.scriptId],
           ...action.studentLevelPairing
+        }
+      }
+    };
+  }
+  if (action.type === ADD_STUDENT_TIMESTAMPS) {
+    return {
+      ...state,
+      studentTimestampsByScript: {
+        [action.scriptId]: {
+          ...state.studentTimestampsByScript[action.scriptId],
+          ...action.studentTimestamps
         }
       }
     };
@@ -380,6 +398,8 @@ export const loadScript = (scriptId, sectionId) => {
               getStudentLevelResult(dataByStudent)
             )
           );
+          dispatch(addStudentTimestamps(scriptId, data.student_timestamps));
+
           dispatch(
             addStudentLevelPairing(scriptId, getStudentPairing(dataByStudent))
           );
