@@ -6,6 +6,7 @@ import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
 import {getStudentTimestamp} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../lib/util/firehose';
+import moment from 'moment';
 
 class SectionProgressNameCell extends Component {
   static propTypes = {
@@ -16,7 +17,7 @@ class SectionProgressNameCell extends Component {
     // Provided by redux.
     scriptName: PropTypes.string,
     scriptId: PropTypes.number,
-    studentTimestamp: PropTypes.number // seconds since epoch
+    studentTimestamp: PropTypes.number
   };
 
   recordStudentNameClick = () => {
@@ -44,7 +45,7 @@ class SectionProgressNameCell extends Component {
       studentTimestamp
     } = this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
-    const title = `Last Progress: ${studentTimestamp}`;
+    const title = `Last Progress: ${moment(studentTimestamp).calendar()}`;
 
     return (
       <div style={progressStyles.nameCell} title={title}>

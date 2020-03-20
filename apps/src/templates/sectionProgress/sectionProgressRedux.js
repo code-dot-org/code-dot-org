@@ -452,12 +452,13 @@ export function getStudentLevelResult(dataByStudent) {
  *
  * @param state {Object} The redux state tree.
  * @param studentId {number} The user id of the student.
- * @returns {number} Number of *seconds* since the beginning of the epoch.
+ * @returns {number} Number of milliseconds since the beginning of the epoch,
+ *   truncated to the nearest second.
  */
 export const getStudentTimestamp = (state, studentId) => {
   const scriptId = state.scriptSelection.scriptId;
   const timestamps = state.sectionProgress.studentTimestampsByScript[scriptId];
-  return timestamps && timestamps[studentId];
+  return timestamps && timestamps[studentId] * 1000;
 };
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
