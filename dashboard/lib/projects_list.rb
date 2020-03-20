@@ -167,8 +167,9 @@ module ProjectsList
       PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
         library = libraries.find {|lib| lib['project_id'] == project[:id]}
         project_value = JSON.parse(project[:value])
+        next unless library && project_value['latestLibraryVersion']
 
-        if library && library['version'] != project_value['latestLibraryVersion']
+        if library['version'] != project_value['latestLibraryVersion']
           updated_library_channels << library['channel_id']
         end
       end
