@@ -1,4 +1,5 @@
 class LibrariesController < ApplicationController
+  before_action :authenticate_user!, only: :get_updates
   before_action :require_levelbuilder_mode, except: [:show, :get_updates]
   load_and_authorize_resource find_by: :name, except: [:show, :get_updates]
 
