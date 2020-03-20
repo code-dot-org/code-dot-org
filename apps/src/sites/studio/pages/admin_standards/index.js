@@ -14,7 +14,8 @@ $(document).ready(function() {
           contentType: 'application/json',
           data: JSON.stringify(data)
         }).done(function(data) {
-          $('#alert-message').text(data.message);
+          $('#alert-message').append('<div id=alert-details/>');
+          $('#alert-details').text(data.message);
         });
       })
       .fail(function() {
