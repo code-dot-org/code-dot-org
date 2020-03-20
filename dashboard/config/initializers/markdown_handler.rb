@@ -27,7 +27,9 @@ class CustomRewriter < Redcarpet::Render::HTML
   # Open links in a new tab by default.
   def link(link, title, content)
     # `content` is already escaped by Redcarpet.
-    "<a target='_blank' href='#{Rack::Utils.escape_html(link)}' title='#{Rack::Utils.escape_html(title)}'>#{content}</a>"
+    # make sure we use rel in addition to target=_blank to attempt to mitigate
+    # the inherent danger in opening links in a new tab.
+    "<a target='_blank' rel='noreferrer noopener nofollow' href='#{Rack::Utils.escape_html(link)}' title='#{Rack::Utils.escape_html(title)}'>#{content}</a>"
   end
 
   def autolink(link, _)
