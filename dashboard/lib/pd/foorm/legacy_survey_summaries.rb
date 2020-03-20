@@ -1,7 +1,8 @@
-# Retrieves, parses and summarizes Foorm Survey results for consumption by APIs.
+# Retrieves legacy survey summary results from Pd::LegacySurveySummary for API use.
 module Pd::Foorm
   class LegacySurveySummaries
     def self.get_summaries(facilitator)
+      # CSF Intro post-workshop - my workshops
       data = Pd::LegacySurveySummary.where(
         facilitator: facilitator,
         course: Pd::Workshop::COURSE_CSF,
@@ -9,11 +10,13 @@ module Pd::Foorm
       ).first&.data
       csf_intro_post_workshop_from_pegasus = JSON.parse(data) if data
 
+      # (Lookup strings from IDs.)
       csf_intro_post_workshop_from_pegasus_with_strings = {}
       csf_intro_post_workshop_from_pegasus.each_pair do |key, value|
         csf_intro_post_workshop_from_pegasus_with_strings[I18n.t("pd.survey.#{key}")] = value
       end
 
+      # CSF Intro post-workshop - all workshops
       data = Pd::LegacySurveySummary.where(
         facilitator: nil,
         course: Pd::Workshop::COURSE_CSF,
@@ -21,11 +24,13 @@ module Pd::Foorm
       ).first&.data
       csf_intro_post_workshop_from_pegasus_for_all_workshops = JSON.parse(data) if data
 
+      # (Lookup strings from IDs.)
       csf_intro_post_workshop_from_pegasus_for_all_workshops_with_strings = {}
       csf_intro_post_workshop_from_pegasus_for_all_workshops.each_pair do |key, value|
         csf_intro_post_workshop_from_pegasus_for_all_workshops_with_strings[I18n.t("pd.survey.#{key}")] = value
       end
 
+      # CSD summer workshops
       data = Pd::LegacySurveySummary.where(
         facilitator: facilitator,
         course: Pd::Workshop::COURSE_CSD,
@@ -33,6 +38,7 @@ module Pd::Foorm
       ).first&.data
       csd_summer_workshops_from_jotform = JSON.parse(data) if data
 
+      # CSP summer workshops
       data = Pd::LegacySurveySummary.where(
         facilitator: facilitator,
         course: Pd::Workshop::COURSE_CSP,
@@ -40,6 +46,7 @@ module Pd::Foorm
       ).first&.data
       csp_summer_workshops_from_jotform = JSON.parse(data) if data
 
+      # Return everything.
       {
         csf_intro_post_workshop_from_pegasus: csf_intro_post_workshop_from_pegasus_with_strings,
         csf_intro_post_workshop_from_pegasus_for_all_workshops:
