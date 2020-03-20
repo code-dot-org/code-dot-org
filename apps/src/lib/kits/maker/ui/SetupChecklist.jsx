@@ -359,6 +359,7 @@ export default class SetupChecklist extends Component {
                       : i18n.updateFirmwareExplanationExpress()}
                   </p>
                   <Button
+                    __useDeprecatedTag
                     text={i18n.updateFirmware()}
                     onClick={
                       this.state.boardTypeDetected === BOARD_TYPE.CLASSIC

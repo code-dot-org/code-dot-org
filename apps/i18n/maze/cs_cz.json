@@ -15,7 +15,7 @@
   "continue": "Pokračovat",
   "corn": "kukuřici",
   "cornTooltip": "Sklízet zrno",
-  "didNotCollectAllCrops": "Ujistěte se, že jste nezanechali žádné plodiny!",
+  "didNotCollectAllCrops": "Ujistěte se, že jste nenechali na poli žádné plodiny!",
   "didNotCollectEverything": "Ujistěte se, zda že jste za sebou nenechali nektar nebo med!",
   "didNotPlantEverywhere": "Ujistěte se, že pěstujete něco na každém políčku s půdou!",
   "dig": "odstraň 1",
@@ -111,7 +111,7 @@
   "whileMsg": "dokud",
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
   "word": "Najdi slovo",
-  "wrongCropError": "Nemůžu zde sklidit tuto plodinu.",
+  "wrongCropError": "Nemůžu odsud tuto plodinu sklidit.",
   "yes": "Ano",
   "youSpelled": "Vyhláskoval(a) jsi"
 }

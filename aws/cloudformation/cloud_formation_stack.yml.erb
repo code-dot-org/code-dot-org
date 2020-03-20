@@ -21,6 +21,7 @@ else
 end
 
 commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
+ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
@@ -152,7 +153,29 @@ Resources:
             Action: 's3:*'
             Resource: '*'
 <% if frontends -%>
-<%=  component 'ami', commit: commit, chef_version: chef_version%>
+<%=  component 'ami', ami: ami,
+  frontend_policies: [Ref: 'CDOPolicy'],
+  frontend_properties: {
+    TargetGroupARNs: [Ref: 'ALBTargetGroup']
+  },
+  frontend_volume_size: 64,
+  ami_timeout: 'PT120M',
+  build_ami: erb_file(aws_dir('cloudformation/bootstrap_chef_stack.sh.erb'),
+    resource_id: "AMICreate#{ami}",
+    node_name: 'ami-$INSTANCE_ID',
+    run_list: [
+      local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
+    ],
+    commit: commit,
+    daemon: false,
+    chef_version: chef_version
+  ),
+  frontend_timeout: 'PT50M',
+  build_frontend: erb_file(aws_dir('cloudformation/bootstrap_frontend.sh.erb'),
+    node_name: 'fe-$INSTANCE_ID',
+    commit: commit
+  )
+%>
 <% end -%>
 <% if load_balancer -%>
   # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
@@ -423,15 +446,17 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
-          resource_id: daemon,
-          node_name: '$STACK',
-          run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
-          commit: nil, # track branch
-          shutdown: false,
-          daemon: true,
-          chef_version: chef_version
-        )%>
+        Fn::Base64: !Sub |
+          #!/bin/bash -x
+          <%=indent(erb_file(aws_dir('cloudformation', 'bootstrap_chef_stack.sh.erb'),
+            resource_id: daemon,
+            node_name: '$STACK',
+            run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
+            commit: nil, # track branch
+            shutdown: false,
+            daemon: true,
+            chef_version: chef_version
+          ), 10)%>
       NetworkInterfaces:
       - AssociatePublicIpAddress: true
         DeviceIndex: 0

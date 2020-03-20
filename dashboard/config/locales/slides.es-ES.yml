@@ -3991,6 +3991,12 @@ es:
       2:
         text: "¡Hola! Mi nombre es Miral Kotb y soy bailarín, desarrollador de software
           y creador de iLuminate."
+      3:
+        text: Entonces, la informática se relaciona con la creatividad de muchas maneras.
+          Inconmensurable, de verdad. Quiero decir, una vez que tienes la capacidad
+          de escribir software puedes poner ideas en cualquier cosa. Lo hago con trajes
+          ligeros. Hay tanto que puede hacer una vez que tenga las herramientas para
+          escribir software, y las posibilidades son realmente infinitas.
       4:
         text: Durante la próxima hora, ¡comenzarás con la informática programando
           tu propia fiesta de baile! Hemos reunido algunos éxitos musicales y un equipo
@@ -4001,6 +4007,9 @@ es:
       6:
         text: Verás que tu pantalla está dividida en tres partes principales. A la
           izquierda está el espacio de juego. Aquí es donde aparecerán tus bailarines.
+      7:
+        text: Esta área central es la caja de herramientas. Nuevos bloques de código
+          estarán disponibles en este espacio a medida que avances en las lecciones.
       8:
         text: El espacio a la derecha es el espacio de trabajo. Puede arrastrar bloques
           fuera de la caja de herramientas y al espacio de trabajo para construir
@@ -4017,9 +4026,17 @@ es:
           Debajo del espacio de juego está el botón de ejecución. Cuando presione
           ejecutar, verá que los bailarines de su programa aparecen en el espacio
           de reproducción y se reproducirá la música.
+      13:
+        text: "¡Inténtalo tú mismo! Y si te sientes atrapado, ¡está bien! Simplemente
+          levántate y muévete, y antes de que te des cuenta, habrás hecho tu propia
+          fiesta de baile. Entonces, ¿qué vas a crear?"
     hoc_dance_events_2019:
       1:
         text: 'Hora de Codificar | Fiesta de baile: Eventos'
+      3:
+        text: Para hacer diferentes movimientos de baile en el momento justo con la
+          música, puede usar algo llamado eventos. Un evento le dice a su programa
+          que escuche que algo suceda y luego reaccione de inmediato.
       4:
         text: Algunos ejemplos de eventos son esperar a un clic del ratón, un botón
           de flecha o pulsar en la pantalla.
@@ -4067,8 +4084,16 @@ es:
           cambiar las propiedades de un bailarín. Las propiedades describen cosas
           como la posición del bailarín en la pantalla, el tamaño del bailarín y el
           color del bailarín.
+      9:
+        text: Usando el bloque establecido, también puede cambiar las dimensiones,
+          rotación, posición y color del bailarín. Al jugar con estas propiedades,
+          puede hacer todo tipo de cambios y vincularlos a diferentes partes de la
+          canción.
       10:
         image: notes/hoc_dance_properties_2019_10.png
+        text: Recuerde, solo puede establecer las propiedades de un bailarín que ya
+          existe. Asegúrate de que tu bloque de set viene después del bloque "Crea
+          un nuevo bailarín". Siéntase libre de experimentar, ser creativo y divertirse.
     hoc_dance_congrats_2019:
       1:
         text: 'Hora de Codificar | Fiesta de Baile: Festejando!'
