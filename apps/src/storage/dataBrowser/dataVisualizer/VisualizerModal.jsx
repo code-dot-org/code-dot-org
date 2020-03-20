@@ -12,6 +12,7 @@ import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
+import Snapshot from './Snapshot';
 
 const styles = {
   container: {
@@ -58,6 +59,8 @@ class VisualizerModal extends React.Component {
     tableName: PropTypes.string.isRequired,
     tableRecords: PropTypes.array.isRequired
   };
+
+  placeholder = require('./placeholder.png');
 
   state = {...INITIAL_STATE};
 
@@ -135,6 +138,44 @@ class VisualizerModal extends React.Component {
       default:
         return chartType;
     }
+  }
+
+  chartOptionsToString(chartType) {
+    const options = [];
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        break;
+      case ChartType.HISTOGRAM:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerBucketSize()}: ${this.state.bucketSize}`
+        );
+        break;
+      case ChartType.SCATTER_PLOT:
+      case ChartType.CROSS_TAB:
+        options.push(
+          `${msg.dataVisualizerXValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerYValues()}: ${this.state.selectedColumn2}`
+        );
+        break;
+      default:
+    }
+    if (!!this.state.filterColumn && !!this.state.filterValue) {
+      options.push(
+        msg.dataVisualizerFilterDescription({
+          column: this.state.filterColumn,
+          value: this.state.filterValue
+        })
+      );
+    }
+    return options.join(', ');
   }
 
   render() {
@@ -275,7 +316,7 @@ class VisualizerModal extends React.Component {
               <div style={styles.placeholderText}>
                 {msg.dataVisualizerPlaceholderText()}
               </div>
-              <img src={require('./placeholder.png')} />
+              <img src={this.placeholder} />
             </div>
           )}
           <div style={{paddingTop: 20}}>
@@ -305,22 +346,11 @@ class VisualizerModal extends React.Component {
               }
               inlineLabel
             />
-            <DropdownField
-              displayName={msg.dataVisualizerCreateChart()}
-              options={[]}
-              disabledOptions={[]}
-              value={this.state.screen}
-              onChange={event => this.setState({screen: event.target.value})}
-              inlineLabel
-            />
-            <button
-              type="button"
-              style={dataStyles.grayButton}
-              onClick={this.handleOpen}
-            >
-              {msg.create()}
-            </button>
           </div>
+          <Snapshot
+            chartTitle={this.state.chartTitle}
+            selectedOptions={this.chartOptionsToString(this.state.chartType)}
+          />
         </BaseDialog>
       </span>
     );
