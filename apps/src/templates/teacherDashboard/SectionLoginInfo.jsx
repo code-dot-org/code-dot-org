@@ -297,6 +297,7 @@ class WordOrPictureLogins extends React.Component {
                   key={student.id}
                   section={section}
                   student={student}
+                  studioUrlPrefix={studioUrlPrefix}
                 />
               ))}
             </div>
