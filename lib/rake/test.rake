@@ -94,6 +94,8 @@ namespace :test do
     Dir.chdir(deploy_dir) do
       flakiness_output = `./bin/test_flakiness -n 5`
       ChatClient.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
+      tests_over_flake_threshold = `./bin/test_flakiness -x 0.2`
+      ChatClient.log "Tests exceeding flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/>These tests should be investigated!", color: 'red'
     end
   end
 
