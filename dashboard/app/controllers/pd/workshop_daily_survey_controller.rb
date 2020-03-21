@@ -99,7 +99,7 @@ module Pd
         return redirect_general(key_params)
       end
 
-      form_questions, latest_version = Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
+      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
         props: {
