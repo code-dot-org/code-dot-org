@@ -120,7 +120,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
       expect(wrapper.state().classLibraries).to.have.lengthOf(0);
-      expect(wrapper.state().libraries).to.have.lengthOf(2);
+      expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
     });
 
     it('displays LibraryListItem when class libraries are available', () => {
@@ -134,7 +134,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
       expect(wrapper.state().classLibraries).to.have.lengthOf(2);
-      expect(wrapper.state().libraries).to.have.lengthOf(0);
+      expect(wrapper.state().projectLibraries).to.have.lengthOf(0);
     });
 
     it('displays all libraries from the project and the class', () => {
@@ -148,7 +148,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
       expect(wrapper.state().classLibraries).to.have.lengthOf(2);
-      expect(wrapper.state().libraries).to.have.lengthOf(2);
+      expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
     });
 
     it('setLibraryToImport sets the import library', () => {

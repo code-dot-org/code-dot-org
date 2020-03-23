@@ -1063,6 +1063,8 @@
   "noClassroomsFound": "No classrooms found.",
   "noIconsFound": "No icons found",
   "noLibraries": "You currently have no libraries.",
+  "noLibrariesInProject": "You have no libraries in your project. Try adding one from your class list or from an ID.",
+  "noLibrariesInClass": "No one in your class has published a library. Try adding one from an ID.",
   "noMenuItemsAvailable": "No menu items available.",
   "nominateATeacher": "Nominate a Teacher",
   "noStudentsInSection": "There are no other students in this section.",

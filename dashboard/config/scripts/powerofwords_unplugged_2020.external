@@ -1,4 +1,5 @@
 name 'PowerOfWords-Unplugged_2020'
+editor_experiment ''
 video_key 'CSF_Power_of_Words'
 display_as_unplugged 'true'
 use_large_video_player 'true'
@@ -6,5 +7,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # The Power of Words
 
-Today you will learn about what to do if someone is being mean online.
+## What should you do when someone uses mean or hurtful language on the internet?
 MARKDOWN
