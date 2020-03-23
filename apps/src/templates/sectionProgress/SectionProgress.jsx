@@ -18,7 +18,8 @@ import {
   getCurrentScriptData,
   setLessonOfInterest,
   scriptDataPropType,
-  setCurrentView
+  setCurrentView,
+  tooltipIdForStudent
 } from './sectionProgressRedux';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -30,6 +31,7 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
+import moment from 'moment';
 
 const styles = {
   heading: {
@@ -78,7 +80,8 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool
+    showStandardsIntroDialog: PropTypes.bool,
+    studentTimestamps: PropTypes.object
   };
 
   componentDidMount() {
@@ -122,8 +125,10 @@ class SectionProgress extends Component {
     );
   };
 
+  // ReactTooltip must be rendered outside of the grid, otherwise the css
+  // position property of the grid elements will mess up the tooltip position.
   renderTooltips() {
-    return this.props.scriptData.stages.map(stage => (
+    const lessonTooltips = this.props.scriptData.stages.map(stage => (
       <ReactTooltip
         id={tooltipIdForLessonNumber(stage.position)}
         key={tooltipIdForLessonNumber(stage.position)}
@@ -137,7 +142,28 @@ class SectionProgress extends Component {
         {stage.name}
       </ReactTooltip>
     ));
+
+    const studentTooltips = Object.keys(this.props.studentTimestamps).map(
+      studentId => (
+        <ReactTooltip
+          id={tooltipIdForStudent(studentId)}
+          key={tooltipIdForStudent(studentId)}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+        >
+          {this.tooltipTextForStudent(studentId)}
+        </ReactTooltip>
+      )
+    );
+
+    return lessonTooltips.concat(studentTooltips);
   }
+
+  tooltipTextForStudent = studentId => {
+    const timestamp = this.props.studentTimestamps[studentId];
+    return `Last Progress: ${moment(timestamp * 1000).calendar()}`;
+  };
 
   navigateToScript = () => {
     firehoseClient.putRecord(
@@ -249,7 +275,11 @@ export default connect(
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
+    studentTimestamps:
+      state.sectionProgress.studentTimestampsByScript[
+        state.scriptSelection.scriptId
+      ]
   }),
   dispatch => ({
     loadScript(scriptId, sectionId) {

@@ -445,21 +445,8 @@ export function getStudentLevelResult(dataByStudent) {
   return getInfoByStudentByLevel(dataByStudent, getLevelResult);
 }
 
-/**
- * Returns the last time this user made progress on any level in the currently
- * selected script. This is based on the updated_at time in the user_levels
- * table, and does not take into account any updates to project-backed levels.
- *
- * @param state {Object} The redux state tree.
- * @param studentId {number} The user id of the student.
- * @returns {number} Number of milliseconds since the beginning of the epoch,
- *   truncated to the nearest second.
- */
-export const getStudentTimestamp = (state, studentId) => {
-  const scriptId = state.scriptSelection.scriptId;
-  const timestamps = state.sectionProgress.studentTimestampsByScript[scriptId];
-  return timestamps && timestamps[studentId] * 1000;
-};
+export const tooltipIdForStudent = studentId =>
+  `tooltipIdForStudent${studentId}`;
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
   return _.mapValues(dataByStudent, studentData =>
