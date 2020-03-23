@@ -5,10 +5,6 @@ require_relative('../../../../dashboard/config/environment')
 require 'cdo/properties'
 require_relative 'pardot_helpers'
 
-# Global variable for Pardot API key. This can become invalid and need to be refreshed
-# and replaced midstream.
-$pardot_api_key = nil
-
 class PardotV2
   extend PardotHelpers
 

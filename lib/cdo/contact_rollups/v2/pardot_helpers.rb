@@ -7,6 +7,9 @@ module PardotHelpers
 
   private
 
+  # Note: Pardot API key can become invalid and need to be refreshed midstream.
+  @@pardot_api_key = nil
+
   # Login to Pardot and request an API key. The API key is valid for (up to) one
   # hour, after which it will become invalid and we will need to request a new
   # one.
@@ -30,7 +33,7 @@ module PardotHelpers
     api_key = doc.xpath('/rsp/api_key').text
     raise "Pardot authentication response did not include api_key" if api_key.nil?
 
-    $pardot_api_key = api_key
+    @@pardot_api_key = api_key
   end
 
   # Make an API request with Pardot authentication, including appending auth
@@ -52,13 +55,12 @@ module PardotHelpers
   #   auth params, as auth params will get appended in this method.
   # @return [Nokogiri::XML] XML response from Pardot
   def post_request_with_auth(url)
-    request_pardot_api_key if $pardot_api_key.nil?
+    request_pardot_api_key if @@pardot_api_key.nil?
 
-    # add the API key and user key parameters to body of the POST request
     post_request(
       url,
       {
-        api_key: $pardot_api_key,
+        api_key: @@pardot_api_key,
         user_key: CDO.pardot_user_key
       }
     )
