@@ -9,8 +9,8 @@ family_name 'coursea'
 version_year '2020'
 curriculum_umbrella 'CSF'
 
-stage 'Going Places Safely', flex_category: 'csf_digcit'
-level 'GoingPlacesSafely-unplugged_2020'
+stage 'Safety in My Online Neighborhood', flex_category: 'csf_digcit'
+level 'csf_safety_in_my_online_neighborhood'
 
 stage 'Learn to Drag and Drop', flex_category: 'csf_sequencing'
 skin 'jigsaw'

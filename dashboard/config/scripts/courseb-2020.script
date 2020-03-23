@@ -9,8 +9,8 @@ family_name 'courseb'
 version_year '2020'
 curriculum_umbrella 'CSF'
 
-stage 'Your Digital Footprint', flex_category: 'csf_digcit'
-level 'DigitalFootprint-Unplugged_2020'
+stage 'Digital Trails', flex_category: 'csf_digcit'
+level 'csf_digital_trails'
 
 stage 'Move It, Move It', flex_category: 'csf_sequencing'
 level 'MoveItMoveIt-Unplugged_2020'
