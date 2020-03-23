@@ -1469,3 +1469,33 @@ lv:
           stages:
             Spelling Bee:
               name: Burtošanas bite
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funkciju veidošana
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Pasākumi
