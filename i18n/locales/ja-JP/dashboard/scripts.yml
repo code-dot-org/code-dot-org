@@ -1906,3 +1906,33 @@ ja:
               name: アーティストくりかえし
             Loops in Artist:
               name: アーティストくりかえし
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: 関数の作成
+        csd3-virtual:
+          stages:
+            Variables:
+              name: 変数（へんすう）
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Whileループ
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
+        code-break:
+          stages:
+            Algorithms:
+              name: アルゴリズム
+            Events:
+              name: イベント
