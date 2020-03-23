@@ -12,22 +12,20 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     assert @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
     assert @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
     assert @firehose_record[:data_string], curriculum_url
-    split_url = curriculum_url.try(:split, '/')
     assert @firehose_record[:data_json]["locale"], "en-us"
-    assert @firehose_record[:data_json]["csx"], split_url[1]
-    assert @firehose_record[:data_json]["course_or_unit"], split_url[2]
-    assert @firehose_record[:data_json]["lesson"], split_url[3]
+    assert @firehose_record[:data_json]["csx"], "csf-18"
+    assert @firehose_record[:data_json]["course_or_unit"], "pre-express"
+    assert @firehose_record[:data_json]["lesson"], 11
   end
 
   def assert_non_english_curriculum_page_view_logged(curriculum_url, user_id)
     assert @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
     assert @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
     assert @firehose_record[:data_string], curriculum_url
-    split_url = curriculum_url.try(:split, '/')
-    assert @firehose_record[:data_json]["locale"], split_url[1]
-    assert @firehose_record[:data_json]["csx"], split_url[2]
-    assert @firehose_record[:data_json]["course_or_unit"], split_url[3]
-    assert @firehose_record[:data_json]["lesson"], split_url[4]
+    assert @firehose_record[:data_json]["locale"], "es-mx"
+    assert @firehose_record[:data_json]["csx"], "csf-1718"
+    assert @firehose_record[:data_json]["course_or_unit"], "coursec"
+    assert @firehose_record[:data_json]["lesson"], 10
   end
 
   def refute_curriculum_page_view_logged
