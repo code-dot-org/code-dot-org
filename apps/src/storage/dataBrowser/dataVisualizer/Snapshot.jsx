@@ -10,7 +10,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
 import {ChartType} from '../dataUtils';
 import * as dataStyles from '../dataStyles';
-import {GOOGLE_CHART_AREA} from './constants';
+import {CROSS_TAB_CHART_AREA, GOOGLE_CHART_AREA} from './constants';
 
 const PLACEHOLDER_IMAGE = require('./placeholder.png');
 
@@ -56,7 +56,21 @@ class Snapshot extends React.Component {
     }
   };
 
-  getImageFromCrossTab = () => {};
+  getImageFromCrossTab = () => {
+    const element = document.getElementById(CROSS_TAB_CHART_AREA);
+    if (!element) {
+      return;
+    }
+    const options = {
+      background: '#fff'
+    };
+    html2canvas(element, options).then(canvas => {
+      const dataSrc = canvas.toDataURL('image/png');
+      if (this.isMounted_) {
+        this.setState({imageSrc: dataSrc});
+      }
+    });
+  };
 
   getImageFromGoogleChart = () => {
     const container = document.getElementById(GOOGLE_CHART_AREA);
