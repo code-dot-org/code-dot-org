@@ -174,7 +174,6 @@ def fetch_hoc_metrics
     'hoc_country_totals' => {},
     'hoc_company_totals' => {}
   }
-
   # Temporary static override for the "Hours of Code served" count during winter break
   # To be removed when our automated update is fixed in early 2020.
   metrics.merge('started' => 910_905_104)
