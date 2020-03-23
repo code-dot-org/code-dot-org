@@ -117,9 +117,10 @@ class MegaSection
           score: 100
         # Add teacher feedback for each level.
         create :teacher_feedback,
-          student: student_user,
-          teacher: section.teacher,
-          level: script_level.levels.first,
+          student_id: student_user.id,
+          teacher_id: section.teacher.id,
+          script_level_id: script_level.id,
+          level_id: script_level.levels.first.id,
           comment: tiny_lipsum
       end
     end
