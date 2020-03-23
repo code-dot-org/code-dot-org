@@ -81,7 +81,6 @@ class MegaSection
   #    results. (CSF allows imperfect results, CSD and CSP do not.)
   def self.create_section(options)
     script = Script.get_from_cache(options[:script_name])
-    level_count = script.script_levels.count
 
     # Create the section
     section = create :section, script: script,
@@ -103,45 +102,42 @@ class MegaSection
       # Add student to section
       create :follower, section: section, student_user: student_user
 
-      # Create random student progress.
-      pct_skipped = rng.rand(15)
-      pct_imperfect = options[:use_imperfect_results] ? rng.rand(25..65) +
-        pct_skipped : 0
-
-      max_level =
-        if rng.rand(100) < 90
-          (level_count.to_f * rng.rand(0.2..0.8)).to_i
-        else
-          # To simulate real-world data, some students have no progress
-          0
-        end
-
-      # Create progress for this student on each level, up to a random
-      # max level
-      current_level = 0
       script.script_levels.each do |script_level|
-        break if current_level == max_level
-
-        # Roll the dice to decide if progress is completed, perfect, or
-        # skipped for this level
-        rand_val = rng.rand(100)
-        best_result =
-          if rand_val < pct_skipped
-            nil
-          elsif rand_val < pct_imperfect
-            ActivityConstants::MINIMUM_PASS_RESULT
-          else
-            ActivityConstants::BEST_PASS_RESULT
-          end
-
-        # Save progress for this level if not skipping
-        if best_result
-          create :user_level, user: student_user, script_id: script.id,
-            level_id: script_level.levels.first.id, attempts: 1,
-            best_result: best_result
-        end
-        current_level += 1
+        # Create progress for this student on each level
+        user_level = create :user_level,
+          user: student_user,
+          script_id: script.id,
+          level_id: script_level.levels.first.id,
+          attempts: 1,
+          best_result: ActivityConstants::BEST_PASS_RESULT
+        # Score each level for each student
+        create :teacher_score,
+          user_level_id: user_level.id,
+          teacher_id: section.teacher.id,
+          score: 100
+        # Add teacher feedback for each level.
+        create :teacher_feedback,
+          student: student_user,
+          teacher: section.teacher,
+          level: script_level.levels.first,
+          comment: tiny_lipsum
       end
     end
+  end
+
+  # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
+  # fake text data.
+  def self.tiny_lipsum
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
+    " labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" \
+    " laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" \
+    " voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat" \
+    " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
+      split(/[.,]/).
+      sample(rng.rand(3..6)).
+      map(&:strip).
+      compact.
+      map(&:capitalize).
+      join('. ') + '.'
   end
 end

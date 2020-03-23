@@ -1227,6 +1227,11 @@ FactoryGirl.define do
     association :script_level
   end
 
+  factory :teacher_score do
+    association :user_level
+    association :teacher
+  end
+
   factory :validated_user_level do
     time_spent 10
     user_level_id 1
