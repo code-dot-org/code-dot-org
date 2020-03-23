@@ -54,7 +54,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
   end
 
   test "get index for signed out, non-English curriculum_url" do
-    get :index, params: {from:   @example_curriculum_url_with_locale}
+    get :index, params: {from: @example_curriculum_url_with_locale}
     assert_response :success
     assert_non_english_curriculum_page_view_logged(@example_curriculum_url_with_locale, nil)
   end
@@ -68,7 +68,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
 
   test "get index for signed in, non-English curriculum_url" do
     sign_in @teacher
-    get :index, params: {from:   @example_curriculum_url_with_locale}
+    get :index, params: {from: @example_curriculum_url_with_locale}
     assert_response :success
     assert_non_english_curriculum_page_view_logged(@example_curriculum_url_with_locale, @teacher.id)
   end
