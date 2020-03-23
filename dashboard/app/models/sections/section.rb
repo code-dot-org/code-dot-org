@@ -299,7 +299,7 @@ class Section < ActiveRecord::Base
     end
   end
 
-  # One of the contstraints for teachers looking for discount codes is that they
+  # One of the constraints for teachers looking for discount codes is that they
   # have a section in which 10+ students have made progress on 5+ levels in both
   # csd2 and csd3
   # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication
@@ -325,6 +325,37 @@ class Section < ActiveRecord::Base
 
       num_students_with_sufficient_progress += 1
       return true if num_students_with_sufficient_progress >= 10
+    end
+    false
+  end
+
+  def has_sufficient_lesson_progress_for_completion?(script, stage_number)
+    total_num_students = students.length
+    lesson_script = script
+    raise 'Missing script' unless lesson_script
+
+    # Will need to deal with finding the stage here too
+    lesson_levels = lesson_script.stage_by_relative_position(stage_number).cached_script_levels
+    num_lesson_levels = lesson_levels.length
+
+    num_students_with_sufficient_progress = 0
+    students.each do |student|
+      # this is checking script not stage - need to update
+      student_levels = student.user_levels_by_level(script)
+      student_levels_best_result = student_levels.values.map(&:best_result)
+      num_levels_student_completed = 0
+      student_levels_best_result.each do |level_result|
+        next unless level_result >= ActivityConstants::MINIMUM_PASS_RESULT
+
+        num_levels_student_completed += 1
+      end
+
+      # Count students who have made progress on 60% of the levels in the stage
+      next unless (num_levels_student_completed.to_f / num_lesson_levels) >= 0.6
+
+      num_students_with_sufficient_progress += 1
+      # 80% of the class needs to have completed at least 60% of the levels
+      return true if (num_students_with_sufficient_progress.to_f / total_num_students) >= 0.8
     end
     false
   end

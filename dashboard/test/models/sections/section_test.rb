@@ -559,7 +559,7 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.valid_grade?("56")
   end
 
-  class HasSufficientDiscountCodeProgress < ActiveSupport::TestCase
+  class HasSufficientProgress < ActiveSupport::TestCase
     self.use_transactional_test_case = true
 
     def create_script_with_levels(name, level_type)
@@ -588,7 +588,7 @@ class SectionTest < ActiveSupport::TestCase
         script.levels.select {|level| !level.is_a?(Unplugged)}.last(num_programming_levels)
 
       progress_levels.each do |level|
-        create :user_level, level: level, user: student, script: script
+        create :user_level, level: level, user: student, script: script, best_result: ActivityConstants::MINIMUM_PASS_RESULT
       end
     end
 
@@ -597,7 +597,7 @@ class SectionTest < ActiveSupport::TestCase
       @csd3 = create_script_with_levels('csd3-2019', :gamelab)
     end
 
-    test 'returns true when all conditions met' do
+    test 'returns true when all conditions met for discount code progress' do
       section = create :section
       10.times do
         follower = create :follower, section: section
@@ -607,7 +607,7 @@ class SectionTest < ActiveSupport::TestCase
       assert_equal true, section.has_sufficient_discount_code_progress?
     end
 
-    test 'returns false if only enough progress in one script' do
+    test 'returns false if only enough discount code progress in one script' do
       section = create :section
       10.times do
         follower = create :follower, section: section
@@ -617,7 +617,7 @@ class SectionTest < ActiveSupport::TestCase
       assert_equal false, section.has_sufficient_discount_code_progress?
     end
 
-    test 'return false if not enough progress in programming levels' do
+    test 'return false if not enough discount code progress in programming levels' do
       section = create :section
       10.times do
         follower = create :follower, section: section
@@ -629,7 +629,7 @@ class SectionTest < ActiveSupport::TestCase
       assert_equal false, section.has_sufficient_discount_code_progress?
     end
 
-    test 'returns false if not enough students have progress' do
+    test 'returns false if not enough students have progress for discount code' do
       section = create :section
       9.times do
         follower = create :follower, section: section
@@ -642,6 +642,44 @@ class SectionTest < ActiveSupport::TestCase
       create :follower, section: section
 
       assert_equal false, section.has_sufficient_discount_code_progress?
+    end
+
+    test 'returns true if enough students have completed the lesson to consider it completed by class' do
+      section = create :section
+      9.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 2)
+      end
+      1.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 0)
+      end
+      create :follower, section: section
+
+      assert_equal true, section.has_sufficient_lesson_progress_for_completion?(@csd2, 1)
+    end
+
+    test 'returns false if not enough students have completed the lesson to consider it completed by class' do
+      section = create :section
+      5.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 2)
+      end
+      5.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 0)
+      end
+      create :follower, section: section
+
+      assert_equal false, section.has_sufficient_lesson_progress_for_completion?(@csd2, 1)
     end
   end
 end
