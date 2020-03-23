@@ -51,8 +51,8 @@ def main
   # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
   total_started += 14_861_327
 
-  today = Date.new(2020, 2, 2)
-  day = Date.new(2020, 2, 1)
+  today = Date.today
+  day = Date.new(2014, 12, 6)
 
   while day < today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")

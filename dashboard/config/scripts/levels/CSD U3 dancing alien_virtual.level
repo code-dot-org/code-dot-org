@@ -66,13 +66,10 @@
     "reference_links": [
       "/docs/csd-1718/draw_loop/index.html"
     ],
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -263,6 +263,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           {this.props.scholarshipWorkshop &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
             this.scholarshipInfo(enrollment)}
+          <td>{enrollment.enrolled_date}</td>
         </tr>
       );
     });
@@ -330,6 +331,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             {this.props.scholarshipWorkshop && (
               <th style={styles.th}>Scholarship Teacher?</th>
             )}
+            <th style={styles.th}>Enrolled date</th>
           </tr>
         </thead>
         <tbody>{enrollmentRows}</tbody>

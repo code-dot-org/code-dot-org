@@ -72,10 +72,10 @@
     "video_key": "csd_gamelab_draw_2",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

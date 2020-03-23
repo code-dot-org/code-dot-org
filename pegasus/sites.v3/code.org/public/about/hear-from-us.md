@@ -11,7 +11,7 @@ Interested in learning more about the work we do? Take a peek under the hood and
 
 ## Sign-up information
 
-<iframe src="http://go.pardot.com/l/153401/2018-01-08/k4krw5" width="100%" height="300" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+<iframe src="http://go.pardot.com/l/153401/2018-01-08/k4krw5" width="100%" height="405" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 
 ## <a name="previous"></a>Previous updates
 
