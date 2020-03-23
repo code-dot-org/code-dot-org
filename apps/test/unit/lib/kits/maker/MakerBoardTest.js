@@ -13,12 +13,6 @@ import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBo
  * @extends EventEmitter
  */
 
-/**
- * Run the set of interface conformance tests on the provided class.
- * @param {function} BoardClass
- * @param {function} boardSpecificSetup optional
- */
-
 const CP_CONSTRUCTOR_COUNT = 13;
 const CP_COMPONENT_COUNT = 16;
 const MB_CONSTRUCTOR_COUNT = 4;
@@ -45,6 +39,11 @@ const MB_COMPONENTS = [
   'MicroBitThermometer'
 ];
 
+/**
+ * Run the set of interface conformance tests on the provided class.
+ * @param {function} BoardClass
+ * @param {function} boardSpecificSetup optional
+ */
 export function itImplementsTheMakerBoardInterface(
   BoardClass,
   boardSpecificSetup = null
