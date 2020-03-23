@@ -3,10 +3,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {progressStyles} from './multiGridConstants';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
-import {getStudentTimestamp} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {tooltipIdForStudent} from './sectionProgressRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '../../lib/util/firehose';
-import moment from 'moment';
 
 class SectionProgressNameCell extends Component {
   static propTypes = {
@@ -16,8 +15,7 @@ class SectionProgressNameCell extends Component {
 
     // Provided by redux.
     scriptName: PropTypes.string,
-    scriptId: PropTypes.number,
-    studentTimestamp: PropTypes.number
+    scriptId: PropTypes.number
   };
 
   recordStudentNameClick = () => {
@@ -37,18 +35,17 @@ class SectionProgressNameCell extends Component {
   };
 
   render() {
-    const {
-      name,
-      studentId,
-      sectionId,
-      scriptName,
-      studentTimestamp
-    } = this.props;
+    const {name, studentId, sectionId, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, studentId);
-    const title = `Last Progress: ${moment(studentTimestamp).calendar()}`;
+    const tooltipId = tooltipIdForStudent(studentId);
 
     return (
-      <div style={progressStyles.nameCell} title={title}>
+      <div
+        style={progressStyles.nameCell}
+        data-tip
+        data-for={tooltipId}
+        aria-describedby={tooltipId}
+      >
         {studentUrl && (
           <a
             href={studentUrl}
@@ -67,6 +64,5 @@ class SectionProgressNameCell extends Component {
 export const UnconnectedSectionProgressNameCell = SectionProgressNameCell;
 export default connect((state, ownProps) => ({
   scriptName: getSelectedScriptName(state),
-  scriptId: state.scriptSelection.scriptId,
-  studentTimestamp: getStudentTimestamp(state, ownProps.studentId)
+  scriptId: state.scriptSelection.scriptId
 }))(SectionProgressNameCell);
