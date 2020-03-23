@@ -214,7 +214,7 @@ bonus 'courseD_artist_binary_challenge1_2020'
 bonus 'courseD_artist_binary_challenge2_2020'
 
 stage 'Be A Super Digital Citizen', flex_category: 'csf_digcit'
-level 'DigitalCitizenship-Unplugged_2020'
+level 'csf_be_a_super_digital_citizen'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseD_EOC_2020', progression: 'Create your project'
