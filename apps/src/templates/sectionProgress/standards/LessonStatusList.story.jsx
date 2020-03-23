@@ -8,6 +8,7 @@ import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
+import pageConstants from '@cdo/apps/redux/pageConstants';
 
 export default storybook => {
   const store = createStore(
@@ -15,7 +16,8 @@ export default storybook => {
       sectionProgress,
       sectionStandardsProgress,
       scriptSelection,
-      sectionData
+      sectionData,
+      pageConstants
     })
   );
 
