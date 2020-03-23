@@ -503,6 +503,11 @@ class MicrobitFirmataClient {
     this.myPort.write([this.STREAM_ANALOG | chan, 1]);
   }
 
+  analogRead(pin, callback) {
+    this.addFirmataUpdateListener(callback);
+    this.streamAnalogChannel(pin);
+  }
+
   stopStreamingAnalogChannel(chan) {
     // Stop streaming the given analog channel.
 
