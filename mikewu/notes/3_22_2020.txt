@@ -1,0 +1,13 @@
+Notes for March 22, 2020
+
+url for homepage: http://localhost-studio.code.org:3000/
+url for curriculum: http://localhost-studio.code.org:3000/s/coursed-2019/stage/9/puzzle/1
+
+strategy: add hacky components in a SINGLE file. we can integrate them together in proper style with the other engineers later.
+
+todos: 
+1. figure out what component affects hints
+2. figure out what component generates hints to put into redux
+3. figure out what component generates blocks 
+4. setup hacky flask server that we can make API requests to
+
