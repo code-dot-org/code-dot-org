@@ -9,7 +9,7 @@ Thank you for submitting your information to help local teachers. Teachers will 
 
 If you need to update your information or want to unsubscribe from teacher requests, use this link:
 
-<%= "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>
+<<%= "https://#{CDO.canonical_hostname('code.org')}/volunteer/engineer/edit/#{form.secret}/" %>>
 
 Thanks again for your support,
 
