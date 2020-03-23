@@ -1476,3 +1476,21 @@ ky:
               name: Океан көрүнүшү циклдар менен
             Loops in Artist:
               name: Сүрөтчүдөгү циклдар
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Функциялар
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритмдер
+            Events:
+              name: Окуялар
