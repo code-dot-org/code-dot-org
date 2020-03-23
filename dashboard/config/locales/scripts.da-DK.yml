@@ -1723,3 +1723,66 @@ da:
           stages:
             Conditionals:
               name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funktioner med parametre
+        csd3-2020:
+          description_short: Programmering
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Gå til sikre steder
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Dit digitale fodspor
+            Move It, Move It:
+              name: Flyt det, flyt det
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binære armbånd
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            'Unplugged: Binary':
+              name: 'Unplugged: Binære'
+            Artist Binary:
+              name: Kunstner binære
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            Dance Party:
+              name: Dance Party
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Betingelser
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dance Party
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stave-bien

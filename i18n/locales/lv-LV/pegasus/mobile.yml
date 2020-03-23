@@ -16,7 +16,6 @@
   learn_now: "Mācīties tagad"
   petition_message: "Katram skolēnam katrā skolā būtu jābūt iespējai apgūt programmēšanu"
   petition_sign_message: 'Ja tu piekrītat, rakstiet savu vārdu šeit. Pievienojies # citiem.'
-  petition_sign_message_support: 'Ja atbalsti mūs, ieraksti savu vārdu. Pievienojies # citiem.'
   petition_join_others: 'Pievienojies # citiem'
   name: "Vārds"
   email: "E-pasts"
@@ -195,6 +194,7 @@
   homepage_action_text_learn: "Sāc mācīties"
   homepage_action_text_signpetition: "Paraksti petīciju"
   homepage_signpetition_dropdown: "Es piekrītu &#x25BE;"
+  homepage_signpetition_dropdown_text: "es piekrītu"
   homepage_banner_text_main: "Code.org un koledžu padome veido apvienību, lai uzlabotu dažādību datorzinībās."
   homepage_banner_text_link: "Uzzini vairāk"
   homepage_banner_privacy_link: "Uzzini vairāk"

@@ -9387,12 +9387,6 @@ es-MX:
         courseC_PlayLab_eventsA_b: Tendrás que arrastrar específicamente un bloque
           de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
           rompecabezas.
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: Usa el bloque \` establecer fondo ' y el bloque
-          ' establecer agente a una velocidad de**\_** ' para resolver este desafío.
-        courseC_PlayLab_eventsA_b: Tendrás que arrastrar específicamente un bloque
-          de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
-          rompecabezas.
       courseC_PlayLab_eventsFP:
         idea1: "_¿Necesitas una idea?_\n\n**¿Quién está allí?** Haz que los personajes
           aparezcan con imágenes aleatorias, para que nadie sepa quién sigue. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)"

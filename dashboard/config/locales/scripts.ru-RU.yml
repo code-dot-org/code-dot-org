@@ -3184,3 +3184,178 @@ ru:
           stages:
             Conditionals:
               name: Условные команды
+        csd2-2020:
+          stages:
+            CSS Classes:
+              name: CSS классы
+        csd5-2020:
+          stages:
+            ASCII and Binary Representation:
+              name: ASCII и Двоичное Представление
+            Representing Images:
+              name: Представление изображений
+            Representing Numbers:
+              name: Представления чисел
+            Making Decisions with Data:
+              name: Использование данных для принятия решений
+        csd6-2020:
+          description_short: Программирование с физическими устройствами
+          stages:
+            Analog Input:
+              name: Иной ввод
+            Arrays and For Loops:
+              name: Множества и цикл for
+            Functions with Parameters:
+              name: Процедуры с параметрами
+            'Project: Prototype an Innovation':
+              name: 'Проект: Прототип Инновации'
+        csd3-2020:
+          description_short: Программирование
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+        coursea-2020:
+          description_audience: 'Возраст: 4-7'
+          stages:
+            Going Places Safely:
+              name: Безопасное путешествие
+            'Loops: Happy Loops':
+              description_teacher: Циклы - это очень полезный и мощный инструмент
+                в программировании. Чтобы понять, насколько полезными могут быть циклы,
+                ученикам нужно будет водить, чтобы найти более простой способ решить
+                повседневные проблемы.
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+            Loops in Collector:
+              name: Циклы в Собирателе
+            Ocean Scene with Loops:
+              name: Циклы в исполнителе Художник
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Твой цифровой след
+            Move It, Move It:
+              name: Вперед, вперед
+            Loops in Collector:
+              name: Циклы в Собирателе
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Двоичные браслеты
+            Sticker Art with Loops:
+              name: Циклы в исполнителе Художник
+        coursed-2020:
+          description_audience: 'Возраст: 7-11'
+          stages:
+            Relay Programming:
+              name: Эстафетное программирование
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            Conditionals with Cards:
+              name: Условные выражения с картами
+            While Loops in Farmer:
+              name: Цикл while в Фермере
+            'Unplugged: Binary':
+              name: 'Урок без компьютера: Двоичный'
+            Artist Binary:
+              name: 'Художник: двоичная система'
+            Digital Citizenship:
+              name: Цифровое гражданство
+            Dance Party:
+              name: Танцевальная вечеринка
+        coursee-2020:
+          description_audience: 'Возраст: 8-12'
+          stages:
+            Conditionals:
+              name: Условные команды
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
+            Nested Loops in Artist:
+              name: Вложенные циклы в Художнике
+            'Functions: Songwriting':
+              description_teacher: Одним из самых великолепных структур в мире компьютерной
+                науки является функция.  Функции (иногда называемые процедурами) -
+                это мини-программы, которые можно использовать снова и снова внутри
+                большой программы. Этот урок поможет учащимся интуитивно понять, почему
+                объединение частей кода в функцию является такой полезной практикой.
+        coursef-2020:
+          description_audience: 'Возраст: 9-13'
+          stages:
+            Nested Loops in the Maze:
+              description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит
+                вам, что происходит, когда вы помещаете цикл внутри другого цикла.
+            Envelope Variables:
+              name: Конвертные переменные
+            For Loop Fun:
+              name: Игры с циклами
+            For Loops in Bee:
+              name: Цикл for в Пчеле
+            For Loops in Artist:
+              name: Цикл for в Художнике
+            Internet:
+              name: интернет
+            Crowdsourcing:
+              name: Краудсорсинг
+        express-2020:
+          title: Экспресс-курс (2017)
+          description_audience: 'Возраст: 9-18'
+          stages:
+            Dance Party:
+              name: Танцевальная вечеринка
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops in Bee:
+              name: Вложенные циклы в Пчеле
+            While Loops in Farmer:
+              name: Цикл while в Фермере
+            For Loops in Bee:
+              name: Цикл for в Пчеле
+            For Loops in Artist:
+              name: Цикл for в Художнике
+        pre-express-2020:
+          description_audience: 'Возраст: 4-8'
+          stages:
+            Spelling Bee:
+              name: Пчела
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+            Loops in Collector:
+              name: Циклы в Собирателе
+            Ocean Scene with Loops:
+              name: Циклы в исполнителе Художник
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Двоичные числа
+        csp2-2020:
+          stages:
+            The Need for Addressing:
+              name: Необходимость адресации
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
+        csp3-2020:
+          stages:
+            The Need for Programming Languages:
+              name: Необходимость языков программирования

@@ -17,7 +17,6 @@
   learn_now: "Начать изучение"
   petition_message: "Каждый ученик в каждой школе должен иметь возможность изучения информатики"
   petition_sign_message: 'Если вы согласны, укажите свое имя. Присоединяйтесь к # остальным.'
-  petition_sign_message_support: 'Если вы поддерживаете нас, подпишите свое имя.  Присоединяйтесь к #остальным.'
   petition_join_others: 'Присоединяйтесь к #остальным'
   name: "Имя"
   email: "Электронная почта"
@@ -288,6 +287,7 @@
   homepage_action_text_learn: "Начать обучение"
   homepage_action_text_signpetition: "Подписать петицию"
   homepage_signpetition_dropdown: "Я согласен(на) ▾"
+  homepage_signpetition_dropdown_text: "Я согласен(на)"
   homepage_diversity_pledge: "Присоединиться к петиции о разнообразии"
   homepage_banner_text_prizes: 'Час кода состоится снова 7-13 декабря. '
   homepage_banner_link_prizes: 'Присоединяйтесь к крупнейшему обучающему событию в истории. '

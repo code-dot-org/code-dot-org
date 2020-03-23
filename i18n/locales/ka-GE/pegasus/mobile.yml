@@ -17,7 +17,6 @@
   learn_now: "ისწავლეთ ახლა"
   petition_message: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს პროგრამირება"
   petition_sign_message: 'თუ გვეთანხმებით, ჩაწერეთ თქვენი სახელი. შუერთდით #სხვებს ჩვენი ელფოსტის ადრესატების სიაში.'
-  petition_sign_message_support: 'თუ გვიჭერთ მხარს, მაშინ ჩაწერეთ თქვენი სახელი. შეუერთდით #სხვებს ჩვენი ელფოსტის ადრესატების სიაში.'
   petition_join_others: 'შეუერთდით #სხვებს'
   name: "სახელი"
   email: "ელექტრონული ფოსტა"
@@ -285,6 +284,7 @@
   homepage_action_text_learn: "დაიწყეთ სწავლა"
   homepage_action_text_signpetition: "მოაწერეთ ხელი პეტიციას"
   homepage_signpetition_dropdown: "ვეთანხმები პეტიციას &#x25BE;"
+  homepage_signpetition_dropdown_text: "ვეთანხმები"
   homepage_diversity_pledge: "დაუჭირეთ მხარი მრავალფეროვნებას"
   homepage_banner_text_prizes: 'კოდის ერთი საათი კვლავ ბრუნდება, დეკემბრის 7-13. '
   homepage_banner_link_prizes: 'მიიღეთ მონაწილეობა ისტორიაში ყველაზე დიდ საგანმანათლებლო ღონისძიებაში. '

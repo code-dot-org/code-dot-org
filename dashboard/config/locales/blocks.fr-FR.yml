@@ -998,8 +998,7 @@ fr:
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
       gamelab_createNewSprite:
-        text: "fais un nouveau lutin\n appelle le {NAME}\n avec le costume {COSTUME}
-          \n à {LOCATION}"
+        text: crée un nouveau lutin appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
       gamelab_destroy:
         text: enlever {THIS}
       gamelab_draggable:
@@ -1082,6 +1081,8 @@ fr:
             '"left"': vers la gauche
       gamelab_mouseLocation:
         text: emplacement de la souris
+      gamelab_moveBackward:
+        text: déplace {SPRITE} de {DISTANCE} pixels en arrière
       gamelab_moveForward:
         text: avance {SPRITE} de {DISTANCE} pixels
       gamelab_moveInDirection:
@@ -1149,7 +1150,7 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
       gamelab_setSizes:
-        text: définir {SPRITE} {PROPERTY} à {N} %
+        text: définis {SPRITE} {PROPERTY} à {N} %
         options:
           PROPERTY:
             '"scale"': taille
@@ -1158,7 +1159,7 @@ fr:
       gamelab_setTint:
         text: changer la couleur de {THIS} en {COLOR}
       gamelab_setupSim:
-        text: "configure la simulation avec \n{SPRITE1N}{SPRITE1COSTUME}vitesse{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}vitesse{SPRITE2SPEED}\nramassant\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: configure la simulation avec {SPRITE1N}{SPRITE1COSTUME}vitesse{SPRITE1SPEED}{SPRITE2N}{SPRITE2COSTUME}vitesse{SPRITE2SPEED}ramassant{SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: montre le titre de l'écran {BREAK} titre {TITLE} texte {SUBTITLE}
       gamelab_spriteClicked:
@@ -1173,6 +1174,8 @@ fr:
           DIRECTION:
             '"right"': vers la droite
             '"left"': vers la gauche
+      gamelab_updateTitleWithColor:
+        text: affiche le titre à l'écran {BREAK} titre {TITLE} couleur {COLOR}
       gamelab_whenDownArrow:
         text: quand on appuie sur la flèche du bas
       gamelab_whenKey:
@@ -1364,9 +1367,7 @@ fr:
       Mikelab_groupWhileClicked:
         text: en cliquant sur {COSTUME}
       Mikelab_groupWhileTouchingAny:
-        text: |-
-          tandis que{COSTUME} touche {COSTUME2}
-          {STATEMENT}
+        text: tandis que{COSTUME} touche {COSTUME2}{STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} fait actuellement {BEHAVIOR}"
       Mikelab_hideFish:
@@ -1514,9 +1515,7 @@ fr:
       SpriteLab2Beta_spriteSay:
         text: sprite {SPRITE} dire {TEXT} pendant {SECONDS} secondes
       Vector_createSpriteWith:
-        text: |-
-          créer sprite
-          faire{STATEMENT}
+        text: crée un lutin en train de{STATEMENT}
       Vector_log:
         text: message de journal {MESSAGE}
       Vector_positionCenter:
@@ -1571,9 +1570,9 @@ fr:
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:
-        text: "écran de tirage\n{B1}\n{B2}\n{B3}\n{B4}\n{B5}\n{B6}\n123_321 \n 123_321
-          123_321[B7]\n 123_321 123_321 \n 123_321 123_321 \n 123_321 123_321 123_321
-          \n 123_321 123_321 123_321[6]\n{B8}"
+        text: dessine un écran{B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7]
+          123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321
+          123_321[6]{B8}
       binary_drawDec:
         text: dessiner la décimale {DEC}
       binary_drawPixelHere:
@@ -1613,18 +1612,14 @@ fr:
             '"s"': s
             '"d"': d
       craft_ifPath:
-        text: |-
-          si chemin {DIR}
-          {STATEMENT}
+        text: si chemin {DIR}{STATEMENT}
         options:
           DIR:
             "'ahead'": devant
             "'right'": à droite
             "'left'": à gauche
       craft_ifStandingOn:
-        text: |-
-          si debout sur {TYPE}
-          {STATEMENT}
+        text: si debout sur {TYPE}{STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": corail bleu
@@ -1634,9 +1629,7 @@ fr:
             "'planksOak'": planches en chêne
             "'seaLantern'": lanterne aquatique
       craft_ifStandingOnLimit:
-        text: |-
-          si debout sur {TYPE}
-          {STATEMENT}
+        text: si debout sur {TYPE}{STATEMENT}
         options:
           TYPE:
             "'sand'": sable
@@ -1680,13 +1673,9 @@ fr:
       craft_placeTorch:
         text: placer la torche
       craft_repeatUntilConduit:
-        text: |-
-          répéter jusqu'à ce que le conduit soit terminé
-          {STATEMENT}
+        text: répète jusqu'à ce que le tuyau soit terminé{STATEMENT}
       craft_repeatUntilGoal:
-        text: |-
-          répéter jusqu'au bout
-          {STATEMENT}
+        text: répète jusqu'au but{STATEMENT}
       craft_spawnEntity:
         text: œuf {ENTITY}
         options:

@@ -190,8 +190,6 @@ pt-BR:
     valid_password: Senha válida!
     invalid_password: A senha deve ter pelo menos 6 caracteres
     mismatch_password: As duas senhas que você digitou são diferentes
-    under_13_consent: Caso eu tenha menos de 13 anos de idade, confirmo que tenho
-      autorização dos meus pais ou do meu tutor legal para usar os serviços do Code.org.
     student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
       para usar os serviços do Code.org.
     agree_us_website: Concordo em usar um site situado nos Estados Unidos.
@@ -596,8 +594,7 @@ pt-BR:
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
-  certificate:
-    sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
@@ -689,6 +686,7 @@ pt-BR:
     download: Baixar Vídeo
     show_notes: Mostrar as notas
     show_video: Mostrar o vídeo
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Seu navegador não é compatível. Atualize seu navegador
@@ -882,11 +880,13 @@ pt-BR:
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+    toofew_title: Poucas respostas.
   multi-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar uma resposta.
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta.
+    toofew_title: Poucas respostas.
   level_group:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar respostas.
@@ -1185,6 +1185,12 @@ pt-BR:
     csp_traversals: Traversais
     csp_libraries: Bibliotecas
     csp_parameters_return_values: Parâmetros e valores de retorno
+    csp_unit1_2020: 'Unidade 1: Informação Digital'
+    csp_unit2_2020: 'Unidade 2: A internet'
+    csp_unit3_2020: 'Unidade 3: Introdução ao desenho de aplicativos'
+    csp_unit6_2020: 'Unidade 6: Algoritmos'
+    csp_unit9_2020: 'Unidade 9: Dados'
+    csp_unit10_2020: 'Unidade 10: Cibersegurança e Impactos Globais'
     dlp: Prompts de reflexão
     time4cs_c1: Everglades e seus ecossistemas
     time4cs_c2: Cadeias de comida em Everglades
@@ -1275,6 +1281,11 @@ pt-BR:
     você deveria estar.
   hidden_script: Seu professor não esperava que estivesse aqui. Por favor, pergunte
     ao seu professor qual unidade você deveria estar.
+  no_course_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
+    ao seu professor em qual unidade você deveria estar.
+  no_course_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
+    deve ter acesso a esta unidade, por favor, escreva para support@code.org para
+    que possamos corrigir a situação.
   no_script_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
     ao seu professor em qual unidade você deveria estar.
   no_script_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
@@ -1432,3 +1443,7 @@ pt-BR:
     Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa
     página inicial.
   page_not_found_button: Volte para a página inicial
+  copy: Copiar
+  maker:
+    google_oauth:
+      error_no_code: Por favor, digite seus detalhes de login.

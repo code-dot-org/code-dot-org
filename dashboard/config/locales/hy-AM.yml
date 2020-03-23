@@ -3,6 +3,8 @@ hy:
   errors:
     messages:
       not_saved: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
+      too_young: Այս բովանդակությունը տարիքային սահմանափակումներ տեղում է եւ մատչելի
+        չէ երիտասարդ ուսանողների
   activerecord:
     errors:
       messages:
@@ -77,6 +79,7 @@ hy:
     student_count: "%{count} students have already signed up."
     teacher_count: "%{count} teachers have already signed up."
     teacher_educator_guide: Տես մանկավարժ ուղեցույցը
+    title: Գրանցվել Code.org-ում
     school_name: School Անուն (ըստ ցանկության)
     school_address: Դպրոցը հասցեն (ըստ ցանկության)
     address_placeholder: հասցեն, քաղաք, պետություն, փոստային
@@ -696,6 +699,7 @@ hy:
     csp_functions: գործառույթները
     csp_lists: ցուցակները
     csp_loops: loops
+    csp_unit1_2020: CS Principles Unit 1
   hoc_download:
     title: Hour of Code downloads
     capsule_title: Do you have Internet?
@@ -712,6 +716,9 @@ hy:
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
+    download_in_English: 'Download in English:'
+    download_in_Spanish: 'Download in Spanish:'
+    windows: Windows
     mac: Mac OS X
   pd:
     form_labels:
@@ -737,3 +744,4 @@ hy:
     accept: Ես համաձայն եմ
   gdpr_dialog:
     true: այո
+  copy: պատճեն

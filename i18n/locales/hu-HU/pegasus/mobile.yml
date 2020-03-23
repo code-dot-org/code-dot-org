@@ -17,7 +17,6 @@
   learn_now: "Tanulj most"
   petition_message: "Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon"
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
-  petition_sign_message_support: 'Ha támogatsz, írd alá. Csatlakozz egy # fős csapathoz.'
   petition_join_others: '# ember vár, hogy csatlakozz'
   name: "Név"
   email: "Email"
@@ -256,6 +255,7 @@
   homepage_action_text_learn: "Kezdj tanulni"
   homepage_action_text_signpetition: "Írd alá a petíciót"
   homepage_signpetition_dropdown: "Írd alá a petíciót &#x25BE;"
+  homepage_signpetition_dropdown_text: "Egyetértek"
   homepage_diversity_pledge: "Csatlakozz a diverzitási peticióhoz"
   homepage_banner_text_prizes: 'Újra közeledik a Kódolás órája, december 7-13. '
   homepage_banner_link_prizes: 'Csatlakozz a történelem legnagyobb tanulási eseményéhez!'

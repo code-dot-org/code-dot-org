@@ -606,13 +606,6 @@ sk-SK:
           Aby si zistil/a, akú rolu majú informatika a programovanie v zábavnom priemysle, urob malý prieskum. Skús vyhľadať „Informatika a &#95;&#95;&#95;&#95;&#95;&#95;" v spojení s rôznymi druhmi zábavy ako je film, televízia, hudba, hry, animácie, móda a podobne.
 
 
-      CSD U3 Entertainment_2018:
-        markdown: |+
-          # Začni svoj prieskum
-
-          Aby si zistil/a, akú rolu majú informatika a programovanie v zábavnom priemysle, urob malý prieskum. Skús vyhľadať „Informatika a &#95;&#95;&#95;&#95;&#95;&#95;" v spojení s rôznymi druhmi zábavy ako je film, televízia, hudba, hry, animácie, móda a podobne.
-
-
       CSD U3 Entertainment_2018_2019:
         markdown: |+
           # Začni svoj prieskum
@@ -699,10 +692,11 @@ sk-SK:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -1964,6 +1958,8 @@ sk-SK:
         - correct: true
         questions:
         - {}
+      courseE_project_exemplars_2019:
+        content1: Strana učebnice s obodovaním testu
       courseF_bee_variables_8a_2018:
         answers:
         - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
@@ -1984,7 +1980,20 @@ sk-SK:
         - text: Neviem.
         questions:
         - text: Pozri sa na kód dole. Koľko jednotiek nektáru pozbiera včela na konci?
+      courseF_markdown_algorithms_end:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_algorithms_intro:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_conditionals_end:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_conditionals_intro:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_debugging_end:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_debugging_intro:
+        content1: Strana učebnice s obodovaním testu
       courseF_markdown_forloops_end:
+        content1: Strana učebnice s obodovaním testu
         markdown: |+
           # **Práve si sa naučil "cyklus for"!**
 
@@ -2001,6 +2010,7 @@ sk-SK:
           ### **Cyklus for** - Cykly for sú cykly, ktoré majú prednastavený začiatok, koniec, a prírastok (veľkosť kroku)
 
       courseF_markdown_forloops_end_2019:
+        content1: Strana učebnice s obodovaním testu
         markdown: |+
           # **Práve si sa naučil "cyklus for"!**
 
@@ -2016,6 +2026,26 @@ sk-SK:
 
           ### **Cyklus for** - Cykly for sú cykly, ktoré majú prednastavený začiatok, koniec, a prírastok (veľkosť kroku)
 
+      courseF_markdown_forloops_intro:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_forloops_intro_2019:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_loops_end:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_loops_intro:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_nestedloops_end:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_nestedloops_intro:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_variables_end:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_variables_end_2019:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_variables_intro:
+        content1: Strana učebnice s obodovaním testu
+      courseF_markdown_variables_intro_2019:
+        content1: Strana učebnice s obodovaním testu
       courseF_multi_artist_for10_predict1:
         answers:
         - text: Umelec nakreslí rovnú čiaru, ktorá zväčšuje svoju šírku ako ide z
@@ -2171,6 +2201,8 @@ sk-SK:
         - text: Neviem.
         questions:
         - {}
+      courseF_project_exemplars_2019:
+        content1: Strana učebnice s obodovaním testu
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -2198,6 +2230,8 @@ sk-SK:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: |+
           # Objavujeme informatiku - Záverečný dotazník
@@ -2217,6 +2251,74 @@ sk-SK:
 
 
 
+      csd-post-survey-levelgroup-2018:
+        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: Objavujeme Informatiku - rýchly prieskum!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: Objavujeme Informatiku - rýchly prieskum!
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.

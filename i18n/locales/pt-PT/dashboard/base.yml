@@ -148,7 +148,6 @@ pt:
     valid_password: "Palavra-passe válida!"
     invalid_password: "A palavra-passe tem de ter, pelo menos, 6 caracteres"
     mismatch_password: "As duas palavras-passe que digitaste não correspondem"
-    under_13_consent: "Se eu tiver menos de 13 anos de idade, confirmo que tenho autorização dos meus pais ou do encarregado de educação para usar os serviços da Code.org."
     student_consent: "Eu confirmo que tenho autorização dos meus pais ou do encarregado de educação para usar os serviços da Code.org."
     agree_us_website: "Eu concordo em usar um sítio web situado nos Estados Unidos."
     my_data_to_us: "Os dados gerados do meu uso deste site poderão ser enviados e armazenados ou processados nos Estados Unidos."
@@ -785,6 +784,8 @@ pt:
     csp_functions: 'Funções'
     csp_lists: 'Listas'
     csp_loops: 'Ciclos'
+    csp_unit1_2020: 'Unidade 1: Informação Digital'
+    csp_unit2_2020: 'Unidade 2: A Internet'
     k5_next_steps: 'Próximos Passos'
   hoc_download:
     title: 'Hora das transferências de Código'
@@ -840,5 +841,7 @@ pt:
   cookie_banner:
     accept: 'Concordar'
   gdpr_dialog:
+    message: 'Os dados gerados do meu uso deste site poderão ser enviados e armazenados ou processados nos Estados Unidos.'
     yes: 'Sim'
   page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
+  copy: 'Copiar'

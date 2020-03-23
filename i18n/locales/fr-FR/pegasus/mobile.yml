@@ -17,7 +17,6 @@
   learn_now: "Apprenez maintenant"
   petition_message: "Chaque élève de chaque école devrait avoir la possibilité d'apprendre l'informatique."
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres participants.'
-  petition_sign_message_support: 'Si vous nous soutenez, ajoutez votre nom. Rejoignez # les autres.'
   petition_join_others: 'Rejoignez # les autres'
   name: "Nom"
   email: "E-mail"
@@ -301,6 +300,7 @@
   homepage_action_text_signpetition: "Signez la pétition"
   homepage_action_text_wincelebritychat: "Gagnez un chat avec une célébrité"
   homepage_signpetition_dropdown: "Je suis d'accord ▾"
+  homepage_signpetition_dropdown_text: "J'accepte"
   homepage_diversity_pledge: "Prendre l'engagement de diversité"
   homepage_banner_text_prizes: 'L’Heure de Code revient du 7 au 13 décembre.'
   homepage_banner_link_prizes: 'Rejoins le plus grand évènement d''apprentissage de l’histoire.'
@@ -1538,7 +1538,7 @@
   hoc2018_dance_party_box_description: "Codez une Soirée Dansante à partager avec vos amis !"
   hoc2018_dance_party_specs: "Langue | Format | De 6 à 106 ans"
   hoc2018_dance_party_button: "Commencer"
-  hoc2018_dance_keep_on_dancing_box_title: "Continuez à danser"
+  hoc2018_dance_keep_on_dancing_box_title: "Continuer de Danser"
   hoc2018_dance_keep_on_dancing_description: "Allez au-delà de la première heure avec de longues idées de projets."
   hoc2018_dance_keep_on_dancing_specs: "Langue | Format | 13 ans et plus"
   hoc2018_dance_keep_on_dancing_button: "Commencer la partie 2"

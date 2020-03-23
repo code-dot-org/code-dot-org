@@ -534,7 +534,7 @@ pt-PT:
       Dance_Party_02: |-
         Vamos pôr este alce a dançar!
 
-        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
+        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
 
         Os **Compassos** são usados para contar o tempo na música. Neste tutorial, um compasso tem quatro batidas.
       Dance_Party_03: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
@@ -836,6 +836,8 @@ pt-PT:
         chamado de "incremento" e a cada execução do laço a variável contador
         é alterada de acordo com o incremento. Tente coletar essas flores usando um incremento
         de 2.
+      New Minecraft Hero Project: "**Jogo livre:** Agora tudo depende de ti! Utiliza
+        o código do Agent para te ajudar a explorar este mundo."
       Overworld House Frame Chosen: Construa o resto da casa de qualquer material
         que goste. O comando "repetir" vai dar jeito.
       Overworld House Frame Chosen_2019: Construa o resto da casa de qualquer material

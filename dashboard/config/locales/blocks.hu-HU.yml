@@ -489,7 +489,7 @@ hu:
       Dancelab_onPointerUp:
         text: mutató felfelé mozgatásakor
       Dancelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
@@ -1102,9 +1102,9 @@ hu:
       gamelab_printText:
         text: nyomtatás {TEXT}
       gamelab_randColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomLocation:
         text: véletlen hely
       gamelab_removeAllBehaviors:
@@ -1418,7 +1418,7 @@ hu:
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       Mikelab_repeatUntilComplete:

@@ -8,10 +8,8 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {
-  personalProjectDataPropType,
-  PROJECT_TYPE_MAP
-} from './projectConstants';
+import {personalProjectDataPropType} from './projectConstants';
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {
   AlwaysPublishableProjectTypes,
   ConditionallyPublishableProjectTypes
@@ -121,9 +119,10 @@ const dateFormatter = function(time) {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
+    canShare: PropTypes.bool.isRequired,
+
+    // Provided by Redux
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType)
-      .isRequired,
-    canShare: PropTypes.bool.isRequired
   };
 
   state = {
@@ -302,6 +301,10 @@ class PersonalProjectsTable extends React.Component {
   };
 
   render() {
+    if (!this.props.personalProjectsList) {
+      return null;
+    }
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -320,7 +323,7 @@ class PersonalProjectsTable extends React.Component {
     const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
-      <div style={styles.bottomMargin}>
+      <div id="uitest-personal-projects" style={styles.bottomMargin}>
         {!noProjects && (
           <Table.Provider
             columns={columns}
@@ -335,7 +338,9 @@ class PersonalProjectsTable extends React.Component {
             />
           </Table.Provider>
         )}
-        {noProjects && <h3>{i18n.noPersonalProjects()}</h3>}
+        {noProjects && (
+          <h3 style={{textAlign: 'center'}}>{i18n.noPersonalProjects()}</h3>
+        )}
       </div>
     );
   }

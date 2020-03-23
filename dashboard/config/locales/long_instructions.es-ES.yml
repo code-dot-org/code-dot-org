@@ -1390,6 +1390,41 @@ es-ES:
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde
         a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
         alcance la antorcha de redstone [redstone_torch]."
+      Gamelab StartScreen Intro: |-
+        # Empezar y Terminar Pantalla
+
+        Este seminario te enseñará cómo hacer pantallas de empiezo y fin en Game Lab, además de reiniciar el juego desde la pantalla final.
+
+        Presiona correr para jugar el juego a la izquierda. Sigue las instrucciones en la pantalla de empiezo para jugar. Una vez que el juego esté terminado, Sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la siguiente burbuja, verás el código para el juego y vas a empezar a añadir tu propio pantallas de empiezo y pantallas finales.
+
+        ## Pantalla de Empiezo
+
+        La pantalla de empiezo es la pantalla introductoria que aparece antes de que el jugador empiece a jugar. Generalmente hay un título del juego y algunas instrucciones básicas de cómo jugar. También puede que incluya el constructor del juego.
+
+        ## Pantalla Final
+
+        La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
+      Gamelab StartScreen State: |-
+        # El variable del estado del juego
+
+        Nuestra muestra tuvo cuatro argumentos (o **estados**) de que tenemos que hacer un seguimiento para exponer la pantalla correcta: "empezando", "jugando", "ganado", "perdido". La primera etapa para añadir una pantalla de empiezo o fin al juego es crear un variable para registrar los cambios en el estado del juego.
+
+        ## Haz Esto
+
+        -   Declara un variable llamado `estadodeljuego` en el inicio del programa. (un buen lugar para hacerlo estaría cerca de dónde `marcador` y `vidas` son declarados.)
+        -   Asigna el valor inicial de tu `estadodeljuego` a "empezando"
+
+        (Porque no estás usando ya este variable, verás un triángulo de advertencia junto a la línea donde está declarado. También no afecta cómo corre el programa.)
+      Gamelab StartScreen base code: |-
+        # Código del Juego
+
+        Este es el código para el juego sin las pantallas de empiezo y fin. La función 'gameStatus' (llamada en línea 43 y definida en línea 208) chequea si el usuario ha ganado o perdido, pero sólo añade un mensaje de texto a la pantalla. El juego también continúa aún después de que el juego esté terminado.
+
+        ## Haz Esto
+
+        Lee el código, en particular el código antes del loop de dibujar (línea 1-24), dentro del loop de dibujar (línea 27-43), y dentro de la función de 'gameStatus'(línea 209-224). Está bien si no entiendes todo en el juego, pero deberías ver el código antes del loop de dibujar pone los sprites, y el código dentro del loop de dibujar controla el juego.
       HOC 2018 Level_1: Necesitarás suministros para el viaje. Consigue un **barco**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -1554,6 +1589,8 @@ es-ES:
       NEW Course 4 Bee For Loops 6: El último número en tu bucle for se llama el "incremento",
         y cada vez que el bucle se ejecuta la variable contador cambia al incrementarse.
         Trata de recoger estas flores con un incremento de 2.
+      New Minecraft Hero Project: "**Juego libre:** ¡Te toca! Utiliza el código del
+        Agent para ayudarte a explorar este mundo."
       Overworld House Frame Chosen: Construye el resto de tu casa con cualquier material
         que te guste. El comando "repetir" va a resultar util.
       Overworld House Frame Chosen_2019: Construye el resto de tu casa con cualquier
@@ -1623,6 +1660,29 @@ es-ES:
         Empieza por usar <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> con <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> para hacer tu mascota mover hacia el norte **mientras** la tecla de flecha hacia arriba.
 
         ¡Repite lo de arriba por las otras tres direcciones (Sur, Oeste, Este) y las teclas de flecha hacia arriba (abajo, izquierda, derecha)!
+      Virtual Pet 4_2019: "1.  Añade **dos** sprites a tu mundo. \n2.  Haz un sprite
+        aparecer como lo que a tu mascota le gusta comer, y lo otro como lo que no
+        le gusta comer.\n3.  Haz cada sprite de comida empezar el comportamiento de
+        **errar** inmediatamente después de que aparezca."
+      Virtual Pet 5_2019: |-
+        ¡Usa <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> con <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> para **estimular** a "comer" en tu mundo virtual!
+
+        1.  Crea un evento que hace uno de tus sprites de comida saltar a una ubicación al azar cuando tu mascota lo toque.
+        2.  Repite lo de arriba para el otro sprite de comida.
+      Virtual Pet 6_2019: "¡Usa <xml><block type=\"variables_set\" block-text=\"the
+        set variable block\"><title name=\"VAR\">energy</title></block></xml> con
+        <xml><block type=\"math_change\" block-text=\"the change variable block\"><title
+        name=\"VAR\">energy</title></block></xml> para hacer que comer comida afecte
+        la energía de tu mascota! ¡Cuanta más energía lo tenga, más rápido se mueve!
+        \n\n1.  Asigna la variable 'energía' a 5 cuando el programa empiece.\n2.  Cuando
+        tu mascota coma la comida que le **gusta**, añade 1 a 'energía.\n3.  Cuando
+        tu mascota coma la comida que **no le gusta**, establece 'energía' a 5\n4.
+        \ Cambia cada evento de tecla de fecha  para que tu mascota ahora se mueva
+        'energía' píxeles en lugar de un número específico."
+      Virtual Pet 7_2019: "¡Puedes chequear el valor de la 'energía' de tu mascota
+        con <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>,
+        un bloque nuevo encontrado en la categorîa 'Mundo'! \n\nCrea un evento que
+        hace el valor de 'energía' imprimido cuando el sprite de mascota esté pinchado. "
       behaviors 1: |-
         ¡Haz una predicción! Estudia el código.
 

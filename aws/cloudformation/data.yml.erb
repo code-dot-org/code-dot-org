@@ -121,13 +121,13 @@ Resources:
          # Default value: 1000 KB (1 MB)
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
-  DMS<%=task_name.underscore.camelize%>FullLoad:
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
+  DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>-full-load-no-cdc
+      ReplicationTaskIdentifier: <%= task_name %>
       SourceEndpointArn: !Ref AuroraReaderEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
@@ -136,8 +136,8 @@ Resources:
           <%= table_mappings.to_json %>
       Tags:
         -
-          Key: environment
-          Value: <%=rack_env.to_s%>
+          Key: schedule
+          Value: <%=schedule%>
 <% end -%>
   DMSS3Role:
     Type: AWS::IAM::Role
@@ -306,25 +306,6 @@ Resources:
     Properties:
       AliasName: !Sub "alias/snapshot-${AWS::StackName}"
       TargetKeyId: !Ref DBSnapshotKey
-  # The production reporting Aurora cluster replicates via MySQL binlog from the production Aurora cluster.
-  ReportingBinLogReplicaLagAlarm:
-    Type: AWS::CloudWatch::Alarm
-    Properties:
-      AlarmName: !Sub "${AWS::StackName}-ReportingBinLogReplicaLag"
-      AlarmDescription: Alarms when the Aurora Reporting Cluster binlog replica lag exceeds 900 seconds for 12 datapoints.
-      AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
-      Dimensions:
-        - Name: DBClusterIdentifier
-          Value: !Ref ReportingCluster
-      MetricName: AuroraBinlogReplicaLag
-      Namespace: AWS/RDS
-      Statistic: Average
-      ComparisonOperator: GreaterThanThreshold
-      Threshold: 600
-      Period: 3600 # 1 hour
-      EvaluationPeriods: 12
-      TreatMissingData: breaching
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database

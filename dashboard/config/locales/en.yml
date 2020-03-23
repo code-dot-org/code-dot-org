@@ -578,6 +578,7 @@ en:
     download: 'Download Video'
     show_notes: 'Show Notes'
     show_video: 'Show Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
@@ -940,6 +941,7 @@ en:
     csf_warmup: 'Warm-Up'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd1_3: 'Alternate Lessons'
     csd2_1: 'Chapter 1: Web Content and HTML'
     csd2_2: 'Chapter 2: Styling and CSS'
     csd3_1: 'Chapter 1: Images and Animations'
@@ -978,6 +980,13 @@ en:
     csp_traversals: 'Traversals'
     csp_libraries: 'Libraries'
     csp_parameters_return_values: 'Parameters and Return Values'
+    csp_unit1_2020: 'Unit 1: Digital Information'
+    csp_unit2_2020: 'Unit 2: The Internet'
+    csp_unit3_2020: 'Unit 3: Intro to App Design'
+    csp_unit6_2020: 'Unit 6: Algorithms'
+    csp_unit8_2020: 'Unit 8: Create PT Prep'
+    csp_unit9_2020: 'Unit 9: Data'
+    csp_unit10_2020: 'Unit 10: Cybersecurity and Global Impacts'
     dlp: 'Reflection Prompts'
     time4cs_c1: 'Collection 1: The Everglades & its Ecosystems'
     time4cs_c2: 'Collection 2: Food Chains (in the Everglades)'
@@ -991,6 +1000,9 @@ en:
     k5_next_steps: 'Next Steps'
     k5_basic_concepts: 'Basic Coding Concepts and Teaching Practices'
     k5_diving_deeper: 'Diving Deeper: Courses E and F'
+    web_lab_projects: 'Web Lab Projects'
+    game_lab_projects: 'Game Lab Projects'
+    app_lab_projects: 'App Lab Projects'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -1061,6 +1073,8 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
   no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
   no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
@@ -1206,3 +1220,13 @@ en:
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
+  copy: 'Copy'
+  maker:
+    google_oauth:
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'

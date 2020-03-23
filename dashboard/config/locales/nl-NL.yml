@@ -147,9 +147,6 @@ nl:
     valid_password: Geldig wachtwoord!
     invalid_password: Wachtwoord moet ten minste 6 tekens lang zijn
     mismatch_password: De twee wachtwoorden komen niet overeen
-    under_13_consent: Indien ik jonger dan 13 jaar ben, bevestig ik dat ik toestemming
-      heb van mijn ouders of wettelijke voogd om gebruik te maken van de diensten
-      van Code.org.
     agree_us_website: Ik ga akkoord met het gebruik van een website die in de Verenigde
       Staten gevestigd is.
     my_data_to_us: Gegevens over mijn gebruik van deze site mogen worden verzonden
@@ -552,6 +549,7 @@ nl:
     download: Video downloaden
     show_notes: Toon Notities
     show_video: Toon Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Uw browser wordt niet ondersteund. Probeer uw browser te
@@ -951,3 +949,4 @@ nl:
       opgeslagen of verwerkt worden in de Verenigde Staten.
     true: Ja
   page_not_found_title: Pagina niet gevonden
+  copy: Kopieër

@@ -24,6 +24,10 @@ zh-TW:
         評量：把最後一顆牙齒畫完。
         這顆牙寬：25 像素；高：25像素
       2-3 Artist Debugging 1: 這個帽子的寬度應該只有 50 像素，你能修正它嗎？
+      2-3 Artist Debugging 11: |-
+        我的雪花有個缺口！
+
+        你可以找到是哪兒出了錯嗎？
       2-3 Artist Debugging 2: |-
         畫出貓鬍鬚的程式不正確。
 
@@ -148,7 +152,7 @@ zh-TW:
       2-3 Maze 13: 讓我抓到那隻豬！這一次，你只能用 1 個向前移動積木。
       2-3 Maze 15: 這個關卡裡，2 個 `重複` 迴圈可以幫你使用最少的積木數來抓到豬！
       2-3 Maze 16: 迴圈裡還可以放入更多的積木！你可以循環這個序列，讓殭屍吃到向日葵嗎？
-      2-3 Maze 16 before: 想想看，如何用最快的方式讓我可以抓到豬？
+      2-3 Maze 16 before: 想想看，如何用最快的方式讓我抓到豬？
       2-3 Maze 2: 那隻豬惹毛我了，幫助我抓到牠！
       2-3 Maze 3: 順著路徑讓我抓到那隻蠢豬，當心別碰到 TNT 炸藥，不然我的羽毛會滿天飛！
       2-3 Maze 4: 帶我去找那綠色的小惡魔！（小心 TNT 炸藥）
@@ -280,7 +284,7 @@ zh-TW:
       4-5 While Loops 5: 哇，現在這裡有兩個很深的坑洞！你可以寫個程式，填滿它們直到地面變平整嗎？
       4-5 While Loops 6: 哇，現在這裡有一個很大的土堆！你可以寫個程式剷平它們嗎？
       4-5 While Loops 7: 哇，現在這裡有三個土堆！你可以寫個程式，挖除它們直到地面變平整嗎？
-      4-5 While Loops 8: " 有一個非常深的洞，還有一個非常大的土堆。需要幾鏟土才能把地面變平整呢？提示:：填土和挖土都用了「當…」迴圈。"
+      4-5 While Loops 8: " 有一個非常深的洞，還有一個非常大的土堆。需要幾鏟土才能把地面變平整呢？提示:：填土和挖土都用了「重複 判斷…」迴圈。"
       4-5 While Loops Assessment 1: 這兒有許多坑洞和土堆。幫我把它們填滿或鏟除，讓地面變平整。
       AB_Debug_PlayLab3: 將騎士挪移到每根旗子那兒。如果出現了問題，請找出錯誤來！
       Alien Defender: 專案點子：在 Play Lab 裡設計一個獨一無二的遊戲！
@@ -472,8 +476,8 @@ zh-TW:
       Course 4 Playlab For Loops 6b: "編輯這個計數迴圈去創造一個你自己覺得好玩的遊戲！\\\r\n點擊「運行」然後盡你所能的點擊獨角獸，你能超過我們的最高紀錄
         24 分嗎？ "
       Course 4 SCF 1: 使用建議的函式來畫出四列的六角形，注意到我們的偶數列是如何移動到右邊的嗎？
-      Course 4 SCF 1a: 想想看，要怎樣用最少的積木收集到所有的花蜜？
-      Course 4 SCF 1b: 想想看，要怎樣用最少的積木收集到所有的蜂蜜？
+      Course 4 SCF 1a: 想想看，要怎樣用最少的積木採集出所有花蜜？
+      Course 4 SCF 1b: 想想看，要怎樣用最少的積木釀造出所有蜂蜜？
       Course 4 SCF 2: '用你在上個關卡學到的來畫出像這樣的圖形。注意：如果你合併了參數，程式碼會變得更精簡。 '
       Course 4 SCF 3: '用你在上個關卡學到的來畫出像這樣的圖形。注意：如果你合併了參數，程式碼會變得更精簡。 '
       Course 4 SCFL 1: 盡可能使用最少的程式積木來完成這個關卡。
@@ -797,6 +801,11 @@ zh-TW:
       NEW Course 4 Bee For Loops 9: 如果循環的數字是由大排到小，每次循環就會從計數器變量中減去間隔的值。如果要依序收集 15、12、9、6、3
         個花蜜，間隔數需要設成多少？
       NEW Course 4 Play Lab Params 11: '自由發揮的時間到了，用工具箱裡的程式積木來做一些好玩的事吧。 '
+      New Gumball Project: 自由發揮吧！然後把您的成果分享出來！
+      New Ice Age Project: 自由發揮吧！然後把您的成果分享出來！
+      New Infinity Project: 自由發揮吧！然後把您的成果分享出來！
+      New Minecraft Hero Project: "**自由發揮：**是時候自己探索了！"
+      New Sports Project: 創建你自己的遊戲 ！這裡一切由你做主：你可以更改所有規則、混合搭配不同的運動，愈多創意愈好！當你完成後，點擊完成就可以讓你的朋友在手機上試試看你創造的遊戲。
       Overworld Avoid Monsters: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
       Overworld Avoid Monsters_2019: 碰上苦力怕就糟了。小心的從苦力怕身邊通過，安全地抵達你的家裡。
       Overworld Chop Tree: 木材是相當重要的資源，很多東西都要用到它。走到樹木前面，使用「破壞方塊」指令把它砍下。
@@ -975,6 +984,12 @@ zh-TW:
       courseA_harvester_loops6_2019: 你將會需要 **一個** `往南移動` 程式積木 與 **一個** `往西移動` 程式積木.
       courseA_harvester_loops7: 換你自己試試！
       courseA_harvester_loops7_2019: 換你自己試試！
+      courseA_harvester_loops9: 你能摘取到所有的玉米嗎？
+      courseA_harvester_loops9_2019: 你能摘取到所有的玉米嗎？
+      courseA_harvester_seq1: 利用這些程式積木幫農夫摘取到玉米。
+      courseA_harvester_seq13: 利用這些程式積木幫農夫摘取到玉米。
+      courseA_harvester_seq13_2019: 利用這些程式積木幫農夫摘取到玉米。
+      courseA_harvester_seq1_2019: 利用這些程式積木幫農夫摘取到玉米。
       courseA_harvester_seq6: 自己試試！
       courseA_harvester_seq6_2019: 自己試試！
       courseA_harvester_seq7: 自己試試！
@@ -1029,8 +1044,10 @@ zh-TW:
       courseA_playlab_events_challenge1_2019: |-
         我的朋友藏在哪兒？
         你能寫個程式把我的朋友找出來嗎？
-      courseB_Scrat_ramp5a_2018: 自己試試這個！
-      courseB_Scrat_ramp5a_2019: 自己試試這個！
+      courseB_Scrat_ramp2_2018: 把積木貼合在一起，然後點擊「▶ 運行」按鈕。
+      courseB_Scrat_ramp2_2019: 把積木貼合在一起，然後點擊「▶ 運行」按鈕。
+      courseB_Scrat_ramp5a_2018: 現在換你自己試試看了！
+      courseB_Scrat_ramp5a_2019: 現在換你自己試試看了！
       courseB_artist_loops3: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
       courseB_artist_loops3_2018: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
       courseB_artist_loops3_2019: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
@@ -1095,9 +1112,21 @@ zh-TW:
       courseB_iceage_loops7_2019: 鼠奎特真的很想拿到橡樹果實！
       courseB_iceage_loops8: 你有辦法修好這個程式嗎？
       courseB_iceage_loops8_2019: 你有辦法修好這個程式嗎？
+      courseB_maze_seq1: |-
+        玩一玩這些程式積木，看看它們能讓憤怒鳥做什麼！
+
+        幫憤怒鳥走到有豬豬的地方就可以過關。
       courseB_maze_seq12: 現在抓到那頭豬，不管你用什麼方法！
       courseB_maze_seq12_2018: 現在抓到那頭豬，不管你用什麼方法！
       courseB_maze_seq12_2019: 現在抓到那頭豬，不管你用什麼方法！
+      courseB_maze_seq1_2018: |-
+        玩一玩這些程式積木，看看它們能讓鼠奎特做什麼！
+
+        幫鼠奎特走到有橡樹果實的地方就可以過關。
+      courseB_maze_seq1_2019: |-
+        玩一玩這些程式積木，看看它們能讓鼠奎特做什麼！
+
+        幫鼠奎特走到有橡樹果實的地方就可以過關。
       courseB_maze_seq2: _「有個臭蟲（bug，程式中有錯誤的意思）！修正這個程式讓我到豬豬那兒。」_
       courseB_maze_seq4: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq4_2018: 添加 2 個積木讓鳥移動到豬那裡。
@@ -1406,6 +1435,8 @@ zh-TW:
       courseD_maze_ramp5: 小心 TNT 炸藥。
       courseD_maze_ramp5_2018: 小心 TNT 炸藥。
       courseD_maze_ramp5_2019: 小心 TNT 炸藥。
+      courseD_maze_ramp5a: 仔細的找出順序，看看你能不能順利的抓到那頭豬！
+      courseD_maze_ramp5a_2018: 仔細的找出順序，看看你能不能順利的抓到那頭豬！
       courseD_maze_ramp5a_2019: 仔細計算網格上的空格！
       courseD_maze_ramp5b: 幫忙引導憤怒鳥抓到豬！
       courseD_maze_ramp5b_2018: 幫忙引導憤怒鳥抓到豬！
@@ -1481,6 +1512,13 @@ zh-TW:
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions5c: 你的函式會在這裡派上用場。
       courseE_farmer_functions8b: "**挑戰：**讓農夫走到南瓜那兒，並沿著路收集所有的南瓜。 "
+      courseE_farmer_functions9b: 你能想出程式的規律以通過這個關卡嗎？
+      courseE_farmer_ramp11a: 只有一有土堆，就移除它。
+      courseE_farmer_ramp11a_2018: 只有一有土堆，就移除它。
+      courseE_farmer_ramp11a_2019: 只有一有土堆，就移除它。
+      courseE_farmer_ramp11b: 只有一有土堆，就移除它。
+      courseE_farmer_ramp11b_2018: 只有一有土堆，就移除它。
+      courseE_farmer_ramp11b_2019: 只有一有土堆，就移除它。
       courseE_farmer_ramp12_forswap: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_forswap_2018: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_forswap_2019: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
@@ -1513,6 +1551,7 @@ zh-TW:
       courseF_artist_fwp7: 完成 draw a spiral edge（畫個螺旋圖）函式，同時詢問螺旋中心所需的最小長度。
       courseF_artist_fwp8: 想一想要怎麼使用你剛剛創建的函式來製作出這個圖案？
       courseF_artist_fwp9: 自由發揮：畫些很棒的東西出來吧！變化筆跡寬度，看看你的圖案會變得怎麼樣！
+      courseF_artist_fwp_challenge1: 在沒有運行程式前，你猜得到它會發生什麼嗎？
       courseF_artist_variables7: 畫個周長為 150 像素的三角形。
       courseF_artist_variables7_2018: 畫個周長為 150 像素的三角形。
       courseF_artist_variables7_2019: 畫個周長為 150 像素的三角形。
@@ -1552,6 +1591,8 @@ zh-TW:
       courseF_bee_variables_8_2018: 蜜蜂能從這朵花中採集到多少花蜜？
       courseF_bee_variables_8_2019: 蜜蜂能從這朵花中採集到多少花蜜？
       courseF_playlab_variables3b_josh: 用變數 `age` 取代固定的年齡 `12`，幫 Kiki 和 Brain 完成對話。
+      coursea_maze_ramp1_2018: 這個關卡很簡單，把積木貼合在一起，然後點擊「▶ 運行」按鈕！
+      coursea_maze_ramp1_2019: 這個關卡很簡單，把積木貼合在一起，然後點擊「▶ 運行」按鈕！
       flappy_1: 添加一個積木到「當點擊時」積木下，然後點擊「運行」。點擊或輕觸螢幕，讓像素鳥移動至目標。
       flappy_11: 創造你自己的像素鳥遊戲。你可以改變所有看的到的東西和所有規則，甚至是重力。當你完成時，點擊完成，讓你的朋友可以在他們手機上體驗你做的遊戲。
       flappy_2: 現在我們已經添加了一些地面。附加一個積木到「當碰到地面時」積木，當像素鳥撞上時你要程式來將「遊戲結束」。

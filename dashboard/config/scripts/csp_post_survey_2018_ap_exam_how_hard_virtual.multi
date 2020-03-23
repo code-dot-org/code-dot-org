@@ -1,0 +1,8 @@
+name 'csp-post-survey-2018-AP-exam-how-hard_virtual'
+question 'If you took the CS Principles AP exam, please rate how difficult it was compared to what you were expecting.'
+right 'Way easier than expected'
+right 'Easier than expected'
+right 'About what I was expecting'
+right 'More difficult than expected'
+right 'Way more difficult than expected'
+right 'I did not take the CS Principles AP Exam'

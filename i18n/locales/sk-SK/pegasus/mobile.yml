@@ -17,7 +17,6 @@
   learn_now: "Nauč sa teraz"
   petition_message: "Aby každý študent na každej škole dostal možnosť študovať informatiku"
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu spolu s # ďalšími.'
-  petition_sign_message_support: 'Ak nás podporuješ, zapíš sa a pridaj sa k nášmu mailing listu spolu s # ďalšími.'
   petition_join_others: 'Pridaj sa k # iným'
   name: "Meno"
   email: "E-mail"
@@ -319,6 +318,7 @@
   homepage_action_text_signpetition: "Podpíš petíciu"
   homepage_action_text_wincelebritychat: "Vyhraj rozhovor s celebritou"
   homepage_signpetition_dropdown: "Súhlasím &#x25BE;"
+  homepage_signpetition_dropdown_text: "Súhlasím"
   homepage_diversity_pledge: "Podpor diverzitu"
   homepage_banner_text_prizes: 'Hodina Kódu prichádza znovu 7 - 13 decembra. '
   homepage_banner_link_prizes: 'Pripojte sa k najväčšej vzdelávacej aktivite v histórii. '
@@ -940,8 +940,11 @@
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  csd2_name: 'Lekcia 2: Vývoj webových stránok'
+  csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: "Zrýchlený kurz"
   express_name: "Zrýchlený kurz"
+  pre-express_name: Zrýchlený kurz pre predškolákov
   20-hour_name: Zrýchlený kurz
   algebra_name: "Informatika v algebre - celý kurz"
   AlgebraA_name: "Informatika v algebre - Kurz A"

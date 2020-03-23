@@ -35,21 +35,20 @@ mi-NZ:
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
       CourseD_Dance_Party_01:
-        dance_callout_01: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_01: Tapiri atu tenei paraka ki to taupānga!
       CourseD_Dance_Party_02:
-        dance_callout_02: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_02: Tapiri atu tenei paraka ki to taupānga!
       CourseD_Dance_Party_04:
-        dance_callout_04: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_04: Tapiri atu tenei paraka ki to taupānga!
       CourseD_Dance_Party_06:
         dance_callout_06: Tapiri atu i to kaikanikani hou ki konei
       CourseD_Dance_Party_11:
         dance_callout_11_a: He paraka/wahanga hou!
         dance_callout_11_b: He paraka/wahanga hou!
       CourseD_Dance_Party_11_5:
-        dance_party_11_5_groups: Tirohia ki konei mo te Paraka/ wahanga "Nga raki
-          katoa"
+        dance_party_11_5_groups: Tirohia ki konei mo te Paraka "Ngā raki katoa"
       Dance_2019_04:
-        dance_callout_02: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_02: Tapiri atu tenei paraka ki to taupānga!
       Dance_2019_06:
         dance_party_11_5_groups: He paraka/wahanga hou!
       Dance_2019_07:
@@ -58,19 +57,18 @@ mi-NZ:
         new_block_3: He paraka/wahanga hou!
         new_block_4: He paraka/wahanga hou!
       Dance_Party_01:
-        dance_callout_01: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_01: Tapiri atu tenei paraka ki to taupānga!
       Dance_Party_02:
-        dance_callout_02: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_02: Tapiri atu tenei paraka ki to taupānga!
       Dance_Party_04:
-        dance_callout_04: Tapiri atu tenei paraka/ wahanga ki to taupānga!
+        dance_callout_04: Tapiri atu tenei paraka ki to taupānga!
       Dance_Party_06:
         dance_callout_06: Tapiri atu i to kaikanikani hou ki konei
       Dance_Party_11:
         dance_callout_11_a: He paraka/wahanga hou!
         dance_callout_11_b: He paraka/wahanga hou!
       Dance_Party_11_5:
-        dance_party_11_5_groups: Tirohia ki konei mo te Paraka/ wahanga "Nga raki
-          katoa"
+        dance_party_11_5_groups: Tirohia ki konei mo te Paraka "Ngā raki katoa"
       Infinity_move_collide:
         Infinity_move_collide_callout: Whakatangihia mai tētahi oro ki te puta tēnei
           āhuatanga.
@@ -100,6 +98,9 @@ mi-NZ:
       NEW Course 4 Bee For Loops 5:
         actions_category: Kua hou katoa te hanga o te pouaka utauta! Kei reira hoki
           ngā paraka "Ngā Hohenga" ināianei.
+      New Frozen Project:
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka
+          rerekē!
       Overworld Chop Trees:
         craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
       Overworld Chop Trees_2019:

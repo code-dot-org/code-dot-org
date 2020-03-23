@@ -15,7 +15,6 @@
   learn_now: "Aprende agora"
   petition_message: "Todos os alumnos, en todas as escolas, deberían ter a oportunidade de aprender a programar"
   petition_sign_message: 'Se estás dacordo, asina co teu nome.  Únete a # outros.'
-  petition_sign_message_support: 'Se nos apoias, asina co teu nome. Únete a # outros.'
   petition_join_others: 'Únete a # outros'
   name: "Nome"
   email: "E-mail"
@@ -207,6 +206,7 @@
   homepage_action_text_learn: "Comeza a aprender"
   homepage_action_text_signpetition: "Asina a petición"
   homepage_signpetition_dropdown: "Concordo &#x25BE;"
+  homepage_signpetition_dropdown_text: "Acepto"
   homepage_diversity_pledge: "Abraza a causa en favor da diversidade"
   homepage_banner_text_prizes: 'A Hora do Código está volvendo, de 7 a 13 decembro. '
   homepage_banner_link_prizes: 'Xúntate ao maior evento de aprendizaxe da historia. '

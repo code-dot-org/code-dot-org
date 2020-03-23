@@ -33,6 +33,7 @@ class PersonalProjectsPublishedCell extends Component {
       <div>
         {showPublishButton && (
           <Button
+            __useDeprecatedTag
             onClick={this.onPublish}
             color={Button.ButtonColor.gray}
             text={i18n.publish()}
@@ -41,6 +42,7 @@ class PersonalProjectsPublishedCell extends Component {
         )}
         {showUnpublishButton && (
           <Button
+            __useDeprecatedTag
             onClick={this.onUnpublish}
             color={Button.ButtonColor.gray}
             text={i18n.unpublish()}

@@ -513,6 +513,9 @@ az:
     capsule_title: Internetiniz varmı?
     instructions_headline: Əlaqə yoxdur?
     minecraft_name: Maynkraft Kod Saatı
+    download_in_English: 'İngilizcə yükləyin:'
+    download_in_Spanish: 'İspanca yükləyin:'
+    windows: Windows
     mac: Mac OS X
   pd:
     survey:
@@ -549,3 +552,4 @@ az:
     accept: Razıyam
   gdpr_dialog:
     true: Bəli
+  copy: Köçür

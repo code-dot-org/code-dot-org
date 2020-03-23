@@ -97,6 +97,11 @@ cs-CZ:
         Infinity_move_right_runbutton: Přidej zde blok
       Infinity_repeat:
         Infinity_repeat_callout: Umísti dovnit přesouvací bloky
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Jakmile budeš připravený vyzkoušet svůj program,
+          zmáčkni tlačítko "Spustit".
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Klikni na "Spustit" pro spuštění pohybu.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor
           a vložte kód, který chcete pořád opakovat.
@@ -130,6 +135,8 @@ cs-CZ:
         place_length_variable: Přetáhni proměnnou délku k nahrazení otazníků
       NEW Course 4 Bee For Loops 5:
         actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
+      New Frozen Project:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
       Overworld Chop Trees:
         craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
           začít
@@ -160,6 +167,43 @@ cs-CZ:
         craft_what_is_iron: Vytěž toto železo!
       Underground Iron_2019:
         craft_what_is_iron: Vytěž toto železo!
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Klikni sem, abys viděl pracovat kód!
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp3_2019:
+        stone_block_2: Šedé bloky není možné zahodit.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.

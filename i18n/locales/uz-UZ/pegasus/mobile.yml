@@ -15,7 +15,6 @@
   learn_now: "Hoziroq o‘rganing"
   petition_message: "Har bir maktabning har bir o‘quvchisida informatikani o‘rganish imkoniyati bo‘lishi kerak"
   petition_sign_message: 'Agar rozi bo‘lsangiz, ismingizni kiriting. Boshqalarga # qo‘shiling.'
-  petition_sign_message_support: 'Agar qo‘llab-quvvatlasangiz, ismingizni kiriting. Boshqalarga # qo‘shiling.'
   petition_join_others: 'Boshqalarga # qo‘shiling'
   name: "Ismi"
   email: "Elektron pochta"
@@ -218,6 +217,7 @@
   homepage_action_text_learn: "O‘rganishni boshlang"
   homepage_action_text_signpetition: "Murojaatni imzolang"
   homepage_signpetition_dropdown: "Roziman: &#x25BE;"
+  homepage_signpetition_dropdown_text: "Roziman"
   homepage_diversity_pledge: "Turli qatlamdagi insonlarni jalb qiling"
   homepage_banner_text_prizes: 'Dasturlash soati 7-13 dekabr kunlari yana kelmoqda.'
   homepage_banner_link_prizes: 'Tarixdagi eng katta o‘quv tadbiriga qo‘shiling. '

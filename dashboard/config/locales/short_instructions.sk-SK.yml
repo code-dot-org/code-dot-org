@@ -389,7 +389,10 @@ sk-SK:
         zasypávať jamu až kým nebude zem vyrovnaná?  "
       4-5 While Loops 8: " Toto je veľmi hlboká jama a veľmi veľká kopa hliny. Koľko
         lopát plných hliny musíte presunúť, aby ste zem zarovnali?"
+      AB_Debug_PlayLab3: Presuň rytiera ku každej vlajke. Ak sa niečo nepodarí, hľadaj
+        kde je chyba!
       Alien Defender: 'Nápad na projekt: Vytvor obrannú hru v Play Labe!'
+      CDEF_debugging_flappy2: Prečo táto hra nefunguje?
       CSD U5 black white images pixelation: Dokončite tvar X písaním núl a jednotiek
       CSD U5 black white images pixelation 2: Nakreslite smajlíka (kliknite sem pre
         zobrazenie obrázku)
@@ -518,6 +521,8 @@ sk-SK:
       Dance Party Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance_2019_05: Teraz donúť tanečníka začať nový krok po 6 taktoch!
+      Dance_2019_07: Zmeň veľkosť skupiny tanečníkov v pozadí.
+      Dance_2019_09: Skúste byť kreatívni s týmito novými blokmi!
       Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
       Dance_Party_01: Pretiahni blok `vytvor` na pracovnú plochu a napoj ho do vnútra
@@ -542,12 +547,14 @@ sk-SK:
         vieš!
       Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
+      Dance_Party_extras_alternate_2019: Dozadu a dopredu (klikni na "Viac" pre detail)
       Dance_Party_extras_battle: Tanečné skupiny (klikni na "Viac" pre detail)
       Dance_Party_extras_battle_2019: Tanečné skupiny (klikni na "Viac" pre detail)
       Dance_Party_extras_every_beat: Štvrťové noty (klikni na "Viac" pre detail)
       Dance_Party_extras_every_beat_2019: Štvrťové noty (klikni na "Viac" pre detail)
       Dance_Party_extras_layout: Všetci do formácie! (klikni "Viac" pre detail)
       Dance_Party_extras_layout_2019: Všetci do formácie! (klikni "Viac" pre detail)
+      Dance_Party_extras_mixed_2019: Viac tlačidiel (klikni "Viac" pre detaily)
       Dance_Party_extras_on_beat: Basy, Stredy a Výšky (Klikni na "Viac" pre detail)
       Dance_Party_extras_on_beat_2019: Basy, Stredy a Výšky (Klikni na "Viac" pre
         detail)
@@ -568,10 +575,12 @@ sk-SK:
       Fish Tank 7-validated_2019: Použi niektoré nové bloky z panelu nástrojov, aby
         bolo tvoje akvárium špeciálne!
       FoodFight: Toto je príklad hry, ktorú môžeš vytvoriť v Play Labe.
+      Frequency Analysis: Test
       Function intro Ryan: Dvakrát použi funkciu 'Postav most' na vytvorenie cesty
         k fakli.
       Function intro Ryan_2019: Dvakrát použi funkciu 'Postav most' na vytvorenie
         cesty k fakli.
+      HOC 2018 Level_12: Navrhni si vlastné vodné prostredie, je to len na tebe!
       Infinity_catch: Dokážeš Elsou ("postava 2") hýbať šípkami tak, aby s Annou udržala
         krok?
       Infinity_finale: Vytvor čo len chceš a zdieľaj to s kamarátmi!
@@ -686,6 +695,13 @@ sk-SK:
         Skús pozbierať tieto kvety s použitím prírastku 2.
       NEW Course 4 Bee For Loops 8: Máš to! Aký by mal byť tvoj prírastok, aby si
         pozbieral 3, 6, 9, 12, 15 nektárov?
+      New Gumball Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Ice Age Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Infinity Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
+      New Minecraft Hero Project: "**Voľná hra:** Čas skúmať na vlastnú päsť!"
+      New Sports Project: 'Vytvor si vlastný zápas! Tu si šéfom ty: môžeš zmeniť všetky
+        pravidlá, zmiešať športy, čo ti len napadne. Keď budeš hotový, klikni na "Dokončiť",
+        aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.'
       Overworld Avoid Monsters: |-
         Naraziť do Creepera nie je dobrý nápad.
         Opatrne prebehni popri Creeperoch a dostaň sa do bezpečia svojho domova.
@@ -762,6 +778,9 @@ sk-SK:
         stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Underground Mining Coal_2019: Najcennejšie zdroje nájdeš v podzemí, ale môže
         sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
+      Vigenere: Test
+      Virtual Pet 1: Čo si myslíš, že sa stane keď stlačíš "Spustiť" a potom na ňu
+        klikneš?
       Virtual Pet 1 Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Virtual Pet 2: Vytvor takú **udalosť**, že keď sa Geraldine dotkne mláky, tak
         sa jej farba zmení na hnedú.
@@ -775,6 +794,9 @@ sk-SK:
       Virtual Pet 6: Pridaj jablko, ktoré vráti žirafu do pôvodnej veľkosti, keď sa
         dotknú.
       Virtual Pet Freeplay: 'Voľná hra: Čo viac dokážeš spraviť so svojou žirafou? '
+      'Widget: Text Compression': V texte hľadajte vzory (opakované slová alebo frázy).
+        Zadajte vzory, ktoré vidíte, do slovníka vpravo. Pri zadávaní položiek do
+        slovníka, symbol pre položku sa vloží do textu namiesto vzoru.
       bounce_10_basketball: Teraz máme na ihrisku kôš! Použi bloky "pridaj bod" a
         "pridaj bod súperovi" pod blok "keď je lopta v bránke" a "keď lopta netrafí
         ruku". Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
@@ -815,6 +837,7 @@ sk-SK:
         loptu až kým sa nedotkne vlajky.
       bounce_7_sports: Pripoj správne bloky ku každému z "keď..." blokov. Odrážaj
         loptu až kým sa nedotkne vlajky.
+      comment_intro_maze_2018: Použi nový blok `komentár` aby si niečo poznačil/a.
       course1_artist_loops_challenge4: '"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"'
       course1_maze_debugging_challenge2: Analyzuj tento level. Toto sú tie správne
         bloky, ale sú v nesprávnom poradí!
@@ -849,6 +872,73 @@ sk-SK:
         jaskyne.
       courseA_collector_loops11_2019: Pomôž Laurel pozbierať všetky drahokamy z tejto
         jaskyne.
+      courseA_harvester_loops1: Pomôž záhradníčke pozbierať všetku kukuricu!
+      courseA_harvester_loops10: Pomôž záhradníčke pozbierať všetkých 5 klasov kukurice!
+      courseA_harvester_loops10_2019: Pomôž záhradníčke pozbierať všetkých 5 klasov
+        kukurice!
+      courseA_harvester_loops11: 'Vyskúšajte to ešte raz sami! '
+      courseA_harvester_loops11_2019: 'Vyskúšajte to ešte raz sami! '
+      courseA_harvester_loops1_2019: Pomôž záhradníčke pozbierať všetku kukuricu!
+      courseA_harvester_loops2: Nezabudni pozbierať všetku kukuricu!
+      courseA_harvester_loops2_2019: Nezabudni pozbierať všetku kukuricu!
+      courseA_harvester_loops3: Dokážeš pozbierať všetku kukuricu použitím len **jedného**
+        bloku posunúť?
+      courseA_harvester_loops3_2019: Dokážeš pozbierať všetku kukuricu použitím len
+        **jedného** bloku posunúť?
+      courseA_harvester_loops4: Dokážeš pomôcť záhradníčke nájsť chybu v kóde?
+      courseA_harvester_loops4_2019: Dokážeš pomôcť záhradníčke nájsť chybu v kóde?
+      courseA_harvester_loops5: Vyskúšaj to! Dokážeš zobrať aj tú kukuricu na konci?
+      courseA_harvester_loops5_2019: Vyskúšaj to! Dokážeš zobrať aj tú kukuricu na
+        konci?
+      courseA_harvester_loops5a: Pozri na všetku tú kukuricu! Dokážeš ju všetku pozbierať?
+      courseA_harvester_loops5a_2019: Pozri na všetku tú kukuricu! Dokážeš ju všetku
+        pozbierať?
+      courseA_harvester_loops5b: Dokážeš svoj kód zmeniť tak aby záhradníčka pozbierala
+        všetku kukricu?
+      courseA_harvester_loops5b_2019: Dokážeš svoj kód zmeniť tak aby záhradníčka
+        pozbierala všetku kukricu?
+      courseA_harvester_loops6: Budeš potrebovať **jeden** blok `Pohni sa na západ`
+        a **jeden** blok `Pohni sa na sever` block.
+      courseA_harvester_loops7: 'Teraz to vyskúšajte sami! '
+      courseA_harvester_loops7_2019: 'Teraz to vyskúšajte sami! '
+      courseA_harvester_loops9: Dokážeš prísť na to ako pozbierať všetku kukuricu?
+      courseA_harvester_loops9_2019: Dokážeš prísť na to ako pozbierať všetku kukuricu?
+      courseA_harvester_seq1: Zahraj sa s týmito blokmi, aby si pomohol záhradníčke
+        pozbierať kukuricu.
+      courseA_harvester_seq10: Nezabudni pozbierať všetku kukuricu!
+      courseA_harvester_seq10_2019: Nezabudni pozbierať všetku kukuricu!
+      courseA_harvester_seq11: Vyskúšaj to sám/a! Pozbieraj všetku kukuricu.
+      courseA_harvester_seq11_2019: Vyskúšaj to sám/a! Pozbieraj všetku kukuricu.
+      courseA_harvester_seq12: Pozbieraj všetku kukuricu.
+      courseA_harvester_seq12_2019: Pozbieraj všetku kukuricu.
+      courseA_harvester_seq13: Pohraj sa s týmito blokmi, a pomôž záhradníčke pozbierať
+        kukuricu.
+      courseA_harvester_seq13_2019: Pohraj sa s týmito blokmi, a pomôž záhradníčke
+        pozbierať kukuricu.
+      courseA_harvester_seq1_2019: Zahraj sa s týmito blokmi, aby si pomohol záhradníčke
+        pozbierať kukuricu.
+      courseA_harvester_seq2: Na vyriešenie úlohy použi 3 bloky `pohni sa na západ`
+        a jeden blok `zober kukuricu`.
+      courseA_harvester_seq2_2019: Na vyriešenie úlohy použi 3 bloky `pohni sa na
+        západ` a jeden blok `zober kukuricu`.
+      courseA_harvester_seq3: Použi 3 bloky `pohni sa na sever` a jeden blok `zober
+        kukuricu`.
+      courseA_harvester_seq3_2019: Použi 3 bloky `pohni sa na sever` a jeden blok
+        `zober kukuricu`.
+      courseA_harvester_seq4: Aby záhradníčka pozbierala kukuricu, pridaj ešte jeden
+        blok.
+      courseA_harvester_seq4_2019: Aby záhradníčka pozbierala kukuricu, pridaj ešte
+        jeden blok.
+      courseA_harvester_seq5: Nájdi chybu a oprav ju!
+      courseA_harvester_seq5_2019: Nájdi chybu a oprav ju!
+      courseA_harvester_seq6: Vyskúšaj to sám/sama!
+      courseA_harvester_seq6_2019: Vyskúšaj to sám/sama!
+      courseA_harvester_seq7: Vyskúšaj to sám/sama!
+      courseA_harvester_seq7_2019: Vyskúšaj to sám/sama!
+      courseA_harvester_seq8: Teraz záhradníčka musí kukuricu zobrať až 2-krát!
+      courseA_harvester_seq8_2019: Teraz záhradníčka musí kukuricu zobrať až 2-krát!
+      courseA_harvester_seq9: Na dokončenie úlohy pridaj ešte 2 bloky!
+      courseA_harvester_seq9_2019: Na dokončenie úlohy pridaj ešte 2 bloky!
       courseA_maze_ramp2_2018: Spoj všetky bloky dokopy, aby si dokončil tvoj kód,
         potom stlač "▶ Spustiť".
       courseA_maze_ramp2_2019: Spoj všetky bloky dokopy, aby si dokončil tvoj kód,
@@ -865,6 +955,10 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp4a_2019: Dokážeš prísť na to, ktorý blok potrebuješ pridať
         na spodok ostatných blokov, aby si dokončíl tento kód?
+      courseA_maze_seq10_2018: 'Výzva: Aby si dostal vtáka k prasiatku, musíš sa vyhnúť
+        TNT! '
+      courseA_maze_seq10_2019: 'Výzva: Aby si dostal vtáka k prasiatku, musíš sa vyhnúť
+        TNT! '
       courseA_maze_seq12: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2018: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2019: 'Dostaň to prasiatko! '
@@ -873,12 +967,22 @@ sk-SK:
       courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq5_2018: Vyskúšaj si to ešte raz.
       courseA_maze_seq5_2019: Vyskúšaj si to ešte raz.
+      courseA_maze_seq5a_2018: Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a
+        k prasiatku?
+      courseA_maze_seq5a_2019: Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a
+        k prasiatku?
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
+      courseA_playLab_events4_2018: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
+        posunul doprava po kliknutí na tlačidlo `vpravo`.
+      courseA_playLab_events4_2019: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
+        posunul doprava po kliknutí na tlačidlo `vpravo`.
+      courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
+      courseA_playLab_events7_2019: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
       courseB_Scrat_ramp1_2018: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       courseB_Scrat_ramp1_2019: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       courseB_Scrat_ramp2_2018: Spoj všetky bloky dokopy, aby si dokončil tvoj kód,
@@ -2270,13 +2374,13 @@ sk-SK:
         na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_maze_ramp1_2019: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_maze_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+      courseD_maze_ramp2: Aby sa vták dostal až k prasiatku, z panela nástrojov presuň
         ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
-      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasaťu, z panela nástrojov
+      courseD_maze_ramp2_2018: Aby sa vták dostal až k prasiatku, z panela nástrojov
         presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
-      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasaťu, z panela nástrojov
+      courseD_maze_ramp2_2019: Aby sa vták dostal až k prasiatku, z panela nástrojov
         presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
       courseD_maze_ramp3: Na pracovnej ploche je jeden blok navyše, ktorý spôsobí,
@@ -2356,7 +2460,7 @@ sk-SK:
       courseD_playLab_condFP_2018: A teraz si vytvor hru, ktorou sa pochváliš kamarátom!
       courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni
         na tlačítko "Spustiť" a sleduj, čo sa stane.
-      courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
+      courseD_scrat_ramp2: Aby sa vták dostal až k prasiatku, z panela nástrojov presuň
         ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
       courseD_scrat_ramp4: Vyhni sa TNT, lebo bude lietať perie!
@@ -2372,7 +2476,13 @@ sk-SK:
         so stranami dlhými 25 pixelov.
       courseE_artist_functions2: Tentokrát použi na vytvorenie okuliarov funkciu '
         nakresli štvorec '.
+      courseE_artist_functions2_2018: 'Na vytvorenie okuliarov použi funkciu '' nakresli
+        štvorec ''. '
+      courseE_artist_functions2_2019: 'Na vytvorenie okuliarov použi funkciu '' nakresli
+        štvorec ''. '
       courseE_artist_functions3: Túto kresbu môžeš vytvoriť pridaním bloku opakovania.
+      courseE_artist_functions3_2018: Vytvor funkciu, ktorá spraví túto hviezdu.
+      courseE_artist_functions3_2019: Vytvor funkciu, ktorá spraví túto hviezdu.
       courseE_artist_functions4: Teraz keď už vieš nakresliť hviezdu, skús nakresliť
         štyri hviezdy!
       courseE_artist_functions5: Nakresli len tie tri hviezdy, ktoré potrebuješ, aby
@@ -2391,7 +2501,25 @@ sk-SK:
         `nakresli okno` a zavolaním tejto funkcie 5 krát. Pozor na dvere!
       courseE_artist_functions8: 'Výzva: Vytvor toľko funkcií, koľko potrebuješ na
         vytvorenie tejto kresby zloženej z 50-pixelových štvorcov.'
+      courseE_artist_functions8_2018: Na vytvorenie tohto dizajnu využi všetko čo
+        si sa už naučil/a.
+      courseE_artist_functions8_2019: Na vytvorenie tohto dizajnu využi všetko čo
+        si sa už naučil/a.
+      courseE_artist_functions8a_2018: Vytvor funkciu pre jeden štvorec.
+      courseE_artist_functions8a_2019: Vytvor funkciu pre jeden štvorec.
+      courseE_artist_functions8b_2018: Pre zjednodušenie, zavolaj funkciu `nakresli
+        štvorec` zvnútra funkcie `nakresli rad štvorcov`!
+      courseE_artist_functions8b_2019: Pre zjednodušenie, zavolaj funkciu `nakresli
+        štvorec` zvnútra funkcie `nakresli rad štvorcov`!
+      courseE_artist_functions8c_2018: Pridaj ešte jednu funkciu, ktorá vytvorí tento
+        rad spojených štvorcov.
+      courseE_artist_functions8c_2019: Pridaj ešte jednu funkciu, ktorá vytvorí tento
+        rad spojených štvorcov.
       courseE_artist_functions9: Vytvor tento obrázok len pomocou dostupných blokov.
+      courseE_artist_functions9_2018: "**Výzva:** Vytvor tento obrázok len pomocou
+        dostupných blokov."
+      courseE_artist_functions9_2019: "**Výzva:** Vytvor tento obrázok len pomocou
+        dostupných blokov."
       courseE_artist_functionsProj_2018: "**Inšpirácia:** Využi všetko, čo už vieš
         a nakresli obrázok, aký len chceš!"
       courseE_artist_functionsProj_2019: "**Inšpirácia:** Využi všetko, čo už vieš
@@ -2411,14 +2539,58 @@ sk-SK:
       courseE_farmer_concept2_2018: Pozbieraj všetky tekvice.
       courseE_farmer_concept3: Vyplň dieru na konci každej z týchto ciest.
       courseE_farmer_concept3_2018: Vyplň dieru na konci každej z týchto ciest.
+      courseE_farmer_functions10a1_2018: Na vyriešenie tejto úlohy využi všetko čo
+        si sa už naučil/a!
+      courseE_farmer_functions10a1_2019: Na vyriešenie tejto úlohy využi všetko čo
+        si sa už naučil/a!
       courseE_farmer_functions13_2018: Na vyriešenie tejto úlohy použi najviac 23
         blokov.
       courseE_farmer_functions13_2019: Na vyriešenie tejto úlohy použi najviac 23
         blokov.
+      courseE_farmer_functions1a_2018: Pomôž záhradníčke pozbierať všetku kukuricu
+        a potom tekvicu.
+      courseE_farmer_functions1a_2019: Pomôž záhradníčke pozbierať všetku kukuricu
+        a potom tekvicu.
+      courseE_farmer_functions2ba_2018: Použi funkcie, čo vidíš dole, aby farmárka
+        pozbierala kukuricu a tekvice.
+      courseE_farmer_functions3c1_2018: Táto funkcia volá iné funkcie!
+      courseE_farmer_functions3c1_2019: Táto funkcia volá iné funkcie!
+      courseE_farmer_functions3c_2018: Vyskúšaj dlhšiu cestu.
+      courseE_farmer_functions3c_2019: Vyskúšaj dlhšiu cestu.
       courseE_farmer_functions7a1_2018: Vytvor funkciu pomocou ktorej záhradníčka
         prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
       courseE_farmer_functions7a1_2019: Vytvor funkciu pomocou ktorej záhradníčka
         prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseE_farmer_functions8a1_2018: Je tvoja funkcia stále nápomocná?
+      courseE_farmer_functions8a1_2019: Je tvoja funkcia stále nápomocná?
+      courseE_farmer_functions9a1_2018: Je tvoja funkcia stále nápomocná?
+      courseE_farmer_functions9a1_2019: Je tvoja funkcia stále nápomocná?
+      courseE_farmer_ramp12_forswap: Teraz použi vnorené cykly na vyriešenie úlohy.
+      courseE_farmer_ramp12_forswap_2018: Teraz použi vnorené cykly na vyriešenie
+        úlohy.
+      courseE_farmer_ramp12_forswap_2019: Teraz použi vnorené cykly na vyriešenie
+        úlohy.
+      courseE_farmer_ramp12b: Pokiaľ je tam šalát, zbieraj šalát!
+      courseE_farmer_ramp12b_2018: Pokiaľ je tam šalát, zbieraj šalát!
+      courseE_farmer_ramp12b_2019: Pokiaľ je tam šalát, zbieraj šalát!
+      courseE_farmer_ramp12c: Choď dopredu, až kým sa nedostaneš k šalátu, potom ho
+        všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12c_2018: Choď dopredu, až kým sa nedostaneš k šalátu, potom
+        ho všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12c_2019: Choď dopredu, až kým sa nedostaneš k šalátu, potom
+        ho všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12d: Choď dopredu, až kým sa nedostaneš k šalátu, potom ho
+        všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12d_2018: Choď dopredu, až kým sa nedostaneš k šalátu, potom
+        ho všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12d_2019: Choď dopredu, až kým sa nedostaneš k šalátu, potom
+        ho všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12e: Choď dopredu, až kým sa nedostaneš k šalátu, potom ho
+        všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12e_2018: Choď dopredu, až kým sa nedostaneš k šalátu, potom
+        ho všetok pozbieraj pomocou cyklu pokiaľ.
+      courseE_farmer_ramp12e_2019: Choď dopredu, až kým sa nedostaneš k šalátu, potom
+        ho všetok pozbieraj pomocou cyklu pokiaľ.
       courseF_artist_for1: Experimentuj s cyklom `for` a s premennou `počítadlo`.
       courseF_artist_for10: 'Voľná hra: Skús použiť premennú `počítadlo` spolu s ďalšími
         kresliacimi blokmi, aby si vytvoril magické obrázky ako tento.'

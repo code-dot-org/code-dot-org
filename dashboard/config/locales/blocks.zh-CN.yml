@@ -1083,6 +1083,8 @@ zh-CN:
             '"left"': 向左
       gamelab_mouseLocation:
         text: 鼠标位置
+      gamelab_moveBackward:
+        text: 向后移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveForward:
         text: 向前移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveInDirection:
@@ -1178,6 +1180,8 @@ zh-CN:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
+      gamelab_updateTitleWithColor:
+        text: 显示标题屏幕 {BREAK} 标题 {TITLE} 颜色 {COLOR}
       gamelab_whenDownArrow:
         text: 当下方向键按下时
       gamelab_whenKey:

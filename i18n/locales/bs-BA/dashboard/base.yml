@@ -169,6 +169,7 @@ bs:
       word: 'Tajne riječi'
       email: 'Email'
       google_classroom: 'Google učionica'
+      clever: 'Pametni račun'
   follower:
     invite_sent: 'Pozivnica poslana'
     added_teacher: '%{name} dodan kao vaš učitelj'
@@ -629,8 +630,10 @@ bs:
     capsule_title: 'Imate li internet?'
     instructions_headline: 'Nema interneta?'
     instructions: 'Instrukcije za nastavnike: ako imate slabu internetsku uslugu, ovi tutorijali Sata Kodiranja su dostupni za preuzimanje i instaliranje za izvanmrežno korištenje. Izaberite Vaš jezik i platformu, preuzmite i instalirajte ih na sve računare u Vašoj učionici. Možda želite koristiti USB uređaj da na njega jednom preuzmete i instalirate na sve računare. Bilješka: učenici se neće moći prijaviti na Code Studio, sačuvati napredak, ili isprintati certifikate. Nastavnici mogu unaprijed isprintati certifikate <a href="%{url}}">ovdje</a>.'
+    minecraft_name: 'Sata Kodiranja Minecraft-a'
     download_in_Albanian: 'Skinite na albanskom:'
     download_in_Arabic: 'Skinite na arapskom:'
+  return_unit_overview: 'Idite na pregled kursa'
   return_course_overview: 'Idite na pregled kursa'
   view_all_units: 'Vidi sve jedinice'
   pd:
@@ -656,3 +659,4 @@ bs:
     accept: 'Slažem se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

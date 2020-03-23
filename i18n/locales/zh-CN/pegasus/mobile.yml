@@ -17,7 +17,6 @@
   learn_now: "现在开始学习"
   petition_message: "任何学校的任何学生都应有机会学习计算机科学"
   petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
-  petition_sign_message_support: '如果支持我们，签名并像其他 #人一样加入邮件列表。'
   petition_join_others: '加入另外 # 人'
   name: "姓名"
   email: "电子邮件"
@@ -150,6 +149,7 @@
   personalize_certificate: "个性化你的证书"
   print_batch_certificates: "批量打印证书"
   print_certificates: "打印证书"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   print_ice_art_from_frozen: "打印来自冰雪奇缘的冰雪艺术家"
   want_a_blank_certificate_template: "需要空白证书模板来填写学生的名字？"
   landscape_recommended_certificates: "打印证书时，推荐选择 **风景**。"
@@ -315,6 +315,7 @@
   homepage_action_text_signpetition: "在请愿书上签名"
   homepage_action_text_wincelebritychat: "赢得与名人聊天的机会"
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
+  homepage_signpetition_dropdown_text: "我同意"
   homepage_diversity_pledge: "承诺多样性"
   homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
   homepage_banner_link_prizes: '加入史上最大的学习盛会 '
@@ -683,7 +684,7 @@
   dashboard_sections_print_secrets: "然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。"
   dashboard_sections_switch_section: '切换学习小组'
   dashboard_sections_close: "关闭"
-  dashboard_sections_move_students_desc: "选择学生转到新的章节。转移的学生不会清除他们的进展。"
+  dashboard_sections_move_students_desc: "选择学生转到新的小组。转移的学生不会清除他们的进展。"
   dashboard_sections_one_per_teacher: "对每一位老师来说，学生仅能在一个学习小组中。你的学生想加入一个新的学习小组，他就要离开原来的小组。"
   dashboard_sections_move_to_section: '移动到此节︰'
   dashboard_sections_enter_code: '输入此节代码︰'
@@ -691,7 +692,7 @@
   dashboard_sections_other_section: "其他老师"
   dashboard_sections_both_sections: "你想要学生两个部分都参加吗？"
   dashboard_sections_yes_both: "是的，我想要复制学生到本小组和新小组中"
-  dashboard_sections_no_move: "不，我想移动学生到新章节中。"
+  dashboard_sections_no_move: "不，我想移动学生到新小组中。"
   dashboard_sections_move_students: "转移学生"
   dashboard_sections_assign_hoc_script_desc: "参与编程一小时？"
   dashboard_sections_assign_hoc_script_msg: "请注意，在12月3日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。但课程中其它部分还可以使用。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a href='%{certificate_url}'>打印</a>这些证书。）在本周之外的其它时间里，学生进度和报告会正常保存。"

@@ -53,6 +53,7 @@ et:
   join_section:
     code:
       placeholder: Üksuse kood (ABCDEF)
+      instructions_short: Sisestage oma 6-täheline sektsiooni kood
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
     submit: Lisa vihje
@@ -193,6 +194,7 @@ et:
       word: Salajane sõna
       email: E-post
       google_classroom: Google Classroom
+      clever: Tark konto
   follower:
     invite_sent: Kutse saadetud
     added_teacher: "%{name} lisatud kui sinu õpetaja"
@@ -460,6 +462,7 @@ et:
     download: Lae video alla
     show_notes: Näita märkmeid
     show_video: Näita videot
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a
@@ -904,6 +907,7 @@ et:
     vaadata.
   hidden_stage: Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises
     tunnis sa peaksid olema.
+  return_unit_overview: Mine teema ülevaatesse
   return_course_overview: Mine teema ülevaatesse
   view_all_units: Vaata kõik
   view_teacher_guide: Vaata juhendit õpetajatele
@@ -922,6 +926,7 @@ et:
         science: Teadus
         la: Keeled
       resources:
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
       robotics:
@@ -933,3 +938,4 @@ et:
     accept: Olen nõus
   gdpr_dialog:
     true: Jah
+  copy: Kopeeri

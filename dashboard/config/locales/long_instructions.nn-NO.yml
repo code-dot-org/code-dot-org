@@ -612,7 +612,7 @@ nn-NO:
       Dance_Party_02: |-
         No må vi få elgen til å danse!
 
-        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
+        Trekk <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokka til arbeidsområdet. Koble den under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokka. Dansaren din skal starte på ein ny dans etter den fjerde takta.
 
         **Taktar** vert brukt til å telje tida i musikk. I denne opplæringa er ei takt fire slag lang.
       Dance_Party_03: |-
@@ -643,7 +643,7 @@ nn-NO:
         No veit vi korleis vi endrar eigenskapane til dansarane. Vi kan óg få dei same eigenskapane til å reagere på musikken med denne blokka:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -878,6 +878,8 @@ nn-NO:
         Når du er ferdig med funksjonen, trykk "lukk" for å gå tilbake til programmet ditt.
       NEW Course 4 Artist Params 1: La oss lage ein funksjon som tegnar eit kvadrat
         med sider som er 50 pikslar lange. Trykk "rediger" for å starte.
+      New Minecraft Hero Project: "**Frileik:** No er det opp til deg! Bruk agenten
+        sin kode for å hjelpe deg med å utforske denne verda."
       Overworld Move to Sheep: Legg til endå ei "gå framover"-blokk for å nå fram
         til sauen.
       Overworld Move to Sheep_2019: Legg til endå ei "gå framover"-blokk for å nå
@@ -1039,6 +1041,11 @@ nn-NO:
       courseC_artist_loops2a_2019: "No kan du bruke ei løkke for å lage fleire kopiar.
         Prøv å endre talet på \"snu\"- og \"gjenta\"-blokkene for å lage andre mønster.
         \n\n* * *\n\nTrykk på \"Ferdig\" når du er nøgd med det du har laga. \n\n![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)\n![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)\n![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)"
+      courseC_artist_loopsPrePre1a_2019: |-
+        Kunstneren er på feil sted!
+
+        Bruk <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>-blokken for å få kunstneren til midten av området.
+        Deretter tegn en 50 piksler lang linje med <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>-blokken.
       courseC_collector_prog9: _"La oss få heile skatten!"_
       courseC_collector_prog9_2018: _"La oss få heile skatten!"_
       courseC_collector_prog9_2019: _"La oss få heile skatten!"_
@@ -1068,6 +1075,11 @@ nn-NO:
       courseC_maze_programming_challenge2_2019: Nokre gongar er det meir enn ein måte
         å løyse det same problemet på. Nokre gongar er det raskare å gå bakover enn
         å gå framover!
+      courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \\_\"Prøv å endre formen eller lengden på linjene for å lage den din egen!\"\n\n<br/>
+        \ \n\n**Inspirasjon:** Du kan ende tegningen din sånn du vil, men her er et
+        forslag:\n\n-   Prøv å endre typen former i midten av snøflaket med den på
+        enden av hver linje!"
       courseD_artist_binary_challenge1_2018: Du kan berre bruke kvar binærverdi (0
         eller 1) ein gong i denne oppgåva. Prøv å bruke løkker for å fullføre denne
         teikninga.

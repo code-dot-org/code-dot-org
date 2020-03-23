@@ -277,6 +277,18 @@ cs-CZ:
         draw a polygon: nakresli mnohoúhelník
       NEW Course 4 Play Lab Params 11:
         jump: skoč
+      New Artist Project:
+        draw a star: nakresli hvězdu
+        draw a circle: nakresli kružnici
+        draw a triangle: nakresli trojúhelník
+        draw a shape: nakresli tvar
+        draw a house: nakresli dům
+        draw a square: nakresli čtverec
+      New Minecraft Hero Project:
+        function 1: funkce 1
+        function 2: funkce 2
+      New Play Lab Project:
+        jump: skoč
       Robot Doodle:
         draw head: nakreslit hlavu
       Robot Doodle_2018:
@@ -285,6 +297,8 @@ cs-CZ:
         draw a flower: nakresli květinu
       Standalone_Artist_8:
         draw a shape: nakresli tvar
+      Standalone_Artist_9:
+        my function: moje funkce
       course3_artist_functions_challenge1:
         do something: proveď něco
       course3_artist_functions_challenge2:
@@ -433,8 +447,6 @@ cs-CZ:
       courseE_artist_functions7:
         draw a house: nakresli dům
       courseE_artist_functions7_2018:
-        draw a house: nakresli dům
-      courseE_artist_functions7_2019:
         draw a house: nakresli dům
       courseE_artist_functions8:
         do something: proveď něco

@@ -180,6 +180,17 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {array} list of all class ids that this library has been shared
+   * with. Or undefined if we don't have a current project.
+   */
+  getCurrentLibrarySharedClasses() {
+    if (!current) {
+      return;
+    }
+    return current.sharedWith;
+  },
+
+  /**
    * @returns {string} description of the most recently published library from the
    * project, or undefined if we don't have a current project
    */
@@ -468,6 +479,9 @@ var projects = (module.exports = {
 
   __TestInterface: {
     // Used by UI tests
+    getCurrent() {
+      return current;
+    },
     isInitialSaveComplete() {
       return initialSaveComplete;
     },
@@ -565,30 +579,54 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
-  setLibraryDescription(description, callback) {
+  setLibrarySharedClasses(newSharedClasses, callback) {
     current = current || {};
-    if (description && current.libraryDescription !== description) {
-      current.libraryDescription = description;
+    if (Array.isArray(newSharedClasses)) {
+      current.sharedWith = newSharedClasses;
       this.updateChannels_(callback);
     }
   },
-  setLibraryName(newName, callback) {
+  /**
+   * Updates the current channel's library details.
+   *
+   * @param {Object} config - Object containing library details.
+   * @param {string} config.libraryName
+   * @param {string} config.libraryDescription
+   * @param {string} config.latestLibraryVersion - S3 version ID for the current library version. Passing this value as -1 will nullify libraryLatestVersion.
+   * @param {boolean} config.publishing - true if library is being published, false if library is being unpublished, undefined otherwise.
+   */
+  setLibraryDetails(config = {}) {
     current = current || {};
-    if (newName && current.libraryName !== newName) {
-      current.libraryName = newName;
-      this.updateChannels_(callback);
+    const {
+      libraryName,
+      libraryDescription,
+      latestLibraryVersion,
+      publishing
+    } = config;
+
+    if (libraryName !== current.libraryName) {
+      current.libraryName = libraryName;
     }
-  },
-  setLibraryDetails(newName, newDescription, callback) {
-    current = current || {};
-    if (
-      current.libraryName !== newName ||
-      current.libraryDescription !== newDescription
-    ) {
-      current.libraryName = newName;
-      current.libraryDescription = newDescription;
-      this.updateChannels_(callback);
+
+    if (libraryDescription !== current.libraryDescription) {
+      current.libraryDescription = libraryDescription;
     }
+
+    if (latestLibraryVersion !== current.latestLibraryVersion) {
+      current.latestLibraryVersion =
+        latestLibraryVersion === -1 ? null : latestLibraryVersion;
+    }
+
+    if (publishing) {
+      // Tells the server to set libraryPublishedAt timestamp.
+      current.publishLibrary = true;
+    } else if (publishing === false) {
+      // Unpublishing, so nullify libraryPublishedAt timestamp.
+      current.libraryPublishedAt = null;
+      current.publishLibrary = false;
+    }
+
+    this.updateChannels_();
   },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {

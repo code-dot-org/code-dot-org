@@ -63,7 +63,7 @@
     "run": "运行",
     "mostImportantParts": "这些是最重要的鱼类局部信息：",
     "clickIndividualFish": "单击鱼以查看其信息。",
-    "mostImportantPartsDescription": "",
+    "mostImportantPartsDescription": "这是最重要的用于区分这条是 “*{word}*” 或 “**{notWord}**” 的重要部分。",
     "newWord": "新词语",
     "finish": "完成",
     "trainMore": "更多训练",

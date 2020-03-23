@@ -17,7 +17,6 @@
   learn_now: "همین حالا یاد بگیرید"
   petition_message: "هر دانش آموز در هر مدرسه باید فرصت یادگیری علم کامپیوتر را داشته باشد"
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به پیوندید.'
-  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به #دیگران بپیوندید.'
   petition_join_others: 'به #دیگران ملحق شوید'
   name: "نام"
   email: "ایمیل"
@@ -239,6 +238,7 @@
   homepage_action_text_learn: "یادگیری را شروع کنید"
   homepage_action_text_signpetition: "درخواست را امضا کنید"
   homepage_signpetition_dropdown: "درخواست ما را امضا کنید  &#x25BE;"
+  homepage_signpetition_dropdown_text: "موافقم"
   homepage_diversity_pledge: "پیمان احترام و برابری نژاد ها را بپذیرید"
   homepage_banner_text_main: "Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع علوم کامپیوتر را بهبود ببخشند."
   homepage_banner_text_link: "بیشتر بیاموزید"

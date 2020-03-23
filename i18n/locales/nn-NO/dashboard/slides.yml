@@ -566,7 +566,7 @@ nn:
         text: "For å kunne gjenta handlingen fire ganger og dermed tegne hele kvadratet, kan vi dra ut en gjentablokk og putte en \"gå fremover\" og en \"snu mot høyre\" inne i den. Når vi trykker \"kjør\", vil kunstneren gjenta de skrittene fire ganger og fullføre kvadratet."
     C2_bee_loops:
       1:
-        text: "En løkke er en repeterende handling. Jeg åpner en bikube for å inspisere den, jeg ser på rammen og så setter jeg den tilbake. Dette gjør jeg flere ganger. Det går i løkke, gjentar den samme handlingen flere ganger."
+        text: "Ei løkke er ei gjentaking av ein aktivitet. Når eg går inn i bikuben for å inspisere, tar eg opp ei ramme og så setter eg den ned att, så gjentar eg den samme handlinga fleire gongar. Løkka går i ring, der handlinga blir gjort fleire gongar."
       2:
         text: "Dette er en gjenta blokk. Det du putter inne i den vil repeteres det antall ganger som du ber den om. For eksempel, på dette nivået, i stedet for å dra ut gå fremover og få nektar tre ganger, kan vi hente dem en gang hver og repetere handlingene tre ganger. Da ble det lett!"
     C2_maze_intro:
@@ -605,7 +605,7 @@ nn:
         text: "Her forsøker jeg å gjøre en flikkflakk, men jeg faller hele tiden ned. Jeg går gjennom hver del, skritt for skritt, og innser hvor feilen min var. Treneren viste meg at jeg ikke satte hendene mine riktig på bommen. Så jeg prøvde enda en flikkflakk på bommen med den nye håndposisjonen min, og jeg klarte det! Jeg var virkelig glad jeg debugget flikkflakken min. Vi skjønte det! Debugging er å finne og fikse problemer. Bra, godt jobbet!"
     C2_zuck_repeat_loop:
       1:
-        text: "En ting datamaskiner er skikkelig gode til er å gjenta kommandoer. Siden du er et menneske ville du kjedet deg veldig hvis du måtte gjøre den samme tingen mange ganger på rad. Men en datamaskin kan gjøre den samme tingen millioner eller til og med milliarder ganger, uten å kjede seg, og kan gjøre det ordentlig bra."
+        text: "Noko datamaskiner er veldig gode til, er å gjenta kommandoar. Vi menneske gjeng fort leide dersom vi må gjere den same oppgåva mange, mange gongar på rad. Men ei datamaskin kan gjere det same millionar eller sjølv milliardar av gongar utan å gå lei."
       2:
         text: "Så hvis jeg for eksempel ønsket å gratulere alle på Facebook med bursdagen ved å sende dem en epost ville det tatt med mer enn hundre år å faktisk skrive alle disse epostene til alle sammen. Men bare med noen få linjer kode kan jeg la et datasystem sende en epost til alle på Facebook for å gratulere dem med bursdagen. Så det er hva løkker er, og grunnen til at de er verdifulle, og noe datamaskiner er veldig gode til."
       3:
@@ -814,7 +814,7 @@ nn:
       2:
         text: "Blockly er delt i tre hoveddeler. Til venstre er labyrinten hvor programmet vil kjøre. Instruksjonene for hvert nivå står under labyrinten. På midten er verktøykassen. Hver av disse blokkene er kommandoer som fuglen kan forstå. Det hvite feltet til høyre kalles arbeidsområdet, og det er her vi skal bygge programmet vårt."
       3:
-        text: "Hva skjer hvis jeg drar \"gå fremover\"-blokken til arbeidsområdet og trykker \"kjør\"? Fuglen beveger seg en boks fremover i koordinatsystemet. Hva hvis jeg vil at fuglen skal gjøre noe annet etter at den har flyttet seg frem en boks? Da legger jeg til en blokk til i programmet vårt."
+        text: "Kva skjer dersom eg drar \"gå framover\"-blokka til arbeidsområdet og trykker \"Køyr\"? Fuglen flyttar seg ein boks framover i koordinatsystemet. Kva om eg vil at fuglen skal gjere noko anna etterpå? Då legger eg til ei blokk til i programmet vårt."
       4:
         text: "Jeg kommer til å velge en \"rotér mot høyre\"-blokk og dra den inn under \"gå fremover\"-blokken, til det dukker opp en gul pil. Da slipper jeg den og de to blokkene fester seg til hverandre. Når jeg så trykker på \"Kjør\" igjen, vil fuglen utføre kommandoene i arbeidsområdet i rekkefølge fra toppen og nedover."
       5:
@@ -1175,12 +1175,13 @@ nn:
       3:
         text: "I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles på en telefon."
       4:
-        text: "Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen, hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet nedenfor."
+        text: "Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der spelet ditt vil køyre. Instruksjonane for kvart nivå er skrivne under speleflata."
       5:
         text: "I midten er verktøykassa, og hver av disse blokkene er en kommando, et stykke kode."
       6:
         text: "Det kvite området til høgre er arbeidsområdet, og det er her vi bygger opp programmet."
       7:
+        text: "For å starte må du kople blokkene dine til den oransje-\"når den køyrer\"-blokka. Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina og vil dei snappe saman."
       8:
         text: "I dette første puslespillet, vil vi få skuespillerne til å si noe ved å koble \"si\" blokken til når kjøre blokk og skrive inn meldingen. Når du har din blokker på plass, trykk på Kjør-knappen for å se hva du programmert."
       9:
@@ -1209,12 +1210,13 @@ nn:
       3:
         text: "I dag skal vi lære å gjøre alle disse tingene, en etter en, med morsomme figurer. Og så skal vi lage et spill fra grunnen av, som kan deles og spilles på en telefon."
       4:
-        text: "Skjermen din er delt inn i tre hoveddeler. Til venstre er spilldelen, hvor programmet ditt skal kjøres. Instruksjonene for hvert nivå er skrevet nedenfor."
+        text: "Skjermen din er delt i 3 hovuddelar. Den til venstre er speleflata der spelet ditt vil køyre. Instruksjonane for kvart nivå er skrivne under speleflata."
       5:
         text: "I midten er verktøykassa, og hver av disse blokkene er en kommando, et stykke kode."
       6:
         text: "Det kvite området til høgre er arbeidsområdet, og det er her vi bygger opp programmet."
       7:
+        text: "For å starte må du kople blokkene dine til den oransje-\"når den køyrer\"-blokka. Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina og vil dei snappe saman."
       8:
         text: "I dette første puslespillet, vil vi få skuespillerne til å si noe ved å koble \"si\" blokken til når kjøre blokk og skrive inn meldingen. Når du har din blokker på plass, trykk på Kjør-knappen for å se hva du programmert."
       9:

@@ -2195,7 +2195,8 @@ a.download-video {
 .standalone-video,
 .curriculum-reference,
 .multi,
-.match {
+.match,
+.bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
     border: 5px solid $cyan;
@@ -2290,6 +2291,10 @@ a.download-video {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 100%;
+}
+
+.bubble-choice #markdown.teacher {
+  margin: 10px 0;
 }
 
 .multi.contained #markdown.teacher {
@@ -2627,9 +2632,9 @@ $modal-no-icon-gap: 22px;
   }
 
   .congrats {
-    font-size: 27px;
-    line-height: 30px;
-    margin-bottom: 15px;
+    font-family: "Gotham 5r", sans-serif;
+    font-size: 21px;
+    line-height: 27px;
   }
 
   .instructions2 {

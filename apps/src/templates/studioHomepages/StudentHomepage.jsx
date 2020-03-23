@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
 import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
@@ -36,6 +37,7 @@ export default class StudentHomepage extends Component {
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
+        <SpecialAnnouncement isTeacher={false} />
         {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
         <RecentCourses
           courses={courses}

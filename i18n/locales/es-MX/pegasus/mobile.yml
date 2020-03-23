@@ -17,7 +17,6 @@
   learn_now: "Aprende Ahora"
   petition_message: "Cada alumno de cada escuela debería tener la oportunidad de aprender ciencias de la computación"
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
-  petition_sign_message_support: 'Si usted nos apoya, firme su nombre. Invite a # otros.'
   petition_join_others: 'Únete a # otros'
   name: "Nombre"
   email: "Correo electrónico"
@@ -300,6 +299,7 @@
   homepage_action_text_signpetition: "Firma la petición"
   homepage_action_text_wincelebritychat: "Gana un chat con celebridades"
   homepage_signpetition_dropdown: "Firma nuestra petición ▾"
+  homepage_signpetition_dropdown_text: "Acepto"
   homepage_diversity_pledge: "Toma la promesa de diversidad"
   homepage_banner_text_prizes: 'Vuelve la Hora del Código, 7-13 de Diciembre. '
   homepage_banner_link_prizes: 'Únete al mayor evento educativo de la historia.'

@@ -4530,12 +4530,12 @@ it-IT:
           scuro a fianco dell'acqua.
         mc_7_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
       Overworld Powered Minecart:
-        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
-          nel punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
+          punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Powered Minecart_2019:
-        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
-          nel punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
+          punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Shear Sheep:
         mc_3_a: Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te.
@@ -9546,11 +9546,6 @@ it-IT:
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
           tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsA_2019:
-        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
-          uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
-        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
-          tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
-      courseC_PlayLab_eventsA_embed_2019:
         courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
           uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
@@ -14853,6 +14848,7 @@ it-IT:
         courseE_bee_concept3a_c: Ci sono quattro tratti rettilinei di percorso, quindi
           il ciclo `ripeti ... volte` più esterno deve essere ripetuto quattro volte.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
         courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.

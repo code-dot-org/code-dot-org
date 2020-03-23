@@ -169,6 +169,10 @@ ta:
           stages:
             Lists:
               name: பட்டியல்கள்
+        coursef-draft:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
         csd6-draft:
           stages:
             Lists:
@@ -199,6 +203,22 @@ ta:
               name: செயல்பாடுகள்
             'null':
               name: 'வெறுமை'
+        coursee-2017:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
+        express-2017:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
+        new-f:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
+        course-f-2018:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
         csd6-old:
           stages:
             Lists:
@@ -241,6 +261,10 @@ ta:
               name: பாடல் எழுதுதல்
             Internet:
               name: இணையம்
+        coursef-2018:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
         csp1-2018:
           stages:
             The Internet:
@@ -303,3 +327,9 @@ ta:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
+        csd3-2020:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Functions:
+              name: செயல்பாடுகள்

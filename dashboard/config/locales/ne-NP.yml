@@ -782,6 +782,7 @@ ne:
     csp_functions: Functions
     csp_lists: Lists
     csp_loops: Loops
+    csp_unit1_2020: "(old) Unit 1: Digital Information"
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
@@ -856,6 +857,7 @@ ne:
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   pd:
     form_labels:
@@ -883,3 +885,4 @@ ne:
     accept: I agree
   gdpr_dialog:
     true: हो
+  copy: प्रतिलिपि गर्नुहोस्

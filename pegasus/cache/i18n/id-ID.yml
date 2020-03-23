@@ -27,8 +27,6 @@ id-ID:
     untuk mempelajari ilmu komputer
   petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda dan bergabunglah dengan
     milis kami dengan # orang lainnya.'
-  petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabunglah
-    dengan # orang lainnya.'
   petition_join_others: 'Bergabunglah dengan # orang-orang lainnya'
   name: Nama
   email: Email
@@ -411,6 +409,7 @@ id-ID:
   homepage_action_text_signpetition: Tandatangani petisi
   homepage_action_text_wincelebritychat: Menangkan sebuah obrolan selebriti
   homepage_signpetition_dropdown: Tandatangani petisi kami &#x25BE;
+  homepage_signpetition_dropdown_text: Saya setuju
   homepage_diversity_pledge: Ambil jaminan diversitas
   homepage_banner_text_prizes: 'The Hour of Code akan datang lagi, Desember 7-13. '
   homepage_banner_link_prizes: 'Bergabung dengan acara belajar terbesar dalam sejarah. '

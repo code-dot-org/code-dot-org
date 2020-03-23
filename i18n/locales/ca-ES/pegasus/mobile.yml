@@ -17,7 +17,6 @@
   learn_now: "Aprèn ara"
   petition_message: "Cada alumne en cada escola ha de tenir l'oportunitat d'aprendre informàtica"
   petition_sign_message: 'Si hi esteu d''acord, signeu amb el vostre nom. Uniu-vos als altres #.'
-  petition_sign_message_support: 'Signa si ens dónes suport. Uneix-te a # altres.'
   petition_join_others: 'Uneix-te a # altres'
   name: "Nom"
   email: "Correu electrònic"
@@ -236,6 +235,7 @@
   homepage_action_text_learn: "Comença a aprendre"
   homepage_action_text_signpetition: "Signa la petició"
   homepage_signpetition_dropdown: "Estic d'acord &#x25BE;"
+  homepage_signpetition_dropdown_text: "D'acord"
   homepage_banner_text_prizes: 'L''Hora del Codi s''acosta de nou, del 7 al 13 de desembre. '
   homepage_banner_link_prizes: 'Uneix-te a l''esdeveniment d''aprenentatge més gran de la història. '
   homepage_banner_text_main: "Code.org i el College Board formen una aliança per millorar la diversitat en informàtica."

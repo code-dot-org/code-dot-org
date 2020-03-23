@@ -155,7 +155,6 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: "La contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas ingresadas no coinciden"
-    under_13_consent: "Si soy menor de 13 años de edad, confirmo que tengo autorización de mi padres o de mi tutor legal para utilizar los servicios de Code.org."
     student_consent: "Confirmo que tengo la autorización de mis padres o tutores legales para utilizar los servicios de Code.org."
     agree_us_website: "Acepto usar un sitio web con sede en Estados Unidos."
     my_data_to_us: "Acepto que se envíen y almacenen datos de mi utilización de este sitio web en Estados Unidos."
@@ -557,6 +556,7 @@ es-MX:
     download: 'Descargar el video'
     show_notes: 'Mostrar notas'
     show_video: 'Mostrar el video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Tu navegador no es compatible. Por favor, actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."
@@ -772,6 +772,7 @@ es-MX:
     privacy_notice: "Aviso de privacidad"
     accept_label: 'Acepto los <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>.'
     accept_label_markdown: Acepto los [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}).
+    accept_tos: Al registrarse a Code.org, usted acepta los [Términos de Servicio](%{tos_url}) y nuestra [Póliza de Privacidad](%{privacy_url}).
     accept: "Acepto"
     print: "Imprimir"
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>. Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.'
@@ -941,6 +942,11 @@ es-MX:
     csp_traversals: 'Recorridos'
     csp_libraries: 'Bibliotecas'
     csp_parameters_return_values: 'Parámetros y valores de retorno'
+    csp_unit1_2020: 'Tema 1: Información digital'
+    csp_unit2_2020: 'Unidad 2: Internet'
+    csp_unit3_2020: 'Unidad 3: Introducción al diseño de aplicaciones'
+    csp_unit6_2020: 'Unidad 6: Algoritmos'
+    csp_unit9_2020: 'Unidad 9: Datos'
     dlp: 'Preguntas para reflexionar'
     time4cs_c1: 'Colección 1: Everglades y sus ecosistemas'
     time4cs_c2: 'Colección 2: Cadenas de comida (en Everglades)'
@@ -1132,3 +1138,4 @@ es-MX:
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
+  copy: 'Copiar'

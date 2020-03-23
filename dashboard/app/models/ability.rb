@@ -48,8 +48,8 @@ class Ability
       Pd::Application::Teacher2021Application,
       Pd::InternationalOptIn,
       :maker_discount,
-      :show_manifest,
-      :updated_manifest
+      :edit_manifest,
+      :update_manifest
     ]
     cannot :index, Level
 
@@ -108,6 +108,7 @@ class Ability
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
+        can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
       end
 
       if user.facilitator?
@@ -243,7 +244,7 @@ class Ability
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
 
-      can [:show_manifest, :updated_manifest], :dataset
+      can [:edit_manifest, :update_manifest, :index, :show, :update], :dataset
     end
 
     if user.persisted?

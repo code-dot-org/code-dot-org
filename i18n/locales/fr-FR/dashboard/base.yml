@@ -19,6 +19,11 @@ fr:
       pair_programmer: 'Vous êtes en train de programmer avec un élève qui n''a pas accès à ce contenu. Pour accéder à ce contenu, arrêtez la programmation en binôme et essayez à nouveau.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "n'est pas valide. Tu noteras que chaque lien ne peut être utilisé qu'une seule fois pour réinitialiser ton mot de passe, et seul le lien envoyé le plus récemment fonctionnera."
       messages:
         blank: "est obligatoire"
         blank_plural: "est requis"
@@ -45,6 +50,7 @@ fr:
         finish_sign_up_subheader_markdown: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour **%{email}**.'
         finish_sign_up_subheader_provider: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec <strong>%{provider}</strong> de <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec **%{provider}** de **%{email}**.'
+        reset_password_token: "Le lien que vous avez suivi pour réinitialiser le mot de passe"
         error:
           future: ne peut pas être dans le futur
   beta: "beta"
@@ -117,6 +123,10 @@ fr:
     unable_to_connect_provider: "Impossible de connecter votre compte Code.org à votre %{provider}. Veuillez réessayer s'il vous plaît."
     already_in_use: "Votre compte de %{provider} est déjà connecté à un autre compte de Code.org."
     already_linked: "Votre compte de %{provider} est déjà associé à votre compte de Code.org."
+    existing_account:
+      account_exists: "Bonnes nouvelles ! Tu as déjà un compte Code.org qui utilise %{email}"
+      sign_in: "Veuillez vous connecter et nous lierons votre %{provider} profil."
+      sign_up: "Pas votre adresse électronique ? Souhaitez-vous créer un nouveau compte avec une adresse électronique différente ? Nous lierons votre %{provider} profil si vous choisissez de créer un nouveau compte."
   signup_form:
     email_signup: 'Inscrivez-vous avec votre adresse email'
     student_count: '%{count} élèves se sont déjà inscrits.'
@@ -124,7 +134,7 @@ fr:
     overview: 'Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a href="/">Vous pouvez parcourir les différentes étapes et les puzzles</a> sans compte, mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.'
     overview_markdown: 'Inscrivez-vous pour suivre vos progression ou gérer votre classe. [Vous pouvez parcourir les différentes étapes et les puzzles](/) sans compte, mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.'
     hoc_already_signed_up_heading: 'Commencez sans vous connecter'
-    hoc_already_signed_up_content: 'Vous êtes inscrit pour enseigner une Heure du Code! Vous et vos élèves n''avez pas besoin de vous connecter à Code Studio pour participer à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez un didacticiel</a> pour votre classe et partagez le lien avec eux. <br/> <br/> Si vous avez apprécié l''Heure du Code et souhaitez aller plus loin, vous pouvez configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire vos étudiants dans l''un de nos <a href="https://code.org/educate"> cours plus longs </a >.'
+    hoc_already_signed_up_content: 'Vous êtes inscrit pour enseigner une Hour of Code ! Vous et vos élèves n''avez pas besoin de vous connecter à Code Studio pour participer à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez un didacticiel</a> pour votre classe et partagez le lien avec eux. <br/> <br/> Si vous avez apprécié Hour of Code et souhaitez aller plus loin, vous pouvez configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire vos étudiants dans l''un de nos cours <a href="https://code.org/educate">  plus longs </a >.'
     hoc_already_signed_up_content_post_hoc: 'Je vous remercie d’avoir accueilli Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d'' un mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves et suivre leurs évolutions. <a href="%{studio_url}"> vous pouvez également continuer à parcourir les différentes étapes et énigmes</a> sans créer un compte.'
     hoc_already_signed_up_content_post_hoc_markdown: 'Je vous remercie d’avoir accueilli Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d'' un mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves et suivre leurs évolutions. [vous pouvez également continuer à parcourir les différentes étapes et énigmes](%{studio_url}) sans créer un compte.'
     teacher_educator_guide: 'Consultez le guide de l''enseignant'
@@ -145,11 +155,10 @@ fr:
     valid_password: "Mot de passe correct !"
     invalid_password: "Le mot de passe doit comporter au moins 6 caractères."
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
-    under_13_consent: "Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
     student_consent: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
     agree_us_website: "J’accepte d’utiliser un site Web basé aux États-Unis."
     my_data_to_us: "Des informations sur mon utilisation de ce site peuvent être envoyées et enregistrées ou traitées aux États-Unis."
-    student_terms_markdown: "Les adresses de courriel ne sont pas stockées dans un format qui nous permet de contacter les étudiants.\nLes étudiants ne recevront jamais de courriels de Code.org sauf lors de la procédure de récupération de mot de passe.\nVoir notre [politique de confidatialité](http://code.org/privacy) pour plus d'informations."
+    student_terms_markdown: "Les adresses de courriel ne sont pas stockées dans un format qui nous permet de contacter les étudiants.Les étudiants ne recevront jamais de courriels de Code.org sauf lors de la procédure de récupération de mot de passe.Voir notre [politique de confidatialité](http://code.org/privacy) pour plus d'informations."
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
@@ -450,6 +459,8 @@ fr:
     enter_parent_email: "Entrez l'adresse e-mail de vos parents ou de votre tuteur (pour la récupération de mot de passe)"
     update: "Mise à jour du compte"
     account_successfully_updated: "Compte actualisé avec succès."
+    auth_option_saved: "Vous avez réussi à lier votre %{provider} compte avec l'adresse électronique %{email}."
+    auth_option_saved_no_email: "Vous avez réussi à lier votre %{provider} compte."
     update_email: "Mise à jour"
   user_level:
     completed: 'Terminé'
@@ -552,12 +563,14 @@ fr:
     download: 'Télécharger la vidéo'
     show_notes: 'Afficher les notes'
     show_video: 'Afficher la vidéo'
+    label: 'Vidéo'
   compatibility:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
       link: "Pour en savoir plus"
       applab_unsupported_tablet: "Le labo des applis fonctionne mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes avec de cet outil sur votre appareil actuel."
       gamelab_unsupported_tablet: "Game Lab fonctionne mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes avec cet outil sur votre appareil actuel."
+      oceans_unsupported_browser: "Ce navigateur n'est pas pris en charge pour ce didacticiel. Veuillez essayer de visiter cette page en utilisant Edge, Chrome, Firefox ou un autre navigateur moderne."
       weblab_unsupported_browser: "Malheureusement, Web Lab a quelques problèmes de chargement avec ce navigateur. Vous pouvez utiliser un autre navigateur jusqu'à ce que les soucis soient résolu. Désolé pour la gêne occasionnée."
       weblab_unsupported_locale_storage: "Vous pourriez rencontrer des difficultés à utiliser le Web Lab en mode incognito. Veuillez recharger votre projet en mode normal. Désolé pour la gêne occasionnée."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
@@ -770,6 +783,7 @@ fr:
     privacy_notice: "Déclaration de confidentialité"
     accept_label: 'J''accepte la mise à jour des <a href="%{tos_url}" target="_blank"> Conditions d’utilisation</a> et de la<a href="%{privacy_url}" target="_blank"> Politique de confidentialité</a>'
     accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url}) et de la[Politique de confidentialité](%{privacy_url})
+    accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url}) et [Privacy Policy](%{privacy_url}).
     accept: "Accepter "
     print: "Imprimer"
     reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url}" target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
@@ -935,13 +949,20 @@ fr:
     csp_traversals: 'Parcours'
     csp_libraries: 'Bibliothèques'
     csp_parameters_return_values: 'Paramètres et Valeur de Retour'
+    csp_unit1_2020: 'Unité 1: L’Information numérique'
+    csp_unit2_2020: 'Principes de l''informatique, unité 2'
     dlp: 'Sujets de réflexion'
     time4cs_c1: 'Les Everglades et ses écosystèmes'
     time4cs_c2: 'Les chaînes alimentaires dans les Everglades'
     time4cs_c3: 'Vivre dans les Everglades'
     time4cs_c4: 'Impact Invasif sur les Everglades'
     time4cs_c5: 'Citoyens influent sur les changements dans les Everglades'
+    time4cs_c6: 'Conditions (révision)'
+    k5_csf_intro: 'Familiarisez-vous avec les cours sur les Fondamentaux de l''Informatique'
+    k5_coding_concepts: 'Concepts de Codage et Stratégies D''Enseignement'
     k5_next_steps: 'Prochaines étapes'
+    k5_basic_concepts: 'Concepts de Codage de Base et Pratiques D''enseignement'
+    k5_diving_deeper: 'Immersion Totale : Cours E et F'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas géré par Code.org.
@@ -1119,3 +1140,4 @@ fr:
   page_not_found_header: '404 : Page introuvable'
   page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse web et réessayez, ou retournez à notre page d’accueil."
   page_not_found_button: "Retourner à la page d’accueil"
+  copy: 'Copier'
