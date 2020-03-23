@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import color from '../util/color';
+import i18n from '@cdo/locale';
 
 export default class AtHomeBanner extends React.Component {
   styles = {
@@ -67,13 +68,9 @@ export default class AtHomeBanner extends React.Component {
               </div>
               <div className="texts" style={this.styles.texts}>
                 <div className="text" style={this.styles.text}>
-                  {/*i18n.codeorgHomepageSpecial2020Body1()*/}
-                  Support for parents and teachers facing school closures.
+                  {i18n.atHomeBannerBody1()}
                 </div>
-                <div className="text">
-                  {/*i18n.codeorgHomepageSpecial2020Body2()*/}
-                  See our suggested learning resources.
-                </div>
+                <div className="text">{i18n.atHomeBannerBody2()}</div>
               </div>
             </div>
             <div className="col-33" style={this.styles.content}>
@@ -82,7 +79,7 @@ export default class AtHomeBanner extends React.Component {
                 text="Get started"
                 href="/athome"
               >
-                {/*i18n.codeorgHomepageSpecial2020LinkText()*/}
+                {i18n.atHomeBannerLinkText()}
               </Button>
             </div>
           </div>
