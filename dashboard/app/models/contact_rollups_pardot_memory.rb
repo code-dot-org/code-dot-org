@@ -28,7 +28,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
 
     # TODO: bulk insert and update. or even bulk delete and then bulk insert
-    Pardot.retrieve_new_ids(last_id).each do |mapping|
+    PardotV2.retrieve_new_ids(last_id).each do |mapping|
       pardot_record = find_or_initialize_by(email: mapping[:email])
       pardot_record.pardot_id = mapping[:id]
       pardot_record.pardot_id_updated_at = Time.now
