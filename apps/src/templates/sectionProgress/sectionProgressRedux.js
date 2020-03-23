@@ -216,12 +216,16 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === ADD_STUDENT_TIMESTAMPS) {
+    const studentTimestamps = _.mapValues(
+      action.studentTimestamps,
+      seconds => seconds * 1000
+    );
     return {
       ...state,
       studentTimestampsByScript: {
         [action.scriptId]: {
           ...state.studentTimestampsByScript[action.scriptId],
-          ...action.studentTimestamps
+          ...studentTimestamps
         }
       }
     };

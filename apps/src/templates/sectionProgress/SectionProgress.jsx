@@ -162,7 +162,8 @@ class SectionProgress extends Component {
 
   tooltipTextForStudent = studentId => {
     const timestamp = this.props.studentTimestamps[studentId];
-    return `Last Progress: ${moment(timestamp * 1000).calendar()}`;
+    const time = timestamp ? moment(timestamp).calendar() : i18n.none();
+    return `Last Progress: ${time}`;
   };
 
   navigateToScript = () => {
