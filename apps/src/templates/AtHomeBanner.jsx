@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import color from '../util/color';
 import i18n from '@cdo/locale';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class AtHomeBanner extends React.Component {
   styles = {
@@ -56,7 +57,7 @@ export default class AtHomeBanner extends React.Component {
 
   render() {
     return (
-      <a href="/athome">
+      <a href={pegasus('/athome')}>
         <div
           className="special_2020_announcement"
           style={this.styles.announcement}
@@ -77,7 +78,7 @@ export default class AtHomeBanner extends React.Component {
               <Button
                 style={this.styles.button}
                 text={i18n.atHomeBannerLinkText()}
-                href="/athome"
+                href={pegasus('/athome')}
               />
             </div>
           </div>
