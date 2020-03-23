@@ -5,6 +5,7 @@ import {expect} from '../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -173,7 +174,7 @@ export function itImplementsTheMakerBoardInterface(
         });
 
         // Board-specific tests
-        if (BoardClass === CircuitPlaygroundBoard) {
+        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
           describe('led', () => {
             function expectLedToHaveFunction(fnName) {
               expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
@@ -483,7 +484,7 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (BoardClass === CircuitPlaygroundBoard) {
+    if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
       /**
        * @function
        * @name MakerBoard#createLed
@@ -532,7 +533,7 @@ export function itImplementsTheMakerBoardInterface(
         expect(button).to.have.property('isPressed');
 
         // TODO - not yet implemented for microbit
-        if (BoardClass === CircuitPlaygroundBoard) {
+        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
           expect(button).to.have.property('holdtime');
         }
       });
