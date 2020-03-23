@@ -1,0 +1,29 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-03-17T21:09:52.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**How do I switch between files?**]\r\n\r\nClick the name of the file you want to look at in the menu on the left side of the screen.\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Adding Style\r\n\r\nThis Web Lab project is using a new language to add style to the page. Explore both the `index.html` and `style.css` files. Think about the following questions.\r\n\r\n* What changes is this new language making to the page?\r\n* How is this language different from HTML?\r\n* How are the `index.html` and `style.css` files connected?",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"h1 {\\n    color: blue;\\n    text-align: center;\\n}\\n\\nh2 {\\ntext-align: right;\\n  color: red;\\n}\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  <h1>We're about to learn a new language!</h1>\\n  <h2>And it's going to help us add STYLE</h2>\\n  <h1>But how does it work?</h1>\\n</body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "display_name": "Exploration: Adding Style",
+    "teacher_markdown": "Have students explore this level with a partner. Afterwards lead a short share out so that partners can share with the class their responses to the three questions in the instructions. The subsequent video should help reinforce what students discovered so there's no need to lead a lengthy debrief conversation.",
+    "parent_level_id": 20017,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:38:13 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-12 23:31:28 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-28 17:09:30 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:09:43 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:16:12 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:17:21 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:19:00 +0000\",\"changed\":[\"encrypted_examples\",\"start_sources\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:21:41 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:23:50 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-06-28 17:25:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-09-19 16:16:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-19 17:13:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

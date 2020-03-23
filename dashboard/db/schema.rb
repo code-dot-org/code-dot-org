@@ -268,6 +268,38 @@ ActiveRecord::Schema.define(version: 20200317174030) do
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
   end
 
+  create_table "contact_rollups_comparisons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",               null: false
+    t.json     "old_data"
+    t.datetime "old_data_updated_at"
+    t.json     "new_data"
+    t.datetime "new_data_updated_at"
+    t.datetime "created_at"
+    t.index ["email"], name: "index_contact_rollups_comparisons_on_email", unique: true, using: :btree
+  end
+
+  create_table "contact_rollups_final", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",      null: false
+    t.json     "data",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_contact_rollups_final_on_email", unique: true, using: :btree
+  end
+
+  create_table "contact_rollups_pardot_memory", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "email",                null: false
+    t.integer  "pardot_id"
+    t.datetime "pardot_id_updated_at"
+    t.json     "data_synced"
+    t.datetime "data_synced_at"
+    t.datetime "data_rejected_at"
+    t.string   "data_rejected_reason"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["email"], name: "index_contact_rollups_pardot_memory_on_email", unique: true, using: :btree
+    t.index ["pardot_id"], name: "index_contact_rollups_pardot_memory_on_pardot_id", unique: true, using: :btree
+  end
+
   create_table "contact_rollups_processed", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "email",      null: false
     t.json     "data",       null: false
