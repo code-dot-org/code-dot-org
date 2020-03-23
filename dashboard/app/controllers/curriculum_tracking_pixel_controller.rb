@@ -17,15 +17,10 @@ class CurriculumTrackingPixelController < ApplicationController
       # es-mx/csf-1718/coursec/10/'
       split_url = curriculum_page.split('/')
       # ["", "csf-18", "pre-express", "11"]
-      # ["", "es-mx", "csf-1718", "coursec", "10"]
+      # ["es-mx", "csf-1718", "coursec", "10"]
 
-      non_en = split_url[1][2] == "-"
-      if non_en
-        locale = split_url.shift
-        split_url.drop(1)
-      else
-        locale = "en-us"
-      end
+      non_en = !!split_url[0].match(/\S{2}-\S{2}/)
+      locale = non_en ? split_url[0] : "en-us"
 
       if split_url.length > 1
         # csf, csd, csp including version year, algebra or hoc
