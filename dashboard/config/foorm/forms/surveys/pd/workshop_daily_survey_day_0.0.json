@@ -988,6 +988,7 @@
      },
      {
       "type": "rating",
+      "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
       "name": "expertise_rating",
       "indent": 12,
       "titleLocation": "hidden",
@@ -1001,6 +1002,7 @@
      },
      {
       "type": "rating",
+      "title": "ABC CBV. 1. Vocabulary before activity  --- 5. vocabulary after activity",
       "name": "vocabulary_rating",
       "indent": 12,
       "titleLocation": "hidden",
@@ -1014,6 +1016,7 @@
      },
      {
       "type": "rating",
+      "title": "Recruit Responsibility. 1. recruit students interested in CS  --- 5. recruit representative population",
       "name": "recruiting_rating",
       "indent": 12,
       "titleLocation": "hidden",
@@ -1027,6 +1030,7 @@
      },
      {
       "type": "rating",
+      "title": "Prioritize Time. 1. prioritize most need --- 5. distribute equally",
       "name": "time_prioritization_ratings",
       "indent": 12,
       "titleLocation": "hidden",
@@ -1040,6 +1044,7 @@
      },
      {
       "type": "rating",
+      "title": "Instructional focus. 1. more material,some students struggle --- 5. less material, leave fewer behind",
       "name": "material_ratings",
       "indent": 12,
       "titleLocation": "hidden",
