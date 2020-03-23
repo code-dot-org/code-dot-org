@@ -1682,3 +1682,31 @@ hy:
           stages:
             Spelling Bee:
               name: Spelling Bee
+        csp3-virtual:
+          description_short: Programming
+          stages:
+            Creating Functions:
+              name: Ստեղծվում գործառույթները
+        csd3-virtual:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: փոփոխականների
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Մինչ Loops
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: գործառույթները
+        code-break:
+          stages:
+            Algorithms:
+              name: ալգորիթմները
+            Events:
+              name: Իրադարձություններ
