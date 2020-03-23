@@ -20,39 +20,29 @@ class CurriculumTrackingPixelController < ApplicationController
       # ["", "es-mx", "csf-1718", "coursec", "10"]
 
       non_en = split_url[1][2] == "-"
+      if non_en
+        locale = split_url.shift
+        split_url.drop(1)
+      else
+        locale = "en-us"
+      end
+
       if split_url.length > 1
-        if non_en
-          locale = split_url[1]
-        else
-          locale = "en-us"
-          # csf, csd, csp including version year, algebra or hoc
-          csx = split_url[1]
-        end
+        # csf, csd, csp including version year, algebra or hoc
+        csx = split_url[1]
       end
 
       if split_url.length > 2
-        if non_en
-          csx = split_url[2]
-        else
-          # csf -> coursea, courseb, ..., pre-express, express
-          # csd/csp -> unit1, unit2, ...
-          # algebra -> courseA, courseB
-          # hoc -> plugged, unplugged
-          course_or_unit = split_url[2]
-        end
+        # csf -> coursea, courseb, ..., pre-express, express
+        # csd/csp -> unit1, unit2, ...
+        # algebra -> courseA, courseB
+        # hoc -> plugged, unplugged
+        course_or_unit = split_url[2]
       end
 
       if split_url.length > 3
-        if non_en
-          course_or_unit = split_url[3]
-        else
-          # lesson number, standards, vocab, resources
-          lesson = split_url[3]
-        end
-      end
-
-      if split_url.length > 4 && non_en
-        lesson = split_url[4]
+        # lesson number, standards, vocab, resources
+        lesson = split_url[3]
       end
 
       FirehoseClient.instance.put_record(
