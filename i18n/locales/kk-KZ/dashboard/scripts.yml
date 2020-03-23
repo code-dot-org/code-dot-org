@@ -1664,3 +1664,31 @@ kk:
           stages:
             Spelling Bee:
               name: Сөз жазушы Ара
+        csp3-virtual:
+          description_short: Бағдарламалау
+          stages:
+            Creating Functions:
+              name: Функцияларды Құру
+        csd3-virtual:
+          description_short: "Бағдарламалау"
+          stages:
+            Variables:
+              name: Айнымалылар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Шарт орындалғанша Циклдері
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Функциялар
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритмдер
+            Events:
+              name: Шаралар
