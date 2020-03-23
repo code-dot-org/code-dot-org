@@ -10,8 +10,7 @@ export default class AtHomeBanner extends React.Component {
       color: 'white',
       fontSize: 18,
       padding: 16,
-      overflow: 'hidden',
-      marginBottom: 20
+      overflow: 'hidden'
     },
     content: {
       backgroundColor: color.purple,
