@@ -12,6 +12,31 @@ from collections import defaultdict, OrderedDict
 
 import torch
 
+# TODO: change me to new problem.
+# map from integers to feedback labels
+IX_TO_LABEL = {
+    0: 'shapeLoop-none',
+    1: 'square-none',
+    2: 'side-none',
+    3: 'shapeLoopHeader-missingValue',
+    4: 'shapeLoopHeader-wrongOrder',
+    5: 'shapeLoopHeader-wrongDelta',
+    6: 'shapeLoopHeader-wrongEnd',
+    7: 'shapeLoopHeader-wrongStart',
+    8: 'square-armsLength',
+    9: 'square-unrolled',
+    10: 'square-wrongNumSides',
+    11: 'side-forgotLeft',
+    12: 'side-forgotMove',
+    13: 'side-wrongMoveLeftOrder',
+    14: 'side-armsLength',
+    15: 'turn-wrongAmount',
+    16: 'turn-rightLeftConfusion',
+    17: 'move-wrongAmount',
+}
+LABEL_TO_IX = dict([[v,k] for k,v in IX_TO_LABEL.items()])
+NUM_LABELS = len(IX_TO_LABEL)
+
 # these are "special" tokens used often to handle language
 # given a sentence like "A brown dog.", we add these tokens 
 # to make it:
