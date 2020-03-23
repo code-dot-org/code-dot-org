@@ -1,0 +1,94 @@
+import React from 'react';
+import Button from './Button';
+import color from '../util/color';
+
+export default class AtHomeBanner extends React.Component {
+  styles = {
+    announcement: {
+      textAlign: 'center',
+      backgroundColor: color.purple,
+      color: 'white',
+      fontSize: 18,
+      padding: 16,
+      overflow: 'hidden',
+      marginBottom: 20
+    },
+    content: {
+      backgroundColor: color.purple,
+      color: color.white
+    },
+    icon: {
+      float: 'left',
+      fontSize: 60,
+      paddingRight: 30
+    },
+    texts: {
+      fontFamily: "'Gotham 4r', sans-serif",
+      float: 'left',
+      textAlign: 'left'
+    },
+    text: {
+      paddingTop: 7,
+      paddingBottom: 5
+    },
+    button: {
+      color: color.white,
+      fontSize: 18,
+      backgroundColor: color.purple,
+      borderColor: color.white,
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderBottomLeftRadius: 3,
+      borderBottomRightRadius: 3,
+      borderTopLeftRadius: 3,
+      borderTopRightRadius: 3,
+      minWidth: 230,
+      height: 40,
+      padding: '0 30px',
+      boxShadow: 'none',
+      ':hover': {
+        color: color.white,
+        borderColor: color.white,
+        backgroundColor: color.purple
+      }
+    }
+  };
+
+  render() {
+    return (
+      <a href="/athome">
+        <div
+          className="special_2020_announcement"
+          style={this.styles.announcement}
+        >
+          <div className="container_responsive">
+            <div className="col-66" style={this.styles.content}>
+              <div className="icon tablet-feature">
+                <i className="fa fa-home" style={this.styles.icon} />
+              </div>
+              <div className="texts" style={this.styles.texts}>
+                <div className="text" style={this.styles.text}>
+                  {/*i18n.codeorgHomepageSpecial2020Body1()*/}
+                  Support for parents and teachers facing school closures.
+                </div>
+                <div className="text">
+                  {/*i18n.codeorgHomepageSpecial2020Body2()*/}
+                  See our suggested learning resources.
+                </div>
+              </div>
+            </div>
+            <div className="col-33" style={this.styles.content}>
+              <Button
+                style={this.styles.button}
+                text="Get started"
+                href="/athome"
+              >
+                {/*i18n.codeorgHomepageSpecial2020LinkText()*/}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </a>
+    );
+  }
+}
