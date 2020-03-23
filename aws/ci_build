@@ -189,6 +189,9 @@ def main
       end
     end
 
+    tests_over_flake_threshold = `./bin/test_flakiness -x 0.2`
+    ChatClient.log "Tests exceeding flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/> Please ensure these tests are being investigated!", color: 'red'
+
     emit_deploy_metric(rack_env.to_s.titleize, status == 0)
   end
 
