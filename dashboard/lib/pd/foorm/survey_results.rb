@@ -43,14 +43,14 @@ module Pd::Foorm
       rollup = get_rollup_from_parsed_data(parsed_forms, summarized_answers, ws_data.course)
       return result_data unless rollup
 
-      result_data[:rollups] = {}
-      result_data[:rollups][:single_workshop] = {
+      result_data[:workshop_rollups] = {}
+      result_data[:workshop_rollups][:single_workshop] = {
         averages: rollup[:averages],
         response_count: rollup[:response_count],
         workshop_id: ws_data.id
       }
       overall_rollup = get_rollup_for_course(ws_data.course)
-      result_data[:rollups][:overall] = {
+      result_data[:workshop_rollups][:overall] = {
         averages: overall_rollup[:averages],
         response_count: overall_rollup[:response_count]
       }
