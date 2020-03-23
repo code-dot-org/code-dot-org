@@ -1,0 +1,18 @@
+March 23, 2020
+
+Things i have learned:
+
+    - hints are stored in a redux state that is populated ONCE on loading. Hints are manually specified by the level creator. 
+        - redux : https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/redux/authoredHints.js
+        - loading initial hints : https://github.com/code-dot-org/code-dot-org/blob/21c724e6f7c65b08ee8d82347a9beb882eb26252/apps/src/StudioApp.js#L336-L341
+        - dispatching to redux : https://github.com/code-dot-org/code-dot-org/blob/21c724e6f7c65b08ee8d82347a9beb882eb26252/apps/src/authoredHints.js#L102
+        - example config by levelbuilder : https://github.com/code-dot-org/code-dot-org/blob/188131c69a07663a6656671ea767be9b0c642533/dashboard/config/scripts/levels/2-3%20Artist%201%20new.level#L37
+    - code blocks are rendered by blockly
+        - separate code base https://github.com/code-dot-org/blockly
+        - can interact with Blockly using JS console
+        - can interact with Blockly from Javascript
+            - example : https://github.com/code-dot-org/code-dot-org/blob/188131c69a07663a6656671ea767be9b0c642533/apps/src/StudioApp.js#L439
+    - good file to start from : StudioApp
+        - https://github.com/code-dot-org/code-dot-org/blob/21c724e6f7c65b08ee8d82347a9beb882eb26252/apps/src/StudioApp.js#L336-L341
+    - where is the callback when user clicks run?
+        - for Artist : https://github.com/code-dot-org/code-dot-org/blob/65fec2f9c2e4d65c570d9d4c6e2ef7fa432520d6/apps/src/turtle/artist.js#L868-L869
