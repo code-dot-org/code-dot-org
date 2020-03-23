@@ -225,7 +225,12 @@ Dashboard::Application.routes.draw do
     resources :blocks, constraints: {id: /[^\/]+/}
   end
   resources :shared_blockly_functions, path: '/functions'
-  resources :libraries
+
+  resources :libraries do
+    collection do
+      get '/get_updates', to: 'libraries#get_updates'
+    end
+  end
 
   resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
     collection do
@@ -433,6 +438,7 @@ Dashboard::Application.routes.draw do
 
         get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
       end
+
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
@@ -442,6 +448,7 @@ Dashboard::Application.routes.draw do
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
       post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
+      get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'

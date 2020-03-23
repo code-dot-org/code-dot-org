@@ -26,7 +26,7 @@ module Pd::Foorm
       foorm_submissions.each do |submission|
         form_key = get_form_key(submission.form_name, submission.form_version)
         survey_key = get_survey_key(ws_submissions.where(foorm_submission_id: submission.id).first)
-        next unless parsed_forms[form_key] && parsed_forms[form_key]
+        next unless parsed_forms[form_key]
         form_questions = parsed_forms[form_key]
         workshop_summary[survey_key] ||= {response_count: 0}
         workshop_summary[survey_key][:response_count] += 1

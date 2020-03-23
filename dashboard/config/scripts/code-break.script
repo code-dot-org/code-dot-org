@@ -1,0 +1,9 @@
+stage 'Algorithms'
+level 'Code Print: Episode 1', progression: 'Code Break: Episode 1'
+level 'CodeBreak E01 Beg Challenge', progression: 'Beginner Challenge: Create Your Own Drawing'
+level 'CodeBreak E01 Int Challenge', progression: 'Intermediate Challenge: Create Your Own Drawing'
+
+stage 'Events'
+level 'Code Print: Episode 1', progression: 'Code Break: Episode 2'
+level 'CodeBreak E01 Beg Challenge', progression: 'Beginner Challenge: Dance Party'
+level 'CodeBreak E01 Int Challenge', progression: 'Intermediate Challenge: Dance Party'
