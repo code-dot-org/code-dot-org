@@ -80,6 +80,7 @@ namespace :seed do
     'coursea-2019',
     'coursec-2019',
     'coursee-2019',
+    'csd3-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
