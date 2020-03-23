@@ -15,7 +15,7 @@ class MegaSection
   end
 
   def self.environment_check!
-    raise "Should not be run outside of adhoc, development  or test" unless [:adhoc, :development, :test].include?(CDO.rack_env)
+    raise "Should not be run in production" if rack_env?(:production)
   end
 
   def self.seed
