@@ -98,7 +98,7 @@ export class LibraryManagerDialog extends React.Component {
 
   state = {
     importLibraryId: '',
-    libraries: [],
+    projectLibraries: [],
     classLibraries: [],
     cachedClassLibraries: [],
     viewingLibrary: {},
@@ -114,18 +114,19 @@ export class LibraryManagerDialog extends React.Component {
   }
 
   onOpen = () => {
-    this.setState({libraries: dashboard.project.getProjectLibraries() || []});
+    const libraries = dashboard.project.getProjectLibraries() || [];
+    this.setState({projectLibraries: libraries});
 
     let libraryClient = new LibraryClientApi();
     libraryClient.getClassLibraries(
       classLibraries => {
         const projectLibraries = mapUserNameToProjectLibraries(
-          this.state.libraries,
+          libraries,
           classLibraries
         );
         this.setState({
           classLibraries,
-          libraries: projectLibraries
+          projectLibraries: projectLibraries
         });
       },
       error => {
@@ -139,23 +140,22 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   addLibraryToProject = libraryJson => {
+    const {projectLibraries} = this.state;
     if (!libraryJson) {
       return;
     }
 
-    dashboard.project.setProjectLibraries([
-      ...this.state.libraries,
-      libraryJson
-    ]);
-    this.setState({libraries: dashboard.project.getProjectLibraries()});
+    dashboard.project.setProjectLibraries([...projectLibraries, libraryJson]);
+    this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
   };
 
   updateLibraryInProject = libraryJson => {
+    const {projectLibraries} = this.state;
     if (!libraryJson) {
       return;
     }
 
-    let libraries = [...this.state.libraries];
+    let libraries = [...projectLibraries];
     const libraryIndex = libraries.findIndex(
       library => library.channelId === libraryJson.channelId
     );
@@ -176,8 +176,8 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   fetchLatestLibrary = (channelId, callback) => {
-    let {cachedClassLibraries} = this.state;
-    let cachedLibrary = cachedClassLibraries.find(
+    const {cachedClassLibraries} = this.state;
+    const cachedLibrary = cachedClassLibraries.find(
       library => library.channelId === channelId
     );
     if (cachedLibrary) {
@@ -212,25 +212,21 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   removeLibrary = libraryName => {
+    const {projectLibraries} = this.state;
     dashboard.project.setProjectLibraries(
-      this.state.libraries.filter(library => {
+      projectLibraries.filter(library => {
         return library.name !== libraryName;
       })
     );
-    this.setState({libraries: dashboard.project.getProjectLibraries()});
+    this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
   };
 
   displayProjectLibraries = () => {
-    let {libraries} = this.state;
-    if (!Array.isArray(libraries) || !libraries.length) {
-      return (
-        <div style={styles.message}>
-          You have no libraries in your project. Try adding one from your class
-          list or from an ID.
-        </div>
-      );
+    const {projectLibraries} = this.state;
+    if (!Array.isArray(projectLibraries) || !projectLibraries.length) {
+      return <div style={styles.message}>{i18n.noLibrariesInProject()}</div>;
     }
-    return libraries.map(library => {
+    return projectLibraries.map(library => {
       return (
         <LibraryListItem
           key={library.name}
@@ -246,14 +242,9 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   displayClassLibraries = () => {
-    let {classLibraries} = this.state;
+    const {classLibraries} = this.state;
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
-      return (
-        <div style={styles.message}>
-          No one in your class has published a library. Try adding one from an
-          ID.
-        </div>
-      );
+      return <div style={styles.message}>{i18n.noLibrariesInClass()}</div>;
     }
     return classLibraries.map(library => {
       return (
@@ -285,8 +276,14 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   render() {
-    let {isOpen} = this.props;
-    let {isViewingCode, importLibraryId, viewingLibrary} = this.state;
+    const {isOpen} = this.props;
+    const {
+      isViewingCode,
+      importLibraryId,
+      viewingLibrary,
+      isLoading,
+      error
+    } = this.state;
     return (
       <div>
         <BaseDialog
@@ -314,15 +311,13 @@ export class LibraryManagerDialog extends React.Component {
                 this.fetchLatestLibrary(importLibraryId, this.addLibraryById);
               }}
               type="button"
-              disabled={!this.state.importLibraryId}
+              disabled={!importLibraryId}
             >
-              {this.state.isLoading && (
-                <FontAwesome icon="spinner" className="fa-spin" />
-              )}
-              {!this.state.isLoading && i18n.add()}
+              {isLoading && <FontAwesome icon="spinner" className="fa-spin" />}
+              {!isLoading && i18n.add()}
             </button>
           </div>
-          <div style={styles.error}>{this.state.error}</div>
+          <div style={styles.error}>{error}</div>
         </BaseDialog>
         <LibraryViewCode
           isOpen={isViewingCode}
