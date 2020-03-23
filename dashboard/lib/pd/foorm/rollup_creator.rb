@@ -16,13 +16,22 @@ module Pd::Foorm
         case questions_and_forms[question][:type]
         when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT
           next unless answers[:count] > 0
-          rollup[:averages][question] = answers[:sum].to_f / answers[:count]
+          rollup[:averages][answers[:survey_name]] ||= {}
+          rollup[:averages][answers[:survey_name]][question] = answers[:sum].to_f / answers[:count]
         when ANSWER_MATRIX
-          rollup[:averages][question] = {}
+          rollup[:averages][answers[:survey_name]] ||= {}
+          rollup[:averages][answers[:survey_name]][question] = {}
+          averages = {}
+          overall_sum = 0
+          overall_count = 0
           answers.each do |matrix_question, matrix_answer|
-            next unless matrix_answer[:count] > 0
-            rollup[:averages][question][matrix_question] = matrix_answer[:sum].to_f / matrix_answer[:count]
+            next unless matrix_question != :survey_name && matrix_answer[:count] > 0
+            averages[matrix_question] = matrix_answer[:sum].to_f / matrix_answer[:count]
+            overall_sum += matrix_answer[:sum]
+            overall_count += matrix_answer[:count]
           end
+          rollup[:averages][answers[:survey_name]][question][:average] = overall_sum.to_f / overall_count
+          rollup[:averages][answers[:survey_name]][question][:rows] = averages
         end
       end
       return rollup
@@ -67,12 +76,13 @@ module Pd::Foorm
       questions_and_forms.each do |question, question_data|
         next unless validate_question_same_across_forms(question, question_data, parsed_forms) &&
           question_data[:form_keys].first && parsed_forms[question_data[:form_keys].first]
-        question_details = parsed_forms[question_data[:form_keys].first][question]
+        survey_name = question_data[:form_keys].first
+        question_details = parsed_forms[survey_name][question]
         case question_data[:type]
         when ANSWER_MULTI_SELECT, ANSWER_SINGLE_SELECT
-          intermediate_rollup[:questions][question] = {sum: 0, count: 0}
+          intermediate_rollup[:questions][question] = {sum: 0, count: 0, survey_name: survey_name}
         when ANSWER_MATRIX
-          intermediate_rollup[:questions][question] = {}
+          intermediate_rollup[:questions][question] = {survey_name: survey_name}
           question_details[:rows].each_key do |row|
             intermediate_rollup[:questions][question][row] = {sum: 0, count: 0}
           end
