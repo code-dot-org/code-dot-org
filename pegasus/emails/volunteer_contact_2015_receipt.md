@@ -18,15 +18,9 @@ Hi <%= volunteer_name_s %>,
 <%= name_s %> is a teacher at <%= school_name_s %>. They found you on the [volunteer site](https://code.org/volunteer/local) and after reviewing your profile specifically requested if you could help their class. They would like it if you could:
 
 <ul>
-<% if type_task_onsite_b %>
-  <li> visit the classroom for technical help and inspiration
-<% end %>
-<% if type_task_remote_b %>
-  <li> Skype into the classroom to say a few words of inspiration to the kids
-<% end %>
-<% if type_task_mentor_b %>
-  <li> be a mentor to help prepare them for coding with their students
-<% end %>
+<% if type_task_onsite_b %><li> visit the classroom for technical help and inspiration<% end %>
+<% if type_task_remote_b %><li> Skype into the classroom to say a few words of inspiration to the kids<% end %>
+<% if type_task_mentor_b %><li> be a mentor to help prepare them for coding with their students<% end %>
 </ul>
 
 We won't release your email directly to a teacher, so they're waiting for you to write back.

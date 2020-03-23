@@ -27,6 +27,6 @@
       %p.content.content3!= render_multi_or_match_content(level.localized_property('content3'))
   / Markdown will be rendered clientside by _content.js
   - if data['markdown'].present?
-    - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.localized_property('markdown')
+    - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.try(:localized_property, 'markdown')
     .markdown-container{data: {markdown: level_markdown}}
   = postcontent

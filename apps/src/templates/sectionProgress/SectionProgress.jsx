@@ -30,7 +30,6 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   heading: {
@@ -79,30 +78,16 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool,
-    getStandardsCoveredForScript: PropTypes.func.isRequired
+    showStandardsIntroDialog: PropTypes.bool
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId);
-    this.props.getStandardsCoveredForScript(this.props.scriptId);
-  }
-
-  componentDidUpdate() {
-    // Check if we are on a script that does NOT have standards associations and
-    // currentView is Standards. If so re-set currentView to Summary since
-    // Standards doesn't apply.
-    const hasStandards =
-      this.props.scriptData && this.props.scriptData.hasStandards;
-    if (this.props.currentView === ViewType.STANDARDS && !hasStandards) {
-      this.props.setCurrentView(ViewType.SUMMARY);
-    }
+    this.props.loadScript(this.props.scriptId, this.props.section.id);
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId);
-    this.props.getStandardsCoveredForScript(scriptId);
+    this.props.loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -215,7 +200,8 @@ class SectionProgress extends Component {
           )}
         </div>
 
-        <ProgressViewHeader />
+        {levelDataInitialized && <ProgressViewHeader />}
+
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
             <FontAwesome
@@ -235,15 +221,17 @@ class SectionProgress extends Component {
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-            <div id="uitest-standards-view" style={standardsStyle}>
-              <StandardsView
-                showStandardsIntroDialog={
-                  currentView === ViewType.STANDARDS && showStandardsIntroDialog
-                }
-              />
-            </div>
-          )}
+          {levelDataInitialized &&
+            experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+              <div id="uitest-standards-view" style={standardsStyle}>
+                <StandardsView
+                  showStandardsIntroDialog={
+                    currentView === ViewType.STANDARDS &&
+                    showStandardsIntroDialog
+                  }
+                />
+              </div>
+            )}
         </div>
       </div>
     );
@@ -264,8 +252,8 @@ export default connect(
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
+    loadScript(scriptId, sectionId) {
+      dispatch(loadScript(scriptId, sectionId));
     },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
@@ -275,9 +263,6 @@ export default connect(
     },
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
-    },
-    getStandardsCoveredForScript(scriptId) {
-      dispatch(getStandardsCoveredForScript(scriptId));
     }
   })
 )(SectionProgress);

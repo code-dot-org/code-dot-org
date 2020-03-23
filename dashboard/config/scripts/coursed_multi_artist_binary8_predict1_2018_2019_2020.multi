@@ -1,0 +1,22 @@
+name 'courseD_multi_artist_binary8_predict1_2018_2019_2020'
+question 'Take a close look at the code below. Which image will it create after you click "Run"?'
+wrong 'A', feedback: 'Incorrect.'
+wrong 'B', feedback: 'Incorrect.'
+wrong 'C', feedback: 'Incorrect.'
+right 'D', feedback: 'Correct!'
+markdown <<MARKDOWN
+<table>
+<tr>
+
+<td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+<td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+<td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+<td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+</tr></table>
+<br/>
+
+MARKDOWN

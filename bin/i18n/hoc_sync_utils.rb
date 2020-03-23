@@ -86,8 +86,6 @@ class HocSyncUtils
         FileUtils.mkdir_p(dest_dir)
         FileUtils.cp(source_path, File.join(dest_dir, dest_name))
       end
-
-      puts "Copied locale #{prop[:unique_language_s]}"
     end
   end
 
@@ -100,8 +98,8 @@ class HocSyncUtils
   # values from the original source.
   def self.sanitize_hoc_file(path)
     header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    sanitize_header!(header)
-    write_markdown_with_header(content, header, path)
+    I18nScriptUtils.sanitize_header!(header)
+    I18nScriptUtils.write_markdown_with_header(content, header, path)
   end
 
   # In the sync in, we slice the YAML headers of the files we upload to crowdin
@@ -118,28 +116,9 @@ class HocSyncUtils
       end
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
       header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-      sanitize_header!(header)
+      I18nScriptUtils.sanitize_header!(header)
       restored_header = source_header.merge(header)
-      write_markdown_with_header(content, restored_header, path)
+      I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
     end
-  end
-
-  def self.write_markdown_with_header(markdown, header, path)
-    open(path, 'w') do |f|
-      unless header.empty?
-        f.write(I18nScriptUtils.to_crowdin_yaml(header))
-        f.write("---\n\n")
-      end
-      f.write(markdown)
-    end
-  end
-
-  # Reduce the header metadata we include in markdown files down to just the
-  # subset of content we want to allow translators to translate.
-  #
-  # Right now, this is just page titles but it could be expanded to include
-  # any English content (description, social share stuff, etc).
-  def self.sanitize_header!(header)
-    header.slice!("title")
   end
 end

@@ -182,7 +182,7 @@ class StudioApp extends EventEmitter {
     this.onContinue = undefined;
     this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
-    this.sendToPhone = undefined;
+    this.isUS = undefined;
     this.enableShowBlockCount = true;
 
     this.disableSocialShare = false;
@@ -973,9 +973,13 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {boolean} options.noOverlap if true, will not start playing if the sound is already playing
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (options && options.noOverlap && Sounds.getSingleton().isPlaying(name)) {
+    return;
+  }
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
@@ -1588,7 +1592,7 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
-  options.sendToPhone = this.sendToPhone;
+  options.isUS = this.isUS;
   options.channelId = project.getCurrentId();
 
   try {
@@ -1887,7 +1891,7 @@ StudioApp.prototype.setConfigValues_ = function(config) {
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
-  this.sendToPhone = config.sendToPhone;
+  this.isUS = config.isUS;
   this.noPadding = config.noPadding;
 
   // contract editor requires more vertical space. set height to 1250 unless
@@ -2171,10 +2175,13 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
     return;
   }
 
-  config.level.libraryCode = '';
+  config.level.projectLibraries = [];
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += createLibraryClosure(library);
+    config.level.projectLibraries.push({
+      name: library.name,
+      code: createLibraryClosure(library)
+    });
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',

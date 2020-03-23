@@ -28,8 +28,6 @@ ta-IN:
     இருக்க வேண்டும்
   petition_sign_message: நீங்கள் ஒப்புக்கொண்டால்,உங்கள் பெயரை பதியுங்கள்,மற்றவர்களுடன்
     சேருங்கள்.
-  petition_sign_message_support: 'நீங்கள் எங்களுக்கு ஆதரவளித்தால், உங்கள் பெயரில்
-    கையொப்பமிட்டு # மற்றவர்களுடன் எங்கள் அஞ்சல் பட்டியலில் சேரவும்.'
   petition_join_others: 'மற்றவர்களுடன் # சேரவும்'
   name: பெயர்
   email: மின்னஞ்சல்
@@ -140,6 +138,7 @@ ta-IN:
   contact_form_topic_press: பத்திரிக்கை/ஊடகம் (பேட்டி அல்லது ஒப்பந்தம் பேசும் போது)
   studiobar_frozen_title: நிரல்வரி நேரம்
   homepage_action_text_try_it: இதை முயற்சிக்கவும்
+  homepage_signpetition_dropdown_text: நான் ஒப்புக்கொள்கிறேன்
   homepage_slot_text_title_hoc: நிரல்வரி நேரம்
   homepage_slot_text_link_hoc: நிரல்தொடர் மணியை முயல்க
   contact_form_topic_other: வேறு

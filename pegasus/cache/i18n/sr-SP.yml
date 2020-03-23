@@ -25,8 +25,6 @@ sr-SP:
   learn_now: Учите сада
   petition_message: Сваки ученик у свакој школи треба да има прилику да учи информатику
   petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
-  petition_sign_message_support: 'Ако нас подржаваш, упиши своје име. Придружи се
-    # осталима.'
   petition_join_others: Придружи се осталима
   name: Име
   email: Електронска пошта
@@ -254,6 +252,7 @@ sr-SP:
   homepage_action_text_learn: Почни
   homepage_action_text_signpetition: Потпишите петицију
   homepage_signpetition_dropdown: Потпишите нашу петицију &#x25BE;
+  homepage_signpetition_dropdown_text: Слажем се
   homepage_banner_text_prizes: 'Sat programiranja je opet tu od 7. do 13. decembra. '
   homepage_banner_link_prizes: 'Pridruži se najvećem događaju za učenje u istoriji. '
   homepage_banner_text_link: Сазнајте више

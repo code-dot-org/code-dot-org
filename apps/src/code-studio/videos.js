@@ -206,6 +206,9 @@ videos.showVideoDialog = function(options, forceShowVideo) {
       trackEvent('downloadvideo', 'startdownloadvideo', options.key);
       return true;
     });
+  if (document.dir === 'rtl') {
+    download.css('float', 'right');
+  }
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 

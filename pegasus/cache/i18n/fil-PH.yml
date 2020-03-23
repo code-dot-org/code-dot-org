@@ -28,8 +28,6 @@ fil-PH:
     na matuto ng computer science
   petition_sign_message: 'Kung ikaw ang sumasang-ayon, isulat ang iyong pangalan.
     Sumali sa # pang iba.'
-  petition_sign_message_support: 'Kung ikaw ay sumusuporta sa amin, isulat ang iyong
-    pangalan. At sumali sa # iba.'
   petition_join_others: 'Sumali sa # iba'
   name: Pangalan
   email: Email
@@ -438,6 +436,7 @@ fil-PH:
   homepage_action_text_signpetition: Mag-sign sa petisyon
   homepage_action_text_wincelebritychat: Manalo ng isang celebrity chat
   homepage_signpetition_dropdown: 'Mag-sign sa aming petisyon & # x25BE;'
+  homepage_signpetition_dropdown_text: Ako ay sumasang-ayon
   homepage_diversity_pledge: Tanggapin ang kayamuan na pangako
   homepage_banner_text_prizes: 'Ang Hour of Code ay darating ulit, sa ika-7 hanggang
     ika-13 ng Disyembre. '

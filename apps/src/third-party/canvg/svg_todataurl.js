@@ -98,7 +98,7 @@ SVGElement.prototype.toDataURL = function(type, options) {
     // https://developer.mozilla.org/en/DOM/window.btoa
     if (window.btoa) {
       debug('using window.btoa for base64 encoding');
-      b64 += btoa(s);
+      b64 += btoa(unescape(encodeURIComponent(s)));
     } else {
       debug('using custom base64 encoder');
       b64 += Base64.encode(s);

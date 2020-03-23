@@ -9,9 +9,9 @@ layout: wide
   }
 </style>
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
-# Lesson guidelines for the Hour of Code™ and Computer Science Education Week
+# Guidelines for øvelser til Hour of Code™ og Computer Science Education Week
 
 Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
@@ -275,4 +275,4 @@ Please promote your activity to your network! Direct them to your Hour of Code p
 
 [**Back to the top**](#top)
 
-{{ signup_button }}
+{{ tilmeld_knap }}

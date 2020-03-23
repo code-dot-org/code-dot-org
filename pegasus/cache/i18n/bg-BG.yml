@@ -27,8 +27,6 @@ bg-BG:
     науки
   petition_sign_message: 'Ако сте съгласни, подпишете се с името си. Присъединете
     се към # други.'
-  petition_sign_message_support: 'Ако ни подкрепяте, запишете се.  Присъединете се
-    # към другите.'
   petition_join_others: 'Присъединете се към # другите'
   name: Име
   email: Имейл
@@ -394,6 +392,7 @@ bg-BG:
   homepage_action_text_signpetition: Подпишете петицията
   homepage_action_text_wincelebritychat: Спечели чат със знаменитост
   homepage_signpetition_dropdown: Съгласен&#x25BE;
+  homepage_signpetition_dropdown_text: Приемам
   homepage_diversity_pledge: Вземете разнообразни подаръци
   homepage_banner_text_prizes: 'Часът на кода идва отново, декември 7-13. '
   homepage_banner_link_prizes: 'Присъединете се към най-голямото обучително събитие

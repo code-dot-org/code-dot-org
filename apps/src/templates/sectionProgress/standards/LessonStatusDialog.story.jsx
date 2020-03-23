@@ -1,5 +1,5 @@
 import React from 'react';
-import {UnconnectedLessonStatusDialog as LessonStatusDialog} from './LessonStatusDialog';
+import LessonStatusDialog from './LessonStatusDialog';
 import {action} from '@storybook/addon-actions';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';

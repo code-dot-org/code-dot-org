@@ -25,7 +25,6 @@ hy-AM:
   petition_message: Յուրաքանչյուր աշակերտ յուրաքանչյուր դպրոցում պետք է հնարավորություն
     ունենա սովորելու համակարգչային գիտություն
   petition_sign_message: 'Եթե համաձայն եք, գրեք Ձեր անունը։ Գրանցվել։ #Այլ'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: Անուն
   email: Էլ. փոստ
@@ -368,6 +367,7 @@ hy-AM:
   homepage_action_text_learn: Սկսել սովորել
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: I agree &#x25BE;
+  homepage_signpetition_dropdown_text: Ես համաձայն եմ
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '

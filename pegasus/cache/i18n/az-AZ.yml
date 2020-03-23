@@ -27,8 +27,6 @@ az-AZ:
   petition_message: Hər bir məktəbdə hər bir şagirdin informatikanı öyrənmək imkanı
     olmalıdır
   petition_sign_message: 'Razısınızsa, adınızı yazın. Daha # nəfərə qoşulun.'
-  petition_sign_message_support: Əgər bizi dəstəkləyirsinizsə, adınızı daxil edin.
-    Bizə qatılın.
   petition_join_others: 'Digər # nəfərə qoşulun'
   name: Ad
   email: E-poçt
@@ -219,6 +217,7 @@ az-AZ:
   homepage_action_text_learn: Öyrənməyə başlayın
   homepage_action_text_signpetition: Petisiyaya qol çəkin
   homepage_signpetition_dropdown: Mən razıyam &#x25BE;
+  homepage_signpetition_dropdown_text: Razıyam
   homepage_diversity_pledge: Fərqlilik barədə öhdəlik götür
   homepage_banner_text_prizes: 'Kod Saatı yenə gəlir, 7-13 dekabrda. '
   homepage_banner_link_prizes: 'Tarixin ən böyük təhsil hadisəsinə qoşulun. '

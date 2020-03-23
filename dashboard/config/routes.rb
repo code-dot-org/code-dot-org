@@ -55,6 +55,8 @@ Dashboard::Application.routes.draw do
   post 'maker/complete', to: 'maker#complete'
   get 'maker/application_status', to: 'maker#application_status'
   post 'maker/override', to: 'maker#override'
+  get 'maker/google_oauth_login_code', to: 'maker#login_code'
+  get 'maker/display_google_oauth_code', to: 'maker#display_code'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -155,6 +157,7 @@ Dashboard::Application.routes.draw do
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
     get '/reset_session', to: 'sessions#reset'
     get '/users/existing_account', to: 'registrations#existing_account'
+    post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -188,7 +191,6 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
-  get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -202,6 +204,8 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
+
+      get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
     end
   end
 
@@ -221,10 +225,19 @@ Dashboard::Application.routes.draw do
     resources :blocks, constraints: {id: /[^\/]+/}
   end
   resources :shared_blockly_functions, path: '/functions'
-  resources :libraries
 
-  get 'datasets/manifest', to: 'datasets#show_manifest'
-  post 'datasets/manifest', to: 'datasets#updated_manifest'
+  resources :libraries do
+    collection do
+      get '/get_updates', to: 'libraries#get_updates'
+    end
+  end
+
+  resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
+    collection do
+      get '/manifest/edit', to: 'datasets#edit_manifest'
+      post '/manifest/update', to: 'datasets#update_manifest'
+    end
+  end
 
   resources :levels do
     member do
@@ -313,6 +326,7 @@ Dashboard::Application.routes.draw do
   get 'regional_partners/:id/remove_program_manager/:program_manager_id', controller: 'regional_partners', action: 'remove_program_manager'
   post 'regional_partners/:id/add_mapping', controller: 'regional_partners', action: 'add_mapping'
   get 'regional_partners/:id/remove_mapping/:id', controller: 'regional_partners', action: 'remove_mapping'
+  post 'regional_partners/:id/replace_mappings',  controller: 'regional_partners', action: 'replace_mappings'
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
@@ -421,7 +435,10 @@ Dashboard::Application.routes.draw do
         get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
+
+        get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
       end
+
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
@@ -430,6 +447,8 @@ Dashboard::Application.routes.draw do
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
+      post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
+      get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
@@ -442,6 +461,8 @@ Dashboard::Application.routes.draw do
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
       get 'regional_partners/find', to: 'regional_partners#find'
+
+      post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
@@ -482,10 +503,12 @@ Dashboard::Application.routes.draw do
     post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/foorm/day/:day', to: 'workshop_daily_survey#new_general_foorm'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
     post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+    get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
     get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
     get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
     get 'workshop_survey/thanks', to: 'workshop_daily_survey#thanks'
@@ -664,6 +687,10 @@ Dashboard::Application.routes.draw do
 
   # Routes used by standards info dialog
   post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
+
+  # Routes used by teacher scores
+  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_stages_for_section'
+  get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

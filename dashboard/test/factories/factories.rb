@@ -1112,6 +1112,20 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_with_mappings, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    group 1
+    mappings do
+      [
+        create(
+          :pd_regional_partner_mapping,
+          zip_code: 98143,
+          state: nil
+        )
+      ]
+    end
+  end
+
   factory :regional_partner_with_summer_workshops, parent: :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     contact_name "Contact Name"
@@ -1219,4 +1233,21 @@ FactoryGirl.define do
   end
 
   factory :donor_school
+
+  factory :contact_rollups_raw do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:sources) {|n| "dashboard.table_#{n}"}
+    data {{opt_in: 1}}
+    data_updated_at {Time.now}
+  end
+
+  factory :contact_rollups_processed do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
 end
