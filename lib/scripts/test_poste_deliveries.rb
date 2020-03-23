@@ -14,7 +14,7 @@ templates = POSTE_DB[:poste_messages].to_hash(:id, :name).map do |id, name|
   end
   template = Poste::Template.new path
   [id, template]
-end.to_h
+end.compact.to_h
 
 # for each email we've delivered in the last year, simply attempt to render the
 # email so we will trigger the existing "ActionView/TextRender incompatibility"
@@ -26,9 +26,20 @@ end.to_h
 deliveries = POSTE_DB[:poste_deliveries].where("sent_at > '2019-01-01'")
 total = deliveries.count
 i = 0
-deliveries.paged_each do |delivery|
-  template = templates[delivery[:message_id]]
-  template.render(JSON.parse(delivery[:params])) if template
-  i += 1
-  puts "#{i}/#{total} finished (#{i * 100 / total}%)" if i % (total / 5) == 0
+
+# implement paging manually so we can use .all
+# We can't use .paged_each (or even .each) because template.render can issue a
+# query, and you apparently can't nest queries in Sequel. See
+# https://github.com/jeremyevans/sequel/issues/1096
+page_size = 1000
+page = 0
+while i < total
+  deliveries.limit(page_size).offset(page_size * page).all.each do |delivery|
+    template = templates[delivery[:message_id]]
+    template.render(JSON.parse(delivery[:params])) if template
+    i += 1
+    puts "#{i}/#{total} finished (#{i * 100 / total}%)" if i % (total / 5) == 0
+  end
+
+  page += 1
 end
