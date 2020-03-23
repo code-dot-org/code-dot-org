@@ -57,7 +57,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
 
   render() {
     const parsedData = this.getParsedData();
-    let key = 0;
     return (
       <Table>
         <thead>
@@ -74,7 +73,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
             <td>{this.props.workshopRollups.overall.response_count}</td>
           </tr>
           {parsedData.map(matrixData => {
-            key++;
             // return (
             //   <MatrixAverages
             //     orderedData={matrixData.orderedData}
