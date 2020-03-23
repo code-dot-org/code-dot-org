@@ -79,10 +79,7 @@ describe('CircuitPlaygroundBoard', () => {
     ChromeSerialPort.stub.reset();
   });
 
-  itImplementsTheMakerBoardInterface(
-    CircuitPlaygroundBoard,
-    'circuit_playground'
-  );
+  itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
     // TODO (bbuchanan): Remove when maker-captouch is on by default.
