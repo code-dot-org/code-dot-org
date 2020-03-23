@@ -76,11 +76,9 @@ export default class AtHomeBanner extends React.Component {
             <div className="col-33" style={this.styles.content}>
               <Button
                 style={this.styles.button}
-                text="Get started"
+                text={i18n.atHomeBannerLinkText()}
                 href="/athome"
-              >
-                {i18n.atHomeBannerLinkText()}
-              </Button>
+              />
             </div>
           </div>
         </div>
