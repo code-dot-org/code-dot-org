@@ -435,6 +435,8 @@ Dashboard::Application.routes.draw do
         get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
+
+        get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
       end
 
       resources :workshop_summary_report, only: :index
@@ -459,6 +461,8 @@ Dashboard::Application.routes.draw do
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
       get 'regional_partners/find', to: 'regional_partners#find'
+
+      post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
@@ -697,8 +701,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
-
-  post '/dashboardapi/v1/pd/workshop_survey_foorm_submission', to: 'api/v1/pd/workshop_survey_foorm_submissions#create', defaults: {format: 'json'}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
