@@ -175,7 +175,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n* First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the draw loop.\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack.\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",
+    "long_instructions": "# Laying Out Your Background\r\nBefore beginning this project, consider planning out what you want to create on paper. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\n\r\n* Lay out the shapes or sprites that will become the background to your card.\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -217,11 +217,14 @@
     ],
     "mini_rubric": "false",
     "encrypted": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:27:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:29:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:06:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 19:49:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:27:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:29:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:06:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-26 19:49:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2020-03-18 20:34:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -19,7 +19,7 @@ describe('MicroBitBoard', () => {
   });
 
   describe('Maker Board Interface', () => {
-    itImplementsTheMakerBoardInterface(MicroBitBoard, 'microbit', board => {
+    itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
       sinon.stub(board.boardClient_, 'connect').callsFake(() => {
         board.boardClient_.myPort = {write: () => {}};
         sinon.stub(board.boardClient_.myPort, 'write');

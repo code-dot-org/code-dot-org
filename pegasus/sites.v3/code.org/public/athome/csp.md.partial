@@ -27,6 +27,12 @@ The primary resources we’ve put together here include:
 
 We know that teaching in a virtual setting is a new challenge for many. We also know that many of our students lack access to technology that would allow them to participate in virtual learning. We are working quickly to address this rapidly developing situation and will continue to update this page with resources and recommendations as we have them.
 
+## March 20th Update - College Board Cancels CS Principles Exam, Students to Still Submit PTs by May 26th
+
+On the morning of March 20th [the College Board announced](https://apcentral.collegeboard.org/about-ap/news-changes/coronavirus-update) that there will be no multiple-choice exam for CS Principles and that students will still be submitting their Create PT and Explore PT. The deadline for both tasks was extended to May 26th. More details are at the link above.
+
+Our team is staying in close communication with the College Board and exploring ways to support classrooms and students who still can complete the performance tasks from home. Our team knows that many districts will not allow you to assign additional work and that many students lack device or internet access that would allow them to complete the performance tasks at home. We will be working quickly to better understand  the needs of our students, develop resources, and share them here. The Performance Task Prep section below has the current set of resources we've made available.
+
 ## Share on the Forum
 
 You are highly encouraged to share any questions or insights on our [CS Principles Forum](http://forum.code.org/c/csp) where you'll find many other teachers working together to navigate the transition to virtual instruction.
@@ -35,11 +41,13 @@ You are highly encouraged to share any questions or insights on our [CS Principl
 
 The College Board is updating [collegeboard.org/ap-covid19-updates](https://collegeboard.org/ap-covid19-updates) as they continue to announce their response to this rapidly changing situation. Please refer to this site for up-to-date information about impacts on exam dates and performance task submissions. 
  
-## Create Performance Task Prep
+## Performance Task Prep
 
-We know many classrooms just started or were beginning to start the Create Performance Task. Our team has created a [Virtual Create PT Survival Guide](https://docs.google.com/document/d/16QwbnPFJl8u0fcsnu9ws2nuwJRMMu9F3aVRzLUNgaTI/edit#) that compiles all the resources from our Create PT Prep unit into a single document that's easier to share and assign. Activities have also been modified to be better suited for a virtual and independent format.
+We know many classrooms just started or were beginning to start the Create Performance Task. Our team has created a [Virtual Create PT Survival Guide](https://docs.google.com/document/d/16QwbnPFJl8u0fcsnu9ws2nuwJRMMu9F3aVRzLUNgaTI/edit#) and [Virtual Explore PT Survival Guide](https://docs.google.com/document/d/1eZFFp_tzn_MBz0FJaYcwFOX2trb0yBDDmDNo0zujA-E/edit) that compiles all the resources normally found in our Create PT Prep and Explore PT Prep units into single documents that are easier to share and assign. Activities have also been modified to be better suited for a virtual and independent format.
 
 ## Review and Exam Prep
+
+**Note: Per the College Board's March 20th announcement there will no longer be a multiple-choice exam for CS Principles. The resources below may still be useful for virtual learning or review and so we will not be removing them from this page for now**
 
 Schools are closing during weeks when many classrooms would be completing exam preparation. The following resources are useful for review and exam prep.
 
@@ -60,7 +68,7 @@ The recommendations below are for classrooms in which students will primarily be
 * **Unit 3 - Intro to Programming**
     * If students are still in this unit we recommend they complete only lessons 4 - 10 of this unit which teach turtle programming and top-down-design.
 * **Unit 4 - Big Data and Privacy**
-    * If students need to review this content assign the [TLS: Secure data transport](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#tls-secure-data-transport), [Cybercrime and prevention](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#cybercrime-and-prevention), [The digital divide](https://www.khanacademy.org/computing/ap-computer-science-principles/global-impact-of-computing/the-digital-divide/a/the-global-digital-divide) resources from the Khan Academy course 
+    * If students need to review this content assign the [TLS: Secure data transport](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#tls-secure-data-transport), [Cybercrime and prevention](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet#cybercrime-and-prevention), [The digital divide](https://www.khanacademy.org/computing/ap-computer-science-principles/global-impact-of-computing/the-digital-divide/a/the-global-digital-divide) and [Big data](https://www.khanacademy.org/computing/ap-computer-science-principles/data-analysis-101#big-data) resources from the Khan Academy course 
 * **Unit 5 - Building Apps:** Many of our teachers are in this unit right now and so we're offering more detailed recommendations. Most programming lessons in this unit can be completed independently if students have access to a computer and internet at home. Notable exceptions are highlighted below. Further down this document we have notes on how best to support students in a virtual setting and options for students with limited technology access.
 As a reminder students have learned every concept necessary for the Create PT at the end of Unit 5 Chapter 1. Unit 5 Chapter 2 content is only important covered on the AP exam. 
     * **Lesson 3 - Building an App: Multi-screen App:** Do not complete the peer review as part of this project.
@@ -73,7 +81,7 @@ As a reminder students have learned every concept necessary for the Create PT at
     * **Lesson 16 - Functions with Return Values:** - Skip the unplugged Getting Started activity.
     * **Lesson 17 - Building an App: Canvas Painter:** Students do not need to complete this project in order to prepare for the AP exam or Create PT. We recommend you save this for after the AP.
 * **Post AP - Data Tools**
-    * Chapter 1 content can be replaced by the "Data Analysis"  unit from Khan academy
+    * Chapter 1 content is not well-suited for students to complete independently. Consider using the [Data analysis](https://www.khanacademy.org/computing/ap-computer-science-principles/data-analysis-101)  unit from Khan Academy to cover these learning objectives.
     * Chapter 2 content does not have lesson plans associated with it and can be completed asynchronously by students following the completion of the course
 
 ## Supporting Student Learning - Your role as the teacher
@@ -106,6 +114,8 @@ The Code.org Teacher Dashboard allows you to view student progress, review stude
 
 If you are using our CS Principles curriculum in a non-AP context many of the same recommendations should still help you teach our courses in a virtual environment. Many classrooms even assign the Create and Explore PTs as end-of-year projects. Consider whether virtual options for these projects will work in your classroom setting. You may also consider any number of virtual options listed at [code.org/athome](http://code.org/athome).
 
+We also recommend you consider [CSTA's Resources to Support Teaching During COVID-19](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) for an extensive set of options for continuing to teach computer science during school closures.
+
 ## Supporting Students with Limited Technology Access
 
 We know many of our CS Principles students lack access to the internet or a laptop at home. The following resources are available for students lacking internet access, a laptop, or both, while they are continuing to study CS Principles from home.
@@ -115,5 +125,7 @@ We know many of our CS Principles students lack access to the internet or a lapt
 * [Abstracting CS](https://www.abstractingcs.com/bits-bytes-resources-page/) has created a fully unplugged activity packet for CS Principles students
 * The College Board has asked the community to help compile a list of resources, including [this list of non-programming resources](https://docs.google.com/spreadsheets/d/1WHtvxinAt_A-ld2FCopcrmZvFSqFG9sOiW6SvjOsRcE/edit?fbclid=IwAR2Li0vAIx_ziaqQP31TQMKTUYId-FIe_scORDcZxQEb26YL_RC10FJ0OAg#gid=0), some of which are also unplugged.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk3MDM0NjMyLDk2Njk0Mjg5NV19
+eyJoaXN0b3J5IjpbMzUyNTcyNjU0LDE5MjQ1MzA0ODUsMzIxOT
+k3NTMwLC0xOTUxNDAxMzYzLC01NDMxNDM5NzQsODA4MzAwNDcx
+LDg5NzAzNDYzMiw5NjY5NDI4OTVdfQ==
 -->

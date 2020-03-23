@@ -56,13 +56,10 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

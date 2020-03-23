@@ -68,8 +68,8 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

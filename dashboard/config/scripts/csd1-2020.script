@@ -29,6 +29,9 @@ level 'CSD What Makes a Computer a Computer Video_2020', named: true
 
 stage 'Input and Output', flex_category: 'csd1_2'
 level 'CSD U1L05 TFMD_2020', named: true
+level 'CSD U1 IO Pet Chooser', named: true
+level 'CSD U1 IO Story', named: true
+level 'CSD U1 IO Pet Chooser 2', named: true
 
 stage 'Processing', flex_category: 'csd1_2'
 level 'CSD U1L06 TFMD_2020', named: true
