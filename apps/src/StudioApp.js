@@ -277,6 +277,8 @@ StudioApp.prototype.init = function(config) {
     }
   }
 
+  console.log('MIKEWU: Reached StudioApp');
+
   this.setConfigValues_(config);
 
   this.configureDom(config);

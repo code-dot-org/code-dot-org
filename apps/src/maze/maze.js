@@ -32,6 +32,7 @@ const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
 const MOBILE_PORTRAIT_WIDTH = 700;
+const FEEDBACK_SERVER_URL = 'http://localhost:5000/predict';
 
 module.exports = class Maze {
   constructor() {
@@ -309,6 +310,25 @@ module.exports = class Maze {
   }
 
   /**
+   * Added by Mike Wu.
+   * Make POST request to feedback server. Send code blocks.
+   */
+  sendFeedback_(code) {
+    $.ajax({
+      url: FEEDBACK_SERVER_URL,
+      data: JSON.stringify({code: code}),  // add more info maybe?
+      type: 'POST',
+      crossDomain: true,
+      dataType: "json",
+      accepts: "application/json",
+      contentType: "application/json",
+      success: function(result) {
+        console.log(result);
+      }
+    });
+  }
+
+  /**
    * Execute the user's code.  Heaven help us...
    */
   execute_(stepMode) {
@@ -321,8 +341,12 @@ module.exports = class Maze {
       if (studioApp().initializationBlocks) {
         codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
       }
-
       code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+      
+      this.sendFeedback_(code);
+      console.log('MIKEWU:');
+      console.log(code);
+      console.log(typeof code);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();

@@ -16,3 +16,9 @@ Things i have learned:
         - https://github.com/code-dot-org/code-dot-org/blob/21c724e6f7c65b08ee8d82347a9beb882eb26252/apps/src/StudioApp.js#L336-L341
     - where is the callback when user clicks run?
         - for Artist : https://github.com/code-dot-org/code-dot-org/blob/65fec2f9c2e4d65c570d9d4c6e2ef7fa432520d6/apps/src/turtle/artist.js#L868-L869
+        - classes of problems : Maze > Karel > Bee
+            - https://github.com/code-dot-org/code-dot-org/blob/d17a5e476018ad7fac9efa502ec1aba67e44a97c/apps/src/maze/maze.js#L327
+
+    - to see changes in the local codeorg instance
+        - if JS changes, run `yarn build` or `yarn start` in apps/ and leave running
+        - """I usually just keep dashboard-server running in one terminal and yarn start running in another, and never have to restart anything"""
