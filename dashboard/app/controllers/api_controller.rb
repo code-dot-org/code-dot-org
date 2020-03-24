@@ -314,6 +314,8 @@ class ApiController < ApplicationController
     timestamp_by_user = progress_by_user.transform_values do |user|
       user.values.map {|level| level[:last_progress_at]}.compact.max
     end
+    # Remove last_progress_at from the return value, to keep the data sent to
+    # the client to a minimum.
     progress_by_user.values.each do |user|
       user.values.each do |level|
         level.delete(:last_progress_at)
