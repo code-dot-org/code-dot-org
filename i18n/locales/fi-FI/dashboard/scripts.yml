@@ -1841,3 +1841,33 @@ fi:
           stages:
             Spelling Bee:
               name: Kirjurimehiläinen
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funktioiden luominen
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Niin kauan kuin -silmukat
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmit
+            Events:
+              name: Tapahtumat

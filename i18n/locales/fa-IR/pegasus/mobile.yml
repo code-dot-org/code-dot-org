@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 دسامبر، 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی</a> دارد میآید. همه‌ی دبیران و برنامه گزاران را صدا میزند، <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ساعتِ کدنویسی خود را برنامه‌ریزی کنید</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید</a>'
+  csedweek_banner_teachers_text: "آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر را ببینید"
   n_have_learned_an_hoc: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه شده</h3>"
   anybody_can_learn: "هر کسی می تواند یاد بگیرند."
   learn_now: "همین حالا یاد بگیرید"

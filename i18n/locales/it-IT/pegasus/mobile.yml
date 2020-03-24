@@ -12,6 +12,7 @@
   csedweek_dates: "3-9 dicembre 2018"
   csedweek_banner_hoc: 'L''<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Ora del Codice</a> è in arrivo. Insegnanti ed educatori, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">programmate la vostra Ora del Codice</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Sei un insegnante interessato all''Informatica? Guarda le altre risorse disponibili</a>'
+  csedweek_banner_teachers_text: "Sei un insegnante interessato all'Informatica? Guarda le altre risorse disponibili"
   n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
   try_hoc_num_served: "<h1>Prova un'</h1><h2>Ora del Codice</h2><h3>, ne hanno già fatte %{num}</h3>"
   anybody_can_learn: "Chiunque può imparare."

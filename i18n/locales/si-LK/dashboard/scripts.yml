@@ -1679,3 +1679,30 @@ si:
           stages:
             Spelling Bee:
               name: අක්ෂර වින්‍යාස බඹරා
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: ශ්‍රිතය නිර්මාණය කරන්න
+        csd3-virtual:
+          description_short: "ක්‍රමලේඛනය"
+          stages:
+            Variables:
+              name: විචල්‍යන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: නැවත සිදුවන ලුප
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: ශ්‍රිතයන්
+        code-break:
+          stages:
+            Algorithms:
+              name: ඇල්ගොරිතම්
+            Events:
+              name: වැඩසටහන්

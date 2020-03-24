@@ -926,3 +926,21 @@ az:
           stages:
             Internet:
               name: İnternet
+        csd3-virtual:
+          stages:
+            Variables:
+              name: dəyişənlər
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funksiyalar
+        code-break:
+          stages:
+            Algorithms:
+              name: Alqoritmlər
+            Events:
+              name: Hadisələr

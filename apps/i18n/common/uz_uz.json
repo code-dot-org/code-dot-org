@@ -30,6 +30,7 @@
   "clearPuzzle": "Boshidan boshlamoq",
   "clearPuzzleConfirm": "Bu jumboqni boshdagi holatiga qaytarib, siz qo'shgan yoki o'zgartirgan bloklar barchasi o‘chirib yuboriladi.",
   "clearPuzzleConfirmHeader": "Rostan boshidan boshlamoqchimisiz?",
+  "closeDialog": "Yopish",
   "codeMode": "Kod",
   "codeTooltip": "JavaScriptda yaratilgan kodni ko‘ring.",
   "completedLevels": "O‘tilgan bosqichlar",

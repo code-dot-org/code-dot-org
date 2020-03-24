@@ -2592,3 +2592,35 @@ nn:
           stages:
             Binary Numbers:
               name: Binære tal
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Lag Funksjonar
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Medan-løkker
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hendingar

@@ -243,6 +243,10 @@ ga:
           san áireamh chun deimhniú go n-oibríonn an fheidhm mar is ceart.
       Booleans:
         title: Athróga Boole agus Loighic
+        desc: Is iad Athróga Boole an ceathrú chineál sonraí (agus an ceann deireanach)
+          a fhoghlaimeoidh tú faoi sa chúrsa seo.  Sa ghníomhaíocht seo, foghlaimeoidh
+          tú céard iad Athróga Boole, agus an bealach a chabhraíonn siad linn agus
+          muid ag cumadh feidhmeanna a smaoiníonn go loighiciúil
       ConditionalsPiecewiseFunctions:
         title: Coinníollacha agus Feidhmeanna Breacleanúnacha
       CollisionDetection:

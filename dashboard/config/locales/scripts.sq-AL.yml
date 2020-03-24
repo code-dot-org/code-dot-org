@@ -1866,3 +1866,29 @@ sq:
           stages:
             Spelling Bee:
               name: Bleta Gërmëzuese
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Krijimi i Funksioneve
+        csd3-virtual:
+          stages:
+            Variables:
+              name: variabla
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Përsëritjet Ndërsa
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funksione
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmet
+            Events:
+              name: Ngjarje
