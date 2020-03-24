@@ -64,7 +64,11 @@ export default class LibraryClientApi {
           let mostRecent = data.find(libraryVersion => {
             return libraryVersion.isLatest;
           });
-          onSuccess(mostRecent.versionId);
+          if (mostRecent) {
+            onSuccess(mostRecent.versionId);
+          } else {
+            onError('This project has been deleted');
+          }
         } else {
           onError(error);
         }

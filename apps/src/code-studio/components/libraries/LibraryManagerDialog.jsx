@@ -1,34 +1,22 @@
 /*globals dashboard*/
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
+import LibraryIdImporter from '@cdo/apps/code-studio/components/libraries/LibraryIdImporter';
 import libraryParser from './libraryParser';
 import color from '@cdo/apps/util/color';
-
-const DEFAULT_MARGIN = 7;
+import {
+  DEFAULT_MARGIN,
+  libraryStyles
+} from '@cdo/apps/code-studio/components/libraries/styles';
 
 const styles = {
   dialog: {
     padding: '0 15px'
-  },
-  linkBox: {
-    cursor: 'auto',
-    height: '32px',
-    marginBottom: 0,
-    flex: 1,
-    maxWidth: 400
-  },
-  header: {
-    textAlign: 'left',
-    color: color.purple,
-    fontSize: 24,
-    marginTop: 20
   },
   libraryList: {
     maxHeight: '140px',
@@ -43,30 +31,8 @@ const styles = {
     lineHeight: '15px',
     whiteSpace: 'pre-wrap'
   },
-  inputParent: {
-    display: 'flex',
-    alignItems: 'baseline'
-  },
-  add: {
-    margin: DEFAULT_MARGIN,
-    color: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    ':disabled': {
-      color: color.light_gray,
-      borderColor: color.light_gray,
-      backgroundColor: color.lightest_gray
-    }
-  },
   hidden: {
     visibility: 'hidden'
-  },
-  error: {
-    color: color.red,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    minHeight: 30,
-    whiteSpace: 'pre-wrap',
-    lineHeight: 1
   }
 };
 
@@ -90,7 +56,7 @@ export const mapUserNameToProjectLibraries = (
   return projectLibraries;
 };
 
-export class LibraryManagerDialog extends React.Component {
+export default class LibraryManagerDialog extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired
@@ -103,8 +69,7 @@ export class LibraryManagerDialog extends React.Component {
     cachedClassLibraries: [],
     viewingLibrary: {},
     isViewingCode: false,
-    isLoading: false,
-    error: null
+    isLoading: false
   };
 
   componentDidUpdate(prevProps) {
@@ -135,10 +100,6 @@ export class LibraryManagerDialog extends React.Component {
     );
   };
 
-  setLibraryToImport = event => {
-    this.setState({importLibraryId: event.target.value, error: null});
-  };
-
   addLibraryToProject = libraryJson => {
     const {projectLibraries} = this.state;
     if (!libraryJson) {
@@ -167,7 +128,6 @@ export class LibraryManagerDialog extends React.Component {
   addLibraryById = (libraryJson, error) => {
     if (error) {
       this.setState({
-        error: i18n.libraryImportError(),
         isLoading: false
       });
     } else if (libraryJson) {
@@ -176,6 +136,7 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   fetchLatestLibrary = (channelId, callback) => {
+    this.setState({isLoading: true});
     const {cachedClassLibraries} = this.state;
     const cachedLibrary = cachedClassLibraries.find(
       library => library.channelId === channelId
@@ -200,8 +161,7 @@ export class LibraryManagerDialog extends React.Component {
               versionId
             );
             this.setState({
-              cachedClassLibraries: [...cachedClassLibraries, updatedjson],
-              isLoading: false
+              cachedClassLibraries: [...cachedClassLibraries, updatedjson]
             });
             callback(updatedjson, null);
           },
@@ -277,13 +237,7 @@ export class LibraryManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
-    const {
-      isViewingCode,
-      importLibraryId,
-      viewingLibrary,
-      isLoading,
-      error
-    } = this.state;
+    const {isViewingCode, viewingLibrary, isLoading} = this.state;
     return (
       <div>
         <BaseDialog
@@ -292,32 +246,16 @@ export class LibraryManagerDialog extends React.Component {
           style={{...styles.dialog, ...(isViewingCode ? styles.hidden : {})}}
           useUpdatedStyles
         >
-          <h1 style={styles.header}>{i18n.libraryManage()}</h1>
+          <h1 style={libraryStyles.header}>{i18n.libraryManage()}</h1>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <h1 style={styles.header}>{i18n.libraryClassImport()}</h1>
+          <h1 style={libraryStyles.header}>{i18n.libraryClassImport()}</h1>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
-          <div style={styles.inputParent}>
-            <input
-              style={styles.linkBox}
-              type="text"
-              value={importLibraryId}
-              onChange={this.setLibraryToImport}
-            />
-            <button
-              style={styles.add}
-              onClick={() => {
-                this.setState({isLoading: true});
-                this.fetchLatestLibrary(importLibraryId, this.addLibraryById);
-              }}
-              type="button"
-              disabled={!importLibraryId}
-            >
-              {isLoading && <FontAwesome icon="spinner" className="fa-spin" />}
-              {!isLoading && i18n.add()}
-            </button>
-          </div>
-          <div style={styles.error}>{error}</div>
+          <LibraryIdImporter
+            isLoading={isLoading}
+            addLibraryById={id =>
+              this.fetchLatestLibrary(id, this.addLibraryById)
+            }
+          />
         </BaseDialog>
         <LibraryViewCode
           isOpen={isViewingCode}
@@ -328,5 +266,3 @@ export class LibraryManagerDialog extends React.Component {
     );
   }
 }
-
-export default Radium(LibraryManagerDialog);
