@@ -75,7 +75,7 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
-            locale={homepageData.locale}
+            localeEnglishName={homepageData.locale}
             specialAnnouncement={specialAnnouncement}
           />
         )}

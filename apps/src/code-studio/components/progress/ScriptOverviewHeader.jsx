@@ -86,7 +86,7 @@ class ScriptOverviewHeader extends Component {
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
-    locale: PropTypes.string,
+    localeEnglishName: PropTypes.string,
     userId: PropTypes.number
   };
 
@@ -188,7 +188,7 @@ class ScriptOverviewHeader extends Component {
     );
     setRecommendedAndSelectedVersions(
       filteredVersions,
-      this.props.locale,
+      this.props.localeEnglishName,
       selectedVersion && selectedVersion.year
     );
 

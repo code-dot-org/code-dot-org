@@ -54,7 +54,7 @@ const style = {
 class EditSectionForm extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    locale: PropTypes.string,
+    localeEnglishName: PropTypes.string,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
 
@@ -126,7 +126,7 @@ class EditSectionForm extends Component {
       handleClose,
       stageExtrasAvailable,
       assignedScriptName,
-      locale,
+      localeEnglishName,
       isNewSection
     } = this.props;
 
@@ -154,7 +154,7 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            locale={locale}
+            localeEnglishName={localeEnglishName}
             isNewSection={isNewSection}
           />
           {stageExtrasAvailable(section.scriptId) && (
@@ -257,7 +257,7 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  locale,
+  localeEnglishName,
   isNewSection
 }) => (
   <div>
@@ -271,7 +271,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      locale={locale}
+      localeEnglishName={localeEnglishName}
       isNewSection={isNewSection}
     />
   </div>
@@ -282,7 +282,7 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  locale: PropTypes.string,
+  localeEnglishName: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
