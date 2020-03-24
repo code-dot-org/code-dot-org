@@ -3010,7 +3010,20 @@
   "https://studio.code.org/s/express-2019/stage/24/puzzle/3": {
     "short_instructions": "Change the tumbleweed into any kind of fish!",
     "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1].",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must have at least one fish sprite with an active behavior."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must have at least one fish sprite with an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/4": {
     "short_instructions": "Change the fish's behavior so that it swims left and right.",
@@ -3018,12 +3031,38 @@
     "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one fish sprite with an active behavior.\n-   The fish sprite needs to move left and right. This can be done by changing its behavior to `swimming left and right`.",
     "callouts": {
       "spritelab_comment": "Use this block to leave yourself or your teacher notes about how your code works."
+    },
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
     }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/5": {
     "short_instructions": "Use the `set background color` block to make the background any color.",
     "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _PROGRESSION NAME_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the background to something other than white."
+    "teacher_markdown": "This lesson contains a **mini-project** called _PROGRESSION NAME_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the background to something other than white.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/6": {
     "display_name": "How to Make a Sprite"
@@ -3031,12 +3070,38 @@
   "https://studio.code.org/s/express-2019/stage/24/puzzle/7": {
     "short_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
     "long_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create exactly two unique sprites, and one must be a fish."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create exactly two unique sprites, and one must be a fish.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/8": {
     "short_instructions": "Add a behavior to the fish's new friend.",
     "long_instructions": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Each sprite must have an active behavior."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Each sprite must have an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/24/puzzle/9": {
     "short_instructions": "Use some new blocks from the toolbox to make your fish tank special!",
@@ -3057,32 +3122,114 @@
   "https://studio.code.org/s/express-2019/stage/25/puzzle/3": {
     "short_instructions": "Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!",
     "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in [blockly block][0] to a different one that will make the alien start spinning!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must click the sprite after pressing `Run`.\n-   The sprite needs to spin."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must click the sprite after pressing `Run`.\n-   The sprite needs to spin.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/4": {
     "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
     "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create a pink alien sprite.\n-   The pink alien sprite must start a behavior when clicked."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create a pink alien sprite.\n-   The pink alien sprite must start a behavior when clicked.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/5": {
     "short_instructions": "Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.",
     "long_instructions": "Form an alien dance crew! \n\n-   Create a third sprite that looks like a yellow alien, and make it begin a dance move when clicked.\n-   Set all of your aliens to stand in a horizontal line, like this:\n\n[][0]",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must create three sprites using the blue alien, pink alien, and yellow alien costumes.\n-   Students must arrange the alien sprites in a horizontal line (within 50 pixels).\n-   The yellow alien sprite needs to start a behavior when clicked."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must create three sprites using the blue alien, pink alien, and yellow alien costumes.\n-   Students must arrange the alien sprites in a horizontal line (within 50 pixels).\n-   The yellow alien sprite needs to start a behavior when clicked.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/6": {
     "short_instructions": "Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!",
     "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using [blockly block][0]. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_.",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the color of each of the three alien sprites."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the color of each of the three alien sprites.",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/7": {
     "short_instructions": "Add a sprite that looks like a bell, then add an event that makes each alien stop dancing when it is clicked.",
     "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using [blockly block][0]!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/8": {
     "short_instructions": "Make the blue alien begin a new dance when the pink alien touches it. Use the `when touches` event.",
     "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse [blockly block][0] to make the blue alien begin a new dance move when the pink alien touches it.",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   The blue alien sprite needs to start a new behavior."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   The blue alien sprite needs to start a new behavior.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/25/puzzle/9": {
     "short_instructions": "Now create your own alien disco!",
@@ -3094,6 +3241,22 @@
     "long_instructions": "Make a prediction! Study the code.\n\n-   The sprite will spin.\n-   The sprite will shrink.\n-   The sprite will move.\n-   The sprite will change colors.",
     "callouts": {
       "behaviors_edit": "Click here to see how this behavior works."
+    },
+    "behavior_names": {
+      "mystery behavior": "mystery behavior",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     },
     "contained levels": [
       {
@@ -3134,6 +3297,22 @@
     "long_instructions": "Fly the rocket to the stars!\n\n-   Change the behavior of the rocket so that it flies upwards in the display area.",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which direction does the rocket need to move?"
+    },
+    "behavior_names": {
+      "flying": "flying",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/3": {
@@ -3141,6 +3320,22 @@
     "long_instructions": "Help the rover outrun the robot!\n\n-   Edit the behavior of the rover sprite (top) so that it goes faster than the robot.",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "behavior_names": {
+      "zooming east": "zooming east",
+      "driving east": "driving east",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/4": {
@@ -3153,6 +3348,22 @@
       "behavior_callout": "Why isn't this behavior working for the middle star?",
       "star2_callout": "Remove this costume block and use the \"this sprite\" block instead.",
       "this_sprite_callout": "Replace the costume block below with this."
+    },
+    "behavior_names": {
+      "spinning right": "spinning right",
+      "zooming east": "zooming east",
+      "driving east": "driving east",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/puzzle/5": {
@@ -3160,6 +3371,22 @@
     "long_instructions": "Make a prediction! Which path will the satellite follow to reach the solar system?",
     "callouts": {
       "behaviors_edit": "Click here to see how this behavior works."
+    },
+    "behavior_names": {
+      "move south and west": "move south and west",
+      "wandering": "wandering",
+      "running east": "running east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     },
     "contained levels": [
       {
@@ -3212,6 +3439,9 @@
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
     "callouts": {
       "behaviors_edit": "Add code to this behavior."
+    },
+    "behavior_names": {
+      "spinning and growing": "spinning and growing"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": {
@@ -3219,6 +3449,22 @@
     "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\n\n[][0]",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving east": "moving east",
+      "rolling": "rolling",
+      "running east": "running east",
+      "wandering": "wandering",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
     }
   },
   "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": {
@@ -3227,25 +3473,110 @@
     "authored_hints": {
       "behaviors_hint1": "You can create a new behavior that uses two different actions or combine two existing behaviors.",
       "sprites_idea1": "For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!\n\n[][0]\n\n[][1]"
+    },
+    "behavior_names": {
+      "moving north": "moving north",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "rolling": "rolling",
+      "running east": "running east",
+      "wandering": "wandering",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving east": "moving east"
     }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/1": {
-    "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**."
+    "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "mystery": "mystery",
+      "spinning right": "spinning right",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "growing": "growing",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/2": {
     "long_instructions": "Now it's your turn to create your own virtual pet! Start by giving it a look you like.\n\n1.  Click the **Costumes** tab at the top-left of your screen (next to **Code**). \n2.  Edit the starting costume, or add a new one that you like. \n3.  Change the sprite's costume to your own in the code below.\n4.  Click **Run** to see your pet's new look!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "callouts": {
       "": "Click here!"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
     }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/3": {
     "long_instructions": "Create events to make your pet move on command!\n\nStart by using [blockly block][0] along with [blockly block][1] to make your pet move North **while** the up arrow is pressed.\n\nRepeat the above for the other three directions (South, West, East) and arrow keys (down, left, right)!",
-    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
+    "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "wandering2": "wandering2",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "moving east2": "moving east2",
+      "shrinking": "shrinking",
+      "spinning left2": "spinning left2",
+      "growing": "growing",
+      "spinning right2": "spinning right2",
+      "moving south": "moving south",
+      "shrinking2": "shrinking2",
+      "swimming left and right": "swimming left and right",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "moving north2": "moving north2",
+      "patrolling": "patrolling",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/4": {
     "long_instructions": "Let's make some wandering food!\n\n1.  Add **two** sprites to your world. \n2.  Make one sprite look like what your pet **likes** to eat, and the other look like what it **doesn't** like to eat.\n3.  Make each food sprite begin the **wandering** behavior immediately after it appears.",
-    "teacher_markdown": "This lesson contains a **mini-project** called \\*Virtual Pet. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least three sprites."
+    "teacher_markdown": "This lesson contains a **mini-project** called \\*Virtual Pet. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least three sprites.",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/27/puzzle/5": {
     "long_instructions": "Use [blockly block][0] with [blockly block][1] to **simulate** \"eating\" in your virtual world!\n\n1.  Create an event that makes one of your food sprites jump to a random location when your pet touches it.\n2.  Repeat the above for the other food sprite.",
@@ -3271,7 +3602,21 @@
     }
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/2": {
-    "display_name": "Course F Sprite Lab Project"
+    "display_name": "Course F Sprite Lab Project",
+    "behavior_names": {
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "wandering": "wandering"
+    }
   },
   "https://studio.code.org/s/express-2019/stage/28/puzzle/3": {
     "display_name": "Course F Artist Project"
