@@ -116,3 +116,17 @@ $almost_white: #eee;
     height: 200px;
   }
 }
+
+.donor-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.donor {
+  flex-basis: 30%;
+  padding: 1%;
+  text-align: center;
+  font-family: $gotham-bold;
+  font-size: 14px;
+}
