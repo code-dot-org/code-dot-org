@@ -2117,3 +2117,39 @@ uk:
           stages:
             Binary Numbers:
               name: Двійкові Числа
+        csp3-virtual:
+          description_short: Програмування
+          stages:
+            Creating Functions:
+              name: Створення функцій
+        csd3-virtual:
+          description_short: Програмування
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: Класи CSS
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Цикли "поки"
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Події

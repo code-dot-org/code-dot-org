@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 בדצמבר, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">שעה של קוד</a> מגיעה. כל המורים והמארגנים נקראים, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">לתכנן את שעת הקוד שלכם</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
+  csedweek_banner_teachers_text: "האם אתה מורה למדעי המחשב? ראה עוד משאבים של "
   n_have_learned_an_hoc: "<h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>"
   anybody_can_learn: "כל אחד יכול ללמוד."
   learn_now: "למד עכשיו"

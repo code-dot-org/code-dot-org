@@ -12,6 +12,7 @@
   csedweek_dates: "8.–14. prosince 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hodina kódu</a> se blíží. Vyzýváme všechny učitele a organizátory, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> naplánujte si svou Hodinu kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Učíte informatiku? Podívejte se také na další zdroje CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Učíte informatiku? Podívejte se také na další zdroje CSEdWeek"
   n_have_learned_an_hoc: "<h1>Vyzkoušej si</h1> <h2>Hodina kódu</h2> <h3># si vyzkoušelo</h3>"
   anybody_can_learn: "Zvládne to každý."
   learn_now: "Učit se teď"

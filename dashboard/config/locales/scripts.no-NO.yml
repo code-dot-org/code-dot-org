@@ -1960,3 +1960,35 @@
           stages:
             Binary Numbers:
               name: Binære Tall
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Lage Funksjoner
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+            Sprite Properties:
+              name: Figuregenskaper
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Gjenta-løkker
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hendelser

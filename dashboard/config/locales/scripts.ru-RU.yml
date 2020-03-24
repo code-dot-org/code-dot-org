@@ -3359,3 +3359,65 @@ ru:
           stages:
             The Need for Programming Languages:
               name: Необходимость языков программирования
+        csp3-virtual:
+          description_short: Программирование
+          stages:
+            The Need For Programming Languages:
+              name: Необходимость языков программирования
+            Using Simple Commands:
+              name: Использование простых команд
+            Creating Functions:
+              name: Создание функций
+            APIs and Function Parameters:
+              name: API и параметры функции
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
+        csd3-virtual:
+          description_short: Программирование
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+            Random Numbers:
+              name: Случайные числа
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: CSS классы
+        csp5-virtual:
+          stages:
+            Controlling Memory with Variables:
+              name: Контролирование памяти с помощью переменных
+            User Input and Strings:
+              name: Пользовательский ввод и строки
+            While Loops:
+              name: Циклы «пока»
+            Introduction to Arrays:
+              name: Введение в массивы
+            Processing Arrays:
+              name: Обработка массивов
+            Functions with Return Values:
+              name: Функции с возвращаемыми значениями
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритмы
+            Events:
+              name: События

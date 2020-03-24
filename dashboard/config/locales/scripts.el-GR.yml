@@ -1931,3 +1931,39 @@ el:
               name: Η μέλισσα της ορθογραφίας
             Loops in Ice Age:
               name: Βρόχοι στην Εποχή των Παγετώνων
+        csp3-virtual:
+          description_short: Προγραμματισμός
+          stages:
+            Creating Functions:
+              name: Δημιουργούμε Συναρτήσεις
+        csd3-virtual:
+          description_short: Προγραμματισμός
+          stages:
+            Variables:
+              name: Μεταβλητές
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Βρόχοι με «Όσο»
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+        code-break:
+          stages:
+            Algorithms:
+              name: Αλγόριθμοι
+            Events:
+              name: Συμβάντα

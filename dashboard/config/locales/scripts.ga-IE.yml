@@ -2325,6 +2325,8 @@ ga:
               name: An tIdirlíon
             Crowdsourcing:
               name: Sluafhoinsiú
+            AI for Oceans:
+              name: AI ar son an Aigéin
         express-2020:
           stages:
             Dance Party:
@@ -2348,3 +2350,43 @@ ga:
           stages:
             Introduction to Design Mode:
               name: Buneolas ar an Mód Deartha
+        csp3-virtual:
+          description_short: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
+            trí dhearadh ó bharr anuas agus líníocht "turtair".
+          stages:
+            Creating Functions:
+              name: Feidhmeanna a chruthú
+            CS Principles Post Course survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Athróga
+            Sprites:
+              name: Sprideanna
+            Conditionals:
+              name: Coinníollacha
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
+            Sprite Properties:
+              name: Airíonna na Spride
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Lúba "Chomh fada is"
+            CS Principles Post Course survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
+        code-break:
+          stages:
+            Algorithms:
+              name: Algartaim
+            Events:
+              name: Teagmhais

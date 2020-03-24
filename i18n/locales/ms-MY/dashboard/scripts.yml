@@ -573,3 +573,21 @@ ms:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Fungsi
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritma
+            Events:
+              name: Acara-acara

@@ -2286,3 +2286,41 @@ bs:
           stages:
             Binary Numbers:
               name: Binarni Brojevi
+        csp3-virtual:
+          stages:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        csd2-virtual:
+          stages:
+            Images:
+              name: Slike
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Dok petlje
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Događaji

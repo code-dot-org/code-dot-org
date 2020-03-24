@@ -135,7 +135,7 @@ ar:
             Digital Citizenship:
               name: المواطنة الرقمية
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
             Functional Suncatchers:
               name: وظيفية Suncatchers
             Internet:
@@ -260,7 +260,7 @@ ar:
             'Bee: Nested Loops':
               name: 'النحلة : الحلقات المتداخلة'
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
             'Maze: Sequence':
               name: 'المتاهة : التسلسل'
         usability:
@@ -806,7 +806,7 @@ ar:
             Bounce:
               name: الارتداد
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
         csd3-2017:
           description_short: البرمجة
           stages:
@@ -1780,3 +1780,31 @@ ar:
           stages:
             Binary Numbers:
               name: أرقام ثنائية
+        csp3-virtual:
+          description_short: البرمجة
+          stages:
+            Creating Functions:
+              name: إضافة الدوال
+        csd3-virtual:
+          description_short: البرمجة
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: حلقات بينما
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: دوال
+        code-break:
+          stages:
+            Algorithms:
+              name: الخوارزميات
+            Events:
+              name: الأحداث

@@ -980,6 +980,12 @@ cs-CZ:
         \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých
         políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním
         řádku?"
+      courseD_artist_binary2: Spusť tento kód, abys viděl(a), jak umělec používá binární
+        kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2018: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
       courseD_artist_binary3: Který z těchto binárních řetězců se má provést osmkrát
         v cyklu, aby se nakreslil následující obrazec?
       courseD_artist_binary3_2018: Který z těchto binárních řetězců se má provést
@@ -1025,12 +1031,16 @@ cs-CZ:
       courseD_artist_binaryFP: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binaryFP8: "**Volná hra:** Nakresli si binárně, co chceš! "
       courseD_artist_binaryFP_2018: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
       courseD_artist_binaryFP_2019: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_nestedLoops4: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2018: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2019: Výborně! Udělej to samé se všemi těmito kruhy.
       courseD_artist_nestedLoops7: Použij, co ses naučil, abys vytvořil tento obrázek.
       courseD_artist_nestedLoops7_2018: Použij, co ses naučil, abys vytvořil tento
         obrázek.
@@ -1045,6 +1055,8 @@ cs-CZ:
       courseD_artist_nestedLoops_challenge2: Oprav kód, abys udělal tento obrázek!
       courseD_artist_nestedLoops_challenge2_2018: Oprav kód, abys udělal tento obrázek!
       courseD_artist_nestedLoops_challenge2_2019: Oprav kód, abys udělal tento obrázek!
+      courseD_autorun_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
       courseD_autorun_binary3_2019: Který z těchto binárních řetězců se má provést
         osmkrát v cyklu, aby se nakreslil následující obrazec?
       courseD_autorun_binary4_2019: Můžeš nakreslit tento vzor opakováním binárního
@@ -1151,6 +1163,8 @@ cs-CZ:
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_nested_loops_challenge2a: Pomoz Laurel sesbírat aspoň dvě
+        hromádky s pokladem.
       courseD_farmer_condLoops7: 'Výzva: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.'
       courseD_farmer_condLoops7_2018: 'Výzva: Sesbírej všechnu kukuřici a salát, pak

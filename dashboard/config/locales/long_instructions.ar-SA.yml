@@ -265,7 +265,7 @@ ar-SA:
       Dance_Party_02: |-
         لنجعل غزال الموظ هذا يرقص!
 
-        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
+        اسحب المربع البرمجي <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> إلى مساحة العمل. صِله بأسفل المربع البرمجي <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. ينبغي أن يبدأ راقصك حركة جديدة بعد الإجراء الرابع.
 
         تُستخدَم **الإجراءات** لحساب الوقت منذ تشغيل الموسيقى. في هذا الدرس التعليمي، يكون الإجراء عبارة عن أربع خطوات بالطول.
       Dance_Party_03: |-
@@ -814,6 +814,10 @@ ar-SA:
         ### الرسام في المكان الخاطئ!
 
         استخدم <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> لتجعل الرسام في منتصف منطقة اللعب./ ومن ثم ارسم مستقيم بطول 50 بكسل باستخدام <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_loopsPrePre1a_2019: |-
+        الرسام في المكان الخاطئ!
+
+        استخدم الكتلة البرمجية <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> لتحرك الرسام إلى مركز منطقة اللعب./ ومن ثم ارسم مستقيم بطول 50 بكسل باستخدام الكتلة البرمجية <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_prog6_2018: |-
         \_ "الان المس بيلي!"\_
 

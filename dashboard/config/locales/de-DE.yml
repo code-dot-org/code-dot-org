@@ -547,6 +547,9 @@ de:
       ein (zur Wiederherstellung des Passworts)
     update: Konto aktualisieren
     account_successfully_updated: Konto erfolgreich aktualisiert.
+    auth_option_saved: Du hast erfolgreich deinen %{provider} Account mit deiner E-Mail
+      %{email} verknüpft.
+    auth_option_saved_no_email: Du hast erfolgreich deinen %{provider} Account verbunden.
     update_email: Aktualisieren
   user_level:
     completed: Abgeschlossen
@@ -990,6 +993,8 @@ de:
       zu
     accept_label_markdown: Ich stimme den aktualisierten [Nutzungsbedingungen](%{tos_url})
       und der aktualisierten [Datenschutzerklärung](%{privacy_url}) zu
+    accept_tos: Mit der Anmeldung bei Code.org stimmst du unseren AGB (%{tos_url})
+      und Datenschutzbestimmungen (%{privacy_url}) zu.
     accept: Akzeptieren
     print: Drucken
     reminder_desc: Wir haben unsere <a href="%{tos_url}" target="_blank">Allgemeinen
@@ -1434,4 +1439,5 @@ de:
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
     Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen
     Sie zurück zu unserer Webseite.
+  page_not_found_button: Zurück zur Homepage
   copy: Kopieren
