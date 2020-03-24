@@ -13,7 +13,7 @@ social:
   "og:video:type": ""
 nav: athome_nav
 ---
-<div style="background-color: #00adbc; padding: 25px; margin-top:50px;"><img src="/images/athome/CodeBreak-header.png" style="max-width: 100%"/></div>
+<div style="background-color: #00adbc; padding: 25px"><img src="/images/athome/CodeBreak-header.png" style="max-width: 100%"/></div>
 <h1>Take a Code Break</h1>
 <div class="col-66" style="padding-right: 30px;">
 
@@ -47,7 +47,6 @@ Or, follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a hr
 [col-40]
 
 <center><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" width="275px" style="padding-right: 5px"></a></center>
-
 [/col-40]
 
 [col-70]
