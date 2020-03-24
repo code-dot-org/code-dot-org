@@ -5,7 +5,7 @@ require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
   def test_retrieve_new_ids_without_result
-    xml_content = <<-XML
+    pardot_response = Nokogiri::XML <<-XML
       <rsp stat="ok">
         <result>
           <total_results>0</total_results>
@@ -13,7 +13,7 @@ class PardotV2Test < Minitest::Test
       </rsp>
     XML
 
-    PardotV2.stubs(:post_with_auth_retry).returns(Nokogiri::XML(xml_content))
+    PardotV2.stubs(:post_with_auth_retry).returns(pardot_response)
 
     assert_equal [], PardotV2.retrieve_new_ids
   end
@@ -21,7 +21,7 @@ class PardotV2Test < Minitest::Test
   def test_retrieve_new_ids_with_result
     pardot_id = 1
     email = "alex@rollups.com"
-    xml_content = <<-XML
+    pardot_response = Nokogiri::XML <<-XML
       <rsp stat="ok">
         <result>
           <prospect>
@@ -32,7 +32,7 @@ class PardotV2Test < Minitest::Test
         </result>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(Nokogiri::XML(xml_content))
+    PardotV2.stubs(:post_with_auth_retry).returns(pardot_response)
 
     expected_result = [{email: email, pardot_id: pardot_id}]
     assert_equal expected_result, PardotV2.retrieve_new_ids
