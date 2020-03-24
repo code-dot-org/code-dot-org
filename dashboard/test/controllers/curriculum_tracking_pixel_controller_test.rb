@@ -9,23 +9,25 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
   end
 
   def assert_curriculum_page_view_logged(curriculum_url, user_id)
-    assert @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
-    assert @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
-    assert @firehose_record[:data_string], curriculum_url
-    assert @firehose_record[:data_json]["locale"], "en-us"
-    assert @firehose_record[:data_json]["csx"], "csf-18"
-    assert @firehose_record[:data_json]["course_or_unit"], "pre-express"
-    assert @firehose_record[:data_json]["lesson"], 11
+    assert_equal @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
+    assert_equal @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
+    assert_equal @firehose_record[:data_string], curriculum_url
+    parsed_result = JSON.parse(@firehose_record[:data_json])
+    assert parsed_result['locale'], "en-us"
+    assert_equal parsed_result['csx'], "csf-18"
+    assert_equal parsed_result['course_or_unit'], "pre-express"
+    assert_equal parsed_result['lesson'], "11"
   end
 
   def assert_non_english_curriculum_page_view_logged(curriculum_url, user_id)
-    assert @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
-    assert @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
-    assert @firehose_record[:data_string], curriculum_url
-    assert @firehose_record[:data_json]["locale"], "es-mx"
-    assert @firehose_record[:data_json]["csx"], "csf-1718"
-    assert @firehose_record[:data_json]["course_or_unit"], "coursec"
-    assert @firehose_record[:data_json]["lesson"], 10
+    assert_equal @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
+    assert_equal @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
+    assert_equal @firehose_record[:data_string], curriculum_url
+    parsed_result = JSON.parse(@firehose_record[:data_json])
+    assert parsed_result['locale'], "es-mx"
+    assert_equal parsed_result['csx'], "csf-1718"
+    assert_equal parsed_result['course_or_unit'], "coursec"
+    assert_equal parsed_result['lesson'], "10"
   end
 
   def refute_curriculum_page_view_logged
@@ -36,7 +38,7 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     stub_firehose
     @teacher = create :teacher
     @example_curriculum_url = '/csf-18/pre-express/11/'
-    @example_curriculum_url_with_locale = 'es-mx/csf-1718/coursec/10/'
+    @example_curriculum_url_with_locale = '/es-mx/csf-1718/coursec/10/'
   end
 
   test "get index for signed out, no curriculum_url" do
