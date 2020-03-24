@@ -21,12 +21,7 @@ class CurriculumTrackingPixelController < ApplicationController
 
       non_en = split_url[0].length == 5 && !!split_url[0].match(/\S{2}-\S{2}/)
 
-      if non_en
-        locale = split_url[0]
-        split_url.shift(1)
-      else
-        locale = "en-us"
-      end
+      locale = non_en ? split_url.shift : "en-us"
 
       unless split_url.empty?
         # csf, csd, csp including version year, algebra or hoc
