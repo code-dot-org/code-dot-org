@@ -4,48 +4,46 @@ module Pd::Foorm
     include Constants
     extend Helper
 
-    def self.calculate_averaged_rollup(parsed_forms, summarized_answers, questions_to_summarize)
-      questions_and_forms = get_question_details(parsed_forms, questions_to_summarize)
-      intermediate_rollup = get_intermediate_rollup(summarized_answers, questions_and_forms, parsed_forms)
-      get_averaged_rollup(intermediate_rollup, questions_and_forms)
+    def self.calculate_averaged_rollup(parsed_forms, summarized_answers, question_details)
+      intermediate_rollup = get_intermediate_rollup(summarized_answers, question_details, parsed_forms)
+      get_averaged_rollup(intermediate_rollup, question_details)
     end
 
-    def self.get_averaged_rollup(intermediate_rollup, questions_and_forms)
+    def self.get_averaged_rollup(intermediate_rollup, question_details)
       rollup = {response_count: intermediate_rollup[:response_count], averages: {}}
       intermediate_rollup[:questions].each do |question, answers|
-        case questions_and_forms[question][:type]
+        case question_details[question][:type]
         when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT
           next unless answers[:count] > 0
-          rollup[:averages][answers[:survey_name]] ||= {}
-          rollup[:averages][answers[:survey_name]][question] = answers[:sum].to_f / answers[:count]
+          rollup[:averages][question] ||= {}
+          rollup[:averages][question] = (answers[:sum].to_f / answers[:count]).round(2)
         when ANSWER_MATRIX
-          rollup[:averages][answers[:survey_name]] ||= {}
-          rollup[:averages][answers[:survey_name]][question] = {}
+          rollup[:averages][question] = {}
           averages = {}
           overall_sum = 0
           overall_count = 0
           answers.each do |matrix_question, matrix_answer|
             next unless matrix_question != :survey_name && matrix_answer[:count] > 0
-            averages[matrix_question] = matrix_answer[:sum].to_f / matrix_answer[:count]
+            averages[matrix_question] = (matrix_answer[:sum].to_f / matrix_answer[:count]).round(2)
             overall_sum += matrix_answer[:sum]
             overall_count += matrix_answer[:count]
           end
-          rollup[:averages][answers[:survey_name]][question][:average] = overall_sum.to_f / overall_count
-          rollup[:averages][answers[:survey_name]][question][:rows] = averages
+          rollup[:averages][question][:average] = (overall_sum.to_f / overall_count).round(2)
+          rollup[:averages][question][:rows] = averages
         end
       end
       return rollup
     end
 
-    def self.get_intermediate_rollup(summarized_answers, questions_and_forms, parsed_forms)
-      intermediate_rollup = set_up_intermediate_rollup(questions_and_forms, parsed_forms)
+    def self.get_intermediate_rollup(summarized_answers, question_details, parsed_forms)
+      intermediate_rollup = set_up_intermediate_rollup(question_details, parsed_forms)
       summarized_answers.each_value do |summaries_by_form|
         included_form = false
-        questions_and_forms.each do |question, question_details|
-          question_details[:form_keys].each do |form|
+        question_details.each do |question, question_data|
+          question_data[:form_keys].each do |form|
             next unless summaries_by_form[form] && summaries_by_form[form][question]
             included_form = true
-            case question_details[:type]
+            case question_data[:type]
             when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT
               add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question], summaries_by_form[form][question])
             when ANSWER_MATRIX
@@ -71,11 +69,10 @@ module Pd::Foorm
       end
     end
 
-    def self.set_up_intermediate_rollup(questions_and_forms, parsed_forms)
+    def self.set_up_intermediate_rollup(question_details, parsed_forms)
       intermediate_rollup = {questions: {}, response_count: 0}
-      questions_and_forms.each do |question, question_data|
-        next unless validate_question_same_across_forms(question, question_data, parsed_forms) &&
-          question_data[:form_keys].first && parsed_forms[question_data[:form_keys].first]
+      question_details.each do |question, question_data|
+        next unless parsed_forms[question_data[:form_keys].first]
         survey_name = question_data[:form_keys].first
         question_details = parsed_forms[survey_name][question]
         case question_data[:type]
@@ -89,51 +86,6 @@ module Pd::Foorm
         end
       end
       intermediate_rollup
-    end
-
-    def self.validate_question_same_across_forms(question, question_data, parsed_forms)
-      choices = nil
-      rows = nil
-      columns = nil
-      question_data[:form_keys].each do |form_key|
-        question = parsed_forms[form_key][question]
-        return false unless question[:type] = question_data[:type]
-        case question[:type]
-        when ANSWER_MULTI_SELECT, ANSWER_SINGLE_SELECT
-          if choices.nil?
-            choices = question[:choices]
-          else
-            return false unless choices == question[:choices]
-          end
-        when ANSWER_MATRIX
-          if rows.nil? && columns.nil?
-            rows = question[:rows]
-            columns = question[:columns]
-          else
-            return false unless rows == question[:rows] && columns == question[:columns]
-          end
-        end
-      end
-      return true
-    end
-
-    # get question details in format:
-    # {
-    #   question_name: {type: 'matrix/singleSelect/...', form_keys = [form_key1, form_key2, ...]}
-    # }
-    def self.get_question_details(parsed_forms, questions_to_summarize)
-      questions_and_forms = {}
-      parsed_forms.each do |form_key, parsed_form|
-        questions_to_summarize.each do |question|
-          next unless parsed_form[question]
-          questions_and_forms[question] ||= {
-            type: parsed_form[question][:type],
-            form_keys: []
-          }
-          questions_and_forms[question][:form_keys] << form_key
-        end
-      end
-      questions_and_forms
     end
   end
 end

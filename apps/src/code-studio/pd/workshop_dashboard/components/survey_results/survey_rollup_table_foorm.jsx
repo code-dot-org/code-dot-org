@@ -14,44 +14,36 @@ export default class SurveyRollupTableFoorm extends React.Component {
     let parsedData = [];
     const overall = workshopRollups.overall;
     const thisWorkshop = workshopRollups.single_workshop;
-    console.log('in get parsed data');
+    const questions = workshopRollups.questions;
     if (overall && overall.averages) {
-      Object.keys(overall.averages).forEach(surveyName => {
-        Object.keys(overall.averages[surveyName]).forEach(questionId => {
-          const questionData = this.props.questions[surveyName][questionId];
-          let overallQuestionAverages =
-            overall.averages[surveyName][questionId];
-          let thisWorkshopAverages =
-            thisWorkshop.averages[surveyName] &&
-            thisWorkshop.averages[surveyName][questionId];
-          let parsedQuestionAverages = {};
-          // only display matrix questions for now
-          if (questionData.type === 'matrix') {
-            console.log('question is a matrix');
-            parsedQuestionAverages[questionData.title] = {
-              thisWorkshop:
-                thisWorkshopAverages && thisWorkshopAverages.average,
-              overall: overallQuestionAverages.average
+      Object.keys(overall.averages).forEach(questionId => {
+        const questionData = questions[questionId];
+        let overallQuestionAverages = overall.averages[questionId];
+        let thisWorkshopAverages = thisWorkshop.averages[questionId];
+        let parsedQuestionAverages = {};
+        // only display matrix questions for now
+        if (questionData.type === 'matrix') {
+          parsedQuestionAverages[questionData.header] = {
+            thisWorkshop: thisWorkshopAverages && thisWorkshopAverages.average,
+            overall: overallQuestionAverages.average
+          };
+          let thisWorkshopRows =
+            thisWorkshopAverages && thisWorkshopAverages.rows;
+          Object.keys(overallQuestionAverages.rows).forEach(rowId => {
+            parsedQuestionAverages[questionData.rows[rowId]] = {
+              thisWorkshop: thisWorkshopRows && thisWorkshopRows[rowId],
+              overall: overallQuestionAverages.rows[rowId]
             };
-            let thisWorkshopRows =
-              thisWorkshopAverages && thisWorkshopAverages.rows;
-            Object.keys(overallQuestionAverages.rows).forEach(rowId => {
-              console.log(`adding row ${rowId}`);
-              parsedQuestionAverages[questionData.rows[rowId]] = {
-                thisWorkshop: thisWorkshopRows && thisWorkshopRows[rowId],
-                overall: overallQuestionAverages.rows[rowId]
-              };
-            });
-            parsedData.push({
-              orderedData: parsedQuestionAverages,
-              denominator: Object.keys(questionData.columns).length
-            });
-            console.log('added to parsed data');
-          }
-        });
+          });
+          parsedData.push({
+            orderedData: parsedQuestionAverages,
+            denominator: questionData.column_count,
+            question: questionData.title,
+            header: questionData.header
+          });
+        }
       });
     }
-    console.log(`parsed data length: ${parsedData.length}`);
     return parsedData;
   }
 
@@ -73,13 +65,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
             <td>{this.props.workshopRollups.overall.response_count}</td>
           </tr>
           {parsedData.map(matrixData => {
-            // return (
-            //   <MatrixAverages
-            //     orderedData={matrixData.orderedData}
-            //     denominator={matrixData.denominator}
-            //     key={key}
-            //   />
-            //   );
             return Object.keys(matrixData.orderedData).map(question => {
               const answerData = matrixData.orderedData[question];
               return (
