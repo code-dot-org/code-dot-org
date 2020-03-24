@@ -6,6 +6,7 @@ class MegaSection
   SAMPLE_TEACHER_NAME = 'MegaSection Teacher'.freeze
   SAMPLE_STUDENT_NAME_FORMAT = 'TestStudent%s MegaSection'.freeze
   SAMPLE_STUDENT_NAME_REGEX = /TestStudent\d* MegaSection/
+  SAMPLE_STUDENT_PARENT_EMAIL = 'mega_section_parent@code.org'.freeze
 
   @@rng = nil
 
@@ -22,8 +23,12 @@ class MegaSection
     environment_check!
 
     # Create a test teacher
+    start_time = Time.now
+
     teacher = create_teacher SAMPLE_TEACHER_EMAIL, SAMPLE_TEACHER_PASSWORD,
       SAMPLE_TEACHER_NAME
+
+    mid_time = Time.now
 
     # Create a large section for CSF, Course A 2019
     create_section(
@@ -32,6 +37,9 @@ class MegaSection
       age_max_inclusive: 9, script_name: 'coursea-2019', num_students: 250,
       use_imperfect_results: true
     )
+
+    puts "Created section and progress in #{Time.now - mid_time} seconds"
+    puts "Seeded in #{Time.now - start_time} seconds"
   end
 
   # Hard-delete the teacher and all of the teacher's sections and students
@@ -60,6 +68,7 @@ class MegaSection
         raise "Not a sample teacher - #{user.name}"
       end
       environment_check!
+      user.teacher_feedbacks.with_deleted.delete_all
       user.really_destroy!
     end
     # Create the test teacher
@@ -81,36 +90,42 @@ class MegaSection
   #    results. (CSF allows imperfect results, CSD and CSP do not.)
   def self.create_section(options)
     script = Script.get_from_cache(options[:script_name])
-
+    script_levels = script.script_levels.includes(:levels)
 
     # Create the section
     section = create :section, script: script,
       **options.slice(:teacher, :name, :login_type, :grade)
 
-    current_student = 0
-
-    # Create students in section
-
-    followers = []
-    teacher_scores = []
-    teacher_feedbacks = []
-
-    (1..options[:num_students]).each do
+    # Create students
+    students = []
+    (1..options[:num_students]).each do |i|
       # Choose random properties and create student
       age_min = options[:age_min]
       age_max_inclusive = options[:age_max_inclusive]
-      current_student += 1
 
-      name = format(SAMPLE_STUDENT_NAME_FORMAT, current_student)
-      age = rng.rand(age_min..age_max_inclusive)
-      student_user = create :student, name: name, age: age
+      # We give all sample students the same parent email to make it easy to look them
+      # up after we bulk-create them here.
+      students << build(:student,
+        name: format(SAMPLE_STUDENT_NAME_FORMAT, i),
+        age: rng.rand(age_min..age_max_inclusive),
+        email: "mega_student_#{i}@example.com",
+        parent_email: SAMPLE_STUDENT_PARENT_EMAIL
+      )
+    end
+    User.import! students
 
+    students = User.where(parent_email: SAMPLE_STUDENT_PARENT_EMAIL)
+
+    # Add students to section and simulate progress
+    followers = []
+    user_levels = []
+    teacher_feedbacks = []
+    students.each do |student_user|
       # Add student to section
       followers << build(:follower, section: section, student_user: student_user)
 
       # Create progress for this student on each level
-      user_levels = []
-      script.script_levels.includes(:levels).each do |script_level|
+      script_levels.each do |script_level|
         user_levels << build(:user_level,
           user: student_user,
           script_id: script.id,
@@ -128,23 +143,22 @@ class MegaSection
           comment: tiny_lipsum
         )
       end
-      UserLevel.import! user_levels
-
-      # Retrieve newly-created user levels so we can add teacher scores
-      user_levels = UserLevel.where(user: student_user)
-      user_levels.each do |user_level|
-        # Score each level for each student
-        teacher_scores << build(:teacher_score,
-          user_level_id: user_level.id,
-          teacher_id: section.teacher.id,
-          score: 100
-        )
-      end
     end
-
     Follower.import! followers
-    TeacherScore.import! teacher_scores
+    UserLevel.import! user_levels
     TeacherFeedback.import! teacher_feedbacks
+
+    # Retrieve newly-created user levels so we can add teacher scores
+    teacher_scores = []
+    UserLevel.where(user: students).each do |user_level|
+      # Score each level for each student
+      teacher_scores << build(:teacher_score,
+        user_level_id: user_level.id,
+        teacher_id: section.teacher.id,
+        score: 100
+      )
+    end
+    TeacherScore.import! teacher_scores
   end
 
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
