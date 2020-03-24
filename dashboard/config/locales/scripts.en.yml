@@ -14261,6 +14261,10 @@ en:
               name: 'Mini-Project: HTML Web Page'
             'Mini-Project: Your Personal Style':
               name: 'Mini-Project: Your Personal Style'
+            'Your Web Page - Define ':
+              name: 'Your Web Page - Define '
+            Your Web Page - Prepare:
+              name: Your Web Page - Prepare
         csd1-2020:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -15965,7 +15969,9 @@ en:
               name: Episode 1 - Algorithms with Hill Harper
             Episode 2 - Placeholder:
               name: Episode 2 - Placeholder
+            Episode 2 - Coming Soon!:
+              name: Episode 2 - Coming Soon!
           title: Code Break
           description_audience: ''
           description_short: ''
-          description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly show where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at code.org/break. '
+          description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. '
