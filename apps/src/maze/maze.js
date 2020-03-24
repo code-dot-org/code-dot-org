@@ -1,3 +1,4 @@
+/* globals appOptions */
 const React = require('react');
 const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
@@ -319,7 +320,11 @@ module.exports = class Maze {
   sendFeedback_(code) {
     $.ajax({
       url: FEEDBACK_SERVER_URL,
-      data: JSON.stringify({code: code}),
+      data: JSON.stringify({
+        code: code,
+        userId: appOptions.userId,
+        levelId: appOptions.serverLevelId
+      }),
       type: 'POST',
       crossDomain: true,
       dataType: 'json',

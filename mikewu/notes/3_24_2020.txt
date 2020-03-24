@@ -1,0 +1,3 @@
+March 24th, 2020
+
+Global variables: appOptions which contains metadata like level and user id

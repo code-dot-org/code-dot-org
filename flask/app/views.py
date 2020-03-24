@@ -20,7 +20,7 @@ def predict():
         data = json.loads(request.data)
         code = data['code']
         print('---------------\n')
-        print(code)
+        print(data)
         print('---------------\n')
 
     response = {
