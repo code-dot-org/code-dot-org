@@ -318,12 +318,14 @@ module.exports = class Maze {
    * Make POST request to feedback server. Send code blocks.
    */
   sendFeedback_(code) {
+    var userId = appOptions.userId;
+    var levelId = appOptions.serverLevelId;
     $.ajax({
       url: FEEDBACK_SERVER_URL,
       data: JSON.stringify({
         code: code,
-        userId: appOptions.userId,
-        levelId: appOptions.serverLevelId
+        userId: userId,
+        levelId: levelId
       }),
       type: 'POST',
       crossDomain: true,
@@ -332,11 +334,7 @@ module.exports = class Maze {
       contentType: 'application/json',
       success: function(result) {
         // Create hint ID.
-        var currentDate = new Date();
-        var date = currentDate.getDate();
-        var month = currentDate.getMonth();
-        var year = currentDate.getFullYear();
-        var hintId = 'feedback_ml_' + date + '-' + month + '-' + year;
+        var hintId = 'feedback_ml_level=' + levelId + '_user=' + userId;
 
         // Add hint into the redux state.
         var hint = {
@@ -346,9 +344,10 @@ module.exports = class Maze {
           alreadySeen: false
         };
 
-        getStore().dispatch(enqueueHints([hint], [hintId]));
         // Indicate the question has hints.
         getStore().dispatch(setHasAuthoredHints(true));
+        // Add new hint to redux queue.
+        getStore().dispatch(enqueueHints([hint], [hintId]));
       }
     });
   }
