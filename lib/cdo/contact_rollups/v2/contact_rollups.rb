@@ -10,8 +10,8 @@ class ContactRollupsV2
     log_collector.time!('ContactRollupsComparison.delete_all') {ContactRollupsComparison.delete_all}
     log_collector.time!('ContactRollupsComparison.compare_processed_data') {ContactRollupsComparison.compile_processed_data}
 
-    log_collector.time!('ContactRollupsPardotMemory.update_from_new_contacts') {ContactRollupsPardotMemory.update_from_new_contacts}
+    log_collector.time!('ContactRollupsPardotMemory.add_and_update_pardot_ids') {ContactRollupsPardotMemory.add_and_update_pardot_ids}
 
-    # To do: sync upstream step
+    # TODO: sync upstream step
   end
 end
