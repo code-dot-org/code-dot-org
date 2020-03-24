@@ -455,3 +455,21 @@ uz:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+        csd3-virtual:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funksiyalar
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmlar

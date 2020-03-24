@@ -443,3 +443,19 @@ ku:
           stages:
             Conditionals:
               name: مەرجیەکان
+        csd3-virtual:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: فرمانەکان
+        code-break:
+          stages:
+            Algorithms:
+              name: خوارزمیەکان

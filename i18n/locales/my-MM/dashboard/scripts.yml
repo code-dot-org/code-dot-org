@@ -170,3 +170,7 @@ my:
           stages:
             Variables:
               name: Variables
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables

@@ -5361,6 +5361,8 @@ sk:
                 vzorov, v ktorých vlastne voláme jednu funkciu z vnútra inej funkcie.
             End of Course Project:
               name: Záverečný projekt
+            Digital Sharing:
+              name: Digitálne zdieľanie
         coursef-2020:
           title: Kurz F (2019)
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a
@@ -5415,6 +5417,8 @@ sk:
                 občana.
             End of Course Project:
               name: Záverečný projekt
+            AI for Oceans:
+              name: AI pomáha oceánom
         express-2020:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -5484,3 +5488,55 @@ sk:
           stages:
             Debugging:
               name: Hľadanie a odstraňovanie chýb
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Tvorba funkcií
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Premenné
+            Conditionals:
+              name: Podmienky
+            Velocity:
+              name: Rýchlosť
+            Functions:
+              name: Funkcie
+            Sprite Properties:
+              name: Vlastnosti postáv
+        jess-test-script:
+          stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
+        csd2-virtual:
+          stages:
+            Digital Footprint:
+              name: Digitálna stopa
+            Images:
+              name: Obrázky
+            'Websites for Expression ':
+              description_student: 'Táto lekcia predstavuje webstránky ako spôsob
+                osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými
+                sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá
+                na zopár príkladov webstránok pripravených študentami z predošlých
+                kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov,
+                ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu
+                zvyšku kapitoly. '
+        csp5-virtual:
+          stages:
+            Multi-screen Apps:
+              name: Viacobrazovkové aplikácie
+            While Loops:
+              name: Cykly "pokiaľ"
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Rýchlosť
+            Functions:
+              name: Funkcie
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmy
+            Events:
+              name: Udalosti

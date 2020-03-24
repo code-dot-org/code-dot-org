@@ -952,8 +952,11 @@ zh-CN:
     csp_parameters_return_values: '参数和返回值'
     csp_unit1_2020: '单元 1︰ 数字信息'
     csp_unit2_2020: '单元 2︰ 互联网'
+    csp_unit3_2020: '第3单元：应用设计简介'
     csp_unit6_2020: '单元 6: 算法'
+    csp_unit8_2020: '单元 8: 创建 PT准备'
     csp_unit9_2020: '单元 9: 数据'
+    csp_unit10_2020: '第10单元：网络安全和全球影响'
     dlp: '反思提示'
     time4cs_c1: '集合 1：湿地及其生态系统'
     time4cs_c2: '集合 2：湿地里的食物链'
@@ -1147,3 +1150,7 @@ zh-CN:
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"
   page_not_found_button: "返回主页"
   copy: '复制'
+  maker:
+    google_oauth:
+      login_with_google: '登录到Google的制作者应用'
+      error_no_code: '请输入您的登录代码。'

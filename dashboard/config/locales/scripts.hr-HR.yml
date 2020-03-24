@@ -1598,3 +1598,29 @@ hr:
           stages:
             Spelling Bee:
               name: Slovkanje
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Stvaranje funkcija
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Petlje s uvjetom
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Događaji

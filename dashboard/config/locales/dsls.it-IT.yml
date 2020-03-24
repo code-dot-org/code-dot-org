@@ -1655,6 +1655,24 @@ it-IT:
           ## Durata del corso
 
           Per completare questo corso online sono necessarie 3 - 7 ore, a seconda delle tue precedenti conoscenze e da quanto intendi approfondire le risorse messe a disposizione in Code.org.
+      OPD-K5 Assessment:
+        markdown: |
+          # Gestione della classe > Altre risorse disponibili
+
+          Accedendo come insegnante nel sito Code.org hai a disposizione molte risorse che gli alunni non hanno. Hai già visto come individuare un corso, creare una classe ed assegnare il corso alla classe. Inoltre puoi:
+
+          - **Seguire l'andamento degli alunni nel corso**: [Valutare l'apprendimento](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) di tutti i tuoi alunni.
+          - **Il tuo andamento nel corso**: Vedere il tuo andamento nelle lezioni in Code.org come studente. Anche i tuoi alunni saranno in grado di vedere il loro andamento con la loro utenza. In aggiunta, in qualità di insegnante, sarai in grado di vedere il piano di studio delle lezioni e le soluzioni di tutti gli esercizi.
+          - **Aiuto e comunità**: Accedendo a [support.code.org](https://support.code.org/) puoi porre domande, rispondere a domande di altri insegnanti, e leggere le domande frequenti (FAQ) fornite dal team di Code.org. In questa pagina puoi contattare direttamente il team di Code.org per qualsiasi altra domanda.
+
+          <br/>
+          ---
+          > ## Visita support.code.org
+          > Se non riesci a proseguire o hai qualche domanda, cerca nelle nostre pagine di supporto in support.code.org! Puoi anche contattarci direttamente  da quella pagina sul [nostro forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://support.code.org" target="blank"><button class="plc">Domanda aiuto >></button></a>
+
+          Dopo aver commentato nel forum, torna qui e seleziona il bottone sottostante per accedere alla prossima lezione.computer
       OPD-K5 CS Courses:
         markdown: "# Gestione della classe > Per iniziare in Code.org\n\n\n## Passo
           1: Seleziona un corso\nTutti i corsi -- da quelli indicati per la scuola
@@ -1746,6 +1764,20 @@ it-IT:
 
 
           > Questo è tutto! Potrai tornare a questo esercizio ogni volta che avrai bisogno di ripassare come funziona la piattaforma di apprendimento.
+      OPD-K5 Celebrate:
+        markdown: |
+          # I prossimi passi > Festeggiamo!
+
+          Congratulazioni per aver terminato questo corso online di sviluppo professionale. Se hai terminato tutte le lezioni in questo corso puoi scaricare e stampare l'attestato di completamento seguendo i seguenti passi:
+
+          1. vai a [questo sito](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. inserisci il tuo nome nel riquadro bianco.
+          3. seleziona "Stampa gli attestati".
+          4. seleziona l'immagine dell'attestato con il  tasto destro del mouse e seleziona "salva l'immagine come..." affinché sia salvato sul tuo computer.
+
+          E non dimenticare... puoi ritornare a questo corso ogni volta che lo desideri, per rivedere le lezioni, accedere alle risorse o soltanto per rinfrescare la tua memoria!
+
+          Grazie per la tua partecipazione! Non vediamo l'ora di sentire come hai realizzato le tue lezioni di informatica utilizzando Core Studio nella tua classe!
       OPD-K5 Congrats:
         markdown: "# Events > Riepilogo\n\nIn questa lezione hai realizzato giochi
           divertenti, hai combinato fra di loro i concetti base dimostrando quello
@@ -1763,6 +1795,19 @@ it-IT:
           Hai completato le lezioni da 1 a 8 ed appreso i concetti base dell'informatica. Speriamo che tu ti sia divertito ! Confidiamo che tu stia considerando come potresti utilizzare quanto hai appreso nella tua attività di insegnamento.
           <br/><br/>
           Nella prossima lezione prenderemo in considerazione i migliori metodi, accorgimenti e strategie per insegnare questi concetti fondamentali nella tua classe.
+      OPD-K5 Connect:
+        markdown: "# I prossimi passi > rimani in contatto\n\nOltre ad ulteriori corsi
+          formali potresti considerare di unirti alla comunità di code.org community
+          per continuare ad imparare in maniera informale dalle eserienze altruui
+          o semplicemente per trovare supporto ed un gruppo di colleghi. Ecco come:
+          \ \n\n<br/><br/>\n\n> **Continua a partecipare  alla comunità degli insegnanti
+          in code.org:** Il forum che hai utilizzato durante questo corsosarà una
+          grande risorsa nel proseguo del tuo percorso. Puoi usarlo non solo  riferendoti
+          al tuo apprendimento in questo corso, ma per avere supporto mentre prosegui
+          il tuo viaggio o anche per offrire supporto ad altri che hanno bisogno della
+          tua esperienza. Registra il suo indirizzo e visitalo spesso: [http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+          \ \n\n<br/>\n\n> **Connettiti con [@teachcode](http://twitter.com/teachcode)
+          su Twitter.**  \n\n<br/>\n"
       OPD-K5 Culture:
         markdown: "# Linee guida > Approccio in classe\n\nCome possiamo stimolare
           un proficuo approccio della classe nei nostri corsi di informatica ? Per
@@ -1952,6 +1997,15 @@ it-IT:
           è il tuo piano?\n\nOra prenditi del tempo per pianificare la fruizione di
           questo corso online, al fine di ottenere il massimo beneficio da questa
           esperienza. Dopo aver preparato il tuo piano puoi tuffarti nella prima lezione!"
+      OPD-K5 PostSurvey:
+        markdown: |+
+          # Prima di terminare - Sondaggio finale
+
+          Grazie per aver seguito il corso Fondamenti di Informatica - Corso per insegnanti!
+          Indipendentemente dal fatto che tu abbia terminato o no il corso, vogliamo conoscere le tue opinioni in merito. Compila questo breve sondaggio per aiutarci a migliorare il corso!
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Compila il sondaggio finale</a>
+
       OPD-K5 PreSurvey:
         markdown: |+
           # Per cominciare > Sondaggio preliminare
@@ -2000,6 +2054,21 @@ it-IT:
           di [Fondamenti di informatica](http://studio.code.org/). Il vantaggio di
           questo corso è di darti in un breve lasso di tempo un primo assaggio di
           cosa ti aspetta, estraendo alcuni esercizi particolarmente rappresentativi."
+      OPD-K5 Stage10Start:
+        markdown: |
+          # I prossimi passi > Riepiloghiamo
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## Ci sei quasi!
+
+          Finora hai imparato le basi della programmazione, esplorato il modo in cui potresti insegnare informatica e creato un semplice piano per l'insegnamento in classe.
+
+          Completando la lezione 11, sarai in grado di:
+
+          - riflettere su ciò che hai imparato
+          - pensare ai prossimi passi da compiere per proseguire il tuo apprendimento
+          - connetterti  con una comunità di colleghi docenti interessati all'insegnamento dell'informatica
       OPD-K5 Stage1Go:
         markdown: |-
           # Per cominciare > Pronti, attenti, via!
@@ -2229,22 +2298,21 @@ it-IT:
 
           ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
       OPD-K5 Stage5Start:
-        markdown: |
+        markdown: |-
           # Istruzioni condizionali > Sommario della lezione
 
           <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
 
-          Finora hai scritto un semplice programma a cui hai aggiunto i cicli per migliorarne l'efficienza. In questa lezione introdurremo l'istruzione **Se** che introduce la possibilità di un comportamento alternativo al tuo programma.
+          Finora hai scritto un semplice programma a cui hai aggiunto i cicli per migliorarne l'efficienza. In questa lezione introdurremo l'istruzione condizionale **se** che aggiunge la logica al tuo programma.
 
           Completando la lezione 6 sarai in grado di:
 
-          - Acquisire pratica programmando istruzioni condizionali semplici
-          - Riflettere sulla loro applicazione in classe
+          - creare semplici programmi basati sulle istruzioni condizionali;
+          - riflettere su come insegnare questi concetti in classe.
 
-          >**Come si svolge questa lezione:** presenteremo un'attività tradizionale tratta dal Corso D (indicato per la 3ª classe primaria) che spiega l'idea delle istruzioni condizionali. Successivamente completerai una serie di esercizi in cui applicherai ciò che hai imparato sull'utilizzo delle istruzioni condizionali. La lezione terminerà con l'opportunità di riflessione. Prevedi di impiegare tra 20 e 45 minuti per completare questa lezione.
+          >**Come si svolge questa lezione** - Viene inizialmente presentata una lezione tradizionale del Corso D (adatta per la 3ª primaria) che introduce il concetto di istruzione condizionale. Successivamente completerai una serie di esercizi in cui applicherai ciò che hai imparato sull'utilizzo delle istruzioni condizionali. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
 
-
-          Pronti? Andiamo!
+          Pronti? Partiamo!
       OPD-K5 Stage6Go:
         markdown: "# Funzioni > Attività tradizionale\n\nI programmatori hanno sempre
           cercato il metodo per rendere il loro programma sempre più efficiente.Un
@@ -2363,7 +2431,7 @@ it-IT:
 
           - **Privilegia le attività "tradizionali"** per insegnare i concetti fondamentali (seleziona [qui per una lista completa delle attività tradizionali])(https://code.org/curriculum/unplugged.)
           - Adotta le regola **"chiedi a tre e poi a me"** nella tua classe: un alunno prima di farti una domanda deve averla già fatta a 3 dei suoi compagni. Questo riduce il numero delle risposte che devi dare individualmente e promuove l'apprendimento collettivo.
-          - **Sii calmo ma tenace** quando i problemi sorgono (e ce ne saranno). La tua reazione determina il clima nella classe. Se al al primo problema esclami:"sono pessimo con la tecnologia. Io mollo", i tuoi alunni penseranno che questo sia il modo giusto di comportarsi nelle loro difficoltà.
+          - **Sii calmo ma tenace** quando i problemi sorgono (e ce ne saranno). La tua reazione determina il clima nella classe. Se al al primo problema esclami:"sono pessimo con la tecnologia. Io rinuncio", i tuoi alunni penseranno che questo sia il modo giusto di comportarsi nelle loro difficoltà.
           - **Sii orgoglioso** dei loro programmi. Mostrali, falli provare ad altri, pubblicali. E' un grande successo per te e per i tuoi alunni e deve essere celebrato.
           - **Fai domande esplorative** agli alunni (anche se tu non ne conosci la risposta). Chiedi alla classe se qualcuno conosce la risposta. Eventualmente sentiti a tuo agio nel dire: "neppure io so rispondere; cerchiamo di trovare la risposta insieme!"
 
@@ -2397,6 +2465,22 @@ it-IT:
           altre linee guida suggerite dalla comunità di docenti di Code.org\n\nTi
           offriremo l'opportunità di condividere le tue linee guida con la nostra
           comunità.\n"
+      OPD-K5 Stage9Go:
+        markdown: |
+          # Gestione della classe > Riepilogo
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          In questa lezione hai:
+
+          - acquisito familiarità con il pannello di controllo dell'insegnante e delle altre risorse disponibili in Code.org
+          - riflettuto su come integrare l'informatica nel tuo insegnamento
+
+          Nella lezione 11, l'ultima lezione avrai modo di:
+
+          - riflettere su ciò che hai imparato
+          - pensare ai prossimi passi da compiere per proseguire il tuo apprendimento
+          - connetterti  con una comunità di colleghi docenti interessati all'insegnamento dell'informatica
       OPD-K5 Stage9Start:
         markdown: "# Gestione della classe > Esploriamo le risorse per gli insegnanti\n\nNel
           corso delle lezioni  da 4 a 8 hai preso visione di alcune lezioni \"tradizionali\"
@@ -2408,7 +2492,7 @@ it-IT:
           di controllo dell'insegnante](http://studio.code.org/)**. \n\nAl termine
           della lezione 10, avrai:\n\n- scoperto altre risorse disponibili per gli
           insegnanti \n- imparato l'utilizzo del **[Pannello di controllo dell'insegnante](http://studio.code.org/)**
-          di Code.org\n- pensato a come integrare l'informatica nel tuo insegnamento\n\n***\n\nQuesta
+          di Code.org\n- riflettuto su come integrare l'informatica nel tuo insegnamento\n\n***\n\nQuesta
           sotto è una schermata del pannello di controllo dell'insegnante. Per vederlo
           devi fare login con la tua utenza di insegnante in Code.org  --  dovrebbe
           essere la tua schermata predefinita del sito non appena accedi. Se non hai
@@ -2539,6 +2623,23 @@ it-IT:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
           > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Your Plan:
+        markdown: "# Gestione della classe  > La pianificazione\n\nSperiamo che questa
+          lezione ti sia servita per scoprire le risorse disponibili in Code Studio.
+          \nMentre pensi a come in futuro potresti insegnare informatica utilizzando
+          una delle risorse di code.org o Code Studio, [condividi il tuo piano con
+          la comunità degli insegnanti (PLC)](http://forum.code.org/t/teaching-computer-science-your-plans/412).\n\nCondividi
+          con noi:\n\n- Quali sono gli obiettivi per la tua classe? Come i corsi di
+          Fondamenti di informatica o le risorse di Code.org possono aiutarti a raggiungerli?\n-
+          Quali di queste risorse ti entusiasma maggiormente?\n- Quali sfide prevedi
+          nel cercare di raggiungere i tuoi obiettivi?\n- Quali domande hai a cui
+          questa community potrebbe aiutarti a rispondere?\n\nDopo aver pubblicato
+          la tua pianificazione, in seguito rivisita [questa discussione] nel forum
+          (http://forum.code.org/t/teaching-computer-science-your-plans/412) per aggiornarci
+          su come procede il piano!\n\n<a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\"
+          target=\"blank\"><button class=\"plc\">Pubblica la tua pianificazione >></button></a>\n\nDopo
+          aver scritto nel forum torna qui e seleziona il bottone sottostante per
+          procedere"
       OPD-Stage3Start:
         markdown: |-
           # Uno sguardo avanti > Sommario della lezione

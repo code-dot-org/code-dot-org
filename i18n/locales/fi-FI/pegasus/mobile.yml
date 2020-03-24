@@ -12,6 +12,7 @@
   csedweek_dates: "3.-9. joulukuuta 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
+  csedweek_banner_teachers_text: "Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit"
   n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
   anybody_can_learn: "Kuka tahansa voi oppia."
   learn_now: "Opettele nyt"

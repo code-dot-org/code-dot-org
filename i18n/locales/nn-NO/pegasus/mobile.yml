@@ -12,6 +12,7 @@
   csedweek_dates: "3.-9. desember, 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmar seg. Til alle lærarar og arrangørar<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg kodetimen din</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
+  csedweek_banner_teachers_text: "Er du en lærar i IT? Sjå andre CSEdWeek-ressursar"
   n_have_learned_an_hoc: "<h1>Prøv ein</h1><h2>Kodetime</h2><h3># har prøvd</h3>"
   anybody_can_learn: "Alle kan læra."
   learn_now: "Lær no"

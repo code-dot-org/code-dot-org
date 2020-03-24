@@ -457,6 +457,14 @@ Resources:
             daemon: true,
             chef_version: chef_version
           ), 10)%>
+          # Signal CloudFormation resource.
+          aws cloudformation signal-resource \
+            --unique-id $INSTANCE_ID \
+            --stack-name $STACK \
+            --logical-resource-id $RESOURCE_ID \
+            --status $STATUS \
+            --region $REGION \
+            || true
       NetworkInterfaces:
       - AssociatePublicIpAddress: true
         DeviceIndex: 0

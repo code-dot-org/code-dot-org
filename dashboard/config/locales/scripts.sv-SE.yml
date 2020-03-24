@@ -2183,3 +2183,33 @@ sv:
           stages:
             Binary Numbers:
               name: Binära tal
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Skapa funktioner
+        csd3-virtual:
+          stages:
+            Variables:
+              name: variabler
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+        csd2-virtual:
+          stages:
+            Images:
+              name: Bilder
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: "'Medan' loopar(slingor)"
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funktioner
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Händelser

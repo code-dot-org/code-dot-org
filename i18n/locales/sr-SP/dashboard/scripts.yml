@@ -1463,3 +1463,32 @@ sr:
           stages:
             Spelling Bee:
               name: Пчелица словарица
+        csp3-virtual:
+          description_short: Programming
+        csd3-virtual:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Понављања са условима
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Догађаји

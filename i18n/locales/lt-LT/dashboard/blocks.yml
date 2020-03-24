@@ -426,11 +426,10 @@ lt:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': parodyk
-            '"hide"': pa(si)slėpk
+            '"random"': atsitiktinis
       binary_move:
         options:
           DIR:

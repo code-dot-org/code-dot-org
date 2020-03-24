@@ -12,6 +12,7 @@
   csedweek_dates: "Ika 18-14 ng Disyembre, 2014"
   csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> ay parating na. Tinatawagan ang lahat ng guro at mga organizer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">pagplanuhan ang iyong Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek"
   n_have_learned_an_hoc: "<h1> Subukan ang</h1><h2>Hour of Code</h2><h3>#served</h3>"
   anybody_can_learn: "Lahat ay puwedeng matuto."
   learn_now: "Matuto Ngayon"

@@ -20,6 +20,8 @@ pt-BR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Você é professor de ciência da computação? Veja outros
     recursos da Semana de Educação em Ciência da Computação</a>'
+  csedweek_banner_teachers_text: Você é professor de ciência da computação? Veja outros
+    recursos da Semana de Educação em Ciência da Computação
   n_have_learned_an_hoc: "<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>"
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
@@ -710,6 +712,8 @@ pt-BR:
   volunteer_engineer_submission_intro_links: É professor(a) e está procurando voluntários?
     Encontre um voluntário na sua região em nosso <a href="%{volunteer_local}">mapa
     de voluntários</a>.
+  volunteer_engineer_submission_intro_links_markdown: É um(a)  professor(a) à procura
+    de voluntários? Encontre um voluntário local no nosso [mapa de voluntários](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Atualize suas informações
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores
     no mapa de voluntários

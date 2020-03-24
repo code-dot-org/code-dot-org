@@ -4827,6 +4827,8 @@ it:
               description_teacher: Gli studenti saranno introdotti all'uso delle funzioni su Code.org. Nell'ambiente dell'Artista verranno create e modificate figure magnifiche sfruttando la potenza delle funzioni. Per schemi più complessi, gli studenti impareranno ad usare le funzioni annidate, richiamando una funzione dall'interno di un'altra.
             End of Course Project:
               name: Progetto di fine corso
+            Digital Sharing:
+              name: Condivisione digitale
         coursef-2020:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
@@ -4868,6 +4870,8 @@ it:
               description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
             End of Course Project:
               name: Progetto di fine corso
+            AI for Oceans:
+              name: L'Intelligenza Artificiale per il mare
         express-2020:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -4948,3 +4952,49 @@ it:
           stages:
             Debugging:
               name: Correzione errori (debugging)
+        csp3-virtual:
+          description_short: Programmazione
+          stages:
+            Creating Functions:
+              name: Creazione di funzioni
+        csd3-virtual:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni
+        jess-test-script:
+          stages:
+            Debugging:
+              name: Correzione errori (debugging)
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Cicli "mentre"
+            Introduction to Arrays:
+              name: Introduzione agli array
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Eventi

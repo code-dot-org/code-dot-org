@@ -217,6 +217,10 @@ zh-TW:
 
         讓我移動到土堆上並把土鏟平，再移動到坑洞上並把洞填滿。
       Alien Defender: "**專案點子**：在 Play Lab 裡設計一個獨一無二的遊戲！"
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**目標:** 使屏幕變為綠色。\n\n**How:**
+        拖入一個 `setProperty()` 塊。使用下拉菜單將屏幕的“背景顏色”設置為“綠色”。 然後點擊“運行”。\n\n**被卡住了嗎？ 點擊此處:**
+        ![可擴展](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
       CSD Problem Solving Process Video: |-
         ## 需思想的問題
 

@@ -356,11 +356,10 @@ kk:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': көрсет
-            '"hide"': жасырылған бейнесі
+            '"random"': кездейсоқ
       binary_move:
         options:
           DIR:
