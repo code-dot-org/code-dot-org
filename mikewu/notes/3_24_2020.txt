@@ -1,3 +1,25 @@
 March 24th, 2020
 
-Global variables: appOptions which contains metadata like level and user id
+Global variables: appOptions which contains metadata like level and user id.
+
+How should we implement the highlighting button?
+
+Actual highlighting seems easy: 
+    - https://github.com/code-dot-org/code-dot-org/blob/a3a80ed4764b179222a2d1041a5012566f74e311/apps/src/maze/maze.js#L796
+    - StudioApp contains the code https://github.com/code-dot-org/code-dot-org/blob/fc3d2a361e19b84eb375f97f3ec6b888e1455610/apps/src/StudioApp.js
+
+Question:
+    - Advice on implementing the code highlighting
+        
+        Answer: find relevant code (showPaths thing)?
+    
+    - Why does enqueue directly show and not hit lightbulb
+        
+        Answer: try contextual?
+    
+    - blocklyToCode replacement? I choose the repeat block this way...
+        - get block type, args, id
+        
+        Answer: can convert to XML (which contains everything)
+                Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+                Blockly.Xml.domToPrettyText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
