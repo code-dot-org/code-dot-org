@@ -77,6 +77,7 @@ level 'CSD U2 Expression Exemplars_2018_2019_pilot_2020', named: true
 
 stage 'Styling Elements with CSS', flex_category: 'csd2_1'
 level 'CSD U2L09 TFMD_2020', named: true
+level 'CSD U2 Sample CSS layout', named: true
 level 'CSD U2 layout style sample_2020', progression: 'Exploring more CSS'
 level 'CSD U2 layout style bgcolor_2020', progression: 'Exploring more CSS'
 level 'CSD U2 layout style body_2020', progression: 'Layout with CSS'
@@ -86,7 +87,7 @@ level 'CSD U2 layout style practice_pilot_2020', progression: 'Layout with CSS'
 level 'CSD U2 add style_2020', progression: 'Layout with CSS', assessment: true
 level 'CSD U2 layout style challenge_pilot_2020', progression: 'Layout with CSS'
 
-stage 'Project - Planning Layout and Style', flex_category: 'csd2_1'
+stage 'Your Web Page - Prepare', flex_category: 'csd2_1'
 level 'CSD U2L10 TFMD_2020', named: true
 
 stage 'Project - Building a Webpage', flex_category: 'csd2_1'
