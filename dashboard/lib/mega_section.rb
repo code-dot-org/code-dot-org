@@ -82,6 +82,7 @@ class MegaSection
   def self.create_section(options)
     script = Script.get_from_cache(options[:script_name])
 
+
     # Create the section
     section = create :section, script: script,
       **options.slice(:teacher, :name, :login_type, :grade)
@@ -89,6 +90,11 @@ class MegaSection
     current_student = 0
 
     # Create students in section
+
+    followers = []
+    teacher_scores = []
+    teacher_feedbacks = []
+
     (1..options[:num_students]).each do
       # Choose random properties and create student
       age_min = options[:age_min]
@@ -100,30 +106,45 @@ class MegaSection
       student_user = create :student, name: name, age: age
 
       # Add student to section
-      create :follower, section: section, student_user: student_user
+      followers << build(:follower, section: section, student_user: student_user)
 
-      script.script_levels.each do |script_level|
-        # Create progress for this student on each level
-        user_level = create :user_level,
+      # Create progress for this student on each level
+      user_levels = []
+      script.script_levels.includes(:levels).each do |script_level|
+        user_levels << build(:user_level,
           user: student_user,
           script_id: script.id,
           level_id: script_level.levels.first.id,
           attempts: 1,
           best_result: ActivityConstants::BEST_PASS_RESULT
-        # Score each level for each student
-        create :teacher_score,
-          user_level_id: user_level.id,
-          teacher_id: section.teacher.id,
-          score: 100
+        )
+
         # Add teacher feedback for each level.
-        create :teacher_feedback,
+        teacher_feedbacks << build(:teacher_feedback,
           student_id: student_user.id,
           teacher_id: section.teacher.id,
           script_level_id: script_level.id,
           level_id: script_level.levels.first.id,
           comment: tiny_lipsum
+        )
+      end
+      UserLevel.import! user_levels
+
+      # Retrieve newly-created user levels so we can add teacher scores
+      user_levels = UserLevel.where(user: student_user)
+      user_levels.each do |user_level|
+        # Score each level for each student
+        teacher_scores << build(:teacher_score,
+          user_level_id: user_level.id,
+          teacher_id: section.teacher.id,
+          score: 100
+        )
       end
     end
+
+    Follower.import! followers
+    TeacherScore.import! teacher_scores
+    TeacherFeedback.import! teacher_feedbacks
   end
 
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
