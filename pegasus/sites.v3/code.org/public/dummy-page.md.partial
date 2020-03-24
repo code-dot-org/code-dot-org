@@ -1,0 +1,73 @@
+---
+title: testing page
+video_player: true
+theme: responsive
+---
+<div id="gdpr-dialog"></div>
+<script data-gdpr="{}" data-usertype="null" src="/assets/js/code-studiowpb755ed5e31e33d10e190.min.js"></script>
+
+<div id="courses-container">
+<div data-reactroot style="width: 100%; max-width: 970px; margin-left: auto; margin-right: auto;">
+<div data-radium="true" style="width: 100%">
+<div data-radium="true" style="justify-content: space-between; flex-wrap: wrap;">
+    <div>
+        <div class="tutorial-row">
+            <div class="tutorial-block">
+                <div id="dance-2019">
+                    <div class="courseblock-span3 courseblock-tall">
+                        <a href="//code.org/dance">
+                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_dance-2019.gif" alt="Logo tall dance 2019">
+                        <div class="course-container">
+                            <h3 class="heading">Dance Party</h3>
+                            <div class="text smalltext">Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!</div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-block">
+                <div id="aquatic">
+                    <div class="courseblock-span3 courseblock-tall">
+                        <a href="//code.org/api/hour/begin/mc">
+                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_aquatic.jpg" alt="Logo tall aquatic">
+                        <div class="course-container">
+                            <h3 class="heading">Minecraft</h3>
+                            <div class="text smalltext">Use your creativity and problem solving skills to explore and build underwater worlds with code!</div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-block">
+                <div id="oceans">
+                    <div class="courseblock-span3 courseblock-tall">
+                        <a href="//code.org/oceans">
+                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_oceans.jpg" alt="Logo tall oceans">
+                        <div class="course-container">
+                            <h3 class="heading">AI for Oceans</h3>
+                            <div class="text smalltext">Learn how AI and machine learning can be used to address world problems.</div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-block">
+                <div id="flappy">
+                    <div class="courseblock-span3 courseblock-tall">
+                        <a href="http://studio.code.org/s/flappy/reset">
+                            <img height="120px" width="100%" src="/shared/images/courses/logo_tall_flappy.jpg" alt="Logo tall flappy">
+                        <div class="course-container">
+                            <h3 class="heading">Flappy Code</h3>
+                            <div class="text smalltext">Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!</div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
