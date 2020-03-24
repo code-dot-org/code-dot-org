@@ -1254,6 +1254,8 @@ FactoryGirl.define do
   factory :contact_rollups_pardot_memory do
     sequence (:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
+    pardot_id_updated_at {Time.now - 1.hour}
     data_synced {{opt_in: 0}}
+    data_synced_at {Time.now}
   end
 end
