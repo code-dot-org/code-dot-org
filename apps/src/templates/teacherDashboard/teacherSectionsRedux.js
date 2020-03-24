@@ -45,6 +45,8 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
+const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
+  'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
@@ -102,6 +104,10 @@ export const __testInterface__ = {
 export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
 export const setStageExtrasScriptIds = ids => ({
   type: SET_STAGE_EXTRAS_SCRIPT_IDS,
+  ids
+});
+export const setTextToSpeechScriptIds = ids => ({
+  type: SET_TEXT_TO_SPEECH_SCRIPT_IDS,
   ids
 });
 export const setAuthProviders = providers => ({
@@ -440,6 +446,7 @@ const initialState = {
   showSectionEditDialog: false,
   saveInProgress: false,
   stageExtrasScriptIds: [],
+  textToSpeechScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -520,6 +527,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       stageExtrasScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
+    return {
+      ...state,
+      textToSpeechScriptIds: action.ids
     };
   }
 
@@ -1110,6 +1124,14 @@ export const assignmentPaths = (validAssignments, section) => {
  */
 export const stageExtrasAvailable = (state, id) =>
   state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
+
+/**
+ * Is the given script ID a text to speech enabled course? `script.rb` owns the list.
+ * @param state
+ * @param id
+ */
+export const ttsAvailable = (state, id) =>
+  state.teacherSections.textToSpeechScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
