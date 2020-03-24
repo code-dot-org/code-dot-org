@@ -32,7 +32,7 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
-import {enqueueHints} from '../redux/authoredHints';
+import {displayMissingBlockHints} from '../redux/authoredHints';
 import {setHasAuthoredHints} from '../redux/instructions';
 
 const MOBILE_PORTRAIT_WIDTH = 700;
@@ -347,7 +347,7 @@ module.exports = class Maze {
         // Indicate the question has hints.
         getStore().dispatch(setHasAuthoredHints(true));
         // Add new hint to redux queue.
-        getStore().dispatch(enqueueHints([hint], [hintId]));
+        getStore().dispatch(displayMissingBlockHints([hint]));
       }
     });
   }
