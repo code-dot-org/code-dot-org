@@ -1,8 +1,3 @@
-require File.expand_path('../../../../../pegasus/src/env', __FILE__)
-require 'net/http'
-require 'net/http/responses'
-require_relative('../../../../dashboard/config/environment')
-require 'cdo/properties'
 require_relative 'pardot_helpers'
 
 class PardotV2
@@ -38,7 +33,7 @@ class PardotV2
         results_in_response += 1
         last_id = id
 
-        mappings << {email: email, id: id}
+        mappings << {email: email, pardot_id: id}
       end
 
       # Stop if all the remaining results were in this response - we're done. Otherwise, keep repeating.
