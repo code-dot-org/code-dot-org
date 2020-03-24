@@ -58,6 +58,10 @@ const styles = {
   },
   hide: {
     display: 'none'
+  },
+  studentTooltip: {
+    display: 'flex',
+    textAlign: 'center'
   }
 };
 
@@ -152,7 +156,11 @@ class SectionProgress extends Component {
           wrapper="span"
           effect="solid"
         >
-          {this.tooltipTextForStudent(studentId)}
+          <span style={styles.studentTooltip}>
+            Last Progress:
+            <br />
+            {this.tooltipTextForStudent(studentId)}
+          </span>
         </ReactTooltip>
       )
     );
@@ -162,8 +170,7 @@ class SectionProgress extends Component {
 
   tooltipTextForStudent = studentId => {
     const timestamp = this.props.studentTimestamps[studentId];
-    const time = timestamp ? moment(timestamp).calendar() : i18n.none();
-    return `Last Progress: ${time}`;
+    return timestamp ? moment(timestamp).calendar() : i18n.none();
   };
 
   navigateToScript = () => {
