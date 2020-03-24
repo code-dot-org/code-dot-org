@@ -12,6 +12,7 @@ const testSection = {
   providerManaged: false,
   stageExtras: false,
   pairingAllowed: true,
+  autoplayEnabled: false,
   studentCount: 10,
   code: 'PMTKVH'
 };
