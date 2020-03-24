@@ -147,23 +147,22 @@ class SectionProgress extends Component {
       </ReactTooltip>
     ));
 
-    const studentTooltips = Object.keys(this.props.studentTimestamps).map(
-      studentId => (
-        <ReactTooltip
-          id={tooltipIdForStudent(studentId)}
-          key={tooltipIdForStudent(studentId)}
-          role="tooltip"
-          wrapper="span"
-          effect="solid"
-        >
-          <span style={styles.studentTooltip}>
-            Last Progress:
-            <br />
-            {this.tooltipTextForStudent(studentId)}
-          </span>
-        </ReactTooltip>
-      )
-    );
+    const studentTimestamps = this.props.studentTimestamps || {};
+    const studentTooltips = Object.keys(studentTimestamps).map(studentId => (
+      <ReactTooltip
+        id={tooltipIdForStudent(studentId)}
+        key={tooltipIdForStudent(studentId)}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        <span style={styles.studentTooltip}>
+          Last Progress:
+          <br />
+          {this.tooltipTextForStudent(studentId)}
+        </span>
+      </ReactTooltip>
+    ));
 
     return lessonTooltips.concat(studentTooltips);
   }
