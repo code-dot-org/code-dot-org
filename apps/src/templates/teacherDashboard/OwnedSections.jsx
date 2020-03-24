@@ -44,7 +44,7 @@ const styles = {
 class OwnedSections extends React.Component {
   static propTypes = {
     queryStringOpen: PropTypes.string,
-    locale: PropTypes.string,
+    localeEnglishName: PropTypes.string,
 
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -106,7 +106,7 @@ class OwnedSections extends React.Component {
       sectionIds,
       hiddenSectionIds,
       asyncLoadComplete,
-      locale
+      localeEnglishName
     } = this.props;
     const {viewHidden} = this.state;
 
@@ -158,8 +158,8 @@ class OwnedSections extends React.Component {
           </div>
         )}
         <RosterDialog />
-        <AddSectionDialog locale={locale} />
-        <EditSectionDialog locale={locale} />
+        <AddSectionDialog localeEnglishName={localeEnglishName} />
+        <EditSectionDialog localeEnglishName={localeEnglishName} />
       </div>
     );
   }
