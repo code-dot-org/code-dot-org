@@ -1658,3 +1658,29 @@ gl:
           stages:
             Spelling Bee:
               name: Abella que Soletrea
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Creando funcións
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Bucles mentres
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funcións
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmos
+            Events:
+              name: Eventos

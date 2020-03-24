@@ -703,17 +703,23 @@ ka:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': ჩრდილოეთი
+            '"East"': აღმოსავლეთი
+            '"South"': სამრხეთი
+            '"West"': აღმოსავლეთი
       aalab_scene:
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': ჩვენება
-            '"hide"': დამალვა
+            '"random"': შემთხვევითი
       binary_move:
         options:
           DIR:

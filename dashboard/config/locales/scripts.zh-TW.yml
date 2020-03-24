@@ -5360,6 +5360,8 @@ zh-TW:
               name: 二進制手環
             Create a Design with Loops:
               name: 用迴圈來創作
+            Powerful Passwords:
+              name: 強大的密碼
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -6629,6 +6631,8 @@ zh-TW:
           description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
           description_audience: 年齡 6-10
           stages:
+            Powerful Passwords:
+              name: 強大的密碼
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
             Programming in Collector:
@@ -6788,3 +6792,138 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            Part 1:
+              name: 第一部分
+            Part 2:
+              name: 第二部分
+        csp3-virtual:
+          stages:
+            Using Simple Commands:
+              name: 簡單指令的使用
+            Creating Functions:
+              name: 建立函式
+            APIs and Function Parameters:
+              name: API 和函式參數
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
+        csd3-virtual:
+          description_short: Game Lab 編程環境介紹
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+            Variables:
+              name: 變數
+            Sprites:
+              name: 角色
+            Sprite Movement:
+              name: 角色動作
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Collision Detection:
+              name: 碰撞檢測
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+            Random Numbers:
+              name: 隨機取數
+        jess-test-script:
+          stages:
+            new stage:
+              name: 新的階段
+        csd2-virtual:
+          stages:
+            Exploring Web Pages:
+              name: 瀏覽網頁
+            Headings:
+              name: 標題
+            Digital Footprint:
+              name: 數位足跡
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+            Intellectual Property:
+              name: 知識產權
+            Images:
+              name: 圖像
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+            Project - Building a Webpage:
+              name: 專案 — 製作網頁
+            Purpose of a  Websites:
+              name: 網站的目的
+            Sources and Research:
+              name: 資料來源與研究
+            Planning a Multi-page Website:
+              name: 規劃多頁網站
+            Linking and Navigation:
+              name: 鏈接與導航
+        csp5-virtual:
+          stages:
+            Multi-screen Apps:
+              name: 多螢幕應用程式
+            Unit 5 Assessment 1:
+              name: 單元 5 評量 1
+            User Input and Strings:
+              name: 使用者輸入與字串
+            '"If" Statements Unplugged':
+              name: "「如果」陳述式不插電教程"
+            '"if-else-if" and Conditional Logic':
+              name: "「如果…否則」和條件判斷式"
+            Unit 5 Assessment 2:
+              name: 單元 5 評量 2
+            While Loops:
+              name: 當…迴圈
+            Introduction to Arrays:
+              name: 陣列（Arrays）的介紹
+            'Building an App: Image Scroller':
+              name: 創建一個 APP：圖像播放器
+            Unit 5 Assessment 3:
+              name: 單元 5 評量 3
+            Processing Arrays:
+              name: 處理陣列
+            Functions with Return Values:
+              name: 帶返回值的函式
+            'Building an App: Canvas Painter':
+              name: 創建一個 App - 帆布畫家
+            Unit 5 Assessment 4:
+              name: 單元 5 評量 4
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 速度
+            Collision Detection:
+              name: 碰撞檢測
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+        code-break:
+          stages:
+            new stage:
+              name: 新的階段
+            Algorithms:
+              name: 演算法
+            Events:
+              name: 事件

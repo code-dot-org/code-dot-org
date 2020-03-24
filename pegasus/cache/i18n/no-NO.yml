@@ -19,6 +19,7 @@ no-NO:
     font-weight:bold">Planlegg din kodetime</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser</a>'
+  csedweek_banner_teachers_text: Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser
   n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>"
   anybody_can_learn: Hvem som helst kan lære.
   learn_now: Lær nå

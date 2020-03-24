@@ -1516,3 +1516,29 @@ ne:
           stages:
             Spelling Bee:
               name: Spelling Bee
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Creating Functions
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Conditionals
+            Functions:
+              name: Functions
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: While Loops
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Functions
+        code-break:
+          stages:
+            Algorithms:
+              name: Algorithms
+            Events:
+              name: कार्य 

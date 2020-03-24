@@ -61,3 +61,7 @@ te:
           stages:
             Dance Party:
               name: డాన్స్ పార్టీ
+        code-break:
+          stages:
+            Events:
+              name: ఈవెంట్లు

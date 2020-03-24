@@ -1805,3 +1805,33 @@ lt:
           stages:
             Binary Numbers:
               name: Dvejetainiai skaičiai
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Komandų kūrimas
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: "„Kol“ kartojimas"
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmai
+            Events:
+              name: Įvykiai

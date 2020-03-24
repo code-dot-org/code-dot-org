@@ -70,6 +70,7 @@
   "clearPuzzleConfirm": "Ova akcija će resetovati ovaj zadatak na njegovo početno stanje i izbrisati će sve blokove koje si dodao/la ili promijenio/la.",
   "clearPuzzleConfirmHeader": "Jesi li siguran/na da želiš početi iznova?",
   "clickToRemix": "Klikni na \"Remix\" da bi otpočeo svoju verziju!",
+  "closeDialog": "Zatvori",
   "code": "Kôd:",
   "codeMode": "Kôd",
   "codeTooltip": "Pogledaj stvoreni JavaScript kôd.",

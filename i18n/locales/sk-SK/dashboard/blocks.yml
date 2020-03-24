@@ -1546,6 +1546,14 @@ sk:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: pohni {SPRITE} {DISTANCE} pixelov {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Sever
+            '"East"': Východ
+            '"South"': Juh
+            '"West"': Západ
       aalab_prompt:
         text: položiť otázku {MESSAGE}
       aalab_scene:
@@ -1557,12 +1565,10 @@ sk:
             '3': '3'
       aalab_setupStory:
         text: nastav príbeh
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': ukáž
-            '"hide"': skry
+            '"random"': náhodný
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:

@@ -1393,17 +1393,24 @@ nn:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: gå {SPRITE} {DISTANCE} piksler {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Sør
+            '"West"': Vest
       aalab_scene:
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': vis
-            '"hide"': gøyme
+            '"random"': tilfeldig
       binary_goToHome:
         text: hopp til øverst til venstre
       binary_move:

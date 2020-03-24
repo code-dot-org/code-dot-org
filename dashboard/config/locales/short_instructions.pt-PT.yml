@@ -559,6 +559,9 @@ pt-PT:
       4-5 While Loops Assessment 1: |-
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
+      CSD U5 black white images pixelation 5: Desenha o que quiseres
+      CSD U5 black white images pixelation 5_2018: Desenha o que quiseres
+      CSD U5 black white images pixelation 5_2019: Desenha o que quiseres
       Course 4 Artist 1: |-
         Ajude-me a terminar de desenhar minha caixa. (Cada linha tem
         200 pixels de comprimento)
@@ -1143,6 +1146,14 @@ pt-PT:
       NEW Course 4 Play Lab Params 11: |-
         É hora da atividade livre! Divirta-se
         com todos os blocos da sua caixa de ferramentas.
+      New Artist Project: Desenhe algo incrível! O seu código é guardado como um projecto
+        que pode ser retomado a qualquer momento.
+      New Basketball Project: 'Cria o teu próprio jogo de Basquetebol. Podes mudar
+        todas as regras. Quando tiveres terminado, clica em Partilhar para os teus
+        amigos experimentarem o jogo nos seus telemóveis. '
+      New Bounce Project: 'Cria o teu próprio jogo de Ping-Pong. Podes mudar todos
+        os visuais e as regras. Quando tiveres terminado, clica em Partilhar para
+        os teus amigos experimentarem o jogo nos seus telemóveis. '
       New Gumball Project: Crie o que quiser e compartilhe!
       New Ice Age Project: Crie o que quiser e compartilhe!
       New Infinity Project: Crie o que quiser e compartilhe!
@@ -1248,6 +1259,10 @@ pt-PT:
       Underground Mining Coal_2019: Vais encontrar os recursos mais valiosos no subsolo,
         mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
         menos 2 carvões.
+      'Widget: Text Compression': 'Procura padrões (palavras ou frases repetidas)
+        no texto. Introduz os padrões que vês no dicionário à direita. À medida que
+        escreves cada entrada no dicionário, o símbolo da entrada é inserido no texto
+        no lugar do padrão. '
       bounce_1: Conecte um bloco ao bloco "quando clicar na seta para a esquerda"
         e clique em "Executar". Mova a raquete usando a seta para a esquerda para
         alcançar o objetivo final.
@@ -1255,6 +1270,10 @@ pt-PT:
         e "marque um ponto para o oponente" aos blocos "quando a bola atingir o alvo"
         e "quando a bola não acertar a raquete" para fazer um jogo. Veja quantos pontos
         você consegue marcar antes que seu oponente marque duas vezes.
+      bounce_10_basketball: Agora há um alvo na parte de cima. Conecta os blocos "marca
+        um ponto" e "marca um ponto para o oponente" aos blocos "quando a bola atingir
+        o alvo" e "quando a bola não acertar na mão" para fazeres um jogo. Vê quantos
+        pontos consegues marcar antes que teu oponente marque duas vezes.
       bounce_11: Agora você pode conectar blocos ao bloco "quando o jogo começa".
         Você tem que anexar o novo bloco "jogue uma nova bola" em mais de um lugar.
         Além disso, tente mudar o cenário ou a velocidade da raquete e da bola e veja
@@ -1271,21 +1290,26 @@ pt-PT:
       bounce_12: Crie seu próprio jogo de Pingue-pongue. Você pode mudar o visual
         e todas as regras. Quando terminar, clique em Concluir para que seus amigos
         possam jogar seu jogo em seus celulares.
-      bounce_1_basketball: Conecte um bloco ao bloco "quando clicar na seta para a
-        esquerda" e clique em "Executar". Mova a raquete usando a seta para a esquerda
-        para alcançar o objetivo final.
+      bounce_12_basketball: 'Cria o teu próprio jogo de Basquetebol. Podes mudar todas
+        as regras. Quando tiveres acabado, clica em Terminar para os teus amigos experimentarem
+        o jogo nos seus telemóveis. '
+      bounce_1_basketball: Conecta um bloco ao bloco "quando clicar na seta para a
+        esquerda" e clica em "Executar". Move a mão usando a seta para a esquerda
+        para alcançares o objectivo final.
       bounce_2: Conecte um bloco aos blocos "quando clicar na seta para a direita"
         e "quando clicar na seta para a esquerda". Mova a raquete para alcançar ambos
         os objetivos finais.
-      bounce_2_basketball: Conecte um bloco aos blocos "quando clicar na seta para
-        a direita" e "quando clicar na seta para a esquerda". Mova a raquete para
-        alcançar ambos os objetivos finais.
+      bounce_2_basketball: Conecta um bloco ao bloco "quando clicar na seta para a
+        direita" e "quando clicar na seta para a esquerda". Move a mão para alcançares
+        ambos os objectivos finais.
       bounce_3: Agora, tente algo semelhante com o bloco "quando clicar na seta para
         cima". Mova a raquete o objetivo final no topo.
       bounce_4: Desta vez, você precisa adicionar quatro blocos. Mova a raquete para
         todos os quatro alvos finais para completar este desafio.
       bounce_5: Vamos lançar uma bola em direção à raquete. Conecte um bloco ao bloco
         "quando a bola bater na raquete" para garantir que a bola atinja o alvo.
+      bounce_5_basketball: Vamos lançar uma bola em direcção à mão. Conecte um bloco
+        ao bloco "quando a bola bater na mão" para garantir que a bola atinge a bandeira.
       bounce_6: Agora o alvo está no topo. Você precisa conectar blocos em ambos os
         blocos "quando a bola bater" para resolver este desafio.
       bounce_7: Conecte os blocos a cada um dos blocos "quando". Faça a bola quicar
@@ -1304,9 +1328,46 @@ pt-PT:
         para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
         por algo totalmente diferente)
       courseA_maze_seq1: Leve o pássaro até o porquinho!
+      courseA_maze_seq12: Consegue esse porco!
+      courseA_maze_seq12_2018: Consegue esse porco!
+      courseA_maze_seq12_2019: Consegue esse porco!
+      courseA_maze_seq13: Consegue esse porco de qualquer maneira!
+      courseA_maze_seq13_2018: Consegue esse porco de qualquer maneira!
+      courseA_maze_seq13_2019: Consegue esse porco de qualquer maneira!
       courseA_maze_seq1_2018: Leve o pássaro até o porquinho!
       courseA_maze_seq1_2019: Leve o pássaro até o porquinho!
-      courseA_maze_seq2: Altere o código para me levar até o porco!
+      courseA_maze_seq2: Altera o código para me levar para o porco!
+      courseA_maze_seq3: Arranja o código para levar o pássaro até ao porco!
+      courseA_maze_seq4: REMOVE um bloco para fazer chegar o pássaro ao porco!
+      courseB_collector_loops_challenge2a: Ajuda a Laurel a conseguir pelo menos **5**
+        peças do tesouro para acabar este puzzle.
+      courseB_collector_loops_challenge2a_2018: Ajuda a Laurel a conseguir pelo menos
+        **5** peças do tesouro para acabar este puzzle.
+      courseB_collector_loops_challenge2a_2019: Ajuda a Laurel a conseguir pelo menos
+        **5** peças do tesouro para acabar este puzzle.
+      courseB_maze_seq3: '"Altera o código para me levares até ao porco!"'
+      courseB_maze_seq4: Adiciona 2 blocos para fazeres chegar o pássaro ao porco.
+      courseB_maze_seq5: Agora tenta este puzzle desde o início!
+      courseB_maze_seq8: É a tua vez! O que precisas de fazer para fazer chegar o
+        pássaro ao porco?
+      courseB_playLab_events1: Vê se consegues descobrir o que cada bloco faz.
+      courseB_playLab_events1_2018: Vê se consegues descobrir o que cada bloco faz.
+      courseB_playLab_events1_2019: Vê se consegues descobrir o que cada bloco faz.
+      courseB_starWars_prog1: '"Vai arranjar sucata, BB-8!"'
+      courseB_starWars_prog1_2018: '"Vai arranjar sucata, BB-8!"'
+      courseB_starWars_prog1_2019: '"Vai arranjar sucata, BB-8!"'
+      courseB_starWars_prog2: Consegue todo o metal.
+      courseB_starWars_prog2_2018: Consegue todo o metal.
+      courseB_starWars_prog2_2019: Consegue todo o metal.
+      courseB_starWars_prog3: Consegue toda a sucata
+      courseB_starWars_prog3_2018: Consegue toda a sucata
+      courseB_starWars_prog3_2019: Consegue toda a sucata
+      courseB_starWars_prog4: Consegue toda a sucata
+      courseB_starWars_prog4_2018: Consegue toda a sucata
+      courseB_starWars_prog4_2019: Consegue toda a sucata
+      courseB_starWars_prog6: Consegue toda a sucata
+      courseB_starWars_prog6_2018: Consegue toda a sucata
+      courseB_starWars_prog6_2019: Consegue toda a sucata
       courseC_artist_prog5: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:
         os três lados têm o mesmo comprimento.'
       courseC_artist_prog5_2018: 'Esta casa precisa de um telhado! Desenha um triângulo.  Dica:

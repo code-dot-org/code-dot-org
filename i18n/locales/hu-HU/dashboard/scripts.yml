@@ -2194,3 +2194,49 @@ hu:
           stages:
             Representing Information:
               name: Az információ ábrázolása
+        csp3-virtual:
+          description_short: Programozás
+          stages:
+            The Need for Algorithms:
+              name: Algoritmusokra szükség van
+            Creativity in Algorithms:
+              name: Kreativitás az algoritmusokban
+            Creating Functions:
+              name: Függvények létrehozása
+            Creating functions with Parameters:
+              name: Paraméteres függvények készítése
+            Unit 3 Chapter 1 Assessment:
+              name: 3. lecke 1. fejezet végi értékelés
+        csd3-virtual:
+          description_short: "Programozás"
+          stages:
+            Variables:
+              name: változók
+            Sprites:
+              name: Sprite-ok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Random Numbers:
+              name: Véletlen számok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: CSS osztályok
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funkciók
+        code-break:
+          stages:
+            Algorithms:
+              name: algoritmusok
+            Events:
+              name: Események

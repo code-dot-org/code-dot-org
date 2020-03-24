@@ -1558,6 +1558,14 @@ id:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       aalab_prompt:
         text: ajukan pertanyaan {MESSAGE}
       aalab_scene:
@@ -1569,12 +1577,10 @@ id:
             '3': '3'
       aalab_setupStory:
         text: cerita penyiapan
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': tampilkan
-            '"hide"': Sembunyikan
+            '"random"': acak
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:

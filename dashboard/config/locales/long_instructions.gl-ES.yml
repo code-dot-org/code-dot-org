@@ -119,6 +119,71 @@ gl-ES:
 
         -   Arranxa o código roto para que a páxina web se mostre correctamente
         -   Compara os problemas que arranxaches cun compañeiro
+      CSD U2 Heading Demo: "# Cabeceiras\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Que
+        son as cabeceiras?</strong></summary>\n\nAs cabeceiras son os títulos das
+        seccións de diferente tamaño dunha páxina web. As cabeceiras engaden estrutura
+        á páxina web ao dividila para que sexa máis fácil de ler para o usuario.\n\n</details>\n<details>\n<summary><strong>Como
+        fago as cabeceiras de diferente tamaño?</strong></summary>\n\nAs cabeceiras
+        veñen en 6 tamaños diferentes. Ata o de agora, utilizouse principalmente o
+        máis grande: \\<h1>. O número '1' na etiqueta HTML designa que este é o encabezado
+        máis grande. O encabezado máis pequeno é \\<h6>. Tamén podes probar coas etiquetas
+        \\<h2>, \\<h3>, \\<h4> e \\<h5>, que se fan máis pequenas a medida que o número
+        aumenta.\n\n</h1>\n</details>\n<details>\n<summary><strong>Que é o HTML?</strong></summary>\n\nHTML
+        significa Hypertext Markup Language (Linguaxe de Etiquetaxe de HiperTexto).
+        O HTML utilízase para engadir estrutura ao contido dunha páxina web. O HTML
+        utiliza etiquetas para especificar onde comezan e terminan certas estruturas.
+        Estas etiquetas son conxuntos de caracteres que non se atopan en inglés para
+        poder diferenciar o contido e a estrutura. \n\n</details>\n<details>\n<summary><strong>Que
+        é un elemento HTML?</strong></summary>\n\nUn elemento HTML é unha parte dun
+        sitio web que está marcado cunha etiqueta de inicio e ás veces pechado cunha
+        etiqueta de fin. O elemento tamén inclúe o contido dentro das etiquetas. Por
+        exemplo: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n\n</details>\n<details>\n<summary><strong>Que é unha
+        etiqueta HTML?</strong></summary>\n\nUnha etiqueta HTML é un conxunto especial
+        de caracteres que lle di á máquina onde está o comezo ou o final dun elemento
+        HTML e de que tipo é.\n\n</details>\n</div>\n\nAta o de agora, organizaches
+        o teu contido en parágrafos. Outra forma en que o HTML che permite organizar
+        o teu código é usando **cabeceiras**.  Unha cabeceira é un texto curto que
+        vai na parte superior dunha sección de contido, como un título.\n\nFai isto:\n\n-
+        \  Atopa as cabeceiras na páxina web de abaixo e usa a Ferramenta de Inspección
+        para ver o código que os fai.\n-   Asegúrate de que ti e a túa parella estean
+        de acordo no que fan as etiquetas.\n-   Cambia o código para que \"Debuxo\"
+        e \"2 anos\" coincidan coas cabeceiras do resto da páxina."
+      CSD U2 Heading Sizes: "# Tamaño das cabeceiras\n\n<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Que son as cabeceiras?</strong>\n\n</summary>\nAs
+        cabeceiras son os títulos das seccións de diferente tamaño dunha páxina web.
+        As cabeceiras engaden estrutura á páxina web ao dividila para que sexa máis
+        fácil de ler para o usuario.\n</details>\n<details>\n<summary><strong>Como
+        fago as cabeceiras de diferente tamaño?</strong>\n\n</summary>\nAs cabeceiras
+        veñen en 6 tamaños diferentes. A cabeceira máis común é o da etiqueta HTML.
+        O número 1 na etiqueta HTML designa que este é o encabezado máis grande. O
+        encabezado máis pequeno é o de &lt;h6&gt;. Tamén podes probar coas etiquetas
+        &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt; e &lt;h5&gt; as cales se volven máis pequenas
+        a medida que o número aumenta.\n</details>\n<details>\n<summary><strong>Que
+        é o HTML?</strong>\n\n</summary>\nHTML significa Hypertext Markup Language
+        (Linguaxe de Etiquetaxe de HiperTexto). O HTML utilízase para engadir estrutura
+        ao contido dunha páxina web. O HTML utiliza etiquetas para especificar onde
+        comezan e terminan certas estruturas. Estas etiquetas son conxuntos de caracteres
+        que non se atopan en inglés para poder diferenciar o contido e a estrutura.
+        \n</details>\n<details>\n<summary><strong>Que é un elemento HTML?</strong>\n\n</summary>\nUn
+        elemento HTML é unha parte dun sitio web que está marcado cunha etiqueta de
+        inicio e ás veces pechado cunha etiqueta de fin. O elemento tamén inclúe o
+        contido dentro das etiquetas. Por exemplo: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary><strong>Que é unha
+        etiqueta HTML?</strong>\n\n</summary>\n\nUnha etiqueta HTML é un conxunto
+        especial de caracteres que lle di á máquina onde está o comezo ou o final
+        dun elemento HTML e de que tipo é.\n\n</details>\n</div>\n\nAs cabeceiras
+        poden vir en diferentes tamaños. Nesta páxina hai seis encabezados de diferentes
+        tamaños, pero todos están mesturados. Podedes ti e a túa parella pescudar
+        como arranxalos?\n\nFai isto:\n\n-   Usa a Ferramenta de Inspección para pescudar
+        que fai que as cabeceiras sexan de diferentes tamaños.\n-   Asegúrate de que
+        ti e o teu compañeiro estean de acordo no que fan as diferentes etiquetas
+        de cabeceira.\n-   Cambia as etiquetas para que as cabeceiras estean en orde
+        de maior a menor, e o texto diga o tamaño correcto, como na imaxe de abaixo.
+        \n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px; float:left\">"
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
