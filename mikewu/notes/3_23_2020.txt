@@ -22,3 +22,10 @@ Things i have learned:
     - to see changes in the local codeorg instance
         - if JS changes, run `yarn build` or `yarn start` in apps/ and leave running
         - """I usually just keep dashboard-server running in one terminal and yarn start running in another, and never have to restart anything"""
+
+
+Questions:
+
+    - Hint object?
+    - how to get user_id and level_id / course_id
+    - HintType?

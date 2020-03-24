@@ -31,6 +31,9 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
 
+import {enqueueHints} from '../redux/authoredHints';
+import {setHasAuthoredHints} from '../redux/instructions';
+
 const MOBILE_PORTRAIT_WIDTH = 700;
 const FEEDBACK_SERVER_URL = 'http://localhost:5000/predict';
 
@@ -316,14 +319,31 @@ module.exports = class Maze {
   sendFeedback_(code) {
     $.ajax({
       url: FEEDBACK_SERVER_URL,
-      data: JSON.stringify({code: code}),  // add more info maybe?
+      data: JSON.stringify({code: code}),
       type: 'POST',
       crossDomain: true,
-      dataType: "json",
-      accepts: "application/json",
-      contentType: "application/json",
+      dataType: 'json',
+      accepts: 'application/json',
+      contentType: 'application/json',
       success: function(result) {
-        console.log(result);
+        // Create hint ID.
+        var currentDate = new Date();
+        var date = currentDate.getDate();
+        var month = currentDate.getMonth();
+        var year = currentDate.getFullYear();
+        var hintId = 'feedback_ml_' + date + '-' + month + '-' + year;
+
+        // Add hint into the redux state.
+        var hint = {
+          hintType: 'non-contextual',
+          hintId: hintId,
+          markdown: result.hint,
+          alreadySeen: false
+        };
+
+        getStore().dispatch(enqueueHints([hint], [hintId]));
+        // Indicate the question has hints.
+        getStore().dispatch(setHasAuthoredHints(true));
       }
     });
   }
@@ -342,11 +362,9 @@ module.exports = class Maze {
         codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
       }
       code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-      
+
+      // Make Ajax request to feedback server
       this.sendFeedback_(code);
-      console.log('MIKEWU:');
-      console.log(code);
-      console.log(typeof code);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();
