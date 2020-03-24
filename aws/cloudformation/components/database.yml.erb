@@ -10,11 +10,6 @@
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
-<% if clone_existing_cluster -%>
-      RestoreType: 'copy-on-write'
-      SourceDBClusterIdentifier: !Ref SourceClusterId
-      UseLatestRestorableTime: true
-<% end -%>
 <% 2.times do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance

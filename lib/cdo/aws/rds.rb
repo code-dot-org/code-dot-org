@@ -6,11 +6,15 @@ module Cdo
     # Create an RDS Aurora MySQL cluster cloned from a specified source cluster.
     # @param source_cluster_id [String] DB cluster id of the cluster to clone.  Defaults to current environment's cluster.
     # @param clone_cluster_id [String] DB cluster id to assign to clone.  Defaults to source cluster id + "-clone"
-    # @param instance_type [String]
+    # @param instance_type [String] RDS DB Instance Type
+    # @param max_attempts [Integer] Number of times to check whether task has completed successfully before failing.
+    # @param delay [Integer] Number of seconds to wait between checking task status.
     def self.clone_cluster(
       source_cluster_id: CDO.db_cluster_id,
       clone_cluster_id: "#{source_cluster_id}-clone",
-      instance_type: 'db.r4.large'
+      instance_type: 'db.r4.large',
+      max_attempts: 30,  # It takes ~15 minutes to clone the production cluster, so default to 30 minutes.
+      delay: 60
     )
       clone_instance_id = clone_cluster_id + "-0"
       rds_client = Aws::RDS::Client.new
@@ -51,7 +55,7 @@ module Cdo
         rds_client.wait_until(
           :db_instance_available,
           {db_instance_identifier: clone_instance_id},
-          {max_attempts: 30, delay: 60}
+          {max_attempts: max_attempts, delay: delay}
         )
       rescue Aws::Waiters::Errors::WaiterFailed => error
         CDO.log.info "Error waiting for cluster clone instance to become available. #{error.message}"

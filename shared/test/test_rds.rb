@@ -250,7 +250,12 @@ class TestRDS < Minitest::Test
       }
     }
 
-    Cdo::RDS.clone_cluster(source_cluster_id: @source_cluster_id, clone_cluster_id: @clone_cluster_id)
+    Cdo::RDS.clone_cluster(
+      source_cluster_id: @source_cluster_id,
+      clone_cluster_id: @clone_cluster_id,
+      max_attempts: 1,
+      delay: 0
+    )
   end
 
   def test_delete_cluster
