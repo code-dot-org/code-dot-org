@@ -16,6 +16,16 @@
 #
 
 class ContactRollupsComparison < ApplicationRecord
+  scope :new_contacts, -> {where(old_data_updated_at: nil)}
+  scope :deleted_contacts, -> {where(new_data_updated_at: nil)}
+
+  scope :updated_contacts, -> do
+    # Use NULL-safe equal to operator because both columns could be null
+    where.not(old_data_updated_at: nil).
+    where.not(new_data_updated_at: nil).
+    where.not("old_data <=> new_data")
+  end
+
   # Compiles old and new processed data then saves the results, one row per email.
   def self.compile_processed_data
     # Since Mysql 5.7 doesn't support FULL OUTER JOIN, we will simulate a FULL OUTER JOIN
