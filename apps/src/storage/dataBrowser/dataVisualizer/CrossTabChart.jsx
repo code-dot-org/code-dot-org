@@ -3,105 +3,99 @@ import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
 import * as color from '../../../util/color';
 
-export default class CrossTabChart extends React.Component {
-  static propTypes = {
-    records: PropTypes.array.isRequired,
-    numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
-    chartTitle: PropTypes.string,
-    selectedColumn1: PropTypes.string,
-    selectedColumn2: PropTypes.string
-  };
-
-  render() {
-    if (
-      !this.props.records ||
-      !this.props.selectedColumn1 ||
-      !this.props.selectedColumn2
-    ) {
-      return null;
-    }
-    const {chartData, columns} = createPivotTable(
-      this.props.records,
-      this.props.numericColumns,
-      this.props.selectedColumn1,
-      this.props.selectedColumn2
-    );
-    const numericValues = [];
-
-    chartData.forEach(record => {
-      Object.entries(record).forEach(entry => {
-        let key = entry[0];
-        let value = entry[1];
-        if (typeof value === 'number' && key !== this.props.selectedColumn1) {
-          numericValues.push(value);
-        }
-      });
-    });
-
-    // Our goal is uniform column widths, for all columns except the first one.
-    // There are a few steps that lead to successful layout here.
-    // 1. The table width is 100% to maximize available space.
-    // 2. The first column uses `white-space: nowrap` so it won't shrink too
-    //    small for its contents.
-    // 3. We set the rest of the columns to have the same percentage-width,
-    //    adding up to 99% of the table width (which is more than available space)
-    //    so after setting the first column width, the remaining columns
-    //    shrink to fit evenly.
-    const columnWidth = 99 / (columns.length - 1) + '%';
-
-    const min = Math.min(...numericValues);
-    const max = Math.max(...numericValues);
-
-    return (
-      <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
-        <h1 style={chartTitleStyle}>{this.props.chartTitle}</h1>
-        <table style={tableStyle}>
-          <tr>
-            <td>&nbsp;</td>
-            <td
-              style={{...topCellStyle, ...axisTitleStyle}}
-              colSpan={columns.length - 1}
-            >
-              {this.props.selectedColumn2}
-            </td>
-          </tr>
-          <tr>
-            {columns.map((column, i) => (
-              <td
-                key={column}
-                style={
-                  i === 0 ? {...leftCellStyle, ...axisTitleStyle} : topCellStyle
-                }
-              >
-                {column}
-              </td>
-            ))}
-          </tr>
-          {chartData.map((record, i) => (
-            <tr key={i}>
-              {columns.map((column, j) => {
-                const value = record[column];
-                const cellStyle =
-                  j === 0
-                    ? {...leftCellStyle}
-                    : {
-                        ...innerCellStyle,
-                        width: columnWidth,
-                        backgroundColor: getColorForValue(value, min, max)
-                      };
-                return (
-                  <td key={column} style={cellStyle}>
-                    {value}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </table>
-      </div>
-    );
+export default function CrossTabChart(props) {
+  if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {
+    return null;
   }
+  const {chartData, columns} = createPivotTable(
+    props.records,
+    props.numericColumns,
+    props.selectedColumn1,
+    props.selectedColumn2
+  );
+  const numericValues = [];
+
+  chartData.forEach(record => {
+    Object.entries(record).forEach(entry => {
+      let key = entry[0];
+      let value = entry[1];
+      if (typeof value === 'number' && key !== props.selectedColumn1) {
+        numericValues.push(value);
+      }
+    });
+  });
+
+  // Our goal is uniform column widths, for all columns except the first one.
+  // There are a few steps that lead to successful layout here.
+  // 1. The table width is 100% to maximize available space.
+  // 2. The first column uses `white-space: nowrap` so it won't shrink too
+  //    small for its contents.
+  // 3. We set the rest of the columns to have the same percentage-width,
+  //    adding up to 99% of the table width (which is more than available space)
+  //    so after setting the first column width, the remaining columns
+  //    shrink to fit evenly.
+  const columnWidth = 99 / (columns.length - 1) + '%';
+
+  const min = Math.min(...numericValues);
+  const max = Math.max(...numericValues);
+
+  return (
+    <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
+      <h1 style={chartTitleStyle}>{props.chartTitle}</h1>
+      <table style={tableStyle}>
+        <tr>
+          <td>&nbsp;</td>
+          <td
+            style={{...topCellStyle, ...axisTitleStyle}}
+            colSpan={columns.length - 1}
+          >
+            {props.selectedColumn2}
+          </td>
+        </tr>
+        <tr>
+          {columns.map((column, i) => (
+            <td
+              key={column}
+              style={
+                i === 0 ? {...leftCellStyle, ...axisTitleStyle} : topCellStyle
+              }
+            >
+              {column}
+            </td>
+          ))}
+        </tr>
+        {chartData.map((record, i) => (
+          <tr key={i}>
+            {columns.map((column, j) => {
+              const value = record[column];
+              const cellStyle =
+                j === 0
+                  ? {...leftCellStyle}
+                  : {
+                      ...innerCellStyle,
+                      width: columnWidth,
+                      backgroundColor: getColorForValue(value, min, max)
+                    };
+              return (
+                <td key={column} style={cellStyle}>
+                  {value}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </table>
+    </div>
+  );
 }
+
+CrossTabChart.propTypes = {
+  records: PropTypes.array.isRequired,
+  numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
+  chartTitle: PropTypes.string,
+  selectedColumn1: PropTypes.string,
+  selectedColumn2: PropTypes.string
+};
 
 /**
  * @param {Array.<Object>} records
