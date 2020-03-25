@@ -150,7 +150,6 @@ export function getColorForValue(value, min, max) {
 
 const wrapperStyle = {
   width: '100%'
-  // padding: 10
 };
 const chartTitleStyle = {
   fontFamily: '"Gotham 7r", sans-serif',
