@@ -192,8 +192,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_sharing_meta_tags(
       url: "http://test.host/c/#{level_source.id}",
       image: 'http://test.host/assets/sharing_drawing.png',
-      image_width: 500,
-      image_height: 261
+      image_width: 400,
+      image_height: 400,
+      small_thumbnail: true
     )
   end
 
