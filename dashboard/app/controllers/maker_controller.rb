@@ -19,32 +19,34 @@ class MakerController < ApplicationController
     }
   end
 
+  ScriptAndCourse = Struct.new(:script_name, :course_name, :script)
+
   def self.maker_script(for_user)
-    csd6_17 = Script.get_from_cache(Script::CSD6_NAME)
-    csd6_18 = Script.get_from_cache(Script::CSD6_2018_NAME)
-    csd6_19 = Script.get_from_cache(Script::CSD6_2019_NAME)
+    # Order matters here - should go from most to least recent.
+    years = [
+      ScriptAndCourse.new(Script::CSD6_2019_NAME, ScriptConstants::CSD_2019),
+      ScriptAndCourse.new(Script::CSD6_2018_NAME, ScriptConstants::CSD_2018),
+      ScriptAndCourse.new(Script::CSD6_NAME, ScriptConstants::CSD_2017),
+    ]
+    years.each {|year| year.script = Script.get_from_cache(year.script_name)}
 
-    # Assigned course or script should take precedence.
+    # Assigned course or script should take precedence - show most recent version that's been assigned.
     assigned = for_user.section_courses + for_user.section_scripts
-    if assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2019)) || assigned.include?(csd6_19)
-      return csd6_19
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2018)) || assigned.include?(csd6_18)
-      return csd6_18
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2017)) || assigned.include?(csd6_17)
-      return csd6_17
+    years.each do |year|
+      if assigned.include?(Course.get_from_cache(year.course_name)) || assigned.include?(year.script)
+        return year.script
+      end
     end
 
-    # Otherwise, show the version with progress (defaulting to most recent).
-    progress = UserScript.lookup_hash(for_user, [Script::CSD6_NAME, Script::CSD6_2018_NAME, Script::CSD6_2019_NAME])
-    if progress[Script::CSD6_2019_NAME]
-      csd6_19
-    elsif progress[Script::CSD6_2018_NAME]
-      csd6_18
-    elsif progress[Script::CSD6_NAME]
-      csd6_17
-    else
-      csd6_19
+    # Otherwise, show the most recent version with progress.
+    script_names = years.map(&:script_name)
+    progress = UserScript.lookup_hash(for_user, script_names)
+    years.each do |year|
+      return year.script if progress[year.script_name]
     end
+
+    # If none of the above applies, default to most recent.
+    years.first.script
   end
 
   def setup
