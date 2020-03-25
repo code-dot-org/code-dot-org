@@ -12,17 +12,6 @@ export default class CrossTabChart extends React.Component {
     selectedColumn2: PropTypes.string
   };
 
-  getColorForValue = (value, min, max) => {
-    if (typeof value !== 'number') {
-      return 'white';
-    }
-    const lightest = 100;
-    const darkest = 56;
-    const lightness =
-      lightest - ((value - min) / (max - min)) * (lightest - darkest);
-    return `hsl(217, 89%, ${lightness}%)`;
-  };
-
   render() {
     if (
       !this.props.records ||
@@ -98,7 +87,7 @@ export default class CrossTabChart extends React.Component {
                     : {
                         ...innerCellStyle,
                         width: columnWidth,
-                        backgroundColor: this.getColorForValue(value, min, max)
+                        backgroundColor: getColorForValue(value, min, max)
                       };
                 return (
                   <td key={column} style={cellStyle}>
@@ -152,6 +141,17 @@ export function createPivotTable(records, numericColumns, rowName, columnName) {
     a[rowName] > b[rowName] ? 1 : -1
   );
   return {chartData, columns};
+}
+
+export function getColorForValue(value, min, max) {
+  if (typeof value !== 'number') {
+    return 'white';
+  }
+  const lightest = 100;
+  const darkest = 56;
+  const lightness =
+    lightest - ((value - min) / (max - min)) * (lightest - darkest);
+  return `hsl(217, 89%, ${lightness}%)`;
 }
 
 const wrapperStyle = {
