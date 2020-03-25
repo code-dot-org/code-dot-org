@@ -15,6 +15,7 @@ class PardotHelpersTest < Minitest::Test
     XML
 
     exception = assert_raises do
+      # Since the method we want to test is a private method, we have to invoke it using `send`
       PardotHelpersTest.send(:raise_if_response_error, pardot_error)
     end
 
