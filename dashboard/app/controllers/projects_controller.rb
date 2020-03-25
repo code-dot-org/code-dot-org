@@ -324,7 +324,7 @@ class ProjectsController < ApplicationController
     )
 
     if params[:key] == 'artist'
-      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
     if params[:key] == 'dance'
