@@ -1,0 +1,15 @@
+March 25th
+
+Have to make edits to Blockly code. Learned that NPM can link 
+two repositories together. 
+
+```
+cd blockly
+npm link
+cd ../code-dot-org
+npm link @code-dot-org/blockly
+```
+
+Question: Do i need to run `npm run build` for every change in Blockly?
+Answer: no. Run `npm run build` in blockly and yarn should be able to track changes.
+        might need to restart yarn if things aren't working?

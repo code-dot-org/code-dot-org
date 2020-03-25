@@ -1,4 +1,5 @@
 from app import app
+from app.utils.xml_parser import xmlToAst
 from flask import (
     request, 
     Response,
@@ -18,9 +19,11 @@ def index():
 def predict():
     if len(request.data) > 0:
         data = json.loads(request.data)
-        code = data['code']
+        xml = data['code']
+        ast = xmlToAst(xml)
         print('---------------\n')
         print(data)
+        print(ast)
         print('---------------\n')
 
     response = {
