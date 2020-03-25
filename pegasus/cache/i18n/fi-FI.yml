@@ -19,12 +19,12 @@ fi-FI:
     font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
+  csedweek_banner_teachers_text: Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit
   n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
   anybody_can_learn: Kuka tahansa voi oppia.
   learn_now: Opettele nyt
   petition_message: Jokaisen oppilaan jokaisessa koulussa tulisi voida oppia tietotekniikkaa
   petition_sign_message: 'Jos olet samaa mieltä, allekirjoita. Ole yksi # joukossa.'
-  petition_sign_message_support: 'Jos tuet meitä, allekirjoita nimesi.  Liity # joukkoon.'
   petition_join_others: 'Liity # muihin'
   name: Nimi
   email: Sähköposti
@@ -356,6 +356,7 @@ fi-FI:
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
+  homepage_signpetition_dropdown_text: Hyväksyn
   homepage_diversity_pledge: Tee monipuolisuuslupaus
   homepage_banner_text_prizes: 'Koodaustunti on tulossa taas, joulukuussa 7-13. '
   homepage_banner_link_prizes: 'Liity historian suurimpaan oppimistapahtumaan. '

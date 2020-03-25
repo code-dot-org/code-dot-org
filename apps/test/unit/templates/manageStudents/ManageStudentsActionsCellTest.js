@@ -15,20 +15,22 @@ const DEFAULT_PROPS = {
 };
 
 describe('ManageStudentsActionsCell', () => {
-  it('renders the edit and remove option when a picture login', () => {
+  it('renders the edit, remove and print login card option when a picture login', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'picture'} />
     );
     expect(wrapper).to.contain('Remove student');
     expect(wrapper).to.contain('Edit');
+    expect(wrapper).to.contain('Print login card');
   });
 
-  it('renders the edit and remove option when a word login', () => {
+  it('renders the edit, remove and print login card option when a word login', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'word'} />
     );
     expect(wrapper).to.contain('Remove student');
     expect(wrapper).to.contain('Edit');
+    expect(wrapper).to.contain('Print login card');
   });
 
   it('renders the edit and remove option when a email login', () => {
@@ -37,6 +39,7 @@ describe('ManageStudentsActionsCell', () => {
     );
     expect(wrapper).to.contain('Remove student');
     expect(wrapper).to.contain('Edit');
+    expect(wrapper).not.to.contain('Print login card');
   });
 
   it('renders the edit option when a clever login', () => {

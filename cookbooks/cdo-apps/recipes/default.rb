@@ -90,8 +90,8 @@ include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 
-include_recipe 'cdo-cloudwatch-extra-metrics'
-include_recipe 'cdo-cloudwatch-logger' if node[:ec2]
+include_recipe 'cdo-cloudwatch-agent'
+include_recipe 'cdo-syslog'
 
 include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
@@ -138,3 +138,5 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 include_recipe 'cdo-apps::resolved'
 
 include_recipe 'cdo-apps::rbspy'
+
+include_recipe 'cdo-apps::syslog_permissions'

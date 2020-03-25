@@ -64,6 +64,11 @@
           %a{href: designer_link, target: '_blank'}
             %button= I18n.t(:minecraft_agent_button)
 
+%div{style: "clear: both; margin-bottom: 40px;"}
+%h3.responsive-padding
+  =I18n.t(:minecraft_no_internet)
+  %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
+
 .clear
 %h2= I18n.t(:hoc2018_mc_educators)
 

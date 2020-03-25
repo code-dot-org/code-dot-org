@@ -108,6 +108,7 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
   const providerName = PROVIDER_NAME[provider];
   return (
     <Button
+      __useDeprecatedTag
       text={buttonText(buttonState, providerName)}
       color={ButtonColor.white}
       size={ButtonSize.large}

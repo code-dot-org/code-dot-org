@@ -85,6 +85,15 @@ FirebaseStorage.clearAllData = function(onSuccess, onError) {
  */
 FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
   key = fixKeyName(key, onError);
+  try {
+    validateFirebaseKey(key);
+  } catch (e) {
+    onError({
+      type: WarningType.KEY_INVALID,
+      msg: `The key is invalid. ${e.message}`
+    });
+    return;
+  }
 
   const keyRef = getKeysRef().child(key);
   keyRef.once(
@@ -966,7 +975,7 @@ function parseRecordsDataFromCsv(csvData) {
     records.forEach((record, index) => {
       const id = index + 1;
       for (const key in record) {
-        record[key] = castValue(record[key]);
+        record[key] = castValue(record[key], /* allowUnquotedStrings */ true);
       }
       record.id = id;
       recordsData[id] = JSON.stringify(record);
