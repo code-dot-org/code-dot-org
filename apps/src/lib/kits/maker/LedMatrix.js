@@ -36,3 +36,26 @@ export default class LedMatrix {
     this.board.mb.displayClear();
   }
 }
+
+export class ExternalLed {
+  constructor(board, pin) {
+    //TODO - limit to the GPIO pins on MB?
+    this.board = board;
+    this.pin = pin;
+    this.isOn = false;
+  }
+
+  on() {
+    this.board.setDigitalOutput(this.pin, 1);
+    this.isOn = true;
+  }
+
+  off() {
+    this.board.setDigitalOutput(this.pin, 0);
+    this.isOn = false;
+  }
+
+  toggle() {
+    return this.isOn ? this.off() : this.on();
+  }
+}
