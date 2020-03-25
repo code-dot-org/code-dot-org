@@ -268,6 +268,6 @@ class TestRDS < Minitest::Test
       }
     }
 
-    Cdo::RDS.delete_cluster(@cluster_to_delete_id)
+    Cdo::RDS.delete_cluster(@cluster_to_delete_id, 1, 0)
   end
 end
