@@ -1,25 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
+import * as color from '../../../util/color';
 
-const styles = {
-  headerCell: {
-    border: '1px solid black'
-  },
-  cell: {
-    height: '2em',
-    textAlign: 'center',
-    border: '1px solid black'
-  },
-  title: {
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
-    fontSize: 16,
-    lineHeight: '16px',
-    color: 'black'
-  }
-};
-
-class CrossTabChart extends React.Component {
+export default class CrossTabChart extends React.Component {
   static propTypes = {
     records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -104,43 +88,105 @@ class CrossTabChart extends React.Component {
       });
     });
 
+    // Our goal is uniform column widths, for all columns except the first one.
+    // There are a few steps that lead to successful layout here.
+    // 1. The table width is 100% to maximize available space.
+    // 2. The first column uses `white-space: nowrap` so it won't shrink too
+    //    small for its contents.
+    // 3. We set the rest of the columns to have the same percentage-width,
+    //    adding up to 99% of the table width (which is more than available space)
+    //    so after setting the first column width, the remaining columns
+    //    shrink to fit evenly.
+    const columnWidth = 99 / (columns.length - 1) + '%';
+
     const min = Math.min(...numericValues);
     const max = Math.max(...numericValues);
 
     return (
-      <div id={CROSS_TAB_CHART_AREA}>
-        <h1 style={styles.title}>{this.props.chartTitle}</h1>
-        <table>
-          <tbody>
-            <tr>
-              {columns.map(column => (
-                <th key={column} style={styles.headerCell}>
-                  {column}
-                </th>
-              ))}
-            </tr>
-            {chartData.map((record, id) => (
-              <tr key={id}>
-                {columns.map(column => {
-                  const value = record[column];
-                  const color =
-                    column === this.props.selectedColumn1
-                      ? 'white'
-                      : this.getColorForValue(value, min, max);
-                  const cellStyle = {...styles.cell, backgroundColor: color};
-                  return (
-                    <td key={column} style={cellStyle}>
-                      {value}
-                    </td>
-                  );
-                })}
-              </tr>
+      <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
+        <h1 style={chartTitleStyle}>{this.props.chartTitle}</h1>
+        <table style={tableStyle}>
+          <tr>
+            <td>&nbsp;</td>
+            <td
+              style={{...topCellStyle, ...axisTitleStyle}}
+              colSpan={columns.length - 1}
+            >
+              {this.props.selectedColumn2}
+            </td>
+          </tr>
+          <tr>
+            {columns.map((column, i) => (
+              <td
+                key={column}
+                style={
+                  i === 0 ? {...leftCellStyle, ...axisTitleStyle} : topCellStyle
+                }
+              >
+                {column}
+              </td>
             ))}
-          </tbody>
+          </tr>
+          {chartData.map((record, i) => (
+            <tr key={i}>
+              {columns.map((column, j) => {
+                const value = record[column];
+                const cellStyle =
+                  j === 0
+                    ? {...leftCellStyle}
+                    : {
+                        ...innerCellStyle,
+                        width: columnWidth,
+                        backgroundColor: this.getColorForValue(value, min, max)
+                      };
+                return (
+                  <td key={column} style={cellStyle}>
+                    {value}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
         </table>
       </div>
     );
   }
 }
 
-export default CrossTabChart;
+const wrapperStyle = {
+  width: '100%'
+  // padding: 10
+};
+const chartTitleStyle = {
+  fontFamily: '"Gotham 7r", sans-serif',
+  fontSize: 16,
+  lineHeight: '16px',
+  color: 'black'
+};
+const tableStyle = {
+  width: '100%'
+};
+const cellStyle = {
+  height: '3em',
+  border: '1px solid black',
+  textAlign: 'center'
+};
+const topCellStyle = {
+  ...cellStyle,
+  backgroundColor: color.lightest_gray,
+  color: 'black'
+};
+const leftCellStyle = {
+  ...cellStyle,
+  backgroundColor: color.dark_charcoal,
+  color: 'white',
+  padding: '0 1em',
+  whiteSpace: 'nowrap'
+};
+const innerCellStyle = {
+  ...cellStyle,
+  overflow: 'hidden'
+};
+const axisTitleStyle = {
+  fontFamily: '"Gotham 5r", sans-serif'
+};
