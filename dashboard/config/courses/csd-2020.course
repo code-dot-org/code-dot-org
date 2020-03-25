@@ -21,7 +21,6 @@
     ],
     "has_verified_resources": true,
     "family_name": "csd",
-    "version_year": "2020",
-    "is_stable": false
+    "version_year": "2020"
   }
 }
