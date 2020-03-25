@@ -1,3 +1,0 @@
-# cdo-unison
-
-Installs Unison.
