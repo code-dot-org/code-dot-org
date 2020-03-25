@@ -1,6 +1,4 @@
-require 'minitest/autorun'
-require 'mocha/mini_test'
-require 'nokogiri'
+require_relative '../../test_helper'
 require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
