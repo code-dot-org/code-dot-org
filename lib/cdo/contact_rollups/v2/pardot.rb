@@ -9,7 +9,7 @@ class PardotV2
   # Retrieves new email-id mappings from Pardot
   # @param [Integer] last_id
   # @return [Array] an array of hash {email, id}
-  def self.retrieve_new_ids(last_id = 0)
+  def self.retrieve_new_ids(last_id)
     # Run repeated requests querying for prospects above our highest known
     # Pardot ID. Up to 200 prospects will be returned at a time by Pardot, so
     # query repeatedly if there are more than 200 to retrieve.
