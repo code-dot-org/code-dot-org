@@ -15,7 +15,7 @@ const DEFAULT_PROPS = {
 describe('TeacherDashboard', () => {
   it('renders TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboard {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Header')).to.exist;
+    expect(wrapper.find('TeacherDashboardHeader')).to.exist;
   });
 
   it('does not render TeacherDashboardHeader on /login_info', () => {
@@ -23,7 +23,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.find('Header')).to.not.exist;
+    expect(wrapper.find('TeacherDashboardHeader')).to.exist;
   });
 
   it('does not render TeacherDashboardHeader on /standards_report', () => {

@@ -4,9 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation, {
   TeacherDashboardPath
 } from './TeacherDashboardNavigation';
-import experiments from '@cdo/apps/util/experiments';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
-import TeacherDashboardHeaderWithButtons from './TeacherDashboardHeaderWithButtons';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
@@ -18,34 +16,7 @@ import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import {recordImpression} from './impressionHelpers';
 
-function Header(props) {
-  if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-    if (
-      experiments.isEnabled(
-        experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT
-      )
-    ) {
-      recordImpression('teacher_dashboard_header_with_buttons_switch_section');
-    } else {
-      recordImpression('teacher_dashboard_header_with_buttons_select_section');
-    }
-    return (
-      <div>
-        {/* TeacherDashboardNavigation must be outside of
-        TeacherDashboardHeader. Routing components do not work with
-        components using Connect/Redux. Library we could use to fix issue:
-        https://github.com/supasate/connected-react-router */}
-        <TeacherDashboardHeaderWithButtons />
-        <TeacherDashboardNavigation />
-      </div>
-    );
-  } else {
-    recordImpression('teacher_dashboard_header_no_buttons');
-    return <TeacherDashboardHeader sectionName={props.sectionName} />;
-  }
-}
 class TeacherDashboard extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
@@ -106,7 +77,16 @@ class TeacherDashboard extends Component {
 
     return (
       <div>
-        {includeHeader && <Header {...this.props} />}
+        {includeHeader && (
+          <div>
+            {/* TeacherDashboardNavigation must be outside of
+            TeacherDashboardHeader. Routing components do not work with
+            components using Connect/Redux. Library we could use to fix issue:
+            https://github.com/supasate/connected-react-router */}
+            <TeacherDashboardHeader />
+            <TeacherDashboardNavigation />
+          </div>
+        )}
         <Switch>
           <Route
             path={TeacherDashboardPath.manageStudents}
