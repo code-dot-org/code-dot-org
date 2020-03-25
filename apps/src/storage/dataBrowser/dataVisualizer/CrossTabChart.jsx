@@ -12,46 +12,6 @@ export default class CrossTabChart extends React.Component {
     selectedColumn2: PropTypes.string
   };
 
-  /**
-   * @param {Array.<Object>} records
-   * @param {string} rowName
-   * @param {string} columnName
-   */
-  createPivotTable = (records, rowName, columnName) => {
-    let countMap = {};
-
-    // Find all values in columnName - these will be the columns of the pivot table
-    const pivotedColumns = new Set(records.map(record => record[columnName]));
-
-    // Count occurrences of each row/column pair
-    records.forEach(record => {
-      let key = record[rowName];
-      let value = record[columnName];
-      if (!countMap[key]) {
-        countMap[key] = {[rowName]: key};
-        pivotedColumns.forEach(column => (countMap[key][column] = 0));
-      }
-      countMap[key][value]++;
-    });
-
-    // Sort columns
-    let columns;
-    if (this.props.numericColumns.includes(columnName)) {
-      columns = [...pivotedColumns].sort(function(a, b) {
-        return a - b;
-      });
-    } else {
-      columns = [...pivotedColumns].sort();
-    }
-    columns.unshift(rowName);
-
-    // Sort rows
-    let chartData = Object.values(countMap).sort((a, b) =>
-      a[rowName] > b[rowName] ? 1 : -1
-    );
-    return {chartData, columns};
-  };
-
   getColorForValue = (value, min, max) => {
     if (typeof value !== 'number') {
       return 'white';
@@ -71,8 +31,9 @@ export default class CrossTabChart extends React.Component {
     ) {
       return null;
     }
-    const {chartData, columns} = this.createPivotTable(
+    const {chartData, columns} = createPivotTable(
       this.props.records,
+      this.props.numericColumns,
       this.props.selectedColumn1,
       this.props.selectedColumn2
     );
@@ -151,6 +112,46 @@ export default class CrossTabChart extends React.Component {
       </div>
     );
   }
+}
+
+/**
+ * @param {Array.<Object>} records
+ * @param {string} rowName
+ * @param {string} columnName
+ */
+export function createPivotTable(records, numericColumns, rowName, columnName) {
+  let countMap = {};
+
+  // Find all values in columnName - these will be the columns of the pivot table
+  const pivotedColumns = new Set(records.map(record => record[columnName]));
+
+  // Count occurrences of each row/column pair
+  records.forEach(record => {
+    let key = record[rowName];
+    let value = record[columnName];
+    if (!countMap[key]) {
+      countMap[key] = {[rowName]: key};
+      pivotedColumns.forEach(column => (countMap[key][column] = 0));
+    }
+    countMap[key][value]++;
+  });
+
+  // Sort columns
+  let columns;
+  if (numericColumns.includes(columnName)) {
+    columns = [...pivotedColumns].sort(function(a, b) {
+      return a - b;
+    });
+  } else {
+    columns = [...pivotedColumns].sort();
+  }
+  columns.unshift(rowName);
+
+  // Sort rows
+  let chartData = Object.values(countMap).sort((a, b) =>
+    a[rowName] > b[rowName] ? 1 : -1
+  );
+  return {chartData, columns};
 }
 
 const wrapperStyle = {

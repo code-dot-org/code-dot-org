@@ -1,7 +1,9 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import CrossTabChart from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
+import CrossTabChart, {
+  createPivotTable
+} from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
 
 const DEFAULT_PROPS = {
   records: [],
@@ -75,9 +77,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 1, 2, 3]
       };
-      expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+        expectedPivotData
+      );
     });
 
     it('sorts string columns alphabetically, but with the row column first', () => {
@@ -96,9 +98,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'a', 'z']
       };
-      expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+        expectedPivotData
+      );
     });
 
     it('sorts numeric columns numerically, with the row column first', () => {
@@ -117,9 +119,8 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 18, 134]
       };
-      wrapper.setProps({numericColumns: ['value']});
       expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
+        createPivotTable(records, ['value'], 'abc', 'value')
       ).to.deep.equal(expectedPivotData);
     });
 
@@ -140,9 +141,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'x', 'y']
       };
-      expect(
-        wrapper.instance().createPivotTable(records, 'abc', 'value')
-      ).to.deep.equal(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).to.deep.equal(
+        expectedPivotData
+      );
     });
   });
 });
