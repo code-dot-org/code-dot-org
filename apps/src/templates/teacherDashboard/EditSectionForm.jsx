@@ -54,7 +54,6 @@ const style = {
 class EditSectionForm extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    localeEnglishName: PropTypes.string,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
 
@@ -73,7 +72,8 @@ class EditSectionForm extends Component {
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
-    updateHiddenScript: PropTypes.func.isRequired
+    updateHiddenScript: PropTypes.func.isRequired,
+    localeEnglishName: PropTypes.string
   };
 
   state = {
@@ -373,7 +373,8 @@ let defaultPropsFromState = state => ({
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
   hiddenStageState: state.hiddenStage,
-  assignedScriptName: assignedScriptName(state)
+  assignedScriptName: assignedScriptName(state),
+  localeEnglishName: state.locales.localeEnglishName
 });
 
 export const UnconnectedEditSectionForm = EditSectionForm;
