@@ -12,10 +12,12 @@ Question:
     - Advice on implementing the code highlighting
         
         Answer: find relevant code (showPaths thing)?
-    
+        Result: no... we will have to be more creative (open question)
+
     - Why does enqueue directly show and not hit lightbulb
         
         Answer: try contextual?
+        Result: No contextual was not important but enqueueHints was not the right function
     
     - blocklyToCode replacement? I choose the repeat block this way...
         - get block type, args, id
@@ -23,3 +25,4 @@ Question:
         Answer: can convert to XML (which contains everything)
                 Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
                 Blockly.Xml.domToPrettyText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace))
+        Result: promising.. we will have to pull Blockly and mess with it ourselves

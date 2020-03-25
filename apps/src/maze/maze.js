@@ -369,7 +369,8 @@ module.exports = class Maze {
 
       // Make Ajax request to feedback server
       let codeXML = Blockly.Xml.domToText(
-        Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+        Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
+      );
       this.sendFeedback_(codeXML);
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
