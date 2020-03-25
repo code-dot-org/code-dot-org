@@ -18,7 +18,7 @@ export const setLocaleEnglishName = localeEnglishName => ({
 // Initial state of localesRedux
 
 const initialState = {
-  // locale code like 'en-us', 'es-mx', or null if none is specified.
+  // locale code like 'en-US', 'es-MX', or null if none is specified.
   localeCode: null,
   // The english name for this locale.
   localeEnglishName: null
