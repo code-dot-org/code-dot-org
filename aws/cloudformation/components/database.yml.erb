@@ -10,7 +10,7 @@
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
--
+
 <% 2.times do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
