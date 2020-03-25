@@ -45,7 +45,8 @@ export default class AtHomeBanner extends React.Component {
       borderTopRightRadius: 3,
       minWidth: 230,
       height: 40,
-      padding: '0 30px',
+      paddingLeft: 30,
+      paddingRight: 30,
       boxShadow: 'none',
       ':hover': {
         color: color.white,
