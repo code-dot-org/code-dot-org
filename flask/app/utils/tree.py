@@ -37,6 +37,6 @@ class Tree:
         flat = ['(', self.getRoot()]
         for child in self.children:
             if child:
-                flat += self.flatten(child)
+                flat += child.toTrainableInput()
         flat.append(')')
         return flat
