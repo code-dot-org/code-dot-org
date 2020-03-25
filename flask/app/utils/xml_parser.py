@@ -23,10 +23,11 @@ def xmlToAst(tree):
 def process(xmlTree, depth):
     
     treeType = getTreeType(xmlTree)
+    treeId = getTreeId(xmlTree)
     if treeType == 'next': return None
 
     #print out node
-    newTree = Tree(treeType)
+    newTree = Tree(treeType, treeId)
 
     # recurse
     for child in xmlTree:
@@ -45,6 +46,11 @@ def printName(depth, treeType):
         whiteSpace += '  '
     print(whiteSpace + treeType)
 
+def getTreeId(tree):
+    if tree.tag == 'block':
+        return tree.get('blockid')
+    else:
+        return -1
 
 def getTreeType(tree):
     if tree.tag == 'xml':
