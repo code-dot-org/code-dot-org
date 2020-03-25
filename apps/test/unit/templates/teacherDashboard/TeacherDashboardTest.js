@@ -18,13 +18,12 @@ describe('TeacherDashboard', () => {
     expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.exist;
   });
 
-
   it('does not render TeacherDashboardHeader on /login_info', () => {
     const location = {pathname: '/login_info'};
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    console.log(wrapper.debug())
+    console.log(wrapper.debug());
     expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
   });
 
