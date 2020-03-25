@@ -2591,7 +2591,7 @@ StudioApp.prototype.setStartBlocks_ = function(config, loadLastAttempt) {
       config.forceInsertTopBlock
     );
   }
-  if (config.level.sharedFunctions) {
+  if (config.level.sharedFunctions && !config.level.lastAttempt) {
     startBlocks = blockUtils.appendNewFunctions(
       startBlocks,
       config.level.sharedFunctions
