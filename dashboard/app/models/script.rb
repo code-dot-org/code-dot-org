@@ -210,6 +210,10 @@ class Script < ActiveRecord::Base
   def self.stage_extras_script_ids
     @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
   end
+  
+  def self.text_to_speech_script_ids
+    Script.all.select(&:text_to_speech_enabled?).pluck(:id)
+  end
 
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
