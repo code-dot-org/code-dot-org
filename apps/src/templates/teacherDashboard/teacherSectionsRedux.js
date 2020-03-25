@@ -531,6 +531,7 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
+    console.log(action.ids);
     return {
       ...state,
       textToSpeechScriptIds: action.ids

@@ -10,6 +10,7 @@ import {getStore} from '@cdo/apps/redux';
 import {
   setValidGrades,
   setStageExtrasScriptIds,
+  setTextToSpeechScriptIds,
   setAuthProviders,
   beginEditingNewSection,
   setPageType,
@@ -31,6 +32,8 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
+  console.log(homepageData.textToSpeechScriptIds);
+  store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));

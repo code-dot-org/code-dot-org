@@ -14,7 +14,8 @@ import {
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  stageExtrasAvailable
+  stageExtrasAvailable,
+  ttsAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
@@ -71,6 +72,7 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
+    ttsAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired
@@ -125,6 +127,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
+      ttsAvailable,
       assignedScriptName,
       locale,
       isNewSection
@@ -169,11 +172,15 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
-          <AutoplayField
-            value={section.autoplayEnabled}
-            onChange={autoplayEnabled => editSectionProperties({autoplayEnabled})}
-            disabled={isSaveInProgress}
-          />
+          {ttsAvailable(section.scriptId) && (
+            <AutoplayField
+              value={section.autoplayEnabled}
+              onChange={autoplayEnabled =>
+                  editSectionProperties({autoplayEnabled})
+              }
+              disabled={isSaveInProgress}
+              />
+          )}
         </div>
         <DialogFooter>
           <Button
@@ -396,6 +403,7 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  ttsAvailable: id => ttsAvailable(state, id),
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state)
 });
