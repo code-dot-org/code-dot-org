@@ -1,6 +1,6 @@
 name 'CodeBreak Episode Placeholder'
 editor_experiment ''
-video_key 'C2_graph_paper'
+video_key 'codebrea_e01'
 display_as_unplugged 'false'
 use_large_video_player 'true'
 hide_reference_area 'true'
@@ -11,13 +11,6 @@ markdown <<MARKDOWN
   
 # Take a Code Break
 Thanks for being one of the first to join Code Break! Together let’s build the world’s largest live interactive classroom!
-
-To prepare:
-1) [Download Zoom](https://zoom.us/download) on your computer or phone in advance (you can also call in to this episode’s phone number) 
-2) [Tune in](http://www.code.org/codebreaknow) on Wednesdays at 10am PT / 1pm ET
-3) Optional: pen + paper
-
-After the episode airs, return here to complete practice levels and challenges. Don't forget to share your work using the hashtag #CodeBreak.
 
 ## Sign Up
 If you haven't already, [sign up](https://code.org/break) to receive the Weekly Challenge email, and information about each episode.
