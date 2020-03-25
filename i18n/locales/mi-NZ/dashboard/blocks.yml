@@ -473,6 +473,12 @@ mi:
         text: whakaranu te {COLOR1} me te {COLOR2}
       Dancelab_nMeasures:
         text: "{N} wāhanga"
+      Dancelab_onPointerDown:
+        text: te tohu whakararo
+      Dancelab_onPointerDrag:
+        text: te tohu kumekume
+      Dancelab_onPointerUp:
+        text: te tohu whakarunga
       Dancelab_randomColor:
         text: tae matapōkere
       Dancelab_setBackground:
@@ -1249,11 +1255,6 @@ mi:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
-        options:
-          OPTION:
-            '"show"': whakaaturia
-            '"hide"': hunaia
       binary_move:
         options:
           DIR:

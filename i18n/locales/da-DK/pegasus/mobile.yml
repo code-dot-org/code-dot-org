@@ -12,12 +12,12 @@
   csedweek_dates: "8.-14. december 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code</a> er på vej. Opråb til alle lærere og interesserede: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planlæg din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Underviser du i programmering? Se andre CSEdWeek ressourcer</a>'
+  csedweek_banner_teachers_text: " Underviser du i programmering? Se andre CSEdWeek ressourcer"
   n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>"
   anybody_can_learn: "Alle kan lære."
   learn_now: "Lær Nu"
   petition_message: "Alle elever i alle skoler burde have muligheden for at lære programmering"
   petition_sign_message: 'Hvis du er enig, underskriv dit navn.  Tilslut dig # andre.'
-  petition_sign_message_support: 'Underskriv her, hvis du vil støtte os. Gør som # andre.'
   petition_join_others: 'Gør som # andre'
   name: "Navn"
   email: "E-mail"
@@ -229,6 +229,7 @@
   homepage_action_text_learn: "Begynd at lære"
   homepage_action_text_signpetition: "Skriv under"
   homepage_signpetition_dropdown: "Jeg er enig &#x25BE;"
+  homepage_signpetition_dropdown_text: "Jeg er enig"
   homepage_diversity_pledge: "Afgiv et løfte om mangfoldighed"
   homepage_banner_text_prizes: 'The Hour Of Code kommer igen, nemlig d. 7.-13. december 2015. '
   homepage_banner_link_prizes: 'Deltag i den største læringsbegivenhed i historien. '
@@ -1086,10 +1087,12 @@
   compatibility_hide_this_warning: "Skjul denne advarsel"
   flappy_shortcode: "bask"
   header_home: "Hjem"
+  header_my_dashboard: "Hjem"
   header_courses: "kurser"
   header_course_catalog: "Kursuskatalog"
   header_project_gallery: "Projekter"
   header_sections: "Sektioner"
+  header_professional_learning: "Professional learning"
   header_educate_overview: "Oversigt for undervisere"
   header_educate_elementary: "Grundskole"
   header_educate_middle: "Grundskole (mellemtrin/udskoling)"

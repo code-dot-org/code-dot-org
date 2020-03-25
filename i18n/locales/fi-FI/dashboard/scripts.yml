@@ -1791,3 +1791,83 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Menossa turvallisesti
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Digitaalinen jalanjälkesi
+            Move It, Move It:
+              name: Liikuta, liikuta
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binäärikorut
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Releohjelmointi
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+            'Unplugged: Binary':
+              name: 'Tietokoneeton tekeminen: binääri'
+            Artist Binary:
+              name: 'Taiteilija: binääri'
+            Digital Citizenship:
+              name: Digitaalinen kansalaisuus
+            Dance Party:
+              name: Tanssibileet
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Ehtolausekkeet
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Kirjekuorimuuttujat
+            For Loop Fun:
+              name: Silmukkahupia
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Joukkoistaminen
+        express-2020:
+          stages:
+            Dance Party:
+              name: Tanssibileet
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Kirjurimehiläinen
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funktioiden luominen
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Niin kauan kuin -silmukat
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmit
+            Events:
+              name: Tapahtumat

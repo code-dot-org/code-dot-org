@@ -62,7 +62,8 @@ export default class LibraryPublisher extends React.Component {
     onPublishSuccess: PropTypes.func.isRequired,
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
-    libraryClientApi: PropTypes.object.isRequired
+    libraryClientApi: PropTypes.object.isRequired,
+    onShareTeacherLibrary: PropTypes.func
   };
 
   state = {
@@ -103,17 +104,25 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription
     );
 
+    // Publish to S3
     libraryClientApi.publish(
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
         this.setState({publishState: PublishState.ERROR_PUBLISH});
       },
-      () => {
+      data => {
+        // Write to projects database
+        dashboard.project.setLibraryDetails({
+          libraryName,
+          libraryDescription,
+          publishing: true,
+          latestLibraryVersion: data && data.versionId
+        });
+
         onPublishSuccess(libraryName);
       }
     );
-    dashboard.project.setLibraryDetails(libraryName, libraryDescription);
   };
 
   displayNameInput = () => {
@@ -178,7 +187,12 @@ export default class LibraryPublisher extends React.Component {
     const {sourceFunctionList} = this.props.libraryDetails;
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
-      const shouldDisable = comment.length === 0;
+      const noComment = comment.length === 0;
+      const duplicateFunction =
+        sourceFunctionList.filter(
+          source => source.functionName === functionName
+        ).length > 1;
+      const shouldDisable = noComment || duplicateFunction;
       let checked = selectedFunctions[functionName] || false;
       if (shouldDisable && checked) {
         checked = false;
@@ -199,8 +213,13 @@ export default class LibraryPublisher extends React.Component {
           />
           <span>{functionName}</span>
           <br />
-          {shouldDisable && (
+          {noComment && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
+          )}
+          {duplicateFunction && (
+            <p style={styles.alert}>
+              {i18n.libraryExportDuplicationFunctionError()}
+            </p>
           )}
           <pre style={styles.textInput}>{comment}</pre>
         </div>
@@ -235,11 +254,16 @@ export default class LibraryPublisher extends React.Component {
     const {libraryClientApi, onUnpublishSuccess} = this.props;
     libraryClientApi.delete(
       () => {
+        dashboard.project.setLibraryDetails({
+          libraryName: undefined,
+          libraryDescription: undefined,
+          publishing: false,
+          latestLibraryVersion: -1
+        });
         onUnpublishSuccess();
-        dashboard.project.setLibraryDetails(undefined, undefined);
       },
       error => {
-        console.warn(`Error publishing library: ${error}`);
+        console.warn(`Error unpublishing library: ${error}`);
         this.setState({publishState: PublishState.ERROR_UNPUBLISH});
       }
     );
@@ -247,6 +271,8 @@ export default class LibraryPublisher extends React.Component {
 
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
+    const {onShareTeacherLibrary} = this.props;
+
     return (
       <div>
         <Heading2>{i18n.libraryName()}</Heading2>
@@ -258,12 +284,23 @@ export default class LibraryPublisher extends React.Component {
         <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
           <Button
+            __useDeprecatedTag
             style={{marginTop: 20}}
             onClick={this.publish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
+          {onShareTeacherLibrary && (
+            <Button
+              __useDeprecatedTag
+              style={{marginTop: 20, marginLeft: 10}}
+              onClick={onShareTeacherLibrary}
+              text={i18n.manageLibraries()}
+              color={Button.ButtonColor.gray}
+            />
+          )}
           {alreadyPublished && (
             <Button
+              __useDeprecatedTag
               style={styles.unpublishButton}
               onClick={this.unpublish}
               text={i18n.unpublish()}

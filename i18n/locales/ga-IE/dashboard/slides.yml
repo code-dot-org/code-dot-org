@@ -5,6 +5,23 @@
 #3) Crowdin proofreaders are translating filepaths, despite being hidden.
 ga:
   slides:
+    maze_intro:
+      1:
+        text: "Fáilte chuig do chéad uair an chloig ag códú! Seo linn chuig do chéad bhlaiseadh den ríomhchlárú."
+      2:
+        text: "Beimis ag baint úsáid as Blockly, teanga ríomhchlárúcháin ina ndéantar tarraingt agus scaoileadh le bloicíní chun cód a scríobh."
+      3:
+        text: "De ghnáth, déantar cód a chlóbhualadh, ach is teanga fhíseach í Blockly.  Freagraíonn gach bhloicín le líne de cód \"fíor\"."
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
     applab_intro_designmode:
       1:
         image: 'notes/applab_intro_designmode_1.png'
@@ -64,6 +81,7 @@ ga:
       3:
       4:
       5:
+        text: "Nó comórtas damhsa le cairde?"
       6:
       7:
     lesson_planning:
@@ -136,5 +154,6 @@ ga:
       3:
       4:
       5:
+        text: "Nó comórtas damhsa le cairde?"
       6:
       7:

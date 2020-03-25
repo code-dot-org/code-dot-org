@@ -348,6 +348,10 @@ fi:
       2:
       3:
         text: "Ah, siinä se ongelma on! Kissan viikset ovat 75 kuvapistettä pitkät, ei 25."
+    C2_bee_loops:
+      1:
+        text: "Silmukka on toiminnan toistamista. Mennessäni mehiläispesälle tarkistamaan, katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä useita kertoja."
+      2:
     C2_maze_intro:
       1:
       2:
@@ -609,6 +613,7 @@ fi:
       6:
         text: "Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme."
       7:
+        text: "Aloittaaksesi sinun täytyy liittää lohkosi oranssiin \"suoritettaessa\" lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet keltaisen viivan ja sitten ne kohdistuvat yhteen."
       8:
       9:
     iceage_intro:
@@ -621,7 +626,19 @@ fi:
       6:
         text: "Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme."
       7:
+        text: "Aloittaaksesi sinun täytyy liittää lohkosi oranssiin \"suoritettaessa\" lohkoon. Voit liittää useita lohkoja yhteen vetämällä niitä, kunnes näet keltaisen viivan ja sitten ne kohdistuvat yhteen."
       8:
+      9:
+    mc_2016_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+        text: "Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen työkalupakkiin."
       9:
     hoc_dance_events_2019:
       1:

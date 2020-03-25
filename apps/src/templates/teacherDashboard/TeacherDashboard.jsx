@@ -22,7 +22,15 @@ import {recordImpression} from './impressionHelpers';
 
 function Header(props) {
   if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-    recordImpression('teacher_dashboard_header_with_buttons');
+    if (
+      experiments.isEnabled(
+        experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT
+      )
+    ) {
+      recordImpression('teacher_dashboard_header_with_buttons_switch_section');
+    } else {
+      recordImpression('teacher_dashboard_header_with_buttons_select_section');
+    }
     return (
       <div>
         {/* TeacherDashboardNavigation must be outside of
@@ -41,7 +49,6 @@ function Header(props) {
 class TeacherDashboard extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
@@ -75,7 +82,6 @@ class TeacherDashboard extends Component {
     const {
       location,
       studioUrlPrefix,
-      pegasusUrlPrefix,
       sectionId,
       sectionName,
       studentCount
@@ -105,19 +111,13 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.manageStudents}
             component={props => (
-              <ManageStudents
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route
             path={TeacherDashboardPath.loginInfo}
             component={props => (
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                pegasusUrlPrefix={pegasusUrlPrefix}
-              />
+              <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route

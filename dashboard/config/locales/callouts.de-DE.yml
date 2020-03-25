@@ -95,6 +95,9 @@ de-DE:
       Course 4 Artist Vars 6:
         degrees_per_side: Teile 360 durch die Anzahl der Seiten, um die Größe der
           einzelnen Winkel in Grad zu erhalten.
+      Course 4 Artist Vars 8:
+        Course_4_Artist_Vars_8_a: Brauchst du mehr Platz? Verschiebe die Trennlinie,
+          um mehr Platz zum Programmieren zu haben.
       Course 4 Bee 1:
         if_bee_nectar: Nutze den "wenn"-Baustein, um zu entscheiden, ob die Biene
           Nektar sammeln oder Honig machen soll
@@ -168,16 +171,15 @@ de-DE:
           GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen
           soll.
       Infinity_move_collide:
-        Infinity_move_collide_callout: Spiele einen Geräusch ab, wenn dieses Ereignis
-          passiert.
+        Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
       Infinity_move_directions:
         Infinity_move_directions_callout: Welcher Baustein bewegt Baymax nach oben,
-          wenn Pfeil-nach-oben gedrückt wird?
-        Infinity_move_directions_callout_arrow: Benutze die Pfeiltasten zum Bewegen
+          wenn der Pfeil nach oben gedrückt wird?
+        Infinity_move_directions_callout_arrow: Benutze diese Pfeile zum Steuern
       Infinity_move_right:
         Infinity_move_right_runbutton: Füge den "bewegen"-Baustein hier hinzu
       Infinity_repeat:
-        Infinity_repeat_callout: Setze "bewegen"-Bausteine hier hinein
+        Infinity_repeat_callout: Platziere den "bewegen"-Bausteine hier hinein
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Mit "Ausführen" testest du dein Programm, wenn
           du fertig bist.
@@ -233,6 +235,9 @@ de-DE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Die Werkzeugkiste hat einen neuen Look! Die „Aktion“-Bausteine
           sind jetzt hier drin.
+      New Frozen Project:
+        snowflake_dropdown: Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken
+          zu erstellen!
       Overworld Chop Trees:
         craft_callout_preplaced: Hier haben wir ein paar Bausteine für den Anfang.
       Overworld Chop Trees_2019:

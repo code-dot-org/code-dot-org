@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T21:25:42.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Choose: Array or Variable?\r\n\r\nYour app needs to store the following information. For each type of information, decide whether you would use an array or a variable to store it:\r\n \r\n* All the messages a user has sent\r\n* The highest score a user has ever reached on the app\r\n* A username and password to unlock the app\r\n",
+    "encrypted_solution": "cT6kDpMtnNPI1Kf472zUL3KgV0XLdaZTdkXZmpnI4AViHyK/VOnpzBZNKYrR\nvLzbVZ5qglnwT/w/Q7whFVTKFZeHHqo1alfuy4/eXcM85xKbqmna/g2GheTO\nNk6e7iQZL+hP2zqZ7gmtoVcZbtEJ2cgVi85uRtWFKD1rjH6zoiPjxGxmS4IL\n90J80BwgpfkMOYxqHdcdeZaMrOwtAIJAL3V2iVVgv0m2DvOnAK6HT5xFCIff\nMhikAG82tO5xBlW2YRjx+KGVgS8WoC5rf+A+oGsAIfV9QL4TBOXd3TNOKBj2\nZQcPAeQYoIEKP6FKXuF9gSQ6bn4EEdmWvxAnvkmkb5kOfSiwbfiTHsPEuG8o\nXdaih2+KOWpODhgqxl2gRrulHgrmqBV7CWeRBJE9MM0zaVTIKRdh5LysJ5aP\ns2xdl404XGLqbAEyw1ZFhJLvn2chBvme0Q0gV9q2ZZdAGUfIKzDhpIzjqUGj\n0LaxLCYKCICwNDo7MWYFisyAbWMG5R7IuCMdVBshGTpB80Hw80TJsFUA1TR8\n+0bivm9w1M9ni1Qznnsbc0XOfSjCfO1YcqYo2nigKw3u1azzXugA+vyGVrBC\nzbdMZ5nO7DynoVUC7bjuS0nk93xk9E/AoyMHSaGjAG0CoPev04slT5ayDJG/\nDTkEdDLV8QAvRiEcJmdUZ8RrGt9WkFvocXJCFpaHAEYzVDvMd3ii61sH3eBa\nKsXWOYZJLuJR8AQnILaFbu+U72JtNHbbj2mpHiOp+pm2SSVj68FuMmzYo4Uk\nW03CSvJcGDJM+ndOlMQtGwgNOR5IBJ0XsfAsoWnJOIzvOa9v7vOAsVuBuA39\nDNTOFp6Zo21PzEAHmrdUxC70xU5rrpIYsqxxoBWV6T5SF6pNI1jjO63iBXO6\ngCYdeB9K0BFQAkeevN1nM2kVOI/njOkvXELAb+5F8Fu10ZxptdaSWCW9KdaQ\n0LwRoLB3NHY3QwG32tHJMh3mNsTvV4Zy4zLPGpUyKoS/JdjHH+cscGhIsEsf\nLNAbdjGCCl4UhGZ9ESd0Q6jWEsJd8Eqgs+1kgxSKdVt56kr2WsKs5so+IPb3\n1APFV4N/\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "parent_level_id": 17360,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-14 16:56:49 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":177,\"changed_by_email\":\"josh.schulte@code.org\"}]"
+}]]></config>
+</FreeResponse>

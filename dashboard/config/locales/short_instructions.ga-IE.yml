@@ -238,6 +238,12 @@ ga-IE:
       CourseD_Dance_Party_04: Cuir éifeacht chúlra le do chlár.
       CourseD_Dance_Party_05: Úsáid bloc nua eile le tabhairt ar an damhsóir a steip
         a athrú gach dhá thomhas.
+      CourseD_Dance_Party_06: Cruthaigh damhsóir tionlacain darb ainm `backup_dancer1`
+        a dhéanfaidh damhsa leis an gcat.
+      CourseD_Dance_Party_08: An bhfuil tú in ann an mhéid chéanna a chur ar an dá
+        dhamhsóir tionlacain?
+      CourseD_Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn
+        le cairde é.
       Crack Random Substitution: Treoracha
       Crack a Caesar Cipher: Treoracha
       Dance_2019_01: 'Tarraing an bloc <xml><block type="Dancelab_makeAnonymousDanceSprite"
@@ -259,6 +265,8 @@ ga-IE:
       Dance_2019_08: Athraigh an imir ar dhuine de na damhsóirí (nó ar an ngrúpa ar
         fad)!
       Dance_2019_09: Bí cruthaitheach leis na blocanna nua seo!
+      Dance_2019_10: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn le
+        cairde é.
       Dance_Party_01: Tarraing an bloc `déan... nua` go dtí an spás oibre, agus ceangail
         laistigh den bhloc `socrú` é.
       Dance_Party_02: Tabhair ar an mús steip nua a thosú tar éis 4 thomhas!
@@ -266,6 +274,12 @@ ga-IE:
       Dance_Party_04: Cuir éifeacht chúlra le do chlár.
       Dance_Party_05: Úsáid bloc nua eile le tabhairt ar an damhsóir a steip a athrú
         gach dhá thomhas.
+      Dance_Party_06: Cruthaigh damhsóir tionlacain darb ainm `backup_dancer1` a dhéanfaidh
+        damhsa leis an gcat.
+      Dance_Party_08: An bhfuil tú in ann an mhéid chéanna a chur ar an dá dhamhsóir
+        tionlacain?
+      Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn le
+        cairde é.
       Dance_Party_extras_alternate_2019: Anonn agus Anall! (Cliceáil "Tuilleadh" chun
         na mionsonraí a fháil)
       Dance_Party_extras_battle: Foirne Damhsa (Cliceáil "Tuilleadh" chun na mionsonraí
@@ -527,6 +541,14 @@ ga-IE:
         ó gach bláth.
       NEW Course 4 Bee For Loops 8: Cén incrimint a úsáidfí chun 3, 6, 9, 12, 15 neachtar
         a bhailiú? Tá a fhios agat!
+      New Gumball Project: Déan cibé rud is rogha leat, ansin foilsigh é!
+      New Ice Age Project: Déan cibé rud is rogha leat, ansin foilsigh é!
+      New Infinity Project: Déan cibé rud is rogha leat, ansin foilsigh é!
+      New Minecraft Hero Project: "**Saorimirt:** Tá cead do chinn agat anois!"
+      New Sports Project: 'Cruthaigh do chluiche féin! Is tusa atá i gceannas ar gach
+        uile rud: is féidir leat na rialacha nó fiú an spórt féin a athrú - tá cead
+        do chinn agat! Nuair a bheidh tú críochnaithe, cliceáil "Críochnaigh" agus
+        lig do chairde an cluiche a imirt ar a guthán.'
       Overworld Avoid Monsters: B'olc an mhaise duit bualadh i gcoinne Téaltóra. Téigh
         thar na téaltóirí go cúramach go dtí go mbainfidh tú do theach amach slán
         sábháilte.

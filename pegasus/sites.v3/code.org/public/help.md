@@ -43,7 +43,7 @@ We're working to give *every* student the opportunity to learn computer science 
 [<button>Please consider a donation</button>](/donate) &nbsp;&nbsp; [<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
 
 ## Translate our tutorials
-Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
+Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!
 
 [<button>Translate tutorials</button>](/translate)
 

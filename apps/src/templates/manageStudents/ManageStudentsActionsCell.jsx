@@ -17,6 +17,9 @@ import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import i18n from '@cdo/locale';
+import {navigateToHref} from '@cdo/apps/utils';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   xIcon: {
@@ -104,12 +107,38 @@ class ManageStudentActionsCell extends Component {
     this.props.addStudent(this.props.id);
   };
 
+  onPrintLoginInfo = () => {
+    const {id, sectionId} = this.props;
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-print-login-card',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
+
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?studentId=${id}`;
+    navigateToHref(url);
+  };
+
   render() {
     const {rowType, isEditing, loginType} = this.props;
     const canDelete = [
       SectionLoginType.word,
       SectionLoginType.picture,
       SectionLoginType.email
+    ].includes(loginType);
+
+    const showLoginCardOption = [
+      SectionLoginType.word,
+      SectionLoginType.picture
     ].includes(loginType);
 
     return (
@@ -119,6 +148,11 @@ class ManageStudentActionsCell extends Component {
             {this.props.canEdit && (
               <PopUpMenu.Item onClick={this.onEdit}>
                 {i18n.edit()}
+              </PopUpMenu.Item>
+            )}
+            {showLoginCardOption && (
+              <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
+                {i18n.printLoginCard()}
               </PopUpMenu.Item>
             )}
             {this.props.canEdit && canDelete && <MenuBreak />}
@@ -133,6 +167,7 @@ class ManageStudentActionsCell extends Component {
         {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.onSave}
               color={Button.ButtonColor.orange}
               text={i18n.save()}
@@ -140,6 +175,7 @@ class ManageStudentActionsCell extends Component {
               style={styles.saveButton}
             />
             <Button
+              __useDeprecatedTag
               onClick={this.onCancel}
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
@@ -149,6 +185,7 @@ class ManageStudentActionsCell extends Component {
         {rowType === RowType.ADD && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.onAdd}
               color={Button.ButtonColor.gray}
               text={i18n.add()}

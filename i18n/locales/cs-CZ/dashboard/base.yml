@@ -71,7 +71,7 @@ cs:
     submit: 'Přidat tip'
   appname: "Code.org"
   stage: "Úroveň"
-  stage_number: "Fáze %{number}"
+  stage_number: "Lekce %{number}"
   puzzle: "Úloha"
   trophies: "Trofeje"
   courses: 'Kurzy'
@@ -251,7 +251,7 @@ cs:
       signed_in: 'Dříve než budeš pokračovat se, prosím, odhlas'
       username_not_found: 'Uživatelské jméno %{username} nebylo nalezeno'
       username_in_use: '%{username} je již obsazeno, vyber si jiný, prosím'
-      no_teacher: "Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím Požádejte je, prosím, aby se zde přihlásili a poté zkuste je znovu přidat"
+      no_teacher: "Nebyl nalezený nikdo přihlášený jako '%{teacher_email_or_code}'. Požádejte je prosím, aby se zde přihlásili a poté je zkuste znovu přidat"
       section_not_found: "Nelze nalézt sekci s kódem \"%{section_code}\"."
       blank_code: "Zadej prosím kód sekce"
       cant_join_own_section: "Lituji, ale nemůžete se připojit s vlastní sekcí."
@@ -271,7 +271,7 @@ cs:
     submit: 'Odeslat'
     destroy: 'Zrušit'
     back: 'Zpět'
-    confirm: 'Jsi si jistý?'
+    confirm: 'Určitě?'
     created: '%{model} byl úspěšně vytvořen.'
     updated: '%{model} byl úspěšně aktualizován.'
     destroyed: '%{model} byl/a úspěšně odstraněn/a.'
@@ -303,7 +303,7 @@ cs:
       educate_hoc: "Hodina kódu"
       educate_partner: "Navažte s námi partnerství"
       educate_beyond: "Nad rámec Code.org"
-      educate_inspire: "Inspirovat studenta"
+      educate_inspire: "Inspirujte studenta"
       educate_community: "Online komunita"
       educate_tools: "Nástroje a videa"
       about_us: "O nás"
@@ -343,11 +343,11 @@ cs:
       artist_k1: 'Umělec (předškolák)'
       basketball: 'Basketbal'
       bounce: 'Odraz'
-      dance: 'Dance Party'
+      dance: 'Taneční večírek'
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab_jr: 'Game Lab (beta)'
-      gumball: 'Žvýkačku'
+      gumball: 'Gumball'
       iceage: 'Doba ledová'
       infinity: 'Nekonečno'
       minecraft_adventurer: 'Minecraft Adventurer'
@@ -356,10 +356,13 @@ cs:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (předškolák)'
+      scratch: 'Scratch'
+      sports: 'Sporty'
       starwars: 'Hvězdné války'
       starwarsblocks: 'Hvězdné války (kostky)'
       starwarsblocks_hour: 'Hvězdné války (kostky)'
       weblab: 'Web Lab'
+      view_all: 'Ukázat všechny projekty...'
     popup:
       progress_for_user: "Pokrok užívatele %{name}"
       progress: 'Tvůj pokrok'
@@ -462,7 +465,7 @@ cs:
     trynow: 'Vyzkoušej hned'
     add_hint_help: 'Prosím, pomozte nám s přidáním chytrých tipů na Code.org výukové programy'
     20hour_overview: 'Tento 20-ti hodinový kurz představuje základní koncepty informatiky a programování. Kurz je navrhnut pro děti od 1. po 7. třídu, ale jistě bude bavit žáky jakéhokoliv věku.'
-    test_videos_help: 'Vyzkoušejte náš nový video přehrávač ve vaší škole'
+    test_videos_help: 'Vyzkoušejte náš nový video přehrávač ve své škole'
     try_beta_courses: 'Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ'
     use_as_teacher: 'Použijte jako učitel tento web'
     your_gallery: Galerie
@@ -472,7 +475,7 @@ cs:
   move_students:
     new_section_dne: "Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte jiný kód sekce."
     section_code_cant_be_current_section: "Aktuální sekce nemůže být stejná jako nová sekce."
-    current_section_dne: "Omlouvám se, ale sekce %{current_section_code} neexistuje. Zadejte jiný sekční kód."
+    current_section_dne: "Omlouvám se, ale sekce %{current_section_code} neexistuje. Zadejte jiný kód sekce."
     student_ids_not_entered: "Zadejte prosím student_ids."
     student_not_found: "Nelze nalézt jednoho nebo více studentů."
     all_students_must_be_in_current_section: "Všichni studenti musí být zapsáni v tvoji v sekci."
@@ -492,7 +495,7 @@ cs:
     thank_you: 'Děkujeme, našim <a href="https://code.org/about/donors"> dárcům</a>, <a href="https://code.org/about/partners"> partnerům</a>, náš <a href="https://code.org/about/team"> rozšířený tým</a>, náše video obsazení a naši <a href="https://code.org/about/advisors"> poradci ve vzdělávání </a> za jejich podporu při vytváření Code studia.'
     help_from_html: 'Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit tento kurz.'
     help_from_html_old: 'Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit tyto materiály.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Všechna práva vyhrazena.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Všechna práva vyhrazena.<br />Frozen&#8482; &copy; %{current_year} Disney. Všechna práva vyhrazena.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Všechna práva vyhrazena.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Všechna práva vyhrazena.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Všechna práva vyhrazena.<br />The Amazing World of Gumball je značka a &copy; %{current_year} Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org používá p5.play, který je licencován pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Poháněn Amazon Web Services'
@@ -500,7 +503,7 @@ cs:
     copyright: 'Autorská práva'
     more: 'Více'
     feedback: 'Poskytnout zpětnou vazbu'
-    translate: 'Pomozte nám v překladu do vašehojazyka'
+    translate: 'Pomozte nám v překladu do vašeho jazyka'
     support: 'Nápověda a Komunita'
     support_url: 'http://support.code.org'
     tos_short: 'Podmínky'
@@ -513,9 +516,10 @@ cs:
     how_it_works: 'Jak to funguje'
     try_hour_of_code: 'Vyzkoušejte Hodinu kódu!'
   reference_area:
-    title: 'Potřebujete pomoc?'
-    subtitle: 'Podívej se na tyto videa a tipy'
+    title: 'Potřebuješ pomoc?'
+    subtitle: 'Podívej se na tato videa a tipy'
     teacher: 'Zobraz řešení'
+    teacher_no_solution: 'Skrýt řešení'
     auth_error: 'Nemáš oprávnění zobrazovat řešení.'
     submit: 'Aktualizovat umístění umělce'
     direction: 'Počáteční směr (ve stupních)'
@@ -525,6 +529,8 @@ cs:
     notes_coming_soon: 'Poznámky pro toto video přijdou brzy.'
     autoplay_option: 'Automatické přehrávání videí'
     download: 'Stáhnout Video'
+    show_notes: 'Zobrazit poznámky'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
@@ -568,21 +574,21 @@ cs:
       audience: 'Věk 13 +'
       cta: 'Jak na to'
     dance:
-      title: 'Dance Party'
+      title: 'Taneční večírek'
     dance-2019:
-      title: 'Dance Party'
+      title: 'Taneční večírek'
     hoc:
       title: 'Klasické bludiště'
-      body: 'Zkuste základy informatiky. Miliony lidí to už zkusili.'
+      body: 'Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.'
     flappy:
-      title: 'Tenký kód'
-      body: 'Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušej náš výukový kurz tenkého kódu!'
+      title: 'Flappy'
+      body: 'Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušejte náš návod na hru Flappy Bird!'
     20-hour:
       title: 'Zrychlený kurz'
       body: 'Tento 20-ti hodinový kurz pokrývá základní koncepty informatiky a programování obsáhnuté v kurzích 2-4. Kurz je navrhnut pro žáky staré 10 - 18 let. Pokud máš zájem o detailnejší kurz, vyzkoušej kurzy 2-4!'
       body_short: 'Naučit se základní informatiku ve zrychlené verzi kurzy 2-4.'
     hoc2014:
-      try_new_tutorial: 'Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi'
+      try_new_tutorial: 'Vyzkoušejte náš nový kurz Hodina kódu v beta verzi'
       try_frozen: 'Umělec s Annou a Elsa, od zmrazené'
     gallery:
       title: "Galerie"
@@ -616,6 +622,12 @@ cs:
     hero:
       title: "Minecraft"
       body: "Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft s kódem."
+    sports:
+      title: "Sporty"
+      body: "Vytvoř basketbalovou hru, nebo ji propojte s jinými sporty."
+    text-compression:
+      title: "Komprese textu"
+      body: "V této lekce studenti využijí pomůcku pro kompresi textu, aby stěstnali text pomocí nahrazení vzorů za symboly."
     unplugged:
       title: "Lekce bez počítače"
       audience: "Od 4 let"
@@ -653,7 +665,7 @@ cs:
     placeholder: "Zadejte svou odpověď zde"
   multi:
     wrong_title: "Nesprávná odpověď"
-    wrong_body: "Odpověď, kterou jste zadali, není správné.  Opakujte akci!"
+    wrong_body: "Odpověď, kterou jsi vybral(a), není správná. Zkus to znovu!"
     correct_title: "Správně"
     correct_body: "To je správná odpověď."
   multi-submittable:
@@ -680,7 +692,7 @@ cs:
     submit-complete-body: "Po odeslání už nebudete moci hodnocení upravovat. Jste si jistý?"
   match:
     wrong_title: "Nesprávné řešení"
-    wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
+    wrong_body: "Řešení, které jsi zadal(a), není správné.  Zkus to znovu."
     correct_title: "Správně"
     correct_body: "To je správná odpověď."
   contract_match:
@@ -820,8 +832,10 @@ cs:
     main_course: 'Hlavní kurs'
     csf_digcit: 'Digitální občanství'
     csf_jigsaw: 'Skládačka'
+    csf_sequencing: 'Sekvence'
     csf_loops: 'Cykly'
     csf_events: 'Události'
+    csf_online_safety: 'Online bezpečnost'
     csf_binary: 'Binární'
     csf_conditionals: 'Podmínky'
     csf_nested_loops: 'Vnořené cykly'
@@ -844,6 +858,7 @@ cs:
     csp2_1: 'Kapitola 1: Kódování a komprese komplexních informací'
     csp2_2: 'Kapitola 2: Práce s daty a jejich zobrazení'
     csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
+    csp_postap_1: 'Kapitola 2: Práce s daty a jejich zobrazení'
     csp2_1_2018: '2. lekce: Digitální informace'
     csp3_1_2018: 'Jednotka 3: Úvod do programování'
     csp_variables: 'Proměnné'
@@ -851,6 +866,7 @@ cs:
     csp_functions: 'Funkce'
     csp_lists: 'Seznamy'
     csp_loops: 'Cykly'
+    csp_unit1_2020: '1. lekce: Digitální informace'
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností Code.org.
@@ -917,6 +933,8 @@ cs:
   view_teacher_guide: 'Zobrazit příručku učitele'
   pd:
     form_labels:
+      first_name: 'Křestní jméno'
+      last_name: 'Příjmení'
       email: 'E-mail'
       school_name: 'Název školy'
       school_country: 'Země školy'
@@ -925,24 +943,63 @@ cs:
         male: 'Muž'
         female: 'Žena'
         none: 'Raději bych neodpovídal/a'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Chile'
+        israel: 'Izrael'
+        malaysia: 'Malajsie'
+        mexico: 'Mexiko'
+        thailand: 'Thajsko'
+      ages:
+        ages_under_6: '< 6 let'
+        ages_7_8: '7-8 let'
+        ages_9_10: '9-10 let'
+        ages_11_12: '11-12 let'
+        ages_13_14: '13-14 let'
+        ages_15_16: '15-16 let'
+        ages_17_18: '17-18 let'
+        ages_19_over: 'Více než 19 let'
       subjects:
         cs: 'Informatika'
         math: 'Matematické'
         science: 'Věda'
         la: 'Jazyky'
+        efl: 'Angličtina jako cizí jazyk'
+        music: 'Hudba'
+        art: 'Umění'
+        other: "Ostatní:"
       resources:
+        codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Ostatní:"
       robotics:
+        grok: 'Grok Learning'
         kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        other: "Ostatní:"
       workshop_course:
         csp: 'Principy informatiky 2016-2017'
       email_opt_in:
         opt_in_yes: 'Ano'
         opt_in_no: 'Ne'
   cookie_banner:
+    message: 'Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím", souhlasíte s uložením cookies na svém počítači nebo přístroji.'
+    more_information: "Zobrazte si zásady ochrany soukromí pro Code.org."
     accept: 'Souhlasím'
   gdpr_dialog:
+    heading: 'Souhlasíte s používáním webových stránek provozovaných ve Spojených státech?'
+    message: 'Informace ohledně Vašeho používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány.'
+    privacy_policy: 'zásady ochrany osobních údajů'
     yes: 'Ano'
   page_not_found_title: "Stránka nebyla nalezena"
   page_not_found_header: '404 - Stránka nebyla nalezena'
   page_not_found_button: "Zpět domů"
+  copy: 'Kopírovat'

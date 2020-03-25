@@ -12,12 +12,12 @@
   csedweek_dates: "3. - 9. Dezember, 2018"
   csedweek_banner_hoc: 'Die <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> kommt. Aufruf an alle Lehrer und Organisatoren: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planen Sie Ihre Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen</a>'
+  csedweek_banner_teachers_text: "Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen"
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
   anybody_can_learn: "Jeder kann es lernen."
   learn_now: "Jetzt lernen"
   petition_message: "Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik zu lernen"
   petition_sign_message: 'Tragen Sie sich in der Liste ein, wenn Sie auch dieser Meinung sind. Werden Sie einer von # Unterstützern.'
-  petition_sign_message_support: 'Wenn Sie uns unterstützen möchten, tragen Sie sich in der Liste ein. Werden Sie einer von # Unterstützern.'
   petition_join_others: 'Tritt # anderen bei'
   name: "Name"
   email: "E-Mail"
@@ -301,6 +301,7 @@
   homepage_action_text_signpetition: "Petition unterzeichnen"
   homepage_action_text_wincelebritychat: "Gewinne einen Chat mit einer Berühmtheit"
   homepage_signpetition_dropdown: "Ich stimme zu ▾"
+  homepage_signpetition_dropdown_text: "Ich stimme zu"
   homepage_diversity_pledge: "Unterstützen"
   homepage_banner_text_prizes: 'Die Hour of Code findet wieder statt, vom 7. bis 13. Dezember. '
   homepage_banner_link_prizes: 'Nehmen Sie am größten Lernereignis der Geschichte teil.'
@@ -1365,7 +1366,7 @@
   header_courses: "Kurse"
   header_course_catalog: "Kurs Katalog"
   header_project_gallery: "Projekte"
-  header_sections: "Sektionen"
+  header_sections: "Lerngruppen"
   header_professional_learning: "Professionelles Lernen"
   header_educate_overview: "Lehrerübersicht"
   header_educate_elementary: "Grundschule"
@@ -1435,8 +1436,8 @@
   reset_student_password_instructions: "Sie können das Geheimnis <word/picture> für jeden Ihrer Schüler zurücksetzen, indem Sie auf die Registerkarte \"Schüler verwalten\" für den Abschnitt gehen, auf die Schaltfläche \"Geheimnis anzeigen\" unter der Spalte \"Passwort\" klicken und auf die Schaltfläche \"Geheimnis zurücksetzen\" klicken."
   login_cards: "Loginkarten"
   print_login_cards: "Drucke Loginkarten"
-  joining_section: "Ihrer Sektion beitreten (nur einmal)"
-  joining_section_overview: "Wenn ein Schüler noch nicht in Ihrer Sektion ist, bitten Sie ihn, die folgenden Schritte durchzuführen. Beachten Sie, dass dies nur einmal ausgeführt werden muss. Nach dem Beitritt in Ihre Sektion können die Schüler den ihnen zugewiesenen Kurs sehen und Sie können den Fortschritt der Arbeit verfolgen, die sie während ihrer Anmeldung erledigen."
+  joining_section: "Ihrer Lerngruppe beitreten (nur einmal)"
+  joining_section_overview: "Wenn ein Schüler noch nicht in Ihrer Lerngruppe ist, bitten Sie ihn, die folgenden Schritte durchzuführen. Beachten Sie, dass dies nur einmal ausgeführt werden muss. Nach dem Beitritt in Ihre Lerngruppe können die Schüler den ihnen zugewiesenen Kurs sehen und Sie können den Fortschritt der Arbeit verfolgen, die sie während Ihrer Anmeldung erledigen."
   joining_section_instruct_website: 'Erstellen Sie ein Code.org-Konto, falls dies noch nicht geschehen ist. Sie können dies unter https://studio.code.org/users/sign_up tun. Beachten Sie, dass sie sich entweder mit einer E-Mail-Adresse und einem Passwort anmelden oder sich über Google, Facebook oder Microsoft anmelden können, indem sie auf eine dieser Schaltflächen klicken:'
   joining_section_instruct_account: "Melden Sie sich in ihr Code.org-Konto an."
   joining_section_instruct_code: 'Navigieren Sie zu %{code_org_url} und geben Sie deren Abschnittscode ein: %{section_code}.'
@@ -1563,10 +1564,16 @@
   hoc2018_dance_amazon_future_engineer_footer: "* Die Künstler deren Musik in diesem Tutorial vorkommt, sponsern oder unterstützen Amazon nicht durch die Lizensierung ihrer Musik auf Code.org.\n\n"
   hoc2018_dance_measure: "Takt"
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_dance_video1: "Tanzparty - Einführung"
+  hoc2018_dance_video2: "Tanzparty - Ereignisse"
+  hoc2018_dance_video3: "Tanzparty - Eigenschaften"
+  hoc2018_dance_video4: "Tanzparty - Glückwünsche"
   page_not_found_title: "Seite nicht gefunden"
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."
+  page_not_found_button: "Zurück zur Homepage"
   hoc2018_mc_with_microsoft: "In Zusammenarbeit mit"
   hoc2018_mc_thank_microsoft: "Wir danken Microsoft für die Unterstützung unserer Vision und Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein."
+  hoc2019_mc_mee_title: "Minecraft AI für Gott"
   hoc2019_mc_mee_description1: 'Das neue Minecraft Hour of Code Tutorial ist jetzt in Minecraft verfügbar: Education Edition für Windows, Mac und iPad. Lernen Sie die Grundlagen der Programmierung und erkunden Sie die KI mit Ihren Schülern!'
   hoc2019_mc_mee_description2: "Greifen Sie auf kostenlose Ressourcen zu, darunter einen Unterrichtsplan, Videos, einen Lehrplan für Informatik und Lehrerausbildungen."

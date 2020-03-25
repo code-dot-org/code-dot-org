@@ -1,0 +1,34 @@
+name 'CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual'
+title 'CS Principles Unit 5 Assessment 3'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2018_2019_virtual'
+level 'cspu5_assess3_whileTrue_2018_2019_virtual'
+level 'cspu5_assess3_bakeSale_2018_2019_virtual'
+level 'cspu5_assess3_shortAnswer_virtual'
+level 'cspu5_assess3_robot_2018_2019_virtual'
+
+page
+level 'cspu5_assess3_loopValue1_2018_2019_virtual'
+level 'cspu5_assess3_loopValue2_2018_2019_virtual'
+level 'cspu5_assess3_loopValue3_2018_2019_virtual'
+level 'cspu5_assess3_impossibleOutput_2018_2019_virtual'
+
+page
+level 'cspu5_assess3_counter_2018_2019_virtual'
+level 'cspu5_assess3_rollDie_2018_2019_virtual'
+level 'cspu5_assess3_array1_2018_2019_virtual'
+level 'cspu5_assess3_array2_2018_2019_virtual'
+
+page
+level 'cspu5_assess3_array3_2018_2019_virtual'
+level 'cspu5_assess3_array4_2018_2019_virtual'
+level 'cspu5_assess3_array5_2018_2019_virtual'
+level 'cspu5_assess3_ageList_2018_2019_virtual'
+
+page
+level 'cspu5_assess3_listAppend_2018_2019_virtual'
+level 'cspu5_assess3_swap_2018_2019_virtual'
+level 'cspu5_assess3_mysterySwap_2018_2019_virtual'

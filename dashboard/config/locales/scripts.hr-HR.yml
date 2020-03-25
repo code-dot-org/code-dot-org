@@ -1556,3 +1556,71 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Sigurna putovanja
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tvoj digitalni trag
+            Move It, Move It:
+              name: Pomakni, pomakni
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binarne narukvice
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Odnosno programiranje
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Logički operatori'
+            Artist Binary:
+              name: Umjetnik binarno
+            Digital Citizenship:
+              name: Digitalno građanstvo
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        coursef-2020:
+          stages:
+            For Loop Fun:
+              name: For Petlja Zabava
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Slovkanje
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Stvaranje funkcija
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Petlje s uvjetom
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Događaji

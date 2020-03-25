@@ -34,10 +34,12 @@ my:
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   crud:
+    edit: 'ပြုပြင်သည်'
     submit: 'ပေးပို့ပါ'
   nav:
     header:
       my_dashboard: "ကျွန်ုပ်ကျောက်သင်ပုံး"
+      sections: "တန်းခွဲများ"
       professional_learning: "Professional Learning"
     user:
       create: 'ဖန်တီးပါ'
@@ -53,6 +55,8 @@ my:
   teacher:
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
+  home:
+    trynow: 'ဆက်သင်ယူရန်'
   video:
     label: 'ဗီဒီယို'
   compatibility:
@@ -80,6 +84,8 @@ my:
     csp_variables: 'Variables'
     csp_lists: 'စာရင်းများ'
     csp_loops: 'Loops'
+  hoc_download:
+    minecraft_name: 'Minecraft Hour of Code'
   pd:
     form_labels:
       email: 'email လိပ္စာ'
@@ -88,3 +94,4 @@ my:
       subjects:
         cs: 'ကွန်ပျုတာသိပ္ပံ'
         math: 'သင်္ချာ'
+  copy: 'မိတ္တူ'

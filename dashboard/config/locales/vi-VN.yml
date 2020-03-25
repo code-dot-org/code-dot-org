@@ -66,6 +66,7 @@ vi:
   join_section:
     code:
       placeholder: Phần mã (ABCDEF)
+      instructions_short: Nhập mã 6 chữ cái của bạn
   add_hint_form:
     placeholder: Vui lòng nhập gợi ý của bạn ở đây
     submit: Thêm gợi ý
@@ -397,6 +398,7 @@ vi:
       minecraft_hero: Minecraft Hero
       playlab: Phòng trò chơi
       playlab_k1: Kho trò chơi (dành cho trẻ chưa biết đọc)
+      scratch: Scratch
       starwars: Cuộc Chiến Giữa Các Vì Sao
       weblab: Kho Web
     popup:
@@ -442,6 +444,7 @@ vi:
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: "(Địa chỉ email sai?)"
     email_resend_confirm: Gửi lại hướng dẫn xác nhận
+    new_email_hint: "(Hãy chắc chắc bạn có thể nhận được email bằng địa chỉ này.)"
     new_password_hint: "(để trống nếu bạn không muốn thay đổi nó)"
     current_password_hint: "(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)"
     delete: Xóa tài khoản của bạn
@@ -1049,6 +1052,7 @@ vi:
   hoc_download:
     title: Tải giờ của mã
     instructions_headline: Không có Internet?
+    minecraft_name: Minecraft Hour of Code
     download_in_Albanian: 'Tải xuống bằng Tiếng Albania:'
     download_in_Arabic: 'Tải xuống bằng tiếng Ả Rập:'
     download_in_Azerbaijani: 'Tải về tại Azerbaijan:'
@@ -1115,12 +1119,19 @@ vi:
         math: thuật toán
         science: Khoa học
         la: Nghệ thuật ngôn ngữ
+      resources:
+        khan: Học viện Khan
+        scratch: Scratch
+      robotics:
+        grok: Tìm hiểu Grok
       email_opt_in:
         opt_in_yes: Đồng ý
         opt_in_no: Không
   cookie_banner:
     accept: Tôi đồng ý
   gdpr_dialog:
+    heading: Bạn có đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ không?
     message: Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu
       trữ hoặc xử lý tại Hoa Kỳ.
     true: Đồng ý
+  copy: Sao chép

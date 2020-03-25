@@ -17,9 +17,17 @@ const styles = {
     display: 'flex',
     flexDirection: 'row'
   },
+  lessonBoxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  lessonBox: {
+    marginBottom: 10
+  },
   lessonsAreaTitle: {
     marginRight: 10,
-    width: '28%'
+    width: '30%'
   },
   tooltip: {
     textAlign: 'center'
@@ -39,8 +47,10 @@ class StandardDescriptionCell extends Component {
   getLessonBoxes = () => {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
+        const percentComplete =
+          Math.round(lesson.numStudentsCompleted / lesson.numStudents) * 100;
         return (
-          <span key={lesson.name}>
+          <span key={lesson.name} style={styles.lessonBox}>
             {!this.props.isViewingReport && (
               <ReactTooltip
                 id={lesson.name}
@@ -53,12 +63,16 @@ class StandardDescriptionCell extends Component {
                 <div style={styles.tooltip}>
                   <div style={styles.tooltipLessonName}>{lesson.name}</div>
                   <div>
+                    {lesson.unplugged ? i18n.unplugged() : i18n.plugged()}
+                  </div>
+                  <div>
                     {lesson.completed ? i18n.completed() : i18n.notCompleted()}
                   </div>
                   <div>
                     {i18n.completedStudentCount({
                       numStudentsCompleted: lesson.numStudentsCompleted,
-                      numStudents: lesson.numStudents
+                      numStudents: lesson.numStudents,
+                      percentComplete: percentComplete
                     })}
                   </div>
                 </div>
@@ -67,6 +81,7 @@ class StandardDescriptionCell extends Component {
             <ProgressBoxForLessonNumber
               key={lesson.lessonNumber}
               completed={lesson.completed}
+              inProgress={lesson.inProgress}
               lessonNumber={lesson.lessonNumber}
               tooltipId={lesson.name}
               linkToLessonPlan={lesson.url}
@@ -95,7 +110,7 @@ class StandardDescriptionCell extends Component {
           <span style={styles.lessonsAreaTitle}>
             {i18n.availableLessons({numLessons: this.getNumberLessons()})}
           </span>
-          {this.getLessonBoxes()}
+          <div style={styles.lessonBoxes}>{this.getLessonBoxes()}</div>
         </div>
       </div>
     );

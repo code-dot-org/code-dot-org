@@ -71,10 +71,13 @@ ky:
       google_classroom: 'Google Classroom'
   crud:
     new_model: 'Жаңы %{model}'
+    show: 'көрсөт'
+    edit: 'өзгөртүү'
     submit: 'Кошуу'
   nav:
     header:
       my_dashboard: "Менин тактам"
+      sections: "Класс секциялары"
       educate_hoc: "Код сааты"
       about_news: "Жаңылыктар"
     user:
@@ -92,10 +95,13 @@ ky:
       minecraft_adventurer: 'Minecraft тентек'
       minecraft_hero: 'Minecraft каарманы'
       playlab_k1: 'Play Lab (мектепке чейин)'
+      scratch: 'Scratch'
       weblab: 'Web Lab'
   teacher:
     panel:
       section: 'Секция'
+  home:
+    trynow: 'Дагы кара'
   video:
     notes: 'Видео жокпу? Эскертмелери көрсөт.'
     show_notes: 'Эскертмелери көрсөт'
@@ -137,6 +143,8 @@ ky:
     startover_title: "Кайрадан баштагыңыз келгени аныкпы?"
     startover_ok: "Кайра баштоо"
     startover_cancel: "Жок кыл"
+  time:
+    day: 'күн'
   terms_interstitial:
     print: "Бастыр"
   race_interstitial:
@@ -170,6 +178,9 @@ ky:
     csp_functions: 'Функциялар'
     csp_lists: 'Тизмелер'
     csp_loops: 'Циклдер'
+  hoc_download:
+    minecraft_name: 'Minecraft код сааты'
+    windows: 'Windows'
   view_all_units: 'Бардык бирдиктерди көрүү'
   pd:
     form_labels:
@@ -181,8 +192,14 @@ ky:
         math: 'Математика'
         science: 'Илим'
         la: 'Тил өнөрлөрү'
+      resources:
+        khan: 'Khan Academy'
+        scratch: 'Scratch'
+      robotics:
+        grok: 'Grok үйрөнүү'
       email_opt_in:
         opt_in_yes: 'Ооба'
         opt_in_no: 'Жок'
   gdpr_dialog:
     yes: 'Ооба'
+  copy: 'Көчүрүү'

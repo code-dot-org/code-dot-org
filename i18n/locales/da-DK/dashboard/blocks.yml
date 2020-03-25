@@ -887,6 +887,7 @@ da:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -932,6 +933,7 @@ da:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1041,6 +1043,7 @@ da:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
         text: 'placering x: {X} y: {Y}'
@@ -1408,6 +1411,14 @@ da:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: flyt {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Syd
+            '"West"': Vest
       aalab_prompt:
         text: spørg om {MESSAGE}
       aalab_scene:
@@ -1419,12 +1430,10 @@ da:
             '3': '3'
       aalab_setupStory:
         text: opret spil
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': vis
-            '"hide"': skjul
+            '"random"': tilfældig
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:

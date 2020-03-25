@@ -1,7 +1,9 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
+import LibraryManagerDialog, {
+  mapUserNameToProjectLibraries
+} from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -118,7 +120,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
       expect(wrapper.state().classLibraries).to.have.lengthOf(0);
-      expect(wrapper.state().libraries).to.have.lengthOf(2);
+      expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
     });
 
     it('displays LibraryListItem when class libraries are available', () => {
@@ -132,7 +134,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
       expect(wrapper.state().classLibraries).to.have.lengthOf(2);
-      expect(wrapper.state().libraries).to.have.lengthOf(0);
+      expect(wrapper.state().projectLibraries).to.have.lengthOf(0);
     });
 
     it('displays all libraries from the project and the class', () => {
@@ -146,7 +148,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
       expect(wrapper.state().classLibraries).to.have.lengthOf(2);
-      expect(wrapper.state().libraries).to.have.lengthOf(2);
+      expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
     });
 
     it('setLibraryToImport sets the import library', () => {
@@ -163,31 +165,34 @@ describe('LibraryManagerDialog', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-
-      wrapper.instance().onImportFailed();
-      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+      wrapper.instance().setState({error: IMPORT_ERROR_MSG});
 
       wrapper.instance().setLibraryToImport({target: {value: 'id'}});
       expect(wrapper.state().error).to.be.null;
     });
 
-    it('onImportFailed displays an error', () => {
+    it('addLibraryById adds the library to the project if given libraryJson', () => {
+      let setProjectLibrariesSpy = sinon.spy(
+        window.dashboard.project,
+        'setProjectLibraries'
+      );
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      const getErrorEl = wrapper =>
-        wrapper
-          .find('BaseDialog')
-          .children()
-          .last();
+      const library = {libraryName: 'my favorite library'};
 
+      wrapper.instance().addLibraryById(library, null);
+      expect(setProjectLibrariesSpy).to.have.been.called;
+      setProjectLibrariesSpy.restore();
+    });
+
+    it('addLibraryById sets an error in state if given an error', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
       expect(wrapper.state().error).to.be.null;
-      expect(getErrorEl(wrapper).text()).to.equal('');
-
-      wrapper.instance().onImportFailed();
-
+      wrapper.instance().addLibraryById(null, 'an error occurred!');
       expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
-      expect(getErrorEl(wrapper).text()).to.equal(IMPORT_ERROR_MSG);
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
@@ -205,6 +210,21 @@ describe('LibraryManagerDialog', () => {
       expect(setProjectLibraries.withArgs([{name: 'second'}]).calledOnce).to.be
         .true;
       window.dashboard.project.setProjectLibraries.restore();
+    });
+  });
+
+  describe('mapUserNameToProjectLibraries', () => {
+    it('maps userName from classLibraries to project libraries', () => {
+      const projectLibraries = [{channelId: '123456'}, {channelId: '654321'}];
+      const classLibraries = [{channel: '123456', userName: 'Library Author'}];
+
+      const mappedProjectLibraries = mapUserNameToProjectLibraries(
+        projectLibraries,
+        classLibraries
+      );
+
+      expect(mappedProjectLibraries[0].userName).to.equal('Library Author');
+      expect(mappedProjectLibraries[1].userName).to.be.undefined;
     });
   });
 });

@@ -1,0 +1,23 @@
+name 'cspu5_assess3_ageList_2018_2019_virtual'
+wrong 'Remove all items from the list and start over'
+right 'INSERT the value 13 at the index of 2'
+wrong 'REMOVE the value at the index of 2, then INSERT 13 in the index 2'
+wrong 'ages[2] = ages[2] + 1'
+
+markdown <<MARKDOWN
+A programmer created a list of all of her sibling’s ages:
+
+![](https://images.code.org/4477ca6076a69a8a331033c74b404a26-image-1477187744636.png)
+
+Unfortunately, she made a typo!  Her middle sibling is 13 years old.  Which of the following solutions will **NOT** fix the typo?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 13**
+
+To fix something in an array, you can change the value at the specific index, remove the value and insert the correct one, or start over with the array. It will **NOT** work to just insert the value 13 at index 2 because you would end up with: 
+
+	ages: [10,13,12,17]
+
+Which has one more value and index than intended.
+MARKDOWN

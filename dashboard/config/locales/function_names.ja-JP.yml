@@ -317,6 +317,19 @@ ja-JP:
         draw a polygon: 多角形をかく
       NEW Course 4 Play Lab Params 11:
         jump: ジャンプする
+      New Artist Project:
+        draw a star: 星形 を かく
+        draw a circle: 円 を かく
+        draw a pinwheel: 風車をかく
+        draw a triangle: 三角形を描画します。
+        draw a shape: 図形をかく
+        draw a house: 家 を かく
+        draw a square: 正方形 を かく
+      New Minecraft Hero Project:
+        function 1: 関数1
+        function 2: 関数2
+      New Play Lab Project:
+        jump: ジャンプする
       Robot Doodle:
         25 pixel square: 25ピクセルの正方形
         draw head: 頭を かく
@@ -597,7 +610,6 @@ ja-JP:
         draw a house: 家 を かく
       courseE_artist_functions7_2019:
         draw a window: まどをかく
-        draw a house: 家 を かく
       courseE_artist_functions8:
         do something: 何かしてください
         draw a line of squares: draw a line of squares

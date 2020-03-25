@@ -64,6 +64,7 @@ gl:
   join_section:
     code:
       placeholder: "Código da sección (ABCDEF)"
+      instructions_short: "Introduce o teu código de sección de 6 letras"
   add_hint_form:
     placeholder: 'Por favor, dixite a súa pista aquí'
     submit: 'Agregar pista'
@@ -232,6 +233,7 @@ gl:
       picture: 'Contrasinal de imaxe'
       word: 'Palabras secretas'
       email: 'E-mail'
+      clever: 'Conta intelixente'
   follower:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi agregado como o teu profesor'
@@ -693,6 +695,8 @@ gl:
     csp_functions: 'Funcións'
     csp_lists: 'Listas'
     csp_loops: 'Bucles'
+  hoc_download:
+    minecraft_name: 'Hora do Código Minecraft'
   pd:
     form_labels:
       email: 'E-mail'
@@ -719,3 +723,4 @@ gl:
     accept: 'Acepto'
   gdpr_dialog:
     yes: 'Si'
+  copy: 'Copiar'

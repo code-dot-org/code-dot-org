@@ -593,6 +593,9 @@ de-DE:
         Ansonsten leg mit Deinem eigenen Design los!
       Course 4 Artist Vars 1: Kannst du mir helfen, ein gleichseitiges Dreieck zu
         zeichnen? Es soll auf jeder Seite genau 100 Pixel lang sein.
+      Course 4 Artist Vars 11: Hier ist etwas komplizierterer Code, der dieselben
+        Konzepte verwendet wie das letzte Rätsel. Welchen Wert muss die „Seiten“-Variable
+        diesmal bekommen, um die dargestellte Figur aus Quadraten zu zeichnen?
       Course 4 Artist Vars 12: Setzen wir die Variable "Seiten" auf 5. Je mehr Seiten
         wir zu diesem Algorithmus hinzufügen, desto größer wird das ganze Muster!
         Beachte, dass es eine weitere Variable namens "Länge" gibt. Wir können sie
@@ -747,56 +750,53 @@ de-DE:
       Dance Party 7_2019: Lasse den blauen Außerirdischen einen neuen Tanz beginnen,
         wenn der rosa Außerirdische ihn berührt. Verwenden Sie das Ereignis `wenn
         berührt`.
-      Dance_2019_01: 'Ziehen Sie den Block <xml><block type="Dancelab_makeAnonymousDanceSprite"
+      Dance_2019_01: 'Ziehe den Block <xml><block type="Dancelab_makeAnonymousDanceSprite"
         block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
         &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
-        in den Arbeitsbereich, und verbinden Sie ihn innerhalb des <xml><block type="Dancelab_whenSetup2"
+        in den Arbeitsbereich, und verbinde ihn innerhalb des <xml><block type="Dancelab_whenSetup2"
         next_connection_disabled="true" block-text="setup"></block></xml> Blocks.'
-      Dance_2019_02: Mit dem Block `wenn Pfeil nach oben  gedrückt ist` können Sie
-        Code ausführen, wenn Sie Pfeil nach oben drücken. Lassen Sie die  Tänzerin
-        klatschen, wenn Sie den Pfeil nach oben drücken, oder probieren Sie eine andere
-        Bewegung aus!
-      Dance_2019_03: Es ist Zeit für einen Tanzwettbewerb! Programmieren Sie jeden
-        Tänzer so, dass er sich bewegt, wenn Sie verschiedene Tasten drücken. Wählen
-        Sie für jeden Tänzer Ihre Lieblingsbewegung aus oder stellen Sie für etwas
-        völlig Unvorhersehbares "(Random)“ ein!
-      Dance_2019_04: Lassen Sie Ihren Tänzer nach dem vierten Takt mit einer neue
-        Bewegung beginnen.
+      Dance_2019_02: Lass die Katze eine Tanzbewegung ausführen wenn Du eine Taste
+        drückst.
+      Dance_2019_03: Es ist Zeit für einen Tanzwettbewerb! Programmiere jeden Tänzer
+        so, dass er sich bewegt, wenn Du verschiedene Tasten drückst. Wähle für jeden
+        Tänzer Deine Lieblingsbewegung aus oder stellen sie auf etwas völlig Unvorhersehbares
+        "(Random)“ ein!
+      Dance_2019_04: Lassen Deinen Tänzer nach dem vierten Takt mit einer neue Bewegung
+        beginnen.
       Dance_2019_05: Lasse jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt
         beginnen!
-      Dance_2019_06: Erstellen Sie eine Gruppe von Ersatztänzern um den Haupttänzer
+      Dance_2019_06: Erstelle eine Gruppe von Hintergrundtänzern um den Haupttänzer
         in der Mitte.
-      Dance_2019_07: Ändern Sie die Größe der Gruppe der Backup-Tänzer.
+      Dance_2019_07: Ändere die Größe der Gruppe der Background-Tänzer.
       Dance_2019_08: Versuche, den Farbton einer deiner Tänzer bzw. Tänzerinnen (oder
         einer ganzen Gruppe) zu ändern!
       Dance_2019_09: Sei bei diesen neuen Bausteinen kreativ!
-      Dance_2019_10: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
-        Sie ihn mit Ihren Freunden.
-      Dance_Party_01: Ziehen Sie den Block "Neuen Block erstellen" in den Arbeitsbereich,
-        und verbinden Sie ihn innerhalb des "Setup" -Blocks.
+      Dance_2019_10: Groove los! Erstelle einen eigenen Tanz und teile ihn mit Deinen
+        Freunden.
+      Dance_Party_01: Ziehe den Block "Neuen Block erstellen" in den Arbeitsbereich,
+        und verbinde ihn innerhalb des "Setup" -Blocks.
       Dance_Party_02: Lasse den Elch nach 4 Takten einen neuen Tanzschritt beginnen!
       Dance_Party_03: Lasse jetzt den Tänzer nach 6 Takten einen neuen Tanzschritt
         beginnen!
       Dance_Party_04: Füge deinem Programm einen Hintergrundeffekt hinzu.
-      Dance_Party_05: Verwenden Sie einen weiteren neuen Block, damit der Tänzer alle
+      Dance_Party_05: Verwendene einen weiteren neuen Block, damit der Tänzer alle
         2 Takte den Tanzschritt wechselt.
-      Dance_Party_06: Erstellen Sie einen Backup-Tänzer namens "backup\_dancer1",
-        der mit der Katze tanzt.
+      Dance_Party_06: Erstelle einen Backup-Tänzer namens "backup\_dancer1", der mit
+        der Katze tanzt.
       Dance_Party_08: Kannst du beide Hintergrund-Tänzer gleich groß machen?
-      Dance_Party_09: Verwenden Sie den Block "Farbton einstellen", um den Farbton
-        eines Tänzers zu verändern.
-      Dance_Party_10: Lassen Sie die anderen Tänzer auch auf die Musik reagieren,
-        indem Sie den Block "beginnt danach" verwenden.
-      Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" können Sie Code ausführen,
-        wenn die Pfeiltaste nach oben gedrückt wird. Versuchen Sie, den Tänzer eine
-        schnelle Bewegung ausführen zu lassen, wenn Sie die Pfeiltaste nach oben drücken.
-      Dance_Party_11_5: Verwenden Sie die Blöcke "alle Enten", um die Enten gemeinsam
-        tanzen zu lassen.
-      Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Sie die rechte
-        Pfeiltaste drücken, und einmal "flossen", wenn Sie die Pfeiltaste nach oben
-        drücken. Machen Sie den Drop-Floss, so schnell es geht!
-      Dance_Party_12: Grooven Sie los! Erstellen Sie einen eigenen Tanz und teilen
-        Sie ihn mit Ihren Freunden.
+      Dance_Party_09: Verwende den Block "Farbton einstellen", um den Farbton eines
+        Tänzers zu verändern.
+      Dance_Party_10: Lasse auch die anderen Tänzer auf die Musik reagieren, indem
+        Du den Block "... beginnt ... nach ..." verwendest.
+      Dance_Party_11: Mit dem Block "Wenn nach oben gedrückt" kannst Du Code ausführen,
+        wenn die Pfeiltaste nach oben gedrückt wird. Versuche, den Tänzer eine schnelle
+        Bewegung ausführen zu lassen, wenn Du die Pfeiltaste nach oben drückst.
+      Dance_Party_11_5: Verwende die Blöcke "alle Enten", um die Enten gemeinsam tanzen
+        zu lassen.
+      Dance_Party_11b: Lassen Sie den Roboter einmal "droppen", wenn Du die rechte
+        Pfeiltaste drückst, und einmal "flossen", wenn Du die Pfeiltaste nach oben
+        drückst. Mache den Drop-Floss, so schnell es geht!
+      Dance_Party_12: Groove los! Erstelle einen eigenen Tanz und teilen ihn mit DeinenFreunden.
       Dance_Party_extras_alternate_2019: Hin und her! (Klicke auf "Mehr" für weitere
         Details)
       Dance_Party_extras_battle: Tanzformation! (Klicke auf "Mehr" für weitere Details)
@@ -1140,6 +1140,15 @@ de-DE:
         Textzeichen abbilden, um textbasierte Informationen hin und her zu senden.
         Mit einem textbasierten Protokoll kannst du alle Arten von Informationen einfach
         darstellen und kommunizieren. '
+      New Gumball Project: Erstelle alles, was dir gefällt und teile es!
+      New Ice Age Project: Erstelle alles, was dir gefällt und teile es!
+      New Infinity Project: Erstelle alles, was dir gefällt und teile es!
+      New Minecraft Hero Project: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust
+        losziehen!"
+      New Sports Project: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel.
+        Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
+        \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
+        auf ihren Smartphones ausprobieren."
       Overworld Avoid Monsters: In einen Creeper hinein zu laufen, ist eine schlechte
         Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
         Zuhause.
@@ -1297,8 +1306,8 @@ de-DE:
         „Punkt für den Gegner“ an die Bausteine „Wenn Ball im Tor“ und „Wenn Ball
         Schläger verfehlt“, um ein Spiel zu erzeugen. Finde heraus, wie viele Punkte
         du erreichen kannst, bevor dein Gegner zwei Punkte erhält.
-      bounce_10_basketball: "Jetzt ist das Tor oben. Programmiere das ein Spiel so:
-        Hänge die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine
+      bounce_10_basketball: "Jetzt ist das Tor oben. Programmiere das Spiel so: Hänge
+        die Bausteine „Punkt erzielen“ und „Punkt für den Gegner“ an die Bausteine
         „Wenn Ball im Tor“ und „Wenn Ball die Hand verfehlt“.\\\r\n\\\r\nStarte das
         Spiel und versuche möglichst viele Punkte zu machen, bevor dein Gegner zwei
         Punkte erzielt."
@@ -1324,9 +1333,9 @@ de-DE:
       bounce_12: Erstelle dein eigenes Bounce-Spiel. Du kannst die Bilder und Regeln
         ändern. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das
         Spiel auf ihren Smartphones ausprobieren.
-      bounce_12_basketball: Erstelle Dein eigenes Basketball-Spiel. Du kannst die
+      bounce_12_basketball: Erstelle Dein eigenes Basketball-Spiel. Du kannst alle
         Regeln ändern. Wenn Du fertig bist, klicke auf Fertigstellen, um Deine Freunde
-        das Spiel auf ihrem Handys ausprobieren zu lassen.
+        das Spiel auf ihren Handys ausprobieren zu lassen.
       bounce_12_sports: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel.
         Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
         \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
@@ -2082,11 +2091,11 @@ de-DE:
         helfen kannst, die Schätze einzusammeln.
       courseC_collector_prog1_2019: Spiel mit den Blöcken und schau, ob du Laurel
         helfen kannst, die Schätze einzusammeln.
-      courseC_collector_prog2: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+      courseC_collector_prog2: Bewege Laurel zum Schatz und benutze dann 'sammle'
         um ihn aufzuheben.
-      courseC_collector_prog2_2018: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+      courseC_collector_prog2_2018: Bewege Laurel zum Schatz und benutze dann 'sammle'
         um ihn aufzuheben.
-      courseC_collector_prog2_2019: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+      courseC_collector_prog2_2019: Bewege Laurel zum Schatz und benutze dann 'sammle'
         um ihn aufzuheben.
       courseC_collector_prog3: Ordne diese Blöcke so an, dass der Schatz eingesammelt
         wird, und löse damit die Aufgabe.
@@ -2123,12 +2132,12 @@ de-DE:
       courseC_collector_prog9: _"Lass uns alle Schätze sammeln!"_
       courseC_collector_prog9_2018: _"Lass uns alle Schätze sammeln!"_
       courseC_collector_prog9_2019: _"Lass uns alle Schätze sammeln!"_
-      courseC_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+      courseC_collector_prog_challenge1: Schau genau hin! Kannst du alle **10** Schätze
         einsammeln?
-      courseC_collector_prog_challenge1_2018: Schau genau! Kannst du alle **10** Schätze
-        einsammeln?
-      courseC_collector_prog_challenge1_2019: Schau genau! Kannst du alle **10** Schätze
-        einsammeln?
+      courseC_collector_prog_challenge1_2018: Schau genau hin! Kannst du alle **10**
+        Schätze einsammeln?
+      courseC_collector_prog_challenge1_2019: Schau genau hin! Kannst du alle **10**
+        Schätze einsammeln?
       courseC_collector_prog_challenge2: Sammle mindesten **10** Schätze ein um diese
         Herausforderung zu beenden!
       courseC_collector_prog_challenge2_2018: Sammle mindesten **10** Schätze ein

@@ -1918,3 +1918,93 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Läheb asukohta turvaliselt
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Sinu digitaalne jalajälg
+            Move It, Move It:
+              name: Liiguta, liiguta
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binaarsed käevõrud
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Relee programmeerimine
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+            Conditionals with Cards:
+              name: Tingimuslaused kaartidel
+            'Unplugged: Binary':
+              name: 'Unplugged: Binaar'
+            Artist Binary:
+              name: Kunstnik Binaar
+            Digital Citizenship:
+              name: Digitaalne kodakondsus
+            Dance Party:
+              name: Tantsuõhtu
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Tingimuslaused
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Ümbriku muutujad
+            For Loop Fun:
+              name: For Loop Fun
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Ühistegevused
+        express-2020:
+          stages:
+            Dance Party:
+              name: Tantsuõhtu
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Sõnamesilane
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binaararvud
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Loomisfunktsioonid
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '„Kui“ tsüklid'
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmid
+            Events:
+              name: Sündmused

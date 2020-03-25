@@ -44,7 +44,9 @@ describe('SectionProgress', () => {
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      getStandardsCoveredForScript: () => {}
+      studentTimestamps: {
+        1: Date.now()
+      }
     };
   });
 
@@ -85,5 +87,16 @@ describe('SectionProgress', () => {
     );
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
     experiments.isEnabled.restore();
+  });
+
+  it('shows student timestamps', () => {
+    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const tooltip = wrapper.find('#tooltipIdForStudent1');
+    expect(
+      tooltip
+        .children()
+        .first()
+        .text()
+    ).to.contain('Today');
   });
 });

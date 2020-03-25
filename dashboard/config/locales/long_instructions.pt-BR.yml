@@ -21218,6 +21218,8 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
+      New Minecraft Hero Project: "**Jogo Livre:** Agora é com você! Use o código
+        do Agente para ajudá-lo a explorar este mundo."
       OPD-K5 CS Video: |-
         ## Vamos Começar: Por que Fundamentos de Ciências da Computação (CC)?
 
@@ -21229,31 +21231,31 @@ pt-BR:
         >
         > Quais são suas primeiras impressões de Fundamentos de CC?
         >
-        > [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
+        > [Envie suas impressões pelo Tweeter][0] e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
-        > Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+        > Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook][1] ou no [Instagram][2].
       OPD-K5 Closing: |-
         > \*\*Se você gostou deste curso, inscreva-se para um workshop presencial: \*\*
         >
-        > [Inscreva-se agora](http://code.org/professional-development-workshops) para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
+        > [Inscreva-se agora][0] para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
       OPD-K5 EventsVid: |-
         Assista este vídeo que define "eventos" e mostra como eles funcionam em Fundamentos de CC. Em seguida, você irá tentar alguns quebra-cabeças que requerem que você codifique eventos.
 
         > Um evento é uma linha de código que diz ao seu computador para "escutar" alguma coisa acontecer, e em seguida tomar uma ação. Por exemplo, em páginas web você geralmente pode exibir um menu suspenso ao passar sobre a barra de navegação com seu mouse. A "rolagem do mouse" é um "evento" que dispara uma ação.
       OPD-K5 FirstProgram: Assista o vídeo abaixo, que explica o primeiro programa
-        que os estudantes irão escrever no [Curso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
-        Na próxima página, você mesmo irá escrever um programa parecido!
+        que os estudantes irão escrever no [Curso A][0]. Na próxima página, você mesmo
+        irá escrever um programa parecido!
       OPD-K5 LessonPlanning: |-
         Até agora, você foi apresentado a alguns de nossos planos de aulas desplugados. No entanto, existem planos de aula para cada uma das lições em Fundamentos de CC - tanto conectadas quanto on-line. Você pode encontrar a lista completa de planos de aula para cada curso abaixo:
         <br/>
         <br/>
-        [Planos de aula do curso A](https://curriculum.code.org/csf-18/coursea/)<br/>
-        [Planos de aula do curso B](https://curriculum.code.org/csf-18/courseb/)<br/>
-        [Planos de aula do curso C](https://curriculum.code.org/csf-18/coursec/)<br/>
-        [Planos de aula do curso D](https://curriculum.code.org/csf-18/coursed/)<br/>
-        [Planos de aula do curso E](https://curriculum.code.org/csf-18/coursee/)<br/>
-        [Planos de aula do curso F](https://curriculum.code.org/csf-18/coursef/)<br/>
+        [Planos de aula do curso A][0]<br/>
+        [Planos de aula do curso B][1]<br/>
+        [Planos de aula do curso C][2]<br/>
+        [Planos de aula do curso D][3]<br/>
+        [Planos de aula do curso E][4]<br/>
+        [Planos de aula do curso F][5]<br/>
 
         No entanto, você pode querer adaptar essas lições ou criar as suas próprias! O vídeo abaixo explica a estrutura das lições de Fundamentos de CC, mas também fornece dicas, caso você queira desenvolver suas próprias lições.
       OPD-K5 Problem Solving: |-
@@ -21264,7 +21266,7 @@ pt-BR:
         <iframe width="640" height="390" src="https://www.youtube.com/embed/XN0G6bSbQ2M" frameborder="0" allowfullscreen></iframe>
         [Não consegue ver o vídeo? Clique aqui][0]
 
-        [Esta planilha](https://twitter.com/teachcode) detalha os passos da Receita para Resolver Quebra-Cabeças.
+        [Esta planilha][1] detalha os passos da Receita para Resolver Quebra-Cabeças.
 
         <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
 

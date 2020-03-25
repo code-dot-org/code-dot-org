@@ -71,6 +71,7 @@ id:
     code:
       title: 'Bergabunglah dengan bagian di Code.org'
       placeholder: "Kode Bagian (ABCDEF)"
+      instructions_short: "Masukkan 6 huruf bagian kode anda"
       submit: 'Bergabung'
   add_hint_form:
     placeholder: 'Masukkan pentunjuk anda disini'
@@ -917,6 +918,7 @@ id:
     csp_traversals: 'Melintang'
     csp_libraries: 'Perpustakaan'
     csp_parameters_return_values: 'Parameter dan Nilai Balik'
+    csp_unit1_2020: '(Lama) Unit 1: Informasi Digital'
     dlp: 'Anjuran Refleksi'
     time4cs_c1: 'Everglades dan Ekosistemnya'
     time4cs_c2: 'Tantai Makanan di Everglades'
@@ -1043,9 +1045,11 @@ id:
         music: 'Musik'
         art: 'Seni'
       resources:
+        khan: 'Akademi khan'
         kodable: 'Kodable'
         lightbot: 'Lightbot'
       robotics:
+        grok: 'Mempelajari Grok'
         kodable: 'Kodable'
       workshop_course:
         csd: 'Penemuan CS'
@@ -1057,8 +1061,11 @@ id:
   cookie_banner:
     accept: 'Saya setuju'
   gdpr_dialog:
+    heading: 'Apakah Anda setuju untuk menggunakan sebuah situs web yang berbasis di Amerika Serikat?'
+    message: 'Data dari penggunaan Anda atas situs ini dapat dikirimkan ke dan disimpan atau diproses di Amerika Serikat.'
     yes: 'Ya'
   page_not_found_title: "Halaman tidak ditemukan"
   page_not_found_header: '404: halaman tidak ditemukan'
   page_not_found_description: "Halaman yang anda cari tidak ada di alamat ini. Periksa alamat web dan daftar ulang. Atau, kembali ke homepage."
   page_not_found_button: "Pulang ke rumah"
+  copy: 'Salin'

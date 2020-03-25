@@ -70,6 +70,7 @@ ro:
   join_section:
     code:
       placeholder: "Secțiune Cod (ABCDEF)"
+      instructions_short: "Introdu codul clasei tale din 6 litere"
   add_hint_form:
     placeholder: 'Te rugăm să introduci indiciul tău aici'
     submit: 'Adaugă sugestie'
@@ -888,6 +889,7 @@ ro:
     csp_functions: 'Funcţii'
     csp_lists: 'Liste'
     csp_loops: 'Bucle'
+    csp_unit1_2020: '(vechi) Unitatea 1: Informaţii digitale'
     k5_next_steps: 'Pașii următori'
   external_links:
     disclaimer: Act de renuntare
@@ -949,6 +951,7 @@ ro:
     mac: 'Mac OS X'
   locked_stage: 'Conţinutul de acest stadiu nu este vizibil deoarece aceasta etapa este blocată momentan. Profesorul poate debloca acest stadiu atunci când este timpul să lucrezi la el sau de a revizui raspunsurile.'
   hidden_stage: "Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce lecție ar trebui să urmezi."
+  return_unit_overview: 'Mergi la unitatea de ansamblu'
   return_course_overview: 'Mergi la unitatea de ansamblu'
   pd:
     form_labels:
@@ -992,6 +995,7 @@ ro:
         scratch: 'Scratch'
         tynker: 'Tynker'
       robotics:
+        grok: 'Grok Learning'
         kodable: 'Kodable'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
@@ -1024,3 +1028,4 @@ ro:
     privacy_policy: 'politică de confidențialitate'
     logout: 'Deconectare'
     yes: 'Da'
+  copy: 'Copiază'

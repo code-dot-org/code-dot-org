@@ -56,6 +56,11 @@ ur:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
+        step:
+          title: اسٹیپ
+          stages:
+            Step:
+              name: اسٹیپ
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -335,3 +340,29 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+        coursed-2020:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: شرائط
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+        express-2020:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+        code-break:
+          stages:
+            Events:
+              name: ایونٹس/واقعات

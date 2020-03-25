@@ -12,12 +12,12 @@
   csedweek_dates: "De 3 a 9 de dezembro de 2018"
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora do Código</a> está chegando. Professores e organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planejem sua Hora do Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação</a>'
+  csedweek_banner_teachers_text: "Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação"
   n_have_learned_an_hoc: "<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>"
   anybody_can_learn: "Qualquer pessoa pode aprender."
   learn_now: "Aprenda Agora"
   petition_message: "Todos os alunos, em todas as escolas, devem ter a oportunidade de aprender ciência da computação"
   petition_sign_message: 'Se você concordar, assine seu nome e junte-se à nossa lista de e-mails junto com # outros.'
-  petition_sign_message_support: 'Se você nos apoia, assine seu nome e junte-se à nossa lista de e-mails juntamente com # outros.'
   petition_join_others: 'Junte-se a # outros'
   name: "Nome"
   email: "E-mail"
@@ -326,6 +326,7 @@
   homepage_action_text_signpetition: "Assine a petição"
   homepage_action_text_wincelebritychat: "Ganhe um bate-papo com celebridades"
   homepage_signpetition_dropdown: "Assinar nossa petição &#x25BE;"
+  homepage_signpetition_dropdown_text: "Aceito"
   homepage_diversity_pledge: "Abrace a causa em favor da diversidade"
   homepage_banner_text_prizes: 'A Hora do Código está voltando, de 7 a 13 dezembro. '
   homepage_banner_link_prizes: 'Junte-se ao maior evento de aprendizagem da história. '
@@ -520,6 +521,7 @@
   volunteer_engineer_submission_intro_guide: "Saiba mais sobre o nosso <a href=\"%{volunteer_guide}\">programa de voluntariado aqui</a>."
   volunteer_engineer_submission_intro_signup: "Por favor, insira as seguintes informações se você é um estudante de ciência da computação ou profissional de software. Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe que todos os campos que você preencher nesta seção estarão publicamente disponíveis para qualquer um olhando para o <a href=\"/volunteer/local\">mapa de voluntário</a>. Campos marcados com um <span class=\"form-required-field\">*</span> são obrigatórios."
   volunteer_engineer_submission_intro_links: "É professor(a) e está procurando voluntários? Encontre um voluntário na sua região em nosso <a href=\"%{volunteer_local}\">mapa de voluntários</a>."
+  volunteer_engineer_submission_intro_links_markdown: "É um(a)  professor(a) à procura de voluntários? Encontre um voluntário local no nosso [mapa de voluntários](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Atualize suas informações"
   volunteer_engineer_submission_header_shared: "Informações compartilhadas com professores no mapa de voluntários"
   volunteer_engineer_submission_field_name: "Nome"

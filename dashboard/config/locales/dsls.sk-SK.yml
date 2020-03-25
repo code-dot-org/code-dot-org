@@ -606,13 +606,6 @@ sk-SK:
           Aby si zistil/a, akú rolu majú informatika a programovanie v zábavnom priemysle, urob malý prieskum. Skús vyhľadať „Informatika a &#95;&#95;&#95;&#95;&#95;&#95;" v spojení s rôznymi druhmi zábavy ako je film, televízia, hudba, hry, animácie, móda a podobne.
 
 
-      CSD U3 Entertainment_2018:
-        markdown: |+
-          # Začni svoj prieskum
-
-          Aby si zistil/a, akú rolu majú informatika a programovanie v zábavnom priemysle, urob malý prieskum. Skús vyhľadať „Informatika a &#95;&#95;&#95;&#95;&#95;&#95;" v spojení s rôznymi druhmi zábavy ako je film, televízia, hudba, hry, animácie, móda a podobne.
-
-
       CSD U3 Entertainment_2018_2019:
         markdown: |+
           # Začni svoj prieskum
@@ -766,8 +759,8 @@ sk-SK:
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
           na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ postavy a funkcie, ktoré budeš potrebovať. V nasledujúcich cvičeniach
-          na svojej hre začneš pracovať.\n"
+          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
+          cvičeniach začneš na svojej hre pracovať.\n"
       CSD U3 game intro_2018:
         markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
           je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
@@ -778,8 +771,8 @@ sk-SK:
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
           na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ postavy a funkcie, ktoré budeš potrebovať. V nasledujúcich cvičeniach
-          na svojej hre začneš pracovať.\n"
+          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
+          cvičeniach začneš na svojej hre pracovať.\n"
       CSD U3 game intro_2018_2019:
         markdown: "# Vytvor svoju vlastnú hru\n\nKeď si sa naučil/a všetko, čo potrebuješ,
           je čas urobiť si vlastnú hru! S partnerom popremýšľajte nad rôznymi nápadmi.
@@ -790,8 +783,8 @@ sk-SK:
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\n<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58
           PM.png\" style=\"width: 200px; margin: 10px;\">\n\nKeď sa s kamarátom dohodnete
           na type hry, vyplňte Sprievodcu projektom a definujte pozadie, premenné,
-          \ postavy a funkcie, ktoré budeš potrebovať. V nasledujúcich cvičeniach
-          na svojej hre začneš pracovať.\n"
+          \ \"sprite\" objekty a funkcie, ktoré budeš potrebovať. V nasledujúcich
+          cvičeniach začneš na svojej hre pracovať.\n"
       CSD U3 platform intro:
         markdown: |
           # Vytvor si plošinovú skákaciu hru
@@ -1924,21 +1917,33 @@ sk-SK:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Záhradníčka zoberie dve tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera všetky tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera šalát.
           correct: true
           feedback: Správne!
         - text: Záhradníčka pozbiera kukuricu.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
         questions:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Záhradníčka zoberie dve tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera všetky tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
         - text: Záhradníčka pozbiera šalát.
           correct: true
           feedback: Správne!
         - text: Záhradníčka pozbiera kukuricu.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
         questions:
         - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
       courseE_prediction_artistFunction1:

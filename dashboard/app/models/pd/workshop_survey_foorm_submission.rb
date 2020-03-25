@@ -10,6 +10,7 @@
 #  day                 :integer
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  facilitator_id      :integer
 #
 # Indexes
 #
@@ -43,6 +44,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
   end
 
   def self.has_submitted_form?(user_id, pd_workshop_id, pd_session_id, day, form_name)
+    # Match on these values.
     submissions = Pd::WorkshopSurveyFoormSubmission.where(
       user_id: user_id,
       pd_workshop_id: pd_workshop_id,
@@ -50,6 +52,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
       day: day
     )
 
+    # If provided a form_name, narrow the search to match on that too.
     if form_name
       submissions = submissions.joins(:foorm_submission).where(foorm_submissions: {form_name: form_name})
     end
@@ -60,7 +63,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
   private
 
   def day_for_subject
-    if pd_workshop
+    if pd_workshop && !day.nil?
       unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
         errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
       end

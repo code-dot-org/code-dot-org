@@ -102,12 +102,22 @@ pt-PT:
         do something: faz algo
       NEW Course 4 Play Lab Params 11:
         jump: saltar
+      New Artist Project:
+        draw a star: desenhar uma estrela
+        draw a circle: desenhar um círculo
+        draw a triangle: desenhar um triângulo
+        draw a house: desenhar uma casa
+        draw a square: desenhar um quadrado
+      New Play Lab Project:
+        jump: saltar
       Standalone_Artist_7:
         draw a flower: desenhar uma flor
       Standalone_Artist_8:
         draw a shape: desenhar uma forma
       Standalone_Artist_9:
         my function: minha função
+      course1_artist_loops_challenge2:
+        potential solution: possível solução
       course3_artist_functions_challenge1:
         do something: faz algo
       course3_artist_functions_challenge2:
@@ -120,6 +130,12 @@ pt-PT:
         do something: faz algo
       course4_artist_fwp_challenge1:
         do something: faz algo
+      courseB_artist_loops_challenge2:
+        potential solution: possível solução
+      courseB_artist_loops_challenge2_2018:
+        potential solution: possível solução
+      courseB_artist_loops_challenge2_2019:
+        potential solution: possível solução
       courseC_data wizard:
         do something: faz algo
       courseE_artist_concept1:
@@ -162,8 +178,6 @@ pt-PT:
       courseE_artist_functions7:
         draw a house: desenhar uma casa
       courseE_artist_functions7_2018:
-        draw a house: desenhar uma casa
-      courseE_artist_functions7_2019:
         draw a house: desenhar uma casa
       courseE_artist_functions8:
         do something: faz algo

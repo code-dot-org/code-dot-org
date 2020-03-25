@@ -186,6 +186,9 @@ uk-UA:
       NEW Course 4 Bee For Loops 5:
         actions_category: Панель інструментів тепер виглядає інакше! Блоки "Дії" тепер
           знаходяться тут.
+      New Frozen Project:
+        snowflake_dropdown: Скористайтесь розкривним списком, щоб створювати різні
+          сніжинки!
       Overworld Chop Trees:
         craft_callout_preplaced: Ми вже розмістили деякі блоки в заготовці
       Overworld Chop Trees_2019:

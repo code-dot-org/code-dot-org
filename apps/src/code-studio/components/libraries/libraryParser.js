@@ -71,7 +71,7 @@ export function createLibraryClosure(json) {
   let functionsInClosure = exportedFunctions.join(',');
   return `var ${json.name} = (function() {${
     json.source
-  }; return {${functionsInClosure}}})();`;
+  };\nreturn {${functionsInClosure}}})();`;
 }
 
 /**
