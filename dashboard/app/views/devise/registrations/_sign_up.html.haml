@@ -2,7 +2,7 @@
 
 #signup
   .row
-    .span9
+    .span8.header
       -# FND-893 - Stop using markdown inside headers
       %h1= t('signup_form.title')
       - if @already_hoc_registered
@@ -10,15 +10,70 @@
       - else
         = t('signup_form.overview_markdown', markdown: true).html_safe
         = t('auth.already_signedup')
+        &nbsp;
         = link_to t('nav.user.signin'), new_session_path(resource_name)
+  .row
+    .span8.oauth-links
+      .row
+        .span6
+          = render "devise/shared/oauth_links"
+      .row
+        .span6
+          %div.horizontal-or
+            %hr
+            = t("or").upcase
+            %hr
+      .row
+        .span6
+          %h4.signup-header= t('signup_form.email_signup')
+  .row
+    .span8
+      = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
+        / Email
+        .row
+          .span2
+            -# Render email label as "Email&nbsp;*", so the asterisk referencing the
+            -# "student terms" footer can't wrap onto a line all by itself
+            = f.label :email do
+              = succeed '&nbsp;*'.html_safe do
+                = User.human_attribute_name(:email)
+          .span4
+            = f.email_field :email, maxlength: 255
+          .span2
+            %span.error= @user.errors[:email]&.first
 
-  -# Render both old and new signup forms to the page, with the new form
-  -# hidden. This setup will then be used by optimizely to situationally
-  -# switch which form is displayed.
-  .old_form
-    = render 'old_sign_up_form'
-  .new_form{style: "display: none"}
-    = render 'new_sign_up_form'
+        / Password
+        .row
+          .span2
+            = f.label :password
+          .span4
+            = f.password_field :password, maxlength: 255
+          .span2
+            %span.error= @user.errors[:password]&.first
+
+        / Password confirmation
+        .row
+          .span2
+            = f.label :password_confirmation
+          .span4
+            = f.password_field :password_confirmation, maxlength: 255
+          .span2
+            %span.error= @user.errors[:password_confirmation]&.first
+
+        / Submit
+        .row
+          .span6
+            %button.submit= t('signup_form.submit')
+
+  / More information for students about email storage.
+  .row
+    .span8.more-details
+      %div
+        *
+      %div.more-details-text
+        != t('signup_form.student_terms_markdown', markdown: true)
+
+
 
 %div{style: "clear:both"}
 %br/
