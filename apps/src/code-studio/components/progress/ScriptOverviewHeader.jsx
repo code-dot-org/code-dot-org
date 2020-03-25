@@ -278,5 +278,6 @@ export default connect(state => ({
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
+  localeEnglishName: state.locales.localeEnglishName
 }))(ScriptOverviewHeader);

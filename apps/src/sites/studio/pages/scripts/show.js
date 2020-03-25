@@ -12,6 +12,7 @@ import plcHeaderReducer, {
 import scriptAnnouncementReducer, {
   addAnnouncement
 } from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
 
 $(document).ready(initPage);
 
@@ -25,10 +26,11 @@ function initPage() {
   if (plcBreadcrumb) {
     // Dispatch breadcrumb props so that ScriptOverviewHeader can add the breadcrumb
     // as appropriate
-    registerReducers({plcHeader: plcHeaderReducer});
+    registerReducers({locales, plcHeader: plcHeaderReducer});
     store.dispatch(
       setPlcHeader(plcBreadcrumb.unit_name, plcBreadcrumb.course_view_path)
     );
+    store.dispatch(setLocaleEnglishName(scriptData.locale));
   }
 
   if (scriptData.has_verified_resources) {
