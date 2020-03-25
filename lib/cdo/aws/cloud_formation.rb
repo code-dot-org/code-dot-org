@@ -1,4 +1,5 @@
 require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/numeric/time'
 require 'aws-sdk-cloudformation'
 require 'aws-sdk-s3'
 require 'json'
@@ -262,7 +263,7 @@ module AWS
       begin
         cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
-          w.max_attempts = 540 # = 1.5 hours
+          w.max_attempts = 1.5.hours / w.delay
           w.before_wait do
             yield
             print '.' unless options[:quiet]
