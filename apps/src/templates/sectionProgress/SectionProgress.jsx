@@ -85,7 +85,8 @@ class SectionProgress extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     showStandardsIntroDialog: PropTypes.bool,
-    studentTimestamps: PropTypes.object
+    studentTimestamps: PropTypes.object,
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
@@ -168,6 +169,10 @@ class SectionProgress extends Component {
   }
 
   tooltipTextForStudent = studentId => {
+    const {localeCode} = this.props;
+    if (localeCode) {
+      moment.locale(localeCode);
+    }
     const timestamp = this.props.studentTimestamps[studentId];
     return timestamp ? moment(timestamp).calendar() : i18n.none();
   };
@@ -286,7 +291,8 @@ export default connect(
     studentTimestamps:
       state.sectionProgress.studentTimestampsByScript[
         state.scriptSelection.scriptId
-      ]
+      ],
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
     loadScript(scriptId, sectionId) {
