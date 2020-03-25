@@ -43,47 +43,49 @@ export default function CrossTabChart(props) {
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
       <h1 style={chartTitleStyle}>{props.chartTitle}</h1>
       <table style={tableStyle}>
-        <tr>
-          <td>&nbsp;</td>
-          <td
-            style={{...topCellStyle, ...axisTitleStyle}}
-            colSpan={columns.length - 1}
-          >
-            {props.selectedColumn2}
-          </td>
-        </tr>
-        <tr>
-          {columns.map((column, i) => (
+        <tbody>
+          <tr>
+            <td>&nbsp;</td>
             <td
-              key={column}
-              style={
-                i === 0 ? {...leftCellStyle, ...axisTitleStyle} : topCellStyle
-              }
+              style={{...topCellStyle, ...axisTitleStyle}}
+              colSpan={columns.length - 1}
             >
-              {column}
+              {props.selectedColumn2}
             </td>
-          ))}
-        </tr>
-        {chartData.map((record, i) => (
-          <tr key={i}>
-            {columns.map((column, j) => {
-              const value = record[column];
-              const cellStyle =
-                j === 0
-                  ? {...leftCellStyle}
-                  : {
-                      ...innerCellStyle,
-                      width: columnWidth,
-                      backgroundColor: getColorForValue(value, min, max)
-                    };
-              return (
-                <td key={column} style={cellStyle}>
-                  {value}
-                </td>
-              );
-            })}
           </tr>
-        ))}
+          <tr>
+            {columns.map((column, i) => (
+              <td
+                key={column}
+                style={
+                  i === 0 ? {...leftCellStyle, ...axisTitleStyle} : topCellStyle
+                }
+              >
+                {column}
+              </td>
+            ))}
+          </tr>
+          {chartData.map((record, i) => (
+            <tr key={i}>
+              {columns.map((column, j) => {
+                const value = record[column];
+                const cellStyle =
+                  j === 0
+                    ? {...leftCellStyle}
+                    : {
+                        ...innerCellStyle,
+                        width: columnWidth,
+                        backgroundColor: getColorForValue(value, min, max)
+                      };
+                return (
+                  <td key={column} style={cellStyle}>
+                    {value}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
