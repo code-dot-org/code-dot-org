@@ -199,9 +199,6 @@ class ContactRollups
     log_collector.time!('update_teachers_from_forms') {update_teachers_from_forms}
     log_collector.time!('update_teachers_from_census_submissions') {update_teachers_from_census_submissions}
 
-    # Set opt_in based on information collected in Dashboard Email Preference.
-    log_collector.time!('update_email_preferences') {update_email_preferences}
-
     count = PEGASUS_REPORTING_DB_READER["select count(*) as cnt from #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}"].first[:cnt]
     log "Done. Total overall time: #{Time.now - start} seconds. #{count} records created in contact_rollups_daily table."
 
@@ -482,16 +479,6 @@ class ContactRollups
     INNER JOIN #{PEGASUS_DB_NAME}.contacts on contacts.email = #{DEST_TABLE_NAME}.email
     SET opted_out = true
     WHERE unsubscribed_at IS NOT NULL"
-    log_completion(start)
-  end
-
-  def self.update_email_preferences
-    start = Time.now
-    log "Updating from dashboard.email_preferences"
-    PEGASUS_REPORTING_DB_WRITER.run "
-    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.email_preferences on email_preferences.email = #{DEST_TABLE_NAME}.email
-    SET #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.opt_in = #{DASHBOARD_DB_NAME}.email_preferences.opt_in"
     log_completion(start)
   end
 

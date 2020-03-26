@@ -272,10 +272,6 @@ class Pardot
       dest[:is_do_not_email] = true
     end
 
-    # The custom Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
-    # Set db_Opt_in to 'No' when there is no source entry, matching the process used by Marketing team.
-    dest[:db_Opt_In] = src[:opt_in] == true ? 'Yes' : 'No'
-
     # If this contact has a dashboard user ID (which means it is a teacher
     # account), mark that in a Pardot field so we can segment on that.
     if src[:dashboard_user_id].present?
