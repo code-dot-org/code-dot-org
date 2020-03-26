@@ -701,7 +701,9 @@ describe('entry tests', () => {
 
     'peer_reviews/dashboard':
       './src/sites/studio/pages/peer_reviews/dashboard.js',
-    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
+
+    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included
