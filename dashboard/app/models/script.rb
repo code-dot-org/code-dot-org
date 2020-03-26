@@ -212,6 +212,10 @@ class Script < ActiveRecord::Base
     @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
   end
 
+  def self.maker_unit_scripts
+    visible_scripts.select {|s| s.family_name == 'csd6'}
+  end
+
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
