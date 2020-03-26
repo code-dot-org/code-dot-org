@@ -67,7 +67,7 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="gamelab_createNewSprite">
+            <block type="gamelab_createNewSprite" inline="false">
               <title name="NAME">dusty</title>
               <title name="COSTUME">"tumbleweed"</title>
               <value name="LOCATION">
@@ -76,7 +76,7 @@
                 </block>
               </value>
               <next>
-                <block type="gamelab_addBehaviorSimple">
+                <block type="gamelab_addBehaviorSimple" inline="true">
                   <value name="SPRITE">
                     <block type="sprite_variables_get">
                       <title name="VAR">dusty</title>
