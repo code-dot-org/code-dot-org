@@ -4,6 +4,8 @@ module Cdo::CloudFormation
   # Controller class that provides the ERB binding context for CloudFormation stack templates.
   # Includes helper methods for rendering CloudFormation stack templates.
   class StackTemplate
+    include Lambda
+
     # Array preventing specified Logical Resource IDs from having their events logged by `#tail_events`.
     attr_reader :log_resource_filter
 
