@@ -48,7 +48,7 @@ class StandardDescriptionCell extends Component {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
         const percentComplete =
-          Math.round(lesson.numStudentsCompleted / lesson.numStudents) * 100;
+          (lesson.numStudentsCompleted / lesson.numStudents).toFixed(2) * 100;
         return (
           <span key={lesson.name} style={styles.lessonBox}>
             {!this.props.isViewingReport && (
@@ -66,12 +66,7 @@ class StandardDescriptionCell extends Component {
                     {lesson.unplugged ? i18n.unplugged() : i18n.plugged()}
                   </div>
                   <div>
-                    {lesson.completed ? i18n.completed() : i18n.notCompleted()}
-                  </div>
-                  <div>
-                    {i18n.completedStudentCount({
-                      numStudentsCompleted: lesson.numStudentsCompleted,
-                      numStudents: lesson.numStudents,
+                    {i18n.completedStudentPercent({
                       percentComplete: percentComplete
                     })}
                   </div>
