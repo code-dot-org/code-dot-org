@@ -325,6 +325,19 @@ endvariants
     assert_equal true, output[:has_lesson_plan]
   end
 
+  test 'can set tts' do
+    input_dsl = <<~DSL
+      tts 'true'
+
+      stage 'Stage1'
+      level 'Level 1'
+      stage 'Stage2'
+      level 'Level 2'
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:tts]
+  end
+
   test 'can set teacher_resources' do
     input_dsl = <<~DSL
       teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
