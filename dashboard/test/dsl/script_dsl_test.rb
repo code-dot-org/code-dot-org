@@ -33,7 +33,8 @@ class ScriptDslTest < ActiveSupport::TestCase
     pilot_experiment: nil,
     editor_experiment: nil,
     project_sharing: nil,
-    curriculum_umbrella: nil
+    curriculum_umbrella: nil,
+    tts: false
   }
 
   test 'test Script DSL' do
