@@ -75,6 +75,7 @@ module Pd
     def new_general_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       day = params[:day].to_i
+      # TODO: extract day 5 out into post-survey once have facilitator surveys (so can auto-redirect)
       unless [0, 5].include?(day)
         return render_404
       end

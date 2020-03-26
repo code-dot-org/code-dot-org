@@ -1,3 +1,6 @@
+// Shows rollup data from Foorm surveys. Shows average data for this workshop
+// and across all workshops for this course
+// TODO: show facilitator averages
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
@@ -9,21 +12,10 @@ export default class SurveyRollupTableFoorm extends React.Component {
     courseName: PropTypes.string.isRequired
   };
 
-  renderTableRow(title, answers, denominator, isHeader) {
-    return (
-      <tr style={isHeader ? {borderTop: 'solid'} : {}}>
-        <td style={isHeader ? {} : {paddingLeft: '60px'}}>{title}</td>
-        {answers.map((answer, i) => {
-          return (
-            <td key={i}>
-              {answer} / {denominator}
-            </td>
-          );
-        })}
-      </tr>
-    );
-  }
-
+  // parse row data into format reactabular-table can parse. Each row may contain the following data:
+  // {question: {text: <question-text>, type: overall/title/question},
+  //             thisWorkshop: <this workshop average>, overall: <overall average>,
+  //             id: <id>, isHeader: true/false}
   getTableRows() {
     const {workshopRollups} = this.props;
     let rows = [
@@ -45,55 +37,23 @@ export default class SurveyRollupTableFoorm extends React.Component {
         const questionData = questions[questionId];
         let overallQuestionAverages = overall.averages[questionId];
         let thisWorkshopAverages = thisWorkshop.averages[questionId];
-        let denominator = questionData.column_count;
         // only display matrix questions for now
         if (questionData.type === 'matrix') {
-          // add header data
-          rows.push({
-            question: {
-              text: questionData.header,
-              type: 'overall'
-            },
-            thisWorkshop: thisWorkshopAverages
-              ? `${thisWorkshopAverages.average} / ${denominator}`
-              : '',
-            overall: `${overallQuestionAverages.average} / ${denominator}`,
-            id: `${questionId}-header`,
-            isHeader: true
-          });
-          // add top level question
-          rows.push({
-            question: {
-              text: questionData.title,
-              type: 'title'
-            },
-            id: questionId
-          });
-          // add individual rows
-          let thisWorkshopRows =
-            thisWorkshopAverages && thisWorkshopAverages.rows;
-          Object.keys(overallQuestionAverages.rows).forEach(rowId => {
-            rows.push({
-              question: {
-                text: questionData.rows[rowId],
-                type: 'question'
-              },
-              thisWorkshop: thisWorkshopRows
-                ? `${thisWorkshopRows[rowId]} / ${denominator}`
-                : '',
-              overall: `${
-                overallQuestionAverages.rows[rowId]
-              } / ${denominator}`,
-              id: rowId
-            });
-          });
+          this.parseMatrixData(
+            rows,
+            questionData,
+            questionId,
+            thisWorkshopAverages,
+            overallQuestionAverages
+          );
         }
       });
     }
     return rows;
   }
 
-  getTableColumns(courseName) {
+  // get column configuration information
+  getTableColumns() {
     return [
       {
         property: 'question',
@@ -120,15 +80,62 @@ export default class SurveyRollupTableFoorm extends React.Component {
       {
         property: 'overall',
         header: {
-          label: `Average across all ${courseName} workshops`
+          label: `Average across all ${this.props.courseName} workshops`
         }
       }
     ];
   }
 
+  // parse row data for a set of matrix answers
+  parseMatrixData(
+    rows,
+    questionData,
+    questionId,
+    thisWorkshopAverages,
+    overallQuestionAverages
+  ) {
+    let denominator = questionData.column_count;
+    // add matrix category
+    rows.push({
+      question: {
+        text: questionData.header,
+        type: 'overall'
+      },
+      thisWorkshop: thisWorkshopAverages
+        ? `${thisWorkshopAverages.average} / ${denominator}`
+        : '',
+      overall: `${overallQuestionAverages.average} / ${denominator}`,
+      id: `${questionId}-category`,
+      isHeader: true
+    });
+    // add top level question
+    rows.push({
+      question: {
+        text: questionData.title,
+        type: 'title'
+      },
+      id: questionId
+    });
+    // add individual rows
+    let thisWorkshopRows = thisWorkshopAverages && thisWorkshopAverages.rows;
+    Object.keys(overallQuestionAverages.rows).forEach(rowId => {
+      rows.push({
+        question: {
+          text: questionData.rows[rowId],
+          type: 'question'
+        },
+        thisWorkshop: thisWorkshopRows
+          ? `${thisWorkshopRows[rowId]} / ${denominator}`
+          : '',
+        overall: `${overallQuestionAverages.rows[rowId]} / ${denominator}`,
+        id: rowId
+      });
+    });
+  }
+
   render() {
     const rows = this.getTableRows();
-    const columns = this.getTableColumns(this.props.courseName);
+    const columns = this.getTableColumns();
     return (
       <Table.Provider className="table table-bordered" columns={columns}>
         <Table.Header />
