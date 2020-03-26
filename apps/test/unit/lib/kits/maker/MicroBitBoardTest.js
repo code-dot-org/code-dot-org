@@ -3,7 +3,7 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
-import ExternalLed from '@cdo/apps/lib/kits/maker/LedMatrix';
+import {ExternalLed} from '@cdo/apps/lib/kits/maker/LedMatrix';
 
 describe('MicroBitBoard', () => {
   let board;

@@ -38,10 +38,10 @@ export default class LedMatrix {
 }
 
 export class ExternalLed {
-  constructor(board, pin) {
+  constructor(opts) {
     //TODO - limit to the GPIO pins on MB?
-    this.board = board;
-    this.pin = pin;
+    this.board = opts.board;
+    this.pin = opts.pin;
     this.isOn = false;
   }
 
