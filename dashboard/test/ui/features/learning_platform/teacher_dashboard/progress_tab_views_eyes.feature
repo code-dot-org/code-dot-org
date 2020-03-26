@@ -44,6 +44,7 @@ Feature: Using the progress tab of the teacher dashboard
     And I see no difference for "standards intro"
     And I press the first ".uitest-standards-intro-button" element
 
+    And I wait until element ".uitest-standards-intro-button" is not visible
     And I wait until element "#uitest-progress-standards-table" is visible
     And I see no difference for "standards view"
     And I close my eyes
