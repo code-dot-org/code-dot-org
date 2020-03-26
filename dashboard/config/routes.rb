@@ -693,6 +693,8 @@ Dashboard::Application.routes.draw do
 
   post '/dashboardapi/v1/pd/workshop_survey_foorm_submission', to: 'api/v1/pd/workshop_survey_foorm_submissions#create', defaults: {format: 'json'}
 
+  get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
+
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'

@@ -1,5 +1,4 @@
 import * as Survey from 'survey-react';
-
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -11,6 +10,32 @@ export default class Foorm extends React.Component {
     submitApi: PropTypes.string.isRequired,
     surveyData: PropTypes.object,
     submitParams: PropTypes.object
+  };
+
+  customCss = {
+    // Use default style but use existing font.
+    root: 'sv_main sv_default_css foorm-reset-font',
+
+    header: 'sv_header foorm-adjust-header',
+
+    body: 'sv_body foorm-adjust-body',
+
+    checkbox: {
+      itemControl: 'sv_q_checkbox_control_item foorm-adjust-checkbox'
+    },
+
+    radiogroup: {
+      itemControl: 'sv_q_radiogroup_control_item foorm-adjust-radio'
+    },
+
+    matrix: {
+      root: 'sv_q_matrix foorm-adjust-matrix'
+    },
+
+    // Use our own button style.
+    navigation: {
+      complete: 'foorm-complete-button'
+    }
   };
 
   constructor(props) {
@@ -53,6 +78,7 @@ export default class Foorm extends React.Component {
           model={this.surveyModel}
           onComplete={this.onComplete}
           data={this.props.surveyData}
+          css={this.customCss}
         />
       );
     }
