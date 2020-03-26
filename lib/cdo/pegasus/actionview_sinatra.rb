@@ -16,10 +16,6 @@ module ActionViewSinatra
       lax_spacing: true
     }
 
-    def preprocess(full_document)
-      full_document.gsub(/```/, "```\n")
-    end
-
     def postprocess(full_document)
       process_div_brackets(full_document)
     end
