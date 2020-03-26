@@ -65,8 +65,8 @@ export default function CrossTabChart(props) {
               </td>
             ))}
           </tr>
-          {chartData.map((record, i) => (
-            <tr key={i}>
+          {chartData.map(record => (
+            <tr key={record[props.selectedColumn1]}>
               {columns.map((column, j) => {
                 const value = record[column];
                 const cellStyle =
@@ -101,6 +101,7 @@ CrossTabChart.propTypes = {
 
 /**
  * @param {Array.<Object>} records
+ * @param {Array.<string>} numericColumns
  * @param {string} rowName
  * @param {string} columnName
  */
