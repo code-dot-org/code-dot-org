@@ -4,6 +4,7 @@ export const sensor_channels = {
   accelZ: 10,
   tempSensor: 12
 };
+export const EXTERNAL_PINS = [0, 1, 2];
 
 export function roundToHundredth(rawValue) {
   return Math.floor(rawValue * 100) / 100;
