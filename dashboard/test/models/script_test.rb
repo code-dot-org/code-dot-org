@@ -1112,12 +1112,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
 
-  test 'text_to_speech_enabled? for k5_course' do
-    assert Script.find_by_name('csf1').text_to_speech_enabled?
-  end
-
   test '!text_to_speech_enabled? by default' do
     refute create(:script).text_to_speech_enabled?
+  end
+
+  test 'text_to_speech_enabled? if tts true' do
+    script = create :script, tts: true
+    assert script.text_to_speech_enabled?
   end
 
   test 'FreeResponse level is listed in text_response_levels' do
