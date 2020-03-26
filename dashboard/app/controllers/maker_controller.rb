@@ -1,5 +1,4 @@
 require 'cdo/script_constants'
-require 'pry'
 
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code]
