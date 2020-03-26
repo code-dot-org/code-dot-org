@@ -14325,6 +14325,44 @@ en:
               name: 'Lesson 3: Exploring Problem Solving - Games Theme'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'Lesson 3: Exploring Problem Solving - Animals Theme'
+            \"Alt Lesson 1:\" Intro to Problem Solving - Newspaper Table:
+              name: \"Alt Lesson 1:\" Intro to Problem Solving - Newspaper Table
+            'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
+              name: 'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge'
+            '"Alt Lesson 1:" Intro to Problem Solving - Newspaper Table':
+              name: '"Alt Lesson 1:" Intro to Problem Solving - Newspaper Table'
+            " Newspaper Table (Alt Lesson 1: Intro to Problem Solving -)":
+              name: " Newspaper Table (Alt Lesson 1: Intro to Problem Solving -)"
+            'Spaghetti Bridge - "Alt Lesson 1: Intro to Problem Solving "':
+              name: 'Spaghetti Bridge - "Alt Lesson 1: Intro to Problem Solving "'
+            " Newspaper Table (Alternative Lesson 1: Intro to Problem Solving)":
+              name: " Newspaper Table (Alternative Lesson 1: Intro to Problem Solving)"
+            'Spaghetti Bridge - (Alt Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Bridge - (Alt Lesson 1: Intro to Problem Solving)'
+            'Spaghetti Bridge (Alt Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Bridge (Alt Lesson 1: Intro to Problem Solving)'
+            'Paper Tower (Lesson 1: Intro to Problem Solving)':
+              name: 'Paper Tower (Lesson 1: Intro to Problem Solving)'
+            " Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)":
+              name: " Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)"
+            'Spaghetti Bridge (Alt. Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Bridge (Alt. Lesson 1: Intro to Problem Solving)'
+            'Games Theme (Lesson 3: Exploring Problem Solving)':
+              name: 'Games Theme (Lesson 3: Exploring Problem Solving)'
+            'Exploring Problem Solving (Lesson 3: Exploring Problem Solving)':
+              name: 'Exploring Problem Solving (Lesson 3: Exploring Problem Solving)'
+            'Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)'
+            'Spaghetti Bridge (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Bridge (Alternate Lesson 1: Intro to Problem Solving)'
+            'Games Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Games Theme (Alternate Lesson 3: Exploring Problem Solving)'
+            'Exploring Problem Solving (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Exploring Problem Solving (Alternate Lesson 3: Exploring Problem Solving)'
+            'Paper Tower (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Paper Tower (Alternate Lesson 1: Intro to Problem Solving)'
+            'Animals Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Animals Theme (Alternate Lesson 3: Exploring Problem Solving)'
         csd4-2020:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
