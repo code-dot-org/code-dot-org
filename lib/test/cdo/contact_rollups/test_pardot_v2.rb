@@ -13,7 +13,7 @@ class PardotV2Test < Minitest::Test
 
     PardotV2.stubs(:post_with_auth_retry).returns(pardot_response)
 
-    assert_equal [], PardotV2.retrieve_new_ids
+    assert_equal [], PardotV2.retrieve_new_ids(0)
   end
 
   def test_retrieve_new_ids_with_result
@@ -33,6 +33,6 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).returns(pardot_response)
 
     expected_result = [{email: email, pardot_id: pardot_id}]
-    assert_equal expected_result, PardotV2.retrieve_new_ids
+    assert_equal expected_result, PardotV2.retrieve_new_ids(0)
   end
 end
