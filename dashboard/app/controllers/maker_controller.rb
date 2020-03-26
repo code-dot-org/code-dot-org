@@ -19,34 +19,33 @@ class MakerController < ApplicationController
     }
   end
 
-  ScriptAndCourse = Struct.new(:script_name, :course_name, :script)
+  ScriptAndCourse = Struct.new(:script, :course)
+  MAKER_UNIT_SCRIPTS = Script.maker_unit_scripts.
+      sort_by(&:version_year).
+      reverse.
+      freeze
+  # A list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+  # In order from most recent to least.
+  MAKER_YEARS = MAKER_UNIT_SCRIPTS.map {|s| ScriptAndCourse.new(s, s.course)}.freeze
 
   def self.maker_script(for_user)
-    # Order matters here - should go from most to least recent.
-    years = [
-      ScriptAndCourse.new(Script::CSD6_2019_NAME, ScriptConstants::CSD_2019),
-      ScriptAndCourse.new(Script::CSD6_2018_NAME, ScriptConstants::CSD_2018),
-      ScriptAndCourse.new(Script::CSD6_NAME, ScriptConstants::CSD_2017),
-    ]
-    years.each {|year| year.script = Script.get_from_cache(year.script_name)}
-
     # Assigned course or script should take precedence - show most recent version that's been assigned.
     assigned = for_user.section_courses + for_user.section_scripts
-    years.each do |year|
-      if assigned.include?(Course.get_from_cache(year.course_name)) || assigned.include?(year.script)
+    MAKER_YEARS.each do |year|
+      if assigned.include?(year.course) || assigned.include?(year.script)
         return year.script
       end
     end
 
     # Otherwise, show the most recent version with progress.
-    script_names = years.map(&:script_name)
+    script_names = MAKER_YEARS.map {|sc| sc.script.name}
     progress = UserScript.lookup_hash(for_user, script_names)
-    years.each do |year|
-      return year.script if progress[year.script_name]
+    MAKER_YEARS.each do |year|
+      return year.script if progress[year.script.name]
     end
 
     # If none of the above applies, default to most recent.
-    years.first.script
+    MAKER_YEARS.first.script
   end
 
   def setup
