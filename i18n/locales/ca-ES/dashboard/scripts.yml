@@ -1558,3 +1558,29 @@ ca:
           stages:
             Spelling Bee:
               name: Abella ortogràfica
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Creant Funcions
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Bucles Mentres
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funcions
+        code-break:
+          stages:
+            Algorithms:
+              name: Algorismes
+            Events:
+              name: Esdeveniments

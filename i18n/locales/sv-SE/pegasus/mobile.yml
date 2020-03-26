@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 december 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Kodtimmen</a> kommer. Kalla till dig alla lärare och arrangörer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planera din kodtimme</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Är du en CS lärare? Se andra CSEdWeek resurser</a>'
+  csedweek_banner_teachers_text: "Är du en CS lärare? Se andra CSEdWeek resurser"
   n_have_learned_an_hoc: "<h1>Prova en</h1><h2>Hour of Code</h2><h3># har redan provat</h3>"
   anybody_can_learn: "Alla kan lära sig."
   learn_now: "Lär dig nu"

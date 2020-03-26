@@ -1552,6 +1552,14 @@ ro:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: mută {SPRITE} {DISTANCE} pixeli {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       aalab_prompt:
         text: întreabă {MESSAGE}
       aalab_scene:
@@ -1563,12 +1571,10 @@ ro:
             '3': '3'
       aalab_setupStory:
         text: poveste de configurare
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': arată
-            '"hide"': ascunde
+            '"random"': aleator
       binary_drawBin:
         text: trage binar {BIN}
       binary_drawDec:

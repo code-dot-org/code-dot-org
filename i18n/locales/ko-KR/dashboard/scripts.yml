@@ -1982,3 +1982,43 @@ ko:
           stages:
             Spelling Bee:
               name: 말하는 꿀벌
+        csp3-virtual:
+          description_short: 프로그래밍
+          stages:
+            Creating Functions:
+              name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
+        csd3-virtual:
+          description_short: "프로그래밍"
+          stages:
+            Variables:
+              name: 변수
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+            Sprite Properties:
+              name: 스프라이트 속성
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '~인 동안 반복'
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+        code-break:
+          stages:
+            Algorithms:
+              name: 알고리즘
+            Events:
+              name: 이벤트

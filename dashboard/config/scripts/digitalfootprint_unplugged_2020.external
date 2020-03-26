@@ -1,10 +1,11 @@
 name 'DigitalFootprint-Unplugged_2020'
-video_key 'C2_digital_footprint'
+editor_experiment ''
+video_key 'csf_follow_the_digital_trail'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
-# Your Digital Footprint
+# Follow the Digital Trail
 
-Putting information about yourself online creates a digital footprint.
+## What information is OK to have in your digital footprint?
 MARKDOWN

@@ -1245,4 +1245,9 @@ FactoryGirl.define do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
   end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
 end

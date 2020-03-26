@@ -1549,6 +1549,14 @@ is:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: færa {SPRITE} {DISTANCE} díla í {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': norður
+            '"East"': austur
+            '"South"': suður
+            '"West"': vestur
       aalab_prompt:
         text: spyrja spurningar {MESSAGE}
       aalab_scene:
@@ -1560,12 +1568,10 @@ is:
             '3': '3'
       aalab_setupStory:
         text: stilla upp sögu
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': sýna
-            '"hide"': fela
+            '"random"': eitthvað
       binary_drawBin:
         text: teikna tvíund {BIN}
       binary_drawBinScreen:

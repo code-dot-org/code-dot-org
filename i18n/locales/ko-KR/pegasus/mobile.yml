@@ -12,6 +12,7 @@
   csedweek_dates: "2018년 12월 3일-9일"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of Code 행사를 준비하세요.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
+  csedweek_banner_teachers_text: "컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요."
   n_have_learned_an_hoc: "<h1>Hour of Code를</h1> <h2>체험하세요</h2> <h3># served</h3>"
   anybody_can_learn: "누구나 배울 수 있습니다."
   learn_now: "지금 배워보세요."

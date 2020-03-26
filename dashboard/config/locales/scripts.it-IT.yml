@@ -6172,6 +6172,8 @@ it:
                 richiamando una funzione dall'interno di un'altra.
             End of Course Project:
               name: Progetto di fine corso
+            Digital Sharing:
+              name: Condivisione digitale
         coursef-2020:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e
             istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
@@ -6273,6 +6275,8 @@ it:
                 digitale.
             End of Course Project:
               name: Progetto di fine corso
+            AI for Oceans:
+              name: L'Intelligenza Artificiale per il mare
         express-2020:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
@@ -6363,3 +6367,50 @@ it:
           stages:
             Debugging:
               name: Correzione errori (debugging)
+        csp3-virtual:
+          description_short: Programmazione
+          stages:
+            Creating Functions:
+              name: Creazione di funzioni
+        csd3-virtual:
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Sprites:
+              name: Personaggi
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni
+        jess-test-script:
+          stages:
+            Debugging:
+              name: Correzione errori (debugging)
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Cicli "mentre"
+            Introduction to Arrays:
+              name: Introduzione agli array
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Eventi

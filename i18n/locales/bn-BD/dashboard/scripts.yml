@@ -1070,3 +1070,28 @@ bn:
           stages:
             Spelling Bee:
               name: বানান মৌমাছি
+        csp3-virtual:
+          description_short: প্রোগ্রামিং
+        csd3-virtual:
+          description_short: "প্রোগ্রামিং"
+          stages:
+            Variables:
+              name: চলকগুলো
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: হোয়াইল লুপ
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: ফাংশনগুলি
+        code-break:
+          stages:
+            Algorithms:
+              name: অ্যালগরিদম
+            Events:
+              name: ঘটনাবলী

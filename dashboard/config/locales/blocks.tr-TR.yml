@@ -1548,6 +1548,14 @@ tr:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: hareket {SPRITE} {DISTANCE} piksel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Kuzey
+            '"East"': Doğu
+            '"South"': Güney
+            '"West"': Batı
       aalab_prompt:
         text: soru sormak {MESSAGE}
       aalab_scene:
@@ -1559,12 +1567,10 @@ tr:
             '3': '3'
       aalab_setupStory:
         text: kurulum öyküsü
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': göster
-            '"hide"': gizle
+            '"random"': gelişigüzel
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:

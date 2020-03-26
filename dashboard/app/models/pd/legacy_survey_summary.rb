@@ -12,4 +12,5 @@
 #
 
 class Pd::LegacySurveySummary < ApplicationRecord
+  belongs_to :facilitator, class_name: 'User'
 end

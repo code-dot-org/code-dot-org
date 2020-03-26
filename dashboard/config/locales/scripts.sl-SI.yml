@@ -1319,3 +1319,29 @@ sl:
           stages:
             Spelling Bee:
               name: Čebelica črkuje besede
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Dogodki

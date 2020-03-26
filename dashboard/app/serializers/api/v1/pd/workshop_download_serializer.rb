@@ -1,10 +1,14 @@
 class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
-  attributes :id, :status, :start_date, :sessions, :organizer_name, :organizer_email, :regional_partner_name,
+  attributes :id, :status, :created_date, :start_date, :sessions, :organizer_name, :organizer_email, :regional_partner_name,
     :location_address, :location_name, :on_map, :funded, :course, :subject, :enrollment_url,
     :enrolled_teacher_count, :capacity, :facilitators, :notes
 
   def status
     object.state
+  end
+
+  def created_date
+    object.created_at&.to_date&.iso8601
   end
 
   def start_date

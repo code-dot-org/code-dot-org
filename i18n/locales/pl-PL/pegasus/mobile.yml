@@ -12,6 +12,7 @@
   csedweek_dates: "3-9 grudnia 2018"
   csedweek_banner_hoc: 'Zbliża się <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Godzina Kodowania (Hour of Code)</a>. Zapraszamy wszystkich nauczycieli i organizatorów, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> zaplanujcie swoją Godzinę Kodowania (Hour of Code)</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Jesteś nauczycielem informatyki? Zobacz inne propozycje CSEdWeek"
   n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
   anybody_can_learn: "Każdy może się uczyć."
   learn_now: "Rozpocznij naukę teraz"
