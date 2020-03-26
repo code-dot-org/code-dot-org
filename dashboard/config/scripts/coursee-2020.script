@@ -2,7 +2,7 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursee/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursee'
@@ -105,7 +105,7 @@ level 'courseE_aboutme_6_2020', progression: 'Mini-project: Interactive Poster'
 stage 'Digital Sharing', flex_category: 'csf_digcit'
 level 'DigitalSharing-Unplugged_2020'
 
-stage 'Access Ability', flex_category: 'csf_impacts'
+stage 'Designing for Accessibility', flex_category: 'csf_impacts'
 level 'DesigningForAccessibilityMarkdownLevel_2019_2020'
 
 stage 'Nested Loops in Bee', flex_category: 'csf_nested_loops'

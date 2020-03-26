@@ -446,15 +446,25 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file('bootstrap_chef_stack.sh.erb',
-          resource_id: daemon,
-          node_name: '$STACK',
-          run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
-          commit: nil, # track branch
-          shutdown: false,
-          daemon: true,
-          chef_version: chef_version
-        )%>
+        Fn::Base64: !Sub |
+          #!/bin/bash -x
+          <%=indent(erb_file(aws_dir('cloudformation', 'bootstrap_chef_stack.sh.erb'),
+            resource_id: daemon,
+            node_name: '$STACK',
+            run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
+            commit: nil, # track branch
+            shutdown: false,
+            daemon: true,
+            chef_version: chef_version
+          ), 10)%>
+          # Signal CloudFormation resource.
+          aws cloudformation signal-resource \
+            --unique-id $INSTANCE_ID \
+            --stack-name $STACK \
+            --logical-resource-id $RESOURCE_ID \
+            --status $STATUS \
+            --region $REGION \
+            || true
       NetworkInterfaces:
       - AssociatePublicIpAddress: true
         DeviceIndex: 0
