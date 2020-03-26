@@ -246,7 +246,7 @@
   "completed": "Completed",
   "completedLevels": "Completed Levels",
   "completedLessons": "Completed Lessons",
-  "completedStudentCount": "{numStudentsCompleted} of {numStudents} students completed ({percentComplete} %)",
+  "completedStudentPercent": "{percentComplete}% of students completed",
   "completedUnpluggedLessons": "Tell us which unplugged lessons* your class has completed",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "completionStatus": "Completion Status",
