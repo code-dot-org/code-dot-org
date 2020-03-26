@@ -4,6 +4,7 @@ video_player: true
 theme: responsive
 nav: athome_nav
 ---
+
 <a id="top"></a>
 # Learning computer science when schools are closed
 <div class="col-66" style="padding-right: 20px;">
@@ -38,6 +39,7 @@ nav: athome_nav
 <div class="clearboth">
 
 </div>
+
 
 </div>
 <a id="hoc"></a>
