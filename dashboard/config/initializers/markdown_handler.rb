@@ -1,6 +1,6 @@
 # Add Markdown .md support to the ActionView template system.
 
-require 'cdo/markdown_handler'
+require 'cdo/markdown/handler'
 
 MARKDOWN_OPTIONS = {
   autolink: true,
@@ -8,4 +8,4 @@ MARKDOWN_OPTIONS = {
   space_after_headers: true
 }.freeze
 
-MarkdownHandler.register(Redcarpet::Render::HTML, MARKDOWN_OPTIONS)
+Cdo::Markdown::Handler.register(Redcarpet::Render::HTML, MARKDOWN_OPTIONS)
