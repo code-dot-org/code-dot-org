@@ -525,6 +525,44 @@ level 'Level 3'
     assert_equal expected, output
   end
 
+  test 'Script DSL with stage visible after date' do
+    input_dsl = <<~DSL
+      stage 'Stage1', visible_after: 'DATE'
+      level 'Level 1'
+      level 'Level 2'
+    DSL
+    expected = DEFAULT_PROPS.merge(
+        {
+            stages: [
+                {
+                    stage: "Stage1",
+                    visible_after: 'DATE',
+                    scriptlevels: [
+                        {stage: "Stage1", levels: [{name: "Level 1"}]},
+                        {stage: "Stage1", levels: [{name: "Level 2"}]},
+                    ]
+                }
+            ]
+        }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize visible after for stage' do
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script, hidden: true
+    stage = create :stage, name: 'stage 1', script: script, visible_after: 'DATE'
+    script_level = create :script_level, levels: [level], stage: stage, script: script
+    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    expected = <<~SCRIPT
+      stage 'stage 1', visible_after: 'DATE'
+      level 'maze 1'
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
   test 'Script DSL with project_sharing' do
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
