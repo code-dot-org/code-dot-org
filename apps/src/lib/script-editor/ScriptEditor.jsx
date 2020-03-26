@@ -343,7 +343,7 @@ export default class ScriptEditor extends React.Component {
             defaultChecked={this.props.tts}
             style={styles.checkbox}
           />
-          <p>Check if this course has text-to-speech available.</p>
+          <p>Check to enable text-to-speech for this course.</p>
         </label>
         {this.props.isLevelbuilder && (
           <label>
