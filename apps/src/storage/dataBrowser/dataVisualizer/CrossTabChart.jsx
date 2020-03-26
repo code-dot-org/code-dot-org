@@ -163,7 +163,7 @@ const tableStyle = {
   width: '100%'
 };
 const cellStyle = {
-  height: '3em',
+  height: '2em',
   border: '1px solid black',
   textAlign: 'center'
 };
