@@ -12,8 +12,6 @@ import sinon from 'sinon';
 
 describe('LibraryManagerDialog', () => {
   const ID = 123;
-  const IMPORT_ERROR_MSG =
-    'An error occurred while importing your library. Please make sure you have a valid ID and an internet connection.';
 
   describe('viewCode', () => {
     it('sets the view library', () => {
@@ -151,26 +149,6 @@ describe('LibraryManagerDialog', () => {
       expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
     });
 
-    it('setLibraryToImport sets the import library', () => {
-      getProjectLibrariesStub.returns(undefined);
-      const wrapper = shallow(
-        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
-      );
-      wrapper.instance().onOpen();
-      wrapper.instance().setLibraryToImport({target: {value: 'id'}});
-      expect(wrapper.state().importLibraryId).to.equal('id');
-    });
-
-    it('setLibraryToImport resets the error in state to null', () => {
-      const wrapper = shallow(
-        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
-      );
-      wrapper.instance().setState({error: IMPORT_ERROR_MSG});
-
-      wrapper.instance().setLibraryToImport({target: {value: 'id'}});
-      expect(wrapper.state().error).to.be.null;
-    });
-
     it('addLibraryById adds the library to the project if given libraryJson', () => {
       let setProjectLibrariesSpy = sinon.spy(
         window.dashboard.project,
@@ -186,13 +164,16 @@ describe('LibraryManagerDialog', () => {
       setProjectLibrariesSpy.restore();
     });
 
-    it('addLibraryById sets an error in state if given an error', () => {
+    it('addLibraryById resets loading state if given an error', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      expect(wrapper.state().error).to.be.null;
+      wrapper.setState({isLoading: true});
+      expect(wrapper.state().isLoading).to.be.true;
+      expect(wrapper.state().loadLibraryErrored).to.be.false;
       wrapper.instance().addLibraryById(null, 'an error occurred!');
-      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+      expect(wrapper.state().isLoading).to.be.false;
+      expect(wrapper.state().loadLibraryErrored).to.be.true;
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {

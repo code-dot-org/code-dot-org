@@ -69,7 +69,8 @@ export default class LibraryManagerDialog extends React.Component {
     cachedClassLibraries: [],
     viewingLibrary: {},
     isViewingCode: false,
-    isLoading: false
+    isLoading: false,
+    loadLibraryErrored: false
   };
 
   componentDidUpdate(prevProps) {
@@ -127,16 +128,14 @@ export default class LibraryManagerDialog extends React.Component {
 
   addLibraryById = (libraryJson, error) => {
     if (error) {
-      this.setState({
-        isLoading: false
-      });
+      this.setState({isLoading: false, loadLibraryErrored: true});
     } else if (libraryJson) {
       this.addLibraryToProject(libraryJson);
     }
   };
 
   fetchLatestLibrary = (channelId, callback) => {
-    this.setState({isLoading: true});
+    this.setState({isLoading: true, loadLibraryErrored: false});
     const {cachedClassLibraries} = this.state;
     const cachedLibrary = cachedClassLibraries.find(
       library => library.channelId === channelId
@@ -237,7 +236,12 @@ export default class LibraryManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
-    const {isViewingCode, viewingLibrary, isLoading} = this.state;
+    const {
+      isViewingCode,
+      viewingLibrary,
+      isLoading,
+      loadLibraryErrored
+    } = this.state;
     return (
       <div>
         <BaseDialog
@@ -252,6 +256,7 @@ export default class LibraryManagerDialog extends React.Component {
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
           <LibraryIdImporter
             isLoading={isLoading}
+            loadLibraryErrored={loadLibraryErrored}
             addLibraryById={id =>
               this.fetchLatestLibrary(id, this.addLibraryById)
             }

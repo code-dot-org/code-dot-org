@@ -44,30 +44,32 @@ const styles = {
 export class LibraryIdImporter extends React.Component {
   static propTypes = {
     addLibraryById: PropTypes.func.isRequired,
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    loadLibraryErrored: PropTypes.bool
   };
 
   state = {
     importLibraryId: '',
-    wasClicked: false,
-    error: null
+    wasClicked: false
   };
 
-  componentDidUpdate(prevProps) {
-    const {isLoading} = this.props;
-    const {wasClicked} = this.state;
-    if (wasClicked && prevProps.isLoading && !isLoading) {
-      this.setState({wasClicked: false, error: i18n.libraryImportError()});
-    }
-  }
-
   setLibraryToImport = event => {
-    this.setState({importLibraryId: event.target.value, error: null});
+    this.setState({importLibraryId: event.target.value, wasClicked: false});
+  };
+
+  getButtonContent = () => {
+    const {wasClicked} = this.state;
+    const {isLoading} = this.props;
+    if (wasClicked && isLoading) {
+      return <FontAwesome icon="spinner" className="fa-spin" />;
+    } else {
+      return i18n.add();
+    }
   };
 
   render() {
     const {importLibraryId, wasClicked} = this.state;
-    const {addLibraryById, isLoading} = this.props;
+    const {addLibraryById, loadLibraryErrored} = this.props;
     return (
       <div>
         <h1 style={libraryStyles.header}>{i18n.libraryIdImport()}</h1>
@@ -87,13 +89,12 @@ export class LibraryIdImporter extends React.Component {
             type="button"
             disabled={!importLibraryId}
           >
-            {wasClicked && isLoading && (
-              <FontAwesome icon="spinner" className="fa-spin" />
-            )}
-            {!(wasClicked && isLoading) && i18n.add()}
+            {this.getButtonContent()}
           </button>
         </div>
-        <div style={styles.error}>{this.state.error}</div>
+        <div style={styles.error}>
+          {wasClicked && loadLibraryErrored && i18n.libraryImportError()}
+        </div>
       </div>
     );
   }
