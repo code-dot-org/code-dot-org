@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'pry'
 
 class MakerControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
