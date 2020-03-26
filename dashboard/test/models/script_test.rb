@@ -1120,6 +1120,11 @@ class ScriptTest < ActiveSupport::TestCase
     refute create(:script).text_to_speech_enabled?
   end
 
+  test 'text_to_speech_enabled? if tts true' do
+    script = create :script, tts: true
+    assert script.text_to_speech_enabled?
+  end
+
   test 'FreeResponse level is listed in text_response_levels' do
     script = create :script
     stage = create :stage, script: script
