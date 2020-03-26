@@ -780,12 +780,8 @@ class Script < ActiveRecord::Base
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
-  private def csf_tts_level?
-    k5_course?
-  end
-
   def text_to_speech_enabled?
-    csf_tts_level? || tts?
+    tts?
   end
 
   # Generates TTS files for each level in a script.
