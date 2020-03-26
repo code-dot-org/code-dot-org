@@ -1,4 +1,5 @@
 require 'cdo/script_constants'
+require 'pry'
 
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code]
@@ -20,32 +21,36 @@ class MakerController < ApplicationController
   end
 
   ScriptAndCourse = Struct.new(:script, :course)
-  MAKER_UNIT_SCRIPTS = Script.maker_unit_scripts.
-      sort_by(&:version_year).
-      reverse.
-      freeze
-  # A list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
-  # In order from most recent to least.
-  MAKER_YEARS = MAKER_UNIT_SCRIPTS.map {|s| ScriptAndCourse.new(s, s.course)}.freeze
 
   def self.maker_script(for_user)
+    maker_unit_scripts = Script.maker_unit_scripts.
+        sort_by(&:version_year).
+        reverse.
+        freeze
+    csd_courses = Course.all_courses.select {|c| c.family_name == Course::CSD}.freeze
+    # maker_years is a list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+    # Ordered from most recent to least.
+    maker_years = maker_unit_scripts.map do |s|
+      ScriptAndCourse.new(s, csd_courses.find {|c| s.version_year == c.version_year})
+    end.freeze
+
     # Assigned course or script should take precedence - show most recent version that's been assigned.
     assigned = for_user.section_courses + for_user.section_scripts
-    MAKER_YEARS.each do |year|
+    maker_years.each do |year|
       if assigned.include?(year.course) || assigned.include?(year.script)
         return year.script
       end
     end
 
     # Otherwise, show the most recent version with progress.
-    script_names = MAKER_YEARS.map {|sc| sc.script.name}
+    script_names = maker_years.map {|sc| sc.script.name}
     progress = UserScript.lookup_hash(for_user, script_names)
-    MAKER_YEARS.each do |year|
+    maker_years.each do |year|
       return year.script if progress[year.script.name]
     end
 
     # If none of the above applies, default to most recent.
-    MAKER_YEARS.first.script
+    maker_years.first.script
   end
 
   def setup
