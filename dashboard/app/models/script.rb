@@ -149,6 +149,7 @@ class Script < ActiveRecord::Base
     editor_experiment
     project_sharing
     curriculum_umbrella
+    tts
   )
 
   def self.twenty_hour_script
@@ -1381,7 +1382,8 @@ class Script < ActiveRecord::Base
       family_name: family_name,
       version_year: version_year,
       assigned_section_id: assigned_section_id,
-      hasStandards: has_standards_associations?
+      hasStandards: has_standards_associations?,
+      tts: tts?,
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1528,7 +1530,7 @@ class Script < ActiveRecord::Base
       editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
       curriculum_umbrella: script_data[:curriculum_umbrella],
-      tts: script_data[:tts]
+      tts: !!script_data[:tts]
     }.compact
   end
 
