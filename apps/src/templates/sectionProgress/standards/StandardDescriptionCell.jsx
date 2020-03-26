@@ -66,12 +66,7 @@ class StandardDescriptionCell extends Component {
                     {lesson.unplugged ? i18n.unplugged() : i18n.plugged()}
                   </div>
                   <div>
-                    {lesson.completed ? i18n.completed() : i18n.notCompleted()}
-                  </div>
-                  <div>
-                    {i18n.completedStudentCount({
-                      numStudentsCompleted: lesson.numStudentsCompleted,
-                      numStudents: lesson.numStudents,
+                    {i18n.completedStudentPercent({
                       percentComplete: percentComplete
                     })}
                   </div>
