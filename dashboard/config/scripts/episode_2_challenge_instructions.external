@@ -1,0 +1,24 @@
+name 'Episode 2 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+On the next level, you will choose to Create an Interactive Card (K-6) or Build an App (7-12) using either the Beginner or Intermediate toolboxes. We can't wait to see what you make!
+
+## Ideas
+
+Not sure where to start? Here are some sample projects to help get the ideas flowing. 
+
+### Beginner Projects
+
+
+
+### Intermediate Projects
+
+
+MARKDOWN
