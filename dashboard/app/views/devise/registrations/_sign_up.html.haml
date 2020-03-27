@@ -3,7 +3,6 @@
 #signup
   .row
     .span8.header
-      -# FND-893 - Stop using markdown inside headers
       %h1= t('signup_form.title')
       - if @already_hoc_registered
         = t('signup_form.hoc_already_signed_up_content_post_hoc_markdown', studio_url: CDO.studio_url('/'), markdown: true).html_safe
