@@ -374,6 +374,9 @@ describe('entry tests', () => {
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
+      options: {
+        dest: 'build/locales'
+      },
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
@@ -662,6 +665,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/learn/local.js',
     'code.org/views/professional_learning_apply_banner':
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
+    'code.org/views/at_home_banner':
+      './src/sites/code.org/pages/views/at_home_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -701,7 +706,9 @@ describe('entry tests', () => {
 
     'peer_reviews/dashboard':
       './src/sites/studio/pages/peer_reviews/dashboard.js',
-    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
+
+    'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included

@@ -21,6 +21,8 @@ el-GR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους του
     CSEdWeek</a>'
+  csedweek_banner_teachers_text: Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους
+    του CSEdWeek
   n_have_learned_an_hoc: "<h1>Δοκιμάστε μία</h1><h2>Ώρα του Κώδικα</h2><h3># την δοκίμασαν</h3>"
   anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει.
   learn_now: Μάθε τώρα
@@ -416,6 +418,7 @@ el-GR:
 '
   homepage_action_text_wincelebritychat: Κερδίστε μια συνομιλία με μία διασημότητα
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
+  homepage_signpetition_dropdown_text: Συμφωνώ
   homepage_diversity_pledge: Ακολούθησε τη δέσμευση για πολυμορφία
   homepage_banner_text_prizes: 'Η Ώρα του Κώδικα πλησιάζει πάλι, 7-13 Δεκεμβρίου. '
   homepage_banner_link_prizes: 'Πάρε μέρος στη μεγαλύτερη μαθησιακή εκδήλωση στην

@@ -47,6 +47,8 @@ class StandardDescriptionCell extends Component {
   getLessonBoxes = () => {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
+        const percentComplete =
+          (lesson.numStudentsCompleted / lesson.numStudents).toFixed(2) * 100;
         return (
           <span key={lesson.name} style={styles.lessonBox}>
             {!this.props.isViewingReport && (
@@ -61,12 +63,11 @@ class StandardDescriptionCell extends Component {
                 <div style={styles.tooltip}>
                   <div style={styles.tooltipLessonName}>{lesson.name}</div>
                   <div>
-                    {lesson.completed ? i18n.completed() : i18n.notCompleted()}
+                    {lesson.unplugged ? i18n.unplugged() : i18n.plugged()}
                   </div>
                   <div>
-                    {i18n.completedStudentCount({
-                      numStudentsCompleted: lesson.numStudentsCompleted,
-                      numStudents: lesson.numStudents
+                    {i18n.completedStudentPercent({
+                      percentComplete: percentComplete
                     })}
                   </div>
                 </div>
@@ -75,6 +76,7 @@ class StandardDescriptionCell extends Component {
             <ProgressBoxForLessonNumber
               key={lesson.lessonNumber}
               completed={lesson.completed}
+              inProgress={lesson.inProgress}
               lessonNumber={lesson.lessonNumber}
               tooltipId={lesson.name}
               linkToLessonPlan={lesson.url}

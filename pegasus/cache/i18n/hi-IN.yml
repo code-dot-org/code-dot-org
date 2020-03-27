@@ -19,6 +19,7 @@ hi-IN:
     font-weight:bold"> आपके ऑवर ऑफ़ कोड  का प्लान करे</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें</a>'
+  csedweek_banner_teachers_text: " तुम एक CS शिक्षक हो? अन्य CSEdWeek संसाधन देखें"
   n_have_learned_an_hoc: |-
     का प्रयास एक कोड के घंटे सेवा की
      code ke ek ghante dha koshish karo
@@ -408,6 +409,7 @@ hi-IN:
   homepage_action_text_signpetition: याचना पर हस्ताक्षर करें
   homepage_action_text_wincelebritychat: सेलिब्रिटी चैट जीतें
   homepage_signpetition_dropdown: मैं सहमत हूं &#x25BE;
+  homepage_signpetition_dropdown_text: मैं सहमत हूँ
   homepage_diversity_pledge: विविधता संकल्प लें
   homepage_banner_text_prizes: 'आवर ऑफ़ कोड दुबारा 7-13 दिसम्बर को आ रहा है। '
   homepage_banner_link_prizes: 'इतिहास में सबसे बड़े सीखने के कार्यक्रम में शामिल

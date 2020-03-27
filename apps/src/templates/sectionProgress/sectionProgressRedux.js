@@ -25,6 +25,7 @@ const SET_LESSON_OF_INTEREST = 'sectionProgress/SET_LESSON_OF_INTEREST';
 const ADD_SCRIPT_DATA = 'sectionProgress/ADD_SCRIPT_DATA';
 const ADD_STUDENT_LEVEL_PROGRESS = 'sectionProgress/ADD_STUDENT_LEVEL_PROGRESS';
 const ADD_STUDENT_LEVEL_PAIRING = 'sectionProgress/ADD_STUDENT_LEVEL_PAIRING';
+const ADD_STUDENT_TIMESTAMPS = 'sectionProgress/ADD_STUDENT_TIMESTAMPS';
 const START_LOADING_PROGRESS = 'sectionProgress/START_LOADING_PROGRESS';
 const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const ADD_LEVELS_BY_LESSON = 'sectionProgress/ADD_LEVELS_BY_LESSON';
@@ -76,48 +77,11 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
     studentLevelPairing
   };
 };
-
-export const jumpToLessonDetails = lessonOfInterest => {
-  return (dispatch, getState) => {
-    const state = getState();
-    dispatch(setLessonOfInterest(lessonOfInterest));
-    dispatch(setCurrentView(ViewType.DETAIL));
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'view_change_toggle',
-        data_json: JSON.stringify({
-          section_id: state.sectionData.section.id,
-          old_view: ViewType.SUMMARY,
-          new_view: ViewType.DETAIL,
-          script_id: state.scriptSelection.scriptId
-        })
-      },
-      {includeUserId: true}
-    );
-  };
-};
-export const processScriptAndProgress = scriptId => {
-  return (dispatch, getState) => {
-    const state = getState().sectionProgress;
-    const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
-    const studentLevelPairing = state.studentLevelPairingByScript[scriptId];
-    const scriptData = state.scriptDataByScript[scriptId];
-    let levelsByLessonByStudent = {};
-    for (const studentId of Object.keys(studentLevelProgress)) {
-      levelsByLessonByStudent[studentId] = levelsByLesson({
-        stages: scriptData.stages,
-        levelProgress: studentLevelProgress[studentId],
-        levelPairing: studentLevelPairing[studentId],
-        currentLevelId: null
-      });
-    }
-
-    dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
-    dispatch(finishLoadingProgress());
-  };
-};
+export const addStudentTimestamps = (scriptId, studentTimestamps) => ({
+  type: ADD_STUDENT_TIMESTAMPS,
+  scriptId,
+  studentTimestamps
+});
 
 const NUM_STUDENTS_PER_PAGE = 50;
 
@@ -164,6 +128,7 @@ const initialState = {
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
   studentLevelPairingByScript: {},
+  studentTimestampsByScript: {},
   levelsByLessonByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: true
@@ -250,9 +215,46 @@ export default function sectionProgress(state = initialState, action) {
       }
     };
   }
+  if (action.type === ADD_STUDENT_TIMESTAMPS) {
+    const studentTimestamps = _.mapValues(
+      action.studentTimestamps,
+      seconds => seconds * 1000
+    );
+    return {
+      ...state,
+      studentTimestampsByScript: {
+        [action.scriptId]: {
+          ...state.studentTimestampsByScript[action.scriptId],
+          ...studentTimestamps
+        }
+      }
+    };
+  }
 
   return state;
 }
+
+export const jumpToLessonDetails = lessonOfInterest => {
+  return (dispatch, getState) => {
+    const state = getState();
+    dispatch(setLessonOfInterest(lessonOfInterest));
+    dispatch(setCurrentView(ViewType.DETAIL));
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'view_change_toggle',
+        data_json: JSON.stringify({
+          section_id: state.sectionData.section.id,
+          old_view: ViewType.SUMMARY,
+          new_view: ViewType.DETAIL,
+          script_id: state.scriptSelection.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+};
 
 // Selector functions
 
@@ -351,9 +353,12 @@ export const loadScript = (scriptId, sectionId) => {
     const sectionData = getState().sectionData.section;
 
     // Don't load data if it's already stored in redux.
+    // TODO: Save Standards data in a way that allows us
+    // not to reload all data to get correct standards data
     if (
       state.studentLevelProgressByScript[scriptId] &&
-      state.scriptDataByScript[scriptId]
+      state.scriptDataByScript[scriptId] &&
+      state.currentView !== ViewType.STANDARDS
     ) {
       return;
     }
@@ -371,6 +376,12 @@ export const loadScript = (scriptId, sectionId) => {
         ) {
           dispatch(fetchStandardsCoveredForScript(scriptId));
           dispatch(fetchStudentLevelScores(scriptId, sectionId));
+        }
+        if (
+          state.currentView === ViewType.STANDARDS &&
+          !scriptData.hasStandards
+        ) {
+          dispatch(setCurrentView(ViewType.SUMMARY));
         }
       });
 
@@ -391,6 +402,8 @@ export const loadScript = (scriptId, sectionId) => {
               getStudentLevelResult(dataByStudent)
             )
           );
+          dispatch(addStudentTimestamps(scriptId, data.student_timestamps));
+
           dispatch(
             addStudentLevelPairing(scriptId, getStudentPairing(dataByStudent))
           );
@@ -404,6 +417,27 @@ export const loadScript = (scriptId, sectionId) => {
   };
 };
 
+export const processScriptAndProgress = scriptId => {
+  return (dispatch, getState) => {
+    const state = getState().sectionProgress;
+    const studentLevelProgress = state.studentLevelProgressByScript[scriptId];
+    const studentLevelPairing = state.studentLevelPairingByScript[scriptId];
+    const scriptData = state.scriptDataByScript[scriptId];
+    let levelsByLessonByStudent = {};
+    for (const studentId of Object.keys(studentLevelProgress)) {
+      levelsByLessonByStudent[studentId] = levelsByLesson({
+        stages: scriptData.stages,
+        levelProgress: studentLevelProgress[studentId],
+        levelPairing: studentLevelPairing[studentId],
+        currentLevelId: null
+      });
+    }
+
+    dispatch(addLevelsByLesson(scriptId, levelsByLessonByStudent));
+    dispatch(finishLoadingProgress());
+  };
+};
+
 export function getStudentPairing(dataByStudent) {
   return getInfoByStudentByLevel(
     dataByStudent,
@@ -414,6 +448,9 @@ export function getStudentPairing(dataByStudent) {
 export function getStudentLevelResult(dataByStudent) {
   return getInfoByStudentByLevel(dataByStudent, getLevelResult);
 }
+
+export const tooltipIdForStudent = studentId =>
+  `tooltipIdForStudent${studentId}`;
 
 function getInfoByStudentByLevel(dataByStudent, infoFromLevelData) {
   return _.mapValues(dataByStudent, studentData =>
