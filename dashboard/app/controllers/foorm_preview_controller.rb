@@ -14,7 +14,7 @@ class FoormPreviewController < ApplicationController
         formQuestions: form_questions,
         formName: name,
         formVersion: latest_version,
-        submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
+        submitApi: "/none",
         submitParams: {
           user_id: current_user&.id,
           pd_workshop_id: Pd::Workshop.first.id
