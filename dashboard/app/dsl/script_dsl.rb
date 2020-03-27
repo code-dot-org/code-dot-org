@@ -34,6 +34,7 @@ class ScriptDSL < BaseDSL
     @editor_experiment = nil
     @project_sharing = nil
     @curriculum_umbrella = nil
+    @tts = false
   end
 
   integer :id
@@ -50,6 +51,7 @@ class ScriptDSL < BaseDSL
   boolean :has_lesson_plan
   boolean :is_stable
   boolean :project_sharing
+  boolean :tts
 
   string :wrapup_video
   string :script_announcements
@@ -124,7 +126,8 @@ class ScriptDSL < BaseDSL
       pilot_experiment: @pilot_experiment,
       editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
-      curriculum_umbrella: @curriculum_umbrella
+      curriculum_umbrella: @curriculum_umbrella,
+      tts: @tts
     }
   end
 
@@ -301,6 +304,7 @@ class ScriptDSL < BaseDSL
     s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
+    s << 'tts true' if script.tts
 
     s << '' unless s.empty?
     s << serialize_stages(script)

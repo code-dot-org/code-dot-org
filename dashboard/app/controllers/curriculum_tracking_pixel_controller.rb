@@ -19,7 +19,7 @@ class CurriculumTrackingPixelController < ApplicationController
       # ["csf-18", "pre-express", "11"]
       # ["es-mx", "csf-1718", "coursec", "10"]
 
-      non_en = split_url[0].length == 5 && !!split_url[0].match(/\S{2}-\S{2}/)
+      non_en = split_url[0]&.length == 5 && !!split_url[0].match(/\S{2}-\S{2}/)
 
       locale = non_en ? split_url.shift : "en-us"
 
