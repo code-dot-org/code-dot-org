@@ -548,18 +548,18 @@ level 'Level 3'
       level 'Level 2'
     DSL
     expected = DEFAULT_PROPS.merge(
-        {
-            stages: [
-                {
-                    stage: "Stage1",
-                    visible_after: '2020-04-01 08:00:00 -0700',
-                    scriptlevels: [
-                        {stage: "Stage1", levels: [{name: "Level 1"}]},
-                        {stage: "Stage1", levels: [{name: "Level 2"}]},
-                    ]
-                }
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            visible_after: '2020-04-01 08:00:00 -0700',
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2"}]},
             ]
-        }
+          }
+        ]
+      }
     )
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')

@@ -45,6 +45,16 @@ class ScriptsController < ApplicationController
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
     sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
+
+    if current_user.levelbuilder?
+      @script.stages.each do |stage|
+        next unless stage.visible_after
+
+        formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
+        num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
+        flash[:notice] = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+      end
+    end
   end
 
   def index
