@@ -26,7 +26,7 @@ module Cdo::CloudFormation
     # Hard-coded constants and default values.
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
-    INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.2xlarge'
+    INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '15.2.20'
     DOMAIN = 'cdn-code.org'
@@ -51,13 +51,13 @@ module Cdo::CloudFormation
       options = @options = OpenStruct.new(options)
 
       # Various option defaults.
-      options.commit        ||= `git ls-remote origin #{branch}`.split.first
       options.frontends     ||= rack_env?(:production)
       options.database      ||= [:staging, :test, :levelbuilder].include?(rack_env)
       options.load_balancer ||= !rack_env?(:adhoc) || options.frontends
       options.alarms        ||= !rack_env?(:adhoc)
       options.cdn_enabled   ||= !rack_env?(:adhoc)
       options.branch        ||= (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+      options.commit        ||= `git ls-remote origin #{branch}`.split.first
       options.domain        ||= DOMAIN
 
       stack_name << "-#{branch}" if stack_name == 'adhoc'
