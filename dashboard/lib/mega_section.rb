@@ -3,7 +3,7 @@ include FactoryGirl::Syntax::Methods
 class MegaSection
   SAMPLE_TEACHER_EMAIL = 'mega_section_teacher@code.org'.freeze
   SAMPLE_TEACHER_PASSWORD = 'mega_section_password'.freeze
-  SAMPLE_TEACHER_NAME = 'MegaSection Teacher'.freeze
+  SAMPLE_TEACHER_NAME = 'MegaSection_Teacher'.freeze
   SAMPLE_STUDENT_NAME_FORMAT = 'TestStudent%s MegaSection'.freeze
   SAMPLE_STUDENT_NAME_REGEX = /TestStudent\d* MegaSection/
   SAMPLE_STUDENT_PARENT_EMAIL = 'mega_section_parent@code.org'.freeze
@@ -30,12 +30,23 @@ class MegaSection
 
     mid_time = Time.now
 
-    # Create a large section for CSF, Course A 2019
+    # Create a large section for CSF
+    # Assign and generate progress for Course A 2019 , which does have
+    # standards associations, so we DO fetch teacher scores when we query for
+    # progress.
+    # Generate progress for Course A 2018, which does NOT have
+    # standards associations, so we do NOT (currently) fetch teacher scores
+    # when we query for progress.
     create_section(
-      teacher: teacher, name: 'CSF - Mega Section',
-      login_type: Section::LOGIN_TYPE_PICTURE, grade: 2, age_min: 7,
-      age_max_inclusive: 9, script_name: 'coursea-2019', num_students: 250,
-      use_imperfect_results: true
+      teacher: teacher,
+      login_type: Section::LOGIN_TYPE_PICTURE,
+      grade: 2,
+      age_min: 7,
+      age_max_inclusive: 9,
+      num_students: 250,
+      name: 'CSF - Mega Section',
+      script_name_1: 'coursea-2019',
+      script_name_2: 'coursea-2018',
     )
 
     puts "Created section and progress in #{Time.now - mid_time} seconds"
@@ -84,16 +95,17 @@ class MegaSection
   #  :grade - grade for section
   #  :age_min - minimum age to generate for students
   #  :age_max_inclusive - max age (inclusive) to generate for students
-  #  :script_name - name of script to assign for section
+  #  :script_name_1 - name of script to assign for section
+  #  :script_name_2 - name of additional script to generate progress for
   #  :num_students - number of students to generate for section
-  #  :use_imperfect_results - if true, generate some less than perfect
-  #    results. (CSF allows imperfect results, CSD and CSP do not.)
   def self.create_section(options)
-    script = Script.get_from_cache(options[:script_name])
-    script_levels = script.script_levels.includes(:levels)
+    script_1 = Script.get_from_cache(options[:script_name_1])
+    script_2 = Script.get_from_cache(options[:script_name_2])
+    script_levels_1 = script_1.script_levels.includes(:levels)
+    script_levels_2 = script_2.script_levels.includes(:levels)
 
     # Create the section
-    section = create :section, script: script,
+    section = create :section, script: script_1,
       **options.slice(:teacher, :name, :login_type, :grade)
 
     # Create students
@@ -124,11 +136,31 @@ class MegaSection
       # Add student to section
       followers << build(:follower, section: section, student_user: student_user)
 
-      # Create progress for this student on each level
-      script_levels.each do |script_level|
+      # Create progress for this student on each level of assigned script.
+      script_levels_1.each do |script_level|
         user_levels << build(:user_level,
           user: student_user,
-          script_id: script.id,
+          script_id: script_1.id,
+          level_id: script_level.levels.first.id,
+          attempts: 1,
+          best_result: ActivityConstants::BEST_PASS_RESULT
+        )
+
+        # Add teacher feedback for each level.
+        teacher_feedbacks << build(:teacher_feedback,
+          student_id: student_user.id,
+          teacher_id: section.teacher.id,
+          script_level_id: script_level.id,
+          level_id: script_level.levels.first.id,
+          comment: tiny_lipsum
+        )
+      end
+
+      # Create progress for this student on each level of additional script.
+      script_levels_2.each do |script_level|
+        user_levels << build(:user_level,
+          user: student_user,
+          script_id: script_2.id,
           level_id: script_level.levels.first.id,
           attempts: 1,
           best_result: ActivityConstants::BEST_PASS_RESULT
