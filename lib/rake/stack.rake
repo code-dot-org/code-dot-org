@@ -11,7 +11,8 @@ namespace :stack do
         stack_name: ENV['STACK_NAME'],
         frontends: ENV['FRONTENDS'],
         domain: ENV['DOMAIN'],
-        cdn_enabled: ENV['CDN_ENABLED']
+        cdn_enabled: ENV['CDN_ENABLED'],
+        commit: ENV['COMMIT']
       )),
       log: CDO.log,
       verbose: ENV['VERBOSE'],
