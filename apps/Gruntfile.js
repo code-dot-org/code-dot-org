@@ -527,8 +527,6 @@ describe('entry tests', () => {
     'courses/show': './src/sites/studio/pages/courses/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
-    'devise/registrations/_old_sign_up_form':
-      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
     essential: './src/sites/studio/pages/essential.js',
