@@ -18,7 +18,7 @@ MARKDOWN_OPTIONS = {
 class InterimMarkdownHandler
   def initialize
     @old_parser = Redcarpet::Markdown.new(Redcarpet::Render::HTML, MARKDOWN_OPTIONS)
-    @new_parser = Redcarpet::Markdown.new(Cdo::Markdown::Renderer)
+    @new_parser = Redcarpet::Markdown.new(Cdo::Markdown::Renderer, Cdo::Markdown::Renderer::OPTIONS)
   end
 
   def call(template)
