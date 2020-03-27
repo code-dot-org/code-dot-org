@@ -91,8 +91,18 @@ level 'CSD Games Properties practice_2020', progression: 'Sprite Properties'
 level 'CSD Games properties assessment_2020', progression: 'Sprite Properties', assessment: true
 level 'CSD Games Properties challenge_2020', named: true
 
-stage 'Text and Captioned Scenes', flex_category: 'csd3_1'
+stage 'Text', flex_category: 'csd3_1'
 level 'CSD U3L09 TFMD_2020', named: true
+level 'CSD U3 Scene Example_2018_2020', named: true
+level 'CSD U3 Sprites text_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites text debug_2018_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene drawing_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene sprites_2020', progression: 'Making Scenes', assessment: true
+level 'CSD U3 Sprites scene text_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene challenge_2020', progression: 'Challenge'
+
+stage 'Mini-Project: Captioned Scenes', flex_category: 'csd3_1'
+level 'CSD U3L09a TFMD_2020', named: true
 level 'CSD U3 Scene Example_2018_2020', named: true
 level 'CSD U3 Sprites text_2020', progression: 'Making Scenes'
 level 'CSD U3 Sprites text debug_2018_2020', progression: 'Making Scenes'
@@ -114,9 +124,6 @@ level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2020', progression: 'Spri
 level 'CSD U3 Draw Loop Plugged update your scene_2020', progression: 'Animate Your Scene', assessment: true
 level 'CSD U3 L7 Freeplay_2020', progression: 'Challenge'
 
-stage 'The Counter Pattern Unplugged', flex_category: 'csd3_1'
-level 'CSD U3L11 TFMD_2020', named: true
-
 stage 'Sprite Movement', flex_category: 'csd3_1'
 level 'CSD U3L12 TFMD_2020', named: true
 level 'CSD: Animating Sprite Movement_2020', named: true
@@ -135,8 +142,15 @@ level 'CSD sprite movement challenge_2020', progression: 'Challenge'
 level 'CSD U3 Movement Fish challenge_2020', progression: 'Challenge'
 level 'CSD U3 L9 Freeplay_2020', progression: 'Challenge'
 
-stage 'Booleans Unplugged', flex_category: 'csd3_1'
+stage 'Mini-Project: Animation', flex_category: 'csd3_1'
 level 'CSD U3L13 TFMD_2020', named: true
+level 'CSD U3 Scene Example_2018_2020', named: true
+level 'CSD U3 Sprites text_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites text debug_2018_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene drawing_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene sprites_2020', progression: 'Making Scenes', assessment: true
+level 'CSD U3 Sprites scene text_2020', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene challenge_2020', progression: 'Challenge'
 
 stage 'Conditionals', flex_category: 'csd3_1'
 level 'CSD U3L14 TFMD_2020', named: true
@@ -164,7 +178,7 @@ level 'CSD U3 Direction Animations_2018_2020', progression: 'Keyboard Input'
 level 'CSD U3 Keyboard Input Challenge_2018_2020', progression: 'Challenge'
 level 'CSD U3 L12 Freeplay_2020', progression: 'Challenge'
 
-stage 'Other Forms of Input', flex_category: 'csd3_1'
+stage 'Mouse Input', flex_category: 'csd3_1'
 level 'CSD U3L16 TFMD_2020', named: true
 level 'CSD U3 if else predict_2020', named: true
 level 'CSD U3 - Conditionals Video_2020', named: true
