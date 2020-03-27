@@ -145,8 +145,8 @@ Test.prototype.updateView = function() {
 
 Test.prototype.s3Key = function() {
   const featureRegex = /features\/(.*)\.feature/i;
-  let result = featureRegex.exec(this.feature);
-  let featureName = result[1].replace("/", "_");
+  const result = featureRegex.exec(this.feature);
+  const featureName = result[1].replace(/\//g, "_");
   return `${S3_PREFIX}/${this.browser}_${featureName}${S3_KEY_SUFFIX}`;
 };
 
