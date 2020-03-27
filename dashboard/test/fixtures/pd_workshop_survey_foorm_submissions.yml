@@ -1,0 +1,19 @@
+foorm_submission_day_0_1:
+  id: 1
+  foorm_submission_id: 1
+  user_id: 1
+  pd_session_id: 1
+  pd_workshop_id: 1
+  day: 0
+  created_at: 2020-03-26 21:58:28
+  updated_at: 2020-03-26 21:58:28
+
+foorm_submission_day_0_2:
+  id: 2
+  foorm_submission_id: 2
+  user_id: 2
+  pd_session_id: 1
+  pd_workshop_id: 1
+  day: 0
+  created_at: 2020-03-26 21:58:28
+  updated_at: 2020-03-26 21:58:28
