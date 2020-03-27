@@ -1,0 +1,8 @@
+hideable_stages true
+
+stage 'Episode 2 - Building Things with Mark Cuban & Lyndsey Scott'
+level 'CodeBreak Episode 2 Placeholder', progression: 'Coming Soon!'
+level 'Episode 2 Instructions', progression: 'Practice'
+level 'Episode 2 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E02 Challenges', progression: 'Challenges'
+level 'Episode 2 Share', progression: 'Share Your Work!'
