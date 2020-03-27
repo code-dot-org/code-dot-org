@@ -91,11 +91,20 @@ class ScriptDSL < BaseDSL
     @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
-    @stage_visible_after = properties[:visible_after]
+    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
     @stage_extras_disabled = nil
+  end
+
+  def determine_visible_after_time(visible_after_value)
+    current_time = Time.now
+    raw_diff_to_wed = 3 - current_time.wday
+    diff_to_wed = raw_diff_to_wed > 0 ? raw_diff_to_wed : 7 + raw_diff_to_wed
+    next_wednesday = current_time + diff_to_wed.day
+    next_wednesday_8_am_pst = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
+    visible_after_value == '' ? next_wednesday_8_am_pst : visible_after_value
   end
 
   def parse_output
