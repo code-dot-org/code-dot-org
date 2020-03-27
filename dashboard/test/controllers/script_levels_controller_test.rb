@@ -227,11 +227,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'project template level sets data tables when defined' do
     template_level = create :applab
     template_level.data_tables = '{"key":"expected"}'
+    template_level.data_properties = '{"prop":"expected"}'
     template_level.save!
 
     real_level = create :applab
     real_level.project_template_level_name = template_level.name
     real_level.data_tables = '{"key":"wrong"}'
+    real_level.data_properties = '{"prop":"wrong"}'
     real_level.save!
 
     sl = create :script_level, levels: [real_level]
@@ -241,6 +243,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # data tables comes from project_level not real_level
     level_options = assigns(:level).blockly_level_options
     assert_equal '{"key":"expected"}', level_options['dataTables']
+    assert_equal '{"prop":"expected"}', level_options['dataProperties']
   end
 
   test 'project template level does not set data tables when not defined' do
@@ -250,6 +253,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level = create :applab
     real_level.project_template_level_name = template_level.name
     real_level.data_tables = '{"key":"real"}'
+    real_level.data_properties = '{"prop":"real"}'
     real_level.save!
 
     sl = create :script_level, levels: [real_level]
@@ -259,6 +263,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # data tables comes from real_level not project_level
     level_options = assigns(:level).blockly_level_options
     assert_equal '{"key":"real"}', level_options['dataTables']
+    assert_equal '{"prop":"real"}', level_options['dataProperties']
   end
 
   test 'project template level sets start animations when defined' do
