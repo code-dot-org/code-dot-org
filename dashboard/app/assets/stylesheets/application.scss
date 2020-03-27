@@ -3310,6 +3310,11 @@ h2.danger {
   }
 }
 
+.foorm-adjust-page-title {
+  font-family: "Gotham 5r", sans-serif !important;
+  font-size: 22px !important;
+}
+
 .foorm-adjust-radio {
   margin-top: -4px !important;
 }
@@ -3334,7 +3339,7 @@ h2.danger {
   }
 }
 
-.foorm-complete-button {
+.foorm-button {
   font-size: 100% !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
@@ -3342,4 +3347,8 @@ h2.danger {
   padding-right: 20px !important;
   border-radius: 5px !important;
   background-color: $orange !important;
+}
+
+.foorm-button-right {
+  float: right;
 }
