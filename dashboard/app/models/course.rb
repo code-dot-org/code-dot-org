@@ -373,7 +373,7 @@ class Course < ApplicationRecord
 
     if user.teacher?
       alternates.each do |cs|
-        return cs if SingleUserExperiment.enabled?(user: user, experiment_name: cs.experiment_name)
+        return cs if Experiment.get_all_enabled(user: user, experiment_name: cs.experiment_name).any?
       end
     end
 
