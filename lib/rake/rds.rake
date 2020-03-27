@@ -9,11 +9,12 @@ namespace :rds do
   # bundle exec rake rds:clone_cluster SOURCE_CLUSTER_ID=my-favorite-cluster
   desc 'Clone SOURCE_CLUSTER_ID to optional CLONE_CLUSTER_ID with optional INSTANCE_TYPE.'
   task :clone_cluster do
-    Cdo::RDS.clone_cluster(
+    options = {
       source_cluster_id: ENV['SOURCE_CLUSTER_ID'],
       clone_cluster_id: ENV['CLONE_CLUSTER_ID'],
       instance_type: ENV['INSTANCE_TYPE']
-    )
+    }
+    Cdo::RDS.clone_cluster(options.compact)
   end
 
   desc 'Delete CLUSTER_ID'
