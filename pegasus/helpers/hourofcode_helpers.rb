@@ -39,9 +39,6 @@ def hoc_s(id, markdown: false, locals: nil)
 
   if markdown
     type = markdown == :inline ? :inline_md : :safe_md
-    if type == :inline_md
-      puts "rendering #{string.inspect} inline"
-    end
     string = @actionview.render(inline: string, type: type)
   end
 
