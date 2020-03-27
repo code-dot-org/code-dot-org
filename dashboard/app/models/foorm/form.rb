@@ -49,6 +49,8 @@ class Foorm::Form < ActiveRecord::Base
 
   def self.get_questions_and_latest_version_for_name(form_name)
     latest_version = Foorm::Form.where(name: form_name).maximum(:version)
+    return nil if latest_version.nil?
+
     form = Foorm::Form.where(name: form_name, version: latest_version).first
 
     # Substitute any questions from the library.
