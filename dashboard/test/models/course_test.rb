@@ -253,6 +253,7 @@ class CourseTest < ActiveSupport::TestCase
         @alternate_course_script,
         @course.select_course_script(@other_teacher, @default_course_script)
       )
+
       experiment.destroy
     end
 
@@ -298,6 +299,31 @@ class CourseTest < ActiveSupport::TestCase
         @default_course_script,
         @course.select_course_script(@student, @default_course_script)
       )
+    end
+
+    test 'scripts_for_user query counts, teacher in experiment' do
+      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
+
+      assert_queries(9) do
+        @course.scripts_for_user(@other_teacher)
+      end
+      experiment.destroy
+    end
+
+    test 'scripts_for_user query counts, teacher in experiment, additional alternate script' do
+      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
+
+      create :course_script,
+        course: @course,
+        script: create(:script, name: 'script3a'),
+        position: 3,
+        default_script: @script3,
+        experiment_name: 'my-experiment'
+
+      assert_queries(10) do
+        @course.scripts_for_user(@other_teacher)
+      end
+      experiment.destroy
     end
   end
 
