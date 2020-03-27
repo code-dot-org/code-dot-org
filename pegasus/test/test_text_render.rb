@@ -1,4 +1,5 @@
 require_relative '../../lib/cdo/pegasus'
+require_relative '../../lib/cdo/pegasus/text_render'
 require 'minitest/autorun'
 
 class TextRenderTest < Minitest::Test
