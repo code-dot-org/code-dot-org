@@ -98,13 +98,19 @@ class ScriptDSL < BaseDSL
     @stage_extras_disabled = nil
   end
 
+  # If visible_after value is blank default to next wednesday at 8am PST
+  # Otherwise use the supplied time
   def determine_visible_after_time(visible_after_value)
-    current_time = Time.now
-    raw_diff_to_wed = 3 - current_time.wday
-    diff_to_wed = raw_diff_to_wed > 0 ? raw_diff_to_wed : 7 + raw_diff_to_wed
-    next_wednesday = current_time + diff_to_wed.day
-    next_wednesday_8_am_pst = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
-    visible_after_value == '' ? next_wednesday_8_am_pst : visible_after_value
+    if visible_after_value == ''
+      current_time = Time.now
+      raw_diff_to_wed = 3 - current_time.wday
+      # Make sure it is the next wednesday not the one that just passed
+      diff_to_next_wed = raw_diff_to_wed > 0 ? raw_diff_to_wed : 7 + raw_diff_to_wed
+      next_wednesday = current_time + diff_to_next_wed.day
+      visible_after_value = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
+    end
+
+    visible_after_value
   end
 
   def parse_output
