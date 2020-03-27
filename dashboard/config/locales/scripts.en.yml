@@ -14732,6 +14732,10 @@ en:
               name: 'Mini-Project: Animation'
             Mouse Input:
               name: Mouse Input
+            'Mini-Project: Side Scroller':
+              name: 'Mini-Project: Side Scroller'
+            'Mini-Project: Platform Jumper':
+              name: 'Mini-Project: Platform Jumper'
         moneppo-1:
           stages: {}
         coursea-2020:

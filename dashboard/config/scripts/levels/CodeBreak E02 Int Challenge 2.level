@@ -188,11 +188,12 @@
     "display_name": "7-12 Intermediate Challenge",
     "bubble_choice_description": "Build your app in App Lab using your Paper Prototype with a full toolbox. ",
     "libraries_enabled": "false",
-    "widget_mode": "false"
+    "widget_mode": "false",
+    "thumbnail_url": "https://images.code.org/e86a814a7f48d55650568a551d4dcba6-image-1585343732458.gif"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-31 16:45:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-04-11 15:13:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:29:30 +0000\",\"changed\":[\"code_functions\",\"short_instructions\",\"long_instructions\",\"submittable\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 16:45:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-04-11 15:13:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:29:30 +0000\",\"changed\":[\"code_functions\",\"short_instructions\",\"long_instructions\",\"submittable\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 21:15:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

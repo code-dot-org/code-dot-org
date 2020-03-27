@@ -220,6 +220,9 @@ level 'CSD U3 abstraction tumbleweed_2020', progression: 'Side Scroller'
 level 'CSD U3 abstraction looping_2020', progression: 'Side Scroller'
 level 'CSD U3 L15 Freeplay_2020', progression: 'Challenge'
 
+stage 'Mini-Project: Side Scroller', flex_category: 'csd3_1'
+level 'CSD U3L19 TFMD_2020', named: true
+
 stage 'Collision Detection', flex_category: 'csd3_2'
 level 'CSD U3L19 TFMD_2020', named: true
 level 'CSD U3 collisions car intro_2020', named: true
@@ -267,6 +270,9 @@ level 'CSD U3 collisions flyman displace coin_2020', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman change colliders_2020', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman make it your own_2020', progression: 'Flyer Game', assessment: true
 level 'CSD U3 L18 Freeplay_2020', progression: 'Challenge'
+
+stage 'Mini-Project: Platform Jumper', flex_category: 'csd3_1'
+level 'CSD U3L19 TFMD_2020', named: true
 
 stage 'Functions', flex_category: 'csd3_2'
 level 'CSD U3L22 TFMD_2020', named: true
