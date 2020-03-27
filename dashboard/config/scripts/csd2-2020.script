@@ -37,6 +37,8 @@ level 'CSD Web Headings challenge_2020', named: true
 
 stage 'Mini-Project: HTML Web Page', flex_category: 'csd2_1'
 level 'CSD U2L04a TFMD_2020', named: true
+level 'CSD HTML project Review', progression: 'HTML Review'
+level 'CSD HTML project Lists', progression: 'HTML Lists'
 
 stage 'Digital Footprint', flex_category: 'csd2_1'
 level 'CSD U2L04 TFMD_2020', named: true
