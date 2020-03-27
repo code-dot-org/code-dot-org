@@ -45,9 +45,9 @@ We're working to give *every* student the opportunity to learn computer science 
 <img src="/images/fit-500/marketing/givewithbing-2020-final.png" style="border-radius: 0px; margin-left: 0px;">
 
 ## Give with Bing
-Support computer science students through Give with Bing. Join Microsoft Rewards, and your Bing searches will earn Rewards points that are automatically donated directly to Code.org.
+Support computer science students through Give with Bing. Join Microsoft Rewards, choose Code.org and your Bing searches will earn Rewards points that are automatically donated directly to Code.org.
 
-[<button>Join now</button>](https://www.bing.com/?form=MJ11YK&cid=840-460858543)
+[<button>Join now</button>](https://aka.ms/give-to-codeorg)
 
 ## Translate our tutorials
 Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!
