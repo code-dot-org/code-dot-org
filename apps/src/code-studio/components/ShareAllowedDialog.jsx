@@ -477,7 +477,10 @@ class ShareAllowedDialog extends React.Component {
                       </div>
                       <div style={styles.sendToPhoneRight}>
                         <label>{i18n.scanQRCode()}</label>
-                        <QRCode value={this.props.shareUrl} size={90} />
+                        <QRCode
+                          value={this.props.shareUrl + '?qr=true'}
+                          size={90}
+                        />
                       </div>
                     </div>
                     <div style={{clear: 'both'}} />
