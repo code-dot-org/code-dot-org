@@ -12,12 +12,17 @@
   csedweek_dates: "Du 3 au 9 décembre 2018"
   csedweek_banner_hoc: 'L’<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Heure de Code</a> arrive. Appel à tous les enseignants et organisateurs -<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifiez votre Heure de Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Êtes-vous un professeur d’informatique&#160;? Voir les autres ressources de la Semaine de l’enseignement de l’informatique</a>'
+  csedweek_banner_teachers_text: "Êtes-vous un professeur d’informatique ? Voir les autres ressources de la Semaine de l’enseignement de l’informatique"
   n_have_learned_an_hoc: "<h1>Essayez une</h1><h2>Heure de Code</h2><h3># servi</h3>"
+  try_hoc_num_served: "<h1>Essayez une</h1><h2> Heure de Code</h2><h3>%{num} ont été formés</h3>"
+  try_hoc_num_served_markdown: "# Essayez une\\n\\n## Heure de Code\\n\\n### %{num} ont été formés"
   anybody_can_learn: "Tout le monde peut apprendre."
   learn_now: "Apprenez maintenant"
   petition_message: "Chaque élève de chaque école devrait avoir la possibilité d'apprendre l'informatique."
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres participants.'
+  petition_sign_message_num: "Si tu es d'accord, ajoute ton nom et rejoins notre boite d'information avec les %{num} d'autres."
   petition_join_others: 'Rejoignez # les autres'
+  petition_join_others_num: "Rejoindre les %{num} autres"
   name: "Nom"
   email: "E-mail"
   zipcode: "Code postal ou pays"
@@ -42,6 +47,7 @@
   hoc2014_support: "Soutenez-la &#x25BE;"
   hoc2014_whatishoc: "Qu'est-ce que l'Heure de Code&#160;?"
   csedweek_map_header: "# Semaine de l'enseignement de l’informatique / les évènements de l’Heure de Code dans le monde entier"
+  csedweek_map_header_num: "%{num} Semaine de l'enseignement de l’informatique / les événements de l’Heure de Code dans le monde entier"
   csedweek_map_signup: "Inscrivez votre évènement"
   csedweek_map_search_placeholder: "Recherchez les évènements Heure de Code"
   csedweek_map_search_search: "Rechercher"
@@ -300,6 +306,7 @@
   homepage_action_text_signpetition: "Signez la pétition"
   homepage_action_text_wincelebritychat: "Gagnez un chat avec une célébrité"
   homepage_signpetition_dropdown: "Je suis d'accord ▾"
+  homepage_signpetition_dropdown_text: "J'accepte"
   homepage_diversity_pledge: "Prendre l'engagement de diversité"
   homepage_banner_text_prizes: 'L’Heure de Code revient du 7 au 13 décembre.'
   homepage_banner_link_prizes: 'Rejoins le plus grand évènement d''apprentissage de l’histoire.'
@@ -462,7 +469,7 @@
   sports_athlete_Chris: "Chris Bosh, médaillé d'Or olympique et Champion de la NBA, Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, champion olympique et Champion de la NBA, les Mavericks de Dallas"
   watch_inspirational_videos: "Avant de commencer, regarde une de ces vidéos pour t'inspirer"
-  video_title_cs_is_everything: "L'informatique est en train de tout changer"
+  video_title_cs_is_everything: "L'informatique est en Train de Tout Changer"
   video_title_inspire_girl: "Encourager une fille"
   video_title_cs_intro: "Introduction à la science de l'informatique"
   video_title_schools_dont_teach: "Ce que la plupart des écoles n'enseignent pas"
@@ -930,7 +937,7 @@
   hoc-encryption_name: Cryptage simple
   text-compression_name: Compression de texte
   applab_name: "Labo des applis"
-  gamelab_name: "Labo des jeux"
+  gamelab_name: "Labo des Jeux"
   basketball_name: "Faire un match de basket"
   sports_name: "Coder ton propre jeu de sports"
   applab_gradelevel: "Âge recommandé: 13 ans et plus"
@@ -1351,15 +1358,15 @@
   sphero_beyond_longdescription: "Que vous soyez un éducateur ou un parent, les leçons SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots, tout en affûtant leurs compétences en mathématiques et en sciences."
   compatibility_hide_this_warning: "Cacher l'avertissement"
   compatibility_unsupported_browser: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
-  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
+  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue."
   flappy_shortcode: "battre des ailes"
   header_home: "Accueil"
-  header_my_dashboard: "Mon tableau de bord"
+  header_my_dashboard: "Mon Tableau de Bord"
   header_courses: "Cours"
   header_course_catalog: "Catalogue des cours"
   header_project_gallery: "Projets"
   header_sections: "Sections"
-  header_professional_learning: "Apprentissage professionnel"
+  header_professional_learning: "Apprentissage Professionnel"
   header_educate_overview: "Aperçu enseignant"
   header_educate_elementary: "École primaire"
   header_educate_middle: "Collège"
@@ -1388,7 +1395,7 @@
   header_teacher_community: "Communauté des enseignants"
   header_help_support: 'Aide et support '
   header_report_bug: "Rapporter un problème"
-  header_tutorials: "Tutoriels"
+  header_tutorials: "Didacticiels"
   app_lab_documentation: "Documentation du Laboratoire d'Applications"
   app_lab_tutorials: "Tutoriels sur le Laboratoire d'Applications"
   game_lab_documentation: "Documentation du Laboratoire de Jeux"
@@ -1405,7 +1412,7 @@
   user_header_create: 'Créer '
   user_header_applab: 'Labo des applis '
   user_header_artist: 'Artiste '
-  user_header_gamelab: "Labo des jeux"
+  user_header_gamelab: "Labo des Jeux"
   user_header_playlab: "Labo de jeux"
   user_header_dance: "Soirée Dansante"
   user_header_minecraft: "Minecraft"
@@ -1448,7 +1455,7 @@
   applab_tile_teacher_guide: "Voir le guide de l'enseignant"
   aquatic_name: 'Minecraft : Voyage Aquatique'
   account_sign_up_email_opt_in: "Pouvons-nous vous envoyer des e-mails d’information sur nos formations, des opportunités près de chez vous ou d’autres brèves dans le domaine informatique?"
-  account_sign_up_child_accept_terms: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
+  account_sign_up_child_accept_terms: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal d’utiliser les services de Code.org."
   hoc_overview_dance_title: "Soirée Dansante"
   hoc_overview_dance_subtitle: "Codez une Soirée Dansante à partager avec vos amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !"
   hoc_overview_dance_2019_subtitle: "Codez une Soirée Dansante à partager avec vos amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, et 34 autres !"
@@ -1506,7 +1513,7 @@
   hoc2018_mc_video_5min: "5 minutes"
   hoc2018_mc_video_title_steph_curry: "Heure de Code avec Steph Curry"
   hoc2018_mc_video_title_sports: "Persévère. Tout le monde peut apprendre."
-  hoc2018_mc_video_title_cs_is_everything: "L'informatique est en train de tout changer"
+  hoc2018_mc_video_title_cs_is_everything: "L'informatique est en Train de Tout Changer"
   hoc2018_mc_video_title_inspire_girl: "Encourager une fille"
   hoc2018_mc_video_title_cs_intro: "Introduction à la science de l'informatique"
   hoc2018_mc_video_title_schools_dont_teach: "Ce que la plupart des écoles n'enseignent pas"
@@ -1523,9 +1530,9 @@
   hoc2018_mc_back: "Minecraft est de retour pour une toute nouvelle activité de l'Heure de Code!"
   hoc2018_mc_back_journey: "Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code."
   hoc2018_mc_teacher_guide: "Voir le guide de l'enseignant"
-  hoc2018_mc_minecraft_education: "Minecraft version éducation"
+  hoc2018_mc_minecraft_education: "Minecraft Éducation"
   hoc2018_mc_continue_learning: "Continuer à apprendre avec Minecraft."
-  hoc2018_mc_go_to_mc_education: "Allez sur Minecraft version éducation"
+  hoc2018_mc_go_to_mc_education: "Aller sur Minecraft Éducation"
   hoc2018_mc_short_description: "Utilise ta créativité et tes compétences de résolution de problèmes pour trouver des trésors et explorer des mondes sous-marins avec la puissance de la programmation."
   hoc2018_mc_short_description_shorter: "Utilisez votre créativité et vos compétences de résolution de problèmes pour explorer et construire des mondes sous-marins avec la programmation."
   hoc2018_mc_journey: "Voyage à travers Minecraft avec la programmation."
@@ -1585,3 +1592,4 @@
   page_not_found_button: "Retourner à la page d’accueil"
   hoc2018_mc_with_microsoft: "En partenariat avec"
   hoc2018_mc_thank_microsoft: "Nous remercions Microsoft du soutien accordé à notre vision et mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique et les compétences nécessaires pour réussir au XXIe siècle."
+  hoc2019_mc_more_coding_resources: "Plus de Ressources pour Coder\n"

@@ -20,8 +20,8 @@ fr-FR:
       AppLab Intro 7 - thisOrThatAddScreen: Ceci ou cela
       AppLab Intro 7 - thisOrThatPersonalize: Ceci ou cela
       AppLab Intro 7 - thisOrThatSetScreen: Ceci ou cela
-      CDEF_video_SpritesInAction: Comment créer un sprite
-      CDEF_video_SpritesInAction_2019: Comment créer un sprite
+      CDEF_video_SpritesInAction: Comment Créer un Lutin
+      CDEF_video_SpritesInAction_2019: Comment Créer un Lutin
       CSD Board Buttons Map: Boutons et interrupteur
       CSD Board Buttons Map_2018: Boutons et interrupteur
       CSD Board Buttons Map_2019: Boutons et interrupteur
@@ -631,10 +631,10 @@ fr-FR:
       'Course E: Artist Project_2019': Cours E Projet Artistique
       'Course F: Artist Project_2018': Cours E Projet Artistique
       'Course F: Artist Project_2019': Cours E Projet Artistique
-      CourseEF_video_IntroSpriteLab: Voici Sprite Lab
-      CourseEF_video_IntroSpriteLab_2019: Voici Sprite Lab
-      CourseEF_video_MakeSprite: Comment créer un sprite
-      CourseEF_video_MakeSprite_2019: Comment créer un sprite
+      CourseEF_video_IntroSpriteLab: Voici le Labo du Lutin
+      CourseEF_video_IntroSpriteLab_2019: Voici le Labo du Lutin
+      CourseEF_video_MakeSprite: Comment Créer un Lutin
+      CourseEF_video_MakeSprite_2019: Comment Créer un Lutin
       Dance_Party_extras_alternate_2019: Va et viens
       Dance_Party_extras_battle: Équipes de danse
       Dance_Party_extras_battle_2019: Équipes de danse
@@ -690,10 +690,13 @@ fr-FR:
       Oceans_Video_Training_Data: 'Vidéo : Données de formation'
       The Accelerometer_2018: L’accéléromètre
       The Accelerometer_2019: L’accéléromètre
-      courseA_video_Stevie: Stevie et le grand projet
-      courseA_video_Stevie_2018: Stevie et le grand projet
-      courseB_video_Unspotted: Bugs passés inaperçus
-      courseB_video_Unspotted_2018: Bugs passés inaperçus
+      courseA_video_Stevie: Stevie et le Grand Projet
+      courseA_video_Stevie_2018: Stevie et le Grand Projet
+      courseB_video_Unspotted: Les Bugs Passés Inaperçus
+      courseB_video_Unspotted_2018: Les Bugs Passés Inaperçus
+      courseF_artist_for1: Jeu Libre avec des Boucles For (Début)
+      courseF_artist_for1_2018: Jeu Libre avec des Boucles For (Début)
+      courseF_artist_for1_2019: Jeu Libre avec des Boucles For (Début)
       courseF_video_csMatters: Projets de fin de cours
       courseF_video_csMatters_2018: 'Vidéo : Questions d’informatique'
       csd U3 conditional statements video: 'Vidéo : Instructions conditionnelles'

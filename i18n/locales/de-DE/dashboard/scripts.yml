@@ -5264,6 +5264,8 @@ de:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            AI for Oceans:
+              name: KI für Meere
         express-2020:
           title: Expresskurs (2019)
           description_audience: 'Alter: 9-18'
@@ -5361,3 +5363,111 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Part 1:
+              name: Teil 1
+            Part 2:
+              name: Teil 2
+        csp3-virtual:
+          description_short: Programmierung
+          stages:
+            The Need For Programming Languages:
+              name: Wozu Programmiersprachen?
+            Using Simple Commands:
+              name: Einfache Befehle verwenden
+            Creating Functions:
+              name: Funktionen erstellen
+            Functions and Top-Down Design:
+              name: Funktionen und Top-Down-Entwicklung
+            APIs and Function Parameters:
+              name: APIs und Funktionsparameter
+            Looping and Random Numbers:
+              name: Schleifen- und Zufallszahlen
+            Unit 3 Chapter 1 Assessment:
+              name: Lerneinheit 3 Kapitel 1 Herausforderung
+        csd3-virtual:
+          description_short: "Programmierung"
+          stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
+            Variables:
+              name: Variablen
+            Sprites:
+              name: Sprites
+            Conditionals:
+              name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
+            Velocity:
+              name: Geschwindigkeit
+            Collisions:
+              name: Kollisionen
+            Functions:
+              name: Funktionen
+            Random Numbers:
+              name: Zufällige Zahlen
+            Sprite Properties:
+              name: Sprite Eigenschaften
+        jess-test-script:
+          stages:
+            new stage:
+              name: neue Etappe
+            Debugging:
+              name: Debugging
+        csd2-virtual:
+          stages:
+            Exploring Web Pages:
+              name: Erkunde Webseiten
+            Intro to HTML:
+              name: Einführung in HTML
+            Headings:
+              name: Überschriften
+            Digital Footprint:
+              name: Digitaler Fußabdruck
+            Intellectual Property:
+              name: Geistiges Eigentum
+            Images:
+              name: Bilder
+            Project - Building a Webpage:
+              name: Projekt - Erstellung einer Webseite
+        csp5-virtual:
+          stages:
+            Multi-screen Apps:
+              name: Mehrbildschirm-Apps
+            Controlling Memory with Variables:
+              name: Speicher mit Variablen steuern
+            Unit 5 Assessment 1:
+              name: Lerneinheit 5 Herausforderung 1
+            User Input and Strings:
+              name: Benutzereingaben und Zeichenketten
+            Unit 5 Assessment 2:
+              name: Lerneinheit 5 Herausforderung 2
+            While Loops:
+              name: Solange-Schleifen
+            Loops and Simulations:
+              name: Schleifen und Simulationen
+            Introduction to Arrays:
+              name: Einführung in Arrays
+            Processing Arrays:
+              name: Mit Arrays arbeiten
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Geschwindigkeit
+            Collisions:
+              name: Kollisionen
+            Functions:
+              name: Funktionen
+        code-break:
+          stages:
+            new stage:
+              name: neue Etappe
+            Algorithms:
+              name: Algorithmen
+            Events:
+              name: Ereignisse

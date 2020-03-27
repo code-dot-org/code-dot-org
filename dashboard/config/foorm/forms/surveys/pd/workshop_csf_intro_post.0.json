@@ -568,6 +568,8 @@
         {
           "type": "matrix",
           "name": "pd_feelings",
+          "title": "Facilitator feedback",
+          "titleLocation": "hidden",
           "columns": [
             {
               "value": "strongly_disagree",

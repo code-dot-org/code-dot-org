@@ -7,6 +7,7 @@ module Cdo
     def parse_yaml_header(content, locals={})
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content] unless match
+
       yaml = match[:yaml]
       yaml = ERB.new(yaml).result_with_hash(locals)
       [YAML.safe_load(yaml), match.post_match]

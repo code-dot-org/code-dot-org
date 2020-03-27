@@ -161,7 +161,6 @@ module Poste
 
     def render_html(bound, locals={})
       return nil unless @html.present?
-
       # All our emails regardless of the extension they use are parsed as ERB
       # in addition to their regular template type.
       html = renderer.render(inline: @html, type: :erb, locals: locals)
@@ -176,13 +175,13 @@ module Poste
 
     def render_text(bound, locals={})
       return nil unless @text.present?
-      renderer.render(inline: @actionview_text, type: :erb, locals: locals)
+      renderer.render(inline: @text, type: :erb, locals: locals)
     end
 
     def renderer
       @@renderer ||= begin
-        require 'cdo/pegasus/actionview_sinatra'
-        ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
+        require 'cdo/markdown_handler'
+        MarkdownHandler.register
         ActionView::Base.new
       end
     end

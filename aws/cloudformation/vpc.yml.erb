@@ -1,3 +1,7 @@
+<%
+require 'cdo/cloud_formation/vpc'
+self.class.include VPC
+-%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: VPC layer including all Subnets, NAT Gateway and Security Groups for Code.org infrastructure.
@@ -7,7 +11,7 @@ Resources:
     Properties:
       CidrBlock: 10.0.0.0/16
       EnableDnsHostnames: true
-  VpcClassicLink: <%= lambda_fn.call 'VpcClassicLink',
+  VpcClassicLink: <%= lambda_fn 'VpcClassicLink',
     VpcId: {Ref: 'VPC'},
     DnsSupport: true %>
   S3Endpoint:
@@ -100,7 +104,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: <%=ssh_ip%>
+          CidrIp: <%=SSH_IP%>
   DaemonSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
