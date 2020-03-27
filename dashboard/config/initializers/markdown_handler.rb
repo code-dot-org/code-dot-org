@@ -28,6 +28,7 @@ class InterimMarkdownHandler
     if old_result != new_result
       Honeybadger.notify(
         error_class: 'Rendering differences between new and old Dashboard markdown',
+        error_message: "template #{template.identifier.inspect} renders differently with new renderer than with old",
         context: {
           old_result: old_result,
           new_result: new_result,
