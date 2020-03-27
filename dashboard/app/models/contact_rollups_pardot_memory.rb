@@ -19,6 +19,20 @@
 #  index_contact_rollups_pardot_memory_on_pardot_id  (pardot_id) UNIQUE
 #
 
+require 'cdo/contact_rollups/v2/pardot'
+
 class ContactRollupsPardotMemory < ApplicationRecord
   self.table_name = 'contact_rollups_pardot_memory'
+
+  def self.add_and_update_pardot_ids(last_id = nil)
+    last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
+
+    # TODO: bulk insert and update. or even bulk delete and then bulk insert
+    PardotV2.retrieve_new_ids(last_id).each do |mapping|
+      pardot_record = find_or_initialize_by(email: mapping[:email])
+      pardot_record.pardot_id = mapping[:pardot_id]
+      pardot_record.pardot_id_updated_at = Time.now
+      pardot_record.save
+    end
+  end
 end

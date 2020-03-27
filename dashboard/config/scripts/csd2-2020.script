@@ -1,3 +1,4 @@
+tts true
 login_required true
 hideable_stages true
 student_detail_progress_view true
@@ -43,6 +44,7 @@ level 'Social Sleuth_2018_2019_pilot_2020', named: true
 
 stage 'Styling Text with CSS', flex_category: 'csd2_1'
 level 'CSD U2L05 TFMD_2020', named: true
+level 'CSD U2 Sample CSS text', named: true
 level 'CSD U2 CSS explore CSS_2020', named: true
 level 'Video: Intro to CSS_2020', named: true
 level 'CSD U2 text style h1_2020', progression: 'Styling Text'
@@ -121,6 +123,7 @@ level 'CSD U2 RGB intro_2020', named: true
 
 stage 'Planning a Multi-page Website', flex_category: 'csd2_2'
 level 'CSD U2L16 TFMD_2020', named: true
+level 'CSD web upload images multi_2020', progression: 'Upload Your Images'
 
 stage 'Linking and Navigation', flex_category: 'csd2_2'
 level 'CSD U2L17 TFMD_2020', named: true
@@ -130,14 +133,16 @@ level 'CSD U2 naming links_2020', progression: 'Links and Navigation'
 level 'CSD U2 nav bar_2020', progression: 'Links and Navigation'
 level 'CSD U2 adding pages_2020', progression: 'Adding Pages', assessment: true
 level 'CSD U2 naming pages_2020', progression: 'Adding Pages'
+level 'CSD web create pages project', progression: 'Your Team Project'
 level 'CSD U2 external links_2020', progression: 'Challenge: External Links'
 
 stage 'Project - Website for a Purpose', flex_category: 'csd2_2'
 level 'CSD U2L18 TFMD_2020', named: true
-level 'CSD web upload images multi_2020', progression: 'Upload Your Images'
-level 'CSD U2 create page_2020', progression: 'Create Your Pages'
+level 'CSD U2 create page_2020', progression: 'Double Check Images and Pages'
 level 'CSD web add html_2020', progression: 'Add Content'
+level 'CSD web share html_2020', progression: 'Share Your Pages'
 level 'CSD web add CSS_2020', progression: 'Add Style'
+level 'CSD web share CSS_2020', progression: 'Share Your Styles'
 level 'CSD web check_2020', progression: 'Check Your Work'
 
 stage 'Peer Review and Final Touches', flex_category: 'csd2_2'
