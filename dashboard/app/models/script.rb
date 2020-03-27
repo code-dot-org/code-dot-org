@@ -149,6 +149,7 @@ class Script < ActiveRecord::Base
     editor_experiment
     project_sharing
     curriculum_umbrella
+    tts
   )
 
   def self.twenty_hour_script
@@ -209,6 +210,10 @@ class Script < ActiveRecord::Base
 
   def self.stage_extras_script_ids
     @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
+  end
+
+  def self.maker_unit_scripts
+    visible_scripts.select {|s| s.family_name == 'csd6'}
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -779,63 +784,8 @@ class Script < ActiveRecord::Base
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
-  private def csf_tts_level?
-    k5_course?
-  end
-
-  private def csd_tts_level?
-    [
-      Script::CSD2_NAME,
-      Script::CSD3_NAME,
-      Script::CSD4_NAME,
-      Script::CSD6_NAME,
-      Script::CSD2_2018_NAME,
-      Script::CSD3_2018_NAME,
-      Script::CSD4_2018_NAME,
-      Script::CSD6_2018_NAME,
-      Script::CSD2_2019_NAME,
-      Script::CSD3_2019_NAME,
-      Script::CSD4_2019_NAME,
-      Script::CSD6_2019_NAME,
-      Script::CSD1_PILOT_NAME,
-      Script::CSD2_PILOT_NAME,
-      Script::CSD3_PILOT_NAME,
-      Script::CSD2_2020_NAME,
-      Script::CSD3_2020_NAME,
-      Script::CSD4_2020_NAME,
-      Script::CSD6_2020_NAME
-    ].include?(name)
-  end
-
-  private def csp_tts_level?
-    [
-      Script::CSP17_UNIT3_NAME,
-      Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME,
-      Script::CSP3_2018_NAME,
-      Script::CSP5_2018_NAME,
-      Script::CSP_POSTAP_2018_NAME,
-      Script::CSP3_2019_NAME,
-      Script::CSP5_2019_NAME,
-      Script::CSP_POSTAP_2019_NAME
-    ].include?(name)
-  end
-
-  private def hoc_tts_level?
-    [
-      Script::APPLAB_INTRO,
-      Script::DANCE_PARTY_NAME,
-      Script::DANCE_PARTY_EXTRAS_NAME,
-      Script::DANCE_PARTY_2019_NAME,
-      Script::DANCE_PARTY_EXTRAS_2019_NAME,
-      Script::ARTIST_NAME,
-      Script::SPORTS_NAME,
-      Script::BASKETBALL_NAME
-    ].include?(name)
-  end
-
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
+    tts?
   end
 
   # Generates TTS files for each level in a script.
@@ -1382,7 +1332,8 @@ class Script < ActiveRecord::Base
       family_name: family_name,
       version_year: version_year,
       assigned_section_id: assigned_section_id,
-      hasStandards: has_standards_associations?
+      hasStandards: has_standards_associations?,
+      tts: tts?,
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1528,7 +1479,8 @@ class Script < ActiveRecord::Base
       pilot_experiment: script_data[:pilot_experiment],
       editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
-      curriculum_umbrella: script_data[:curriculum_umbrella]
+      curriculum_umbrella: script_data[:curriculum_umbrella],
+      tts: !!script_data[:tts]
     }.compact
   end
 
