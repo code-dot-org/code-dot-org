@@ -119,9 +119,9 @@
         = form.text_field :username, maxlength: 255
     - else
       .field
-        -# FND-893 - Stop using markdown in <Label>s
         = form.label :personal_email, class: "label-bold" do
-          = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: true).html_safe
+          %span
+            = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
         = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
     .field
       = form.label :password, maxlength: 255, class: "label-bold"

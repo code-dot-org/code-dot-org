@@ -298,6 +298,10 @@ namespace :seed do
     SampleData.seed
   end
 
+  timed_task mega_section: :environment do
+    MegaSection.seed
+  end
+
   MAX_LEVEL_SOURCES = 10_000
   desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
   timed_task ideal_solutions: :environment do
