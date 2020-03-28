@@ -275,8 +275,7 @@
           ],
           "templateTitle": "Information about: {panel.facilitatorName}",
           "allowAddPanel": false,
-          "allowRemovePanel": false,
-          "panelCount": 1
+          "allowRemovePanel": false
         },
         {
           "type": "html",
