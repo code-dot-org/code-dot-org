@@ -235,19 +235,21 @@ class TestRDS < Minitest::Test
     )
 
     @describe_instance_to_delete_response = {
-      "db_instance": @source_instance[:db_instances][0].deep_merge(
-        {
-          "db_cluster_identifier": "#{@cluster_to_delete_id}-0",
-          "dbi_resource_id": "db-Z9Y8X7W6V5",
-          "db_instance_arn": "arn:aws:rds:us-east-1:0987654321:db:#{@cluster_to_delete_id}-0",
-          "db_parameter_groups": [
-            {
-              "db_parameter_group_name": "#{@cluster_to_delete_id}-writerdbparameters-a1b2c3de",
-              "parameter_apply_status": "in-sync"
-            }
-          ]
-        }
-      )
+      "db_instances": [
+        @source_instance[:db_instances][0].deep_merge(
+          {
+            "db_cluster_identifier": "#{@cluster_to_delete_id}-0",
+            "dbi_resource_id": "db-Z9Y8X7W6V5",
+            "db_instance_arn": "arn:aws:rds:us-east-1:0987654321:db:#{@cluster_to_delete_id}-0",
+            "db_parameter_groups": [
+              {
+                "db_parameter_group_name": "#{@cluster_to_delete_id}-writerdbparameters",
+                "parameter_apply_status": "in-sync"
+              }
+            ]
+          }
+        )
+      ]
     }
 
     @delete_instance_response = {

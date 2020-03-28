@@ -82,7 +82,7 @@ module Cdo
       rescue Aws::Waiters::Errors::WaiterFailed => error
         CDO.log.info "Error waiting for cluster clone instance to become available. #{error.message}"
       end
-      CDO.log.info "Done creating clone of database cluster."
+      CDO.log.info "Done creating database cluster - #{clone_cluster_id}"
     end
 
     def self.delete_cluster(cluster_id, max_attempts = 20, delay = 60)
