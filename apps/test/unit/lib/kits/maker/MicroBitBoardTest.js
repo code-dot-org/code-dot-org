@@ -77,6 +77,18 @@ describe('MicroBitBoard', () => {
     });
   });
 
+  describe(`digitalWrite(pin, value)`, () => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
+        let digitalWriteSpy = sinon.spy(board.boardClient_, 'digitalWrite');
+        const pin = 11;
+        const arg2 = 1023;
+        board.digitalWrite(pin, arg2);
+        expect(digitalWriteSpy).to.have.been.calledWith(pin, arg2);
+      });
+    });
+  });
+
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
