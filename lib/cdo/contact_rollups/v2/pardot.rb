@@ -42,4 +42,14 @@ class PardotV2
 
     mappings
   end
+
+  # TODO: convert to instance variable and instance method
+  @@batch = []
+  def self.send_in_batch(email, data, pardot_id)
+    # accumulate in a batch
+  end
+
+  def self.flush
+    raise 'TBA'
+  end
 end

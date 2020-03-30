@@ -35,4 +35,12 @@ class PardotV2Test < Minitest::Test
     expected_result = [{email: email, pardot_id: pardot_id}]
     assert_equal expected_result, PardotV2.retrieve_new_ids(0)
   end
+
+  def test_send_in_batch
+    # TBA
+  end
+
+  def test_flush
+    # TBA
+  end
 end

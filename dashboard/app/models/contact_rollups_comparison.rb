@@ -16,16 +16,6 @@
 #
 
 class ContactRollupsComparison < ApplicationRecord
-  scope :new_contacts, -> {where(old_data_updated_at: nil)}
-  scope :deleted_contacts, -> {where(new_data_updated_at: nil)}
-
-  scope :updated_contacts, -> do
-    # Use NULL-safe equal to operator because both columns could be null
-    where.not(old_data_updated_at: nil).
-    where.not(new_data_updated_at: nil).
-    where.not("old_data <=> new_data")
-  end
-
   # Compiles old and new processed data then saves the results, one row per email.
   def self.compile_processed_data
     # Since Mysql 5.7 doesn't support FULL OUTER JOIN, we will simulate a FULL OUTER JOIN
@@ -59,4 +49,27 @@ class ContactRollupsComparison < ApplicationRecord
 
     ActiveRecord::Base.connection.exec_query(insert_records_query)
   end
+
+  def self.sync_new_contacts_to_pardot
+    # TODO: is it better to use association?
+    # Get all new contacts from contact_rollups_comparisons
+    # Join with contact_rollups_pardot_memory to find pardot_id
+    new_contacts_query = <<-SQL.squish
+      SELECT a.email, a.new_data AS data, b.pardot_id
+      FROM contact_rollups_comparisons AS a
+      LEFT OUTER JOIN contact_rollups_pardot_memory AS b
+      ON a.email = b.email
+      WHERE a.old_data_updated_at IS NULL
+    SQL
+
+    ActiveRecord::Base.connection.exec_query(new_contacts_query).each do |record|
+      # TODO: Use new instance of PardotV2 client. PardotV2 acts as an output stream
+      PardotV2.send_in_batch record['email'], record['data'], record['pardot_id']
+    end
+    PardotV2.flush
+  end
+
+  # TODO: sync contacts that change pardot mappings
+  # TODO: sync contacts with updated content
+  # TODO: sync deleted contacts
 end
