@@ -9,6 +9,7 @@ SCRIPT_START = Time.now
 require_relative "../../lib/cdo/only_one"
 require_relative "../../deployment"
 require "cdo/slack"
+require "cdo/high_frequency_reporter"
 require "open3"
 exit unless only_one_running?(__FILE__)
 
@@ -36,9 +37,11 @@ FOLDERS = {
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 60 - INTERVAL_SECONDS
 error_message = ""
-alert_slack = true
+# will repeat loop for up to TOTAL_SECONDS (currently 55) after start time
+logger = HighFrequencyReporter.new(Slack.new, '~/test.csv')
 while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   attempt_start = Time.now
+  logger.load
   FOLDERS.each do |key, value|
     # 'unison' will sync the two folders. It will return true on success and false on failure.
     # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
@@ -51,15 +54,15 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     stdout, stderr, _ = Open3.capture3(command)
     if stdout != "" || stderr != ""
       error_message = "#{error_message}Dropbox directory: #{key}. staging directory: #{value}. \n#{stdout}#{stderr}\n"
+      logger.record error_message
     end
   end
   current_time = Time.now
-  if alert_slack && error_message != ""
-    Slack.message("@here Error syncing Dropbox and staging\n" + error_message, {channel: "sync-dropbox-staging"})
-    alert_slack = false
-  end
+  logger.save
+  # sleep until INTERVAL_SECONDS have passed since while loop above started OR
   while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
     sleep 0.1
     current_time = Time.now
   end
 end
+logger.report! 5
