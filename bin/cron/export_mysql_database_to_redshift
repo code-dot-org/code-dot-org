@@ -12,18 +12,15 @@ require 'cdo/redshift_import'
 
 # Delay between each check on task status.
 TASK_STATUS_DELAY = 10.minutes
-# TODO: (suresh) Can this dynamically reference the endpoint defined the in the production data stack?
-CLONE_CLUSTER_ID = 'production-clone-for-redshift-export-cluster'.freeze
-CLONE_DB_INSTANCE_ID = 'db.r4.4xlarge'.freeze
 
 def main
   ChatClient.message 'data', 'Beginning daily export from Aurora MySQL database to Redshift.'
   # Delete clone of production cluster if it was incorrectly left behind by a previous execution of the import process.
-  Cdo::RDS.delete_cluster(CLONE_CLUSTER_ID)
+  Cdo::RDS.delete_cluster(RedshiftImport::CLONE_CLUSTER_ID)
   Cdo::RDS.clone_cluster(
     source_cluster_id: CDO.db_cluster_id,
-    clone_cluster_id: CLONE_CLUSTER_ID,
-    instance_type: CLONE_DB_INSTANCE_ID
+    clone_cluster_id: RedshiftImport::CLONE_CLUSTER_ID,
+    instance_type: RedshiftImport::CLONE_DB_INSTANCE_ID
   )
 
   # Ensure that if any threads that are starting/monitoring DMS Tasks Raise an error, that the main thread here raises.
@@ -66,7 +63,7 @@ rescue StandardError => error
   ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
 ensure
-  Cdo::RDS.delete_cluster(CLONE_CLUSTER_ID)
+  Cdo::RDS.delete_cluster(RedshiftImport::CLONE_CLUSTER_ID)
 end
 
 main
