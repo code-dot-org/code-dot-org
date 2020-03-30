@@ -8,4 +8,5 @@
  */
 // locale for netsim
 
-module.exports = window.blockly.netsim_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('netsim_locale');
