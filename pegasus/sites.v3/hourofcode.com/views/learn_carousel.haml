@@ -31,7 +31,7 @@
             .slide.clear{:style=>styling}
               .slide-img<
                 %a{:href=>url, :target=>'_blank'}<
-                  %img{:src=>tutorial[:image].sub("/images/", "https://code.org/images/fit-520/").sub(".png", ".jpg")}
+                  %img{:src=>tutorial[:image].sub("/images/", CDO.code_org_url("/images/fit-520/")).sub(".png", ".jpg")}
               .slide-text
                 %a{:href=>url, :target=>'_blank'}<
                   -unless international_layout

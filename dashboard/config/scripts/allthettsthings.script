@@ -1,3 +1,4 @@
+tts true
 stage 'TTS'
 level 'allthethings_ttscsf contained'
 level 'allthethings_ttscsd'

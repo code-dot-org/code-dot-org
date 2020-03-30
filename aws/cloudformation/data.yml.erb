@@ -2,6 +2,8 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
+
+self.tags.push key: 'environment', value: rack_env
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -306,25 +308,6 @@ Resources:
     Properties:
       AliasName: !Sub "alias/snapshot-${AWS::StackName}"
       TargetKeyId: !Ref DBSnapshotKey
-  # The production reporting Aurora cluster replicates via MySQL binlog from the production Aurora cluster.
-  ReportingBinLogReplicaLagAlarm:
-    Type: AWS::CloudWatch::Alarm
-    Properties:
-      AlarmName: !Sub "${AWS::StackName}-ReportingBinLogReplicaLag"
-      AlarmDescription: Alarms when the Aurora Reporting Cluster binlog replica lag exceeds 900 seconds for 12 datapoints.
-      AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
-      Dimensions:
-        - Name: DBClusterIdentifier
-          Value: !Ref ReportingCluster
-      MetricName: AuroraBinlogReplicaLag
-      Namespace: AWS/RDS
-      Statistic: Average
-      ComparisonOperator: GreaterThanThreshold
-      Threshold: 600
-      Period: 3600 # 1 hour
-      EvaluationPeriods: 12
-      TreatMissingData: breaching
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database

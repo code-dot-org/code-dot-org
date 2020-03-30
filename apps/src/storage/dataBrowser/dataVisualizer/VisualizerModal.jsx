@@ -12,6 +12,7 @@ import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
+import Snapshot from './Snapshot';
 
 const styles = {
   container: {
@@ -56,13 +57,10 @@ class VisualizerModal extends React.Component {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    // "if all of the keys are integers, and more than half of the keys between 0 and
-    // the maximum key in the object have non-empty values, then Firebase will render
-    // it as an array."
-    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired
+    tableRecords: PropTypes.array.isRequired
   };
+
+  placeholder = require('./placeholder.png');
 
   state = {...INITIAL_STATE};
 
@@ -142,14 +140,46 @@ class VisualizerModal extends React.Component {
     }
   }
 
+  chartOptionsToString(chartType) {
+    const options = [];
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        break;
+      case ChartType.HISTOGRAM:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerBucketSize()}: ${this.state.bucketSize}`
+        );
+        break;
+      case ChartType.SCATTER_PLOT:
+      case ChartType.CROSS_TAB:
+        options.push(
+          `${msg.dataVisualizerXValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerYValues()}: ${this.state.selectedColumn2}`
+        );
+        break;
+      default:
+    }
+    if (!!this.state.filterColumn && !!this.state.filterValue) {
+      options.push(
+        msg.dataVisualizerFilterDescription({
+          column: this.state.filterColumn,
+          value: this.state.filterValue
+        })
+      );
+    }
+    return options.join(', ');
+  }
+
   render() {
-    // this.props.tableRecords is either an object or an array (see propTypes comment). If it's an object, we want to
-    // convert it to an array before trying to parse the records.
-    const parsedRecords = this.parseRecords(
-      Array.isArray(this.props.tableRecords)
-        ? this.props.tableRecords
-        : Object.values(this.props.tableRecords)
-    );
+    const parsedRecords = this.parseRecords(this.props.tableRecords);
     let filteredRecords = parsedRecords;
     if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
       filteredRecords = this.filterRecords(
@@ -286,7 +316,7 @@ class VisualizerModal extends React.Component {
               <div style={styles.placeholderText}>
                 {msg.dataVisualizerPlaceholderText()}
               </div>
-              <img src={require('./placeholder.png')} />
+              <img src={this.placeholder} />
             </div>
           )}
           <div style={{paddingTop: 20}}>
@@ -316,22 +346,12 @@ class VisualizerModal extends React.Component {
               }
               inlineLabel
             />
-            <DropdownField
-              displayName={msg.dataVisualizerCreateChart()}
-              options={[]}
-              disabledOptions={[]}
-              value={this.state.screen}
-              onChange={event => this.setState({screen: event.target.value})}
-              inlineLabel
-            />
-            <button
-              type="button"
-              style={dataStyles.grayButton}
-              onClick={this.handleOpen}
-            >
-              {msg.create()}
-            </button>
           </div>
+          <Snapshot
+            chartType={this.state.chartType}
+            chartTitle={this.state.chartTitle}
+            selectedOptions={this.chartOptionsToString(this.state.chartType)}
+          />
         </BaseDialog>
       </span>
     );
@@ -341,6 +361,6 @@ class VisualizerModal extends React.Component {
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({
   tableColumns: state.data.tableColumns || [],
-  tableRecords: state.data.tableRecords || {},
+  tableRecords: state.data.tableRecords || [],
   tableName: state.data.tableName || ''
 }))(VisualizerModal);

@@ -183,6 +183,7 @@ class StandardsProgressTable extends Component {
       <Table.Provider
         columns={columns}
         style={{...tableLayoutStyles.table, ...this.props.style}}
+        id="uitest-progress-standards-table"
       >
         <Table.Header />
         <Table.Body rows={rowData} rowKey="id" />

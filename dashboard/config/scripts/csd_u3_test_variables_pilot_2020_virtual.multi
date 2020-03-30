@@ -1,0 +1,18 @@
+name 'CSD U3 Test variables_pilot_2020_virtual'
+title 'Question 3'
+question 'What is the apple\’s x position at the end of this program?'
+wrong '20'
+right '90'
+wrong '110'
+wrong 'There will be two apples in two different positions.'
+wrong 'None, because the program will have an error.'
+
+
+markdown <<MARKDOWN
+Consider the following program (blocks and text)
+
+<img style="display:inline-block;width:300px" src="https://images.code.org/39742e261b25c859daa8a62ddf9749a9-image-1552415157293.24.38 AM.png"><pre style="display:inline-block;">apple.x = 20;
+banana.x = 60;
+apple.x = banana.x + 30;
+banana.x = 80;</pre>
+MARKDOWN
