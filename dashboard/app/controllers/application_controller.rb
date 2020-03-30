@@ -228,6 +228,20 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # Allow us to get some UI test coverage on levelbuilder-only features. This
+  # protection must be applied carefully to make sure that script and level
+  # files in the test environment are never modified.
+  #
+  # UI test authors must be careful to clean up after themselves so that they do
+  # not modify curriculum content in a way could introduce intermittent failures
+  # in other tests. Developers wishing to run these tests locally should run
+  # their local server in levelbuilder_mode.
+  def require_levelbuilder_mode_or_test
+    unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
+
   def require_admin
     authorize! :read, :reports
   end
