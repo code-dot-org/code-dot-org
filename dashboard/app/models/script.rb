@@ -1165,7 +1165,9 @@ class Script < ActiveRecord::Base
           },
           script_data[:stages],
         )
-        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        if Rails.application.config.levelbuilder_mode
+          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        end
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1173,9 +1175,11 @@ class Script < ActiveRecord::Base
     end
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
-      # write script to file
-      filename = "config/scripts/#{script_params[:name]}.script"
-      ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      if Rails.application.config.levelbuilder_mode
+        # write script to file
+        filename = "config/scripts/#{script_params[:name]}.script"
+        ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
