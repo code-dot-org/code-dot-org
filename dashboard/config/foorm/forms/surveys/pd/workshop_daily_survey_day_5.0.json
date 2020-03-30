@@ -10,31 +10,31 @@
           "title": "How much do you agree or disagree with the following statements about the workshop overall? ",
           "columns": [
             {
-              "value": 1,
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": 2,
+              "value": "2",
               "text": "Disagree "
             },
             {
-              "value": 3,
+              "value": "3",
               "text": "Slightly Disagree "
             },
             {
-              "value": 4,
+              "value": "4",
               "text": "Neutral "
             },
             {
-              "value": 5,
+              "value": "5",
               "text": "Slightly Agree "
             },
             {
-              "value": 6,
+              "value": "6",
               "text": "Agree "
             },
             {
-              "value": 7,
+              "value": "7",
               "text": "Strongly Agree "
             }
           ],
@@ -71,31 +71,31 @@
           "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
           "columns": [
             {
-              "value": 1,
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": 2,
+              "value": "2",
               "text": "Disagree "
             },
             {
-              "value": 3,
+              "value": "3",
               "text": "Slightly Disagree "
             },
             {
-              "value": 4,
+              "value": "4",
               "text": "Neutral "
             },
             {
-              "value": 5,
+              "value": "5",
               "text": "Slightly Agree "
             },
             {
-              "value": 6,
+              "value": "6",
               "text": "Agree "
             },
             {
-              "value": 7,
+              "value": "7",
               "text": "Strongly Agree "
             }
           ],
@@ -124,31 +124,31 @@
           "title": "Having been through the five-day workshop, what are your overall impressions of the curriculum? ",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": "2",
               "text": "Disagree "
             },
             {
-              "value": "slightly_disagree",
+              "value": "3",
               "text": "Slightly Disagree "
             },
             {
-              "value": "neutral",
+              "value": "4",
               "text": "Neutral "
             },
             {
-              "value": "slightly_agree",
+              "value": "5",
               "text": "Slightly Agree "
             },
             {
-              "value": "agree",
+              "value": "6",
               "text": "Agree "
             },
             {
-              "value": "strongly_agree",
+              "value": "7",
               "text": "Strongly Agree "
             }
           ],
@@ -187,31 +187,31 @@
           "title": "How much do you agree or disagree with the following statements about teaching computer science? ",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": "2",
               "text": "Disagree "
             },
             {
-              "value": "slightly_disagree",
+              "value": "3",
               "text": "Slightly Disagree "
             },
             {
-              "value": "neutral",
+              "value": "4",
               "text": "Neutral "
             },
             {
-              "value": "slightly_agree",
+              "value": "5",
               "text": "Slightly Agree "
             },
             {
-              "value": "agree",
+              "value": "6",
               "text": "Agree "
             },
             {
-              "value": "strongly_agree",
+              "value": "7",
               "text": "Strongly Agree "
             }
           ],
@@ -240,31 +240,31 @@
           "title": "How much do you agree or disagree with the following statements about your computer science teaching community?",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": "2",
               "text": "Disagree "
             },
             {
-              "value": "slightly_disagree",
+              "value": "3",
               "text": "Slightly Disagree "
             },
             {
-              "value": "neutral",
+              "value": "4",
               "text": "Neutral "
             },
             {
-              "value": "slightly_agree",
+              "value": "5",
               "text": "Slightly Agree "
             },
             {
-              "value": "agree",
+              "value": "6",
               "text": "Agree "
             },
             {
-              "value": "strongly_agree",
+              "value": "7",
               "text": "Strongly Agree "
             }
           ],
@@ -293,31 +293,31 @@
           "title": "What is your perspective about how your identity, especially with regards to your gender or race, impacts how you teach? ",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": "2",
               "text": "Disagree "
             },
             {
-              "value": "slightly_disagree",
+              "value": "3",
               "text": "Slightly Disagree "
             },
             {
-              "value": "neutral",
+              "value": "4",
               "text": "Neutral "
             },
             {
-              "value": "slightly_agree",
+              "value": "5",
               "text": "Slightly Agree "
             },
             {
-              "value": "agree",
+              "value": "6",
               "text": "Agree "
             },
             {
-              "value": "strongly_agree",
+              "value": "7",
               "text": "Strongly Agree "
             }
           ],
@@ -357,7 +357,7 @@
           "title": "Concerns about {workshop_course} right now.",
           "columns": [
             {
-              "value": "not_applicable",
+              "value": "0",
               "text": "N/A"
             },
             {
@@ -423,7 +423,7 @@
           "title": "Concerns about {workshop_course} right now. (continued)",
           "columns": [
             {
-              "value": "not_applicable",
+              "value": "0",
               "text": "N/A"
             },
             {
@@ -506,7 +506,7 @@
           "title": "Teaching computer science in general. Right now... ",
           "columns": [
             {
-              "value": "not_applicable",
+              "value": "0",
               "text": "N/A"
             },
             {
@@ -565,7 +565,7 @@
           "title": "Please indicate the degree to which you think you could do the following things right now. ",
           "columns": [
             {
-              "value": "not_applicable",
+              "value": "0",
               "text": "N/A"
             },
             {
@@ -635,7 +635,7 @@
           "title": "Please indicate the degree to which you think you could do the following things right now. ",
           "columns": [
             {
-              "value": "not_applicable",
+              "value": "0",
               "text": "N/A"
             },
             {
@@ -701,7 +701,7 @@
           "title": "Right now, I have concrete teaching strategies to... ",
           "columns": [
             {
-              "value": "not_applicable",
+              "value": "0",
               "text": "N/A"
             },
             {
