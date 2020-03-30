@@ -124,10 +124,7 @@ export class LibraryManagerDialog extends React.Component {
           libraries,
           classLibraries
         );
-        this.setState({
-          classLibraries,
-          projectLibraries: projectLibraries
-        });
+        this.setState({classLibraries, projectLibraries});
       },
       error => {
         console.log('error: ' + error);
