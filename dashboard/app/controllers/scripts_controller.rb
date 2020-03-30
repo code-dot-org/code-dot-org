@@ -46,14 +46,18 @@ class ScriptsController < ApplicationController
     sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
 
+    # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
     if current_user.levelbuilder?
+      notice_text = ""
       @script.stages.each do |stage|
-        next unless stage.visible_after
+        next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
 
         formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
         num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
-        flash[:notice] = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+        lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+        notice_text = notice_text.empty? ? lesson_visible_after_message : notice_text + "<br/>" + lesson_visible_after_message
       end
+      flash[:notice] = notice_text.html_safe
     end
   end
 
