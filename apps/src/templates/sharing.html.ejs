@@ -46,10 +46,6 @@
       <button id="publish-to-project-gallery-button">
           <%= msg.publish() %>
       </button>
-    <% } else if (options.saveToLegacyGalleryUrl && !options.disableSaveToGallery) { %>
-      <button id="save-to-legacy-gallery-button">
-        <%= msg.saveAndPublish() %>
-      </button>
     <% } %>
     <% if (options.downloadReplayVideo) { %>
       <!-- Mount point for DownloadReplayVideoButton component. -->
