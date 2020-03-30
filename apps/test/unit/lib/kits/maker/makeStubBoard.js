@@ -23,6 +23,8 @@ export class MicrobitStubBoard {
     this.myPort = true;
   }
 
+  setPinMode(pinNum, mode) {}
+
   displayPlot() {}
 
   displayClear() {}
