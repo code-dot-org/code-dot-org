@@ -77,6 +77,18 @@ describe('MicroBitBoard', () => {
     });
   });
 
+  describe(`analogWrite(pin, value)`, () => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
+        let analogWriteSpy = sinon.spy(board.boardClient_, 'analogWrite');
+        const pin = 11;
+        const arg2 = 1023;
+        board.analogWrite(pin, arg2);
+        expect(analogWriteSpy).to.have.been.calledWith(pin, arg2);
+      });
+    });
+  });
+
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
