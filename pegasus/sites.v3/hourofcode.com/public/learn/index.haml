@@ -83,7 +83,7 @@ social:
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
       .bannerBeyond
-        != hoc_s(:learn_banner_beyond_markdown, markdown: true, locals: {url: "https://hourofcode.com/beyond"})
+        != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
       .bannerTeachers
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
         != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})

@@ -94,7 +94,7 @@ theme: responsive
 
   %div{style: "clear: both; margin-top: 10px;"}
 
-  %h3.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: true)
+  %h3.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
 
   = view :resource_boxes, resources: resources
 
