@@ -1114,6 +1114,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -1209,6 +1211,8 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: turn {SPRITE} {DIRECTION} {N} degrees
         options:
