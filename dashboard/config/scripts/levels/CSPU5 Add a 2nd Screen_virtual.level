@@ -1,0 +1,70 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setScreen": null,
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Make a 2 screen app with a black screen and a white screen. (Click to see detailed instructions)",
+    "long_instructions": "# Design Mode: Adding a Screen\r\n\r\n<img src=\"https://images.code.org/3aab64d77293bda1759586e2cff5c6cc-image-1477366229125.png\" style=\"width: 150px; float: right\">\r\n\r\n**Now you try it:** Add a new screen and a button to the app we've started here.\r\n\r\n**NOTE:** We've created one screen for you - the Hello Screen.  You need to add a new screen - the new screen should look something like the example shown to the right.\r\n\r\nHere are the steps:\r\n\r\n* **Add a new screen**\r\n  * Drag out <img src=\"https://images.code.org/4337b39cfd797ed9289b70fb6cb365fb-image-1444353631083.17.39 PM.png\" style=\"width: 50px\"> from the Design Toolbox.\r\n  * Or choose *New Screen...* from the pulldown menu at the top of the app display.\r\n \r\n* **Set the background color**\r\n  * It doesn't have to be orange like the example\r\n \r\n* **Add a Button**\r\n  * A simple button is fine.  You can embelish with an icon if you want.\r\n  * Optional: You can also add a text label saying \"Goodbye!\"\r\n\r\n**Click Run...but...you won't see much**\r\n\r\n* Because we haven't added code yet **all you'll see is the (default) Hello screen**\r\n* You won't have any way to see the orange screen when the app is running.\r\n\r\n**Click Finish** to move on to the next level where we'll add code\r\n\r\n  * Note: you can continue to work on your design on the next level too\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "project_template_level_name": "CSPU5 Adding Screens Template_virtual",
+    "show_debug_watch": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 17112,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

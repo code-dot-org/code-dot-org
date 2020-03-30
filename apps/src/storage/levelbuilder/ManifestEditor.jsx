@@ -51,7 +51,7 @@ class ManifestEditor extends React.Component {
 
   handleSubmit = event => {
     $.ajax({
-      url: '/datasets/manifest',
+      url: '/datasets/manifest/update',
       method: 'POST',
       contentType: 'application/json',
       data: JSON.stringify({manifest: this.refs.content.value})
@@ -123,6 +123,7 @@ class ManifestEditor extends React.Component {
           onChange={() => {}}
         />
         <Button
+          __useDeprecatedTag
           text="Submit"
           onClick={this.handleSubmit}
           disabled={!isValidJson}

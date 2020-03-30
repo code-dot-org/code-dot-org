@@ -216,6 +216,7 @@ class MoveStudents extends Component {
     return (
       <div>
         <Button
+          __useDeprecatedTag
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.moveStudents()}
@@ -286,11 +287,13 @@ class MoveStudents extends Component {
           </SortedTableSelect>
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}

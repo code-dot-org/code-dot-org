@@ -1,5 +1,6 @@
 require 'action_view'
 require 'cdo/markdown_handler'
+require 'cdo/redcarpet/inline'
 require 'haml'
 require 'haml/template'
 require 'redcarpet'
@@ -14,10 +15,6 @@ module ActionViewSinatra
       fenced_code_blocks: true,
       lax_spacing: true
     }
-
-    def preprocess(full_document)
-      full_document.gsub(/```/, "```\n")
-    end
 
     def postprocess(full_document)
       process_div_brackets(full_document)
@@ -51,6 +48,7 @@ module ActionViewSinatra
 
       MarkdownHandler.register(MarkdownRenderer, MarkdownRenderer::OPTIONS)
       MarkdownHandler.register_html_safe(Redcarpet::Render::Safe)
+      MarkdownHandler.register_inline(Redcarpet::Render::Inline.new({filter_html: true}))
     end
 
     def response

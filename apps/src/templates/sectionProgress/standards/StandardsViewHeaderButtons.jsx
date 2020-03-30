@@ -12,6 +12,7 @@ import {
   fetchStudentLevelScores
 } from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '../../../lib/util/firehose';
 import {TeacherScores} from './standardsConstants';
 
 const styles = {
@@ -39,11 +40,24 @@ class StandardsViewHeaderButtons extends Component {
   state = {
     isLessonStatusDialogOpen: false,
     isCreateReportDialogOpen: false,
-    comment: ''
+    comment: '',
+    commentUpdated: false
   };
 
   openLessonStatusDialog = () => {
     this.setState({isLessonStatusDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'click_update_unplugged_lessons',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeLessonStatusDialog = () => {
@@ -52,6 +66,18 @@ class StandardsViewHeaderButtons extends Component {
 
   openCreateReportDialog = () => {
     this.setState({isCreateReportDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'open_generate_report_dialog',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeCreateReportDialog = () => {
@@ -71,10 +97,25 @@ class StandardsViewHeaderButtons extends Component {
       teacherComment: this.state.comment,
       scriptId: this.props.scriptId
     };
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'generate_report',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId,
+          added_or_changed_comment: this.state.commentUpdated
+        })
+      },
+      {includeUserId: true}
+    );
+    this.setState({commentUpdated: false});
   };
 
   onCommentChange = value => {
     this.setState({comment: value}, () => {
+      this.setState({commentUpdated: true});
       this.props.setTeacherCommentForReport(this.state.comment);
     });
   };
@@ -123,6 +164,7 @@ class StandardsViewHeaderButtons extends Component {
         {this.props.unpluggedLessons.length > 0 && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.openLessonStatusDialog}
               color={Button.ButtonColor.gray}
               text={i18n.updateUnpluggedProgress()}
@@ -136,6 +178,7 @@ class StandardsViewHeaderButtons extends Component {
           </div>
         )}
         <Button
+          __useDeprecatedTag
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}

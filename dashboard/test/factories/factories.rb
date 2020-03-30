@@ -1227,6 +1227,11 @@ FactoryGirl.define do
     association :script_level
   end
 
+  factory :teacher_score do
+    association :user_level
+    association :teacher
+  end
+
   factory :validated_user_level do
     time_spent 10
     user_level_id 1
@@ -1244,5 +1249,18 @@ FactoryGirl.define do
   factory :contact_rollups_processed do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
+
+  factory :contact_rollups_pardot_memory do
+    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:pardot_id) {|n| n}
+    pardot_id_updated_at {Time.now - 1.hour}
+    data_synced {{opt_in: 0}}
+    data_synced_at {Time.now}
   end
 end

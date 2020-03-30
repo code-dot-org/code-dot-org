@@ -184,6 +184,7 @@ class ProjectAppTypeArea extends React.Component {
       <div style={styles.viewMoreButtons}>
         {showViewMore && (
           <Button
+            __useDeprecatedTag
             onClick={this.loadMore}
             color={Button.ButtonColor.gray}
             icon="plus-circle"
@@ -192,6 +193,7 @@ class ProjectAppTypeArea extends React.Component {
           />
         )}
         <Button
+          __useDeprecatedTag
           href="#top"
           color={Button.ButtonColor.gray}
           icon="chevron-circle-up"

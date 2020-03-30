@@ -843,6 +843,7 @@ class CensusForm extends Component {
             <div style={styles.errors}>{i18n.censusRequired()}</div>
           )}
           <Button
+            __useDeprecatedTag
             id="submit-button"
             onClick={() => this.validateSubmission()}
             color={Button.ButtonColor.orange}
