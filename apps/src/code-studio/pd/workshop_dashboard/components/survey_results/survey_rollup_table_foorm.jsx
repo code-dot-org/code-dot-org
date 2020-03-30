@@ -5,6 +5,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 
+const styles = {
+  title: {
+    paddingLeft: '30px'
+  },
+  question: {
+    paddingLeft: '60px'
+  },
+  headerRow: {
+    borderTop: 'solid'
+  }
+};
+
 export default class SurveyRollupTableFoorm extends React.Component {
   static propTypes = {
     workshopRollups: PropTypes.object.isRequired,
@@ -65,8 +77,8 @@ export default class SurveyRollupTableFoorm extends React.Component {
                 question.type === 'overall'
                   ? {}
                   : question.type === 'title'
-                  ? {paddingLeft: '30px'}
-                  : {paddingLeft: '60px'}
+                  ? styles.title
+                  : styles.question
             })
           ]
         }
@@ -143,7 +155,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
           rows={rows}
           rowKey="id"
           onRow={row => {
-            return {style: row.isHeader ? {borderTop: 'solid'} : {}};
+            return {style: row.isHeader ? styles.headerRow : {}};
           }}
         />
       </Table.Provider>
