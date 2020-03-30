@@ -1240,6 +1240,7 @@ And(/^I get hidden script access$/) do
 end
 
 And(/^I save the section url$/) do
+  wait_short_until {steps 'Then I should see the section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
       .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
