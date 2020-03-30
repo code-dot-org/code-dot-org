@@ -1,8 +1,9 @@
+tts true
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursed/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}'
 family_name 'coursed'
 version_year '2020'
 curriculum_umbrella 'CSF'
@@ -213,8 +214,8 @@ level 'courseD_artist_binaryFP_2020', progression: 'Free Play'
 bonus 'courseD_artist_binary_challenge1_2020'
 bonus 'courseD_artist_binary_challenge2_2020'
 
-stage 'Digital Citizenship', flex_category: 'csf_digcit'
-level 'DigitalCitizenship-Unplugged_2020'
+stage 'Be A Super Digital Citizen', flex_category: 'csf_digcit'
+level 'csf_be_a_super_digital_citizen'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseD_EOC_2020', progression: 'Create your project'

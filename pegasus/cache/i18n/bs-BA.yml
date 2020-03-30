@@ -20,6 +20,8 @@ bs-BA:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Da li ste učitelj informatike? Pogledajte i ostale CSEdWeek
     resurse</a>'
+  csedweek_banner_teachers_text: Da li ste učitelj informatike? Pogledajte i ostale
+    CSEdWeek resurse
   n_have_learned_an_hoc: "<h1> Isprobaj </h1><h2>Sat Kodiranja</h2><h3># poslužen</h3>"
   anybody_can_learn: Svi mogu naučiti.
   learn_now: Nauči sad
@@ -312,6 +314,7 @@ bs-BA:
   homepage_action_text_learn: Započni sa učenjem
   homepage_action_text_signpetition: Potpiši peticiju
   homepage_signpetition_dropdown: Slažem se &#x25BE;
+  homepage_signpetition_dropdown_text: Slažem se
   homepage_diversity_pledge: Prisegni se na raznolikost
   homepage_banner_text_prizes: 'Sat Kodiranja dolazi opet, Decembar 7-13. '
   homepage_banner_link_prizes: 'Pridruži se najvećem događaju učenja u historiji. '

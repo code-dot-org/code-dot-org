@@ -1978,3 +1978,33 @@ et:
           stages:
             Binary Numbers:
               name: Binaararvud
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Loomisfunktsioonid
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '„Kui“ tsüklid'
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmid
+            Events:
+              name: Sündmused

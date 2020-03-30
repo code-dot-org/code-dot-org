@@ -147,6 +147,38 @@ module ProjectsList
       end
     end
 
+    # Given an array of library objects (outlined below), returns the channel_ids for
+    # libraries that have been updated since the given version.
+    #
+    # @param libraries [Array<Hash>] Should be formatted as follows:
+    #   [{channel_id: 'abc123', version: 'xyz987'}]
+    #   where `version` corresponds to an S3 version of the library.
+    # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
+    def fetch_updated_library_channels(libraries)
+      project_ids = libraries.map do |library|
+        _, id = storage_decrypt_channel_id(library['channel_id'])
+        library['project_id'] = id
+        id
+      rescue
+        nil
+      end.compact.uniq
+
+      return [] if project_ids.nil_or_empty?
+
+      updated_library_channels = []
+      PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
+        library = libraries.find {|lib| lib['project_id'] == project[:id]}
+        project_value = JSON.parse(project[:value])
+        next unless library && project_value['latestLibraryVersion']
+
+        if library['version'] != project_value['latestLibraryVersion']
+          updated_library_channels << library['channel_id']
+        end
+      end
+
+      updated_library_channels
+    end
+
     def project_and_featured_project_and_user_fields
       [
         :storage_apps__id___id,
@@ -228,6 +260,7 @@ module ProjectsList
         row_data[:libraryName] = project_value['libraryName']
         row_data[:libraryDescription] = project_value['libraryDescription']
         row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
+        row_data[:sharedWith] = project_value['sharedWith'] ? project_value['sharedWith'] : []
       end
 
       row_data.with_indifferent_access

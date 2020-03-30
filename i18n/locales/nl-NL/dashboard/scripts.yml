@@ -2453,3 +2453,63 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+        csp3-virtual:
+          description_short: Programmeren
+          stages:
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Using Simple Commands:
+              name: Simpele Commando's Gebruiken
+            Creating Functions:
+              name: Maken van functies
+            Functions and Top-Down Design:
+              name: Functies en Top-Down Designs
+            APIs and Function Parameters:
+              name: API's en Functieparameters
+        csd3-virtual:
+          description_short: "Programmeren"
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        jess-test-script:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Debugging:
+              name: Foutopsporing
+        csp5-virtual:
+          stages:
+            User Input and Strings:
+              name: Gebruikersinvoer en Strings
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        code-break:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Algorithms:
+              name: Algoritmen
+            Events:
+              name: Gebeurtenissen

@@ -20,6 +20,8 @@ et-EE:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Oled informaatika õpetaja? Vaata teisi arvutiteaduse hariduse
     nädala materjale</a>'
+  csedweek_banner_teachers_text: Oled informaatika õpetaja? Vaata teisi arvutiteaduse
+    hariduse nädala materjale
   n_have_learned_an_hoc: "<h1>Proovi</h1><h2>KoodiTund</h2><h3># served</h3>"
   anybody_can_learn: Igaüks võib õppida.
   learn_now: Õpi nüüd
@@ -247,6 +249,7 @@ et-EE:
   homepage_action_text_learn: Alusta õppimist
   homepage_action_text_signpetition: Allkirjasta taotlus
   homepage_signpetition_dropdown: Ma nõustun &#x25BE;
+  homepage_signpetition_dropdown_text: Olen nõus
   homepage_diversity_pledge: Mitmekesisuse lubadus
   homepage_banner_text_prizes: 'KoodiTund tuleb taas, 7.-13. detsembril. '
   homepage_banner_link_prizes: 'Liitu suurima õppimisüritusega ajaloos. '

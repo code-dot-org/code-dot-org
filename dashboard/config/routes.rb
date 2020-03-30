@@ -221,7 +221,12 @@ Dashboard::Application.routes.draw do
     resources :blocks, constraints: {id: /[^\/]+/}
   end
   resources :shared_blockly_functions, path: '/functions'
-  resources :libraries
+
+  resources :libraries do
+    collection do
+      get '/get_updates', to: 'libraries#get_updates'
+    end
+  end
 
   resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
     collection do
@@ -426,7 +431,10 @@ Dashboard::Application.routes.draw do
         get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
+
+        get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
       end
+
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
@@ -436,6 +444,7 @@ Dashboard::Application.routes.draw do
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
       post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
+      get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
@@ -448,6 +457,8 @@ Dashboard::Application.routes.draw do
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
       get 'regional_partner_workshops/find', to: 'regional_partner_workshops#find'
       get 'regional_partners/find', to: 'regional_partners#find'
+
+      post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
 
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
@@ -687,7 +698,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
-  post '/dashboardapi/v1/pd/workshop_survey_foorm_submission', to: 'api/v1/pd/workshop_survey_foorm_submissions#create', defaults: {format: 'json'}
+  get 'foorm/preview/:name', to: 'foorm_preview#index', constraints: {name: /.*/}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 

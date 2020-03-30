@@ -10,6 +10,7 @@
   "dropletBlock_changeScore_param0": "ရမှတ်",
   "dropletBlock_playSound_description": "​ရွေးချယ်ထား​​သော အသံဖွင့်ပါ။",
   "dropletBlock_removePoints_param0": "ရမှတ်",
+  "elseCode": "သို့မဟုတ်",
   "for": "အတွက်",
   "incrementPlayerScore": "အမှတ်ရယူပါ",
   "makeProjectileDisappear": "ပျောက်ကွယ်သည်",

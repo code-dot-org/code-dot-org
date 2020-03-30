@@ -1653,3 +1653,31 @@ eu:
           stages:
             Spelling Bee:
               name: Letraz-letra
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funtzioak sortzen
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '"Bitartean" begiztak'
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funtzioak
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmoak
+            Events:
+              name: Gertaerak

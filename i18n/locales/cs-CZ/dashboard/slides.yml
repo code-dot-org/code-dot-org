@@ -646,7 +646,7 @@ cs:
         text: "Algoritmus je myšlení za tím, co se má stát. Program jsou aktuální pokyny počítači, aby se to stalo. Algoritmus musí být přeložen do programu předtím, než počítač jej může spustit. Někdy je obtížné rozdělit úkol do kroků, nazývaných algoritmus. Ale jako nové dovednosti, je to snazší a jednodušší, s praxí."
     C3_farmer_while:
       1:
-        text: "While cykly jsou dost podobné, co můžeš dělat v každodenním životě. Představ si, že myješ tvé auto, budeš drhnout, dokud není čisté. Zatímco to není čisté, pokračuješ v drhnutí. Vyhodnocuješ tyto věci po celou dobu."
+        text: "Cykly pokud (while) jsou dost podobné tomu, co můžeš dělat v každodenním životě. Představ si, že myješ své auto. Budeš ho drhnout, dokud není čisté. Pokud není čisté, pokračuješ v drhnutí. Po celou dobu tyto věci vyhodnocuješ."
       2:
         text: "Máme nový pohled na to, abys pomohl tvému farmáři. Tomu se říká while blok. Je to vlastně docela jednoduché. While příkaz v horní části je pravdivý, udělají něco. Např. zatímco existuje hromada přesunout jedno seno. Nestyď se a zkus to s tvým farmářem."
     C3_functional_suncatchers:
@@ -684,7 +684,7 @@ cs:
       1:
         text: "V tomto příkladu tvým cílem je dostat zombie ke slunečnici. Mohli bychom použít pět bloků pohyb vpřed, nebo mohli jste povědět počítači posunout vpřed a pětkrát opakovat pomocí jednoho bloku opakování."
       2:
-        text: "To šetří čas a usnadňuje. Chcete-li použít, stačí dát blok krok vpřed uvnitř bloku opakování. Stisknout run a zombie se přesune pětkrát k báječné slunečnici."
+        text: "Šetří to čas a hodně to usnadňuje. Abys to využil, stačí dát blok posuň se vpřed dovnitř bloku opakuj. Pak stiskni Spustit a zombie se pětkrát posune dopředu k vynikající slunečnici."
     C3_playlab_create_game:
       1:
         text: "Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé, když ji spustíš. Nyní můžeš vytvořit interaktivní hry, které můžeš skutečně hrát."
@@ -1251,9 +1251,74 @@ cs:
       11:
         text: "Pokud zapomeneš jak hru hrát, instrukce ke každé úrovni jsou nahoře."
       12:
+    hoc_dance_warmup:
+      1:
+        text: "Hodina kódu | Taneční večírek: Na rozehřátí"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
+    hoc_dance_events:
+      1:
+        text: "Hodina kódu | Taneční večírek: Události"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+    hoc_dance_properties:
+      1:
+        text: "Hodina kódu | Taneční večírek: Vlastnosti"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+    hoc_dance_congrats:
+      1:
+        text: "Hodina kódu | Taneční večírek: Party začíná!"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+    hoc_dance_warmup_2019:
+      1:
+        text: "Hodina kódu | Taneční večírek: Na rozehřátí"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
     hoc_dance_events_2019:
       1:
+        text: "Hodina kódu | Taneční večírek: Události"
       2:
+        text: "Jmenuji se Erin a jsem softwarová inženýrka tady v Code.org. Pomohla jsem vytvořit Taneční večírek."
       3:
       4:
         text: "Některé příklady událostí naslouchají klepnutí myší, kurzorové směrové tlačítko nebo dotek na obrazovku."
@@ -1261,3 +1326,24 @@ cs:
       6:
       7:
       8:
+    hoc_dance_properties_2019:
+      1:
+        text: "Hodina kódu | Taneční večírek: Vlastnosti"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+    hoc_dance_congrats_2019:
+      1:
+        text: "Hodina kódu | Taneční večírek: Party začíná!"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:

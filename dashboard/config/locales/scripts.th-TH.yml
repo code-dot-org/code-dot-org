@@ -85,6 +85,8 @@ th:
               name: 'เขาวงกต: การจัดลำดับ'
             'Real-life Algorithms: Paper Planes':
               name: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
+            Relay programming:
+              name: โปรแกรมการถ่ายทอดข้อมูล
             'Studio: Create a Story':
               name: 'เพลย์แลป: สร้างเรื่อง'
             The Big Event:
@@ -2176,3 +2178,25 @@ th:
           stages:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
+        csd3-virtual:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Conditionals:
+              name: เงื่อนไข
+            Functions:
+              name: ฟังก์ชัน
+        jess-test-script:
+          stages:
+            Debugging:
+              name: การแก้ไขจุดบกพร่อง
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: ฟังก์ชัน
+        code-break:
+          stages:
+            Algorithms:
+              name: อัลกอริทึม
+            Events:
+              name: เหตุการณ์
