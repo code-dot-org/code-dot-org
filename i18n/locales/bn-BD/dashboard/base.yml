@@ -236,6 +236,7 @@ bn:
     see_details: বিস্তারিত দেখুন
     view_course: কোর্স দেখুন
     trynow: 'এখন চেষ্টা করুন'
+    try_beta_courses: 'নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক কোর্স ব্যাবহার করে দেখুন।'
     use_as_teacher: 'শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন'
     your_gallery: সংগ্রহশালা
   gender:
@@ -277,6 +278,7 @@ bn:
   upsell:
     applab:
       title: 'অ্যাপ ল্যাব'
+      body: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।"
       audience: 'বয়সের ১৩+'
       cta: 'শিখুন কিভাবে'
     flappy:
@@ -312,6 +314,7 @@ bn:
   gallery:
     caption_time_ago: "%{time_ago} আগে"
     header: "সংগ্রহশালা"
+    header_playlab: "প্লে ল্যাব"
     header_artist: "কোড শিল্প"
   landing:
     report_bug: "বাগ রিপোর্ট করুন"
@@ -393,11 +396,15 @@ bn:
     csf_variables: 'চলকগুলো'
     csf_for_loops: 'ফর লুপ'
     csf_internet: 'ইন্টারনেট'
+    csp2_1_2018: '(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য'
     csp_variables: 'চলকগুলো'
     csp_conditionals: 'শর্তযুক্ত'
     csp_functions: 'ফাংশনগুলি'
     csp_lists: 'তালিকা'
     csp_loops: 'চক্র'
+    csp_unit1_2020: '(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য'
+  hoc_download:
+    minecraft_name: 'মাইনক্র্যাফট এক ঘণ্টার কোড'
   pd:
     form_labels:
       email: 'ই-মেইল'

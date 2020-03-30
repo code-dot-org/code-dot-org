@@ -37,6 +37,7 @@ class DatasetList extends React.Component {
         />
         <br />
         <Button
+          __useDeprecatedTag
           text="New Dataset"
           href={`/datasets/${this.state.newTableName}`}
           disabled={!isValidTableName}

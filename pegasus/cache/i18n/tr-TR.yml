@@ -20,6 +20,8 @@ tr-TR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
     bakın</a>'
+  csedweek_banner_teachers_text: Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
+    bakın
   n_have_learned_an_hoc: "<h1>Deneyin</h1><h2>Kod Saati</h2><h3># kez</h3>"
   anybody_can_learn: Herkes öğrenebilir.
   learn_now: Şimdi Öğren
@@ -404,6 +406,7 @@ tr-TR:
   homepage_action_text_signpetition: Üye dilekçesi
   homepage_action_text_wincelebritychat: Ünlü ile sohbet kazan
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
+  homepage_signpetition_dropdown_text: Kabul ediyorum
   homepage_diversity_pledge: 'Çeşitlilik oluştur ! '
   homepage_banner_text_prizes: "`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek."
   homepage_banner_link_prizes: 'Tarihteki en büyük eğitim etkinliğine katılın. '

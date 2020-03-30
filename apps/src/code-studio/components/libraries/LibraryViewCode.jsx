@@ -1,7 +1,8 @@
 /* globals droplet */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Body, Title} from '@cdo/apps/templates/Dialog';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {Body, Title} from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
@@ -54,19 +55,17 @@ export default class LibraryViewCode extends React.Component {
   render() {
     const {isOpen, onClose, library} = this.props;
     return (
-      <Dialog isOpen={isOpen} handleClose={onClose} useUpdatedStyles>
-        <Title>
-          <div>{library.name}</div>
-        </Title>
+      <BaseDialog isOpen={isOpen} handleClose={onClose} useUpdatedStyles>
+        <Title>{library.name}</Title>
         <Body>
           <div style={{textAlign: 'left'}}>
-            <div style={styles.message}>{library.description}</div>
+            <p style={styles.message}>{library.description}</p>
             <div className="libraryCodeViewerContainer" style={styles.code}>
               <div ref="libraryCodeViewer" />
             </div>
           </div>
         </Body>
-      </Dialog>
+      </BaseDialog>
     );
   }
 }

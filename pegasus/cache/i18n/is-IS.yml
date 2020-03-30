@@ -20,6 +20,8 @@ is-IS:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í
     boði í tilefni CSEdWeek</a>'
+  csedweek_banner_teachers_text: Ertu tölvunarfræðikennari? Kannaðu annað efni sem
+    er í boði í tilefni CSEdWeek
   n_have_learned_an_hoc: "<h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2><h3># hafa gert
     það</h3>"
   anybody_can_learn: Allir geta lært.
@@ -395,6 +397,7 @@ is-IS:
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifa undir áskorunina
   homepage_signpetition_dropdown: Ég samþykki &#x25BE;
+  homepage_signpetition_dropdown_text: Sammála
   homepage_diversity_pledge: Vinna fjölbreytniheitið
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '
   homepage_banner_link_prizes: 'Taktu þátt í stærsta námsviðburði í sögunni. '

@@ -172,6 +172,7 @@ class ScriptsController < ApplicationController
       :stage_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
+      :tts,
       :script_announcements,
       :pilot_experiment,
       :editor_experiment,

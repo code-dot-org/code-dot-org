@@ -12,6 +12,7 @@
   csedweek_dates: "ডিসেম্বর 8-14, ২০১৪"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Hour of Code </a> আসছে, তাই সব শিক্ষক ও উদ্যোক্তাদের আহ্বান জানানো হচ্ছে, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> আপনাদের Hour of Code এর পরিকল্পনা করুন</a> '
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek এর উপর অন্যান্য বিষয় গুলি জানুন</a>'
+  csedweek_banner_teachers_text: " আপনি কি (CS) কম্পিউটার সায়েন্সের শিক্ষক ? CSEdWeek এর উপর অন্যান্য বিষয় গুলি জানুন"
   n_have_learned_an_hoc: "<h2>এক ঘণ্টা কোড করার </h2><h1> চেষ্টা করুন </h1><h3># সেবা</h3>"
   anybody_can_learn: "যে কেউ শিখতে পারবে।"
   learn_now: "এবার শিখুন"
@@ -266,6 +267,7 @@
   homepage_action_text_learn: "শেখা শুরু করুন।"
   homepage_action_text_signpetition: "পিটিশন স্বাক্ষর করুন"
   homepage_signpetition_dropdown: "▾ একমত;"
+  homepage_signpetition_dropdown_text: "আমি একমত"
   homepage_diversity_pledge: "বৈচিত্রতার অঙ্গীকার নিন"
   homepage_banner_text_prizes: 'এক ঘন্টা কোড অনুষ্ঠান আবার আসছে, ডিসেম্বর ৭ থেকে ১৩।'
   homepage_banner_link_prizes: 'ইতিহাসের সবচেয়ে বড় ঘটনায় যোগ দিন।'

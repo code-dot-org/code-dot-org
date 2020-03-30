@@ -1,12 +1,15 @@
 name 'GoingPlacesSafely-unplugged_2020'
-video_key 'C1_going_places_safely'
+editor_experiment ''
+video_key 'csf_my_online_neighborhood_2020'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
-# Going Places Safely
+# My Online Neighborhood
 
-The Internet is a powerful, but sometimes dangerous place. Stay safe while navigating the Internet!
+## How do you go places safely online?
+MARKDOWN
 
-<p align=center>
+teacher_markdown <<MARKDOWN
+
 MARKDOWN

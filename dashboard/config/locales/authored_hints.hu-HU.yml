@@ -362,7 +362,6 @@ hu-HU:
           **Választható feladatok**
 
           -   Válassz másik dalt a lejátszáshoz.
-          -   Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!
           -   Nevezd át a táncosodat.
       CourseD_Dance_Party_02:
         validation: |-
@@ -370,7 +369,7 @@ hu-HU:
 
           -   A táncosnak 4 ütem után új mozdulatra kell váltania.
 
-          _A szint 8 ütem után ér véget._
+          _A szint a 7. ütem után ér véget._
       CourseD_Dance_Party_03:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**
@@ -877,6 +876,12 @@ hu-HU:
           egy kincs lenne mindenhol!
         courseC_maze_loops_challenge2_b: Használj ciklusokat, hogy ne fogyjanak el
           el a `begyűjtés` blokkjaid!
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: Használhatod többször is a `begyűjtés`
+          parancsot, hogy extra kincseket gyűjts.
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: Használhatod többször is a `begyűjtés`
+          parancsot, hogy extra kincseket gyűjts.
       course2_harvester_loops_challenge1:
         courseC_harvester_loops_challenge1_a: Ne is gondolj arra, hogy ciklus nélkül
           ezt meg tudod csinálni!

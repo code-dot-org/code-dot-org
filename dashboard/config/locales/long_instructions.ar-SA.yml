@@ -814,6 +814,10 @@ ar-SA:
         ### الرسام في المكان الخاطئ!
 
         استخدم <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> لتجعل الرسام في منتصف منطقة اللعب./ ومن ثم ارسم مستقيم بطول 50 بكسل باستخدام <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_loopsPrePre1a_2019: |-
+        الرسام في المكان الخاطئ!
+
+        استخدم الكتلة البرمجية <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> لتحرك الرسام إلى مركز منطقة اللعب./ ومن ثم ارسم مستقيم بطول 50 بكسل باستخدام الكتلة البرمجية <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_prog6_2018: |-
         \_ "الان المس بيلي!"\_
 

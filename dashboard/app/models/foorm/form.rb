@@ -20,11 +20,11 @@ class Foorm::Form < ActiveRecord::Base
   has_many :foorm_submissions
 
   def self.setup
-    foorms = Dir.glob('config/foorms/**/*.json').sort.map.with_index(1) do |path, id|
-      # Given: "config/foorms/surveys/pd/pre_workshop_survey.0.json"
+    forms = Dir.glob('config/foorm/forms/**/*.json').sort.map.with_index(1) do |path, id|
+      # Given: "config/foorm/forms/surveys/pd/pre_workshop_survey.0.json"
       # we get full_name: "surveys/pd/pre_workshop_survey"
       #      and version: 0
-      unique_path = path.partition("config/foorms/")[2]
+      unique_path = path.partition("config/foorm/forms/")[2]
       filename_and_version = File.basename(unique_path, ".json")
       filename, version = filename_and_version.split(".")
       version = version.to_i
@@ -43,13 +43,34 @@ class Foorm::Form < ActiveRecord::Base
 
     transaction do
       reset_db
-      Foorm::Form.import! foorms
+      Foorm::Form.import! forms
     end
   end
 
-  def self.get_form_and_latest_version_for_name(form_name)
+  def self.get_questions_and_latest_version_for_name(form_name)
     latest_version = Foorm::Form.where(name: form_name).maximum(:version)
+    return nil if latest_version.nil?
+
     form = Foorm::Form.where(name: form_name, version: latest_version).first
-    return form, latest_version
+
+    # Substitute any questions from the library.
+    questions = JSON.parse(form.questions)
+    questions["pages"]&.each do |page|
+      page["elements"]&.map! do |element|
+        if element["type"] == "library_item"
+          JSON.parse(
+            Foorm::LibraryQuestion.where(
+              library_name: element["library_name"],
+              library_version: element["library_version"].to_i,
+              question_name: element["name"]
+            ).first.question
+          )
+        else
+          element
+        end
+      end
+    end
+
+    return questions, latest_version
   end
 end
