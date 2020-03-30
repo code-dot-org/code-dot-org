@@ -7,6 +7,7 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
 family_name 'csd1'
 version_year '2020'
+pilot_experiment 'noaccess'
 project_sharing true
 curriculum_umbrella 'CSD'
 
