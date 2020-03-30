@@ -136,8 +136,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "short_instructions": "**Grades 7-12 - Intermediate Challenge (Full Toolbox):** Use your Paper Prototype to build an app! ",
-    "long_instructions": "**Grades 7-12 - Intermediate Challenge (Full Toolbox):** Use your Paper Prototype to build an app! ",
+    "short_instructions": "**App Lab - Intermediate Challenge (Full Toolbox):** Use your Paper Prototype to build an app! ",
+    "long_instructions": "**App Lab - Intermediate Challenge (Full Toolbox):** Use your Paper Prototype to build an app! ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,9 +167,6 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "show_debug_watch": "true",
     "fail_on_lint_errors": "false",
@@ -184,16 +181,19 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "display_name": "7-12 Intermediate Challenge",
+    "display_name": "App Lab: Intermediate Challenge",
     "bubble_choice_description": "Build your app in App Lab using your Paper Prototype with a full toolbox. ",
     "libraries_enabled": "false",
     "widget_mode": "false",
-    "thumbnail_url": "https://images.code.org/e86a814a7f48d55650568a551d4dcba6-image-1585343732458.gif"
+    "thumbnail_url": "https://images.code.org/e86a814a7f48d55650568a551d4dcba6-image-1585343732458.gif",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-31 16:45:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-04-11 15:13:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:29:30 +0000\",\"changed\":[\"code_functions\",\"short_instructions\",\"long_instructions\",\"submittable\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 21:15:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 16:45:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-04-11 15:13:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 16:29:30 +0000\",\"changed\":[\"code_functions\",\"short_instructions\",\"long_instructions\",\"submittable\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-27 21:15:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-03-30 01:33:57 +0000\",\"changed\":[\"code_functions\",\"short_instructions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
