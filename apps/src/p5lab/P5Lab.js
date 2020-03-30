@@ -1495,11 +1495,6 @@ P5Lab.prototype.displayFeedback_ = function() {
     // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
     showingSharing:
       !level.disableSharing && level.freePlay /* || level.impressive */,
-    // impressive levels are already saved
-    // alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToLegacyGalleryUrl:
-      level.freePlay && this.response && this.response.save_to_gallery_url,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()
