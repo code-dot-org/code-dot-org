@@ -1,7 +1,8 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: :show
+  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode_or_test, only: [:edit, :update]
   before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
@@ -77,8 +78,10 @@ class ScriptsController < ApplicationController
     end
 
     @script.destroy
-    filename = "config/scripts/#{@script.name}.script"
-    File.delete(filename) if File.exist?(filename)
+    if Rails.application.config.levelbuilder_mode
+      filename = "config/scripts/#{@script.name}.script"
+      File.delete(filename) if File.exist?(filename)
+    end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
 
