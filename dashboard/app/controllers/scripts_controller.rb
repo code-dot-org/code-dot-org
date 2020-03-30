@@ -55,7 +55,7 @@ class ScriptsController < ApplicationController
         formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
         num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
         lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
-        notice_text = notice_text.empty? ? lesson_visible_after_message : notice_text + "<br/>" + lesson_visible_after_message
+        notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
       end
       flash[:notice] = notice_text.html_safe
     end
