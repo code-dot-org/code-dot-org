@@ -14732,6 +14732,10 @@ en:
               name: 'Mini-Project: Animation'
             Mouse Input:
               name: Mouse Input
+            'Mini-Project: Side Scroller':
+              name: 'Mini-Project: Side Scroller'
+            'Mini-Project: Platform Jumper':
+              name: 'Mini-Project: Platform Jumper'
         moneppo-1:
           stages: {}
         coursea-2020:
@@ -16029,15 +16033,41 @@ en:
               name: Episode 2 - Placeholder
             Episode 2 - Coming Soon!:
               name: Episode 2 - Coming Soon!
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Episode 2 - Building Things with Mark Cuban & Lyndsey Scott
           title: Code Break
           description_audience: ''
           description_short: ''
-          description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. '
+          description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 13+. '
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
               name: Episode 2 - Building Things with Mark Cuban & Lyndsey Scott
+            Episode 1 - Algorithms with Hill Harper:
+              name: Episode 1 - Algorithms with Hill Harper
           title: Code Break Staging
           description_audience: ''
           description_short: ''
           description: ''
+        code-break-younger-staging:
+          stages:
+            Episode 1 - Algorithms with Hill Harper:
+              name: Episode 1 - Algorithms with Hill Harper
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Episode 2 - Building Things with Mark Cuban & Lyndsey Scott
+          title: Code Break Younger Staging
+          description_audience: ''
+          description_short: ''
+          description: ''
+        code-break-younger:
+          stages:
+            Episode 1 - Algorithms with Hill Harper:
+              name: Episode 1 - Algorithms with Hill Harper
+            Episode 2 - Coming Soon!:
+              name: Episode 2 - Coming Soon!
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Episode 2 - Building Things with Mark Cuban & Lyndsey Scott
+          title: Code Break for Younger Students
+          description_audience: ''
+          description_short: ''
+          description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 6-12. '
