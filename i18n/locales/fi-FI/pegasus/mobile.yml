@@ -139,6 +139,7 @@
   enter_valid_email: "Ole hyvä ja syötä toimiva sähköpostiosoite"
   get_a_certificate_message: "Me lähetämme sinulle todistuksen ja lisätietoa miten voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>"
   get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai tarkastele vaihtoehtoja <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>."
+  get_a_certificate_message_after_markdown: "Napsauta todistusta ladataksesi tai tulostaaksesi. Jatka sen jälkeen [muilla kursseilla](http://studio.code.org), tai tarkastele vaihtoehtoja [Mitä voit oppia ensimmäisen tunnin jälkeen](/learn/beyond)."
   thanks_for_submitting: "Kiitos tietojen antamisesta!"
   if_you_enjoyed: "Jos nautit oppimisesta, pyydä myös kavereitasi kokeilemaan! Haluamme koko maailman oppivan."
   personalize_certificate: "Nimikoi todistuksesi"
