@@ -1,3 +1,4 @@
 // locale for jigsaw
 
-module.exports = window.blockly.jigsaw_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('jigsaw_locale');
