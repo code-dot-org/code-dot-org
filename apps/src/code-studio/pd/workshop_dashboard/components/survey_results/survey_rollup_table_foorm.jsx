@@ -33,7 +33,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     const thisWorkshop = workshopRollups.single_workshop;
     const questions = workshopRollups.questions;
     if (overall && overall.averages) {
-      Object.keys(overall.averages).forEach(questionId => {
+      for (const questionId in overall.averages) {
         const questionData = questions[questionId];
         let overallQuestionAverages = overall.averages[questionId];
         let thisWorkshopAverages = thisWorkshop.averages[questionId];
@@ -47,7 +47,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
             overallQuestionAverages
           );
         }
-      });
+      }
     }
     return rows;
   }
@@ -118,7 +118,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     });
     // add individual rows
     let thisWorkshopRows = thisWorkshopAverages && thisWorkshopAverages.rows;
-    Object.keys(overallQuestionAverages.rows).forEach(rowId => {
+    for (const rowId in overallQuestionAverages.rows) {
       rows.push({
         question: {
           text: questionData.rows[rowId],
@@ -130,7 +130,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
         overall: `${overallQuestionAverages.rows[rowId]} / ${denominator}`,
         id: rowId
       });
-    });
+    }
   }
 
   render() {
