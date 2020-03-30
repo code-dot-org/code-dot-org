@@ -205,17 +205,6 @@ class ActivitiesController < ApplicationController
       # bypass validations/transactions/etc
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
-
-    # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
-    # string value.
-    if params[:save_to_gallery] == 'true' && @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(
-        user: current_user,
-        user_level_id: @user_level.try(:id),
-        level_source_id: @level_source_image.level_source_id,
-        autosaved: true
-      )
-    end
   end
 
   def track_progress_in_session
