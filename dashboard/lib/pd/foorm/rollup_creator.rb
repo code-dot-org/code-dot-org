@@ -53,8 +53,10 @@ module Pd::Foorm
       return rollup
     end
 
-    # Get sum and count for each question in question_details from summarized_answers
-    # response in format:
+    # Creates an intermediate rollup, which is the
+    # sum and count for each question in question_details from summarized_answers.
+    # If there was no response for an answer it is not included.
+    # response format:
     # {
     #   response_count: 5,
     #   questions: {
@@ -88,7 +90,7 @@ module Pd::Foorm
       intermediate_rollup
     end
 
-    # add single set of matrix answers to intermediate rollup
+    # add single set of matrix answers to intermediate rollup (see get_intermediate_rollup for format)
     def self.add_summary_to_intermediate_rollup(intermediate_rollup_at_question, answers)
       answers.each do |answer_value, answer_count|
         intermediate_rollup_at_question[:sum] += answer_value.to_i * answer_count
