@@ -503,19 +503,6 @@ FeedbackUtils.prototype.displayFeedback = function(
     });
   }
 
-  const saveToLegacyGalleryButton = feedback.querySelector(
-    '#save-to-legacy-gallery-button'
-  );
-  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
-    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
-      $.post(options.saveToLegacyGalleryUrl, () =>
-        $('#save-to-legacy-gallery-button')
-          .prop('disabled', true)
-          .text('Saved!')
-      );
-    });
-  }
-
   var printButton = feedback.querySelector('#print-button');
   if (printButton) {
     dom.addClickTouchEvent(printButton, function() {
