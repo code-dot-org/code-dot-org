@@ -1336,7 +1336,9 @@ class Script < ActiveRecord::Base
       tts: tts?,
     }
 
-    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
+    # Filter out stages that have a visible_after date in the future
+    filtered_stages = stages.select {|stage| stage.published?(user)}
+    summary[:stages] = filtered_stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 

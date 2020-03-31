@@ -16079,3 +16079,15 @@ en:
           description_audience: ''
           description_short: ''
           description: 'With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers. More info at Code.org/break. Ages 6-12. '
+        code-break-test:
+          stages:
+            Stage 1:
+              name: Stage 1
+            Stage 2:
+              name: Stage 2
+            Stage 3:
+              name: Stage 3
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
