@@ -14,8 +14,6 @@ exit unless only_one_running?(__FILE__)
 
 FOLDERS = {
   "advocacy.code.org" => "sites.v3/advocacy.code.org",
-  "applab-docs-1" => "sites.v3/code.org/public/applab/docs1",
-  "applab-docs" => "sites.v3/code.org/public/applab/docs",
   "code.org" => "sites.v3/code.org",
   "csedweek.org" => "sites.v3/csedweek.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
@@ -43,11 +41,6 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     # 'unison' will sync the two folders. It will return true on success and false on failure.
     # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
     command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
-    if key == "code.org"
-      # The applab-docs and applab-docs-1 folders on dropbox are synced separately even though
-      # they are sub-paths of the code.org folder on git.
-      command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
-    end
     stdout, stderr, _ = Open3.capture3(command)
     if stdout != "" || stderr != ""
       error_message = "#{error_message}Dropbox directory: #{key}. staging directory: #{value}. \n#{stdout}#{stderr}\n"
