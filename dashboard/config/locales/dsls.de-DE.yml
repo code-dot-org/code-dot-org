@@ -546,7 +546,7 @@ de-DE:
         markdown: |
           # Binäre Bilder
 
-          Erfahre ein Bild mit nur zwei einfachen Werten darstellen zu können.
+          Lerne, wie man ein Bild mit nur zwei einfachen Werten darstellen kann.
       Building a UI with Design Mode:
         markdown: |
           # Willkommen im App Lab Design Mode
@@ -3371,13 +3371,19 @@ de-DE:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Nichts. Scrat wird sich überhaupt nicht bewegen.
+        - text: Scrat wird sich dreimal vorwärts bewegen, sich drehen, sich dann noch
+            dreimal vorwärts bewegen und es bis zur Eichel schaffen!
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Scrat wird sich vorwärts bewegen, sich dann umdrehen und abstürzen.
         - text: Ich weiß es nicht.
+          feedback: Wenn du den "Vorwärts"-Block innerhalb des "Wiederholen"-Blocks
+            platzierst, bewegt sich Scrat dreimal vorwärts. Dann dreht er sich um
+            und bewegt sich noch drei weitere Male vorwärts und erreicht die Eichel!
         questions:
-        - {}
+        - text: Dieser Code verwendet einen neuen Block. Was passiert deiner Meinung
+            nach, wenn du auf "Ausführen" drückst?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -3770,3 +3776,7 @@ de-DE:
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
+      gradek1_activity_beNice:
+        markdown: "# Verhalten im Computerlabor\n \n<br/><br/>  \n  \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nZum Unterrichtsplan\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Weiter</a>"

@@ -11,6 +11,7 @@ Programming in a brand new environment can be challenging and intimidating. We r
 <br>
 <div class="col-33" style="padding-right: 20px;">
     <img src="/images/athome/web-lab.jpg">
+    <p><i>Photo courtesy of Fundación Sadosky</i><p>
 </div>
 <div class="col-66">
     <h3><a href="https://code.org/educate/weblab"><strong>Web Lab</strong></a></h3>
@@ -72,9 +73,9 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
     </thead>
     <tbody>
         <tr>
-            <td><h3><strong>Digital Book Report</strong></h3><p>Use Web Lab to create a presentation for a class assignment. Add text and images and cite your sources.</p><img src="/images/athome/book-report.png"/><br><br><p><a href="https://docs.google.com/document/d/1t9MluD6MXBpXC6v-O2iJZth2XngFNt1cNcfDnSnAzMA/edit">More Details</a></p><p><a href="https://docs.google.com/document/d/1b-r2fmXMX5UzQDOZO5Ti40pDhA1_fup232Tlim1bdp4/edit#">Project Guide</a></p></td>
-            <td><h3><strong>Choose Your Own Adventure</strong></h3><p>Write a branching story using hyperlinks and separate pages for each reader decision point.</p><img src="/images/athome/cyoa.png"/><br><br><p><a href="https://docs.google.com/document/d/1ERjIca3bFmm1Gj8x5YKNB2bvd3gwTdvaqdq4XUpBxZI/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1bMPvQTEtThFx5R0yIoJN4290SerK9lLgtPXp5zS-umQ/edit#">Project Guide</a></p></td>
-            <td><h3><strong>Journal or Blog</strong></h3><p>Create a space for you to write about your experiences. Add a new page each daily or week!</p><img src="/images/athome/journal.png"/><br><br><p><a href="https://docs.google.com/document/d/104TYIDCUq8n7AiSEYFMqdkBqes8Yr9WCi1zqEdoBSkU/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1bMPvQTEtThFx5R0yIoJN4290SerK9lLgtPXp5zS-umQ/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Digital Book Report</strong></h3><p>Use Web Lab to create a presentation for a class assignment. Add text and images and cite your sources.</p><img src="/images/athome/book-report.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1t9MluD6MXBpXC6v-O2iJZth2XngFNt1cNcfDnSnAzMA/edit">More Details</a></p><p><a href="https://docs.google.com/document/d/1b-r2fmXMX5UzQDOZO5Ti40pDhA1_fup232Tlim1bdp4/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Choose Your Own Adventure</strong></h3><p>Write a branching story using hyperlinks and separate pages for each reader decision point.</p><img src="/images/athome/cyoa.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1ERjIca3bFmm1Gj8x5YKNB2bvd3gwTdvaqdq4XUpBxZI/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1bMPvQTEtThFx5R0yIoJN4290SerK9lLgtPXp5zS-umQ/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Journal or Blog</strong></h3><p>Create a space for you to write about your experiences. Add a new page each daily or week!</p><img src="/images/athome/journal.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/104TYIDCUq8n7AiSEYFMqdkBqes8Yr9WCi1zqEdoBSkU/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1bMPvQTEtThFx5R0yIoJN4290SerK9lLgtPXp5zS-umQ/edit#">Project Guide</a></p></td>
 
         </tr>
     </tbody>
@@ -91,9 +92,9 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
     </thead>
     <tbody>
         <tr>
-            <td><h3><strong>No Sprites Animation Challenge</strong></h3><p>Test your understanding of variables and the draw loop by creating an animated scene without any sprites!</p><img src="/images/athome/no-sprites.gif"/><br><br><p><a href="https://docs.google.com/document/d/1JGmqwOUr-9LgjbbaEqVK8AQsHSQWvyjgHOJ-9CblU6o/edit#heading=h.jornae4vwl7p">More Details</a></p><p><a href="https://docs.google.com/document/d/1PyqSvPvg01usv6uS1lf-E_kLHAf59iWteyALUqOlEgM/edit#">Project Guide</a></p></td>
-            <td><h3><strong>Randomized Image Creator</strong></h3><p>Apply knowledge of user input and the draw loop to create on-demand randomized images.</p><img src="/images/athome/random-image.gif"/><br><br><p><a href="https://docs.google.com/document/d/1QGIvapBacMyvHVRDrLH179DEkjOMUBrv7Zh6OYz_Vyo/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1-aSVaGYgQFymtLse8oQg1QXdWohbIYzLysfCFJhlRRk/edit#">Project Guide</a></p></td>
-            <td><h3><strong>Teach a Science Concept</strong></h3><p>Create your own pixel animations and add text to create an interactive presentation about a science concept - or any other topic!</p><img src="/images/athome/science-concept.gif"/><br><br><p><a href="https://docs.google.com/document/d/1gevkecZBDUb49KptVE3IqfU1E8Ov5zjbR73bnETsI8g/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1mgpQfAsMGJFZlHQwzX0ePIlI8cx8zejLZb0HOwlN95A/edit#">Project Guide</a></p></td>
+            <td><h3><strong>No Sprites Animation Challenge</strong></h3><p>Test your understanding of variables and the draw loop by creating an animated scene without any sprites!</p><img src="/images/athome/no-sprites.gif" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1JGmqwOUr-9LgjbbaEqVK8AQsHSQWvyjgHOJ-9CblU6o/edit#heading=h.jornae4vwl7p">More Details</a></p><p><a href="https://docs.google.com/document/d/1PyqSvPvg01usv6uS1lf-E_kLHAf59iWteyALUqOlEgM/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Randomized Image Creator</strong></h3><p>Apply knowledge of user input and the draw loop to create on-demand randomized images.</p><img src="/images/athome/random-image.gif" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1QGIvapBacMyvHVRDrLH179DEkjOMUBrv7Zh6OYz_Vyo/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1-aSVaGYgQFymtLse8oQg1QXdWohbIYzLysfCFJhlRRk/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Teach a Science Concept</strong></h3><p>Create your own pixel animations and add text to create an interactive presentation about a science concept - or any other topic!</p><img src="/images/athome/science-concept.gif" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1gevkecZBDUb49KptVE3IqfU1E8Ov5zjbR73bnETsI8g/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1mgpQfAsMGJFZlHQwzX0ePIlI8cx8zejLZb0HOwlN95A/edit#">Project Guide</a></p></td>
         </tr>
     </tbody>
 </table>
