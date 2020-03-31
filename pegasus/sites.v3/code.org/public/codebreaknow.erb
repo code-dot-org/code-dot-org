@@ -16,14 +16,15 @@ social:
 <script>
 // Set the date we're counting down to
 // THIS CODE NEEDS TO CHANGE EACH WEEK
-var episode1 = new Date();
-episode1.setUTCFullYear(2020);
-episode1.setUTCMonth(3); // in javascript months start at 0
-episode1.setUTCDate(1);
-episode1.setUTCHours(16); // countdown until 9:58:00am PT, giving 2 min to launch zoom
-episode1.setUTCMinutes(58);
-episode1.setUTCSeconds(50);
-episode1.setUTCMilliseconds(0);
+var episode1 = new Date(Date.UTC(
+  2020, // set this to the year
+  3,    // set this to the month minus one (JavaScript months start at 0
+  1,    // set this to the day
+  16,   // don't change this (hours in UTC)
+  58,   // don't change this (minutes)
+  50,   // don't change this (seconds)
+  0     // don't change this (milliseconds)
+));
 
 // SWAP THE //s IN THE LINE BELOW TO SWITCH FROM DEMO TO REAL
 //var countDownDate = new Date(Date.now() + 10000).getTime(); // THIS IS FOR TESTING
@@ -49,7 +50,7 @@ var x = setInterval(function() {
  //   minutes + " minutes | " + seconds + " seconds";
   document.getElementById("demo").innerHTML = "<span style='white-space: nowrap;'>" + days + " days | </span><span style='white-space: nowrap;'>" + hours + " hours |</span><span style='white-space: nowrap;'> " +
     minutes + " minutes |</span><span style='white-space: nowrap;'> " + seconds + " seconds</span>";
-  // If the count down is over, write some text 
+  // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "<a href='https://codebreak.live/now'>Join the Code Break!</a>";
@@ -59,7 +60,7 @@ var x = setInterval(function() {
 
 <h1>Stuck at Home? Take a Code Break!</h1>
 <p>
-<font color="00adbc"><b>Check back at this page right before the episode</b></font> for the link to participate: Wednesdays at 10am PT / 1pm ET, starting March 25. Recordings will also be available here after the episode has aired. 
+<font color="00adbc"><b>Check back at this page right before the episode</b></font> for the link to participate: Wednesdays at 10am PT / 1pm ET, starting March 25. Recordings will also be available here after the episode has aired.
 </p>
 
 <div style=" color:#00adbc; padding: 20px; ">
