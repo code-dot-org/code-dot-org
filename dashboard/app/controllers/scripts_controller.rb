@@ -47,7 +47,7 @@ class ScriptsController < ApplicationController
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
 
     # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
-    if current_user.levelbuilder?
+    if current_user && current_user.levelbuilder?
       notice_text = ""
       @script.stages.each do |stage|
         next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
