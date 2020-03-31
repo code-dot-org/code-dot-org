@@ -98,6 +98,7 @@ Resources:
 <%=  component 'ami', ami: (ami = commit[0..4]),
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
+  subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
   frontend_policies: [Ref: 'CDOPolicy'],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,

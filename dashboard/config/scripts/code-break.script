@@ -1,4 +1,5 @@
 hidden false
+login_required true
 hideable_stages true
 student_detail_progress_view true
 
@@ -10,5 +11,9 @@ level 'Episode 1 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E01 Challenges', progression: 'Challenges'
 level 'Episode 1 Share', progression: 'Share Your Work!'
 
-stage 'Episode 2 - Coming Soon!'
+stage 'Episode 2 - Building Things with Mark Cuban & Lyndsey Scott'
 level 'CodeBreak Episode 2 Placeholder', progression: 'Coming Soon!'
+level 'Episode 2 Instructions', progression: 'Practice'
+level 'Episode 2 Challenge Instructions', progression: 'Challenges'
+level 'CodeBreak E02 Challenges', progression: 'Challenges'
+level 'Episode 2 Share', progression: 'Share Your Work!'
