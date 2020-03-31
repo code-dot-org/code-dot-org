@@ -236,7 +236,7 @@ class ApplicationController < ActionController::Base
   # not modify curriculum content in a way could introduce intermittent failures
   # in other tests. Developers wishing to run these tests locally should run
   # their local server in levelbuilder_mode.
-  def require_levelbuilder_mode_or_test
+  def require_levelbuilder_mode_or_test_env
     unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
