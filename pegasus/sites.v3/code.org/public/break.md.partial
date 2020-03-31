@@ -13,8 +13,9 @@ social:
   "og:video:type": ""
 ---
 <div style="background-color: #00adbc; padding: 25px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+
 <h1>Take a Code Break</h1>
-<div class="col-66" style="padding-right: 30px;">
+<div class="col-66" style="padding-right: 30px; padding-bottom: 20px;">
 
 With schools closed and tens of millions of students at home, join Code.org each week for Code Break — help us build the world's largest live interactive classroom, with weekly challenges to engage students of all abilities, even those without computers.
 
@@ -24,6 +25,8 @@ With schools closed and tens of millions of students at home, join Code.org each
 <li>A <a href="#activities">weekly activity</a> or challenge. <a href="#signup">Sign up</a>.</li>
 <li>Options for beginners, experienced students, and even students without computers.</li>
 </ul>
+
+<a href="https://code.org/codebreaknow"><button>Tune In</button></a>
 
 </div>
 

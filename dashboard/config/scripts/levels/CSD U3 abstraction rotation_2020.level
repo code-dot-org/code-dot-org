@@ -42,7 +42,7 @@
     "debugger_disabled": "true",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"sun\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"sun\": {\r\n      \"name\": \"sun\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/nfUk4Qpbn68_IT-Cri9ZfA/sun.png?version=TmYjW1.fxMqhOKou3lpHlye3MaD9w61N\",\r\n      \"frameSize\": {\r\n        \"x\": 100,\r\n        \"y\": 100\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"TmYjW1.fxMqhOKou3lpHlye3MaD9w61N\"\r\n    }\r\n  }\r\n}",
     "start_blocks": "var sun = createSprite(200, 200);\r\nsun.setAnimation(\"sun\");\r\n\r\nfunction draw() {\r\n  background(\"blue\");\r\n  drawSprites();\r\n}\r\n",
-    "long_instructions": "# rotationSpeed\r\n\r\nYou've already learned how to make your sprite spin by using the `rotation` block.  For example, when you wanted your sprite to rotate by two degrees each time it was drawn, you put `sprite.rotation = sprite.rotation + 2` inside the draw loop.\r\n\r\nNow, you can use `rotationSpeed` to make your sprites rotate by a certain amount each time they are drawn. If you want your sun to rotate by two degrees each time it's drawn, you can use `sun.rotationSpeed = 2` before the draw loop, after you create your sprite.\r\n\r\n# Do This\r\n\r\nMake the sun rotate by 3 degrees each time using the `rotationSpeed` block. ( [Show me where](#triggercallout=callout1) )",
+    "long_instructions": "# rotationSpeed\r\n\r\nYou can use `rotationSpeed` to make your sprites spin. If you want your sun to rotate by two degrees each time it's drawn, you can use `sun.rotationSpeed = 2` before the draw loop, after you create your sprite.\r\n\r\n# Do This\r\n\r\nMake the sun rotate by 3 degrees each time using the `rotationSpeed` block. ( [Show me where](#triggercallout=callout1) )",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
@@ -62,11 +62,15 @@
     "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:41:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:18:28 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:41:46 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 07:18:28 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 20:40:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
