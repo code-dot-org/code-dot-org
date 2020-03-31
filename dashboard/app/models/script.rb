@@ -1060,6 +1060,7 @@ class Script < ActiveRecord::Base
 
       raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
+      stage.visible_after = raw_stage[:visible_after]
       stage.save! if stage.changed?
     end
 
