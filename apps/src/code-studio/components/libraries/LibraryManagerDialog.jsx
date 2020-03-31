@@ -141,14 +141,15 @@ export class LibraryManagerDialog extends React.Component {
       return;
     }
 
-    const queryObj = libraries.map(library => ({
+    // TODO: filter out class libraries
+    const libraryQuery = libraries.map(library => ({
       channel_id: library.channelId,
       version: library.versionId
     }));
 
     $.ajax({
       method: 'GET',
-      url: `/libraries/get_updates?libraries=${JSON.stringify(queryObj)}`
+      url: `/libraries/get_updates?libraries=${JSON.stringify(libraryQuery)}`
     }).done(updatedLibraryChannels => this.setState({updatedLibraryChannels}));
   };
 
