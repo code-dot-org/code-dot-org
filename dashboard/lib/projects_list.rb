@@ -276,7 +276,8 @@ module ProjectsList
         name: project_value['libraryName'],
         description: project_value['libraryDescription'],
         userName: user&.name,
-        sharedWith: project_value['sharedWith'] ? project_value['sharedWith'] : []
+        sharedWith: project_value['sharedWith'] ? project_value['sharedWith'] : [],
+        latestLibraryVersion: project_value['latestLibraryVersion']
       }.with_indifferent_access
     end
 
