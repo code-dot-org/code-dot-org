@@ -8,12 +8,11 @@ require 'time'
 #     errors.record "Something went wrong"
 #   end
 #   errors.report!
-#   errors.save!
+#   errors.save
 class HighFrequencyReporter
-  attr_reader :new_events, :old_events
-
-  def initialize(chat_client, log_file_name)
+  def initialize(chat_client, channel, log_file_name)
     @chat_client = chat_client
+    @channel = channel
     # Load old events from disk
     # [{name: "eventblah", reported_at: '2020010...'}, ...]
     @old_events = []
@@ -34,7 +33,6 @@ class HighFrequencyReporter
     @old_events = CSV.read(@filename, headers: true).map do |row|
       row.to_h.transform_keys(&:to_sym).tap do |h|
         h[:reported_at] = Time.parse(h[:reported_at])
-        #h[:last_slack_reported_at] = Time.parse(h[:last_slack_reported_at])
       end
     end
   rescue
@@ -48,10 +46,8 @@ class HighFrequencyReporter
   end
 
   def report!(throttle = 1)
-    alertable_events = @new_events.map {|e| e[:name]} & @old_events.map {|e| e[:name]}
-    puts Time.now.min
     if Time.now.min % throttle == 0
-      alertable_events.each {|e| @chat_client.message(e)}
+      alertable_events.each {|e| @chat_client.message(e, {channel: @channel})}
     end
   end
 
@@ -62,5 +58,9 @@ class HighFrequencyReporter
         csv << event.values
       end
     end
+  end
+
+  def alertable_events
+    @new_events.map {|e| e[:name]} & @old_events.map {|e| e[:name]}
   end
 end
