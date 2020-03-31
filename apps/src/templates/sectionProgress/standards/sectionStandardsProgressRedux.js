@@ -332,26 +332,35 @@ export function fetchStandardsCoveredForScript(scriptId) {
 export function fetchStudentLevelScores(scriptId, sectionId) {
   return (dispatch, getState) => {
     let state = getState();
-    $.ajax({
-      method: 'GET',
-      dataType: 'json',
-      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
-    }).then(data => {
-      const scoresData = data;
-      dispatch(setStudentLevelScores(scoresData));
-      let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
-        state,
-        scriptId,
-        scoresData
-      );
-      let unpluggedLessonList = getUnpluggedLessonsForScript(state);
-      const lessonsToSelect = _.filter(unpluggedLessonList, function(lesson) {
-        if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
-          return lesson;
-        }
-      });
-      dispatch(setSelectedLessons(lessonsToSelect));
+    const numStudents =
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .studentCount;
+    const NUM_STUDENTS_PER_PAGE = 50;
+    const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
+    const requests = _.range(1, numPages + 1).map(currentPage => {
+      const url = `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}?page=${currentPage}`;
+      return fetch(url, {credentials: 'include'})
+        .then(response => response.json())
+        .then(data => {
+          const scoresData = data;
+          dispatch(setStudentLevelScores(scoresData));
+          let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
+            state,
+            scriptId,
+            scoresData
+          );
+          let unpluggedLessonList = getUnpluggedLessonsForScript(state);
+          const lessonsToSelect = _.filter(unpluggedLessonList, function(
+            lesson
+          ) {
+            if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
+              return lesson;
+            }
+          });
+          dispatch(setSelectedLessons(lessonsToSelect));
+        });
     });
+    Promise.all(requests);
   };
 }
 
