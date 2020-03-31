@@ -19,6 +19,8 @@ eu-ES:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Informatika irakaslea zara? Ikusi Informatikaren Ikaskuntzaren
     Asteko (CSEdWeek) beste baliabide batzuk</a>'
+  csedweek_banner_teachers_text: Informatika irakaslea zara? Ikusi Informatikaren
+    Ikaskuntzaren Asteko (CSEdWeek) beste baliabide batzuk
   n_have_learned_an_hoc: "<h1>Saiatu egiten</h1><h2>Kode Ordua.</h2><h3>#-k egin dute
     jada</h3>"
   anybody_can_learn: Edozeinek ikasi dezake.
@@ -128,6 +130,9 @@ eu-ES:
     egin bertan. Orain gure <a href='http://studio.code.org'>-rekin jarraitu, bestelako
     ikastaroak</a> edo ikusi aukera gehiago <a href='/learn/beyond'>Ordubete baino
     gehiago ikasi</a>.
+  get_a_certificate_message_after_markdown: Ziurtagiria deskargatzeko edo inprimatzeko
+    klik egin bertan. Orain gure [rekin jarraitu, bestelako ikastaroak](http://studio.code.org)
+    edo ikusi aukera gehiago [Ordubete baino gehiago ikasi](/learn/beyond).
   thanks_for_submitting: Eskerrik asko bidaltzeagatik!
   if_you_enjoyed: Ondo pasa baduzu ikasten, gonbidatu zure lagunak saiatzeko! Mundu
     guztiak ikastea nahi dugu.

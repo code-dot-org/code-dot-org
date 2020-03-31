@@ -1,19 +1,20 @@
+tts true
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursec/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursec'
 version_year '2020'
 curriculum_umbrella 'CSF'
 
-stage 'Screen Out the Mean', flex_category: 'csf_digcit'
-level 'ScreenOutTheMean-Unplugged_2020'
+stage 'Putting a STOP to Online Meanness', flex_category: 'csf_digcit'
+level 'csf_putting_a_stop_to_online_meanness'
 
-stage 'Powerful Passwords', flex_category: 'csf_digcit'
-level 'PowerfulPasswords-Unplugged_2020'
+stage 'Password Power-Up', flex_category: 'csf_digcit'
+level 'csf_password_power-up'
 
 stage 'Programming: My Robotic Friends', flex_category: 'csf_sequencing'
 level 'MyRoboticFriends-Unplugged_2020'

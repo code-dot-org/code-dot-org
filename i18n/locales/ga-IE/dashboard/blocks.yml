@@ -1456,12 +1456,10 @@ ga:
             '3': '3'
       aalab_setupStory:
         text: socrú an scéil
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': taispeáin
-            '"hide"': folaigh
+            '"random"': randamach
       binary_drawPixelHere:
         options:
           VAL:

@@ -2359,22 +2359,32 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+            Text:
+              name: Tekst
         coursea-2020:
           stages:
             Going Places Safely:
               name: Veilig Reizen
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
             Move It, Move It:
               name: verplaats het, verplaats het
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
             Relay Programming:
               name: Estafette Programmeren
             Build a Star Wars Game:
@@ -2382,7 +2392,7 @@ nl:
             Conditionals with Cards:
               name: Statements met Kaarten
             'Unplugged: Binary':
-              name: 'Unplugged: binair'
+              name: Binaire afbeeldingen
             Artist Binary:
               name: Kunstenaar Binary
             Digital Citizenship:
@@ -2391,9 +2401,8 @@ nl:
               name: Dansfeest
         coursee-2020:
           stages:
-            Conditionals:
-              name: Voorwaardelijke instructies
             'Functions: Songwriting':
+              name: Songwriting
               description_teacher: Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  
         coursef-2020:
           stages:
@@ -2402,7 +2411,7 @@ nl:
             For Loop Fun:
               name: For Lus fun
             Internet:
-              name: Internet
+              name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
         express-2020:
@@ -2453,3 +2462,63 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+        csp3-virtual:
+          description_short: Programmeren
+          stages:
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Using Simple Commands:
+              name: Simpele Commando's Gebruiken
+            Creating Functions:
+              name: Maken van functies
+            Functions and Top-Down Design:
+              name: Functies en Top-Down Designs
+            APIs and Function Parameters:
+              name: API's en Functieparameters
+        csd3-virtual:
+          description_short: "Programmeren"
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        jess-test-script:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Debugging:
+              name: Foutopsporing
+        csp5-virtual:
+          stages:
+            User Input and Strings:
+              name: Gebruikersinvoer en Strings
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        code-break:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Algorithms:
+              name: Algoritmen
+            Events:
+              name: Gebeurtenissen

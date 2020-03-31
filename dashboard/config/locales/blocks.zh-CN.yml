@@ -1579,6 +1579,14 @@ zh-CN:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
       aalab_prompt:
         text: 提问 {MESSAGE}
       aalab_scene:
@@ -1590,12 +1598,10 @@ zh-CN:
             '3': '3'
       aalab_setupStory:
         text: 设置故事
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 显示
-            '"hide"': 隐藏
+            '"random"': 随机
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:

@@ -2296,10 +2296,14 @@ hu:
               name: Feltételek
             Functions:
               name: funkciók
+            Text:
+              name: szöveg
         coursea-2020:
           stages:
             Going Places Safely:
               name: Biztonságos utazás
+            'Programming: Happy Maps':
+              name: Vidám térképek
             Programming with Rey and BB-8:
               name: Programozás Rey és BB-8 segítségével
               description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
@@ -2312,6 +2316,8 @@ hu:
               name: A digitális lábnyomod
             Move It, Move It:
               name: Mozgás, mozgás
+            'Loops: Getting Loopy':
+              name: Ciklikusság
         coursec-2020:
           stages:
             Binary Bracelets:
@@ -2323,14 +2329,18 @@ hu:
               description_teacher: A „Getting Loopy” című utasítások ismétlődésének
                 koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
                 amiben BB-8 lesz a segítségükre.
+            'Events: The Big Event':
+              name: A nagy esemény
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
             Relay Programming:
               name: Váltó programozás
             Conditionals with Cards:
               name: Feltételek kártyákkal
             'Unplugged: Binary':
-              name: 'Gép nélküli feladatok: kettes számrendszer'
+              name: Bináris képek
             Artist Binary:
               name: 'Művész: a kettes számrendszer'
             Digital Citizenship:
@@ -2339,8 +2349,8 @@ hu:
               name: Táncos buli
         coursee-2020:
           stages:
-            Conditionals:
-              name: Feltételek
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2348,7 +2358,7 @@ hu:
             For Loop Fun:
               name: Szórakozás a For ciklussal
             Internet:
-              name: Internet
+              name: Az internet
             Crowdsourcing:
               name: Csoportos megoldás
         express-2020:
@@ -2367,3 +2377,49 @@ hu:
           stages:
             Representing Information:
               name: Az információ ábrázolása
+        csp3-virtual:
+          description_short: Programozás
+          stages:
+            The Need for Algorithms:
+              name: Algoritmusokra szükség van
+            Creativity in Algorithms:
+              name: Kreativitás az algoritmusokban
+            Creating Functions:
+              name: Függvények létrehozása
+            Creating functions with Parameters:
+              name: Paraméteres függvények készítése
+            Unit 3 Chapter 1 Assessment:
+              name: 3. lecke 1. fejezet végi értékelés
+        csd3-virtual:
+          description_short: Programozás
+          stages:
+            Variables:
+              name: változók
+            Sprites:
+              name: Sprite-ok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Random Numbers:
+              name: Véletlen számok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: CSS osztályok
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funkciók
+        code-break:
+          stages:
+            Algorithms:
+              name: algoritmusok
+            Events:
+              name: Események

@@ -6,14 +6,14 @@ de-DE:
       Alien Defender: Alien Defender
       App Lab Intro 8 - Video Design Mode: 'Video: Designmodus'
       App Lab Intro 8 - Video Getting Started: 'Video: Einführung'
-      App Lab Intro 8 - Video Images and Sounds: 'Video: Bild und Klang'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Bilder und Klänge'
       App Lab Intro 8 - Video Make It Interactive: 'Video: Mache es interaktiv'
       App Lab Intro 8 - Video Share Your App: 'Video: Teile deine App mit Anderen'
       AppLab Intro 7 - Change Screen Color: Bildschirmfarbe ändern
       AppLab Intro 7 - Change Text 2: Text ändern
       AppLab Intro 7 - Full Text: Zwei Tasten
       AppLab Intro 7 - onEvent intro: Funktion der Tasten erstellen
-      AppLab Intro 7 - onEvent twoButtons: Mehr Praxis
+      AppLab Intro 7 - onEvent twoButtons: Mehr onEvent Übungen
       AppLab Intro 7 - playSound: playSound verwenden
       AppLab Intro 7 - thisOrThatAddButton: Dies oder das
       AppLab Intro 7 - thisOrThatAddScreen: Dies oder das
@@ -386,8 +386,8 @@ de-DE:
       Dance_Party_extras_on_beat_2019: Bass, Mitten und Höhen
       Dance_Party_extras_speed: Beschleunigen, verlangsamen
       Dance_Party_extras_speed_2019: Beschleunigen, verlangsamen
-      Dance_Party_extras_visible: Wohin würden sie gehen?
-      Dance_Party_extras_visible_2019: Wohin würden sie gehen?
+      Dance_Party_extras_visible: Wo sind sie hin?
+      Dance_Party_extras_visible_2019: Wo sind sie hin?
       Final Personal Website: Die endgültige persönliche Website
       Final Personal Website_2018: Die endgültige persönliche Website
       Final Personal Website_2019: Die endgültige persönliche Website
@@ -418,6 +418,7 @@ de-DE:
       MC_HOC_2017_10_RETRY_2019: Die Höhle
       Making Music_2018: Musik machen
       Making Music_2019: Musik machen
+      New Dance Lab Project: Neues Tanzparty Projekt
       OPD-K5 WhatIsCS: Was ist Informatik?
       Oceans_Video_Machine_Learning: 'Video: Maschinelles Lernen'
       Oceans_Video_Societal_Implications: 'Video: Gesellschaftliche Auswirkungen'
@@ -433,7 +434,11 @@ de-DE:
       courseB_video_Unspotted: Unentdeckte Bugs
       courseB_video_Unspotted_2018: Unentdeckte Bugs
       courseE_Dogger_2: Dogger Beispiel
+      courseF_artist_for1: Freie Gestaltung Für-Schleifen (Beginn)
+      courseF_artist_for1_2018: Freie Gestaltung Für-Schleifen (Beginn)
+      courseF_artist_for1_2019: Freie Gestaltung Für-Schleifen (Beginn)
       courseF_project_1: Sprite Lab Beispielprojekt
+      courseF_video_csMatters: Projekte am Ende des Kurses
       csd U3 conditional statements video: 'Video: "Wenn/Sonst" Anweisungen'
       csd U3 conditional statements video_2019: 'Video: Bedingte Anweisungen'
       csd u5 recommender sample: Beispiel-App

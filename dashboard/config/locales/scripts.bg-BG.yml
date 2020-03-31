@@ -2516,36 +2516,46 @@ bg:
               name: Скорост
             Functions:
               name: Функции
+            Text:
+              name: Текст
         coursea-2020:
           stages:
             Going Places Safely:
               name: Достигаме безопасно до места
+            'Programming: Happy Maps':
+              name: Щастливи карти
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
             Move It, Move It:
               name: Преместете го, преместете го
+            'Loops: Getting Loopy':
+              name: Да повтаряме
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Двоични гривни
+            'Events: The Big Event':
+              name: Голямото събитие
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
             Relay Programming:
               name: Повтори програмирането
             Conditionals with Cards:
               name: Условия с карти
             'Unplugged: Binary':
-              name: 'Ънплъгд: двоичен код'
+              name: Бинарни образи(картини)
             Artist Binary:
               name: 'Художник: Бинарен код'
             Digital Citizenship:
               name: Цифрови граждани
         coursee-2020:
           stages:
-            Conditionals:
-              name: Условия
+            'Functions: Songwriting':
+              name: Писане на песен
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2564,3 +2574,50 @@ bg:
           stages:
             Binary Numbers:
               name: Бинарни числа
+        csp3-virtual:
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране,
+            което отключва възможността да се правят богати, интерактивни приложения.
+            Този курс използва JavaScript като език за програмиране, както и Ап лабораторията
+            като програмната среда за изграждане на приложения, но концепцията, която
+            ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          description_short: Програмиране
+          stages:
+            The Need For Programming Languages:
+              name: Нуждата от програмни езици
+            Using Simple Commands:
+              name: Използване на прости команди
+            Creating Functions:
+              name: Създаване на функции
+            APIs and Function Parameters:
+              name: API и параметри на функцията
+            Looping and Random Numbers:
+              name: Цикли и случайни числа
+        csd3-virtual:
+          description_short: Програмиране
+          stages:
+            Variables:
+              name: Променливи
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+            Sprite Properties:
+              name: Свойства на Спрайта
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Докато цикли
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Събития

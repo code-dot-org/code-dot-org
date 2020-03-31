@@ -20,14 +20,22 @@ pt-BR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Você é professor de ciência da computação? Veja outros
     recursos da Semana de Educação em Ciência da Computação</a>'
+  csedweek_banner_teachers_text: Você é professor de ciência da computação? Veja outros
+    recursos da Semana de Educação em Ciência da Computação
   n_have_learned_an_hoc: "<h1>Experimente uma</h1><h2>Hora do Código</h2><h3># tentaram</h3>"
+  try_hoc_num_served: "<h1>Faça uma</h1><h2>Hora do Código</h2><h3>%{num} atendidos</h3>"
+  try_hoc_num_served_markdown: "# Faça uma\\n\\n## Hora do Código\\n\\n### %{num}
+    atendidos"
   anybody_can_learn: Qualquer pessoa pode aprender.
   learn_now: Aprenda Agora
   petition_message: Todos os alunos, em todas as escolas, devem ter a oportunidade
     de aprender ciência da computação
   petition_sign_message: 'Se você concordar, assine seu nome e junte-se à nossa lista
     de e-mails junto com # outros.'
+  petition_sign_message_num: Caso esteja de acordo, assine seu nome e participe da
+    nossa lista de e-mails junto com% {num} outros.
   petition_join_others: 'Junte-se a # outros'
+  petition_join_others_num: Junte-se a %{num} outros
   name: Nome
   email: E-mail
   zipcode: CEP ou país
@@ -60,6 +68,8 @@ pt-BR:
   hoc2014_whatishoc: O que é a Hora do Código?
   csedweek_map_header: "# Semana de Educação em Ciência da Computação / Hora do Código
     ao redor do mundo"
+  csedweek_map_header_num: "%{num} eventos Semana de Educação em Ciência da Computação
+    / Hora do Código ao redor do mundo"
   csedweek_map_signup: Registre seu evento
   csedweek_map_search_placeholder: Pesquisar eventos da Hora do Código
   csedweek_map_search_search: Pesquisar
@@ -230,6 +240,9 @@ pt-BR:
   get_a_certificate_message_after: Clique no certificado para baixá-lo ou imprimi-lo.
     Agora, faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja
     mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
+  get_a_certificate_message_after_markdown: Clique no certificado para baixá-lo ou
+    imprimi-lo. Agora, faça nossos [outros cursos](http://studio.code.org), ou veja
+    mais opções para [Aprender além da Hora do Código](/learn/beyond).
   thanks_for_submitting: Obrigado por enviar!
   if_you_enjoyed: Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos
     que o mundo todo aprenda.
@@ -250,6 +263,8 @@ pt-BR:
   share_achievement: Compartilhar sua conquista
   beyond_hour_message: Faça nossos <a href='http://studio.code.org'>outros cursos</a>,
     ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
+  beyond_hour_message_markdown: Faça nossos [outros cursos](http://studio.code.org),
+    ou veja mais opções para [Aprender além da Hora do Código](/learn/beyond).
   leaderboards_for_hoc: Classificações para a Hora do Código.
   support_url: http://support.code.org
   country: País
@@ -335,6 +350,12 @@ pt-BR:
     aluna do 5º ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Frank Martinez, Professor'
+  stats_nina_markdown: "“Todos os dias produziram os mesmos resultados – 100% de comprometimento.”
+    – Nina Nichols Peery, Professora"
+  stats_student_markdown: "“Eu sabia que esta era uma chance **única**.” – Mariana
+    Alzate, aluna do 5º ano"
+  stats_michael_markdown: "“Eu **nunca, nunca** vi meus alunos tão animados para aprender.”
+    – Frank Martinez, Professor"
   studiobar_title: Explore os <a href='http://studio.code.org'>Cursos Code.org</a>
   studiobar_title_nolink: Explore os cursos do Code.org
   studiobar_elementary_title: Cursos para o Ensino Fundamental
@@ -534,8 +555,12 @@ pt-BR:
   class_submission_languages_other: Outro(s) idioma(s)
   videos_more: Mais <a href='%{inspiring_videos_playlist}'>vídeos inspiradores</a>
     com modelos e celebridades
+  videos_more_markdown: Mais [vídeos inspiradores](%{inspiring_videos_playlist}) com
+    modelos e celebridades
   careers_page_more: Mais <a href='%{careers_url}' target='_blank'>vídeos inspiradores</a>
     com profissionais em áreas da tecnologia
+  careers_page_more_markdown: Mais [vídeos inspiradores](%{careers_url}) com profissionais
+    em áreas da tecnologia
   playlab_choose_theme: Escolha seu tema do Laboratório
   playlab_classic_title: Clássico
   playlab_gumball_title: O Incrível Mundo de Gumball
@@ -699,17 +724,32 @@ pt-BR:
     style="font-family: ''Gotham 7r'', sans-serif;">inspirar</span> seus alunos falando
     sobre a gama de possibilidades da ciência da computação (o que pode ser feito
     por meio de de vídeo conferência).'
+  volunteer_engineer_submission_intro_recruit_markdown: Os professores adorariam ter
+    alguém**apaixonado pelo ensino da ciência da computação** que pudesse ajudá-los
+    em suas aulas, ou alguém que pudesse**inspirar** seus alunos falando sobre a gama
+    de possibilidades da ciência da computação (o que pode ser feito por meio de de
+    vídeo conferência).
   volunteer_engineer_submission_intro_guide: Saiba mais sobre o nosso <a href="%{volunteer_guide}">programa
     de voluntariado aqui</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Saiba mais sobre o nosso [programa
+    de voluntariado aqui](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Por favor, insira as seguintes informações
     se você é um estudante de ciência da computação ou profissional de software. Você
     deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe
     que todos os campos que você preencher nesta seção estarão publicamente disponíveis
     para qualquer um olhando para o <a href="/volunteer/local">mapa de voluntário</a>.
     Campos marcados com um <span class="form-required-field">*</span> são obrigatórios.
+  volunteer_engineer_submission_intro_signup_markdown: Insira as seguintes informações
+    se você for um estudante de ciência da computação ou profissional de software.
+    Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe
+    que todos os campos que você preencher nesta seção estarão publicamente disponíveis
+    para qualquer um olhando para o [mapa de voluntários](/volunteer/local). Campos
+    marcados com um _*_ são obrigatórios.
   volunteer_engineer_submission_intro_links: É professor(a) e está procurando voluntários?
     Encontre um voluntário na sua região em nosso <a href="%{volunteer_local}">mapa
     de voluntários</a>.
+  volunteer_engineer_submission_intro_links_markdown: É professor(a) e está procurando
+    voluntários? Encontre um voluntário na sua região em nosso [mapa de voluntários](%{volunteer_local}).
   volunteer_engineer_submission_update_information: Atualize suas informações
   volunteer_engineer_submission_header_shared: Informações compartilhadas com professores
     no mapa de voluntários
@@ -767,6 +807,10 @@ pt-BR:
     foi enviada com sucesso. Os professores estarão usando <a href="%{url}">este mapa</a>
     para procurar e contactar voluntários como você. Por favor, espere 48 horas para
     que suas informações apareçam corretamente no mapa.
+  volunteer_engineer_submission_thankyou_markdown: Obrigado! Sua informação de voluntariado
+    foi enviada com sucesso. Os professores estarão usando [este mapa](%{url}) para
+    procurar e contactar voluntários como você. Espere 48 horas para que suas informações
+    apareçam corretamente no mapa.
   volunteer_engineer_submission_commitment_uncertain: Incerto
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 hora por semana
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 horas por semana
@@ -1071,6 +1115,8 @@ pt-BR:
   dashboard_express: 'Curso Expresso: '
   dashboard_unplugged: Se não tiver computadores, <a href='%{unplugged_url}'>use essas
     aulas off-line</a> na sua sala de aula.
+  dashboard_unplugged_markdown: Se não tiver computadores, [use essas aulas off-line](%{unplugged_url})
+    na sua sala de aula.
   dashboard_tools: 'Ferramentas: '
   dashboard_curriculum: Currículo
   dashboard_curriculum_overview: Visão geral do currículo do pré ao 5º ano
@@ -2270,6 +2316,11 @@ pt-BR:
     Qualquer pessoa, em qualquer lugar, pode organizar um evento Hora do Código ou
     tentar qualquer um dos mais de 200 tutoriais de uma hora, disponíveis em mais
     de 45 idiomas.
+  hoc_overview_subtitle_markdown: A [Hora do Código](https://hourofcode.com) é um
+    movimento global que alcança dezenas de milhões de estudantes em mais de 180 países.
+    Qualquer pessoa, em qualquer lugar, pode organizar um evento Hora do Código ou
+    tentar qualquer um dos mais de 200 tutoriais de uma hora, disponíveis em mais
+    de 45 idiomas.
   hoc_overview_partner_activities_title: Mais atividades de parceiros
   hoc_overview_partner_activities_body: O site da Hora do Código tem mais de 500 atividades
     de ciência da computação para todas as idades e níveis de experiência, desenvolvidos
@@ -2407,6 +2458,10 @@ pt-BR:
     e treinar crianças e jovens de baixa renda e outras crianças desfavorecidas para
     carreiras em ciência da computação. <a href='%{amazon_future_engineer_link}' target='_blank'>Saiba
     mais</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: O
+    Amazon Future Engineer* é um programa abrangente de a infância-a-carreira para
+    inspirar, educar e treinar crianças e jovens de baixa renda e outras crianças
+    desfavorecidas para carreiras em ciência da computação. [Saiba mais](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Saiba mais sobre
     o Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Sobre o Amazon Future Engineer

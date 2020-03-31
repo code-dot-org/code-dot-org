@@ -20,6 +20,8 @@ es-MX:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de
     CSEdWeek</a>'
+  csedweek_banner_teachers_text: "¿Eres profesor de informática? Mira otros recursos
+    de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Código</h2><h3># intentaron</h3>"
   anybody_can_learn: Cualquiera puede aprender.
   learn_now: Aprende Ahora

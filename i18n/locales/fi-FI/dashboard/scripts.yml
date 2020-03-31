@@ -1791,28 +1791,38 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
+            Text:
+              name: teksti
         coursea-2020:
           stages:
             Going Places Safely:
               name: Menossa turvallisesti
+            'Programming: Happy Maps':
+              name: Iloiset kartat
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Digitaalinen jalanjälkesi
             Move It, Move It:
               name: Liikuta, liikuta
+            'Loops: Getting Loopy':
+              name: Mennään silmukoille
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binäärikorut
+            'Events: The Big Event':
+              name: Suuri tapahtuma
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Ruutupaperiohjelmointi
             Relay Programming:
               name: Releohjelmointi
             Conditionals with Cards:
               name: Ehtolauseet pelikorteilla
             'Unplugged: Binary':
-              name: 'Tietokoneeton tekeminen: binääri'
+              name: Binäärikuvat
             Artist Binary:
               name: 'Taiteilija: binääri'
             Digital Citizenship:
@@ -1821,8 +1831,8 @@ fi:
               name: Tanssibileet
         coursee-2020:
           stages:
-            Conditionals:
-              name: Ehtolausekkeet
+            'Functions: Songwriting':
+              name: Säveltäminen
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1830,7 +1840,7 @@ fi:
             For Loop Fun:
               name: Silmukkahupia
             Internet:
-              name: Internet
+              name: Internetti
             Crowdsourcing:
               name: Joukkoistaminen
         express-2020:
@@ -1841,3 +1851,33 @@ fi:
           stages:
             Spelling Bee:
               name: Kirjurimehiläinen
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funktioiden luominen
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Niin kauan kuin -silmukat
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmit
+            Events:
+              name: Tapahtumat

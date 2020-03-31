@@ -12,6 +12,7 @@
   csedweek_dates: "ថ្ងៃទី៨ ដល់ទី១៤ ខែធ្នូ ឆ្នាំ២០១៤"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">កម្មវិធី Hour of Code</a> ហ្នឹងមកដល់ក្នុងពេលឆាប់ៗ. សូមអំពាវនាវដល់គ្រូបង្រៀន និងអ្នករៀបចំកម្មវិធីទាំងអស់, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">រៀបចំគំរងកម្មវិធី Hour of Code របស់អ្នក</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">តើអ្នកជាគ្រូបង្រៀនផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រ? សូមមើលធនធាន CSEdWeek ដ៏ទៃទៀត</a>'
+  csedweek_banner_teachers_text: "តើអ្នកជាគ្រូបង្រៀនផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រ? សូមមើលធនធាន CSEdWeek ដ៏ទៃទៀត"
   n_have_learned_an_hoc: "<h1>សាកល្បង</h1><h2>កម្មវិធី Hour of Code</h2><h3># ដែលបានផ្តល់ឲ</h3>"
   anybody_can_learn: "គ្រប់គ្នាអាចរៀនបាន។"
   learn_now: "ចាប់ផ្ដើមរៀននៅពេលនេះ"
