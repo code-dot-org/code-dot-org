@@ -141,7 +141,6 @@ export class LibraryManagerDialog extends React.Component {
       return;
     }
 
-    // TODO: filter out class libraries
     const libraryQuery = libraries.map(library => ({
       channel_id: library.channelId,
       version: library.versionId
