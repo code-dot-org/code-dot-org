@@ -36,7 +36,6 @@ module Pd::Foorm
         case question_details[question][:type]
         # TODO: add other answer types
         when ANSWER_MATRIX
-          rollup[:averages][question] = {}
           averages = {}
           overall_sum = 0
           overall_count = 0
@@ -46,8 +45,13 @@ module Pd::Foorm
             overall_sum += matrix_answer[:sum]
             overall_count += matrix_answer[:count]
           end
-          rollup[:averages][question][:average] = (overall_sum.to_f / overall_count).round(2)
-          rollup[:averages][question][:rows] = averages
+          # don't include rollup for questions with no answers
+          if overall_count > 0
+            rollup[:averages][question] = {}
+            rollup[:averages][question][:average] = (overall_sum.to_f / overall_count).round(2)
+            rollup[:averages][question][:rows] = averages
+          end
+
         end
       end
       return rollup
