@@ -15,6 +15,21 @@ module Pd::Foorm
     #         overall: <rollup for all workshops in course_name, see RollupCreator>
     #       }
     # }
+    # Path for calculating report is:
+    # SurveyResults.get_raw_data_for_workshop
+    #   summary:
+    #   -> FoormParser.parse_forms
+    #   -> WorkshopSummarizer.summarize_answers_by_survey
+    #     rollups:
+    #     -> RollupHelper.get_question_details_for_rollup
+    #       single_workshop_rollup:
+    #       -> RollupCreator.calculate_averaged_rollup
+    #       course rollup:
+    #       -> get all workshop ids for course
+    #       -> SurveyResults.get_raw_data_for_workshop(ids)
+    #       -> FoormParser.parse_forms
+    #       -> WorkshopSummarizer.summarize_answers_by_survey
+    #       -> RollupCreator.calculate_averaged_rollup
     def self.get_workshop_report(workshop_id)
       return unless workshop_id
 

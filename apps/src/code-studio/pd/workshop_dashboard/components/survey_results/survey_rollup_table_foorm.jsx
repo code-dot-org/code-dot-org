@@ -5,6 +5,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 
+const styles = {
+  title: {
+    paddingLeft: '30px'
+  },
+  question: {
+    paddingLeft: '60px'
+  },
+  headerRow: {
+    borderTop: 'solid'
+  }
+};
+
 export default class SurveyRollupTableFoorm extends React.Component {
   static propTypes = {
     workshopRollups: PropTypes.object.isRequired,
@@ -33,7 +45,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     const thisWorkshop = workshopRollups.single_workshop;
     const questions = workshopRollups.questions;
     if (overall && overall.averages) {
-      Object.keys(overall.averages).forEach(questionId => {
+      for (const questionId in overall.averages) {
         const questionData = questions[questionId];
         let overallQuestionAverages = overall.averages[questionId];
         let thisWorkshopAverages = thisWorkshop.averages[questionId];
@@ -47,7 +59,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
             overallQuestionAverages
           );
         }
-      });
+      }
     }
     return rows;
   }
@@ -65,8 +77,8 @@ export default class SurveyRollupTableFoorm extends React.Component {
                 question.type === 'overall'
                   ? {}
                   : question.type === 'title'
-                  ? {paddingLeft: '30px'}
-                  : {paddingLeft: '60px'}
+                  ? styles.title
+                  : styles.question
             })
           ]
         }
@@ -118,7 +130,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     });
     // add individual rows
     let thisWorkshopRows = thisWorkshopAverages && thisWorkshopAverages.rows;
-    Object.keys(overallQuestionAverages.rows).forEach(rowId => {
+    for (const rowId in overallQuestionAverages.rows) {
       rows.push({
         question: {
           text: questionData.rows[rowId],
@@ -130,7 +142,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
         overall: `${overallQuestionAverages.rows[rowId]} / ${denominator}`,
         id: rowId
       });
-    });
+    }
   }
 
   render() {
@@ -143,7 +155,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
           rows={rows}
           rowKey="id"
           onRow={row => {
-            return {style: row.isHeader ? {borderTop: 'solid'} : {}};
+            return {style: row.isHeader ? styles.headerRow : {}};
           }}
         />
       </Table.Provider>
