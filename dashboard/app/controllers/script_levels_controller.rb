@@ -106,6 +106,12 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    unless @script_level.stage.stage_released?(current_user)
+      view_options(full_width: true)
+      render 'levels/_unpublished_stage'
+      return
+    end
+
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
