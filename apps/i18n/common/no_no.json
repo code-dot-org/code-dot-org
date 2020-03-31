@@ -100,6 +100,7 @@
   "assignmentSelectorCourse": "Velg kurs",
   "assignmentSelectorVersion": "Versjon",
   "assignmentSelectorUnit": "Velg gjeldende oppgave",
+  "atHomeBannerLinkText": "Kom i gang",
   "audioInitializeError": "Datamaskinen din er ikke satt opp til å ta opp lyd. Vennligst forsikre deg om at du har tilkoblet mikrofon og gitt den tillatelse til å spille inn lyd på denne nettsiden.",
   "audioSaveError": "Det har oppstått en feil under lagring av opptaket ditt. Vennligst spill inn på nytt og prøv igjen. Hvis denne feilen vedvarer, forsøk å laste inn siden på nytt.",
   "authorizeGoogleClassrooms": "Klikk her for å autorisere Google klasserommet.",

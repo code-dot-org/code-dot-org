@@ -86,6 +86,9 @@ uk-UA:
       Course 4 Play Lab Vars 1:
         arrows_move_actor: Скористайтесь стрілками для переміщення персонажа
       Course 4 Playlab For Loops 4b:
+        Course_4_Playlab_For_Loops_4b_1: Зауважив, що "лічильник" має різне значення
+          для різних персонажів? Це для того, щоб кожен цикл "для" контролював власний
+          лічильник.
         Course_4_Playlab_For_Loops_4b_2: У цій головоломці ви можете змінювати тільки
           "інкрімент" петлі "for".
       CourseD_Dance_Party_01:

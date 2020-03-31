@@ -933,6 +933,14 @@ cs-CZ:
           do vody!
       courseB_iceage_loops1_2019:
         courseB_iceage_loops1_a: Dávej pozor na probořený led! Scrat jím propadne!
+      courseB_iceage_loops2:
+        courseB_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseB_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
+      courseB_iceage_loops2_2019:
+        courseB_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseB_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Použij tento nový blok!
@@ -1083,6 +1091,10 @@ cs-CZ:
       courseC_starWars_loops7_2019:
         courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseD_artist_5_2018:
+        '1': Jestli měníš tvary, nezapomeň, že budeš muset změnit také jejich úhly!
+      courseD_artist_5_2018_2019:
+        '1': Jestli měníš tvary, nezapomeň, že budeš muset změnit také jejich úhly!
       courseD_artist_binary1:
         courseD_artist_binary1_c: |-
           Takto vložíš svůj binární kód:
@@ -1581,6 +1593,8 @@ cs-CZ:
         courseD_collector_debugging9_a: Je několik cest, jak tuto úlohu vyřešit...
           ale všechny zahrnují otočky!
       courseD_farmer_condLoops6_2018:
+        courseD_farmer_condLoops6_a: Využij cyklus `pokud je cesta vpřed` nebo blok
+          `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.
         courseD_farmer_condLoops6_b: Po většinu sklizně musíš kontrolovat jen kukuřici.
           Úplně na konci programu sesbírej dýni.
       courseD_farmer_condLoops6_2019:
@@ -1610,6 +1624,17 @@ cs-CZ:
           do vody!
       courseD_iceage_loops1_2019:
         courseD_iceage_loops1_a: Dávej pozor na probořený led! Scrat jím propadne!
+      courseD_iceage_loops2:
+        courseD_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseD_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
+      courseD_iceage_loops2_2019:
+        courseD_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseD_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
+      courseD_iceage_loops3:
+        courseB_iceage_loops3_b: Abys kód zopakoval(a), přetáhni cyklus `opakuj`,
+          do něhož pak vložíš blok, který chceš opakovat.
       courseD_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Použij tento nový blok!
@@ -1617,6 +1642,22 @@ cs-CZ:
            <xml><block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">5</title>
             </block></xml>
+        courseB_iceage_loops3_b: Abys kód zopakoval(a), přetáhni cyklus `opakuj`,
+          do něhož pak vložíš blok, který chceš opakovat.
+      courseD_iceage_loops4:
+        courseD_iceage_loops4_b: Zkus zapsat kroky, které musí Scrat podniknout, aby
+          získal žalud. Vidíš nějaký vzor?
+      courseD_iceage_loops4_2019:
+        courseD_iceage_loops4_b: Zkus zapsat kroky, které musí Scrat podniknout, aby
+          získal žalud. Vidíš nějaký vzor?
+      courseD_iceage_loops6:
+        courseD_iceage_loops6_a: Tvůj kód bude mít **tři** bloky `posuň se vpřed`.
+      courseD_iceage_loops6_2019:
+        courseD_iceage_loops6_a: Tvůj kód bude mít **tři** bloky `posuň se vpřed`.
+      courseD_iceage_loops8:
+        courseD_iceage_loops8_a: Jsou správně bloky `otoč se`? Co jiného můžeš změnit?
+      courseD_iceage_loops8_2019:
+        courseD_iceage_loops8_a: Jsou správně bloky `otoč se`? Co jiného můžeš změnit?
       courseD_maze_intro4_2019:
         courseC_maze_programming4_a: Můžeš zatočit doprava nebo doleva z Ruďákova
           pohledu. Jestli jsi nasměrovaný doprava, po zatočení doprava budeš směřovat
