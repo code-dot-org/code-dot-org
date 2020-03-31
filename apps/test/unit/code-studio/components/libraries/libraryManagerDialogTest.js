@@ -1,6 +1,7 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
+import sinon from 'sinon';
 import LibraryManagerDialog, {
   mapUserNameToProjectLibraries
 } from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
@@ -8,7 +9,6 @@ import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryL
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
-import sinon from 'sinon';
 
 describe('LibraryManagerDialog', () => {
   const ID = 123;
@@ -210,6 +210,49 @@ describe('LibraryManagerDialog', () => {
       expect(setProjectLibraries.withArgs([{name: 'second'}]).calledOnce).to.be
         .true;
       window.dashboard.project.setProjectLibraries.restore();
+    });
+  });
+
+  describe('fetchUpdates', () => {
+    let wrapper, server;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={false} />
+      );
+      server = sinon.fakeServer.create();
+    });
+
+    afterEach(() => {
+      server.restore();
+    });
+
+    it('sets updatedLibraryChannels in state', () => {
+      const libraries = [
+        {channelId: 'abc123', versionId: '1'},
+        {channelId: 'def456', versionId: '2'}
+      ];
+      server.respondWith('GET', /\/libraries\/get_updates\?libraries=.+/, [
+        200,
+        {'Content-Type': 'application/json'},
+        '["abc123"]'
+      ]);
+
+      wrapper.instance().fetchUpdates(libraries);
+      server.respond();
+
+      expect(server.requests.length).to.equal(1);
+      expect(server.requests[0].url).to.equal(
+        '/libraries/get_updates?libraries=[{"channel_id":"abc123","version":"1"},{"channel_id":"def456","version":"2"}]'
+      );
+      assert.deepEqual(wrapper.state('updatedLibraryChannels'), ['abc123']);
+    });
+
+    it('does not request updates if there are no libraries', () => {
+      wrapper.instance().fetchUpdates([]);
+      server.respond();
+
+      expect(server.requests.length).to.equal(0);
     });
   });
 
