@@ -3,19 +3,15 @@ import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
  * Maker Toolkit.
  * @interface MakerBoard
  * @extends EventEmitter
- */
-
-/**
- * Run the set of interface conformance tests on the provided class.
- * @param {function} BoardClass
- * @param {function} boardType
- * @param {function} boardSpecificSetup optional
  */
 
 const CP_CONSTRUCTOR_COUNT = 13;
@@ -44,9 +40,13 @@ const MB_COMPONENTS = [
   'MicroBitThermometer'
 ];
 
+/**
+ * Run the set of interface conformance tests on the provided class.
+ * @param {function} BoardClass
+ * @param {function} boardSpecificSetup optional
+ */
 export function itImplementsTheMakerBoardInterface(
   BoardClass,
-  boardType,
   boardSpecificSetup = null
 ) {
   describe('implements the MakerBoard interface', () => {
@@ -129,7 +129,7 @@ export function itImplementsTheMakerBoardInterface(
 
         it(`correct number of them`, () => {
           let constructorCount =
-            boardType === 'microbit'
+            BoardClass === MicroBitBoard
               ? MB_CONSTRUCTOR_COUNT
               : CP_CONSTRUCTOR_COUNT;
           expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
@@ -138,7 +138,7 @@ export function itImplementsTheMakerBoardInterface(
         });
 
         let components =
-          boardType === 'microbit' ? MB_COMPONENTS : CP_COMPONENTS;
+          BoardClass === MicroBitBoard ? MB_COMPONENTS : CP_COMPONENTS;
 
         components.forEach(constructor => {
           it(constructor, () => {
@@ -165,7 +165,7 @@ export function itImplementsTheMakerBoardInterface(
 
         it(`correct number of them`, () => {
           let globalPropsCount =
-            boardType === 'microbit'
+            BoardClass === MicroBitBoard
               ? MB_CONSTRUCTOR_COUNT + MB_COMPONENT_COUNT
               : CP_CONSTRUCTOR_COUNT + CP_COMPONENT_COUNT;
           expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
@@ -174,7 +174,7 @@ export function itImplementsTheMakerBoardInterface(
         });
 
         // Board-specific tests
-        if (boardType === 'circuit playground') {
+        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
           describe('led', () => {
             function expectLedToHaveFunction(fnName) {
               expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
@@ -308,7 +308,7 @@ export function itImplementsTheMakerBoardInterface(
         }
 
         // Board-specific tests
-        if (boardType === 'microbit') {
+        if (BoardClass === MicroBitBoard) {
           ['buttonA', 'buttonB'].forEach(button => {
             describe(button, () => {
               let component;
@@ -484,7 +484,7 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (boardType === 'circuit playground') {
+    if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
       /**
        * @function
        * @name MakerBoard#createLed
@@ -533,7 +533,7 @@ export function itImplementsTheMakerBoardInterface(
         expect(button).to.have.property('isPressed');
 
         // TODO - not yet implemented for microbit
-        if (boardType === 'circuit playground') {
+        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
           expect(button).to.have.property('holdtime');
         }
       });

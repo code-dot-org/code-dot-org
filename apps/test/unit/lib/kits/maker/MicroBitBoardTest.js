@@ -19,7 +19,7 @@ describe('MicroBitBoard', () => {
   });
 
   describe('Maker Board Interface', () => {
-    itImplementsTheMakerBoardInterface(MicroBitBoard, 'microbit', board => {
+    itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
       board.boardClient_ = new MicrobitStubBoard();
     });
   });
@@ -61,6 +61,18 @@ describe('MicroBitBoard', () => {
     it('returns true after connecting', () => {
       return board.connect().then(() => {
         expect(board.boardConnected()).to.be.true;
+      });
+    });
+  });
+
+  describe(`pinMode(pin, modeConstant)`, () => {
+    it('forwards the call to board', () => {
+      return board.connect().then(() => {
+        let pinModeSpy = sinon.spy(board.boardClient_, 'setPinMode');
+        const pin = 11;
+        const arg2 = 1023;
+        board.pinMode(pin, arg2);
+        expect(pinModeSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });

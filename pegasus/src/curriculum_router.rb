@@ -2,6 +2,7 @@ require File.expand_path('../env', __FILE__)
 require 'cdo/rack/request'
 require 'cdo/yaml'
 require 'json'
+require_relative './text_render'
 
 def http_content_type(type, params={})
   params = params.map {|k, v| "#{k}=#{v}"}.join('; ')
