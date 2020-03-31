@@ -171,6 +171,7 @@ level 'CSD U3L16 TFMD_2020', named: true
 level 'CSD U3 if else predict_2020', progression: 'Code Prediction'
 level 'CSD U3 - Conditionals Video_2020', named: true
 level 'CSD U3 Else_2020', progression: 'If/Else Statements'
+level 'CSD games mousedown intro', progression: 'New Input'
 level 'CSD U3 - complex - mouse down_2020', progression: 'Mouse Input'
 level 'CSD U3 If Else_2020', progression: 'Mouse Input'
 level 'CSD web mouse practice choice', progression: 'Mouse Input'
@@ -190,18 +191,16 @@ level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2020', progress
 
 stage 'Velocity', flex_category: 'csd3_2'
 level 'CSD U3L18 TFMD_2020', named: true
-level 'CSD: Sprite Velocity_2020', named: true
 level 'CSD U3 abstraction velocityX_2020', progression: 'Velocity'
+level 'CSD: Sprite Velocity_2020', named: true
 level 'CSD U3 abstraction velocityY_2020', progression: 'Velocity'
 level 'CSD U3 abstraction rotation_2020', progression: 'Velocity'
 level 'CSD U3 abstraction rotation control_2020', progression: 'Velocity'
-level 'CSD U3 abstraction velocityY control_2020', progression: 'Velocity'
-level 'CSD U3 abstraction velocityX if-statements_2020', progression: 'Velocity', assessment: true
-level 'CSD U3 abstraction velocityX control_2020', progression: 'Velocity'
-level 'CSD U3 abstraction jump_2018_2020', progression: 'Side Scroller'
-level 'CSD U3 abstraction tumbleweed_2020', progression: 'Side Scroller'
-level 'CSD U3 abstraction looping_2020', progression: 'Side Scroller'
-level 'CSD U3 L15 Freeplay_2020', progression: 'Challenge'
+level 'CSD U3 abstraction velocityX if-statements_2020', progression: 'Velocity'
+level 'CSD games velocity tennis', progression: 'Velocity'
+level 'CSD games velocity practice choice', progression: 'Velocity'
+level 'CSD U3 abstraction velocityX control_2020', progression: 'Velocity', assessment: true
+level 'CSD games velocity challenge choice', progression: 'Challenge: Velocity'
 
 stage 'Collision Detection', flex_category: 'csd3_2'
 level 'CSD U3L19 TFMD_2020', named: true
@@ -218,6 +217,9 @@ level 'CSD U3 L16 Freeplay_2020', progression: 'Challenge'
 
 stage 'Mini-Project: Side Scroller', flex_category: 'csd3_2'
 level 'CSD U3L19 TFMD_2020', named: true
+level 'CSD U3 abstraction jump_2018_2020', progression: 'Side Scroller'
+level 'CSD U3 abstraction tumbleweed_2020', progression: 'Side Scroller'
+level 'CSD U3 abstraction looping_2020', progression: 'Side Scroller'
 
 stage 'Complex Sprite Movement', flex_category: 'csd3_2'
 level 'CSD U3L20 TFMD_2020', named: true
