@@ -69,6 +69,7 @@
   enter_valid_email: "Por favor introduce un correo electrónico válido"
   get_a_certificate_message: "Enviaremosche un certificado e información sobre cómo facer para <a href='/learn/beyond'> Aprender mais aló dunha hora</a>"
   get_a_certificate_message_after: "Fai clic no certificado para descargalo e imprimilo. Agora, continúa cos <a href='http://studio.code.org'>outros cursos</a>, ou mira máis opcións en <a href='/learn/beyond'>Aprender máis aló dunha Hora</a>."
+  get_a_certificate_message_after_markdown: "Fai clic no certificado para descargalo e imprimilo. Agora, continúa cos [outros cursos)(http://studio.code.org), ou mira máis opcións en [Aprender máis aló dunha Hora](/learn/beyond)."
   thanks_for_submitting: "Graciñas por enviar!"
   if_you_enjoyed: "Se che gustou aprender, invita os teus amigos para que o intenten tamén!  Queremos que todo o mundo poida aprender."
   personalize_certificate: "Personaliza o teu certificado"

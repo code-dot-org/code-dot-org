@@ -1020,6 +1020,7 @@ fr:
         options:
           CHOICE:
             '"this"': ceci
+            '"other"': autre
       gamelab_hideTitleScreen:
         text: cacher l'écran-titre
       gamelab_isTouchingEdges:

@@ -19848,6 +19848,8 @@ es-MX:
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            Text:
+              name: Texto
         coursea-2020:
           title: Curso A (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
@@ -19876,7 +19878,7 @@ es-MX:
                 y continúa con el uso de una computadora para completar desafíos en
                 línea.
             'Programming: Happy Maps':
-              name: 'Programación: Mapas felices'
+              name: Mapas felices
               description_student: Escribe instrucciones para que el Flurb llegue
                 hasta la fruta.
               description_teacher: La transición desde los algoritmos hacia la programación
@@ -19893,7 +19895,7 @@ es-MX:
                 y continúa con el uso de una computadora para completar desafíos en
                 línea.
             Programming in Ice Age:
-              name: Programación en la Era de Hielo
+              name: Programación con Scrat
               description_student: Escribe programas para ayudar a Scrat a llegar
                 hasta la bellota.
               description_teacher: A partir de los personajes de La Era de Hielo,
@@ -19909,7 +19911,7 @@ es-MX:
                 habilidades de programación de formas más complejas para recorrer
                 un camino difícil con BB-8.
             'Loops: Happy Loops':
-              name: 'Loops: Loops felices'
+              name: Bucles felices
               description_student: Ayuda al Flurb a resolver problemas más grandes
                 mediante los bucles.
               description_teacher: Los bucles son una herramienta muy útil e importante
@@ -19917,14 +19919,14 @@ es-MX:
                 deben ser motivados a querer resolver problemas cotidianos de manera
                 más fácil.
             Loops in Ice Age:
-              name: Bucles de la Era de Hielo
+              name: Bucles con Scrat
               description_student: Usa los bucles para ayudar a Scrat a cubrir más
                 terreno.
               description_teacher: En base al concepto de repetición de instrucciones
                 de "Bucles felices", en este nivel los estudiantes usarán bucles para
                 llegar hasta la bellota de manera más eficiente en Code.org.
             Loops in Collector:
-              name: Loops en Recolectora
+              name: Bucles con Laurel
               description_student: Ayuda a Laurel la Aventurera a recolectar el tesoro
                 subterráneo.
               description_teacher: Durante esta etapa se desarrolla el concepto de
@@ -19940,14 +19942,14 @@ es-MX:
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imágenes mediante bucles.
             'Events: The Big Event':
-              name: 'Eventos: El Gran Evento'
+              name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los
                 botones de un control remoto gigante.
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
                 es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
-              name: Eventos en Play Lab
+              name: En movimiento con eventos
               description_student: Crea tu propio juego o historia.
               description_teacher: En esta actividad en línea, los estudiantes tendrán
                 la oportunidad de aprender a usar eventos en el Laboratorio de juegos
@@ -19984,7 +19986,7 @@ es-MX:
                 para que caminen con cuidado de un lugar a otro hasta que se logre
                 una meta.
             Sequencing in Maze:
-              name: Secuencias en Laberinto
+              name: Secuencias con Angry Birds
               description_student: Ayuda al Angry Bird rojo a seguir el camino hacia
                 el cerdo travieso.
               description_teacher: Esta lección dará a los estudiantes una idea de
@@ -19993,7 +19995,7 @@ es-MX:
                 y continúa con el uso de una computadora para completar desafíos en
                 línea.
             Programming in Maze:
-              name: Programación en Laberinto
+              name: Programación con Angry Birds
               description_student: Crea programas para ayudar al Angry Bird a moverse
                 a través del laberinto.
               description_teacher: A partir de los personajes del juego Angry Birds,
@@ -20013,7 +20015,7 @@ es-MX:
                 de las habilidades de algoritmo secuencial y comenzarán a usar el
                 proceso de depuración. '
             'Loops: Getting Loopy':
-              name: 'Loops: Buscando Loopy'
+              name: Girar y girar
               description_student: En esta lección, ¡usaremos bucles 'repetir' para
                 crear una fiesta de baile!
               description_teacher: A medida que empezamos a escribir programas más
@@ -20022,14 +20024,14 @@ es-MX:
                 mirar los patrones repetidos de movimiento en un baile y comunicar
                 más fácilmente aquellas instrucciones que tienen mucha repetición.
             Loops in Harvester:
-              name: Bucles en la cosechadora
+              name: Bucles con la cosechadora
               description_student: "¡Usa los bucles para ayudar a la Cosechadora a
                 recolectar aún más!"
               description_teacher: En base al concepto de repetición de instrucciones
                 de "Getting Loopy", en este nivel los estudiantes usarán bucles para
                 recolectar maíz de manera más eficiente en Code.org.
             Loops in Collector:
-              name: Loops en Recolectora
+              name: Bucles con Laurel
               description_student: Programa a Laurel la Aventurera para que recolecte
                 el tesoro en una cueva abierta.
               description_teacher: En esta lección, los estudiantes continúan aprendiendo
@@ -20037,7 +20039,7 @@ es-MX:
                 recolectar tesoros en cuevas abiertas. Se introduce un nuevo bloque
                 `obtener tesoro` que la ayudará en su recorrido.
             Loops in Artist:
-              name: Loops en Artista
+              name: Dibujar jardines con bucles
               description_student: Usa patrones y bucles para terminar las imágenes.
               description_teacher: Volviendo a los bucles, los estudiantes aprenden
                 a dibujar imágenes mediante bucles de secuencias simples de instrucciones.
@@ -20056,14 +20058,14 @@ es-MX:
                 ejercitan la empatía y la creatividad para esbozar una aplicación
                 para smartphone que responda a las necesidades de otro usuario. '
             'Events: The Big Event':
-              name: 'Eventos: El Gran Evento'
+              name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los
                 botones de un control remoto gigante.
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
                 es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
-              name: Eventos en Play Lab
+              name: Una batalla real con eventos
               description_student: Usa los eventos para crear una historia o un juego
                 interactivo.
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -20106,7 +20108,7 @@ es-MX:
                 existentes con un juego interactivo y crean nuevas contraseñas mediante
                 directrices para contraseñas poderosas.\r\n"
             'Programming: My Robotic Friends':
-              name: 'Programación: Mis amigos robóticos'
+              name: Mis amigos robóticos Jr.
               description_student: En esta lección, harás de cuenta que tus compañeros
                 de clase son robots y los programarás para crear patrones de tazas
                 apiladas.
@@ -20118,7 +20120,7 @@ es-MX:
                 entre los símbolos y las acciones, la diferencia entre un algoritmo
                 y un programa, y lo valiosa que es la depuración.
             Programming in Maze:
-              name: Programación en Laberinto
+              name: Programación con Angry Birds
               description_student: Aprende acerca de las secuencias y los algoritmos
                 con Angry Birds.
               description_teacher: A partir de los personajes del juego Angry Birds,
@@ -20137,7 +20139,7 @@ es-MX:
                 para identificar los errores, tales como bucles incorrectos, bloques
                 que faltan, bloques de más y bloques que no funcionan.
             Programming in Collector:
-              name: Programación en Collector
+              name: Recoger tesoros con Laurel
               description_student: "¡Escribe algoritmos que ayuden a Laurel la Aventurera
                 a recolectar muchas gemas!"
               description_teacher: En esta serie de desafíos, los estudiantes continuarán
@@ -20145,7 +20147,7 @@ es-MX:
                 algoritmos secuenciales para que el nuevo personaje Laurel la Aventurera
                 pueda recoger el tesoro mientras recorre el camino.
             Programming in Artist:
-              name: Programación en Artist
+              name: Crear arte con código
               description_student: Programa el Artista para crear imágenes hermosas.
               description_teacher: En esta lección, los estudiantes tomarán control
                 del Artista para completar los dibujos en pantalla. En esta etapa
@@ -20162,7 +20164,7 @@ es-MX:
                 es posible tomar algo de la vida real y convertirlo en una serie de
                 funciones de encendido y apagado.
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos y repetitivos'
+              name: Mis amigos robóticos y repetitivos Jr.
               description_student: En esta lección, volverás a programar a tus compañeros
                 de clase. Al usar bucles, podrás resolver problemas más grandes y
                 más complicados.
@@ -20180,7 +20182,7 @@ es-MX:
                 ayudar a BB-8 a atravesar un laberinto de manera más eficiente que
                 antes.
             Loops in Harvester:
-              name: Bucles en la cosechadora
+              name: Cosechar cultivos con bucles
               description_student: "¡Usemos los bucles para ayudar a la cosechadora
                 a recolectar algunos vegetales!"
               description_teacher: "En la etapa anterior, los estudiantes utilizaron
@@ -20188,7 +20190,7 @@ es-MX:
                 acciones con los bucles para ayudar a la cosechadora a recolectar
                 vegetales que crecen en racimos grandes.\r\n"
             Looking Ahead:
-              name: Mirar hacia adelante
+              name: Mirando hacia el Futuro con Minecraft
               description_student: "¡Evita la lava! Aquí empezarás a aprender sobre
                 condicionales en el mundo de Minecraft."
               description_teacher: Esta lección se creó originalmente para la Hora
@@ -20207,7 +20209,7 @@ es-MX:
                 fantástica para producir artefactos para carpetas o para reuniones
                 de padres/profesores."
             'Events: The Big Event':
-              name: 'Eventos: El Gran Evento'
+              name: El gran evento
               description_student: 'Aprende sobre eventos con este divertido juego. '
               description_teacher: Los estudiantes pronto aprenderán que los eventos
                 son una gran forma de sumar flexibilidad a un algoritmo que ya está
@@ -20224,7 +20226,7 @@ es-MX:
                 Al final del nivel, podrán cambiar las imágenes o las reglas para
                 personalizar su juego.
             Events in Play Lab:
-              name: Eventos en Play Lab
+              name: Chase Game con Eventos
               description_student: "¡Es el momento de ser creativos y crear un juego
                 en el Laboratorio de juegos!"
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -20262,7 +20264,7 @@ es-MX:
           description_audience: De 7 a 11 años
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmos: programación en papel cuadriculado'
+              name: Programación con Papel Cuadriculado
               description_student: En esta lección, programarás a tu compañero de
                 clase para que dibujar imágenes.
               description_teacher: 'Al "programarse" entre sí para dibujar imágenes,
@@ -20297,7 +20299,7 @@ es-MX:
                 contrarreloj a medida que los estudiantes se dividen en equipos y
                 trabajan juntos para escribir un programa a la vez.
             Debugging in Collector:
-              name: Depuración en Recolector
+              name: Depuración con Laurel
               description_student: "¿Alguna vez has tenido problemas al programar?
                 En esta lección, aprenderás sobre los secretos de debugging. Debugging
                 es el proceso de encontrar y arreglar problemas en tu código."
@@ -20332,7 +20334,7 @@ es-MX:
                 `repetir` para que Scrat llegue hasta la bellota de la manera más
                 eficiente posible.
             Loops in Artist:
-              name: Loops en Artista
+              name: Dibujar formas con bucles
               description_student: En esta lección, ¡los bucles ayudan a crear imágenes
                 geniales con el Artista de forma más simple!
               description_teacher: Esta lección, basada en la comprensión de los bucles
@@ -20340,7 +20342,7 @@ es-MX:
                 ser verdaderamente creativos. Esta actividad también sirve como un
                 ejercicio de depuración para seguir practicando la resolución de problemas.
             Nested Loops in Bee:
-              name: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
               description_student: Bucles dentro de bucles que están dentro de otros
                 bucles. ¿Qué significa esto? Esta lección te mostrará qué sucede cuando
                 creas un bucle anidado.
@@ -20395,7 +20397,7 @@ es-MX:
                 de los bucles `hasta`. Crearán programas en los cuales el personaje
                 repetirá acciones `hasta` que llegue al punto de detención deseado.
             Conditionals & Loops in Harvester:
-              name: Condicionales y bucles en Cosechadora
+              name: Cosechar con condicionales
               description_student: No siempre está claro cuándo usar cada condicional.
                 Esta lección te ayudará a tener práctica en decidir qué hacer.
               description_teacher: Los/as estudiantes practicarán loops `while`, loops
@@ -20403,7 +20405,7 @@ es-MX:
                 condicionales. Al practicar los tres, los/as estudiantes aprenderán
                 a escribir código complejo y flexible.
             'Unplugged: Binary':
-              name: 'Sin conexión: binario'
+              name: Imágenes binarias
               description_student: Aprende cómo las computadoras almacenan imágenes
                 a través de un lenguaje que tiene solo dos opciones.
               description_teacher: Aunque mucha gente piense en lo binario estrictamente
@@ -20466,7 +20468,7 @@ es-MX:
                 existente para identificar los errores, tales como bucles incorrectos,
                 bloques que faltan, bloques de más y bloques que no funcionan."
             Programming and Loops with the Artist:
-              name: Programación y bucles con el Artista
+              name: Dibujar con bucles
               description_student: En esta lección, los bucles hacen que sea sencillo
                 crear imágenes incluso más geniales con Artista.
               description_teacher: "¡Mira cómo se ilumina el resto de los estudiantes
@@ -20485,7 +20487,7 @@ es-MX:
                 tendrán la oportunidad de practicar las ideas que han aprendido hasta
                 este punto, ¡y también de echar un vistazo a los condicionales!
             Conditionals:
-              name: Condicionales
+              name: Condicionales con Granjera
               description_student: En esta divertida y desafiante serie podrás decirle
                 a la computadora qué hacer bajo ciertas condiciones.
               description_teacher: Esta lección introduce a los estudiantes a los
@@ -20533,7 +20535,7 @@ es-MX:
 
                 Mientras los estudiantes visitan sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los faculta a protegerse a sí mismos y sus familias contra el robo de identidad. En esta lección, los estudiantes aprenden a pensar críticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, además de cómo distinguir entre lo que es seguro de compartir en línea y lo que no lo es.
             About Me:
-              name: Acerca de mí
+              name: Acerca de mí con Sprite Lab
               description_student: Al crear un cartel interactivo con el Laboratorio
                 de sprites, los estudiantes aplicarán sus conocimientos sobre cómo
                 compartir información personal y privada en la web.
@@ -20541,7 +20543,7 @@ es-MX:
                 de sprites, los estudiantes aplicarán sus conocimientos sobre cómo
                 compartir información personal y privada en la web.\r\n"
             Access Ability:
-              name: Habilidad de acceso
+              name: Diseñar con la accesibilidad en mente
               description_student: 'En esta lección, los estudiantes aprenderán sobre
                 accesibilidad y sobre el valor de la empatía mediante la reflexión
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
@@ -20549,7 +20551,7 @@ es-MX:
                 accesibilidad y sobre el valor de la empatía mediante la reflexión
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
             Nested Loops in Bee:
-              name: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
               description_student: Loops dentro de loops dentro de loops. ¿Qué significa
                 esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
                 de otro loop.
@@ -20560,7 +20562,7 @@ es-MX:
                 se les animará a que descifren cómo cambios pequeños en cualquier
                 loop, afectarán su programa cuando hagan clic en Ejecutar.
             Nested Loops in Artist:
-              name: Bucles anidados en Artista
+              name: Formas elegantes con bucles anidados
               description_student: "¡Más loops anidados! Esta vez, harás algunos SORPRENDENTES
                 dibujos con loops anidados."
               description_teacher: Los/as estudiantes crearán diseños complicados
@@ -20571,7 +20573,7 @@ es-MX:
                 para que los/as estudiantes creen su propio diseño al final de la
                 etapa.
             Nested Loops in Frozen:
-              name: Bucles anidados en Frozen
+              name: Bucles anidados con Frozen
               description_student: 'Anna y Elsa patinan muy bien sobre hielo, pero
                 necesitan de tu ayuda para crear patrones en esa superficie. Utiliza
                 los bucles anidados para crear algo súper GENIAL. '
@@ -20581,7 +20583,7 @@ es-MX:
                 imágenes, listas para incluir en una carpeta, gracias a las excelentes
                 habilidades de patinaje sobre hielo de Anna y Elsa.
             'Functions: Songwriting':
-              name: 'Funciones: composición musical'
+              name: Composición de canciones
               description_student: Incluso las estrellas de rock necesitan conocimientos
                 de programación. Esta lección te enseñará sobre funciones mediante
                 el uso de letras de canciones.
@@ -20599,7 +20601,7 @@ es-MX:
                 manera las funciones pueden ser útiles en esta divertida e interactiva
                 aventura de Minecraft.
             Functions in Harvester:
-              name: Funciones en la Cosechadora
+              name: Funciones en Cosechadora
               description_student: "¡Las funciones te ahorrarán mucho trabajo mientras
                 ayudas a la granjera con su cosecha!"
               description_teacher: Los estudiantes practicaron cómo crear diseños
@@ -20637,6 +20639,8 @@ es-MX:
                 de clase."
             Digital Sharing:
               name: Colaboración digital
+            Designing for Accessibility:
+              name: Diseñar con la accesibilidad en mente
         coursef-2020:
           title: Curso F (2019)
           description: Aprende a usar diferentes tipos de bucles, eventos, funciones
@@ -20665,6 +20669,7 @@ es-MX:
                 son acciones que los sprites harán continuamente hasta que se los
                 detenga. '
             Events with Sprite Lab:
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
               description_student: Crea un proyecto interactivo que puedes compartir
                 con tus compañeros de clase.
               description_teacher: 'Esta lección presenta el Laboratorio de sprites,
@@ -20673,6 +20678,7 @@ es-MX:
                 incorporarán las entradas de usuarios como eventos para crear una
                 "fiesta de baile alienígena". '
             Loops with the Artist:
+              name: Dibujar con bucles
               description_student: En esta lección, los bucles hacen que sea sencillo
                 crear imágenes incluso más geniales con Artista.
               description_teacher: "¡Mira cómo se ilumina el resto de los estudiantes
@@ -20683,7 +20689,7 @@ es-MX:
                 fantástica para producir artefactos para carpetas o para reuniones
                 de padres/profesores."
             Nested Loops in the Maze:
-              name: Bucles anidados en el Laberinto
+              name: Bucles anidados en Laberinto
               description_student: Loops dentro de loops dentro de loops. ¿Qué significa
                 esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
                 de otro loop.
@@ -20707,6 +20713,7 @@ es-MX:
                 El concepto de variable no es fácil de comprender, por lo que recomendamos
                 debatirlo durante mucho tiempo al final de la lección.
             Variables as Constant in Artist:
+              name: Variables con Artista
               description_student: "¡No olvides tu creatividad! En estos desafíos,
                 usarás las variables para hacer dibujos fantásticos."
               description_teacher: En esta lección, los estudiantes explorarán la
@@ -20715,11 +20722,13 @@ es-MX:
                 para hacer que el código sea más fácil de leer y de escribir, incluso
                 cuando los valores no cambian en el tiempo de ejecución.
             Variables that Change in Bee:
+              name: Cambiar variables con Abeja
               description_student: Esta abeja adora las variables.
               description_teacher: 'Esta lección ayudará a ilustrar cómo las variables
                 pueden hacer que los programas sean más potentes al permitir que los
                 valores cambien mientras el código se está ejecutando. '
             Variables that Change in Artist:
+              name: Cambiar variables con Artista
               description_student: En esta lección, harás dibujos usando variables
                 que cambien mientras el programa se ejecuta.
               description_teacher: En esta lección, los alumnos explorarán la creación
@@ -20748,7 +20757,7 @@ es-MX:
                 estructuras integradas. A través de estas nuevas estructuras, los
                 estudiantes podrán crear un código más potente y dinámico. '
             For Loops in Bee:
-              name: Bucles `desde` en Abeja
+              name: Bucles 'desde' con la Abeja
               description_student: Bzzz, bzzz. ¡En estos desafíos, usarás bucles `desde`
                 para guiar a una abeja hacia el néctar y la miel!
               description_teacher: Esta lección con Abeja se centra en bucles `desde`
@@ -20757,7 +20766,7 @@ es-MX:
                 el uso de bucles `desde` para resolver problemas más difíciles de
                 manera más efectiva.
             For Loops in Artist:
-              name: Bucles `desde` en Artista
+              name: Bucles `desde'`con Artista
               description_student: Prepárate para crear tu próxima obra maestra. Aquí
                 usarás bucles `desde` para tomar fotos asombrosas.
               description_teacher: En esta lección, los alumnos seguirán practicando
@@ -20775,11 +20784,13 @@ es-MX:
                 estudiantes viajarán a través de Internet y aprenderán acerca de conexiones,
                 URL, direcciones IP y el DNS.
             Editing Behaviors:
+              name: Editar comportamientos
               description_student: Aprende a programar tus propios comportamientos
                 de sprites.
               description_teacher: Aquí, los estudiantes usarán el Laboratorio de
                 sprites para crear tus propios comportamientos personalizados.
             Virtual Pet:
+              name: Mascota virtual
               description_student: En esta lección, los estudiantes crearán una Mascota
                 Virtual interactiva que luce y se comporta como ellos desean. Los
                 estudiantes usarán la herramienta "Disfraces" del Laboratorio de sprites

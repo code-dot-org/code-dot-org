@@ -88,7 +88,9 @@ de-DE:
       4-5 Bee Debugging 9:
         make all honey: stelle den gesamten Honig her
       Choose Your Own Adventure:
-        story: Handlung
+        witch ending: Hexen Ende
+        story: geschichte
+        starting path: weg beginnen
       Course 4 Artist Binary 1:
         draw: zeichne
         draw bit: zeichne ein bisschen
@@ -122,6 +124,10 @@ de-DE:
       Course 4 Artist Binary pre1:
         draw bit: zeichne ein bisschen
         draw: zeichne
+      Course 4 Artist Functions Inspiration:
+        draw a square 20: ein Quadrat ziehen 20
+      Course 4 Artist Functions challenge:
+        draw a square 20: ein Quadrat ziehen 20
       Course 4 Bee Params 1:
         get 3 nectar: sammle 3 Nektar
       Course 4 Bee Params 2:
@@ -134,14 +140,21 @@ de-DE:
         get 5 nectar: sammle 5 Nektar
       Course 4 Bee Params 6:
         get 5 nectar: sammle 5 Nektar
+      Course 4 Bee Params 8:
+        get nectar make honey: Nektar holen, Honig herstellen
       Course 4 Play Lab Params 1:
         jump: springen
+      Course 4 Play Lab Params 10:
+        level_up: level_up
+        score_points: score_points
       Course 4 Play Lab Params 2:
         jump: springen
       Course 4 Play Lab Params 3:
         jump: springen
       Course 4 Play Lab Params 4:
         do something: Funktionsblock
+      Course 4 Play Lab Params 9:
+        score_points: score_points
       Course 4 Play Lab Vars 1:
         set score: Punktestand setzen
       Course 4 Play Lab Vars 2:
@@ -149,18 +162,25 @@ de-DE:
       Course 4 SCF 1:
         draw a hexagon: zeichne ein Sechseck
         draw a line of hexagons: zeichne eine Linie aus Sechsecken
+        draw a square 20: ein Quadrat ziehen 20
       Course 4 SCF 1a:
         get nectar: hole Nektar
       Course 4 SCF 2:
+        draw a square 20: ein Quadrat ziehen 20
         draw octagons: zeichne Oktagons
-        draw an octagon: zeichne einen Oktagon
+        draw an octagon: ein Achteck zeichnen
       Course 4 SCF 3:
+        draw a square 20: ein Quadrat ziehen 20
         do something: Funktionsblock
-        draw an octagon: zeichne einen Oktagon
+        draw an octagon: ein Achteck zeichnen
       'Course E: Play Lab Project':
         do something: Funktionsblock
       Find the Wizard:
+        check guess: Vermutung prüfen
         do something: Funktionsblock
+      FoodFight:
+        level_up: level_up
+        score_points: score_points
       Function intro Ryan:
         build bridge: baue Brücke
       Function intro Ryan_2019:
@@ -185,10 +205,16 @@ de-DE:
         draw a house: Zeichne ein Haus
         triangle: dreieck
         square: Quadrat
+      Guess The Number:
+        check guess: Vermutung prüfen
       InspirationalArtwork:
-        n-sided shape: Form mit n Seiten
+        n-sided shape: n-seitige Form
+        draw a loop: eine Schleife zeichnen
+        draw spiral circle: Spiralkreis zeichnen
       InspirationalArtwork_2018:
-        n-sided shape: Form mit n Seiten
+        draw a loop: eine Schleife zeichnen
+        n-sided shape: n-seitige Form
+        draw spiral circle: Spiralkreis zeichnen
       K-1 Artist2 3:
         draw roof: zeichne Dach
       K-1 Artist2 4:
@@ -211,8 +237,15 @@ de-DE:
       MC_HOC_2017_FP20x20_2019:
         function 1: Funktion 1
         function 2: Funktion 2
+      NEW Course 4 Artist Functions 11:
+        draw a square 20: ein Quadrat ziehen 20
+      NEW Course 4 Artist Functions 12:
+        draw a square 20: ein Quadrat ziehen 20
+      NEW Course 4 Artist Functions 13:
+        draw a square 20: ein Quadrat ziehen 20
       NEW Course 4 Artist Functions 14:
         empty function: leere Funktion
+        draw a square 20: ein Quadrat ziehen 20
       NEW Course 4 Artist Functions 3:
         draw a square: zeichne ein Quadrat
       NEW Course 4 Artist Functions 4:
@@ -239,9 +272,12 @@ de-DE:
         draw a polygon: zeichne ein Vieleck
       NEW Course 4 Artist Params 13:
         draw a polygon: zeichne ein Vieleck
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge: eine Spiralkante zeichnen
       NEW Course 4 Artist Params 15:
         draw a star: zeichne einen Stern
         draw a circle: Zeichne einen Kreis
+        draw a pinwheel: zeichne ein Windrad
         draw a triangle: zeichne ein Dreieck
         draw a shape: zeichne eine Form
         draw a house: Zeichne ein Haus
@@ -274,6 +310,7 @@ de-DE:
       New Artist Project:
         draw a star: zeichne einen Stern
         draw a circle: Zeichne einen Kreis
+        draw a pinwheel: zeichne ein Windrad
         draw a triangle: zeichne ein Dreieck
         draw a shape: zeichne eine Form
         draw a house: Zeichne ein Haus
@@ -307,6 +344,15 @@ de-DE:
         do something: Funktionsblock
       course3_bee_functions_challenge2:
         do something: Funktionsblock
+      course3_bee_functions_challenge3:
+        check nectar or honey: Nektar oder Honig prüfen
+        row of nectar: Reihe Nektar
+        rowOfNectar: rowOfNectar
+      course3_bee_functions_challenge4:
+        check nectar or honey: Nektar oder Honig prüfen
+        row of nectar: Reihe Nektar
+        rowOfNectar: rowOfNectar
+        move and check: bewegen und prüfen
       course3_playLab_challenge1:
         win game: Spiel gewinnen
         lose game: Spiel verlieren
@@ -323,9 +369,17 @@ de-DE:
         my design: mein Design
         do something: Funktionsblock
       course4_artist_fwp_challenge1:
-        draw background: zeichne Hintergrund
+        draw background: Hintergrund zeichnen
         draw a polygon: zeichne ein Vieleck
+        draw a square 20: ein Quadrat ziehen 20
         do something: Funktionsblock
+      course4_bee_for_challenge1:
+        move and get nectar with counter: Bewege dich und hole den Nektar mit einem
+          Zähler
+      course4_bee_fwp_challenge1:
+        pick row: Sammel-Reihe
+      course4_bee_fwp_challenge2:
+        pick row: Sammel-Reihe
       courseA_artist_loops_challenge1:
         '"simple" solution': '"einfache" Lösung'
       courseB_artist_loops_challenge2:
@@ -634,34 +688,112 @@ de-DE:
         do something: Funktionsblock
       courseF_artist_fwp1:
         draw a square: zeichne ein Quadrat
+        checker: checker
         do something: Funktionsblock
+        Make gingham: Ein Karomuster erstellen
+        black outline: schwarzer Umriss
       courseF_artist_fwp2:
         draw a square: zeichne ein Quadrat
+        checker: checker
         do something: Funktionsblock
+        Make gingham: Ein Karomuster erstellen
+        black outline: schwarzer Umriss
       courseF_artist_fwp2_predict1:
         draw a square: zeichne ein Quadrat
       courseF_artist_fwp3:
         draw a square: zeichne ein Quadrat
+        draw a square2: zeichne ein Quadrat2
+        filled square: gefülltes Quadrat
+        black outline: schwarzer Umriss
       courseF_artist_fwp4:
         draw a polygon: zeichne ein Vieleck
       courseF_artist_fwp5:
         draw a polygon: zeichne ein Vieleck
+      courseF_artist_fwp6:
+        draw a spiral edge: eine Spiralkante zeichnen
+      courseF_artist_fwp7:
+        draw a spiral edge: eine Spiralkante zeichnen
+      courseF_artist_fwp8:
+        draw a spiral edge: eine Spiralkante zeichnen
       courseF_artist_fwp9:
         draw a star: zeichne einen Stern
         draw a circle: Zeichne einen Kreis
+        draw a pinwheel: zeichne ein Windrad
         draw a triangle: zeichne ein Dreieck
         draw a shape: zeichne eine Form
         draw a house: Zeichne ein Haus
         draw a square: zeichne ein Quadrat
+        draw a spiral edge: eine Spiralkante zeichnen
       courseF_artist_fwp_challenge1:
-        draw background: zeichne Hintergrund
+        draw background: Hintergrund zeichnen
         draw a polygon: zeichne ein Vieleck
+        draw a square 20: ein Quadrat ziehen 20
         do something: Funktionsblock
       courseF_artist_fwp_challenge2:
+        draw a square 20: ein Quadrat ziehen 20
         do something: Funktionsblock
-        draw an octagon: zeichne einen Oktagon
+        draw an octagon: ein Achteck zeichnen
+      courseF_bee_conditionals2:
+        move and check: bewegen und prüfen
+        check nectar or honey: Nektar oder Honig prüfen
+      courseF_bee_for_challenge1:
+        move and get nectar with counter: Bewege dich und hole den Nektar mit einem
+          Zähler
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter: Bewege dich und hole den Nektar mit einem
+          Zähler
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter: Bewege dich und hole den Nektar mit einem
+          Zähler
+      courseF_bee_functions2:
+        get only nectar: nur Nektar holen
+      courseF_bee_functions3:
+        only make honey: nur Honig herstellen
+      courseF_bee_functions3a:
+        check nectar or honey: Nektar oder Honig prüfen
+      courseF_bee_functions4:
+        move and check: bewegen und prüfen
+        check nectar or honey: Nektar oder Honig prüfen
+      courseF_bee_functions5a:
+        move and check: bewegen und prüfen
+        check nectar or honey: Nektar oder Honig prüfen
+      courseF_bee_functions6:
+        get nectar make honey: Nektar holen, Honig herstellen
+      courseF_bee_functions7:
+        get nectar make honey: Nektar holen, Honig herstellen
       courseF_bee_functions8a:
         do something: Funktionsblock
+        get nectar make honey: Nektar holen, Honig herstellen
+      courseF_bee_functionsPre7:
+        get nectar make honey: Nektar holen, Honig herstellen
+      courseF_bee_functions_challenge1:
+        row of nectar: Reihe Nektar
+        rowOfNectar: rowOfNectar
+        check nectar or honey: Nektar oder Honig prüfen
+      courseF_bee_functions_challenge2:
+        rowOfNectar: rowOfNectar
+        move and check: bewegen und prüfen
+        check nectar or honey: Nektar oder Honig prüfen
+      courseF_bee_fwp2:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp3:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp4:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp5:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp6:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp_challenge1:
+        pick row: Sammel-Reihe
+      courseF_bee_fwp_challenge2:
+        pick row: Sammel-Reihe
       courseF_bee_variables_1_2018:
         collect row: Reihe sammeln
       courseF_bee_variables_1_2019:
