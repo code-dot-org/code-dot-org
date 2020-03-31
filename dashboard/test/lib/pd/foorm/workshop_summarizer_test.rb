@@ -1,6 +1,4 @@
 require 'test_helper'
-require 'pd/foorm/foorm_parser.rb'
-require 'pd/foorm/workshop_summarizer.rb'
 
 module Pd::Foorm
   class WorkshopSummarizerTest < ActiveSupport::TestCase
@@ -12,10 +10,56 @@ module Pd::Foorm
     end
 
     test 'summarizes survey results without error' do
-      ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: 1)
+      workshop = create :csp_summer_workshop
+      create :day_0_workshop_foorm_submission_low, pd_workshop_id: workshop.id
+      create :day_0_workshop_foorm_submission_high, pd_workshop_id: workshop.id
+      ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
-      WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, @parsed_forms, ws_submissions)
+      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, @parsed_forms, ws_submissions)
+
+      expected_result = {
+        'Day 0': {
+          response_count: 2,
+          'surveys/pd/workshop_daily_survey_day_0.0': {
+            course_length_weeks: {
+              '5_fewer': 1,
+              '30_more': 1
+            },
+            teaching_cs_matrix: {
+              committed_to_teaching_cs: {
+                '1': 1,
+                '7': 1
+              },
+              like_teaching_cs: {
+                '1': 1,
+                '7': 1
+              },
+              understand_cs: {
+                '1': 1,
+                '7': 1
+              },
+              skills_cs: {
+                '1': 1,
+                '7': 1
+              }
+            },
+            expertise_rating: {
+              1 => 1,
+              5 => 1
+            },
+            birth_year: %w(1990 1983),
+            racial_ethnic_identity: {
+              num_respondents: 2,
+              black_aa: 2,
+              white: 1,
+              hispanic_latino: 1
+            }
+          }
+        }
+      }
+
+      assert_equal expected_result.with_indifferent_access, summarized_answers.with_indifferent_access
     end
   end
 end
