@@ -5763,6 +5763,8 @@ is:
                 til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
+            Text:
+              name: texti
         coursea-2020:
           title: Námskeið A (2019)
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
@@ -5772,13 +5774,16 @@ is:
           stages:
             Going Places Safely:
               name: Ferðast í öryggi
+            'Programming: Happy Maps':
+              name: Krúttleg kort
             'Loops: Happy Loops':
+              name: Lukkulegar lykkjur
               description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
                 forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
                 haga því þannig að nemendur vilji fá auðveldari leið til að leysa
                 hversdagsleg verkefni.
-            Loops in Ice Age:
-              name: Lykkjur í Ísöld
+            Loops in Collector:
+              name: Lykkjur með Láru
         courseb-2020:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
             Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -5788,9 +5793,15 @@ is:
             Move It, Move It:
               name: Hreyfa sig, hreyfa sig
             Sequencing in Maze:
-              name: Röð aðgerða í Völundarhúsi
+              name: Röð aðgerða með Angry Birds
             Programming in Harvester:
               name: Forritun með Hirðinum
+            'Loops: Getting Loopy':
+              name: Lykkjulæti
+            Loops in Harvester:
+              name: Lykkjur með Hirðinum
+            Loops in Collector:
+              name: Lykkjur með Láru
         coursec-2020:
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
             myndir, sögur og leiki.
@@ -5800,9 +5811,13 @@ is:
               name: Stafræn armbönd
             Looking Ahead:
               name: Horft fram á við
+            'Events: The Big Event':
+              name: Stórviðburður
         coursed-2020:
           description_audience: 'Aldur: 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Forritun rúðublaða
             Relay Programming:
               name: Boðhlaupsforritun
             Loops in Ice Age:
@@ -5810,7 +5825,7 @@ is:
             Conditionals with Cards:
               name: Skilyrði með kortum
             'Unplugged: Binary':
-              name: 'Verkefni án tölvu: Tvíundir'
+              name: Tvíundarmyndir
             Artist Binary:
               name: 'Listamaður: Tvíundir'
             Digital Citizenship:
@@ -5820,8 +5835,8 @@ is:
         coursee-2020:
           description_audience: 'Aldur: 8 - 12'
           stages:
-            Conditionals:
-              name: Skilyrði
+            'Functions: Songwriting':
+              name: Lagasmíð
         coursef-2020:
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
             til eigin myndir, sögur og leiki.
@@ -5831,12 +5846,8 @@ is:
               name: Umslagabreytur
             For Loop Fun:
               name: Fyndnar frá lykkjur
-            For Loops in Bee:
-              name: Frá-lykkjur með Býflugu
-            For Loops in Artist:
-              name: Frá-lykkjur með Listamanni
             Internet:
-              name: Internet
+              name: Internetið
             Virtual Pet:
               description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
                 sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu

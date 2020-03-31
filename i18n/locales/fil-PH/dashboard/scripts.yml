@@ -8909,6 +8909,7 @@ fil:
               name: Proyekto - Pagmungkahi ng App
               description_student: Para tapusin ang pag-aaral sa proseso ng paglutas ng problema at ang input/output/store/proceso na modelo ng isang kompyuter, ang klase ay mag-mungkahi ng mga app na dinisenyo para maglutas ng mga problema sa totoong buhay. Ang proyektong ito makokumpleto sa loob ng ilang mga araw at magtatapos sa isang poster na presentasyon na nagpapakita sa mga katangian ng bawat app. Ang proyekto ay dinisenyo nang may kapares pero maaari pa rin itong makumpleto nang mag-isa.
               description_teacher: Para tapusin ang kanilang pag-aaral sa proseso ng paglutas ng problema at ang input/output/store/proseso na modelo ng isang kompyuter, ang mga estudyante ay magmumungkahi ng isang app na dinisenyo para lumutas ng problema sa totoong buhay. Ang proyektong ito ay gagawin sa loob ng iilang mga araw at magresulta sa paglikha ng mga estudyante ng isang poster na nagpapakita sa mga katangian ng kanilang app na ipapakita nila sa kanilang mga kamag-aral. Ang gabay ng proyekto ay nagbibigay ng sunod-sunod na mga instruksyon para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama pero maaari rin itong gawin na mag-isa lang.
+            0:
         csd4-2020:
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo na mga hamon, matutunan mo kung paano mas maintindihan pa ang pangangailangan ng iba habang gumagawa ng solusyon sa isang problema. Ang pangalawang bahagi ng yunit ay binubuo ng isang pagliwan na koponan na proyekto, kung saan ang mga koponan ay magkakaroon ng pagkakataon na tukuyin ang pangangailangan na pinagmamalasakitan nila, gagawa ng prototype na solusyon pareho sa papel at sa App Lab, at magsubok sa mga solusyon gamit ang tunay na mga gumagamit para makakuha ng feedback at mapahusay pa ang iterasyon.
           stages:
@@ -9166,6 +9167,8 @@ fil:
               name: Proyekto - Pagdisenyo ng Laro
               description_student: Ang klase ay gagawa ng plano at bubuo ng mga orihinal na laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin. Habang nagtatrabaho ng isa o may kasama, ang klase ay magpaplano, magde-develop, at magbigay ng puna sa mga laro. Pagkatapos ilakip ang puna ng mga kasamahan, ang klase ay magbabahagi sa nakompletong mga laro.
               description_teacher: Ang mga estudyante ay magpaplano at bubuo ng kanilang sariling laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin para gabayan sila sa kanilang proyekto. Habang nagtatrabaho nang mag-isa o may kasama, ang mga estudyante ay unang magdesisyon kung anong uri ng laro ang gusto nilang gawin, habang kumukuha ng inspirasyon sa isang grupo ng mga halimbawang mga laro. Sila ay kukumpleto sa isang blankong gabay sa proyekto kung saan ilalarawan nila ang paggalaw ng laro at ihanda ang mga variables, mga sprites, at mga functions na kailangan nilang gawin. Sa Code Studio, isang serye ng mga antas ay nag-prompt sa kanila sa isang pangkalahatang pagkasunod-sunod na maaari nilang gamitin para ipatupad ang planong ito. Sa kalagitnaan ng proseso, ang mga estudyante ay magbabahagi sa kanilang mga proyekto para repasuhin ng mga kasamahan at kanilang isama ang mga puna habang tinatapos nila ang kanilang laro. Sa bandang huli ng aralin, ang mga estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring aabot kahit saan hanggang sa 3-5 na oras ng klase.
+            Text:
+              name: Text
         coursea-2020:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
@@ -9178,7 +9181,7 @@ fil:
               name: Matutong Mag-Drag at Mag-Drop
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
             'Programming: Happy Maps':
-              name: 'Pag-Program: Masayang mga Mapa'
+              name: Happy Maps
               description_teacher: 'Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.'
             Sequencing with Scrat:
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.
@@ -9207,7 +9210,7 @@ fil:
             Programming in Maze:
               name: Pag-Program sa Maze
             'Loops: Getting Loopy':
-              name: 'Mga Loops: Pagiging Loopy'
+              name: Pagiging Loopy
             Loops in Harvester:
               name: Mga Loops sa Harvester
             'Events: The Big Event':
@@ -9239,6 +9242,8 @@ fil:
               name: Mga Loops sa Harvester
             Looking Ahead:
               name: Masdan ang Hinaharap
+            'Events: The Big Event':
+              name: The Big Event
             Build a Flappy Game:
               name: Bumuo ng Flappy na Laro
             'End of Course Project: Create a Play Lab Game':
@@ -9246,7 +9251,7 @@ fil:
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Mga Algoritmo: Graph na Papel na Pag-program'
+              name: Graph Paper Programming
             Introduction to Online Puzzles:
               name: Pambungad sa mga Online na mga Palaisipan
             Relay Programming:
@@ -9260,7 +9265,7 @@ fil:
               description_student: Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito.
               description_teacher: Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Conditionals with Cards:
               name: Mga Conditional gamit ang mga Card
             Conditionals in Bee:
@@ -9270,7 +9275,7 @@ fil:
             Conditionals & Loops in Harvester:
               name: Mga Kondisyonal & Mga Loop sa Harvester
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary na mga Larawan
             Artist Binary:
               name: Artist na Binary
             Digital Citizenship:
@@ -9282,7 +9287,6 @@ fil:
           description_audience: 'Mga Edad: 8-12'
           stages:
             Conditionals:
-              name: Mga conditional
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito.
               description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.
             Private and Personal Information:
@@ -9290,13 +9294,13 @@ fil:
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
               description_teacher: "Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.\n\nHabang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online."
             Nested Loops in Bee:
-              name: Mga Naka-Nest na mga Loop sa Bee
+              name: Naka-nest na mga Loops sa Maze
             Nested Loops in Artist:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
-              name: Naka-nest na mga Loop sa Frozen
+              name: Naka-Nest na mga Loops sa Frozen
             'Functions: Songwriting':
-              name: 'Mga Function: Pagsusulat ng Awit'
+              name: Pagsusulat ng Awit
               description_student: Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin.
               description_teacher: Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.
             Functions in Artist:
@@ -9308,6 +9312,8 @@ fil:
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description_audience: 'Mga Edad: 9-13'
           stages:
+            Nested Loops in the Maze:
+              name: Naka-nest na mga Loops sa Maze
             Envelope Variables:
               name: Balot ng mga Variables
               description_student: 'Ang mga sobre at mga variable ay mayroong isang bagay na magkatulad: pareho silang maaaring humawak ng mga mahahalagang mga bagay. Dito matutunan mo kung ano ang mga variables at ang mga kasindak-sindak na mga bagay na magagawa nila.'
@@ -9329,7 +9335,7 @@ fil:
               description_student: Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan.
               description_teacher: Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.
             Internet:
-              name: Internet
+              name: The Internet
               description_student: Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana.
               description_teacher: Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.
             The Power of Words:

@@ -1322,6 +1322,8 @@ fr-FR:
         ton augmentation pour recueillir 15, puis 12 et enfin 9, 6, 3 nectars ?
       NEW Course 4 Play Lab Params 11: 'C''est l''heure de la récréation ! Amuse-toi
         avec tous les blocs de ta boîte à outils. '
+      New Artist Project: Dessine quelque chose de génial! Ton code est enregistré
+        comme un projet et tu peux y revenir à tout moment.
       New Gumball Project: Crée ce que tu veux et partage-le !
       New Ice Age Project: Crée ce que tu veux et partage-le !
       New Infinity Project: Crée ce que tu veux et partage-le !
@@ -1564,9 +1566,9 @@ fr-FR:
         le même problème. Parfois il est plus rapide de faire marche arrière que d'aller
         tout droit!
       course3_artist_functions_challenge1: Dès que tu as défini une fonction, tu peux
-        l'appeler encore et encore - quand tu veux et n'importe où! Essaie ce code
-        pour voir comment il fonctionne, puis modifie le pour faire ton propre dessin
-        impressionant!
+        l'appeler encore et encore - quand tu veux et n'importe où ! Essaie ce code
+        pour voir comment il fonctionne, puis modifie-le pour faire ton propre dessin
+        impressionant !
       course3_artist_functions_challenge2: Essaie ce code pour voir comment il fonctionne,
         puis fais en le tien!
       course3_bee_debugging_challenge1: Regarde comment les abeilles récupèrent le
@@ -1612,11 +1614,10 @@ fr-FR:
         pas!
       courseA_artist_loops10_2019: Aide moi à placer les pierres pour que je ne tombe
         pas!
-      courseA_artist_loops11: Aide moi à dessiner l'escalier pour voir le voilier
+      courseA_artist_loops11: Aide moi à dessiner l'escalier pour voir le navire partir.
+      courseA_artist_loops11_2018: Aide moi à dessiner l'escalier pour voir le navire
         partir.
-      courseA_artist_loops11_2018: Aide moi à dessiner l'escalier pour voir le voilier
-        partir.
-      courseA_artist_loops11_2019: Aide moi à dessiner l'escalier pour voir le voilier
+      courseA_artist_loops11_2019: Aide moi à dessiner l'escalier pour voir le navire
         partir.
       courseA_artist_loops12: |-
         L'artiste a vu quelque chose d'étrange
@@ -1739,12 +1740,24 @@ fr-FR:
         erreurs?"_
       courseA_collector_loops_challenge1_2019: _"Tu peux m'aider à identifier des
         erreurs?"_
+      courseA_collector_loops_challenge2: Récupérez tous les trésors!
       courseA_collector_loops_challenge2kp: Récupère au moins **3** diamants pour
         passer ce niveau.
       courseA_collector_loops_challenge2kp_2018: Récupère au moins **3** diamants
         pour passer ce niveau.
       courseA_collector_loops_challenge2kp_2019: Récupère au moins **3** diamants
         pour passer ce niveau.
+      courseA_collector_preLoops1: "C'est Laurel l'aventurier! \n\nCliquez sur \"Exécuter\"
+        pour la voir marcher jusqu'au trésor et le récupérer."
+      courseA_collector_preLoops2: "Bien! Maintenant vous pouvez ajouter du code vous
+        même! \n\nAttachez un bloc \"Récupérer le trésor\" en bas du programme et
+        appuyez sur \"Exécuter\". "
+      courseA_collector_preLoops3: Attachez deux blocs "E -->" et un bloc "Récupérer
+        le trésor" en bas du programme, puis cliquez sur "Exécuter".
+      courseA_collector_preLoops4: Pouvez-vous deviner comment résoudre ce casse-tête?
+      courseA_collector_preLoops5: 'Récupérez 1 de ces 2 gemmes pour résoudre ce casse-tête. '
+      courseA_collector_preLoops6: Récupérez les deux morceaux du trésor pour résoudre
+        ce casse-tête.
       courseA_collector_preLoops7: Recupère les 3 tas pour passer ce niveau.
       courseA_harvester_loops6_2019: Vous aurez besoin de **un** bloc `Bouger au sud`
         et de **un** bloc `Bouger à l'ouest`.
@@ -1975,12 +1988,12 @@ fr-FR:
       courseB_collector_loops_challenge2: Allons chercher le trésor ! Aide-moi à travers
         chaque ligne puis reviens pour commencer la ligne suivante. Peux-tu trouver
         un schéma commun ?
-      courseB_collector_loops_challenge2a: Aide Laurel à obtenir au moins **5** diamants
+      courseB_collector_loops_challenge2a: Aide Laurel à obtenir au moins **5** trésors
         pour terminer le puzzle.
       courseB_collector_loops_challenge2a_2018: Aide Laurel à obtenir au moins **5**
-        diamants pour terminer le puzzle.
+        trésors pour terminer le puzzle.
       courseB_collector_loops_challenge2a_2019: Aide Laurel à obtenir au moins **5**
-        diamants pour terminer le puzzle.
+        trésors pour terminer le puzzle.
       courseB_maze_seq1: |-
         Joue avec ces blocs pour voir ce qu'ils font faire à l'oiseau !
         Amène l'oiseau jusqu'au cochon pour terminer le niveau.
@@ -2097,8 +2110,8 @@ fr-FR:
       courseB_starWars_prog9_2019: Aidez BB-8 à rassembler la ferraille rougeoyante
       courseC19_playLab_EOC1: Choisis un arrière plan et un acteur qui sera ton héros
         dans le jeu.
-      courseC19_playLab_EOC3: Ajoute 2 ou plus acteurs à ton jeu et fais les bouger.
-      courseC19_playLab_EOC4: Trouve des moyens intéressant pour modifier le score.
+      courseC19_playLab_EOC3: Ajoute au moins 2 acteurs à ton jeu et fais les bouger.
+      courseC19_playLab_EOC4: Trouve des moyens intéressants pour modifier le score.
         Le score doit se modifier pour montrer autre chose que 0 et pouvoir continuer.
       courseC19_playLab_EOC6: Tu as terminé! Maintenant tu peux jouer à ton jeu où
         le partager avec tes amis et camarades de classe!
@@ -2111,23 +2124,21 @@ fr-FR:
         Jorge le Chien (acteur 1), puis ensuite à Olive le Chat (Acteur 2)?
       courseC_PlayLab_events2_2019: Est ce que tu peux faire dire quelque chose à
         Jorge le Chien (acteur 1), puis ensuite à Olive le Chat (Acteur 2)?
-      courseC_PlayLab_events3: |-
-        Peux-tu écrire un programme pour que ce c
-        hien se déplace jusqu'au chat ?
-      courseC_PlayLab_events3_2018: |-
-        Peux-tu écrire un programme pour que ce c
-        hien se déplace jusqu'au chat ?
-      courseC_PlayLab_events3_2019: |-
-        Peux-tu écrire un programme pour que ce c
-        hien se déplace jusqu'au chat ?
+      courseC_PlayLab_events3: Peux-tu écrire un programme pour que ce chien se déplace
+        jusqu'au chat ?
+      courseC_PlayLab_events3_2018: Peux-tu écrire un programme pour que ce chien
+        se déplace jusqu'au chat ?
+      courseC_PlayLab_events3_2019: Peux-tu écrire un programme pour que ce chien
+        se déplace jusqu'au chat ?
       courseC_PlayLab_events4: Peux-tu écrire un programme qui fait bouger Jorge (acteur
-        1) vers Olive le Chat, et que Olive dise "Salut." lorsque Jorge la rejoint?
+        1) vers Olive le Chat, et qu’Olive dise "Salut." lorsque Jorge la rejoint
+        ?
       courseC_PlayLab_events4_2018: Peux-tu écrire un programme qui fait bouger Jorge
-        (acteur 1) vers Olive le Chat, et que Olive dise "Salut." lorsque Jorge la
-        rejoint?
+        (acteur 1) vers Olive le Chat, et qu’Olive dise "Salut." lorsque Jorge la
+        rejoint ?
       courseC_PlayLab_events4_2019: Peux-tu écrire un programme qui fait bouger Jorge
-        (acteur 1) vers Olive le Chat, et que Olive dise "Salut." lorsque Jorge la
-        rejoint?
+        (acteur 1) vers Olive le Chat, et qu’Olive dise "Salut." lorsque Jorge la
+        rejoint ?
       courseC_PlayLab_events5: Peux-tu écrire un programme pour faire dire «Quoi de
         neuf?» à la pieuvre Octavia lorsqu'on lui clique dessus?
       courseC_PlayLab_events5_2018: Peux-tu écrire un programme pour faire dire «Quoi
@@ -2301,67 +2312,67 @@ fr-FR:
         sur cette route!"_
       courseC_artist_prog_challenge2a_2019: _"Aide moi à peindre les lignes jaunes
         sur cette route!"_
-      courseC_collector_loops_challenge2: Ramasse au moins **5** diamants!
-      courseC_collector_loops_challenge2_2018: Ramasse au moins **5** diamants!
-      courseC_collector_loops_challenge2_2019: Ramasse au moins **5** diamants!
+      courseC_collector_loops_challenge2: Ramasse au moins **5** trésors!
+      courseC_collector_loops_challenge2_2018: Ramasse au moins **5** trésors!
+      courseC_collector_loops_challenge2_2019: Ramasse au moins **5** trésors!
       courseC_collector_prog1: Joue un peu avec les blocs pour voir si tu peux aider
-        Laurel à collecter quelques diamants.
+        Laurel à trésorrécupérer des trésors.
       courseC_collector_prog1_2018: Joue un peu avec les blocs pour voir si tu peux
-        aider Laurel à collecter quelques diamants.
+        aider Laurel à trésorrécupérer des trésors.
       courseC_collector_prog1_2019: Joue un peu avec les blocs pour voir si tu peux
-        aider Laurel à collecter quelques diamants.
-      courseC_collector_prog2: Bouge Laurel jusqu'au diamant, puis utilise `collecter`
+        aider Laurel à trésorrécupérer des trésors.
+      courseC_collector_prog2: Bouge Laurel jusqu'au trésortrésor, puis utilise `collecter`
         pour le ramasser.
-      courseC_collector_prog2_2018: Bouge Laurel jusqu'au diamant, puis utilise `collecter`
-        pour le ramasser.
-      courseC_collector_prog2_2019: Bouge Laurel jusqu'au diamant, puis utilise `collecter`
-        pour le ramasser.
-      courseC_collector_prog3: Ordonne ces blocs pour ramasser les diamants et résoudre
-        le puzzle.
-      courseC_collector_prog3_2018: Ordonne ces blocs pour ramasser les diamants et
+      courseC_collector_prog2_2018: Bouge Laurel jusqu'au trésortrésor, puis utilise
+        `collecter` pour le ramasser.
+      courseC_collector_prog2_2019: Bouge Laurel jusqu'au trésortrésor, puis utilise
+        `collecter` pour le ramasser.
+      courseC_collector_prog3: Ordonne ces blocs pour ramasser trésordes trésors et
         résoudre le puzzle.
-      courseC_collector_prog3_2019: Ordonne ces blocs pour ramasser les diamants et
-        résoudre le puzzle.
+      courseC_collector_prog3_2018: Ordonne ces blocs pour ramasser trésordes trésors
+        et résoudre le puzzle.
+      courseC_collector_prog3_2019: Ordonne ces blocs pour ramasser trésordes trésors
+        et résoudre le puzzle.
       courseC_collector_prog4: Mets ces blocs dans l'ordre pour ramasser tous les
-        diamants et résoudre ce puzzle.
+        trésortrésors et résoudre ce puzzle.
       courseC_collector_prog4_2018: Mets ces blocs dans l'ordre pour ramasser tous
-        les diamants et résoudre ce puzzle.
+        les trésortrésors et résoudre ce puzzle.
       courseC_collector_prog4_2019: Mets ces blocs dans l'ordre pour ramasser tous
-        les diamants et résoudre ce puzzle.
+        les trésortrésors et résoudre ce puzzle.
       courseC_collector_prog5: Ces blocs ne sont pas dans l'ordre, Peux-tu les corriger?
       courseC_collector_prog5_2018: Ces blocs ne sont pas dans l'ordre, Peux-tu les
         corriger?
       courseC_collector_prog5_2019: Ces blocs ne sont pas dans l'ordre, Peux-tu les
         corriger?
-      courseC_collector_prog6: Ré-organise les blocs pour ramasser les diamants.
-      courseC_collector_prog6_2018: Ré-organise les blocs pour ramasser les diamants.
-      courseC_collector_prog6_2019: Ré-organise les blocs pour ramasser les diamants.
+      courseC_collector_prog6: Ré-organise les blocs pour ramasser les trésortrésors.
+      courseC_collector_prog6_2018: Ré-organise les blocs pour ramasser les trésortrésors.
+      courseC_collector_prog6_2019: Ré-organise les blocs pour ramasser les trésortrésors.
       courseC_collector_prog7: Utilise les blocs de la boite à outils pour ramasser
-        les diamants.
+        les trésortrésors.
       courseC_collector_prog7_2018: Utilise les blocs de la boite à outils pour ramasser
-        les diamants.
+        les trésortrésors.
       courseC_collector_prog7_2019: Utilise les blocs de la boite à outils pour ramasser
-        les diamants.
-      courseC_collector_prog8: _"Continuez votre bon travail! Aidez-moi à rassembler
-        tout les diamants."_
-      courseC_collector_prog8_2018: _"Continuez votre bon travail! Aidez-moi à rassembler
-        tout les diamants."_
-      courseC_collector_prog8_2019: _"Continuez votre bon travail! Aidez-moi à rassembler
-        tout les diamants."_
-      courseC_collector_prog9: _"Ramassons tous les diamants!"_
-      courseC_collector_prog9_2018: _"Ramassons tous les diamants!"_
-      courseC_collector_prog9_2019: _"Ramassons tous les diamants!"_
+        les trésortrésors.
+      courseC_collector_prog8: _"Continue le bon travail ! Aide-moi à rassembler trésortous
+        les trésors."_
+      courseC_collector_prog8_2018: _"Continue le bon travail ! Aide-moi à rassembler
+        trésortous les trésors."_
+      courseC_collector_prog8_2019: _"Continue le bon travail ! Aide-moi à rassembler
+        trésortous les trésors."_
+      courseC_collector_prog9: _"Ramassons tous les trésortrésors !"_
+      courseC_collector_prog9_2018: _"Ramassons tous les trésortrésors !"_
+      courseC_collector_prog9_2019: _"Ramassons tous les trésortrésors !"_
       courseC_collector_prog_challenge1: Regarde attentivement! Est ce que tu peux
-        ramasser les **10** diamants?
+        ramasser les **10** trésors?
       courseC_collector_prog_challenge1_2018: Regarde attentivement! Est ce que tu
-        peux ramasser les **10** diamants?
+        peux ramasser les **10** trésors?
       courseC_collector_prog_challenge1_2019: Regarde attentivement! Est ce que tu
-        peux ramasser les **10** diamants?
-      courseC_collector_prog_challenge2: Ramasse au moins **10** diamants pour terminer
+        peux ramasser les **10** trésors?
+      courseC_collector_prog_challenge2: Ramasse au moins **10** trésors pour terminer
         ce défi!
-      courseC_collector_prog_challenge2_2018: Ramasse au moins **10** diamants pour
+      courseC_collector_prog_challenge2_2018: Ramasse au moins **10** trésors pour
         terminer ce défi!
-      courseC_collector_prog_challenge2_2019: Ramasse au moins **10** diamants pour
+      courseC_collector_prog_challenge2_2019: Ramasse au moins **10** trésors pour
         terminer ce défi!
       courseC_flappy_events1: Attache le bloc `faire une quantité normale de battements
         d'ailes` sous l'évènement `lors d'un clic`, et appuie sur "Démarrer". Clique
@@ -2538,11 +2549,11 @@ fr-FR:
       courseC_maze_loops_challenge1a_2019: 'Maintenant Scrat veut utiliser les boucles
         pour essayer d''atteindre son gland! '
       courseC_maze_programming1: Pour ce puzzle, mets tous les blocs ensemble et clique
-        "Démarrer" pour le voir faire!
+        sur "Démarrer" pour le voir faire !
       courseC_maze_programming1_2018: Pour ce puzzle, mets tous les blocs ensemble
-        et clique "Démarrer" pour le voir faire!
+        et clique sur "Démarrer" pour le voir faire !
       courseC_maze_programming1_2019: Pour ce puzzle, mets tous les blocs ensemble
-        et clique "Démarrer" pour le voir faire!
+        et clique sur "Démarrer" pour le voir faire !
       courseC_maze_programming2: Ajoute à nouveau `un bloc`avancer plus\` depuis la
         boite à outil pour terminer ton code.
       courseC_maze_programming2_2018: Ajoute à nouveau `un bloc`avancer plus\` depuis
@@ -2561,28 +2572,28 @@ fr-FR:
       courseC_maze_programming5: Evite la TNT.
       courseC_maze_programming5_2018: Evite la TNT.
       courseC_maze_programming5_2019: Evite la TNT.
-      courseC_maze_programming6: '"Reste calme et aide moi a trouver ce vilain cochon.
-        Autrement je pourrais m''énerver!"'
-      courseC_maze_programming6_2018: '"Reste calme et aide moi a trouver ce vilain
-        cochon. Autrement je pourrais m''énerver!"'
-      courseC_maze_programming6_2019: '"Reste calme et aide moi a trouver ce vilain
-        cochon. Autrement je pourrais m''énerver!"'
+      courseC_maze_programming6: '"Reste calme et aide moi à trouver ce vilain cochon.
+        Autrement je pourrais m''énerver !"'
+      courseC_maze_programming6_2018: '"Reste calme et aide moi à trouver ce vilain
+        cochon. Autrement je pourrais m''énerver !"'
+      courseC_maze_programming6_2019: '"Reste calme et aide moi à trouver ce vilain
+        cochon. Autrement je pourrais m''énerver !"'
       courseC_maze_programming7: "**Défi** Ce code a beaucoup d'erreur. Tu dois ajouter
         des blocs et en enlever d'autres."
       courseC_maze_programming7_2018: "**Défi** Ce code a beaucoup d'erreur. Tu dois
         ajouter des blocs et en enlever d'autres."
       courseC_maze_programming7_2019: "**Défi** Ce code a beaucoup d'erreur. Tu dois
         ajouter des blocs et en enlever d'autres."
-      courseC_maze_programming8: _"Reste calme et aide moi a trouver ce vilain cochon."_
-      courseC_maze_programming8_2018: _"Reste calme et aide moi a trouver ce vilain
+      courseC_maze_programming8: _"Reste calme et aide moi à trouver ce vilain cochon."_
+      courseC_maze_programming8_2018: _"Reste calme et aide moi à trouver ce vilain
         cochon."_
-      courseC_maze_programming8_2019: _"Reste calme et aide moi a trouver ce vilain
+      courseC_maze_programming8_2019: _"Reste calme et aide moi à trouver ce vilain
         cochon."_
-      courseC_maze_programming8_predict1: _"Reste calme et aide moi a trouver ce vilain
+      courseC_maze_programming8_predict1: _"Reste calme et aide moi à trouver ce vilain
         cochon."_
-      courseC_maze_programming8_predict1_2018: _"Reste calme et aide moi a trouver
+      courseC_maze_programming8_predict1_2018: _"Reste calme et aide moi à trouver
         ce vilain cochon."_
-      courseC_maze_programming8_predict1_2019: _"Reste calme et aide moi a trouver
+      courseC_maze_programming8_predict1_2019: _"Reste calme et aide moi à trouver
         ce vilain cochon."_
       courseC_maze_programming9: _"Maintenant, aide moi me faufiler jusqu'au cochon
         comme tu le souhaites!"_
@@ -2668,11 +2679,12 @@ fr-FR:
       courseC_starWars_loops7_2019: Peux-tu essayer de ramasser toute la ferraille
         avec une seule boucle? Essaie de le programmer sans puis de trouver le code
         qui se répète pour le mettre dans une boucle.
-      courseC_starWars_loops9: Utilse ce que tu as appris pour ramasser tout le ferraille!
-      courseC_starWars_loops9_2018: Utilse ce que tu as appris pour ramasser tout
-        le ferraille!
-      courseC_starWars_loops9_2019: Utilse ce que tu as appris pour ramasser tout
-        le ferraille!
+      courseC_starWars_loops9: Utilse ce que tu as appris pour ramasser toute la ferraille
+        !
+      courseC_starWars_loops9_2018: Utilse ce que tu as appris pour ramasser toute
+        la ferraille !
+      courseC_starWars_loops9_2019: Utilse ce que tu as appris pour ramasser toute
+        la ferraille !
       courseD_artist_5_2018: Joue avec les flocons de neige!
       courseD_artist_5_2018_2019: Joue avec les flocons de neige!
       courseD_artist_binary1: |-
@@ -2733,18 +2745,18 @@ fr-FR:
       courseD_artist_binary8_predict1_2018: Termine le code pour créer ce dessin.
       courseD_artist_binary8_predict1_2019: Termine le code pour créer ce dessin.
       courseD_artist_binaryFP: |-
-        Voici un tableau avec une plus grande résolution de 16 x 16 pixels!
+        Voici un tableau avec une plus grande résolution de 16 x 16 pixels !
 
-        Regarde ce qui se passe lorsque l'on essaie d'être créatif avec les bits!
+        Regarde ce qu’il se passe lorsque l'on essaie d'être créatif avec les bits !
       courseD_artist_binaryFP8: "**Jeu libre:** Dessine ce que tu veux en binaire! "
       courseD_artist_binaryFP_2018: |-
-        Voici un tableau avec une plus grande résolution de 16 x 16 pixels!
+        Voici un tableau avec une plus grande résolution de 16 x 16 pixels !
 
-        Regarde ce qui se passe lorsque l'on essaie d'être créatif avec les bits!
+        Regarde ce qu’il se passe lorsque l'on essaie d'être créatif avec les bits !
       courseD_artist_binaryFP_2019: |-
-        Voici un tableau avec une plus grande résolution de 16 x 16 pixels!
+        Voici un tableau avec une plus grande résolution de 16 x 16 pixels !
 
-        Regarde ce qui se passe lorsque l'on essaie d'être créatif avec les bits!
+        Regarde ce qu’il se passe lorsque l'on essaie d'être créatif avec les bits !
       courseD_artist_nestedLoops1: |-
         Dessine un triangle pour commencer ce niveau.\
         (Chaque côté fait 100 pixels de long et tu devras tourner de 120 degrés pour chaque angle.)
@@ -2770,15 +2782,15 @@ fr-FR:
       courseD_artist_nestedLoops2_2019: Ce coup-ci, termine le puzzle avec le moins
         de blocs possible.
       courseD_artist_nestedLoops3: |-
-        Utilise tes nouvelles compétences pour dessiner rapidement la dernière rangée de cette immeuble.
+        Utilise tes nouvelles compétences pour dessiner rapidement la dernière rangée de cet immeuble.
 
         Les fenêtres sont des carrés de 20 pixels, espacées de 20 pixels chacun.
       courseD_artist_nestedLoops3_2018: |-
-        Utilise tes nouvelles compétences pour dessiner rapidement la dernière rangée de cette immeuble.
+        Utilise tes nouvelles compétences pour dessiner rapidement la dernière rangée de cet immeuble.
 
         Les fenêtres sont des carrés de 20 pixels, espacées de 20 pixels chacun.
       courseD_artist_nestedLoops3_2019: |-
-        Utilise tes nouvelles compétences pour dessiner rapidement la dernière rangée de cette immeuble.
+        Utilise tes nouvelles compétences pour dessiner rapidement la dernière rangée de cet immeuble.
 
         Les fenêtres sont des carrés de 20 pixels, espacées de 20 pixels chacun.
       courseD_artist_nestedLoops4: Bien! Fais la même chose avec ces cercles.
@@ -2795,12 +2807,12 @@ fr-FR:
         dessin.
       courseD_artist_nestedLoops7_2019: Utilise ce que tu as appris pour faire ce
         dessin.
-      courseD_artist_nestedLoops8: En utilisant ce que tu as appris au cours des derniers
-        puzzles, construis cette image depuis le début.
+      courseD_artist_nestedLoops8: En utilisant ce que tu as appris au cours des deux
+        derniers puzzles, construis cette image depuis le début.
       courseD_artist_nestedLoops8_2018: En utilisant ce que tu as appris au cours
-        des derniers puzzles, construis cette image depuis le début.
+        des deux derniers puzzles, construis cette image depuis le début.
       courseD_artist_nestedLoops8_2019: En utilisant ce que tu as appris au cours
-        des derniers puzzles, construis cette image depuis le début.
+        des deux derniers puzzles, construis cette image depuis le début.
       courseD_artist_nestedLoops9: "**Défi:** Peux tu trouver comment faire un dessin
         comme celui la ?"
       courseD_artist_nestedLoops9_2018: "**Défi:** Peux tu trouver comment faire un
@@ -3021,26 +3033,26 @@ fr-FR:
       courseD_bee_nestedLoops9_predict2: Fais tout le miel.
       courseD_bee_nestedLoops9_predict2_2018: Fais tout le miel.
       courseD_bee_nestedLoops9_predict2_2019: Fais tout le miel.
-      courseD_collector_debugging1: Corrige la ou les erreurs pour ramasser les diamants.
+      courseD_collector_debugging1: Corrige la ou les erreurs pour ramasser les trésors.
       courseD_collector_debugging1a_2018: Corrige la ou les erreurs pour ramasser
-        les diamants.
+        les trésors.
       courseD_collector_debugging1a_2019: Corrige la ou les erreurs pour ramasser
-        les diamants.
-      courseD_collector_debugging2: Corrige la ou les erreurs pour ramasser les diamants.
+        les trésors.
+      courseD_collector_debugging2: Corrige la ou les erreurs pour ramasser les trésors.
       courseD_collector_debugging2a_2018: Corrige la ou les erreurs pour ramasser
-        les diamants.
+        les trésors.
       courseD_collector_debugging2a_2019: Corrige la ou les erreurs pour ramasser
-        les diamants.
-      courseD_collector_debugging3: Corrige la ou les erreurs pour ramasser les diamants.
+        les trésors.
+      courseD_collector_debugging3: Corrige la ou les erreurs pour ramasser les trésors.
       courseD_collector_debugging3a_2018: Corrige la ou les erreurs pour ramasser
-        les diamants.
+        les trésors.
       courseD_collector_debugging3a_2019: Corrige la ou les erreurs pour ramasser
-        les diamants.
-      courseD_collector_debugging4: Corrige la ou les erreurs pour ramasser les diamants.
+        les trésors.
+      courseD_collector_debugging4: Corrige la ou les erreurs pour ramasser les trésors.
       courseD_collector_debugging4a_2018: Corrige la ou les erreurs pour ramasser
-        les diamants.
+        les trésors.
       courseD_collector_debugging4a_2019: Corrige la ou les erreurs pour ramasser
-        les diamants.
+        les trésors.
       courseD_collector_debugging5: Toutes les commandes dont tu as besoin sont déjà
         présentes... Maintenant utilise tes compétences en débogages pour trouver
         comment résoudre ce puzzle.
@@ -3051,7 +3063,7 @@ fr-FR:
         déjà présentes... Maintenant utilise tes compétences en débogages pour trouver
         comment résoudre ce puzzle.
       courseD_collector_debugging6: "**Défi:** Utilise tes compétences en débogage
-        pour corriger les erreurs et ramasser tous les diamants."
+        pour corriger les erreurs et ramasser tous les trésors."
       courseD_collector_debugging_challenge2: Es-tu un expert des boucles imbriquées
         ? Sers-toi de ce que tu as appris jusqu'à maintenant pour ramasser tous les
         diamants !
@@ -3065,10 +3077,10 @@ fr-FR:
         au moins deux piles de joyaux, en utilisant seulement les blocs dans ta boîte
         à outils. Tu peux les collecter tous les 4.
       courseD_collector_nested_loops_challenge2a: Aide Laurel à ramasser au moins
-        2 tas de diamants.
-      courseD_collector_ramp10: Aide Laurel à ramasser tous les diamants.
-      courseD_collector_ramp8: Aide Laurel à ramasser tous les diamants.
-      courseD_collector_ramp9: Aide Laurel à ramasser tous les diamants.
+        2 tas de trésors.
+      courseD_collector_ramp10: Aide Laurel à ramasser tous les trésortrésors.
+      courseD_collector_ramp8: Aide Laurel à ramasser tous les trésortrésors.
+      courseD_collector_ramp9: Aide Laurel à ramasser tous les trésortrésors.
       courseD_farmer_condLoops1: Utilise des conditions pour t’assurer que tu ramasses
         le maïs uniquement lorsqu’il y en a.
       courseD_farmer_condLoops1_2018: Utilise des conditions pour t’assurer que tu
@@ -3284,8 +3296,8 @@ fr-FR:
       courseD_maze_ramp5d: Amène l'oiseau jusqu'au cochon.
       courseD_maze_ramp5d_2018: Amène l'oiseau jusqu'au cochon.
       courseD_maze_ramp5d_2019: Amène l'oiseau jusqu'au cochon.
-      courseD_maze_ramp6: '"Reste calme et aide moi a trouver ce vilain cochon. Autrement
-        je pourrais m''énerver!"'
+      courseD_maze_ramp6: '"Reste calme et aide moi à trouver ce vilain cochon. Autrement
+        je pourrais m''énerver !"'
       courseD_maze_ramp7: Amène l’oiseau jusqu'au cochon !
       courseD_maze_until1: Amène l'oiseau en colère jusqu'au cochon.
       courseD_maze_until10: Aide le zombie à aller jusqu’au tournesol.
@@ -3358,10 +3370,10 @@ fr-FR:
         mettes à poursuivre le pirate.\n2.  Si le pirate est à plus de 225 pixels
         du bas, fais que le ninja **fuis** le pirate. Sinon, fais **poursuivre** le
         pirate par le ninja.  "
-      courseD_playLab_cond6a: Si le pirate (acteur 1) est dans la zone sûre, attend
+      courseD_playLab_cond6a: Si le pirate (acteur 1) est dans la zone sûre, attends
         une seconde, puis soustrait un point tant qu'il reste sous la ligne des pieuvres.
       courseD_playLab_cond6a_2018: Si le pirate (acteur 1) est dans la zone sûre,
-        attend une seconde, puis soustrait un point tant qu'il reste sous la ligne
+        attends une seconde, puis soustrait un point tant qu'il reste sous la ligne
         des pieuvres.
       courseD_playLab_condFP: Maintenant construis ton propre jeu pour montrer à tes
         amis!
@@ -3411,7 +3423,7 @@ fr-FR:
       courseE_artist_functions5_2019: Dessine seulement ces 3 étoiles pour terminer
         le puzzle.
       courseE_artist_functions6: Fais cette fenêtre en dessinant un carré, puis tourne
-        de 90 degrés avant de dessiner une autre et ainsi de suite.
+        de 90 degrés avant d’en dessiner une autre et ainsi de suite.
       courseE_artist_functions7: Essaie de résoudre ce puzzle en créant la fonction
         `dessine une fenêtre` et en l'appelant 5 fois. Attention à la porte!
       courseE_artist_functions7_2018: Essaie de résoudre ce puzzle en créant la fonction
@@ -3423,17 +3435,17 @@ fr-FR:
       courseE_artist_functions9: Crée cette image en utilisant uniquement les blocs
         fournis.
       courseE_artist_functions_challenge1: Dès que tu as défini une fonction, tu peux
-        l'appeler encore et encore - quand tu veux et n'importe où! Essaie ce code
-        pour voir comment il fonctionne, puis modifie le pour faire ton propre dessin
-        impressionant!
+        l'appeler encore et encore - quand tu veux et n'importe où ! Essaie ce code
+        pour voir comment il fonctionne, puis modifie-le pour faire ton propre dessin
+        impressionant !
       courseE_artist_functions_challenge1_2018: Dès que tu as défini une fonction,
-        tu peux l'appeler encore et encore - quand tu veux et n'importe où! Essaie
-        ce code pour voir comment il fonctionne, puis modifie le pour faire ton propre
-        dessin impressionant!
+        tu peux l'appeler encore et encore - quand tu veux et n'importe où ! Essaie
+        ce code pour voir comment il fonctionne, puis modifie-le pour faire ton propre
+        dessin impressionant !
       courseE_artist_functions_challenge1_2019: Dès que tu as défini une fonction,
-        tu peux l'appeler encore et encore - quand tu veux et n'importe où! Essaie
-        ce code pour voir comment il fonctionne, puis modifie le pour faire ton propre
-        dessin impressionant!
+        tu peux l'appeler encore et encore - quand tu veux et n'importe où ! Essaie
+        ce code pour voir comment il fonctionne, puis modifie-le pour faire ton propre
+        dessin impressionant !
       courseE_artist_functions_challenge2: Essaie ce code pour voir comment il fonctionne,
         puis fais en le tien!
       courseE_artist_functions_challenge2_2018: Essaie ce code pour voir comment il
@@ -3457,10 +3469,10 @@ fr-FR:
         le nectar ou faire du miel. Est-ce que tu peux l'aider?
       courseE_bee_concept4_2018: Oula! L'abeille ne sait pas vraiment si elle doit
         ramasser le nectar ou faire du miel. Est-ce que tu peux l'aider?
-      courseE_bee_concept5: Est-ce que tu peux aider l'abeille a ramasser le nectar
-        des fleurs?
-      courseE_bee_concept5_2018: Est-ce que tu peux aider l'abeille a ramasser le
-        nectar des fleurs?
+      courseE_bee_concept5: Est-ce que tu peux aider l'abeille à ramasser le nectar
+        des fleurs ?
+      courseE_bee_concept5_2018: Est-ce que tu peux aider l'abeille à ramasser le
+        nectar des fleurs ?
       courseE_bee_functions1: Récolte tout le nectar de chaque fleur.
       courseE_bee_functions10: Résoud ce puzzle en créant une fonction qui aide l'abeille
         à aller chercher tout le miel avant de retourner sur le chemin principal.
@@ -3474,7 +3486,7 @@ fr-FR:
         Utilise la fonction pour récolter tout le nectar.
       courseE_bee_functions5: Maintenant écris la fonction pour ramasser le nectar
         des fleurs.
-      courseE_bee_functions6: Crée une fonction et appelle la pour ramasser le nectar
+      courseE_bee_functions6: Crée une fonction et appelle-la pour ramasser le nectar
         de chaque fleur et faire du miel sur chaque nid d'abeilles.
       courseE_bee_functions7: Créer ta propre fonction qui descend un chemin, récolte
         du nectar, produit du miel, puis renvoie l'abeille vers le haut du chemin.
@@ -3487,9 +3499,9 @@ fr-FR:
         peut-être plus compliqué qu'il n'y parait!
       courseE_bee_functions_challenge2: Tu dois te débrouiller pour ce défi. Cool!
       courseE_farmer_concept1: Peux-tu écrire un programme qui remplit ces trous jusqu'à
-        ce que le sol affleure?
+        ce que le sol soit lisse ?
       courseE_farmer_concept1_2018: Peux-tu écrire un programme qui remplit ces trous
-        jusqu'à ce que le sol affleure?
+        jusqu'à ce que le sol soit lisse ?
       courseE_farmer_concept2: Rammasse toutes les citrouilles.
       courseE_farmer_concept2_2018: Rammasse toutes les citrouilles.
       courseE_farmer_concept3: Remplis le trou à la fin de chacun de ses chemins.
@@ -3533,17 +3545,17 @@ fr-FR:
       courseE_farmer_ramp11b: Tant qu'il y a une pile, enlève la saleté.
       courseE_farmer_ramp11b_2018: Tant qu'il y a une pile, enlève la saleté.
       courseE_farmer_ramp11b_2019: Tant qu'il y a une pile, enlève la saleté.
-      courseE_farmer_ramp12f: Avance jusqu'à atteindre la laitue, puis turne à gauche
+      courseE_farmer_ramp12f: Avance jusqu'à atteindre la salade, puis tourne à gauche
         **si** il y a un chemin à gauche. Sinon tourne à droite.
-      courseE_farmer_ramp12f_2018: Avance jusqu'à atteindre la laitue, puis turne
+      courseE_farmer_ramp12f_2018: Avance jusqu'à atteindre la salade, puis tourne
         à gauche **si** il y a un chemin à gauche. Sinon tourne à droite.
-      courseE_farmer_ramp12f_2019: Avance jusqu'à atteindre la laitue, puis turne
+      courseE_farmer_ramp12f_2019: Avance jusqu'à atteindre la salade, puis tourne
         à gauche **si** il y a un chemin à gauche. Sinon tourne à droite.
-      courseE_farmer_ramp12g: Avance jusqu'à atteindre la laitue, puis turne à gauche
+      courseE_farmer_ramp12g: Avance jusqu'à atteindre la salade, puis tourne à gauche
         **si** il y a un chemin à gauche. Sinon tourne à droite.
-      courseE_farmer_ramp12g_2018: Avance jusqu'à atteindre la laitue, puis turne
+      courseE_farmer_ramp12g_2018: Avance jusqu'à atteindre la salade, puis tourne
         à gauche **si** il y a un chemin à gauche. Sinon tourne à droite.
-      courseE_farmer_ramp12g_2019: Avance jusqu'à atteindre la laitue, puis turne
+      courseE_farmer_ramp12g_2019: Avance jusqu'à atteindre la salade, puis tourne
         à gauche **si** il y a un chemin à gauche. Sinon tourne à droite.
       courseE_playLab_challenge1: Il doit se produire quelque chose lorsque tu as
         assez de points ou lorsque tu n'en as plus assez. Ajoute du code aux fonctions
@@ -3553,8 +3565,8 @@ fr-FR:
         héros dans le jeu.
       courseE_playLab_scaffold2: Utilise des gestionnaires d'évènements et des actions
         pour faire bouger ton acteur.
-      courseE_playLab_scaffold3: Ajoute 2 ou plus acteurs à ton jeu et fais les bouger.
-      courseE_playLab_scaffold4: Trouve des moyens intéressant pour modifier le score.
+      courseE_playLab_scaffold3: Ajoute au moins 2 acteurs à ton jeu et fais les bouger.
+      courseE_playLab_scaffold4: Trouve des moyens intéressants pour modifier le score.
         Le score doit se modifier pour montrer autre chose que 0 et pouvoir continuer.
       courseE_playLab_scaffold5: Maintenant passe un peu de temps à vérifier que le
         jeu fonctionne comme tu le souhaites. Inclus un moyen de gagner ou de perdre,
@@ -3989,15 +4001,15 @@ fr-FR:
       frozen square snowflake: Peux-tu créer un flocon de neige en utilisant le bloc
         «Répéter» pour faire 10 fois un carré, et le bloc «Tourner» pour tourner de
         36 degrés entre chaque carré ?
-      grade2_collector_10: C'est presque terminé! Ramasse autant de diamants que tu
-        peux pour finir le niveau!
-      grade2_collector_10_2018: C'est presque terminé! Ramasse autant de diamants
+      grade2_collector_10: C'est presque terminé! Ramasse autant de trésortrésors
         que tu peux pour finir le niveau!
-      grade2_collector_10_2019: C'est presque terminé! Ramasse autant de diamants
+      grade2_collector_10_2018: C'est presque terminé! Ramasse autant de trésortrésors
         que tu peux pour finir le niveau!
-      grade2_collector_A: Aide Laurel à ramasser tous les diamants.
-      grade2_collector_A_2018: Aide Laurel à ramasser tous les diamants.
-      grade2_collector_A_2019: Aide Laurel à ramasser tous les diamants.
+      grade2_collector_10_2019: C'est presque terminé! Ramasse autant de trésortrésors
+        que tu peux pour finir le niveau!
+      grade2_collector_A: Aide Laurel à ramasser tous les trésortrésors.
+      grade2_collector_A_2018: Aide Laurel à ramasser tous les trésortrésors.
+      grade2_collector_A_2019: Aide Laurel à ramasser tous les trésortrésors.
       grade5_artist_binary11: 'Activité libre : voici une toile vierge pour que tu
         dessines dessus.  Amuse-toi!'
       grade5_artist_binary4: Peux-tu dessiner ce modèle en bouclant une chaîne binaire

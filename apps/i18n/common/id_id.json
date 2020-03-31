@@ -100,6 +100,7 @@
   "assignmentSelectorCourse": "Pilih kursus",
   "assignmentSelectorVersion": "Versi",
   "assignmentSelectorUnit": "Memilih unit saat ini",
+  "atHomeBannerLinkText": "Memulai",
   "audioInitializeError": "Komputer ini tidak diset-up untuk merekam audio. Pastikan Anda memiliki mikrofon yang diizinkan untuk mengakses audio pada website ini.",
   "audioSaveError": "Telah terjadi kesalahan menyimpan rekaman Anda. Harap merekam ulang dan coba lagi. Jika masalah ini berlanjut, silahkan refresh halaman dan coba lagi.",
   "authorizeGoogleClassrooms": "Klik di sini untuk mengizinkan Google Kelas.",

@@ -383,6 +383,7 @@ fr:
       playlab_k1: 'Labo du Jeu (Pré-lecteur)'
       scratch: 'Scratch'
       sports: 'Sports'
+      spritelab: 'Le Labo des Lutins'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocs)'
       starwarsblocks_hour: 'Star Wars (blocs)'
@@ -501,6 +502,7 @@ fr:
     no_primary_course: "Essaye un cours Code Studio"
     choose_next_course: "Essaye un cours Code Studio en le choisissant ci-dessous"
     print_certificate: "Imprimer le certificat"
+  certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer ton apprentissage."
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un code de section différent."
     section_code_cant_be_current_section: "La section courante ne peut pas être identique à la nouvelle section."
@@ -895,7 +897,7 @@ fr:
     csf_e_2: 'Contenu du cours E'
     csf_f_1: 'Progression jusqu''au cours F (facultatif)'
     csf_f_2: 'Contenu du cours F'
-    csf_digcit: 'Citoyenneté numérique'
+    csf_digcit: 'डिजीटल नागरिकता'
     csf_jigsaw: 'Puzzle'
     csf_sequencing: 'Séquençage'
     csf_loops: 'boucles'
@@ -903,11 +905,14 @@ fr:
     csf_online_safety: 'Sécurité en ligne'
     csf_binary: 'Binaire'
     csf_conditionals: 'Instructions conditionnelles'
+    csf_sprites: 'Les Lutins'
+    csf_spritelab: 'Le Labo des Lutins'
     csf_nested_loops: 'Boucles Imbriquées'
     csf_functions: 'fonctions'
     csf_variables: 'variables'
     csf_for_loops: 'Boucles « Pour »'
-    csf_internet: 'Internet'
+    csf_internet: 'इंटरनेट'
+    csf_impacts: 'Les Impacts de l''Informatique'
     csf_warmup: 'Échauffement'
     csd1_1: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
     csd1_2: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
@@ -950,7 +955,9 @@ fr:
     csp_libraries: 'Bibliothèques'
     csp_parameters_return_values: 'Paramètres et Valeurs de Retour'
     csp_unit1_2020: 'Unité 1: L’Information numérique'
-    csp_unit2_2020: 'Principes de l''informatique, unité 2'
+    csp_unit2_2020: 'Unité 2: L''Internet'
+    csp_unit6_2020: 'Unité 6 : Les Algorithmes'
+    csp_unit9_2020: 'Unité 9 : Les Données'
     dlp: 'Sujets de Réflexion'
     time4cs_c1: 'Collection 1 : Les Everglades et ses Écosystèmes'
     time4cs_c2: 'Collection 2 : Les Chaînes Alimentaires (dans les Everglades)'
@@ -958,6 +965,7 @@ fr:
     time4cs_c4: 'Collection 4 : L’Impact des Espèces Invasives (sur les Everglades)'
     time4cs_c5: 'Collection 5 : Les Citoyens Passent à l’Action'
     time4cs_c6: 'Conditions (révision)'
+    k5_getting_started: 'La Mise en Route'
     k5_csf_intro: 'Familiarisez-vous avec les cours sur les Fondamentaux de l''Informatique'
     k5_coding_concepts: 'Concepts de Codage et Stratégies D''Enseignement'
     k5_next_steps: 'Prochaines étapes'

@@ -360,10 +360,12 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
-        coursee-2020:
+            Text:
+              name: អត្ថ​​បទ
+        coursef-2020:
           stages:
-            Conditionals:
-              name: លក្ខខណ្ឌ
+            Internet:
+              name: អ៊ីនធឺណិត
         csd3-virtual:
           stages:
             Variables:

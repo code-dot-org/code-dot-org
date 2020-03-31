@@ -4,6 +4,7 @@ pt:
     script:
       category:
         csf_category_name: Fundamentos
+        csf2_draft_category_name: 'Em Desenvolvimento: Cursos A - F'
         hoc_category_name: Hora de Código
         math_category_name: Matemática
         research_studies_category_name: Trabalhos de Investigação
@@ -325,6 +326,8 @@ pt:
               name: A receita do design
         K5PD:
           stages:
+            Computer Science Pedagogy:
+              name: Pedagogia das Ciências da Computação
             K-5 Courses:
               name: Cursos Ensino Primário e Básico
             Next Steps:
@@ -411,6 +414,8 @@ pt:
           stages:
             Bounce:
               name: Bounce
+            Calc:
+              name: Calc
         flappy:
           title: Flappy Bird
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
@@ -522,6 +527,8 @@ pt:
               name: Laços enquanto
         algebraPD3:
           stages:
+            Computer Science Pedagogy:
+              name: Pedagogia das Ciências da Computação
             Course Overview:
               name: Visão geral do curso
             Evaluation Blocks:
@@ -2020,6 +2027,8 @@ pt:
           stages:
             new stage:
               name: nova fase
+            Libraries:
+              name: Bibliotecas
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -2148,30 +2157,40 @@ pt:
               name: Velocidade
             Functions:
               name: Funções
+            Text:
+              name: Texto
         coursea-2020:
           stages:
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
+            'Programming: Happy Maps':
+              name: Mapas felizes
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: A tua Pegada Digital
             Move It, Move It:
               name: Criando caminhos
+            'Loops: Getting Loopy':
+              name: Repetindo
         coursec-2020:
           stages:
             Powerful Passwords:
               name: Senhas Poderosas
             Binary Bracelets:
               name: Pulseiras binárias
+            'Events: The Big Event':
+              name: O Grande Evento
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programação de papel milimetrico
             Relay Programming:
               name: Programação por revezamento
             Conditionals with Cards:
               name: Condicionais com cartas
             'Unplugged: Binary':
-              name: 'Offline: binário'
+              name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
             Digital Citizenship:
@@ -2180,11 +2199,10 @@ pt:
               name: Festa da Dança
         coursee-2020:
           stages:
-            Conditionals:
-              name: Condicionais
             Simon Says:
               name: O Rei Manda
             'Functions: Songwriting':
+              name: Composição
               description_teacher: Uma das estruturas mais incríveis no mundo da ciência
                 da computação é a função. As funções (chamadas às vezes de procedimentos)
                 são miniprogramas que podem ser usados repetidas vezes dentro do programa
@@ -2199,7 +2217,7 @@ pt:
             For Loop Fun:
               name: Diversão com laços for
             Internet:
-              name: Internet
+              name: A Internet
             Crowdsourcing:
               name: Aberto ao público
             Digital Sharing:

@@ -92,7 +92,7 @@ mn:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "[SPRITE] нь {MOVE} {DIR}-г үүрд хийдэг"
+        text: "{SPRITE} нь {MOVE} {DIR}-г үүрд хийдэг"
         options:
           MOVE:
             '"next"': "(Дараагийнх)"

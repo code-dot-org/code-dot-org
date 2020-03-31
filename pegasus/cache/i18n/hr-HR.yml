@@ -90,6 +90,9 @@ hr-HR:
   get_a_certificate_message_after: Klikni na certifikat da ga preuzmeš ili ispišeš.
     Nastavi s našim <a href='http://studio.code.org'>drugim tečajevima</a>, ili istraži
     više mogućnosti na <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>.
+  get_a_certificate_message_after_markdown: Klikni na certifikat da ga preuzmeš ili
+    ispišeš. Nastavi s našim [drugim tečajevima](http://studio.code.org), ili istraži
+    više mogućnosti na [Saznaj više od Jednog sata kodiranja](/learn/beyond).
   thanks_for_submitting: Hvala na prijavi!
   if_you_enjoyed: Ako si uživao/la učeći, pozovi prijatelje da probaju također! Želimo
     cijeli svijet da nauči.
