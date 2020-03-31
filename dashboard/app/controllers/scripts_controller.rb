@@ -2,7 +2,7 @@ class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
   before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
-  before_action :require_levelbuilder_mode_or_test, only: [:edit, :update]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
   before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
