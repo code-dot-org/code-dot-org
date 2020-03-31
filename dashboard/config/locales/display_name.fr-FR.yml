@@ -114,6 +114,9 @@ fr-FR:
       CSD U2 formatting map: Mise en forme HTML
       CSD U2 formatting map_2018: Mise en forme HTML
       CSD U2 formatting map_2019: Mise en forme HTML
+      CSD U2 images map: Les Images dans le HTML
+      CSD U2 images map_2018: Les Images dans le HTML
+      CSD U2 images map_2019: Les Images dans le HTML
       CSD U2 lists map: Listes en HTML
       CSD U2 lists map_2018: Listes en HTML
       CSD U2 lists map_2019: Listes en HTML
@@ -245,9 +248,9 @@ fr-FR:
       CSD U3 Sprites scene challenge: 'Défie : Élargis ta scène'
       CSD U3 Sprites scene challenge_2018: 'Défie : Élargis ta scène'
       CSD U3 Sprites scene challenge_2019: 'Défie : Élargis ta scène'
-      CSD U3 The Draw Loop Map: La boucle Draw
-      CSD U3 The Draw Loop Map_2018: La boucle Draw
-      CSD U3 The Draw Loop Map_2019: La boucle Draw
+      CSD U3 The Draw Loop Map: La Boucle Dessiner
+      CSD U3 The Draw Loop Map_2018: La Boucle Dessiner
+      CSD U3 The Draw Loop Map_2019: La Boucle Dessiner
       CSD U3 Variables Challenge: 'Défi : Mettre des variables à jour'
       CSD U3 Variables Challenge_2018: 'Défi : Mettre des variables à jour'
       CSD U3 Variables Challenge_2019: 'Défi : Mettre des variables à jour'
@@ -376,6 +379,9 @@ fr-FR:
       CSD U4 Importing Screens Map: Importation d’écrans
       CSD U4 Importing Screens Map_2018: Importation d’écrans
       CSD U4 Importing Screens Map_2019: Importation d’écrans
+      CSD U4 Mult Screen Map: Applications Multi-Écrans
+      CSD U4 Mult Screen Map_2018: Applications Multi-Écrans
+      CSD U4 Mult Screen Map_2019: Applications Multi-Écrans
       CSD U4 User Input Map: Répondre à l’entrée de l’utilisateur
       CSD U4 User Input Map_2018: Répondre à l’entrée de l’utilisateur
       CSD U4 User Input Map_2019: Répondre à l’entrée de l’utilisateur
@@ -476,8 +482,8 @@ fr-FR:
       CSD U6 analog challenge: 'Défi : Donner du sens aux capteurs'
       CSD U6 analog challenge_2018: 'Défi : Donner du sens aux capteurs'
       CSD U6 analog challenge_2019: 'Défi : Donner du sens aux capteurs'
-      CSD U6 arrays intro: Introduction sur les Arrays
-      CSD U6 arrays intro_2018: Introduction sur les Arrays
+      CSD U6 arrays intro: Introduction aux Tableaux
+      CSD U6 arrays intro_2018: Introduction aux Tableaux
       CSD U6 arrays intro_2019: Tableaux
       CSD U6 challenge motorcycle_2018: 'Défi : Moto'
       CSD U6 challenge motorcycle_2019: 'Défi : Moto'
@@ -683,6 +689,8 @@ fr-FR:
       MC_HOC_2017_Ali_2019: La forteresse du Nether
       MC_HOC_2017_FP20x20: Jeu libre
       MC_HOC_2017_FP20x20_2019: Jeu libre
+      Making Music_2018: Créer de la Musique
+      Making Music_2019: Créer de la Musique
       New Minecraft Hero Project: Jeu libre
       OPD-K5 WhatIsCS: Qu'est-ce que l'informatique ?
       Oceans_Video_Machine_Learning: 'Vidéo : Apprentissage automatique'

@@ -5529,6 +5529,7 @@ vi:
               name: Khám phá Giải quyết vấn đề
             What is a Computer?:
               name: Máy tính là gì?
+            0:
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5591,17 +5592,19 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+            Text:
+              name: Văn bản
         coursea-2020:
           stages:
             Going Places Safely:
               name: Đến nơi an toàn
+            'Programming: Happy Maps':
+              name: Bản đồ thú vị
             Sequencing with Scrat:
               name: Học về chuỗi tuần tự cùng sóc Scrat
               description_student: Viết chương trình để Scrat tìm đến hạt sồi.
             Programming with Rey and BB-8:
               name: Lập trình cùng Rey và robot BB-8
-            Loops in Ice Age:
-              name: Vòng lặp trong Kỷ băng hà
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
         courseb-2020:
@@ -5611,25 +5614,27 @@ vi:
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
             Sequencing in Maze:
-              name: Chuỗi tuần tự trong mê cung
-            Programming in Maze:
-              name: Lập trình trong mê cung
+              name: Chuỗi tuần tự cùng Angry Birds
+            'Loops: Getting Loopy':
+              name: Tạo vòng lặp
         coursec-2020:
           stages:
-            Programming in Maze:
-              name: Lập trình trong mê cung
             Binary Bracelets:
               name: Vòng đeo tay nhị phân
             Looking Ahead:
               name: Nhìn về phía trước
+            'Events: The Big Event':
+              name: Sự kiện lớn
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: lập trình đồ thị trên giấy
             Relay Programming:
               name: Chương trình chuyển tiếp
             Loops in Ice Age:
               name: Vòng lặp trong Kỷ băng hà
             'Unplugged: Binary':
-              name: 'Chưa hoạt động: nhị phân'
+              name: Hình ảnh Nhị phân
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Digital Citizenship:
@@ -5640,8 +5645,10 @@ vi:
           stages:
             Sequencing in the Maze:
               name: Chuỗi tuần tự trong mê cung
-            Conditionals:
-              name: Điều kiện
+            Nested Loops in Frozen:
+              name: Vòng lặp lồng với Frozen
+            'Functions: Songwriting':
+              name: Sáng tác với tham số
         coursef-2020:
           stages:
             Envelope Variables:
@@ -5649,7 +5656,7 @@ vi:
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
             Internet:
-              name: Kết nối mạng
+              name: Internet
             Crowdsourcing:
               name: Đa nguồn
             AI for Oceans:

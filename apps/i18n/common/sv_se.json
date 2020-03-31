@@ -137,7 +137,6 @@
   "completed": "Avklarade",
   "completedLevels": "Avklarade nivåer",
   "completedLessons": "Klarade lektioner",
-  "completedStudentCount": "{numStudentsCompleted} av {numStudents} elever klara",
   "completedWithoutRecommendedBlock": "Grattis! Du har slutfört pussel {puzzleNumber}. (Men du kan använda ett annat block för bättre kod.)",
   "concept": "Koncept",
   "confirmClearTable": "Vill du verkligen ta bort all information från tabellen? Det går inte att ångra.",

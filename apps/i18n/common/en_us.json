@@ -135,6 +135,7 @@
   "builtOnCodeStudio": "Built on Code Studio",
   "by": "By",
   "cancel": "Cancel",
+  "cannotDeleteLibrary": "You cannot delete preset libraries",
   "cannotDeleteUsedImage": "You cannot delete images that are currently used in your project",
   "catActions": "Actions",
   "catColour": "Color",

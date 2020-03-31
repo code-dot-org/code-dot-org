@@ -542,4 +542,68 @@ class ScriptsControllerTest < ActionController::TestCase
       assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
     end
   end
+
+  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+    sign_in @levelbuilder
+
+    get :show, params: {id: 'course1'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+  end
+
+  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    assert response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "student does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:student)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "teacher does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:teacher)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
 end

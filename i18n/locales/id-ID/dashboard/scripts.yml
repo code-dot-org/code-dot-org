@@ -5216,6 +5216,7 @@ id:
               name: Sedang memproses
             Apps and Storage:
               description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+            0:
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5299,17 +5300,23 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+            Text:
+              name: Teks
         coursea-2020:
           description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           stages:
             Going Places Safely:
               name: Pergi ke tempat-tempat dengan aman
+            'Programming: Happy Maps':
+              name: Pemetaan bahagia
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Digital Footprint Kamu
             Move It, Move It:
               name: Gerakkan itu, Gerakkan itu
+            'Loops: Getting Loopy':
+              name: Dapat berulang-ulang
         coursec-2020:
           stages:
             Screen Out the Mean:
@@ -5318,12 +5325,14 @@ id:
               name: Gelang biner
             Looking Ahead:
               name: Melihat ke depan
+            'Events: The Big Event':
+              name: Acara besar
             'End of Course Project: Create a Play Lab Game':
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
         coursed-2020:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Kertas Grafik Pemrograman'
+              name: Pemrograman grafis diatas kertas
             Introduction to Online Puzzles:
               name: Pengantar teka-Teki secara Online
             Relay Programming:
@@ -5333,7 +5342,7 @@ id:
             Conditionals with Cards:
               name: Bersyarat dengan kartu
             'Unplugged: Binary':
-              name: 'Dicabut: Biner'
+              name: gambar Biner
             Artist Binary:
               name: Artis Biner
             Digital Citizenship:
@@ -5342,10 +5351,10 @@ id:
               name: Pesta Tari
         coursee-2020:
           stages:
-            Conditionals:
-              name: Kondisi
             Private and Personal Information:
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
+            'Functions: Songwriting':
+              name: Menulis lagu
         coursef-2020:
           description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
           stages:

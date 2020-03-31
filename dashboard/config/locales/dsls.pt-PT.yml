@@ -1221,10 +1221,11 @@ pt-PT:
       K-1 Happy Maps Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/up.png"
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
         - text: "/script_assets/k_1_images/unplugged_images/right.png"
-        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Qual seta leva o Flurb ao tesouro?
         title: Escolha múltipla
@@ -1289,21 +1290,22 @@ pt-PT:
         title: Labirinto
       K-1 Move It Multi 1:
         answers:
-        - text: "/script_assets/k_1_images/unplugged_images/rightrightup.png"
-        - correct: true
-        - text: "/script_assets/k_1_images/unplugged_images/left.png"
-        - {}
-        content1: "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Qual algoritmo leva o Flurb até as flores?
         title: Escolha múltipla
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
           correct: true
-        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Qual passo deve ficar no começo desse algoritmo?
         title: Escolha múltipla

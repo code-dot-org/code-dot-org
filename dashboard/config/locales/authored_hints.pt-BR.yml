@@ -2843,8 +2843,8 @@ pt-BR:
           o incremento é adicionado na sua variável contadora a cada repetição. Qual
           deve ser seu incremento para obter o número depois dele?
       New Minecraft Hero Project:
-        MC_HOC_2017_13_Cole_a: 'Tenta que o Agente construa algumas pontes para que
-          o Alex ou o Steve possam andar para além dos limites do mapa. '
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agente construa algumas pontes
+          para que Alex ou Steve possam andar além dos limites do mapa.
       Overworld Avoid Monsters:
         mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
         mc_8_b: Use laços `repita` para simplificar seu código.
