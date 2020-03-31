@@ -1614,6 +1614,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 end
 
 Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
+  wait_short_until {steps 'Then I should see the section table'}
   @section_id = get_section_id_from_table(row_index)
 end
 

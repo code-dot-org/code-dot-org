@@ -5181,21 +5181,23 @@ es:
                 de la lección, los estudiantes compartirán sus juegos completados
                 con sus compañeros de clase. Este proyecto abarcará múltiples clases
                 y puede tomar fácilmente de 3-5 períodos de clase.
+            Text:
+              name: Texto
         coursea-2020:
           description_short: Una introducción a la informática para pre-lectores.
           stages:
             Going Places Safely:
               name: Ir a Sitios Seguro
-            Loops in Ice Age:
-              name: Bucles en la Edad del Hielo
+            'Programming: Happy Maps':
+              name: Mapas Felices
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Tu huella Digital
             Move It, Move It:
               name: Muévelo, Muévelo
-            Loops in Artist:
-              name: Bucles en Artista
+            'Loops: Getting Loopy':
+              name: Bucleandose
         coursec-2020:
           description_short: Aprende los conceptos básicos de las ciencias de la computación
             y crea tu propio arte, historias y juegos.
@@ -5207,11 +5209,15 @@ es:
               name: Pulseras Binarias
             Looking Ahead:
               name: Observando hacia el futuro
+            'Events: The Big Event':
+              name: El Gran Evento
             Picturing Data:
               name: Datos de gráfico
         coursed-2020:
           description_audience: Edades de 7 a 11 años
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en papel cuadriculado
             Relay Programming:
               name: Programación de Relevos
               description_teacher: Esta actividad comenzará con una lección breve
@@ -5229,12 +5235,10 @@ es:
                 su propio juego.
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
-            Loops in Artist:
-              name: Bucles en Artista
             Conditionals with Cards:
               name: Condicionales con tarjetas
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: Imágenes binarias
             Artist Binary:
               name: Artista binario
             Digital Citizenship:
@@ -5244,15 +5248,12 @@ es:
         coursee-2020:
           description_audience: Edades de 8 a 12 años
           stages:
-            Conditionals:
-              name: Condicionales
             Simon Says:
               name: Simón dice
               description_student: Juega un juego y piensa en qué comandos se necesitan
                 para obtener el resultado correcto.
-            Access Ability:
-              name: Habilidad de acceso
             'Functions: Songwriting':
+              name: Composición Musical
               description_teacher: Una de las estructuras más magníficas en el mundo
                 de las ciencias de la computación es la función.  Las Funciones (a
                 veces llamadas procedimientos) son mini programas que puedes utilizar

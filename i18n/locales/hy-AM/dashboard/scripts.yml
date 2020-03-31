@@ -1638,36 +1638,46 @@ hy:
               name: conditionals
             Functions:
               name: գործառույթները
+            Text:
+              name: տեքստ
         coursea-2020:
           stages:
             Going Places Safely:
               name: Going Places Safely
+            'Programming: Happy Maps':
+              name: Ուրախ Քարտեզներ
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Your Digital Footprint
             Move It, Move It:
               name: Տեղափոխել այն, տեղափոխել այն
+            'Loops: Getting Loopy':
+              name: Getting Loopy
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binary Bracelets
+            'Events: The Big Event':
+              name: The Big Event
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Գրաֆիկի Թուղթ Ծրագրավորում
             Relay Programming:
               name: Relay programming
             Conditionals with Cards:
               name: Conditionals with Cards
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binary Images
             Artist Binary:
               name: Artist Binary
             Digital Citizenship:
               name: Digital Citizenship
         coursee-2020:
           stages:
-            Conditionals:
-              name: conditionals
+            'Functions: Songwriting':
+              name: songwriting
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1675,7 +1685,7 @@ hy:
             For Loop Fun:
               name: For Loop Fun
             Internet:
-              name: Internet
+              name: Համացանց
             Crowdsourcing:
               name: Crowdsourcing
         pre-express-2020:
