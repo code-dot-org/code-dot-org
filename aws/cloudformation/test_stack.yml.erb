@@ -30,5 +30,5 @@ Resources:
     ami: ami,
     frontend_device_name: '/dev/xvda',
     frontend_policies: [Ref: 'CDOPolicy'],
-    image_id: {Ref: 'ImageId'}.to_json
+    ssh_key_name: SSH_KEY_NAME
 -%>
