@@ -26,7 +26,7 @@ class ContentCommitter
 
   # @return [String] An environment-specific string indicating that the robo-commit was skipped.
   def commit_skipped_string
-    "robo-commit skipped (#{@d_to_env.upcase}: no)"
+    "<@#{DevelopersTopic.dotd}> robo-commit skipped (#{@d_to_env.upcase}: no)"
   end
 
   # @return [String] An environment-specific string indicating that the robo-commit is happening.
@@ -41,7 +41,7 @@ class ContentCommitter
 
   # @return [String] An environment-specific string indicating that the robo-commit failed.
   def commit_failed_string
-    "no (robo-commit failed on #{@env})"
+    "<@#{DevelopersTopic.dotd}> no (robo-commit failed on #{@env})"
   end
 
   # Returns whether the Slack#developers topic allows for deploys in environment @env, messaging the
