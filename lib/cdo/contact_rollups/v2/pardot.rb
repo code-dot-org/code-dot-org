@@ -24,7 +24,6 @@ class PardotV2
       # Pardot returns the count total available prospects (not capped to 200),
       # although the data for a max of 200 are contained in the response.
       total_results = doc.xpath('/rsp/result/total_results').text.to_i
-      puts total_results
       results_in_response = 0
 
       # Process every prospect in the response.
