@@ -14736,6 +14736,8 @@ en:
               name: 'Mini-Project: Side Scroller'
             'Mini-Project: Platform Jumper':
               name: 'Mini-Project: Platform Jumper'
+            'Mini-Project: Flyer Game':
+              name: 'Mini-Project: Flyer Game'
         moneppo-1:
           stages: {}
         coursea-2020:
@@ -15983,6 +15985,8 @@ en:
               name: CS Principles Post Course survey
               description_student: ''
               description_teacher: ''
+            Intro to App Lab:
+              name: Intro to App Lab
         virtual-holding-place:
           stages:
             Example Projects:
