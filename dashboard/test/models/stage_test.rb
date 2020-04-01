@@ -133,6 +133,101 @@ class StageTest < ActiveSupport::TestCase
     assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
   end
 
+  test "published? returns true if levelbuilder" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    levelbuilder = create :levelbuilder
+    script = create :script
+    stage_future_visible_after = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+    stage_past_visible_after = create :stage, name: 'stage 2', script: script, visible_after: '2020-03-01 08:00:00 -0700'
+    stage_no_visible_after = create :stage, name: 'stage 3', script: script
+
+    assert stage_future_visible_after.published?(levelbuilder)
+    assert stage_past_visible_after.published?(levelbuilder)
+    assert stage_no_visible_after.published?(levelbuilder)
+    Timecop.return
+  end
+
+  test "published? returns true if stage does not have visible_after date for teacher" do
+    teacher = create :teacher
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script
+
+    assert stage.published?(teacher)
+  end
+
+  test "published? returns true if stage does not have visible_after date for student" do
+    student = create :student
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script
+
+    assert stage.published?(student)
+  end
+
+  test "published? returns true if stage does not have visible_after date for unsigned in user" do
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script
+
+    assert stage.published?(nil)
+  end
+
+  test "published? returns true if stage visible_after date is in past for teacher" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    teacher = create :teacher
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-03-01 08:00:00 -0700'
+
+    assert stage.published?(teacher)
+    Timecop.return
+  end
+
+  test "published? returns true if stage visible_after date is in past for student" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    student = create :student
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-03-01 08:00:00 -0700'
+
+    assert stage.published?(student)
+    Timecop.return
+  end
+
+  test "published? returns true if stage visible_after date is in past for unsigned in user" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-03-01 08:00:00 -0700'
+
+    assert stage.published?(nil)
+    Timecop.return
+  end
+
+  test "published? returns false if stage visible_after date is in future for teacher" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    teacher = create :teacher
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+
+    refute stage.published?(teacher)
+    Timecop.return
+  end
+
+  test "published? returns false if stage visible_after date is in future for student" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    student = create :student
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+
+    refute stage.published?(student)
+    Timecop.return
+  end
+
+  test "published? returns false if stage visible_after date is in future for unsigned in user" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+
+    refute stage.published?(nil)
+    Timecop.return
+  end
+
   def create_swapped_lockable_stage
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
