@@ -62,7 +62,7 @@ export default class RotateContainer extends React.Component {
       // with a white background, so that if you scroll off of the inner container
       // you see white instead of the codeApp
 
-      const scale = screen.height / 900;
+      const scale = screen.height / 1400;
       width = window.screen.width / scale;
       height = window.screen.height;
     }
