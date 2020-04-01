@@ -16,20 +16,16 @@
 class ContactRollupsFinal < ApplicationRecord
   self.table_name = 'contact_rollups_final'
 
-  def self.truncate_and_overwrite
+  def self.overwrite_from_processed_table
     truncate
-    overwrite_from_processed_table
+    insert_from_processed_table
   end
 
   def self.truncate
-    truncate_sql = <<~SQL
-      TRUNCATE contact_rollups_final;
-    SQL
-
-    ActiveRecord::Base.connection.exec_query(truncate_sql)
+    ActiveRecord::Base.connection.truncate('contact_rollups_final')
   end
 
-  def self.overwrite_from_processed_table
+  def self.insert_from_processed_table
     overwrite_sql = <<~SQL
       INSERT INTO contact_rollups_final
       SELECT *
