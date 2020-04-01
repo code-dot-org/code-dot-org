@@ -91,6 +91,12 @@ export const mapUserNameToProjectLibraries = (
   return projectLibraries;
 };
 
+const DisplayLibraryMode = {
+  NONE: 'none',
+  VIEW: 'view',
+  UPDATE: 'update'
+};
+
 export class LibraryManagerDialog extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
@@ -102,7 +108,8 @@ export class LibraryManagerDialog extends React.Component {
     projectLibraries: [],
     classLibraries: [],
     cachedClassLibraries: [],
-    viewingLibrary: null,
+    displayLibrary: null,
+    displayLibraryMode: DisplayLibraryMode.NONE,
     isLoading: false,
     error: null,
     updatedLibraryChannels: []
@@ -285,12 +292,15 @@ export class LibraryManagerDialog extends React.Component {
     });
   };
 
-  viewCode = library => {
+  viewCode = (library, mode) => {
     if (!library) {
       return;
     }
 
-    this.setState({viewingLibrary: library});
+    this.setState({
+      displayLibrary: library,
+      displayLibraryMode: mode || DisplayLibraryMode.VIEW
+    });
   };
 
   closeLibraryManager = () => {
@@ -300,13 +310,20 @@ export class LibraryManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
-    const {importLibraryId, viewingLibrary, isLoading, error} = this.state;
+    const {
+      importLibraryId,
+      displayLibrary,
+      displayLibraryMode,
+      isLoading,
+      error
+    } = this.state;
+
     return (
       <div>
         <BaseDialog
           isOpen={isOpen}
           handleClose={this.closeLibraryManager}
-          style={{...styles.dialog, ...(viewingLibrary ? styles.hidden : {})}}
+          style={{...styles.dialog, ...(displayLibrary ? styles.hidden : {})}}
           useUpdatedStyles
         >
           <h1 style={styles.header}>{i18n.libraryManage()}</h1>
@@ -336,12 +353,17 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        {viewingLibrary && (
+        {displayLibraryMode === DisplayLibraryMode.VIEW && displayLibrary && (
           <LibraryViewCode
-            title={viewingLibrary.name}
-            description={viewingLibrary.description}
-            onClose={() => this.setState({viewingLibrary: null})}
-            sourceCode={viewingLibrary.source}
+            title={displayLibrary.name}
+            description={displayLibrary.description}
+            onClose={() =>
+              this.setState({
+                displayLibrary: null,
+                displayLibraryMode: DisplayLibraryMode.NONE
+              })
+            }
+            sourceCode={displayLibrary.source}
           />
         )}
       </div>
