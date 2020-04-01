@@ -723,6 +723,102 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  def create_visible_after_script
+    script = create(:script, name: 'script-with-visible-after')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+    stage = create(:stage, script: script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700')
+    create(:script_level, script: script, stage: stage)
+
+    script
+  end
+
+  test 'should summarize script with future visible after date for unsigned in user' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    script = create_visible_after_script
+
+    summary = script.summarize(true, nil, false)
+
+    assert_equal 1, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with past visible after date for unsigned in user' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    script = create_visible_after_script
+
+    summary = script.summarize(true, nil, false)
+
+    assert_equal 2, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with future visible after date for teacher' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    teacher = create(:teacher)
+    script = create_visible_after_script
+
+    summary = script.summarize(true, teacher, false)
+
+    assert_equal 1, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with past visible after date for teacher' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    teacher = create(:teacher)
+    script = create_visible_after_script
+
+    summary = script.summarize(true, teacher, false)
+
+    assert_equal 2, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with future visible after date for student' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    student = create(:student)
+    script = create_visible_after_script
+
+    summary = script.summarize(true, student, false)
+
+    assert_equal 1, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with past visible after date for student' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    student = create(:student)
+    script = create_visible_after_script
+
+    summary = script.summarize(true, student, false)
+
+    assert_equal 2, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with future visible after date for levelbuilder' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    levelbuilder = create(:levelbuilder)
+    script = create_visible_after_script
+
+    summary = script.summarize(true, levelbuilder, false)
+
+    assert_equal 2, summary[:stages].count
+    Timecop.return
+  end
+
+  test 'should summarize script with past visible after date for levelbuilder' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    levelbuilder = create(:levelbuilder)
+    script = create_visible_after_script
+
+    summary = script.summarize(true, levelbuilder, false)
+
+    assert_equal 2, summary[:stages].count
+    Timecop.return
+  end
+
   test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
