@@ -1,8 +1,0 @@
-- hidden = local_assigns[:hidden]
-- unless @script.nil?
-  #unpublished-stage{style: hidden ? 'display: none' : '' }
-    %div{style: 'margin-bottom: 15px' }
-      =t('unpublished_stage')
-    %a{href: script_path(@script)}
-      %button.btn.btn-large.btn-primary
-        =t('return_unit_overview')
