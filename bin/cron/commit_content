@@ -41,7 +41,7 @@ class ContentCommitter
 
   # @return [String] An environment-specific string indicating that the robo-commit failed.
   def commit_failed_string
-    "<@#{DevelopersTopic.dotd}> no (robo-commit failed on #{@env})"
+    "no (robo-commit failed on #{@env})"
   end
 
   # Returns whether the Slack#developers topic allows for deploys in environment @env, messaging the
