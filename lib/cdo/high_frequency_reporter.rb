@@ -10,6 +10,8 @@ require 'time'
 #   errors.report!
 #   errors.save
 class HighFrequencyReporter
+  attr_accessor :new_events
+
   def initialize(chat_client, channel, log_file_name)
     @chat_client = chat_client
     @channel = channel
@@ -62,5 +64,9 @@ class HighFrequencyReporter
 
   def alertable_events
     @new_events.map {|e| e[:name]} & @old_events.map {|e| e[:name]}
+  end
+
+  def reset_new_events
+    @new_events = []
   end
 end
