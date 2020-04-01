@@ -362,10 +362,22 @@ ta:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
+            Text:
+              name: உரை
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: வரைதாள் செய்நிரல்
             Dance Party:
               name: நடன விருந்து
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: பாடல் எழுதுதல்
+        coursef-2020:
+          stages:
+            Internet:
+              name: இணையம்
         express-2020:
           stages:
             Dance Party:

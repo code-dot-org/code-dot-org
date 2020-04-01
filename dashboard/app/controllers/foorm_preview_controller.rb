@@ -9,11 +9,30 @@ class FoormPreviewController < ApplicationController
 
     render_404 unless form_questions
 
+    survey_data = {
+      facilitators: [
+        {
+          facilitatorId: 1,
+          facilitatorName: 'Alice'
+        },
+        {
+          facilitatorId: 2,
+          facilitatorName: 'Bob'
+        },
+        {
+          facilitatorId: 3,
+          facilitatorName: 'Chris'
+        }
+      ],
+      workshop_course: "Summer Course"
+    }
+
     @script_data = {
       props: {
         formQuestions: form_questions,
         formName: name,
         formVersion: latest_version,
+        surveyData: survey_data,
         submitApi: "/none",
         submitParams: {
           user_id: current_user&.id,

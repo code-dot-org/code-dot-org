@@ -2283,13 +2283,15 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+            Text:
+              name: Text
         coursea-2020:
           title: Kurz A (2019)
           stages:
             Going Places Safely:
               name: Cestování bezpečně
-            Loops in Ice Age:
-              name: Cykly v Době ledové
+            'Programming: Happy Maps':
+              name: Šťastné mapy
         courseb-2020:
           title: Kurz B (2019)
           stages:
@@ -2297,6 +2299,8 @@ cs:
               name: Tvé digitální stopy
             Move It, Move It:
               name: Pohyb, pohyb
+            'Loops: Getting Loopy':
+              name: Bláznit
         coursec-2020:
           title: Kurz C (2019)
           stages:
@@ -2309,6 +2313,8 @@ cs:
                 získat poklad na cestě.
             Binary Bracelets:
               name: Binární náramky
+            'Events: The Big Event':
+              name: Velká událost
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
         coursed-2020:
@@ -2317,6 +2323,7 @@ cs:
             Kromě programování se studenti naučí o digitálním občanství.
           stages:
             'Algorithms: Graph Paper Programming':
+              name: Programování na čtverečkovaném papíru
               description_teacher: Začněme formou "programování", kde bude jeden žák
                 programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost
                 zažít některé ze základních principů programování zábavnou a přístupnou
@@ -2333,6 +2340,7 @@ cs:
                 do týmů a budou spolupracovat na napsání programu postupně po jednom
                 pokynu.
             Debugging in Collector:
+              name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění
                 kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu
                 kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými
@@ -2357,11 +2365,13 @@ cs:
                 cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji
                 dostali Scrata k žaludu.
             Loops in Artist:
+              name: Kreslení tvarů s cykly
               description_teacher: Tato lekce staví na pochopení cyklů z předchozí
                 lekce a dává studentům možnost být opravdu kreativní. Tato aktivita
                 se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli
                 svoje schopnosti řešit problémy.
             Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
@@ -2377,6 +2387,7 @@ cs:
                 počítači rozhodnout se podle informace, která platí v čase, kdy kód
                 poběží.\r\n\r "
             Conditionals in Bee:
+              name: Pokud/jinak se včelkou
               description_teacher: Dosud psali studenti kód, který fungoval pořád
                 stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní.
                 V této lekci začne vaše třída programovat s podmínkami, což jim umožní
@@ -2402,19 +2413,20 @@ cs:
                 (until). Studenti budou stavět programy, v nichž hlavní postavy opakují
                 akce, `dokud` se nedostanou do požadovaného bodu.
             Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
               description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
                 (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky.
                 Procvičováním všech tří se studenti naučí psát komplexní a flexibilní
                 kód.
             'Unplugged: Binary':
-              name: 'Nezapojené: binární'
+              name: Binární obrázky
               description_teacher: Přestože si hodně lidí myslí, že binární znamená
                 výhradně nuly a jedničky, studenti se naučí, že informace lze znázornit
                 v různých binárních možnostech. Tato lekce posune celý koncept ještě
                 dále, když znázorní, jak počítač může binárně ukládat i ještě složitější
                 informace (jako jsou obrázky a barvy).
             Artist Binary:
-              name: Binární umělec
+              name: Binární obrázky s umělcem
               description_teacher: Tato série online lekcí naučí studenty, jak vytvářet
                 obrázky jen zapnutím a vypnutím.
             Digital Citizenship:
@@ -2446,19 +2458,24 @@ cs:
                 vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili
                 chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky,
                 které nefungují.  "
-            Conditionals:
-              name: Podmínky
+            Programming and Loops with the Artist:
+              name: Kreslení s cykly
             Simon Says:
               name: Kuba řekl
             Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
                 uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
                 změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
+            'Functions: Songwriting':
+              name: Skládání písniček
         coursef-2020:
           title: Kurz F (2019)
           stages:
+            Loops with the Artist:
+              name: Kreslení s cykly
             Nested Loops in the Maze:
               name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost

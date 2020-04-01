@@ -180,8 +180,8 @@ module Poste
 
     def renderer
       @@renderer ||= begin
-        require 'cdo/markdown_handler'
-        MarkdownHandler.register
+        require 'cdo/markdown/handler'
+        Cdo::Markdown::Handler.register
         ActionView::Base.new
       end
     end

@@ -33,7 +33,12 @@ class PreviewModal extends React.Component {
     return (
       <BaseDialog isOpen handleClose={this.props.onClose} fullWidth fullHeight>
         <h1>{this.props.tableName}</h1>
-        <p>{datasetInfo.description}</p>
+        <p>
+          {datasetInfo.description}{' '}
+          {datasetInfo.docUrl && (
+            <a href={datasetInfo.docUrl}>{msg.moreInfo()}</a>
+          )}
+        </p>
         <div style={{overflow: 'scroll', maxHeight: '70%'}}>
           <DataTable readOnly rowsPerPage={100} />
         </div>

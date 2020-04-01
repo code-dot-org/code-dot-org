@@ -1609,36 +1609,46 @@ eu:
               name: Baldintzak
             Functions:
               name: Funtzioak
+            Text:
+              name: Testua
         coursea-2020:
           stages:
             Going Places Safely:
               name: Joan segurtasunez
+            'Programming: Happy Maps':
+              name: Mapa Zoriontsuak
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Zure aztarna digitala
             Move It, Move It:
               name: Mugi ezazu, mugi ezazu!
+            'Loops: Getting Loopy':
+              name: Iteratzen
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Eskumuturreko bitarrak
+            'Events: The Big Event':
+              name: Gertaera Handia
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Paper grafiko programazioa
             Relay Programming:
               name: Txandaka programatzen
             Conditionals with Cards:
               name: Baldintzak Txartelekin
             'Unplugged: Binary':
-              name: 'Desnkonektatua: binarioa'
+              name: Irudi bitarrak
             Artist Binary:
               name: Artista bitarra
             Digital Citizenship:
               name: Hiritartasun digitala
         coursee-2020:
           stages:
-            Conditionals:
-              name: Baldintzak
+            'Functions: Songwriting':
+              name: Musika idazten
         coursef-2020:
           stages:
             Envelope Variables:
