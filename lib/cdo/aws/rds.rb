@@ -24,30 +24,27 @@ module Cdo
       begin
         CDO.log.info "Creating clone of database cluster - #{source_cluster_id}"
         source_cluster = rds_client.describe_db_clusters({db_cluster_identifier: source_cluster_id}).db_clusters.first
+        clone_cluster_parameter_group = "#{clone_cluster_id}-auroraclusterdbparameters"
+        clone_instance_parameter_group = "#{clone_cluster_id}-aurorawriterdbparameters"
 
         copy_source_cluster_parameter_group = rds_client.copy_db_cluster_parameter_group(
-          {
-            source_db_cluster_parameter_group_identifier: source_cluster[:db_cluster_parameter_group],
-            target_db_cluster_parameter_group_description: "#{clone_cluster_id}-auroraclusterdbparameters",
-            target_db_cluster_parameter_group_identifier: "#{clone_cluster_id}-auroraclusterdbparameters",
-          }
+          source_db_cluster_parameter_group_identifier: source_cluster[:db_cluster_parameter_group],
+          target_db_cluster_parameter_group_description: clone_cluster_parameter_group,
+          target_db_cluster_parameter_group_identifier: clone_cluster_parameter_group
         ).db_cluster_parameter_group
 
         rds_client.restore_db_cluster_to_point_in_time(
-          {
-            db_cluster_identifier: clone_cluster_id,
-            restore_type: 'copy-on-write',
-            source_db_cluster_identifier: source_cluster_id,
-            use_latest_restorable_time: true,
-            db_subnet_group_name: source_cluster.db_subnet_group,
-            vpc_security_group_ids: source_cluster.vpc_security_groups.map(&:vpc_security_group_id),
-            db_cluster_parameter_group_name: copy_source_cluster_parameter_group.db_cluster_parameter_group_name
-          }
+          db_cluster_identifier: clone_cluster_id,
+          restore_type: 'copy-on-write',
+          source_db_cluster_identifier: source_cluster_id,
+          use_latest_restorable_time: true,
+          db_subnet_group_name: source_cluster.db_subnet_group,
+          vpc_security_group_ids: source_cluster.vpc_security_groups.map(&:vpc_security_group_id),
+          db_cluster_parameter_group_name: copy_source_cluster_parameter_group.db_cluster_parameter_group_name
         )
         source_writer_instance_identifier = source_cluster.
           db_cluster_members.
-          select(&:is_cluster_writer).
-          first.
+          find(&:is_cluster_writer).
           db_instance_identifier
         source_writer_instance = rds_client.
           describe_db_instances({db_instance_identifier: source_writer_instance_identifier}).
@@ -55,23 +52,18 @@ module Cdo
           first
 
         copy_source_writer_instance_parameter_group = rds_client.copy_db_parameter_group(
-          {
-            source_db_parameter_group_identifier: source_writer_instance[:db_parameter_groups][0][:db_parameter_group_name],
-            target_db_parameter_group_description: "#{clone_cluster_id}-aurorawriterdbparameters",
-            target_db_parameter_group_identifier: "#{clone_cluster_id}-aurorawriterdbparameters",
-          }
+          source_db_parameter_group_identifier: source_writer_instance[:db_parameter_groups][0][:db_parameter_group_name],
+          target_db_parameter_group_description: clone_instance_parameter_group,
+          target_db_parameter_group_identifier: clone_instance_parameter_group,
         ).db_parameter_group
 
         rds_client.create_db_instance(
-          {
-            db_instance_identifier: clone_instance_id,
-            db_instance_class: instance_type,
-            engine: source_cluster.engine,
-            db_cluster_identifier: clone_cluster_id,
-            db_parameter_group_name: copy_source_writer_instance_parameter_group.db_parameter_group_name
-          }
+          db_instance_identifier: clone_instance_id,
+          db_instance_class: instance_type,
+          engine: source_cluster.engine,
+          db_cluster_identifier: clone_cluster_id,
+          db_parameter_group_name: copy_source_writer_instance_parameter_group.db_parameter_group_name
         )
-        # Wait 30 minutes.  As of mid-2019, it takes about 15 minutes to provision a clone of the production cluster.
         # The RDS SDK doesn't provide a waiter for cluster operations.  Once the db instance is provisioned, the
         # cluster is ready.
         rds_client.wait_until(
@@ -91,46 +83,35 @@ module Cdo
         existing_cluster = rds_client.describe_db_clusters({db_cluster_identifier: cluster_id}).db_clusters.first
         existing_cluster.db_cluster_members.each do |instance|
           instance_details = rds_client.describe_db_instances(
-            {
-              db_instance_identifier: instance.db_instance_identifier,
-            }
+            db_instance_identifier: instance.db_instance_identifier,
           ).db_instances.first
 
           rds_client.delete_db_instance(
-            {
-              db_instance_identifier: instance.db_instance_identifier,
-              skip_final_snapshot: true,
-            }
+            db_instance_identifier: instance.db_instance_identifier,
+            skip_final_snapshot: true,
           )
           rds_client.wait_until(
             :db_instance_deleted,
             {db_instance_identifier: instance.db_instance_identifier},
-            {max_attempts: 20, delay: 60}
+            {max_attempts: max_attempts, delay: delay}
           )
 
           # Delete Parameter Group if it was created just for this cluster to use.
           next unless instance_details.db_parameter_groups.first.db_parameter_group_name == "#{cluster_id}-aurorawriterdbparameters"
           rds_client.delete_db_parameter_group(
-            {
-              db_parameter_group_name: instance_details.db_parameter_groups.first.db_parameter_group_name
-            }
+            db_parameter_group_name: instance_details.db_parameter_groups.first.db_parameter_group_name
           )
         end
         rds_client.delete_db_cluster(
-          {
-            db_cluster_identifier: cluster_id,
-            skip_final_snapshot: true,
-          }
+          db_cluster_identifier: cluster_id,
+          skip_final_snapshot: true,
         )
-        # Wait 20 minutes.  As of early-2020, it takes about 10 minutes to delete a clone of the production cluster.
         wait_until_db_cluster_deleted(cluster_id, max_attempts, delay)
 
         # Delete Parameter Group if it was created just for this cluster to use.
         if existing_cluster.db_cluster_parameter_group == "#{cluster_id}-auroraclusterdbparameters"
           rds_client.delete_db_cluster_parameter_group(
-            {
-              db_cluster_parameter_group_name: existing_cluster.db_cluster_parameter_group
-            }
+            db_cluster_parameter_group_name: existing_cluster.db_cluster_parameter_group
           )
         end
       rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
