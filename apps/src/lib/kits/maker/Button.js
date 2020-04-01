@@ -28,22 +28,9 @@ export function MicroBitButton(board) {
   this.board = board;
   this.pullup = MB_EXTERNAL_PINS.includes(this.board.pin);
   if (this.pullup) {
-    this.board.mb.setPinMode(this.board.pin, 0);
-    this.board.mb.digitalRead(this.board.pin, (sourceID, eventID) => {
-      console.log("TRIggered this read " + sourceID + " " + eventID);
-      if (this.board.pin === sourceID) {
-        this.buttonEvents[eventID]++;
-        if (eventID === 1) {
-          this.emit('down');
-        } else if (eventID === 2) {
-          this.emit('up');
-        }
-      }
-    });
     this.board.mb.trackDigitalPin(this.board.pin, 1);
   }
   this.board.mb.addFirmataEventListener((sourceID, eventID) => {
-    console.log("Beta");
     if (this.board.pin === sourceID) {
       this.buttonEvents[eventID]++;
       if (eventID === 1) {

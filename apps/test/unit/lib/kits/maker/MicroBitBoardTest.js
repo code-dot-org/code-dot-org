@@ -7,7 +7,6 @@ import {ExternalLed} from '@cdo/apps/lib/kits/maker/LedMatrix';
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
-import Playground from "playground-io";
 
 describe('MicroBitBoard', () => {
   let board;
@@ -172,81 +171,6 @@ describe('MicroBitBoard', () => {
             const newButton = board.createButton(pin);
             expect(newButton.pullup).to.be.false;
           });
-      });
-    });
-  });
-
-  describe(`destroy()`, () => {
-    it('sends the board reset signal', () => {
-      let resetSpy;
-      return board
-      .connect()
-      .then(() => {
-        resetSpy = sinon.spy(board.boardClient_, 'reset');
-        board.destroy();
-      })
-      .then(() => {
-        expect(resetSpy).to.have.been.calledOnce;
-      });
-    });
-
-    it('sets the boardClient to null', () => {
-      let resetSpy;
-      return board
-      .connect()
-      .then(() => board.destroy())
-      .then(() => {
-        expect(board.boardClient_).to.be.null;
-      });
-    });
-
-    it('lets playground-io register its sysex response handler each time', () => {
-      // This test covers a fix for a known accelerometer issue, where the
-      // handler for accelerometer data is from the first Playground object
-      // created on the page.
-      // This is a fragile approach to testing this fix, but reproducing the
-      // real problem in tests is going to be near-impossible since we stub
-      // Firmata at the webpack layer in our tests.
-      expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
-      return board.connect().then(() => {
-        expect(playground.sysexResponse).to.have.been.calledTwice;
-        expect(Playground.hasRegisteredSysexResponse).to.be.true;
-        return board.destroy().then(() => {
-          expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
-
-          const newBoard = new CircuitPlaygroundBoard();
-          expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
-          return newBoard.connect().then(() => {
-            // Connecting creates new a new playground transport, and a new spy
-            expect(playground.sysexResponse).to.have.been.calledTwice;
-            expect(Playground.hasRegisteredSysexResponse).to.be.true;
-          });
-        });
-      });
-    });
-
-    it('stops any created Leds', () => {
-      return board.connect().then(() => {
-        const led1 = board.createLed(0);
-        const led2 = board.createLed(1);
-        sinon.spy(led1, 'stop');
-        sinon.spy(led2, 'stop');
-
-        expect(led1.stop).not.to.have.been.called;
-        expect(led2.stop).not.to.have.been.called;
-
-        return board.destroy().then(() => {
-          expect(led1.stop).to.have.been.calledOnce;
-          expect(led2.stop).to.have.been.calledOnce;
-        });
-      });
-    });
-
-    it('does not require special cleanup for created buttons', () => {
-      return board.connect().then(() => {
-        board.createButton(0);
-        board.createButton(1);
-        return board.destroy();
       });
     });
   });

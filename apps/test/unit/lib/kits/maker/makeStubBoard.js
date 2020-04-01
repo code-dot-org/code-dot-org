@@ -70,10 +70,4 @@ export class MicrobitStubBoard {
   streamAnalogChannel(channel) {}
 
   stopStreamingAnalogChannel(channel) {}
-
-  destroy() {}
-
-  reset() {}
-
-  disconnect() {}
 }
