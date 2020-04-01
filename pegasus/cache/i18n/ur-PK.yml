@@ -20,6 +20,8 @@ ur-PK:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> کیا آپ CS (کمپیوٹر سا‏ئنس) کے ایک استاد ہیں؟ دیگر CSEdWeek
     وسائل دیکھیں</a>'
+  csedweek_banner_teachers_text: کیا آپ CS (کمپیوٹر سا‏ئنس) کے ایک استاد ہیں؟ دیگر
+    CSEdWeek وسائل دیکھیں
   n_have_learned_an_hoc: "<h1>آزمائیں ایک</h1><h2>کوڈ کی گھڑی</h2><h3># جیسے پیش کیا
     گیا ہے</h3>"
   anybody_can_learn: ھر کوئ سیکھ سکتا ھے۔
@@ -27,8 +29,6 @@ ur-PK:
   petition_message: ہر سکول کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ملنا چاہئیے
   petition_sign_message: 'اگر آپ متفق ہوں، اپنا نام سائن ان کریں ۔  # دوسروں میں شامل
     ہوں'
-  petition_sign_message_support: 'اگر آپ ہماری مدد کرنا چاہیں تو اپنا نام سائن ان
-    کریں ۔  # دوسروں میں شامل ہوں'
   petition_join_others: "# دوسروں میں شامل ہوں"
   name: نام
   email: Email
@@ -68,6 +68,7 @@ ur-PK:
   csedweek_map_legend_event: آور اف کوڈ ایونٹ
   csedweek_map_legend_cs_tech_jam: خاص موقع
   cded_try_it: یہ آزمائیے
+  try_now: مزید سیکھے
   california_heading: اپنے اسکول سے کمپیوٹر پڑھانے کے سلسلے میں بات کیجئے۔
   view_english_site: انگریزی ویب سائٹ دیکھئں
   write_your_first_program: Apna pehla Computer ka Program likhiye
@@ -212,6 +213,7 @@ ur-PK:
   homepage_action_text_learn: سیکھنا شروع کریں
   homepage_action_text_signpetition: درخواست پر دستخط کریں
   homepage_signpetition_dropdown: میں اتفاق کرتا ہوں &#x25BE;
+  homepage_signpetition_dropdown_text: ma manta ho
   homepage_diversity_pledge: کوڈ کو پھیلانے کا عہد کریں
   homepage_banner_text_prizes: کوڈ کی گھڑی آ رہا ہے پھر 7-13 دسمبر ہے.
   homepage_banner_link_prizes: 'سب سے بڑا تعلیم ایونٹ کی تاریخ میں شامل ہوں. '
@@ -384,6 +386,7 @@ ur-PK:
   dashboard_puzzle: پزل(Puzzle)
   stats_hoc_2013_image_alt: کوڈ کی گھڑی کے شماریات 2013
   dashboard_student: Talib-e-ilm
+  learn_more: مزید سیکھے
   hoc2014_try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
   frozen_name: اینا اور ایلسا کے ساتھ کوڈ
   blockly_name: بلاکلی

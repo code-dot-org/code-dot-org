@@ -938,6 +938,7 @@ is:
     csp_traversals: 'Yfirferðir'
     csp_libraries: 'Söfn'
     csp_parameters_return_values: 'Stikar og skilagildi'
+    csp_unit1_2020: 'Kafli 1 - Stafrænar upplýsingar'
     dlp: 'Kvaðningar um íhugun'
     time4cs_c1: 'Everglades og vistkerfi þess'
     time4cs_c2: 'Fæðukeðjur í Everglades'
@@ -1131,3 +1132,4 @@ is:
   page_not_found_header: '404: Síða finnst ekki'
   page_not_found_description: "Síðan sem þú ert að leita að finnst ekki á þessu veffangi. Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar."
   page_not_found_button: "Aftur á heimasíðu"
+  copy: 'Afrita'

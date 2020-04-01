@@ -1033,4 +1033,6 @@ fi:
     accept: Hyväksyn
   gdpr_dialog:
     heading: Annatko suostumuksesi Yhdysvalloissa sijaitsevan sivuston käyttöön?
+    message: Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä Yhdysvalloissa.
     true: Kyllä
+  copy: Kopioi

@@ -3,7 +3,7 @@ import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 import {expect} from '../../../../util/reconfiguredChai';
 
 describe('FakeBoard', () => {
-  itImplementsTheMakerBoardInterface(FakeBoard, 'circuit_playground');
+  itImplementsTheMakerBoardInterface(FakeBoard);
 
   describe(`boardConnected()`, () => {
     it('always returns false', () => {

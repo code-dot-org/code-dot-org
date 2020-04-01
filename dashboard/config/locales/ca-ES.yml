@@ -66,6 +66,7 @@ ca:
   join_section:
     code:
       placeholder: Secció Codi (ABCDEF)
+      instructions_short: Introdueixi el seu codi de secció de 6 lletres
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
     submit: Afegeix pista
@@ -730,6 +731,8 @@ ca:
     csp_functions: Funcions
     csp_lists: Llistes
     csp_loops: Bucles
+  hoc_download:
+    minecraft_name: Hora del Codi de Minecraft
   view_teacher_guide: Veure la guia docent
   pd:
     form_labels:
@@ -755,4 +758,7 @@ ca:
   cookie_banner:
     accept: D'acord
   gdpr_dialog:
+    message: Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades
+      o processades als Estats Units.
     true: Sí
+  copy: Copiar

@@ -160,12 +160,12 @@ fr-FR:
       Course 4 Bee Params 7:
         get many nectar: obtenir beaucoup de nectars
       Course 4 Bee Params 8:
-        get nectar make honey: obtenir du nectar fabriquer du miel
+        get nectar make honey: recueillir du nectar fabriquer du miel
       Course 4 Play Lab Params 1:
         jump: sauter
       Course 4 Play Lab Params 10:
         level_up: niveau_suivant
-        score_points: score_points
+        score_points: points
       Course 4 Play Lab Params 2:
         jump: sauter
       Course 4 Play Lab Params 3:
@@ -182,7 +182,7 @@ fr-FR:
       Course 4 Play Lab Params 8:
         patrol: patrouiller
       Course 4 Play Lab Params 9:
-        score_points: score_points
+        score_points: points
       Course 4 Play Lab Vars 1:
         set score: mettre le score à
       Course 4 Play Lab Vars 2:
@@ -209,11 +209,11 @@ fr-FR:
       'Course E: Play Lab Project':
         do something: faire quelque chose
       Find the Wizard:
-        check guess: vérifier l'hypothèse
+        check guess: vérifier supposition
         do something: faire quelque chose
       FoodFight:
         level_up: niveau_suivant
-        score_points: score_points
+        score_points: points
       Function intro Ryan:
         build bridge: construire le pont
       Function intro Ryan_2019:
@@ -241,14 +241,14 @@ fr-FR:
         triangle: triangle
         square: carré
       Guess The Number:
-        check guess: vérifier l'hypothèse
+        check guess: vérifier supposition
       InspirationalArtwork:
-        n-sided shape: forme avec n côtés
+        n-sided shape: forme à n côtés
         draw a loop: dessiner une boucle
         draw spiral circle: dessiner un cercle en spirale
       InspirationalArtwork_2018:
         draw a loop: dessiner une boucle
-        n-sided shape: forme avec n côtés
+        n-sided shape: forme à n côtés
         draw spiral circle: dessiner un cercle en spirale
       K-1 Artist2 3:
         draw roof: dessiner le toit
@@ -355,6 +355,20 @@ fr-FR:
       NEW Course 4 Play Lab Params 11:
         jump: sauter
         patrol: patrouiller
+      New Artist Project:
+        draw a star: dessine une étoile
+        draw a circle: dessine un cercle
+        draw a pinwheel: dessiner une girouette
+        draw a triangle: dessine un triangle
+        draw a shape: dessiner une forme
+        draw a house: dessine une maison
+        draw a square: dessine un carré
+      New Minecraft Hero Project:
+        function 1: fonction 1
+        function 2: fonction 2
+      New Play Lab Project:
+        jump: sauter
+        patrol: patrouiller
       Robot Doodle:
         25 pixel square: carré de 25 pixels
         draw head: dessiner la tête
@@ -387,12 +401,12 @@ fr-FR:
         move and collect: se déplacer et collecter
       course3_bee_functions_challenge3:
         check nectar or honey: vérifier le nectar ou le miel
-        row of nectar: ligne de nectars
-        rowOfNectar: lignedenectars
+        row of nectar: rangée de nectars
+        rowOfNectar: rangéeDeNectars
       course3_bee_functions_challenge4:
         check nectar or honey: vérifier le nectar ou le miel
-        row of nectar: ligne de nectars
-        rowOfNectar: lignedenectars
+        row of nectar: rangée de nectars
+        rowOfNectar: rangéeDeNectars
         move and check: se déplacer et vérifier
       course3_playLab_challenge1:
         win game: gagner le jeu
@@ -415,11 +429,12 @@ fr-FR:
         draw a square 20: dessiner un carré 20
         do something: faire quelque chose
       course4_bee_for_challenge1:
-        move and get nectar with counter: se déplacer et obtenir le nectar avec compteur
+        move and get nectar with counter: déplace-toi et recueille le nectar avec
+          le compteur
       course4_bee_fwp_challenge1:
-        pick row: choisir la ligne
+        pick row: ramasser la rangée
       course4_bee_fwp_challenge2:
-        pick row: choisir la ligne
+        pick row: ramasser la rangée
       courseA_artist_loops_challenge1:
         '"simple" solution': solution "simple"
       courseB_artist_loops_challenge2:
@@ -635,7 +650,6 @@ fr-FR:
         draw a house: dessine une maison
       courseE_artist_functions7_2019:
         draw a window: dessiner une fenêtre
-        draw a house: dessine une maison
       courseE_artist_functions8:
         do something: faire quelque chose
         draw a line of squares: dessiner une ligne de carrés
@@ -791,7 +805,7 @@ fr-FR:
       courseE_farmer_functions11_predict:
         check and pick: vérifier et prendre
         find pumpkin: trouver la citrouille
-        wander path: marcher sur le chemin
+        wander path: errer sur le chemin
       courseE_farmer_functions11_predict_2018:
         pick along path: collecter le long du chemin
         pumpkin square: carré de citrouille
@@ -931,15 +945,18 @@ fr-FR:
         move and check: se déplacer et vérifier
         check nectar or honey: vérifier le nectar ou le miel
       courseF_bee_for_challenge1:
-        move and get nectar with counter: se déplacer et obtenir le nectar avec compteur
+        move and get nectar with counter: déplace-toi et recueille le nectar avec
+          le compteur
       courseF_bee_for_challenge1_2018:
-        move and get nectar with counter: se déplacer et obtenir le nectar avec compteur
+        move and get nectar with counter: déplace-toi et recueille le nectar avec
+          le compteur
       courseF_bee_for_challenge1_2019:
-        move and get nectar with counter: se déplacer et obtenir le nectar avec compteur
+        move and get nectar with counter: déplace-toi et recueille le nectar avec
+          le compteur
       courseF_bee_functions2:
-        get only nectar: obtenir uniquement le nectar
+        get only nectar: recueillir uniquement le nectar
       courseF_bee_functions3:
-        only make honey: fabriquer uniquement le miel
+        only make honey: seulement faire du miel
       courseF_bee_functions3a:
         check nectar or honey: vérifier le nectar ou le miel
       courseF_bee_functions4:
@@ -949,42 +966,42 @@ fr-FR:
         move and check: se déplacer et vérifier
         check nectar or honey: vérifier le nectar ou le miel
       courseF_bee_functions6:
-        get nectar make honey: obtenir du nectar fabriquer du miel
+        get nectar make honey: recueillir du nectar fabriquer du miel
       courseF_bee_functions7:
-        get nectar make honey: obtenir du nectar fabriquer du miel
+        get nectar make honey: recueillir du nectar fabriquer du miel
       courseF_bee_functions8a:
         do something: faire quelque chose
-        get nectar make honey: obtenir du nectar fabriquer du miel
+        get nectar make honey: recueillir du nectar fabriquer du miel
       courseF_bee_functionsPre7:
-        get nectar make honey: obtenir du nectar fabriquer du miel
+        get nectar make honey: recueillir du nectar fabriquer du miel
       courseF_bee_functions_challenge1:
-        row of nectar: ligne de nectars
-        rowOfNectar: lignedenectars
+        row of nectar: rangée de nectars
+        rowOfNectar: rangéeDeNectars
         check nectar or honey: vérifier le nectar ou le miel
       courseF_bee_functions_challenge2:
-        rowOfNectar: lignedenectars
+        rowOfNectar: rangéeDeNectars
         move and check: se déplacer et vérifier
         check nectar or honey: vérifier le nectar ou le miel
       courseF_bee_fwp2:
-        rowOfNectar: lignedenectars
+        rowOfNectar: rangéeDeNectars
       courseF_bee_fwp3:
-        rowOfNectar: lignedenectars
+        rowOfNectar: rangéeDeNectars
       courseF_bee_fwp4:
-        rowOfNectar: lignedenectars
+        rowOfNectar: rangéeDeNectars
       courseF_bee_fwp5:
-        rowOfNectar: lignedenectars
+        rowOfNectar: rangéeDeNectars
       courseF_bee_fwp6:
-        rowOfNectar: lignedenectars
+        rowOfNectar: rangéeDeNectars
       courseF_bee_fwp7:
-        rowOfNectarOrHoney: lignedenectaroumiel
+        rowOfNectarOrHoney: rangéeDeNectarOuMiel
       courseF_bee_fwp8:
-        rowOfNectarOrHoney: lignedenectaroumiel
+        rowOfNectarOrHoney: rangéeDeNectarOuMiel
       courseF_bee_fwp9_predict1:
-        rowOfNectarOrHoney: lignedenectaroumiel
+        rowOfNectarOrHoney: rangéeDeNectarOuMiel
       courseF_bee_fwp_challenge1:
-        pick row: choisir la ligne
+        pick row: ramasser la rangée
       courseF_bee_fwp_challenge2:
-        pick row: choisir la ligne
+        pick row: ramasser la rangée
       courseF_bee_variables_1_2018:
         collect row: collecter la ligne
       courseF_bee_variables_1_2019:
@@ -1010,15 +1027,15 @@ fr-FR:
       courseF_bee_variables_6_2019:
         collect stairs: collecter les escaliers
       courseF_bee_variables_7_2018:
-        collect: collecter
+        collect: collecte
       courseF_bee_variables_7_2019:
-        collect: collecter
+        collect: collecte
       courseF_bee_variables_8_2018:
         move and increment: déplacer et incrémenter
-        collect: collecter
+        collect: collecte
       courseF_bee_variables_8_2019:
         move and increment: déplacer et incrémenter
-        collect: collecter
+        collect: collecte
       grade5_artist_binary11:
         draw: dessiner
         draw bit: dessiner un peu

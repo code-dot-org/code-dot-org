@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T21:25:41.000Z",
+  "level_num": "custom",
+  "user_id": 566,
+  "properties": {
+    "video_key": "csp_applab_lists_4",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17345,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

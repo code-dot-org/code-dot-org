@@ -58,6 +58,7 @@ fil:
   join_section:
     code:
       placeholder: "Section Code (ABCDEF)"
+      instructions_short: "Ilagay ang iyong 6 na letra na section code"
   add_hint_form:
     placeholder: 'Maaaring ilagay ang iyong hint dito'
     submit: 'Magdagdag ng hint'
@@ -848,12 +849,14 @@ fil:
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
+    csp_postap_1: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
     csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
     csp_variables: 'Mga variable'
     csp_conditionals: 'Mga conditional'
     csp_functions: 'Mga function'
     csp_lists: 'Mga listahan'
     csp_loops: 'Mga loop'
+    csp_unit1_2020: '(luma) Yunit 1: Digital na Impormasyon'
     dlp: 'Pagmunimuni na mga Prompt'
     k5_getting_started: 'Pagsisimula'
     k5_next_steps: 'Mga susunod na Hakbang'
@@ -951,3 +954,4 @@ fil:
     accept: 'Ako ay sumasang-ayon'
   gdpr_dialog:
     yes: 'Oo'
+  copy: 'Kopyahin'

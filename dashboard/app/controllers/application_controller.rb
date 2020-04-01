@@ -79,7 +79,7 @@ class ApplicationController < ActionController::Base
   def render_404
     respond_to do |format|
       format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
-      format.all {head :not_found}
+      format.all {head :not_found, content_type: 'text/html'}
     end
   end
 
@@ -224,6 +224,20 @@ class ApplicationController < ActionController::Base
 
   def require_levelbuilder_mode
     unless Rails.application.config.levelbuilder_mode
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
+
+  # Allow us to get some UI test coverage on levelbuilder-only features. This
+  # protection must be applied carefully to make sure that script and level
+  # files in the test environment are never modified.
+  #
+  # UI test authors must be careful to clean up after themselves so that they do
+  # not modify curriculum content in a way could introduce intermittent failures
+  # in other tests. Developers wishing to run these tests locally should run
+  # their local server in levelbuilder_mode.
+  def require_levelbuilder_mode_or_test_env
+    unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
   end

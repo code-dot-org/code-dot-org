@@ -251,6 +251,7 @@ ms:
     feedback: 'Sediakan maklum balas'
     translate: 'Sukarela menterjemah kandungan kami'
     support: 'Bantuan dan Komuniti'
+    tos_short: 'Terma'
     tos: 'Terma Perkhidmatan'
     privacy: 'Dasar Privasi'
     secure: 'Versi Dilindungi'
@@ -308,6 +309,7 @@ ms:
     picture_count: "Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b> gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk melihat program dimainkan."
     want_to_make_your_own: "Ingin buat anda punya sendiri?"
     more: "Lagi &rarr;"
+    header_artist: "artis"
     report_abuse: "Lapor Salah Guna"
   landing:
     help_support: "Bantuan dan sokongan"
@@ -380,3 +382,4 @@ ms:
     accept: 'saya setuju'
   gdpr_dialog:
     yes: 'Ya'
+  copy: 'Salin'

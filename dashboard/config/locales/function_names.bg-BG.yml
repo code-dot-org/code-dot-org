@@ -133,6 +133,14 @@ bg-BG:
         do something: изпълнява нещо
       NEW Course 4 Play Lab Params 11:
         jump: скок
+      New Artist Project:
+        draw a star: рисува звезда
+        draw a circle: чертае кръг
+        draw a triangle: чертае триъгълник
+        draw a house: рисува къща
+        draw a square: чертае квадрат
+      New Play Lab Project:
+        jump: скок
       Robot Doodle:
         draw head: начертайте глава
       Robot Doodle_2018:
@@ -195,8 +203,6 @@ bg-BG:
       courseE_artist_functions7:
         draw a house: рисува къща
       courseE_artist_functions7_2018:
-        draw a house: рисува къща
-      courseE_artist_functions7_2019:
         draw a house: рисува къща
       courseE_artist_functions8:
         do something: изпълнява нещо

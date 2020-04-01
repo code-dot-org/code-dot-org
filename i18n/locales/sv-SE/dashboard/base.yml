@@ -272,6 +272,7 @@ sv:
       signin: 'Logga in'
       signup: 'Skapa ett konto'
       already_registered: 'Redan registrerad?'
+      pair_programming: 'Par- programmering'
       team: 'Team'
       driver: 'Förare'
       navigator: 'Navigator'
@@ -761,6 +762,7 @@ sv:
   hoc_download:
     capsule_title: 'Har du Internet?'
     instructions_headline: 'Inget Internet?'
+    minecraft_name: 'Minecraft-kodtimmen'
     starwars_blocks_name: 'Star Wars: Bygga en Galax Med Kod (Block)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
     download_message: 'Hämta %{app_name} för offlineanvändning (136MB)'
@@ -849,7 +851,9 @@ sv:
   cookie_banner:
     accept: 'Jag håller med'
   gdpr_dialog:
+    heading: 'Samtycker du till att använda en webbplats baserad i USA?'
     message: 'När du använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA.'
     privacy_policy: 'sekretesspolicy'
     logout: 'Logga ut'
     yes: 'Ja'
+  copy: 'Kopiera'

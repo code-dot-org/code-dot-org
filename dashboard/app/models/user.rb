@@ -178,6 +178,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Validate that a user with the same authentication credentials does not already exist.
+  validate on: :create, if: -> {uid.present?} do |user|
+    # If the user has a unique authentication ID, fail if there is an existing User with that ID.
+    other = User.find_by_credential(type: user.provider, id: user.uid)
+    user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
+  end
+
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info
@@ -202,6 +209,8 @@ class User < ActiveRecord::Base
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
+  after_save :save_parent_email_preference, if: -> {parent_email_preference_opt_in.present?}
+
   before_destroy :soft_delete_channels
 
   def save_email_preference
@@ -212,6 +221,19 @@ class User < ActiveRecord::Base
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
+      )
+    end
+  end
+
+  # Enables/disables email notifications for the parent.
+  def save_parent_email_preference
+    if student? && parent_email.present?
+      EmailPreference.upsert!(
+        email: parent_email,
+        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        ip_address: parent_email_preference_request_ip,
+        source: parent_email_preference_source,
+        form_kind: nil
       )
     end
   end
@@ -359,6 +381,10 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_request_ip
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
+
+  attr_accessor :parent_email_preference_opt_in
+  attr_accessor :parent_email_preference_request_ip
+  attr_accessor :parent_email_preference_source
 
   attr_accessor :data_transfer_agreement_required
 

@@ -165,6 +165,7 @@ bs:
       word: Tajne riječi
       email: Email
       google_classroom: Google učionica
+      clever: Pametni račun
   follower:
     invite_sent: Pozivnica poslana
     added_teacher: "%{name} dodan kao vaš učitelj"
@@ -697,8 +698,10 @@ bs:
       jednom preuzmete i instalirate na sve računare. Bilješka: učenici se neće moći
       prijaviti na Code Studio, sačuvati napredak, ili isprintati certifikate. Nastavnici
       mogu unaprijed isprintati certifikate <a href="%{url}}">ovdje</a>.'
+    minecraft_name: Sata Kodiranja Minecraft-a
     download_in_Albanian: 'Skinite na albanskom:'
     download_in_Arabic: 'Skinite na arapskom:'
+  return_unit_overview: Idite na pregled kursa
   return_course_overview: Idite na pregled kursa
   view_all_units: Vidi sve jedinice
   pd:
@@ -724,3 +727,4 @@ bs:
     accept: Slažem se
   gdpr_dialog:
     true: Da
+  copy: Kopiraj

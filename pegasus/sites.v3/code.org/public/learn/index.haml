@@ -93,10 +93,10 @@ style_min: false
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
       .bannerBeyond
-        != hoc_s(:learn_banner_beyond)
+        != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
       .bannerTeachers
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
-        != hoc_s(:learn_banner_teachers)
+        != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
     #studentImage.col-50.tablet-feature
 
   .clear{style: "clear:both"}
@@ -145,15 +145,18 @@ style_min: false
       img.fadeTo('normal', 1);
     });
 
-    // Set up beyond hyperlink.
-    $("#learn_banner_beyond").attr({href: "https://hourofcode.com/beyond", target: "_blank"});
+    // Open banner links in new tab; we render them with markdown, so we can't do this in the haml
+    // Add the rel tag to attempt to mitigate the inherent danger in opening
+    // links in a new tab; will only work for modern browsers, though.
+    $(".banner a").attr({target: "_blank", rel: "noopener noreferrer nofollow"});
 
-    // Set up teacher hyperlinks.
-    $("#teacher_banner_host").attr({href: "https://hourofcode.com/#join", target: "_blank"}).click(function () {
+    // Set up google analytics tracking
+    $('.bannerTeachers a[href$="join"]').click(function () {
       ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
     });
-    $("#teacher_banner_howto").attr({href: "https://hourofcode.com/how-to", target: "_blank"}).click(function() {
+    $('.bannerTeachers a[href$="how-to"]').click(function () {
       ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
     });
+
     $(".bannerTeachers").fadeTo('slow', 1);
   });

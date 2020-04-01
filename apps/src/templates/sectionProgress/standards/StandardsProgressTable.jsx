@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 import StandardDescriptionCell from './StandardDescriptionCell';
 import {connect} from 'react-redux';
 import {lessonsByStandard} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import _ from 'lodash';
 
 export const COLUMNS = {
   STANDARD_CATEGORY: 0,
@@ -27,7 +29,8 @@ const styles = {
     textAlign: 'center'
   },
   descriptionCell: {
-    maxWidth: 470
+    maxWidth: 470,
+    padding: '10px 10px 0px 10px'
   }
 };
 
@@ -153,7 +156,7 @@ class StandardsProgressTable extends Component {
     return dataColumns;
   };
 
-  getNumLessonsCompleted = (standard, index) => {
+  getNumLessonsCompletedForStandard = (standard, index) => {
     let count = 0;
     if (this.props.lessonsByStandard[standard.id]) {
       this.props.lessonsByStandard[standard.id].forEach(lesson => {
@@ -166,12 +169,13 @@ class StandardsProgressTable extends Component {
   };
 
   render() {
+    const loading = _.isEmpty(this.props.lessonsByStandard);
     const columns = this.getColumns();
     const standards = this.props.standards || [];
     const rowData = standards.map((standard, index) => {
       return {
         ...standard,
-        numCompleted: this.getNumLessonsCompleted(standard, index),
+        numCompleted: this.getNumLessonsCompletedForStandard(standard, index),
         lessonsForStandardStatus: this.props.lessonsByStandard[standard.id]
           ? this.props.lessonsByStandard[standard.id]
           : []
@@ -179,13 +183,25 @@ class StandardsProgressTable extends Component {
     });
 
     return (
-      <Table.Provider
-        columns={columns}
-        style={{...tableLayoutStyles.table, ...this.props.style}}
-      >
-        <Table.Header />
-        <Table.Body rows={rowData} rowKey="id" />
-      </Table.Provider>
+      <div>
+        {loading && (
+          <FontAwesome
+            id="uitest-spinner"
+            icon="spinner"
+            className="fa-pulse fa-3x"
+          />
+        )}
+        {!loading && (
+          <Table.Provider
+            columns={columns}
+            style={{...tableLayoutStyles.table, ...this.props.style}}
+            id="uitest-progress-standards-table"
+          >
+            <Table.Header />
+            <Table.Body rows={rowData} rowKey="id" />
+          </Table.Provider>
+        )}
+      </div>
     );
   }
 }

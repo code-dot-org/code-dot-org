@@ -692,6 +692,7 @@ ga:
         csp_applab_functions: Buneolas ar Fheidhmeanna
         csp_applab_functions_parameters: Feidhmeanna a ghlacann le Paraiméadair
         csp_applab_loops: Lúba
+        csp_concept_encryption: 'An tIdirlíon: Criptiú agus Eochracha Poiblí'
         csp_cs_is_changing_everything: Tá an Ríomheolaíocht ag athrú an domhain
         starwars_intro: 'Star Wars: Tóg do Réaltra Féin le Cód - Réamhrá'
         starwars_typing: 'Star Wars: Tóg do Réaltra Féin le Cód - JavaScript'
@@ -775,6 +776,7 @@ ga:
         hoc_dance_events: Cóisir Dhamhsa - Teagmhais
         hoc_dance_properties: Cóisir Dhamhsa - Airíonna
         hoc_dance_congrats: Cóisir Dhamhsa - Tosaímis an chóisir seo!
+        c_and_c_great_to_create: Bí Cruthaitheach; Bí Cothrom.
         teaching_csf_how_it_works: 'Ag múineadh Bhuntús na Ríomheolaíochta: Conas
           a oibríonn an cúrsa'
         elem_pd_2: Ríomheolaíocht sa Bhunscoil - físeán PD 2/2
@@ -818,11 +820,12 @@ ga:
         oceans_machine_learning: Meaisínfhoghlaim
         oceans_training_data: Sonraí Traenála
         oceans_societal_implications: Impleachtaí Sóisialta
-        hoc_dance_congrats_2019: Cóisir Dhamhsa 2019 - Tosaímis an chóisir seo!
-        hoc_dance_warmup_2019: Cóisir Dhamhsa 2019 - Téamh Suas
-        hoc_dance_events_2019: Cóisir Dhamhsa 2019 - Teagmhais
-        hoc_dance_measures_2019: Cóisir Dhamhsa 2019 - Tomhais
-        hoc_dance_properties_2019: Cóisir Dhamhsa 2019 - Airíonna
+        hoc_dance_congrats_2019: Cóisir Dhamhsa - Tosaímis an chóisir seo!
+        hoc_dance_warmup_2019: Cóisir Dhamhsa - Téamh Suas
+        hoc_dance_events_2019: Cóisir Dhamhsa - Teagmhais
+        hoc_dance_measures_2019: Cóisir Dhamhsa - Tomhais
+        hoc_dance_properties_2019: Cóisir Dhamhsa - Airíonna
+        csf_my_online_neighborhood_2020: Mo Chomharsanacht Ar Líne
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile

@@ -4,15 +4,16 @@
 # on the staging machine. This is required for contents changes from dropbox to
 # be deployed.
 
-require_relative '../../lib/cdo/only_one'
+SCRIPT_START = Time.now
+
+require_relative "../../lib/cdo/only_one"
+require_relative "../../deployment"
+require "cdo/slack"
+require "open3"
 exit unless only_one_running?(__FILE__)
-require_relative '../../dashboard/config/environment'
-exit unless rack_env?(:staging) && CDO.dashboard_hostname == 'staging-studio.code.org'
 
 FOLDERS = {
   "advocacy.code.org" => "sites.v3/advocacy.code.org",
-  "applab-docs-1" => "sites.v3/code.org/public/applab/docs1",
-  "applab-docs" => "sites.v3/code.org/public/applab/docs",
   "code.org" => "sites.v3/code.org",
   "csedweek.org" => "sites.v3/csedweek.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
@@ -30,13 +31,28 @@ FOLDERS = {
   "hourofcode.com" => "sites.v3/hourofcode.com"
 }.freeze
 
-FOLDERS.each do |key, value|
-  # 'unison' will sync the two folders. It will return true on success and false on failure.
-  # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierceg/unison/
-  command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignoreinodenumbers -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
-  if key == "code.org"
-    command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
+INTERVAL_SECONDS = 5
+TOTAL_SECONDS = 60 - INTERVAL_SECONDS
+error_message = ""
+alert_slack = true
+while (Time.now - SCRIPT_START) < TOTAL_SECONDS
+  attempt_start = Time.now
+  FOLDERS.each do |key, value|
+    # 'unison' will sync the two folders. It will return true on success and false on failure.
+    # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
+    command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
+    stdout, stderr, _ = Open3.capture3(command)
+    if stdout != "" || stderr != ""
+      error_message = "#{error_message}Dropbox directory: #{key}. staging directory: #{value}. \n#{stdout}#{stderr}\n"
+    end
   end
-  success = system(command)
-  throw "Error syncing Dropbox #{key} and staging #{value} with the sync_dropbox cron job. Check job output for more details." unless success
+  current_time = Time.now
+  if alert_slack && error_message != ""
+    Slack.message("@here Error syncing Dropbox and staging\n" + error_message, {channel: "sync-dropbox-staging"})
+    alert_slack = false
+  end
+  while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
+    sleep 0.1
+    current_time = Time.now
+  end
 end

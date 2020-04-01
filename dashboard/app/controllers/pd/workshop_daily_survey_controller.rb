@@ -75,18 +75,19 @@ module Pd
     def new_general_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       day = params[:day].to_i
-      if day > 0
+      # TODO: extract day 5 out into post-survey once have facilitator surveys (so can auto-redirect)
+      unless [0, 5].include?(day)
         return render_404
       end
 
-      unless validate_new_general_parameters(workshop)
+      unless day == 5 || validate_new_general_parameters(workshop)
         return
       end
 
       session = get_session_for_workshop_and_day(workshop, day)
 
       # once we have surveys per day parameterize this on day number
-      survey_name = "surveys/pd/workshop_daily_survey_day_0"
+      survey_name = "surveys/pd/workshop_daily_survey_day_#{day}"
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
@@ -95,12 +96,11 @@ module Pd
         sessionId: session&.id,
       }
 
-      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
+      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
         return redirect_general(key_params)
       end
 
-      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
-      form_questions = JSON.parse(form.questions)
+      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
         props: {
@@ -110,7 +110,7 @@ module Pd
           surveyData: {
             workshop_course: workshop.course
           },
-          submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
+          submitApi: "/api/v1/pd/foorm/workshop_survey_submission",
           submitParams: {
             user_id: current_user.id,
             pd_session_id: session&.id,
@@ -309,7 +309,7 @@ module Pd
       return render :no_attendance unless attended_workshop
 
       # Render a thanks message if already submitted.
-      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
+      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
         render :thanks
         return
       end
@@ -448,15 +448,14 @@ module Pd
     end
 
     def render_csf_survey_foorm(survey_name, workshop)
-      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
-      form_questions = JSON.parse(form.questions)
+      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
 
       @script_data = {
         props: {
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
-          submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
+          submitApi: "/api/v1/pd/foorm/workshop_survey_submission",
           submitParams: {
             user_id: current_user.id,
             pd_workshop_id: workshop.id

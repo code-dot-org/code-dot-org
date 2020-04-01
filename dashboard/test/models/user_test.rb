@@ -22,7 +22,19 @@ class UserTest < ActiveSupport::TestCase
       user_type: User::TYPE_STUDENT,
       age: 8
     }
-
+    @good_data_google_classroom_import = {
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 8,
+      provider: AuthenticationOption::GOOGLE,
+      uid: '110879982140384463192',
+    }
+    @good_parent_email_params = {
+      parent_email: 'parent@email.com',
+      parent_email_preference_opt_in: 'yes',
+      parent_email_preference_request_ip: '127.0.0.1',
+      parent_email_preference_source: EmailPreference::ACCOUNT_SIGN_UP
+    }
     @admin = create :admin
     @user = create :user
     @teacher = create :teacher
@@ -364,6 +376,20 @@ class UserTest < ActiveSupport::TestCase
     # Now create second user with duplicate username with different case
     user = User.create(@good_data_young.merge(hashed_email: User.hash_email(@good_data_young[:email].upcase)))
     assert_equal ['Email has already been taken'], user.errors.full_messages
+  end
+
+  test 'cannot create user when a user with the same credentials exists' do
+    User.create(@good_data_google_classroom_import)
+    duplicate_user = User.create(@good_data_google_classroom_import)
+    assert_not_empty(duplicate_user.errors)
+    assert(duplicate_user.errors[:uid])
+  end
+
+  test 'cannot create user when an non-migrated user with the same credentials exists' do
+    User.create(@good_data_google_classroom_import).demigrate_from_multi_auth
+    duplicate_user = User.create(@good_data_google_classroom_import)
+    assert_not_empty(duplicate_user.errors)
+    assert(duplicate_user.errors[:uid])
   end
 
   #
@@ -2177,6 +2203,77 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '127.0.0.1', email_preference.ip_address
     assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
     assert_equal '0', email_preference.form_kind
+  end
+
+  def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
+    assert_equal parent_email_params[:parent_email], email_preference.email
+    assert_equal parent_email_params[:parent_email_preference_opt_in].casecmp?('yes'), email_preference.opt_in
+    assert_equal parent_email_params[:parent_email_preference_request_ip], email_preference.ip_address
+    assert_equal parent_email_params[:parent_email_preference_source], email_preference.source
+  end
+
+  test 'creating a student with parent email should create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_not_nil email_preference
+    assert_parent_email_params_equals_email_preference parent_email_params, email_preference
+  end
+
+  test 'creating a student with parent email and opt-out should create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: 'no'})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_not_nil email_preference
+    assert_parent_email_params_equals_email_preference parent_email_params, email_preference
+  end
+
+  test 'updating a student with parent email should create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params
+    user = User.create(@good_data)
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    # There should be no email preference because no parent_email was defined.
+    assert_nil email_preference
+    user.update!(parent_email_params)
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    # There should now be an email preference because the user was updated with a parent_email.
+    assert_not_nil email_preference
+    assert_parent_email_params_equals_email_preference parent_email_params, email_preference
+  end
+
+  test 'creating a student with parent email opt in and a nil email address should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email: nil})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and an empty string email address should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email: ''})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and a blank string email address should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email: '    '})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and a nil source should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_source: nil})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and a nil request_ip should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_request_ip: nil})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    assert_nil email_preference
   end
 
   test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do

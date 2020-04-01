@@ -1428,6 +1428,10 @@ hu:
               name: Jégkorszak játéklabor
         artist-and-bb8:
           stages:
+            Programming with BB-8:
+              name: Programozás BB-8 segítségével
+            Loops with BB-8:
+              name: Ciklusok BB-8-tel
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
             Bounce:
@@ -1440,10 +1444,14 @@ hu:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
         coursed-2017:
           stages:
             Nested Loops:
@@ -1673,6 +1681,8 @@ hu:
               name: A nagy esemény
             'Loops: Getting Loopy':
               name: Ciklikusság
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
             Conditionals with Cards:
               name: Feltételek kártyákkal
             'Functions: Songwriting':
@@ -1701,6 +1711,8 @@ hu:
               name: 'Valós algoritmusok: Ültess el egy magot!'
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
             Move It, Move It:
               name: Mozgás, mozgás
         coursed-2018:
@@ -1733,6 +1745,8 @@ hu:
               name: Alapozás
             'Loops: Getting Loopy':
               name: Ciklikusság
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
             'Events: The Big Event':
               name: A nagy esemény
             Binary Bracelets:
@@ -1842,6 +1856,8 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
         frozen-2018:
           stages:
             Artist:
@@ -1937,6 +1953,8 @@ hu:
           stages:
             Relay Programming:
               name: Váltó programozás
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Envelope Variables:
@@ -2000,6 +2018,13 @@ hu:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
             Binary Bracelets:
@@ -2010,12 +2035,20 @@ hu:
               name: Vidám térképek
             Going Places Safely:
               name: Biztonságos utazás
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
         courseb-2019:
           stages:
             Move It, Move It:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
             'Loops: Getting Loopy':
               name: Ciklikusság
         pre-express-2019:
@@ -2024,6 +2057,8 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
             Spelling Bee:
               name: Betüző méh
         removed19:
@@ -2086,6 +2121,8 @@ hu:
           stages:
             Graph Paper Programming:
               name: Grafikus programozás
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -2145,6 +2182,10 @@ hu:
               name: Véletlen számok
             Sprite Properties:
               name: Sprite tulajdonságok
+        csl-vn:
+          stages:
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -2255,3 +2296,130 @@ hu:
               name: Feltételek
             Functions:
               name: funkciók
+            Text:
+              name: szöveg
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Biztonságos utazás
+            'Programming: Happy Maps':
+              name: Vidám térképek
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: A digitális lábnyomod
+            Move It, Move It:
+              name: Mozgás, mozgás
+            'Loops: Getting Loopy':
+              name: Ciklikusság
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Bináris karkötők
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
+            'Events: The Big Event':
+              name: A nagy esemény
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
+            Relay Programming:
+              name: Váltó programozás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+            'Unplugged: Binary':
+              name: Bináris képek
+            Artist Binary:
+              name: 'Művész: a kettes számrendszer'
+            Digital Citizenship:
+              name: Digitális állampolgárság
+            Dance Party:
+              name: Táncos buli
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Boríték változók
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+            Internet:
+              name: Az internet
+            Crowdsourcing:
+              name: Csoportos megoldás
+        express-2020:
+          stages:
+            Dance Party:
+              name: Táncos buli
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+        pre-express-2020:
+          stages:
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+            Spelling Bee:
+              name: Betüző méh
+        csp1-2020:
+          stages:
+            Representing Information:
+              name: Az információ ábrázolása
+        csp3-virtual:
+          description_short: Programozás
+          stages:
+            The Need for Algorithms:
+              name: Algoritmusokra szükség van
+            Creativity in Algorithms:
+              name: Kreativitás az algoritmusokban
+            Creating Functions:
+              name: Függvények létrehozása
+            Creating functions with Parameters:
+              name: Paraméteres függvények készítése
+            Unit 3 Chapter 1 Assessment:
+              name: 3. lecke 1. fejezet végi értékelés
+        csd3-virtual:
+          description_short: Programozás
+          stages:
+            Variables:
+              name: változók
+            Sprites:
+              name: Sprite-ok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Random Numbers:
+              name: Véletlen számok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: CSS osztályok
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funkciók
+        code-break:
+          stages:
+            Algorithms:
+              name: algoritmusok
+            Events:
+              name: Események
