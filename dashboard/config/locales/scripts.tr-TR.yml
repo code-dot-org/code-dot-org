@@ -14761,6 +14761,8 @@ tr:
                 içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+            Text:
+              name: yazı
         coursea-2020:
           description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren.
             Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
@@ -14784,7 +14786,7 @@ tr:
                 bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim
                 içi bulmacaları tamamlayarak ilerleyecekler.
             'Programming: Happy Maps':
-              name: 'Programlama: Mutlu Haritalar'
+              name: Mutlu Haritalar
               description_teacher: Öğrenciler bir dizinin planlanması ve bu diziyi
                 uygun dile kodlaması arasındaki farkı anlarlarsa algoritmalardan programlamaya
                 köprü kısa olabilir. Bu etkinlik, öğrencilerin kısa kodda okuma ve
@@ -14813,7 +14815,6 @@ tr:
                 öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
                 verilecek.
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
               description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik
                 eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı
                 istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar
@@ -14844,11 +14845,11 @@ tr:
             Programming in Maze:
               name: Labirentte Programlama
             'Loops: Getting Loopy':
-              name: 'Döngüler: Loopy Başlarken'
+              name: Döngüselleşme
             Loops in Collector:
               name: Toplayıcıda Döngüler
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
               description_teacher: Döngülere geri dönen öğrenciler, basit talimat
                 dizilerini tekrarlayarak resim çizmeyi öğrenirler. Bir önceki takılı
                 olan derste, bir labirentten geçip hazineyi toplamak için ilmekler
@@ -14856,7 +14857,6 @@ tr:
                 öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
                 verilecek.
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
               description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik
                 eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı
                 istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar
@@ -14899,7 +14899,7 @@ tr:
             Sticker Art with Loops:
               name: Sanatçıların Döngüleri
             'Events: The Big Event':
-              name: 'Olaylar: Büyük Olay'
+              name: Büyük Olay
             Build a Flappy Game:
               name: Bir Kanat Çırpma Oyunu Oluşturmak
             Events in Play Lab:
@@ -14915,7 +14915,7 @@ tr:
           description_audience: 'Yaş: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritma: Grafik Kağıdı ile Programlama'
+              name: Grafik Kağıdı Programlama
             Introduction to Online Puzzles:
               name: Online Bulmacalara Giriş
               description_student: Bu ders, bu kursta ihtiyacınız olan becerilere
@@ -14961,9 +14961,9 @@ tr:
                 Wars karakterleri eşliğinde öğrenciler olaylar süresince yönlendirilecek
                 ve sonra kendi oyunlarını oluşturmaları için süre verilecek.
             Loops in Artist:
-              name: Sanatçı- Döngüler
+              name: Sanatçıların Döngüleri
             Nested Loops in Bee:
-              name: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
               description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını
                 yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler
                 vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün
@@ -15015,7 +15015,7 @@ tr:
                 koşul ifadesine çalıştıktan sonra, öğrenciler, daha karmaşık ve esnek
                 kod yazmayı öğrenecekler.
             'Unplugged: Binary':
-              name: 'Bağımsız: İkili Taban (Binary)'
+              name: İkili Sistemle Resimler
               description_teacher: Birçok kişi ikili dosyayı tamamen sıfırlar ve sıfırlar
                 olarak düşünse de, öğrencilere bilginin çeşitli ikili seçeneklerle
                 temsil edilebileceği fikri tanıtılacaktır. Bu ders, bu konsepti bir
@@ -15047,7 +15047,6 @@ tr:
           description_audience: 8-12 yaş grubu
           stages:
             Conditionals:
-              name: Koşullar
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında
                 bilgisayara ne yapacağını söyleyeceksin.
               description_teacher: Bu ders öğrencilere `while` döngüleri ve` if /
@@ -15068,7 +15067,7 @@ tr:
 
                 Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
             Nested Loops in Bee:
-              name: Arı -içiçe döngüler
+              name: Labirentte İçiçe Döngüler
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne
                 anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü
                 yerleştirdiğinizde ne olduğunu öğretecek.
@@ -15082,10 +15081,8 @@ tr:
               name: Sanatçıların İç İçe Döngüleri
               description_student: Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle
                 biraz İLGİNÇ çizimler yapacaksınız.
-            Nested Loops in Frozen:
-              name: Frozen'da İç İçe Döngüler
             'Functions: Songwriting':
-              name: 'Fonksiyonlar: şarkı yazma'
+              name: Şarkı yazma
               description_student: Müzik yıldızı için bile programlama yeteneği gerektirir.
                 Bu ders şarkı sözleri kullanarak fonksiyonları öğretecektir.
               description_teacher: Bilgisayar bilimi dünyasındaki en harika yapılardan
@@ -15118,6 +15115,7 @@ tr:
           description_audience: 'Yaş: 9-13'
           stages:
             Nested Loops in the Maze:
+              name: Labirentte İçiçe Döngüler
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne
                 anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü
                 yerleştirdiğinizde ne olduğunu öğretecek.

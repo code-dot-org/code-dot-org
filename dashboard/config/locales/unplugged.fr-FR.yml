@@ -4,462 +4,442 @@ fr:
     unplugged:
       Unplug1:
         title: Introduction à l'informatique
-        desc: Cette leçon vise à introduire le concept des sciences informatiques
-          et expliquer en quoi consiste un informaticien.  Elle donnera également
-          aux élèves l'occasion d'assumer le rôle d'informaticien.  À la fin de l'activité,
-          chaque élève aura un pense-bête à emporter à la maison, au sujet ce ce qu'il
-          ou elle aura appris.  Vous pourriez être tenté d’omettre l’enseignement
-          aux jeunes enfants des mots de vocabulaire qui sont associés aux leçons
-          qui suivent. Cependant, les leur présenter de manière amusante et ludique
-          à ce stade sera peut-être beaucoup plus productif que d'attendre des occasions
-          futures.
+        desc: यह पाठ आपको कंप्यूटर विज्ञान की अवधारणाओं से अवगत कराएगी और यह समझाएगी
+          की एक कंप्यूटर वैज्ञानिक के कार्ये होते हैं। यह  छात्रों को भी एक कंप्यूटर
+          वैज्ञानिक की भूमिका ग्रहण करने का अवसर  देगी। इस पाठ के अंत में सभी विद्याथियों
+          के पास इस पाठ से जुड़ी कुछ ऐसी बातें जरूर होंगी जिन्हे वे हमेशा याद रखना
+          चाहेंगे। आप युवा बच्चों किसी पाठ से पहले उससे जुड़ी शब्दाबली नहीं पढ़ाने का
+          मन बना सकते हैं,  लेकिन उन्हें एक मजेदार और चंचल रूप  में पेश करना अधिक
+          उन्नत अवसरों के लिए प्रतीक्षा करने की तुलना में कहीं अधिक उत्पादक है ।
       Unplug2:
         title: Algorithmique
-        desc: Munis uniquement de papiers et de feutres, les élèves apprendront les
-          quatre étapes de la pensée computationnelle. Après une brève introduction,
-          les élèves seront divisés en groupes où ils devront créer des indications
-          pour que les autres élèves dessinent un monstre précis (à partir d'un catalogue
-          de monstres présélectionnés). La tâche dans son ensemble doit être décomposée,
-          puis les équipes vont analyser tous les monstres du catalogue de modèles,
-          résumer les différents détails des monstres, puis utiliser ces informations
-          afin de créer un algorithme (instructions) pour qu’une autre équipe dessine
-          un certain monstre. Les équipes échangeront alors les algorithmes et dessineront
-          le monstre sur la base de ce qu’indique cet algorithme. Est-ce que le dessin
-          répond aux attentes de l’équipe d’origine?
+        desc: केवल कागज़ और मार्करों के साथ, छात्र अभिकलनात्मक चिंतन के चार स्टेप
+          सीखेंगे। संक्षिप्त परिचय के बाद, छात्रों को समूहों में बांटा जाएगा, जहां
+          उन्हें विशेष दैत्य (पूर्व-चयनित दैत्यों की सूची से) चित्रित करने के लिए
+          अन्य छात्रों के लिए निर्देश तैयार करने होंगे। संपूर्ण कार्य का विश्लेषण
+          होना आवश्यक है, फिर टीमें पैटर्नों के लिए सूची में सभी दैत्यों का विश्लेषण
+          करेंगी, दैत्यों से विभिन्न विवरणों को अलग करेंगी, फिर एक निश्चित दैत्य चित्रित
+          करने के लिए दूसरी टीम हेतु कलन विधि (निर्देश) तैयार करने के लिए उस जानकारी
+          का उपयोग करेंगी। उसके बाद टीमें दूसरे समूह के साथ कलन विधियों की अदला बदली
+          करेंगी उस वह कलन विधि जो भी संकेत देगी, उसके आधार पर दैत्य चित्रित करेंगी।
+          क्या ड्राइंग वैसी ही है, जैसी मूल टीम बनाना चाहती थी?
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En programmant les dessins des autres groupes, les élèves commenceront
-          à comprendre ce qu’est vraiment la programmation. La classe débutera avec
-          l’échange d’instructions entre les élèves qui devront colorier des carrés
-          sur du papier millimétré afin de reproduire une image existante.  S’il y
-          a assez de temps, la leçon peut se conclure par la création d’images personnalisés
-          par les élèves.
+        desc: तस्वीरें चित्रित करने के लिए एक-दूसरे को प्रोग्रामिंग करके, छात्र यह
+          समझना शुरू करेंगे कि प्रोग्रामिंग वास्तव में किस बारे में है। एक मौजूदा
+          तस्वीर को दुबारा बनाने के प्रयास में ग्राफ पेपर पर वर्गों में रंग भरने के
+          लिए छात्रों द्वारा एक-दूसरे को निर्देश देकर कक्षा शुरू होगी।  यदि समय हो,
+          तो पाठ को ऐसे चित्रों के साथ समाप्ति किया जा सकता है, जो छात्र खुद बनाते
+          हैं।
       Unplug4:
         title: Algorithmes
-        desc: Cette leçon traite des algorithmes.  Le premier exercice se fait à l'aide
-          de formes de Tangram et de papier millimétré. Il sert à démontrer combien
-          il est important de rendre chaque instruction aussi claire et non équivoque
-          que possible.  Par la suite, la classe explorera les façons de plier un
-          morceau de papier en rectangle, en notant comment certaines méthodes peuvent
-          prendre plus ou moins de plis que d'autres.
+        desc: इस पाठ में कलन विधियां शामिल की गई हैं।  टैन्ग्राम आकृतियों और ग्राफ
+          पेपर का उपयोग करते हुए, पहला अभ्यास दिखाएगा कि प्रत्येक निर्देश को अधिक
+          से अधिक स्पष्ट और साफ बनाना कितना महत्वपूर्ण है।  इसके बाद, कक्षा पड़ताल
+          करेगी कि आप कागज़ को कितने तरीकों से आयत में मोड़ सकते हैं, इस पर ध्यान
+          देते हुए कि किस प्रकार कुछ विधियां अन्य के मुकाबले अधिक या कम परतें ले सकती
+          हैं।
       Unplug5:
         title: fonctions
-        desc: Dans cette leçon, les élèves feront un capteur de soleil à l’aide de
-          cordes, de perles et d’un objet fétiche particulier. Les élèves suivront
-          une série d’étapes répétitives, et il leur sera alors demandé d'identifier
-          certains ensembles de «compétences» qui sont reproduites plusieurs fois.
-          Ces compétences étant définies, elles seront appelées depuis un programme
-          principal et tout le merveilleux processus de création sera enregistré sur
-          une seule feuille de papier. Le programme final vise la classe entière,
-          quel que soit leur type de cordes, de perles et d’objet fétiche. Pour permettre
-          cela de manière efficace, les élèves devront «résumer» les détails de leurs
-          matériaux spécifiques et créer des termes vagues pour les fournitures personnelles.  Cette
-          utilisation d'espaces réservés génériques est une merveilleuse introduction
-          aux variables.
+        desc: इस पाठ में, छात्र स्ट्रिंग, मनकों और विशेष ताबीज़ों से सनकैचर बनाएंगे।
+          छात्र दोहराने वाले स्टेप्स की श्रृंखला का अनुसरण करेंगे, फिर उन्हें ऐसे
+          "कौशलों" के निश्चित सेट्स को पहचानने के लिए कहा जाएगा, जिनकी कई बार प्रतिलिपी
+          बनाई जाती है। जब वो कौशल परिभाषित हो जाते हैं, तो उन्हें मुख्य प्रोग्राम
+          से बोला जाएगा और रचना की संपूर्ण सुंदर प्रक्रिया कागज़ की एकल शीट पर रिकॉर्ड
+          की जाएगी। अंतिम प्रोग्राम संपूर्ण कक्षा के लिए तैयार किया जाएगा, चाहे स्ट्रिंग,
+          मनकों और ताबीजों का उनका कोई भी प्रकार हो। इसके लिए प्रभावी रूप से अनुमति
+          देने के लिए, छात्रों को अपनी विशेष सामग्रियों के विवरणों को "अलग करने" और
+          किसी व्यक्ति के सामान के लिए अज्ञात संदर्भ तैयार करने की जरूरत होगी।  व्यापक
+          प्लेसहोल्डरों का यह उपयोग वेरिएबल्स का अद्भुत परिचय होगा।
       Unplug6:
-        title: Conditions
-        desc: Il s'agit d'un jeu s’adressant à toute la classe.  Après avoir introduit
-          la notion d’instructions conditionnelles, d’instructions «Si» et de boucles,
-          la classe peut s'entrainer ensemble à l'aide d'un programme pré-écrit, d'un
-          paquet de cartes et d'un tirage au sort.
+        title: शर्तें
+        desc: यह कक्षा की गेम है।  सापेक्षों, इफ-स्टेटमेंट्स और लूप्स के विचार से
+          परिचित होने के बाद, कक्षा पूर्व-लिखित प्रोग्राम, ताश के पत्तों और ड्रा के
+          लक का उपयोग करते हुए एक साथ अभ्यास कर सकती है।
       Unplug7:
         title: Ecriture de chanson
-        desc: Lire les paroles d’une chanson est une entreprise très intuitive pour
-          la plupart des élèves.  Nous allons prendre une activité qui fait déjà partie
-          du savoir collectif et la transformer en une solide formation sur la définition
-          et l'appel de fonctions. Lorsque les élèves comprennent le processus de
-          définition/appel, nous allons ajouter les fonctionnalités supplémentaires
-          qui s’ajoutent aux paramètres lors des appels de fonction.
+        desc: गीत के बोलों को पढ़ना अधिकतर छात्रों के लिए काफी सहज ज्ञान वाला कार्य
+          होता है।  हम ऐसी गतिविधि लेंगे, जो पहले की सामान्य ज्ञान हो और इसे फंक्शनों
+          को परिभाषित करने और बोलने पर ठोस जानकारी में बदलती हो। जब छात्र परिभाषा/बोलने
+          की प्रक्रिया से परिचित हो जाएंगे, तो हम अतिरिक्त क्षमताएं जोड़ेंगे, जो उन
+          फंक्शन कॉल्स के अंदर गुजरने वाले मापदंडों के साथ आती हैं।
       Unplug8:
         title: Abstraction
-        desc: Cette activité associe le quotidien de vos élèves et un jeu de réflexion
-          de type Mad-Libs (histoire à trous) permettant à votre classe d'appréhender
-          l’efficacité de l'abstraction.
+        desc: यह गतिविधि आपके छात्रों की रोजमर्रा की दिनचर्या को शामिल करती है और
+          Mad-Lib शैली की चिंतन गेम अमूर्तीकरण की प्रभाविकता के बारे में सीखने में
+          आपकी कक्षा की मदद करेगी।
       Unplug9:
         title: Relayer la programmation
-        desc: Cette leçon emprunte une idée d'une activité précédente (4. La programmation
-          sur papier millimétré) et utilise ses compétences pour insister sur l'importance
-          de terminer les programmes qui opèrent en séquence, et de surveiller régulièrement
-          ces programmes pour y repérer les «bogues».
+        desc: यह पाठ पिछली गतिविधि (4. ग्राफ पेपर प्रोग्रामिंग) से सुझाव लेगी और उन
+          कौशलों का उपयोग ऐसे प्रोग्रामों को पूरा करने के महत्व पर ज़ोर देने के लिए
+          करेगी, जो अनुक्रम में संचालित होते हैं और बार-बार प्रोग्रामों में "बग्स”
+          पर नज़र रखते हैं।
       Unplug10:
         title: Internet et les réseaux connectés
-        desc: Dans cette leçon, les élèves vont faire semblant de naviguer sur Internet,
-          tout en apprenant les adresses Web, les adresses IP et les DNS.
+        desc: इस पाठ में, छात्र वेब पतों, IPs और DNS के बारे सब सीखते हुए, इंटरनेट
+          को प्रभावित करने का दावा करेंगे।
       Unplug11:
-        title: Conclusions
-        desc: La conclusion de cette première série de 20 heures aidera la classe
-          à revivre ses moments préférés, tout en lui annonçant des étapes à suivre
-          en solo, afin de poursuivre la découverte de l'informatique.
+        title: समाप्ति
+        desc: पहली 20-घंटे की सीरीज में अंतिम समाप्ति चरण कक्षा को उनके सभी पसंदीदा
+          पलों को फिर से जीने में मदद करेगा, साथ ही उन्हें अगले स्टेप्स देगा, जिन्हें
+          वे अकेले कर सकते हैं, यदि वे अपने कंप्यूटर साइंस के सफर को जारी रखने के
+          इच्छुक हों।
       UnplugHappyMaps:
-        title: Cartes Joyeuses
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+        title: हैप्पी मैप्स
+        desc: छात्र एकल कमांड का उपयोग करते हुए पूरी पहेली में पात्र को मूव करने के
+          लिए सरल कलन विधियां (निर्देशों के सेट) तैयार करते हैं।
       MoveIt:
-        title: Déplace-le, déplace-le
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+        title: इसे मूव करें, इसे मूव करें
+        desc: छात्र एकल कमांड का उपयोग करते हुए पूरी पहेली में पात्र को मूव करने के
+          लिए सरल कलन विधियां (निर्देशों के सेट) तैयार करते हैं।
       PlantASeed:
-        title: 'Algorithmes du monde réel: Planter une graine'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+        desc: जिन तरीकों से हम अपने रोज़ाना जीवन में कलन विधियों का उपयोग करते हैं,
+          यह पाठ उन तरीकों की सहायता लेता है। उदाहरण के तौर पर पौधा उगाने की क्रिया
+          का उपयोग करना। यह कंप्यूटर साइंस की बड़ी तस्वीर पर और इस पर भी ध्यान केंद्रित
+          करता है कि कलन विधियां किस प्रकार से जरूरी भूमिका निभाती हैं।
       BuildingAFoundation:
-        title: Construire une fondation
-        desc: Les élèves construisent une structure en utilisant uniquement les éléments
-          fournis. Les structures doivent accomplir une tâche (atteindre une certaine
-          hauteur ou soutenir un certain poids), et les élèves discutent du fait de
-          persévérer lorsque les choses se compliquent.
+        title: नींव का निर्माण करना
+        desc: छात्र केवल प्रदान किए गए सामान का उपयोग करते हुए ही एक ढांचे का निर्माण
+          करेंगे। ढांचों के लिए कार्य पूरा करना आवश्यक है (निश्चित ऊंचाई तक पहुंचना
+          या निश्चित भार सहन करना), और छात्र इस बारे में सुझावों पर विचार विमर्श करते
+          हैं कि जब चीज़ें जटिल हों तो कैसे दृढ़ रहना है।
       GettingLoopy:
-        title: Tourner en rond
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
+        title: लूपी होना
+        desc: यह पाठ डांस गतिविधि के माध्यम से लूप्स (दोहराए जाने वाले निर्देश) की
+          प्रोग्रामिंग अवधारणा से परिचय कराता है। छात्र सरल कोरियोग्राफी सीखेंगे,
+          फिर उन्हें इसे दोहराने का निर्देश दिया जाएगा।
       RelayProgramming:
         title: Programmation de relais
-        desc: Les élèves courent une course de relais, où ils traversent rapidement
-          le jardin pour aller écrire un algorithme basé sur une image de « Programmation
-          sur papier millimétré». Ils ne peuvent écrire qu’une seule instruction à
-          la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour
-          retourner à ce point.
+        desc: छात्रों ने रिले रेस चलाई है, जहां वे "ग्राफ पेपर प्रोग्रामिंग" चित्र
+          पर आधारित एक कलन विधि लिखने के लिए आंगन के चारों ओर दौड़ते हैं। वे एक बार
+          में केवल एक निर्देश लिख सकते हैं और यदि कहीं कोई त्रुटि हो, तो उन्हें उस
+          बिंदु तक वापस जाने के लिए सब कुछ मिटाना होगा।
       Conditionals:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: सापेक्ष स्टेटमेंट्स के बारे में सीखने के लिए, छात्र ताश का खेल खेलते
+          हैं और "यदि मैं लाल पत्ता चित्रित करूं, तो मुझे अंक मिलेगा" और "यदि मैं
+          काला कार्ड चित्रित करता हूं, तो आपको अंक मिलेगा” जैसे नियम बनाते है।
       BigEvent:
-        title: Le Grand Événement
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+        title: विशाल इवेंट
+        desc: छात्रों को "इवेंट्स” की प्रोग्रामिंग अवधारणा से परिचित कराया जाता है,
+          जो ऐसी क्रियाएं है, जिनका कंप्यूटर लगातार निरीक्षण करता है। अध्यापक कागज
+          के रिमोट पर बटन दबाएगा और छात्र इस आधार पर प्रतिक्रिया करेंगे कि कौन-सा
+          बटन दबाया जाता है।
       GoingPlacesSafely:
-        title: Se déplacer en toute sécurité
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+        title: सुरक्षित रूप से स्थानों पर जाना
+        desc: इंटरनेट प्रभावशाली है, लेकिन कभी-कभार यह खतरनाक स्थान बन जाता है। अध्यापक
+          इससे परिचय कराते हैं कि इंटरनेट चलाते समय कैसे सुरक्षित रहना है।
       GraphPaperProgramming:
         title: Programmation sur papier quadrillé
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+        desc: छात्र अपने सहपाठियों को ड्राइंग की प्रतिलिपि बनाने के लिए निर्देश देने
+          हेतु पूर्व-परिभाषित कमांड्स के सेट का उपयोग करते हुए कलन विधि (निर्देशों
+          का सेट) लिखते हैं।
       PaperPlanes:
-        title: 'Algorithmes du monde réel: Avions en papier'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+        desc: यह पाठ ऐसे तरीकों की सहायता लेता है, जैसे हम अपनी रोजमर्रा की ज़िंदगियों
+          में कलन विधियों का उपयोग करते हैं। यह पाठ कंप्यूटर साइंस की बड़ी तस्वीर
+          पर और इस पर भी केंद्रित है कि कलन विधियां किस प्रकार से महत्वपूर्ण भूमिका
+          निभाती हैं।
       BinaryBracelets:
-        title: Bracelets binaires
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
+        title: युग्मक ब्रैस्लेट्स
+        desc: छात्र अपने नाम के पहले अक्षर की युग्मक प्रस्तुतियों के तौर पर ब्रैस्लेट
+          बना सकते हैं। छात्र सीखते हैं कि डेटे को एक से अधिक तरीके से प्रस्तुत और
+          स्टोर किया जा सकता है।
       DigitalFootprint:
-        title: Ton empreinte numérique
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
-          qui a des conséquences.
+        title: आपका डिजीटल फुटप्रिंट
+        desc: अध्यापक छात्रों को सुझाव पेश करते हैं कि खुद के बारे में ऑनलाइन जानकारी
+          डालने से यह डिजीटल फुटप्रिंट या “निशान” उत्पन्न कर सकता है, जिसके बुरे परिणाम
+          हो सकते हैं।
       ComputationalThinking:
         title: Algorithmique
-        desc: Les élèves utilisent les étapes de la pensée computationnelle (décomposition,
-          recherche de motifs, abstraction, algorithme) pour découvrir comment jouer
-          à un jeu livré sans instructions.
+        desc: छात्र यह पता लगाने के लिए अभिकलनात्मक चिंतन (डीकम्पोज, पैटर्न मिलान,
+          संक्ष्पितीकरण, कलन विधि) के स्टेप्स का उपयोग कर सकते हैं कि ऐसी गेम कैसे
+          खेलें, जो बिना निर्देशों के आती हो।
       FunctionalSuncatchers:
-        title: Vitraux fonctionnels
-        desc: Les élèves créent un algorithme avec des variables et des fonctions
-          (portions de code que vous voulez utiliser encore et encore) pour créer
-          des vitraux en utilisant des cordes et des perles.
+        title: फंक्शनल सनकैचर्स
+        desc: छात्र स्ट्रिंग और मनकों का उपयोग करते हुए सनकैचर्स बनाने के लिए वेरिएबल्स
+          और फंक्शनों (कोड के भाग, जिन्हें आप बार-बार उपयोग करना चाहते हैं) के साथ
+          कलन विधि बनाते हैं।
       SongwritingParameters:
-        title: Écriture de chansons
-        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          le passage de paramètres (qui permettent de personnaliser une fonction sans
-          avoir à la réécrire complètement).
+        title: गीत लेखन
+        desc: छात्र फंक्शनों को परिभाषित करने और बोलने के बारे में सीखने के लिए गीत
+          में कोरस की अवधारणा का उपयोग करते हैं।
       DiceRace:
-        title: 'Les algorithmes du monde réel: La course de dés'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront
-          l'algorithme pour un jeu de course de dés.
+        title: 'वास्तविक-जीवन की कलन विधियां: डाइस रेस'
+        desc: जिन तरीकों से हम अपने रोज़ाना जीवन में कलन विधियों का उपयोग करते हैं,
+          यह पाठ उन तरीकों की सहायता लेता है। उसके भाग के तौर पर, छात्र डाइस रेस गेम
+          के लिए कलन विधि की पहचान करेंगे और उसे लिखेंगे।
       Internet:
-        title: Internet
-        desc: Les élèves envoient des messages représentant diverses méthodes de transmission
-          Internet à l'aide de bouts de papier.
+        title: इंटरनेट
+        desc: छात्र कागज़ों का उपयोग करते हुए भिन्न इंटरनेट संप्रेषण विधियों को प्रस्तुत
+          करने वाले संदेश भेजते हैं।
       Crowdsourcing:
-        title: Financement participatif
-        desc: Les élèves utilisent la production participative, une technique de résolution
-          de problèmes répandue en informatique, pour accomplir une tâche tous ensemble
-          et plus efficacement que si un élève l'avait tentée en solo.
+        title: क्राउडसोर्सिंग
+        desc: किसी छात्र द्वारा अकेले प्रयास करने के मुकाबले कक्षा के तौर पर एक साथ
+          कार्य को अधिक प्रभावी रूप से पूरा करने के लिए, छात्र कंप्यूटर साइंस में
+          समस्या को हल करने की सामान्य तकनीक, क्राउडसोर्सिंग का उपयोग करते हैं।
       DigitalCitizenship:
-        title: Citoyenneté numérique
-        desc: Les élèves explorent la différence entre l'information privée et l'information
-          personnelles, en distinguant ce qui peut et ne peut pas être partagé sans
-          risque en ligne.
+        title: डिजीटल नागरिकता
+        desc: छात्र इसमें अंतर करते हुए गोपनीय जानकारी और निजी जानकारी के बीच अंतर
+          की पड़ताल करेंगे कि ऑनलाइन क्या साझा करना सुरक्षित और असुरक्षित है।
       TangramAlgorithms:
-        title: Les algorithmes de Tangram
-        desc: Cette leçon nous démontre quelque chose d'important sur les algorithmes.
-          Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
-          Si vous souhaiter que tout le monde termine avec la même chose, alors votre
-          algorithme a besoin de plus de détails.
+        title: टैन्ग्राम कलन विधियां
+        desc: यह पाठ हमें कलन विधियों के बारे कुछ महत्वपूर्ण दिखाता है। यदि आप कलन
+          विधि को सरल रखते हैं तो इसका उपयोग करने के बहुत-से तरीके हैं। यदि आप यह
+          सुनिश्चित करना चाहते हैं कि हर कोई एक ही चीज़ से समाप्त करे, तो आपकी कलन
+          विधि में अधिक विवरण की जरूरत है।
       EnvelopeVariables:
-        title: Les variables de l'enveloppe
-        desc: Les variables permettent une grande liberté en informatique.  Cette
-          leçon permet d'expliquer ce que sont les variables et comment nous pouvons
-          les utiliser de différentes manières. Utilisez cette activité avant (ou
-          avec) la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
-          le concept.
+        title: एनवलोप वेरिएब्लस
+        desc: वेरिएबल्स कंप्यूटर साइंस में बहुत सी स्वतंत्रता देती हैं।  यह पाठ इस
+          बारे में विस्तार से बताने में मदद करता है कि वेरिएबल्स क्या हैं और कई अलग-अलग
+          तरीकों से हम उनका उपयोग कैसे कर सकते हैं। इससे पहले कि आप संक्षिप्तीकरण
+          के बारे में पाठ से परिचित हों, इस गतिविधि (अथवा संयोजन में) का उपयोग करें।
       MadGlibs:
-        title: Mad Glibs
-        desc: L’abstraction est l'une des compétences les plus importantes que doit
-          comprendre un informaticien.  Vos élèves analyseront des histoires pour
-          en extraire les différences afin de pouvoir en faire abstraction. Ces histoires
-          abstraites deviennent des modèles pour de nouvelles histoires folles et
-          amusantes.
+        title: मैड ग्लिब्स
+        desc: संक्षिप्तीकरण कंप्यूटर वैज्ञानिकों द्वारा समझने के लिए सबसे महत्वपूर्ण
+          कौशलों में से एक है।  इस गतिविधि में आपके छात्र अंतरों के लिए कहानियों का
+          विश्लेषण करेंगे ताकि वे उनका संक्षिप्तीकरण कर सकें। वो संक्षिप्त की गई कहानियां
+          नए मज़ेदार और उत्साहपूर्ण टेम्प्लेट बन जाती हैं।
       ForLoopFun:
-        title: Jouons avec les boucles « Pour »
-        desc: Nous savons que les boucles nous permettent de répéter des choses encore
-          et encore, mais désormais nous allons apprendre à utiliser les boucles avec
-          des structures supplémentaires intégrées.
+        title: फॉर लूप फन
+        desc: हम जानते हैं कि लूप्स से हम बार-बार चीज़ों को कर सकते हैं, लेकिन अब
+          हम यह सीखने वाले हैं कि अभी बनाई गई अतिरिक्त संरचना के साथ लूप्स का उपयोग
+          कैसे कर सकते हैं।
       SongwritingWithParameters:
         title: Composition de chansons avec des paramètres
-        desc: Une des structures les plus magnifiques dans le monde de l’informatique
-          est la fonction.  Les fonctions (parfois appelées procédures) sont des minis
-          programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus
-          grand programme. Cette leçon aidera les élèves à comprendre intuitivement
-          pourquoi associer des morceaux de code à des fonctions est une pratique
-          très utile.
+        desc: 'कंप्यूटर साइंस की दुनिया में सबसे बड़ी संरचनाओं में एक फंक्शन है।  फंक्शन्स
+          (कभी-कभार इन्हें प्रक्रियाएं कहा जाता है) लघु प्रोग्राम हैं, जिन्हें आप
+          अपने बड़े प्रोग्राम के अंदर बार-बार उपयोग कर सकते हैं। यह पाठ सहज ज्ञान
+          से यह समझने में छात्रों की मदद करेगा कि कोड के भागों को फंक्शन में मिलाना
+          इतना उपयोगी अभ्यास क्यों है।  '
       BinaryImages:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
+        title: युग्मक चित्र
+        desc: हालांकि बहुत-से लोग युगम्क के बारे में पूरी तरह से शून्य और इकाइयों
+          की तरह सोचते हैं, हमारे पिछले कोर्सों ने छात्रों को सिखाया है कि जानकारी
+          को कई प्रकार के युग्मक विकल्पों प्रस्तुत किया जा सकता है।  यह पाठ उस अवधारणा
+          को एक स्टेप आगे लेता है क्योंकि यह उदाहरणों से स्पष्ट करता है कि कंप्यूटर
+          किस प्रकार से अधिक जटिल जानकारी (जैसे चित्र और रंग) को भी युग्मक में स्टोर
+          कर सकती है।
       VideoGamesCoordinatePlanes:
-        title: Les jeux vidéos et les plans de coordonnées
-        desc: Découvrez comment les jeux vidéo auxquels vous aimez jouer sont vraiment
-          dirigés par l'algèbre ! Explorez comment des expressions algébriques et
-          le plan des coordonnées peuvent aider à comprendre le fonctionnement des
-          jeux vidéo, puis commencez à planifier la création d’un jeu vidéo.
+        title: वीडियो गेम्स और कोआर्डीनेट प्लेन्स
+        desc: पता लगाएं कि जिन वीडियो गेम्स को खेलना आपको बेहद पसंद है, वे वास्तव
+          में बीजगणित द्वारा संचालित हैं! स्पष्ट करें कि बीजगणितीय व्यंजक और कोआर्डीनेट
+          प्लेन्स यह समझने में हमारी मदद कर सकते हैं कि वीडियो गेम्स कैसे काम करती
+          हैं, और फिर जो वीडियो गेम आप बनाएंगे, उसके लिए योजना बनाना शुरू करें।
       Contracts:
-        title: Contrats, domaine et gamme
-        desc: Les contrats nous donnent un moyen de comprendre et de discuter des
-          fonctions. Dans cette leçon, nous verrons comment les contrats peuvent nous
-          aider à comprendre un nouveau langage de programmation ou une nouvelle fonction.
+        title: कॉन्टरैक्ट्स, डोमेन और रेंज
+        desc: कॉन्टरैक्ट्स हमें फंक्शन्स को समझने और इस पर चर्चा करने का उपाय देते
+          हैं। इस पाठ में हम इस पर विचार करेंगे कि कॉन्टरैक्ट्स किस प्रकार से नई प्रोग्राम
+          भाषा या फंक्शन के अर्थ निकालने में हमारी मदद कर सकते हैं।
       DesignRecipe:
-        title: La Recette de Conception
-        desc: Lors de la dernière étape, les élèves ont écrit quelques fonctions très
-          simples - mais des fonctions plus sophistiquées exigent une approche plus
-          réfléchie. La recette de conception est une approche structurée servant
-          à écrire des fonctions qui incluent la rédaction de scénarios de test s'assurant
-          que la fonction s’exécute comme prévu.
+        title: डिज़ाइन रेसिपी
+        desc: पिछले चरण में छात्रों ने कुछ बहुत ही सरल फंक्शन लिखे थे - लेकिन अधिक
+          गूढ़ फंक्शन्स के लिए अधिक विचारशील दृष्टिकोण की जरूरत होती है। डिज़ाइन रेसिपी
+          फंक्शन लिखने के लिए संरचित दृष्टिकोण है, जिसमें यह सुनिश्चित करने के लिए
+          लेखन परीक्षण शामिल हैं कि फंक्शन अपेक्षा के अनुरूप काम करता है।
       Booleans:
-        title: Les valeurs booléennes et la logique
-        desc: Les booléens sont le quatrième et dernier type de données que vous apprendrez
-          dans ce cours. Dans le cadre de cette activité, vous apprendrez ce que sont
-          les booléens, et comment ceux-ci permettent d’écrire des fonctions qui pensent
-          logiquement.
+        title: बूलियन्स और तर्क
+        desc: बूलियन्स चौथा और अंतिम डेटा प्रकार है, जिसके बारे में आप इस कोर्स में
+          सीखेंगे। इस गतिविधि में, आप इस बारे में सीखेंगे कि बूलियन्स क्या है, और
+          वे किस प्रकार से ऐसे फंक्शन्स लिखने में हमारी मदद कर सकते हैं, जो तार्किक
+          रूप से सोचते हों।
       ConditionalsPiecewiseFunctions:
-        title: Les instructions conditionnelles et les fonctions par morceaux
-        desc: Les paramètres que nous transmettons aux fonctions font que les résultats
-          varient selon un schéma très rigide. Supposons que nous voulons des paramètres
-          avec certaines valeurs pour créer des résultats utilisant un motif, mais
-          d’autres valeurs pour utiliser un motif différent. C'est dans ces cas que
-          les instructions conditionnelles deviennent nécessaires...
+        title: सापेक्ष और खंडशः फंक्शन्स
+        desc: जिन मापदंडों को हम फंक्शन्स के लिए पास करते हैं, वे बहुत ही कठिन पैटर्न
+          के आधार पर अलग-अलग आउटपुट देते हैं। मान लें कि हम एक पैटर्न का उपयोग करते
+          हुए आउटपुट बनाने के लिए कुछ मूल्यों वाले मापदंड चाहते हैं लेकिन अलग पैटर्न
+          के लिए अन्य मूल्य चाहते हैं। यहीं पर सापेक्षों की जरूरत होती है...
       CollisionDetection:
-        title: La détection de collision et le théorème de Pythagore
-        desc: Déterminer quand les objets sur l'écran se touchent est un aspect important
-          de la plupart des jeux. Dans le cadre de cette leçon, nous verrons comment
-          le Théorème de Pythagore et la formule de distance peuvent servir à mesurer
-          la distance entre deux points sur le plan et décider ensuite si ces deux
-          points (ou les personnages du jeu) se touchent.
+        title: संघट्टन अभिज्ञान और पाइथागोरस प्रमेय
+        desc: यह निर्धारित करने में कि स्क्रीन टच पर वस्तुएं कब अधिकतर गेम्स का महत्वपूर्ण
+          पहलू होती हैं। इस पाठ में, हम इस पर विचार करेंगे कि जहाज में जो बिंदुओं
+          के बीच दूरी मापने के लिए पाइथागोरस प्रमेय और दूरी फॉर्मूला का किस प्रकार
+          से उपयोग किया जा सकता है, और फिर निर्णय लिया जाता है कि वो दोनों बिंदु (या
+          गेम के पात्र) स्पर्श करते हैं या नहीं।
       courseA_unplugged_loops:
         title: Boucles débranchées
-        desc: Dans cette leçon, tu découvriras les boucles!
+        desc: इस पाठ में, आप लूप्स के बारे में सीखेंगे!
       courseB_unplugged_MRF:
         title: Activité manuelle
-        desc: Dans cette leçon, tu "programmeras" tes amis!
+        desc: इस पाठ में, आप अपने दोस्तों को 'प्रोग्राम’ करेंगे!
       courseB_unplugged_loopyMRF:
         title: Activité manuelle
-        desc: Tout comme dans "Mon ami robotisé", vous allez programmé vos amis, mais
-          cette fois avec des boucles!
+        desc: जैसे "मेरे रोबोटिक दोस्त” में किया जाता है, बिल्कुल वैसे ही आप अपने
+          दोस्तों को "प्रोग्रामिंग” करेंगे, लेकिन इस बार लूप्स के साथ!
       courseC_Unplugged_ScreenOutTheMean:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        desc: आज आप इस बारे में सीखेंगे कि यदि ऑनलाइन कोई गलत हो रहा है तो क्या करना
+          चाहिए।
       courseD_unplugged_digitalCitizenship:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+        desc: आज आप सीखेंगे कि डिजीटल नागरिक होने का क्या अर्थ होता है।
       courseE_unplugged_privateInformation:
-        title: 'Education au sens commun : information privée et personnelle '
-        desc: Aujourd'hui, tu apprendras la différence entre l'information privée
-          et personnelle!
+        title: 'व्यावहारिक ज्ञान शिक्षा: गोपनीय व निजी जानकारी '
+        desc: आज आप गोपनीय और निजी जानकारी के बीच अंतर करना सीखेंगे!
       courseF_unplugged_powerOfWords:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        desc: आज आप इस बारे में सीखेंगे कि यदि ऑनलाइन कोई गलत हो रहा है तो क्या करना
+          चाहिए।
       deeper learning description:
-        desc: 'traduction manquante : en-US.data.unplugged.desc'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
-        title: 'Algorithmes du monde réel: Planter une graine'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+        desc: जिन तरीकों से हम अपने रोज़ाना जीवन में कलन विधियों का उपयोग करते हैं,
+          यह पाठ उन तरीकों की सहायता लेता है। उदाहरण के तौर पर पौधा उगाने की क्रिया
+          का उपयोग करना। यह कंप्यूटर साइंस की बड़ी तस्वीर पर और इस पर भी ध्यान केंद्रित
+          करता है कि कलन विधियां किस प्रकार से जरूरी भूमिका निभाती हैं।
       courseA_unplugged_happyMaps:
-        title: Cartes Joyeuses
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+        title: हैप्पी मैप्स
+        desc: छात्र एकल कमांड का उपयोग करते हुए पूरी पहेली में पात्र को मूव करने के
+          लिए सरल कलन विधियां (निर्देशों के सेट) तैयार करते हैं।
       courseA_unplugged_goingPlacesSafely:
-        title: Se déplacer en toute sécurité
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+        title: सुरक्षित रूप से स्थानों पर जाना
+        desc: इंटरनेट प्रभावशाली है, लेकिन कभी-कभार यह खतरनाक स्थान बन जाता है। अध्यापक
+          इससे परिचय कराते हैं कि इंटरनेट चलाते समय कैसे सुरक्षित रहना है।
       courseABC_unplugged_bigEvent:
-        title: Le Grand Événement
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+        title: विशाल इवेंट
+        desc: छात्रों को "इवेंट्स” की प्रोग्रामिंग अवधारणा से परिचित कराया जाता है,
+          जो ऐसी क्रियाएं है, जिनका कंप्यूटर लगातार निरीक्षण करता है। अध्यापक कागज
+          के रिमोट पर बटन दबाएगा और छात्र इस आधार पर प्रतिक्रिया करेंगे कि कौन-सा
+          बटन दबाया जाता है।
       courseB_unplugged_digitalFootprint:
-        title: Ton empreinte numérique
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
-          qui a des conséquences.
+        title: आपका डिजीटल फुटप्रिंट
+        desc: अध्यापक छात्रों को सुझाव पेश करते हैं कि खुद के बारे में ऑनलाइन जानकारी
+          डालने से यह डिजीटल फुटप्रिंट या “निशान” उत्पन्न कर सकता है, जिसके बुरे परिणाम
+          हो सकते हैं।
       courseC_unplugged_buildingAFoundation:
-        title: Construire une fondation
-        desc: Les élèves construisent une structure en utilisant uniquement les éléments
-          fournis. Les structures doivent accomplir une tâche (atteindre une certaine
-          hauteur ou soutenir un certain poids), et les élèves discutent du fait de
-          persévérer lorsque les choses se compliquent.
+        title: नींव का निर्माण करना
+        desc: छात्र केवल प्रदान किए गए सामान का उपयोग करते हुए ही एक ढांचे का निर्माण
+          करेंगे। ढांचों के लिए कार्य पूरा करना आवश्यक है (निश्चित ऊंचाई तक पहुंचना
+          या निश्चित भार सहन करना), और छात्र इस बारे में सुझावों पर विचार विमर्श करते
+          हैं कि जब चीज़ें जटिल हों तो कैसे दृढ़ रहना है।
       courseC_unplugged_paperPlanes:
-        title: 'Algorithmes du monde réel: Avions en papier'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+        desc: यह पाठ ऐसे तरीकों की सहायता लेता है, जैसे हम अपनी रोजमर्रा की ज़िंदगियों
+          में कलन विधियों का उपयोग करते हैं। यह पाठ कंप्यूटर साइंस की बड़ी तस्वीर
+          पर और इस पर भी केंद्रित है कि कलन विधियां किस प्रकार से महत्वपूर्ण भूमिका
+          निभाती हैं।
       courseC_unplugged_gettingLoopy:
-        title: Tourner en rond
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
+        title: लूपी होना
+        desc: यह पाठ डांस गतिविधि के माध्यम से लूप्स (दोहराए जाने वाले निर्देश) की
+          प्रोग्रामिंग अवधारणा से परिचय कराता है। छात्र सरल कोरियोग्राफी सीखेंगे,
+          फिर उन्हें इसे दोहराने का निर्देश दिया जाएगा।
       courseC_unplugged_binaryBracelets:
-        title: Bracelets binaires
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
+        title: युग्मक ब्रैस्लेट्स
+        desc: छात्र अपने नाम के पहले अक्षर की युग्मक प्रस्तुतियों के तौर पर ब्रैस्लेट
+          बना सकते हैं। छात्र सीखते हैं कि डेटे को एक से अधिक तरीके से प्रस्तुत और
+          स्टोर किया जा सकता है।
       courseD_unplugged_graphPaperProgramming:
         title: Programmation sur papier quadrillé
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+        desc: छात्र अपने सहपाठियों को ड्राइंग की प्रतिलिपि बनाने के लिए निर्देश देने
+          हेतु पूर्व-परिभाषित कमांड्स के सेट का उपयोग करते हुए कलन विधि (निर्देशों
+          का सेट) लिखते हैं।
       courseD_unplugged_relayProgramming:
         title: Programmation de relais
-        desc: Les élèves courent une course de relais, où ils traversent rapidement
-          le jardin pour aller écrire un algorithme basé sur une image de « Programmation
-          sur papier millimétré». Ils ne peuvent écrire qu’une seule instruction à
-          la fois et s'il y a une erreur quelque part, ils doivent tout effacer pour
-          retourner à ce point.
+        desc: छात्रों ने रिले रेस चलाई है, जहां वे "ग्राफ पेपर प्रोग्रामिंग" चित्र
+          पर आधारित एक कलन विधि लिखने के लिए आंगन के चारों ओर दौड़ते हैं। वे एक बार
+          में केवल एक निर्देश लिख सकते हैं और यदि कहीं कोई त्रुटि हो, तो उन्हें उस
+          बिंदु तक वापस जाने के लिए सब कुछ मिटाना होगा।
       courseD_unplugged_conditionalsCards:
         title: Instructions conditionnelles avec des cartes
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: सापेक्ष स्टेटमेंट्स के बारे में सीखने के लिए, छात्र ताश का खेल खेलते
+          हैं और "यदि मैं लाल पत्ता चित्रित करूं, तो मुझे अंक मिलेगा" और "यदि मैं
+          काला कार्ड चित्रित करता हूं, तो आपको अंक मिलेगा” जैसे नियम बनाते है।
       courseD_unplugged_binaryImages:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
+        title: युग्मक चित्र
+        desc: हालांकि बहुत-से लोग युगम्क के बारे में पूरी तरह से शून्य और इकाइयों
+          की तरह सोचते हैं, हमारे पिछले कोर्सों ने छात्रों को सिखाया है कि जानकारी
+          को कई प्रकार के युग्मक विकल्पों प्रस्तुत किया जा सकता है।  यह पाठ उस अवधारणा
+          को एक स्टेप आगे लेता है क्योंकि यह उदाहरणों से स्पष्ट करता है कि कंप्यूटर
+          किस प्रकार से अधिक जटिल जानकारी (जैसे चित्र और रंग) को भी युग्मक में स्टोर
+          कर सकती है।
       courseE_unplugged_diceRace:
-        title: 'Les algorithmes du monde réel : La course de dés'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront
-          l'algorithme pour un jeu de course de dés.
+        title: 'वास्तविक-जीवन की कलन विधियां: डाइस रेस'
+        desc: जिन तरीकों से हम अपने रोज़ाना जीवन में कलन विधियों का उपयोग करते हैं,
+          यह पाठ उन तरीकों की सहायता लेता है। उसके भाग के तौर पर, छात्र डाइस रेस गेम
+          के लिए कलन विधि की पहचान करेंगे और उसे लिखेंगे।
       courseE_unplugged_songwritingParameters:
         title: La composition de chansons avec des paramètres
-        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          le passage de paramètres (qui permettent de personnaliser une fonction sans
-          avoir à la réécrire complètement).
+        desc: छात्र फंक्शनों को परिभाषित करने और बोलने के बारे में सीखने के लिए गीत
+          में कोरस की अवधारणा का उपयोग करते हैं।
       courseE_unplugged_internet:
-        title: Internet
-        desc: Les élèves envoient des messages représentant diverses méthodes de transmission
-          Internet à l'aide de bouts de papier.
+        title: इंटरनेट
+        desc: छात्र कागज़ों का उपयोग करते हुए भिन्न इंटरनेट संप्रेषण विधियों को प्रस्तुत
+          करने वाले संदेश भेजते हैं।
       courseE_unplugged_crowdsourcing:
-        title: Financement participatif
-        desc: Les élèves utilisent la production participative, une technique de résolution
-          de problèmes répandue en informatique, pour accomplir une tâche tous ensemble
-          et plus efficacement que si un élève l'avait tentée en solo.
+        title: क्राउडसोर्सिंग
+        desc: किसी छात्र द्वारा अकेले प्रयास करने के मुकाबले कक्षा के तौर पर एक साथ
+          कार्य को अधिक प्रभावी रूप से पूरा करने के लिए, छात्र कंप्यूटर साइंस में
+          समस्या को हल करने की सामान्य तकनीक, क्राउडसोर्सिंग का उपयोग करते हैं।
       courseE_unplugged_songwriting:
-        title: Écriture de chansons
-        desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
-          le passage de paramètres (qui permettent de personnaliser une fonction sans
-          avoir à la réécrire complètement).
+        title: गीत लेखन
+        desc: छात्र फंक्शनों को परिभाषित करने और बोलने के बारे में सीखने के लिए गीत
+          में कोरस की अवधारणा का उपयोग करते हैं।
       courseF_unplugged_tangrams:
-        title: Les algorithmes de Tangram
-        desc: Cette leçon nous démontre quelque chose d'important sur les algorithmes.
-          Si un algorithme reste simple, il y a beaucoup de façons de l'utiliser.
-          Si vous souhaiter que tout le monde termine avec la même chose, alors votre
-          algorithme a besoin de plus de détails.
+        title: टैन्ग्राम कलन विधियां
+        desc: यह पाठ हमें कलन विधियों के बारे कुछ महत्वपूर्ण दिखाता है। यदि आप कलन
+          विधि को सरल रखते हैं तो इसका उपयोग करने के बहुत-से तरीके हैं। यदि आप यह
+          सुनिश्चित करना चाहते हैं कि हर कोई एक ही चीज़ से समाप्त करे, तो आपकी कलन
+          विधि में अधिक विवरण की जरूरत है।
       courseF_unplugged_envelopeVariables:
-        title: Les variables de l'enveloppe
-        desc: Les variables permettent une grande liberté en informatique.  Cette
-          leçon permet d'expliquer ce que sont les variables et comment nous pouvons
-          les utiliser de différentes manières. Utilisez cette activité avant (ou
-          avec) la leçon sur l'abstraction pour vraiment permettre aux élèves de comprendre
-          le concept.
+        title: एनवलोप वेरिएब्लस
+        desc: वेरिएबल्स कंप्यूटर साइंस में बहुत सी स्वतंत्रता देती हैं।  यह पाठ इस
+          बारे में विस्तार से बताने में मदद करता है कि वेरिएबल्स क्या हैं और कई अलग-अलग
+          तरीकों से हम उनका उपयोग कैसे कर सकते हैं। इससे पहले कि आप संक्षिप्तीकरण
+          के बारे में पाठ से परिचित हों, इस गतिविधि (अथवा संयोजन में) का उपयोग करें।
       courseF_unplugged_forLoopFun:
-        title: Jouons avec les boucles « Pour »
-        desc: Nous savons que les boucles nous permettent de répéter des choses encore
-          et encore, mais désormais nous allons apprendre à utiliser les boucles avec
-          des structures supplémentaires intégrées.
+        title: फॉर लूप फन
+        desc: हम जानते हैं कि लूप्स से हम बार-बार चीज़ों को कर सकते हैं, लेकिन अब
+          हम यह सीखने वाले हैं कि अभी बनाई गई अतिरिक्त संरचना के साथ लूप्स का उपयोग
+          कैसे कर सकते हैं।
       courseF_unplugged_songwritingParameters:
         title: Composition de chansons avec des paramètres
-        desc: Une des structures les plus magnifiques dans le monde de l’informatique
-          est la fonction.  Les fonctions (parfois appelées procédures) sont des minis
-          programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus
-          grand programme. Cette leçon aidera les élèves à comprendre intuitivement
-          pourquoi associer des morceaux de code à des fonctions est une pratique
-          très utile.
+        desc: 'कंप्यूटर साइंस की दुनिया में सबसे बड़ी संरचनाओं में एक फंक्शन है।  फंक्शन्स
+          (कभी-कभार इन्हें प्रक्रियाएं कहा जाता है) लघु प्रोग्राम हैं, जिन्हें आप
+          अपने बड़े प्रोग्राम के अंदर बार-बार उपयोग कर सकते हैं। यह पाठ सहज ज्ञान
+          से यह समझने में छात्रों की मदद करेगा कि कोड के भागों को फंक्शन में मिलाना
+          इतना उपयोगी अभ्यास क्यों है।  '
       swipeRightPassThrough:
-        title: Séance scénarios de recrutement
-        desc: "# Séance scénarios de recrutement\r\n\r\n## Swipe Right for CS\r\nPour
-          cette session, nous utiliserons un outil appelé « Swipe Right for CS »,
-          développé par nos partenaires au MIT. Dans « Swipe Right for CS », vous
-          allez lire certains profils d'élèves et prendre en compte des énoncés spécifiques
-          que vous pourriez utiliser pour le ou la convaincre de s'inscrire à votre
-          cours Principes de l'informatique. \r\n\r\n### Comment ça marche\r\nLorsque
-          vous jouez au jeu « Swipe Right for CS », vous verrez une série de citations
-          que vous pourriez dire à chaque élève. Vous balayerez directement à droite
-          les citations que vous jugeriez efficaces pour convaincre les élèves de
-          s’inscrire au cours et balayez à gauche les déclarations que vous jugez
-          non efficaces. Pendant la session, nous discuterons en groupe de vos réflexions
-          sur les types d'énoncés les plus efficaces pour convaincre un étudiant de
-          s'inscrire à votre cours, et vous aurez l'occasion de savoir dans quelle
-          direction les autres personnes de votre atelier ont balayé pour chacun des
-          arguments. \r\n\r\n\r\nLorsque vous cliquez sur « Continuer » ci-dessous,
-          nous vous renvoyons au jeu et transmettons l'adresse e-mail à laquelle vous
-          êtes connecté sur Code.org."
+        title: भर्ती परिदृश्य सत्र
+        desc: "# Session de Scénarios de Recrutement\r\\R# # Swipe Right for CS \\
+          rPour cette session, nous utiliserons un outil appelé « Swipe Right for
+          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
+          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
+          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
+          à votre cours de CS Principes. \r \\ R # # # Comment ça marche \\ rLorsque
+          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
+          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
+          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
+          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
+          en groupe de vos réflexions sur les types de déclarations les plus efficaces
+          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
+          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.
+          \r \\ r \\ rLorsque vous cliquerez sur continuer, ci-dessous, nous vous
+          enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
+          vous êtes connecté."
       swipeRightPassThrough-test123:
-        title: Séance scénarios de recrutement
-        desc: "# Séance scénarios de recrutement\r\n\r\n## Swipe Right for CS\r\nPour
-          cette session, nous utiliserons un outil appelé « Swipe Right for CS »,
-          développé par nos partenaires au MIT. Dans « Swipe Right for CS », vous
-          allez lire certains profils d'élèves et prendre en compte des énoncés spécifiques
-          que vous pourriez utiliser pour le ou la convaincre de s'inscrire à votre
-          cours Principes de l'informatique. \r\n\r\n### Comment ça marche\r\nLorsque
-          vous jouez au jeu « Swipe Right for CS », vous verrez une série de citations
-          que vous pourriez dire à chaque élève. Vous balayerez directement à droite
-          les citations que vous jugeriez efficaces pour convaincre les élèves de
-          s’inscrire au cours et balayez à gauche les déclarations que vous jugez
-          non efficaces. Pendant la session, nous discuterons en groupe de vos réflexions
-          sur les types d'énoncés les plus efficaces pour convaincre un étudiant de
-          s'inscrire à votre cours, et vous aurez l'occasion de savoir dans quelle
-          direction les autres personnes de votre atelier ont balayé pour chacun des
-          arguments. \r\n\r\n\r\nLorsque vous cliquez sur « Continuer » ci-dessous,
-          nous vous renvoyons au jeu et transmettons l'adresse e-mail à laquelle vous
-          êtes connecté sur Code.org."
+        title: भर्ती परिदृश्य सत्र
+        desc: "# Session de Scénarios de Recrutement\r\\R# # Swipe Right for CS \\
+          rPour cette session, nous utiliserons un outil appelé « Swipe Right for
+          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
+          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
+          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
+          à votre cours de CS Principes. \r \\ R # # # Comment ça marche \\ rLorsque
+          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
+          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
+          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
+          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
+          en groupe de vos réflexions sur les types de déclarations les plus efficaces
+          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
+          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.
+          \r \\ r \\ rLorsque vous cliquerez sur continuer, ci-dessous, nous vous
+          enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
+          vous êtes connecté."
       brad-repro-bug-000:
-        title: Brad reproduction de bug 000
+        title: ब्रैड रेप्रो बग 000
         desc: "# Brad reproduction de bug 000\r\n## Tentative de recréer un bug rapporté
           par Brooke\r\nle processus est le suivant :\r\n1. commencer avec un niveau
           « déconnecté ». peupler d'informations. sauvegarder et publier.\r\n2. «
@@ -467,225 +447,267 @@ fr:
           et le même nom. sauvegarder et publier"
       courseB_unplugged_MRF_2018:
         title: Mes amis les robots
-        desc: Apprenez à programmer en écrivant du code pour vos amis !
+        desc: अपने दोस्तों के लिए कोड लिखकर प्रोग्राम सीखें!
       PlantASeed_2018:
-        title: 'Algorithmes du monde réel: Planter une graine'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+        desc: जिन तरीकों से हम अपने रोज़ाना जीवन में कलन विधियों का उपयोग करते हैं,
+          यह पाठ उन तरीकों की सहायता लेता है। उदाहरण के तौर पर पौधा उगाने की क्रिया
+          का उपयोग करना। यह कंप्यूटर साइंस की बड़ी तस्वीर पर और इस पर भी ध्यान केंद्रित
+          करता है कि कलन विधियां किस प्रकार से जरूरी भूमिका निभाती हैं।
       UnplugHappyMaps_2018:
-        title: Cartes Joyeuses
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+        title: हैप्पी मैप्स
+        desc: छात्र एकल कमांड का उपयोग करते हुए पूरी पहेली में पात्र को मूव करने के
+          लिए सरल कलन विधियां (निर्देशों के सेट) तैयार करते हैं।
       GoingPlacesSafely_2018:
-        title: Se déplacer en toute sécurité
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+        title: सुरक्षित रूप से स्थानों पर जाना
+        desc: इंटरनेट प्रभावशाली है, लेकिन कभी-कभार यह खतरनाक स्थान बन जाता है। अध्यापक
+          इससे परिचय कराते हैं कि इंटरनेट चलाते समय कैसे सुरक्षित रहना है।
       courseA_unplugged_loops_2018:
-        title: Boucles débranchées
-        desc: Dans cette leçon, tu découvriras les boucles!
+        title: Les Boucles Débranchées
+        desc: इस पाठ में, आप लूप्स के बारे में सीखेंगे!
       BigEvent_2018:
-        title: Le Grand Événement
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+        title: विशाल इवेंट
+        desc: छात्रों को "इवेंट्स” की प्रोग्रामिंग अवधारणा से परिचित कराया जाता है,
+          जो ऐसी क्रियाएं है, जिनका कंप्यूटर लगातार निरीक्षण करता है। अध्यापक कागज
+          के रिमोट पर बटन दबाएगा और छात्र इस आधार पर प्रतिक्रिया करेंगे कि कौन-सा
+          बटन दबाया जाता है।
       GraphPaperProgramming_2018:
         title: Programmation sur papier quadrillé
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+        desc: छात्र अपने सहपाठियों को ड्राइंग की प्रतिलिपि बनाने के लिए निर्देश देने
+          हेतु पूर्व-परिभाषित कमांड्स के सेट का उपयोग करते हुए कलन विधि (निर्देशों
+          का सेट) लिखते हैं।
       courseD_unplugged_digitalCitizenship_2018:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+        desc: आज आप सीखेंगे कि डिजीटल नागरिक होने का क्या अर्थ होता है।
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        desc: आज आप इस बारे में सीखेंगे कि यदि ऑनलाइन कोई गलत हो रहा है तो क्या करना
+          चाहिए।
       Conditionals_2018:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: सापेक्ष स्टेटमेंट्स के बारे में सीखने के लिए, छात्र ताश का खेल खेलते
+          हैं और "यदि मैं लाल पत्ता चित्रित करूं, तो मुझे अंक मिलेगा" और "यदि मैं
+          काला कार्ड चित्रित करता हूं, तो आपको अंक मिलेगा” जैसे नियम बनाते है।
       DigitalFootprint_2018:
-        title: Ton empreinte numérique
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
-          qui a des conséquences.
+        title: आपका डिजीटल फुटप्रिंट
+        desc: अध्यापक छात्रों को सुझाव पेश करते हैं कि खुद के बारे में ऑनलाइन जानकारी
+          डालने से यह डिजीटल फुटप्रिंट या “निशान” उत्पन्न कर सकता है, जिसके बुरे परिणाम
+          हो सकते हैं।
       BinaryImages_2018:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
+        title: युग्मक चित्र
+        desc: हालांकि बहुत-से लोग युगम्क के बारे में पूरी तरह से शून्य और इकाइयों
+          की तरह सोचते हैं, हमारे पिछले कोर्सों ने छात्रों को सिखाया है कि जानकारी
+          को कई प्रकार के युग्मक विकल्पों प्रस्तुत किया जा सकता है।  यह पाठ उस अवधारणा
+          को एक स्टेप आगे लेता है क्योंकि यह उदाहरणों से स्पष्ट करता है कि कंप्यूटर
+          किस प्रकार से अधिक जटिल जानकारी (जैसे चित्र और रंग) को भी युग्मक में स्टोर
+          कर सकती है।
       PaperPlanes_2018:
-        title: 'Algorithmes du monde réel: Avions en papier'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+        desc: यह पाठ ऐसे तरीकों की सहायता लेता है, जैसे हम अपनी रोजमर्रा की ज़िंदगियों
+          में कलन विधियों का उपयोग करते हैं। यह पाठ कंप्यूटर साइंस की बड़ी तस्वीर
+          पर और इस पर भी केंद्रित है कि कलन विधियां किस प्रकार से महत्वपूर्ण भूमिका
+          निभाती हैं।
       GettingLoopy_2018:
-        title: Tourner en rond
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
+        title: लूपी होना
+        desc: यह पाठ डांस गतिविधि के माध्यम से लूप्स (दोहराए जाने वाले निर्देश) की
+          प्रोग्रामिंग अवधारणा से परिचय कराता है। छात्र सरल कोरियोग्राफी सीखेंगे,
+          फिर उन्हें इसे दोहराने का निर्देश दिया जाएगा।
       BinaryBracelets_2018:
-        title: Bracelets binaires
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
+        title: युग्मक ब्रैस्लेट्स
+        desc: छात्र अपने नाम के पहले अक्षर की युग्मक प्रस्तुतियों के तौर पर ब्रैस्लेट
+          बना सकते हैं। छात्र सीखते हैं कि डेटे को एक से अधिक तरीके से प्रस्तुत और
+          स्टोर किया जा सकता है।
       MoveItMoveIt_2018:
         title: Bouge, Bouge
       courseB_unplugged_CnC_2018:
-        title: C'est bien de créer et de jouer équitablement
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
-          processus créatif de partage et d'inspiration. Parallèlement à cela vient
-          la promotion de l'expression créative et le besoin d'être juste avec le
-          travail créatif.
+        title: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+        desc: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर साइंस के मूल सिद्धांतों
+          के लिए उधार लिया गया, यह पाठ साझा करने और प्रेरणा की रचनात्मक प्रक्रिया
+          को समझने में छात्रों की मदद के लिए मौजूद है।  उसके साथ रचनात्मक अभिव्यंजना
+          का और रचनात्मक काम के साथ निष्पक्ष रहने का प्रचार भी किया गया है।
       courseE_unplugged_CnC_2018:
-        title: Partage numérique
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
-          défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les étudiants devraient
-          être encouragés à respecter les droits des artistes, qui constituent un
-          élément important de leur citoyenneté numérique.
+        title: डिजीटल शेयरिंग
+        desc: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर साइंस के मूल सिद्धांतों
+          के लिए उधार लिया गया, यह पाठ विशेषकर डिजीटल परिवेश में, स्वामित्व और कॉपीराइट
+          का सम्मान करने की चुनौतियों और लाभों को समझने में छात्रों की मदद के लिए
+          मौजूद है। छात्रों को नैतिक डिजीटल नागरिक होने का महत्वपूर्ण हिस्से के तौर
+          पर कलाकारों के अधिकारों का सम्मान करने के लिए प्रोत्साहित किया जाना चाहिए।
       RelayProgramming_2018:
         title: Programmation de relais
-        desc: Cette activité débutera par une brève leçon sur le débogage et la persistance,
-          puis passera rapidement à une course contre la montre pendant que les élèves
-          se regroupent en équipes et travaillent ensemble à la rédaction d'un programme,
-          instruction par instruction.
+        desc: यह गतिविधि डीबगिंग और दृढ़ता के बारे में एक छोटे पाठ से शुरू होगी, फिर
+          बहुत तेज़ी से मूव होगी क्योंकि छात्रों को टीमों में बाटा जाता है और वे एक
+          ही समय पर एक निर्देश का प्रोग्राम लिखने के लिए एक साथ काम करते हैं।
       courseB_unplugged_MRF_2019:
         title: Mes amis les robots
-        desc: Apprenez à programmer en écrivant du code pour vos amis !
+        desc: अपने दोस्तों के लिए कोड लिखकर प्रोग्राम सीखें!
       BuildingAFoundation_2019:
-        title: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: सापेक्ष स्टेटमेंट्स के बारे में सीखने के लिए, छात्र ताश का खेल खेलते
+          हैं और "यदि मैं लाल पत्ता चित्रित करूं, तो मुझे अंक मिलेगा" और "यदि मैं
+          काला कार्ड चित्रित करता हूं, तो आपको अंक मिलेगा” जैसे नियम बनाते है।
       courseF_unplugged_powerOfWords_2019:
-        title: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
       EnvelopeVariables_2019:
-        title: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.EnvelopeVariables_2018.desc'
       ForLoopFun_2019:
-        title: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programmation sur papier quadrillé
-        desc: Les élèves écrivent un algorithme (un ensemble d'instructions) utilisant
-          un ensemble de commandes prédéfinies pour diriger leurs camarades afin de
-          reproduire un dessin.
+        desc: छात्र अपने सहपाठियों को ड्राइंग की प्रतिलिपि बनाने के लिए निर्देश देने
+          हेतु पूर्व-परिभाषित कमांड्स के सेट का उपयोग करते हुए कलन विधि (निर्देशों
+          का सेट) लिखते हैं।
       RelayProgramming_2018_2019:
         title: Programmation de relais
-        desc: Cette activité débutera par une brève leçon sur le débogage et la persistance,
-          puis passera rapidement à une course contre la montre pendant que les élèves
-          se regroupent en équipes et travaillent ensemble à la rédaction d'un programme,
-          instruction par instruction.
+        desc: यह गतिविधि डीबगिंग और दृढ़ता के बारे में एक छोटे पाठ से शुरू होगी, फिर
+          बहुत तेज़ी से मूव होगी क्योंकि छात्रों को टीमों में बाटा जाता है और वे एक
+          ही समय पर एक निर्देश का प्रोग्राम लिखने के लिए एक साथ काम करते हैं।
       courseD_unplugged_digitalCitizenship_2019:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez ce que veut dire être un Citoyen Numérique.
+        desc: आज आप सीखेंगे कि डिजीटल नागरिक होने का क्या अर्थ होता है।
       BinaryImages_2019:
-        title: Les images binaires
-        desc: Bien que beaucoup de gens pensent au binaire comme étant strictement
-          des zéros et des uns, nos précédents cours ont enseigné aux élèves que les
-          informations peuvent être représentées d’une variété d'options binaires.  Cette
-          leçon emmène ce concept encore plus loin puisqu'elle illustre comment un
-          ordinateur peut stocker des informations encore plus complexes (telles que
-          les images et les couleurs) également en binaire.
+        title: युग्मक चित्र
+        desc: हालांकि बहुत-से लोग युगम्क के बारे में पूरी तरह से शून्य और इकाइयों
+          की तरह सोचते हैं, हमारे पिछले कोर्सों ने छात्रों को सिखाया है कि जानकारी
+          को कई प्रकार के युग्मक विकल्पों प्रस्तुत किया जा सकता है।  यह पाठ उस अवधारणा
+          को एक स्टेप आगे लेता है क्योंकि यह उदाहरणों से स्पष्ट करता है कि कंप्यूटर
+          किस प्रकार से अधिक जटिल जानकारी (जैसे चित्र और रंग) को भी युग्मक में स्टोर
+          कर सकती है।
       courseE_unplugged_privateInformation_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+        desc: कॉमन सेंस एजुकेशन द्वारा विकसित किया गया यह पाठ जानकारी के उस अंतर के
+          बारे में है, जो ऑनलाइन साझा करने के लिए सुरक्षित है और जो जानकारी सुरक्षित
+          नहीं है।
       SongwritingParameters_2019:
-        title: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
-        title: Partage numérique
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre les
-          défis et les avantages du respect de la propriété et du droit d'auteur,
-          en particulier dans les environnements numériques. Les étudiants devraient
-          être encouragés à respecter les droits des artistes, qui constituent un
-          élément important de leur citoyenneté numérique.
+        title: डिजीटल शेयरिंग
+        desc: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर साइंस के मूल सिद्धांतों
+          के लिए उधार लिया गया, यह पाठ विशेषकर डिजीटल परिवेश में, स्वामित्व और कॉपीराइट
+          का सम्मान करने की चुनौतियों और लाभों को समझने में छात्रों की मदद के लिए
+          मौजूद है। छात्रों को नैतिक डिजीटल नागरिक होने का महत्वपूर्ण हिस्से के तौर
+          पर कलाकारों के अधिकारों का सम्मान करने के लिए प्रोत्साहित किया जाना चाहिए।
       Internet_2019:
-        title: 'traduction manquante : en-US.data.unplugged.Internet_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.Internet_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.Internet_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.Internet_2018.desc'
       Crowdsourcing_2019:
-        title: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'अनुवाद मौजूद नहीं है: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
-        title: Tourner en rond
-        desc: Cette leçon présente le concept de programmation des boucles (instructions
-          répétées) par le biais d’une activité de danse. Les élèves apprendront une
-          chorégraphie simple, puis devront la répéter.
+        title: लूपी होना
+        desc: यह पाठ डांस गतिविधि के माध्यम से लूप्स (दोहराए जाने वाले निर्देश) की
+          प्रोग्रामिंग अवधारणा से परिचय कराता है। छात्र सरल कोरियोग्राफी सीखेंगे,
+          फिर उन्हें इसे दोहराने का निर्देश दिया जाएगा।
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Activité manuelle
-        desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
-          en ligne.
+        desc: आज आप इस बारे में सीखेंगे कि यदि ऑनलाइन कोई गलत हो रहा है तो क्या करना
+          चाहिए।
       BigEvent_2019:
-        title: Le Grand Événement
-        desc: Les élèves découvrent le concept de la programmation d’«événements»,
-          qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
-          appuiera sur des boutons à distance et les élèves réagiront en fonction
-          du bouton choisi.
+        title: विशाल इवेंट
+        desc: छात्रों को "इवेंट्स” की प्रोग्रामिंग अवधारणा से परिचित कराया जाता है,
+          जो ऐसी क्रियाएं है, जिनका कंप्यूटर लगातार निरीक्षण करता है। अध्यापक कागज
+          के रिमोट पर बटन दबाएगा और छात्र इस आधार पर प्रतिक्रिया करेंगे कि कौन-सा
+          बटन दबाया जाता है।
       BinaryBracelets_2019:
-        title: Bracelets binaires
-        desc: Les élèves créent des bracelets comme des représentations binaires de
-          la première lettre de leur nom. Les élèves apprennent que les données peuvent
-          être représentées et stockées de plus d’une façon.
+        title: युग्मक ब्रैस्लेट्स
+        desc: छात्र अपने नाम के पहले अक्षर की युग्मक प्रस्तुतियों के तौर पर ब्रैस्लेट
+          बना सकते हैं। छात्र सीखते हैं कि डेटे को एक से अधिक तरीके से प्रस्तुत और
+          स्टोर किया जा सकता है।
       PaperPlanes_2019:
-        title: 'Algorithmes du monde réel: Avions en papier'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, plus précisément en faisant des avions en papier.
-          Cette leçon se concentre également sur l'informatique en général et la façon
-          dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+        desc: यह पाठ ऐसे तरीकों की सहायता लेता है, जैसे हम अपनी रोजमर्रा की ज़िंदगियों
+          में कलन विधियों का उपयोग करते हैं। यह पाठ कंप्यूटर साइंस की बड़ी तस्वीर
+          पर और इस पर भी केंद्रित है कि कलन विधियां किस प्रकार से महत्वपूर्ण भूमिका
+          निभाती हैं।
+      test-uid-passthrough:
+        desc: "# Session de Scénarios de Recrutement\r\\R# # Swipe Right for CS \\
+          rPour cette session, nous utiliserons un outil appelé « Swipe Right for
+          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
+          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
+          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
+          à votre cours de CS Principes. \r \\ R # # # Comment ça marche \\ rLorsque
+          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
+          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
+          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
+          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
+          en groupe de vos réflexions sur les types de déclarations les plus efficaces
+          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
+          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.\r<br><br><br><br>\r\r<span
+          style=\"display:none\">submitButton next-stage</span>\r\r < a class=\"btn
+          btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid
+          = < user_id/>\"> Cliquez ici pour jouer à Swipe Right for CS !< / a > \r
+          \\ r"
       PlantASeed_2019:
-        title: 'Algorithmes du monde réel: Planter une graine'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne, en utilisant comme exemple l’action de planter
-          une graine. Elle se concentre également sur la vue d’ensemble de l'informatique
-          et la façon dont les algorithmes jouent un rôle essentiel.
+        title: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+        desc: जिन तरीकों से हम अपने रोज़ाना जीवन में कलन विधियों का उपयोग करते हैं,
+          यह पाठ उन तरीकों की सहायता लेता है। उदाहरण के तौर पर पौधा उगाने की क्रिया
+          का उपयोग करना। यह कंप्यूटर साइंस की बड़ी तस्वीर पर और इस पर भी ध्यान केंद्रित
+          करता है कि कलन विधियां किस प्रकार से जरूरी भूमिका निभाती हैं।
       UnplugHappyMaps_2019:
-        title: Cartes Joyeuses
-        desc: Les élèves créent des algorithmes simples (ensemble d'instructions)
-          pour déplacer un personnage dans un labyrinthe en utilisant une seule commande.
+        title: हैप्पी मैप्स
+        desc: छात्र एकल कमांड का उपयोग करते हुए पूरी पहेली में पात्र को मूव करने के
+          लिए सरल कलन विधियां (निर्देशों के सेट) तैयार करते हैं।
       GoingPlacesSafely_2019:
-        title: Se déplacer en toute sécurité
-        desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
-          présentent comment rester en sécurité en naviguant sur Internet.
+        title: सुरक्षित रूप से स्थानों पर जाना
+        desc: इंटरनेट प्रभावशाली है, लेकिन कभी-कभार यह खतरनाक स्थान बन जाता है। अध्यापक
+          इससे परिचय कराते हैं कि इंटरनेट चलाते समय कैसे सुरक्षित रहना है।
       courseA_unplugged_loops_2019:
-        title: Boucles débranchées
-        desc: Dans cette leçon, tu découvriras les boucles!
+        title: Les Boucles Débranchées
+        desc: इस पाठ में, आप लूप्स के बारे में सीखेंगे!
       MoveItMoveIt_2019:
         title: Bouge, Bouge
       DigitalFootprint_2019:
-        title: Ton empreinte numérique
-        desc: Les enseignants sensibilisent les élèves à l'idée que mettre en ligne
-          des informations personnelles crée une empreinte numérique ou une « trace »
-          qui a des conséquences.
+        title: आपका डिजीटल फुटप्रिंट
+        desc: अध्यापक छात्रों को सुझाव पेश करते हैं कि खुद के बारे में ऑनलाइन जानकारी
+          डालने से यह डिजीटल फुटप्रिंट या “निशान” उत्पन्न कर सकता है, जिसके बुरे परिणाम
+          हो सकते हैं।
       courseB_unplugged_CnC_2019:
-        title: C'est bien de créer et de jouer équitablement
-        desc: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright
-          and Creativity, cette leçon a pour but d'aider les élèves à comprendre le
-          processus créatif de partage et d'inspiration. Parallèlement à cela vient
-          la promotion de l'expression créative et le besoin d'être juste avec le
-          travail créatif.
+        title: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+        desc: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर साइंस के मूल सिद्धांतों
+          के लिए उधार लिया गया, यह पाठ साझा करने और प्रेरणा की रचनात्मक प्रक्रिया
+          को समझने में छात्रों की मदद के लिए मौजूद है।  उसके साथ रचनात्मक अभिव्यंजना
+          का और रचनात्मक काम के साथ निष्पक्ष रहने का प्रचार भी किया गया है।
+      GraphingData_2019:
+        title: तस्वीरों वाला डेटा
+        desc: इस पाठ में, छात्र प्ले लैब प्रोजेक्ट या वास्तविक दुनिया के परिदृश्य
+          से डेटा एकत्र करेंगे और अनुमान लगाने में इसका उपयोग करेंगे।
+      courseE_unplugged_accessAbility_2019:
+        title: पहुंच क्षमता
+        desc: विचारविमर्श और परिकल्पित ऐप्स के लिए सुलभ समाधान तैयार करने के माध्यम
+          से सुलभता और समानुभूति के बारे में सीखें।
+      courseE_simon_says_2019:
+        title: सिमोन कहती है
+        desc: "Jouez à un jeu et réfléchissez aux commandes nécessaires pour obtenir
+          le bon résultat.\r \\ r![image de test] (https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: प्रभावशाली पासवर्ड
+        desc: पड़ताल करें कि लोग पासवर्डों का उपयोग क्यों करते हैं, पासवर्डों का उपयोग
+          करने के लाभों के बारे में जानें, और मज़बूत, सुरक्षित पासवर्ड बनाने और उन्हें
+          रखने की कार्यनीतियों का पता लगाएं।
       timeforcs_demo_crowdsourcing:
-        title: Financement participatif
+        title: क्राउडसोर्सिंग
+        desc: '_जोश नोट: पहले पाठ की तुलना में, मैंने इसे बिल्कुल आम अनप्लग्ड पाठ
+          की तरह फॉर्मेट किया है। _'
       timeforcs_demo_conditionals:
         title: Instructions conditionnelles
-        desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
-          à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
-          je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+        desc: सापेक्ष स्टेटमेंट्स के बारे में सीखने के लिए, छात्र ताश का खेल खेलते
+          हैं और "यदि मैं लाल पत्ता चित्रित करूं, तो मुझे अंक मिलेगा" और "यदि मैं
+          काला कार्ड चित्रित करता हूं, तो आपको अंक मिलेगा” जैसे नियम बनाते है।
+      TheRightApp_2019:
+        title: La Bonne Application
+        desc: "* Tout le monde utilise des ordinateurs ces jours-ci, en particulier
+          des smartphones. \\ R* Les applications smartphone, ou « applications »,
+          aident les gens à faire des choses comme parler à des amis, écouter de la
+          musique, faire des achats, ou tout simplement explorer le Web.\r * Il est
+          important, pour les programmeurs, de comprendre les besoins des autres et
+          de concevoir des applications enles gardant à l'esprit !\r \\ r! [] (https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

@@ -171,6 +171,9 @@ bs-BA:
     Sada, nastavi sa našim <a href='http://studio.code.org'>drugim kursevima</a>,
     ili istraži još mogućnosti na<a href='/learn/beyond'>Nauči više nego u jednom
     Satu Kodiranja</a>.
+  get_a_certificate_message_after_markdown: Klikni na certifikat da bi ga snimio ili
+    isprintao. Sada, nastavi sa našim [drugim kursevima](http://studio.code.org),
+    ili istraži još mogućnosti na [Nauči više nego u jednom Satu Kodiranja](/learn/beyond).
   thanks_for_submitting: Hvala na prijavi!
   if_you_enjoyed: Ako ti je učenje bilo super zabavno, pozovi prijatelje da i oni
     probaju! Želimo da cijeli svijet nauči.

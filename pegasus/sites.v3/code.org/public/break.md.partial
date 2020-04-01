@@ -13,8 +13,9 @@ social:
   "og:video:type": ""
 ---
 <div style="background-color: #00adbc; padding: 25px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+
 <h1>Take a Code Break</h1>
-<div class="col-66" style="padding-right: 30px;">
+<div class="col-66" style="padding-right: 30px; padding-bottom: 20px;">
 
 With schools closed and tens of millions of students at home, join Code.org each week for Code Break — help us build the world's largest live interactive classroom, with weekly challenges to engage students of all abilities, even those without computers.
 
@@ -24,6 +25,8 @@ With schools closed and tens of millions of students at home, join Code.org each
 <li>A <a href="#activities">weekly activity</a> or challenge. <a href="#signup">Sign up</a>.</li>
 <li>Options for beginners, experienced students, and even students without computers.</li>
 </ul>
+
+<a href="https://code.org/codebreaknow"><button>Tune In</button></a>
 
 </div>
 
@@ -68,7 +71,11 @@ Or, follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a hr
 <div style="clear: both;"></div>
 <div style="background-color: #00adbc; padding: 2px; margin-top:40px;"></div>
 <a id="activities"></a>
+
 <h1>Weekly Activities & Past Episodes</h1>
+
+[col-66]
+
 <h3><a href="https://www.facebook.com/Code.org/videos/212168439992679/">Episode 1 with Hill Harper, March 25th</a></h3>
 <p style="font-weight: bold;">Practice making your own algorithms.</p>
 On a computer or tablet:
@@ -77,3 +84,17 @@ On a computer or tablet:
 <li>If you want to practice, try the <a href="https://studio.code.org/s/artist/reset">Artist Hour of Code</a> (optional)</li>
 <li>Check out <a href="http://studio.code.org/s/code-break">Code Break: Lesson 1</a> on Code.org. Try the challenge puzzle, then create and share your own code art!</li>
 </ul>
+
+[/col-66]
+
+[col-33]
+
+<div style="margin:0 auto;"><a href="https://www.facebook.com/Code.org/videos/212168439992679/"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" width="400px" style="padding-left: 10px; padding-bottom: 10px"></a></div>
+
+[/col-33]
+
+[clear-both]
+
+[/clear-both]
+
+<div style="clear: both;"></div>

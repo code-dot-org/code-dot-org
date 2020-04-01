@@ -890,14 +890,20 @@ az:
               name: Şərti ifadələr
             Functions:
               name: funksiyalar
+            Text:
+              name: mətn
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: Şən xəritələr
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimetrlik kağızda proqramlaşdırma
             Relay Programming:
               name: Estafet proqramlaşdırması
-        coursee-2020:
-          stages:
-            Conditionals:
-              name: Şərti ifadələr
+            'Unplugged: Binary':
+              name: İkilik təsvirlər
         coursef-2020:
           stages:
             Internet:
