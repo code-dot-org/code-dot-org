@@ -588,8 +588,13 @@ class MicrobitFirmataClient {
 
     if ((pinNum < 0) || (pinNum > 20)) return;
     this.myPort.write([this.SET_PIN_MODE, pinNum, this.PWM]);
+    this.analogWrite(pinNum, level);
+  }
+
+  analogWrite(pin, value){
+    if ((pin < 0) || (pin > 20)) return;
     this.myPort.write([this.SYSEX_START, this.EXTENDED_ANALOG_WRITE,
-      pinNum, (level & 0x7F), ((level >> 7) & 0x7F),
+      pin, (value & 0x7F), ((value >> 7) & 0x7F),
       this.SYSEX_END]);
   }
 
