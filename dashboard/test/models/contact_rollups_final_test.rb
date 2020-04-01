@@ -8,7 +8,7 @@ class ContactRollupsFinalTest < ActiveSupport::TestCase
     create_list :contact_rollups_final, 3
 
     ContactRollupsFinal.delete_all # Stand in for ContactRollupsFinal.truncate, which tests don't allow b/c modifies DDL
-    ContactRollupsFinal.overwrite_from_processed_table
+    ContactRollupsFinal.insert_from_processed_table
 
     assert_equal 5, ContactRollupsFinal.count
     processed.each do |contact|

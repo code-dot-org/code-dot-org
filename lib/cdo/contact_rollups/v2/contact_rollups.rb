@@ -10,10 +10,10 @@ class ContactRollupsV2
     log_collector.time!('ContactRollupsComparison.delete_all') {ContactRollupsComparison.delete_all}
     log_collector.time!('ContactRollupsComparison.compare_processed_data') {ContactRollupsComparison.compile_processed_data}
 
-    log_collector.time!('ContactRollupsPardotMemory.add_and_update_pardot_ids') {ContactRollupsPardotMemory.add_and_update_pardot_ids}
+    log_collector.time!('ContactRollupsPardotMemory.add_and_update_pardot_ids') {ContactRollupsPardotMemory.add_and_update_pardot_ids(82_574_936)}
 
     # TODO: sync upstream step
 
-    log_collector.time!("ContactRollupsFinal.truncate_and_overwrite!") {ContactRollupsFinal.truncate_and_overwrite!}
+    log_collector.time!("ContactRollupsFinal.overwrite_from_processed_table") {ContactRollupsFinal.overwrite_from_processed_table}
   end
 end
