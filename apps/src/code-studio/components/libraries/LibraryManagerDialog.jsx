@@ -102,8 +102,7 @@ export class LibraryManagerDialog extends React.Component {
     projectLibraries: [],
     classLibraries: [],
     cachedClassLibraries: [],
-    viewingLibrary: {},
-    isViewingCode: false,
+    viewingLibrary: null,
     isLoading: false,
     error: null,
     updatedLibraryChannels: []
@@ -291,7 +290,7 @@ export class LibraryManagerDialog extends React.Component {
       return;
     }
 
-    this.setState({viewingLibrary: library, isViewingCode: true});
+    this.setState({viewingLibrary: library});
   };
 
   closeLibraryManager = () => {
@@ -301,19 +300,13 @@ export class LibraryManagerDialog extends React.Component {
 
   render() {
     const {isOpen} = this.props;
-    const {
-      isViewingCode,
-      importLibraryId,
-      viewingLibrary,
-      isLoading,
-      error
-    } = this.state;
+    const {importLibraryId, viewingLibrary, isLoading, error} = this.state;
     return (
       <div>
         <BaseDialog
           isOpen={isOpen}
           handleClose={this.closeLibraryManager}
-          style={{...styles.dialog, ...(isViewingCode ? styles.hidden : {})}}
+          style={{...styles.dialog, ...(viewingLibrary ? styles.hidden : {})}}
           useUpdatedStyles
         >
           <h1 style={styles.header}>{i18n.libraryManage()}</h1>
@@ -343,11 +336,11 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        {isViewingCode && (
+        {viewingLibrary && (
           <LibraryViewCode
             title={viewingLibrary.name}
             description={viewingLibrary.description}
-            onClose={() => this.setState({isViewingCode: false})}
+            onClose={() => this.setState({viewingLibrary: null})}
             sourceCode={viewingLibrary.source}
           />
         )}
