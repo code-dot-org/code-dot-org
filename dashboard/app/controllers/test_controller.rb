@@ -9,6 +9,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def levelbuilder_access
+    return unless (user = current_user)
+    user.permission = UserPermission::LEVELBUILDER
+    user.save!
+    head :ok
+  end
+
   def enroll_in_plc_course
     return unless (user = current_user)
     course = Course.find_by(name: 'All The PLC Things')
@@ -53,5 +60,19 @@ class TestController < ApplicationController
   def get_i18n_t
     locale = params[:locale] || request.env['cdo.locale']
     render plain: I18n.t(params.require(:key), locale: locale)
+  end
+
+  def create_script
+    script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
+      Script.create!(name: script_name)
+    end
+    render json: {script_name: script.name}
+  end
+
+  def destroy_script
+    script = Script.find_by!(name: params[:script_name])
+    script.destroy
+    head :ok
   end
 end

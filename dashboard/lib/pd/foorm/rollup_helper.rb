@@ -4,33 +4,32 @@ module Pd::Foorm
     include Constants
     extend Helper
 
-    # Parameters:
-    #   parsed_forms: output of FoormParser.parse_forms
-    #   questions_to_summarize: questions to average, in the format:
+    # @param parsed_forms: output of FoormParser.parse_forms
+    # @param questions_to_summarize: questions to average, in the format:
     #     [{question_id: <question_id>, header_text: <friendly text to show, ex 'Teacher Engagement'}]
     # Given above parameters, finds forms where questions to summarize appear and extracts out question
-    # configuration for use by RollupCreator. See get_rollup_question_data for configuration format
+    # configuration for use by RollupCreator.
+    # @return ee get_rollup_question_data
     def self.get_question_details_for_rollup(parsed_forms, questions_to_summarize)
       question_details = get_question_details(parsed_forms, questions_to_summarize)
       return get_rollup_question_data(parsed_forms, question_details)
     end
 
     # get required information about a rollup question.
-    # Parameters:
-    #   questions_and_forms: output of get_question_details
-    #   parsed_forms: output of FoormParser.parse_forms
+    # @param questions_and_forms: output of get_question_details
+    # @param parsed_forms: output of FoormParser.parse_forms
     # Only saves matrix data for now, and will throw out any questions that differ across foorms
-    # output is:
-    # {
-    #   question_id: {
-    #     title: <question_title>,
-    #     rows: <row configuration>,
-    #     column_count: <number_of_columns>,
-    #     type: 'matrix',
-    #     header: <header_text>,
-    #     form_keys: [form ids where question appears]
+    # @return
+    #   {
+    #     question_id: {
+    #       title: <question_title>,
+    #       rows: <row configuration>,
+    #       column_count: <number_of_columns>,
+    #       type: 'matrix',
+    #       header: <header_text>,
+    #       form_keys: [form ids where question appears]
+    #     }
     #   }
-    # }
     def self.get_rollup_question_data(parsed_forms, question_details)
       questions = {}
       question_details.each do |question, question_data|
@@ -90,14 +89,14 @@ module Pd::Foorm
     end
 
     # Finds forms in which question appears
-    # get question details in format:
-    # {
-    #   question_name: {
-    #     type: 'matrix/singleSelect/...',
-    #     form_keys = [form_key1, form_key2, ...],
-    #     header_text: <header_text>
+    # @return
+    #   {
+    #     question_name: {
+    #       type: 'matrix/singleSelect/...',
+    #       form_keys = [form_key1, form_key2, ...],
+    #       header_text: <header_text>
+    #     }
     #   }
-    # }
     def self.get_question_details(parsed_forms, questions_to_summarize)
       question_details = {}
       parsed_forms.each do |form_key, parsed_form|
