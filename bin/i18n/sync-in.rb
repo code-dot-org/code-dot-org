@@ -34,11 +34,11 @@ def get_i18n_strings(level)
   elsif level.is_a?(Level)
     %w(
       display_name
-      failure_message_overrides
-      long_instructions
-      placeholder
       short_instructions
+      long_instructions
+      failure_message_overrides
       teacher_markdown
+      placeholder
       title
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
