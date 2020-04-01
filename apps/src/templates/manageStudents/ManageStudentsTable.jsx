@@ -598,7 +598,9 @@ class ManageStudentsTable extends Component {
               transferStatus={transferStatus}
             />
           )}
-          <DownloadParentLetters />
+          <DownloadParentLetters
+            numStudents={this.studentDataMinusBlanks().length}
+          />
         </div>
         <Table.Provider
           columns={columns}

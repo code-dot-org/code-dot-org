@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import ReactTooltip from 'react-tooltip';
@@ -9,6 +10,10 @@ const styles = {
 };
 
 export default class DownloadParentLetters extends Component {
+  static propTypes = {
+    numStudents: PropTypes.number.isRequired
+  };
+
   render() {
     return (
       <div style={styles.button}>
@@ -23,15 +28,13 @@ export default class DownloadParentLetters extends Component {
         </span>
         <ReactTooltip
           id="download-letter"
-          class="react-tooltip-hover-stay"
           role="tooltip"
           effect="solid"
-          place="top"
-          offset={{bottom: 5}}
-          delayHide={1000}
+          delayShow={500}
         >
           <div>
-            “Download parent letters for all [N] students in this section”
+            Download parent letters for all {this.props.numStudents} students in
+            this section
           </div>
         </ReactTooltip>
       </div>
