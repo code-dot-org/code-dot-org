@@ -719,8 +719,6 @@ en:
     help_support: "Help and support"
     documentation: "Documentation"
     tutorials: "Tutorials"
-  free_response:
-    placeholder: "Enter your answer here"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"
