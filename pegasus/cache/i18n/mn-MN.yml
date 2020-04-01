@@ -19,6 +19,7 @@ mn-MN:
     font-weight:bold">Кодын цагаа төлөвлөх</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Та КШУ-ны багш уу? Бусад CSEdWeek нөөцийг харах</a>'
+  csedweek_banner_teachers_text: Та КШУ-ны багш уу? Бусад CSEdWeek нөөцийг харах
   n_have_learned_an_hoc: "<h1>Оролдох</h1><h2>Кодын цаг</h2><h3># үйлчилсэн</h3>"
   anybody_can_learn: Бүх хүн сурч болно.
   learn_now: Одоо сурах
@@ -425,6 +426,7 @@ mn-MN:
   homepage_action_text_signpetition: Өргөдөлд гарын үсэг зураарай
   homepage_action_text_wincelebritychat: Ододтой чатлах эрх хожоорой
   homepage_signpetition_dropdown: Би &#x25BE;-г зөвшөөрч байна
+  homepage_signpetition_dropdown_text: Зөвшөөрж байна
   homepage_diversity_pledge: Олон талт байдлыг хүлцэх амлалт өгөх
   homepage_banner_text_prizes: 'Кодын Цаг 12-р сарын 7-13-ны өдрүүдэд дахин хийгдэх
     гэж байна. '

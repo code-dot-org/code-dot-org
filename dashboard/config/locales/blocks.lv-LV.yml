@@ -430,17 +430,20 @@ lv:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
       aalab_scene:
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': rādīt
-            '"hide"': paslēpt
+            '"random"': nejaušs
       binary_move:
         options:
           DIR:

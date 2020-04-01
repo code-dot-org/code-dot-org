@@ -1,10 +1,11 @@
+tts true
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit4/code/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit4/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit4/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit4/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit4/code/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit4/{LESSON}'
+curriculum_path 'https://curriculum.code.org/csd-20/unit4/{LESSON}'
 family_name 'csd4'
 version_year '2020'
 project_sharing true

@@ -106,10 +106,10 @@ cs:
               name: Tvé digitální stopy
         course3:
           title: Kurz 3
-          description: Kurz 3 je určen pro studenty, kteří prošli kurzem 3. Studenti
+          description: Kurz 3 je určen pro studenty, kteří prošli kurzem 2. Studenti
             se hlouběji ponoří do programovacích témat z předchozích kurzů a budou
             hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu studenti
-            tvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné
+            vytvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné
             pro 4.-5. ročník ZŠ.
           description_short: Ponořte se ještě hlouběji do programování při vytváření
             her a interaktivních příběhů. Tento kurz navazuje na Kurz 2.
@@ -118,11 +118,11 @@ cs:
             Artist:
               name: Umělec
             'Artist: Functions':
-              name: 'Malíř: Funkce'
+              name: 'Malíř: funkce'
             'Artist: Nested Loops':
               name: 'Umělec: Vnořené cykly'
             'Artist: Patterns':
-              name: 'Umělec: Vzorky'
+              name: 'Umělec: vzory'
             'Bee: Conditionals':
               name: 'Včela: podmínky'
             'Bee: Debugging':
@@ -142,7 +142,7 @@ cs:
             Digital Citizenship:
               name: Digitální občanství
             'Farmer: While Loops':
-              name: Farmář - While cykly
+              name: Farmářka - pokud (while) cykly
             Functional Suncatchers:
               name: Funkční náhrdelníky
             Internet:
@@ -203,11 +203,11 @@ cs:
             Artist:
               name: Umělec
             Artist Binary:
-              name: Umělecké binární
+              name: Binární umělec
             'Artist: For Loops':
               name: 'Umělec: For cykly'
             'Artist: Functions':
-              name: 'Malíř: Funkce'
+              name: 'Malíř: funkce'
             'Artist: Functions with Parameters':
               name: 'Umělec: funkce s parametry'
             'Artist: Variables':
@@ -252,7 +252,7 @@ cs:
             2 a 3.
           stages:
             'Artist: Functions':
-              name: 'Malíř: Funkce'
+              name: 'Malíř: funkce'
             'Artist: Loops':
               name: 'Umělec: Cykly'
             'Artist: Nested Loops':
@@ -266,7 +266,7 @@ cs:
             'Bee: Nested Loops':
               name: 'Včela: vnořené cykly'
             'Farmer: While Loops':
-              name: Farmář - While cykly
+              name: Farmářka - pokud (while) cykly
             'Maze: Sequence':
               name: 'Bludiště: posloupnost'
         usability:
@@ -314,6 +314,8 @@ cs:
           stages:
             Teacher Dashboard:
               name: Katedra učitele
+            Unplugged lessons:
+              name: Lekce bez počítače
         netsim:
           title: Simulátor Internetu
         20-hour:
@@ -432,6 +434,8 @@ cs:
               name: Komprese textu
         algebraPD:
           stages:
+            Course Overview:
+              name: Přehled kurzu
             Evaluation Blocks:
               name: Bloky vyhodnocení
             Teacher Dashboard:
@@ -455,9 +459,11 @@ cs:
             Creating Functions:
               name: Vytvářející funkce
             While Loops:
-              name: While (zatímco) cykly
+              name: While (pokud) cykly
         algebraPD3:
           stages:
+            Course Overview:
+              name: Přehled kurzu
             Evaluation Blocks:
               name: Bloky vyhodnocení
             Strings and Images:
@@ -468,12 +474,16 @@ cs:
               name: Návrhový předpis
         algebraPD-NexTech:
           stages:
+            Course Overview:
+              name: Přehled kurzu
             Evaluation Blocks:
               name: Bloky vyhodnocení
             Teacher Dashboard:
               name: Katedra učitele
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: Přehled kurzu
             Evaluation Blocks:
               name: Bloky vyhodnocení
             Teacher Dashboard:
@@ -539,6 +549,8 @@ cs:
           stages:
             Booleans:
               name: Logické hodnoty
+            Course Overview:
+              name: Přehled kurzu
             Defining Functions:
               name: Definice funkcí
             Defining Variables:
@@ -682,7 +694,7 @@ cs:
           description_short: Programování
           stages:
             While Loops:
-              name: While (zatímco) cykly
+              name: While (pokud) cykly
         gumball:
           title: Gumball Play Lab
           description: Vytvoř si příběh nebo hru s Gumball Play Labem!
@@ -769,6 +781,8 @@ cs:
         algebraPD1:
           title: CS v Algebře část 1
           stages:
+            Course Overview:
+              name: Přehled kurzu
             Evaluation Blocks:
               name: Bloky vyhodnocení
             Teacher Dashboard:
@@ -795,7 +809,7 @@ cs:
         csp5-2017:
           stages:
             While Loops:
-              name: While (zatímco) cykly
+              name: While (pokud) cykly
         CSDU3-Draft:
           description_short: Programování
           stages:
@@ -912,7 +926,7 @@ cs:
             Bounce:
               name: Odraz
             'Farmer: While Loops':
-              name: Farmář - While cykly
+              name: Farmářka - pokud (while) cykly
         csd3-2017:
           title: CSD Jednotka 3 - Animace and hry ('17-'18)
           description_short: Programování
@@ -954,7 +968,7 @@ cs:
             Variables:
               name: Proměnné
             While Loops:
-              name: While (zatímco) cykly
+              name: While (pokud) cykly
         algebrapdnext:
           stages:
             Teacher Dashboard:
@@ -1035,7 +1049,7 @@ cs:
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1043,7 +1057,7 @@ cs:
             'Unplugged: Binary':
               name: 'Nezapojené: binární'
             Artist Binary:
-              name: Umělecké binární
+              name: Binární umělec
             Nested Loops:
               name: Vnořené cykly
             Introduction:
@@ -1241,14 +1255,14 @@ cs:
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
               description_teacher: "Když se studenti dostanou k této lekci, měli by
                 už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu
-                ztížit. \n\n_Cykly dokud (while)_ jsou cykly, které opakují příkazy,
-                když je splněná podmínka. Cykly `dokud` se využívají, když programátor
+                ztížit. \n\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy,
+                když je splněná podmínka. Cykly `pokud` se využívají, když programátor
                 neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky
                 musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka
                 budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou
@@ -1269,6 +1283,22 @@ cs:
                 V této lekci začne vaše třída programovat s podmínkami, což jim umožní
                 napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž
                 se program setká.
+            Conditionals & Loops in Farmer:
+              description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
+                (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky.
+                Procvičováním všech tří se studenti naučí psát komplexní a flexibilní
+                kód.
+            Digital Citizenship:
+              description_teacher: |-
+                Tato lekce vytvořená ve spolupráci s Common Sense Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských informacích, které některé weby požadují. Studenti se naučí rozdíl mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné sdílet online.
+
+                Při učení, jak být dobrým digitálním občanem, studenti také prozkoumají, co znamená být zodpovědný a ohleduplný ke svým offline a online komunitám.
+            'Unplugged: Binary':
+              description_teacher: Přestože si hodně lidí myslí, že binární znamená
+                výhradně nuly a jedničky, studenti se naučí, že informace lze znázornit
+                v různých binárních možnostech. Tato lekce posune celý koncept ještě
+                dále, když znázorní, jak počítač může binárně ukládat i ještě složitější
+                informace (jako jsou obrázky a barvy).
             Debugging in Collector:
               description_teacher: V této online aktivitě si studenti procvičí ladění
                 kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu
@@ -1276,6 +1306,8 @@ cs:
                 cykly.
           title: Kurz D
           assignment_family_title: Kurz D
+          description_short: Rychle zopakuje pojmy z Kurzu C, pak se posune dál s
+            algoritmy, vnořenými cykly, podmínkami a dalším.
         coursee-2017:
           stages:
             Introduction:
@@ -1300,6 +1332,8 @@ cs:
               name: Vnořené cykly
           title: Kurz E
           assignment_family_title: Kurz E
+          description_short: Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále
+            s funkcemi.
         coursef-2017:
           stages:
             Introduction:
@@ -1325,7 +1359,7 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -1338,6 +1372,8 @@ cs:
               name: Budování nadace
             Nested Loops:
               name: Vnořené cykly
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1378,7 +1414,7 @@ cs:
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programování'
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1386,11 +1422,11 @@ cs:
             'Unplugged: Binary':
               name: 'Nezapojené: binární'
             Artist Binary:
-              name: Umělecké binární
+              name: Binární umělec
             Building a Foundation:
               name: Budování nadace
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
         new-express:
           stages:
             Introduction:
@@ -1402,7 +1438,7 @@ cs:
             Events in Bounce:
               name: Události při odrazu
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
             Building a Foundation:
               name: Budování nadace
             Nested Loops:
@@ -1537,15 +1573,21 @@ cs:
             Events in Bounce:
               name: Události při odrazu
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
             Conditionals in Bee:
               name: Pokud/jinak se včelkou
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
             'Loops: Getting Loopy':
               name: Bláznit
             Conditionals with Cards:
               name: Podmínky s kartami
+            Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
             'Functions: Songwriting':
               name: Skládání písniček
+            Functions in Harvester:
+              name: Funkce se zahradnicí
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Envelope Variables:
@@ -1557,7 +1599,7 @@ cs:
             'Unplugged: Binary':
               name: Binární obrázky
             Artist Binary:
-              name: Umělecké binární
+              name: Binární obrázky s umělcem
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1596,7 +1638,7 @@ cs:
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
             Conditionals in Bee:
@@ -1606,9 +1648,13 @@ cs:
             'Unplugged: Binary':
               name: Binární obrázky
             Artist Binary:
-              name: Umělecké binární
+              name: Binární obrázky s umělcem
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
+            Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
             Graph Paper Programming:
               name: Programování na čtverečkovaném papíru
             Relay Programming:
@@ -1708,7 +1754,7 @@ cs:
         csp5-2018:
           stages:
             While Loops:
-              name: While (zatímco) cykly
+              name: While (pokud) cykly
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1736,8 +1782,8 @@ cs:
         dance:
           stages:
             Dance Party:
-              name: Dance Party
-          title: Taneční večírek
+              name: Taneční večírek
+          title: Taneční večírek (2018)
           description_short: Vystupují Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara a dalších 25 umělců!
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
@@ -1754,11 +1800,11 @@ cs:
         dance--draft:
           stages:
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
         dance-draft:
           stages:
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
         dance-extras:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursef-2019:
@@ -1779,8 +1825,8 @@ cs:
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Loops with the Artist:
               name: Kreslení s cykly
             Internet:
@@ -1790,7 +1836,8 @@ cs:
         dance-low:
           stages:
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
+          title: Taneční večírek (špatné připojení)
           description_short: Nakóduj vlastní taneční party, kterou můžeš sdílet s
             přáteli! (Tato verze je pro pomalá připojení)
         coursed-2019:
@@ -1830,7 +1877,7 @@ cs:
                 dostanou studenti příležitost přizpůsobit si svou hru různými stupni
                 rychlosti a zvuky.
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
               description_teacher: Pro krátké opakování (nebo představení) používání
                 cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji
                 dostali Scrata k žaludu.
@@ -1845,20 +1892,27 @@ cs:
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
               description_teacher: "Když se studenti dostanou k této lekci, měli by
                 už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu
-                ztížit.\n\r\n\r\n_Cykly dokud (while)_ jsou cykly, které opakují příkazy,
-                když je splněná podmínka. Cykly `dokud` se využívají, když programátor
+                ztížit. \r\n\r\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy,
+                když je podmínka splněna. Cykly `pokud` se využívají, když programátor
                 neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky
                 musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka
                 budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou
                 znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí
                 pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud
                 nebude země rovná."
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
+              description_student: Když použij cykly `dokud`, můžeš udělat úžasné
+                věci!
+              description_teacher: V této lekci se studenti naučí o cyklech `dokud`
+                (until). Studenti budou stavět programy, v nichž hlavní postavy opakují
+                akce, `dokud` se nedostanou do požadovaného bodu.
             Conditionals with Cards:
               name: Podmínky s kartami
               description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité
@@ -1875,12 +1929,32 @@ cs:
                 V této lekci začne vaše třída programovat s podmínkami, což jim umožní
                 napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž
                 se program setká.
+            Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
+              description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
+                (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky.
+                Procvičováním všech tří se studenti naučí psát komplexní a flexibilní
+                kód.
             Digital Citizenship:
               name: Digitální občanství
+              description_teacher: "Tato lekce vytvořená ve spolupráci s Common Sense
+                Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských
+                informacích, které některé weby požadují. Studenti se naučí rozdíl
+                mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné
+                sdílet online.\r\n\r\nPři učení, jak být dobrým digitálním občanem,
+                studenti také prozkoumají, co znamená být zodpovědný a ohleduplný
+                ke svým offline a online komunitám."
             'Unplugged: Binary':
               name: Binární obrázky
+              description_teacher: Přestože si hodně lidí myslí, že binární znamená
+                výhradně nuly a jedničky, studenti se naučí, že informace lze znázornit
+                v různých binárních možnostech. Tato lekce posune celý koncept ještě
+                dále, když znázorní, jak počítač může binárně ukládat i ještě složitější
+                informace (jako jsou obrázky a barvy).
             Artist Binary:
-              name: Umělecké binární
+              name: Binární obrázky s umělcem
+              description_teacher: Tato série online lekcí naučí studenty, jak vytvářet
+                obrázky jen zapnutím a vypnutím.
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
               description_teacher: V této hodině si studenti procvičí události vystavěním
@@ -1888,7 +1962,10 @@ cs:
                 pomohou studentům projít událostmi. Studenti pak dostanou prostor
                 pro vytvoření své vlastní hry.
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
+              description_teacher: V této lekci studenti naprogramují svůj vlastní
+                interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
+                tento nástroj byl vytvořený tak, aby reagoval na hudbu.
         coursee-2019:
           title: Kurz E (2019)
           stages:
@@ -1915,8 +1992,8 @@ cs:
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Sequencing in the Maze:
               description_teacher: "V této sadě úloh studenti začnou se seznámením
                 se (případně podle stupně pokročilosti třídy se zopakováním si) s
@@ -1943,11 +2020,15 @@ cs:
             Nested Loops in Bee:
               name: Vnořené cykly v bludišti
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
             Conditionals with Cards:
               name: Podmínky s kartami
             Conditionals in Bee:
               name: Pokud/jinak se včelkou
+            Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Envelope Variables:
@@ -1959,13 +2040,13 @@ cs:
             'Unplugged: Binary':
               name: 'Nezapojené: binární'
             Artist Binary:
-              name: Umělecké binární
+              name: Binární umělec
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
         andrea-test:
           stages:
             'null':
@@ -2006,7 +2087,7 @@ cs:
             Your Digital Footprint:
               name: Tvé digitální stopy
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
             'Loops: Getting Loopy':
               name: Bláznit
         pre-express-2019:
@@ -2065,7 +2146,7 @@ cs:
         csp5-2019:
           stages:
             While Loops:
-              name: While (zatímco) cykly
+              name: While (pokud) cykly
         csp1-pilot:
           stages:
             Binary Numbers:
@@ -2082,10 +2163,18 @@ cs:
               name: Vytvoř hru Flappy Bird
             Build a Star Wars Game:
               name: Vytvoř Star Wars hru
+        csp5-pilot-staging:
+          stages:
+            'Loops Practice: While Loops':
+              name: 'Procvičování cyklů: Cykly pokud (while)'
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programování na čtverečkovaném papíru
+        csp5-pilot:
+          stages:
+            'Loops Practice: While Loops':
+              name: 'Procvičování cyklů: Cykly pokud (while)'
         csd2-pilot:
           stages:
             Lists:
@@ -2109,7 +2198,7 @@ cs:
         csl-vn:
           stages:
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
         peru-2019:
           stages:
             Introduction:
@@ -2119,7 +2208,8 @@ cs:
         dance-2019:
           stages:
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
+          title: Taneční večírek (2019)
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
         k5-onlinepd-2019:
           stages:
@@ -2139,6 +2229,10 @@ cs:
               name: Proměnné
             For Loops:
               name: For cykly
+            End-of-course projects:
+              name: Projekty k ukončení kurzu
+            End of Course projects:
+              name: Projekty k ukončení kurzu
         dance-extras-2019:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         time4cs-original-unit-1:
@@ -2189,13 +2283,15 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+            Text:
+              name: Text
         coursea-2020:
           title: Kurz A (2019)
           stages:
             Going Places Safely:
               name: Cestování bezpečně
-            Loops in Ice Age:
-              name: Cykly v době ledové
+            'Programming: Happy Maps':
+              name: Šťastné mapy
         courseb-2020:
           title: Kurz B (2019)
           stages:
@@ -2203,6 +2299,8 @@ cs:
               name: Tvé digitální stopy
             Move It, Move It:
               name: Pohyb, pohyb
+            'Loops: Getting Loopy':
+              name: Bláznit
         coursec-2020:
           title: Kurz C (2019)
           stages:
@@ -2215,6 +2313,8 @@ cs:
                 získat poklad na cestě.
             Binary Bracelets:
               name: Binární náramky
+            'Events: The Big Event':
+              name: Velká událost
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
         coursed-2020:
@@ -2223,6 +2323,7 @@ cs:
             Kromě programování se studenti naučí o digitálním občanství.
           stages:
             'Algorithms: Graph Paper Programming':
+              name: Programování na čtverečkovaném papíru
               description_teacher: Začněme formou "programování", kde bude jeden žák
                 programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost
                 zažít některé ze základních principů programování zábavnou a přístupnou
@@ -2239,6 +2340,7 @@ cs:
                 do týmů a budou spolupracovat na napsání programu postupně po jednom
                 pokynu.
             Debugging in Collector:
+              name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění
                 kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu
                 kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými
@@ -2258,21 +2360,23 @@ cs:
                 pomohou studentům projít událostmi. Studenti pak dostanou prostor
                 pro vytvoření své vlastní hry.
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
               description_teacher: Pro krátké opakování (nebo představení) používání
                 cyklů budou studenti využívat blok `opakuj`, aby co nejefektivněji
                 dostali Scrata k žaludu.
             Loops in Artist:
+              name: Kreslení tvarů s cykly
               description_teacher: Tato lekce staví na pochopení cyklů z předchozí
                 lekce a dává studentům možnost být opravdu kreativní. Tato aktivita
                 se dá využít i pro procvičování ladění, aby si studenti dále vyzkoušeli
                 svoje schopnosti řešit problémy.
             Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Conditionals with Cards:
               name: Podmínky s kartami
               description_teacher: "Tato lekce ukazuje, jak mohou být podmínky využité
@@ -2283,31 +2387,62 @@ cs:
                 počítači rozhodnout se podle informace, která platí v čase, kdy kód
                 poběží.\r\n\r "
             Conditionals in Bee:
+              name: Pokud/jinak se včelkou
               description_teacher: Dosud psali studenti kód, který fungoval pořád
                 stejně vždy, když byl spuštěn. Spolehlivé, ale ne moc flexibilní.
                 V této lekci začne vaše třída programovat s podmínkami, což jim umožní
                 napsat kód, který funguje odlišně podle konkrétních podmínek, s nimiž
                 se program setká.
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
               description_teacher: "Když se studenti dostanou k této lekci, měli by
                 už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu
-                ztížit.\n\r\n\r\n_Cykly dokud (while)_ jsou cykly, které opakují příkazy,
-                když je splněná podmínka. Cykly `dokud` se využívají, když programátor
+                ztížit. \r\n\r\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy,
+                když je podmínka splněna. Cykly `pokud` se využívají, když programátor
                 neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky
                 musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka
                 budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou
                 znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí
                 pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud
                 nebude země rovná."
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
+              description_student: Když použij cykly `dokud`, můžeš udělat úžasné
+                věci!
+              description_teacher: V této lekci se studenti naučí o cyklech `dokud`
+                (until). Studenti budou stavět programy, v nichž hlavní postavy opakují
+                akce, `dokud` se nedostanou do požadovaného bodu.
+            Conditionals & Loops in Harvester:
+              name: Zahradničení s podmínkami
+              description_teacher: Studenti si procvičí cykly `pokud` (while), `dokud`
+                (until) a příkazy `když / jinak`. Všechny tyto bloky využívají podmínky.
+                Procvičováním všech tří se studenti naučí psát komplexní a flexibilní
+                kód.
             'Unplugged: Binary':
-              name: 'Nezapojené: binární'
+              name: Binární obrázky
+              description_teacher: Přestože si hodně lidí myslí, že binární znamená
+                výhradně nuly a jedničky, studenti se naučí, že informace lze znázornit
+                v různých binárních možnostech. Tato lekce posune celý koncept ještě
+                dále, když znázorní, jak počítač může binárně ukládat i ještě složitější
+                informace (jako jsou obrázky a barvy).
             Artist Binary:
-              name: Umělecké binární
+              name: Binární obrázky s umělcem
+              description_teacher: Tato série online lekcí naučí studenty, jak vytvářet
+                obrázky jen zapnutím a vypnutím.
             Digital Citizenship:
               name: Digitální občanství
+              description_teacher: "Tato lekce vytvořená ve spolupráci s Common Sense
+                Education pomáhá studentům naučit se kriticky přemýšlet o uživatelských
+                informacích, které některé weby požadují. Studenti se naučí rozdíl
+                mezi soukromými a osobními infomacemi a rozlišit, co je a není bezpečné
+                sdílet online.\r\n\r\nPři učení, jak být dobrým digitálním občanem,
+                studenti také prozkoumají, co znamená být zodpovědný a ohleduplný
+                ke svým offline a online komunitám."
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
+              description_teacher: V této lekci studenti naprogramují svůj vlastní
+                interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
+                tento nástroj byl vytvořený tak, aby reagoval na hudbu.
         coursee-2020:
           title: Kurz E (2019)
           stages:
@@ -2323,26 +2458,31 @@ cs:
                 vyřešeny nesprávně. Budou muset projít stávající kód, aby odhalili
                 chyby jako jsou nesprávné cykly, chybějící bloky, bloky navíc a bloky,
                 které nefungují.  "
-            Conditionals:
-              name: Podmínky
+            Programming and Loops with the Artist:
+              name: Kreslení s cykly
             Simon Says:
               name: Kuba řekl
             Nested Loops in Bee:
+              name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
+            'Functions: Songwriting':
+              name: Skládání písniček
         coursef-2020:
           title: Kurz F (2019)
           stages:
+            Loops with the Artist:
+              name: Kreslení s cykly
             Nested Loops in the Maze:
               name: Vnořené cykly v bludišti
               description_teacher: V této online aktivitě dostanou studenti příležitost
                 posunout své znalosti cyklů na úplně jinou úrověň. Při hraní se včelkou
                 nebo hry Plants vs Zombies se studenti naučí naprogramovat cyklus
-                uvnitř jiného cyklu. Budou také povzbuzování, aby vymysleli, jak malé
-                změny v některém z cyklů ovlivní program poté, co zmáčknout `Spustit`.
+                uvnitř jiného cyklu. Budou také povzbuzovaní, aby vymysleli, jak malé
+                změny v některém z cyklů ovlivní program poté, co zmáčknou `Spustit`.
             Envelope Variables:
               name: Obálkové proměnné
             For Loop Fun:
@@ -2351,19 +2491,23 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            AI for Oceans:
+              name: AI pomáhá oceánům
         express-2020:
           title: Rychlý kurz (2019)
           stages:
             Dance Party:
-              name: Dance Party
+              name: Taneční večírek
             While Loops in Farmer:
-              name: Cykly dokud (while) s farmářkou
+              name: Cykly pokud (while) s farmářkou
+            Until Loops in Maze:
+              name: Cykly dokud (until) v bludišti
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Hláskovací včelka
             Loops in Ice Age:
-              name: Cykly v době ledové
+              name: Cykly v Době ledové
         csp1-2020:
           stages:
             Binary Numbers:
@@ -2372,3 +2516,37 @@ cs:
           stages:
             Debugging:
               name: Ladění
+        csp3-virtual:
+          description_short: Programování
+          stages:
+            Creating Functions:
+              name: Vytvářející funkce
+        csd3-virtual:
+          description_short: Programování
+          stages:
+            Variables:
+              name: Proměnné
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce
+            Random Numbers:
+              name: Náhodná čísla
+        jess-test-script:
+          stages:
+            Debugging:
+              name: Ladění
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: While (pokud) cykly
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkce
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmy
+            Events:
+              name: Události

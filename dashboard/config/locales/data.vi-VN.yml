@@ -581,6 +581,7 @@ vi:
         csp_applab_functions: Giới thiệu về hàm
         csp_applab_functions_parameters: Hàm và tham số
         csp_applab_loops: Vòng lặp
+        csp_cs_is_changing_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
         mc_intro: Minecraft - Giới thiệu
         mc_repeat: Minecraft - Lặp lại
         mc_if_statements: Minecraft - Lệnh if
@@ -606,6 +607,7 @@ vi:
         hoc_dance_events_2019: Bữa Tiệc Khiêu Vũ 2019 - Sự kiện
         hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
         hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
+        csd_what_computers_are: Máy tính là gì?
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

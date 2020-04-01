@@ -259,20 +259,25 @@ cs-CZ:
         -   Zavolejte funkci "movePlane(name)" zevnitř bloku události tak, aby se letadlo pohybovalo jen tehdy, když je zaškrtnuto zaškrtávací tlačítko.
 
         \_Výzva: letadla se momentálně pohybují příliš rychle. Podaří se vám změnit kód tak, aby se pohybala pomaleji? \_
-      Course 4 Artist Binary 3: Mohl bys nakreslit tento vzor opakováním tří číslicovým
-        binárním řetězcem?
+      Course 4 Artist Binary 1: |-
+        Následující funkce vezme řetězec binary složený z jedniček a nul a řekne malíři, že má podle řetězce postupovat zleva doprava, shora dolů. Malíř vybarví čtverec, když je na řadě 1 a přeskočí čtverec, když vidí 0.
+
+        Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.
+      Course 4 Artist Binary 3: Můžeš nakreslit tento vzor opakováním binárního řetězce
+        složeného ze 3 číslic (nul a jedniček)?
       Course 4 Artist Binary 4: Každý binární řetězec představuje jeden řádek tohoto
         obrázku. Lze je přeuspořádat, aby nakreslil smajlíka místo zamračeného obličeje?
-      Course 4 Artist Binary 5: Který 6 číslicový binární řetězec 11 krát opakovaný
-        nakreslí tento obrázek?
+      Course 4 Artist Binary 5: Jaký binární řetězec složený ze 6 číslic opakovaný
+        11 krát nakreslí tento obrázek?
       Course 4 Artist Binary 6: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
       Course 4 Artist Binary 7: Dokonči tuto kresbu.
       Course 4 Artist Binary Free Play 2: 'Pohraj si: Zde je prázdné plátno pro tebe,
         na které můžeš  čerpat.  Pobav se!'
-      Course 4 Artist Binary Free Play 2a: "Zde je vyšší rozlišení plátna na - 16
-        x 16 pixelů! \\\r \\\r je vidět, co se stane, když začneme být kreativní s
-        bity?"
+      Course 4 Artist Binary Free Play 2a: |-
+        Tady je vyšší rozlišení plátna - 16 x 16 pixelů!
+
+        Co se stane, když začneme být kreativní s bity?
       Course 4 Artist Binary Free Play 2b: Klepnutím sem se zobrazí pokyny.
       Course 4 Artist Binary pre1: "Binární soubor je způsob, jak zobrazit informace
         pomocí jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem
@@ -842,6 +847,10 @@ cs-CZ:
         program který ukáže zbytek mých kamarádů?"'
       course1_playlab_events_challenge2: '"Pojďme na párty! Zadej mým přátelům něco,
         co budou dělat, když na ně klikneš nebo na ně klepneš."'
+      course2_artist_nestedLoops_challenge1: Dokážeš vymyslet, jak udělat takovýto
+        obrázek?
+      course2_artist_nestedLoops_challenge2: Dokážeš vymyslet, jak udělat takovýto
+        obrázek?
       course2_artist_prog_challenge1: Nakresli místnost pro každé ze zvířat. Je spousta
         různých způsobů, jak tuhle hádanku vyřešit, takže se dobře bav. Nejkratší
         možné řešení má 6 bloků, ale použij jich, kolik chceš!
@@ -858,6 +867,8 @@ cs-CZ:
       course2_maze_loops_challenge1: 'Scrat chce teď použít cykly k nalezení žaludu! '
       course2_maze_programming_challenge1: _"Prase se schovává! Pomůžeš mi najít k
         němu cestu?"_
+      course4_artist_binary_challenge2: Dokážeš vytrvat dostatečně dlouho, abys obnovil
+        logo zpátky do normálu?
       course4_artist_fwp_challenge1: Zkus spouštět tento program, provádět změny a
         sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď
         něčím naprosto jiným)
@@ -954,6 +965,19 @@ cs-CZ:
       courseC_maze_programming5: Vyhni se TNT!
       courseC_maze_programming5_2018: Vyhni se TNT!
       courseC_maze_programming5_2019: Vyhni se TNT!
+      courseD_artist_1_2018: 'Nakresli šestiúhelník se stranami dlouhými **50** pixelů. '
+      courseD_artist_1_2018_2019: 'Nakresli šestiúhelník se stranami dlouhými **50**
+        pixelů. '
+      courseD_artist_2_2018: Teď zatoč doprava o **60** stupňů, pak nakresli rovnou
+        čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
+      courseD_artist_2_2018_2019: Teď zatoč doprava o **60** stupňů, pak nakresli
+        rovnou čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
+      courseD_artist_4_2018: Přidej malý tvar na konec čáry!
+      courseD_artist_4_2018_2019: Přidej malý tvar na konec čáry!
+      courseD_artist_6_2018: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých čar
+        dlouhých **25** pixelů s malými otočkami na konci.
+      courseD_artist_6_2018_2019: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých
+        čar dlouhých **25** pixelů s malými otočkami na konci.
       courseD_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \\\r \\\r Poskytli jsme mřížku \"pixelů\",
@@ -971,36 +995,119 @@ cs-CZ:
         \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých
         políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním
         řádku?"
-      courseD_artist_binary4: Mohl bys nakreslit tento vzor opakováním tří číslicovým
-        binárním řetězcem?
-      courseD_artist_binary4_2018: Mohl bys nakreslit tento vzor opakováním tří číslicovým
-        binárním řetězcem?
-      courseD_artist_binary4_2019: Mohl bys nakreslit tento vzor opakováním tří číslicovým
-        binárním řetězcem?
-      courseD_artist_binary6: Který 6 číslicový binární řetězec 11 krát opakovaný
-        nakreslí tento obrázek?
-      courseD_artist_binary6_2018: Který 6 číslicový binární řetězec 11 krát opakovaný
-        nakreslí tento obrázek?
-      courseD_artist_binary6_2019: Který 6 číslicový binární řetězec 11 krát opakovaný
-        nakreslí tento obrázek?
+      courseD_artist_binary2: Spusť tento kód, abys viděl(a), jak umělec používá binární
+        kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2018: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
+      courseD_artist_binary3: Který z těchto binárních řetězců se má provést osmkrát
+        v cyklu, aby se nakreslil následující obrazec?
+      courseD_artist_binary3_2018: Který z těchto binárních řetězců se má provést
+        osmkrát v cyklu, aby se nakreslil následující obrazec?
+      courseD_artist_binary3_2019: Který z těchto binárních řetězců se má provést
+        osmkrát v cyklu, aby se nakreslil následující obrazec?
+      courseD_artist_binary4: Můžeš nakreslit tento vzor opakováním binárního řetězce
+        složeného ze 3 číslic (nul a jedniček)?
+      courseD_artist_binary4_2018: Můžeš nakreslit tento vzor opakováním binárního
+        řetězce složeného ze 3 číslic (nul a jedniček)?
+      courseD_artist_binary4_2019: Můžeš nakreslit tento vzor opakováním binárního
+        řetězce složeného ze 3 číslic (nul a jedniček)?
+      courseD_artist_binary5: |-
+        Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
+
+        Můžeš řetězce přeházet tak, aby se nakreslil usměvavý smajlík místo zamračeného?
+      courseD_artist_binary5_2018: |-
+        Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
+
+        Můžeš řetězce přeházet tak, aby se nakreslil usměvavý smajlík místo zamračeného?
+      courseD_artist_binary5_2019: |-
+        Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
+
+        Můžeš řetězce přeházet tak, aby se nakreslil usměvavý smajlík místo zamračeného?
+      courseD_artist_binary6: Jaký binární řetězec složený ze 6 číslic opakovaný 11
+        krát nakreslí tento obrázek?
+      courseD_artist_binary6_2018: Jaký binární řetězec složený ze 6 číslic opakovaný
+        11 krát nakreslí tento obrázek?
+      courseD_artist_binary6_2019: Jaký binární řetězec složený ze 6 číslic opakovaný
+        11 krát nakreslí tento obrázek?
       courseD_artist_binary7: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
       courseD_artist_binary7_2018: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
       courseD_artist_binary7_2019: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
-      courseD_autorun_binary4_2019: Mohl bys nakreslit tento vzor opakováním tří číslicovým
-        binárním řetězcem?
-      courseD_autorun_binary6_2019: Který 6 číslicový binární řetězec 11 krát opakovaný
-        nakreslí tento obrázek?
+      courseD_artist_binary8: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_2018: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_2019: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_predict1: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_predict1_2018: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binary8_predict1_2019: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_artist_binaryFP: |-
+        Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
+        Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binaryFP8: "**Volná hra:** Nakresli si binárně, co chceš! "
+      courseD_artist_binaryFP_2018: |-
+        Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
+        Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binaryFP_2019: |-
+        Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
+        Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binary_challenge2_2018: Dokážeš vytrvat dostatečně dlouho, abys
+        obnovil logo zpátky do normálu?
+      courseD_artist_binary_challenge2_2019: Dokážeš vytrvat dostatečně dlouho, abys
+        obnovil logo zpátky do normálu?
+      courseD_artist_nestedLoops4: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2018: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2019: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops7: Použij, co ses naučil, abys vytvořil tento obrázek.
+      courseD_artist_nestedLoops7_2018: Použij, co ses naučil, abys vytvořil tento
+        obrázek.
+      courseD_artist_nestedLoops7_2019: Použij, co ses naučil, abys vytvořil tento
+        obrázek.
+      courseD_artist_nestedLoops_challenge1: Dokážeš vymyslet, jak udělat takovýto
+        obrázek?
+      courseD_artist_nestedLoops_challenge1_2018: Dokážeš vymyslet, jak udělat takovýto
+        obrázek?
+      courseD_artist_nestedLoops_challenge1_2019: Dokážeš vymyslet, jak udělat takovýto
+        obrázek?
+      courseD_artist_nestedLoops_challenge2: Oprav kód, abys udělal tento obrázek!
+      courseD_artist_nestedLoops_challenge2_2018: Oprav kód, abys udělal tento obrázek!
+      courseD_artist_nestedLoops_challenge2_2019: Oprav kód, abys udělal tento obrázek!
+      courseD_autorun_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
+      courseD_autorun_binary3_2019: Který z těchto binárních řetězců se má provést
+        osmkrát v cyklu, aby se nakreslil následující obrazec?
+      courseD_autorun_binary4_2019: Můžeš nakreslit tento vzor opakováním binárního
+        řetězce složeného ze 3 číslic (nul a jedniček)?
+      courseD_autorun_binary5_2019: |-
+        Každý binární řetězec představuje jednu řadu čtverců v tomto obrázku.
+
+        Můžeš řetězce přeházet tak, aby se nakreslil usměvavý smajlík místo zamračeného?
+      courseD_autorun_binary6_2019: Jaký binární řetězec složený ze 6 číslic opakovaný
+        11 krát nakreslí tento obrázek?
       courseD_autorun_binary7_2019: Jaký je nejkratší binární řetězec, který lze opakovat
         k nakreslení tohoto obrázku?
+      courseD_autorun_binary8_2019: Dokonči kód, abys vytvořil tento obrázek.
+      courseD_autorun_binary8_predict1_2019: Dokonči kód, abys vytvořil tento obrázek.
       courseD_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals10_2018: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals10_2019: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals5: Posbírej všechen nektar a pokus se použít co nejméně
+        bloků.
+      courseD_bee_conditionals5_2018: Posbírej všechen nektar a pokus se použít co
+        nejméně bloků.
+      courseD_bee_conditionals5_2019: Posbírej všechen nektar a pokus se použít co
+        nejméně bloků.
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9_2018: Sesbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals9_2019: Sesbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
+        med.
+      courseD_bee_conditionals_challenge1_2018: Sesbírej všechen nektar a vyrob všechen
+        med.
+      courseD_bee_conditionals_challenge1_2019: Sesbírej všechen nektar a vyrob všechen
+        med.
       courseD_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
         med.
       courseD_bee_conditionals_challenge2_2018: Sesbírej všechen nektar a vyrob všechen
@@ -1043,28 +1150,111 @@ cs-CZ:
       courseD_bee_nestedLoops9_predict2: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2_2018: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2_2019: Vyrob med na každé plástvi.
+      courseD_bounce_events11s_2018: 'Připoj blok `hoď nový míč` na všechna místa,
+        kde hra vyžaduje nový míč. '
+      courseD_bounce_events11s_2019: 'Připoj blok `hoď nový míč` na všechna místa,
+        kde hra vyžaduje nový míč. '
       courseD_bounce_events12s_2018: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
         i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
         si zahrát i se sluchátky.
       courseD_bounce_events12s_2019: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
         i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
         si zahrát i se sluchátky.
+      courseD_bounce_events1s_2018: Připoj blok k bloku "když šipka vlevo" a zmáčkni
+        "Spustit", abys posunul hráče k síti.
+      courseD_bounce_events1s_2019: Připoj blok k bloku "když šipka vlevo" a zmáčkni
+        "Spustit", abys posunul hráče k síti.
+      courseD_bounce_events2s_2018: Nyní připoj blok k události `když šipka vpravo`,
+        aby se ruka dostala k oběma košům.
+      courseD_bounce_events2s_2019: Nyní připoj blok k události `když šipka vpravo`,
+        aby se ruka dostala k oběma košům.
+      courseD_bounce_events5s_2018: Připoj blok k události `když míč udeří do ruky`,
+        abys zajistil(a), že se míč dostane do koše.
+      courseD_bounce_events5s_2019: Připoj blok k události `když míč udeří do ruky`,
+        abys zajistil(a), že se míč dostane do koše.
+      courseD_bounce_events6s_2018: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
+        se míč odrazil, když zasáhne zeď.
+      courseD_bounce_events6s_2019: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
+        se míč odrazil, když zasáhne zeď.
       courseD_bounce_events7s_2018: Přidej zvukový blok, aby zaznělo švihnutí sítí,
         když míč spadne do koše a zvukový blok, aby zaznělo pískání, když míč mine
         ruku. Zařiď, ať se míč odráží, dokud nebude v konečném cíli.
       courseD_bounce_events7s_2019: Přidej zvukový blok, aby zaznělo švihnutí sítí,
         když míč spadne do koše a zvukový blok, aby zaznělo pískání, když míč mine
         ruku. Zařiď, ať se míč odráží, dokud nebude v konečném cíli.
+      courseD_collector_debugging1: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging1a_2018: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging1a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging2: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging2a_2018: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging2a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging3: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging3a_2018: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging3a_2019: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging4: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging4a_2018: Oprav chyby, abys sesbíral všechny poklady.
+      courseD_collector_debugging4a_2019: Oprav chyby, abys sesbíral všechny poklady.
       courseD_collector_debugging6a_2018: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_nested_loops_challenge2a: Pomoz Laurel sesbírat aspoň dvě
+        hromádky s pokladem.
+      courseD_farmer_condLoops7: 'Výzva: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.'
+      courseD_farmer_condLoops7_2018: 'Výzva: Sesbírej všechnu kukuřici a salát, pak
+        vezmi dýni.'
+      courseD_farmer_condLoops7_2019: 'Výzva: Sesbírej všechnu kukuřici a salát, pak
+        vezmi dýni.'
+      courseD_farmer_condLoops8: Sesbírej všechnu kukuřici a salát, pak vezmi dýni.
+      courseD_farmer_condLoops8_2018: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops8_2019: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9: Sesbírej všechnu kukuřici a salát, pak vezmi dýni.
+      courseD_farmer_condLoops9_2018: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_2019: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_predict1: Sesbírej všechnu kukuřici a salát, pak vezmi
+        dýni.
+      courseD_farmer_condLoops9_predict1_2018: Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni.
+      courseD_farmer_condLoops9_predict1_2019: Sesbírej všechnu kukuřici a salát,
+        pak vezmi dýni.
       courseD_farmer_while1: Posuň se k hromádce hlíny a využij blok `odstraň`, abys
         ji odstranil.
+      courseD_farmer_while10: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while10_2018: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while10_2019: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while10_predict2: 'Srovnej všechny díry za použití co nejméně
+        bloků. '
+      courseD_farmer_while10_predict2_2018: 'Srovnej všechny díry za použití co nejméně
+        bloků. '
+      courseD_farmer_while10_predict2_2019: 'Srovnej všechny díry za použití co nejméně
+        bloků. '
       courseD_farmer_while1_2018: Posuň se k hromádce hlíny a využij blok `odstraň`,
         abys ji odstranil.
       courseD_farmer_while1_2019: Posuň se k hromádce hlíny a využij blok `odstraň`,
         abys ji odstranil.
+      courseD_farmer_while2: Přesuň mě k díře a naplň ji s šesti lopatami hlíny za
+        pomoci bloku `vyplň`.
+      courseD_farmer_while2_2018: Přesuň mě k díře a naplň ji s šesti lopatami hlíny
+        za pomoci bloku `vyplň`.
+      courseD_farmer_while2_2019: Přesuň mě k díře a naplň ji s šesti lopatami hlíny
+        za pomoci bloku `vyplň`.
+      courseD_farmer_while5: 'Pomož mi odstranit všechnu hlínu. '
+      courseD_farmer_while5_2018: 'Pomož mi odstranit všechnu hlínu. '
+      courseD_farmer_while5_2019: 'Pomož mi odstranit všechnu hlínu. '
+      courseD_farmer_while7: 'Zasyp díry na konci každé z cest. '
+      courseD_farmer_while7_2018: 'Zasyp díry na konci každé z cest. '
+      courseD_farmer_while7_2019: 'Zasyp díry na konci každé z cest. '
+      courseD_farmer_while8: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
+      courseD_farmer_while8_2018: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
+      courseD_farmer_while8_2019: 'Výzva: Vyplň tyto díry za použití co nejméně bloků. '
+      courseD_farmer_while9: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while9_2018: 'Srovnej všechny díry za použití co nejméně bloků. '
+      courseD_farmer_while9_2019: 'Srovnej všechny díry za použití co nejméně bloků. '
       courseD_iceage_loops1: Pomoz Scratovi přes led k žaludu!
       courseD_iceage_loops10: Pomoz Scratovi projít celou cestu k žaludu!
       courseD_iceage_loops10_2019: Pomoz Scratovi projít celou cestu k žaludu!
@@ -1132,12 +1322,37 @@ cs-CZ:
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
       courseD_maze_ramp7: Dostaň mne k prasátku!
-      courseD_maze_until1: Dostaň rozhněvaného ptáka k prasátku.
-      courseD_maze_until1_2018: Dostaň rozhněvaného ptáka k prasátku.
-      courseD_maze_until1_2019: Dostaň rozhněvaného ptáka k prasátku.
+      courseD_maze_until1: Dostaň rozhněvaného ptáka k praseti.
+      courseD_maze_until10: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until10_predict2_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until1_2018: Dostaň rozhněvaného ptáka k praseti.
+      courseD_maze_until1_2019: Dostaň rozhněvaného ptáka k praseti.
       courseD_maze_until3: Dostaň ptáka k praseti.
       courseD_maze_until3_2018: Dostaň ptáka k praseti.
       courseD_maze_until3_2019: Dostaň ptáka k praseti.
+      courseD_maze_until5: 'Použij blok `když`, abys pomohl zombie rozhodnout se,
+        kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until5_2018: 'Použij blok `když`, abys pomohl zombie rozhodnout
+        se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until5_2019: 'Použij blok `když`, abys pomohl zombie rozhodnout
+        se, kdy zatočit. Pak dostaň zombie ke slunečnici. '
+      courseD_maze_until6: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until6_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until6_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7_2018: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until7_2019: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until8: Pomož zombie dostat se ke slunečnici.
+      courseD_maze_until9: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
+      courseD_maze_until9_2018: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
+      courseD_maze_until9_2019: "**Výzva:** Vyhni se masožravkám a pomož zombie dostat
+        se ke slunečnici."
       courseD_scrat_ramp1: V této úloze připoj všechny bloky dohromady a klikni "Spustit",
         abys viděl, jak to funguje!
       courseD_scrat_ramp2: Přetáhni další blok `posuň se vpřed` z panelu bloků a připoj
@@ -1151,12 +1366,17 @@ cs-CZ:
         cykly.
       courseE_bee_concept1_2018: Sesbírej všechen nektar z každého květu. Použij vnořené
         cykly.
+      courseE_bee_concept3: Posbírej všechen nektar a pokus se použít co nejméně bloků.
+      courseE_bee_concept3_2018: Posbírej všechen nektar a pokus se použít co nejméně
+        bloků.
       courseE_bee_functions1: Sesbírejte všechen nektar z každého květu.
       courseE_bee_functions3: Funkce jsou bloky kódu, provádějící úkol. Použij funkci
         "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus
         k získání ideálního počtu bloků.
       courseE_bee_functions4: Funkce "posunout a dostat nektar" otočí včelu, sbírá
         nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar.
+      courseE_farmer_concept3: 'Zasyp díry na konci každé z cest. '
+      courseE_farmer_concept3_2018: 'Zasyp díry na konci každé z cest. '
       courseF_artist_for7: Udělej tři malé změny do kódu z poslední úrovni, abys to
         dosáhl!
       courseF_artist_for7_2018: Udělej tři malé změny do kódu z poslední úrovni, abys
@@ -1176,6 +1396,8 @@ cs-CZ:
         pomocí jediného cyklu?
       courseF_bee_conditionals10: Sesbírej všechen nektar a vyrob všechen med.
       courseF_bee_conditionals3: Pomoz včele sebrat nektar ze všech květů.
+      courseF_bee_conditionals5: Posbírej všechen nektar a pokus se použít co nejméně
+        bloků.
       courseF_bee_for4: Pomoz včele sebrat nektar ze všech květů.
       courseF_bee_for4_2018: Pomoz včele sebrat nektar ze všech květů.
       courseF_bee_for4_2019: Pomoz včele sebrat nektar ze všech květů.
@@ -1274,13 +1496,15 @@ cs-CZ:
         mezi všemi čtverci?
       grade5_artist_binary11: 'Pohraj si: Zde je prázdné plátno pro tebe, na které
         můžeš  čerpat.  Pobav se!'
-      grade5_artist_binary4: Mohl bys nakreslit tento vzor opakováním tří číslicovým
-        binárním řetězcem?
+      grade5_artist_binary4: Můžeš nakreslit tento vzor opakováním binárního řetězce
+        složeného ze 3 číslic (nul a jedniček)?
       grade5_artist_binary5: Každý binární řetězec představuje jeden řádek tohoto
         obrázku. Lze je přeuspořádat, aby nakreslil smajlíka místo zamračeného obličeje?
       grade5_artist_binary8: Dokonči tuto kresbu.
-      grade5_artist_binary9: "Zde je vyšší rozlišení plátna na - 16 x 16 pixelů! \\\r
-        \\\r je vidět, co se stane, když začneme být kreativní s bity?"
+      grade5_artist_binary9: |-
+        Tady je vyšší rozlišení plátna - 16 x 16 pixelů!
+
+        Co se stane, když začneme být kreativní s bity?
       k-1 maze 1: Dokážeš mne přesunout na západ k prasátku?
       ramp_artist_loops4_2019: Vytvoř obrázek této hvězdy tak, že zacyklíš řadu bloků
         "posuň se vpřed" a "otoč se vpravo o 144 stupňů".

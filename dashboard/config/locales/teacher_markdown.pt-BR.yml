@@ -1,1 +1,339 @@
---- {}
+---
+pt-BR:
+  data:
+    teacher_markdown:
+      CSD U6 circuit LED map: |-
+        #### Aprendendo mais sobre LEDs
+
+        Nós incluímos LED no pacote da sala de aula do Circuit Playground, mas se você for cuidadoso, poderá usar praticamente todos os LEDs que desejar. Para saber mais sobre o emparelhamento de LEDs com o resistor adequado, consulte [Primer de LED da Adafruit]
+      CSD U6 circuit LED map_2018: |-
+        #### Aprendendo mais sobre LEDs
+
+        Nós incluímos LED no pacote da sala de aula do Circuit Playground, mas se você for cuidadoso, poderá usar praticamente todos os LEDs que desejar. Para saber mais sobre o emparelhamento de LEDs com o resistor adequado, consulte [Primer de LED da Adafruit]
+      CSD U6 circuit LED map_2019: |-
+        #### Aprendendo mais sobre LEDs
+
+        Nós incluímos LED no pacote da sala de aula do Circuit Playground, mas se você for cuidadoso, poderá usar praticamente todos os LEDs que desejar. Para saber mais sobre o emparelhamento de LEDs com o resistor adequado, consulte [Primer de LED da Adafruit]
+      CSD U6 circuit pinMode: |-
+        ### Por que estamos falando de pins?
+
+        Você pode perceber que, nos níveis iniciais desta lição, os alunos estão programando de uma maneira muito diferente que anteriormente, manipulando pinos diretamente. Os comandos "digitalWrite ()" e "pinMode ()"são úteis para configurar nossa fiação rapidamente, mas não são as principais preocupações desta aula. Assim que os alunos estiverem confortáveis ​​em ligar os circuitos de LED, nós apresentaremos técnicas para controlar esses LEDs com os comandos de nível mais alto usados ​​até esse momento (como "led.on ()"e "led.off ()").
+      CSD U6 circuit pinMode_2018: |-
+        ### Por que estamos falando de pins?
+
+        Você pode perceber que, nos níveis iniciais desta lição, os alunos estão programando de uma maneira muito diferente que anteriormente, manipulando pinos diretamente. Os comandos "digitalWrite ()" e "pinMode ()"são úteis para configurar nossa fiação rapidamente, mas não são as principais preocupações desta aula. Assim que os alunos estiverem confortáveis ​​em ligar os circuitos de LED, nós apresentaremos técnicas para controlar esses LEDs com os comandos de nível mais alto usados ​​até esse momento (como "led.on ()"e "led.off ()").
+      CSD U6 circuit pinMode_2019: |-
+        ### Por que estamos falando de pins?
+
+        Você pode perceber que, nos níveis iniciais desta lição, os alunos estão programando de uma maneira muito diferente que anteriormente, manipulando pinos diretamente. Os comandos "digitalWrite ()" e "pinMode ()"são úteis para configurar nossa fiação rapidamente, mas não são as principais preocupações desta aula. Assim que os alunos estiverem confortáveis ​​em ligar os circuitos de LED, nós apresentaremos técnicas para controlar esses LEDs com os comandos de nível mais alto usados ​​até esse momento (como "led.on ()"e "led.off ()").
+      CSD U6 tugowar variables 2: |-
+        ## Exposição a funções com parâmetros
+
+        Os parâmetros são uma maneira poderosa de tornar as funções mais úteis, fornecendo a elas entradas específicas. Nós estamos introduzindo isso aqui principalmente como uma maneira de expor os alunos a esse conceito, mas funções com parâmetros não serão ensinadas completamente até o capítulo 2. Para os alunos que estão interessados ​​em experimentar mais essa técnica agora, direcione-o para a documentação.
+      CSD U6 tugowar variables 2_2018: |-
+        ## Exposição a funções com parâmetros
+
+        Os parâmetros são uma maneira poderosa de tornar as funções mais úteis, fornecendo a elas entradas específicas. Nós estamos introduzindo isso aqui principalmente como uma maneira de expor os alunos a esse conceito, mas funções com parâmetros não serão ensinadas completamente até o capítulo 2. Para os alunos que estão interessados ​​em experimentar mais essa técnica agora, direcione-o para a documentação.
+      CSD U6 tugowar variables 2_2019: |-
+        ## Exposição a funções com parâmetros
+
+        Os parâmetros são uma maneira poderosa de tornar as funções mais úteis, fornecendo a elas entradas específicas. Nós estamos introduzindo isso aqui principalmente como uma maneira de expor os alunos a esse conceito, mas funções com parâmetros não serão ensinadas completamente até o capítulo 2. Para os alunos que estão interessados ​​em experimentar mais essa técnica agora, direcione-o para a documentação.
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Objetivos da discussão
+
+        Depois de assistir ao vídeo, os alunos devem entender que os computadores são máquinas projetadas para ajudar as pessoas a pensar no trabalho, em oposição ao trabalho físico. Dentro de um contexto de solução de problemas, os computadores são projetados para resolver problemas de informação. Sutilezas podem surgir na discussão sobre computadores que possuem mecanismos de saída que lhes permitem realizar trabalho físico (por exemplo, robôs). Tudo bem se os alunos não chegarem a uma conclusão específica sobre todos os dispositivos em que possam pensar.
+
+        Os alunos podem não ter tido tempo para refletir suficientemente sobre a natureza da entrada, saída, armazenamento e processamento; portanto, suas respostas aqui podem ser vagas, especialmente em relação ao processamento. Eles serão capazes de se aprofundar nesses conceitos mais adiante na unidade. Concentre-se na entrada e na saída por enquanto e permita que os alunos discordem sobre detalhes de armazenamento e processamento, informando que terão mais oportunidades de explorar o assunto. Por exemplo, uma fonte comum de controvérsia em relação ao processamento é se alguns dispositivos estão processando informações, ou se o usuário está processando as informações, enquanto o dispositivo simplesmente armazena informações (por exemplo, o ábaco).
+      Overworld Free Play 20x20_2019: Esse nível é livre. Esse não é só um ótimo espaço
+        para identificar estudantes que estão progredindo rápido, como também uma
+        oportunidade para que todos realmente expressem sua criatividade. Como não
+        é solicitado que os estudantes escrevam um código nesse nível, eles podem
+        aplicar o que aprenderam conforme vejam mais sentido. Incentive seus alunos
+        a investirem algum tempo aqui.
+      behaviors free play: |-
+        Essa fase é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseA_artist_loops12_2019: |-
+        Essa é uma atividade livre. Esse é um ótimo lugar não apenas para pontuar alunos que estão progredindo rapidamente, mas também para toda a turma expressar a sua criatividade. Apesar dos alunos não precisarem escrever nem uma linha de código neste nível, fazer isso permitirá que apliquem o conhecimento aprendido de uma forma que tenha mais significado para eles. Encoraje a turma a passar um tempo aqui.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseA_artist_loops_challenge1_2019: |-
+        Essa fase extra é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseA_playLab_events7_2019: |-
+        Essa fase é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseA_video_Stevie: |-
+        \*\* IMPORTANTE: \*\* Esta história deve ser lida em voz alta por um professor que interage com a turma. Encontre o PDF em \[<https://goo.gl/SZHo4zorgeous[0]>.
+
+        * * *
+
+        Se você não conseguir ler a história para sua turma, pergunte aos alunos sobre este vídeo. A intenção não é que os alunos assistam desanimados!
+
+        Q1) Quais são as duas grandes palavras que Stevie aprendeu nessa história?
+
+        Q2) O que significa ser "frustrado"?
+
+        Q3) Você já ficou frustrado?
+
+        Q4) Quais são algumas das ações que você pode fazer quando se sentir frustrado?
+
+        Q5) O que é "persistência"?
+
+        Q6) Por que a persistência é uma coisa boa?
+
+        Q7) Quais são algumas das ações que você pode fazer para se manter persistente?
+      courseA_video_Stevie_2018: |-
+        \*\* IMPORTANTE: \*\* Esta história deve ser lida em voz alta por um professor que interage com a turma. Encontre o PDF em \[<https://goo.gl/SZHo4zorgeous[0]>.
+
+        * * *
+
+        Se você não conseguir ler a história para sua turma, pergunte aos alunos sobre este vídeo. A intenção não é que os alunos assistam desanimados!
+
+        Q1) Quais são as duas grandes palavras que Stevie aprendeu nessa história?
+
+        Q2) O que significa ser "frustrado"?
+
+        Q3) Você já ficou frustrado?
+
+        Q4) Quais são algumas das ações que você pode fazer quando se sentir frustrado?
+
+        Q5) O que é "persistência"?
+
+        Q6) Por que a persistência é uma coisa boa?
+
+        Q7) Quais são algumas das ações que você pode fazer para se manter persistente?
+      courseB_artist_loops10_2019: |-
+        Essa é uma atividade livre. Esse é um ótimo lugar não apenas para pontuar alunos que estão progredindo rapidamente, mas também para toda a turma expressar a sua criatividade. Apesar dos alunos não precisarem escrever nem uma linha de código neste nível, fazer isso permitirá que apliquem o conhecimento aprendido de uma forma que tenha mais significado para eles. Encoraje a turma a passar um tempo aqui.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseB_playLab_events1_2019: Este nível é livre. Como ele está no início da
+        lição, ele serve como uma "caixa de areia" em que os estudantes podem fazer
+        experimentos. Nesse nível não é solicitado que os estudantes escrevem nenhum
+        código, possibilitando que eles façam descobertas por conta própria antes
+        de receberem tarefas específicas. Incentive os seus alunos a investirem algum
+        tempo aqui.
+      courseB_playlab_eventsFP_2019: Esse nível é livre. Esse não é só um ótimo espaço
+        para identificar estudantes que estão progredindo rápido, como também uma
+        oportunidade para que todos realmente expressem sua criatividade. Como não
+        é solicitado que os estudantes escrevam um código nesse nível, eles podem
+        aplicar o que aprenderam conforme vejam mais sentido. Incentive seus alunos
+        a investirem algum tempo aqui.
+      courseB_playlab_events_challenge1_2019: |-
+        Essa fase extra é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseB_video_Unspotted: |-
+        \*\* IMPORTANTE: \*\* Esta história deve ser lida em voz alta por um professor que interage com a turma. Encontre o PDF em [https://goo.gl/q2BQ1a/201/2010].
+
+        * * *
+
+        Se você não conseguir ler a história para sua turma, pergunte aos alunos sobre este vídeo. A intenção não é que os alunos assistam desanimados!
+
+        Q1) Nesta história, o que os "bugs" fazem?
+
+        Q2) Na ciência da computação, os programadores falam sobre "bugs" em seu código. O que você acha que isso significa?
+
+        Q3) Como Jasmine e JD encontraram os bugs que estavam procurando?
+
+        Q4) Você consegue se lembrar dessa maneira de procurar bugs?
+
+        -   Caminhe passo a passo.
+        -   Tudo está bom no primeiro passo?
+        -   Tudo está bom no segundo passo?
+        -   O terceiro?
+        -   Se você encontrar algo errado, procure pelo "bug" nesse local.
+        -   Quando encontrar o bug, dê um nome a ele e diga em voz alta!
+      courseB_video_Unspotted_2018: |-
+        \*\* IMPORTANTE: \*\* Esta história deve ser lida em voz alta por um professor que interage com a turma. Encontre o PDF em [https://goo.gl/q2BQ1a/201/2010].
+
+        * * *
+
+        Se você não conseguir ler a história para sua turma, pergunte aos alunos sobre este vídeo. A intenção não é que os alunos assistam desanimados!
+
+        Q1) Nesta história, o que os "bugs" fazem?
+
+        Q2) Na ciência da computação, os programadores falam sobre "bugs" em seu código. O que você acha que isso significa?
+
+        Q3) Como Jasmine e JD encontraram os bugs que estavam procurando?
+
+        Q4) Você consegue se lembrar dessa maneira de procurar bugs?
+
+        -   Caminhe passo a passo.
+        -   Tudo está bom no primeiro passo?
+        -   Tudo está bom no segundo passo?
+        -   O terceiro?
+        -   Se você encontrar algo errado, procure pelo "bug" nesse local.
+        -   Quando encontrar o bug, dê um nome a ele e diga em voz alta!
+      courseC_PlayLab_eventsFP_2019: |-
+        Essa fase é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseC_artist_loops1a_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops1b_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops2a_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops4a_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops5b_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops6a_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops7a_2019: |-
+        Essa aula contem um **mini projeto** chamado _Stiker Design_.Essa progressão pode soar bastante diferente do que o que foi passado antes no curso para você e seus estudantes. Esses níveis tem algumas novas características que você ode querer explorar antes de começar.
+
+        -   O código que os seus alunos escrevem em um nível será automaticamente transferido pelos outros níveis. Isso os permite construir e interagir gradualmente com suas ideias enquanto aprendem.
+        -   Esses níveis **não são corrigidos** para permitir mais liberdade criativa.
+            Incentive seus alunos a determinar por eles mesmos quando eles tem de completar cada tarefa.
+            Não existe somente uma alternativa correta!
+        -   Soluções de exemplo estão disponíveis neste passo da progressão qual pode ser visualizada abrindo o painel do professor na direita.
+      courseC_artist_loops8a_2019: |-
+        Essa fase é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseD_artist_project1_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #1". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project1a_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #1". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project2_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #1". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project2a_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #2". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project3_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #1". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project3a_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #2". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project4_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #1". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project4a_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #2". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseD_artist_project5_2019: |-
+        Essa lição contém um "mini-projeto" chamado "Floco de Neve #1". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Nesses níveis não há correção das respostas para possibilitar maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+      courseE_aboutme_2: |-
+        Essa lição contém um "mini-projeto" chamado "Poster Interativo". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Esses níveis oferecem maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseE_aboutme_3: |-
+        Essa lição contém um "mini-projeto" chamado "Poster Interativo". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Esses níveis oferecem maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseE_aboutme_4: |-
+        Essa lição contém um "mini-projeto" chamado "Poster Interativo". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Esses níveis oferecem maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+
+        Nesse nível será feita a validação do código de um estudante por meio da verificação das seguintes condições:
+
+        -   Cada aluno deve criar pelo menos três sprites.
+      courseE_aboutme_5: |-
+        Essa lição contém um "mini-projeto" chamado "Poster Interativo". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Esses níveis oferecem maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseE_aboutme_6: |-
+        Essa lição contém um "mini-projeto" chamado "Poster Interativo". Essa série pode parecer muito diferente das que apareceram anteriormente no curso, tanto para você quanto para os estudantes. Esses níveis apresentam algumas características novas que talvez você queira explorar antes de iniciar.
+
+        -   O código que os alunos escrevem em um nível será automaticamente transferido para os níveis seguintes. Isso permite que o desenvolvimento aconteça de forma gradual e que os alunos façam iterações entre suas ideias à medida que aprendem.
+        -   Esses níveis oferecem maior liberdade criativa. Empodere seus alunos a determinarem por conta própria quando uma tarefa está finalizada. Não existe apenas uma resposta correta!
+        -   Exemplos de soluções estão disponíveis para essa parte da série e podem ser visualizados no painel do professor à direita.
+      courseF_artist_for10_2019: |-
+        Essa fase é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.
+      courseF_artist_variablesFP_2019: |-
+        Essa fase é uma "brincadeira livre". Essas fases têm algumas características que talvez você queira explorar antes de começar.
+
+        -   Esses níveis **não são corrigidos**, permitindo que a criatividade se desenvolva. Incentive seus alunos a determinarem por conta própria quando tiverem criado algo que gostem. Não tem resposta certa!
+        -   Soluções de exemplo para essa fase estão disponíveis e podem ser vistas ao abrir o painel do professor à direita.

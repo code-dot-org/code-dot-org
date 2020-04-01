@@ -56,6 +56,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
             headers={CSV_SUBMISSION_STATUS_HEADERS}
           >
             <Button
+              __useDeprecatedTag
               text={i18n.downloadCSV()}
               onClick={() => {}}
               color={Button.ButtonColor.gray}

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import RegionalPartnerPlaybook from './RegionalPartnerPlaybook';
+import RegionalPartnerPlaybook from '@cdo/apps/lib/ui/RegionalPartnerPlaybook';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';

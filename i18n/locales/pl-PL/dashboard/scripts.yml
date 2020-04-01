@@ -4971,6 +4971,7 @@ pl:
               name: Przetwarzanie
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+            0:
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5052,6 +5053,8 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Text:
+              name: Tekst
         coursea-2020:
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: 'Wiek 4-7'
@@ -5060,10 +5063,10 @@ pl:
               name: Bezpiecznie dotrzeć na miejsce
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
+            'Programming: Happy Maps':
+              name: Szczęśliwe Mapy (Happy Maps)
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
-            Loops in Ice Age:
-              name: Pętle w Epoce Lodowcowej
         courseb-2020:
           description_audience: 'Wiek 5-8'
           stages:
@@ -5073,6 +5076,8 @@ pl:
               name: Przenieść go, przenieść go
             Programming in Maze:
               name: Programowanie w labiryncie
+            'Loops: Getting Loopy':
+              name: Poznając pętle
         coursec-2020:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: 'Wiek 6-10'
@@ -5087,11 +5092,15 @@ pl:
               name: Pętle z Rey i BB-8
             Looking Ahead:
               name: Patrząc w przyszłość
+            'Events: The Big Event':
+              name: Wielkie wydarzenie
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
         coursed-2020:
           description_audience: 'Wiek 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programowanie na papierze milimetrowym
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
             Relay Programming:
@@ -5099,13 +5108,13 @@ pl:
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Bee:
               name: Wyrażenie warunkowe w pszczole
             'Unplugged: Binary':
-              name: 'Bez komputera: Binarny'
+              name: Binarne obrazy (Binary Images)
             Artist Binary:
               name: 'Artysta: Binarny'
             Digital Citizenship:
@@ -5115,14 +5124,16 @@ pl:
         coursee-2020:
           description_audience: 'Wiek 8-12'
           stages:
-            Conditionals:
-              name: Zdania z warunkami
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
+            'Functions: Songwriting':
+              name: Pisanie piosenek
         coursef-2020:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description_audience: 'Wiek 9-13'
           stages:
+            Nested Loops in the Maze:
+              name: Zagnieżdżone pętle w labiryncie
             Envelope Variables:
               name: Zmienne w kopertach
             For Loop Fun:
@@ -5209,3 +5220,131 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csp3-virtual:
+          description_short: Programowanie
+          stages:
+            The Need For Programming Languages:
+              name: Potrzeba języków programowania
+            The Need for Algorithms:
+              name: Potrzeba algorytmów
+            Creativity in Algorithms:
+              name: Kreatywność w algorytmach
+            Using Simple Commands:
+              name: Używanie prostych komend
+            Creating Functions:
+              name: Tworzenie Funkcji
+            APIs and Function Parameters:
+              name: API i parametry funkcji
+            Creating functions with Parameters:
+              name: Tworzenie funkcji z parametrami
+            Looping and Random Numbers:
+              name: Zapętlanie i losowe liczby
+            Unit 3 Chapter 1 Assessment:
+              name: Oszacowanie Jednostki 3 rozdziału 1
+        csd3-virtual:
+          description_short: "Programowanie"
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Shapes and Randomization:
+              name: Kształty oraz losowość
+            Variables:
+              name: Zmienne
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+            Sprite Properties:
+              name: Właściwości duszka
+        jess-test-script:
+          stages:
+            new stage:
+              name: nowy etap
+            Debugging:
+              name: Debugowanie
+        csd2-virtual:
+          stages:
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
+            CSS Classes:
+              name: Klasy CSS
+        csp5-virtual:
+          stages:
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+            Multi-screen Apps:
+              name: Aplikacje wieloekranowe
+            Controlling Memory with Variables:
+              name: Kontrolowanie pamięci ze zmiennymi
+            User Input and Strings:
+              name: Wprowadzanie danych użytkownika oraz łańcuchy
+            Boolean Expressions and "If" Statements:
+              name: Wyrażenie boolowskie i instrukcje "if"
+            '"if-else-if" and Conditional Logic':
+              name: '"if-else-if" oraz logika warunkowa'
+            While Loops:
+              name: Pętle Dopóki (While)
+            Loops and Simulations:
+              name: Pętle i symulacje
+            Introduction to Arrays:
+              name: Wprowadzenie do tablic
+            Processing Arrays:
+              name: Przetwarzanie tablic
+            Functions with Return Values:
+              name: Funkcje zwracające wartości
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+        code-break:
+          stages:
+            new stage:
+              name: nowy etap
+            Algorithms:
+              name: Algorytmy
+            Events:
+              name: Zdarzenia

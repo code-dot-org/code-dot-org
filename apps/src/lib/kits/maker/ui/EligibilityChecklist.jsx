@@ -218,6 +218,7 @@ export default class EligibilityChecklist extends React.Component {
               </strong>
             </div>
             <Button
+              __useDeprecatedTag
               color={Button.ButtonColor.orange}
               text={i18n.getCode()}
               onClick={this.confirmEligibility}

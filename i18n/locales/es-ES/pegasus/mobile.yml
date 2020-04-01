@@ -12,6 +12,7 @@
   csedweek_dates: "Del 3 al 9 de Diciembre de 2018"
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Code</a>. Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifica tu Hora de Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
+  csedweek_banner_teachers_text: "¿Eres profesor de informática? Mira otros recursos de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Code</h2><h3># intentaron</h3>"
   anybody_can_learn: "Cualquiera puede aprender."
   learn_now: "Aprende Ahora"
@@ -299,6 +300,7 @@
   homepage_action_text_signpetition: "Firma la petición"
   homepage_action_text_wincelebritychat: "Gane un chat de celebridades"
   homepage_signpetition_dropdown: "Firma nuestra petición &#x25BE;"
+  homepage_signpetition_dropdown_text: "De acuerdo"
   homepage_diversity_pledge: "Abraza la promesa de la diversidad"
   homepage_banner_text_prizes: 'Vuelve la Hora de Code, del 7 al 13 de Diciembre. '
   homepage_banner_link_prizes: 'Únete al mayor evento educativo de la historia. '

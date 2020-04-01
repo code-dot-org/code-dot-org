@@ -30,7 +30,9 @@ class CreateStandardsReportStep1 extends Component {
           {i18n.createStandardsReportStep1() + ' '}
           {i18n.completedUnpluggedLessons()}
         </h3>
-        {this.props.unpluggedLessons.length > 0 && <LessonStatusList />}
+        {this.props.unpluggedLessons.length > 0 && (
+          <LessonStatusList dialog={'CreateStandardsReportDialog'} />
+        )}
         {this.props.unpluggedLessons.length === 0 && (
           <p style={styles.noUnplugged}>
             {i18n.standardsReportNoUnpluggedLessons()}
@@ -39,6 +41,7 @@ class CreateStandardsReportStep1 extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
+            __useDeprecatedTag
             text={i18n.next()}
             onClick={this.props.onNext}
             color={Button.ButtonColor.orange}

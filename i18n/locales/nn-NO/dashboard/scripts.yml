@@ -2479,45 +2479,55 @@ nn:
               name: Fart
             Functions:
               name: Funksjonar
+            Text:
+              name: Tekst
         coursea-2020:
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
           stages:
             Going Places Safely:
               name: Går stader trygt
+            'Programming: Happy Maps':
+              name: Glade Kart
             Events in Play Lab:
-              name: Hendingar i Spel-lab
+              name: Hendingar i Spellab
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Dine digitale fotspor
             Move It, Move It:
               name: Flytt den, flytt den
+            'Loops: Getting Loopy':
+              name: Me blir sløyfete
             Events in Play Lab:
-              name: Hendingar i Spel-lab
+              name: Hendingar i Spellab
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binær armbånd
+            'Events: The Big Event':
+              name: Den store hendinga
             Events in Play Lab:
-              name: Hendingar i Spel-lab
+              name: Hendingar i Spellab
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
             Relay Programming:
               name: Programmeringsstafett
             Conditionals with Cards:
               name: Vilkår med kort
             'Unplugged: Binary':
-              name: 'Trådlaust: Binær'
+              name: Binære bilete
             Artist Binary:
-              name: 'Kunstnar: binær'
+              name: 'Kunstnar: Binærbilete'
             Digital Citizenship:
               name: Digitalt statsborgerskap
             Dance Party:
               name: Dansefest
         coursee-2020:
           stages:
-            Conditionals:
-              name: Betingelser
+            'Functions: Songwriting':
+              name: Låtskriving
         coursef-2020:
           description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
           stages:
@@ -2541,3 +2551,35 @@ nn:
           stages:
             Binary Numbers:
               name: Binære tal
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Lag Funksjonar
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Medan-løkker
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hendingar

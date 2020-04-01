@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 December 2014"
   csedweek_banner_hoc: 'Het <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> "Hour of Code"</a> komt eraan. Dit is een oproep aan alle leerkrachten en organisatoren, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan uw "Hour of Code"</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bent u een Informaticadocent? Zie andere bronnen voor de CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Bent u een Informaticadocent? Zie andere bronnen voor de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>"
   anybody_can_learn: "Iedereen kan het leren."
   learn_now: "Nu leren"
@@ -275,6 +276,7 @@
   homepage_action_text_learn: "Begin met leren"
   homepage_action_text_signpetition: "Teken de petitie"
   homepage_signpetition_dropdown: "Teken onze petitie &#x25BE;"
+  homepage_signpetition_dropdown_text: "Ik ga akkoord"
   homepage_diversity_pledge: "Doe de diversiteits-belofte"
   homepage_banner_text_prizes: 'Het Uur Code komt er weer aan, 7-13 december. '
   homepage_banner_link_prizes: 'Doe mee met het grootste onderwijs-event in de geschiedenis. '

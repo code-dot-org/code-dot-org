@@ -378,6 +378,38 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal teacher_name, lib_response[0][:userName]
   end
 
+  test 'fetch_updated_library_channels returns channel_ids of libraries that have been updated' do
+    updated_channel_id = storage_encrypt_channel_id(1, 1)
+    libraries = [
+      {'channel_id' => updated_channel_id, 'version' => '1'},
+      {'channel_id' => storage_encrypt_channel_id(1, 2), 'version' => '1'},
+      {'channel_id' => storage_encrypt_channel_id(1, 3), 'version' => '1'}
+    ]
+    stub_projects = [
+      {
+        id: 1,
+        value: {'latestLibraryVersion': '2'}.to_json
+      },
+      {
+        id: 2,
+        value: {'latestLibraryVersion': '1'}.to_json
+      },
+      {
+        id: 3,
+        value: {}.to_json
+      }
+    ]
+
+    PEGASUS_DB.stubs(:[]).returns(stub(where: stub_projects))
+
+    updated_channel_ids = ProjectsList.fetch_updated_library_channels(libraries)
+    assert_equal [updated_channel_id], updated_channel_ids
+  end
+
+  test 'fetch_updated_library_channels returns empty array if no libraries given' do
+    assert_equal [], ProjectsList.fetch_updated_library_channels([])
+  end
+
   private
 
   def user_db_result(result)
