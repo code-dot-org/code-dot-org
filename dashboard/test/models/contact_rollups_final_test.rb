@@ -3,6 +3,7 @@ require 'test_helper'
 class ContactRollupsFinalTest < ActiveSupport::TestCase
   test 'insert_from_processed_table properly inserts into contact_rollups_final' do
     clean_tables
+
     processed = create_list :contact_rollups_processed, 5
 
     ContactRollupsFinal.insert_from_processed_table
