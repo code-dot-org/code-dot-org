@@ -4,6 +4,23 @@ student_detail_progress_view true
 has_verified_resources true
 project_sharing true
 
+stage 'Intro to App Lab'
+level 'CSPU5_HOC_virtual1', progression: 'Setting Properties'
+level 'CSPU5_HOC_virtual2', progression: 'Setting Properties'
+level 'CSPU5_HOC_virtual3', progression: 'Setting Properties'
+level 'CSPU5_HOC_virtual4', progression: 'Setting Properties'
+level 'CSPU5_HOC_virtual5', progression: 'Make it Interactive'
+level 'CSPU5_HOC_virtual6', progression: 'Make it Interactive'
+level 'CSPU5_HOC_virtual7', progression: 'Make it Interactive'
+level 'CSPU5_HOC_virtual8', progression: 'Images and Sounds'
+level 'CSPU5_HOC_virtual9', progression: 'Images and Sounds'
+level 'CSPU5_HOC_virtual10', progression: 'Design Mode'
+level 'CSPU5_HOC_virtual11', progression: 'Design Mode'
+level 'CSPU5_HOC_virtual12', progression: 'Design Mode'
+level 'CSPU5_HOC_virtual13', progression: 'Design Mode'
+level 'CSPU5_HOC_virtual14', progression: 'Share Your App'
+level 'CSPU5_HOC_virtual15', progression: 'Share Your App'
+
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'CSP U5L01 SFLP_virtual', named: true
 level 'Introduction to Design Mode_virtual', progression: 'Intro to Design Mode in App Lab'

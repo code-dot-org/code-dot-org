@@ -1,0 +1,7 @@
+name 'CSD games cake challenge choice'
+editor_experiment ''
+display_name 'Challenges'
+description 'Improve your game with these challenges!'
+
+sublevels
+level 'CSD U3 AnimationsMulti defender make it your own_2020'
