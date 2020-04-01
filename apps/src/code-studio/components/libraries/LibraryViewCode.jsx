@@ -27,12 +27,14 @@ const styles = {
 
 export default class LibraryViewCode extends React.Component {
   static propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    library: PropTypes.object.isRequired
+    sourceCode: PropTypes.string.isRequired,
+    buttons: PropTypes.node
   };
 
   componentDidMount() {
-    const {library} = this.props;
     this.editor = new droplet.Editor(this.libraryCodeViewer, {
       mode: 'javascript',
       allowFloatingBlocks: false,
@@ -41,23 +43,25 @@ export default class LibraryViewCode extends React.Component {
       palette: []
     });
 
-    this.editor.setValue(library.source);
+    this.editor.setValue(this.props.sourceCode);
     this.editor.setReadOnly(true);
   }
 
   render() {
-    const {onClose, library} = this.props;
+    const {title, description, onClose, buttons} = this.props;
+
     return (
       <BaseDialog isOpen={true} handleClose={onClose} useUpdatedStyles>
-        <Title>{library.name}</Title>
+        <Title>{title}</Title>
         <Body>
           <div style={{textAlign: 'left'}}>
-            <p style={styles.message}>{library.description}</p>
+            <p style={styles.message}>{description}</p>
             <div className="libraryCodeViewerContainer" style={styles.code}>
               <div ref={node => (this.libraryCodeViewer = node)} />
             </div>
           </div>
         </Body>
+        {buttons}
       </BaseDialog>
     );
   }

@@ -345,8 +345,10 @@ export class LibraryManagerDialog extends React.Component {
         </BaseDialog>
         {isViewingCode && (
           <LibraryViewCode
+            title={viewingLibrary.name}
+            description={viewingLibrary.description}
             onClose={() => this.setState({isViewingCode: false})}
-            library={viewingLibrary}
+            sourceCode={viewingLibrary.source}
           />
         )}
       </div>
