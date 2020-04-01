@@ -34,7 +34,6 @@ module Pd::Foorm
       rollup = {response_count: intermediate_rollup[:response_count], averages: {}}
       intermediate_rollup[:questions].each do |question, answers|
         case question_details[question][:type]
-        # TODO: add other answer types
         when ANSWER_MATRIX
           averages = {}
           overall_sum = 0
@@ -51,7 +50,8 @@ module Pd::Foorm
             rollup[:averages][question][:average] = (overall_sum.to_f / overall_count).round(2)
             rollup[:averages][question][:rows] = averages
           end
-
+        when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+          rollup[:averages][question] = (answers[:sum].to_f / answers[:count]).round(2)
         end
       end
       return rollup
@@ -79,11 +79,12 @@ module Pd::Foorm
             next unless summaries_by_form[form] && summaries_by_form[form][question]
             included_form = true
             case question_data[:type]
-            # TODO: add other answer types
             when ANSWER_MATRIX
               summaries_by_form[form][question].each do |sub_question, answers|
                 add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question][sub_question], answers)
               end
+            when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+              add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question], summaries_by_form[form][question])
             end
           end
         end
@@ -108,12 +109,13 @@ module Pd::Foorm
       intermediate_rollup = {questions: {}, response_count: 0}
       question_details.each do |question, question_data|
         case question_data[:type]
-        # TODO: add other answer types
         when ANSWER_MATRIX
           intermediate_rollup[:questions][question] = {}
           question_details[question][:rows].each_key do |row|
             intermediate_rollup[:questions][question][row] = {sum: 0, count: 0}
           end
+        when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+          intermediate_rollup[:questions][question] = {sum: 0, count: 0}
         end
       end
       intermediate_rollup

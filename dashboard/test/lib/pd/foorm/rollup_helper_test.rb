@@ -4,8 +4,9 @@ module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
     setup_all do
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
+      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
       daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
-      @parsed_forms = FoormParser.parse_forms([daily_survey_day_5])
+      @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
     end
 
     test 'creates question details for CSD rollup' do
@@ -40,6 +41,12 @@ module Pd::Foorm
           type: "matrix",
           header: "Overall Success",
           form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"]
+        },
+        expertise_rating: {
+          title: "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
+          column_count: 5,
+          type: "scale",
+          form_keys: %w(surveys/pd/workshop_daily_survey_day_0.0 surveys/pd/workshop_daily_survey_day_5.0)
         }
       }
 
