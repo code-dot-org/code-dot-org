@@ -7,6 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -14,10 +15,15 @@
           "function(){\n\n}"
         ]
       },
-      "moveForward": null,
-      "moveBackward": null,
-      "turnRight": null,
-      "turnLeft": null
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null
     },
     "edit_code": true,
     "embed": "false",
@@ -67,16 +73,16 @@
     "long_instructions": "# Debugging Unexpected Behavior\r\n\r\nTo understand a new piece of code good programmers often try to **first make a prediction about what will happen before running the program**. \r\n\r\nBy forcing yourself to make a prediction (it doesn't matter if you're right or not) you are immediately alerted to any **unusual or unexpected behavior** and you can ask yourself, *\"Huh? why did it do that?  Was that supposed to happen?\"*  It might not be an error, but you gain invaluable insight and actually **learn faster**.\r\n\r\n**Predict:** For the code that is here, what will happen when the \"Forward!\" button is clicked? \r\n\r\n  * **Study the code** - This program has **two event handlers** listening for events on the same button?\r\n  * **Force yourself to make a prediction!** - \"I don't know\" is not a prediction!. \r\n\r\n**Observe:** Once you've made a prediction, close these instructions and **run the program** to observe what happens.\r\n\r\n**Reflect:** Was your prediction correct? If not what about your mental model might need to change? Experiment with the code to make sure you understand what is happening.",
     "encrypted": "false",
     "mini_rubric": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "widget_mode": "false",
-    "libraries_enabled": "false"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-02 18:01:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-07 18:40:27 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-30 17:37:42 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-03-18 02:16:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-01-02 18:01:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-07 18:40:27 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-30 17:37:42 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-03-18 02:16:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-04-01 21:17:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
