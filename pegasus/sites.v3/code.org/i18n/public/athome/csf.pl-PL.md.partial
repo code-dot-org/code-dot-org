@@ -1,29 +1,31 @@
 ---
-title: Guide for CS Fundamentals teachers during school closures
+title: Poradnik dla nauczycieli podstaw informatyki podczas zamknięcia szkół
 video_player: true
 theme: responsive
 ---
 
-# Guide for CS Fundamentals teachers during school closures
+# Poradnik dla nauczycieli podstaw informatyki podczas zamknięcia szkół
 
-As more schools close in response to the COVID-19 pandemic, many Code.org classrooms are moving to using our CS Fundamentals courses in a virtual setting or giving their students activities to keep learning at home.
+W miarę, jak coraz więcej szkół jest zamykanych w odpowiedzi na pandemię COVID-19, wiele klas korzystających z Code.org przenosi się do korzystania z naszych kursów podstaw informatyki w wirtualnym środowisku lub organizuje uczniom zajęcia, aby kontynuowali naukę w domu.
 
-## Resources to keep learning
+## Zasoby do kontynuowania nauki
 
-Computer science is a great way to add some fun to extended time at home. However, the learning will take a different form when some kids are engaged regularly, some have only a little time, some have computers, and some don’t.
+Informatyka to świetny sposób na dodanie ciekawych zajęć na dłuższy pobyt w domu. Jednakże, nauka różnie przebiega, gdy niektóre dzieci angażują są regularnie, niektóre poświęcają tylko trochę czasu, niektóre mają komputery, a inne nie.
 
-Rather than trying to teach a synchronous class remotely, many teachers will be giving elementary school students activities they can do to maintain their interest as well as providing structure during their time at home.
+Zamiast zdalnie prowadzić zajęcia synchronicznie, wielu nauczycieli zapewnia uczniom aktywności, które mają na celu podtrzymywanie ich zainteresowań, a także starają się lepiej organizować ich działania podczas pobytu w domu.
 
-<strong>We are compiling a list of activities on [code.org\athome](https://code.org/athome)</strong> that are ideal to share with students or families interested in doing some computer science on their own. This list includes activities for students with no computers or internet access.
+<strong> Tworzymy listę działań na [code.org\athome](https://code.org/athome)</strong>, które znakomicie się nadają do dzielenia się nimi z uczniami lub rodzinami zainteresowanymi samodzielnym uczeniem się informatyki. Ta lista obejmuje take zajęcia dla uczniów bez komputerów lub bez dostępu do Internetu.
 
-## Teaching CS Fundamentals Remotely
+## Nauczanie na odległość podstaw informatyki
 
-If your school is asking you to continue to teach virtually and you’re part way through CS Fundamentals, we recommend you have students continue their existing courses at home, but skip the unplugged lessons.
+Jeśli Twoja szkoła prosi Cię o kontynuowanie nauki wirtualnej i część zajęć z podstaw informatyki już się odbyła, to zalecamy, aby uczniowie kontynuowali rozpoczęty kursw domu, ale pomiń lekcje, które miały przebiegać bez komputera.
 
-We designed the lessons in CS Fundamentals for use in a classroom with an actively engaged teacher, but many lessons can adapt well to at-home learning. Learning with CS Fundamentals does require an internet-connected device with a modern browser, something we realize not all students can access right now.
+Lekcje z podstaw informatyki zaprojektowaliśmy do wykorzystania w klasie z aktywnie zaangażowanym nauczycielem, ale wiele lekcji można dobrze dostosować do nauki w domu. Nauka podstaw informatyki wymaga urządzenia podłączonego do Internetu z nowoczesną przeglądarką, ale zdajemy sobie sprawę, że nie wszyscy uczniowie mają teraz taki dostęp.
 
-You can track your [students’ progress](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) to see where they are. You may be able to use resources like video conferencing or email to assist students and provide feedback.
+Możesz śledzić [postępy swoich uczniów](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress), aby zobaczyć, gdzie się znajdują w kursie. Możesz korzystać z zasobów takich, jak wideokonferencja lub poczta e-mail, aby asystować uczniom i przekazywać rady.
 
-## Where can I get help?
+## Gdzie mogę uzyskać pomoc?
 
-You are highly encouraged to share any questions or insights on our [CS Fundamentals Forum](https://forum.code.org/t/supporting-cs-fundamentals-students-during-school-closures/32456) where you can connect with other teachers. You can also email us at [support@code.org](mailto:support@code.org). We are here to help!
+Zachęcamy do dzielenia się wszelkimi pytaniami lub spostrzeżeniami na naszym [ Forum podstaw informatyki](https://forum.code.org/t/supporting-cs-fundamentals-students-during-school-closures/32456), gdzie możesz łączyć się z innymi nauczycielami. Możesz również wysłać do nas wiadomość e-mail na [ support@code.org ](mailto:support@code.org). Jesteśmy tu, aby Ci pomóc!
+
+We also recommend you consider [CSTA's Resources to Support Teaching During COVID-19](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) for an extensive set of options for continuing to teach computer science during school closures.

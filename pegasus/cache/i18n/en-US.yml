@@ -11,9 +11,16 @@
   computer_science_edweek: "Computer Science Education Week"
   csedweek_dates: "December 3-9, 2018"
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
+  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
   csedweek_banner_teachers_text: "Are you a CS teacher? See other CSEdWeek resources"
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
-  try_hoc_num_served_markdown: "# Try an\\n\\n## Hour of Code\\n\\n### %{num} served"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served
   anybody_can_learn: "Anybody can learn."
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
@@ -147,6 +154,7 @@
   enter_valid_age: "Please select a valid age"
   enter_valid_email: "Please enter a valid email address"
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
+  get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   get_a_certificate_message_after_markdown: "Click on the certificate to download or print it. Now, keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Thanks for submitting!"
   if_you_enjoyed: "If you enjoyed learning, ask friends to try it too!  We want the whole world to learn."
@@ -160,6 +168,7 @@
   print_one_here_certificates: "Print one here."
   enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
   share_achievement: "Share your achievement"
+  beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   beyond_hour_message_markdown: "Keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Leaderboards for the Hour of Code."
   support_url: "http://support.code.org/"
@@ -232,6 +241,9 @@
   students_and_lines: "%{students} students have done the Hour of Code and written %{lines} lines of code."
   start_hoc: "Start the Hour of Code now"
   contact_form_topic_press: "Press/media (interview or speaking engagement)"
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Frank Martinez, Teacher'
   stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5th grader'
   stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Teacher'
@@ -328,6 +340,7 @@
   homepage_action_text_learn: "Start learning"
   homepage_action_text_signpetition: "Sign the petition"
   homepage_action_text_wincelebritychat: "Win a celebrity chat"
+  homepage_signpetition_dropdown: "I agree &#x25BE;"
   homepage_signpetition_dropdown_text: "I agree"
   homepage_diversity_pledge: "Take the diversity pledge"
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
@@ -523,9 +536,13 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: "The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13."
+  volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).'
   volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
+  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
+  volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the <a href=\"/volunteer/local\">volunteer map</a>. Fields marked with a <span class=\"form-required-field\">*</span> are required."
   volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
+  volunteer_engineer_submission_intro_links: "Are you a teacher looking for volunteers? Find a local volunteer on our <a href=\"%{volunteer_local}\">volunteer map</a>."
   volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Update your information"
   volunteer_engineer_submission_header_shared: "Information shared with teachers on volunteer map"
@@ -559,6 +576,7 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "Submit"
+  volunteer_engineer_submission_thankyou: "Thank you! Your volunteer information was successfully submitted. Teachers will be using <a href=\"%{url}\">this map</a> to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_thankyou_markdown: "Thank you! Your volunteer information was successfully submitted. Teachers will be using [this map](%{url}) to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_commitment_uncertain: "Uncertain"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 hour per week"
@@ -758,6 +776,7 @@
   dashboard_coursef: 'Course F: '
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
+  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_unplugged_markdown: "If you don't have computers, [try these unplugged lessons](%{unplugged_url}) in your classroom."
   dashboard_tools: 'Tools: '
   dashboard_curriculum: "Curriculum"
@@ -964,10 +983,18 @@
   coursed-2019_name: Course D (2019)
   coursee-2019_name: Course E (2019)
   coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Express Course (2019)
   pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
@@ -1541,6 +1568,7 @@
   hoc_overview_dance_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
   hoc_overview_dance_2019_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!"
   hoc_overview_title: "Hour of Code Activities from Code.org"
+  hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
   hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
   hoc_overview_partner_activities_title: "More activities from partners"
   hoc_overview_partner_activities_body: "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners."
@@ -1641,6 +1669,7 @@
   hoc2018_dance_video_title_what_is_creativity: "What is Creativity?"
   hoc2018_dance_view_creativity_video_playlist: "What is Creativity? View Full Series (5 min)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "In partnership with"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn more</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn more](%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Learn more about Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "About Amazon Future Engineer"

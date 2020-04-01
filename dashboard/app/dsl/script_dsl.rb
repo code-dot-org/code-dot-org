@@ -5,6 +5,7 @@ class ScriptDSL < BaseDSL
     @stage = nil
     @stage_flex_category = nil
     @stage_lockable = false
+    @stage_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -82,6 +83,7 @@ class ScriptDSL < BaseDSL
     if @stage
       @stages << {
         stage: @stage,
+        visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
         stage_extras_disabled: @stage_extras_disabled,
       }.compact
@@ -89,10 +91,26 @@ class ScriptDSL < BaseDSL
     @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
+    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
     @stage_extras_disabled = nil
+  end
+
+  # If visible_after value is blank default to next wednesday at 8am PDT
+  # Otherwise use the supplied time
+  def determine_visible_after_time(visible_after_value)
+    if visible_after_value == ''
+      current_time = Time.now
+      raw_diff_to_wed = 3 - current_time.wday
+      # Make sure it is the next wednesday not the one that just passed
+      diff_to_next_wed = raw_diff_to_wed % 7
+      next_wednesday = current_time + diff_to_next_wed.day
+      visible_after_value = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
+    end
+
+    visible_after_value
   end
 
   def parse_output
@@ -314,6 +332,7 @@ class ScriptDSL < BaseDSL
       t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
       t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
+      t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
       s << t
       stage.script_levels.each do |sl|
         type = 'level'
