@@ -157,27 +157,23 @@ export default class AddParentEmailModal extends React.Component {
               </label>
               <div>
                 <div style={styles.radioButton}>
-                  <label style={styles.input}>
-                    <input
-                      type="radio"
-                      value={'yes'}
-                      disabled={saving}
-                      checked={values['emailOptIn'] === 'yes'}
-                      onChange={this.onEmailOptInChange}
-                    />
-                  </label>
+                  <input
+                    type="radio"
+                    value={'yes'}
+                    disabled={saving}
+                    checked={values['emailOptIn'] === 'yes'}
+                    onChange={this.onEmailOptInChange}
+                  />
                   <label style={styles.label}>{i18n.yes()}</label>
                 </div>
                 <div style={styles.radioButton}>
-                  <label style={styles.input}>
-                    <input
-                      type="radio"
-                      value={'no'}
-                      disabled={saving}
-                      checked={values['emailOptIn'] === 'no'}
-                      onChange={this.onEmailOptInChange}
-                    />
-                  </label>
+                  <input
+                    type="radio"
+                    value={'no'}
+                    disabled={saving}
+                    checked={values['emailOptIn'] === 'no'}
+                    onChange={this.onEmailOptInChange}
+                  />
                   <label style={styles.label}>{i18n.no()}</label>
                 </div>
               </div>
@@ -206,9 +202,6 @@ const styles = {
   container: {
     margin: 20,
     color: color.charcoal
-  },
-  input: {
-    //marginBottom: 4
   },
   emailOptIn: {
     display: 'flex',
