@@ -5,16 +5,16 @@ module Pd::Foorm
     include Constants
     extend Helper
 
-    # result format:
-    # {
-    #   <form_name>.<form_version> =>
+    # @return
     #   {
-    #     num_respondents: 4,
-    #     <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
-    #     <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
-    #     <question3-name> => ['abc', 'def']
+    #     <form_name>.<form_version> =>
+    #     {
+    #       num_respondents: 4,
+    #       <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
+    #       <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
+    #       <question3-name> => ['abc', 'def']
+    #     }
     #   }
-    # }
     # Where the value for a question name is an array answers for a text question
     # or a summary of answer choices for select/matrix
     # questions. If question is a matrix responses will be nested like so:
