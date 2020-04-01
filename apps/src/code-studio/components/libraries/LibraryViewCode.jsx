@@ -28,19 +28,12 @@ const styles = {
 export default class LibraryViewCode extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired,
     library: PropTypes.object.isRequired
   };
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.isOpen === false && this.props.isOpen === true) {
-      this.onOpen();
-    }
-  }
-
-  onOpen = () => {
+  componentDidMount() {
     const {library} = this.props;
-    this.editor = new droplet.Editor(this.refs.libraryCodeViewer, {
+    this.editor = new droplet.Editor(this.libraryCodeViewer, {
       mode: 'javascript',
       allowFloatingBlocks: false,
       enablePaletteAtStart: false,
@@ -50,18 +43,18 @@ export default class LibraryViewCode extends React.Component {
 
     this.editor.setValue(library.source);
     this.editor.setReadOnly(true);
-  };
+  }
 
   render() {
-    const {isOpen, onClose, library} = this.props;
+    const {onClose, library} = this.props;
     return (
-      <BaseDialog isOpen={isOpen} handleClose={onClose} useUpdatedStyles>
+      <BaseDialog isOpen={true} handleClose={onClose} useUpdatedStyles>
         <Title>{library.name}</Title>
         <Body>
           <div style={{textAlign: 'left'}}>
             <p style={styles.message}>{library.description}</p>
             <div className="libraryCodeViewerContainer" style={styles.code}>
-              <div ref="libraryCodeViewer" />
+              <div ref={node => (this.libraryCodeViewer = node)} />
             </div>
           </div>
         </Body>

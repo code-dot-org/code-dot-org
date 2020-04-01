@@ -343,11 +343,12 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        <LibraryViewCode
-          isOpen={isViewingCode}
-          onClose={() => this.setState({isViewingCode: false})}
-          library={viewingLibrary}
-        />
+        {isViewingCode && (
+          <LibraryViewCode
+            onClose={() => this.setState({isViewingCode: false})}
+            library={viewingLibrary}
+          />
+        )}
       </div>
     );
   }
