@@ -607,6 +607,85 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, script_level.hidden_for_section?(section.id)
   end
 
+  def create_visible_after_script
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+    script_level = create :script_level, levels: [level], stage: stage, script: script
+
+    script_level
+  end
+
+  test 'valid_progression_level returns true for script level in stage with past visible after date for levelbuilder' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    levelbuilder = create :levelbuilder
+    script_level = create_visible_after_script
+
+    assert script_level.valid_progression_level?(levelbuilder)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns false for script level in stage with future visible after date for levelbuilder' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    levelbuilder = create :levelbuilder
+    script_level = create_visible_after_script
+
+    assert script_level.valid_progression_level?(levelbuilder)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns true for script level in stage with past visible after date for teacher' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    teacher = create :teacher
+    script_level = create_visible_after_script
+
+    assert script_level.valid_progression_level?(teacher)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns false for script level in stage with future visible after date for teacher' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    teacher = create :teacher
+    script_level = create_visible_after_script
+
+    refute script_level.valid_progression_level?(teacher)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns true for script level in stage with past visible after date for student' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    student = create :student
+    script_level = create_visible_after_script
+
+    assert script_level.valid_progression_level?(student)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns false for script level in stage with future visible after date for student' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    student = create :student
+    script_level = create_visible_after_script
+
+    refute script_level.valid_progression_level?(student)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns true for script level in stage with past visible after date for unsigned in user' do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    script_level = create_visible_after_script
+
+    assert script_level.valid_progression_level?(nil)
+    Timecop.return
+  end
+
+  test 'valid_progression_level returns false for script level in stage with future visible after date for unsigned in user' do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    script_level = create_visible_after_script
+
+    refute script_level.valid_progression_level?(nil)
+    Timecop.return
+  end
+
   private
 
   def create_fake_plc_data
