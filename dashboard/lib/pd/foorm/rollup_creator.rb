@@ -7,29 +7,29 @@ module Pd::Foorm
     include Constants
     extend Helper
 
-    # Parameters:
-    #   summarized_answers: output of WorkshopSummarizer.summarize_answers_by_survey
-    #   question_details: output of RollupHelper.get_question_details_for_rollup
+    # @param summarized_answers: output of WorkshopSummarizer.summarize_answers_by_survey
+    # @param question_details: output of RollupHelper.get_question_details_for_rollup
     # Calculate average responses for each question in question_details for the set of responses in summarized_answers
-    # See get_averaged_rollup for response format
+    # @return See get_averaged_rollup
     def self.calculate_averaged_rollup(summarized_answers, question_details)
       intermediate_rollup = get_intermediate_rollup(summarized_answers, question_details)
       get_averaged_rollup(intermediate_rollup, question_details)
     end
 
-    # Calculates average for each question in intermediate rollup and returns rollup in format below.
-    # {
-    #   response_count: 5
-    #   averages: {
-    #     question_id_1: {
-    #       average: 3.45,
-    #       rows: {
-    #         row_id_1: 2.5,
-    #         row_id_2: 5.6
-    #       }
-    #     },...
+    # Calculates average for each question in intermediate rollup
+    # @return
+    #   {
+    #     response_count: 5
+    #     averages: {
+    #       question_id_1: {
+    #         average: 3.45,
+    #         rows: {
+    #           row_id_1: 2.5,
+    #           row_id_2: 5.6
+    #         }
+    #       },...
+    #     }
     #   }
-    # }
     def self.get_averaged_rollup(intermediate_rollup, question_details)
       rollup = {response_count: intermediate_rollup[:response_count], averages: {}}
       intermediate_rollup[:questions].each do |question, answers|
@@ -56,16 +56,16 @@ module Pd::Foorm
     # Creates an intermediate rollup, which is the
     # sum and count for each question in question_details from summarized_answers.
     # If there was no response for an answer it is not included.
-    # response format:
-    # {
-    #   response_count: 5,
-    #   questions: {
-    #     question_id_1: {
-    #       row_id_1: {sum: 3, count: 1},
-    #       ...
-    #     },...
+    # @return
+    #   {
+    #     response_count: 5,
+    #     questions: {
+    #       question_id_1: {
+    #         row_id_1: {sum: 3, count: 1},
+    #         ...
+    #       },...
+    #     }
     #   }
-    # }
     def self.get_intermediate_rollup(summarized_answers, question_details)
       intermediate_rollup = set_up_intermediate_rollup(question_details)
       summarized_answers.each_value do |summaries_by_form|

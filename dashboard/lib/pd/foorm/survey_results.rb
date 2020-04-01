@@ -4,8 +4,9 @@ module Pd::Foorm
     extend Helper
     include Constants
 
-    # Calculates report for a given workshop id. Will return object of
-    # {
+    # Calculates report for a given workshop id.
+    # @return
+    #   {
     #        course_name: 'CS Principles',
     #        questions: <parsed form, see FoormParser>,
     #        this_workshop: <summarized survey answers, see WorkshopSummarizer>,
@@ -14,7 +15,7 @@ module Pd::Foorm
     #         single_workshop: <rollup for workshop_id, see RollupCreator>,
     #         overall: <rollup for all workshops in course_name, see RollupCreator>
     #       }
-    # }
+    #   }
     # Path for calculating report is:
     # SurveyResults.get_raw_data_for_workshop
     #   summary:
@@ -69,7 +70,7 @@ module Pd::Foorm
         response_count: overall_rollup[:response_count]
       }
 
-      return result_data
+      result_data
     end
 
     # Get rollup for all survey results for the given course
@@ -83,7 +84,7 @@ module Pd::Foorm
     def self.parse_and_summarize_forms(ws_submissions, form_submissions, forms)
       parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
       summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
-      return [parsed_forms, summarized_answers]
+      [parsed_forms, summarized_answers]
     end
 
     def self.get_rollup_from_parsed_data(parsed_forms, summarized_answers, course_name)
@@ -98,9 +99,10 @@ module Pd::Foorm
     # def self.get_rollup_for_facilitator(workshop_id, facilitator_id)
     # end
 
-    # given a workshop id, get the raw data needed for summarizing workshop survey results.
-    # Will return an array of [WorkshopSurveyFoormSubmissions, FoormSubmissions and FoormForms]
-    # for the given workshop id.
+    # Gets the raw data needed for summarizing workshop survey results.
+    # @param workshop id, the workshop to get data from
+    # @return array of [WorkshopSurveyFoormSubmissions, FoormSubmissions and FoormForms]
+    #   for the given workshop id.
     def self.get_raw_data_for_workshop(workshop_id)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
 
