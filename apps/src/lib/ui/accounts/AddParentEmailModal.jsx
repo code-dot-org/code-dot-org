@@ -14,7 +14,7 @@ const STATE_UNKNOWN_ERROR = 'unknown-error';
 export default class AddParentEmailModal extends React.Component {
   static propTypes = {
     /**
-     * @type {function({newEmail: string}):Promise}
+     * @type {function({parentEmail: string, emailOptIn: string}):Promise}
      */
     handleSubmit: PropTypes.func.isRequired,
     /**
@@ -29,11 +29,18 @@ export default class AddParentEmailModal extends React.Component {
       parentEmail: '',
       emailOptIn: ''
     },
-    serverErrors: {
+    errors: {
       parentEmail: '',
       emailOptIn: ''
     }
   };
+
+  focusOnError() {
+    const {errors} = this.state;
+    if (errors.parentEmail) {
+      this.parentEmailInput.focus();
+    }
+  }
 
   save = () => {
     // No-op if we know the form is invalid, client-side.
@@ -54,34 +61,34 @@ export default class AddParentEmailModal extends React.Component {
       this.setState(
         {
           saveState: STATE_INITIAL,
-          serverErrors: error.serverErrors
+          errors: error.serverErrors
         },
-        () => this.changeEmailForm.focusOnAnError()
+        () => this.focusOnError()
       );
     } else {
       this.setState({saveState: STATE_UNKNOWN_ERROR});
     }
   };
 
-  isFormValid(validationErrors) {
-    return Object.keys(validationErrors).every(key => !validationErrors[key]);
+  isFormValid(errors) {
+    return Object.keys(errors).every(key => !errors[key]);
   }
 
   getValidationErrors() {
-    const {serverErrors} = this.state;
+    const {errors} = this.state;
     return {
-      newEmail: serverErrors.newEmail || this.getNewEmailValidationError(),
-      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError()
+      parentEmail: errors.parentEmail || this.getNewEmailValidationError(),
+      emailOptIn: errors.emailOptIn || this.getEmailOptInValidationError()
     };
   }
 
   getNewEmailValidationError = () => {
     const {parentEmail} = this.state.values;
     if (parentEmail.trim().length === 0) {
-      return i18n.changeEmailModal_newEmail_isRequired();
+      return i18n.addParentEmailModal_parentEmail_isRequired();
     }
     if (!isEmail(parentEmail.trim())) {
-      return i18n.changeEmailModal_newEmail_invalid();
+      return i18n.addParentEmailModal_parentEmail_invalid();
     }
     return null;
   };
@@ -95,21 +102,24 @@ export default class AddParentEmailModal extends React.Component {
   };
 
   onParentEmailChange = event => {
-    const {values} = this.state;
+    const {values, errors} = this.state;
     values['parentEmail'] = event.target.value;
-    this.setState({values});
+    errors['parentEmail'] = undefined;
+    this.setState({values, errors});
   };
 
   onEmailOptInChange = event => {
-    const {values} = this.state;
+    const {values, errors} = this.state;
     values['emailOptIn'] = event.target.value;
-    this.setState({values});
+    errors['emailOptIn'] = undefined;
+    this.setState({values, errors});
   };
 
   render = () => {
     const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
+    const saving = saveState === STATE_SAVING;
     return (
       <BaseDialog
         useUpdatedStyles
@@ -120,12 +130,13 @@ export default class AddParentEmailModal extends React.Component {
         <div style={styles.container}>
           <Header text={i18n.addParentEmailModal_title()} />
           <Field
-            label={i18n.addParentEmailModal_newEmail_label()}
-            error={validationErrors.newEmail}
+            label={i18n.addParentEmailModal_parentEmail_label()}
+            error={validationErrors.parentEmail}
           >
             <input
               type="email"
               value={values.parentEmail}
+              disabled={saving}
               tabIndex="1"
               onKeyDown={this.onKeyDown}
               onChange={this.onParentEmailChange}
@@ -133,7 +144,7 @@ export default class AddParentEmailModal extends React.Component {
               maxLength="255"
               size="255"
               style={styles.input}
-              ref={el => (this.newEmailInput = el)}
+              ref={el => (this.parentEmailInput = el)}
             />
           </Field>
           <Field error={validationErrors.emailOptIn}>
@@ -150,6 +161,7 @@ export default class AddParentEmailModal extends React.Component {
                     <input
                       type="radio"
                       value={'yes'}
+                      disabled={saving}
                       checked={values['emailOptIn'] === 'yes'}
                       onChange={this.onEmailOptInChange}
                     />
@@ -161,6 +173,7 @@ export default class AddParentEmailModal extends React.Component {
                     <input
                       type="radio"
                       value={'no'}
+                      disabled={saving}
                       checked={values['emailOptIn'] === 'no'}
                       onChange={this.onEmailOptInChange}
                     />
@@ -174,11 +187,11 @@ export default class AddParentEmailModal extends React.Component {
             confirmText={i18n.addParentEmailModal_save()}
             onConfirm={this.save}
             onCancel={this.cancel}
-            disableConfirm={STATE_SAVING === saveState || !isFormValid}
-            disableCancel={STATE_SAVING === saveState}
+            disableConfirm={saving || !isFormValid}
+            disableCancel={saving}
             tabIndex="2"
           >
-            {STATE_SAVING === saveState && <em>{i18n.saving()}</em>}
+            {saving && <em>{i18n.saving()}</em>}
             {STATE_UNKNOWN_ERROR === saveState && (
               <em>{i18n.changeEmailModal_unexpectedError()}</em>
             )}
