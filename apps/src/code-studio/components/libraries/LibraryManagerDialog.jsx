@@ -5,6 +5,7 @@ import React from 'react';
 import Radium from 'radium';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
@@ -68,6 +69,10 @@ const styles = {
     minHeight: 30,
     whiteSpace: 'pre-wrap',
     lineHeight: 1
+  },
+  updateButtons: {
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };
 
@@ -173,11 +178,11 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   updateLibraryInProject = libraryJson => {
-    const {projectLibraries} = this.state;
     if (!libraryJson) {
       return;
     }
 
+    const {projectLibraries} = this.state;
     let libraries = [...projectLibraries];
     const libraryIndex = libraries.findIndex(
       library => library.channelId === libraryJson.channelId
@@ -254,8 +259,10 @@ export class LibraryManagerDialog extends React.Component {
       // Only pass onUpdate prop for libraries with updates available.
       let onUpdate;
       if (updatedLibraryChannels.includes(library.channelId)) {
-        onUpdate = channelId => {
-          this.fetchLatestLibrary(channelId, this.updateLibraryInProject);
+        onUpdate = () => {
+          this.fetchLatestLibrary(library.channelId, lib =>
+            this.viewCode(lib, DisplayLibraryMode.UPDATE)
+          );
         };
       }
 
@@ -308,15 +315,55 @@ export class LibraryManagerDialog extends React.Component {
     this.props.onClose();
   };
 
+  renderDisplayLibrary = () => {
+    const {displayLibrary, displayLibraryMode} = this.state;
+    const onClose = () =>
+      this.setState({
+        displayLibrary: null,
+        displayLibraryMode: DisplayLibraryMode.NONE
+      });
+
+    if (displayLibraryMode === DisplayLibraryMode.VIEW) {
+      return (
+        <LibraryViewCode
+          title={displayLibrary.name}
+          description={displayLibrary.description}
+          onClose={onClose}
+          sourceCode={displayLibrary.source}
+        />
+      );
+    }
+
+    if (displayLibraryMode === DisplayLibraryMode.UPDATE) {
+      return (
+        <LibraryViewCode
+          title={i18n.updateLibraryConfirmation({
+            libraryName: displayLibrary.name
+          })}
+          description={displayLibrary.description}
+          onClose={onClose}
+          sourceCode={displayLibrary.source}
+          buttons={
+            <div style={styles.updateButtons}>
+              <Button
+                text={i18n.cancel()}
+                color={Button.ButtonColor.gray}
+                onClick={onClose}
+              />
+              <Button
+                text={i18n.update()}
+                onClick={() => this.updateLibraryInProject(displayLibrary)}
+              />
+            </div>
+          }
+        />
+      );
+    }
+  };
+
   render() {
     const {isOpen} = this.props;
-    const {
-      importLibraryId,
-      displayLibrary,
-      displayLibraryMode,
-      isLoading,
-      error
-    } = this.state;
+    const {importLibraryId, displayLibrary, isLoading, error} = this.state;
 
     return (
       <div>
@@ -353,19 +400,7 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        {displayLibraryMode === DisplayLibraryMode.VIEW && displayLibrary && (
-          <LibraryViewCode
-            title={displayLibrary.name}
-            description={displayLibrary.description}
-            onClose={() =>
-              this.setState({
-                displayLibrary: null,
-                displayLibraryMode: DisplayLibraryMode.NONE
-              })
-            }
-            sourceCode={displayLibrary.source}
-          />
-        )}
+        {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );
   }
