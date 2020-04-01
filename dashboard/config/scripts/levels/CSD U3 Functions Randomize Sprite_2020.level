@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Making Changes to Functions\r\n\r\nA nice benefit of using functions to remove repeated code is that you can now easily make changes to multiple places in your code. Just change how you create the functions, and your program will now use the new code everywhere your function is called.\r\n\r\n# Do This\r\n\r\nMake changes to the `setFlyer` function so that the flyer starts at a random Y location between 0 and 400, and moves at a random velocity every time he is reset.",
+    "long_instructions": "# Making Changes to Functions\r\n\r\nA nice benefit of using functions to remove repeated code is that you can now easily make changes to multiple places in your code. Just change how you create the functions, and your program will now use the new code everywhere your function is called.\r\n\r\n# Do This\r\n\r\nMake changes to the `setFlyer` function so that the flyer starts at a random Y location between 0 and 400, and moves at a random velocity every time it is reset.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -71,11 +71,17 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_gamelab_functions",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "display_name": "Making Changes to Functions",
+    "bubble_choice_description": "Change the setFlyer() function so that the flyer appears at a random y with random velocity",
+    "thumbnail_url": "https://images.code.org/8e641dc7060e5d13e58efb8f522db9ab-image-1585697491559.png",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 22:47:07 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:47:53 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 22:57:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:15:47 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-05 22:47:07 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:47:53 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 22:57:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-03 07:15:47 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 23:32:22 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
