@@ -15,6 +15,7 @@ import {
   Facilitator,
   ProgramManager
 } from './permission';
+import queryString from 'query-string';
 import $ from 'jquery';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
@@ -59,6 +60,10 @@ export class WorkshopIndex extends React.Component {
     this.context.router.push('/survey_results');
   };
 
+  handleLegacySurveySummariesClick = () => {
+    this.context.router.push('/legacy_survey_summaries');
+  };
+
   handleFilterClick = e => {
     e.preventDefault();
     this.context.router.push('/workshops/filter');
@@ -87,6 +92,9 @@ export class WorkshopIndex extends React.Component {
       Organizer,
       ProgramManager
     );
+    const canSeeLegacySurveySummaries =
+      queryString.parse(window.location.search).legacysurveys &&
+      this.props.permission.hasAny(Facilitator, CsfFacilitator);
 
     return (
       <div>
@@ -108,6 +116,11 @@ export class WorkshopIndex extends React.Component {
           {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (
             <Button onClick={this.handleSurveyResultsClick}>
               Facilitator Survey Results
+            </Button>
+          )}
+          {canSeeLegacySurveySummaries && (
+            <Button onClick={this.handleLegacySurveySummariesClick}>
+              Legacy Facilitator Survey Summaries
             </Button>
           )}
           <Button

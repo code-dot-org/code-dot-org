@@ -16,6 +16,7 @@ zh-TW:
     style="color: white; text-decoration:underline; font-weight:bold">開始計畫您的活動吧！</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
+  csedweek_banner_teachers_text: 您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源
   n_have_learned_an_hoc: "<h1>立刻嘗試</h1><h3> # 人已體驗的</h3><h2>一小時玩程式活動</h2>"
   anybody_can_learn: 任何人都可以學習。
   learn_now: 現在就開始學習
@@ -306,6 +307,7 @@ zh-TW:
   homepage_action_text_signpetition: 在意願書上簽名
   homepage_action_text_wincelebritychat: 贏得與名人聊天的機會
   homepage_signpetition_dropdown: 我同意 &#x25BE;
+  homepage_signpetition_dropdown_text: 我同意
   homepage_diversity_pledge: 承諾多樣性
   homepage_banner_text_prizes: '一小時玩程式（Hour of Code）又來囉，就在 12 月的 7 - 13 日。 '
   homepage_banner_link_prizes: '參加史上最大的學習盛會。 '

@@ -212,6 +212,10 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: projectsList
       };
     case PUBLISH_SUCCESS:
+      if (!state.projects) {
+        // We haven't loaded the projects and therefore have nothing to update.
+        return state;
+      }
       var publishedChannel = action.lastPublishedProjectData.channel;
 
       var publishedProjectIndex = state.projects.findIndex(
@@ -468,6 +472,29 @@ export function unpublishProject(projectId) {
     });
   };
 }
+
+export const updateProjectLibrary = (projectId, newData) => {
+  return dispatch => {
+    fetchProjectToUpdate(projectId, (error, project) => {
+      if (error) {
+        console.error(error);
+      } else {
+        let updatedData = {...project, ...newData};
+        $.ajax({
+          url: `/v3/channels/${project.id}`,
+          method: 'POST',
+          type: 'json',
+          contentType: 'application/json;charset=UTF-8',
+          data: JSON.stringify(updatedData)
+        });
+        // the channels api returns `channel` as `id` but our redux object
+        // expects `channel`. Adding that here.
+        updatedData.channel = project.id;
+        dispatch(updatePersonalProjectData(project.id, updatedData));
+      }
+    });
+  };
+};
 
 export const unpublishProjectLibrary = (
   projectId,

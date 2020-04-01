@@ -173,11 +173,13 @@ class WebLabView extends React.Component {
               <p>{weblabMsg.errorSavingProject()}</p>
               <div style={{position: 'relative'}}>
                 <Button
+                  __useDeprecatedTag
                   onClick={() => window.location.reload()}
                   text={msg.reloadPage()}
                   color={Button.ButtonColor.gray}
                 />
                 <Button
+                  __useDeprecatedTag
                   style={{position: 'absolute', right: 0}}
                   onClick={this.closeErrorDialog}
                   text={msg.dialogOK()}

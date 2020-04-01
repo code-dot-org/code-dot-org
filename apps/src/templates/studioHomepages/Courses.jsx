@@ -7,6 +7,7 @@ import {CourseBlocksAll} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -69,6 +70,7 @@ class Courses extends Component {
         >
           {isSignedOut && (
             <Button
+              __useDeprecatedTag
               href="/users/sign_up"
               color={Button.ButtonColor.gray}
               text={i18n.createAccount()}
@@ -78,10 +80,13 @@ class Courses extends Component {
 
         <ProtectedStatefulDiv ref="flashes" />
 
+        <SpecialAnnouncement isTeacher={isTeacher} />
+
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {isEnglish && isTeacher && (
           <div>
-            {specialAnnouncement && (
+            {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
+            {specialAnnouncement && false && (
               <SpecialAnnouncementActionBlock
                 announcement={specialAnnouncement}
               />

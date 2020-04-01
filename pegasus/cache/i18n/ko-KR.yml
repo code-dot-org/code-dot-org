@@ -19,6 +19,7 @@ ko-KR:
     Code 행사를 준비하세요.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
+  csedweek_banner_teachers_text: 컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.
   n_have_learned_an_hoc: "<h1>Hour of Code를</h1> <h2>체험하세요</h2> <h3># served</h3>"
   anybody_can_learn: 누구나 배울 수 있습니다.
   learn_now: 지금 배워보세요.
@@ -348,6 +349,7 @@ ko-KR:
   homepage_action_text_learn: 학습 시작
   homepage_action_text_signpetition: 청원서에 서명하세요
   homepage_signpetition_dropdown: 청원서에 서명하세요
+  homepage_signpetition_dropdown_text: 동의합니다
   homepage_diversity_pledge: 다양성 존중 서약하기
   homepage_banner_text_prizes: '12월 7일 - 13일, Hour of Code가 다시 찾아옵니다. '
   homepage_banner_link_prizes: '역사상 가장 큰 학습 이벤트 참가하세요. '

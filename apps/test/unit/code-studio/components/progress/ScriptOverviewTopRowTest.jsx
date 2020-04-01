@@ -42,11 +42,13 @@ describe('ScriptOverviewTopRow', () => {
         <div>
           <div>
             <Button
+              __useDeprecatedTag
               href="/s/test-script/next"
               text={i18n.tryNow()}
               size={Button.ButtonSize.large}
             />
             <Button
+              __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
@@ -75,6 +77,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           href="/s/test-script/next"
           text={i18n.continue()}
           size={Button.ButtonSize.large}
@@ -95,6 +98,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           href="/s/test-script/next"
           text={i18n.printCertificate()}
           size={Button.ButtonSize.large}

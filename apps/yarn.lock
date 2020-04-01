@@ -1526,10 +1526,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.6":
-  version "3.5.6"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.6.tgz#bdb05285cc9fbfd440449e67ff3e913365e94192"
-  integrity sha512-99e8mQpNkQWyvCZfv892mTDbspzUibnUrzQpN2LME69s13l69mJpuZxlePmO2IlW7yyllQ8y+LMcGCZoB8LIIQ==
+"@code-dot-org/blockly@3.5.8":
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.8.tgz#f3b9818dda8f955bce78b4454631da9c3766177f"
+  integrity sha512-X39kzCcfS8FsLcO5BTP3PQQHoHjAQ7VrSoplyNNR/hyAMRmddLZKdOBSNdyV+6YwuZDgu9/CMlJ76qeqRMCiMQ==
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
