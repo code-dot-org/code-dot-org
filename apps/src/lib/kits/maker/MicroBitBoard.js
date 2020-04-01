@@ -10,7 +10,6 @@ import {
 } from './MicroBitComponents';
 import {MicroBitButton} from './Button';
 import {ExternalLed} from './LedMatrix';
-import five from "@code-dot-org/johnny-five";
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -103,52 +102,16 @@ export default class MicroBitBoard extends EventEmitter {
 
   createButton(pin) {
     const newButton = new MicroBitButton({mb: this.boardClient_, pin});
-    console.log("Made a button");
     this.dynamicComponents_.push(newButton);
     return newButton;
   }
 
+  // TODO
   /**
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
-    this.dynamicComponents_.forEach(component => {
-      // For now, these are _always_ Leds.  Complain if they're not.
-      if (component instanceof ExternalLed) {
-        component.stop();
-      } else if (component instanceof five.Button) {
-        // No special cleanup required for five.Button
-      } else {
-        throw new Error('Added an unsupported component to dynamic components');
-      }
-    });
-    this.dynamicComponents_.length = 0;
-
-    if (this.prewiredComponents_) {
-      cleanupMicroBitComponents(
-        this.prewiredComponents_,
-        true /* shouldDestroyComponents */
-      );
-    }
-    this.prewiredComponents_ = null;
-
-    if (this.boardClient_) {
-      this.boardClient_.reset();
-    }
-    return new Promise(resolve => {
-      // It can take a moment for the reset() command to reach the board, so defer
-      // closing the serialport for a moment.
-      setTimeout(() => {
-        // Close the serialport, cleaning it up properly so we can open it again
-        // on the next run.
-        // Note: This doesn't seem to be necessary when using browser-serialport
-        // and the Chrome App connector, but it is required for native
-        // node serialport in the Code.org Maker App.
-        this.boardClient_.disconnect();
-        this.boardClient_ = null;
-        resolve();
-      }, 50);
-    });
+    return Promise.resolve();
   }
 
   /**

@@ -165,7 +165,6 @@ class MicrobitFirmataClient {
     // Use the given port. Assume the port has been opened by the caller.
 
     function dataReceived(data) {
-      //console.log("Data Received");
       if ((this.inbufCount + data.length) < this.inbuf.length) {
         this.inbuf.set(data, this.inbufCount);
         this.inbufCount += data.length;
@@ -201,12 +200,6 @@ class MicrobitFirmataClient {
     }
   }
 
-  reset() {
-    if(this.myPort){
-      this.myPort.write([this.SYSTEM_RESET]);
-    }
-  }
-
   // Internal: Connecting/Disconnecting Support
 
   boardVersionFromSerialNumber(usbSerialNumber) {
@@ -229,7 +222,6 @@ class MicrobitFirmataClient {
   // Internal: Parse Incoming Firmata Messages
 
   processFirmatMessages() {
-    //console.log("Process Firmata Messages");
     // Process and remove all complete Firmata messages in inbuf.
 
     if (!this.inbufCount) return; // nothing received
@@ -264,7 +256,7 @@ class MicrobitFirmataClient {
     // Attempt to process the command starting at the given index in inbuf.
     // If the command is incomplete, return -1.
     // Otherwise, process it and return the number of bytes in the entire command.
-    //console.log("Dispatch Command");
+
     var cmdByte = this.inbuf[cmdStart];
     var chanCmd = cmdByte & 0xF0;
     var argBytes = 0;
@@ -301,7 +293,6 @@ class MicrobitFirmataClient {
   }
 
   dispatchSysexCommand(sysexStart, argBytes) {
-    console.log("Sysex");
     var sysexCmd = this.inbuf[sysexStart];
     switch (sysexCmd) {
       case this.MB_REPORT_EVENT:
@@ -355,7 +346,6 @@ class MicrobitFirmataClient {
   }
 
   receivedEvent(sysexStart, argBytes) {
-    console.log("Event");
     const MICROBIT_ID_BUTTON_A = 1;
     const MICROBIT_ID_BUTTON_B = 2;
     const MICROBIT_BUTTON_EVT_DOWN = 1;
@@ -480,8 +470,6 @@ class MicrobitFirmataClient {
     // The optional mode can be 0 (no pullup or pulldown), 1 (pullup resistor),
     // or 2 (pulldown resistor). It defaults to 0.
 
-    console.log("Tracked the digital pin");
-
     if ((pinNum < 0) || (pinNum > 20)) return;
     var port = pinNum >> 3;
     var mode = this.DIGITAL_INPUT; // default
@@ -493,7 +481,7 @@ class MicrobitFirmataClient {
   }
 
   digitalRead(pin, callback) {
-    this.addFirmataEventListener(callback);
+    this.addFirmataUpdateListener(callback);
     this.trackDigitalPin(pin);
   }
 
