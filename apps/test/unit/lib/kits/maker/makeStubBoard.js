@@ -27,6 +27,8 @@ export class MicrobitStubBoard {
 
   digitalWrite(pinNum, value) {}
 
+  analogWrite(pinNum, value) {}
+
   displayPlot() {}
 
   displayClear() {}

@@ -66,6 +66,18 @@ class ManageStudentActionsCell extends Component {
     })
       .done(() => {
         removeStudent(id);
+        firehoseClient.putRecord(
+          {
+            study: 'teacher-dashboard',
+            study_group: 'manage-students-actions',
+            event: 'single-student-delete',
+            data_json: JSON.stringify({
+              sectionId: sectionId,
+              studentId: id
+            })
+          },
+          {includeUserId: true}
+        );
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -84,27 +96,79 @@ class ManageStudentActionsCell extends Component {
   };
 
   onEdit = () => {
-    this.props.startEditingStudent(this.props.id);
+    const {id, sectionId} = this.props;
+    this.props.startEditingStudent(id);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-start-edit',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onCancel = () => {
+    const {id, sectionId} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.props.removeStudent(this.props.id);
     } else {
-      this.props.cancelEditingStudent(this.props.id);
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'manage-students-actions',
+          event: 'single-student-cancel-edit',
+          data_json: JSON.stringify({
+            sectionId: sectionId,
+            studentId: id
+          })
+        },
+        {includeUserId: true}
+      );
+      this.props.cancelEditingStudent(id);
     }
   };
 
   onSave = () => {
+    const {id, sectionId} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.onAdd();
     } else {
-      this.props.saveStudent(this.props.id);
+      this.props.saveStudent(id);
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'manage-students-actions',
+          event: 'single-student-save',
+          data_json: JSON.stringify({
+            sectionId: sectionId,
+            studentId: id
+          })
+        },
+        {includeUserId: true}
+      );
     }
   };
 
   onAdd = () => {
-    this.props.addStudent(this.props.id);
+    const {id, sectionId} = this.props;
+    this.props.addStudent(id);
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-add',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onPrintLoginInfo = () => {
