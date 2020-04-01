@@ -352,7 +352,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: true
-    File.stubs(:write).raises('must not modify script files')
+    File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: script.id,
       script: {name: script.name},
@@ -387,7 +387,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: true
-    File.stubs(:write).raises('must not modify script files')
+    File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: script.id,
       script: {name: script.name},
@@ -405,7 +405,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     script = create :script, hidden: true
-    File.stubs(:write).raises('must not modify script files')
+    File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: script.id,
       script: {name: script.name},
