@@ -1,3 +1,4 @@
 // locale for eval
 
-module.exports = window.blockly.eval_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('eval_locale');
