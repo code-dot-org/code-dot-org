@@ -1,0 +1,7 @@
+name 'CSD games velocity challenge choice'
+editor_experiment ''
+display_name 'Velocity Challenges'
+description 'Try out these new blocks and challenges with velocity.'
+
+sublevels
+level 'CSD U3 L15 Freeplay_2020'

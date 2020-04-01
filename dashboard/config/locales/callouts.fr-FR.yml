@@ -198,6 +198,10 @@ fr-FR:
       NEW Course 4 Bee For Loops 5:
         actions_category: La boîte à outils a un nouvel aspect ! Les blocs «Actions
           » sont maintenant ici.
+      New Artist Project:
+        New Artist Project_callout1: Cliques sur les catégories pour voir les blocs
+          dans ta boîte à outils! Fais glisser les blocs vers l'espace de travail
+          et ajoutes-les à ton programme.
       New Frozen Project:
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
@@ -248,12 +252,12 @@ fr-FR:
         courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
           reculer l'abeille.
@@ -270,7 +274,7 @@ fr-FR:
         courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       course4_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Cette fonction fera un bon travail avec
           le maïs, mais qu'en est-il des autres légumes ?
@@ -285,13 +289,13 @@ fr-FR:
           utiliser dans ce puzzle.
       courseA_artist_loops7:
         courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
-          peut être utiliser dans la réponse finale.
+          peut être utilisé dans la réponse finale.
       courseA_artist_loops7_2018:
         courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
-          peut être utiliser dans la réponse finale.
+          peut être utilisé dans la réponse finale.
       courseA_artist_loops7_2019:
         courseA_artist_loops7_1: Ce nombre indique que seulement un bloc de ce type
-          peut être utiliser dans la réponse finale.
+          peut être utilisé dans la réponse finale.
       courseA_artist_loops8:
         courseA_artist_loops8_1: Tu sais que tu peux reculer en dessinant sur une
           ligne existante lorsque tu en as besoin?
@@ -313,6 +317,8 @@ fr-FR:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Ce nombre t'indique combien de ces blocs tu peux
           utiliser dans ce puzzle.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Cliquez ici pour voir le code s'exécuter!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Y a-t-il de nouveaux blocs dans la boite à outils?
           Ne t'inquiète pas, nous allons t'aider à les utiliser plus tard.
@@ -423,13 +429,13 @@ fr-FR:
           niveau suivant.
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: Utilise ce bloc lorsque Waddles et Chomp
-          se percute!
+          se percutent !
       courseC_PlayLab_events8_2018:
         courseC_PlayLab_events8_callout1: Utilise ce bloc lorsque Waddles et Chomp
-          se percute!
+          se percutent !
       courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_callout1: Utilise ce bloc lorsque Waddles et Chomp
-          se percute!
+          se percutent !
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: Ce bloc te laisse bouger les acteurs
           vers différentes parties de l'espace de jeu.
@@ -461,14 +467,14 @@ fr-FR:
         courseC_collector_prog7_1: Tu peux prendre plus de blocs de la boite à outils
           si tu en as besoin!
       courseC_harvester_loops1:
-        courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
-          y a 4 citrouilles que tu peux ramasser.
+        courseC_harvester_loops1_callout1: Le chiffre 4 sur la citrouille indique
+          qu'il y a 4 citrouilles que tu peux ramasser.
       courseC_harvester_loops1_2018:
-        courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
-          y a 4 citrouilles que tu peux ramasser.
+        courseC_harvester_loops1_callout1: Le chiffre 4 sur la citrouille indique
+          qu'il y a 4 citrouilles que tu peux ramasser.
       courseC_harvester_loops1_2019:
-        courseC_harvester_loops1_callout1: Le nombre 4 sur la citrouille indique qu'il
-          y a 4 citrouilles que tu peux ramasser.
+        courseC_harvester_loops1_callout1: Le chiffre 4 sur la citrouille indique
+          qu'il y a 4 citrouilles que tu peux ramasser.
       courseC_maze_debugging5:
         courseC_maze_debugging5_1: Les blocs gris ne peuvent pas être effacés!
       courseC_maze_programming1:
@@ -523,18 +529,18 @@ fr-FR:
         '': Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que
           tu veux !
       courseC_maze_programming7:
-        courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
-          difficile et peuvent demander plusieurs essais.
+        courseC_maze_programming7_1: C'est ton premier défi ! Ils sont faits pour
+          être difficiles et peuvent demander plusieurs essais.
         courseC_maze_programming7_2: Ces blocs sont comme des pierres que tu ne peux
           pas enlever.
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
-          difficile et peuvent demander plusieurs essais.
+        courseC_maze_programming7_1: C'est ton premier défi ! Ils sont faits pour
+          être difficiles et peuvent demander plusieurs essais.
         courseC_maze_programming7_2: Ces blocs sont comme des pierres que tu ne peux
           pas enlever.
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_1: C'est ton premier défi! Ils sont fait pour être
-          difficile et peuvent demander plusieurs essais.
+        courseC_maze_programming7_1: C'est ton premier défi ! Ils sont faits pour
+          être difficiles et peuvent demander plusieurs essais.
         courseC_maze_programming7_2: Ces blocs sont comme des pierres que tu ne peux
           pas enlever.
       courseC_starWars_loops2:
@@ -559,13 +565,14 @@ fr-FR:
           pour réussir ce puzzle. Si tu le souhaites, ce bloc `couleur aléatoire`
           le fait facilement!
       courseD_artist_ramp11:
-        courseD_artist_ramp11_1: Vous pouvez modifier ce nombre.
+        courseD_artist_ramp11_1: Tu peux modifier ce nombre.
         courseD_artist_ramp11_2: Cliques ici pour taper le nombre de fois que ce code
           doit se répéter.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR.
           Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
-        4_5_Bee_Conditionals_2_2: Besoin d'aide? Cliques ici pour une vidéo d'indice!
+        4_5_Bee_Conditionals_2_2: Besoin d'aide ? Clique ici pour une vidéo d'indice
+          !
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: Souviens-toi de vérifier si CHAQUE nuage a une FLEUR.
           Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.
@@ -588,7 +595,7 @@ fr-FR:
         courseD_bee_debugging_challenge1_callout1: Utilise cette commande pour faire
           reculer l'abeille.
       courseD_collector_ramp8:
-        courseD_collector_ramp8_1: 'Utilise ce bloc pour ramasser un diamant.  '
+        courseD_collector_ramp8_1: 'Utilise ce bloc pour ramasser un trésor.  '
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: C'est ton nombre maximum de blocs. Cela te dit
           combien de ces blocs il te reste à utiliser.
@@ -656,13 +663,13 @@ fr-FR:
           autant de fois que tu en donneras l’instruction, puis continuera à exécuter
           le reste du programme.
       courseD_playLab_condFP:
-        courseD_playLab_condFP_1: nous avons organisés les blocs en catégories pour
-          que tu aies plus de code pour jouer avec! Appuis ici pour voir ou tout se
-          trouve.
+        courseD_playLab_condFP_1: nous avons organisé les blocs en catégories pour
+          que tu aies plus de code pour jouer avec ! Appuis ici pour voir où tout
+          se trouve.
       courseD_playLab_condFP_2018:
-        courseD_playLab_condFP_1: nous avons organisés les blocs en catégories pour
-          que tu aies plus de code pour jouer avec! Appuis ici pour voir ou tout se
-          trouve.
+        courseD_playLab_condFP_1: nous avons organisé les blocs en catégories pour
+          que tu aies plus de code pour jouer avec ! Appuis ici pour voir où tout
+          se trouve.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Après avoir connecté tous les blocs, appuie sur
           "Exécuter" pour démarrer ton programme.
@@ -687,7 +694,7 @@ fr-FR:
           autant de fois que tu en donneras l’instruction, puis continuera à exécuter
           le reste du programme.
       courseD_scrat_ramp8:
-        courseD_maze_ramp7_1: C'est ton premier défi! Ils sont fait pour être difficile
+        courseD_maze_ramp7_1: C'est ton premier défi ! Ils sont faits pour être difficiles
           et peuvent demander plusieurs essais.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Commençons par utiliser ce bloc pour aider à
@@ -705,50 +712,50 @@ fr-FR:
           dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après
           avoir dessiné le premier carré?
       courseE_artist_functions8:
-        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacées
+        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacés
           sous cette étiquette dans la boite à outils.
       courseE_artist_functions8a_2018:
-        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacées
+        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacés
           sous cette étiquette dans la boite à outils.
       courseE_artist_functions8a_2019:
-        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacées
+        courseD_artist_functions8_1: Tes blocs pour créer les fonctions ont été déplacés
           sous cette étiquette dans la boite à outils.
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       courseE_artist_functions_challenge1_2018:
         courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       courseE_artist_functions_challenge1_2019:
         courseE_artist_functions_challenge1_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge1_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       courseE_artist_functions_challenge2_2018:
         courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       courseE_artist_functions_challenge2_2019:
         courseE_artist_functions_challenge2_callout1: Continue ce programme en ajoutant
           plus de code à la fin.
         courseE_artist_functions_challenge2_callout2: Si tu n'aime pas ce concept,
-          change le à ta convenance!
+          change-le à ta convenance !
       courseE_artist_ramp8:
-        courseE_artist_ramp8_1: Vous pouvez modifier ce nombre.
+        courseE_artist_ramp8_1: Tu peux modifier ce nombre.
         courseE_artist_ramp8_2: Cliques ici pour taper le nombre de fois que ce code
           doit se répéter.
       courseE_artist_ramp8_2:
-        courseE_artist_ramp8_1: Vous pouvez modifier ce nombre.
+        courseE_artist_ramp8_1: Tu peux modifier ce nombre.
         courseE_artist_ramp8_2: Cliques ici pour taper le nombre de fois que ce code
           doit se répéter.
       courseE_farmer_functions1:

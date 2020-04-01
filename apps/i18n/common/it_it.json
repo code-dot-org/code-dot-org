@@ -103,6 +103,7 @@
   "assignmentSelectorCourse": "Seleziona corso",
   "assignmentSelectorVersion": "Versione",
   "assignmentSelectorUnit": "Seleziona l'unità corrente",
+  "atHomeBannerLinkText": "Inizia",
   "audioInitializeError": "Il tuo computer non è impostato per registrare audio. Perfavore assicurati di avere un microfono con i permessi di accesso audio su questo sito web.",
   "audioSaveError": "Si è verificato un errore durante il salvataggio della tua registrazione. Perfavore registra di nuovo e riprova. Se questo problema persiste, perfavore aggiorna la pagina e riprova.",
   "authorizeGoogleClassrooms": "Clicca qui per autorizzare Google Classrom.",
