@@ -2842,6 +2842,9 @@ pt-BR:
         NEW_Course_4_Bee_For_Loops_8_a: Se seu laço está fazendo contagem progressiva,
           o incremento é adicionado na sua variável contadora a cada repetição. Qual
           deve ser seu incremento para obter o número depois dele?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agente construa algumas pontes
+          para que Alex ou Steve possam andar além dos limites do mapa.
       Overworld Avoid Monsters:
         mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
         mc_8_b: Use laços `repita` para simplificar seu código.

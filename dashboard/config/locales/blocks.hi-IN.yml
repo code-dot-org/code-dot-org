@@ -1527,6 +1527,14 @@ hi:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} {DISTANCE} पिक्सल्स को {DIRECTION} की ओर घुमाएं"
+        options:
+          DIRECTION:
+            '"North"': उत्तर
+            '"East"': पूर्व
+            '"South"': दक्षिण
+            '"West"': पश्चिम
       aalab_prompt:
         text: सवाल पूछें {MESSAGE}
       aalab_scene:
@@ -1538,12 +1546,10 @@ hi:
             '3': '3'
       aalab_setupStory:
         text: सेटअप कहानी
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': दिखाएं
-            '"hide"': छुपाएँ
+            '"random"': यादृच्छिक
       binary_drawBin:
         text: युग्मक चित्रित करें {BIN}
       binary_drawBinScreen:

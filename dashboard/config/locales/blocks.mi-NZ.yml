@@ -1257,11 +1257,6 @@ mi:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
-        options:
-          OPTION:
-            '"show"': whakaaturia
-            '"hide"': hunaia
       binary_move:
         options:
           DIR:

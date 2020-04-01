@@ -1556,12 +1556,16 @@ ca:
               name: Condicionals
             Functions:
               name: Funcions
+            Text:
+              name: text
         coursea-2020:
           description_short: Una introducció a la informàtica per prelectors.
           description_audience: De 4 a 7 anys
           stages:
             Going Places Safely:
               name: Anant a llocs segurs
+            'Programming: Happy Maps':
+              name: Mapes feliços
         courseb-2020:
           description_audience: De 5 a 8 anys
           stages:
@@ -1569,6 +1573,8 @@ ca:
               name: La vostra empremta digital
             Move It, Move It:
               name: Mou-lo, Mou-lo
+            'Loops: Getting Loopy':
+              name: Fent bucles
         coursec-2020:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu
             el vostre propi art, històries i jocs.
@@ -1576,15 +1582,19 @@ ca:
           stages:
             Binary Bracelets:
               name: Polseres binàries
+            'Events: The Big Event':
+              name: El gran esdeveniment
         coursed-2020:
           description_audience: De 7 a 11 anys
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programació de paper quadriculat
             Relay Programming:
               name: Programació en relleus
             Conditionals with Cards:
               name: Condicionals amb targetes
             'Unplugged: Binary':
-              name: 'Sense connexió: Binari'
+              name: Imatges binàries
             Artist Binary:
               name: Artista binari
             Digital Citizenship:
@@ -1594,8 +1604,8 @@ ca:
         coursee-2020:
           description_audience: De 8 a 12 anys
           stages:
-            Conditionals:
-              name: Condicionals
+            'Functions: Songwriting':
+              name: Composició de cançons
         coursef-2020:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
@@ -1613,3 +1623,29 @@ ca:
           stages:
             Spelling Bee:
               name: Abella ortogràfica
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Creant Funcions
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Bucles Mentres
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funcions
+        code-break:
+          stages:
+            Algorithms:
+              name: Algorismes
+            Events:
+              name: Esdeveniments

@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {LessonIcons} from './standardsConstants';
 
 const styles = {
   main: {
@@ -47,8 +49,11 @@ class StandardDescriptionCell extends Component {
   getLessonBoxes = () => {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
+        const icon = lesson.unplugged
+          ? LessonIcons.UNPLUGGED
+          : LessonIcons.PLUGGED;
         const percentComplete =
-          Math.round(lesson.numStudentsCompleted / lesson.numStudents) * 100;
+          (lesson.numStudentsCompleted / lesson.numStudents).toFixed(2) * 100;
         return (
           <span key={lesson.name} style={styles.lessonBox}>
             {!this.props.isViewingReport && (
@@ -61,17 +66,11 @@ class StandardDescriptionCell extends Component {
                 place="top"
               >
                 <div style={styles.tooltip}>
-                  <div style={styles.tooltipLessonName}>{lesson.name}</div>
-                  <div>
-                    {lesson.unplugged ? i18n.unplugged() : i18n.plugged()}
+                  <div style={styles.tooltipLessonName}>
+                    {lesson.name} <FontAwesome icon={icon} />
                   </div>
                   <div>
-                    {lesson.completed ? i18n.completed() : i18n.notCompleted()}
-                  </div>
-                  <div>
-                    {i18n.completedStudentCount({
-                      numStudentsCompleted: lesson.numStudentsCompleted,
-                      numStudents: lesson.numStudents,
+                    {i18n.completedStudentPercent({
                       percentComplete: percentComplete
                     })}
                   </div>

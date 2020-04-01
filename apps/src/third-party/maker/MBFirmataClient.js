@@ -596,6 +596,7 @@ class MicrobitFirmataClient {
   }
 
   digitalWrite(pin, value){
+    if ((pin < 0) || (pin > 20)) return;
     this.myPort.write([this.SET_DIGITAL_PIN, pin, value]);
   }
 
@@ -613,6 +614,7 @@ class MicrobitFirmataClient {
   }
 
   analogWrite(pin, value){
+    if ((pin < 0) || (pin > 20)) return;
     this.myPort.write([this.SYSEX_START, this.EXTENDED_ANALOG_WRITE,
       pin, (value & 0x7F), ((value >> 7) & 0x7F),
       this.SYSEX_END]);

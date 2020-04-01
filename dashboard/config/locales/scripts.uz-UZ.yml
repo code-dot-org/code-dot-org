@@ -443,15 +443,37 @@ uz:
               name: Shart buyruqlari
             Functions:
               name: Funksiyalar
+            Text:
+              name: Matn
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
-        coursee-2020:
+        coursef-2020:
           stages:
-            Conditionals:
-              name: Shart buyruqlari
+            Internet:
+              name: Internet
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+        csd3-virtual:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funksiyalar
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmlar

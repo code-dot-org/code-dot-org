@@ -25,8 +25,8 @@ frontend_policies ||= []
 # Array of properties to append to the frontend AutoScalingGroup resource.
 frontend_properties ||= {}
 
-image_id ||= IMAGE_ID
-ssh_key_name ||= SSH_KEY_NAME
+image_id ||= {Ref: 'ImageId'}.to_json
+ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
 instance_type ||= {Ref: 'InstanceType'}.to_json
 
 ami_timeout ||= 'PT10M'
@@ -65,7 +65,7 @@ frontend_device_name ||= '/dev/sda1'
       InstanceType: <%=instance_type%>
       IamInstanceProfile: !Ref FrontendInstanceProfile
       SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
-      SubnetId: !ImportValue VPC-Subnet<%=azs.first%>
+      SubnetId: <%=subnets.first.to_json%>
       KeyName: <%=ssh_key_name%>
       BlockDeviceMappings:
         - DeviceName: <%=frontend_device_name%>
@@ -92,14 +92,14 @@ frontend_device_name ||= '/dev/sda1'
             || true
 
           shutdown -h now
-  AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
+  AMI<%=ami%>: <%= lambda_fn 'AMIManager',
     DependsOn: "AMICreate#{ami}",
     InstanceId: {Ref: "WebServerAMI" } %>
-  FastSnapshotRestore: <%= lambda_fn.call 'FastSnapshotRestore',
+  FastSnapshotRestore: <%= lambda_fn 'FastSnapshotRestore',
     ImageIds: [{Ref: "AMI#{ami}" }],
     AvailabilityZones: AVAILABILITY_ZONES
   %>
-  ASGCount: <%= lambda_fn.call 'CountASG',
+  ASGCount: <%= lambda_fn 'CountASG',
     Default: {
       MinSize: 2,
       MaxSize: 20,

@@ -92,7 +92,7 @@ mn:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
-        text: "[SPRITE] нь {MOVE} {DIR}-г үүрд хийдэг"
+        text: "{SPRITE} нь {MOVE} {DIR}-г үүрд хийдэг"
         options:
           MOVE:
             '"next"': "(Дараагийнх)"
@@ -1550,6 +1550,14 @@ mn:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE}-г {DISTANCE} пикселээр {DIRECTION}-д хөдөлгөх"
+        options:
+          DIRECTION:
+            '"North"': Хойд
+            '"East"': Дорнод
+            '"South"': Өмнөд
+            '"West"': Өрнөд
       aalab_prompt:
         text: асуулт асуух {MESSAGE}
       aalab_scene:
@@ -1561,12 +1569,6 @@ mn:
             '3': '3'
       aalab_setupStory:
         text: түүхийг тохируулах
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
-        options:
-          OPTION:
-            '"show"': үзүүлэх
-            '"hide"': нуугдах
       binary_drawBin:
         text: хоёртыг зурах {BIN}
       binary_drawBinScreen:

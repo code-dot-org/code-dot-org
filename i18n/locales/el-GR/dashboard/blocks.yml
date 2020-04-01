@@ -1545,6 +1545,14 @@ el:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: κινήσου {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Βοράς
+            '"East"': Ανατολή
+            '"South"': Νότος
+            '"West"': Δυτικά
       aalab_prompt:
         text: κάνε ερώτηση {MESSAGE}
       aalab_scene:
@@ -1556,12 +1564,10 @@ el:
             '3': '3'
       aalab_setupStory:
         text: ιστορία εγκατάστασης
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': δείξε
-            '"hide"': κρύψε
+            '"random"': τυχαίο
       binary_drawBin:
         text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:

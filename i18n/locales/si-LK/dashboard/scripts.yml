@@ -1635,36 +1635,46 @@ si:
               name: කන්ඩිෂනලස්
             Functions:
               name: ශ්‍රිතයන්
+            Text:
+              name: පෙළ
         coursea-2020:
           stages:
             Going Places Safely:
               name: තැන්වලට සුරක්ෂිතව යාම
+            'Programming: Happy Maps':
+              name: සතුටු සිතියම්
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: ඔබේ ඩිජිටල් පා සටහන
             Move It, Move It:
               name: එය ගෙන යන්න, ගෙන යන්න
+            'Loops: Getting Loopy':
+              name: ඔල්මාද වීම
         coursec-2020:
           stages:
             Binary Bracelets:
               name: ද්විමය වළලු
+            'Events: The Big Event':
+              name: විශාල සිදුවීම
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ප්‍රස්තාර රටා වැඩසටහන්
             Relay Programming:
               name: ක්‍රමලේඛණය ප්‍රතිචාරණය
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
             'Unplugged: Binary':
-              name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා'
+              name: ද්විමය පින්තූර
             Artist Binary:
               name: කලාකරු ද්විමය
             Digital Citizenship:
               name: ඩිජිටල් පුරවැසිකම
         coursee-2020:
           stages:
-            Conditionals:
-              name: කන්ඩිෂනලස්
+            'Functions: Songwriting':
+              name: ගීත ලිවීම
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1679,3 +1689,30 @@ si:
           stages:
             Spelling Bee:
               name: අක්ෂර වින්‍යාස බඹරා
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: ශ්‍රිතය නිර්මාණය කරන්න
+        csd3-virtual:
+          description_short: "ක්‍රමලේඛනය"
+          stages:
+            Variables:
+              name: විචල්‍යන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: නැවත සිදුවන ලුප
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: ශ්‍රිතයන්
+        code-break:
+          stages:
+            Algorithms:
+              name: ඇල්ගොරිතම්
+            Events:
+              name: වැඩසටහන්

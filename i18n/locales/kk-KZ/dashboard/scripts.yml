@@ -1620,36 +1620,46 @@ kk:
               name: Шарттар
             Functions:
               name: Функциялар
+            Text:
+              name: Мәтін
         coursea-2020:
           stages:
             Going Places Safely:
               name: Қауіпсіз Жерді Табу
+            'Programming: Happy Maps':
+              name: Көңілді Карталар
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Сіздің сандық іздеріңіз
             Move It, Move It:
               name: Қозғал, Қозғал
+            'Loops: Getting Loopy':
+              name: Ілмектерді үйрену
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Екілік Білезіктер
+            'Events: The Big Event':
+              name: Үлкен Оқиға
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Миллиметрлік Бағдарламалау
             Relay Programming:
               name: Релелік Бағдарламалау
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
             'Unplugged: Binary':
-              name: 'Kомпьютерсіз: Екілік жүйе'
+              name: Екілік Суреттер
             Artist Binary:
               name: Кейіпкер Екілік жүйе
             Digital Citizenship:
               name: Сандық Азаматтық
         coursee-2020:
           stages:
-            Conditionals:
-              name: Шарттар
+            'Functions: Songwriting':
+              name: Ән Жазу
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1664,3 +1674,31 @@ kk:
           stages:
             Spelling Bee:
               name: Сөз жазушы Ара
+        csp3-virtual:
+          description_short: Бағдарламалау
+          stages:
+            Creating Functions:
+              name: Функцияларды Құру
+        csd3-virtual:
+          description_short: "Бағдарламалау"
+          stages:
+            Variables:
+              name: Айнымалылар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Шарт орындалғанша Циклдері
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Функциялар
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритмдер
+            Events:
+              name: Шаралар

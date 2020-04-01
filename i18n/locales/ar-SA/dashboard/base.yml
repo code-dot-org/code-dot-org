@@ -65,6 +65,7 @@ ar:
     code:
       placeholder: "مقطع التعليمات البرمجية (ABCDEF)"
       instructions_short: "أدخل الحروف الست لشفرة القسم"
+      submit: 'انضم إلينا'
   add_hint_form:
     placeholder: 'الرجاء إدخال التلميح الخاص بك هنا'
     submit: 'إضافة تلميح'
@@ -112,6 +113,9 @@ ar:
     unable_to_connect_provider: "لا يمكن الاتصال بين حسابك على Code.org مع حساب %{provider}. الرجاء المحاولة لاحقاً."
     already_in_use: "حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر."
     already_linked: "حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر."
+    existing_account:
+      account_exists: "أخبار جيدة! لديك سلفاٌ حساب على المنصة يستخدم الايميل %{email}"
+      sign_in: "لطفاً قم بتسجيل الدخول و سنقوم بربط حسابك على %{provider}"
   signup_form:
     email_signup: 'قم بالتسجيل باستخدام بريدك الإلكتروني'
     student_count: 'عدد الطلاب المسجلين حالياً هو %{count}.'
@@ -851,6 +855,7 @@ ar:
     csd3_2: 'الفصل 2: إنشاء الألعاب'
     csd4_1: 'الفصل 1: التصميم المحوري للمستخدم'
     csd4_2: 'الفصل 2: نمذجة التطبيق'
+    cspSurvey: 'استبيان'
     csp2_1_2018: '(قديم) الوحدة 1: معلومات رقمية'
     csp_variables: 'المتغيرات'
     csp_conditionals: 'الجمل الشرطية'

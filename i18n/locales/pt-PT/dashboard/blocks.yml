@@ -1079,6 +1079,8 @@ pt:
             '"left"': para a esquerda
       gamelab_mouseLocation:
         text: localização do mouse
+      gamelab_moveBackward:
+        text: mover {SPRITE} {DISTANCE} píxeis para trás
       gamelab_moveForward:
         text: Mover {SPRITE} {DISTANCE} pixels para a frente
       gamelab_moveInDirection:
@@ -1174,6 +1176,8 @@ pt:
           DIRECTION:
             '"right"': para a direita
             '"left"': para a esquerda
+      gamelab_updateTitleWithColor:
+        text: mostrar título de tela {BREAK} título {TITLE} cor {COLOR}
       gamelab_whenDownArrow:
         text: quando a seta para baixo pressionada
       gamelab_whenKey:
@@ -1549,6 +1553,14 @@ pt:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Mover {SPRITE} {DISTANCE} Pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Ocidente
       aalab_prompt:
         text: fazer a pergunta {MESSAGE}
       aalab_scene:
@@ -1560,12 +1572,10 @@ pt:
             '3': '3'
       aalab_setupStory:
         text: história de configuração
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mostrar
-            '"hide"': ocultar
+            '"random"': aleatório
       binary_drawBin:
         text: desenhar binário {BIN}
       binary_drawBinScreen:

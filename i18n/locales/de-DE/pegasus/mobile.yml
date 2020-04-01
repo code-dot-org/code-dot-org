@@ -12,6 +12,7 @@
   csedweek_dates: "3. - 9. Dezember, 2018"
   csedweek_banner_hoc: 'Die <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> kommt. Aufruf an alle Lehrer und Organisatoren: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planen Sie Ihre Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen</a>'
+  csedweek_banner_teachers_text: "Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen"
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
   anybody_can_learn: "Jeder kann es lernen."
   learn_now: "Jetzt lernen"
@@ -144,6 +145,7 @@
   enter_valid_email: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
   get_a_certificate_message: "Wir schicken Ihnen eine Urkunde und Informationen, wie Sie Ihr <a href='/learn/beyond'>Wissen erweitern</a> können"
   get_a_certificate_message_after: "Klicken Sie auf die Urkunde, um sie herunterzuladen oder auszudrucken. Machen Sie nun weiter mit unseren <a href='http://studio.code.org'>anderen Kursen</a> oder <a href='/learn/beyond'>￼Erweitern Sie Ihr Wissen</a>."
+  get_a_certificate_message_after_markdown: "Klicken Sie auf die Urkunde, um sie herunterzuladen oder auszudrucken. Machen Sie nun weiter mit unseren [anderen Kursen](http://studio.code.org) oder [Erweitern Sie Ihr Wissen](/learn/beyond)."
   thanks_for_submitting: "Danke für's Mitmachen!"
   if_you_enjoyed: "Wenn Ihnen das Programmieren Spaß gemacht hat, empfehlen Sie es Ihren Freunden weiter! Wir möchten, dass die ganze Welt Programmieren lernt."
   personalize_certificate: "Urkunde personalisieren"
@@ -1383,7 +1385,7 @@
   header_about_partners: "Partner"
   header_about_team: "Das Team"
   header_about_news: "Newsroom"
-  header_about_evaluation: "Evaluation"
+  header_about_evaluation: "Auswertung"
   header_about_jobs: "Jobs"
   header_about_contact: "Kontaktieren Sie uns"
   header_about_faqs: "FAQs"
@@ -1406,7 +1408,7 @@
   user_header_label: "Hallo %{username}"
   user_header_team: "Team"
   user_header_my_projects: "Meine Projekte"
-  user_header_settings: "Mein Account"
+  user_header_settings: "Kontoeinstellungen"
   user_header_logout: "Abmelden"
   user_header_signin: "Anmelden"
   user_header_create: 'Erstelle '
@@ -1563,10 +1565,16 @@
   hoc2018_dance_amazon_future_engineer_footer: "* Die Künstler deren Musik in diesem Tutorial vorkommt, sponsern oder unterstützen Amazon nicht durch die Lizensierung ihrer Musik auf Code.org.\n\n"
   hoc2018_dance_measure: "Takt"
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_dance_video1: "Tanzparty - Einführung"
+  hoc2018_dance_video2: "Tanzparty - Ereignisse"
+  hoc2018_dance_video3: "Tanzparty - Eigenschaften"
+  hoc2018_dance_video4: "Tanzparty - Glückwünsche"
   page_not_found_title: "Seite nicht gefunden"
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."
+  page_not_found_button: "Zurück zur Homepage"
   hoc2018_mc_with_microsoft: "In Zusammenarbeit mit"
   hoc2018_mc_thank_microsoft: "Wir danken Microsoft für die Unterstützung unserer Vision und Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein."
+  hoc2019_mc_mee_title: "Minecraft AI für Gott"
   hoc2019_mc_mee_description1: 'Das neue Minecraft Hour of Code Tutorial ist jetzt in Minecraft verfügbar: Education Edition für Windows, Mac und iPad. Lernen Sie die Grundlagen der Programmierung und erkunden Sie die KI mit Ihren Schülern!'
   hoc2019_mc_mee_description2: "Greifen Sie auf kostenlose Ressourcen zu, darunter einen Unterrichtsplan, Videos, einen Lehrplan für Informatik und Lehrerausbildungen."

@@ -20,6 +20,8 @@ ur-PK:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> کیا آپ CS (کمپیوٹر سا‏ئنس) کے ایک استاد ہیں؟ دیگر CSEdWeek
     وسائل دیکھیں</a>'
+  csedweek_banner_teachers_text: کیا آپ CS (کمپیوٹر سا‏ئنس) کے ایک استاد ہیں؟ دیگر
+    CSEdWeek وسائل دیکھیں
   n_have_learned_an_hoc: "<h1>آزمائیں ایک</h1><h2>کوڈ کی گھڑی</h2><h3># جیسے پیش کیا
     گیا ہے</h3>"
   anybody_can_learn: ھر کوئ سیکھ سکتا ھے۔

@@ -130,3 +130,9 @@ en-GB:
           stages:
             Variables:
               name: Variables
+            Text:
+              name: Text
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
