@@ -35,6 +35,7 @@ class Stage < ActiveRecord::Base
 
   serialized_attrs %w(
     stage_extras_disabled
+    visible_after
   )
 
   # A stage has an absolute position and a relative position. The difference between the two is that relative_position
