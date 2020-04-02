@@ -254,22 +254,22 @@ export class LibraryManagerDialog extends React.Component {
       return <div style={styles.message}>{i18n.noLibrariesInProject()}</div>;
     }
 
-    return projectLibraries.map(library => {
-      // Only pass onUpdate prop for libraries with updates available.
-      let onUpdate;
-      if (updatedLibraryChannels.includes(library.channelId)) {
-        onUpdate = () => {
-          this.fetchLatestLibrary(library.channelId, lib =>
-            this.viewCode(lib, DisplayLibraryMode.UPDATE)
-          );
-        };
-      }
+    const onUpdate = channelId => {
+      this.fetchLatestLibrary(channelId, lib =>
+        this.viewCode(lib, DisplayLibraryMode.UPDATE)
+      );
+    };
 
+    return projectLibraries.map(library => {
       return (
         <LibraryListItem
           key={library.name}
           library={library}
-          onUpdate={onUpdate}
+          onUpdate={
+            updatedLibraryChannels.includes(library.channelId)
+              ? onUpdate
+              : undefined
+          }
           onRemove={this.removeLibrary}
           onViewCode={() => this.viewCode(library)}
         />
