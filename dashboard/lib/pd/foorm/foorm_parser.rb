@@ -1,30 +1,30 @@
 # Parses Foorm forms into a useful format for looking up questions by form name, form version
 # and question name
-# Format is:
-# {
-#   <form-name>.<form-version: {
-#     <question_name>: {
-#       title: "sample title",
-#       type: "text/singleSelect/multiSelect/matrix/scale",
-#       # for singleSelect/multiSelect/scale
-#       choices: {
-#         choice_1_name: "choice 1 value",
-#         ...
-#       },
-#       # if has other choice
-#       other_text: "Other choice text",
-#       # for matrix
-#       rows: {
-#         row_1_name: "row 1 value",
-#         ...
-#       },
-#       columns: {
-##         column_1_name: "column 1 value",
-##         ...
-##       }
+# @return
+#   {
+#     <form-name>.<form-version: {
+#       <question_name>: {
+#         title: "sample title",
+#         type: "text/singleSelect/multiSelect/matrix/scale",
+#         # for singleSelect/multiSelect/scale
+#         choices: {
+#           choice_1_name: "choice 1 value",
+#           ...
+#         },
+#         # if has other choice
+#         other_text: "Other choice text",
+#         # for matrix
+#         rows: {
+#           row_1_name: "row 1 value",
+#           ...
+#         },
+#         columns: {
+#           column_1_name: "column 1 value",
+#           ...
+#         }
+#       }
 #     }
 #   }
-# }
 module Pd::Foorm
   class FoormParser
     include Constants
@@ -46,7 +46,8 @@ module Pd::Foorm
       parsed_forms
     end
 
-    # parse a form element and return hash of {question_name->question_data,...}
+    # parse a form element
+    # @return hash of {question_name->question_data,...}
     # Form element may be a panel which contains questions, therefore resulting hash
     # may contain one or more questions
     def self.parse_element(question_data)
@@ -108,8 +109,8 @@ module Pd::Foorm
       choices
     end
 
-    # given a list of choices in the format [{value: "value1", text: "text1"},{value: "value2", text: "text2"},...]
-    # convert to object in format {value1: "text1", value2: "text2",...}
+    # @param choices in the format [{value: "value1", text: "text1"},{value: "value2", text: "text2"},...]
+    # @return object in format {value1: "text1", value2: "text2",...}
     def self.flatten_choices(choices)
       choices_obj = {}
       choices.each do |choice_hash|
