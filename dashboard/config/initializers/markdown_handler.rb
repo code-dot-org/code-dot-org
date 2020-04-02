@@ -1,38 +1,44 @@
-require 'nokogiri'
-require 'cdo/markdown_handler'
-
 # Add Markdown .md support to the ActionView template system.
+
+require 'cdo/honeybadger'
+require 'cdo/markdown/renderer'
+require 'redcarpet'
+
 MARKDOWN_OPTIONS = {
   autolink: true,
   tables: true,
   space_after_headers: true
 }.freeze
 
-class CustomRewriter < Redcarpet::Render::HTML
-  # Rewrite YouTube iframe elements to use the fallback-player iframe instead.
-  def block_html(html)
-    doc = ::Nokogiri::HTML(html)
-    nodes = doc.xpath(%w(youtube youtubeeducation youtube-nocookie).map {|x| "//iframe[@src[contains(.,'#{x}.com/embed')]]"}.join(' | '))
-    nodes.each do |node|
-      next unless node['src']
-      id = node['src'].match(Video::EMBED_URL_REGEX)[:id]
-      node['src'] = node['src'].sub(
-        Video::EMBED_URL_REGEX,
-        Video.embed_url(id)
+# Temporarily use this instead of the standard Cdo::Markdown::Handler so we can
+# render using both the new and old renderers side-by-side and compare the
+# results. We will still return the old result, but will notify Honeybadger if
+# they are different so we can identify potential changes before switching
+# over.
+class InterimMarkdownHandler
+  def initialize
+    @old_parser = Redcarpet::Markdown.new(Redcarpet::Render::HTML, MARKDOWN_OPTIONS)
+    @new_parser = Redcarpet::Markdown.new(Cdo::Markdown::Renderer, Cdo::Markdown::Renderer::OPTIONS)
+  end
+
+  def call(template)
+    old_result = @old_parser.render(template.source)
+    new_result = @new_parser.render(template.source)
+
+    if old_result != new_result
+      Honeybadger.notify(
+        error_class: 'Rendering differences between new and old Dashboard markdown',
+        error_message: "template #{template.identifier.inspect} renders differently with new renderer than with old",
+        context: {
+          old_result: old_result,
+          new_result: new_result,
+          template: template
+        }
       )
     end
-    doc.css('body').children.to_html
-  end
 
-  # Open links in a new tab by default.
-  def link(link, title, content)
-    # `content` is already escaped by Redcarpet.
-    "<a target='_blank' href='#{Rack::Utils.escape_html(link)}' title='#{Rack::Utils.escape_html(title)}'>#{content}</a>"
-  end
-
-  def autolink(link, _)
-    link(link, nil, link)
+    "#{old_result.inspect}.html_safe"
   end
 end
 
-MarkdownHandler.register(CustomRewriter, MARKDOWN_OPTIONS)
+ActionView::Template.register_template_handler :md, InterimMarkdownHandler.new

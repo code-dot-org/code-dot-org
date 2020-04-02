@@ -160,6 +160,18 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
+    csp_2020: [
+      CSP1_2020_NAME = 'csp1-2020'.freeze,
+      CSP2_2020_NAME = 'csp2-2020'.freeze,
+      CSP3_2020_NAME = 'csp3-2020'.freeze,
+      CSP4_2020_NAME = 'csp4-2020'.freeze,
+      CSP5_2020_NAME = 'csp5-2020'.freeze,
+      CSP6_2020_NAME = 'csp6-2020'.freeze,
+      CSP7_2020_NAME = 'csp7-2020'.freeze,
+      CSP8_2020_NAME = 'csp8-2020'.freeze,
+      CSP9_2020_NAME = 'csp9-2020'.freeze,
+      CSP10_2020_NAME = 'csp10-2020'.freeze,
+    ].freeze,
     csp_2019: [
       CSP1_2019_NAME = 'csp1-2019'.freeze,
       CSP2_2019_NAME = 'csp2-2019'.freeze,
@@ -340,7 +352,8 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
       ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:csf_2019, script)
+      ScriptConstants.script_in_category?(:csf_2019, script) ||
+      ScriptConstants.script_in_category?(:csf_2020, script)
   end
 
   def self.i18n?(script)

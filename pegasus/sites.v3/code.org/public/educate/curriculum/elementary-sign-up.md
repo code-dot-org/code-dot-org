@@ -9,7 +9,7 @@ Sign up below to receive monthly email updates on Code.org’s Computer Science 
 
 ## Sign-up information
 
-<iframe src="http://go.pardot.com/l/153401/2018-10-02/lzp5jd" width="100%" height="250" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+<iframe src="http://go.pardot.com/l/153401/2018-10-02/lzp5jd" width="100%" height="400" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 ## Previous updates
 
 ### 2019-20

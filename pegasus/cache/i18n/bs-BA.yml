@@ -20,6 +20,8 @@ bs-BA:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Da li ste učitelj informatike? Pogledajte i ostale CSEdWeek
     resurse</a>'
+  csedweek_banner_teachers_text: Da li ste učitelj informatike? Pogledajte i ostale
+    CSEdWeek resurse
   n_have_learned_an_hoc: "<h1> Isprobaj </h1><h2>Sat Kodiranja</h2><h3># poslužen</h3>"
   anybody_can_learn: Svi mogu naučiti.
   learn_now: Nauči sad
@@ -169,6 +171,9 @@ bs-BA:
     Sada, nastavi sa našim <a href='http://studio.code.org'>drugim kursevima</a>,
     ili istraži još mogućnosti na<a href='/learn/beyond'>Nauči više nego u jednom
     Satu Kodiranja</a>.
+  get_a_certificate_message_after_markdown: Klikni na certifikat da bi ga snimio ili
+    isprintao. Sada, nastavi sa našim [drugim kursevima](http://studio.code.org),
+    ili istraži još mogućnosti na [Nauči više nego u jednom Satu Kodiranja](/learn/beyond).
   thanks_for_submitting: Hvala na prijavi!
   if_you_enjoyed: Ako ti je učenje bilo super zabavno, pozovi prijatelje da i oni
     probaju! Želimo da cijeli svijet nauči.

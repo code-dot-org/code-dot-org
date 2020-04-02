@@ -1,0 +1,7 @@
+name 'CSD games platform challenge choice'
+editor_experiment ''
+display_name 'Challenges'
+description 'Improve your game with these challenges!'
+
+sublevels
+level 'CSD U3 platform challenge_2020'

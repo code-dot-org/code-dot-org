@@ -20,6 +20,8 @@ az-AZ:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi
     üçün digər materiallarımızı nəzərdən keçirin</a>'
+  csedweek_banner_teachers_text: İnformatika müəllimisiniz? İnformatika Təhsil Həftəsi
+    üçün digər materiallarımızı nəzərdən keçirin
   n_have_learned_an_hoc: "<h1>Kod Saatında</h1><h2>özünüzü sınayın</h2><h3># nəfər
     faydalanıb</h3>"
   anybody_can_learn: Hər kəs öyrənə bilər.
