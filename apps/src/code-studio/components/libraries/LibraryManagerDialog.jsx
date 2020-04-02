@@ -316,6 +316,13 @@ export class LibraryManagerDialog extends React.Component {
 
   renderDisplayLibrary = () => {
     const {displayLibrary, displayLibraryMode} = this.state;
+    if (
+      !displayLibrary ||
+      !Object.values(DisplayLibraryMode).includes(displayLibraryMode)
+    ) {
+      return;
+    }
+
     const onClose = () =>
       this.setState({
         displayLibrary: null,
