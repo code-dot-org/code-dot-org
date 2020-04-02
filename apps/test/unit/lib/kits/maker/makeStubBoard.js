@@ -29,6 +29,10 @@ export class MicrobitStubBoard {
 
   analogWrite(pinNum, value) {}
 
+  analogRead(pinNum, callback) {
+    callback();
+  }
+
   displayPlot() {}
 
   displayClear() {}
