@@ -197,7 +197,7 @@ def main
         flake_factor_message[:message] = "Hooray! There are no UI tests over 0.2 flakiness."
       else
         flake_factor_message[:color] = 'red'
-        flake_factor_message[:message] = "Tests exceeding flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/> Please ensure these tests are being investigated!"
+        flake_factor_message[:message] = "Tests exceeding 0.2 flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/> Please ensure these tests are being investigated!"
       end
       ChatClient.log flake_factor_message[:message], color: flake_factor_message[:color]
     end
