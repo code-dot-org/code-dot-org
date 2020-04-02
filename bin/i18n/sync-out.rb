@@ -243,8 +243,6 @@ def distribute_translations
       translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
         translation.empty? ? english : translation
       end
-      #puts "\ntranslations:\n#{translations_with_fallback.inspect}\n" if locale == "co-CO"
-      #puts "\ntranslations:\n#{translations_with_fallback.inspect}\n" if locale == "es-MX"
       relname = File.basename(loc_file)
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
       sanitize_data_and_write(translations_with_fallback, destination)
