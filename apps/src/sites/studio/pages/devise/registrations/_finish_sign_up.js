@@ -84,6 +84,9 @@ $(document).ready(() => {
       ':checked'
     );
     if (checked) {
+      $('#user_user_type')
+        .val('student')
+        .change();
       fadeInFields(['.parent-email-field']);
     } else {
       hideFields(['.parent-email-field']);
