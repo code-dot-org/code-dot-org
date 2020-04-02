@@ -37,9 +37,7 @@ class PardotV2
       end
 
       # Stop if all the remaining results were in this response - we're done. Otherwise, keep repeating.
-      # Also stops after first iteration (200 contacts) if we're in dev environment, which
-      # prevents from downloading all new contacts from Pardot.
-      break if (results_in_response == total_results) || CDO.env == 'development'
+      break if results_in_response == total_results
     end
 
     mappings
