@@ -16,7 +16,7 @@ OptionParser.new do |opts|
     options[:limit] = Integer(n)
   end
   opts.on('-x', '--threshold X', 'Tests over flakiness threshold X') do |x|
-    options[:threshold] = Integer(x)
+    options[:threshold] = BigDecimal(x)
   end
   opts.on('-r', '--reruns', 'Show recommended reruns/confidence.') do
     options[:reruns] = true
