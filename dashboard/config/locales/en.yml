@@ -250,6 +250,7 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+    parent_email_added_subject: 'Welcome to Code.org'  
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
