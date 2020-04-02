@@ -15,7 +15,8 @@ const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
-  '#student-consent'
+  '#student-consent',
+  '#parent-email-section'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -36,6 +37,7 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
+    renderParentSignUpSection();
   }
 
   let alreadySubmitted = false;
@@ -70,6 +72,21 @@ $(document).ready(() => {
         'input[name="user[school_info_attributes][school_id]"]'
       );
       schoolIdEl.val('');
+    }
+  }
+
+  $('#user_parent_email_preference_opt_in_required').change(
+    renderParentSignUpSection
+  );
+
+  function renderParentSignUpSection() {
+    let checked = $('#user_parent_email_preference_opt_in_required').is(
+      ':checked'
+    );
+    if (checked) {
+      fadeInFields(['.parent-email-field']);
+    } else {
+      hideFields(['.parent-email-field']);
     }
   }
 
