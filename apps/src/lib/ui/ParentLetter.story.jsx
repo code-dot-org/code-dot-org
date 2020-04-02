@@ -5,7 +5,7 @@ import ParentLetter from './ParentLetter';
 export default storybook =>
   storybook.storiesOf('ParentLetter', module).add('overview', () => (
     <Page>
-      <ParentLetter />
+      <ParentLetter loginType="email" teacherName="Minerva McGonagall" />
     </Page>
   ));
 
