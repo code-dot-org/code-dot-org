@@ -399,7 +399,7 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        {displayLibrary && this.renderDisplayLibrary()}
+        {isOpen && displayLibrary && this.renderDisplayLibrary()}
       </div>
     );
   }
