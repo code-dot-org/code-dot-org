@@ -597,6 +597,7 @@ en:
         csf_private_and_personal_information: Private and Personal Information
         csd_what_computers_are: What is a Computer?
         codebreak_e01: 'Code Break 1.0: Algorithms with Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototypes with Mark Cuban and Lyndsey Scott'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
