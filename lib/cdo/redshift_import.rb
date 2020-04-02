@@ -39,6 +39,7 @@ class RedshiftImport
   def self.temporary_import_tables(schema)
     redshift_client = RedshiftClient.instance
     query = <<~SQL
+      SET search_path TO #{schema};
       SELECT DISTINCT t.tablename
       FROM pg_table_def t LEFT JOIN pg_indexes i ON t.tablename = i.indexname
       WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table_def, as a table.
