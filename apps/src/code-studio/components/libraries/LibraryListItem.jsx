@@ -133,7 +133,7 @@ export class LibraryListItem extends React.Component {
             <button
               type="button"
               key={'update-' + library.id}
-              onClick={this.props.onUpdate}
+              onClick={() => this.props.onUpdate(library.channelId)}
               style={[styles.actionBtn, styles.updateBtn]}
             >
               <FontAwesome icon="refresh" style={{padding: '0 1px'}} />
