@@ -21,6 +21,12 @@ const LOGIN_TYPE_NAMES = {
   [SectionLoginType.email]: 'personal logins'
 };
 
+/**
+ * A letter that teachers can send home to parents, providing guidance on
+ * helping kids continue working on Code.org at home.
+ * Designed to be rendered by itself on a page, ready for printing or PDF
+ * generation.
+ */
 export default function ParentLetter({loginType, sectionCode, teacherName}) {
   return (
     <div>
