@@ -28,7 +28,6 @@ const styles = {
   },
   header: {
     textAlign: 'left',
-    color: color.purple,
     fontSize: 24,
     marginTop: 20
   },

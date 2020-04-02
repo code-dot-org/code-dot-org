@@ -2,12 +2,24 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Body, Title} from '@cdo/apps/templates/Dialog';
+import {Body} from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
 
 const styles = {
+  dialog: {
+    padding: 15
+  },
+  header: {
+    textAlign: 'left',
+    fontSize: 24,
+    marginTop: 5,
+    whiteSpace: 'pre-wrap',
+    lineHeight: 1.25,
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
   message: {
     color: color.dark_charcoal,
     margin: DEFAULT_MARGIN,
@@ -51,8 +63,13 @@ export default class LibraryViewCode extends React.Component {
     const {title, description, onClose, buttons} = this.props;
 
     return (
-      <BaseDialog isOpen={true} handleClose={onClose} useUpdatedStyles>
-        <Title>{title}</Title>
+      <BaseDialog
+        isOpen={true}
+        handleClose={onClose}
+        style={styles.dialog}
+        useUpdatedStyles
+      >
+        <h1 style={styles.header}>{title}</h1>
         <Body>
           <div style={{textAlign: 'left'}}>
             <p style={styles.message}>{description}</p>
