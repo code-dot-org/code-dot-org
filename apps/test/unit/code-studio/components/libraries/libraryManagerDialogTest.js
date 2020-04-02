@@ -263,6 +263,50 @@ describe('LibraryManagerDialog', () => {
     });
   });
 
+  describe('renderDisplayLibrary', () => {
+    let wrapper, library;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={false} />
+      );
+      library = {
+        name: 'MyLibrary',
+        description: 'Very fun!',
+        source: 'function myLibrary() {};'
+      };
+    });
+
+    it('returns the view mode component if displayLibraryMode is "view"', () => {
+      wrapper.setState({displayLibrary: library, displayLibraryMode: 'view'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent.props.title).to.equal(library.name);
+      expect(libraryComponent.props.description).to.equal(library.description);
+      expect(libraryComponent.props.sourceCode).to.equal(library.source);
+      expect(libraryComponent.props.buttons).to.be.undefined;
+    });
+
+    it('returns the update mode component if displayLibraryMode is "update"', () => {
+      wrapper.setState({displayLibrary: library, displayLibraryMode: 'update'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent.props.title).to.equal(
+        `Are you sure you want to update ${library.name}?`
+      );
+      expect(libraryComponent.props.description).to.equal(library.description);
+      expect(libraryComponent.props.sourceCode).to.equal(library.source);
+      expect(libraryComponent.props.buttons).to.not.be.undefined;
+    });
+
+    it('returns undefined if displayLibraryMode is neither "view" nor "update"', () => {
+      wrapper.setState({displayLibrary: library, displayLibraryMode: 'hi'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent).to.be.undefined;
+    });
+  });
+
   describe('mapUserNameToProjectLibraries', () => {
     it('maps userName from classLibraries to project libraries', () => {
       const projectLibraries = [{channelId: '123456'}, {channelId: '654321'}];
