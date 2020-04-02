@@ -1627,7 +1627,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     params: -> {script_level_params(@pilot_script_level)},
     name: 'levelbuilder can view pilot script level'
 
-  def create_visible_after_script
+  def create_visible_after_script_level
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script
     stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
@@ -1636,123 +1636,117 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level
   end
 
-  test 'levelbuilder can view level in stage with future visible after date' do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in @levelbuilder
+  class ShowVisibleAfterScriptLevelTests < ActionController::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
 
-    script_level = create_visible_after_script
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :success
-    Timecop.return
-  end
+      level = create :maze, name: 'maze 1', level_num: 'custom'
+      script_with_visible_after_stages = create :script
 
-  test 'levelbuilder can view level in stage with past visible after date' do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in @levelbuilder
+      stage_future_visible_after = create :stage, name: 'stage 1', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], stage: stage_future_visible_after, script: script_with_visible_after_stages
 
-    script_level = create_visible_after_script
+      stage_past_visible_after = create :stage, name: 'stage 2', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], stage: stage_past_visible_after, script: script_with_visible_after_stages
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :success
-    Timecop.return
-  end
+      stage_no_visible_after = create :stage, name: 'stage 3', script: script_with_visible_after_stages
+      @script_level_no_visible_after = create :script_level, levels: [level], stage: stage_no_visible_after, script: script_with_visible_after_stages
+    end
 
-  test 'teacher can not view level in stage with future visible after date' do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in @teacher
+    teardown do
+      Timecop.return
+    end
 
-    script_level = create_visible_after_script
+    test 'levelbuilder can view level in stage with future visible after date' do
+      sign_in @levelbuilder
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :forbidden
-    Timecop.return
-  end
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :success
+    end
 
-  test 'teacher can view level in stage with past visible after date' do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in @teacher
+    test 'levelbuilder can view level in stage with past visible after date' do
+      sign_in @levelbuilder
 
-    script_level = create_visible_after_script
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :success
-    Timecop.return
-  end
+    test 'teacher can not view level in stage with future visible after date' do
+      sign_in @teacher
 
-  test 'student can not view level in stage with future visible after date' do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in @teacher
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
 
-    script_level = create_visible_after_script
+    test 'teacher can view level in stage with past visible after date' do
+      sign_in @teacher
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :forbidden
-    Timecop.return
-  end
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
 
-  test 'student can view level in stage with past visible after date' do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in @teacher
+    test 'student can not view level in stage with future visible after date' do
+      sign_in @teacher
 
-    script_level = create_visible_after_script
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :success
-    Timecop.return
-  end
+    test 'student can view level in stage with past visible after date' do
+      sign_in @teacher
 
-  test 'unsigned in user can not view level in stage with future visible after date' do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_out :user
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
 
-    script_level = create_visible_after_script
+    test 'unsigned in user can not view level in stage with future visible after date' do
+      sign_out :user
 
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :forbidden
-    Timecop.return
-  end
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
 
-  test 'unsigned in user can view level in stage with past visible after date' do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_out :user
+    test 'unsigned in user can view level in stage with past visible after date' do
+      sign_out :user
 
-    script_level = create_visible_after_script
-
-    get :show, params: {
-      script_id: script_level.script,
-      stage_position: script_level.stage.absolute_position,
-      id: script_level.position
-    }
-    assert_response :success
-    Timecop.return
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
   end
 end
