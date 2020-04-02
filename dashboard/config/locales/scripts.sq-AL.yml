@@ -1822,36 +1822,46 @@ sq:
               name: Kushtet
             Functions:
               name: funksione
+            Text:
+              name: Tekst
         coursea-2020:
           stages:
             Going Places Safely:
               name: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+            'Programming: Happy Maps':
+              name: Hartat e Gëzuara
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Gjurmët e Tua Dixhitale
             Move It, Move It:
               name: Lëvize atë, lëvize atë
+            'Loops: Getting Loopy':
+              name: Duke u Çmëndur
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Byzylykët Binarë
+            'Events: The Big Event':
+              name: Eventi i Madh
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programimi Grafik me Letër
             Relay Programming:
               name: Programimi i Besuar
             Conditionals with Cards:
               name: Kushtoret me Karta
             'Unplugged: Binary':
-              name: 'Unplugged: Binare'
+              name: Imazhet Binare
             Artist Binary:
               name: Artist Binar
             Digital Citizenship:
               name: Shtetësi Dixhitale
         coursee-2020:
           stages:
-            Conditionals:
-              name: Kushtet
+            'Functions: Songwriting':
+              name: Të shkruarit e Këngëve
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1859,10 +1869,36 @@ sq:
             For Loop Fun:
               name: Qef me Ciklet For
             Internet:
-              name: Internet
+              name: Interneti
             Crowdsourcing:
               name: Crowdsourcing
         pre-express-2020:
           stages:
             Spelling Bee:
               name: Bleta Gërmëzuese
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Krijimi i Funksioneve
+        csd3-virtual:
+          stages:
+            Variables:
+              name: variabla
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Përsëritjet Ndërsa
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funksione
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmet
+            Events:
+              name: Ngjarje

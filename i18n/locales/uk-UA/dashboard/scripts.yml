@@ -2003,13 +2003,15 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+            Text:
+              name: Текст
         coursea-2020:
           description_audience: 'Вік: 4-7'
           stages:
             Going Places Safely:
               name: Безпечне добирання
-            Loops in Ice Age:
-              name: Петлі в Ice Age
+            'Programming: Happy Maps':
+              name: Щасливі карти
         courseb-2020:
           description_audience: 'Вік: 5-8'
           stages:
@@ -2017,14 +2019,20 @@ uk:
               name: Твій цифровий слід
             Move It, Move It:
               name: Рухайся, рухайся
+            'Loops: Getting Loopy':
+              name: Економія на повторах
         coursec-2020:
           description_audience: 'Вік: 6-10'
           stages:
             Binary Bracelets:
               name: Двійкові браслети
+            'Events: The Big Event':
+              name: Велика подія
         coursed-2020:
           description_audience: 'Вік: 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Програмування по клітинках
             Relay Programming:
               name: Естафетне програмування
             Loops in Ice Age:
@@ -2032,7 +2040,7 @@ uk:
             Conditionals with Cards:
               name: Листівки та умови
             'Unplugged: Binary':
-              name: 'Безмашинні вправи: двійкова система'
+              name: Двійкові зображення
             Artist Binary:
               name: 'Художник: двійкова система'
             Digital Citizenship:
@@ -2042,8 +2050,8 @@ uk:
         coursee-2020:
           description_audience: 'Вік: 8-12'
           stages:
-            Conditionals:
-              name: Умови
+            'Functions: Songwriting':
+              name: Написання пісень
         coursef-2020:
           description_audience: 'Вік: 9-13'
           stages:
@@ -2071,3 +2079,39 @@ uk:
           stages:
             Binary Numbers:
               name: Двійкові Числа
+        csp3-virtual:
+          description_short: Програмування
+          stages:
+            Creating Functions:
+              name: Створення функцій
+        csd3-virtual:
+          description_short: "Програмування"
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: Класи CSS
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Цикли "поки"
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Події

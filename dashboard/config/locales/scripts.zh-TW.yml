@@ -5360,6 +5360,8 @@ zh-TW:
               name: 二進制手環
             Create a Design with Loops:
               name: 用迴圈來創作
+            Powerful Passwords:
+              name: 強大的密碼
         gamelab:
           title: Game Lab
         coursea-2019:
@@ -6574,6 +6576,8 @@ zh-TW:
               name: 使用遊戲設計流程
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+            Text:
+              name: 文字
         coursea-2020:
           title: 課程 A（2019）
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
@@ -6586,21 +6590,19 @@ zh-TW:
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
             'Programming: Happy Maps':
-              name: 程式設計 - 快樂地圖
+              name: 快樂地圖
               description_teacher: 如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。
             Sequencing with Scrat:
               name: 和鼠奎特一起學序列
             Programming in Ice Age:
-              name: 在冰河歷險紀裡編程
+              name: 和鼠奎特一起寫程式
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
             'Loops: Happy Loops':
               name: 迴圈（Loops） - 快樂迴圈
               description_teacher: 迴圈是程式設計中非常有用且強大的工具。為了理解迴圈的用處，就必須逼著學生去思考更簡潔的方式來解決平凡的問題。
-            Loops in Ice Age:
-              name: 冰河歷險紀中的迴圈
             Loops in Collector:
-              name: 收藏家中的迴圈（Loops）
+              name: 與 Laurel 一起學習迴圈
               description_student: 幫探險家 Laurel 收集地底的寶藏。
               description_teacher: 從「快樂迴圈」中建立重複指令的概念，這個階段會讓學生用迴圈更有效率的收集寶藏。
         courseb-2020:
@@ -6614,48 +6616,58 @@ zh-TW:
                 footprint），至於痕跡的大小、利弊，就要靠他們自己來管理。
             Move It, Move It:
               name: 移動它，移動它
+            Sequencing in Maze:
+              name: 迷宮中的循序（Sequence）
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
             Programming in Harvester:
               name: 和農夫一起學程式
             'Loops: Getting Loopy':
-              name: 迴圈：學習迴圈
+              name: 學習迴圈
+            Loops in Harvester:
+              name: 與農夫一起學迴圈（Loops）
             Loops in Collector:
-              name: 收藏家中的迴圈（Loops）
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
+              name: 與 Laurel 一起學習迴圈
         coursec-2020:
           title: 課程 C（2019）
           description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
           description_audience: 年齡 6-10
           stages:
+            Powerful Passwords:
+              name: 強大的密碼
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
             Programming in Collector:
-              name: 和收藏家學編程（Program）
+              name: 和 Laurel 一起收集寶石
+            Programming in Artist:
+              name: 用代碼創作藝術
             Binary Bracelets:
               name: 二進制手環
+            Looking Ahead:
+              name: 與 Minecraft 一起展望未來
+            'Events: The Big Event':
+              name: 大事件
         coursed-2020:
           title: 課程 D（2019）
           description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
           description_audience: 年齡 7-11
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: 方格紙編程
             Relay Programming:
               name: 接力編程
             Debugging in Collector:
-              name: 和收藏家學除錯（Debug）
+              name: 和 Laurel 學除錯（Debug）
             Build a Star Wars Game:
               name: 創建一個星際大戰遊戲！
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
             Nested Loops in Bee:
-              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             'Unplugged: Binary':
-              name: 不插電活動 - 二進制
+              name: 二進制圖像
             Artist Binary:
               name: 小藝術家 - 二進制（Binary）
             Digital Citizenship:
@@ -6669,19 +6681,16 @@ zh-TW:
           description_short: 預覽課程 C & D 的概念，進一步的學習函式。
           description_audience: 年齡 8-12
           stages:
-            Conditionals:
-              name: 條件判斷（Conditionals）
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             About Me:
               name: 關於我
-            Access Ability:
-              name: 輔助功能
             Nested Loops in Bee:
-              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Nested Loops in Artist:
               name: 小藝術家裡的巢狀迴圈（Nested Loops）
             'Functions: Songwriting':
+              name: 歌曲創作
               description_teacher: 在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
             Functions in Minecraft:
               name: Minecraft 中的函式
@@ -6694,6 +6703,10 @@ zh-TW:
             Functions in Minecraft:
               name: Minecraft 中的函式
               description_student: 你能指出要如何利用函式提高編程效率嗎？
+            Events with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            Nested Loops in the Maze:
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Envelope Variables:
               name: 信封變數
             For Loop Fun:
@@ -6701,7 +6714,9 @@ zh-TW:
             For Loops in Artist:
               name: 藝術家中的計數迴圈（For Loops）
             Internet:
-              name: 網際網路 Internet
+              name: 網際網路
+            Editing Behaviors:
+              name: Sprite Lab 的行為（Behavior）
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
         express-2020:
@@ -6788,3 +6803,138 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            Part 1:
+              name: 第一部分
+            Part 2:
+              name: 第二部分
+        csp3-virtual:
+          stages:
+            Using Simple Commands:
+              name: 簡單指令的使用
+            Creating Functions:
+              name: 建立函式
+            APIs and Function Parameters:
+              name: API 和函式參數
+            Unit 3 Chapter 1 Assessment:
+              name: 單元 1 第 1 節 評量
+        csd3-virtual:
+          description_short: Game Lab 編程環境介紹
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+            Variables:
+              name: 變數
+            Sprites:
+              name: 角色
+            Sprite Movement:
+              name: 角色動作
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Collision Detection:
+              name: 碰撞檢測
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+            Random Numbers:
+              name: 隨機取數
+        jess-test-script:
+          stages:
+            new stage:
+              name: 新的階段
+        csd2-virtual:
+          stages:
+            Exploring Web Pages:
+              name: 瀏覽網頁
+            Headings:
+              name: 標題
+            Digital Footprint:
+              name: 數位足跡
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+            Intellectual Property:
+              name: 知識產權
+            Images:
+              name: 圖像
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+            Project - Building a Webpage:
+              name: 專案 — 製作網頁
+            Purpose of a  Websites:
+              name: 網站的目的
+            Sources and Research:
+              name: 資料來源與研究
+            Planning a Multi-page Website:
+              name: 規劃多頁網站
+            Linking and Navigation:
+              name: 鏈接與導航
+        csp5-virtual:
+          stages:
+            Multi-screen Apps:
+              name: 多螢幕應用程式
+            Unit 5 Assessment 1:
+              name: 單元 5 評量 1
+            User Input and Strings:
+              name: 使用者輸入與字串
+            '"If" Statements Unplugged':
+              name: "「如果」陳述式不插電教程"
+            '"if-else-if" and Conditional Logic':
+              name: "「如果…否則」和條件判斷式"
+            Unit 5 Assessment 2:
+              name: 單元 5 評量 2
+            While Loops:
+              name: 當…迴圈
+            Introduction to Arrays:
+              name: 陣列（Arrays）的介紹
+            'Building an App: Image Scroller':
+              name: 創建一個 APP：圖像播放器
+            Unit 5 Assessment 3:
+              name: 單元 5 評量 3
+            Processing Arrays:
+              name: 處理陣列
+            Functions with Return Values:
+              name: 帶返回值的函式
+            'Building an App: Canvas Painter':
+              name: 創建一個 App - 帆布畫家
+            Unit 5 Assessment 4:
+              name: 單元 5 評量 4
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 速度
+            Collision Detection:
+              name: 碰撞檢測
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+        code-break:
+          stages:
+            new stage:
+              name: 新的階段
+            Algorithms:
+              name: 演算法
+            Events:
+              name: 事件

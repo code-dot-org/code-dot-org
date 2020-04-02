@@ -554,16 +554,20 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+            Text:
+              name: teks
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
             Dance Party:
               name: Majlis Tari-Menari
-        coursee-2020:
-          stages:
-            Conditionals:
-              name: Bersyarat
         coursef-2020:
           stages:
             Internet:
@@ -576,3 +580,21 @@ ms:
           stages:
             Spelling Bee:
               name: Lebah Ejaan
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Fungsi
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritma
+            Events:
+              name: Acara-acara

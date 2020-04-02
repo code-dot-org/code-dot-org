@@ -10,12 +10,14 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
     @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
-    @csd_2017 = ensure_course Script::CSD_2017
-    @csd_2018 = ensure_course Script::CSD_2018
-    @csd_2019 = ensure_course Script::CSD_2019
-    @csd6_2017 = ensure_script Script::CSD6_NAME
-    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
-    @csd6_2019 = ensure_script Script::CSD6_2019_NAME
+    @csd_2017 = ensure_course Script::CSD_2017, '2017'
+    @csd_2018 = ensure_course Script::CSD_2018, '2018'
+    @csd_2019 = ensure_course Script::CSD_2019, '2019'
+    @csd_2020_unstable = ensure_course 'csd-2020-unstable', '2020'
+    @csd6_2017 = ensure_script Script::CSD6_NAME, '2017'
+    @csd6_2018 = ensure_script Script::CSD6_2018_NAME, '2018'
+    @csd6_2019 = ensure_script Script::CSD6_2019_NAME, '2019'
+    @csd6_2020_unstable = ensure_script 'csd6-2020-unstable', '2020', false
   end
 
   test_redirect_to_sign_in_for :home
@@ -473,15 +475,15 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name)
+  def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name).tap do |script|
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable).tap do |script|
         create :script_level, script: script
       end
   end
 
-  def ensure_course(course_name)
+  def ensure_course(course_name, version_year)
     Course.find_by_name(course_name) ||
-      create(:course, name: course_name)
+      create(:course, name: course_name, version_year: version_year, family_name: Course::CSD)
   end
 end

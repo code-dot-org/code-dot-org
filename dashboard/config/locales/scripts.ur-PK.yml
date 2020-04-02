@@ -340,14 +340,14 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+            Text:
+              name: متن
         coursed-2020:
           stages:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
             Dance Party:
               name: ڈانس پارٹی
-        coursee-2020:
-          stages:
-            Conditionals:
-              name: شرائط
         coursef-2020:
           stages:
             Envelope Variables:
@@ -356,3 +356,13 @@ ur:
           stages:
             Dance Party:
               name: ڈانس پارٹی
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+        code-break:
+          stages:
+            Events:
+              name: ایونٹس/واقعات

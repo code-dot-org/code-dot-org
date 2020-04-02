@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Displace\r\n\r\nThe interaction you've been programming is so common that there's a block designed to do the interaction for you. `sprite.displace()` that will make one sprite push the other when they touch. The code underlying this block might look a lot like what you just wrote, but now you no longer need to worry about writing those details yourself.\r\n\r\n# Do This\r\n\r\nSomeone tried to use the `sprite.displace()` block to make the **elephant push the hippo**, but there is a bug. Can you change the code so that the elephant pushes the hippo off the screen?\r\n\r\n* Find the line of code where the `sprite.displace()` block is used and fix the error.",
+    "long_instructions": "# Displace\r\n\r\nThis type of sprite interaction  is so common that there's a block for it: `sprite.displace()`.  Someone tried to use the `sprite.displace()` block to make the **elephant push the hippo**, but there is a bug.\r\n\r\n# Do This\r\n\r\n* Find the line of code where the `sprite.displace()` block is used and fix the error.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -67,11 +67,15 @@
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/sprite-interactions/",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 19:08:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-03-05 19:08:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-01 06:09:30 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

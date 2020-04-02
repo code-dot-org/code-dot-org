@@ -19,6 +19,8 @@ ka-GE:
     font-weight:bold"> დაგეგმოთ თქვენი კოდის ერთი საათი</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> CS მასწავლებელი ხართ? გაეცანით CSEd კვირის სხვა რესურსებს</a>'
+  csedweek_banner_teachers_text: " CS მასწავლებელი ხართ? გაეცანით CSEd კვირის სხვა
+    რესურსებს"
   n_have_learned_an_hoc: "<h1> სცადეთ </h1><h2>კოდის ერთი საათი</h2><h3>#</h3>"
   anybody_can_learn: სწავლა შეუძლია ყველას.
   learn_now: ისწავლეთ ახლა
@@ -203,6 +205,9 @@ ka-GE:
     მას. შემდეგ კი გააგრძელეთ <a href='http://studio.code.org'>ჩვენი სხვა კურსები</a>
     ან გაიგეთ, კიდევ როგორ შეგიძლიათ სწავლა <a href='/learn/beyond'>კოდის ერთი საათის
     დასრულების შემდეგ</a>.
+  get_a_certificate_message_after_markdown: სერტიფიკატის გადმოსაწერად ან ამოსაბეჭდად
+    დააჭირეთ მას. შემდეგ კი გააგრძელეთ [ჩვენი სხვა კურსები](http://studio.code.org)
+    ან გაიგეთ, კიდევ როგორ შეგიძლიათ სწავლა [კოდის ერთი საათის დასრულების შემდეგ](/learn/beyond).
   thanks_for_submitting: მადლობა, თქვენი მოთხოვნა მიღებულია!
   if_you_enjoyed: თუ მოგეწონათ სწავლა, შესთავაზეთ მეგობრებსაც! ჩვენ გვინდა, რომ მთელმა
     სამყარომ ისწავლოს პროგრამირება.

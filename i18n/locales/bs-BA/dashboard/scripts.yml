@@ -2224,6 +2224,8 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+            Text:
+              name: Tekst
         coursea-2020:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           stages:
@@ -2232,6 +2234,7 @@ bs:
             Learn to Drag and Drop:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
+              name: Vesele Mape
               description_teacher: 'Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.'
             Sequencing with Scrat:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
@@ -2244,18 +2247,22 @@ bs:
               name: Pomakni, Pomakni
             Sequencing in Maze:
               description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+            'Loops: Getting Loopy':
+              name: Zapetljavanje
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki Događaj
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Papirno Programiranje Grafikona
             Relay Programming:
               name: Prijenos programiranja
             Conditionals with Cards:
               name: Uvjeti s Kartama
-            'Unplugged: Binary':
-              name: 'Izvanmrežno: Binarni'
             Artist Binary:
               name: Umjetnik Binarno
             Digital Citizenship:
@@ -2264,8 +2271,8 @@ bs:
               name: Plesna zabava
         coursee-2020:
           stages:
-            Conditionals:
-              name: Uvjeti
+            'Functions: Songwriting':
+              name: Pisanje pjesama
         coursef-2020:
           stages:
             Internet:
@@ -2286,3 +2293,41 @@ bs:
           stages:
             Binary Numbers:
               name: Binarni Brojevi
+        csp3-virtual:
+          stages:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        csd2-virtual:
+          stages:
+            Images:
+              name: Slike
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Dok petlje
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Događaji

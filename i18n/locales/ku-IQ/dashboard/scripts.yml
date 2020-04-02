@@ -436,11 +436,35 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+            Text:
+              name: دەق
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: نەخشەی دڵخۆش
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
-        coursee-2020:
+        coursef-2020:
           stages:
+            Internet:
+              name: ئینتەرنێت
+        csd3-virtual:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
             Conditionals:
               name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: فرمانەکان
+        code-break:
+          stages:
+            Algorithms:
+              name: خوارزمیەکان

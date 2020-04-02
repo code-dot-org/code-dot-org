@@ -762,6 +762,30 @@ cs-CZ:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
+      Overworld House Frame Chosen:
+        mc_6_b: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Overworld House Frame Chosen_2019:
+        mc_6_b: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Overworld Place Wall:
+        mc_5_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Overworld Place Wall_2019:
+        mc_5_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Overworld Shear Sheep:
+        mc_3_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Overworld Shear Sheep_2019:
+        mc_3_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Underground Iron:
+        mc_10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
+      Underground Iron_2019:
+        mc_10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když
+          jsi úlohu zatím ještě úplně nerozluštil(a).
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_a: |-
           Můžeš použít podobný cyklus k vytvoření zdí a střechy. Zkus opakovat různé bloky.
@@ -878,12 +902,45 @@ cs-CZ:
         courseA_harvester_seq2_b: Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_harvester_seq2_2019:
         courseA_harvester_seq2_b: Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseA_maze_seq13:
+        courseA_maze_seq13_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, abys viděl(a), co se stane.
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, abys viděl(a), co se stane.
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, abys viděl(a), co se stane.
       courseA_maze_seq5:
         courseA_maze_seq5_a: Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_maze_seq5_2018:
         '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_maze_seq5_2019:
         '1': Zkus sepsat kroky na papír, aby jsi našel řešení!
+      courseB_Scrat_ramp1_2018:
+        '2': Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej
+          něco jiného.
+      courseB_Scrat_ramp1_2019:
+        '2': Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej
+          něco jiného.
+      courseB_iceage_loops1:
+        courseB_iceage_loops1_a: Dávej pozor na probořený led! Scrat jím propadne!
+      courseB_iceage_loops10:
+        courseB_iceage_loops10_a: Dávej pozor na probořený led! Scrat jím propadne
+          do vody!
+      courseB_iceage_loops10_2019:
+        courseB_iceage_loops10_a: Dávej pozor na probořený led! Scrat jím propadne
+          do vody!
+      courseB_iceage_loops1_2019:
+        courseB_iceage_loops1_a: Dávej pozor na probořený led! Scrat jím propadne!
+      courseB_iceage_loops2:
+        courseB_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseB_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
+      courseB_iceage_loops2_2019:
+        courseB_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseB_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Použij tento nový blok!
@@ -908,12 +965,66 @@ cs-CZ:
         courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
       courseB_maze_seq9_2019:
         courseB_maze_seq9_c: Tuto hádanku lze vyřešit dvěma způsoby.
+      courseB_starWars_prog9:
+        courseB_starWars_prog9_a: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseB_starWars_prog9_2018:
+        courseB_starWars_prog9_a: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseB_starWars_prog9_2019:
+        courseB_starWars_prog9_a: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_artist_prog5:
+        courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_artist_prog5_2018:
+        courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_artist_prog5_2019:
+        courseC_artist_prog5_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_artist_prog7:
+        courseC_artist_prog7_e: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_artist_prog7_2018:
+        courseC_artist_prog7_e: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_artist_prog7_2019:
+        courseC_artist_prog7_e: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_collector_loops_challenge2:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_collector_loops_challenge2_2018:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_collector_loops_challenge2_2019:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_prog2:
+        courseC_collector_prog2_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_collector_prog4:
+        courseC_collector_prog4_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_collector_prog4_2018:
+        courseC_collector_prog4_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_collector_prog4_2019:
+        courseC_collector_prog4_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_collector_prog6:
+        courseC_collector_prog6_a: "Dokážeš přijít na to, co je špatně? \n\nPro nalezení
+          chyb zkus použít tlačítko Krok, abys spouštěl(a) kód řádek po řádku."
+      courseC_collector_prog6_2018:
+        courseC_collector_prog6_a: "Dokážeš přijít na to, co je špatně? \n\nPro nalezení
+          chyb zkus použít tlačítko Krok, abys spouštěl(a) kód řádek po řádku."
+      courseC_collector_prog6_2019:
+        courseC_collector_prog6_a: "Dokážeš přijít na to, co je špatně? \n\nPro nalezení
+          chyb zkus použít tlačítko Krok, abys spouštěl(a) kód řádek po řádku."
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
@@ -929,12 +1040,130 @@ cs-CZ:
       courseC_harvester_loops3_2019:
         courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_maze_programming5:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
       courseC_maze_programming6:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseC_maze_programming8:
+        courseC_maze_programming8_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseC_starWars_loops1:
+        courseC_starWars_loops1_b: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops10:
+        courseC_starWars_loops10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops10_2018:
+        courseC_starWars_loops10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops10_2019:
+        courseC_starWars_loops10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_b: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_b: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops7:
+        courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops7_2018:
+        courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
+          co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseD_artist_5_2018:
+        '1': Jestli měníš tvary, nezapomeň, že budeš muset změnit také jejich úhly!
+      courseD_artist_5_2018_2019:
+        '1': Jestli měníš tvary, nezapomeň, že budeš muset změnit také jejich úhly!
+      courseD_artist_binary1:
+        courseD_artist_binary1_c: |-
+          Takto vložíš svůj binární kód:
+
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2018:
+        courseD_artist_binary1_c: |-
+          Takto vložíš svůj binární kód:
+
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary1_2019:
+        courseD_artist_binary1_c: |-
+          Takto vložíš svůj binární kód:
+
+          ![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)
+      courseD_artist_binary2:
+        courseD_artist_binary2_a: Klikni na `Spustit`, abys viděl program v akci!
+      courseD_artist_binary2_2018:
+        courseD_artist_binary2_a: Klikni na `Spustit`, abys viděl program v akci!
+      courseD_artist_binary2_2019:
+        courseD_artist_binary2_a: Klikni na `Spustit`, abys viděl program v akci!
+      courseD_artist_binary3:
+        courseD_artist_binary3_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
+      courseD_artist_binary3_2018:
+        courseD_artist_binary3_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
+      courseD_artist_binary3_2019:
+        courseD_artist_binary3_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
+      courseD_artist_binary4:
+        courseD_artist_binary4_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_artist_binary4_2018:
+        courseD_artist_binary4_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_artist_binary4_2019:
+        courseD_artist_binary4_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_artist_binary5:
+        courseD_artist_binary5_a: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary5_b: Musíš jen vyměnit dvě řady, abys vytvořil(a) úsměv.
+      courseD_artist_binary5_2018:
+        courseD_artist_binary5_a: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary5_b: Musíš jen vyměnit dvě řady, abys vytvořil(a) úsměv.
+      courseD_artist_binary5_2019:
+        courseD_artist_binary5_a: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary5_b: Musíš jen vyměnit dvě řady, abys vytvořil(a) úsměv.
+      courseD_artist_binary7:
+        courseD_artist_binary7_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_artist_binary7_2018:
+        courseD_artist_binary7_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_artist_binary7_2019:
+        courseD_artist_binary7_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_artist_binary8:
+        courseD_artist_binary8_b: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary8_c: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
+      courseD_artist_binary8_2018:
+        courseD_artist_binary8_b: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary8_c: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
+      courseD_artist_binary8_2019:
+        courseD_artist_binary8_b: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary8_c: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
       courseD_artist_binary_challenge2_2018:
         courseD_artist_binary_challenge2_a: V původním programu je pouze několik řádků
           špatně.
@@ -956,6 +1185,24 @@ cs-CZ:
           Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
 
           Pokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?
+      courseD_autorun_binary2_2019:
+        courseD_artist_binary2_a: Klikni na `Spustit`, abys viděl program v akci!
+      courseD_autorun_binary3_2019:
+        courseD_artist_binary3_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
+      courseD_autorun_binary4_2019:
+        courseD_artist_binary4_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_autorun_binary5_2019:
+        courseD_artist_binary5_a: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary5_b: Musíš jen vyměnit dvě řady, abys vytvořil(a) úsměv.
+      courseD_autorun_binary7_2019:
+        courseD_artist_binary7_b: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když si nemyslíš, že jsi úlohu úplně rozluštil(a).
+      courseD_autorun_binary8_2019:
+        courseD_artist_binary8_b: Zkus nejprve kód spustit, abys viděl(a), s čím pracuješ.
+        courseD_artist_binary8_c: Neboj se dělat chyby! Zkus napsat kód a spusť ho,
+          abys viděl(a), co se stane, i když jsi úlohu ještě nerozluštil(a).
       courseD_bee_conditionals2:
         courseD_bee_conditionals2_a: Někdy tam květina bude a někdy nebude. Pokud
           chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz.
@@ -1031,16 +1278,28 @@ cs-CZ:
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
           K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
+        courseD_bee_conditionals8_b: |-
+          Nenechte se napálit, nemůžete zkontrolovat prázdná pole, nektar _a_ med jen s jednou podmínkou.
+
+          Zkontrolujte nektar a med na konci své cesty.
       courseD_bee_conditionals8_2018:
         courseD_bee_conditionals8_a: |-
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
           K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
+        courseD_bee_conditionals8_b: |-
+          Nenechte se napálit, nemůžete zkontrolovat prázdná pole, nektar _a_ med jen s jednou podmínkou.
+
+          Zkontrolujte nektar a med na konci své cesty.
       courseD_bee_conditionals8_2019:
         courseD_bee_conditionals8_a: |-
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
           K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
+        courseD_bee_conditionals8_b: |-
+          Nenechte se napálit, nemůžete zkontrolovat prázdná pole, nektar _a_ med jen s jednou podmínkou.
+
+          Zkontrolujte nektar a med na konci své cesty.
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge1_b: |-
           Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:
@@ -1077,7 +1336,164 @@ cs-CZ:
           <block type="maze_nectar"/>
           </statement>
           </block></xml>
+      courseD_bounce_events10s_2018:
+        courseD_bounce_events10s_a: |-
+          Ve svém kódu bys měl(a) mít obě tyto události:
+
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>
+      courseD_bounce_events10s_2019:
+        courseD_bounce_events10s_a: |-
+          Ve svém kódu bys měl(a) mít obě tyto události:
+
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>
+      courseD_bounce_events11s_2018:
+        courseD_bounce_events11s_a: 'Budeš muset hodit míč, když hra začne, když hodíš
+          koš a když ruka balón mine. '
+      courseD_bounce_events11s_2019:
+        courseD_bounce_events11s_a: 'Budeš muset hodit míč, když hra začne, když hodíš
+          koš a když ruka balón mine. '
+      courseD_bounce_events12s_2018:
+        courseD_bounce_events12s_a: Můžeš zrychlit míč nebo ruku tak, že tyto bloky
+          připojíš k události `při spuštění`.
+        courseD_bounce_events12s_b: Zkus dát každému hodu 2 body a změnit logo týmu
+          na tým ze svého města!
+      courseD_bounce_events12s_2019:
+        courseD_bounce_events12s_a: Můžeš zrychlit míč nebo ruku tak, že tyto bloky
+          připojíš k události `při spuštění`.
+        courseD_bounce_events12s_b: Zkus dát každému hodu 2 body a změnit logo týmu
+          na tým ze svého města!
+      courseD_bounce_events1s_2018:
+        courseD_bounce_events1s_a: |-
+          Aby hra fungovala, musíš přidat blok `posuň se vlevo` k události `když šipka vlevo`:
+
+           <xml> <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+
+             </xml>
+        courseD_bounce_events1s_b: Nezapomeň stisknout "Spustit" a dostat ruku ke
+          koši, abys úlohu vyřešil(a).
+      courseD_bounce_events1s_2019:
+        courseD_bounce_events1s_a: |-
+          Aby hra fungovala, musíš přidat blok `posuň se vlevo` k události `když šipka vlevo`:
+
+           <xml> <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+
+             </xml>
+        courseD_bounce_events1s_b: Nezapomeň stisknout "Spustit" a dostat ruku ke
+          koši, abys úlohu vyřešil(a).
+      courseD_bounce_events2s_2018:
+        courseD_bounce_events2s_a: |-
+          Aby to fungovalo, budeš potřebovat naprogramovat dvě `posuň se` události:
+
+          <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
+          </xml>
+      courseD_bounce_events2s_2019:
+        courseD_bounce_events2s_a: |-
+          Aby to fungovalo, budeš potřebovat naprogramovat dvě `posuň se` události:
+
+          <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
+          </xml>
+      courseD_bounce_events5s_2018:
+        courseD_bounce_events5s_a: Nemusíš pohnout rukou, abys úlohu vyřešil(a).
+        courseD_bounce_events5s_b: |-
+          Ujisti se, že jsi do svého pracovního prostoru přidal(a) tento kód:
+
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events5s_2019:
+        courseD_bounce_events5s_a: Nemusíš pohnout rukou, abys úlohu vyřešil(a).
+        courseD_bounce_events5s_b: |-
+          Ujisti se, že jsi do svého pracovního prostoru přidal(a) tento kód:
+
+          <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
+      courseD_bounce_events6s_2018:
+        courseD_bounce_events6s_a: |-
+          Máš událost, která vypadá takto?
+
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Pokud jsi napsal(a) kód správně, nebudeš muset
+          pro výhru pohnout rukou.
+      courseD_bounce_events6s_2019:
+        courseD_bounce_events6s_a: |-
+          Máš událost, která vypadá takto?
+
+          <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Pokud jsi napsal(a) kód správně, nebudeš muset
+          pro výhru pohnout rukou.
+      courseD_bounce_events7s_2018:
+        courseD_bounce_events7s_a: Pokud chceš, můžeš přidat zvuky na více míst!
+      courseD_bounce_events7s_2019:
+        courseD_bounce_events7s_a: Pokud chceš, můžeš přidat zvuky na více míst!
+      courseD_collector_debugging1:
+        courseD_collector_debugging1_a: |-
+          Použij tlačítko "Krok", abys viděl(a), jestli je v prvním kroku všechno správně.
+
+          Co druhý krok?
+
+          Kde to nefunguje?
+        courseD_collector_debugging1_c: Nezapomeň použít blok `sbírej`, abys sesbíral
+          poklad, když se k němu posuneš.
+      courseD_collector_debugging10_predict1:
+        courseD_collector_debugging9_a: Je několik cest, jak tuto úlohu vyřešit...
+          ale všechny zahrnují otočky!
+      courseD_collector_debugging1a_2018:
+        courseD_collector_debugging1_a: |-
+          Použij tlačítko "Krok", abys viděl(a), jestli je v prvním kroku všechno správně.
+
+          Co druhý krok?
+
+          Kde to nefunguje?
+        courseD_collector_debugging1_c: Nezapomeň použít blok `sbírej`, abys sesbíral
+          poklad, když se k němu posuneš.
+      courseD_collector_debugging1a_2019:
+        courseD_collector_debugging1_a: |-
+          Použij tlačítko "Krok", abys viděl(a), jestli je v prvním kroku všechno správně.
+
+          Co druhý krok?
+
+          Kde to nefunguje?
+        courseD_collector_debugging1_c: Nezapomeň použít blok `sbírej`, abys sesbíral
+          poklad, když se k němu posuneš.
+      courseD_collector_debugging2:
+        courseD_collector_debugging2_a: |-
+          Použij tlačítko "Krok", abys viděl(a), jestli je v prvním kroku všechno správně.
+
+          Co druhý krok?
+
+          Kde to nefunguje?
       courseD_collector_debugging2a_2018:
+        courseD_collector_debugging2a_a: |-
+          Použij tlačítko "Krok", abys viděl(a), jestli je v prvním kroku všechno správně.
+
+          Co druhý krok?
+
+          Kde to nefunguje?
         courseD_collector_debugging2a_c: |-
           Co se děje?
 
@@ -1085,12 +1501,46 @@ cs-CZ:
 
           Co ti to říká?
       courseD_collector_debugging2a_2019:
+        courseD_collector_debugging2a_a: |-
+          Použij tlačítko "Krok", abys viděl(a), jestli je v prvním kroku všechno správně.
+
+          Co druhý krok?
+
+          Kde to nefunguje?
         courseD_collector_debugging2a_c: |-
           Co se děje?
 
           Co se má stát?
 
           Co ti to říká?
+      courseD_collector_debugging3:
+        courseD_collector_debugging3_a: Je místo, kde Laurel dělá něco, co nedává
+          smysl? Co se stane poté, když tyto bloky změníš?
+        courseD_collector_debugging3_b: Zkus zjednodušit kód využítím vnořených cyklů.
+      courseD_collector_debugging3a_2018:
+        courseD_collector_debugging3_a: Je místo, kde Laurel dělá něco, co nedává
+          smysl? Co se stane poté, když tyto bloky změníš?
+      courseD_collector_debugging3a_2019:
+        courseD_collector_debugging3_a: Je místo, kde Laurel dělá něco, co nedává
+          smysl? Co se stane poté, když tyto bloky změníš?
+      courseD_collector_debugging4:
+        courseD_collector_debugging4_a: "Zkus použít proces ladění několikrát za sebou.
+          \n\nCo způsobuje první problém?\n\nKdyž je problém opravený, co je špatně?"
+        courseD_collector_debugging4_b: "Jestli je pro tebe těžké vymyslet, jak udělat
+          schodovitý vzor, zkus ho obtáhnout prstem a říkat si při tom pokyny nahlas.
+          \n\nNezapomeň ukázat směr otoček!"
+      courseD_collector_debugging4a_2018:
+        courseD_collector_debugging4_a: "Zkus použít proces ladění několikrát za sebou.
+          \n\nCo způsobuje první problém?\n\nKdyž je problém opravený, co je špatně?"
+        courseD_collector_debugging4_b: "Jestli je pro tebe těžké vymyslet, jak udělat
+          schodovitý vzor, zkus ho obtáhnout prstem a říkat si při tom pokyny nahlas.
+          \n\nNezapomeň ukázat směr otoček!"
+      courseD_collector_debugging4a_2019:
+        courseD_collector_debugging4_a: "Zkus použít proces ladění několikrát za sebou.
+          \n\nCo způsobuje první problém?\n\nKdyž je problém opravený, co je špatně?"
+        courseD_collector_debugging4_b: "Jestli je pro tebe těžké vymyslet, jak udělat
+          schodovitý vzor, zkus ho obtáhnout prstem a říkat si při tom pokyny nahlas.
+          \n\nNezapomeň ukázat směr otoček!"
       courseD_collector_debugging5a_2018:
         courseD_collector_debugging5a_a: |-
           Co to dělá?
@@ -1109,7 +1559,42 @@ cs-CZ:
           Co ti to říká?
         courseD_collector_debugging5a_b: Jakmile máš sesbíraný první řádek pokladu,
           co ve tvém kódu zbývá?
+      courseD_collector_debugging6:
+        courseD_collector_debugging6_a: |-
+          Zkus projít kód použitím tlačítka "Krok". Je v prvním kroku všechno správně?
+
+          Co ve druhém?
+
+          Kde už to správně není?
+      courseD_collector_debugging6a_2018:
+        courseD_collector_debugging6_a: |-
+          Zkus projít kód použitím tlačítka "Krok". Je v prvním kroku všechno správně?
+
+          Co ve druhém?
+
+          Kde už to správně není?
+        courseD_collector_debugging6_b: Vypadá to, že všechny bloky, které potřebuješ,
+          jsou v pracovním prostoru. Zkus kliknout na "Začít znovu", když se v tom
+          začneš ztrácet.
+      courseD_collector_debugging6a_2019:
+        courseD_collector_debugging6_a: |-
+          Zkus projít kód použitím tlačítka "Krok". Je v prvním kroku všechno správně?
+
+          Co ve druhém?
+
+          Kde už to správně není?
+        courseD_collector_debugging6_b: Vypadá to, že všechny bloky, které potřebuješ,
+          jsou v pracovním prostoru. Zkus kliknout na "Začít znovu", když se v tom
+          začneš ztrácet.
+      courseD_collector_debugging8:
+        courseD_collector_debugging8_a: Vidíš vzor, který můžeš zjednodušit cyklem?
+        courseD_collector_debugging8_b: Zkus využít vnořený cyklus, abys kód zkrátil(a).
+      courseD_collector_debugging9:
+        courseD_collector_debugging9_a: Je několik cest, jak tuto úlohu vyřešit...
+          ale všechny zahrnují otočky!
       courseD_farmer_condLoops6_2018:
+        courseD_farmer_condLoops6_a: Využij cyklus `pokud je cesta vpřed` nebo blok
+          `když je cesta vpřed / jinak`, abys posunul(a) farmářku dále přes spirálu.
         courseD_farmer_condLoops6_b: Po většinu sklizně musíš kontrolovat jen kukuřici.
           Úplně na konci programu sesbírej dýni.
       courseD_farmer_condLoops6_2019:
@@ -1129,6 +1614,27 @@ cs-CZ:
       courseD_farmer_while1_2019:
         courseD_farmer_while1_b: Použij blok `odstraň 1`, když stojíš na hromádce
           hlíny, abys ji odstranil.
+      courseD_iceage_loops1:
+        courseD_iceage_loops1_a: Dávej pozor na probořený led! Scrat jím propadne!
+      courseD_iceage_loops10:
+        courseB_iceage_loops10_a: Dávej pozor na probořený led! Scrat jím propadne
+          do vody!
+      courseD_iceage_loops10_2019:
+        courseB_iceage_loops10_a: Dávej pozor na probořený led! Scrat jím propadne
+          do vody!
+      courseD_iceage_loops1_2019:
+        courseD_iceage_loops1_a: Dávej pozor na probořený led! Scrat jím propadne!
+      courseD_iceage_loops2:
+        courseD_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseD_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
+      courseD_iceage_loops2_2019:
+        courseD_iceage_loops2_a: Rozděl si úlohu na dva kusy, první před rohem a druhý
+          po něm.
+        courseD_iceage_loops2_b: Když si nebudeš vědět rady, zkus si kroky říkat nahlas.
+      courseD_iceage_loops3:
+        courseB_iceage_loops3_b: Abys kód zopakoval(a), přetáhni cyklus `opakuj`,
+          do něhož pak vložíš blok, který chceš opakovat.
       courseD_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Použij tento nový blok!
@@ -1136,6 +1642,22 @@ cs-CZ:
            <xml><block type="controls_repeat_dropdown">
               <title name="TIMES" config="2-10">5</title>
             </block></xml>
+        courseB_iceage_loops3_b: Abys kód zopakoval(a), přetáhni cyklus `opakuj`,
+          do něhož pak vložíš blok, který chceš opakovat.
+      courseD_iceage_loops4:
+        courseD_iceage_loops4_b: Zkus zapsat kroky, které musí Scrat podniknout, aby
+          získal žalud. Vidíš nějaký vzor?
+      courseD_iceage_loops4_2019:
+        courseD_iceage_loops4_b: Zkus zapsat kroky, které musí Scrat podniknout, aby
+          získal žalud. Vidíš nějaký vzor?
+      courseD_iceage_loops6:
+        courseD_iceage_loops6_a: Tvůj kód bude mít **tři** bloky `posuň se vpřed`.
+      courseD_iceage_loops6_2019:
+        courseD_iceage_loops6_a: Tvůj kód bude mít **tři** bloky `posuň se vpřed`.
+      courseD_iceage_loops8:
+        courseD_iceage_loops8_a: Jsou správně bloky `otoč se`? Co jiného můžeš změnit?
+      courseD_iceage_loops8_2019:
+        courseD_iceage_loops8_a: Jsou správně bloky `otoč se`? Co jiného můžeš změnit?
       courseD_maze_intro4_2019:
         courseC_maze_programming4_a: Můžeš zatočit doprava nebo doleva z Ruďákova
           pohledu. Jestli jsi nasměrovaný doprava, po zatočení doprava budeš směřovat
@@ -1144,19 +1666,166 @@ cs-CZ:
           zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě
           jednou, abys získal žalud.
       courseD_maze_intro5a_2019:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
         courseC_maze_programming5_b: Pamatuj si, že otočky jsou z Ruďákovy perspektivy.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp1:
+        courseC_maze_programming1_a: Pokud se pták nemůže dostat k praseti, ujisti
+          se, že jsi všechny bloky pořádně spojil a znovu klikni na tlačítko "Spustit".
+        courseC_maze_programming1_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp1_2018:
+        courseC_maze_programming1_a: Pokud se pták nemůže dostat k praseti, ujisti
+          se, že jsi všechny bloky pořádně spojil a znovu klikni na tlačítko "Spustit".
+        courseC_maze_programming1_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp1_2019:
+        courseC_maze_programming1_a: Pokud se pták nemůže dostat k praseti, ujisti
+          se, že jsi všechny bloky pořádně spojil a znovu klikni na tlačítko "Spustit".
+        courseC_maze_programming1_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_a: Jestli chceš použít  `posuň se vpřed` blok, přetáhni
+          ho z panelu ven na pracovní plochu a spoj ho s blokem `při spuštění`.
+        courseC_maze_programming2_b: Ujisti se, že jsou všechny 3 bloky pořádně u
+          sebe a připojené k bloku `při spuštění`.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: Jestli chceš použít  `posuň se vpřed` blok, přetáhni
+          ho z panelu ven na pracovní plochu a spoj ho s blokem `při spuštění`.
+        courseC_maze_programming2_b: Ujisti se, že jsou všechny 3 bloky pořádně u
+          sebe a připojené k bloku `při spuštění`.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: Jestli chceš použít  `posuň se vpřed` blok, přetáhni
+          ho z panelu ven na pracovní plochu a spoj ho s blokem `při spuštění`.
+        courseC_maze_programming2_b: Ujisti se, že jsou všechny 3 bloky pořádně u
+          sebe a připojené k bloku `při spuštění`.
+      courseD_maze_ramp3:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          K vymazání bloku, který je uprostřed tvého kódu, přesuň všechny bloky, které jsou umístěné pod blokem, který chceš vymazat, doprava a nech je tam chvilku ležet.
+
+          Dále klikni na blok, který chceš vymazat, a přetáhni ho doleva zpátky do panelu s bloky.
+
+          Nakonec vrať bloky z pravé strany zpátky na své místo.
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          K vymazání bloku, který je uprostřed tvého kódu, přesuň všechny bloky, které jsou umístěné pod blokem, který chceš vymazat, doprava a nech je tam chvilku ležet.
+
+          Dále klikni na blok, který chceš vymazat, a přetáhni ho doleva zpátky do panelu s bloky.
+
+          Nakonec vrať bloky z pravé strany zpátky na své místo.
+      courseD_maze_ramp3_2019:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          K vymazání bloku, který je uprostřed tvého kódu, přesuň všechny bloky, které jsou umístěné pod blokem, který chceš vymazat, doprava a nech je tam chvilku ležet.
+
+          Dále klikni na blok, který chceš vymazat, a přetáhni ho doleva zpátky do panelu s bloky.
+
+          Nakonec vrať bloky z pravé strany zpátky na své místo.
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_b: Aby ses držel cesty, posuň se vpřed a jednou
           zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě
           jednou, abys získal žalud.
+      courseD_maze_ramp5:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5_2018:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5_2019:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5a:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5a_2018:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5a_2019:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5b:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5b_2018:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_maze_ramp5b_2019:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
+        courseC_maze_programming5_b: Nezapomeň, že všechny směry a zatáčky musíš zadávat
+          z Ruďákova pohledu.
+        courseC_maze_programming5_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_a: Jestli chceš použít  `posuň se vpřed` blok, přetáhni
+          ho z panelu ven na pracovní plochu a spoj ho s blokem `při spuštění`.
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          K vymazání bloku, který je uprostřed tvého kódu, přesuň všechny bloky, které jsou umístěné pod blokem, který chceš vymazat, doprava a nech je tam chvilku ležet.
+
+          Dále klikni na blok, který chceš vymazat, a přetáhni ho doleva zpátky do panelu s bloky.
+
+          Nakonec vrať bloky z pravé strany zpátky na své místo.
       courseD_scrat_ramp4:
         courseC_maze_programming4_b: Aby ses držel cesty, posuň se vpřed a jednou
           zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě
           jednou, abys získal žalud.
+        courseC_maze_programming4_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_scrat_ramp5:
+        courseC_maze_programming5_a: Zkus používat tlačítko "Krok" a spusť svůj kód
+          řádek po řádku.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+        courseD_scrat_programming6_c: Neboj se dělat chyby! Zkus přidávat bloky a
+          spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_c: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
+          kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku
           80 pixelů a otočka vpravo je o 120 stupňů. '
@@ -1254,6 +1923,10 @@ cs-CZ:
           \*\* Pamatujte: \*\* Tato hádanka se mění pokaždé, když je spuštěna.
 
           K vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).
+        courseF_bee_conditionals8_b: |-
+          Nenechte se napálit, nemůžete zkontrolovat prázdná pole, nektar _a_ med jen s jednou podmínkou.
+
+          Zkontrolujte nektar a med na konci své cesty.
       courseF_bee_for5:
         courseF_bee_for5_c: Neboj se dělat chyby! Zkus používat bloky a spouštět kód
           a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
@@ -1273,3 +1946,9 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
+      coursea_maze_ramp1_2018:
+        courseC_maze_programming1_b: Neboj se dělat chyby! Něco zkus, a když to nebude
+          fungovat, vyzkoušej něco jiného.
+      coursea_maze_ramp1_2019:
+        courseC_maze_programming1_b: Neboj se dělat chyby! Něco zkus, a když to nebude
+          fungovat, vyzkoušej něco jiného.
