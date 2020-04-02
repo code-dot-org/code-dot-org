@@ -84,5 +84,60 @@ module Pd::Foorm
       assert_equal 'surveys/pd/workshop_daily_survey_day_0.0', parsed_forms.keys[0]
       assert_equal 'surveys/pd/workshop_daily_survey_day_5.0', parsed_forms.keys[1]
     end
+
+    test 'parses panel questions correctly' do
+      panel_form_data = {
+        pages: [
+          name: 'sample',
+          elements: [
+            {
+              type: "checkbox",
+              name: "question1",
+              choices: [{
+                value: "item1",
+                text: "Item1"
+              }]
+            },
+            {
+              type: "panel",
+              name: "panel1",
+              elements: [
+                {
+                  type: "radiogroup",
+                  name: "question2",
+                  choices: [{
+                    value: "item2",
+                    text: "Item2"
+                  }]
+                },
+                {
+                  type: "panel",
+                  name: "panel2",
+                  elements: [
+                    {
+                      type: "radiogroup",
+                      name: "question3",
+                      choices: [{
+                        value: "item3",
+                        text: "Item3"
+                      }]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        ]
+      }.to_json
+      form = Foorm::Form.create(name: 'sample', version: 0, questions: panel_form_data)
+      parsed_form = FoormParser.parse_forms([form]).with_indifferent_access
+
+      expected_choice_1 = {"item1" => "Item1"}
+      expected_choice_2 = {"item2" => "Item2"}
+      expected_choice_3 = {"item3" => "Item3"}
+      assert_equal expected_choice_1, parsed_form['sample.0']['question1']['choices']
+      assert_equal expected_choice_2, parsed_form['sample.0']['question2']['choices']
+      assert_equal expected_choice_3, parsed_form['sample.0']['question3']['choices']
+    end
   end
 end

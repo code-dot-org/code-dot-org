@@ -4,9 +4,9 @@ module Pd::Foorm
   class RollupHelperTest < ActiveSupport::TestCase
     setup_all do
       @rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
-      daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
-      daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
-      @parsed_forms = FoormParser.parse_forms([daily_survey_day_0, daily_survey_day_5])
+      @daily_survey_day_0 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_0')
+      @daily_survey_day_5 = ::Foorm::Form.find_by_name('surveys/pd/workshop_daily_survey_day_5')
+      @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5])
     end
 
     test 'creates question details for CSD rollup' do
@@ -51,6 +51,18 @@ module Pd::Foorm
       }
 
       assert_equal expected_question_details.with_indifferent_access, question_details.with_indifferent_access
+    end
+
+    test 'ignores inconsistent questions' do
+      # inconsistent form has different scale for expertise_rating, so that question should be ignored
+      inconsistent_form = create :foorm_form_with_inconsistent_questions
+      @parsed_forms = FoormParser.parse_forms([@daily_survey_day_0, @daily_survey_day_5, inconsistent_form])
+      question_details = RollupHelper.get_question_details_for_rollup(
+        @parsed_forms,
+        @rollup_configuration['CS Discoveries'.to_sym]
+      )
+
+      assert_nil question_details[:expertise_rating]
     end
   end
 end
