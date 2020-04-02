@@ -81,9 +81,8 @@ export default class MicroBitBoard extends EventEmitter {
     this.boardClient_.digitalWrite(pin, value);
   }
 
-  // TODO
   digitalRead(pin, callback) {
-    callback(pin);
+    this.boardClient_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {
