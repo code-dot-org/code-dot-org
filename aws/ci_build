@@ -199,7 +199,7 @@ def main
         flake_factor_message[:color] = 'red'
         flake_factor_message[:message] = "Tests exceeding flakiness threshold: <br/><pre>#{tests_over_flake_threshold}</pre><br/><br/> Please ensure these tests are being investigated!"
       end
-      ChatClient.log flake_factor_message.message, color: flake_factor_message.color
+      ChatClient.log flake_factor_message[:message], color: flake_factor_message[:color]
     end
 
     emit_deploy_metric(rack_env.to_s.titleize, status == 0)
