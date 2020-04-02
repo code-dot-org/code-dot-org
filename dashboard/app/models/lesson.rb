@@ -22,7 +22,7 @@ require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
-class Stage < ActiveRecord::Base
+class Lesson < ActiveRecord::Base
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -32,6 +32,8 @@ class Stage < ActiveRecord::Base
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
   has_and_belongs_to_many :standards
+
+  self.table_name = 'stages'
 
   serialized_attrs %w(
     stage_extras_disabled
