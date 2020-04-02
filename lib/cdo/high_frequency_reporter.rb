@@ -47,6 +47,10 @@ class HighFrequencyReporter
     @new_events << {name: event_name, reported_at: Time.now}
   end
 
+  # Reports alertable events to chat client
+  # if current minute is multiple of throttle.
+  # Defaults to always report alertable events unless throttled.
+  # @param [Integer] throttle
   def report!(throttle = 1)
     if Time.now.min % throttle == 0
       alertable_events.each {|e| @chat_client.message(e, {channel: @channel})}
