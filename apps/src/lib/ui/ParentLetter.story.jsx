@@ -1,13 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ParentLetter from './ParentLetter';
+import {SectionLoginType} from '../../util/sharedConstants';
 
-export default storybook =>
-  storybook.storiesOf('ParentLetter', module).add('overview', () => (
-    <Page>
-      <ParentLetter loginType="email" teacherName="Minerva McGonagall" />
-    </Page>
-  ));
+export default storybook => {
+  storybook = storybook.storiesOf('ParentLetter', module);
+
+  // Make a story for every login type
+  Object.values(SectionLoginType).forEach(loginType => {
+    storybook = storybook.add(`Generic / ${loginType}`, () => (
+      <Page>
+        <ParentLetter
+          loginType={loginType}
+          sectionCode="ABCDEF"
+          teacherName="Minerva McGonagall"
+        />
+      </Page>
+    ));
+  });
+};
 
 const Page = ({children}) => (
   <div

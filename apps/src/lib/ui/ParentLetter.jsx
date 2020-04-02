@@ -13,7 +13,7 @@ const PRIVACY_POLICY_URL = 'https://code.org/privacy';
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
 
-export default function ParentLetter({loginType, teacherName}) {
+export default function ParentLetter({loginType, sectionCode, teacherName}) {
   return (
     <div>
       <Header />
@@ -34,7 +34,7 @@ export default function ParentLetter({loginType, teacherName}) {
           ).
         </p>
         <h1>Step 2 - Get your child set up to use Code.org at home</h1>
-        <SignInInstructions loginType={loginType} />
+        <SignInInstructions loginType={loginType} sectionCode={sectionCode} />
         <p>
           At the top of their homepage, your student can continue the course
           they are doing with their classroom at school. They can also create
@@ -89,6 +89,7 @@ export default function ParentLetter({loginType, teacherName}) {
 }
 ParentLetter.propTypes = {
   loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
+  sectionCode: PropTypes.string,
   teacherName: PropTypes.string.isRequired
 };
 
@@ -106,27 +107,110 @@ const Header = () => {
   );
 };
 
-const SignInInstructions = ({loginType}) => {
-  if (loginType === 'nothing') {
-    return null;
+const SignInInstructions = ({loginType, sectionCode}) => {
+  switch (loginType) {
+    case SectionLoginType.clever:
+      return (
+        <div>
+          <p>
+            Our class uses <strong>Clever accounts</strong> to sign in. To have
+            your student sign in to Code.org at home, do the following:
+          </p>
+          <ol>
+            <li>
+              Have your students log in to their Clever account at{' '}
+              <a href="https://www.clever.com/">www.clever.com</a> (click "Sign
+              in as a student" at the top right)
+            </li>
+            <li>
+              Click on the Code.org logo on the Clever dashboard. The logo looks
+              like this: TODO: PLACEHOLDER FOR IMAGE
+            </li>
+          </ol>
+        </div>
+      );
+    case SectionLoginType.google_classroom:
+      return (
+        <div>
+          <p>
+            Our class uses <strong>Google Classroom accounts</strong> to sign
+            in. To have your student sign in to Code.org at home, do the
+            following:
+          </p>
+          <ol>
+            <li>
+              Go to <a href="#">studio.code.org</a> and click 'Sign in'
+            </li>
+            <li>Choose 'Sign in with Google'</li>
+            <li>Sign in via the Google sign-in dialog</li>
+          </ol>
+        </div>
+      );
+    case SectionLoginType.picture:
+      return (
+        <div>
+          <p>
+            Our class uses <strong>picture passwords</strong> to sign in. To
+            have your student sign in to Code.org at home, do the following:
+          </p>
+          <ol>
+            <li>
+              Go to <a href="#">studio.code.org/sections/{sectionCode}</a> and
+              click on their name
+            </li>
+            <li>Click on their picture password and then click 'Sign in'</li>
+            <li>
+              If your student does not remember their picture password, please
+              email me and I will provide it
+            </li>
+          </ol>
+        </div>
+      );
+    case SectionLoginType.word:
+      return (
+        <div>
+          <p>
+            Our class uses <strong>secret words</strong> to sign in. To have
+            your student sign in to Code.org at home, do the following:
+          </p>
+          <ol>
+            <li>
+              Go to <a href="#">studio.code.org/sections/{sectionCode}</a> and
+              click on their name
+            </li>
+            <li>Type in their secret words and then click 'Sign in'</li>
+            <li>
+              If your student does not remember their password, please email me
+              and I will provide it
+            </li>
+          </ol>
+        </div>
+      );
+    case SectionLoginType.email:
+    default:
+      return (
+        <div>
+          <p>
+            Our class uses <strong>personal logins</strong> to sign in. To have
+            your student sign in to Code.org at home, do the following:
+          </p>
+          <ol>
+            <li>
+              Go to <a href="#">studio.code.org</a> and click 'Sign in'
+            </li>
+            <li>
+              Have them enter their email and password and then click 'Sign in'
+            </li>
+            <li>
+              If your student does not remember their password, they can reset
+              it from the Sign in screen
+            </li>
+          </ol>
+        </div>
+      );
   }
-
-  return (
-    <div>
-      <p>
-        Our class uses secret words to login. To have your student login at
-        home, do the following:
-      </p>
-      <ol>
-        <li>
-          Go to <a href="#">studio.code.org/sections/SBGJQS</a> and click on
-          their name
-        </li>
-        <li>Type in their secret words and hit ‘sign in’</li>
-      </ol>
-    </div>
-  );
 };
 SignInInstructions.propTypes = {
-  loginType: PropTypes.oneOf(Object.values(SectionLoginType))
+  loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
+  sectionCode: PropTypes.string
 };
