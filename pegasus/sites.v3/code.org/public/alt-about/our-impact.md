@@ -1,5 +1,5 @@
 ---
-title: About Us
+title: Our Impact
 nav: alt-about_nav
 video_player: true
 theme: responsive
@@ -7,43 +7,57 @@ style_min: true
 ---
 <a id="top"></a>
 <div style="margin-top:40px;">
-  <img src="/images/alt-about/alt-about-header.jpg" style="width: 100%">
+  <img src="/images/alt-about/our-impact.png" style="width: 100%">
 </div>
-<h1 style="margin-top:30px; margin-bottom:20px">About Us</h1>
+<h1 style="margin-top:30px; margin-bottom:20px">Our Impact</h1>
 
-Code.org&reg; is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented youth. Our vision is that <u><b>every student in every school has the opportunity to learn computer science</b></u>, just like biology, chemistry or algebra. Code.org provides the leading curriculum for K-12 computer science in the largest school districts in the United States and Code.org also organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+Whether it’s organizing the worldwide Hour of Code, advocating for policy change in statehouses across the US, developing curriculum, or preparing teachers to bring CS into their classrooms, Code.org has impacted [every part of the education system](/alt-about#work) in its mission to get computer science access to all students. Below is a high-level overview--you can go deeper with our [Annual Report](/about/2019), or see all the stats and research on our [Research](/research) page.
 
-<div style="clear: both; margin-bottom: 20px"></div>
-<div class="col-100" style="text-align:center">
-  <a href="#impact">Our Impact</a>  |  <a href="#work">Our Work</a>     |     <a href="#values">Our Values</a>      |     <a href="#history">History and Philosophy</a>     |     <a href="#more">More</a>
-</div>
+<hr/>
 
 <a id="impact"></a>
-## Our Impact
+## At a Glance
 
-<div class="col-25" style="padding-right: 15px;">
-    <img src="/images/alt-about/photo.png" style="width: 100%">
-    <p style="text-align: center">In large part thanks to the Code.org Advocacy Coalition, all 50 US states (plus Washington DC) and more than 50 countries have <a href="https://advocacy.code.org/">passed or implemented policies</a> that give students more access to CS education.</p>
+<div class="col-33" style="padding-right: 15px; text-align: center">
+    <img src="/images/alt-about/photo.png" style="width: 75%">
+    <p>Tens of millions of students have tried an Hour of Code, and research shows the Hour of Code positively impacts attitudes toward and self-efficacy with computer science. Go deeper with our <a href="https://code.org/files/HourOfCodeImpactStudy_Jan2017.pdf">impact study</a>.</p>
 </div>
 
-<div class="col-25" style="padding-right: 15px;">
-    <img src="/images/alt-about/photo.png" style="width: 100%">
-    <p style="text-align: center">46 million students are or have enrolled in courses on Code.org. Nearly half the US students using Code.org are in <a href="https://code.org/diversity">high-needs schools</a>.</p>
+<div class="col-33" style="padding-right: 15px; text-align: center">
+    <img src="/images/alt-about/photo.png" style="width: 75%">
+    <p>46 million students are or have enrolled in courses on Code.org. Nearly half the US students using Code.org are in <a href="https://code.org/diversity">high-needs schools</a>.</p>
 </div>
 
-<div class="col-25" style="padding-right: 15px;">
-    <img src="/images/alt-about/photo.png" style="width: 100%">
-    <p style="text-align: center">More than 100,000 teachers have taken our <a href="https://code.org/educate/professional-learning">professional development workshops</a>, and 98% of them would recommend our workshops to another teacher.</p>
+<div class="col-33" style="padding-right: 15px; text-align: center">
+    <img src="/images/alt-about/photo.png" style="width: 75%">
+    <p>More than 100,000 teachers have taken our <a href="https://code.org/educate/professional-learning">professional development workshops</a>, and 98% of them would recommend our workshops to another teacher.</p>
 </div>
 
-<div class="col-25" style="padding-right: 15px;">
-    <img src="/images/alt-about/photo.png" style="width: 100%">
-    <p style="text-align: center">Our nationwide network of <a href="https://code.org/educate/regional-partner">Regional Partners</a> are establishing regional computer science hubs, expanding CS access and opportunities to more people than ever before.</p>
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<div class="col-33" style="padding-right: 15px; text-align: center">
+    <img src="/images/alt-about/photo.png" style="width: 75%">
+    <p>In large part thanks to the Code.org Advocacy Coalition, all 50 US states (plus Washington DC) and more than 50 countries have <a href="https://advocacy.code.org/">passed or implemented policies</a> that give students more access to CS education.</p>
+</div>
+
+<div class="col-33" style="padding-right: 15px; text-align: center">
+    <img src="/images/alt-about/photo.png" style="width: 75%">
+    <p>Our nationwide network of <a href="https://code.org/educate/regional-partner">Regional Partners</a> are establishing regional computer science hubs, expanding CS access and opportunities to more people than ever before.</p>
+</div>
+
+<div class="col-33" style="padding-right: 15px; text-align: center">
+    <img src="/images/alt-about/photo.png" style="width: 75%">
+    <p>Our nationwide network of <a href="https://code.org/educate/regional-partner">Regional Partners</a> are establishing regional computer science hubs, expanding CS access and opportunities to more people than ever before.</p>
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 <br>
-<strong>To learn more about the impacts our programs have had on students and teachers, visit <a href="https://code.org/our-impact">Our Impact</a> page, or take a look at our <a href="https://code.org/about/2019">Annual Report</a>.</strong>
+
+<div class="solid-block-header" style="background-color:#00adbc">
+    <p style="font-size:12px"><strong>Looking for ways to bring computer science to your school or district?</strong></p>
+    <a href="/yourschool"><button class="educate-button" style="float:right; background-color: #ffa400; color: #fff; margin-top: 0">Learn more</button></a>
+</div>
+
 <p><a href="#top">[Back to top]</a></p>
 
 <hr/>
