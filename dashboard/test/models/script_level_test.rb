@@ -607,6 +607,56 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, script_level.hidden_for_section?(section.id)
   end
 
+  class ValidProgressionLevelTests < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      level = create :maze, name: 'visible after level', level_num: 'custom'
+      script_with_visible_after_stages = create :script
+
+      stage_future_visible_after = create :stage, name: 'stage future', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], stage: stage_future_visible_after, script: script_with_visible_after_stages
+
+      stage_past_visible_after = create :stage, name: 'stage past', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], stage: stage_past_visible_after, script: script_with_visible_after_stages
+
+      stage_no_visible_after = create :stage, name: 'stage no', script: script_with_visible_after_stages
+      @script_level_no_visible_after = create :script_level, levels: [level], stage: stage_no_visible_after, script: script_with_visible_after_stages
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test 'valid_progression_level returns true for levelbuilder' do
+      assert @script_level_future_visible_after.valid_progression_level?(@levelbuilder)
+      assert @script_level_past_visible_after.valid_progression_level?(@levelbuilder)
+      assert @script_level_no_visible_after.valid_progression_level?(@levelbuilder)
+    end
+
+    test 'valid_progression_level returns true for script level in stage with past visible after date' do
+      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
+      assert @script_level_past_visible_after.valid_progression_level?(@student)
+      assert @script_level_past_visible_after.valid_progression_level?(nil)
+    end
+
+    test 'valid_progression_level returns true for script level in stage with no visible after date' do
+      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
+      assert @script_level_past_visible_after.valid_progression_level?(@student)
+      assert @script_level_past_visible_after.valid_progression_level?(nil)
+    end
+
+    test 'valid_progression_level returns false for script level in stage with future visible after date' do
+      refute @script_level_future_visible_after.valid_progression_level?(@teacher)
+      refute @script_level_future_visible_after.valid_progression_level?(@student)
+      refute @script_level_future_visible_after.valid_progression_level?(nil)
+    end
+  end
+
   private
 
   def create_fake_plc_data
