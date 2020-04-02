@@ -112,13 +112,6 @@ class RedshiftImport
   # Rename a table within the same schema to preserve permissions
   # and also its primary key so that another table can be created with the old table name and old primary key name.
   def self.rename_table(schema, current_table_name, new_table_name)
-    redshift_client = RedshiftClient.instance
-    query = <<~SQL
-      SET search_path TO #{schema};
-      ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
-    SQL
-    redshift_client.exec(query)
-
     primary_key = RedshiftImport.primary_key(schema, current_table_name)
     if primary_key
       rename_primary_key(
@@ -129,6 +122,13 @@ class RedshiftImport
         primary_key[:columns]
       )
     end
+
+    redshift_client = RedshiftClient.instance
+    query = <<~SQL
+      SET search_path TO #{schema};
+      ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
+    SQL
+    redshift_client.exec(query)
   rescue PG::UndefinedTable => undefined_table_error
     CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{undefined_table_error}"
   end
