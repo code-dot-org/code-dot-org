@@ -59,7 +59,7 @@ class TeacherScore < ApplicationRecord
   def self.get_level_scores_for_script_for_section(script_id, section_id, page)
     level_scores_by_student_by_stage_by_script = {}
     stages = Script.find(script_id).stages
-    student_ids = Section.find(section_id).students.pluck(:id).each_slice(50).to_a[page - 1]
+    student_ids = Section.find(section_id).students.page(page).per(50).pluck(:id)
     stage_student_level_scores = {}
     stages.each do |stage|
       level_scores = get_level_scores_for_stage_for_students(stage, student_ids)
