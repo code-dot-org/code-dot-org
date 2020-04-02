@@ -364,10 +364,14 @@ export class LibraryManagerDialog extends React.Component {
     const {isOpen} = this.props;
     const {importLibraryId, displayLibrary, isLoading, error} = this.state;
 
+    if (!isOpen) {
+      return null;
+    }
+
     return (
       <div>
         <BaseDialog
-          isOpen={isOpen}
+          isOpen={true}
           handleClose={this.closeLibraryManager}
           style={{...styles.dialog, ...(displayLibrary ? styles.hidden : {})}}
           useUpdatedStyles
@@ -399,7 +403,7 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        {isOpen && displayLibrary && this.renderDisplayLibrary()}
+        {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );
   }
