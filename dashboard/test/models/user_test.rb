@@ -2277,27 +2277,27 @@ class UserTest < ActiveSupport::TestCase
     assert_nil email_preference
   end
 
-  test 'creating a student with no parent notification should not create an email preference for the parent' do
+  test 'creating a student with no parent email preference should not create an email preference for the parent' do
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in_required: '0'})
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
     assert_nil email_preference
   end
 
-  test 'creating a student with parent notification and no parent_email should return an error' do
+  test 'creating a student with parent email preference and no parent_email should return an error' do
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_email: nil})
     user = User.create(@good_data.merge(parent_email_params))
     assert user.errors[:parent_email_preference_email].length == 1
   end
 
-  test 'creating a student with parent notification and no opt-in should return an error' do
+  test 'creating a student with parent email preference and no opt-in should return an error' do
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: nil})
     user = User.create(@good_data.merge(parent_email_params))
     assert user.errors[:parent_email_preference_opt_in].length == 1
   end
 
-  test 'creating a teacher with parent notification should not create a notification' do
-    # This tests when someone starts filling out the parent notification form on the student UI but then switches
+  test 'creating a teacher with parent email preference should not create a parent email preference' do
+    # This tests when someone starts filling out the parent email preference form on the student UI but then switches
     # to a Teacher form and submits that.
     parent_email_params = @good_parent_email_params.merge({user_type: 'teacher'})
     user = User.create(@good_data.merge(parent_email_params))
