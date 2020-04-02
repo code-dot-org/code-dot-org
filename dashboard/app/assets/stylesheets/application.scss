@@ -1612,8 +1612,9 @@ a.download-video {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
 
-    #school-info-inputs {
-      width: 100%;
+    .section-container {
+      padding: 10px;
+      flex-grow: 1;
       background-color: $school-info-background;
       border: 1px solid $school-info-border-color;
 
@@ -1624,6 +1625,10 @@ a.download-video {
       hr {
         border: 1px solid $school-info-border-color;
       }
+    }
+
+    #school-info-inputs {
+      padding: 0;
     }
 
     .field-row {
@@ -1713,6 +1718,38 @@ a.download-video {
         }
       }
     }
+    #parent-email-section {
+      background-color: $school-info-background;
+      border: 1px solid $school-info-border-color;
+      flex-wrap: wrap;
+    }
+    .padded-container {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      .row {
+        flex-grow: 1;
+      }
+      .parent-email-field-label {
+        flex-wrap: wrap;
+        p {
+          margin: 0;
+        }
+      }
+      .parent-email-field-input {
+        flex-grow: 1;
+      }
+    }
+
+    .parent-email-section-header {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+    .parent-email-field {
+      margin-top: 10px;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
 
     .checkbox {
       display: flex;
@@ -1724,7 +1761,7 @@ a.download-video {
 
       p, span {
         margin: 0;
-        padding: 10px;
+        padding: 0 10px;
         font-size: 14px;
       }
     }
@@ -1736,6 +1773,7 @@ a.download-video {
     }
 
     .radio {
+      padding: 0;
       display: flex;
       input[type=radio] {
         margin-left: 0;
@@ -1774,6 +1812,12 @@ a.download-video {
     #forgot-password {
       align-self: center;
       font-style: italic;
+    }
+
+    .tos {
+      p {
+        font-size: 14px;
+      }
     }
   }
 }
