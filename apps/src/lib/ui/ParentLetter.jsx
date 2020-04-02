@@ -134,7 +134,15 @@ const SignInInstructions = ({loginType, sectionCode}) => {
           </li>
           <li>
             Click on the Code.org logo on the Clever dashboard. The logo looks
-            like this: TODO: PLACEHOLDER FOR IMAGE
+            like this:
+            <br />
+            <img
+              src="/shared/images/clever_code_org_logo.png"
+              style={{
+                width: 60,
+                margin: 10
+              }}
+            />
           </li>
         </ol>
       );
