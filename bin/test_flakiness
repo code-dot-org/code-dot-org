@@ -46,7 +46,7 @@ results.to_a.sort_by(&:last).reverse[0..options[:limit]].map do |name, value|
     result.insert(1, *TestFlakiness.recommend_reruns(TestFlakiness.test_flakiness[name]))
   end
 
-  if options[:flake_threshold]
+  if options[:threshold]
     if value >= options[:threshold]
       puts result.join("\t")
     end
