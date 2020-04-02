@@ -2,6 +2,8 @@ require 'test_helper'
 
 module Pd::Foorm
   class RollupCreatorTest < ActiveSupport::TestCase
+    self.use_transactional_test_case = true
+
     setup_all do
       rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       questions_to_summarize = rollup_configuration['CS Discoveries'.to_sym]
