@@ -65,7 +65,7 @@ module Api::V1::Pd
 
       assert_not_empty response['workshop_rollups']['single_workshop']
       assert_equal 0, response['workshop_rollups']['single_workshop']['response_count']
-      assert_empty response['workshop_rollups']['averages']
+      assert_nil response['workshop_rollups']['averages']
     end
 
     def create_survey_submission(survey_response)
