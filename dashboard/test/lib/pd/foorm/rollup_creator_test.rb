@@ -8,7 +8,7 @@ module Pd::Foorm
       workshop = create :csd_summer_workshop
       create :day_5_workshop_foorm_submission_low, pd_workshop_id: workshop.id
       create :day_5_workshop_foorm_submission_high, pd_workshop_id: workshop.id
-      ws_submissions, foorm_submissions, forms = SurveyResults.get_raw_data_for_workshop(workshop.id)
+      ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
       @question_details = RollupHelper.get_question_details_for_rollup(parsed_forms, questions_to_summarize)
@@ -38,7 +38,8 @@ module Pd::Foorm
               would_recommend: 4,
               absolute_best_pd: 4
             }
-          }
+          },
+          expertise_rating: 3
         }
       }
 
@@ -64,7 +65,8 @@ module Pd::Foorm
             connected_community: {sum: 8, count: 2},
             would_recommend: {sum: 8, count: 2},
             absolute_best_pd: {sum: 8, count: 2}
-          }
+          },
+          expertise_rating: {sum: 6, count: 2}
         }
       }
 

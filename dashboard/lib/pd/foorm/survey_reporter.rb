@@ -1,8 +1,8 @@
 # Retrieves, parses and summarizes Foorm Survey results for consumption by APIs.
 module Pd::Foorm
-  class SurveyResults
-    extend Helper
+  class SurveyReporter
     include Constants
+    extend Helper
 
     # Calculates report for a given workshop id.
     # @return
@@ -17,7 +17,7 @@ module Pd::Foorm
     #       }
     #   }
     # Path for calculating report is:
-    # SurveyResults.get_raw_data_for_workshop
+    # SurveyReporter.get_raw_data_for_workshop
     #   summary:
     #   -> FoormParser.parse_forms
     #   -> WorkshopSummarizer.summarize_answers_by_survey
@@ -27,7 +27,7 @@ module Pd::Foorm
     #       -> RollupCreator.calculate_averaged_rollup
     #       course rollup:
     #       -> get all workshop ids for course
-    #       -> SurveyResults.get_raw_data_for_workshop(ids)
+    #       -> SurveyReporter.get_raw_data_for_workshop(ids)
     #       -> FoormParser.parse_forms
     #       -> WorkshopSummarizer.summarize_answers_by_survey
     #       -> RollupCreator.calculate_averaged_rollup

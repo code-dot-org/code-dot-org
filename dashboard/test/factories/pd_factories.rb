@@ -1570,4 +1570,29 @@ FactoryGirl.define do
       "racial_ethnic_identity": ["black_aa","white"]
     }'
   end
+
+  factory :foorm_form_with_inconsistent_questions, class: 'Foorm::Form' do
+    name "surveys/pd/sample_survey"
+    version 0
+    created_at "2020-03-26 21:58:28"
+    updated_at "2020-03-26 21:58:28"
+    questions '{
+      "pages": [
+          {
+            "name": "teaching_context",
+            "elements": [
+            {
+              "type": "rating",
+              "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
+              "name": "expertise_rating",
+              "indent": 12,
+              "titleLocation": "hidden",
+              "minRate": 2,
+              "minRateDescription": "Strongly aligned with A",
+              "maxRateDescription": "Strongly aligned with B!"
+            }]
+          }
+        ]
+      }'
+  end
 end
