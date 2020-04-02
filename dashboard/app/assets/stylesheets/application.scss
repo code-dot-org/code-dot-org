@@ -1695,7 +1695,7 @@ a.download-video {
 
     .row {
       display: flex;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       [class*=span] {
         align-self: center;
@@ -1718,24 +1718,28 @@ a.download-video {
         }
       }
     }
+
     #parent-email-section {
       background-color: $school-info-background;
       border: 1px solid $school-info-border-color;
       flex-wrap: wrap;
     }
+
     .padded-container {
-      padding: 10px;
+      padding: 20px;
       display: flex;
       flex-wrap: wrap;
       .row {
         flex-grow: 1;
       }
+
       .parent-email-field-label {
         flex-wrap: wrap;
         p {
           margin: 0;
         }
       }
+
       .parent-email-field-input {
         flex-grow: 1;
       }
@@ -1745,8 +1749,9 @@ a.download-video {
       margin-bottom: 0;
       flex-grow: 1;
     }
+
     .parent-email-field {
-      margin-top: 10px;
+      margin-top: 20px;
       margin-bottom: 0;
       flex-grow: 1;
     }
@@ -1817,6 +1822,7 @@ a.download-video {
     .tos {
       p {
         font-size: 14px;
+        margin: 0;
       }
     }
   }

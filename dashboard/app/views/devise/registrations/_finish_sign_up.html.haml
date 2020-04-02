@@ -34,7 +34,7 @@
         - if @user.errors[:user_type].present?
           %span.error= t('activerecord.errors.messages.blank')
 
-    .row
+    .row#parent-email-container
       .span8#parent-email-section
         .padded-container
           .row.parent-email-section-header
@@ -93,10 +93,10 @@
         - if @user.errors[:gender].present?
           %span.error= @user.errors[:gender].join(', ')
 
-    .row
+    .row#school-info-section{style: "display: none;"}
       .span10
         -# Mount point for React SchoolInfoInputs component.
-        #school-info-inputs.section-container{style: "display: none;"}
+        #school-info-inputs.section-container
           = f.fields_for :school_info_attributes do |ff|
             = ff.hidden_field :school_id
             = ff.hidden_field :school_name
