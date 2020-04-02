@@ -20,7 +20,6 @@ level 'CSPU5_HOC_virtual12', progression: 'Design Mode'
 level 'CSPU5_HOC_virtual13', progression: 'Design Mode'
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
-level 'CSPU5_playWithEventTypes_virtual', progression: 'Event Types'
 level 'CSPU5_video_debugging_virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_predict_applab_onEventWithWrongID_virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_U3L13 - Debugging IDs case sensitive_virtual', progression: 'Intro to Debugging and Common Problems'
@@ -30,6 +29,7 @@ level 'How setPosition and screen dimensions work_2018_2019_virtual', progressio
 level 'CSPU5_setPosition to fixed location_virtual', progression: 'How setPosition and Screen Dimensions Work'
 level 'CSPU5_U3L16 - setPosition to move button_virtual', progression: 'How setPosition and Screen Dimensions Work'
 level 'CSPU5_AddLabelToChaserGame_virtual', progression: 'Using Labels'
+level 'CSPU5_playWithEventTypes_virtual', progression: 'Event Types'
 level 'How Images Work_2018_2019_virtual', progression: 'How Images Work'
 level 'Finalize Your Chaser Game v.1_virtual', progression: 'Chaser Game v.1'
 

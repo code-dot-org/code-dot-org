@@ -9,9 +9,13 @@
     "video_key": "csd_debugging",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "long_instructions": "Here are some long instructions"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-02 18:32:57 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
