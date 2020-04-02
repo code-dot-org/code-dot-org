@@ -23,7 +23,7 @@ class ContactRollupsFinal < ApplicationRecord
 
   def self.insert_from_processed_table
     overwrite_sql = <<~SQL
-      INSERT INTO contact_rollups_final
+      INSERT INTO #{table_name}
       SELECT *
       FROM contact_rollups_processed;
     SQL
