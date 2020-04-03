@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ParentLetter from './ParentLetter';
 import {SectionLoginType} from '../../util/sharedConstants';
+import wizardPng from '../../../static/skins/studio/wizard_thumb.png';
 
 export default storybook => {
   storybook = storybook.storiesOf('ParentLetter', module);
 
+  // Make stories for generic letters and personalized letters
   // Make a story for every login type
   Object.values(SectionLoginType).forEach(loginType => {
     storybook = storybook.add(`Generic / ${loginType}`, () => (
@@ -14,6 +16,19 @@ export default storybook => {
           loginType={loginType}
           sectionCode="ABCDEF"
           teacherName="Minerva McGonagall"
+        />
+      </Page>
+    ));
+
+    storybook = storybook.add(`Personalized / ${loginType}`, () => (
+      <Page>
+        <ParentLetter
+          loginType={loginType}
+          secretPicturePath={wizardPng}
+          secretWords="wizarding world"
+          sectionCode="ABCDEF"
+          teacherName="Minerva McGonagall"
+          studentName="Neville"
         />
       </Page>
     ));
