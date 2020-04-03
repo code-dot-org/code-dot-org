@@ -108,13 +108,7 @@ class TeacherDashboard extends Component {
           />
           <Route
             path={TeacherDashboardPath.parentLetter}
-            component={props => (
-              <ParentLetter
-                loginType={'picture'}
-                sectionCode="ABCDEF"
-                teacherName="Minerva McGonagall"
-              />
-            )}
+            component={props => <ParentLetter />}
           />
           {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (

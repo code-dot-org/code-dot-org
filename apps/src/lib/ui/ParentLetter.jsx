@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import _ from 'lodash';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
 import color from '../../util/color';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
@@ -13,7 +16,7 @@ const ENGAGEMENT_URL =
 const LOGIN_TYPE_NAMES = {
   [SectionLoginType.clever]: 'Clever accounts',
   [SectionLoginType.google_classroom]: 'Google Classroom accounts',
-  [SectionLoginType.picture]: 'picture passwosrds',
+  [SectionLoginType.picture]: 'picture passwords',
   [SectionLoginType.word]: 'secret words',
   [SectionLoginType.email]: 'personal logins'
 };
@@ -32,101 +35,152 @@ const LOGIN_TYPE_NAMES = {
  *   secretPicturePath
  *   secretWords
  */
-export default function ParentLetter({
-  loginType,
-  secretPicturePath,
-  secretWords,
-  sectionCode,
-  studentName,
-  teacherName
-}) {
-  return (
-    <div>
-      <Header />
-      <article>
-        <p>Hello!</p>
-        <p>
-          In my class, your child {studentName} is learning computer science on{' '}
-          <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
-          learning computer science and basic coding. Your interest in what your
-          child is learning is critical, and Code.org makes it easy to stay
-          involved.
-        </p>
-        <h1>Step 1 - Encourage your child, show interest</h1>
-        <p>
-          One of the best ways to show your interest is to ask your child to
-          explain what they’re learning and show you a project they are proud of
-          (<a href={ENGAGEMENT_URL}>details on how to engage your child</a>
-          ).
-        </p>
-        <h1>Step 2 - Get your child set up to use Code.org at home</h1>
-        <SignInInstructions
-          loginType={loginType}
-          secretPicturePath={secretPicturePath}
-          secretWords={secretWords}
-          sectionCode={sectionCode}
-          studentName={studentName}
-        />
-        <p>
-          At the top of their homepage, {studentName || 'your student'} can
-          continue the course they are doing with their classroom at school.
-          They can also create their own{' '}
-          <a href={studio('/projects/public')}>
-            games or artwork in the Project Gallery
-          </a>{' '}
-          or check out <a href={pegasus('/athome')}>code.org/athome</a> for
-          ideas for things to work on at home.
-        </p>
-        <h1>Step 3 - Connect your email to your student’s account</h1>
-        <p>
-          Keep up to date with what your student is working on and receive
-          updates from Code.org.
-        </p>
-        <ol>
-          <li>Have your child sign in to Code.org</li>
-          <li>
-            Click on the User Menu in the top right corner of the site, then
-            click on Account Settings.
-          </li>
-          <li>
-            Scroll down to the section “For Parents and Guardians” and add your
-            email address.
-          </li>
-        </ol>
-        <h1>Step 4 - Review Code.org’s privacy policy</h1>
-        <p>
-          Code.org assigns utmost importance to student safety and security.
-          Code.org has signed the{' '}
-          <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their
-          privacy practices have received{' '}
-          <a href={COMMON_SENSE_ARTICLE_URL}>
-            one of the highest overall scores from Common Sense Media
-          </a>
-          . You can find further details by viewing Code.org’s{' '}
-          <a href={pegasus('/privacy')}>Privacy Policy</a>.
-        </p>
-        <p>
-          Computer science teaches students critical thinking, problem solving,
-          and digital citizenship, and benefits all students in today’s world,
-          no matter what opportunities they pursue in the future.
-        </p>
-        <p>
-          Please let me know if you have any questions and thank you for your
-          continued support of your child and of our classroom!
-        </p>
-        <p>{teacherName}</p>
-      </article>
-    </div>
-  );
+class ParentLetter extends React.Component {
+  static propTypes = {
+    // Provided by Redux
+    section: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
+      code: PropTypes.string.isRequired
+    }).isRequired,
+    students: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        secret_picture_path: PropTypes.string,
+        secret_words: PropTypes.string
+      })
+    ).isRequired,
+    teacherName: PropTypes.string.isRequired
+  };
+
+  componentDidMount() {
+    this.printParentLetter();
+  }
+
+  printParentLetter = () => {
+    const printArea = document.getElementById('printArea').outerHTML;
+    // Adding a unique ID to the window name allows for multiple instances of this window
+    // to be open at once without affecting each other.
+    const windowName = `printWindow-${_.uniqueId()}`;
+    let printWindow = window.open('', windowName, '');
+
+    printWindow.document.open();
+    printWindow.addEventListener('load', event => {
+      printWindow.print();
+    });
+
+    printWindow.document.write(
+      `<html><head><link rel="stylesheet" type="text/css" href="/shared/css/standards-report-print.css"></head>`
+    );
+    printWindow.document.write('<body onafterprint="self.close()">');
+    printWindow.document.write(printArea);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+  };
+
+  render() {
+    const {students, teacherName, section} = this.props;
+    const studentId = queryParams('studentId');
+    const student = students
+      .filter(student => student.id.toString() === studentId)
+      .shift();
+    const studentName = student.name;
+    const secretPicturePath = student.secret_picture_path;
+    const secretWords = student.secret_words;
+    const sectionCode = section.code;
+    const loginType = section.loginType;
+
+    return (
+      <div id="printArea">
+        <Header />
+        <article>
+          <p>Hello!</p>
+          <p>
+            In my class, your child {studentName} is learning computer science
+            on <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
+            learning computer science and basic coding. Your interest in what
+            your child is learning is critical, and Code.org makes it easy to
+            stay involved.
+          </p>
+          <h1>Step 1 - Encourage your child, show interest</h1>
+          <p>
+            One of the best ways to show your interest is to ask your child to
+            explain what they’re learning and show you a project they are proud
+            of (<a href={ENGAGEMENT_URL}>details on how to engage your child</a>
+            ).
+          </p>
+          <h1>Step 2 - Get your child set up to use Code.org at home</h1>
+          <SignInInstructions
+            loginType={loginType}
+            secretPicturePath={secretPicturePath}
+            secretWords={secretWords}
+            sectionCode={sectionCode}
+            studentName={studentName}
+          />
+          <p>
+            At the top of their homepage, {studentName || 'your student'} can
+            continue the course they are doing with their classroom at school.
+            They can also create their own{' '}
+            <a href={studio('/projects/public')}>
+              games or artwork in the Project Gallery
+            </a>{' '}
+            or check out <a href={pegasus('/athome')}>code.org/athome</a> for
+            ideas for things to work on at home.
+          </p>
+          <h1>Step 3 - Connect your email to your student’s account</h1>
+          <p>
+            Keep up to date with what your student is working on and receive
+            updates from Code.org.
+          </p>
+          <ol>
+            <li>Have your child sign in to Code.org</li>
+            <li>
+              Click on the User Menu in the top right corner of the site, then
+              click on Account Settings.
+            </li>
+            <li>
+              Scroll down to the section “For Parents and Guardians” and add
+              your email address.
+            </li>
+          </ol>
+          <h1>Step 4 - Review Code.org’s privacy policy</h1>
+          <p>
+            Code.org assigns utmost importance to student safety and security.
+            Code.org has signed the{' '}
+            <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their
+            privacy practices have received{' '}
+            <a href={COMMON_SENSE_ARTICLE_URL}>
+              one of the highest overall scores from Common Sense Media
+            </a>
+            . You can find further details by viewing Code.org’s{' '}
+            <a href={pegasus('/privacy')}>Privacy Policy</a>.
+          </p>
+          <p>
+            Computer science teaches students critical thinking, problem
+            solving, and digital citizenship, and benefits all students in
+            today’s world, no matter what opportunities they pursue in the
+            future.
+          </p>
+          <p>
+            Please let me know if you have any questions and thank you for your
+            continued support of your child and of our classroom!
+          </p>
+          <p>{teacherName}</p>
+        </article>
+      </div>
+    );
+  }
 }
-ParentLetter.propTypes = {
-  loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
-  secretPicturePath: PropTypes.string,
-  secretWords: PropTypes.string,
-  sectionCode: PropTypes.string, // TODO: Conditionally-required
-  studentName: PropTypes.string,
-  teacherName: PropTypes.string.isRequired
-};
+
+export const UnconnectedParentLetter = ParentLetter;
+
+export default connect(state => ({
+  section:
+    state.teacherSections.sections[state.teacherSections.selectedSectionId],
+  students: state.sectionData.section.students,
+  teacherName: state.currentUser.userName
+}))(ParentLetter);
 
 const Header = () => {
   return (
