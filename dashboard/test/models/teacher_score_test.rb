@@ -16,7 +16,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
       :script_level,
       script: @script,
       levels: [
-        create(:maze, name: 'test level 1')
+        create(:unplugged, name: 'test level 1')
       ]
     )
     @stage = @script_level.stage
