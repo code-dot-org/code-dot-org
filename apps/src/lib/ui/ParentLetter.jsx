@@ -48,16 +48,20 @@ export default function ParentLetter({
         <p>
           In my class, your child {studentName} is learning computer science on{' '}
           <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
-          learning computer science and basic coding. Your interest in what your
-          child is learning is critical, and Code.org makes it easy to stay
-          involved.
+          learning computer science and basic coding to create interactive
+          animations, games, or apps. Your interest in what your child is
+          learning is critical, and Code.org makes it easy to stay involved.
         </p>
-        <h1>Step 1 - Encourage your child, show interest</h1>
+        <h1>
+          Step 1 - Encourage your child, show interest in computer science
+        </h1>
         <p>
-          One of the best ways to show your interest is to ask your child to
-          explain what they’re learning and show you a project they are proud of
-          (<a href={ENGAGEMENT_URL}>details on how to engage your child</a>
-          ).
+          One of the best ways is to ask your child to explain what they’re
+          learning and show you a project they are proud of (
+          <a href={ENGAGEMENT_URL}>see details</a>
+          ). Or watch one of{' '}
+          <a href={pegasus(`/educate/resources/inspire`)}>these videos</a>{' '}
+          together.
         </p>
         <h1>Step 2 - Get your child set up to use Code.org at home</h1>
         <SignInInstructions
@@ -93,22 +97,32 @@ export default function ParentLetter({
             email address.
           </li>
         </ol>
-        <h1>Step 4 - Review Code.org’s privacy policy</h1>
+        <h1>Join the weekly “Code Break” every Wednesday</h1>
+        <p>
+          The team at Code.org hosts a live interactive classroom for students
+          of all ages. Anybody can participate, and learn computer science in a
+          fun format starring very special guests.{' '}
+          <a href={pegasus('/break')}>More info</a>.
+        </p>
+        <h1>Why computer science</h1>
+        <p>
+          Computer science teaches students critical thinking, problem solving,
+          and digital citizenship, and benefits all students, no matter what
+          opportunities they pursue in the future. And learning to make
+          interactive animations, code-art, games, and apps on Code.org
+          encourages creativity and makes learning fun.
+        </p>
+        <h1>Code.org’s commitment to student privacy</h1>
         <p>
           Code.org assigns utmost importance to student safety and security.
           Code.org has signed the{' '}
-          <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their
-          privacy practices have received{' '}
+          <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their{' '}
+          <a href={pegasus('/privacy')}>privacy practices</a> have received{' '}
           <a href={COMMON_SENSE_ARTICLE_URL}>
             one of the highest overall scores from Common Sense Media
           </a>
           . You can find further details by viewing Code.org’s{' '}
-          <a href={pegasus('/privacy')}>Privacy Policy</a>.
-        </p>
-        <p>
-          Computer science teaches students critical thinking, problem solving,
-          and digital citizenship, and benefits all students in today’s world,
-          no matter what opportunities they pursue in the future.
+          <a href={pegasus('/privacy/student-privacy')}>Privacy Policy</a>.
         </p>
         <p>
           Please let me know if you have any questions and thank you for your
