@@ -1,8 +1,9 @@
 class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationController
   def create
-    answers = params[:answers].to_json
+    answers = params[:answers]
 
-    save_facilitator_questions(params[:answers], params)
+    facilitator_answers = answers["facilitators"]
+    answers.delete("facilitators")
 
     survey_submission = ::Pd::WorkshopSurveyFoormSubmission.new(
       user_id: params[:user_id],
@@ -11,18 +12,28 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
       day: params[:day]
     )
     begin
-      survey_submission.save_with_foorm_submission(answers, params[:form_name], params[:form_version])
+      survey_submission.save_with_foorm_submission(answers.to_json, params[:form_name], params[:form_version])
     rescue ActiveRecord::ActiveRecordError => e
       render json: {error: e.message}, status: :bad_request
       return
     end
 
-    render json: {submission_id: survey_submission.foorm_submission_id, survey_submission_id: survey_submission.id}, status: :created
+    facilitator_save_result = save_facilitator_questions(facilitator_answers, params)
+
+    if facilitator_save_result[:save_success]
+      render json: {submission_id: survey_submission.foorm_submission_id, survey_submission_id: survey_submission.id}, status: :created
+    else
+      render json: {error: e.message}, status: :bad_request
+    end
   end
 
-  def save_facilitator_questions(answers, params)
-    if answers["facilitators"]
-      answers["facilitators"].each do |_, data|
+  def save_facilitator_questions(facilitator_answers, params)
+    save_success = true
+    error = nil
+    submission_ids = []
+    survey_submission_ids = []
+    if facilitator_answers
+      facilitator_answers.each do |_, data|
         next unless data["facilitatorId"]
         survey_submission = ::Pd::WorkshopSurveyFoormSubmission.new(
           user_id: params[:user_id],
@@ -32,12 +43,20 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
           facilitator_id: data["facilitatorId"]
         )
         begin
-          survey_submission.save_with_foorm_submission(data, params[:form_name], params[:form_version])
+          survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])
+          submission_ids << survey_submission.foorm_submission_id
+          survey_submission_ids << survey_submission.id
         rescue ActiveRecord::ActiveRecordError => e
-          render json: {error: e.message}, status: :bad_request
-          break
+          save_success = true
+          error = e.message
         end
       end
     end
+    {
+      save_success: save_success,
+      error: error,
+      submission_ids: submission_ids,
+      survey_submission_ids: survey_submission_ids
+    }
   end
 end
