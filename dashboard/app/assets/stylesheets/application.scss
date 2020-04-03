@@ -1650,6 +1650,9 @@ a.download-video {
     .field_with_errors {
       display: flex;
       flex-basis: 100%;
+      input, select {
+        border-color: $red;
+      }
     }
 
     .field_with_errors label {
