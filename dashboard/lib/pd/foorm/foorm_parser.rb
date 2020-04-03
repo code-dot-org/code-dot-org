@@ -52,8 +52,12 @@ module Pd::Foorm
     # may contain one or more questions
     def self.parse_element(question_data)
       parsed_questions = {}
-      if question_data[:type] == 'panel'
-        question_data[:elements].each do |panel_question_data|
+      if PANEL_TYPES.include?(question_data[:type])
+        elements = question_data[:elements]
+        if question_data[:type] == TYPE_PANEL_DYNAMIC
+          elements = question_data[:templateElements]
+        end
+        elements.each do |panel_question_data|
           parsed_questions.merge!(parse_element(panel_question_data))
         end
       else
