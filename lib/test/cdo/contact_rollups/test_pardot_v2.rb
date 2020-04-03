@@ -100,7 +100,7 @@ class PardotV2Test < Minitest::Test
 
     expected_url = URI.encode(
       "#{base_url}?"\
-      "prospects={\"prospect_batch\":[{\"email\":\"test@domain.com\",\"id\":null,\"db_Opt_In\":\"No\"}]}"
+      "prospects={\"prospects\":[{\"email\":\"test@domain.com\",\"id\":null,\"db_Opt_In\":\"No\"}]}"
     )
 
     assert_equal expected_url, PardotV2.build_batch_url(base_url, prospects)
