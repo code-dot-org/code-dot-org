@@ -17,6 +17,7 @@ import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 class TeacherDashboard extends Component {
   static propTypes = {
@@ -108,7 +109,12 @@ class TeacherDashboard extends Component {
           />
           <Route
             path={TeacherDashboardPath.parentLetter}
-            component={props => <ParentLetter />}
+            component={props => (
+              <ParentLetter
+                studentId={queryParams('studentId')}
+                autoPrint={true}
+              />
+            )}
           />
           {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (
