@@ -185,7 +185,7 @@ en:
     email_preference_required: "You must specify an email preference."
     parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
     parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
-    parent_account_email_label: "Your Email (can be the same as the account email)"
+    parent_account_email_label: "Parent/Guardian Email"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
