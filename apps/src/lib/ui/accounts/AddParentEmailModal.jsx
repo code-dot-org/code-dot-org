@@ -20,20 +20,27 @@ export default class AddParentEmailModal extends React.Component {
     /**
      * @type {function()}
      */
-    handleCancel: PropTypes.func.isRequired
+    handleCancel: PropTypes.func.isRequired,
+    currentParentEmail: PropTypes.string
   };
 
-  state = {
-    saveState: STATE_INITIAL,
-    values: {
-      parentEmail: '',
-      emailOptIn: ''
-    },
-    errors: {
-      parentEmail: '',
-      emailOptIn: ''
-    }
-  };
+  constructor(props) {
+    super(props);
+    const displayedParentEmail = props.currentParentEmail
+      ? props.currentParentEmail
+      : '';
+    this.state = {
+      saveState: STATE_INITIAL,
+      values: {
+        parentEmail: displayedParentEmail,
+        emailOptIn: ''
+      },
+      errors: {
+        parentEmail: '',
+        emailOptIn: ''
+      }
+    };
+  }
 
   focusOnError() {
     const {errors} = this.state;
@@ -89,6 +96,9 @@ export default class AddParentEmailModal extends React.Component {
     }
     if (!isEmail(parentEmail.trim())) {
       return i18n.addParentEmailModal_parentEmail_invalid();
+    }
+    if (parentEmail.trim() === this.props.currentParentEmail) {
+      return i18n.addParentEmailModal_parentEmail_mustBeDifferent();
     }
     return null;
   };

@@ -93,6 +93,20 @@ describe('AddParentEmailModal', () => {
         );
       });
 
+      it('checks that email is different that current one', () => {
+        wrapper.setProps({currentParentEmail: 'old@example.com'});
+        wrapper.setState({
+          values: {
+            parentEmail: 'old@example.com',
+            emailOptIn: 'yes'
+          }
+        });
+
+        expect(wrapper.text()).to.include(
+          i18n.addParentEmailModal_parentEmail_mustBeDifferent()
+        );
+      });
+
       it('reports email server errors', () => {
         const serverError = 'test-server-error';
         wrapper.setState({
