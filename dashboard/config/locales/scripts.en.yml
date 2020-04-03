@@ -10263,7 +10263,7 @@ en:
               name: Songwriting
         express-2019:
           title: Express Course (2019)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
           stages:
@@ -10825,7 +10825,7 @@ en:
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
         pre-express-2019:
           title: Pre-reader Express (2019)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
           stages:
@@ -15190,7 +15190,7 @@ en:
               name: AI for Oceans
         express-2020:
           title: Express Course (2020)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description_audience: 'Ages: 9-18'
           stages:
@@ -15308,7 +15308,7 @@ en:
               description_teacher: ''
         pre-express-2020:
           title: Pre-reader Express (2020)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
           stages:
@@ -16053,6 +16053,8 @@ en:
               name: Episode 1 - Algorithms with Hill Harper
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
               name: Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott
+            Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epson:
+              name: Episode 3 - Encryption with Ashton Kutcher & Mia Gil Epson
           title: Code Break Staging
           description_audience: ''
           description_short: ''
