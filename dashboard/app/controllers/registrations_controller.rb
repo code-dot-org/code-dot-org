@@ -145,6 +145,9 @@ class RegistrationsController < Devise::RegistrationsController
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
+      elsif params[:user_type] == "student"
+        params[:parent_email_preference_request_ip] = request.ip
+        params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
       end
 
       params[:data_transfer_agreement_accepted] = params[:data_transfer_agreement_accepted] == "1"
