@@ -89,6 +89,23 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
+  test 'pre_survey_url' do
+    csp_summer_workshop = build :csp_summer_workshop
+    csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
+
+    csp_academic_year_workshop = build :csp_academic_year_workshop
+    csp_academic_year_workshop_enrollment = build :pd_enrollment, workshop: csp_academic_year_workshop
+
+    csf_deep_dive_workshop = build :csf_deep_dive_workshop
+    csf_201_workshop_enrollment = build :pd_enrollment, workshop: csf_deep_dive_workshop
+
+    csf_intro_workshop = build :csf_intro_workshop
+    csf_intro_workshop_enrollment = build :pd_enrollment, workshop: csf_intro_workshop
+
+    studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    assert_equal studio_url["/pd/workshop_daily_survey/day/0?enrollmentCode=#{csp_summer_workshop_enrollment.code}"], csp_summer_workshop_enrollment.pre_survey_url
+  end
+
   test 'exit_survey_url' do
     csf_workshop = create :csf_workshop, :ended
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
