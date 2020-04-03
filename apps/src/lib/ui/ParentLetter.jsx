@@ -109,14 +109,8 @@ ParentLetter.propTypes = {
 
 const Header = () => {
   return (
-    <header style={{backgroundColor: color.teal, marginBottom: 30}}>
-      <img
-        src="/shared/images/CodeLogo_White.png"
-        style={{
-          height: 30,
-          margin: 15
-        }}
-      />
+    <header style={styles.header}>
+      <img src="/shared/images/CodeLogo_White.png" style={styles.codeOrgLogo} />
     </header>
   );
 };
@@ -138,10 +132,7 @@ const SignInInstructions = ({loginType, sectionCode}) => {
             <br />
             <img
               src="/shared/images/clever_code_org_logo.png"
-              style={{
-                width: 60,
-                margin: 10
-              }}
+              style={styles.cleverCodeOrgLogo}
             />
           </li>
         </ol>
@@ -234,4 +225,10 @@ const GoToSectionSignIn = ({sectionCode}) => {
 };
 GoToSectionSignIn.propTypes = {
   sectionCode: PropTypes.string.isRequired
+};
+
+const styles = {
+  cleverCodeOrgLogo: {width: 60, margin: 10},
+  codeOrgLogo: {height: 30, margin: 15},
+  header: {backgroundColor: color.teal, marginBottom: 30}
 };
