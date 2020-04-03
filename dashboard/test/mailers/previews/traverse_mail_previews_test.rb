@@ -4,9 +4,14 @@ class TraverseMailPreviewsTest < ActiveSupport::TestCase
   test 'Verify all mailers can be run' do
     classes = Dir['./test/mailers/previews/*_preview.rb'].map do |file|
       require file
-      Object.const_get('Pd::' + file.scan(/\/pd_([\w_]+).rb/).first.first.camelize)
+      if file.scan(/\/pd_([\w_]+).rb/).empty?
+        Object.const_get(file.scan(/\/([\w_]+).rb/).first.first.camelize)
+      else
+        Object.const_get('Pd::' + file.scan(/\/pd_([\w_]+).rb/).first.first.camelize)
+      end
     end
 
+    puts classes
     classes.each do |klass|
       methods =  klass.instance_methods - FactoryGirl::Syntax::Methods.methods - FactoryGirl::Syntax::Methods.instance_methods
 
