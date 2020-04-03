@@ -195,6 +195,9 @@ class ManageStudentActionsCell extends Component {
 
   onDownloadParentLetter = () => {
     const {id, sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
+    window.open(url, '_blank');
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
