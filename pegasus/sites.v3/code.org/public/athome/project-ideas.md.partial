@@ -5,13 +5,13 @@ theme: responsive
 ---
 <a id="top"></a>
 # Overview
-Below is a guide assigning open-ended projects to students using Code.org. This guide could be used by anyone but is targeted for middle and high school teachers currently teaching [CS Discoveries](https://code.org/educate/csd) as alternatives and suggestions to augment the existing course material.
-
+Below is a step-by-step guide for assigning students open-ended projects that use Code.org tools. This guide could be used by anyone but is targeted at middle and high school teachers currently teaching [CS Discoveries](https://code.org/educate/csd) as alternatives or ways to augment the existing course material.
 ## 1. Choose a Tool
 Programming in a brand new environment can be challenging and intimidating. We recommend using the following labs with your class after students have had sufficient time to learn to use them. Below you can find an overview of each tool and also how to get students practice using it.
 <br>
 <div class="col-33" style="padding-right: 20px;">
     <img src="/images/athome/web-lab.jpg">
+    <p><i>Photo courtesy of Fundación Sadosky</i><p>
 </div>
 <div class="col-66">
     <h3><a href="https://code.org/educate/weblab"><strong>Web Lab</strong></a></h3>
@@ -44,16 +44,20 @@ Programming in a brand new environment can be challenging and intimidating. We r
 <div style="clear: both; margin-bottom: 40px"></div>
 
 ## 2. Choose a Project Idea
-All three labs enable student creativity in different ways. Students can make a project about just about anything. It is even possible to make connections to other subjects like ELA, math or science!
+All three labs enable student creativity in different ways. Students can make a project about just about anything. It is even possible to make connections to other subjects like English language arts, math or science!
 
 ### **Get inspired! Browse the Project Gallery and remix!**
-Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) and look at what other students around the world have shared.  You can view a project, see the code, and remix it to make it your own!  Teachers, you might get inspired to invent your own project as a riff on one of these gallery projects to give to your students.
+Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) and look at what other students around the world have shared.  You can view a project, see the code, and **remix it** to make it your own! You might get inspired to invent your own project as a riff on one of these gallery projects to give to your students.
 <br>
 <br>
 <style>
   table {
     table-layout: fixed;
     width: 100%;
+  }
+  td {
+    vertical-align: top;
+    text-align: center;
   }
   img {
     width: 100%;
@@ -69,9 +73,10 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
     </thead>
     <tbody>
         <tr>
-            <td><h3 style="color:#7665a0"><strong>Digital Book Report</strong></h3><p>Use Web Lab to create a presentation for a class assignment. Add text and images and cite your sources.</p><img src="/images/learningathome.jpg"/><br><br><p>More Details</p><p>Project Guide</p></td>
-            <td><h3 style="color:#7665a0"><strong>Journal or Blog</strong></h3><p>Create a space for you to write about your experiences. Add a new page each daily or week!</p><img src="/images/learningathome.jpg"/><br><br><p>More Details</p><p>Project Guide</p></td>
-            <td><h3 style="color:#7665a0"><strong>Choose Your Own Adventure</strong></h3><p>Write a branching story using hyperlinks and separate pages for each reader decision point.</p><img src="/images/athome/cyoa.png"/><br><br><p>More Details</p><p>Project Guide</p></td>
+            <td><h3><strong>Digital Book Report</strong></h3><p>Use Web Lab to create a presentation for a class assignment. Add text and images and cite your sources.</p><img src="/images/athome/book-report.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1t9MluD6MXBpXC6v-O2iJZth2XngFNt1cNcfDnSnAzMA/edit">More Details</a></p><p><a href="https://docs.google.com/document/d/1b-r2fmXMX5UzQDOZO5Ti40pDhA1_fup232Tlim1bdp4/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Choose Your Own Adventure</strong></h3><p>Write a branching story using hyperlinks and separate pages for each reader decision point.</p><img src="/images/athome/cyoa.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1ERjIca3bFmm1Gj8x5YKNB2bvd3gwTdvaqdq4XUpBxZI/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1bMPvQTEtThFx5R0yIoJN4290SerK9lLgtPXp5zS-umQ/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Journal or Blog</strong></h3><p>Create a space for you to write about your experiences. Add a new page each daily or week!</p><img src="/images/athome/journal.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/104TYIDCUq8n7AiSEYFMqdkBqes8Yr9WCi1zqEdoBSkU/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1bMPvQTEtThFx5R0yIoJN4290SerK9lLgtPXp5zS-umQ/edit#">Project Guide</a></p></td>
+
         </tr>
     </tbody>
 </table>
@@ -87,9 +92,9 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
     </thead>
     <tbody>
         <tr>
-            <td><h3 style="color:#7665a0"><strong>No Sprites Animation Challenge</strong></h3><p>Test your understanding of variables and the draw loop by creating an animated scene without any sprites!</p><img src="/images/athome/no-sprites.gif"/><br><br><p>More Details</p><p>Project Guide</p></td>
-            <td><h3 style="color:#7665a0"><strong>Randomized Image Creator</strong></h3><p>Apply knowledge of user input and the draw loop to create on-demand randomized images.</p><img src="/images/athome/random-image.gif"/><br><br><p>More Details</p><p>Project Guide</p></td>
-            <td><h3 style="color:#7665a0"><strong>Teach a Science Concept</strong></h3><p>Create your own pixel animations and add text to create an interactive presentation about a science concept - or any other topic!</p><img src="/images/athome/science-concept.gif"/><br><br><p>More Details</p><p>Project Guide</p></td>
+            <td><h3><strong>No Sprites Animation Challenge</strong></h3><p>Test your understanding of variables and the draw loop by creating an animated scene without any sprites!</p><img src="/images/athome/no-sprites.gif" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1JGmqwOUr-9LgjbbaEqVK8AQsHSQWvyjgHOJ-9CblU6o/edit#heading=h.jornae4vwl7p">More Details</a></p><p><a href="https://docs.google.com/document/d/1PyqSvPvg01usv6uS1lf-E_kLHAf59iWteyALUqOlEgM/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Randomized Image Creator</strong></h3><p>Apply knowledge of user input and the draw loop to create on-demand randomized images.</p><img src="/images/athome/random-image.gif" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1QGIvapBacMyvHVRDrLH179DEkjOMUBrv7Zh6OYz_Vyo/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1-aSVaGYgQFymtLse8oQg1QXdWohbIYzLysfCFJhlRRk/edit#">Project Guide</a></p></td>
+            <td><h3><strong>Teach a Science Concept</strong></h3><p>Create your own pixel animations and add text to create an interactive presentation about a science concept - or any other topic!</p><img src="/images/athome/science-concept.gif" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1gevkecZBDUb49KptVE3IqfU1E8Ov5zjbR73bnETsI8g/edit#">More Details</a></p><p><a href="https://docs.google.com/document/d/1mgpQfAsMGJFZlHQwzX0ePIlI8cx8zejLZb0HOwlN95A/edit#">Project Guide</a></p></td>
         </tr>
     </tbody>
 </table>
@@ -105,19 +110,14 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
     </thead>
     <tbody>
         <tr>
-            <td><h3 style="color:#7665a0"><strong>Sound Board</strong></h3><p>Create an app with buttons to play different sounds.</p><img src="/images/athome/sound-board.png" style="max-width:50%"/><br><br><p>More Details</p><p>Project Guide</p></td>
-            <td><h3 style="color:#7665a0"><strong>Flash Card / Self-Quiz App</strong></h3><p>Use this app to create flashcards to learn a new subject or practice for a test.</p><img src="/images/athome/flash-card.png" style="max-width:50%"/><br><br><p>More Details</p><p>Project Guide</p></td>
-            <td><h3 style="color:#7665a0"><strong>Sneaky Hidden Puzzle</strong></h3><p>To win, the player must click on an object that is visually “hidden” on the screen.</p><img src="/images/athome/hidden-puzzle.png" style="max-width:50%"/><br><br><p>More Details</p><p>Project Guide</p></td>
+            <td><h3><strong>Sound Board</strong></h3><p>Create an app with buttons to play different sounds.</p><img src="/images/athome/sound-board.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/1dixTiXXJbIdMlDX0yfMiFMWiXl6Sdzv0QNeMon9XAy8/edit">More Details</a></p></td>
+            <td><h3><strong>Flash Card / Self-Quiz App</strong></h3><p>Use this app to create flashcards to learn a new subject or practice for a test.</p><img src="/images/athome/flash-card.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/17g--4H9RdixrJ67EHwwFj1wfT7GeUsQzvBNf2SteNqc/edit#">More Details</a></p></td>
+            <td><h3><strong>Sneaky Hidden Puzzle</strong></h3><p>To win, the player must click on an object that is visually “hidden” on the screen.</p><img src="/images/athome/hidden-puzzle.png" style="max-width:50%"/><br><br><p><a href="https://docs.google.com/document/d/18Dv1b6rcuvfFgPgwBOP9lKBzOj8G4cB-ePOzW1DmtNw/edit">More Details</a></p></td>
         </tr>
     </tbody>
 </table>
 <br>
 <br>
-
-**As you are planning for the project consider:**
-* How will you assign the project? (email/Google Classroom/etc.)
-* How will you support students as they are working?
-* How will students turn in their work?
 
 ## 3. Assign the project
 
@@ -134,11 +134,12 @@ Go to the [Code.org Project Gallery](https://studio.code.org/projects/public) an
 1. *When you have completed your project please submit it by clicking on the Share button at the top of the page. Please copy the share link and send it to my email.*
 
 ## 4. Support Student Learning
-It’s important to consider how you can support your students through a project, especially when teaching and learning remotely.  Doing this asynchronously means that students won’t have easy access to peers to collaborate with or a teacher to ask questions of.  We also know that not every student will have access to an adult who can help them with the content at home.  Your role in supporting student learning is more important than ever. 
+It’s important to consider how you can support your students through a project, especially when teaching and learning remotely.  Doing this asynchronously means that students won’t have easy access to peers to collaborate with or a teacher to ask questions of.  We also know that not every student will have access to an adult who can help them with the content at home.  Your role in supporting student learning is more important than ever.
 
 *Embrace Asynchronous Collaboration*
 
-One benefit of open-ended, asynchronous  projects is that they give students more freedom and space to come up with their own ideas and think independently.  In a virtual environment, you can embrace the types of assignments that don’t have clear correct solutions or answers--assignments that more closely mirror the kinds of projects that are common in the modern workplace.  However, students will also need others to brainstorm with, bounce ideas off of, and get advice from. Think about setting up support structures like coding buddies or teams who work individually but support each other.
+One benefit of open-ended, asynchronous projects is that they give students more freedom and space to come up with their own ideas and think independently.  In a virtual environment, you can embrace the types of assignments that don’t have clear correct solutions or answers--assignments that more closely mirror projects that are common in the modern workplace.  However, students will also need others to brainstorm with, bounce ideas off of, and get advice from. Think about setting up support structures like coding buddies or teams who work individually but support each other.
+
 Below are some ideas that you may be able to utilize depending on your own capacity and your district policies.
 
 * Use a classroom discussion board, encouraging students to help each other.  If your class or school’s LMS doesn’t have such a feature you could try [Piazza](https://piazza.com/) which has a good track record and is used for exactly this purpose in academic settings -- you can use it standalone, or it integrates with many LMSs.

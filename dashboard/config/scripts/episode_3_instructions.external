@@ -1,0 +1,12 @@
+name 'Episode 3 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+Information about Caesar Cipher widget usage
+MARKDOWN

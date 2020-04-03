@@ -13423,6 +13423,8 @@ zh-CN:
               name: 项目后测试
             CS Discoveries Post Course survey:
               name: 计算机科学发现课后问卷
+            Text:
+              name: 文本
         coursea-2020:
           title: 课程 A (2019)
           description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
@@ -13438,7 +13440,7 @@ zh-CN:
               description_student: 点击并拖拽来完成难题。
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             'Programming: Happy Maps':
-              name: '编程: 快乐地图'
+              name: 快乐地图
               description_student: 写出指令来让福乐波到达水果。
               description_teacher: 如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。
             Sequencing with Scrat:
@@ -13446,7 +13448,7 @@ zh-CN:
               description_student: 编程让斯奎特到达橡子。
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             Programming in Ice Age:
-              name: 在冰河时代里编程
+              name: 与斯奎特一起编程
               description_student: 写程序来帮助斯奎特到达橡子。
               description_teacher: 用《冰河世纪》中的角色，学生们可以开发序列算法，来让斯奎特从迷宫的一端移动到另一端的橡子那里。要做到这些，需要将代码模块堆成一个序列，让它往前移动，左转或右转。
             Programming with Rey and BB-8:
@@ -13458,7 +13460,7 @@ zh-CN:
               description_student: 用循环帮福乐波解决更麻烦的问题。
               description_teacher: 循环是编程中非常有用而又强大的工具。为了理解循环的用处，学生们需要被驱动去用简单的方法来解决单调的问题。
             Loops in Ice Age:
-              name: 冰河时代里的循环
+              name: 斯奎特和循环
               description_student: 用循环帮助斯奎特走过更多地方。
               description_teacher: 在 Code.org 上，基于 "快乐循环" 中重复指令的概念，这个阶段会让学生用循环更高效的获得橡子。
             Loops in Collector:
@@ -13470,7 +13472,7 @@ zh-CN:
               description_student: 用循环和规律来完成这些图画。
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动并喊出来。
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
@@ -13492,7 +13494,7 @@ zh-CN:
               description_student: 为同学编程，让他们小心的从一个地方移动到另一个地方。
               description_teacher: 本课程为学生在心理上，为课程过程中遇到编码练习做好准备。在小团队中，学生将通过身体活动来为同学编程，以使他们从一个地方到另一个地方小心地前进到目标。
             Sequencing in Maze:
-              name: 迷宫中的序列
+              name: 愤怒的小鸟中的序列
               description_student: 帮助红色《愤怒的小鸟》沿着道路到达顽皮的猪。
               description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             Programming in Maze:
@@ -13504,7 +13506,7 @@ zh-CN:
               description_student: 帮助收获者沿着道路收集蔬菜。
               description_teacher: '学生们会在收获者环境中使用已学会的编程概念。现在，和让角色到达目标不同，学生们必须用新模块来收集玉米。学生们会继续发展序列的算法技巧，并开始了调试的过程。 '
             'Loops: Getting Loopy':
-              name: '循环: 变得糊涂'
+              name: 越来越糊涂
               description_student: 这节课中，会用重复循环来制作舞蹈派对！
               description_teacher: 随着编写出更长的和更有趣的程序，代码中常常会包含很多重复部分。在本课中，学生将通过观察舞蹈中重复的动作规律，学习如何使用循环来更轻松地执行很多重复指令。
             Loops in Harvester:
@@ -13516,7 +13518,7 @@ zh-CN:
               description_student: 为冒险家罗瑞尔编程来在开放的洞穴中收集宝藏。
               description_teacher: 这节课中，学生们会继续学习循环的概念。在这里，冒险家罗瑞尔用循环在开放的洞穴中收集宝藏。新的`获得宝藏`模块用来帮助他的旅行。
             Loops in Artist:
-              name: 艺术家里的循环
+              name: 用循环来画花园
               description_student: 用规律和循环来完成这幅图画。
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个在线课程中，循环被用来遍历迷宫并收集宝藏。在这里，学生们用循环来创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             The Right App:
@@ -13525,7 +13527,7 @@ zh-CN:
               description_teacher: '这节课让学生们认识到计算机科学可以在现实生活中帮助人们。首先，学生们会感受一些虚构的智能手机用户的情况，来帮助他们找到
                 “正确的应用” 来解决需要。然后，学生们会练习同理心和创造力来画出自己的智能手机应用来解决另外一位用户的需求。 '
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动或喊出来。
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
@@ -13585,7 +13587,7 @@ zh-CN:
               description_student: 用循环帮助收获者收集一些蔬菜！
               description_teacher: "在上个阶段，学生使用循环创建了奇妙的图画。现在，会用循环执行新操作，来帮助收获者收集大量生长的蔬菜。\r\n"
             Looking Ahead:
-              name: 展望未来
+              name: 与《我的世界》往前看
               description_student: 躲开岩浆！在《我的世界》里学习条件。
               description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             Sticker Art with Loops:
@@ -13593,7 +13595,7 @@ zh-CN:
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
               description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             'Events: The Big Event':
-              name: '事件: 大事件'
+              name: 大事件
               description_student: '玩游戏来学习事件。 '
               description_teacher: 学生将学习的事件，与预先写好的算法相比有更大的灵活性。有时程序要响应用户的意图。事件能让程序更有趣，更有交互性。
             Build a Flappy Game:
@@ -13618,7 +13620,7 @@ zh-CN:
           description_audience: 年龄：7-11
           stages:
             'Algorithms: Graph Paper Programming':
-              name: '算法: 图纸编程'
+              name: 方格纸编程
               description_student: 在这节课中，会给你的同学编程来画画！
               description_teacher: '通过给别人"编程"来画图，学生们有机会通过好玩又容易的方法，来体验一些编程的核心概念。课程开始时，会让学生通过符号来指挥其他人给方格纸上的方块涂色来重现已有的图画。如果有时间，课程还可以让学生们试试自己创建出的图画。  '
             Introduction to Online Puzzles:
@@ -13650,7 +13652,7 @@ zh-CN:
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
               description_teacher: 本次课建立在前面课程对循环的理解上，并给学生提供机会来创造真正的作品。这次活动也是一次额外的解决问题的调试练习。
             Nested Loops in Bee:
-              name: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
               description_student: 在循环里的循环里循环。这是什么意思？这节课会介绍将循环嵌套起来会发生什么。
               description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             Conditionals with Cards:
@@ -13674,7 +13676,7 @@ zh-CN:
               description_student: 当使用条件时，不是每次都会很清楚。这一课会帮助你练习决定应该做什么。
               description_teacher: 学生们会练习`当`循环，`直到`循环和`如果/否则`语句。所有这些模块都用了条件语句。通过练习这三种语句，学生们能学会写复杂而灵活的代码。
             'Unplugged: Binary':
-              name: 离线：二进制
+              name: 二进制图像
               description_student: 用只有两个选项的语言来学习计算机如何储存图片。
               description_teacher: 虽然很多人认为作为二进制就是严格的 0 和 1，学生会学习信息表达成各种二进制的概念。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息
                 (如图像和颜色)。
@@ -13709,7 +13711,7 @@ zh-CN:
               description_student: 在《我的世界》里，会学习条件。
               description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             Conditionals:
-              name: 条件语句
+              name: 农夫和条件
               description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
               description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
             Simon Says:
@@ -13736,11 +13738,11 @@ zh-CN:
               description_student: 通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。
               description_teacher: "通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。\r\n"
             Access Ability:
-              name: 辅助功能
+              name: 辅助功能设计
               description_student: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
               description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
             Nested Loops in Bee:
-              name: 蜜蜂里的嵌套循环
+              name: 迷宫里的嵌套循环
               description_student: 在循环里的循环里循环。这是什么意思？这节课会教你什么时候将一个循环放到另一个循环里。
               description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             Nested Loops in Artist:
@@ -13748,11 +13750,11 @@ zh-CN:
               description_student: 更多的嵌套循环！这次，你能用嵌套循环画出更令人惊奇的图画！
               description_teacher: 学生们会在今天的关卡中用小艺术家做出错综复杂的设计。通过继续在新的目标下练习嵌套循环，学生们能够明白循环的更多用法。这一组关卡会提供很多潜在的创意，给学生们机会在最后阶段能够创建出自己的设计。
             Nested Loops in Frozen:
-              name: 冰雪奇缘里的嵌套循环
+              name: 冰雪奇缘和嵌套循环
               description_student: '安娜和爱莎的溜冰技巧都非常棒，但需要帮助才能在冰面上创作图案。使用嵌套循环来创建一些非常酷的东西。 '
               description_teacher: 现在学生们知道如何分层循环了，可以创建出非常美丽的东西了。这堂课会让学生通过一系列的练习，用安娜和爱莎高超的溜冰技巧，来创造自己的图像。
             'Functions: Songwriting':
-              name: '功能: 作曲'
+              name: 写歌
               description_student: 甚至摇滚巨星也需要编程技能。这堂课会通过歌词来教你函数。
               description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
             Functions in Minecraft:
@@ -13772,6 +13774,8 @@ zh-CN:
               description_teacher: "接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\r\n\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它熟悉的界面。（这可能是项目中最长的一个阶段。）最终，要给同学们展示最终的作品。"
             Digital Sharing:
               name: 数字共享
+            Designing for Accessibility:
+              name: 辅助功能设计
         coursef-2020:
           title: 课程 F （2019）
           description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
@@ -13787,9 +13791,11 @@ zh-CN:
               description_student: 学习如何创建并编辑精灵图。
               description_teacher: 这节课，学生会学习精灵图实验室的两个核心概念：精灵图和行为。精灵图是在屏幕上可以移动、变化和操作的角色或对象。行为是精灵图在停止前会一直做的动作。
             Events with Sprite Lab:
+              name: 精灵图实验室中的外星人舞蹈派对
               description_student: 创建能分享给同学的互动项目。
               description_teacher: '这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。   '
             Loops with the Artist:
+              name: 艺术家的编程和循环
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
               description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             Nested Loops in the Maze:
@@ -13801,12 +13807,15 @@ zh-CN:
               description_student: 封装和变量有一些相同之处：两者都能保存有用的东西。这里你会学到什么是变量，和它们令人惊奇的作用。
               description_teacher: 变量被用作值的占位符，例如数字或词语。变量在编程中带来了很大的自由性。在编程中不需要打出同样的内容很多词，或者记住一个隐晦的数字，计算机科学家们用变量来引用它们。这节课帮助解释什么是变量，怎样通过不同的方法使用它们。变量的理念不容易领会，因此我们推荐在课程的结尾允许大量时间的讨论。
             Variables as Constant in Artist:
+              name: 艺术家和变量
               description_student: 别忘了将创意带到课堂中！在这些关卡中，你会用变量做出了不起的图画。
               description_teacher: 在本课中，学生会在小艺术家环境中学习使用变量的重复循环。学生会学习如何使用变量，来让代码更易于编写和阅读，即使变量在运行时不变化也是如此。
             Variables that Change in Bee:
+              name: 蜜蜂与改变变量
               description_student: 蜜蜂喜欢变量！
               description_teacher: '本课程会展示，能在代码中变化的值会让程序变得有多强大。 '
             Variables that Change in Artist:
+              name: 小艺术家与改变变量
               description_student: 本课程会使用在运行时变化的变量来画图。
               description_teacher: 这节课中，学生们会在小艺术家环境中用变量来探索重复的设计。学生们会学习到变量如何能被用来让代码更容易书写和阅读。在指导的关卡后，学生们会在自由关卡中结束，他们能展示他们学到了什么，创造他们自己的图案。
             Simulating Experiments:
@@ -13830,9 +13839,11 @@ zh-CN:
               description_student: 有没有好奇过信息是如何在互联网上传递的？没什么神奇的！这堂课会教你互联网的基本工作。
               description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
             Editing Behaviors:
+              name: 编辑行为
               description_student: 学习编写自己的精灵图行为！
               description_teacher: 在这里，学生们会使用精灵图实验室创造出自己的行为。
             Virtual Pet:
+              name: 虚拟宠物
               description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
               description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             The Power of Words:

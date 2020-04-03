@@ -75,6 +75,7 @@
   "assignmentSelectorCourse": "Velja áfanga",
   "assignmentSelectorVersion": "Útgáfa",
   "assignmentSelectorUnit": "Veldu núverandi einingu",
+  "atHomeBannerLinkText": "Hefjast handa",
   "audioInitializeError": "Tölvan þín er ekki stillt til að taka upp hljóð. Gættu þess að tölvan hafi hljóðnema með leyfi til að nota hljóð á þessum vef.",
   "authorizeGoogleClassrooms": "Smelltu hér til að heimila Google Classroom.",
   "authorizeGoogleClassroomsText": "Áður en þú getur speglað Google Classroom, þarft Code.org að hafa gilt leyfi til að nota Google Classroom aðganginn þinn.",

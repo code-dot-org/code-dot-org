@@ -13,6 +13,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
+    @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
     @section = create :section, user_id: @teacher.id
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
@@ -222,6 +223,48 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     # start html comes from real_level not project_level
     level_options = assigns(:level).blockly_level_options
     assert_equal '<div><label id="label1">real_level html</label></div>', level_options['startHtml']
+  end
+
+  test 'project template level sets data tables when defined' do
+    template_level = create :applab
+    template_level.data_tables = '{"key":"expected"}'
+    template_level.data_properties = '{"prop":"expected"}'
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.data_tables = '{"key":"wrong"}'
+    real_level.data_properties = '{"prop":"wrong"}'
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+
+    assert_response :success
+    # data tables comes from project_level not real_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '{"key":"expected"}', level_options['dataTables']
+    assert_equal '{"prop":"expected"}', level_options['dataProperties']
+  end
+
+  test 'project template level does not set data tables when not defined' do
+    template_level = create :applab
+    template_level.save!
+
+    real_level = create :applab
+    real_level.project_template_level_name = template_level.name
+    real_level.data_tables = '{"key":"real"}'
+    real_level.data_properties = '{"prop":"real"}'
+    real_level.save!
+
+    sl = create :script_level, levels: [real_level]
+    get :show, params: {script_id: sl.script, stage_position: '1', id: '1'}
+
+    assert_response :success
+    # data tables comes from real_level not project_level
+    level_options = assigns(:level).blockly_level_options
+    assert_equal '{"key":"real"}', level_options['dataTables']
+    assert_equal '{"prop":"real"}', level_options['dataProperties']
   end
 
   test 'project template level sets start animations when defined' do
@@ -1583,4 +1626,127 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'levelbuilder can view pilot script level'
+
+  def create_visible_after_script_level
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script
+    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+    script_level = create :script_level, levels: [level], stage: stage, script: script
+
+    script_level
+  end
+
+  class ShowVisibleAfterScriptLevelTests < ActionController::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      level = create :maze, name: 'maze 1', level_num: 'custom'
+      script_with_visible_after_stages = create :script
+
+      stage_future_visible_after = create :stage, name: 'stage 1', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], stage: stage_future_visible_after, script: script_with_visible_after_stages
+
+      stage_past_visible_after = create :stage, name: 'stage 2', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], stage: stage_past_visible_after, script: script_with_visible_after_stages
+
+      stage_no_visible_after = create :stage, name: 'stage 3', script: script_with_visible_after_stages
+      @script_level_no_visible_after = create :script_level, levels: [level], stage: stage_no_visible_after, script: script_with_visible_after_stages
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test 'levelbuilder can view level in stage with future visible after date' do
+      sign_in @levelbuilder
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'levelbuilder can view level in stage with past visible after date' do
+      sign_in @levelbuilder
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'teacher can not view level in stage with future visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
+
+    test 'teacher can view level in stage with past visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'student can not view level in stage with future visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
+
+    test 'student can view level in stage with past visible after date' do
+      sign_in @teacher
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+
+    test 'unsigned in user can not view level in stage with future visible after date' do
+      sign_out :user
+
+      get :show, params: {
+        script_id: @script_level_future_visible_after.script,
+        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        id: @script_level_future_visible_after.position
+      }
+      assert_response :forbidden
+    end
+
+    test 'unsigned in user can view level in stage with past visible after date' do
+      sign_out :user
+
+      get :show, params: {
+        script_id: @script_level_past_visible_after.script,
+        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        id: @script_level_past_visible_after.position
+      }
+      assert_response :success
+    end
+  end
 end

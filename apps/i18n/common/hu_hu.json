@@ -236,7 +236,6 @@
   "completed": "Befejezve",
   "completedLevels": "Befejezett szintek",
   "completedLessons": "Teljesített leckék",
-  "completedStudentCount": "{numStudentsCompleted} tanuló teljesítette a {numStudents} tanulóból",
   "completedUnpluggedLessons": "Melyik offline leckéket* teljesítette az osztály",
   "completedWithoutRecommendedBlock": "Gratulálunk! Teljesítetted ezt a feladványt: {puzzleNumber}. (De használhatsz más blokkot egy elegánsabb kódhoz.)",
   "completionStatus": "Teljesítés állapota",

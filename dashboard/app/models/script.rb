@@ -1060,6 +1060,7 @@ class Script < ActiveRecord::Base
 
       raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
+      stage.visible_after = raw_stage[:visible_after]
       stage.save! if stage.changed?
     end
 
@@ -1165,7 +1166,9 @@ class Script < ActiveRecord::Base
           },
           script_data[:stages],
         )
-        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        if Rails.application.config.levelbuilder_mode
+          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        end
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1173,9 +1176,11 @@ class Script < ActiveRecord::Base
     end
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
-      # write script to file
-      filename = "config/scripts/#{script_params[:name]}.script"
-      ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      if Rails.application.config.levelbuilder_mode
+        # write script to file
+        filename = "config/scripts/#{script_params[:name]}.script"
+        ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1335,7 +1340,9 @@ class Script < ActiveRecord::Base
       tts: tts?,
     }
 
-    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
+    # Filter out stages that have a visible_after date in the future
+    filtered_stages = stages.select {|stage| stage.published?(user)}
+    summary[:stages] = filtered_stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 

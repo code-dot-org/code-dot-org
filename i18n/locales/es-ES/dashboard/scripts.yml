@@ -3949,6 +3949,7 @@ es:
               description_teacher: En esta lección, los alumnos consideran una cantidad de dispositivos informáticos para determinar qué tipos de entradas y salidas utilizan. Los grupos se asignan a un dispositivo informático y, según una definición de entrada y salida proporcionada por el maestro, enumeran las entradas y salidas de su dispositivo. Al principio de la actividad, los estudiantes deben enfocarse en entradas y salidas físicas más obvias (por ejemplo, un teclado como entrada o una pantalla como salida) pero las discusiones posteriores llevan a los estudiantes a considerar ejemplos menos obvios (por ejemplo, que una pantalla táctil es tanto una entrada y salida, o el hecho de que Internet puede servir como entrada y salida). A lo largo de la lección, el maestro registra las entradas y salidas que se identifican en un cuadro en el frente del salon. Para concluir la lección, los alumnos examinan las actividades comunes que realizan en un dispositivo informático y seleccionan de la tabla las entradas y salidas utilizadas para esa actividad.
             Apps and Storage:
               description_student: 'Esta lección cubre los aspectos de entrada y salida de las computadoras en un contexto que es relevante y familiar para los estudiantes: aplicaciones. La clase evalúa varias aplicaciones web para analizar los problemas específicos que fueron diseñados para resolverse, las entradas que necesitan para trabajar y las salidas que proporcionan a los usuarios. La clase concluye con observaciones de estas aplicaciones, así como una discusión dirigida por el docente sobre el impacto de las aplicaciones en la sociedad. '
+            0:
         csd4-2020:
           stages:
             User-Centered Design Micro Activity:
@@ -4018,21 +4019,23 @@ es:
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
             Project - Design a Game:
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
+            Text:
+              name: Texto
         coursea-2020:
           description_short: Una introducción a la informática para pre-lectores.
           stages:
             Going Places Safely:
               name: Ir a Sitios Seguro
-            Loops in Ice Age:
-              name: Bucles en la Edad del Hielo
+            'Programming: Happy Maps':
+              name: Mapas Felices
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Tu huella Digital
             Move It, Move It:
               name: Muévelo, Muévelo
-            Loops in Artist:
-              name: Bucles en Artista
+            'Loops: Getting Loopy':
+              name: Bucleandose
         coursec-2020:
           description_short: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
           description_audience: 'Edades de 6 a 10 años'
@@ -4043,11 +4046,15 @@ es:
               name: Pulseras Binarias
             Looking Ahead:
               name: Observando hacia el futuro
+            'Events: The Big Event':
+              name: El Gran Evento
             Picturing Data:
               name: Datos de gráfico
         coursed-2020:
           description_audience: 'Edades de 7 a 11 años'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en papel cuadriculado
             Relay Programming:
               name: Programación de Relevos
               description_teacher: Esta actividad comenzará con una lección breve sobre depuración y persistencia, luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes se agrupan en equipos y trabajan juntos para escribir una instrucción de un programa a la vez.
@@ -4057,12 +4064,10 @@ es:
               description_teacher: En esta lección, los estudiantes pondrán en práctica utilizando eventos para construir un juego que pueden compartir en línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados a través de eventos, luego le dadas espacio para crear su propio juego.
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
-            Loops in Artist:
-              name: Bucles en Artista
             Conditionals with Cards:
               name: Condicionales con tarjetas
             'Unplugged: Binary':
-              name: 'Desconectado: binario'
+              name: Imágenes binarias
             Artist Binary:
               name: Artista binario
             Digital Citizenship:
@@ -4072,14 +4077,11 @@ es:
         coursee-2020:
           description_audience: 'Edades de 8 a 12 años'
           stages:
-            Conditionals:
-              name: Condicionales
             Simon Says:
               name: Simón dice
               description_student: Juega un juego y piensa en qué comandos se necesitan para obtener el resultado correcto.
-            Access Ability:
-              name: Habilidad de acceso
             'Functions: Songwriting':
+              name: Composición Musical
               description_teacher: Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función.  Las Funciones (a veces llamadas procedimientos) son mini programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase  ayudará a los alumnos a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.  
             Digital Sharing:
               name: Compartir digital

@@ -250,6 +250,7 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+    parent_email_added_subject: 'Welcome to Code.org!'  
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
@@ -481,6 +482,7 @@ en:
     parent_guardian_email_label: "Parent/guardian email"
     none: "None"
     only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
+    encrypted: "encrypted"
   user_level:
     completed: 'Completed'
     tried: 'Tried'
