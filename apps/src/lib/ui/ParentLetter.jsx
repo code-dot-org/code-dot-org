@@ -84,19 +84,10 @@ export default function ParentLetter({
         <h1>Step 3 - Connect your email to your student’s account</h1>
         <p>
           Keep up to date with what your student is working on and receive
-          updates from Code.org.
+          updates from Code.org. Have your child sign in to Code.org and then
+          enter your email in Account Settings or{' '}
+          <a href={studio('/users/edit')}>click here</a>.
         </p>
-        <ol>
-          <li>Have your child sign in to Code.org</li>
-          <li>
-            Click on the User Menu in the top right corner of the site, then
-            click on Account Settings.
-          </li>
-          <li>
-            Scroll down to the section “For Parents and Guardians” and add your
-            email address.
-          </li>
-        </ol>
         <h1>Join the weekly “Code Break” every Wednesday</h1>
         <p>
           The team at Code.org hosts a live interactive classroom for students
