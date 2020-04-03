@@ -91,7 +91,7 @@ class ParentLetter extends React.Component {
     const sectionCode = section.code;
     const loginType = section.loginType;
     const student =
-      students.length !== 0
+      students.length !== 0 && studentId
         ? students
             .filter(student => student.id.toString() === studentId)
             .shift()
