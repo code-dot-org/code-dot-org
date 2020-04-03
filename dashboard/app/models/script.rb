@@ -36,7 +36,7 @@ class Script < ActiveRecord::Base
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
-  has_many :stages, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script
+  has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -52,12 +52,12 @@ class Script < ActiveRecord::Base
         {
           script_levels: [
             {levels: [:game, :concepts, :level_concept_difficulty]},
-            :stage,
+            :lesson,
             :callouts
           ]
         },
         {
-          stages: [{script_levels: [:levels]}]
+          lessons: [{script_levels: [:levels]}]
         },
         :course_scripts
       ]
@@ -1006,7 +1006,7 @@ class Script < ActiveRecord::Base
       # Set/create Stage containing custom ScriptLevel
       if stage_name
         stage = script.stages.detect {|s| s.name == stage_name} ||
-          Stage.find_or_create_by(
+          Lesson.find_or_create_by(
             name: stage_name,
             script: script,
           ) do |s|
