@@ -21,8 +21,10 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
-export const setStudentLevelScores = scoresData => ({
+export const setStudentLevelScores = (scriptId, lessonId, scoresData) => ({
   type: SET_STUDENT_LEVEL_SCORES,
+  scriptId,
+  lessonId,
   scoresData
 });
 
@@ -65,9 +67,23 @@ export default function sectionStandardsProgress(state = initialState, action) {
     };
   }
   if (action.type === SET_STUDENT_LEVEL_SCORES) {
+    const prevLevelScoreByStage = state.studentLevelScoresByStage[
+      action.scriptId
+    ]
+      ? state.studentLevelScoresByStage[action.scriptId][action.lessonId]
+      : {};
     return {
       ...state,
-      studentLevelScoresByStage: action.scoresData
+      studentLevelScoresByStage: {
+        ...state.studentLevelScoresByStage,
+        [action.scriptId]: {
+          ...state.studentLevelScoresByStage[action.scriptId],
+          [action.lessonId]: {
+            ...prevLevelScoreByStage,
+            ...action.scoresData[action.scriptId][action.lessonId]
+          }
+        }
+      }
     };
   }
   return state;
@@ -335,6 +351,7 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
     const numStudents =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
+    const unpluggedLessonIds = _.map(getUnpluggedLessonsForScript(state), 'id');
     const NUM_STUDENTS_PER_PAGE = 50;
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
     const requests = _.range(1, numPages + 1).map(currentPage => {
@@ -343,7 +360,9 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
         .then(response => response.json())
         .then(data => {
           const scoresData = data;
-          dispatch(setStudentLevelScores(scoresData));
+          unpluggedLessonIds.forEach(lessonId =>
+            dispatch(setStudentLevelScores(scriptId, lessonId, scoresData))
+          );
           let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
             state,
             scriptId,
