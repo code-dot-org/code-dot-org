@@ -27,12 +27,22 @@ export default class Results extends React.Component {
             ] || 0})`}
           >
             <br />
+            <h3>General Questions</h3>
             <SectionResults
               section="general"
-              questions={this.props.questions}
-              answers={this.props.thisWorkshop[workshopTab]}
+              questions={this.props.questions['general']}
+              answers={this.props.thisWorkshop[workshopTab]['general']}
             />
-            {/* TODO: add facilitator feedback per session once we have that data */}
+            {this.props.thisWorkshop[workshopTab]['facilitator'] && (
+              <div>
+                <h3>Facilitator Specific Questions</h3>
+                <SectionResults
+                  section="general"
+                  questions={this.props.questions['facilitator']}
+                  answers={this.props.thisWorkshop[workshopTab]['facilitator']}
+                />
+              </div>
+            )}
           </Tab>
         ))}
         {this.props.workshopRollups && (
