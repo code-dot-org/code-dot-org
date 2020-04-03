@@ -1608,6 +1608,12 @@ a.download-video {
     width: 800px;
   }
 
+  .signup-header {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+
   .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
@@ -1866,11 +1872,6 @@ a.download-video {
     width: 40%;
     border-color: $light_gray;
   }
-}
-
-.signup-header {
-  flex-grow: 1;
-  text-align: center;
 }
 
 // NEW STYLES FOR devise/shared/_new_links
