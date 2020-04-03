@@ -364,34 +364,32 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
           unpluggedLessonIds.forEach(lessonId =>
             dispatch(setStudentLevelScores(scriptId, lessonId, scoresData))
           );
-          let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
-            state,
-            scriptId,
-            scoresData
-          );
-          const lessonsToSelect = _.filter(unpluggedLessonList, function(
-            lesson
-          ) {
-            if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
-              return lesson;
-            }
-          });
-          dispatch(setSelectedLessons(lessonsToSelect));
         });
     });
-    Promise.all(requests);
+    Promise.all(requests).then(function() {
+      let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
+        getState(),
+        scriptId
+      );
+      const lessonsToSelect = _.filter(unpluggedLessonList, function(lesson) {
+        if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
+          return lesson;
+        }
+      });
+      dispatch(setSelectedLessons(lessonsToSelect));
+    });
   };
 }
 
-function getInitialUnpluggedLessonCompletionStatus(
-  state,
-  scriptId,
-  scoresData
-) {
+function getInitialUnpluggedLessonCompletionStatus(state, scriptId) {
   let completedLessonIds = [];
 
-  if (scoresData[scriptId]) {
-    const levelScoresByStudentForScript = scoresData[scriptId];
+  if (
+    state.sectionStandardsProgress.studentLevelScoresByStage &&
+    state.sectionStandardsProgress.studentLevelScoresByStage[scriptId]
+  ) {
+    const levelScoresByStudentForScript =
+      state.sectionStandardsProgress.studentLevelScoresByStage[scriptId];
 
     Object.keys(levelScoresByStudentForScript).forEach(function(item) {
       const studentScoresComplete = _.filter(
