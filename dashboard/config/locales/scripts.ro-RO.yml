@@ -5172,25 +5172,33 @@ ro:
             CS Discoveries Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Text:
+              name: Text
         coursea-2020:
           description_short: O introducere în informatică pentru preșcolari.
           stages:
             Going Places Safely:
               name: Mergând în locuri în siguranţă
-            Loops in Ice Age:
-              name: Bucle în Ice Age
+            'Programming: Happy Maps':
+              name: Hărţi Fericite
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Amprenta ta Digitală
             Move It, Move It:
               name: Mutaţi-l, mutați-l
+            'Loops: Getting Loopy':
+              name: Transformând în Buclă
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Brăţări Binare
+            'Events: The Big Event':
+              name: Marele eveniment
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programare pe Hârtie Milimetrică
             Relay Programming:
               name: Programare de releu
             Loops in Ice Age:
@@ -5198,7 +5206,7 @@ ro:
             Conditionals with Cards:
               name: Condiționale cu Carduri
             'Unplugged: Binary':
-              name: 'Fără calculator: Binar'
+              name: Imagini binare
             Artist Binary:
               name: Binar cu artist
             Digital Citizenship:
@@ -5207,8 +5215,8 @@ ro:
               name: Petrecere dansantă
         coursee-2020:
           stages:
-            Conditionals:
-              name: Condiţionale
+            'Functions: Songwriting':
+              name: Compunând Cântece
         coursef-2020:
           description_short: Învățați toate conceptele din fundamentele informaticii
             şi creați propria dvs. artă, poveste sau joc.
@@ -5218,7 +5226,7 @@ ro:
             For Loop Fun:
               name: Pentru distracția cu bucle
             Internet:
-              name: Internet
+              name: Internetul
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
         express-2020:
@@ -5600,6 +5608,9 @@ ro:
               name: Algoritmi
             Events:
               name: Evenimente
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+        code-break-staging:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"

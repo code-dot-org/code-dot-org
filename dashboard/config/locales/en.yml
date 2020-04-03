@@ -476,6 +476,7 @@ en:
     auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Update"
+    encrypted: "encrypted"
   user_level:
     completed: 'Completed'
     tried: 'Tried'
