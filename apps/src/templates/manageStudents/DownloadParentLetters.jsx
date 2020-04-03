@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import ReactTooltip from 'react-tooltip';
+import i18n from '@cdo/locale';
 
 const styles = {
   button: {
@@ -22,8 +23,7 @@ export default class DownloadParentLetters extends Component {
             __useDeprecatedTag
             onClick={() => {}}
             color={Button.ButtonColor.gray}
-            // text={i18n.moveStudents()}
-            text="Download parent letters"
+            text={i18n.downloadParentLetter()}
             icon="file-text"
           />
         </span>
@@ -34,8 +34,9 @@ export default class DownloadParentLetters extends Component {
           delayShow={500}
         >
           <div>
-            Download parent letters for all {this.props.numStudents} students in
-            this section
+            {i18n.downloadParentLetterTooltip({
+              numStudents: this.props.numStudents
+            })}
           </div>
         </ReactTooltip>
       </div>
