@@ -100,7 +100,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
       :script_level,
       script: script,
       levels: [
-        create(:maze, name: 'test level 1')
+        create(:unplugged, name: 'test level 1')
       ]
     )
     level = script_level.levels[0]
@@ -128,7 +128,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
       :script_level,
       script: script,
       levels: [
-        create(:maze, name: 'test level 1')
+        create(:unplugged, name: 'test level 1')
       ]
     )
     level = script_level.levels[0]
@@ -141,7 +141,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: score}]}
 
-    assert_queries 11 do
+    assert_queries 13 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
 
@@ -153,7 +153,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal section.students.count, 11
 
-    assert_queries 11 do
+    assert_queries 13 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
   end
