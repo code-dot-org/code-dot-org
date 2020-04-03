@@ -66,12 +66,12 @@ class EnrolledWorkshopsTable extends React.Component {
   renderWorkshopActionButtons(workshop) {
     return (
       <div>
-        {workshop.state === 'Not Started' && (
+        {workshop.state === 'Not Started' && workshop.pre_survey_url && (
           <Button
-            onClick={() => this.showCancelModal(workshop.enrollment_code)}
+            onClick={() => window.open(workshop.pre_survey_url, '_blank')}
             style={styles.button}
           >
-            Cancel enrollment
+            Complete pre-workshop survey
           </Button>
         )}
         {workshop.state === 'Ended' && (
@@ -94,6 +94,14 @@ class EnrolledWorkshopsTable extends React.Component {
         >
           Workshop details
         </Button>
+        {workshop.state === 'Not Started' && (
+          <Button
+            onClick={() => this.showCancelModal(workshop.enrollment_code)}
+            style={styles.button}
+          >
+            Cancel enrollment
+          </Button>
+        )}
       </div>
     );
   }
