@@ -494,6 +494,9 @@ es-MX:
       NEW Course 4 Bee For Loops 5:
         actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Aquí están
           los bloques de "Acciones".
+      New Frozen Project:
+        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
+          de nieve!"
       Overworld Chop Trees:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
       Overworld Chop Trees_2019:
@@ -541,6 +544,7 @@ es-MX:
           del medio?"
         star2_callout: Quita este bloque 'disfraz' y, en su lugar, usa el bloque "este
           sprite".
+        this_sprite_callout: Recoloca este bloque de disfraz debajo con este.
       behaviors 4:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 5:

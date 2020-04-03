@@ -15,7 +15,27 @@ pl-PL:
         draw_rect: narysuj trojkat
       2-3 Artist Debugging 10:
         draw square: narysuj kwadrat
+        jump to controller top left: skocz do lewego górnego kontrolera
+        jump to middle: skocz do środka
         draw a circle: narysuj okrąg
+        draw a button: narysuj przycisk
+        draw cord: narysuj kabel
+        draw R pad: narysuj pad R
+      2-3 Artist Debugging 5:
+        draw left leg: narysuj lewą nogę
+        draw right leg: narysuj prawą nogę
+        draw body and arms: narysuj ciało i ręce
+        draw a head: narysuj głowę
+      2-3 Artist Debugging 6:
+        draw right leg: narysuj prawą nogę
+        draw sitting stick figure: narysuj siedzącego patyczaka
+        draw arms: narysuj ręce
+        jump to neck: skocz do szyi
+        draw left leg: narysuj lewą nogę
+      2-3 Artist Debugging 7:
+        draw O: narysuj O
+        draw D: narysuj D
+        draw E: narysuj E
       2-3 Artist Functions 11:
         draw a hexagon: narysuj sześciokąt
       2-3 Artist Functions 11.5:
@@ -51,6 +71,9 @@ pl-PL:
         get nectar or make honey: zbierz nektar lub zrób miód
       4-5 Bee Debugging 8:
         get 5 nectar: zbierz 5 nektarów
+      Choose Your Own Adventure:
+        story: opowieść
+        starting path: początkowa droga
       Course 4 Bee Params 1:
         get 3 nectar: zbierz 3 nektary
       Course 4 Bee Params 2:
@@ -133,8 +156,18 @@ pl-PL:
         do something: wykonaj coś
       NEW Course 4 Play Lab Params 11:
         jump: skocz
+      New Artist Project:
+        draw a star: narysuj gwiazdę
+        draw a circle: narysuj okrąg
+        draw a triangle: narysuj trójkąt
+        draw a house: narysuj dom
+        draw a square: narysuj kwadrat
+      New Play Lab Project:
+        jump: skocz
       Standalone_Artist_7:
         draw a flower: narysuj kwiatka
+      Standalone_Artist_9:
+        my function: moja funkcja
       course3_artist_functions_challenge1:
         do something: wykonaj coś
       course3_artist_functions_challenge2:
@@ -193,8 +226,6 @@ pl-PL:
       courseE_artist_functions7:
         draw a house: narysuj dom
       courseE_artist_functions7_2018:
-        draw a house: narysuj dom
-      courseE_artist_functions7_2019:
         draw a house: narysuj dom
       courseE_artist_functions8:
         do something: wykonaj coś

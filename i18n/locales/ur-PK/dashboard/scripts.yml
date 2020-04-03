@@ -53,6 +53,11 @@ ur:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
+        step:
+          title: اسٹیپ
+          stages:
+            Step:
+              name: اسٹیپ
         algebraPD:
           stages:
             Teacher Dashboard:
@@ -244,6 +249,7 @@ ur:
             Dance Party:
               name: ڈانس پارٹی
           title: ڈانس پارٹی
+          description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور مزید 25 کی خاصیت بنانا!
         dance--draft:
           stages:
             Dance Party:
@@ -312,7 +318,47 @@ ur:
               name: ایونٹس/واقعات
             Variables:
               name: متغیرات
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: شرائط
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
+        csd3-2020:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+            Text:
+              name: متن
+        coursed-2020:
+          stages:
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+            Dance Party:
+              name: ڈانس پارٹی
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+        express-2020:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+        csd3-virtual:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+        code-break:
+          stages:
+            Events:
+              name: ایونٹس/واقعات

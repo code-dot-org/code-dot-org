@@ -6,7 +6,7 @@ title: Útmutató
 
 # Így tarts meg egy Hour of Code eseményt egy iskola utáni foglalkozáson
 
-### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! Ha további segítséget szeretnél, kereshetsz egy [helyi önkéntest]({{ urls/volunteer_local }}), aki segít a Kódolás Óráját szervezni az osztályodban.
 
 * * *
 
@@ -14,7 +14,7 @@ title: Útmutató
 
 ## 2. Válassz egy gyakorlatot
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Számos [vicces, egy órás tevékenységeket szervezünk]({{ urls/learn }}) minden korosztálynak, számos partnerrel közösen szervezve. [Próbáld ki!]({{ urls/learn }})
 
 **Minden "Hour of Code" gyakorlat** egy minimális felkészülési igényel a szervezőtől, de az eseményen mindenki a saját tempójában tud haladni, a képességének megfelelően.
 
@@ -24,7 +24,7 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## 3. Népszerűsítsd a "Hour of Code" eseményedet
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Hirdesd a Kódolás Óráját [ezekkel az eszközökkel]({{ urls/promote }}) és bátoríts másokat a saját rendezvényük megszervezésére.
 
 ## Tervezd meg, hogy milyen technikai feltételek szükségesek - a számítógép opcionális dolog
 
@@ -51,22 +51,22 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 - Magyarázd el milyen hatással van a modern technológia az életünkre, keress olyan magyarázatot, ami a fiúknak és a lányoknak is érdekes lehet! (Például olyan esetekről, amikor a technológia életet menthet, segíti az embereket, összeköti az embereket, stb.).
 - Sorolj fel olyan dolgokat a midennapi életből amely programkód alapján működik.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [Itt]({{ urls/girls }}) találhatsz tippeket, hogy lányokat is inspirálj a számítástechnikára.
 
 **További segítségre van szükséged? **Töltsd le ezt az [óraterv mintát](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Kódoljunk!
 
-**Közvetlen résztvevőknek az eseményen** Írd fel a gyakorlat linkjét a táblára! Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Közvetlen résztvevőknek az eseményen** Írd fel a tutorial linkjét a táblára. A linket megtalálod a [kiválasztott tutorial videókról szóló információknál]({{ urls/learn }}) a résztvevők száma alatt.
 
 **Ha valaki nehézségekbe ütközik, akkor természetes válasz az, hogy:** - Nem tudom! Találjuk meg együtt a problémát. - "A technológia nem mindig úgy működik, ahogy mi azt szeretnénk." - "Amikor programozni tanulunk az olyan, mint ha egy új nyelvet tanulnánk beszélni. Azonnal senki sem tud folyékonyan kommunikálni."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Mit csinálj, ha valaki korán végez?** - Bátorítsd a résztvevőket egy másik Kódolás Órája tevékenység megkezdésére a [hourofcode.com/learn]({{ urls/learn }}) oldalon - Vagy, kérd meg azokat, akik korán végeznek, hogy segítsenek azoknak, akik még dolgoznak.
 
 ## 7. Ünnepelj!
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
+- [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
+- [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ promote/resources_stickers }}) matricákat.
 - [Rendelj egyedi pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) a résztvevőknek.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
@@ -79,6 +79,6 @@ Indítsa el a Kódolás Óráját azáltal, hogyinspirálja a résztvevőket, va
 
 ## Mi jön a "Hour of Code" esemény után?
 
-Az "Hour of Code" esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Az "Hour of Code" esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Segítsd a diákokat az útjukon és bátorítsd őket, hogy [tanuljanak még többet online](/beyond)!
 
 {{ signup_button }}

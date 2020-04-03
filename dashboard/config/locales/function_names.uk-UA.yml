@@ -5,6 +5,8 @@ uk-UA:
       2-3 Artist 11:
         x: x
       2-3 Artist 12:
+        details: подробиці
+        draw eyebrow: Намалюй око
         draw pupil: намалюйте учня
       2-3 Artist 3.4:
         draw a circle: намалювати коло
@@ -181,6 +183,17 @@ uk-UA:
         draw a polygon: намалюйте багатокутник
       NEW Course 4 Play Lab Params 11:
         jump: стрибок
+      New Artist Project:
+        draw a star: намалювати зірку
+        draw a circle: намалювати коло
+        draw a triangle: намалювати трикутник
+        draw a house: намалювати будинок
+        draw a square: намалювати квадрат
+      New Minecraft Hero Project:
+        function 1: функція 1
+        function 2: функція 2
+      New Play Lab Project:
+        jump: стрибок
       Standalone_Artist_7:
         draw a flower: намалювати квітку
       course3_artist_functions_challenge1:
@@ -241,8 +254,6 @@ uk-UA:
       courseE_artist_functions7:
         draw a house: намалювати будинок
       courseE_artist_functions7_2018:
-        draw a house: намалювати будинок
-      courseE_artist_functions7_2019:
         draw a house: намалювати будинок
       courseE_artist_functions8:
         do something: щось зробити

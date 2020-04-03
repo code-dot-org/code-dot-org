@@ -3,9 +3,6 @@ id-ID:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Pilihan Berganda
-        questions:
-        - text: Pilihlah sebuah algoritma untuk gambar berikut.
         answers:
         - text: Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas
             persegi<br/>Letakkan sebuah segitiga di bawah persegi
@@ -14,225 +11,231 @@ id-ID:
             di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang
         - text: Mulailah dengan sebuah persegi <br/> Letakkan segitiga bawah persegi
             <br/> Letakkan genjang sebelah kanan segitiga
-      2-3 Algorithms Multi 2:
-        title: Pilihan Berganda
-        content1: Mulailah dengan sebuah segitiga<br/>Letakkan persegi di bawah segitiga<br/>Letakkan
-          sebuah segitiga lain di bawah persegi
         questions:
-        - text: Gambar manakah yang <em>tidak</em> sesuai dengan algoritma ini?
+        - text: Pilihlah sebuah algoritma untuk gambar berikut.
+        title: Pilihan Berganda
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        content1: Mulailah dengan sebuah segitiga<br/>Letakkan persegi di bawah segitiga<br/>Letakkan
+          sebuah segitiga lain di bawah persegi
+        questions:
+        - text: Gambar manakah yang <em>tidak</em> sesuai dengan algoritma ini?
+        title: Pilihan Berganda
       2-3 Big Event Match 1:
-        title: Mencocokan
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - {}
+        - {}
+        - {}
         content2: Pasangkanlah kombinasi tombol untuk gerakan tari.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - {}
-        - {}
-        - {}
-      2-3 Binary Match 1:
         title: Mencocokan
+      2-3 Binary Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Gunakan kunci untuk mencocokkan setiap kode dengan hurufnya
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Mencocokan
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: Sesuai peraturan permainan, kumpulan kartu manakah yang dicetak dengan
             benar?
+        title: Pilihan Berganda
+      2-3 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
         - correct: true
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Pilihan Berganda
+        - {}
+        - {}
         questions:
         - text: Bagaimana Anda akan menyederhanakan urutan ini dengan perulangan?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Pilihan Berganda
       2-3 Graph Paper Match 1:
-        title: Mencocokan
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Cocokkan grid dengan programnya.
         questions:
         - {}
         - {}
         - {}
+        title: Mencocokan
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: Program apakah yang membuat gambar ini?
-        answers:
-        - {}
-        - correct: true
-        - {}
+        title: Pilihan Berganda
       2-3 Maze Match 2:
-        title: Pertandingan labirin
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Cocokkan teka-teki pada blok
-        pre_title: instruksi
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Pertandingan labirin
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: Pilihan Ganda Labirin
-        questions:
-        - {}
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Pilihan Berganda
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
-      2-3 Relay Programming Multi 2:
+        questions:
+        - {}
         title: Pilihan Berganda
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Combo program-gambar/image-program mana yang tidak mengandung kesalahan?
+        title: Pilihan Berganda
+      2-3 artist debug multi 1:
         answers:
         - {}
-        - {}
         - correct: true
-      2-3 artist debug multi 1:
+        - {}
+        - {}
         questions:
         - {}
+      2-3 artist functions multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      2-3 artist functions multi 1:
-        title: Fungsi Artis Pilihan  Berganda Satu
         questions:
         - text: Pilihlah blok-blok yang benar untuk menggambar gambar ini dengan fungsi
             yang diberikan
-        answers:
-        - correct: true
-        - {}
-        - {}
+        title: Fungsi Artis Pilihan  Berganda Satu
       2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: cocokan putaran dengan bentuk
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: Artis loop pilihan ganda
         questions:
         - text: Bentuk apa yang dibuat oleh putaran ini?
+        title: Artis loop pilihan ganda
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
-        - correct: true
         - {}
-      2-3 artist loops multi 2:
-        title: Artis loop pilihan ganda
+        - correct: true
         questions:
         - text: Bentuk apa yang dibuat oleh program ini?
+        title: Artis loop pilihan ganda
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
-        - correct: true
-      2-3 artist match 1:
-        title: Mencocokan Artis
+        - {}
         content1: Sesuai bentuk dengan blok yang lengkap.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Mencocokan Artis
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Manakah perbandingan di bawah ini yang benar?
+      2-3 bee conditionals multi 3:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      2-3 bee conditionals multi 3:
+        - {}
         questions:
         - text: Pilih blok terbaik.
+      2-3 bee loops multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: Lebah Loop Pilihan Berganda Satu
+        - {}
         questions:
         - text: Blok manakah yang mengumpulkan semua nektar ?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Lebah Loop Pilihan Berganda Satu
       2-3 maze match 1:
-        title: Labirin Pertandingan Satu
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Cocokkan teka-teki pada blok
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Labirin Pertandingan Satu
       2-3 maze multi 1:
-        title: Pilihan Ganda Labirin Satu
-        questions:
-        - text: Kumpulan blok mana yang merupakan jawaban yang tepat?
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Kumpulan blok mana yang merupakan jawaban yang tepat?
+        title: Pilihan Ganda Labirin Satu
       4-5 Algorithms Match 1:
-        title: Mencocokan
+        answers:
+        - text: "<h4>Set pemain 1 Skor 0</h4>"
+        - text: "<h4>Pemain 1 menggulung mati</h4>"
+        - text: "<h4>Tambahkan pemain 1 roll untuk total Skor</h4>"
+        - text: "<h4>Bandingkan Skor pemain untuk melihat siapa yang menang</h4>"
         content1: Sesuai langkah-langkah dalam permainan dadu ras dalam urutan dimana
           mereka harus muncul dalam algoritma.
         questions:
@@ -240,23 +243,23 @@ id-ID:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Set pemain 1 Skor 0</h4>"
-        - text: "<h4>Pemain 1 menggulung mati</h4>"
-        - text: "<h4>Tambahkan pemain 1 roll untuk total Skor</h4>"
-        - text: "<h4>Bandingkan Skor pemain untuk melihat siapa yang menang</h4>"
+        title: Mencocokan
       4-5 Algorithms Multi 1:
-        title: Pilihan Berganda
-        questions:
-        - text: item manakah yang paling sulit untuk menjelaskan suatu algoritma ?
         answers:
         - text: Menyikat gigi
         - text: Memanggang kue
         - text: Belanja dari daftar belanjaan
         - text: Pisang
           correct: true
+        questions:
+        - text: item manakah yang paling sulit untuk menjelaskan suatu algoritma ?
+        title: Pilihan Berganda
       4-5 Computational Thinking Match 1:
-        title: Mencocokan
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Masing-masing kendaraan ini telah dibagi menjadi bagian-bagian yang
           lebih kecil. Cocokkan setiap kendaraan dengan daftar bagiannya.
         questions:
@@ -264,74 +267,67 @@ id-ID:
         - text: "<h3>Sisi Roda: 2 <br/>Sisi Windows: 1</h3>"
         - text: "<h3>Sisi Roda: 2 <br/>Sisi Windows: 6</h3>"
         - text: "<h3>Sisi Roda: 3 <br/>Sisi Windows: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Mencocokan
       4-5 Computational Thinking Multi 1:
-        title: Pilihan Berganda
-        questions:
-        - text: Seattle adalah kota besar. <br/> Eugene adalah kota menengah <br/>
-            Hillview adalah sebuah kota kecil.
         answers:
         - text: Seattle _____ a _____ _____.
         - text: _____adalah sebuah kota _____ .
           correct: true
         - text: _____ adalah _____ _____.
         - text: Eugene adalah kota _____.
-      4-5 Crowdsourcing Multi 1:
-        title: Pilihan Berganda
         questions:
-        - text: Manakah dari foto-foto ini yang terbaik merepresentasikan crowdsourcing?
+        - text: Seattle adalah kota besar. <br/> Eugene adalah kota menengah <br/>
+            Hillview adalah sebuah kota kecil.
+        title: Pilihan Berganda
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - correct: true
-      4-5 Crowdsourcing Multi 2:
-        title: Pilihan Berganda
         questions:
-        - text: Apakah salah satu kegiatan ini akan lebih baik untuk berlatih crowdsourcing?
+        - text: Manakah dari foto-foto ini yang terbaik merepresentasikan crowdsourcing?
+        title: Pilihan Berganda
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: bersihankan kamar Anda
           correct: true
         - text: Makan makanan penutup Anda
         - text: sikat rambut Anda
         - text: Mencuci wajah Anda
-      4-5 Digital Footprint Multi 1:
-        title: Pilihan Berganda
         questions:
-        - text: Manakah dari Sepotong informasi yang tercantum di bawah ini yang baik
-            untuk berbagi di internet?
+        - text: Apakah salah satu kegiatan ini akan lebih baik untuk berlatih crowdsourcing?
+        title: Pilihan Berganda
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Hari ulang tahun Anda
         - text: Makanan favorit Anda
           correct: true
         - text: Alamat Anda
         - text: nomor kartu kredit Orangtua Anda
-      4-5 Internet Multi 1:
+        questions:
+        - text: Manakah dari Sepotong informasi yang tercantum di bawah ini yang baik
+            untuk berbagi di internet?
         title: Pilihan Berganda
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Ketika Anda mencoba untuk log on ke code.org, alamat IP mana yang
             merupakan DNS yang paling mungkin untuk membawa Anda?
+        title: Pilihan Berganda
+      4-5 Internet Multi 2:
         answers:
         - {}
-        - {}
-        - {}
         - correct: true
-      4-5 Internet Multi 2:
-        title: Pilihan Berganda
+        - {}
+        - {}
         questions:
         - text: Jika DNS telah mengirim Anda ke halaman di alamat IP 100.42.50.110,
             situs mana yang sedang Anda masuki?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Pilihan Berganda
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, lewati untuk ke Lou saya,
         - text: Lou, Lou, melompat ke saya Lou, <br/> Lou, Lou, melompat ke saya Lou,
@@ -340,8 +336,15 @@ id-ID:
           correct: true
         - {}
         - {}
+        questions:
+        - {}
+        title: Pilihan Berganda
       4-5 Suncatchers Match 1:
-        title: Mencocokan
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>Bintang</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Cocokkan setiap program dengan kata yang dibuat, gunakan kelompok
           keterampilan yang telah disediakan.
         questions:
@@ -349,112 +352,104 @@ id-ID:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>Bintang</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Mencocokan
       4-5 Suncatchers Multi 1:
-        title: Pilihan Berganda
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: program yang manakah di bawah ini yang <em>tidak</em> membuat urutan
             yang persis sama seperti Program 1?
+        title: Pilihan Berganda
+      4-5 artist loops multi 1:
         answers:
         - {}
         - correct: true
         - {}
-      4-5 artist loops multi 1:
-        title: Artis loop pilihan ganda
+        - {}
         questions:
         - text: Blok-blok manakah yang akan membuat bentuk itu?
+        title: Artis loop pilihan ganda
+      4-5 artist multi 1:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 artist multi 1:
-        title: Artis pilihan ganda
         questions:
         - text: Blok manakah yang menggambar persegi panjang dengan keliling 100?
+        title: Artis pilihan ganda
+      4-5 artist multi 2:
         answers:
+        - {}
         - {}
         - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Artis pilihan ganda
         questions:
         - text: Gambar manakah yang simetris?
+        title: Artis pilihan ganda
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - correct: true
         - {}
-      4-5 bee conditionals multi 1:
-        title: Kondisional Lebah Pilihan Berganda
         questions:
         - text: Pilih blok terbaik.
+        title: Kondisional Lebah Pilihan Berganda
+      4-5 bee debug multi 1:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      4-5 bee debug multi 1:
-        title: Lebah Debug Pilihan Berganda
+        - {}
         questions:
         - text: Versi dari fungsi manakah yang dapat berjalan?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Lebah Debug Pilihan Berganda
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
         title: Loop Lebah Pilihan Berganda
-        questions:
-        - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
         title: Kondisional Labirin Pilihan Berganda
-        questions:
-        - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Pertandingan labirin
-        content1: Cocokkan teka-teki pada blok
-        pre_title: instruksi
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
-      4-5 maze multi 1:
-        title: Pilihan Ganda Labirin
+        content1: Cocokkan teka-teki pada blok
         questions:
-        - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+        - {}
+        - {}
+        - {}
+        title: Pertandingan labirin
+      4-5 maze multi 1:
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+        title: Pilihan Ganda Labirin
       Begin planning your project:
-        title: judul
         content1: desekripsi di sini
       Begin planning your project_2018:
-        title: Mulai perencanaan proyek anda
         content1: desekripsi di sini
       Begin planning your project_2018_2019:
-        title: Mulai perencanaan proyek anda
         content1: desekripsi di sini
       CSD Header Size MC:
         answers:
@@ -475,172 +470,158 @@ id-ID:
         - {}
         - {}
       CSD U2 Design Project:
-        title: judul
         content1: desekripsi di sini
       CSD U2 Design Project_2018:
-        title: judul
         content1: desekripsi di sini
       CSD U2 Design Project_2018_2019:
-        title: judul
+        content1: desekripsi di sini
+      CSD U2 L1 Overview:
         content1: desekripsi di sini
       CSD U2 L2 Overview:
-        title: judul
         content1: desekripsi di sini
       CSD U2 L3 Overview:
-        title: judul
         content1: desekripsi di sini
       CSD U2 L4 Overview:
-        title: judul
         content1: desekripsi di sini
       CSD U2 L5 Overview:
-        title: judul
         content1: desekripsi di sini
       CSD U2 L6 Overview:
-        title: judul
         content1: desekripsi di sini
       CSD U2 Lesson 6 Overview:
         content1: desekripsi di sini
       CSD U2 expand project:
-        title: judul
         content1: desekripsi di sini
       CSD U2 expand project_2018:
-        title: judul
         content1: desekripsi di sini
       CSD U2 expand project_2018_2019:
-        title: judul
         content1: desekripsi di sini
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 project guide:
-        title: Website pribadi anda
         content1: desekripsi di sini
       CSD U2 project guide_2018:
-        title: Website pribadi anda
         content1: desekripsi di sini
       CSD U2 project guide_2018_2019:
-        title: Website pribadi anda
         content1: desekripsi di sini
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: judul
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: judul
       CSD U3 Boolean MC_2018:
-        title: judul
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: judul
       CSD U3 Boolean MC_2018_2019:
-        title: judul
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: judul
       CSD U3 Card Examples_2018:
-        title: Membuat kartu interaktif
         content1: desekripsi di sini
       CSD U3 Card Examples_2018_2019:
-        title: Membuat kartu interaktif
         content1: desekripsi di sini
       CSD U3 Functions Prediction define first:
         answers:
@@ -661,210 +642,182 @@ id-ID:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
+        - {}
         - {}
         - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      CSD U3 combining rep:
-        title: judul
-        content1: desekripsi di sini
-      CSD U3 combining rep_2018:
-        title: judul
-        content1: desekripsi di sini
-      CSD U3 combining rep_2018_2019:
-        title: judul
-        content1: desekripsi di sini
-      CSD U3 drawSprites placement match:
+        - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      CSD U3 combining rep:
+        content1: desekripsi di sini
+      CSD U3 combining rep_2018:
+        content1: desekripsi di sini
+      CSD U3 combining rep_2018_2019:
+        content1: desekripsi di sini
+      CSD U3 drawSprites placement match:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 game intro:
-        title: Buat permainan anda sendiri
         content1: desekripsi di sini
       CSD U3 game intro_2018:
-        title: Buat permainan anda sendiri
         content1: desekripsi di sini
       CSD U3 game intro_2018_2019:
-        title: Buat permainan anda sendiri
         content1: desekripsi di sini
       CSD U3 platform intro:
-        title: Membangun sebuah Platform Jumper
         content1: desekripsi di sini
       CSD U3 platform intro_2018:
-        title: Membangun sebuah Platform Jumper
         content1: desekripsi di sini
       CSD U3 platform intro_2018_2019:
-        title: Membangun sebuah Platform Jumper
         content1: desekripsi di sini
       CSD U5 Encryption 1:
-        title: judul
         content1: desekripsi di sini
       CSD U5 Encryption 1_2018:
-        title: judul
         content1: desekripsi di sini
       CSD U5 Encryption 1_2018_2019:
-        title: judul
         content1: desekripsi di sini
       CSD U5 Encryption 2:
-        title: Membaca sandi string binary
         content1: desekripsi di sini
       CSD U5 Encryption 2_2018:
-        title: Membaca sandi string binary
         content1: desekripsi di sini
       CSD U5 Encryption 2_2018_2019:
-        title: Membaca sandi string binary
         content1: desekripsi di sini
       CSD U5 L13 SFLP Interpreting Data:
-        title: judul
         content1: desekripsi di sini
       CSD U5 crosstab warmup:
-        title: Survei pizza
         content1: desekripsi di sini
       CSD U5 crosstab warmup_2018:
-        title: Survei pizza
         content1: desekripsi di sini
       CSD U5 crosstab warmup_2018_2019:
-        title: Survei pizza
         content1: desekripsi di sini
       CSD U5 data visualization:
-        title: judul
         content1: desekripsi di sini
       CSD U5 data visualization_2018:
-        title: judul
         content1: desekripsi di sini
       CSD U5 data visualization_2018_2019:
-        title: judul
         content1: desekripsi di sini
       CSD U5 student record:
-        title: judul
         content1: desekripsi di sini
       CSD U5 student record_2018:
-        title: judul
         content1: desekripsi di sini
       CSD U5 student record_2018_2019:
-        title: judul
         content1: desekripsi di sini
       CSD U6 LED create intro:
-        title: Buat sebuah aplikasi menggunakan LED
         content1: desekripsi di sini
       CSD U6 LED create intro_2018:
-        title: Buat sebuah aplikasi menggunakan LED
         content1: desekripsi di sini
       CSD U6 LED create intro_2018_2019:
-        title: Buat sebuah aplikasi menggunakan LED
         content1: desekripsi di sini
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 final intro:
         content1: desekripsi di sini
       CSD U6 final intro_2018:
@@ -872,20 +825,28 @@ id-ID:
       CSD U6 final intro_2018_2019:
         content1: desekripsi di sini
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       Crowdsourcing-Unplugged:
         markdown: |
@@ -967,6 +928,97 @@ id-ID:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Terus menari!
+
+          Untuk bagian 2, Anda akan membuat proyek Anda sendiri. Tidak ada teka-teki di sini - malah ada banyak proyek yang menunjukkan cara berbeda untuk membuat pesta dansa yang lebih kompleks.
+
+          Anda dapat melakukan level ini dalam urutan apa pun. Langsung berkeliling untuk melihat bagaimana sesuatu dilakukan di tingkat sebelumnya, atau menggabungkan konsep antara proyek. Cobalah semuanya, pilih favorit Anda, dan habiskan waktu Anda bekerja untuk menambah proyek itu untuk menjadikannya milik Anda.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Lanjutkan</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Kembali dan Keempat
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Lebih Banyak Tombol
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Dapatkan Informasi
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Kemana Mereka Pergi?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Kru Dansa
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Perempat Catatan
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bass, Mid, Treble
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Percepat, Perlambat
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DigitalSharing-Unplugged:
         markdown: |
           #Berbagi digital
@@ -995,13 +1047,10 @@ id-ID:
 
           Buat algoritma untuk menggerakkan karakter melalui sebuah maze.
       Internet Simulator Setup:
-        title: Internet simulator setup
         content1: desekripsi di sini
       Internet Simulator Setup 2:
-        title: judul
         content1: desekripsi di sini
       Internet Simulator Setup 3:
-        title: Internet simulator setup 3
         content1: desekripsi di sini
       Internet-Unplugged:
         markdown: |
@@ -1009,210 +1058,206 @@ id-ID:
 
           Bangun internet anda sendiri dalam ruang kelas hanya menggunakan secarik kertas.
       K-1 Artist 1 Multi 1:
-        title: Pilihan Berganda
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
+        title: Pilihan Berganda
+      K-1 Artist 1 Multi 2:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      K-1 Artist 1 Multi 2:
-        title: Pilihan Berganda
+        - {}
         questions:
         - text: Blok mana yang menarik alun-alun?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Pilihan Berganda
       K-1 Artist 2 Match 2:
-        title: Mencocokan
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Cocokkan bentuk berdasarkan jenisnya.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Pilihan Berganda
-        questions:
-        - text: berapa banyak kah jumlah madu?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Pilihan Berganda
-        questions:
-        - text: berapa banyak kah jumlah madu?
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-      K-1 Bee Loops Match 1:
         title: Mencocokan
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: berapa banyak kah jumlah madu?
+        title: Pilihan Berganda
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: berapa banyak kah jumlah madu?
+        title: Pilihan Berganda
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Cocokkan blok
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Big Event Match 1:
         title: Mencocokan
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - {}
+        - {}
         content2: Pasangkanlah kombinasi tombol untuk gerakan tari.
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - {}
-        - {}
+        title: Mencocokan
       K-1 Digital Footprint Multi 1:
-        title: Pilihan Berganda
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Hewan yang mana yang memiliki tapak digital yang meninggalkan Dia.
             <strong> yang paling aman</strong>?
-        answers:
-        - {}
-        - {}
-        - correct: true
-      K-1 Getting Loopy Multi 1:
         title: Pilihan Berganda
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Bagaimana Anda akan menyederhanakan urutan ini dengan perulangan?
+        title: Pilihan Berganda
+      K-1 Happy Maps Multi 1:
         answers:
+        - {}
         - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: Panah mana yang mendapatkan Flurb untuk harta?
+        title: Pilihan Berganda
+      K-1 Keep it Private Multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      K-1 Keep it Private Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: Informasi mana yang harus Anda <strong>tidak</strong> berbagi online?
+        title: Pilihan Berganda
+      K-1 Maze Debugging Multi 1:
         answers:
         - correct: true
         - {}
         - {}
-      K-1 Maze Debugging Multi 1:
-        title: Pilihan Berganda
+        - {}
         questions:
         - text: Pilihan mana yang harus menjadi blok akhir?
+        title: Pilihan Berganda
+      K-1 Maze Loops Multi 1:
         answers:
         - correct: true
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: blok pengulangan mana yang sama?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Maze Loops Multi 2:
         title: Pilihan Berganda
+      K-1 Maze Loops Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Pilih blok pengulangan yang benar.
+        title: Pilihan Berganda
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
-        - correct: true
-      K-1 Maze Match 1:
-        title: Mencocokan
+        - {}
+        - {}
         content2: Cocokkan teka-teki dengan blok
-        pre_title: instruksi
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Mencocokan
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Labirin
         questions:
         - text: Jawaban mana yang memecahkan tingkat ini?
+        title: Labirin
+      K-1 Move It Multi 1:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      K-1 Move It Multi 1:
-        title: Pilihan Berganda
+        - {}
         questions:
         - text: Algoritma mana yang mendapatkan Flurb untuk bunga?
+        title: Pilihan Berganda
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
+        - {}
         - correct: true
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: Langkah mana yang  harus masuk pada awal algoritma ini?
+        title: Pilihan Berganda
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
-        - {}
         - correct: true
-      K-1 Plant a Seed Multi 2:
-        title: Pilihan Berganda
+        - {}
         questions:
         - text: Langkah mana yang harus mengisi kekosongan untuk algoritma ini?
+        title: Pilihan Berganda
+      K-1 Word Search Multi 1:
         answers:
         - {}
         - correct: true
         - {}
-      K-1 Word Search Multi 1:
-        title: Pilihan Berganda
         questions:
         - text: Blok mana yang mengeja "MOVE" /  "Bergerak"?
-        answers:
-        - {}
-        - correct: true
-        - {}
-      K-1 Word Search Multi 3:
         title: Pilihan Berganda
-        questions:
-        - text: Kata yang dieja?
+      K-1 Word Search Multi 3:
         answers:
         - text: SET
         - text: KOTAK
           correct: true
         - text: SELATAN
+        questions:
+        - text: Kata yang dieja?
+        title: Pilihan Berganda
       Multi-Screen Apps:
-        title: judul
         content1: desekripsi di sini
       New Challenge Introduction:
-        title: judul
         content1: desekripsi di sini
       OPD-K5 Stage3aGo:
-        title: judul
         content1: desekripsi di sini
       PowerOfWords-Unplugged:
         markdown: |
@@ -1220,730 +1265,701 @@ id-ID:
 
           Hari ini anda akan belajar tentang apa yang dilakukan jika seseorang sedang online.
       Prepare for your presentation:
-        title: judul
         content1: desekripsi di sini
-      Prepare for your presentation_2018:
-        title: Persiapkan presentasimu
       SimonSays-Unplugged:
         markdown: |
           #Kata Simon
 
           Mainkan game dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang baik.
       'Technique: Frequency Analysis':
-        title: Bagaimana memecahkan sandi subtitusi
         content1: desekripsi di sini
       Terminology Recap:
-        title: Itu sangat mudah, apa selanjutnya?
         content1: desekripsi di sini
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Salah
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Salah
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Sang pelukis akan mengambar sebuah kotak.
+          correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Sang pelukis akan mengambar sebuah kotak.
+          correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
         - {}
-      courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Saya tidak tahu
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Saya tidak tahu
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Saya tidak tahu
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict2:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      courseD_external_binary1:
-        title: Menggambar binari
-      courseD_external_binary1_2018:
-        title: Menggambar binari
-      courseD_external_binary1_2018_2019:
-        title: Menggambar binari
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: S
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: S
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: S
           correct: true
-      courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
         - {}
-      courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
+      courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_project_exemplars_2019:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_markdown_algorithms_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_algorithms_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_conditionals_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_conditionals_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_debugging_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_debugging_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_forloops_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_forloops_end_2019:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_forloops_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_forloops_intro_2019:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_loops_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_loops_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_nestedloops_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_nestedloops_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_variables_end:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_variables_end_2019:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_variables_intro:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_markdown_variables_intro_2019:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
       courseF_project_exemplars_2019:
-        title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
         markdown: |+
           # Contoh proyek
@@ -1967,52 +1983,52 @@ id-ID:
           | Let's get creative with variables! | Let's get creative with For Loops! |
 
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
+            programnya dijalankan?
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      gradek1_activity_beNice:
-        title: Komputer adalah temanmu
+        questions:
+        - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
+            programnya dijalankan?

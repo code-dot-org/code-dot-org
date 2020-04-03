@@ -58,6 +58,8 @@ he:
   join_section:
     code:
       placeholder: קוד קבוצה (ABCDEF)
+      instructions_short: הזן את קוד הקבוצה שלך באורך 6 תווים
+      submit: הצטרף
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן
     submit: הוסף רמז
@@ -148,8 +150,6 @@ he:
     valid_password: סיסמה תקינה!
     invalid_password: הסיסמא חייבת להכיל לפחות 6 תווים
     mismatch_password: שתי הסיסמאות שהזנת אינן תואמות
-    under_13_consent: אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים
-      לי להשתמש בשירותי Code.org.
     student_consent: אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org.
     agree_us_website: אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית.
     my_data_to_us: יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית.
@@ -576,6 +576,7 @@ he:
     download: הורד סרטון
     show_notes: הצג הערות
     show_video: הצג סרטון
+    label: סרטון
   compatibility:
     upgrade:
       unsupported_message: הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}',
@@ -723,6 +724,8 @@ he:
     help_support: עזרה ותמיכה
     documentation: מסמכים
     tutorials: מדריכים
+  free_response:
+    placeholder: הכנס את התשובה שלך כאן
   multi:
     wrong_title: תשובה לא נכונה
     wrong_body: התשובה שענית אינה נכונה. נא נסה שנית!
@@ -1130,3 +1133,4 @@ he:
     privacy_policy: מדיניות פרטיות
     logout: התנתק
     true: כן
+  copy: העתק

@@ -42,6 +42,8 @@ ar-SA:
       CourseD_Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: قم بإلقاء نظرة لمعرفة المربعات البرمجية "كل البط"
       Dance_2019_01:
         dance_callout_01: أضف هذا المربع البرمجي إلى برنامجك!
       Dance_2019_02:
@@ -69,6 +71,11 @@ ar-SA:
       Dance_Party_11:
         dance_callout_11_a: مربع برمجي جديد!
         dance_callout_11_b: مربع برمجي جديد!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: قم بإلقاء نظرة لمعرفة المربعات البرمجية "كل البط"
+      Fish Tank 3-validated_2019:
+        spritelab_comment: استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول
+          كيفية عمل التعليمات البرمجية الخاصة بك.
       Function intro Ryan:
         Function_intro_Ryan_1: هذه التعليمات تخبر الكمبيوتر أن يشغل الجزء الكبير من
           البرنامج بنفس الاسم في مساحة العمل.
@@ -85,6 +92,11 @@ ar-SA:
         Infinity_move_right_runbutton: إضافة مربع برمجة تنقّل هنا
       Infinity_repeat:
         Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: عند الانتهاء من كتابة البرنامج، اضغط زر "تشغيل"
+          لتتمكّن من تجريب برنامجك!
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: اضغط على زر "تشغيل" لتبدأ بالتحرّك.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: هذه حلقة "كرر"! انقر عليها في مساحة العمل وأضف الأوامر
           البرمجية التي تريد تكرارها مراراً.
@@ -122,6 +134,23 @@ ar-SA:
         place_length_variable: اسحب متغير الطول هنا لاستبدال علامات الاستفهام
       NEW Course 4 Bee For Loops 5:
         actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
+      New Artist Project:
+        New Artist Project_callout1: قم بالضغط على التصنيفات لرؤية الكتل البرمجية
+          الموجودة في صندوق الأدوات! قم بسحب الكتل البرمجية إلى مساحة العمل لإضافتها
+          إلى برنامجك.
+        New Artist Project_callout2: انقر على "تشغيل" لحفظ و تشغيل برنامجك
+        sign_in_to_save_project: هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل
+          الدخول لحفظ هذا المشروع في حسابك!
+      New Frozen Project:
+        snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
+          الثلج!
+      New Play Lab Project:
+        New Play Lab Project_callout1: قم بالضغط على التصنيفات لرؤية الكتل البرمجية
+          الموجودة في صندوق الأدوات! قم بسحب الكتل البرمجية إلى مساحة العمل لإضافتها
+          إلى برنامجك.
+        New Play Lab Project_callout2: انقر على "تشغيل" لحفظ و تشغيل برنامجك
+        sign_in_to_save_project: هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل
+          الدخول لحفظ هذا المشروع في حسابك!
       Overworld Chop Trees:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld Chop Trees_2019:
@@ -150,6 +179,8 @@ ar-SA:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Underground Iron_2019:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
+      Virtual Pet 2_2019:
+        '': انقر هنا!
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
@@ -242,9 +273,13 @@ ar-SA:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
+      courseD_maze_ramp3_2019:
+        stone_block_2: القطع البرمجية الرمادية لا يمكن حذفها.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً
           ويحتاج العديد من المحاولات لحلها.
+      courseE_aboutme_2:
+        '': انقر هنا!
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
@@ -268,6 +303,7 @@ ar-SA:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!
       frozen line:
+        run: انقر على "تشغيل" لتجربة البرنامج الخاص بك!
         move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة
           "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
       frozen perpendicular:

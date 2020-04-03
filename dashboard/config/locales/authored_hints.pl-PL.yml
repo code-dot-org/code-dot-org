@@ -40,6 +40,8 @@ pl-PL:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ten diament to tak na prawdę kwadrat obrócony na bok
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Pamiętaj, że chcesz by panel sterowania był o 10
+          pikseli _szerszy_...upewnij się, że **dodajesz** 10 do liczby, którą zmieniasz.
         2-3_Artist_Debugging_10_b: |-
           **Metoda prób i błędów sprawdza się tu doskonale!**
 
@@ -55,6 +57,13 @@ pl-PL:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Co się stanie, jeśli masz tryb Artysta i ruszają
           lub skaczą przez pierwszy wiersz?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Ile razy powtórzył się mój kształt?
+
+          Ile razy kształt _powinien_ się powtórzyć?
+
+          Gdzie możesz to zmienić w programie?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Artysta musi obrócić się jeszcze w lewo o 60 stopni
           zanim rozpocznie rysowanie!
@@ -181,6 +190,19 @@ pl-PL:
           kolejne bloki? Potraktuj czerwony kwiat dokładnie tak samo, jak fioletowy!
         2-3_Bee_Conditionals_14_b: Gdyby czerwony kwiat był fioletowy, czy możesz
           sobie wyobrazić, jak używać dodatkowych powtórzeń pętli skrócenia kodu?
+        2-3_Bee_Conditionals_14_c: |-
+          Spróbuj rozłączyć to na dwa oddzielne kawałki:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Pobierz nektar 3 razy
+              -   idź do przodu 5 razy
+              -   sprawdź, czy jest nektar, jeśli tak: zbierz go
+              -   skręć w lewo
+
+          2.  Wyprodukuj miód
+              -   idź raz do przodu
+              -   produkuj miód dwa razy
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub
           nie (0 lub 1) i mogą zmienić ten stan za każdym uruchomieniem programu.'
@@ -292,6 +314,11 @@ pl-PL:
       4-5 Artist 4:
         4-5_Artist_4_a: "Koło ma 360 stopni! \n\nWięc ile razy trzeba powtarzać ten
           kod (ruch o 1 stopień) aby narysować pełne koło?"
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Próby i błędy są dobrą metodą, ale możesz też rozwiązać ten problem, dzieląc kąt 90-stopniowy na trzy części.
+
+          **90 / 3 = \_ \_ \_ \_ \_**
       4-5 Artist 7:
         4-5_Artist_7_a: 'Jaki kąt jest najmniejszy?  Pod jakim kątem stoi artysta? '
       4-5 Artist 8:
@@ -1241,6 +1268,17 @@ pl-PL:
           Czy możesz znaleźć ścieżkę aby dotrzeć do każdego kwiatka i plastra miodu bez uderzania w żadne drzewo? Najlepszą ścieżką jest spirala.
 
           **Możesz to rozwiązać nawet bez skręcania w lewo.**
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Zupełnie tak, jak w blokach 'jeśli na kwiatku', kod wewnątrz 'dopóki nektar > 0' będzie działał tylko, jeśli pszczółka jest na kwiatku. Główna różnica jest taka, że kod wewnątrz będzie się powtarzał dopóki nie będzie już żadnego nektaru. Wypróbuj ten wzór:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: Oryginalny kod działałby świetnie - gdyby
           był tylko jeden skarb na każdym stosie!
@@ -1256,6 +1294,33 @@ pl-PL:
         courseC_harvester_loops_challenge1_b: Możesz powtarzać `move forward` i `pick
           corn` tak wiele razy jak tylko zechcesz, następnie `turn right` w każdym
           narożniku.
+        courseC_harvester_loops_challenge1_c: |-
+          Najlepszy sposób na zebranie pierwszych czterech kolb kukurydzy, polega na użyciu bloku 'powtórz', wewnątrz innego bloku 'powtórz'. Możesz użyć tego wzoru też dla reszty łamigłówki!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: Pomyśl o tej drodze, jakby była trzema różnymi
           kawałkami. Każdy ma jeden wzór, który możesz powtórzyć.
@@ -1284,11 +1349,19 @@ pl-PL:
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Przycisk `STEP` może być bardzo pomocny
           w tym wyzwaniu.
+      course3_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_b: Ścieżka Scrata jest w kształcie prostokąta!
+          Musi obrócić się tak samo za każdym razem!
+        courseC_maze_debugging_challenge1_c: Jeśli utknąłeś, możesz zawsze zacząć
+          od nowa albo usunąć cały kod i znaleźć swój własny sposób!
       course3_maze_debugging_challenge2:
         courseC_maze_debugging_challenge2_a: Jednym ze sposobów rozwiązania tego problemu
           jest dodanie więcej kroków naprzód pomiędzy skrętami.
         courseC_maze_debugging_challenge2_b: Jeśli utkniesz, zawsze możesz zacząć
           od nowa lub usunąć cały kod i znaleźć własną drogę!
+        courseC_maze_debugging_challenge2_c: Są dwie ścieżki, którymi możesz podążać,
+          używając tylko bloku "idź naprzód" i tylko czterech skrętów. Jeśli znajdziesz
+          sposób na użycie bloku "powtórz", może ich być nawet więcej!
       course4_bee_fwp_challenge1:
         courseF_bee_fwp_challenge1_b: |-
           Zobacz ile gotowej do żniw kukurydzy w każdym z miejsc. Czy widzisz wzór liczenia? Parametr `Length` powinien być wykorzystany do ustawienia maksymalnej wartości w `for loop`.
@@ -1403,14 +1476,14 @@ pl-PL:
         courseA_collector_loops5_b: Spróbuj rozdzielić problem na 2 części, poruszaj
           się bokiem i potem na dół.
       courseA_collector_loops6:
-        courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseA_collector_loops6_a: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops6_2018:
-        courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseA_collector_loops6_a: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops6_2019:
-        courseA_collector_loops6_a: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseA_collector_loops6_a: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseA_collector_loops7:
         courseA_collector_loops7_a: Jeśli nie wiesz co będzie dalej, uruchom kod aby
           zobaczyć gdzie Laurel skończy.
@@ -1835,6 +1908,15 @@ pl-PL:
       courseC_collector_prog1_2019:
         courseC_collector_prog1_a: Kiedy stoisz w pewnej odległości od skarbu, użyj
           bloku <xml><block type="collector_collect"/></xml> aby go podnieść.
+      courseC_collector_prog3:
+        courseC_collector_prog3_c: Jeśli masz problemy z rozszyfrowaniem tej łamigłówki,
+          spróbuj zapisać ruchy na kartce papieru.
+      courseC_collector_prog3_2018:
+        courseC_collector_prog3_c: Jeśli masz problemy z rozszyfrowaniem tej łamigłówki,
+          spróbuj zapisać ruchy na kartce papieru.
+      courseC_collector_prog3_2019:
+        courseC_collector_prog3_c: Jeśli masz problemy z rozszyfrowaniem tej łamigłówki,
+          spróbuj zapisać ruchy na kartce papieru.
       courseC_collector_prog_challenge1:
         courseC_collector_prog_challenge1_a: Używaj komendy `collect` częściej aby
           zebrać dodatkowy skarb.
@@ -1959,29 +2041,173 @@ pl-PL:
         courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
           tą zagadkę.
       courseC_maze_debugging2:
-        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseC_maze_debugging2_c: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging2_2018:
-        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseC_maze_debugging2_c: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging2_2019:
-        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseC_maze_debugging2_c: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3:
-        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseC_maze_debugging3_b: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_2018:
-        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseC_maze_debugging3_b: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_2019:
-        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
-          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+        courseC_maze_debugging3_b: Nie możesz znaleźć, co jest źle? Spróbuj uruchomić
+          kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseC_maze_programming1:
+        courseC_maze_programming1_0: Upewnij się, że wszystkie bloki zostały połączone
+          ze sobą, a następnie ponownie kliknij Uruchom.
+      courseC_maze_programming1_2018:
+        courseC_maze_programming1_0: Upewnij się, że wszystkie bloki zostały połączone
+          ze sobą, a następnie ponownie kliknij Uruchom.
+      courseC_maze_programming1_2019:
+        courseC_maze_programming1_0: Upewnij się, że wszystkie bloki zostały połączone
+          ze sobą, a następnie ponownie kliknij Uruchom.
+      courseC_maze_programming2:
+        courseC_maze_programming2_a: Aby użyć bloku <xml><block type="maze_moveForward"/></xml>,
+          przeciągnij go z przybornika i przyciągnij do bloku <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: Upewnij się, że wszystkie bloki zostały połączone
+          ze sobą, a następnie ponownie kliknij Uruchom.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_a: Aby użyć bloku <xml><block type="maze_moveForward"/></xml>,
+          przeciągnij go z przybornika i przyciągnij do bloku <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: Upewnij się, że wszystkie bloki zostały połączone
+          ze sobą, a następnie ponownie kliknij Uruchom.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_a: Aby użyć bloku <xml><block type="maze_moveForward"/></xml>,
+          przeciągnij go z przybornika i przyciągnij do bloku <xml><block type="when_run"/></xml>.
+        courseC_maze_programming2_b: Upewnij się, że wszystkie bloki zostały połączone
+          ze sobą, a następnie ponownie kliknij Uruchom.
+      courseC_maze_programming3:
+        courseC_maze_programming3_a: Spróbuj najpierw uruchomić program, aby sprawdzić
+          gdzie źle działa.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Aby usunąć blok ze środka kodu, przeciągnij wszystkie bloki do innej części obszaru roboczego.
+
+          Przeciągnij blok, który chcesz usunąć, z powrotem do przybornika.
+
+          Na koniec, przeciągnij pozostałe bloki tam, gdzie powinny być.
+      courseC_maze_programming3_2018:
+        courseC_maze_programming3_a: Spróbuj najpierw uruchomić program, aby sprawdzić
+          gdzie źle działa.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Aby usunąć blok ze środka kodu, przeciągnij wszystkie bloki do innej części obszaru roboczego.
+
+          Przeciągnij blok, który chcesz usunąć, z powrotem do przybornika.
+
+          Na koniec, przeciągnij pozostałe bloki tam, gdzie powinny być.
+      courseC_maze_programming3_2019:
+        courseC_maze_programming3_a: Spróbuj najpierw uruchomić program, aby sprawdzić
+          gdzie źle działa.
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Aby usunąć blok ze środka kodu, przeciągnij wszystkie bloki do innej części obszaru roboczego.
+
+          Przeciągnij blok, który chcesz usunąć, z powrotem do przybornika.
+
+          Na koniec, przeciągnij pozostałe bloki tam, gdzie powinny być.
+      courseC_maze_programming4:
+        courseC_maze_programming4_a: Pamiętaj, że kiedy skręcasz, obracasz się z punktu
+          widzenia ptaka. Jeśli skręcisz w prawo, to ptak skieruje się do dołu.
+        courseC_maze_programming4_b: |-
+          Aby podążać ścieżką:
+
+          -   idź do przodu
+          -   skręć w jedną stronę
+          -   idź do przodu
+          -   skręć do tyłu w drugą stronę
+          -   idź do przodu
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_a: Pamiętaj, że kiedy skręcasz, obracasz się z punktu
+          widzenia ptaka. Jeśli skręcisz w prawo, to ptak skieruje się do dołu.
+        courseC_maze_programming4_b: |-
+          Aby podążać ścieżką:
+
+          -   idź do przodu
+          -   skręć w jedną stronę
+          -   idź do przodu
+          -   skręć do tyłu w drugą stronę
+          -   idź do przodu
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_a: Pamiętaj, że kiedy skręcasz, obracasz się z punktu
+          widzenia ptaka. Jeśli skręcisz w prawo, to ptak skieruje się do dołu.
+        courseC_maze_programming4_b: |-
+          Aby podążać ścieżką:
+
+          -   idź do przodu
+          -   skręć w jedną stronę
+          -   idź do przodu
+          -   skręć do tyłu w drugą stronę
+          -   idź do przodu
+      courseC_maze_programming5:
+        courseC_maze_programming5_b: Ptak potrzebuje wykonać jeden skręt, aby ukończyć
+          tę łamigłówkę. Czy potrafisz wymyślić, w którą stronę?
+        courseC_maze_programming5_c: Rozwiązanie będzie miało dwa bloki „idź do przodu”,
+          skręt, dwa kolejne bloki „idź do przodu”.
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_b: Ptak potrzebuje wykonać jeden skręt, aby ukończyć
+          tę łamigłówkę. Czy potrafisz wymyślić, w którą stronę?
+        courseC_maze_programming5_c: Rozwiązanie będzie miało dwa bloki „idź do przodu”,
+          skręt, dwa kolejne bloki „idź do przodu”.
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_b: Ptak potrzebuje wykonać jeden skręt, aby ukończyć
+          tę łamigłówkę. Czy potrafisz wymyślić, w którą stronę?
+        courseC_maze_programming5_c: Rozwiązanie będzie miało dwa bloki „idź do przodu”,
+          skręt, dwa kolejne bloki „idź do przodu”.
       courseC_maze_programming6:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+        courseC_maze_programming6_b: Podążaj za palcem od ptaka do świnki, jakie podjąłeś
+          kroki?
+        courseC_maze_programming6_c: Pamiętaj, że musisz najpierw skręcić, ponieważ
+          ptak stoi na przeciwko ściany.
+        courseC_maze_programming6_d: Czujesz, że utknąłeś? Spójrz na tę ścieżkę!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+        courseC_maze_programming6_b: Podążaj za palcem od ptaka do świnki, jakie podjąłeś
+          kroki?
+        courseC_maze_programming6_c: Pamiętaj, że musisz najpierw skręcić, ponieważ
+          ptak stoi na przeciwko ściany.
+        courseC_maze_programming6_d: Czujesz, że utknąłeś? Spójrz na tę ścieżkę!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+        courseC_maze_programming6_b: Podążaj za palcem od ptaka do świnki, jakie podjąłeś
+          kroki?
+        courseC_maze_programming6_c: Pamiętaj, że musisz najpierw skręcić, ponieważ
+          ptak stoi na przeciwko ściany.
+        courseC_maze_programming6_d: Czujesz, że utknąłeś? Spójrz na tę ścieżkę!
+      courseC_maze_programming7:
+        courseC_maze_programming7_a: Nie zapomnij użyć przycisku „Krok”, aby przechodzić
+          między blokami i szukać błędów.
+        courseC_maze_programming7_b: Jeśli masz problemy z rozszyfrowaniem tej łamigłówki,
+          spróbuj zapisać ruchy na kartce papieru.
+      courseC_maze_programming7_2018:
+        courseC_maze_programming7_a: Nie zapomnij użyć przycisku „Krok”, aby przechodzić
+          między blokami i szukać błędów.
+        courseC_maze_programming7_b: Jeśli masz problemy z rozszyfrowaniem tej łamigłówki,
+          spróbuj zapisać ruchy na kartce papieru.
+      courseC_maze_programming7_2019:
+        courseC_maze_programming7_a: Nie zapomnij użyć przycisku „Krok”, aby przechodzić
+          między blokami i szukać błędów.
+        courseC_maze_programming7_b: Jeśli masz problemy z rozszyfrowaniem tej łamigłówki,
+          spróbuj zapisać ruchy na kartce papieru.
+      courseC_maze_programming8:
+        courseC_maze_programming8_a: Pamiętaj, że możesz użyć przycisku „Krok”, aby
+          przejrzeć kod wiersz po wierszu, jeśli utkniesz.
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_a: Pamiętaj, że możesz użyć przycisku „Krok”, aby
+          przejrzeć kod wiersz po wierszu, jeśli utkniesz.
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_a: Pamiętaj, że możesz użyć przycisku „Krok”, aby
+          przejrzeć kod wiersz po wierszu, jeśli utkniesz.
       courseC_maze_programming_challenge2:
         courseC_maze_programming_challenge2_b: |-
           Najkrótsze rozwiązanie wykorzystuje tylko 5 bloków, ale używa tego bloku:
@@ -2192,10 +2418,67 @@ pl-PL:
           Ta plansza jest inna za każdym uruchomieniem.
 
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
+      courseD_maze_ramp1:
+        courseC_maze_programming1_a: Jeśli ten ptak nie dociera do świnki upewnij
+          się, że wszystkie te trzy bloki zostały w ściśle połączone, a następnie
+          ponownie kliknij „Uruchom”.
+      courseD_maze_ramp1_2018:
+        courseC_maze_programming1_a: Jeśli ten ptak nie dociera do świnki upewnij
+          się, że wszystkie te trzy bloki zostały w ściśle połączone, a następnie
+          ponownie kliknij „Uruchom”.
+      courseD_maze_ramp1_2019:
+        courseC_maze_programming1_a: Jeśli ten ptak nie dociera do świnki upewnij
+          się, że wszystkie te trzy bloki zostały w ściśle połączone, a następnie
+          ponownie kliknij „Uruchom”.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_b: Upewnij się, że wszystkie 3 bloki są ściśle połączone
+          razem i podłączone do bloku "po uruchomieniu".
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_b: Upewnij się, że wszystkie 3 bloki są ściśle połączone
+          razem i podłączone do bloku "po uruchomieniu".
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_b: Upewnij się, że wszystkie 3 bloki są ściśle połączone
+          razem i podłączone do bloku "po uruchomieniu".
+      courseD_maze_ramp4:
+        courseC_maze_programming4_a: Możesz skręcić w prawo lub w lewo z punktu widzenia
+          ptaka. Jeśli patrzysz w prawo, to obrót w prawo spowoduje skierowanie się
+          w dół.
+        courseC_maze_programming4_b: Aby podążać ścieżką, przejdź do przodu i skręć
+          się w jedną stronę, a następnie ponownie idź do przodu i skręć w drugą stronę.
+          Idź jeszcze raz do przodu, aby dotrzeć do świnki.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_a: Możesz skręcić w prawo lub w lewo z punktu widzenia
+          ptaka. Jeśli patrzysz w prawo, to obrót w prawo spowoduje skierowanie się
+          w dół.
+        courseC_maze_programming4_b: Aby podążać ścieżką, przejdź do przodu i skręć
+          się w jedną stronę, a następnie ponownie idź do przodu i skręć w drugą stronę.
+          Idź jeszcze raz do przodu, aby dotrzeć do świnki.
+      courseD_maze_ramp5:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5_2018:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5_2019:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5a:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5a_2018:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5b:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5b_2018:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
+      courseD_maze_ramp5b_2019:
+        courseC_maze_programming5_b: Pamiętaj, że skręty są z perspektywy ptaka.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+      courseD_maze_ramp7:
+        courseD_maze_ramp7_b: Nie zapomnij użyć przycisku „Krok”, aby przechodzić
+          między blokami i szukać błędów.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: Nie zapomnij użyć przycisku „Krok”, aby przechodzić
+          między blokami i szukać błędów.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30**
           i wymaga obrotu w prawo o **60 stopni**.  '

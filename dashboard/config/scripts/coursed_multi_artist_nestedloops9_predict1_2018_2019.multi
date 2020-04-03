@@ -1,5 +1,5 @@
 name 'courseD_multi_artist_nestedLoops9_predict1_2018_2019'
-question 'Take a good look at the code below.  Which drawing will this program make when you click "Run"?'
+question 'Take a good look at the code below. Which drawing will this program make when you click "Run"?'
 right 'A', feedback: 'Correct!'
 wrong 'B', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
 wrong 'C', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'

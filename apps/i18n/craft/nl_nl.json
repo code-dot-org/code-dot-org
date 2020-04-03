@@ -109,6 +109,7 @@
   "blockTypeRedstoneWire": "redstone-draad",
   "blockTypeSand": "zand",
   "blockTypeSandstone": "zandsteen",
+  "blockTypeSnow": "sneeuw",
   "blockTypeStone": "steen",
   "blockTypeTnt": "TNT",
   "blockTypeTree": "boom",

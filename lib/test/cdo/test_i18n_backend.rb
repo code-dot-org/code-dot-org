@@ -1,7 +1,7 @@
 require_relative '../test_helper'
 require 'cdo/i18n_backend'
 
-class TestI18nBackend < ::I18n::Backend::Simple
+class TestI18nSmartTranslateBackend < ::I18n::Backend::Simple
   include Cdo::I18n::SmartTranslate
 end
 
@@ -52,9 +52,16 @@ class I18nSmartTranslateTest < Minitest::Test
     assert_nil smart_options[:separator]
   end
 
+  def test_smart_translate_option_not_passed_to_super
+    test_locale = :'te-ST'
+    backend = TestI18nSmartTranslateBackend.new
+    backend.store_translations(test_locale, test_interpolation: "test %{smart}")
+    assert_equal "test %{smart}", backend.translate(test_locale, :test_interpolation, smart: true)
+  end
+
   def test_smart_translate
     test_locale = :'te-ST'
-    backend = TestI18nBackend.new
+    backend = TestI18nSmartTranslateBackend.new
 
     # with smart translate, we can successfully retrieve translations that use periods as keys
     period_separated_i18n = {
@@ -100,5 +107,59 @@ class I18nSmartTranslateTest < Minitest::Test
     backend.store_translations test_locale, all_separated_i18n
     assert_nil backend.translate(test_locale, "separators_that we/support", {scope: [:data, "some.keys", "with|all,of-the"], default: nil})
     assert_nil backend.translate(test_locale, "separators_that we/support", {scope: [:data, "some.keys", "with|all,of-the"], default: nil, smart: true})
+  end
+end
+
+class TestI18nMarkdownTranslateBackend < ::I18n::Backend::Simple
+  include Cdo::I18n::MarkdownTranslate
+end
+
+class I18nMarkdownTranslateTest < Minitest::Test
+  def test_markdown_translate_option_not_passed_to_super
+    test_locale = :'te-ST'
+    backend = TestI18nMarkdownTranslateBackend.new
+    backend.store_translations(test_locale, test_interpolation: "test %{markdown}")
+    assert_equal "test %{markdown}", backend.translate(test_locale, :test_interpolation, markdown: false)
+  end
+end
+
+class TestI18nSafeInterpolationBackend < ::I18n::Backend::Simple
+  include Cdo::I18n::SafeInterpolation
+end
+
+class I18nSafeInterpolationTest < Minitest::Test
+  def setup
+    @locale = :'te-ST'
+    @backend = TestI18nSafeInterpolationBackend.new
+  end
+
+  def test_string_can_render_with_missing_interpolation_argument
+    @backend.store_translations(
+      @locale,
+      test_missing_interpolation_argument: "Hello %{world}"
+    )
+
+    assert_equal "Hello %{world}", @backend.translate(@locale, 'test_missing_interpolation_argument')
+  end
+
+  def test_string_can_render_with_some_missing_interpolation_arguments
+    @backend.store_translations(
+      @locale,
+      test_missing_interpolation_argument: "%{hello} %{world}"
+    )
+
+    assert_equal "%{hello} %{world}", @backend.translate(@locale, 'test_missing_interpolation_argument')
+    assert_equal "Hello %{world}", @backend.translate(@locale, 'test_missing_interpolation_argument', hello: "Hello")
+    assert_equal "%{hello} World", @backend.translate(@locale, 'test_missing_interpolation_argument', world: "World")
+  end
+
+  def test_missing_interpolation_arguments_are_logged
+    @backend.store_translations(
+      @locale,
+      test_missing_interpolation_argument: "Hello %{world}"
+    )
+
+    Honeybadger.expects(:notify)
+    @backend.translate(@locale, 'test_missing_interpolation_argument')
   end
 end

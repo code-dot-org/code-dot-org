@@ -87,7 +87,27 @@ module Pd
     # Index valule is then saved to 'day' column in WorkshopDailySurvey table.
     CSF_SURVEY_INDEXES = {
       PRE_DEEPDIVE_SURVEY => 0,
-      POST_DEEPDIVE_SURVEY => 1,
+      POST_DEEPDIVE_SURVEY => 1
+    }
+
+    # valid day numbers for different workshop categories
+    VALID_DAYS = {
+      LOCAL_CATEGORY => (0..5).to_a.freeze,
+      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
+      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
+      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
+      VIRTUAL_1_CATEGORY => [1].freeze,
+      VIRTUAL_2_CATEGORY => [1].freeze,
+      VIRTUAL_3_CATEGORY => [1].freeze,
+      VIRTUAL_4_CATEGORY => [1].freeze,
+      VIRTUAL_5_CATEGORY => [1].freeze,
+      VIRTUAL_6_CATEGORY => [1].freeze,
+      VIRTUAL_7_CATEGORY => [1].freeze,
+      VIRTUAL_8_CATEGORY => [1].freeze,
+      CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
   end
 end

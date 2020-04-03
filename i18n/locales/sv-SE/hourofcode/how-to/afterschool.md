@@ -6,7 +6,7 @@ title: Så-gör-du guide
 
 # Hur man undervisar Hour of Code på fritids och i föreningar
 
-### Häng på och introducera en grupp elever i deras första programmeringstimme genom dessa steg. Hour of Code är lätt att delta i - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Häng på och introducera en grupp elever till deras första programmeringstimme med dessa steg. Hour of Code är enkelt att delta i - även för nybörjare! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
 * * *
 

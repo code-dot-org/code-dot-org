@@ -6,18 +6,18 @@ import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import {
-  setValidGrades,
-  setStageExtrasScriptIds,
-  setAuthProviders,
   beginEditingNewSection,
+  pageTypes,
+  setAuthProviders,
   setPageType,
-  pageTypes
+  setStageExtrasScriptIds,
+  setValidGrades
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import LinkCleverAccountModal from '@cdo/apps/code-studio/LinkCleverAccountModal';
+import locales, {setLocaleEnglishName} from '@cdo/apps/redux/localesRedux';
 
 $(document).ready(showHomepage);
 
@@ -27,13 +27,16 @@ function showHomepage() {
   const isTeacher = homepageData.isTeacher;
   const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
+  const specialAnnouncement = homepageData.specialAnnouncement;
   const query = queryString.parse(window.location.search);
+  registerReducers({locales});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
+  store.dispatch(setLocaleEnglishName(homepageData.locale));
 
   let courseId;
   let scriptId;
@@ -75,7 +78,7 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
-            locale={homepageData.locale}
+            specialAnnouncement={specialAnnouncement}
           />
         )}
         {!isTeacher && (
@@ -134,50 +137,3 @@ function getTeacherAnnouncement(override) {
 
   return announcement;
 }
-
-window.CleverTakeoverManager = function(options) {
-  this.options = options;
-  const self = this;
-
-  const linkCleverDiv = $('<div>');
-  function showLinkCleverModal(cancel, submit, providerToLink) {
-    $(document.body).append(linkCleverDiv);
-
-    ReactDOM.render(
-      <LinkCleverAccountModal
-        isOpen={true}
-        handleCancel={cancel}
-        handleSubmit={submit}
-        forceConnect={options.forceConnect === 'true'}
-        providerToLink={providerToLink}
-      />,
-      linkCleverDiv[0]
-    );
-  }
-
-  if (self.options.cleverLinkFlag) {
-    showLinkCleverModal(
-      onCancelModal,
-      onConfirmLink,
-      self.options.cleverLinkFlag
-    );
-  }
-
-  function closeLinkCleverModal() {
-    ReactDOM.unmountComponentAtNode(linkCleverDiv[0]);
-  }
-
-  function onCancelModal() {
-    $('#user_user_type').val('student');
-    $.get('/users/clever_modal_dismissed');
-    closeLinkCleverModal();
-  }
-
-  function onConfirmLink() {
-    window.location.href =
-      '/users/clever_takeover?mergeID=' +
-      self.options.userIDToMerge +
-      '&token=' +
-      self.options.mergeAuthToken;
-  }
-};

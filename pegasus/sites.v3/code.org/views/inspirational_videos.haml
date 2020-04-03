@@ -21,5 +21,5 @@
 
 .video-smalltext
   %ul
-    %li= I18n.t(:videos_more, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP')
-    %li= I18n.t(:careers_page_more, careers_url: CDO.code_org_url('/careers'))
+    %li!= I18n.t(:videos_more_markdown, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP', markdown: :inline)
+    %li!= I18n.t(:careers_page_more_markdown, careers_url: CDO.code_org_url('/careers'), markdown: :inline)

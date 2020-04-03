@@ -182,7 +182,10 @@ no-NO:
         designet.'
       4-5 While Loops 8: " Det er et virkelig dypt hull og en virkelig stor haug med
         jord. Hvor mange spadetak må tas for å gjøre bakken helt flat?"
+      AB_Debug_PlayLab3: Flytt ridderen til hver av flaggene. Om noe går galt, se
+        etter feil!
       Alien Defender: 'Idé: Lag et forsvarsspill i Spill-lab!'
+      CDEF_debugging_flappy2: Hvorfor funker ikke dette spillet?
       CSD U5 black white images pixelation: Fullfør X-formen ved å bruke 0 og 1-tall
       CSD U5 black white images pixelation 2: Tegn et smilefjes (trykk her for å se
         bilde)
@@ -373,12 +376,14 @@ no-NO:
         hver 2. takt.
       Dance_Party_12: Ta på deg danseskoene! Lag din egen dans og del den med vennene
         dine.
+      Dance_Party_extras_alternate_2019: Frem og Tilbake (Klikk "Mer" for detaljer)
       Dance_Party_extras_battle: Dansegruppe (Klikk «Mer» for informasjon)
       Dance_Party_extras_battle_2019: Dansegruppe (Klikk «Mer» for informasjon)
       Dance_Party_extras_every_beat: Fjerdedelsnoter (Klikk «Mer» for informasojo)
       Dance_Party_extras_every_beat_2019: Fjerdedelsnoter (Klikk «Mer» for informasojo)
       Dance_Party_extras_layout: La oss komme i formasjon! (Klikk «Mer» for detaljer)
       Dance_Party_extras_layout_2019: La oss komme i formasjon! (Klikk «Mer» for detaljer)
+      Dance_Party_extras_mixed_2019: Flere Knapper (Klikk "Mer" for detaljer)
       Dance_Party_extras_on_beat: Bass, Mellomtone og Diskant (Klikk «Mer» informasjon)
       Dance_Party_extras_on_beat_2019: Bass, Mellomtone og Diskant (Klikk «Mer» informasjon)
       Dance_Party_extras_speed: Raskere, saktere (Klikk «Mer» for informasjon)
@@ -392,6 +397,7 @@ no-NO:
       Function intro Ryan_2019: Bruk funksjonen `build bridge` to ganger for å lage
         en vei til redstonefakkelen.
       Guess The Number: Bygg hva enn du vil. Dette er et eksempel på et siffergjettingsspill!
+      HOC 2018 Level_12: Design ditt eget undervannsmiljø, det er opp til deg!
       Infinity_catch: Kan du få Elsa ("skuespiller 2") til å ta igjen med Anna ved
         å bruke piltastene?
       Infinity_finale: Lag det du har lyst til og del det med andre!
@@ -596,6 +602,14 @@ no-NO:
         din flere ganger før du skjønner alle stegene.'
       NEW Course 4 Bee For Loops 8: Du har forstått dette! Hva må økningen være for
         å samle 3, 6, 9, 12 og 15 nektar?
+      New Gumball Project: Lag det du har lyst til og del det med andre!
+      New Ice Age Project: Lag det du har lyst til og del det med andre!
+      New Infinity Project: Lag det du har lyst til og del det med andre!
+      New Minecraft Hero Project: "**Fritt spill:** Utforsk på egenhånd!"
+      New Sports Project: 'Lag ditt eget spill! Du bestemmer: Du kan endre på alle
+        regler, blande og sette sammen ulike sporter. Vær kreativ! Når du er ferdig,
+        trykk "Fullført" for å dele spillet med vennene dine, så de kan prøve det
+        på sine telefoner!'
       Overworld Avoid Monsters: Det er ikke bra å møte på en creeper. Beveg deg forsiktig
         forbi creeperene og kom deg trygt hjem.
       Overworld Avoid Monsters_2019: Det er ikke bra å møte på en creeper. Beveg deg
@@ -688,6 +702,10 @@ no-NO:
       Underground Mining Coal_2019: De mest verdifulle ressursene finner du under
         bakken, men det kan være mørkt der. Plasser minst to fakler og utvinn minst
         to kull.
+      'Widget: Text Compression': Se etter mønster (repeterende ord eller fraser)
+        i teksten. Legg inn mønstrene du finner i ordlisten til høyre. Når du legger
+        inn et mønster i ordlisten, vil symbolet for mønsteret legges inn i teksten
+        istedenfor mønsteret.
       bounce_1: Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt
         åren ved å bruke venstre pil for å nå målet.
       bounce_10: Det er nå et mål på toppen. Fest «skår et poeng» og «skår motstanderen
@@ -888,6 +906,8 @@ no-NO:
       courseF_bee_functions4: Funksjonen "flytt og hent nektar" snur bien, samleren
         inn nektar og returnerer til der den startet. Bruk denne funksjonen til å
         samle inn all nektaren.
+      express_maze_debugging9_2019: Bruk blokkene i verktøykassen til å bygge et program.
+        Få ekornet til nøtta.
       flappy_1: Fest en blokk til "når klikk"-blokken og trykk "Start". Klikk eller
         trykk på skjermen for å fly Flakse til målet.
       flappy_11: Lag ditt eget Flappy-spill! Du kan endre alle bilder og alle regler,
@@ -967,14 +987,3 @@ no-NO:
         16 ganger 16 piskler!\\\r\n\\\r\nSe hva som skjer når vi blir kreative med
         bitene!"
       k-1 maze 1: Kan du bevege meg til vest for å komme til grisen?
-      scrat 16: Nøtt! Nøtt! Nøtt!, Bruk en "Hvis"-blokk får å få meg dit med så få
-        blokker som mulig.
-      scrat 17: Ok, la oss øve på den en gang til - denne er ikke så forskjellig,
-        men pass deg for veggen!
-      scrat 18: '"Hvis-ellers"-blokken sjekker en betingelse og utfører det ene ELLER
-        det andre. For å få meg til nøtten ved å bruke denne blokken.'
-      scrat 19: En siste øvelse med "hvis-ellers"-blokken. Klarer du å gjøre det riktig
-        på første forsøk?
-      scrat 20: Klarer du å hjelpe meg igjennom en kompleks labyrint ved bare å legge
-        til 3 blokker? Hvis du gjør det riktig så kan jeg gå en hvilken som helst
-        krokete vei igjennom, uansett lengde. Skynd deg! Isen smelter!

@@ -20,7 +20,7 @@ ko:
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           MOVE1:
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 다운
@@ -32,7 +32,7 @@ ko:
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
           MOVE2:
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 다운
@@ -77,7 +77,7 @@ ko:
             '"next"': "(다음)"
             '"prev"': "(이전)"
             '"rand"': "(임의)"
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 다운
@@ -98,7 +98,7 @@ ko:
             '"next"': "(다음)"
             '"prev"': "(이전)"
             '"rand"': "(임의)"
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
             MOVES.DoubleJam: 더블 다운
@@ -166,7 +166,7 @@ ko:
           MOVE:
             '"rand"': "(임의)"
             MOVES.XBend: 구부리기
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.XClapSide: 박수
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
@@ -197,7 +197,7 @@ ko:
           MOVE:
             '"rand"': "(임의)"
             MOVES.XBend: 구부리기
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.XClapSide: 박수
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
@@ -279,7 +279,7 @@ ko:
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
@@ -355,10 +355,15 @@ ko:
           FORMAT:
             '"border"': 테두리
             '"inner"': 내부 사각형
+            '"diamond"': 다이아몬드
             '"circle"': 원
             '"grid"': 그리드
+            '"top"': 위쪽 행
             '"row"': 행
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
             '"column"': 열
+            '"right"': 오른쪽 열
             '"x"': 교차
             '"plus"': 더하기
             '"random"': random(랜덤)
@@ -501,7 +506,7 @@ ko:
             '"splatter"': 페인트 튀기기
             '"rainbow"': 무지개
             '"snowflakes"': 눈
-            '"text"': 음악 제목
+            '"text"': 노래 제목
             '"galaxy"': 우주
             '"sparkles"': 반짝이
             '"spiral"': 나선
@@ -509,7 +514,7 @@ ko:
             '"stars"': 별
           PALETTE:
             '"rave"': 흑백
-            '"cool"': 파란색
+            '"cool"': 시원시원
             '"electronic"': 일렉트로닉
             '"iceCream"': 아이스크림
             '"default"': 빛
@@ -518,7 +523,9 @@ ko:
             '"vintage"': 빈티지
             '"warm"': 빨간색
       Dancelab_setBackgroundEffectWithPalette:
-        text: 배경 효과 {PALETTE} {EFFECT} 설정
+        text: |-
+          "배경 효과 설정
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': 없음
@@ -539,7 +546,7 @@ ko:
             '"ripples_random"': 랜덤 물결
             '"ripples"': 물결
             '"snowflakes"': 눈
-            '"text"': 음악 제목
+            '"text"': 노래 제목
             '"squiggles"': 구불구불
             '"galaxy"': 우주
             '"sparkles"': 반짝이
@@ -549,7 +556,7 @@ ko:
             '"music_wave"': 파도
           PALETTE:
             '"rave"': 흑백
-            '"cool"': 파란색
+            '"cool"': 시원시원
             '"electronic"': 일렉트로닉
             '"iceCream"': 아이스크림
             '"default"': 빛
@@ -603,7 +610,7 @@ ko:
             '"smiling_poop"': 똥
             '"rain"': 비
             '"floating_rainbows"': 무지개
-            '"smile_face"': 웃는 얼굴
+            '"smile_face"': 미소
             '"spotlight"': 스포트라이트
             '"color_lights"': 무대 조명
             '"raining_tacos"': 타코
@@ -625,7 +632,7 @@ ko:
             '"smiling_poop"': 똥
             '"rain"': 비
             '"floating_rainbows"': 무지개
-            '"smile_face"': 웃는 얼굴
+            '"smile_face"': 미소
             '"spotlight"': 스포트라이트
             '"color_lights"': 무대 조명
             '"exploding_stars"': 스타버스트
@@ -1376,7 +1383,7 @@ ko:
             MOVES.Drop: 드롭
             MOVES.Floss: 플로스
             MOVES.Fresh: 프레시
-            MOVES.Roll: 바디롤
+            MOVES.Roll: 구르기
             MOVES.Kick: 별
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
@@ -1538,6 +1545,14 @@ ko:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 이동 {SPRITE} {DISTANCE} 픽셀 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 북쪽
+            '"East"': 동쪽
+            '"South"': 남쪽
+            '"West"': 서쪽
       aalab_prompt:
         text: 질문하기 {MESSAGE}
       aalab_scene:
@@ -1549,12 +1564,10 @@ ko:
             '3': '3'
       aalab_setupStory:
         text: 설정 스토리
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 보이게 하기
-            '"hide"': 보이지 않게 하기
+            '"random"': random(랜덤)
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:

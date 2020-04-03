@@ -3,22 +3,20 @@ zh-CN:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: |-
-          {GROUP} 每 {N} 小节交替
-          动作 {MOVE1} 和 {MOVE2}
+        text: "{GROUP} 每 {N} 小节交替动作 {MOVE1} 和 {MOVE2}"
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           MOVE1:
@@ -63,18 +61,18 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
-            '"UNICORN"': 所有独角兽
+            '"UNICORN"': 独角兽
           MOVE:
             '"next"': "（下一步）"
             '"prev"': "（前一步）"
@@ -126,20 +124,20 @@ zh-CN:
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_changePropEachBy:
-        text: 更改 {GROUP} {PROPERTY} 数值 {VAL}
+        text: 将 {GROUP} {PROPERTY} 改为 {VAL}
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
@@ -154,16 +152,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           MOVE:
@@ -228,9 +226,9 @@ zh-CN:
       Dancelab_eval:
         text: 执行 {CODE}
       Dancelab_everyMeasuresRange:
-        text: '重复每 {N} 措施后 {START} '
+        text: "{START} 后重复 {N} 小节"
       Dancelab_everySeconds:
-        text: '每 {N} {UNIT} '
+        text: 每 {N} {UNIT} 重复一次
         options:
           UNIT:
             '"measures"': 节拍
@@ -319,16 +317,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           LOCATION:
@@ -347,25 +345,30 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           FORMAT:
             '"border"': 边框
             '"inner"': 正方形内部
+            '"diamond"': 钻石
             '"circle"': 圆
             '"grid"': 网格
+            '"top"': 最上排
             '"row"': 行
+            '"bottom"': 最底排
+            '"left"': 左列
             '"column"': 列
+            '"right"': 右列
             '"x"': 十字交叉
             '"plus"': 添加
             '"random"': 随机
@@ -379,7 +382,7 @@ zh-CN:
             '"DOG"': 狗
             '"DUCK"': 鸭子
             '"FROG"': 青蛙
-            '"MOOSE"': 所有驼鹿
+            '"MOOSE"': 驼鹿
             '"PINEAPPLE"': 菠萝
             '"ROBOT"': 机器人
             '"SHARK"': 鲨鱼
@@ -470,9 +473,9 @@ zh-CN:
             '"top"': 最上排
             '"row"': 行
             '"bottom"': 最底排
-            '"left"': 左栏
+            '"left"': 左列
             '"column"': 列
-            '"right"': 右栏
+            '"right"': 右列
             '"x"': 十字交叉
             '"plus"': 添加
             '"random"': 随机
@@ -523,7 +526,9 @@ zh-CN:
             '"vintage"': 复古
             '"warm"': 红色
       Dancelab_setBackgroundEffectWithPalette:
-        text: 设置背景效果 {PALETTE} {EFFECT}
+        text: |-
+          设置背景效果
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': 没有
@@ -541,8 +546,8 @@ zh-CN:
             '"lasers"': 激光舞池
             '"splatter"': 油漆飞溅
             '"rainbow"': 彩虹
-            '"ripples_random"': 随机涟漪
-            '"ripples"': 涟漪
+            '"ripples_random"': 随机波纹
+            '"ripples"': 波纹
             '"snowflakes"': 雪
             '"text"': 歌曲标题
             '"squiggles"': 花体
@@ -576,16 +581,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           SPEED:
@@ -619,7 +624,7 @@ zh-CN:
             '"none"': 没有
             '"rand"': 随机
             '"bubbles"': 气泡
-            '"hearts_colorful"': 多彩的心
+            '"hearts_colorful"': 五彩心
             '"confetti"': 彩纸屑
             '"emojis"': 表情符号
             '"hearts_red"': 心
@@ -650,16 +655,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
@@ -686,16 +691,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
@@ -713,16 +718,16 @@ zh-CN:
         options:
           THIS:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
       Dancelab_setTintEachInline:
@@ -730,16 +735,16 @@ zh-CN:
         options:
           THIS:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
       Dancelab_setTintInline:
@@ -755,16 +760,16 @@ zh-CN:
         options:
           THIS:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           VISIBILITY:
@@ -790,16 +795,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
@@ -835,16 +840,16 @@ zh-CN:
         options:
           GROUP:
             sprites: 所有
-            '"ALIEN"': 所有外星人
-            '"BEAR"': 所有熊
-            '"CAT"': 所有猫
-            '"DOG"': 所有狗
-            '"DUCK"': 所有鸭子
-            '"FROG"': 所有青蛙
-            '"MOOSE"': 所有驼鹿
-            '"PINEAPPLE"': 所有菠萝
-            '"ROBOT"': 所有机器人
-            '"SHARK"': 所有鲨鱼
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
           PROPERTY:
@@ -865,8 +870,8 @@ zh-CN:
         options:
           STRING:
             '"music_wave"': 波浪
-            '"ripples"': 涟漪
-            '"ripples_random"': 随机涟漪
+            '"ripples"': 波纹
+            '"ripples_random"': 随机波纹
             '"quads"': 角度
             '"flowers"': 花朵
             '"popsicles"': 冰棒
@@ -878,14 +883,14 @@ zh-CN:
             '"exploding_stars"': 星爆
             '"row_top"': 最上排
             '"row_bottom"': 最底排
-            '"column_left"': 左栏
-            '"column_right"': 右栏
+            '"column_left"': 左列
+            '"column_right"': 右列
             '"diamond"': 钻石
             '"mural"': 壁画
             '"safari"': 游猎
-            '"network"': 网路
+            '"network"': 网络
             '"highway"': 高速公路
-            '"stream"': 串流
+            '"stream"': 流
             '"tile"': 平铺
             '"shadow"': 阴影
             '"s"': s
@@ -968,7 +973,7 @@ zh-CN:
           SONG:
             '"peas"': 黑眼豆豆合唱团 - 我有一种感觉
       gamelab_addBehaviorSimple:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_changePropBy:
@@ -993,7 +998,7 @@ zh-CN:
       gamelab_comment:
         text: 注释： {COMMENT}
       gamelab_createNewSprite:
-        text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
+        text: "制作一个新的精灵图 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
       gamelab_destroy:
         text: 移除 {THIS}
       gamelab_draggable:
@@ -1011,7 +1016,7 @@ zh-CN:
             '"direction"': 移动方向
             '"tint"': 色调
       gamelab_getThisSprite:
-        text: "{CHOICE} 精灵"
+        text: "{CHOICE} 精灵图"
         options:
           CHOICE:
             '"this"': 这
@@ -1069,7 +1074,7 @@ zh-CN:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
@@ -1078,6 +1083,8 @@ zh-CN:
             '"left"': 向左
       gamelab_mouseLocation:
         text: 鼠标位置
+      gamelab_moveBackward:
+        text: 向后移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveForward:
         text: 向前移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveInDirection:
@@ -1111,7 +1118,7 @@ zh-CN:
       gamelab_removeAllBehaviors:
         text: "{SPRITE} 停止所有事情"
       gamelab_removeBehaviorSimple:
-        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 从 {THIS} 删除颜色
       gamelab_setAnimation:
@@ -1173,6 +1180,8 @@ zh-CN:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
+      gamelab_updateTitleWithColor:
+        text: 显示标题屏幕 {BREAK} 标题 {TITLE} 颜色 {COLOR}
       gamelab_whenDownArrow:
         text: 当下方向键按下时
       gamelab_whenKey:
@@ -1224,7 +1233,7 @@ zh-CN:
       gamelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
       Mikelab_addBehaviorSimple:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 添加培训数据： {NAME},{LOCATION}
         options:
@@ -1234,7 +1243,7 @@ zh-CN:
           LOCATION:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": 鱼
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是鱼
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 标签
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 我的标签
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的标签
       Mikelab_changePropBy:
         text: 将 {PROPERTY} {SPRITE} 改为 {VAL}
@@ -1246,7 +1255,7 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
       Mikelab_createNewSprite:
-        text: "制作一个新的精灵 \n 叫做 {COSTUME} \n 服装为 {NAME} \n 位于 {LOCATION}"
+        text: "制作一个新的精灵图 \n 叫做 {COSTUME} \n 服装为 {NAME} \n 位于 {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1400,23 +1409,23 @@ zh-CN:
       Mikelab_ifLabel:
         text: |-
           如果 {DANCE}
-          做 {DO1} 还 {DO2}
+          那么 {DO1} 否则 {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: 鱼
-            MOVES.Clown: 标签
+            MOVES.Clown: 我的标签
       Mikelab_ifRecognizeLabel:
         text: |-
-          如果将对象识别为 {DANCE}
-          做 {DO1} 还 {DO2}
+          如果对象为 {DANCE}
+          那么 {DO1} 否则 {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: 鱼
-            MOVES.Clown: 标签
+            MOVES.Clown: 我的标签
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          如果将对象识别为 {DANCE}
-          做 {DO1}
+          如果对象为 {DANCE}
+          那么 {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: 鱼
@@ -1428,7 +1437,7 @@ zh-CN:
       Mikelab_randomColor:
         text: 随机颜色
       Mikelab_removeBehaviorSimple:
-        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: 一直重复
       Mikelab_sendBad:
@@ -1461,7 +1470,7 @@ zh-CN:
             '"above"': above
             '"below"': below
       Mikelab_sprite:
-        text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵
+        text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵图
         options:
           LOCATION:
             "{x: 200, y: 100}": 顶部
@@ -1502,9 +1511,9 @@ zh-CN:
       Mikelab_whenMouseClicked:
         text: 当鼠标点击时
       Mikelab_whenTouchesAny:
-        text: 当{SPRITE} 触及任何精灵时
+        text: 当{SPRITE} 触及任何精灵图时
       Mikelab_whenYesNoClicked:
-        text: 当 {KEY} 点击
+        text: 当点击 {KEY} 时
         options:
           KEY:
             '"yes"': 是
@@ -1518,7 +1527,7 @@ zh-CN:
             '"right"': 右方向键
       Mikelab_whileTouchingAny:
         text: |-
-          当{SPRITE} 碰到任何精灵
+          当{SPRITE} 碰到任何精灵图
           {STATEMENT}
       Mikelab_xLocationOf:
         text: "{SPRITE} 的x轴坐标"
@@ -1531,10 +1540,10 @@ zh-CN:
       RyanLab_turnRight:
         text: 向右转
       SpriteLab2Beta_spriteSay:
-        text: 精灵 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
+        text: 精灵图 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
-          创建精灵
+          创建精灵图
           执行 {STATEMENT}
       Vector_log:
         text: 日志消息 {MESSAGE}
@@ -1558,22 +1567,30 @@ zh-CN:
           PROPERTY:
             "'shapeColor'": 颜色
       aalab_addBehaviorForDuration:
-        text: aalab 精灵 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
+        text: aalab 精灵图 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
       aalab_addBehaviorUntilBoolean:
-        text: 精灵{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
+        text: 精灵图{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
       aalab_createNewSpriteAnonReturn2:
-        text: 新子画面命名{SPRITE_NAME} 与服装{ANIMATION_NAME} 在位置{LOCATION}
+        text: 新精灵图在位置 {LOCATION}，名为 {SPRITE_NAME}，并穿着 {ANIMATION_NAME}
       aalab_goToScene:
-        text: 前往现场 {SCENE}
+        text: 前往场景 {SCENE}
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 东
+            '"South"': 南
+            '"West"': 西
       aalab_prompt:
         text: 提问 {MESSAGE}
       aalab_scene:
-        text: 现场 {SCENE}
+        text: 场景 {SCENE}
         options:
           SCENE:
             '1': '1'
@@ -1581,12 +1598,10 @@ zh-CN:
             '3': '3'
       aalab_setupStory:
         text: 设置故事
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 显示
-            '"hide"': 隐藏
+            '"random"': 随机
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:

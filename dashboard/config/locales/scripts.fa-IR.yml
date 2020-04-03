@@ -1675,7 +1675,7 @@ fa:
               name: متغیرها
             For Loops:
               name: حلقه های "برای"
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: شرطی ها
@@ -1685,3 +1685,106 @@ fa:
               name: کمک گیری جمعی
             Conditionals with Cards:
               name: شرطی ها با کارتها
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: شرطی ها
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: شرطی ها
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: معادله با پارامترها
+        csd3-2020:
+          description_short: برنامه نویسی
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Text:
+              name: متن
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+            'Programming: Happy Maps':
+              name: نقشه های شاد
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Events: The Big Event':
+              name: رویداد بزرگ
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            'Unplugged: Binary':
+              name: تصاویر دوتایی
+            Artist Binary:
+              name: دودویی هنرمند
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: ترانه سرایی
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: زنبور عسل هجی کن
+        csp3-virtual:
+          description_short: برنامه نویسی
+          stages:
+            Creating Functions:
+              name: ساختن تابع ها
+        csd3-virtual:
+          description_short: برنامه نویسی
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: حلقه ها ی While
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: توابع
+        code-break:
+          stages:
+            Algorithms:
+              name: الگوریتم ها
+            Events:
+              name: رویدادها

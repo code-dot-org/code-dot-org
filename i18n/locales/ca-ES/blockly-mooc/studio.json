@@ -34,6 +34,7 @@
   "bird": "",
   "calloutPutCommandsHereRunStart": "Posa aquí les instruccions que s'han d'executar quan s'inicia el programa",
   "calloutBlocklyPlaceGoUpHere": "Posa aquí un bloc \"pujar\" per anar amunt",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Feu clic a la capçalera d'esdeveniments per veure les funcions dels blocs d'esdeveniments.",
   "calloutUseArrowButtons": "Prem aquests botons o les fletxes del teclat per activar els esdeveniments de moviment",
   "calloutUseArrowButtonsAutoSteer": "Hem ocultat el codi que vas escriure, però encara pots utilitzar les tecles de fletxa per moure",

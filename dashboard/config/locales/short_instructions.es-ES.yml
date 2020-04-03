@@ -1079,6 +1079,14 @@ es-ES:
         3, 6, 9 de néctar? \\\r"
       NEW Course 4 Play Lab Params 11: "¡Es hora de jugar! Diviértete con todos los
         bloques en tu caja de herramientas. "
+      New Gumball Project: "¡Crea cualquier osa que desees compartir!"
+      New Ice Age Project: "¡Crea cualquier osa que desees compartir!"
+      New Infinity Project: "¡Crea cualquier osa que desees compartir!"
+      New Minecraft Hero Project: "**Juego libre:**  ¡Ha llegado el momento de explorar
+        por tu propia cuenta!"
+      New Sports Project: Crea tu propio juego. Puedes cambiar todas las reglas y
+        mezclar deportes. ¡Puedes ser creativo! Cuando estés listo haz clic en Terminar
+        para que tus amigos prueben tu juego en sus teléfonos.
       Overworld Avoid Monsters: Ir contra un Creeper no es buena idea. Evítalos con
         cuidado y llega a casa para estar a salvo.
       Overworld Avoid Monsters_2019: Ir contra un Creeper no es buena idea. Evítalos
@@ -1184,6 +1192,15 @@ es-ES:
       Underground Mining Coal_2019: Encontrarás los recursos más valiosos bajo tierra,
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
+      behaviors 1: "¡Haz una predicción!"
+      behaviors 2: "¡Vuela el cohete hasta las estrella!"
+      behaviors 3: "¡Ayuda el vagabundo aventajar el robot!"
+      behaviors 3a: 'Depurar: ¡Haz todas las estrellas girar en la misma dirección!'
+      behaviors 4: "¡Haz una predicción!"
+      behaviors 5: Mueve el astronauta diagonalmente.
+      behaviors 6: Haz la pelota rodar.
+      behaviors 7: "¡Conduce hacia el horizonte!"
+      behaviors free play: 'Juego libre: ¡Crea tu propio escena del espacio exterior!'
       bounce_1: Une un bloque al bloque "cuando flecha izquierda" y pulsa "Ejecutar
         Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
         final.
@@ -2124,14 +2141,3 @@ es-ES:
       ramp_artist_loops9: Resuelve este puzzle dibujando un cuadrado.
       ramp_artist_loops9_2018: Resuelve este puzzle dibujando un cuadrado.
       ramp_artist_loops9_2019: Resuelve este puzzle dibujando un cuadrado.
-      scrat 16: ¡Bellota! ¡Bellota! ¡Bellota! Utiliza un bloque "si" para llevarme
-        ahí con el menor número de bloques.
-      scrat 17: Ok, vamos a hacerlo de nuevo para practicar - este no es muy diferente,
-        ¡Pero ten cuidado con la pared!
-      scrat 18: El bloque "If-else" verifica una condición y después hace o una cosa
-        u otra. Para llevarme a la bellota intenta usar este nuevo bloque.
-      scrat 19: Una práctica más del bloque "si-sino", ¿Puedes hacerlo bien en tu
-        primer intento?
-      scrat 20: "¿Puedes agregar sólo 3 bloques para ayudarme a resolver un laberinto
-        más complejo? Si lo haces correctamente puedo caminar cualquier camino curvo
-        sin importar su longitud. !Date prisa! ¡El hielo se está derritiendo!"

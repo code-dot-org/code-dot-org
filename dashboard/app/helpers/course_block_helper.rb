@@ -4,9 +4,9 @@ module CourseBlockHelper
     include LocaleHelper
   end
 
-  #
-  # Given a Script ID or a string, returns an object that represents
-  # a tall course block (_course_tall_block.haml), if one exists.
+  # Given a Script ID or string and an optional course family name, returns
+  # an object that represents a tall course block (_course_tall_block.haml), if
+  # one exists.
   #
   # Example return value:
   # {
@@ -18,7 +18,7 @@ module CourseBlockHelper
   #   audience: "Pre-reader"
   # }
   #
-  def self.get_tall_course_block(id)
+  def self.get_tall_course_block(id, family_name = nil)
     default = {
       url: script_url(id),
       title: I18n.t("upsell.#{id}.title"),
@@ -185,6 +185,17 @@ module CourseBlockHelper
         body: data_t_suffix('script.name', id, 'description_short')
       }
     }
+
+    # The CourseA-F families should all be rendered the same.
+    if [Script::COURSEA, Script::COURSEB, Script::COURSEC, Script::COURSED, Script::COURSEE, Script::COURSEF].include? family_name
+      return {
+        url: script_url(id),
+        image_url: CDO.shared_image_url("courses/logo_tall_#{id}.jpg"),
+        title: data_t_suffix('script.name', id, 'title'),
+        body: data_t_suffix('script.name', id, 'description_short'),
+        audience: data_t_suffix('script.name', id, 'description_audience')
+      }
+    end
 
     default.merge!(block_override_data[id] || {})
   end

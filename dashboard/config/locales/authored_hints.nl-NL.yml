@@ -24,6 +24,8 @@ nl-NL:
       2-3 Artist 4:
         2-3_Artist_4_a: Om het huis af te maken moet je een vierkant tekenen!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Om die kleine hoeken te maken, moet je telkens \* verder
+          \* draaien dan je met het vierkant deed.   '
         2-3_Artist_6_b: Omdat ik al naar rechts kijk, kun je het best eerst vooruit
           bewegen, en dan naar links draaien om de driehoek te maken.
         2-3_Artist_6_c: Elke zijde van de driehoek heeft dezelfde lengte als elke
@@ -38,6 +40,9 @@ nl-NL:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Deze diamant is eigenlijk gewoon een vierkant op zijn kant
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: Denk eraan, je wilt het controle paneel 10 pixels
+          \* breder \*... dus zorg ervoor dat je 10 tot welk nummer je wilt veranderen
+          \* toevoegt \*.
         2-3_Artist_Debugging_10_b: "\\*\\* Proberen en fouten maken is prima hier!\\*\\*."
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 'Tip: Elke snorhaar is 75 pixels lang.'
@@ -48,6 +53,8 @@ nl-NL:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Wat gebeurt er als je de kunstenaar naar achteren
           laat bewegen of springen nadat hij de eerste lijn tekent?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: Hoeveel keer werd mijn vorm herhaald?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: De kunstenaar moet 60 graden verder naar links draaien
           voor je begint met tekenen!
@@ -104,6 +111,8 @@ nl-NL:
       2-3 Artist Nested Loops 3:
         2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   \*\* 360/12 = 30
           \*\*
+        2-3_Artist_Nested_Loops_3_b: Vergeet niet om alle grijze blokken en je draai
+          blok binnen een lus te plaatsen.
       2-3 Artist Nested Loops 4:
         2-3_Artist_Nested_Loops_3_a: Hulp nodig bij de hoeken?   \*\* 360/12 = 30
           \*\*
@@ -251,12 +260,25 @@ nl-NL:
           Er zitten 360 graden in een cirkel!
 
           Dat is hoeveel keren je deze code moet herhalen (als je 1 graad draait per keer) vooraleer de cirkel compleet is!
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Vallen en opstaan (trial and error) is een geweldige methode, maar je kan het probleem ook oplossen door 90 graden te delen door drie.
+
+          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: Welke hoek is het kleinst? In welke hoek staat de kunstenaar?
       4-5 Artist 8:
         4-5_Artist_8_a: "De lange zijden zijn elk 240 pixels lang. Dat betekent dat
           de 2 korte zijden:\n\n**800 - 240 - 240 = 320**\n\nWat is **320/2** ? "
+        4-5_Artist_8_b: |-
+          Deze afbeelding kan op 2 manieren gemaakt worden!
+
+          -   Teken 2 rechthoeken die **120** lang en **160** breed zijn, met een overlappende zijde
+
+          -   Teken één rechthoek die **240** lang en **160** breed is, en voeg dan een lijn in het midden toe.
       4-5 Artist 9:
+        4-5_Artist_9_a: Wanneer een driehoek gelijkzijdig is, zijn alle zijden en
+          hoeken hetzelfde.
         4-5_Artist_9_b: Je moet 3 driehoeken van dezelfde grootte tekenen. Vergeet
           niet achter elke driehoek naar de nieuwe positie te springen.
       4-5 Artist Assessment 1:
@@ -353,6 +375,9 @@ nl-NL:
           zeshoek**, gevolgd door **2/3 van een driehoek**. '
         Course_4_Artist_12_b: Het patroon is bijna hetzelfde als in de laatste puzzel.
           De halve achthoek is enkel een beetje groter.
+        Course_4_Artist_12_c: "1.  De eerste drie lijnen zijn 60 pixels lang en je
+          moet 60 graden draaien.\n2.  De volgende twee lijnen zijn 80 pixels lang
+          en je moet 120 graden draaien. "
         Course_4_Artist_12_d: |-
           **Oplossing:**
           <xml>
@@ -1757,7 +1782,7 @@ nl-NL:
 
           -   Zorg ervoor dat er een danser op het scherm verschijnt.
 
-          -   Dit level eindigt na 4 maten.\*
+          _Dit level eindigt na 4 maten._
         challenges: |-
           **Extra uitdagingen**
 
@@ -1795,7 +1820,7 @@ nl-NL:
 
           -   Je moet minstens twee dansers hebben.
 
-          _Dit level eindigt na 6 maten._
+          _Dit level eindigt na 5 maten._
         challenges: |-
           **Extra uitdaging**
 
@@ -2034,6 +2059,8 @@ nl-NL:
           -   Gebruik het blok 'wanneer linkerpijltoets ingedrukt' om de Robot een dansmove te laten doen wanneer je de linkerpijltoets indrukt.
 
           _Dit level eindigt na 8 maten._
+      Dance_Party_extras_alternate_2019:
+        alternate: Het alternatieve blok valt in de categorie "Dansers".
       Function intro Ryan:
         Function_intro_Ryan_b: Als je de functies correct aanroept, dan is dit het
           pad dat je zal volgen...
@@ -2191,6 +2218,10 @@ nl-NL:
           iets anders te doen.
         double_loop: Probeer een `herhaal` lust binnen in een andere `herhaal` lus
           te plaatsen.
+        specifics: |-
+          Het 'herhaal counter' blok loopt van drie tot zeventien voor elk "bloemblaadjes" en gaat daarna de volgende maken tot er in totaal 6 zijn. De vorm heeft een oneven aantal zijden.
+
+          De 'zet doorzichtigheid' blok gebruikt delen door om de kleur te vervagen als de teller hoger wordt.
         after: Vergeet niet om 20 pixels voorwaarts te bewegen en 60 graden te draaien
           na het tekenen van ieder "bloemblad".
       Overworld House Frame Chosen:
@@ -3125,6 +3156,15 @@ nl-NL:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_harvester_loops_challenge1a:
+        courseC_harvester_loops_challenge1_b: Je kan `beweeg voorwaarts` en `maïs
+          plukken` herhalen zoveel je maar wilt. Gebruik `draai rechts` aan elke hoek.
+      courseC_harvester_loops_challenge1a_2018:
+        courseC_harvester_loops_challenge1_b: Je kan `beweeg voorwaarts` en `maïs
+          plukken` herhalen zoveel je maar wilt. Gebruik `draai rechts` aan elke hoek.
+      courseC_harvester_loops_challenge1a_2019:
+        courseC_harvester_loops_challenge1_b: Je kan `beweeg voorwaarts` en `maïs
+          plukken` herhalen zoveel je maar wilt. Gebruik `draai rechts` aan elke hoek.
       courseC_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Een oplossing van deze puzzel lijkt
           op een zig-zag. Een andere manier lijkt op een spiraal! Er zijn vele verschillende
@@ -3167,6 +3207,15 @@ nl-NL:
       courseC_starWars_loops5:
         courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
           een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
+      courseC_starWars_loops9:
+        course_starWars_loops9_b: Je kan meer dan één blok binnen in een `herhaal`
+          lus plaatsen.
+      courseC_starWars_loops9_2018:
+        course_starWars_loops9_b: Je kan meer dan één blok binnen in een `herhaal`
+          lus plaatsen.
+      courseC_starWars_loops9_2019:
+        course_starWars_loops9_b: Je kan meer dan één blok binnen in een `herhaal`
+          lus plaatsen.
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
@@ -3182,6 +3231,36 @@ nl-NL:
           Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
 
           Als je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?
+      courseD_bee_conditionals7:
+        courseD_bee_conditionals7_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
+      courseD_bee_conditionals7_2018:
+        courseD_bee_conditionals7_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
+      courseD_bee_conditionals7_2019:
+        courseD_bee_conditionals7_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
+      courseD_bee_conditionals7_predict2:
+        courseD_bee_conditionals7_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
+      courseD_bee_conditionals7_predict2_2018:
+        courseD_bee_conditionals7_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
+      courseD_bee_conditionals7_predict2_2019:
+        courseD_bee_conditionals7_a: |-
+          **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
+
+          Je zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen.
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_a: |-
           **Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.
@@ -3414,8 +3493,24 @@ nl-NL:
           </next>
           </block>
           </xml>
+      courseD_maze_ramp2:
+        courseC_maze_programming2_a: Om het "beweeg vooruit" blok te gebruiken, sleep
+          je het vanuit het blokken gebied naar de werkplaats en plak je het direct
+          onder het blok "als gestart".
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: Om het "beweeg vooruit" blok te gebruiken, sleep
+          je het vanuit het blokken gebied naar de werkplaats en plak je het direct
+          onder het blok "als gestart".
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: Om het "beweeg vooruit" blok te gebruiken, sleep
+          je het vanuit het blokken gebied naar de werkplaats en plak je het direct
+          onder het blok "als gestart".
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_a: Om het "beweeg vooruit" blok te gebruiken, sleep
+          je het vanuit het blokken gebied naar de werkplaats en plak je het direct
+          onder het blok "als gestart".
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       courseE_artist_concept_challenge1:
@@ -5158,5 +5253,3 @@ nl-NL:
           </next>
           </block>
           </xml>
-      Dance_Party_extras_alternate_2019:
-        alternate: Het alternatieve blok bevindt zich in de categorie "Dansers".

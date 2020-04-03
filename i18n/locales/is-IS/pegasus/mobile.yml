@@ -12,12 +12,12 @@
   csedweek_dates: "3.-9. desember 2018"
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar og stjórnendur: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">byrjið að undirbúa ykkar Klukkustund kóðunar</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í boði í tilefni CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í boði í tilefni CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2><h3># hafa gert það</h3>"
   anybody_can_learn: "Allir geta lært."
   learn_now: "Læra núna"
   petition_message: "Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði"
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
-  petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
   petition_join_others: 'Slástu í hóp með # öðrum'
   name: "Nafn"
   email: "Netfang"
@@ -148,6 +148,7 @@
   thanks_for_submitting: "Takk fyrir þátttökuna!"
   if_you_enjoyed: "Ef þér fannst gaman að læra þetta, hvernig væri að fá vini þína til að prófa líka! Við viljum að allur heimurinn læri."
   personalize_certificate: "Gerðu viðurkenningarskjalið persónulegra"
+  print_certificates: "Prenta skírteini"
   share_achievement: "Deildu árangrinum þínum"
   beyond_hour_message: "Haltu áfram með <a href='http://studio.code.org'>önnur námskeið okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram klukkustund</a>."
   leaderboards_for_hoc: "Topplisti fyrir Klukkustund kóðunar."
@@ -309,6 +310,7 @@
   homepage_action_text_learn: "Byrjaðu að læra"
   homepage_action_text_signpetition: "Skrifa undir áskorunina"
   homepage_signpetition_dropdown: "Ég samþykki &#x25BE;"
+  homepage_signpetition_dropdown_text: "Sammála"
   homepage_diversity_pledge: "Vinna fjölbreytniheitið"
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '
   homepage_banner_link_prizes: 'Taktu þátt í stærsta námsviðburði í sögunni. '

@@ -2,21 +2,54 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import memoize from 'memoize-one';
+import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
+import msg from '@cdo/locale';
+import color from '../../../util/color';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {isBlank} from '../dataUtils';
+import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
+import Snapshot from './Snapshot';
 
-const INITIAL_STATE = {
+const styles = {
+  container: {
+    display: 'inline-block'
+  },
+  modalBody: {
+    overflow: 'auto',
+    maxHeight: '90%'
+  },
+  input: {
+    ...rowStyle.container,
+    float: 'left'
+  },
+  placeholderContainer: {
+    position: 'relative',
+    textAlign: 'center'
+  },
+  placeholderText: {
+    position: 'absolute',
+    width: '100%',
+    bottom: '50%',
+    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    fontSize: 20,
+    color: color.dark_charcoal
+  }
+};
+
+export const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
-  chartType: '',
+  chartType: ChartType.NONE,
   bucketSize: '',
   selectedColumn1: '',
-  selectedColumn2: ''
+  selectedColumn2: '',
+  filterColumn: '',
+  filterValue: '',
+  screen: ''
 };
 
 class VisualizerModal extends React.Component {
@@ -24,13 +57,10 @@ class VisualizerModal extends React.Component {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    // "if all of the keys are integers, and more than half of the keys between 0 and
-    // the maximum key in the object have non-empty values, then Firebase will render
-    // it as an array."
-    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired
+    tableRecords: PropTypes.array.isRequired
   };
+
+  placeholder = require('./placeholder.png');
 
   state = {...INITIAL_STATE};
 
@@ -38,18 +68,28 @@ class VisualizerModal extends React.Component {
 
   handleClose = () => this.setState({isVisualizerOpen: false});
 
-  parseRecords = memoize(rawRecords => {
-    if (Object.keys(rawRecords).length === 0) {
-      return [];
-    } else {
-      let parsedRecords = [];
-      rawRecords.forEach(record => {
-        if (record) {
-          parsedRecords.push(JSON.parse(record));
-        }
-      });
-      return parsedRecords;
+  canDisplayChart = () => {
+    switch (this.state.chartType) {
+      case ChartType.BAR_CHART:
+        return !!this.state.selectedColumn1;
+      case ChartType.HISTOGRAM:
+        return !!(this.state.selectedColumn1 && this.state.bucketSize);
+      case ChartType.SCATTER_PLOT:
+      case ChartType.CROSS_TAB:
+        return !!(this.state.selectedColumn1 && this.state.selectedColumn2);
+      default:
+        return false;
     }
+  };
+
+  parseRecords = memoize(rawRecords => {
+    let parsedRecords = [];
+    rawRecords.forEach(record => {
+      if (record) {
+        parsedRecords.push(JSON.parse(record));
+      }
+    });
+    return parsedRecords;
   });
 
   findNumericColumns = memoize((records, columns) => {
@@ -59,32 +99,121 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
+  getValuesForFilterColumn = memoize((records, column) => {
+    let values = [];
+    values = Array.from(new Set(records.map(record => record[column])));
+    values = values.map(x => (typeof x === 'string' ? `"${x}"` : `${x}`));
+
+    return values;
+  });
+
+  filterRecords = memoize((records = [], column, value) => {
+    let parsedValue;
+    if (isNumber(value)) {
+      parsedValue = parseFloat(value);
+    } else if (isBoolean(value)) {
+      parsedValue = toBoolean(value);
+    } else if (value === 'undefined') {
+      parsedValue = undefined;
+    } else if (value === 'null') {
+      parsedValue = null;
+    } else {
+      // We add quotes around strings to display in the dropdown, remove the quotes here so that
+      // we filter on the actual value
+      parsedValue = value.slice(1, -1);
+    }
+    return records.filter(record => record[column] === parsedValue);
+  });
+
+  getDisplayNameForChartType(chartType) {
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        return msg.barChart();
+      case ChartType.HISTOGRAM:
+        return msg.histogram();
+      case ChartType.SCATTER_PLOT:
+        return msg.scatterPlot();
+      case ChartType.CROSS_TAB:
+        return msg.crossTab();
+      default:
+        return chartType;
+    }
+  }
+
+  chartOptionsToString(chartType) {
+    const options = [];
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        break;
+      case ChartType.HISTOGRAM:
+        options.push(
+          `${msg.dataVisualizerValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerBucketSize()}: ${this.state.bucketSize}`
+        );
+        break;
+      case ChartType.SCATTER_PLOT:
+      case ChartType.CROSS_TAB:
+        options.push(
+          `${msg.dataVisualizerXValues()}: ${this.state.selectedColumn1}`
+        );
+        options.push(
+          `${msg.dataVisualizerYValues()}: ${this.state.selectedColumn2}`
+        );
+        break;
+      default:
+    }
+    if (!!this.state.filterColumn && !!this.state.filterValue) {
+      options.push(
+        msg.dataVisualizerFilterDescription({
+          column: this.state.filterColumn,
+          value: this.state.filterValue
+        })
+      );
+    }
+    return options.join(', ');
+  }
+
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
+    let filteredRecords = parsedRecords;
+    if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
+      filteredRecords = this.filterRecords(
+        parsedRecords,
+        this.state.filterColumn,
+        this.state.filterValue
+      );
+    }
     const numericColumns = this.findNumericColumns(
       parsedRecords,
       this.props.tableColumns
     );
 
     let disabledOptions = [];
-    const disableNonNumericColumns = ['Scatter Plot', 'Histogram'].includes(
-      this.state.chartType
-    );
+    const disableNonNumericColumns = [
+      ChartType.SCATTER_PLOT,
+      ChartType.HISTOGRAM
+    ].includes(this.state.chartType);
     if (disableNonNumericColumns) {
       disabledOptions = _.difference(this.props.tableColumns, numericColumns);
     }
-    const isMultiColumnChart = ['Scatter Plot', 'Cross Tab'].includes(
-      this.state.chartType
-    );
+    const isMultiColumnChart = [
+      ChartType.SCATTER_PLOT,
+      ChartType.CROSS_TAB
+    ].includes(this.state.chartType);
 
     return (
-      <span style={{display: 'inline-block'}}>
+      <span style={styles.container}>
         <button
           type="button"
           style={dataStyles.whiteButton}
           onClick={this.handleOpen}
         >
-          Show Viz (Placeholder)
+          {msg.visualizeData()}
         </button>
         <BaseDialog
           isOpen={this.state.isVisualizerOpen}
@@ -92,15 +221,18 @@ class VisualizerModal extends React.Component {
           fullWidth
           fullHeight
         >
-          <div style={{overflow: 'auto', maxHeight: '90%'}}>
-            <h1> Explore {this.props.tableName} </h1>
-            <h2> Overview </h2>
+          <div style={styles.modalBody}>
+            <h2> {msg.exploreDataset({datasetName: this.props.tableName})} </h2>
 
             <div>
-              <div style={rowStyle.container}>
-                <label style={rowStyle.description}>Chart Title</label>
-                <input
+              <div style={styles.input}>
+                <label style={rowStyle.description}>
+                  {msg.dataVisualizerChartTitle()}
+                </label>
+                <DebounceInput
                   style={rowStyle.input}
+                  minLength={1}
+                  debounceTimeout={500}
                   value={this.state.chartTitle}
                   onChange={event =>
                     this.setState({chartTitle: event.target.value})
@@ -110,15 +242,29 @@ class VisualizerModal extends React.Component {
             </div>
 
             <DropdownField
-              displayName="Chart Type"
-              options={['Bar Chart', 'Histogram', 'Scatter Plot', 'Cross Tab']}
+              displayName={msg.dataVisualizerChartType()}
+              options={[
+                ChartType.BAR_CHART,
+                ChartType.HISTOGRAM,
+                ChartType.SCATTER_PLOT,
+                ChartType.CROSS_TAB
+              ]}
+              getDisplayNameForOption={this.getDisplayNameForChartType}
               value={this.state.chartType}
-              onChange={event => this.setState({chartType: event.target.value})}
+              onChange={event =>
+                this.setState({
+                  chartType: parseFloat(event.target.value),
+                  selectedColumn1: '',
+                  selectedColumn2: ''
+                })
+              }
             />
 
-            {this.state.chartType === 'Histogram' && (
-              <div style={rowStyle.container}>
-                <label style={rowStyle.description}>Bucket Size</label>
+            {this.state.chartType === ChartType.HISTOGRAM && (
+              <div style={styles.input}>
+                <label style={rowStyle.description}>
+                  {msg.dataVisualizerBucketSize()}
+                </label>
                 <input
                   style={rowStyle.input}
                   value={this.state.bucketSize}
@@ -130,7 +276,11 @@ class VisualizerModal extends React.Component {
             )}
 
             <DropdownField
-              displayName={isMultiColumnChart ? 'X Values' : 'Values'}
+              displayName={
+                isMultiColumnChart
+                  ? msg.dataVisualizerXValues()
+                  : msg.dataVisualizerValues()
+              }
               options={this.props.tableColumns}
               disabledOptions={disabledOptions}
               value={this.state.selectedColumn1}
@@ -141,7 +291,7 @@ class VisualizerModal extends React.Component {
 
             {isMultiColumnChart && (
               <DropdownField
-                displayName="Y Values"
+                displayName={msg.dataVisualizerYValues()}
                 options={this.props.tableColumns}
                 disabledOptions={disabledOptions}
                 value={this.state.selectedColumn2}
@@ -151,9 +301,9 @@ class VisualizerModal extends React.Component {
               />
             )}
           </div>
-          {this.state.chartType && (
+          {this.canDisplayChart() ? (
             <DataVisualizer
-              records={parsedRecords}
+              records={filteredRecords}
               numericColumns={numericColumns}
               chartType={this.state.chartType}
               bucketSize={this.state.bucketSize}
@@ -161,7 +311,47 @@ class VisualizerModal extends React.Component {
               selectedColumn1={this.state.selectedColumn1}
               selectedColumn2={this.state.selectedColumn2}
             />
+          ) : (
+            <div style={styles.placeholderContainer}>
+              <div style={styles.placeholderText}>
+                {msg.dataVisualizerPlaceholderText()}
+              </div>
+              <img src={this.placeholder} />
+            </div>
           )}
+          <div style={{paddingTop: 20}}>
+            <DropdownField
+              displayName={msg.filter()}
+              options={this.props.tableColumns}
+              disabledOptions={[]}
+              value={this.state.filterColumn}
+              onChange={event =>
+                this.setState({
+                  filterColumn: event.target.value,
+                  filterValue: ''
+                })
+              }
+              inlineLabel
+            />
+            <DropdownField
+              displayName={msg.by()}
+              options={this.getValuesForFilterColumn(
+                parsedRecords,
+                this.state.filterColumn
+              )}
+              disabledOptions={[]}
+              value={this.state.filterValue}
+              onChange={event =>
+                this.setState({filterValue: event.target.value})
+              }
+              inlineLabel
+            />
+          </div>
+          <Snapshot
+            chartType={this.state.chartType}
+            chartTitle={this.state.chartTitle}
+            selectedOptions={this.chartOptionsToString(this.state.chartType)}
+          />
         </BaseDialog>
       </span>
     );
@@ -171,6 +361,6 @@ class VisualizerModal extends React.Component {
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({
   tableColumns: state.data.tableColumns || [],
-  tableRecords: state.data.tableRecords || {},
+  tableRecords: state.data.tableRecords || [],
   tableName: state.data.tableName || ''
 }))(VisualizerModal);

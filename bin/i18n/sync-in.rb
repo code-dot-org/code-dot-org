@@ -16,11 +16,13 @@ require_relative 'redact_restore_utils'
 def sync_in
   HocSyncUtils.sync_in
   localize_level_content
+  localize_project_content
   localize_block_content
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
+  localize_markdown_content
 end
 
 def get_i18n_strings(level)
@@ -35,6 +37,9 @@ def get_i18n_strings(level)
       short_instructions
       long_instructions
       failure_message_overrides
+      teacher_markdown
+      placeholder
+      title
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -75,6 +80,14 @@ def get_i18n_strings(level)
         name = function.at_xpath('./title[@name="NAME"]')
         i18n_strings['function_names'][name.content] = name.content if name
       end
+
+      # Spritelab behaviors
+      behaviors = blocks.xpath("//block[@type=\"behavior_definition\"]")
+      i18n_strings['behavior_names'] = Hash.new unless behaviors.empty?
+      behaviors.each do |behavior|
+        name = behavior.at_xpath('./title[@name="NAME"]')
+        i18n_strings['behavior_names'][name.content] = name.content if name
+      end
     end
   end
 
@@ -85,10 +98,33 @@ def get_i18n_strings(level)
   i18n_strings.delete_if {|_, value| value.blank?}
 end
 
+def localize_project_content
+  puts "Preparing project content"
+  project_content_file = "../#{I18N_SOURCE_DIR}/course_content/projects.json"
+  project_strings = {}
+
+  Dir.chdir(Rails.root) do
+    ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+      next unless value["i18n"]
+      level = Level.find_by_name(value["name"])
+      url = "https://studio.code.org/p/#{key}"
+      project_strings[url] = get_i18n_strings(level)
+      # Block categories are handled differently below and are generally covered by the script levels
+      project_strings[url].delete("block_categories") if project_strings[url].key? "block_categories"
+    end
+    project_strings.delete_if {|_, value| value.blank?}
+
+    File.open(project_content_file, "w") do |file|
+      file.write(JSON.pretty_generate(project_strings))
+    end
+  end
+end
+
 def localize_level_content
   puts "Preparing level content"
 
   block_category_strings = {}
+  level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
 
   # We have to run this specifically from the Rails directory because
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
@@ -99,6 +135,10 @@ def localize_level_content
       script_strings = {}
       script.script_levels.each do |script_level|
         level = script_level.oldest_active_level
+        # Don't localize encrypted levels; the whole point of encryption is to
+        # keep the contents of certain levels secret.
+        next if level.encrypted?
+
         url = I18nScriptUtils.get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
 
@@ -112,23 +152,48 @@ def localize_level_content
       end
       script_strings.delete_if {|_, value| value.blank?}
 
-      script_i18n_directory = "../#{I18N_SOURCE_DIR}/course_content"
-
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
         if ScriptConstants.script_in_category?(:hoc, script.name)
-          File.join(script_i18n_directory, "Hour of Code")
+          File.join(level_content_directory, "Hour of Code")
         elsif script.version_year
-          File.join(script_i18n_directory, script.version_year)
+          File.join(level_content_directory, script.version_year)
         else
-          File.join(script_i18n_directory, "other")
+          File.join(level_content_directory, "other")
         end
+
       FileUtils.mkdir_p script_i18n_directory
-      script_i18n_filename = File.join(script_i18n_directory, "#{script.name}.json")
-      File.open(script_i18n_filename, 'w') do |file|
-        file.write(JSON.pretty_generate(script_strings))
+      script_i18n_name = "#{script.name}.json"
+      script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
+
+      # If a script is updated such that its destination directory changes
+      # after creation, we can end up in a situation in which we have multiple
+      # copies of the script file in the repo, which makes it difficult for the
+      # sync out to know which is the canonical version.
+      #
+      # To prevent that, here we proactively check for existing files in the
+      # filesystem with the same filename as our target script file, but a
+      # different directory. If found, we refuse to create the second such
+      # script file and notify of the attempt, so the issue can be manually
+      # resolved.
+      #
+      # Note we could try here to remove the old version of the file both from
+      # the filesystem and from github, but it would be significantly harder to
+      # also remove it from Crowdin.
+      matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
+        other_filename == script_i18n_filename
       end
+      unless matching_files.empty?
+        # Clean up the file paths, just to make our output a little nicer
+        base = Pathname.new(level_content_directory)
+        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
+        relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
+        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+        next
+      end
+
+      File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
     end
   end
 
@@ -183,6 +248,7 @@ def select_redactable(i18n_strings)
     authored_hints
     long_instructions
     short_instructions
+    teacher_markdown
   )
 
   redactable = i18n_strings.select do |key, _|
@@ -240,6 +306,27 @@ def redact_block_content
   FileUtils.mkdir_p(File.dirname(backup))
   FileUtils.cp(source, backup)
   RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
+end
+
+def localize_markdown_content
+  markdown_files_to_localize = ['international/about.md.partial',
+                                'educate/curriculum/csf-transition-guide.md',
+                                'athome.md.partial',
+                                'athome/csf.md.partial',
+                                'break.md.partial',
+                                'csforgood.md']
+  markdown_files_to_localize.each do |path|
+    original_path = File.join('pegasus/sites.v3/code.org/public', path)
+    # Remove the .partial if it exists
+    source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
+    FileUtils.mkdir_p(File.dirname(source_path))
+    FileUtils.cp(original_path, source_path)
+  end
+  Dir.glob(File.join(I18N_SOURCE_DIR, "markdown/**/*.md")).each do |path|
+    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    I18nScriptUtils.sanitize_header!(header)
+    I18nScriptUtils.write_markdown_with_header(content, header, path)
+  end
 end
 
 sync_in if __FILE__ == $0

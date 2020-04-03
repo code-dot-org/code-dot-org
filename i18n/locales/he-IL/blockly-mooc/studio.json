@@ -34,6 +34,7 @@
   "bird": "ציפור",
   "calloutPutCommandsHereRunStart": "הצב את הפקודות כאן על מנת שירוצו כאשר התוכנית מתחילה",
   "calloutBlocklyPlaceGoUpHere": "הצב בלוק \"למעלה\" כאן כדי לנוע למעלה",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "לחץ על הכותרת \"אירועים\" על מנת לראות בלוקים של פונקציות אירועים.",
   "calloutUseArrowButtons": "לחץ ברציפות על המקשים הללו או על מקשי החצים במקלדת על מנת להפעיל את אירועי התנועה",
   "calloutUseArrowButtonsAutoSteer": "החבאנו את הקוד שכתבתם, אך אתם עדיין יכולים להשתמש במקשי החצים על מנת לזוז",

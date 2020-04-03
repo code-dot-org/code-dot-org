@@ -98,6 +98,7 @@ ky:
           GROUP:
             sprites: баары
           FORMAT:
+            '"diamond"': алмаз
             '"random"': туш келди
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -492,11 +493,10 @@ ky:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': көрсөт
-            '"hide"': катуу
+            '"random"': туш келди
       binary_move:
         options:
           DIR:

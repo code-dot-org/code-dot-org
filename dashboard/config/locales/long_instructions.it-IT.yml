@@ -74,6 +74,9 @@ it-IT:
         figura è troppo piccola. Riesci a farla più grande?  \n\n<b>Suggerimento</b>:
         ogni lato dovrebbe essere 75 pixel più lungo della dimensione attuale."
       2-3 Artist Free Play: 'Tempo di giocare: disegna qualcosa che ti piace.'
+      2-3 Artist Functions 1: "\"Io artista zombie. Me ama disegnare!\" \n\nAiuta
+        lo zombie a disegnare occhiali quadrati.  \n\nIl ponte tra i bicchieri è di
+        soli 25 pixel più breve della larghezza dei quadrati, che è di 100 pixel."
       2-3 Artist Functions 10: Qui ci sono due funzioni, una per disegnare un ingranaggio
         grande e una per disegnare un ingranaggio piccolo. Usale per disegnare l'interno
         di un macchinario!
@@ -313,6 +316,10 @@ it-IT:
       4-5 Artist 7: Questo triangolo rettangolo ha gli angoli di 30, 60 e 90 gradi.
         Il lato obliquo è lungo il doppio del lato verticale, che è alto 100 pixel.
         Completa il disegno.
+      4-5 Artist 8: "La linea di centrocampo in un campo di calcio è _perpendicolare_
+        alle linee laterali. \\\nQuesto campo ha un perimetro di 800 pixel ed è lungo
+        240 pixel. Quanto è lunga la linea di centrocampo?   \n\nDisegna i bordi del
+        campo e la linea di centrocampo."
       4-5 Artist 9: Disegna l'altra metà in modo che il disegno sia simmetrico. I
         triangoli sono equilateri e con il lato di 50 pixel.
       4-5 Artist Assessment 1: Questo è un esercizio di riepilogo -- Usa un ciclo
@@ -369,6 +376,9 @@ it-IT:
       4-5 Bee Conditionals 1: |-
         La nuvola impedisce all'ape di sapere se dietro c'è un fiore oppure no. Verifica se c'è un fiore e solo in questo caso raccogli il nettare. Attenzione, ciò che trovi dietro la nuvola può cambiare di volta in volta!<br>
         <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-7#VIDEO" target="_blank">Video doppiato in italiano</a>
+      4-5 Bee Conditionals 2: "Adesso ci sono più nuvole! \n\nControlla ognuna di
+        esse e verifica se c'è un fiore. Solo in tal caso raccogli il nettare.  \n\nRicordati
+        che le diverse nuvole possono nascondere oggetti diversi!"
       4-5 Bee Conditionals 5: Potrebbe esserci un fiore oppure un favo dietro quelle
         nuvole. Usa un blocco `se-altrimenti` per raccogliere il nettare <i>se</i>
         si tratta di un fiore, <i>altrimenti</i> per produrre il miele (dato che,
@@ -420,13 +430,17 @@ it-IT:
         Se lo fai correttamente, riuscirà a camminare lungo un percorso tortuoso di qualsiasi lunghezza!
       4-5 Maze Conditionals 2: Usa il blocco `ripeti fino a che` per far arrivare
         lo zombie fino al girasole.
+      4-5 Maze Conditionals 3: 'Usa il blocco `se` per decidere quando svoltare. '
       4-5 Maze Conditionals 4: Ok, questo è quasi come l'esercizio precedente, ma
         devi ricordarti come hai usato insieme i blocchi `se c'è strada` e `ripeti
         fino a che`.
+      4-5 Maze Conditionals 5: "_\"Me ... volere ... girasole!\"_  \n\nUsa un blocco
+        `se` per far arrivare lo zombie fino al girasole utilizzando il minor numero
+        possibile di blocchi."
       4-5 Maze Conditionals 6: |-
-        Me ... volere ... girasole!
+        _"Mangiare girasole!_
 
-        Usa un blocco `se c'è strada` per farmi arrivare là utilizzando il minor numero possibile di blocchi.
+        Usa un blocco `se` per far arrivare lo zombie fino al girasole utilizzando il minor numero possibile di blocchi.
       4-5 Maze Conditionals 7: 'Ok, esercitiamoci di nuovo per far pratica: questo
         esercizio non è molto diverso, ma stai attento alle piante carnivore!'
       4-5 Maze Conditionals 8: |-
@@ -458,6 +472,10 @@ it-IT:
         da disegnare un mulino a vento.
       4-5 Nested Loops 6: Riesci a disegnare un esagono inserendo in un ciclo le istruzioni
         per disegnare un triangolo?
+      4-5 Nested Loops 7: "Ripeti 10 volte la figura disegnata dal codice che trovi
+        già pronto. \n\nDi quanti gradi devi ruotare ad ogni ripetizione?"
+      4-5 Nested Loops 8: "Ripeti 6 volte la figura disegnata dal codice che trovi
+        già pronto. \n\nDi quanti gradi devi ruotare ad ogni ripetizione? "
       4-5 Nested Loops 9: Finisci di disegnare i denti del coccodrillo!
       4-5 Nested Loops Assessment 1: Questo è un esercizio di riepilogo -- Usa un
         ciclo annidato per completare il disegno.
@@ -1191,6 +1209,10 @@ it-IT:
         di `sides`(<i>lati</i>) delle figure. Riesci a modificare l''algoritmo affinché
         la dimensione complessiva della figura disegnata rimanga la stessa, indipendentemente
         dal numero dei suoi lati?'
+      Course 4 Bee 1: "L'ape non sa cosa si nasconde dietro la nuvola! \n\nUsa un
+        blocco `se` per verificare se si tratta di un fiore oppure di un favo. \n\nPoi,
+        se c'è un fiore, raccogli **SOLO** una dose di nettare.\n\n<a href=\"https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-2#VIDEO\"
+        target=\"_blank\">Video doppiato in italiano</a>"
       Course 4 Bee 2: Usa il blocco `se-altrimenti` per controllare ogni oggetto e
         verificare se si tratta di un fiore oppure di un favo. <b>Se</b> è un fiore,
         raccogli una dose di nettare ... <b>altrimenti</b>, produci una dose di miele!
@@ -1349,6 +1371,8 @@ it-IT:
         <b>Super Sfida sulle funzioni:</b> Usa le funzioni suggerite per disegnare quattro file di tre esagoni l'una (`draw a line of hexagons` = "disegna una fila di esagoni"). Osserva che le file di numero pari vengono disegnate spostate a destra.<br>
         <b>Nota</b>: `shift down/forward` = "scivola in basso e avanti"; `shift down/backward` = "scivola in basso e indietro".
       Course 4 SCF 1a: "<b>Super Sfida sulle funzioni:</b> Riesci a capire come raccogliere
+        tutto questo nettare con il minor numero possibile di blocchi?"
+      Course 4 SCF 1b: "**Super Sfida sulle funzioni**: Riesci a capire come raccogliere
         tutto questo nettare con il minor numero possibile di blocchi?"
       Course 4 SCF 2: |-
         <b>Super Sfida sulle funzioni:</b> Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br>
@@ -1714,7 +1738,7 @@ it-IT:
 
         Ora sei in grado di creare un gruppo di ballerini in un colpo solo!
 
-        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa...` per scrivere del codice che faccia ballare i paperi tutti assieme.
+        Prova ad usare alcuni blocchi `"tutti i paperi" eseguono la mossa ...` per scrivere del codice che faccia ballare i paperi tutti assieme.
       Dance_Party_11b: |-
         E ora una sfida all’ultima mossa! Quando premi la freccia a sinistra (←) il Gatto fa la "dab". Fai fare una “spaccata” al Robot premendo la freccia a destra (→) e fagli fare un "applauso" quando premi la freccia in giù (↓).
 
@@ -2132,10 +2156,11 @@ it-IT:
         Poi usa la funzione così definita per disegnare 3 quadrati con i lati di 25, 50 e 75 pixel: in ognuno di essi l'angolo in basso a sinistra è a distanza di 100 pixel da quello del precedente.<br>
         <br>
         <b>Nota</b>: riesci a capire come modificare ulteriormente la funzione per risolvere l'esercizio con soli 15 blocchi in totale?
-      NEW Course 4 Artist Params inspire: |-
-        <img src="https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png"
-        width="250px"/><br>
-        Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Se la figura ti ispira, prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di tuo.
+      NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
+        width=\"250px\"/>\n\nOra hai imparato tutto quello che devi sapere per realizzare
+        un disegno come quello mostrato al precedente link! \n\nSe la figura ti ispira,
+        prova a realizzare qualcosa di simile. In caso contrario, crea qualcosa di
+        tuo.\n\nVuoi realizzare la figura che ti abbiamo mostrato? Ecco alcuni suggerimenti:"
       NEW Course 4 Artist Vars 12: Riutilizza adesso l'algoritmo dell'esercizio precedente
         e scrivi il codice per disegnare un pentagono con i lati lunghi 150 pixel.
       NEW Course 4 Artist Vars 2: Inserisci il blocco numerico `???` nei blocchi `imposta
@@ -2182,6 +2207,81 @@ it-IT:
       NEW Course 4 Bee For Loops 8: Questo codice è da completare! Quale deve essere
         il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi
         di nettare?
+      New Minecraft Hero Project: "**Tempo di giocare:** ora tocca a te! Programma
+        l'Agente per farti aiutare ad esplorare questo mondo."
+      OPD-K5 CS Video: |-
+        ## Per cominciare - Perché Fondamenti di informatica?
+
+        Completerai questo corso gratuito in autoapprendimento utilizzando la stessa piattaforma che potrai usare in classe con i tuoi alunni.
+
+        Iniziamo mettendo a fuoco cosa sono i "Fondamenti di informatica" e come sono stati appresi da altri insegnanti e alunni in tutto il mondo. Nel prossimo livello vedremo come interagire con la piattaforma di studio che userai durante tutto il corso.
+
+        > ## Rifletti
+        >
+        > Quali sono le tue prime impressioni sui "Fondamenti di informatica"?
+        >
+        > Se sai l'inglese, [Twitta i tuoi pensieri][0] taggando @teachcode.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
+        > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook][1] o [Instagram][2].
+      OPD-K5 Closing: |-
+        > **Se ti è piaciuto il corso, iscriviti ad un seminario:**
+        >
+        > [Iscriviti ora][0] per continuare a studiare l'informatica e la sua pedagogia. I seminari gratuiti sono un eccellente occasione  per collaborare ed impegnarsi con altri insegnanti appassionati della tua zona.
+      OPD-K5 EventsVid: |-
+        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché proverai alcuni esercizi in qui devi programmare gli eventi.
+
+        > Un evento è una istruzione che dice al computer di "ascoltare" se succede un determinata cosa, e di conseguenza eseguire un'azione. Per esempio, in alcune  pagine web,  passando il mouse sopra un menù a tendina, esso si apre. Il "mouse sopra " è un evento che attiva un'azione.
+      OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
+        che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
+        ti verrà chiesto di scrivere un programma simile!
+      OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni dei piani di
+        sviluppo delle attività tradizionali. Tieni presente sono disponibili tutte
+        le pianificazioni per ogni lezione del corso \"Fondamenti di informatica\"
+        -- sia tradizionali che al computer. Puoi trovare la lista completa delle
+        strutture delle lezioni qui sotto:\n<br/>\n<br/> \n[Pianificazione delle lezioni
+        del corso A][0]<br/> \n[Pianificazione delle lezioni del corso B][1]<br/>\n[Pianificazione
+        delle lezioni del corso C][2]<br/> \n[Pianificazione delle lezioni del corso
+        D][3]<br/> \n[Pianificazione delle lezioni del corso E][4]<br/> \n[Pianificazione
+        delle lezioni del corso F][5]<br/> \n\nSentiti libero di adattare queste lezioni
+        o creare la tua specifica pianificazione della lezione che asseconda le tue
+        preferenze! Il video qui sotto spiega la struttura delle lezioni del corso
+        \"Fondamenti di informatica\" ed aggiunge anche suggerimenti se dovessi decidere
+        di creare una tua lezione."
+      OPD-K5 Problem Solving: |-
+        # Linee guida > Insegnare a risolvere i problemi
+
+        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Il metodo metacognitivo di risoluzione dei problemi implica di pensare sul ragionamento effettuato e di riflettere su come "tu" risolveresti il problema. Guarda il video sottostante per imparare come la "Ricetta per risolvere gli esercizi" di Code.org  può aiutare gli alunni ad affrontare con successo problemi difficili:
+
+        [Questa scheda][0] illustra i vari passi della "ricetta per risolvere gli esercizi".
+
+        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Riflettiamo:
+        >
+        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza?
+        >
+        > [Twitta i tuoi pensieri][1] taggando @teachcode.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Condividi su Twitter</h4></a>
+      OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
+        di ripetizione (cicli) ed introduce il blocco "ripeti ... volte" nei corsi
+        di "Fondamenti di informatica".
+      OPD-K5 Unplugged Video: |-
+        ## Uno sguardo avanti > "Senza computer"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Nell'insegnamento dell'informatica potresti pensare che sia fondamentale basarsi sulla miglior tecnologia disponibile -- computer nuovi, connessione internet veloce e le applicazioni più moderne. Ma in Code.org abbiamo scoperto che alcune delle lezioni di informatica di maggior successo sono in realtà di tipologia tradizionale, con pochissima tecnologia o del tutto prive. In queste lezioni gli studenti imparano i principi fondamentali dell'informatica senza l'uso di computer.
+
+        Ecco perché in tutti i nostri corsi di Fondamenti di informatica si sfruttano attività tradizionali per presentare i principi fondamentali dell'informatica con attività concrete, prima che gli studenti scrivano programmi al computer che sfruttano quegli  stessi concetti. Un esempio potrebbe essere un ballo con movimenti ripetitivi per far comprendere agli alunni come i cicli ripetono le istruzioni all'interno di un programma. In questo modo, quando gli studenti scriveranno programmi con i cicli, l'attività tradizionale avrà creato un'associazione preliminare con un'attività a loro familiare che potranno correlare con questo nuovo concetto.
+
+        Guarda il video sottostante per comprendere i benefici dell'uso delle lezioni tradizionali nell'insegnamento dell'informatica.
+
+        **Mentre percorrerai le lezioni da 4 a 8**, avrai l'occasione di conoscere alcune delle nostre attività tradizionali per ognuno dei concetti chiave trattati in questo corso.
+      OPD-K5 WhatIsCS: Ti sei mai chiesto "Cos'è esattamente l'informatica?" oppure
+        "Perché alcuni programmi informatici sono scritti con delle parole ed altri
+        usando delle immagini?" Guarda questo video, è un'ottima introduzione all'informatica.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
       Overworld Chop Tree_2019: 'Il legno è una risorsa molto importante: serve per
@@ -2394,11 +2494,25 @@ it-IT:
             <title name="XPOS">???</title>
             <title name="YPOS">???</title>
             </block></xml>
+      course3_bee_debugging_challenge1: Guarda come l'ape prende il nettare. Utilizza
+        lo stesso tipo di schema per aiutare l'ape a produrre tutto il miele?
       course3_bee_functions_challenge1: Dovrai cavartela da solo in questa sfida.
         Potrebbe essere più difficile di quanto sembri!
+      course3_bee_functions_challenge2: Dovrai cavartela da solo in questa sfida!
+      course3_bee_functions_challenge3: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      course3_bee_functions_challenge4: Usa ciò che hai imparato per completare questo
+        esercizio!
+      course3_collector_debugging_challenge2: Sei un esperto di cicli annidati? Usa
+        ciò che hai imparato finora per raccogliere tutti i diamanti!
       course3_farmer_until_challenge2: Usa il blocco `se/altrimenti` per seguire questo
         percorso con molte curve in diverse direzioni. Ad ogni angolo, usa il blocco
         `rimuovi 1` all'interno di un ciclo per eliminare il mucchio di terra.
+      course3_maze_debugging_challenge1: _"Devo fare il girotondo?"_
+      course3_maze_debugging_challenge2: _"Se mi fai fare troppe curve, potrebbe girarmi
+        la testa! Aiutami a raggiungere il maialino usando al massimo quattro blocchi
+        `gira a ...`."_
       course3_maze_until_challenge1: Nessun suggerimento, solo una sfida. Fai arrivare
         lo zombie fino al girasole.
       course3_playLab_challenge1: "_Gli **scoiattoli** sono terrorizzati all'idea
@@ -2430,6 +2544,9 @@ it-IT:
       course4_artist_fwp_challenge1: Prova ad eseguire questo programma e ad apportare
         modifiche per vedere cosa succede. Riesci a capire come funziona? (Oppure
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
+      course4_bee_fwp_challenge1: Utilizza un ciclo con contatore in una funzione
+        per raccogliere tutte le pannocchie. Lo stesso ciclo con contatore può avere
+        diversi valori massimi sfruttando il parametro `length` (_lunghezza_).
       course4_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
         solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
@@ -2660,8 +2777,8 @@ it-IT:
       courseA_collector_loops2: |-
         Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: 'Raccogli tutte e tre le perle! Muovi Laurel
-        su ogni pezzo del tesoro e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2018: 'Raccogli tutti e tre i diamanti! Muovi Laura
+        su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -3448,15 +3565,15 @@ it-IT:
       courseC_PlayLab_events_challenge1: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2018: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2019: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_artist_loop1: |-
         Fantastico!
 
@@ -3810,9 +3927,9 @@ it-IT:
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
       courseC_collector_prog2: Fai muovere Laura fino al diamante, quindi usa il blocco
-        <xml><block type="collector_collect"/></xml> per prenderlo.
+        \<<xml><block type="collector_collect"/></xml> per prenderlo.
       courseC_collector_prog2_2018: Fai muovere Laura fino al diamante, quindi usa
-        il blocco <xml><block type="collector_collect"/></xml> per prenderlo.
+        il blocco \<<xml><block type="collector_collect"/></xml> per prenderlo.
       courseC_collector_prog2_2019: Fai muovere Laura fino al diamante, quindi usa
         il blocco <xml><block type="collector_collect"/></xml> per prenderlo.
       courseC_collector_prog3: "_\"L'ordine conta!\"_ \n\nTrovi già nell'area di lavoro
@@ -4129,18 +4246,12 @@ it-IT:
 
         C'è un blocco di troppo che fa andare a sbattere l'uccellino.\
         Buttalo via sganciandolo dai blocchi grigi e trascinandolo nella cassetta degli attrezzi.
-      courseC_maze_programming4: |-
-        _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
-
-        Evita la dinamite (TNT) o ci lascio le penne!
-      courseC_maze_programming4_2018: |-
-        _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
-
-        Evita la dinamite (TNT) o ci lascio le penne!
-      courseC_maze_programming4_2019: |-
-        _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
-
-        Evita la dinamite (TNT) o ci lascio le penne!
+      courseC_maze_programming4: "_\"Fammi fare il percorso per arrivare a quello
+        sciocco maialino.\"_ \n\nEvita la dinamite (TNT) o ci lascio le penne!"
+      courseC_maze_programming4_2018: "_\"Fammi fare il percorso per arrivare a quello
+        sciocco maialino.\"_ \n\nEvita la dinamite (TNT) o ci lascio le penne!"
+      courseC_maze_programming4_2019: "_\"Fammi fare il percorso per arrivare a quello
+        sciocco maialino.\"_ \n\nEvita la dinamite (TNT) o ci lascio le penne!"
       courseC_maze_programming5: |-
         _"Segui questo percorso per farmi arrivare fino al maialino!"_
 
@@ -4571,6 +4682,18 @@ it-IT:
 
         -   Entrambe le forme hanno **lati di 50 pixel**.
         -   Tra ogni coppia di immagini, dovrai saltare in avanti della lunghezza di un lato e girare di 45 gradi.
+      courseD_artist_nestedLoops9_predict1: |-
+        **Sfida**: riesci a realizzare un'immagine come questa?
+
+        -   Entrambe le forme hanno lati di 50 pixel
+      courseD_artist_nestedLoops9_predict1_2018: |-
+        **Sfida**: riesci a realizzare un'immagine come questa?
+
+        -   Entrambe le forme hanno lati di 50 pixel
+      courseD_artist_nestedLoops9_predict1_2019: |-
+        **Sfida**: riesci a realizzare un'immagine come questa?
+
+        -   Entrambe le forme hanno lati di 50 pixel
       courseD_artist_nestedLoopsFP: |-
         Adesso è il tuo turno. Usa le tecniche che hai imparato per realizzare qualcosa che ti piaccia!
 
@@ -5019,6 +5142,8 @@ it-IT:
       courseD_bee_conditionals_challenge2_2019: Raccogli tutto il nettare e fai tutto
         il miele. Puoi raccogliere tutto il nettare da un fiore usando il blocco `mentre
         nettare > 0`.
+      courseD_bee_debugging_challenge1: Guarda come l'ape prende il nettare. Utilizza
+        lo stesso tipo di schema per aiutare l'ape a produrre tutto il miele?
       courseD_bee_debugging_challenge1a: |-
         _"Zzz zzz! Sono già capace a prendere il nettare, ora aiutami a produrre il miele!"_
 
@@ -5097,10 +5222,10 @@ it-IT:
         raggiungere prima che il tuo avversario ne faccia due!"
       courseD_bounce_events1s_2018: "Vai a canestro!     \n\nAttacca un blocco al
         blocco evento `quando si preme sulla freccia verso sinistra` e premi \"Esegui\".\n\nPoi
-        sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina."
+        sposta il giocatore usando la freccia verso sinistra per raggiungere il canestro."
       courseD_bounce_events1s_2019: "Vai a canestro!     \n\nAttacca un blocco al
         blocco evento `quando si preme sulla freccia verso sinistra` e premi \"Esegui\".\n\nPoi
-        sposta il giocatore usando la freccia verso sinistra per raggiungere la bandierina."
+        sposta il giocatore usando la freccia verso sinistra per raggiungere il canestro."
       courseD_bounce_events2s_2018: Ora, attacca un blocco al blocco evento `quando
         si preme sulla freccia verso destra` affinché la mano possa arrivare ad entrambi
         i canestri.
@@ -5563,14 +5688,10 @@ it-IT:
 
         C'è un blocco di troppo che fa andare a sbattere l'uccellino.
         Buttalo via sganciandolo dagli altri blocchi grigi e trascinandolo nella cassetta degli attrezzi.
-      courseD_maze_ramp4: |-
-        _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
-
-        Evita la dinamite (TNT) o ci lascio le penne!
-      courseD_maze_ramp4_2018: |-
-        _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
-
-        Evita la dinamite (TNT) o ci lascio le penne!
+      courseD_maze_ramp4: "_\"Fammi fare il percorso per arrivare a quello sciocco
+        maialino.\"_ \n\nEvita la dinamite (TNT) o ci lascio le penne!"
+      courseD_maze_ramp4_2018: "_\"Fammi fare il percorso per arrivare a quello sciocco
+        maialino.\"_ \n\nEvita la dinamite (TNT) o ci lascio le penne!"
       courseD_maze_ramp4_2019: |-
         _"Fammi fare il percorso per arrivare a quello sciocco maialino."_
 
@@ -5981,14 +6102,20 @@ it-IT:
             <title name="XPOS">???</title>
             <title name="YPOS">???</title>
             </block></xml>
+      courseE_artist_functions_predict1: 'Ecco un esercizio che utilizza una funzione
+        che abbiamo definito. '
+      courseE_artist_functions_predict1_2018: 'Ecco un esercizio che utilizza una
+        funzione che abbiamo definito. '
+      courseE_artist_functions_predict1_2019: 'Ecco un esercizio che utilizza una
+        funzione che abbiamo definito. '
       courseE_artist_ramp8: |-
-        Grande! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
+        Grandioso! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
 
         * * *
 
         ##### Ogni lato del quadrato ha una lunghezza di 200 pixel e sarà necessario ruotare di 90 gradi ad ogni angolo.
       courseE_artist_ramp8_2: |-
-        Grande! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
+        Grandioso! Ora usiamo un blocco `ripeti ... volte` per far fare un quadrato all'Artista! I blocchi dell'artista sono leggermente diversi, ma l'idea è la stessa.
 
         * * *
 
@@ -6060,6 +6187,12 @@ it-IT:
         finora per risolvere questo esercizio con 19 blocchi o meno!"
       courseE_farmer_functions10b: Se metti il codice dell'esercizio precedente in
         una funzione, poi potrai usarla due volte per risolvere questo esercizio.
+      courseE_farmer_functions11_predict: Cerca di capire quale funzione utilizzare
+        e quale eliminare per risolvere questo esercizio.
+      courseE_farmer_functions11_predict_2018: Cerca di capire quale funzione utilizzare
+        e quale eliminare per risolvere questo esercizio.
+      courseE_farmer_functions11_predict_2019: Cerca di capire quale funzione utilizzare
+        e quale eliminare per risolvere questo esercizio.
       courseE_farmer_functions13_2018: |-
         Risolvi questo esercizio in 23 blocchi o meno.
 
@@ -6410,6 +6543,67 @@ it-IT:
         Riesci a ricreare questo disegno usando un solo ciclo?
 
         <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
+      courseF_artist_fwp1: Continuiamo a sfruttare l'ambiente di modifica delle funzioni.
+        Ti ricordi come si correggono gli errori nella funzione `disegna un quadrato`?
+      courseF_artist_fwp2: |-
+        Modifica la funzione in modo che preveda un parametro chiamato `lunghezza`.
+
+        I lati di ogni quadrato sono 25 pixel più grandi del precedente. Il primo quadrato ha i lati di 25 pixel.
+      courseF_artist_fwp2_predict1: |-
+        Modifica la funzione in modo che preveda un parametro chiamato `lunghezza`.
+
+        I lati di ogni quadrato sono 25 pixel più grandi del precedente. Il primo quadrato ha i lati di 25 pixel. Sostituisci i punti interrogativi ("???") con i valori necessari per disegnare correttamente l'immagine.
+      courseF_artist_fwp3: "Ora prova a creare una funzione partendo da zero!  \n\nCrea
+        la funzione `disegna un quadrato` e utilizzala per delineare questi quattro
+        riquadri.\\\nDevi aggiungere un parametro per gestire la `lunghezza` dei lati!\n\n*
+        * *\n\nPartendo dall'alto a destra, le larghezze dei riquadri sono 50, 100,
+        150 e 200."
+      courseF_artist_fwp4: |-
+        Ottimo lavoro! Ora modifica questa funzione aggiungendo un parametro per il numero di lati del poligono.
+
+        I lati di tutte le forme sono lunghi 100 pixel.
+      courseF_artist_fwp5: "Usa la funzione dell'ultimo esercizio per disegnare questa
+        serie di forme.  \n\nI lati del triangolo sono di 21 pixel e quelli delle
+        forme successive sono sempre 7 pixel più lunghi del precedente.\nUsa il blocco
+        matematico per eseguire la moltiplicazione, in modo da far sì che tutto questo
+        accada richiamando la funzione una sola volta.\n\n* * *\n\nIl blocco per eseguire
+        la moltiplicazione ha questo aspetto: <xml><block type=\"math_arithmetic\"
+        inline=\"true\">\n      <title name=\"OP\">MULTIPLY</title>\n    </block></xml>\n(`length`
+        = _lunghezza_, `sides` = _lati_)"
+      courseF_artist_fwp6: |-
+        **Sfida**: modifica la funzione `disegna una spirale` per aggiungere i parametri di cui hai bisogno e disegnare queste figure.
+
+        -   I lati del quadrato passano da 3 pixel a 90 pixel.
+        -   I lati dell'esagono passano da 3 pixel a 100 pixel.
+        -   I lati del triangolo passano da 3 pixel a 95 pixel.
+      courseF_artist_fwp7: |-
+        Completa la funzione `disegna una spirale` in modo che richieda la lunghezza minima al centro della spirale.
+
+        -   Il lato più corto al centro di questa spirale quadrata è di 50 pixel.
+        -   Il lato più lungo all'esterno di questa spirale quadrata è di 200 pixel.
+            (`length` = _lunghezza_, `sides` = _lati_)
+      courseF_artist_fwp8: |-
+        Riesci a capire come realizzare questo disegno utilizzando la funzione che hai appena creato?
+
+        -   I lati della spirale rossa passano da 50 a 200 pixel.
+        -   I lati della spirale blu passano da 25 a 150 pixel.
+        -   I lati della spirale verde passano da 100 a 350 pixel.
+            (`length` = _lunghezza_, `sides` = _lati_, `min`=_minimo_)
+      courseF_artist_fwp9: 'Tempo di giocare: nella cassetta degli attrezzi trovi
+        tutte le funzioni che hai creato e anche qualcuna in più. Prova a cambiare
+        lo spessore della penna per vedere come cambiano i tuoi disegni! Nei suggerimenti
+        trovi alcuni consigli...'
+      courseF_artist_fwp_challenge1: Prova ad eseguire questo programma e ad apportare
+        modifiche per vedere cosa succede. Riesci a capire come funziona? Puoi anche
+        cancellarlo e sostituirlo con qualcosa di totalmente diverso.
+      courseF_artist_fwp_challenge2: |-
+        Wow! Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa.
+
+        _Nota: il codice diventa più semplice se usi le funzioni con parametri._
+
+        <br/>
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png" width="300px"/>
+        <br/>
       courseF_artist_variables10: |-
         Ecco il codice dell'esercizio precedente. Prova a modificare la variabile `length` (_lunghezza_) in altri modi.
 
@@ -6751,6 +6945,56 @@ it-IT:
         _"Questo campo è labirinticamente fantastico!"_
 
         Ora costruisci una tua funzione per aiutare l'ape a percorrere il labirinto girando a sinistra in corrispondenza dei fiori e a destra quando incontra dei favi. Chiaramente, non dimenticare di raccogliere il nettare e fare il miele lungo il percorso!
+      courseF_bee_functions7: |-
+        Per percorrere questo labirinto, ricostruisci la funzione del precedente esercizio.
+
+        Gira a sinistra in corrispondenza dei favi e a destra quando incontri dei fiori.\
+        **Attenzione:** alcune curve non sono segnate!
+      courseF_bee_functions8a: "Sotto questa nuvola, potrebbe esserci un fiore con
+        una quantità sconosciuta di nettare o un favo con una quantità sconosciuta
+        di miele.  \n\nScrivi un programma in grado di gestire entrambe le situazioni."
+      courseF_bee_functionsPre7: |-
+        Ora prova a creare una funzione per percorrere questo labirinto. In che modo è diverso da quello precedente?
+
+        Gira a sinistra in corrispondenza dei favi e a destra quando incontri dei fiori.\
+        **Attenzione:** alcune curve non sono segnate!
+      courseF_bee_functions_challenge1: Crea una nuova funzione per raccogliere tutto
+        il nettare e produrre tutto il miele `mentre c'è strada in avanti`. Usala
+        per completare l'esercizio!
+      courseF_bee_functions_challenge2: Usa ciò che hai imparato per completare questo
+        esercizio!
+      courseF_bee_fwp1: "Controlla sotto le nuvole per vedere se ci sono dei fiori.
+        \ \n\nIn tutta questa lezione, ogni fiore avrà esattamente **una** dose di
+        nettare e ogni favo avrà esattamente **una** dose di miele. "
+      courseF_bee_fwp2: "Ecco un programma che risolve l'ultimo esercizio.\nMettilo
+        in una funzione e richiamala per verificare la presenza di fiori in questa
+        riga di nuvole.  \n\n* * *\n\nTi può sembrare strano ora, ma vedrai che presto
+        sarà molto utile!"
+      courseF_bee_fwp3: "È ora di mettere alla prova la funzione! \n\nVediamo se l'uso
+        della funzione facilita la raccolta di queste tre file di fiori."
+      courseF_bee_fwp4: "_\"Come funzionano le tue funzioni?\"_   \n\nOra dobbiamo
+        fare qualche miglioramento. Clicca su \"modifica\" per aggiungere un parametro
+        `length` (_lunghezza_) alla funzione, in modo da renderla indipendente dalla
+        lunghezza della riga."
+      courseF_bee_fwp5: |-
+        _"Stai andando alla grande!"_
+
+        Ora usiamo questa funzione per raccogliere il nettare.
+      courseF_bee_fwp6: "È possibile rendere un programma più breve ed efficiente
+        combinando le funzioni con altri elementi di programmazione.  \n\n* * *\n\nQuali
+        blocchi puoi usare con la tua funzione per realizzare una soluzione compatta
+        ed elegante per questo esercizio?"
+      courseF_bee_fwp7: "**Sfida:** qui c'è qualcosa di diverso... Modifica la funzione
+        per produrre anche il miele."
+      courseF_bee_fwp_challenge1: Utilizza un ciclo con contatore in una funzione
+        per raccogliere tutte le pannocchie. Lo stesso ciclo con contatore può avere
+        diversi valori massimi sfruttando il parametro `length` (_lunghezza_).
+      courseF_bee_fwp_challenge2: |-
+        _"Vediamo se riesci a risolvere questo test finale! Datti da fare!"_
+
+        Utilizza un ciclo con contatore in una funzione per raccogliere tutte le verdure su una riga. Fai in modo che il ciclo con contare raggiunga valori massimi differenti grazie al parametro `length` (_lunghezza_). Rendi il programma il più breve possibile utilizzando un secondo ciclo con contatore esterno alla funzione.
+
+        Buona fortuna!
       courseF_bee_variables_3_2018: |-
         _"Che giardino fantastico!"_
 
@@ -6770,13 +7014,13 @@ it-IT:
       courseF_playlab_variables1a: "Le variabili possono servire per memorizzare del
         testo che si desidera utilizzare in seguito.  \n\nChiedi a Kiki, la ragazzina
         che gioca a calcio, di urlare \"Goal!\" assegnando quel testo alla variabile
-        `shout` (\"urlo\")."
+        `shout` (_urlo_)."
       courseF_playlab_variables2b: |-
         Può essere molto utile mescolare pezzi di frasi con delle variabili.
 
         Inserisci la variabile `color` nel mezzo di una frase, inserendola nella posizione vuota del blocco `unisci`.
       courseF_playlab_variables3b_josh: 'Aiuta Kiki a chiacchierare con Brian usando
-        la variabile `age` ("età") in tutti i punti del discorso in cui è necessario. '
+        la variabile `age` (_età_) in tutti i punti del discorso in cui è necessario. '
       courseF_playlab_variables4b: "Ora il pirata ha qualche domanda per Brian.\n\nIn
         questo programma si usa un blocco `chiedi`, in modo che tu possa inserire
         le risposte di Brian dopo aver cliccato su \"Esegui\". \n\nInserisci le variabili
@@ -6784,11 +7028,11 @@ it-IT:
       courseF_playlab_variables5c: |-
         Divertiti un po' combinando il blocco `chiedi` con un'istruzione condizionale `se/altrimenti`.
 
-        Il pirata sta per farti una domanda. Trascina una copia della variabile `answer` ("risposta") nella condizione dell'istruzione `se`, in modo da controllare se è stato inserito o meno il colore corretto.
+        Il pirata sta per farti una domanda. Trascina una copia della variabile `answer` (_risposta_) nella condizione dell'istruzione `se`, in modo da controllare se è stato inserito o meno il colore corretto.
       courseF_playlab_variables6c: |-
         Nel resto di questa lezione, userai diversi blocchi `chiedi` e istruzioni condizionali `se/altrimenti`, al fine di creare un gioco che controllerai **tu**!
 
-        Inizia definendo la variabile "codename" ("nome in codice") con una parola segreta che puoi ricordare facilmente. Quindi, usa un blocco `chiedi` per richiedere il nome in codice all'utente. Avrai bisogno di un blocco `se/altrimenti` per capire se il nome in codice inserito corrisponde a quello definito nel programma.
+        Inizia definendo la variabile "codeName" (_nome in codice_) con una parola segreta che puoi ricordare facilmente. Quindi, usa un blocco `chiedi` per richiedere il nome in codice all'utente. Avrai bisogno di un blocco `se/altrimenti` per capire se il nome in codice inserito corrisponde a quello definito nel programma.
       courseF_playlab_variables7b: "È ora di realizzare il tuo progetto!  \n\nCrea
         alcune domande e combina le risposte in una storia tutta tua.\n\nSe ti servono
         delle idee, clicca sull'icona dei suggerimenti."
@@ -6798,7 +7042,7 @@ it-IT:
         Utilizza l'istruzione condizionale `se/altrimenti` in modo che quando si inserisce il tuo nome in codice il gioco vinca sempre, mentre qualsiasi altro utente perda sempre.
       courseF_playlab_variables8c: Usa il blocco `unisci` (nella categoria "Testo"
         della cassetta degli attrezzi) per personalizzare i messaggi di vittoria/sconfitta,
-        facendo in modo che includano le variabili `codename` e `color`.
+        facendo in modo che includano le variabili `codeName` e `color`.
       courseF_playlab_variables_challenge1: Usa questi blocchi per fare in modo che
         i personaggi condividano un gioco di parole ("knock-knock joke"). Modifica
         il contenuto delle variabili `firstName` e `punchLine` per raccontare la tua

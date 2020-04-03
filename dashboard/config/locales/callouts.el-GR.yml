@@ -45,6 +45,8 @@ el-GR:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Νέο μπλοκ*!
         dance_callout_11_b: Νέο μπλοκ*!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Αναζητήστε εδώ τα μπλοκ «όλες τις πάπιες»
       Dance_2019_01:
         dance_callout_01: Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!
       Dance_2019_02:
@@ -72,6 +74,8 @@ el-GR:
       Dance_Party_11:
         dance_callout_11_a: Νέο μπλοκ*!
         dance_callout_11_b: Νέο μπλοκ*!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Αναζητήστε εδώ τα μπλοκ «όλες τις πάπιες»
       Function intro Ryan:
         Function_intro_Ryan_1: Αυτή η μικρή οδηγία "λέει" στον υπολογιστή να εκτελέσει
           το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας.
@@ -133,6 +137,9 @@ el-GR:
       NEW Course 4 Bee For Loops 5:
         actions_category: Η εργαλειοθήκη πήρε νέα μορφή! Τα "Δράσεις" μπλοκ είναι
           εδώ μέσα τώρα.
+      New Frozen Project:
+        snowflake_dropdown: Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις
+          διαφορετικές χιονονιφάδες!
       Overworld Chop Trees:
         craft_callout_preplaced: Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις
       Overworld Chop Trees_2019:
@@ -201,5 +208,3 @@ el-GR:
       frozen square snowflake:
         replace_questions: Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις
           το "???" με έναν αριθμό
-      Dance_Party_11_5:
-        dance_party_11_5_groups: Αναζητήστε εδώ τα μπλοκ «όλες τις πάπιες»

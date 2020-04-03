@@ -508,6 +508,8 @@ vi-VN:
           -   Sử dụng khối `when left arrow pressed` để làm Robot thực hiện một động tác nhảy khi bạn nhấn mũi tên trái.
 
           _Cấp độ này kết thúc sau 8 nhịp._
+      Dance_Party_extras_alternate_2019:
+        alternate: Khối luân phiên động tác nằm trong danh mục "Dancers".
       Function intro Ryan:
         Function_intro_Ryan_b: Nếu bạn sử dụng chính xác các chức năng, sẽ có một
           con đường bạn có thể di chuyển...
@@ -2261,5 +2263,3 @@ vi-VN:
       coursea_maze_ramp1_2019:
         courseC_maze_programming1_b: Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu
           nó chưa đúng, hãy thử một cái khác!
-      Dance_Party_extras_alternate_2019:
-        alternate: Khối thay thế nằm trong danh mục "Vũ công".

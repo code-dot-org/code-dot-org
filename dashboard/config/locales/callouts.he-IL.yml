@@ -106,6 +106,8 @@ he-IL:
       CourseD_Dance_Party_11:
         dance_callout_11_a: בלוק חדש!
         dance_callout_11_b: בלוק חדש!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: חפשו פה בלוקים של "כל הברווזים"
       Dance_2019_01:
         dance_callout_01: בחרו כאן את סוג הרקדן.
       Dance_2019_02:
@@ -133,6 +135,8 @@ he-IL:
       Dance_Party_11:
         dance_callout_11_a: בלוק חדש!
         dance_callout_11_b: בלוק חדש!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: חפשו פה בלוקים של "כל הברווזים"
       Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך
           קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!
@@ -167,6 +171,24 @@ he-IL:
         craft_what_is_iron: כרו את הברזל הזה!
       Underground Iron_2019:
         craft_what_is_iron: כרו את הברזל הזה!
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
+          הקוד. זה יעזור לכם למצוא את הבאג! '
+      courseB_maze_seq1:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
+          הקוד. זה יעזור לכם למצוא את הבאג! '
       courseC_maze_programming3:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.
@@ -208,5 +230,3 @@ he-IL:
           שאלזה תזוז קדימה
       frozen snowflake branch:
         frozen_snowflake_branch: השתמש בבלוק "צור ענף של פתית שלג"
-      Dance_Party_11_5:
-        dance_party_11_5_groups: חפשו פה בלוקים של "כל הברווזים"

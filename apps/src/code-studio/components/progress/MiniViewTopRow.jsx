@@ -64,6 +64,7 @@ export default class MiniViewTopRow extends React.Component {
     return (
       <div style={styles.main}>
         <Button
+          __useDeprecatedTag
           text={i18n.viewUnitOverview()}
           href={`/s/${scriptName}${params}`}
           color={Button.ButtonColor.gray}

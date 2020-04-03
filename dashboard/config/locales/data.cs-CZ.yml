@@ -3,11 +3,11 @@ cs:
   data:
     game:
       name:
-        Unplug1: Úvod do počítačové vědy
+        Unplug1: Úvod do informatiky
         Maze: Bludiště
         Multi: Více voleb
         Unplug2: Aritmetické Myšlení
-        Unplug3: Programování Na Milimetrovém Papíru
+        Unplug3: Programování na čtverečkovaném papíru
         Artist: Umělec
         Unplug4: Algoritmy
         Artist2: Umělec 2
@@ -19,7 +19,7 @@ cs:
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: Relay programování
+        Unplug9: Štafetové programování
         Farmer3: Farmář 3
         Unplug10: Internet
         Artist5: Umělec 5
@@ -46,21 +46,21 @@ cs:
     concept:
       description:
         sequence: Sekvence
-        if: Blok Pokud
+        if: Blok "když"
         if_else: If-else blok
-        loop_times: Blok Opakovat n-krát
-        loop_until: Blok Opakovat Dokud
-        loop_while: Blok Dokud
-        loop_for: blok Čítač
+        loop_times: Blok "opakuj"
+        loop_until: Blok "opakuj dokud"
+        loop_while: Blok "pokud"
+        loop_for: Blok "počítadlo"
         function: Funkce
-        parameters: Funkce s Parametry
+        parameters: Funkce s parametry
     level:
       instructions:
-        maze_2_2: 'Pomůžeš mi chytit zlobivé prase? Poskládej dohromady několik bloků
-          "posunout vpřed" a stiskni tlačítko "Spustit", abys mě tam dostal. '
+        maze_2_2: 'Pomůžeš mi chytit to zlobivé prasátko? Poskládej dohromady několik
+          bloků "posuň se vpřed" a stiskni tlačítko "Spustit", abys mě tam dostal. '
         maze_2_1: To prase mi pije krev. Pomoz mi ho najít!
-        maze_2_2_5: Najdi cestu a veď mě k tomu pošetilému praseti. Vyhni se TNT,
-          nebo bude peří létat!
+        maze_2_2_5: Najdi cestu a přiveď mě k tomu pošetilému prasátku. Vyhni se TNT,
+          nebo bude létat peří!
         maze_2_3: Naveď mě k zelenému zlu! (Pozor na TNT)
         maze_2_4: Zachovej klid a pomoz mi najít to zlé prasátko. Jinak bych se mohl
           rozzlobit!
@@ -68,21 +68,21 @@ cs:
           pouze 2 bloků. Přijdeš na něj?
         maze_2_6: Pokus se mě dostat k zelenému vetřelci za použití třech bloků.
         maze_2_7: Pomoz mi zbavit se toho zlobivého prasátka pomocí co nejmenšího
-          počtu bloků. Zkus použít více než jeden blok "opakuj n-krát".
+          počtu bloků. Zkus použít více než jeden blok "opakuj".
         maze_2_8: 'Když je blok šedý, tak to znamená, že ho nemůžeš smazat. Vyřeš
-          tuto hádanku použitím šedého bloku "opakuj", který opakuje třikrát. Zkus
-          do něj vložit další 3 bloky: posunout vpřed, posunout vpřed, otočit.'
-        maze_2_9: Dobře, zkus nový blok "opakovat do" - bude se opakovat, dokud nechytím
-          to otravné prase.
+          tuto úlohu použitím šedého bloku "opakuj", který opakuje třikrát. Zkus do
+          něj vložit další 3 bloky: "posuň se vpřed", "posuň se vpřed", "otoč se".'
+        maze_2_9: Dobře, zkus nový blok "opakuj dokud" - akce se bude opakovat, dokud
+          nechytím to otravné prasátko.
         maze_2_10: Dobře, ještě jednou pro procvičení - dokážeš vyřešit tento úkol
           za použití pouze 4 bloků?
         maze_2_11: Drahý živý. Já zombie. Já hladový. Muset...se dostat...k té slunečnici...
           Dostaneš mě tam za použití jen 5 bloků?
         maze_2_12: Dobře, toto je podobné, jen trošičku odlišné. Zvládneš to vyřešit
           jen s 5-ti bloky?
-        maze_2_13: 'Použij nový typ bloku "pokud", abych se rozhodl, kdy se otočit.
-          Tip: stačí ti pouze jeden další blok, ale nauč se, jak jsme to nachystali,
-          aby jsi to příště dokázal sám.'
+        maze_2_13: 'Použij nový typ bloku "když", který mi pomůže rozhodnout se, kdy
+          se mám otočit. Tip: stačí přidat pouze jeden blok, ale všimni si, jak jsme
+          tento kód připravili, aby jsi to příště dokázal sám.'
         maze_2_14: Dobře, tohle je stejné jako předchozí hádanka, ale musíš si pamatovat,
           jak jsi použil blok "pokud" a blok "opakovat" dohromady.
         maze_2_15: Já chtít slunečnici! Použij blok "pokud" a dostaň mě tam s co nejmenším
@@ -153,7 +153,7 @@ cs:
         maze_karel_1_4: 'Pomůžeš mi odstranit všechny čtyři hromádky hlíny? Tip: pokud
           to jde, použij blok opakovat.'
         maze_karel_1_5: 'Pomoz mi vyplnit všechny tyto díry pěti lopatami hlíny. Tip:
-          můžeš vložit blok "opakovat" dovnitř bloku "dokud".'
+          blok "opakuj" můžeš vložit dovnitř bloku "pokud".'
         maze_karel_1_6: Odstraň všechny hromádky hlíny použitím co nejmenšího počtu
           bloků. Nová možnost v rozbalovacím menu bloku "dokud" mi řekne, stojím-li
           na hromádce nebo v díře.
@@ -487,7 +487,7 @@ cs:
         farmer_intro: Úvod Farmářka
         flappy_intro: Úvod do Flappy
         loop_times: Blok Opakovat n-krát
-        loop_until: Blok Opakovat Dokud
+        loop_until: Blok "opakuj dokud"
         if: Blok Pokud
         if_else: Blok Pokud/jinak
         if_else_scrat: Blok Pokud/jinak
@@ -498,13 +498,13 @@ cs:
         hoc_wrapup: Shrnutí Hodiny Kódu
         Unplug1: Co je to CS?
         Unplug2: Aritmetické Myšlení
-        Unplug3: Programování Na Milimetrovém Papíru
+        Unplug3: Programování na čtverečkovaném papíru
         Unplug4: Algoritmy
         Unplug5: Funkce
         Unplug6: Podmínky
         Unplug7: Skládání písniček
         Unplug8: Abstrakce
-        Unplug9: Relay programování
+        Unplug9: Štafetové programování
         Unplug10: Internet
         Unplug11: Shrnutí
         C1_happy_maps_unplugged: Šťastné mapy
@@ -536,7 +536,7 @@ cs:
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binární náramky
-        C2_relay_programming: Relay programování
+        C2_relay_programming: Štafetové programování
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Tvé digitální stopy
         C2_digital_footprint_v2: Tvé digitální stopy
@@ -547,7 +547,7 @@ cs:
         C3_bee_conditionals: Včela podmínky
         C3_maze_conditionals: Bludištní podminky
         C3_artist_nested_loops: Vnořené cykly
-        C3_farmer_while: While (zatímco) cykly
+        C3_farmer_while: While (pokud) cykly
         C3_bee_nested_loops: Vnořené cykly
         C3_bee_debugging: Včelí ladění
         C3_bounce: Odraz
@@ -559,7 +559,7 @@ cs:
         C3_functional_suncatchers: Funkční náhrdelníky
         C3_songwriting_with_parameters: Psaní písniček s parametry
         C4_intro: Úvod
-        C4_loops_zombie: Smyčky
+        C4_loops_zombie: Cykly
         C4_bee_conditional: Včela podmínky
         C4_variables_artist: Proměnné - umělec
         C4_variables_playlab: Proměnné - Play Lab
@@ -578,10 +578,14 @@ cs:
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
         CSF_artist_angles: Úhly s Malířem
-        CSF_collector_k1_blocks: 'CS Fundamentals: Sběrač'
-        CSF_collector_repeat_loops: Sběrač opakuje smyčku
-        CSF_collector_text_blocks: 'CS Fundamentals: Sběrač'
+        CSF_collector_k1_blocks: 'Základy informatiky: Sběračka'
+        CSF_collector_repeat_loops: Sběrač opakuje cyklus
+        CSF_collector_text_blocks: 'Základy informatiky: Sběračka'
         CSF_create_functions: Vytváření funkcí
+        CSF_debugging_k1_blocks: Ladění
+        CSF_debugging_text_blocks: Ladění
+        CSF_maze_intro_k1_blocks: Úvod do Code studia
+        CSF_maze_intro_text_blocks: Úvod do Code studia
         CSF_my_robotic_friends: Mí robotičtí přátelé
         CSF_Power_of_Words: Síla slov
         CSF_Super_Digital_Citizen: Super digitální občan
@@ -605,16 +609,20 @@ cs:
           vstup a výstup'
         csd_concept_hardware_software: 'Jak fungují počítače: Hardware a software'
         csd_concept_search: Jak funguje vyhledávání
+        csd_external_waze_data: Proč je tolik uživatelů posedlých bludištěm?
+        csd_weblab_css_1: Úvod do CSS - část 1
+        csd_weblab_css_2: Úvod do CSS - část 2
         csp_applab_functions: Úvod do funkcí
         csp_applab_functions_parameters: Funkce s Parametry
-        csp_applab_loops: Smyčky
+        csp_applab_loops: Cykly
+        csp_cs_is_changing_everything: Informatika mění vše
         starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
         starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
-        starwars_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        starwars_congrats: 'Hvězdné války: Budování Galaxie s kódem - blahopřejeme'
         starwars_blocks_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
         starwars_blocks_events: 'Hvězdné války: Budování Galaxy s kódem - události'
-        starwars_blocks_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        starwars_blocks_congrats: 'Hvězdné války: Budování Galaxie s kódem - blahopřejeme'
         mc_intro: Minecraft - Úvod
         mc_repeat: Minecraft - opakování
         mc_if_statements: Minecraft - if příkazy
@@ -639,18 +647,41 @@ cs:
         mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
-        CSF_loops_AB: Smyčky
+        CSF_skinOverview_Harvester: Zahradnice
+        CSF_harvester_skinOverview_K-1: Zahradnice
+        CSF_scrat_loops_K1: Cykly v Době ledové
+        CSF_scrat_loops_CF: Cykly v Době ledové
+        CSF_loops_AB: Cykly
+        CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
+        hoc_dance_warmup: Dance Party - Na rozehřátí
+        hoc_dance_events: Taneční večírek  - Události
+        hoc_dance_properties: Taneční večírek  - vlastnosti
+        hoc_dance_congrats: Dance Party - Jedeme dál!
+        what_is_cs: Co je informatika?
+        lesson_planning: Plánování hodiny
+        writing_first_program: Psaní svého prvního počítačového programu
         csd_pair_programming: Párové programování
         csd_applab_parameters: Funkce s Parametry
+        CSF_Going_Places_Safely: Mé online sousedství
+        csd_debugging: Ladění
+        csp-pd-welcome: Vítej v rodině!
+        oceans_machine_learning: Strojové učení
+        hoc_dance_congrats_2019: Dance Party 2019 - Jedeme dál!
+        hoc_dance_warmup_2019: Dance Party 2019 - Na rozehřátí
+        hoc_dance_events_2019: Dance Party 2019 - Události
+        hoc_dance_measures_2019: Dance Party 2019 - Takty
+        hoc_dance_properties_2019: Dance Party 2019 - Vlastnosti
+        csd_what_computers_do: Co dělají počítače?
+        csf_my_online_neighborhood_2020: Mé online sousedství
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
         run: Stisknutím tlačítka "Spustit" si vyzkoušíš program
-        watch_again: Klikněte sem, pokud chcete vidět video znova
+        watch_again: Pokud chceš video prohrát znova klikni sem
         gray_block_explanation: Bloky, které jsou šedé, nejde smazat, ani je přesunout
-          nikam jinam. Dokážeš vyřešit hádanku i tak?
-        show_code_explanation: Klikněte sem, pokud chcete vidět kód programu, který
-          tvoříte
+          nikam jinam. Dokážeš úlohu vyřešit i tak?
+        show_code_explanation: Pokud chceš vidět kód programu, který tvoříš, klikni
+          sem
         instructions_repeat_explanation: Instrukce pro každou hádanku jsou zopakované
           tady
         category_explanation: Máte ty stejné bloky, jen byly uspořádány do kategorií
@@ -679,8 +710,8 @@ cs:
         which_equation: Která rovnost dává každé straně tvary kratší s více stranami?
         get_nectar: Používej nový blok "získat nektar".
         actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
-        draw_square_hint: 'Tip: Použij čtvercovou smyčku, právě provedenou v posledním
-          puzzlu.'
+        draw_square_hint: 'Tip: Použij čtvercový cyklus, který jsi právě udělal v
+          poslední úloze.'
         edit_function: Klepnutím sem upravíš svou funkci.
         create_function: Klepnutím sem se otevře vysouvací "Funkce", pak klepni na
           tlačítko "Vytvoř funkci".
@@ -697,7 +728,7 @@ cs:
           kruhu.
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.
-        frozen_snowflake_branch: Použij blok "vytvořit větev vločky"
+        frozen_snowflake_branch: Použij blok "vytvoř rameno vločky"
         frozen_create_square: Přidej více bloků k vytvoření čtverce
         playlab_drag_say: Přetáhni sem blok "say" a zadej "Ahoj"
         playlab_use_twice: Použij tento blok dvakrát a nezapomeň změnit číslo aktéra
@@ -742,10 +773,11 @@ cs:
         craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
         craft_drag_block_callout: Přetáhni blok "moveForward();" a připoj jej pod
           jiný blok
-        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+        craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
+          začít
         craft_inside_repeat: Opakuj akce umístěním bloků zde
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
           to dokončit?
         craft_what_is_iron: Vytěž toto železo!
-        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
-          k posunu dopředu?
+        craft_callout_moveforward: Tento kód kontroluje lávu, umíš přidat povel k
+          posunu dopředu?

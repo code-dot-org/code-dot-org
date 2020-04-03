@@ -52,3 +52,15 @@ mr:
           stages:
             Events:
               name: ईव्हेंट्स
+        coursed-2020:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        express-2020:
+          stages:
+            Dance Party:
+              name: डांस पार्टी
+        code-break:
+          stages:
+            Events:
+              name: ईव्हेंट्स

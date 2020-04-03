@@ -20,7 +20,7 @@ const styles = {
 
 const eligibilitySchoolUnknown = `
 Because your school isn’t listed, we were not able to look up the data on what percent of your
-students are eligible for free/reduced-price lunches. If you participated in the 2018-19 CS
+students are eligible for free/reduced-price lunches. If you participated in the 2019-20 CS
 Discoveries Professional Learning Program and believe you meet the requirements to qualify for a
 subsidy, please contact [teacher@code.org](mailto:teacher@code.org) to continue.
 Otherwise, you are still eligible for a discount!
@@ -72,7 +72,7 @@ export default class DiscountCodeSchoolChoice extends Component {
       .done(data => {
         this.props.onSchoolConfirmed({
           schoolId: this.state.schoolId,
-          fullDiscount: data.full_discount
+          schoolHighNeedsEligible: data.school_high_needs_eligible
         });
         this.setState({
           confirming: false,
@@ -113,6 +113,7 @@ export default class DiscountCodeSchoolChoice extends Component {
         />
         {this.state.schoolId !== '-1' && (
           <Button
+            __useDeprecatedTag
             color={Button.ButtonColor.orange}
             text={confirming ? i18n.confirming() : i18n.confirmSchool()}
             onClick={this.handleClickConfirmSchool}

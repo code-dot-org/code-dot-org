@@ -340,7 +340,45 @@ km:
               name: អនុ​គមន៍
             Variables:
               name: អ​ថេរ
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: លក្ខខណ្ឌ
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ
+        csd3-2020:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+            Text:
+              name: អត្ថ​​បទ
+        coursef-2020:
+          stages:
+            Internet:
+              name: អ៊ីនធឺណិត
+        csd3-virtual:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: អនុ​គមន៍
+        code-break:
+          stages:
+            Events:
+              name: ព្រឹត្តិការណ៍

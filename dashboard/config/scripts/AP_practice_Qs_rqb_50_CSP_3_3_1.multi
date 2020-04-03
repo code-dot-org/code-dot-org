@@ -1,11 +1,8 @@
 name 'AP_practice_Qs_rqb_50_CSP_3_3_1'
 wrong 'Combine multiple files to create a single, compressed file that can be restored to its original form.'
-wrong 'Compress a high resolution photo to a low resolution format such as .jpg
-'
-wrong 'Extract a compressed zip file to its original size
-'
-right 'Enlarge a file in order to increase the resolution in the original, thereby increasing the file size
-'
+wrong 'Compress a high resolution photo to a low resolution format such as .jpg'
+wrong 'Extract a compressed zip file to its original size'
+right 'Enlarge a file in order to increase the resolution in the original, thereby increasing the file size'
 markdown <<MARKDOWN
 Digital data can be compressed in order to reduce file size, and speed of transmission through a network. While some compression techniques are lossy, others preserve the original data in the compressed form. Compression techniques (lossy or lossless) can do the following, EXCEPT:
 MARKDOWN

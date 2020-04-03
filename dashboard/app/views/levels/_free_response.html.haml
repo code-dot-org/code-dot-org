@@ -29,10 +29,12 @@
     );
 
 .free-response{:class => ('left-aligned' if left_align)}
+  -# FND-984 title needs to be localized level property.
   - if level.title.present? && (!in_level_group || is_contained_level)
     %h1= level.title
-  - if level.long_instructions
-    %div= render(inline: level.long_instructions, type: :md)
+  - long_instructions = level.get_property("long_instructions")
+  - if long_instructions
+    %div= render(inline: long_instructions, type: :md)
 
   - if level.allow_user_uploads?
     %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
@@ -46,7 +48,9 @@
       ReactDOM.render(React.createElement(dashboard.Attachments, {showUnderageWarning: !appOptions.is13Plus, readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
 
   - height = level.height || '80'
-  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  -# FND-984 placeholder needs to be localized level property.
+  - placeholder = level.placeholder || I18n.t('free_response.placeholder')
+  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group

@@ -16,7 +16,7 @@ nav: how_to_nav
 
 ### 1. Werben Sie Schulen vor Ort an
 
-Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
+Verbreiten Sie [diese E-Mail]({{ promote/sample_emails }}) und [die Anleitung für Lehrer]({{ urls/how_to_guide }}) oder veröffentlichen Sie [einen kurzen Text]({{ promote/stats_url }}) in einem Newsletter oder einer Pinnwand. <br />
 
 ### 2. Stellen Sie den Schulen einen Beispiel-Lehrplan zur Verfügung
 
@@ -28,7 +28,7 @@ Teile auf [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fh
 
 ### 4. Machen Sie Werbung auf der Webseite Ihres Bezirks
 
-Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code]({{ urls/home }}).
+Lassen Sie Besucher wissen, dass sie an Hour of Code teilnehmen und was dahinter steckt. Verlinken Sie die [Homepage von Hour of Code]({{ urls/home }}).
 
 ### 5. Veranstalte eine Hour of Code in Ihrem Bezirk
 
@@ -38,7 +38,7 @@ Sehen Sie sich den [Veranstaltungsleitfaden]({{ urls/how_to_events }}) für eine
 
 Die Hour of Code ist nur der erste Schritt einer Reise um mehr darüber zu lernen, wie Technologie funktioniert und wie Software Anwendungen geschrieben werden. Um weiter zu reisen:
 
-- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Ermutigen Sie Ihre Schülerinnen und Schüler weiter [online zu lernen](%= resolve_url('https://code. org/learn/beyond') %).
+- Nehmen Sie an einem [eintägigen Workshop](%= resolve_url('https://code.org/professional-development-workshops') %) teil, um Anleitung eines erfahrenen Informatikberaters zu erhalten. (Nur für Lehrer/Veranstalter aus den USA!)
 
 {{ signup_button }}

@@ -66,6 +66,8 @@ uk:
   join_section:
     code:
       placeholder: Код групи (ABCDEF)
+      instructions_short: Введіть ваші 6 букв коду класу
+      submit: Приєднатися
   add_hint_form:
     placeholder: Будь ласка, введіть сюди підказку
     submit: Додати підказку
@@ -166,8 +168,6 @@ uk:
     valid_password: Вірний пароль!
     invalid_password: Пароль має складатися хоча б із %d символів
     mismatch_password: Введені вами паролі не збігаються
-    under_13_consent: Якщо мені менше 13 років, я підтверджую, що у мене є дозвіл
-      моїх батьків або законного опікуна на використання Code.org.
     student_consent: Я підтверджую що у мене є згода моїх батьків і законних опікунів
       на дозвіл використання Code.org.
     agree_us_website: Я згоден використовувати веб-сайт, що знаходиться на території
@@ -361,6 +361,7 @@ uk:
       district_dashboard: Панель області
       label: Привіт %{username}
       stats: Студія коду
+      my_projects: Мої проекти
       settings: Мій профіль
       logout: Вийти
       signin: Увійти
@@ -798,6 +799,8 @@ uk:
     help_support: Допомога та підтримка
     documentation: Документація
     tutorials: Навчальні матеріали
+  free_response:
+    placeholder: Введіть свою відповідь тут
   multi:
     wrong_title: Неправильна відповідь
     wrong_body: Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!
@@ -893,6 +896,8 @@ uk:
       сервісу</a> та <a href="%{privacy_url}" target="_blank">Політикою конфіденційності</a>.
     accept_label_markdown: Я погоджуюсь з [Умовами використання сервісу](%{tos_url})
       та [Політикою конфіденційності](%{privacy_url}).
+    accept_tos: Реєструючись на Code.org, ви погоджуєтесь з нашими [Умовами надання
+      послуг](%{tos_url}) та [Політикою конфіденційності](%{privacy_url}).
     accept: Підтвердити
     print: Друк
     reminder_desc: Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила
@@ -1093,6 +1098,7 @@ uk:
     csp_traversals: Переходи
     csp_libraries: Бібліотеки
     csp_parameters_return_values: Параметри і значення, які повертаються
+    csp_unit1_2020: 'Розділ 1: Цифрова інформація'
     dlp: Відображення підказок
     time4cs_c1: Еверглейдс і його екосистеми
     time4cs_c2: Харчові ланцюги в Еверглейдс
@@ -1252,4 +1258,9 @@ uk:
   cookie_banner:
     accept: Погоджуюся
   gdpr_dialog:
+    message: Дані про моє використання цього веб-сайту можуть направлятися в США,
+      а також зберігатися або оброблятися на території США.
     true: Так
+  page_not_found_title: Сторінка не знайдена
+  page_not_found_header: '404: Сторінка не знайдена'
+  copy: Скопіювати

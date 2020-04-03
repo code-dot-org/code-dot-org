@@ -96,6 +96,14 @@ sr-SP:
         do something: урадити нешто
       NEW Course 4 Play Lab Params 11:
         jump: скок
+      New Artist Project:
+        draw a star: нацртајте звезду
+        draw a circle: нацртај круг
+        draw a triangle: нацртај троугао
+        draw a house: нацртај кућу
+        draw a square: нацртај квадрат
+      New Play Lab Project:
+        jump: скок
       Standalone_Artist_7:
         draw a flower: нацртајте цвет
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ sr-SP:
       courseE_artist_functions7:
         draw a house: нацртај кућу
       courseE_artist_functions7_2018:
-        draw a house: нацртај кућу
-      courseE_artist_functions7_2019:
         draw a house: нацртај кућу
       courseE_artist_functions8:
         do something: урадити нешто

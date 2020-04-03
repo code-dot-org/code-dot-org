@@ -3,7 +3,7 @@ import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
-import LegendSelector from './LegendSelector';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -51,7 +51,6 @@ export default class ScriptEditor extends React.Component {
     professionalLearningCourse: PropTypes.string,
     peerReviewsRequired: PropTypes.number,
     wrapupVideo: PropTypes.string,
-    excludeCsfColumnInLegend: PropTypes.bool,
     projectWidgetVisible: PropTypes.bool,
     projectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -71,7 +70,8 @@ export default class ScriptEditor extends React.Component {
     versionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    isLevelbuilder: PropTypes.bool
+    isLevelbuilder: PropTypes.bool,
+    tts: PropTypes.bool
   };
 
   constructor(props) {
@@ -79,7 +79,8 @@ export default class ScriptEditor extends React.Component {
 
     this.state = {
       hidden: this.props.hidden,
-      pilotExperiment: this.props.pilotExperiment
+      pilotExperiment: this.props.pilotExperiment,
+      curriculumUmbrella: this.props.curriculumUmbrella
     };
   }
 
@@ -93,6 +94,11 @@ export default class ScriptEditor extends React.Component {
     $(this.supportedLocaleSelect)
       .children('option')
       .removeAttr('selected', true);
+  };
+
+  handleUmbrellaSelectChange = event => {
+    const curriculumUmbrella = event.target.value;
+    this.setState({curriculumUmbrella});
   };
 
   presubmit = e => {
@@ -173,7 +179,7 @@ export default class ScriptEditor extends React.Component {
                 name="curriculum_umbrella"
                 style={styles.dropdown}
                 defaultValue={this.props.curriculumUmbrella}
-                ref={select => (this.curriculumUmbrellaSelect = select)}
+                onChange={this.handleUmbrellaSelectChange}
               >
                 <option value="">(None)</option>
                 {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
@@ -187,6 +193,16 @@ export default class ScriptEditor extends React.Component {
                 curriculum_umbrella, specific to that course regardless of
                 version.
               </p>
+              <p>
+                If you select CSF, CSF-specific elements will show in the
+                progress tab of the teacher dashboard. For example, the progress
+                legend will include a separate column for levels completed with
+                too many blocks and there will be information about CSTA
+                Standards.
+              </p>
+              <ProgressLegend
+                excludeCsfColumn={this.state.curriculumUmbrella !== 'CSF'}
+              />
             </label>
             <label>
               Family Name
@@ -319,6 +335,16 @@ export default class ScriptEditor extends React.Component {
             PDF form) that we should provide links to.
           </p>
         </label>
+        <label>
+          Text-to-Speech
+          <input
+            name="tts"
+            type="checkbox"
+            defaultChecked={this.props.tts}
+            style={styles.checkbox}
+          />
+          <p>Check to enable text-to-speech for this course.</p>
+        </label>
         {this.props.isLevelbuilder && (
           <label>
             Editor Experiment. If specified, users with this experiment on the
@@ -368,10 +394,7 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <LegendSelector
-          excludeCsf={this.props.excludeCsfColumnInLegend}
-          inputStyle={styles.checkbox}
-        />
+
         <h3>Project widget options</h3>
         <label>
           Project widget visible

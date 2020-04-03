@@ -154,7 +154,6 @@ da:
     valid_password: "Gyldig adgangskode!"
     invalid_password: "Adgangskoden skal være på mindst 6 tegn"
     mismatch_password: "De to adgangskoder du har indtastet stemmer ikke overens"
-    under_13_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
     student_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
     agree_us_website: "Jeg accepterer at bruge en hjemmeside baseret i USA."
     my_data_to_us: "Data fra min brug af dette websted kan sendes til og gemmes eller behandles i USA."
@@ -284,11 +283,13 @@ da:
     header:
       finished_hoc: "Jeg har afsluttet min Hour of Code"
       sign_in_to_save: 'Log ind for at gemme fremskridt'
+      my_dashboard: "Hjem"
       course_catalog: "Kursuskatalog"
       project_gallery: "Projekter"
       sections: "Sektioner"
       report_bug: "Rapporter fejl"
       teacher_community: "Lærer-fælleskab"
+      professional_learning: "Professional learning"
       educate_overview: "Oversigt for undervisere"
       educate_elementary: "Grundskole"
       educate_middle: "Grundskole (mellemtrin/udskoling)"
@@ -333,7 +334,7 @@ da:
       artist: 'Kunstner'
       bounce: 'Hoppe'
       calc: 'Infinitesimalregning'
-      dance: 'Dansefest'
+      dance: 'Dance Party'
       eval: 'Evaluer'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -526,9 +527,9 @@ da:
       title: 'App Lab'
       audience: 'Alder 13+'
     dance:
-      title: 'Dansefest'
+      title: 'Dance Party'
     dance-2019:
-      title: 'Dansefest'
+      title: 'Dance Party'
     hoc:
       title: 'Klassisk labyrint'
       body: 'Prøv grundlæggende kodning. Millioner har allerede gjort det.'
@@ -590,6 +591,8 @@ da:
     report_bug: "Rapporter fejl"
     support: "Få hjælp"
     support_url: "Support.Code.org"
+  free_response:
+    placeholder: "Skriv dit svar her"
   multi:
     wrong_title: "Forkert svar"
     wrong_body: "Det svar, du har angivet er ikke korrekte.  Prøv venligst igen!"
@@ -637,10 +640,12 @@ da:
     age: Din alder
     header: Opdater konto oplysninger
   terms_interstitial:
+    intro_desc: "Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil _ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio_. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost."
     intro_desc_markdown: "Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil _ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio_. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost."
     tos: "Termer"
     privacy: "Privatlivspolitik"
     accept_label_markdown: Eg godtar [tenestevilkåra](%{tos_url}) og[retningslinjer for personvern](%{privacy_url}).
+    accept_tos: Ved at tilmelde dig Code.org, accepterer du vores [Servicevilkår](%{tos_url}) og [Privatlivspolitik](%{privacy_url}).
     print: "Udskriv"
     reminder_desc_markdown: Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.
   school_info_interstitial:
@@ -726,6 +731,7 @@ da:
     csp_lists: 'Lister'
     csp_loops: 'Løkker'
   hoc_download:
+    minecraft_name: 'Minecraft Hour of Code'
     download_in_Swedish: 'Download på svensk:'
     download_in_Turkish: 'Download på tyrkisk:'
     download_in_Ukrainian: 'Download på ukrainsk:'
@@ -770,6 +776,7 @@ da:
         la: 'Sprog kunst'
       resources:
         bootstrap: 'Bootstrap'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
       robotics:
         kodable: 'Kodable'
@@ -779,8 +786,10 @@ da:
   cookie_banner:
     accept: 'Jeg er enig'
   gdpr_dialog:
+    heading: 'Accepterer du at bruge en hjemmeside baseret i USA?'
     message: 'Data fra din brug af dette websted kan sendes til og gemmes eller behandles i USA.'
     link_intro: 'For nærmere oplysninger se vores'
     privacy_policy: 'Privatlivspolitik'
     logout: 'Log af'
     yes: 'Ja'
+  copy: 'Kopier'

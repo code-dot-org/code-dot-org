@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
+import fishMsg from './locale';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -129,7 +130,8 @@ Fish.prototype.initMLActivities = function() {
     appMode: mode,
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
-    playSound: this.studioApp_.playAudio.bind(this.studioApp_)
+    playSound: this.studioApp_.playAudio.bind(this.studioApp_),
+    i18n: fishMsg
   });
 };
 

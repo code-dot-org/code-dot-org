@@ -109,6 +109,12 @@ el:
               name: Το Ψηφιακό σου Αποτύπωμα
         course3:
           title: Μάθημα 3
+          description: Έτοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν σε
+            θέματα προγραμματισμού που εισήχθησαν σε προηγούμενα μαθήματα και να βρουν
+            ευέλικτες λύσεις σε πιο σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος
+            οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν
+            να μοιραστούν με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως
+            Ε' Δημοτικού.
           description_short: Το Μάθημα 3 είναι συνέχεια του Μαθήματος 2.
           description_audience: Ηλικίες 8+ (μετά το Μάθημα 2)
           stages:
@@ -1575,8 +1581,8 @@ el:
             Dance Party:
               name: Πάρτι Χορού
           title: Πάρτι Χορού
-          description_short: Παίζουν οι Κέιτι Πέρι, Μαντόνα, Τζέι Μπάλβιν, Σία, Κίθ
-            Ούρμπαν, Κιάρα, και 25 ακόμα!
+          description_short: Με τους Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara, και 25 ακόμη!
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε
             με τους φίλους σας.
         frozen-2018-test-b:
@@ -1832,7 +1838,7 @@ el:
               name: Βρόχοι Για
         dance-extras-2019:
           description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς ιδέες για πρότζεκτ.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Συνθήκες
@@ -1842,3 +1848,130 @@ el:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Υποθέσεις με Κάρτες
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Συνθήκες
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Συνθήκες
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Συναρτήσεις με παραμέτρους
+        csd3-2020:
+          description_short: Προγραμματισμός
+          stages:
+            Variables:
+              name: Μεταβλητές
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+            Text:
+              name: κείμενο
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Πηγαίνοντας σε Μέρη με Ασφάλεια
+            'Programming: Happy Maps':
+              name: Χαρούμενοι Χάρτες
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Το Ψηφιακό σου Αποτύπωμα
+            Move It, Move It:
+              name: Μετακίνησέ το, Μετακίνησέ το
+            'Loops: Getting Loopy':
+              name: Επαναλαμβανόμαστε
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Δυαδικά Βραχιόλια
+            'Events: The Big Event':
+              name: Το Μεγάλο Γεγονός
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
+            Relay Programming:
+              name: Προγραμματισμός Ρελέ
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
+            Conditionals with Cards:
+              name: Υποθέσεις με Κάρτες
+            'Unplugged: Binary':
+              name: Δυαδικές Εικόνες
+            Artist Binary:
+              name: Δυαδικοί Καλλιτέχνη
+            Digital Citizenship:
+              name: Ψηφιακή υπηκοότητα
+            Dance Party:
+              name: Πάρτι Χορού
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Σύνθεση τραγουδιού
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Μεταβλητές
+            For Loop Fun:
+              name: Διασκέδαση με το Βρόχο Για
+            Internet:
+              name: Το Διαδίκτυο
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Πάρτι Χορού
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Η μέλισσα της ορθογραφίας
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
+        csp3-virtual:
+          description_short: Προγραμματισμός
+          stages:
+            Creating Functions:
+              name: Δημιουργούμε Συναρτήσεις
+        csd3-virtual:
+          description_short: Προγραμματισμός
+          stages:
+            Variables:
+              name: Μεταβλητές
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Βρόχοι με «Όσο»
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις
+        code-break:
+          stages:
+            Algorithms:
+              name: Αλγόριθμοι
+            Events:
+              name: Συμβάντα

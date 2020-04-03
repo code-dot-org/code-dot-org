@@ -7,7 +7,6 @@
 set -e
 
 function cp_in() {
-  echo "$1 => $2"
   cp $1 $2
 }
 
@@ -53,12 +52,13 @@ for file in $(find $orig_dir -name '*.json'); do
   cp_in $file $loc_dir$relname
 done
 
+### Oceans tutorial
+cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locales/source/blockly-mooc/fish.json
 
 ### Pegasus
 
 orig_dir=pegasus/cache/i18n
 loc_dir=i18n/locales/source/pegasus
 mkdir -p $loc_dir
-
 perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/en-US.yml
 cp_in $orig_dir/en-US.yml $loc_dir/mobile.yml

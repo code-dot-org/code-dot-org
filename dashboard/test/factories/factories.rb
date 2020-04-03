@@ -153,25 +153,7 @@ FactoryGirl.define do
         ops_first_name 'District'
         ops_last_name 'Person'
       end
-      # Creates a teacher optionally enrolled in a workshop,
-      # or marked attended on either all (true) or a specified list of workshop sessions.
-      factory :pd_workshop_participant do
-        transient do
-          workshop nil
-          enrolled true
-          attended false
-        end
-        after(:create) do |teacher, evaluator|
-          raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          if evaluator.attended
-            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
-            attended_sessions.each do |session|
-              create :pd_attendance, session: session, teacher: teacher
-            end
-          end
-        end
-      end
+
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -1055,6 +1037,14 @@ FactoryGirl.define do
       grade_07_offered true
       grade_08_offered true
     end
+
+    # Schools eligible for circuit playground discount codes
+    # are schools where over 50% of students are eligible
+    # for free and reduced meals.
+    trait :is_maker_high_needs_school do
+      frl_eligible_total 51
+      students_total 100
+    end
   end
 
   # Default school to public school. More specific factories below
@@ -1080,6 +1070,12 @@ FactoryGirl.define do
     trait :is_k8_school do
       after(:create) do |school|
         build :school_stats_by_year, :is_k8_school, school: school
+      end
+    end
+
+    trait :is_maker_high_needs_school do
+      after(:create) do |school|
+        create :school_stats_by_year, :is_maker_high_needs_school, school: school
       end
     end
   end
@@ -1114,6 +1110,20 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+  end
+
+  factory :regional_partner_with_mappings, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    group 1
+    mappings do
+      [
+        create(
+          :pd_regional_partner_mapping,
+          zip_code: 98143,
+          state: nil
+        )
+      ]
+    end
   end
 
   factory :regional_partner_with_summer_workshops, parent: :regional_partner do
@@ -1217,10 +1227,40 @@ FactoryGirl.define do
     association :script_level
   end
 
+  factory :teacher_score do
+    association :user_level
+    association :teacher
+  end
+
   factory :validated_user_level do
     time_spent 10
     user_level_id 1
   end
 
   factory :donor_school
+
+  factory :contact_rollups_raw do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:sources) {|n| "dashboard.table_#{n}"}
+    data {{opt_in: 1}}
+    data_updated_at {Time.now}
+  end
+
+  factory :contact_rollups_processed do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'dashboard.email_preferences' => {'opt_in' => 1}}}
+  end
+
+  factory :contact_rollups_pardot_memory do
+    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:pardot_id) {|n| n}
+    pardot_id_updated_at {Time.now - 1.hour}
+    data_synced {{opt_in: 0}}
+    data_synced_at {Time.now}
+  end
 end

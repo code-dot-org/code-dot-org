@@ -4,6 +4,7 @@ nl:
     script:
       category:
         csf_category_name: Basis
+        csp_category_name: CW Principes
         cspexams_category_name: CW Principes Praktische Test
         csp17_category_name: CW Principes
         full_course_category_name: Volledige Cursussen
@@ -349,6 +350,8 @@ nl:
               name: Offline lessen
             Writing computer programs:
               name: Computerprogramma's schrijven
+            new stage:
+              name: nieuw niveau
         netsim:
           title: Internet Simulator
           description: Leer hoe het internet werkt
@@ -732,6 +735,8 @@ nl:
               name: Bee
             Bounce:
               name: Stuiter
+            Farmer:
+              name: Boer
             Flappy:
               name: Flappy
             Jigsaw:
@@ -952,7 +957,7 @@ nl:
             Hour of Code 2015:
               name: Uur van Code 2015
         mc:
-          title: Minecraft Uur Code
+          title: Minecraft programmeer uur
           description: Gebruik blokken code om Steve of Alex mee te nemen op avontuur
             door deze Minecraft-wereld
           description_short: Ontdek een Minecraft-wereld met code
@@ -977,6 +982,10 @@ nl:
               name: 'Calc: Variabelen definiëren'
             'Calc: Evaluation Blocks':
               name: 'Calc: Evaluatie blokken'
+            'Eval: Defining Functions':
+              name: 'Eval: Het definiëren van functies'
+            'Eval: Functions':
+              name: 'Eval: functies'
             'Eval: Strings and Images':
               name: 'Eval: Tekenreeksen en afbeeldingen'
             'Eval: Writing Contracts':
@@ -1076,6 +1085,8 @@ nl:
         CSDU3-Draft:
           description_short: Programmeren
           stages:
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
             Velocity:
@@ -1120,6 +1131,10 @@ nl:
           stages:
             Game Lab:
               name: Game Lab
+        CSDU4-Draft:
+          stages:
+            Design Mode:
+              name: Ontwerpmodus
         MikeTest:
           stages:
             Artist Functions:
@@ -1210,6 +1225,8 @@ nl:
               name: Einde
         grade3:
           stages:
+            " Bee: Conditionals":
+              name: 'Bij: voorwaardelijke instructies'
             'Artist: Nested Loops':
               name: 'Kunstenaar: geneste lussen'
             Bee Debugging:
@@ -1223,6 +1240,8 @@ nl:
           stages:
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
             'Project: Design a Game':
@@ -1286,6 +1305,8 @@ nl:
               name: Speel Lab
         csd2-2017:
           stages:
+            new stage:
+              name: nieuw niveau
             Lists:
               name: Lijsten
         minecraft:
@@ -1341,6 +1362,8 @@ nl:
           stages:
             Digital Citizenship:
               name: Digitaal Burgerschap
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1363,6 +1386,8 @@ nl:
               name: Introductie
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
         classic-hoc-impact-study:
           description_short: Probeer de grondbeginselen van de informatica met veel
             leuke figuren!
@@ -1391,6 +1416,10 @@ nl:
           stages:
             Welcome Back!:
               name: Welkom Terug!
+        csdgraveyard:
+          stages:
+            new stage:
+              name: nieuw niveau
         sciencepd4:
           stages:
             Welcome!:
@@ -1425,6 +1454,14 @@ nl:
           stages:
             Introduction:
               name: Introductie
+        csd5-draft:
+          stages:
+            new stage:
+              name: nieuw niveau
+        applab-2hour:
+          stages:
+            new stage:
+              name: nieuw niveau
         coursed-ramp:
           stages:
             Introduction:
@@ -1455,6 +1492,8 @@ nl:
               name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
             'Project: Design a Game':
@@ -1463,6 +1502,8 @@ nl:
           stages:
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
             'Project: Design a Game':
@@ -1479,6 +1520,8 @@ nl:
               name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
             'Project: Design a Game':
@@ -1487,6 +1530,8 @@ nl:
               name: niets
         coursef-ramp:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
             Introduction:
               name: Introductie
             Ice Age Play Lab:
@@ -1511,10 +1556,19 @@ nl:
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
         coursed-2017:
           stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: Door elkaar te programmeren om tekeningen te maken,
+                zullen de leerlingen beginnen te begrijpen wat programmeren nu eigenlijk
+                is. De klas begint met elkaar instructies geven om vakjes op ruitjespapier
+                in te kleuren, om zo de bestaande tekening na te maken. Als er tijd
+                is, kan de les worden afgesloten met tekeningen die de leerlingen
+                zelf maken.
             Nested Loops:
               name: Genestelde lussen
         coursee-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
             Envelope Variables:
@@ -1523,12 +1577,23 @@ nl:
               name: For Lus fun
             Songwriting with Parameters:
               name: Liedjes schrijven met Parameters
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            'Functions: Songwriting':
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
             Building a Foundation:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
         coursef-2017:
           stages:
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
             Building a Foundation:
               name: Een Basis Bouwen
         express-2017:
@@ -1539,6 +1604,8 @@ nl:
               name: Internet
             Digital Citizenship:
               name: Digitaal Burgerschap
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             Conditionals with Cards:
               name: Statements met Kaarten
             Envelope Variables:
@@ -1561,8 +1628,14 @@ nl:
           stages:
             Thanks:
               name: Bedankt
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: nieuw niveau
         csp3-research-mxghyt:
           stages:
+            new stage:
+              name: nieuw niveau
             The Need For Programming Languages:
               name: De Nood Aan Programmeertalen
             Using Simple Commands:
@@ -1582,6 +1655,8 @@ nl:
               name: Genestelde lussen
             Conditionals:
               name: Voorwaardelijke instructies
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1602,6 +1677,10 @@ nl:
               name: Kunstenaar Binary
             Building a Foundation:
               name: Een Basis Bouwen
+        csp3-a:
+          stages:
+            new stage:
+              name: nieuw niveau
         new-express:
           stages:
             Introduction:
@@ -1616,6 +1695,8 @@ nl:
               name: Een Basis Bouwen
             Conditionals:
               name: Voorwaardelijke instructies
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1624,6 +1705,8 @@ nl:
           stages:
             Building a Foundation:
               name: Een Basis Bouwen
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
             Ice Age Play Lab:
               name: Ijs tijd Speel Lab
             Envelope Variables:
@@ -1632,6 +1715,10 @@ nl:
               name: For Lus fun
             Songwriting with Parameters:
               name: Liedjes schrijven met Parameters
+        hocali:
+          stages:
+            new stage:
+              name: nieuw niveau
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -1644,12 +1731,28 @@ nl:
               name: Functies en Top-Down Designs
             APIs and Function Parameters:
               name: API's en Functieparameters
+        pwc:
+          stages:
+            new stage:
+              name: nieuw niveau
         hero:
           stages:
             Minecraft Hour of Code:
-              name: Minecraft Uur Code
+              name: Minecraft programmeer uur
           description: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit!
             Gebruik code om door Minecraft te reizen.
+        csp-explore-2017:
+          stages:
+            new stage:
+              name: nieuw niveau
+        aws-demo:
+          stages:
+            new stage:
+              name: nieuw niveau
+        colehoc17:
+          stages:
+            new stage:
+              name: nieuw niveau
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1664,10 +1767,14 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
         course-f-2018:
           stages:
             Building a Foundation:
               name: Een Basis Bouwen
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
             Introduction:
               name: Introductie
             Ice Age Play Lab:
@@ -1692,9 +1799,15 @@ nl:
               name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
           description_short: Programmeren
+        textbook:
+          stages:
+            new stage:
+              name: nieuw niveau
         csd3-2018:
           description_short: Programmeren
           stages:
@@ -1704,6 +1817,8 @@ nl:
               name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
         csd2-2018:
@@ -1798,6 +1913,8 @@ nl:
               name: Binaire armbanden
         csd6-2018:
           stages:
+            Functions with Parameters_:
+              name: Functies met Parameters
             Functions with Parameters:
               name: Functies met Parameters
         coursee-2018:
@@ -1808,8 +1925,16 @@ nl:
               name: Een Basis Bouwen
             Introduction:
               name: Introductie
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             'Functions: Songwriting':
               name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
             Internet:
               name: Het Internet
             Crowdsourcing:
@@ -1817,13 +1942,15 @@ nl:
             Conditionals with Cards:
               name: Statements met Kaarten
             Minecraft Hour of Code:
-              name: Minecraft Uur Code
+              name: Minecraft programmeer uur
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
               name: My Robotic Friends
             Building a Foundation:
               name: Een Basis Bouwen
+            'Algorithms: Tangrams':
+              name: 'Algoritmen: Tangrams'
             Introduction:
               name: Introductie
             Ice Age Play Lab:
@@ -1907,10 +2034,12 @@ nl:
               name: Kunstenaar
         dance:
           stages:
+            new stage:
+              name: nieuw niveau
             Dance Party:
               name: Dansfeest
           title: Dansfeest
-          description_short: Met Katy Perry, Madonna, J. Calvin, Sia, Keith Urban,
+          description_short: Met Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
             Ciara en nog 25 anderen!
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
         frozen-2018-test-b:
@@ -1968,6 +2097,8 @@ nl:
               name: Binaire afbeeldingen
             Artist Binary:
               name: Kunstenaar Binary
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             Dance Party:
               name: Dansfeest
         coursee-2019:
@@ -1978,8 +2109,16 @@ nl:
               name: Genestelde lussen
             Conditionals with Cards:
               name: Statements met Kaarten
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
             'Functions: Songwriting':
               name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2010,6 +2149,8 @@ nl:
               name: Dansfeest
         andrea-test:
           stages:
+            new stage:
+              name: nieuw niveau
             'null':
               name: niets
         dance-extras-gallery:
@@ -2051,6 +2192,10 @@ nl:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
+        dani-test-script:
+          stages:
+            new stage:
+              name: nieuw niveau
         csd2-2019:
           stages:
             Lists:
@@ -2064,6 +2209,8 @@ nl:
               name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
         csd6-2019:
@@ -2121,12 +2268,18 @@ nl:
               name: Arrays Verwerken
         csp1-pilot:
           stages:
+            new stage:
+              name: nieuw niveau
             Number Systems:
               name: Systemen voor getalnotatie
             Sending Binary Messages:
               name: Binaire berichten verzenden
             Binary Numbers:
               name: Binaire getallen
+        csd-videos:
+          stages:
+            new stage:
+              name: nieuw niveau
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2135,10 +2288,24 @@ nl:
               name: Statements met Kaarten
             Building a Foundation:
               name: Een Basis Bouwen
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+        csp3-pilot-staging:
+          stages:
+            The Need for Programming Languages:
+              name: De Nood Aan Programmeertalen
+        csp7-pilot-staging:
+          stages:
+            new stage:
+              name: nieuw niveau
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
+        csp5-pilot:
+          stages:
+            new stage:
+              name: nieuw niveau
         csd2-pilot:
           stages:
             Lists:
@@ -2152,14 +2319,34 @@ nl:
               name: Voorwaardelijke instructies
             Velocity:
               name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
             Functions:
               name: Functies
+        maddie-test:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp3-pilot:
+          stages:
+            The Need for Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Debugging:
+              name: Foutopsporing
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nieuw niveau
         csp2-pilot:
           stages:
+            new stage:
+              name: nieuw niveau
             The Need for Addressing:
               name: De Nood aan Adressering
         peru-2019:
           stages:
+            new stage:
+              name: nieuw niveau
             Introduction:
               name: Introductie
             Nested Loops:
@@ -2189,7 +2376,15 @@ nl:
               name: For-lussen
         dance-extras-2019:
           description: Breid de kennis van het eerste uur uit met uitgebreide projectideeën.
-        time4cs-control-unit-1:
+        csp10-pilot:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp4-preview:
+          stages:
+            new stage:
+              name: nieuw niveau
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Voorwaardelijke instructies
@@ -2199,3 +2394,204 @@ nl:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Statements met Kaarten
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Voorwaardelijke instructies
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Voorwaardelijke instructies
+        csp8-pilot:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Functies met Parameters
+        csd3-2020:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+            Text:
+              name: Tekst
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Veilig Reizen
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+            Move It, Move It:
+              name: verplaats het, verplaats het
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
+            Relay Programming:
+              name: Estafette Programmeren
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            'Unplugged: Binary':
+              name: Binaire afbeeldingen
+            Artist Binary:
+              name: Kunstenaar Binary
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            Dance Party:
+              name: Dansfeest
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Internet:
+              name: Het Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spellingswedstrijd
+        csp1-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Binary Numbers:
+              name: Binaire getallen
+        csp2-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            The Need for Addressing:
+              name: De Nood aan Adressering
+        csp3-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            The Need for Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Debugging:
+              name: Foutopsporing
+        csp6-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp8-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp9-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp10-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp3-virtual:
+          description_short: Programmeren
+          stages:
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Using Simple Commands:
+              name: Simpele Commando's Gebruiken
+            Creating Functions:
+              name: Maken van functies
+            Functions and Top-Down Design:
+              name: Functies en Top-Down Designs
+            APIs and Function Parameters:
+              name: API's en Functieparameters
+        csd3-virtual:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        jess-test-script:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Debugging:
+              name: Foutopsporing
+        csp5-virtual:
+          stages:
+            User Input and Strings:
+              name: Gebruikersinvoer en Strings
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        code-break:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Algorithms:
+              name: Algoritmen
+            Events:
+              name: Gebeurtenissen

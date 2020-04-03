@@ -12,12 +12,12 @@
   csedweek_dates: "Del 3 al 9 de diciembre de 2018"
   csedweek_banner_hoc: 'Se acerca la <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora del código</a>. Se convoca a todos los maestros y organizadores, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifica tu Hora del Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de CSEdWeek</a>'
+  csedweek_banner_teachers_text: "¿Eres profesor de informática? Mira otros recursos de CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prueba una</h1><h2>Hora de Código</h2><h3># intentaron</h3>"
   anybody_can_learn: "Cualquiera puede aprender."
   learn_now: "Aprende Ahora"
   petition_message: "Cada alumno de cada escuela debería tener la oportunidad de aprender ciencias de la computación"
   petition_sign_message: 'Si estás de acuerdo, firma con tu nombre.  Unete a # others.'
-  petition_sign_message_support: 'Si usted nos apoya, firme su nombre. Invite a # otros.'
   petition_join_others: 'Únete a # otros'
   name: "Nombre"
   email: "Correo electrónico"
@@ -148,6 +148,7 @@
   thanks_for_submitting: "¡Gracias por enviar!"
   if_you_enjoyed: "¡Si te ha gustado aprender, invita a amigos para que lo intenten también! Queremos que todo el mundo pueda aprender."
   personalize_certificate: "Personaliza tu certificado"
+  print_certificates: "Imprimir certificados"
   share_achievement: "Comparte tu logro"
   beyond_hour_message: "Continúa con <a href='http://studio.code.org'>otros cursos</a> nuestros o consulta más opciones en <a href='/learn/beyond'>Aprender más allá de una Hora</a>."
   leaderboards_for_hoc: "Clasificaciones para la Hora del Código."
@@ -299,6 +300,7 @@
   homepage_action_text_signpetition: "Firma la petición"
   homepage_action_text_wincelebritychat: "Gana un chat con celebridades"
   homepage_signpetition_dropdown: "Firma nuestra petición ▾"
+  homepage_signpetition_dropdown_text: "Acepto"
   homepage_diversity_pledge: "Toma la promesa de diversidad"
   homepage_banner_text_prizes: 'Vuelve la Hora del Código, 7-13 de Diciembre. '
   homepage_banner_link_prizes: 'Únete al mayor evento educativo de la historia.'

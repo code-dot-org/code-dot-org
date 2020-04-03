@@ -49,6 +49,7 @@
  * @property {string} share
  * @property {string} labUserId
  * @property {string} firebaseName
+ * @property {string} firebaseSharedAuthToken
  * @property {string} firebaseAuthToken
  * @property {string} firebaseChannelIdSuffix
  * @property {boolean} isSignedIn
@@ -56,7 +57,7 @@
  * @property {boolean} hasVerticalScrollbars
  * @property {boolean} showExampleTestButtons
  * @property {ReportOptions} report
- * @property {boolean} sendToPhone
+ * @property {boolean} isUS
  * @property {string} send_to_phone_url
  * @property {CopyrightStrings} copyrightStrings
  * @property {string} teacherMarkdown

@@ -34,6 +34,7 @@
   "bird": "",
   "calloutPutCommandsHereRunStart": "Стави овде команде да би се извршиле када програм почне",
   "calloutBlocklyPlaceGoUpHere": "Постави овде блок \"крени горе\" да би ишао на горе",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Кликните на заглавље догађаја да бисте видели блокове функције.",
   "calloutUseArrowButtons": "Притисните ову дугмад или тастере са стрелицама на тастатури да почнете померање",
   "calloutUseArrowButtonsAutoSteer": "Сакрили смо кôд који си написао, али и даље можеш да користиш тастере са стрелицама да би се померао",

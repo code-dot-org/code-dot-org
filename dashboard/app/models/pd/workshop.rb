@@ -22,6 +22,7 @@
 #  on_map              :boolean
 #  funded              :boolean
 #  funding_type        :string(255)
+#  properties          :text(65535)
 #
 # Indexes
 #
@@ -31,8 +32,24 @@
 
 class Pd::Workshop < ActiveRecord::Base
   include Pd::WorkshopConstants
+  include SerializedProperties
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
+  belongs_to :organizer, class_name: 'User'
+  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
+
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  accepts_nested_attributes_for :sessions, allow_destroy: true
+
+  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  belongs_to :regional_partner
+
+  has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
+
+  serialized_attrs %w(
+    fee
+  )
 
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -46,17 +63,6 @@ class Pd::Workshop < ActiveRecord::Base
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
-
-  belongs_to :organizer, class_name: 'User'
-  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
-
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  accepts_nested_attributes_for :sessions, allow_destroy: true
-
-  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  belongs_to :regional_partner
-
-  has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address

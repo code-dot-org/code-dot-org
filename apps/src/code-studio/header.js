@@ -18,6 +18,7 @@ import {
 
 import progress from './progress';
 import {getStore} from '../redux';
+import msg from '@cdo/locale';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -108,7 +109,7 @@ header.build = function(
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
+    $('.header_popup_link_text').text(msg.lessAllCaps());
     $(document).on('click', hideHeaderPopup);
     progress.renderMiniView(
       $('.user-stats-block')[0],
@@ -130,7 +131,7 @@ header.build = function(
     }
     $('.header_popup').hide();
     $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('more'));
+    $('.header_popup_link_text').text(msg.moreAllCaps());
     $(document).off('click', hideHeaderPopup);
     isHeaderPopupVisible = false;
   }

@@ -366,10 +366,15 @@ pl:
           FORMAT:
             '"border"': brzeg
             '"inner"': wewnątrz kwadratu
+            '"diamond"': diament
             '"circle"': koło
             '"grid"': siatka
+            '"top"': górny wiersz
             '"row"': rząd
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
             '"column"': kolumna
+            '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
             '"random"': losowy
@@ -837,7 +842,7 @@ pl:
             '"mid"': średni ton
             '"treble"': wysoki ton
       Dancelab_stopMappingEach:
-        text: "{GROUP} zatrzymuje {PROPERTY} po {RANGE}"
+        text: "{GROUP} zmieniaj co {PROPERTY} takty/taktów pomiędzy {RANGE} a [MOVE2][3]"
         options:
           GROUP:
             sprites: wszystkie
@@ -875,7 +880,7 @@ pl:
             '"ripples_random"': Losowe fale
             '"quads"': Kąty
             '"flowers"': Kwiaty
-            '"popsicles"': Lody
+            '"popsicles"': Lody na patyku
             '"squiggles"': Pokręcone linie
             '"growing_stars"': Powiększające się gwiazdy
             '"emojis"': Emotikony
@@ -920,7 +925,7 @@ pl:
             '"left"': w lewo
             '"down"': do dołu
             '"right"': w prawo
-            '"space"': przestrzeń
+            '"space"': kosmos
             '"enter"': wprowadź
             '"a"': a
             '"b"': b
@@ -1001,6 +1006,9 @@ pl:
         text: kliknął {SPRITE}
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at
+          {LOCATION}"
       gamelab_destroy:
         text: usunąć {THIS}
       gamelab_draggable:
@@ -1018,6 +1026,7 @@ pl:
             '"direction"': kierunku ruchu
             '"tint"': odcień
       gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
         options:
           CHOICE:
             '"this"': tego
@@ -1066,6 +1075,8 @@ pl:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_locationAt:
+        text: 'location x: {X} y: {Y}'
       gamelab_locationMouse:
         text: lokalizacja myszy
       gamelab_locationOf:
@@ -1086,9 +1097,9 @@ pl:
         options:
           DIRECTION:
             '"North"': Północ
-            '"East"': Na wschód
+            '"East"': Wschód
             '"South"': Południe
-            '"West"': Na zachód
+            '"West"': Zachód
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1096,9 +1107,9 @@ pl:
         options:
           DIRECTION:
             '"North"': Północ
-            '"East"': Na wschód
+            '"East"': Wschód
             '"South"': Południe
-            '"West"': Na zachód
+            '"West"': Zachód
       gamelab_printText:
         text: druk {TEXT}
       gamelab_randColor:
@@ -1129,10 +1140,10 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': siatka
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazd
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-            undefined: Żadnego
+            undefined: żaden
       gamelab_setProp:
         text: zestaw {SPRITE} {PROPERTY} do {VAL}
         options:
@@ -1396,6 +1407,8 @@ pl:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie moja etykieta
+      Mikelab_locationAt:
+        text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
@@ -1517,6 +1530,13 @@ pl:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Północ
+            '"East"': Wschód
+            '"South"': Południe
+            '"West"': Zachód
       aalab_prompt:
         text: zadaj pytanie {MESSAGE}
       aalab_scene:
@@ -1528,12 +1548,10 @@ pl:
             '3': '3'
       aalab_setupStory:
         text: historia konfiguracji
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': pokaż
-            '"hide"': ukryj
+            '"random"': losowy
       binary_drawBin:
         text: remis binarny {BIN}
       binary_drawDec:

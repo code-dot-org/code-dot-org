@@ -68,6 +68,7 @@ sq:
   join_section:
     code:
       placeholder: Kodi i Seksionit (ABCDEF)
+      instructions_short: Fut kodin e seksionit me 6 shkronja
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
     submit: Shto udhëzim
@@ -154,8 +155,6 @@ sq:
     valid_password: Fjalëkalimi i vlefshëm!
     invalid_password: Fjalëkalimi duhet të ketë të paktën 6 karaktere
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
-    under_13_consent: Nëse jam nën moshën 13 vjeç, konfirmoj se kam lejen e prindit
-      ose të kujdestarit ligjor për të përdorur shërbimet e Code.org.
     student_consent: Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për
       të përdorur shërbimet e Code.org.
     agree_us_website: Unë pajtohem me përdorimin e një faqe interneti të themeluar
@@ -352,6 +351,7 @@ sq:
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
     email_confirm_wrong_email: "(Email i gabuar?)"
     email_resend_confirm: Ridërgo udhëzimet e konfirmimit
+    new_email_hint: "(Sigurohuni se mund të merrni email-e në këtë adresë email-i.)"
     new_password_hint: "(lëre bosh nëse nuk do ta ndryshosh atë)"
     current_password_hint: "(ne kemi nevojë për fjalëkalimin tënd aktual që të konfirmojmë
       ndryshimet e bëra)"
@@ -628,6 +628,8 @@ sq:
     support: Merr Ndihmë
     support_url: "//support.code.org"
     help_resources: Ndihmë dhe Burime
+  free_response:
+    placeholder: Shkruani përgjigjen tuaj këtu
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
@@ -899,6 +901,8 @@ sq:
     starwars_blocks_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
     starwars_javascript_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
     download_message: Shkarko%{app_name} përdorim offline (136MB)
+    download_in_English: 'Shkarko në Anglisht:'
+    download_in_Spanish: 'Shkarko në Spanjisht:'
     windows: Windows (64-bit)
     mac: Mac OS X
   locked_stage: Përmbajtjet e kësaj faze nuk janë të dukshme për shkak se kjo fazë
@@ -906,6 +910,7 @@ sq:
     koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.
   hidden_stage: Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj
     se cili mësim duhet të jetë.
+  return_unit_overview: Shko në njësinë e rishikimit
   return_course_overview: Shko në njësinë e rishikimit
   pd:
     form_labels:
@@ -933,4 +938,7 @@ sq:
   cookie_banner:
     accept: Pranoj
   gdpr_dialog:
+    message: Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe të ruhen
+      ose përpunohen në Shtetet e Bashkuara.
     true: Po
+  copy: Kopjo

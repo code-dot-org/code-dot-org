@@ -22,11 +22,6 @@
 # part of modules, and modules are not part of courses.
 # Learning Modules correspond to Stages in our regular curriculum hierarchy.
 class Plc::LearningModule < ActiveRecord::Base
-  belongs_to :stage
-  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_unit_id'
-  has_and_belongs_to_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', association_foreign_key: 'plc_task_id'
-  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
-
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,
@@ -35,10 +30,15 @@ class Plc::LearningModule < ActiveRecord::Base
 
   NONREQUIRED_MODULE_TYPES = (MODULE_TYPES - [REQUIRED_MODULE]).freeze
 
+  attr_readonly :plc_course_unit_id
+
+  belongs_to :stage
+  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_unit_id'
+  has_and_belongs_to_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', association_foreign_key: 'plc_task_id'
+  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
+
   validates_presence_of :plc_course_unit_id
   validates_inclusion_of :module_type, in: MODULE_TYPES
-
-  attr_readonly :plc_course_unit_id
 
   scope :required, -> {where(module_type: REQUIRED_MODULE)}
   scope :content, -> {where(module_type: CONTENT_MODULE)}

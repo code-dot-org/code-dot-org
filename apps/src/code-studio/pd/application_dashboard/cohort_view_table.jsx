@@ -10,7 +10,7 @@ import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {StatusColors, ApplicationStatuses} from './constants';
+import {StatusColors, getApplicationStatuses} from './constants';
 import {
   UNMATCHED_PARTNER_VALUE,
   ALL_PARTNERS_VALUE,
@@ -158,7 +158,7 @@ export class CohortViewTable extends React.Component {
         cell: {
           formatters: [
             status =>
-              ApplicationStatuses[this.props.viewType][status] ||
+              getApplicationStatuses(this.props.viewType)[status] ||
               _.upperFirst(status)
           ],
           transforms: [

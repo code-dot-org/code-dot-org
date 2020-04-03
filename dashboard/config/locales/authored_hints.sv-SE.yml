@@ -144,7 +144,7 @@ sv-SE:
       Dance_2019_03:
         validation: "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett
           danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter
-          fyra takter._"
+          sex takter._"
         challenges: "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med
           vänster och höger piltangent."
       Dance_2019_04:
@@ -161,32 +161,53 @@ sv-SE:
           -   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.
 
           _Denna nivå slutar efter 12 åtgärder._
-        challenges: "**Valfri utmaning**-   Ändra bakgrunden när dansarna ändrar danssteg."
+        challenges: "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna
+          ändrar danssteg."
       Dance_2019_06:
-        validation: "**Hur klarar jag den här nivån?**-   Skapa en ledande dansare
-          och en grupp bakgrundsdansare._Den här nivån är slut efter sju takter._"
-        challenges: "**Valfri utmaning**-   Skapa flera grupper med bakgrundsdansare."
-      Dance_2019_07:
-        validation: "**Hur klara jag den här nivån?**-   Ändra storlek på minst en
-          dansare när musiken har börjat._Den här nivån är slut efter sex takter._"
+        validation: |-
+          **Hur klarar jag den här nivån?**
+
+          -   Skapa en ledande dansare och en grupp bakgrundsdansare.
+
+          _Den här nivån är slut efter sju takter._
         challenges: |-
           **Valfri utmaning**
 
-          -   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)
+          -   Skapa flera grupper med bakgrundsdansare.
+      Dance_2019_07:
+        validation: |-
+          **Hur klara jag den här nivån?**
+
+          -   Ändra storlek på minst en dansare när musiken har börjat.
+
+          _Den här nivån är slut efter sex takter._
+        challenges: |-
+          **Valfri utmaning**
+
+          -   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).
       Dance_2019_08:
-        validation: "**Hur klara jag den här nivån?**-   Ändra färgton på minst en
-          dansare._Den här nivån är slut efter sex takter._"
+        validation: |-
+          **Hur klarar jag den här nivån?**
+
+          -   Ändra färgton på minst en dansare.
+
+          _Den här nivån är slut efter sex takter._
         tint_hint: Märkte du att dina dansare inte ändrar färg till exakt den ton
-          du valde? Det beror på att **färgtoner** blandar de färger som du väljer
-          med dansarens färger.
+          du valde? Det beror på att **tints** blandar de färger som du väljer med
+          dansarens färger.
       Dance_2019_09:
-        validation: "**Hur klarar jag den här nivån?**-   Du behöver bara att trycka
-          på ”Klar”-knappen!"
-        repeat_every_ideas: "**Behöver du idéer?**-   Ändra en dansares storlek flera
-          gånger så att den blir större.-   Ändra en dansares rotation flera gånger
-          så att den snurrar runt.-   Ändra en dansares horisontella eller vertikala
-          position flera gånger så att den rör sig över skärmen._Du kan också använda
-          negativa siffror för att skapa motsatt effekt!_"
+        validation: |-
+          **Hur klarar jag den här nivån?**
+
+          -   Du behöver bara att trycka på ”Klar”-knappen!
+        repeat_every_ideas: |-
+          **Behöver du idéer?**
+
+          -   Ändra en dansares storlek flera gånger så att den blir större.
+          -   Ändra en dansares rotation flera gånger så att den snurrar runt.
+          -   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.
+
+          _Du kan också använda negativa siffror för att skapa motsatt effekt!_
         next_previous: '**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket
           för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”,
           ”(Nästa)” eller ”(Föregående)”.    <xml><block type="Dancelab_changeMoveEachLR">    <title
@@ -232,6 +253,10 @@ sv-SE:
           **Valfri utmaning**
 
           Ändra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> händelserna.
+      Dance_Party_05:
+        validation: "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla
+          genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar
+          efter 12 takter._"
       Dance_Party_06:
         validation: |-
           **Hur ska man ta sig förbi denna nivå?**
@@ -290,6 +315,8 @@ sv-SE:
           -   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.
 
           _Denna nivå slutar efter 8 åtgärder._
+      Dance_Party_extras_alternate_2019:
+        alternate: Alternate blocket finns i "Dansare" kategorin.
       Function intro Ryan:
         Function_intro_Ryan_a: Du kan kalla på en funktion flera gånger i ditt program!  Kalla
           på den två gånger för att lösa det här pusslet.
@@ -434,9 +461,3 @@ sv-SE:
         courseE_artist_functions1_a: Rutorna varje har 100 pixel sidor, det betyder
           att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra
           torget.
-      Dance_Party_05:
-        validation: "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla
-          genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar
-          efter 12 takter._"
-      Dance_Party_extras_alternate_2019:
-        alternate: Det alternativa blocket är i kategorin "Dansare".

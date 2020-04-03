@@ -1,8 +1,8 @@
 ---
-title: Comité de prevención de la Hora del Código y la Semana por la Educación de las Ciencias de la Computación
+title: Comité asesor de la Hora del Código y la Semana por la Educación en Ciencias de la Computación
 ---
 
-# Comité de prevención de la Hora del Código y la Semana por la Educación de las Ciencias de la Computación
+# Comité asesor de la Hora del Código y la Semana por la Educación en Ciencias de la Computación
 
 {{ advisory-committee/about_headshots }}
 

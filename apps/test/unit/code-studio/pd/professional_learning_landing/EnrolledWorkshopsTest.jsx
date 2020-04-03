@@ -22,7 +22,9 @@ describe('EnrolledWorkshops', () => {
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
       enrollment_code: 'code1',
-      state: 'Not Started'
+      state: 'Not Started',
+      user_id: 123,
+      attended: false
     },
     {
       id: 2,
@@ -39,7 +41,9 @@ describe('EnrolledWorkshops', () => {
       facilitators: [],
       organizer: {name: 'organizer_name', email: 'organizer_email'},
       enrollment_code: 'code2',
-      state: 'In Progress'
+      state: 'In Progress',
+      user_id: 123,
+      attended: false
     },
     {
       id: 3,
@@ -56,7 +60,28 @@ describe('EnrolledWorkshops', () => {
       facilitators: [],
       organizer: {name: null, email: null},
       enrollment_code: 'code3',
-      state: 'Ended'
+      state: 'Ended',
+      user_id: 123,
+      attended: true
+    },
+    {
+      id: 4,
+      sessions: [],
+      location_name: 'My house',
+      location_address: '123 Fake Street',
+      on_map: false,
+      funded: false,
+      workshop_type: 'workshopType',
+      course: 'course',
+      subject: 'subject',
+      enrolled_teacher_count: 10,
+      capacity: 15,
+      facilitators: [],
+      organizer: {name: null, email: null},
+      enrollment_code: 'code4',
+      state: 'Ended',
+      user_id: 123,
+      attended: false
     }
   ];
 
@@ -73,9 +98,9 @@ describe('EnrolledWorkshops', () => {
       <EnrolledWorkshopsTable workshops={workshops} />
     );
 
-    // We expect there to be a table with 3 rows in the body, two of which have two buttons
-    expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(3);
-    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(5);
+    // We expect there to be a table with 4 rows in the body, three of which have two buttons
+    expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(4);
+    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(7);
     expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
     expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
       undefined
@@ -92,15 +117,15 @@ describe('EnrolledWorkshops', () => {
     );
   });
 
-  it('Clicking "Print Certificate" opens the certificate in a new tab', function() {
+  it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function() {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
     );
 
     // Click the "Print Certificate" button
     enrolledWorkshopsTable
-      .find('tr')
-      .last()
+      .find('tbody tr')
+      .at(2)
       .find('Button')
       .first()
       .simulate('click');
@@ -111,5 +136,20 @@ describe('EnrolledWorkshops', () => {
         `/pd/generate_workshop_certificate/${workshops[2].enrollment_code}`
       )
     );
+  });
+
+  it('"Print Certificate" button is disabled if user did not attend workshop', function() {
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable workshops={workshops} />
+    );
+
+    // Get disabled "Print Certificate" React Button component
+    const printCertificateButton = enrolledWorkshopsTable
+      .find('tbody tr')
+      .at(3)
+      .find('Button')
+      .first();
+
+    expect(printCertificateButton.prop('disabled')).to.be.true;
   });
 });

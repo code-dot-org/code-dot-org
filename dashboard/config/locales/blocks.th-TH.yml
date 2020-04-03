@@ -359,10 +359,15 @@ th:
           FORMAT:
             '"border"': เส้นขอบ
             '"inner"': แถวจตุรัส
+            '"diamond"': เพชร
             '"circle"': วงกลม
             '"grid"': ตาข่าย
+            '"top"': แถวบนสุด
             '"row"': แถว
+            '"bottom"': แถวล่างสุด
+            '"left"': คอลัมน์ซ้าย
             '"column"': คอลัมน์
+            '"right"': คอลัมน์ขวา
             '"x"': กากบาท
             '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
@@ -499,8 +504,8 @@ th:
             '"diamonds"': เพชร
             '"disco_ball"': บอลดิสโก้
             '"fireworks"': พลุ
-            '"swirl"': มนต์สะกด
-            '"kaleidoscope"': ภาพลานตา
+            '"swirl"': ฮิปโน
+            '"kaleidoscope"': คาไลโดสโคป
             '"lasers"': ฟลอร์เต้นรำเลเซอร์
             '"splatter"': สาดสี
             '"rainbow"': สายรุ้ง
@@ -513,7 +518,7 @@ th:
             '"stars"': ดาว
           PALETTE:
             '"rave"': ขาวดำ
-            '"cool"': น้ำเงิน
+            '"cool"': คลู
             '"electronic"': ไฟฟ้า
             '"iceCream"': ไอศกรีม
             '"default"': อ่อน
@@ -522,7 +527,9 @@ th:
             '"vintage"': วินเทจ
             '"warm"': แดง
       Dancelab_setBackgroundEffectWithPalette:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {PALETTE} {EFFECT}
+        text: |-
+          "กำหนดแบ็กกราวนด์เอฟเฟกต์
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': ไม่มี
@@ -535,8 +542,8 @@ th:
             '"fireworks"': พลุ
             '"flowers"': ดอกไม้
             '"growing_stars"': ดาวเปล่งแสง
-            '"swirl"': มนต์สะกด
-            '"kaleidoscope"': ภาพลานตา
+            '"swirl"': ฮิปโน
+            '"kaleidoscope"': คาไลโดสโคป
             '"lasers"': ฟลอร์เต้นรำเลเซอร์
             '"splatter"': สาดสี
             '"rainbow"': สายรุ้ง
@@ -553,7 +560,7 @@ th:
             '"music_wave"': คลื่น
           PALETTE:
             '"rave"': ขาวดำ
-            '"cool"': น้ำเงิน
+            '"cool"': คลู
             '"electronic"': ไฟฟ้า
             '"iceCream"': ไอศกรีม
             '"default"': อ่อน
@@ -599,15 +606,15 @@ th:
           EFFECT:
             '"none"': ไม่มี
             '"bubbles"': ฟองสบู่
-            '"confetti"': กระดาษสี
+            '"confetti"': คอนเฟตติ
             '"hearts_red"': หัวใจ
-            '"music_notes"': โน๊ตดนตรี
+            '"music_notes"': โน้ตเพลง
             '"pineapples"': สับปะรด
             '"pizzas"': พิซซ่า
             '"smiling_poop"': อุนจิ
             '"rain"': ฝน
             '"floating_rainbows"': สายรุ้ง
-            '"smile_face"': หน้ายิ้ม
+            '"smile_face"': ยิ้ม
             '"spotlight"': สปอตไลท์
             '"color_lights"': ไฟบนเวที
             '"raining_tacos"': ทาโก้
@@ -619,17 +626,17 @@ th:
             '"rand"': "(สุ่ม)"
             '"bubbles"': ฟองสบู่
             '"hearts_colorful"': หัวใจหลากสี
-            '"confetti"': กระดาษสี
+            '"confetti"': คอนเฟตติ
             '"emojis"': อิโมจิ
             '"hearts_red"': หัวใจ
-            '"music_notes"': โน๊ตดนตรี
+            '"music_notes"': โน้ตเพลง
             '"paint_drip"': สีจุ่ม
             '"pineapples"': สับปะรด
             '"pizzas"': พิซซ่า
             '"smiling_poop"': อุนจิ
             '"rain"': ฝน
             '"floating_rainbows"': สายรุ้ง
-            '"smile_face"': หน้ายิ้ม
+            '"smile_face"': ยิ้ม
             '"spotlight"': สปอตไลท์
             '"color_lights"': ไฟบนเวที
             '"exploding_stars"': ดาวกระจาย
@@ -893,6 +900,7 @@ th:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -912,7 +920,7 @@ th:
             '"left"': ซ้าย
             '"down"': เป็นตำแหน่ง
             '"right"': ขวา
-            '"space"': ช่องว่าง
+            '"space"': พื้นที่
             '"enter"': ป้อน
             '"a"': a
             '"b"': b
@@ -938,6 +946,7 @@ th:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1051,6 +1060,7 @@ th:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'สถานที่ x: {X} Y: {Y}'
@@ -1541,6 +1551,14 @@ th:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: ย้าย {SPRITE} {DISTANCE} พิก เซล {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': ทิศเหนือ
+            '"East"': ตะวันออก
+            '"South"': ทางใต้
+            '"West"': เวสต์
       aalab_prompt:
         text: ถามคำถาม {MESSAGE}
       aalab_scene:
@@ -1552,12 +1570,10 @@ th:
             '3': '3'
       aalab_setupStory:
         text: เรื่องราวการติดตั้ง
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': แสดง
-            '"hide"': ซ่อน
+            '"random"': สุ่ม
       binary_drawBin:
         text: วาดเลขฐานสอง {BIN}
       binary_drawBinScreen:

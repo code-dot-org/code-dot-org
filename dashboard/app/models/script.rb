@@ -136,7 +136,6 @@ class Script < ActiveRecord::Base
     student_detail_progress_view
     project_widget_visible
     project_widget_types
-    exclude_csf_column_in_legend
     teacher_resources
     stage_extras_available
     has_verified_resources
@@ -150,6 +149,7 @@ class Script < ActiveRecord::Base
     editor_experiment
     project_sharing
     curriculum_umbrella
+    tts
   )
 
   def self.twenty_hour_script
@@ -210,6 +210,10 @@ class Script < ActiveRecord::Base
 
   def self.stage_extras_script_ids
     @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
+  end
+
+  def self.maker_unit_scripts
+    visible_scripts.select {|s| s.family_name == 'csd6'}
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -417,7 +421,7 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name, version_year: nil, with_associated_models: true)
+  def self.get_without_cache(id_or_name, with_associated_models: true)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -434,28 +438,22 @@ class Script < ActiveRecord::Base
   end
 
   # Returns the script with the specified id, or a script with the specified
-  # name, or a redirect to the latest version of the script within the specified
-  # family. Also populates the script cache so that future responses will be cached.
+  # name. Also populates the script cache so that future responses will be cached.
   # For example:
   #   get_from_cache('11') --> script_cache['11'] = <Script id=11, name=...>
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
-  #   get_from_cache('csp1') --> script_cache['csp1'] = <Script redirect_to="csp1-2018">
-  #   get_from_cache('csp1', version_year: '2017') --> script_cache['csp1/2017'] = <Script redirect_to="csp1-2017">
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
-  # @param version_year [String] If specified, when looking for a script to redirect
-  #   to within a script family, redirect to this version rather than the latest.
-  def self.get_from_cache(id_or_name, version_year: nil)
+  def self.get_from_cache(id_or_name)
     if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
       raise "Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: #{id_or_name}"
     end
 
-    return get_without_cache(id_or_name, version_year: version_year, with_associated_models: false) unless should_cache?
-    cache_key_suffix = version_year ? "/#{version_year}" : ''
-    cache_key = "#{id_or_name}#{cache_key_suffix}"
+    return get_without_cache(id_or_name, with_associated_models: false) unless should_cache?
+    cache_key = id_or_name.to_s
     script_cache.fetch(cache_key) do
       # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
+      script_cache[cache_key] = get_without_cache(id_or_name)
     end
   end
 
@@ -506,18 +504,6 @@ class Script < ActiveRecord::Base
     end
 
     script_name = latest_version&.name
-    script_name ? Script.new(redirect_to: script_name) : nil
-  end
-
-  # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family, or to a specific
-  # version_year if one is specified.
-  # @param family_name [String] The name of the script family to search in.
-  # @param version_year [String] Version year to return. Optional.
-  # @return [Script|nil] A dummy script object, not persisted to the database,
-  #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
@@ -581,9 +567,8 @@ class Script < ActiveRecord::Base
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
-    script_versions = Script.
-      where(family_name: family_name).
-      order("properties -> '$.version_year' DESC")
+    script_versions = Script.get_family_from_cache(family_name).
+      sort_by(&:version_year).reverse
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
@@ -686,6 +671,29 @@ class Script < ActiveRecord::Base
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
+  def self.scripts_with_standards
+    Script.
+      where("properties -> '$.curriculum_umbrella' = 'CSF'").
+      where("properties -> '$.version_year' >= '2019'").
+      map {|script| [script.localized_title, script.name]}
+  end
+
+  def has_standards_associations?
+    curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
+  end
+
+  def standards
+    standards = stages.map(&:standards).flatten.uniq
+    standards_with_stages = []
+    standards.each do |standard|
+      standard_summary = standard.summarize
+      stages_by_standard = stages & standard.stages
+      standard_summary[:lesson_ids] = stages_by_standard.pluck(:id)
+      standards_with_stages << standard_summary
+    end
+    standards_with_stages
+  end
+
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -776,59 +784,8 @@ class Script < ActiveRecord::Base
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
-  private def csf_tts_level?
-    k5_course?
-  end
-
-  private def csd_tts_level?
-    [
-      Script::CSD2_NAME,
-      Script::CSD3_NAME,
-      Script::CSD4_NAME,
-      Script::CSD6_NAME,
-      Script::CSD2_2018_NAME,
-      Script::CSD3_2018_NAME,
-      Script::CSD4_2018_NAME,
-      Script::CSD6_2018_NAME,
-      Script::CSD2_2019_NAME,
-      Script::CSD3_2019_NAME,
-      Script::CSD4_2019_NAME,
-      Script::CSD6_2019_NAME,
-      Script::CSD1_PILOT_NAME,
-      Script::CSD2_PILOT_NAME,
-      Script::CSD3_PILOT_NAME
-    ].include?(name)
-  end
-
-  private def csp_tts_level?
-    [
-      Script::CSP17_UNIT3_NAME,
-      Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME,
-      Script::CSP3_2018_NAME,
-      Script::CSP5_2018_NAME,
-      Script::CSP_POSTAP_2018_NAME,
-      Script::CSP3_2019_NAME,
-      Script::CSP5_2019_NAME,
-      Script::CSP_POSTAP_2019_NAME
-    ].include?(name)
-  end
-
-  private def hoc_tts_level?
-    [
-      Script::APPLAB_INTRO,
-      Script::DANCE_PARTY_NAME,
-      Script::DANCE_PARTY_EXTRAS_NAME,
-      Script::DANCE_PARTY_2019_NAME,
-      Script::DANCE_PARTY_EXTRAS_2019_NAME,
-      Script::ARTIST_NAME,
-      Script::SPORTS_NAME,
-      Script::BASKETBALL_NAME
-    ].include?(name)
-  end
-
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
+    tts?
   end
 
   # Generates TTS files for each level in a script.
@@ -1103,6 +1060,7 @@ class Script < ActiveRecord::Base
 
       raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
+      stage.visible_after = raw_stage[:visible_after]
       stage.save! if stage.changed?
     end
 
@@ -1208,7 +1166,9 @@ class Script < ActiveRecord::Base
           },
           script_data[:stages],
         )
-        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        if Rails.application.config.levelbuilder_mode
+          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        end
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1216,9 +1176,11 @@ class Script < ActiveRecord::Base
     end
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
-      # write script to file
-      filename = "config/scripts/#{script_params[:name]}.script"
-      ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      if Rails.application.config.levelbuilder_mode
+        # write script to file
+        filename = "config/scripts/#{script_params[:name]}.script"
+        ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1348,12 +1310,12 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
+      csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
       teacher_resources: teacher_resources,
       stage_extras_available: stage_extras_available,
       has_verified_resources: has_verified_resources?,
@@ -1373,10 +1335,14 @@ class Script < ActiveRecord::Base
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
-      assigned_section_id: assigned_section_id
+      assigned_section_id: assigned_section_id,
+      hasStandards: has_standards_associations?,
+      tts: tts?,
     }
 
-    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
+    # Filter out stages that have a visible_after date in the future
+    filtered_stages = stages.select {|stage| stage.published?(user)}
+    summary[:stages] = filtered_stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1478,6 +1444,8 @@ class Script < ActiveRecord::Base
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@script_cache = nil
+    @@script_family_cache = nil
+    @@level_cache = nil
     Rails.cache.delete SCRIPT_CACHE_KEY
   end
 
@@ -1500,7 +1468,6 @@ class Script < ActiveRecord::Base
   def self.build_property_hash(script_data)
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
-      exclude_csf_column_in_legend: script_data[:exclude_csf_column_in_legend] || false,
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
@@ -1518,7 +1485,8 @@ class Script < ActiveRecord::Base
       pilot_experiment: script_data[:pilot_experiment],
       editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
-      curriculum_umbrella: script_data[:curriculum_umbrella]
+      curriculum_umbrella: script_data[:curriculum_umbrella],
+      tts: !!script_data[:tts]
     }.compact
   end
 
@@ -1569,12 +1537,17 @@ class Script < ActiveRecord::Base
       # scripts, which just use version_year.
       info[:version_title] = version_year
     end
+    if localized_description
+      info[:description] = localized_description
+    end
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
     info[:stage_extras_available] = stage_extras_available
-
+    if has_standards_associations?
+      info[:standards] = standards
+    end
     info
   end
 
@@ -1660,6 +1633,9 @@ class Script < ActiveRecord::Base
     return false unless pilot? && user
     return true if user.permission?(UserPermission::LEVELBUILDER)
     return true if has_pilot_experiment?(user)
+    # a platformization partner should be able to view pilot scripts which they
+    # own, even if they are not in the pilot experiment.
+    return true if has_editor_experiment?(user)
 
     # A user without the experiment has pilot script access if
     # (1) they have been assigned to or have progress in the pilot script, and
@@ -1680,6 +1656,13 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
+  end
+
+  # If a user is in the editor experiment of this script, that indicates that
+  # they are a platformization partner who owns this script.
+  def has_editor_experiment?(user)
+    return false unless editor_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
   end
 
   def self.get_version_year_options

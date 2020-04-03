@@ -2,8 +2,7 @@ name 'AP_practice_Qs_rqb_95_CSP_5_2_1'
 right 'Redundancy'
 wrong 'Bandwidth'
 wrong 'Latency'
-wrong 'Storage Size 
-'
+wrong 'Storage Size'
 markdown <<MARKDOWN
 What is the advantage to using multiple CPUs (Computer processing units)?
 MARKDOWN

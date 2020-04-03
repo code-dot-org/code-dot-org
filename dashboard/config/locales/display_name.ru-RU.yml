@@ -3,12 +3,21 @@ ru-RU:
   data:
     display_name:
       AB_Debug_Artist1: 'Художник: Отладка #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: Режим дизайна
       App Lab Intro 8 - Video Getting Started: 'Видео: начало работы'
       App Lab Intro 8 - Video Images and Sounds: 'Видео: Изображения и звуки'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Сделай программу интерактивной'
       App Lab Intro 8 - Video Share Your App: 'Видео: Поделись своим приложением'
       AppLab Intro 7 - Change Screen Color: Изменить цвет окна
       AppLab Intro 7 - Change Text 2: Изменить текст
       AppLab Intro 7 - Full Text: Две кнопки
+      AppLab Intro 7 - onEvent intro: Пусть кнопки реагируют на нажатие
+      AppLab Intro 7 - onEvent twoButtons: Еще поработаем с реакцией на события onEvent
+      AppLab Intro 7 - playSound: Звуки - функция playSound/игратьЗвук/
+      AppLab Intro 7 - thisOrThatAddButton: То или это
+      AppLab Intro 7 - thisOrThatAddScreen: То или это
+      AppLab Intro 7 - thisOrThatPersonalize: То или это
+      AppLab Intro 7 - thisOrThatSetScreen: То или это
       CSD If Else Map: Операторы "если-иначе"
       CSD If Else Map_2018: Операторы "если-иначе"
       CSD If Else Map_2019: Операторы "если-иначе"
@@ -19,6 +28,7 @@ ru-RU:
       CSD Polling Events Map_2018: Опросы
       CSD Polling Events Map_2019: Опросы
       CSD U1L02 TFMD_2018: Обзор урока
+      CSD U1L02 TFMD_2019: Обзор урока
       CSD U1L03 TFMD_2018: Обзор урока
       CSD U1L03 TFMD_2019: Обзор урока
       CSD U1L04 TFMD_2018: Обзор урока
@@ -86,7 +96,9 @@ ru-RU:
       CSD U2 lists map_2018: Списки в HTML
       CSD U2 lists map_2019: Списки в HTML
       CSD U2L01 TFMD_2018: Обзор урока
+      CSD U2L01 TFMD_2019: Обзор урока
       CSD U2L02 TFMD_2018: Обзор урока
+      CSD U2L02 TFMD_2019: Обзор урока
       CSD U2L03 TFMD_2018: Обзор урока
       CSD U2L03 TFMD_2019: Обзор урока
       CSD U2L04 TFMD_2018: Обзор урока
@@ -180,7 +192,10 @@ ru-RU:
       CSD U3 platform challenge: Улучшите вашу игру
       CSD U3 platform challenge_2018: Улучшите вашу игру
       CSD U3 platform challenge_2019: Улучшите вашу игру
+      CSD U3L01 TFMD_2018: Обзор урока
+      CSD U3L01 TFMD_2019: Обзор урока
       CSD U3L02 TFMD_2018: Обзор урока
+      CSD U3L02 TFMD_2019: Обзор урока
       CSD U3L03 TFMD_2018: Обзор урока
       CSD U3L03 TFMD_2019: Обзор урока
       CSD U3L04 TFMD_2018: Обзор урока
@@ -228,7 +243,9 @@ ru-RU:
       CSD U4 Importing Screens Map_2018: Импорт экранов
       CSD U4 Importing Screens Map_2019: Импорт экранов
       CSD U4L01 autoSFLP_2018: Обзор урока
+      CSD U4L01 autoSFLP_2019: Обзор урока
       CSD U4L02 autoSFLP_2018: Обзор урока
+      CSD U4L02 autoSFLP_2019: Обзор урока
       CSD U4L03 autoSFLP_2018: Обзор урока
       CSD U4L03 autoSFLP_2019: Обзор урока
       CSD U4L04 autoSFLP_2018: Обзор урока
@@ -262,7 +279,9 @@ ru-RU:
       CSD U5 Waze Data Video: Сбор информации о пользователях
       CSD U5 Waze Data Video_2018: Сбор информации о пользователях
       CSD U5L01 autoSFLP_2018: Обзор урока
+      CSD U5L01 autoSFLP_2019: Обзор урока
       CSD U5L02 autoSFLP_2018: Обзор урока
+      CSD U5L02 autoSFLP_2019: Обзор урока
       CSD U5L03 autoSFLP_2018: Обзор урока
       CSD U5L03 autoSFLP_2019: Обзор урока
       CSD U5L04 autoSFLP_2018: Обзор урока
@@ -297,9 +316,12 @@ ru-RU:
       CSD U6 functions paramters video: Процедуры с параметрами
       CSD U6 functions paramters video_2018: Процедуры с параметрами
       CSD U6 functions paramters video_2019: Процедуры с параметрами
+      CSD U6L01 TFMD: Обзор урока
       CSD U6L01 TFMD_2018: Обзор урока
+      CSD U6L01 TFMD_2019: Обзор урока
       CSD U6L02 TFMD: Обзор урока
       CSD U6L02 TFMD_2018: Обзор урока
+      CSD U6L02 TFMD_2019: Обзор урока
       CSD U6L03 TFMD: Обзор урока
       CSD U6L03 TFMD_2018: Обзор урока
       CSD U6L03 TFMD_2019: Обзор урока
@@ -342,9 +364,11 @@ ru-RU:
       CSD U6L16 TFMD: Обзор урока
       CSD U6L16 TFMD_2018: Обзор урока
       CSD U6L16 TFMD_2019: Обзор урока
-      CSD What Makes a Computer a Computer Video: Что делает компьютер компьютером?
-      CSD What Makes a Computer a Computer Video_2018: Что делает компьютер компьютером?
-      CSD What Makes a Computer a Computer Video_2019: Что делает компьютер компьютером?
+      CSD What Makes a Computer a Computer Video: 'Видео: Что Делает Компьютер Компьютером?'
+      CSD What Makes a Computer a Computer Video_2018: 'Видео: Что Делает Компьютер
+        Компьютером?'
+      CSD What Makes a Computer a Computer Video_2019: 'Видео: Что Делает Компьютер
+        Компьютером?'
       CSD-Arrays: Изменение и создание массивов
       CSD-Arrays_2018: Изменение и создание массивов
       CSD-Arrays_2019: Изменение и создание массивов
@@ -398,5 +422,9 @@ ru-RU:
       courseA_video_Stevie_2018: Стиви и Большой Проект
       courseB_video_Unspotted: Незамеченные Баги
       courseB_video_Unspotted_2018: Незамеченные Баги
+      courseF_artist_for1: Свободная практика с циклами for (начало)
+      courseF_artist_for1_2018: Свободная практика с циклами for (начало)
+      courseF_artist_for1_2019: Свободная практика с циклами for (начало)
+      courseF_video_csMatters: Конец проектов курса
       csd-pre-survey-2017-levelgroup_2018: Обзор урока
       csd-pre-survey-levelgroup_2019: Обзор урока

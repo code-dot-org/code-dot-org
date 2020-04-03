@@ -8,13 +8,16 @@ class MakerControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @admin = create :admin
     @school = create :school
+    @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
-    @csd_2017 = ensure_course Script::CSD_2017
-    @csd_2018 = ensure_course Script::CSD_2018
-    @csd_2019 = ensure_course Script::CSD_2019
-    @csd6_2017 = ensure_script Script::CSD6_NAME
-    @csd6_2018 = ensure_script Script::CSD6_2018_NAME
-    @csd6_2019 = ensure_script Script::CSD6_2019_NAME
+    @csd_2017 = ensure_course Script::CSD_2017, '2017'
+    @csd_2018 = ensure_course Script::CSD_2018, '2018'
+    @csd_2019 = ensure_course Script::CSD_2019, '2019'
+    @csd_2020_unstable = ensure_course 'csd-2020-unstable', '2020'
+    @csd6_2017 = ensure_script Script::CSD6_NAME, '2017'
+    @csd6_2018 = ensure_script Script::CSD6_2018_NAME, '2018'
+    @csd6_2019 = ensure_script Script::CSD6_2019_NAME, '2019'
+    @csd6_2020_unstable = ensure_script 'csd6-2020-unstable', '2020', false
   end
 
   test_redirect_to_sign_in_for :home
@@ -196,7 +199,7 @@ class MakerControllerTest < ActionController::TestCase
     sign_in @teacher
     create :circuit_playground_discount_application,
       user: @teacher,
-      school: @school,
+      school: @school_maker_high_needs,
       full_discount: true
 
     CircuitPlaygroundDiscountApplication.stubs(:studio_person_pd_eligible?).returns(true)
@@ -211,7 +214,7 @@ class MakerControllerTest < ActionController::TestCase
     sign_in @teacher
     application = create :circuit_playground_discount_application,
       user: @teacher,
-      school: @school,
+      school: @school_maker_high_needs,
       full_discount: true
 
     assert_nil application.unit_6_intention
@@ -259,9 +262,39 @@ class MakerControllerTest < ActionController::TestCase
     assert_creates CircuitPlaygroundDiscountApplication do
       post :schoolchoice, params: {nces: @school.id}
       assert_response :success
-      expected = {"full_discount" => false}
+      expected = {"school_high_needs_eligible" => false}
       assert_equal expected, JSON.parse(@response.body)
     end
+  end
+
+  test "schoolchoice: Returns full discount when applicant from Alaska" do
+    sign_in @teacher
+    school_alaska = create(:school, state: 'AK')
+
+    post :schoolchoice, params: {nces: school_alaska.id}
+    application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
+
+    assert application.full_discount
+  end
+
+  test "schoolchoice: Returns full discount when applicant from Hawaii" do
+    sign_in @teacher
+    school_hawaii = create(:school, state: 'HI')
+
+    post :schoolchoice, params: {nces: school_hawaii.id}
+    application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
+
+    assert application.full_discount
+  end
+
+  test "schoolchoice: Returns no discount when school not in Alaska or Hawaii" do
+    sign_in @teacher
+    school_washington = create(:school, state: 'WA')
+
+    post :schoolchoice, params: {nces: school_washington.id}
+    application = CircuitPlaygroundDiscountApplication.find_by(user_id: @teacher)
+
+    refute application.full_discount
   end
 
   test "complete: fails if not given a signature" do
@@ -292,7 +325,7 @@ class MakerControllerTest < ActionController::TestCase
     assert_response :forbidden
 
     # intend to teach unit 6, but has not confirmed school
-    application.update!(unit_6_intention: 'yes1819')
+    application.update!(unit_6_intention: 'yesSpring2020')
     post :complete, params: {signature: "My Name"}
     assert_response :forbidden
 
@@ -309,7 +342,7 @@ class MakerControllerTest < ActionController::TestCase
     create :circuit_playground_discount_application,
       user: @teacher,
       school: @school,
-      unit_6_intention: 'yes1819',
+      unit_6_intention: 'yesSpring2020',
       full_discount: true
     code = create :circuit_playground_discount_code
 
@@ -356,7 +389,7 @@ class MakerControllerTest < ActionController::TestCase
 
     create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1819',
+      unit_6_intention: 'yesSpring2020',
       school_id: @school.id,
       full_discount: true
 
@@ -412,7 +445,7 @@ class MakerControllerTest < ActionController::TestCase
     # has not yet confirmed school
     create :circuit_playground_discount_application,
       user_id: @teacher.id,
-      unit_6_intention: 'yes1819'
+      unit_6_intention: 'yesSpring2020'
     post :override, params: {user: @teacher.id, full_discount: true}
     assert_response :success
     expected = {
@@ -429,7 +462,7 @@ class MakerControllerTest < ActionController::TestCase
           "name" => nil,
           "high_needs" => nil,
         },
-        "unit_6_intention" => "yes1819",
+        "unit_6_intention" => "yesSpring2020",
         "full_discount" => true,
         "admin_set_status" => true,
         "discount_code" => nil,
@@ -442,15 +475,15 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name)
+  def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name).tap do |script|
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable).tap do |script|
         create :script_level, script: script
       end
   end
 
-  def ensure_course(course_name)
+  def ensure_course(course_name, version_year)
     Course.find_by_name(course_name) ||
-      create(:course, name: course_name)
+      create(:course, name: course_name, version_year: version_year, family_name: Course::CSD)
   end
 end

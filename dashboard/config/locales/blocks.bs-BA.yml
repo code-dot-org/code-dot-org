@@ -336,6 +336,7 @@ bs:
           FORMAT:
             '"border"': ivica
             '"inner"': unutar kvadrata
+            '"diamond"': dijamant
             '"circle"': krug
             '"grid"': mreža
             '"row"': red
@@ -806,6 +807,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
@@ -835,6 +837,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: kada {RANGE} vrhunac
@@ -898,6 +901,7 @@ bs:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_mirrorSprite:
         options:
@@ -1116,11 +1120,10 @@ bs:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': prikaži
-            '"hide"': sakrij
+            '"random"': slučajno odabran
       binary_move:
         options:
           DIR:

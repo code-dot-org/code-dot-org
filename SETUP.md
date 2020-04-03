@@ -159,7 +159,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
 * Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
-  1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
+  1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
   1. First clone the code.org git repo to get the provided Vagrantfile (you will be able to skip step 1 of the common setup instructions): `git clone https://github.com/code-dot-org/code-dot-org.git`
@@ -173,7 +173,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
-     * **Step 4: Storage**: Increase storage to 32GiB
+     * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
@@ -291,7 +291,7 @@ OS X: when running `bundle install`, you may need to also run `xcode-select --in
 ### Recommended hardware
 While it's possible to run the server locally without these, we've found the following hardware specifications to be best for fast development.
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
-- Storage: The repository takes up 16GB
+- Storage: The repository takes up 20GB
 
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso

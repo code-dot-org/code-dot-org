@@ -1,7 +1,6 @@
 login_required true
 hideable_stages true
 stage_extras_available true
-pilot_experiment 'time4cs-experiment'
 editor_experiment 'broward'
 
 stage 'Sequencing in Maze', flex_category: 'csf_sequencing'
@@ -116,4 +115,4 @@ level 'courseE_farmer_ramp12d_experiment', progression: 'Practice'
 level 'courseE_farmer_ramp12e_experiment', progression: 'Practice'
 level 'courseE_video_BeeifElse_experiment', progression: '"If/Else" with the Bee'
 level 'courseE_farmer_ramp12f_experiment', progression: 'Challenge', challenge: true
-level 'courseE_farmer_ramp12g_experiment', progression: 'Practice'
+level 'courseE_farmer_ramp12g_experiment', progression: 'Updated'

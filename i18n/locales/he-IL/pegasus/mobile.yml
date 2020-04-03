@@ -12,12 +12,12 @@
   csedweek_dates: "8-14 בדצמבר, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">שעה של קוד</a> מגיעה. כל המורים והמארגנים נקראים, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">לתכנן את שעת הקוד שלכם</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">האם אתה מורה למדעי המחשב? ראה עוד משאבים של CSEdWeek</a>'
+  csedweek_banner_teachers_text: "האם אתה מורה למדעי המחשב? ראה עוד משאבים של "
   n_have_learned_an_hoc: "<h1>נסו</h1><h2>שעת קוד</h2><h3># מוגשת</h3>"
   anybody_can_learn: "כל אחד יכול ללמוד."
   learn_now: "למד עכשיו"
   petition_message: "כל תלמיד בכל בית-ספר זכאי להזדמנות ללמוד מדעי המחשב"
   petition_sign_message: 'אם אתה מסכים, חתום בשמך. הצטרף ל- # אחרים.'
-  petition_sign_message_support: 'אם אתם תומכים בנו חיתמו את שמכם. צרפו# נוספים.'
   petition_join_others: 'הצטרף #לאחרים'
   name: "שם"
   email: "דואר אלקטרוני"
@@ -245,6 +245,7 @@
   homepage_action_text_learn: "התחל ללמוד"
   homepage_action_text_signpetition: "חתום על העצומה"
   homepage_signpetition_dropdown: "חתום על העצומה שלנו;"
+  homepage_signpetition_dropdown_text: "מסכים"
   homepage_banner_text_main: "Code.org והנהלת המכללה יוצרים ברית לשפר את המגוון במדעי המחשב."
   homepage_banner_text_link: "למד עוד"
   homepage_banner_privacy_link: "למד עוד"

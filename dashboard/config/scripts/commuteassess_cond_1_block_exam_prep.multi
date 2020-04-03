@@ -1,8 +1,9 @@
 name 'CommuteAssess - Cond 1 - block_exam_prep'
 question 'What will be displayed after running this code?'
-wrong '<pre>Inside first if</pre>'
-right '<pre>Inside second if</pre>'
-wrong '<pre>Inside first if<br>Inside second if</pre>'
+wrong '`Inside first if`'
+right '`Inside second if`'
+wrong '`Inside first if`  
+`Inside second if`'
 wrong 'Nothing will be printed'
 wrong 'It will be different each time'
 

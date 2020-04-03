@@ -552,6 +552,7 @@ ar:
         infinity_playlab_intro: مختبر اللعب - المقدمة
         infinity_playlab_events: مختبر اللعب - الأحداث
         infinity_playlab_repeat_forever: مختبر الألعاب - تكرار إلى الأبد
+        csd_weblab_intro_1: مدخل لمختبر الويب -الجزء 2
         csd_weblab_intro_2: مدخل لمختبر الويب -الجزء 2
         csd_weblab_css_1: مدخل ل CSS - جزء 1
         csd_weblab_css_2: مدخل ل CSS - جزء 2
@@ -672,6 +673,11 @@ ar:
         csd_pair_programming: البرمجة الزوجية
         csd_applab_parameters: الدوال والمعاملات
         CSF_SpriteLab_SpritesInAction_v2: العفاريت تتحرك
+        hoc_dance_congrats_2019: حفلة الرقص 2019- الحفلة قيد التشغيل!
+        hoc_dance_warmup_2019: حفلة الرقص- إحماء
+        hoc_dance_events_2019: حفلة الرقص 2019- الأحداث
+        hoc_dance_measures_2019: حفلة الرقص 2019- الموازين الموسيقية
+        hoc_dance_properties_2019: حفلة الرقص 2019- الخصائص
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

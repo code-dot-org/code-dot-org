@@ -1,5 +1,5 @@
 ---
-title: Contact International Partners
+title: Kontakta internationella partners
 ---
 
 <style>
@@ -10,7 +10,7 @@ title: Contact International Partners
 
 {{ signup_button }}
 
-# Contact International Partners
+# Kontakta internationella partners
 
 Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
 
@@ -77,7 +77,8 @@ tinasupport@gmail.com                                                |
 henrylee@i3dprinter.com.hk                                             |
 | Hong Kong                             | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                        | www.iamai.hk   
 johnson.chu@iamai.hk                                                          |
-| India                                 | CodeTigers                                                        | Sandeep Sheokand                   | sandeep.sheokand@gmail.com                                                                    |
+| India                                 | CodeTigers                                                        | Sandeep Sheokand                   | https://www.codetigers.com   
+sandeep.sheokand@gmail.com                                      |
 | India                                 | Mozilla Indore                                                    | Mrinal Jain                        | jain.mrinal140@gmail.com                                                                      |
 | India                                 | Pi Jam Foundation                                                 | Shoaib Dar                         | http://www.thepijam.org   
 shoaib.dar@thepijam.org                                            |

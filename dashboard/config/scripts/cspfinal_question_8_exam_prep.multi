@@ -1,8 +1,8 @@
 name 'CSPFinal_Question_8_exam_prep'
-wrong 'BIN: <strong>1110</strong>, DEC: <strong>13</strong>, HEX: <strong>F</strong>'
-right 'DEC: <strong>13</strong>, BIN: <strong>1110</strong>, HEX: <strong>F</strong>'
-wrong 'DEC: <strong>13</strong>, HEX: <strong>F</strong>, BIN: <strong>1110</strong>'
-wrong 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
+wrong 'BIN: **1110**, DEC: **13**, HEX: **F**'
+right 'DEC: **13**, BIN: **1110**, HEX: **F**'
+wrong 'DEC: **13**, HEX: **F**, BIN: **1110**'
+wrong 'HEX: **F** DEC: **13**, BIN: **1110**'
 markdown <<MARKDOWN
 Consider the following numbers given in Binary (BIN), Decimal (DEC), and Hexadecimal (HEX) representations:
 

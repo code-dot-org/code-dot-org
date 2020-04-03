@@ -6,7 +6,7 @@ import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 describe('ScriptEditor', () => {
   const DEFAULT_PROPS = {
     announcements: [],
-    excludeCsfColumnInLegend: false,
+    curriculumUmbrella: 'CSF',
     i18nData: {
       stageDescriptions: []
     },

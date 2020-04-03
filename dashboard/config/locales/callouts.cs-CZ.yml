@@ -97,6 +97,11 @@ cs-CZ:
         Infinity_move_right_runbutton: Přidej zde blok
       Infinity_repeat:
         Infinity_repeat_callout: Umísti dovnit přesouvací bloky
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: Jakmile budeš připravený vyzkoušet svůj program,
+          zmáčkni tlačítko "Spustit".
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Klikni na "Spustit" pro spuštění pohybu.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Toto je cyklus „opakovat“! Klikněte na pracovní prostor
           a vložte kód, který chcete pořád opakovat.
@@ -130,10 +135,14 @@ cs-CZ:
         place_length_variable: Přetáhni proměnnou délku k nahrazení otazníků
       NEW Course 4 Bee For Loops 5:
         actions_category: Panel nástrojů má nový vzhled! Bloky "Akce" jsou nyní zde.
+      New Frozen Project:
+        snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
       Overworld Chop Trees:
-        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+        craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
+          začít
       Overworld Chop Trees_2019:
-        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+        craft_callout_preplaced: Už jsme sem umístnili určité bloky, které ti pomohou
+          začít
       Overworld House Frame Chosen:
         craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
           to dokončit?
@@ -149,15 +158,84 @@ cs-CZ:
       Overworld Place Wall_2019:
         craft_inside_repeat: Opakuj akce umístěním bloků zde
       Underground Avoiding Lava:
-        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
-          k posunu dopředu?
+        craft_callout_moveforward: Tento kód kontroluje lávu, umíš přidat povel k
+          posunu dopředu?
       Underground Avoiding Lava_2019:
-        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
-          k posunu dopředu?
+        craft_callout_moveforward: Tento kód kontroluje lávu, umíš přidat povel k
+          posunu dopředu?
       Underground Iron:
         craft_what_is_iron: Vytěž toto železo!
       Underground Iron_2019:
         craft_what_is_iron: Vytěž toto železo!
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Klikni sem, abys viděl pracovat kód!
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseC_maze_programming5:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseC_maze_programming5_2018:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseC_maze_programming5_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_artist_ramp11:
+        courseD_artist_ramp11_1: Tohle číslo můžeš změnit.
+        courseD_artist_ramp11_2: Klikni sem, abys napsal(a) počet opakování svého
+          kódu.
+      courseD_farmer_while7_2018:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
+      courseD_farmer_while7_2019:
+        courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
+          použít blok `pokud je cesta vpřed`.
+      courseD_maze_intro5a_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_maze_ramp3_2019:
+        stone_block_2: Šedé bloky není možné zahodit.
+      courseD_maze_ramp5:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5_2018:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a_2018:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
+          pro spuštění svého programu.
+      courseD_scrat_ramp5:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Tohle číslo můžeš změnit.
+        courseE_artist_ramp8_2: Klikni sem, abys napsal(a) počet opakování svého kódu.
+      courseE_artist_ramp8_2:
+        courseE_artist_ramp8_1: Tohle číslo můžeš změnit.
+        courseE_artist_ramp8_2: Klikni sem, abys napsal(a) počet opakování svého kódu.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.
@@ -174,13 +252,14 @@ cs-CZ:
       frozen freeplay:
         snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
       frozen line:
+        run: Stisknutím tlačítka "Spustit" si vyzkoušíš program!
         move_elsa_forward: Přetáhni blok "Posunout vpřed" a umístěte ho pod blok "Při
           spuštění", aby se Elsa posunula vpřed
       frozen perpendicular:
         turn_elsa: Použij blok "Turn" k otočení Elsy. Číslo v drop-down určuje, kolikrát
           se Elsa otočí
       frozen snowflake branch:
-        frozen_snowflake_branch: Použij blok "vytvořit větev vločky"
+        frozen_snowflake_branch: Použij blok "vytvoř rameno vločky"
       frozen square iterative:
         frozen_create_square: Přidej více bloků k vytvoření čtverce
       frozen square loop:

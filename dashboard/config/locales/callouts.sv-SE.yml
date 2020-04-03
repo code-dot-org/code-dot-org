@@ -84,8 +84,10 @@ sv-SE:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nytt Block!
         dance_callout_11_b: Nytt Block!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Kolla här för "alla ankor" block
       Dance_2019_01:
-        dance_callout_01: Lägg till detta block till ditt program!
+        dance_callout_01: Välj din dansare här.
       Dance_2019_02:
         dance_callout_11_a: Lägg till det här blocket i ditt program.
         arrow_buttons: Tryck på piltangenterna för att kontrollera din dansare.
@@ -111,6 +113,8 @@ sv-SE:
       Dance_Party_11:
         dance_callout_11_a: Nytt Block!
         dance_callout_11_b: Nytt Block!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Kolla här för "alla ankor" block
       Function intro Ryan:
         Function_intro_Ryan_1: Den här lilla instruktionen säger åt datorn att köra
           den STORA gruppen kod med samma namn i arbetsytan.
@@ -174,6 +178,8 @@ sv-SE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken
           är här nu.
+      New Frozen Project:
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
       Overworld Chop Trees:
         craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
           igång
@@ -252,5 +258,3 @@ sv-SE:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
       frozen square snowflake:
         replace_questions: Använd rullistan för att ersätta "???" med en siffra
-      Dance_Party_11_5:
-        dance_party_11_5_groups: Kolla här för "alla ankor" block

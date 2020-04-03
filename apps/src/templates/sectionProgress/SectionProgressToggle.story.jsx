@@ -31,7 +31,22 @@ export default storybook => {
     };
   }
 
+  function isStandardsTrue() {
+    return {
+      name: 'Standards view toggle on',
+      story: () => (
+        <SectionProgressToggle
+          currentView={ViewType.STANDARDS}
+          showStandardsToggle={true}
+          setCurrentView={() => {
+            console.log('Toggle view.');
+          }}
+        />
+      )
+    };
+  }
+
   storybook
     .storiesOf('Progress/SectionProgressToggle', module)
-    .addStoryTable([isSummaryTrue(), isSummaryFalse()]);
+    .addStoryTable([isSummaryTrue(), isSummaryFalse(), isStandardsTrue()]);
 };

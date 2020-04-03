@@ -65,6 +65,8 @@ ar:
   join_section:
     code:
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions_short: أدخل الحروف الست لشفرة القسم
+      submit: انضم إلينا
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
     submit: إضافة تلميح
@@ -116,6 +118,9 @@ ar:
       الرجاء المحاولة لاحقاً.
     already_in_use: حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر.
     already_linked: حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر.
+    existing_account:
+      account_exists: أخبار جيدة! لديك سلفاٌ حساب على المنصة يستخدم الايميل %{email}
+      sign_in: لطفاً قم بتسجيل الدخول و سنقوم بربط حسابك على %{provider}
   signup_form:
     email_signup: قم بالتسجيل باستخدام بريدك الإلكتروني
     student_count: عدد الطلاب المسجلين حالياً هو %{count}.
@@ -158,8 +163,6 @@ ar:
     valid_password: كلمة المرور متاحة!
     invalid_password: كلمة المرور يجب ان تكون على الاقل 6 احرف
     mismatch_password: كلمة المرور التي ادخلتها غير متطابقة
-    under_13_consent: إذا كان عمري أقل من 13 عامًا، أؤكد أنني قد حصلت على إذن من والدي
-      أو الوصي القانوني باستخدام خدمات Code.org.
     student_consent: أؤكد على أنني حصلت على أذن من والدي أو الوصي لاستعمال خدمات Code.org.
     agree_us_website: أوافق على استخدام موقع على شبكة الإنترنت مقره في الولايات المتحدة.
     my_data_to_us: قد تُرسَل بيانات عن استخدامي لهذا الموقع إلى الولايات المتحدة وتُخزّن
@@ -316,6 +319,7 @@ ar:
       help_support: مساعدة ودعم
       report_bug: أبلغ عن وجود خلل
       teacher_community: مجتمع المدرسين
+      professional_learning: Professional learning
       documentation: الوثائق
       tutorials: الدروس
       educate_overview: لمحة عن المعلم
@@ -362,7 +366,7 @@ ar:
       applab: مختبر التطبيق
       artist: الرسام
       bounce: الارتداد
-      dance: حفلة رقص
+      dance: حفلة الرقص
       eval: تقييم
       flappy: فلابي
       frozen: ملكة الثلج Frozen
@@ -655,9 +659,9 @@ ar:
       audience: للأعمار 13 +
       cta: تعلم كيف
     dance:
-      title: حفلة رقص
+      title: حفلة الرقص
     dance-2019:
-      title: حفلة رقص
+      title: حفلة الرقص
     hoc:
       title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
@@ -750,6 +754,8 @@ ar:
     help_support: مساعدة ودعم
     documentation: الوثائق
     tutorials: الدروس
+  free_response:
+    placeholder: 'ادخل إجابتك هنا '
   multi:
     wrong_title: الإجابة غير صحيحة
     wrong_body: أن الإجابة التي قمت بإدخالها غير صحيحة.  الرجاء المحاولة مرة أخرى!
@@ -841,6 +847,8 @@ ar:
       و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
     accept_label_markdown: أوافق على [شروط الخدمة](%{tos_url}) و [سياسة الخصوصية](%{privacy_url})
       المحدثة
+    accept_tos: بتسجيل الدخول إلى موقع Code.org، أنت توافق على [شروط الخدمة] (%{tos_url})،
+      و[سياسة الخصوصية](%{privacy_url}).
     accept: اوافق
     print: طباعة
     reminder_desc: قمنا بتحديث <a href="%{tos_url}" target="_blank">شروط استعمال خدمتنا</a>
@@ -996,6 +1004,8 @@ ar:
     csd3_2: 'الفصل 2: إنشاء الألعاب'
     csd4_1: 'الفصل 1: التصميم المحوري للمستخدم'
     csd4_2: 'الفصل 2: نمذجة التطبيق'
+    cspSurvey: استبيان
+    csp2_1_2018: "(قديم) الوحدة 1: معلومات رقمية"
     csp_variables: المتغيرات
     csp_conditionals: الجمل الشرطية
     csp_functions: دوال
@@ -1004,6 +1014,7 @@ ar:
     csp_loops: الحلقات
     csp_libraries: المكتبات
     csp_parameters_return_values: إعداد وإرجاع القيم
+    csp_unit1_2020: "(قديم) الوحدة 1: معلومات رقمية"
   hoc_download:
     title: ساعة تحميل التعليمات البرمجية
     capsule_title: هل لديك إنترنت؟
@@ -1152,6 +1163,8 @@ ar:
   cookie_banner:
     accept: أوافق
   gdpr_dialog:
+    heading: هل توافق على استخدام موقع مقره في الولايات المتحدة؟
     message: قد تُرسل بيانات عن استخدامك لهذا الموقع إلى الولايات المتحدة وتُخزّن
       أو تُعالج فيها.
     true: نعم
+  copy: نسخ

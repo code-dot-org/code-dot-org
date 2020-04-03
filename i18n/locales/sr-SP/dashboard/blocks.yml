@@ -2,12 +2,18 @@
 sr:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: све
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': секунде
       Dancelab_changeMoveEachLR:
         options:
+          GROUP:
+            sprites: све
           DIR:
             '1': "→"
             "-1": "←"
@@ -23,11 +29,15 @@ sr:
             '"height"': висина
       Dancelab_changePropEachBy:
         options:
+          GROUP:
+            sprites: све
           PROPERTY:
             '"scale"': величина
             '"height"': висина
       Dancelab_doMoveEachLR:
         options:
+          GROUP:
+            sprites: све
           DIR:
             '1': "→"
             "-1": "←"
@@ -61,13 +71,18 @@ sr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            sprites: све
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": насумичан
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            sprites: све
           FORMAT:
+            '"diamond"': дијамант
             '"random"': насумичан
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -115,15 +130,17 @@ sr:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
             '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
+          GROUP:
+            sprites: све
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
@@ -135,6 +152,8 @@ sr:
             '"height"': висина
       Dancelab_setPropEach:
         options:
+          GROUP:
+            sprites: све
           PROPERTY:
             '"scale"': величина
             '"height"': висина
@@ -145,9 +164,23 @@ sr:
             '"height"': висина
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            sprites: све
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: све
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: све
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: све
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -155,6 +188,8 @@ sr:
             '"height"': висина
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            sprites: све
           PROPERTY:
             '"scale"': величина
             '"height"': висина
@@ -165,6 +200,8 @@ sr:
             '"height"': висина
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            sprites: све
           PROPERTY:
             '"scale"': величина
             '"height"': висина
@@ -173,6 +210,7 @@ sr:
           STRING:
             '"diamond"': дијамант
             '"x"': x
+            '"y"': у
       Dancelab_whenKey:
         options:
           KEY:
@@ -182,6 +220,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
+            '"y"': у
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -207,6 +246,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
+            '"y"': у
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -273,8 +313,14 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_groupChangePropBy:
         options:
+          SELECT:
+            '"all"': све
           PROPERTY:
             '"scale"': величина
       Mikelab_groupCreateNewSprite:
@@ -282,14 +328,36 @@ sr:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': све
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': све
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_groupSetProp:
         options:
+          SELECT:
+            '"all"': све
           PROPERTY:
             '"scale"': величина
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_randomColor:
         text: насумична боја
       Mikelab_repeatUntilComplete:
@@ -320,7 +388,9 @@ sr:
             '"left"': стрелица лево
             '"right"': стрелица десно
             '"w"': w
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -329,7 +399,9 @@ sr:
             '"left"': стрелица лево
             '"right"': стрелица десно
             '"w"': w
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -355,11 +427,10 @@ sr:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': прикажи
-            '"hide"': сакриј
+            '"random"': насумичан
       binary_move:
         options:
           DIR:

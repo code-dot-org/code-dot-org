@@ -1,3 +1,26 @@
 {
-  "shareGame": "Oyununu paylaş:"
+  "errorLoadingAnimation": "Görünüşe bakılırsa ''{animationName}'' adlı animasyonunuzu yüklerken sorun yaşıyoruz. İnternet bağlantı kalitenizin yüksek olduğundan emin olun ve sayfayı yeniden yüklemeyi deneyin. Eğer sorun devam ediyorsa, animasyonun bozuk olması muhtemel. Böyle bir durumda, animasyonu kaldırarak devam etmeniz gerekebilir.",
+  "reinfFeedbackMsg": "Başardın! Sonraki bölüme geçmek için ''Devam et''e tıkla.",
+  "shareGame": "Oyununu paylaş:",
+  "spritelabFeedbackCreateFishWithBehavior": "En az bir balık perisi yapmalı ve ona bir davranış vermelisin.",
+  "spritelabFeedbackMoveFishLeftRight": "Balık perin sola veya sağa doğru hareket etmeli. Onun davranışını değiştirmeyi dene.",
+  "spritelabFeedbackChangeBackgroundColor": "Arka planı beyazdan başka bir şeyle değiştirmeniz gerekiyor.",
+  "spritelabFeedbackCreateTwoSprites": "Tam olarak iki hareketli nesne oluşturmanız gerekiyor.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Iki hareketli nesnenin farklı kostümlere ihtiyacı var.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Farklı kostümleri ve birer davranışı olan iki peri daha oluşturman lazım.",
+  "spritelabFeedbackClickSprite": "'Çalıştır'a bastıktan sonra perine tıkladığından emin ol.",
+  "spritelabFeedbackUseSpinningBehavior": "Perinin dönmeye başlaması lazım. Onun davranışını değiştirmeyi dene.",
+  "spritelabFeedbackPinkAlienBehavior": "Pembe uzaylı perin herhangi bir davranış göstermedi.",
+  "spritelabFeedbackCreateThreeAliens": "Bir mavi, bir pembe ve bir sarı uzaylı oluşturman lazım.",
+  "spritelabFeedbackAliensNotInLine": "Üç uzaylı perinin yatay bir hizada sıralanmış olması lazım (50 pixel içinde).",
+  "spritelabFeedbackYellowAlienBehavior": "Sarı uzaylı, davranışını gerçekleştirmedi.",
+  "spritelabFeedbackNoAlienColor": "Uzaylılarından en az biri renk değiştirmedi.",
+  "spritelabFeedbackNeedAlienStopBehavior": "Uzaylı perilerinin, tüm davranışlarını durdurmaları lazım.",
+  "spritelabFeedbackBlueAlienBehavior": "Mavi uzaylının yeni bir davranış göstermesi lazım.",
+  "spritelabFeedbackUseCostume": "En az bir kostüm kullanman gerek.",
+  "spritelabFeedbackThreeSpritesWithCostumes": "Farklı kostümlü üç peri oluşturman lazım.",
+  "spritelabFeedbackMoveUpNotDown": "Perinin aşağı (güney) doğru değil yukarı (kuzey) doğru hareket etmesi lazım.",
+  "spritelabFeedbackRobotFasterThanRover": "Robot, ekranın sağ tarafına arazi aracından önce olaştı.",
+  "spritelabFeedbackDifferentStarRotation": "Her iki yıldız kostümüne de sahip olan perilerin aynı miktarda dönmesi lazım.",
+  "spritelabFeedbackAstronautMoveToCorner": "Astronot perisinin dört köşeden birine hareket etmesi lazım."
 }

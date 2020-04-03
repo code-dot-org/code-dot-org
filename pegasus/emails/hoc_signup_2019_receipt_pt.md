@@ -1,7 +1,6 @@
 ---
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
 subject: "Obrigado por se inscrever para sediar a Hora do Código!"
-litmus_tracking_id: "5g5lyi1a"
 ---
   <% hostname = CDO.canonical_hostname('hourofcode.com') %>
   <% codedotorg = CDO.canonical_hostname('code.org') %>
@@ -31,7 +30,7 @@ Fundador da Code.org
 
 <hr/>
 <small>
-Você está recebendo este e-mail porque você se cadastrou na Hora do Código, apoiada por mais de 200 parceiros e organizada pela Code.org. A Code.org é uma organização sem fins lucrativos. Nosso endereço é: 1501 4th Avenue, Suite 900, Seattle, WA 98101. Não quer receber esses e-mails? [Cancele sua assinatura](<%= unsubscribe_link %>).
+Você está recebendo este e-mail porque você se cadastrou na Hora do Código, apoiada por mais de 200 parceiros e organizada pela Code.org. A Code.org é uma organização sem fins lucrativos. Nosso endereço é: 1501 4th Avenue, Suite 900, Seattle, WA 98101. Não quer receber esses e-mails? [Cancele sua assinatura](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

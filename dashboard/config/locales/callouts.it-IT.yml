@@ -148,6 +148,8 @@ it-IT:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"
       Dance_2019_01:
         dance_callout_01: Qui scegli il tipo di ballerino.
       Dance_2019_02:
@@ -175,6 +177,8 @@ it-IT:
       Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"
       Function intro Ryan:
         Function_intro_Ryan_1: Questa piccola istruzione dice al computer di eseguire
           la GRANDE porzione di codice con lo stesso nome nell'area di lavoro.
@@ -235,10 +239,8 @@ it-IT:
         MC_HOC_2017_08_RY_1: 'L''Agente può muoversi sulla lava, mentre Steve e Alex
           non possono!  '
       NEW Course 4 Artist Functions 3:
-        NEW_Course_4_Artist_Functions_3_1: |-
-          https://studio.code.org/s/course4/stage/12/puzzle/3
-
-          Clicca qui per creare un nuova funzione che costruisca un quadrato.
+        NEW_Course_4_Artist_Functions_3_1: Clicca qui per creare un nuova funzione
+          che costruisca un quadrato.
       NEW Course 4 Artist Functions 7:
         edit_function: Clicca qui per modificare la tua funzione.
       NEW Course 4 Artist Functions 8:
@@ -260,6 +262,9 @@ it-IT:
       NEW Course 4 Bee For Loops 5:
         actions_category: La "cassetta degli attrezzi" ha un nuovo aspetto! I blocchi
           "Azioni" ora sono qui.
+      New Frozen Project:
+        snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
+          di varie forme!
       Overworld Chop Trees:
         craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
       Overworld Chop Trees_2019:
@@ -321,10 +326,10 @@ it-IT:
         courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
           l'ape all'indietro.
       course3_bee_functions_challenge3:
-        courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
+        courseF_bee_functions_challenge1_1: Che istruzioni dovresti inserire in questa
           funzione?
-        courseF_bee_functions_challenge1_2: La funzione "controlla nettare o miele"
-          può essere usata quì se la modifichi per produrre miele più volte.
+        courseF_bee_functions_challenge1_2: Qui puoi usare la funzione `controlla
+          nettare o miele` modificandola per produrre miele più volte.
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Questo blocco ti permette di muovere
           gli attori in diverse parti dello spazio di gioco.
@@ -603,14 +608,20 @@ it-IT:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseC_maze_programming7:
-        courseC_maze_programming7_2: Questi blocchi sono pietrificati e non possono
-          essere gettati via.
+        courseC_maze_programming7_1: Questa è la tua prima sfida! Questi esercizi
+          sono appositamente pensati per essere difficili e potrebbero richiederti
+          diversi tentativi.
+        courseC_maze_programming7_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_2: Questi blocchi sono pietrificati e non possono
-          essere gettati via.
+        courseC_maze_programming7_1: Questa è la tua prima sfida! Questi esercizi
+          sono appositamente pensati per essere difficili e potrebbero richiederti
+          diversi tentativi.
+        courseC_maze_programming7_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_2: Questi blocchi sono pietrificati e non possono
-          essere gettati via.
+        courseC_maze_programming7_1: Questa è la tua prima sfida! Questi esercizi
+          sono appositamente pensati per essere difficili e potrebbero richiederti
+          diversi tentativi.
+        courseC_maze_programming7_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
       courseC_starWars_loops2:
         courseC_starWars_loops2: In questo esercizio, puoi usare solo uno di questi
           blocchi.
@@ -693,9 +704,11 @@ it-IT:
       courseD_maze_ramp3:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+        stone_block_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
       courseD_maze_ramp3_2018:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
+        stone_block_2: 'Non puoi buttare via i blocchi grigi: sono pietrificati!'
       courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: Per buttare via i blocchi di troppo, basta trascinarli
           nella cassetta degli attrezzi.
@@ -735,6 +748,9 @@ it-IT:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: Questa è la tua prima sfida! Questi esercizi sono appositamente
+          pensati per essere difficili e potrebbero richiederti diversi tentativi.
       courseE_aboutme_2:
         '': Clicca qui!
       courseE_artist_functions1:
@@ -850,6 +866,14 @@ it-IT:
       courseF_artist_for1_2019:
         courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
           in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_fwp1:
+        courseF_artist_fwp1_1: Clicca sul pulsante "modifica" per modificare il codice
+          all'interno della funzione.
+      courseF_artist_fwp4:
+        courseF_artist_fwp4_1: Per completare il poligono, assicurati di girare sempre
+          di un angolo = 360 ÷ `lati`.
+      courseF_artist_fwp5:
+        courseF_artist_fwp5_1: Ecco dove trovi la funzione `disegna un poligono`.
       courseF_artist_variables3:
         courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
           variabile `length` (lunghezza)
@@ -885,10 +909,21 @@ it-IT:
         courseF_bee_functions6_1: Non dimenticarti che qui ci sono altri blocchi che
           potrebbero semplificarti il lavoro!
       courseF_bee_functions_challenge1:
-        courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
+        courseF_bee_functions_challenge1_1: Che istruzioni dovresti inserire in questa
           funzione?
-        courseF_bee_functions_challenge1_2: La funzione "controlla nettare o miele"
-          può essere usata quì se la modifichi per produrre miele più volte.
+        courseF_bee_functions_challenge1_2: Qui puoi usare la funzione `controlla
+          nettare o miele` modificandola per produrre miele più volte.
+      courseF_bee_fwp1:
+        courseF_bee_fwp1_1: L'istruzione `se` la trovi qui.
+      courseF_bee_fwp2:
+        courseF_bee_fwp2_a: Il blocco che richiama la tua funzione lo trovi in questa
+          categoria.
+      courseF_bee_fwp3:
+        courseF_bee_fwp3_1: Questa funzione può essere utilizzata per controllare
+          sia le nuvole che le caselle vuote.
+      courseF_bee_fwp4:
+        courseF_bee_fwp4_1: Premi il tasto "modifica" per aggiungere un parametro
+          a questa funzione.
       courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Questa funzione farà un buon lavoro con
           le pannocchie, ma con le altre verdure?
@@ -961,5 +996,3 @@ it-IT:
         grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
           introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
           presi e spostati da un blocco all''altro!'
-      Dance_Party_11_5:
-        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"

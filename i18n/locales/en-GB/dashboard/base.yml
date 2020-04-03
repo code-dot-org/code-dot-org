@@ -46,6 +46,7 @@ en-GB:
     type:
       email: 'Email'
   crud:
+    edit: 'editar'
     submit: 'Submit'
   nav:
     user:
@@ -86,3 +87,4 @@ en-GB:
         opt_in_no: 'No'
   gdpr_dialog:
     yes: 'Yes'
+  copy: 'Copy'

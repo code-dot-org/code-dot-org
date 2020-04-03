@@ -223,27 +223,37 @@ ar-SA:
           كل سطر.
       4-5 Artist 3:
         4-5_Artist_3_a: |-
-          إذا كان محيط مشتل زهور 600 نقطة والضلعين الجانبيين بطول 200 نقطة، إليك كيفية معرفة طول الطرفين القصيرين معاً:
+          إذا كان محيط مشتل الزهور 600 نقطة وكل من الضلعين الجانبيين بطول 200 نقطة، إليك كيفية معرفة طول الجانبين القصيرين معاً:
 
           **600 - 200 - 200 = 200**
 
-          وهذا يعني أن طول كلا الجانبين القصيرين مجتمعين هو 200 نقطة.
+          وهذا يعني أن مجموع طول كلٍ من الجانبين القصيرين مجتمعين هو 200 نقطة.
 
-          **ما ناتج 200 / 2?**
+          **ما ناتج 200 / 2؟**
         4-5_Artist_3_b: إذا لم تتمكن من رؤية أين تذهب حلقة "كرر" على الفور، فحاول
           برمجة الحل كاملا وابحث عن نمط.
       4-5 Artist 4:
         4-5_Artist_4_a: "هناك 360 درجة في الدائرة! \n\nهذا هو عدد المرات التي تحتاجه
-          لتكرار هذا الجزء البرمجي (الاستدارة درجة واحدة في كل مرة) قبل اكتمال الدائرة!"
+          لتكرار هذا الكود (يالاستدارة درجة واحدة في كل مرة) قبل اكتمال الدائرة!"
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          تعتبر المحاولة والخطأ طريقة رائعة، ولكن يمكنك أيضًا حل المسالة عن طريق تقسيم الزاوية 90 درجة إلى أثلاث.
+
+          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'أي زاوية هي الأصغر؟ في أي زاوية يقف الرسام؟ '
       4-5 Artist 8:
-        4-5_Artist_8_a: "الأضلاع الطويلة هي بطول 240 نقطة لكل منهما. وهذا يعني أن
-          الجانبين القصيرين يجب أن يكون مجموع طوليهما:\n\n**800 - 240 - 240 = 320**\n\nما
-          هو  **320/2** ؟ "
+        4-5_Artist_8_a: "الأضلاع الطويلة طولها 240 نقطة لكل منهما. وهذا يعني أن الجانبين
+          القصيرين يجب أن يكون مجموع طوليهما:\n\n**800 - 240 - 240 = 320**\n\nما هو
+          ناتج **320 / 2** ؟ "
+        4-5_Artist_8_b: "يمكن إنتاج هذه الصورة بطريقتين! \n\n-   ارسم مستطيلين بعرض
+          **120** وطول **160**، مع ضلع مشترك (متراكب) بينهما.\n\n-   ارسم مستطيلاً
+          بطول \\*\\* 240 \\*\\* وعرض **160**، ثم أضف خطاً في الوسط."
       4-5 Artist 9:
+        4-5_Artist_9_a: 'عندما يكون المثلث متساوي الأضلاع، تكون كل الأضلاع وكل الزوايا
+          متساوية.  '
         4-5_Artist_9_b: ستحتاج إلى رسم ثلاثة مثلثات بنفس الحجم. لا تنس أن تقفز إلى
-          موقع جديد بعد رسم كل مثلث.
+          موقعك الجديد بعد رسم كل منهم.
       4-5 Artist Assessment 1:
         4-5_Artist_Assessment_1_a: ما عليك سوى رسم المثلث الخارجي لإكمال هذا اللغز.
       4-5 Artist Patterns 11:
@@ -295,8 +305,8 @@ ar-SA:
           حاول تتبع المسار بإصبعك.
           هل هو أقصر مسار يمكنك إيجاده؟
       4-5 Maze 7:
-        4-5_Maze_7_a: "**هل تريد أن يكون برنامجك أصغر ما يمكن؟** \n\nابحث عن نمط في
-          القطع البرمجية. هل ترى شيء يتكرر؟ حاول وضع حلقة تكرارية حوله!"
+        4-5_Maze_7_a: "**هل تريد أن يكون برنامجك أصغر ما يمكن؟** \n\nابحث عن نمطٍ
+          في القطع البرمجية. هل ترى شيئاً يتكرر؟ حاول وضع حلقة حوله بدلاً من تكراره!"
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 Nested Loops 6:
@@ -317,7 +327,7 @@ ar-SA:
 
           **360 / 6 =؟**
       4-5 While Loops 8:
-        4-5_While_Loops_8_a: كل عنصر سوف يحتاج حلقة "بينما" خاصة به.
+        4-5_While_Loops_8_a: كل عنصر سوف يحتاج حلقة "طالما" خاصة به.
       Course 4 Artist 11:
         Course_4_Artist_11_a: 'يمتلك نصف السداسي **طول 30** ويستدير يميناً بمقدار
           **60 درجة**.  '
@@ -352,7 +362,7 @@ ar-SA:
         Course_4_Artist_Binary_Free_Play_2b_d: |-
           **الحل:**
 
-          <xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">1</title></block></value><value name="TO"><block type="math_number"><title name="NUM">8</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">عداد</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">طرح</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">ضرب</title><value name="A"><block type="variables_get"><title name="VAR">عداد</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">عداد</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">8</title></block></value><value name="TO"><block type="math_number"><title name="NUM">1</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">عداد</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">طرح</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">ضرب</title><value name="A"><block type="variables_get"><title name="VAR">عداد</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">عداد</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>
+          <xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">1</title></block></value><value name="TO"><block type="math_number"><title name="NUM">8</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">MULTIPLY</title><value name="A"><block type="variables_get"><title name="VAR">counter</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type="controls_for_counter" inline="true"><mutation counter="counter"></mutation><value name="FROM"><block type="math_number"><title name="NUM">8</title></block></value><value name="TO"><block type="math_number"><title name="NUM">1</title></block></value><value name="BY"><block type="math_number"><title name="NUM">1</title></block></value><statement name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="math_arithmetic" inline="true"><title name="OP">MINUS</title><value name="A"><block type="math_number"><title name="NUM">16</title></block></value><value name="B"><block type="math_arithmetic" inline="true"><title name="OP">MULTIPLY</title><value name="A"><block type="variables_get"><title name="VAR">counter</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">0</title></block></value></block></statement><next><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">counter</title></block></value><statement name="DO"><block type="procedures_callnoreturn" inline="true"><mutation name="draw"><arg name="binary"></arg></mutation><value name="ARG0"><block type="text"><title name="TEXT">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>
       Course 4 Artist For Loops 11:
         Course_4_Artist_For_Loops_11_a: "زاوية الاستدارة سوف تتغير مع كل شكل! \n\nاستخدم
           قطعة الرياضيات لإدخال 360 مقسومًا على عدد أضلاع الشكل من أجل الحصول على
@@ -718,6 +728,9 @@ ar-SA:
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: هل ترى **فوانيس البحر** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           كيف يمكنك استخدام شرطٍ معها لتتجاوز نصب المحيط؟
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: يمكنك استخدام القطعة البرمجية if path لمساعدتك في اتخاذ الدوران
+          الصحيح.
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة
           \* \* الصحيحة \* \* للمضي، وتحقق من أن المرجان الأحمر ليس إلى \* \* اليسار
@@ -869,6 +882,10 @@ ar-SA:
           **تحدٍّ اختياري**
 
           غيّر تأثيرات الخلفية عند نقاط مختلفة أثناء تشغيل الأغنية من خلال وصلِ المربع البرمجي الجديد بالأحداث <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: "\\*\\* كيف يمكنني اجتياز هذا المستوى ؟\\*\\* \n\n-   يحتاج الراقص
+          الخاص بك إلى التبديل بين 4 حركات رقص مختلفة على الأقل قبل انتهاء المستوى.
+          \n\n_ينتهي هذا المستوى بعد 12 ميزان موسيقى._"
       Dance_Party_06:
         validation: |-
           **كيف يمكنني تجاوز هذا المستوى؟**
@@ -927,9 +944,14 @@ ar-SA:
           -   استخدم المربع البرمجي "عند الضغط على السهم الأيسر" لجعل الروبوت يقم بحركة رقص عند الضغط عليه.
 
           _ينتهي هذا المستوى بعد 8 إجراءات._
+      Dance_Party_extras_alternate_2019:
+        alternate: يوجد المربع البرمجي "التنقل" في فئة "الراقصين".
       HOC 2018 Level_10:
         voyage_aquatic_10a: هل ترى **فوانيس البحر** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           كيف يمكنك استخدام شرطٍ معها لتتجاوز نصب المحيط؟
+      HOC 2018 Level_7a:
+        aquatic7: يمكنك استخدام القطعة البرمجية if path لمساعدتك في اتخاذ الدوران
+          الصحيح.
       HOC 2018 Level_9b:
         voyage_aquatic_9a: يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة
           \* \* الصحيحة \* \* للمضي، وتحقق من أن المرجان الأحمر ليس إلى \* \* اليسار
@@ -1064,6 +1086,9 @@ ar-SA:
         double_loop: حاول وضع حلقة "العد أو for" داخل حلقةت"تكرار".
         after: عند الانتهاء من كل بتلة، تأكد من التحرك إلى الأمام 20 بكسل قبل الاستدارة
           60 درجة.
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: حاول أن تجعل العميل يبني بعض الجسور بحيث يستطيع ألكس
+          أو ستيف المشي خارج حدود الخريطة.
       behaviors 2:
         behavior hint: "حاول تعديل السلوك! \n\n-   في أي اتجاه يحتاج الطائر أن يتحرك؟"
       behaviors 5:
@@ -1094,6 +1119,9 @@ ar-SA:
           النمط الحلزوني يمكن برمجته باستخدام 18 بلوكة!
 
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_b: الحل الأقصر سوف يستخدم 5 قطع فقط, لكنه
+          يستخدم قطعة `كرر` البرمجية!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
@@ -1102,12 +1130,49 @@ ar-SA:
         courseE_bee_functions_challenge1_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
           قريبا، سوف تنجح!"
+      course3_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_b: مسار "سكرات" على شكل مستطيل! وهو يحتاج
+          أن يلف بنفس الطريقة كل مرة!
+        courseC_maze_debugging_challenge1_c: إذا وصلت لطريق مسدود، يمكنك دوماً البدء
+          من جديد، أو حذف كل الكود والبحث عن طريقك بنفسك!
+      course3_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_a: أحد طرق حل ذلك هي إضافة خطوات إضافية
+          للأمام بين الدورانات.
+        courseC_maze_debugging_challenge2_b: إذا وصلت لطريق مسدود، يمكنك دوماً البدء
+          من جديد أو حذف كل الكود والبحث عن طريقك بنفسك!
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: |-
+          حاول استخدام
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+
+           قطعة التكرار البرمجية!
+      courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "الكود البرمجي الخاص بك سيحتوي على **أربع** قطع
+          تحركات إلى الغرب\n<xml><block type=\"maze_moveWest\"/></xml> و **أربع**
+          قطع <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
       courseA_harvester_loops6:
         courseA_harvester_loops6_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
           نمط متكرر.
       courseA_harvester_loops6_2019:
         courseA_harvester_loops6_a: إذا علقت, جرب كتابة الخطوات على ورقة وابحث عن
           نمط متكرر.
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_c: |-
+          هاتين القطعتين
+
+          <xml><block type="maze_moveNorth"/></xml>
+          <xml><block type="maze_moveEast"/></xml>
+
+          ستساعدك في الاقتراب من الخنزير.
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          استخدم هذه القطعة البرمجية الجديدة
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: لتكرير الكود البرمجي، اسحب دالة 'كرر'[0]، ومن ثم
+          استخدم ضع القطعة البرمجية التي تريدها في الداخل.
       courseB_maze_seq8:
         courseB_maze_seq8_b: هناك طريقتان لحل هذا اللغز!
       courseC_PlayLab_events1:
@@ -1336,10 +1401,8 @@ ar-SA:
         courseC_PlayLab_eventsA_b: سوف تحتاج إلى سحب بلوكة الحدث " عند التشغيل" إلى
           منطقة العمل لتحل اللغز.
       courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: استخدم بلوكة "تعيين الخلفية" و "تعيين الممثل إلى
-          سرعة" لتحل اللغز.
-        courseC_PlayLab_eventsA_b: سوف تحتاج إلى سحب بلوكة الحدث " عند التشغيل" إلى
-          منطقة العمل لتحل اللغز.
+        courseC_PlayLab_eventsA_a: استخدم أزرار الأسهم لتحريك البطريق. بإمكانك إنهاء
+          هذه المرحلة دون كتابة أي تعليمة برمجية.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _تحتاج إلى فكرة؟_
@@ -1721,18 +1784,18 @@ ar-SA:
           إلى اليمين</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog2_2018:
         courseC_artist_prog2_a: '*"إذا استخدمت كتلة <xml><block type="draw_move_by_constant"><title
-          name="DIR">تحرك إلى الأمام</title><title name="VALUE">100</title></block></xml>
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
           سوف أرسم خطاً."*'
         courseC_artist_prog2_b: هل تواجه صعوبة في الاستدارة عند الزوايا؟ استخدم كتلة
-          <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">اتجه
-          إلى اليمين</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
+          <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title
+          name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog2_2019:
         courseC_artist_prog2_a: '*"إذا استخدمت كتلة <xml><block type="draw_move_by_constant"><title
-          name="DIR">تحرك إلى الأمام</title><title name="VALUE">100</title></block></xml>
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
           سوف أرسم خطاً."*'
         courseC_artist_prog2_b: هل تواجه صعوبة في الاستدارة عند الزوايا؟ استخدم كتلة
-          <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">اتجه
-          إلى اليمين</title><title name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
+          <xml><block type="draw_turn_by_constant_dropdown"><title name="DIR">turnRight</title><title
+          name="VALUE" config="45,60,90,120,180">90</title></block></xml>.
       courseC_artist_prog5_2018:
         courseC_artist_prog5_c: يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية
           استخدامها!
@@ -2557,6 +2620,13 @@ ar-SA:
           للانتقال من أعلى مربع إلى المكان الذي سوف تبدأ منه رسم المربع التالي. \n\nإذا
           كانت مربعاتك بطول 20 نقطة ومتباعدة عن بعضها 20 نقطة، كم مقدار القفزة التي
           تحتاجها؟"
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: إذا كنت تستخدم القطعة البرمجية "if at flower"
+          ، فيمكنك حل هذه المشكلة باستخدام حلقة التكرار المتداخلة. اكتب برنامجًا للمسار
+          الأيمن والأسفل، ثم كرر كل شيء مرتين!
+        courseD_bee_conditionals5_c: للاستمرار في المسار ، سوف تحتاج النحلة إلى "التحرك
+          للأمام". أثناء تحركها ، تحتاج النحلة إلى التحقق من وجود الزهرة. "إذا كانت
+          هناك زهرة" ، فيجب أن يحصل النحل 'على الرحيق'.
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_a: "\\*\\* تذكر: \\*\\* هذا اللغز يتغير في كل مرة
           يتم تشغيله. \n\nستحتاج أن تستخدم كتلة شرطية (\"إذا\" أو \"إذا/وإلا\") لحل
@@ -2572,11 +2642,46 @@ ar-SA:
       courseD_collector_ramp8:
         courseD_collector_ramp8_b: إذا اردت تبسيط كودك البرمجي, يمكنك أن تضع دالة
           "كرر" داخل أخرى! هذه تسمى \*\* دالة التكرار المتداخلة\*\*.
+      courseD_farmer_condLoops6_2019:
+        courseD_farmer_condLoops6_a: استخدم حلقة التكرار `طالما المسار سالكاً` أو
+          القطعة البرمجية `إذا كان المسار سالكاً/ آخر` لتحريك المزارع لأسفل كل قطعة
+          حلزونية.
+      courseD_farmer_condLoops7_2019:
+        courseD_farmer_condLoops7_b: حاول استخدام `طالما المسار سالكاً` لجعل آلة الحصد
+          تتحرك العدد الصحيح من الخطوات.
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          استخدم هذه القطعة البرمجية الجديدة.
+          <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: يمكنك الدوران يميناً ويساراً من وجهة نظر ريد
+          ، اذا كنت متجه إلى اليمين،فإن الاتجاه نحو اليمين سيجعلك تشير إلى أسفل.
+        courseC_maze_programming4_b: لمتابعة المسار تقدّم للأمام ثم أدر في اتجاه واحد
+          ، ثم تحرك مجددًا واستدر في الاتجاه المعاكس. تقدّم للأمام مرةً أخرى للوصول
+          إلى شجرة البلوط.
+      courseD_maze_intro5a_2019:
+        courseC_maze_programming5_b: تذكّر أن الدوران هو من منظور ريد.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_a: يمكنك الدوران يميناً أو يساراً من وجهة نظر سكرات.
+          إذا كنت متجه إلى اليمين، فإن الإتجاه نحو اليمين سيجعلك تشير إلى الأسفل.
+        courseC_maze_programming4_b: لمتابعة المسار تقدّم للأمام ثم أدر في اتجاه واحد
+          ، ثم تحرك مجددًا واستدر في الاتجاه المعاكس. تقدّم للأمام مرةً أخرى للوصول
+          إلى شجرة البلوط.
+      courseD_maze_ramp5a_2019:
+        courseC_maze_programming5_b: تذكّر أن الدوران هو من منظور سكرات.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
       courseD_maze_ramp7:
         courseD_maze_ramp7_b: لاتنسى أن تستخدم زر " الخطوة" لتراجع الكود البرمجي بلوكة
           بلوكة لتكتشف الخطأ.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_a: يمكنك الدوران يميناً أو يساراً من وجهة نظر سكرات.
+          إذا كنت متجه إلى اليمين، فإن الإتجاه نحو اليمين سيجعلك تشير إلى الأسفل.
+        courseC_maze_programming4_b: لمتابعة المسار تقدّم للأمام ثم أدر في اتجاه واحد
+          ، ثم تحرك مجددًا واستدر في الاتجاه المعاكس. تقدّم للأمام مرةً أخرى للوصول
+          إلى شجرة البلوط.
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: هناك طريقتان لحل هذا اللغز!
       courseD_scrat_ramp8:
@@ -2643,6 +2748,33 @@ ar-SA:
         courseE_bee_functions_challenge1_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء
           من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى.
           قريبا، سوف تنجح!"
+      courseE_farmer_ramp11b:
+        courseE_farmer_ramp11b_a: يمكنك أن  تُدخل حلقة `طالما` في حلقة الـ `تكرار`
+          لجعل الكود البرمجي أقصر.
+      courseE_farmer_ramp11b_2018:
+        courseE_farmer_ramp11b_a: يمكنك أن  تُدخل حلقة `طالما` في حلقة الـ `تكرار`
+          لجعل الكود البرمجي أقصر.
+      courseE_farmer_ramp11b_2019:
+        courseE_farmer_ramp11b_a: يمكنك أن  تُدخل حلقة `طالما` في حلقة الـ `تكرار`
+          لجعل الكود البرمجي أقصر.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: 'لا تزال بحاجة الى استخدام حلقة `كرر` عند التشغيل
+          لتقول للمزارع كم مرة يجب فيها التقدم للأمام وجمع الخس. '
+      courseE_farmer_ramp12_forswap_2018:
+        courseE_farmer_ramp12_b: 'لا تزال بحاجة الى استخدام حلقة `كرر` عند التشغيل
+          لتقول للمزارع كم مرة يجب فيها التقدم للأمام وجمع الخس. '
+      courseE_farmer_ramp12_forswap_2019:
+        courseE_farmer_ramp12_b: 'لا تزال بحاجة الى استخدام حلقة `كرر` عند التشغيل
+          لتقول للمزارع كم مرة يجب فيها التقدم للأمام وجمع الخس. '
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: لا تزال أولاً بحاجة إلى استخدام حلقة `التكرار حتى`,
+          ومن ثم عند وصولك إلى الخس قم بإستخدام حلقة `التكرار طالما`.
+      courseE_farmer_ramp12c_2018:
+        courseE_farmer_ramp12b_b: لا تزال أولاً بحاجة إلى استخدام حلقة `التكرار حتى`,
+          ومن ثم عند وصولك إلى الخس قم بإستخدام حلقة `التكرار طالما`.
+      courseE_farmer_ramp12c_2019:
+        courseE_farmer_ramp12b_b: لا تزال أولاً بحاجة إلى استخدام حلقة `التكرار حتى`,
+          ومن ثم عند وصولك إلى الخس قم بإستخدام حلقة `التكرار طالما`.
       courseF_artist_for4:
         courseF_artist_for4_a: |-
           \*\* ما هو الرقم الأصغر الذي ستحتاجه؟\
@@ -3103,12 +3235,3 @@ ar-SA:
         courseF_bee_functions7_a: "إذا كان اللغز يبدو صعباً، حاول بناء جزء من الدالة
           كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى. قريبا،
           سوف تنجح!"
-      Dance_Party_05:
-        validation: |-
-          **كيف يمكنني اجتياز هذا المستوى؟**
-
-          -   يحتاج الراقص الخاص بك إلى دورة من خلال 4 حركات رقص مختلفة على الأقل قبل انتهاء المستوى.
-
-          \_ينتهي هذا المستوى بعد 12 تدبيراً. \_
-      Dance_Party_extras_alternate_2019:
-        alternate: الكتلة البديلة موجودة في فئة "الراقصين".

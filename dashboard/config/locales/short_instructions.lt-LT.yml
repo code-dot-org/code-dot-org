@@ -170,6 +170,9 @@ lt-LT:
       MC HOC 2016 Village Test: |-
         O ne! Zombiai įviliojo tave į spąstus!
         Užprogramuok Geležinį Golemą persekioti ir atakuoti zombius!
+      New Sports Project: 'Sukurk savo žaidimą! Dabar tu čia šeimininkas: gali pakeisti
+        visas taisykles, panaudoti kelias sporto rūšis - būk kūrybingas!. Kai pabaigsi,
+        spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.'
       Overworld Avoid Monsters: Atsitrenkti į Creeper'į - bloga idėja. Atsargiai judėk
         tarp Crepper'ių ir saugiai pasiek namus.
       Overworld Avoid Monsters_2019: Atsitrenkti į Creeper'į - bloga idėja. Atsargiai
@@ -400,14 +403,3 @@ lt-LT:
       frozen square snowflake: Pamėginkime sukurti snaigę. Reikės nupiešti 10 kvadratų,
         o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą.
       k-1 maze 1: Padėk man žingsniuoti į vakarus, kad pasiekčiau kiaulę.
-      scrat 16: Gilė! Gilė! Gilė! Panaudok blokelį „jei“, kad galėčiau ją pasiekti.
-        Pamėgink panaudoti kuo mažiau blokelių.
-      scrat 17: Pamėginkime dar kartą – užduotis labai panaši, bet reikia stengtis
-        neatsitrenkti į sieną!
-      scrat 18: Blokelis „jei-kitu atveju“ tikrina sąlygą, o po to atlieka vieną ARBA
-        kitą veiksmą. Padėk man pasiekti gilę, panaudodamas šį blokelį.
-      scrat 19: Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi
-        ją atlikti iš pirmo karto?
-      scrat 20: Ar gali pridėti tik 3 blokelius, kad galėčiau pereiti per šį labirintą?
-        Jei užduotį išspręsi teisingai, aš galėsiu eiti vingiuotu keliu, kad ir koks
-        ilgas jis bebūtų. Paskubėk, arba ledas ištirps!

@@ -942,6 +942,12 @@ es-ES:
           **Desafío opcional**
 
           Cambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      Dance_Party_05:
+        validation: |-
+          **¿Cómo se pasa este nivel?**
+
+          -   Tu bailarín tiene que realizar cuatro movimientos diferentes para pasar de nivel.
+              _Este nivel termina después de 12 compases._
       Dance_Party_06:
         validation: |-
           **¿Cómo paso este nivel?**
@@ -1352,6 +1358,15 @@ es-ES:
       behaviors 6:
         behavior hint: "¡Intenta editar los comportamientos! \\*¿Qué valor está controlando
           la velocidad de cada sprite?"
+      behaviors 7:
+        behaviors_hint1: Puedes crear un nuevo comportamiento que usa dos acciones
+          diferentes o combinar dos comportamientos existentes.
+        sprites_idea1: |-
+          Para divertirte, puedes usar un comportamiento similar para hacer el barco volar hacia el espacio o un figura correr hacia el primer plano. ¡Prueba de cambiar el fondo y disfraces de los sprites en tu escena!
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Los comentarios también son útiles cuando otras
           personas intentan leer tu código.
@@ -4428,11 +4443,6 @@ es-ES:
           `definir actor __ a una velocidad ___` para resolver este puzle.
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
           al espacio de trabajo para resolver este puzle.
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
-          `definir actor __ a una velocidad ___` para resolver este puzle.
-        courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
-          al espacio de trabajo para resolver este puzle.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _¿Necesitas una idea?_
@@ -6153,6 +6163,11 @@ es-ES:
           del lápiz están controlados por la variable \`contador '.
       courseF_artist_variables4:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseF_artist_variables4_2019:
+        courseF_artist_variables4_a: Tu código no será muy diferente de lo que fue
+          en el último desafío, excepto que tendrás que girar al artista para saltar
+          hacia abajo, y luego hacerlo dar una vuelta para estar listo a dibujar el
+          último triángulo.
       courseF_artist_variables5:
         courseF_artist_variables5_b: La primera mitad de tu código dibujará tres triángulos,
           y la segunda mitad dibujará los otros tres.
@@ -6496,6 +6511,9 @@ es-ES:
           Comience asegurándose de que entiende cómo funciona esta _supuesta_ función. A medida que la agricultora se mueve por cada camino, solo intentará recolectar maíz. En cambio, ¿cómo puedes hacer que revise cada una de las 3 verduras y elegir solo la que encuentra?
 
           Agregue declaraciones condicionales a la función para buscar maíz, calabazas y lechuga.
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: En lugar de restar 1 de 'recoger', añade 1
+          cada vez. ¿Qué valor debería tener la variable al principio?
       courseF_playlab_variables2b:
         courseF_playlab_variables2b_a: "¿Qué crees que dirá Kiki cuando toques `Ejecutar`?"
       courseF_playlab_variables3b_josh:

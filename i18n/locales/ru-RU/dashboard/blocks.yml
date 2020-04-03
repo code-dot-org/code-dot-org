@@ -3,7 +3,7 @@ ru:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} чередовать каждый {N} Меры \nМежду {MOVE1} И {MOVE2}"
+        text: "\"{GROUP} чередовать каждые {N} тактов \n{MOVE1} и {MOVE2}"
         options:
           GROUP:
             sprites: все
@@ -20,26 +20,26 @@ ru:
             '"SLOTH"': Ленивцы
             '"UNICORN"': Единороги
           MOVE1:
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
           MOVE2:
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -77,14 +77,14 @@ ru:
             '"next"': "(Следующий)"
             '"prev"': "(Предыдущий)"
             '"rand"': "(Случайный)"
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -98,14 +98,14 @@ ru:
             '"next"': "(Следующий)"
             '"prev"': "(Предыдущий)"
             '"rand"': "(Случайный)"
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -166,7 +166,7 @@ ru:
           MOVE:
             '"rand"': "(Случайный)"
             MOVES.XBend: Сгиба
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.XClapSide: Хлопок
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
@@ -175,7 +175,7 @@ ru:
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.XHeadHips: Голова и бедра
             MOVES.XHop: Хоп
             MOVES.XHighKick: Удар
@@ -197,7 +197,7 @@ ru:
           MOVE:
             '"rand"': "(Случайный)"
             MOVES.XBend: Сгиба
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.XClapSide: Хлопок
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
@@ -206,7 +206,7 @@ ru:
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.XHeadHips: Голова и бедра
             MOVES.XHop: Хоп
             MOVES.XHighKick: Удар
@@ -223,7 +223,7 @@ ru:
             '1': "→"
             "-1": "←"
       Dancelab_everyMeasuresRange:
-        text: 'повторить каждый {N} меры после {START} '
+        text: 'повторять каждые {N} тактов после {START} '
       Dancelab_everySeconds:
         text: 'каждые {N} {UNIT} '
         options:
@@ -273,13 +273,13 @@ ru:
         options:
           DANCE:
             MOVES.ClapHigh: Высокий хлопок
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -357,10 +357,15 @@ ru:
           FORMAT:
             '"border"': граница
             '"inner"': внутренняя площадь
+            '"diamond"': алмаз
             '"circle"': круг
             '"grid"': сетка
+            '"top"': верхний ряд
             '"row"': шеренга
+            '"bottom"': нижний ряд
+            '"left"': левая колонка
             '"column"': колонна
+            '"right"': правая колонка
             '"x"': крест-накрест
             '"plus"': плюс
             '"random"': случайный
@@ -497,21 +502,21 @@ ru:
             '"diamonds"': Ромбы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
-            '"swirl"': Гипноз
+            '"swirl"': Гипно
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
             '"splatter"': Брызги краски
             '"rainbow"': Радуга
             '"snowflakes"': Снег
-            '"text"': Название песни
+            '"text"': Названия песен
             '"galaxy"': Космос
             '"sparkles"': Блестки
             '"spiral"': Спираль
             '"disco"': Квадраты
             '"stars"': Звезды
           PALETTE:
-            '"rave"': Черно-белый
-            '"cool"': Голубой
+            '"rave"': Черное и белое
+            '"cool"': Крутой
             '"electronic"': Электронных
             '"iceCream"': Мороженое
             '"default"': Свет
@@ -520,7 +525,9 @@ ru:
             '"vintage"': Винтаж
             '"warm"': Красный
       Dancelab_setBackgroundEffectWithPalette:
-        text: задать фоновый эффект {PALETTE} {EFFECT}
+        text: |-
+          "установить фоновый эффект
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Нет
@@ -533,15 +540,15 @@ ru:
             '"fireworks"': Фейерверк
             '"flowers"': Цветы
             '"growing_stars"': Растущие звезды
-            '"swirl"': Гипноз
+            '"swirl"': Гипно
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
             '"splatter"': Брызги краски
             '"rainbow"': Радуга
-            '"ripples_random"': Случайные рябь
-            '"ripples"': Рябь
+            '"ripples_random"': Случайные круги на воде
+            '"ripples"': Круги на воде
             '"snowflakes"': Снег
-            '"text"': Название песни
+            '"text"': Названия песен
             '"squiggles"': Squiggles
             '"galaxy"': Космос
             '"sparkles"': Блестки
@@ -550,8 +557,8 @@ ru:
             '"stars"': Звезды
             '"music_wave"': Волны
           PALETTE:
-            '"rave"': Черно-белый
-            '"cool"': Голубой
+            '"rave"': Черное и белое
+            '"cool"': Крутой
             '"electronic"': Электронных
             '"iceCream"': Мороженое
             '"default"': Свет
@@ -599,13 +606,13 @@ ru:
             '"bubbles"': Пузыри
             '"confetti"': Конфетти
             '"hearts_red"': Сердечки
-            '"music_notes"': Ноты
+            '"music_notes"': Музыкальные ноты
             '"pineapples"': Ананасы
             '"pizzas"': Пиццы
-            '"smiling_poop"': Экскременты
+            '"smiling_poop"': Какашка
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
-            '"smile_face"': Смайлик
+            '"smile_face"': Улыбки
             '"spotlight"': Прожектор
             '"color_lights"': Огни сцены
             '"raining_tacos"': Тако
@@ -616,18 +623,18 @@ ru:
             '"none"': Нет
             '"rand"': "(Случайный)"
             '"bubbles"': Пузыри
-            '"hearts_colorful"': Красочные сердца
+            '"hearts_colorful"': Цветные сердечки
             '"confetti"': Конфетти
             '"emojis"': Смайлики
             '"hearts_red"': Сердечки
-            '"music_notes"': Ноты
+            '"music_notes"': Музыкальные ноты
             '"paint_drip"': Краска Drip
             '"pineapples"': Ананасы
             '"pizzas"': Пиццы
-            '"smiling_poop"': Экскременты
+            '"smiling_poop"': Какашка
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
-            '"smile_face"': Смайлик
+            '"smile_face"': Улыбки
             '"spotlight"': Прожектор
             '"color_lights"': Огни сцены
             '"exploding_stars"': Старберст
@@ -783,7 +790,7 @@ ru:
             '"mid"': средние
             '"treble"': высокие
       Dancelab_startMappingEach:
-        text: "{GROUP} Начать {PROPERTY} Следующие {RANGE}"
+        text: "{GROUP} начать {PROPERTY} после {RANGE}"
         options:
           GROUP:
             sprites: все
@@ -858,12 +865,12 @@ ru:
             '"mid"': средние
             '"treble"': высокие
       Dancelab_translateStrings:
-        text: Перевести {STRING}
+        text: перевести {STRING}
         options:
           STRING:
             '"music_wave"': Волны
-            '"ripples"': Рябь
-            '"ripples_random"': Случайные рябь
+            '"ripples"': Круги на воде
+            '"ripples_random"': Случайные круги на воде
             '"quads"': Углы
             '"flowers"': Цветы
             '"popsicles"': Фруктовое мороженое
@@ -1372,13 +1379,13 @@ ru:
         options:
           DANCE:
             MOVES.ClapHigh: Высокий хлопок
-            MOVES.Clown: Клоун
+            MOVES.Clown: Гангнам
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
             MOVES.Drop: Дроп
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
-            MOVES.Roll: Движение «волна»
+            MOVES.Roll: Массажер
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
@@ -1540,6 +1547,14 @@ ru:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Переместить {SPRITE} {DISTANCE} Пикселей {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Север
+            '"East"': Восток
+            '"South"': Юг
+            '"West"': Запад
       aalab_prompt:
         text: задавать вопрос {MESSAGE}
       aalab_scene:
@@ -1551,12 +1566,10 @@ ru:
             '3': '3'
       aalab_setupStory:
         text: История установки
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': показать
-            '"hide"': скрыть
+            '"random"': случайный
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:

@@ -1,6 +1,5 @@
 hidden false
 login_required true
-exclude_csf_column_in_legend true
 has_verified_resources true
 
 stage 'CSD post-course survey', flex_category: 'csdSurvey'
