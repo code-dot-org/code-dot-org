@@ -1,22 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
 import color from '../../util/color';
 
-const CODE_ORG_URL = 'https://code.org/';
-const AT_HOME_URL = 'https://code.org/athome';
-const PROJECT_GALLERY_URL = 'https://studio.code.org/projects/public';
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
   'https://medium.com/@codeorg/code-orgs-commitment-to-student-privacy-earns-accolades-cae1cca35632';
-const PRIVACY_POLICY_URL = 'https://code.org/privacy';
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
 
 const LOGIN_TYPE_NAMES = {
   [SectionLoginType.clever]: 'Clever accounts',
   [SectionLoginType.google_classroom]: 'Google Classroom accounts',
-  [SectionLoginType.picture]: 'picture passwords',
+  [SectionLoginType.picture]: 'picture passwosrds',
   [SectionLoginType.word]: 'secret words',
   [SectionLoginType.email]: 'personal logins'
 };
@@ -35,7 +32,7 @@ export default function ParentLetter({loginType, sectionCode, teacherName}) {
         <p>Hello!</p>
         <p>
           In my class, your child is learning computer science on{' '}
-          <a href={CODE_ORG_URL}>Code.org</a>, a fun, creative platform for
+          <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
           learning computer science and basic coding. Your interest in what your
           child is learning is critical, and Code.org makes it easy to stay
           involved.
@@ -53,11 +50,11 @@ export default function ParentLetter({loginType, sectionCode, teacherName}) {
           At the top of their homepage, your student can continue the course
           they are doing with their classroom at school. They can also create
           their own{' '}
-          <a href={PROJECT_GALLERY_URL}>
+          <a href={studio('/projects/public')}>
             games or artwork in the Project Gallery
           </a>{' '}
-          or check out <a href={AT_HOME_URL}>code.org/athome</a> for ideas for
-          things to work on at home.
+          or check out <a href={pegasus('/athome')}>code.org/athome</a> for
+          ideas for things to work on at home.
         </p>
         <h1>Step 3 - Connect your email to your student’s account</h1>
         <p>
@@ -85,7 +82,7 @@ export default function ParentLetter({loginType, sectionCode, teacherName}) {
             one of the highest overall scores from Common Sense Media
           </a>
           . You can find further details by viewing Code.org’s{' '}
-          <a href={PRIVACY_POLICY_URL}>Privacy Policy</a>.
+          <a href={pegasus('/privacy')}>Privacy Policy</a>.
         </p>
         <p>
           Computer science teaches students critical thinking, problem solving,
@@ -209,17 +206,15 @@ SignInInstructions.propTypes = {
 
 const GoToSignIn = () => (
   <li>
-    Go to <a href="https://studio.code.org/">studio.code.org</a> and click 'Sign
-    in'
+    Go to <a href={studio('/')}>{studio('/')}</a> and click 'Sign in'
   </li>
 );
 
 const GoToSectionSignIn = ({sectionCode}) => {
-  const sectionUrl = `studio.code.org/sections/${sectionCode}`;
+  const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
-      Go to <a href={`https://${sectionUrl}`}>{sectionUrl}</a> and click on
-      their name
+      Go to <a href={sectionUrl}>{sectionUrl}</a> and click on their name
     </li>
   );
 };
