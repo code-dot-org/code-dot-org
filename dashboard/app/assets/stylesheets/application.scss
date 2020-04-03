@@ -1757,6 +1757,11 @@ a.download-video {
       flex-grow: 1;
     }
 
+    #teacher-name-label, #student-name-label {
+      display: flex;
+      flex-basis: 100%;
+    }
+
     .checkbox {
       display: flex;
       padding: 0;
