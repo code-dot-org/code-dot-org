@@ -66,7 +66,6 @@ export default function initPage(scriptEditorData) {
         professionalLearningCourse={scriptData.professionalLearningCourse}
         peerReviewsRequired={scriptData.peerReviewsRequired}
         wrapupVideo={scriptData.wrapupVideo}
-        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
         teacherResources={teacherResources}
@@ -87,6 +86,7 @@ export default function initPage(scriptEditorData) {
         scriptFamilies={scriptEditorData.script_families}
         versionYearOptions={scriptEditorData.version_year_options}
         isLevelbuilder={scriptEditorData.is_levelbuilder}
+        tts={scriptData.tts}
       />
     </Provider>,
     document.querySelector('.edit_container')

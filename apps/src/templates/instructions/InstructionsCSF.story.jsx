@@ -110,19 +110,6 @@ const createCommonStore = function(options = {}) {
       "And then this will appear below. Used to convey information that should not be perceived as being 'spoken' by the avatar character.";
   }
 
-  if (options.tts) {
-    pageConstants.textToSpeechEnabled = true;
-    pageConstants.locale = 'en_us';
-
-    // Grab some arbitrary preexisting audio files for this test; they will not
-    // match the displayed text for this test, but that doesn't seem necessary
-    // enough to justify generating custom audio just for this storybook
-    pageConstants.ttsShortInstructionsUrl =
-      'https://tts.code.org/sharon22k/180/100/045539bb7fc9812eec4024867ac56d61/courseC_maze_programming8.mp3';
-    pageConstants.ttsLongInstructionsUrl =
-      'https://tts.code.org/sharon22k/180/100/e91c9a88c669b0aeba648353cc478452/courseC_maze_programming9.mp3';
-  }
-
   store.dispatch(setPageConstants(pageConstants));
   store.dispatch(setInstructionsConstants(instructionsConstants));
 
@@ -158,16 +145,12 @@ const STORIES = {
   'Sub-Instructions': {
     subInstructions: true
   },
-  'Text-to-Speech': {
-    tts: true
-  },
   'Full-featured example': {
     avatar: true,
     failureAvatar: true,
     feedback: true,
     hints: true,
-    longInstructions: true,
-    tts: true
+    longInstructions: true
   },
   'Full-featured Right-to-Left example': {
     avatar: true,
@@ -175,8 +158,7 @@ const STORIES = {
     feedback: true,
     hints: true,
     longInstructions: true,
-    rtl: true,
-    tts: true
+    rtl: true
   }
 };
 

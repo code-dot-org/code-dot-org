@@ -12,13 +12,14 @@ de-DE:
   upgrade_ie_link: Mehr erfahren
   en: Informatik
   computer_science_edweek: Informatik-Bildungswoche
-  csedweek_dates: 8. - 14. Dezember, 2014
+  csedweek_dates: 3. - 9. Dezember, 2018
   csedweek_banner_hoc: 'Die <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> kommt. Aufruf an alle Lehrer und Organisatoren:
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Planen Sie Ihre Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen</a>'
+  csedweek_banner_teachers_text: Unterrichten Sie Informatik? Andere CSEdWeek Ressourcen
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal
     genutzt</h3>"
   anybody_can_learn: Jeder kann es lernen.
@@ -27,8 +28,6 @@ de-DE:
     zu lernen
   petition_sign_message: 'Tragen Sie sich in der Liste ein, wenn Sie auch dieser Meinung
     sind. Werden Sie einer von # Unterstützern.'
-  petition_sign_message_support: 'Wenn Sie uns unterstützen möchten, tragen Sie sich
-    in der Liste ein. Werden Sie einer von # Unterstützern.'
   petition_join_others: 'Tritt # anderen bei'
   name: Name
   email: E-Mail
@@ -38,7 +37,7 @@ de-DE:
   twentyhours_text: Sie haben Ihre erste „Hour of Code“ beendet? Lernen Sie in diesem
     Folgekurs weitere Informatik- und Programmierkonzepte.
   og_title: Jedes Kind verdient eine Gelegenheit
-  og_title_soon: Die Hour of Code kommt
+  og_title_soon: Stunde des Codes kommt bald
   og_title_here: Die Stunde des Codes ist gekommen!
   og_description: In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik
     zu lernen.
@@ -225,10 +224,14 @@ de-DE:
   get_a_certificate_message_after: Klicken Sie auf die Urkunde, um sie herunterzuladen
     oder auszudrucken. Machen Sie nun weiter mit unseren <a href='http://studio.code.org'>anderen
     Kursen</a> oder <a href='/learn/beyond'>￼Erweitern Sie Ihr Wissen</a>.
+  get_a_certificate_message_after_markdown: Klicken Sie auf die Urkunde, um sie herunterzuladen
+    oder auszudrucken. Machen Sie nun weiter mit unseren [anderen Kursen](http://studio.code.org)
+    oder [Erweitern Sie Ihr Wissen](/learn/beyond).
   thanks_for_submitting: Danke für's Mitmachen!
   if_you_enjoyed: Wenn Ihnen das Programmieren Spaß gemacht hat, empfehlen Sie es
     Ihren Freunden weiter! Wir möchten, dass die ganze Welt Programmieren lernt.
   personalize_certificate: Urkunde personalisieren
+  print_certificates: Zeugnisse drucken
   share_achievement: Teilen Sie Ihren Erfolg
   beyond_hour_message: Machen Sie weiter mit unseren <a href='http://studio.code.org'>anderen
     Kursen</a> oder <a href='/learn/beyond'>￼Erweitern Sie Ihr Wissen</a>.
@@ -322,7 +325,7 @@ de-DE:
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_dance_title: Tanzparty
-  studiobar_dance_body: Erstelle und teile deine eigene Tanzparty
+  studiobar_dance_body: Kreieren und teilen Sie ihre eigene Tanzparty
   studiobar_hoc_title: Die Hour of Code
   studiobar_hoc_body: Mit Angry Birds programmieren lernen
   studiobar_flappy_title: Flappy Code
@@ -377,7 +380,7 @@ de-DE:
   homepage_hero_text_stat_loc: 2.5 Millionen Mädchen lernen mit Code Studio
   homepage_hero_text_stat_students: "#student_count Schüler-Accounts bei Code Studio"
   homepage_hero_text_stat_served: 'The Hour of Code: #served mal genutzt'
-  homepage_hero_hoc_is_coming: Die Hour of Code kommt
+  homepage_hero_hoc_is_coming: Stunde des Codes kommt bald
   homepage_hero_hoc_is_here: Die Hour of Code ist hier
   homepage_slot_text_hoc: Die "Hour of Code"
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
@@ -400,6 +403,7 @@ de-DE:
   homepage_action_text_signpetition: Petition unterzeichnen
   homepage_action_text_wincelebritychat: Gewinne einen Chat mit einer Berühmtheit
   homepage_signpetition_dropdown: Ich stimme zu ▾
+  homepage_signpetition_dropdown_text: Ich stimme zu
   homepage_diversity_pledge: Unterstützen
   homepage_banner_text_prizes: 'Die Hour of Code findet wieder statt, vom 7. bis 13.
     Dezember. '
@@ -998,7 +1002,7 @@ de-DE:
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
-  dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_course4: 'Kurs 4: '
   dashboard_coursea: 'Kurs A: '
   dashboard_courseb: 'Kurs B: '
   dashboard_coursec: 'Kurs C: '
@@ -1297,12 +1301,12 @@ de-DE:
   thinkersmith2_gradelevel: Alter 8 +
   kodableunplugged_gradelevel: Alter 8-13
   projguts_gradelevel: 'Alter: 10-13'
-  hourofcode_gradelevel: Im Alter von 4-104
+  hourofcode_gradelevel: Im Alter von 6-106
   frozen_gradelevel: 'Alter: 8-108'
   starwars_gradelevel: Ab 6 Jahren
   playlab_gradelevel: 'Alter: 6-14'
-  infinity_gradelevel: Im Alter von 4-104
-  artist_gradelevel: Im Alter von 4-104
+  infinity_gradelevel: 'Alter: 6-14'
+  artist_gradelevel: Im Alter von 8-108
   monstercoding_gradelevel: 'Alter: 5-13'
   allcancode_gradelevel: 'Alter: 5-10'
   csfirst_gradelevel: 'Alter: 9-14'
@@ -1474,6 +1478,8 @@ de-DE:
   coursea_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
   courseb_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
     (Ähnlich wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
+  coursec_shortdescription_congrats: Lerne die Grundlagen der Informatik und erstelle
+    Deine eigene Kunst, Geschichten und Spiele.
   coursed_shortdescription_congrats: Behandele Konzepte aus Kurs C, und gehe dann
     weiter mit Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
   coursee_shortdescription_congrats: Handle Konzepte in Kurs C & D schnell ab und
@@ -1484,6 +1490,8 @@ de-DE:
   coursea-2017_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
   courseb-2017_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
     (Ähnlich wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
+  coursec-2017_shortdescription_congrats: Lerne die Grundlagen der Informatik und
+    erstelle Deine eigene Kunst, Geschichten und Spiele.
   coursed-2017_shortdescription_congrats: Behandele Konzepte aus Kurs C, und gehe
     dann weiter mit Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
   coursee-2017_shortdescription_congrats: Handle Konzepte in Kurs C & D schnell ab
@@ -1494,6 +1502,8 @@ de-DE:
   coursea-2018_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
   courseb-2018_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
     (Ähnlich wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
+  coursec-2018_shortdescription_congrats: Lerne die Grundlagen der Informatik und
+    erstelle Deine eigene Kunst, Geschichten und Spiele.
   coursed-2018_shortdescription_congrats: Behandele Konzepte aus Kurs C, und gehe
     dann weiter mit Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
   coursee-2018_shortdescription_congrats: Handle Konzepte in Kurs C & D schnell ab
@@ -1504,6 +1514,8 @@ de-DE:
   coursea-2019_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
   courseb-2019_shortdescription_congrats: Eine Einführung in die Informatik für Leseanfänger.
     (Ähnlich wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
+  coursec-2019_shortdescription_congrats: Lerne die Grundlagen der Informatik und
+    erstelle Deine eigene Kunst, Geschichten und Spiele.
   coursed-2019_shortdescription_congrats: Behandele Konzepte aus Kurs C, und gehe
     dann weiter mit Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
   coursee-2019_shortdescription_congrats: Handle Konzepte in Kurs C & D schnell ab
@@ -2014,11 +2026,11 @@ de-DE:
     diese Seite zu betrachten, aber es können Fehler auftreten.
   flappy_shortcode: flattern
   header_home: Home
-  header_my_dashboard: Mein Armaturenbrett
+  header_my_dashboard: Meine Übersicht
   header_courses: Kurse
   header_course_catalog: Kurs Katalog
   header_project_gallery: Projekte
-  header_sections: Sektionen
+  header_sections: Lerngruppen
   header_professional_learning: Professionelles Lernen
   header_educate_overview: Lehrerübersicht
   header_educate_elementary: Grundschule
@@ -2036,7 +2048,7 @@ de-DE:
   header_about_partners: Partner
   header_about_team: Das Team
   header_about_news: Newsroom
-  header_about_evaluation: Evaluation
+  header_about_evaluation: Auswertung
   header_about_jobs: Jobs
   header_about_contact: Kontaktieren Sie uns
   header_about_faqs: FAQs
@@ -2059,7 +2071,7 @@ de-DE:
   user_header_label: Hallo %{username}
   user_header_team: Team
   user_header_my_projects: Meine Projekte
-  user_header_settings: Mein Account
+  user_header_settings: Kontoeinstellungen
   user_header_logout: Abmelden
   user_header_signin: Anmelden
   user_header_create: 'Erstelle '
@@ -2094,12 +2106,12 @@ de-DE:
     "Passwort" klicken und auf die Schaltfläche "Geheimnis zurücksetzen" klicken.
   login_cards: Loginkarten
   print_login_cards: Drucke Loginkarten
-  joining_section: Ihrer Sektion beitreten (nur einmal)
-  joining_section_overview: Wenn ein Schüler noch nicht in Ihrer Sektion ist, bitten
+  joining_section: Ihrer Lerngruppe beitreten (nur einmal)
+  joining_section_overview: Wenn ein Schüler noch nicht in Ihrer Lerngruppe ist, bitten
     Sie ihn, die folgenden Schritte durchzuführen. Beachten Sie, dass dies nur einmal
-    ausgeführt werden muss. Nach dem Beitritt in Ihre Sektion können die Schüler den
-    ihnen zugewiesenen Kurs sehen und Sie können den Fortschritt der Arbeit verfolgen,
-    die sie während ihrer Anmeldung erledigen.
+    ausgeführt werden muss. Nach dem Beitritt in Ihre Lerngruppe können die Schüler
+    den ihnen zugewiesenen Kurs sehen und Sie können den Fortschritt der Arbeit verfolgen,
+    die sie während Ihrer Anmeldung erledigen.
   joining_section_instruct_website: 'Erstellen Sie ein Code.org-Konto, falls dies
     noch nicht geschehen ist. Sie können dies unter https://studio.code.org/users/sign_up
     tun. Beachten Sie, dass sie sich entweder mit einer E-Mail-Adresse und einem Passwort
@@ -2134,9 +2146,9 @@ de-DE:
   account_sign_up_child_accept_terms: Ich bestätige, dass ich die Erlaubnis meines
     Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen.
   hoc_overview_dance_title: Tanzparty
-  hoc_overview_dance_subtitle: Programmiere eine Tanzparty, die du mit deinen Freunden
-    teilen kannst. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und
-    25 weiteren!
+  hoc_overview_dance_subtitle: Codieren Sie eine Tanzparty, um sie mit Ihren Freunden
+    zu teilen. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25
+    mehr!
   hoc_overview_dance_2019_subtitle: Programmiere eine Tanzparty, die du mit deinen
     Freunden teilen kannst. Mit Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 weiteren!
@@ -2240,6 +2252,7 @@ de-DE:
     of Code! Entdecke die Welt von Minecraft mit Code.
   hoc2018_mc_teacher_guide: Lehrer-Leitfaden anzeigen
   hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_continue_learning: Weiterlernen mit Minecraft.
   hoc2018_mc_go_to_mc_education: Gehe zu Minecraft Education
   hoc2018_mc_short_description: Nutze deine Kreativität und Problemlösungsfähigkeiten,
     um Schätze zu finden und Unterwasserwelten mit der Kraft des Codes zu erkunden.
@@ -2300,15 +2313,21 @@ de-DE:
     ihrer Musik auf Code.org.\n\n"
   hoc2018_dance_measure: Takt
   hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_dance_video1: Tanzparty - Einführung
+  hoc2018_dance_video2: Tanzparty - Ereignisse
+  hoc2018_dance_video3: Tanzparty - Eigenschaften
+  hoc2018_dance_video4: Tanzparty - Glückwünsche
   page_not_found_title: Seite nicht gefunden
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
     Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen
     Sie zurück zu unserer Webseite.
+  page_not_found_button: Zurück zur Homepage
   hoc2018_mc_with_microsoft: In Zusammenarbeit mit
   hoc2018_mc_thank_microsoft: Wir danken Microsoft für die Unterstützung unserer Vision
     und Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik
     und die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein.
+  hoc2019_mc_mee_title: Minecraft AI für Gott
   hoc2019_mc_mee_description1: 'Das neue Minecraft Hour of Code Tutorial ist jetzt
     in Minecraft verfügbar: Education Edition für Windows, Mac und iPad. Lernen Sie
     die Grundlagen der Programmierung und erkunden Sie die KI mit Ihren Schülern!'

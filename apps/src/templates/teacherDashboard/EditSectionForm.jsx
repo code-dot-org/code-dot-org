@@ -13,6 +13,7 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
+  reloadAfterEditingSection,
   stageExtrasAvailable
 } from './teacherSectionsRedux';
 import {
@@ -53,7 +54,6 @@ const style = {
 class EditSectionForm extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    locale: PropTypes.string,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
 
@@ -72,7 +72,8 @@ class EditSectionForm extends Component {
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
-    updateHiddenScript: PropTypes.func.isRequired
+    updateHiddenScript: PropTypes.func.isRequired,
+    localeEnglishName: PropTypes.string
   };
 
   state = {
@@ -125,7 +126,7 @@ class EditSectionForm extends Component {
       handleClose,
       stageExtrasAvailable,
       assignedScriptName,
-      locale,
+      localeEnglishName,
       isNewSection
     } = this.props;
 
@@ -153,7 +154,7 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            locale={locale}
+            localeEnglishName={localeEnglishName}
             isNewSection={isNewSection}
           />
           {stageExtrasAvailable(section.scriptId) && (
@@ -171,6 +172,7 @@ class EditSectionForm extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             onClick={handleClose}
             text={i18n.dialogCancel()}
             size={Button.ButtonSize.large}
@@ -178,6 +180,7 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
           />
           <Button
+            __useDeprecatedTag
             className="uitest-saveButton"
             onClick={this.onSaveClick}
             text={i18n.save()}
@@ -198,30 +201,6 @@ class EditSectionForm extends Component {
     );
   }
 }
-
-export const UnconnectedEditSectionForm = EditSectionForm;
-
-export default connect(
-  state => ({
-    initialCourseId: state.teacherSections.initialCourseId,
-    initialScriptId: state.teacherSections.initialScriptId,
-    validGrades: state.teacherSections.validGrades,
-    validAssignments: state.teacherSections.validAssignments,
-    assignmentFamilies: state.teacherSections.assignmentFamilies,
-    sections: state.teacherSections.sections,
-    section: state.teacherSections.sectionBeingEdited,
-    isSaveInProgress: state.teacherSections.saveInProgress,
-    stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-    hiddenStageState: state.hiddenStage,
-    assignedScriptName: assignedScriptName(state)
-  }),
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: finishEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
 
 const FieldProps = {
   value: PropTypes.any,
@@ -278,7 +257,7 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  locale,
+  localeEnglishName,
   isNewSection
 }) => (
   <div>
@@ -292,7 +271,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      locale={locale}
+      localeEnglishName={localeEnglishName}
       isNewSection={isNewSection}
     />
   </div>
@@ -303,7 +282,7 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  locale: PropTypes.string,
+  localeEnglishName: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
@@ -382,3 +361,40 @@ const YesNoDropdown = ({value, onChange, disabled}) => (
   </Dropdown>
 );
 YesNoDropdown.propTypes = FieldProps;
+
+let defaultPropsFromState = state => ({
+  initialCourseId: state.teacherSections.initialCourseId,
+  initialScriptId: state.teacherSections.initialScriptId,
+  validGrades: state.teacherSections.validGrades,
+  validAssignments: state.teacherSections.validAssignments,
+  assignmentFamilies: state.teacherSections.assignmentFamilies,
+  sections: state.teacherSections.sections,
+  section: state.teacherSections.sectionBeingEdited,
+  isSaveInProgress: state.teacherSections.saveInProgress,
+  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  hiddenStageState: state.hiddenStage,
+  assignedScriptName: assignedScriptName(state),
+  localeEnglishName: state.locales.localeEnglishName
+});
+
+export const UnconnectedEditSectionForm = EditSectionForm;
+
+export const ReloadAfterEditSectionForm = connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: reloadAfterEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);
+
+export default connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: finishEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);

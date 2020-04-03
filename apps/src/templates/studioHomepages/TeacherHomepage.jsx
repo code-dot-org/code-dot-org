@@ -17,6 +17,7 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
+import SpecialAnnouncement from './SpecialAnnouncement';
 
 const styles = {
   clear: {
@@ -36,7 +37,6 @@ export default class TeacherHomepage extends Component {
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
-    locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
     donorBannerName: PropTypes.string,
     donorTeacherBannerOptions: donorTeacherBannerOptionsShape,
@@ -44,7 +44,8 @@ export default class TeacherHomepage extends Component {
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
-    schoolYear: PropTypes.number
+    schoolYear: PropTypes.number,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   state = {
@@ -153,7 +154,6 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const {
-      hocLaunch,
       courses,
       topCourse,
       announcement,
@@ -168,11 +168,8 @@ export default class TeacherHomepage extends Component {
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      locale
+      specialAnnouncement
     } = this.props;
-
-    // Show the special announcement for Hour of Code 2019.
-    const showSpecialAnnouncement = true;
 
     // Hide the regular announcement/notification for now.
     const showAnnouncement = false;
@@ -182,8 +179,10 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock hocLaunch={hocLaunch} />
+        <SpecialAnnouncement isTeacher={true} />
+        {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
+        {specialAnnouncement && false && (
+          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
           <div>
@@ -238,7 +237,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
+        <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

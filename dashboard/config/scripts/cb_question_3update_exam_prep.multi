@@ -1,8 +1,8 @@
 name 'CB_Question_3update_exam_prep'
-wrong 'ASCII Character: <code> A </code>'
-right 'ASCII Character: <code> B </code>'
-wrong 'ASCII Character: <code> D </code>'
-wrong 'The table does not contain the value represented by the binary number <code>0100  0010</code>'
+wrong 'ASCII Character: ` A `'
+right 'ASCII Character: ` B `'
+wrong 'ASCII Character: ` D `'
+wrong 'The table does not contain the value represented by the binary number `0100 0010`'
 
 markdown <<MARKDOWN
 ASCII is a character-encoding scheme that uses a numeric value to represent each character. For example, the uppercase letter "G" is represented by the decimal (base 10) value 71. A partial list of characters and their corresponding ASCII values are shown in the table below. 

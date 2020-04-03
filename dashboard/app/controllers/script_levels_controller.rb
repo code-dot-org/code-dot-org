@@ -78,7 +78,7 @@ class ScriptLevelsController < ApplicationController
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = ScriptLevelsController.get_script(request, version_year: DEFAULT_VERSION_YEAR)
+    @script = ScriptLevelsController.get_script(request)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -105,6 +105,10 @@ class ScriptLevelsController < ApplicationController
       render 'levels/_hidden_stage'
       return
     end
+
+    # If the stage is not released yet (visible_after is in the future) then don't
+    # let a user go to the script_level page in that stage
+    return head(:forbidden) unless @script_level.stage.published?(current_user)
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
@@ -246,11 +250,11 @@ class ScriptLevelsController < ApplicationController
     render json: stage.summary_for_lesson_plans
   end
 
-  def self.get_script(request, version_year: nil)
+  def self.get_script(request)
     script_id = request.params[:script_id]
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
       Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
-      Script.get_from_cache(script_id, version_year: version_year)
+      Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
     script

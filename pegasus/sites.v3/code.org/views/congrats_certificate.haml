@@ -103,10 +103,10 @@
     %h2{:style=>'margin-top: 0px; margin-bottom: .5em;'}=I18n.t :thanks_for_submitting
 
     %p
-      =I18n.t :get_a_certificate_message_after
+      !=I18n.t :get_a_certificate_message_after_markdown, markdown: :inline
 
   #certificate_disable{:style=>'display: none'}
     %h2{:style=>'margin-top: 0px; margin-bottom: .5em;'}=I18n.t :congratulations
 
     %p
-      =I18n.t :beyond_hour_message
+      !=I18n.t :beyond_hour_message_markdown, markdown: :inline

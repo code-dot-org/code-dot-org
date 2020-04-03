@@ -306,8 +306,8 @@ class Section < ActiveRecord::Base
   # once such a thing exists
   def has_sufficient_discount_code_progress?
     return false if students.length < 10
-    csd2 = Script.get_from_cache('csd2-2018')
-    csd3 = Script.get_from_cache('csd3-2018')
+    csd2 = Script.get_from_cache('csd2-2019')
+    csd3 = Script.get_from_cache('csd3-2019')
     raise 'Missing scripts' unless csd2 && csd3
 
     csd2_programming_level_ids = csd2.levels.select {|level| level.is_a?(Weblab)}.map(&:id)

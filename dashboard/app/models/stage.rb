@@ -31,9 +31,11 @@ class Stage < ActiveRecord::Base
   has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
+  has_and_belongs_to_many :standards
 
   serialized_attrs %w(
     stage_extras_disabled
+    visible_after
   )
 
   # A stage has an absolute position and a relative position. The difference between the two is that relative_position
@@ -58,6 +60,15 @@ class Stage < ActiveRecord::Base
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
     script_levels.first.oldest_active_level.unplugged?
+  end
+
+  # This is currently only relevant to CSF levels, which use the Unplugged
+  # level type. As an alternative to the Unplugged level type, Levelbuilders
+  # can select if External/Markdown levels should display as unplugged.
+  def display_as_unplugged
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged?
   end
 
   def spelling_bee?
@@ -135,7 +146,8 @@ class Stage < ActiveRecord::Base
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: '')),
+        unplugged: display_as_unplugged
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -265,5 +277,13 @@ class Stage < ActiveRecord::Base
   def next_level_number_for_stage_extras(user)
     next_level = next_level_for_stage_extras(user)
     next_level ? next_level.stage.relative_position : nil
+  end
+
+  def published?(user)
+    return true if user&.levelbuilder?
+
+    return true unless visible_after
+
+    Time.parse(visible_after) <= Time.now
   end
 end

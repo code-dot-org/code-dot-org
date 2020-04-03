@@ -64,9 +64,9 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
+  after_create :set_default_scholarship_info
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
-  after_create :set_default_scholarship_info
 
   serialized_attrs %w(
     role
@@ -77,6 +77,8 @@ class Pd::Enrollment < ActiveRecord::Base
     csf_has_physical_curriculum_guide
     previous_courses
     replace_existing
+    csf_intro_intent
+    csf_intro_other_factors
   )
 
   def set_default_scholarship_info
@@ -298,6 +300,22 @@ class Pd::Enrollment < ActiveRecord::Base
     workshop.local_summer? &&
       workshop.school_year == APPLICATION_CURRENT_YEAR &&
       FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
+  end
+
+  def application_id
+    find_application_id(user_id, pd_workshop_id)
+  end
+
+  # Finds the application an user used for a workshop.
+  # Assumes that at most one application like that exists.
+  # @param [Integer] user_id
+  # @param [Integer] workshop_id
+  # @return [Integer, nil] application id or nil if cannot find any application
+  def find_application_id(user_id, workshop_id)
+    Pd::Application::ApplicationBase.where(user_id: user_id).each do |application|
+      return application.id if application.try(:pd_workshop_id) == workshop_id
+    end
+    nil
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.

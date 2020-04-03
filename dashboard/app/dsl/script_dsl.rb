@@ -5,6 +5,7 @@ class ScriptDSL < BaseDSL
     @stage = nil
     @stage_flex_category = nil
     @stage_lockable = false
+    @stage_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -14,7 +15,6 @@ class ScriptDSL < BaseDSL
     @hidden = true
     @login_required = false
     @hideable_stages = false
-    @exclude_csf_column_in_legend = false
     @student_detail_progress_view = false
     @teacher_resources = []
     @stage_extras_available = false
@@ -34,6 +34,7 @@ class ScriptDSL < BaseDSL
     @editor_experiment = nil
     @project_sharing = nil
     @curriculum_umbrella = nil
+    @tts = false
   end
 
   integer :id
@@ -43,7 +44,6 @@ class ScriptDSL < BaseDSL
   boolean :hidden
   boolean :login_required
   boolean :hideable_stages
-  boolean :exclude_csf_column_in_legend
   boolean :student_detail_progress_view
   boolean :stage_extras_available
   boolean :project_widget_visible
@@ -51,6 +51,7 @@ class ScriptDSL < BaseDSL
   boolean :has_lesson_plan
   boolean :is_stable
   boolean :project_sharing
+  boolean :tts
 
   string :wrapup_video
   string :script_announcements
@@ -82,6 +83,7 @@ class ScriptDSL < BaseDSL
     if @stage
       @stages << {
         stage: @stage,
+        visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
         stage_extras_disabled: @stage_extras_disabled,
       }.compact
@@ -89,10 +91,26 @@ class ScriptDSL < BaseDSL
     @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
+    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
     @stage_extras_disabled = nil
+  end
+
+  # If visible_after value is blank default to next wednesday at 8am PDT
+  # Otherwise use the supplied time
+  def determine_visible_after_time(visible_after_value)
+    if visible_after_value == ''
+      current_time = Time.now
+      raw_diff_to_wed = 3 - current_time.wday
+      # Make sure it is the next wednesday not the one that just passed
+      diff_to_next_wed = raw_diff_to_wed % 7
+      next_wednesday = current_time + diff_to_next_wed.day
+      visible_after_value = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
+    end
+
+    visible_after_value
   end
 
   def parse_output
@@ -104,7 +122,6 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_stages: @hideable_stages,
-      exclude_csf_column_in_legend: @exclude_csf_column_in_legend,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
@@ -124,7 +141,8 @@ class ScriptDSL < BaseDSL
       pilot_experiment: @pilot_experiment,
       editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
-      curriculum_umbrella: @curriculum_umbrella
+      curriculum_umbrella: @curriculum_umbrella,
+      tts: @tts
     }
   end
 
@@ -245,7 +263,8 @@ class ScriptDSL < BaseDSL
     @stage_extras_disabled = true
   end
 
-  def i18n_strings
+  # @override
+  def i18n_hash
     i18n_strings = {}
     @stages.each do |stage|
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
@@ -281,7 +300,6 @@ class ScriptDSL < BaseDSL
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_stages true' if script.hideable_stages
-    s << 'exclude_csf_column_in_legend true' if script.exclude_csf_column_in_legend
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
@@ -301,6 +319,7 @@ class ScriptDSL < BaseDSL
     s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
+    s << 'tts true' if script.tts
 
     s << '' unless s.empty?
     s << serialize_stages(script)
@@ -313,6 +332,7 @@ class ScriptDSL < BaseDSL
       t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
       t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
+      t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
       s << t
       stage.script_levels.each do |sl|
         type = 'level'

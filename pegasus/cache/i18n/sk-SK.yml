@@ -20,14 +20,14 @@ sk-SK:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Učíte informatiku? Pozrite sa aj na naše ďalšie materiály
     </a>'
+  csedweek_banner_teachers_text: 'Učíte informatiku? Pozrite sa aj na naše ďalšie
+    materiály '
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Aby každý študent na každej škole dostal možnosť študovať informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu
     spolu s # ďalšími.'
-  petition_sign_message_support: 'Ak nás podporuješ, zapíš sa a pridaj sa k nášmu
-    mailing listu spolu s # ďalšími.'
   petition_join_others: 'Pridaj sa k # iným'
   name: Meno
   email: E-mail
@@ -217,6 +217,7 @@ sk-SK:
   if_you_enjoyed: Ak sa ti hodina páčila, opýtaj sa priateľov či to chcú skúsiť tiež!
     Chceme, aby sa celý svet mohol učiť.
   personalize_certificate: Prispôsob si svoj certifikát
+  print_certificates: Vytlačiť certifikáty
   share_achievement: Zdieľaj svoj úspech
   beyond_hour_message: Pokračujte s našimi <a href='http://studio.code.org'>ďalšími
     kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe
@@ -398,6 +399,7 @@ sk-SK:
   homepage_action_text_signpetition: Podpíš petíciu
   homepage_action_text_wincelebritychat: Vyhraj rozhovor s celebritou
   homepage_signpetition_dropdown: Súhlasím &#x25BE;
+  homepage_signpetition_dropdown_text: Súhlasím
   homepage_diversity_pledge: Podpor diverzitu
   homepage_banner_text_prizes: 'Hodina Kódu prichádza znovu 7 - 13 decembra. '
   homepage_banner_link_prizes: 'Pripojte sa k najväčšej vzdelávacej aktivite v histórii. '
@@ -1224,8 +1226,11 @@ sk-SK:
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  csd2_name: 'Lekcia 2: Vývoj webových stránok'
+  csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
-  express_name: Zrýchlený kurz (2018)
+  express_name: Zrýchlený kurz
+  pre-express_name: Zrýchlený kurz pre predškolákov
   20-hour_name: Zrýchlený kurz
   algebra_name: Informatika v algebre - celý kurz
   AlgebraA_name: Informatika v algebre - Kurz A

@@ -1,7 +1,11 @@
 var extraArgs = null;
+var other = [];
 
 function draw() {
   executeDrawLoopAndCallbacks();
+  for (var i = 0; i < other.length; i++) {
+    other[i]();
+  }
 }
 
 /* Legacy code only. Do not add any new code below here */
@@ -11,6 +15,37 @@ function clickedOn(spriteId, callback) {
 
 function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
+}
+
+function tumbling(spriteId) {
+  var behavior = function(spriteId) {
+    changePropBy(spriteId, 'rotation', -6);
+    changePropBy(spriteId, 'x', -3);
+  };
+  return {func: behavior, name: 'tumbling'};
+}
+
+function patrollingUpDown(spriteId) {
+  var behavior = function(spriteId) {
+    if (getProp(spriteId, 'patrollingDirection') == undefined) {
+      setProp(spriteId, 'patrollingDirection', 'up');
+    }
+    var patrollingDirection = getProp(spriteId, 'patrollingDirection');
+    if (patrollingDirection == 'up') {
+      changePropBy(spriteId, 'y', 6);
+    }
+    if (patrollingDirection == 'down') {
+      changePropBy(spriteId, 'y', -6);
+    }
+    var y = getProp(spriteId, 'y');
+    if (y <= 40) {
+      setProp(spriteId, 'patrollingDirection', 'up');
+    }
+    if (y >= 360) {
+      setProp(spriteId, 'patrollingDirection', 'down');
+    }
+  };
+  return {func: behavior, name: 'patrollingUpDown'};
 }
 
 function pointInDirection(spriteId, direction) {

@@ -1,7 +1,7 @@
 login_required true
 hideable_stages true
 stage_extras_available true
-pilot_experiment 'time4cs-control'
+editor_experiment 'broward'
 
 stage 'Crowdsourcing', flex_category: 'csf_digcit'
 level 'Crowdsourcing-Unplugged'

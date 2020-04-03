@@ -1,13 +1,6 @@
 {
   "https://studio.code.org/s/course3/stage/1/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?",
-      "questions": [
-        {
-          "text": "Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city."
-        }
-      ],
       "answers": [
         {
           "text": "Seattle _____ a _____ _____.",
@@ -25,27 +18,18 @@
           "text": "Eugene is a _____ city.",
           "correct": false
         }
-      ]
+      ],
+      "content1": "Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?",
+      "questions": [
+        {
+          "text": "Seattle is a big city.  \nEugene is a medium city  \nHillview is a small city."
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/1/puzzle/3": {
     "dsls": {
-      "title": "Matching",
-      "content1": "Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.",
-      "questions": [
-        {
-          "text": "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        },
-        {
-          "text": "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        },
-        {
-          "text": "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        },
-        {
-          "text": "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
@@ -59,7 +43,23 @@
         {
           "text": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         }
-      ]
+      ],
+      "content1": "Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.",
+      "questions": [
+        {
+          "text": "**Wheels/side: 2**  \n**Windows/side: 0**"
+        },
+        {
+          "text": "**Wheels/side: 2**  \n**Windows/side: 1**"
+        },
+        {
+          "text": "**Wheels/side: 2**  \n**Windows/side: 6**"
+        },
+        {
+          "text": "**Wheels/side: 3**  \n**Windows/side: 2**"
+        }
+      ],
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/1": {
@@ -122,9 +122,18 @@
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/14": {
     "dsls": {
-      "title": "Maze Match",
+      "answers": [
+        {
+          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        },
+        {
+          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        },
+        {
+          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+        }
+      ],
       "content1": "Match the puzzles to the blocks",
-      "pre_title": "Instructions",
       "questions": [
         {
           "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
@@ -136,28 +145,11 @@
           "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         }
       ],
-      "answers": [
-        {
-          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
-        },
-        {
-          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
-        },
-        {
-          "text": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-        }
-      ]
+      "title": "Maze Match"
     }
   },
   "https://studio.code.org/s/course3/stage/2/puzzle/15": {
     "dsls": {
-      "title": "Maze Multiple Choice",
-      "content1": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks solve the puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png",
@@ -175,7 +167,14 @@
           "text": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks solve the puzzle?"
+        }
+      ],
+      "title": "Maze Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/2/extras?level_name=course3_maze_debugging_challenge1": {
@@ -291,12 +290,6 @@
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/13": {
     "dsls": {
-      "title": "Artist Multiple Choice",
-      "questions": [
-        {
-          "text": "Which blocks draw a rectangle with a perimeter of 100?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png",
@@ -314,17 +307,17 @@
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which blocks draw a rectangle with a perimeter of 100?"
+        }
+      ],
+      "title": "Artist Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/14": {
     "dsls": {
-      "title": "Artist Multiple Choice",
-      "questions": [
-        {
-          "text": "Which drawing is symmetric?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png",
@@ -342,7 +335,13 @@
           "text": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which drawing is symmetric?"
+        }
+      ],
+      "title": "Artist Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/3/puzzle/15": {
@@ -351,13 +350,6 @@
   },
   "https://studio.code.org/s/course3/stage/4/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png",
-      "questions": [
-        {
-          "text": "Which of the programs below <em>does not</em> make the exact same sequence as Program 1?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png",
@@ -371,12 +363,32 @@
           "text": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png",
+      "questions": [
+        {
+          "text": "Which of the programs below _does not_ make the exact same sequence as Program 1?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/4/puzzle/3": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "**STACK**"
+        },
+        {
+          "text": "**STAMP**"
+        },
+        {
+          "text": "**STAR**"
+        },
+        {
+          "text": "**RAMP**"
+        }
+      ],
       "content1": "Match each program to the word it makes, using the provided group of skills.",
       "content2": "/script_assets/4-5_images/unplugged/suncatchers_1.png",
       "questions": [
@@ -393,20 +405,7 @@
           "text": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         }
       ],
-      "answers": [
-        {
-          "text": "<h4>STACK</h4>"
-        },
-        {
-          "text": "<h4>STAMP</h4>"
-        },
-        {
-          "text": "<h4>STAR</h4>"
-        },
-        {
-          "text": "<h4>RAMP</h4>"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/1": {
@@ -496,13 +495,6 @@
   },
   "https://studio.code.org/s/course3/stage/5/puzzle/10": {
     "dsls": {
-      "title": "Artist Functions Multiple Choice One",
-      "content1": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Pick the correct blocks to draw this image using the given functions"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png",
@@ -516,7 +508,14 @@
           "text": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Pick the correct blocks to draw this image using the given functions"
+        }
+      ],
+      "title": "Artist Functions Multiple Choice One"
     }
   },
   "https://studio.code.org/s/course3/stage/5/extras?level_name=course3_artist_functions_challenge1": {
@@ -714,14 +713,6 @@
   },
   "https://studio.code.org/s/course3/stage/7/puzzle/10": {
     "dsls": {
-      "title": "Bee Conditionals Multiple Choice",
-      "content1": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png",
-      "content2": "A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?",
-      "questions": [
-        {
-          "text": "Choose the best blocks."
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png",
@@ -739,7 +730,15 @@
           "text": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png",
+      "content2": "A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?",
+      "questions": [
+        {
+          "text": "Choose the best blocks."
+        }
+      ],
+      "title": "Bee Conditionals Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/7/extras?level_name=course3_farmer_condLoops_challenge1": {
@@ -803,13 +802,6 @@
   },
   "https://studio.code.org/s/course3/stage/8/puzzle/12": {
     "dsls": {
-      "title": "Maze Conditionals Multiple Choice",
-      "content1": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks solve the puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png",
@@ -827,7 +819,14 @@
           "text": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks solve the puzzle?"
+        }
+      ],
+      "title": "Maze Conditionals Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/8/extras?level_name=course3_maze_until_challenge1": {
@@ -840,75 +839,69 @@
   },
   "https://studio.code.org/s/course3/stage/9/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/songwriting_1_q.png",
-      "questions": [
-        {
-          "text": "What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?"
-        }
-      ],
       "answers": [
         {
           "text": "Lou, Lou, skip to my Lou,",
           "correct": false
         },
         {
-          "text": "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.",
+          "text": "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nSkip to my Lou, my darlin.",
           "correct": true
         },
         {
-          "text": "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,",
+          "text": "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,   \nShoo, fly, shoo,",
           "correct": false
         },
         {
-          "text": "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.",
+          "text": "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,   \nSkip to my Lou, my darlin.",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/songwriting_1_q.png",
+      "questions": [
+        {
+          "text": "What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/2": {
     "dsls": {
-      "title": "Matching",
+      "answers": [
+        {
+          "text": "**Set Player 1 score to 0**"
+        },
+        {
+          "text": "**Player 1 rolls die**"
+        },
+        {
+          "text": "**Add Player 1 roll to total score**"
+        },
+        {
+          "text": "**Compare player scores to see who wins**"
+        }
+      ],
       "content1": "Match the steps in the Dice Race game to the order that they should appear in the algorithm.",
       "questions": [
         {
-          "text": "<h4>1)</h4>"
+          "text": "**1)**"
         },
         {
-          "text": "<h4>2)</h4>"
+          "text": "**2)**"
         },
         {
-          "text": "<h4>3)</h4>"
+          "text": "**3)**"
         },
         {
-          "text": "<h4>4)</h4>"
+          "text": "**4)**"
         }
       ],
-      "answers": [
-        {
-          "text": "<h4>Set Player 1 score to 0</h4>"
-        },
-        {
-          "text": "<h4>Player 1 rolls die</h4>"
-        },
-        {
-          "text": "<h4>Add Player 1 roll to total score</h4>"
-        },
-        {
-          "text": "<h4>Compare player scores to see who wins</h4>"
-        }
-      ]
+      "title": "Matching"
     }
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which one of these items is hardest to describe an algorithm for?"
-        }
-      ],
       "answers": [
         {
           "text": "Brushing your teeth",
@@ -926,7 +919,13 @@
           "text": "Banana",
           "correct": true
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which one of these items is hardest to describe an algorithm for?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/11/puzzle/1": {
@@ -987,13 +986,6 @@
   },
   "https://studio.code.org/s/course3/stage/11/puzzle/12": {
     "dsls": {
-      "title": "Artist Loops Multiple Choice",
-      "content1": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500",
-      "questions": [
-        {
-          "text": "Which blocks will create the design?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png",
@@ -1011,7 +1003,14 @@
           "text": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500",
+      "questions": [
+        {
+          "text": "Which blocks will create the design?"
+        }
+      ],
+      "title": "Artist Loops Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/11/extras?level_name=course2_artist_nestedLoops_challenge1": {
@@ -1141,13 +1140,6 @@
   },
   "https://studio.code.org/s/course3/stage/13/puzzle/13": {
     "dsls": {
-      "title": "Bee Loops Multiple Choice",
-      "content1": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png",
-      "questions": [
-        {
-          "text": "Which blocks will solve the puzzle?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png",
@@ -1165,7 +1157,14 @@
           "text": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png",
+      "questions": [
+        {
+          "text": "Which blocks will solve the puzzle?"
+        }
+      ],
+      "title": "Bee Loops Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/13/extras?level_name=course3_bee_debugging_challenge1": {
@@ -1243,14 +1242,6 @@
   },
   "https://studio.code.org/s/course3/stage/14/puzzle/13": {
     "dsls": {
-      "title": "Bee Debug Multiple Choice",
-      "content1": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png",
-      "content2": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png",
-      "questions": [
-        {
-          "text": "Which version of the function will work?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png",
@@ -1268,7 +1259,15 @@
           "text": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png",
+      "content2": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png",
+      "questions": [
+        {
+          "text": "Which version of the function will work?"
+        }
+      ],
+      "title": "Bee Debug Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/15/puzzle/1": {
@@ -1319,13 +1318,6 @@
   },
   "https://studio.code.org/s/course3/stage/18/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
-      "questions": [
-        {
-          "text": "When you try to log on to code.org, which IP address is the DNS most likely to take you to?"
-        }
-      ],
       "answers": [
         {
           "text": "23.23.224.106",
@@ -1343,18 +1335,18 @@
           "text": "54.243.71.82",
           "correct": true
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
+      "questions": [
+        {
+          "text": "When you try to log on to code.org, which IP address is the DNS most likely to take you to?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/18/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
-      "questions": [
-        {
-          "text": "If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?"
-        }
-      ],
       "answers": [
         {
           "text": "code.org",
@@ -1372,17 +1364,18 @@
           "text": "khanacademy.org",
           "correct": false
         }
-      ]
+      ],
+      "content1": "/script_assets/4-5_images/unplugged/internet_1_q.png",
+      "questions": [
+        {
+          "text": "If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/19/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which of these pictures best represents crowdsourcing?"
-        }
-      ],
       "answers": [
         {
           "text": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png",
@@ -1392,17 +1385,17 @@
           "text": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png",
           "correct": true
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which of these pictures best represents crowdsourcing?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/19/puzzle/3": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which one of these activities would be best for practicing crowdsourcing?"
-        }
-      ],
       "answers": [
         {
           "text": "Cleaning your room",
@@ -1420,17 +1413,17 @@
           "text": "Washing your face",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which one of these activities would be best for practicing crowdsourcing?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/20/puzzle/2": {
     "dsls": {
-      "title": "Multiple Choice",
-      "questions": [
-        {
-          "text": "Which piece of information listed below is okay to share on the internet?"
-        }
-      ],
       "answers": [
         {
           "text": "Your birthday",
@@ -1448,7 +1441,13 @@
           "text": "Your parent's credit card number",
           "correct": false
         }
-      ]
+      ],
+      "questions": [
+        {
+          "text": "Which piece of information listed below is okay to share on the internet?"
+        }
+      ],
+      "title": "Multiple Choice"
     }
   },
   "https://studio.code.org/s/course3/stage/21/puzzle/1": {

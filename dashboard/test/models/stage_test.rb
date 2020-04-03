@@ -79,6 +79,31 @@ class StageTest < ActiveSupport::TestCase
     assert_equal [level.id], summary[:levels].first[:ids]
   end
 
+  test "summary of levels for lesson plan" do
+    script = create :script
+    level = create :level
+    stage = create :stage, script: script, name: 'My Stage'
+    script_level = create :script_level, script: script, stage: stage, levels: [level]
+
+    expected_summary_of_levels = [
+      {
+        id: script_level.id,
+        position: script_level.position,
+        named_level: script_level.named_level?,
+        bonus_level: !!script_level.bonus,
+        assessment: script_level.assessment,
+        progression: script_level.progression,
+        path: script_level.path,
+        level_id: level.id,
+        type: level.class.to_s,
+        name: level.name,
+        display_name: level.display_name
+      }
+    ]
+
+    assert_equal expected_summary_of_levels, stage.summary_for_lesson_plans[:levels]
+  end
+
   test "last_progression_script_level" do
     stage = create :stage
     create :script_level, stage: stage
@@ -106,6 +131,49 @@ class StageTest < ActiveSupport::TestCase
 
     assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, stage1.next_level_path_for_stage_extras(@student)
     assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
+  end
+
+  class StagePublishedTests < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      @script_with_visible_after_stages = create :script
+      @stage_future_visible_after = create :stage, name: 'stage 1', script: @script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @stage_past_visible_after = create :stage, name: 'stage 2', script: @script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @stage_no_visible_after = create :stage, name: 'stage 3', script: @script_with_visible_after_stages
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test "published? returns true if levelbuilder" do
+      assert @stage_future_visible_after.published?(@levelbuilder)
+      assert @stage_past_visible_after.published?(@levelbuilder)
+      assert @stage_no_visible_after.published?(@levelbuilder)
+    end
+
+    test "published? returns true if stage does not have visible_after date" do
+      assert @stage_no_visible_after.published?(@teacher)
+      assert @stage_no_visible_after.published?(@student)
+      assert @stage_no_visible_after.published?(nil)
+    end
+
+    test "published? returns true if stage visible_after date is in past" do
+      assert @stage_past_visible_after.published?(@teacher)
+      assert @stage_past_visible_after.published?(@student)
+      assert @stage_past_visible_after.published?(nil)
+    end
+
+    test "published? returns false if stage visible_after date is in future" do
+      refute @stage_future_visible_after.published?(@teacher)
+      refute @stage_future_visible_after.published?(@student)
+      refute @stage_future_visible_after.published?(nil)
+    end
   end
 
   def create_swapped_lockable_stage

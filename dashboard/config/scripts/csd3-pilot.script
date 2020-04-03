@@ -1,6 +1,6 @@
+tts true
 login_required true
 hideable_stages true
-exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-20/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-20/unit3/code/"]]
 has_verified_resources true
@@ -200,7 +200,7 @@ level 'CSD U3 abstraction velocityY_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction rotation_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction rotation control_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction velocityY control_pilot', progression: 'Velocity'
-level 'CSD U3 abstraction velocityX if-statements_pilot', progression: 'Velocity'
+level 'CSD U3 abstraction velocityX if-statements_pilot', progression: 'Velocity', assessment: true
 level 'CSD U3 abstraction velocityX control_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction jump_2018_pilot', progression: 'Side Scroller'
 level 'CSD U3 abstraction tumbleweed_pilot', progression: 'Side Scroller'

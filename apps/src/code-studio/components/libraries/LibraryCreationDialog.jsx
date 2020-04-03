@@ -1,82 +1,73 @@
-/*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
-import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
-import annotationList from '@cdo/apps/acemode/annotationList';
 import Spinner from '../../pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
+import PublishSuccessDisplay from './PublishSuccessDisplay';
+import ShareTeacherLibraries from './ShareTeacherLibraries';
+import LibraryPublisher from './LibraryPublisher';
+import loadLibrary from './libraryLoader';
+import LibraryClientApi from './LibraryClientApi';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
-  alert: {
-    color: 'red',
-    width: '90%'
-  },
   libraryBoundary: {
     padding: 10,
     width: '90%'
-  },
-  largerCheckbox: {
-    width: 20,
-    height: 20,
-    margin: 10
-  },
-  functionItem: {
-    marginBottom: 20
-  },
-  textarea: {
-    width: 400
   },
   centerContent: {
     display: 'flex',
     justifyContent: 'center'
   },
-  copy: {
-    cursor: 'copy',
-    width: 300,
-    height: 25
-  },
-  button: {
-    marginLeft: 10,
-    marginRight: 10
+  info: {
+    fontSize: 12,
+    fontStyle: 'italic',
+    lineHeight: 1.2
   }
 };
-
-function select(event) {
-  event.target.select();
-}
 
 /**
  * @readonly
  * @enum {string}
  */
-export const PublishState = {
+export const DialogState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
-  ERROR_PUBLISH: 'error_publish',
-  CODE_ERROR: 'code_error',
-  NO_FUNCTIONS: 'no_functions'
+  UNPUBLISHED: 'unpublished',
+  SHARE_TEACHER_LIBRARIES: 'share_teacher_libraries',
+  ERROR: 'error'
 };
 
+/**
+ * Displays an interactive dialog that can be used to create a library. It
+ * includes the following displays:
+ * LOADING: Information is still being gathered for the library
+ * DONE_LOADING: Information has been gathered for the library and the user can
+ *     decide what data to publish from it
+ * PUBLISHED: The user has successfully published the library
+ * UNPUBLISHED: The user has successfully unpublished the library
+ * ERROR: There was an error loading the library
+ */
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
+    channelId: PropTypes.string.isRequired,
+
+    // From Redux
     dialogIsOpen: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired,
-    clientApi: PropTypes.object.isRequired
+    onClose: PropTypes.func.isRequired
   };
 
   state = {
-    librarySource: '',
-    sourceFunctionList: [],
-    publishState: PublishState.LOADING,
+    dialogState: DialogState.LOADING,
     libraryName: '',
-    canPublish: false
+    libraryDetails: {},
+    libraryClientApi: new LibraryClientApi(this.props.channelId),
+    errorMessage: ''
   };
 
   componentDidUpdate(prevProps) {
@@ -86,238 +77,145 @@ class LibraryCreationDialog extends React.Component {
   }
 
   onOpen = () => {
-    var error = annotationList.getJSLintAnnotations().find(annotation => {
-      return annotation.type === 'error';
-    });
-    if (error) {
-      this.setState({publishState: PublishState.CODE_ERROR});
-      return;
-    }
-
-    dashboard.project.getUpdatedSourceAndHtml_(response => {
-      let functionsList = libraryParser.getFunctions(response.source);
-      if (!functionsList || functionsList.length === 0) {
-        this.setState({publishState: PublishState.NO_FUNCTIONS});
-        return;
-      }
-      let librarySource = response.source;
-      if (response.libraries) {
-        response.libraries.forEach(library => {
-          librarySource =
-            libraryParser.createLibraryClosure(library) + librarySource;
-        });
-      }
-      this.setState({
-        libraryName: libraryParser.sanitizeName(
-          dashboard.project.getLevelName()
-        ),
-        librarySource: librarySource,
-        publishState: PublishState.DONE_LOADING,
-        sourceFunctionList: functionsList
-      });
-    });
+    loadLibrary(
+      this.state.libraryClientApi,
+      error =>
+        this.setState({dialogState: DialogState.ERROR, errorMessage: error}),
+      libraryDetails =>
+        this.setState({
+          dialogState: DialogState.DONE_LOADING,
+          libraryDetails: libraryDetails
+        })
+    );
   };
 
   handleClose = () => {
-    this.setState({publishState: PublishState.LOADING});
+    this.setState({dialogState: DialogState.LOADING});
     this.props.onClose();
   };
 
-  copyChannelId = () => {
-    let channelId = document.getElementById('library-sharing');
-    channelId.select();
-    document.execCommand('copy');
-  };
-
-  publish = event => {
-    event.preventDefault();
-    let formElements = this.formElements.elements;
-    let selectedFunctionList = [];
-    let libraryDescription = '';
-    [...formElements].forEach(element => {
-      if (element.type === 'checkbox' && element.checked) {
-        selectedFunctionList.push(this.state.sourceFunctionList[element.value]);
-      }
-      if (element.type === 'textarea') {
-        libraryDescription = element.value;
-      }
-    });
-    let libraryJson = libraryParser.createLibraryJson(
-      this.state.librarySource,
-      selectedFunctionList,
-      this.state.libraryName,
-      libraryDescription
-    );
-
-    // TODO: Display final version of error and success messages to the user.
-    this.props.clientApi.publish(
-      libraryJson,
-      error => {
-        console.warn(`Error publishing library: ${error}`);
-        this.setState({publishState: PublishState.ERROR_PUBLISH});
-      },
-      () => {
-        this.setState({publishState: PublishState.PUBLISHED});
-      }
-    );
-    dashboard.project.setLibraryName(this.state.libraryName);
-    dashboard.project.setLibraryDescription(libraryDescription);
-  };
-
-  validateInput = () => {
-    // Check if any of the checkboxes are checked
-    // If this changes the publishable state, update
-    let formElements = this.formElements.elements;
-    let isChecked = false;
-    [...formElements].forEach(element => {
-      if (element.type === 'checkbox' && element.checked) {
-        isChecked = true;
-      }
-    });
-    if (isChecked !== this.state.canPublish) {
-      this.setState({canPublish: isChecked});
-    }
-  };
-
-  displayError = errorMessage => {
-    return <div>{errorMessage}</div>;
-  };
-
-  displayLoadingState = () => {
+  displayPublisherContent = () => {
+    const {libraryDetails, libraryClientApi} = this.state;
     return (
-      <div style={styles.centerContent}>
-        <Spinner />
-      </div>
+      <LibraryPublisher
+        onPublishSuccess={libraryName =>
+          this.setState({
+            dialogState: DialogState.PUBLISHED,
+            libraryName: libraryName
+          })
+        }
+        onUnpublishSuccess={() =>
+          this.setState({dialogState: DialogState.UNPUBLISHED})
+        }
+        onShareTeacherLibrary={this.onShareTeacherLibrary()}
+        libraryDetails={libraryDetails}
+        libraryClientApi={libraryClientApi}
+      />
     );
   };
 
-  displayFunctions = () => {
-    let keyIndex = 0;
-    return (
-      <div>
-        <Heading2>
-          <b>{i18n.libraryName()}</b>
-          {this.state.libraryName}
-        </Heading2>
-        <form
-          ref={formElements => {
-            this.formElements = formElements;
-          }}
-          onSubmit={this.publish}
-        >
-          <textarea
-            required
-            name="description"
-            rows="2"
-            cols="200"
-            style={styles.textarea}
-            placeholder="Write a description of your library"
-          />
-          {this.state.sourceFunctionList.map(sourceFunction => {
-            let name = sourceFunction.functionName;
-            let comment = sourceFunction.comment;
-            return (
-              <div key={keyIndex} style={styles.functionItem}>
-                <input
-                  type="checkbox"
-                  style={styles.largerCheckbox}
-                  disabled={comment.length === 0}
-                  onClick={this.validateInput}
-                  value={keyIndex++}
-                />
-                {name}
-                <br />
-                {comment.length === 0 && (
-                  <p style={styles.alert}>
-                    {i18n.libraryExportNoCommentError()}
-                  </p>
-                )}
-                <pre>{comment}</pre>
-              </div>
-            );
-          })}
-          <div>
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value={i18n.publish()}
-              disabled={!this.state.canPublish}
-            />
-            {this.state.publishState === PublishState.ERROR_PUBLISH && (
-              <div>
-                <p id="error-alert" style={styles.alert}>
-                  {i18n.libraryPublishFail()}
-                </p>
-              </div>
-            )}
-          </div>
-        </form>
-      </div>
-    );
-  };
+  isTeacher() {
+    return getStore().getState().currentUser.userType === 'teacher';
+  }
 
-  displaySuccess = () => {
-    return (
-      <div>
-        <Heading2>
-          <b>{i18n.libraryPublishTitle()}</b>
-          {this.state.libraryName}
-        </Heading2>
-        <div>
-          <p>{i18n.libraryPublishExplanation()}</p>
-          <div style={styles.centerContent}>
-            <input
-              type="text"
-              id="library-sharing"
-              onClick={select}
-              readOnly="true"
-              value={dashboard.project.getCurrentId()}
-              style={styles.copy}
-            />
-            <Button
-              onClick={this.copyChannelId}
-              text={i18n.copyId()}
-              style={styles.button}
-            />
-          </div>
-        </div>
-      </div>
-    );
+  onShareTeacherLibrary = () => {
+    return this.isTeacher()
+      ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES})
+      : undefined;
   };
 
   render() {
-    let bodyContent;
-    switch (this.state.publishState) {
-      case PublishState.LOADING:
-        bodyContent = this.displayLoadingState();
+    let subtitleContent, bodyContent;
+    const {dialogState, libraryName, errorMessage} = this.state;
+    const {dialogIsOpen, channelId, onClose} = this.props;
+    switch (dialogState) {
+      case DialogState.LOADING:
+        bodyContent = <LoadingDisplay />;
         break;
-      case PublishState.PUBLISHED:
-        bodyContent = this.displaySuccess();
+      case DialogState.PUBLISHED:
+        bodyContent = (
+          <PublishSuccessDisplay
+            libraryName={libraryName}
+            channelId={channelId}
+            // Waiting for design guidance prior to enabling this functionality
+            // onShareTeacherLibrary={this.onShareTeacherLibrary}
+          />
+        );
         break;
-      case PublishState.CODE_ERROR:
-        bodyContent = this.displayError(i18n.libraryCodeError());
+      case DialogState.UNPUBLISHED:
+        bodyContent = <UnpublishSuccessDisplay />;
         break;
-      case PublishState.NO_FUNCTIONS:
-        bodyContent = this.displayError(i18n.libraryNoFunctonsError());
+      case DialogState.ERROR:
+        bodyContent = <ErrorDisplay message={errorMessage} />;
+        break;
+      case DialogState.DONE_LOADING:
+        subtitleContent = i18n.libraryExportSubtitle();
+        bodyContent = this.displayPublisherContent();
+        break;
+      case DialogState.SHARE_TEACHER_LIBRARIES:
+        bodyContent = <ShareTeacherLibraries onCancel={onClose} />;
         break;
       default:
-        bodyContent = this.displayFunctions();
+        // If we get to this state, we've shipped a bug.
+        bodyContent = <ErrorDisplay message={i18n.libraryCreatorError()} />;
+        break;
     }
+
+    const title =
+      dialogState === DialogState.SHARE_TEACHER_LIBRARIES
+        ? i18n.manageYourLibraries()
+        : i18n.libraryExportTitle();
     return (
       <Dialog
-        isOpen={this.props.dialogIsOpen}
+        isOpen={dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
+        style={{width: 800}}
       >
         <Body>
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
-              <Heading1>{i18n.libraryExportTitle()}</Heading1>
+              <Heading1>{title}</Heading1>
+              {subtitleContent && (
+                <div style={styles.info}>{subtitleContent}</div>
+              )}
               {bodyContent}
             </div>
           </PadAndCenter>
         </Body>
       </Dialog>
+    );
+  }
+}
+
+export class ErrorDisplay extends React.Component {
+  static propTypes = {message: PropTypes.string.isRequired};
+
+  render() {
+    const {message} = this.props;
+    return <div>{message}</div>;
+  }
+}
+
+export class LoadingDisplay extends React.Component {
+  render() {
+    return (
+      <div style={styles.centerContent}>
+        <Spinner />
+      </div>
+    );
+  }
+}
+
+export class UnpublishSuccessDisplay extends React.Component {
+  render() {
+    return (
+      <div>
+        <Heading2>
+          <b>{i18n.libraryUnPublishTitle()}</b>
+        </Heading2>
+        <p>{i18n.libraryUnPublishExplanation()}</p>
+      </div>
     );
   }
 }

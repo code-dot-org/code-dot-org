@@ -1,9 +1,7 @@
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 import $ from 'jquery';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import initializeCodeMirror, {
-  initializeCodeMirrorForJson
-} from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
 import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
@@ -16,7 +14,10 @@ import animationListModule, {
 import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
-let poolField, nameField, helperEditor;
+const VALID_COLOR = 'black';
+const INVALID_COLOR = '#d00';
+
+let poolField, nameField, helperEditor, configEditor, validationDiv;
 
 $(document).ready(() => {
   registerReducers({animationList: animationListModule});
@@ -30,30 +31,74 @@ $(document).ready(() => {
     typeHints: true
   });
 
-  let submitButton = document.querySelector('#block_submit');
-  const fixupJson = initializeCodeMirrorForJson('block_config', {onChange});
-  helperEditor = initializeCodeMirror('block_helper_code', 'javascript', {
-    callback: fixupJson,
-    onUpdateLinting: (_, errors) => {
-      if (errors.length) {
-        submitButton.setAttribute('disabled', 'disabled');
-      } else {
-        submitButton.removeAttribute('disabled');
-      }
-    }
+  const blockConfigElement = document.getElementById('block_config');
+
+  // Pretty print the config
+  let blocks = blockConfigElement.value;
+  if (blocks) {
+    blockConfigElement.value = JSON.stringify(JSON.parse(blocks), null, 2);
+  }
+
+  validationDiv = $(
+    blockConfigElement.parentNode.insertBefore(
+      document.createElement('div'),
+      blockConfigElement.nextSibling
+    )
+  );
+
+  const helperCodeElement = document.getElementById('block_helper_code');
+  configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
+    callback: validateBlockConfig,
+    onUpdateLinting: onUpdateLinting
   });
-  poolField.addEventListener('change', fixupJson);
+
+  helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
+    callback: _ => validateBlockConfig(),
+    onUpdateLinting: onUpdateLinting
+  });
+  poolField.addEventListener('change', updateBlockPreview);
+
+  if (blocks) {
+    updateBlockPreview();
+  }
 
   $('.alert.alert-success')
     .delay(5000)
     .fadeOut(1000);
 });
 
-let config;
-function onChange(editor) {
-  config = editor.getValue();
+function onUpdateLinting(_, errors) {
+  const submitButton = document.querySelector('#block_submit');
+  if (errors.length) {
+    submitButton.setAttribute('disabled', 'disabled');
+  } else {
+    submitButton.removeAttribute('disabled');
+  }
+}
 
-  const parsedConfig = jsonic(config);
+function validateBlockConfig(editor) {
+  try {
+    if (editor) {
+      JSON.parse(editor.getValue());
+    }
+    updateBlockPreview();
+    validationDiv.text('Config and helper code appear valid.');
+    validationDiv.css('color', VALID_COLOR);
+  } catch (err) {
+    validationDiv.text(err.toString());
+    validationDiv.css('color', INVALID_COLOR);
+  }
+}
+
+function getBlockName(name, pool) {
+  if (!pool || pool === 'GamelabJr') {
+    pool = 'gamelab';
+  }
+  return `${pool}_${name}`;
+}
+
+function updateBlockPreview() {
+  const parsedConfig = jsonic(configEditor.getValue());
 
   // Only Dancelab and Spritelab use customInputTypes.
   const customInputTypes =
@@ -61,7 +106,13 @@ function onChange(editor) {
       ? dancelabCustomInputTypes
       : spritelabCustomInputTypes;
 
-  const blocksInstalled = installCustomBlocks({
+  const blockName = getBlockName(
+    parsedConfig.func || parsedConfig.name,
+    poolField.value
+  );
+  nameField.value = blockName;
+  // Calling this function just so that we can catch and show errors (if any)
+  installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: [
       {
@@ -74,8 +125,6 @@ function onChange(editor) {
     ],
     customInputTypes
   });
-  const blockName = Object.values(blocksInstalled)[0][0];
-  nameField.value = blockName;
   const blocksDom = parseElement(`<block type="${blockName}" />`);
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);

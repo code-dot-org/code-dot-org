@@ -109,7 +109,6 @@ class AdvancedShareOptions extends React.Component {
     openLibraryCreationDialog: PropTypes.func.isRequired,
     onExpand: PropTypes.func.isRequired,
     expanded: PropTypes.bool.isRequired,
-    i18n: PropTypes.object.isRequired,
     channelId: PropTypes.string.isRequired,
     embedOptions: PropTypes.shape({
       iframeHeight: PropTypes.number.isRequired,
@@ -215,9 +214,7 @@ class AdvancedShareOptions extends React.Component {
     const iframeHtml = `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
-        <p style={style.p}>
-          {this.props.i18n.t('project.share_embed_description')}
-        </p>
+        <p style={style.p}>{i18n.shareEmbedDescription()}</p>
         <textarea
           type="text"
           onClick={e => e.target.select()}
@@ -429,7 +426,7 @@ class AdvancedShareOptions extends React.Component {
       }
       const embedTab = this.renderAdvancedListItem(
         ShareOptions.EMBED,
-        this.props.i18n.t('project.embed')
+        i18n.embed()
       );
       if (
         experiments.isEnabled(experiments.STUDENT_LIBRARIES) ||
@@ -468,7 +465,7 @@ class AdvancedShareOptions extends React.Component {
     const expand =
       expanded && selectedOption ? null : (
         <a onClick={onExpand} style={style.expand}>
-          {this.props.i18n.t('project.advanced_share')}
+          {i18n.advancedShare()}
         </a>
       );
     return (

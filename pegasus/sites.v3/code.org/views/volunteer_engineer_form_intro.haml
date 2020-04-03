@@ -1,7 +1,7 @@
 %h1= I18n.t(:volunteer_engineer_submission_title)
 %p
-  = I18n.t(:volunteer_engineer_submission_intro_recruit)
-  = I18n.t(:volunteer_engineer_submission_intro_guide, volunteer_guide: '/volunteer/guide')
-%p= I18n.t(:volunteer_engineer_submission_intro_links).gsub('%{learn_more}', 'https://hourofcode.com').gsub('%{volunteer_local}', '/volunteer/local')
+  != I18n.t(:volunteer_engineer_submission_intro_recruit_markdown, markdown: :inline)
+  != I18n.t(:volunteer_engineer_submission_intro_guide_markdown, markdown: :inline, volunteer_guide: '/volunteer/guide')
+%p!= I18n.t(:volunteer_engineer_submission_intro_links_markdown, markdown: :inline, learn_more: 'https://hourofcode.com', volunteer_local: '/volunteer/local')
 %img{src: "/images/fill-300x150/homepage/kids3_2x.jpg", style: "margin: 10px 0 20px 0; max-width: 100%;"}
-%p= I18n.t(:volunteer_engineer_submission_intro_signup)
+%p.form-required-em!= I18n.t(:volunteer_engineer_submission_intro_signup_markdown, markdown: :inline)

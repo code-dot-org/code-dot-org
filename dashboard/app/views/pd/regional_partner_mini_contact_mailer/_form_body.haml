@@ -1,0 +1,19 @@
+%p
+  %b Name:
+  = @form[:name]
+  %br
+  %b Email:
+  = @form[:email]
+  %br
+  %b Zip:
+  = @form[:zip]
+  %br
+  %b Role:
+  = "#{@form[:role]}"
+  %br
+  %b Grade Levels:
+  = @form[:grade_levels] ? "#{@form[:grade_levels].join(', ')}" : "Not specified"
+
+%p
+  %b Message:
+  = @form[:notes] ? @form[:notes] : "None"

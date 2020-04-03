@@ -52,6 +52,11 @@ class MediaProxyControllerTest < ActionController::TestCase
     assert_response 400
   end
 
+  test "can't access loopback IP addresses" do
+    get :get, params: {u: 'http://0.0.0.0'}
+    assert_response 400
+  end
+
   test "should fail if too many redirects" do
     response = {body: 'Redirect', status: 302, headers: {location: IMAGE_URI}}
     stub_request(:get, IMAGE_URI).to_return(
@@ -76,5 +81,26 @@ class MediaProxyControllerTest < ActionController::TestCase
     stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'image/jpeg'}, status: 503)
     get :get, params: {u: IMAGE_URI}
     assert_response 503
+  end
+
+  test "should return 400 on upstream timeouts" do
+    stub_request(:get, IMAGE_URI).to_timeout
+    get :get, params: {u: IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, 'Network error'
+  end
+
+  test "should return 400 on SSL errors" do
+    stub_request(:get, IMAGE_URI).to_raise(OpenSSL::SSL::SSLError)
+    get :get, params: {u: IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, 'Remote host SSL certificate error'
+  end
+
+  test "should return 400 on EOF errors" do
+    stub_request(:get, IMAGE_URI).to_raise(EOFError)
+    get :get, params: {u: IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, 'Remote host closed the connection'
   end
 end

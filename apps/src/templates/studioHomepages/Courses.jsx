@@ -7,10 +7,12 @@ import {CourseBlocksAll} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
+import shapes from './shapes';
 
 const styles = {
   content: {
@@ -28,7 +30,8 @@ class Courses extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
-    modernElementaryCoursesAvailable: PropTypes.bool.isRequired
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   componentDidMount() {
@@ -43,7 +46,8 @@ class Courses extends Component {
       isEnglish,
       isTeacher,
       isSignedOut,
-      modernElementaryCoursesAvailable
+      modernElementaryCoursesAvailable,
+      specialAnnouncement
     } = this.props;
     const headingText = isTeacher
       ? i18n.coursesHeadingTeacher()
@@ -55,7 +59,6 @@ class Courses extends Component {
     const headingDescription = isSignedOut
       ? i18n.coursesHeadingDescription()
       : null;
-    const showSpecialTeacherAnnouncement = false;
 
     return (
       <div style={styles.content}>
@@ -67,6 +70,7 @@ class Courses extends Component {
         >
           {isSignedOut && (
             <Button
+              __useDeprecatedTag
               href="/users/sign_up"
               color={Button.ButtonColor.gray}
               text={i18n.createAccount()}
@@ -76,11 +80,16 @@ class Courses extends Component {
 
         <ProtectedStatefulDiv ref="flashes" />
 
+        <SpecialAnnouncement isTeacher={isTeacher} />
+
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {isEnglish && isTeacher && (
           <div>
-            {showSpecialTeacherAnnouncement && (
-              <SpecialAnnouncementActionBlock />
+            {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
+            {specialAnnouncement && false && (
+              <SpecialAnnouncementActionBlock
+                announcement={specialAnnouncement}
+              />
             )}
             <CoursesTeacherEnglish />
           </div>

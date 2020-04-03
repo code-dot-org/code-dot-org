@@ -106,3 +106,12 @@
               = t('beta')
         %h4= data_t_suffix('script.name', id, 'description_audience')
         .smalltext= data_t_suffix('script.name', id, 'description')
+
+- else
+  .courseblock-span6.courseblock-wide-small{style: "min-height: 140px;"}
+    = link_to script_url(id)  do
+      .courseblock-span2.imgspan
+        %img{src: CDO.code_org_url("/shared/images/courses/fill-150x110/logo_tall_#{id}.jpg")}
+      .courseblock-span4.heading
+        %h3= data_t_suffix('script.name', id, 'title')
+        .smalltext= data_t_suffix('script.name', id, 'description_short')

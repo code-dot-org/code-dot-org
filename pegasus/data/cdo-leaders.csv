@@ -1,4 +1,6 @@
 name_s,url_s,description_t,role_s,kind_s
+Alfred Lin,leadership/alfred_lin,"Partner, Sequoia Capital",,director
+Anne Dinning,leadership/anne_dinning,"Managing Director, D. E. Shaw & Co.",,director
 Bobby Schnabel,leadership/bobby_schnabel,"Professor of Computer Science, University of Colorado Boulder",,director
 Brad Smith,leadership/brad_smith,"President, Chief Legal Officer, Microsoft",,director
 Hadi Partovi,leadership/hadi_partovi,"Founder and CEO, Code.org",,director
@@ -14,6 +16,8 @@ Anthony Suarez,leadership/anthony_suarez,Chief Technology Officer,,LT
 Alex Brenner,leadership/alex_brenner,Director of Accounting and Finance,,LT
 Alice Steinglass,leadership/alice_steinglass,President,,LT
 Cameron Wilson,leadership/cameron_wilson,"Chief Operating Officer and President of <a href=""/advocacy"">Code.org Advocacy Coalition</a>",,LT
+Emily McLeod,,Director of Curriculum,,LT
+Jackie Smalls,,Chief Programs Officer,,LT
 Leonardo Ortiz Villacorta,leadership/leonardo_ortiz_villacorta,VP of International Partnerships,,LT
 Marina Taylor,leadership/marina_taylor,Director of Product,,LT
 Megan Godwin,,Director of People Ops,,LT

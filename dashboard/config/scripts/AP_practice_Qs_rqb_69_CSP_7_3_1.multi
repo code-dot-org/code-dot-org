@@ -1,9 +1,6 @@
 name 'AP_practice_Qs_rqb_69_CSP_7_3_1'
-wrong 'The act ensures all files are distributed on the internet strictly under the terms of their copyright.
-'
-wrong 'The act has been a benefit to commercial interests without any benefit to artists.
-
-'
+wrong 'The act ensures all files are distributed on the internet strictly under the terms of their copyright.'
+wrong 'The act has been a benefit to commercial interests without any benefit to artists.'
 wrong 'The act has been a benefit to artists without any benefit to commercial interests.'
 right 'The act has both benefits and challenges in making copyrighted material available worldwide.'
 markdown <<MARKDOWN

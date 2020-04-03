@@ -1,5 +1,5 @@
 name 'courseF_multi_bee_conditionals7_predict2'
-question 'Look carefully at the code below.  What do you think will happen after you click "Run"?'
+question 'Look carefully at the code below. What do you think will happen after you click "Run"?'
 right 'The bee will get nectar at each flower, otherwise it will make honey.', feedback: 'Correct!'
 wrong 'The bee will try to get nectar from both flowers and honeycomb.', feedback: 'Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there\'s not a flower (therefore a honeycomb.).'
 wrong 'The bee will try to get honey from both flowers and honeycomb.', feedback: 'Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.'

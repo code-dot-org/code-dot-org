@@ -172,7 +172,7 @@ progress.renderCourseProgress = function(scriptData) {
         id={scriptData.id}
         courseId={scriptData.course_id}
         onOverviewPage={true}
-        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+        excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
@@ -182,7 +182,6 @@ progress.renderCourseProgress = function(scriptData) {
         redirectScriptUrl={scriptData.redirect_script_url}
         versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
         courseName={scriptData.course_name}
-        locale={scriptData.locale}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
         assignedSectionId={scriptData.assigned_section_id}

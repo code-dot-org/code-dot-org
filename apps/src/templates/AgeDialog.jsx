@@ -126,6 +126,7 @@ class AgeDialog extends Component {
                     ref={element => (this.ageDropdown = element)}
                   />
                   <Button
+                    __useDeprecatedTag
                     id="uitest-submit-age"
                     onClick={this.onClickAgeOk}
                     text={i18n.ok()}

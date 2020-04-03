@@ -91,11 +91,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will end up one step short of the pig.",
@@ -116,6 +111,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "This code gets the bird perfectly to the pig."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read through the code below very carefully. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -202,11 +202,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -227,6 +222,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
             }
           ]
         }
@@ -335,11 +335,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at this code carefully. What do you think will happen when the program runs?"
-            }
-          ],
           "answers": [
             {
               "text": "Laurel will collect 4 pieces of treasure using this code.",
@@ -360,6 +355,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Laurel tries to collect treasure where there is none and it causes an error."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at this code carefully. What do you think will happen when the program runs?"
             }
           ]
         }
@@ -458,11 +458,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -483,6 +478,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The artist draws a square."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -518,11 +518,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will not move.",
@@ -543,6 +538,11 @@
               "text": "I don't know",
               "correct": false,
               "feedback": "The repeat block will make the BB-8 move forward 5 times."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -622,11 +622,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will travel too far in the first loop.",
@@ -647,6 +642,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -913,11 +913,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -938,6 +933,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1010,11 +1010,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -1035,6 +1030,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -1124,11 +1124,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing will happen.",
@@ -1149,6 +1144,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will remove dirt as long as there is a pile, then stop when the pile is gone"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1211,14 +1211,9 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
-            }
-          ],
           "answers": [
             {
-              "text": "Nothing.  This code will leave only level ground.",
+              "text": "Nothing. This code will leave only level ground.",
               "correct": false,
               "feedback": "Incorrect. There is no code to remove dirt from the pile."
             },
@@ -1236,6 +1231,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `while` loop will handle any size loop, but there is no code to remove dirt from the pile."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a good look at the code below. What will be left at the end of this puzzle?"
             }
           ]
         }
@@ -1262,11 +1262,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will not move at all.",
@@ -1287,6 +1282,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1350,11 +1350,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The zombie will pass the correct path and end up going back and forth forever.",
@@ -1376,6 +1371,11 @@
               "correct": false,
               "feedback": "In this code, the zombie will pass the correct path and end up going back and forth forever."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen after you click \"Run\"?"
+            }
           ]
         }
       }
@@ -1390,11 +1390,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
@@ -1415,6 +1410,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ],
+          "questions": [
+            {
+              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
             }
           ]
         }
@@ -1497,11 +1497,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud."
-            }
-          ],
           "answers": [
             {
               "text": "The bee will get nectar at each flower and honey at each honeycomb.",
@@ -1522,6 +1517,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud."
             }
           ]
         }
@@ -1638,11 +1638,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will collect all of the crops.",
@@ -1665,7 +1660,12 @@
               "feedback": "The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin."
             }
           ],
-          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n"
+          "markdown": "The sprouts in this puzzle will be either corn or lettuce.\n<br/>\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1974,11 +1974,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at the functions defined below.  What will the harvester pick?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will pick two pumpkins.",
@@ -2000,6 +1995,11 @@
               "correct": false,
               "feedback": "Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look at the functions defined below. What will the harvester pick?"
+            }
           ]
         }
       }
@@ -2014,11 +2014,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. The function is not called in the program.",
@@ -2039,6 +2034,11 @@
               "text": "The artist will draw two squares with a small gap in between.",
               "correct": true,
               "feedback": "Correct! The function is called two times in the program, with a jump in between."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
             }
           ]
         }
@@ -2188,11 +2188,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press the \"Run\" button?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will solve the puzzle correctly.",
@@ -2213,6 +2208,11 @@
               "text": "The artist will draw four squares on top of one another.",
               "correct": false,
               "feedback": "Incorrect. The loop turns 90 degrees between calls to \"draw polygon\"."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press the \"Run\" button?"
             }
           ]
         }
@@ -2467,7 +2467,6 @@
   },
   "https://studio.code.org/s/express-2018/stage/29/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!\n\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n\n\n"
     }
@@ -2476,11 +2475,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with 50 pixel sides.",
@@ -2501,6 +2495,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -2624,12 +2623,6 @@
     "contained levels": [
       {
         "dsls": {
-          "title": "Bee Variables Multi",
-          "questions": [
-            {
-              "text": "Look at the code below.  How many units of nectar will the bee collect at the end?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee won't collect any nectar because the variable isn't called \"gather\".",
@@ -2651,7 +2644,13 @@
               "correct": false,
               "feedback": "The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units."
             }
-          ]
+          ],
+          "questions": [
+            {
+              "text": "Look at the code below. How many units of nectar will the bee collect at the end?"
+            }
+          ],
+          "title": "Bee Variables Multi"
         }
       }
     ]
@@ -2699,7 +2698,6 @@
   },
   "https://studio.code.org/s/express-2018/stage/31/puzzle/6": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"variables\"!**\n\n### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! \n\n---\n\n## **Vocab to Know**\n\n### **Variable** - A placeholder for a piece of information that can change\n\n"
     }
@@ -2741,7 +2739,6 @@
   },
   "https://studio.code.org/s/express-2018/stage/33/puzzle/3": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n### *For*tunately, this new loop will make solving puzzles like this really easy!\n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n\n"
     }
@@ -2750,11 +2747,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and collect all of the nectar from every flower. ",
@@ -2777,7 +2769,12 @@
               "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
           ],
-          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -2859,7 +2856,6 @@
   },
   "https://studio.code.org/s/express-2018/stage/33/puzzle/14": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"for loops\"!**\n\n### **For loops are loops where you set the start, stop, and step values.**\n\n### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.\n\n### More control means you can solve puzzles a lot faster! \n\n---\n\n## **Vocab to Know**\n\n### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)\n\n"
     }
@@ -2963,11 +2959,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
@@ -2990,7 +2981,12 @@
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
           ],
-          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -3074,7 +3070,21 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/2": {
     "short_instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  "
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/3": {
     "short_instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",
@@ -3090,7 +3100,20 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/6": {
     "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
-    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked."
+    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/7": {
     "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
@@ -3098,7 +3121,20 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/8": {
     "short_instructions": "Now create your own alien disco!",
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other"
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/1": {
     "short_instructions": "What do you think will happen if you press \"Run\" and then click on her?",
@@ -3112,7 +3148,21 @@
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/2": {
     "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
-    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/3": {
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
@@ -3120,19 +3170,67 @@
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/4": {
     "short_instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
-    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!"
+    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/5": {
     "short_instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
-    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  "
+    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/6": {
     "short_instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
-    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  "
+    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/7": {
     "short_instructions": "Freeplay: What more can you make your giraffe do? ",
-    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  "
+    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/38/puzzle/1": {
     "display_name": "Video: CS Matters"
@@ -3151,11 +3249,27 @@
     }
   },
   "https://studio.code.org/s/express-2018/stage/38/puzzle/3": {
-    "display_name": "Sprite Lab Example Project"
+    "display_name": "Sprite Lab Example Project",
+    "behavior_names": {
+      "flying south and loop": "flying south and loop",
+      "drive south and loop": "drive south and loop",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "being hungry": "being hungry",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/39/puzzle/1": {
     "dsls": {
-      "title": "Begin planning your project",
       "content1": "description here",
       "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
@@ -3164,7 +3278,21 @@
     "display_name": "Course F Artist Project"
   },
   "https://studio.code.org/s/express-2018/stage/40/puzzle/2": {
-    "display_name": "Course F Sprite Lab Project"
+    "display_name": "Course F Sprite Lab Project",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/41/puzzle/1": {
     "display_name": "Revise Artist Project"
@@ -3174,13 +3302,11 @@
   },
   "https://studio.code.org/s/express-2018/stage/42/puzzle/1": {
     "dsls": {
-      "title": "Prepare for yur presentation",
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/1": {
     "dsls": {
-      "title": "Binary Drawing",
       "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
@@ -3285,11 +3411,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a close look at the code below.  Which image will it create after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "A",
@@ -3312,7 +3433,12 @@
               "feedback": "Correct!"
             }
           ],
-          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n"
+          "markdown": "<table>\n<tr>\n\n<td style=\"padding: 0 30px 0 0;\"> <b>A)</b> <img src=\"https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>B)</b> <img src=\"https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png\" width=\"100px\"/></td>\n\n<td style=\"padding: 0 20px 0 0;\"> <b>C)</b> <img src=\"https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png\" width=\"100px\"/></td>\n\n\n<td style=\"padding: 0 20px 0 0;\"> <b>D)</b> <img src=\"https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png\" width=\"100px\"/></td>\n</tr></table>\n<br/>\n\n",
+          "questions": [
+            {
+              "text": "Take a close look at the code below. Which image will it create after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]

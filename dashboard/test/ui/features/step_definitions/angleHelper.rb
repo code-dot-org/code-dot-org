@@ -25,7 +25,7 @@ end
 
 When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y|
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousedown')")
-  @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousemove', {offsetX: #{x}, offsetY: #{y}})")
+  @browser.execute_script("var rect_ = $('.blocklyWidgetDiv svg')[0].getBoundingClientRect();Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mousemove', {clientX: #{x} + rect_.left, clientY: #{y} + rect_.top})")
   @browser.execute_script("Blockly.fireUiEvent($('.blocklyWidgetDiv svg')[0], 'mouseup')")
 end
 
