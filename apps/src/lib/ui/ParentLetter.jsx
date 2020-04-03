@@ -5,7 +5,6 @@ import _ from 'lodash';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
 import color from '../../util/color';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
@@ -37,6 +36,8 @@ const LOGIN_TYPE_NAMES = {
  */
 class ParentLetter extends React.Component {
   static propTypes = {
+    studentId: PropTypes.string,
+    autoPrint: PropTypes.bool,
     // Provided by Redux
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -50,12 +51,18 @@ class ParentLetter extends React.Component {
         secret_picture_path: PropTypes.string,
         secret_words: PropTypes.string
       })
-    ).isRequired,
+    ),
     teacherName: PropTypes.string.isRequired
   };
 
+  static defaultProps = {
+    students: []
+  };
+
   componentDidMount() {
-    this.printParentLetter();
+    if (this.props.autoPrint) {
+      this.printParentLetter();
+    }
   }
 
   printParentLetter = () => {
@@ -80,17 +87,18 @@ class ParentLetter extends React.Component {
   };
 
   render() {
-    const {students, teacherName, section} = this.props;
-    const studentId = queryParams('studentId');
-    const student = students
-      .filter(student => student.id.toString() === studentId)
-      .shift();
-    const studentName = student.name;
-    const secretPicturePath = student.secret_picture_path;
-    const secretWords = student.secret_words;
+    const {students, teacherName, section, studentId} = this.props;
     const sectionCode = section.code;
     const loginType = section.loginType;
-
+    const student =
+      students.length !== 0
+        ? students
+            .filter(student => student.id.toString() === studentId)
+            .shift()
+        : null;
+    const studentName = student ? student.name : null;
+    const secretPicturePath = student ? student.secret_picture_path : null;
+    const secretWords = student ? student.secret_words : null;
     return (
       <div id="printArea">
         <Header />
