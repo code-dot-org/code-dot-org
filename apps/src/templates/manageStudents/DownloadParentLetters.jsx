@@ -24,6 +24,7 @@ export default class DownloadParentLetters extends Component {
             color={Button.ButtonColor.gray}
             // text={i18n.moveStudents()}
             text="Download parent letters"
+            icon="file-text"
           />
         </span>
         <ReactTooltip
