@@ -173,7 +173,7 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
      * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
-     * **Step 4: Storage**: Increase storage to 32GiB
+     * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
   1. Optionally, update your ssh config so that you can connect using a shorter command:
@@ -291,7 +291,7 @@ OS X: when running `bundle install`, you may need to also run `xcode-select --in
 ### Recommended hardware
 While it's possible to run the server locally without these, we've found the following hardware specifications to be best for fast development.
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
-- Storage: The repository takes up 16GB
+- Storage: The repository takes up 20GB
 
 
 [ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso
