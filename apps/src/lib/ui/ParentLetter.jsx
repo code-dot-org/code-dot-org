@@ -192,10 +192,12 @@ const SignInInstructions = ({
               </span>
             )}
           </li>
-          <li>
-            If your student does not remember their picture password, please
-            email me and I will provide it
-          </li>
+          {!secretPicturePath && (
+            <li>
+              If your student does not remember their picture password, please
+              email me and I will provide it
+            </li>
+          )}
         </ol>
       );
       break;
@@ -211,10 +213,12 @@ const SignInInstructions = ({
             Type in their secret words {secretWords && `(${secretWords})`} and
             then click 'Sign in'
           </li>
-          <li>
-            If your student does not remember their password, please email me
-            and I will provide it
-          </li>
+          {!secretWords && (
+            <li>
+              If your student does not remember their password, please email me
+              and I will provide it
+            </li>
+          )}
         </ol>
       );
       break;
