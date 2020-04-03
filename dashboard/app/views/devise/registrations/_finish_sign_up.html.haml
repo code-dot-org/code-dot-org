@@ -44,7 +44,15 @@
                   = f.label :parent_email_preference_opt_in_required do
                     = f.check_box :parent_email_preference_opt_in_required
                     %span= t('signup_form.parent_account_checkbox')
-            .row.parent-email-field{style: "display: none;"}
+            .row.parent-email-field
+              .span3.signup-field-label
+                = f.label :parent_email do
+                  %span= t('signup_form.parent_account_email_label')
+                - if @user.errors[:parent_email_preference_email].present?
+                  %p.error= @user.errors[:parent_email_preference_email]&.first
+              .span4.parent-email-field-input
+                = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email || @user.email
+            .row.parent-email-field
               .span6.signup-field-label
                 = t('signup_form.parent_account_email_progress_permission', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
                 - if @user.errors[:parent_email_preference_opt_in].present?
@@ -56,14 +64,6 @@
                 .radio
                   = f.radio_button :parent_email_preference_opt_in, 'no'
                   = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
-            .row.parent-email-field{style: "display: none;"}
-              .span3.signup-field-label
-                = f.label :parent_email do
-                  %span= t('signup_form.parent_account_email_label')
-                - if @user.errors[:parent_email_preference_email].present?
-                  %p.error= @user.errors[:parent_email_preference_email]&.first
-              .span4.parent-email-field-input
-                = f.email_field :parent_email_preference_email, maxlength: 255, value: @user.parent_email_preference_email || @user.email
     .row
       .span3.signup-field-label
         #teacher-name-label{style: "display: none;"}
