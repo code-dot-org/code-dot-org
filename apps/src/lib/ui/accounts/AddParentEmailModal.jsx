@@ -114,14 +114,14 @@ export default class AddParentEmailModal extends React.Component {
   onParentEmailChange = event => {
     const {values, errors} = this.state;
     values['parentEmail'] = event.target.value;
-    errors['parentEmail'] = undefined;
+    errors['parentEmail'] = '';
     this.setState({values, errors});
   };
 
   onEmailOptInChange = event => {
     const {values, errors} = this.state;
     values['emailOptIn'] = event.target.value;
-    errors['emailOptIn'] = undefined;
+    errors['emailOptIn'] = '';
     this.setState({values, errors});
   };
 

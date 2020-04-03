@@ -173,7 +173,7 @@ describe('AddParentEmailModal', () => {
         emailInput(wrapper).simulate('change', {
           target: {value: 'me@example.com'}
         });
-        expect(wrapper.state().errors.parentEmail).to.be.undefined;
+        expect(wrapper.state().errors.parentEmail).to.equal('');
       });
 
       it('on emailOptIn', () => {
@@ -184,7 +184,7 @@ describe('AddParentEmailModal', () => {
         });
         expect(wrapper.state().errors.emailOptIn).to.equal('test-server-error');
         emailOptOutSelect(wrapper).simulate('change');
-        expect(wrapper.state().errors.emailOptIn).to.be.undefined;
+        expect(wrapper.state().errors.emailOptIn).to.equal('');
       });
     });
 
