@@ -351,7 +351,8 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
     const numStudents =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
-    const unpluggedLessonIds = _.map(getUnpluggedLessonsForScript(state), 'id');
+    let unpluggedLessonList = getUnpluggedLessonsForScript(state);
+    const unpluggedLessonIds = _.map(unpluggedLessonList, 'id');
     const NUM_STUDENTS_PER_PAGE = 50;
     const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
     const requests = _.range(1, numPages + 1).map(currentPage => {
@@ -368,7 +369,6 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
             scriptId,
             scoresData
           );
-          let unpluggedLessonList = getUnpluggedLessonsForScript(state);
           const lessonsToSelect = _.filter(unpluggedLessonList, function(
             lesson
           ) {
