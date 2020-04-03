@@ -18,8 +18,8 @@ export default class SpecialAnnouncement extends Component {
       ? i18n.teacherAnnouncementSpecial2020Heading()
       : i18n.studentAnnouncementSpecial2020Heading();
     const descriptionText = isTeacher
-      ? i18n.teacherAnnouncementSpecial2020Description()
-      : i18n.studentAnnouncementSpecial2020Description();
+      ? i18n.teacherAnnouncementSpecial2020Body()
+      : i18n.studentAnnouncementSpecial2020Body();
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special2020'
       : 'student_homepage_announcement_special2020';

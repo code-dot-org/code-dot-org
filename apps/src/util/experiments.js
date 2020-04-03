@@ -25,6 +25,7 @@ experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
 experiments.STUDENT_LIBRARIES = 'student-libraries';
 experiments.STANDARDS_REPORT = 'standardsReport';
+experiments.PARENT_LETTER = 'parentLetter';
 experiments.BETT_DEMO = 'bett-demo';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
