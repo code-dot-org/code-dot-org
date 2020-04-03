@@ -171,12 +171,6 @@ img.video_thumbnail {
 }
 
 .header-wrapper {
-  &.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
-    }
-  }
-
   padding-top: 0;
   min-height: 60px;
   position: relative;
@@ -1131,9 +1125,6 @@ input.header_input {
   left: $codeApp-left-margin;
   right: 25px;
   bottom: 10px;
-  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
-    top: 10px;
-  }
 
   &.centered_embed {
     position: relative;
