@@ -242,7 +242,10 @@ const SignInInstructions = ({
             {secretPicturePath && (
               <span>
                 <br />
-                <img src={secretPicturePath} style={{width: 60, margin: 10}} />
+                <img
+                  src={pegasus(`/images/${secretPicturePath}`)}
+                  style={{width: 60, margin: 10}}
+                />
               </span>
             )}
           </li>
