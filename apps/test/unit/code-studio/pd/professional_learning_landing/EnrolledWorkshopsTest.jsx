@@ -33,7 +33,7 @@ describe('EnrolledWorkshops', () => {
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
     expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(4);
-    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(7);
+    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(8);
     expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
     expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
       undefined
@@ -41,8 +41,10 @@ describe('EnrolledWorkshops', () => {
 
     // Pushing the button should bring up the modal
     enrolledWorkshopsTable
-      .find('tbody tr Button')
-      .first()
+      .find('tbody tr')
+      .at(0)
+      .find('Button')
+      .last()
       .simulate('click');
     expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
     expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
@@ -85,4 +87,33 @@ describe('EnrolledWorkshops', () => {
 
     expect(printCertificateButton.prop('disabled')).to.be.true;
   });
+
+  it('Pre-survey link button shown in workshops that have not started', function() {
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable workshops={workshops} />
+    );
+
+    enrolledWorkshopsTable
+      .find('tbody tr')
+      .at(0)
+      .find('Button')
+      .first()
+      .simulate('click');
+
+    assert(utils.windowOpen.calledOnce);
+  });
+
+  /*  it('Pre-survey link button not shown in ended workshops', function() {
+    const endedWorkshopButtons = enrolledWorkshopsTable
+      .find('tbody tr')
+      .at(0)
+      .find('Button');
+    console.log(endedWorkshopButtons.text());
+
+    expect(
+      endedWorkshopButtons
+        .map(button => button.text())
+        .includes('Print certificate')
+    ).to.be.true;
+  });*/
 });
