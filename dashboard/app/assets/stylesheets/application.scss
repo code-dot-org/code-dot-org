@@ -1649,7 +1649,7 @@ a.download-video {
 
     .field_with_errors {
       display: flex;
-      flex-grow: 1;
+      flex-basis: 100%;
     }
 
     .field_with_errors label {
@@ -1725,19 +1725,20 @@ a.download-video {
       flex-wrap: wrap;
     }
 
+    .signup-field-label {
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+      }
+    }
+
     .padded-container {
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
       .row {
         flex-grow: 1;
-      }
-
-      .parent-email-field-label {
-        flex-wrap: wrap;
-        p {
-          margin: 0;
-        }
       }
 
       .parent-email-field-input {
