@@ -23,15 +23,30 @@ const LOGIN_TYPE_NAMES = {
  * helping kids continue working on Code.org at home.
  * Designed to be rendered by itself on a page, ready for printing or PDF
  * generation.
+ *
+ * The "generic" version of this letter can be displayed by passing only
+ * the required props.
+ *
+ * The letter can be personalized by passing optional props:
+ *   studentName
+ *   secretPicturePath
+ *   secretWords
  */
-export default function ParentLetter({loginType, sectionCode, teacherName}) {
+export default function ParentLetter({
+  loginType,
+  secretPicturePath,
+  secretWords,
+  sectionCode,
+  studentName,
+  teacherName
+}) {
   return (
     <div>
       <Header />
       <article>
         <p>Hello!</p>
         <p>
-          In my class, your child is learning computer science on{' '}
+          In my class, your child {studentName} is learning computer science on{' '}
           <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
           learning computer science and basic coding. Your interest in what your
           child is learning is critical, and Code.org makes it easy to stay
@@ -45,11 +60,17 @@ export default function ParentLetter({loginType, sectionCode, teacherName}) {
           ).
         </p>
         <h1>Step 2 - Get your child set up to use Code.org at home</h1>
-        <SignInInstructions loginType={loginType} sectionCode={sectionCode} />
+        <SignInInstructions
+          loginType={loginType}
+          secretPicturePath={secretPicturePath}
+          secretWords={secretWords}
+          sectionCode={sectionCode}
+          studentName={studentName}
+        />
         <p>
-          At the top of their homepage, your student can continue the course
-          they are doing with their classroom at school. They can also create
-          their own{' '}
+          At the top of their homepage, {studentName || 'your student'} can
+          continue the course they are doing with their classroom at school.
+          They can also create their own{' '}
           <a href={studio('/projects/public')}>
             games or artwork in the Project Gallery
           </a>{' '}
@@ -100,7 +121,10 @@ export default function ParentLetter({loginType, sectionCode, teacherName}) {
 }
 ParentLetter.propTypes = {
   loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
-  sectionCode: PropTypes.string,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string,
+  sectionCode: PropTypes.string, // TODO: Conditionally-required
+  studentName: PropTypes.string,
   teacherName: PropTypes.string.isRequired
 };
 
@@ -112,7 +136,13 @@ const Header = () => {
   );
 };
 
-const SignInInstructions = ({loginType, sectionCode}) => {
+const SignInInstructions = ({
+  loginType,
+  secretPicturePath,
+  secretWords,
+  sectionCode,
+  studentName
+}) => {
   let steps;
   switch (loginType) {
     case SectionLoginType.clever:
@@ -149,12 +179,25 @@ const SignInInstructions = ({loginType, sectionCode}) => {
     case SectionLoginType.picture:
       steps = (
         <ol>
-          <GoToSectionSignIn sectionCode={sectionCode} />
-          <li>Click on their picture password and then click 'Sign in'</li>
+          <GoToSectionSignIn
+            sectionCode={sectionCode}
+            studentName={studentName}
+          />
           <li>
-            If your student does not remember their picture password, please
-            email me and I will provide it
+            Click on their picture password and then click 'Sign in'
+            {secretPicturePath && (
+              <span>
+                <br />
+                <img src={secretPicturePath} style={{width: 60, margin: 10}} />
+              </span>
+            )}
           </li>
+          {!secretPicturePath && (
+            <li>
+              If your student does not remember their picture password, please
+              email me and I will provide it
+            </li>
+          )}
         </ol>
       );
       break;
@@ -162,12 +205,20 @@ const SignInInstructions = ({loginType, sectionCode}) => {
     case SectionLoginType.word:
       steps = (
         <ol>
-          <GoToSectionSignIn sectionCode={sectionCode} />
-          <li>Type in their secret words and then click 'Sign in'</li>
+          <GoToSectionSignIn
+            sectionCode={sectionCode}
+            studentName={studentName}
+          />
           <li>
-            If your student does not remember their password, please email me
-            and I will provide it
+            Type in their secret words {secretWords && `(${secretWords})`} and
+            then click 'Sign in'
           </li>
+          {!secretWords && (
+            <li>
+              If your student does not remember their password, please email me
+              and I will provide it
+            </li>
+          )}
         </ol>
       );
       break;
@@ -201,7 +252,10 @@ const SignInInstructions = ({loginType, sectionCode}) => {
 };
 SignInInstructions.propTypes = {
   loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
-  sectionCode: PropTypes.string
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string,
+  sectionCode: PropTypes.string, // TODO: Conditional required
+  studentName: PropTypes.string
 };
 
 const GoToSignIn = () => (
@@ -210,16 +264,18 @@ const GoToSignIn = () => (
   </li>
 );
 
-const GoToSectionSignIn = ({sectionCode}) => {
+const GoToSectionSignIn = ({sectionCode, studentName}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
       Go to <a href={sectionUrl}>{sectionUrl}</a> and click on their name
+      {studentName && ` (${studentName})`}
     </li>
   );
 };
 GoToSectionSignIn.propTypes = {
-  sectionCode: PropTypes.string.isRequired
+  sectionCode: PropTypes.string.isRequired,
+  studentName: PropTypes.string
 };
 
 const styles = {
