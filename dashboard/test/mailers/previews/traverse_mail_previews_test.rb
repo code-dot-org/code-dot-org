@@ -11,7 +11,6 @@ class TraverseMailPreviewsTest < ActiveSupport::TestCase
       end
     end
 
-    puts classes
     classes.each do |klass|
       methods =  klass.instance_methods - FactoryGirl::Syntax::Methods.methods - FactoryGirl::Syntax::Methods.instance_methods
 
