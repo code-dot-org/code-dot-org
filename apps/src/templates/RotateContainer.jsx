@@ -17,23 +17,22 @@ const styles = {
     height: '100%'
   },
   rotateContainerInner: {
-    backgroundPosition: '50% 50%',
+    backgroundPosition: '50% 10%',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat'
   },
   rotateText: {
     position: 'relative',
-    top: '50%',
+    top: '25%',
     left: '-50%',
     marginLeft: '50px',
     marginRight: '-50px'
   },
   paragraph: {
     textAlign: 'center',
-    fontSize: '26px',
-    lineHeight: '26px',
-    transform: 'rotate(90deg)',
-    WebkitTransform: 'rotate(90deg)'
+    fontSize: 48,
+    lineHeight: 1.5,
+    transform: 'translate(40px, 0px) rotate(90deg)'
   }
 };
 
@@ -52,19 +51,8 @@ export default class RotateContainer extends React.Component {
       width = this.props.width;
       height = '100%';
     } else {
-      // In StudioApp.prototype.fixViewportForSmallScreens_ we end up scaling our
-      // viewport so that things look good in landscape mode. Unfortunately, this
-      // means that we can't dependably use CSS to size our rotate container in a
-      // way that works across ios and android.
-      // What we do is to figure out the scaling factor fixViewportForSmallScreens_
-      // is going to use and set our width relative to that factor.
-      // In addition, I've added an outer container that fills up the whole space
-      // with a white background, so that if you scroll off of the inner container
-      // you see white instead of the codeApp
-
-      const scale = screen.height / 1400;
-      width = window.screen.width / scale;
-      height = window.screen.height;
+      width = '90%';
+      height = '100%';
     }
 
     return (

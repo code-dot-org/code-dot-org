@@ -1825,7 +1825,9 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   var deviceWidth;
   var desiredWidth;
-  var minWidth;
+  var width;
+  var scale;
+
   if (this.share && dom.isMobile()) {
     var mobileNoPaddingShareWidth =
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
@@ -1834,23 +1836,25 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = mobileNoPaddingShareWidth;
+    var minWidth = mobileNoPaddingShareWidth;
+    width = Math.max(minWidth, desiredWidth);
+    scale = deviceWidth / width;
   } else {
-    // assume we are in landscape mode, so width is the longer of the two
-    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-    minWidth = MIN_WIDTH;
-  }
-  var width = Math.max(minWidth, desiredWidth);
-  var scale = deviceWidth / width;
+    // We want the longer edge, the width in landscape, to get MIN_WIDTH.
+    let screenWidth = Math.max(screen.width, screen.height);
 
+    width = MIN_WIDTH;
+    scale = screenWidth / width;
+  }
+
+  // Setting `minimum-scale=scale`` meant that we were unable to shrink the
+  // entire playspace area down to fit on a portrait iPhone.
   var content = [
     'width=' + width,
     'minimal-ui',
     'initial-scale=' + scale,
     'maximum-scale=' + scale,
-    'minimum-scale=' + scale,
-    'target-densityDpi=device-dpi',
-    'user-scalable=no'
+    'target-densityDpi=device-dpi'
   ];
   viewport.setAttribute('content', content.join(', '));
 };
