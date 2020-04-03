@@ -7,8 +7,10 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
+family_name 'csd3'
 version_year '2020'
 project_sharing true
+curriculum_umbrella 'CSD'
 tts true
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
