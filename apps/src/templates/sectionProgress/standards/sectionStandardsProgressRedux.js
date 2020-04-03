@@ -21,8 +21,10 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
-export const setStudentLevelScores = scoresData => ({
+export const setStudentLevelScores = (scriptId, lessonId, scoresData) => ({
   type: SET_STUDENT_LEVEL_SCORES,
+  scriptId,
+  lessonId,
   scoresData
 });
 
@@ -65,9 +67,23 @@ export default function sectionStandardsProgress(state = initialState, action) {
     };
   }
   if (action.type === SET_STUDENT_LEVEL_SCORES) {
+    const prevLevelScoreByStage = state.studentLevelScoresByStage[
+      action.scriptId
+    ]
+      ? state.studentLevelScoresByStage[action.scriptId][action.lessonId]
+      : {};
     return {
       ...state,
-      studentLevelScoresByStage: action.scoresData
+      studentLevelScoresByStage: {
+        ...state.studentLevelScoresByStage,
+        [action.scriptId]: {
+          ...state.studentLevelScoresByStage[action.scriptId],
+          [action.lessonId]: {
+            ...prevLevelScoreByStage,
+            ...action.scoresData[action.scriptId][action.lessonId]
+          }
+        }
+      }
     };
   }
   return state;
@@ -332,19 +348,29 @@ export function fetchStandardsCoveredForScript(scriptId) {
 export function fetchStudentLevelScores(scriptId, sectionId) {
   return (dispatch, getState) => {
     let state = getState();
-    $.ajax({
-      method: 'GET',
-      dataType: 'json',
-      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
-    }).then(data => {
-      const scoresData = data;
-      dispatch(setStudentLevelScores(scoresData));
+    const numStudents =
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .studentCount;
+    let unpluggedLessonList = getUnpluggedLessonsForScript(state);
+    const unpluggedLessonIds = _.map(unpluggedLessonList, 'id');
+    const NUM_STUDENTS_PER_PAGE = 50;
+    const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
+    const requests = _.range(1, numPages + 1).map(currentPage => {
+      const url = `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}?page=${currentPage}`;
+      return fetch(url, {credentials: 'include'})
+        .then(response => response.json())
+        .then(data => {
+          const scoresData = data;
+          unpluggedLessonIds.forEach(lessonId =>
+            dispatch(setStudentLevelScores(scriptId, lessonId, scoresData))
+          );
+        });
+    });
+    Promise.all(requests).then(function() {
       let initialCompletedUnpluggedLessons = getInitialUnpluggedLessonCompletionStatus(
-        state,
-        scriptId,
-        scoresData
+        getState(),
+        scriptId
       );
-      let unpluggedLessonList = getUnpluggedLessonsForScript(state);
       const lessonsToSelect = _.filter(unpluggedLessonList, function(lesson) {
         if (initialCompletedUnpluggedLessons.includes(lesson.id)) {
           return lesson;
@@ -355,15 +381,15 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
   };
 }
 
-function getInitialUnpluggedLessonCompletionStatus(
-  state,
-  scriptId,
-  scoresData
-) {
+function getInitialUnpluggedLessonCompletionStatus(state, scriptId) {
   let completedLessonIds = [];
 
-  if (scoresData[scriptId]) {
-    const levelScoresByStudentForScript = scoresData[scriptId];
+  if (
+    state.sectionStandardsProgress.studentLevelScoresByStage &&
+    state.sectionStandardsProgress.studentLevelScoresByStage[scriptId]
+  ) {
+    const levelScoresByStudentForScript =
+      state.sectionStandardsProgress.studentLevelScoresByStage[scriptId];
 
     Object.keys(levelScoresByStudentForScript).forEach(function(item) {
       const studentScoresComplete = _.filter(
