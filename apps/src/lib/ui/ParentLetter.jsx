@@ -185,7 +185,7 @@ const SignInInstructions = ({loginType, sectionCode}) => {
           </li>
           <li>
             If your student does not remember their password, they can reset it
-            from the Sign in screen
+            from the sign in screen
           </li>
         </ol>
       );
