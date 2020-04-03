@@ -106,4 +106,8 @@ module PardotHelpers
   def get_response_status(doc)
     doc.xpath('/rsp/@stat').text
   end
+
+  def log(s)
+    CDO.log.info s
+  end
 end
