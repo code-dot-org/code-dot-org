@@ -15,8 +15,6 @@
 #  index_contact_rollups_comparisons_on_email  (email) UNIQUE
 #
 
-require 'cdo/contact_rollups/v2/pardot'
-
 class ContactRollupsComparison < ApplicationRecord
   # Compiles old and new processed data then saves the results, one row per email.
   def self.compile_processed_data
