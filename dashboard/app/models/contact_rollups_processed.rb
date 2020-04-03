@@ -89,7 +89,9 @@ class ContactRollupsProcessed < ApplicationRecord
   # @return [Hash, nil] a hash containing opt_in key and value (could be nil)
   #   or nil if opt_in does not exist in the input.
   def self.extract_opt_in(contact_data)
-    return nil unless contact_data.key?('dashboard.email_preferences') && contact_data['dashboard.email_preferences'].key?('opt_in')
-    {opt_in: contact_data.dig('dashboard.email_preferences', 'opt_in')}
+    table = 'dashboard.email_preferences'
+    field = 'opt_in'
+    return nil unless contact_data.key?(table) && contact_data[table].key?(field)
+    {opt_in: contact_data.dig(table, field)}
   end
 end
