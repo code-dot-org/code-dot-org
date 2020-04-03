@@ -723,6 +723,48 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      @script = create(:script, name: 'script-with-visible-after')
+      stage_no_visible_after = create(:stage, script: @script, name: 'Stage 1')
+      create(:script_level, script: @script, stage: stage_no_visible_after)
+      stage_future_visible_after = create(:stage, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700')
+      create(:script_level, script: @script, stage: stage_future_visible_after)
+      stage_past_visible_after = create(:stage, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700')
+      create(:script_level, script: @script, stage: stage_past_visible_after)
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test 'should summarize script with visible after dates for unsigned in user' do
+      summary = @script.summarize(true, nil, false)
+      assert_equal 2, summary[:stages].count
+    end
+
+    test 'should summarize script with visible after dates for teacher' do
+      summary = @script.summarize(true, @teacher, false)
+      assert_equal 2, summary[:stages].count
+    end
+
+    test 'should summarize script with visible after dates for student' do
+      summary = @script.summarize(true, @student, false)
+      assert_equal 2, summary[:stages].count
+    end
+
+    test 'should summarize script with visible after dates for levelbuilder' do
+      summary = @script.summarize(true, @levelbuilder, false)
+      assert_equal 3, summary[:stages].count
+    end
+  end
+
   test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
