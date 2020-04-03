@@ -14169,7 +14169,7 @@ en:
           description: ''
         csd2-2020:
           title: CSD Unit 2 - Web Development
-          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
+          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
           stages:
@@ -15987,6 +15987,8 @@ en:
               description_teacher: ''
             Intro to App Lab:
               name: Intro to App Lab
+            Console.log and Multi-screen Apps:
+              name: Console.log and Multi-screen Apps
         virtual-holding-place:
           stages:
             Example Projects:
