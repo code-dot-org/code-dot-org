@@ -25,15 +25,49 @@ module Pd::Foorm
       workshop_summary = {}
       foorm_submissions.each do |submission|
         form_key = get_form_key(submission.form_name, submission.form_version)
-        survey_key = get_survey_key(ws_submissions.where(foorm_submission_id: submission.id).first)
-        next unless parsed_forms[form_key]
-        form_questions = parsed_forms[form_key]
+        ws_submission = ws_submissions.where(foorm_submission_id: submission.id).first
+        survey_key = get_survey_key(ws_submission)
+        next unless parsed_forms[:general][form_key] && parsed_forms[:facilitator][form_key]
         workshop_summary[survey_key] ||= {response_count: 0}
         workshop_summary[survey_key][:response_count] += 1
-        current_workshop_summary = workshop_summary[survey_key][form_key] || {}
-        workshop_summary[survey_key][form_key] = add_single_submission_to_summary(submission, current_workshop_summary, form_questions)
+
+        if ws_submission.facilitator_id.nil?
+          workshop_summary[survey_key][:general] ||= {}
+          workshop_summary[survey_key][:general][form_key] ||= {}
+          workshop_summary[survey_key][:general][form_key] = add_single_submission_to_summary(
+            submission,
+            workshop_summary[survey_key][:general][form_key],
+            parsed_forms[:general][form_key]
+          )
+        else
+          facilitator_name = User.find(ws_submission.facilitator_id).name
+          workshop_summary[survey_key][:facilitator] ||= {}
+          workshop_summary[survey_key][:facilitator][form_key] ||= {}
+          workshop_summary[survey_key][:facilitator][form_key] = add_facilitator_submission_to_summary(
+            submission,
+            workshop_summary[survey_key][:facilitator][form_key],
+            facilitator_name,
+            parsed_forms[:facilitator][form_key]
+          )
+        end
       end
       workshop_summary
+    end
+
+    def self.add_facilitator_submission_to_summary(submission, current_workshop_summary, facilitator_name, form_questions)
+      answers = JSON.parse(submission.answers)
+      answers.each do |name, answer|
+        next unless form_questions[name]
+
+        current_workshop_summary[name] ||= {}
+        current_workshop_summary[name][facilitator_name] = add_question_to_summary(
+          current_workshop_summary[name][facilitator_name],
+          answer,
+          answers,
+          form_questions[name][:type]
+        )
+      end
+      current_workshop_summary
     end
 
     # Add data from a survey submission to current_workshop_summary, either by updating counts of responses
@@ -44,50 +78,59 @@ module Pd::Foorm
         # parse answer based on question type (which will tell us answer format)
         # add answer to summary based on question type
         next unless form_questions[name]
-        question_type = form_questions[name][:type]
 
-        # check if this is an 'other' response and look for other
-        # text if it exists.
-        if answer == 'other'
-          comment_text_key = "#{name}-Comment"
-          if answers[comment_text_key]
-            current_workshop_summary[name]['other_answers'] ||= []
-            current_workshop_summary[name]['other_answers'] << answers[comment_text_key]
-            # don't add to counter when putting result in other_answers
-            next
-          end
-        end
-
-        case question_type
-        when ANSWER_TEXT
-          # add text to list of answers
-          current_workshop_summary[name] ||= []
-          current_workshop_summary[name] << answer
-        when ANSWER_SINGLE_SELECT, ANSWER_RATING
-          # increment a counter
-          current_workshop_summary[name] ||= {}
-          current_workshop_summary[name][answer] ||= 0
-          current_workshop_summary[name][answer] += 1
-        when ANSWER_MULTI_SELECT
-          # increment one or more counters
-          current_workshop_summary[name] ||= {}
-          current_workshop_summary[name][:num_respondents] ||= 0
-          current_workshop_summary[name][:num_respondents] += 1
-          answer.each do |single_answer|
-            current_workshop_summary[name][single_answer] ||= 0
-            current_workshop_summary[name][single_answer] += 1
-          end
-        when ANSWER_MATRIX
-          # increment one or more counters
-          current_workshop_summary[name] ||= {}
-          answer.each do |row, column|
-            current_workshop_summary[name][row] ||= {}
-            current_workshop_summary[name][row][column] ||= 0
-            current_workshop_summary[name][row][column] += 1
-          end
-        end
+        current_workshop_summary[name] = add_question_to_summary(
+          current_workshop_summary[name],
+          answer,
+          answers,
+          form_questions[name][:type]
+        )
       end
       current_workshop_summary
+    end
+
+    def self.add_question_to_summary(summary_at_question, answer, answers, question_type)
+      # check if this is an 'other' response and look for other
+      # text if it exists.
+      if answer == 'other'
+        comment_text_key = "#{name}-Comment"
+        if answers[comment_text_key]
+          summary_at_question['other_answers'] ||= []
+          summary_at_question['other_answers'] << answers[comment_text_key]
+          # don't add to counter when putting result in other_answers
+          return summary_at_question
+        end
+      end
+
+      case question_type
+      when ANSWER_TEXT
+        # add text to list of answers
+        summary_at_question ||= []
+        summary_at_question << answer
+      when ANSWER_SINGLE_SELECT, ANSWER_RATING
+        # increment a counter
+        summary_at_question ||= {}
+        summary_at_question[answer] ||= 0
+        summary_at_question[answer] += 1
+      when ANSWER_MULTI_SELECT
+        # increment one or more counters
+        summary_at_question ||= {}
+        summary_at_question[:num_respondents] ||= 0
+        summary_at_question[:num_respondents] += 1
+        answer.each do |single_answer|
+          summary_at_question[single_answer] ||= 0
+          summary_at_question[single_answer] += 1
+        end
+      when ANSWER_MATRIX
+        # increment one or more counters
+        summary_at_question ||= {}
+        answer.each do |row, column|
+          summary_at_question[row] ||= {}
+          summary_at_question[row][column] ||= 0
+          summary_at_question[row][column] += 1
+        end
+      end
+      summary_at_question
     end
   end
 end
