@@ -4,85 +4,18 @@ import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_lear
 import sinon from 'sinon';
 import {assert, expect} from 'chai';
 import * as utils from '@cdo/apps/utils';
+import {serializedWorkshopFactory} from '../../../../factories/professionalLearning';
 
 describe('EnrolledWorkshops', () => {
   const workshops = [
-    {
-      id: 1,
-      sessions: [],
-      location_name: 'My house',
-      location_address: '123 Fake Street',
-      on_map: false,
-      funded: false,
-      workshop_type: 'workshopType',
-      course: 'course',
-      subject: 'subject',
-      enrolled_teacher_count: 10,
-      capacity: 15,
-      facilitators: [],
-      organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_code: 'code1',
+    serializedWorkshopFactory.build({
       state: 'Not Started',
-      user_id: 123,
-      attended: false
-    },
-    {
-      id: 2,
-      sessions: [],
-      location_name: 'My house',
-      location_address: '123 Fake Street',
-      on_map: false,
-      funded: false,
-      workshop_type: 'workshopType',
-      course: 'course',
-      subject: 'subject',
-      enrolled_teacher_count: 10,
-      capacity: 15,
-      facilitators: [],
-      organizer: {name: 'organizer_name', email: 'organizer_email'},
-      enrollment_code: 'code2',
-      state: 'In Progress',
-      user_id: 123,
-      attended: false
-    },
-    {
-      id: 3,
-      sessions: [],
-      location_name: 'My house',
-      location_address: '123 Fake Street',
-      on_map: false,
-      funded: false,
-      workshop_type: 'workshopType',
-      course: 'course',
-      subject: 'subject',
-      enrolled_teacher_count: 10,
-      capacity: 15,
-      facilitators: [],
-      organizer: {name: null, email: null},
-      enrollment_code: 'code3',
-      state: 'Ended',
-      user_id: 123,
-      attended: true
-    },
-    {
-      id: 4,
-      sessions: [],
-      location_name: 'My house',
-      location_address: '123 Fake Street',
-      on_map: false,
-      funded: false,
-      workshop_type: 'workshopType',
-      course: 'course',
-      subject: 'subject',
-      enrolled_teacher_count: 10,
-      capacity: 15,
-      facilitators: [],
-      organizer: {name: null, email: null},
-      enrollment_code: 'code4',
-      state: 'Ended',
-      user_id: 123,
-      attended: false
-    }
+      attended: false,
+      pre_survey_url: 'code.org/pre_survey'
+    }),
+    serializedWorkshopFactory.build({state: 'In Progress', attended: false}),
+    serializedWorkshopFactory.build({state: 'Ended', attended: true}),
+    serializedWorkshopFactory.build({state: 'Ended', attended: false})
   ];
 
   beforeEach(() => {
