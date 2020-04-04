@@ -47,6 +47,7 @@ const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
   'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
+const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
@@ -108,6 +109,10 @@ export const setStageExtrasScriptIds = ids => ({
 });
 export const setTextToSpeechScriptIds = ids => ({
   type: SET_TEXT_TO_SPEECH_SCRIPT_IDS,
+  ids
+});
+export const setPreReaderScriptIds = ids => ({
+  type: SET_PREREADER_SCRIPT_IDS,
   ids
 });
 export const setAuthProviders = providers => ({
@@ -447,6 +452,7 @@ const initialState = {
   saveInProgress: false,
   stageExtrasScriptIds: [],
   textToSpeechScriptIds: [],
+  preReaderScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -531,10 +537,16 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
-    console.log(action.ids);
     return {
       ...state,
       textToSpeechScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_PREREADER_SCRIPT_IDS) {
+    return {
+      ...state,
+      preReaderScriptIds: action.ids
     };
   }
 
@@ -762,7 +774,10 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const stageExtraSettings = {};
+    const autoplayEnabledSettings = {};
     if (action.props.scriptId) {
+      autoplayEnabledSettings.autoplayEnabled =
+        state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
@@ -776,6 +791,7 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
         ...stageExtraSettings,
+        ...autoplayEnabledSettings,
         ...action.props
       }
     };

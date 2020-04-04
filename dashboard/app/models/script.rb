@@ -210,9 +210,13 @@ class Script < ActiveRecord::Base
   def self.stage_extras_script_ids
     @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
   end
-  
+
   def self.text_to_speech_script_ids
     Script.all.select(&:text_to_speech_enabled?).pluck(:id)
+  end
+
+  def self.pre_reader_script_ids
+    Script.all.select(&:csf_tts_level?).pluck(:id)
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -783,7 +787,7 @@ class Script < ActiveRecord::Base
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
-  private def csf_tts_level?
+  def csf_tts_level?
     k5_course?
   end
 

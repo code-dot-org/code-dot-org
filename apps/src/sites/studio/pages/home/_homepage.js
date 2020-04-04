@@ -11,6 +11,7 @@ import {
   setValidGrades,
   setStageExtrasScriptIds,
   setTextToSpeechScriptIds,
+  setPreReaderScriptIds,
   setAuthProviders,
   beginEditingNewSection,
   setPageType,
@@ -32,8 +33,9 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
-  console.log(homepageData.textToSpeechScriptIds);
   store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
+  console.log(homepageData.preReaderScriptIds);
+  store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
