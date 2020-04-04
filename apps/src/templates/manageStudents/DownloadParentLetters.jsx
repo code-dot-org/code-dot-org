@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   button: {
@@ -12,16 +13,19 @@ const styles = {
 
 export default class DownloadParentLetters extends Component {
   static propTypes = {
-    numStudents: PropTypes.number.isRequired
+    numStudents: PropTypes.number.isRequired,
+    sectionId: PropTypes.number
   };
 
   render() {
+    console.log(teacherDashboardUrl(this.props.sectionId, '/parent_letter'));
     return (
       <div style={styles.button}>
         <span data-tip="" data-for="download-letter">
           <Button
             __useDeprecatedTag
-            onClick={() => {}}
+            href={teacherDashboardUrl(this.props.sectionId, '/parent_letter')}
+            target="_blank"
             color={Button.ButtonColor.gray}
             text={i18n.downloadParentLetter()}
             icon="file-text"

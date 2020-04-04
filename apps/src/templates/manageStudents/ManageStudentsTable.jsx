@@ -600,6 +600,7 @@ class ManageStudentsTable extends Component {
           )}
           <DownloadParentLetters
             numStudents={this.studentDataMinusBlanks().length}
+            sectionId={this.props.sectionId}
           />
         </div>
         <Table.Provider
