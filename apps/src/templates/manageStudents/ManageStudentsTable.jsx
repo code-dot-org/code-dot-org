@@ -34,6 +34,7 @@ import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetters from './DownloadParentLetters';
 import Button from '../Button';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   headerName: {
@@ -598,10 +599,12 @@ class ManageStudentsTable extends Component {
               transferStatus={transferStatus}
             />
           )}
-          <DownloadParentLetters
-            numStudents={this.studentDataMinusBlanks().length}
-            sectionId={this.props.sectionId}
-          />
+          {experiments.isEnabled(experiments.PARENT_LETTER) && (
+            <DownloadParentLetters
+              numStudents={this.studentDataMinusBlanks().length}
+              sectionId={this.props.sectionId}
+            />
+          )}
         </div>
         <Table.Provider
           columns={columns}
