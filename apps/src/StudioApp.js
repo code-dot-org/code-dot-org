@@ -1858,7 +1858,8 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     'minimal-ui',
     'initial-scale=' + scale,
     'minimum-scale=' + scale,
-    'target-densityDpi=device-dpi'
+    'target-densityDpi=device-dpi',
+    'viewport-fit=cover'
   ];
   viewport.setAttribute('content', content.join(', '));
 };
