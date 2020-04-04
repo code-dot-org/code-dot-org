@@ -1847,13 +1847,17 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     scale = screenWidth / width;
   }
 
-  // Setting `minimum-scale=scale`` meant that we were unable to shrink the
-  // entire playspace area down to fit on a portrait iPhone.
+  // Setting `minimum-scale=scale` means that we are unable to shrink the
+  // entire playspace area down to fit on a portrait iPhone, even though
+  // it's technically not visible because of the RotateContainer on top.
+  // But setting `maximum-scale=scale` was preventing an Android from starting
+  // in the desired zoom level in landscape, so we removed that but left
+  // `minimum-scale=scale`.
   var content = [
     'width=' + width,
     'minimal-ui',
     'initial-scale=' + scale,
-    'maximum-scale=' + scale,
+    'minimum-scale=' + scale,
     'target-densityDpi=device-dpi'
   ];
   viewport.setAttribute('content', content.join(', '));

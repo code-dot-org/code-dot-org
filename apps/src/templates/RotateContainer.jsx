@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
+import _ from 'lodash';
 
 // NOTE: We still have a media query style associated with this component
 // in RotateContainer.scss which controls the display attribute (none vs block)
@@ -17,22 +18,23 @@ const styles = {
     height: '100%'
   },
   rotateContainerInner: {
-    backgroundPosition: '50% 10%',
+    position: 'absolute',
+    backgroundPosition: '50% 50%',
     backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    width: '100%',
+    height: '100%'
   },
   rotateText: {
     position: 'relative',
-    top: '25%',
-    left: '-50%',
-    marginLeft: '50px',
-    marginRight: '-50px'
+    top: '50%',
+    left: '-40%'
   },
   paragraph: {
     textAlign: 'center',
-    fontSize: 48,
+    fontSize: 24,
     lineHeight: 1.5,
-    transform: 'translate(40px, 0px) rotate(90deg)'
+    transform: 'rotate(90deg)'
   }
 };
 
@@ -41,35 +43,78 @@ const styles = {
  */
 export default class RotateContainer extends React.Component {
   static propTypes = {
-    assetUrl: PropTypes.func.isRequired,
-    width: PropTypes.number
+    assetUrl: PropTypes.func.isRequired
+  };
+
+  state = {
+    hasVisualViewport: false
+  };
+
+  componentDidMount() {
+    if (window.visualViewport) {
+      this.updateViewport();
+
+      this.resizeListener = _.throttle(this.updateViewport, 200);
+      window.visualViewport.addEventListener('resize', this.resizeListener);
+      window.visualViewport.addEventListener('scroll', this.resizeListener);
+    }
+  }
+
+  updateViewport = () => {
+    this.setState({
+      hasVisualViewport: true,
+      offsetLeft: window.visualViewport.offsetLeft,
+      offsetTop: window.visualViewport.offsetTop,
+      width: window.visualViewport.width,
+      height: window.visualViewport.height
+    });
   };
 
   render() {
-    let width, height;
-    if (this.props.width) {
-      width = this.props.width;
-      height = '100%';
-    } else {
-      width = '90%';
-      height = '100%';
+    // Duplicate the default styles in case we want to modify any.
+    let rotateContainerInnerStyle = {
+      ...styles.rotateContainerInner,
+      backgroundImage:
+        'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')'
+    };
+    let rotateTextStyle = {...styles.rotateText};
+    let paragraphStyle = {...styles.paragraph};
+
+    // Override the defaults if the browser supports window.visualViewport.
+    if (this.state.hasVisualViewport) {
+      const width = this.state.width;
+      const height = this.state.height;
+      const offsetLeft = this.state.offsetLeft;
+      const offsetTop = this.state.offsetTop;
+      const textLeft = width * -0.4;
+      const textTop = height / 2;
+      const fontSize = width / 25;
+
+      rotateContainerInnerStyle = {
+        ...rotateContainerInnerStyle,
+        width: width,
+        height: height,
+        left: offsetLeft,
+        top: offsetTop
+      };
+
+      rotateTextStyle = {
+        ...rotateTextStyle,
+        left: textLeft,
+        top: textTop
+      };
+
+      paragraphStyle = {
+        ...paragraphStyle,
+        fontSize: fontSize
+      };
     }
 
     return (
       <div id="rotateContainer" style={styles.rotateContainer}>
-        <div
-          style={{
-            ...styles.rotateContainerInner,
-            width: width,
-            height: height,
-            backgroundImage:
-              'url(' +
-              this.props.assetUrl('media/turnphone_horizontal.png') +
-              ')'
-          }}
-        >
-          <div style={styles.rotateText}>
-            <p style={styles.paragraph}>
+        <div id="rotateContainerInner" style={rotateContainerInnerStyle}>
+          <div id="rotateText" style={rotateTextStyle}>
+            <p style={paragraphStyle}>
               {msg.rotateText()}
               <br />
               {msg.orientationLock()}
