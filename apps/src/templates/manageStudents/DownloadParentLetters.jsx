@@ -18,7 +18,6 @@ export default class DownloadParentLetters extends Component {
   };
 
   render() {
-    console.log(teacherDashboardUrl(this.props.sectionId, '/parent_letter'));
     return (
       <div style={styles.button}>
         <span data-tip="" data-for="download-letter">
