@@ -12,6 +12,7 @@
 #  lockable          :boolean          default(FALSE), not null
 #  relative_position :integer          not null
 #  properties        :text(65535)
+#  lesson_group_id   :integer
 #
 # Indexes
 #
