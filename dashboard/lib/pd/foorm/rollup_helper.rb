@@ -37,17 +37,19 @@ module Pd::Foorm
         # across all versions/forms.
         next unless validate_question(question, question_data, parsed_forms)
         parsed_question_data = parsed_forms[question_data[:form_keys].first][question]
+
+        questions[question] = {
+          title: parsed_question_data[:title],
+          type: parsed_question_data[:type],
+          form_keys: question_data[:form_keys]
+        }
         case parsed_question_data[:type]
-          # TODO: add more question types
         when ANSWER_MATRIX
-          questions[question] = {
-            title: parsed_question_data[:title],
-            rows: parsed_question_data[:rows],
-            column_count: parsed_question_data[:columns].length,
-            type: parsed_question_data[:type],
-            header: question_data[:header_text],
-            form_keys: question_data[:form_keys]
-          }
+          questions[question][:rows] = parsed_question_data[:rows]
+          questions[question][:column_count] = parsed_question_data[:columns].length
+          questions[question][:header] = question_data[:header_text]
+        when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+          questions[question][:column_count] = parsed_question_data[:choices].length
         end
       end
       questions
@@ -61,16 +63,21 @@ module Pd::Foorm
       rows = nil
       columns = nil
       question_data[:form_keys].each do |form_key|
-        question = parsed_forms[form_key][question]
-        return false unless question[:type] = question_data[:type]
-        case question[:type]
-          # TODO: add more question types
+        parsed_question = parsed_forms[form_key][question]
+        return false unless parsed_question[:type] = question_data[:type]
+        case parsed_question[:type]
         when ANSWER_MATRIX
           if rows.nil? && columns.nil?
-            rows = question[:rows]
-            columns = question[:columns]
+            rows = parsed_question[:rows]
+            columns = parsed_question[:columns]
           else
-            return false unless rows == question[:rows] && columns == question[:columns]
+            return false unless rows == parsed_question[:rows] && columns == parsed_question[:columns]
+          end
+        when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+          if columns.nil?
+            columns = parsed_question[:choices]
+          else
+            return false unless columns == parsed_question[:choices]
           end
         end
       end
