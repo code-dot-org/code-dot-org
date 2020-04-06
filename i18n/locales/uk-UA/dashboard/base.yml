@@ -221,6 +221,7 @@ uk:
       %{name}
   parent_mailer:
     student_associated_subject: 'Вхідні дані для Code.org'
+    parent_email_added_subject: 'Ласкаво просимо на Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Ласкаво просимо на Code.org!'
     delete_teacher_subject: 'Сповіщення Code.org: Ваш аккаунт був вилучений'

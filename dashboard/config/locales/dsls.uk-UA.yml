@@ -313,9 +313,10 @@ uk-UA:
           correct: true
         - text: _____ є _____ за _____.
         - text: Eugene — _____ місто.
+        content1: Ось три речення. Який зі зразків нижче підходить до кожного з речень
         questions:
-        - text: Сіетл - величезне місто. <br/> Eugene є середні міста <br/> Hillview
-            — місто.
+        - text: Сіетл - величезне місто. <br/> Eugene — середнє місто <br/> Hillview
+            — мале місто.
         title: Множинний вибір
       4-5 Crowdsourcing Multi 1:
         answers:
