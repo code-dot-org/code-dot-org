@@ -15,7 +15,16 @@
   csedweek_banner_teachers_text: "Êtes-vous un professeur d’informatique ? Voir les autres ressources de la Semaine de l’enseignement de l’informatique"
   n_have_learned_an_hoc: "<h1>Essayez une</h1><h2>Heure de Code</h2><h3># servi</h3>"
   try_hoc_num_served: "<h1>Essayez une</h1><h2> Heure de Code</h2><h3>%{num} ont été formés</h3>"
-  try_hoc_num_served_markdown: "# Essayez une\\n\\n## Heure de Code\\n\\n### %{num} ont été formés"
+  try_hoc_num_served_markdown: |-
+    # Essayez une\
+    \
+    ## Heure de Code\
+    \
+    ### %{num} ont été formés #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Tout le monde peut apprendre."
   learn_now: "Apprenez maintenant"
   petition_message: "Chaque élève de chaque école devrait avoir la possibilité d'apprendre l'informatique."
@@ -601,7 +610,7 @@
   dashboard_hoc_courses_desc: "Essayez l'un de ces tutoriels plus courts (1 heure) avec vos élèves !"
   dashboard_hoc_courses_desc_and_cta: "Essayez l'un de ces courts tutoriels d’1 heure avec vos élèves. <a href=\"https://hourofcode.com\">Rejoignez le mouvement de l'Heure de Code</a> au cours de la Semaine de l'enseignement de l’informatique."
   dashboard_k5_courses: "20 heures de cours pour l’école primaire"
-  dashboard_k5_courses_desc: "Ces cours associent en ligne des tutoriels autoguidés et effectués à son rythme avec des activités «&#160;débranchées&#160;» qui ne nécessitent pas du tout d’ordinateur. Chaque cours se compose d'environ 20 leçons qui peuvent être mises en œuvre en une seule unité ou au cours d'un semestre. Même les enfants de maternelle qui ne savent pas lire peuvent participer. Pour vous aider à démarrer, nous proposons des ateliers gratuits de perfectionnement professionnel (sous forme de journées pédagogiques) de haute qualité à travers les États-Unis. <a href=\"/professional-development-workshops\">Trouvez-en un près de chez vous !</a>"
+  dashboard_k5_courses_desc: "Ces cours associent en ligne des tutoriels autoguidés et effectués à son rythme avec des activités «débranchées» qui ne nécessitent pas du tout d’ordinateur. Chaque cours se compose d'environ 20 leçons qui peuvent être mises en œuvre en une seule unité ou au cours d'un semestre. Même les enfants de maternelle qui ne savent pas lire peuvent participer. Pour vous aider à démarrer, nous proposons des ateliers gratuits de perfectionnement professionnel (sous forme de journées pédagogiques) de haute qualité à travers les États-Unis. <a href=\"/professional-development-workshops\">Trouvez-en un près de chez vous !</a> "
   dashboard_middle_courses: "20 heures de cours au collège"
   dashboard_middle_courses_desc: "Notre programme pour le collège utilise l’informatique et la programmation dans le cadre des mathématiques et des sciences au collège - comme un outil pour enseigner les concepts mathématiques et scientifiques. Pour vous inscrire aux ateliers de perfectionnement professionnel/journées pédagogiques, demandez un <a href=\"/educate/districts\">partenariat à l’échelle du district</a> avec Code.org."
   dashboard_high_courses: "Cours pour le lycée tout au long de l’année"
@@ -812,7 +821,7 @@
   learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\">Trouvez un bénévole local</a> pour vous aider lors de votre Heure de Code"
   learn_teacher_led_lesson_plans: "Soyez inspiré par les <a href=\"https://code.org/teacher-led\">plans de cours d’Une Heure de Code menés par l’enseignant</a>"
   learn_how_to_hoc: "Suivez <a href=\"https://hourofcode.com/how-to\">notre guide pratique</a> de l'enseignement d'une Heure de Code"
-  learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\">En savoir plus</a> sur les prix pour chaque éducateur, jusqu’à épuisement des stocks."
+  learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\"> En savoir plus</a> sur les prix pour chaque éducateur."
   learn_inspirational_videos: "Poussez l’imagination des élèves en leur montrant <a href=\"https://code.org/educate/inspire\">ces vidéos</a>"
   hoc2014_try_new_tutorials: "Essayez nos nouveaux tutoriels Heure de Code"
   hoc2014_try_new_tutorial: "Essayez notre nouveau tutoriel heure de Code en version bêta"
@@ -938,6 +947,7 @@
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
   express-2019_name: Cour rapide (2017)
   pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
+  express-2020_name: Cour rapide (2017)
   csd2_name: 'Unit 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et jeux'
   accelerated_name: "Cours accéléré"

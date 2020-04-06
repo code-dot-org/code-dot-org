@@ -19,7 +19,12 @@ zh-CN:
   csedweek_banner_teachers_text: 你是电脑科学课的老师吗？看其他的电脑科学教育周的资料吧
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
   try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
-  try_hoc_num_served_markdown: "# 尝试\\n\\n##《编程一小时》\\n\\n###%{num}参与"
+  try_hoc_num_served_markdown: |-
+    # 尝试\
+    \
+    ##《编程一小时》\
+    \
+    ###%{num}参与 #Try an
   anybody_can_learn: 任何人都可以学习。
   learn_now: 现在开始学习
   petition_message: 任何学校的任何学生都应有机会学习计算机科学
@@ -986,10 +991,17 @@ zh-CN:
   coursed-2019_name: 课程 D (2019)
   coursee-2019_name: 课程 E (2019)
   coursef-2019_name: 课程 F （2019）
+  coursea-2020_name: 课程 A (2019)
+  courseb-2020_name: 课程 B (2019)
+  coursec-2020_name: 课程 C (2019)
+  coursed-2020_name: 课程 D (2019)
+  coursee-2020_name: 课程 E (2019)
+  coursef-2020_name: 课程 F （2019）
   express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
   pre-express-2019_name: 学前儿童的速学课程（2019）
+  express-2020_name: 速学课程 (2019)
   csd2_name: 单元 2：网页开发
   csd3_name: 单元 3：动画和游戏
   accelerated_name: 加速课程
