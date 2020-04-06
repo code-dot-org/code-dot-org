@@ -58,6 +58,18 @@ export default class SurveyRollupTableFoorm extends React.Component {
             thisWorkshopAverages,
             overallQuestionAverages
           );
+        } else if (
+          questionData.type === 'scale' ||
+          questionData.type === 'singleSelect' ||
+          questionData.type === 'multiSelect'
+        ) {
+          this.parseSelectData(
+            rows,
+            questionData,
+            questionId,
+            thisWorkshopAverages,
+            overallQuestionAverages
+          );
         }
       }
     }
@@ -143,6 +155,29 @@ export default class SurveyRollupTableFoorm extends React.Component {
         id: rowId
       });
     }
+  }
+
+  // parse row data for a set of select answers
+  parseSelectData(
+    rows,
+    questionData,
+    questionId,
+    thisWorkshopAverage,
+    overallQuestionAverage
+  ) {
+    let denominator = questionData.column_count;
+    rows.push({
+      question: {
+        text: questionData.title,
+        type: 'overall'
+      },
+      thisWorkshop: thisWorkshopAverage
+        ? `${thisWorkshopAverage} / ${denominator}`
+        : '',
+      overall: `${overallQuestionAverage} / ${denominator}`,
+      id: questionId,
+      isHeader: true
+    });
   }
 
   render() {
