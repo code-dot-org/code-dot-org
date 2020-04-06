@@ -17,6 +17,7 @@ The numbers for `setPosition` are **x and y coordinates of the screen**.
 
 * 0,0 is the top left corner.
 * Specify a location by how many pixels from the **left and down** from the top of the screen it is.  
+  * Remember that the *x* and *y* properties in the `setPosition` block specify the element's **top left** corner.
 * The screen is **320 by 450 pixels**.  
 * You can **hover over the screen** to see the x,y coordinate of any point.
 

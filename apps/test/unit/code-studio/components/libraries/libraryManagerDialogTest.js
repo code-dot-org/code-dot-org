@@ -16,16 +16,23 @@ describe('LibraryManagerDialog', () => {
     'An error occurred while importing your library. Please make sure you have a valid ID and an internet connection.';
 
   describe('viewCode', () => {
-    it('sets the view library', () => {
+    it('sets displayLibrary and displayLibraryMode in state', () => {
       const wrapper = shallow(
-        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+        <LibraryManagerDialog onClose={() => {}} isOpen={false} />
       );
       let library = {foo: 'bar'};
-      expect(wrapper.state().viewingLibrary).to.deep.equal({});
-      expect(wrapper.state().isViewingCode).to.be.false;
+      expect(wrapper.state().displayLibrary).to.be.null;
+      expect(wrapper.state().displayLibraryMode).to.equal('none');
       wrapper.instance().viewCode(library);
-      expect(wrapper.state().isViewingCode).to.be.true;
-      expect(wrapper.state().viewingLibrary).to.deep.equal(library);
+      expect(wrapper.state().displayLibraryMode).to.equal('view');
+      expect(wrapper.state().displayLibrary).to.deep.equal(library);
+      library = {new: 'library'};
+      wrapper.instance().viewCode(library, 'update');
+      expect(wrapper.state().displayLibraryMode).to.equal('update');
+      expect(wrapper.state().displayLibrary).to.deep.equal(library);
+      wrapper.instance().viewCode(library, null);
+      expect(wrapper.state().displayLibraryMode).to.equal('view');
+      expect(wrapper.state().displayLibrary).to.deep.equal(library);
     });
   });
 
@@ -253,6 +260,57 @@ describe('LibraryManagerDialog', () => {
       server.respond();
 
       expect(server.requests.length).to.equal(0);
+    });
+  });
+
+  describe('renderDisplayLibrary', () => {
+    let wrapper, library;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={false} />
+      );
+      library = {
+        name: 'MyLibrary',
+        description: 'Very fun!',
+        source: 'function myLibrary() {};'
+      };
+    });
+
+    it('returns the view mode component if displayLibraryMode is "view"', () => {
+      wrapper.setState({displayLibrary: library, displayLibraryMode: 'view'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent.props.title).to.equal(library.name);
+      expect(libraryComponent.props.description).to.equal(library.description);
+      expect(libraryComponent.props.sourceCode).to.equal(library.source);
+      expect(libraryComponent.props.buttons).to.be.undefined;
+    });
+
+    it('returns the update mode component if displayLibraryMode is "update"', () => {
+      wrapper.setState({displayLibrary: library, displayLibraryMode: 'update'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent.props.title).to.equal(
+        `Are you sure you want to update ${library.name}?`
+      );
+      expect(libraryComponent.props.description).to.equal(library.description);
+      expect(libraryComponent.props.sourceCode).to.equal(library.source);
+      expect(libraryComponent.props.buttons).to.not.be.undefined;
+    });
+
+    it('returns null if displayLibraryMode is not "update" or "view"', () => {
+      wrapper.setState({displayLibrary: library, displayLibraryMode: 'hi'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent).to.be.null;
+    });
+
+    it('returns null if displayLibrary is not set in state', () => {
+      wrapper.setState({displayLibrary: null, displayLibraryMode: 'view'});
+
+      const libraryComponent = wrapper.instance().renderDisplayLibrary();
+      expect(libraryComponent).to.be.null;
     });
   });
 
