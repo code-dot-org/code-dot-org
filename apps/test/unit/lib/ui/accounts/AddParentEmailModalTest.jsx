@@ -93,6 +93,20 @@ describe('AddParentEmailModal', () => {
         );
       });
 
+      it('checks that email is different that current one', () => {
+        wrapper.setProps({currentParentEmail: 'old@example.com'});
+        wrapper.setState({
+          values: {
+            parentEmail: 'old@example.com',
+            emailOptIn: 'yes'
+          }
+        });
+
+        expect(wrapper.text()).to.include(
+          i18n.addParentEmailModal_parentEmail_mustBeDifferent()
+        );
+      });
+
       it('reports email server errors', () => {
         const serverError = 'test-server-error';
         wrapper.setState({
@@ -159,7 +173,7 @@ describe('AddParentEmailModal', () => {
         emailInput(wrapper).simulate('change', {
           target: {value: 'me@example.com'}
         });
-        expect(wrapper.state().errors.parentEmail).to.be.undefined;
+        expect(wrapper.state().errors.parentEmail).to.equal('');
       });
 
       it('on parentEmailOptIn', () => {
@@ -172,7 +186,7 @@ describe('AddParentEmailModal', () => {
           'test-server-error'
         );
         parentEmailOptOutSelect(wrapper).simulate('change');
-        expect(wrapper.state().errors.parentEmailOptIn).to.be.undefined;
+        expect(wrapper.state().errors.parentEmailOptIn).to.equal('');
       });
     });
 

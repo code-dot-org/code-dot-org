@@ -20,20 +20,27 @@ export default class AddParentEmailModal extends React.Component {
     /**
      * @type {function()}
      */
-    handleCancel: PropTypes.func.isRequired
+    handleCancel: PropTypes.func.isRequired,
+    currentParentEmail: PropTypes.string
   };
 
-  state = {
-    saveState: STATE_INITIAL,
-    values: {
-      parentEmail: '',
-      parentEmailOptIn: ''
-    },
-    errors: {
-      parentEmail: '',
-      parentEmailOptIn: ''
-    }
-  };
+  constructor(props) {
+    super(props);
+    const displayedParentEmail = props.currentParentEmail
+      ? props.currentParentEmail
+      : '';
+    this.state = {
+      saveState: STATE_INITIAL,
+      values: {
+        parentEmail: displayedParentEmail,
+        parentEmailOptIn: ''
+      },
+      errors: {
+        parentEmail: '',
+        parentEmailOptIn: ''
+      }
+    };
+  }
 
   focusOnError() {
     const {errors} = this.state;
@@ -91,6 +98,9 @@ export default class AddParentEmailModal extends React.Component {
     if (!isEmail(parentEmail.trim())) {
       return i18n.addParentEmailModal_parentEmail_invalid();
     }
+    if (parentEmail.trim() === this.props.currentParentEmail) {
+      return i18n.addParentEmailModal_parentEmail_mustBeDifferent();
+    }
     return null;
   };
 
@@ -105,14 +115,14 @@ export default class AddParentEmailModal extends React.Component {
   onParentEmailChange = event => {
     const {values, errors} = this.state;
     values['parentEmail'] = event.target.value;
-    errors['parentEmail'] = undefined;
+    errors['parentEmail'] = '';
     this.setState({values, errors});
   };
 
   onEmailOptInChange = event => {
     const {values, errors} = this.state;
     values['parentEmailOptIn'] = event.target.value;
-    errors['parentEmailOptIn'] = undefined;
+    errors['parentEmailOptIn'] = '';
     this.setState({values, errors});
   };
 
