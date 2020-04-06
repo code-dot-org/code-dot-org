@@ -48,7 +48,7 @@ module Api::V1::Pd
       response = JSON.parse(@response.body)
 
       assert_equal 2, response['this_workshop']['Day 0']['response_count']
-      matrix_response = response['this_workshop']['Day 0']['surveys/pd/workshop_daily_survey_day_0.0']['teaching_cs_matrix']
+      matrix_response = response['this_workshop']['Day 0']['general']['surveys/pd/workshop_daily_survey_day_0.0']['teaching_cs_matrix']
 
       assert_not_nil matrix_response['committed_to_teaching_cs']
       assert_not_nil matrix_response['like_teaching_cs']
