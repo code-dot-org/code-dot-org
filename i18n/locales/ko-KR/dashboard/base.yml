@@ -212,6 +212,7 @@ ko:
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
+    parent_email_added_subject: 'Code.org에 오신것을 환영합니다!'
   teacher_mailer:
     new_teacher_subject: 'Code.org에 오신것을 환영합니다!'
   section:
