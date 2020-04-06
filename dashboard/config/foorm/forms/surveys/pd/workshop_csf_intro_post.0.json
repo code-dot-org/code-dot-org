@@ -12,8 +12,7 @@
         {
           "type": "matrix",
           "name": "overall_success",
-          "title": "Overall",
-          "description": "How much do you agree or disagree with the following statements about the workshop overall?",
+          "title": "How much do you agree or disagree with the following statements about the workshop overall?",
           "columns": [
             {
               "value": "1",
@@ -74,8 +73,7 @@
         {
           "type": "matrix",
           "name": "teacher_engagement",
-          "title": "Engagement",
-          "description": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
+          "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
           "columns": [
             {
               "value": "1",
@@ -134,8 +132,7 @@
         {
           "type": "matrix",
           "name": "curriculum_impressions",
-          "title": "Curriculum",
-          "description": "Having attended the workshop, what are your overall impressions of the {workshop_course} curriculum?",
+          "title": "Having attended the workshop, what are your overall impressions of the {workshop_course} curriculum?",
           "columns": [
             {
               "value": "1",
@@ -203,8 +200,7 @@
             {
               "type": "matrix",
               "name": "facilitator_effectiveness",
-              "title": "Facilitator",
-              "description": "During my workshop, {panel.facilitatorName} did the following:",
+              "title": "During my workshop, {panel.facilitatorName} did the following:",
               "columns": [
                 {
                   "value": "1",
@@ -291,7 +287,7 @@
         {
           "type": "radiogroup",
           "name": "gender",
-          "title": "Gender",
+          "title": "What is your gender identity?",
           "isRequired": true,
           "choices": [
             {
@@ -359,8 +355,7 @@
         {
           "type": "radiogroup",
           "name": "permission",
-          "title": "Permission",
-          "description": "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "title": "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
           "isRequired": true,
           "choices": [
             {
