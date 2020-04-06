@@ -4971,6 +4971,7 @@ pl:
               name: Przetwarzanie
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
+            0:
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5052,6 +5053,8 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Text:
+              name: Tekst
         coursea-2020:
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: 'Wiek 4-7'
@@ -5060,10 +5063,10 @@ pl:
               name: Bezpiecznie dotrzeć na miejsce
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
+            'Programming: Happy Maps':
+              name: Szczęśliwe Mapy (Happy Maps)
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
-            Loops in Ice Age:
-              name: Pętle w Epoce Lodowcowej
         courseb-2020:
           description_audience: 'Wiek 5-8'
           stages:
@@ -5073,6 +5076,8 @@ pl:
               name: Przenieść go, przenieść go
             Programming in Maze:
               name: Programowanie w labiryncie
+            'Loops: Getting Loopy':
+              name: Poznając pętle
         coursec-2020:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: 'Wiek 6-10'
@@ -5087,11 +5092,15 @@ pl:
               name: Pętle z Rey i BB-8
             Looking Ahead:
               name: Patrząc w przyszłość
+            'Events: The Big Event':
+              name: Wielkie wydarzenie
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
         coursed-2020:
           description_audience: 'Wiek 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programowanie na papierze milimetrowym
             Introduction to Online Puzzles:
               name: Wprowadzenie do puzzli online
             Relay Programming:
@@ -5099,13 +5108,13 @@ pl:
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Bee:
               name: Wyrażenie warunkowe w pszczole
             'Unplugged: Binary':
-              name: 'Bez komputera: Binarny'
+              name: Binarne obrazy (Binary Images)
             Artist Binary:
               name: 'Artysta: Binarny'
             Digital Citizenship:
@@ -5115,14 +5124,16 @@ pl:
         coursee-2020:
           description_audience: 'Wiek 8-12'
           stages:
-            Conditionals:
-              name: Zdania z warunkami
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
+            'Functions: Songwriting':
+              name: Pisanie piosenek
         coursef-2020:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description_audience: 'Wiek 9-13'
           stages:
+            Nested Loops in the Maze:
+              name: Zagnieżdżone pętle w labiryncie
             Envelope Variables:
               name: Zmienne w kopertach
             For Loop Fun:

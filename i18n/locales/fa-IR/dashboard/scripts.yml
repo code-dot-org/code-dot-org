@@ -1674,36 +1674,46 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+            Text:
+              name: متن
         coursea-2020:
           stages:
             Going Places Safely:
               name: با خیال راحت سفرکردن
+            'Programming: Happy Maps':
+              name: نقشه های شاد
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
             Move It, Move It:
               name: حرکت کن، حرکت کن
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
         coursec-2020:
           stages:
             Binary Bracelets:
               name: دستبند دودویی
+            'Events: The Big Event':
+              name: رویداد بزرگ
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
               name: برنامه نویسی دست به دست
             Conditionals with Cards:
               name: شرطی ها با کارتها
             'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
+              name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
             Digital Citizenship:
               name: شهروندی دیجیتالی
         coursee-2020:
           stages:
-            Conditionals:
-              name: شرطی ها
+            'Functions: Songwriting':
+              name: ترانه سرایی
         coursef-2020:
           stages:
             Envelope Variables:

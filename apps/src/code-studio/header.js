@@ -19,6 +19,7 @@ import {
 import progress from './progress';
 import {getStore} from '../redux';
 import msg from '@cdo/locale';
+import firehoseClient from '../lib/util/firehose';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -106,6 +107,16 @@ header.build = function(
   var isHeaderPopupVisible = false;
 
   function showHeaderPopup() {
+    firehoseClient.putRecord(
+      {
+        study: 'mini_view',
+        event: 'mini_view_opened',
+        data_json: JSON.stringify({
+          current_level_id: currentLevelId
+        })
+      },
+      {includeUserId: true}
+    );
     sizeHeaderPopupToViewport();
     $('.header_popup').show();
     $('.header_popup_link_glyph').html('&#x25B2;');
