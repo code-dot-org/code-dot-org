@@ -231,6 +231,7 @@ nl:
       %{name}
   parent_mailer:
     student_associated_subject: Logininformatie voor Code.org
+    parent_email_added_subject: Welkom bij Code.org!
   teacher_mailer:
     new_teacher_subject: Welkom bij Code.org!
   section:
