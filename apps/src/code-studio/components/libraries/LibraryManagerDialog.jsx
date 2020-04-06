@@ -316,11 +316,8 @@ export class LibraryManagerDialog extends React.Component {
 
   renderDisplayLibrary = () => {
     const {displayLibrary, displayLibraryMode} = this.state;
-    if (
-      !displayLibrary ||
-      !Object.values(DisplayLibraryMode).includes(displayLibraryMode)
-    ) {
-      return;
+    if (!displayLibrary) {
+      return null;
     }
 
     const onClose = () =>
@@ -329,41 +326,42 @@ export class LibraryManagerDialog extends React.Component {
         displayLibraryMode: DisplayLibraryMode.NONE
       });
 
-    if (displayLibraryMode === DisplayLibraryMode.VIEW) {
-      return (
-        <LibraryViewCode
-          title={displayLibrary.name}
-          description={displayLibrary.description}
-          onClose={onClose}
-          sourceCode={displayLibrary.source}
-        />
-      );
-    }
-
-    if (displayLibraryMode === DisplayLibraryMode.UPDATE) {
-      return (
-        <LibraryViewCode
-          title={i18n.updateLibraryConfirmation({
-            libraryName: displayLibrary.name
-          })}
-          description={displayLibrary.description}
-          onClose={onClose}
-          sourceCode={displayLibrary.source}
-          buttons={
-            <div style={styles.updateButtons}>
-              <Button
-                text={i18n.cancel()}
-                color={Button.ButtonColor.gray}
-                onClick={onClose}
-              />
-              <Button
-                text={i18n.update()}
-                onClick={() => this.updateLibraryInProject(displayLibrary)}
-              />
-            </div>
-          }
-        />
-      );
+    switch (displayLibraryMode) {
+      case DisplayLibraryMode.VIEW:
+        return (
+          <LibraryViewCode
+            title={displayLibrary.name}
+            description={displayLibrary.description}
+            onClose={onClose}
+            sourceCode={displayLibrary.source}
+          />
+        );
+      case DisplayLibraryMode.UPDATE:
+        return (
+          <LibraryViewCode
+            title={i18n.updateLibraryConfirmation({
+              libraryName: displayLibrary.name
+            })}
+            description={displayLibrary.description}
+            onClose={onClose}
+            sourceCode={displayLibrary.source}
+            buttons={
+              <div style={styles.updateButtons}>
+                <Button
+                  text={i18n.cancel()}
+                  color={Button.ButtonColor.gray}
+                  onClick={onClose}
+                />
+                <Button
+                  text={i18n.update()}
+                  onClick={() => this.updateLibraryInProject(displayLibrary)}
+                />
+              </div>
+            }
+          />
+        );
+      default:
+        return null;
     }
   };
 

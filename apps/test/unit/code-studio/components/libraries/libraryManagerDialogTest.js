@@ -299,18 +299,18 @@ describe('LibraryManagerDialog', () => {
       expect(libraryComponent.props.buttons).to.not.be.undefined;
     });
 
-    it('returns undefined if displayLibraryMode is not present in DisplayLibraryMode', () => {
+    it('returns null if displayLibraryMode is not "update" or "view"', () => {
       wrapper.setState({displayLibrary: library, displayLibraryMode: 'hi'});
 
       const libraryComponent = wrapper.instance().renderDisplayLibrary();
-      expect(libraryComponent).to.be.undefined;
+      expect(libraryComponent).to.be.null;
     });
 
-    it('returns undefined if displayLibrary is not set in state', () => {
+    it('returns null if displayLibrary is not set in state', () => {
       wrapper.setState({displayLibrary: null, displayLibraryMode: 'view'});
 
       const libraryComponent = wrapper.instance().renderDisplayLibrary();
-      expect(libraryComponent).to.be.undefined;
+      expect(libraryComponent).to.be.null;
     });
   });
 
