@@ -1,5 +1,6 @@
-require 'cdo/redshift'
-require 'pg'
+# cdo/redshift and pg are required only in the methods that use them so that tests (such as shared/test_dms.rb) that
+# are dependent on constants declared in this class can run in environments where
+# the native pg gem is not loaded (currently it's only installed on `production-console` and `production-daemon`).
 
 class RedshiftImport
   # Database Migration Service Replication Tasks load data from Aurora into staging Redshift tables with a prefix.
@@ -37,6 +38,8 @@ class RedshiftImport
   # @param schema [String] The Redshift schema to search for database import staging tables.
   # Returns Array of Redshift table names.
   def self.temporary_import_tables(schema)
+    require 'cdo/redshift'
+
     redshift_client = RedshiftClient.instance
     query = <<~SQL
       SET search_path TO #{schema};
@@ -54,6 +57,8 @@ class RedshiftImport
   # @param table [String] The Redshift table.
   # Returns hash containing name of primary key and an array of the column names it constrains.
   def self.primary_key(schema, table)
+    require 'cdo/redshift'
+
     redshift_client = RedshiftClient.instance
     primary_key_query = <<~SQL
       SELECT co.conname AS constraint_name
@@ -100,11 +105,15 @@ class RedshiftImport
   end
 
   def self.truncate_table(schema, table)
+    require 'cdo/redshift'
+
     redshift_client = RedshiftClient.instance
     redshift_client.exec "TRUNCATE #{schema}.#{table};"
   end
 
   def self.drop_table(schema, table)
+    require 'cdo/redshift'
+
     redshift_client = RedshiftClient.instance
     redshift_client.exec "DROP TABLE IF EXISTS #{schema}.#{table};"
   end
@@ -112,6 +121,9 @@ class RedshiftImport
   # Rename a table within the same schema to preserve permissions
   # and also its primary key so that another table can be created with the old table name and old primary key name.
   def self.rename_table(schema, current_table_name, new_table_name)
+    require 'cdo/redshift'
+    require 'pg'
+
     primary_key = RedshiftImport.primary_key(schema, current_table_name)
     if primary_key
       rename_primary_key(
@@ -141,6 +153,8 @@ class RedshiftImport
   # @param columns [Array] Array of column names that primary key is composed of.
   # Returns PG:Result (https://github.com/ged/ruby-pg/blob/master/lib/pg/result.rb).
   def self.rename_primary_key(schema, table, current_index_name, new_index_name, columns)
+    require 'cdo/redshift'
+
     redshift_client = RedshiftClient.instance
     query = <<~SQL
       SET search_path TO #{schema};
