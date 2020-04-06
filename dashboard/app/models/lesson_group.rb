@@ -15,7 +15,7 @@
 #
 
 class LessonGroup < ApplicationRecord
-  belongs_to :script, foreign_key: 'unit_id', inverse_of: :lesson_group
+  belongs_to :script, foreign_key: 'unit_id'
   has_many :stages, inverse_of: :lesson_group
   has_many :script_levels, through: :stages, inverse_of: :lesson_group
 end
