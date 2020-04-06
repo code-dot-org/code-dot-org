@@ -22,12 +22,12 @@ class ContactRollupsFinal < ApplicationRecord
   end
 
   def self.insert_from_processed_table
-    overwrite_sql = <<~SQL
+    insert_sql = <<~SQL
       INSERT INTO #{table_name}
       SELECT *
       FROM contact_rollups_processed;
     SQL
 
-    ActiveRecord::Base.connection.exec_query(overwrite_sql)
+    ActiveRecord::Base.connection.exec_query(insert_sql)
   end
 end
