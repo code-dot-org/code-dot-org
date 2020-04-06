@@ -163,6 +163,8 @@ fa:
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
 
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
+  parent_mailer:
+    parent_email_added_subject: به Code.org خوش آمدید!
   teacher_mailer:
     new_teacher_subject: به Code.org خوش آمدید!
   section:
