@@ -238,6 +238,8 @@ ur:
       subjects:
         cs: کمپیوٹر سائنس
         math: ریاضی
+        science: سائنس
+        la: لسانی آرٹس
       email_opt_in:
         opt_in_yes: جی
         opt_in_no: نہيں
