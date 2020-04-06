@@ -332,7 +332,7 @@ SignInInstructions.propTypes = {
 
 const GoToSignIn = () => (
   <li>
-    Go to <a href={studio('/')}>{studio('/')}</a> and click 'Sign in'
+    Go to <a href={studio('/')}>studio.code.org</a> and click 'Sign in'
   </li>
 );
 
@@ -340,7 +340,8 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
-      Go to <a href={sectionUrl}>{sectionUrl}</a> and click on their name
+      Go to <a href={sectionUrl}>studio.code.org/sections/{sectionCode}</a> and
+      click on their name
       {studentName && ` (${studentName})`}
     </li>
   );
