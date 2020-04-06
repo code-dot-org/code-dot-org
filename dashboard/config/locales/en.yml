@@ -143,7 +143,7 @@ en:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    overview_markdown: 'Sign up for an account to track your progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
+    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
     hoc_already_signed_up_heading: 'Get started without logging in'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
@@ -183,6 +183,9 @@ en:
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
+    parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
+    parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
+    parent_account_email_label: "Parent/Guardian Email"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -250,6 +253,7 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+    parent_email_added_subject: 'Welcome to Code.org!'  
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
