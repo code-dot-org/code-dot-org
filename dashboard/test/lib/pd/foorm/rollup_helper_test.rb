@@ -25,7 +25,8 @@ module Pd::Foorm
           column_count: 7,
           type: "matrix",
           header: "Teacher Engagement",
-          form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"]
+          form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"],
+          form_type: :general
         },
         overall_success: {
           title: "How much do you agree or disagree with the following statements about the workshop overall?",
@@ -40,13 +41,15 @@ module Pd::Foorm
           column_count: 7,
           type: "matrix",
           header: "Overall Success",
-          form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"]
+          form_keys: ["surveys/pd/workshop_daily_survey_day_5.0"],
+          form_type: :general
         },
         expertise_rating: {
           title: "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
           column_count: 5,
           type: "scale",
-          form_keys: %w(surveys/pd/workshop_daily_survey_day_0.0 surveys/pd/workshop_daily_survey_day_5.0)
+          form_keys: %w(surveys/pd/workshop_daily_survey_day_0.0 surveys/pd/workshop_daily_survey_day_5.0),
+          form_type: :general
         }
       }
 

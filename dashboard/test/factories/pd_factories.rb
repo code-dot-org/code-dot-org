@@ -1595,4 +1595,33 @@ FactoryGirl.define do
         ]
       }'
   end
+
+  factory :csf_intro_post_facilitator_workshop_submission_high, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :foorm_submission, factory: :csf_intro_post_facilitator_foorm_submission_high
+    association :pd_workshop, factory: :csf_101_workshop
+    association :user, factory: :teacher
+    association :facilitator, factory: :facilitator
+    day 0
+  end
+
+  factory :csf_intro_post_facilitator_foorm_submission_high, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    form_version 0
+    created_at "2020-03-30 21:58:28"
+    updated_at "2020-03-30 21:58:28"
+    answers '{
+      "facilitatorId": 1,
+      "facilitatorName": "Facilitator1",
+      "facilitator_effectiveness":{
+        "demonstrated_knowledge":"7",
+        "built_equitable":"7",
+        "on_track":"7",
+        "productive_discussions":"7",
+        "ways_equitable":"7",
+        "healthy_relationship":"7"
+      },
+      "k5_facilitator_did_well":"things done well"
+      }
+    }'
+  end
 end

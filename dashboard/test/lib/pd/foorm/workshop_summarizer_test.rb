@@ -21,39 +21,41 @@ module Pd::Foorm
       expected_result = {
         'Day 0': {
           response_count: 2,
-          'surveys/pd/workshop_daily_survey_day_0.0': {
-            course_length_weeks: {
-              '5_fewer': 1,
-              '30_more': 1
-            },
-            teaching_cs_matrix: {
-              committed_to_teaching_cs: {
-                '1': 1,
-                '7': 1
+          general: {
+            'surveys/pd/workshop_daily_survey_day_0.0': {
+              course_length_weeks: {
+                '5_fewer': 1,
+                '30_more': 1
               },
-              like_teaching_cs: {
-                '1': 1,
-                '7': 1
+              teaching_cs_matrix: {
+                committed_to_teaching_cs: {
+                  '1': 1,
+                  '7': 1
+                },
+                like_teaching_cs: {
+                  '1': 1,
+                  '7': 1
+                },
+                understand_cs: {
+                  '1': 1,
+                  '7': 1
+                },
+                skills_cs: {
+                  '1': 1,
+                  '7': 1
+                }
               },
-              understand_cs: {
-                '1': 1,
-                '7': 1
+              expertise_rating: {
+                1 => 1,
+                5 => 1
               },
-              skills_cs: {
-                '1': 1,
-                '7': 1
+              birth_year: %w(1990 1983),
+              racial_ethnic_identity: {
+                num_respondents: 2,
+                black_aa: 2,
+                white: 1,
+                hispanic_latino: 1
               }
-            },
-            expertise_rating: {
-              1 => 1,
-              5 => 1
-            },
-            birth_year: %w(1990 1983),
-            racial_ethnic_identity: {
-              num_respondents: 2,
-              black_aa: 2,
-              white: 1,
-              hispanic_latino: 1
             }
           }
         }
