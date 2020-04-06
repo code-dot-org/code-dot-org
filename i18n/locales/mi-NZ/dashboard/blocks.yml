@@ -958,6 +958,10 @@ mi:
         text: tatūnga
       Dancelab_whenSetup2:
         text: tatūnga
+      gamelab_addBehaviorSimple:
+        text: parehe {SPRITE} ka {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_changePropBy:
         text: tinihia te {SPRITE} {PROPERTY} kia {VAL}
         options:
@@ -966,10 +970,15 @@ mi:
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
       gamelab_checkTouching:
+        text: "{CONDITION} pā {SPRITE1} ki {SPRITE2}"
         options:
           CONDITION:
             '"when"': ina
             '"while"': i te
+      gamelab_clickedOn:
+        text: ina pāwhiria {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: pāwhiria {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1084,6 +1093,8 @@ mi:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addBehaviorSimple:
+        text: parehe {SPRITE} ka {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1211,6 +1222,8 @@ mi:
             "{x: 300, y: 100}": ki runga ki te taha mātau
             "{x: 100, y: 300}": ki raro ki te taha māui
             "{x: 300, y: 300}": ki raro ki te taha mātau
+      Mikelab_whenClickedOn:
+        text: ina pāwhiria {SPRITE}
       Mikelab_whenKeyPressed:
         text: i te wa ka māhia {KEY}
         options:
