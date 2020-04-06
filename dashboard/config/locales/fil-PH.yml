@@ -229,6 +229,7 @@ fil:
       %{name}
   parent_mailer:
     student_associated_subject: Login na impormasyon para sa Code.org
+    parent_email_added_subject: Maligayang pagdating sa Code.org!
   teacher_mailer:
     new_teacher_subject: Maligayang pagdating sa Code.org!
   section:
