@@ -239,6 +239,7 @@ class RegistrationsController < Devise::RegistrationsController
     successfully_updated = update_parent_email
 
     if successfully_updated
+      ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user)
       head :no_content
     else
       render status: :unprocessable_entity,
