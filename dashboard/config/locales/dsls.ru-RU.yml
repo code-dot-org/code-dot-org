@@ -129,11 +129,13 @@ ru-RU:
         title: Вопрос с несколькими вариантами ответа
       2-3 artist debug multi 1:
         answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
           correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - text: Что тебе нужно исправить чтобы сделать круг завершённым?
         title: 'Художник: Отладка и Множественный выбор 1'

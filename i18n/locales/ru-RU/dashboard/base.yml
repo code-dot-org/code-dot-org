@@ -239,6 +239,7 @@ ru:
       %{name}
   parent_mailer:
     student_associated_subject: 'Входные данные для Code.org'
+    parent_email_added_subject: 'Добро пожаловать на Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Добро пожаловать на Code.org!'
     delete_teacher_subject: 'Уведомление Code.org: Ваш аккаунт был удален'
@@ -457,6 +458,7 @@ ru:
     auth_option_saved: "Вы успешно связали свой %{provider} аккаунт при помощи электронной почты %{email}."
     auth_option_saved_no_email: "Вы успешно связали ваш %{provider} аккаунт."
     update_email: "Обновить"
+    encrypted: "зашифровано"
   user_level:
     completed: 'Завершено'
     tried: 'Пытался'
