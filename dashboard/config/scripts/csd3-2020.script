@@ -7,9 +7,10 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
+family_name 'csd3'
 version_year '2020'
-pilot_experiment 'csd-noaccess'
 project_sharing true
+curriculum_umbrella 'CSD'
 tts true
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
@@ -175,7 +176,7 @@ level 'CSD games mousedown intro', progression: 'New Input'
 level 'CSD U3 - complex - mouse down_2020', progression: 'Mouse Input'
 level 'CSD U3 If Else_2020', progression: 'Mouse Input'
 level 'CSD web mouse practice choice', progression: 'Mouse Input'
-level 'CSD web mouse assessment', progression: 'Mouse Input'
+level 'CSD web mouse assessment', progression: 'Mouse Input', assessment: true
 level 'CSD web mouse challenge choice', progression: 'Challenges: Mouse Input'
 
 stage 'Project - Interactive Card', flex_category: 'csd3_1'
