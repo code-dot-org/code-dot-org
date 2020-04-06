@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/course2/stage/1/puzzle/1": {
+    "title": "Graph Paper Programming"
+  },
   "https://studio.code.org/s/course2/stage/1/puzzle/2": {
     "dsls": {
       "answers": [
@@ -51,6 +54,9 @@
       ],
       "title": "Matching"
     }
+  },
+  "https://studio.code.org/s/course2/stage/2/puzzle/1": {
+    "title": "Real-life Algorithms: Paper Planes"
   },
   "https://studio.code.org/s/course2/stage/2/puzzle/2": {
     "dsls": {
@@ -339,6 +345,9 @@
     "authored_hints": {
       "courseC_artist_prog_challenge2_a": "You can put commands inside `repeat` block to loop them over and over. Try it!\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/course2/stage/5/puzzle/1": {
+    "title": "Getting Loopy"
   },
   "https://studio.code.org/s/course2/stage/5/puzzle/2": {
     "dsls": {
@@ -806,6 +815,9 @@
       "courseC_harvester_loops_challenge2_d": "This spiral pattern can be coded with just 18 blocks!\n\n[][0]"
     }
   },
+  "https://studio.code.org/s/course2/stage/9/puzzle/1": {
+    "title": "Relay Programming"
+  },
   "https://studio.code.org/s/course2/stage/9/puzzle/2": {
     "dsls": {
       "answers": [
@@ -1044,6 +1056,9 @@
       "title": "Artist Debugging Multiple Choice 1"
     }
   },
+  "https://studio.code.org/s/course2/stage/12/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/course2/stage/12/puzzle/2": {
     "dsls": {
       "answers": [
@@ -1070,6 +1085,7 @@
           "text": "According to the rules of the game, which set of cards is scored correctly?"
         }
       ],
+      "teacher_markdown": "## Teachers:\n\nStudents might be operating off of a misconception, and this is a great place to tease that out.  If students think that there is *no* correct answer, then they probably have a misunderstanding around conditionals.\n\nHere is a video that helps explain what is going on in this question:\n\nhttps://youtu.be/TbUaEnAYPjI\n",
       "title": "Multiple Choice"
     }
   },
@@ -1212,6 +1228,9 @@
       "courseD_bee_conditionals_challenge1_b": "In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square."
     }
   },
+  "https://studio.code.org/s/course2/stage/14/puzzle/1": {
+    "title": "Binary Bracelets"
+  },
   "https://studio.code.org/s/course2/stage/14/puzzle/2": {
     "dsls": {
       "answers": [
@@ -1246,6 +1265,9 @@
       ],
       "title": "Matching"
     }
+  },
+  "https://studio.code.org/s/course2/stage/15/puzzle/1": {
+    "title": "The Big Event"
   },
   "https://studio.code.org/s/course2/stage/15/puzzle/2": {
     "dsls": {
@@ -1311,6 +1333,9 @@
   },
   "https://studio.code.org/s/course2/stage/16/puzzle/10": {
     "short_instructions": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones."
+  },
+  "https://studio.code.org/s/course2/stage/18/puzzle/1": {
+    "title": "Your Digital Footprint"
   },
   "https://studio.code.org/s/course2/stage/18/puzzle/2": {
     "dsls": {

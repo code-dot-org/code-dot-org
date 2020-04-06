@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/coursec-2017/stage/1/puzzle/1": {
+    "title": "Building a Foundation"
+  },
   "https://studio.code.org/s/coursec-2017/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
@@ -251,6 +254,9 @@
       "courseC_maze_debugging_challenge2_c": "There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!\n\n[][0]"
     }
   },
+  "https://studio.code.org/s/coursec-2017/stage/4/puzzle/1": {
+    "title": "Real-life Algorithms: Paper Planes"
+  },
   "https://studio.code.org/s/coursec-2017/stage/5/puzzle/2": {
     "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
@@ -502,6 +508,9 @@
       "courseC_artist_prog_challenge2_a": "After you draw the first line, turn left before you draw your second line.",
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
+  },
+  "https://studio.code.org/s/coursec-2017/stage/7/puzzle/1": {
+    "title": "Getting Loopy"
   },
   "https://studio.code.org/s/coursec-2017/stage/8/puzzle/1": {
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
@@ -897,6 +906,9 @@
       "courseC_harvester_loops_challenge2_d": "This spiral pattern can be coded with just 18 blocks!\n\n[][0]"
     }
   },
+  "https://studio.code.org/s/coursec-2017/stage/11/puzzle/1": {
+    "title": "The Big Event"
+  },
   "https://studio.code.org/s/coursec-2017/stage/12/puzzle/2": {
     "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
     "long_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n* * *\n\nClick or tap on the play space to move Flappy to the target.",
@@ -1061,5 +1073,11 @@
     "callouts": {
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
     }
+  },
+  "https://studio.code.org/s/coursec-2017/stage/14/puzzle/1": {
+    "title": "Unplugged Activity"
+  },
+  "https://studio.code.org/s/coursec-2017/stage/15/puzzle/1": {
+    "title": "Binary Bracelets"
   }
 }

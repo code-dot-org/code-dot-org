@@ -719,16 +719,16 @@
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/4": {
-    "short_instructions": "Connect the `move left` block to the `when left` event block that is already in the workspace.",
-    "long_instructions": "Help Jorge the Dog get moving by connecting the [blockly block][0] block to the [blockly block][1] event block that is already in the workspace.\n\nGet Jorge to the flag to finish this level!",
+    "short_instructions": "Connect the `move left` block to the `when left` event block that is already in the workspace. Use the arrow keys or press the arrow buttons to move Jorge to the flag and finish the level!",
+    "long_instructions": "Help Jorge the Dog get moving by connecting the [blockly block][0] block to the [blockly block][1] event block that is already in the workspace. \n\nUse the arrow keys or press the arrow buttons to move Jorge to the flag and finish the level!",
     "authored_hints": {
       "courseA_playLab_events3_a": "Drag this block  [blockly block][0] out and snap it to the bottom of [blockly block][1]",
       "courseA_playLab_events3_b": "Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you've finished!"
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/5": {
-    "short_instructions": "Add another event block to get Jorge to move right when the `right` button is clicked.",
-    "long_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked.",
+    "short_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
+    "long_instructions": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
     "authored_hints": {
       "courseA_playLab_events4_a": "Here is the event block that you will need to get Jorge to move right:\n\n[blockly block][0]",
       "courseA_playLab_events4_b": "This is the code you will need to complete this puzzle:\n\n[blockly block][0]"
@@ -738,8 +738,8 @@
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/6": {
-    "short_instructions": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed.",
-    "long_instructions": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
+    "short_instructions": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed. Make Jorge get the flags to finish the level!",
+    "long_instructions": "Add events to have Jorge move up and down when the \\`up\\` and \\`down\\` buttons are pressed. Make Jorge get the flags to finish the level!",
     "authored_hints": {
       "courseA_playLab_events5_a": "Here are the event blocks that you will need to use to move Jorge up and down:\n\n[blockly block][0]\n\nand \n\n[blockly block][1]",
       "courseA_playLab_events5_b": "Did you know that you can change the key for  the event arrow by clicking on the picture in the block and choosing a new key?\n\n[][0]"
@@ -749,8 +749,8 @@
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/7": {
-    "short_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
-    "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
+    "short_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
+    "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
     "authored_hints": {
       "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\n\n[blockly block][0]",
       "courseA_playLab_events6_b": "Here is the block you would use to change the background:\n\n[blockly block][0]",
