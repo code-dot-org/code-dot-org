@@ -289,6 +289,7 @@ de:
       %{name}
   parent_mailer:
     student_associated_subject: Login Informationen für Code.org
+    parent_email_added_subject: Willkommen bei Code.org!
   teacher_mailer:
     new_teacher_subject: Willkommen bei Code.org!
     delete_teacher_subject: 'Code.org Benachrichtigung: Dein Konto wurde gelöscht'
@@ -554,6 +555,7 @@ de:
       %{email} verknüpft.
     auth_option_saved_no_email: Du hast erfolgreich deinen %{provider} Account verbunden.
     update_email: Aktualisieren
+    encrypted: verschlüsselt
   user_level:
     completed: Abgeschlossen
     tried: Versucht
