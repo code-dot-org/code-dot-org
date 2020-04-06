@@ -4398,6 +4398,9 @@ es-MX:
         NEW_Course_4_Bee_For_Loops_8_a: |-
           Si tu loop cuenta hacia arriba, el incremento es añadido a tu variable de contador cada vez.
           ¿Qué necesitas agregar a cada número para obtener el número que sigue?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Haz que el Agente construya algunos puentes para que
+          Alex o Steve puedan caminar más allá de los límites del mapa.
       Overworld Avoid Monsters:
         mc_8_a: Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?
         mc_8_b: Use los loops "repetir" para simplificar su código.

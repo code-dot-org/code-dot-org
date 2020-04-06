@@ -1535,6 +1535,14 @@ es-MX:
         de texto para enviar información basada en texto de un lado a otro. Con un
         protocolo basado en texto, puede representar y comunicar fácilmente todo tipo
         de información. '
+      New Artist Project: "¡Dibuja algo impresionante! Tu código ha sido guardado
+        como un proyecto al que puedes regresar en cualquier momento."
+      New Basketball Project: Crea tu propio juego de básquetbol. Puedes cambiar todas
+        las reglas. Cuando hayas terminado, haz clic en Compartir para que tus amigos
+        prueben tu juego en sus teléfonos.
+      New Bounce Project: Crea tu propio juego "Rebote". Puedes cambiar todos los
+        efectos visuales y las reglas. Cuando estés listo, haz clic en Compartir para
+        que tus amigos prueben tu juego en sus teléfonos.
       New Gumball Project: "¡Crea cualquier cosa que desees compartir!"
       New Ice Age Project: "¡Crea cualquier cosa que desees compartir!"
       New Infinity Project: "¡Crea cualquier cosa que desees compartir!"
@@ -2200,25 +2208,17 @@ es-MX:
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events3_2018: Conecta el bloque `mover a la izquierda` al bloque
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
-      courseA_playLab_events3_2019: Conecta el bloque `mover a la izquierda` al bloque
-        de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events4: Agrega bloques para moverte a la derecha si se hace
         clic en el botón `derecha`.
       courseA_playLab_events4_2018: Agrega otro bloque de evento para que Jorge se
-        mueva a la derecha si haces clic en el botón `derecha`.
-      courseA_playLab_events4_2019: Agrega otro bloque de evento para que Jorge se
         mueva a la derecha si haces clic en el botón `derecha`.
       courseA_playLab_events5: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones `arriba` y `abajo`.
       courseA_playLab_events5_2018: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones `arriba` y `abajo`.
-      courseA_playLab_events5_2019: Agrega eventos para que Jorge se mueva hacia arriba
-        y hacia abajo si se presionan los botones `arriba` y `abajo`.
       courseA_playLab_events6: "¡Hazlo aún más interesante! Cambia el fondo y reproduce
         un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events6_2018: "¡Hazlo aún más interesante! Cambia el fondo y
-        reproduce un sonido aleatorio cuando se hace clic en Jorge."
-      courseA_playLab_events6_2019: "¡Hazlo aún más interesante! Cambia el fondo y
         reproduce un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7: Agrega todo lo que quieras a este juego. ¿Puedes hacer
         que el dinosaurio desaparezca cuando Jorge se encuentra con él?
