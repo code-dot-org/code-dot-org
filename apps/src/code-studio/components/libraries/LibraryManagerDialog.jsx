@@ -376,7 +376,7 @@ export class LibraryManagerDialog extends React.Component {
     return (
       <div>
         <BaseDialog
-          isOpen={true}
+          isOpen
           handleClose={this.closeLibraryManager}
           style={{...styles.dialog, ...(displayLibrary ? styles.hidden : {})}}
           useUpdatedStyles
