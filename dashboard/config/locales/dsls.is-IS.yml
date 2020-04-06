@@ -2428,19 +2428,11 @@ is-IS:
             býkúpa eða *eitt* blóm undir hverju skýi.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: Býflugan mun sækja blómasafa á hverju blómi og búa til hunang í hverri
-            býkúpu.
-          correct: true
+        - correct: true
           feedback: Rétt!
         - text: Býflugan mun reyna að ná blómasafa bæði á blómum og í býkúpum.
-          feedback: Ekki rétt. Kubburinn `ef á blómi` lætur býfluguna sækja blómasafa
-            ef hún er á blómi.
         - text: Býflugan mun reyna að búa til hunang bæði á blómum og í býkúpum.
-          feedback: Ekki rétt. Kubburinn `ef á blómi` lætur býfluguna sækja blómasafa
-            ef hún er á blómi..
         - text: Veit ekki.
-          feedback: Kubburinn `ef á blómi` lætur býfluguna sækja blómasafa ef hún
-            er á blómi.
         questions:
         - text: 'Skoðaðu kóðann hér fyrir neðan vandlega.  Hvað heldur þú að muni
             gerast eftir að þú smellir á "Keyra"? Mundu: það er aldrei meira en *ein*
