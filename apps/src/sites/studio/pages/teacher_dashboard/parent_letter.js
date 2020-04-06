@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ParentLetter autoPrint />
+      <ParentLetter autoPrint logoUrl={scriptData.logoUrl} />
     </Provider>,
     mountPoint
   );

@@ -52,7 +52,8 @@ class ParentLetter extends React.Component {
         secret_words: PropTypes.string
       })
     ),
-    teacherName: PropTypes.string.isRequired
+    teacherName: PropTypes.string.isRequired,
+    logoUrl: PropTypes.string
   };
 
   static defaultProps = {
@@ -66,7 +67,7 @@ class ParentLetter extends React.Component {
   }
 
   render() {
-    const {students, teacherName, section, studentId} = this.props;
+    const {logoUrl, students, teacherName, section, studentId} = this.props;
     const sectionCode = section.code;
     const loginType = section.loginType;
     const student =
@@ -81,7 +82,7 @@ class ParentLetter extends React.Component {
 
     return (
       <div id="printArea">
-        <Header />
+        <Header logoUrl={logoUrl} />
         <article>
           <p>Hello!</p>
           <p>
@@ -177,12 +178,18 @@ export default connect(state => ({
   studentId: queryParams('studentId')
 }))(ParentLetter);
 
-const Header = () => {
+const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src="/shared/images/CodeLogo_White.png" style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} />
     </header>
   );
+};
+Header.propTypes = {
+  logoUrl: PropTypes.string.isRequired
+};
+Header.defaultProps = {
+  logoUrl: '/shared/images/CodeLogo_White.png'
 };
 
 const SignInInstructions = ({
@@ -333,6 +340,6 @@ GoToSectionSignIn.propTypes = {
 
 const styles = {
   cleverCodeOrgLogo: {width: 60, margin: 10},
-  codeOrgLogo: {height: 30, margin: 15},
+  codeOrgLogo: {height: 42, margin: '4px 16px'},
   header: {backgroundColor: color.teal, marginBottom: 30}
 };
