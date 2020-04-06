@@ -1,0 +1,22 @@
+name 'Episode 3 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Caesar Cipher Wheel
+
+Build your own Caesar Cipher Wheel using the [Caesar Cipher - Activity Guide](https://docs.google.com/document/d/18gH5cd4eEsLbJgtrLEjMQummo7a9micZyHIX4iRpIjQ/edit?usp=sharing) and solve some encryption puzzles. 
+
+![](https://images.code.org/c4b8071ffec9bef44dd30242aa13ba84-image-1586117571279.png)
+
+### Caesar Cipher Widget
+On the next level, test out the power of the computer against encrypted messages using the Caesar Cipher Widget. Or, for a bigger challenge, check out the Random Substitution Widget. 
+
+---
+Looking for more practice? Check out the [Hour of Code: Simple Encryption](https://studio.code.org/s/hoc-encryption).
+MARKDOWN

@@ -1,10 +1,10 @@
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit1/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit1"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-20/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-20/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
+curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
 family_name 'csd1'
 version_year '2020'
 project_sharing true
@@ -35,6 +35,13 @@ level 'CSD U1 IO Pet Chooser 2', named: true
 
 stage 'Processing', flex_category: 'csd1_2'
 level 'CSD U1L06 TFMD_2020', named: true
+level 'CSD U1 processing bday', progression: 'App: Is It Your Birthday?'
+level 'CSD U1 processing npark', progression: 'App: National Park Quiz'
+level 'CSD U1 processing countries', progression: 'App: How Many Countries...'
+level 'CSD U1 processing writers', progression: 'App: My Famous Birthday'
+level 'CSD U1 processing notebook', progression: 'App: Stamp Notebook'
+level 'CSD U1 processing guess', progression: 'App: Guess the Number'
+level 'CSD U1 processing live', progression: 'App: Where Should I Live?'
 
 stage 'Apps and Storage', flex_category: 'csd1_2'
 level 'CSD U1L07 TFMD_2020', named: true
@@ -50,17 +57,17 @@ level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_2020', progression: '
 stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
 level 'CSD U1 Test_2020', assessment: true
 
-stage 'Lesson 1: Intro to Problem Solving - Newspaper Table', flex_category: 'csd1_3'
+stage 'Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)', flex_category: 'csd1_3'
 level 'CSD U1L01.1 TFMD_2020', named: true
 
-stage 'Lesson 1: Intro to Problem Solving - Spaghetti Bridge', flex_category: 'csd1_3'
+stage 'Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)', flex_category: 'csd1_3'
 level 'CSD U1L01.2 TFMD_2020', named: true
 
-stage 'Lesson 1: Intro to Problem Solving - Paper Tower', flex_category: 'csd1_3'
+stage 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', flex_category: 'csd1_3'
 level 'CSD U1L01.3 TFMD_2020', named: true
 
-stage 'Lesson 3: Exploring Problem Solving - Games Theme', flex_category: 'csd1_3'
+stage 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
 level 'CSD U1L03 TFMD_2020', named: true
 
-stage 'Lesson 3: Exploring Problem Solving - Animals Theme', flex_category: 'csd1_3'
+stage 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
 level 'CSD U1L03 TFMD_2020', named: true

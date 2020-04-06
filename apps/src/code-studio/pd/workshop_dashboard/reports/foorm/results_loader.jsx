@@ -47,9 +47,9 @@ export class ResultsLoader extends React.Component {
           questions: data['questions'],
           thisWorkshop: data['this_workshop'],
           workshopTabs: Object.keys(data['this_workshop']),
-          courseName: data['course_name']
+          courseName: data['course_name'],
           // TODO: add rollup data once it's sent by the backend
-          // workshopRollups: data['workshop_rollups'],
+          workshopRollups: data['workshop_rollups']
           // facilitatorRollups: data['facilitator_rollups']
         });
       })

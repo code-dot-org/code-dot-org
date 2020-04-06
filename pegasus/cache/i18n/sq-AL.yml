@@ -21,7 +21,10 @@ sq-AL:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">A je ti një mësues për shkencat kompjuterike? Shiko burimet
     e javes për shkencat kompjuterike</a>'
+  csedweek_banner_teachers_text: A je ti një mësues për shkencat kompjuterike? Shiko
+    burimet e javes për shkencat kompjuterike
   n_have_learned_an_hoc: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>"
+  try_hoc_num_served_markdown: "# Provo\\n\\n## Ora e Kodimit\\n\\n### %{num} të shërbyer"
   anybody_can_learn: Të gjithë mund të mësojnë.
   learn_now: Meso tani
   petition_message: Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar
@@ -211,6 +214,9 @@ sq-AL:
   get_a_certificate_message_after: Kliko te certivikata për ta shkarkuar ose për ta
     printuar. Tani vazhdo me <a href='http://studio.code.org'> kurset e tjera</a>,
     ose shiko mundësi të tjera tek <a href='/learn/beyond'> Mëso Përtej Një Ore</a>.
+  get_a_certificate_message_after_markdown: Kliko te certivikata për ta shkarkuar
+    ose për ta printuar. Tani vazhdo me [kurset e tjera](http://studio.code.org),
+    ose shiko mundësi të tjera tek [Mësoni përtej një ore](/learn/beyond].
   thanks_for_submitting: Faleminderit për dorëzimin!
   if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu!
     Ne duam qe e gjithe bota te mesoje.

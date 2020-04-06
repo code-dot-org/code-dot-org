@@ -7,6 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -14,6 +15,15 @@
           "function(){\n\n}"
         ]
       },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
       "randomNumber_min_max": null,
       "setPosition": null
     },
@@ -37,7 +47,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "encrypted_examples": "6dccbu4XDgsKwxtTGb8vO7XtATuCqkNkIK1+EVRGmf6yUcucrJUgUNmZPS4U\nzHDe\n",
-    "long_instructions": "<img src=\"https://images.code.org/dc1f942b805f07b3581c678ed1669a27-image-1476892595302.gif\" style=\"float: right\">\r\n\r\n# Using setPosition and randomNumber\r\n\r\n<img src=\"https://images.code.org/a501391fac0c396a197aaaf357e73972-image-1476892143359.gif\">\r\n\r\n**Now you try it** - instead of using a fixed value, you use [randomNumber](#triggercallout=showRand) to set the x and y coordinates for setPosition.  Now you'll have to chase the button all over the screen!\r\n\r\n* Make it so that the button could jump *anywhere* on the visible screen each time it's clicked.\r\n* Extend it: if you want to get really nuts, you could add back in the *width* and *height* parameters of setPosition and make the size of the button *also* change randomly with each click!\r\n\r\nOnce you've got the button jumping around the screen.  Click **Finish** to move onto the next level.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/dc1f942b805f07b3581c678ed1669a27-image-1476892595302.gif\" style=\"float: right\">\r\n\r\n# Using setPosition and randomNumber\r\n\r\n**Now you try it** - instead of using a fixed value, you use [randomNumber](#triggercallout=showRand) to set the x and y coordinates for setPosition.  Now you'll have to chase the button all over the screen!\r\n\r\n**Watch:** ![expandable](https://images.code.org/a2641825710e3a2942c0634bc79b2568-image-1586187050510.2020-04-06 11_29_59.gif)\r\n\r\n* Make it so that the button could jump *anywhere* on the visible screen each time it's clicked.\r\n* Extend it: if you want to get really nuts, you could add back in the *width* and *height* parameters of setPosition and make the size of the button *also* change randomly with each click!\r\n\r\nOnce you've got the button jumping around the screen.  Click **Finish** to move onto the next level.\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -59,10 +69,19 @@
     "show_debug_watch": "true",
     "parent_level_id": 17092,
     "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-02 16:05:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 15:31:21 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

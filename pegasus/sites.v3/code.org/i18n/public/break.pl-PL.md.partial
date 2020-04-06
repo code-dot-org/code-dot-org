@@ -1,0 +1,75 @@
+---
+title: Take a Code Break
+theme: responsive
+social:
+  og:title: Code.org Code Break
+  og:description: Learn CS with Hadi Partovi and the team at Code.org with a live weekly webcast and weekly challenges for students of all abilities
+  og:image: http://code.org/images/marketing/announcement_special2020.jpg
+  og:image:width: 850
+  og:image:height: 502
+  og:video: ''
+  og:video:width: ''
+  og:video:height: ''
+  og:video:type: ''
+---
+
+<div style="background-color: #00adbc; padding: 25px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<h1>Take a Code Break</h1>
+<div class="col-66" style="padding-right: 30px;">
+
+Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org uruchamia Code Break - cotygodniowy webcast na żywo, w którym nasz zespół będzie uczył Twoje dzieci w domu podczas zamknięcia szkoły, oraz cotygodniowe wyzwanie angażujące uczniów o różnych umiejętnościach, nawet tych bez komputerów.
+
+<h3>Uczmy Twoje dzieci:</h3>
+<ul>
+<li><a href="http://code.org/codebreaknow">cotygodniowa interaktywna klasa</a> z udziałem naszego założyciela<a href="/about/leadership/hadi_partovi">Hadi Partoviego</a> i gości specjalnych. <a href="https://www.addevent.com/event/om4764982">Dodaj do kalendarza</a>.</li>
+<li><a href="#activities">Cotygodniowa aktywność</a> lub wyzwanie. <a href="#signup">Zarejestruj się</a>.</li>
+<li>Opcje dla początkujących, doświadczonych uczniów, a nawet dla uczniów bez komputerów.</li>
+</ul>
+
+</div>
+
+<div class="col-33">
+
+<img src="/images/athome/CodeBreakGuestsMarkandLindsey.jpg" style="max-width:100%">
+
+</div>
+
+<div style="clear: both;"></div>
+<h2>Tired of studying? Take a Code Break!</h2>
+<p>Informatyka jest <i> super zajęciem</i>, ponieważ jest kreatywna i zabawna. Niezależnie od tego, czy rozwiązują łamigłówkę, kodują, czy projektują aplikację, uczniowie wolą uczyć się przez dociekanie niż zapamiętywanie.</p>
+<p>Informatyka jest <a href="/promote"> fundamentem </a> wszystkich dziedzin kształcenia, ale ponieważ wiele szkół jeszcze jej nie oferuje, może to być wyjątkową okazją, aby pomóc Twojemu dziecku w tej nowej, przyjemnej okazji do uczenia się.</p>
+<a id="signup"></a>
+<h2> Zarejestruj się, aby co tydzień otrzymywać Code Break:</h2>
+<iframe src="http://go.pardot.com/l/153401/2020-03-16/n7j6zc" width="100%" height="280" type="text/html" frameborder="0" allowTransparency="true" style="border: 100" mark="crwd-mark"></iframe> Lub śledź nas na <a href="http://facebook.com/code.org"> Facebooku </a> lub na <a href = "http://twitter.com/ codeorg "mark =" crwd-mark "> Twitterze</a>.
+
+<h2>Włączaj się co tydzień: środy o 10:00 PT / 13:00 ET</h2>
+[col-33]
+
+<div style="margin:0 auto;"><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" width="275px" style="padding-right: 5px"></a></div>
+[/col-33]
+
+[col-66]
+
+[ Dołącz ](http://code.org/codebreaknow) z uczniami do naszego założyciela [ Hadi Partoviego](https://code.org/about/leadership/hadi_partovi), specjalnych gości i najlepszych nauczycieli Code.org, aby poznawać różne pojęcia informatyczne w interaktywnej klasie na żywo. Wszystkie grupy wiekowe są mile widziane. Aby co tydzień otrzymywać projekty dla klasy, <a href="#signup"> zarejestruj się</a> powyżej i <a href = "https://www.addevent.com/even/om4764982„> dodaj Code Break do swojego kalendarza</a>.
+<a title ="Dodaj do kalendarza" class="addeventatc" data-id="om4764982" href="https://www.addevent.com/event/om4764982" target="_ blank" rel = "nofollow" mark = „crwd-mark”>Dodaj do kalendarza</a> <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+<p>Witamy w każdym wieku, przez telefon lub komputer. Upewnij się, aby wcześniej <a href="https://zoom.us/download"> pobrać Zoom</a>. </p><p> Znajdź więcej zasobów do nauki w domu <a href="https://code.org/athome">tutaj</a>.</p>
+[/col-66]
+
+[clear-both]
+
+[/clear-both]
+
+<div style="clear: both;"></div>
+<div style="background-color: #00adbc; padding: 2px; margin-top:40px;"></div>
+<a id="activities"></a>
+<h1>Cotygodniowe zajęcia i poprzednie odcinki</h1>
+<h3><a href="https://www.facebook.com/Code.org/videos/212168439992679/">Odcinek 1 z Hill Harper, 25 marca</a></h3>
+<p style="font-weight: bold;">Ćwicz tworzenie własnych algorytmów.</p>
+Na komputerze lub tablecie:
+<ul>
+<li><a href="https://studio.code.org/users/sign_up"> Utwórz konto </a> na Code.org, aby zapisywać swoje prace</li>
+<li>Jeśli chcesz poćwiczyć, wypróbuj <a href="https://studio.code.org/s/artist/reset"> Godzinę Kodowania z Artystą</a> (opcjonalnie)</li>
+<li>Sprawdź <a href="http://studio.code.org/s/code-break"> Code Break: Lekcja 1 </a> na Code.org. Wypróbuj łamigłówkę, a następnie utwórz i udostępnij własny kod!</li>
+</ul>
+

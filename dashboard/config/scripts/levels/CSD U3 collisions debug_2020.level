@@ -33,7 +33,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Debug\r\n\r\nSometimes sprites will behave in ways that are unexpected. There is a special `sprite.debug` property you can use to better understand why the sprites interact the way that they do.\r\n\r\n# Do This\r\n\r\nThese two coins are round, so you would expect them to bounce in a certain way. Something weird is happening though!\r\n\r\n* Run the code and watch the way that the coins interact.\r\n* Use the `sprite.debug` block to make debug 'true' for both the sprites and run the code again.\r\n* Change the gold coin's starting x position to 51 and run the code again.\r\n* Discuss with a partner: Why do you think the coins are bouncing strangely?",
+    "long_instructions": "# Debug\r\n\r\nSometimes sprites will behave in ways that are unexpected. There is a special `sprite.debug` property you can use to better understand why the sprites interact the way that they do.\r\n\r\n# Do This\r\n\r\nThese two coins are round, so you would expect them to bounce in a certain way. Something weird is happening though!\r\n\r\n* Run the code and watch the way that the coins interact.\r\n* Use the `sprite.debug` block to make debug 'true' for both the sprites and run the code again.\r\n* Change the gold coin's starting x position to 51 and run the code again.\r\n* Discuss with a partner: Why do you think the coins are bouncing strangely?\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -78,11 +78,18 @@
     ],
     "map_reference": "/docs/concepts/game-lab/sprites/sprite-interactions/",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "display_name": "Debug Colliders",
+    "bubble_choice_description": "Set a sprite's debug property to understand how it bounces.",
+    "thumbnail_url": "https://images.code.org/ad22cf2442b4abbdfb79839506cd0594-image-1585850671262.gif",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-02 18:40:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 19:11:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-02 18:40:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 19:11:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 18:05:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

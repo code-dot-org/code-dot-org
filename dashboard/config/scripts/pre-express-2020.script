@@ -2,12 +2,13 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/express/standards"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/pre-express/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/pre-express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'pre-express'
 version_year '2020'
 curriculum_umbrella 'CSF'
+tts true
 
 stage 'Learn to Drag and Drop', flex_category: 'csf_sequencing'
 skin 'jigsaw'

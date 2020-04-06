@@ -9,7 +9,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     @course_unit1 = create(:plc_course_unit, plc_course: @course, unit_order: 1)
   end
 
-  test 'Enrolling user in a task creates unit enrollments' do
+  test 'Enrolling user in a course creates unit enrollments' do
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
 
     assert_equal [@course_unit2, @course_unit1], enrollment.plc_unit_assignments.map(&:plc_course_unit)

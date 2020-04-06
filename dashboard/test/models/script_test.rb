@@ -723,6 +723,48 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      @script = create(:script, name: 'script-with-visible-after')
+      stage_no_visible_after = create(:stage, script: @script, name: 'Stage 1')
+      create(:script_level, script: @script, stage: stage_no_visible_after)
+      stage_future_visible_after = create(:stage, script: @script, name: 'Stage 2', visible_after: '2020-04-01 08:00:00 -0700')
+      create(:script_level, script: @script, stage: stage_future_visible_after)
+      stage_past_visible_after = create(:stage, script: @script, name: 'Stage 3', visible_after: '2020-03-01 08:00:00 -0700')
+      create(:script_level, script: @script, stage: stage_past_visible_after)
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test 'should summarize script with visible after dates for unsigned in user' do
+      summary = @script.summarize(true, nil, false)
+      assert_equal 2, summary[:stages].count
+    end
+
+    test 'should summarize script with visible after dates for teacher' do
+      summary = @script.summarize(true, @teacher, false)
+      assert_equal 2, summary[:stages].count
+    end
+
+    test 'should summarize script with visible after dates for student' do
+      summary = @script.summarize(true, @student, false)
+      assert_equal 2, summary[:stages].count
+    end
+
+    test 'should summarize script with visible after dates for levelbuilder' do
+      summary = @script.summarize(true, @levelbuilder, false)
+      assert_equal 3, summary[:stages].count
+    end
+  end
+
   test 'should generate a shorter summary for header' do
     script = create(:script, name: 'single-stage-script')
     stage = create(:stage, script: script, name: 'Stage 1')
@@ -944,11 +986,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, unit.plc_learning_modules.count
     assert_equal lm, unit.plc_learning_modules.first
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
-
-    task = script.script_levels.first.plc_task
-    assert_equal 'Level 1', task.name
-    assert_equal 1, lm.plc_tasks.count
-    assert_equal task, lm.plc_tasks.first
   end
 
   test 'expect error on bad module types' do
@@ -1112,12 +1149,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
 
-  test 'text_to_speech_enabled? for k5_course' do
-    assert Script.find_by_name('csf1').text_to_speech_enabled?
-  end
-
   test '!text_to_speech_enabled? by default' do
     refute create(:script).text_to_speech_enabled?
+  end
+
+  test 'text_to_speech_enabled? if tts true' do
+    script = create :script, tts: true
+    assert script.text_to_speech_enabled?
   end
 
   test 'FreeResponse level is listed in text_response_levels' do
