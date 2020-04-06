@@ -272,6 +272,7 @@ da:
       %{name}
   parent_mailer:
     student_associated_subject: Login-oplysninger til Code.org
+    parent_email_added_subject: Velkommen til Code.org!
   teacher_mailer:
     new_teacher_subject: Velkommen til Code.org!
   section:
