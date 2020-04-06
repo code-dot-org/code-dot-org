@@ -6584,27 +6584,63 @@ fr-FR:
         .\\\r\n\\\r\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
       courseA_artist_loops2_2019: "Help the artist draw this line\ntwo times forward
         .\\\r\n\\\r\n![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)"
-      courseA_artist_loops3: "Our artist is trying to draw a\nline five times, but
-        can't get it right. Can you help?\\\r\n\\\r \n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
-      courseA_artist_loops3_2018: "Our artist is trying to draw a\nline five times,
-        but can't get it right. Can you help?\\\r\n\\\r \n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
-      courseA_artist_loops3_2019: "Our artist is trying to draw a\nline five times,
-        but can't get it right. Can you help?\\\r\n\\\r \n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
+      courseA_artist_loops3: |-
+        Our artist is trying to draw a
+        line five times, but can't get it right. Can you help?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018: |-
+        Our artist is trying to draw a
+        line five times, but can't get it right. Can you help?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
+        Our artist is trying to draw a
+        line five times, but can't get it right. Can you help?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4: "Now, use a <xml><block type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\"
         config=\"2-6\">5</title></block></xml> loop to draw this line\nfive times!\\\r\n\\\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
       courseA_artist_loops4_2018: "Now, use a <xml><block type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\"
         config=\"2-6\">5</title></block></xml> loop to draw this line\nfive times!\\\r\n\\\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
       courseA_artist_loops4_2019: "Now, use a <xml><block type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\"
         config=\"2-6\">5</title></block></xml> loop to draw this line\nfive times!\\\r\n\\\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
-      courseA_artist_loops5: "## Draw a line seven steps long.\n\nThis will become
-        our horizon.\\\r\n\\\r\n![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
-      courseA_artist_loops5_2018: "## Draw a line seven steps long.\n\nThis will become
-        our horizon.\\\r\n\\\r\n![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
-      courseA_artist_loops5_2019: "## Draw a line seven steps long.\n\nThis will become
-        our horizon.\\\r\n\\\r\n![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)"
-      courseA_artist_loops6: "## Let's put a nice hill in the\n\nback.\\\r\n\\\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
-      courseA_artist_loops6_2018: "## Let's put a nice hill in the\n\nback.\\\r\n\\\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
-      courseA_artist_loops6_2019: "## Let's put a nice hill in the\n\nback.\\\r\n\\\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
+      courseA_artist_loops5: |-
+        ## Draw a line seven steps long.
+
+        This will become our horizon.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2018: |-
+        ## Draw a line seven steps long.
+
+        This will become our horizon.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
+        ## Draw a line seven steps long.
+
+        This will become our horizon.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops6: |-
+        ## Let's put a nice hill in the
+
+        back
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## Let's put a nice hill in the
+
+        back
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Let's put a nice hill in the
+
+        back
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
         ## Utilisez la boucle [blockly block] [0] pour ajouter des vagues à l'eau..
 
@@ -6848,10 +6884,6 @@ fr-FR:
         et vers le bas lorsque les flèches haut et bas sont pressés.
       courseA_playLab_events5_2018: Ajoute des événements pour déplacer Jorge vers
         le haut et vers le bas lorsque les flèches haut et bas sont pressés.
-      courseA_playLab_events5_2019: Ajoute des événements pour déplacer Jorge vers
-        le haut et vers le bas lorsque les flèches haut et bas sont pressés.
-      courseA_playLab_events6_2019: Change le fond d'écran et joue un son aléatoire
-        lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playlab_events_challenge1: |-
         En cliquant sur Olive tu feras apparaitre Robin! Peux-tu écrire le code pour montrer aussi le reste des personnages ?
 
@@ -7010,12 +7042,12 @@ fr-FR:
         vallée."_
       courseB_collector_loops_challenge1_2019: 'Cette fois, tu as un nombre limité
         de blocs. Collecte tout le trésor ! '
-      courseB_collector_loops_challenge2a: _"Ramassons les trésors !"_  Aide Laurel
-        à obtenir au moins **5** trésors pour terminer le puzzle.
-      courseB_collector_loops_challenge2a_2018: _"Ramassons les trésors !"_  Aide
-        Laurel à obtenir au moins **5** trésors pour terminer le puzzle.
-      courseB_collector_loops_challenge2a_2019: _"Ramassons les trésors !"_  Aide
-        Laurel à obtenir au moins **5** trésors pour terminer le puzzle.
+      courseB_collector_loops_challenge2a: "_\"Ramassons les trésors !\"_  \n\nAide
+        Laurel à obtenir au moins **5** trésors pour terminer le puzzle."
+      courseB_collector_loops_challenge2a_2018: "_\"Ramassons les trésors !\"_  \n\nAide
+        Laurel à obtenir au moins **5** trésors pour terminer le puzzle."
+      courseB_collector_loops_challenge2a_2019: "_\"Ramassons les trésors !\"_  \n\nAide
+        Laurel à obtenir au moins **5** trésors pour terminer le puzzle."
       courseB_maze_seq3: _"Corrige le code pour m'amener jusqu'au cochon !"_
       courseB_maze_seq9: "**Défi :** Déplace-toi autour de la TNT pour amener l'oiseau
         jusqu'au cochon."
@@ -7883,12 +7915,18 @@ fr-FR:
         style=\"float: left; margin: 0 15px 15px 0;\" />\\\r\nDraw a\nstair-step pattern
         that uses turns between 75 and 105 degrees -- but make\nsure that your left
         and right turns use the same angle.  \\\r\n(You will see\nwhy later.)"
-      courseD_artist_binary1: Nous avons mis à ta disposition une grille de "pixels"
-        que tu peux parcourir pour créer des dessins en activant certains carrés.
-      courseD_artist_binary1_2018: Nous avons mis à ta disposition une grille de "pixels"
-        que tu peux parcourir pour créer des dessins en activant certains carrés.
-      courseD_artist_binary1_2019: Nous avons mis à ta disposition une grille de "pixels"
-        que tu peux parcourir pour créer des dessins en activant certains carrés.
+      courseD_artist_binary1: "Nous t’avons fourni une grille de « Pixels » que tu
+        peux parcourir pour faire des dessins en tournant sur certains carrés seulement.
+        \ \n\nPeux-tu faire que l'artiste dessine « 01010101 » en binaire dans la
+        première ligne ?"
+      courseD_artist_binary1_2018: "Nous t’avons fourni une grille de « Pixels » que
+        tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.
+        \ \n\nPeux-tu faire que l'artiste dessine « 01010101 » en binaire dans la
+        première ligne ?"
+      courseD_artist_binary1_2019: "Nous t’avons fourni une grille de « Pixels » que
+        tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.
+        \ \n\nPeux-tu faire que l'artiste dessine « 01010101 » en binaire dans la
+        première ligne ?"
       courseD_artist_binary2: |-
         Voici une fonction qui prend des chaines binaires de 1 et de 0 qui dicte à l'artiste de les suivre de gauche à droite, de haut en bas.
 
@@ -9009,14 +9047,16 @@ fr-FR:
         1.  Ralentit le ninja (acteur 3) avant que tu le mettes à poursuivre le pirate (acteur 1).
 
         2.  Utilise une boucle `Répète à l'infini` pour vérifier si le pirate est dans une "zone sûre" sous la ligne des pieuvres (à plus de 225 pixels du bas), s'il s'y trouve, alors le ninja **fuis** le pirate. Sinon, le ninja **poursuit** le pirate.
-      courseD_playLab_cond6a: "We don't want the pirate to\nstay in the \"safe zone\"
-        too long!  \\\r\n\\\r\nAdd code to the `if` statement\nbelow so that if the
-        pirate is in the safe zone, the program will wait one\nsecond, then deduct
-        a point as long as he stays beneath the octopus line."
-      courseD_playLab_cond6a_2018: "We don't want the pirate to\nstay in the \"safe
-        zone\" too long!  \\\r\n\\\r\nAdd code to the `if` statement\nbelow so that
-        if the pirate is in the safe zone, the program will wait one\nsecond, then
-        deduct a point as long as he stays beneath the octopus line."
+      courseD_playLab_cond6a: "Il ne faut pas que le pirate reste trop longtemps dans
+        la \"zone de sécurité\"! \n\nAjoute du code à l'instruction `if` ci-dessous
+        au cas où le pirate (acteur 1) se trouverait dans la zone de sécurité pour
+        que le programme attende une seconde avant d'enlever un point, tant qu'il
+        reste en dessous de la ligne de poulpe."
+      courseD_playLab_cond6a_2018: "Il ne faut pas que le pirate reste trop longtemps
+        dans la \"zone de sécurité\"! \n\nAjoute du code à l'instruction `if` ci-dessous
+        au cas où le pirate (acteur 1) se trouverait dans la zone de sécurité pour
+        que le programme attende une seconde avant d'enlever un point, tant qu'il
+        reste en dessous de la ligne de poulpe."
       courseD_scrat_ramp1: Pour ce puzzle, mets tous les blocs ensemble et clique
         "Démarrer" pour le voir faire!
       courseD_scrat_ramp2: Fais glisser un bloc `avancer` supplémentaire en-dehors

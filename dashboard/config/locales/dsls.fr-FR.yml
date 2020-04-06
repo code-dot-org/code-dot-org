@@ -1957,20 +1957,12 @@ fr-FR:
             chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
-            nid d'abeilles.
-          correct: true
+        - correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
-          feedback: Incorrect. Le bloc `Si à la fleur` laisse l’abeille ramasser le
-            nectar sur chaque fleur et le miel à chaque nid d'abeilles.
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
-          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
-            nectar à chaque fleur et le miel à chaque nid d'abeilles..
         - text: Je ne sais pas.
-          feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
-            chaque fleur et le miel à chaque nid d'abeilles.
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
             après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement

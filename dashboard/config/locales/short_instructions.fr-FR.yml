@@ -549,10 +549,8 @@ fr-FR:
 
         Regarde ce qui se passe lorsque nous commençons à faire preuve de créativité avec les bits ?
       Course 4 Artist Binary Free Play 2b: Clique ici pour avoir des conseils.
-      Course 4 Artist Binary pre1: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
+      Course 4 Artist Binary pre1: Peux-tu faire que l'artiste dessine « 01010101 »
+        en binaire dans la première ligne ?
       Course 4 Artist For Loops 1: 'Dessine ce triangle qui mesure 50 pixels de large.
         Indice: utilise un bloc «Répéter».'
       Course 4 Artist For Loops 11: 'Dans une étape précédent, souviens-toi que nous
@@ -1821,21 +1819,15 @@ fr-FR:
         <-` qui est déjà dans l'espace de travail.
       courseA_playLab_events3_2018: Attache le bloc `déplacer <-` au bloc d'évènement
         `Quand <-` qui est déjà dans l'espace de travail.
-      courseA_playLab_events3_2019: Attache le bloc `déplacer <-` au bloc d'évènement
-        `Quand <-` qui est déjà dans l'espace de travail.
       courseA_playLab_events4: Ajoute les blocs pour bouger à droite lorsque le bouton
         `droite` est cliqué.
       courseA_playLab_events5: Ajoute des évènements pour que Jorge monte et descende
         lorsque les touches `monter` et `descendre` sont pressés.
       courseA_playLab_events5_2018: Ajoute des évènements pour que Jorge monte et
         descende lorsque les touches `monter` et `descendre` sont pressés.
-      courseA_playLab_events5_2019: Ajoute des évènements pour que Jorge monte et
-        descende lorsque les touches `monter` et `descendre` sont pressés.
       courseA_playLab_events6: Change le fond d'écran et joue un son aléatoire lorsque
         tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events6_2018: Change le fond d'écran et joue un son aléatoire
-        lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
-      courseA_playLab_events6_2019: Change le fond d'écran et joue un son aléatoire
         lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events7: Ajoute ce que tu veux à ce jeu. Peux-tu faire disparaitre
         le dinosaure lorsque Jorge lui coure après?
@@ -2687,18 +2679,12 @@ fr-FR:
         la ferraille !
       courseD_artist_5_2018: Joue avec les flocons de neige!
       courseD_artist_5_2018_2019: Joue avec les flocons de neige!
-      courseD_artist_binary1: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
-      courseD_artist_binary1_2018: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
-      courseD_artist_binary1_2019: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
+      courseD_artist_binary1: Peux-tu faire que l'artiste dessine « 01010101 » en
+        binaire dans la première ligne ?
+      courseD_artist_binary1_2018: Peux-tu faire que l'artiste dessine « 01010101 »
+        en binaire dans la première ligne ?
+      courseD_artist_binary1_2019: Peux-tu faire que l'artiste dessine « 01010101 »
+        en binaire dans la première ligne ?
       courseD_artist_binary2: Démarre ce code pour voir comment l'artiste utilise
         les binaires pour dessiner les motifs.
       courseD_artist_binary2_2018: Démarre ce code pour voir comment l'artiste utilise
