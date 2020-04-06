@@ -15,7 +15,7 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
 
 <hr/>
 
-<a id="impact"></a>
+<a id="overview"></a>
 ## At a Glance
 
 <div class="col-33" style="padding-right: 15px; text-align: center">
@@ -50,141 +50,46 @@ Whether it’s organizing the worldwide Hour of Code, advocating for policy chan
     <p>Our nationwide network of <a href="https://code.org/educate/regional-partner">Regional Partners</a> are establishing regional computer science hubs, expanding CS access and opportunities to more people than ever before.</p>
 </div>
 
-<div style="clear: both; margin-bottom: 20px"></div>
-<br>
+<div style="clear: both; margin-bottom: 10px"></div>
 
-<div class="solid-block-header" style="background-color:#00adbc">
-    <p style="font-size:12px"><strong>Looking for ways to bring computer science to your school or district?</strong></p>
-    <a href="/yourschool"><button class="educate-button" style="float:right; background-color: #ffa400; color: #fff; margin-top: 0">Learn more</button></a>
+<div class="solid-block-header" style="background-color:#00adbc; border-radius: 10px">
+    <p style="font-size:14px; margin-bottom: 5px"><strong>Looking for ways to bring computer science to your school or district?</strong>
+    <a href="/yourschool"><button class="educate-button" style="float:right; background-color: #ffa400; color: #fff; margin-top: 0; margin-right: 10px">Learn more</button></a></p>
 </div>
 
 <p><a href="#top">[Back to top]</a></p>
 
 <hr/>
 
-<a id="work"></a>
-## Our Work
-<p>Expanding access to computer science for all students takes effort on multiple fronts. To support this goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes.</p>
-<p>Our work builds upon <a href="https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub">decades of effort, by countless organizations and individuals</a> who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and <a href="https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924">we thank all the partners and individuals who have supported our impact over the years</a>.</p>
-<br>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a href="/dance">
-        <img class="tutorial-tile-img" src="/images/alt-about/placeholder.jpg" style="max-width:100%; border: 1px solid #808080; border-radius: 25px 25px 0 0">
-      </a>
-    <div class="tutorial-info" style="background-color: #b9bf15; border-radius: 0 0 25px 25px; padding: 15px 15px 15px 15px">
-      <span>
-        <h3 class="tutorial-info-h" style="color: white; text-align: center; margin-top:10px"><strong>Advocacy</strong></h3>
-        <div class="smalltext" style="color: white; text-align: center">Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education. See what’s happening <a href="https://advocacy.code.org/" style="text-decoration: underline; color: white;">in your state</a>.</div>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a href="/dance">
-        <img class="tutorial-tile-img" src="/images/alt-about/placeholder.jpg" style="max-width:100%; border: 1px solid #808080; border-radius: 25px 25px 0 0">
-      </a>
-    <div class="tutorial-info" style="background-color: #0094ca; border-radius: 0 0 25px 25px; padding: 15px 15px 15px 15px">
-      <span>
-        <h3 class="tutorial-info-h" style="color: white; text-align: center; margin-top: 10px"><strong>Curriculum and Tools</strong></h3>
-        <div class="smalltext" style="color: white; text-align: center">From Computer Science Fundamentals to Computer Science Principles, Code.org is creating curriculum and tools for every K-12 student. The best part? They'll always be free. Learn more about what we offer at <a href="https://code.org/educate" style="text-decoration: underline; color: white;">code.org/educate</a>.</div>
-    </span>
-  </div>
-</div>
-</div>
-
-<div style="clear: both; margin-bottom: 20px"></div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a href="/dance">
-        <img class="tutorial-tile-img" src="/images/alt-about/placeholder.jpg" style="max-width:100%; border: 1px solid #808080; border-radius: 25px 25px 0 0">
-      </a>
-    <div class="tutorial-info" style="background-color: #00adbc; border-radius: 0 0 25px 25px; padding: 15px 15px 15px 15px">
-      <span>
-        <h3 class="tutorial-info-h" style="color: white; text-align: center; margin-top: 10px"><strong>Professional Development</strong></h3>
-        <div class="smalltext" style="color: white; text-align: center">We work with a network of 65 Regional Partners to offer professional development to teachers of all grades who want to bring CS to their students. Previous CS experience is not required. See workshops available in your area <a href="https://code.org/educate/professional-learning" style="text-decoration: underline; color: white;">here</a>.</div>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a href="/dance">
-        <img class="tutorial-tile-img" src="/images/dance_party_2019.gif" style="max-width:100%; border: 1px solid #808080; border-radius: 25px 25px 0 0">
-      </a>
-    <div class="tutorial-info" style="background-color: #7665a0; border-radius: 0 0 25px 25px; padding: 15px 15px 15px 15px">
-      <span>
-        <h3 class="tutorial-info-h" style="color: white; text-align: center; margin-top: 10px"><strong>Hour of Code</strong></h3>
-        <div class="smalltext" style="color: white; text-align: center">The Hour of Code is the largest educational event in history, with tens of millions of students participating since it launched in 2013. With <a href="https://hourofcode.com/us/learn" style="text-decoration: underline; color: white;">hundreds of fun, engaging tutorials available</a>, it’s an easy way to introduce students to computer science.</div>
-    </span>
-  </div>
-</div>
-</div>
-
-<div style="clear: both; margin-bottom: 20px"></div>
-<p><a href="#top">[Back to top]</a></p>
-
-<hr/>
-
-<a id="values"></a>
-## Our Values
-
-<div class="col-33" style="padding-right: 20px;">
+<a id="students"></a>
+## Expanding student access and boosting achievement
+<div class="col-25" style="padding-right: 20px;">
   <img src="/images/alt-about/photo.png" style="width: 100%">
 </div>
-<div class="col-66">
-  <h3 style="color:#00adbc"><strong>We believe computer science is foundational for all students</strong></h3>
-  <p>We believe that learning computer science is fundamental to active and informed participation in an increasingly digital society and provides all students with a critical lens for interpreting the world around them. Computer science offers life-changing and economic opportunities, whether they pursue careers in technology or not. We create high-quality, approachable experiences to engage all students in computer science.</p>
+<div class="col-75">
+  <p>Since 2013, the percentage of young women and students from underrepresented racial and ethnic groups in Code.org classrooms has increased by xxxxx%, nearly matching US demographics. And because Code.org classrooms represent around 40% of all CS classrooms in the US, percentages overall have increased, too!</p>
 </div>
 <div style="clear: both; margin-bottom: 10px"></div>
-<div class="col-33" style="padding-right: 20px;">
+<div class="col-25" style="padding-right: 20px;">
   <img src="/images/alt-about/photo.png" style="width: 100%">
 </div>
-<div class="col-66">
-  <h3 style="color:#00adbc"><strong>We are committed to equity, access, and opportunity</strong></h3>
-  <p>We believe every student in every school should have the opportunity to learn computer science regardless of gender, race, ethnicity, identity, family income, neighborhood, or where they are from. To achieve this goal, we work to identify and eliminate barriers that have prevented the inclusion and full participation of underrepresented groups in CS.</p>
-  <p>As an organization, Code.org is committed to providing an inclusive environment, with equitable access and opportunity for growth and advancement for all Code.org staff regardless of gender, race, ethnicity, nationality, religion, age, marital status, sexual orientation, or identity.</p>
+<div class="col-75">
+  <p>Among young women and students from underrepresented racial and ethnic groups, participation in AP Computer Science Principles has grown ten-fold since our launch six years ago! Learn more at <a href="https://code.org/diversity">code.org/diversity</a>.</p>
 </div>
 <div style="clear: both; margin-bottom: 10px"></div>
-<div class="col-33" style="padding-right: 20px;">
+<div class="col-25" style="padding-right: 20px;">
   <img src="/images/alt-about/photo.png" style="width: 100%">
 </div>
-<div class="col-66">
-  <h3 style="color:#00adbc"><strong>We believe in the power of a collaborative education community</strong></h3>
-  <p>We collaborate with teachers, facilitators, and partners. We value, respect, and learn from the shared expertise of the growing professional computer science education community. We are committed to strengthening this community and we recognize, promote, and amplify the work of all members of this teacher-led movement.</p>
+<div class="col-75">
+  <p>Recent research demonstrates that students who learn CS with Code.org are 18% likelier than other students to go to college. Code.org students also <a href="https://www.sciencedirect.com/science/article/abs/pii/S0360131520300099?dgcid=author">outperform other STEM students at reading comprehension and problem-solving</a>. Find more results on our <a href="https://code.org/research">Research</a> page.</p>
 </div>
 <div style="clear: both; margin-bottom: 10px"></div>
-<div class="col-33" style="padding-right: 20px;">
-  <img src="/images/alt-about/photo.png" style="width: 100%">
-</div>
-<div class="col-66">
-  <h3 style="color:#00adbc"><strong>We are agile and responsive to feedback</strong></h3>
-  <p>We act quickly but thoughtfully. We make decisions with available information, and actively collect new data to confirm understanding or inform change. We listen broadly and deeply to a diverse audience and are responsive to feedback.</p>
-</div>
-<div style="clear: both; margin-bottom: 10px"></div>
-<div class="col-33" style="padding-right: 20px;">
-  <img src="/images/alt-about/photo.png" style="width: 100%">
-</div>
-<div class="col-66">
-  <h3 style="color:#00adbc"><strong>We act with integrity and transparency</strong></h3>
-  <p>We act in the best interest of our student-focused mission. In this work, we are accountable to and transparent with our team, Board, donors, facilitators, partners, teachers, and community. We believe in trying new ideas, openly sharing our mistakes, and growing and learning from them. We proactively share information, research, data, processes, decisions, and results. Our products and curriculum are purposefully open for anyone to use or contribute.</p>
-</div>
-<div style="clear: both; margin-bottom: 10px"></div>
-<div class="col-33" style="padding-right: 20px;">
-  <img src="/images/alt-about/photo.png" style="width: 100%">
-</div>
-<div class="col-66">
-  <h3 style="color:#00adbc"><strong>We believe broad impact requires thinking big and acting holistically</strong></h3>
-  <p>We are creating sustainable change in education systems through policies, products, services, and partnerships that impact all levels of education, from the individual student or classroom to entire schools, districts, states, or countries. We strategically use available resources to make long-term investments that will have a positive, lasting impact on students' lives.</p>
+
+<div class="solid-block-header" style="background-color:#00adbc; border-radius: 10px">
+    <p style="font-size:14px; margin-bottom: 5px"><strong>Encourage students to learn computer science!</strong>
+    <a href="/recruit"><button class="educate-button" style="float:right; background-color: #ffa400; color: #fff; margin-top: 0; margin-right: 10px">Learn more</button></a></p>
 </div>
 
-<div style="clear: both; margin-bottom: 20px"></div>
-<p><strong>Read more about our values and key messages <a href="https://code.org/about/values">here</a>.</strong></p>
 <p><a href="#top">[Back to top]</a></p>
 
 <hr/>
