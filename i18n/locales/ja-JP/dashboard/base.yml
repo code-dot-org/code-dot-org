@@ -213,6 +213,7 @@ ja:
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org のログイン情報'
+    parent_email_added_subject: 'Code.org へようこそ!'
   teacher_mailer:
     new_teacher_subject: 'Code.org へようこそ!'
   section:

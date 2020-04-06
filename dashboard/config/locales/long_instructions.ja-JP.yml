@@ -1613,21 +1613,10 @@ ja-JP:
             <title name="DIR">8</title>
           </block></xml> をつけて 犬をうごかせるようにしよう。
         犬を はたまで うごかせばクリアです。
-      courseA_playLab_events3_2019: |-
-        <xml><block type="studio_whenArrow" block-text="when left arrow">
-            <title name="VALUE">left</title>
-          </block></xml> のしたに <xml><block type="studio_move" block-text="move dog west">
-            <title name="SPRITE">1</title>
-            <title name="DIR">8</title>
-          </block></xml> をつけて 犬をうごかせるようにしよう。
-        犬を はたまで うごかせばクリアです。
       courseA_playLab_events4: 右やじるしキーがおされたとき、犬が右にうごくようにしてみよう。
       courseA_playLab_events4_2018: みぎ やじるし ボタンが おされたとき、ジョージが みぎに うごくようにしよう。
-      courseA_playLab_events4_2019: みぎ やじるし ボタンが おされたとき、ジョージが みぎに うごくようにしよう。
       courseA_playLab_events5: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
       courseA_playLab_events5_2018: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
-      courseA_playLab_events5_2019: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
-      courseA_playLab_events6_2019: はいけいをかえてみよう、犬が クリックされたとき ランダムに おとが なるようにしてみよう。
       courseA_playLab_events7_2018: _フリープレイ_ このゲームを かいぞう してみよう。ジョージが きょうりゅうに ぶつかったとき、きょうりゅうを
         けすことが できますか？
       courseA_playLab_events7_2019: _フリープレイ_ このゲームを かいぞう してみよう。ジョージが きょうりゅうに ぶつかったとき、きょうりゅうを
