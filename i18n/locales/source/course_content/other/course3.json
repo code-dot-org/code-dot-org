@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/course3/stage/1/puzzle/1": {
+    "title": "Computational Thinking"
+  },
   "https://studio.code.org/s/course3/stage/1/puzzle/2": {
     "dsls": {
       "answers": [
@@ -347,6 +350,9 @@
   "https://studio.code.org/s/course3/stage/3/puzzle/15": {
     "short_instructions": "Free Draw!  Draw whatever you are inspired to create.",
     "long_instructions": "Free Draw!  Draw whatever you are inspired to create."
+  },
+  "https://studio.code.org/s/course3/stage/4/puzzle/1": {
+    "title": "Functional Suncatchers"
   },
   "https://studio.code.org/s/course3/stage/4/puzzle/2": {
     "dsls": {
@@ -837,6 +843,9 @@
     "short_instructions": "Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles.",
     "long_instructions": "Use If/Else blocks to follow the curvy path. At each corner, use the `remove 1` command in a loop to clear the piles."
   },
+  "https://studio.code.org/s/course3/stage/9/puzzle/1": {
+    "title": "Songwriting"
+  },
   "https://studio.code.org/s/course3/stage/9/puzzle/2": {
     "dsls": {
       "answers": [
@@ -865,6 +874,9 @@
       ],
       "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course3/stage/10/puzzle/1": {
+    "title": "Real Life Algorithms: Dice Race"
   },
   "https://studio.code.org/s/course3/stage/10/puzzle/2": {
     "dsls": {
@@ -1316,6 +1328,9 @@
       "keep playing": "keep playing"
     }
   },
+  "https://studio.code.org/s/course3/stage/18/puzzle/1": {
+    "title": "Internet"
+  },
   "https://studio.code.org/s/course3/stage/18/puzzle/2": {
     "dsls": {
       "answers": [
@@ -1374,6 +1389,9 @@
       "title": "Multiple Choice"
     }
   },
+  "https://studio.code.org/s/course3/stage/19/puzzle/1": {
+    "title": "Crowdsourcing"
+  },
   "https://studio.code.org/s/course3/stage/19/puzzle/2": {
     "dsls": {
       "answers": [
@@ -1421,6 +1439,9 @@
       ],
       "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course3/stage/20/puzzle/1": {
+    "title": "Digital Citizenship"
   },
   "https://studio.code.org/s/course3/stage/20/puzzle/2": {
     "dsls": {

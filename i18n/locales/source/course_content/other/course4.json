@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/course4/stage/1/puzzle/1": {
+    "title": "Tangram Algorithms"
+  },
   "https://studio.code.org/s/course4/stage/2/puzzle/1": {
     "short_instructions": "Avoid the TNT!"
   },
@@ -136,6 +139,12 @@
   "https://studio.code.org/s/course4/stage/3/puzzle/14": {
     "short_instructions": "Still playing?  Here is a blank canvas where you can design anything you want!",
     "long_instructions": "Still playing?  Here is a blank canvas where you can design anything you want!"
+  },
+  "https://studio.code.org/s/course4/stage/4/puzzle/1": {
+    "title": "Envelope Variables"
+  },
+  "https://studio.code.org/s/course4/stage/5/puzzle/1": {
+    "title": "Mad Glibs"
   },
   "https://studio.code.org/s/course4/stage/6/puzzle/1": {
     "short_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 100 pixels long on each side.",
@@ -299,6 +308,9 @@
     "authored_hints": {
       "courseF_playlab_variables_challenge1_a": "You will need additional blocks from the tool box to get the actors to talk.\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/course4/stage/8/puzzle/1": {
+    "title": "For Loop Fun"
   },
   "https://studio.code.org/s/course4/stage/9/puzzle/1": {
     "short_instructions": "Use a loop to collect the nectar from each flower."
@@ -634,6 +646,9 @@
       "my design": "my design",
       "do something": "do something"
     }
+  },
+  "https://studio.code.org/s/course4/stage/13/puzzle/1": {
+    "title": "Songwriting With Parameters"
   },
   "https://studio.code.org/s/course4/stage/14/puzzle/1": {
     "short_instructions": "Let's define this function to draw a square with 50 pixel sides. Click \"edit\" to get started.",
@@ -992,6 +1007,9 @@
     "function_names": {
       "pick row": "pick row"
     }
+  },
+  "https://studio.code.org/s/course4/stage/17/puzzle/1": {
+    "title": "Binary Images"
   },
   "https://studio.code.org/s/course4/stage/18/puzzle/1": {
     "short_instructions": "Use the blocks below to have the artist draw \"01010101\" in binary in the first row.",
