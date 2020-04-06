@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -12,7 +11,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
 
-$(() => {
+window.addEventListener('DOMContentLoaded', function() {
   // Register the reducers we need to show the parent letter:
   registerReducers({currentUser, sectionData, teacherSections});
 
