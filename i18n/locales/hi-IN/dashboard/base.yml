@@ -216,6 +216,7 @@ hi:
       Code.org पर कंप्यूटर विज्ञान tutorials के लिए (मुझे अपने "शिक्षक" के रूप में) के साथ साइन अप करने के लिए नीचे दिए गए लिंक पर क्लिक करें:%{link} ट्यूटोरियल रहे हैं मज़ा, नेत्रहीन आकर्षक, और एक सरल, निर्देशित, खेल की तरह अनुभव का उपयोग कर कंप्यूटर विज्ञान की मूलभूत अवधारणाओं सिखाने। बिल गेट्स, मार्क Zuckerberg, गुस्से में पक्षियों और लाश बनाम संयंत्रों से कोड करने के लिए जानें! :-) %{name}
   parent_mailer:
     student_associated_subject: 'Code.org के लिए लॉगिन जानकारी'
+    parent_email_added_subject: 'Code.org में आपका स्वागत है!'
   teacher_mailer:
     new_teacher_subject: 'Code.org में आपका स्वागत है!'
     delete_teacher_subject: 'Code.org सूचना: आपका खाता मिटा दिया गया है'
@@ -436,6 +437,7 @@ hi:
     update: "खाता अद्यतन करें"
     account_successfully_updated: "खाता सफलतापूर्वक अद्यतन हो गया।"
     update_email: "अद्यतन करें"
+    encrypted: "कूटलेखन किया"
   user_level:
     completed: 'पूरा हो गया'
     tried: 'कोशिश की'
