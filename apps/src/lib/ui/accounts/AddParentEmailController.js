@@ -69,6 +69,7 @@ export default class AddParentEmailController {
   };
 
   submitParentEmailChange({parentEmail, parentEmailOptIn}) {
+    console.log(parentEmail, parentEmailOptIn);
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
