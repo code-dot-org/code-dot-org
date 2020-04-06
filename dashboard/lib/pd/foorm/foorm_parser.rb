@@ -57,14 +57,15 @@ module Pd::Foorm
           parsed_questions.merge!(parse_element(panel_question_data))
         end
       else
-        parsed_questions[question_data[:name]] = parse_question(question_data)
+        if QUESTION_TYPES.include?(question_data[:type])
+          parsed_questions[question_data[:name]] = parse_question(question_data)
+        end
       end
       parsed_questions
     end
 
     # parse single question into standardized format
     def self.parse_question(question_data)
-      return unless QUESTION_TYPES.include?(question_data[:type])
       parsed_question = {
         title: question_data[:title],
         type: QUESTION_TO_ANSWER_TYPES[question_data[:type]]
