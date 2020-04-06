@@ -19,7 +19,7 @@ Feature: Using the progress tab of the teacher dashboard
     And I get hidden script access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved with experiment "standardsReport"
+    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
 
     # Summary View
@@ -48,4 +48,3 @@ Feature: Using the progress tab of the teacher dashboard
     And I wait until element "#uitest-progress-standards-table" is visible
     And I see no difference for "standards view"
     And I close my eyes
-
