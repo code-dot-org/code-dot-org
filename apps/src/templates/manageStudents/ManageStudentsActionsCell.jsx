@@ -193,8 +193,11 @@ class ManageStudentActionsCell extends Component {
     navigateToHref(url);
   };
 
-  onDownloadParentLetter = () => {
+  onViewParentLetter = () => {
     const {id, sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
+    window.open(url, '_blank');
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
@@ -238,8 +241,8 @@ class ManageStudentActionsCell extends Component {
             )}
             {showWordPictureOptions &&
               experiments.isEnabled(experiments.PARENT_LETTER) && (
-                <PopUpMenu.Item onClick={this.onDownloadParentLetter}>
-                  {i18n.downloadParentLetter()}
+                <PopUpMenu.Item onClick={this.onViewParentLetter}>
+                  {i18n.viewParentLetter()}
                 </PopUpMenu.Item>
               )}
             {this.props.canEdit && canDelete && <MenuBreak />}
