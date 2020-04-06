@@ -942,6 +942,16 @@ sk-SK:
           # Zastav sa
 
           Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Dizajn, ktorý je dostupný
+
+          * Vo svete informatiky **dostupnosť** znamená tvorbu technológií pre ľudí so znevýhodnením.
+          * Znevýhodnenie môže byť fyzické, zrakové, sluchové a mnohé ďalšie.
+          * Existujú rôzne typy znevýhodnenia a všetky majú vplyv na to ako ľudia so znevýhodnením používajú technológie, napr. **smartfónové aplikácie**.
+          * Keď tvoríte aplikáciu, ktorá je dostupná pre ľudí so znevýhodnením, vlastne ju vylepšujete aj pre všetkých ostatných!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1147,6 +1157,21 @@ sk-SK:
           # Prezentácia projektov
 
           Nastal čas prezentovať tvoj projekt. Viac informácií o prezentácii pred spolužiakmi dostaneš od učiteľa.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Súkromné a osobné údaje
+
+          Na tejto hodine sa naučíte, aký je rozdiel medzi tým čo je a nie je bezpečné zdielať na internete. Lekciu pripravili Common Sense Education.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      SimonSays-Unplugged:
+        markdown: |-
+          # Simon vraví
+
+          Zahraj si hru a porozmýšľaj aké príkazu sú potrebné na dosiahnutie správnych výsledkov.
+      Songwriting-Unplugged:
+        markdown: "# Písanie piesní\n\nNa príklade použitia refrénu v piesni sa študenti
+          naučia definovanie a vyvolanie funkcií. "
       behaviors 1 predict:
         answers:
         - feedback: Nesprávne.
@@ -1634,18 +1659,11 @@ sk-SK:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
-          correct: true
+        - correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
-          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
-            kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
-          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
-            kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
-          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
-            a vyrobiť med na každom pláste.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -2046,6 +2064,22 @@ sk-SK:
         - {}
       courseE_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
+        markdown: |-
+          # Príklady projektov
+
+          Práve sa ideš pustiť do svojho finálneho projektu. Predým ako začneš, prezri si niekoľko príkladov projektov.
+
+          ## Sprite Lab
+
+          | Tanec príšer (Sprite Lab) | Košíčková hra (Sprite Lab) |
+          |---|---|
+          | [![Monster Dance(Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Skús do tejto hry pridať text alebo skóre! | Skús do tejto hry pridať text alebo skóre! |
+
+          ## Umelec
+
+          | Postup (Artist) | Kvetiny s funkciami (Arist) |
+          |---|---|
       courseF_bee_variables_8a_2018:
         answers:
         - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".
