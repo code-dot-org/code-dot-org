@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import color from '../../../util/color';
 import AddParentEmailModal from './AddParentEmailModal';
 
 /**
@@ -35,7 +36,8 @@ export default class AddParentEmailController {
       return; // Idempotent show
     }
 
-    const handleSubmit = values => this.submitParentEmailChange(values);
+    const handleSubmit = values =>
+      this.submitParentEmailChange(values).then(this.onParentEmailChanged);
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
     ReactDOM.render(
@@ -58,8 +60,16 @@ export default class AddParentEmailController {
     }
   };
 
+  onParentEmailChanged = parentEmail => {
+    this.displayedParentEmail.text(parentEmail);
+    this.hideAddParentEmailModal();
+    this.displayedParentEmail.effect('highlight', {
+      duration: 1500,
+      color: color.orange
+    });
+  };
+
   submitParentEmailChange({parentEmail, parentEmailOptIn}) {
-    console.log(parentEmail, parentEmailOptIn);
     return new Promise((resolve, reject) => {
       const onSuccess = () => {
         detachHandlers();
@@ -96,7 +106,6 @@ export default class AddParentEmailController {
       this.form
         .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
         .val(parentEmailOptIn);
-      console.log(this.form);
       this.form.submit();
     });
   }
