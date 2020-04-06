@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
+import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
@@ -172,7 +173,8 @@ export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
-  teacherName: state.currentUser.userName
+  teacherName: state.currentUser.userName,
+  studentId: queryParams('studentId')
 }))(ParentLetter);
 
 const Header = () => {
