@@ -173,6 +173,8 @@ et:
     subject: 'Liitu minu klassiga (Code.org lehel)'
     body: |
       Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt ja Plants vs Zombielt! :-) %{name}
+  parent_mailer:
+    parent_email_added_subject: 'Tere tulemast Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Tere tulemast Code.org!'
   section:
@@ -315,6 +317,7 @@ et:
     create_personal_login_under_13_username: "Kasutajanimi (ärge kasutage oma pärisnime!)"
     create_personal_login_under_13_parent_email: 'Lapsevanem/hooldaja e-posti aadress'
     update_email: "Uuenda"
+    encrypted: "krüpteeritud"
   user_level:
     completed: 'Tehtud'
     tried: 'Proovisin'
