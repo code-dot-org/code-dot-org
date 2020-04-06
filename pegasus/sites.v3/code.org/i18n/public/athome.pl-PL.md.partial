@@ -33,9 +33,10 @@ theme: responsive
 
 <div class="col-70" style="padding-right:25px">
 
-<p style="border: 0; margin-top:15px;">Oderwij się od kodowania i zrób sobie przerwę z Hadi Partovim i zespołem Code.org</p>
+<p style="border: 0;">Oderwij się od kodowania i zrób sobie przerwę z Hadi Partovim i zespołem Code.org</p>
 <p style="font-size: 14px; border: 0">Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.</p>
 <p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow"> Łącz się</a> w środy o 10.00 PT / 13.00 ET, począwszy od 25 marca. Dowiedz się więcej na <a href="https://code.org/break"> code.org/break </a></p>
+<a href="/break"><button>Learn more</button></a>
 
 </div>
 
@@ -90,6 +91,8 @@ Wypróbuj godzinny samouczek przeznaczony dla wszystkich grup wiekowych. Istniej
 
 <p><a href="#top">Powrót na górę</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
+
+<a id="express"></a>
 
 ## Poznaj podstawy informatyki dzięki naszym ekspresowym kursom
 To świetna okazja dla uczniów, rozpoczynających samodzielną naukę. Poznasz podstawy informatyki przeciągając & upuszczając bloki. Twórz własne rysunki i gry. <i mark = "crwd-mark"> Uwaga: Kursy ekspresowe są obecnie dostępne tylko w języku angielskim, hindi, włoskim i hiszpańskim; wkrótce będą także po polsku. Aby zobaczyć, co jest dostępne w Twoim języku, odwiedź [ studio.code.org](https://studio.code.org/courses). </i>
@@ -148,7 +151,7 @@ To świetna okazja dla uczniów, rozpoczynających samodzielną naukę. Poznasz 
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"> <h3 style = "color: # 7665a0"> <strong> Grasshopper </strong> </h3> </a> Naucz się kodowania na zabawnych, szybkich lekcjach na Twoim telefonie, aby kodować w JavaScript. Z projektu Google Area 120. <i> (dla starszych uczniów) </i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"> <h3 style = "color: # 7665a0"> <strong> Grasshopper </strong> </h3> </a> Naucz się kodowania na zabawnych, szybkich lekcjach na Twoim telefonie, aby kodować w JavaScript. A Code with Google Program. <i> (dla starszych uczniów) </i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
