@@ -228,8 +228,11 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   nav.append(fallbackPlayerLinkDiv);
 
   // Resize modal to fit constraining dimension.
-  var height = $(window).height() * widthRatio,
-    width = $(window).width() * heightRatio;
+  let windowHeight = Math.min(screen.height, screen.width);
+  let windowWidth = Math.max(screen.height, screen.width);
+
+  var height = windowHeight * widthRatio,
+    width = windowWidth * heightRatio;
 
   if (height * aspectRatio < width) {
     $div.height(height);
