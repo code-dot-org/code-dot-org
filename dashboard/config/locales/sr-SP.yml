@@ -20,6 +20,11 @@ sr:
       user:
         name: Прикажи назив
         email: Електронска пошта
+        parent_email: Имејл од родитеља/старатеља
+        personal_email: Твоја адреса електронске поште <a href="%{url}">(кликни овде
+          уколико немаш електронску пошту)</a>
+        personal_email_markdown: Твоја адреса електронске поште [(кликни овде уколико
+          немаш електронску пошту)](%{url})
         username: корисничко име
         password: Лозинка
         password_confirmation: Потврдите лозинку
@@ -28,22 +33,40 @@ sr:
         age: Узраст
         gender: Пол
         edit_header: Уреди детаље налога
+        finish_sign_up_header: Заврши креирање твог налога
+        finish_sign_up_subheader: Попуни следеће информације да би завршио креирање
+          Code.org налога за <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Попуни следеће информације да би завршио
+          креирање Code.org налога за **%{email}**.
+        finish_sign_up_subheader_provider: Попуни следеће информације да би завршио
+          креирање Code.org налога са <strong>%{provider}</strong> за <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Попуни следеће информације да
+          би завршио креирање Code.org налога са **%{provider}** за **%{email}**.
+        reset_password_token: Веза за ресетовање шифре коју си пратио
         error:
           future: не може бити у будућности
   beta: пробна верзија
   hello: Здраво свете
   welcome_back: Добродошао назад, %{name}
+  your_professional_learning_plan: Твој професионални план учења
   see_your_learning_plan: Погледај твој план учења
   submit: Пошаљи
   unsubmit: Откажи предају
   previous_page: Претходна страница
   next_page: Следећа страница
+  next_resource: Следећи материјал
   cancel: Откажи
   okay: У реду
   or: или
+  heading_x_of_y: "%{heading} (page %{x} од %{y})"
   join_section:
     code:
+      title: Придружи се секцији на Code.org
       placeholder: Шифра секције(ABCDEF)
+      instructions: 'Молим те да укуцаш код од 6 слова који ти је дао учитељ (на пример:
+        "ABCDEF") да би се придружио секцији.'
+      instructions_short: Укуцај твој код секције од 6 слова
+      submit: Придружи се
   add_hint_form:
     placeholder: Молимо унесите ваш савет овде
     submit: Додај савет
@@ -55,6 +78,7 @@ sr:
   courses: курсеви
   courses_page:
     title_student: Научите о Code Studio-ју
+    title_teacher: Научи компјутерске науке (информатику)
   unplugged_activity: Активност ван мреже
   of: од
   more: ВИШЕ
@@ -68,8 +92,12 @@ sr:
   prize: награда
   more_info: Више информација
   auth:
+    continue_with: Настави са %{provider}
     sign_in_with: Пријавите се помоћу %{provider}
     signed_in: Пријављени сте!
+    signed_out_markdown: "### Одјавио си се са [Code.org](%{url})."
+    sign_out_of_markdown: "#### Користили сте %{provider} да бисте се пријавили. [Кликните
+      овде](%{url}) да бисте се одјавили са %{provider}."
     already_signedup: Већ сте направили налог?
     notyet_signedup: Нисте се придружили?
     google_oauth2: Гугл налог
@@ -109,15 +137,21 @@ sr:
     mismatch_password: Лозинке се не поклапају
     additional_information: Потребне су нам додатне информације како би смо могли
       да наставимо са процесом регистрације.
+    user_type_button: Ажурирајте тип налога
     user_type_label: Врста налога
     user_type_teacher: Учитељ
     user_type_student: студент
     field_is_required: је обавезан
     accept_terms: Морате се сложити да бисте креирали свој налог
+    error: Дошло је до грешке.
+    email_preference_question: Да ли можемо да вам шаљемо електронску пошту о нашим
+      курсевима, локалним могућностима или другим вестима из информатике (отприлике
+      једном месечно)?
     email_preference_privacy: "(Погледајте нашу политику приватности)"
     email_preference_yes: Да
     email_preference_no: не
   school_info:
+    title: Информације о школи (опционо)
     other: Други
   signin_form:
     title: Већ имате налог? Пријавите се
@@ -156,7 +190,20 @@ sr:
       Туторијали су забавни, визуелни, и уче основе програмиранја користећи једноставне примјере у облику игрица. Научите програмирати од Bill Gatesа, Mark Zuckerbergа, Angry Birds, и Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Информације о пријави на Code.org
+    parent_email_added_subject: Добро дошли на Code.org!
+  teacher_mailer:
+    new_teacher_subject: Добро дошли на Code.org!
+    delete_teacher_subject: 'Code.org обавештење: Ваш налог је обрисан'
   section:
+    your_section:
+      one: 'Ваша секција:'
+      other: 'Ваше секције:'
+    code_with_teacher: "%{section_code} са %{teacher_name}"
+    confirm:
+      remove: Да ли сте сигурни да желите да напустите ову секцију?
+    remove: "(уклони секцију)"
     type:
       word: Тајна реч
       email: Електронска пошта
@@ -198,7 +245,19 @@ sr:
     header:
       finished_hoc: Завршио сам свој Сат програмирања
       sign_in_to_save: Пријави се да сачуваш напредак
+      sections: Секције
+      report_bug: Пријави проблем
+      teacher_community: Заједница учитеља
       educate_hoc: Час кода
+      about_us: О нама
+      about_donors: Донатори
+      about_partners: Партнери
+      about_team: Цео тим
+      about_jobs: Послови
+      about_contact: Контактирајте нас
+      about_faqs: Често постављана питања
+      learn: Научи
+      help_us: Помози нам
     user:
       classroom: Почетна страница за учитеље
       district_dashboard: Регионална огласна табла
@@ -207,7 +266,9 @@ sr:
       settings: Мој налог
       logout: Одјави се
       signin: Пријави се
+      signup: Креирај налог
       already_registered: Већ си регистрован?
+      team: Тим
       create: Креирај
       artist: Уметник
       bounce: одбиј се
@@ -248,6 +309,7 @@ sr:
       example: Пример решења
       example_with_number: Пример решења %{solution_number}
       submitted_on: 'Предато:'
+      last_updated: 'Последње ажурирање:'
       unsubmit: Откажи предају
   user:
     email_confirm_needed: 'Електронска пошта није потврђена:'
