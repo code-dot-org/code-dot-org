@@ -44,9 +44,9 @@ export default class AddParentEmailController {
       <AddParentEmailModal
         handleSubmit={handleSubmit}
         handleCancel={this.hideAddParentEmailModal}
-        currentParentEmail={$(
-          '#add-parent-email-modal_user_parent_email'
-        ).val()}
+        currentParentEmail={this.form
+          .find('#add-parent-email-modal_user_parent_email')
+          .val()}
       />,
       this.mountPoint
     );

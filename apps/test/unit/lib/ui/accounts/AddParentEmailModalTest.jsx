@@ -98,7 +98,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'old@example.com',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           }
         });
 
