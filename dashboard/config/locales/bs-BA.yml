@@ -157,6 +157,8 @@ bs:
       privlačni, podučavaju osnovnim informatičkim pojmovima kroz zabavu i igru s
       puno uputstava. Nauči kodirati dok ti pomažu Bill Gates, Mark Zuckerberg Angry
       Birds i Plants vs. Zombies! :-) \n%{name}\n"
+  parent_mailer:
+    parent_email_added_subject: Dobrodošli na Code.org!
   teacher_mailer:
     new_teacher_subject: Dobrodošli na Code.org!
   section:
