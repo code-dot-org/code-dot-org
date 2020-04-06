@@ -29,7 +29,7 @@ hu:
   oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
     hogyan ismerjen fel halakat.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: A számtástechnika sokkal több, mint csak kódolás! Tanulj
     többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez kapcsolódó
     foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI hogyan oldhatja
@@ -172,6 +172,8 @@ hu:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
   codeorg_homepage_special2020_link_text: Get started
   cookie_banner_message: Az oldal további használatával, valamint az egyetértek gombra
     kattintással elfogadod a Cookie-k számítógépen történő tárolását.
