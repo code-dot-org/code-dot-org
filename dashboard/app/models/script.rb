@@ -115,15 +115,7 @@ class Script < ActiveRecord::Base
           plc_course_unit_id: unit.id,
           name: stage.name,
           module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
-          plc_tasks: []
         )
-
-        stage.script_levels.each do |sl|
-          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
-          task.name = sl.level.name
-          task.save!
-          lm.plc_tasks << task
-        end
       end
     end
   end
@@ -149,6 +141,7 @@ class Script < ActiveRecord::Base
     editor_experiment
     project_sharing
     curriculum_umbrella
+    tts
   )
 
   def self.twenty_hour_script
@@ -209,6 +202,10 @@ class Script < ActiveRecord::Base
 
   def self.stage_extras_script_ids
     @@stage_extras_scripts ||= Script.all.select(&:stage_extras_available?).pluck(:id)
+  end
+
+  def self.maker_unit_scripts
+    visible_scripts.select {|s| s.family_name == 'csd6'}
   end
 
   # Get the set of scripts that are valid for the current user, ignoring those
@@ -779,63 +776,8 @@ class Script < ActiveRecord::Base
     @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
-  private def csf_tts_level?
-    k5_course?
-  end
-
-  private def csd_tts_level?
-    [
-      Script::CSD2_NAME,
-      Script::CSD3_NAME,
-      Script::CSD4_NAME,
-      Script::CSD6_NAME,
-      Script::CSD2_2018_NAME,
-      Script::CSD3_2018_NAME,
-      Script::CSD4_2018_NAME,
-      Script::CSD6_2018_NAME,
-      Script::CSD2_2019_NAME,
-      Script::CSD3_2019_NAME,
-      Script::CSD4_2019_NAME,
-      Script::CSD6_2019_NAME,
-      Script::CSD1_PILOT_NAME,
-      Script::CSD2_PILOT_NAME,
-      Script::CSD3_PILOT_NAME,
-      Script::CSD2_2020_NAME,
-      Script::CSD3_2020_NAME,
-      Script::CSD4_2020_NAME,
-      Script::CSD6_2020_NAME
-    ].include?(name)
-  end
-
-  private def csp_tts_level?
-    [
-      Script::CSP17_UNIT3_NAME,
-      Script::CSP17_UNIT5_NAME,
-      Script::CSP17_POSTAP_NAME,
-      Script::CSP3_2018_NAME,
-      Script::CSP5_2018_NAME,
-      Script::CSP_POSTAP_2018_NAME,
-      Script::CSP3_2019_NAME,
-      Script::CSP5_2019_NAME,
-      Script::CSP_POSTAP_2019_NAME
-    ].include?(name)
-  end
-
-  private def hoc_tts_level?
-    [
-      Script::APPLAB_INTRO,
-      Script::DANCE_PARTY_NAME,
-      Script::DANCE_PARTY_EXTRAS_NAME,
-      Script::DANCE_PARTY_2019_NAME,
-      Script::DANCE_PARTY_EXTRAS_2019_NAME,
-      Script::ARTIST_NAME,
-      Script::SPORTS_NAME,
-      Script::BASKETBALL_NAME
-    ].include?(name)
-  end
-
   def text_to_speech_enabled?
-    csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
+    tts?
   end
 
   # Generates TTS files for each level in a script.
@@ -1110,6 +1052,7 @@ class Script < ActiveRecord::Base
 
       raw_stage = raw_stages.find {|rs| rs[:stage].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
+      stage.visible_after = raw_stage[:visible_after]
       stage.save! if stage.changed?
     end
 
@@ -1215,7 +1158,9 @@ class Script < ActiveRecord::Base
           },
           script_data[:stages],
         )
-        Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        if Rails.application.config.levelbuilder_mode
+          Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
+        end
       end
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1223,9 +1168,11 @@ class Script < ActiveRecord::Base
     end
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
-      # write script to file
-      filename = "config/scripts/#{script_params[:name]}.script"
-      ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      if Rails.application.config.levelbuilder_mode
+        # write script to file
+        filename = "config/scripts/#{script_params[:name]}.script"
+        ScriptDSL.serialize(Script.find_by_name(script_name), filename)
+      end
       true
     rescue StandardError => e
       errors.add(:base, e.to_s)
@@ -1381,10 +1328,13 @@ class Script < ActiveRecord::Base
       family_name: family_name,
       version_year: version_year,
       assigned_section_id: assigned_section_id,
-      hasStandards: has_standards_associations?
+      hasStandards: has_standards_associations?,
+      tts: tts?,
     }
 
-    summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
+    # Filter out stages that have a visible_after date in the future
+    filtered_stages = stages.select {|stage| stage.published?(user)}
+    summary[:stages] = filtered_stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1527,7 +1477,8 @@ class Script < ActiveRecord::Base
       pilot_experiment: script_data[:pilot_experiment],
       editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
-      curriculum_umbrella: script_data[:curriculum_umbrella]
+      curriculum_umbrella: script_data[:curriculum_umbrella],
+      tts: !!script_data[:tts]
     }.compact
   end
 

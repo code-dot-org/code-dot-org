@@ -20,14 +20,23 @@ fr-FR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Êtes-vous un professeur d’informatique&#160;? Voir les
     autres ressources de la Semaine de l’enseignement de l’informatique</a>'
+  csedweek_banner_teachers_text: Êtes-vous un professeur d’informatique ? Voir les
+    autres ressources de la Semaine de l’enseignement de l’informatique
   n_have_learned_an_hoc: "<h1>Essayez une</h1><h2>Heure de Code</h2><h3># servi</h3>"
+  try_hoc_num_served: "<h1>Essayez une</h1><h2> Heure de Code</h2><h3>%{num} ont été
+    formés</h3>"
+  try_hoc_num_served_markdown: "# Essayez une\\n\\n## Heure de Code\\n\\n### %{num}
+    ont été formés"
   anybody_can_learn: Tout le monde peut apprendre.
   learn_now: Apprenez maintenant
   petition_message: Chaque élève de chaque école devrait avoir la possibilité d'apprendre
     l'informatique.
   petition_sign_message: 'Si tu es d''accord, indique ton nom. Rejoins les # autres
     participants.'
+  petition_sign_message_num: Si tu es d'accord, ajoute ton nom et rejoins notre boite
+    d'information avec les %{num} d'autres.
   petition_join_others: 'Rejoignez # les autres'
+  petition_join_others_num: Rejoindre les %{num} autres
   name: Nom
   email: E-mail
   zipcode: Code postal ou pays
@@ -60,6 +69,8 @@ fr-FR:
   hoc2014_whatishoc: Qu'est-ce que l'Heure de Code&#160;?
   csedweek_map_header: "# Semaine de l'enseignement de l’informatique / les évènements
     de l’Heure de Code dans le monde entier"
+  csedweek_map_header_num: "%{num} Semaine de l'enseignement de l’informatique / les
+    événements de l’Heure de Code dans le monde entier"
   csedweek_map_signup: Inscrivez votre évènement
   csedweek_map_search_placeholder: Recherchez les évènements Heure de Code
   csedweek_map_search_search: Rechercher
@@ -236,7 +247,19 @@ fr-FR:
   if_you_enjoyed: Si tu as aimé apprendre, demande à des amis d’essayer aussi ! Nous
     voulons que le monde entier apprenne.
   personalize_certificate: Personnalise ton diplôme
+  print_batch_certificates: Imprimez un lot de certificats
   print_certificates: Imprimer les certificats
+  certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer
+    ton apprentissage."
+  print_ice_art_from_frozen: Imprimez l'art de la glace à partir du didacticiel de
+    Frozen
+  want_a_blank_certificate_template: Vous désirez un certificat vierge pour y inscrire
+    le nom de vos élèves ?
+  landscape_recommended_certificates: Il est recommandé de choisir **Paysage** lorsque
+    vous imprimez les certificats.
+  print_one_here_certificates: Imprimez-en un ici.
+  enter_certificate_names: Saisissez jusqu'à 30 noms, **un par ligne**. Une page imprimable
+    avec des certificats personnalisés %{script_name}  sera générée.
   share_achievement: Partage ta réalisation
   beyond_hour_message: Continue avec nos <a href='http://studio.code.org'>autres cours</a>,
     ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>.
@@ -367,10 +390,8 @@ fr-FR:
     d'apprendre l'informatique. » Sheryl, Directrice des Opérations, Facebook"
   homepage_hero_text_satya: "«&#160;L'informatique peut vous apporter les meilleures
     opportunités du monde.&#160;» Satya, PDG de Microsoft"
-  homepage_hero_text_satya_new: |-
-    &ldquo;L'informatique donne aux étudiants le pouvoir de
-    créer le monde de demain.&rdquo;
-    Satya, CEO de Microsoft
+  homepage_hero_text_satya_new: "« L'informatique permet aux étudiants de créer le
+    monde de demain. » Satya, CEO de Microsoft"
   homepage_hero_text_bosh: "«&#160;Si vous codez, vous pouvez choisir le déroulement
     de votre vie.&#160;» Chris Bosh"
   homepage_hero_text_student1: "«&#160;Ces compétences ont changé mon avenir. Sans
@@ -645,7 +666,7 @@ fr-FR:
   sports_athlete_Harrison: Harrison Barnes, champion olympique et Champion de la NBA,
     les Mavericks de Dallas
   watch_inspirational_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
-  video_title_cs_is_everything: L'informatique est en train de tout changer
+  video_title_cs_is_everything: L'informatique est en Train de Tout Changer
   video_title_inspire_girl: Encourager une fille
   video_title_cs_intro: Introduction à la science de l'informatique
   video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent pas
@@ -1011,8 +1032,8 @@ fr-FR:
   dashboard_students_female: Féminin
   dashboard_students_completed_levels: Niveaux terminés
   dashboard_students_total_lines: Lignes de code
-  dashboard_students_share_section: 'Partagez la page de connexion de cette section
-    avec vos élèves&#160;:'
+  dashboard_students_share_section: Demandez à vos élèves d'aller sur la page <a href=%{join_url}
+    > %{join_url}< / a > et de taper le code de section (%{section_code})
   dashboard_students_share_section_secondary: 'Vous pouvez également partager la page
     de connexion de cette section avec vos étudiants :'
   dashboard_students_print_info: Imprimez des cartes avec les données de connexion
@@ -1284,10 +1305,23 @@ fr-FR:
   coursed-2017_name: Cours D (2017)
   coursee-2017_name: Cours E (2017)
   coursef-2017_name: Cours F (2017)
+  coursea-2018_name: Cours A (2018)
+  courseb-2018_name: Cours B (2018)
+  coursec-2018_name: Cours C (2018)
+  coursed-2018_name: Cours D (2018)
+  coursee-2018_name: Cours E (2018)
+  coursef-2018_name: Cours F (2018)
+  coursea-2019_name: Cours A (2019)
+  courseb-2019_name: Cours B (2019)
+  coursec-2019_name: Cours C (2019)
+  coursed-2019_name: Cours D (2019)
+  coursee-2019_name: Cours E (2019)
+  coursef-2019_name: Cours F (2019)
   express-2018_name: Cour rapide (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
   express-2019_name: Cour rapide (2017)
   pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
+  csd2_name: 'Unit 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et jeux'
   accelerated_name: Cours accéléré
   express_name: Cours Express
@@ -1304,7 +1338,7 @@ fr-FR:
   hoc-encryption_name: Cryptage simple
   text-compression_name: Compression de texte
   applab_name: Labo des applis
-  gamelab_name: Labo des jeux
+  gamelab_name: Labo des Jeux
   basketball_name: Faire un match de basket
   sports_name: Coder ton propre jeu de sports
   applab_gradelevel: 'Âge recommandé: 13 ans et plus'
@@ -2122,17 +2156,16 @@ fr-FR:
     nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
     avoir des choses qui ne fonctionnent pas.
   compatibility_unsupported_browser_markdown: Votre navigateur n'est pas supporté.
-    Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
-    Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent
-    pas.
+    Merci de mettre votre navigateur à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}).
+    Vous pouvez essayer d’afficher la page mais la fonctionnalité risque d’être rompue.
   flappy_shortcode: battre des ailes
   header_home: Accueil
-  header_my_dashboard: Mon tableau de bord
+  header_my_dashboard: Mon Tableau de Bord
   header_courses: Cours
   header_course_catalog: Catalogue des cours
   header_project_gallery: Projets
   header_sections: Sections
-  header_professional_learning: Apprentissage professionnel
+  header_professional_learning: Apprentissage Professionnel
   header_educate_overview: Aperçu enseignant
   header_educate_elementary: École primaire
   header_educate_middle: Collège
@@ -2161,7 +2194,7 @@ fr-FR:
   header_teacher_community: Communauté des enseignants
   header_help_support: 'Aide et support '
   header_report_bug: Rapporter un problème
-  header_tutorials: Tutoriels
+  header_tutorials: Didacticiels
   app_lab_documentation: Documentation du Laboratoire d'Applications
   app_lab_tutorials: Tutoriels sur le Laboratoire d'Applications
   game_lab_documentation: Documentation du Laboratoire de Jeux
@@ -2178,9 +2211,10 @@ fr-FR:
   user_header_create: 'Créer '
   user_header_applab: 'Labo des applis '
   user_header_artist: 'Artiste '
-  user_header_gamelab: Labo des jeux
+  user_header_gamelab: Labo des Jeux
   user_header_playlab: Labo de jeux
   user_header_dance: Soirée Dansante
+  user_header_spritelab: Le Labo des Lutins
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Afficher tous les projets...
@@ -2250,7 +2284,7 @@ fr-FR:
     sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
     le domaine informatique?
   account_sign_up_child_accept_terms: Je confirme que j’ai l'autorisation de mes parents
-    ou de mon tuteur légal pour utiliser les services de Code.org.
+    ou de mon tuteur légal d’utiliser les services de Code.org.
   hoc_overview_dance_title: Soirée Dansante
   hoc_overview_dance_subtitle: Codez une Soirée Dansante à partager avec vos amis.
     Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !
@@ -2298,6 +2332,8 @@ fr-FR:
   hoc2018_mc_aquatic_title: 'Minecraft : Voyage Aquatique'
   hoc2018_mc_aquatic_description: Minecraft est de retour pour l’Heure de code avec
     une toute nouvelle activité ! Exploration de Minecraft avec le code.
+  hoc2019_mc_aquatic_description: Explore et construis des mondes sous-marins avec
+    le code.
   hoc2018_mc_hero_title: 'Minecraft : Voyage du héros'
   hoc2018_mc_hero_description: Minecraft est de retour pour l’Heure de code avec une
     toute nouvelle activité ! Exploration de Minecraft avec le code.
@@ -2340,7 +2376,7 @@ fr-FR:
   hoc2018_mc_video_5min: 5 minutes
   hoc2018_mc_video_title_steph_curry: Heure de Code avec Steph Curry
   hoc2018_mc_video_title_sports: Persévère. Tout le monde peut apprendre.
-  hoc2018_mc_video_title_cs_is_everything: L'informatique est en train de tout changer
+  hoc2018_mc_video_title_cs_is_everything: L'informatique est en Train de Tout Changer
   hoc2018_mc_video_title_inspire_girl: Encourager une fille
   hoc2018_mc_video_title_cs_intro: Introduction à la science de l'informatique
   hoc2018_mc_video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent
@@ -2363,9 +2399,9 @@ fr-FR:
   hoc2018_mc_back_journey: Minecraft est de retour pour l’Heure de code avec une toute
     nouvelle activité ! Exploration de Minecraft avec le code.
   hoc2018_mc_teacher_guide: Voir le guide de l'enseignant
-  hoc2018_mc_minecraft_education: Minecraft version éducation
+  hoc2018_mc_minecraft_education: Minecraft Éducation
   hoc2018_mc_continue_learning: Continuer à apprendre avec Minecraft.
-  hoc2018_mc_go_to_mc_education: Allez sur Minecraft version éducation
+  hoc2018_mc_go_to_mc_education: Aller sur Minecraft Éducation
   hoc2018_mc_short_description: Utilise ta créativité et tes compétences de résolution
     de problèmes pour trouver des trésors et explorer des mondes sous-marins avec
     la puissance de la programmation.
@@ -2438,8 +2474,8 @@ fr-FR:
   hoc2018_dance_amazon_funding_title: Obtenir un financement pour votre diplôme de
     sciences informatiques
   hoc2018_dance_amazon_future_engineer_footer: "* Les artistes dont la musique est
-    utilisée dans ce tutoriel ne sont pas sponsorisés par ni ne soutiennent Amazon
-    dans le cadre de l’utilisation de la licence de leur musique sur Code.org.\n\n"
+    utilisée dans ce didacticiel ni ne sponsorisent, ni ne soutiennent Amazon quant
+    à l'octroi d'une licence pour l'utilisation de leur musique à Code.org."
   hoc2018_dance_measure: Mesure
   hoc2018_dance_measure_colon: 'Mesure:'
   hoc2018_aquatic_video1: 'Minecraft : Voyage Aquatique - Introduction'
@@ -2459,3 +2495,14 @@ fr-FR:
   hoc2018_mc_thank_microsoft: Nous remercions Microsoft du soutien accordé à notre
     vision et mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
     et les compétences nécessaires pour réussir au XXIe siècle.
+  hoc2019_mc_mee_title: Minecraft AI pour de Bon
+  hoc2019_mc_mee_description1: 'Le nouveau didacticiel Minecraft Hour of Code est
+    maintenant disponible dans Minecraft : Édition Éducation pour Windows, Mac et
+    iPad. Apprenez les bases du codage et explorez l''IA avec vos élèves!'
+  hoc2019_mc_mee_description2: Accédez à des ressources gratuites, qui comprennent
+    un plan de leçon, des vidéos, un programme d'informatique et des formations pour
+    les enseignants.
+  hoc2019_mc_more_coding_resources: Plus De Ressources De Codage
+  hoc2019_dance_previous_versions: Vous cherchez une version antérieure de Dance Party?  Cliquez
+    ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie 2](%{dance_extras_2018_link})
+    qui datent de l'année dernière.

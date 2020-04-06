@@ -1549,6 +1549,14 @@ th:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: ย้าย {SPRITE} {DISTANCE} พิก เซล {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': ทิศเหนือ
+            '"East"': ตะวันออก
+            '"South"': ทางใต้
+            '"West"': เวสต์
       aalab_prompt:
         text: ถามคำถาม {MESSAGE}
       aalab_scene:
@@ -1560,12 +1568,10 @@ th:
             '3': '3'
       aalab_setupStory:
         text: เรื่องราวการติดตั้ง
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': แสดง
-            '"hide"': ซ่อน
+            '"random"': สุ่ม
       binary_drawBin:
         text: วาดเลขฐานสอง {BIN}
       binary_drawBinScreen:

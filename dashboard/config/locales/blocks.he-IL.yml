@@ -1547,6 +1547,14 @@ he:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: הזיז {SPRITE} {DISTANCE} פיקסלים {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': צפונה
+            '"East"': מזרחה
+            '"South"': דרומה
+            '"West"': מערבה
       aalab_prompt:
         text: לשאול את השאלה {MESSAGE}
       aalab_scene:
@@ -1558,12 +1566,10 @@ he:
             '3': '3'
       aalab_setupStory:
         text: סיפור ההתקנה
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': הצג
-            '"hide"': הסתר
+            '"random"': אקראי
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:

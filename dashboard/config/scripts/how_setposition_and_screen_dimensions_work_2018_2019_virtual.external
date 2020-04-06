@@ -7,20 +7,17 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # setPosition and Screen Dimensions
 
-The `setPosition` command (now added to the Toolbox) lets you move UI elements to an arbitrary position on the screen (and optionally set the size at the same time).  Here is the generic form which shows that: *for a given UI id, you can explicitly set the x,y location on the screen as well as the width and height*.
-
-<img src="https://images.code.org/6db4a1aa3b8a6d300a93e68314980ab7-image-1476887961934.png" style="display: block; margin: auto">
-
-The little arrows on the right side mean that some of the parameters are optional.  You can click the arrows to collapse or expand the available parameters.
+The `setPosition` command (now added to the Toolbox) lets you change the position (and size) of an element on the screen. The little arrows on the right side mean that some of the parameters are optional.  You can click the arrows to collapse or expand the available parameters.
 
 <img src="https://images.code.org/85555ba95bc3b3b82d1b2c8d2c54e695-image-1476887867008.gif" style="display: block; margin: auto">
 
-You (perhaps obviously) need to plug actual numbers into these parameters of `setPosition` for it to have any effect.  The numbers for setPosition are **x and y coordinates of the screen**. This is similar to the turtle's `moveTo(x,y)` command.
+The numbers for `setPosition` are **x and y coordinates of the screen**.
 
 **Remember:**
 
 * 0,0 is the top left corner.
 * Specify a location by how many pixels from the **left and down** from the top of the screen it is.  
+  * Remember that the *x* and *y* properties in the `setPosition` block specify the element's **top left** corner.
 * The screen is **320 by 450 pixels**.  
 * You can **hover over the screen** to see the x,y coordinate of any point.
 

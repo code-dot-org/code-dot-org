@@ -7,6 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -14,13 +15,20 @@
           "function(){\n\n}"
         ]
       },
-      "moveForward": null,
-      "turnLeft": null
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null
     },
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Debug the program by fixing the logical error within the program. (Click to see full instructions)",
-    "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"button2\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "start_blocks": "onEvent(\"button1\", \"click\", function(){\r\n  setProperty(\"screen1\", \"background-color\", \"green\");\r\n});\r\nonEvent(\"screen1\", \"click\", function(){\r\n  setProperty(\"screen1\", \"background-color\", \"yellow\");\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -37,7 +45,7 @@
     "free_play": "true",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "true",
+    "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -48,21 +56,32 @@
     "slider_speed": "1.0",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "QhkBlwDT6oYThweA4DaYpiBTHuwsxkHRoZ+9U7GegE9QLnf4ZmQmXVO++L/L\nvXWZ\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 10px;\">Go Forth!</button><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 130px; top: 10px;\">Turn Left!</button></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 85px; width: 150px; font-size: 32px; color: rgb(0, 0, 0); background-color: rgb(238, 238, 0); position: absolute; left: 85px; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0); border-radius: 3px; font-family: Arial, Helvetica, sans-serif; top: 280px;\">Yellow!</button><button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 85px; font-size: 32px; color: rgb(0, 0, 0); background-color: rgb(0, 111, 0); position: absolute; left: 85px; border-style: solid; border-width: 1px; border-color: rgb(0, 0, 0); border-radius: 3px; font-family: Arial, Helvetica, sans-serif; width: 150px; top: 85px;\">Green!</button></div></div>",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Debugging Logical Errors\r\n\r\nSometimes you can write a program that generates no errors but still does not work as intended. \r\n\r\nThis is the result of **logical errors** in your code, and **making a prediction** can help find these nasty little buggers too.\r\n\r\nOnce again we've introduced an error or two (a logical error this time) for you to debug.\r\n\r\n1. **Investigate the code and make a prediction** - What *should* happen here?\r\n2. **Run the program** and experiment to see what's wrong.\r\n3. **Reflect** - were you right?  Why or why not?\r\n4. **Fix it** - make it work as intended.\r\n5. **Repeat as necessary**",
+    "long_instructions": "# Debugging Logical Errors\r\n\r\nHere is a program that generates no errors but still does not work as intended. We call these **logical errors**.\r\n\r\nOnce again we've introduced a logical error or two for you to debug.\r\n\r\n1. **Investigate the code and make a prediction** - What *should* happen here?\r\n2. **Run the program** and experiment to see what's wrong.\r\n3. **Reflect** - were you right?  Why or why not?\r\n4. **Fix it** - make it work as intended.\r\n5. **Repeat as necessary**\r\n\r\n**Hint:** Both events should be checking for clicks on *buttons*, not the screen. Make sure each button changes the screen color in a way that makes sense.",
     "instructions_important": "false",
     "parent_level_id": 17088,
     "name_suffix": "_virtual",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-01 21:17:43 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:39:42 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"start_html\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:40:07 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:42:24 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 15:20:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

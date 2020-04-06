@@ -5,23 +5,25 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
-  '#school-info-inputs',
+  '#school-info-section',
   '#email-preference-radio'
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
-  '#student-consent'
+  '#student-consent',
+  '#parent-email-container'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID, provider} = scriptData;
+const {usIp, signUpUID} = scriptData;
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -36,7 +38,16 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
-    trackPageLoadInOptimizely();
+    // FND-1099 Remove this once PARENT_EMAIL_PREFERENCE is launched.
+    setupParentEmailPreferenceExperiment();
+    renderParentSignUpSection();
+  }
+
+  // FND-1099 Remove this once PARENT_EMAIL_PREFERENCE is launched.
+  function setupParentEmailPreferenceExperiment() {
+    if (experiments.isEnabled(experiments.PARENT_EMAIL_PREFERENCE)) {
+      $('#parent-email-experiment-container').show();
+    }
   }
 
   let alreadySubmitted = false;
@@ -71,6 +82,24 @@ $(document).ready(() => {
         'input[name="user[school_info_attributes][school_id]"]'
       );
       schoolIdEl.val('');
+    }
+  }
+
+  $('#user_parent_email_preference_opt_in_required').change(
+    renderParentSignUpSection
+  );
+
+  function renderParentSignUpSection() {
+    let checked = $('#user_parent_email_preference_opt_in_required').is(
+      ':checked'
+    );
+    if (checked) {
+      $('#user_user_type')
+        .val('student')
+        .change();
+      fadeInFields(['.parent-email-field']);
+    } else {
+      hideFields(['.parent-email-field']);
     }
   }
 
@@ -150,21 +179,6 @@ $(document).ready(() => {
         schoolInfoMountPoint
       );
     }
-  }
-
-  function trackPageLoadInOptimizely() {
-    // record that we have arrived at this stage in the registration process
-    // with Optimizely for the old vs new signup page A/B test.
-    //
-    // TODO elijah: remove this logic once the A/B test has been completed
-    window['optimizely'] = window['optimizely'] || [];
-    window['optimizely'].push({
-      type: 'event',
-      eventName: 'finishSignUpPageLoad',
-      tags: {
-        provider
-      }
-    });
   }
 
   function onCountryChange(_, event) {

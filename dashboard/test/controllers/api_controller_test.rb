@@ -871,18 +871,21 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
+    assert_equal 2, data['student_timestamps'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 2, data['students'].keys.length
+    assert_equal 2, data['student_timestamps'].keys.length
 
     # third page has only one student (of 5 total)
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 1, data['students'].keys.length
+    assert_equal 1, data['student_timestamps'].keys.length
   end
 
   test "should get paired icons for paired user levels" do
@@ -986,6 +989,22 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "script_structure returns summarized script" do
+    overview_path = 'http://script.overview/path'
+    CDO.stubs(:studio_url).returns(overview_path)
+    script = Script.find_by_name('algebra')
+
+    user = create :user
+    sign_in user
+
+    get :script_structure, params: {script: script.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    expected_response = script.summarize(true, user, true).merge({path: overview_path}).with_indifferent_access
+    assert_equal expected_response, response
+  end
+
+  test "script_structure returns summarized script with no user" do
+    sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
     script = Script.find_by_name('algebra')

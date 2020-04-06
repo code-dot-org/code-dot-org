@@ -3151,15 +3151,17 @@ ru:
               name: Обнаружение столкновений
             Functions:
               name: функции
+            Text:
+              name: Текст
         coursea-2020:
           description_audience: 'Возраст: 4-7'
           stages:
             Going Places Safely:
               name: Безопасное путешествие
+            'Programming: Happy Maps':
+              name: Весёлые карты
             'Loops: Happy Loops':
               description_teacher: Циклы - это очень полезный и мощный инструмент в программировании. Чтобы понять, насколько полезными могут быть циклы, ученикам нужно будет водить, чтобы найти более простой способ решить повседневные проблемы.
-            Loops in Ice Age:
-              name: Циклы в ледниковом периоде
             Loops in Collector:
               name: Циклы в Собирателе
             Ocean Scene with Loops:
@@ -3170,6 +3172,8 @@ ru:
               name: Твой цифровой след
             Move It, Move It:
               name: Вперед, вперед
+            'Loops: Getting Loopy':
+              name: Зацикливание
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -3180,9 +3184,13 @@ ru:
               name: Двоичные браслеты
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
+            'Events: The Big Event':
+              name: Большое Событие
         coursed-2020:
           description_audience: 'Возраст: 7-11'
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
             Loops in Ice Age:
@@ -3190,13 +3198,13 @@ ru:
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
             Conditionals with Cards:
               name: Условные выражения с картами
             While Loops in Farmer:
               name: Цикл while в Фермере
             'Unplugged: Binary':
-              name: 'Урок без компьютера: Двоичный'
+              name: Двоичные образы
             Artist Binary:
               name: 'Художник: двоичная система'
             Digital Citizenship:
@@ -3206,19 +3214,19 @@ ru:
         coursee-2020:
           description_audience: 'Возраст: 8-12'
           stages:
-            Conditionals:
-              name: Условные команды
             Nested Loops in Bee:
-              name: Вложенные циклы в Пчеле
+              name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Nested Loops in Artist:
               name: Вложенные циклы в Художнике
             'Functions: Songwriting':
+              name: Написание песен
               description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.  
         coursef-2020:
           description_audience: 'Возраст: 9-13'
           stages:
             Nested Loops in the Maze:
+              name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
             Envelope Variables:
               name: Конвертные переменные
@@ -3229,7 +3237,7 @@ ru:
             For Loops in Artist:
               name: Цикл for в Художнике
             Internet:
-              name: интернет
+              name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
         express-2020:
@@ -3275,3 +3283,65 @@ ru:
           stages:
             The Need for Programming Languages:
               name: Необходимость языков программирования
+        csp3-virtual:
+          description_short: Программирование
+          stages:
+            The Need For Programming Languages:
+              name: Необходимость языков программирования
+            Using Simple Commands:
+              name: Использование простых команд
+            Creating Functions:
+              name: Создание функций
+            APIs and Function Parameters:
+              name: API и параметры функции
+            Creating functions with Parameters:
+              name: Создание функций с параметрами
+        csd3-virtual:
+          description_short: "Программирование"
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+            Random Numbers:
+              name: Случайные числа
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: CSS классы
+        csp5-virtual:
+          stages:
+            Controlling Memory with Variables:
+              name: Контролирование памяти с помощью переменных
+            User Input and Strings:
+              name: Пользовательский ввод и строки
+            While Loops:
+              name: Циклы «пока»
+            Introduction to Arrays:
+              name: Введение в массивы
+            Processing Arrays:
+              name: Обработка массивов
+            Functions with Return Values:
+              name: Функции с возвращаемыми значениями
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритмы
+            Events:
+              name: События

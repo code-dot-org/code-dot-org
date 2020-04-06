@@ -1281,30 +1281,40 @@ sl:
               name: Pogoji
             Functions:
               name: Funkcije
+            Text:
+              name: Besedilo
         coursea-2020:
           stages:
             Going Places Safely:
               name: Kako varno potovati
+            'Programming: Happy Maps':
+              name: Veseli zemljevidi
         courseb-2020:
           stages:
             Move It, Move It:
               name: Premakni se, premakni
+        coursec-2020:
+          stages:
+            'Events: The Big Event':
+              name: Veliki dogodek
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Obarvajmo kvadratke
             Relay Programming:
               name: Relejsko programiranje
             Conditionals with Cards:
               name: Pogojniki s kartami
             'Unplugged: Binary':
-              name: 'Brez prijave: Binarno'
+              name: Binarne slike
             Artist Binary:
               name: Umetnik Binarno
             Digital Citizenship:
               name: Digitalno državljanstvo
         coursee-2020:
           stages:
-            Conditionals:
-              name: Pogoji
+            'Functions: Songwriting':
+              name: Napiši pesem
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1319,3 +1329,29 @@ sl:
           stages:
             Spelling Bee:
               name: Čebelica črkuje besede
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Dogodki

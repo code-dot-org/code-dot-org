@@ -2,7 +2,6 @@ require 'base64'
 require 'cdo/db'
 require 'cdo/form'
 require 'cdo/parse_email_address_string'
-require 'cdo/pegasus/text_render'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
@@ -113,34 +112,8 @@ module Poste
   class Template
     def initialize(path)
       @path = path
-
-      @engine = {
-        '.haml' => TextRender::HamlEngine,
-        '.html' => TextRender::ErbEngine,
-        '.md' => TextRender::MarkdownEngine,
-      }[File.extname(path).downcase]
       @template_type = File.extname(path)[1..-1]
-
       @header, @html, @text = parse_template(IO.read(path))
-
-      # Temporarily also load in a new 'actionview' template and render it
-      # alongside the given one; we will use this to help build confidence that
-      # switching our templates over to actionview can be done without changing
-      # the resulting rendered HTML
-      actionview_path = path + ".actionview"
-      if File.exist?(actionview_path)
-        @actionview_header, @actionview_html, @actionview_text = parse_template(IO.read(actionview_path))
-      else
-        # Warn if there is no such path, in case a new email template gets
-        # added to our system before this experiment has concluded.
-        Honeybadger.notify(
-          error_class: 'No email template to render with ActionView',
-          error_message: "Could not find actionview-specific #{actionview_path.inspect} email template",
-          context: {
-            path: path
-          }
-        )
-      end
     end
 
     def render(params={})
@@ -183,75 +156,15 @@ module Poste
 
     def render_header(bound, locals={})
       return {} unless @header.present?
-
-      if @actionview_header
-        begin
-          actionview_result = YAML.safe_load(renderer.render(inline: @actionview_header, type: :erb, locals: locals))
-        rescue => e
-          Honeybadger.notify(
-            error_class: 'Error rendering email with ActionView',
-            error_message: "Email template #{@path} could not render header",
-            context: {
-              locals: locals,
-              error: e
-            }
-          )
-          puts @path
-          puts e
-        end
-      end
-
-      result = TextRender::YamlEngine.new(@header).result(bound)
-
-      if result && actionview_result && result != actionview_result
-        Honeybadger.notify(
-          error_class: 'Incorrectly rendered email with ActionView',
-          error_message: "Email template #{@path} rendered the header incorrectly",
-          context: {
-            expected: result,
-            actual: actionview_result
-          }
-        )
-      end
-
-      result
+      YAML.safe_load(renderer.render(inline: @header, type: :erb, locals: locals))
     end
 
     def render_html(bound, locals={})
       return nil unless @html.present?
-
-      if @actionview_html
-        begin
-          # All our emails regardless of the extension they use are parsed as ERB
-          # in addition to their regular template type.
-          html = renderer.render(inline: @actionview_html, type: :erb, locals: locals)
-          actionview_result = renderer.render(inline: html, type: @template_type)
-        rescue => e
-          Honeybadger.notify(
-            error_class: 'Error rendering email with ActionView',
-            error_message: "Email template #{@path} could not render html",
-            context: {
-              locals: locals,
-              error: e
-            }
-          )
-          puts @path
-          puts e
-        end
-      end
-
-      html = @engine.new(@html).result(bound)
-
-      if html && actionview_result && html != actionview_result
-        Honeybadger.notify(
-          error_class: 'Incorrectly rendered email with ActionView',
-          error_message: "Email template #{@path} rendered the html incorrectly",
-          context: {
-            expected: html,
-            actual: actionview_result
-          }
-        )
-      end
+      # All our emails regardless of the extension they use are parsed as ERB
+      # in addition to their regular template type.
+      html = renderer.render(inline: @html, type: :erb, locals: locals)
+      html = renderer.render(inline: html, type: @template_type)
 
       # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
       # logic in the click tracking method to clean up or canonicalize the HTML.
@@ -262,44 +175,13 @@ module Poste
 
     def render_text(bound, locals={})
       return nil unless @text.present?
-
-      if @actionview_text
-        begin
-          actionview_result = renderer.render(inline: @actionview_text, type: :erb, locals: locals)
-        rescue => e
-          Honeybadger.notify(
-            error_class: 'Error rendering email with ActionView',
-            error_message: "Email template #{@path} could not render text",
-            context: {
-              locals: locals,
-              error: e
-            }
-          )
-          puts @path
-          puts e
-        end
-      end
-
-      result = TextRender::ErbEngine.new(@text).result(bound)
-
-      if result && actionview_result && result != actionview_result
-        Honeybadger.notify(
-          error_class: 'Incorrectly rendered email with ActionView',
-          error_message: "Email template #{@path} rendered the text incorrectly",
-          context: {
-            expected: result,
-            actual: actionview_result
-          }
-        )
-      end
-
-      result
+      renderer.render(inline: @text, type: :erb, locals: locals)
     end
 
     def renderer
       @@renderer ||= begin
-        require 'cdo/markdown_handler'
-        MarkdownHandler.register
+        require 'cdo/markdown/handler'
+        Cdo::Markdown::Handler.register
         ActionView::Base.new
       end
     end

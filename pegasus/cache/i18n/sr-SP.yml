@@ -20,6 +20,8 @@ sr-SP:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Да ли сте ви учитељ компјутерских наука? Погледајте друге
     на недељи едукације о компјутерској науци.</a>'
+  csedweek_banner_teachers_text: Да ли сте ви учитељ компјутерских наука? Погледајте
+    друге на недељи едукације о компјутерској науци.
   n_have_learned_an_hoc: "<h1>Испробај</h1><h2>Сат Програмирања</h2><h3># посећено</h3>"
   anybody_can_learn: Сви могу да науче.
   learn_now: Учите сада

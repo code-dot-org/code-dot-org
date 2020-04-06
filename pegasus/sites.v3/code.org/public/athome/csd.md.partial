@@ -27,7 +27,7 @@ Students can continue working on online lessons if they have reliable computers 
 
 <i>If you are currently teaching another unit...</i>
 
-* <strong>Give students a self paced project to keep their skills fresh</strong>: Students can be assigned a project using a tool they know (Web Lab, Game Lab, or App Lab). We are working hard to create new projects with rubrics aligned to different stopping points in the curriculum. (Coming soon)
+* Give students a self paced project to keep their skills fresh: Students can be assigned a project using a tool they know (Web Lab, Game Lab, or App Lab). We have created a [step-by-step guide](/athome/project-ideas) for current CSD teachers interested in assigning students open-ended projects that use Code.org tools. These projects can serve as alternatives to other lessons or ways to augment the existing course material.
 * <strong>Assign a self-paced programming unit</strong>: We adapted Unit 3 from CS Principles to create [an intro to Turtle Programming in JavaScript](https://studio.code.org/s/csp3-virtual) designed for students in grades 6-12 to do on their own from home. There are no unplugged lessons or classroom activities, and you’ll be able to see your students’ work in your dashboard. (And check back soon… we are working hard to add more self paced programming options for your class.)
 
 ## Share on the Forum
@@ -63,6 +63,8 @@ The Code.org Teacher Dashboard allows you to view student progress, review stude
 
 ## Supporting Students with Limited Technology Access
 
-We know many of our students lack access to the internet or a laptop at home. The following resources are available for students lacking internet access, a laptop, or both, while they are continuing to learn computer science from home.
+We know many of our students lack access to the internet or a laptop at home. The following resource is available for students lacking internet access, a laptop, or both, while they are continuing to learn computer science from home.
 
 [Learning computer science when schools are closed in response to Covid19](https://code.org/athome)
+
+We also recommend you consider [CSTA's Resources to Support Teaching During COVID-19](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) for an extensive set of options for continuing to teach computer science during school closures.

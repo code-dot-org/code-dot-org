@@ -134,6 +134,13 @@ pt:
     unable_to_connect_provider: Foi impossível ligar a tua conta da Code.org à tua
       conta do %{provider}. Por favor tenta outra vez.
     already_in_use: A tua conta %{provider} já está conectada a outra conta da Code.org.
+    already_linked: A sua conta %{provider} já está conectada à sua conta Code.org.
+    existing_account:
+      account_exists: Boas notícias! Já tem uma conta Code.org que usa %{email}
+      sign_in: Por favor inicie sessão e nós iremos ligar o seu %{provider} perfil.
+      sign_up: 'Não é o seu email? Quer criar uma nova conta com um email diferente?
+        Nós também vamos conectar o seu %{provider} perfil  se decidir criar uma nova
+        conta. '
   signup_form:
     email_signup: Regista-te com o teu endereço de email
     student_count: "%{count} alunos já criaram uma conta."
@@ -249,6 +256,8 @@ pt:
       submit: OK
     reset_errors:
       captcha_required: Por favor preenche o CAPTCHA para redefinires a tua palavra-passe.
+      invalid_email: Parece que se inscreveu com um email inválido. Por favor envie
+        um email para support@code.org para receber um link para recuperar a senha.
     change_form:
       title: Alterar palavra-passe
       new_password: Nova palavra-passe
@@ -321,6 +330,7 @@ pt:
     header:
       finished_hoc: Acabei!
       sign_in_to_save: Inicia sessão para guardares o teu progresso
+      my_dashboard: O Meu Painel de Controlo
       course_catalog: Catálogo de Cursos
       project_gallery: Projetos
       sections: Turmas
@@ -373,6 +383,7 @@ pt:
       applab: Laboratório de aplicações
       artist: Artista
       bounce: Bounce
+      calc: Calc
       dance: Festa da Dança
       flappy: Flappy Bird
       frozen: Frozen
@@ -609,6 +620,9 @@ pt:
         nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas
         algumas funcionalidade podem não estar disponíveis.
       link: Saber mais
+      oceans_unsupported_browser: Este browser não é suportado para este tutorial.
+        Por favor tente visitar esta página usando Edge, Chrome, Firefox, ou outro
+        browser mais moderno.
   slow_loading: Isto está a demorar mais do que o habitual...
   try_reloading: Tente recarregar a página
   next_stage: Já está! Continua para a próxima etapa
@@ -681,6 +695,8 @@ pt:
     gamelab:
       audience: Maiores de 13 anos
       cta: Saber mais
+    hoc-encryption:
+      title: Encriptação Simples
     weblab:
       audience: Maiores de 13 anos
       cta: Saber mais
@@ -741,6 +757,8 @@ pt:
     header_artist: Artista
     report_abuse: Denunciar abuso
   landing:
+    prerelease_tutorial: Este tutorial está na versão beta. Ele está sujeito a revisões
+      conforme são recebidos feedbacks e melhorias são feitas.
     report_bug: Comunicar um problema
     support: Obter ajuda
     support_url: "//support.code.org"
@@ -762,10 +780,14 @@ pt:
     correct_body: Obrigado por publicar a sua resposta.
   level_group:
     wrong_title: Obrigado
+    wrong_body: Obrigado por submeter respostas.
     correct_title: Obrigado
+    correct_body: Obrigado por submeter respostas.
   level_group-submittable:
     wrong_title: Obrigado
+    wrong_body: Obrigado por submeter respostas.
     correct_title: Obrigado
+    correct_body: Obrigado por submeter respostas.
     unsubmit-title: Remove a tua avaliação
     submit-incomplete-title: Submete a tua avaliação
     submit-complete-title: Submete a tua avaliação
@@ -805,16 +827,30 @@ pt:
     age: Idade
     header: Atualização de informações da conta
   terms_interstitial:
+    title: Termos de Utilização e Política de Privacidade actualizados.
     tos: Termos de utilização
     privacy: Política de privacidade
     privacy_notice: Aviso de Privacidade
     accept: Aceitar
     print: Imprimir
+    review_terms: Rever termos actualizados
   school_info_interstitial:
+    message: Por favor introduza a informação da sua escola abaixo.
+    message_with_suggestion: Por favor verifique que a seguinte informação está correcta
+      ou actualize-a se necessário.
     save: Guardar
   race_interstitial:
+    title: 'Opcional: Ajude-nos a seguir o seu progresso de forma a melhorarmos a
+      diversidade na ciência da computação.'
     races:
+      white: Branco
+      black: Negro ou afro-americano
+      hispanic: Hispânico ou Latino
+      asian: Asiático
+      hawaiian: Nativos do Hawai ou de outras Ilhas do Pacífico
+      american_indian: Indo-americano/Nativo do Alasca
       other: Outro
+      opt_out: Prefiro não dizer
     submit: OK
     decline: Fechar
   zendesk_too_young_message: Pedimos desculpa, mas os utilizadores mais jovens não
@@ -845,9 +881,15 @@ pt:
     exit: Voltar ao curso
     project_gallery: Projetos
     publish: Publicar
+    unpublish: Remover publicação
     share_title: Partilha o teu projeto
     share_copy_link: 'Copia a ligação:'
+    share_u13_warning: 'Pergunta ao teu professor antes de partilhar. Partilha apenas
+      com os teus amigos na tua escola. '
     embed: Incorporar
+    advanced_share: Mostrar opções avançadas
+    no_projects: De momento não tens projectos. Clica num dos botões em cima para
+      começares um projecto.
     name: Nome
     updated: Última atualização
     project_type: Tipo de projeto
@@ -893,19 +935,30 @@ pt:
   peer_review:
     accepted:
       name: Aceite
+      description_markdown: "**Sim**, esta submissão **satisfaz** os requisitos. "
     rejected:
       name: Recusado
+      description_markdown: "**Não**, esta submissão **não satisfaz** os requisitos. "
     escalated:
       name: Reencaminhado
+      description: Gostaria que um instrutor revisse esta proposta.
     instructor_feedback: Opinião do Instrutor
   flex_category:
     required: Visão geral
     content: Conteúdo
     practice: Práticas de Ensino
+    main_course: Curso Principal
+    extra_course_content: Conteúdo Extra Curso
+    csf_e_1: Continuar para o Curso E (Opcional)
+    csf_e_2: Conteúdo do Curso E
+    csf_f_1: Continuar para o Curso F (Opcional)
+    csf_f_2: Conteúdo do Curso F
     csf_digcit: Cidadania digital
     csf_jigsaw: Quebra-cabeças
+    csf_sequencing: Sequenciação
     csf_loops: Ciclos
     csf_events: Eventos
+    csf_online_safety: Segurança Online
     csf_binary: Binário
     csf_conditionals: Condicionais
     csf_nested_loops: Laços aninhados
@@ -913,14 +966,25 @@ pt:
     csf_variables: Variáveis
     csf_for_loops: Ciclos "for"
     csf_internet: Internet
+    csf_warmup: Aquecimento
+    csd1_1: 'Capítulo 1: O Processo de Resolução de Problemas'
+    csd1_2: 'Capítulo 2: Computadores e Resolução de Problemas'
+    csd3_1: 'Capítulo 1: Imagens e Animações'
+    csd3_2: 'Capítulo 2: Construindo Jogos'
+    csd_survey: Inquérito Pós-Curso
+    cspSurvey: Inquérito
     csp2_1_2018: 'Unidade 1: Informação Digital'
     csp_variables: Variáveis
     csp_conditionals: Condicionais
     csp_functions: Funções
+    csp_project: Projecto
     csp_lists: Listas
     csp_loops: Ciclos
+    csp_libraries: 'Bibliotecas '
     csp_unit1_2020: 'Unidade 1: Informação Digital'
     csp_unit2_2020: 'Unidade 2: A Internet'
+    csp_unit10_2020: 'Unidade 10: Ciber Segurança e Impactos Globais'
+    time4cs_c6: Condicionais (revisão)
     k5_next_steps: Próximos Passos
   hoc_download:
     title: Hora das transferências de Código

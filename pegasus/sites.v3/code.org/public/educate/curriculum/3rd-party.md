@@ -112,6 +112,9 @@ Codecademy is an online interactive platform that offers free coding classes in 
 ### [CompuScholar](https://www.compuscholar.com/schools)
 CompuScholar’s online, turn-key teaching system for Java, C#, Python, HTML and Unity Game Design includes complete student and teacher material, aligned to state and national standards.  All teachers get free professional development and technical support.
 
+### [Create & Learn](https://www.create-learn.us/)
+Create & Learn offers live online classes on a wide range of computer science topics such as coding (Scratch, Python, etc.), AI, and Data Science. Our curriculum places a strong focus on understanding the real world applications and problem solving, as well as developing students’ creativity and critical thinking skills.
+
 ### [CS Unplugged](http://csunplugged.org/)
 Fun classroom exercises to teach computer science principles, no computers needed!
 

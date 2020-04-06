@@ -32,3 +32,7 @@ se:
           stages:
             Events:
               name: Dáhpáhusaid
+        code-break:
+          stages:
+            Events:
+              name: Dáhpáhusaid

@@ -1639,6 +1639,34 @@ zh-TW:
       4:
       5:
       6:
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "本課程分為多個階段。"
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "前幾個階段將介紹電腦科學，以及一些關鍵詞彙。"
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "該學習平台將會追踪你的進度，如此你便可隨時從上次中斷的地方繼續學習。"
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+      2:
+        image: 'notes/writing_first_program_2.png'
+      3:
+        image: 'notes/writing_first_program_3.png'
+      4:
+        image: 'notes/writing_first_program_4.png'
+      5:
+        image: 'notes/writing_first_program_5.png'
+      6:
+      7:
     hoc_dance_warmup_2019:
       1:
         text: "一小時玩程式 | 舞蹈派對：暖身"

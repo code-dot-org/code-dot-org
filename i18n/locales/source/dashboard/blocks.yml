@@ -1114,6 +1114,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move [SPRITE][0] pixels [DISTANCE][1] toward [TARGET][2]
+      gamelab_patrollingUpDown:
+        text: patrolling up and down
       gamelab_playSound:
         text: playSound [SOUND][0]
       gamelab_pointInDirection:
@@ -1209,6 +1211,8 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_tumbling:
+        text: tumbling
       gamelab_turn:
         text: turn [SPRITE][0] [DIRECTION][1] [N][2] degrees
         options:
@@ -1667,6 +1671,14 @@ en:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: move [SPRITE][0] [DISTANCE][1] pixels [DIRECTION][2]
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       aalab_prompt:
         text: ask question [MESSAGE][0]
       aalab_scene:
@@ -1678,12 +1690,17 @@ en:
             '3': '3'
       aalab_setupStory:
         text: setup story
-      aalab_showHideSprite:
-        text: "[OPTION][0][SPRITE][1]"
+      aalab_starwars_playSound:
+        text: play[OPTION][0]sound
         options:
           OPTION:
-            '"show"': show
-            '"hide"': hide
+            '"random"': random
+            '"R2-D2 random"': R2-D2 random
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:

@@ -8,4 +8,5 @@
  */
 
 // base locale
-module.exports = window.blockly.common_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('common_locale');

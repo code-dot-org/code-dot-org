@@ -92,6 +92,11 @@ ar-SA:
         Infinity_move_right_runbutton: إضافة مربع برمجة تنقّل هنا
       Infinity_repeat:
         Infinity_repeat_callout: وضع مربعات برمجة التنقّل هنا
+      MC HOC 2016 Level 2-2:
+        craft2_run_button_callout: عند الانتهاء من كتابة البرنامج، اضغط زر "تشغيل"
+          لتتمكّن من تجريب برنامجك!
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: اضغط على زر "تشغيل" لتبدأ بالتحرّك.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: هذه حلقة "كرر"! انقر عليها في مساحة العمل وأضف الأوامر
           البرمجية التي تريد تكرارها مراراً.
@@ -129,9 +134,23 @@ ar-SA:
         place_length_variable: اسحب متغير الطول هنا لاستبدال علامات الاستفهام
       NEW Course 4 Bee For Loops 5:
         actions_category: أداة مربع حصلت على نظرة جديدة! كتل "الإجراءات" هنا الآن.
+      New Artist Project:
+        New Artist Project_callout1: قم بالضغط على التصنيفات لرؤية الكتل البرمجية
+          الموجودة في صندوق الأدوات! قم بسحب الكتل البرمجية إلى مساحة العمل لإضافتها
+          إلى برنامجك.
+        New Artist Project_callout2: انقر على "تشغيل" لحفظ و تشغيل برنامجك
+        sign_in_to_save_project: هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل
+          الدخول لحفظ هذا المشروع في حسابك!
       New Frozen Project:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!
+      New Play Lab Project:
+        New Play Lab Project_callout1: قم بالضغط على التصنيفات لرؤية الكتل البرمجية
+          الموجودة في صندوق الأدوات! قم بسحب الكتل البرمجية إلى مساحة العمل لإضافتها
+          إلى برنامجك.
+        New Play Lab Project_callout2: انقر على "تشغيل" لحفظ و تشغيل برنامجك
+        sign_in_to_save_project: هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل
+          الدخول لحفظ هذا المشروع في حسابك!
       Overworld Chop Trees:
         craft_callout_preplaced: وضعنا بعض الكتل هنا لنساعدك في البدء
       Overworld Chop Trees_2019:
@@ -284,6 +303,7 @@ ar-SA:
         snowflake_dropdown: استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من رقاقات
           الثلج!
       frozen line:
+        run: انقر على "تشغيل" لتجربة البرنامج الخاص بك!
         move_elsa_forward: اسحب مربع البرمجة "تقدم إلى الأمام" وركّبها تحت مربع البرمجة
           "عند التشغيل" لجعل إلسا تتقدم إلى الأمام
       frozen perpendicular:

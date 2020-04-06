@@ -19848,6 +19848,8 @@ es-MX:
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            Text:
+              name: Texto
         coursea-2020:
           title: Curso A (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
@@ -19876,7 +19878,7 @@ es-MX:
                 y continúa con el uso de una computadora para completar desafíos en
                 línea.
             'Programming: Happy Maps':
-              name: 'Programación: Mapas felices'
+              name: Mapas felices
               description_student: Escribe instrucciones para que el Flurb llegue
                 hasta la fruta.
               description_teacher: La transición desde los algoritmos hacia la programación
@@ -19893,7 +19895,7 @@ es-MX:
                 y continúa con el uso de una computadora para completar desafíos en
                 línea.
             Programming in Ice Age:
-              name: Programación en la Era de Hielo
+              name: Programación con Scrat
               description_student: Escribe programas para ayudar a Scrat a llegar
                 hasta la bellota.
               description_teacher: A partir de los personajes de La Era de Hielo,
@@ -19909,7 +19911,7 @@ es-MX:
                 habilidades de programación de formas más complejas para recorrer
                 un camino difícil con BB-8.
             'Loops: Happy Loops':
-              name: 'Loops: Loops felices'
+              name: Bucles felices
               description_student: Ayuda al Flurb a resolver problemas más grandes
                 mediante los bucles.
               description_teacher: Los bucles son una herramienta muy útil e importante
@@ -19917,14 +19919,14 @@ es-MX:
                 deben ser motivados a querer resolver problemas cotidianos de manera
                 más fácil.
             Loops in Ice Age:
-              name: Bucles de la Era de Hielo
+              name: Bucles con Scrat
               description_student: Usa los bucles para ayudar a Scrat a cubrir más
                 terreno.
               description_teacher: En base al concepto de repetición de instrucciones
                 de "Bucles felices", en este nivel los estudiantes usarán bucles para
                 llegar hasta la bellota de manera más eficiente en Code.org.
             Loops in Collector:
-              name: Loops en Recolectora
+              name: Bucles con Laurel
               description_student: Ayuda a Laurel la Aventurera a recolectar el tesoro
                 subterráneo.
               description_teacher: Durante esta etapa se desarrolla el concepto de
@@ -19940,14 +19942,14 @@ es-MX:
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imágenes mediante bucles.
             'Events: The Big Event':
-              name: 'Eventos: El Gran Evento'
+              name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los
                 botones de un control remoto gigante.
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
                 es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
-              name: Eventos en Play Lab
+              name: En movimiento con eventos
               description_student: Crea tu propio juego o historia.
               description_teacher: En esta actividad en línea, los estudiantes tendrán
                 la oportunidad de aprender a usar eventos en el Laboratorio de juegos
@@ -19984,7 +19986,7 @@ es-MX:
                 para que caminen con cuidado de un lugar a otro hasta que se logre
                 una meta.
             Sequencing in Maze:
-              name: Secuencias en Laberinto
+              name: Secuencias con Angry Birds
               description_student: Ayuda al Angry Bird rojo a seguir el camino hacia
                 el cerdo travieso.
               description_teacher: Esta lección dará a los estudiantes una idea de
@@ -19993,7 +19995,7 @@ es-MX:
                 y continúa con el uso de una computadora para completar desafíos en
                 línea.
             Programming in Maze:
-              name: Programación en Laberinto
+              name: Programación con Angry Birds
               description_student: Crea programas para ayudar al Angry Bird a moverse
                 a través del laberinto.
               description_teacher: A partir de los personajes del juego Angry Birds,
@@ -20013,7 +20015,7 @@ es-MX:
                 de las habilidades de algoritmo secuencial y comenzarán a usar el
                 proceso de depuración. '
             'Loops: Getting Loopy':
-              name: 'Loops: Buscando Loopy'
+              name: Girar y girar
               description_student: En esta lección, ¡usaremos bucles 'repetir' para
                 crear una fiesta de baile!
               description_teacher: A medida que empezamos a escribir programas más
@@ -20022,14 +20024,14 @@ es-MX:
                 mirar los patrones repetidos de movimiento en un baile y comunicar
                 más fácilmente aquellas instrucciones que tienen mucha repetición.
             Loops in Harvester:
-              name: Bucles en la cosechadora
+              name: Bucles con la cosechadora
               description_student: "¡Usa los bucles para ayudar a la Cosechadora a
                 recolectar aún más!"
               description_teacher: En base al concepto de repetición de instrucciones
                 de "Getting Loopy", en este nivel los estudiantes usarán bucles para
                 recolectar maíz de manera más eficiente en Code.org.
             Loops in Collector:
-              name: Loops en Recolectora
+              name: Bucles con Laurel
               description_student: Programa a Laurel la Aventurera para que recolecte
                 el tesoro en una cueva abierta.
               description_teacher: En esta lección, los estudiantes continúan aprendiendo
@@ -20037,7 +20039,7 @@ es-MX:
                 recolectar tesoros en cuevas abiertas. Se introduce un nuevo bloque
                 `obtener tesoro` que la ayudará en su recorrido.
             Loops in Artist:
-              name: Loops en Artista
+              name: Dibujar jardines con bucles
               description_student: Usa patrones y bucles para terminar las imágenes.
               description_teacher: Volviendo a los bucles, los estudiantes aprenden
                 a dibujar imágenes mediante bucles de secuencias simples de instrucciones.
@@ -20056,14 +20058,14 @@ es-MX:
                 ejercitan la empatía y la creatividad para esbozar una aplicación
                 para smartphone que responda a las necesidades de otro usuario. '
             'Events: The Big Event':
-              name: 'Eventos: El Gran Evento'
+              name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los
                 botones de un control remoto gigante.
               description_teacher: Los eventos son una excelente manera de agregar
                 variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo
                 es que el programa responda al usuario exactamente cuando éste quiere.
             Events in Play Lab:
-              name: Eventos en Play Lab
+              name: Una batalla real con eventos
               description_student: Usa los eventos para crear una historia o un juego
                 interactivo.
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -20106,7 +20108,7 @@ es-MX:
                 existentes con un juego interactivo y crean nuevas contraseñas mediante
                 directrices para contraseñas poderosas.\r\n"
             'Programming: My Robotic Friends':
-              name: 'Programación: Mis amigos robóticos'
+              name: Mis amigos robóticos Jr.
               description_student: En esta lección, harás de cuenta que tus compañeros
                 de clase son robots y los programarás para crear patrones de tazas
                 apiladas.
@@ -20118,7 +20120,7 @@ es-MX:
                 entre los símbolos y las acciones, la diferencia entre un algoritmo
                 y un programa, y lo valiosa que es la depuración.
             Programming in Maze:
-              name: Programación en Laberinto
+              name: Programación con Angry Birds
               description_student: Aprende acerca de las secuencias y los algoritmos
                 con Angry Birds.
               description_teacher: A partir de los personajes del juego Angry Birds,
@@ -20137,7 +20139,7 @@ es-MX:
                 para identificar los errores, tales como bucles incorrectos, bloques
                 que faltan, bloques de más y bloques que no funcionan.
             Programming in Collector:
-              name: Programación en Collector
+              name: Recoger tesoros con Laurel
               description_student: "¡Escribe algoritmos que ayuden a Laurel la Aventurera
                 a recolectar muchas gemas!"
               description_teacher: En esta serie de desafíos, los estudiantes continuarán
@@ -20145,7 +20147,7 @@ es-MX:
                 algoritmos secuenciales para que el nuevo personaje Laurel la Aventurera
                 pueda recoger el tesoro mientras recorre el camino.
             Programming in Artist:
-              name: Programación en Artist
+              name: Crear arte con código
               description_student: Programa el Artista para crear imágenes hermosas.
               description_teacher: En esta lección, los estudiantes tomarán control
                 del Artista para completar los dibujos en pantalla. En esta etapa
@@ -20162,7 +20164,7 @@ es-MX:
                 es posible tomar algo de la vida real y convertirlo en una serie de
                 funciones de encendido y apagado.
             'Loops: My Loopy Robotic Friends':
-              name: 'Bucles: Mis amigos robóticos y repetitivos'
+              name: Mis amigos robóticos y repetitivos Jr.
               description_student: En esta lección, volverás a programar a tus compañeros
                 de clase. Al usar bucles, podrás resolver problemas más grandes y
                 más complicados.
@@ -20180,7 +20182,7 @@ es-MX:
                 ayudar a BB-8 a atravesar un laberinto de manera más eficiente que
                 antes.
             Loops in Harvester:
-              name: Bucles en la cosechadora
+              name: Cosechar cultivos con bucles
               description_student: "¡Usemos los bucles para ayudar a la cosechadora
                 a recolectar algunos vegetales!"
               description_teacher: "En la etapa anterior, los estudiantes utilizaron
@@ -20188,7 +20190,7 @@ es-MX:
                 acciones con los bucles para ayudar a la cosechadora a recolectar
                 vegetales que crecen en racimos grandes.\r\n"
             Looking Ahead:
-              name: Mirar hacia adelante
+              name: Mirando hacia el Futuro con Minecraft
               description_student: "¡Evita la lava! Aquí empezarás a aprender sobre
                 condicionales en el mundo de Minecraft."
               description_teacher: Esta lección se creó originalmente para la Hora
@@ -20207,7 +20209,7 @@ es-MX:
                 fantástica para producir artefactos para carpetas o para reuniones
                 de padres/profesores."
             'Events: The Big Event':
-              name: 'Eventos: El Gran Evento'
+              name: El gran evento
               description_student: 'Aprende sobre eventos con este divertido juego. '
               description_teacher: Los estudiantes pronto aprenderán que los eventos
                 son una gran forma de sumar flexibilidad a un algoritmo que ya está
@@ -20224,7 +20226,7 @@ es-MX:
                 Al final del nivel, podrán cambiar las imágenes o las reglas para
                 personalizar su juego.
             Events in Play Lab:
-              name: Eventos en Play Lab
+              name: Chase Game con Eventos
               description_student: "¡Es el momento de ser creativos y crear un juego
                 en el Laboratorio de juegos!"
               description_teacher: En esta actividad en línea, los estudiantes tendrán
@@ -20262,7 +20264,7 @@ es-MX:
           description_audience: De 7 a 11 años
           stages:
             'Algorithms: Graph Paper Programming':
-              name: 'Algoritmos: programación en papel cuadriculado'
+              name: Programación con Papel Cuadriculado
               description_student: En esta lección, programarás a tu compañero de
                 clase para que dibujar imágenes.
               description_teacher: 'Al "programarse" entre sí para dibujar imágenes,
@@ -20297,7 +20299,7 @@ es-MX:
                 contrarreloj a medida que los estudiantes se dividen en equipos y
                 trabajan juntos para escribir un programa a la vez.
             Debugging in Collector:
-              name: Depuración en Recolector
+              name: Depuración con Laurel
               description_student: "¿Alguna vez has tenido problemas al programar?
                 En esta lección, aprenderás sobre los secretos de debugging. Debugging
                 es el proceso de encontrar y arreglar problemas en tu código."
@@ -20332,7 +20334,7 @@ es-MX:
                 `repetir` para que Scrat llegue hasta la bellota de la manera más
                 eficiente posible.
             Loops in Artist:
-              name: Loops en Artista
+              name: Dibujar formas con bucles
               description_student: En esta lección, ¡los bucles ayudan a crear imágenes
                 geniales con el Artista de forma más simple!
               description_teacher: Esta lección, basada en la comprensión de los bucles
@@ -20340,7 +20342,7 @@ es-MX:
                 ser verdaderamente creativos. Esta actividad también sirve como un
                 ejercicio de depuración para seguir practicando la resolución de problemas.
             Nested Loops in Bee:
-              name: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
               description_student: Bucles dentro de bucles que están dentro de otros
                 bucles. ¿Qué significa esto? Esta lección te mostrará qué sucede cuando
                 creas un bucle anidado.
@@ -20395,7 +20397,7 @@ es-MX:
                 de los bucles `hasta`. Crearán programas en los cuales el personaje
                 repetirá acciones `hasta` que llegue al punto de detención deseado.
             Conditionals & Loops in Harvester:
-              name: Condicionales y bucles en Cosechadora
+              name: Cosechar con condicionales
               description_student: No siempre está claro cuándo usar cada condicional.
                 Esta lección te ayudará a tener práctica en decidir qué hacer.
               description_teacher: Los/as estudiantes practicarán loops `while`, loops
@@ -20403,7 +20405,7 @@ es-MX:
                 condicionales. Al practicar los tres, los/as estudiantes aprenderán
                 a escribir código complejo y flexible.
             'Unplugged: Binary':
-              name: 'Sin conexión: binario'
+              name: Imágenes binarias
               description_student: Aprende cómo las computadoras almacenan imágenes
                 a través de un lenguaje que tiene solo dos opciones.
               description_teacher: Aunque mucha gente piense en lo binario estrictamente
@@ -20466,7 +20468,7 @@ es-MX:
                 existente para identificar los errores, tales como bucles incorrectos,
                 bloques que faltan, bloques de más y bloques que no funcionan."
             Programming and Loops with the Artist:
-              name: Programación y bucles con el Artista
+              name: Dibujar con bucles
               description_student: En esta lección, los bucles hacen que sea sencillo
                 crear imágenes incluso más geniales con Artista.
               description_teacher: "¡Mira cómo se ilumina el resto de los estudiantes
@@ -20485,7 +20487,7 @@ es-MX:
                 tendrán la oportunidad de practicar las ideas que han aprendido hasta
                 este punto, ¡y también de echar un vistazo a los condicionales!
             Conditionals:
-              name: Condicionales
+              name: Condicionales con Granjera
               description_student: En esta divertida y desafiante serie podrás decirle
                 a la computadora qué hacer bajo ciertas condiciones.
               description_teacher: Esta lección introduce a los estudiantes a los
@@ -20533,7 +20535,7 @@ es-MX:
 
                 Mientras los estudiantes visitan sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los faculta a protegerse a sí mismos y sus familias contra el robo de identidad. En esta lección, los estudiantes aprenden a pensar críticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, además de cómo distinguir entre lo que es seguro de compartir en línea y lo que no lo es.
             About Me:
-              name: Acerca de mí
+              name: Acerca de mí con Sprite Lab
               description_student: Al crear un cartel interactivo con el Laboratorio
                 de sprites, los estudiantes aplicarán sus conocimientos sobre cómo
                 compartir información personal y privada en la web.
@@ -20541,7 +20543,7 @@ es-MX:
                 de sprites, los estudiantes aplicarán sus conocimientos sobre cómo
                 compartir información personal y privada en la web.\r\n"
             Access Ability:
-              name: Habilidad de acceso
+              name: Diseñar con la accesibilidad en mente
               description_student: 'En esta lección, los estudiantes aprenderán sobre
                 accesibilidad y sobre el valor de la empatía mediante la reflexión
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
@@ -20549,7 +20551,7 @@ es-MX:
                 accesibilidad y sobre el valor de la empatía mediante la reflexión
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
             Nested Loops in Bee:
-              name: Bucles anidados en Abeja
+              name: Bucles anidados en Laberinto
               description_student: Loops dentro de loops dentro de loops. ¿Qué significa
                 esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
                 de otro loop.
@@ -20560,7 +20562,7 @@ es-MX:
                 se les animará a que descifren cómo cambios pequeños en cualquier
                 loop, afectarán su programa cuando hagan clic en Ejecutar.
             Nested Loops in Artist:
-              name: Bucles anidados en Artista
+              name: Formas elegantes con bucles anidados
               description_student: "¡Más loops anidados! Esta vez, harás algunos SORPRENDENTES
                 dibujos con loops anidados."
               description_teacher: Los/as estudiantes crearán diseños complicados
@@ -20571,7 +20573,7 @@ es-MX:
                 para que los/as estudiantes creen su propio diseño al final de la
                 etapa.
             Nested Loops in Frozen:
-              name: Bucles anidados en Frozen
+              name: Bucles anidados con Frozen
               description_student: 'Anna y Elsa patinan muy bien sobre hielo, pero
                 necesitan de tu ayuda para crear patrones en esa superficie. Utiliza
                 los bucles anidados para crear algo súper GENIAL. '
@@ -20581,7 +20583,7 @@ es-MX:
                 imágenes, listas para incluir en una carpeta, gracias a las excelentes
                 habilidades de patinaje sobre hielo de Anna y Elsa.
             'Functions: Songwriting':
-              name: 'Funciones: composición musical'
+              name: Composición de canciones
               description_student: Incluso las estrellas de rock necesitan conocimientos
                 de programación. Esta lección te enseñará sobre funciones mediante
                 el uso de letras de canciones.
@@ -20599,7 +20601,7 @@ es-MX:
                 manera las funciones pueden ser útiles en esta divertida e interactiva
                 aventura de Minecraft.
             Functions in Harvester:
-              name: Funciones en la Cosechadora
+              name: Funciones en Cosechadora
               description_student: "¡Las funciones te ahorrarán mucho trabajo mientras
                 ayudas a la granjera con su cosecha!"
               description_teacher: Los estudiantes practicaron cómo crear diseños
@@ -20635,6 +20637,10 @@ es-MX:
                 es, probablemente, la etapa más larga del proyecto.) Finalmente, los
                 estudiantes podrán presentar sus trabajos terminados a sus compañeros
                 de clase."
+            Digital Sharing:
+              name: Colaboración digital
+            Designing for Accessibility:
+              name: Diseñar con la accesibilidad en mente
         coursef-2020:
           title: Curso F (2019)
           description: Aprende a usar diferentes tipos de bucles, eventos, funciones
@@ -20663,6 +20669,7 @@ es-MX:
                 son acciones que los sprites harán continuamente hasta que se los
                 detenga. '
             Events with Sprite Lab:
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
               description_student: Crea un proyecto interactivo que puedes compartir
                 con tus compañeros de clase.
               description_teacher: 'Esta lección presenta el Laboratorio de sprites,
@@ -20671,6 +20678,7 @@ es-MX:
                 incorporarán las entradas de usuarios como eventos para crear una
                 "fiesta de baile alienígena". '
             Loops with the Artist:
+              name: Dibujar con bucles
               description_student: En esta lección, los bucles hacen que sea sencillo
                 crear imágenes incluso más geniales con Artista.
               description_teacher: "¡Mira cómo se ilumina el resto de los estudiantes
@@ -20681,7 +20689,7 @@ es-MX:
                 fantástica para producir artefactos para carpetas o para reuniones
                 de padres/profesores."
             Nested Loops in the Maze:
-              name: Bucles anidados en el Laberinto
+              name: Bucles anidados en Laberinto
               description_student: Loops dentro de loops dentro de loops. ¿Qué significa
                 esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro
                 de otro loop.
@@ -20705,6 +20713,7 @@ es-MX:
                 El concepto de variable no es fácil de comprender, por lo que recomendamos
                 debatirlo durante mucho tiempo al final de la lección.
             Variables as Constant in Artist:
+              name: Variables con Artista
               description_student: "¡No olvides tu creatividad! En estos desafíos,
                 usarás las variables para hacer dibujos fantásticos."
               description_teacher: En esta lección, los estudiantes explorarán la
@@ -20713,11 +20722,13 @@ es-MX:
                 para hacer que el código sea más fácil de leer y de escribir, incluso
                 cuando los valores no cambian en el tiempo de ejecución.
             Variables that Change in Bee:
+              name: Cambiar variables con Abeja
               description_student: Esta abeja adora las variables.
               description_teacher: 'Esta lección ayudará a ilustrar cómo las variables
                 pueden hacer que los programas sean más potentes al permitir que los
                 valores cambien mientras el código se está ejecutando. '
             Variables that Change in Artist:
+              name: Cambiar variables con Artista
               description_student: En esta lección, harás dibujos usando variables
                 que cambien mientras el programa se ejecuta.
               description_teacher: En esta lección, los alumnos explorarán la creación
@@ -20746,7 +20757,7 @@ es-MX:
                 estructuras integradas. A través de estas nuevas estructuras, los
                 estudiantes podrán crear un código más potente y dinámico. '
             For Loops in Bee:
-              name: Bucles `desde` en Abeja
+              name: Bucles 'desde' con la Abeja
               description_student: Bzzz, bzzz. ¡En estos desafíos, usarás bucles `desde`
                 para guiar a una abeja hacia el néctar y la miel!
               description_teacher: Esta lección con Abeja se centra en bucles `desde`
@@ -20755,7 +20766,7 @@ es-MX:
                 el uso de bucles `desde` para resolver problemas más difíciles de
                 manera más efectiva.
             For Loops in Artist:
-              name: Bucles `desde` en Artista
+              name: Bucles `desde'`con Artista
               description_student: Prepárate para crear tu próxima obra maestra. Aquí
                 usarás bucles `desde` para tomar fotos asombrosas.
               description_teacher: En esta lección, los alumnos seguirán practicando
@@ -20773,11 +20784,13 @@ es-MX:
                 estudiantes viajarán a través de Internet y aprenderán acerca de conexiones,
                 URL, direcciones IP y el DNS.
             Editing Behaviors:
+              name: Editar comportamientos
               description_student: Aprende a programar tus propios comportamientos
                 de sprites.
               description_teacher: Aquí, los estudiantes usarán el Laboratorio de
                 sprites para crear tus propios comportamientos personalizados.
             Virtual Pet:
+              name: Mascota virtual
               description_student: En esta lección, los estudiantes crearán una Mascota
                 Virtual interactiva que luce y se comporta como ellos desean. Los
                 estudiantes usarán la herramienta "Disfraces" del Laboratorio de sprites
@@ -20831,6 +20844,8 @@ es-MX:
                 Las próximas cinco lecciones le ofrecen al estudiante la oportunidad de poner en práctica sus habilidades de codificación en un proyecto final. Este proyecto ayudará a las personas a adquirir experiencia con la codificación y a producir un ejemplo para compartir con sus compañeros/as y seres queridos. Se trata de un proyecto para varias lecciones o varias semanas en las que el estudiante dedicará tiempo a la lluvia de ideas, al aprendizaje del proceso de diseño, a la construcción y a la presentación de su trabajo final.
 
                 En la etapa "Explorar", el estudiante jugará con programas de Artista y Sprite Lab ya construidos para inspirarse. A continuación, el estudiante aprenderá sobre el proceso de diseño y cómo implementarlo en sus propios proyectos. Luego se le dará el espacio para crear su propio proyecto en Artista, Sprite Lab, o cualquier otra interfaz que tú te sientas cómodo proporcionando. (Esta es probablemente la etapa más larga del proyecto). El estudiante revisará su código después de las pruebas y la revisión de los compañeros. Finalmente, el estudiante podrá presentar su trabajo terminado a sus compañeros/as de clase.
+            AI for Oceans:
+              name: Inteligencia Artificial para océanos
         express-2020:
           title: Curso Express (2019)
           description: Aprende los fundamentos de las ciencias de la computación y
@@ -21031,3 +21046,637 @@ es-MX:
           stages:
             new stage:
               name: nueva etapa
+            Part 1:
+              name: Parte 1
+            Part 2:
+              name: Parte 2
+        csp3-virtual:
+          description: "Esta unidad presenta los conceptos fundamentales de la programación
+            informática, que desbloquea la capacidad de crear aplicaciones ricas e
+            interactivas. Este curso utiliza JavaScript como lenguaje de programación
+            y App Lab como el entorno de programación para crear aplicaciones, pero
+            los conceptos aprendidos en estas lecciones abarcan todos los lenguajes
+            y herramientas de programación.\r\n\r\nEsta unidad se actualizó por última
+            vez el 30 de octubre de 2017. Obtenga más información sobre las actualizaciones
+            de los planes de estudios en forum.code.org/c/csp/updates."
+          description_short: Aprende los conceptos básicos de la programación en JavaScript
+            a través de un enfoque de diseño general que utiliza el dibujo clásico
+            de tortuga.
+          stages:
+            The Need For Programming Languages:
+              name: La necesidad de lenguajes de programación
+            The Need for Algorithms:
+              name: La necesidad de algoritmos
+            Creativity in Algorithms:
+              name: Creatividad en algoritmos
+            Using Simple Commands:
+              name: Uso de comandos simples
+            Creating Functions:
+              name: Crear funciones
+            Functions and Top-Down Design:
+              name: Funciones y diseño gradual
+            APIs and Function Parameters:
+              name: Las API y los parámetros de funciones
+            Creating functions with Parameters:
+              name: Creación de funciones con parámetros
+            Looping and Random Numbers:
+              name: Creación de bucles y números aleatorios
+            Practice PT - Design a Digital Scene:
+              name: PT de práctica - Diseño de una escena digital
+            Unit 3 Chapter 1 Assessment:
+              name: Evaluación del Capítulo 1 de la Unidad 3
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
+        csd3-virtual:
+          description_short: " Aprende a programar animaciones, arte interactivo y
+            juegos en el Laboratorio de juegos."
+          stages:
+            Programming for Entertainment:
+              name: Programación para entretenimiento
+              description_student: Se pide a la clase que considere los "problemas"
+                del aburrimiento y la autoexpresión, y que reflexione sobre cómo aborda
+                esos problemas en sus propias vidas. A partir de allí, explorará cómo
+                las Ciencias de la Computación, en general, y la programación, en
+                particular, desempeñan un papel específico como una forma de entretenimiento
+                o como un vehículo para la autoexpresión.
+              description_teacher: Se pide a los estudiantes que consideren los "problemas"
+                del aburrimiento y la autoexpresión, y que reflexionen sobre cómo
+                abordan esos problemas en sus propias vidas. A partir de allí, los
+                estudiantes explorarán cómo las Ciencias de la Computación, en general,
+                y la programación, en particular, desempeñan un papel específico como
+                una forma de entretenimiento o como un vehículo para la autoexpresión.
+            Plotting Shapes:
+              name: Trazar formas
+              description_student: Los estudiantes exploran los desafíos a la hora
+                de comunicar cómo dibujar con formas y usan una herramienta que introduce
+                la forma de abordar este problema en el Laboratorio de juegos. La
+                actividad de preparación demuestra rápidamente los desafíos de comunicar
+                una posición sin algún punto de referencia compartido. En la actividad
+                principal, los estudiantes exploran una herramienta del Laboratorio
+                de juegos que les permite colocar formas de manera interactiva en
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
+                enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
+                un desafío que está muy presente cuando los estudiantes programan
+                en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
+                propia imagen antes de comenzar a hablar sobre la información.
+              description_teacher: Los estudiantes exploran los desafíos a la hora
+                de comunicar cómo dibujar con formas y usan una herramienta que introduce
+                la forma de abordar este problema en el Laboratorio de juegos. La
+                actividad de preparación demuestra rápidamente los desafíos de comunicar
+                una posición sin algún punto de referencia compartido. En la actividad
+                principal, los estudiantes exploran una herramienta del Laboratorio
+                de juegos que les permite colocar formas de manera interactiva en
+                la cuadrícula de 400 por 400 del laboratorio. Luego se turnan para
+                enseñar a un compañero a dibujar una imagen oculta con esta herramienta,
+                un desafío que está muy presente cuando los estudiantes programan
+                en el Laboratorio de aplicaciones. Los estudiantes pueden crear su
+                propia imagen antes de comenzar a hablar sobre la información.
+            Drawing in Game Lab:
+              name: Dibujar en el Laboratorio de juegos
+              description_student: Se presenta el Laboratorio de juegos, el ambiente
+                de programación de esta unidad, a la clase, que comienza a usarlo
+                para colocar formas en la pantalla. Esta lección cubre los conceptos
+                básicos de secuencias y depuración, así como algunos comandos simples.
+                Al final de la lección, la clase crea una versión en línea de la imagen
+                que diseñaron en la lección anterior.
+              description_teacher: Se presenta a los estudiantes el Laboratorio de
+                juegos, el ambiente de programación de esta unidad, quienes comienzan
+                a usarlo para colocar formas en la pantalla. Aprenderán los conceptos
+                básicos de secuencias y depuración, así como algunos comandos simples.
+                Al final de la lección, los estudiantes podrán programar imágenes
+                como las que crearon con la herramienta de dibujo de la lección anterior.
+            Shapes and Randomization:
+              name: Formas y aleatoriedad
+            Variables:
+              name: Variables
+              description_student: Esta lección introduce variables como una forma
+                de etiquetar un número en un programa o guardar un valor generado
+                de forma aleatoria. La clase comienza la lección con una descripción
+                muy básica del propósito de una variable, que pone en práctica mediante
+                los nuevos bloques. Después, la clase usa variables para guardar un
+                número aleatorio, lo que permite que los programas usen el mismo número
+                aleatorio varias veces.
+              description_teacher: En esta lección, los estudiantes aprenden a usar
+                variables para etiquetar un número en su programa o guardar un valor
+                generado de forma aleatoria. Los estudiantes comienzan la lección
+                con una descripción muy básica del propósito de una variable. Luego,
+                los estudiantes completan un avance de nivel que refuerza el modelo
+                de una variable como una forma de etiquetar o nombrar un número. Los
+                estudiantes usan variables para guardar un número aleatorio y ver
+                que las variables realmente almacenan o guardan sus valores, lo que
+                les permite usar el mismo número aleatorio varias veces en sus programas.
+            Sprites:
+              name: Sprites
+              description_student: Para crear imágenes más interesantes y detalladas,
+                se presenta el objeto sprite a la clase. A cada sprite se le puede
+                asignar una imagen para mostrar, y los sprites también hacen un seguimiento
+                de varios valores acerca de ellos mismos, lo que resultará útil a
+                la hora de crear animaciones. Al final de la lección, todos crean
+                una escena mediante sprites.
+              description_teacher: Para crear imágenes más interesantes y detalladas,
+                se presenta el objeto sprite a los estudiantes. A cada sprite se le
+                puede asignar una imagen para mostrar, y los sprites también hacen
+                un seguimiento de varios valores acerca de ellos mismos, lo que resultará
+                útil a la hora de crear animaciones.
+            The Draw Loop:
+              name: El bucle 'dibujar'
+              description_student: Esta lección presenta el bucle 'dibujar', uno de
+                los principales paradigmas de programación en el Laboratorio de juegos.
+                La clase combina el bucle 'dibujar' con números aleatorios para manipular
+                algunas animaciones simples con puntos y, luego, con sprites. Después,
+                todos usarán lo que aprendieron para actualizar la escena del sprite
+                de la lección anterior.
+              description_teacher: En esta lección se presenta el bucle 'dibujar'
+                a los estudiantes, uno de los principales paradigmas de programación
+                en el Laboratorio de juegos. Para comenzar la lección, los estudiantes
+                mirarán algunos libros animados físicos para ver cómo la presencia
+                de muchos marcos con diferentes imágenes crea la impresión de movimiento.
+                Luego, los estudiantes verán un video que explica cómo el bucle 'dibujar'
+                en el Laboratorio de juegos ayuda a crear esta misma impresión en
+                sus programas. Los estudiantes combinarán el bucle 'dibujar' con números
+                aleatorios para manipular algunas animaciones simples con puntos y,
+                luego, con sprites. Después, todos usarán lo que aprendieron para
+                actualizar la escena del sprite de la lección anterior.
+            The Counter Pattern Unplugged:
+              name: El patrón del contador sin conexión
+              description_student: Esta lección sin conexión explora el comportamiento
+                subyacente de las variables. Mediante tarjetas de notas y cadenas
+                para simular variables dentro de un programa, la clase implementa
+                algunos programas cortos. Una vez que se siente cómoda con esta sintaxis,
+                la clase utiliza el mismo proceso con las propiedades del sprite y
+                realiza un seguimiento del progreso del sprite en la pantalla.
+              description_teacher: Los estudiantes exploran el comportamiento subyacente
+                de las variables a través de una actividad sin conexión. Mediante
+                tarjetas de notas y cadenas para simular variables dentro de un programa,
+                los estudiantes implementan algunos programas cortos. Una vez que
+                se sienten cómodos con esta sintaxis, usarán el mismo proceso con
+                las propiedades del sprite y seguirán el progreso de un sprite en
+                la pantalla.
+            Sprite Movement:
+              name: Movimiento de sprites
+              description_student: Al combinar el bucle 'dibujar' y el patrón del
+                contador, la clase escribe programas que mueven sprites por la pantalla
+                y anima otras propiedades del sprite.
+              description_teacher: Al combinar el bucle 'dibujar' y el patrón del
+                contador, los estudiantes escriben programas que mueven sprites por
+                la pantalla y animan otras propiedades del sprite.
+            Booleans Unplugged:
+              name: Valores booleanos sin conexión
+              description_student: Esta lección presenta los valores y la lógica booleanos,
+                así como sentencias condicionales. La clase comienza con un juego
+                simple de "Pararse, Sentarse", en el que las sentencias booleanas
+                (verdadero/falso) describen propiedades personales (color de cabello
+                u ojos, tipo de ropa, edad, etc.). Luego, la clase agrupa los objetos
+                en base a sentencias booleanas cada vez más complejas y observa cómo
+                los condicionales pueden afectar el flujo de un programa.
+              description_teacher: |-
+                En esta lección, se presentan los valores y la lógica booleanos a los estudiantes, además de las sentencias condicionales. La clase comienza con un juego simple de "Pararse, Sentarse", en el que las sentencias booleanas (verdadero/falso) describen propiedades personales (color de cabello u ojos, tipo de ropa, edad, etc.). Esto lleva a los estudiantes a pensar en cómo pueden elaborar una propiedad con varios valores potenciales (como la edad) a partir de una pregunta binaria.
+
+                A partir de allí, los estudiantes reciben un grupo de objetos con propiedades físicas similares, pero variables. En parejas, agrupan esos objetos según sentencias booleanas cada vez más complejas, que incluyen booleanos compuestos con Y y O.
+
+                Finalmente, revelamos los condicionales como una herramienta para tomar decisiones o afectar el flujo de un programa mediante la incorporación de sentencias booleanas.
+            Conditionals:
+              name: Condicionales
+              description_student: La clase utiliza valores booleanos para comparar
+                el valor actual de la propiedad de un sprite con un valor objetivo,
+                y emplea esa comparación para determinar cuándo un sprite alcanzó
+                un punto en la pantalla, creció a un tamaño dado o alcanzó un valor
+                con el patrón del contador. Después de usar los valores booleanos
+                directamente para investigar los valores o las propiedades del sprite,
+                la clase agrega sentencias condicionales 'si' para escribir código
+                que responda a esas comparaciones booleanas.
+              description_teacher: Los estudiantes utilizan valores booleanos para
+                comparar el valor actual de la propiedad de un sprite con un valor
+                objetivo, y emplean esa comparación para determinar cuándo un sprite
+                alcanzó un punto en la pantalla, creció a un tamaño dado o alcanzó
+                un valor con el patrón del contador. Después de usar los valores booleanos
+                directamente para investigar los valores o las propiedades del sprite,
+                los estudiantes agregan sentencias condicionales _si_ para escribir
+                código que responda a esas comparaciones booleanas.
+            Keyboard Input:
+              name: Entrada de teclado
+              description_student: Después de la introducción a los valores booleanos
+                y las instrucciones _si_ de la lección anterior, se presenta a los
+                estudiantes un nuevo bloque llamado keyDown() que devuelve un valor
+                booleano y se puede usar en sentencias de condicionales para mover
+                sprites por la pantalla. Al final de esta lección, los estudiantes
+                habrán escrito programas que utilizarán la entrada de teclado del
+                usuario para controlar los sprites en la pantalla.
+              description_teacher: Después de la introducción a los valores booleanos
+                y las instrucciones _si_ de la lección anterior, se presenta a los
+                estudiantes un nuevo bloque llamado `keyDown()` que devuelve un valor
+                booleano y se puede usar en sentencias de condicionales para mover
+                sprites por la pantalla. Al final de esta lección, los estudiantes
+                habrán escrito programas que utilizarán la entrada de teclado del
+                usuario para controlar los sprites en la pantalla.
+            Other Forms of Input:
+              name: Otras formas de entrada
+              description_student: La clase continúa explorando formas de usar sentencias
+                condicionales para recibir información del usuario. Además del sencillo
+                comando keyDown() que aprendieron ayer, la clase aprende sobre otros
+                comandos de entrada de teclado y formas de utilizar la entrada de
+                ratón.
+              description_teacher: En esta lección, los estudiantes continúan explorando
+                formas de usar sentencias condicionales para recibir información del
+                usuario. Además del sencillo comando `keyDown()` que aprendieron ayer,
+                los estudiantes aprenden sobre otros comandos de entrada de teclado
+                y formas de utilizar la entrada de ratón.
+            Project - Interactive Card:
+              name: Proyecto - Tarjeta interactiva
+              description_student: En este proyecto integrado para el Capítulo 1,
+                la clase planifica y desarrolla una tarjeta de felicitación interactiva
+                mediante las técnicas de programación que ha aprendido hasta el momento.
+              description_teacher: En este proyecto integrado para el Capítulo 1,
+                los estudiantes planifican y desarrollan una tarjeta de felicitación
+                interactiva mediante las técnicas de programación que han aprendido
+                hasta el momento.
+            Velocity:
+              name: Velocidad
+              description_student: Después de una breve revisión de cómo se usa el
+                patrón de contador para mover los sprites, la clase conocerá las propiedades
+                que establecen la velocidad y la velocidad de rotación directamente.
+                A medida que utilizan estas nuevas propiedades de diferentes maneras,
+                desarrollarán las habilidades que necesitan para crear un juego básico
+                de desplazamiento lateral.
+              description_teacher: Después de una breve revisión de cómo usan el patrón
+                de contador para mover los sprites en lecciones anteriores, los estudiantes
+                conocerán las propiedades que establecen la velocidad y la velocidad
+                de rotación directamente. A medida que utilizan estas nuevas propiedades
+                de diferentes maneras, desarrollarán las habilidades que necesitan
+                para crear un juego básico de desplazamiento lateral.
+            Collision Detection:
+              name: Detección de colisiones
+              description_student: La clase aprende sobre la detección de colisiones
+                en la computadora. Las parejas exploran cómo una computadora podría
+                usar las propiedades de tamaño y ubicación de los sprites y las matemáticas
+                para detectar si dos sprites se tocan. Luego, la clase usa el bloque
+                isTouching() para crear diferentes efectos cuando los sprites colisionan,
+                incluidos los sonidos de reproducción. Por último, usan sus nuevas
+                habilidades para mejorar el juego de desplazamiento lateral que iniciaron
+                en la última lección.
+              description_teacher: Los estudiantes aprenden sobre la detección de
+                colisiones en la computadora. En parejas, explorarán cómo una computadora
+                podría usar las propiedades de tamaño y ubicación de los sprites y
+                las matemáticas para detectar si dos sprites se tocan. Luego, usarán
+                el bloque `isTouching()` para crear diferentes efectos cuando los
+                sprites colisionan, incluidos los sonidos de reproducción. Por último,
+                emplearán sus nuevas habilidades para mejorar el juego de desplazamiento
+                lateral que iniciaron en la última lección.
+            Complex Sprite Movement:
+              name: Movimiento complejo de sprites
+              description_student: 'La clase aprende a combinar las propiedades de
+                velocidad de los sprites con el patrón de contador para crear un movimiento
+                de sprite más complejo, como simular la gravedad, hacer que un sprite
+                salte y permitir que un sprite flote hacia la izquierda o hacia la
+                derecha. En los niveles finales, la clase combina estos movimientos
+                para animar y controlar un solo sprite, y crear un juego simple en
+                el que un personaje vuela y recoge monedas. '
+              description_teacher: Los estudiantes aprenden a combinar las propiedades
+                de velocidad de los sprites con el patrón de contador para crear un
+                movimiento de sprite más complejo. En particular, los estudiantes
+                aprenderán a simular la gravedad, hacer que un sprite salte y permitir
+                que un sprite flote hacia la izquierda o hacia la derecha. En los
+                niveles finales del avance de Code Studio, los estudiantes combinan
+                estos movimientos para animar y controlar un solo sprite, y crear
+                un juego simple en el que un personaje vuela y recoge monedas. Se
+                anima a los estudiantes a agregar otros componentes al juego en el
+                nivel final.
+            Collisions:
+              name: Colisiones
+              description_student: La clase programa sus sprites para interactuar
+                de nuevas maneras. Después de una breve revisión de cómo usaron el
+                bloque estáTocando, la clase intercambia ideas sobre otras formas
+                en que dos sprites podrían interactuar. Luego, usan estáTocando para
+                hacer que un sprite presione a otro en la pantalla antes de practicar
+                con los cuatro bloques de colisión (colisionar, desplazar, rebotar
+                y rebotarEn).
+              description_teacher: Los estudiantes programan sus sprites para interactuar
+                de nuevas maneras. Después de una breve revisión de cómo usaron el
+                bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
+                formas en que dos sprites podrían interactuar. Luego, usan `estáTocando`
+                para hacer que un sprite presione a otro en la pantalla antes de practicar
+                con los cuatro bloques de colisión (`colisionar`, `desplazar`, `rebotar`
+                y `rebotarEn`).
+            Functions:
+              name: Funciones
+              description_student: Esta lección trata las funciones como una forma
+                de organizar su código, hacerlo más legible y eliminar bloques de
+                código repetidos. La clase aprende que los pasos de nivel superior
+                o más abstractos permiten entender y razonar sobre los pasos más fácilmente,
+                y luego comienza a crear funciones en el Laboratorio de juegos. Al
+                final de la lección, la clase utiliza estas habilidades para organizar
+                y agregar funcionalidad a la versión final de su juego de desplazamiento
+                lateral.
+              description_teacher: Los estudiantes aprenden a crear funciones para
+                organizar su código, hacerlo más legible y eliminar bloques de código
+                repetidos. Una actividad de preparación sin conexión explora qué tan
+                útiles pueden ser las instrucciones en diferentes niveles de detalle
+                según el contexto. Los estudiantes aprenden que los pasos de nivel
+                superior o más abstractos permiten entender y razonar sobre los pasos
+                más fácilmente. Luego, los estudiantes comienzan a crear funciones
+                en el Laboratorio de juegos. Usarán funciones para quitar largos bloques
+                de código de su bucle 'dibujar' y reemplazar partes del código con
+                una sola función. Al final de la lección, los estudiantes utilizan
+                estas habilidades para organizar y agregar funcionalidad a la versión
+                final de su juego de desplazamiento lateral.
+            The Game Design Process:
+              name: El proceso de diseño de juegos
+              description_student: Esta lección presenta el proceso que la clase utilizará
+                para diseñar juegos en el resto de la unidad. La clase recorre este
+                proceso en una serie de niveles. Como parte de esta lección, la clase
+                también aprende brevemente a usar animaciones de varios cuadros en
+                el Laboratorio de juegos. Al final de la lección, tendrán la oportunidad
+                de realizar mejoras en el juego para personalizarlo.
+              description_teacher: Esta lección presenta a los estudiantes el proceso
+                que usarán para diseñar juegos en el resto de la unidad. Este proceso
+                se centra en una guía de proyectos que pide a los estudiantes que
+                definan sus sprites, variables y funciones antes de comenzar a programar
+                su juego. En esta lección, los estudiantes comienzan jugando un juego
+                en el Laboratorio de juegos, donde el código está oculto. Debatirán
+                acerca de cómo deberían ser los sprites, las variables y las funciones
+                para crear el juego. Luego, se les entrega una guía de proyecto completa
+                que muestra una forma de implementar el juego. Después, los estudiantes
+                recorren este proceso a través de una serie de niveles. Como parte
+                de esta lección, los estudiantes también aprenden brevemente a usar
+                animaciones de varios cuadros en el Laboratorio de juegos. Al final
+                de la lección, los estudiantes tendrán la oportunidad de realizar
+                mejoras en el juego para personalizarlo.
+            Using the Game Design Process:
+              name: Uso del proceso de diseño de juegos
+              description_student: En esta lección de varios días, la clase usa el
+                proceso de resolución de problemas de la Unidad 1 para crear un juego
+                de salto de plataformas. Después de mirar un juego de muestra, la
+                clase define cómo se verán sus juegos y utiliza un proceso estructurado
+                para crearlos. Finalmente, la clase reflexiona sobre cómo se podrían
+                mejorar los juegos e implementa esos cambios.
+              description_teacher: En esta lección de varios días, los estudiantes
+                usan el proceso de resolución de problemas de la Unidad 1 para crear
+                un juego de salto de plataformas. Luego de mirar un ejemplo de un
+                salto de plataformas, definen cómo se verán sus juegos. A continuación,
+                utilizan un proceso estructurado para planificar los fondos, las variables,
+                los sprites y las funciones que necesitarán para implementar su juego.
+                Después de escribir el código para el juego, los estudiantes reflexionarán
+                sobre cómo se podría mejorar el juego e implementan esos cambios.
+            Project - Design a Game:
+              name: Proyecto - Diseñar un juego
+              description_student: La clase planifica y desarrolla juegos originales
+                mediante la guía de proyectos de las dos lecciones anteriores. Ya
+                sea individualmente o en parejas, la clase planifica, desarrolla y
+                da su opinión sobre los juegos. Después de incorporar los comentarios
+                de los compañeros, la clase comparte los juegos finalizados.
+              description_teacher: Los estudiantes planificarán y desarrollarán sus
+                propios juegos con la guía de proyectos de las dos lecciones anteriores
+                para orientar su proyecto. Ya sea individualmente o en parejas, los
+                estudiantes primero decidirán el tipo de juego que quieren crear,
+                y se inspiran en un conjunto de juegos de muestra. Luego, completarán
+                una guía de proyecto en blanco donde describirán el comportamiento
+                del juego y analizarán las variables, los sprites y las funciones
+                que necesitarán crear. En Code Studio, una serie de niveles les indica
+                una secuencia general que pueden usar para implementar este plan.
+                A lo largo del proceso, los estudiantes compartirán sus proyectos
+                para que los revisen sus compañeros e incorporarán los comentarios
+                cuando finalicen su juego. Al final de la lección, los estudiantes
+                compartirán sus juegos completos con sus compañeros de clase. Este
+                proyecto puede abarcar de 3 a 5 períodos de clase.
+            Post-Project Test:
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
+            Shapes and Parameters:
+              name: Formas y parámetros
+            Random Numbers:
+              name: Números aleatorios
+            Sprites and Animations:
+              name: Sprites y animaciones
+            Sprite Properties:
+              name: Propiedades de Sprite
+            Text and Captioned Scenes:
+              name: Texto y escenas con subtítulos
+        jess-test-script:
+          stages:
+            new stage:
+              name: nueva etapa
+            Debugging:
+              name: Depuración
+        csd2-virtual:
+          stages:
+            Exploring Web Pages:
+              name: Exploración de páginas web
+            Intro to HTML:
+              name: Introducción al HTML
+              description_student: Esta lección presenta el HTML como una solución
+                al problema de cómo comunicar el contenido y la estructura de un sitio
+                web a una computadora. La lección comienza con una breve actividad
+                sin conexión que muestra los desafíos de comunicar la estructura de
+                una página web de forma efectiva. La clase mira una página HTML en
+                el Laboratorio web, debate cómo las etiquetas HTML ayudan a resolver
+                este problema, y luego usa el HTML para escribir las primeras páginas
+                web de la unidad.
+              description_teacher: En esta lección, los estudiantes aprenderán sobre
+                HTML como una solución al problema de cómo comunicar el contenido
+                y la estructura de un sitio web a una computadora. La lección comienza
+                con una breve actividad sin conexión que muestra los desafíos de comunicar
+                la estructura de una página web de forma efectiva. Luego, los estudiantes
+                miran un ejemplo de página HTML en el Laboratorio web, debaten con
+                sus compañeros de clase sobre cómo las etiquetas HTML ayudan a resolver
+                este problema y escriben su primer HTML. Un debate de cierre ayuda
+                a consolidar la comprensión del contenido en relación con la estructura
+                que se desarrolló a lo largo de la lección.
+            Headings:
+              name: Encabezados
+              description_student: Esta lección continúa con la introducción a las
+                etiquetas HTML, esta vez con encabezados. La clase practica el uso
+                de etiquetas de encabezados para crear títulos de página y sección,
+                y aprende cómo se muestran los diferentes elementos del encabezado
+                de forma predeterminada. A continuación, la clase planifica cómo organizar
+                su contenido en las páginas web personales que se desarrollarán en
+                toda la unidad y comienza la primera página del proyecto.
+              description_teacher: En esta lección, los estudiantes continúan utilizando
+                el HTML para estructurar el texto en las páginas web, esta vez con
+                encabezados. Los estudiantes aprenden cómo se muestran los diferentes
+                elementos del encabezado de forma predeterminada y practican con ellos
+                para crear títulos de páginas y secciones. Los estudiantes comienzan
+                a decidir cómo organizarán su contenido en sus propias páginas web.
+                En el último nivel, los estudiantes inician el proyecto en el que
+                trabajarán a lo largo de la unidad.
+            Digital Footprint:
+              name: Huella digital
+              description_student: Esta lección da un paso atrás desde la creación
+                del sitio web personal para hablar sobre la información personal que
+                las personas eligen compartir de forma digital. La clase comienza
+                con un debate sobre qué tipo de información se puede compartir con
+                otras personas, y luego observa varios ejemplos de páginas de redes
+                sociales para ver qué tipos de información personal se pueden compartir
+                de manera intencional o no. Finalmente, la clase presenta un conjunto
+                de pautas por seguir a la hora de publicar información en línea.
+              description_teacher: "Una vez que los estudiantes han pensado en el
+                contenido real que se incluirá en sus sitios web personales, esta
+                lección toma distancia del proyecto de la unidad (publicación de un
+                sitio web personal) para ayudarlos a expresar qué información personal
+                desean compartir de forma digital y con quién. También refuerza la
+                idea de que gran parte de la información que eligen compartir digitalmente
+                queda fuera de su control desde el momento en que se publica.  \r\n\r\nPara
+                comenzar, los estudiantes identifican individualmente las audiencias
+                a las que les compartirían información personal específica sin problemas.
+                Luego, observan varias páginas de redes sociales para determinar qué
+                tipo de información comparten las personas sobre sí mismas o entre
+                ellas. Por último, los estudiantes reflexionan sobre las pautas que
+                consideran apropiadas para publicar información en línea.\r\n\r\nEl
+                objetivo final de esta lección no es asustar a los estudiantes, sino
+                más bien que puedan darse cuenta de la pérdida de control cuando publican
+                información en la web."
+            Styling Text with CSS:
+              name: Estilos de texto con CSS
+              description_student: Esta lección presenta CSS como una forma de diseñar
+                elementos en la página. La clase aprende la sintaxis básica de los
+                conjuntos de reglas CSS y luego explora las propiedades que afectan
+                los elementos de texto HTML. Finalmente, todos aplican estilos de
+                texto a sus sitios web personales.
+              description_teacher: "Esta lección presenta CSS como una forma de diseñar
+                elementos en la página. Los estudiantes aprenden la sintaxis básica
+                de los conjuntos de reglas CSS y luego exploran las propiedades que
+                afectan los elementos de texto HTML. Trabajarán en una página HTML
+                sobre los titulares de récords Guinness y agregarán su propio estilo
+                a la página provista. En el último nivel, todos aplicarán lo que han
+                aprendido sobre estilos para elementos de texto a sus sitios web personales.\r\n\r\n"
+            Intellectual Property:
+              name: Propiedad intelectual
+            Images:
+              name: Imágenes
+            'Websites for Expression ':
+              name: 'Sitios web para la expresión '
+              description_student: 'Esta lección presenta los sitios web como un medio
+                de expresión personal. La clase primero debate sobre las diferentes
+                maneras en que las personas expresan y comparten sus intereses e ideas,
+                y luego observa algunos ejemplos de sitios web realizados por estudiantes
+                de un curso anterior. Finalmente, todos aportan ideas y comparten
+                una lista de temas e intereses a incluir, lo cual crea un recurso
+                para desarrollar un sitio web personal en el resto de la unidad. '
+              description_teacher: En esta lección, los estudiantes investigan formas
+                de utilizar los sitios web como medio de expresión personal y desarrollan
+                una lista de temas e intereses a incluir en un sitio web personal.
+                Para comenzar la lección, los estudiantes aportan ideas sobre las
+                diferentes maneras en que las personas expresan y comparten sus intereses
+                e ideas. Luego, observan algunos ejemplos de sitios web realizados
+                por estudiantes de un curso anterior de Descubrimientos de Ciencias
+                de la Computación para identificar formas en que expresan sus ideas.
+                Finalmente, los estudiantes intercambian ideas y comparten una lista
+                de temas e intereses que podrían incluir en un sitio web personal
+                al que puedan referirse para obtener ideas a medida que avanzan en
+                la unidad.
+            Styling Elements with CSS:
+              name: Estilos de elementos con CSS
+              description_student: Esta lección continúa con la introducción a las
+                propiedades de estilo CSS, esta vez con foco en elementos que no pertenecen
+                al texto. La clase investiga y modifica los nuevos estilos CSS en
+                una página de Postres del Mundo. Después, todos aplican este nuevo
+                conocimiento a sus sitios web personales.
+              description_teacher: Esta lección continúa con la introducción a las
+                propiedades de estilo CSS, esta vez con foco en elementos que no pertenecen
+                al texto. Al inicio de esta lección, los estudiantes observan un sitio
+                web sobre Postres del Mundo. Investigan y modifican los nuevos estilos
+                CSS en este sitio web y agregan sus propios estilos a la página. Después
+                de trabajar en esta página de Postres, los estudiantes aplican sus
+                conocimientos de las nuevas propiedades de CSS para dar más estilos
+                a sus sitios web personales.
+            Project - Planning Layout and Style:
+              name: Proyecto - Planificación de disposición y estilo
+            Project - Building a Webpage:
+              name: Proyecto - Crear una página web
+            Purpose of a  Websites:
+              name: Propósito de un sitio web
+            Team Problem Solving:
+              name: Resolución de problemas en equipo
+            Sources and Research:
+              name: Fuentes e investigación
+            CSS Classes:
+              name: Clases CSS
+            Planning a Multi-page Website:
+              name: Planificación de un sitio con varias páginas
+            Linking and Navigation:
+              name: Enlaces y navegación
+            Project - Website for a Purpose:
+              name: Proyecto - Sitio web para un propósito específico
+            Peer Review and Final Touches:
+              name: Revisión de compañeros y ajustes finales
+            Post-Project Test:
+              name: Prueba posterior al proyecto
+            CS Discoveries Post Course survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
+        csp5-virtual:
+          stages:
+            Buttons and Events:
+              name: Botones y eventos
+            Multi-screen Apps:
+              name: Aplicaciones con varias pantallas
+            'Building an App: Multi-Screen App':
+              name: 'Crear una aplicación: aplicación con varias pantallas'
+            Controlling Memory with Variables:
+              name: Control de la memoria con variables
+            'Building an App: Clicker Game':
+              name: 'Crear una aplicación: juego Clicker'
+            Unit 5 Assessment 1:
+              name: Evaluación 1 de la Unidad 5
+            User Input and Strings:
+              name: Entradas de usuarios y cadenas
+            '"If" Statements Unplugged':
+              name: Sentencias "si" sin conexión
+            Boolean Expressions and "If" Statements:
+              name: Expresiones booleanas y sentencias "si"
+            '"if-else-if" and Conditional Logic':
+              name: Lógica "si-si no-si" y condicional
+            'Building an App: Color Sleuth':
+              name: 'Crear una aplicación: detección del color'
+            Unit 5 Assessment 2:
+              name: Evaluación 2 de la Unidad 5
+            While Loops:
+              name: Bucles `mientras`
+            Loops and Simulations:
+              name: Bucles y simulaciones
+            Introduction to Arrays:
+              name: Introducción a los arreglos
+            'Building an App: Image Scroller':
+              name: 'Crear una aplicación: desplazamiento de imagen'
+            Unit 5 Assessment 3:
+              name: Evaluación 3 de la Unidad 5
+            Processing Arrays:
+              name: Procesamiento de arreglos
+            Functions with Return Values:
+              name: Funciones con valores de retorno
+            'Building an App: Canvas Painter':
+              name: 'Crear una aplicación: pintor de lienzo'
+            Unit 5 Assessment 4:
+              name: Evaluación 4 de la Unidad 5
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Evaluación 5 de la Unidad 5 - Preguntas prácticas sobre pseudocódigo
+                en AP
+            CS Principles Post Course survey:
+              name: Encuesta de fin de curso de Principios de Ciencias de la Computación
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Velocidad
+            Collision Detection:
+              name: Detección de colisiones
+            Complex Sprite Movement:
+              name: Movimiento complejo de sprites
+            Collisions:
+              name: Colisiones
+            Functions:
+              name: Funciones
+            The Game Design Process:
+              name: El proceso de diseño de juegos
+            Using the Game Design Process:
+              name: Uso del proceso de diseño de juegos
+            Project - Design a Game:
+              name: Proyecto - Diseñar un juego
+        code-break:
+          stages:
+            new stage:
+              name: nueva etapa
+            Algorithms:
+              name: Algoritmos
+            Events:
+              name: Eventos
