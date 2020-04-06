@@ -148,6 +148,7 @@ Dashboard::Application.routes.draw do
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
+    patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option

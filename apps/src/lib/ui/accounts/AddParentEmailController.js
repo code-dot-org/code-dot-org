@@ -82,10 +82,7 @@ export default class AddParentEmailController {
         if (validationErrors) {
           error = {
             serverErrors: {
-              newEmail: validationErrors.email && validationErrors.email[0],
-              currentPassword:
-                validationErrors.current_password &&
-                validationErrors.current_password[0]
+              parentEmail: validationErrors.email && validationErrors.email[0]
             }
           };
         } else {
@@ -103,10 +100,13 @@ export default class AddParentEmailController {
       };
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
-      this.form.find('#add-parent-email-modal_parent_email').val(parentEmail);
       this.form
-        .find('#add-parent-email-modal_parent_email_preference_opt_in')
+        .find('#add-parent-email-modal_user_parent_email')
+        .val(parentEmail);
+      this.form
+        .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
         .val(parentEmailOptIn);
+      console.log(this.form);
       this.form.submit();
     });
   }
