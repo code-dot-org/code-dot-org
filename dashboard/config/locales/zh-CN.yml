@@ -234,6 +234,7 @@ zh-CN:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org 的登录信息
+    parent_email_added_subject: 欢迎来到 Code.org ！
   teacher_mailer:
     new_teacher_subject: 欢迎来到 Code.org ！
     delete_teacher_subject: Code.org 通知：你的帐户已被删除
@@ -462,6 +463,7 @@ zh-CN:
     auth_option_saved: 已成功连接 %{provider} 账号的邮件地址 %{email}。
     auth_option_saved_no_email: 已成功连接 %{provider} 账号 。
     update_email: 更新
+    encrypted: 已加密
   user_level:
     completed: 已完成
     tried: 试过了

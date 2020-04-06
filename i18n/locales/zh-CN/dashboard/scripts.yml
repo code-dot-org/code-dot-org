@@ -13427,6 +13427,8 @@ zh-CN:
               name: 第5单元评估 5 - AP 伪代码练习题
             CS Principles Post Course survey:
               name: 计算机科学原理课后问卷
+            Intro to App Lab:
+              name: 应用程序实验室简介
         virtual-holding-place:
           stages:
             Velocity:
