@@ -29,9 +29,9 @@
     );
 
 .free-response{:class => ('left-aligned' if left_align)}
-  -# FND-984 title needs to be localized level property.
-  - if level.title.present? && (!in_level_group || is_contained_level)
-    %h1= level.title
+  - title = level.get_property(:title)
+  - if title.present? && (!in_level_group || is_contained_level)
+    %h1= title
   - long_instructions = level.get_property("long_instructions")
   - if long_instructions
     %div= render(inline: long_instructions, type: :md)
@@ -48,8 +48,7 @@
       ReactDOM.render(React.createElement(dashboard.Attachments, {showUnderageWarning: !appOptions.is13Plus, readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
 
   - height = level.height || '80'
-  -# FND-984 placeholder needs to be localized level property.
-  - placeholder = level.placeholder || I18n.t('free_response.placeholder')
+  - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
   %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
