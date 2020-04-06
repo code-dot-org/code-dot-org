@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
 import color from '../../util/color';
@@ -61,30 +60,9 @@ class ParentLetter extends React.Component {
 
   componentDidMount() {
     if (this.props.autoPrint) {
-      this.printParentLetter();
+      print();
     }
   }
-
-  printParentLetter = () => {
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
-
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
-    });
-
-    printWindow.document.write(
-      `<html><head><link rel="stylesheet" type="text/css" href="/shared/css/standards-report-print.css"></head>`
-    );
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-  };
 
   render() {
     const {students, teacherName, section, studentId} = this.props;
