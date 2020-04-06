@@ -23218,16 +23218,10 @@ pt-BR:
         para a direita quando a seta para direita for clicada.
       courseA_playLab_events4_2018: Agora, adicione um outro bloco de evento para
         fazer Jorge mover-se para a direita quando a seta para direita for clicada.
-      courseA_playLab_events4_2019: Agora, adicione um outro bloco de evento para
-        fazer Jorge mover-se para a direita quando a seta para direita for clicada.
       courseA_playLab_events5: Adcione eventos para fazer com que Jorge mova-se para
         cima e para baixo quando a seta para cima e para baixo forem pressionadas.
       courseA_playLab_events5_2018: Adcione eventos para fazer com que Jorge mova-se
         para cima e para baixo quando a seta para cima e para baixo forem pressionadas.
-      courseA_playLab_events5_2019: Adcione eventos para fazer com que Jorge mova-se
-        para cima e para baixo quando a seta para cima e para baixo forem pressionadas.
-      courseA_playLab_events6_2019: Torne isso mais interessante alterando o fundo
-        e tocando um som aleatório quando Jorge for clicado.
       courseA_playLab_events7_2018: _Jogo Livre:_ Adicione qualquer coisa nesse jogo.
         Você consegue fazer o dinossauro desaparecer  quando Jorge correr em direção
         a ele?
@@ -25982,10 +25976,10 @@ pt-BR:
 
         Faça os seus outros sprites mostrarem informações quando são clicados. Tenha certeza de que o que você está compartilhando é SEGURO!
       courseE_aboutme_6: "![](https://images.code.org/4e9c4465463d0c061b2b47b23d5817ca-image-1557185863600.png)
-        _\"Wow! Seu poster é quase tão legal quanto o meu! Quase. \U0001F609\"_\n\nDe
-        quem é esse mundo?! É seu! \n\nEntão, continue! Aqui tem algumas ideias para
-        fazer o seu poster ficar ainda melhor:\n\n-   Adicione um plano de fundo!
-        Escolha um plano de fundo que combine com o seu poster.\n-   Adicione comportamentos!
+        _\"Wow! Seu poster é quase tão legal quanto o meu! Quase. \"_\n\nDe quem é
+        esse mundo?! É seu! \n\nEntão, continue! Aqui tem algumas ideias para fazer
+        o seu poster ficar ainda melhor:\n\n-   Adicione um plano de fundo! Escolha
+        um plano de fundo que combine com o seu poster.\n-   Adicione comportamentos!
         Faça cada um dos seus sprites reagir de maneira diferente quando são clicados.\n-
         \  Adicione mais eventos! Use os outros blocos na categoria `Eventos`."
       courseE_artist_concept1: "Refaça essa imagem. \n\n-   Os hexágonos possuem lados
