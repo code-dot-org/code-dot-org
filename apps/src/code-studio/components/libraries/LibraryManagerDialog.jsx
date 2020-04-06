@@ -5,6 +5,7 @@ import React from 'react';
 import Radium from 'radium';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
@@ -27,7 +28,6 @@ const styles = {
   },
   header: {
     textAlign: 'left',
-    color: color.purple,
     fontSize: 24,
     marginTop: 20
   },
@@ -68,6 +68,10 @@ const styles = {
     minHeight: 30,
     whiteSpace: 'pre-wrap',
     lineHeight: 1
+  },
+  updateButtons: {
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };
 
@@ -91,6 +95,12 @@ export const mapUserNameToProjectLibraries = (
   return projectLibraries;
 };
 
+const DisplayLibraryMode = {
+  NONE: 'none',
+  VIEW: 'view',
+  UPDATE: 'update'
+};
+
 export class LibraryManagerDialog extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
@@ -102,8 +112,8 @@ export class LibraryManagerDialog extends React.Component {
     projectLibraries: [],
     classLibraries: [],
     cachedClassLibraries: [],
-    viewingLibrary: {},
-    isViewingCode: false,
+    displayLibrary: null,
+    displayLibraryMode: DisplayLibraryMode.NONE,
     isLoading: false,
     error: null,
     updatedLibraryChannels: []
@@ -167,11 +177,11 @@ export class LibraryManagerDialog extends React.Component {
   };
 
   updateLibraryInProject = libraryJson => {
-    const {projectLibraries} = this.state;
     if (!libraryJson) {
       return;
     }
 
+    const {projectLibraries} = this.state;
     let libraries = [...projectLibraries];
     const libraryIndex = libraries.findIndex(
       library => library.channelId === libraryJson.channelId
@@ -244,20 +254,22 @@ export class LibraryManagerDialog extends React.Component {
       return <div style={styles.message}>{i18n.noLibrariesInProject()}</div>;
     }
 
-    return projectLibraries.map(library => {
-      // Only pass onUpdate prop for libraries with updates available.
-      let onUpdate;
-      if (updatedLibraryChannels.includes(library.channelId)) {
-        onUpdate = channelId => {
-          this.fetchLatestLibrary(channelId, this.updateLibraryInProject);
-        };
-      }
+    const onUpdate = channelId => {
+      this.fetchLatestLibrary(channelId, lib =>
+        this.viewCode(lib, DisplayLibraryMode.UPDATE)
+      );
+    };
 
+    return projectLibraries.map(library => {
       return (
         <LibraryListItem
           key={library.name}
           library={library}
-          onUpdate={onUpdate}
+          onUpdate={
+            updatedLibraryChannels.includes(library.channelId)
+              ? onUpdate
+              : undefined
+          }
           onRemove={this.removeLibrary}
           onViewCode={() => this.viewCode(library)}
         />
@@ -286,12 +298,15 @@ export class LibraryManagerDialog extends React.Component {
     });
   };
 
-  viewCode = library => {
+  viewCode = (library, mode) => {
     if (!library) {
       return;
     }
 
-    this.setState({viewingLibrary: library, isViewingCode: true});
+    this.setState({
+      displayLibrary: library,
+      displayLibraryMode: mode || DisplayLibraryMode.VIEW
+    });
   };
 
   closeLibraryManager = () => {
@@ -299,21 +314,71 @@ export class LibraryManagerDialog extends React.Component {
     this.props.onClose();
   };
 
+  renderDisplayLibrary = () => {
+    const {displayLibrary, displayLibraryMode} = this.state;
+    if (!displayLibrary) {
+      return null;
+    }
+
+    const onClose = () =>
+      this.setState({
+        displayLibrary: null,
+        displayLibraryMode: DisplayLibraryMode.NONE
+      });
+
+    switch (displayLibraryMode) {
+      case DisplayLibraryMode.VIEW:
+        return (
+          <LibraryViewCode
+            title={displayLibrary.name}
+            description={displayLibrary.description}
+            onClose={onClose}
+            sourceCode={displayLibrary.source}
+          />
+        );
+      case DisplayLibraryMode.UPDATE:
+        return (
+          <LibraryViewCode
+            title={i18n.updateLibraryConfirmation({
+              libraryName: displayLibrary.name
+            })}
+            description={displayLibrary.description}
+            onClose={onClose}
+            sourceCode={displayLibrary.source}
+            buttons={
+              <div style={styles.updateButtons}>
+                <Button
+                  text={i18n.cancel()}
+                  color={Button.ButtonColor.gray}
+                  onClick={onClose}
+                />
+                <Button
+                  text={i18n.update()}
+                  onClick={() => this.updateLibraryInProject(displayLibrary)}
+                />
+              </div>
+            }
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   render() {
     const {isOpen} = this.props;
-    const {
-      isViewingCode,
-      importLibraryId,
-      viewingLibrary,
-      isLoading,
-      error
-    } = this.state;
+    const {importLibraryId, displayLibrary, isLoading, error} = this.state;
+
+    if (!isOpen) {
+      return null;
+    }
+
     return (
       <div>
         <BaseDialog
-          isOpen={isOpen}
+          isOpen
           handleClose={this.closeLibraryManager}
-          style={{...styles.dialog, ...(isViewingCode ? styles.hidden : {})}}
+          style={{...styles.dialog, ...(displayLibrary ? styles.hidden : {})}}
           useUpdatedStyles
         >
           <h1 style={styles.header}>{i18n.libraryManage()}</h1>
@@ -343,11 +408,7 @@ export class LibraryManagerDialog extends React.Component {
           </div>
           <div style={styles.error}>{error}</div>
         </BaseDialog>
-        <LibraryViewCode
-          isOpen={isViewingCode}
-          onClose={() => this.setState({isViewingCode: false})}
-          library={viewingLibrary}
-        />
+        {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );
   }

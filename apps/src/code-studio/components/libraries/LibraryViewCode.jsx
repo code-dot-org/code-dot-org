@@ -2,12 +2,24 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Body, Title} from '@cdo/apps/templates/Dialog';
+import {Body} from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
 
 const styles = {
+  dialog: {
+    padding: 15
+  },
+  header: {
+    textAlign: 'left',
+    fontSize: 24,
+    marginTop: 5,
+    whiteSpace: 'pre-wrap',
+    lineHeight: 1.25,
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
   message: {
     color: color.dark_charcoal,
     margin: DEFAULT_MARGIN,
@@ -27,20 +39,15 @@ const styles = {
 
 export default class LibraryViewCode extends React.Component {
   static propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    library: PropTypes.object.isRequired
+    sourceCode: PropTypes.string.isRequired,
+    buttons: PropTypes.node
   };
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.isOpen === false && this.props.isOpen === true) {
-      this.onOpen();
-    }
-  }
-
-  onOpen = () => {
-    const {library} = this.props;
-    this.editor = new droplet.Editor(this.refs.libraryCodeViewer, {
+  componentDidMount() {
+    this.editor = new droplet.Editor(this.libraryCodeViewer, {
       mode: 'javascript',
       allowFloatingBlocks: false,
       enablePaletteAtStart: false,
@@ -48,23 +55,30 @@ export default class LibraryViewCode extends React.Component {
       palette: []
     });
 
-    this.editor.setValue(library.source);
+    this.editor.setValue(this.props.sourceCode);
     this.editor.setReadOnly(true);
-  };
+  }
 
   render() {
-    const {isOpen, onClose, library} = this.props;
+    const {title, description, onClose, buttons} = this.props;
+
     return (
-      <BaseDialog isOpen={isOpen} handleClose={onClose} useUpdatedStyles>
-        <Title>{library.name}</Title>
+      <BaseDialog
+        isOpen={true}
+        handleClose={onClose}
+        style={styles.dialog}
+        useUpdatedStyles
+      >
+        <h1 style={styles.header}>{title}</h1>
         <Body>
           <div style={{textAlign: 'left'}}>
-            <p style={styles.message}>{library.description}</p>
+            <p style={styles.message}>{description}</p>
             <div className="libraryCodeViewerContainer" style={styles.code}>
-              <div ref="libraryCodeViewer" />
+              <div ref={node => (this.libraryCodeViewer = node)} />
             </div>
           </div>
         </Body>
+        {buttons}
       </BaseDialog>
     );
   }
