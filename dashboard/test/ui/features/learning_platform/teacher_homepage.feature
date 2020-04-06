@@ -26,16 +26,15 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
-    Given I am on "http://studio.code.org/s/csd2-2017/stage/3/puzzle/7"
+    Given I am on "http://studio.code.org/s/csp2-2017/stage/1/puzzle/1"
     And I wait to see ".header_popup_link"
     When I wait for jquery to load
     And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     Then I click selector "a:contains(View Unit Overview)"
-    And check that I am on "http://studio.code.org/s/csd2-2017"
-    Then I press the first ".uitest-bubble" element
-    And check that I am on "http://studio.code.org/s/csd2-2017/stage/3/puzzle/7"
-    And I wait until element ".uitest-instructionsTab" is visible
+    And check that I am on "http://studio.code.org/s/csp2-2017"
+    Then I press the first ".uitest-ProgressPill" element
+    And check that I am on "http://studio.code.org/s/csp2-2017/stage/1/puzzle/1"
 
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
