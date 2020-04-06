@@ -199,6 +199,7 @@ bg:
       %{name}
   parent_mailer:
     student_associated_subject: 'Информация за вход в Code.org'
+    parent_email_added_subject: 'Добре дошли в Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Добре дошли в Code.org!'
   section:
