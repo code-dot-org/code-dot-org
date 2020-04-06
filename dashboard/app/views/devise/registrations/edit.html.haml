@@ -100,7 +100,7 @@
     = f.hidden_field :password_confirmation
 
 - if current_user.student?
-  %div#add-parent-email
+  %div#add-parent-email{style: "display: none"}
     %hr
     %h2= t('user.for_parents_and_guardians')
     %p= "#{t('user.link_a_parent_email')}:"
