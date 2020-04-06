@@ -6414,6 +6414,8 @@ it:
               name: Cicli "mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
         virtual-holding-place:
           stages:
             Velocity:
