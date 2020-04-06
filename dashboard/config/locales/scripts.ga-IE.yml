@@ -1913,7 +1913,7 @@ ga:
             Digital Sharing:
               description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta
                 ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis
-                ná cabhrú lle daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
+                ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
                 a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go
                 háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
                 bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
@@ -1929,9 +1929,9 @@ ga:
             Relay Programming:
               name: Códáil Sealaíochta
               description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr
-                ar dífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
+                ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
                 chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun
-                ríomhchlár a scríobh, treoir i ndiadh treorach.
+                ríomhchlár a scríobh, treoir i ndiaidh treorach.
             Loops in Ice Age:
               name: Lúba in Ice Age
             Conditionals with Cards:
@@ -2161,6 +2161,8 @@ ga:
           stages:
             Lists:
               name: Liostaí
+            Peer Review and Final Touches:
+              name: Piarmheasúnú agus Bailchríoch
         csd3-pilot:
           stages:
             Variables:
@@ -2261,6 +2263,10 @@ ga:
               name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+        csd2-2020:
+          stages:
+            Peer Review and Final Touches:
+              name: Piarmheasúnú agus Bailchríoch
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -2311,9 +2317,9 @@ ga:
             Relay Programming:
               name: Códáil Sealaíochta
               description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr
-                ar dífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
+                ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
                 chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun
-                ríomhchlár a scríobh, treoir i ndiadh treorach.
+                ríomhchlár a scríobh, treoir i ndiaidh treorach.
             Loops in Ice Age:
               name: Lúba in Ice Age
             Conditionals with Cards:
@@ -2359,7 +2365,7 @@ ga:
             Digital Sharing:
               description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta
                 ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis
-                ná cabhrú lle daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
+                ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
                 a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go
                 háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
                 bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
@@ -2410,12 +2416,18 @@ ga:
               name: Feidhmeanna
             Sprite Properties:
               name: Airíonna na Spride
+        csd2-virtual:
+          stages:
+            Peer Review and Final Touches:
+              name: Piarmheasúnú agus Bailchríoch
         csp5-virtual:
           stages:
             While Loops:
               name: Lúba "Chomh fada is"
             CS Principles Post Course survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+            Intro to App Lab:
+              name: Buneolas ar an tSaotharlann Aipeanna
         virtual-holding-place:
           stages:
             Velocity:

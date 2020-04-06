@@ -217,6 +217,14 @@ ga-IE:
       Course 4 Maze 3: 'Scríobh cód chun cabhrú leis an éan feargach an mhuc a shroicheadh. '
       Course 4 Maze 5: An féidir leat an dúshlán seo a réiteach leis an líon is lú
         blocanna agus is féidir?
+      Course 4 Play Lab Params 4: "Seo é feidhm darb ainm \"patrólú\". \n\nCuir in
+        eagar í chun an cat a aistriú suas 400 picteilín ansin síos 400 picteilín."
+      Course 4 Play Lab Params 5: Cuir an fheidhm "patrólú" in eagar agus cuir paraiméadar
+        nua "actor" leis, ionas go mbeimid in ann í a úsáid le haon cheann de na haisteoirí.
+        Cuimhnigh gur tugadh uimhreacha 1, 2 agus 3 do na haisteoirí.
+      Course 4 Play Lab Params 6: Cuir paraiméadar eile "speed" leis an bhfeidhm "patrólú".
+        Bain úsáid as an mbloc "set speed" chun cabhrú leis an bpiongain an dá bhratach
+        a fháil sular féidir leis na carachtair eile fiú bratach amháin a fháil.
       Course 4 SCFL 1: Réitigh an dúshlán seo leis an líon is lú blocanna agus is
         féidir.
       Course 4 SCFL 2: Réitigh an dúshlán seo leis an líon is lú blocanna agus is
@@ -244,6 +252,20 @@ ga-IE:
         dhamhsóir tionlacain?
       CourseD_Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn
         le cairde é.
+      CourseE_HOC 2018 Level_1: Bailigh bád ón gcófra.
+      CourseE_HOC 2018 Level_10: Aimsigh an bealach isteach sa Séadchomhartha Mara
+        seo.
+      CourseE_HOC 2018 Level_11: Tóg seoladán as Priosmuiríneach laistigh den Séadchomhartha
+        Mara.
+      CourseE_HOC 2018 Level_2: Téigh go dtí deireadh an duga.
+      CourseE_HOC 2018 Level_3: Trasnaigh an fharraige oscailte go dtí an trosc.
+      CourseE_HOC 2018 Level_4: Úsáid lúb chun an deilf a bhaint amach.
+      CourseE_HOC 2018 Level_5: Taiscéal an long bhriste chun an cófra a bhaint amach.
+      CourseE_HOC 2018 Level_6: Déan do bhealach tríd an oighear chun an bradán a
+        bhaint amach.
+      CourseE_HOC 2018 Level_7a: Téigh ar lorg cófra sna fothracha seo faoi uisce.
+      CourseE_HOC 2018 Level_9b: Úsáid an coiréal mar sheicphointí chun an cófra a
+        bhaint amach.
       Crack Random Substitution: Treoracha
       Crack a Caesar Cipher: Treoracha
       Dance_2019_01: 'Tarraing an bloc <xml><block type="Dancelab_makeAnonymousDanceSprite"
@@ -308,13 +330,34 @@ ga-IE:
         mionsonraí a fháil)
       Dance_Party_extras_visible_2019: Cá ndeachaigh siad? (Cliceáil "Tuilleadh" chun
         na mionsonraí a fháil)
+      Fish Tank 5-validated_2019: Tá anam eachtrúil san iasc seo, agus ba mhaith leis
+        bualadh le hainmhithe mara eile. Cuir sprid nua san uisceadán. Úsáid culaith
+        ar bith seachas an ceann atá ar d'iascsa!
+      Fish Tank 6-validated: Cuir iompar le cara nua an éisc.
+      Fish Tank 6-validated_2019: Cuir iompar le cara nua an éisc.
+      Fish Tank 7-validated: Úsáid roinnt de na blocanna nua sa bhosca uirlisí chun
+        cuma speisialta a chur ar an uisceadán!
+      Fish Tank 7-validated_2019: Úsáid roinnt de na blocanna nua sa bhosca uirlisí
+        chun cuma speisialta a chur ar an uisceadán!
       FoodFight: Seo é an cineál cluiche is féidir leat a dhéanamh sa Spraotharlann.
       Function intro Ryan: Úsáid an fheidhm `build bridge` faoi dhó chun cosán go
         dtí an Tóirse Deargchloiche a dhéanamh.
       Function intro Ryan_2019: Úsáid an fheidhm `build bridge` faoi dhó chun cosán
         go dtí an Tóirse Deargchloiche a dhéanamh.
+      HOC 2018 Level_1: Bailigh bád ón gcófra.
+      HOC 2018 Level_10: Aimsigh an bealach isteach sa Séadchomhartha Mara seo.
+      HOC 2018 Level_11: Tóg seoladán as Priosmuiríneach laistigh den Séadchomhartha
+        Mara.
       HOC 2018 Level_12: Dear timpeallacht faoi uisce de do chuid féin, is leatsa
         an rogha!
+      HOC 2018 Level_2: Téigh go dtí deireadh an duga.
+      HOC 2018 Level_3: Trasnaigh an fharraige oscailte go dtí an trosc.
+      HOC 2018 Level_4: Úsáid lúb chun an deilf a bhaint amach.
+      HOC 2018 Level_5: Taiscéal an long bhriste chun an cófra a bhaint amach.
+      HOC 2018 Level_6: Déan do bhealach tríd an oighear chun an bradán a bhaint amach.
+      HOC 2018 Level_7a: Téigh ar lorg cófra sna fothracha seo faoi uisce.
+      HOC 2018 Level_9b: Úsáid an coiréal mar sheicphointí chun an cófra a bhaint
+        amach.
       Infinity_catch: An féidir leat na saighde a úsáid chun cabhrú le hElsa ("aisteoir
         2") teacht suas le hAnna?
       Infinity_finale: Déan cibé rud is rogha leat, ansin foilsigh é!
@@ -541,6 +584,14 @@ ga-IE:
         ó gach bláth.
       NEW Course 4 Bee For Loops 8: Cén incrimint a úsáidfí chun 3, 6, 9, 12, 15 neachtar
         a bhailiú? Tá a fhios agat!
+      New Artist Project: Tarraing rud éigin iontach! Sábhálfar do chód mar thionscadal
+        a mbeidh tú ábalta filleadh air am ar bith amach anseo.
+      New Basketball Project: Cruthaigh do chluiche cispheile féin. Is féidir leat
+        na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe, cliceáil "Comhroinn"
+        agus lig do chairde an cluiche a imirt ar a nguthán.
+      New Bounce Project: Cruthaigh do chluiche liathróide féin. Is féidir leat an
+        leagan amach agus na rialacha go léir a athrú. Nuair a bheidh tú críochnaithe,
+        cliceáil "Comhroinn" agus lig do chairde an cluiche a imirt ar a nguthán.
       New Gumball Project: Déan cibé rud is rogha leat, ansin foilsigh é!
       New Ice Age Project: Déan cibé rud is rogha leat, ansin foilsigh é!
       New Infinity Project: Déan cibé rud is rogha leat, ansin foilsigh é!
@@ -1029,8 +1080,6 @@ ga-IE:
       courseA_playLab_events3: Ceangail an bloc "téigh ar chlé" leis an mbloc "nuair
         a bhrúitear an tsaighead chlé" atá sa spás oibre cheana.
       courseA_playLab_events3_2018: Ceangail an bloc "téigh ar chlé" leis an mbloc
-        "nuair a bhrúitear an tsaighead chlé" atá sa spás oibre cheana.
-      courseA_playLab_events3_2019: Ceangail an bloc "téigh ar chlé" leis an mbloc
         "nuair a bhrúitear an tsaighead chlé" atá sa spás oibre cheana.
       courseA_playlab_events_challenge1: An féidir leat cód a scríobh chun an chuid
         eile de mo chairde a thaispeáint? Cabhróidh na leideanna leat an tionscadal
@@ -2124,6 +2173,8 @@ ga-IE:
       courseD_maze_ramp5a_2019: Áirigh na spásanna ar an ngreille go cúramach!
       courseD_maze_ramp5c: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
+      courseD_maze_ramp5c_2019: Bí san airdeall ar oighear ag briseadh! Cabhraigh
+        le Scrat an dearcán a bhaint amach.
       courseD_maze_ramp5d: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d_2019: Cabhraigh leis an éan an mhuc a bhaint amach.

@@ -3,14 +3,14 @@ ga:
   slides:
     maze_intro:
       1:
-        text: Fáilte chuig do chéad uair an chloig ag códú! Seo linn chuig do chéad
+        text: Fáilte chuig do chéad uair an chloig ag códáil! Seo linn chuig do chéad
           bhlaiseadh den ríomhchlárú.
       2:
         text: Beimis ag baint úsáid as Blockly, teanga ríomhchlárúcháin ina ndéantar
-          tarraingt agus scaoileadh le bloicíní chun cód a scríobh.
+          tarraingt agus scaoileadh le blocanna chun cód a scríobh.
       3:
         text: De ghnáth, déantar cód a chlóbhualadh, ach is teanga fhíseach í Blockly.  Freagraíonn
-          gach bhloicín le líne de cód "fíor".
+          gach bloc le líne de cód "fíor".
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png

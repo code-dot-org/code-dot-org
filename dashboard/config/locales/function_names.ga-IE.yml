@@ -37,7 +37,16 @@ ga-IE:
       Course 4 Play Lab Params 3:
         jump: léim
       Course 4 Play Lab Params 4:
+        patrol: patrólú
         do something: rud éigin a dhéanamh
+      Course 4 Play Lab Params 5:
+        patrol: patrólú
+      Course 4 Play Lab Params 6:
+        patrol: patrólú
+      Course 4 Play Lab Params 7:
+        patrol: patrólú
+      Course 4 Play Lab Params 8:
+        patrol: patrólú
       Course 4 Play Lab Vars 1:
         set score: socraigh an scór
       Course 4 Play Lab Vars 2:
@@ -52,12 +61,38 @@ ga-IE:
         do something: rud éigin a dhéanamh
       Find the Wizard:
         do something: rud éigin a dhéanamh
+      Function intro Ryan:
+        build bridge: tóg droichead
+      Function intro Ryan_2019:
+        build bridge: tóg droichead
       Geometric Sun:
         diamond: ar chruth diamaint
         draw a house: tarraing teach
       Geometric Sun_2018:
         diamond: ar chruth diamaint
         draw a house: tarraing teach
+      MC_HOC_2017_07_Cole:
+        clear path: glan cosán
+      MC_HOC_2017_07_Cole_2019:
+        clear path: glan cosán
+      MC_HOC_2017_10_RETRY:
+        fix long path: deisigh cosán fada
+        fix short path: deisigh cosán gearr
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path: deisigh cosán fada
+        fix short path: deisigh cosán gearr
+      MC_HOC_2017_Ali:
+        build short bridge: tóg droichead gearr
+        build long bridge: tóg droichead fada
+      MC_HOC_2017_Ali_2019:
+        build short bridge: tóg droichead gearr
+        build long bridge: tóg droichead fada
+      MC_HOC_2017_FP20x20:
+        function 1: feidhm 1
+        function 2: feidhm 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1: feidhm 1
+        function 2: feidhm 2
       NEW Course 4 Artist Functions 3:
         draw a square: tarraing cearnóg
       NEW Course 4 Artist Functions 4:
@@ -98,14 +133,19 @@ ga-IE:
         do something: rud éigin a dhéanamh
       NEW Course 4 Play Lab Params 11:
         jump: léim
+        patrol: patrólú
       New Artist Project:
         draw a star: tarraing réalta
         draw a circle: tarraing ciorcal
         draw a triangle: tarraing triantán
         draw a house: tarraing teach
         draw a square: tarraing cearnóg
+      New Minecraft Hero Project:
+        function 1: feidhm 1
+        function 2: feidhm 2
       New Play Lab Project:
         jump: léim
+        patrol: patrólú
       Standalone_Artist_7:
         draw a flower: tarraing bláth
       Standalone_Artist_9:

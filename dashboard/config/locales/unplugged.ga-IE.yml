@@ -476,19 +476,19 @@ ga:
           Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí
           tuiscint a fháil ar an bpróiseas cruthaitheach - próiseas de chomhroinnt
           agus spreagadh.  Chomh maith leis seo, cuirtear chun cinn an cheapadóireacht
-          chruthaitheach, agus an gá a bheith cóir maidir le obair chruthaitheach.
+          chruthaitheach, agus an gá a bheith cóir maidir le hobair chruthaitheach.
       courseE_unplugged_CnC_2018:
         desc: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann
-          Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú lle daltaí
+          Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí
           tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a
           léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar
           na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht
           Dhigiteach.
       RelayProgramming_2018:
         title: Códáil Sealaíochta
-        desc: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dífhabhtú agus
+        desc: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dhífhabhtú agus
           diongbháilteacht.  Ansin beidh rás in aghaidh an chloig leis na daltaí roinnte
-          i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiadh
+          i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiaidh
           treorach.
       courseB_unplugged_MRF_2019:
         title: Mo Chairde Róbatacha
@@ -517,9 +517,9 @@ ga:
           atáirgeadh.
       RelayProgramming_2018_2019:
         title: Códáil Sealaíochta
-        desc: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dífhabhtú agus
+        desc: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dhífhabhtú agus
           diongbháilteacht.  Ansin beidh rás in aghaidh an chloig leis na daltaí roinnte
-          i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiadh
+          i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiaidh
           treorach.
       courseD_unplugged_digitalCitizenship_2019:
         title: Gníomhaíocht Dhíphlugáilte
@@ -537,7 +537,7 @@ ga:
         desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         desc: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann
-          Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú lle daltaí
+          Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí
           tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a
           léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar
           na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht
@@ -601,7 +601,7 @@ ga:
           Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí
           tuiscint a fháil ar an bpróiseas cruthaitheach - próiseas de chomhroinnt
           agus spreagadh.  Chomh maith leis seo, cuirtear chun cinn an cheapadóireacht
-          chruthaitheach, agus an gá a bheith cóir maidir le obair chruthaitheach.
+          chruthaitheach, agus an gá a bheith cóir maidir le hobair chruthaitheach.
       timeforcs_demo_crowdsourcing:
         title: Sluafhoinsiú
         desc: '_Josh note: in contrast with the first lesson, I''ve formatted this
