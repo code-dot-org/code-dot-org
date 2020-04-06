@@ -229,8 +229,8 @@ pl-PL:
       Infinity_repeat:
         Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia
       InspirationalArtwork:
-        InspirationalArtwork_1: Spróbuj użyć nowego bloku `comment` pod tą etykietą,
-          aby zostawić sobie notatki wewnątrz twojego programu!
+        InspirationalArtwork_1: Spróbuj użyć nowego bloku "komentarz" pod tą etykietą,
+          aby zostawić sobie notatki wewnątrz Twojego programu!
       InspirationalArtwork_2018:
         InspirationalArtwork_1: Spróbuj użyć nowego bloku `comment` pod tą etykietą,
           aby zostawić sobie notatki wewnątrz twojego programu!
@@ -310,11 +310,11 @@ pl-PL:
       Overworld Place Wall_2019:
         craft_inside_repeat: Powtarzaj działania, umieszczając tu bloki
       Robot Doodle:
-        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą
-          etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
+        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku "komentarz" pod
+          tą etykietą, aby zostawić sobie notatki wewnątrz Twojego programu!
       Robot Doodle_2018:
-        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą
-          etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
+        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku "komentarz" pod
+          tą etykietą, aby zostawić sobie notatki wewnątrz Twojego programu!
       Underground Avoiding Lava:
         craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać
           polecenie, aby przejść dalej?
@@ -655,7 +655,7 @@ pl-PL:
         courseF_bee_functions_challenge1_2: Funkcja "sprawdź nektar lub miód" może
           zostać tu wykorzystana, jeśli ją zmienisz tak, by robiła miód wiele razy.
       courseF_bee_fwp2:
-        courseF_bee_fwp2_a: Tutaj mieszka blok, który woła twoją funkcję.
+        courseF_bee_fwp2_a: Tutaj znajduje się blok, który woła twoją funkcję.
       courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Ta funkcja dobrze sobie poradzi z kukurydzą,
           ale co z innymi warzywami?

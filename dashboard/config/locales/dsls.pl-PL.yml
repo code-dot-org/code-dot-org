@@ -85,9 +85,11 @@ pl-PL:
         title: Dopasowanie
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Za pomocą którego programu został utworzony ten obrazek?
         title: Test wielokrotnego wyboru
