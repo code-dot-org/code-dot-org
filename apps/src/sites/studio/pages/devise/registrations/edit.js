@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
+import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
@@ -48,6 +49,12 @@ $(document).ready(() => {
     userType,
     isPasswordRequired,
     emailChangedCallback: onEmailChanged
+  });
+
+  new AddParentEmailController({
+    form: $('#add-parent-email-modal-form'),
+    link: $('#add-parent-email-link'),
+    currentParentEmail: $('#current-parent-email')
   });
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
