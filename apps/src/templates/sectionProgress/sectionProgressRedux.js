@@ -14,7 +14,6 @@ import _ from 'lodash';
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
 import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores
@@ -370,10 +369,7 @@ export const loadScript = (scriptId, sectionId) => {
       .then(response => response.json())
       .then(scriptData => {
         dispatch(addScriptData(scriptId, scriptData));
-        if (
-          scriptData.hasStandards &&
-          experiments.isEnabled(experiments.STANDARDS_REPORT)
-        ) {
+        if (scriptData.hasStandards) {
           dispatch(fetchStandardsCoveredForScript(scriptId));
           dispatch(fetchStudentLevelScores(scriptId, sectionId));
         }
