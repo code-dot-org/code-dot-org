@@ -6403,6 +6403,8 @@ vi:
               name: Phần 5 Đánh giá 4
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
+            Intro to App Lab:
+              name: Giới thiệu về AppLab
         virtual-holding-place:
           stages:
             Collision Detection:

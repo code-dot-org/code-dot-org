@@ -259,6 +259,7 @@ vi:
       vs. Zombies! :-) \n\n%{name}\n"
   parent_mailer:
     student_associated_subject: Thông tin đăng nhập vào Code.org
+    parent_email_added_subject: Chào mừng tới Code.org!
   teacher_mailer:
     new_teacher_subject: Chào mừng tới Code.org!
     delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
