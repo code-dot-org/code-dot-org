@@ -100,14 +100,13 @@
     = f.hidden_field :password_confirmation
 
 - if current_user.student?
-  %span#current-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? '' : current_user.parent_email
   %div#add-parent-email
     %hr
     %h2= t('user.for_parents_and_guardians')
     %p= "#{t('user.link_a_parent_email')}:"
     %p
       %b= "#{t('user.parent_guardian_email_label')}:"
-      = (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
+      %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
       (
       %a#add-parent-email-link{href: '#'}= t('user.update_email')
       )
