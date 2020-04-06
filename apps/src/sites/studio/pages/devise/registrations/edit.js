@@ -54,7 +54,7 @@ $(document).ready(() => {
   new AddParentEmailController({
     form: $('#add-parent-email-modal-form'),
     link: $('#add-parent-email-link'),
-    currentParentEmail: $('#current-parent-email')
+    displayedParentEmail: $('#displayed-parent-email')
   });
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);

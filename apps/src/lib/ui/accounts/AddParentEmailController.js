@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import color from '../../../util/color';
 import AddParentEmailModal from './AddParentEmailModal';
 
 /**
@@ -43,7 +42,9 @@ export default class AddParentEmailController {
       <AddParentEmailModal
         handleSubmit={handleSubmit}
         handleCancel={this.hideAddParentEmailModal}
-        currentParentEmail={this.displayedParentEmail}
+        currentParentEmail={$(
+          '#add-parent-email-modal_user_parent_email'
+        ).val()}
       />,
       this.mountPoint
     );
@@ -55,17 +56,6 @@ export default class AddParentEmailController {
       document.body.removeChild(this.mountPoint);
       delete this.mountPoint;
     }
-  };
-
-  onEmailChanged = newEmail => {
-    this.displayedParentEmail.text(newEmail);
-    this.hideAddParentEmailModal();
-    this.displayedParentEmail.effect('highlight', {
-      duration: 1500,
-      color: color.orange
-    });
-    //this.parentEmailChangedCallback(newEmail, hashEmail(newEmail));
-    console.log(newEmail);
   };
 
   submitParentEmailChange({parentEmail, parentEmailOptIn}) {
