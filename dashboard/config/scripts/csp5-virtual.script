@@ -21,6 +21,7 @@ level 'CSPU5_HOC_virtual13', progression: 'Design Mode'
 
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'CSPU5_video_new_debugging_virtual', progression: 'Intro to Debugging and Common Problems'
+level 'CSPU5_predict_applab_onEventWithWrongID_virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_U3L13 - Debugging IDs case sensitive_virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual', progression: 'Intro to Debugging and Common Problems'
 level 'CSPU5_U3L13 - Debugging 3_virtual', progression: 'Intro to Debugging and Common Problems'
