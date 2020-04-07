@@ -14,7 +14,16 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">A je ti një mësues për shkencat kompjuterike? Shiko burimet e javes për shkencat kompjuterike</a>'
   csedweek_banner_teachers_text: "A je ti një mësues për shkencat kompjuterike? Shiko burimet e javes për shkencat kompjuterike"
   n_have_learned_an_hoc: "<h1>Provo</h1><h2>Orën e Kodimit</h2><h3># të shërbyer</h3>"
-  try_hoc_num_served_markdown: "# Provo\\n\\n## Ora e Kodimit\\n\\n### %{num} të shërbyer"
+  try_hoc_num_served_markdown: |-
+    # Provo\
+    \
+    ## Ora e Kodimit\
+    \
+    ### %{num} të shërbyer #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Të gjithë mund të mësojnë."
   learn_now: "Meso tani"
   petition_message: "Çdo student në çdo shkollë duhet të ketë mundësinë për të mësuar rreth shkencave kompjuterike"

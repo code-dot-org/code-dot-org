@@ -229,6 +229,7 @@ es:
       Haz clic en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "profesor"): %{link} Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia sencilla y guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombis! :-) %{name}
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
+    parent_email_added_subject: '¡Bienvenido a Code.org!'
   teacher_mailer:
     new_teacher_subject: '¡Bienvenido a Code.org!'
     delete_teacher_subject: 'Aviso de Code.org: Su cuenta ha sido borrada'
@@ -444,6 +445,7 @@ es:
     update: "Actualizar cuenta de usuario"
     account_successfully_updated: "Cuenta actualizada exitosamente."
     update_email: "Actualizar"
+    encrypted: "encriptado"
   user_level:
     completed: 'Completada'
     tried: 'Prueba'
