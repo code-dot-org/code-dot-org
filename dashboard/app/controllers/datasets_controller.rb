@@ -44,7 +44,7 @@ class DatasetsController < ApplicationController
   def update_manifest
     parsed_manifest = JSON.parse(params['manifest'])
     response = @firebase.set_library_manifest parsed_manifest
-    return head response.code
+    render json: {}, status: response.code
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}
   end

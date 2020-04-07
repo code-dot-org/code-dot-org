@@ -665,7 +665,7 @@ cs:
     placeholder: "Zadejte svou odpověď zde"
   multi:
     wrong_title: "Nesprávná odpověď"
-    wrong_body: "Odpověď, kterou jste zadali, není správné.  Opakujte akci!"
+    wrong_body: "Odpověď, kterou jsi vybral(a), není správná. Zkus to znovu!"
     correct_title: "Správně"
     correct_body: "To je správná odpověď."
   multi-submittable:
@@ -692,7 +692,7 @@ cs:
     submit-complete-body: "Po odeslání už nebudete moci hodnocení upravovat. Jste si jistý?"
   match:
     wrong_title: "Nesprávné řešení"
-    wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
+    wrong_body: "Řešení, které jsi zadal(a), není správné.  Zkus to znovu."
     correct_title: "Správně"
     correct_body: "To je správná odpověď."
   contract_match:

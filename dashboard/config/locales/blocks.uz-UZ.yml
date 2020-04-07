@@ -131,6 +131,10 @@ uz:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': tasodifiy
       binary_whenKey:
         options:
           KEY:

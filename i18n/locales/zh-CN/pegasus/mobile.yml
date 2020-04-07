@@ -12,12 +12,17 @@
   csedweek_dates: "2018年12月3-9日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">编程一小时</a>即将来临。邀请所有的老师和组织领导们<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
+  csedweek_banner_teachers_text: "你是电脑科学课的老师吗？看其他的电脑科学教育周的资料吧"
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
+  try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
+  try_hoc_num_served_markdown: "# 尝试\\n\\n##《编程一小时》\\n\\n###%{num}参与"
   anybody_can_learn: "任何人都可以学习。"
   learn_now: "现在开始学习"
   petition_message: "任何学校的任何学生都应有机会学习计算机科学"
   petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
+  petition_sign_message_num: "如果同意，签名并像其他 %{num} 人一样加入邮件列表。"
   petition_join_others: '加入另外 # 人'
+  petition_join_others_num: "与 %{num} 人一样加入"
   name: "姓名"
   email: "电子邮件"
   zipcode: "邮政编码或国家"
@@ -42,6 +47,7 @@
   hoc2014_support: "支持它 &#x25BE;"
   hoc2014_whatishoc: "什么是编程一小时？"
   csedweek_map_header: "#CSEdWeek/ 编程一小时是一个世界性的活动"
+  csedweek_map_header_num: "全世界已有 %{num} 次计算机科学教育周 / 《编程一小时》活动"
   csedweek_map_signup: "登记参加活动"
   csedweek_map_search_placeholder: "搜索编程一小时的活动"
   csedweek_map_search_search: "搜索"

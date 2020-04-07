@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 decembrie 2014"
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemăm toți profesorii şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planificați-vă Ora de cod</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Ești profesor de informatică ? Vezi alte resurse CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ești profesor de informatică ? Vezi alte resurse CSEdWeek"
   n_have_learned_an_hoc: "<h1>Încearcă o</h1><h2>Ora de cod</h2><h3># servit</h3>"
   anybody_can_learn: "Oricine poate învăța."
   learn_now: "Învaţă Acum"

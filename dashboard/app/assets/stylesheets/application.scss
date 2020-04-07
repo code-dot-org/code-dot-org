@@ -1579,7 +1579,27 @@ a.download-video {
 }
 
 #signup, #school-info-modal {
-  // NEW SIGN-UP FORM
+  display: flex;
+  flex-wrap: wrap;
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .oauth-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .more-details {
+    display: flex;
+    .more-details-text {
+      margin: 0 10px;
+    }
+  }
+
   .signup {
     margin: 20px 0;
   }
@@ -1587,17 +1607,20 @@ a.download-video {
   .finish-signup {
     width: 800px;
   }
-  /* FND-893 - Stop using markdown in <Label>s*/
-  .finish-signup #instructions p {
-    display: inline;
+
+  .signup-header {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
   }
 
   .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
 
-    #school-info-inputs {
-      width: 100%;
+    .section-container {
+      padding: 10px;
+      flex-grow: 1;
       background-color: $school-info-background;
       border: 1px solid $school-info-border-color;
 
@@ -1610,22 +1633,8 @@ a.download-video {
       }
     }
 
-    .checkbox {
-      display: flex;
-      width: 600px;
-      padding: 10px;
-
-      label {
-        padding-left: 10px;
-      }
-    }
-
-    .radio {
-      display: flex;
-
-      input[type=radio] {
-        margin-right: 5px;
-      }
+    #school-info-inputs {
+      padding: 0;
     }
 
     .field-row {
@@ -1644,6 +1653,14 @@ a.download-video {
       width: 400px;
     }
 
+    .field_with_errors {
+      display: flex;
+      flex-basis: 100%;
+      input, select {
+        border-color: $red;
+      }
+    }
+
     .field_with_errors label {
       color: $black;
     }
@@ -1656,6 +1673,7 @@ a.download-video {
     .error {
       color: $red;
       font-style: italic;
+      margin: 0;
     }
 
     .padded {
@@ -1663,19 +1681,131 @@ a.download-video {
       max-width: 150px;
     }
 
-    select, input[type=text], input[type=password] {
+    select {
+      height: 46px;
+      margin: 0;
+    }
+
+    #school-type {
       height: 36px;
-      width: 350px;
     }
 
-    input[type=text], input[type=password] {
-      width: 338px;
-      padding-top: 0;
-      padding-bottom: 0;
+    input[type=text], input[type=password], input[type=email] {
+      height: 36px;
     }
 
-    .input-sm input {
-      width: 250px;
+    input {
+      margin: 0;
+    }
+
+    input, select {
+      flex-grow: 1;
+    }
+
+    .row {
+      display: flex;
+      margin-bottom: 20px;
+
+      [class*=span] {
+        align-self: center;
+        display: flex;
+        .div {
+          align-self: center;
+          display: flex;
+        }
+      }
+
+      label {
+        margin: 0;
+      }
+
+      input[type=checkbox] {
+        flex-grow: 0;
+        align-self: center;
+        .field_with_errors {
+          flex-grow: 0;
+        }
+      }
+    }
+
+    #parent-email-section {
+      background-color: $school-info-background;
+      border: 1px solid $school-info-border-color;
+      flex-wrap: wrap;
+    }
+
+    .signup-field-label {
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .padded-container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      .row {
+        flex-grow: 1;
+      }
+
+      .parent-email-field-input {
+        flex-grow: 1;
+      }
+    }
+
+    .parent-email-section-header {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    .parent-email-field {
+      margin-top: 20px;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    #teacher-name-label, #student-name-label {
+      display: flex;
+      flex-basis: 100%;
+    }
+
+    .checkbox {
+      display: flex;
+      padding: 0;
+
+      label {
+        display: flex;
+      }
+
+      p, span {
+        margin: 0;
+        padding: 0 10px;
+        font-size: 14px;
+      }
+    }
+
+    #email-preference-radio {
+      p {
+        margin: 0;
+      }
+    }
+
+    .radio {
+      padding: 0;
+      display: flex;
+      input[type=radio] {
+        margin-left: 0;
+        align-self: center;
+      }
+      input[type=radio], label {
+        flex-grow: 0;
+        margin-right: 5px;
+      }
+      .field_with_errors {
+        flex-basis: auto;
+      }
     }
 
     #school-type {
@@ -1692,162 +1822,24 @@ a.download-video {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
-      font-weight: bolder;
       padding: 0 20px;
       margin: 5px 0;
+      font-size: 18px;
+      height: 40px;
+      font-family: $gotham-extra-bold;
     }
 
     #forgot-password {
       align-self: center;
       font-style: italic;
     }
-  }
 
-  // OLD SIGN-UP FORM
-  .signupform {
-    padding: 20px 0;
-    margin-bottom: 0;
-  }
-  .itemblock {
-    display: table;
-
-    input[type=radio] {
-      margin-top: -4px;
-      margin-right: 4px;
+    .tos {
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
     }
-  }
-  .labelblock {
-    display: table-cell;
-    width: 180px;
-    vertical-align: middle;
-  }
-  .labelblock-wide {
-    display: table-cell;
-    width: 350px;
-    padding-right: 10px;
-    vertical-align: middle;
-  }
-  .school-info-labelblock {
-    display: table-cell;
-    width: 210px;
-    vertical-align: middle;
-  }
-  .fieldblock {
-    width: 220px;
-    vertical-align: top;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  /* FND-893 - Stop using markdown in <Label>s*/
-  label.terms {
-    font-size: inherit;
-    line-height: inherit;
-  }
-  .terms-text {
-    overflow: hidden;
-  }
-  .terms-text p {
-    display: inline;
-    margin: 0;
-  }
-  .terms-checkbox {
-    margin: 0 5px 0 0;
-    float: left;
-  }
-
-  .race-checkbox {
-    margin: 0 5px 2px 0;
-  }
-  .right {
-    float: right;
-  }
-  .scroll-box {
-    height: 100px;
-    border: 1px solid $border_gray;
-    padding: 20px;
-    margin-top: 5px;
-    resize: vertical;
-    overflow: auto;
-    overflow-y: scroll;
-  }
-  .custom-h1 {
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-  }
-  .checkbox-error {
-    display: inline !important;
-    padding-left: 0 !important;
-  }
-  #labelusername {
-    vertical-align: top;
-    padding-top: 7px;
-  }
-  #usernamefield {
-    vertical-align: top;
-  }
-  #user_type-block select, #user_user_age, #gender-block select, #schoolcountry-block select {
-    width: 234px;
-  }
-  $schooldropdown-background: #f7f7f7;
-  $schooldropdown-border: #e5e5e5;
-  #schooldropdown-block {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: $schooldropdown-background;
-    border-style: solid;
-    border-width: 1px;
-    border-color: $schooldropdown-border;
-  }
-  #schooldropdown-block hr {
-    border-color: $schooldropdown-border;
-  }
-  #schooldropdown-block select, #schooldropdown-block .selectize-control {
-    width: 100%;
-  }
-  #schooldropdown-block .itemblock, #schooldropdown-block .fieldblock {
-    width: 100%;
-  }
-  #usernamemessage, #password_message, #password_message_confirmation {
-    display: inline-block;
-    max-width: 180px;
-    vertical-align: top;
-  }
-  #password_confirmation-block {
-    margin-bottom: 20px;
-  }
-  .error_in_field {
-    color: $red;
-    opacity: 0;
-    display: table-cell;
-    padding-left: 10px;
-    vertical-align: middle;
-  }
-  .error {
-    color: $red;
-    margin-bottom: 8px;
-  }
-  select {
-    width: 234px;
-  }
-  .field_with_errors {
-    display: inline-block;
-  }
-  button {
-    font-size: 16px;
-    height: 40px;
-  }
-  .registertext {
-    display: inline-block;
-    font-size: 16px;
-    color: $charcoal;
-    margin-top: 15px;
-  }
-  #user_type-block {
-    margin-bottom: 20px;
   }
 }
 
@@ -1868,8 +1860,8 @@ a.download-video {
 }
 
 .horizontal-or {
-  width: 400px;
   display: flex;
+  flex-grow: 1;
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
@@ -1880,11 +1872,6 @@ a.download-video {
     width: 40%;
     border-color: $light_gray;
   }
-}
-
-.signup-header {
-  width: 400px;
-  text-align: center;
 }
 
 // NEW STYLES FOR devise/shared/_new_links
@@ -3290,4 +3277,65 @@ h2.danger {
   .learn-more {
     color: $yellow;
   }
+}
+
+.foorm-reset-font {
+  font-family: inherit !important;
+}
+
+.foorm-adjust-body {
+  border: none !important;
+}
+
+.foorm-adjust-header {
+  background-color: $white;
+  h3 {
+    font-family: "Gotham 5r", sans-serif !important;
+    font-size: 22px !important;
+    line-height: 30px !important;
+    color: $teal !important;
+  }
+}
+
+.foorm-adjust-page-title {
+  font-family: "Gotham 5r", sans-serif !important;
+  font-size: 22px !important;
+}
+
+.foorm-adjust-radio {
+  margin-top: -4px !important;
+}
+
+.foorm-adjust-checkbox {
+  margin-top: -4px !important;
+}
+
+.foorm-adjust-matrix {
+  th {
+    font-size: 100%;
+    text-align: center;
+  }
+
+  tr td:not(:first-child) {
+    text-align: center;
+    width: 10%;
+  }
+
+  td {
+    min-width: 0 !important;
+  }
+}
+
+.foorm-button {
+  font-size: 100% !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  border-radius: 5px !important;
+  background-color: $orange !important;
+}
+
+.foorm-button-right {
+  float: right;
 }

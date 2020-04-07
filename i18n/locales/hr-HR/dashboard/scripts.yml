@@ -1530,36 +1530,44 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
+            Text:
+              name: tekst
         coursea-2020:
           stages:
             Going Places Safely:
               name: Sigurna putovanja
+            'Programming: Happy Maps':
+              name: Vesele karte
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Tvoj digitalni trag
             Move It, Move It:
               name: Pomakni, pomakni
+            'Loops: Getting Loopy':
+              name: Zapetljancije
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki događaj
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Grafičko programiranje
             Relay Programming:
               name: Odnosno programiranje
             Conditionals with Cards:
               name: Uvjeti s kartama
-            'Unplugged: Binary':
-              name: 'Izvanmrežno: Logički operatori'
             Artist Binary:
               name: Umjetnik binarno
             Digital Citizenship:
               name: Digitalno građanstvo
         coursee-2020:
           stages:
-            Conditionals:
-              name: Uvjeti
+            'Functions: Songwriting':
+              name: Pisanje pjesama
         coursef-2020:
           stages:
             For Loop Fun:
@@ -1572,3 +1580,29 @@ hr:
           stages:
             Spelling Bee:
               name: Slovkanje
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Stvaranje funkcija
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Petlje s uvjetom
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Događaji

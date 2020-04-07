@@ -812,8 +812,8 @@ sk-SK:
         rýchlosť ruky a lopty a skús získať čo najviac bodov predtým, ako tvoj súper
         získa 2 body!
       bounce_12_basketball: Vytvor si svoj vlastný basketbalový zápas! Môžeš zmeniť
-        pravidlá ako len chceš. Keď budeš hotový, klikni na "Dokončiť", aby si tvoj
-        zápas mohli zahrať aj kamaráti na svojich mobiloch.
+        pravidlá ako len chceš. Keď skončíš, klikni na "Dokončiť", nech si ho zahrajú
+        aj kamaráti na svojich mobiloch.
       bounce_12_sports: 'Vytvor si vlastný zápas! Tu si šéfom ty: môžeš zmeniť všetky
         pravidlá, zmiešať športy, čo ti len napadne. Keď budeš hotový, klikni na "Dokončiť",
         aby si tvoj zápas mohli zahrať aj kamaráti na svojich mobiloch.'
@@ -1375,12 +1375,15 @@ sk-SK:
         Zahraj si hru a pomocou šípok pohybuj tučniakom.
       courseC_PlayLab_eventsA_embed_2019: Poďme sa hrať. Získaj 5 bodov, narážím tučniaka
         do chobotnice!
-      courseC_PlayLab_eventsFP: Vytvor si svoju vlastnú hru. Keď budeš hotový, stlač
-        "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
-      courseC_PlayLab_eventsFP_2018: Vytvor si svoju vlastnú hru. Keď budeš hotový,
-        stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
-      courseC_PlayLab_eventsFP_2019: Vytvor si svoju vlastnú hru. Keď budeš hotový,
-        stlač "Dokončiť" a zdieľaj ju s priateľmi. Nejaké nápady nájdeš aj v nápovedách.
+      courseC_PlayLab_eventsFP: Vytvor si svoju vlastnú hru.  Keď skončíš, klikni
+        na "Dokončiť" a zdieľaj ju s priateľmi. Niekoľko nápadov nájdeš aj v nápovedách
+        (po kliknutí na žiarovku).
+      courseC_PlayLab_eventsFP_2018: Vytvor si svoju vlastnú hru.  Keď skončíš, klikni
+        na "Dokončiť" a zdieľaj ju s priateľmi. Niekoľko nápadov nájdeš aj v nápovedách
+        (po kliknutí na žiarovku).
+      courseC_PlayLab_eventsFP_2019: Vytvor si svoju vlastnú hru.  Keď skončíš, klikni
+        na "Dokončiť" a zdieľaj ju s priateľmi. Niekoľko nápadov nájdeš aj v nápovedách
+        (po kliknutí na žiarovku).
       courseC_PlayLab_events_challenge1: |-
         Použi nový blok na to, aby sa tučniak Waddles vrátil späť na začiatok vždy, keď narazí do dinosaura a keď získa bod.
         Zahraj si a posúvaj Waddlesa šípkami, až kým nezískaš dostatok bodov.
@@ -2807,6 +2810,8 @@ sk-SK:
         ju vyriešil?
       courseF_bee_variables_7_2019: Táto úloha je trochu iná. Čo potrebuješ, aby si
         ju vyriešil?
+      courseF_bee_variables_8_2018: Koľko nektáru pozbiera včela z tejto kvetiny?
+      courseF_bee_variables_8_2019: Koľko nektáru pozbiera včela z tejto kvetiny?
       coursea_maze_ramp1_2018: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       coursea_maze_ramp1_2019: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       flappy_1: Ku bloku "keď klikneš" pripoj blok "mávni" a potom stlač "Spustiť".

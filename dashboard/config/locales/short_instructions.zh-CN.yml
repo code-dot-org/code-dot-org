@@ -963,6 +963,9 @@ zh-CN:
       NetSim Standalone SendAB: 你和伙伴共享了单条线路，它只能被设为状态 A 或状态 B。可以在任何时候都设置和读取线路状态。有没有办法只使用这个系统进行通信？
       NetSim Standalone Sending Numbers: '和伙伴可以可靠的来回发信息，不需要额外的协调了！当来回发送比特时，也可以用这些比特来表达十进制数据。可以用此系统表达什么样的信息？ '
       NetSim Standalone Sending Numbers Ascii: '现在，已经传输了以十进制数字表示的信息，可以将这些数字映射到文本字符，以来回发送基于文字的信息。使用基于文字的协议，可以很容易的表示和交流各种信息。 '
+      New Artist Project: 画一些令人惊奇的东西吧，你的指令已经以项目的形式保存了，你可以随时撤销。
+      New Basketball Project: 创造你自己的篮球游戏，你可以改变所有的规则。当你完成时，点击分享以让你的朋友在他们的手机上玩。
+      New Bounce Project: 创作你自己的弹珠子游戏。你可以改换所有的可视部分和规则。当你完成时，点击分享已让你的朋友在他们的手机上尝试你的游戏。
       New Gumball Project: 创建并分享你想的任何东西！
       New Ice Age Project: 创建并分享你想的任何东西！
       New Infinity Project: 创建并分享你想的任何东西！

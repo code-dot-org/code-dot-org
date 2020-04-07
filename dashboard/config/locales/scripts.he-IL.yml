@@ -64,7 +64,7 @@ he:
             'Artist: Sequence':
               name: 'אמן: רצף'
             'Bee: Conditionals':
-              name: 'דבורה: ההתניות'
+              name: 'דבורה: התניות'
             'Bee: Debugging':
               name: 'דבורה: איתור באגים'
             'Bee: Loops':
@@ -109,7 +109,7 @@ he:
             'Artist: Patterns':
               name: 'אמן: תבניות'
             'Bee: Conditionals':
-              name: 'דבורה: ההתניות'
+              name: 'דבורה: התניות'
             'Bee: Debugging':
               name: 'דבורה: איתור באגים'
             'Bee: Functions':
@@ -127,7 +127,7 @@ he:
             Maze:
               name: מבוך
             'Maze: Conditionals':
-              name: 'מבוך: ההתניות'
+              name: 'מבוך: התניות'
             Songwriting:
               name: כתיבת שירים
             'Studio: Create a Game':
@@ -217,7 +217,7 @@ he:
             'Artist: Sequence':
               name: 'אמן: רצף'
             'Bee: Conditionals':
-              name: 'דבורה: ההתניות'
+              name: 'דבורה: התניות'
             'Bee: Debugging':
               name: 'דבורה: איתור באגים'
             'Bee: Nested Loops':
@@ -709,7 +709,7 @@ he:
         kinderTest:
           stages:
             'Bee: Conditionals':
-              name: 'דבורה: ההתניות'
+              name: 'דבורה: התניות'
         gradeKinder:
           stages:
             Events:
@@ -917,7 +917,7 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Conditionals & Loops in Maze:
-              name: ההתניות & לולאות במבוך
+              name: התניות & לולאות במבוך
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
@@ -1137,7 +1137,7 @@ he:
                 _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של
                 חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Conditionals & Loops in Maze:
-              name: ההתניות & לולאות במבוך
+              name: התניות & לולאות במבוך
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
@@ -1226,7 +1226,7 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Conditionals & Loops in Maze:
-              name: ההתניות & לולאות במבוך
+              name: התניות & לולאות במבוך
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
             For Loop Fun:
@@ -1238,7 +1238,7 @@ he:
             Songwriting with Parameters:
               name: כתיבת שירים
             Conditional Loops in Maze:
-              name: ההתניות & לולאות במבוך
+              name: התניות & לולאות במבוך
             Until Loops in Maze:
               name: לולאות "עד" במבוך
         pre-express-2017:
@@ -1274,7 +1274,7 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Conditionals & Loops in Maze:
-              name: ההתניות & לולאות במבוך
+              name: התניות & לולאות במבוך
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
@@ -1505,7 +1505,7 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Conditionals & Loops in Maze:
-              name: ההתניות & לולאות במבוך
+              name: התניות & לולאות במבוך
             'Unplugged: Binary':
               name: תמונות בינאריות
             Artist Binary:
@@ -2052,10 +2052,14 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
+            Text:
+              name: טקסט
         coursea-2020:
           stages:
+            'Programming: Happy Maps':
+              name: מפות שמחות
             Loops in Ice Age:
-              name: לולאות בעידן הקרח
+              name: לולאות עם סקראט
             Ocean Scene with Loops:
               description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות
                 של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך
@@ -2069,20 +2073,28 @@ he:
           stages:
             Move It, Move It:
               name: זוזו, זוזו
+            Sequencing in Maze:
+              name: יצירת רצפים עם ציפורים כועסות
             Programming in Maze:
-              name: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
         coursec-2020:
           stages:
             Programming in Maze:
-              name: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
             Binary Bracelets:
               name: צמידים בינארים
+            'Events: The Big Event':
+              name: האירוע הגדול
         coursed-2020:
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
               description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או
@@ -2097,13 +2109,18 @@ he:
               description_teacher: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות,
                 אח"כ נעבור בזריזות למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו
                 יחד כדי לתכנת הוראה אחת בכל פעם.
+            Debugging in Collector:
+              name: ניפוי שגיאות עם לורל
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             'Unplugged: Binary':
+              name: תמונות בינאריות
               description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק
                 אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת
                 מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה
@@ -2115,23 +2132,24 @@ he:
         coursee-2020:
           stages:
             Conditionals:
-              name: תנאים
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
                 _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם
                 מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים
                 הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים
                 בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי
                 הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
+            'Functions: Songwriting':
+              name: כתיבת שירים
         coursef-2020:
           stages:
+            Nested Loops in the Maze:
+              name: לולאות מקוננות במבוך
             For Loop Fun:
               name: כיף עם לולאת "עבור"
-            For Loops in Bee:
-              name: לולאות עבור עם הדבורה
-            For Loops in Artist:
-              name: לולאות עבור עם האמן
             Internet:
-              name: אינטרנט
+              name: האינטרנט
         express-2020:
           stages:
             Dance Party:
@@ -2154,3 +2172,49 @@ he:
               name: תחרות איות
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+        csd3-virtual:
+          stages:
+            Variables:
+              name: משתנים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות
+            Sprite Properties:
+              name: מאפייני ספרייט
+        csd2-virtual:
+          stages:
+            Intro to HTML:
+              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר
+                למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב
+                המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה
+                דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML
+                עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון
+                שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין
+                התוכן למבנה כפי שנבנה במהלך השיעור.
+            Headings:
+              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם
+                כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים
+                ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד
+                לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת
+                הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
+              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ
+                טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות
+                מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות
+                מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן
+                שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט
+                שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: לולאות "כל עוד"
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: פונקציות
+        code-break:
+          stages:
+            Algorithms:
+              name: אלגוריתמים
+            Events:
+              name: אירועים

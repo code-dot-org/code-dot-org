@@ -29,6 +29,20 @@ hu-HU:
       2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Assessment 1: "**Értékelés:** Fejezd be az utolsó fog megrajzolását:
         25 képpont a szélessége és 25 képpont a magassága is."
+      2-3 Artist Debugging 1: "Ennek a kalapnak csak 50 pixel szélesnek kell lennie.\\\nKi
+        tudod javítani?  \n\n<br/> "
+      2-3 Artist Debugging 2: |-
+        Ez a kód, ami a macska bajuszát rajzolná meg, hibás.
+
+        Javítsd a kódon, hogy a ugyanolyan hosszú legyen mindegyik szál.
+      2-3 Artist Debugging 3: |-
+        Lyukas a csónakon!
+
+        Mit kell kijavítanod, hogy a vonalak találkozzanak?
+      2-3 Artist Debugging 5: |-
+        A kód, amit a lábszárhoz és a lábfejhez kaptál, rossz.
+
+        Ki tudod javítani?
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
       2-3 Artist Loops New 1: |-
         Rajzoljuk meg a robot fejét! Tudnál rajzolni egy négyzetet, aminek az oldalai 100 képpont hosszúak?
@@ -109,6 +123,10 @@ hu-HU:
         Lássuk, ezzel mire "méz"!
 
         Néhány javítás után ez a program összegyűjti az összes nektárt és elkészíti az összes mézet.
+      2-3 Bee Debugging Assessment 1: |-
+        **Értékelés:** Most mutasd meg, hogy mit tudsz!
+
+        Javítsd ki a hibákat, hogy begyűjtsd az összes nektárt és elkészítsd az összes mézet.
       2-3 Bee Loops 1: |-
         Ezek a virágok jól néznek ki!
 
@@ -197,7 +215,7 @@ hu-HU:
       CSD Problem Solving Process Video: |-
         ## megfontolandó kérdések
 
-        -   Hogyan követte az utolsó leckében a problémamegoldási folyamatot?
+        -   Hogyan követted az utolsó leckében a problémamegoldási folyamatot?
         -   Hogyan használhatnád ezt a folyamatot a mindennapi életed problémájára?
       CSD U2 HTML Adding Paragraphs pt 2_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
@@ -490,7 +508,7 @@ hu-HU:
       CourseD_Dance_Party_02: |-
         Táncoltassuk meg ezt a jávorszarvast!
 
-        Húzd ki a <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>  blokk alá. A táncosod a negyedik ütem után egy új mozdulattal kezd táncolni.
+        Húzd ki a <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blokkot a munkaterületre. Csatlakoztasd be az <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>  blokk alá. A táncosod a negyedik ütem után egy új mozdulattal kezd táncolni.
 
         A zenében **ütemekben** mérjük az időt. Ebben a bemutatóban az ütemek négy negyed hosszúak.
       CourseD_Dance_Party_03: |-
@@ -567,7 +585,7 @@ hu-HU:
       CourseE_HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       CourseE_HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       CourseE_HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz
         vezető utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       CourseE_HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben
@@ -822,7 +840,7 @@ hu-HU:
       HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető
         utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben egy
@@ -973,6 +991,10 @@ hu-HU:
         _"Vadásszunk kincsekre - ciklusok használatával!"_
 
         Segíts a gyűjtőnek azzal, hogy kijavítod hibát a kódban. Szerezd meg az összes kincset!
+      course2_collector_prog_challenge1: Nézd meg alaposan! Össze tudod gyűjteni mind
+        a **10** kincset?
+      course2_collector_prog_challenge2: "**20** kincs található itt. Legalább a felét
+        gyűjtsd össze, hogy végezz a küldetéssel!"
       course2_harvester_loops_challenge1: Gyűjtsd be az összes kukoricát.
       course2_harvester_loops_challenge2: Gyűjtsd be az összes salátát. Ne menj neki
         a fáknak és ne lépj a zöld mezőkre se!

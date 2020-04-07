@@ -473,11 +473,10 @@ az:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': şov
-            '"hide"': gizlə
+            '"random"': təsadüfi
       binary_move:
         options:
           DIR:

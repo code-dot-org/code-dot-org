@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 Aralık 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodlama Saati</a> yaklaşıyor. Öğretmen ve organizatörleri, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">kendi Kodlama Saati''nizi Planlamaya</a> davet ediyoruz'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara bakın</a>'
+  csedweek_banner_teachers_text: "Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara bakın"
   n_have_learned_an_hoc: "<h1>Deneyin</h1><h2>Kod Saati</h2><h3># kez</h3>"
   anybody_can_learn: "Herkes öğrenebilir."
   learn_now: "Şimdi Öğren"

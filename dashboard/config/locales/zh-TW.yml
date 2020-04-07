@@ -460,6 +460,8 @@ zh-TW:
     enter_parent_email: 輸入你的家長或監護人的信箱（用於密碼恢復）
     update: 更新帳戶
     account_successfully_updated: 帳戶更新成功。
+    auth_option_saved: 已成功將你的%{provider}帳戶與電子郵件%{email}鏈接。
+    auth_option_saved_no_email: 已成功與你的%{provider}帳戶鏈接。
     update_email: 更新
   user_level:
     completed: 已完成
@@ -802,6 +804,7 @@ zh-TW:
     accept_label: 我同意 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank">
       隱私政策</a>
     accept_label_markdown: 我同意 [服務條款](%{tos_url}) 和 [隱私政策](%{privacy_url})
+    accept_tos: 註冊Code.org，即表示同意接受我們的[服務條款](%{tos_url})與[隱私政策](%{privacy_url})。
     accept: 接受
     print: 列印
     reminder_desc: 我們已經更新了<a href="%{tos_url}"target="_blank"> 服務條款</a>和<a href="%{privacy_url}"target="_blank">隱私政策</a>。同意前請仔細閱讀。注意，在你的學生接受更新的條款之前，可能無法使用我們教授
@@ -1051,6 +1054,8 @@ zh-TW:
   locked_stage: 此階段內容無法觀看，因為這個階段目前已上鎖。當老師設定的時間到了或是審閱了你的答案後，這個階段就會解鎖。
   hidden_stage: 你的老師沒想到你會在這，問問你的老師你該上哪堂課。
   hidden_script: 你的老師沒想到你會在這裏。問問老師應該上哪個單元。
+  no_course_access_student: 你無參加本課程的權限。請詢問你的老師應該參加哪門課程。
+  no_course_access_teacher: 你無參加本課程的權限。如果你認為自己應該有權參與該課程，請電郵support@code.org，以便我們解決問題。
   no_script_access_student: 你沒有權限瀏覽這個單元。請向你的老師查詢指定的單元。
   no_script_access_teacher: 你沒有權限瀏覽這個單元。如果你認為你應該要有權限，請電郵至 support@code.org 讓我們解決這個問題。
   return_unit_overview: 移至單元概覽
@@ -1169,3 +1174,8 @@ zh-TW:
   page_not_found_description: 你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。
   page_not_found_button: 返回主頁
   copy: 複製
+  maker:
+    google_oauth:
+      enter_code: 請輸入通過Google在默認瀏覽器上登錄時所提供的代碼。
+      error_invalid_user: 無效的用戶ID。 請嘗試重新登錄。
+      error_no_code: 請輸入您的登錄代碼。

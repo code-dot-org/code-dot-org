@@ -12,17 +12,13 @@
     -# twitter boilerplate
     = tag 'meta', name: 'twitter:site', content: '@codeorg'
 
-    - if @level.game.app == Game::DANCE
+    - if @level.game.app == Game::DANCE || @level.game.app == Game::ARTIST
       = tag 'meta', name: 'twitter:card', content: 'summary'
     - else
       = tag 'meta', name: 'twitter:card', content: 'photo'
 
-    - if @level.game.app == Game::ARTIST
-      - meta_image_width = 500
-      - meta_image_height = 261
-    - else
-      - meta_image_width = 400
-      - meta_image_height = 400
+    - meta_image_width = 400
+    - meta_image_height = 400
 
     -# several meta tags are the same for facebook/og and twitter
     - {og: 'property', twitter: 'name'}.each do |namespace, attr|

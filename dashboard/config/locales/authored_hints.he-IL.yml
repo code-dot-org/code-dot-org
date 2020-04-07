@@ -35,6 +35,8 @@ he-IL:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: המעוין הזה הוא בסך הכל מרובע השוכב על צדו
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: זכרו, אתם רוצים שהחיצים _יגדלו_ ב-10 פיקסלים...
+          היו בטוחים שאתם _מוסיפים_ 10 למספר שאתם משנים.
         2-3_Artist_Debugging_10_b: |-
           **ניסוי וטעייה עם בסדר גמור כאן!**
 
@@ -178,6 +180,19 @@ he-IL:
           לפרח האדום בדיוק כמו לפרח הסגול!
         2-3_Bee_Conditionals_14_b: אם הפרח האדום היה סגול, היית מצליח לחשוב על דרך
           כיצד להשתמש בלולאת ה"חזור" כדי לחסוך בכמות הבלוקים בקוד?
+        2-3_Bee_Conditionals_14_c: |-
+          נסו לחלק את זה לשני חלקים:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  אספו נקטר 3 פעמים
+              -   זוזו קדימה 5 פעמים
+              -   בדקו האם נותר צוף, אם כן: אספו אותו
+              -   הסתובבו שמאלה
+
+          2.  ייצרו דבש
+              -   זוזו קדימה פעם אחת
+              -   ייצרו 2 חלות דבש
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'זכור: פרחים סגולים יכולים להכיל או 0 או 1 צופים
           והם יכולים להשתנות בכל פעם שתפעיל את התוכנית.'
@@ -1207,6 +1222,22 @@ he-IL:
           \                   <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n
           \                 </block>\n                </next>\n              </block>\n
           \             </statement></block></xml>"
+      course2_bee_conditionals_challenge1:
+        courseD_bee_conditionals_challenge1_a: |-
+          התוכלו למצוא את הדרך אשר מגיעה לכל פרח וחלת דבש בלי להתקע בעצים? הדרך הטובה ביותר היא ספירלה.
+
+          **אתם יכולים לפתור את השלב בלי לפנות שמאלה כלל.**
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:
+
+          <xml>  <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>                    <statement name="DO">
+                                <block type="maze_nectar"/>
+                              </statement>
+            </block></xml>
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: הקוד המקורי יכול לעבוד נהדר - רק אם היה אוצר
           אחד בלבד בכל ערימה!
@@ -1219,7 +1250,38 @@ he-IL:
       course2_harvester_loops_challenge1:
         courseC_harvester_loops_challenge1_a: אל תחשוב אפילו לנסות לפתור את החידה
           בלי לולאות!
+        courseC_harvester_loops_challenge1_b: אתם יכולים לחזור על הבלוקים 'זוז קדימה'
+          ו-'אסוף תירס' כמה פעמים שאתם צריכים, אח"כ השתמשו בבלוק 'פנה ימינה' בכל פינה.
+        courseC_harvester_loops_challenge1_c: |-
+          הדרך הטובה ביותר לאסוף את ארבעת התירסים הראשונים היא בעזרת בלוק 'חזור' בתוך בלוק 'חזור' נוסף. תוכלו להשתמש בדרך הזו גם להמשך פתרון הפאזל!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: חישבו על הדרך הזו כעל שלושה חלקים נפרדים.
+          בכל אחד דפוס פעולה זהה אשר ניתן לחזור עליו.
         courseC_maze_loops_challenge1_b: בכל בלוק 'חזור' עליך להשתמש ב- 'פנה שמאלה'
           או 'פנה ימינה' כדי להכין את סקראט אל התבנית הבאה.
         courseC_maze_loops_challenge1_c: |-
@@ -1397,6 +1459,15 @@ he-IL:
           </next>
           </block>
           </xml>
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:
+
+          <xml><block type="maze_moveWest"/></xml>
       courseA_maze_seq13:
         courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי
           לראות מה קורה.
@@ -1406,6 +1477,35 @@ he-IL:
       courseA_maze_seq13_2019:
         courseA_maze_seq13_b: אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי
           לראות מה קורה.
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: 'יש בלוק 1 חסר בתוכנית הזו. תוכלו לגלות מיהו הבלוק החסר? '
+        courseA_maze_seq2_b: 'נסו קודם להריץ את הקוד כדי לראות עד לאן הציפור מגיעה.
+          לאן היא צריכה להמשיך מהנקודה הזו? '
+      courseA_maze_seq3:
+        courseA_maze_seq3_a: '1 מהבלוקים מזיז את הציפור בכיוון הלא נכון. תוכלו לגלות
+          מיהו הבלוק ולהחליף אותו בבלוק המתאים? '
+        courseA_maze_seq3_b: 'נסו להשתמש בכפתור צעד כדי למצוא איפה התוכנית משתבשת.
+          האם זה בצעד הראשון? אולי השני? '
+        courseA_maze_seq3_c: 'לא נראה שהבלוק <xml><block type="maze_moveNorth"/></xml>
+          מזיז את הציפור בכיוון הנכון. התוכלו להחליף אותו בבלוק אחר? '
       courseB_Scrat_ramp1_2018:
         '2': אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!
       courseB_Scrat_ramp1_2019:

@@ -12,6 +12,7 @@
   csedweek_dates: "2018 年 12 月 3-9 日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">一小時玩程式</a>活動即將開始。所有的教師以及召集人，趕快<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">開始計畫您的活動吧！</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
+  csedweek_banner_teachers_text: "您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源"
   n_have_learned_an_hoc: "<h1>立刻嘗試</h1><h3> # 人已體驗的</h3><h2>一小時玩程式活動</h2>"
   anybody_can_learn: "任何人都可以學習。"
   learn_now: "現在就開始學習"

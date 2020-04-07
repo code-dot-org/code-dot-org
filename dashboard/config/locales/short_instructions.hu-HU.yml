@@ -29,6 +29,20 @@ hu-HU:
       2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Assessment 1: 'Értékelés: Fejezd be az utolsó fog megrajzolását:
         25 képpont a szélessége és 25 képpont a magassága is.'
+      2-3 Artist Debugging 1: Ennek a kalapnak 50 képpont szélesnek kell lennie. Meg
+        tudod javítani a kódot?
+      2-3 Artist Debugging 2: |-
+        Ez a kód, ami a macska bajuszát rajzolná meg, hibás.
+
+        Javítsd a kódon, hogy a ugyanolyan hosszú legyen mindegyik szál.
+      2-3 Artist Debugging 3: |-
+        Lyukas a csónakon!
+
+        Mit kell kijavítanod, hogy a vonalak találkozzanak?
+      2-3 Artist Debugging 5: |-
+        A kód, amit a lábszárhoz és a lábfejhez kaptál, rossz.
+
+        Ki tudod javítani?
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
       2-3 Artist Loops New 1: Rajzoljuk meg a robot fejét! Tudnál rajzolni egy négyzetet,
         aminek az oldalai 100 képpont hosszúak?
@@ -120,6 +134,10 @@ hu-HU:
         Lássuk, ezzel mire "méz"!
 
         Néhány javítás után ez a program összegyűjti az összes nektárt és elkészíti az összes mézet.
+      2-3 Bee Debugging Assessment 1: |-
+        Értékelés: Most mutasd meg, hogy mit tudsz!
+
+        Javítsd ki a hibákat, hogy begyűjtsd az összes nektárt és elkészítsd az összes mézet.
       2-3 Bee Functions 3: Gyűjtsd össze az összes virág összes nektárját!
       2-3 Bee Functions 6: Most használd ugyanazt a függvényt, hogy mindhárom virágból
         összegyűjtsd a nektárt.
@@ -933,6 +951,10 @@ hu-HU:
         használ, de használj csak annyit, amennyit szeretnél!
       course2_artist_prog_challenge2: _Segíts nekem sárgával megrajzolni az utat!_
       course2_collector_loops_challenge2: Szerezd meg az összes kincset!
+      course2_collector_prog_challenge1: Nézd meg alaposan! Össze tudod gyűjteni mind
+        a _10_ kincset?
+      course2_collector_prog_challenge2: 20 kincs található itt. Legalább a felét
+        gyűjtsd össze, hogy végezz a küldetéssel!
       course2_harvester_loops_challenge1: Gyűjtsd be az összes kukoricát.
       course2_harvester_loops_challenge2: Gyűjtsd be az összes salátát. Ne menj neki
         a fáknak és ne lépj a zöld mezőkre se!

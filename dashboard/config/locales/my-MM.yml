@@ -4,14 +4,20 @@ my:
     attributes:
       user:
         email: email လိပ္စာ
+        username: အသုံးပြုမည့်အမည်
+        locale: ဘာသာစကား
+        age: အသက်
         gender: က်ား/မ
   hello: မဂၤလာပါ ကမာၻၾကီး
   submit: ပေးပို့ပါ
   cancel: ပယ်ဖျတ်သည်
   or: သို့မဟုတ်
+  appname: Code.org
   continue: ဆက်လုပ်ပါ
   auth:
     clever: Clever
+  signup_form:
+    age: အသက်
   signin_form:
     login: email လိပ္စာ
   password:

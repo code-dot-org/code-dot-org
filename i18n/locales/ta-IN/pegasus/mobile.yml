@@ -11,6 +11,7 @@
   csedweek_dates: "மார்கழி 8-14, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">ஒரு மணியில் குறியீடு </a> இதோ வருகிறது. அனைத்து ஆசிரியர்கள் மற்றும் அமைப்பாளர்களுக்கு, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> திட்டமிடுங்கள் உங்கள் ஒரு மணியில் குறியீட்டை</a> '
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> CS நீங்கள் ஒரு கணனி ஆசிரியர? மற்ற CSEdWeek ஆதாரங்களை பார்க்கவும்</a>'
+  csedweek_banner_teachers_text: "CS நீங்கள் ஒரு கணனி ஆசிரியர? மற்ற CSEdWeek ஆதாரங்களை பார்க்கவும்"
   n_have_learned_an_hoc: "<h1>முயற்சிக்கவும்</h1><h2>ஒரு மணி நேரக் குறியீடு </h2><h3># பகிரப்பட்டது</h3>"
   anybody_can_learn: "எவரும் கற்றுக்கொள்ளலாம்."
   learn_now: "இப்போது கற்க"
@@ -107,6 +108,7 @@
   girl: "பெண்"
   boy: "ஆண்"
   contact_form_topic_press: "பத்திரிக்கை/ஊடகம் (பேட்டி அல்லது ஒப்பந்தம் பேசும் போது)"
+  studiobar_dance_title: "நடன விருந்து"
   studiobar_frozen_title: "நிரல்வரி நேரம்"
   homepage_action_text_try_it: "இதை முயற்சிக்கவும்"
   homepage_signpetition_dropdown_text: "நான் ஒப்புக்கொள்கிறேன்"
@@ -167,9 +169,13 @@
   user_header_logout: "வெளியேறு"
   user_header_signin: "உள்நுழை"
   user_header_create: 'உருவாக்குக '
+  user_header_dance: "நடன விருந்து"
   applab_tile_start_tutorial: "தொடங்குக"
+  hoc_overview_dance_title: "நடன விருந்து"
   hoc_overview_start_tutorial: "தொடங்குக"
   hoc2018_creativity_create: "உருவாக்கு"
   hoc2018_mc_start: "தொடங்குக"
   hoc2018_mc_homepage_try_it: "இதை முயற்சிக்கவும்"
+  hoc2018_dance_party_main_heading: "நடன விருந்து"
+  hoc2018_dance_party_box_title: "நடன விருந்து"
   hoc2018_dance_party_button: "தொடங்குக"

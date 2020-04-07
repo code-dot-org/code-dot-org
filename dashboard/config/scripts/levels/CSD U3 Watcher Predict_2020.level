@@ -79,10 +79,22 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"001671d5-7f72-4645-8f6d-7cc948f7fe11\": {\r\n      \"name\": \"pan\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg/category_generic_items/pan.png\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 152\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"R2MK5WwBxF.EZ9RymYu6G23tmFie5ZFg\"\r\n    }\r\n  }\r\n}",
     "parent_level_id": 18525,
     "name_suffix": "_2020",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Predict: Counter Pattern",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Predict what will happen to the pan based on the code",
+    "libraries_enabled": "false",
+    "thumbnail_url": "https://images.code.org/e3a0b379cae42afebbedeeec1e940a57-image-1585694352619.png"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-31 22:37:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-31 22:39:27 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -12,6 +12,7 @@
   csedweek_dates: "2018 оны 12-р сарын 3-9"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Кодын Цаг</a> ирж байна. Бүх багш, зохион байгуулагчдыг дуудаж, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Кодын цагаа төлөвлөх</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Та КШУ-ны багш уу? Бусад CSEdWeek нөөцийг харах</a>'
+  csedweek_banner_teachers_text: "Та КШУ-ны багш уу? Бусад CSEdWeek нөөцийг харах"
   n_have_learned_an_hoc: "<h1>Оролдох</h1><h2>Кодын цаг</h2><h3># үйлчилсэн</h3>"
   anybody_can_learn: "Бүх хүн сурч болно."
   learn_now: "Одоо сурах"

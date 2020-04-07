@@ -4207,18 +4207,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -4509,24 +4501,12 @@ ja-JP:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          次に道にそって宝石を集めます。
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          さっき作ったプログラムに 次のブロックを加えます。
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "最後に他の道にある たからものを 集めます。さらに 次のブロックを
           加えます。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
           \             </block>\n      <block type=\"controls_repeat\">\n        <title
@@ -6350,18 +6330,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -6389,18 +6361,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -6428,18 +6392,10 @@ ja-JP:
           \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
           \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml> で とりをしゃべらせることが できます。"
-        courseA_playlab_events_challenge2_b: |-
-          おとをならすには、<xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">winpoint</title>
-                    </block>
-                  </next>
-
-            </block></xml> をつかいます。
+        courseA_playlab_events_challenge2_b: "おとをならすには、<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml> をつかいます。"
         courseA_playlab_events_challenge2_c: |-
           <xml>  <block type="studio_whenSpriteClicked">
               <title name="SPRITE">5</title>
@@ -10605,7 +10561,7 @@ ja-JP:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -10616,7 +10572,7 @@ ja-JP:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -10627,7 +10583,7 @@ ja-JP:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -11008,24 +10964,12 @@ ja-JP:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          次に道にそって宝石を集めます。
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          さっき作ったプログラムに 次のブロックを加えます。
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "次に道にそって宝石を集めます。\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nさっき作ったプログラムに 次のブロックを加えます。\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "最後に他の道にある たからものを 集めます。さらに 次のブロックを
           加えます。\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
           \             </block>\n      <block type=\"controls_repeat\">\n        <title

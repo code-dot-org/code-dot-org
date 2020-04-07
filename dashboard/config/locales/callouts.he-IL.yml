@@ -171,6 +171,24 @@ he-IL:
         craft_what_is_iron: כרו את הברזל הזה!
       Underground Iron_2019:
         craft_what_is_iron: כרו את הברזל הזה!
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
+          הקוד. זה יעזור לכם למצוא את הבאג! '
+      courseB_maze_seq1:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: 'לחצו על הנורה כשתזדקקו לרמז! '
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: 'השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך
+          הקוד. זה יעזור לכם למצוא את הבאג! '
       courseC_maze_programming3:
         courseC_maze_programming3_2: תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים
           כדי להיפטר מהם.

@@ -311,7 +311,7 @@ cs-CZ:
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Dance_Party_03: |-
@@ -802,6 +802,16 @@ cs-CZ:
         _"Sleduj tuto cestu a dostaň mě k praseti!"_
 
         Vyhni se TNT.
+      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, já jsem Elsa z Arendellu, pomož mi namalovat tvar.”_\n\nNamaluj šestiúhelník
+        se stranami dlouhými 50 pixelů.  \n\n* * *\n\nAbys namaloval(a) šestiúhelník,
+        budeš muset: \n\n-   posunout se dopředu o **50** pixelů\n-   zatočit doprava
+        o **60** stupňů\n-   vše celkem **6** krát zopakovat"
+      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, já jsem Elsa z Arendellu, pomož mi namalovat tvar.”_\n\nNamaluj šestiúhelník
+        se stranami dlouhými 50 pixelů.  \n\n* * *\n\nAbys namaloval(a) šestiúhelník,
+        budeš muset: \n\n-   posunout se dopředu o **50** pixelů\n-   zatočit doprava
+        o **60** stupňů\n-   vše celkem **6** krát zopakovat"
       courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Zkus změnit tvar nebo délku čar, aby sis vytvořil svůj vlastní obrázek!\"_\n\n<br/>
         \ \n\n**Inspirace:** Můžeš změnit svůj obrázek, jak chceš, ale tady je jeden
@@ -859,6 +869,18 @@ cs-CZ:
         * * *
 
         **Spusť tento kód a uvidíš, jak malíř používá binární kód ke kreslení vzoru.**
+      courseD_bee_conditionals10: |-
+        Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
+
+        Posbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals10_2018: |-
+        Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
+
+        Posbírej všechen nektar a vyrob všechen med.
+      courseD_bee_conditionals10_2019: |-
+        Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
+
+        Posbírej všechen nektar a vyrob všechen med.
       courseD_bee_conditionals2: |-
         Víc mraků!
 
@@ -934,6 +956,21 @@ cs-CZ:
         Někdy mrak pod sebou ukrývá květinu a někdy včelí plástev!
 
         Použij `pokud/jinak` blok, abys nasbíral nektar z květin a vyrobil med ze včelí plástve. Nezapomeň: za mrakem vždy bude _jedna_ včelí plástev nebo _jedna_květina.
+      courseD_bee_conditionals8: |-
+        **Výzva:** Pod každým mrakem bude buďto květina nebo včelí plástev!
+
+        Seber nektar jednou, pokud je tam květina.
+        Jinak vyrob med (protože je tam včelí plástev).
+      courseD_bee_conditionals8_2018: |-
+        **Výzva:** Pod každým mrakem bude buďto květina nebo včelí plástev!
+
+        Seber nektar jednou, pokud je tam květina.
+        Jinak vyrob med (protože je tam včelí plástev).
+      courseD_bee_conditionals8_2019: |-
+        **Výzva:** Pod každým mrakem bude buďto květina nebo včelí plástev!
+
+        Seber nektar jednou, pokud je tam květina.
+        Jinak vyrob med (protože je tam včelí plástev).
       courseD_bee_conditionals9: Sesbírej všechen nektar a vyrob všechen med. Nektar
         můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj každé místečko,
         jestli je tam květina nebo plástev. Za každým mráčkem bude jen jedna květina
@@ -1104,39 +1141,39 @@ cs-CZ:
       courseD_collector_debugging3: |-
         _"Nepolevuj a vymyslíš to."_
 
-        Oprav chyby, abys posbíral všechny poklady.
+        Oprav chyby, abys posbíral(a) všechny poklady.
       courseD_collector_debugging3a_2018: |-
         _"Nepolevuj a vymyslíš to."_
 
-        Oprav chyby, abys posbíral všechny poklady.
+        Oprav chyby, abys posbíral(a) všechny poklady.
       courseD_collector_debugging3a_2019: |-
         _"Nepolevuj a vymyslíš to."_
 
-        Oprav chyby, abys posbíral všechny poklady.
+        Oprav chyby, abys posbíral(a) všechny poklady.
       courseD_collector_debugging4: |-
         _"Neboj. Ty to zvládneš!"_
 
-        Oprav chyby, abys sesbíral všechny poklady.
+        Oprav chyby, abys sesbíral(a) všechny poklady.
       courseD_collector_debugging4a_2018: |-
         _"Neboj. Ty to zvládneš!"_
 
-        Oprav chyby, abys sesbíral všechny poklady.
+        Oprav chyby, abys sesbíral(a) všechny poklady.
       courseD_collector_debugging4a_2019: |-
         _"Neboj. Ty to zvládneš!"_
 
-        Oprav chyby, abys sesbíral všechny poklady.
+        Oprav chyby, abys sesbíral(a) všechny poklady.
       courseD_collector_debugging5: |-
         _"Z této úlohy se mi zamotala hlava!"_
 
-        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel(a), jak vyřešit tuto úlohu.
       courseD_collector_debugging5a_2018: |-
         _"Z této úlohy se mi zamotala hlava!"_
 
-        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel(a), jak vyřešit tuto úlohu.
       courseD_collector_debugging5a_2019: |-
         _"Z této úlohy se mi zamotala hlava!"_
 
-        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel, jak vyřešit tuto úlohu.
+        Všechny příkazy, které potřebuješ, už jsou tady...teď využij své ladící schopnosti, abys vymyslel(a), jak vyřešit tuto úlohu.
       courseD_collector_debugging6a_2018: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
@@ -1487,6 +1524,10 @@ cs-CZ:
         být výhonky buď kukuřice, **nebo** salát. Co musíš přidat do tohoto programu,
         abys zkontroloval každý výhonek předtím, než začneš sbírat? \n\n* * *\n\n#####
         Poznámka: Každý výhonek vyroste v buď **jednu** kukuřici, nebo **jeden** salát."
+      courseF_bee_conditionals10: |-
+        Podmínky mohou být nápomocné, i když přesně víš, co se nachází na každém poli.
+
+        Posbírej všechen nektar a vyrob všechen med.
       courseF_bee_conditionals3: Nektar můžeš posbírat jen z květin, ale můžeš se
         podívat na jakékoliv pole a zjistit, jestli tam květina je. Pokud je květina
         pod některým z těchto mraků, pak bude muset včela sebrat nektar _jednou_.
@@ -1497,6 +1538,10 @@ cs-CZ:
       courseF_bee_conditionals7_predict2: "Někdy mrak pod sebou ukrývá květinu a někdy
         včelí plást!\n\nPoužij `pokud/jinak` blok, abys nasbíral nektar z květin a
         vyrobil med ze včelího plástu. "
+      courseF_bee_conditionals8: |-
+        **Výzva:** Pod každým mrakem bude buďto květina nebo včelí plástev!
+
+        Seber nektar jednou, pokud je tam květina. Jinak vyrob med (protože je tam včelí plástev).
       courseF_bee_for_challenge2: Vyřeš tento puzzle s co nejmenším možným počtem
         bloků.
       courseF_bee_for_challenge2_2018: Vyřeš tento puzzle s co nejmenším možným počtem

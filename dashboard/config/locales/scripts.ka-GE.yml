@@ -6414,6 +6414,8 @@ ka:
               name: თამაშის დიზაინის პროცესის გამოყენება
             Project - Design a Game:
               name: პროექტი - შექმენით თამაშის დიზაინი
+            Text:
+              name: ტექსტი
         coursea-2020:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -6431,7 +6433,7 @@ ka:
                 შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების
                 ამოხსნაზე.
             'Programming: Happy Maps':
-              name: 'პროგრამირება: ბედნიერი რუკები'
+              name: ბედნიერი რუკები
               description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ
                 მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის
                 პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს,
@@ -6446,8 +6448,6 @@ ka:
               name: პროგრამირება რეისთან და BB-8-სთან ერთად
             'Loops: Happy Loops':
               name: 'ციკლები: ბედნიერი ციკლები'
-            Loops in Ice Age:
-              name: ციკლები გამყინვარების პერიოდში
             Loops in Collector:
               name: ციკლები შემგროვებელში
               description_teacher: განმეორებადი ინსტრუქციების შესახებ "ბედნიერი ციკლებიდან"
@@ -6455,8 +6455,6 @@ ka:
                 განძის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
             Ocean Scene with Loops:
               name: ციკლები მხატვარში
-            'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
               description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება,
@@ -6481,12 +6479,12 @@ ka:
                 ამოხსნაზე.
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
+            'Loops: Getting Loopy':
+              name: ჩაციკლვა
             Loops in Collector:
               name: ციკლები შემგროვებელში
             Loops in Artist:
-              name: ციკლები მხატვარში
-            'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: ეზოების ხატვა ციკლებით
             Events in Play Lab:
               name: მოვლენები სათამაშო ლაბორატორიაში
         coursec-2020:
@@ -6498,25 +6496,25 @@ ka:
           description_audience: 'ასაკი: 6-10'
           stages:
             'Programming: My Robotic Friends':
-              name: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
             Programming in Maze:
               name: პროგრამირება ლაბირინთში
             Debugging in Maze:
               name: გამართვა ლაბირინთში
             Programming in Collector:
-              name: პროგრამირება შემგროვებელში
+              name: განძის შეგროვება ლორელთან ერთად
             Programming in Artist:
-              name: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
             Binary Bracelets:
               name: ორობითი სამაჯურები
             'Loops: My Loopy Robotic Friends':
-              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
             Sticker Art with Loops:
               name: ციკლები მხატვარში
             'Events: The Big Event':
-              name: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
             Build a Flappy Game:
               name: ააწყვეთ მოფარფატე ჩიტის თამაში
             Events in Play Lab:
@@ -6526,12 +6524,14 @@ ka:
                 თქვენი პროექტის აწყობა.
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: გრაფიკული პროგრამირება ქაღალდზე
             Introduction to Online Puzzles:
               name: შესავალი ონლაინ თავსატეხებში
             Relay Programming:
               name: პროგრამირება ცვლაში
             Debugging in Collector:
-              name: გამართვა შემგროვებელში
+              name: გამართვა ლორელთან ერთად
             Events in Bounce:
               name: მოვლენები მხტუნავში
             Build a Star Wars Game:
@@ -6548,7 +6548,7 @@ ka:
             Loops in Artist:
               name: ციკლები მხატვარში
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
             Conditionals with Cards:
               name: პირობები ბარათებით
             Conditionals in Bee:
@@ -6556,9 +6556,9 @@ ka:
             While Loops in Farmer:
               name: While ციკლები ფერმერში
             Conditionals & Loops in Harvester:
-              name: პირობითი წინადადებები და ციკლები ფერმერში
+              name: მოსავლის აღება პირობითი წინადადებებით
             'Unplugged: Binary':
-              name: 'გაკვეთილი კომპიუტერის გარეშე: ორობითი სისტემა'
+              name: ორობითი სურათები
             Artist Binary:
               name: 'მხატვარი: ორობითი'
             Digital Citizenship:
@@ -6568,16 +6568,14 @@ ka:
         coursee-2020:
           description_audience: 'ასაკი: 8-12'
           stages:
-            Conditionals:
-              name: პირობითი ბრძანებები
             Private and Personal Information:
               name: კონფიდენციალური და პირადი ინფორმაცია
             Nested Loops in Bee:
-              name: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
             Nested Loops in Artist:
-              name: ჩადგმული ციკლები მხატვარში
+              name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
             'Functions: Songwriting':
-              name: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა
               description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები.
                 ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების
                 გამოყენებით.
@@ -6587,9 +6585,13 @@ ka:
                 ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება
                 არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან
                 ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
+            Digital Sharing:
+              name: ციფრული გაზიარება
         coursef-2020:
           description_audience: 'ასაკი: 9-13'
           stages:
+            Nested Loops in the Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
             Envelope Variables:
               name: ცვლადები კონვერტებში
             For Loop Fun:
@@ -6716,3 +6718,172 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csp3-virtual:
+          description_short: პროგრამირება
+          stages:
+            The Need For Programming Languages:
+              name: პროგრამირების ენების საჭიროება
+            The Need for Algorithms:
+              name: ალგორითმების საჭიროება
+            Creativity in Algorithms:
+              name: შემოქმედებითობა ალგორითმებში
+            Using Simple Commands:
+              name: მარტივი ბრძანებების გამოყენება
+            Creating Functions:
+              name: ფუნქციების შექმნა
+            Looping and Random Numbers:
+              name: ციკლები და შემთხვევითი რიცხვები
+        csd3-virtual:
+          description_short: " შეისწავლეთ ანიმაციების, ინტერაქტიული ხელოვნების ნიმუშებისა
+            და თამაშების კოდის წერა თამაშების ლაბორატორიაში."
+          stages:
+            Programming for Entertainment:
+              name: პროგრამირება გართობისათვის
+            Drawing in Game Lab:
+              name: ხატვა თამაშების ლაბორატორიაში
+              description_student: კლასი ეცნობა თამაშების ლაბორატორიას, ამ თავისთვის
+                საჭირო პროგრამირების გარემოს და იწყებს მის გამოყენებას, რათა განალაგოს
+                ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობებისა და გამართვის
+                საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის ბოლო კლასი
+                შექმნის წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ ვერსიას.
+              description_teacher: მოსწავლეები ეცნობიან თამაშების ლაბორატორიას, ამ
+                თავისთვის საჭირო პროგრამირების გარემოს და იწყებენ მის გამოყენებას,
+                რათა განალაგონ ფიგურები ეკრანზე. ეს გაკვეთილი მოიცავს მიმდევრობების
+                და გამართვის საფუძვლებს, ასევე რამდენიმე მცირე ბრძანებას. გაკვეთილის
+                ბოლოს მოსწავლეები შექმნიან წინა დონეზე მათ მიერ შექმნილი სურათის ონლაინ
+                ვერსიას.
+            Variables:
+              name: ცვლადები
+            Sprites:
+              name: სპრაიტები
+            The Draw Loop:
+              name: ხატვის ციკლი
+            Sprite Movement:
+              name: სპრაიტების მოძრაობა
+            Conditionals:
+              name: პირობითი ბრძანებები
+            Keyboard Input:
+              name: კლავიატურიდან შეყვანილი ინფორმაცია
+            Project - Interactive Card:
+              name: პროექტი - ინტერაქტიული ბარათი
+            Velocity:
+              name: სიჩქარე
+              description_student: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
+                შემდეგ კლასი გაეცნობა იმ თვისებებს, რომლებიც გამოიყენება სიჩქარისა
+                და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ ამ
+                თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
+                side scroller ტიპის თამაშის შექმნას.
+              description_teacher: მთვლელის ნიმუშის მუშაობის პრინციპის მოკლე განხილვის
+                შემდეგ, მოსწავლეების გაეცნობიან იმ თვისებებს, რომლებიც გამოიყენება
+                სიჩქარის და მობრუნების სისწრაფის განსასაზღვრად. როგორც კი ისინი დაიწყებენ
+                ამ თვისებების სხვადასხვაგვარად გამოყენებას, მოსწავლეები შეძლებენ საბაზისო
+                side scroller ტიპის თამაშის შექმნას.
+            Collision Detection:
+              name: შეჯახების აღმოჩენა
+            Complex Sprite Movement:
+              name: სპრაიტების რთული მოძრაობა
+            Collisions:
+              name: შეჯახებები
+            Functions:
+              name: ფუნქციები
+            The Game Design Process:
+              name: თამაშის დიზაინის პროცესი
+            Using the Game Design Process:
+              name: თამაშის დიზაინის პროცესის გამოყენება
+            Project - Design a Game:
+              name: პროექტი - შექმენით თამაშის დიზაინი
+        jess-test-script:
+          stages:
+            new stage:
+              name: ახალი დონე
+            Debugging:
+              name: გამართვა
+        csd2-virtual:
+          stages:
+            Intro to HTML:
+              name: შესავალი HTML-ში
+            Headings:
+              name: სათაურები
+            Digital Footprint:
+              name: ციფრული ნაკვალევი
+            Styling Text with CSS:
+              name: ტექსტის სტილის მორგება CSS-ით
+              description_student: ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების
+                სტილის განსაზღვრის გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს
+                და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტურ ელემენტებზე.
+                საბოლოოდ, ყველა გამოიყენებს ტექსტურ სტილებს საკუთარ პირად ვებ-საიტზე.
+              description_teacher: "ეს დონე წარმოგიდგენთ CSS-ს, როგორც გვერდის ელემენტების
+                სტილის მორგების გზას. კლასი შეისწავლის CSS წესების საბაზისო სინტაქსს
+                და გამოიკვლევს თვისებებს, რომლებიც ზემოქმედებენ HTML ტექსტური ელემენტებზე.
+                ისინი იმუშავებენ HTML გვერდზე, რომელიც გვიამბობს გინესის რეკორდების
+                მფლობელებზე, კერძოდ კი დაამატებენ მოწოდებულ გვერდს თავის სტილებს.
+                ბოლო დონეზე მოსწავლეები გამოიყენებენ ახალ ინფორმაციას საკუთარ პირად
+                ვებ-გვერდზე ტექსტური ელემენტების სტილების განსასაზღვრად.\r\n\r\n"
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
+            Images:
+              name: სურათები
+            'Websites for Expression ':
+              name: 'ვებ-საიტები გამოხატვისათვის '
+            Styling Elements with CSS:
+              name: ელემენტების სტილის მორგება CSS-ით
+        csp5-virtual:
+          stages:
+            Buttons and Events:
+              name: ღილაკები და მოვლენები
+            Multi-screen Apps:
+              name: მრავალეკრანიანი აპლიკაციები
+            'Building an App: Multi-Screen App':
+              name: 'აპლიკაციის შექმნა: მრავალეკრანიანი აპლიკაცია'
+            Controlling Memory with Variables:
+              name: მეხსიერების გაკონტროლება ცვლადებით
+            'Building an App: Clicker Game':
+              name: 'აპლიკაციის შექმნა: წკაპა თამაში'
+            Unit 5 Assessment 1:
+              name: სექცია 5 დავალება 1
+            User Input and Strings:
+              name: მომხმარებლის მიერ შეყვანილი ინფორმაცია და სტრინგები
+            '"if-else-if" and Conditional Logic':
+              name: '"თუ-სხვაგვარად-თუ" და პირობითი ლოგიკა'
+            Unit 5 Assessment 2:
+              name: სექცია 5 დავალება 2
+            While Loops:
+              name: '"სანამ" ციკლები'
+            Loops and Simulations:
+              name: ციკლები და სიმულაციები
+            Introduction to Arrays:
+              name: შესავალი მასივებში
+            'Building an App: Image Scroller':
+              name: 'აპლიკაციის შექმნა: სურათების ცოცია ("სქროლერი")'
+            Unit 5 Assessment 3:
+              name: სექცია 5 დავალება 3
+            Processing Arrays:
+              name: მასივების დამუშავება
+            Unit 5 Assessment 4:
+              name: სექცია 5 დავალება 4
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: სიჩქარე
+            Collision Detection:
+              name: შეჯახების აღმოჩენა
+            Complex Sprite Movement:
+              name: სპრაიტების რთული მოძრაობა
+            Collisions:
+              name: შეჯახებები
+            Functions:
+              name: ფუნქციები
+            The Game Design Process:
+              name: თამაშის დიზაინის პროცესი
+            Using the Game Design Process:
+              name: თამაშის დიზაინის პროცესის გამოყენება
+            Project - Design a Game:
+              name: პროექტი - შექმენით თამაშის დიზაინი
+        code-break:
+          stages:
+            new stage:
+              name: ახალი დონე
+            Algorithms:
+              name: ალგორითმები
+            Events:
+              name: მოვლენები

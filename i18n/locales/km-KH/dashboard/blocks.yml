@@ -491,11 +491,10 @@ km:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': បង្ហាញ
-            '"hide"': លាក់
+            '"random"': ព្រាវ
       binary_move:
         options:
           DIR:

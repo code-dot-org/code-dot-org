@@ -1761,36 +1761,46 @@ lt:
               name: Greitis
             Functions:
               name: Komandų kūrimas
+            Text:
+              name: Tekstas
         coursea-2020:
           stages:
             Going Places Safely:
               name: Saugus naršymas internete
+            'Programming: Happy Maps':
+              name: Laimingieji žemėlapiai
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Virtualūs pirštų antspaudai
             Move It, Move It:
               name: Judėk, judėk
+            'Loops: Getting Loopy':
+              name: Kartojimo supratimas
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Dvejetainės apyrankės
+            'Events: The Big Event':
+              name: Didelis įvykis
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programavimas ant languoto popieriaus
             Relay Programming:
               name: Programavimas komandoje
             Conditionals with Cards:
               name: Sąlyginiai sakiniai su kortomis
             'Unplugged: Binary':
-              name: 'Be kompiuterio: dvejetainiai skaičiai'
+              name: Dvejetainiai vaizdai
             Artist Binary:
               name: 'Meninkas: dvejetainis'
             Digital Citizenship:
               name: Virtuali pilietybė
         coursee-2020:
           stages:
-            Conditionals:
-              name: Sąlyginiai sakiniai
+            'Functions: Songwriting':
+              name: Dainų rašymas
         coursef-2020:
           stages:
             Internet:
@@ -1805,3 +1815,33 @@ lt:
           stages:
             Binary Numbers:
               name: Dvejetainiai skaičiai
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Komandų kūrimas
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: "„Kol“ kartojimas"
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmai
+            Events:
+              name: Įvykiai

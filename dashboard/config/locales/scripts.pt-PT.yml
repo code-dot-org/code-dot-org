@@ -4,6 +4,7 @@ pt:
     script:
       category:
         csf_category_name: Fundamentos
+        csf2_draft_category_name: 'Em Desenvolvimento: Cursos A - F'
         hoc_category_name: Hora de Código
         math_category_name: Matemática
         research_studies_category_name: Trabalhos de Investigação
@@ -104,7 +105,7 @@ pt:
             The Big Event:
               name: O Grande Evento
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
         course3:
           title: Curso 3
           description: O Curso 3 foi desenvolvido para estudantes que já fizeram o
@@ -325,12 +326,18 @@ pt:
               name: A receita do design
         K5PD:
           stages:
+            Computer Science Pedagogy:
+              name: Pedagogia das Ciências da Computação
             K-5 Courses:
               name: Cursos Ensino Primário e Básico
             Next Steps:
               name: Próximos Passos
+            Reflection:
+              name: Reflexão
             Teacher Dashboard:
               name: Painel do Professor
+            Writing computer programs:
+              name: Escrevendo programas de computador
             new stage:
               name: nova fase
         netsim:
@@ -392,6 +399,8 @@ pt:
           description: Editar código
           description_short: Editar código
           stages:
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
             Play Lab:
               name: Laboratório
             The Artist:
@@ -405,6 +414,8 @@ pt:
           stages:
             Bounce:
               name: Bounce
+            Calc:
+              name: Calc
         flappy:
           title: Flappy Bird
           description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente
@@ -516,6 +527,8 @@ pt:
               name: Laços enquanto
         algebraPD3:
           stages:
+            Computer Science Pedagogy:
+              name: Pedagogia das Ciências da Computação
             Course Overview:
               name: Visão geral do curso
             Evaluation Blocks:
@@ -877,26 +890,42 @@ pt:
               name: Enviando números
             The Internet:
               name: A Internet
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
         csp2-2017:
           stages:
             Bytes and File Sizes:
               name: Bytes e tamanhos de ficheiros
             Text Compression:
               name: Compressão de Texto
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
         csp3-2017:
           description_short: Programação
           stages:
             Creating Functions:
               name: Criando funções
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
+        csp4-2017:
+          stages:
+            Simple Encryption:
+              name: Encriptação Simples
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
         csp5-2017:
           stages:
             While Loops:
               name: Laços enquanto
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
         CSDU3-Draft:
           description_short: Programação
           stages:
             Functions:
               name: Funções
+            Velocity:
+              name: Velocidade
         2016_sciencePD_phase1:
           stages:
             The Tutorial:
@@ -1004,6 +1033,8 @@ pt:
         csd3-2017:
           description_short: Programação
           stages:
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
             Variables:
@@ -1054,6 +1085,10 @@ pt:
           stages:
             Bounce:
               name: Bounce
+        hoc-encryption:
+          stages:
+            Simple Encryption:
+              name: Encriptação Simples
         fesbinary:
           title: Binário
           stages:
@@ -1093,7 +1128,7 @@ pt:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
         coursec-draft:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1101,7 +1136,7 @@ pt:
             Binary Bracelets:
               name: Pulseiras binárias
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
             Building a Foundation:
               name: Criar uma base
         coursed-draft:
@@ -1196,6 +1231,10 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
+        csppostap-2017:
+          stages:
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
         csd6-draft:
           stages:
             Lists:
@@ -1244,10 +1283,14 @@ pt:
               name: Variáveis
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
         csd3-old:
           stages:
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
         csd2-draft:
@@ -1260,6 +1303,8 @@ pt:
               name: Variáveis
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
             'null':
@@ -1282,14 +1327,20 @@ pt:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
+          title: Curso A
+          assignment_family_title: Curso A
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
+          title: Curso B
+          assignment_family_title: Curso B
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da Vida Real: Aviões de Papel'
+          title: Curso C
+          assignment_family_title: Curso C
         coursed-2017:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1301,6 +1352,8 @@ pt:
                 que os próprios alunos criaram.
             Nested Loops:
               name: Laços aninhados
+          title: Curso D
+          assignment_family_title: Curso D
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
@@ -1323,12 +1376,16 @@ pt:
               name: Criar uma base
             Nested Loops:
               name: Laços aninhados
+          title: Curso E
+          assignment_family_title: Curso E
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
             Building a Foundation:
               name: Criar uma base
+          title: Curso F
+          assignment_family_title: Curso F
         express-2017:
           stages:
             Introduction:
@@ -1448,6 +1505,8 @@ pt:
               name: nova fase
             Personal Innovations:
               name: Inovação Pessoal
+            Simple Encryption:
+              name: Encriptação Simples
         hero:
           stages:
             Minecraft Hour of Code:
@@ -1456,6 +1515,12 @@ pt:
           stages:
             new stage:
               name: nova fase
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Inquérito Pós-Curso
         aws-demo:
           stages:
             new stage:
@@ -1506,6 +1571,8 @@ pt:
               name: Variáveis
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
           description_short: Programação
@@ -1520,6 +1587,8 @@ pt:
               name: Variáveis
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
         csd2-2018:
@@ -1527,6 +1596,7 @@ pt:
             Lists:
               name: Listas
         coursea-2018:
+          assignment_family_title: Curso A
           stages:
             'Programming: Happy Maps':
               name: Mapas felizes
@@ -1569,14 +1639,18 @@ pt:
             Graph Paper Programming:
               name: Programação de papel milimetrico
         courseb-2018:
+          assignment_family_title: Curso B
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
             Move It, Move It:
               name: Criando caminhos
+            Copyright and Creativity:
+              name: É Óptimo Criar e Jogar Limpo
         coursed-2018:
+          assignment_family_title: Curso D
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programação de papel milimetrico
@@ -1597,6 +1671,7 @@ pt:
             Relay Programming:
               name: Programação por revezamento
         coursec-2018:
+          assignment_family_title: Curso C
           stages:
             Building a Foundation:
               name: Criar uma base
@@ -1613,6 +1688,7 @@ pt:
             Functions with Parameters:
               name: Funções com parâmetros
         coursee-2018:
+          assignment_family_title: Curso E
           stages:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
@@ -1635,7 +1711,10 @@ pt:
               name: Condicionais com cartas
             Minecraft Hour of Code:
               name: Hora do Código de Minecraft
+            Copyright and Creativity:
+              name: Partilha Digital
         coursef-2018:
+          assignment_family_title: Curso F
           stages:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
@@ -1682,6 +1761,10 @@ pt:
           stages:
             Creating Functions:
               name: Criando funções
+        csp4-2018:
+          stages:
+            Simple Encryption:
+              name: Encriptação Simples
         csp5-2018:
           stages:
             While Loops:
@@ -1695,7 +1778,9 @@ pt:
             Move It, Move It:
               name: Criando caminhos
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
+            Copyright and Creativity:
+              name: É Óptimo Criar e Jogar Limpo
         frozen-2018:
           stages:
             Artist:
@@ -1739,6 +1824,8 @@ pt:
               name: A Internet
             Crowdsourcing:
               name: Aberto ao público
+            Digital Sharing:
+              name: Partilha Digital
         dance-low:
           stages:
             Dance Party:
@@ -1778,6 +1865,10 @@ pt:
               name: Internet
             Crowdsourcing:
               name: Aberto ao público
+            Digital Sharing:
+              name: Partilha Digital
+            Simon Says:
+              name: O Rei Manda
             Songwriting:
               name: Composição
         express-2019:
@@ -1816,6 +1907,8 @@ pt:
               name: O Grande Evento
             Binary Bracelets:
               name: Pulseiras binárias
+            Powerful Passwords:
+              name: Senhas Poderosas
         coursea-2019:
           stages:
             'Programming: Happy Maps':
@@ -1827,7 +1920,7 @@ pt:
             Move It, Move It:
               name: Criando caminhos
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
             'Loops: Getting Loopy':
               name: Repetindo
         pre-express-2019:
@@ -1835,7 +1928,7 @@ pt:
             Move It, Move It:
               name: Criando caminhos
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
             Spelling Bee:
               name: Escrever com a abelha
         removed19:
@@ -1857,6 +1950,8 @@ pt:
               name: Variáveis
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
         csd6-2019:
@@ -1894,6 +1989,10 @@ pt:
           stages:
             Creating Functions:
               name: Criando funções
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: Encriptação Simples
         csp5-2019:
           stages:
             While Loops:
@@ -1928,6 +2027,8 @@ pt:
           stages:
             new stage:
               name: nova fase
+            Libraries:
+              name: Bibliotecas
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -1947,8 +2048,14 @@ pt:
               name: Variáveis
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Random Numbers:
+              name: Números Aleatórios
         maddie-test:
           stages:
             new stage:
@@ -1977,6 +2084,8 @@ pt:
           stages:
             Next Steps:
               name: Próximos Passos
+            Sequencing:
+              name: Sequenciação
             Loops:
               name: Ciclos
             Conditionals:
@@ -2001,6 +2110,8 @@ pt:
           stages:
             Conditionals:
               name: Condicionais
+            Simon Says:
+              name: O Rei Manda
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
@@ -2011,10 +2122,14 @@ pt:
           stages:
             Conditionals:
               name: Condicionais
+            Simon Says:
+              name: O Rei Manda
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Condicionais
+            Simon Says:
+              name: O Rei Manda
         csp8-pilot:
           stages:
             new stage:
@@ -2030,34 +2145,52 @@ pt:
         csd3-2020:
           description_short: Programação
           stages:
+            Shapes and Parameters:
+              name: Formas e Parâmetros
             Variables:
               name: Variáveis
+            Random Numbers:
+              name: Números Aleatórios
             Conditionals:
               name: Condicionais
+            Velocity:
+              name: Velocidade
             Functions:
               name: Funções
+            Text:
+              name: Texto
         coursea-2020:
           stages:
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
+            'Programming: Happy Maps':
+              name: Mapas felizes
         courseb-2020:
           stages:
             Your Digital Footprint:
-              name: Seu rastro digital
+              name: A tua Pegada Digital
             Move It, Move It:
               name: Criando caminhos
+            'Loops: Getting Loopy':
+              name: Repetindo
         coursec-2020:
           stages:
+            Powerful Passwords:
+              name: Senhas Poderosas
             Binary Bracelets:
               name: Pulseiras binárias
+            'Events: The Big Event':
+              name: O Grande Evento
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programação de papel milimetrico
             Relay Programming:
               name: Programação por revezamento
             Conditionals with Cards:
               name: Condicionais com cartas
             'Unplugged: Binary':
-              name: 'Offline: binário'
+              name: Imagens binárias
             Artist Binary:
               name: 'Artista: binário'
             Digital Citizenship:
@@ -2066,14 +2199,17 @@ pt:
               name: Festa da Dança
         coursee-2020:
           stages:
-            Conditionals:
-              name: Condicionais
+            Simon Says:
+              name: O Rei Manda
             'Functions: Songwriting':
+              name: Composição
               description_teacher: Uma das estruturas mais incríveis no mundo da ciência
                 da computação é a função. As funções (chamadas às vezes de procedimentos)
                 são miniprogramas que podem ser usados repetidas vezes dentro do programa
                 maior. Esta aula ajudará os alunos a entender, de maneira intuitiva,
                 por que combinar blocos de códigos em funções é uma prática útil.
+            Digital Sharing:
+              name: Partilha Digital
         coursef-2020:
           stages:
             Envelope Variables:
@@ -2081,9 +2217,11 @@ pt:
             For Loop Fun:
               name: Diversão com laços for
             Internet:
-              name: Internet
+              name: A Internet
             Crowdsourcing:
               name: Aberto ao público
+            Digital Sharing:
+              name: Partilha Digital
         express-2020:
           stages:
             Dance Party:
@@ -2126,3 +2264,45 @@ pt:
           stages:
             new stage:
               name: nova fase
+        csp3-virtual:
+          description_short: Programação
+          stages:
+            Creating Functions:
+              name: Criando funções
+        csd3-virtual:
+          description_short: Programação
+          stages:
+            Variables:
+              name: Variáveis
+            Conditionals:
+              name: Condicionais
+            Velocity:
+              name: Velocidade
+            Functions:
+              name: Funções
+            Shapes and Parameters:
+              name: Formas e Parâmetros
+            Random Numbers:
+              name: Números Aleatórios
+        jess-test-script:
+          stages:
+            new stage:
+              name: nova fase
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Laços enquanto
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Velocidade
+            Functions:
+              name: Funções
+        code-break:
+          stages:
+            new stage:
+              name: nova fase
+            Algorithms:
+              name: Algoritmos
+            Events:
+              name: Eventos

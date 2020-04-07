@@ -56,6 +56,7 @@
   "clearPuzzleConfirm": "This will reset the puzzle to its start state and delete all the blocks you've added or changed.",
   "clearPuzzleConfirmHeader": "Are you sure you want to start over?",
   "clickToRemix": "Click \"Remix\" to spin-off your own version!",
+  "closeDialog": "बन्द गर्नुहोस्",
   "code": "Code:",
   "codeMode": "Code",
   "codeTooltip": "See generated JavaScript code.",

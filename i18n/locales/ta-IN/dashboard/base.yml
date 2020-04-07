@@ -109,6 +109,7 @@ ta:
       signin: 'உள்நுழை'
       signup: 'ஒரு அக்கவுண்டை உருவாக்குங்கள்'
       create: 'உருவாக்கு'
+      dance: 'நடன விருந்து'
       infinity: 'முடிவிலி'
     popup:
       close: 'மூடு'
@@ -139,6 +140,11 @@ ta:
     subtitle: 'இந்த வீடியோக்கள் மற்றும் உதவிக்குறிப்புகளை பார்க்கவும்'
   video:
     tab: 'வீடியோ.'
+  upsell:
+    dance:
+      title: 'நடன விருந்து'
+    dance-2019:
+      title: 'நடன விருந்து'
   gallery:
     header_artist: "கலைஞர்"
     report_abuse: "தவறான பயன்பாட்டை தெரிவிக்கவும்"

@@ -1529,6 +1529,13 @@ pl:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Północ
+            '"East"': Wschód
+            '"South"': Południe
+            '"West"': Zachód
       aalab_prompt:
         text: zadaj pytanie {MESSAGE}
       aalab_scene:
@@ -1540,12 +1547,10 @@ pl:
             '3': '3'
       aalab_setupStory:
         text: historia konfiguracji
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': pokaż
-            '"hide"': ukryj
+            '"random"': losowy
       binary_drawBin:
         text: remis binarny {BIN}
       binary_drawDec:

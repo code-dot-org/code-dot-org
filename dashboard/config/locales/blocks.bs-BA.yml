@@ -1120,11 +1120,10 @@ bs:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': prikaži
-            '"hide"': sakrij
+            '"random"': slučajno odabran
       binary_move:
         options:
           DIR:

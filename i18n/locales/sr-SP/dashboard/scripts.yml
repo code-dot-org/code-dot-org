@@ -1423,36 +1423,42 @@ sr:
               name: Брзина
             Functions:
               name: Функције
+            Text:
+              name: текст
         coursea-2020:
           stages:
             Going Places Safely:
               name: Сигурна путања
+            'Programming: Happy Maps':
+              name: Веселе мапе
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Твој дигитални траг
             Move It, Move It:
               name: Помери га, помери
+            'Loops: Getting Loopy':
+              name: Запетљанције
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Бинарне наруквице
+            'Events: The Big Event':
+              name: Велики догађај
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Графиконско - Папирно Програмирање
             Relay Programming:
               name: Relay programming
             Conditionals with Cards:
               name: Услови са картама
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: Binarne slike
             Artist Binary:
               name: Уметник Бинарно
             Digital Citizenship:
               name: Дигитално држављанство
-        coursee-2020:
-          stages:
-            Conditionals:
-              name: Кондиционали
         coursef-2020:
           stages:
             Internet:
@@ -1463,3 +1469,32 @@ sr:
           stages:
             Spelling Bee:
               name: Пчелица словарица
+        csp3-virtual:
+          description_short: Programming
+        csd3-virtual:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Понављања са условима
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Догађаји

@@ -1655,6 +1655,24 @@ it-IT:
           ## Durata del corso
 
           Per completare questo corso online sono necessarie 3 - 7 ore, a seconda delle tue precedenti conoscenze e da quanto intendi approfondire le risorse messe a disposizione in Code.org.
+      OPD-K5 Assessment:
+        markdown: |
+          # Gestione della classe > Altre risorse disponibili
+
+          Accedendo come insegnante nel sito Code.org hai a disposizione molte risorse che gli alunni non hanno. Hai già visto come individuare un corso, creare una classe ed assegnare il corso alla classe. Inoltre puoi:
+
+          - **Seguire l'andamento degli alunni nel corso**: [Valutare l'apprendimento](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) di tutti i tuoi alunni.
+          - **Il tuo andamento nel corso**: Vedere il tuo andamento nelle lezioni in Code.org come studente. Anche i tuoi alunni saranno in grado di vedere il loro andamento con la loro utenza. In aggiunta, in qualità di insegnante, sarai in grado di vedere il piano di studio delle lezioni e le soluzioni di tutti gli esercizi.
+          - **Aiuto e comunità**: Accedendo a [support.code.org](https://support.code.org/) puoi porre domande, rispondere a domande di altri insegnanti, e leggere le domande frequenti (FAQ) fornite dal team di Code.org. In questa pagina puoi contattare direttamente il team di Code.org per qualsiasi altra domanda.
+
+          <br/>
+          ---
+          > ## Visita support.code.org
+          > Se non riesci a proseguire o hai qualche domanda, cerca nelle nostre pagine di supporto in support.code.org! Puoi anche contattarci direttamente  da quella pagina sul [nostro forum](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://support.code.org" target="blank"><button class="plc">Domanda aiuto >></button></a>
+
+          Dopo aver commentato nel forum, torna qui e seleziona il bottone sottostante per accedere alla prossima lezione.computer
       OPD-K5 CS Courses:
         markdown: "# Gestione della classe > Per iniziare in Code.org\n\n\n## Passo
           1: Seleziona un corso\nTutti i corsi -- da quelli indicati per la scuola
@@ -1746,6 +1764,20 @@ it-IT:
 
 
           > Questo è tutto! Potrai tornare a questo esercizio ogni volta che avrai bisogno di ripassare come funziona la piattaforma di apprendimento.
+      OPD-K5 Celebrate:
+        markdown: |
+          # I prossimi passi > Festeggiamo!
+
+          Congratulazioni per aver terminato questo corso online di sviluppo professionale. Se hai terminato tutte le lezioni in questo corso puoi scaricare e stampare l'attestato di completamento seguendo i seguenti passi:
+
+          1. vai a [questo sito](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. inserisci il tuo nome nel riquadro bianco.
+          3. seleziona "Stampa gli attestati".
+          4. seleziona l'immagine dell'attestato con il  tasto destro del mouse e seleziona "salva l'immagine come..." affinché sia salvato sul tuo computer.
+
+          E non dimenticare... puoi ritornare a questo corso ogni volta che lo desideri, per rivedere le lezioni, accedere alle risorse o soltanto per rinfrescare la tua memoria!
+
+          Grazie per la tua partecipazione! Non vediamo l'ora di sentire come hai realizzato le tue lezioni di informatica utilizzando Core Studio nella tua classe!
       OPD-K5 Congrats:
         markdown: "# Events > Riepilogo\n\nIn questa lezione hai realizzato giochi
           divertenti, hai combinato fra di loro i concetti base dimostrando quello
@@ -1763,6 +1795,19 @@ it-IT:
           Hai completato le lezioni da 1 a 8 ed appreso i concetti base dell'informatica. Speriamo che tu ti sia divertito ! Confidiamo che tu stia considerando come potresti utilizzare quanto hai appreso nella tua attività di insegnamento.
           <br/><br/>
           Nella prossima lezione prenderemo in considerazione i migliori metodi, accorgimenti e strategie per insegnare questi concetti fondamentali nella tua classe.
+      OPD-K5 Connect:
+        markdown: "# I prossimi passi > rimani in contatto\n\nOltre ad ulteriori corsi
+          formali potresti considerare di unirti alla comunità di code.org community
+          per continuare ad imparare in maniera informale dalle eserienze altruui
+          o semplicemente per trovare supporto ed un gruppo di colleghi. Ecco come:
+          \ \n\n<br/><br/>\n\n> **Continua a partecipare  alla comunità degli insegnanti
+          in code.org:** Il forum che hai utilizzato durante questo corsosarà una
+          grande risorsa nel proseguo del tuo percorso. Puoi usarlo non solo  riferendoti
+          al tuo apprendimento in questo corso, ma per avere supporto mentre prosegui
+          il tuo viaggio o anche per offrire supporto ad altri che hanno bisogno della
+          tua esperienza. Registra il suo indirizzo e visitalo spesso: [http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+          \ \n\n<br/>\n\n> **Connettiti con [@teachcode](http://twitter.com/teachcode)
+          su Twitter.**  \n\n<br/>\n"
       OPD-K5 Culture:
         markdown: "# Linee guida > Approccio in classe\n\nCome possiamo stimolare
           un proficuo approccio della classe nei nostri corsi di informatica ? Per
@@ -1952,6 +1997,15 @@ it-IT:
           è il tuo piano?\n\nOra prenditi del tempo per pianificare la fruizione di
           questo corso online, al fine di ottenere il massimo beneficio da questa
           esperienza. Dopo aver preparato il tuo piano puoi tuffarti nella prima lezione!"
+      OPD-K5 PostSurvey:
+        markdown: |+
+          # Prima di terminare - Sondaggio finale
+
+          Grazie per aver seguito il corso Fondamenti di Informatica - Corso per insegnanti!
+          Indipendentemente dal fatto che tu abbia terminato o no il corso, vogliamo conoscere le tue opinioni in merito. Compila questo breve sondaggio per aiutarci a migliorare il corso!
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Compila il sondaggio finale</a>
+
       OPD-K5 PreSurvey:
         markdown: |+
           # Per cominciare > Sondaggio preliminare
@@ -2000,6 +2054,21 @@ it-IT:
           di [Fondamenti di informatica](http://studio.code.org/). Il vantaggio di
           questo corso è di darti in un breve lasso di tempo un primo assaggio di
           cosa ti aspetta, estraendo alcuni esercizi particolarmente rappresentativi."
+      OPD-K5 Stage10Start:
+        markdown: |
+          # I prossimi passi > Riepiloghiamo
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## Ci sei quasi!
+
+          Finora hai imparato le basi della programmazione, esplorato il modo in cui potresti insegnare informatica e creato un semplice piano per l'insegnamento in classe.
+
+          Completando la lezione 11, sarai in grado di:
+
+          - riflettere su ciò che hai imparato
+          - pensare ai prossimi passi da compiere per proseguire il tuo apprendimento
+          - connetterti  con una comunità di colleghi docenti interessati all'insegnamento dell'informatica
       OPD-K5 Stage1Go:
         markdown: |-
           # Per cominciare > Pronti, attenti, via!
@@ -2110,7 +2179,7 @@ it-IT:
           essere direttamente usato con gli alunni, ma potresti sfruttarlo come spunto
           per preparare la tua lezione.\n\n[![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54
           PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)\n\n[Non riesci a vedere
-          il video? Seleziona qui](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
+          il video? Clicca qui](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
           \ \n\n<br/>\n\n**3. Guarda il video per l'insegnante su come proporre la
           lezione tradizionale \"Happy Maps\"**\n<br/>\n\n[![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01
           PM.png)](https://youtube.com/watch?v=En6Bshuqljg)\n\n<br/>\n\n\n**4. Guarda
@@ -2122,9 +2191,8 @@ it-IT:
           Corso D (Classe 3): [Programmazione su carta a quadretti](https://studio.code.org/s/coursed-2018/stage/1/puzzle/1/lang/it)\n-
           Corso E, Corso F (Classi 4 e 5): [I miei amici robotici](https://studio.code.org/s/coursee-2018/stage/1/puzzle/1/lang/it)\n\n\n---\n\n\n>
           ## Riflessioni\n> Come spiegheresti il concetto di programmazione (sequenze
-          di istruzioni e algoritmi inclusi) ai tuoi alunni? Condividi i tuoi pensieri
-          nel <a href=\"http://forum.code.org/t/teaching-sequencing/408\">nostro forum</a>
-          (in inglese).\n\n> <a href=\"http://forum.code.org/t/teaching-sequencing/408\"
+          di istruzioni e algoritmi inclusi) ai tuoi alunni? <a href=\"http://forum.code.org/t/teaching-sequencing/408\">Condividi
+          i tuoi pensieri nel nostro forum</a> (in inglese).\n\n> <a href=\"http://forum.code.org/t/teaching-sequencing/408\"
           target=\"blank\"><button class=\"plc\">Confrontiamoci nel forum (in inglese)
           >></button></a>\n\nDopo che hai commentato nel forum, torna qui e seleziona
           il bottone sottostante per proseguire.\nNella prossima lezione aggiungeremo
@@ -2199,100 +2267,119 @@ it-IT:
 
           Pronti? Partiamo!
       OPD-K5 Stage5Go:
-        markdown: "# Istruzioni condizionali > Attività tradizionali\n\n\n\n**1. Guarda
-          la struttura della lezione \"[istruzioni condizionali con le carte da gioco](https://curriculum.code.org/csf-18/coursed/13/)\"
-          dal corso D:** \n<br/>\nIl corso D è indicato per gli alunni della classe
-          3ª primaria. La medesima lezione è presente anche nei corsi E e F. Le istruzioni
-          condizionali non sono spiegate nei corsi A, B e C.\n<br/><br/>\n\n**2. Guarda
-          il video per gli alunni: istruzioni condizionali con le carte da gioco**\n<br/>\nPotresti
-          far vedere ai tuoi alunni questo video che ti aiuta ad introdurre il concetto
-          di istruzioni condizionali ed iniziare l'attività tradizionale. \n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
+        markdown: "# Istruzioni condizionali > Lezione tradizionale\n\n**1. Guarda
+          la struttura della lezione \"[Istruzioni condizionali con le carte da gioco](https://curriculum.code.org/csf-18/coursed/13/)\"
+          del corso D:**\n<br/>\nIl corso D è indicato per gli alunni della classe
+          3ª primaria. La medesima lezione è presente anche nei corsi E ed F. Mentre,
+          nei corsi A, B e C le istruzioni condizionali non vengono trattate.\n<br/><br/>\n\n**2.
+          Guarda il video per gli alunni: istruzioni condizionali con le carte da
+          gioco**\n<br/>\nPotresti far vedere ai tuoi alunni questo video che ti aiuta
+          ad introdurre il concetto di istruzioni condizionali ed iniziare la relativa
+          attività tradizionale. \n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
           PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n<br/>\n[Non riesci
-          a vedere il video? Seleziona qui](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
+          a vedere il video? Clicca qui](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
           Guarda come è spiegato il concetto: \"Istruzioni condizionali con le carte
-          da gioco\"**\n<br/>\nQuesto video è fatto per gli insegnanti, per trarre
-          spunti su come impostare la lezione.\n\n\n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
+          da gioco\"**\n<br/>\nQuesto video è fatto per fornire spunti agli insegnanti
+          su come impostare la lezione.\n\n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
           PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)\n\n[Non riesci a vedere
-          il video? Seleziona qui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
-          ## Riflettiamo\n> Come spiegheresti il concetto di istruzioni condizionali
-          ai tuoi alunni? Condividi i tuoi pensieri nel [forum](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
-          <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"><button
-          class=\"plc\">Parliamo nel forum >></button></a>\n\nDopo che hai commentato
-          nel forum, torna qui e seleziona il bottone sottostante per proseguire.\n"
+          il video? Clicca qui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
+          ## Riflessioni\n> Come spiegheresti il concetto di istruzioni condizionali
+          ai tuoi alunni?<br><br>\nCondividi i tuoi pensieri nel [forum](http://forum.code.org/t/teaching-conditionals/406/1)(in
+          inglese).\n\n> <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\"
+          target=\"blank\"><button class=\"plc\">Confrontiamoci nel forum (in inglese)
+          >></button></a>\n\nDopo che hai commentato nel forum, torna qui e seleziona
+          il bottone sottostante per proseguire."
       OPD-K5 Stage5Review:
-        markdown: |
-          # Cicli > Riflettiamo
+        markdown: |-
+          # Cicli > Riflessioni
 
-          In questa lezione abbiamo imparato come si usano le istruzioni condizionali e come introducano la possibilità di un comportamento alternativo al tuo programma. Nella prossima lezione vedremo come le funzioni portano il tuo programma ad un livello superiore.
+          In questa lezione abbiamo imparato come le istruzioni condizionali permettano di aggiunge logica al tuo programma, dando la possibilità di definire diversi comportamenti alternativi. Nella prossima lezione vedremo come le funzioni possano portare la tua programmazione ad un livello superiore.
 
-          **Rifletti su come è stato spiegato il concetto di istruzioni condizionali nel corso "Fondamenti di informatica" e pensa come potresti realizzare le attività proposte nella tua classe.**
+          **Prenditi un attimo per riflettere su come è stato spiegato il concetto di istruzioni condizionali nel corso "Fondamenti di informatica" e pensa come potresti realizzare le attività proposte nella tua classe.**
 
           ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
       OPD-K5 Stage5Start:
-        markdown: |
+        markdown: |-
           # Istruzioni condizionali > Sommario della lezione
 
           <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
 
-          Finora hai scritto un semplice programma a cui hai aggiunto i cicli per migliorarne l'efficienza. In questa lezione introdurremo l'istruzione **Se** che introduce la possibilità di un comportamento alternativo al tuo programma.
+          Finora hai scritto un semplice programma a cui hai aggiunto i cicli per migliorarne l'efficienza. In questa lezione introdurremo l'istruzione condizionale **se** che aggiunge la logica al tuo programma.
 
           Completando la lezione 6 sarai in grado di:
 
-          - Acquisire pratica programmando istruzioni condizionali semplici
-          - Riflettere sulla loro applicazione in classe
+          - creare semplici programmi basati sulle istruzioni condizionali;
+          - riflettere su come insegnare questi concetti in classe.
 
-          >**Come si svolge questa lezione:** presenteremo un'attività tradizionale tratta dal Corso D (indicato per la 3ª classe primaria) che spiega l'idea delle istruzioni condizionali. Successivamente completerai una serie di esercizi in cui applicherai ciò che hai imparato sull'utilizzo delle istruzioni condizionali. La lezione terminerà con l'opportunità di riflessione. Prevedi di impiegare tra 20 e 45 minuti per completare questa lezione.
+          >**Come si svolge questa lezione** - Viene inizialmente presentata una lezione tradizionale del Corso D (adatta per la 3ª primaria) che introduce il concetto di istruzione condizionale. Successivamente completerai una serie di esercizi in cui applicherai ciò che hai imparato sull'utilizzo delle istruzioni condizionali. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
 
-
-          Pronti? Andiamo!
+          Pronti? Partiamo!
       OPD-K5 Stage6Go:
-        markdown: "# Funzioni > Attività tradizionale\n\nI programmatori hanno sempre
-          cercato il metodo per rendere il loro programma sempre più efficiente.Un
-          modo che viene adoperato è di servirsi delle \"funzioni\", le quali consentono
-          di riutilizzare segmenti di programma.\n\n**1. Guarda la struttura della
-          lezione \"[Funzioni: composizione di canzoni](https://curriculum.code.org/csf-18/coursee/14/)\"
-          del corso E.**\n<br/>\nIl corso E è indicato per gli alunni della 4ª primaria.
-          Le funzioni non sono trattate nei corsi da A a D.\n\n<br/>\n\n**2. Guarda
-          il video per gli alunni: Funzioni: composizione di canzoni**\n<br/>\nQuesto
-          è un video che potresti far vedere ai tuoi alunni che ti aiuta ad introdurre
-          il concetto di funzioni ed iniziare l'attività tradizionale. \n\n[![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39
-          PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)\n\n<br/>\n\n[Non riesci
-          a vedere il video? Seleziona qui](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)\n\n<br/>\n\n**3.
-          Guarda come è spiegato il concetto: \"Funzioni: composizione di canzoni\"**\n<br/>\nQuesto
-          video è fatto per gli insegnanti, per trarre spunti su come impostare la
-          lezione.\n[![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46
-          PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)\n[Non riesci a vedere
-          il video? Seleziona qui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)\n<br/>\n\n---\n\n>
-          ## Riflettiamo\n> Come spiegheresti il concetto di funzioni ai tuoi alunni?
-          Condividi i tuoi pensieri nel <a href=\"http://forum.code.org/t/teaching-functions/407/1\"
-          target=\"blank\">nostro forum</a>.\n\n> <a href=\"http://forum.code.org/t/teaching-functions/407/1\"
-          target=\"blank\"><button class=\"plc\">Parliamo nel forum >></button></a>\n\nDopo
-          che hai commentato nel forum, torna qui e seleziona il bottone sottostante
-          per proseguire.\n"
-      OPD-K5 Stage6Review:
-        markdown: |
-          # Funzioni > Riflettiamo
+        markdown: |-
+          # Funzioni > Lezione tradizionale
 
-          In questa lezione abbiamo imparato come funzioni ti permettano di programmare meglio e più velocemente consentendoti di riutilizzare segmenti del tuo programma. Nella prossima lezione vedremo il concetto di eventi e lo utilizzeremo nel nostro programma.
-          **Rifletti su come è stato spiegato il concetto di funzioni nel corso "Fondamenti di informatica" e pensa come potresti realizzare le attività proposte nella tua classe.**
+          I programmatori hanno sempre cercato metodi per rendere più efficienti i loro programmi. Un modo per fare ciò è servirsi delle "funzioni", che consentono di riutilizzare parti di codice.
+
+          **1. Guarda la struttura della lezione "[Composizione di canzoni](https://curriculum.code.org/csf-18/coursee/14/)" del corso E.**
+          <br/>
+          Il corso E è indicato per gli alunni della 4ª primaria. Le funzioni non sono trattate nei corsi da A a D.
+
+          <br/>
+
+          **2. Guarda il video per gli alunni - Composizione di canzoni**
+          <br/>
+          Potresti far vedere ai tuoi alunni questo video che ti aiuta ad introdurre il concetto di funzione ed iniziare la relativa attività tradizionale.
+
+          [![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39 PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)
+
+          <br/>
+
+          [Non riesci a vedere il video? Clicca qui](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
+
+          <br/>
+
+          **3. Guarda come è spiegato il concetto: "Composizione di canzoni"**
+          <br/>
+          Questo video è fatto per fornire spunti agli insegnanti su come impostare la lezione.
+
+          [![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46 PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)
+          [Non riesci a vedere il video? Clicca qui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
+          <br/>
+
+          ---
+
+          > ## Riflessioni
+          > Come spiegheresti il concetto di funzioni ai tuoi alunni?<br><br>
+          Condividi i tuoi pensieri nel <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank">nostro forum</a> (in inglese).
+
+          > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"><button class="plc">Confrontiamoci nel forum (in inglese) >></button></a>
+
+          Dopo che hai commentato nel forum, torna qui e seleziona il bottone sottostante per proseguire.
+      OPD-K5 Stage6Review:
+        markdown: |-
+          # Funzioni > Riflessioni
+
+          In questa lezione abbiamo imparato come le funzioni ti permettano di programmare meglio e più velocemente consentendoti di riutilizzare segmenti di codice. Nella prossima lezione introdurremo il concetto di evento e lo metteremo alla prova nei nostri programmi.
+
+          **Prenditi un attimo per riflettere su come è stato spiegato il concetto di funzione nel corso "Fondamenti di informatica" e pensa come potresti realizzare le attività proposte nella tua classe.**
 
           ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
       OPD-K5 Stage6Start:
-        markdown: |
+        markdown: |-
           # Funzioni > Sommario della lezione
 
           <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
 
-          Nelle prime lezioni hai imparato come scrivere un programma ed aggiungere i cicli e le istruzioni condizionali. In questa lezione presenteremo il concetto di **funzioni**.
+          Nelle prime lezioni hai imparato come scrivere un programma, sfruttare le potenzialità delle istruzioni di ripetizione e delle istruzioni condizionali. In questa lezione presenteremo il nuovo concetto di **funzione**.
+
           Completando la lezione 7 sarai in grado di:
-          +
-          - Acquisire pratica programmando funzioni semplici
-          - Riflettere sulla loro applicazione in classe
 
-          >**Come si svolge questa lezione:** presenteremo un'attività tradizionale tratta dal Corso E (indicato per la 4ª classe primaria) che spiega l'idea delle funzioni. Successivamente apprenderai le funzioni tramite un video, e farai pratica completando una serie di esercizi. L'opportunità di riflettere su quanto appreso terminerà la lezione. Prevedi di impiegare tra 20 e 45 minuti per completare il tutto.
+          - scrivere programmi che sfruttano semplici funzioni;
+          - riflettere sulle applicazioni in classe.
 
+          >**Come si svolge questa lezione** - Viene inizialmente presentata una lezione tradizionale del Corso E (adatta per la 4ª primaria) che introduce il concetto di funzione. Successivamente proseguirai l'approfondimento di questo nuovo concetto mediante un video e farai pratica completando una serie di esercizi. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
 
-          Pronti? Andiamo!
+          Pronti? Partiamo!
       OPD-K5 Stage7Go:
         markdown: |+
           # Eventi > Attività tradizionale
@@ -2335,22 +2422,22 @@ it-IT:
 
 
       OPD-K5 Stage7Start:
-        markdown: "# Eventi > Sommario della lezione\n\n<img src=\"https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png\"
-          width=\"450px\"  style=\"border-radius:10px; float:right; margin: 0 0 40px
-          40px;\"/>\n\nin questo corso hai imparato a scrivere le sequenze di istruzioni,
-          aggiungere i cicli, ed inserire istruzioni condizionali e funzioni. Abbiamo
-          quasi terminato! \nIn questa lezione introdurremo gli *eventi*, un altro
-          concetto basilare dell'informatica. Dopo aver trattato gli eventi, riepilogheremo
-          quanto appreso finora e scriverai qualche programma più complesso.\n\nCompletando
-          la lezione 8 sarai in grado di:\n\n- Acquisire pratica programmando eventi
-          semplici\n- Riflettere sulla loro applicazione in classe\n\n>**Come si svolge
-          questa lezione:** presenteremo un'attività tradizionale tratta dal Corso
-          C (indicato per la 2ª classe primaria) che spiega l'idea degli eventi. Successivamente
-          completerai una serie di esercizi del corso F (indicato per gli alunni della
-          5ª primaria) in cui applicherai ciò che hai imparato sull'utilizzo degli
-          eventi. La lezione terminerà con l'opportunità di riflessione. Prevedi di
-          impiegare tra 20 e 45 minuti per completare questa lezione.\n\n\nPronti?
-          Andiamo!\n"
+        markdown: |-
+          # Eventi > Sommario della lezione
+
+          <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
+
+          Fino a questo punto hai imparato a scrivere programmi costituiti da sequenze istruzioni, cicli, istruzioni condizionali e funzioni. C'è quasi tutto!
+          In questa lezione introdurremo gli *eventi*, un altro concetto basilare dell'informatica. Dopo aver trattato gli eventi, riepilogheremo quanto appreso finora e scriverai qualche programma più complesso.
+
+          Completando la lezione 8 sarai in grado di:
+
+          - creare semplici programmi basati sugli eventi;
+          - riflettere sulle applicazioni in classe.
+
+          >**Come si svolge questa lezione** - Viene inizialmente presentata una lezione tradizionale del Corso C (adatta per la 2ª primaria) che introduce il concetto di evento. Successivamente completerai una serie di esercizi del corso F (adatto per alunni della 5ª primaria) in cui applicherai alla programmazione a blocchi ciò che hai appreso sull'utilizzo degli eventi. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
+
+          Pronti? Partiamo!
       OPD-K5 Stage8Go:
         markdown: |
           # Linee guida > Riflessione
@@ -2363,7 +2450,7 @@ it-IT:
 
           - **Privilegia le attività "tradizionali"** per insegnare i concetti fondamentali (seleziona [qui per una lista completa delle attività tradizionali])(https://code.org/curriculum/unplugged.)
           - Adotta le regola **"chiedi a tre e poi a me"** nella tua classe: un alunno prima di farti una domanda deve averla già fatta a 3 dei suoi compagni. Questo riduce il numero delle risposte che devi dare individualmente e promuove l'apprendimento collettivo.
-          - **Sii calmo ma tenace** quando i problemi sorgono (e ce ne saranno). La tua reazione determina il clima nella classe. Se al al primo problema esclami:"sono pessimo con la tecnologia. Io mollo", i tuoi alunni penseranno che questo sia il modo giusto di comportarsi nelle loro difficoltà.
+          - **Sii calmo ma tenace** quando i problemi sorgono (e ce ne saranno). La tua reazione determina il clima nella classe. Se al al primo problema esclami:"sono pessimo con la tecnologia. Io rinuncio", i tuoi alunni penseranno che questo sia il modo giusto di comportarsi nelle loro difficoltà.
           - **Sii orgoglioso** dei loro programmi. Mostrali, falli provare ad altri, pubblicali. E' un grande successo per te e per i tuoi alunni e deve essere celebrato.
           - **Fai domande esplorative** agli alunni (anche se tu non ne conosci la risposta). Chiedi alla classe se qualcuno conosce la risposta. Eventualmente sentiti a tuo agio nel dire: "neppure io so rispondere; cerchiamo di trovare la risposta insieme!"
 
@@ -2397,6 +2484,22 @@ it-IT:
           altre linee guida suggerite dalla comunità di docenti di Code.org\n\nTi
           offriremo l'opportunità di condividere le tue linee guida con la nostra
           comunità.\n"
+      OPD-K5 Stage9Go:
+        markdown: |
+          # Gestione della classe > Riepilogo
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          In questa lezione hai:
+
+          - acquisito familiarità con il pannello di controllo dell'insegnante e delle altre risorse disponibili in Code.org
+          - riflettuto su come integrare l'informatica nel tuo insegnamento
+
+          Nella lezione 11, l'ultima lezione avrai modo di:
+
+          - riflettere su ciò che hai imparato
+          - pensare ai prossimi passi da compiere per proseguire il tuo apprendimento
+          - connetterti  con una comunità di colleghi docenti interessati all'insegnamento dell'informatica
       OPD-K5 Stage9Start:
         markdown: "# Gestione della classe > Esploriamo le risorse per gli insegnanti\n\nNel
           corso delle lezioni  da 4 a 8 hai preso visione di alcune lezioni \"tradizionali\"
@@ -2408,7 +2511,7 @@ it-IT:
           di controllo dell'insegnante](http://studio.code.org/)**. \n\nAl termine
           della lezione 10, avrai:\n\n- scoperto altre risorse disponibili per gli
           insegnanti \n- imparato l'utilizzo del **[Pannello di controllo dell'insegnante](http://studio.code.org/)**
-          di Code.org\n- pensato a come integrare l'informatica nel tuo insegnamento\n\n***\n\nQuesta
+          di Code.org\n- riflettuto su come integrare l'informatica nel tuo insegnamento\n\n***\n\nQuesta
           sotto è una schermata del pannello di controllo dell'insegnante. Per vederlo
           devi fare login con la tua utenza di insegnante in Code.org  --  dovrebbe
           essere la tua schermata predefinita del sito non appena accedi. Se non hai
@@ -2539,6 +2642,23 @@ it-IT:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
           > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Your Plan:
+        markdown: "# Gestione della classe  > La pianificazione\n\nSperiamo che questa
+          lezione ti sia servita per scoprire le risorse disponibili in Code Studio.
+          \nMentre pensi a come in futuro potresti insegnare informatica utilizzando
+          una delle risorse di code.org o Code Studio, [condividi il tuo piano con
+          la comunità degli insegnanti (PLC)](http://forum.code.org/t/teaching-computer-science-your-plans/412).\n\nCondividi
+          con noi:\n\n- Quali sono gli obiettivi per la tua classe? Come i corsi di
+          Fondamenti di informatica o le risorse di Code.org possono aiutarti a raggiungerli?\n-
+          Quali di queste risorse ti entusiasma maggiormente?\n- Quali sfide prevedi
+          nel cercare di raggiungere i tuoi obiettivi?\n- Quali domande hai a cui
+          questa community potrebbe aiutarti a rispondere?\n\nDopo aver pubblicato
+          la tua pianificazione, in seguito rivisita [questa discussione] nel forum
+          (http://forum.code.org/t/teaching-computer-science-your-plans/412) per aggiornarci
+          su come procede il piano!\n\n<a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\"
+          target=\"blank\"><button class=\"plc\">Pubblica la tua pianificazione >></button></a>\n\nDopo
+          aver scritto nel forum torna qui e seleziona il bottone sottostante per
+          procedere"
       OPD-Stage3Start:
         markdown: |-
           # Uno sguardo avanti > Sommario della lezione

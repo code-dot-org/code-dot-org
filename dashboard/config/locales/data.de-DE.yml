@@ -762,6 +762,8 @@ de:
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic Bedingungen'
         mc_2018_closing: 'Minecraft: Voyage Aquatic Glückwunsch'
         hoc_dance_warmup: Tanzparty- Aufwärmen
+        hoc_dance_events: Tanzparty - Ereignisse
+        hoc_dance_properties: Tanzparty - Eigenschaften
         hoc_dance_congrats: Tanzparty- Party los!
         c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu
           spielen
@@ -791,6 +793,7 @@ de:
         hoc_dance_events_2019: Tanzparty 2019- Events
         hoc_dance_measures_2019: Tanzparty 2019-Takte
         hoc_dance_properties_2019: Tanzparty 2019- Eigenschaften
+        csf_my_online_neighborhood_2020: Meine Online-Nachbarschaft
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den
@@ -905,8 +908,7 @@ de:
         Infinity_move_directions_callout: Welcher Baustein bewegt Baymax nach oben,
           wenn Pfeil-nach-oben gedrückt wird?
         Infinity_move_directions_callout_arrow: Benutze die Pfeiltasten zum Bewegen
-        Infinity_move_collide_callout: Spiele einen Geräusch ab, wenn dieses Ereignis
-          passiert.
+        Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
         Infinity_repeat_callout: Setze "bewegen"-Bausteine hier hinein
         craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
         craft_drag_block_callout: Ziehe einen "moveForward();"-Baustein zu einem anderen

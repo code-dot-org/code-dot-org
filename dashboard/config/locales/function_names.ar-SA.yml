@@ -232,6 +232,28 @@ ar-SA:
         square: مربع
       Guess The Number:
         check guess: تحقق من تخمين
+      MC_HOC_2017_07_Cole:
+        clear path: طريق سالك
+      MC_HOC_2017_07_Cole_2019:
+        clear path: طريق سالك
+      MC_HOC_2017_10_RETRY:
+        fix long path: أصلح المسار الطويل
+        fix short path: أصلح المسار القصير
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path: أصلح المسار الطويل
+        fix short path: أصلح المسار القصير
+      MC_HOC_2017_Ali:
+        build short bridge: ابن جسراً قصير
+        build long bridge: ابن جسراً طويل
+      MC_HOC_2017_Ali_2019:
+        build short bridge: ابن جسراً قصير
+        build long bridge: ابن جسراً طويل
+      MC_HOC_2017_FP20x20:
+        function 1: الدالة 1
+        function 2: الدالة 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1: الدالة 1
+        function 2: الدالة 2
       NEW Course 4 Artist Functions 11:
         draw a line of  squares: ارسم خط من المربعات
         draw a square 20: ارسم مربع ٢٠
@@ -312,6 +334,9 @@ ar-SA:
         draw a shape: ارسم شكل
         draw a house: رسم منزل
         draw a square: رسم مربع
+      New Minecraft Hero Project:
+        function 1: الدالة 1
+        function 2: الدالة 2
       New Play Lab Project:
         jump: قفز
         patrol: دورية

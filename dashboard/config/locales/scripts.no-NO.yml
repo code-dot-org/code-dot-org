@@ -1903,29 +1903,39 @@
               name: Hastighet
             Functions:
               name: Funksjoner
+            Text:
+              name: tekst
         coursea-2020:
           description_short: En introduksjon til datavitenskap for førskolebarn.
           stages:
             Going Places Safely:
               name: Trygg reise
+            'Programming: Happy Maps':
+              name: Glade Kart
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Dine digitale fotavtrykk
             Move It, Move It:
               name: Flytt den, flytt den
+            'Loops: Getting Loopy':
+              name: Gå i spinn
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binær armbånd
+            'Events: The Big Event':
+              name: Den store begivenheten
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeterpapirprogrammering
             Relay Programming:
               name: Relé programmering
             Conditionals with Cards:
               name: Betingelser med kort
             'Unplugged: Binary':
-              name: 'Frakoblet: Binær'
+              name: Binære Bilder
             Artist Binary:
               name: Kunstner Binær
             Digital Citizenship:
@@ -1934,8 +1944,8 @@
               name: Dansefest
         coursee-2020:
           stages:
-            Conditionals:
-              name: Betingelser
+            'Functions: Songwriting':
+              name: Låtskriving
         coursef-2020:
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag
             din egen kunst, historier og spill.
@@ -1960,3 +1970,35 @@
           stages:
             Binary Numbers:
               name: Binære Tall
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Lage Funksjoner
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+            Sprite Properties:
+              name: Figuregenskaper
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Gjenta-løkker
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hendelser

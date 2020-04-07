@@ -789,31 +789,31 @@ sk-SK:
         -   Pridaj do hry ďalšiu prekážku.
         -   Pridaj ďalší vlastný nápad.
       CSD U3 game create sprites_2018: |-
-        # Vytvor postavy
+        # Vytvor "sprite" objekty
 
-        Vytvor postavy a daj im začiatočné vlastnosti v časti kódu „Create Sprites”. Pre každú z nich by si mal/a:
+        Vytvor "sprite" objekty a daj im počiatočné vlastnosti v časti kódu „Create Sprites”. Pre každý z nich by si mal/a:
 
-        -   Vytvoriť ju na správnom mieste na obrazovke
-        -   Nastaviť animáciu (alebo farbu a veľkosť)
-        -   Nastaviť rýchlosť pohybu a rýchlosť otáčania, ak je to potrebné
-        -   Nastavit nárazník a „odrazivosť“, ak je to potrebné
+        -   Vytvoriť ho na správnom mieste na obrazovke;
+        -   Nastaviť jeho animáciu (alebo farbu a veľkosť);
+        -   Ak je to potrebné, nastaviť jeho rýchlosť pohybu (velocity) a rýchlosť otáčania (rotation speed);
+        -   Ak je to potrebné, nastaviť jeho nárazník (collider) a „odrazivosť“ (bounciness).
 
-        Každú postavu po vytvorení otestuj predtým ako vytvoríš ďaľšiu. Ak  začína mimo obrazovky, najprv ju umiestni na obrazovku, aby si otestoval/a, či vyzerá správne, a následne zmeň nastavenia tak, aby bola mimo obrazovky.
+        Každý "sprite" otestuj predtým, ako vytvoríš ďaľší. Ak začína mimo obrazovky, najprv ho umiestni na obrazovku, aby si otestoval/a, či vyzerá správne. Následne zmeň nastavenia tak, aby bol mimo obrazovky.
 
-        Ak umiestnetnenie niektorej postavy bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jej umiestnenie, aby si ju vedela použiť neskôr.
+        Ak umiestnetnenie niektorého "sprite" objektu bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jeho umiestnenie. Následne ju môžeš neskôr použiť.
       CSD U3 game create sprites_2019: |-
-        # Vytvor postavy
+        # Vytvor "sprite" objekty
 
-        Vytvor postavy a daj im začiatočné vlastnosti v časti kódu „Create Sprites”. Pre každú z nich by si mal/a:
+        Vytvor "sprite" objekty a daj im počiatočné vlastnosti v časti kódu „Create Sprites”. Pre každý z nich by si mal/a:
 
-        -   Vytvoriť ju na správnom mieste na obrazovke
-        -   Nastaviť animáciu (alebo farbu a veľkosť)
-        -   Nastaviť rýchlosť pohybu a rýchlosť otáčania, ak je to potrebné
-        -   Nastavit nárazník a „odrazivosť“, ak je to potrebné
+        -   Vytvoriť ho na správnom mieste na obrazovke;
+        -   Nastaviť jeho animáciu (alebo farbu a veľkosť);
+        -   Ak je to potrebné, nastaviť jeho rýchlosť pohybu (velocity) a rýchlosť otáčania (rotation speed);
+        -   Ak je to potrebné, nastaviť jeho nárazník (collider) a „odrazivosť“ (bounciness).
 
-        Každú postavu po vytvorení otestuj predtým ako vytvoríš ďaľšiu. Ak  začína mimo obrazovky, najprv ju umiestni na obrazovku, aby si otestoval/a, či vyzerá správne, a následne zmeň nastavenia tak, aby bola mimo obrazovky.
+        Každý "sprite" otestuj predtým, ako vytvoríš ďaľší. Ak začína mimo obrazovky, najprv ho umiestni na obrazovku, aby si otestoval/a, či vyzerá správne. Následne zmeň nastavenia tak, aby bol mimo obrazovky.
 
-        Ak umiestnetnenie niektorej postavy bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jej umiestnenie, aby si ju vedela použiť neskôr.
+        Ak umiestnetnenie niektorého "sprite" objektu bude potrebovať počas hry reset, zíde sa ti vytvoriť funkciu, ktorá definuje jeho umiestnenie. Následne ju môžeš neskôr použiť.
       CSD U3 keydown conditional_2018: "# Zmena \"sprite\" objektov\n\nV poslednom
         leveli sme videli, že `keyDown` vráti hodnotu `true`, ak je klávesa stlačená,
         a `false`, ak stlačená nie je. Vstupom pre príkaz `keyDown` je anglický názov
@@ -1886,8 +1886,8 @@ sk-SK:
 
         Použi bloky s udalosťami ako napríklad 'keď sa postava dotkne', aby si ovplyvnil skóre alebo vyhral. Nazbieraj 5 bodov alebo vyhraj, aby si vyriešil túto úlohu.
       courseC19_playLab_EOC5: Skvelá práca! Máš všetky základné časti fungujúcej hry.
-        Teraz venuj nejaký čas tomu, aby si s uistil, že hra funguje tak ako chceš.
-        Keď budeš hotový, klikni na "Dokončiť"!
+        Teraz si skontroluj, či hra funguje presne tak, ako chceš. A nakoniec klikni
+        na "Dokončiť"!
       courseC_PlayLab_events6_2019: Napíš program na pohyb tučniaka Waddles použitím
         kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele.
       courseC_PlayLab_events7: "Blok \"opakuj donekonečna\" púšťa kód znova a znova
@@ -3633,6 +3633,70 @@ sk-SK:
         na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       courseE_artist_functions2_2019: "Tu je funkcia `nakresli štvorec`. Použi ju
         na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
+      courseE_artist_functions3_2018: |-
+        Poskladaj funckiu, ktorá vytvorí túto hviezdu.
+
+        * * *
+
+        -   Každé rameno hviezdy je dlhé 25 pixelov
+        -   Potrebuješ sa otáčať o 45 stupňov aby si mal 8 ramien
+        -   Je v poriadku chodiť dopredu a dozadu po jednom ramene
+      courseE_artist_functions3_2019: |-
+        Poskladaj funckiu, ktorá vytvorí túto hviezdu.
+
+        * * *
+
+        -   Každé rameno hviezdy je dlhé 25 pixelov
+        -   Potrebuješ sa otáčať o 45 stupňov aby si mal 8 ramien
+        -   Je v poriadku chodiť dopredu a dozadu po jednom ramene
+      courseE_artist_functions5_2018: |-
+        Kedy je ťažšie nakresliť tri hviezdy ako štyri? Vtedy ak musíš pritom ešte aj preskočiť mesiac!
+
+        Na dokončenie úlohy, nakresli len tie tri hviezdy.
+
+        * * *
+
+        -   Skok medzi prvou a druhou hviezdou je **200** pixelov
+        -   Skok medzi druhou a treťou hviezdou je **100** pixelov
+      courseE_artist_functions5_2019: |-
+        Kedy je ťažšie nakresliť tri hviezdy ako štyri? Vtedy ak musíš pritom ešte aj preskočiť mesiac!
+
+        Na dokončenie úlohy, nakresli len tie tri hviezdy.
+
+        * * *
+
+        -   Skok medzi prvou a druhou hviezdou je **200** pixelov
+        -   Skok medzi druhou a treťou hviezdou je **100** pixelov
+      courseE_artist_functions7_2018: "Kresliť všetky tie okná osobitne by bolo otravné!\n\nVyskúšaj
+        túto úlohu vyriešiť  vytvorením funkcie  `nakresliť okno` a zavolaj ju 5-krát.
+        Pozor na dvere!\n\n* * *\n\n-   Každé okno je tvorené štyrmi **25** pixelovými
+        štvorcami.\n-   Vrchné okná sú od seba vzdialené **100** pixelov. \n-   Spodné
+        okná sú od vrchných vzdialené  **150** pixelov."
+      courseE_artist_functions7_2019: "Kresliť všetky tie okná osobitne by bolo otravné!\n\nVyskúšaj
+        túto úlohu vyriešiť  vytvorením funkcie  `nakresliť okno` a zavolaj ju 5-krát.
+        Pozor na dvere!\n\n* * *\n\n-   Každé okno je tvorené štyrmi **25** pixelovými
+        štvorcami.\n-   Vrchné okná sú od seba vzdialené **100** pixelov. \n-   Spodné
+        okná sú od vrchných vzdialené  **150** pixelov."
+      courseE_artist_functions8a_2018: "_\"Funkcie jednoducho!\"_\n\nTeraz postavíme
+        niečo efektné! Začni s vytvorením funkcie pre tento štvorec. "
+      courseE_artist_functions8a_2019: "_\"Funkcie jednoducho!\"_\n\nTeraz postavíme
+        niečo efektné! Začni s vytvorením funkcie pre tento štvorec. "
+      courseE_artist_functions8b_2018: |-
+        _"Zombiemu sa toči hlava."_
+
+        Zavolaj funkciu `nakresli štvorec` zvnútra funkcie `nakresli rad štvorcov`, aby to bolo ešte jednoduchšie!
+
+        * * *
+
+        -   Štvorce sú od seba vzdialené _50_ pixelov.
+      courseE_artist_functions8b_2019: |-
+        _"Zombiemu sa toči hlava."_
+
+        Zavolaj funkciu `nakresli štvorec` zvnútra funkcie `nakresli rad štvorcov`, aby to bolo ešte jednoduchšie!
+
+        * * *
+
+        -   Štvorce sú od seba vzdialené _50_ pixelov.
       courseE_artist_functions8c_2018: Pridaj ešte jednu funkciu, ktorá vytvorí tento
         rad spojených štvorcov, použi funkciu `nakresli rad štvorcov`.
       courseE_artist_functions8c_2019: Pridaj ešte jednu funkciu, ktorá vytvorí tento
@@ -3645,6 +3709,10 @@ sk-SK:
         limitovaných dostupných blokov. \n\n-   Každý trojuhlník má strany dlhé **50
         pixelov:**  \n-   Aby si nakreslil/a diamant, musíš striedať otočky medzi
         **60 stupňov a 120 stupňov**."
+      courseE_artist_functionsProj_2018: "**Inšpirácia:** Použi čo si sa naučil/a
+        a vytvor čo len chceš! \n\nDokážeš vytvoriť niečo ako táto ružica?"
+      courseE_artist_functionsProj_2019: "**Inšpirácia:** Použi čo si sa naučil/a
+        a vytvor čo len chceš! \n\nDokážeš vytvoriť niečo ako táto ružica?"
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
         mal ideálny počet blokov.

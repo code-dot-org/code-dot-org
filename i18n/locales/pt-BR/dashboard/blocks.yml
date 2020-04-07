@@ -1560,6 +1560,14 @@ pt-BR:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: mover {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Leste
+            '"South"': Sul
+            '"West"': Oeste
       aalab_prompt:
         text: perguntar {MESSAGE}
       aalab_scene:
@@ -1571,12 +1579,10 @@ pt-BR:
             '3': '3'
       aalab_setupStory:
         text: configurar estória
-      aalab_showHideSprite:
-        text: "{OPTION} {SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mostre
-            '"hide"': oculte
+            '"random"': aleatório
       binary_drawBin:
         text: desenhar o binário {BIN}
       binary_drawBinScreen:

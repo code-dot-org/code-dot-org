@@ -184,12 +184,24 @@ cs-CZ:
       courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
+      courseC_maze_programming5:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseC_maze_programming5_2018:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseC_maze_programming5_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_artist_ramp11:
+        courseD_artist_ramp11_1: Tohle číslo můžeš změnit.
+        courseD_artist_ramp11_2: Klikni sem, abys napsal(a) počet opakování svého
+          kódu.
       courseD_farmer_while7_2018:
         courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
           použít blok `pokud je cesta vpřed`.
       courseD_farmer_while7_2019:
         courseD_farmer_while7_2018_PathAhead: Abys vyřešil tuto úlohu, budeš muset
           použít blok `pokud je cesta vpřed`.
+      courseD_maze_intro5a_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
@@ -201,9 +213,29 @@ cs-CZ:
           pro spuštění svého programu.
       courseD_maze_ramp3_2019:
         stone_block_2: Šedé bloky není možné zahodit.
+      courseD_maze_ramp5:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5_2018:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a_2018:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseD_maze_ramp5a_2019:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Poté co spojíš všechny bloky, zmáčkni "Spustit"
           pro spuštění svého programu.
+      courseD_scrat_ramp5:
+        '': Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!
+      courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Tohle číslo můžeš změnit.
+        courseE_artist_ramp8_2: Klikni sem, abys napsal(a) počet opakování svého kódu.
+      courseE_artist_ramp8_2:
+        courseE_artist_ramp8_1: Tohle číslo můžeš změnit.
+        courseE_artist_ramp8_2: Klikni sem, abys napsal(a) počet opakování svého kódu.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.

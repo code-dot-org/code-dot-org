@@ -382,6 +382,109 @@ pt-PT:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Faz com que o Agent construa algumas pontes para que
           Alex ou Steve se possa deslocar para além da orla do mapa.
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: 'Tenta que o Agente construa algumas pontes para que
+          o Alex ou o Steve possam andar para além dos limites do mapa. '
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_d: |-
+          Tenta isto!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      course1_collector_loops_challenge4:
+        courseB_collector_loops_challenge2_d: |-
+          Tenta esta solução:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       course2_artist_prog_challenge1:
         courseC_artist_prog_challenge1_a: 'O rectângulo tem 200 píxeis de largura
           e 100 píxeis de altura. '
@@ -413,3 +516,283 @@ pt-PT:
           de me virar para o lado certo!_
         courseC_maze_programming_challenge2_b: A solução mais curta só usa 5 blocos,
           mas usa o bloco `repita`!
+      courseB_collector_loops_challenge1:
+        courseB_collector_loops_challenge1_d: |-
+          Tenta isto!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_collector_loops_challenge1_2018:
+        courseB_collector_loops_challenge1_d: |-
+          Tenta isto!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_collector_loops_challenge1_2019:
+        courseB_collector_loops_challenge1_d: |-
+          Tenta isto!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">5</title>
+                  <statement name="DO">
+                    <block type="maze_moveSouth">
+                      <next>
+                        <block type="collector_collect"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast">
+                          <next>
+                            <block type="controls_repeat_simplified">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="collector_collect">
+                                  <next>
+                                    <block type="maze_moveNorth"/>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="maze_moveEast">
+                                  <next>
+                                    <block type="maze_moveEast">
+                                      <next>
+                                        <block type="controls_repeat_simplified">
+                                          <title name="TIMES">5</title>
+                                          <statement name="DO">
+                                            <block type="maze_moveSouth">
+                                              <next>
+                                                <block type="collector_collect"/>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_collector_loops_challenge2:
+        courseB_collector_loops_challenge2_d: |-
+          Tenta esta solução:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat_simplified_dropdown">
+                  <title name="TIMES" config="3-10">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="collector_collect">
+                          <next>
+                            <block type="maze_moveWest">
+                              <next>
+                                <block type="maze_moveWest">
+                                  <next>
+                                    <block type="maze_moveSouth"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_repeat_simplified_dropdown">
+                      <title name="TIMES" config="3-10">6</title>
+                      <statement name="DO">
+                        <block type="collector_collect"/>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_collector_loops_challenge2a:
+        courseB_collector_loops_challenge2a_a: 'Se algo correr mal, tenta resolver
+          o problema. Não desistas! '
+        courseB_collector_loops_challenge2a_b: Vê esta opção para conseguires sair
+          do labirinto. Vês algum padrão que possas repetir?
+        courseB_collector_loops_challenge2a_c: Para conseguires todo o tesouro, precisas
+          ou de adicionar dois <xml> <block type="collector_collect"/></xml> blocos
+          dentro de um ciclo, ou colocar um bloco dentro do seu próprio bloco de 'repetir'.
+      courseB_collector_loops_challenge2a_2018:
+        courseB_collector_loops_challenge2a_a: 'Se algo correr mal, tenta resolver
+          o problema. Não desistas! '
+        courseB_collector_loops_challenge2a_b: Vê esta opção para conseguires sair
+          do labirinto. Vês algum padrão que possas repetir?
+        courseB_collector_loops_challenge2a_c: Para conseguires todo o tesouro, precisas
+          ou de adicionar dois <xml> <block type="collector_collect"/></xml> blocos
+          dentro de um ciclo, ou colocar um bloco dentro do seu próprio bloco de 'repetir'.
+      courseB_collector_loops_challenge2a_2019:
+        courseB_collector_loops_challenge2a_a: 'Se algo correr mal, tenta resolver
+          o problema. Não desistas! '
+        courseB_collector_loops_challenge2a_b: Vê esta opção para conseguires sair
+          do labirinto. Vês algum padrão que possas repetir?
+        courseB_collector_loops_challenge2a_c: Para conseguires todo o tesouro, precisas
+          ou de adicionar dois <xml> <block type="collector_collect"/></xml> blocos
+          dentro de um ciclo, ou colocar um bloco dentro do seu próprio bloco de 'repetir'.
+      courseB_maze_seq6:
+        courseB_maze_seq5_c: Há duas formas de resolver este puzzle.
+      courseB_maze_seq6_2018:
+        courseB_maze_seq5_c: Há duas formas de resolver este puzzle.
+      courseB_maze_seq6_2019:
+        courseB_maze_seq5_c: Há duas formas de resolver este puzzle.
+      courseB_maze_seq7:
+        courseB_maze_seq7_a: Adiciona 1 bloco para mover o pássaro até ao porco.
+        courseB_maze_seq7_c: Não consegues chegar ao porco? Tenta este caminho!
+      courseB_maze_seq9:
+        courseB_maze_seq9_c: Há duas formas de resolver este puzzle.
+        courseB_maze_seq9_d: Encravado? Tenta este caminho!
+      courseB_maze_seq9_2018:
+        courseB_maze_seq9_c: Há duas formas de resolver este puzzle.
+        courseB_maze_seq9_d: Encravado? Tenta este caminho!
+      courseB_maze_seq9_2019:
+        courseB_maze_seq9_c: Há duas formas de resolver este puzzle.
+        courseB_maze_seq9_d: Encravado? Tenta este caminho!
+      courseB_starWars_prog3:
+        courseB_starWars_prog3_b: Constrói um pedaço de código de cada vez. Corre-o
+          para perceberes como proceder a partir daí.
+      courseB_starWars_prog3_2018:
+        courseB_starWars_prog3_b: Constrói um pedaço de código de cada vez. Corre-o
+          para perceberes como proceder a partir daí.
+      courseB_starWars_prog3_2019:
+        courseB_starWars_prog3_b: Constrói um pedaço de código de cada vez. Corre-o
+          para perceberes como proceder a partir daí.
+      courseB_starWars_prog4:
+        courseB_starWars_prog4_a: Constrói um pedaço de código de cada vez. Corre-o
+          para perceberes como proceder a partir daí.
+      courseB_starWars_prog4_2018:
+        courseB_starWars_prog4_a: Constrói um pedaço de código de cada vez. Corre-o
+          para perceberes como proceder a partir daí.
+      courseB_starWars_prog4_2019:
+        courseB_starWars_prog4_a: Constrói um pedaço de código de cada vez. Corre-o
+          para perceberes como proceder a partir daí.

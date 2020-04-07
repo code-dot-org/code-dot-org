@@ -10,6 +10,7 @@
   csedweek_dates: "8-14 dekabr, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Dasturlash soati</a> yaqinlashmoqda. Barcha o''qituvchi va tashkilotchilarni <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">o‘z Dasturlash soatlarini rejalashtirishga</a> chaqiramiz.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini ham ko‘ring.</a>'
+  csedweek_banner_teachers_text: "Informatika o‘qituvchisimisiz? Boshqa CSEdWeek manbalarini ham ko‘ring."
   n_have_learned_an_hoc: "<h1>Dasturlash soatini</h1><h2>sinab ko‘ring</h2><h3>o‘tganlar: #</h3>"
   anybody_can_learn: "Har kim o‘rganishi mumkin."
   learn_now: "Hoziroq o‘rganing"

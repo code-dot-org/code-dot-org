@@ -189,20 +189,20 @@ sk:
         studio_c2_8: Nastav tučniaka tak, aby povedal "Au!" a prehral zvuk "úderu" keď narazí do dinosaura. Posúvaj ho šípkami a vyskúšaj to.
         studio_c2_9: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
-        studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c2_11: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť" a pošli ho kamarátom na mobil!
         studio_c3_story_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_c3_story_2: Viete nechať psa niečo povedať a potom nechať mačku takisto niečo povedať?
         studio_c3_story_3: Viete napísať program, ktorý posunie tohto psa k mačke?
         studio_c3_story_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech mačka povie "ahoj", keď k nej pes príde?
         studio_c3_story_5: Viete pridať blok a spraviť chobotnicu šťastnou?
-        studio_c3_story_6: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c3_story_6: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť" a pošli ho kamarátom na mobil!
         studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj", keď na ňu klikneš?
         studio_c3_game_2: Viete napísať program na pohyb tučniaka použitím kláves hore / dole / doľava / doprava tak, aby zasiahol všetky ciele?
         studio_c3_game_3: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať správne bloky, ktoré umožnia, aby sa dinosaurus opakovane pohyboval hore a dole?
         studio_c3_game_4: Nastav tučniaka tak, aby povedal "Au!" a prehral zvuk "úderu" keď narazí do dinosaura. Posúvaj ho šípkami a vyskúšaj to.
         studio_c3_game_5: Viete pridať blok pre získanie bodu, keď Waddles narazí do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom ho presunúť pomocou šípok až kým neskóruje?
-        studio_c3_game_7: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
+        studio_c3_game_7: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_playlab_1: Tučniačik chce povedať "ahoj" - môžeš mu s tým pomôcť?
         studio_playlab_2: Jaskynný muž (postava 1) a jaskynná žena (postava 2) by sa chceli navzájom pozdraviť slovom "ahoj". Pomôž im k tomu tak, že dvakrát použiješ blok "povedz".
         studio_playlab_3: Dokážeš pomôcť tenistke dostať sa k vlajke?
@@ -212,7 +212,7 @@ sk:
         studio_playlab_7: Blok "opakuj donekonečna" umožňuje nekonečný beh kódu. Vieš pridať tieto bloky a pomôcť čarodejníkovi opakovane sa pohybovať doprava a doľava?
         studio_playlab_8: Vieš pridať blok, ktorým získaš body a blok, ktorým prehráš zvuk v momente, keď jednorožec narazí do čarodejníka? Po naprogramovaní posúvaj jednorožcom až kým neskóruješ.
         studio_playlab_9: Nastav pozadie pre túto inváziu mimozemšťanov a pomôž Spacebotovi čo najrýchlejšie sa dostať k mimozemštanovi tým, že zmeníš jeho rýchlosť. Potom ho presuň pomocou šípiek a upozorni na inváziu aj ostatných
-        studio_playlab_10: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
+        studio_playlab_10: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_iceage_hello1: Sid chce dať všetkých dokopy pre nové dobrodružstvo. Viete mu pomôcť povedať "ahoj" presunutím bloku "povedať" na pracovnú plochu a napísaním "ahoj" doňho?
         studio_iceage_hello2: Manny (postavička č. 1) našla Sida (postavička č. 2) a chce ho zobrať na dobrodružný výlet. Pomôž im pozdraviť sa nazvájom použitím bloku "postavička povie" dvakrát.
         studio_iceage_move_to_flag: Scrat hľadá svoj žaluď! Pomôžte mu prejsť posledných 200 pixelov pomocou bloku "posunúť".
@@ -223,7 +223,7 @@ sk:
         studio_iceage_sound_and_points: Napísali sme za Vás skoro všetok kód, ktorý hýbe Babičkou doľava a doprava, ako aj kód, ktorý hýbe Sida po obrazovke. Viete dokončiť kód a pridať bloky k akcií "keď sa postavička dotkne" tak, že zaznie zvuk keď hocikto z nich získa bod a keď sa Sid a Granny stretnú? Stlačte Spustiť pre začiatok hry.
         studio_iceage_warn_ice_age: Každý sa musí pohybovať rýchlejšie, lebo sa blíži Doba Ľadová! Zmeň pozadie na ľadové a nastav Sidovu rýchlosť na rýchlu. Potom stlač "Spustiť" a posuň Sida k Diegovi, aby ho varoval.
         studio_iceage_throw_hearts: Sid chce dať vedieť svojej babke, Babičke, že ju ľúbi. Použite príkaz "postavička hodí", aby Sid (postavička č. 1) hodil Babičke (postavička č. 2) srdiečka! Nastavte Babičkinu náladu na šťastnú akonáhle dostane srdiečka.
-        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru, alebo príbeh. Keď budeš hotový, klikni na Skončiť, aby si mohli zahrať tvoju hru kamaráti na svojich telefónoch, tabletoch, alebo na počítačoch!
+        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru alebo príbeh. Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti na mobile, tablete, či počítači!
         studio_gumball_hello1: Anais si chce nájsť nových kamarátov. Pomôžeš jej povedať "ahoj" tým, že presunieš blok "povedz" na pracovnú plochu a napíšeš do neho "ahoj"?
         studio_gumball_hello2: Darwin (postava 1) a jeho brat Gumball (postava 2) idú do školy. Pomôž im pozdraviť sa tak, že dvakrát použiješ blok "postava povedz".
         studio_gumball_move_to_flag: Banánový Joe sa chystá vyhrať preteky! Pomôž mu prejsť posledných 200 pixelov pomocou bloku "posuň sa".
@@ -234,8 +234,8 @@ sk:
         studio_gumball_sound_and_points: Napísali sme za teba skoro všetok kód, ktorý hýbe Antonom (postava 2) doľava a doprava, ako aj kód, ktorý umožní hýbať sa Banánovému Joe (postava 1) po obrazovke. Dokonči kód a pridaj k udalosti "keď sa postava dotkne" bloky, ktoré zahrajú zvuk vždy, keď niekto z nich získa bod, alebo keď sa Banánový Joe a Anton stretnú. Stlač "Spustiť" a hru si zahraj.
         studio_gumball_warn_food_fight: Darwin práve utiekol z bitky s jedlom! Zmeň pozadie na "postavy" a zmeň Darwinovu rýchlosť na rýchlu, potom stlač "Spustiť" a presuň Darwina ku Penny, aby ju mohol varovať.
         studio_gumball_join_food_fight: Pridaj sa ku bitke s jedlom! Použi príkaz "postava hoď predmet vpravo", aby Banánový Joe (postava č. 1) odhodil jedlo na Antona (postava č. 2)! Ak Antona zasiahne, nastav Antonovu náladu na nahnevanú.
-        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh. Keď budeš hotový klikni na Skončiť, aby si mohli kamaráti zahrať tvoju hru na svojich telefónoch, tabletoch, alebo na počítačoch!
-        studio_full_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
+        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh.  Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti na mobile, tablete, či počítači!
+        studio_full_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_k1_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_k1_2: Viete nechať psa niečo povedať a potom nechať mačku takisto niečo povedať?
         studio_k1_3: Viete napísať program, ktorý posunie tohto psa k mačke?
@@ -255,7 +255,7 @@ sk:
         applab_ec_simple: Vytvor si aplikáciu použitím blokov v paneli nástrojov.
         turtle_ec_1_2: 'Teraz nakresli štvorec. POZNÁMKA: použi svoju obľúbenú farbu výberom na novom bloku "farbaPera".'
         turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Pár vtipných nápadov: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj blok "šírkaPera". Prajeme veľa zábavy!'
-        studio_ec_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
+        studio_ec_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
     video:
       name:
         maze_intro: Úvod do bludiska
@@ -524,6 +524,8 @@ sk:
         hoc_dance_events_2019: Tanečná párty 2019 - Udalosti
         hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
         hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
+        csf_my_online_neighborhood_2020: Moja internetová štvrť
+        csf_private_and_personal_information: Súkromné a osobné údaje
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

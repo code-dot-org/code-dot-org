@@ -546,7 +546,7 @@ de-DE:
         markdown: |
           # Binäre Bilder
 
-          Erfahre ein Bild mit nur zwei einfachen Werten darstellen zu können.
+          Lerne, wie man ein Bild mit nur zwei einfachen Werten darstellen kann.
       Building a UI with Design Mode:
         markdown: |
           # Willkommen im App Lab Design Mode
@@ -2221,10 +2221,10 @@ de-DE:
           Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       New Challenge Introduction:
         content1: hier die Beschreibung
-        markdown: "### Neue Herausforderung: Knacken Sie eine zufällige Substitutions-Verschlüsslung...mit
+        markdown: "### Neue Herausforderung: Knacke eine zufällige Substitutions-Verschlüsselung...mit
           einem neuen Widget.\n\nWas wäre, wenn wir, anstatt das ganze Alphabet zu
           verschieben, jeden Buchstaben des Alphabets auf einen anderen Buchstaben
-          des Alphabets abgebildet hätten? Dies wird als **zufällige Substitutions-Verschlüsslung**
+          des Alphabets abgebildet hätten? Dies wird als **zufällige Substitutions-Verschlüsselung**
           bezeichnet.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNun,
           anstatt dass die geheime Nachricht mit einer einfachen alphabetischen Verschiebung
           kodiert wird, wirst du Nachrichten sehen, die mit **zufälliger Substitutions-Verschlüsselung**
@@ -2234,15 +2234,15 @@ de-DE:
           viele verschiedene Dinge zeigt.\n\nAber was es tut bleibt ein Rätsel!  \n\n####
           Deine Aufgabe:\n\n * Finde heraus, was in dieser neuen Version des Tools
           vor sich geht.\n * Welche Informationen werden Dir präsentiert?\n * Finde
-          heraus, was das Tool dir erlaubt.\n * Wie immer: Man kann es nicht brechen.
+          heraus, was das Tool Dir erlaubt.\n * Wie immer: Man kann es nicht brechen.
           \ Also einfach herumklicken und ausprobieren.\n * Wenn du es herausfindest,
           kannst du möglicherweise eine Nachricht knacken, die mit zufälliger Substitutions-Verschlüsselung
-          kodiert wurde.\n \n### Hinweis\n\n* Wussten Sie, dass **E** der gebräuchlichste
-          Brief im Englischen ist?\n\n### Rekapitulieren und diskutieren\n Nachdem
-          du einige Zeit damit gespielt hast, solltest du dich mit jemandem - Partner,
-          Kleingruppe, ganze Klasse - treffen, um zu besprechen, was du gefunden hast,
-          und dich vergewissern, dass du weißt, was los ist und wie du das Tool benutzen
-          kannst.\n\n\n"
+          kodiert wurde.\n \n### Hinweis\n\n* Wusstest Du, dass **E** der gebräuchlichste
+          Buchstabe im Englischen ist?\n\n### Rekapitulieren und diskutieren\n Nachdem
+          Du einige Zeit damit gespielt hast, solltest Du Dich mit jemandem - Partner,
+          Kleingruppe, ganze Klasse - treffen, um zu besprechen, was Du herausgefunden
+          hast, und Dich vergewissern, dass Du weißt, was los ist und wie Du das Tool
+          benutzen kannst.\n\n\n"
       OPD-K5 Celebrate:
         markdown: |
           # Weitere Schritte > Feiern!
@@ -2486,16 +2486,16 @@ de-DE:
           vorkommen.\n* Tatsächlich ist die Verteilung der Buchstaben für fast alle
           Muster des englischen Textes ungefähr gleich. \n\n\nDie Version des Widgets
           auf der vorherigen Seite soll Dir helfen, **eine Substitutions-Verschlüsselung
-          durch Frequenzanalyse zu knacken**.\n\nIndem du die Häufigkeit der Buchstaben
+          durch Frequenzanalyse zu knacken**.\n\nIndem Du die Häufigkeit der Buchstaben
           in der verschlüsselten Nachricht im Vergleich zur Häufigkeit der Buchstaben
-          in einem typischen Stück englischer Prosa analysierst, kannst du beginnen,
-          dich darauf zu beschränken, was einige der Buchstabenzuordnungen sein könnten.
+          in einem typischen Stück englischer Prosa analysierst, kannst Du beginnen,
+          Dich darauf zu beschränken, was einige der Buchstabenzuordnungen sein könnten.
           \n\nDas Tool zeigt Dir, wie sich die Häufigkeit der Buchstaben im verschlüsselten
           Text (orange) mit der Häufigkeit aus dem typischen Englisch (blau) vergleicht.\n\n###
           Tipp: Wo soll man anfangen?\n\n1. Finde die kurzen Wörter und \"knacke\"
-          diese zuerst.  Wie viele Wörter mit einem Buchstaben kennst du? (\"a\").
-          \ Ein sehr häufiges Wort mit 3 Buchstaben ist \"the\".\n2. Sobald du das
-          getan hast, hast du Substitionen für einige der häufigsten Buchstaben.  Du
+          diese zuerst.  Wie viele Wörter mit einem Buchstaben kennst Du? (\"a\").
+          \ Ein sehr häufiges Wort mit 3 Buchstaben ist \"the\".\n2. Sobald Du das
+          getan hast, hast Du Substitionen für einige der häufigsten Buchstaben.  Du
           solltest in der Lage sein deine Intuition zu nutzen, um mit diesen Teilunterstützungen
           andere Wörter zu erraten.\n3. Nachdem man nur eine Handvoll hart umkämpfter
           Buchstaben gefunden hat, wird der Rest einfach.\n4. Der Vergleich der Häufigkeiten
@@ -2521,10 +2521,10 @@ de-DE:
           die eine Verschlüsselung durchführt.\n* **Caesar's Cipher** (hier auch Caesar
           Verschlüsselung genannt) - eine Verschlüsselungstechnik, die das Alphabet
           um eine bestimmte Anzahl von Zeichen verschiebt.\n* **Knacken der Verschlüsselung**
-          - Wenn Sie versuchen, eine geheime Nachricht zu entschlüsseln, *ohne* alle
+          - Wenn Du versuchst, eine geheime Nachricht zu entschlüsseln, *ohne* alle
           Besonderheiten der Verschlüsselung zu kennen, versuchen Sie, die Verschlüsselung
-          zu **knacken** (englisch: to crack).\n\n\nKlicken Sie auf Weiter, um die
-          **Nächste Herausforderung** zu sehen...\n\n \n"
+          zu **knacken** (englisch: to crack).\n\n\nKlicke auf Weiter, um die **Nächste
+          Herausforderung** zu sehen...\n\n \n"
       TheRightAppMarkdownLevel_2019:
         markdown: "# Die richtige App\n\n* Jeder benutzt heutzutage Computer, insbesondere
           Smartphones. \n* Smartphone-Apps helfen Menschen, Dinge zu tun, wie mit
@@ -3371,13 +3371,19 @@ de-DE:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Nichts. Scrat wird sich überhaupt nicht bewegen.
+        - text: Scrat wird sich dreimal vorwärts bewegen, sich drehen, sich dann noch
+            dreimal vorwärts bewegen und es bis zur Eichel schaffen!
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Scrat wird sich vorwärts bewegen, sich dann umdrehen und abstürzen.
         - text: Ich weiß es nicht.
+          feedback: Wenn du den "Vorwärts"-Block innerhalb des "Wiederholen"-Blocks
+            platzierst, bewegt sich Scrat dreimal vorwärts. Dann dreht er sich um
+            und bewegt sich noch drei weitere Male vorwärts und erreicht die Eichel!
         questions:
-        - {}
+        - text: Dieser Code verwendet einen neuen Block. Was passiert deiner Meinung
+            nach, wenn du auf "Ausführen" drückst?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -3770,3 +3776,7 @@ de-DE:
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
+      gradek1_activity_beNice:
+        markdown: "# Verhalten im Computerlabor\n \n<br/><br/>  \n  \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nZum Unterrichtsplan\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Weiter</a>"

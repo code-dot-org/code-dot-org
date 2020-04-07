@@ -1800,13 +1800,15 @@ zh-TW:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: 沒事。鼠奎特一動不動。
+        - text: 鼠奎特會向前移動3次，轉彎，然後再向前移動3次，讓它拿到橡果！
+          correct: true
           feedback: 正確！
-        - {}
+        - text: 鼠奎特會向前移動，然後轉彎並碎裂。
         - text: 我不知道。
+          feedback: 將「move forward」模塊放進「repeat」模塊會致使鼠奎特向前移動3次。然後它轉彎，繼續向前移動3次，讓它拿到橡果！
         questions:
-        - {}
+        - text: 這個程式使用新的模塊。當您按下「運行」時，您認為會發生什麼？
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -2076,3 +2078,7 @@ zh-TW:
         - text: 我不知道。
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "#計算機實驗室行為\n\n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>轉至教學計劃</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
+          btn-large btn-primary next-stage submitButton\">繼續</a>"

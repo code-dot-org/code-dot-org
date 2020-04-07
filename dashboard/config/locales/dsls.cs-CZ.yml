@@ -271,21 +271,23 @@ cs-CZ:
         content1: Každé z těchto vozidel bylo rozloženo na menší kousky. Porovnej
           každé vozidlo s jeho seznamem rozložení.
         questions:
-        - text: "<h3>Kola/strana: 2 <br/> Okna/strana: 0</h3>"
-        - text: "<h3>Kola/strana: 2 <br/> Okna/strana: 0</h3>"
-        - text: "<h3>Kola/strana: 2 <br/> Okna/strana: 6</h3>"
-        - text: "<h3>Kola/strana: 3 <br/> Windows/strana: 2</h3>"
+        - text: "**Kola/strana: 2**  \n**Okna/strana: 0**"
+        - text: "**Kola/strana: 2**  \n**Okna/strana: 1**"
+        - text: "**Kola/strana: 2**  \n**Okna/strana: 6**"
+        - text: "**Kola/strana: 3** \n**Okna/strana: 2**"
         title: Porovnání
       4-5 Computational Thinking Multi 1:
         answers:
         - text: Seattle _____ _____ _____.
-        - text: _____ je město _____.
+        - text: _____  je ______ město.
           correct: true
         - text: _____ je _____ _____.
-        - text: Eugene je město _____.
+        - text: Eugene je _______ město.
+        content1: Zde jsou tři věty. Které ze šablon dole je správně shrnuje tak,
+          aby bylo možné použít stejnou šablonu pro všechny z nich?
         questions:
-        - text: Seattle je velké město. <br/> Eugene je střední město <br/> Hillview
-            je malé město.
+        - text: "Seattle je velké město. \nEugene je střední město \nHillview je malé
+            město. "
         title: Vícenásobná volba
       4-5 Crowdsourcing Multi 1:
         answers:
@@ -1623,7 +1625,7 @@ cs-CZ:
             na "Spustit"?
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - {}
+        - text: 'Laurel špatně zatočí, když bude dělat čtverec. '
         - {}
         - correct: true
           feedback: Správně!

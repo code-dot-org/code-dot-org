@@ -12,6 +12,7 @@
   csedweek_dates: "8-14 Desember 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> The Hour of Code</a> telah tiba. Mintalah semua guru dan penyelenggara, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> rencanakan Hour of Code Anda</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek yang lain</a>'
+  csedweek_banner_teachers_text: "Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek yang lain"
   n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: "Siapa pun bisa belajar."
   learn_now: "Pelajari sekarang"

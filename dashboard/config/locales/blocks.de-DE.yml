@@ -1514,6 +1514,14 @@ de:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: bewege {SPRITE} {DISTANCE} Pixel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Ost
+            '"South"': Süd
+            '"West"': West
       aalab_prompt:
         text: stelle Frage {MESSAGE}
       aalab_scene:
@@ -1523,12 +1531,10 @@ de:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': zeige
-            '"hide"': ausblenden
+            '"random"': zufällig
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:

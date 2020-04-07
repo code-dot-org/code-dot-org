@@ -2,6 +2,8 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
+
+self.tags.push key: 'environment', value: rack_env
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
