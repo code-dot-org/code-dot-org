@@ -235,6 +235,9 @@ class User < ActiveRecord::Base
         source: parent_email_preference_source,
         form_kind: nil
       )
+      if parent_email_changed?
+        ParentMailer.parent_email_added_to_student_account(parent_email, self).deliver_now
+      end
     end
   end
 
