@@ -707,4 +707,6 @@ Dashboard::Application.routes.draw do
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
+
+  post '/profanity/find', to: 'profanity#find'
 end
