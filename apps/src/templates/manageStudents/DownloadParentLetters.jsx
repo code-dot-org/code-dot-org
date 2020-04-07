@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
-import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
@@ -13,35 +13,36 @@ const styles = {
 
 export default class DownloadParentLetters extends Component {
   static propTypes = {
-    numStudents: PropTypes.number.isRequired,
     sectionId: PropTypes.number
+  };
+
+  onDownloadParentLetter = () => {
+    const url = teacherDashboardUrl(this.props.sectionId, '/parent_letter');
+    window.open(url, '_blank');
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'download-parent-letter-button',
+        data_json: JSON.stringify({
+          sectionId: this.props.sectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
     return (
       <div style={styles.button}>
-        <span data-tip="" data-for="download-letter">
-          <Button
-            __useDeprecatedTag
-            href={teacherDashboardUrl(this.props.sectionId, '/parent_letter')}
-            target="_blank"
-            color={Button.ButtonColor.gray}
-            text={i18n.downloadParentLetter()}
-            icon="file-text"
-          />
-        </span>
-        <ReactTooltip
-          id="download-letter"
-          role="tooltip"
-          effect="solid"
-          delayShow={500}
-        >
-          <div>
-            {i18n.downloadParentLetterTooltip({
-              numStudents: this.props.numStudents
-            })}
-          </div>
-        </ReactTooltip>
+        <Button
+          __useDeprecatedTag
+          onClick={this.onDownloadParentLetter}
+          target="_blank"
+          color={Button.ButtonColor.gray}
+          text={i18n.downloadParentLetter()}
+          icon="file-text"
+        />
       </div>
     );
   }

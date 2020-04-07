@@ -310,6 +310,18 @@ Resources:
                 Action:
                   - 'rds:DescribeDBInstances'
                 Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'rds:CopyDBClusterParameterGroup'
+                  - 'rds:DeleteDBClusterParameterGroup'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:CopyDBParameterGroup'
+                  - 'rds:DeleteDBParameterGroup'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
         - PolicyName: StopInactiveAdhocInstances
           PolicyDocument:
             Statement:
