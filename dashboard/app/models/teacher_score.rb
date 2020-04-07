@@ -23,7 +23,7 @@ class TeacherScore < ApplicationRecord
     section = Section.find(section_id)
     student_ids = section.students.pluck(:id)
     teacher_id = section.user_id
-    stage = Stage.find(stage_id)
+    stage = Lesson.find(stage_id)
     script_id = stage.script.id
     level_ids = stage.script_levels.map(&:level_id)
 
