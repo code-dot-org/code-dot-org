@@ -105,6 +105,7 @@ We may collect and store information about your location to provide you with edu
 In certain situations, we may obtain information, including Personal Information, from third parties or sources other than the Website. For example, if you donate to Code.org via PayPal, we may obtain your name and mailing address to send a thank you note. If we combine or associate information from other sources with Personal Information that we collect through the Website, we will treat the combined information as Personal Information in accordance with this Privacy Policy. Your sharing of Personal Information with those third parties will also be subject to their privacy policies.
 
 <a id="techinfo"></a>
+
 ## Technical Information
 
 To provide a personalized learning and high-quality experience for our Users, we may use various technologies that automatically record certain technical information from your browser or device, including browser language settings, standard log files, web beacons, or pixel tags. This technical information may include your Internet Protocol (IP) address, browser type, internet service provider (ISP), referring or exit pages, click stream data, operating system, and the dates and times that you visit the Website. This information assists us in understanding how our Users are using our Website.
@@ -295,6 +296,7 @@ We also automatically delete any Personal Information associated with inactive S
 ## Your Rights Regarding to Your Personal Data under the General Data Protection Regulation (GDPR)
 
 If you are an individual in the European Economic Area (EEA), we collect and process information about you only where we have legal bases for doing so under applicable EU laws. This means we collect and use your information only where:
+
 * We need it to provide you the functionality of the Website, including to operate the Website, provide customer support and personalized features, and to protect the safety and security of the Website;
 * It satisfies a legitimate interest (which is not overridden by your data protection interests), such as for research and development, to market and promote the Website, and to protect our legal rights and interests;
 * You give us consent to do so for a specific purpose; or
@@ -303,6 +305,7 @@ If you are an individual in the European Economic Area (EEA), we collect and pro
 If you have consented to our use of information about you for a specific purpose, you have the right to change your mind at any time, but this will not affect any processing that has already taken place. Where we are using your information because we or a third party have a legitimate interest to do so, you may have the right to object to that use though, in some cases, this may mean no longer using the Website. 
 
 Additionally, once you have provided us your data, either actively or automatically, you will have the right to: 
+
 * Request access to the personal data we have from you;
 * Request a rectification, erasure, restriction of processing of your personal data;
 * Object to processing in certain circumstances;
@@ -317,6 +320,7 @@ From time to time our Privacy Policy will change. Code.org will notify Users of 
 ## Contacting Code.org
 
 Please contact Code.org with any questions or comments about this Privacy Policy, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at [https://code.org/contact](https://code.org/contact) or at 1501 Fourth Ave, Suite 900, Seattle, WA 98101.
+
 <br />
 <br />
 <br />
