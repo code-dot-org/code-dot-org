@@ -3,9 +3,9 @@ class ScriptDSL < BaseDSL
     super
     @id = nil
     @lesson = nil
-    @lesson_flex_category = nil
-    @lesson_lockable = false
-    @lesson_visible_after = nil
+    @stage_flex_category = nil
+    @stage_lockable = false
+    @stage_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -83,15 +83,15 @@ class ScriptDSL < BaseDSL
     if @lesson
       @lessons << {
         lesson: @lesson,
-        visible_after: @lesson_visible_after,
+        visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
         stage_extras_disabled: @stage_extras_disabled,
       }.compact
     end
     @lesson = name
-    @lesson_flex_category = properties[:flex_category]
-    @lesson_lockable = properties[:lockable]
-    @lesson_visible_after = determine_visible_after_time(properties[:visible_after])
+    @stage_flex_category = properties[:flex_category]
+    @stage_lockable = properties[:lockable]
+    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
@@ -196,8 +196,8 @@ class ScriptDSL < BaseDSL
 
     level = {
       name: name,
-      lesson_flex_category: @lesson_flex_category,
-      lesson_lockable: @lesson_lockable,
+      stage_flex_category: @stage_flex_category,
+      stage_lockable: @stage_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
       level_concept_difficulty: @level_concept_difficulty || {},

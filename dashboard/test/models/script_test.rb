@@ -163,7 +163,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_file_empty_lesson = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
     scripts, _ = Script.setup([script_file_empty_lesson])
     assert_equal 1, scripts[0].lessons.count
-    assert_not lesson.exists?(lesson.id)
+    assert_not Lesson.exists?(lesson.id)
   end
 
   test 'should remove empty lessons, reordering lessons' do
@@ -184,7 +184,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Reupload a script of the same filename / name, but lacking the middle lesson.
     scripts, _ = Script.setup([script_file_middle_missing_reversed])
     assert_equal 2, scripts[0].lessons.count
-    assert_not lesson.exists?(second.id)
+    assert_not Lesson.exists?(second.id)
 
     first = scripts[0].lessons[0]
     second = scripts[0].lessons[1]
