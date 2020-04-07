@@ -114,6 +114,10 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_submit_batch_request_ok
+    prospects = [
+      {email: 'test@domain.com', id: nil, db_Opt_In: 'No'}
+    ]
+
     ok_response = Nokogiri.XML <<-XML
       <rsp stat="ok" version="1.0">
           <errors/>
@@ -121,7 +125,7 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
 
-    assert_equal [], PardotV2.submit_batch_request('a_pardot_endpoint', [])
+    assert_equal [], PardotV2.submit_batch_request('a_pardot_endpoint', prospects)
   end
 
   def test_submit_batch_request_with_errors
