@@ -1,4 +1,4 @@
 login_required 'true'
 
-stage 'Stage1'
+lesson 'Stage1'
 level 'Level 1'
