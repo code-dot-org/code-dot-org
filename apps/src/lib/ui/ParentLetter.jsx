@@ -149,8 +149,8 @@ class ParentLetter extends React.Component {
           <p>
             Code.org assigns utmost importance to student safety and security.
             Code.org has signed the{' '}
-            <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their{' '}
-            <a href={pegasus('/privacy')}>privacy practices</a> have received{' '}
+            <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their
+            privacy practices have received{' '}
             <a href={COMMON_SENSE_ARTICLE_URL}>
               one of the highest overall scores from Common Sense Media
             </a>
