@@ -1357,12 +1357,14 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
   #send-to-phone-left {
     float: left;
-    width: 60%;
+    width: 65%;
+    padding-right: 20px;
+    box-sizing: border-box;
   }
 
   #send-to-phone-right {
     float: left;
-    width: 40%;
+    width: 35%;
     margin-bottom: 0px;
   }
 

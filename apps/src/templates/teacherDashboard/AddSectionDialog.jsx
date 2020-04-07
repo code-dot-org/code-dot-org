@@ -21,8 +21,6 @@ import {
  */
 class AddSectionDialog extends Component {
   static propTypes = {
-    locale: PropTypes.string,
-
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
     section: sectionShape,
@@ -39,8 +37,7 @@ class AddSectionDialog extends Component {
       beginImportRosterFlow,
       setRosterProvider,
       setLoginType,
-      handleCancel,
-      locale
+      handleCancel
     } = this.props;
     const {loginType} = section || {};
     const title = i18n.newSection();
@@ -61,13 +58,7 @@ class AddSectionDialog extends Component {
               handleCancel={handleCancel}
             />
           )}
-          {loginType && (
-            <EditSectionForm
-              title={title}
-              locale={locale}
-              isNewSection={true}
-            />
-          )}
+          {loginType && <EditSectionForm title={title} isNewSection={true} />}
         </PadAndCenter>
       </BaseDialog>
     );

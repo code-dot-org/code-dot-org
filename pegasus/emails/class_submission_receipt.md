@@ -13,6 +13,6 @@ Founder, Code.org
 
 <hr/>
 
-Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101. Don't like these emails? [Unsubscribe](<%= unsubscribe_link %>).
+Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101. Don't like these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

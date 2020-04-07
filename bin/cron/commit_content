@@ -26,7 +26,7 @@ class ContentCommitter
 
   # @return [String] An environment-specific string indicating that the robo-commit was skipped.
   def commit_skipped_string
-    "robo-commit skipped (#{@d_to_env.upcase}: no)"
+    "<@#{DevelopersTopic.dotd}> robo-commit skipped (#{@d_to_env.upcase}: no)"
   end
 
   # @return [String] An environment-specific string indicating that the robo-commit is happening.

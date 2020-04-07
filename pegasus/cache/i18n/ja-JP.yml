@@ -16,6 +16,7 @@ ja-JP:
     style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a>の計画をしましょう'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください</a>'
+  csedweek_banner_teachers_text: コンピュータサイエンスの先生ですか？他のCSEdWeekをご覧ください
   n_have_learned_an_hoc: "<h1>さあ、</h1><h2>コードの時間</h2><h3># をはじめよう</h3>"
   anybody_can_learn: 誰でも学べます
   learn_now: 今すぐ学ぶ

@@ -124,6 +124,8 @@ namespace :seed do
     'starwars',
     'starwarsblocks',
     'step',
+    'oceans',
+    'sports',
   ].map {|script| "config/scripts/#{script}.script"}.freeze
   SEEDED = 'config/scripts/.seeded'.freeze
 
@@ -298,6 +300,10 @@ namespace :seed do
     SampleData.seed
   end
 
+  timed_task mega_section: :environment do
+    MegaSection.seed
+  end
+
   MAX_LEVEL_SOURCES = 10_000
   desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
   timed_task ideal_solutions: :environment do
@@ -366,7 +372,7 @@ namespace :seed do
 
   FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards].freeze
   UI_TEST_SEED_TASKS = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :standards].freeze
-  DEFAULT_SEED_TASKS = rack_env?(:adhoc) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
+  DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
   timed_task default: DEFAULT_SEED_TASKS
@@ -378,5 +384,5 @@ namespace :seed do
   timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorm_libraries, :foorm_forms, :standards]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :foorm_libraries, :foorm_forms, :standards]
+  timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards]
 end

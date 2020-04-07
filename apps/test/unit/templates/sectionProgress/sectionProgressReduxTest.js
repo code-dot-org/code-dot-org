@@ -5,6 +5,7 @@ import sectionProgress, {
   addScriptData,
   addStudentLevelProgress,
   addStudentLevelPairing,
+  addStudentTimestamps,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
@@ -15,6 +16,7 @@ import sectionProgress, {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
+import _ from 'lodash';
 
 const fakeSectionData = {
   id: 123,
@@ -57,6 +59,12 @@ const fakeStudentProgress = {
   2: {242: 1000, 243: 1000}
 };
 
+const timeInSeconds = Date.now() / 1000;
+const fakeStudentTimestamps = {
+  1: timeInSeconds,
+  2: timeInSeconds + 1
+};
+
 const lessonOfInterest = 16;
 
 describe('sectionProgressRedux', () => {
@@ -81,6 +89,7 @@ describe('sectionProgressRedux', () => {
       assert.deepEqual(nextState.scriptDataByScript, {});
       assert.deepEqual(nextState.studentLevelProgressByScript, {});
       assert.deepEqual(nextState.levelsByLessonByScript, {});
+      assert.deepEqual(nextState.studentTimestampsByScript, {});
     });
   });
 
@@ -232,6 +241,17 @@ describe('sectionProgressRedux', () => {
         3: {},
         4: {}
       });
+    });
+  });
+
+  describe('addStudentTimestamps', () => {
+    it('converts timestamps from seconds to milliseconds', () => {
+      const action = addStudentTimestamps(130, fakeStudentTimestamps);
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(
+        _.mapValues(fakeStudentTimestamps, sec => sec * 1000),
+        nextState.studentTimestampsByScript[130]
+      );
     });
   });
 

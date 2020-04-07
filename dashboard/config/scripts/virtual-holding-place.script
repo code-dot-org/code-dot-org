@@ -1,3 +1,5 @@
+hideable_stages true
+
 stage 'Example Projects'
 level 'CSD U3 Entertainment Sample 1_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_virtual', progression: 'Sample Programs'

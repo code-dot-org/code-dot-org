@@ -1,3 +1,12 @@
+# NOTE: This serializer is used in two places.
+#
+#   1. Workshop dashboard CSV downloads (workshops_controller#filter)
+#   2. Automated workshop tracker export (summer_workshops_to_gdrive)
+#
+# The workshop tracker includes a bunch of formulas that are dependent on the layout of
+# the export, so please check that the programs team is okay making updates there
+# before adding a column to the middle of this list.  If they are not, consider
+# breaking this into two serializers.
 class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
   attributes :id, :status, :created_date, :start_date, :sessions, :organizer_name, :organizer_email, :regional_partner_name,
     :location_address, :location_name, :on_map, :funded, :course, :subject, :enrollment_url,

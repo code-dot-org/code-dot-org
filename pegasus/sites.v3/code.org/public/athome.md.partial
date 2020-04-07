@@ -3,7 +3,7 @@ title: Learning computer science when schools are closed in response to Covid19
 video_player: true
 theme: responsive
 ---
-
+<a id="top"></a>
 # Learning computer science when schools are closed
 <div class="col-66" style="padding-right: 20px;">
 
@@ -25,13 +25,14 @@ theme: responsive
 <div class="breakoutquote" style="padding: 18px">
 
 <div class="col-25">
-<a href="https://code.org/break"><img src="/images/code-break-stacked.png" style="max-width: 85%"></a></div>
+<a href="https://code.org/break"><img src="/images/athome/code-break-stacked.png" style="max-width: 85%; padding-left:25px"></a></div>
 
-<div class="col-70">
+<div class="col-70" style="padding-right:25px">
 
-<p style="border: 0; margin-top:15px;">Take a Code Break with Hadi Partovi and the Code.org team</p>
+<p style="border: 0;">Take a Code Break with Hadi Partovi and the Code.org team</p>
 <p style="font-size: 14px; border: 0">With schools closed and tens of millions of students at home, Code.org is launching Code Break — a live, weekly interactive classroom where our team will teach your children at home while school is closed, and a weekly challenge to engage students of all abilities, even those without computers.</p>
-<p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow">Tune in</a> Wednesdays at 10am PT / 1pm ET, starting March 25. Learn more at <a href="https://code.org/break">code.org/break</a></p>
+<p style="font-size: 14px; border: 0"><a href="https://code.org/codebreaknow">Tune in</a> Wednesdays at 10am PT / 1pm ET. Learn more at <a href="https://code.org/break">code.org/break</a></p>
+<a href="/break"><button>Learn more</button></a>
 
 </div>
 
@@ -50,6 +51,7 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 * [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Learn about astronomy using Quorum, a programming language accessible to blind or visually impaired learners.
 * And many [more tutorials](https://code.org/hourofcode/overview)!
 
+<p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 ## Videos: Watch these easy 3-5 minute educational videos
 
@@ -80,24 +82,50 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 
 <div style="clear: both; margin-bottom: 40px"></div>
 [Visit our video library.](https://code.org/educate/resources/videos)
-
+<br>
+<p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
-## Learn the fundamentals with our express courses
+
+<a id="express"></a>
+## Learn the fundamentals with our self-paced courses
+### **Express courses**
 A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <i>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. To see what's available in your language, visit <a href="https://studio.code.org/courses">studio.code.org</a>.</i>
 
 <div style="clear: both; margin-bottom: 30px"></div>
-<div class="col-50" style="padding-right: 20px; padding-bottom:40px">
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/express-2019"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://studio.code.org/s/express-2019">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
 
 </div>
 
-<div class="col-50" style="padding-right: 20px; padding-bottom:40px">
+<div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
 <a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
 
 </div>
+<div style="clear: both"></div>
 
+<hr>
+
+### **Turtle Programming in App Lab**
+
+<div class="col-25" style="padding-right: 20px;">
+
+<a href="https://studio.code.org/s/csp3-virtual"><img src="/images/athome/turtle.png" style="width: 100%"/></a>
+
+</div>
+
+<div class="col-75">
+
+<p>Adapted from our CS Principles course, this short, self-paced JavaScript module for 6th-12th graders is a great way to learn concepts that span all programming languages and tools. Ages 13+.</p>
+<a href="https://studio.code.org/s/csp3-virtual"><button>Try it out</button></a>
+
+</div>
+
+<div style="clear: both; margin-bottom: 15px"></div>
+
+
+<p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 ## Learn to design and build apps with App Lab
 
@@ -115,7 +143,8 @@ A great option for students getting started on their own. You'll learn the funda
 
 </div>
 
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 15px"></div>
+<p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="apps"></a>
 ## No computer at home? Try these smartphone apps
@@ -134,15 +163,19 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="//code.org/images/tutorials/hoc2019/grasshopper_hack.jpg" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. From Google’s Area 120 project. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
 
 </div>
+<div style="clear: both; margin-bottom: 15px"></div>
+
+<p><a href="#top">[Back to top]</a></p>
 
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 ## Limited or no internet access? Check out these unplugged activities
 * [Hello Ruby](https://www.helloruby.com/play)  - The world's most whimsical way to learn about computers, technology and programming. Activities on a range of CS topics, like the ability to decompose a problem, spot patterns, think algorithmically, debug problems and work together. *(for ages 4-10)*
 * [CS Unplugged](https://csunplugged.org/en/) - A collection of free teaching material that teaches Computer Science through engaging games and puzzles that use cards, string, crayons and lots of running around. *(for ages 5-14)*
 
+<p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 <a id="teacher-support"></a>
 ## Support for teachers mid-course
@@ -168,5 +201,8 @@ A guide for teachers with resources to materials that students can use at home t
 A guide for teachers with resources to materials that students can use at home to continue learning CS Fundamentals
 
 </div>
+<div style="clear: both; margin-bottom: 15px"></div>
+
+<p><a href="#top">[Back to top]</a></p>
 
 <div style="clear: both; padding-top: 40px; "></div>

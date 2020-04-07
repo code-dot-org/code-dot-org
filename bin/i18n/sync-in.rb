@@ -38,6 +38,8 @@ def get_i18n_strings(level)
       long_instructions
       failure_message_overrides
       teacher_markdown
+      placeholder
+      title
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end

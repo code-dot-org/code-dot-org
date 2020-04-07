@@ -38,5 +38,7 @@ module Pd::Foorm
       TYPE_MATRIX => ANSWER_MATRIX,
       TYPE_RATING => ANSWER_RATING
     }
+
+    ROLLUP_CONFIGURATION_FILE = 'config/foorm/rollups/rollups_by_course.json'
   end
 end

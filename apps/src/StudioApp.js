@@ -3235,7 +3235,7 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
-  if (config.hasContainedLevels) {
+  if (config.hasContainedLevels || config.level.isProjectLevel) {
     return false;
   } else if (
     ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(

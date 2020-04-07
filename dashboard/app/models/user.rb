@@ -209,6 +209,8 @@ class User < ActiveRecord::Base
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
+  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
+
   before_destroy :soft_delete_channels
 
   def save_email_preference
@@ -219,6 +221,19 @@ class User < ActiveRecord::Base
         ip_address: email_preference_request_ip,
         source: email_preference_source,
         form_kind: email_preference_form_kind,
+      )
+    end
+  end
+
+  # Enables/disables email notifications for the parent.
+  def save_parent_email_preference
+    if student? && parent_email.present?
+      EmailPreference.upsert!(
+        email: parent_email,
+        opt_in: parent_email_preference_opt_in.downcase == "yes",
+        ip_address: parent_email_preference_request_ip,
+        source: parent_email_preference_source,
+        form_kind: nil
       )
     end
   end
@@ -367,6 +382,12 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
 
+  attr_accessor :parent_email_preference_opt_in_required
+  attr_accessor :parent_email_preference_opt_in
+  attr_accessor :parent_email_preference_email
+  attr_accessor :parent_email_preference_request_ip
+  attr_accessor :parent_email_preference_source
+
   attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
@@ -436,6 +457,23 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+
+  # Validations for adding parent email notifications
+  before_validation :parent_email_preference_setup, if: :parent_email_preference_opt_in_required?
+  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
+  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
+
+  def parent_email_preference_opt_in_required?
+    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
+    # user_type 'student' is the only type which supports have a parent_email associated with it.
+    parent_email_preference_opt_in_required == '1' && user_type == 'student'
+  end
+
+  def parent_email_preference_setup
+    self.parent_email = parent_email_preference_email
+  end
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
   validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}

@@ -269,9 +269,12 @@ class ApiController < ApplicationController
       return head :range_not_satisfiable
     end
 
+    student_progress, student_timestamps = script_progress_for_users(paged_students, script)
+
     # Get the level progress for each student
     render json: {
-      students: script_progress_for_users(paged_students, script),
+      students: student_progress,
+      student_timestamps: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
@@ -298,15 +301,27 @@ class ApiController < ApplicationController
   private def script_progress_for_users(users, script)
     user_levels = User.user_levels_by_user_by_level(users, script)
     paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
-    users.inject({}) do |progress_by_user, user|
-      progress_by_user[user.id] = merge_user_progress_by_level(
+    progress_by_user = users.inject({}) do |progress, user|
+      progress[user.id] = merge_user_progress_by_level(
         script: script,
         user: user,
         user_levels_by_level: user_levels[user.id],
-        paired_user_levels: paired_user_levels_by_user[user.id]
+        paired_user_levels: paired_user_levels_by_user[user.id],
+        include_timestamp: true
       )
-      progress_by_user
+      progress
     end
+    timestamp_by_user = progress_by_user.transform_values do |user|
+      user.values.map {|level| level[:last_progress_at]}.compact.max
+    end
+    # Remove last_progress_at from the return value, to keep the data sent to
+    # the client to a minimum.
+    progress_by_user.values.each do |user|
+      user.values.each do |level|
+        level.delete(:last_progress_at)
+      end
+    end
+    [progress_by_user, timestamp_by_user]
   end
 
   use_database_pool student_progress: :persistent
@@ -337,7 +352,7 @@ class ApiController < ApplicationController
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, nil, true)
+    summary = script.summarize(true, current_user, true)
     summary[:path] = overview_path
     render json: summary
   end
