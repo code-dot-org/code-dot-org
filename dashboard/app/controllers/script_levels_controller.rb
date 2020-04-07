@@ -164,7 +164,7 @@ class ScriptLevelsController < ApplicationController
 
     if stage_id
       # TODO(asher): change this to use a cache
-      stage = Stage.find(stage_id)
+      stage = Lesson.find(stage_id)
       return head :forbidden unless stage.try(:script).try(:hideable_stages)
       section.toggle_hidden_stage(stage, should_hide)
     else
