@@ -9,15 +9,22 @@ import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import currentUser, {
   setCurrentUserName
 } from '@cdo/apps/templates/currentUserRedux';
+import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
 import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
+
+const script = document.querySelector('script[data-dashboard]');
+const scriptData = JSON.parse(script.dataset.dashboard);
+
+// Capture base URLs for both dashboard and pegasus since we want
+// absolute URLs for both in the letter we generate.
+setPegasusOrigin(scriptData.pegasusOrigin);
+setStudioOrigin(scriptData.studioOrigin);
 
 window.addEventListener('DOMContentLoaded', function() {
   // Register the reducers we need to show the parent letter:
   registerReducers({currentUser, sectionData, teacherSections});
 
   // Populate the store with data passed down from the server:
-  const script = document.querySelector('script[data-dashboard]');
-  const scriptData = JSON.parse(script.dataset.dashboard);
   const store = getStore();
   store.dispatch(setCurrentUserName(scriptData.userName));
   store.dispatch(setSections(scriptData.sections));
