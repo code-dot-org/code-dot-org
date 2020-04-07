@@ -15,6 +15,6 @@
 #
 
 class LessonGroup < ApplicationRecord
-  belongs_to :script
+  belongs_to :script, foreign_key: 'unit_id'
   has_many :stages
 end

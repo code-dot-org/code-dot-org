@@ -920,6 +920,7 @@ class Script < ActiveRecord::Base
       named_level = nil
       bonus = nil
       stage_flex_category = nil
+      stage_lesson_group = nil
       stage_lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
@@ -935,6 +936,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         stage_flex_category = raw_level.delete(:stage_flex_category)
+        stage_lesson_group = raw_level.delete(:stage_lesson_group)
         stage_lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
@@ -998,13 +1000,30 @@ class Script < ActiveRecord::Base
       end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
+        # check if that lesson_group exists for the script
+        lesson_group = nil
+        if stage_lesson_group
+          puts script.lesson_groups
+          lesson_group = script.lesson_groups.detect {|lg| lg.name == stage_lesson_group} ||
+            LessonGroup.find_or_create_by(
+              name: stage_lesson_group,
+              script: script
+            )
+        end
+
         stage = script.stages.detect {|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
             script: script,
+            lesson_group: lesson_group
           ) do |s|
             s.relative_position = 0 # will be updated below, but cant be null
           end
+
+        # Check if we need to update the lesson group for the stage
+        if stage.lesson_group_id != lesson_group&.id
+          stage.lesson_group = lesson_group
+        end
 
         stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
