@@ -4,6 +4,7 @@ class ScriptDSL < BaseDSL
     @id = nil
     @stage = nil
     @stage_flex_category = nil
+    @stage_lesson_group = nil
     @stage_lockable = false
     @stage_visible_after = nil
     @concepts = []
@@ -90,6 +91,7 @@ class ScriptDSL < BaseDSL
     end
     @stage = name
     @stage_flex_category = properties[:flex_category]
+    @stage_lesson_group = properties[:lesson_group]
     @stage_lockable = properties[:lockable]
     @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
@@ -197,6 +199,7 @@ class ScriptDSL < BaseDSL
     level = {
       name: name,
       stage_flex_category: @stage_flex_category,
+      stage_lesson_group: @stage_lesson_group,
       stage_lockable: @stage_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
@@ -332,6 +335,7 @@ class ScriptDSL < BaseDSL
       t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
       t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
+      t += ", lesson_group: '#{escape(stage.lesson_group.name)}'" if stage.lesson_group
       t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
       s << t
       stage.script_levels.each do |sl|
