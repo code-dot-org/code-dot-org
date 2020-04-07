@@ -376,6 +376,7 @@ zh-TW:
         CSF_maze_intro_k1_blocks: Code Studio 介紹
         CSF_maze_intro_text_blocks: Code Studio 介紹
         CSF_my_robotic_friends: 我的機器人朋友
+        CSF_Power_of_Words: 語言的力量
         CSF_Super_Digital_Citizen: 超級數位公民
         CSF_stevie_big_project: Stevie 和 Big Project
         CSF_unspotted_bugs: 沒被發現的蟲蟲
@@ -455,15 +456,31 @@ zh-TW:
         mc_2017_puzzle_3: 一小時玩 App Lab - 重複迴圈
         mc_2017_puzzle_8: 一小時玩 App Lab - 函式
         mc_2017_puzzle_12: 一小時玩 App Lab - 自由發揮
+        hint_videos_d_11_3_first: 提示影片：D.11.3 在最前
+        hint_videos_d_11_3_last: 提示影片：D.11.3 在最後
+        hint_videos_d_11_4_first: 提示影片：D.11.4 在最前
+        hint_videos_d_11_4_last: 提示影片：D.11.4 在最後
+        hint_videos_d_11_5_first: 提示影片：D.11.5 在最前
+        hint_videos_d_11_5_last: 提示影片：D.11.5 在最後
+        hint_videos_d_11_6_first: 提示影片：D.11.6 在最前
+        hint_videos_d_11_6_last: 提示影片：D.11.6 在最後
+        hint_videos_d_11_7_first: 提示影片：D.11.7 在最前
+        hint_videos_d_11_7_last: 提示影片：D.11.7 在最後
+        hint_videos_d_11_9_first: 提示影片：D.11.9 在最前
+        hint_videos_d_11_9_last: 提示影片：D.11.9 在最後
+        hint_videos_d_11_11_first: 提示影片：D.11.11 在最前
+        hint_videos_d_11_11_last: 提示影片：D.11.11 在最後
         applab_intro_welcome: App Lab - 入門
         applab_intro_events: App Lab - 和它互動
         applab_intro_sounds: App Lab - 圖像和音效
         applab_intro_designmode: App Lab - 設計模式
         applab_intro_share: App Lab - 分享你的程式
         csd_applab_arrays: 陣列（Arrays）的介紹
+        CSF_skinOverview_Harvester: 收割者
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: 和 BB-8 一起學迴圈
+        CSF_harvester_skinOverview_K-1: 收割者
         CSF_scrat_loops_K1: 冰河歷險紀中的迴圈
         CSF_scrat_loops_CF: 冰河歷險紀中的迴圈
         CSF_if_allskins: 如果積木
@@ -486,23 +503,46 @@ zh-TW:
         hoc_dance_events: 舞蹈派對 - 事件（Evnets）
         hoc_dance_properties: 舞蹈派對 - 屬性（Properties）
         hoc_dance_congrats: 舞蹈派對 - 還不快動起來！
+        teaching_csf_how_it_works: 教授 CS 基礎知識：課程如何進展
         elem_pd_2: 小學的計算機科學 - PD 影片 2/2
         what_is_cs: 計算機科學是什麼？
+        repeat_block: 使用「重複」積木
         lesson_planning: 教學計畫
+        opd_closing: 教授 CS 基礎知識：結語和未來步驟
+        why_unplugged_lessons: "「不插電」課堂"
+        writing_first_program: 編寫你的第一個電腦程式
+        conditionals_with_cards: 不插電課堂實作 - 以撲克牌學習條件式
+        songwriting_with_functions: 不插電課堂實作 - 以函式作曲
+        what_is_an_event: 甚麼是「事件」？
         teaching_cs_pair_programming: 教授 CS 基礎知識：結對編程（Pair Programming）
+        teaching_problem_solving: 教授 CS 基礎知識：教導如何解決問題
+        csd_applab_designmode: CS 探索：App Lab - 設計模式
         csd_pair_programming: 結對編程
+        csd_gamelab_functions: 呼叫和定義函式
         csd_applab_parameters: 函式帶參數
+        csd_applab_loops: App Lab 中的迴圈
         csd_problem_solving_process: 問題解決流程
         CSF_Going_Places_Safely: 我的線上鄰居
+        CSF_SpriteLab_Intro_v2: Sprite Lab 簡介
         CSF_Spritelab_MakeSprite_v2: 如何建立一個角色
         CSF_SpriteLab_SpritesInAction_v2: 運行中的角色
+        csd_applab_designmode_short: App Lab 設計模式
+        csp-pd-welcome: 歡迎來到這個大家庭！
+        CSF-Teaching-Problem-Solving: CSF 教學：解決問題
+        u5-traversals-get-list-explanation: Code.org [關卡建立器] - 試播影片 - 資料積木
+        u7-libraries-explanation: App Lab：自己砌積木 - 如何使用函式庫
+        how-to-k5-workshops: Code.org CS 基本原理：小孩測試，老師核對
+        why-should-teach-unplugged-activities: 常見問題：為甚麼我應該教導「不插電」活動？
+        cs-principles-intro-to-objects: CS 原理：「物件」簡介
         oceans_machine_learning: 機器學習
         oceans_training_data: 訓練數據
+        oceans_societal_implications: 社會意涵
         hoc_dance_congrats_2019: 舞蹈派對 2019 - 開跳！
         hoc_dance_warmup_2019: 舞蹈派對 2019 - 熱身！
         hoc_dance_events_2019: 舞蹈派對 2019 - 事件
         hoc_dance_measures_2019: 舞蹈派對 2019 - 小節
         hoc_dance_properties_2019: 舞蹈派對 2019 - 屬性
+        csd_what_computers_do: 電腦用來做甚麼？
         csf_my_online_neighborhood_2020: 我的線上鄰居
         csd_what_computers_are: 電腦是什麼？
     callout:

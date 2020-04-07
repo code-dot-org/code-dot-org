@@ -220,6 +220,7 @@ he:
       %{name}
   parent_mailer:
     student_associated_subject: 'פרטי החיבור עבור Code.org'
+    parent_email_added_subject: 'ברוך הבא לCode.org!'
   teacher_mailer:
     new_teacher_subject: 'ברוך הבא לCode.org!'
     delete_teacher_subject: 'הודעת Code.org: החשבון שלך נמחק'
@@ -422,6 +423,7 @@ he:
     update: "עדכן חשבון"
     account_successfully_updated: "חשבון עודכן בהצלחה."
     update_email: "עדכון"
+    encrypted: "מוצפן"
   user_level:
     completed: 'הושלם'
     tried: 'נוסה'
