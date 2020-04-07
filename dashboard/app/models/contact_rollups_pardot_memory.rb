@@ -36,7 +36,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     end
   end
 
-  def self.create_new_pardot_contacts
+  def self.create_new_pardot_prospects
     # Finds contacts in contact_rollups_processed but are not in contact_rollups_pardot_memory.
     # Contacts must not be previously rejected by Pardot as invalid emails.
     new_contacts_query = <<-SQL.squish
