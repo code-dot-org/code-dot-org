@@ -230,10 +230,22 @@ def distribute_translations
     end
 
     ### Blockly Core
+    # Blockly doesn't know how to fall back to English, so here we manually and
+    # explicitly default all untranslated strings to English.
+    blockly_english = JSON.load(File.open("i18n/locales/source/blockly-core/core.json"))
     Dir.glob("i18n/locales/#{locale}/blockly-core/*.json") do |loc_file|
+      translations = JSON.load(File.open(loc_file))
+      # Create a hash containing all translations, with English strings in
+      # place of any missing translations. We do this as 'english merge
+      # translations' rather than 'translations merge english' to ensure that
+      # we include all the keys from English, regardless of which keys are in
+      # the translations hash.
+      translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
+        translation.empty? ? english : translation
+      end
       relname = File.basename(loc_file)
       destination = "apps/node_modules/@code-dot-org/blockly/i18n/locales/#{locale}/#{relname}"
-      sanitize_file_and_write(loc_file, destination)
+      sanitize_data_and_write(translations_with_fallback, destination)
     end
 
     ### Pegasus
