@@ -108,7 +108,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def has_another_level_to_go_to?
     if script.professional_learning_course?
-      !end_of_lesson?
+      !end_of_stage?
     else
       next_progression_level
     end
@@ -214,7 +214,7 @@ class ScriptLevel < ActiveRecord::Base
     script.script_levels[i - 1]
   end
 
-  def end_of_lesson?
+  def end_of_stage?
     lesson.script_levels.to_a.last == self
   end
 
@@ -326,7 +326,7 @@ class ScriptLevel < ActiveRecord::Base
       end
 
       # Add a next pointer if it's not the obvious (level+1)
-      if end_of_lesson?
+      if end_of_stage?
         if next_level
           summary[:next] = [next_level.lesson.absolute_position, next_level.position]
         else
