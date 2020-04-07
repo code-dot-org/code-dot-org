@@ -61,9 +61,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'invalid_email', id: nil, db_Opt_in: 'No'},
       {email: 'valid@domain.com', id: nil, db_Opt_in: 'Yes'},
     ]
-    error_msg = 'Invalid prospect email address'
     errors = [
-      {prospect_index: 0, error_msg: error_msg}
+      {prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}
     ]
     submitted_time = Time.now
 
@@ -71,7 +70,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     refute_nil ContactRollupsPardotMemory.find_by(
       email: submissions.first[:email],
-      data_rejected_reason: error_msg,
+      data_rejected_reason: PardotHelpers::ERROR_INVALID_EMAIL,
       data_rejected_at: submitted_time
     )
 
