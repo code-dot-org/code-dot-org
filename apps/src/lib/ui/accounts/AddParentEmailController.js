@@ -32,7 +32,6 @@ export default class AddParentEmailController {
 
   showAddParentEmailModal = () => {
     if (this.mountPoint) {
-      console.log('already have a mount point');
       return; // Idempotent show
     }
 
