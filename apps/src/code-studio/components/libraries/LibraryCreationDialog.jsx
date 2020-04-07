@@ -136,6 +136,7 @@ class LibraryCreationDialog extends React.Component {
         onShareTeacherLibrary={this.onShareTeacherLibrary()}
         libraryDetails={libraryDetails}
         libraryClientApi={libraryClientApi}
+        findProfanity={this.findProfanity}
       />
     );
   };

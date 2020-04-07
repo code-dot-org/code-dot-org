@@ -50,6 +50,7 @@ export const PublishState = {
   DEFAULT: 'default',
   ERROR_PUBLISH: 'error_publish',
   INVALID_INPUT: 'invalid_input',
+  PROFANE_INPUT: 'profane_input',
   ERROR_UNPUBLISH: 'error_unpublish'
 };
 
@@ -63,7 +64,8 @@ export default class LibraryPublisher extends React.Component {
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
     libraryClientApi: PropTypes.object.isRequired,
-    onShareTeacherLibrary: PropTypes.func
+    onShareTeacherLibrary: PropTypes.func,
+    findProfanity: PropTypes.func.isRequired
   };
 
   state = {
@@ -72,7 +74,8 @@ export default class LibraryPublisher extends React.Component {
       this.props.libraryDetails.libraryName
     ),
     libraryDescription: this.props.libraryDetails.libraryDescription,
-    selectedFunctions: this.props.libraryDetails.selectedFunctions
+    selectedFunctions: this.props.libraryDetails.selectedFunctions,
+    profaneWords: []
   };
 
   setLibraryName = event => {
@@ -97,32 +100,45 @@ export default class LibraryPublisher extends React.Component {
       return;
     }
 
-    const libraryJson = libraryParser.createLibraryJson(
-      librarySource,
-      functionsToPublish,
-      libraryName,
-      libraryDescription
-    );
+    // Validate library name/description input for profanity before publishing.
+    this.props
+      .findProfanity(`${libraryName} ${libraryDescription}`)
+      .then(profaneWords => {
+        if (profaneWords) {
+          this.setState({
+            publishState: PublishState.PROFANE_INPUT,
+            profaneWords
+          });
+          return;
+        }
 
-    // Publish to S3
-    libraryClientApi.publish(
-      libraryJson,
-      error => {
-        console.warn(`Error publishing library: ${error}`);
-        this.setState({publishState: PublishState.ERROR_PUBLISH});
-      },
-      data => {
-        // Write to projects database
-        dashboard.project.setLibraryDetails({
+        const libraryJson = libraryParser.createLibraryJson(
+          librarySource,
+          functionsToPublish,
           libraryName,
-          libraryDescription,
-          publishing: true,
-          latestLibraryVersion: data && data.versionId
-        });
+          libraryDescription
+        );
 
-        onPublishSuccess(libraryName);
-      }
-    );
+        // Publish to S3
+        libraryClientApi.publish(
+          libraryJson,
+          error => {
+            console.warn(`Error publishing library: ${error}`);
+            this.setState({publishState: PublishState.ERROR_PUBLISH});
+          },
+          data => {
+            // Write to projects database
+            dashboard.project.setLibraryDetails({
+              libraryName,
+              libraryDescription,
+              publishing: true,
+              latestLibraryVersion: data && data.versionId
+            });
+
+            onPublishSuccess(libraryName);
+          }
+        );
+      });
   };
 
   displayNameInput = () => {
@@ -228,11 +244,17 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
-    const {publishState} = this.state;
+    const {publishState, profaneWords} = this.state;
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
         errorMessage = i18n.libraryPublishInvalid();
+        break;
+      case PublishState.PROFANE_INPUT:
+        errorMessage = i18n.libraryDetailsProfanity({
+          profanityCount: profaneWords.length,
+          profaneWords: profaneWords.join(', ')
+        });
         break;
       case PublishState.ERROR_PUBLISH:
         errorMessage = i18n.libraryPublishFail();
