@@ -169,4 +169,44 @@ describe('StageDescriptions', () => {
       ])
     );
   });
+
+  it('recovers when there are too few importedDescriptions', () => {
+    const wrapper = mount(
+      <StageDescriptions
+        scriptName="myscript"
+        currentDescriptions={currentDescriptions}
+      />
+    );
+    wrapper.setState({collapsed: false});
+    // now click import button
+    const importButton = wrapper.find('button').at(1);
+    assert.equal(importButton.text(), 'Import from Curriculum Builder');
+    importButton.simulate('click');
+
+    assert.equal(requests.length, 1);
+    assert.equal(
+      requests[0].url,
+      'https://curriculum.code.org/metadata/myscript.json'
+    );
+
+    requests[0].respond(
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({
+        lessons: [
+          {
+            title: currentDescriptions[0].name,
+            student_desc: currentDescriptions[0].descriptionStudent,
+            teacher_desc: currentDescriptions[0].descriptionTeacher
+          }
+        ]
+      })
+    );
+    wrapper.update();
+
+    // If we get here, the import completed without any JS errors.
+    assert.equal(wrapper.state('buttonText'), 'Imported');
+    const imported = wrapper.state('importedDescriptions');
+    assert.equal(imported.length, 1);
+  });
 });

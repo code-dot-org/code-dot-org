@@ -312,7 +312,12 @@ function loadProjectAndCheckAbuse(appOptions) {
         return;
       }
       if (project.getSharingDisabled()) {
-        renderAbusive(project, msg.sharingDisabled());
+        renderAbusive(
+          project,
+          msg.sharingDisabled({
+            sign_in_url: 'https://studio.code.org/users/sign_in'
+          })
+        );
         return;
       }
       resolve(appOptions);
