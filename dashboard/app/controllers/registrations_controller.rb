@@ -138,6 +138,24 @@ class RegistrationsController < Devise::RegistrationsController
     head :no_content
   end
 
+  def parent_email_params
+    params.
+      require(:user).
+      tap do |user|
+        user[:parent_email_preference_email] = user[:parent_email]
+        user[:parent_email_preference_opt_in_required] = '1'
+        user[:parent_email_preference_request_ip] = request.ip
+        user[:parent_email_preference_source] = EmailPreference::PARENT_EMAIL_CHANGE
+      end.
+      permit(
+        :parent_email_preference_email,
+        :parent_email_preference_opt_in,
+        :parent_email_preference_request_ip,
+        :parent_email_preference_source,
+        :parent_email_preference_opt_in_required
+      )
+  end
+
   def sign_up_params
     super.tap do |params|
       if params[:user_type] == "teacher"
@@ -198,8 +216,27 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def set_email
     return head(:bad_request) if params[:user].nil?
-
     successfully_updated = update_user_email
+
+    if successfully_updated
+      head :no_content
+    else
+      render status: :unprocessable_entity,
+             json: current_user.errors.as_json(full_messages: true),
+             content_type: 'application/json'
+    end
+  end
+
+  #
+  # PATCH /users/parent_email
+  #
+  # Route allowing user to update the parent email address associated
+  # with the account
+  #
+  def set_parent_email
+    return head(:bad_request) if params[:user].nil?
+
+    successfully_updated = update_parent_email
 
     if successfully_updated
       head :no_content
@@ -275,6 +312,10 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   private
+
+  def update_parent_email
+    current_user.update_without_password(parent_email_params)
+  end
 
   def update_user_email
     return false if forbidden_change?(current_user, params)
