@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
+import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
@@ -52,7 +52,8 @@ class ParentLetter extends React.Component {
         secret_words: PropTypes.string
       })
     ),
-    teacherName: PropTypes.string.isRequired
+    teacherName: PropTypes.string.isRequired,
+    logoUrl: PropTypes.string
   };
 
   static defaultProps = {
@@ -61,33 +62,12 @@ class ParentLetter extends React.Component {
 
   componentDidMount() {
     if (this.props.autoPrint) {
-      this.printParentLetter();
+      print();
     }
   }
 
-  printParentLetter = () => {
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
-
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
-    });
-
-    printWindow.document.write(
-      `<html><head><link rel="stylesheet" type="text/css" href="/shared/css/standards-report-print.css"></head>`
-    );
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-  };
-
   render() {
-    const {students, teacherName, section, studentId} = this.props;
+    const {logoUrl, students, teacherName, section, studentId} = this.props;
     const sectionCode = section.code;
     const loginType = section.loginType;
     const student =
@@ -102,7 +82,7 @@ class ParentLetter extends React.Component {
 
     return (
       <div id="printArea">
-        <Header />
+        <Header logoUrl={logoUrl} />
         <article>
           <p>Hello!</p>
           <p>
@@ -192,15 +172,22 @@ export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
-  teacherName: state.currentUser.userName
+  teacherName: state.currentUser.userName,
+  studentId: queryParams('studentId')
 }))(ParentLetter);
 
-const Header = () => {
+const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src="/shared/images/CodeLogo_White.png" style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} />
     </header>
   );
+};
+Header.propTypes = {
+  logoUrl: PropTypes.string.isRequired
+};
+Header.defaultProps = {
+  logoUrl: '/shared/images/CodeLogo_White.png'
 };
 
 const SignInInstructions = ({
@@ -330,7 +317,7 @@ SignInInstructions.propTypes = {
 
 const GoToSignIn = () => (
   <li>
-    Go to <a href={studio('/')}>{studio('/')}</a> and click 'Sign in'
+    Go to <a href={studio('/')}>studio.code.org</a> and click 'Sign in'
   </li>
 );
 
@@ -338,7 +325,8 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
-      Go to <a href={sectionUrl}>{sectionUrl}</a> and click on their name
+      Go to <a href={sectionUrl}>studio.code.org/sections/{sectionCode}</a> and
+      click on their name
       {studentName && ` (${studentName})`}
     </li>
   );
@@ -350,6 +338,6 @@ GoToSectionSignIn.propTypes = {
 
 const styles = {
   cleverCodeOrgLogo: {width: 60, margin: 10},
-  codeOrgLogo: {height: 30, margin: 15},
+  codeOrgLogo: {height: 42, margin: '4px 16px'},
   header: {backgroundColor: color.teal, marginBottom: 30}
 };
