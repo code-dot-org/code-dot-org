@@ -41,13 +41,13 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     processed_contacts = []
     processed_contacts << (create :contact_rollups_processed)
 
-    ContactRollupsPardotMemory.create_new_pardot_contacts
+    ContactRollupsPardotMemory.create_new_pardot_prospects
     assert_equal processed_contacts.length, ContactRollupsPardotMemory.count
 
     # Sync multiple contacts
     processed_contacts.concat(create_list(:contact_rollups_processed, 2))
 
-    ContactRollupsPardotMemory.create_new_pardot_contacts
+    ContactRollupsPardotMemory.create_new_pardot_prospects
     assert_equal processed_contacts.length, ContactRollupsPardotMemory.count
     processed_contacts.each do |contact|
       refute_nil ContactRollupsPardotMemory.find_by(email: contact.email)
