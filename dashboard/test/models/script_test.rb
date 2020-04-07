@@ -67,7 +67,7 @@ class ScriptTest < ActiveSupport::TestCase
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
     assert_equal 'Level 1', script.levels[0].name
-    assert_equal 'Stage2', script.script_levels[3].stage.name
+    assert_equal 'lesson2', script.script_levels[3].lesson.name
 
     assert_equal 'MyProgression', script.script_levels[3].progression
     assert_equal 'MyProgression', script.script_levels[4].progression
@@ -89,10 +89,10 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages]
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:lessons]
 
     # Set different level name in tested script
-    parsed_script.map {|stage| stage[:scriptlevels]}.flatten[4][:levels][0]['name'] = "Level 1"
+    parsed_script.map {|lesson| lesson[:scriptlevels]}.flatten[4][:levels][0]['name'] = "Level 1"
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
@@ -104,18 +104,18 @@ class ScriptTest < ActiveSupport::TestCase
   test 'cannot rename a script without a new_name' do
     l = create :level
     dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     old_script = Script.add_script(
       {name: 'old script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
     )
     assert_equal 'old script name', old_script.name
 
     new_script = Script.add_script(
       {name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
     )
     assert_equal 'new script name', new_script.name
 
@@ -126,18 +126,18 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can rename a script between original name and new_name' do
     l = create :level
     dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     old_script = Script.add_script(
       {name: 'old script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
     )
     assert_equal 'old script name', old_script.name
 
     new_script = Script.add_script(
       {name: 'new script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
     )
     assert_equal 'new script name', new_script.name
 
@@ -146,7 +146,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     old_script = Script.add_script(
       {name: 'old script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
     )
     assert_equal 'old script name', old_script.name
 
@@ -154,44 +154,44 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal old_script.id, new_script.id
   end
 
-  test 'should remove empty stages' do
+  test 'should remove empty lessons' do
     scripts, _ = Script.setup([@script_file])
-    assert_equal 2, scripts[0].stages.count
+    assert_equal 2, scripts[0].lessons.count
 
-    # Reupload a script of the same filename / name, but lacking the second stage.
-    stage = scripts[0].stages.last
-    script_file_empty_stage = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
-    scripts, _ = Script.setup([script_file_empty_stage])
-    assert_equal 1, scripts[0].stages.count
-    assert_not Stage.exists?(stage.id)
+    # Reupload a script of the same filename / name, but lacking the second lesson.
+    lesson = scripts[0].lessons.last
+    script_file_empty_lesson = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture.script")
+    scripts, _ = Script.setup([script_file_empty_lesson])
+    assert_equal 1, scripts[0].lessons.count
+    assert_not lesson.exists?(lesson.id)
   end
 
-  test 'should remove empty stages, reordering stages' do
-    script_file_3_stages = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
-    scripts, _ = Script.setup([script_file_3_stages])
-    assert_equal 3, scripts[0].stages.count
-    first = scripts[0].stages[0]
-    second = scripts[0].stages[1]
-    third = scripts[0].stages[2]
-    assert_equal 'Stage1', first.name
-    assert_equal 'Stage2', second.name
-    assert_equal 'Stage3', third.name
+  test 'should remove empty lessons, reordering lessons' do
+    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
+    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
+    scripts, _ = Script.setup([script_file_3_lessons])
+    assert_equal 3, scripts[0].lessons.count
+    first = scripts[0].lessons[0]
+    second = scripts[0].lessons[1]
+    third = scripts[0].lessons[2]
+    assert_equal 'lesson1', first.name
+    assert_equal 'lesson2', second.name
+    assert_equal 'lesson3', third.name
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 3, third.absolute_position
 
-    # Reupload a script of the same filename / name, but lacking the middle stage.
+    # Reupload a script of the same filename / name, but lacking the middle lesson.
     scripts, _ = Script.setup([script_file_middle_missing_reversed])
-    assert_equal 2, scripts[0].stages.count
-    assert_not Stage.exists?(second.id)
+    assert_equal 2, scripts[0].lessons.count
+    assert_not lesson.exists?(second.id)
 
-    first = scripts[0].stages[0]
-    second = scripts[0].stages[1]
+    first = scripts[0].lessons[0]
+    second = scripts[0].lessons[1]
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
-    assert_equal 'Stage3', first.name
-    assert_equal 'Stage1', second.name
+    assert_equal 'lesson3', first.name
+    assert_equal 'lesson1', second.name
   end
 
   test 'should not create two scripts with same name' do
@@ -202,35 +202,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Name has already been taken', raise.message
   end
 
-  test 'stages are in order' do
+  test 'lessons are in order' do
     script = create(:script, name: 's1')
-    create(:stage, script: script)
-    last = create(:stage, script: script)
-    create(:stage, script: script)
+    create(:lesson, script: script)
+    last = create(:lesson, script: script)
+    create(:lesson, script: script)
 
     last.move_to_bottom
 
-    script.stages
+    script.lessons
 
-    assert_equal [1, 2, 3], script.stages.collect(&:absolute_position)
+    assert_equal [1, 2, 3], script.lessons.collect(&:absolute_position)
   end
 
-  test 'calling next_level on last script_level points to next stage' do
+  test 'calling next_level on last script_level points to next lesson' do
     script = create(:script, name: 'test2')
-    first_stage = create(:stage, script: script, absolute_position: 1)
+    first_lesson = create(:lesson, script: script, absolute_position: 1)
 
-    first_stage_last_level = create(:script_level, script: script, stage: first_stage, position: 1)
-    second_stage = create(:stage, script: script, absolute_position: 2)
-    second_stage_first_level = create(:script_level, script: script, stage: second_stage, position: 1)
-    create(:script_level, script: script, stage: second_stage, position: 2)
+    first_lesson_last_level = create(:script_level, script: script, lesson: first_lesson, position: 1)
+    second_lesson = create(:lesson, script: script, absolute_position: 2)
+    second_lesson_first_level = create(:script_level, script: script, lesson: second_lesson, position: 1)
+    create(:script_level, script: script, lesson: second_lesson, position: 2)
 
-    assert_equal second_stage_first_level, first_stage_last_level.next_progression_level
+    assert_equal second_lesson_first_level, first_lesson_last_level.next_progression_level
   end
 
   test 'script_level positions should reset' do
     scripts, _ = Script.setup([@script_file])
-    first = scripts[0].stages[0].script_levels[0]
-    second = scripts[0].stages[0].script_levels[1]
+    first = scripts[0].lessons[0].script_levels[0]
+    second = scripts[0].lessons[0].script_levels[1]
     assert_equal 1, first.position
     assert_equal 2, second.position
     promoted_level = second.level
@@ -244,16 +244,16 @@ class ScriptTest < ActiveSupport::TestCase
   test 'script import is idempotent w.r.t. positions and count' do
     scripts, _ = Script.setup([@script_file])
     original_count = ScriptLevel.count
-    first = scripts[0].stages[0].script_levels[0]
-    second = scripts[0].stages[0].script_levels[1]
-    third = scripts[0].stages[0].script_levels[2]
+    first = scripts[0].lessons[0].script_levels[0]
+    second = scripts[0].lessons[0].script_levels[1]
+    third = scripts[0].lessons[0].script_levels[2]
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
     scripts, _ = Script.setup([@script_file])
-    first = scripts[0].stages[0].script_levels[0]
-    second = scripts[0].stages[0].script_levels[1]
-    third = scripts[0].stages[0].script_levels[2]
+    first = scripts[0].lessons[0].script_levels[0]
+    second = scripts[0].lessons[0].script_levels[1]
+    third = scripts[0].lessons[0].script_levels[2]
     assert_equal 1, first.position
     assert_equal 2, second.position
     assert_equal 3, third.position
@@ -268,10 +268,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-      "stage 'Stage1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
+      "lesson 'lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
-    script = Script.add_script({name: 'test script'}, script_data[:stages])
+    script = Script.add_script({name: 'test script'}, script_data[:lessons])
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
@@ -382,19 +382,19 @@ class ScriptTest < ActiveSupport::TestCase
       Script.cache_find_script_level(script_level.id).level
   end
 
-  test 'stage hierarchy uses cache' do
+  test 'lesson hierarchy uses cache' do
     script = Script.first
-    stage = script.stages.first
-    expected_script_level = stage.script_levels.first
-    expected_level = stage.script_levels.first.levels.first
+    lesson = script.lessons.first
+    expected_script_level = lesson.script_levels.first
+    expected_level = lesson.script_levels.first.levels.first
 
     populate_cache_and_disconnect_db
 
     assert_equal expected_script_level,
-      Script.get_from_cache(script.id).stages.first.script_levels.first
+      Script.get_from_cache(script.id).lessons.first.script_levels.first
     assert_equal expected_level,
       Script.get_from_cache(script.id).
-        stages.first.script_levels.first.levels.first
+        lessons.first.script_levels.first.levels.first
   end
 
   test 'level_concept_difficulty uses preloading' do
@@ -681,29 +681,29 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should summarize script' do
-    script = create(:script, name: 'single-stage-script')
-    stage = create(:stage, script: script, name: 'Stage 1')
-    create(:script_level, script: script, stage: stage)
+    script = create(:script, name: 'single-lesson-script')
+    lesson = create(:lesson, script: script, name: 'lesson 1')
+    create(:script_level, script: script, lesson: lesson)
     script.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
     summary = script.summarize
 
-    assert_equal 1, summary[:stages].count
-    assert_nil summary[:peerReviewStage]
+    assert_equal 1, summary[:lessons].count
+    assert_nil summary[:peerReviewlesson]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
 
   test 'should summarize script with peer reviews' do
     script = create(:script, name: 'script-with-peer-review', peer_reviews_to_complete: 1)
-    stage = create(:stage, script: script, name: 'Stage 1')
-    create(:script_level, script: script, stage: stage)
-    stage = create(:stage, script: script, name: 'Stage 2')
-    create(:script_level, script: script, stage: stage)
+    lesson = create(:lesson, script: script, name: 'lesson 1')
+    create(:script_level, script: script, lesson: lesson)
+    lesson = create(:lesson, script: script, name: 'lesson 2')
+    create(:script_level, script: script, lesson: lesson)
 
     summary = script.summarize
 
-    expected_peer_review_stage = {
+    expected_peer_review_lesson = {
       name: "You must complete 1 reviews for this unit",
       flex_category: "Peer Review",
       levels: [{
@@ -718,18 +718,18 @@ class ScriptTest < ActiveSupport::TestCase
       lockable: false
     }
 
-    assert_equal 2, summary[:stages].count
-    assert_equal expected_peer_review_stage, summary[:peerReviewStage]
+    assert_equal 2, summary[:lessons].count
+    assert_equal expected_peer_review_lesson, summary[:peerReviewlesson]
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
   test 'should generate a shorter summary for header' do
-    script = create(:script, name: 'single-stage-script')
-    stage = create(:stage, script: script, name: 'Stage 1')
-    create(:script_level, script: script, stage: stage)
+    script = create(:script, name: 'single-lesson-script')
+    lesson = create(:lesson, script: script, name: 'lesson 1')
+    create(:script_level, script: script, lesson: lesson)
 
     expected = {
-      name: 'single-stage-script',
+      name: 'single-lesson-script',
       disablePostMilestone: false,
       isHocScript: false,
       student_detail_progress_view: false,
@@ -738,12 +738,12 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected, script.summarize_header
   end
 
-  test 'should exclude stages if include_stages is false' do
-    script = create(:script, name: 'single-stage-script')
-    stage = create(:stage, script: script, name: 'Stage 1')
-    create(:script_level, script: script, stage: stage)
+  test 'should exclude lessons if include_lessons is false' do
+    script = create(:script, name: 'single-lesson-script')
+    lesson = create(:lesson, script: script, name: 'lesson 1')
+    create(:script_level, script: script, lesson: lesson)
 
-    assert_nil script.summarize(false)[:stages]
+    assert_nil script.summarize(false)[:lessons]
   end
 
   test 'summarize includes has_verified_resources' do
@@ -896,16 +896,16 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil script.summarize(true, create(:student))[:show_assign_button]
   end
 
-  test 'summarize includes bonus levels for stages if include_bonus_levels and include_stages are true' do
+  test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
     script = create :script
-    stage = create :stage, script: script
+    lesson = create :lesson, script: script
     level = create :level
-    create :script_level, stage: stage, levels: [level], bonus: true
+    create :script_level, lesson: lesson, levels: [level], bonus: true
 
     response = script.summarize(true, nil, true)
-    assert_equal 1, response[:stages].length
-    assert_equal 1, response[:stages].first[:levels].length
-    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
+    assert_equal 1, response[:lessons].length
+    assert_equal 1, response[:lessons].first[:levels].length
+    assert_equal [level.id], response[:lessons].first[:levels].first[:ids]
   end
 
   test 'should generate PLC objects' do
@@ -939,7 +939,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'PLC Test', unit.unit_name
     assert_equal 'PLC test fixture script', unit.unit_description
 
-    lm = script.stages.first.plc_learning_module
+    lm = script.lessons.first.plc_learning_module
     assert_equal 'Sample Module', lm.name
     assert_equal 1, unit.plc_learning_modules.count
     assert_equal lm, unit.plc_learning_modules.first
@@ -990,126 +990,126 @@ class ScriptTest < ActiveSupport::TestCase
     script.update!(login_required: true)
   end
 
-  test 'names stages appropriately when script has lockable stages' do
+  test 'names lessons appropriately when script has lockable lessons' do
     create :level, name: 'LockableAssessment1'
     create :level, name: 'NonLockableAssessment1'
     create :level, name: 'NonLockableAssessment2'
     create :level, name: 'NonLockableAssessment3'
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      stage 'NonLockable1'
+      lesson 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      stage 'NonLockable2'
+      lesson 'NonLockable2'
       assessment 'NonLockableAssessment2';
-      stage 'NonLockable3'
+      lesson 'NonLockable3'
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:stages])
+    script = Script.add_script({name: 'test_script'}, script_data[:lessons])
 
-    # Everything has Stage <number> when nothing is lockable
-    assert /^Lesson 1:/.match(script.stages[0].localized_title)
-    assert /^Lesson 2:/.match(script.stages[1].localized_title)
-    assert /^Lesson 3:/.match(script.stages[2].localized_title)
+    # Everything has lesson <number> when nothing is lockable
+    assert /^Lesson 1:/.match(script.lessons[0].localized_title)
+    assert /^Lesson 2:/.match(script.lessons[1].localized_title)
+    assert /^Lesson 3:/.match(script.lessons[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      stage 'Lockable1', lockable: true
+      lesson 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
-      stage 'NonLockable1'
+      lesson 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      stage 'NonLockable2'
+      lesson 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:stages])
+    script = Script.add_script({name: 'test_script'}, script_data[:lessons])
 
-    # When first stage is lockable, it has no stage number, and the next stage starts at 1
-    assert /^Lesson/.match(script.stages[0].localized_title).nil?
-    assert /^Lesson 1:/.match(script.stages[1].localized_title)
-    assert /^Lesson 2:/.match(script.stages[2].localized_title)
+    # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
+    assert /^Lesson/.match(script.lessons[0].localized_title).nil?
+    assert /^Lesson 1:/.match(script.lessons[1].localized_title)
+    assert /^Lesson 2:/.match(script.lessons[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      stage 'NonLockable1'
+      lesson 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      stage 'Lockable1', lockable: true
+      lesson 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
-      stage 'NonLockable2'
+      lesson 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:stages])
+    script = Script.add_script({name: 'test_script'}, script_data[:lessons])
 
-    # When only second stage is lockable, we count non-lockable stages appropriately
-    assert /^Lesson 1:/.match(script.stages[0].localized_title)
-    assert /^Lesson/.match(script.stages[1].localized_title).nil?
-    assert /^Lesson 2:/.match(script.stages[2].localized_title)
+    # When only second lesson is lockable, we count non-lockable lessons appropriately
+    assert /^Lesson 1:/.match(script.lessons[0].localized_title)
+    assert /^Lesson/.match(script.lessons[1].localized_title).nil?
+    assert /^Lesson 2:/.match(script.lessons[2].localized_title)
   end
 
-  test 'Script DSL fails when creating invalid lockable stages' do
+  test 'Script DSL fails when creating invalid lockable lessons' do
     create :level, name: 'Level1'
     create :level, name: 'LockableAssessment1'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      stage 'Lockable1', lockable: true
+      lesson 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
       level 'Level1';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:stages])
+      Script.add_script({name: 'test_script'}, script_data[:lessons])
     end
   end
 
   test "update_i18n without metdata" do
-    # This simulates us doing a seed after adding new stages to multiple of
-    # our script files. Doing so should update our object with the new stage
+    # This simulates us doing a seed after adding new lessons to multiple of
+    # our script files. Doing so should update our object with the new lesson
     # names (which we would then persist to sripts.en.yml)
     original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
 
-    course3_yml = {'stages' => {'course3' => {'name' => 'course3'}}}
-    course4_yml = {'stages' => {'course4' => {'name' => 'course4'}}}
+    course3_yml = {'lessons' => {'course3' => {'name' => 'course3'}}}
+    course4_yml = {'lessons' => {'course4' => {'name' => 'course4'}}}
 
-    stages_i18n = {
+    lessons_i18n = {
       'course3' => course3_yml,
       'course4' => course4_yml
     }
 
     # updated represents what will get written to scripts.en.yml
-    updated = Script.update_i18n(original_yml, stages_i18n)
+    updated = Script.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
     assert_equal course4_yml, updated['en']['data']['script']['name']['course4']
   end
 
   test "update_i18n with metadata" do
-    # In this case, we're modifying a stage description without changing any
-    # stage names
+    # In this case, we're modifying a lesson description without changing any
+    # lesson names
     original_yml = YAML.load_file(Rails.root.join('test', 'en.yml'))
 
-    # No updates to stage names
-    stages_i18n = {'en' => {'data' => {'name' => {}}}}
+    # No updates to lesson names
+    lessons_i18n = {'en' => {'data' => {'name' => {}}}}
 
     script_name = 'Report Script'
 
     metadata = {
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
-      stage_descriptions: [{
-        'name' => 'Report Stage 1',
-        'descriptionStudent' => 'Stage 1 is pretty neat',
+      lesson_descriptions: [{
+        'name' => 'Report lesson 1',
+        'descriptionStudent' => 'lesson 1 is pretty neat',
         'descriptionTeacher' => 'This is what you should know as a teacher'
       }].to_json
     }
 
-    updated = Script.update_i18n(original_yml, stages_i18n, script_name, metadata)
+    updated = Script.update_i18n(original_yml, lessons_i18n, script_name, metadata)
 
     updated_report_script = updated['en']['data']['script']['name']['Report Script']
 
     assert_equal 'Report Script Name', updated_report_script['title']
     assert_equal 'This is what Report Script is all about', updated_report_script['description']
-    assert_equal 'report-stage-1', updated_report_script['stages']['Report Stage 1']['name']
-    assert_equal 'Stage 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
+    assert_equal 'report-lesson-1', updated_report_script['lessons']['Report lesson 1']['name']
+    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report lesson 1']['description_student']
+    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report lesson 1']['description_teacher']
   end
 
   test '!text_to_speech_enabled? by default' do
@@ -1123,38 +1123,38 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'FreeResponse level is listed in text_response_levels' do
     script = create :script
-    stage = create :stage, script: script
+    lesson = create :lesson, script: script
     level = create :free_response
-    create :script_level, script: script, stage: stage, levels: [level]
+    create :script_level, script: script, lesson: lesson, levels: [level]
 
     assert_equal level, script.text_response_levels.first[:levels].first
   end
 
   test 'Multi level is not listed in text_response_levels' do
     script = create :script
-    stage = create :stage, script: script
+    lesson = create :lesson, script: script
     level = create :multi
-    create :script_level, script: script, stage: stage, levels: [level]
+    create :script_level, script: script, lesson: lesson, levels: [level]
 
     assert_empty script.text_response_levels
   end
 
   test 'contained FreeResponse level is listed in text_response_levels' do
     script = create :script
-    stage = create :stage, script: script
+    lesson = create :lesson, script: script
     contained_level = create :free_response, name: 'Contained Free Response'
     level = create :maze, properties: {contained_level_names: [contained_level.name]}
-    create :script_level, script: script, stage: stage, levels: [level]
+    create :script_level, script: script, lesson: lesson, levels: [level]
 
     assert_equal contained_level, script.text_response_levels.first[:levels].first
   end
 
   test 'contained Multi level is not listed in text_response_levels' do
     script = create :script
-    stage = create :stage, script: script
+    lesson = create :lesson, script: script
     contained_level = create :multi, name: 'Contained Multi'
     level = create :maze, properties: {contained_level_names: [contained_level.name]}
-    create :script_level, script: script, stage: stage, levels: [level]
+    create :script_level, script: script, lesson: lesson, levels: [level]
 
     assert_empty script.text_response_levels
   end
@@ -1195,8 +1195,8 @@ class ScriptTest < ActiveSupport::TestCase
   test "logged_out_age_13_required?" do
     script = create :script, login_required: false
     level = create :applab
-    stage = create :stage, script: script
-    create :script_level, script: script, stage: stage, levels: [level]
+    lesson = create :lesson, script: script
+    create :script_level, script: script, lesson: lesson, levels: [level]
 
     # return true when we have an applab level
     assert_equal true, script.logged_out_age_13_required?
@@ -1208,31 +1208,31 @@ class ScriptTest < ActiveSupport::TestCase
     # returns false if we don't have any applab/gamelab/weblab levels
     script = create :script, login_required: false
     level = create :maze
-    stage = create :stage, script: script
-    create :script_level, script: script, stage: stage, levels: [level]
+    lesson = create :lesson, script: script
+    create :script_level, script: script, lesson: lesson, levels: [level]
     assert_equal false, script.logged_out_age_13_required?
   end
 
   test "get_bonus_script_levels" do
     script = create :script
-    stage1 = create :stage, script: script
-    create :stage, script: script
-    stage3 = create :stage, script: script
-    create :script_level, script: script, stage: stage1, bonus: true
-    create :script_level, script: script, stage: stage1, bonus: true
-    create :script_level, script: script, stage: stage3, bonus: true
-    create :script_level, script: script, stage: stage3, bonus: true
+    lesson1 = create :lesson, script: script
+    create :lesson, script: script
+    lesson3 = create :lesson, script: script
+    create :script_level, script: script, lesson: lesson1, bonus: true
+    create :script_level, script: script, lesson: lesson1, bonus: true
+    create :script_level, script: script, lesson: lesson3, bonus: true
+    create :script_level, script: script, lesson: lesson3, bonus: true
 
-    bonus_levels1 = script.get_bonus_script_levels(stage1)
-    bonus_levels3 = script.get_bonus_script_levels(stage3)
+    bonus_levels1 = script.get_bonus_script_levels(lesson1)
+    bonus_levels3 = script.get_bonus_script_levels(lesson3)
 
     assert_equal 1, bonus_levels1.length
-    assert_equal 1, bonus_levels1[0][:stageNumber]
+    assert_equal 1, bonus_levels1[0][:lessonNumber]
     assert_equal 2, bonus_levels1[0][:levels].length
 
     assert_equal 2, bonus_levels3.length
-    assert_equal 1, bonus_levels3[0][:stageNumber]
-    assert_equal 3, bonus_levels3[1][:stageNumber]
+    assert_equal 1, bonus_levels3[0][:lessonNumber]
+    assert_equal 3, bonus_levels3[1][:lessonNumber]
     assert_equal 2, bonus_levels3[0][:levels].length
     assert_equal 2, bonus_levels3[1][:levels].length
   end
@@ -1240,22 +1240,22 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can make a challenge level not a challenge level' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}', challenge: true
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
     )
     assert script.script_levels.first.challenge
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
     )
 
     refute script.script_levels.first.challenge
@@ -1264,22 +1264,22 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can make a bonus level not a bonus level' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}', bonus: true
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
     )
     assert script.script_levels.first.bonus
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
     )
 
     refute script.script_levels.first.bonus
@@ -1289,11 +1289,11 @@ class ScriptTest < ActiveSupport::TestCase
     l = create :level
     old_dsl = <<-SCRIPT
       project_widget_visible true
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
@@ -1302,7 +1302,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:stages]
+      script_data[:lessons]
     )
     assert script.project_widget_visible
 
@@ -1312,7 +1312,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:stages]
+      script_data[:lessons]
     )
 
     refute script.project_widget_visible
@@ -1322,11 +1322,11 @@ class ScriptTest < ActiveSupport::TestCase
     l = create :level
     old_dsl = <<-SCRIPT
       script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
@@ -1335,7 +1335,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:stages]
+      script_data[:lessons]
     )
     assert script.script_announcements
 
@@ -1345,7 +1345,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:stages]
+      script_data[:lessons]
     )
 
     refute script.script_announcements
@@ -1356,9 +1356,9 @@ class ScriptTest < ActiveSupport::TestCase
     dsl = <<-SCRIPT
       has_lesson_plan true
       curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
-      stage 'Stage2'
+      lesson 'lesson2'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
@@ -1367,19 +1367,19 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'curriculumTestScript',
         properties: Script.build_property_hash(script_data),
       },
-      script_data[:stages],
+      script_data[:lessons],
     )
-    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.stages.first.lesson_plan_html_url
+    assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.lessons.first.lesson_plan_html_url
     with_locale(:'it-IT') do
-      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), script.stages.last.lesson_plan_html_url
+      assert_equal CDO.curriculum_url('it-IT', 'foo/2'), script.lessons.last.lesson_plan_html_url
     end
 
     script.curriculum_path = '//example.com/foo/{LESSON}'
-    assert_equal '//example.com/foo/1', script.stages.first.lesson_plan_html_url
-    assert_equal '//example.com/foo/2', script.stages.last.lesson_plan_html_url
+    assert_equal '//example.com/foo/1', script.lessons.first.lesson_plan_html_url
+    assert_equal '//example.com/foo/2', script.lessons.last.lesson_plan_html_url
 
     script.curriculum_path = nil
-    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.stages.first.lesson_plan_html_url
+    assert_equal '//test.code.org/curriculum/curriculumTestScript/1/Teacher', script.lessons.first.lesson_plan_html_url
   end
 
   test 'clone script with suffix' do
@@ -1407,18 +1407,18 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal '_copy', level.name_suffix
     end
 
-    # Validate stages. We've already done some validation of level contents, so
+    # Validate lessons. We've already done some validation of level contents, so
     # this time just validate their names.
-    assert_equal 2, script_copy.stages.count
-    stage1 = script_copy.stages.first
-    stage2 = script_copy.stages.last
+    assert_equal 2, script_copy.lessons.count
+    lesson1 = script_copy.lessons.first
+    lesson2 = script_copy.lessons.last
     assert_equal(
       'Level 1_copy,Level 2_copy,Level 3_copy',
-      stage1.script_levels.map(&:levels).flatten.map(&:name).join(',')
+      lesson1.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
     assert_equal(
       'Level 4_copy,Level 5_copy',
-      stage2.script_levels.map(&:levels).flatten.map(&:name).join(',')
+      lesson2.script_levels.map(&:levels).flatten.map(&:name).join(',')
     )
   end
 
@@ -1459,7 +1459,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Ignore level names, since we are just testing whether the
     # variants / active / endvariants structure is correct.
     new_dsl_regex = <<-SCRIPT
-stage 'Stage1'
+lesson 'lesson1'
 variants
   level '[^']+'
   level '[^']+', active: false
@@ -1489,13 +1489,13 @@ endvariants
   end
 
   test "assignable_info: returns assignable info for a script" do
-    script = create(:script, name: 'fake-script', hidden: true, stage_extras_available: true)
+    script = create(:script, name: 'fake-script', hidden: true, lesson_extras_available: true)
     assignable_info = script.assignable_info
 
     assert_equal("fake-script *", assignable_info[:name])
     assert_equal("fake-script", assignable_info[:script_name])
     assert_equal("other", assignable_info[:category])
-    assert(assignable_info[:stage_extras_available])
+    assert(assignable_info[:lesson_extras_available])
   end
 
   test "assignable_info: correctly translates script info" do
@@ -1678,7 +1678,7 @@ endvariants
       hidden false
       pilot_experiment 'pilot-experiment'
 
-      stage 'Stage1'
+      lesson 'lesson1'
       level '#{l.name}'
     SCRIPT
 
