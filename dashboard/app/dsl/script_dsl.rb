@@ -14,10 +14,10 @@ class ScriptDSL < BaseDSL
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
-    @hideable_lessons = false
+    @hideable_stages = false
     @student_detail_progress_view = false
     @teacher_resources = []
-    @lesson_extras_available = false
+    @stage_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
     @has_lesson_plan = false
@@ -43,9 +43,9 @@ class ScriptDSL < BaseDSL
 
   boolean :hidden
   boolean :login_required
-  boolean :hideable_lessons
+  boolean :hideable_stages
   boolean :student_detail_progress_view
-  boolean :lesson_extras_available
+  boolean :stage_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
@@ -85,7 +85,7 @@ class ScriptDSL < BaseDSL
         lesson: @lesson,
         visible_after: @lesson_visible_after,
         scriptlevels: @scriptlevels,
-        lesson_extras_disabled: @lesson_extras_disabled,
+        stage_extras_disabled: @stage_extras_disabled,
       }.compact
     end
     @lesson = name
@@ -95,7 +95,7 @@ class ScriptDSL < BaseDSL
     @scriptlevels = []
     @concepts = []
     @skin = nil
-    @lesson_extras_disabled = nil
+    @stage_extras_disabled = nil
   end
 
   # If visible_after value is blank default to next wednesday at 8am PDT
@@ -121,12 +121,12 @@ class ScriptDSL < BaseDSL
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
-      hideable_lessons: @hideable_lessons,
+      hideable_stages: @hideable_stages,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
-      lesson_extras_available: @lesson_extras_available,
+      stage_extras_available: @stage_extras_available,
       has_verified_resources: @has_verified_resources,
       has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
@@ -260,7 +260,7 @@ class ScriptDSL < BaseDSL
   end
 
   def no_extras
-    @lesson_extras_disabled = true
+    @stage_extras_disabled = true
   end
 
   # @override
@@ -299,11 +299,11 @@ class ScriptDSL < BaseDSL
 
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
-    s << 'hideable_lessons true' if script.hideable_lessons
+    s << 'hideable_stages true' if script.hideable_stages
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
-    s << 'lesson_extras_available true' if script.lesson_extras_available
+    s << 'stage_extras_available true' if script.stage_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
     s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
@@ -359,7 +359,7 @@ class ScriptDSL < BaseDSL
           s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
         end
       end
-      s << 'no_extras' if lesson.lesson_extras_disabled
+      s << 'no_extras' if lesson.stage_extras_disabled
       s << ''
     end
     s.join("\n")
