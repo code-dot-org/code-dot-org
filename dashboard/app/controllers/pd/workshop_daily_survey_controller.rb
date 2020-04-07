@@ -466,7 +466,8 @@ module Pd
             pd_workshop_id: workshop.id
           },
           surveyData: {
-            facilitators: facilitator_data
+            facilitators: facilitator_data,
+            workshop_course: workshop.course
           }
         }.to_json
       }

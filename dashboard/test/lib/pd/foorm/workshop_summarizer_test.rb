@@ -63,5 +63,71 @@ module Pd::Foorm
 
       assert_equal expected_result.with_indifferent_access, summarized_answers.with_indifferent_access
     end
+
+    test 'summarizes facilitator results' do
+      workshop = create :csf_101_workshop
+      facilitator = create :facilitator
+      create :csf_intro_post_facilitator_workshop_submission_high, pd_workshop_id: workshop.id, facilitator_id: facilitator.id
+      create :csf_intro_post_facilitator_workshop_submission_low, pd_workshop_id: workshop.id, facilitator_id: facilitator.id
+
+      ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
+      submission_ids = ws_submissions.pluck(:foorm_submission_id)
+      foorm_submissions = ::Foorm::Submission.find(submission_ids)
+      csf_form = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
+      parsed_form = FoormParser.parse_forms([csf_form])
+      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_form, ws_submissions).with_indifferent_access
+
+      facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      assert_not_empty facilitator_answers
+      expected_matrix_data = {
+        demonstrated_knowledge: {"7": 1, "1": 1},
+        built_equitable: {"7": 1, "1": 1},
+        on_track: {"7": 1, "1": 1},
+        productive_discussions: {"7": 1, "1": 1},
+        ways_equitable: {"7": 1, "1": 1},
+        healthy_relationship: {"7": 1, "1": 1}
+      }.with_indifferent_access
+
+      assert_equal expected_matrix_data, facilitator_answers[:facilitator_effectiveness][facilitator.name]
+    end
+
+    test 'summarizes facilitator results for multiple facilitators' do
+      workshop = create :csf_101_workshop
+      facilitator1 = create :facilitator
+      facilitator2 = create :facilitator
+      create :csf_intro_post_facilitator_workshop_submission_high, pd_workshop_id: workshop.id, facilitator_id: facilitator1.id
+      create_list :csf_intro_post_facilitator_workshop_submission_low, 3, pd_workshop_id: workshop.id, facilitator_id: facilitator2.id
+
+      ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
+      submission_ids = ws_submissions.pluck(:foorm_submission_id)
+      foorm_submissions = ::Foorm::Submission.find(submission_ids)
+      csf_form = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
+      parsed_form = FoormParser.parse_forms([csf_form])
+      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_form, ws_submissions).with_indifferent_access
+
+      expected_matrix_data_high = {
+        demonstrated_knowledge: {"7": 1},
+        built_equitable: {"7": 1},
+        on_track: {"7": 1},
+        productive_discussions: {"7": 1},
+        ways_equitable: {"7": 1},
+        healthy_relationship: {"7": 1}
+      }.with_indifferent_access
+
+      expected_matrix_data_low = {
+        demonstrated_knowledge: {"1": 3},
+        built_equitable: {"1": 3},
+        on_track: {"1": 3},
+        productive_discussions: {"1": 3},
+        ways_equitable: {"1": 3},
+        healthy_relationship: {"1": 3}
+      }.with_indifferent_access
+
+      facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
+      assert_not_empty facilitator_answers
+
+      assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.name]
+      assert_equal expected_matrix_data_low, facilitator_answers[:facilitator_effectiveness][facilitator2.name]
+    end
   end
 end

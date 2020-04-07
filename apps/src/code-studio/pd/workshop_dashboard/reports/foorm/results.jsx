@@ -37,7 +37,7 @@ export default class Results extends React.Component {
               <div>
                 <h3>Facilitator Specific Questions</h3>
                 <SectionResults
-                  section="general"
+                  section="facilitator"
                   questions={this.props.questions['facilitator']}
                   answers={this.props.thisWorkshop[workshopTab]['facilitator']}
                 />
