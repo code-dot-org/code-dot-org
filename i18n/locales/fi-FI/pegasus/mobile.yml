@@ -12,6 +12,7 @@
   csedweek_dates: "3.-9. joulukuuta 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suunnittele koodaustuntisi</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
+  csedweek_banner_teachers_text: "Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit"
   n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
   anybody_can_learn: "Kuka tahansa voi oppia."
   learn_now: "Opettele nyt"
@@ -138,6 +139,7 @@
   enter_valid_email: "Ole hyvä ja syötä toimiva sähköpostiosoite"
   get_a_certificate_message: "Me lähetämme sinulle todistuksen ja lisätietoa miten voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>"
   get_a_certificate_message_after: "Napsauta todistusta ladataksesi tai tulostaaksesi. Jatka sen jälkeen <a href='http://studio.code.org'>muilla kursseilla</a>, tai tarkastele vaihtoehtoja <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>."
+  get_a_certificate_message_after_markdown: "Napsauta todistusta ladataksesi tai tulostaaksesi. Jatka sen jälkeen [muilla kursseilla](http://studio.code.org), tai tarkastele vaihtoehtoja [Mitä voit oppia ensimmäisen tunnin jälkeen](/learn/beyond)."
   thanks_for_submitting: "Kiitos tietojen antamisesta!"
   if_you_enjoyed: "Jos nautit oppimisesta, pyydä myös kavereitasi kokeilemaan! Haluamme koko maailman oppivan."
   personalize_certificate: "Nimikoi todistuksesi"

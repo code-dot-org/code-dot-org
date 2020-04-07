@@ -1469,26 +1469,36 @@ mi:
               name: Ngā Here
             Functions:
               name: Ngā Taumahi
+            Text:
+              name: Kuputuhi
         coursea-2020:
           stages:
             Going Places Safely:
               name: Te Karore Haumaru
+            'Programming: Happy Maps':
+              name: Ngā Mahere Harikoa
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
             Move It, Move It:
               name: E Neke, E Neke
+            'Loops: Getting Loopy':
+              name: Kia Koromeke
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Kōmore Ā-Rua
+            'Events: The Big Event':
+              name: Te Takahanga Nui
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Papatono Pepa Kauwhata
             Relay Programming:
               name: Papatonotanga ā-Tānga
             'Unplugged: Binary':
-              name: 'Momotu: Tāhūrua'
+              name: Ngā Atahanga Tāhūrua
             Artist Binary:
               name: Rehetoi Tāhūrua
             Digital Citizenship:
@@ -1497,8 +1507,8 @@ mi:
               name: Te Pāti Kanikani
         coursee-2020:
           stages:
-            Conditionals:
-              name: Ngā Here
+            'Functions: Songwriting':
+              name: Te Tito Waiata
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1517,3 +1527,29 @@ mi:
           stages:
             Spelling Bee:
               name: Ohu Takikupu
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Te Waihanga Taumahi
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Ngā Koromeke I Te
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Ngā Taumahi
+        code-break:
+          stages:
+            Algorithms:
+              name: Ngā Hātepe
+            Events:
+              name: Ngā Takunetanga

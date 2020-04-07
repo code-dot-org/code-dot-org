@@ -63,6 +63,7 @@ he:
     code:
       placeholder: "קוד קבוצה (ABCDEF)"
       instructions_short: "הזן את קוד הקבוצה שלך באורך 6 תווים"
+      submit: 'הצטרף'
   add_hint_form:
     placeholder: 'הכניסו בבקשה את הרמז שלכם כאן'
     submit: 'הוסף רמז'

@@ -941,6 +941,7 @@ en:
     csf_warmup: 'Warm-Up'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd1_3: 'Alternate Lessons'
     csd2_1: 'Chapter 1: Web Content and HTML'
     csd2_2: 'Chapter 2: Styling and CSS'
     csd3_1: 'Chapter 1: Images and Animations'
@@ -999,6 +1000,9 @@ en:
     k5_next_steps: 'Next Steps'
     k5_basic_concepts: 'Basic Coding Concepts and Teaching Practices'
     k5_diving_deeper: 'Diving Deeper: Courses E and F'
+    web_lab_projects: 'Web Lab Projects'
+    game_lab_projects: 'Game Lab Projects'
+    app_lab_projects: 'App Lab Projects'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

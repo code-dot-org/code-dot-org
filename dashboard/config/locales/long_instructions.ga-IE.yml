@@ -196,7 +196,7 @@ ga-IE:
       CourseD_Dance_Party_02: |-
         Cuirimis an mús seo ag damhsa!
 
-        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc teagmhais <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
+        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc teagmhais <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
 
         Úsáidtear **tomhais** chun am a mharcáil sa gceol. Sa chúrsa seo, tá ceithre bhuille i ngach tomhas.
       CourseD_Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc teagmhais <xml><block
@@ -226,7 +226,7 @@ ga-IE:
       CourseD_Dance_Party_10: |-
         Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -324,7 +324,7 @@ ga-IE:
       Dance_Party_02: |-
         Cuirimis an mús seo ag damhsa!
 
-        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
+        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
 
         Úsáidtear **tomhais** chun am a mharcáil sa gceol. Sa chúrsa seo, tá ceithre bhuille i ngach tomhas.
       Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -353,7 +353,7 @@ ga-IE:
       Dance_Party_10: |-
         Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>

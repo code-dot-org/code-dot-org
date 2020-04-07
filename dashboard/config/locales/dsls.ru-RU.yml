@@ -2074,12 +2074,17 @@ ru-RU:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ничего. Скрат не сдвинется с места.
+        - text: Добираясь до желудя, Скрат трижды переместится вперед, повернет, а
+            затем переместится вперед еще трижды!
+          correct: true
+        - text: Скрат переместится вперед, а затем повернется и упадет.
+        - feedback: Вставив блок «двигаться вперед» в блок «повторить», ты заставишь
+            Скрата трижды переместиться вперед. Затем он повернет и переместится вперед
+            еще трижды, пока не доберется до желудя!
         questions:
-        - {}
+        - text: В этом коде используется новый блок. Как ты думаешь, что произойдет,
+            когда ты нажмешь «Выполнить»?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -2320,3 +2325,8 @@ ru-RU:
         - {}
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "# Правила поведения в компьютерной лаборатории\n  \n<br/><br/>
+          \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nПерейти к плану урока\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Продолжить</a>\n"

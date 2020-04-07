@@ -357,7 +357,25 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
-        coursee-2020:
+            Text:
+              name: អត្ថ​​បទ
+        coursef-2020:
           stages:
+            Internet:
+              name: អ៊ីនធឺណិត
+        csd3-virtual:
+          stages:
+            Variables:
+              name: អ​ថេរ
             Conditionals:
               name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: អនុ​គមន៍
+        code-break:
+          stages:
+            Events:
+              name: ព្រឹត្តិការណ៍

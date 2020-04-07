@@ -60,3 +60,7 @@ mr:
           stages:
             Dance Party:
               name: डांस पार्टी
+        code-break:
+          stages:
+            Events:
+              name: ईव्हेंट्स

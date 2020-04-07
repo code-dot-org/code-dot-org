@@ -1542,6 +1542,14 @@ vi:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Di chuyển {SPRITE} {DISTANCE} Pixel {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Phía Bắc
+            '"East"': Phía Đông
+            '"South"': Phía Nam
+            '"West"': Phía Tây
       aalab_prompt:
         text: đặt câu hỏi {MESSAGE}
       aalab_scene:
@@ -1553,12 +1561,10 @@ vi:
             '3': '3'
       aalab_setupStory:
         text: câu chuyện thiết lập
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': hiển thị
-            '"hide"': ẩn
+            '"random"': ngẫu nhiên
       binary_drawBin:
         text: vẽ nhị phân {BIN}
       binary_drawBinScreen:

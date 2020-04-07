@@ -24,6 +24,7 @@ level 'U9L3 CFU manually cleaning data', progression: 'Check For Understanding',
 
 stage 'Exploring Two Columns'
 level 'CSP U9L4 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L4 Making Crosstabs and Scatter Plots', progression: 'Crosstab and Scatter Charts'
 level 'Which Type of Chart', progression: 'What Type of Chart?'
 level 'U9L4 CFU Two Column vs One', progression: 'Check For Understanding', assessment: true
 

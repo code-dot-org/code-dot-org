@@ -222,6 +222,10 @@ en-GB:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': random
       binary_whenKey:
         options:
           KEY:

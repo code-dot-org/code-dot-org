@@ -325,6 +325,10 @@ pl-PL:
         craft_what_is_iron: Wydobądź to żelazo!
       Underground Iron_2019:
         craft_what_is_iron: Wydobądź to żelazo!
+      behaviors 1:
+        behaviors_edit: Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie.
+      behaviors 4:
+        behaviors_edit: Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar
           (lub miód) z jednego kwiatka (lub plastra).
@@ -340,7 +344,7 @@ pl-PL:
           projekt, zmień go tak, jak chcesz!
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Wykorzystaj to polecenie do przesunięcia
-          pszczoły do tyłu.
+          pszczółki do tyłu.
       course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_1: Jaki kod powinieneś wstawić do tej funkcji?
         courseF_bee_functions_challenge1_2: Funkcja "sprawdź nektar lub miód" może
@@ -503,16 +507,28 @@ pl-PL:
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!
       courseC_maze_programming3:
-        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+        courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming3_2018:
-        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+        courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming3_2019:
-        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+        courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7:
+        courseC_maze_programming7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą
+          być trudne i wymagać kilku prób.
+
+'
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą
+          być trudne i wymagać kilku prób.
+
+'
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą
+          być trudne i wymagać kilku prób.
+
+'
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Nie musisz używać kolorów by poprawnie rozwiązać
@@ -548,10 +564,10 @@ pl-PL:
           (lub miód) z jednego kwiatka (lub plastra).
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Wykorzystaj to polecenie do przesunięcia
-          pszczoły do tyłu.
+          pszczółki do tyłu.
       courseD_bee_debugging_challenge1a:
         courseD_bee_debugging_challenge1_callout1: Wykorzystaj to polecenie do przesunięcia
-          pszczoły do tyłu.
+          pszczółki do tyłu.
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'Użyj tego bloku, aby wziąć jeden kawałek skarbu.  '
       courseD_maze_ramp3:
@@ -569,6 +585,11 @@ pl-PL:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą być
+          trudne i wymagać kilku prób.
+
+'
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu
           dodając więcej kodu na dole.

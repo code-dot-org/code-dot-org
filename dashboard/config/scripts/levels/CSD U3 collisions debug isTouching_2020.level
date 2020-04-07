@@ -29,7 +29,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Debugging Collisions\r\n\r\nThe balloon is popping before the tack touches it.  When sprites aren't doing what you expect, you can use the `debug` block to get more information about why the sprites are behaving that way.  Can you find out what's wrong in the code below?\r\n\r\n# Do This\r\n* Run the code and use the arrow keys to move the tack to pop the balloon.\r\n* In the code below, change `balloon.debug = false` to `balloon.debug = true`.\r\n* Add a new `debug` block to the code and set the tack sprite's debug property to `true`.\r\n* Run the code again, then discuss with your partner why the balloon is popping early.\r\n\r\n*Challenge: Can you use the animations tab to resize the balloon picture so it pops at the correct time?*\r\n\r\n[//]: # (https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png)\r\n\r\n[//]: # (https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png)\r\n\r\n[//]: # (https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png)\r\n\r\n[//]: # (https://images.code.org/2892e65635d7a43d0664bb8ff58eb698-image-1471200175665.png)\r\n\r\n[//]: # (https://images.code.org/9ffeb3f543033353d073794071316860-image-1471200179449.png)",
+    "long_instructions": "# Debugging Collisions\r\n\r\nThe balloon is popping before the tack touches it.  You can use the `debug` block to get more information about the bug in the program?\r\n\r\n# Do This\r\n* Run the code and use the arrow keys to move the tack to pop the balloon.\r\n* In the code below, change `balloon.debug = false` to `balloon.debug = true`.\r\n* Add a new `debug` block to the code and set the tack sprite's debug property to `true`.\r\n* Run the code again, then discuss with your partner why the balloon is popping early.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -72,11 +72,16 @@
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
+    "encrypted": "false",
+    "teacher_markdown": "This level does not ask students to fix the bug in the program, which must be done in the animation tab.  In order to make the collision work properly, students will need to crop the empty space around the visible part of the picture.  The easiest way to do this is to click once on the \"crop\" icon in the animation tab, which will tightly crop to the smallest rectangle around the visible parts of the picture.  Students may also use the rectangular select tool to specify what should be cropped away. ",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-03-05 17:12:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-31 04:14:32 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

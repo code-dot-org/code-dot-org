@@ -9701,10 +9701,56 @@ sk-SK:
         courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_b: Funkcia by nemala obsahovať celý prgram, iba
+          tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.
+        courseD_artist_functions2_c: |-
+          Uisti sa, že použiješ zelený blok  `nakresli štvorec` aby si "zavolal/a" tvoju funckiu. Inak kód v tvojej funkcii nepôjde.
+
+           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          Tvoj program by mal:
+
+          -   Použiť tvoju funkciu
+          -   Posunúť sa dopredu 100 + 75 pixelov
+          -   Znova použiť tvoju funkciu
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_b: Funkcia by nemala obsahovať celý prgram, iba
+          tú časť, ktorá nakreslí štvorec so stranou dlhou 100 pixelov.
+        courseD_artist_functions2_c: |-
+          Uisti sa, že použiješ zelený blok  `nakresli štvorec` aby si "zavolal/a" tvoju funckiu. Inak kód v tvojej funkcii nepôjde.
+
+           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_a: |-
+          Tvoj program by mal:
+
+          -   Použiť tvoju funkciu
+          -   Posunúť sa dopredu 100 + 75 pixelov
+          -   Znova použiť tvoju funkciu
+      courseE_artist_functions5_2018:
+        courseD_artist_functions5_c: Začni vytvorením funkcie `nakresli hviezdu`,
+          potom túto funkciu použi na nakreslenie 3 hviezd!
+      courseE_artist_functions5_2019:
+        courseD_artist_functions5_c: Začni vytvorením funkcie `nakresli hviezdu`,
+          potom túto funkciu použi na nakreslenie 3 hviezd!
       courseE_artist_functions6:
         grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
           bloky a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil
           celú úlohu.
+      courseE_artist_functions7_2018:
+        courseD_artist_functions7_b: Aby si sa dostal/a od vrchných okien ku spodným,
+          otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz
+          umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!
+      courseE_artist_functions7_2019:
+        courseD_artist_functions7_b: Aby si sa dostal/a od vrchných okien ku spodným,
+          otoč umelca doprava, skoč o 150 pixelov a potom ho znovu otoč doprava! Teraz
+          umelec bude otočený správnym smerom, aby mohol dokončiť zvyšo domu!
+      courseE_artist_functions8_2018:
+        courseD_artist_functions8_c: 'Na konci každého striedavého radu štvorcov,
+          pred začatím nového radu, umelec potrebuje skočiť dole a späť. '
+      courseE_artist_functions8_2019:
+        courseD_artist_functions8_c: 'Na konci každého striedavého radu štvorcov,
+          pred začatím nového radu, umelec potrebuje skočiť dole a späť. '
       courseE_artist_functions8b_2018:
         courseD_artist_functions8_f: Budeš potrebovať už len jeden blok `posuň sa
           dopredu`, ak to máš správne!
@@ -9732,17 +9778,27 @@ sk-SK:
           sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!
         courseD_artist_functions8_a: Druhý riadok štvrocov sa líši od prvého 180 stupňovou
           otočkou!
+        courseD_artist_functions8_c: Na konci každého radu štvorcov, pred začatím
+          nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra
+          opakovacieho cyklu, aby si sa priparavil/a na ďalšie cvičenie!
       courseE_artist_functions8c_2019:
         courseD_artist_functions8_f: Toto je jednoduchšie ako by sa mohlo zdať! Nie
           sú tu potrebné žiadne bloky `pohni sa` alebo `skoč`!
         courseD_artist_functions8_a: Druhý riadok štvrocov sa líši od prvého 180 stupňovou
           otočkou!
+        courseD_artist_functions8_c: Na konci každého radu štvorcov, pred začatím
+          nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra
+          opakovacieho cyklu, aby si sa priparavil/a na ďalšie cvičenie!
       courseE_artist_ramp9:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseE_bee_concept2_2018:
+        courseE_bee_concept2_d: S týmto cyklom `pokiaľ` dokážeš skontrolovať aj prázdne
+          miesta a zistiť či je hodnota medu > 0. Toto vykoná to isté ako cyklus `pokiaľ
+          tam je med`.
       courseE_bee_concept3_2018:
         courseE_bee_concept3a_a: Vyskúšaj použiť vnorené cykly `opakuj` alebo `pokiaľ`,
           aby si vyriešil túto úlohu.
@@ -9805,11 +9861,17 @@ sk-SK:
           v predchádzajúcich úlohách.
         courseE_farmer_functions9a1_2018b: Na vyriešenie prvej polovice úlohy, použi
           kroky z predchádzajúcej úlohy.
+        courseE_farmer_functions9a1_2018c: Aby si sa dostal/a aj k poslednému šalátu,
+          budeš sa musieť niekoľko krát `otočiť` a `posunúť dopredu`, urob to predtým
+          ako znovu zavoláš svoju funkciu.
       courseE_farmer_functions9a1_2019:
         courseE_farmer_functions9a1_2018a: Použiješ tú istú funkciu, ktorú si si vytvoril/a
           v predchádzajúcich úlohách.
         courseE_farmer_functions9a1_2018b: Na vyriešenie prvej polovice úlohy, použi
           kroky z predchádzajúcej úlohy.
+        courseE_farmer_functions9a1_2018c: Aby si sa dostal/a aj k poslednému šalátu,
+          budeš sa musieť niekoľko krát `otočiť` a `posunúť dopredu`, urob to predtým
+          ako znovu zavoláš svoju funkciu.
       courseE_farmer_ramp11b:
         courseE_farmer_ramp11b_a: Umiestniť cyklus `pokiaľ` vo vnútri cyklu `opakuj`,
           aby bol tvoj kód kratší.
@@ -9831,6 +9893,24 @@ sk-SK:
         courseE_farmer_ramp12_b: Stále budeš musieť použiť cyklus `opakuj` obalený
           okolo celého kódu, aby si farmárke povedal, koľkokrát musí ísť vpred a zobrať
           šalát.
+      courseE_farmer_ramp12c:
+        courseE_farmer_ramp12b_b: 'Ako prvý použicyklus `dokiaľ`, potom keď sa dostaneš
+          k šalátu, použi cyklus `pokiaľ`.  '
+      courseE_farmer_ramp12c_2018:
+        courseE_farmer_ramp12b_b: 'Ako prvý použicyklus `dokiaľ`, potom keď sa dostaneš
+          k šalátu, použi cyklus `pokiaľ`.  '
+      courseE_farmer_ramp12c_2019:
+        courseE_farmer_ramp12b_b: 'Ako prvý použicyklus `dokiaľ`, potom keď sa dostaneš
+          k šalátu, použi cyklus `pokiaľ`.  '
+      courseE_farmer_ramp12d:
+        courseE_farmer_ramp12d_b: Pre vyriešenie tejto úlohy budeš musieť vložiť tvoje
+          cykly `dokiaľ` a `pokiaľ`  dovnútra cyklu `opakuj`!
+      courseE_farmer_ramp12d_2018:
+        courseE_farmer_ramp12d_b: Pre vyriešenie tejto úlohy budeš musieť vložiť tvoje
+          cykly `dokiaľ` a `pokiaľ`  dovnútra cyklu `opakuj`!
+      courseE_farmer_ramp12d_2019:
+        courseE_farmer_ramp12d_b: Pre vyriešenie tejto úlohy budeš musieť vložiť tvoje
+          cykly `dokiaľ` a `pokiaľ`  dovnútra cyklu `opakuj`!
       courseE_farmer_ramp12e:
         courseE_farmer_ramp12e_b: Riešenie tejto úlohy je veľmi podobné tej predošlej,
           musíš však zabočiť do inej strany.
@@ -11093,13 +11173,13 @@ sk-SK:
           v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko
           sa posunieš medzi trojuholníkmi.'
         courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
-          iba na jendom mieste: po bloku `nastav dĺžka na`.'
+          iba na jednom mieste: po bloku `nastav dĺžka na`.'
       courseF_artist_variables3_2019:
         courseF_artist_variables3_a: 'Premenná `dĺžka` bude použitá na dvoch miestach
           v tvojom kóde: V dĺžke strany tvojho trojuholníka a vo veľkosti, o koľko
           sa posunieš medzi trojuholníkmi.'
         courseF_artist_variables3_b: 'Číselný blok s hodnotou 50 by mal byť použitý
-          iba na jendom mieste: po bloku `nastav dĺžka na`.'
+          iba na jednom mieste: po bloku `nastav dĺžka na`.'
       courseF_artist_variables4:
         courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
           úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
@@ -11116,6 +11196,99 @@ sk-SK:
           Toto je vzor, ktorého sa bude držať tvoj umelec:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: Tvoj kód nebude veľmi odlišný od toho v poslednej
           úlohe, iba toľko, že potrebuješ otočiť umelca, aby skočil nadol, a potom
@@ -11124,6 +11297,99 @@ sk-SK:
           Toto je vzor, ktorého sa bude držať tvoj umelec:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables5:
         courseF_artist_variables5_a: Druhá polovica tvojho kódu by mala vyzerať takmer
           rovnako ako prvá, rozdiel bude iba v tom, že sa budeš otáčať _vľavo_, skákať,

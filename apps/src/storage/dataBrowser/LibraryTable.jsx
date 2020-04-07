@@ -108,9 +108,16 @@ class LibraryTable extends React.Component {
                   })}
                 </span>
               )}
-              <p>{datasetInfo.description}</p>
+              <span style={{display: 'block'}}>{datasetInfo.description} </span>
+
+              {datasetInfo.docUrl && (
+                <span style={{display: 'block'}}>
+                  <a href={datasetInfo.docUrl}>{msg.moreInfo()}</a>
+                </span>
+              )}
+
               {datasetInfo.sourceUrl && (
-                <span style={{display: 'inline-block'}}>
+                <span style={{display: 'block'}}>
                   {msg.dataSource() + ': '}
                   <a href={datasetInfo.sourceUrl}>
                     {datasetInfo.sourceText || datasetInfo.sourceUrl}

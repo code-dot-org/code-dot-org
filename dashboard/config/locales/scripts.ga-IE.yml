@@ -1910,6 +1910,13 @@ ga:
               name: An tIdirlíon
             Crowdsourcing:
               name: Sluafhoinsiú
+            Digital Sharing:
+              description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta
+                ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis
+                ná cabhrú lle daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
+                a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go
+                háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
+                bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
         dance-low:
           stages:
             Dance Party:
@@ -1921,6 +1928,10 @@ ga:
               name: Ríomhchlárú ar Ghrafpháipéar
             Relay Programming:
               name: Códáil Sealaíochta
+              description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr
+                ar dífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
+                chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun
+                ríomhchlár a scríobh, treoir i ndiadh treorach.
             Loops in Ice Age:
               name: Lúba in Ice Age
             Conditionals with Cards:
@@ -2266,13 +2277,15 @@ ga:
               name: Treoluas
             Functions:
               name: Feidhmeanna
+            Text:
+              name: Téacs
         coursea-2020:
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           stages:
             Going Places Safely:
               name: Ag Taisteal Slán Sábháilte
-            Loops in Ice Age:
-              name: Lúba in Ice Age
+            'Programming: Happy Maps':
+              name: Mapaí Meidhreacha
         courseb-2020:
           description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
             Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
@@ -2281,22 +2294,32 @@ ga:
               name: Do Lorg Digiteach
             Move It, Move It:
               name: Bog é, Bog é
+            'Loops: Getting Loopy':
+              name: Bí Lúbach
         coursec-2020:
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
             scéalta, agus cluichí.
           stages:
             Binary Bracelets:
               name: Bráisléid Dhénártha
+            'Events: The Big Event':
+              name: An Teagmhas Mór
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Ríomhchlárú ar Ghrafpháipéar
             Relay Programming:
               name: Códáil Sealaíochta
+              description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr
+                ar dífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
+                chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun
+                ríomhchlár a scríobh, treoir i ndiadh treorach.
             Loops in Ice Age:
               name: Lúba in Ice Age
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
             'Unplugged: Binary':
-              name: 'Díphlugáilte: Dénártha'
+              name: Íomhánna Dénártha
             Artist Binary:
               name: 'Ealaíontóir: Dénártha'
             Digital Citizenship:
@@ -2305,26 +2328,43 @@ ga:
               name: Cóisir Dhamhsa
         coursee-2020:
           stages:
-            Conditionals:
-              name: Coinníollacha
             Learning Sprites with Sprite Lab:
-              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+              name: Éisc ar snámh i Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            About Me:
+              name: Maidir Liomsa i Saotharlann na Sprideanna
+            'Functions: Songwriting':
+              name: Ceapadh Ceoil
         coursef-2020:
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
             agus cruthaigh ealaín, scéal, nó cluiche.
           stages:
             Learning Sprites with Sprite Lab:
-              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+              name: Éisc ar snámh i Saotharlann na Sprideanna
+            Events with Sprite Lab:
+              name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
             Envelope Variables:
               name: Athróga i gClúdach Litreach
             For Loop Fun:
               name: Spraoi le Lúba
             Internet:
               name: An tIdirlíon
+            Editing Behaviors:
+              name: Iompair i Saotharlann na Sprideanna
+            Virtual Pet:
+              name: Peata Fíorúil i Saotharlann na Sprideanna
             Crowdsourcing:
               name: Sluafhoinsiú
+            Digital Sharing:
+              description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta
+                ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis
+                ná cabhrú lle daltaí tuiscint a fháil ar na dúshláin agus na buntáistí
+                a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go
+                háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
+                bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
+            AI for Oceans:
+              name: AI ar son an Aigéin
         express-2020:
           stages:
             Dance Party:
@@ -2348,3 +2388,43 @@ ga:
           stages:
             Introduction to Design Mode:
               name: Buneolas ar an Mód Deartha
+        csp3-virtual:
+          description_short: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
+            trí dhearadh ó bharr anuas agus líníocht "turtair".
+          stages:
+            Creating Functions:
+              name: Feidhmeanna a chruthú
+            CS Principles Post Course survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Athróga
+            Sprites:
+              name: Sprideanna
+            Conditionals:
+              name: Coinníollacha
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
+            Sprite Properties:
+              name: Airíonna na Spride
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Lúba "Chomh fada is"
+            CS Principles Post Course survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna
+        code-break:
+          stages:
+            Algorithms:
+              name: Algartaim
+            Events:
+              name: Teagmhais

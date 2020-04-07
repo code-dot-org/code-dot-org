@@ -1810,6 +1810,8 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう) 
+            Text:
+              name: テキスト
         coursea-2020:
           description_short: 低学年向けコンピューター サイエンス入門
           description_audience: '4-7 才'
@@ -1819,15 +1821,13 @@ ja:
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
             'Programming: Happy Maps':
-              name: 'プログラミング：ハッピー マップ'
+              name: ハッピーマップ
             'Loops: Happy Loops':
-              name: 'くりかえし：ハッピー ループ'
+              name: くりかえし：ハッピー ループ
             Loops in Collector:
               name: くりかえし あつめる
             Ocean Scene with Loops:
               name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
         courseb-2020:
@@ -1843,8 +1843,6 @@ ja:
               name: くりかえし あつめる
             Loops in Artist:
               name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
         coursec-2020:
@@ -1855,12 +1853,12 @@ ja:
               name: バイナリブレスレット
             Sticker Art with Loops:
               name: アーティストくりかえし
-            'Events: The Big Event':
-              name: 'イベント: おおきなイベント'
             Events in Play Lab:
               name: プレイ ラボのイベント
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: グラフ用紙のプログラミング
             Relay Programming:
               name: プログラミングをリレーする
             Loops in Artist:
@@ -1868,15 +1866,15 @@ ja:
             Conditionals with Cards:
               name: カードと条件
             'Unplugged: Binary':
-              name: 'アンプラグド: バイナリ'
+              name: バイナリ画像
             Artist Binary:
               name: アーティスト：バイナリ
             Dance Party:
               name: ダンスパーティー
         coursee-2020:
           stages:
-            Conditionals:
-              name: 条件
+            'Functions: Songwriting':
+              name: 作詞作曲
         coursef-2020:
           description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
           stages:
@@ -1906,3 +1904,33 @@ ja:
               name: アーティストくりかえし
             Loops in Artist:
               name: アーティストくりかえし
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: 関数の作成
+        csd3-virtual:
+          stages:
+            Variables:
+              name: 変数（へんすう）
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Whileループ
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
+        code-break:
+          stages:
+            Algorithms:
+              name: アルゴリズム
+            Events:
+              name: イベント

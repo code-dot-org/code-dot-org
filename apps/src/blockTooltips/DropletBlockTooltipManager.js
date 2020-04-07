@@ -87,6 +87,13 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
       const hoverDivRect = blockHoverDiv.getBoundingClientRect();
       const toolboxRight = $('.droplet-palette-scroller').width();
       const offsetX = Math.min(hoverDivRect.width, toolboxRight);
+      if (offsetX === 0) {
+        // This happens when we start in design mode and the toolbox hasn't yet
+        // rendered. In this case, skip installing the tooltips. We can try
+        // again when the student switches to code mode and this method is
+        // called again.
+        return;
+      }
 
       // Vertically center the tooltip on the block it belongs to.
       //

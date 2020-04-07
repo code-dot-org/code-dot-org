@@ -135,7 +135,7 @@ ar:
             Digital Citizenship:
               name: المواطنة الرقمية
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
             Functional Suncatchers:
               name: وظيفية Suncatchers
             Internet:
@@ -260,7 +260,7 @@ ar:
             'Bee: Nested Loops':
               name: 'النحلة : الحلقات المتداخلة'
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
             'Maze: Sequence':
               name: 'المتاهة : التسلسل'
         usability:
@@ -806,7 +806,7 @@ ar:
             Bounce:
               name: الارتداد
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
         csd3-2017:
           description_short: البرمجة
           stages:
@@ -1720,24 +1720,32 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+            Text:
+              name: النص
         coursea-2020:
           stages:
             Going Places Safely:
               name: الذهاب للأماكن بأمان
-            Loops in Ice Age:
-              name: الحلقات في العصر الجليدي
+            'Programming: Happy Maps':
+              name: الخرائط السعيدة
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
             Move It, Move It:
               name: حركها , حركها
+            'Loops: Getting Loopy':
+              name: القبض على المعتوهون
         coursec-2020:
           stages:
             Binary Bracelets:
               name: أساور الثنائية
+            'Events: The Big Event':
+              name: الحدث الكبير
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: برمجة ورقة الرسم البياني
             Relay Programming:
               name: برمجة السباق
             Loops in Ice Age:
@@ -1745,7 +1753,7 @@ ar:
             Conditionals with Cards:
               name: الشرطية مع بطاقات
             'Unplugged: Binary':
-              name: 'موصول: ثنائي'
+              name: صور ثنائية
             Artist Binary:
               name: ثنائي الفنان
             Digital Citizenship:
@@ -1754,8 +1762,8 @@ ar:
               name: حفلة الرقص
         coursee-2020:
           stages:
-            Conditionals:
-              name: الجمل الشرطية
+            'Functions: Songwriting':
+              name: تأليف الأغاني
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1763,7 +1771,7 @@ ar:
             For Loop Fun:
               name: حلقة فور، مرح
             Internet:
-              name: الإنترنت
+              name: الانترنت
             Crowdsourcing:
               name: حشد المصادر
         express-2020:
@@ -1780,3 +1788,31 @@ ar:
           stages:
             Binary Numbers:
               name: أرقام ثنائية
+        csp3-virtual:
+          description_short: البرمجة
+          stages:
+            Creating Functions:
+              name: إضافة الدوال
+        csd3-virtual:
+          description_short: البرمجة
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: حلقات بينما
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: دوال
+        code-break:
+          stages:
+            Algorithms:
+              name: الخوارزميات
+            Events:
+              name: الأحداث

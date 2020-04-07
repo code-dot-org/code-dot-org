@@ -70,7 +70,8 @@ export default class ScriptEditor extends React.Component {
     versionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    isLevelbuilder: PropTypes.bool
+    isLevelbuilder: PropTypes.bool,
+    tts: PropTypes.bool
   };
 
   constructor(props) {
@@ -333,6 +334,16 @@ export default class ScriptEditor extends React.Component {
             Check if this course has lesson plans (on Curriculum Builder or in
             PDF form) that we should provide links to.
           </p>
+        </label>
+        <label>
+          Text-to-Speech
+          <input
+            name="tts"
+            type="checkbox"
+            defaultChecked={this.props.tts}
+            style={styles.checkbox}
+          />
+          <p>Check to enable text-to-speech for this course.</p>
         </label>
         {this.props.isLevelbuilder && (
           <label>

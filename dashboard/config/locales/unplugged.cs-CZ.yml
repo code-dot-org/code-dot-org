@@ -139,8 +139,9 @@ cs:
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       ComputationalThinking:
         title: Aritmetické Myšlení
-        desc: Studenti používají kroky počítačového myšlení (rozklad, souhlas se vzorem,
-          abstrakce, algoritmus), aby přišli na to jak hrát hru bez instrukcí.
+        desc: Studenti používají jednotlivé kroky aritmetického myšlení (rozklad,
+          shoda vzoru, abstrakce, algoritmus), aby přišli na to, jak hrát hru bez
+          instrukcí.
       FunctionalSuncatchers:
         title: Funkční náhrdelníky
         desc: Studenti vytvoří algoritmus s proměnnými a funkcemi (kusy kódu, který

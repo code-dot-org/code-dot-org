@@ -404,11 +404,10 @@ sq:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': trego
-            '"hide"': fsheh
+            '"random"': zakonshëm
       binary_move:
         options:
           DIR:

@@ -1055,18 +1055,32 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+            Text:
+              name: পাঠ
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: আনন্দের মানচিত্র
+        coursec-2020:
+          stages:
+            'Events: The Big Event':
+              name: বড় ঘটনা
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: ছক-কাগজে প্রোগ্রামিং
             Relay Programming:
               name: রিলে-স্যুইচ প্রোগ্রামিং
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            'Unplugged: Binary':
+              name: দ্বিমিক ছবি
             Artist Binary:
               name: শিল্পী দ্বিমিক
         coursee-2020:
           stages:
-            Conditionals:
-              name: শর্তযুক্ত
+            'Functions: Songwriting':
+              name: গান লিখা
         coursef-2020:
           stages:
             Internet:
@@ -1075,3 +1089,28 @@ bn:
           stages:
             Spelling Bee:
               name: বানান মৌমাছি
+        csp3-virtual:
+          description_short: প্রোগ্রামিং
+        csd3-virtual:
+          description_short: প্রোগ্রামিং
+          stages:
+            Variables:
+              name: চলকগুলো
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: হোয়াইল লুপ
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: ফাংশনগুলি
+        code-break:
+          stages:
+            Algorithms:
+              name: অ্যালগরিদম
+            Events:
+              name: ঘটনাবলী

@@ -7,592 +7,39 @@
         {
           "type": "html",
           "name": "intro_text",
-          "html": "Please note that the facilitator of your session will see your responses. Your name and email will not be shared with your facilitator to protect your anonymity, however, it’s possible your facilitator could identify you from your written responses."
+          "html": "<p><strong>Well done, you've completed the Code.org CS Fundamentals Intro workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>"
         },
-        {
-          "type": "library_item",
-          "library_name": "surveys/pd/workshop_elements",
-          "library_version": 0,
-          "name": "consent_survey"
-        },
-        {
-          "type": "radiogroup",
-          "name": "will_teach_csd_next_year",
-          "title": "Will you be teaching/are you teaching CS Fundamentals 5-day Summer in the next school year? ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        },
-        {
-          "type": "checkbox",
-          "name": "reason_attending",
-          "title": "Reason for attending? (select all that apply) ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "personal_interest",
-              "text": "Personal interest"
-            },
-            {
-              "value": "heard_about",
-              "text": "Heard about it from someone else who attended and thought it was a worthwhile program."
-            },
-            {
-              "value": "asked_to_teach",
-              "text": "I have been asked to teach CS and felt I needed to attend some teacher training."
-            },
-            {
-              "value": "school_district_suggested",
-              "text": "School/district suggested this program"
-            },
-            {
-              "value": "school_district_required",
-              "text": "School/district required this program"
-            },
-            {
-              "value": "other",
-              "text": "Other"
-            }
-          ]
-        },
-        {
-          "type": "checkbox",
-          "name": "how_hear",
-          "title": "How did you hear about this workshop? (select all that apply)",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "email_codeorg",
-              "text": "Email from Code.org"
-            },
-            {
-              "value": "social_media",
-              "text": "Social media"
-            },
-            {
-              "value": "other_teachers",
-              "text": "Other teachers"
-            },
-            {
-              "value": "principal_district_admin",
-              "text": "From my principal or school district/administration"
-            },
-            {
-              "value": "email_newsletter_local",
-              "text": "Email/newsletter from a local organization"
-            },
-            {
-              "value": "newsletter_school_district",
-              "text": "School district newsletter"
-            },
-            {
-              "value": "organizer_website",
-              "text": "Workshop organizer’s website"
-            },
-            {
-              "value": "education_event",
-              "text": "Education event/conference"
-            },
-            {
-              "value": "other",
-              "text": "Other"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "clear_communication",
-          "title": "I received clear communication about when and where the workshop would take place.",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "strong_disagree",
-              "text": "Strongly Disagree"
-            },
-            {
-              "value": "disagree",
-              "text": "Disagree"
-            },
-            {
-              "value": "slightly_disagree",
-              "text": "Slightly Disagree"
-            },
-            {
-              "value": "slightly_agree",
-              "text": "Slightly Agree"
-            },
-            {
-              "value": "agree",
-              "text": "Agree"
-            },
-            {
-              "value": "strongly_agree",
-              "text": "Strongly Agree"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "believe_school_has_tech",
-          "title": "Do you believe your school has the technology requirements modern web browsers/sufficient internet access/1:1 computing environment necessary to effectively teach the course?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        },
-
-        {
-          "type": "comment",
-          "name": "feedback_venue_logistics",
-          "title": "Do you have feedback about the venue and the way logistics were run for this workshop? Please be specific and provide suggestions for improvement."
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "how_much_learned",
-          "title": "Overall, how much have you learned from your workshop about computer science? ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "almost_nothing",
-              "text": "Almost nothing"
-            },
-            {
-              "value": "little_bit",
-              "text": "A little bit"
-            },
-            {
-              "value": "some",
-              "text": "Some"
-            },
-            {
-              "value": "quite_a_bit",
-              "text": "Quite a bit"
-            },
-            {
-              "value": "tremendous_amount",
-              "text": "A tremendous amount"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "how_motivating",
-          "title": "During your workshop, how motivating were the activities that this program had you do?  ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "not_motivating",
-              "text": "Not at all motivating"
-            },
-            {
-              "value": "slightly_motivating",
-              "text": "Slightly motivating"
-            },
-            {
-              "value": "somewhat_motivating",
-              "text": "Somewhat motivating"
-            },
-            {
-              "value": "quite_motivating",
-              "text": "Quite motivating"
-            },
-            {
-              "value": "extremely_motivating",
-              "text": "Extremely motivating"
-            }
-          ]
-        },
-
-        {
-            "type": "panel",
-            "name": "about_facilitator",
-            "title": "About your facilitator",
-            "innerIndent": 3,
-            "elements": [
-                {
-                  "type": "radiogroup",
-                  "name": "how_clearly",
-                  "title": "For this workshop, how clearly did your facilitator present the information that you needed to learn?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "not_clearly",
-                      "text": "Not at all clearly"
-                    },
-                    {
-                      "value": "slightly_clearly",
-                      "text": "Slightly clearly"
-                    },
-                    {
-                      "value": "somewhat_clearly",
-                      "text": "Somewhat clearly"
-                    },
-                    {
-                      "value": "quite_clearly",
-                      "text": "Quite clearly"
-                    },
-                    {
-                      "value": "extremely_clearly",
-                      "text": "Extremely clearly"
-                    }
-                  ]
-                },
-
-                {
-                  "type": "radiogroup",
-                  "name": "how_interesting",
-                  "title": "How interesting did your facilitator make what you learned in the workshop?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "not_interesting",
-                      "text": "Not at all interesting"
-                    },
-                    {
-                      "value": "slightly_interesting",
-                      "text": "Slightly interesting"
-                    },
-                    {
-                      "value": "somewhat_interesting",
-                      "text": "Somewhat interesting"
-                    },
-                    {
-                      "value": "quite_interesting",
-                      "text": "Quite interesting"
-                    },
-                    {
-                      "value": "extremely_interesting",
-                      "text": "Extremely interesting"
-                    }
-                  ]
-                },
-
-                {
-                  "type": "radiogroup",
-                  "name": "how_often_feedback",
-                  "title": "How often did your facilitator give you feedback that helped you learn?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "almost_never",
-                      "text": "Almost never"
-                    },
-                    {
-                      "value": "once_while",
-                      "text": "Once in a while"
-                    },
-                    {
-                      "value": "sometimes",
-                      "text": "Sometimes"
-                    },
-                    {
-                      "value": "often",
-                      "text": "Often"
-                    },
-                    {
-                      "value": "all_time",
-                      "text": "All the time"
-                    }
-                  ]
-                },
-
-                {
-                  "type": "radiogroup",
-                  "name": "extra_help",
-                  "title": "When you needed extra help, how good was your facilitator at giving you that help?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "not_good",
-                      "text": "Not at all good"
-                    },
-                    {
-                      "value": "slightly_good",
-                      "text": "Slightly good"
-                    },
-                    {
-                      "value": "somewhat_good",
-                      "text": "Somewhat good"
-                    },
-                    {
-                      "value": "quite_good",
-                      "text": "Quite good"
-                    },
-                    {
-                      "value": "extremely_good",
-                      "text": "Extremely good"
-                    },
-                    {
-                      "value": "na",
-                      "text": "N/A - I didn't need extra help"
-                    }
-                  ]
-                },
-
-                {
-                  "type": "radiogroup",
-                  "name": "how_comfortable",
-                  "title": "How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "not_comfortable",
-                      "text": "Not at all comfortable"
-                    },
-                    {
-                      "value": "slightly_comfortable",
-                      "text": "Slightly comfortable"
-                    },
-                    {
-                      "value": "somewhat_comfortable",
-                      "text": "Somewhat comfortable"
-                    },
-                    {
-                      "value": "quite_comfortable",
-                      "text": "Quite comfortable"
-                    },
-                    {
-                      "value": "extremely_comfortable",
-                      "text": "Extremely comfortable"
-                    }
-                  ]
-                },
-
-                {
-                  "type": "radiogroup",
-                  "name": "how_often_new_things",
-                  "title": "How often did your facilitator teach you things that you didn't know before taking this workshop?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "almost_never",
-                      "text": "Almost never"
-                    },
-                    {
-                      "value": "once_while",
-                      "text": "Once in a while"
-                    },
-                    {
-                      "value": "sometimes",
-                      "text": "Sometimes"
-                    },
-                    {
-                      "value": "often",
-                      "text": "Often"
-                    },
-                    {
-                      "value": "all_time",
-                      "text": "All the time"
-                    }
-                  ]
-                }
-            ]
-        },
-
-        {
-          "type": "comment",
-          "name": "facilitator_did_well",
-          "title": "What were two things [facilitator] did well?"
-        },
-
-        {
-          "type": "comment",
-          "name": "facilitator_could_do_better",
-          "title": "What were two things [facilitator] could do better?"
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "how_much_participate",
-          "title": "During your workshop, how much did you participate?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "not_all",
-              "text": "Not at all"
-            },
-            {
-              "value": "little_bit",
-              "text": "A little bit"
-            },
-            {
-              "value": "some",
-              "text": "Some"
-            },
-            {
-              "value": "quite_bit",
-              "text": "Quite a bit"
-            },
-            {
-              "value": "tremendous_amount",
-              "text": "A tremendous amount"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "how_often_talk",
-          "title": "When you are not in Code.org workshops how often do you talk about the ideas from the workshops?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "almost_never",
-              "text": "Almost never"
-            },
-            {
-              "value": "once_while",
-              "text": "Once in a while"
-            },
-            {
-              "value": "sometimes",
-              "text": "Sometimes"
-            },
-            {
-              "value": "often",
-              "text": "Often"
-            },
-            {
-              "value": "almost_always",
-              "text": "Almost always"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "how_often_focused",
-          "title": "How often did you get so focused on Code.org workshop activities that you lost track of time? ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "almost_never",
-              "text": "Almost never"
-            },
-            {
-              "value": "once_while",
-              "text": "Once in a while"
-            },
-            {
-              "value": "sometimes",
-              "text": "Sometimes"
-            },
-            {
-              "value": "often",
-              "text": "Often"
-            },
-            {
-              "value": "almost_always",
-              "text": "Almost always"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "how_excited_before",
-          "title": "Before the workshop, how excited were you about going to your Code.org workshop? ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "not_excited",
-              "text": "Not at all excited"
-            },
-            {
-              "value": "little_excited",
-              "text": "A little bit excited"
-            },
-            {
-              "value": "somewhat_excited",
-              "text": "Somewhat excited"
-            },
-            {
-              "value": "quite_excited",
-              "text": "Quite excited"
-            },
-            {
-              "value": "extremely_excited",
-              "text": "Extremely excited"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "overall_how_interested",
-          "title": "Overall, how interested were you in the Code.org in-person workshop?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "not_interested",
-              "text": "Not at all interested"
-            },
-            {
-              "value": "little_interested",
-              "text": "A little bit interested"
-            },
-            {
-              "value": "somewhat_interested",
-              "text": "Somewhat interested"
-            },
-            {
-              "value": "quite_interested",
-              "text": "Quite interested"
-            },
-            {
-              "value": "extremely_interested",
-              "text": "Extremely interested"
-            }
-          ]
-        },
-
         {
           "type": "matrix",
-          "name": "pd_feelings",
-          "title": "Facilitator feedback",
-          "titleLocation": "hidden",
+          "name": "overall_success",
+          "title": "How much do you agree or disagree with the following statements about the workshop overall?",
           "columns": [
             {
-              "value": "strongly_disagree",
+              "value": "1",
               "text": "Strongly Disagree"
             },
             {
-              "value": "disagree",
+              "value": "2",
               "text": "Disagree"
             },
             {
-              "value": "slightly_disagree",
+              "value": "3",
               "text": "Slightly Disagree"
             },
             {
-              "value": "slightly_agree",
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
               "text": "Slightly Agree"
             },
             {
-              "value": "agree",
+              "value": "6",
               "text": "Agree"
             },
             {
-              "value": "strongly_agree",
+              "value": "7",
               "text": "Strongly Agree"
             }
           ],
@@ -610,38 +57,321 @@
               "text": "This professional development was suitable for my level of experience with teaching CS."
             },
             {
+              "value": "feel_community",
+              "text": "I feel connected to a community of computer science teachers."
+            },
+            {
               "value": "would_recommend",
               "text": "I would recommend this professional development to others."
             },
             {
               "value": "best_pd",
               "text": "This was the absolute best professional development I’ve ever participated in."
-            },
-            {
-              "value": "feel_community",
-              "text": "I feel like I am a part of a community of teachers."
             }
           ]
         },
-
+        {
+          "type": "matrix",
+          "name": "teacher_engagement",
+          "title": "How much do you agree or disagree with the following statements about your level of engagement in the workshop?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "engaging",
+              "text": "I found the activities we did in this workshop interesting and engaging."
+            },
+            {
+              "value": "active",
+              "text": "I was highly active and participated a lot in the workshop activities."
+            },
+            {
+              "value": "ideas",
+              "text": "I am definitely planning to make use of ideas and content covered in this workshop in my classroom."
+            }
+          ]
+        },
         {
           "type": "comment",
-          "name": "two_things_liked",
-          "title": "What were the two things you liked most about the activities you did in this workshop and why?"
+          "name": "supported",
+          "title": "What supported your learning the most today and why?"
         },
-
         {
           "type": "comment",
-          "name": "two_things_change",
-          "title": "What are the two things you would change about the activities you did in this workshop? How would you improve them for future participants?"
+          "name": "detracted",
+          "title": "What detracted from your learning today and why?"
         },
-
+        {
+          "type": "matrix",
+          "name": "curriculum_impressions",
+          "title": "Having attended the workshop, what are your overall impressions of the {workshop_course} curriculum?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "love",
+              "text": "I am going to love teaching with this curriculum."
+            },
+            {
+              "value": "understand_what",
+              "text": "I understand what CS Fundamentals courses look like, including lesson plans, online activities, and unplugged activities."
+            },
+            {
+              "value": "understand_which",
+              "text": "I understand which courses and lessons are most appropriate for my students."
+            },
+            {
+              "value": "understand_tools",
+              "text": "I understand all of the tools and technologies I can use in the curriculum."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "feedback_venue_logistics",
+          "title": "Do you have feedback about the venue and the way logistics were run for this workshop? Please be specific and provide suggestions for improvement."
+        },
         {
           "type": "comment",
           "name": "anything_else",
           "title": "Is there anything else you’d like to tell us about your experience at this workshop?"
         },
-
+        {
+          "type": "paneldynamic",
+          "name": "facilitators",
+          "title": "Your facilitators",
+          "templateElements": [
+            {
+              "type": "matrix",
+              "name": "facilitator_effectiveness",
+              "title": "During my workshop, {panel.facilitatorName} did the following:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "demonstrated_knowledge",
+                  "text": "Demonstrated knowledge of the curriculum."
+                },
+                {
+                  "value": "built_equitable",
+                  "text": "Built and sustained an equitable learning environment in our workshop."
+                },
+                {
+                  "value": "on_track",
+                  "text": "Kept the workshop and participants on track."
+                },
+                {
+                  "value": "productive_discussions",
+                  "text": "Supported productive workshop discussions."
+                },
+                {
+                  "value": "ways_equitable",
+                  "text": "Helped me see ways to create and support an equitable learning environment for my students."
+                },
+                {
+                  "value": "healthy_relationship",
+                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+                }
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "k5_facilitator_did_well",
+              "title": "What were two things {panel.facilitatorName} did well?"
+            },
+            {
+              "type": "comment",
+              "name": "k5_facilitator_could_improve",
+              "title": "What were two things {panel.facilitatorName} could do better?"
+            }
+          ],
+          "templateTitle": "Information about: {panel.facilitatorName}",
+          "allowAddPanel": false,
+          "allowRemovePanel": false
+        },
+        {
+          "type": "html",
+          "name": "last_text",
+          "html": "Lastly, we would like to know a little about you, your background, and if we can stay in touch with you."
+        },
+        {
+          "type": "text",
+          "name": "year_of_birth",
+          "title": "What is your year of birth?",
+          "inputType": "number"
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "What is your gender identity?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "non_binary",
+              "text": "Non-binary"
+            },
+            {
+              "value": "not_listed",
+              "text": "Preferred term not listed"
+            },
+            {
+              "value": "prefer_not_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "race",
+          "title": "What is your racial or ethnic identity?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ai_or_an",
+              "text": "American Indian/Alaska Native"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "black_african_american",
+              "text": "Black or African American"
+            },
+            {
+              "value": "hispanic_latino",
+              "text": "Hispanic or Latino"
+            },
+            {
+              "value": "nh_or_pi",
+              "text": "Native Hawaiian or other Pacific Islander"
+            },
+            {
+              "value": "white",
+              "text": "White"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            },
+            {
+              "value": "prefer_not_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give the workshop organizer permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "yes_name",
+              "text": "Yes, I give the workshop organizer permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anonymous",
+              "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give the workshop organizer my permission."
+            }
+          ]
+        },
         {
           "type": "radiogroup",
           "name": "willing_talk",
@@ -655,206 +385,6 @@
             {
               "value": "no",
               "text": "No"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "gender",
-          "title": "Gender",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "male",
-              "text": "Male"
-            },
-            {
-              "value": "female",
-              "text": "Female"
-            },
-            {
-              "value": "other",
-              "text": "Other"
-            },
-            {
-              "value": "prefer_not_say",
-              "text": "Prefer not to say"
-            }
-          ]
-        },
-
-      {
-          "type": "checkbox",
-          "name": "race",
-          "title": "Race? (select all that apply)",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "white",
-              "text": "White"
-            },
-            {
-              "value": "black_african_american",
-              "text": "Black or African American"
-            },
-            {
-              "value": "hispanic_latino",
-              "text": "Hispanic or Latino"
-            },
-            {
-              "value": "asian",
-              "text": "Asian"
-            },
-            {
-              "value": "nh_or_pi",
-              "text": "Native Hawaiian or other Pacific Islander"
-            },
-            {
-              "value": "ai_or_an",
-              "text": "American Indian/Alaska Native"
-            },
-            {
-              "value": "other",
-              "text": "Other"
-            },
-            {
-              "value": "prefer_not_say",
-              "text": "Prefer not to say"
-            }
-          ]
-        },
-
-        {
-          "type": "radiogroup",
-          "name": "what_age",
-          "title": "What is your age?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "21_25",
-              "text": "21 - 25"
-            },
-            {
-              "value": "26_30",
-              "text": "26 - 30"
-            },
-            {
-              "value": "31_35",
-              "text": "31 - 35"
-            },
-            {
-              "value": "36_40",
-              "text": "36 - 40"
-            },
-            {
-              "value": "41_45",
-              "text": "41 - 45"
-            },
-            {
-              "value": "46_55",
-              "text": "46 - 55"
-            },
-            {
-              "value": "56_65",
-              "text": "56 - 65"
-            },
-            {
-              "value": "66plus",
-              "text": "66+"
-            }
-          ]
-        },
-
-        {
-          "type": "comment",
-          "name": "k12_how_many_years",
-          "title": "If you are/were a K-12 teacher, how many years have you taught?"
-        },
-
-        {
-          "type": "checkbox",
-          "name": "grade_level",
-          "title": "What grade level do you teach? (select all that apply)",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "pre_k",
-              "text": "pre-K"
-            },
-            {
-              "value": "elementary",
-              "text": "Elementary"
-            },
-            {
-              "value": "middle_juniorhigh",
-              "text": "Middle School/Junior High"
-            },
-            {
-              "value": "high_school",
-              "text": "High School"
-            }
-          ]
-        },
-
-        {
-          "type": "checkbox",
-          "name": "grade_level_planning",
-          "title": "What grade level are you planning to teach this course to? (select all that apply) ",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "pre_k",
-              "text": "pre-K"
-            },
-            {
-              "value": "elementary",
-              "text": "Elementary"
-            },
-            {
-              "value": "middle_juniorhigh",
-              "text": "Middle School/Junior High"
-            },
-            {
-              "value": "high_school",
-              "text": "High School"
-            }
-          ]
-        },
-
-        {
-          "type": "checkbox",
-          "name": "what_subjects",
-          "title": "What subjects have you taught? (select all that apply)",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "cs",
-              "text": "Computer Science"
-            },
-            {
-              "value": "english_la",
-              "text": "English/Language Arts"
-            },
-            {
-              "value": "science",
-              "text": "Science"
-            },
-            {
-              "value": "math",
-              "text": "Math"
-            },
-            {
-              "value": "arts_music",
-              "text": "Arts/Music"
-            },
-            {
-              "value": "library_technology",
-              "text": "Library or Technology Education"
-            },
-            {
-              "value": "other",
-              "text": "Other"
             }
           ]
         }

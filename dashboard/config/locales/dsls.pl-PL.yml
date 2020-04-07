@@ -1395,18 +1395,27 @@ pl-PL:
           * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Nieprawidłowe
+        - text: Duszek się zakręci.
+        - text: Duszek się skurczy.
+          correct: true
+          feedback: Poprawnie!
+        - text: Duszek się poruszy.
+        - text: 'Duszek zmieni kolory.
+
+'
+          feedback: Nieprawidłowe
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Nieprawidłowe
+        - text: W lewo, a potem w dół
+        - text: Diagonalnie
+          correct: true
+          feedback: Poprawnie!
+        - text: Zig zag
+          feedback: Niepoprawnie
+        - text: W dół, a potem w lewo
+          feedback: Nieprawidłowe
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -1414,7 +1423,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1422,7 +1432,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1430,7 +1441,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1438,8 +1450,9 @@ pl-PL:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Poprawnie!
         - text: '15'
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1447,8 +1460,9 @@ pl-PL:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Poprawnie!
         - text: '15'
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1456,63 +1470,83 @@ pl-PL:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Poprawnie!
         - text: '15'
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Nie wiem.
+          feedback: Ten kod idealnie przeniesie ptaka na świnkę.
         questions:
-        - {}
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Nie wiem.
+          feedback: Ten kod idealnie przeniesie ptaka na świnkę.
         questions:
-        - {}
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Nie wiem.
+          feedback: Ten kod idealnie przeniesie ptaka na świnkę.
         questions:
-        - {}
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
       courseC_multi_starWars_predict1:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - text: Nie wiem
         questions:
         - {}
@@ -1521,6 +1555,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - text: Nie wiem
         questions:
         - {}
@@ -1529,6 +1564,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - text: Nie wiem
         questions:
         - {}
@@ -1536,24 +1572,27 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1563,6 +1602,7 @@ pl-PL:
         - text: B
         - text: R
           correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1572,6 +1612,7 @@ pl-PL:
         - text: B
         - text: R
           correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1581,81 +1622,91 @@ pl-PL:
         - text: B
         - text: R
           correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
+          feedback: Poprawnie!
         - text: B
         - text: B
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
+          feedback: Poprawnie!
         - text: B
         - text: B
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
+          feedback: Poprawnie!
         - text: B
         - text: B
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -1664,7 +1715,8 @@ pl-PL:
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -1673,7 +1725,8 @@ pl-PL:
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -1682,7 +1735,8 @@ pl-PL:
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -1690,8 +1744,9 @@ pl-PL:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Poprawnie!
         - text: '12'
-        - {}
+        - text: Nie wiem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
             klikniesz "Uruchom"?
@@ -1700,8 +1755,9 @@ pl-PL:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Poprawnie!
         - text: '12'
-        - {}
+        - text: Nie wiem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
             klikniesz "Uruchom"?
@@ -1710,8 +1766,9 @@ pl-PL:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Poprawnie!
         - text: '12'
-        - {}
+        - text: Nie wiem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
             klikniesz "Uruchom"?
@@ -1720,7 +1777,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -1728,7 +1786,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1736,7 +1795,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -1744,39 +1804,44 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1784,7 +1849,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -1792,7 +1858,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -1800,63 +1867,74 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -1864,7 +1942,7 @@ pl-PL:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1873,6 +1951,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -1880,6 +1959,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         questions:
         - {}
@@ -1888,6 +1968,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         questions:
         - {}
@@ -1920,8 +2001,9 @@ pl-PL:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
+          feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1929,8 +2011,9 @@ pl-PL:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
+          feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1938,7 +2021,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -1946,7 +2030,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -1954,55 +2039,62 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
@@ -2011,6 +2103,7 @@ pl-PL:
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
+          feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
         questions:
@@ -2021,6 +2114,7 @@ pl-PL:
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
+          feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
         questions:
@@ -2031,6 +2125,7 @@ pl-PL:
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
+          feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
         questions:
@@ -2040,7 +2135,7 @@ pl-PL:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
@@ -2048,13 +2143,14 @@ pl-PL:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
         questions:
@@ -2063,6 +2159,7 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
         questions:
@@ -2071,6 +2168,7 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
         questions:
@@ -2087,23 +2185,26 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}

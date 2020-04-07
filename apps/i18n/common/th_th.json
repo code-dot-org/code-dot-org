@@ -84,6 +84,7 @@
   "clearPuzzle": "เริ่มเล่นใหม่",
   "clearPuzzleConfirm": "สิ่งนี้จะเริ่มต้นเกมใหม่ที่จุดเริ่มต้นและลบทุกบล็อกที่คุณเพิ่มหรือเปลี่ยนออกไป.",
   "clearPuzzleConfirmHeader": "คุณจะเริ่มต้นใหม่จริงๆหรือ ?",
+  "closeDialog": "ปิด",
   "code": "โปรแกรม:",
   "codeMode": "โปรแกรม",
   "codeTooltip": "ดูการสร้างโค้ด JavaScript.",

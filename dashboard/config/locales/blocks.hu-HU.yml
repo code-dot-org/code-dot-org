@@ -1547,6 +1547,14 @@ hu:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} lépj {DISTANCE} képpontot {DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': Észak
+            '"East"': Kelet
+            '"South"': Dél
+            '"West"': Nyugat
       aalab_prompt:
         text: kérdezd {MESSAGE}
       aalab_scene:
@@ -1558,12 +1566,10 @@ hu:
             '3': '3'
       aalab_setupStory:
         text: beállítási történet
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mutasd
-            '"hide"': elrejt
+            '"random"': véletlen
       binary_drawBin:
         text: bináris {BIN} rajzolása
       binary_drawBinScreen:

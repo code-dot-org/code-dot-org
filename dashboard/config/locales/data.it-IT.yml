@@ -872,6 +872,9 @@ it:
         hoc_dance_events_2019: Dance Party - Eventi
         hoc_dance_measures_2019: Ballando col codice - Battute
         hoc_dance_properties_2019: Dance Party - Proprietà
+        csf_my_online_neighborhood_2020: Il mio quartiere digitale
+        csf_private_and_personal_information: Cittadinanza digitale - Dati personali
+          e altri dati
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

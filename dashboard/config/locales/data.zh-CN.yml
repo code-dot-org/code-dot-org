@@ -537,6 +537,10 @@ zh-CN:
         hoc_dance_events_2019: 舞蹈派对 2019 - 事件
         hoc_dance_measures_2019: 舞蹈派对 2019 - 小节
         hoc_dance_properties_2019: 舞蹈派对 2019 - 属性
+        csd_what_computers_do: 计算机做什么？
+        csf_my_online_neighborhood_2020: 我的在线邻居
+        csf_private_and_personal_information: 私人和个人信息
+        csd_what_computers_are: 什么是计算机？
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

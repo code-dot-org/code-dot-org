@@ -1441,36 +1441,46 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+            Text:
+              name: Teksts
         coursea-2020:
           stages:
             Going Places Safely:
               name: Nokļūst galamērķos droši
+            'Programming: Happy Maps':
+              name: Laimīgās kartes
         courseb-2020:
           stages:
             Your Digital Footprint:
               name: Tavs digitālais nospiedums
             Move It, Move It:
               name: Ej, ej
+            'Loops: Getting Loopy':
+              name: Kļūst ciklisks
         coursec-2020:
           stages:
             Binary Bracelets:
               name: Binārās aproces
+            'Events: The Big Event':
+              name: Lielais notikums
         coursed-2020:
           stages:
+            'Algorithms: Graph Paper Programming':
+              name: Rūtiņpapīra programmēšana
             Relay Programming:
               name: Releju programmēšana
             Conditionals with Cards:
               name: nosacījumi ar kārtēm
             'Unplugged: Binary':
-              name: 'Atvienots: binārs'
+              name: Binārie Attēli
             Artist Binary:
               name: 'Mākslinieks: Binārais'
             Digital Citizenship:
               name: Digitālā pilsonība
         coursee-2020:
           stages:
-            Conditionals:
-              name: Sazarojumi
+            'Functions: Songwriting':
+              name: Dziesmu rakstīšana
         coursef-2020:
           stages:
             Envelope Variables:
@@ -1485,3 +1495,33 @@ lv:
           stages:
             Spelling Bee:
               name: Burtošanas bite
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funkciju veidošana
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Pasākumi

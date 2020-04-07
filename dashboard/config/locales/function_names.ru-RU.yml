@@ -78,7 +78,9 @@ ru-RU:
       Alien Defender:
         game has been won: игра выиграна
       Choose Your Own Adventure:
+        witch ending: конец ведьмы
         story: история
+        starting path: начальный путь
       Course 4 Artist Binary 1:
         draw: нарисовать
       Course 4 Artist Binary 2:
@@ -101,6 +103,10 @@ ru-RU:
         draw: нарисовать
       Course 4 Artist Binary pre1:
         draw: нарисовать
+      Course 4 Artist Functions Inspiration:
+        draw a square 20: нарисовать квадрат 20
+      Course 4 Artist Functions challenge:
+        draw a square 20: нарисовать квадрат 20
       Course 4 Bee Params 5:
         get 5 nectar: собрать нектар х5
       Course 4 Bee Params 6:
@@ -112,7 +118,8 @@ ru-RU:
       Course 4 Play Lab Params 1:
         jump: прыгнуть
       Course 4 Play Lab Params 10:
-        score_points: очки
+        level_up: перейти_на_новый_уровень
+        score_points: засчитывать_очки
       Course 4 Play Lab Params 2:
         jump: прыгнуть
       Course 4 Play Lab Params 3:
@@ -129,27 +136,32 @@ ru-RU:
       Course 4 Play Lab Params 8:
         patrol: проверка
       Course 4 Play Lab Params 9:
-        score_points: очки
+        score_points: засчитывать_очки
       Course 4 Play Lab Vars 1:
         set score: задать счет
       Course 4 Play Lab Vars 2:
         set score: задать счет
       Course 4 SCF 1:
         draw a hexagon: нарисовать шестиугольник
+        draw a square 20: нарисовать квадрат 20
       Course 4 SCF 1a:
         get nectar: собрать нектар
       Course 4 SCF 2:
+        draw a square 20: нарисовать квадрат 20
         draw octagons: нарисовать восьмиугольники
         draw an octagon: нарисовать восьмиугольник
       Course 4 SCF 3:
+        draw a square 20: нарисовать квадрат 20
         do something: выполнить что-то
         draw an octagon: нарисовать восьмиугольник
       'Course E: Play Lab Project':
         do something: выполнить что-то
       Find the Wizard:
+        check guess: проверить догадку
         do something: выполнить что-то
       FoodFight:
-        score_points: очки
+        level_up: перейти_на_новый_уровень
+        score_points: засчитывать_очки
       Function intro Ryan:
         build bridge: построить мост
       Function intro Ryan_2019:
@@ -176,6 +188,16 @@ ru-RU:
         draw a house: нарисовать дом
         triangle: треугольник
         square: квадрат
+      Guess The Number:
+        check guess: проверить догадку
+      InspirationalArtwork:
+        n-sided shape: фигура с n сторонами
+        draw a loop: нарисовать цикл
+        draw spiral circle: 'Нарисовать спиральный круг '
+      InspirationalArtwork_2018:
+        draw a loop: нарисовать цикл
+        n-sided shape: фигура с n сторонами
+        draw spiral circle: 'Нарисовать спиральный круг '
       K-1 Artist2 3:
         draw roof: нарисовать крышу
       K-1 Artist2 4:
@@ -194,8 +216,15 @@ ru-RU:
       MC_HOC_2017_FP20x20_2019:
         function 1: функция 1
         function 2: функция 2
+      NEW Course 4 Artist Functions 11:
+        draw a square 20: нарисовать квадрат 20
+      NEW Course 4 Artist Functions 12:
+        draw a square 20: нарисовать квадрат 20
+      NEW Course 4 Artist Functions 13:
+        draw a square 20: нарисовать квадрат 20
       NEW Course 4 Artist Functions 14:
         empty function: пустая функция
+        draw a square 20: нарисовать квадрат 20
       NEW Course 4 Artist Functions 3:
         draw a square: нарисовать квадрат
       NEW Course 4 Artist Functions 4:
@@ -222,6 +251,8 @@ ru-RU:
         draw a polygon: нарисовать многоугольник
       NEW Course 4 Artist Params 13:
         draw a polygon: нарисовать многоугольник
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge: нарисовать край спирали
       NEW Course 4 Artist Params 15:
         draw a star: нарисовать звезду
         draw a circle: нарисовать круг
@@ -290,6 +321,15 @@ ru-RU:
         do something: выполнить что-то
       course3_bee_functions_challenge2:
         do something: выполнить что-то
+      course3_bee_functions_challenge3:
+        check nectar or honey: проверить на наличие нектара или меда
+        row of nectar: ряд нектара
+        rowOfNectar: rowOfNectar
+      course3_bee_functions_challenge4:
+        check nectar or honey: проверить на наличие нектара или меда
+        row of nectar: ряд нектара
+        rowOfNectar: rowOfNectar
+        move and check: переместиться и проверить
       course3_playLab_challenge1:
         win game: выиграть игру
         lose game: проиграть игру
@@ -305,11 +345,14 @@ ru-RU:
       course4_artist_fwp_challenge1:
         draw background: нарисовать фон
         draw a polygon: нарисовать многоугольник
+        draw a square 20: нарисовать квадрат 20
         do something: выполнить что-то
+      course4_bee_for_challenge1:
+        move and get nectar with counter: двигаться и собирать нектар со счетчиком
       course4_bee_fwp_challenge1:
-        pick row: выбрать строку
+        pick row: собрать ряд
       course4_bee_fwp_challenge2:
-        pick row: выбрать строку
+        pick row: собрать ряд
       courseA_artist_loops_challenge1:
         '"simple" solution': '"простое" решение'
       courseB_artist_loops_challenge2:
@@ -579,18 +622,33 @@ ru-RU:
         do something: выполнить что-то
       courseF_artist_fwp1:
         draw a square: нарисовать квадрат
+        checker: проверщик
         do something: выполнить что-то
+        Make gingham: Сделать зонтик
+        black outline: черный контур
       courseF_artist_fwp2:
         draw a square: нарисовать квадрат
+        checker: проверщик
         do something: выполнить что-то
+        Make gingham: Сделать зонтик
+        black outline: черный контур
       courseF_artist_fwp2_predict1:
         draw a square: нарисовать квадрат
       courseF_artist_fwp3:
         draw a square: нарисовать квадрат
+        draw a square2: нарисовать квадрат2
+        filled square: заполненный квадрат
+        black outline: черный контур
       courseF_artist_fwp4:
         draw a polygon: нарисовать многоугольник
       courseF_artist_fwp5:
         draw a polygon: нарисовать многоугольник
+      courseF_artist_fwp6:
+        draw a spiral edge: нарисовать край спирали
+      courseF_artist_fwp7:
+        draw a spiral edge: нарисовать край спирали
+      courseF_artist_fwp8:
+        draw a spiral edge: нарисовать край спирали
       courseF_artist_fwp9:
         draw a star: нарисовать звезду
         draw a circle: нарисовать круг
@@ -599,15 +657,37 @@ ru-RU:
         draw a shape: нарисовать фигуру
         draw a house: нарисовать дом
         draw a square: нарисовать квадрат
+        draw a spiral edge: нарисовать край спирали
       courseF_artist_fwp_challenge1:
         draw background: нарисовать фон
         draw a polygon: нарисовать многоугольник
+        draw a square 20: нарисовать квадрат 20
         do something: выполнить что-то
       courseF_artist_fwp_challenge2:
+        draw a square 20: нарисовать квадрат 20
         do something: выполнить что-то
         draw an octagon: нарисовать восьмиугольник
+      courseF_bee_conditionals2:
+        move and check: переместиться и проверить
+        check nectar or honey: проверить на наличие нектара или меда
+      courseF_bee_for_challenge1:
+        move and get nectar with counter: двигаться и собирать нектар со счетчиком
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter: двигаться и собирать нектар со счетчиком
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter: двигаться и собирать нектар со счетчиком
+      courseF_bee_functions2:
+        get only nectar: получить только нектар
       courseF_bee_functions3:
-        only make honey: только сделать мед
+        only make honey: только делать мед
+      courseF_bee_functions3a:
+        check nectar or honey: проверить на наличие нектара или меда
+      courseF_bee_functions4:
+        move and check: переместиться и проверить
+        check nectar or honey: проверить на наличие нектара или меда
+      courseF_bee_functions5a:
+        move and check: переместиться и проверить
+        check nectar or honey: проверить на наличие нектара или меда
       courseF_bee_functions6:
         get nectar make honey: собери нектар сделай мед
       courseF_bee_functions7:
@@ -617,10 +697,34 @@ ru-RU:
         get nectar make honey: собери нектар сделай мед
       courseF_bee_functionsPre7:
         get nectar make honey: собери нектар сделай мед
+      courseF_bee_functions_challenge1:
+        row of nectar: ряд нектара
+        rowOfNectar: rowOfNectar
+        check nectar or honey: проверить на наличие нектара или меда
+      courseF_bee_functions_challenge2:
+        rowOfNectar: rowOfNectar
+        move and check: переместиться и проверить
+        check nectar or honey: проверить на наличие нектара или меда
+      courseF_bee_fwp2:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp3:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp4:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp5:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp6:
+        rowOfNectar: rowOfNectar
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney: rowOfNectarOrHoney
       courseF_bee_fwp_challenge1:
-        pick row: выбрать строку
+        pick row: собрать ряд
       courseF_bee_fwp_challenge2:
-        pick row: выбрать строку
+        pick row: собрать ряд
       courseF_bee_variables_7_2018:
         collect: собрать
       courseF_bee_variables_7_2019:

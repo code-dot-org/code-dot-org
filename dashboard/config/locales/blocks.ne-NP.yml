@@ -361,11 +361,6 @@ ne:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
-        options:
-          OPTION:
-            '"show"': देखाउ
-            '"hide"': लुकेको
       binary_move:
         options:
           DIR:

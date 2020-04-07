@@ -12,6 +12,7 @@
   csedweek_dates: "Từ ngày 8-14 tháng  12 năm 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Giờ Mã</a> đang đến. Gọi điện cho tất cả giáo viên và các tổ chức, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">lập kết hoạch ''Giờ Mã'' của bạn</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"><a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo dục Tin Học.</a>'
+  csedweek_banner_teachers_text: "Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo dục Tin Học."
   n_have_learned_an_hoc: "<h1>Hãy thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>"
   anybody_can_learn: "Tất cả mọi người điều có thể học."
   learn_now: "Học ngay"

@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Recreate the game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)",
-    "long_instructions": "# Add a \"game over\" screen and finalize the game\r\n\r\n* **Add a new Screen** with a \"game over\" message and **add a button** to start over. \r\n\r\n* **Add an event handler** for the \"Start Over\" Button to send the user back to the Welcome Screen.\r\n\r\n* **Add `setScreen` to the event handling function for the background image**\r\n  * When the background image is clicked, the user should be sent to the \"game over\" screen you just created.\r\n\r\n<img src=\"https://images.code.org/bb3c0973ee0d83d3540f5ffed797e442-image-1477405500619.gif\" style=\"float: right; width: 150px\">\r\n\r\n# Run. Test. Debug.\r\n\r\nYou should now have a 3-screen app with:\r\n\r\n* A welcome screen\r\n* A game play screen\r\n* A \"game over\" screen\r\n\r\n**Avoid dead-ends** -- the user should be able to get between all the screens appropriately, and play the game.\r\n\r\nIf it's not working:\r\n\r\n* Retrace your steps\r\n* See if you can figure out where things are going wrong\r\n* Add extra `console.log` statements.  \r\n* Ask a friend to help you out.\r\n\r\n**Stick with it until you get it!**\r\n\r\n",
+    "long_instructions": "# Add a \"game over\" screen and finalize the game\r\n\r\n* **Add a new Screen** with a \"game over\" message and **add a button** to start over. \r\n\r\n* **Add an event handler** for the \"Start Over\" Button to send the user back to the Welcome Screen.\r\n\r\n* **Add `setScreen` to the event handling function for the background image**\r\n  * When the background image is clicked, the user should be sent to the \"game over\" screen you just created.\r\n\r\n<img src=\"https://images.code.org/bb3c0973ee0d83d3540f5ffed797e442-image-1477405500619.gif\" style=\"float: right; width: 150px\">\r\n\r\n# Run. Test. Debug.\r\n\r\nYou should now have a 3-screen app with:\r\n\r\n* A welcome screen\r\n* A game play screen\r\n* A \"game over\" screen\r\n\r\n**Avoid dead-ends** -- the user should be able to get between all the screens appropriately, and play the game.\r\n\r\nIf it's not working:\r\n\r\n* Retrace your steps\r\n* See if you can figure out where things are going wrong\r\n* Add extra `console.log` statements. \r\n\r\n**Stick with it until you get it!**\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -44,6 +44,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "code_functions": {
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -51,12 +52,20 @@
           "function(){\n\n}"
         ]
       },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
       "randomNumber_min_max": null,
       "setPosition": null,
       "setWidth": null,
       "hideElement": null,
       "showElement": null,
-      "setScreen": null,
       "setSize": null,
       "console.log": null
     },
@@ -64,10 +73,19 @@
     "parent_level_id": 17118,
     "name_suffix": "_virtual",
     "show_debug_watch": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-03 20:14:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:27:26 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

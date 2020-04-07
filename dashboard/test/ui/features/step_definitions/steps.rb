@@ -992,6 +992,37 @@ Given(/^I am assigned to script "([^"]*)"$/) do |script_name|
   )
 end
 
+Given(/^I create a temp script$/) do
+  response = browser_request(
+    url: '/api/test/create_script',
+    method: 'POST'
+  )
+  @temp_script_name = JSON.parse(response)['script_name']
+  puts "created temp script named '#{@temp_script_name}'"
+end
+
+Given(/^I view the temp script overview page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}"
+    And I wait until element "#script-title" is visible
+  }
+end
+
+Given(/^I view the temp script edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+    And I wait until element ".edit_script" is visible
+  }
+end
+
+Given(/^I delete the temp script$/) do
+  browser_request(
+    url: '/api/test/destroy_script',
+    method: 'POST',
+    body: {script_name: @temp_script_name}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
@@ -1077,7 +1108,7 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
 
   individual_steps %Q{
     And I press the save button to create a new section
-    And I wait for the dialog to close
+    And I wait for the dialog to close using jQuery
     Then I should see the section table
   }
 end
@@ -1105,6 +1136,13 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
+end
+
+And(/^I create a levelbuilder named "([^"]*)"$/) do |name|
+  steps %{
+    Given I create a teacher named "#{name}"
+    And I get levelbuilder access
+  }
 end
 
 def sign_up(name)
@@ -1239,7 +1277,12 @@ And(/^I get hidden script access$/) do
   browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
+And(/^I get levelbuilder access$/) do
+  browser_request(url: '/api/test/levelbuilder_access', method: 'POST')
+end
+
 And(/^I save the section url$/) do
+  wait_short_until {steps 'Then I should see the section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
       .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
@@ -1590,6 +1633,10 @@ When /^I wait for the dialog to close$/ do
   steps 'When I wait until element ".modal" is gone'
 end
 
+When /^I wait for the dialog to close using jQuery$/ do
+  steps 'When I wait until element ".modal" is not visible'
+end
+
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
 end
@@ -1613,6 +1660,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 end
 
 Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
+  wait_short_until {steps 'Then I should see the section table'}
   @section_id = get_section_id_from_table(row_index)
 end
 

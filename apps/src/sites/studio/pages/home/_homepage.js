@@ -6,17 +6,18 @@ import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import {
-  setValidGrades,
-  setStageExtrasScriptIds,
-  setAuthProviders,
   beginEditingNewSection,
+  pageTypes,
+  setAuthProviders,
   setPageType,
-  pageTypes
+  setStageExtrasScriptIds,
+  setValidGrades
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import locales, {setLocaleEnglishName} from '@cdo/apps/redux/localesRedux';
 
 $(document).ready(showHomepage);
 
@@ -28,12 +29,14 @@ function showHomepage() {
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
   const query = queryString.parse(window.location.search);
+  registerReducers({locales});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.stageExtrasScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
+  store.dispatch(setLocaleEnglishName(homepageData.locale));
 
   let courseId;
   let scriptId;
@@ -75,7 +78,6 @@ function showHomepage() {
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
             schoolYear={homepageData.currentSchoolYear}
-            locale={homepageData.locale}
             specialAnnouncement={specialAnnouncement}
           />
         )}

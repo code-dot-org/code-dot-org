@@ -402,11 +402,10 @@ fa:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': نشان می دهد
-            '"hide"': پنهان کردن
+            '"random"': در هم
       binary_move:
         options:
           DIR:

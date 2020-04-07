@@ -1547,6 +1547,14 @@ nl:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} {DISTANCE} pixels {DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': Naar het noorden
+            '"East"': Oost
+            '"South"': Zuid
+            '"West"': West
       aalab_prompt:
         text: stel vraag {MESSAGE}
       aalab_scene:
@@ -1558,12 +1566,10 @@ nl:
             '3': '3'
       aalab_setupStory:
         text: setup-verhaal
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': toon
-            '"hide"': verberg
+            '"random"': willekeurig
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:

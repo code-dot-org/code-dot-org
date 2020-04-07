@@ -867,6 +867,8 @@ cs-CZ:
       course2_maze_loops_challenge1: 'Scrat chce teď použít cykly k nalezení žaludu! '
       course2_maze_programming_challenge1: _"Prase se schovává! Pomůžeš mi najít k
         němu cestu?"_
+      course4_artist_binary_challenge2: Dokážeš vytrvat dostatečně dlouho, abys obnovil
+        logo zpátky do normálu?
       course4_artist_fwp_challenge1: Zkus spouštět tento program, provádět změny a
         sledovat, co se stane. Dokážeš zjistit, jak funguje? (Nebo jej odstraň a nahraď
         něčím naprosto jiným)
@@ -963,6 +965,19 @@ cs-CZ:
       courseC_maze_programming5: Vyhni se TNT!
       courseC_maze_programming5_2018: Vyhni se TNT!
       courseC_maze_programming5_2019: Vyhni se TNT!
+      courseD_artist_1_2018: 'Nakresli šestiúhelník se stranami dlouhými **50** pixelů. '
+      courseD_artist_1_2018_2019: 'Nakresli šestiúhelník se stranami dlouhými **50**
+        pixelů. '
+      courseD_artist_2_2018: Teď zatoč doprava o **60** stupňů, pak nakresli rovnou
+        čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
+      courseD_artist_2_2018_2019: Teď zatoč doprava o **60** stupňů, pak nakresli
+        rovnou čáru dlouhou **150** pixelů a skoč zpátky do středu hracího pole.
+      courseD_artist_4_2018: Přidej malý tvar na konec čáry!
+      courseD_artist_4_2018_2019: Přidej malý tvar na konec čáry!
+      courseD_artist_6_2018: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých čar
+        dlouhých **25** pixelů s malými otočkami na konci.
+      courseD_artist_6_2018_2019: Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých
+        čar dlouhých **25** pixelů s malými otočkami na konci.
       courseD_artist_binary1: "Binární soubor je způsob, jak zobrazit informace pomocí
         jen dvou možností.  Jedna z možností  \"vypnuto\" (představované číslem 0)
         a \"zapnuto\" (představované číslem 1).  \\\r \\\r Poskytli jsme mřížku \"pixelů\",
@@ -980,6 +995,12 @@ cs-CZ:
         \"pixelů\", které můžete procházet a udělat návrhy zapnutím pouze některých
         políček.  Můžete mít umělce, který nakreslí \"01010101\"  binárně v prvním
         řádku?"
+      courseD_artist_binary2: Spusť tento kód, abys viděl(a), jak umělec používá binární
+        kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2018: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
+      courseD_artist_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
       courseD_artist_binary3: Který z těchto binárních řetězců se má provést osmkrát
         v cyklu, aby se nakreslil následující obrazec?
       courseD_artist_binary3_2018: Který z těchto binárních řetězců se má provést
@@ -1025,12 +1046,20 @@ cs-CZ:
       courseD_artist_binaryFP: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binaryFP8: "**Volná hra:** Nakresli si binárně, co chceš! "
       courseD_artist_binaryFP_2018: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
       courseD_artist_binaryFP_2019: |-
         Tady je vyšší rozlišení plátna, na které můžeš kreslit - 16 x 16 pixelů!
         Uvidíš, co se stane, když začneme být kreativní s bity!
+      courseD_artist_binary_challenge2_2018: Dokážeš vytrvat dostatečně dlouho, abys
+        obnovil logo zpátky do normálu?
+      courseD_artist_binary_challenge2_2019: Dokážeš vytrvat dostatečně dlouho, abys
+        obnovil logo zpátky do normálu?
+      courseD_artist_nestedLoops4: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2018: Výborně! Udělej to samé se všemi těmito kruhy.
+      courseD_artist_nestedLoops4_2019: Výborně! Udělej to samé se všemi těmito kruhy.
       courseD_artist_nestedLoops7: Použij, co ses naučil, abys vytvořil tento obrázek.
       courseD_artist_nestedLoops7_2018: Použij, co ses naučil, abys vytvořil tento
         obrázek.
@@ -1045,6 +1074,8 @@ cs-CZ:
       courseD_artist_nestedLoops_challenge2: Oprav kód, abys udělal tento obrázek!
       courseD_artist_nestedLoops_challenge2_2018: Oprav kód, abys udělal tento obrázek!
       courseD_artist_nestedLoops_challenge2_2019: Oprav kód, abys udělal tento obrázek!
+      courseD_autorun_binary2_2019: Spusť tento kód, abys viděl(a), jak umělec používá
+        binární kód pro namalování tohoto vzoru.
       courseD_autorun_binary3_2019: Který z těchto binárních řetězců se má provést
         osmkrát v cyklu, aby se nakreslil následující obrazec?
       courseD_autorun_binary4_2019: Můžeš nakreslit tento vzor opakováním binárního
@@ -1119,16 +1150,32 @@ cs-CZ:
       courseD_bee_nestedLoops9_predict2: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2_2018: Vyrob med na každé plástvi.
       courseD_bee_nestedLoops9_predict2_2019: Vyrob med na každé plástvi.
+      courseD_bounce_events11s_2018: 'Připoj blok `hoď nový míč` na všechna místa,
+        kde hra vyžaduje nový míč. '
+      courseD_bounce_events11s_2019: 'Připoj blok `hoď nový míč` na všechna místa,
+        kde hra vyžaduje nový míč. '
       courseD_bounce_events12s_2018: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
         i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
         si zahrát i se sluchátky.
       courseD_bounce_events12s_2019: Vytvoř si svou vlastní hru. Můžeš změnit vzhled
         i pravidla. Až hra bude hotová, klikni na "Dokončit" a nech někoho ze spolužáků
         si zahrát i se sluchátky.
+      courseD_bounce_events1s_2018: Připoj blok k bloku "když šipka vlevo" a zmáčkni
+        "Spustit", abys posunul hráče k síti.
+      courseD_bounce_events1s_2019: Připoj blok k bloku "když šipka vlevo" a zmáčkni
+        "Spustit", abys posunul hráče k síti.
       courseD_bounce_events2s_2018: Nyní připoj blok k události `když šipka vpravo`,
         aby se ruka dostala k oběma košům.
       courseD_bounce_events2s_2019: Nyní připoj blok k události `když šipka vpravo`,
         aby se ruka dostala k oběma košům.
+      courseD_bounce_events5s_2018: Připoj blok k události `když míč udeří do ruky`,
+        abys zajistil(a), že se míč dostane do koše.
+      courseD_bounce_events5s_2019: Připoj blok k události `když míč udeří do ruky`,
+        abys zajistil(a), že se míč dostane do koše.
+      courseD_bounce_events6s_2018: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
+        se míč odrazil, když zasáhne zeď.
+      courseD_bounce_events6s_2019: Abys vyřešil tuto úlohu, přidej nějaký blok, aby
+        se míč odrazil, když zasáhne zeď.
       courseD_bounce_events7s_2018: Přidej zvukový blok, aby zaznělo švihnutí sítí,
         když míč spadne do koše a zvukový blok, aby zaznělo pískání, když míč mine
         ruku. Zařiď, ať se míč odráží, dokud nebude v konečném cíli.
@@ -1151,6 +1198,8 @@ cs-CZ:
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_debugging6a_2019: 'Výzva: Použij kód v pracovním prostoru
         tak, abys získal alespoň **6** pokladů! '
+      courseD_collector_nested_loops_challenge2a: Pomoz Laurel sesbírat aspoň dvě
+        hromádky s pokladem.
       courseD_farmer_condLoops7: 'Výzva: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.'
       courseD_farmer_condLoops7_2018: 'Výzva: Sesbírej všechnu kukuřici a salát, pak

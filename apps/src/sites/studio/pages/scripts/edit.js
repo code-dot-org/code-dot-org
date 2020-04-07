@@ -86,6 +86,7 @@ export default function initPage(scriptEditorData) {
         scriptFamilies={scriptEditorData.script_families}
         versionYearOptions={scriptEditorData.version_year_options}
         isLevelbuilder={scriptEditorData.is_levelbuilder}
+        tts={scriptData.tts}
       />
     </Provider>,
     document.querySelector('.edit_container')

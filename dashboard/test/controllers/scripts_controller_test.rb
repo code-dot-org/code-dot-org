@@ -194,11 +194,34 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  test "should not get edit if not levelbuilder mode" do
+  test "should not get edit on production" do
+    CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
     get :edit, params: {id: 'course1'}
+    assert_response :forbidden
+  end
 
+  test "should get edit on levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
+    assert_response :ok
+  end
+
+  test "should get edit on test" do
+    CDO.stubs(:rack_env).returns(:test)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
+    assert_response :ok
+  end
+
+  test "should not get edit on staging" do
+    CDO.stubs(:rack_env).returns(:staging)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
 
@@ -289,12 +312,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/flappy"
   end
 
-  test "edit forbidden if not on levelbuilder" do
-    sign_in @levelbuilder
-    get :edit, params: {id: 'course1'}
-    assert_response :forbidden
-  end
-
   test 'create' do
     expected_contents = ''
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -327,6 +344,77 @@ class ScriptsControllerTest < ActionController::TestCase
         delete :destroy, params: {id: evil_script.id}
       end
     end
+  end
+
+  test "cannot update on production" do
+    CDO.stubs(:rack_env).returns(:production)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :forbidden
+    script.reload
+    assert script.hidden
+  end
+
+  test "can update on levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :redirect
+    script.reload
+    refute script.hidden
+  end
+
+  test "can update on test without modifying filesystem" do
+    CDO.stubs(:rack_env).returns(:test)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :redirect
+    script.reload
+    refute script.hidden
+  end
+
+  test "cannot update on staging" do
+    CDO.stubs(:rack_env).returns(:staging)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :forbidden
+    script.reload
+    assert script.hidden
   end
 
   test 'updates teacher resources' do
@@ -541,5 +629,69 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_select "script[data-levelbuildereditscript]" do |elements|
       assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
     end
+  end
+
+  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+    sign_in @levelbuilder
+
+    get :show, params: {id: 'course1'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+  end
+
+  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    assert response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "student does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:student)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "teacher does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:teacher)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
   end
 end

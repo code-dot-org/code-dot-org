@@ -926,10 +926,10 @@ pl-PL:
         eksplorację tego świata.'
       New Minecraft Hero Project: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie
         eksplorację tego świata.'
-      Overworld Move to Sheep: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
+      Overworld Move to Sheep: Dodaj drugie polecenie "przejdź do przodu", aby dotrzeć
         do owcy.
-      Overworld Move to Sheep_2019: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
-        do owcy.
+      Overworld Move to Sheep_2019: Dodaj drugie polecenie "przejdź do przodu", aby
+        dotrzeć do owcy.
       Overworld Shear Sheep: Czas strzyżenia owiec! Użyj polecenia `shear`, aby zebrać
         wełnę z obu owiec.
       Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
@@ -962,6 +962,13 @@ pl-PL:
         w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas
         ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast
         wzorca.
+      behaviors 1: |-
+        Czy mógłbyś przewidzieć! Przestudiuj kod.
+
+        -   Duszek się zakręci.
+        -   Duszek się skurczy.
+        -   Duszek się poruszy.
+        -   Duszek zmieni kolory.
       course1_maze_debugging_challenge2: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
       course2_artist_prog_challenge1: Narysuj pokoje dla każdego ze zwierząt. Jest
@@ -987,7 +994,7 @@ pl-PL:
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
-        aby rozwiązać tą zagadkę!
+        aby rozwiązać tę łamigłówkę!
       course3_maze_debugging_challenge1: _"Czy ja tylko chodzę dookoła w kółko?"_
       course3_maze_debugging_challenge2: _"Jeśli będę skręcać zbyt często, może mi
         się zakręcić w głowie! Pomóż mi dotrzeć do świnki, używając tylko czterech
@@ -1143,6 +1150,97 @@ pl-PL:
         i pól!
       courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
+      courseC_maze_programming1: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming1_2019: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming2: Przeciągnij z przybornika dodatkowy blok  <xml><block
+        type="maze_moveForward"/></xml>, aby ukończyć swój program.
+      courseC_maze_programming2_2018: Przeciągnij z przybornika dodatkowy blok  <xml><block
+        type="maze_moveForward"/></xml>, aby ukończyć swój program.
+      courseC_maze_programming2_2019: Przeciągnij z przybornika dodatkowy blok  <xml><block
+        type="maze_moveForward" block-text="move forward"/></xml>, aby ukończyć swój
+        program.
+      courseC_maze_programming3: |-
+        \_ „Ta świnka stawia moje pióra”. \_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, odłączając go od szarych bloków i przeciągając go z powrotem do przybornika.
+      courseC_maze_programming3_2018: |-
+        \_ „Ta świnka stawia moje pióra”. \_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, odłączając go od szarych bloków i przeciągając go z powrotem do przybornika.
+      courseC_maze_programming3_2019: |-
+        \_ „Ta świnka stawia moje pióra”. \_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, odłączając go od szarych bloków i przeciągając go z powrotem do przybornika.
+      courseC_maze_programming4: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseC_maze_programming4_2018: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseC_maze_programming4_2019: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseC_maze_programming5: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseC_maze_programming5_2018: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseC_maze_programming5_2019: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseC_maze_programming6: |-
+        _"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!"_
+
+        Doprowadź ptaka do świnki unikając TNT.
+      courseC_maze_programming6_2018: |-
+        _"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!"_
+
+        Doprowadź ptaka do świnki unikając TNT.
+      courseC_maze_programming6_2019: |-
+        _"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!"_
+
+        Doprowadź ptaka do świnki unikając TNT.
+      courseC_maze_programming7: |-
+        \_ „Czas się zdenerwować!”\_
+
+        **Wyzwanie:** Ten kod zawiera wiele błędów. Musisz usunąć niektóre bloki i dodać inne.
+      courseC_maze_programming7_2018: |-
+        \_ „Czas się zdenerwować!”\_
+
+        **Wyzwanie:** Ten kod zawiera wiele błędów. Musisz usunąć niektóre bloki i dodać inne.
+      courseC_maze_programming7_2019: |-
+        \_ „Czas się zdenerwować!”\_
+
+        **Wyzwanie:** Ten kod zawiera wiele błędów. Musisz usunąć niektóre bloki i dodać inne.
+      courseC_maze_programming8: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_2018: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_2019: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_predict1: _„Zachowaj spokój i pomóż mi znaleźć złą
+        świnkę."_
+      courseC_maze_programming8_predict1_2018: _„Zachowaj spokój i pomóż mi znaleźć
+        złą świnkę."_
+      courseC_maze_programming8_predict1_2019: _„Zachowaj spokój i pomóż mi znaleźć
+        złą świnkę."_
+      courseC_maze_programming9: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
+      courseC_maze_programming9_2018: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
+      courseC_maze_programming9_2019: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
       courseC_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2018: Czasami jest więcej sposobów na rozwiązanie
@@ -1218,8 +1316,58 @@ pl-PL:
       courseD_maze_nestedLoops4_2019: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
+      courseD_maze_ramp1: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp1_2019: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp3: |-
+        _„Ta świnka powoduje stawanie moich piór."_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, usuwając go spośród innych bloków i przeciągając go z powrotem do przybornika.
+      courseD_maze_ramp3_2018: |-
+        _„Ta świnka powoduje stawanie moich piór."_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, usuwając go spośród innych bloków i przeciągając go z powrotem do przybornika.
+      courseD_maze_ramp4: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseD_maze_ramp4_2018: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseD_maze_ramp5: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseD_maze_ramp5_2018: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseD_maze_ramp5_2019: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseD_maze_ramp5a: Zwróć uwagę na tę sekwencję i sprawdź, czy możesz dojść
+        do tej świnki!
+      courseD_maze_ramp5a_2018: Zwróć uwagę na tę sekwencję i sprawdź, czy możesz
+        dojść do tej świnki!
+      courseD_maze_ramp5b: "\\*\\* Wyzwanie: \\*\\* Poruszaj się w tym labiryncie,
+        aby pomóc ptakowi znaleźć świnkę!"
+      courseD_maze_ramp5b_2018: "\\*\\* Wyzwanie: \\*\\* Poruszaj się w tym labiryncie,
+        aby pomóc ptakowi znaleźć świnkę!"
+      courseD_maze_ramp5b_2019: "\\*\\* Wyzwanie: \\*\\* Poruszaj się w tym labiryncie,
+        aby pomóc ptakowi znaleźć świnkę!"
+      courseD_maze_ramp5c: Doprowadź ptaka do świnki.
+      courseD_maze_ramp5c_2018: Doprowadź ptaka do świnki.
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
+      courseD_scrat_ramp1: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
       courseE_bee_functions2: "Funkcje są blokami kodu, które wykonują określone zadanie.
         \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       courseE_bee_functions3: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej
@@ -1239,7 +1387,7 @@ pl-PL:
         ten labirynt.\\\r\n\\\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
         \\\r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
       courseF_bee_functions_challenge2: Wykorzystaj wszystko czego się nauczyłeś,
-        aby rozwiązać tą zagadkę!
+        aby rozwiązać tę łamigłówkę!
       frozen circle: Okrąg ma specjalny kształt. Czy domyślisz się, jaką liczbą należy
         zastąpić znak zapytania w bloku "powtórz"?
       frozen circle function: Użyj nowego bloku "utwórz okrąg", aby narysować 10 nakładających

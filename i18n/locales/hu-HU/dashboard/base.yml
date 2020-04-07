@@ -77,8 +77,8 @@ hu:
   trophies: "trófeák"
   courses: 'tanfolyamok'
   courses_page:
-    title_student: "Tanulj a Kód Stúdióban"
-    title_teacher: "Taníts Számítástechnikát"
+    title_student: "Tanulj a számítástechnikát "
+    title_teacher: "Taníts számítástechnikát"
   unplugged_activity: 'Offline tevékenység'
   of: "/"
   more: "TÖBB"

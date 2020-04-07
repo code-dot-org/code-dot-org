@@ -111,6 +111,7 @@
   "clearPuzzleConfirm": "Tehtävä palautetaan alkutilaan, ja lisäämäsi tai muuttamasi lohkot poistetaan.",
   "clearPuzzleConfirmHeader": "Oletko varma, että haluat aloittaa alusta?",
   "clickToRemix": "Klikkaa \"Remix\" ja tee oma versiosi!",
+  "closeDialog": "Sulje",
   "code": "Koodi:",
   "codeMode": "Koodi",
   "codeTooltip": "Näytä tuotettu JavaScript-koodi.",

@@ -246,7 +246,7 @@ export class SpecialAnnouncementActionBlock extends Component {
     const {announcement} = this.props;
     return (
       <TwoColumnActionBlock
-        imageUrl={announcement.image}
+        imageUrl={pegasus(announcement.image)}
         subHeading={announcement.title}
         description={announcement.body}
         buttons={this.state.buttonList}
