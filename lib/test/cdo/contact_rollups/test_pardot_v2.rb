@@ -97,12 +97,18 @@ class PardotV2Test < Minitest::Test
 
   def test_build_batch_url
     base_url = PardotV2::BATCH_CREATE_URL
-    prospects = [{email: 'test@domain.com', id: nil, db_Opt_In: 'No'}]
+    prospects = [
+      {email: 'test@domain.com', id: nil, db_Opt_In: 'No'},
+      {email: 'a+b@domain.com', id: nil}
+    ]
 
-    expected_url = URI.encode(
-      "#{base_url}?"\
-      "prospects={\"prospects\":[{\"email\":\"test@domain.com\",\"id\":null,\"db_Opt_In\":\"No\"}]}"
-    )
+    subs = {
+      "{" => "%7B",
+      "}" => "%7D",
+      "\"" => "%22",
+      "+" => "%2B"
+    }
+    expected_url = "#{base_url}?prospects={\"prospects\":#{prospects.to_json}}".gsub(/[{}"+]/, subs)
 
     assert_equal expected_url, PardotV2.build_batch_url(base_url, prospects)
   end
