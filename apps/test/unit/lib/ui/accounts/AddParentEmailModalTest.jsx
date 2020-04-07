@@ -21,9 +21,9 @@ describe('AddParentEmailModal', () => {
 
   // Helpers for selecting particular elements/components
   const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
-  const emailOptInSelect = wrapper =>
+  const parentEmailOptInSelect = wrapper =>
     wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'yes');
-  const emailOptOutSelect = wrapper =>
+  const parentEmailOptOutSelect = wrapper =>
     wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'no');
   const submitButton = wrapper =>
     wrapper
@@ -44,8 +44,8 @@ describe('AddParentEmailModal', () => {
     it('disables everything and shows save text when saving', () => {
       wrapper.setState({saveState: 'saving'});
       expect(emailInput(wrapper)).to.have.attr('disabled');
-      expect(emailOptInSelect(wrapper)).to.have.attr('disabled');
-      expect(emailOptOutSelect(wrapper)).to.have.attr('disabled');
+      expect(parentEmailOptInSelect(wrapper)).to.have.attr('disabled');
+      expect(parentEmailOptOutSelect(wrapper)).to.have.attr('disabled');
       expect(submitButton(wrapper)).to.have.attr('disabled');
       expect(cancelButton(wrapper)).to.have.attr('disabled');
       expect(wrapper.text()).to.include(i18n.saving());
@@ -71,7 +71,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -84,7 +84,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'invalidEmail@nowhere',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -98,7 +98,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'old@example.com',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -112,7 +112,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'new@example.com',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           },
           errors: {
             parentEmail: serverError
@@ -122,15 +122,15 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.text()).to.include(serverError);
       });
 
-      it('reports emailOptIn server errors', () => {
+      it('reports parentEmailOptIn server errors', () => {
         const serverError = 'test-email-opt-in-server-error';
         wrapper.setState({
           values: {
             parentEmail: 'new@example.com',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           },
           errors: {
-            emailOptIn: serverError
+            parentEmailOptIn: serverError
           }
         });
 
@@ -141,7 +141,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
-            emailOptIn: ''
+            parentEmailOptIn: ''
           }
         });
 
@@ -152,7 +152,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'me@example.com',
-            emailOptIn: 'yes'
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -176,15 +176,17 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.state().errors.parentEmail).to.equal('');
       });
 
-      it('on emailOptIn', () => {
+      it('on parentEmailOptIn', () => {
         wrapper.setState({
           errors: {
-            emailOptIn: 'test-server-error'
+            parentEmailOptIn: 'test-server-error'
           }
         });
-        expect(wrapper.state().errors.emailOptIn).to.equal('test-server-error');
-        emailOptOutSelect(wrapper).simulate('change');
-        expect(wrapper.state().errors.emailOptIn).to.equal('');
+        expect(wrapper.state().errors.parentEmailOptIn).to.equal(
+          'test-server-error'
+        );
+        parentEmailOptOutSelect(wrapper).simulate('change');
+        expect(wrapper.state().errors.parentEmailOptIn).to.equal('');
       });
     });
 
@@ -199,18 +201,18 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
           parentEmail: '',
-          emailOptIn: ''
+          parentEmailOptIn: ''
         });
         wrapper.instance().onSubmitFailure({
           serverErrors: {
             parentEmail: 'test-email-server-error',
-            emailOptIn: 'test-email-opt-in-server-error'
+            parentEmailOptIn: 'test-email-opt-in-server-error'
           }
         });
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
           parentEmail: 'test-email-server-error',
-          emailOptIn: 'test-email-opt-in-server-error'
+          parentEmailOptIn: 'test-email-opt-in-server-error'
         });
       });
     });
