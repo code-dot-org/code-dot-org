@@ -42,6 +42,7 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "code_functions": {
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -49,12 +50,20 @@
           "function(){\n\n}"
         ]
       },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
       "randomNumber_min_max": null,
       "setPosition": null,
       "setWidth": null,
       "hideElement": null,
       "showElement": null,
-      "setScreen": null,
       "setSize": null,
       "console.log": null
     },
@@ -65,13 +74,18 @@
     "show_debug_watch": "true",
     "expand_debugger": "false",
     "short_instructions": "Recreate the game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)",
-    "long_instructions": "# Add A Welcome Screen\r\n\r\n<div style=\"float: right; width: 150px\">\r\n\r\n\r\n<img src=\"https://images.code.org/558ae19d0fb8af8c6ec573e5d7ac4e29-image-1477369385328.png\" style=\"float: right; width: 150px\"><br>\r\n<em>This is an example showing the elements of a welcome screen. Yours <strong> should not </strong> look exactly like this.  Yours should be appropriate for your game.</em>\r\n\r\n</div>\r\n\r\nLet's improve your \"Chaser Game\" by **adding a welcome screen that shows when the app starts up, and that with a button to start.**\r\n\r\n* NOTE: we've imported the chaser game that you made in the last lesson.  That's the starting point for this.  You can continue with this lesson if you don't have it. But you'll need to make a screen for game play along the way.\r\n\r\nFollowing the Event Driven Programming pattern:\r\n\r\n1. **Design Mode**\r\n   * Add a New Screen to the App\r\n   * Make this new screen the **default screen**\r\n   * Add a new Button to the screen that says \"Start\"\r\n   * Add text welcoming the user to the game.\r\n   * Give the button and the screen meaningful IDs\r\n\r\n2. **Add an onEvent Handler for the Button**\r\n   * Insert a new onEvent block (easy way from Design Mode) for the \"start\" button\r\n\r\n3. **Add code to the event handling function**\r\n   * When the \"start\" button is clicked it should `setScreen` to the screen that plays the game.\r\n\r\n4. **Run. Test. Debug.**\r\n\r\n\tMake sure that:\r\n\r\n\t* When app starts up, your new welcome screen shows first\r\n\t* When you click the \"start\" button it takes you to the game play screen\r\n\t* Note: right now there's no way to get back to the welcome screen - it's okay, we'll add that later.\r\n\r\n",
+    "long_instructions": "# Add A Welcome Screen\r\n\r\n<div style=\"float: right; width: 150px\">\r\n\r\n\r\n<img src=\"https://images.code.org/558ae19d0fb8af8c6ec573e5d7ac4e29-image-1477369385328.png\" style=\"float: right; width: 150px\"><br>\r\n<em>This is an example showing the elements of a welcome screen. Yours <strong> should not </strong> look exactly like this.  Yours should be appropriate for your game.</em>\r\n\r\n</div>\r\n\r\nIn the last lesson you made a simple chaser game. Let's improve your it by **adding a welcome screen that shows immediately when the app runs. We'll also add a button to start the game.**\r\n\r\n* NOTE: If you didn't make a chaser game in the last lesson, you'll want to go back and do that now.\r\n\r\n**Try this:**\r\n\r\n1. **Design Mode**\r\n   * Add a New Screen to the App\r\n   * Make this new screen the **default screen**\r\n   * Add a new Button to the screen that says \"Start\"\r\n   * Add text welcoming the user to the game.\r\n   * Give the button and the screen meaningful IDs\r\n\r\n2. **Add an onEvent Handler for the Button**\r\n   * Insert a new onEvent block for the \"start\" button\r\n   * When the \"start\" button is clicked it should `setScreen` to the screen that plays the game.\r\n\r\n3. **Run. Test. Debug.**\r\n\r\n\tMake sure that:\r\n\r\n\t* When app starts up, your new welcome screen shows first\r\n\t* When you click the \"start\" button it takes you to the game play screen\r\n\t* Note: right now there's no way to get back to the welcome screen - it's okay, we'll add that later.\r\n\r\n",
     "mini_rubric": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-12-10 22:56:19 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:05:05 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-12-10 22:56:19 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:05:05 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-03 19:50:19 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:59 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 16:48:57 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
