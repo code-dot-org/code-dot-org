@@ -4,12 +4,14 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
+import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import experiments from '@cdo/apps/util/experiments';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -49,6 +51,15 @@ $(document).ready(() => {
     isPasswordRequired,
     emailChangedCallback: onEmailChanged
   });
+
+  if (experiments.isEnabled(experiments.PARENT_EMAIL_PREFERENCE)) {
+    $('#add-parent-email').show();
+    new AddParentEmailController({
+      form: $('#add-parent-email-modal-form'),
+      link: $('#add-parent-email-link'),
+      displayedParentEmail: $('#displayed-parent-email')
+    });
+  }
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
 
