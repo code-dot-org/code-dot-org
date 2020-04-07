@@ -1054,7 +1054,6 @@ class ScriptTest < ActiveSupport::TestCase
       level 'Level1';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-
     assert_raises do
       Script.add_script({name: 'test_script'}, script_data[:lessons])
     end
@@ -1489,13 +1488,13 @@ endvariants
   end
 
   test "assignable_info: returns assignable info for a script" do
-    script = create(:script, name: 'fake-script', hidden: true, lesson_extras_available: true)
+    script = create(:script, name: 'fake-script', hidden: true, stage_extras_available: true)
     assignable_info = script.assignable_info
 
     assert_equal("fake-script *", assignable_info[:name])
     assert_equal("fake-script", assignable_info[:script_name])
     assert_equal("other", assignable_info[:category])
-    assert(assignable_info[:lesson_extras_available])
+    assert(assignable_info[:stage_extras_available])
   end
 
   test "assignable_info: correctly translates script info" do
