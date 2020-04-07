@@ -330,9 +330,25 @@ ga-IE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Tá cuma nua ar an mbosca uirlisí! Gheobhaidh tú na blocanna
           "Gníomhartha" anseo anois.
+      New Artist Project:
+        New Artist Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Artist Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thionscadal ar ball?
+          Logáil isteach chun an cód seo a shábháil i do chuntas!
       New Frozen Project:
         snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
           a chruthú!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thionscadal ar ball?
+          Logáil isteach chun an cód seo a shábháil i do chuntas!
       Overworld Chop Trees:
         craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc
           sa chlár cheana
@@ -375,6 +391,8 @@ ga-IE:
         craft_what_is_iron: Tochail an t-iarann seo!
       Underground Iron_2019:
         craft_what_is_iron: Tochail an t-iarann seo!
+      Virtual Pet 2_2019:
+        '': Cliceáil anseo!
       behaviors 1:
         behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
       behaviors 4:
@@ -837,6 +855,8 @@ ga-IE:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
           deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+      courseE_aboutme_2:
+        '': Cliceáil anseo!
       courseE_artist_functions1:
         courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
           an chéad chearnóg a chruthú.

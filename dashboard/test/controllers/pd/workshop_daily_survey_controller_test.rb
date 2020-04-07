@@ -143,6 +143,14 @@ module Pd
       assert_response :success
     end
 
+    test 'post-workshop foorm survey displays foorm when enrolled' do
+      setup_summer_workshop
+
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_survey/foorm/day/5'
+      assert_response :success
+    end
+
     test 'pre-workshop survey reports render to New Relic' do
       setup_summer_workshop
       NewRelic::Agent.expects(:record_custom_event).with(

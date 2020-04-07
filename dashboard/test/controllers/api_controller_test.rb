@@ -993,6 +993,22 @@ class ApiControllerTest < ActionController::TestCase
     CDO.stubs(:studio_url).returns(overview_path)
     script = Script.find_by_name('algebra')
 
+    user = create :user
+    sign_in user
+
+    get :script_structure, params: {script: script.id}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    expected_response = script.summarize(true, user, true).merge({path: overview_path}).with_indifferent_access
+    assert_equal expected_response, response
+  end
+
+  test "script_structure returns summarized script with no user" do
+    sign_out :user
+    overview_path = 'http://script.overview/path'
+    CDO.stubs(:studio_url).returns(overview_path)
+    script = Script.find_by_name('algebra')
+
     get :script_structure, params: {script: script.id}
     assert_response :success
     response = JSON.parse(@response.body)
