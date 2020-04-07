@@ -426,7 +426,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage ||= @script_level.stage
+    @stage ||= @script_level.lesson
 
     load_level_source
 
