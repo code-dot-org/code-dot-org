@@ -29,6 +29,8 @@
   -# Here where we pass data down to the particular script we'd like to run
   :ruby
     teacher_dashboard_data = {}
+    teacher_dashboard_data[:studioOrigin] = CDO.studio_url('', CDO.default_scheme)
+    teacher_dashboard_data[:pegasusOrigin] = CDO.code_org_url('', CDO.default_scheme)
     teacher_dashboard_data[:sections] = @sections
     teacher_dashboard_data[:section] = @section_summary
     teacher_dashboard_data[:userName] = @current_user.short_name
