@@ -198,7 +198,8 @@ function setupSim(
   * attached to sprite id 0, but it doesn't really matter which sprite (as long as it's not an s3 sprite that
   * might get deleted). A behavior is just the simplest way to add a snippet of code that will get executed each frame.
   * The behavior goes through each s3 to delete and randomly chooses one element from its corresponding list to be
-  * the sprite that "wins" the tie. Then it just tllie the score, deletes the s3 sprites, and checks whether the
+  * the sprite that "wins" the tie. (If there's only one item in the list, it means there was no tie, and that sprite
+  * wins by default.) Then it just tallies the score, deletes the s3 sprites, and checks whether the
   * simulation should end. The one-frame delay isn't really noticeable since frames are so fast.
   */
 
