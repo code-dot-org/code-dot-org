@@ -54,13 +54,14 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
     ActiveRecord::Base.connection.exec_query(new_contacts_query).each do |record|
       data_col = JSON.parse(record['data']).deep_symbolize_keys
-      contact = {email: record['email'], pardot_id: record['pardot_id']}.merge(data_col)
+      contact = {email: record['email']}.merge(data_col)
 
       submissions, errors = pardot_writer.batch_create_prospects contact
       save_sync_results(submissions, errors, Time.now) if submissions.present?
     end
 
-    # Sends Pardot request for the rest of the batch
+    # There could be prospects left in the batch because batch size is not yet big enough
+    # to trigger a Pardot request. Sends the remaining of the batch to Pardot now.
     submissions, errors = pardot_writer.batch_create_remaining_prospects
     save_sync_results(submissions, errors, Time.now) if submissions.present?
   end
@@ -70,8 +71,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
   # TODO: sync deleted contacts
 
   # Saves sync results to database.
-  # @param [Array<Hash>] submissions array of prospects
-  # @param [Array<Hash>] errors array of indexes of rejected prospects and their corresponding error messages
+  # @param [Array<Hash>] submissions array of prospects that were synced/submitted to Pardot
+  # @param [Array<Hash>] errors array of hashes, each containing an index and an error message
+  #   of a rejected prospect. Rejected prospects are a subset of all prospects submitted to Pardot.
   # @param [DateTime] submitted_time when submissions were sent to Pardot
   def self.save_sync_results(submissions, errors, submitted_time)
     rejected_indexes = Set.new errors.pluck(:prospect_index)

@@ -57,7 +57,15 @@ class PardotV2
   end
 
   # Batch-creates prospects in Pardot.
-  # Request is only sent to Pardot when the batch is big enough.
+  # Request is only sent to Pardot when the batch is big enough, unless +eager_submit+ is true.
+  #
+  # WARNING: If +eager_submit+ is false (by default), it is possible that the batch never gets
+  # to the size that can trigger a Pardot request. Always uses this method together with its
+  # sibling, +batch_create_remaining_prospects+ to flush out the remaining data in the batch.
+  #
+  # You can think of using this method as writing to an output stream, which at the end you
+  # have to flush out the remaining content in the stream.
+  #
   # @param [Hash] contact
   # @param [Boolean] eager_submit
   # @return [Array] two arrays, one for all submitted prospects and one for Pardot errors
@@ -92,6 +100,9 @@ class PardotV2
   end
 
   # Converts contact fields to Pardot prospect fields.
+  # @example
+  #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: true}
+  #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
   # @param [Hash] contact
   # @return [Hash]
   def self.convert_to_prospect_fields(contact)
@@ -159,8 +170,9 @@ class PardotV2
     errors
   end
 
-  # @param [Nokogiri::XML] doc XML response from Pardot for a batch request
-  # @return [Array] array of indexes and error messages
+  # Extracts errors from a Pardot response.
+  # @param [Nokogiri::XML] doc Pardot XML response for a batch request
+  # @return [Array] array of hashes, each containing an index and an error message
   def self.extract_batch_request_errors(doc)
     doc.xpath('/rsp/errors/*').map do |node|
       {prospect_index: node.attr("identifier").to_i, error_msg: node.text}
