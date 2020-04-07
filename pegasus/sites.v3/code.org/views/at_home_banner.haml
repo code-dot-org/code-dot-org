@@ -1,4 +1,5 @@
 %script{src: webpack_asset_path('js/code.org/views/at_home_banner.js')}
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
 #at-home-banner-container
