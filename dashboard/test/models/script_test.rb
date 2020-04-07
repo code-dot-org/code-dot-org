@@ -167,8 +167,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should remove empty lessons, reordering lessons' do
-    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
+    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
+    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
     scripts, _ = Script.setup([script_file_3_lessons])
     assert_equal 3, scripts[0].lessons.count
     first = scripts[0].lessons[0]
@@ -719,7 +719,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
 
     assert_equal 2, summary[:lessons].count
-    assert_equal expected_peer_review_lesson, summary[:peerReviewlesson]
+    assert_equal expected_peer_review_lesson, summary[:peerReviewStage]
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
@@ -1093,8 +1093,8 @@ class ScriptTest < ActiveSupport::TestCase
     metadata = {
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
-      lesson_descriptions: [{
-        'name' => 'Report lesson 1',
+      stage_descriptions: [{
+        'name' => 'Report Stage 1',
         'descriptionStudent' => 'lesson 1 is pretty neat',
         'descriptionTeacher' => 'This is what you should know as a teacher'
       }].to_json
@@ -1106,9 +1106,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal 'Report Script Name', updated_report_script['title']
     assert_equal 'This is what Report Script is all about', updated_report_script['description']
-    assert_equal 'report-lesson-1', updated_report_script['lessons']['Report lesson 1']['name']
-    assert_equal 'lesson 1 is pretty neat', updated_report_script['lessons']['Report lesson 1']['description_student']
-    assert_equal 'This is what you should know as a teacher', updated_report_script['lessons']['Report lesson 1']['description_teacher']
+    assert_equal 'report-stage-1', updated_report_script['stages']['Report Stage 1']['name']
+    assert_equal 'lesson 1 is pretty neat', updated_report_script['stages']['Report Stage 1']['description_student']
+    assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
 
   test '!text_to_speech_enabled? by default' do
@@ -1226,12 +1226,12 @@ class ScriptTest < ActiveSupport::TestCase
     bonus_levels3 = script.get_bonus_script_levels(lesson3)
 
     assert_equal 1, bonus_levels1.length
-    assert_equal 1, bonus_levels1[0][:lessonNumber]
+    assert_equal 1, bonus_levels1[0][:stageNumber]
     assert_equal 2, bonus_levels1[0][:levels].length
 
     assert_equal 2, bonus_levels3.length
-    assert_equal 1, bonus_levels3[0][:lessonNumber]
-    assert_equal 3, bonus_levels3[1][:lessonNumber]
+    assert_equal 1, bonus_levels3[0][:stageNumber]
+    assert_equal 3, bonus_levels3[1][:stageNumber]
     assert_equal 2, bonus_levels3[0][:levels].length
     assert_equal 2, bonus_levels3[1][:levels].length
   end
