@@ -221,6 +221,7 @@ ku:
       %{name}
   parent_mailer:
     student_associated_subject: 'زانیاری چوونەژوورەوە بۆ (Code.org)'
+    parent_email_added_subject: 'بەخێربێیت بۆ Code.org!'
   teacher_mailer:
     new_teacher_subject: 'بەخێربێیت بۆ Code.org!'
     delete_teacher_subject: 'ئاگاداری لە Code.org: هەژمارەكەت سڕاوەتەوە'
