@@ -529,7 +529,6 @@
   "downloadAssessmentCSV": "Download CSV of student responses",
   "downloadFeedbackCSV": "Download CSV of Feedback",
   "downloadParentLetter": "Download parent letter",
-  "downloadParentLetterTooltip": "Download parent letters for all {numStudents} students in this section",
   "downloadReplayVideoButtonDownload": "Animation",
   "downloadReplayVideoButtonError": "Sorry, we were unable to download your animation. Please try re-running your project and trying again.",
   "dragBlocksToMatch": "Drag the blocks to match",
