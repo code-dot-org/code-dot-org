@@ -89,23 +89,20 @@ class LibraryCreationDialog extends React.Component {
 
   onLibraryLoaded = libraryDetails => {
     this.findProfanity(libraryDetails.librarySource).then(profaneWords => {
-      let newState = {};
       if (profaneWords) {
-        newState = {
+        this.setState({
           dialogState: DialogState.CODE_PROFANITY,
           errorMessage: i18n.libraryCodeProfanity({
             profanityCount: profaneWords.length,
             profaneWords: profaneWords.join(', ')
           })
-        };
+        });
       } else {
-        newState = {
+        this.setState({
           dialogState: DialogState.DONE_LOADING,
           libraryDetails
-        };
+        });
       }
-
-      this.setState(newState);
     });
   };
 
