@@ -15,8 +15,9 @@ class PardotV2
     pardot_id: {field: :id},
   }
 
-  # TODO: convert class variable to instance variable
-  @@prospect_batch = []
+  def initialize
+    @new_prospects = []
+  end
 
   # Retrieves new email-id mappings from Pardot
   # @param [Integer] last_id
@@ -60,32 +61,32 @@ class PardotV2
   # @param [Hash] contact
   # @param [Boolean] eager_submit
   # @return [Array] two arrays, one for all submitted prospects and one for Pardot errors
-  def self.batch_create_prospects(contact, eager_submit = false)
+  def batch_create_prospects(contact, eager_submit = false)
     submissions = []
     errors = []
 
-    prospect = convert_to_prospect_fields contact
-    @@prospect_batch << prospect
+    prospect = self.class.convert_to_prospect_fields contact
+    @new_prospects << prospect
 
-    url = build_batch_url BATCH_CREATE_URL, @@prospect_batch
-    if url.length > URL_LENGTH_THRESHOLD || @@prospect_batch.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
+    url = self.class.build_batch_url BATCH_CREATE_URL, @new_prospects
+    if url.length > URL_LENGTH_THRESHOLD || @new_prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
       # TODO: rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
       # Don't retry an insert because it will create duplicate Pardot prospects.
-      errors = submit_batch_request BATCH_CREATE_URL, @@prospect_batch
-      submissions = @@prospect_batch
-      @@prospect_batch = []
+      errors = self.class.submit_batch_request BATCH_CREATE_URL, @new_prospects
+      submissions = @new_prospects
+      @new_prospects = []
     end
 
     [submissions, errors]
   end
 
   # Batch-creates prospect in Pardot. Request is sent immediately.
-  def self.batch_create_remaining_prospects
-    return [], [] unless @@prospect_batch.present?
+  def batch_create_remaining_prospects
+    return [], [] unless @new_prospects.present?
 
-    errors = submit_batch_request BATCH_CREATE_URL, @@prospect_batch
-    submissions = @@prospect_batch
-    @@prospect_batch = []
+    errors = self.class.submit_batch_request BATCH_CREATE_URL, @new_prospects
+    submissions = @new_prospects
+    @new_prospects = []
 
     [submissions, errors]
   end
