@@ -688,7 +688,7 @@ class Script < ActiveRecord::Base
     standards.each do |standard|
       standard_summary = standard.summarize
       lessons_by_standard = lessons & standard.lessons
-      standard_summary[:lesson_ids] = lessons_by_standard.pluck(:id)
+      standard_summary[:stage_ids] = lessons_by_standard.pluck(:id)
       standards_with_lessons << standard_summary
     end
     standards_with_lessons
@@ -980,7 +980,7 @@ class Script < ActiveRecord::Base
         level
       end
 
-      stage_name = raw_script_level.delete(:stage)
+      stage_name = raw_script_level.delete(:lesson)
       properties = raw_script_level.delete(:properties) || {}
 
       if new_suffix && properties[:variants]
@@ -1037,6 +1037,7 @@ class Script < ActiveRecord::Base
       script_level.save! if script_level.changed?
       script_level
     end
+
     script_lessons.each do |stage|
       # make sure we have an up to date view
       stage.reload
@@ -1058,7 +1059,7 @@ class Script < ActiveRecord::Base
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
 
-      raw_stage = raw_lessons.find {|rs| rs[:stage].downcase == stage.name.downcase}
+      raw_stage = raw_lessons.find {|rs| rs[:lesson].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
       stage.visible_after = raw_stage[:visible_after]
       stage.save! if stage.changed?
