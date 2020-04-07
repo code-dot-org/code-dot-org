@@ -2,12 +2,13 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursee/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursee/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursee/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursee'
 version_year '2020'
 curriculum_umbrella 'CSF'
+tts true
 
 stage 'Sequencing in the Maze', flex_category: 'ramp_up'
 level 'courseD_video_ramp1_2020', progression: 'Maze Intro: Programming with Blocks'
@@ -105,9 +106,6 @@ level 'courseE_aboutme_6_2020', progression: 'Mini-project: Interactive Poster'
 stage 'Digital Sharing', flex_category: 'csf_digcit'
 level 'DigitalSharing-Unplugged_2020'
 
-stage 'Designing for Accessibility', flex_category: 'csf_impacts'
-level 'DesigningForAccessibilityMarkdownLevel_2019_2020'
-
 stage 'Nested Loops in Bee', flex_category: 'csf_nested_loops'
 level 'courseD_bee_nestedLoops1a_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops1_2020', progression: 'Practice'
@@ -202,6 +200,9 @@ level 'courseE_artist_functions_predict2_2020', progression: 'Prediction'
 level 'courseE_artist_functionsProj_2020', progression: 'Practice'
 bonus 'courseE_artist_functions_challenge1_2020'
 bonus 'courseE_artist_functions_challenge2_2020'
+
+stage 'Designing for Accessibility', flex_category: 'csf_impacts'
+level 'DesigningForAccessibilityMarkdownLevel_2019_2020'
 
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseE_project_exemplars_2019_2020', progression: 'Example Projects'

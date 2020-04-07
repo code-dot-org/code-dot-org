@@ -1,7 +1,8 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: :show
+  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
   before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
@@ -45,6 +46,20 @@ class ScriptsController < ApplicationController
     @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
     sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
     @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
+
+    # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
+    if current_user && current_user.levelbuilder?
+      notice_text = ""
+      @script.stages.each do |stage|
+        next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
+
+        formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
+        num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
+        lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+        notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
+      end
+      flash[:notice] = notice_text.html_safe
+    end
   end
 
   def index
@@ -77,8 +92,10 @@ class ScriptsController < ApplicationController
     end
 
     @script.destroy
-    filename = "config/scripts/#{@script.name}.script"
-    File.delete(filename) if File.exist?(filename)
+    if Rails.application.config.levelbuilder_mode
+      filename = "config/scripts/#{@script.name}.script"
+      File.delete(filename) if File.exist?(filename)
+    end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
 
@@ -172,6 +189,7 @@ class ScriptsController < ApplicationController
       :stage_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
+      :tts,
       :script_announcements,
       :pilot_experiment,
       :editor_experiment,

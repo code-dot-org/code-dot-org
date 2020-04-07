@@ -71,7 +71,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Mouse Clicks\r\n\r\nKeypresses are great, but sometimes you want users to interact through mouse clicks. There's a new block called `mouseDown` which, similar to `keyDown`, checks whether the left or right mouse buttons is being pressed. If you are using a computer with a mouse or trackpad that has only one button, you'll want to always use `mouseDown(\"left\")`. \r\n\r\n# Do This\r\nHere's a program that drops a balloon down the screen - you're going to program the mouse button to raise the balloon back up while it's clicked.\r\n\r\n* Add an if else statment that checks for `mouseDown`.\r\n* Inside the conditional, move the balloon up one pixel if the mouse is down. Otherwise, move the balloon down.\r\n\r\n_Hint: You'll need to move the code that drops the balloon for this to work - you only want it to run if `mouseDown` is `false`_\r\n\r\n_Challenge: Can you make the balloon drift randomly to the left and right as it rises and falls?_",
+    "long_instructions": "# Mouse Clicks\r\n\r\nHere's a program that drops a balloon down the screen.  Make the balloon go up and down according to whether the user is pressing the mouse.\r\n\r\n# Do This\r\n* Add code that checks whether the mouse is being pressed.\r\n* Move the balloon up if the mouse is down. Otherwise, move the balloon down.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -120,11 +120,15 @@
     "map_reference": "/docs/gamelab/mouseDown/",
     "video_key": "csd_gamelab_if_else",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:26:18 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:05:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:07:32 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:08:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:26:18 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:05:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:07:32 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-26 01:08:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-30 19:28:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

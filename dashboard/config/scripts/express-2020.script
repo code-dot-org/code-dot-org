@@ -2,12 +2,13 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/express/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/express/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/express/standards/"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/express/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'express'
 version_year '2020'
 curriculum_umbrella 'CSF'
+tts true
 
 stage 'Dance Party', flex_category: 'csf_warmup'
 level 'CourseD_Dance_Party_01_2020'

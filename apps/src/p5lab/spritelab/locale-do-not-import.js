@@ -1,3 +1,4 @@
 // locale for Spritelab
 
-module.exports = window.blockly.spritelab_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('spritelab_locale');

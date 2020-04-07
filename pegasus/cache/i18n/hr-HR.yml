@@ -18,6 +18,8 @@ hr-HR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Jeste li učitelj Informatike? Pogledajte i druge CSEdWeek
     resurse</a>'
+  csedweek_banner_teachers_text: Jeste li učitelj Informatike? Pogledajte i druge
+    CSEdWeek resurse
   n_have_learned_an_hoc: "<h1>Pokušaj</h1> <h2>Sat Kodiranja</h2> <h3># posluženih</h3>"
   anybody_can_learn: Svatko može naučiti.
   learn_now: Nauči sad
@@ -88,6 +90,9 @@ hr-HR:
   get_a_certificate_message_after: Klikni na certifikat da ga preuzmeš ili ispišeš.
     Nastavi s našim <a href='http://studio.code.org'>drugim tečajevima</a>, ili istraži
     više mogućnosti na <a href='/learn/beyond'>Saznaj više od Jednog sata kodiranja</a>.
+  get_a_certificate_message_after_markdown: Klikni na certifikat da ga preuzmeš ili
+    ispišeš. Nastavi s našim [drugim tečajevima](http://studio.code.org), ili istraži
+    više mogućnosti na [Saznaj više od Jednog sata kodiranja](/learn/beyond).
   thanks_for_submitting: Hvala na prijavi!
   if_you_enjoyed: Ako si uživao/la učeći, pozovi prijatelje da probaju također! Želimo
     cijeli svijet da nauči.

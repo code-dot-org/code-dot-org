@@ -20,6 +20,8 @@ sk-SK:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Učíte informatiku? Pozrite sa aj na naše ďalšie materiály
     </a>'
+  csedweek_banner_teachers_text: 'Učíte informatiku? Pozrite sa aj na naše ďalšie
+    materiály '
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz

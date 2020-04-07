@@ -23,6 +23,12 @@ export class MicrobitStubBoard {
     this.myPort = true;
   }
 
+  setPinMode(pinNum, mode) {}
+
+  digitalWrite(pinNum, value) {}
+
+  analogWrite(pinNum, value) {}
+
   displayPlot() {}
 
   displayClear() {}

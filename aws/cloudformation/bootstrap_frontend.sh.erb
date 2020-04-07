@@ -1,4 +1,4 @@
-CHEF_CACHE=<%=local_mode ? '/etc/chef/local-mode-cache/cache' : '/var/chef/cache' %>
+CHEF_CACHE=<%=CDO.chef_local_mode ? '/etc/chef/local-mode-cache/cache' : '/var/chef/cache' %>
 
 # This line causes the LaunchConfiguration to be replaced on each new commit.
 COMMIT=<%=commit%>

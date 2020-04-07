@@ -21,6 +21,8 @@ ca-ES:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Ets mestre d''Informàtica? Mira altres recursos de la
     Setmana de l''Educació Informàtica</a>'
+  csedweek_banner_teachers_text: Ets mestre d'Informàtica? Mira altres recursos de
+    la Setmana de l'Educació Informàtica
   n_have_learned_an_hoc: "<h1>Prova una</h1><h2>Hora de Codi</h2><h3># servit</h3>"
   anybody_can_learn: Qualsevol persona pot aprendre.
   learn_now: Aprèn ara

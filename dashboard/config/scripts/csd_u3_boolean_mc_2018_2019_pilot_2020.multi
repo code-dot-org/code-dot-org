@@ -1,4 +1,5 @@
 name 'CSD U3 Boolean MC_2018_2019_pilot_2020'
+editor_experiment ''
 title 'title'
 description ''
 question 'Which result will be printed in the console by this program?'
@@ -18,7 +19,7 @@ false'
 markdown <<MARKDOWN
 # Boolean Expressions
 
-Decision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.
+**Boolean expression** - an expression that can only evaluate to `TRUE` or `FALSE`
 
 # Predict
 

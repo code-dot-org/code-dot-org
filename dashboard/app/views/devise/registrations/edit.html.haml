@@ -36,7 +36,7 @@
         - if current_user.migrated? && !current_user.student?
           %em= t('user.new_email_hint')
           %br/
-        %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
+        %span#displayed-user-email= f.object.email.present? ? f.object.email : "***#{t('user.encrypted')}***"
         - if current_user.should_see_edit_email_link?
           (
           %a#edit-email-link{href: '#'}= t('user.update_email')
@@ -119,9 +119,9 @@
         = form.text_field :username, maxlength: 255
     - else
       .field
-        -# FND-893 - Stop using markdown in <Label>s
         = form.label :personal_email, class: "label-bold" do
-          = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: true).html_safe
+          %span
+            = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
         = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
     .field
       = form.label :password, maxlength: 255, class: "label-bold"

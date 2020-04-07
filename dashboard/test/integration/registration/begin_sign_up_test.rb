@@ -39,7 +39,7 @@ module RegistrationsControllerTests
       post '/users/begin_sign_up', params: params
 
       assert_template 'new'
-      assert_select 'span.error', 'is required'
+      assert_select 'p.error', 'is required'
     end
 
     test 'renders signup page with error if email is already in use' do
@@ -58,7 +58,7 @@ module RegistrationsControllerTests
       post '/users/begin_sign_up', params: params
 
       assert_template 'new'
-      assert_select 'span.error', 'has already been taken'
+      assert_select 'p.error', 'has already been taken'
     end
 
     test 'renders signup page with error if password is empty' do
@@ -75,7 +75,7 @@ module RegistrationsControllerTests
       post '/users/begin_sign_up', params: params
 
       assert_template 'new'
-      assert_select 'span.error', 'is required'
+      assert_select 'p.error', 'is required'
     end
 
     test 'renders signup page with error if password confirmation is empty' do
@@ -92,7 +92,7 @@ module RegistrationsControllerTests
       post '/users/begin_sign_up', params: params
 
       assert_template 'new'
-      assert_select 'span.error', 'doesn\'t match Password'
+      assert_select 'p.error', 'doesn\'t match Password'
     end
 
     test 'renders signup page with error if passwords do not match' do
@@ -109,7 +109,7 @@ module RegistrationsControllerTests
       post '/users/begin_sign_up', params: params
 
       assert_template 'new'
-      assert_select 'span.error', 'doesn\'t match Password'
+      assert_select 'p.error', 'doesn\'t match Password'
     end
 
     test 'renders signup page with error if passwords are too short' do
@@ -126,7 +126,7 @@ module RegistrationsControllerTests
       post '/users/begin_sign_up', params: params
 
       assert_template 'new'
-      assert_select 'span.error', 'is too short (minimum is 6 characters)'
+      assert_select 'p.error', 'is too short (minimum is 6 characters)'
     end
   end
 end

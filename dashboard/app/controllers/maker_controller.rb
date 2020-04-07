@@ -19,32 +19,37 @@ class MakerController < ApplicationController
     }
   end
 
+  ScriptAndCourse = Struct.new(:script, :course)
+
   def self.maker_script(for_user)
-    csd6_17 = Script.get_from_cache(Script::CSD6_NAME)
-    csd6_18 = Script.get_from_cache(Script::CSD6_2018_NAME)
-    csd6_19 = Script.get_from_cache(Script::CSD6_2019_NAME)
+    maker_unit_scripts = Script.maker_unit_scripts.
+        sort_by(&:version_year).
+        reverse.
+        freeze
+    csd_courses = Course.all_courses.select {|c| c.family_name == Course::CSD}.freeze
+    # maker_years is a list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+    # Ordered from most recent to least.
+    maker_years = maker_unit_scripts.map do |s|
+      ScriptAndCourse.new(s, csd_courses.find {|c| s.version_year == c.version_year})
+    end.freeze
 
-    # Assigned course or script should take precedence.
+    # Assigned course or script should take precedence - show most recent version that's been assigned.
     assigned = for_user.section_courses + for_user.section_scripts
-    if assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2019)) || assigned.include?(csd6_19)
-      return csd6_19
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2018)) || assigned.include?(csd6_18)
-      return csd6_18
-    elsif assigned.include?(Course.get_from_cache(ScriptConstants::CSD_2017)) || assigned.include?(csd6_17)
-      return csd6_17
+    maker_years.each do |year|
+      if assigned.include?(year.course) || assigned.include?(year.script)
+        return year.script
+      end
     end
 
-    # Otherwise, show the version with progress (defaulting to most recent).
-    progress = UserScript.lookup_hash(for_user, [Script::CSD6_NAME, Script::CSD6_2018_NAME, Script::CSD6_2019_NAME])
-    if progress[Script::CSD6_2019_NAME]
-      csd6_19
-    elsif progress[Script::CSD6_2018_NAME]
-      csd6_18
-    elsif progress[Script::CSD6_NAME]
-      csd6_17
-    else
-      csd6_19
+    # Otherwise, show the most recent version with progress.
+    script_names = maker_years.map {|sc| sc.script.name}
+    progress = UserScript.lookup_hash(for_user, script_names)
+    maker_years.each do |year|
+      return year.script if progress[year.script.name]
     end
+
+    # If none of the above applies, default to most recent.
+    maker_years.find {|y| y.script.is_stable?}.script
   end
 
   def setup

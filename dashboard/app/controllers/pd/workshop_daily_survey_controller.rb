@@ -75,18 +75,19 @@ module Pd
     def new_general_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       day = params[:day].to_i
-      if day > 0
+      # TODO: extract day 5 out into post-survey once have facilitator surveys (so can auto-redirect)
+      unless [0, 5].include?(day)
         return render_404
       end
 
-      unless validate_new_general_parameters(workshop)
+      unless day == 5 || validate_new_general_parameters(workshop)
         return
       end
 
       session = get_session_for_workshop_and_day(workshop, day)
 
       # once we have surveys per day parameterize this on day number
-      survey_name = "surveys/pd/workshop_daily_survey_day_0"
+      survey_name = "surveys/pd/workshop_daily_survey_day_#{day}"
       key_params = {
         environment: Rails.env,
         userId: current_user.id,

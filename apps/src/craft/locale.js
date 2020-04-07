@@ -1,1 +1,2 @@
-module.exports = window.blockly.craft_locale;
+import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
+module.exports = safeLoadLocale('craft_locale');

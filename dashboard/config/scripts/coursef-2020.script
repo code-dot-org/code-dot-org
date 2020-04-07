@@ -2,12 +2,13 @@ hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursef/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursef/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursef/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 stage_extras_available true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursef/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
 family_name 'coursef'
 version_year '2020'
 curriculum_umbrella 'CSF'
+tts true
 
 stage 'Functions in Minecraft', flex_category: 'ramp_up'
 level 'MC_HOC_2017_01_RETRY_2020', progression: 'Practice'
@@ -124,11 +125,11 @@ level 'CourseF_Oceans_Short'
 level 'CourseF_Oceans_Video_Societal_Implications'
 level 'CourseF_Oceans_Long'
 
-stage 'For Loop Fun', flex_category: 'csf_for_loops'
-level 'ForLoopFun-Unplugged_2020'
-
 stage 'Internet', flex_category: 'csf_data'
 level 'Internet-Unplugged_2020'
+
+stage 'For Loop Fun', flex_category: 'csf_for_loops'
+level 'ForLoopFun-Unplugged_2020'
 
 stage 'For Loops in Bee', flex_category: 'csf_for_loops'
 level 'courseF_bee_for1_2020', progression: 'Practice'

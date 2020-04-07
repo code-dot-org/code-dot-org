@@ -1,0 +1,61 @@
+---
+title: testing page
+video_player: true
+theme: responsive
+---
+<div class="tile-container-responsive" style="margin-top: 20px;">
+    <div class="col-33">
+        <div class="tutorial-tile">
+            <a href="/dance">
+                <img class="tutorial-tile-img" src="/images/dance_party_2019.gif">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="/dance"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>Dance Party</strong></h3></a>
+                    <div class="smalltext">Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!</div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-33">
+        <div class="tutorial-tile">
+            <a href="/oceans">
+                <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="/oceans"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
+                    <div class="smalltext">Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-33">
+        <div class="tutorial-tile">
+            <a href="/minecraft">
+                <img class="tutorial-tile-img" src="/shared/images/fill-485x260/courses/logo_tall_aquatic.jpg">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="/dance"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>Minecraft Hour of Code</strong></h3></a>
+                    <div class="smalltext">Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.</div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="col-50">
+        <div class="tutorial-tile">
+            <a href="http://studio.code.org/s/flappy/reset">
+                <img class="tutorial-tile-img" src="/shared/images/fill-485x260/courses/logo_tall_flappy.jpg">
+            </a>
+            <div class="tutorial-info">
+                <span>
+                    <a href="http://studio.code.org/s/flappy/reset"><h3 class="tutorial-info-h" style="color:#7665a0"><strong>Flappy Code</strong></h3></a>
+                    <div class="smalltext">Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!</div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,6 +15,9 @@ OptionParser.new do |opts|
   opts.on('-n', '--limit N', 'Top N flakiest tests.') do |n|
     options[:limit] = Integer(n)
   end
+  opts.on('-x', '--threshold X', 'Tests over flakiness threshold X') do |x|
+    options[:threshold] = BigDecimal(x)
+  end
   opts.on('-r', '--reruns', 'Show recommended reruns/confidence.') do
     options[:reruns] = true
   end
@@ -38,8 +41,16 @@ FileUtils.rm(TestFlakiness::CACHE_FILENAME) if options[:recalc]
 results = TestFlakiness.method(options[:method]).call
 results.to_a.sort_by(&:last).reverse[0..options[:limit]].map do |name, value|
   result = [value, name]
+
   if options[:reruns]
     result.insert(1, *TestFlakiness.recommend_reruns(TestFlakiness.test_flakiness[name]))
   end
-  puts result.join("\t")
+
+  if options[:threshold]
+    if value >= options[:threshold]
+      puts result.join("\t")
+    end
+  else
+    puts result.join("\t")
+  end
 end

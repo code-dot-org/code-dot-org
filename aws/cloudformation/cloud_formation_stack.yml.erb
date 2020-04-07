@@ -1,61 +1,3 @@
-<%
-require 'active_support/core_ext/numeric/bytes'
-require 'cdo/aws/cloudfront'
-
-origin = "'https://github.com/code-dot-org/code-dot-org.git'"
-
-if rack_env?(:adhoc) && RakeUtils.git_branch == branch
-  # Current branch is the one we're deploying to the adhoc server,
-  # so check whether it's up-to-date with the remote before we get any further.
-  unless `git remote show #{origin} 2>&1 | grep \"(up to date)\" | grep \"#{branch}\" | wc -l`.strip.to_i > 0
-    raise 'Current adhoc branch needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
-To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
-  end
-else
-  # Either not adhoc or deploying a different branch than the current local one;
-  # simply check that the branch exists on GitHub before deploying.
-  unless system("git ls-remote --exit-code #{origin} #{branch} > /dev/null")
-    raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
-  To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
-  end
-end
-
-commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
-ami = commit[0..4]
-
-frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
-database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
-load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS'] || ENV['LOAD_BALANCER']
-alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
-chef_version = '15.2.20'
-
-unless dry_run
-  update_certs.call unless load_balancer
-  update_cookbooks.call
-  update_bootstrap_script.call
-end
-
-require 'cdo/cron'
-
-self.log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
-
-# Don't provision daemon where manually-provisioned daemon instances already exist.
-# Track Instance ID of manually-provisioned daemon instances that already exist and can't be referenced dynamically
-# TODO migrate stacks to cloudformation-provisioned instances.
-if %w(autoscale-prod test staging levelbuilder).include? stack_name
-  self.daemon_instance_id = {
-    'autoscale-prod' => 'i-08f5f8ace0a473b8d',
-    'test' => 'i-004727200191f3251',
-    'staging' => 'i-02e6cdc765421ab34',
-    'levelbuilder' => 'i-0907b146f7e6503f6'
-  }[stack_name]
-else
-  self.daemon = 'Daemon'
-end
-
-# Use alternate legacy EC2 instance resource name for standalone-adhoc stack.
-self.daemon = 'WebServer' if rack_env?(:adhoc) && !frontends
--%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
@@ -153,22 +95,20 @@ Resources:
             Action: 's3:*'
             Resource: '*'
 <% if frontends -%>
-<%=  component 'ami', ami: ami,
+<%=  component 'ami', ami: (ami = commit[0..4]),
+  image_id: IMAGE_ID,
+  ssh_key_name: SSH_KEY_NAME,
+  subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
   frontend_policies: [Ref: 'CDOPolicy'],
-  frontend_properties: {
-    TargetGroupARNs: [Ref: 'ALBTargetGroup']
-  },
+  frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
   ami_timeout: 'PT120M',
   build_ami: erb_file(aws_dir('cloudformation/bootstrap_chef_stack.sh.erb'),
     resource_id: "AMICreate#{ami}",
     node_name: 'ami-$INSTANCE_ID',
-    run_list: [
-      local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
-    ],
+    run_list: [CDO.chef_local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'],
     commit: commit,
-    daemon: false,
-    chef_version: chef_version
+    daemon: false
   ),
   frontend_timeout: 'PT50M',
   build_frontend: erb_file(aws_dir('cloudformation/bootstrap_frontend.sh.erb'),
@@ -285,18 +225,7 @@ Resources:
   <%=app%>CDN:
     Type: AWS::CloudFront::Distribution
     Properties:
-      DistributionConfig: <%= AWS::CloudFront.distribution_config(
-        app.downcase.to_sym,
-        subdomain('origin'),
-        app == 'Dashboard' ?
-          [studio_subdomain] :
-          [subdomain] + (CDO.partners + ['advocacy']).map{|x| subdomain(nil, x)},
-        {
-          AcmCertificateArn: certificate_arn,
-          MinimumProtocolVersion: 'TLSv1',
-          SslSupportMethod: domain == 'code.org' ? 'vip' : 'sni-only'
-        }
-      )%>
+      DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
 <% end -%>
 <% if cdn_enabled -%>
@@ -354,6 +283,45 @@ Resources:
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
 <% if rack_env?(:production) -%>
+        # Grant scheduled processes (Contact Rollups, Export to Redshift, etc.) permission to clone/delete RDS clusters.
+        - PolicyName: CloneDeleteRDSClusters
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBClusters'
+                  - 'rds:RestoreDBClusterToPointInTime'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:DeleteDBCluster'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:CreateDBInstance'
+                  - 'rds:DeleteDBInstance'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'rds:CopyDBClusterParameterGroup'
+                  - 'rds:DeleteDBClusterParameterGroup'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
+              - Effect: Allow
+                Action:
+                  - 'rds:CopyDBParameterGroup'
+                  - 'rds:DeleteDBParameterGroup'
+                Resource:
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
         - PolicyName: StopInactiveAdhocInstances
           PolicyDocument:
             Statement:
@@ -451,11 +419,9 @@ Resources:
           <%=indent(erb_file(aws_dir('cloudformation', 'bootstrap_chef_stack.sh.erb'),
             resource_id: daemon,
             node_name: '$STACK',
-            run_list: local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
+            run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
-            shutdown: false,
-            daemon: true,
-            chef_version: chef_version
+            daemon: true
           ), 10)%>
           # Signal CloudFormation resource.
           aws cloudformation signal-resource \
