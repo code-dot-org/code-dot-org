@@ -94,6 +94,7 @@ class LibraryCreationDialog extends React.Component {
         newState = {
           dialogState: DialogState.CODE_PROFANITY,
           errorMessage: i18n.libraryCodeProfanity({
+            profanityCount: profaneWords.length,
             profaneWords: profaneWords.join(', ')
           })
         };
