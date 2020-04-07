@@ -204,6 +204,8 @@ function setupSim(
 
   checkTouching('while', {costume: s1costume}, {costume: s3costume}, function(extraArgs) {
     if (World.collisions[extraArgs.target] == undefined) {
+      // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
+      // to the list of s3 to delete next tick.
       World.collisions[extraArgs.target] = [];
       World.s3ToDelete.push(extraArgs.target);
     }
@@ -212,6 +214,8 @@ function setupSim(
 
   checkTouching('while', {costume: s2costume}, {costume: s3costume}, function(extraArgs) {
     if (World.collisions[extraArgs.target] == undefined) {
+      // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
+      // to the list of s3 to delete next tick.
       World.collisions[extraArgs.target] = [];
       World.s3ToDelete.push(extraArgs.target);
     }
@@ -222,6 +226,7 @@ function setupSim(
     for (var s3_counter = 0; s3_counter < World.s3ToDelete.length; s3_counter++) {
       var s3_sprite = World.s3ToDelete[s3_counter];
       var collidedSprites = World.collisions[s3_sprite];
+      // Randomly pick one "winner" for the collision.
       var winnerIndex = randomNumber(0, collidedSprites.length - 1);
       if (collidedSprites[winnerIndex] == s1costume) {
         World.sprite1score += 1;
@@ -233,6 +238,7 @@ function setupSim(
       }
       destroy({id: s3_sprite});
     }
+    // Reset collisions and s3ToDelete before the next tick
     World.collisions = {};
     World.s3ToDelete = [];
     checkSimulationEnd();
