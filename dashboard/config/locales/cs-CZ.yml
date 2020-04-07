@@ -254,6 +254,7 @@ cs:
       %{name}
   parent_mailer:
     student_associated_subject: Přihlašovací údaje na Code.org
+    parent_email_added_subject: Vítejte na Code.org!
   teacher_mailer:
     new_teacher_subject: Vítejte na Code.org!
     delete_teacher_subject: 'Oznámení od Code.org: Váš účet byl odstraněn'
@@ -492,6 +493,7 @@ cs:
     update: Aktualizovat účet
     account_successfully_updated: Účet úspěšně aktualizován.
     update_email: Aktualizovat
+    encrypted: šifrováno
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno

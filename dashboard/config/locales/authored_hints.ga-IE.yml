@@ -97,6 +97,16 @@ ga-IE:
           -   Úsáid an bloc `nuair a bhrúitear an tsaighead chlé` le tabhairt ar an Róbat steip nua a dhéanamh nuair a bhrúitear é.
 
           _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseE_HOC 2018 Level_10:
+        voyage_aquatic_10a: An bhfeiceann tú na **Laindéir Fharraige** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          An féidir leat bloc coinníollach a úsáid chun dul tríd an Séadchomhartha
+          Mara?
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: Is féidir leat an bloc "má tá cosán" chun cabhrú leat do bhealach
+          a dhéanamh.
+      CourseE_HOC 2018 Level_9b:
+        voyage_aquatic_9a: An bhfeiceann tú na blocanna coiréil dearga agus gorma?
+          Úsáid iad mar chuaillí eolais chun do bhealach a dhéanamh tríd an sceir.
       Dance_2019_01:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -309,11 +319,184 @@ ga-IE:
           _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
       Dance_Party_extras_alternate_2019:
         alternate: Tá an bloc malartach sa gcatagóir "Damhsóirí".
+      Function intro Ryan:
+        Function_intro_Ryan_b: Má úsáideann tú na feidhmeanna mar is ceart, seo é
+          an cosán a leanfaidh tú...
+        Function_intro_Ryan_a: Is féidir an fheidhm chéanna a úsáid níos mó ná uair
+          amháin i do chód! Úsáid í faoi dhó chun an dúshlán seo a réiteach.
+      Function intro Ryan_2019:
+        Function_intro_Ryan_b: Má úsáideann tú na feidhmeanna mar is ceart, seo é
+          an cosán a leanfaidh tú...
+        Function_intro_Ryan_a: Is féidir an fheidhm chéanna a úsáid níos mó ná uair
+          amháin i do chód! Úsáid í faoi dhó chun an dúshlán seo a réiteach.
+      HOC 2018 Level_10:
+        voyage_aquatic_10a: An bhfeiceann tú na **Laindéir Fharraige** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          An féidir leat bloc coinníollach a úsáid chun dul tríd an Séadchomhartha
+          Mara?
+      HOC 2018 Level_7a:
+        aquatic7: Is féidir leat an bloc "má tá cosán" chun cabhrú leat do bhealach
+          a dhéanamh.
+      HOC 2018 Level_9b:
+        voyage_aquatic_9a: An bhfeiceann tú na blocanna coiréil dearga agus gorma?
+          Úsáid iad mar chuaillí eolais chun do bhealach a dhéanamh tríd an sceir.
+      MC_HOC_2017_01_RETRY:
+        MC_HOC_2017_01_RETRY_a: Tarraing bloc amháin `téigh ar aghaidh` ón bhosca
+          uirlisí go dtí an spás oibre, agus ceangail é faoin bhloc `nuair a ritear
+          é`.
+        MC_HOC_2017_01_RETRY_b: Ná déan dearmad "Rith" a chliceáil chun cód an Ghníomhaire
+          a chur i bhfeidhm.
+        MC_HOC_2017_01_RETRY_c: Nuair a bheidh cód an Ghníomhaire críochnaithe, beidh
+          tú in ann an t-imreoir a rialú leis na saigheada!
+      MC_HOC_2017_01_RETRY_2019:
+        MC_HOC_2017_01_RETRY_a: Tarraing bloc amháin `téigh ar aghaidh` ón bhosca
+          uirlisí go dtí an spás oibre, agus ceangail é faoin bhloc `nuair a ritear
+          é`.
+        MC_HOC_2017_01_RETRY_b: Ná déan dearmad "Rith" a chliceáil chun cód an Ghníomhaire
+          a chur i bhfeidhm.
+        MC_HOC_2017_01_RETRY_c: Nuair a bheidh cód an Ghníomhaire críochnaithe, beidh
+          tú in ann an t-imreoir a rialú leis na saigheada!
+      MC_HOC_2017_02_Cole:
+        MC_HOC_2017_02_Cole_a: Tabhair ar an nGníomhare dul ar aghadh dhá chéim agus
+          seasamh ar an mbrúphláta. Osclóidh sé sin an doras roimh an imreoir.
+        MC_HOC_2017_02_Cole_b: |-
+          Cliceáil "Rith"!
+
+          Is féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.
+        MC_HOC_2017_02_Cole_c: Chomh luath agus a osclóidh an Gníomhaire an doras,
+          beidh tú in ann na saigheada a úsáid chun an t-imreoir a threorú go dtí
+          an léarscáil!
+        MC_HOC_2017_02_Cole_d: Deimhnigh go bhfuil an Gníomhaire ag leanúint an cosán
+          ar an léarscáil!
+      MC_HOC_2017_02_Cole_2019:
+        MC_HOC_2017_02_Cole_a: Tabhair ar an nGníomhare dul ar aghadh dhá chéim agus
+          seasamh ar an mbrúphláta. Osclóidh sé sin an doras roimh an imreoir.
+        MC_HOC_2017_02_Cole_b: |-
+          Cliceáil "Rith"!
+
+          Is féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.
+        MC_HOC_2017_02_Cole_c: Chomh luath agus a osclóidh an Gníomhaire an doras,
+          beidh tú in ann na saigheada a úsáid chun an t-imreoir a threorú go dtí
+          an léarscáil!
+        MC_HOC_2017_02_Cole_d: Deimhnigh go bhfuil an Gníomhaire ag leanúint an cosán
+          ar an léarscáil!
+      MC_HOC_2017_03_Cole:
+        MC_HOC_2017_03_Cole_a: Chomh luath agus a bhainfidh an Gníomhaire an brúphláta
+          amach, beidh tú in ann na saigheada a úsáid chun an t-imreoir a threorú
+          go dtí an compás!
+        MC_HOC_2017_03_Cole_b: An dóigh leat go bhfuil an cód rófhada? Bain triail
+          as lúb `athdhéan` agus féach an bhfuil tú in ann é a ghiorrú!
+      MC_HOC_2017_03_Cole_2019:
+        MC_HOC_2017_03_Cole_a: Chomh luath agus a bhainfidh an Gníomhaire an brúphláta
+          amach, beidh tú in ann na saigheada a úsáid chun an t-imreoir a threorú
+          go dtí an compás!
+        MC_HOC_2017_03_Cole_b: An dóigh leat go bhfuil an cód rófhada? Bain triail
+          as lúb `athdhéan` agus féach an bhfuil tú in ann é a ghiorrú!
+      MC_HOC_2017_04POINT5_RYAN:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Úsáid an bloc `cas ar dheis` chun treo an ghníomhaire
+          a athrú '
+        MC_HOC_2017_04POINT5_RYAN_a: Ní gá don Ghníomhaire ach an chéad bhrúphláta
+          a bhaint amach chun an cosán go dtí an tua a oscailt do Steve nó Alex.
+      MC_HOC_2017_04POINT5_RYAN_2019:
+        MC_HOC_2017_04POINT5_RYAN_b: 'Úsáid an bloc `cas ar dheis` chun treo an ghníomhaire
+          a athrú '
+        MC_HOC_2017_04POINT5_RYAN_a: Ní gá don Ghníomhaire ach an chéad bhrúphláta
+          a bhaint amach chun an cosán go dtí an tua a oscailt do Steve nó Alex.
+      MC_HOC_2017_04_Cole:
+        MC_HOC_2017_04_Cole_a: Caithfidh an Gníomhaire dul ar aghaidh 7 gcéim. An
+          féidir leat lúb `athdhéan` a úsáid chun é sin a dhéanamh?
+        MC_HOC_2017_04_Cole_c: |-
+          Cliceáil "Rith"!
+
+          Is féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.
+        MC_HOC_2017_04_Cole_b: Chomh luath agus a bhainfidh an Gníomhaire an brúphláta
+          amach, osclófar an doras roimh an imreoir.
+      MC_HOC_2017_04_Cole_2019:
+        MC_HOC_2017_04_Cole_a: Caithfidh an Gníomhaire dul ar aghaidh 7 gcéim. An
+          féidir leat lúb `athdhéan` a úsáid chun é sin a dhéanamh?
+        MC_HOC_2017_04_Cole_c: |-
+          Cliceáil "Rith"!
+
+          Is féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.
+        MC_HOC_2017_04_Cole_b: Chomh luath agus a bhainfidh an Gníomhaire an brúphláta
+          amach, osclófar an doras roimh an imreoir.
+      MC_HOC_2017_05_Cole:
+        MC_HOC_2017_05_Cole_a: An raibh a fhios agat gur féidir níos mó ná bloc amháin
+          a chur laistigh de lúb? Bain triail as dul ar aghaidh **agus** plainc a
+          chur síos laistigh de lúb `athdhéan` chun an dúshlán seo a réiteach.
+        MC_HOC_2017_05_Cole_b: Cabhraigh leis an nGníomhaire dul trasna na habhann,
+          ag tógáil an droichid roimhe.
+      MC_HOC_2017_05_Cole_2019:
+        MC_HOC_2017_05_Cole_a: An raibh a fhios agat gur féidir níos mó ná bloc amháin
+          a chur laistigh de lúb? Bain triail as dul ar aghaidh **agus** plainc a
+          chur síos laistigh de lúb `athdhéan` chun an dúshlán seo a réiteach.
+        MC_HOC_2017_05_Cole_b: Cabhraigh leis an nGníomhaire dul trasna na habhann,
+          ag tógáil an droichid roimhe.
+      MC_HOC_2017_06_Cole:
+        MC_HOC_2017_06_Cole_a: Cé mhéad uair a ritheann an lúb seo? Cé mhéad uair
+          _ba chóir_ di a rith?
+        MC_HOC_2017_06_Cole_b: 'Cabhraigh leis an nGníomhaire droichead a thógáil
+          trasna an uisce! '
+      MC_HOC_2017_06_Cole_2019:
+        MC_HOC_2017_06_Cole_a: Cé mhéad uair a ritheann an lúb seo? Cé mhéad uair
+          _ba chóir_ di a rith?
+        MC_HOC_2017_06_Cole_b: 'Cabhraigh leis an nGníomhaire droichead a thógáil
+          trasna an uisce! '
+      MC_HOC_2017_07_Cole:
+        MC_HOC_2017_07_Cole_c: Ní gá don Ghníomhaire ach cosán go dtí an Chairt Mianaigh
+          a ghlanadh.
+        MC_HOC_2017_07_Cole_a: Chun an dúshlán seo a réiteach, déan iarracht an fheidhm
+          `glan cosán` a thuiscint, ansin úsáid an bloc beag uaine sa bhosca uirlisí
+          an líon uaireanta atá ag teastáil.
+        MC_HOC_2017_07_Cole_b: Bain triail as blocanna feidhme a úsáid in éineacht
+          le blocanna eile ón bhosca uirlisí chun an dúshlán seo a réiteach.
+      MC_HOC_2017_07_Cole_2019:
+        MC_HOC_2017_07_Cole_c: Ní gá don Ghníomhaire ach cosán go dtí an Chairt Mianaigh
+          a ghlanadh.
+        MC_HOC_2017_07_Cole_a: Chun an dúshlán seo a réiteach, déan iarracht an fheidhm
+          `glan cosán` a thuiscint, ansin úsáid an bloc beag uaine sa bhosca uirlisí
+          an líon uaireanta atá ag teastáil.
+        MC_HOC_2017_07_Cole_b: Bain triail as blocanna feidhme a úsáid in éineacht
+          le blocanna eile ón bhosca uirlisí chun an dúshlán seo a réiteach.
+      MC_HOC_2017_10_RETRY:
+        MC_HOC_2017_10_Cole_b: Níl a fhios agat cá bhfuil do thriall? Féach an bhfuil
+          tú in ann an líne poncanna a aimsiú!
+        MC_HOC_2017_10_Cole_a: Tá sé níos éasca an dúshlán seo a réiteach le feidhmeanna!
+      MC_HOC_2017_10_RETRY_2019:
+        MC_HOC_2017_10_Cole_b: Níl a fhios agat cá bhfuil do thriall? Féach an bhfuil
+          tú in ann an líne poncanna a aimsiú!
+        MC_HOC_2017_10_Cole_a: Tá sé níos éasca an dúshlán seo a réiteach le feidhmeanna!
+      MC_HOC_2017_Ali:
+        MC_HOC_2017_08_RY_a: |-
+          Cliceáil "Rith"!
+
+          Is féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.
+        MC_HOC_2017_08_RY_b: Tá go leor bealaí ann leis an dúshlán seo a réiteach.
+          Bain triail as roinnt díobh!
+        MC_HOC_2017_08_RY_c: Tugann an líne poncanna cosán simplí tríd an laibhe duit.
+      MC_HOC_2017_Ali_2019:
+        MC_HOC_2017_08_RY_a: |-
+          Cliceáil "Rith"!
+
+          Is féidir leat do chód a rith fiú mura bhfuil sé ceart. Rith do chód agus atosaigh arís agus arís go dtí go dtuigfidh tú an fhadhb.
+        MC_HOC_2017_08_RY_b: Tá go leor bealaí ann leis an dúshlán seo a réiteach.
+          Bain triail as roinnt díobh!
+        MC_HOC_2017_08_RY_c: Tugann an líne poncanna cosán simplí tríd an laibhe duit.
+      MC_HOC_2017_FP20x20:
+        MC_HOC_2017_13_Cole_a: Tabhair ar an nGníomhaire ráillí don chairt mianaigh
+          a thógáil!
+      MC_HOC_2017_FP20x20_2019:
+        MC_HOC_2017_13_Cole_a: Tabhair ar an nGníomhaire ráillí don chairt mianaigh
+          a thógáil!
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Tabhair ar an ngníomhaire droichid a thógáil sa chaoi
+          go mbeidh Alex nó Steve in ann dul thar teorainneacha an mhapa.
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_b: Tar éis duit teachín éin amháin a chríochnú,
           `léim` go dtí an ceann eile!
         courseA_artist_loops_challenge2_c: Beidh GO LEOR blocanna ag teastáil uait
           laistigh den lúb chun an dúshlán seo a réiteach.
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: Bain triail as dul siar i dtús báire.
       courseD_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Úsáid an bloc nua seo!
@@ -327,6 +510,16 @@ ga-IE:
           sé ag dul síos.
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_b: Meabhraigh go ndéantar casadh ó dhearcadh Ruáin.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_a: Is féidir leat casadh ar chlé nó ar dheis ó dhearcadh
+          Scrat. Má tá a aghaidh ar an taobh deas agus má chasann tú ar dheis, beidh
+          sé ag dul síos.
+      courseD_maze_ramp5a_2019:
+        courseC_maze_programming5_b: Meabhraigh go ndéantar casadh ó dhearcadh Scrat.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_a: Is féidir leat casadh ar chlé nó ar dheis ó dhearcadh
+          Scrat. Má tá a aghaidh ar an taobh deas agus má chasann tú ar dheis, beidh
+          sé ag dul síos.
       courseE_bee_functions4:
         courseE_bee_functions4_b: Úsáid an bloc uaine `téigh agus bailigh neachtar`
           chun an fheidhm seo a úsáid.

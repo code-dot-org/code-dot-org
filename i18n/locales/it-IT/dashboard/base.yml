@@ -240,6 +240,7 @@ it:
       %{name}
   parent_mailer:
     student_associated_subject: 'Informazioni di accesso per Code.org'
+    parent_email_added_subject: 'Benvenuto su Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
     delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'
@@ -458,6 +459,7 @@ it:
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
     update_email: "Aggiorna"
+    encrypted: "crittografato"
   user_level:
     completed: 'Completato'
     tried: 'Provato'

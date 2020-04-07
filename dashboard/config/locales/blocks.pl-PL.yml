@@ -1100,6 +1100,8 @@ pl:
             '"East"': Wschód
             '"South"': Południe
             '"West"': Zachód
+      gamelab_patrollingUpDown:
+        text: patrolowanie w górę i w dół
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
@@ -1166,6 +1168,8 @@ pl:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
+      gamelab_tumbling:
+        text: gimnastykowanie się
       gamelab_turn:
         text: skręt {SPRITE} {DIRECTION} {N} stopni
         options:

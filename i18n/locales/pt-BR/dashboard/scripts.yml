@@ -12504,7 +12504,7 @@ pt-BR:
             CS Discoveries Post Course survey:
               name: Pesquisa do CS Discoveries pós curso
         csd3-2020:
-          title: Unidade CSD 3 - Animações e Jogos (Versão Piloto)
+          title: CSD Unidade 3 - Animações e Jogos
           description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
           description_short: "Programação"
           stages:
@@ -13573,6 +13573,8 @@ pt-BR:
               name: Unidade 5 Avaliação 5 - Questões práticas sobre pseudocódigo AP
             CS Principles Post Course survey:
               name: CS Pesquisa de pós-curso sobre princípios
+            Intro to App Lab:
+              name: Introdução Laboratório de Aplicativos
         virtual-holding-place:
           stages:
             Velocity:

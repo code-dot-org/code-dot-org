@@ -550,17 +550,13 @@ pl-PL:
       Dance_Party_extras_speed_2019: Przyspiesz, spowolnij (Kliknij Więcej po szczegóły)
       Dance_Party_extras_visible: Gdzie oni poszli? (Kliknij Więcej po szczegóły)
       Dance_Party_extras_visible_2019: Gdzie oni poszli? (Kliknij Więcej po szczegóły)
-      Find the Wizard: |-
-        Buduj, co chcesz. To jest przykład
-        gry w zgadywanie numeru!
-      FoodFight: Jest to przykład gry, jaką można stworzyć w play lab.
+      Find the Wizard: Buduj, co chcesz. To jest przykład gry w zgadywanie numeru!
+      FoodFight: Jest to przykład gry, jaką można Utworzyć w PlayLab.
       Function intro Ryan: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie
         użyj funkcji "build bridge".
       Function intro Ryan_2019: Aby przerzucić pomost i dostać się do pochodni, dwukrotnie
         użyj funkcji "build bridge".
-      Guess The Number: |-
-        Buduj, co chcesz. To jest przykład
-        gry w zgadywanie numeru!
+      Guess The Number: Buduj, co chcesz. To jest przykład gry w zgadywanie numeru!
       HOC 2018 Level_1: Weź łódkę z kufra.
       HOC 2018 Level_10: Dostań się do wejścia do tego Oceanicznego Monumentu.
       HOC 2018 Level_11: 'Zbuduj kanał z pryzmarynu wewnątrz Oceanicznego Monumentu.  '
@@ -592,10 +588,10 @@ pl-PL:
         w każdą z czterech postaci. Odczekaj sekundę między dwoma rzutami.
       Infinity_touch_score: Dodaj punkt do wyniku Anny, kiedy dotyka płatka śniegu.  Następnie
         kliknij "Uruchom" i pokieruj nią, aby dotknęła każdy płatek śniegu raz.
-      InspirationalArtwork: Jeśli ten obrazek zainspiruje cię, spróbuj zrobić coś
-        podobnego. W przeciwnym razie możesz stworzyć coś własnego.
-      InspirationalArtwork_2018: Jeśli ten obrazek zainspiruje cię, spróbuj zrobić
-        coś podobnego. W przeciwnym razie możesz stworzyć coś własnego.
+      InspirationalArtwork: Jeśli ten obrazek zainspiruje Cię, to spróbuj zrobić coś
+        podobnego. W przeciwnym razie możesz utworzyć coś własnego.
+      InspirationalArtwork_2018: Jeśli ten obrazek zainspiruje Cię, to spróbuj zrobić
+        coś podobnego. W przeciwnym razie możesz utworzyć coś własnego.
       K-1 Artist Loops 1: Narysuj tę linię poruszając się na wschód (E - East) 4 razy.
       K-1 Artist Loops 2: Teraz, rysuj tę samą linię stosując pętlę.
       K-1 Artist Loops 3: Czy potrafisz powtórzyć te bloki, by narysować 6 linii?
@@ -1510,7 +1506,7 @@ pl-PL:
       courseE_bee_functions4: Użyj funkcji "move and get nectar" (przejdź i pobierz
         nektar), aby zebrać cały nektar.
       courseE_bee_functions_challenge2: Rozwiąż to wyzwanie na własną rękę!
-      courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę zagadkę.
+      courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę łamigłówkę.
       courseE_playLab_scaffold5: Teraz poświęć trochę czasu, żeby upewnić się, że
         gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
         twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.
@@ -1562,22 +1558,17 @@ pl-PL:
       courseF_bee_functions8a: Zbierz cały nektar lub zrób cały miód!
       courseF_bee_functions_challenge2: Wykorzystaj wszystko czego się nauczyłeś,
         aby rozwiązać tę łamigłówkę!
-      courseF_bee_fwp2: |-
-        Wciągnij ten kod do funkcji, potem wywołaj
-        funkcję, by poszukać nektaru w tym rzędzie.
-      courseF_bee_fwp3: |-
-        Zobaczmy, czy funkcja ułatwia zbieranie
-        nektaru w tych trzech rzędach.
-      courseF_bee_fwp4: |-
-        Dodaj parametr `długość` do funkcji tak, by
-        nadal działała, gdy rząd ma inną długość.
+      courseF_bee_fwp2: Wciągnij ten kod do funkcji, potem wywołaj funkcję, by poszukać
+        nektaru w tym rzędzie.
+      courseF_bee_fwp3: Zobaczmy, czy ta funkcja ułatwia zbieranie nektaru w tych
+        trzech rzędach.
+      courseF_bee_fwp4: Dodaj parametr "długość" do funkcji tak, aby nadal działała,
+        gdy rząd ma inną długość.
       courseF_bee_fwp5: Użyj tej funkcji do zbierania nektaru.
       courseF_bee_fwp6: Zbuduj krótkie i słodkie rozwiązanie tego zadania.
-      courseF_bee_fwp7: |-
-        **Wyzwanie:** Zmień swoją funkcję,
-        aby robiła również miód.
+      courseF_bee_fwp7: "**Wyzwanie:** Zmień swoją funkcję, aby robiła również miód."
       courseF_bee_fwp8: Użyj swej nowej funkcji do rozwiązania spirali.
-      courseF_bee_fwp9_predict1: Użyj swojej nowej funkcji, by rozwiązać tę zagadkę.
+      courseF_bee_fwp9_predict1: Użyj swojej nowej funkcji, by rozwiązać tę łamigłówkę.
       courseF_playlab_variables7c: |-
         Spraw, by gra coś zrobiła, prosząc
         użytkownika o zgadnięcie koloru.
