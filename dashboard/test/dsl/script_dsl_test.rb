@@ -539,7 +539,7 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'Script DSL with blank stage visible after date with set visible after to next wednesday at 8 am PST' do
+  test 'Script DSL with blank stage visible after date will set visible after to next wednesday at 8 am PST' do
     Timecop.freeze(Time.new(2020, 3, 27))
 
     input_dsl = <<~DSL
@@ -600,6 +600,44 @@ level 'Level 3'
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
       stage 'stage 1', visible_after: '2020-04-01 08:00:00 -0800'
+      level 'maze 1'
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
+  test 'Script DSL for stage with lesson group' do
+    input_dsl = <<~DSL
+      stage 'Stage1', lesson_group: 'Lesson Group 1'
+      level 'Level 1'
+      level 'Level 2'
+    DSL
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [
+          {
+            stage: "Stage1",
+            scriptlevels: [
+              {stage: "Stage1", levels: [{name: "Level 1", stage_lesson_group: "Lesson Group 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2", stage_lesson_group: "Lesson Group 1"}]},
+            ]
+          }
+        ]
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize lesson_group for stage' do
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script, hidden: true
+    lesson_group = create :lesson_group, name: 'Test Lesson Group', script: script
+    stage = create :stage, name: 'stage 1', script: script, lesson_group: lesson_group
+    script_level = create :script_level, levels: [level], stage: stage, script: script
+    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    expected = <<~SCRIPT
+      stage 'stage 1', lesson_group: 'Test Lesson Group'
       level 'maze 1'
     SCRIPT
     assert_equal expected, script_text
