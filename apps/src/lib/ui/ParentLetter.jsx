@@ -120,9 +120,7 @@ class ParentLetter extends React.Component {
             learning and show you a project they are proud of (
             <a href={ENGAGEMENT_URL}>see details</a>
             ). Or watch one of{' '}
-            <a href={pegasus(`/educate/resources/inspire`)}>
-              these videos
-            </a>{' '}
+            <a href={pegasus(`/educate/resources/videos`)}>these videos</a>{' '}
             together.
           </p>
           <h1>Step 2 - Get your child set up to use Code.org at home</h1>
