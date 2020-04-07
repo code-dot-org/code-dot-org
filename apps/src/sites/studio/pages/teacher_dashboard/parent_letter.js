@@ -12,8 +12,8 @@ import currentUser, {
 import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
 import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
 
-const script = document.querySelector('script[data-dashboard]');
-const scriptData = JSON.parse(script.dataset.dashboard);
+const script = document.querySelector('script[data-json]');
+const scriptData = JSON.parse(script.dataset.json);
 
 // Capture base URLs for both dashboard and pegasus since we want
 // absolute URLs for both in the letter we generate.
