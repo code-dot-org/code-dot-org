@@ -50,16 +50,18 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
+    pardot_writer = PardotV2.new
+
     ActiveRecord::Base.connection.exec_query(new_contacts_query).each do |record|
       data_col = JSON.parse(record['data']).deep_symbolize_keys
       contact = {email: record['email'], pardot_id: record['pardot_id']}.merge(data_col)
 
-      submissions, errors = PardotV2.batch_create_prospects contact
+      submissions, errors = pardot_writer.batch_create_prospects contact
       save_sync_results(submissions, errors, Time.now) if submissions.present?
     end
 
     # Sends Pardot request for the rest of the batch
-    submissions, errors = PardotV2.batch_create_remaining_prospects
+    submissions, errors = pardot_writer.batch_create_remaining_prospects
     save_sync_results(submissions, errors, Time.now) if submissions.present?
   end
 

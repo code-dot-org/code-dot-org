@@ -46,7 +46,7 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
 
-    submitted, errors = PardotV2.batch_create_prospects(contact, true)
+    submitted, errors = PardotV2.new.batch_create_prospects(contact, true)
 
     expected_submissions = [
       {email: contact[:email], id: contact[:pardot_id], db_Opt_In: 'Yes'}
@@ -72,12 +72,13 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).returns(response_with_errors)
 
     # First call, no request sent
-    submitted, errors = PardotV2.batch_create_prospects contacts.first
+    pardot_writer = PardotV2.new
+    submitted, errors = pardot_writer.batch_create_prospects contacts.first
     assert_equal [], submitted
     assert_equal [], errors
 
     # Second call, eagerly send request
-    submitted, errors = PardotV2.batch_create_prospects(contacts.last, true)
+    submitted, errors = pardot_writer.batch_create_prospects(contacts.last, true)
 
     expected_submissions = [
       {email: contacts.first[:email], id: contacts.first[:pardot_id], db_Opt_In: 'No'},
