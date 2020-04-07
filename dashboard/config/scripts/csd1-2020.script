@@ -67,7 +67,7 @@ stage 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', flex_catego
 level 'CSD U1L01.3 TFMD_2020', named: true
 
 stage 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
-level 'CSD U1L03 TFMD_2020', named: true
+level 'CSD U1L12 TFMD_2020', named: true
 
 stage 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
-level 'CSD U1L03 TFMD_2020', named: true
+level 'CSD U1L13 TFMD_2020', named: true
