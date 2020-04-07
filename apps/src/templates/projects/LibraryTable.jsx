@@ -11,6 +11,7 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import {unpublishProjectLibrary} from './projectsRedux';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import Button from '@cdo/apps/templates/Button';
+import {reload} from '@cdo/apps/utils';
 
 export const COLUMNS = {
   LIBRARY_NAME: 0,
@@ -225,7 +226,11 @@ class LibraryTable extends React.Component {
         __useDeprecatedTag
         text={i18n.unpublish()}
         color={Button.ButtonColor.orange}
-        onClick={() => this.props.unpublishProjectLibrary(rowData.channel)}
+        onClick={() =>
+          this.props.unpublishProjectLibrary(rowData.channel, error =>
+            error ? console.error(error) : reload()
+          )
+        }
       />
     );
   };
@@ -279,8 +284,8 @@ export default connect(
     personalProjectsList: state.projects.personalProjectsList.projects
   }),
   dispatch => ({
-    unpublishProjectLibrary(channelId, libraryApi, onComplete) {
-      dispatch(unpublishProjectLibrary(channelId, libraryApi, onComplete));
+    unpublishProjectLibrary(channelId, onComplete, libraryApi) {
+      dispatch(unpublishProjectLibrary(channelId, onComplete, libraryApi));
     }
   })
 )(LibraryTable);
