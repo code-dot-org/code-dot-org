@@ -11,8 +11,7 @@ class ContactRollupsV2
     log_collector.time!('ContactRollupsComparison.compare_processed_data') {ContactRollupsComparison.compile_processed_data}
 
     log_collector.time!('ContactRollupsPardotMemory.add_and_update_pardot_ids') {ContactRollupsPardotMemory.add_and_update_pardot_ids}
-
-    # TODO: sync upstream step
+    log_collector.time!('ContactRollupsComparison.sync_new_contacts_to_pardot') {ContactRollupsPardotMemory.create_new_pardot_prospects}
 
     log_collector.time!("ContactRollupsFinal.overwrite_from_processed_table") {ContactRollupsFinal.overwrite_from_processed_table}
   end
