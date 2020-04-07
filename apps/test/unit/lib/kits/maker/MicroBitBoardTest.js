@@ -26,6 +26,7 @@ describe('MicroBitBoard', () => {
       });
 
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
+      sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
   });
 
@@ -90,6 +91,18 @@ describe('MicroBitBoard', () => {
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
         expect(digitalWriteSpy).to.have.been.calledWith(pin, arg2);
+      });
+    });
+  });
+
+  describe(`digitalRead(pin, callback)`, () => {
+    it('forwards the call to firmata', () => {
+      return board.connect().then(() => {
+        let digitalReadSpy = sinon.spy(board.boardClient_, 'digitalRead');
+        const pin = 11;
+        const arg2 = () => {};
+        board.digitalRead(pin, arg2);
+        expect(digitalReadSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });

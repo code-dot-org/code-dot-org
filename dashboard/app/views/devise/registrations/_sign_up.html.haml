@@ -12,56 +12,54 @@
         &nbsp;
         = link_to t('nav.user.signin'), new_session_path(resource_name)
   .row
-    .span8.oauth-links
-      .row
-        .span6
-          = render "devise/shared/oauth_links"
-      .row
-        .span6
-          %div.horizontal-or
-            %hr
-            = t("or").upcase
-            %hr
-      .row
-        .span6
-          %h4.signup-header= t('signup_form.email_signup')
+    .span7.oauth-links
+      = render "devise/shared/oauth_links"
+  .row
+    .span7
+      %div.horizontal-or
+        %hr
+        = t("or").upcase
+        %hr
+  .row
+    .span7
+      %h4.signup-header= t('signup_form.email_signup')
   .row
     .span8
       = form_for(@user, url: users_begin_sign_up_path, html: {class: "signup"}) do |f|
         / Email
         .row
-          .span2
+          .span3.signup-field-label
             -# Render email label as "Email&nbsp;*", so the asterisk referencing the
             -# "student terms" footer can't wrap onto a line all by itself
             = f.label :email do
               = succeed '&nbsp;*'.html_safe do
                 = User.human_attribute_name(:email)
+            - if @user.errors[:email].present?
+              %p.error= @user.errors[:email]&.first
           .span4
             = f.email_field :email, maxlength: 255
-          .span2
-            %span.error= @user.errors[:email]&.first
 
         / Password
         .row
-          .span2
+          .span3.signup-field-label
             = f.label :password
+            - if @user.errors[:password].present?
+              %p.error= @user.errors[:password]&.first
           .span4
             = f.password_field :password, maxlength: 255
-          .span2
-            %span.error= @user.errors[:password]&.first
 
         / Password confirmation
         .row
-          .span2
+          .span3.signup-field-label
             = f.label :password_confirmation
+            - if @user.errors[:password_confirmation].present?
+              %p.error= @user.errors[:password_confirmation]&.first
           .span4
             = f.password_field :password_confirmation, maxlength: 255
-          .span2
-            %span.error= @user.errors[:password_confirmation]&.first
 
         / Submit
         .row
-          .span6
+          .span8
             %button.submit= t('signup_form.submit')
 
   / More information for students about email storage.

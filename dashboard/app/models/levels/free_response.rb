@@ -61,15 +61,13 @@ class FreeResponse < Level
     # Return the default English string from the database model if we shouldn't
     # localize this property or we couldn't find a localized value.
     default = try(property_name)
-    if should_localize?
-      I18n.t(
-        name,
-        scope: [:data, property_name],
-        default: nil,
-        smart: true
-      ) || default
-    else
-      default
-    end
+    return default unless should_localize?
+
+    I18n.t(
+      name,
+      scope: [:data, property_name],
+      default: default,
+      smart: true
+    )
   end
 end

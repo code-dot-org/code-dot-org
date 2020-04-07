@@ -278,4 +278,12 @@ class Stage < ActiveRecord::Base
     next_level = next_level_for_stage_extras(user)
     next_level ? next_level.stage.relative_position : nil
   end
+
+  def published?(user)
+    return true if user&.levelbuilder?
+
+    return true unless visible_after
+
+    Time.parse(visible_after) <= Time.now
+  end
 end

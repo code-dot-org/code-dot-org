@@ -35,7 +35,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Bounciness\r\n\r\nSo far, `bounceOff` has made sprites bounce away from other objects as fast as they bounced into them.  In the real world, almost everything slows down just a little bit when it bounces off something else.  You can use the `bounciness` block to tell your sprite how much to slow down or speed up when it bounces off something else.\r\n\r\n# Do This\r\n\r\n* Read the code below and press \"Run\" to see the behavior of the basketball and pool ball.\r\n* Use a `bounciness` block to set the bounciness of your soccer ball.\r\n* Run the code again to see how the sprites bounce off the floor.\r\n\r\n\r\n[//]: #  (https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png)\r\n\r\n[//]: #  (https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png)\r\n\r\n[//]: #  (https://images.code.org/0e4e9c26bed0d31d14f6b3f8f8bb4c27-image-1475786966986.png)",
+    "long_instructions": "<img src=\"https://images.code.org/5976aca3356455b4882d2e5d0a62a26f-image-1585825944588.gif\" style=\"float:right\">\r\n\r\n# Bounciness\r\n\r\nSo far, `bounceOff` has made sprites bounce away from other objects as fast as they bounced into them.  In the real world, almost everything slows down just a little bit when it bounces off something else.  You can use the `bounciness` block to tell your sprite how much to slow down or speed up when it bounces off something else.\r\n\r\n# Do This\r\n\r\n* Read the code below and press \"Run\" to see the behavior of the basketball and pool ball.\r\n* Use a `bounciness` block to set the bounciness of your soccer ball.\r\n* Run the code again to see how the sprites bounce off the floor.\r\n\r\n\r\n[//]: #  (https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png)\r\n\r\n[//]: #  (https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png)\r\n\r\n[//]: #  (https://images.code.org/0e4e9c26bed0d31d14f6b3f8f8bb4c27-image-1475786966986.png)\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -78,11 +78,18 @@
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "display_name": "Bounciness",
+    "bubble_choice_description": "Control how much sprites bounce when they interact.",
+    "libraries_enabled": "false",
+    "thumbnail_url": "https://images.code.org/5976aca3356455b4882d2e5d0a62a26f-image-1585825944588.gif"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-05 19:11:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-03-05 19:11:50 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 11:03:15 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-02 11:13:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>
