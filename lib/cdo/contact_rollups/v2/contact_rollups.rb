@@ -13,5 +13,7 @@ class ContactRollupsV2
     log_collector.time!('ContactRollupsPardotMemory.add_and_update_pardot_ids') {ContactRollupsPardotMemory.add_and_update_pardot_ids}
 
     # TODO: sync upstream step
+
+    log_collector.time!("ContactRollupsFinal.overwrite_from_processed_table") {ContactRollupsFinal.overwrite_from_processed_table}
   end
 end
