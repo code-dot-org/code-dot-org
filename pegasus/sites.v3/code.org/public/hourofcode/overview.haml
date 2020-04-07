@@ -21,9 +21,6 @@ social:
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 %script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
-- js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-
 %h1= I18n.t(:hoc_overview_title)
 
 != I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
