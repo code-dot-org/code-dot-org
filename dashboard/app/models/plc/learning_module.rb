@@ -32,7 +32,7 @@ class Plc::LearningModule < ActiveRecord::Base
 
   attr_readonly :plc_course_unit_id
 
-  belongs_to :stage
+  belongs_to :lesson, foreign_key: 'stage_id'
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_unit_id'
   has_and_belongs_to_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', association_foreign_key: 'plc_task_id'
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
