@@ -40,6 +40,7 @@ export const DialogState = {
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
   SHARE_TEACHER_LIBRARIES: 'share_teacher_libraries',
+  CODE_PROFANITY: 'code_profanity',
   ERROR: 'error'
 };
 
@@ -52,6 +53,7 @@ export const DialogState = {
  * PUBLISHED: The user has successfully published the library
  * UNPUBLISHED: The user has successfully unpublished the library
  * ERROR: There was an error loading the library
+ * CODE_PROFANITY: There is profanity in the library code
  */
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -81,12 +83,38 @@ class LibraryCreationDialog extends React.Component {
       this.state.libraryClientApi,
       error =>
         this.setState({dialogState: DialogState.ERROR, errorMessage: error}),
-      libraryDetails =>
-        this.setState({
-          dialogState: DialogState.DONE_LOADING,
-          libraryDetails: libraryDetails
-        })
+      this.onLibraryLoaded
     );
+  };
+
+  onLibraryLoaded = libraryDetails => {
+    this.findProfanity(libraryDetails.librarySource).then(profaneWords => {
+      let newState = {};
+      if (profaneWords) {
+        newState = {
+          dialogState: DialogState.CODE_PROFANITY,
+          errorMessage: i18n.libraryCodeProfanity({
+            profaneWords: profaneWords.join(', ')
+          })
+        };
+      } else {
+        newState = {
+          dialogState: DialogState.DONE_LOADING,
+          libraryDetails
+        };
+      }
+
+      this.setState(newState);
+    });
+  };
+
+  findProfanity = text => {
+    return $.ajax({
+      url: '/profanity/find',
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({text})
+    });
   };
 
   handleClose = () => {
@@ -154,6 +182,9 @@ class LibraryCreationDialog extends React.Component {
         break;
       case DialogState.SHARE_TEACHER_LIBRARIES:
         bodyContent = <ShareTeacherLibraries onCancel={onClose} />;
+        break;
+      case DialogState.CODE_PROFANITY:
+        bodyContent = <ErrorDisplay message={errorMessage} />;
         break;
       default:
         // If we get to this state, we've shipped a bug.
