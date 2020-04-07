@@ -13,7 +13,6 @@ const styles = {
 
 export default class DownloadParentLetters extends Component {
   static propTypes = {
-    numStudents: PropTypes.number.isRequired,
     sectionId: PropTypes.number
   };
 
