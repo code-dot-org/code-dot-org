@@ -1,4 +1,5 @@
 name 'Making a Multi Screen Chaser Game v.2_2018_2019_virtual'
+editor_experiment ''
 title 'title'
 css 'unplugged'
 description 'description here'
@@ -6,7 +7,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Guided Example: Making a Multi-screen Chaser Game
 
-In the last lesson we got some very basic functionality for a simple chaser game going.  Now let's make **version 2**.  Now that we know how to add screens and use console.log to help us debug problems, let's make our game a little more polished.  
+In the last lesson we got some very basic functionality for a simple chaser game going.  Now let's make **version 2**.  Now that we know how to use console.log to help us debug problems, let's make our game a little more polished.  
 
 Here is the plan for what we're about to make:
 

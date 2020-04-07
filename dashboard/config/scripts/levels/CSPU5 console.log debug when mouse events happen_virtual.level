@@ -41,7 +41,7 @@
     "debugger_disabled": "true",
     "makerlab_enabled": "false",
     "code_functions": {
-      "button": null,
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -49,6 +49,15 @@
           "function(){\n\n}"
         ]
       },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
       "setPosition": null,
       "randomNumber_min_max": null,
       "console.log": null
@@ -61,17 +70,17 @@
     "hide_share_and_remix": "false",
     "show_debug_watch": "true",
     "expand_debugger": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "widget_mode": "false",
-    "libraries_enabled": "false"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-03-13 17:49:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2020-04-03 17:33:39 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-03-13 17:49:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2020-04-03 17:33:39 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:30 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
