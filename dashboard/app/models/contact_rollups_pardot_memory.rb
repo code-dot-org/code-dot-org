@@ -66,8 +66,26 @@ class ContactRollupsPardotMemory < ApplicationRecord
     save_sync_results(submissions, errors, Time.now) if submissions.present?
   end
 
-  # TODO: sync contacts that change pardot mappings
-  # TODO: sync contacts with updated content
+  def self.update_pardot_prospects
+    # Find updated contacts
+    # TODO: find contacts with updated pardot_id(s)
+    updated_contact_query = <<-SQL.squish
+      SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
+      FROM contact_rollups_processed AS processed
+      INNER JOIN contact_rollups_pardot_memory AS pardot
+        ON processed.email = pardot.email
+      WHERE pardot.pardot_id IS NOT NULL
+        AND ((pardot.data_synced_at IS NULL) OR (processed.data->>'$.updated_at' > pardot.data_synced_at))
+    SQL
+
+    ActiveRecord::Base.connection.exec_query(updated_contact_query).map do |record|
+      # TODO: Calculate content to sync
+      # TODO: Send to Pardot
+      record['email']
+      # TODO: Save sync results
+    end
+  end
+
   # TODO: sync deleted contacts
 
   # Saves sync results to database.
