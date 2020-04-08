@@ -66,14 +66,15 @@ class PardotV2
   # You can think of using this method as writing to an output stream, which at the end you
   # have to flush out the remaining content in the stream.
   #
-  # @param [Hash] contact
+  # @param [String] email
+  # @param [Hash] data
   # @param [Boolean] eager_submit
   # @return [Array] two arrays, one for all submitted prospects and one for Pardot errors
-  def batch_create_prospects(contact, eager_submit = false)
+  def batch_create_prospects(email, data, eager_submit = false)
     submissions = []
     errors = []
 
-    prospect = self.class.convert_to_prospect_fields contact
+    prospect = self.class.convert_to_prospect_fields data.merge(email: email)
     @new_prospects << prospect
 
     url = self.class.build_batch_url BATCH_CREATE_URL, @new_prospects
@@ -109,6 +110,8 @@ class PardotV2
     prospect = {}
 
     CONTACT_TO_PARDOT_PROSPECT_MAP.each do |key, prospect_info|
+      next unless contact.key?(key)
+
       if prospect_info[:multi]
         # For multi data fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
         contact[key].split(',').each_with_index do |value, index|

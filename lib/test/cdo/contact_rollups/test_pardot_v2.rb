@@ -37,7 +37,7 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_batch_create_prospects_one_contact
-    contact = {email: 'crv2_test@domain.com', pardot_id: nil, opt_in: true}
+    contact = {email: 'crv2_test@domain.com', data: {opt_in: true}}
 
     ok_response = Nokogiri.XML <<-XML
       <rsp stat="ok" version="1.0">
@@ -46,19 +46,17 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
 
-    submitted, errors = PardotV2.new.batch_create_prospects(contact, true)
+    submitted, errors = PardotV2.new.batch_create_prospects contact[:email], contact[:data], true
 
-    expected_submissions = [
-      {email: contact[:email], id: contact[:pardot_id], db_Opt_In: 'Yes'}
-    ]
+    expected_submissions = [{email: contact[:email], db_Opt_In: 'Yes'}]
     assert_equal expected_submissions, submitted
     assert_equal [], errors
   end
 
   def test_batch_create_prospects_multiple_contacts
     contacts = [
-      {email: 'invalid_email', pardot_id: nil, opt_in: false},
-      {email: 'crv2_test@domain.com', pardot_id: nil, opt_in: true}
+      {email: 'invalid_email', data: {opt_in: false}},
+      {email: 'crv2_test@domain.com', data: {opt_in: true}}
     ]
 
     error_msg = 'Invalid prospect email address'
@@ -73,16 +71,16 @@ class PardotV2Test < Minitest::Test
 
     # First call, no request sent
     pardot_writer = PardotV2.new
-    submitted, errors = pardot_writer.batch_create_prospects contacts.first
+    submitted, errors = pardot_writer.batch_create_prospects contacts.first[:email], contacts.first[:data]
     assert_equal [], submitted
     assert_equal [], errors
 
     # Second call, eagerly send request
-    submitted, errors = pardot_writer.batch_create_prospects(contacts.last, true)
+    submitted, errors = pardot_writer.batch_create_prospects contacts.last[:email], contacts.last[:data], true
 
     expected_submissions = [
-      {email: contacts.first[:email], id: contacts.first[:pardot_id], db_Opt_In: 'No'},
-      {email: contacts.last[:email], id: contacts.last[:pardot_id], db_Opt_In: 'Yes'}
+      {email: contacts.first[:email], db_Opt_In: 'No'},
+      {email: contacts.last[:email], db_Opt_In: 'Yes'}
     ]
     expected_errors = [{prospect_index: 0, error_msg: error_msg}]
     assert_equal expected_submissions, submitted

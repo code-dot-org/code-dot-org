@@ -53,10 +53,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
     pardot_writer = PardotV2.new
 
     ActiveRecord::Base.connection.exec_query(new_contacts_query).each do |record|
-      data_col = JSON.parse(record['data']).deep_symbolize_keys
-      contact = {email: record['email']}.merge(data_col)
-
-      submissions, errors = pardot_writer.batch_create_prospects contact
+      data = JSON.parse(record['data']).deep_symbolize_keys
+      submissions, errors = pardot_writer.batch_create_prospects record['email'], data
       save_sync_results(submissions, errors, Time.now) if submissions.present?
     end
 
