@@ -13,6 +13,11 @@ const MOCK_SECTIONS = {
   2: {
     id: 2,
     name: 'intro to computer science II'
+  },
+  3: {
+    id: 3,
+    name: 'hidden section',
+    hidden: true
   }
 };
 
@@ -40,7 +45,7 @@ describe('TeacherDashboardHeader', () => {
     expect(wrapper.contains('Course D (2019)')).to.equal(true);
   });
 
-  it('renders dropdown button with links to sections, highlighting current section', () => {
+  it('renders dropdown button with links to sections, highlighting current section, ignoring hidden section', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let dropdownButton = wrapper.find('DropdownButton');
     expect(dropdownButton).to.have.lengthOf(1);
