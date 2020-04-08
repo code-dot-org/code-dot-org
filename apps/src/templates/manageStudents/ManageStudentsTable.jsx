@@ -32,7 +32,9 @@ import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
+import DownloadParentLetters from './DownloadParentLetters';
 import Button from '../Button';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   headerName: {
@@ -596,6 +598,9 @@ class ManageStudentsTable extends Component {
               transferData={transferData}
               transferStatus={transferStatus}
             />
+          )}
+          {experiments.isEnabled(experiments.PARENT_LETTER) && (
+            <DownloadParentLetters sectionId={this.props.sectionId} />
           )}
         </div>
         <Table.Provider

@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/coursed-2018/stage/1/puzzle/1": {
+    "title": "Graph Paper Programming"
+  },
   "https://studio.code.org/s/coursed-2018/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
@@ -83,6 +86,9 @@
   "https://studio.code.org/s/coursed-2018/stage/2/puzzle/10": {
     "short_instructions": "Get the bird to the pig.",
     "long_instructions": "Get the bird to the pig."
+  },
+  "https://studio.code.org/s/coursed-2018/stage/3/puzzle/1": {
+    "title": "Relay Programming"
   },
   "https://studio.code.org/s/coursed-2018/stage/4/puzzle/2": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
@@ -960,6 +966,9 @@
       }
     ]
   },
+  "https://studio.code.org/s/coursed-2018/stage/13/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/coursed-2018/stage/14/puzzle/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
@@ -1264,6 +1273,9 @@
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
   },
+  "https://studio.code.org/s/coursed-2018/stage/16/puzzle/1": {
+    "title": "Unplugged Activity"
+  },
   "https://studio.code.org/s/coursed-2018/stage/17/puzzle/1": {
     "short_instructions": "Get Pegleg to the flags to solve this puzzle.",
     "long_instructions": "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \n\n* * *\n\nHelp Pegleg gather the flags to solve this puzzle.",
@@ -1332,6 +1344,9 @@
     "callouts": {
       "courseD_playLab_condFP_1": "we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went."
     }
+  },
+  "https://studio.code.org/s/coursed-2018/stage/18/puzzle/1": {
+    "title": "Binary Images"
   },
   "https://studio.code.org/s/coursed-2018/stage/19/puzzle/1": {
     "dsls": {
