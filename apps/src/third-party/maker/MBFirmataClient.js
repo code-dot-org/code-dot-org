@@ -480,11 +480,6 @@ class MicrobitFirmataClient {
     this.myPort.write([this.STREAM_DIGITAL | port, 1]);
   }
 
-  digitalRead(pin, callback) {
-    this.addFirmataUpdateListener(callback);
-    this.trackDigitalPin(pin);
-  }
-
   stopTrackingDigitalPins() {
     // Stop tracking all digital pins.
 
@@ -506,11 +501,6 @@ class MicrobitFirmataClient {
 
     if ((chan < 0) || (chan > 15)) return;
     this.myPort.write([this.STREAM_ANALOG | chan, 1]);
-  }
-
-  analogRead(pin, callback) {
-    this.addFirmataUpdateListener(callback);
-    this.streamAnalogChannel(pin);
   }
 
   stopStreamingAnalogChannel(chan) {
