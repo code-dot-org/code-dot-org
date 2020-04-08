@@ -45,7 +45,7 @@ const styles = {
  * collapsible. It can show the lessons in either a detail or a summary view.
  */
 export default Radium(
-  class ProgressGroup extends React.Component {
+  class LessonGroup extends React.Component {
     static propTypes = {
       groupName: PropTypes.string.isRequired,
       lessons: PropTypes.arrayOf(lessonType).isRequired,

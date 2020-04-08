@@ -17,7 +17,7 @@ import reducer, {
   levelsByLesson,
   levelsForLessonId,
   progressionsFromLevels,
-  categorizedLessons,
+  groupedLessons,
   statusForLevel,
   processedStages,
   setCurrentStageId,
@@ -988,12 +988,13 @@ describe('progressReduxTest', () => {
     });
   });
 
-  describe('categorizedLessons', () => {
-    // helper method that creates a fake stage
-    const fakeStage = (categoryName, stageName, stageId) => ({
+  describe('groupedLessons', () => {
+    // helper method that creates a fake lesson
+    const fakeLesson = (categoryName, groupName, lessonName, lessonId) => ({
       flex_category: categoryName,
-      name: stageName,
-      id: stageId,
+      lesson_group_name: groupName,
+      name: lessonName,
+      id: lessonId,
       levels: [
         {
           url: '',
@@ -1007,51 +1008,51 @@ describe('progressReduxTest', () => {
     it('returns a single category if all lessons have the same category', () => {
       const state = {
         stages: [
-          fakeStage('Content', 'stage1', 1),
-          fakeStage('Content', 'stage2', 2),
-          fakeStage('Content', 'stage3', 3)
+          fakeLesson('Content', null, 'lesson1', 1),
+          fakeLesson('Content', null, 'lesson2', 2),
+          fakeLesson('Content', null, 'lesson3', 3)
         ],
         levelProgress: {},
         focusAreaStageIds: []
       };
 
-      const categories = categorizedLessons(state);
-      assert.equal(categories.length, 1);
-      assert.equal(categories[0].category, 'Content');
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Content');
     });
 
-    it('groups non-adjacent stages by category', () => {
+    it('groups non-adjacent lessons by category', () => {
       const state = {
         stages: [
-          fakeStage('cat1', 'stage1', 1),
-          fakeStage('cat2', 'stage2', 2),
-          fakeStage('cat1', 'stage3', 3)
+          fakeLesson('cat1', null, 'lesson1', 1),
+          fakeLesson('cat2', null, 'lesson2', 2),
+          fakeLesson('cat1', null, 'lesson3', 3)
         ],
         levelProgress: {},
         focusAreaStageIds: []
       };
 
-      const categories = categorizedLessons(state);
-      assert.equal(categories.length, 2);
-      assert.equal(categories[0].category, 'cat1');
-      assert.equal(categories[1].category, 'cat2');
-      assert.equal(categories[0].levels.length, 2);
-      assert.equal(categories[1].levels.length, 1);
-      assert.deepEqual(categories[0].lessons, [
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 2);
+      assert.equal(groups[0].group, 'cat1');
+      assert.equal(groups[1].group, 'cat2');
+      assert.equal(groups[0].levels.length, 2);
+      assert.equal(groups[1].levels.length, 1);
+      assert.deepEqual(groups[0].lessons, [
         {
-          name: 'stage1',
+          name: 'lesson1',
           id: 1,
           isFocusArea: false
         },
         {
-          name: 'stage3',
+          name: 'lesson3',
           id: 3,
           isFocusArea: false
         }
       ]);
-      assert.deepEqual(categories[1].lessons, [
+      assert.deepEqual(groups[1].lessons, [
         {
-          name: 'stage2',
+          name: 'lesson2',
           id: 2,
           isFocusArea: false
         }
@@ -1076,16 +1077,112 @@ describe('progressReduxTest', () => {
         focusAreaStageIds: []
       };
 
-      let categories = categorizedLessons(state, false);
-      assert.equal(categories.length, 1);
-      assert.equal(categories[0].levels.length, 1);
-      assert.equal(categories[0].levels[0].length, 0);
+      let groups = groupedLessons(state, false);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].levels.length, 1);
+      assert.equal(groups[0].levels[0].length, 0);
 
-      categories = categorizedLessons(state, true);
-      assert.equal(categories.length, 1);
-      assert.equal(categories[0].levels.length, 1);
-      assert.equal(categories[0].levels[0].length, 1);
-      assert.equal(categories[0].levels[0][0]['bonus'], true);
+      groups = groupedLessons(state, true);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].levels.length, 1);
+      assert.equal(groups[0].levels[0].length, 1);
+      assert.equal(groups[0].levels[0][0]['bonus'], true);
+    });
+
+    it('returns lesson group if a lesson has both lesson group and flex category', () => {
+      const state = {
+        stages: [fakeLesson('Flex Category', 'Lesson Group', 'lesson1', 1)],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Lesson Group');
+    });
+
+    it('returns a single group if all lessons have the same lesson group', () => {
+      const state = {
+        stages: [
+          fakeLesson(null, 'Lesson Group', 'lesson1', 1),
+          fakeLesson(null, 'Lesson Group', 'lesson2', 2),
+          fakeLesson(null, 'Lesson Group', 'lesson3', 3)
+        ],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Lesson Group');
+    });
+
+    it('groups non-adjacent lessons by group', () => {
+      const state = {
+        stages: [
+          fakeLesson(null, 'Lesson Group 1', 'lesson1', 1),
+          fakeLesson(null, 'Lesson Group 2', 'lesson2', 2),
+          fakeLesson(null, 'Lesson Group 1', 'lesson3', 3)
+        ],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 2);
+      assert.equal(groups[0].group, 'Lesson Group 1');
+      assert.equal(groups[1].group, 'Lesson Group 2');
+      assert.equal(groups[0].levels.length, 2);
+      assert.equal(groups[1].levels.length, 1);
+      assert.deepEqual(groups[0].lessons, [
+        {
+          name: 'lesson1',
+          id: 1,
+          isFocusArea: false
+        },
+        {
+          name: 'lesson3',
+          id: 3,
+          isFocusArea: false
+        }
+      ]);
+      assert.deepEqual(groups[1].lessons, [
+        {
+          name: 'lesson2',
+          id: 2,
+          isFocusArea: false
+        }
+      ]);
+    });
+
+    it('includes bonus levels if includeBonusLevels is true', () => {
+      const bonusLevel = {
+        ids: [2106],
+        title: 1,
+        bonus: true
+      };
+      const state = {
+        stages: [
+          {
+            lesson_group_name: 'Lesson Group',
+            levels: [bonusLevel],
+            lessons: []
+          }
+        ],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      let groups = groupedLessons(state, false);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].levels.length, 1);
+      assert.equal(groups[0].levels[0].length, 0);
+
+      groups = groupedLessons(state, true);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].levels.length, 1);
+      assert.equal(groups[0].levels[0].length, 1);
+      assert.equal(groups[0].levels[0][0]['bonus'], true);
     });
   });
 
