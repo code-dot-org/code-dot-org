@@ -148,4 +148,23 @@ class PardotV2Test < Minitest::Test
 
     assert_equal expected_errors, PardotV2.submit_batch_request('a_pardot_endpoint', prospects)
   end
+
+  def test_calculate_data_delta
+    tests = [
+      {old_data: nil, new_data: {}, expected_delta: {}},
+      {old_data: nil, new_data: {k1: 'v1'}, expected_delta: {k1: 'v1'}},
+      {old_data: {k1: 'v1'}, new_data: {}, expected_delta: {k1: nil}},
+      {old_data: {k1: 'v1'}, new_data: {k1: 'v1'}, expected_delta: {}},
+      {
+        old_data: {k1: 'v1', k2: 'v2'},
+        new_data: {k1: 'v1.1', k3: 'v3'},
+        expected_delta: {k1: 'v1.1', k2: nil, k3: 'v3'}
+      },
+    ]
+
+    tests.each_with_index do |test, index|
+      delta = PardotV2.calculate_data_delta test[:old_data], test[:new_data]
+      assert_equal test[:expected_delta], delta, "Test index #{index} failed"
+    end
+  end
 end
