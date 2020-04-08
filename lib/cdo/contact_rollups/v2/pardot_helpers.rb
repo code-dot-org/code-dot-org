@@ -1,6 +1,9 @@
 module PardotHelpers
-  PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
-  PARDOT_SUCCESS_HTTP_CODES = %w(200 201 204).freeze
+  AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/4".freeze
+  SUCCESS_HTTP_CODES = %w(200 201 204).freeze
+  STATUS_OK = 'ok'.freeze
+  ERROR_INVALID_EMAIL = 'Invalid prospect email address'
+  ERROR_INVALID_API_KEY = 'Invalid API key or user key'
 
   class InvalidApiKeyException < RuntimeError
   end
@@ -8,7 +11,7 @@ module PardotHelpers
   private
 
   # Note: Pardot API key can become invalid and need to be refreshed midstream.
-  @@pardot_api_key = nil
+  @@api_key = nil
 
   # Authenticates and requests a new API key.
   # API keys are valid for one hour while user keys are valid indefinitely.
@@ -16,9 +19,9 @@ module PardotHelpers
   #
   # @return [String] API key to use for subsequent requests
   # @note This method has a side effect (it modifies a class variable) and may raise exception.
-  def request_pardot_api_key
+  def request_api_key
     doc = post_request(
-      PARDOT_AUTHENTICATION_URL,
+      AUTHENTICATION_URL,
       {
         email: CDO.pardot_username,
         password: CDO.pardot_password,
@@ -26,13 +29,14 @@ module PardotHelpers
       }
     )
 
-    status = doc.xpath('/rsp/@stat').text
-    raise "Pardot authentication response failed with status #{status}  #{doc}" unless status == 'ok'
+    status = get_response_status doc
+    raise "Pardot authentication response failed with status #{status}  #{doc}" unless
+      status == STATUS_OK
 
     api_key = doc.xpath('/rsp/api_key').text
     raise 'Pardot authentication response did not include api_key' if api_key.nil?
 
-    @@pardot_api_key = api_key
+    @@api_key = api_key
   end
 
   # Makes an API request with Pardot authentication.
@@ -44,7 +48,7 @@ module PardotHelpers
     post_request_with_auth(url)
   rescue InvalidApiKeyException
     # The API key might have been expired, try again with a new API key
-    request_pardot_api_key
+    request_api_key
     post_request_with_auth(url)
   end
 
@@ -53,10 +57,10 @@ module PardotHelpers
   # @param url [String] URL to post to. The URL should not contain auth params.
   # @return [Nokogiri::XML] XML response from Pardot
   def post_request_with_auth(url)
-    request_pardot_api_key if @@pardot_api_key.nil?
+    request_api_key if @@api_key.nil?
     post_request(
       url,
-      {api_key: @@pardot_api_key, user_key: CDO.pardot_user_key}
+      {api_key: @@api_key, user_key: CDO.pardot_user_key}
     )
   end
 
@@ -70,7 +74,7 @@ module PardotHelpers
     response = Net::HTTP.post_form(uri, params)
 
     raise "Pardot request failed with HTTP #{response.code}" unless
-      PARDOT_SUCCESS_HTTP_CODES.include?(response.code)
+      SUCCESS_HTTP_CODES.include?(response.code)
 
     return nil if response.code == '204'  # No content
 
@@ -78,9 +82,9 @@ module PardotHelpers
     raise 'Pardot response did not return parsable XML' if doc.nil?
 
     error_details = doc.xpath('/rsp/err').text
-    raise InvalidApiKeyException if error_details.include? 'Invalid API key or user key'
+    raise InvalidApiKeyException if error_details.include? ERROR_INVALID_API_KEY
 
-    status = doc.xpath('/rsp/@stat').text
+    status = get_response_status doc
     raise 'Pardot response did not include status' if status.nil?
 
     doc
@@ -91,11 +95,19 @@ module PardotHelpers
   #
   # @param doc [Nokogiri::XML] XML response from Pardot
   def raise_if_response_error(doc)
-    status = doc.xpath('/rsp/@stat').text
-    return if status == 'ok'
+    status = get_response_status doc
+    return if status == STATUS_OK
 
     error_code = doc.xpath('//err/@code').first&.value || 'unknown'
     error_text = doc.xpath('//err').first&.children&.text || 'unknown error message'
     raise "Error in Pardot response: code #{error_code}, #{error_text}"
+  end
+
+  def get_response_status(doc)
+    doc.xpath('/rsp/@stat').text
+  end
+
+  def log(s)
+    CDO.log.info s
   end
 end
