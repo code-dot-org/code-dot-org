@@ -1000,17 +1000,16 @@ class Script < ActiveRecord::Base
       end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
-        # check if that lesson_group exists for the script
+        # check if that lesson_group exists for the script otherwise create a new lesson group
         lesson_group = nil
         if lesson_group_name
-          puts script.lesson_groups
-          lesson_group = script.lesson_groups.detect {|lg| lg.name == lesson_group_name} ||
-            LessonGroup.find_or_create_by(
-              name: lesson_group_name,
-              script: script
-            )
+          lesson_group = LessonGroup.find_or_create_by(
+            name: lesson_group_name,
+            script: script
+          )
         end
 
+        # check if that stage exists for the script otherwise create a new stage
         stage = script.stages.detect {|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
