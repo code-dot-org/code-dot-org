@@ -66,9 +66,9 @@ class EnrolledWorkshopsTable extends React.Component {
   renderWorkshopActionButtons(workshop) {
     return (
       <div>
-        {workshop.state === 'Not Started' && workshop.pre_survey_url && (
+        {workshop.state === 'Not Started' && workshop.pre_workshop_survey_url && (
           <Button
-            onClick={() => window.open(workshop.pre_survey_url, '_blank')}
+            onClick={() => utils.windowOpen(workshop.pre_workshop_survey_url)}
             style={styles.button}
           >
             Complete pre-workshop survey
@@ -85,9 +85,8 @@ class EnrolledWorkshopsTable extends React.Component {
         )}
         <Button
           onClick={() =>
-            window.open(
-              `/pd/workshop_enrollment/${workshop.enrollment_code}`,
-              '_blank'
+            utils.windowOpen(
+              `/pd/workshop_enrollment/${workshop.enrollment_code}`
             )
           }
           style={styles.button}
