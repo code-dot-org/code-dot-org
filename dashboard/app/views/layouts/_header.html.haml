@@ -119,7 +119,7 @@
     - uid = SharedConstants::LEVEL_KIND.stage_extras
 
   - script_data = script.summarize_header
-  - stage_data = (@stage || script_level.stage).summarize
+  - stage_data = (@stage || script_level.lesson).summarize
   -# If caching, we don't know the sign in state, and should be nil
   - signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
   :javascript
