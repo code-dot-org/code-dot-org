@@ -99,6 +99,19 @@
     = f.hidden_field :password
     = f.hidden_field :password_confirmation
 
+- if current_user.student?
+  %div#add-parent-email{style: "display: none"}
+    %hr
+    %h2= t('user.for_parents_and_guardians')
+    %p= "#{t('user.link_a_parent_email')}:"
+    %p
+      %b= "#{t('user.parent_guardian_email_label')}:"
+      %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
+      (
+      %a#add-parent-email-link{href: '#'}= t('user.update_email')
+      )
+    %p= t('user.only_one_parent_email_supported_warning')
+
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
@@ -189,6 +202,17 @@
     = f.hidden_field :hashed_email
     = f.hidden_field :email_preference_opt_in
     = f.hidden_field :current_password
+
+- if resource.student?
+  = form_for(resource,
+      as: resource_name,
+      url: '/users/parent_email',
+      remote: true,
+      html: { id: 'add-parent-email-modal-form' },
+      namespace: 'add-parent-email-modal',
+    ) do |f|
+    = f.hidden_field :parent_email
+    = f.hidden_field :parent_email_preference_opt_in
 
 :ruby
   script_data = {
