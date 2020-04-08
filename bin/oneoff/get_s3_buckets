@@ -1,0 +1,112 @@
+#!/usr/bin/env ruby
+
+# Inventory Code.org S3 buckets.
+
+require_relative '../../dashboard/config/environment'
+require 'aws-sdk-s3'
+require 'aws-sdk-cloudwatch'
+require 'ostruct'
+require 'csv'
+
+s3_client = Aws::S3::Client.new
+cloudwatch_client = Aws::CloudWatch::Client.new
+PRIMARY_REGION = 'us-east-1'.freeze
+ACTIVITY_PERIOD_DAYS = 7.days     # Window of time within which bucket Metrics are collected.
+
+Bucket = Struct.new(
+  :name,
+  :creation_date,
+  :region,
+  :versioning,
+  :size,
+  :object_count,
+  :bytes_uploaded,
+)
+
+buckets = []
+
+s3_buckets = s3_client.list_buckets.buckets
+s3_buckets.each do |s3_bucket|
+  bucket = Bucket.new
+  bucket[:name] = s3_bucket.name
+  bucket[:creation_date] = s3_bucket.creation_date
+
+  bucket[:region] = s3_client.get_bucket_location(bucket: bucket[:name]).location_constraint
+  bucket[:region] = PRIMARY_REGION if bucket[:region] == ''
+  bucket[:versioning] = s3_client.get_bucket_versioning(bucket: bucket[:name]).status
+
+  bucket[:size] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'BucketSizeBytes', client: cloudwatch_client).
+    get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'BucketName',
+            value: bucket[:name],
+          },
+          {
+            name: 'StorageType',
+            value: 'StandardStorage'
+          }
+        ],
+        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        end_time: Time.now,
+        period: ACTIVITY_PERIOD_DAYS,
+        statistics: ['Average'],
+        unit: 'Bytes'
+      }
+    )&.datapoints&.last&.average
+
+  bucket[:object_count] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'NumberOfObjects', client: cloudwatch_client).
+    get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'BucketName',
+            value: bucket[:name],
+          },
+          {
+            name: 'StorageType',
+            value: 'AllStorageTypes'
+          }
+        ],
+        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        end_time: Time.now,
+        period: ACTIVITY_PERIOD_DAYS,
+        statistics: ['Average'],
+        unit: 'Count'
+      }
+    )&.datapoints&.last&.average
+
+  bucket[:bytes_uploaded] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'BytesUploaded', client: cloudwatch_client).
+    get_statistics(
+      {
+        dimensions: [
+          {
+            name: 'BucketName',
+            value: bucket[:name],
+          },
+          {
+            name: 'FilterId',
+            value: 'EntireBucket'
+          }
+        ],
+        start_time: Time.now - ACTIVITY_PERIOD_DAYS,
+        end_time: Time.now,
+        period: ACTIVITY_PERIOD_DAYS,
+        statistics: ['Sum'],
+        unit: 'Bytes'
+      }
+    )&.datapoints&.last&.sum
+
+rescue StandardError => error
+  puts error.message
+ensure
+  buckets.push(bucket)
+end
+
+buckets_csv = CSV.generate do |csv|
+  csv << Bucket.members
+  buckets.sort! {|a, b|  a.creation_date <=> b.creation_date}.each {|bucket| csv << bucket}
+end
+
+puts buckets_csv
