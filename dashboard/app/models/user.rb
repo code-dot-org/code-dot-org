@@ -209,7 +209,7 @@ class User < ActiveRecord::Base
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
-  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
+  after_save :save_parent_email_preference, if: :update_parent_email_preference_opt_in?
 
   before_destroy :soft_delete_channels
 
@@ -235,9 +235,6 @@ class User < ActiveRecord::Base
         source: parent_email_preference_source,
         form_kind: nil
       )
-      if parent_email_changed?
-        ParentMailer.parent_email_added_to_student_account(parent_email, self).deliver_now
-      end
     end
   end
 
@@ -462,16 +459,16 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
   # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: :parent_email_preference_opt_in_required?
-  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
+  before_validation :parent_email_preference_setup, if: :update_parent_email_preference_opt_in?
+  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :update_parent_email_preference_opt_in?
+  validates_presence_of :parent_email_preference_email, if: :update_parent_email_preference_opt_in?
+  validates_presence_of :parent_email_preference_request_ip, if: :update_parent_email_preference_opt_in?
+  validates_presence_of :parent_email_preference_source, if: :update_parent_email_preference_opt_in?
 
-  def parent_email_preference_opt_in_required?
+  def update_parent_email_preference_opt_in?
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
     # user_type 'student' is the only type which supports have a parent_email associated with it.
-    parent_email_preference_opt_in_required == '1' && user_type == 'student'
+    (parent_email_preference_opt_in.present? || parent_email_preference_opt_in_required == '1') && user_type == 'student'
   end
 
   def parent_email_preference_setup
