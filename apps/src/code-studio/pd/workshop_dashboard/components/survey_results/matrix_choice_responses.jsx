@@ -15,6 +15,9 @@ export default class MatrixChoiceResponses extends React.Component {
     questionId: PropTypes.string.isRequired
   };
 
+  // facilitator responses are in form {facilitator1: {question1: <answer>,...}, facilitator2: {...}}
+  // Extract out facilitator answers for a given question id and return in the format
+  // {facilitator1: answer, facilitator2: answer}
   getFacilitatorAnswers(innerQuestionId) {
     const {answer} = this.props;
     let facilitatorAnswers = {};

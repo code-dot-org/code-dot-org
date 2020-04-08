@@ -2,6 +2,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
   def create
     answers = params[:answers]
 
+    # save facilitator answers as separate survey submissions
+    # for ease of querying per-facilitator data
     facilitator_answers = answers["facilitators"]
     answers.delete("facilitators")
 
@@ -27,6 +29,8 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
     end
   end
 
+  # save each set of facilitator questions (split per facilitator)
+  # as a separate survey submission
   def save_facilitator_questions(facilitator_answers, params)
     save_success = true
     error = nil
