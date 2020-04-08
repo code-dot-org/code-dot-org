@@ -38,7 +38,7 @@
     = render partial: "#{survey_type.underscore}_survey"
   -elsif !Pd::PreWorkshopSurvey.where(pd_enrollment: @enrollment).exists?
     If you have not already done so, please complete the
-    = link_to "#{survey_type} survey", @pre_survey_url, target: "_blank"
+    = link_to "#{survey_type} survey", @pre_workshop_survey_url, target: "_blank"
     and review the
     following logistical details about your workshop. If you have any questions about
     your workshop, reach out to your workshop organizer directly:
@@ -68,7 +68,7 @@
 
   %p
     Don’t forget to fill out
-    = link_to 'this survey', @pre_survey_url
+    = link_to 'this survey', @pre_workshop_survey_url
 
     at least 24 hours before the workshop so that your facilitator can make this workshop as effective and useful for you as possible!
 
