@@ -1238,10 +1238,17 @@ de-DE:
   coursed-2019_name: Kurs D (2019)
   coursee-2019_name: Kurs E (2019)
   coursef-2019_name: Kurs F (2019)
+  coursea-2020_name: Kurs A (2019)
+  courseb-2020_name: Kurs B (2019)
+  coursec-2020_name: Kurs C (2019)
+  coursed-2020_name: Kurs D (2019)
+  coursee-2020_name: Kurs E (2019)
+  coursef-2020_name: Kurs F (2019)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
+  express-2020_name: Expresskurs (2019)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: Beschleunigter Kurs

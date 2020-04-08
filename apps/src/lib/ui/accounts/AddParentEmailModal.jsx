@@ -14,7 +14,7 @@ const STATE_UNKNOWN_ERROR = 'unknown-error';
 export default class AddParentEmailModal extends React.Component {
   static propTypes = {
     /**
-     * @type {function({parentEmail: string, emailOptIn: string}):Promise}
+     * @type {function({parentEmail: string, parentEmailOptIn: string}):Promise}
      */
     handleSubmit: PropTypes.func.isRequired,
     /**
@@ -33,11 +33,12 @@ export default class AddParentEmailModal extends React.Component {
       saveState: STATE_INITIAL,
       values: {
         parentEmail: displayedParentEmail,
-        emailOptIn: ''
+        confirmedParentEmail: '',
+        parentEmailOptIn: ''
       },
       errors: {
         parentEmail: '',
-        emailOptIn: ''
+        confirmedParentEmail: ''
       }
     };
   }
@@ -85,7 +86,8 @@ export default class AddParentEmailModal extends React.Component {
     const {errors} = this.state;
     return {
       parentEmail: errors.parentEmail || this.getNewEmailValidationError(),
-      emailOptIn: errors.emailOptIn || this.getEmailOptInValidationError()
+      confirmedParentEmail:
+        errors.confirmedParentEmail || this.getConfirmedEmailValidationError()
     };
   }
 
@@ -103,10 +105,10 @@ export default class AddParentEmailModal extends React.Component {
     return null;
   };
 
-  getEmailOptInValidationError = () => {
-    const {emailOptIn} = this.state.values;
-    if (emailOptIn.length === 0) {
-      return i18n.addParentEmailModal_emailOptIn_isRequired();
+  getConfirmedEmailValidationError = () => {
+    const {parentEmail, confirmedParentEmail} = this.state.values;
+    if (parentEmail !== confirmedParentEmail) {
+      return i18n.addParentEmailModal_confirmedParentEmail_mustMatch();
     }
     return null;
   };
@@ -118,10 +120,17 @@ export default class AddParentEmailModal extends React.Component {
     this.setState({values, errors});
   };
 
+  onConfirmedParentEmailChange = event => {
+    const {values, errors} = this.state;
+    values['confirmedParentEmail'] = event.target.value;
+    errors['confirmedParentEmail'] = '';
+    this.setState({values, errors});
+  };
+
   onEmailOptInChange = event => {
     const {values, errors} = this.state;
-    values['emailOptIn'] = event.target.value;
-    errors['emailOptIn'] = '';
+    values['parentEmailOptIn'] = event.target.value;
+    errors['parentEmailOptIn'] = '';
     this.setState({values, errors});
   };
 
@@ -138,7 +147,11 @@ export default class AddParentEmailModal extends React.Component {
         uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
-          <Header text={i18n.addParentEmailModal_title()} />
+          <div>
+            <Header text={i18n.addParentEmailModal_title()} hideBorder={true} />
+            {i18n.addParentEmailModal_subtitle()}
+            <hr />
+          </div>
           <Field
             label={i18n.addParentEmailModal_parentEmail_label()}
             error={validationErrors.parentEmail}
@@ -157,23 +170,46 @@ export default class AddParentEmailModal extends React.Component {
               ref={el => (this.parentEmailInput = el)}
             />
           </Field>
-          <Field error={validationErrors.emailOptIn}>
-            <div style={styles.emailOptIn}>
+          <Field
+            label={i18n.addParentEmailModal_confirmedParentEmail_label()}
+            error={validationErrors.confirmedParentEmail}
+          >
+            <input
+              type="email"
+              value={values.confirmedParentEmail}
+              disabled={saving}
+              tabIndex="1"
+              onKeyDown={this.onKeyDown}
+              onChange={this.onConfirmedParentEmailChange}
+              autoComplete="off"
+              maxLength="255"
+              size="255"
+              style={styles.input}
+              ref={el => (this.confirmedParentEmailInput = el)}
+            />
+          </Field>
+          <div style={styles.parentOptInSection}>
+            <div style={styles.parentEmailOptInHeading}>
+              <b>{i18n.addParentEmailModal_emailOptIn_label()}</b>
+              <br /> {i18n.addParentEmailModal_emailOptIn_sublabel()}
+            </div>
+            <div style={styles.parentEmailOptInInput}>
               <label style={styles.label}>
                 {i18n.addParentEmailModal_emailOptIn_description()}{' '}
                 <a href={pegasus('/privacy')}>
                   {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
                 </a>
               </label>
-              <div>
+              <div style={styles.radioSelectors}>
                 <div style={styles.radioButton}>
                   <input
                     type="radio"
                     id="yes"
                     value={'yes'}
                     disabled={saving}
-                    checked={values['emailOptIn'] === 'yes'}
+                    checked={values['parentEmailOptIn'] === 'yes'}
                     onChange={this.onEmailOptInChange}
+                    style={styles.radio}
                   />
                   <label htmlFor="yes" style={styles.label}>
                     {i18n.yes()}
@@ -185,8 +221,9 @@ export default class AddParentEmailModal extends React.Component {
                     id="no"
                     value={'no'}
                     disabled={saving}
-                    checked={values['emailOptIn'] === 'no'}
+                    checked={values['parentEmailOptIn'] === 'no'}
                     onChange={this.onEmailOptInChange}
+                    style={styles.radio}
                   />
                   <label htmlFor="no" style={styles.label}>
                     {i18n.no()}
@@ -194,7 +231,7 @@ export default class AddParentEmailModal extends React.Component {
                 </div>
               </div>
             </div>
-          </Field>
+          </div>
           <ConfirmCancelFooter
             confirmText={i18n.addParentEmailModal_save()}
             onConfirm={this.save}
@@ -219,9 +256,32 @@ const styles = {
     margin: 20,
     color: color.charcoal
   },
-  emailOptIn: {
+  parentOptInSection: {
+    border: '1px solid',
+    borderColor: color.charcoal,
+    backgroundColor: color.background_gray,
+    padding: '10px'
+  },
+  parentEmailOptInHeading: {
+    borderColor: color.charcoal,
+    borderTopWidth: 0,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    paddingBottom: 10
+  },
+  parentEmailOptInInput: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingTop: 10
+  },
+  radioSelectors: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
   radioButton: {
     display: 'flex',
@@ -229,5 +289,10 @@ const styles = {
   },
   label: {
     margin: 'auto'
+  },
+  radio: {
+    height: 12,
+    width: 12,
+    margin: 4
   }
 };
