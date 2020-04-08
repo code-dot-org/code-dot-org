@@ -6,6 +6,7 @@ class PardotV2
   API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   PROSPECT_QUERY_URL = "#{API_V4_BASE}/do/query".freeze
   BATCH_CREATE_URL = "#{API_V4_BASE}/do/batchCreate".freeze
+  BATCH_UPDATE_URL = "#{API_V4_BASE}/do/batchUpdate".freeze
 
   URL_LENGTH_THRESHOLD = 6000
   MAX_PROSPECT_BATCH_SIZE = 50
@@ -17,6 +18,7 @@ class PardotV2
 
   def initialize
     @new_prospects = []
+    @updated_prospects = []
   end
 
   # Retrieves new email-id mappings from Pardot
@@ -98,6 +100,49 @@ class PardotV2
     @new_prospects = []
 
     [submissions, errors]
+  end
+
+  def batch_update_prospects(email, pardot_id, old_data, new_data, eager_submit = false)
+    submissions = []
+    errors = []
+
+    delta = self.class.calculate_data_delta(old_data, new_data)
+    prospect = self.class.convert_to_prospect_fields(
+      delta.merge(email: email, pardot_id: pardot_id)
+    )
+    @updated_prospects << prospect
+
+    # TODO: Generalize with batch_create_prospects and batch_create_remaining_prospects
+    url = self.class.build_batch_url BATCH_UPDATE_URL, @updated_prospects
+
+    if url.length > URL_LENGTH_THRESHOLD || @updated_prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
+      errors = self.class.submit_batch_request BATCH_UPDATE_URL, @updated_prospects
+      submissions = @updated_prospects
+      @updated_prospects = []
+    end
+
+    [submissions, errors]
+  end
+
+  # Calculates what needs to change to transform an old data to a new data
+  # @param [Hash] old_data
+  # @param [Hash] new_data cannot be null
+  # @return [Hash]
+  def self.calculate_data_delta(old_data, new_data)
+    return new_data unless old_data.present?
+
+    # Collect key-value pairs that exist only in new data
+    delta = {}
+    new_data.each_pair do |key, val|
+      delta[key] = val unless old_data.key?(key) && old_data[key] == val
+    end
+
+    # Remove entries that no longer exist in new data
+    old_data.each_pair do |key, _|
+      delta[key] = nil unless new_data.key?(key)
+    end
+
+    delta
   end
 
   # Converts contact fields to Pardot prospect fields.
