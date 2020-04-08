@@ -172,6 +172,20 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
   # TODO: sync deleted contacts
 
+  def self.delete_pardot_prospects
+    # Get pardot IDs for contacts (emails) that are no longer in contact_rollups_processed.
+    deleted_contacts_query = <<~SQL
+      SELECT pardot.pardot_id
+      FROM contact_rollups_pardot_memory as pardot
+      LEFT OUTER JOIN contact_rollups_processed as processed
+        ON processed.email = pardot.email
+      WHERE processed.email is null
+    SQL
+
+    pardot_ids_to_delete = ActiveRecord::Base.connection.exec_query(deleted_contacts_query).map {|record| record['pardot_id']}
+    # PardotV2.delete_pardot_prospects(pardot_ids_to_delete)
+  end
+
   # Saves sync results to database.
   # @param [Array<Hash>] submissions an array of prospects that were synced/submitted to Pardot
   # @param [Array<Hash>] errors an array of hashes, each containing an index and an error message

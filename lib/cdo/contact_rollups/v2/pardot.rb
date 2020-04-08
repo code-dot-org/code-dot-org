@@ -5,6 +5,7 @@ class PardotV2
 
   API_V4_BASE = "https://pi.pardot.com/api/prospect/version/4".freeze
   PROSPECT_QUERY_URL = "#{API_V4_BASE}/do/query".freeze
+  PROSPECT_DELETION_URL = "#{API_V4_BASE}/do/delete/id".freeze
   BATCH_CREATE_URL = "#{API_V4_BASE}/do/batchCreate".freeze
   BATCH_UPDATE_URL = "#{API_V4_BASE}/do/batchUpdate".freeze
 
@@ -177,6 +178,28 @@ class PardotV2
     end
 
     [submissions, errors]
+  end
+
+  # Deletes a list of prospects from Pardot. For Pardot API documentation, see
+  # http://developer.pardot.com/kb/api-version-4/prospects/#using-prospects.
+  # @param [Array[Integer]] prospect_ids of the prospects to be deleted.
+  # @return [Array[Integer]] the set of prospect_ids that failed to be deleted.
+  def self.delete_prospects(prospect_ids)
+    failed_prospect_ids = []
+
+    prospect_ids.each do |prospect_id|
+      url = "#{PROSPECT_DELETION_URL}/#{prospect_id}"
+      post_request_with_auth url
+    rescue RuntimeError => e
+      if e.message =~ /Pardot request failed with HTTP/
+        failed_prospect_ids << prospect_id
+        next
+      else
+        raise e
+      end
+    end
+
+    failed_prospect_ids
   end
 
   # Converts contact keys and values to Pardot prospect keys and values.
