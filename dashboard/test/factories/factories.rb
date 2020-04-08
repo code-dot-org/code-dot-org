@@ -29,7 +29,7 @@ FactoryGirl.define do
     end
   end
 
-  factory :section_hidden_lesson do
+  factory :section_hidden_stage do
     section
     lesson
   end
