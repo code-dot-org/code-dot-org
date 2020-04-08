@@ -15,7 +15,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 28 Sep 2017 23:03:52 GMT
+      - Wed, 08 Apr 2020 17:27:52 GMT
       Server:
       - nginx/1.10.3 (Ubuntu)
       Vary:
@@ -30,7 +30,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"en","format":"rest","found":"0","api_key":"<API_KEY>"}}'
     http_version: 
-  recorded_at: Thu, 28 Sep 2017 23:03:52 GMT
+  recorded_at: Wed, 08 Apr 2020 17:27:39 GMT
 - request:
     method: get
     uri: http://api1.webpurify.com/services/rest/?api_key=<API_KEY>&format=json&lang=de&method=webpurify.live.return&text=schei%C3%9Fe
@@ -46,7 +46,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 28 Sep 2017 23:03:52 GMT
+      - Wed, 08 Apr 2020 17:27:53 GMT
       Server:
       - nginx/1.10.3 (Ubuntu)
       Vary:
@@ -61,7 +61,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"de","format":"rest","found":"1","expletive":"schei\u00dfe","api_key":"<API_KEY>"}}'
     http_version: 
-  recorded_at: Thu, 28 Sep 2017 23:03:52 GMT
+  recorded_at: Wed, 08 Apr 2020 17:27:41 GMT
 - request:
     method: get
     uri: http://api1.webpurify.com/services/rest/?api_key=<API_KEY>&format=json&lang=sp&method=webpurify.live.return&text=puta%20madre
@@ -77,7 +77,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 28 Sep 2017 23:03:52 GMT
+      - Wed, 08 Apr 2020 17:27:54 GMT
       Server:
       - nginx/1.10.3 (Ubuntu)
       Vary:
@@ -92,5 +92,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"rsp":{"@attributes":{"stat":"ok"},"method":"webpurify.live.return","lang":"sp","format":"rest","found":"1","expletive":"puta","api_key":"<API_KEY>"}}'
     http_version: 
-  recorded_at: Thu, 28 Sep 2017 23:03:53 GMT
+  recorded_at: Wed, 08 Apr 2020 17:27:41 GMT
 recorded_with: VCR 3.0.3
