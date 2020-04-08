@@ -50,11 +50,13 @@ class TeacherDashboardHeader extends React.Component {
   }
   getDropdownOptions(optionMetricName) {
     let self = this;
-    let visibleSections = Object.fromEntries(
-      Object.entries(this.props.sections).filter(
-        ([sectionId, section]) => !section.hidden
-      )
-    );
+    let visibleSections = Object.entries(this.props.sections)
+      .filter(([sectionId, section]) => !section.hidden)
+      .reduce((visibleSections, filteredEntry) => {
+        visibleSections[filteredEntry[0]] = filteredEntry[1];
+        return visibleSections;
+      }, {});
+
     let options = Object.keys(visibleSections).map(function(key, i) {
       let section = visibleSections[key];
       let optionOnClick = () => {
