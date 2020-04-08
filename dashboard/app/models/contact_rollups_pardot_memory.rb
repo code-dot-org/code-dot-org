@@ -68,7 +68,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # Find updated contacts
     # TODO: find contacts with updated pardot_id(s)
     updated_contact_query = <<-SQL.squish
-      SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
+      SELECT processed.email, processed.data AS new_data, pardot.pardot_id, pardot.data_synced
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
@@ -76,11 +76,15 @@ class ContactRollupsPardotMemory < ApplicationRecord
         AND ((pardot.data_synced_at IS NULL) OR (processed.data->>'$.updated_at' > pardot.data_synced_at))
     SQL
 
+    pardot_writer = PardotV2.new
     ActiveRecord::Base.connection.exec_query(updated_contact_query).map do |record|
-      # TODO: Calculate content to sync
-      # TODO: Send to Pardot
-      record['email']
+      old_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
+      new_data = JSON.parse(record['new_data']).deep_symbolize_keys
+
+      pardot_writer.batch_update_prospects record['email'], record['pardot_id'], old_data, new_data
+
       # TODO: Save sync results
+      record['email']
     end
   end
 
