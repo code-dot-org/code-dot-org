@@ -239,6 +239,7 @@ sk:
       %{name}
   parent_mailer:
     student_associated_subject: 'Prihlasovacie údaje pre Code.org'
+    parent_email_added_subject: 'Vitajte na Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Vitajte na Code.org!'
     delete_teacher_subject: 'Správa z Code.org: Tvoj účet bol vymazaný'
@@ -456,6 +457,7 @@ sk:
     auth_option_saved: "Úspešné prepojenie tvojho účtu %{provider} s tvojím emailom %{email}."
     auth_option_saved_no_email: "Úspešne si si prepojil/a svoj %{provider} účet."
     update_email: "Aktualizovať"
+    encrypted: "šifrované"
   user_level:
     completed: 'Dokončené'
     tried: 'Vyskúšaný'
@@ -893,6 +895,7 @@ sk:
     csf_online_safety: 'Bezpečnosť na internete'
     csf_binary: 'Binárny'
     csf_conditionals: 'Podmienky'
+    csf_sprites: 'Postavy'
     csf_nested_loops: 'Vnorené cykly'
     csf_functions: 'Funkcie'
     csf_variables: 'Premenné'

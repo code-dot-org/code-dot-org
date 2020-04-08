@@ -600,10 +600,7 @@ class ManageStudentsTable extends Component {
             />
           )}
           {experiments.isEnabled(experiments.PARENT_LETTER) && (
-            <DownloadParentLetters
-              numStudents={this.studentDataMinusBlanks().length}
-              sectionId={this.props.sectionId}
-            />
+            <DownloadParentLetters sectionId={this.props.sectionId} />
           )}
         </div>
         <Table.Provider

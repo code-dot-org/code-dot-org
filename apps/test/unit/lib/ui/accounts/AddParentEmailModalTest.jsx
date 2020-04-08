@@ -20,10 +20,11 @@ describe('AddParentEmailModal', () => {
   };
 
   // Helpers for selecting particular elements/components
-  const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
-  const emailOptInSelect = wrapper =>
+  const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR).first();
+  const emailConfirmationInput = wrapper => wrapper.find(EMAIL_SELECTOR).last();
+  const parentEmailOptInSelect = wrapper =>
     wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'yes');
-  const emailOptOutSelect = wrapper =>
+  const parentEmailOptOutSelect = wrapper =>
     wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'no');
   const submitButton = wrapper =>
     wrapper
@@ -44,8 +45,9 @@ describe('AddParentEmailModal', () => {
     it('disables everything and shows save text when saving', () => {
       wrapper.setState({saveState: 'saving'});
       expect(emailInput(wrapper)).to.have.attr('disabled');
-      expect(emailOptInSelect(wrapper)).to.have.attr('disabled');
-      expect(emailOptOutSelect(wrapper)).to.have.attr('disabled');
+      expect(emailConfirmationInput(wrapper)).to.have.attr('disabled');
+      expect(parentEmailOptInSelect(wrapper)).to.have.attr('disabled');
+      expect(parentEmailOptOutSelect(wrapper)).to.have.attr('disabled');
       expect(submitButton(wrapper)).to.have.attr('disabled');
       expect(cancelButton(wrapper)).to.have.attr('disabled');
       expect(wrapper.text()).to.include(i18n.saving());
@@ -71,7 +73,8 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
-            emailOptIn: 'yes'
+            confirmedParentEmail: '',
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -84,7 +87,8 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'invalidEmail@nowhere',
-            emailOptIn: 'yes'
+            confirmedParentEmail: '',
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -98,7 +102,8 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'old@example.com',
-            emailOptIn: 'yes'
+            confirmedParentEmail: 'old@example.com',
+            parentEmailOptIn: 'yes'
           }
         });
 
@@ -107,30 +112,30 @@ describe('AddParentEmailModal', () => {
         );
       });
 
+      it('checks that confirmation email equals email', () => {
+        wrapper.setState({
+          values: {
+            parentEmail: 'email@example.com',
+            confirmedParentEmail: 'different@example.com',
+            parentEmailOptIn: 'yes'
+          }
+        });
+
+        expect(wrapper.text()).to.include(
+          i18n.addParentEmailModal_confirmedParentEmail_mustMatch()
+        );
+      });
+
       it('reports email server errors', () => {
         const serverError = 'test-server-error';
         wrapper.setState({
           values: {
             parentEmail: 'new@example.com',
-            emailOptIn: 'yes'
+            confirmedParentEmail: 'new@example.com',
+            parentEmailOptIn: 'yes'
           },
           errors: {
             parentEmail: serverError
-          }
-        });
-
-        expect(wrapper.text()).to.include(serverError);
-      });
-
-      it('reports emailOptIn server errors', () => {
-        const serverError = 'test-email-opt-in-server-error';
-        wrapper.setState({
-          values: {
-            parentEmail: 'new@example.com',
-            emailOptIn: 'yes'
-          },
-          errors: {
-            emailOptIn: serverError
           }
         });
 
@@ -141,7 +146,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
-            emailOptIn: ''
+            confirmedParentEmail: ''
           }
         });
 
@@ -152,7 +157,8 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'me@example.com',
-            emailOptIn: 'yes'
+            confirmedParentEmail: 'me@example.com',
+            parentEmailOptIn: ''
           }
         });
 
@@ -173,18 +179,11 @@ describe('AddParentEmailModal', () => {
         emailInput(wrapper).simulate('change', {
           target: {value: 'me@example.com'}
         });
-        expect(wrapper.state().errors.parentEmail).to.equal('');
-      });
-
-      it('on emailOptIn', () => {
-        wrapper.setState({
-          errors: {
-            emailOptIn: 'test-server-error'
-          }
+        emailConfirmationInput(wrapper).simulate('change', {
+          target: {value: 'me@example.com'}
         });
-        expect(wrapper.state().errors.emailOptIn).to.equal('test-server-error');
-        emailOptOutSelect(wrapper).simulate('change');
-        expect(wrapper.state().errors.emailOptIn).to.equal('');
+
+        expect(wrapper.state().errors.parentEmail).to.equal('');
       });
     });
 
@@ -199,18 +198,16 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
           parentEmail: '',
-          emailOptIn: ''
+          confirmedParentEmail: ''
         });
         wrapper.instance().onSubmitFailure({
           serverErrors: {
-            parentEmail: 'test-email-server-error',
-            emailOptIn: 'test-email-opt-in-server-error'
+            parentEmail: 'test-email-server-error'
           }
         });
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
-          parentEmail: 'test-email-server-error',
-          emailOptIn: 'test-email-opt-in-server-error'
+          parentEmail: 'test-email-server-error'
         });
       });
     });

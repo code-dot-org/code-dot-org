@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/fesbinary/stage/1/puzzle/1": {
+    "title": "Binary Images"
+  },
   "https://studio.code.org/s/fesbinary/stage/1/puzzle/2": {
     "short_instructions": "Encode an image of anything you like using binary. The binary language will be represented with '0' and '1' only.",
     "long_instructions": "# Make your own image of any size\n\n[][0]\n[][1]\n[][2]\n[][3]\n[][4]\n[][5]\n[][6]\n\n**Directions:**\n\n-   Encode an image of anything you like using `binary`.\n-   The binary language will be represented with `0` and `1` only.\n-   You might want to do some planning and sketching with graph paper first. \n-   Depict something, perhaps your name written out, your initials, an icon or logo of some sort.\n-   Get creative! The image doesn't have to be a perfect square, it can be long and skinny."
@@ -205,7 +208,8 @@
   },
   "https://studio.code.org/s/fesbinary/stage/5/puzzle/1": {
     "dsls": {
-      "markdown": "# Problem Solving - Computers and Logic: Lesson 6 - Processing with Bits\n\n## Background\n\nIn this lesson you'll learn how computers process binary information as you design bit-level filters of simple images.\n\n# Resources\n\n* [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))\n"
+      "markdown": "# Problem Solving - Computers and Logic: Lesson 6 - Processing with Bits\n\n## Background\n\nIn this lesson you'll learn how computers process binary information as you design bit-level filters of simple images.\n\n# Resources\n\n* [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))\n",
+      "teacher_markdown": "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8) - Answer Key\n"
     }
   },
   "https://studio.code.org/s/fesbinary/stage/5/puzzle/2": {
