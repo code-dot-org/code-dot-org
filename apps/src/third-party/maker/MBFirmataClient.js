@@ -496,11 +496,6 @@ class MicrobitFirmataClient {
     this.channelUpdateCounts.fill(0); // statistic: number of updates received for each analog channel
   }
 
-  analogRead(pin, callback) {
-    this.addFirmataUpdateListener(callback);
-    this.streamAnalogChannel(pin);
-  }
-
   streamAnalogChannel(chan) {
     // Start streaming the given analog channel.
 
