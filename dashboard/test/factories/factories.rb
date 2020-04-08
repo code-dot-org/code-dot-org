@@ -1260,7 +1260,7 @@ FactoryGirl.define do
     sequence (:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now - 1.hour}
-    data_synced {{opt_in: false}}
+    data_synced {{db_Opt_in: 'No'}}
     data_synced_at {Time.now}
   end
 end
