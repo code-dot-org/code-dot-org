@@ -209,6 +209,7 @@ export default class AddParentEmailModal extends React.Component {
                     disabled={saving}
                     checked={values['parentEmailOptIn'] === 'yes'}
                     onChange={this.onEmailOptInChange}
+                    style={styles.radio}
                   />
                   <label htmlFor="yes" style={styles.label}>
                     {i18n.yes()}
@@ -222,6 +223,7 @@ export default class AddParentEmailModal extends React.Component {
                     disabled={saving}
                     checked={values['parentEmailOptIn'] === 'no'}
                     onChange={this.onEmailOptInChange}
+                    style={styles.radio}
                   />
                   <label htmlFor="no" style={styles.label}>
                     {i18n.no()}
@@ -271,7 +273,8 @@ const styles = {
   },
   parentEmailOptInInput: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingTop: 10
   },
   radioSelectors: {
     paddingLeft: 10,
@@ -279,10 +282,14 @@ const styles = {
   },
   radioButton: {
     display: 'flex',
-    justifyContent: 'space-between',
-    margin: '4px'
+    justifyContent: 'space-between'
   },
   label: {
     margin: 'auto'
+  },
+  radio: {
+    height: 12,
+    width: 12,
+    margin: 4
   }
 };
