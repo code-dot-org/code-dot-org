@@ -1890,8 +1890,8 @@ endvariants
     SCRIPT
 
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal script.stages[0].lesson_group.id, script.stages[1].lesson_group.id
     refute_equal script.stages[0].lesson_group.id, script.stages[2].lesson_group.id
@@ -1908,14 +1908,14 @@ endvariants
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
     refute script.stages[0].lesson_group
 
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
     assert_equal 'Test Lesson Group', script.stages[0].lesson_group.name
@@ -1932,14 +1932,14 @@ endvariants
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
     assert_equal 'Test Lesson Group 1', script.stages[0].lesson_group.name
 
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
     assert_equal 'Test Lesson Group 2', script.stages[0].lesson_group.name
@@ -1956,15 +1956,15 @@ endvariants
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
 
     assert_equal 'Test Lesson Group', script.stages[0].lesson_group.name
 
     script = Script.add_script(
-        {name: 'lessonGroupTestScript'},
-        ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
     refute script.stages[0].lesson_group
