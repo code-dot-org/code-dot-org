@@ -41,7 +41,7 @@ FactoryGirl.define do
   factory :plc_learning_module, class: 'Plc::LearningModule' do
     sequence(:name) {|n| "plc-learning-module-#{n}"}
     plc_course_unit {create(:plc_course_unit)}
-    stage {create(:stage)}
+    lesson {create(:lesson)}
     module_type Plc::LearningModule::CONTENT_MODULE
   end
 
