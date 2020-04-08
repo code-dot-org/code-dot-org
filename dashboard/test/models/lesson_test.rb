@@ -48,8 +48,8 @@ class StageTest < ActiveSupport::TestCase
     script = create :script
     properties = {pages: [{levels: ['level_free_response', 'level_multi_unsubmitted']}]}
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true, properties: properties
-    stage = create :stage, name: 'stage1', script: script, lockable: true
-    create :script_level, script: script, levels: [level1], assessment: true, stage: stage
+    stage = create :lesson, name: 'stage1', script: script, lockable: true
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: stage
 
     # Ensure that a single page long assessment has a uid that ends with "_0".
     assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
@@ -58,11 +58,11 @@ class StageTest < ActiveSupport::TestCase
   test "summary for stage with and without extras" do
     script = create :script, stage_extras_available: true
     level = create :level
-    stage = create :stage, script: script
-    create :script_level, script: script, stage: stage, levels: [level]
+    stage = create :lesson, script: script
+    create :script_level, script: script, lesson: stage, levels: [level]
     level2 = create :level
-    stage2 = create :stage, script: script, stage_extras_disabled: true
-    create :script_level, script: script, stage: stage2, levels: [level2]
+    stage2 = create :lesson, script: script, stage_extras_disabled: true
+    create :script_level, script: script, lesson: stage2, levels: [level2]
 
     assert_match /extras$/, stage.summarize[:stage_extras_level_url]
     assert_nil stage2.summarize[:stage_extras_level_url]
@@ -71,8 +71,8 @@ class StageTest < ActiveSupport::TestCase
   test "summary for stage with extras where include_bonus_levels is true" do
     script = create :script
     level = create :level
-    stage = create :stage, script: script
-    create :script_level, stage: stage, levels: [level], bonus: true
+    stage = create :lesson, script: script
+    create :script_level, lesson: stage, levels: [level], bonus: true
 
     summary = stage.summarize(true)
     assert_equal 1, summary[:levels].length
@@ -82,8 +82,8 @@ class StageTest < ActiveSupport::TestCase
   test "summary of levels for lesson plan" do
     script = create :script
     level = create :level
-    stage = create :stage, script: script, name: 'My Stage'
-    script_level = create :script_level, script: script, stage: stage, levels: [level]
+    stage = create :lesson, script: script, name: 'My Stage'
+    script_level = create :script_level, script: script, lesson: stage, levels: [level]
 
     expected_summary_of_levels = [
       {
@@ -105,29 +105,29 @@ class StageTest < ActiveSupport::TestCase
   end
 
   test "last_progression_script_level" do
-    stage = create :stage
-    create :script_level, stage: stage
-    last_script_level = create :script_level, stage: stage
+    stage = create :lesson
+    create :script_level, lesson: stage
+    last_script_level = create :script_level, lesson: stage
 
     assert_equal last_script_level, stage.last_progression_script_level
   end
 
   test "last_progression_script_level with a bonus level" do
-    stage = create :stage
-    last_script_level = create :script_level, stage: stage
-    create :script_level, stage: stage, bonus: true
+    stage = create :lesson
+    last_script_level = create :script_level, lesson: stage
+    create :script_level, lesson: stage, bonus: true
 
     assert_equal last_script_level, stage.last_progression_script_level
   end
 
   test "next_level_path_for_stage_extras" do
     script = create :script
-    stage1 = create :stage, script: script
-    create :script_level, script: script, stage: stage1
-    create :script_level, script: script, stage: stage1
-    stage2 = create :stage, script: script
-    create :script_level, script: script, stage: stage2
-    create :script_level, script: script, stage: stage2
+    stage1 = create :lesson, script: script
+    create :script_level, script: script, lesson: stage1
+    create :script_level, script: script, lesson: stage1
+    stage2 = create :lesson, script: script
+    create :script_level, script: script, lesson: stage2
+    create :script_level, script: script, lesson: stage2
 
     assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, stage1.next_level_path_for_stage_extras(@student)
     assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
@@ -137,8 +137,8 @@ class StageTest < ActiveSupport::TestCase
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
     level2 = create :level_group, name: 'level2', title: 'title2', submittable: true
-    stage = create :stage, name: 'stage1', script: script, lockable: true
-    script_level = create :script_level, script: script, levels: [level1, level2], assessment: true, stage: stage
+    stage = create :lesson, name: 'stage1', script: script, lockable: true
+    script_level = create :script_level, script: script, levels: [level1, level2], assessment: true, lesson: stage
 
     [script, level1, level2, stage, script_level]
   end
