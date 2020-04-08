@@ -102,13 +102,22 @@ class PardotV2
     [submissions, errors]
   end
 
-  def batch_update_prospects(email, pardot_id, old_data, new_data, eager_submit = false)
+  # @param [String] email
+  # @param [Integer] pardot_id
+  # @param [Hash] old_prospect_data Pardot prospect fields
+  # @param [Hash] new_contact_data contact fields
+  # @param [Boolean] eager_submit
+  # @return [Array]
+  def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit = false)
     submissions = []
     errors = []
 
-    delta = self.class.calculate_data_delta(old_data, new_data)
-    prospect = self.class.convert_to_prospect_fields(
-      delta.merge(email: email, pardot_id: pardot_id)
+    new_prospect_data = self.class.convert_to_prospect_fields new_contact_data
+    delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
+    # TODO: bail out if delta is empty {}
+
+    prospect = delta.merge(
+      self.class.convert_to_prospect_fields(email: email, pardot_id: pardot_id)
     )
     @updated_prospects << prospect
 
@@ -126,7 +135,7 @@ class PardotV2
 
   # Calculates what needs to change to transform an old data to a new data
   # @param [Hash] old_data
-  # @param [Hash] new_data cannot be null
+  # @param [Hash] new_data
   # @return [Hash]
   def self.calculate_data_delta(old_data, new_data)
     return new_data unless old_data.present?
@@ -169,7 +178,9 @@ class PardotV2
 
     # Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
     # @see https://pi.pardot.com/prospectFieldCustom/read/id/9514
-    prospect[:db_Opt_In] = contact[:opt_in] == true ? 'Yes' : 'No'
+    if contact.key?(:opt_in)
+      prospect[:db_Opt_In] = contact[:opt_in] == true ? 'Yes' : 'No'
+    end
 
     prospect
   end

@@ -78,10 +78,12 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
     pardot_writer = PardotV2.new
     ActiveRecord::Base.connection.exec_query(updated_contact_query).map do |record|
-      old_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
-      new_data = JSON.parse(record['new_data']).deep_symbolize_keys
+      old_prospect_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
+      new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
 
-      pardot_writer.batch_update_prospects record['email'], record['pardot_id'], old_data, new_data
+      pardot_writer.batch_update_prospects(
+        record['email'], record['pardot_id'], old_prospect_data, new_contact_data
+      )
 
       # TODO: Save sync results
       record['email']
