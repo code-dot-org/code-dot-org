@@ -89,8 +89,7 @@ export default class AddParentEmailModal extends React.Component {
       parentEmail: errors.parentEmail || this.getNewEmailValidationError(),
       confirmedParentEmail:
         errors.confirmedParentEmail || this.getConfirmedEmailValidationError(),
-      parentEmailOptIn:
-        errors.parentEmailOptIn || this.getEmailOptInValidationError()
+      parentEmailOptIn: errors.parentEmailOptIn
     };
   }
 
@@ -113,14 +112,6 @@ export default class AddParentEmailModal extends React.Component {
     if (parentEmail !== confirmedParentEmail) {
       return i18n.addParentEmailModal_confirmedParentEmail_mustMatch();
     }
-    return null;
-  };
-
-  getEmailOptInValidationError = () => {
-    //const {parentEmailOptIn} = this.state.values;
-    /*if (parentEmailOptIn.length === 0) {
-      return i18n.addParentEmailModal_emailOptIn_isRequired();
-    }*/
     return null;
   };
 
