@@ -63,6 +63,10 @@ class EnrolledWorkshopsTable extends React.Component {
     utils.windowOpen(`/pd/generate_workshop_certificate/${enrollment_code}`);
   };
 
+  moreThanTenDaysUntilWorkshop = workshop_starting_date => {
+    return moment(workshop_starting_date).diff(moment.now(), 'days') > 10;
+  };
+
   renderWorkshopActionButtons(workshop) {
     return (
       <div>
@@ -70,6 +74,9 @@ class EnrolledWorkshopsTable extends React.Component {
           <Button
             onClick={() => utils.windowOpen(workshop.pre_workshop_survey_url)}
             style={styles.button}
+            disabled={this.moreThanTenDaysUntilWorkshop(
+              workshop.workshop_starting_date
+            )}
           >
             Complete pre-workshop survey
           </Button>
