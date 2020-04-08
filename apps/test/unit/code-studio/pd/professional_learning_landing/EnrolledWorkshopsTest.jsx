@@ -4,17 +4,22 @@ import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_lear
 import sinon from 'sinon';
 import {assert, expect} from 'chai';
 import * as utils from '@cdo/apps/utils';
+import moment from 'moment';
 import {serializedWorkshopFactory} from '../../../../factories/professionalLearning';
 
 describe('EnrolledWorkshops', () => {
   const workshops = [
     serializedWorkshopFactory.build({
-      pre_workshop_survey_url: 'code.org/pre_survey_url'
+      pre_workshop_survey_url: 'code.org/pre_survey_url',
+      workshop_starting_date: '2020-01-17T00:44:05.000Z'
     }),
     serializedWorkshopFactory.build({state: 'In Progress'}),
     serializedWorkshopFactory.build({state: 'Ended', attended: true}),
     serializedWorkshopFactory.build({state: 'Ended'})
   ];
+
+  // By default, use normal time
+  let clock = sinon.useFakeTimers(new Date());
 
   beforeEach(() => {
     sinon.stub(utils, 'windowOpen');
@@ -22,6 +27,7 @@ describe('EnrolledWorkshops', () => {
 
   afterEach(() => {
     utils.windowOpen.restore();
+    clock.restore();
   });
 
   it('Clicking cancel enrollment cancels the enrollment', () => {
@@ -99,5 +105,39 @@ describe('EnrolledWorkshops', () => {
       .simulate('click');
 
     assert(utils.windowOpen.calledOnce);
+  });
+
+  it('Pre-survey link button not shown in ended workshop', function() {
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable workshops={workshops} />
+    );
+
+    const preWorkshopSurveyButton = enrolledWorkshopsTable
+      .find('tbody tr')
+      .at(3)
+      .find('Button')
+      .findWhere(n => n.text() === 'Complete pre-workshop survey');
+
+    expect(preWorkshopSurveyButton).to.have.lengthOf(0);
+  });
+
+  it('Pre-survey link button is disabled if more than 10 days before workshop', function() {
+    clock = sinon.useFakeTimers(
+      moment(workshops[0].workshop_starting_date)
+        .subtract(14, 'days')
+        .toDate()
+    );
+
+    const enrolledWorkshopsTable = shallow(
+      <EnrolledWorkshopsTable workshops={workshops} />
+    );
+
+    const preWorkshopSurveyButton = enrolledWorkshopsTable
+      .find('tbody tr')
+      .at(0)
+      .find('Button')
+      .first();
+
+    expect(preWorkshopSurveyButton.props().disabled).to.be.true;
   });
 });
