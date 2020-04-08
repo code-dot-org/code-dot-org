@@ -39,32 +39,32 @@ class ScriptDslTest < ActiveSupport::TestCase
 
   test 'test Script DSL' do
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
       level 'Level 2'
       level 'Level 3'
 
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 4'
       level 'Level 5'
     DSL
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: 'Stage1',
+            lesson: 'Stage1',
             scriptlevels: [
-              {stage: 'Stage1', levels: [{name: 'Level 1'}]},
-              {stage: 'Stage1', levels: [{name: 'Level 2'}]},
-              {stage: 'Stage1', levels: [{name: 'Level 3'}]}
+              {lesson: 'Stage1', levels: [{name: 'Level 1'}]},
+              {lesson: 'Stage1', levels: [{name: 'Level 2'}]},
+              {lesson: 'Stage1', levels: [{name: 'Level 3'}]}
             ]
           },
           {
-            stage: 'Stage2',
+            lesson: 'Stage2',
             scriptlevels: [
-              {stage: 'Stage2', levels: [{name: 'Level 4'}]},
-              {stage: 'Stage2', levels: [{name: 'Level 5'}]}
+              {lesson: 'Stage2', levels: [{name: 'Level 4'}]},
+              {lesson: 'Stage2', levels: [{name: 'Level 5'}]}
             ]
           }
         ],
@@ -81,7 +81,7 @@ class ScriptDslTest < ActiveSupport::TestCase
 
   test 'test Script DSL with level variants' do
     input_dsl = "
-stage 'Stage1'
+lesson 'Stage1'
 level 'Level 1'
 variants
 level 'Level 2a'
@@ -91,19 +91,19 @@ level 'Level 3'
 "
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
               {
-                stage: "Stage1",
+                lesson: "Stage1",
                 levels: [{name: "Level 2a"}, {name: "Level 2b"}],
                 properties: {
                   variants: {"Level 2b" => {active: false}}
                 }
               },
-              {stage: "Stage1", levels: [{name: "Level 3"}]}
+              {lesson: "Stage1", levels: [{name: "Level 3"}]}
             ]
           }
         ]
@@ -116,7 +116,7 @@ level 'Level 3'
 
   test 'test Script DSL with experiment-based swap' do
     input_dsl = "
-stage 'Stage1'
+lesson 'Stage1'
 level 'Level 1'
 variants
   level 'Level 2a'
@@ -133,20 +133,20 @@ endvariants
 "
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
               {
-                stage: "Stage1",
+                lesson: "Stage1",
                 levels: [{name: "Level 2a"}, {name: "Level 2b"}],
                 properties: {
                   variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
                 }
               },
               {
-                stage: "Stage1",
+                lesson: "Stage1",
                 levels: [{name: "Level 3a"}, {name: "Level 3b"}],
                 properties: {
                   variants: {
@@ -156,7 +156,7 @@ endvariants
                 }
               },
               {
-                stage: "Stage1",
+                lesson: "Stage1",
                 levels: [{name: "Level 4a"}, {name: "Level 4b"}],
                 properties: {
                   variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
@@ -176,7 +176,7 @@ endvariants
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
     level3 = create :maze, name: 'maze 3', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script
+    stage = create :lesson, name: 'stage 1', script: script
     script_level = create(
       :script_level,
       levels: [level, level2, level3],
@@ -186,12 +186,12 @@ endvariants
           'maze 3': {'active': false, 'experiments': ['testExperiment2', 'testExperiment3']},
         }
       },
-      stage: stage,
+      lesson: stage,
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      stage 'stage 1'
+      lesson 'stage 1'
       variants
         level 'maze 1'
         level 'maze 2', experiments: ["testExperiment"]
@@ -203,34 +203,34 @@ endvariants
 
   test 'test Script DSL flex category as property hash' do
     input_dsl = <<~DSL
-      stage 'Stage1',
+      lesson 'Stage1',
         flex_category: 'Content'
       level 'Level 1'
-      stage 'Stage2',
+      lesson 'Stage2',
         flex_category: 'Practice'
       level 'Level 2'
-      stage 'Stage3'
+      lesson 'Stage3'
       level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content"}]},
             ]
           },
           {
-            stage: "Stage2",
+            lesson: "Stage2",
             scriptlevels: [
-              {stage: "Stage2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
+              {lesson: "Stage2", levels: [{name: "Level 2", stage_flex_category: "Practice"}]},
             ]
           },
           {
-            stage: "Stage3",
+            lesson: "Stage3",
             scriptlevels: [
-              {stage: "Stage3", levels: [{name: "Level 3"}]},
+              {lesson: "Stage3", levels: [{name: "Level 3"}]},
             ]
           }
         ]
@@ -243,26 +243,26 @@ endvariants
 
   test 'test Script DSL property lockable as property hash' do
     input_dsl = <<~DSL
-      stage 'Stage1',
+      lesson 'Stage1',
         flex_category: 'Content',
         lockable: true
       level 'Level 1'
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 2'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
+              {lesson: "Stage1", levels: [{name: "Level 1", stage_flex_category: "Content", stage_lockable: true}]},
             ]
           },
           {
-            stage: "Stage2",
+            lesson: "Stage2",
             scriptlevels: [
-              {stage: "Stage2", levels: [{name: "Level 2"}]},
+              {lesson: "Stage2", levels: [{name: "Level 2"}]},
             ]
           }
         ]
@@ -277,9 +277,9 @@ endvariants
     input_dsl = <<~DSL
       hideable_stages 'true'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -290,9 +290,9 @@ endvariants
     input_dsl = <<~DSL
       student_detail_progress_view 'true'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -303,9 +303,9 @@ endvariants
     input_dsl = <<~DSL
       has_verified_resources 'true'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -316,9 +316,9 @@ endvariants
     input_dsl = <<~DSL
       has_lesson_plan 'true'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -329,9 +329,9 @@ endvariants
     input_dsl = <<~DSL
       tts 'true'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
-      stage 'Stage2'
+      lesson 'Stage2'
       level 'Level 2'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -342,7 +342,7 @@ endvariants
     input_dsl = <<~DSL
       teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -353,7 +353,7 @@ endvariants
     input_dsl = <<~DSL
       script_announcements [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}]
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -364,7 +364,7 @@ endvariants
     input_dsl = <<~DSL
       pilot_experiment 'science-experiment'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -375,7 +375,7 @@ endvariants
     input_dsl = <<~DSL
       editor_experiment 'script-editors'
 
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
@@ -395,20 +395,20 @@ endvariants
 
   test 'Script DSL with level progressions' do
     input_dsl = <<~DSL
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
       level 'Level 2', progression: 'Foo'
       level 'Level 3', progression: 'Foo'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
-              {stage: "Stage1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 2"}], properties: {progression: 'Foo'}},
+              {lesson: "Stage1", levels: [{name: "Level 3"}], properties: {progression: 'Foo'}},
             ]
           }
         ]
@@ -421,7 +421,7 @@ endvariants
 
   test 'test Script DSL with level variants and progressions' do
     input_dsl = "
-stage 'Stage1'
+lesson 'Stage1'
 level 'Level 1'
 variants
 level 'Level 2a', progression: 'Foo'
@@ -431,20 +431,20 @@ level 'Level 3'
 "
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
               {
-                stage: "Stage1",
+                lesson: "Stage1",
                 levels: [{name: "Level 2a"}, {name: "Level 2b"}],
                 properties: {
                   variants: {"Level 2b" => {active: false}},
                   progression: 'Foo'
                 }
               },
-              {stage: "Stage1", levels: [{name: "Level 3"}]}
+              {lesson: "Stage1", levels: [{name: "Level 3"}]}
             ]
           }
         ]
@@ -457,7 +457,7 @@ level 'Level 3'
 
   test 'raises exception if two variants have different progressions' do
     input_dsl = "
-stage 'Stage1'
+lesson 'Stage1'
 level 'Level 1'
 variants
 level 'Level 2a', progression: 'Foo1'
@@ -472,7 +472,7 @@ level 'Level 3'
 
   test 'Script DSL with level challenge' do
     input_dsl = <<~DSL
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
       level 'Level 2'
       level 'Level 3', challenge: true
@@ -484,16 +484,16 @@ level 'Level 3'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}]},
-              {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
-              {stage: "Stage1", levels: [{name: "Level 4"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 2"}]},
+              {lesson: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
+              {lesson: "Stage1", levels: [{name: "Level 4"}]},
               {
-                stage: "Stage1",
+                lesson: "Stage1",
                 levels: [
                   {name: "Level 5"},
                   {name: "Level 5.1"},
@@ -515,20 +515,20 @@ level 'Level 3'
 
   test 'Script DSL with skipped extras' do
     input_dsl = <<~DSL
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
       level 'Level 2'
       no_extras
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             stage_extras_disabled: true,
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 2"}]},
             ]
           }
         ]
@@ -543,19 +543,19 @@ level 'Level 3'
     Timecop.freeze(Time.new(2020, 3, 27))
 
     input_dsl = <<~DSL
-      stage 'Stage1', visible_after: ''
+      lesson 'Stage1', visible_after: ''
       level 'Level 1'
       level 'Level 2'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             visible_after: '2020-04-01 08:00:00 -0700',
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 2"}]},
             ]
           }
         ]
@@ -569,19 +569,19 @@ level 'Level 3'
 
   test 'Script DSL with stage visible after date' do
     input_dsl = <<~DSL
-      stage 'Stage1', visible_after: '2020-04-01 10:00:00 -0700'
+      lesson 'Stage1', visible_after: '2020-04-01 10:00:00 -0700'
       level 'Level 1'
       level 'Level 2'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             visible_after: '2020-04-01 10:00:00 -0700',
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 2"}]},
             ]
           }
         ]
@@ -595,11 +595,11 @@ level 'Level 3'
   test 'serialize visible after for stage' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0800'
-    script_level = create :script_level, levels: [level], stage: stage, script: script
+    stage = create :lesson, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0800'
+    script_level = create :script_level, levels: [level], lesson: stage, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      stage 'stage 1', visible_after: '2020-04-01 08:00:00 -0800'
+      lesson 'stage 1', visible_after: '2020-04-01 08:00:00 -0800'
       level 'maze 1'
     SCRIPT
     assert_equal expected, script_text
@@ -609,7 +609,7 @@ level 'Level 3'
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [],
+        lessons: [],
         project_sharing: true
       }
     )
@@ -634,7 +634,7 @@ level 'Level 3'
     input_dsl = "curriculum_umbrella 'CSF'"
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [],
+        lessons: [],
         curriculum_umbrella: 'CSF'
       }
     )
@@ -661,7 +661,7 @@ level 'Level 3'
       family_name 'family name'
       version_year '3035'
       is_stable true
-      stage 'Stage1'
+      lesson 'Stage1'
       level 'Level 1'
       level 'Level 2'
     DSL
@@ -671,12 +671,12 @@ level 'Level 3'
         family_name: "family name",
         version_year: "3035",
         is_stable: true,
-        stages: [
+        lessons: [
           {
-            stage: "Stage1",
+            lesson: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2"}]},
+              {lesson: "Stage1", levels: [{name: "Level 1"}]},
+              {lesson: "Stage1", levels: [{name: "Level 2"}]},
             ]
           }
         ]
@@ -710,17 +710,17 @@ level 'Level 3'
   test 'serialize named_level' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script
+    stage = create :lesson, name: 'stage 1', script: script
     script_level = create(
       :script_level,
       levels: [level],
       named_level: true,
-      stage: stage,
+      lesson: stage,
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      stage 'stage 1'
+      lesson 'stage 1'
       level 'maze 1', named: true
     SCRIPT
     assert_equal expected, script_text
@@ -728,15 +728,15 @@ level 'Level 3'
 
   test 'Script DSL with named: true' do
     input_dsl = <<~DSL
-      stage 'stage 1'
+      lesson 'stage 1'
       level 'maze 1', named: true
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "stage 1",
-            scriptlevels: [{stage: "stage 1", levels: [{name: "maze 1", named_level: true}]},]
+            lesson: "stage 1",
+            scriptlevels: [{lesson: "stage 1", levels: [{name: "maze 1", named_level: true}]},]
           }
         ]
       }
@@ -749,17 +749,17 @@ level 'Level 3'
   test 'serialize assessment' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script
+    stage = create :lesson, name: 'stage 1', script: script
     script_level = create(
       :script_level,
       levels: [level],
       assessment: true,
-      stage: stage,
+      lesson: stage,
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      stage 'stage 1'
+      lesson 'stage 1'
       level 'maze 1', assessment: true
     SCRIPT
     assert_equal expected, script_text
@@ -767,15 +767,15 @@ level 'Level 3'
 
   test 'Script DSL with assessment: true' do
     input_dsl = <<~DSL
-      stage 'stage 1'
+      lesson 'stage 1'
       level 'maze 1', assessment: true
     DSL
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "stage 1",
-            scriptlevels: [{stage: "stage 1", levels: [{name: "maze 1", assessment: true}]},]
+            lesson: "stage 1",
+            scriptlevels: [{lesson: "stage 1", levels: [{name: "maze 1", assessment: true}]},]
           }
         ]
       }
@@ -787,7 +787,7 @@ level 'Level 3'
 
   test 'script DSL with single quotes' do
     input_dsl = <<~DSL
-      stage 'Bob\\'s stage'
+      lesson 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
     DSL
@@ -796,12 +796,12 @@ level 'Level 3'
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
-        stages: [
+        lessons: [
           {
-            stage: "Bob's stage",
+            lesson: "Bob's stage",
             scriptlevels: [
-              {stage: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
-              {stage: "Bob's stage", levels: [{name: 'Level 2'}]},
+              {lesson: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
+              {lesson: "Bob's stage", levels: [{name: 'Level 2'}]},
             ]
           }
         ],
