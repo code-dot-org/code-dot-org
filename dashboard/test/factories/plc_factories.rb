@@ -33,7 +33,7 @@ FactoryGirl.define do
     plc_learning_modules []
     after(:create) do |plc_task|
       plc_task.plc_learning_modules.each do |learning_module|
-        plc_task.script_level = create(:script_level, stage: learning_module.stage, script: learning_module.plc_course_unit.script, levels: [create(:level)])
+        plc_task.script_level = create(:script_level, lesson: learning_module.stage, script: learning_module.plc_course_unit.script, levels: [create(:level)])
       end
     end
   end
