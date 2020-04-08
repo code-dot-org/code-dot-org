@@ -149,6 +149,41 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'My School', student.school
   end
 
+  test "parent_email: student can add a parent email without opt in" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_parent_email, params: {
+      user: {
+        parent_email: 'parent@example.com',
+        parent_email_preference_opt_in: ''
+      }
+    }
+    student.reload
+    assert_response :no_content
+    assert_equal 'parent@example.com', student.parent_email
+  end
+
+  test "parent_email: student can add a parent email with opt in" do
+    student = create(:student)
+    sign_in student
+
+    patch :set_parent_email, params: {
+      user: {
+        parent_email: 'parent@example.com',
+        parent_email_preference_opt_in: 'yes'
+      }
+    }
+    student.reload
+    assert_response :no_content
+    assert_equal 'parent@example.com', student.parent_email
+
+    email_preference = EmailPreference.last
+    assert_equal "parent@example.com", email_preference[:email]
+    assert email_preference[:opt_in]
+    assert_equal EmailPreference::PARENT_EMAIL_CHANGE, email_preference[:source]
+  end
+
   test "teachers go to specified return to url after signing up" do
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
 
