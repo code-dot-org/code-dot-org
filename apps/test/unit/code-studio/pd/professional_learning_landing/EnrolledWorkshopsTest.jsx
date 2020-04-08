@@ -9,13 +9,11 @@ import {serializedWorkshopFactory} from '../../../../factories/professionalLearn
 describe('EnrolledWorkshops', () => {
   const workshops = [
     serializedWorkshopFactory.build({
-      state: 'Not Started',
-      attended: false,
-      pre_survey_url: 'code.org/pre_survey'
+      pre_workshop_survey_url: 'code.org/pre_survey_url'
     }),
-    serializedWorkshopFactory.build({state: 'In Progress', attended: false}),
+    serializedWorkshopFactory.build({state: 'In Progress'}),
     serializedWorkshopFactory.build({state: 'Ended', attended: true}),
-    serializedWorkshopFactory.build({state: 'Ended', attended: false})
+    serializedWorkshopFactory.build({state: 'Ended'})
   ];
 
   beforeEach(() => {
@@ -102,18 +100,4 @@ describe('EnrolledWorkshops', () => {
 
     assert(utils.windowOpen.calledOnce);
   });
-
-  /*  it('Pre-survey link button not shown in ended workshops', function() {
-    const endedWorkshopButtons = enrolledWorkshopsTable
-      .find('tbody tr')
-      .at(0)
-      .find('Button');
-    console.log(endedWorkshopButtons.text());
-
-    expect(
-      endedWorkshopButtons
-        .map(button => button.text())
-        .includes('Print certificate')
-    ).to.be.true;
-  });*/
 });
