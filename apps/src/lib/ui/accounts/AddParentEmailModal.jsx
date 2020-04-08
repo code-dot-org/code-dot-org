@@ -33,10 +33,12 @@ export default class AddParentEmailModal extends React.Component {
       saveState: STATE_INITIAL,
       values: {
         parentEmail: displayedParentEmail,
+        confirmedParentEmail: '',
         parentEmailOptIn: ''
       },
       errors: {
         parentEmail: '',
+        confirmedParentEmail: '',
         parentEmailOptIn: ''
       }
     };
@@ -85,6 +87,8 @@ export default class AddParentEmailModal extends React.Component {
     const {errors} = this.state;
     return {
       parentEmail: errors.parentEmail || this.getNewEmailValidationError(),
+      confirmedParentEmail:
+        errors.confirmedParentEmail || this.getConfirmedEmailValidationError(),
       parentEmailOptIn:
         errors.parentEmailOptIn || this.getEmailOptInValidationError()
     };
@@ -104,11 +108,19 @@ export default class AddParentEmailModal extends React.Component {
     return null;
   };
 
-  getEmailOptInValidationError = () => {
-    const {parentEmailOptIn} = this.state.values;
-    if (parentEmailOptIn.length === 0) {
-      return i18n.addParentEmailModal_emailOptIn_isRequired();
+  getConfirmedEmailValidationError = () => {
+    const {parentEmail, confirmedParentEmail} = this.state.values;
+    if (parentEmail !== confirmedParentEmail) {
+      return i18n.addParentEmailModal_confirmedParentEmail_mustMatch();
     }
+    return null;
+  };
+
+  getEmailOptInValidationError = () => {
+    //const {parentEmailOptIn} = this.state.values;
+    /*if (parentEmailOptIn.length === 0) {
+      return i18n.addParentEmailModal_emailOptIn_isRequired();
+    }*/
     return null;
   };
 
@@ -116,6 +128,13 @@ export default class AddParentEmailModal extends React.Component {
     const {values, errors} = this.state;
     values['parentEmail'] = event.target.value;
     errors['parentEmail'] = '';
+    this.setState({values, errors});
+  };
+
+  onConfirmedParentEmailChange = event => {
+    const {values, errors} = this.state;
+    values['confirmedParentEmail'] = event.target.value;
+    errors['confirmedParentEmail'] = '';
     this.setState({values, errors});
   };
 
@@ -139,7 +158,11 @@ export default class AddParentEmailModal extends React.Component {
         uncloseable={STATE_SAVING === saveState}
       >
         <div style={styles.container}>
-          <Header text={i18n.addParentEmailModal_title()} />
+          <div>
+            <Header text={i18n.addParentEmailModal_title()} hideBorder={true} />
+            {i18n.addParentEmailModal_subtitle()}
+            <hr />
+          </div>
           <Field
             label={i18n.addParentEmailModal_parentEmail_label()}
             error={validationErrors.parentEmail}
@@ -158,6 +181,27 @@ export default class AddParentEmailModal extends React.Component {
               ref={el => (this.parentEmailInput = el)}
             />
           </Field>
+          <Field
+            label={i18n.addParentEmailModal_confirmedParentEmail_label()}
+            error={validationErrors.confirmedParentEmail}
+          >
+            <input
+              type="email"
+              value={values.confirmedParentEmail}
+              disabled={saving}
+              tabIndex="1"
+              onKeyDown={this.onKeyDown}
+              onChange={this.onConfirmedParentEmailChange}
+              autoComplete="off"
+              maxLength="255"
+              size="255"
+              style={styles.input}
+              ref={el => (this.confirmedParentEmailInput = el)}
+            />
+          </Field>
+          <b>{i18n.addParentEmailModal_emailOptIn_label()}</b>
+          <br /> {i18n.addParentEmailModal_emailOptIn_sublabel()}
+          <hr />
           <Field error={validationErrors.parentEmailOptIn}>
             <div style={styles.parentEmailOptIn}>
               <label style={styles.label}>

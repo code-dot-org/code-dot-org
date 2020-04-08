@@ -20,7 +20,8 @@ describe('AddParentEmailModal', () => {
   };
 
   // Helpers for selecting particular elements/components
-  const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
+  const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR).first();
+  const emailConfirmationInput = wrapper => wrapper.find(EMAIL_SELECTOR).last();
   const parentEmailOptInSelect = wrapper =>
     wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'yes');
   const parentEmailOptOutSelect = wrapper =>
@@ -44,6 +45,7 @@ describe('AddParentEmailModal', () => {
     it('disables everything and shows save text when saving', () => {
       wrapper.setState({saveState: 'saving'});
       expect(emailInput(wrapper)).to.have.attr('disabled');
+      expect(emailConfirmationInput(wrapper)).to.have.attr('disabled');
       expect(parentEmailOptInSelect(wrapper)).to.have.attr('disabled');
       expect(parentEmailOptOutSelect(wrapper)).to.have.attr('disabled');
       expect(submitButton(wrapper)).to.have.attr('disabled');
@@ -71,6 +73,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
+            confirmedParentEmail: '',
             parentEmailOptIn: 'yes'
           }
         });
@@ -84,6 +87,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'invalidEmail@nowhere',
+            confirmedParentEmail: '',
             parentEmailOptIn: 'yes'
           }
         });
@@ -98,6 +102,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'old@example.com',
+            confirmedParentEmail: 'old@example.com',
             parentEmailOptIn: 'yes'
           }
         });
@@ -107,11 +112,26 @@ describe('AddParentEmailModal', () => {
         );
       });
 
+      it('checks that confirmation email equals email', () => {
+        wrapper.setState({
+          values: {
+            parentEmail: 'email@example.com',
+            confirmedParentEmail: 'different@example.com',
+            parentEmailOptIn: 'yes'
+          }
+        });
+
+        expect(wrapper.text()).to.include(
+          i18n.addParentEmailModal_confirmedParentEmail_mustMatch()
+        );
+      });
+
       it('reports email server errors', () => {
         const serverError = 'test-server-error';
         wrapper.setState({
           values: {
             parentEmail: 'new@example.com',
+            confirmedParentEmail: 'new@example.com',
             parentEmailOptIn: 'yes'
           },
           errors: {
@@ -127,6 +147,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'new@example.com',
+            confirmedParentEmail: 'new@example.com',
             parentEmailOptIn: 'yes'
           },
           errors: {
@@ -141,6 +162,7 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
+            confirmedParentEmail: '',
             parentEmailOptIn: ''
           }
         });
@@ -152,7 +174,8 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: 'me@example.com',
-            parentEmailOptIn: 'yes'
+            confirmedParentEmail: 'me@example.com',
+            parentEmailOptIn: ''
           }
         });
 
@@ -173,6 +196,10 @@ describe('AddParentEmailModal', () => {
         emailInput(wrapper).simulate('change', {
           target: {value: 'me@example.com'}
         });
+        emailConfirmationInput(wrapper).simulate('change', {
+          target: {value: 'me@example.com'}
+        });
+
         expect(wrapper.state().errors.parentEmail).to.equal('');
       });
 
@@ -201,6 +228,7 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
           parentEmail: '',
+          confirmedParentEmail: '',
           parentEmailOptIn: ''
         });
         wrapper.instance().onSubmitFailure({
