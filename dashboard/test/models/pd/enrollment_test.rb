@@ -89,7 +89,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
   end
 
-  test 'pre_survey_url' do
+  test 'pre_workshop_survey_url' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
 
@@ -102,8 +102,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csf_intro_workshop = build :csf_intro_workshop
     csf_intro_workshop_enrollment = build :pd_enrollment, workshop: csf_intro_workshop
 
-    studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
-    assert_equal studio_url["/pd/workshop_survey/day/0?enrollmentCode=#{csp_summer_workshop_enrollment.code}"], csp_summer_workshop_enrollment.pre_survey_url
+    assert_equal "/pd/workshop_survey/day/0?enrollmentCode=#{csp_summer_workshop_enrollment.code}",
+      URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).path + '?' + URI(csp_summer_workshop_enrollment.pre_workshop_survey_url).query
+    assert_equal "/pd/pre_workshop_survey/#{csp_academic_year_workshop_enrollment.code}",
+      URI(csp_academic_year_workshop_enrollment.pre_workshop_survey_url).path
+    assert_equal 'https://studio.code.org/pd/workshop_survey/csf/pre201', csf_201_workshop_enrollment.pre_workshop_survey_url
+    assert_nil csf_intro_workshop_enrollment.pre_workshop_survey_url
   end
 
   test 'exit_survey_url' do
