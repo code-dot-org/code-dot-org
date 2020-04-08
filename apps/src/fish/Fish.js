@@ -87,7 +87,7 @@ Fish.prototype.init = function(config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <FishView onMount={onMount} mobilePortraitWidth={MOBILE_PORTRAIT_WIDTH} />
+      <FishView onMount={onMount} />
     </Provider>,
     document.getElementById(config.containerId)
   );
