@@ -192,13 +192,16 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(email)
   end
 
-  def pre_survey_url
+  # Pre-workshop survey URL (if any)
+  def pre_workshop_survey_url
+    # 5-day summer workshop
     if workshop.local_summer?
       url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0, enrollmentCode: code)
-    elsif workshop.pre_survey?
-      pd_new_pre_workshop_survey_url(enrollment_code: code)
     elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       'https://studio.code.org/pd/workshop_survey/csf/pre201'
+    # academic year workshops for CSP and CSD
+    elsif workshop.pre_survey?
+      pd_new_pre_workshop_survey_url(enrollment_code: code)
     end
   end
 
