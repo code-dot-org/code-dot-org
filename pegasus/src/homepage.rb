@@ -189,8 +189,8 @@ class Homepage
         {
           id: "at-home-en",
           type: "block",
-          title: "homepage_slot_text_title_at-home",
-          text: "homepage_slot_text_blurb_at-home",
+          title: "homepage_slot_text_title_at_home",
+          text: "homepage_slot_text_blurb_at_home",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
           url: "/athome",
@@ -294,8 +294,8 @@ class Homepage
         {
           id: "at-home-nonen",
           type: "blockshort",
-          title: "homepage_slot_text_title_at-home",
-          text: "homepage_slot_text_blurb_at-home",
+          title: "homepage_slot_text_title_at_home",
+          text: "homepage_slot_text_blurb_at_home",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
           url: "/athome",
