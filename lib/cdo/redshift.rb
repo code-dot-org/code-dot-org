@@ -1,4 +1,3 @@
-require 'pg'
 require 'singleton'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
@@ -28,6 +27,8 @@ class RedshiftClient
   ).freeze
 
   def initialize
+    require 'pg'
+
     port = 5439
     options = ''
     tty = ''
