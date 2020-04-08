@@ -517,6 +517,29 @@ class Blockly < Level
       )
       mutation.set_attribute('name', localized_name) if localized_name
     end
+    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="VAR"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="NAME"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
+
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
