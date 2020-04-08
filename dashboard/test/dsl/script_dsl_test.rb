@@ -617,8 +617,8 @@ level 'Level 3'
           {
             stage: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1", stage_lesson_group: "Lesson Group 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2", stage_lesson_group: "Lesson Group 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 1", lesson_group: "Lesson Group 1"}]},
+              {stage: "Stage1", levels: [{name: "Level 2", lesson_group: "Lesson Group 1"}]},
             ]
           }
         ]
