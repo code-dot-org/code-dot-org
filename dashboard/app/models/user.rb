@@ -459,7 +459,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
   # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_email.present?}
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_email.present? && user_type == 'student'}
   validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :update_parent_email_preference_opt_in?
   validates_presence_of :parent_email_preference_email, if: :update_parent_email_preference_opt_in?
   validates_presence_of :parent_email_preference_request_ip, if: :update_parent_email_preference_opt_in?
