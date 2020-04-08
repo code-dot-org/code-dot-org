@@ -185,6 +185,32 @@ class Homepage
   def self.get_blocks(request)
     if request.language == "en"
       [
+
+        {
+          id: "at-home-en",
+          type: "block",
+          title: "homepage_slot_text_title_at-home",
+          text: "homepage_slot_text_blurb_at-home",
+          color1: "0, 173, 188",
+          color2: "89, 202, 211",
+          url: "/athome",
+          image: "/images/mc/2016_homepage_hocblock.jpg",
+          links:
+            [
+              {
+                text: "homepage_slot_text_link_code_break",
+                url: "/break"
+              },
+              {
+                text: "homepage_slot_text_link_do_hoc",
+                url: "/hourofcode/overview"
+              },
+              {
+                text: "homepage_slot_text_link_express_course",
+                url: "/educate/curriculum/express-course"
+              }
+            ]
+        },
         {
           id: "students-en",
           type: "block",
@@ -238,32 +264,6 @@ class Homepage
         },
 
         {
-          id: "hoc-en",
-          type: "block",
-          title: "homepage_slot_text_title_hoc",
-          text: "homepage_slot_text_blurb_hoc",
-          color1: "0, 173, 188",
-          color2: "89, 202, 211",
-          url: "/hourofcode/overview",
-          image: "/images/mc/2016_homepage_hocblock.jpg",
-          links:
-            [
-              {
-                text: "homepage_slot_text_link_about_hoc",
-                url: "https://hourofcode.com/"
-              },
-              {
-                text: "homepage_slot_text_link_host",
-                url: "https://hourofcode.com/how-to"
-              },
-              {
-                text: "homepage_slot_text_link_hocserved",
-                url: "/leaderboards"
-              }
-            ]
-        },
-
-        {
           id: "advocate-en",
           type: "block",
           title: "homepage_slot_text_link_buy",
@@ -292,6 +292,16 @@ class Homepage
     else
       [
         {
+          id: "at-home-nonen",
+          type: "blockshort",
+          title: "homepage_slot_text_title_at-home",
+          text: "homepage_slot_text_blurb_at-home",
+          color1: "0, 173, 188",
+          color2: "89, 202, 211",
+          url: "/athome",
+          image: "/images/mc/2016_homepage_hocblock.jpg"
+        },
+        {
           id: "students-nonen",
           type: "blockshort",
           title: "homepage_slot_text_title_students",
@@ -310,16 +320,6 @@ class Homepage
           color2: "89, 185, 220",
           url: CDO.studio_url("/courses?view=teacher"),
           image: "/shared/images/courses/logo_tall_teacher2.jpg"
-        },
-        {
-          id: "hoc-nonen",
-          type: "blockshort",
-          title: "homepage_slot_text_title_hoc",
-          text: "homepage_slot_text_blurb_hoc",
-          color1: "0, 173, 188",
-          color2: "89, 202, 211",
-          url: "/hourofcode/overview",
-          image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
           id: 'dance-nonen',
