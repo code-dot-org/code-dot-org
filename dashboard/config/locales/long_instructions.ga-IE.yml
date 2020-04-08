@@ -187,6 +187,15 @@ ga-IE:
         Nár mhaith dá mbeifeá in ann an neachtar go léir a bhailiú le feidhm amháin?
 
         Cuir paraiméadar nua `líon neachtar` le d'fheidhm a rialaíonn an méid neachtair le bailiú. Ba chóir duit ainm nua a chur ar an bhfeidhm freisin!
+      Course 4 Play Lab Params 4: "Seo é feidhm darb ainm \"patrólú\". \n\nCuir in
+        eagar í chun an cat a aistriú suas 400 picteilín ansin síos 400 picteilín."
+      Course 4 Play Lab Params 5: Cuir an fheidhm `patrólú` in eagar agus cuir paraiméadar
+        nua `actor` leis, ionas go mbeimid in ann í a úsáid le haon cheann de na haisteoirí.
+        Cuimhnigh gur tugadh uimhreacha 1, 2 agus 3 do na haisteoirí.
+      Course 4 Play Lab Params 6: Cuir paraiméadar eile `speed` leis an bhfeidhm `patrólú`.
+        Bain úsáid as an mbloc `set speed` leis an bparaiméadar nua `speed` chun cabhrú
+        leis an bpiongain an dá bhratach a fháil sular féidir leis na carachtair eile
+        fiú bratach amháin a fháil.
       CourseD_Dance_Party_01: |-
         _Déanaimis damhsa!_
 
@@ -238,6 +247,37 @@ ga-IE:
         **Úsáid na heochracha agus tabhair ar an Róbat titim-bos-titim-bos a dhéanamh chomh gasta agus is féidir!**
       CourseD_Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn
         le cairde é.
+      CourseE_HOC 2018 Level_1: Teastaíonn soláthairtí uait don turas atá romhat.
+        Bailigh **bád** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        ón **gcófra** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: Tá **máthair shúigh** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        ina folach áit éigin sa Séadchomhartha Mara seo. An bhfuil tú in ann teacht
+        uirthi?
+      CourseE_HOC 2018 Level_11: Tóg balla **priosmuiríneach** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        timpeall na coincréite duibhe. Cuirfidh sé seo an **seoladán** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        i ngníomh agus críochnóidh sé an dúshlán!
+      CourseE_HOC 2018 Level_2: Tá bád i bhfad níos éasca ná snámh san fharraige oscailte!
+        Téigh go dtí deireadh an duga chun dul ar bord.
+      CourseE_HOC 2018 Level_3: Beir greim ar na maidí rámha agus stiúir an bád trasna
+        na dtonnta chun an **trosc** a ghabháil ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Tugaimis an trosc don **deilf** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Úsáid bloc athdhéan chun dul trasna na farraige níos gasta.
+      CourseE_HOC 2018 Level_5: Tá **sliogán nátalais** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        i bhfolach áit éigin! Taiscéal an long bhriste chun an **cófra** a bhaint
+        amach ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Cuma fhuar ar an aimsir amuigh ansin! Gabh **bradán**
+        ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        ar do bhealach go dtí na fothracha faoi uisce.
+      CourseE_HOC 2018 Level_7a: D'aimsigh tú na fothracha faoi uisce. Téigh ar lorg
+        **cófra** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        ina bhfuil **priosmuiríneach** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        sa ghaineamhchloch.
+      CourseE_HOC 2018 Level_8: Cnoic oighir ar dtús, anois laibhe?! Déan do bhealach
+        tríd an oileán bolcánach seo agus aimsigh na **héisc thrópaiceacha** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        sa sceir choiréil.
+      CourseE_HOC 2018 Level_9b: Bhain tú an sceir choiréil amach, anois téigh ar
+        lorg **Croí na Farraige** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Úsáid an coiréal gorm agus dearg chun an **cófra** a bhaint amach ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Crack a Caesar Cipher: |-
         # Bris sifear Chaesair!
 
@@ -483,8 +523,83 @@ ga-IE:
         -   Grúpa damhsóirí eile a chur leis
         -   Na damhsóirí a thaispeáint agus a chur i bhfolach leis na saigheada
         -   Na damhsóirí go léir a chur i bhfolach agus an cúlra a athrú go dtí rud éigin spleodrach
+      Fish Tank 1-validated: "**Réamh-mheas**: Cad a tharlóidh nuair a rithfidh tú
+        an cód seo?"
+      Fish Tank 2-validated: "Déanaimis uisceadán! \n\nDéan iasc de Deanncha (an tom
+        rothlaim)."
+      Fish Tank 2-validated_2019: "Déanaimis uisceadán! \n\nDéan iasc den tom rothlaim
+        trí <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the
+        sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>
+        a chliceáil.\n\nNí mór duit culaith na spride seo a athrú in <xml><block type=\"gamelab_addBehaviorSimple\"
+        block-text=\"the add behavior block\"></block></xml> freisin."
+      Fish Tank 3-validated: "Tá mearbhall ag teacht ar an iasc! \n\nAthraigh iompar
+        an éisc ionas go ndéanfaidh sé snámh timpeall an uisceadáin."
+      Fish Tank 3-validated_2019: "Tá mearbhall ag teacht ar an iasc! \n\nAthraigh
+        iompar an éisc ionas go ndéanfaidh sé snámh anonn is anall."
+      Fish Tank 4-validated: "Teastaíonn uisce ón uisceadán! \n\nÚsáid <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n
+        \     <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n
+        \     </block>\n    </value>\n  </block></xml> chun cúlra gorm a chur leis."
+      Fish Tank 4-validated_2019: "Teastaíonn uisce ón uisceadán! \n\nÚsáid <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background
+        color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
+        \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
+        \ </block></xml> chun cúlra daite a chur leis. Molaimid gorm!"
+      Fish Tank 5-validated_2019: Tá anam eachtrúil san iasc seo, agus ba mhaith leis
+        bualadh le hainmhithe mara eile. Cuir sprid nua san uisceadán. Úsáid culaith
+        ar bith seachas an ceann atá ar d'iascsa!
+      Fish Tank 6-validated: "Cad ba chóir dá chara nua a dhéanamh? \n\nCuir iompar
+        leis agus breathnaigh orthu!"
+      Fish Tank 6-validated_2019: |-
+        Cad ba chóir dá chara nua a dhéanamh?
+
+        Cuir iompar leis agus breathnaigh orthu!
+      Fish Tank 7-validated: "Chuireamar go leor blocanna nua leis an mbosca uirlisí.
+        \ \n\nBain triail astu chun cuma speisialta a chur ar an uisceadán!"
+      Fish Tank 7-validated_2019: "Chuireamar go leor blocanna nua leis an mbosca
+        uirlisí.  \n\nBain triail astu chun cuma speisialta a chur ar an uisceadán!"
+      Fish Tank Predict: "**Réamh-mheas**: Cad a tharlóidh nuair a rithfidh tú an
+        cód seo?"
+      Fish Tank Predict_2019: "**Réamh-mheas**: Cad a tharlóidh nuair a rithfidh tú
+        an cód seo?"
+      Function intro Ryan: "Gheobhaidh tú **feidhm** darb ainm `tóg droichead` i do
+        spás oibre. Tá an cód a theastaíonn uait chun dul trasna na habhann inti cheana!
+        \n\nCuir dhá bhloc beag uaine <xml> <block type=\"procedures_callnoreturn\"
+        id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> i do spás oibre
+        chun an cosán a dheisiú agus cabhrú le {currentPlayerName} an Tóirse Deargchloiche
+        [redstone_torch] a bhaint amach."
+      HOC 2018 Level_1: Teastaíonn soláthairtí uait don turas atá romhat. Bailigh
+        **bád** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        ón **gcófra** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Tá **máthair shúigh** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        ina folach áit éigin sa Séadchomhartha Mara seo. An bhfuil tú in ann teacht
+        uirthi?
+      HOC 2018 Level_11: Tóg balla **priosmuiríneach** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        timpeall na coincréite duibhe. Cuirfidh sé seo an **seoladán** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        i ngníomh agus críochnóidh sé an dúshlán!
       HOC 2018 Level_12: Comhghairdeas! Tá domhan mór uisciúil ag fanacht leat. Tóg
         sceir choiréil! Bolcán! Long bhriste! Is leatsa an rogha.
+      HOC 2018 Level_2: Tá bád i bhfad níos éasca ná snámh san fharraige oscailte!
+        Téigh go dtí deireadh an duga chun dul ar bord.
+      HOC 2018 Level_3: Beir greim ar na maidí rámha agus stiúir an bád trasna na
+        dtonnta chun an **trosc** a ghabháil ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Tugaimis an trosc don **deilf** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Úsáid bloc athdhéan chun dul trasna na farraige níos gasta.
+      HOC 2018 Level_5: Tá **sliogán nátalais** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        i bhfolach áit éigin! Taiscéal an long bhriste chun an **cófra** a bhaint
+        amach ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Cuma fhuar ar an aimsir amuigh ansin! Gabh **bradán** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        ar do bhealach go dtí na fothracha faoi uisce.
+      HOC 2018 Level_7a: D'aimsigh tú na fothracha faoi uisce. Téigh ar lorg **cófra**
+        ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        ina bhfuil **priosmuiríneach** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        sa ghaineamhchloch.
+      HOC 2018 Level_8: Cnoic oighir ar dtús, anois laibhe?! Déan do bhealach tríd
+        an oileán bolcánach seo agus aimsigh na **héisc thrópaiceacha** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        sa sceir choiréil.
+      HOC 2018 Level_9b: Bhain tú an sceir choiréil amach, anois téigh ar lorg **Croí
+        na Farraige** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Úsáid an coiréal gorm agus dearg chun an **cófra** a bhaint amach ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       K-1 Bee Loops 2: Úsáid bloc `athdhéan` le dul agus an neachtar a bhailiú, ansin
         déan mil!
       K-1 Bee Loops 3: Úsáid trí bhloc `athdhéan` chun an neachtar a bhailiú agus
@@ -501,8 +616,87 @@ ga-IE:
         \   <title name=\"SCORE\">1</title>\n  </block></xml> chun pointe amháin a
         bhronnadh ort féin nuair a shroicheann tú ceann acu. \n\n Faigh cúig phointe
         chun an cluiche a bhuachan!"
+      MC_HOC_2017_01_RETRY: |-
+        Tá an doras faoi ghlas, ach tá an Gníomhaire faoi do réir!
+
+        Ceangail bloc `téigh ar aghaidh` faoin bhloc `nuair a ritear é` sa spás oibre chun an Gníomhaire a threorú go dtí an brúphláta [PressurePlate_Up]. Ansin, cliceáil "Rith" agus úsáid na saigheada chun dul amach as an teach agus an **cófra** [chest] a fháil.
+      MC_HOC_2017_01_RETRY_2019: |-
+        Tá an doras faoi ghlas, ach tá an Gníomhaire faoi do réir!
+
+        Ceangail bloc `téigh ar aghaidh` faoin bhloc `nuair a ritear é` sa spás oibre chun an Gníomhaire a threorú go dtí an brúphláta [PressurePlate_Up]. Ansin, cliceáil "Rith" agus úsáid na saigheada chun dul amach as an teach agus an **cófra** [chest] a fháil.
+      MC_HOC_2017_02_Cole: "Tá {currentPlayerName} ag dul ag eachtraíocht! Chun cabhrú
+        leis, faigh an **léarscáil** [map_empty] taobh thiar den doras faoi ghlas
+        ar thaobh na láimhe deise. \n\nCuir blocanna sa spás oibre chun cabhrú leis
+        an nGníomhaire an brúphláta [PressurePlate_Up] a bhaint amach, sa chaoi go
+        mbeidh {currentPlayerName} in ann dul tríd. "
+      MC_HOC_2017_02_Cole_2019: "Tá {currentPlayerName} ag dul ag eachtraíocht! Chun
+        cabhrú leis, faigh an **léarscáil** [map_empty] taobh thiar den doras faoi
+        ghlas ar thaobh na láimhe deise. \n\nCuir blocanna sa spás oibre chun cabhrú
+        leis an nGníomhaire an brúphláta [PressurePlate_Up] a bhaint amach, sa chaoi
+        go mbeidh {currentPlayerName} in ann dul tríd. "
+      MC_HOC_2017_03_Cole: "Tá {currentPlayerName} fós ag eachtraíocht agus anois
+        teastaíonn an **compás** [compass] uaidh. \n\nCódáil an Gníomhaire chun an
+        geata a oscailt. "
+      MC_HOC_2017_03_Cole_2019: "Tá {currentPlayerName} fós ag eachtraíocht agus anois
+        teastaíonn an **compás** [compass] uaidh. \n\nCódáil an Gníomhaire chun an
+        geata a oscailt. "
+      MC_HOC_2017_04POINT5_RYAN: "Bhain tú an taobh eile amach! \n\nAnois, cabhraigh
+        le {currentPlayerName} a bhealach a dhéanamh tríd an gcathair ghríobháin chun
+        an **tua** [diamond_axe] a fháil."
+      MC_HOC_2017_04POINT5_RYAN_2019: "Bhain tú an taobh eile amach! \n\nAnois, cabhraigh
+        le {currentPlayerName} a bhealach a dhéanamh tríd an gcathair ghríobháin chun
+        an **tua** [diamond_axe] a fháil."
+      MC_HOC_2017_04_Cole: "Tá an Gníomhaire in ann dul trasna an uisce! \n\nÚsáid
+        lúb `athdhéan` chun an dúshlán seo a réiteach. Cabhraigh le {currentPlayerName}
+        an **buicéad** [bucket_empty] taobh thiar den doras a bhaint amach. "
+      MC_HOC_2017_04_Cole_2019: "Tá an Gníomhaire in ann dul trasna an uisce! \n\nÚsáid
+        lúb `athdhéan` chun an dúshlán seo a réiteach. Cabhraigh le {currentPlayerName}
+        an **buicéad** [bucket_empty] taobh thiar den doras a bhaint amach. "
+      MC_HOC_2017_05_Cole: "A thiarcais, níl aon droichead ann! \n\nCódáil an Gníomhaire
+        chun an droichead a atógáil leis an mbloc <xml>  <block type=\"craft_placeBlock\">\n
+        \   <title name=\"TYPE\">       </title>\n  </block></xml> sa chaoi go mbeidh
+        {currentPlayerName} in ann an **tsluasaid** [diamond_shovel] a fháil."
+      MC_HOC_2017_05_Cole_2019: "A thiarcais, níl aon droichead ann! \n\nCódáil an
+        Gníomhaire chun an droichead a atógáil leis an mbloc <xml>  <block type=\"craft_placeBlock\"
+        block-text=\"place\">\n    <title name=\"TYPE\">       </title>\n  </block></xml>
+        sa chaoi go mbeidh {currentPlayerName} in ann an **tsluasaid** [diamond_shovel]
+        a fháil."
+      MC_HOC_2017_06_Cole: "Abhainn eile, ach tá an ceann seo i bhfad níos leithne!
+        \n\nCeartaigh an cód chun cabhrú leis an nGníomhaire droichead a thógáil sa
+        chaoi go mbeidh {currentPlayerName} in ann an **phiocóid** [diamond_pickaxe]
+        a fháil. "
+      MC_HOC_2017_06_Cole_2019: "Abhainn eile, ach tá an ceann seo i bhfad níos leithne!
+        \n\nCeartaigh an cód chun cabhrú leis an nGníomhaire droichead a thógáil sa
+        chaoi go mbeidh {currentPlayerName} in ann an **phiocóid** [diamond_pickaxe]
+        a fháil. "
+      MC_HOC_2017_07_Cole: "Tá oighear i do bhealach! \n\nIs féidir leat an fheidhm
+        `glan cosán` a úsáid chun an t-oighear a scriosadh agus cabhrú le {currentPlayerName}
+        an Chairt Mianaigh [minecart_normal] a bhaint amach! "
+      MC_HOC_2017_07_Cole_2019: "Tá oighear i do bhealach! \n\nIs féidir leat an fheidhm
+        `glan cosán` a úsáid chun an t-oighear a scriosadh agus cabhrú le {currentPlayerName}
+        an Chairt Mianaigh [minecart_normal] a bhaint amach! "
+      MC_HOC_2017_10_RETRY: "An bhfeiceann tú an difríocht idir an dá fheidhm i do
+        spás oibre? \n\nÚsáid na feidhmeanna seo in éineacht le blocanna eile ón bhosca
+        uirlisí chun cosán a ghlanadh don Chairt Mianaigh, ansin bailigh an **Bhreochloch
+        is Cruach** [flint_and_steel]. \n "
+      MC_HOC_2017_10_RETRY_2019: "An bhfeiceann tú an difríocht idir an dá fheidhm
+        i do spás oibre? \n\nÚsáid na feidhmeanna seo in éineacht le blocanna eile
+        ón bhosca uirlisí chun cosán a ghlanadh don Chairt Mianaigh, ansin bailigh
+        an **Bhreochloch is Cruach** [flint_and_steel]. \n "
+      MC_HOC_2017_Ali: 'Féach ar na feidhmeanna thíos. Conas is féidir leat iad a
+        úsáid chun na hUafairigh a sheachaint agus cabhrú le {currentPlayerName} an
+        **Leabhar Faoi Dhraíocht** [book_enchanted] a bhaint amach? '
+      MC_HOC_2017_Ali_2019: 'Féach ar na feidhmeanna thíos. Conas is féidir leat iad
+        a úsáid chun na hUafairigh a sheachaint agus cabhrú le {currentPlayerName}
+        an **Leabhar Faoi Dhraíocht** [book_enchanted] a bhaint amach? '
+      MC_HOC_2017_FP20x20: "**Saorimirt:** Anois is leatsa an rogha! Úsáid cód an
+        Ghníomhaire chun dul ag eachtraíocht sa domhan seo."
+      MC_HOC_2017_FP20x20_2019: "**Saorimirt:** Anois is leatsa an rogha! Úsáid cód
+        an Ghníomhaire chun dul ag eachtraíocht sa domhan seo."
       NEW Course 4 Artist Params 2: Cruthaigh feidhm `tarraing triantán` as an nua
         a dhéanann triantán le gach taobh 50 picteilín ar fad.
+      New Minecraft Hero Project: "**Saorimirt:** Anois is leatsa an rogha! Úsáid
+        cód an Ghníomhaire chun dul ag eachtraíocht sa domhan seo."
       Overworld Move to Sheep: Cuir ordú "téigh ar aghaidh" eile leis an gcód chun
         an chaora a shroicheadh.
       Overworld Move to Sheep_2019: Cuir ordú "téigh ar aghaidh" eile leis an gcód
@@ -807,6 +1001,7 @@ ga-IE:
         agus cliceáil "Rith" lena chur ar siúl!
       courseD_maze_ramp1_2019: Sa dúshlán seo, ceangail na blocanna go léir le chéile
         agus cliceáil "Rith" lena chur ar siúl!
+      courseD_maze_ramp4_2019: '_"Lean an cosán agus treoraigh go dtí an dearcán mé."_ '
       courseD_maze_ramp5a_2019: Áirigh na spásanna ar an ngreille go cúramach!
       courseD_maze_ramp5c: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018: Cabhraigh leis an éan an mhuc a bhaint amach.

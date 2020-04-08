@@ -3754,32 +3754,15 @@ de-DE:
           </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
 
         Bring Jorge zur Fahne um dieses Level zu beenden!
-      courseA_playLab_events3_2019: |-
-        Hilf Jorge, dem Hund, sich zu bewegen indem du den <xml><block type="studio_move" block-text="move dog west">
-            <title name="SPRITE">1</title>
-            <title name="DIR">8</title>
-          </block></xml> Block mit dem <xml><block type="studio_whenArrow" block-text="when left arrow">
-            <title name="VALUE">left</title>
-          </block></xml> Ereignis-Block, der schon im Arbeitsbereich ist, verbindest.
-
-        Bring Jorge zur Fahne um dieses Level zu beenden!
       courseA_playLab_events4: Füge jetzt mehr Blöcke hinzu, um Jorge nach rechts
         zu bewegen wenn die Pfeiltaste nach 'rechts' gedrückt wird.
       courseA_playLab_events4_2018: Füge nun einen weiteren Ereignisbaustein hinzu,
-        damit sich Jorge nach rechts bewegt, wenn die rechte Pfeiltaste angeklickt
-        wird.
-      courseA_playLab_events4_2019: Füge nun einen weiteren Ereignisbaustein hinzu,
         damit sich Jorge nach rechts bewegt, wenn die rechte Pfeiltaste angeklickt
         wird.
       courseA_playLab_events5: Füge Ereignisse hinzu um Jorge nach oben und unten
         zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
       courseA_playLab_events5_2018: Füge Ereignisse hinzu um Jorge nach oben und unten
         zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
-      courseA_playLab_events5_2019: Füge Ereignisse hinzu um Jorge nach oben und unten
-        zu bewegen, wenn die 'oben' und 'unten' Pfeiltasten gedrückt werden.
-      courseA_playLab_events6_2019: Mach das Ganze noch interessanter indem du den
-        Hintergrund änderst oder einen zufälligen Ton abspielst, wenn auf Jorge geklickt
-        wird.
       courseA_playLab_events7_2018: _Freispiel:_ Füge diesem Spiel alles hinzu, was
         du willst. Kannst du den Dinosaurier verschwinden lassen, wenn Jorge ihn trifft?
       courseA_playLab_events7_2019: _Freispiel:_ Füge diesem Spiel alles hinzu, was

@@ -22,7 +22,6 @@ class Ability
       # PLC Stuff
       Plc::Course,
       Plc::LearningModule,
-      Plc::Task,
       Plc::UserCourseEnrollment,
       Plc::CourseUnit,
       # PD models

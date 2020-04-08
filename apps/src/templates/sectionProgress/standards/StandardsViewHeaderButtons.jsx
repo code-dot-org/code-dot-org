@@ -182,9 +182,10 @@ class StandardsViewHeaderButtons extends Component {
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}
-          size={'narrow'}
+          size="narrow"
           style={styles.button}
           className="uitest-standards-generate-report"
+          icon="file-text"
         />
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}

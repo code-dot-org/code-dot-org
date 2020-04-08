@@ -238,6 +238,7 @@ is:
       %{name}
   parent_mailer:
     student_associated_subject: 'Innskráningarupplýsingar fyrir Code.org'
+    parent_email_added_subject: 'Velkomin á Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkomin á Code.org!'
     delete_teacher_subject: 'Tilkynning frá Code.org: Aðgangi þínum hefur verið eytt'
@@ -452,6 +453,7 @@ is:
     update: "Uppfæra aðgang"
     account_successfully_updated: "Uppfærsla aðgangs tókst."
     update_email: "Uppfæra"
+    encrypted: "dulkóðað"
   user_level:
     completed: 'Lokið'
     tried: 'Reynt'

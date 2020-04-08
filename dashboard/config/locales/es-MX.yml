@@ -288,6 +288,7 @@ es-MX:
 '
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
+    parent_email_added_subject: "¡Bienvenido a Code.org!"
   teacher_mailer:
     new_teacher_subject: "¡Bienvenido a Code.org!"
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
@@ -544,7 +545,11 @@ es-MX:
       o tutor (para recuperar la contraseña)
     update: Actualizar la cuenta
     account_successfully_updated: La cuenta se actualizó correctamente.
+    auth_option_saved: Has vinculado correctamente tu cuenta %{provider} con el correo
+      electrónico %{email}.
+    auth_option_saved_no_email: Has vinculado correctamente tu cuenta %{provider}.
     update_email: Actualizar
+    encrypted: encriptado
   user_level:
     completed: Completado
     tried: Intentado
@@ -598,6 +603,8 @@ es-MX:
     no_primary_course: Prueba un curso de Code Studio
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
+  certificate_sponsor_message: "%{sponsor_name} tuve el generoso gesto de patrocinar
+    tu aprendizaje."
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa
       un código de sección diferente.
@@ -1152,6 +1159,7 @@ es-MX:
     csf_warmup: Actividad previa
     csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
     csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
+    csd1_3: Lecciones alternativas
     csd2_1: 'Capítulo 1: Contenido web y HTML'
     csd2_2: 'Capítulo 2: Estilos y CCS'
     csd3_1: 'Capítulo 1: Imágenes y animaciones'
@@ -1194,7 +1202,9 @@ es-MX:
     csp_unit2_2020: 'Unidad 2: Internet'
     csp_unit3_2020: 'Unidad 3: Introducción al diseño de aplicaciones'
     csp_unit6_2020: 'Unidad 6: Algoritmos'
+    csp_unit8_2020: 'Unidad 8: Preparación de PT de creación'
     csp_unit9_2020: 'Unidad 9: Datos'
+    csp_unit10_2020: 'Unidad 10: Ciberseguridad e impactos globales'
     dlp: Preguntas para reflexionar
     time4cs_c1: 'Colección 1: Everglades y sus ecosistemas'
     time4cs_c2: 'Colección 2: Cadenas de comida (en Everglades)'
@@ -1208,6 +1218,9 @@ es-MX:
     k5_next_steps: Próximos pasos
     k5_basic_concepts: Conceptos básicos de programación y prácticas de enseñanza
     k5_diving_deeper: 'Profundizar: cursos E y F'
+    web_lab_projects: Proyectos de Laboratorio Web
+    game_lab_projects: Proyectos de Laboratorio de juegos
+    app_lab_projects: Proyecto de Laboratorio de aplicaciones
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada
@@ -1284,6 +1297,11 @@ es-MX:
     a qué lección deberías estar asignado.
   hidden_script: Tu docente no esperaba que estuvieras aquí. Por favor, pregúntale
     a qué unidad deberías estar asignado.
+  no_course_access_student: No tienes acceso a este curso. Por favor, pregunta a tu
+    profesor a qué curso deberías estar asignado.
+  no_course_access_teacher: No tienes acceso a este curso. Si crees que deberías tener
+    acceso a este curso, escribe a support@code.org para que podamos solucionar la
+    situación.
   no_script_access_student: No tienes acceso a esta unidad. Por favor, pregunta a
     tu docente a qué unidad deberías estar asignado.
   no_script_access_teacher: No tienes acceso a esta unidad. Si crees que debes tenerlo,
@@ -1436,3 +1454,16 @@ es-MX:
     la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio.
   page_not_found_button: Volver a la página de inicio
   copy: Copiar
+  maker:
+    google_oauth:
+      login_with_google: Inicia sesión en la aplicación Maker con Google
+      enter_code: Ingresa el código provisto cuando iniciaste sesión a través de Google
+        en tu navegador predeterminado.
+      copy_code: Copia y pega este código en la aplicación Maker para iniciar sesión
+        en Code.org.
+      error_token_expired: El token ha expirado. Inicia sesión nuevamente para obtener
+        un nuevo token.
+      error_wrong_provider: Proveedor incorrecto. Asegúrate de iniciar sesión con
+        Google.
+      error_invalid_user: ID de usuario inválida. Intenta iniciar sesión de nuevo.
+      error_no_code: Por favor, ingresa tu código de inicio de sesión.

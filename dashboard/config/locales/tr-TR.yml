@@ -273,6 +273,7 @@ tr:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
+    parent_email_added_subject: Code.org'a Hoşgeldiniz!
   teacher_mailer:
     new_teacher_subject: Code.org'a Hoşgeldiniz!
     delete_teacher_subject: Code.org hesabınız silindi
@@ -517,6 +518,7 @@ tr:
     update: Hesabı güncelle
     account_successfully_updated: Hesap başarıyla güncellendi.
     update_email: Güncelle
+    encrypted: sifrelenmis
   user_level:
     completed: Tamamlandı
     tried: Denenmiş

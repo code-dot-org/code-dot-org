@@ -158,7 +158,7 @@ class SectionProgress extends Component {
         effect="solid"
       >
         <span style={styles.studentTooltip}>
-          Last Progress:
+          {i18n.lastProgress()}
           <br />
           {this.tooltipTextForStudent(studentId)}
         </span>

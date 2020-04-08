@@ -24,10 +24,12 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   # GET /teacher_scores/<:section_id>/<:script_id>
   def get_teacher_scores_for_script
     section = Section.find(params[:section_id])
+    page = [params[:page].to_i, 1].max
     if section.user_id == current_user.id
       @teacher_scores = TeacherScore.get_level_scores_for_script_for_section(
         params[:script_id],
-        params[:section_id]
+        params[:section_id],
+        page
       )
       render json: @teacher_scores, each_serializer: Api::V1::TeacherScoreSerializer
     else

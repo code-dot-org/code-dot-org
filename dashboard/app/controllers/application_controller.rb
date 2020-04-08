@@ -131,7 +131,10 @@ class ApplicationController < ActionController::Base
     :email_preference_opt_in,
     :data_transfer_agreement_accepted,
     :data_transfer_agreement_required,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
   ].freeze
 
   def configure_permitted_parameters
