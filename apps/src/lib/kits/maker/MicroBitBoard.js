@@ -1,7 +1,6 @@
 /** @file Board controller for BBC micro:bit */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
@@ -9,6 +8,7 @@ import {
   componentConstructors
 } from './MicroBitComponents';
 import {MicroBitButton} from './Button';
+import MBFirmataWrapper from './MBFirmataWrapper';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -24,7 +24,7 @@ export default class MicroBitBoard extends EventEmitter {
     this.prewiredComponents_ = null;
 
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataClient(SerialPort);
+    this.boardClient_ = new MBFirmataWrapper(SerialPort);
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -81,9 +81,8 @@ export default class MicroBitBoard extends EventEmitter {
     this.boardClient_.digitalWrite(pin, value);
   }
 
-  // TODO
   digitalRead(pin, callback) {
-    callback(pin);
+    this.boardClient_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {

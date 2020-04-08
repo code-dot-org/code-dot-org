@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/coursef-2018/stage/1/puzzle/1": {
+    "title": "My Robotic Friends"
+  },
   "https://studio.code.org/s/coursef-2018/stage/2/puzzle/1": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
@@ -103,6 +106,9 @@
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"algorithms\"!**  \n\n\n\n### **An algorithm is just a list of steps to finish a task**. The fun thing about algorithms is that you get to decide what happens, step by step.  \n\n### When you write an algorithm for a machine, this is called a **program**.  \n\n---\n\n## **Vocab to Know**\n\n* ### **Algorithm** - A list of steps to finish a task\n\n* ### **Program** - An algorithm that has been coded into something that can be run by a machine\n"
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/3/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/4/puzzle/1": {
     "dsls": {
@@ -330,6 +336,9 @@
       "courseC_artist_prog_challenge2_a": "After you draw the first line, turn left before you draw your second line.",
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/6/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/7/puzzle/1": {
     "dsls": {
@@ -610,6 +619,9 @@
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
     }
   },
+  "https://studio.code.org/s/coursef-2018/stage/10/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/coursef-2018/stage/11/puzzle/1": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
@@ -827,6 +839,12 @@
       "function 1": "function 1",
       "function 2": "function 2"
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/13/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+  },
+  "https://studio.code.org/s/coursef-2018/stage/14/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/15/puzzle/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -1103,6 +1121,9 @@
       "courseF_artist_variables_challenge2_c": "Using one variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.",
       "courseF_artist_variables_challenge2_d": "**Solution:**\n\n[Solution][0]"
     }
+  },
+  "https://studio.code.org/s/coursef-2018/stage/18/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.ForLoopFun_2018.title"
   },
   "https://studio.code.org/s/coursef-2018/stage/19/puzzle/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
