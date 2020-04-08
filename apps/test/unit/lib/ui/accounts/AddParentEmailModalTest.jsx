@@ -142,28 +142,11 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.text()).to.include(serverError);
       });
 
-      it('reports parentEmailOptIn server errors', () => {
-        const serverError = 'test-email-opt-in-server-error';
-        wrapper.setState({
-          values: {
-            parentEmail: 'new@example.com',
-            confirmedParentEmail: 'new@example.com',
-            parentEmailOptIn: 'yes'
-          },
-          errors: {
-            parentEmailOptIn: serverError
-          }
-        });
-
-        expect(wrapper.text()).to.include(serverError);
-      });
-
       it('disables the submit button when validation errors are present', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
-            confirmedParentEmail: '',
-            parentEmailOptIn: ''
+            confirmedParentEmail: ''
           }
         });
 
@@ -202,19 +185,6 @@ describe('AddParentEmailModal', () => {
 
         expect(wrapper.state().errors.parentEmail).to.equal('');
       });
-
-      it('on parentEmailOptIn', () => {
-        wrapper.setState({
-          errors: {
-            parentEmailOptIn: 'test-server-error'
-          }
-        });
-        expect(wrapper.state().errors.parentEmailOptIn).to.equal(
-          'test-server-error'
-        );
-        parentEmailOptOutSelect(wrapper).simulate('change');
-        expect(wrapper.state().errors.parentEmailOptIn).to.equal('');
-      });
     });
 
     describe('onSubmitFailure', () => {
@@ -228,19 +198,16 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
           parentEmail: '',
-          confirmedParentEmail: '',
-          parentEmailOptIn: ''
+          confirmedParentEmail: ''
         });
         wrapper.instance().onSubmitFailure({
           serverErrors: {
-            parentEmail: 'test-email-server-error',
-            parentEmailOptIn: 'test-email-opt-in-server-error'
+            parentEmail: 'test-email-server-error'
           }
         });
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
-          parentEmail: 'test-email-server-error',
-          parentEmailOptIn: 'test-email-opt-in-server-error'
+          parentEmail: 'test-email-server-error'
         });
       });
     });
