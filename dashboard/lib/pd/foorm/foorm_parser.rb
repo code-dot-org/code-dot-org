@@ -1,28 +1,34 @@
-# Parses Foorm forms into a useful format for looking up questions by form name, form version
-# and question name
+# Parses Foorm forms into a useful format for looking up questions by type (general or facilitator),
+# form name, form version and question name. General questions are for the workshop overall, facilitator
+# questions are asked on a per-facilitator basis
 # @return
 #   {
-#     <form-name>.<form-version: {
-#       <question_name>: {
-#         title: "sample title",
-#         type: "text/singleSelect/multiSelect/matrix/scale",
-#         # for singleSelect/multiSelect/scale
-#         choices: {
-#           choice_1_name: "choice 1 value",
-#           ...
-#         },
-#         # if has other choice
-#         other_text: "Other choice text",
-#         # for matrix
-#         rows: {
-#           row_1_name: "row 1 value",
-#           ...
-#         },
-#         columns: {
-#           column_1_name: "column 1 value",
-#           ...
+#     general: {
+#       <form-name>.<form-version>: {
+#         <question_name>: {
+#           title: "sample title",
+#           type: "text/singleSelect/multiSelect/matrix/scale",
+#           # for singleSelect/multiSelect/scale
+#           choices: {
+#             choice_1_name: "choice 1 value",
+#             ...
+#           },
+#           # if has other choice
+#           other_text: "Other choice text",
+#           # for matrix
+#           rows: {
+#             row_1_name: "row 1 value",
+#             ...
+#           },
+#           columns: {
+#             column_1_name: "column 1 value",
+#             ...
+#           }
 #         }
 #       }
+#     },
+#     facilitator: {
+#       <form-name>.<form-version>: {...}
 #     }
 #   }
 module Pd::Foorm
@@ -50,7 +56,7 @@ module Pd::Foorm
     end
 
     # parse a form element
-    # @return hash of {question_name->question_data,...}
+    # @return hash of {general: {question_name->question_data,...}, facilitator: {...}}
     # Form element may be a panel which contains questions, therefore resulting hash
     # may contain one or more questions
     def self.parse_element(question_data, is_facilitator_question)

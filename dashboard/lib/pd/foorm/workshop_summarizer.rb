@@ -7,20 +7,28 @@ module Pd::Foorm
 
     # @return
     #   {
-    #     <form_name>.<form_version> =>
-    #     {
-    #       num_respondents: 4,
-    #       <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
-    #       <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
-    #       <question3-name> => ['abc', 'def']
+    #     general: {
+    #       <form_name>.<form_version> =>
+    #       {
+    #         num_respondents: 4,
+    #         <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
+    #         <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
+    #         <question3-name> => ['abc', 'def']
+    #       }
+    #     },
+    #     facilitator: {
+    #       <question4-name> => {facilitator1: {answer1: 5, answer2: 3}, facilitator2: {answer1: 4,...}}
     #     }
     #   }
+    # The answers are split by general questions and per-facilitator questions
     # Where the value for a question name is an array answers for a text question
     # or a summary of answer choices for select/matrix
     # questions. If question is a matrix responses will be nested like so:
     # {<matrix-name> => {<question1-name: {<answer1-name>: 2, <answer2-name>: 3}}}
     # num_respondents within the hash is used only for multi-select.
     # other_answers is used if the select question has a free text other field
+    # If a question was asked on a per facilitator basis,
+    # answers will be an object split per-facilitator as in question4
     def self.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
       workshop_summary = {}
       foorm_submissions.each do |submission|
@@ -89,6 +97,7 @@ module Pd::Foorm
       current_workshop_summary
     end
 
+    # adds answers to a single question to the given summary_at_question
     def self.add_question_to_summary(summary_at_question, answer, answers, question_type)
       # check if this is an 'other' response and look for other
       # text if it exists.
