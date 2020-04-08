@@ -77,7 +77,7 @@ var copyrightStrings;
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 900;
+var MIN_WIDTH = 1200;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
@@ -1825,7 +1825,9 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   var deviceWidth;
   var desiredWidth;
-  var minWidth;
+  var width;
+  var scale;
+
   if (this.share && dom.isMobile()) {
     var mobileNoPaddingShareWidth =
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
@@ -1834,23 +1836,30 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = mobileNoPaddingShareWidth;
+    var minWidth = mobileNoPaddingShareWidth;
+    width = Math.max(minWidth, desiredWidth);
+    scale = deviceWidth / width;
   } else {
-    // assume we are in landscape mode, so width is the longer of the two
-    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-    minWidth = MIN_WIDTH;
-  }
-  var width = Math.max(minWidth, desiredWidth);
-  var scale = deviceWidth / width;
+    // We want the longer edge, the width in landscape, to get MIN_WIDTH.
+    let screenWidth = Math.max(screen.width, screen.height);
 
+    width = MIN_WIDTH;
+    scale = screenWidth / width;
+  }
+
+  // Setting `minimum-scale=scale` means that we are unable to shrink the
+  // entire playspace area down to fit on a portrait iPhone, even though
+  // it's technically not visible because of the RotateContainer on top.
+  // But setting `maximum-scale=scale` was preventing an Android from starting
+  // in the desired zoom level in landscape, so we removed that but left
+  // `minimum-scale=scale`.
   var content = [
     'width=' + width,
     'minimal-ui',
     'initial-scale=' + scale,
-    'maximum-scale=' + scale,
     'minimum-scale=' + scale,
     'target-densityDpi=device-dpi',
-    'user-scalable=no'
+    'viewport-fit=cover'
   ];
   viewport.setAttribute('content', content.join(', '));
 };

@@ -5,6 +5,7 @@ Dashboard::Application.routes.draw do
   get "404", to: "application#render_404", via: :all
 
   # React-router will handle sub-routes on the client.
+  get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
   get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
 
@@ -148,6 +149,7 @@ Dashboard::Application.routes.draw do
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
+    patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
