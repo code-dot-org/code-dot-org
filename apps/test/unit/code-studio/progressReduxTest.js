@@ -1155,7 +1155,7 @@ describe('progressReduxTest', () => {
       ]);
     });
 
-    it('includes bonus levels if includeBonusLevels is true', () => {
+    it('includes bonus levels in groups if includeBonusLevels is true', () => {
       const bonusLevel = {
         ids: [2106],
         title: 1,
