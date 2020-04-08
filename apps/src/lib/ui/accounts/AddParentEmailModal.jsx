@@ -278,7 +278,10 @@ const styles = {
   },
   radioSelectors: {
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
   },
   radioButton: {
     display: 'flex',
