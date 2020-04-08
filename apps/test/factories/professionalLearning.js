@@ -19,5 +19,5 @@ export const serializedWorkshopFactory = Factory.define('serializedWorkshop')
     user_id: 123,
     state: 'Not Started',
     attended: false,
-    pre_survey_url: null
+    pre_workshop_survey_url: null
   });
