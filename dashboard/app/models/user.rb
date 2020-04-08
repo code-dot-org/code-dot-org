@@ -382,6 +382,7 @@ class User < ActiveRecord::Base
   attr_accessor :email_preference_source
   attr_accessor :email_preference_form_kind
 
+  attr_accessor :parent_email_update_only
   attr_accessor :parent_email_preference_opt_in_required
   attr_accessor :parent_email_preference_opt_in
   attr_accessor :parent_email_preference_email
@@ -459,7 +460,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
 
   # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_email.present? && user_type == 'student'}
+  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
   validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
@@ -469,6 +470,10 @@ class User < ActiveRecord::Base
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
     # user_type 'student' is the only type which supports have a parent_email associated with it.
     parent_email_preference_opt_in_required == '1' && user_type == 'student'
+  end
+
+  def parent_email_update_only?
+    parent_email_update_only == '1' && user_type == 'student'
   end
 
   def parent_email_preference_setup

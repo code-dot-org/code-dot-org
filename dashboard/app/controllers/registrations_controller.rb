@@ -145,8 +145,11 @@ class RegistrationsController < Devise::RegistrationsController
       require(:user).
       tap do |user|
         user[:parent_email_preference_email] = user[:parent_email]
-        user[:parent_email_preference_opt_in_required] = '0'
-        unless user[:parent_email_preference_opt_in].empty?
+        if user[:parent_email_preference_opt_in].empty?
+          user[:parent_email_preference_opt_in_required] = '0'
+          user[:parent_email_update_only] = '1'
+        else
+          user[:parent_email_update_only] = '0'
           user[:parent_email_preference_opt_in_required] = '1'
           user[:parent_email_preference_request_ip] = request.ip
           user[:parent_email_preference_source] = EmailPreference::PARENT_EMAIL_CHANGE
@@ -157,7 +160,8 @@ class RegistrationsController < Devise::RegistrationsController
         :parent_email_preference_opt_in,
         :parent_email_preference_request_ip,
         :parent_email_preference_source,
-        :parent_email_preference_opt_in_required
+        :parent_email_preference_opt_in_required,
+        :parent_email_update_only
       )
   end
 
