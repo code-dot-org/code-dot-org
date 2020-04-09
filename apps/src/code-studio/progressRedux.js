@@ -666,7 +666,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
     byGroup[group].levels.push(lessonLevels);
   });
 
-  // Peer reviews get their own group, but these levels/lessson are stored
+  // Peer reviews get their own group, but these levels/lesson are stored
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
   if (state.peerReviewLessonInfo) {

@@ -8,13 +8,17 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @script = @course_unit.script
     @script.update(professional_learning_course: @course.name)
 
-    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
-    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
-    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
+    @required_lesson_group = create(:lesson_group, name: Plc::LearningModule::REQUIRED_MODULE)
+    @content_lesson_group = create(:lesson_group, name: Plc::LearningModule::CONTENT_MODULE)
+    @practice_lesson_group = create(:lesson_group, name: Plc::LearningModule::PRACTICE_MODULE)
 
-    @required_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::REQUIRED_MODULE)
-    @content_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @practice_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @required_lesson_group.name)
+    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.name)
+    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.name)
+
+    @required_learning_module.stage.update(script: @script, lesson_group: @required_lesson_group)
+    @content_learning_module.stage.update(script: @script, lesson_group: @content_lesson_group)
+    @practice_learning_module.stage.update(script: @script, lesson_group: @practice_lesson_group)
 
     Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 

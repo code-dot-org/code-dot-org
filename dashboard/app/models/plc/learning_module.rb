@@ -23,9 +23,9 @@
 # Learning Modules correspond to Stages in our regular curriculum hierarchy.
 class Plc::LearningModule < ActiveRecord::Base
   MODULE_TYPES = [
-    REQUIRED_MODULE = 'required'.freeze,
-    CONTENT_MODULE = 'content'.freeze,
-    PRACTICE_MODULE = 'practice'.freeze
+    REQUIRED_MODULE = 'Overview'.freeze,
+    CONTENT_MODULE = 'Content'.freeze,
+    PRACTICE_MODULE = 'Teaching Practices'.freeze
   ].freeze
 
   NONREQUIRED_MODULE_TYPES = (MODULE_TYPES - [REQUIRED_MODULE]).freeze
