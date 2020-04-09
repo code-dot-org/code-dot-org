@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
@@ -87,8 +88,16 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
-  onLibraryLoaded = libraryDetails => {
-    this.findProfanity(libraryDetails.librarySource).then(profaneWords => {
+  onLibraryLoaded = async libraryDetails => {
+    const defaultNewState = {
+      dialogState: DialogState.DONE_LOADING,
+      libraryDetails
+    };
+
+    try {
+      const profaneWords = await this.findProfanity(
+        libraryDetails.librarySource
+      );
       if (profaneWords) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
@@ -98,12 +107,12 @@ class LibraryCreationDialog extends React.Component {
           })
         });
       } else {
-        this.setState({
-          dialogState: DialogState.DONE_LOADING,
-          libraryDetails
-        });
+        this.setState(defaultNewState);
       }
-    });
+    } catch {
+      // Still show dialog content if request errors
+      this.setState(defaultNewState);
+    }
   };
 
   findProfanity = text => {
