@@ -191,6 +191,55 @@ describe('LibraryPublisher', () => {
       expect(wrapper.state().publishState).to.equal(PublishState.DEFAULT);
     });
 
+    it('does not call publish if profanity is found', async () => {
+      findProfanity = sinon.stub().resolves(['fart']);
+      wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} findProfanity={findProfanity} />
+      );
+      wrapper.setState({
+        libraryDescription: description,
+        selectedFunctions: selectedFunctions
+      });
+      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+
+      await wrapper.instance().validateAndPublish();
+
+      expect(wrapper.state().publishState).to.equal(PublishState.PROFANE_INPUT);
+      expect(publishSpy.callCount).to.equal(0);
+    });
+
+    it('calls publish if no profanity is found', async () => {
+      findProfanity = sinon.stub().resolves(null);
+      wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} findProfanity={findProfanity} />
+      );
+      wrapper.setState({
+        libraryDescription: description,
+        selectedFunctions: selectedFunctions
+      });
+      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+
+      await wrapper.instance().validateAndPublish();
+
+      expect(publishSpy.callCount).to.equal(1);
+    });
+
+    it('calls publish if request to find profanity fails', async () => {
+      findProfanity = sinon.stub().rejects();
+      wrapper = shallow(
+        <LibraryPublisher {...DEFAULT_PROPS} findProfanity={findProfanity} />
+      );
+      wrapper.setState({
+        libraryDescription: description,
+        selectedFunctions: selectedFunctions
+      });
+      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+
+      await wrapper.instance().validateAndPublish();
+
+      expect(publishSpy.callCount).to.equal(1);
+    });
+
     describe('with valid input', () => {
       it('sets error state when publish fails', async () => {
         publishSpy.callsArg(1);
