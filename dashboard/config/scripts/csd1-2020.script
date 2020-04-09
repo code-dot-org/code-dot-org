@@ -40,6 +40,7 @@ level 'CSD U1 processing npark', progression: 'App: National Park Quiz'
 level 'CSD U1 processing countries', progression: 'App: How Many Countries...'
 level 'CSD U1 processing writers', progression: 'App: My Famous Birthday'
 level 'CSD U1 processing notebook', progression: 'App: Stamp Notebook'
+level 'CSD U1 processing fastest', progression: 'App: The Fastest Finger'
 level 'CSD U1 processing guess', progression: 'App: Guess the Number'
 level 'CSD U1 processing live', progression: 'App: Where Should I Live?'
 
