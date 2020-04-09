@@ -53,7 +53,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'find_updated_contacts_query' do
+  test 'query_updated_contacts' do
     assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
 
@@ -80,11 +80,13 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       create :contact_rollups_processed, contact_info
     end
 
+    # Execute SQL query
     results = ActiveRecord::Base.connection.
-      exec_query(ContactRollupsPardotMemory.find_updated_contacts_query).map do |record|
+      exec_query(ContactRollupsPardotMemory.query_updated_contacts).map do |record|
       record['email']
     end
 
+    # Should find only 2 contacts to update
     assert_equal %w(alpha beta), results
   end
 
