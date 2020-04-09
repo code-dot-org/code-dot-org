@@ -55,7 +55,13 @@ class ContactRollupsPardotMemory < ApplicationRecord
   def self.update_pardot_prospects
     pardot_writer = PardotV2.new
     ActiveRecord::Base.connection.exec_query(query_updated_contacts).each do |record|
-      old_prospect_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
+      # If pardot_id has changed since the last data sync, we should assume that
+      # Pardot prospect data is currently empty and re-sync all contact data.
+      old_prospect_data =
+        record['pardot_id_changed'] ?
+          {} :
+          JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
+
       new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
 
       submissions, errors = pardot_writer.batch_update_prospects(
@@ -82,14 +88,21 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.query_updated_contacts
-    # TODO: find contacts with updated pardot_id(s)
+    # TODO: find contacts with updated pardot_id(s) and test
     <<-SQL.squish
-      SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
+      SELECT
+        processed.email, processed.data,
+        pardot.pardot_id, pardot.data_synced,
+        (pardot.pardot_id_updated_at > pardot.data_synced_at) AS pardot_id_changed
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
       WHERE pardot.pardot_id IS NOT NULL
-        AND ((pardot.data_synced_at IS NULL) OR (processed.data->>'$.updated_at' > pardot.data_synced_at))
+        AND (
+          (pardot.data_synced_at IS NULL)
+          OR (processed.data->>'$.updated_at' > pardot.data_synced_at)
+          OR (pardot.pardot_id_updated_at > pardot.data_synced_at)
+        )
     SQL
   end
 

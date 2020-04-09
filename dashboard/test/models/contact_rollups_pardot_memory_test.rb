@@ -77,17 +77,31 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     base_time = Time.now.utc - 2.days
     pardot_memory_records = [
       {email: 'alpha', pardot_id: 1, data_synced_at: nil, data_synced: nil},
-      {email: 'beta', pardot_id: 2, data_synced_at: base_time - 1.day, data_synced: {db_Opt_In: 'Yes'}},
-      {email: 'gamma', pardot_id: 3, data_synced_at: base_time + 1.day, data_synced: {db_Opt_In: 'Yes'}},
+      {
+        email: 'beta',
+        pardot_id: 2, pardot_id_updated_at: base_time - 2.days,
+        data_synced_at: base_time - 1.day, data_synced: {db_Opt_In: 'Yes'}
+      },
+      {
+        email: 'gamma',
+        pardot_id: 3, pardot_id_updated_at: base_time + 2.days,
+        data_synced_at: base_time + 1.day, data_synced: {db_Opt_In: 'Yes'}
+      },
+      # dummy records
       {email: 'delta', pardot_id: nil},
       {email: 'epsilon', pardot_id: 4},
     ]
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
+    # 3 cases that require updating contacts
     processed_contact_records = [
+      # Case 1: data_synced_at is null
       {email: 'alpha', data: {opt_in: false}, data_updated_at: base_time},
+      # Case 2: data_updated_at > data_synced_at
       {email: 'beta', data: {opt_in: false}, data_updated_at: base_time},
+      # Case 3: pardot_id_updated_at > data_synced_at
       {email: 'gamma', data: {opt_in: true}, data_updated_at: base_time},
+      # dummy records
       {email: 'delta'},
       {email: 'zeta'},
     ]
@@ -96,11 +110,15 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     # Execute SQL query
     results = ActiveRecord::Base.connection.
       exec_query(ContactRollupsPardotMemory.query_updated_contacts).map do |record|
-      record['email']
+      record.slice('email', 'pardot_id_changed')
     end
 
-    # Should find only 2 contacts to update
-    assert_equal %w(alpha beta), results
+    expected_results = [
+      {'email' => 'alpha', 'pardot_id_changed' => nil},
+      {'email' => 'beta', 'pardot_id_changed' => 0},
+      {'email' => 'gamma', 'pardot_id_changed' => 1}
+    ]
+    assert_equal expected_results, results
   end
 
   test 'update_pardot_prospects' do
