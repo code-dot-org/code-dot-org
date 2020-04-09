@@ -113,6 +113,7 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
+    parent_email_banner_dismissed
   )
 
   # Include default devise modules. Others available are:
