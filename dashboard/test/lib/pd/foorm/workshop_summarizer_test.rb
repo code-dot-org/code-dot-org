@@ -20,8 +20,8 @@ module Pd::Foorm
 
       expected_result = {
         'Day 0': {
-          response_count: 2,
           general: {
+            response_count: 2,
             'surveys/pd/workshop_daily_survey_day_0.0': {
               course_length_weeks: {
                 '5_fewer': 1,

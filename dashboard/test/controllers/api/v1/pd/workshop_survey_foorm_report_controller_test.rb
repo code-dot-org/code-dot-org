@@ -19,7 +19,7 @@ module Api::V1::Pd
       assert_equal 'CS Discoveries', response[:course_name]
       assert_not_empty response[:questions]
       assert_not_empty response[:this_workshop]
-      assert_equal 4, response[:this_workshop]['Day 5'.to_sym][:response_count]
+      assert_equal 4, response[:this_workshop]['Day 5'.to_sym][:general][:response_count]
 
       assert_not_empty response[:workshop_rollups]
       assert_equal 5.5, response[:workshop_rollups][:single_workshop][:averages][:teacher_engagement][:average]
@@ -47,7 +47,7 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body)
 
-      assert_equal 2, response['this_workshop']['Day 0']['response_count']
+      assert_equal 2, response['this_workshop']['Day 0']['general']['response_count']
       matrix_response = response['this_workshop']['Day 0']['general']['surveys/pd/workshop_daily_survey_day_0.0']['teaching_cs_matrix']
 
       assert_not_nil matrix_response['committed_to_teaching_cs']

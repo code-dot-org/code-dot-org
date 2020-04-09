@@ -23,8 +23,8 @@ export default class Results extends React.Component {
             eventKey={i + 1}
             key={i}
             title={`${workshopTab} (${this.props.thisWorkshop[workshopTab][
-              'response_count'
-            ] || 0})`}
+              'general'
+            ]['response_count'] || 0})`}
           >
             <br />
             <h3>General Questions</h3>
