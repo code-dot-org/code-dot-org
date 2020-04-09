@@ -4,14 +4,14 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string(255)
-#  unit_id     :integer
-#  user_facing :boolean
+#  script_id   :integer          not null
+#  user_facing :boolean          default(TRUE), not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 # Indexes
 #
-#  index_lesson_groups_on_unit_id  (unit_id)
+#  index_lesson_groups_on_script_id  (script_id)
 #
 
 class LessonGroup < ApplicationRecord
