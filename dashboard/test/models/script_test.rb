@@ -689,7 +689,7 @@ class ScriptTest < ActiveSupport::TestCase
     summary = script.summarize
 
     assert_equal 1, summary[:stages].count
-    assert_nil summary[:peerReviewStage]
+    assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
@@ -703,9 +703,9 @@ class ScriptTest < ActiveSupport::TestCase
 
     summary = script.summarize
 
-    expected_peer_review_stage = {
+    expected_peer_review_lesson = {
       name: "You must complete 1 reviews for this unit",
-      flex_category: "Peer Review",
+      lesson_group_name: "Peer Review",
       levels: [{
         ids: [0],
         kind: LEVEL_KIND.peer_review,
@@ -719,7 +719,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
 
     assert_equal 2, summary[:stages].count
-    assert_equal expected_peer_review_stage, summary[:peerReviewStage]
+    assert_equal expected_peer_review_lesson, summary[:peerReviewLessonInfo]
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
