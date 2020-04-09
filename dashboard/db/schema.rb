@@ -511,11 +511,11 @@ ActiveRecord::Schema.define(version: 20200404005133) do
 
   create_table "lesson_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name"
-    t.integer  "unit_id"
-    t.boolean  "user_facing"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["unit_id"], name: "index_lesson_groups_on_unit_id", using: :btree
+    t.integer  "script_id",                  null: false
+    t.boolean  "user_facing", default: true, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["script_id"], name: "index_lesson_groups_on_script_id", using: :btree
   end
 
   create_table "level_concept_difficulties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

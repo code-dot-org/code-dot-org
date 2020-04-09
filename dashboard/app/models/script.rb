@@ -35,7 +35,7 @@ class Script < ActiveRecord::Base
 
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, foreign_key: 'unit_id', dependent: :destroy
+  has_many :lesson_groups, dependent: :destroy
   has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
   has_many :stages, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
