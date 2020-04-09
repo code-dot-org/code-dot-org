@@ -9,6 +9,7 @@ import {
 } from './MicroBitComponents';
 import {MicroBitButton} from './Button';
 import MBFirmataWrapper from './MBFirmataWrapper';
+import ExternalLed from './ExternalLed';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -94,8 +95,11 @@ export default class MicroBitBoard extends EventEmitter {
     callback(pin);
   }
 
-  // TODO
-  createLed(pin) {}
+  createLed(pin) {
+    const newLed = new ExternalLed({board: this.boardClient_, pin});
+    this.dynamicComponents_.push(newLed);
+    return newLed;
+  }
 
   createButton(pin) {
     const newButton = new MicroBitButton({mb: this.boardClient_, pin: pin});
