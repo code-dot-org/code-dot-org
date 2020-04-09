@@ -236,15 +236,16 @@ class PardotV2
   def self.calculate_data_delta(old_data, new_data)
     return new_data unless old_data.present?
 
-    # Collect key-value pairs that exist only in the new data
+    # Set key-value pairs that exist only in the new data
     delta = {}
     new_data.each_pair do |key, val|
       delta[key] = val unless old_data.key?(key) && old_data[key] == val
     end
 
-    # Remove entries that exist only in the old data and not in the new data
-    old_data.each_pair do |key, _|
-      delta[key] = nil unless new_data.key?(key)
+    # Unset entries that exist only in the old data and not in the new data.
+    # Ignore entries with values are nil.
+    old_data.each_pair do |key, val|
+      delta[key] = nil unless new_data.key?(key) || val.nil?
     end
 
     delta
