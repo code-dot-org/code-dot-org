@@ -181,7 +181,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  get "/gallery", to: redirect("/projects")
+  get "/gallery", to: redirect("/projects/public")
 
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
