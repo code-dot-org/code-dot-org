@@ -68,7 +68,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     # Find updated contacts
     # TODO: find contacts with updated pardot_id(s)
     updated_contact_query = <<-SQL.squish
-      SELECT processed.email, processed.data AS new_data, pardot.pardot_id, pardot.data_synced
+      SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
@@ -81,22 +81,23 @@ class ContactRollupsPardotMemory < ApplicationRecord
       old_prospect_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
       new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
 
-      pardot_writer.batch_update_prospects(
+      submissions, errors = pardot_writer.batch_update_prospects(
         record['email'], record['pardot_id'], old_prospect_data, new_contact_data
       )
-
-      # TODO: Save sync results
-      record['email']
+      save_sync_results(submissions, errors, Time.now) if submissions.present?
     end
+
+    submissions, errors = pardot_writer.batch_update_remaining_prospects
+    save_sync_results(submissions, errors, Time.now) if submissions.present?
   end
 
   # TODO: sync deleted contacts
 
   # Saves sync results to database.
-  # @param [Array<Hash>] submissions array of prospects that were synced/submitted to Pardot
-  # @param [Array<Hash>] errors array of hashes, each containing an index and an error message
+  # @param [Array<Hash>] submissions an array of prospects that were synced/submitted to Pardot
+  # @param [Array<Hash>] errors an array of hashes, each containing an index and an error message
   #   of a rejected prospect. Rejected prospects are a subset of all prospects submitted to Pardot.
-  # @param [DateTime] submitted_time when submissions were sent to Pardot
+  # @param [Time] submitted_time time when submissions were sent to Pardot
   def self.save_sync_results(submissions, errors, submitted_time)
     rejected_indexes = Set.new errors.pluck(:prospect_index)
     successful_submissions = submissions.reject.with_index do |_, index|
@@ -112,7 +113,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.save_successful_submissions(submissions, submitted_time)
-    # save email, data_synced, data_synced_at
     emails_and_data = submissions.map do |item|
       {
         email: item[:email],
@@ -121,9 +121,14 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
+    update_values_sql = <<-SQL.squish
+      data_synced = JSON_MERGE_PATCH(COALESCE(data_synced, JSON_OBJECT()), VALUES(data_synced)),
+      data_synced_at = VALUES(data_synced_at)
+    SQL
+
     import! emails_and_data,
       validate: false,
-      on_duplicate_key_update: [:data_synced, :data_synced_at]
+      on_duplicate_key_update: update_values_sql
   end
 
   def self.save_rejected_submissions(submissions, submitted_time)

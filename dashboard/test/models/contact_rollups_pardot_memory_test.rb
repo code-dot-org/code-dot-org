@@ -110,16 +110,51 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'save_sync_results' do
+  test 'save_sync_results new prospect' do
     assert_equal 0, ContactRollupsPardotMemory.count
 
+    submission = {email: 'valid@domain.com', db_Opt_In: 'Yes'}
+    submitted_time = Time.now
+
+    ContactRollupsPardotMemory.save_sync_results [submission], [], submitted_time
+
+    record = ContactRollupsPardotMemory.find_by(
+      email: submission[:email],
+      data_synced_at: submitted_time
+    )
+    expected_data_synced = submission.except(:email, :id).deep_stringify_keys
+    assert_equal expected_data_synced, record&.data_synced
+  end
+
+  test 'save_sync_results updated prospect' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+    create :contact_rollups_pardot_memory, email: 'alpha', pardot_id: 1, data_synced: nil
+    create :contact_rollups_pardot_memory, email: 'beta', pardot_id: 2, data_synced: {db_Opt_In: 'No'}
+    create :contact_rollups_pardot_memory, email: 'gamma', pardot_id: 3, data_synced: {db_Opt_In: 'Yes'}
+
     submissions = [
-      {email: 'invalid_email', id: nil, db_Opt_in: 'No'},
-      {email: 'valid@domain.com', id: nil, db_Opt_in: 'Yes'},
+      {email: 'alpha', id: 1, db_Opt_In: 'Yes'},
+      {email: 'beta', id: 2, db_Opt_In: 'Yes'},
+      {email: 'gamma', id: 3, db_Opt_In: 'Yes'},
     ]
-    errors = [
-      {prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}
-    ]
+    submitted_time = Time.now
+
+    ContactRollupsPardotMemory.save_sync_results submissions, [], submitted_time
+
+    submissions.each do |submission|
+      record = ContactRollupsPardotMemory.find_by(
+        email: submission[:email],
+        data_synced_at: submitted_time
+      )
+      expected_data_synced = submission.except(:email, :id).deep_stringify_keys
+      assert_equal expected_data_synced, record&.data_synced
+    end
+  end
+  test 'save_sync_results rejected contact' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+
+    submissions = [{email: 'invalid_email', id: nil, db_Opt_In: 'No'}]
+    errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
     submitted_time = Time.now
 
     ContactRollupsPardotMemory.save_sync_results submissions, errors, submitted_time
