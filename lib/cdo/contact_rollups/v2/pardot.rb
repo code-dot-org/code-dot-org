@@ -73,7 +73,7 @@ class PardotV2
   # @param [Boolean] eager_submit
   # @return [Array<Array>] @see process_batch method
   def batch_create_prospects(email, data, eager_submit = false)
-    prospect = self.class.convert_to_prospect_fields data.merge(email: email)
+    prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
 
     process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
@@ -93,17 +93,17 @@ class PardotV2
   #
   # @param [String] email
   # @param [Integer] pardot_id
-  # @param [Hash] old_prospect_data data with Pardot prospect fields
-  # @param [Hash] new_contact_data data with original contact fields
+  # @param [Hash] old_prospect_data a hash with Pardot prospect keys
+  # @param [Hash] new_contact_data a hash with original contact keys
   # @param [Boolean] eager_submit
   # @return [Array<Array>] @see process_batch method
   def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit = false)
-    new_prospect_data = self.class.convert_to_prospect_fields new_contact_data
+    new_prospect_data = self.class.convert_to_pardot_prospect new_contact_data
     delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
     return [], [] unless delta.present?
 
     prospect = delta.merge(
-      self.class.convert_to_prospect_fields(email: email, pardot_id: pardot_id)
+      self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
     )
     @updated_prospects << prospect
 
@@ -124,7 +124,7 @@ class PardotV2
   #
   # @param [String] api_endpoint
   # @param [Array<Hash>] prospects
-  # @param [Boolean] eager_submit triggers submitting request immediately
+  # @param [Boolean] eager_submit if is true, triggers submitting request immediately
   # @return [Array<Array>] two arrays, one for all submitted prospects and one for Pardot errors
   def process_batch(api_endpoint, prospects, eager_submit)
     return [], [] unless prospects.present?
@@ -135,7 +135,7 @@ class PardotV2
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
       # TODO: rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      # Don't retry an insert because it will create duplicate Pardot prospects.
+      # Use an instance variable to remember the number of failures.
       errors = self.class.submit_batch_request api_endpoint, prospects
       submissions = prospects.clone
       prospects.clear
@@ -144,13 +144,13 @@ class PardotV2
     [submissions, errors]
   end
 
-  # Converts contact fields to Pardot prospect fields.
+  # Converts contact keys and values to Pardot prospect keys and values.
   # @example
   #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: true}
   #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
   # @param [Hash] contact
   # @return [Hash]
-  def self.convert_to_prospect_fields(contact)
+  def self.convert_to_pardot_prospect(contact)
     prospect = {}
 
     CONTACT_TO_PARDOT_PROSPECT_MAP.each do |key, prospect_info|
@@ -181,24 +181,24 @@ class PardotV2
   #   data is in JSON format, e.g., {"prospects":[{"email":"some@email.com","name":"hello"}]}
   # @see: http://developer.pardot.com/kb/api-version-4/prospects/#endpoints-for-batch-processing
   #
-  # @param [String] base_url Pardot API endpoint
-  # @param [Array<Hash>] prospects array of prospect data
-  # @return [String] an URL
-  def self.build_batch_url(base_url, prospects)
+  # @param [String] api_endpoint
+  # @param [Array<Hash>] prospects an array of prospect data
+  # @return [String] a URL
+  def self.build_batch_url(api_endpoint, prospects)
     prospects_payload_json_encoded = URI.encode({prospects: prospects}.to_json)
 
     # Encode plus signs in email addresses because it is invalid in a query string
     # (even though it is valid in the base of a URL).
     prospects_payload_json_encoded = prospects_payload_json_encoded.gsub("+", "%2B")
 
-    "#{base_url}?prospects=#{prospects_payload_json_encoded}"
+    "#{api_endpoint}?prospects=#{prospects_payload_json_encoded}"
   end
 
   # Submits a request to Pardot to create/update a batch of prospects.
   # @see http://developer.pardot.com/kb/api-version-4/prospects/#endpoints-for-batch-processing
   #
   # @param api_endpoint [String] a Pardot API endpoint
-  # @param prospects [Array<Hash>] array of prospect data
+  # @param prospects [Array<Hash>] an array of prospect data
   # @return [Array<Hash>] @see extract_batch_request_errors method
   #
   # @raise [Net::ReadTimeout] if doesn't get a response from Pardot
@@ -221,8 +221,8 @@ class PardotV2
   end
 
   # Extracts errors from a Pardot response.
-  # @param [Nokogiri::XML] doc Pardot XML response for a batch request
-  # @return [Array<Hash>] array of hashes, each containing an index and an error message
+  # @param [Nokogiri::XML] doc a Pardot XML response for a batch request
+  # @return [Array<Hash>] an array of hashes, each containing an index and an error message
   def self.extract_batch_request_errors(doc)
     doc.xpath('/rsp/errors/*').map do |node|
       {prospect_index: node.attr("identifier").to_i, error_msg: node.text}

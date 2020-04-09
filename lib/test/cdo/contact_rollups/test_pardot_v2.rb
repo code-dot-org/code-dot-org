@@ -164,7 +164,7 @@ class PardotV2Test < Minitest::Test
     assert_equal expected_errors, errors
   end
 
-  def test_convert_to_prospect_fields
+  def test_convert_to_pardot_prospect
     contacts = [
       {email: 'test0@domain.com', pardot_id: 10, opt_in: true},
       {email: 'test1@domain.com', pardot_id: nil, bad_key: true}
@@ -175,7 +175,7 @@ class PardotV2Test < Minitest::Test
     ]
 
     contacts.each_with_index do |contact, index|
-      assert_equal expected_prospects[index], PardotV2.convert_to_prospect_fields(contact)
+      assert_equal expected_prospects[index], PardotV2.convert_to_pardot_prospect(contact)
     end
   end
 
