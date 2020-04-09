@@ -58,10 +58,10 @@ class PardotV2
     mappings
   end
 
-  # Batch-creates prospects in Pardot.
-  # Request is only sent to Pardot when the batch is big enough, unless +eager_submit+ is true.
+  # Compiles a batch of prospects and batch-create them in Pardot when batch size
+  # is big enough. If +eager_submit+ is true, creates the batch in Pardot immediately.
   #
-  # WARNING: If +eager_submit+ is false (by default), it is possible that the batch never gets
+  # *Warning:* By default, +eager_submit+ is false. It is possible that the batch never gets
   # to the size that can trigger a Pardot request. Always uses this method together with its
   # sibling, +batch_create_remaining_prospects+ to flush out the remaining data in the batch.
   #
@@ -71,7 +71,7 @@ class PardotV2
   # @param [String] email
   # @param [Hash] data
   # @param [Boolean] eager_submit
-  # @return [Array] two arrays, one for all submitted prospects and one for Pardot errors
+  # @return [Array<Array>] @see process_batch method
   def batch_create_prospects(email, data, eager_submit = false)
     prospect = self.class.convert_to_prospect_fields data.merge(email: email)
     @new_prospects << prospect
@@ -79,17 +79,24 @@ class PardotV2
     process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
   end
 
-  # Batch-creates prospect in Pardot. Request is sent immediately.
+  # Immediately batch-create the remaining prospects in Pardot.
+  # @return [Array<Array>] @see process_batch method
   def batch_create_remaining_prospects
     process_batch BATCH_CREATE_URL, @new_prospects, true
   end
 
+  # Compiles a batch of prospects and batch-update them in Pardot when batch size
+  # is big enough. If +eager_submit+ is true, updates the batch in Pardot immediately.
+  #
+  # *Warning:* If +eager_submit+ is false (by default), always uses this method together with
+  # its sibling, +batch_update_remaining_prospects+ to flush out the remaining data in the batch.
+  #
   # @param [String] email
   # @param [Integer] pardot_id
-  # @param [Hash] old_prospect_data Pardot prospect fields
-  # @param [Hash] new_contact_data contact fields
+  # @param [Hash] old_prospect_data data with Pardot prospect fields
+  # @param [Hash] new_contact_data data with original contact fields
   # @param [Boolean] eager_submit
-  # @return [Array]
+  # @return [Array<Array>] @see process_batch method
   def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit = false)
     new_prospect_data = self.class.convert_to_prospect_fields new_contact_data
     delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
@@ -103,21 +110,33 @@ class PardotV2
     process_batch BATCH_UPDATE_URL, @updated_prospects, eager_submit
   end
 
+  # Immediately batch-update the remaining prospects in Pardot.
+  # @return [Array<Array>] @see process_batch method
   def batch_update_remaining_prospects
     process_batch BATCH_UPDATE_URL, @updated_prospects, true
   end
 
-  def process_batch(endpoint, prospects, eager_submit)
+  # Submits a request to a Pardot API endpoint if the prospect batch size is big enough
+  # or +eager_submit+ is true. Otherwise, does nothing.
+  #
+  # *Warning:* This is not a pure method. It clears +prospects+ array once a request
+  # is successfully send to Pardot.
+  #
+  # @param [String] api_endpoint
+  # @param [Array<Hash>] prospects
+  # @param [Boolean] eager_submit triggers submitting request immediately
+  # @return [Array<Array>] two arrays, one for all submitted prospects and one for Pardot errors
+  def process_batch(api_endpoint, prospects, eager_submit)
     return [], [] unless prospects.present?
 
     submissions = []
     errors = []
-    url = self.class.build_batch_url endpoint, prospects
+    url = self.class.build_batch_url api_endpoint, prospects
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
       # TODO: rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
       # Don't retry an insert because it will create duplicate Pardot prospects.
-      errors = self.class.submit_batch_request endpoint, prospects
+      errors = self.class.submit_batch_request api_endpoint, prospects
       submissions = prospects.clone
       prospects.clear
     end
@@ -176,17 +195,18 @@ class PardotV2
   end
 
   # Submits a request to Pardot to create/update a batch of prospects.
-  # This method may raise an exception.
   # @see http://developer.pardot.com/kb/api-version-4/prospects/#endpoints-for-batch-processing
   #
-  # @param base_url [String] a Pardot API endpoint
+  # @param api_endpoint [String] a Pardot API endpoint
   # @param prospects [Array<Hash>] array of prospect data
-  # @return [Array] array of errors containing indexes of rejected prospects and error messages
-  def self.submit_batch_request(base_url, prospects)
+  # @return [Array<Hash>] @see extract_batch_request_errors method
+  #
+  # @raise [Net::ReadTimeout] if doesn't get a response from Pardot
+  def self.submit_batch_request(api_endpoint, prospects)
     return [] unless prospects.present?
 
     # Send request to Pardot
-    url = build_batch_url base_url, prospects
+    url = build_batch_url api_endpoint, prospects
     time_start = Time.now
     doc = post_with_auth_retry url
     time_elapsed = Time.now - time_start
@@ -194,7 +214,7 @@ class PardotV2
     # Return indexes of rejected emails and their error messages
     errors = extract_batch_request_errors doc
 
-    log "Completed a batch request to #{base_url} in #{time_elapsed.round(2)} secs. "\
+    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. "\
       "#{prospects.length} prospects submitted. #{errors.length} rejected."
 
     errors
@@ -202,7 +222,7 @@ class PardotV2
 
   # Extracts errors from a Pardot response.
   # @param [Nokogiri::XML] doc Pardot XML response for a batch request
-  # @return [Array] array of hashes, each containing an index and an error message
+  # @return [Array<Hash>] array of hashes, each containing an index and an error message
   def self.extract_batch_request_errors(doc)
     doc.xpath('/rsp/errors/*').map do |node|
       {prospect_index: node.attr("identifier").to_i, error_msg: node.text}
