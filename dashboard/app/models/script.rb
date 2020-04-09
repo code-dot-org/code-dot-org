@@ -1292,9 +1292,9 @@ class Script < ActiveRecord::Base
         }
       end
 
-      peer_review_lesson_info = {
+      peer_review_stage = {
         name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-        lesson_group_name: 'Peer Review',
+        flex_category: 'Peer Review',
         levels: levels,
         lockable: false
       }
@@ -1323,7 +1323,7 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewLessonInfo: peer_review_lesson_info,
+      peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
