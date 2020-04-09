@@ -26,12 +26,13 @@
   %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
   %script{src: webpack_asset_path('js/code-studio-common.js')}
 
-  -# Here where we pass data down to the particular script we'd like to run
   :ruby
-    teacher_dashboard_data = {}
-    teacher_dashboard_data[:sections] = @sections
-    teacher_dashboard_data[:section] = @section_summary
-    teacher_dashboard_data[:userName] = @current_user.short_name
-    teacher_dashboard_data[:localeCode] = request.locale
-    teacher_dashboard_data[:logoUrl] = asset_path('logo.png')
-  %script{src: webpack_asset_path('js/teacher_dashboard/parent_letter.js'), data: {dashboard: teacher_dashboard_data.to_json}}
+    script_data = {}
+    script_data[:studioOrigin] = CDO.studio_url('', CDO.default_scheme)
+    script_data[:pegasusOrigin] = CDO.code_org_url('', CDO.default_scheme)
+    script_data[:sections] = @sections
+    script_data[:section] = @section_summary
+    script_data[:userName] = @current_user.short_name
+    script_data[:localeCode] = request.locale
+    script_data[:logoUrl] = asset_path('logo.png')
+  %script{src: webpack_asset_path('js/teacher_dashboard/parent_letter.js'), data: {json: script_data.to_json}}
