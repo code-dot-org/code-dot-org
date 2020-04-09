@@ -18,6 +18,8 @@ import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
+import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
+import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -323,24 +325,28 @@ class PersonalProjectsTable extends React.Component {
     const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
-      <div id="uitest-personal-projects" style={styles.bottomMargin}>
-        {!noProjects && (
-          <Table.Provider
-            columns={columns}
-            style={tableLayoutStyles.table}
-            className="ui-personal-projects-table"
-          >
-            <Table.Header />
-            <Table.Body
-              rows={sortedRows}
-              rowKey="channel"
-              className="ui-personal-projects-row"
-            />
-          </Table.Provider>
-        )}
-        {noProjects && (
-          <h3 style={{textAlign: 'center'}}>{i18n.noPersonalProjects()}</h3>
-        )}
+      <div>
+        <div id="uitest-personal-projects" style={styles.bottomMargin}>
+          {!noProjects && (
+            <Table.Provider
+              columns={columns}
+              style={tableLayoutStyles.table}
+              className="ui-personal-projects-table"
+            >
+              <Table.Header />
+              <Table.Body
+                rows={sortedRows}
+                rowKey="channel"
+                className="ui-personal-projects-row"
+              />
+            </Table.Provider>
+          )}
+          {noProjects && (
+            <h3 style={{textAlign: 'center'}}>{i18n.noPersonalProjects()}</h3>
+          )}
+        </div>
+        <PublishDialog />
+        <DeleteProjectDialog />
       </div>
     );
   }

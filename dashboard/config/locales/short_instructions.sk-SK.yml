@@ -490,6 +490,17 @@ sk-SK:
         vieš!
       CourseD_Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý
         môžeš zdieľať s kamarátmi.
+      CourseE_HOC 2018 Level_1: Zober loď z truhly.
+      CourseE_HOC 2018 Level_10: Dostaň sa ku vstupu do tejto Podmorskej pamiatky.
+      CourseE_HOC 2018 Level_11: Vybuduj potrubie z kryštálov vo vnútri Podmorskej
+        pamiatky.
+      CourseE_HOC 2018 Level_2: Choď na koniec prístavu.
+      CourseE_HOC 2018 Level_3: Choď cez otvorené more a zamier k treske.
+      CourseE_HOC 2018 Level_4: Použi cyklus, aby si sa dostal k delfínovi.
+      CourseE_HOC 2018 Level_5: Preskúmaj vrak lode, až kým sa dostaneš k truhlici.
+      CourseE_HOC 2018 Level_6: Premanévruj cez ľady, aby si sa dostal k lososovi.
+      CourseE_HOC 2018 Level_7a: Prehľadaj podmorské ruiny a nájdi truhlicu.
+      CourseE_HOC 2018 Level_9b: Použi koraly ako míľniky na ceste k pokladu.
       Crack Random Substitution: Inštrukcie
       Crack a Caesar Cipher: Inštrukcie
       Dance Party 1-validated: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
@@ -565,9 +576,15 @@ sk-SK:
       Fish Tank 2-validated: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 2-validated_2019: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 3-validated: Zmeň správanie ryby tak, že bude plávať okolo akvária.
+      Fish Tank 3-validated_2019: Zmeň správanie ryby tak aby plávala vpravo a vľavo.
       Fish Tank 4-validated: Použi blok `nastav farbu pozadia`, aby si spravil modré
         pozadie.
+      Fish Tank 4-validated_2019: Použi blok `nastav farmu pozadia` na nastavenie
+        akejkoľvek farby pozadia.
       Fish Tank 5-validated: Naša ryba je trochu osamelá. Pridaj ďalší sprite do akvária.
+      Fish Tank 5-validated_2019: Ryba má dobrodružnú povahu a chcela by stretnúť
+        ďalšie morské živočíchy. Pridaj do akvária ďašiu postavu. Postava môže mať
+        hociaký kostým, okrem toho, ktorý už má ryba.
       Fish Tank 6-validated: Pridajte správanie k novému rybkinmu kamarátovi.
       Fish Tank 6-validated_2019: Pridajte správanie k novému rybkinmu kamarátovi.
       Fish Tank 7-validated: Použi niektoré nové bloky z panelu nástrojov, aby bolo
@@ -580,7 +597,17 @@ sk-SK:
         k fakli.
       Function intro Ryan_2019: Dvakrát použi funkciu 'Postav most' na vytvorenie
         cesty k fakli.
+      HOC 2018 Level_1: Zober loď z truhly.
+      HOC 2018 Level_10: Dostaň sa ku vstupu do tejto Podmorskej pamiatky.
+      HOC 2018 Level_11: Vybuduj potrubie z kryštálov vo vnútri Podmorskej pamiatky.
       HOC 2018 Level_12: Navrhni si vlastné vodné prostredie, je to len na tebe!
+      HOC 2018 Level_2: Choď na koniec prístavu.
+      HOC 2018 Level_3: Choď cez otvorené more a zamier k treske.
+      HOC 2018 Level_4: Použi cyklus, aby si sa dostal k delfínovi.
+      HOC 2018 Level_5: Preskúmaj vrak lode, až kým sa dostaneš k truhlici.
+      HOC 2018 Level_6: Premanévruj cez ľady, aby si sa dostal k lososovi.
+      HOC 2018 Level_7a: Prehľadaj podmorské ruiny a nájdi truhlicu.
+      HOC 2018 Level_9b: Použi koraly ako míľniky na ceste k pokladu.
       Infinity_catch: Dokážeš Elsou ("postava 2") hýbať šípkami tak, aby s Annou udržala
         krok?
       Infinity_finale: Vytvor čo len chceš a zdieľaj to s kamarátmi!
@@ -695,6 +722,14 @@ sk-SK:
         Skús pozbierať tieto kvety s použitím prírastku 2.
       NEW Course 4 Bee For Loops 8: Máš to! Aký by mal byť tvoj prírastok, aby si
         pozbieral 3, 6, 9, 12, 15 nektárov?
+      New Artist Project: Nakresli niečo úžasné! Tvoj kód je uložený ako projekt,
+        ku ktorému sa vieš kedykoľvek vrátiť.
+      New Basketball Project: Vytvor si vlastný basketbalový zápas! Môžeš zmeniť všetky
+        pravidlá. Keď skončíš, klikni na "Zdieľať", aby si ho mohli zahrať aj kamaráti
+        na svojich mobiloch.
+      New Bounce Project: Vytvor si vlastný zápas! Môžeš zmeniť všetky pravidlá a
+        dizajn. Keď skončíš, klikni na "Zdieľať", aby si ho mohli zahrať aj kamaráti
+        na svojich mobiloch.
       New Gumball Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Ice Age Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
       New Infinity Project: Vytvor čo len chceš a zdieľaj to s kamarátmi!
@@ -978,8 +1013,6 @@ sk-SK:
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_playLab_events4_2018: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
-        posunul doprava po kliknutí na tlačidlo `vpravo`.
-      courseA_playLab_events4_2019: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
         posunul doprava po kliknutí na tlačidlo `vpravo`.
       courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
       courseA_playLab_events7_2019: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
@@ -2471,6 +2504,8 @@ sk-SK:
       courseD_scrat_ramp7: Pomôž Scratovi dostať sa k žaluďu!
       courseD_scrat_ramp8: Použi všetky doteraz získané vedomosti a dostaň Scrata
         k žaluďu!
+      courseE_aboutme_6: 'Pokračuj! Skús ešte vylepšiť svoj plagát pridaním ďalších
+        funkcií. '
       courseE_artist_functions10: Tento krát použi rad zložený z 8 šesťuholníkov so
         stranami dlhými 25 pixelov.
       courseE_artist_functions10_2018: Tento krát použi rad zložený z 8 šesťuholníkov

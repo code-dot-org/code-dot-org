@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/course1/stage/1/puzzle/1": {
+    "title": "Happy Maps"
+  },
   "https://studio.code.org/s/course1/stage/1/puzzle/2": {
     "dsls": {
       "answers": [
@@ -27,6 +30,9 @@
       ],
       "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course1/stage/2/puzzle/1": {
+    "title": "Move it, Move it"
   },
   "https://studio.code.org/s/course1/stage/2/puzzle/2": {
     "dsls": {
@@ -249,6 +255,9 @@
       "courseB_maze_seq_challenge2_a": "You do not need to add or remove blocks to solve this puzzle.",
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the middle path."
     }
+  },
+  "https://studio.code.org/s/course1/stage/6/puzzle/1": {
+    "title": "Real-life Algorithms: Plant a Seed"
   },
   "https://studio.code.org/s/course1/stage/6/puzzle/2": {
     "dsls": {
@@ -507,6 +516,9 @@
       "potential solution": "potential solution"
     }
   },
+  "https://studio.code.org/s/course1/stage/9/puzzle/1": {
+    "title": "Building a Foundation"
+  },
   "https://studio.code.org/s/course1/stage/9/puzzle/2": {
     "short_instructions": "Build a three level pyramid, there are no other directions, so just play with the pieces until you get it!"
   },
@@ -629,6 +641,9 @@
       ],
       "title": "Multiple Choice"
     }
+  },
+  "https://studio.code.org/s/course1/stage/12/puzzle/1": {
+    "title": "Getting Loopy"
   },
   "https://studio.code.org/s/course1/stage/12/puzzle/2": {
     "dsls": {
@@ -859,6 +874,9 @@
       "courseB_collector_loops_challenge2_d": "Try this solution:\n\n[blockly block][0]"
     }
   },
+  "https://studio.code.org/s/course1/stage/15/puzzle/1": {
+    "title": "The Big Event"
+  },
   "https://studio.code.org/s/course1/stage/15/puzzle/2": {
     "dsls": {
       "answers": [
@@ -907,6 +925,9 @@
       "courseA_playlab_events_challenge2_b": "You can make a robot beep.\n\n[blockly block][0]",
       "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/course1/stage/17/puzzle/1": {
+    "title": "Going Places Safely"
   },
   "https://studio.code.org/s/course1/stage/17/puzzle/2": {
     "dsls": {

@@ -574,10 +574,10 @@ fr:
         Unplug9: Programmation de relais
         Unplug10: Internet
         Unplug11: Résumé et ouverture
-        C1_happy_maps_unplugged: हैप्पी मैप्स
+        C1_happy_maps_unplugged: Cartes Joyeuses
         C1_moveitmoveit_unplugged: Bouge, Bouge
         C1_bigevent_unplugged: Le Grand Evénement
-        C1_getting_loopy: लूपी होना
+        C1_getting_loopy: Tourner en rond
         C1_pair_programming: Programmation en Binôme
         C1_maze_intro_sequencing: Introduction au séquencement du labyrinthe
         C1_maze_debugging: Débogage du labyrinthe
@@ -589,8 +589,8 @@ fr:
         C1_maze_loops: Labyrinthe et boucles
         C1_playlab_storytelling: Labo de jeux - Créer une histoire
         C1_planting_seed: Planter une graine
-        C1_building_foundation: नींव का निर्माण करना
-        C1_going_places_safely: सुरक्षित रूप से स्थानों पर जाना
+        C1_building_foundation: Construire une fondation
+        C1_going_places_safely: Se déplacer en toute sécurité
         C2_maze_intro: Introduction au Dédale
         C2_artist_intro: Introduction à l'Artiste
         C2_zuck_repeat_loop: Labyrinthe et boucles
@@ -605,8 +605,8 @@ fr:
         C2_binary_bracelets: Bracelets binaires
         C2_relay_programming: Programmation de relais
         C2_paper_airplanes: Avions en Papier
-        C2_digital_footprint: आपका डिजीटल फुटप्रिंट
-        C2_digital_footprint_v2: आपका डिजीटल फुटप्रिंट
+        C2_digital_footprint: Ton empreinte numérique
+        C2_digital_footprint_v2: Ton empreinte numérique
         C3_maze_level_4: Labyrinthe et boucles
         C3_artist_intro: Introduction à l'Artiste
         C3_artist_functions: 'Artiste : les fonctions'
@@ -623,7 +623,7 @@ fr:
         C3_dice_race: Course de Dés
         C3_internet: Internet
         C3_crowdsourcing: Financement participatif
-        C3_functional_suncatchers: फंक्शनल सनकैचर्स
+        C3_functional_suncatchers: Vitraux fonctionnels
         C3_songwriting_with_parameters: Composition de chansons avec des paramètres
         C4_intro: Introduction
         C4_loops_zombie: boucles
@@ -787,8 +787,8 @@ fr:
         hoc_dance_events: Soirée Dansante - Évènements
         hoc_dance_properties: Soirée Dansante - Propriétés
         hoc_dance_congrats: Soirée Dansante - C’est party !
-        c_and_c_great_to_create: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
-        c_and_c_digital_sharing: डिजीटल शेयरिंग
+        c_and_c_great_to_create: C'est bien de créer et de jouer équitablement
+        c_and_c_digital_sharing: Partage numérique
         teaching_csf_how_it_works: 'Enseigner les Fondamentaux de l’Informatique :
           Comment Fonctionne le Cours'
         elem_pd_2: L’Informatique à l'École Primaire - PD vidéo 2/2
@@ -841,6 +841,7 @@ fr:
         hoc_dance_events_2019: Soirée Dansante 2019 - Évènements
         hoc_dance_measures_2019: Soirée Dansante – Les Mesures
         hoc_dance_properties_2019: Soirée Dansante 2019 - Propriétés
+        csd_what_computers_do: Que font les ordinateurs?
         csf_my_online_neighborhood_2020: Mon Quartier en Ligne
         csf_private_and_personal_information: Informations Privées et Personnelles
         csd_what_computers_are: Qu'est ce qu'un Ordinateur ?

@@ -1,0 +1,54 @@
+name 'csf_20-21_course_c_cross-curricular_opportunities'
+editor_experiment ''
+title 'Course C: Cross-Curricular Opportunities'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course C: Cross-Curricular Opportunities
+
+## Common Core English Language Arts Standards
+
+<details><summary>
+
+**Language**
+
+</summary>
+
+* **2.L.6** - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using adjectives and adverbs to describe (e.g., When other kids are happy that makes me happy).
+
+</details>
+
+<details><summary>
+
+**Speaking & Listening**
+
+</summary>
+
+* **2.SL.1** - Participate in collaborative conversations with diverse partners about grade 2 topics and texts with peers and adults in small and larger groups.
+
+* **2.SL.1.a** - Follow agreed-upon rules for discussions (e.g., gaining the floor in respectful ways, listening to others with care, speaking one at a time about the topics and texts under discussion).
+
+* **2.SL.1.b** - Build on others’ talk in conversations by linking their comments to the remarks of others.
+
+* **2.SL.2** - Recount or describe key ideas or details from a text read aloud or information presented orally or through other media.
+
+* **2.SL.6** - Produce complete sentences when appropriate to task and situation in order to provide requested detail or clarification.
+
+</details>
+
+## Next Generation Science Standards
+
+<details><summary>
+
+**Engineering, Technology, and Applications of Science**
+
+</summary>
+
+* **3-5-ETS1-1** - Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.
+
+* **3-5-ETS1-2** - Generate and compare multiple possible solutions  to a problem based on how well each is likely to meet the criteria and constraints of the problem.
+
+</details>
+
+
+MARKDOWN

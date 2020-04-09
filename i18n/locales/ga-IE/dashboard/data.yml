@@ -422,7 +422,7 @@ ga:
         mc_2016_intro: Uair Chódála Minecraft - Réamhrá
         mc_2016_loops: Uair Chódála Minecraft - Lúba
         mc_2016_events: Uair Chódála Minecraft - Teagmhais
-        mc_2016_spawn: Uair Chódála Minecraft - Sceitheadh
+        mc_2016_spawn: Uair Chódála Minecraft - Cruthú
         mc_2016_congrats: Uair Chódála Minecraft - Comhghairdeas
         applab_hoc_welcome: Uair Chódála sa tSaotharlann Aipeanna - Fáilte
         applab_hoc_setproperty: Uair Chódála sa tSaotharlann Aipeanna - setProperty
@@ -521,7 +521,10 @@ ga:
         hoc_dance_events_2019: Cóisir Dhamhsa - Teagmhais
         hoc_dance_measures_2019: Cóisir Dhamhsa - Tomhais
         hoc_dance_properties_2019: Cóisir Dhamhsa - Airíonna
+        csd_what_computers_do: Céard a dhéanann ríomhairí?
         csf_my_online_neighborhood_2020: Mo Chomharsanacht Ar Líne
+        csf_follow_the_digital_trail: Lean an Lorg Digiteach
+        codebreak_e01: 'Códbhriseadh 1.0: Algartaim le Hill Harper'
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é
