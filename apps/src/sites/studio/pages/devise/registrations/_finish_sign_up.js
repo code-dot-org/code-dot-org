@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -38,16 +37,7 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
-    // FND-1099 Remove this once PARENT_EMAIL_PREFERENCE is launched.
-    setupParentEmailPreferenceExperiment();
     renderParentSignUpSection();
-  }
-
-  // FND-1099 Remove this once PARENT_EMAIL_PREFERENCE is launched.
-  function setupParentEmailPreferenceExperiment() {
-    if (experiments.isEnabled(experiments.PARENT_EMAIL_PREFERENCE)) {
-      $('#parent-email-experiment-container').show();
-    }
   }
 
   let alreadySubmitted = false;
