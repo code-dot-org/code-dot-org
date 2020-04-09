@@ -36,11 +36,11 @@ module Pd::Foorm
         ws_submission = ws_submissions.where(foorm_submission_id: submission.id).first
         survey_key = get_survey_key(ws_submission)
         next unless parsed_forms[:general][form_key] || parsed_forms[:facilitator][form_key]
-        workshop_summary[survey_key] ||= {response_count: 0}
-        workshop_summary[survey_key][:response_count] += 1
+        workshop_summary[survey_key] ||= {}
 
         if ws_submission.facilitator_id.nil?
-          workshop_summary[survey_key][:general] ||= {}
+          workshop_summary[survey_key][:general] ||= {response_count: 0}
+          workshop_summary[survey_key][:general][:response_count] += 1
           workshop_summary[survey_key][:general][form_key] ||= {}
           workshop_summary[survey_key][:general][form_key] = add_single_submission_to_summary(
             submission,
@@ -49,7 +49,8 @@ module Pd::Foorm
           )
         else
           facilitator_name = User.find(ws_submission.facilitator_id).name
-          workshop_summary[survey_key][:facilitator] ||= {}
+          workshop_summary[survey_key][:facilitator] ||= {response_count: 0}
+          workshop_summary[survey_key][:facilitator][:response_count] += 1
           workshop_summary[survey_key][:facilitator][form_key] ||= {}
           workshop_summary[survey_key][:facilitator][form_key] = add_facilitator_submission_to_summary(
             submission,
@@ -60,6 +61,14 @@ module Pd::Foorm
         end
       end
       workshop_summary
+    end
+
+    def self.get_response_count_per_survey(workshop_id, form_name, form_version)
+      Pd::WorkshopSurveyFoormSubmission.
+        where(pd_workshop_id: workshop_id).
+        joins(:foorm_submission).
+        where(foorm_submissions: {form_name: form_name, form_version: form_version}).
+        select(:user_id).distinct.count
     end
 
     def self.add_facilitator_submission_to_summary(submission, current_workshop_summary, facilitator_name, form_questions)

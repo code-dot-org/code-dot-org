@@ -93,7 +93,7 @@ module Pd::Foorm
           end
         end
         if included_form
-          intermediate_rollup[:response_count] += summaries_by_form[:response_count]
+          intermediate_rollup[:response_count] += summaries_by_form[:general][:response_count]
         end
       end
       intermediate_rollup
