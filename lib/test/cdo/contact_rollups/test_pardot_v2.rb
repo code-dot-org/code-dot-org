@@ -241,10 +241,13 @@ class PardotV2Test < Minitest::Test
       {old_data: nil, new_data: {k1: 'v1'}, expected_delta: {k1: 'v1'}},
       {old_data: {k1: 'v1'}, new_data: {}, expected_delta: {k1: nil}},
       {old_data: {k1: 'v1'}, new_data: {k1: 'v1'}, expected_delta: {}},
+      {old_data: {k1: 'v1'}, new_data: {k1: 'v1.1'}, expected_delta: {k1: 'v1.1'}},
+      {old_data: {k1: 'v1'}, new_data: {k2: 'v2'}, expected_delta: {k1: nil, k2: 'v2'}},
+      {old_data: {k1: nil}, new_data: {k2: 'v2'}, expected_delta: {k2: 'v2'}},
       {
-        old_data: {k1: 'v1', k2: 'v2'},
-        new_data: {k1: 'v1.1', k3: 'v3'},
-        expected_delta: {k1: 'v1.1', k2: nil, k3: 'v3'}
+        old_data: {k1: 'v1', k2: 'v2', k3: nil},
+        new_data: {k1: 'v1.1', k4: 'v4'},
+        expected_delta: {k1: 'v1.1', k2: nil, k4: 'v4'}
       },
     ]
 
