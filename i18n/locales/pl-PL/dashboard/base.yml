@@ -211,6 +211,7 @@ pl:
       %{name}
   parent_mailer:
     student_associated_subject: 'Informacje logowania Code.org'
+    parent_email_added_subject: 'Witaj na Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Witaj na Code.org!'
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
@@ -416,6 +417,7 @@ pl:
     confirm_secret_words: 'Potwierdź, że to ty, wprowadzając swoje aktualne sekretne słowa'
     enter_parent_email: "Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)"
     update_email: "Uaktualnij"
+    encrypted: "zaszyfrowane"
   user_level:
     completed: 'Ukończono'
     tried: 'Próbowano'

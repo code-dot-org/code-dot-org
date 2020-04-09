@@ -1532,8 +1532,7 @@ cs-CZ:
             plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
-          correct: true
+        - correct: true
           feedback: Správně!
         - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
         - text: Včela se pokusí získat med z květin i ze včelích pláství.
