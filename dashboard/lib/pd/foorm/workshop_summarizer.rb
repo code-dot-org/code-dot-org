@@ -7,17 +7,20 @@ module Pd::Foorm
 
     # @return
     #   {
-    #     general: {
+    #     Day 0: {
+    #       general: {
     #       <form_name>.<form_version> =>
-    #       {
-    #         num_respondents: 4,
-    #         <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
-    #         <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
-    #         <question3-name> => ['abc', 'def']
+    #         {
+    #           response_count: 4,
+    #           <question1-name> => { num_respondents: 3, <answer1-name>: 5, <answer2-name>: 3, other_answers: ["other 1", "other 2"]...},
+    #           <question2-name> => {<answer1-name>: 5, <answer2-name>: 3,...},
+    #           <question3-name> => ['abc', 'def']
+    #         }
+    #       },
+    #       facilitator: {
+    #         response_count: {facilitator1: 2, facilitator2: 2},
+    #         <question4-name> => {facilitator1: {answer1: 5, answer2: 3}, facilitator2: {answer1: 4,...}}
     #       }
-    #     },
-    #     facilitator: {
-    #       <question4-name> => {facilitator1: {answer1: 5, answer2: 3}, facilitator2: {answer1: 4,...}}
     #     }
     #   }
     # The answers are split by general questions and per-facilitator questions
@@ -49,8 +52,9 @@ module Pd::Foorm
           )
         else
           facilitator_name = User.find(ws_submission.facilitator_id).name
-          workshop_summary[survey_key][:facilitator] ||= {response_count: 0}
-          workshop_summary[survey_key][:facilitator][:response_count] += 1
+          workshop_summary[survey_key][:facilitator] ||= {response_count: {}}
+          workshop_summary[survey_key][:facilitator][:response_count][facilitator_name] ||= 0
+          workshop_summary[survey_key][:facilitator][:response_count][facilitator_name] += 1
           workshop_summary[survey_key][:facilitator][form_key] ||= {}
           workshop_summary[survey_key][:facilitator][form_key] = add_facilitator_submission_to_summary(
             submission,
