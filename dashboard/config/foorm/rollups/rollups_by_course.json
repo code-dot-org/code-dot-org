@@ -7,5 +7,8 @@
     {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
     {"question_id": "overall_success", "header_text": "Overall Success"}
   ],
-  "CS Fundamentals": []
+  "CS Fundamentals": [
+    {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
+    {"question_id": "overall_success", "header_text": "Overall Success"}
+  ]
 }

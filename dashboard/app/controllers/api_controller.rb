@@ -352,7 +352,7 @@ class ApiController < ApplicationController
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, nil, true)
+    summary = script.summarize(true, current_user, true)
     summary[:path] = overview_path
     render json: summary
   end

@@ -5,17 +5,19 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
-  '#school-info-inputs',
+  '#school-info-section',
   '#email-preference-radio'
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
-  '#student-consent'
+  '#student-consent',
+  '#parent-email-container'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -36,6 +38,16 @@ $(document).ready(() => {
   function init() {
     setUserType(getUserType());
     renderSchoolInfo();
+    // FND-1099 Remove this once PARENT_EMAIL_PREFERENCE is launched.
+    setupParentEmailPreferenceExperiment();
+    renderParentSignUpSection();
+  }
+
+  // FND-1099 Remove this once PARENT_EMAIL_PREFERENCE is launched.
+  function setupParentEmailPreferenceExperiment() {
+    if (experiments.isEnabled(experiments.PARENT_EMAIL_PREFERENCE)) {
+      $('#parent-email-experiment-container').show();
+    }
   }
 
   let alreadySubmitted = false;
@@ -70,6 +82,28 @@ $(document).ready(() => {
         'input[name="user[school_info_attributes][school_id]"]'
       );
       schoolIdEl.val('');
+    }
+  }
+
+  $('#user_parent_email_preference_opt_in_required').change(function() {
+    // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
+    // allows the parent sign up section of the form.
+    if (getUserType() === '') {
+      $('#user_user_type')
+        .val('student')
+        .change();
+    }
+    renderParentSignUpSection();
+  });
+
+  function renderParentSignUpSection() {
+    let checked = $('#user_parent_email_preference_opt_in_required').is(
+      ':checked'
+    );
+    if (checked) {
+      fadeInFields(['.parent-email-field']);
+    } else {
+      hideFields(['.parent-email-field']);
     }
   }
 

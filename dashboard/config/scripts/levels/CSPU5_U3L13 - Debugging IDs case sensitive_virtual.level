@@ -7,6 +7,7 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
+      "setProperty": null,
       "onEvent": {
         "params": [
           "\"id\"",
@@ -14,13 +15,20 @@
           "function(){\n\n}"
         ]
       },
-      "moveForward": null,
-      "turnLeft": null
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null
     },
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Debug the program by verifying your IDs are being referenced properly. (Click to see full instructions)",
-    "start_blocks": "onEvent(\"fwdBtn\", \"click\", function(){\r\n  moveForward(25);\r\n});\r\nonEvent(\"leftbtn\", \"click\", function(){\r\n  turnLeft(90);\r\n});",
+    "start_blocks": "onEvent(\"blueButton\", \"click\", function(){\r\n  setProperty(\"screen1\",\"background-color\",\"blue\");\r\n});\r\nonEvent(\"RedButton\", \"click\", function(){\r\n  setProperty(\"screen1\",\"background-color\",\"red\");\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -37,7 +45,7 @@
     "free_play": "true",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "true",
+    "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -47,13 +55,12 @@
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": "HkFAuxcHk7FrpOQl/NluL//zhJexv2BrW/GPj3EreveCfk9vsPDRo5c/dpNy\niy1Y\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"fwdBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 15px; top: 10px;\">Go Forth!</button><button id=\"leftBtn\" style=\"padding: 0px; margin: 0px; height: 30px; width: 100px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 130px; top: 10px;\">Turn Left!</button></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"blueButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 120px; background-color: rgb(0, 0, 238); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 4px; border-width: 1px; font-family: Arial, Helvetica, sans-serif; font-size: 32px; position: absolute; left: 100px; top: 100px;\">Blue!</button><button id=\"redButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 80px; width: 120px; background-color: rgb(238, 0, 0); color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); border-radius: 4px; border-width: 1px; font-family: Arial, Helvetica, sans-serif; font-size: 32px; position: absolute; left: 100px; top: 250px;\">Red!</button></div></div>",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\nTry another one! -- This one is trickier, but very common.\r\n\r\n1. **Run the program** and inspect the messages in the Debug Console for clues.\r\n2. **Investigate** - track down what the root of the problem might be.\r\n3. **Fix it** - correct the errors in the program so that it works as intended.\r\n4. **Run the program** and verify that both buttons have the intended functionality.\r\n5. **Repeat as necessary** until the program works as intended\r\n\r\n<details>\r\n\r\n<summary>\r\nHint? [click here]\r\n</summary>\r\n\r\n<li>Remember: IDs are **case-sensitive**!!!</li>\r\n<li>The error is with the id: **leftBtn**</li>\r\n\r\n\r\n</details>\r\n",
+    "long_instructions": "# Debugging Event-Driven Programs: IDs\r\n\r\nTry another one! -- This one is trickier, but very common.\r\n\r\n1. **Run the program** and read the messages in the Debug Console for clues.\r\n2. **Investigate** - track down the problem.\r\n3. **Fix it** - correct the errors in the program so that it works as intended.\r\n4. **Run the program** and verify that both buttons do what you expect.\r\n5. **Repeat as necessary** until the program works as intended\r\n\r\n<details>\r\n\r\n<summary>\r\nHint? [click here]\r\n</summary>\r\n\r\n<li>Remember: IDs are case-sensitive!!!</li>\r\n<li>The error is with the id: redButton</li>\r\n\r\n\r\n</details>\r\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -63,11 +70,18 @@
     "name_suffix": "_virtual",
     "mini_rubric": "false",
     "encrypted": "false",
-    "preload_asset_list": null
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-19 20:42:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 03:48:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 19:32:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-09-19 20:42:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 03:48:08 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 19:32:32 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-04-01 21:05:58 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"start_html\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 21:15:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 21:15:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 21:17:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-02 15:59:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-06 15:17:02 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
