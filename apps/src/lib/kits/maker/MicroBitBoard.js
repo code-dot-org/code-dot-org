@@ -8,8 +8,8 @@ import {
   componentConstructors
 } from './MicroBitComponents';
 import {MicroBitButton} from './Button';
-import {ExternalLed} from './LedMatrix';
 import MBFirmataWrapper from './MBFirmataWrapper';
+import ExternalLed from './ExternalLed';
 
 /**
  * Controller interface for BBC micro:bit board using

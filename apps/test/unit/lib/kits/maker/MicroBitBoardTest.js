@@ -3,10 +3,10 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
-import {ExternalLed} from '@cdo/apps/lib/kits/maker/LedMatrix';
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
+import ExternalLed from '@cdo/apps/lib/kits/maker/ExternalLed';
 
 describe('MicroBitBoard', () => {
   let board;
