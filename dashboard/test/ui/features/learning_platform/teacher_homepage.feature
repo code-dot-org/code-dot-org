@@ -25,6 +25,17 @@ Feature: Using the teacher homepage sections feature
     And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
   Scenario: Navigate to course and unit pages
+    # No sections, ensure that levels load correctly after navigating from MiniView
+    Given I am on "http://studio.code.org/s/csp2-2017/stage/1/puzzle/1"
+    And I wait to see ".header_popup_link"
+    When I wait for jquery to load
+    And I click selector ".header_popup_link"
+    And I wait until element "a:contains(View Unit Overview)" is visible
+    Then I click selector "a:contains(View Unit Overview)"
+    And I wait until current URL contains "/s/csp2-2017"
+    Then I press the first ".uitest-ProgressPill" element
+    And I wait until current URL contains "/s/csp2-2017/stage/1/puzzle/1"
+
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
     And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
@@ -40,7 +51,7 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
-    And check that the URL contains "/courses/csp-2017"
+    And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
     And I wait to see ".uitest-script-next-banner"
