@@ -109,7 +109,7 @@
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
       .row
-        .span6
+        .span12#gdpr-section
           = f.hidden_field :data_transfer_agreement_required, value: "1"
           .checkbox
             = f.label :data_transfer_agreement_accepted do
@@ -117,9 +117,8 @@
               %span
                 = t('signup_form.agree_us_website')
                 = t('signup_form.my_data_to_us')
-        .span2
           - if @user.errors[:data_transfer_agreement_accepted].present?
-            %span.error= t('signup_form.accept_terms')
+            %p.error= t('signup_form.accept_terms')
 
     .row#email-preference-radio{style: "display: none;"}
       .span10.signup-field-label
