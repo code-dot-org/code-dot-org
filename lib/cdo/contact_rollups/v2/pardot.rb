@@ -237,4 +237,25 @@ class PardotV2
       {prospect_index: node.attr("identifier").to_i, error_msg: node.text}
     end
   end
+
+  # Calculates what needs to change to transform an old data to a new data.
+  # @param [Hash] old_data
+  # @param [Hash] new_data
+  # @return [Hash]
+  def self.calculate_data_delta(old_data, new_data)
+    return new_data unless old_data.present?
+
+    # Collect key-value pairs that exist only in the new data
+    delta = {}
+    new_data.each_pair do |key, val|
+      delta[key] = val unless old_data.key?(key) && old_data[key] == val
+    end
+
+    # Remove entries that exist only in the old data and not in the new data
+    old_data.each_pair do |key, _|
+      delta[key] = nil unless new_data.key?(key)
+    end
+
+    delta
+  end
 end
