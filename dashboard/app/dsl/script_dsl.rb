@@ -273,6 +273,9 @@ class ScriptDSL < BaseDSL
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
+    # If we group together all the lesson groups we could do this for them
+    # Or do we want to just have lesson group as part of stage and then parse it out later?
+
     {@name => {'stages' => i18n_strings}}
   end
 

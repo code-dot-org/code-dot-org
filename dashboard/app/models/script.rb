@@ -1227,6 +1227,7 @@ class Script < ActiveRecord::Base
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
   # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(stages_i18n, script_name = '', metadata_i18n = {})
+    puts stages_i18n
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
 

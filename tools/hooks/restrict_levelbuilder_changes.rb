@@ -5,11 +5,13 @@ BLOCKS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/blocks', __FILE__).f
 SHARED_FUNCTIONS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/shared_functions', __FILE__).freeze
 LIBRARIES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/libraries', __FILE__).freeze
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).freeze
+LESSON_GROUP_DIR = File.expand_path(REPO_DIR + '/dashboard/config/lesson_groups', __FILE__).freeze
 COURSES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/courses', __FILE__).freeze
 VIDEO_THUMBNAILS_DIR = File.expand_path(REPO_DIR + '/dashboard/public/c/video_thumbnails', __FILE__).freeze
 WHITELISTED_FILES = %w(
   dashboard/config/locales/dsls.en.yml
   dashboard/config/locales/scripts.en.yml
+  dashboard/config/locales/lesson_groups.en.yml
   dashboard/config/locales/courses.en.yml
   dashboard/config/locales/unplugged.en.yml
   dashboard/config/locales/data.en.yml
@@ -25,6 +27,6 @@ staged_files = HooksUtils.get_staged_files
 
 staged_files.each do |filename|
   raise "#{ERROR_MESSAGE}\nFile blocked: #{filename}" unless filename.start_with?(
-    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, LEVELS_DIR, COURSES_DIR, VIDEO_THUMBNAILS_DIR
+    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, LEVELS_DIR, COURSES_DIR, VIDEO_THUMBNAILS_DIR, LESSON_GROUP_DIR
   ) || WHITELISTED_FILES.include?(filename)
 end
