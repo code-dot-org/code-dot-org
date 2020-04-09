@@ -73,33 +73,15 @@ class PardotV2
   # @param [Boolean] eager_submit
   # @return [Array] two arrays, one for all submitted prospects and one for Pardot errors
   def batch_create_prospects(email, data, eager_submit = false)
-    submissions = []
-    errors = []
-
     prospect = self.class.convert_to_prospect_fields data.merge(email: email)
     @new_prospects << prospect
 
-    url = self.class.build_batch_url BATCH_CREATE_URL, @new_prospects
-    if url.length > URL_LENGTH_THRESHOLD || @new_prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      # TODO: rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      # Don't retry an insert because it will create duplicate Pardot prospects.
-      errors = self.class.submit_batch_request BATCH_CREATE_URL, @new_prospects
-      submissions = @new_prospects
-      @new_prospects = []
-    end
-
-    [submissions, errors]
+    process_batch BATCH_CREATE_URL, @new_prospects, eager_submit
   end
 
   # Batch-creates prospect in Pardot. Request is sent immediately.
   def batch_create_remaining_prospects
-    return [], [] unless @new_prospects.present?
-
-    errors = self.class.submit_batch_request BATCH_CREATE_URL, @new_prospects
-    submissions = @new_prospects
-    @new_prospects = []
-
-    [submissions, errors]
+    process_batch BATCH_CREATE_URL, @new_prospects, true
   end
 
   # @param [String] email
@@ -109,49 +91,38 @@ class PardotV2
   # @param [Boolean] eager_submit
   # @return [Array]
   def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit = false)
-    submissions = []
-    errors = []
-
     new_prospect_data = self.class.convert_to_prospect_fields new_contact_data
     delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
-    # TODO: bail out if delta is empty {}
+    return [], [] unless delta.present?
 
     prospect = delta.merge(
       self.class.convert_to_prospect_fields(email: email, pardot_id: pardot_id)
     )
     @updated_prospects << prospect
 
-    # TODO: Generalize with batch_create_prospects and batch_create_remaining_prospects
-    url = self.class.build_batch_url BATCH_UPDATE_URL, @updated_prospects
+    process_batch BATCH_UPDATE_URL, @updated_prospects, eager_submit
+  end
 
-    if url.length > URL_LENGTH_THRESHOLD || @updated_prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      errors = self.class.submit_batch_request BATCH_UPDATE_URL, @updated_prospects
-      submissions = @updated_prospects
-      @updated_prospects = []
+  def batch_update_remaining_prospects
+    process_batch BATCH_UPDATE_URL, @updated_prospects, true
+  end
+
+  def process_batch(endpoint, prospects, eager_submit)
+    return [], [] unless prospects.present?
+
+    submissions = []
+    errors = []
+    url = self.class.build_batch_url endpoint, prospects
+
+    if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
+      # TODO: rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
+      # Don't retry an insert because it will create duplicate Pardot prospects.
+      errors = self.class.submit_batch_request endpoint, prospects
+      submissions = prospects.clone
+      prospects.clear
     end
 
     [submissions, errors]
-  end
-
-  # Calculates what needs to change to transform an old data to a new data
-  # @param [Hash] old_data
-  # @param [Hash] new_data
-  # @return [Hash]
-  def self.calculate_data_delta(old_data, new_data)
-    return new_data unless old_data.present?
-
-    # Collect key-value pairs that exist only in new data
-    delta = {}
-    new_data.each_pair do |key, val|
-      delta[key] = val unless old_data.key?(key) && old_data[key] == val
-    end
-
-    # Remove entries that no longer exist in new data
-    old_data.each_pair do |key, _|
-      delta[key] = nil unless new_data.key?(key)
-    end
-
-    delta
   end
 
   # Converts contact fields to Pardot prospect fields.
