@@ -227,6 +227,7 @@ ar:
       %{name}
   parent_mailer:
     student_associated_subject: 'معلومات الدخول على Code.org'
+    parent_email_added_subject: 'مرحبا بكم في Code.org!'
   teacher_mailer:
     new_teacher_subject: 'مرحبا بكم في Code.org!'
     delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
@@ -428,6 +429,7 @@ ar:
     update: "تحديث الحساب"
     account_successfully_updated: "تم تحديث الحساب بنجاح."
     update_email: "تحديث"
+    encrypted: "مشفر"
   user_level:
     completed: 'أكمل'
     tried: 'حاول'

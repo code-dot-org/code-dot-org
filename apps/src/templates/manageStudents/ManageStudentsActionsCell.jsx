@@ -192,6 +192,25 @@ class ManageStudentActionsCell extends Component {
     navigateToHref(url);
   };
 
+  onViewParentLetter = () => {
+    const {id, sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
+    window.open(url, '_blank');
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'single-student-download-parent-letter',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: id
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+
   render() {
     const {rowType, isEditing, loginType} = this.props;
     const canDelete = [
@@ -200,7 +219,7 @@ class ManageStudentActionsCell extends Component {
       SectionLoginType.email
     ].includes(loginType);
 
-    const showLoginCardOption = [
+    const showWordPictureOptions = [
       SectionLoginType.word,
       SectionLoginType.picture
     ].includes(loginType);
@@ -214,9 +233,14 @@ class ManageStudentActionsCell extends Component {
                 {i18n.edit()}
               </PopUpMenu.Item>
             )}
-            {showLoginCardOption && (
+            {showWordPictureOptions && (
               <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
                 {i18n.printLoginCard()}
+              </PopUpMenu.Item>
+            )}
+            {showWordPictureOptions && (
+              <PopUpMenu.Item onClick={this.onViewParentLetter}>
+                {i18n.viewParentLetter()}
               </PopUpMenu.Item>
             )}
             {this.props.canEdit && canDelete && <MenuBreak />}
