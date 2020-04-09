@@ -12,6 +12,10 @@ require 'cdo/redshift_import'
 
 # Delay between each check on task status.
 TASK_STATUS_DELAY = 10.minutes
+# As of early 2020, the Task that exports `user_levels` takes about 10 hours to complete and is the longest daily task.
+DAILY_TASK_MAX_EXECUTION_TIME = 16.hours
+# As of early 2020, the Task that exports 'level_sources' takes about 30 hours to complete.
+WEEKLY_TASK_MAX_EXECUTION_TIME = 40.hours
 
 def main
   ChatClient.message 'data', 'Beginning daily export from Aurora MySQL database to Redshift.'
@@ -26,14 +30,10 @@ def main
   # Ensure that if any threads that are starting/monitoring DMS Tasks Raise an error, that the main thread here raises.
   Thread.abort_on_exception = true
 
-  # Get list of tasks that should be executed daily.
-  daily_tasks = Cdo::DMS::ReplicationTask.tasks_by_frequency('daily')
-  # Spawn one thread for each replication task, so we can start and monitor them independently.
-  daily_threads = []
-  daily_tasks.each do |task|
-    daily_threads << Thread.new {task.start(16.hours.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
-  end
-  daily_threads.each(&:join)
+  # Find and execute each daily task in a separate thread.
+  Cdo::DMS::ReplicationTask.tasks_by_frequency('daily').map do |task|
+    Thread.new {task.start(DAILY_TASK_MAX_EXECUTION_TIME.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
+  end.each(&:join)
 
   # The DMS tasks exported to staging (_import_) tables to avoid disrupting queries on the production Redshift tables
   # during the lengthy table import process.  Rename the staging tables to the production table names to complete
@@ -48,12 +48,11 @@ def main
   # the only_one_running? restriction.
   if Date.today.saturday?
     ChatClient.message 'data', "Beginning weekly export from Aurora MySQL database to Redshift."
-    weekly_tasks = Cdo::DMS::ReplicationTask.tasks_by_frequency('weekly')
-    weekly_threads = []
-    weekly_tasks.each do |task|
-      weekly_threads << Thread.new {task.start(40.hours.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
-    end
-    weekly_threads.each(&:join)
+
+    Cdo::DMS::ReplicationTask.tasks_by_frequency('weekly').map do |task|
+      Thread.new {task.start(WEEKLY_TASK_MAX_EXECUTION_TIME.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
+    end.each(&:join)
+
     # Currently, the only weekly task (level_sources) is exported without using a staging table, so this won't find
     # any temp tables to rename.
     RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
