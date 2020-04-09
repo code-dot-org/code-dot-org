@@ -70,6 +70,35 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     end
   end
 
+  test 'extract_updated_at' do
+    base_time = Time.now.utc - 7.days
+    tests = [
+      {
+        input: {'table1' => {'data_updated_at' => base_time}},
+        expected_output: {updated_at: base_time}
+      },
+      {
+        input: {
+          'table1' => {'data_updated_at' => base_time - 1.day},
+          'table2' => {'data_updated_at' => base_time + 1.day},
+          'table3' => {'data_updated_at' => base_time},
+        },
+        expected_output: {updated_at: base_time + 1.day}
+      }
+    ]
+
+    # Test valid inputs
+    tests.each_with_index do |test, index|
+      output = ContactRollupsProcessed.extract_updated_at(test[:input])
+      assert_equal test[:expected_output], output, "Test index #{index} failed"
+    end
+
+    # Test invalid input
+    assert_raise StandardError do
+      ContactRollupsProcessed.extract_updated_at({'table' => {}})
+    end
+  end
+
   test 'parse_contact_data parses valid input' do
     time_str = '2020-03-11 15:01:26'
     time_parsed = Time.find_zone('UTC').parse(time_str)
