@@ -23,6 +23,8 @@ Markdown is a lightweight markup language that you can use to format your pages.
 [**Advanced**](/markdown/advanced)
 
 * Tables
+* Partials
+* Advanced Partials
 * Videos
 * Charts
 * PDF generation
