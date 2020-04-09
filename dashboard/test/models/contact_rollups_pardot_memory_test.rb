@@ -32,78 +32,21 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal new_pardot_id, ContactRollupsPardotMemory.find_by(email: existing_record.email)&.pardot_id
   end
 
-  test 'update_pardot_prospects' do
-    # Function under test: ContactRollupsPardotMemory.update_pardot_prospects
-    # Input: processed table + pardot_memory table
-    # Expected outputs/results:
-    # 1. Send requests to Pardot
-    #   1.1. Find all contacts with updates
-    #     1.1.1 Contacts has pardot ID but never synced to pardot
-    #     1.1.2 Contacts updated after the last time synced to Pardot
-    #     1.1.3 Contacts have new pardot ids
-    #   1.2. Calculate content of each contact to sync (delta could be none)
-    #   1.3. Create batch update query
-    #   1.4. Send update query
-    # 2. Make changes to PardotMemory table
-    #   2.1 Update successfully synced contacts: time synced, data synced
-    #   2.2 Update rejected contacts: time rejected, reason
-
-    # Test 1.1.1 + 1.1.2
-    # setup:
-    #   processed table:
-    #     contact (a).
-    #     contact (b) w/ data_updated_at > pardot data_synced_at.
-    #     contact (c) w/ data_updated_at < pardot data_synced_at.
-    #     contact (d)
-    #     contact (e) not in pardot_memory
-    #   pardot_memory table:
-    #     contact (a) with pardot_id (data_synced_at = null).
-    #     contact (b) w/ pardot_id + data_synced + data_synced_at.
-    #     contact (c) w/ pardot_id + data_synced + data_synced_at.
-    #     contact (d) w/o pardot_id
-    #     contact (f) not in processed table
-    # expect: find (a) & (b)
-
-    base_time = Time.now - 2.days
-    contact_list = [
-      {email: 'alpha@cdo.org', pardot_id: 1, data_updated_at: base_time, data_synced_at: nil, data_synced: nil},
-      {email: 'beta@cdo.org', pardot_id: 2, data_updated_at: base_time, data_synced_at: base_time - 1.day, data_synced: {}},
-      {email: 'gamma@cdo.org', pardot_id: 3, data_updated_at: base_time, data_synced_at: base_time + 1.day, data_synced: {}},
-      {email: 'delta@cdo.org', pardot_id: nil},
-      {email: 'epsilon@cdo.org', not_in_pardot_memory_table: true},
-      {email: 'zeta@cdo.org', not_in_processed_table: true},
-    ]
-    expected_updated_contacts = %w(alpha@cdo.org beta@cdo.org)
-
-    contact_list.each do |contact|
-      unless contact[:not_in_processed_table]
-        create :contact_rollups_processed, email: contact[:email], data: {updated_at: contact[:data_updated_at]}
-      end
-
-      unless contact[:not_in_pardot_memory_table]
-        create :contact_rollups_pardot_memory, contact.slice(:email, :data_synced_at, :data_synced)
-      end
-    end
-
-    assert_equal expected_updated_contacts, ContactRollupsPardotMemory.update_pardot_prospects
-  end
-
   test 'create_new_pardot_prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
     PardotV2.stubs(:submit_batch_request).returns([])
 
     # Sync 1 contact
-    processed_contacts = []
-    processed_contacts << (create :contact_rollups_processed)
-
+    processed_contacts = [create(:contact_rollups_processed)]
     ContactRollupsPardotMemory.create_new_pardot_prospects
+
     assert_equal processed_contacts.length, ContactRollupsPardotMemory.count
 
     # Sync multiple contacts
     processed_contacts.concat(create_list(:contact_rollups_processed, 2))
-
     ContactRollupsPardotMemory.create_new_pardot_prospects
+
     assert_equal processed_contacts.length, ContactRollupsPardotMemory.count
     processed_contacts.each do |contact|
       refute_nil ContactRollupsPardotMemory.find_by(email: contact.email)
@@ -200,11 +143,5 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       data_rejected_reason: PardotHelpers::ERROR_INVALID_EMAIL,
       data_rejected_at: submitted_time
     )
-
-    record = ContactRollupsPardotMemory.find_by(
-      email: submissions.second[:email],
-      data_synced_at: submitted_time
-    )
-    assert_equal({'db_Opt_in' => 'Yes'}, record&.data_synced)
   end
 end
