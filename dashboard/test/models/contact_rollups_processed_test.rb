@@ -72,9 +72,9 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
   test 'parse_contact_data parses valid input' do
     time_str = '2020-03-11 15:01:26'
-    time_parsed = Time.parse(time_str)
+    time_parsed = Time.find_zone('UTC').parse(time_str)
 
-    test_cases = [
+    tests = [
       {
         input: format('[{"sources": "table1", "data": null, "data_updated_at": "%s"}]', time_str),
         expected_output: {'table1' => {'data_updated_at' => time_parsed}}
@@ -100,7 +100,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       }
     ]
 
-    test_cases.each_with_index do |test, index|
+    tests.each_with_index do |test, index|
       output = ContactRollupsProcessed.parse_contact_data test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
