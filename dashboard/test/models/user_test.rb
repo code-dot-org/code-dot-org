@@ -2266,21 +2266,21 @@ class UserTest < ActiveSupport::TestCase
   test 'creating a student with parent email opt in and a nil source should not create an email preference for the parent' do
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_source: nil})
     User.create(@good_data.merge(parent_email_params))
-    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     assert_nil email_preference
   end
 
   test 'creating a student with parent email opt in and a nil request_ip should not create an email preference for the parent' do
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_request_ip: nil})
     User.create(@good_data.merge(parent_email_params))
-    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     assert_nil email_preference
   end
 
   test 'creating a student with no parent email preference should not create an email preference for the parent' do
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in_required: '0'})
     User.create(@good_data.merge(parent_email_params))
-    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     assert_nil email_preference
   end
 
@@ -2305,7 +2305,7 @@ class UserTest < ActiveSupport::TestCase
     # parent_email shouldn't be set for a teacher.
     assert_nil user.parent_email
     # no parent email_preference should be created for teachers.
-    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email])
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     assert_nil email_preference
   end
 
