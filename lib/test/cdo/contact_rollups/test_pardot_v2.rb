@@ -88,9 +88,18 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_convert_to_prospect_fields
-    contact = {email: 'test@domain.com', pardot_id: 10, opt_in: true}
-    expected_prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
-    assert_equal expected_prospect, PardotV2.convert_to_prospect_fields(contact)
+    contacts = [
+      {email: 'test0@domain.com', pardot_id: 10, opt_in: true},
+      {email: 'test1@domain.com', pardot_id: nil, bad_key: true}
+    ]
+    expected_prospects = [
+      {email: 'test0@domain.com', id: 10, db_Opt_In: 'Yes'},
+      {email: 'test1@domain.com', id: nil}
+    ]
+
+    contacts.each_with_index do |contact, index|
+      assert_equal expected_prospects[index], PardotV2.convert_to_prospect_fields(contact)
+    end
   end
 
   def test_build_batch_url
