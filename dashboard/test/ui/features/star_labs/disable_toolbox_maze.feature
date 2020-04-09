@@ -6,7 +6,7 @@ Background:
   And I wait for the page to fully load
   Then element "#runButton" is visible
   Then I drag block "4" to block "6"
-  And I drag block "1" to block "7" plus offset 35, 50
+  And I drag block "2" to block "7" plus offset 35, 50
 
 Scenario: Toolbox in maze (non-category) is enabled
   Then the workspace has "1" blocks of type "maze_forever"
