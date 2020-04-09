@@ -4,6 +4,7 @@
   presumably by a UI test.
 
 - if !(request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)) && current_user && current_user.user_type == 'student'
+  %script{src: webpack_asset_path("js/layouts/_at_home_banner.js")}
 
   #at-home-banner
     %div.banner-content
@@ -13,10 +14,13 @@
       .buttons
         %button#link_your_email= I18n.t('at_home_banner.link_your_email')
         %button#not_now= I18n.t('at_home_banner.not_now')
+  = form_for(current_user,
+      url: '/users/parent_email',
+      remote: true,
+      html: { id: 'add-parent-email-modal-form' },
+      namespace: 'add-parent-email-modal',
+    ) do |f|
+    = f.hidden_field :parent_email
+    = f.hidden_field :parent_email_preference_opt_in
 
-  :javascript
-    // When loaded on the code.org homepage, jQuery is not yet available (since its
-    // load is deferred), but a shim implementing .ready() is available.
-    $(document).ready(function() {
-      //window.setupCookieBanner("#{rack_env}");
-    });
+

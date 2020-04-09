@@ -60,12 +60,14 @@ export default class AddParentEmailController {
   };
 
   onParentEmailChanged = parentEmail => {
-    this.displayedParentEmail.text(parentEmail);
     this.hideAddParentEmailModal();
-    this.displayedParentEmail.effect('highlight', {
-      duration: 1500,
-      color: color.orange
-    });
+    if (this.displayedParentEmail) {
+      this.displayedParentEmail.text(parentEmail);
+      this.displayedParentEmail.effect('highlight', {
+        duration: 1500,
+        color: color.orange
+      });
+    }
   };
 
   submitParentEmailChange({parentEmail, parentEmailOptIn}) {
