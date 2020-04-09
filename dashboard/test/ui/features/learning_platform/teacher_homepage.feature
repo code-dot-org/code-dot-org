@@ -32,9 +32,9 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".header_popup_link"
     And I wait until element "a:contains(View Unit Overview)" is visible
     Then I click selector "a:contains(View Unit Overview)"
-    And check that I am on "http://studio.code.org/s/csp2-2017"
+    And I wait until current URL contains "/s/csp2-2017"
     Then I press the first ".uitest-ProgressPill" element
-    And check that I am on "http://studio.code.org/s/csp2-2017/stage/1/puzzle/1"
+    And I wait until current URL contains "/s/csp2-2017/stage/1/puzzle/1"
 
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
@@ -51,7 +51,7 @@ Feature: Using the teacher homepage sections feature
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
-    And check that the URL contains "/courses/csp-2017"
+    And I wait until current URL contains "/courses/csp-2017"
 
     When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
     And I wait to see ".uitest-script-next-banner"
