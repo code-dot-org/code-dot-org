@@ -36,7 +36,7 @@ class PardotV2Test < Minitest::Test
     assert_equal expected_result, PardotV2.retrieve_new_ids(0)
   end
 
-  def test_batch_create_prospects_one_contact
+  def test_batch_create_prospects_single_contact
     contact = {email: 'crv2_test@domain.com', data: {opt_in: true}}
 
     ok_response = Nokogiri.XML <<-XML
@@ -46,6 +46,7 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
 
+    # Eagerly send a batch-create request
     submitted, errors = PardotV2.new.batch_create_prospects contact[:email], contact[:data], true
 
     expected_submissions = [{email: contact[:email], db_Opt_In: 'Yes'}]
@@ -59,31 +60,32 @@ class PardotV2Test < Minitest::Test
       {email: 'crv2_test@domain.com', data: {opt_in: true}}
     ]
 
-    error_msg = 'Invalid prospect email address'
     response_with_errors = Nokogiri.XML <<-XML
       <rsp stat="fail" version="1.0">
           <errors>
-              <prospect identifier="0">#{error_msg}</prospect>
+              <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
           </errors>
       </rsp>
     XML
     PardotV2.stubs(:post_with_auth_retry).returns(response_with_errors)
 
-    # First call, no request sent
+    # Calling batch_create for each contact. No request shall be sent
     pardot_writer = PardotV2.new
-    submitted, errors = pardot_writer.batch_create_prospects contacts.first[:email], contacts.first[:data]
-    assert_equal [], submitted
-    assert_equal [], errors
+    contacts.each do |contact|
+      submissions, errors = pardot_writer.batch_create_prospects contact[:email], contact[:data]
+      assert_equal [], submissions
+      assert_equal [], errors
+    end
 
-    # Second call, eagerly send request
-    submitted, errors = pardot_writer.batch_create_prospects contacts.last[:email], contacts.last[:data], true
+    # Flushing out the remaining data. Request shall be sent immediately
+    submissions, errors = pardot_writer.batch_create_remaining_prospects
 
     expected_submissions = [
       {email: contacts.first[:email], db_Opt_In: 'No'},
       {email: contacts.last[:email], db_Opt_In: 'Yes'}
     ]
-    expected_errors = [{prospect_index: 0, error_msg: error_msg}]
-    assert_equal expected_submissions, submitted
+    expected_errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
+    assert_equal expected_submissions, submissions
     assert_equal expected_errors, errors
   end
 
