@@ -110,6 +110,41 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     end
   end
 
+  test 'find_updated_contacts_query' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+    assert_equal 0, ContactRollupsProcessed.count
+
+    base_time = Time.now - 2.days
+    pardot_memory_contact_info = [
+      {email: 'alpha', pardot_id: 1, data_synced_at: nil, data_synced: nil},
+      {email: 'beta', pardot_id: 2, data_synced_at: base_time - 1.day, data_synced: {db_Opt_In: 'Yes'}},
+      {email: 'gamma', pardot_id: 3, data_synced_at: base_time + 1.day, data_synced: {db_Opt_In: 'Yes'}},
+      {email: 'delta', pardot_id: nil},
+      {email: 'epsilon', pardot_id: 4},
+    ]
+    pardot_memory_contact_info.each do |contact_info|
+      create :contact_rollups_pardot_memory, contact_info
+    end
+
+    processed_contact_info = [
+      {email: 'alpha', data: {opt_in: false, updated_at: base_time}},
+      {email: 'beta', data: {opt_in: false, updated_at: base_time}},
+      {email: 'gamma', data: {opt_in: true, updated_at: base_time}},
+      {email: 'delta'},
+      {email: 'zeta'},
+    ]
+    processed_contact_info.each do |contact_info|
+      create :contact_rollups_processed, contact_info
+    end
+
+    results = ActiveRecord::Base.connection.
+      exec_query(ContactRollupsPardotMemory.find_updated_contacts_query).map do |record|
+      record['email']
+    end
+
+    assert_equal %w(alpha beta), results
+  end
+
   test 'save_sync_results new prospect' do
     assert_equal 0, ContactRollupsPardotMemory.count
 
@@ -150,6 +185,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       assert_equal expected_data_synced, record&.data_synced
     end
   end
+
   test 'save_sync_results rejected contact' do
     assert_equal 0, ContactRollupsPardotMemory.count
 
