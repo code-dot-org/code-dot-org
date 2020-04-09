@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
+  selectSection,
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -28,6 +29,7 @@ const store = getStore();
 store.dispatch(setCurrentUserName(scriptData.userName));
 store.dispatch(setSections(scriptData.sections));
 store.dispatch(setSection(scriptData.section));
+store.dispatch(selectSection(scriptData.section.id));
 
 window.addEventListener('DOMContentLoaded', function() {
   // Mount and render the letter:

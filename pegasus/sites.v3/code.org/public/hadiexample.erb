@@ -1,0 +1,28 @@
+<input type="file" id="input" >
+
+<div id="previewdiv" ></div>
+<script>
+
+
+function showimage() {
+    const file = document.getElementById('input').files[0];
+    
+    if (file.type.startsWith('image/')){ 
+    
+      const img = document.createElement("img");
+      img.classList.add("obj");
+      img.file = file;
+      preview = document.getElementById("previewdiv");
+      preview.appendChild(img);
+      
+      const reader = new FileReader();
+      reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+      reader.readAsDataURL(file);
+ 
+    }
+}
+
+document.getElementById("input").addEventListener("change", showimage, false);
+
+</script>
+
