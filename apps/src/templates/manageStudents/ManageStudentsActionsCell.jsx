@@ -20,7 +20,6 @@ import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   xIcon: {
@@ -239,12 +238,11 @@ class ManageStudentActionsCell extends Component {
                 {i18n.printLoginCard()}
               </PopUpMenu.Item>
             )}
-            {showWordPictureOptions &&
-              experiments.isEnabled(experiments.PARENT_LETTER) && (
-                <PopUpMenu.Item onClick={this.onViewParentLetter}>
-                  {i18n.viewParentLetter()}
-                </PopUpMenu.Item>
-              )}
+            {showWordPictureOptions && (
+              <PopUpMenu.Item onClick={this.onViewParentLetter}>
+                {i18n.viewParentLetter()}
+              </PopUpMenu.Item>
+            )}
             {this.props.canEdit && canDelete && <MenuBreak />}
             {canDelete && (
               <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
