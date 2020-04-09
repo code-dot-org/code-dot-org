@@ -87,6 +87,81 @@ class PardotV2Test < Minitest::Test
     assert_equal expected_errors, errors
   end
 
+  def test_batch_update_prospects_single_contact
+    contact = {
+      email: 'alpha@cdo.org',
+      pardot_id: 1,
+      old_prospect_data: {db_Opt_In: 'Yes'},
+      new_contact_data: {opt_in: false}
+    }
+
+    ok_response = Nokogiri.XML <<-XML
+      <rsp stat="ok" version="1.0">
+          <errors/>
+      </rsp>
+    XML
+    PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
+
+    # Eagerly submit an update request
+    submissions, errors = PardotV2.new.batch_update_prospects(
+      *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data),
+      true
+    )
+
+    expected_submissions = [
+      {email: contact[:email], id: contact[:pardot_id], db_Opt_In: 'No'}
+    ]
+    assert_equal expected_submissions, submissions
+    assert_equal [], errors
+  end
+
+  def test_batch_update_prospects_multiple_contacts
+    contacts = [
+      {
+        email: 'alpha@cdo.org',
+        pardot_id: 1,
+        old_prospect_data: {db_Opt_In: 'Yes'},
+        new_contact_data: {opt_in: false}
+      },
+      {
+        email: 'beta@cdo.org',
+        pardot_id: 2,
+        old_prospect_data: nil,
+        new_contact_data: {opt_in: true}
+      }
+    ]
+
+    response_with_errors = Nokogiri.XML <<-XML
+      <rsp stat="fail" version="1.0">
+          <errors>
+              <prospect identifier="0">#{PardotHelpers::ERROR_INVALID_EMAIL}</prospect>
+          </errors>
+      </rsp>
+    XML
+    PardotV2.stubs(:post_with_auth_retry).returns(response_with_errors)
+
+    # Calling batch_update for each contact. No update request shall be sent
+    pardot_writer = PardotV2.new
+    contacts.each do |contact|
+      submissions, errors = pardot_writer.batch_update_prospects(
+        *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data)
+      )
+      assert_equal [], submissions
+      assert_equal [], errors
+    end
+
+    # Flushing out the remaining data, request shall be sent immediately
+    submissions, errors = pardot_writer.batch_update_remaining_prospects
+
+    expected_submissions = [
+      {email: contacts.first[:email], id: contacts.first[:pardot_id], db_Opt_In: 'No'},
+      {email: contacts.last[:email], id: contacts.last[:pardot_id], db_Opt_In: 'Yes'}
+    ]
+    expected_errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
+    assert_equal expected_submissions, submissions
+    assert_equal expected_errors, errors
+  end
+
   def test_convert_to_prospect_fields
     contacts = [
       {email: 'test0@domain.com', pardot_id: 10, opt_in: true},
