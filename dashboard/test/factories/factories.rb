@@ -1252,7 +1252,11 @@ FactoryGirl.define do
     end
 
     sequence(:email) {|n| "contact_#{n}@example.domain"}
-    data {{'opt_in' => true, 'updated_at' => data_updated_at}}
+    data {{'opt_in' => true}}
+
+    after(:build) do |contact, evaluator|
+      contact.data[:updated_at] = evaluator.data_updated_at
+    end
   end
 
   factory :contact_rollups_final do
