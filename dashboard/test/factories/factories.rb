@@ -1247,8 +1247,12 @@ FactoryGirl.define do
   end
 
   factory :contact_rollups_processed do
+    transient do
+      data_updated_at {Time.now}
+    end
+
     sequence(:email) {|n| "contact_#{n}@example.domain"}
-    data {{'opt_in' => true}}
+    data {{'opt_in' => true, 'updated_at' => data_updated_at}}
   end
 
   factory :contact_rollups_final do
@@ -1260,7 +1264,7 @@ FactoryGirl.define do
     sequence (:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
     pardot_id_updated_at {Time.now - 1.hour}
-    data_synced {{db_Opt_in: 'No'}}
+    data_synced {{db_Opt_In: 'No'}}
     data_synced_at {Time.now}
   end
 end

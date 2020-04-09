@@ -65,19 +65,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.update_pardot_prospects
-    # Find updated contacts
-    # TODO: find contacts with updated pardot_id(s)
-    updated_contact_query = <<-SQL.squish
-      SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
-      FROM contact_rollups_processed AS processed
-      INNER JOIN contact_rollups_pardot_memory AS pardot
-        ON processed.email = pardot.email
-      WHERE pardot.pardot_id IS NOT NULL
-        AND ((pardot.data_synced_at IS NULL) OR (processed.data->>'$.updated_at' > pardot.data_synced_at))
-    SQL
-
     pardot_writer = PardotV2.new
-    ActiveRecord::Base.connection.exec_query(updated_contact_query).map do |record|
+    ActiveRecord::Base.connection.exec_query(find_updated_contacts_query).each do |record|
       old_prospect_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
       new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
 
@@ -89,6 +78,18 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
     save_sync_results(submissions, errors, Time.now) if submissions.present?
+  end
+
+  def self.find_updated_contacts_query
+    # TODO: find contacts with updated pardot_id(s)
+    <<-SQL.squish
+      SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
+      FROM contact_rollups_processed AS processed
+      INNER JOIN contact_rollups_pardot_memory AS pardot
+        ON processed.email = pardot.email
+      WHERE pardot.pardot_id IS NOT NULL
+        AND ((pardot.data_synced_at IS NULL) OR (processed.data->>'$.updated_at' > pardot.data_synced_at))
+    SQL
   end
 
   # TODO: sync deleted contacts
