@@ -11,7 +11,7 @@ class PardotV2Test < Minitest::Test
       </rsp>
     XML
 
-    PardotV2.stubs(:post_with_auth_retry).returns(pardot_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
     assert_equal [], PardotV2.retrieve_new_ids(0)
   end
@@ -30,7 +30,7 @@ class PardotV2Test < Minitest::Test
         </result>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(pardot_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
     expected_result = [{email: email, pardot_id: pardot_id}]
     assert_equal expected_result, PardotV2.retrieve_new_ids(0)
@@ -44,7 +44,7 @@ class PardotV2Test < Minitest::Test
           <errors/>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
     # Eagerly send a batch-create request
     submitted, errors = PardotV2.new.batch_create_prospects contact[:email], contact[:data], true
@@ -67,7 +67,7 @@ class PardotV2Test < Minitest::Test
           </errors>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(response_with_errors)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
 
     # Calling batch_create for each contact. No request shall be sent
     pardot_writer = PardotV2.new
@@ -102,7 +102,7 @@ class PardotV2Test < Minitest::Test
           <errors/>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
     # Eagerly submit an update request
     submissions, errors = PardotV2.new.batch_update_prospects(
@@ -140,7 +140,7 @@ class PardotV2Test < Minitest::Test
           </errors>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(response_with_errors)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
 
     # Calling batch_update for each contact. No update request shall be sent
     pardot_writer = PardotV2.new
@@ -207,7 +207,7 @@ class PardotV2Test < Minitest::Test
           <errors/>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(ok_response)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(ok_response)
 
     assert_equal [], PardotV2.submit_batch_request('a_pardot_endpoint', prospects)
   end
@@ -225,7 +225,7 @@ class PardotV2Test < Minitest::Test
           </errors>
       </rsp>
     XML
-    PardotV2.stubs(:post_with_auth_retry).returns(response_with_errors)
+    PardotV2.stubs(:post_with_auth_retry).once.returns(response_with_errors)
 
     expected_errors = [
       {prospect_index: 0, error_msg: 'Invalid prospect email address'},
