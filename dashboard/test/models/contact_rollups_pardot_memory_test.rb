@@ -32,6 +32,31 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal new_pardot_id, ContactRollupsPardotMemory.find_by(email: existing_record.email)&.pardot_id
   end
 
+  test 'query_new_contacts' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+    assert_equal 0, ContactRollupsProcessed.count
+
+    pardot_memory_records = [
+      {email: 'alpha', pardot_id: nil},
+      {email: 'beta', pardot_id: 1}
+    ]
+    pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
+
+    processed_contact_records = [
+      {email: 'alpha'}, {email: 'beta'}, {email: 'gamma'}
+    ]
+    processed_contact_records.each {|record| create :contact_rollups_processed, record}
+
+    # Execute SQL query
+    results = ActiveRecord::Base.connection.
+      exec_query(ContactRollupsPardotMemory.query_new_contacts).map do |record|
+      record['email']
+    end
+
+    # Should find only 2 new contacts
+    assert_equal %w(alpha gamma), results
+  end
+
   test 'create_new_pardot_prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
@@ -58,27 +83,23 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal 0, ContactRollupsProcessed.count
 
     base_time = Time.now - 2.days
-    pardot_memory_contact_info = [
+    pardot_memory_records = [
       {email: 'alpha', pardot_id: 1, data_synced_at: nil, data_synced: nil},
       {email: 'beta', pardot_id: 2, data_synced_at: base_time - 1.day, data_synced: {db_Opt_In: 'Yes'}},
       {email: 'gamma', pardot_id: 3, data_synced_at: base_time + 1.day, data_synced: {db_Opt_In: 'Yes'}},
       {email: 'delta', pardot_id: nil},
       {email: 'epsilon', pardot_id: 4},
     ]
-    pardot_memory_contact_info.each do |contact_info|
-      create :contact_rollups_pardot_memory, contact_info
-    end
+    pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
-    processed_contact_info = [
+    processed_contact_records = [
       {email: 'alpha', data: {opt_in: false, updated_at: base_time}},
       {email: 'beta', data: {opt_in: false, updated_at: base_time}},
       {email: 'gamma', data: {opt_in: true, updated_at: base_time}},
       {email: 'delta'},
       {email: 'zeta'},
     ]
-    processed_contact_info.each do |contact_info|
-      create :contact_rollups_processed, contact_info
-    end
+    processed_contact_records.each {|record| create :contact_rollups_processed, record}
 
     # Execute SQL query
     results = ActiveRecord::Base.connection.

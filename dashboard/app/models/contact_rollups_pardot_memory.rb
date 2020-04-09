@@ -37,22 +37,10 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.create_new_pardot_prospects
-    # Finds contacts in contact_rollups_processed but are not in contact_rollups_pardot_memory.
-    # Contacts must not be previously rejected by Pardot as invalid emails.
-    new_contacts_query = <<-SQL.squish
-      SELECT processed.email, processed.data
-      FROM contact_rollups_processed AS processed
-      LEFT OUTER JOIN contact_rollups_pardot_memory AS pardot
-        ON processed.email = pardot.email
-      WHERE pardot.pardot_id IS NULL
-        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_INVALID_EMAIL}')
-    SQL
-
     # Adds contacts to a batch and then sends batch requests to create new Pardot prospects.
     # Requests may not be sent immediately until batch size is big enough.
     pardot_writer = PardotV2.new
-
-    ActiveRecord::Base.connection.exec_query(new_contacts_query).each do |record|
+    ActiveRecord::Base.connection.exec_query(query_new_contacts).each do |record|
       data = JSON.parse(record['data']).deep_symbolize_keys
       submissions, errors = pardot_writer.batch_create_prospects record['email'], data
       save_sync_results(submissions, errors, Time.now) if submissions.present?
@@ -78,6 +66,19 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
     save_sync_results(submissions, errors, Time.now) if submissions.present?
+  end
+
+  def self.query_new_contacts
+    # Finds contacts in contact_rollups_processed but are not in contact_rollups_pardot_memory.
+    # Contacts must not be previously rejected by Pardot as invalid emails.
+    <<-SQL.squish
+      SELECT processed.email, processed.data
+      FROM contact_rollups_processed AS processed
+      LEFT OUTER JOIN contact_rollups_pardot_memory AS pardot
+        ON processed.email = pardot.email
+      WHERE pardot.pardot_id IS NULL
+        AND NOT (pardot.data_rejected_reason <=> '#{PardotHelpers::ERROR_INVALID_EMAIL}')
+    SQL
   end
 
   def self.query_updated_contacts
