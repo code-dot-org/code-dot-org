@@ -9,7 +9,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: "alex@rollups.com", pardot_id: 1},
       {email: "becky@rollups.com", pardot_id: 2}
     ]
-    PardotV2.stubs(:retrieve_new_ids).returns(new_mappings)
+    PardotV2.stubs(:retrieve_new_ids).once.returns(new_mappings)
 
     ContactRollupsPardotMemory.add_and_update_pardot_ids
 
@@ -23,7 +23,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     existing_record = create :contact_rollups_pardot_memory
 
     new_pardot_id = existing_record.pardot_id + 1
-    PardotV2.stubs(:retrieve_new_ids).returns(
+    PardotV2.stubs(:retrieve_new_ids).once.returns(
       [{email: existing_record.email, pardot_id: new_pardot_id}]
     )
 
@@ -59,23 +59,15 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'create_new_pardot_prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
-    assert_equal 0, ContactRollupsProcessed.count
-    PardotV2.stubs(:submit_batch_request).returns([])
+    contact = create :contact_rollups_processed, data: {'opt_in' => true}
 
-    # Sync 1 contact
-    processed_contacts = [create(:contact_rollups_processed)]
+    PardotV2.expects(:submit_batch_request).once.returns([])
+
     ContactRollupsPardotMemory.create_new_pardot_prospects
 
-    assert_equal processed_contacts.length, ContactRollupsPardotMemory.count
-
-    # Sync multiple contacts
-    processed_contacts.concat(create_list(:contact_rollups_processed, 2))
-    ContactRollupsPardotMemory.create_new_pardot_prospects
-
-    assert_equal processed_contacts.length, ContactRollupsPardotMemory.count
-    processed_contacts.each do |contact|
-      refute_nil ContactRollupsPardotMemory.find_by(email: contact.email)
-    end
+    assert_equal 1, ContactRollupsPardotMemory.count
+    record = ContactRollupsPardotMemory.find_by(email: contact.email)
+    assert_equal({'db_Opt_In' => 'Yes'}, record&.data_synced)
   end
 
   test 'query_updated_contacts' do
@@ -93,9 +85,9 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
     processed_contact_records = [
-      {email: 'alpha', data: {opt_in: false, updated_at: base_time}},
-      {email: 'beta', data: {opt_in: false, updated_at: base_time}},
-      {email: 'gamma', data: {opt_in: true, updated_at: base_time}},
+      {email: 'alpha', data: {opt_in: false}, data_updated_at: base_time},
+      {email: 'beta', data: {opt_in: false}, data_updated_at: base_time},
+      {email: 'gamma', data: {opt_in: true}, data_updated_at: base_time},
       {email: 'delta'},
       {email: 'zeta'},
     ]
@@ -109,6 +101,21 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     # Should find only 2 contacts to update
     assert_equal %w(alpha beta), results
+  end
+
+  test 'update_pardot_prospects' do
+    email = 'test@domain.com'
+    last_sync_time = Time.now - 7.days
+    create :contact_rollups_pardot_memory, email: email, data_synced: {db_Opt_In: 'No'}, data_synced_at: last_sync_time
+    create :contact_rollups_processed, email: email, data: {'opt_in' => true}
+
+    PardotV2.expects(:submit_batch_request).once.returns([])
+
+    ContactRollupsPardotMemory.update_pardot_prospects
+
+    record = ContactRollupsPardotMemory.find_by(email: email)
+    assert_equal({'db_Opt_In' => 'Yes'}, record&.data_synced)
+    assert last_sync_time < record&.data_synced_at
   end
 
   test 'save_sync_results new prospect' do
@@ -129,9 +136,12 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'save_sync_results updated prospect' do
     assert_equal 0, ContactRollupsPardotMemory.count
-    create :contact_rollups_pardot_memory, email: 'alpha', pardot_id: 1, data_synced: nil
-    create :contact_rollups_pardot_memory, email: 'beta', pardot_id: 2, data_synced: {db_Opt_In: 'No'}
-    create :contact_rollups_pardot_memory, email: 'gamma', pardot_id: 3, data_synced: {db_Opt_In: 'Yes'}
+    pardot_memory_records = [
+      {email: 'alpha', pardot_id: 1, data_synced: nil},
+      {email: 'beta', pardot_id: 2, data_synced: {db_Opt_In: 'No'}},
+      {email: 'gamma', pardot_id: 3, data_synced: {db_Opt_In: 'Yes'}},
+    ]
+    pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
     submissions = [
       {email: 'alpha', id: 1, db_Opt_In: 'Yes'},
