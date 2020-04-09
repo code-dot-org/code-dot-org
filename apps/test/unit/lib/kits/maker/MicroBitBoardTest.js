@@ -3,6 +3,7 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
+import ExternalLed from '@cdo/apps/lib/kits/maker/ExternalLed';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -114,6 +115,16 @@ describe('MicroBitBoard', () => {
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
         expect(analogWriteSpy).to.have.been.calledWith(pin, arg2);
+      });
+    });
+  });
+
+  describe(`createLed(pin)`, () => {
+    it('makes an LED controller', () => {
+      return board.connect().then(() => {
+        const pin = 13;
+        const newLed = board.createLed(pin);
+        expect(newLed).to.be.an.instanceOf(ExternalLed);
       });
     });
   });
