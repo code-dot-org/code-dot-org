@@ -3,7 +3,7 @@
   environment and the show_cookie_banner_on_test URL parameter is specified,
   presumably by a UI test.
 
-- if true
+- if !(request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)) && current_user && current_user.user_type == 'student'
 
   #at-home-banner
     %div.banner-content
