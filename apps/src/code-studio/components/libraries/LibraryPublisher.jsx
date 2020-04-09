@@ -87,58 +87,72 @@ export default class LibraryPublisher extends React.Component {
     this.setState({libraryName: sanitizedName});
   };
 
-  publish = () => {
-    const {libraryDescription, libraryName, selectedFunctions} = this.state;
-    const {librarySource, sourceFunctionList} = this.props.libraryDetails;
-    const {libraryClientApi, onPublishSuccess} = this.props;
-    const functionsToPublish = sourceFunctionList.filter(sourceFunction => {
+  getFunctionsToPublish = () => {
+    const {selectedFunctions} = this.state;
+    const {sourceFunctionList} = this.props.libraryDetails;
+    return (sourceFunctionList || []).filter(sourceFunction => {
       return selectedFunctions[sourceFunction.functionName];
     });
+  };
 
-    if (!(libraryDescription && functionsToPublish.length > 0)) {
+  validateAndPublish = async () => {
+    const {libraryDescription, libraryName} = this.state;
+
+    if (!(libraryDescription && this.getFunctionsToPublish().length > 0)) {
       this.setState({publishState: PublishState.INVALID_INPUT});
       return;
     }
 
     // Validate library name/description input for profanity before publishing.
-    this.props
-      .findProfanity(`${libraryName} ${libraryDescription}`)
-      .then(profaneWords => {
-        if (profaneWords) {
-          this.setState({
-            publishState: PublishState.PROFANE_INPUT,
-            profaneWords
-          });
-          return;
-        }
+    try {
+      const profaneWords = await this.props.findProfanity(
+        `${libraryName} ${libraryDescription}`
+      );
+      if (profaneWords) {
+        this.setState({
+          publishState: PublishState.PROFANE_INPUT,
+          profaneWords
+        });
+      } else {
+        this.publish();
+      }
+    } catch {
+      // Still publish if request errors
+      this.publish();
+    }
+  };
 
-        const libraryJson = libraryParser.createLibraryJson(
-          librarySource,
-          functionsToPublish,
+  publish = () => {
+    const {libraryDescription, libraryName} = this.state;
+    const {librarySource} = this.props.libraryDetails;
+    const {libraryClientApi, onPublishSuccess} = this.props;
+
+    const libraryJson = libraryParser.createLibraryJson(
+      librarySource,
+      this.getFunctionsToPublish(),
+      libraryName,
+      libraryDescription
+    );
+
+    // Publish to S3
+    libraryClientApi.publish(
+      libraryJson,
+      error => {
+        console.warn(`Error publishing library: ${error}`);
+        this.setState({publishState: PublishState.ERROR_PUBLISH});
+      },
+      data => {
+        // Write to projects database
+        dashboard.project.setLibraryDetails({
           libraryName,
-          libraryDescription
-        );
+          libraryDescription,
+          publishing: true,
+          latestLibraryVersion: data && data.versionId
+        });
 
-        // Publish to S3
-        libraryClientApi.publish(
-          libraryJson,
-          error => {
-            console.warn(`Error publishing library: ${error}`);
-            this.setState({publishState: PublishState.ERROR_PUBLISH});
-          },
-          data => {
-            // Write to projects database
-            dashboard.project.setLibraryDetails({
-              libraryName,
-              libraryDescription,
-              publishing: true,
-              latestLibraryVersion: data && data.versionId
-            });
-
-            onPublishSuccess(libraryName);
-          }
-        );
-      });
+        onPublishSuccess(libraryName);
+      }
+    );
   };
 
   displayNameInput = () => {
@@ -308,7 +322,7 @@ export default class LibraryPublisher extends React.Component {
           <Button
             __useDeprecatedTag
             style={{marginTop: 20}}
-            onClick={this.publish}
+            onClick={this.validateAndPublish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
           {onShareTeacherLibrary && (
