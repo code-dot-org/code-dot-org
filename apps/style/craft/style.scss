@@ -239,10 +239,6 @@ body {
     top: 0 !important;
   }
 
-  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
-    top: 10px !important;
-  }
-
   .loading {
     @include pixelated();
     background: url("#{$root}Sliced_Parts/MC_Loading_Spinner.gif") no-repeat center center;
