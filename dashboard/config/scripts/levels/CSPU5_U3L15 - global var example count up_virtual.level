@@ -61,13 +61,21 @@
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
     "short_instructions": "Look at the code for this app and see how the code works to update the count variable when the up arrow is clicked. (Click to see full instructions).",
-    "long_instructions": "# Using Variables in Apps!\r\n<img src=\"https://images.code.org/f156f8d8524c3c0316e4db394e331bdc-image-1446060829590.gif\" style=\"float: right; width: 200px;\">\r\n\r\nThe example program here has a small portion of the *Count Up/Down App* written.  Right now, what the app should do is  shown in the animation to the right.\r\n\r\n# Important Concept!\r\n\r\nThis small functionality **demonstrates an important concept** - how to create a variable in the app and update it when an event occurs. It may seem fairly straightforward but there are some common misconceptions that we want to alert you to.\r\n\r\n# Do This: Misconception Investigation\r\nOver the next few levels you are going to do a small investigation of two apps that do almost the same thing but *one  works as expected* and *one with a bug* that demonstrates an important concept about using variables in apps.  Here is what you'll do:\r\n\r\n1. **Run this app, which works properly.**\r\n   * Study the code until you think you understand what's happening.\r\n   * Pay attention to the code that handles the up arrow being clicked.\r\n2. **Run the app on the next screen, which has a bug.**\r\n   * On the next screen we show you almost the same app, but with a subtle problem.\r\n   * See if you can spot the difference and fix it.\r\n3. **Report what you found!**\r\n   * We'll ask you to report what you found.  It's not a quiz.  You can go back and forth until you spot the problem, but you should find it and be able to write what it is.\r\n",
+    "long_instructions": "# Using Variables in Apps!\r\n<img src=\"https://images.code.org/f156f8d8524c3c0316e4db394e331bdc-image-1446060829590.gif\" style=\"float: right; width: 200px;\">\r\n\r\nLet's build the app you just saw in pieces.  Right now, what the app should do is  shown in the animation to the right.\r\n\r\nOver the next few levels you are going to do a small investigation of two apps that do almost the same thing but *one  works as expected* and *one with a bug* that demonstrates an important concept about using variables in apps.\r\n\r\n# Do This: Misconception Investigation\r\n\r\n**Run this app, which works as expected already.**\r\n   * Study the code until you think you understand what's happening.\r\n   * Pay attention to the code that handles the up arrow being clicked.\r\n   * Click Finish when you are ready. The next version of this you will see has a new bug.\r\n",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-12-11 00:44:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:27:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-12-11 00:44:42 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 04:27:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-08 20:48:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-08 20:50:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
