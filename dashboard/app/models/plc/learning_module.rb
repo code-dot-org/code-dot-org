@@ -46,8 +46,4 @@ class Plc::LearningModule < ActiveRecord::Base
   def required?
     module_type == REQUIRED_MODULE
   end
-
-  def name_with_required_tag
-    "#{name}#{' - Required' if required?}"
-  end
 end
