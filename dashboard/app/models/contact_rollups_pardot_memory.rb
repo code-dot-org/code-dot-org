@@ -66,7 +66,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
   def self.update_pardot_prospects
     pardot_writer = PardotV2.new
-    ActiveRecord::Base.connection.exec_query(find_updated_contacts_query).each do |record|
+    ActiveRecord::Base.connection.exec_query(query_updated_contacts).each do |record|
       old_prospect_data = JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
       new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
 
@@ -80,7 +80,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     save_sync_results(submissions, errors, Time.now) if submissions.present?
   end
 
-  def self.find_updated_contacts_query
+  def self.query_updated_contacts
     # TODO: find contacts with updated pardot_id(s)
     <<-SQL.squish
       SELECT processed.email, processed.data, pardot.pardot_id, pardot.data_synced
