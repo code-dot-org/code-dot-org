@@ -11,6 +11,7 @@ class PardotV2
 
   URL_LENGTH_THRESHOLD = 6000
   MAX_PROSPECT_BATCH_SIZE = 50
+  MAX_PROSPECT_DELETION_BATCH_SIZE = 50
 
   CONTACT_TO_PARDOT_PROSPECT_MAP = {
     email: {field: :email},
@@ -185,6 +186,9 @@ class PardotV2
   # @param [Array[Integer]] prospect_ids of the prospects to be deleted.
   # @return [Array[Integer]] the set of prospect_ids that failed to be deleted.
   def self.delete_prospects(prospect_ids)
+    return unless CDO.rack_env? :production
+    return if prospect_ids.length > MAX_PROSPECT_DELETION_BATCH_SIZE
+
     failed_prospect_ids = []
 
     prospect_ids.each do |prospect_id|

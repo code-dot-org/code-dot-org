@@ -170,8 +170,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
     SQL
   end
 
-  # TODO: sync deleted contacts
-
   def self.delete_pardot_prospects
     # Get pardot IDs for contacts (emails) that are no longer in contact_rollups_processed.
     deleted_contacts_query = <<~SQL
@@ -183,7 +181,12 @@ class ContactRollupsPardotMemory < ApplicationRecord
     SQL
 
     pardot_ids_to_delete = ActiveRecord::Base.connection.exec_query(deleted_contacts_query).map {|record| record['pardot_id']}
-    # PardotV2.delete_pardot_prospects(pardot_ids_to_delete)
+    # what do we want to happen if there are failed deletions?
+    failed_deletion_pardot_ids = PardotV2.delete_pardot_prospects(pardot_ids_to_delete)
+    pardot_ids_deleted = pardot_ids_to_delete - failed_deletion_pardot_ids
+
+    # this looks syntactically strange to me
+    where(pardot_id: pardot_ids_deleted).delete_all
   end
 
   # Saves sync results to database.
