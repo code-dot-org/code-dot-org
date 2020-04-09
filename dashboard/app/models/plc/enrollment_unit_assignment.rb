@@ -75,7 +75,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def summarize_progress
     summary = []
 
-    categories_for_stage = plc_course_unit.script.stages.map{|s| s.lesson_group&.name}.uniq
+    categories_for_stage = plc_course_unit.script.stages.map {|s| s.lesson_group&.name}.uniq
 
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
