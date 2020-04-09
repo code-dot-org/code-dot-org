@@ -31,7 +31,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
     PardotV2.retrieve_new_ids(last_id).each do |mapping|
       pardot_record = find_or_initialize_by(email: mapping[:email])
       pardot_record.pardot_id = mapping[:pardot_id]
-      pardot_record.pardot_id_updated_at = Time.now
+      pardot_record.pardot_id_updated_at = Time.now.utc
       pardot_record.save
     end
   end
@@ -43,13 +43,13 @@ class ContactRollupsPardotMemory < ApplicationRecord
     ActiveRecord::Base.connection.exec_query(query_new_contacts).each do |record|
       data = JSON.parse(record['data']).deep_symbolize_keys
       submissions, errors = pardot_writer.batch_create_prospects record['email'], data
-      save_sync_results(submissions, errors, Time.now) if submissions.present?
+      save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
     end
 
     # There could be prospects left in the batch because batch size is not yet big enough
     # to trigger a Pardot request. Sends the remaining of the batch to Pardot now.
     submissions, errors = pardot_writer.batch_create_remaining_prospects
-    save_sync_results(submissions, errors, Time.now) if submissions.present?
+    save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
   end
 
   def self.update_pardot_prospects
@@ -61,11 +61,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
       submissions, errors = pardot_writer.batch_update_prospects(
         record['email'], record['pardot_id'], old_prospect_data, new_contact_data
       )
-      save_sync_results(submissions, errors, Time.now) if submissions.present?
+      save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
     end
 
     submissions, errors = pardot_writer.batch_update_remaining_prospects
-    save_sync_results(submissions, errors, Time.now) if submissions.present?
+    save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
   end
 
   def self.query_new_contacts

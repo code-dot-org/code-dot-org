@@ -207,9 +207,9 @@ class PardotV2
 
     # Send request to Pardot
     url = build_batch_url api_endpoint, prospects
-    time_start = Time.now
+    time_start = Time.now.utc
     doc = post_with_auth_retry url
-    time_elapsed = Time.now - time_start
+    time_elapsed = Time.now.utc - time_start
 
     # Return indexes of rejected emails and their error messages
     errors = extract_batch_request_errors doc

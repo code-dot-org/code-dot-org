@@ -74,7 +74,7 @@ class ContactRollupsProcessed < ApplicationRecord
         # In a valid item, only data value could be null
         sources = item['sources']
         data = item['data'] || {}
-        data_updated_at = Time.parse(item['data_updated_at'])
+        data_updated_at = Time.find_zone('UTC').parse(item['data_updated_at'])
 
         output[sources] = data.merge('data_updated_at' => data_updated_at)
       end

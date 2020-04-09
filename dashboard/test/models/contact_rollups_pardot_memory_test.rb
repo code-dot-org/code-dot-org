@@ -74,7 +74,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
 
-    base_time = Time.now - 2.days
+    base_time = Time.now.utc - 2.days
     pardot_memory_records = [
       {email: 'alpha', pardot_id: 1, data_synced_at: nil, data_synced: nil},
       {email: 'beta', pardot_id: 2, data_synced_at: base_time - 1.day, data_synced: {db_Opt_In: 'Yes'}},
@@ -105,7 +105,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'update_pardot_prospects' do
     email = 'test@domain.com'
-    last_sync_time = Time.now - 7.days
+    last_sync_time = Time.now.utc - 7.days
     create :contact_rollups_pardot_memory, email: email, data_synced: {db_Opt_In: 'No'}, data_synced_at: last_sync_time
     create :contact_rollups_processed, email: email, data: {'opt_in' => true}
 
@@ -122,7 +122,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal 0, ContactRollupsPardotMemory.count
 
     submission = {email: 'valid@domain.com', db_Opt_In: 'Yes'}
-    submitted_time = Time.now
+    submitted_time = Time.now.utc
 
     ContactRollupsPardotMemory.save_sync_results [submission], [], submitted_time
 
@@ -148,7 +148,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'beta', id: 2, db_Opt_In: 'Yes'},
       {email: 'gamma', id: 3, db_Opt_In: 'Yes'},
     ]
-    submitted_time = Time.now
+    submitted_time = Time.now.utc
 
     ContactRollupsPardotMemory.save_sync_results submissions, [], submitted_time
 
@@ -167,7 +167,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     submissions = [{email: 'invalid_email', id: nil, db_Opt_In: 'No'}]
     errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
-    submitted_time = Time.now
+    submitted_time = Time.now.utc
 
     ContactRollupsPardotMemory.save_sync_results submissions, errors, submitted_time
 
