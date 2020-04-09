@@ -40,6 +40,7 @@ const stageData = [
     name: 'Computational Thinking',
     title: 'Stage 1: Computational Thinking',
     flex_category: null,
+    lesson_group: null,
     lockable: false,
     levels: [
       {
@@ -96,6 +97,7 @@ const stageData = [
     name: 'Maze',
     title: 'Stage 2: Maze',
     flex_category: null,
+    lesson_group: null,
     lockable: false,
     levels: [
       {
@@ -473,7 +475,7 @@ describe('progressReduxTest', () => {
     // Sample stage of peer review
     const peerReviewStage = {
       name: 'You must complete 2 reviews for this unit',
-      flex_category: 'Peer Review',
+      lesson_group_name: 'Peer Review',
       levels: [
         {
           ids: [0],
@@ -1258,7 +1260,7 @@ describe('progressReduxTest', () => {
     it('extracts lesson data from our peerReviewStage', () => {
       const state = {
         peerReviewStage: {
-          flex_category: 'Peer Review',
+          lesson_group_name: 'Peer Review',
           levels: [],
           lockable: false,
           name: 'You must complete 5 reviews for this unit'
