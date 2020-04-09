@@ -29,7 +29,6 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
 import moment from 'moment';
 
@@ -158,7 +157,7 @@ class SectionProgress extends Component {
         effect="solid"
       >
         <span style={styles.studentTooltip}>
-          Last Progress:
+          {i18n.lastProgress()}
           <br />
           {this.tooltipTextForStudent(studentId)}
         </span>
@@ -259,17 +258,15 @@ class SectionProgress extends Component {
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {levelDataInitialized &&
-            experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-              <div id="uitest-standards-view" style={standardsStyle}>
-                <StandardsView
-                  showStandardsIntroDialog={
-                    currentView === ViewType.STANDARDS &&
-                    showStandardsIntroDialog
-                  }
-                />
-              </div>
-            )}
+          {levelDataInitialized && (
+            <div id="uitest-standards-view" style={standardsStyle}>
+              <StandardsView
+                showStandardsIntroDialog={
+                  currentView === ViewType.STANDARDS && showStandardsIntroDialog
+                }
+              />
+            </div>
+          )}
         </div>
       </div>
     );

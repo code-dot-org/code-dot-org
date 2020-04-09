@@ -106,6 +106,10 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # If the stage is not released yet (visible_after is in the future) then don't
+    # let a user go to the script_level page in that stage
+    return head(:forbidden) unless @script_level.stage.published?(current_user)
+
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
@@ -368,7 +372,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_section
-    if params[:section_id]
+    if params[:section_id] && params[:section_id] != "undefined"
       section = Section.find(params[:section_id])
 
       # TODO: This should use cancan/authorize.

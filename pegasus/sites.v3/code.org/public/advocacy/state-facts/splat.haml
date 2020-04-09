@@ -43,7 +43,7 @@ state-facts: true
       Computer science drives job growth and innovation throughout our economy and society. Computing occupations are the
       %b
         number 1 source of all new wages in the U.S.
-      and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 45% of U.S. high schools teach any computer science courses and only 10% of STEM graduates study it. We need to improve access for all students, including groups who have traditionally been underrepresented.
+      and make up over half of all projected new jobs in STEM fields, making Computer Science one of the most in-demand college degrees. And computing is used all around us and in virtually every field. It’s foundational knowledge that all students need. But computer science is marginalized throughout education. Only 45% of U.S. high schools teach any computer science courses and only 11% of STEM bachelor's degrees are in Computer Science. We need to improve access for all students, including groups who have traditionally been underrepresented.
 
     %img.chart{src: "/images/charts/jobs_degrees.png"}
 
@@ -90,10 +90,10 @@ state-facts: true
         %b
           = format_integer_with_commas(state_info[:cs_graduates_i])
           - if state_info[:cs_graduates_i] == 1
-            computer science graduate
+            STEM bachelor's degrees in Computer Science
           - else
-            computer science graduates
-        in 2017;
+            STEM bachelor's degrees in Computer Science
+        in 2018;
         - if state_info[:percent_female_cs_grad_i] == 0
           %b none
         - else

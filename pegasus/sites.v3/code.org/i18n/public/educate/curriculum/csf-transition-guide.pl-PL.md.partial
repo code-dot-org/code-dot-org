@@ -1,62 +1,62 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Przewodnik po podstawach informatyki
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# Prowadzenie kursów A-F
 
 ## Spis Treści
 
 * [Przegląd](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Prowadzenie nowego kursu](#newcourses)
+* [Opowieści (Kursy A i B)](#circletime)
+* [Obudowanie lekcji & łamigłówki jako wyzwania (w każdym wieku)](#scaffolding)
+* [Działania wspomagające lekcje bez komputerów (w każdym wieku)](#unplugged)
+* [Projekty na koniec kursu (Kursy E & F)](#endofcourse)
+* [Wnioski](#conclusion)
+* [FAQ - Najczęściej zadawane pytania](#faq)
 
 <a id="overview"></a>
 
 ## Przegląd
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+Krajobraz edukacji informatycznej zmienił się ogromnie od czasu utworzenia oryginalnych kursów podstawy informatyki. Pierwotnie kursy 1-4 zostały zaprojektowane jako punkt startowy do zdobycia podstaw, bez względu na wiek ucznia, który zaczął interesować informatyką.  Teraz, gdy coraz więcej dzielnic, miast i stanów wprowadziło kursy informatyki poczynając od przedszkola, nauczyciele proszą o więcej treści, aby mogli się rozwijać uczniowie ze starszych klas.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Kursy A-F z podstaw informatyki są naszą odpowiedzią na te oczekiwania.  Powstanie programu nauczania dla poszczególnych klas spowodowało, że postanowiliśmy przemyśleć sposób, w jaki prezentowaliśmy materiał.  Pozwoliło nam to również na pełne uwzględnienie opinii oddanej społeczności nauczycieli, która wspierała nas w tej misji. Kursy A-F, zaprojektowane z pomocą jednych z najlepszych specjalistów w dziedzinie edukacji informatycznej w szkołach podstawowych w całym kraju, powinny być wystarczająco przystępne, aby można je przeprowadzić bez dodatkowego przygotowania, ale wystarczająco nowe, aby zaprezentować je uczniom, którzy w przeszłości wykonywali nasze lekcje.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Kurs A: Przedszkole
+* Kurs B: 1. klasa
+* Kurs C: 2. klasa
+* Kurs D: 3. klasa
+* Kurs E: 4. klasa
+* Kurs F: 5. klasa
+* Przyspieszony kurs dla uczniów nie umiejących czytać: przedszkole - 1. klasa
+* Przyspieszony kurs: klasy 2-5
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+Największa zmiana kursów podstaw informatyki polega na tym, że zawartość czterech kursów (Kursy 1-4) została przeniesiona do sześciu kursów dostosowanych do poziomu każdej klasy w K-5 (Kursy A-F).  W ten sposób lekcje zostały bardziej dostosowane do odpowiednich poziomów czytania, matematyki i ogólnego rozwoju poznawczego uczniów.  Zwróćcie uwagę na dodanie dwóch różnych kursów przyspieszonych, jednego dla uczniów, którzy jeszcze nie potrafią czytać, i jednego - dla pozostałych klas.  Są one podobne do „przyspieszonej” wersji poprzedniego pakietu.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Prowadzenie nowego kursu
+Jak wspomniano wcześniej, kursy powinny wyglądać znajomo, ale są inne.  Jeśli uczestniczyłeś w doskonaleniu na warsztatach Code.org, to jesteś przygotowany do uczenia nowych kursów. Wprowadzono niewiele zmian, ale ogólna platforma, program nauczania i podejście pedagogiczne pozostały niezmienione. Jeśli jeszcze tego nie zrobiłeś, Code.org oferuje bezpłatne jednodniowe warsztaty, które pomogą Ci zrozumieć programy nauczania, poruszać się na platformie Code.org i prowadzić lekcje bez komputera.
 
-The main updates to the courses are:
+Główne aktualizacje kursów to:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Opowieści dla młodszych uczniów
+* Nowe podejście do obudowania i ćwiczenia/stosowania pojęć
+* Łączenie działań, aby ułatwić przejście od lekcji bez komputerów do lekcji z komputerami
+* Projekty na koniec kursu dla starszych uczniów
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+W pozostałej części tego przewodnika, każda z tych nowości jest przedstawiona bardziej szczegółowo, zawiera wskazówki i porady dotyczące wprowadzania zmian w Twojej klasie.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Opowieści (Kursy A i B)
+Niektóre pojęci są trudne do nauczenia poprzez same ćwiczenia i łamigłówki, szczególnie w przypadku młodych uczniów.  Dlatego w programach nauczania dla przedszkola i pierwszej klasy wprowadziliśmy niewielką liczbę opowieści. Historie te mają być odczytywane przez nauczyciela całej klasie, z przerwami na dyskusję na temat przełomowych idei, takich jak: debugowanie, wytrwałość i frustracja.  Mamy nadzieję, że umożliwienie uczniom poznania tych trudnych pojęć za pośrednictwem postaci z opowieści pomoże im rozpoznać te same pojęcia, gdy pojawią się na przyszłych lekcjach.
 
-Here is how the circle-time stories are intended to be used:
+Oto, w jaki sposób mają być wykorzystane opowieści:
 
-### Read the appropriate story to your class
+### Przeczytaj odpowiednią historię całej swojej klasie
   - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
   - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
   - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
@@ -74,30 +74,30 @@ If you are unable to gather your entire class together, Code.org has provided a 
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Obudowanie lekcji & łamigłówki jako wyzwania (w każdym wieku)
+Kursy A-F są ogólnie mniej obudowane niż nasze poprzednie kursy.  Oznacza to, że staramy się, aby uczniowie tworzyli kod od początku tak często, jak to możliwe, chyba że specjalnie uczą się debugowania.  W ramach tego projektu większość naszych lekcji online jest zgodna z trendem, w którym przedstawiamy prostą łamigłówkę, aby rozpocząć lekcję, a następnie powoli przechodzimy do przodu z nowy pojęciem, aż do momentu, w którym uczniowie mają szansę zrozumieć to pojęcie.  Następnie przedstawiamy im wyzwanie w postaci łamigłówki, która ma ich zachęcić do myślenia o pojęciu w nowy i skomplikowany sposób.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Łamigłówki z wyzwaniami są nowością w kursach A-F.  Intencją łamigłówek z wyzwaniami jest wciągnięcie uczniów na wyższy poziom, gdzie mogą ćwiczyć wytrwałość i niezależne myślenie.  Łamigłówki z wyzwaniami są celowo trudne i tak zaprojektowane, aby tylko uczniowie, którzy naprawdę rozumieją pojęcia, przeszli przez nie rozsądnym czasie.  Oznacza to, że spora liczba uczniów nie odniesie sukcesu w przypadku tych wyzwań za pierwszym razem. Wymaga to od ucznia i nauczyciela szczególnego podejścia.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Uczniowie powinni spróbować tych wyzwań z sercem, a następnie odłożyć je na bok i kontynuować.  Ta praktyka pozwala na pojawienie się dwóch bardzo ważnych rzeczy:
+2. Uczniowie lepiej rozumieją, kiedy i dlaczego stosować studiowane pojęcie. Poczują następne łamigłówki jako łatwiejsze, mimo że pozostają one nadal poważnymi wyzwaniami.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Pamiętaj, że uczniowie mogą w dowolnym momencie przejść lekcje i ponowić próbę wykonania niekompletnych łamigłówek.  Czasami pomocne może okazać się przespanie nocy przed powrotem do trudnego problemu.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Gdy uczniowie przejdą wyzwanie, znajdą garść czekających na nich ćwiczeń podobnych do tych, które mogli doświadczyć w pierwszej połowie etapu. Te łamigłówki zostały umieszczone celowo, aby przetestować rozumienie ucznia studiowanego przedmiotu.  Mogą wydawać się zbyt łatwe, biorąc pod uwagę wcześniej rozwiązane łamigłówki, ale zostały stworzone, aby zademonstrować dokładny poziom kompetencji pożądany na odpowiednim etapie.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+W niektórych przypadkach kończymy lekcje na poziomach w stylu darmowej gry.  Poziomy te mogą albo nie mieć „złej” odpowiedzi, albo mogą pozwalać na kilka różnych sposobów rozwiązania ich podstawowego problemu.  Zachęć uczniów, aby dali z siebie co najlepsze, a nie kliknij „Kontynuuj”, nawet jeśli mogą.
 
-Some final notes for this area:
+Kilka uwag końcowych dla tego obszaru:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Przypomnij uczniom, aby byli wytrwali i używali swoich umiejętności debugowania w przypadku problemów, które wydają się im trudne.
+* Filmy są często wsparciem.  Kiedy uczniowie utkną, poproś ich, aby ponownie obejrzeli film po raz drugi, trzeci, a nawet czwarty.
+* Wymagaj od uczniów przeczytania instrukcji.  Jeśli mają trudności, pozwól im przeczytać instrukcje na głos do kolegi z klasy.
+* Można dawać wskazówki!  Uczniowie powinni wykorzystać tyle wskazówek, ile potrzebują, ale pamiętaj, aby spróbowali rozwiązać przynajmniej jedną zagadkę przed każdą nową ofertą.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
+## Działania wspomagające lekcje bez komputerów (w każdym wieku)
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 
 Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
@@ -106,7 +106,7 @@ For the most part, bridging activities can be created either by taking the subje
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
+## Projekty na koniec kursu (Kursy E & F)
 For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
 
 The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
@@ -125,20 +125,20 @@ No matter how thoroughly students embed themselves in their projects, they are s
 
 <a id="conclusion"></a>
 
-## Conclusion
+## Wnioski
 As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
 
 We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## FAQ - Najczęściej zadawane pytania
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Pytanie                                                                                                                                                     | Odpowiedź                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
+| **Wprowadzasz nowy zestaw kursów - czy to oznacza, że Kursy 1-4 znikają?**                                                                                  | Nie. Tak, jak nasze oryginalne 20-godzinne kursy są nadal dostępne i używane na naszej stronie internetowej, planujemy utrzymać Kursy 1-4 dla tych, którzy uważają, że lepiej reprezentują one doświadczenie, których potrzebują ich uczniowie/dzieci.                                                                                                                                                                                                                         |
+| **Kiedy możemy zacząć korzystać z kursów A-F?**                                                                                                             | Kursy A-F są już dostępne!                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Niektóre moje ulubione lekcje/łamigłówki zniknęły z kursów A-F!**                                                                                         | Nie obawiaj się! Wciąż istnieją tam, gdzie je pozostawiłeś w kursach 1-4 lub w przyspieszonym 20-godzinnym kursie.                                                                                                                                                                                                                                                                                                                                                             |
 | **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
 | **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
 
