@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ContactRollupsProcessedTest < ActiveSupport::TestCase
   test 'import_from_raw_table creates one row per email' do
-    clean_tables
+    assert 0, ContactRollupsRaw.count
+    assert 0, ContactRollupsProcessed.count
 
     # Create 6 records for 3 unique emails
     create :contact_rollups_raw, email: 'email1@example.domain'
@@ -30,26 +31,31 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'import_from_raw_table combines data from multiple records' do
-    clean_tables
+    assert 0, ContactRollupsRaw.count
+    assert 0, ContactRollupsProcessed.count
 
+    base_time = Time.now.utc
     email = 'email@example.domain'
-    create :contact_rollups_raw, email: email, data: nil
-    create :contact_rollups_raw, email: email, data: {opt_in: 0}
-    create :contact_rollups_raw, email: email, sources: 'dashboard.email_preferences', data: {opt_in: 1}
-    expected_output_data = {'opt_in' => 1}
+    create :contact_rollups_raw, email: email,
+      data: nil, data_updated_at: base_time - 1.day
+    create :contact_rollups_raw, email: email,
+      sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time
 
     ContactRollupsProcessed.import_from_raw_table
 
     assert_equal 1, ContactRollupsProcessed.count
-    assert_equal expected_output_data, ContactRollupsProcessed.first.data
+    data = ContactRollupsProcessed.first.data
+    assert_equal 1, data['opt_in']
+    assert_equal base_time.to_i, Time.parse(data['updated_at']).to_i
   end
 
   test 'import_from_raw_table calls all extraction functions' do
-    clean_tables
+    assert 0, ContactRollupsRaw.count
     create :contact_rollups_raw
 
     # Each extraction function will be called once per unique email address
     ContactRollupsProcessed.expects(:extract_opt_in).once
+    ContactRollupsProcessed.expects(:extract_updated_at).once
 
     ContactRollupsProcessed.import_from_raw_table
   end
@@ -150,10 +156,5 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         ContactRollupsProcessed.parse_contact_data input
       end
     end
-  end
-
-  def clean_tables
-    ContactRollupsRaw.delete_all
-    ContactRollupsProcessed.delete_all
   end
 end
