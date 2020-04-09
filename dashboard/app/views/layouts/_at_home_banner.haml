@@ -1,0 +1,22 @@
+-#
+  Only show cookie banner when in a GDPR country, or when we are in the test
+  environment and the show_cookie_banner_on_test URL parameter is specified,
+  presumably by a UI test.
+
+- if true
+
+  #at-home-banner
+    %div.banner-content
+      .text
+        != I18n.t('at_home_banner.text', markdown: true)
+
+      .buttons
+        %button#link_your_email= I18n.t('at_home_banner.link_your_email')
+        %button#not_now= I18n.t('at_home_banner.not_now')
+
+  :javascript
+    // When loaded on the code.org homepage, jQuery is not yet available (since its
+    // load is deferred), but a shim implementing .ready() is available.
+    $(document).ready(function() {
+      //window.setupCookieBanner("#{rack_env}");
+    });
