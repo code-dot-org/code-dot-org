@@ -663,7 +663,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    assert response.body.include? 'The lesson lesson 1 will be visible after'
+    assert response.body.include? 'The lesson stage 1 will be visible after'
     Timecop.return
   end
 
