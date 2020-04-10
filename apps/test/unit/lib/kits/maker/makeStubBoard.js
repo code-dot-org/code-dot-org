@@ -70,4 +70,6 @@ export class MicrobitStubBoard {
   streamAnalogChannel(channel) {}
 
   stopStreamingAnalogChannel(channel) {}
+
+  trackDigitalComponent() {}
 }

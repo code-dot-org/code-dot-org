@@ -3,10 +3,10 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
-import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/ExternalLed';
+import ExternalButton from '@cdo/apps/lib/kits/maker/ExternalButton';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -150,7 +150,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newButton = board.createButton(pin);
-        expect(newButton).to.be.an.instanceOf(five.Button);
+        expect(newButton).to.be.an.instanceOf(ExternalButton);
       });
     });
 
