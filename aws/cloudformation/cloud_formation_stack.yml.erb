@@ -294,6 +294,7 @@ Resources:
                 Resource:
                   - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
                   - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
               - Effect: Allow
                 Action:
                   - 'rds:DeleteDBCluster'
