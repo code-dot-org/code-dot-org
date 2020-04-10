@@ -2,13 +2,15 @@ import $ from 'jquery';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
 $(document).ready(() => {
-  new AddParentEmailController({
-    form: $('#add-parent-email-modal-form'),
-    link: $('#link_your_email')
-  });
-
   const dismissButton = document.getElementById('not_now');
   const banner = document.getElementById('at-home-banner');
+  new AddParentEmailController({
+    form: $('#add-parent-email-modal-form'),
+    link: $('#link_your_email'),
+    onSuccessCallback: () => {
+      banner.style.display = 'none';
+    }
+  });
 
   dismissButton.onclick = () => {
     $.ajax({

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import color from '../../../util/color';
 import AddParentEmailModal from './AddParentEmailModal';
 
 /**
@@ -22,11 +21,12 @@ export default class AddParentEmailController {
    * @param {jQuery} form
    * @param {jQuery} link
    * @param {jQuery} displayedParentEmail
-   * @param {function(parentEmail:string, parentEmailOptIn:string)} parentEmailChangedCallback
+   * @param {jQuery} onSuccess
    */
-  constructor({form, link, displayedParentEmail}) {
+  constructor({form, link, displayedParentEmail, onSuccessCallback}) {
     this.form = form;
     this.displayedParentEmail = displayedParentEmail;
+    this.onSuccessCallback = onSuccessCallback;
     link.click(this.showAddParentEmailModal);
   }
 
@@ -60,14 +60,10 @@ export default class AddParentEmailController {
   };
 
   onParentEmailChanged = parentEmail => {
-    this.hideAddParentEmailModal();
-    if (this.displayedParentEmail) {
-      this.displayedParentEmail.text(parentEmail);
-      this.displayedParentEmail.effect('highlight', {
-        duration: 1500,
-        color: color.orange
-      });
+    if (this.onSuccessCallback) {
+      this.onSuccessCallback(parentEmail);
     }
+    this.hideAddParentEmailModal();
   };
 
   submitParentEmailChange({parentEmail, parentEmailOptIn}) {
