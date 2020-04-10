@@ -12,6 +12,7 @@
 #  lockable          :boolean          default(FALSE), not null
 #  relative_position :integer          not null
 #  properties        :text(65535)
+#  lesson_group_id   :integer
 #
 # Indexes
 #
@@ -31,6 +32,7 @@ class Stage < ActiveRecord::Base
   has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
+  belongs_to :lesson_group
   has_and_belongs_to_many :standards
 
   serialized_attrs %w(

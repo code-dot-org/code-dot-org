@@ -90,9 +90,8 @@ export default class MicroBitBoard extends EventEmitter {
     this.boardClient_.analogWrite(pin, value);
   }
 
-  // TODO
   analogRead(pin, callback) {
-    callback(pin);
+    this.boardClient_.analogRead(pin, callback);
   }
 
   createLed(pin) {
