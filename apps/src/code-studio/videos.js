@@ -118,7 +118,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
 
   upgradeInsecureOptions(options);
   var widthRatio = 0.8;
-  var heightRatio = 0.8;
+  var heightRatio = 0.75;
   var aspectRatio = 16 / 9;
 
   var body = $('<div/>');
@@ -226,15 +226,20 @@ videos.showVideoDialog = function(options, forceShowVideo) {
     'text-align': 'right'
   });
   nav.append(fallbackPlayerLinkDiv);
+  debugger;
 
-  // Resize modal to fit constraining dimension.
-  let accurateInnerHeight = Math.min(window.innerHeight, window.outerHeight);
-  let accurateInnerWidth = Math.min(window.innerWidth, window.outerWidth);
-  let windowHeight = Math.min(accurateInnerHeight, accurateInnerWidth);
-  let windowWidth = Math.max(accurateInnerHeight, accurateInnerWidth);
+  // // Resize modal to fit constraining dimension.
+  // let accurateInnerHeight = Math.min(window.innerHeight, window.outerHeight);
+  // let accurateInnerWidth = Math.min(window.innerWidth, window.outerWidth);
+  // let windowHeight = Math.min(accurateInnerHeight, accurateInnerWidth);
+  // let windowWidth = Math.max(accurateInnerHeight, accurateInnerWidth);
 
-  var height = windowHeight * widthRatio,
-    width = windowWidth * heightRatio;
+  // var height = windowHeight * widthRatio,
+  //   width = windowWidth * heightRatio;
+  function onResize() {
+    console.log("resize")
+  var height = $(window).height() * heightRatio,
+    width = $(window).width() * widthRatio;
 
   if (height * aspectRatio < width) {
     $div.height(height);
@@ -254,8 +259,12 @@ videos.showVideoDialog = function(options, forceShowVideo) {
 
   var divHeight = $div.innerHeight() - nav.outerHeight();
   $(video).height(divHeight);
-
   notesDiv.height(divHeight);
+  }
+
+  window.addEventListener('resize', onResize);
+  onResize()
+
 
   currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
@@ -290,6 +299,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
     shouldStillAdd = false;
   });
 
+  var divHeight = $div.innerHeight() - nav.outerHeight();
   setupVideoFallback(options, $div.width(), divHeight, function() {
     return shouldStillAdd;
   });
