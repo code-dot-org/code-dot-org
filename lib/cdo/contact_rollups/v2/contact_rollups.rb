@@ -6,7 +6,7 @@ class ContactRollupsV2
     end
 
     log_collector.time!('Processes all extracted data') do
-      ContactRollupsProcessed.delete_all
+      ActiveRecord::Base.connection.truncate(ContactRollupsProcessed.table_name)
       ContactRollupsProcessed.import_from_raw_table
     end
 
