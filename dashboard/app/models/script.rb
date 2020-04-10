@@ -680,7 +680,7 @@ class Script < ActiveRecord::Base
     standards.each do |standard|
       standard_summary = standard.summarize
       lessons_by_standard = lessons & standard.lessons
-      standard_summary[:stage_ids] = lessons_by_standard.pluck(:id)
+      standard_summary[:lesson_ids] = lessons_by_standard.pluck(:id)
       standards_with_lessons << standard_summary
     end
     standards_with_lessons
