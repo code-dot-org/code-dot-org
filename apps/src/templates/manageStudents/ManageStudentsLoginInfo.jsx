@@ -6,7 +6,9 @@ import i18n from '@cdo/locale';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Button from '../../templates/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {ParentLetterEntryPoint} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import DownloadParentLetter from './DownloadParentLetter';
 
 const styles = {
   explanation: {
@@ -99,13 +101,16 @@ class ManageStudentsLoginInfo extends Component {
         />
         <h2>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
-        <Button
-          __useDeprecatedTag
-          color="white"
+        <DownloadParentLetter
+          sectionId={this.props.sectionId}
+          buttonLocation={ParentLetterEntryPoint.BELOW_TABLE}
+        />
+        <br />
+        <SafeMarkdown
           id="uitest-privacy-link"
-          target="_blank"
-          href={pegasus('/privacy/student-privacy')}
-          text={i18n.privacyButton()}
+          markdown={i18n.privacyLinkToPolicy({
+            privacyPolicyLink: pegasus('/privacy/student-privacy')
+          })}
         />
       </div>
     );

@@ -6,6 +6,12 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import $ from 'jquery';
 
+// For logging metrics on the multiple Download Parent Letter buttons
+export const ParentLetterEntryPoint = {
+  ABOVE_TABLE: 'above-table',
+  BELOW_TABLE: 'below-table'
+};
+
 // Response from server after adding a new student to the section.
 export const AddStatus = {
   SUCCESS: 'success',
