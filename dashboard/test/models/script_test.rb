@@ -104,7 +104,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'cannot rename a script without a new_name' do
     l = create :level
     dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     old_script = Script.add_script(
@@ -126,7 +126,7 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can rename a script between original name and new_name' do
     l = create :level
     dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     old_script = Script.add_script(
@@ -268,7 +268,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'blockly level in custom script' do
     script_data, _ = ScriptDSL.parse(
-      "lesson 'lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
+      "stage 'lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
     script = Script.add_script({name: 'test script'}, script_data[:lessons])
@@ -1034,11 +1034,11 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'NonLockableAssessment3'
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1'
+      stage 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2'
+      stage 'NonLockable2'
       assessment 'NonLockableAssessment2';
-      lesson 'NonLockable3'
+      stage 'NonLockable3'
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -1050,11 +1050,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert /^Lesson 3:/.match(script.lessons[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', lockable: true
+      stage 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
-      lesson 'NonLockable1'
+      stage 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      lesson 'NonLockable2'
+      stage 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -1066,11 +1066,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert /^Lesson 2:/.match(script.lessons[2].localized_title)
 
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'NonLockable1'
+      stage 'NonLockable1'
       assessment 'NonLockableAssessment1';
-      lesson 'Lockable1', lockable: true
+      stage 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
-      lesson 'NonLockable2'
+      stage 'NonLockable2'
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -1086,7 +1086,7 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'Level1'
     create :level, name: 'LockableAssessment1'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      lesson 'Lockable1', lockable: true
+      stage 'Lockable1', lockable: true
       assessment 'LockableAssessment1';
       level 'Level1';
     DSL
@@ -1276,11 +1276,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can make a challenge level not a challenge level' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}', challenge: true
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -1300,11 +1300,11 @@ class ScriptTest < ActiveSupport::TestCase
   test 'can make a bonus level not a bonus level' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}', bonus: true
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -1325,11 +1325,11 @@ class ScriptTest < ActiveSupport::TestCase
     l = create :level
     old_dsl = <<-SCRIPT
       project_widget_visible true
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
@@ -1358,11 +1358,11 @@ class ScriptTest < ActiveSupport::TestCase
     l = create :level
     old_dsl = <<-SCRIPT
       script_announcements [{"notice"=>"notice1", "details"=>"details1", "link"=>"link1", "type"=>"information"}]
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(old_dsl, 'a filename')
@@ -1392,9 +1392,9 @@ class ScriptTest < ActiveSupport::TestCase
     dsl = <<-SCRIPT
       has_lesson_plan true
       curriculum_path '//example.com/{LOCALE}/foo/{LESSON}'
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
-      lesson 'lesson2'
+      stage 'lesson2'
       level '#{l.name}'
     SCRIPT
     script_data, _ = ScriptDSL.parse(dsl, 'a filename')
@@ -1495,7 +1495,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Ignore level names, since we are just testing whether the
     # variants / active / endvariants structure is correct.
     new_dsl_regex = <<-SCRIPT
-lesson 'lesson1'
+stage 'lesson1'
 variants
   level '[^']+'
   level '[^']+', active: false
@@ -1714,7 +1714,7 @@ endvariants
       hidden false
       pilot_experiment 'pilot-experiment'
 
-      lesson 'lesson1'
+      stage 'lesson1'
       level '#{l.name}'
     SCRIPT
 

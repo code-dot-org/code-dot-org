@@ -431,22 +431,22 @@ class LevelsHelperTest < ActionView::TestCase
     # (position 5) Non-Lockable 2
 
     input_dsl = <<~DSL
-      lesson 'Lockable1',
+      stage 'Lockable1',
         lockable: true;
       assessment 'LockableAssessment1';
 
-      lesson 'Nonockable1'
+      stage 'Nonockable1'
       assessment 'NonLockableAssessment1';
 
-      lesson 'Lockable2',
+      stage 'Lockable2',
         lockable: true;
       assessment 'LockableAssessment2';
 
-      lesson 'Lockable3',
+      stage 'Lockable3',
         lockable: true;
       assessment 'LockableAssessment3';
 
-      lesson 'Nonockable2'
+      stage 'Nonockable2'
       assessment 'NonLockableAssessment2';
     DSL
 
@@ -496,7 +496,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
     input_dsl = <<~DSL
-      lesson 'Test bonus level links'
+      stage 'Test bonus level links'
       level 'Level1'
       level 'BonusLevel1', bonus: true
     DSL
@@ -521,7 +521,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'build_script_level_path handles bonus levels with or without solutions' do
     input_dsl = <<~DSL
-      lesson 'My cool stage'
+      stage 'My cool stage'
       level 'Level1'
       level 'Level2'
       level 'BonusLevel1', bonus: true

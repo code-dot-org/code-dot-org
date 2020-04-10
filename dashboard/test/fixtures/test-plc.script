@@ -1,6 +1,6 @@
 professional_learning_course 'Test plc course'
 peer_reviews_to_complete 42
 
-lesson 'Sample Module',
+stage 'Sample Module',
   flex_category: 'content'
 level 'Level 1'
