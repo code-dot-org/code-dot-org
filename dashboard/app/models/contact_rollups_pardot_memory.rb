@@ -26,26 +26,17 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
   # Retrieves new email-Pardot ID mappings from Pardot and saves them to the database.
   # @param [Integer, nil] last_id retrieves only Pardot ID greater than this value
-  # @param [Integer] batch_size saves records in batches of this size
-  # @return [Integer] number of records saved
-  def self.add_and_update_pardot_ids(last_id = nil, batch_size = 1000)
+  def self.add_and_update_pardot_ids(last_id = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
-    id_mappings = PardotV2.retrieve_new_ids(last_id)
 
-    saved_count = 0
-    while saved_count < id_mappings.length
-      # Grab a batch with size = batch_size. Each item in the batch
-      # is a hash with 3 keys: email, pardot_id, pardot_id_updated_at.
+    PardotV2.retrieve_new_ids(last_id) do |mappings|
       current_time = Time.now.utc
-      batch = id_mappings[saved_count, batch_size].map do |item|
-        item.merge(pardot_id_updated_at: current_time)
-      end
+      batch = mappings.map {|item| item.merge(pardot_id_updated_at: current_time)}
 
-      import! batch, validate: false, on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
-      saved_count += batch.length
+      import! batch,
+        validate: false,
+        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
     end
-
-    saved_count
   end
 
   def self.create_new_pardot_prospects
