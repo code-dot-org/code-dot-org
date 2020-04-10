@@ -186,10 +186,10 @@ class PardotV2
   # @param [Array[Integer]] prospect_ids of the prospects to be deleted.
   # @return [Array[Integer]] the set of prospect_ids that failed to be deleted.
   def self.delete_prospects(prospect_ids)
-    return unless CDO.rack_env? :production
-    return if prospect_ids.length > MAX_PROSPECT_DELETION_BATCH_SIZE
-
     failed_prospect_ids = []
+
+    return failed_prospect_ids unless CDO.rack_env? :production
+    return failed_prospect_ids if prospect_ids.length > MAX_PROSPECT_DELETION_BATCH_SIZE
 
     prospect_ids.each do |prospect_id|
       url = "#{PROSPECT_DELETION_URL}/#{prospect_id}"
