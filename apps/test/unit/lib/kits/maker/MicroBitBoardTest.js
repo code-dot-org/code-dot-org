@@ -29,6 +29,7 @@ describe('MicroBitBoard', () => {
         sinon.stub(board.boardClient_.myPort, 'write');
       });
 
+      sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
     });
