@@ -7,13 +7,13 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     @course_unit = create(:plc_course_unit, plc_course: course)
 
-    @stage_cliffs = create(:stage, name: 'Cliff stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_ornithology = create(:stage, name: 'Ornithology stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_ignorance = create(:stage, name: 'Ignorance stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_blue = create(:stage, name: 'Blue stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_cliffs = create(:lesson, name: 'Cliff stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_ornithology = create(:lesson, name: 'Ornithology stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_ignorance = create(:lesson, name: 'Ignorance stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_blue = create(:lesson, name: 'Blue stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
 
-    @stage_honesty = create(:stage, name: 'Honesty stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
-    @stage_no_nickname = create(:stage, name: 'No nickname stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @stage_honesty = create(:lesson, name: 'Honesty stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @stage_no_nickname = create(:lesson, name: 'No nickname stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
 
     @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_cliffs)
     @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_ornithology)
