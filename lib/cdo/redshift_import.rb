@@ -1,6 +1,9 @@
 require 'cdo/redshift'
 
 class RedshiftImport
+  CLONE_CLUSTER_ID = 'production-clone-for-redshift-export-cluster'.freeze
+  CLONE_DB_INSTANCE_ID = 'db.r4.4xlarge'.freeze
+
   # Database Migration Service Replication Tasks load data from Aurora into staging Redshift tables with a prefix.
   TEMP_TABLE_PREFIX = '_import_'.freeze
   BACKUP_TABLE_PREFIX = '_old_'.freeze
