@@ -22,7 +22,7 @@ class PardotV2
     @updated_prospect_deltas = []
   end
 
-  # Retrieves new email-id mappings from Pardot
+  # Retrieves new email-PardotID mappings from Pardot
   # @param [Integer] last_id
   # @return [Array] an array of hash {email, id}
   def self.retrieve_new_ids(last_id)
