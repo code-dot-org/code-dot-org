@@ -688,7 +688,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     summary = script.summarize
 
-    assert_equal 1, summary[:lessons].count
+    assert_equal 1, summary[:stages].count
     assert_nil summary[:peerReviewlesson]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
@@ -718,7 +718,7 @@ class ScriptTest < ActiveSupport::TestCase
       lockable: false
     }
 
-    assert_equal 2, summary[:lessons].count
+    assert_equal 2, summary[:stages].count
     assert_equal expected_peer_review_lesson, summary[:peerReviewStage]
     assert_equal 1, summary[:peerReviewsRequired]
   end
@@ -746,22 +746,22 @@ class ScriptTest < ActiveSupport::TestCase
 
     test 'should summarize script with visible after dates for unsigned in user' do
       summary = @script.summarize(true, nil, false)
-      assert_equal 2, summary[:lessons].count
+      assert_equal 2, summary[:stages].count
     end
 
     test 'should summarize script with visible after dates for teacher' do
       summary = @script.summarize(true, @teacher, false)
-      assert_equal 2, summary[:lessons].count
+      assert_equal 2, summary[:stages].count
     end
 
     test 'should summarize script with visible after dates for student' do
       summary = @script.summarize(true, @student, false)
-      assert_equal 2, summary[:lessons].count
+      assert_equal 2, summary[:stages].count
     end
 
     test 'should summarize script with visible after dates for levelbuilder' do
       summary = @script.summarize(true, @levelbuilder, false)
-      assert_equal 3, summary[:lessons].count
+      assert_equal 3, summary[:stages].count
     end
   end
 
@@ -785,7 +785,7 @@ class ScriptTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: script, name: 'lesson 1')
     create(:script_level, script: script, lesson: lesson)
 
-    assert_nil script.summarize(false)[:lessons]
+    assert_nil script.summarize(false)[:stages]
   end
 
   test 'summarize includes has_verified_resources' do
@@ -945,9 +945,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, lesson: lesson, levels: [level], bonus: true
 
     response = script.summarize(true, nil, true)
-    assert_equal 1, response[:lessons].length
-    assert_equal 1, response[:lessons].first[:levels].length
-    assert_equal [level.id], response[:lessons].first[:levels].first[:ids]
+    assert_equal 1, response[:stages].length
+    assert_equal 1, response[:stages].first[:levels].length
+    assert_equal [level.id], response[:stages].first[:levels].first[:ids]
   end
 
   test 'should generate PLC objects' do
