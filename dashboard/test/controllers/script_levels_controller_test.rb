@@ -1630,8 +1630,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   def create_visible_after_script_level
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script
-    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
-    script_level = create :script_level, levels: [level], stage: stage, script: script
+    stage = create :lesson, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0700'
+    script_level = create :script_level, levels: [level], lesson: stage, script: script
 
     script_level
   end
@@ -1647,14 +1647,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       level = create :maze, name: 'maze 1', level_num: 'custom'
       script_with_visible_after_stages = create :script
 
-      stage_future_visible_after = create :stage, name: 'stage 1', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
-      @script_level_future_visible_after = create :script_level, levels: [level], stage: stage_future_visible_after, script: script_with_visible_after_stages
+      stage_future_visible_after = create :lesson, name: 'stage 1', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], lesson: stage_future_visible_after, script: script_with_visible_after_stages
 
-      stage_past_visible_after = create :stage, name: 'stage 2', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
-      @script_level_past_visible_after = create :script_level, levels: [level], stage: stage_past_visible_after, script: script_with_visible_after_stages
+      stage_past_visible_after = create :lesson, name: 'stage 2', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], lesson: stage_past_visible_after, script: script_with_visible_after_stages
 
-      stage_no_visible_after = create :stage, name: 'stage 3', script: script_with_visible_after_stages
-      @script_level_no_visible_after = create :script_level, levels: [level], stage: stage_no_visible_after, script: script_with_visible_after_stages
+      stage_no_visible_after = create :lesson, name: 'stage 3', script: script_with_visible_after_stages
+      @script_level_no_visible_after = create :script_level, levels: [level], lesson: stage_no_visible_after, script: script_with_visible_after_stages
     end
 
     teardown do
@@ -1666,7 +1666,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_future_visible_after.script,
-        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        stage_position: @script_level_future_visible_after.lesson.absolute_position,
         id: @script_level_future_visible_after.position
       }
       assert_response :success
@@ -1677,7 +1677,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_past_visible_after.script,
-        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        stage_position: @script_level_past_visible_after.lesson.absolute_position,
         id: @script_level_past_visible_after.position
       }
       assert_response :success
@@ -1688,7 +1688,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_future_visible_after.script,
-        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        stage_position: @script_level_future_visible_after.lesson.absolute_position,
         id: @script_level_future_visible_after.position
       }
       assert_response :forbidden
@@ -1699,7 +1699,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_past_visible_after.script,
-        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        stage_position: @script_level_past_visible_after.lesson.absolute_position,
         id: @script_level_past_visible_after.position
       }
       assert_response :success
@@ -1710,7 +1710,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_future_visible_after.script,
-        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        stage_position: @script_level_future_visible_after.lesson.absolute_position,
         id: @script_level_future_visible_after.position
       }
       assert_response :forbidden
@@ -1721,7 +1721,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_past_visible_after.script,
-        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        stage_position: @script_level_past_visible_after.lesson.absolute_position,
         id: @script_level_past_visible_after.position
       }
       assert_response :success
@@ -1732,7 +1732,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_future_visible_after.script,
-        stage_position: @script_level_future_visible_after.stage.absolute_position,
+        stage_position: @script_level_future_visible_after.lesson.absolute_position,
         id: @script_level_future_visible_after.position
       }
       assert_response :forbidden
@@ -1743,7 +1743,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       get :show, params: {
         script_id: @script_level_past_visible_after.script,
-        stage_position: @script_level_past_visible_after.stage.absolute_position,
+        stage_position: @script_level_past_visible_after.lesson.absolute_position,
         id: @script_level_past_visible_after.position
       }
       assert_response :success

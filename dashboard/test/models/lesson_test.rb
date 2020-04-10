@@ -142,9 +142,9 @@ class StageTest < ActiveSupport::TestCase
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
       @script_with_visible_after_stages = create :script
-      @stage_future_visible_after = create :stage, name: 'stage 1', script: @script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
-      @stage_past_visible_after = create :stage, name: 'stage 2', script: @script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
-      @stage_no_visible_after = create :stage, name: 'stage 3', script: @script_with_visible_after_stages
+      @stage_future_visible_after = create :lesson, name: 'stage 1', script: @script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @stage_past_visible_after = create :lesson, name: 'stage 2', script: @script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @stage_no_visible_after = create :lesson, name: 'stage 3', script: @script_with_visible_after_stages
     end
 
     teardown do
