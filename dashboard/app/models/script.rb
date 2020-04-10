@@ -1002,7 +1002,7 @@ class Script < ActiveRecord::Base
       if stage_name
         # check if that lesson_group exists for the script otherwise create a new lesson group
         lesson_group = LessonGroup.find_or_create_by(
-          name: lesson_group_name.presence || "",
+          key: lesson_group_name.presence || "",
           script: script,
           user_facing: lesson_group_name.present?
         )
@@ -1091,12 +1091,12 @@ class Script < ActiveRecord::Base
     current_lesson_group = nil
 
     script_lessons.each do |lesson|
-      next if lesson.lesson_group.name == current_lesson_group
-      if previous_lesson_groups.include?(lesson.lesson_group.name)
-        raise "Only adjacent stages can have the same lesson group. Lesson Group: #{lesson.lesson_group.name} is on two non-adjacent lessons."
+      next if lesson.lesson_group.key == current_lesson_group
+      if previous_lesson_groups.include?(lesson.lesson_group.key)
+        raise "Only adjacent stages can have the same lesson group. Lesson Group: #{lesson.lesson_group.key} is on two non-adjacent lessons."
       end
       previous_lesson_groups.append(current_lesson_group)
-      current_lesson_group = lesson.lesson_group.name
+      current_lesson_group = lesson.lesson_group.key
     end
   end
 
@@ -1108,7 +1108,7 @@ class Script < ActiveRecord::Base
     lessons_with_lesson_group = []
 
     script_lessons.each do |lesson|
-      lesson.lesson_group.name.blank? ? lessons_without_lesson_group.append(lesson.name) : lessons_with_lesson_group.append(lesson.name)
+      lesson.lesson_group.key.blank? ? lessons_without_lesson_group.append(lesson.name) : lessons_with_lesson_group.append(lesson.name)
     end
 
     if !lessons_without_lesson_group.empty? && !lessons_with_lesson_group.empty?
