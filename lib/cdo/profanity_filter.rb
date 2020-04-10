@@ -24,8 +24,7 @@ class ProfanityFilter
   # @param [String] language_code a two-character ISO 639-1 language code
   # @return [String, nil] The first instance of profanity (if any) or nil (if none)
   def self.find_potential_profanity(text, language_code)
-    profanities = find_potential_profanities(text, language_code)
-    profanities.is_a?(Array) ? profanities.first : profanities
+    find_potential_profanities(text, language_code)&.first
   end
 
   # Look for profanities in a given text, return the expletives found
