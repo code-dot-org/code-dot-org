@@ -1876,6 +1876,27 @@ endvariants
     refute @csp_script.has_standards_associations?
   end
 
+  test 'every stage has a lesson group even if non specified' do
+    l1 = create :level
+    l2 = create :level
+    dsl = <<-SCRIPT
+      stage 'Stage1', lesson_group: 'Test Lesson Group 1'
+      level '#{l1.name}'
+      stage 'Stage2'
+      level '#{l2.name}'
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lessonGroupTestScript'},
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+    )
+    assert_equal script.lesson_groups.count, 2
+    assert_equal script.stages[0].lesson_group.user_facing, true
+    assert_equal script.stages[0].lesson_group.name, 'Test Lesson Group 1'
+    assert_equal script.stages[1].lesson_group.user_facing, false
+    assert_equal script.stages[0].lesson_group.name, ''
+  end
+
   test 'stages with the same lesson group name are associated with the same lesson group' do
     l1 = create :level
     l2 = create :level
