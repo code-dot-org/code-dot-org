@@ -618,14 +618,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create :maze, name: 'visible after level', level_num: 'custom'
       script_with_visible_after_stages = create :script
 
-      stage_future_visible_after = create :stage, name: 'stage future', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
-      @script_level_future_visible_after = create :script_level, levels: [level], stage: stage_future_visible_after, script: script_with_visible_after_stages
+      stage_future_visible_after = create :lesson, name: 'stage future', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], lesson: stage_future_visible_after, script: script_with_visible_after_stages
 
-      stage_past_visible_after = create :stage, name: 'stage past', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
-      @script_level_past_visible_after = create :script_level, levels: [level], stage: stage_past_visible_after, script: script_with_visible_after_stages
+      stage_past_visible_after = create :lesson, name: 'stage past', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], lesson: stage_past_visible_after, script: script_with_visible_after_stages
 
-      stage_no_visible_after = create :stage, name: 'stage no', script: script_with_visible_after_stages
-      @script_level_no_visible_after = create :script_level, levels: [level], stage: stage_no_visible_after, script: script_with_visible_after_stages
+      stage_no_visible_after = create :lesson, name: 'stage no', script: script_with_visible_after_stages
+      @script_level_no_visible_after = create :script_level, levels: [level], lesson: stage_no_visible_after, script: script_with_visible_after_stages
     end
 
     teardown do
