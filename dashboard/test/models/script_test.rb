@@ -1889,7 +1889,7 @@ endvariants
     )
     assert_equal script.lesson_groups.count, 1
     assert_equal script.stages[1].lesson_group.user_facing, false
-    assert_equal script.stages[0].lesson_group.name, ''
+    assert_equal script.stages[0].lesson_group.key, ''
   end
 
   test 'raises error if some lessons have lesson groups and some do not' do
@@ -1975,7 +1975,7 @@ endvariants
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'Test Lesson Group', script.stages[0].lesson_group.name
+    assert_equal 'Test Lesson Group', script.stages[0].lesson_group.key
   end
 
   test 'can change the lesson group for a lesson' do
@@ -1992,14 +1992,14 @@ endvariants
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
-    assert_equal 'Test Lesson Group 1', script.stages[0].lesson_group.name
+    assert_equal 'Test Lesson Group 1', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'Test Lesson Group 2', script.stages[0].lesson_group.name
+    assert_equal 'Test Lesson Group 2', script.stages[0].lesson_group.key
   end
 
   test 'can remove the lesson group for a lesson' do
@@ -2017,7 +2017,7 @@ endvariants
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'Test Lesson Group', script.stages[0].lesson_group.name
+    assert_equal 'Test Lesson Group', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
