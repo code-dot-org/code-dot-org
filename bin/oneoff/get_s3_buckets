@@ -18,6 +18,7 @@ Bucket = Struct.new(
   :creation_date,
   :region,
   :versioning,
+  :encryption,
   :size,
   :object_count,
   :bytes_uploaded,
@@ -34,6 +35,15 @@ s3_buckets.each do |s3_bucket|
   bucket[:region] = s3_client.get_bucket_location(bucket: bucket[:name]).location_constraint
   bucket[:region] = PRIMARY_REGION if bucket[:region] == ''
   bucket[:versioning] = s3_client.get_bucket_versioning(bucket: bucket[:name]).status
+  begin
+    bucket[:encryption] = s3_client.get_bucket_encryption(bucket: bucket[:name]).
+      server_side_encryption_configuration.
+      rules.
+      map {|rule| rule.apply_server_side_encryption_by_default.sse_algorithm}.
+      join(':')
+  rescue Aws::S3::Errors::ServerSideEncryptionConfigurationNotFoundError => no_encryption_error
+    puts "IGNORING - #{no_encryption_error.message}"
+  end
 
   bucket[:size] = Aws::CloudWatch::Metric.new(namespace: 'AWS/S3', name: 'BucketSizeBytes', client: cloudwatch_client).
     get_statistics(
