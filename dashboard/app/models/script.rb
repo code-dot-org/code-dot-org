@@ -1073,11 +1073,47 @@ class Script < ActiveRecord::Base
       stage.save! if stage.changed?
     end
 
+    Script.prevent_lesson_group_mismatch(script_stages)
+    Script.prevent_duplicate_lesson_group(script_stages)
+
     script.stages = script_stages
     script.reload.stages
     script.generate_plc_objects
 
     script
+  end
+
+  # Only adjacent lessons can have the same lesson group.
+  # Raise an error if non adjacent lessons have the same lesson
+  # group
+  def self.prevent_duplicate_lesson_group(script_lessons)
+    previous_lesson_groups = []
+    current_lesson_group = nil
+
+    script_lessons.each do |lesson|
+      next if lesson.lesson_group.name == current_lesson_group
+      if previous_lesson_groups.include?(lesson.lesson_group.name)
+        raise "Only adjacent stages can have the same lesson group. Lesson Group: #{lesson.lesson_group.name} is on two non-adjacent lessons."
+      end
+      previous_lesson_groups.append(current_lesson_group)
+      current_lesson_group = lesson.lesson_group.name
+    end
+  end
+
+  # We want a script to either have all of its lessons have lesson groups
+  # or none of the lessons have lesson groups. This method raises an error if
+  # we some lessons with lesson groups and not others
+  def self.prevent_lesson_group_mismatch(script_lessons)
+    lessons_without_lesson_group = []
+    lessons_with_lesson_group = []
+
+    script_lessons.each do |lesson|
+      lesson.lesson_group.name.blank? ? lessons_without_lesson_group.append(lesson.name) : lessons_with_lesson_group.append(lesson.name)
+    end
+
+    if !lessons_without_lesson_group.empty? && !lessons_with_lesson_group.empty?
+      raise "Expect if one lesson has a lesson group all lessons have lesson groups. #{lessons_without_lesson_group.join(', ')} does/do not have lesson groups."
+    end
   end
 
   # Clone this script, appending a dash and the suffix to the name of this

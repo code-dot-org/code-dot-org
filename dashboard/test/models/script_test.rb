@@ -1876,37 +1876,73 @@ endvariants
     refute @csp_script.has_standards_associations?
   end
 
-  test 'every stage has a lesson group even if non specified' do
+  test 'every lesson has a lesson group even if non specified' do
     l1 = create :level
-    l2 = create :level
     dsl = <<-SCRIPT
-      stage 'Stage1', lesson_group: 'Test Lesson Group 1'
+      stage 'Lesson1'
       level '#{l1.name}'
-      stage 'Stage2'
-      level '#{l2.name}'
     SCRIPT
 
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
-    assert_equal script.lesson_groups.count, 2
-    assert_equal script.stages[0].lesson_group.user_facing, true
-    assert_equal script.stages[0].lesson_group.name, 'Test Lesson Group 1'
+    assert_equal script.lesson_groups.count, 1
     assert_equal script.stages[1].lesson_group.user_facing, false
     assert_equal script.stages[0].lesson_group.name, ''
   end
 
-  test 'stages with the same lesson group name are associated with the same lesson group' do
+  test 'raises error if some lessons have lesson groups and some do not' do
+    l1 = create :level
+    l2 = create :level
+    dsl = <<-SCRIPT
+      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
+      level '#{l1.name}'
+      stage 'Lesson2'
+      level '#{l2.name}'
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lessonGroupTestScript'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      )
+    end
+    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. Lesson2 does/do not have lesson groups.', raise.message
+  end
+
+  test 'raises error if two non-adjacent lessons have the same lesson group' do
     l1 = create :level
     l2 = create :level
     l3 = create :level
     dsl = <<-SCRIPT
-      stage 'Stage1', lesson_group: 'Test Lesson Group 1'
+      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
       level '#{l1.name}'
-      stage 'Stage2', lesson_group: 'Test Lesson Group 1'
+      stage 'Lesson2', lesson_group: 'Test Lesson Group 2'
       level '#{l2.name}'
-      stage 'Stage3', lesson_group: 'Test Lesson Group 2'
+      stage 'Lesson3', lesson_group: 'Test Lesson Group 1'
+      level '#{l3.name}'
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lessonGroupTestScript'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      )
+    end
+    assert_equal 'Only adjacent stages can have the same lesson group. Lesson Group: Test Lesson Group 1 is on two non-adjacent lessons.', raise.message
+  end
+
+  test 'lessons with the same lesson group name are associated with the same lesson group' do
+    l1 = create :level
+    l2 = create :level
+    l3 = create :level
+    dsl = <<-SCRIPT
+      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
+      level '#{l1.name}'
+      stage 'Lesson2', lesson_group: 'Test Lesson Group 1'
+      level '#{l2.name}'
+      stage 'Lesson3', lesson_group: 'Test Lesson Group 2'
       level '#{l3.name}'
     SCRIPT
 
@@ -1918,14 +1954,14 @@ endvariants
     refute_equal script.stages[0].lesson_group.id, script.stages[2].lesson_group.id
   end
 
-  test 'can add the lesson group for a stage' do
+  test 'can add the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Stage1'
+      stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1', lesson_group: 'Test Lesson Group'
+      stage 'Lesson1', lesson_group: 'Test Lesson Group'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -1942,14 +1978,14 @@ endvariants
     assert_equal 'Test Lesson Group', script.stages[0].lesson_group.name
   end
 
-  test 'can change the lesson group for a stage' do
+  test 'can change the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Stage1', lesson_group: 'Test Lesson Group 1'
+      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1', lesson_group: 'Test Lesson Group 2'
+      stage 'Lesson1', lesson_group: 'Test Lesson Group 2'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
@@ -1966,14 +2002,14 @@ endvariants
     assert_equal 'Test Lesson Group 2', script.stages[0].lesson_group.name
   end
 
-  test 'can remove the lesson group for a stage' do
+  test 'can remove the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Stage1', lesson_group: 'Test Lesson Group'
+      stage 'Lesson1', lesson_group: 'Test Lesson Group'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Stage1'
+      stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
