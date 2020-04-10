@@ -1,7 +1,6 @@
 /** @file Board controller for BBC micro:bit */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
@@ -9,6 +8,8 @@ import {
   componentConstructors
 } from './MicroBitComponents';
 import {MicroBitButton} from './Button';
+import MBFirmataWrapper from './MBFirmataWrapper';
+import ExternalLed from './ExternalLed';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -24,7 +25,7 @@ export default class MicroBitBoard extends EventEmitter {
     this.prewiredComponents_ = null;
 
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataClient(SerialPort);
+    this.boardClient_ = new MBFirmataWrapper(SerialPort);
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -81,22 +82,23 @@ export default class MicroBitBoard extends EventEmitter {
     this.boardClient_.digitalWrite(pin, value);
   }
 
-  // TODO
   digitalRead(pin, callback) {
-    callback(pin);
+    this.boardClient_.digitalRead(pin, callback);
   }
 
   analogWrite(pin, value) {
     this.boardClient_.analogWrite(pin, value);
   }
 
-  // TODO
   analogRead(pin, callback) {
-    callback(pin);
+    this.boardClient_.analogRead(pin, callback);
   }
 
-  // TODO
-  createLed(pin) {}
+  createLed(pin) {
+    const newLed = new ExternalLed({board: this.boardClient_, pin});
+    this.dynamicComponents_.push(newLed);
+    return newLed;
+  }
 
   createButton(pin) {
     const newButton = new MicroBitButton({mb: this.boardClient_, pin: pin});

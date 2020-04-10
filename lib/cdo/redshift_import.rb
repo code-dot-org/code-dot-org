@@ -1,7 +1,9 @@
 require 'cdo/redshift'
-require 'pg'
 
 class RedshiftImport
+  CLONE_CLUSTER_ID = 'production-clone-for-redshift-export-cluster'.freeze
+  CLONE_DB_INSTANCE_ID = 'db.r4.4xlarge'.freeze
+
   # Database Migration Service Replication Tasks load data from Aurora into staging Redshift tables with a prefix.
   TEMP_TABLE_PREFIX = '_import_'.freeze
   BACKUP_TABLE_PREFIX = '_old_'.freeze
@@ -20,38 +22,12 @@ class RedshiftImport
         CDO.log.info "Dropping existing table #{schema}.#{target_table} and renaming newly imported #{import_table}."
 
         # Rename existing table to back it up, if it exists.
-        # When a new table created in the source MySQL database is imported for the first time, there won't be an
-        # existing table in Redshift to backup.
+        # Note: When a new table created in the source MySQL database is imported for the first time, there won't be an
+        # existing table in Redshift to backup.  `rename_table` rescues that non-existing table error.
         rename_table(schema, target_table, backup_table)
 
         # Make staging table the production table.
         rename_table(schema, import_table, target_table)
-
-        # Rename the primary key from '_import_[foo]_primary' to '[foo]_primary' so that the next time the
-        # DMS Replication Task runs and creates the staging table it can create the primary key without being blocked
-        # by an existing primary key with that name.
-        # Also rename the backup table's primary key.
-        old_primary_key = RedshiftImport.primary_key(schema, backup_table)
-        if old_primary_key
-          rename_primary_key(
-            schema,
-            backup_table,
-            old_primary_key[:name],
-            BACKUP_TABLE_PREFIX + old_primary_key[:name],
-            old_primary_key[:columns]
-          )
-        end
-
-        primary_key = RedshiftImport.primary_key(schema, target_table)
-        if primary_key
-          rename_primary_key(
-            schema,
-            target_table,
-            primary_key[:name],
-            primary_key[:name].partition(TEMP_TABLE_PREFIX).last,
-            primary_key[:columns]
-          )
-        end
 
         # Drop the old production table.
         drop_table(schema, backup_table)
@@ -135,8 +111,20 @@ class RedshiftImport
     redshift_client.exec "DROP TABLE IF EXISTS #{schema}.#{table};"
   end
 
-  # Rename a table within the same schema to preserve permissions.
+  # Rename a table within the same schema to preserve permissions
+  # and also its primary key so that another table can be created with the old table name and old primary key name.
   def self.rename_table(schema, current_table_name, new_table_name)
+    primary_key = RedshiftImport.primary_key(schema, current_table_name)
+    if primary_key
+      rename_primary_key(
+        schema,
+        current_table_name,
+        primary_key[:name],
+        new_table_name + '_primary',
+        primary_key[:columns]
+      )
+    end
+
     redshift_client = RedshiftClient.instance
     query = <<~SQL
       SET search_path TO #{schema};
