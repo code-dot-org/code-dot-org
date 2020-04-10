@@ -152,7 +152,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal expected_data_synced, record&.data_synced
   end
 
-  test 'save_sync_results updated prospect' do
+  test 'save_sync_results updated prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
     pardot_memory_records = [
       {email: 'alpha', pardot_id: 1, data_synced: nil},
@@ -183,14 +183,14 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   test 'save_sync_results rejected contact' do
     assert_equal 0, ContactRollupsPardotMemory.count
 
-    submissions = [{email: 'invalid_email', id: nil, db_Opt_In: 'No'}]
+    submission = {email: 'invalid_email', id: nil, db_Opt_In: 'No'}
     errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
     submitted_time = Time.now.utc
 
-    ContactRollupsPardotMemory.save_sync_results submissions, errors, submitted_time
+    ContactRollupsPardotMemory.save_sync_results [submission], errors, submitted_time
 
     refute_nil ContactRollupsPardotMemory.find_by(
-      email: submissions.first[:email],
+      email: submission[:email],
       data_rejected_reason: PardotHelpers::ERROR_INVALID_EMAIL,
       data_rejected_at: submitted_time
     )

@@ -88,7 +88,6 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.query_updated_contacts
-    # TODO: find contacts with updated pardot_id(s) and test
     <<-SQL.squish
       SELECT
         processed.email, processed.data,
@@ -136,6 +135,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
+    # data_synced is the accumulation of all data that has been synced to Pardot.
+    # Its new value is a merger of the current value (could be null) and the recently synced data.
     update_values_sql = <<-SQL.squish
       data_synced = JSON_MERGE_PATCH(COALESCE(data_synced, JSON_OBJECT()), VALUES(data_synced)),
       data_synced_at = VALUES(data_synced_at)
