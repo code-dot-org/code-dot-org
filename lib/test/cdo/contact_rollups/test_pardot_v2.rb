@@ -10,10 +10,13 @@ class PardotV2Test < Minitest::Test
         </result>
       </rsp>
     XML
-
     PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
-    assert_equal [], PardotV2.retrieve_new_ids(0)
+    yielded_result = nil
+    result = PardotV2.retrieve_new_ids(0) {|mappings| yielded_result = mappings}
+
+    assert_equal 0, result
+    assert_equal [], yielded_result
   end
 
   def test_retrieve_new_ids_with_result
@@ -32,8 +35,11 @@ class PardotV2Test < Minitest::Test
     XML
     PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
-    expected_result = [{email: email, pardot_id: pardot_id}]
-    assert_equal expected_result, PardotV2.retrieve_new_ids(0)
+    yielded_result = nil
+    result = PardotV2.retrieve_new_ids(0) {|mappings| yielded_result = mappings}
+
+    assert_equal 1, result
+    assert_equal [{email: email, pardot_id: pardot_id}], yielded_result
   end
 
   def test_batch_create_prospects_single_contact
