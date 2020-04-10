@@ -874,7 +874,7 @@ class Script < ActiveRecord::Base
         name = "#{base_name}-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
-        lessons = script_data[:lessons]
+        lessons = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
@@ -972,7 +972,7 @@ class Script < ActiveRecord::Base
         level
       end
 
-      stage_name = raw_script_level.delete(:lesson)
+      stage_name = raw_script_level.delete(:stage)
       properties = raw_script_level.delete(:properties) || {}
 
       if new_suffix && properties[:variants]
@@ -1051,7 +1051,7 @@ class Script < ActiveRecord::Base
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
 
-      raw_stage = raw_lessons.find {|rs| rs[:lesson].downcase == stage.name.downcase}
+      raw_stage = raw_lessons.find {|rs| rs[:stage].downcase == stage.name.downcase}
       stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
       stage.visible_after = raw_stage[:visible_after]
       stage.save! if stage.changed?
@@ -1157,7 +1157,7 @@ class Script < ActiveRecord::Base
             family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
             properties: Script.build_property_hash(general_params)
           },
-          script_data[:lessons],
+          script_data[:stages],
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
