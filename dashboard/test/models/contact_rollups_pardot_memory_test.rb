@@ -3,13 +3,13 @@ require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   test 'add_and_update_pardot_ids inserts new mappings' do
-    ContactRollupsPardotMemory.delete_all
+    assert_equal 0, ContactRollupsPardotMemory.count
 
     new_mappings = [
       {email: "alex@rollups.com", pardot_id: 1},
       {email: "becky@rollups.com", pardot_id: 2}
     ]
-    PardotV2.stubs(:retrieve_new_ids).once.returns(new_mappings)
+    PardotV2.stubs(:retrieve_new_ids).once.yields(new_mappings)
 
     ContactRollupsPardotMemory.add_and_update_pardot_ids
 
@@ -26,11 +26,15 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     email = 'test@domain.com'
     base_time = Time.now.utc - 1.day
-    create :contact_rollups_pardot_memory, email: email, pardot_id: 1, pardot_id_updated_at: base_time
+    create :contact_rollups_pardot_memory,
+      email: email,
+      pardot_id: 1,
+      pardot_id_updated_at: base_time
 
     new_pardot_id = 2
-    PardotV2.stubs(:retrieve_new_ids).once.
-      returns([{email: email, pardot_id: new_pardot_id}])
+    PardotV2.stubs(:retrieve_new_ids).
+      once.
+      yields([{email: email, pardot_id: new_pardot_id}])
 
     ContactRollupsPardotMemory.add_and_update_pardot_ids
 
@@ -38,16 +42,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       where(email: email, pardot_id: new_pardot_id).
       where("pardot_id_updated_at > ?", base_time).
       first
-  end
-
-  test 'add_and_update_pardot_ids save batches' do
-    assert_equal 0, ContactRollupsPardotMemory.count
-
-    new_mappings = (1..11).map {|i| {email: "test#{i}", pardot_id: i}}
-    PardotV2.stubs(:retrieve_new_ids).once.returns(new_mappings)
-    ContactRollupsPardotMemory.add_and_update_pardot_ids(nil, 3)
-
-    assert_equal new_mappings.length, ContactRollupsPardotMemory.count
   end
 
   test 'query_new_contacts' do
