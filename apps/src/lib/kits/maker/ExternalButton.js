@@ -23,5 +23,10 @@ export default function ExternalButton(board) {
       }
     }
   });
+
+  // Add a read-only `isPressed` property
+  Object.defineProperty(this, 'isPressed', {
+    get: () => this.buttonEvents[1] > this.buttonEvents[2]
+  });
 }
 ExternalButton.inherits(EventEmitter);

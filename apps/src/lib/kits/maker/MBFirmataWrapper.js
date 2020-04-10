@@ -1,6 +1,11 @@
 import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
+  constructor(SerialPort) {
+    super(SerialPort);
+    this.digitalCallbacks = [];
+  }
+
   setPinMode(pin, mode) {
     // If setting a pin to input, start tracking it immediately
     if (mode === 0) {
