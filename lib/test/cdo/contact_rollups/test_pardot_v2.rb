@@ -90,6 +90,9 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_batch_update_prospects_single_contact
+    # TODO: add more fields to new_contact_data so that new_contact_data and old_prospect_data
+    #   semantically overlap (field names could be different).
+    #   Same in test_batch_update_prospects_multiple_contacts.
     contact = {
       email: 'alpha@cdo.org',
       pardot_id: 1,

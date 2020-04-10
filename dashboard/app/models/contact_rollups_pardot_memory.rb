@@ -61,11 +61,13 @@ class ContactRollupsPardotMemory < ApplicationRecord
         record['pardot_id_changed'] ?
           {} :
           JSON.parse(record['data_synced'] || '{}').deep_symbolize_keys
-
       new_contact_data = JSON.parse(record['data']).deep_symbolize_keys
 
       submissions, errors = pardot_writer.batch_update_prospects(
-        record['email'], record['pardot_id'], old_prospect_data, new_contact_data
+        record['email'],
+        record['pardot_id'],
+        old_prospect_data,
+        new_contact_data
       )
       save_sync_results(submissions, errors, Time.now.utc) if submissions.present?
     end
@@ -135,16 +137,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
       }
     end
 
-    # data_synced is the accumulation of all data that has been synced to Pardot.
-    # Its new value is a merger of the current value (could be null) and the recently synced data.
-    update_values_sql = <<-SQL.squish
-      data_synced = JSON_MERGE_PATCH(COALESCE(data_synced, JSON_OBJECT()), VALUES(data_synced)),
-      data_synced_at = VALUES(data_synced_at)
-    SQL
-
     import! emails_and_data,
       validate: false,
-      on_duplicate_key_update: update_values_sql
+      on_duplicate_key_update: [:data_synced, :data_synced_at]
   end
 
   def self.save_rejected_submissions(submissions, submitted_time)

@@ -19,6 +19,7 @@ class PardotV2
   def initialize
     @new_prospects = []
     @updated_prospects = []
+    @updated_prospect_deltas = []
   end
 
   # Retrieves new email-id mappings from Pardot
@@ -102,18 +103,31 @@ class PardotV2
     delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
     return [], [] unless delta.present?
 
-    prospect = delta.merge(
-      self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    )
+    prospect_key = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
+    prospect = new_prospect_data.merge prospect_key
     @updated_prospects << prospect
+    prospect_delta = delta.merge prospect_key
+    @updated_prospect_deltas << prospect_delta
 
-    process_batch BATCH_UPDATE_URL, @updated_prospects, eager_submit
+    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
+    return [], [] unless delta_submissions.present?
+
+    # As an optimization, we only send the deltas to Pardot. However, as far as
+    # the caller's concerned, we have sent the entire contact data to Pardot.
+    full_submissions = @updated_prospects
+    @updated_prospects = []
+    [full_submissions, errors]
   end
 
   # Immediately batch-update the remaining prospects in Pardot.
   # @return [Array<Array>] @see process_batch method
   def batch_update_remaining_prospects
-    process_batch BATCH_UPDATE_URL, @updated_prospects, true
+    delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, true
+    return [], [] unless delta_submissions.present?
+
+    full_submissions = @updated_prospects
+    @updated_prospects = []
+    [full_submissions, errors]
   end
 
   # Submits a request to a Pardot API endpoint if the prospect batch size is big enough
@@ -134,8 +148,8 @@ class PardotV2
     url = self.class.build_batch_url api_endpoint, prospects
 
     if url.length > URL_LENGTH_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE || eager_submit
-      # TODO: rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
-      # Use an instance variable to remember the number of failures.
+      # TODO: Rescue Net::ReadTimeout from submit_prospect_batch and tolerate a certain number of failures.
+      #   Use an instance variable to remember the number of failures.
       errors = self.class.submit_batch_request api_endpoint, prospects
       submissions = prospects.clone
       prospects.clear
