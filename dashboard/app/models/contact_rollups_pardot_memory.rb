@@ -171,22 +171,12 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.delete_pardot_prospects
-    # Get pardot IDs for contacts (emails) that are no longer in contact_rollups_processed.
-    deleted_contacts_query = <<~SQL
-      SELECT pardot.pardot_id
-      FROM contact_rollups_pardot_memory as pardot
-      LEFT OUTER JOIN contact_rollups_processed as processed
-        ON processed.email = pardot.email
-      WHERE processed.email is null
-    SQL
-
-    pardot_ids_to_delete = ActiveRecord::Base.connection.exec_query(deleted_contacts_query).map {|record| record['pardot_id']}
-    # what do we want to happen if there are failed deletions?
-    failed_deletion_pardot_ids = PardotV2.delete_pardot_prospects(pardot_ids_to_delete)
+    pardot_ids_to_delete = ContactRollupsPardotMemory.where(delete_from_pardot: 1).pluck(:pardot_id)
+    failed_deletion_pardot_ids = PardotV2.delete_prospects(pardot_ids_to_delete)
     pardot_ids_deleted = pardot_ids_to_delete - failed_deletion_pardot_ids
 
-    # this looks syntactically strange to me
-    where(pardot_id: pardot_ids_deleted).delete_all
+    # clean-up step to delete rows once they've been deleted from Pardot
+    ContactRollupsPardotMemory.where(pardot_id: pardot_ids_deleted).delete_all
   end
 
   # Saves sync results to database.
