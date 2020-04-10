@@ -133,6 +133,49 @@ class StageTest < ActiveSupport::TestCase
     assert_equal '/', stage2.next_level_path_for_stage_extras(@student)
   end
 
+  class StagePublishedTests < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      @script_with_visible_after_stages = create :script
+      @stage_future_visible_after = create :stage, name: 'stage 1', script: @script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @stage_past_visible_after = create :stage, name: 'stage 2', script: @script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @stage_no_visible_after = create :stage, name: 'stage 3', script: @script_with_visible_after_stages
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test "published? returns true if levelbuilder" do
+      assert @stage_future_visible_after.published?(@levelbuilder)
+      assert @stage_past_visible_after.published?(@levelbuilder)
+      assert @stage_no_visible_after.published?(@levelbuilder)
+    end
+
+    test "published? returns true if stage does not have visible_after date" do
+      assert @stage_no_visible_after.published?(@teacher)
+      assert @stage_no_visible_after.published?(@student)
+      assert @stage_no_visible_after.published?(nil)
+    end
+
+    test "published? returns true if stage visible_after date is in past" do
+      assert @stage_past_visible_after.published?(@teacher)
+      assert @stage_past_visible_after.published?(@student)
+      assert @stage_past_visible_after.published?(nil)
+    end
+
+    test "published? returns false if stage visible_after date is in future" do
+      refute @stage_future_visible_after.published?(@teacher)
+      refute @stage_future_visible_after.published?(@student)
+      refute @stage_future_visible_after.published?(nil)
+    end
+  end
+
   def create_swapped_lockable_stage
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
