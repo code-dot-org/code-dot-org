@@ -1381,9 +1381,9 @@ class Script < ActiveRecord::Base
       [key, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
 
-    data['lessons'] = {}
+    data['stages'] = {}
     lessons.each do |stage|
-      data['lessons'][stage.name] = {
+      data['stages'][stage.name] = {
         'name' => stage.name,
         'description_student' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_student", default: ''),
         'description_teacher' => (I18n.t "data.script.name.#{name}.stages.#{stage.name}.description_teacher", default: '')
