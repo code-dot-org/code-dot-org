@@ -100,7 +100,7 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
   });
 
   // map touch events to mouse events
-  if (event.type.substring(0, 5) === 'touch') {
+  if (event.type && event.type.substring(0, 5) === 'touch') {
     switch (event.type) {
       case 'touchmove':
         newEvent.type = 'mousemove';
