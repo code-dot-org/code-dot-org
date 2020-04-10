@@ -11,6 +11,7 @@ import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeCo
 import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import color from '@cdo/apps/util/color';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -41,10 +42,18 @@ $(document).ready(() => {
     );
   }
 
+  const updateDisplayedParentEmail = parentEmail => {
+    const displayedParentEmail = $('#displayed-parent-email');
+    displayedParentEmail.text(parentEmail);
+    displayedParentEmail.effect('highlight', {
+      duration: 1500,
+      color: color.orange
+    });
+  };
   new AddParentEmailController({
     form: $('#add-parent-email-modal-form'),
     link: $('#add-parent-email-link'),
-    displayedParentEmail: $('#displayed-parent-email')
+    onSuccessCallback: updateDisplayedParentEmail
   });
 
   new ChangeEmailController({

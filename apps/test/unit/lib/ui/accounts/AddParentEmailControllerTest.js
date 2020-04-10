@@ -3,12 +3,11 @@ import $ from 'jquery';
 import {spy, stub} from 'sinon';
 import {expect} from '../../../../util/deprecatedChai';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
-import color from '@cdo/apps/util/color';
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 
 describe('AddParentEmailController', () => {
-  let controller, form, link, displayedParentEmail;
+  let controller, form, link, onSuccessCallback;
 
   const TEST_EMAIL = 'batman@bat.cave';
 
@@ -22,15 +21,14 @@ describe('AddParentEmailController', () => {
 
     link = $('<a/>');
 
-    displayedParentEmail = $('<span/>');
-    displayedParentEmail.effect = spy();
+    onSuccessCallback = spy();
   });
 
   function newController() {
     return new AddParentEmailController({
       form,
       link,
-      displayedParentEmail
+      onSuccessCallback
     });
   }
 
@@ -177,21 +175,11 @@ describe('AddParentEmailController', () => {
     });
   });
 
-  describe('onEmailChanged', () => {
-    it('updates the displayed user email for a teacher', () => {
+  describe('onParentEmailChanged', () => {
+    it('calls the onSuccessCallback on success', () => {
       controller = newController();
       controller.onParentEmailChanged(TEST_EMAIL);
-      expect(displayedParentEmail.text()).to.equal(TEST_EMAIL);
-    });
-
-    it('causes a highlight effect on the displayed user email', () => {
-      controller = newController();
-      expect(displayedParentEmail.effect).not.to.have.been.called;
-      controller.onParentEmailChanged(TEST_EMAIL);
-      expect(displayedParentEmail.effect).to.have.been.calledWith('highlight', {
-        duration: 1500,
-        color: color.orange
-      });
+      expect(onSuccessCallback).to.have.been.calledOnce;
     });
   });
 });
