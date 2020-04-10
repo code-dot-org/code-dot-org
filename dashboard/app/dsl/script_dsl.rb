@@ -2,7 +2,7 @@ class ScriptDSL < BaseDSL
   def initialize
     super
     @id = nil
-    @lesson = nil
+    @stage = nil
     @stage_flex_category = nil
     @stage_lockable = false
     @stage_visible_after = nil
@@ -10,7 +10,7 @@ class ScriptDSL < BaseDSL
     @skin = nil
     @current_scriptlevel = nil
     @scriptlevels = []
-    @lessons = []
+    @stages = []
     @video_key_for_next_level = nil
     @hidden = true
     @login_required = false
@@ -79,16 +79,16 @@ class ScriptDSL < BaseDSL
     @pilot_experiment = experiment
   end
 
-  def lesson(name, properties = {})
-    if @lesson
-      @lessons << {
-        lesson: @lesson,
+  def stage(name, properties = {})
+    if @stage
+      @stages << {
+        stage: @stage,
         visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
         stage_extras_disabled: @stage_extras_disabled,
       }.compact
     end
-    @lesson = name
+    @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
     @stage_visible_after = determine_visible_after_time(properties[:visible_after])
@@ -114,10 +114,10 @@ class ScriptDSL < BaseDSL
   end
 
   def parse_output
-    lesson(nil)
+    stage(nil)
     {
       id: @id,
-      lessons: @lessons,
+      stages: @stages,
       hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
@@ -236,7 +236,7 @@ class ScriptDSL < BaseDSL
       end
     else
       script_level = {
-        lesson: @lesson,
+        stage: @stage,
         levels: [level]
       }
 
@@ -251,7 +251,7 @@ class ScriptDSL < BaseDSL
   end
 
   def variants
-    @current_scriptlevel = {levels: [], properties: {}, lesson: @lesson}
+    @current_scriptlevel = {levels: [], properties: {}, stage: @stage}
   end
 
   def endvariants
@@ -266,8 +266,8 @@ class ScriptDSL < BaseDSL
   # @override
   def i18n_hash
     i18n_strings = {}
-    @lessons.each do |lesson|
-      i18n_strings[lesson[:lesson]] = {'name' => lesson[:lesson]}
+    @stages.each do |stage|
+      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
     {@name => {'stages' => i18n_strings}}
@@ -322,19 +322,19 @@ class ScriptDSL < BaseDSL
     s << 'tts true' if script.tts
 
     s << '' unless s.empty?
-    s << serialize_lessons(script)
+    s << serialize_stages(script)
     s.join("\n")
   end
 
-  def self.serialize_lessons(script)
+  def self.serialize_stages(script)
     s = []
-    script.lessons.each do |lesson|
-      t = "lesson '#{escape(lesson.name)}'"
-      t += ', lockable: true' if lesson.lockable
-      t += ", flex_category: '#{escape(lesson.flex_category)}'" if lesson.flex_category
-      t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
+    script.lessons.each do |stage|
+      t = "stage '#{escape(stage.name)}'"
+      t += ', lockable: true' if stage.lockable
+      t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
+      t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
       s << t
-      lesson.script_levels.each do |sl|
+      stage.script_levels.each do |sl|
         type = 'level'
         type = 'bonus' if sl.bonus
 
@@ -359,7 +359,7 @@ class ScriptDSL < BaseDSL
           s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
         end
       end
-      s << 'no_extras' if lesson.stage_extras_disabled
+      s << 'no_extras' if stage.stage_extras_disabled
       s << ''
     end
     s.join("\n")
