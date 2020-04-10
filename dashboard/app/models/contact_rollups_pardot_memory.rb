@@ -24,16 +24,28 @@ require 'cdo/contact_rollups/v2/pardot'
 class ContactRollupsPardotMemory < ApplicationRecord
   self.table_name = 'contact_rollups_pardot_memory'
 
-  def self.add_and_update_pardot_ids(last_id = nil)
+  # Retrieves new email-Pardot ID mappings from Pardot and saves them to the database.
+  # @param [Integer, nil] last_id retrieves only Pardot ID greater than this value
+  # @param [Integer] batch_size saves records in batches of this size
+  # @return [Integer] number of records saved
+  def self.add_and_update_pardot_ids(last_id = nil, batch_size = 1000)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
+    id_mappings = PardotV2.retrieve_new_ids(last_id)
 
-    # TODO: save records in batch using activerecord_import upsert!
-    PardotV2.retrieve_new_ids(last_id).each do |mapping|
-      pardot_record = find_or_initialize_by(email: mapping[:email])
-      pardot_record.pardot_id = mapping[:pardot_id]
-      pardot_record.pardot_id_updated_at = Time.now.utc
-      pardot_record.save
+    saved_count = 0
+    while saved_count < id_mappings.length
+      # Grab a batch with size = batch_size. Each item in the batch
+      # is a hash with 3 keys: email, pardot_id, pardot_id_updated_at.
+      current_time = Time.now.utc
+      batch = id_mappings[saved_count, batch_size].map do |item|
+        item.merge(pardot_id_updated_at: current_time)
+      end
+
+      import! batch, validate: false, on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
+      saved_count += batch.length
     end
+
+    saved_count
   end
 
   def self.create_new_pardot_prospects
