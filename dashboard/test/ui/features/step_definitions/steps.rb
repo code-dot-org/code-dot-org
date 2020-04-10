@@ -871,6 +871,7 @@ Then(/^I set slider speed to medium/) do
 end
 
 Then(/^I slow down execution speed$/) do
+  @browser.execute_script("Maze.shouldSpeedUpInfiniteLoops = false;")
   @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
@@ -1108,7 +1109,7 @@ And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and uni
 
   individual_steps %Q{
     And I press the save button to create a new section
-    And I wait for the dialog to close
+    And I wait for the dialog to close using jQuery
     Then I should see the section table
   }
 end
@@ -1631,6 +1632,10 @@ end
 
 When /^I wait for the dialog to close$/ do
   steps 'When I wait until element ".modal" is gone'
+end
+
+When /^I wait for the dialog to close using jQuery$/ do
+  steps 'When I wait until element ".modal" is not visible'
 end
 
 Then /^I should see the section table$/ do

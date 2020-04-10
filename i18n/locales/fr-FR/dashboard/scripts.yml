@@ -38,13 +38,13 @@ fr:
             'Bee: Sequence':
               name: 'Abeille: Séquence'
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Getting Loopy:
-              name: लूपी होना
+              name: Tourner en rond
             Going Places Safely:
-              name: सुरक्षित रूप से स्थानों पर जाना
+              name: Se déplacer en toute sécurité
             Happy Maps:
-              name: हैप्पी मैप्स
+              name: Cartes Joyeuses
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle : Apprendre à faire un glisser-déposer'
             'Maze: Debugging':
@@ -54,15 +54,15 @@ fr:
             'Maze: Sequence':
               name: 'Labyrinthe: Séquence'
             Move it, Move it:
-              name: इसे मूव करें, इसे मूव करें
+              name: Déplace-le, déplace-le
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Spelling Bee:
               name: Concours d'orthographe
             'Studio: Create a Story':
               name: 'Labo de jeux: Créer une histoire'
             The Big Event:
-              name: विशाल इवेंट
+              name: Le Grand Evénement
         course2:
           title: Cours 2
           description: Commencer avec le Cours 2 pour les élèves qui savent lire et n'ont aucune expérience antérieure en matière de programmation. Dans le cadre de ce cours, les élèves créeront des programmes pour résoudre des problèmes et développeront des jeux interactifs ou des histoires qu'ils pourront partager . Recommandé pour les niveaux CE2-CM2.
@@ -84,13 +84,13 @@ fr:
             'Bee: Loops':
               name: 'Abeille: Boucles'
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             Conditionals:
               name: Instructions conditionnelles
             Flappy:
               name: Flappy
             Getting Loopy:
-              name: लूपी होना
+              name: Tourner en rond
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
             'Maze: Loops':
@@ -98,15 +98,15 @@ fr:
             'Maze: Sequence':
               name: 'Labyrinthe: Séquence'
             'Real-life Algorithms: Paper Planes':
-              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+              name: 'Algorithmes du monde réel: Avions en papier'
             Relay programming:
               name: Programmation de relais
             'Studio: Create a Story':
               name: 'Labo de jeux: Créer une histoire'
             The Big Event:
-              name: विशाल इवेंट
+              name: Le Grand Evénement
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
         course3:
           title: Cours 3
           description: Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2 (8-10 ans).
@@ -134,23 +134,23 @@ fr:
             Computational Thinking:
               name: Algorithmique
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Dice Race:
               name: Course de Dés
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             'Farmer: While Loops':
               name: 'Fermier: Boucles «Tant que»'
             Functional Suncatchers:
-              name: फंक्शनल सनकैचर्स
+              name: Vitraux fonctionnels
             Internet:
-              name: इंटरनेट
+              name: Internet
             Maze:
               name: Labyrinthe
             'Maze: Conditionals':
               name: 'Labyrinthe: Instructions conditionnelles'
             Songwriting:
-              name: गीत लेखन
+              name: Écriture de chansons
             'Studio: Create a Game':
               name: 'Labo de jeux: Créer un jeu'
             'Studio: Create a Story':
@@ -336,7 +336,7 @@ fr:
             Making Pictures:
               name: Faire des photos
             The Design Recipe:
-              name: डिज़ाइन रेसिपी
+              name: La Recette de Conception
         K5PD:
           title: Perfectionnement professionnel en CM2
           description: 'Perfectionnement professionnel pour les cours de CM2'
@@ -762,7 +762,7 @@ fr:
             The Big Game:
               name: Le grand jeu
             The Design Recipe:
-              name: डिज़ाइन रेसिपी
+              name: La Recette de Conception
         ECSPD-NexTech:
           description: 'Apprendre la programmation fonctionnelle par l''algèbre'
           description_short: 'Apprendre la programmation fonctionnelle par l''algèbre'
@@ -902,7 +902,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         sciencePD3:
           stages:
             Decode and Share:
@@ -986,7 +986,7 @@ fr:
             Strings and Images:
               name: Chaînes et images
             The Design Recipe:
-              name: डिज़ाइन रेसिपी
+              name: La Recette de Conception
         allthethings:
           title: Toutes les choses !
           description: Tous les types de niveau pour le test de l'interface utilisateur
@@ -1196,7 +1196,7 @@ fr:
             Teaching with the Design Recipe:
               name: Enseigner avec la Recette de la Conception
             The Design Recipe:
-              name: डिज़ाइन रेसिपी
+              name: La Recette de Conception
             Welcome!:
               name: Bienvenue !
         sciencePD2b:
@@ -1216,7 +1216,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         equity-pd:
           stages:
             Code.org Equity PD:
@@ -1240,7 +1240,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         Equity-OnlinePD:
           stages:
             Creating Equitable Learning Environments:
@@ -1268,7 +1268,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         ECSPD2-iZone:
           description: 'Phase 2 en ligne : Études estivales mixtes'
           description_short: 'Phase 2 en ligne : Études estivales mixtes'
@@ -1342,23 +1342,23 @@ fr:
         asUnplugged:
           stages:
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Getting Loopy:
-              name: लूपी होना
+              name: Tourner en rond
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
             Happy Maps:
-              name: हैप्पी मैप्स
+              name: Cartes Joyeuses
             Move it, Move it:
-              name: इसे मूव करें, इसे मूव करें
+              name: Déplace-le, déplace-le
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Songwriting:
-              name: गीत लेखन
+              name: Écriture de chansons
             The Big Event:
-              name: विशाल इवेंट
+              name: Le Grand Evénement
         vigenere:
           description: Utilisez le Widget de Chiffrement de Vigenère pour explorer le cryptage et le décryptage de messages à l'aide du Chiffrement de Vigenère.
           description_short: Utilisez le Widget de Chiffrement de Vigenère pour explorer le cryptage et le décryptage de messages à l'aide du Chiffrement de Vigenère.
@@ -1530,7 +1530,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         algebraPD3b:
           title: Informatique en DP d'algèbre
           stages:
@@ -1700,7 +1700,7 @@ fr:
             Welcome!:
               name: Bienvenue !
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         cspunit5:
           description_short: Programmation
           stages:
@@ -2658,7 +2658,7 @@ fr:
             Sequences & Algorithms:
               name: Séquences et Algorithmes
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             'Programming Unplugged: Happy Maps':
               name: 'Programmation Débranchée : Les Cartes Joyeuses'
         grade4:
@@ -2670,7 +2670,7 @@ fr:
             Build a Star Wars Game!:
               name: Construis un Jeu Star Wars !
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Explore project ideas:
               name: Explore des idées de projet
             'Farmer: Functions (New)':
@@ -2688,7 +2688,7 @@ fr:
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Phase du Projet Échafaudé (Boucles, Événements, Conditions, Fonctions)
             Songwriting:
-              name: गीत लेखन
+              name: Écriture de chansons
             'Unplugged: Funky Functions':
               name: 'Débranché : les Fonctions Cool'
         grade1:
@@ -2738,7 +2738,7 @@ fr:
             'Bee: Functions with Parameters':
               name: 'Abeille: Fonctions avec des paramètres'
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Explore project ideas:
               name: Explore des idées de projet
             Final Project - Presentation Day:
@@ -3074,11 +3074,11 @@ fr:
             Programming at home with my pet:
               name: Programmer à la maison avec mon animal de compagnie
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             'Real-life Algorithms: Paper Planes':
-              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+              name: 'Algorithmes du monde réel: Avions en papier'
             The Big Event:
-              name: विशाल इवेंट
+              name: Le Grand Evénement
         transferring-over:
           stages:
             20-hr Stage 2:
@@ -3125,7 +3125,7 @@ fr:
             Teaching with the Design Recipe:
               name: Enseigner avec la Recette de la Conception
             The Design Recipe:
-              name: डिज़ाइन रेसिपी
+              name: La Recette de Conception
             Welcome!:
               name: Bienvenue !
         csp-pre-survey:
@@ -3319,9 +3319,9 @@ fr:
           title: Binaire
           stages:
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             Binary Images:
-              name: युग्मक चित्र
+              name: Les images binaires
             Binary Artist Puzzles:
               name: Énigmes Binaires de Artiste
             RGB Color:
@@ -3585,7 +3585,7 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistance et Frustration : Stevie et les Billes'
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
             'Programming: Happy Maps':
@@ -3607,7 +3607,7 @@ fr:
             Fuzz Fiesta:
               name: La Fiesta des Fuzz
             Going Places Safely:
-              name: सुरक्षित रूप से स्थानों पर जाना
+              name: Se déplacer en toute sécurité
             'Debugging: Unspotted Bugs':
               name: 'Débogage: les Bugs Non Décelés'
         courseb-draft:
@@ -3642,16 +3642,16 @@ fr:
             Keep it Private:
               name: Garde ceci Privé
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
         coursec-draft:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Programming in Maze:
               name: La Programmation dans le Labyrinthe
             'Real-life Algorithms: Paper Planes':
-              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+              name: 'Algorithmes du monde réel: Avions en papier'
             Programming in Collector:
               name: Programmation dans Collecteur
             Programming in Artist:
@@ -3671,13 +3671,13 @@ fr:
             More CS with Run Marco:
               name: Plus d'Informatique avec Run Marco
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             Events in Play Lab:
               name: Événements dans le Labo du Jeu
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Screen Out the Mean:
               name: Filtrer la Moyenne
             Debugging in Maze:
@@ -3718,7 +3718,7 @@ fr:
             Conditionals in Bee:
               name: Les Conditions dans l'Abeille
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             'Unplugged: Binary':
               name: 'Débranché: Binaire'
             Artist Binary:
@@ -3737,7 +3737,7 @@ fr:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Build a Star Wars Game:
               name: Construis un Jeu Star Wars
             'Functions: Songwriting':
@@ -3765,9 +3765,9 @@ fr:
             Private and Personal Information:
               name: Informations Privées et Personnelles
             Internet:
-              name: इंटरनेट
+              name: Internet
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Determine the Concept:
               name: Détermine le Concept
             Introduction:
@@ -3780,15 +3780,15 @@ fr:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           stages:
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             Variables in Artist:
               name: Les Variables dans Artiste
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             For Loops in Bee:
               name: Les Boucles For dans l'Abeille
             For Loops in Artist:
@@ -3863,7 +3863,7 @@ fr:
             Thinking Ahead to Implementation:
               name: Réfléchir Avant la Mise en Œuvre
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
@@ -3879,7 +3879,7 @@ fr:
             Thinking Ahead to Implementation:
               name: Réfléchir Avant la Mise en Œuvre
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         sciencepd3-2016:
           stages:
             Welcome Back!:
@@ -3949,7 +3949,7 @@ fr:
             Thinking About Implementation:
               name: La Réflexion Sur La Mise En Œuvre
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         csp-ca-a:
           stages:
             Commutative Assessment A:
@@ -3965,7 +3965,7 @@ fr:
             Physical Science Challenges:
               name: Les Défis des Sciences Physiques
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         csf2harvey:
           stages:
             'Functions: Songwriting':
@@ -3995,7 +3995,7 @@ fr:
             Physical Science Challenges:
               name: Les Défis des Sciences Physiques
             Wrap-Up:
-              name: समाप्ति
+              name: Conclusions
         csp5-support:
           description_short: Cours de Formation Professionnelle des Enseignants pour CSP Unité 5
           stages:
@@ -4246,7 +4246,7 @@ fr:
             Conditionals:
               name: Instructions conditionnelles
             'Real Life Algorithms: Dice Race':
-              name: 'वास्तविक-जीवन की कलन विधियां: डाइस रेस'
+              name: 'Les algorithmes du monde réel: La course de dés'
         csd6-2017:
           title: CSD Unité 6 - L'Informatique Physique (2017 - 2018)
           description_short: Apprends à programmer des objets.
@@ -4878,7 +4878,7 @@ fr:
               name: 'Persistance: Stevie et le Grand Projet'
               description_teacher: "Lorsque les élèves se heurtent à une barrière en répondant à une question ou en travaillant sur un projet, il est si facile pour eux de se sentir frustrés et d'abandonner. Cette leçon amènera les élèves à l'idée que la frustration peut être un élément important de l'apprentissage. Ici, la frustration est présentée comme une étape, dans le processus créatif, plutôt que comme un signe d'échec.\\r \\ rCette leçon peut être enseignée sur une ou deux sessions de classe. Si vous avez plus de temps, n'hésitez pas à dessiner la phase de construction et de révision de l'activité Marble Run."
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
               description_teacher: "Dans cette leçon, les élèves relieront le concept d'algorithmes aux activités quotidiennes de la vie réelle en plantant une véritable graine. L'objectif, ici, est de commencer à développer les compétences nécessaires pour traduire des situations du monde réel en scénarios en ligne et vice versa.\\ r"
             Learn to Drag and Drop:
               name: Séquençage avec Glisser et Déposer
@@ -4919,7 +4919,7 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistance: Stevie et le Grand Projet'
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Learn to Drag and Drop:
               name: Séquençage avec Glisser et Déposer
             Your Digital Footprint:
@@ -4956,7 +4956,7 @@ fr:
             Debugging in Maze:
               name: Déboguer dans le Labyrinthe
             'Real-life Algorithms: Paper Planes':
-              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+              name: 'Algorithmes du monde réel: Avions en papier'
             Programming in Collector:
               name: Programmation dans Collecteur
             Programming in Artist:
@@ -5077,13 +5077,13 @@ fr:
             Ice Age Play Lab:
               name: Labo de jeux Âge de Glace
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables in Artist:
               name: Les Variables dans Artiste
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             For Loops in Bee:
               name: Les Boucles For dans l'Abeille
             For Loops in Artist:
@@ -5170,7 +5170,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -5283,7 +5283,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -5538,9 +5538,9 @@ fr:
             Nested Loops Project in Artist:
               name: Projet de Boucles Imbriquées dans Artiste
             Internet:
-              name: इंटरनेट
+              name: Internet
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Screen Out the Mean:
               name: Filtrer la Moyenne
             'Events: The Big Event':
@@ -5562,13 +5562,13 @@ fr:
             Conditionals & Loops in Farmer:
               name: Les Conditions et les Boucles dans la Fermière
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables in Artist:
               name: Les Variables dans Artiste
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             For Loops in Bee:
               name: Les Boucles For dans l'Abeille
             For Loops in Artist:
@@ -5614,7 +5614,7 @@ fr:
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Nested Loops:
               name: Boucles Imbriquées
             Conditionals & Loops in Harvester:
@@ -5633,7 +5633,7 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistance: Stevie et le Grand Projet'
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Learn to Drag and Drop:
               name: Séquençage avec Glisser et Déposer
             'Online Safety: Your Digital Footprint':
@@ -5792,7 +5792,7 @@ fr:
             Sequence and Preview in Maze:
               name: Séquence et Aperçu dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -5838,9 +5838,9 @@ fr:
             Present Your Project:
               name: Présente Ton Projet
             Internet:
-              name: इंटरनेट
+              name: Internet
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Nested Loops in Bee:
               name: Les Boucles Imbriquées dans l'Abeille
             Nested Loops in Bee/Zombie:
@@ -5877,7 +5877,7 @@ fr:
             Conditionals & Loops in Farmer:
               name: Les Conditions et les Boucles dans la Fermière
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Build a Play Lab Game:
               name: Construis un Jeu dans le Labo des Jeux
             'Unplugged: Binary':
@@ -5885,7 +5885,7 @@ fr:
             Artist Binary:
               name: Artiste binaire
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Loops in Artist:
               name: Les Boucles dans Artiste
             Nested Loops in Bee:
@@ -5973,7 +5973,7 @@ fr:
             Present Your Project:
               name: Présente Ton Projet
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Nested Loops:
@@ -5999,7 +5999,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -6043,9 +6043,9 @@ fr:
             Present Your Project:
               name: Présente Ton Projet
             Internet:
-              name: इंटरनेट
+              name: Internet
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
           title: Nouveau Script pour E
         new-f:
           stages:
@@ -6054,7 +6054,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -6078,13 +6078,13 @@ fr:
             Conditionals in Minecraft:
               name: Les Conditions dans l'Abeille
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables in Artist:
               name: Les Variables dans Artiste
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             For Loops in Bee:
               name: Les Boucles For dans l'Abeille
             For Loops in Artist:
@@ -6434,7 +6434,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -6478,9 +6478,9 @@ fr:
             Present Your Project:
               name: Présente Ton Projet
             Internet:
-              name: इंटरनेट
+              name: Internet
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Build a Star Wars Game:
               name: Construis un Jeu Star Wars
             Functions in Harvester:
@@ -6493,7 +6493,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -6517,13 +6517,13 @@ fr:
             Conditionals in Minecraft:
               name: Les Conditions dans l'Abeille
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables in Artist:
               name: Les Variables dans Artiste
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             For Loops in Bee:
               name: Les Boucles For dans l'Abeille
             For Loops in Artist:
@@ -6836,13 +6836,13 @@ fr:
               name: Apprends à Faire Glisser et Déposer
               description_teacher: Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.
             'Programming: Happy Maps':
-              name: हैप्पी मैप्स
+              name: Cartes Joyeuses
               description_teacher: Le pont entre les algorithmes et la programmation peut être court si les élèves comprennent la différence entre la planification d'une séquence et l'encodage de cette séquence, dans le langage approprié. Cette activité aidera les élèves à acquérir de l'expérience en lecture et en écriture en sténographie.
             Programming in Maze:
               name: Programmation avec Angry Birds
               description_teacher: Dans cette série d'énigmes en ligne, les élèves s'appuieront sur leur compréhension des algorithmes, du débogage et des connaissances informatiques générales. Mettant en avant des personnages du jeu Angry Birds, les élèves développeront des algorithmes séquentiels pour amener l'oiseau au cochon sans s'écraser sur les murs ou le TNT. Des énigmes de débogage ont également été mélangées à cette phase, pour une pratique supplémentaire avec la résolution de problèmes et la pensée critique.
             Going Places Safely:
-              name: सुरक्षित रूप से स्थानों पर जाना
+              name: Se déplacer en toute sécurité
               description_teacher: En collaboration avec [r common-sense-media], cette leçon aide les élèves à apprendre que de nombreux sites web demandent des informations privées et explique comment gérer de telles demandes, de manière responsable. Les étudiants découvrent également qu'ils peuvent aller dans des endroits passionnants, en ligne, mais ils doivent respecter certaines règles pour rester en sécurité.
             'Loops: Happy Loops':
               name: Les Boucles Heureuses
@@ -6881,7 +6881,7 @@ fr:
             Introduction:
               name: Introduction
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging in Collector:
               name: Déboguer dans le Collecteur
             'Loops: My Loopy Robotic Friends':
@@ -6899,7 +6899,7 @@ fr:
             'Common Sense Education: Screen Out the Mean':
               name: 'Éducation de bon sens: Filtrer la Moyenne'
             'Events: The Big Event':
-              name: विशाल इवेंट
+              name: Le Grand Evénement
             Events in Star Wars:
               name: Événements dans Star Wars
             Events with Flappy:
@@ -6959,7 +6959,7 @@ fr:
             Programming in Artist:
               name: Créer de l'Art avec du Code
             'Loops: Getting Loopy':
-              name: लूपी होना
+              name: Tourner en rond
             Loops with Rey and BB-8:
               name: Les Boucles avec Rey et BB-8
             Copyright and Creativity:
@@ -6975,7 +6975,7 @@ fr:
             Conditionals & Loops in Harvester:
               name: Récolter avec les Conditions
             'Functions: Songwriting':
-              name: गीत लेखन
+              name: Écriture de chansons
             Functions in Minecraft:
               name: Les Fonctions avec Minecraft
             Functions in Harvester:
@@ -6991,7 +6991,7 @@ fr:
             The Power of Words:
               name: Le Pouvoir des Mots
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables as Constant in Artist:
               name: Les Variables avec L'Artiste
             Variables that Change in Bee:
@@ -6999,7 +6999,7 @@ fr:
             Variables that Change in Artist:
               name: Modifier des Variables avec l'Artiste
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             Learning Sprites with Sprite Lab:
               name: S'initier au Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -7007,15 +7007,15 @@ fr:
             Pet Giraffe with Sprite Lab:
               name: Girafe de Compagnie
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             'Unplugged: Binary':
-              name: युग्मक चित्र
+              name: Les images binaires
             Artist Binary:
               name: Artiste binaire
             Internet:
               name: Internet et les réseaux connectés
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Relay Programming:
               name: Programmation de relais
             Graph Paper Programming:
@@ -7032,11 +7032,11 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistance et Frustration : Stevie et les Billes'
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
             'Programming: My Robotic Friends':
               name: Mes Amis Robotiques Jr.
             Programming in Maze:
@@ -7062,7 +7062,7 @@ fr:
             Move It, Move It:
               name: Bouge, Bouge
             Copyright and Creativity:
-              name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+              name: C'est bien de créer et de jouer équitablement
         coursed-2018:
           title: Cours D (2018)
           assignment_family_title: Cours D
@@ -7075,7 +7075,7 @@ fr:
             Introduction:
               name: Introduction
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging in Collector:
               name: Déboguer avec Laurel
             Events in Bounce:
@@ -7097,11 +7097,11 @@ fr:
             Conditionals & Loops in Farmer:
               name: Les Conditions et les Boucles dans la Fermière
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
             Build a Play Lab Game:
               name: Le Jeu de Ninjas vs. Pirates
             'Unplugged: Binary':
-              name: युग्मक चित्र
+              name: Les images binaires
             Artist Binary:
               name: Artiste binaire
             Loops in Ice Age:
@@ -7225,7 +7225,7 @@ fr:
           description_audience: 'Âges: 6 à 10 ans'
           stages:
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Programming in Maze:
               name: Programmation avec Angry Birds
             Debugging in Maze:
@@ -7237,7 +7237,7 @@ fr:
             Programming in Artist:
               name: Créer de l'Art avec du Code
             'Loops: Getting Loopy':
-              name: लूपी होना
+              name: Tourner en rond
             Loops with Rey and BB-8:
               name: Les Boucles avec Rey et BB-8
             Loops in Artist:
@@ -7245,7 +7245,7 @@ fr:
             Loops in Harvester:
               name: Récolter des Cultures avec des Boucles
             'Events: The Big Event':
-              name: विशाल इवेंट
+              name: Le Grand Evénement
             Build a Flappy Game:
               name: Construire un Jeu Flappy
             Events in Play Lab:
@@ -7253,7 +7253,7 @@ fr:
             Screen Out the Mean:
               name: Filtrer la Moyenne
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             Looking Ahead:
               name: Regarder vers l'Avenir avec Minecraft
         csd6-2018:
@@ -7339,7 +7339,7 @@ fr:
             Sequence in Maze:
               name: Coder avec les Commentaires
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -7374,7 +7374,7 @@ fr:
               description_student: Sens la force au fur et à mesure que tu construis ton propre jeu Star Wars, dans cette leçon.
               description_teacher: Dans cette leçon, les élèves s'entraîneront à utiliser des événements pour créer un jeu qu'ils peuvent partager en ligne. Avec R2-D2 et d'autres personnages de Star Wars, les élèves seront guidés à travers les événements, puis auront l'opportunité de créer leur propre jeu.
             'Functions: Songwriting':
-              name: गीत लेखन
+              name: Écriture de chansons
               description_student: Même les rockstars ont besoin de compétences en programmation. Cette leçon t'apprendra les fonctions en utilisant les paroles de chansons.
               description_teacher: Une des structures les plus magnifiques dans le monde de l’informatique est la fonction.  Les fonctions (parfois appelées procédures) sont des minis programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme. Cette leçon aidera les élèves à comprendre intuitivement pourquoi associer des morceaux de code à des fonctions est une pratique très utile.
             Functions in Artist:
@@ -7416,7 +7416,7 @@ fr:
               description_student: T'es-tu déjà demandé comment l'information circule sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les bases du fonctionnement d'Internet.
               description_teacher: Même si beaucoup de gens utilisent internet quotidiennement, peu savent comment cela fonctionne. Dans cette leçon, les élèves feront semblant de circuler sur internet, tout en apprenant sur les connexions, les URL, les adresses IP et le DNS.
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
               description_student: Cette leçon t'initiera au crowdsourcing, le processus de construction d'un projet avec une équipe.
               description_teacher: En informatique, nous sommes confrontés à de gros problèmes intimidants. Des défis tels que la recherche de grands nombres premiers ou le séquençage de l'ADN sont presque impossibles à faire en tant qu'individu. Conjuguer la puissance des autres rend ces tâches gérables. Cette leçon montrera à vos élèves à quel point le travail d'équipe peut être utile dans l'industrie de l'informatique.
             Conditionals with Cards:
@@ -7432,7 +7432,7 @@ fr:
             Pet Giraffe with Sprite Lab:
               name: Girafe de Compagnie
             Copyright and Creativity:
-              name: डिजीटल शेयरिंग
+              name: Partage numérique
         coursef-2018:
           title: Cours F (2018)
           assignment_family_title: Cours F
@@ -7445,7 +7445,7 @@ fr:
             Sequence in Maze:
               name: Coder avec les Commentaires
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -7479,7 +7479,7 @@ fr:
               description_student: Évitee la lave ! Ici, tu découvriras les conditions dans le monde de Minecraft.
               description_teacher: Cette leçon donne aux élèves l'occasion d'apprendre et de s'exercer aux conditions. Il présente des personnages et des paramètres de Minecraft, et les étudiants effectueront des tâches telles que l'extraction minière et la construction de structures à l'aide de leurs programmes.
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
               description_student: 'Les enveloppes et les variables ont quelque chose en commun: les deux peuvent contenir des objets précieux. Ici, tu apprendras ce que sont les variables et les choses incroyables qu''ils peuvent faire.'
               description_teacher: Les Variables sont utilisées comme espaces réservés pour des valeurs telles que des nombres ou des mots. Les variables offrent une grande liberté de programmation. Au lieu d'avoir à taper une phrase plusieurs fois ou de se souvenir d'un nombre obscur, les informaticiens peuvent utiliser des variables pour les référencer. Cette leçon aide à expliquer ce que sont les variables et comment nous pouvons les utiliser de différentes façons. L'idée des variables n'est pas un concept facile à saisir. Nous vous recommandons donc de laisser suffisamment de temps pour discuter, à la fin de la leçon.
             Variables in Artist:
@@ -7491,7 +7491,7 @@ fr:
               description_student: Bientôt, tu apprendras à faire interagir des personnages dans un jeu en utilisant des variables !
               description_teacher: Les élèves s'entraîneront davantage avec les variables dans cette leçon en créant des scènes dans le Labo du Jeu. Les étudiants travailleront avec la saisie de l'utilisateur pour définir les valeurs de leurs variables, puis auront l'opportunité de créer leur propre mini-projet avec des variables.
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `for` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
@@ -8320,7 +8320,7 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie et le Grand Projet
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
             'Online Safety: Your Digital Footprint':
@@ -8348,11 +8348,11 @@ fr:
             Sequencing with Scrat:
               name: Séquencer avec Scrat
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
             Programming in Ice Age:
               name: Programmer avec Scrat
             Copyright and Creativity:
-              name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+              name: C'est bien de créer et de jouer équitablement
             Programming with Rey and BB-8:
               name: Programmer avec Rey et BB-8
             Loops in Ice Age:
@@ -8536,7 +8536,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -8562,7 +8562,7 @@ fr:
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
               description_teacher: "Les étudiants considèrent que, pendant qu'ils apprécient leurs sites Web préférés, ils peuvent rencontrer des messages d'autres enfants qui sont susceptibles de les mettre en colère, de les blesser ou de les rendre tristes ou craintifs. Ils explorent les moyens de gérer le cyberharcèlement et de réagir face à la langue bouleversante en ligne.\\r \\ rLes étudiants discutent de toutes les façons dont ils utilisent la technologie pour la communication et explorent les similitudes et les différences entre la communication en personne et en ligne. Les élèves réfléchissent ensuite, en groupes, aux moyens de réagir au cyberharcèlement. "
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
               description_student: 'Les enveloppes et les variables ont quelque chose en commun: les deux peuvent contenir des objets précieux. Ici, tu apprendras ce que sont les variables et les choses incroyables qu''ils peuvent faire.'
               description_teacher: Les Variables sont utilisées comme espaces réservés pour des valeurs telles que des nombres ou des mots. Les variables offrent une grande liberté de programmation. Au lieu d'avoir à taper une phrase plusieurs fois ou de se souvenir d'un nombre obscur, les informaticiens peuvent utiliser des variables pour les référencer. Cette leçon aide à expliquer ce que sont les variables et comment nous pouvons les utiliser de différentes façons. L'idée des variables n'est pas un concept facile à saisir. Nous vous recommandons donc de laisser suffisamment de temps pour discuter, à la fin de la leçon.
             Variables as Constant in Artist:
@@ -8578,7 +8578,7 @@ fr:
               description_student: Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute.
               description_teacher: Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `for` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
@@ -8657,13 +8657,13 @@ fr:
               description_student: T'es-tu déjà demandé comment l'information circule sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les bases du fonctionnement d'Internet.
               description_teacher: Même si beaucoup de gens utilisent internet quotidiennement, peu savent comment cela fonctionne. Dans cette leçon, les élèves feront semblant de circuler sur internet, tout en apprenant sur les connexions, les URL, les adresses IP et le DNS.
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
               description_student: Cette leçon t'initiera au crowdsourcing, le processus de construction d'un projet avec une équipe.
               description_teacher: En informatique, nous sommes confrontés à de gros problèmes intimidants. Des défis tels que la recherche de grands nombres premiers ou le séquençage de l'ADN sont presque impossibles à faire en tant qu'individu. Conjuguer la puissance des autres rend ces tâches gérables. Cette leçon montrera à vos élèves à quel point le travail d'équipe peut être utile dans l'industrie de l'informatique.
             Digital Sharing:
-              name: डिजीटल शेयरिंग
+              name: Partage numérique
               description_student: 'Dans cette leçon, tu découvriras les défis et les avantages de la propriété et du droit d''auteur. '
-              description_teacher: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर साइंस के मूल सिद्धांतों के लिए उधार लिया गया, यह पाठ विशेषकर डिजीटल परिवेश में, स्वामित्व और कॉपीराइट का सम्मान करने की चुनौतियों और लाभों को समझने में छात्रों की मदद के लिए मौजूद है। छात्रों को नैतिक डिजीटल नागरिक होने का महत्वपूर्ण हिस्से के तौर पर कलाकारों के अधिकारों का सम्मान करने के लिए प्रोत्साहित किया जाना चाहिए।
+              description_teacher: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
             Running Simulations:
               name: Exécuter des Simulations
             Simulating Experiments:
@@ -8693,7 +8693,7 @@ fr:
             Relay Programming:
               name: Programmation de relais
               description_student: Te rappelles-tu, au début du cours, lorsque tu as fait des dessins avec du code ? Dans cette leçon, tu vas travailler avec une équipe pour faire quelque chose de très similaire !
-              description_teacher: यह गतिविधि डीबगिंग और दृढ़ता के बारे में एक छोटे पाठ से शुरू होगी, फिर बहुत तेज़ी से मूव होगी क्योंकि छात्रों को टीमों में बाटा जाता है और वे एक ही समय पर एक निर्देश का प्रोग्राम लिखने के लिए एक साथ काम करते हैं।
+              description_teacher: Cette activité débutera par une brève leçon sur le débogage et la persistance, puis passera rapidement à une course contre la montre pendant que les élèves se regroupent en équipes et travaillent ensemble à la rédaction d'un programme, instruction par instruction.
             Debugging in Collector:
               name: Déboguer avec Laurel
               description_student: As-tu déjà rencontré des problèmes lors du codage ? Dans cette leçon, tu apprendras les secrets du débogage. Le débogage est le processus de recherche et de résolution des problèmes dans ton code.
@@ -8739,13 +8739,13 @@ fr:
               description_student: Il n'est pas toujours clair quand utiliser chaque conditionn. Cette leçon t'aidera à t'entraîner à décider quoi faire.
               description_teacher: Les étudiants pratiqueront les boucles `tant que`, les boucles `jusqu'à ce que` et les déclarations `si / sinon`. Tous ces blocs utilisent des conditions. En pratiquant les trois, les élèves apprendront à écrire du code complexe et flexible.
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
               description_student: Certaines informations ne sont pas sûres à partager en ligne. Cette leçon t'aidera à apprendre la différence entre l'information sûre et privée.
               description_teacher: "En collaboration avec Common Sense Education, cette leçon aide les élèves à réfléchir de manière critique sur les informations utilisateur que certains sites web demandent ou exigent. Les élèves apprennent la différence entre les informations privées et les informations personnelles, en distinguant ce qui est sûr de ce qui est dangereux à partager en ligne.\\r \\ rLes étudiants exploreront également ce que signifie être responsable et respectueux envers leurs communautés hors ligne et en ligne comme une étape vers l'apprentissage de la citoyenneté numérique."
             Build a Play Lab Game:
               name: Construis un Jeu dans le Labo des Jeux
             'Unplugged: Binary':
-              name: युग्मक चित्र
+              name: Les images binaires
               description_student: Découvre comment les ordinateurs stockent des images en utilisant un langage avec seulement deux options.
               description_teacher: Bien que beaucoup de gens considèrent le binaire comme étant strictement des zéros et des uns, les étudiants seront initiés à l'idée que l'information peut être représentée dans une variété d'options binaires. Cette leçon pousse ce concept un peu plus loin car elle illustre comment un ordinateur peut aussi stocker des informations encore plus complexes (telles que des images et des couleurs) en binaire.
             Artist Binary:
@@ -8771,7 +8771,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -8799,7 +8799,7 @@ fr:
               description_student: Sens la force au fur et à mesure que tu construis ton propre jeu Star Wars, dans cette leçon.
               description_teacher: Dans cette leçon, les élèves s'entraîneront à utiliser des événements pour créer un jeu qu'ils peuvent partager en ligne. Avec R2-D2 et d'autres personnages de Star Wars, les élèves seront guidés à travers les événements, puis auront l'opportunité de créer leur propre jeu.
             'Functions: Songwriting':
-              name: गीत लेखन
+              name: Écriture de chansons
               description_student: Même les rockstars ont besoin de compétences en programmation. Cette leçon t'apprendra les fonctions en utilisant les paroles de chansons.
               description_teacher: Une des structures les plus magnifiques dans le monde de l’informatique est la fonction.  Les fonctions (parfois appelées procédures) sont des minis programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme. Cette leçon aidera les élèves à comprendre intuitivement pourquoi associer des morceaux de code à des fonctions est une pratique très utile.
             Functions in Minecraft:
@@ -8847,11 +8847,11 @@ fr:
               description_student: Prépare-toi à éblouir ! Il est temps de présenter ton projet à tes pairs.
               description_teacher: Au cours de quatre leçons, les étudiants seront formés pour programmer un projet de leur propre conception en utilisant le Labo du Jeu ou Artiste, comme environnement de programmation. Enfin, les étudiants pourront présenter leur travail fini à leurs pairs ou le partager avec leurs proches grâce à un lien spécial. Le guide de leçon pour les quatre phases du processus se trouve dans la première phase de ce processus de projet [ici] (https://curriculum.code.org/csf/coursee/12/).
             Internet:
-              name: इंटरनेट
+              name: Internet
               description_student: T'es-tu déjà demandé comment l'information circule sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les bases du fonctionnement d'Internet.
               description_teacher: Même si beaucoup de gens utilisent internet quotidiennement, peu savent comment cela fonctionne. Dans cette leçon, les élèves feront semblant de circuler sur internet, tout en apprenant sur les connexions, les URL, les adresses IP et le DNS.
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
               description_student: Cette leçon t'initiera au crowdsourcing, le processus de construction d'un projet avec une équipe.
               description_teacher: En informatique, nous sommes confrontés à de gros problèmes intimidants. Des défis tels que la recherche de grands nombres premiers ou le séquençage de l'ADN sont presque impossibles à faire en tant qu'individu. Conjuguer la puissance des autres rend ces tâches gérables. Cette leçon montrera à vos élèves à quel point le travail d'équipe peut être utile dans l'industrie de l'informatique.
             Nested Loops in Bee:
@@ -8890,9 +8890,9 @@ fr:
               description_student: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
             Digital Sharing:
-              name: डिजीटल शेयरिंग
+              name: Partage numérique
             Simon Says:
-              name: सिमोन कहती है
+              name: Jacques a dit
               description_student: Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le bon résultat.
               description_teacher: 'Dans cette leçon, les élèves joueront à un jeu destiné à les faire réfléchir à la façon dont les commandes doivent être données pour produire le bon résultat. Cela les aidera à transporter, plus facilement, au Labo des Lutins, dans les leçons à venir. '
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -8904,7 +8904,7 @@ fr:
             Designing for Accessibility:
               name: Concevoir pour l'Accessibilité
             Songwriting:
-              name: गीत लेखन
+              name: Écriture de chansons
         express-2019:
           title: Cour rapide (2017)
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
@@ -8966,7 +8966,7 @@ fr:
             The Power of Words:
               name: Le Pouvoir des Mots
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
             Variables as Constant in Artist:
               name: Les Variables avec L'Artiste
             Variables that Change in Bee:
@@ -8974,7 +8974,7 @@ fr:
             Variables that Change in Artist:
               name: Modifier des Variables avec l'Artiste
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
             For Loops in Bee:
               name: Les Boucles For avec l'Abeille
             For Loops in Artist:
@@ -8996,15 +8996,15 @@ fr:
             Present Your Project:
               name: Présente Ton Projet
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
             'Unplugged: Binary':
               name: 'Débranché: Binaire'
             Artist Binary:
               name: Artiste binaire
             Internet:
-              name: इंटरनेट
+              name: Internet
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Editing Behaviors:
               name: Les Comportements dans le Labo des Lutins
             Virtual Pet with Sprite Lab:
@@ -9120,7 +9120,7 @@ fr:
               description_student: Trouvez des problèmes dans les énigme et exerce tes compétences de débogage.
               description_teacher: Le débogage est un élément essentiel de l'apprentissage de la programmation. Dans cette leçon, les élèves rencontreront des énigmes qui ont été résolues de manière incorrecte. Ils devront parcourir le code existant pour identifier les erreurs, y compris les boucles incorrectes, les blocs manquants, les blocs inutiles et les blocs qui ne fonctionnent pas.
             'Real-life Algorithms: Paper Planes':
-              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+              name: 'Algorithmes du monde réel: Avions en papier'
             Programming in Collector:
               name: Collecter le Trésor avec Laurel
               description_student: Ecris des algorithmes pour aider Laurel l'Aventurière à collecter beaucoup de joyaux !
@@ -9142,7 +9142,7 @@ fr:
               description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
               description_teacher: "À l'étape précédente, les élèves ont utilisé des boucles pour créer des dessins fantastiques. Maintenant, ils vont boucler de nouvelles actions afin d'aider la Moissonneuse à ramasser plusieurs légumes qui poussent en larges lots.\\ r"
             'Events: The Big Event':
-              name: विशाल इवेंट
+              name: Le Grand Evénement
               description_student: 'Jouer un jeu amusant pour découvrir les événements. '
               description_teacher: Les élèves apprendront bientôt que les événements sont un excellent moyen d'ajouter de la flexibilité à un algorithme pré-écrit. Parfois, vous voulez que votre programme soit en mesure de répondre à l'utilisateur exactement quand l'utilisateur le souhaite. Les événements peuvent rendre votre programme plus intéressant et interactif.
             Build a Flappy Game:
@@ -9162,7 +9162,7 @@ fr:
               description_student: Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft.
               description_teacher: Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
               description_student: Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !
               description_teacher: Le binaire est extrêmement important dans le monde des ordinateurs. La majorité des ordinateurs stockent aujourd'hui toutes sortes d'informations sous forme binaire. Cette leçon aide à démontrer comment il est possible de prendre quelque chose de la vie réelle et de le traduire en une série de marche et arrêt.
             Create a Design with Loops:
@@ -9181,7 +9181,7 @@ fr:
             Graphing Data:
               name: Porter des Données sur un Graphique
             Powerful Passwords:
-              name: प्रभावशाली पासवर्ड
+              name: Mots de Passe Fort
               description_student: Dans cette leçon, tu apprendras comment les mots de passe protègent vos informations et comment créer un bon mot de passe.
               description_teacher: "Les élèves explorent pourquoi les gens utilisent des mots de passe, apprennent les avantages de l'utilisation des mots de passe et découvrent des stratégies pour créer et garder des mots de passe forts et sécurisés.\\r \\ rLes étudiants reçoivent des conseils concernant les mots de passe, testent leurs mots de passe existants avec un jeu interactif, et créent de nouveaux mots de passe en utilisant des directives pour les mots de passe puissants.\\ r"
             Sticker Art with Loops:
@@ -9189,7 +9189,7 @@ fr:
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
               description_teacher: Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.
             Picturing Data:
-              name: तस्वीरों वाला डेटा
+              name: Représenter les Données
               description_student: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
               description_teacher: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
         csp-mid-survey:
@@ -9217,7 +9217,7 @@ fr:
             Sequencing in Maze:
               name: Sequencer dans le Labyrinthe
             'Programming: Happy Maps':
-              name: हैप्पी मैप्स
+              name: Cartes Joyeuses
               description_student: Écrives des instructions pour amener le Flurb au fruit.
               description_teacher: 'Cette leçon débranchée réunit des équipes avec une tâche simple : amener le « flurb » au fruit. Les élèves s''entraîneront à écrire des instructions précises tout en travaillant sur la traduction des instructions dans les symboles fournis. Si des problèmes apparaissent dans le code, les étudiants doivent également travailler ensemble pour reconnaître les bugs et construire des solutions.'
             Programming in Maze:
@@ -9226,7 +9226,7 @@ fr:
             Programming in Harvester:
               name: La Programmation dans la Moissonneuse
             Going Places Safely:
-              name: सुरक्षित रूप से स्थानों पर जाना
+              name: Se déplacer en toute sécurité
               description_student: Apprends les règles pour visiter, en toute sécurité, des lieux en ligne.
               description_teacher: En collaboration avec Common Sense Media], cette leçon aide les élèves à apprendre que de nombreux sites web demandent des informations privées et explique comment gérer de telles demandes, de manière responsable. Les étudiants découvrent également qu'ils peuvent visiter des endroits passionnants, en ligne, mais ils doivent respecter certaines règles pour rester en sécurité.
             'Loops: Happy Loops':
@@ -9285,7 +9285,7 @@ fr:
             Sequencing with Scrat:
               name: Séquencer avec Scrat
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
               description_student: 'Découvre ton empreinte numérique et comment rester en sécurité lorsque tu visites des sites Web. '
               description_teacher: En collaboration avec [r Common-sense-media], cette leçon aide les élèves à apprendre les similitudes de la sécurité dans le monde réel et lors de la visite de sites Web. Les étudiants apprendront également que l'information qu'ils mettent en ligne laisse une empreinte digitale ou « sentier ». Ce sentier peut être grand ou petit, utile ou nuisible, selon la façon dont ils le gèrent.
             'Programming: My Robotic Friends':
@@ -9317,7 +9317,7 @@ fr:
               description_student: Utilise des événements pour créer une histoire ou un jeu interactif.
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
             'Loops: Getting Loopy':
-              name: लूपी होना
+              name: Tourner en rond
               description_student: Dans cette leçon, nous aurons une soirée dansante en utilisant des boucles répéter !
               description_teacher: Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.
             The Right App:
@@ -9355,7 +9355,7 @@ fr:
             Sequencing with Scrat:
               name: Séquencer avec Scrat
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
             'Programming: My Robotic Friends':
               name: 'Programmation : Mes Amis Robotiques'
             Programming in Ice Age:
@@ -9397,7 +9397,7 @@ fr:
             'Persistence & Frustration: Stevie and the Big Project':
               name: 'Persistance et Frustration : Stevie et le Grand Projet'
             'Real-life Algorithms: Plant a Seed':
-              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+              name: 'Algorithmes du monde réel: Planter une graine'
           title: Retiré du CSF pour 2019
         dani-test-script:
           stages:
@@ -10179,7 +10179,7 @@ fr:
             Introduction to the Problem:
               name: Introduction au Problème
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Everglades Habitats:
               name: Les Habitats des Everglades
             Reviewing Projects:
@@ -10197,7 +10197,7 @@ fr:
             Sequence in Maze:
               name: La Séquence dans le Labyrinthe
             Building a Foundation:
-              name: नींव का निर्माण करना
+              name: Construire une fondation
             Debugging with Scrat:
               name: Déboguer avec Scrat
             Programming in Artist:
@@ -11756,7 +11756,7 @@ fr:
             'Events: The Big Event':
               name: 'Événements : Le Grand Événement'
             Simon Says:
-              name: सिमोन कहती है
+              name: Jacques a dit
             Learning Sprites with Sprite Lab:
               name: Découvrir les Lutins avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -11766,7 +11766,7 @@ fr:
             About Me:
               name: À Propos De Moi
             Access Ability:
-              name: पहुंच क्षमता
+              name: "Capacité d'Accès\n"
             Conditionals Review:
               name: Examen des Conditions
             Drawing with Loops:
@@ -11775,7 +11775,7 @@ fr:
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
             Nested Loops in Bee:
@@ -11866,7 +11866,7 @@ fr:
             'Events: The Big Event':
               name: 'Événements : Le Grand Événement'
             Simon Says:
-              name: सिमोन कहती है
+              name: Jacques a dit
             Learning Sprites with Sprite Lab:
               name: Découvrir les Lutins avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -11876,7 +11876,7 @@ fr:
             About Me:
               name: À Propos De Moi
             Access Ability:
-              name: पहुंच क्षमता
+              name: "Capacité d'Accès\n"
             Conditionals Review:
               name: Examen des Conditions
         time4cs-experiment-unit-1:
@@ -11893,7 +11893,7 @@ fr:
             'Events: The Big Event':
               name: 'Événements : Le Grand Événement'
             Simon Says:
-              name: सिमोन कहती है
+              name: Jacques a dit
             Learning Sprites with Sprite Lab:
               name: Découvrir les Lutins avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -11903,7 +11903,7 @@ fr:
             About Me:
               name: À Propos De Moi
             Access Ability:
-              name: पहुंच क्षमता
+              name: "Capacité d'Accès\n"
             Conditionals Review:
               name: Examen des Conditions
         csp7-pilot:
@@ -12370,7 +12370,7 @@ fr:
             CS Discoveries Post Course survey:
               name: CS Discoveries Enquête Post Cours
         csd3-2020:
-          title: CSD Unit 3 - Les Animations et les Jeux (Version Pilote)
+          title: CSD Unit 3 - Les Animations et les Jeux
           description: "Dans l'Unité 3, tu tireras profit de ton expérience de codage en programmant des animations, de l'art interactif et des jeux dans le Labo des Jeux. L'unité commence avec des formes simples et progresse vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les mêmes concepts de programmation et le processus de conception que les informaticiens utilisent quotidiennement. Dans le projet final, tu développeras un programme personnalisé et interactif."
           description_short: "Programmation"
           stages:
@@ -12477,7 +12477,7 @@ fr:
           description_audience: 'Âges : 4 à 7 ans'
           stages:
             Going Places Safely:
-              name: सुरक्षित रूप से स्थानों पर जाना
+              name: Se déplacer en toute sécurité
               description_student: Apprends les règles pour visiter, en toute sécurité, des lieux en ligne.
               description_teacher: En collaboration avec Common Sense Media], cette leçon aide les élèves à apprendre que de nombreux sites web demandent des informations privées et explique comment gérer de telles demandes, de manière responsable. Les étudiants découvrent également qu'ils peuvent visiter des endroits passionnants, en ligne, mais ils doivent respecter certaines règles pour rester en sécurité.
             Learn to Drag and Drop:
@@ -12485,7 +12485,7 @@ fr:
               description_student: Clique et fais glisser pour terminer les énigmes.
               description_teacher: Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.
             'Programming: Happy Maps':
-              name: हैप्पी मैप्स
+              name: Cartes Joyeuses
               description_student: Écrives des instructions pour amener le Flurb au fruit.
               description_teacher: 'Cette leçon débranchée réunit des équipes avec une tâche simple : amener le « flurb » au fruit. Les élèves s''entraîneront à écrire des instructions précises tout en travaillant sur la traduction des instructions dans les symboles fournis. Si des problèmes apparaissent dans le code, les étudiants doivent également travailler ensemble pour reconnaître les bugs et construire des solutions.'
             Sequencing with Scrat:
@@ -12530,7 +12530,7 @@ fr:
           description_audience: 'Âges : 5 à 8 ans'
           stages:
             Your Digital Footprint:
-              name: आपका डिजीटल फुटप्रिंट
+              name: Ton empreinte numérique
               description_student: 'Découvre ton empreinte numérique et comment rester en sécurité lorsque tu visites des sites Web. '
               description_teacher: En collaboration avec [r Common-sense-media], cette leçon aide les élèves à apprendre les similitudes de la sécurité dans le monde réel et lors de la visite de sites Web. Les étudiants apprendront également que l'information qu'ils mettent en ligne laisse une empreinte digitale ou « sentier ». Ce sentier peut être grand ou petit, utile ou nuisible, selon la façon dont ils le gèrent.
             Move It, Move It:
@@ -12550,7 +12550,7 @@ fr:
               description_student: Aide la Moissonneuse à ramasser les légumes le long d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d''algorithme séquentiel et commenceront à utiliser le processus de débogage. '
             'Loops: Getting Loopy':
-              name: लूपी होना
+              name: Tourner en rond
               description_student: Dans cette leçon, nous aurons une soirée dansante en utilisant des boucles répéter !
               description_teacher: Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.
             Loops in Harvester:
@@ -12587,7 +12587,7 @@ fr:
               description_student: Dans cette leçon, tu apprendras ce qu'il faut faire si quelque chose en ligne te mets en colère, te rends triste ou t'effrayes.
               description_teacher: "Cette leçon aide les enfants à reconnaître qu'il est essentiel de dire à un adulte de confiance si quelque chose en ligne les met en colère, les rend tristes ou les effraye. \\r \\ rLes étudiants apprennent que d'autres personnes peuvent parfois agir comme des intimidateurs quand ils sont en ligne. Ils exploreront ce que signifie le cyberharcèlement et ce qu'ils peuvent faire quand ils y sont confrontés. Après avoir lu un scénario sur le comportement méchant en ligne, les élèves discutent de ce qu'est le cyberharcèlement, comment il peut affecter les gens et comment y répondre. Enfin, ils utilisent leurs connaissances pour créer une simple feuille de conseils sur le cyberharcèlement dans leur journal.\\ r"
             Powerful Passwords:
-              name: प्रभावशाली पासवर्ड
+              name: Mots de Passe Fort
               description_student: Dans cette leçon, tu apprendras comment les mots de passe protègent vos informations et comment créer un bon mot de passe.
               description_teacher: "Les élèves explorent pourquoi les gens utilisent des mots de passe, apprennent les avantages de l'utilisation des mots de passe et découvrent des stratégies pour créer et garder des mots de passe forts et sécurisés.\\r \\ rLes étudiants reçoivent des conseils concernant les mots de passe, testent leurs mots de passe existants avec un jeu interactif, et créent de nouveaux mots de passe en utilisant des directives pour les mots de passe puissants.\\ r"
             'Programming: My Robotic Friends':
@@ -12611,7 +12611,7 @@ fr:
               description_student: Crée de belles images en programmant l'Artiste.
               description_teacher: Dans cette leçon, les élèves prendront le contrôle de l'Artiste pour réaliser les dessins à l'écran. Cette phase d'Artiste permettra aux élèves de créer des images de complexité croissante, en utilisant de nouveaux blocs tels que `avancer de 100 pixels` et `tourner à droite de 90 degrés`.
             Binary Bracelets:
-              name: युग्मक ब्रैस्लेट्स
+              name: Les bracelets binaires
               description_student: Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !
               description_teacher: Le binaire est extrêmement important dans le monde des ordinateurs. La majorité des ordinateurs stockent aujourd'hui toutes sortes d'informations sous forme binaire. Cette leçon aide à démontrer comment il est possible de prendre quelque chose de la vie réelle et de le traduire en une série de marche et arrêt.
             'Loops: My Loopy Robotic Friends':
@@ -12635,7 +12635,7 @@ fr:
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
               description_teacher: Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.
             'Events: The Big Event':
-              name: विशाल इवेंट
+              name: Le Grand Evénement
               description_student: 'Jouer un jeu amusant pour découvrir les événements. '
               description_teacher: Les élèves apprendront bientôt que les événements sont un excellent moyen d'ajouter de la flexibilité à un algorithme pré-écrit. Parfois, vous voulez que votre programme soit en mesure de répondre à l'utilisateur exactement quand l'utilisateur le souhaite. Les événements peuvent rendre votre programme plus intéressant et interactif.
             Build a Flappy Game:
@@ -12647,7 +12647,7 @@ fr:
               description_student: Il est temps de faire preuve de créativité et de créer un jeu dans le Labo du Jeu !
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
             Picturing Data:
-              name: तस्वीरों वाला डेटा
+              name: Représenter les Données
               description_student: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
               description_teacher: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
             'End of Course Project: Create a Play Lab Game':
@@ -12669,7 +12669,7 @@ fr:
             Relay Programming:
               name: Programmation de relais
               description_student: Te rappelles-tu, au début du cours, lorsque tu as fait des dessins avec du code ? Dans cette leçon, tu vas travailler avec une équipe pour faire quelque chose de très similaire !
-              description_teacher: यह गतिविधि डीबगिंग और दृढ़ता के बारे में एक छोटे पाठ से शुरू होगी, फिर बहुत तेज़ी से मूव होगी क्योंकि छात्रों को टीमों में बाटा जाता है और वे एक ही समय पर एक निर्देश का प्रोग्राम लिखने के लिए एक साथ काम करते हैं।
+              description_teacher: Cette activité débutera par une brève leçon sur le débogage et la persistance, puis passera rapidement à une course contre la montre pendant que les élèves se regroupent en équipes et travaillent ensemble à la rédaction d'un programme, instruction par instruction.
             Debugging in Collector:
               name: Déboguer avec Laurel
               description_student: As-tu déjà rencontré des problèmes lors du codage ? Dans cette leçon, tu apprendras les secrets du débogage. Le débogage est le processus de recherche et de résolution des problèmes dans ton code.
@@ -12715,7 +12715,7 @@ fr:
               description_student: Il n'est pas toujours clair quand utiliser chaque conditionn. Cette leçon t'aidera à t'entraîner à décider quoi faire.
               description_teacher: Les étudiants pratiqueront les boucles `tant que`, les boucles `jusqu'à ce que` et les déclarations `si / sinon`. Tous ces blocs utilisent des conditions. En pratiquant les trois, les élèves apprendront à écrire du code complexe et flexible.
             'Unplugged: Binary':
-              name: युग्मक चित्र
+              name: Les images binaires
               description_student: Découvre comment les ordinateurs stockent des images en utilisant un langage avec seulement deux options.
               description_teacher: Bien que beaucoup de gens considèrent le binaire comme étant strictement des zéros et des uns, les étudiants seront initiés à l'idée que l'information peut être représentée dans une variété d'options binaires. Cette leçon pousse ce concept un peu plus loin car elle illustre comment un ordinateur peut aussi stocker des informations encore plus complexes (telles que des images et des couleurs) en binaire.
             Artist Binary:
@@ -12723,7 +12723,7 @@ fr:
               description_student: Dans cette leçon, tu apprendras comment faire des images en utilisant seulement des 0s et des 1s.
               description_teacher: Cette série de leçons en ligne permettra aux élèves d'apprendre à créer des images en utilisant activer et désactiver.
             Digital Citizenship:
-              name: डिजीटल नागरिकता
+              name: Citoyenneté numérique
               description_student: Certaines informations ne sont pas sûres à partager en ligne. Cette leçon t'aidera à apprendre la différence entre l'information sûre et privée.
               description_teacher: "En collaboration avec Common Sense Education, cette leçon aide les élèves à réfléchir de manière critique sur les informations utilisateur que certains sites web demandent ou exigent. Les élèves apprennent la différence entre les informations privées et les informations personnelles, en distinguant ce qui est sûr de ce qui est dangereux à partager en ligne.\\r \\ rLes étudiants exploreront également ce que signifie être responsable et respectueux envers leurs communautés hors ligne et en ligne comme une étape vers l'apprentissage de la citoyenneté numérique."
             Dance Party:
@@ -12752,7 +12752,7 @@ fr:
               description_student: Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante.
               description_teacher: Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.
             Simon Says:
-              name: सिमोन कहती है
+              name: Jacques a dit
               description_student: Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le bon résultat.
               description_teacher: 'Dans cette leçon, les élèves joueront à un jeu destiné à les faire réfléchir à la façon dont les commandes doivent être données pour produire le bon résultat. Cela les aidera à transporter, plus facilement, au Labo des Lutins, dans les leçons à venir. '
             Learning Sprites with Sprite Lab:
@@ -12788,7 +12788,7 @@ fr:
               description_student: 'Anna et Elsa ont d''excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. '
               description_teacher: Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !
             'Functions: Songwriting':
-              name: गीत लेखन
+              name: Écriture de chansons
               description_student: Même les rockstars ont besoin de compétences en programmation. Cette leçon t'apprendra les fonctions en utilisant les paroles de chansons.
               description_teacher: Une des structures les plus magnifiques dans le monde de l’informatique est la fonction.  Les fonctions (parfois appelées procédures) sont des minis programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme. Cette leçon aidera les élèves à comprendre intuitivement pourquoi associer des morceaux de code à des fonctions est une pratique très utile.
             Functions in Minecraft:
@@ -12807,7 +12807,7 @@ fr:
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
               description_teacher: "Les quatre prochaines leçons offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit, dans un projet de synthèse. Ce projet aidera les individus à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Il s'agit d'un projet de plusieurs leçons ou de plusieurs semaines où les élèves passent du temps à réfléchir en groupes, à se renseigner sur le processus de conception, à construire, puis à présenter leur travail final. \\r \\ rDans la phase « explorer », les étudiants joueront avec des programmes pré-construits de l'Artiste et du Labo des Lutins pour trouver de l'inspiration. Ensuite, les élèves apprendront le processus de conception et la façon de le mettre en œuvre dans leurs propres projets. Ils auront ensuite l'espace pour créer leur propre projet dans Artiste, le Labo des Lutins, ou toute autre interface que vous êtes à l'aise de fournir. (C'est probablement l'étape la plus longue du projet). Enfin, les élèves pourront présenter leur travail fini à leurs camarades de classe."
             Digital Sharing:
-              name: डिजीटल शेयरिंग
+              name: Partage numérique
             Designing for Accessibility:
               name: Concevoir pour l'Accessibilité
         coursef-2020:
@@ -12836,7 +12836,7 @@ fr:
               description_student: Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu places une boucle dans une autre boucle.
               description_teacher: Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur "Exécuter".
             Envelope Variables:
-              name: एनवलोप वेरिएब्लस
+              name: Les variables de l'enveloppe
               description_student: 'Les enveloppes et les variables ont quelque chose en commun: les deux peuvent contenir des objets précieux. Ici, tu apprendras ce que sont les variables et les choses incroyables qu''ils peuvent faire.'
               description_teacher: Les Variables sont utilisées comme espaces réservés pour des valeurs telles que des nombres ou des mots. Les variables offrent une grande liberté de programmation. Au lieu d'avoir à taper une phrase plusieurs fois ou de se souvenir d'un nombre obscur, les informaticiens peuvent utiliser des variables pour les référencer. Cette leçon aide à expliquer ce que sont les variables et comment nous pouvons les utiliser de différentes façons. L'idée des variables n'est pas un concept facile à saisir. Nous vous recommandons donc de laisser suffisamment de temps pour discuter, à la fin de la leçon.
             Variables as Constant in Artist:
@@ -12856,7 +12856,7 @@ fr:
               description_student: Exécute des simulations sur l'ordinateur et expérimente en changeant les variables.
               description_teacher: En exécutant une simulation simple dans le Labo des Lutins, les étudiants découvriront comment l'informatique peut être utilisée pour collecter des données qui identifient des tendances ou des modèles. Après avoir exécuté la simulation de nombreuses fois, les élèves auront l'occasion de faire une prédiction sur la façon dont la modification d'une variable dans la simulation peut avoir un impact sur le résultat, puis de tester cette hypothèse.
             For Loop Fun:
-              name: फॉर लूप फन
+              name: Jouons avec les boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir les boucles `for` !
               description_teacher: 'Nous savons que les boucles nous permettent de faire des choses encore et encore, mais maintenant nous allons apprendre à utiliser des boucles qui ont des structures supplémentaires intégrées. Ces nouvelles structures permettront aux élèves de créer du code plus puissant et plus dynamique. '
             For Loops in Bee:
@@ -12884,13 +12884,13 @@ fr:
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
               description_teacher: "Les étudiants considèrent que, pendant qu'ils apprécient leurs sites Web préférés, ils peuvent rencontrer des messages d'autres enfants qui sont susceptibles de les mettre en colère, de les blesser ou de les rendre tristes ou craintifs. Ils explorent les moyens de gérer le cyberharcèlement et de réagir face à la langue bouleversante en ligne.\\r \\ rLes étudiants discutent de toutes les façons dont ils utilisent la technologie pour la communication et explorent les similitudes et les différences entre la communication en personne et en ligne. Les élèves réfléchissent ensuite, en groupes, aux moyens de réagir au cyberharcèlement. "
             Crowdsourcing:
-              name: क्राउडसोर्सिंग
+              name: Financement participatif
               description_student: Cette leçon t'initiera au crowdsourcing, le processus de construction d'un projet avec une équipe.
               description_teacher: En informatique, nous sommes confrontés à de gros problèmes intimidants. Des défis tels que la recherche de grands nombres premiers ou le séquençage de l'ADN sont presque impossibles à faire en tant qu'individu. Conjuguer la puissance des autres rend ces tâches gérables. Cette leçon montrera à vos élèves à quel point le travail d'équipe peut être utile dans l'industrie de l'informatique.
             Digital Sharing:
-              name: डिजीटल शेयरिंग
+              name: Partage numérique
               description_student: 'Dans cette leçon, tu découvriras les défis et les avantages de la propriété et du droit d''auteur. '
-              description_teacher: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर साइंस के मूल सिद्धांतों के लिए उधार लिया गया, यह पाठ विशेषकर डिजीटल परिवेश में, स्वामित्व और कॉपीराइट का सम्मान करने की चुनौतियों और लाभों को समझने में छात्रों की मदद के लिए मौजूद है। छात्रों को नैतिक डिजीटल नागरिक होने का महत्वपूर्ण हिस्से के तौर पर कलाकारों के अधिकारों का सम्मान करने के लिए प्रोत्साहित किया जाना चाहिए।
+              description_teacher: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
             End of Course Project:
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
               description_teacher: "Les cinq prochaines leçons offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit, dans un projet de synthèse. Ce projet aidera les individus à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Il s'agit d'un projet de plusieurs leçons ou de plusieurs semaines où les élèves passent du temps à réfléchir en groupes, à se renseigner sur le processus de conception, à construire, puis à présenter leur travail final. \\r \\ rDans la phase « explorer », les étudiants joueront avec des programmes pré-construits de l'Artiste et du Labo des Lutins pour trouver de l'inspiration. Ensuite, les élèves apprendront le processus de conception et la façon de le mettre en œuvre dans leurs propres projets. Ils auront ensuite l'espace pour créer leur propre projet dans Artiste, le Labo des Lutins, ou toute autre interface que vous êtes à l'aise de fournir. (C'est probablement l'étape la plus longue du projet). Les élèves réviseront ensuite leur code après les tests et en fonction des commentaires des pairs. Enfin, les élèves pourront présenter leur travail fini à leurs camarades de classe."
@@ -13368,6 +13368,8 @@ fr:
               name: Unité 5 Évaluation 5 - AP Pratique Pseudocode - Questions
             CS Principles Post Course survey:
               name: CS Principles Enquête Post Cours
+            Intro to App Lab:
+              name: Introduction au Labo des Applis
         virtual-holding-place:
           stages:
             Velocity:

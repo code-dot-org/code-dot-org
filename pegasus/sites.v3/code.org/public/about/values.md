@@ -4,7 +4,7 @@ nav: about_nav
 theme: responsive
 ---
 
-# Our core values and how we talk about them:
+# Our core values:
 
 ## We believe computer science is foundational for all students
 We believe that learning computer science is fundamental to active and informed participation in an increasingly digital society and provides all students with a critical lens for interpreting the world around them. Computer science offers life-changing and economic opportunities, whether they pursue careers in technology or not. We create high-quality, approachable experiences to engage all students in computer science.

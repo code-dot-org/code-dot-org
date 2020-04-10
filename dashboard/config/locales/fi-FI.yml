@@ -271,6 +271,7 @@ fi:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org kirjautumistiedot
+    parent_email_added_subject: Tervetuloa Code.org:n!
   teacher_mailer:
     new_teacher_subject: Tervetuloa Code.org:n!
     delete_teacher_subject: 'Code.org ilmoitus: Tilisi on poistettu'

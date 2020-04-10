@@ -7,7 +7,6 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
 family_name 'csd1'
 version_year '2020'
-pilot_experiment 'noaccess'
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -36,6 +35,14 @@ level 'CSD U1 IO Pet Chooser 2', named: true
 
 stage 'Processing', flex_category: 'csd1_2'
 level 'CSD U1L06 TFMD_2020', named: true
+level 'CSD U1 processing bday', progression: 'App: Is It Your Birthday?'
+level 'CSD U1 processing npark', progression: 'App: National Park Quiz'
+level 'CSD U1 processing countries', progression: 'App: How Many Countries...'
+level 'CSD U1 processing writers', progression: 'App: My Famous Birthday'
+level 'CSD U1 processing notebook', progression: 'App: Stamp Notebook'
+level 'CSD U1 processing fastest', progression: 'App: The Fastest Finger'
+level 'CSD U1 processing guess', progression: 'App: Guess the Number'
+level 'CSD U1 processing live', progression: 'App: Where Should I Live?'
 
 stage 'Apps and Storage', flex_category: 'csd1_2'
 level 'CSD U1L07 TFMD_2020', named: true
@@ -61,7 +68,7 @@ stage 'Intro to Problem Solving - Paper Tower (Alternate Lesson 1)', flex_catego
 level 'CSD U1L01.3 TFMD_2020', named: true
 
 stage 'Exploring Problem Solving - Games Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
-level 'CSD U1L03 TFMD_2020', named: true
+level 'CSD U1L12 TFMD_2020', named: true
 
 stage 'Exploring Problem Solving - Animals Theme (Alternate Lesson 3)', flex_category: 'csd1_3'
-level 'CSD U1L03 TFMD_2020', named: true
+level 'CSD U1L13 TFMD_2020', named: true

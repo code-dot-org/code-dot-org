@@ -115,15 +115,7 @@ class Script < ActiveRecord::Base
           plc_course_unit_id: unit.id,
           name: stage.name,
           module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
-          plc_tasks: []
         )
-
-        stage.script_levels.each do |sl|
-          task = Plc::Task.find_or_initialize_by(script_level_id: sl.id)
-          task.name = sl.level.name
-          task.save!
-          lm.plc_tasks << task
-        end
       end
     end
   end
@@ -1341,7 +1333,9 @@ class Script < ActiveRecord::Base
       tts: tts?,
     }
 
-    summary[:lessons] = lessons.map {|stage| stage.summarize(include_bonus_levels)} if include_lessons
+    # Filter out stages that have a visible_after date in the future
+    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 

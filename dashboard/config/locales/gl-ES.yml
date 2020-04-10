@@ -236,6 +236,7 @@ gl:
       %{name}
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
+    parent_email_added_subject: "¡Benvida a Code.org!"
   teacher_mailer:
     new_teacher_subject: "¡Benvida a Code.org!"
   section:
