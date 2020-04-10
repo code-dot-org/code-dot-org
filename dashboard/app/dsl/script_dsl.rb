@@ -335,7 +335,7 @@ class ScriptDSL < BaseDSL
       t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
       t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
-      t += ", lesson_group: '#{escape(stage.lesson_group.name)}'" if stage.lesson_group
+      t += ", lesson_group: '#{escape(stage.lesson_group.name)}'" if stage.lesson_group&.user_facing
       t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
       s << t
       stage.script_levels.each do |sl|
