@@ -1335,7 +1335,7 @@ class Script < ActiveRecord::Base
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+    summary[:stages] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
@@ -1345,7 +1345,7 @@ class Script < ActiveRecord::Base
   def summarize_for_edit
     include_lessons = false
     summary = summarize(include_lessons)
-    summary[:lessons] = lessons.map(&:summarize_for_edit)
+    summary[:stages] = lessons.map(&:summarize_for_edit)
     summary
   end
 
