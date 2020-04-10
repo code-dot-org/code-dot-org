@@ -67,7 +67,7 @@ class ScriptTest < ActiveSupport::TestCase
     scripts, _ = Script.setup([@script_file])
     script = scripts[0]
     assert_equal 'Level 1', script.levels[0].name
-    assert_equal 'lesson2', script.script_levels[3].lesson.name
+    assert_equal 'stage2', script.script_levels[3].lesson.name
 
     assert_equal 'MyProgression', script.script_levels[3].progression
     assert_equal 'MyProgression', script.script_levels[4].progression
@@ -89,7 +89,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_id = scripts[0].script_levels[4].script_id
     script_level_id = scripts[0].script_levels[4].id
 
-    parsed_script = ScriptDSL.parse_file(@script_file)[0][:lessons]
+    parsed_script = ScriptDSL.parse_file(@script_file)[0][:stages]
 
     # Set different level name in tested script
     parsed_script.map {|lesson| lesson[:scriptlevels]}.flatten[4][:levels][0]['name'] = "Level 1"
@@ -109,13 +109,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     old_script = Script.add_script(
       {name: 'old script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal 'old script name', old_script.name
 
     new_script = Script.add_script(
       {name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal 'new script name', new_script.name
 
@@ -131,13 +131,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     old_script = Script.add_script(
       {name: 'old script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal 'old script name', old_script.name
 
     new_script = Script.add_script(
       {name: 'new script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal 'new script name', new_script.name
 
@@ -146,7 +146,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     old_script = Script.add_script(
       {name: 'old script name', new_name: 'new script name'},
-      ScriptDSL.parse(dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal 'old script name', old_script.name
 
@@ -174,9 +174,9 @@ class ScriptTest < ActiveSupport::TestCase
     first = scripts[0].lessons[0]
     second = scripts[0].lessons[1]
     third = scripts[0].lessons[2]
-    assert_equal 'lesson1', first.name
-    assert_equal 'lesson2', second.name
-    assert_equal 'lesson3', third.name
+    assert_equal 'stage1', first.name
+    assert_equal 'stage2', second.name
+    assert_equal 'stage3', third.name
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
     assert_equal 3, third.absolute_position
@@ -190,8 +190,8 @@ class ScriptTest < ActiveSupport::TestCase
     second = scripts[0].lessons[1]
     assert_equal 1, first.absolute_position
     assert_equal 2, second.absolute_position
-    assert_equal 'lesson3', first.name
-    assert_equal 'lesson1', second.name
+    assert_equal 'stage3', first.name
+    assert_equal 'stage1', second.name
   end
 
   test 'should not create two scripts with same name' do
@@ -271,7 +271,7 @@ class ScriptTest < ActiveSupport::TestCase
       "stage 'lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
 
-    script = Script.add_script({name: 'test script'}, script_data[:lessons])
+    script = Script.add_script({name: 'test script'}, script_data[:stages])
 
     assert_equal 'Studio', script.script_levels[1].level.game.name
     assert_equal '100', script.script_levels[1].level.level_num
@@ -1042,7 +1042,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment3';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lessons])
+    script = Script.add_script({name: 'test_script'}, script_data[:stages])
 
     # Everything has lesson <number> when nothing is lockable
     assert /^Lesson 1:/.match(script.lessons[0].localized_title)
@@ -1058,7 +1058,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lessons])
+    script = Script.add_script({name: 'test_script'}, script_data[:stages])
 
     # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
     assert /^Lesson/.match(script.lessons[0].localized_title).nil?
@@ -1074,7 +1074,7 @@ class ScriptTest < ActiveSupport::TestCase
       assessment 'NonLockableAssessment2';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-    script = Script.add_script({name: 'test_script'}, script_data[:lessons])
+    script = Script.add_script({name: 'test_script'}, script_data[:stages])
 
     # When only second lesson is lockable, we count non-lockable lessons appropriately
     assert /^Lesson 1:/.match(script.lessons[0].localized_title)
@@ -1092,7 +1092,7 @@ class ScriptTest < ActiveSupport::TestCase
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     assert_raises do
-      Script.add_script({name: 'test_script'}, script_data[:lessons])
+      Script.add_script({name: 'test_script'}, script_data[:stages])
     end
   end
 
@@ -1285,13 +1285,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
     assert script.script_levels.first.challenge
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
     refute script.script_levels.first.challenge
@@ -1309,13 +1309,13 @@ class ScriptTest < ActiveSupport::TestCase
     SCRIPT
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(old_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
     assert script.script_levels.first.bonus
 
     script = Script.add_script(
       {name: 'challengeTestScript'},
-      ScriptDSL.parse(new_dsl, 'a filename')[0][:lessons]
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
     refute script.script_levels.first.bonus
@@ -1338,7 +1338,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lessons]
+      script_data[:stages]
     )
     assert script.project_widget_visible
 
@@ -1348,7 +1348,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lessons]
+      script_data[:stages]
     )
 
     refute script.project_widget_visible
@@ -1371,7 +1371,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lessons]
+      script_data[:stages]
     )
     assert script.script_announcements
 
@@ -1381,7 +1381,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'challengeTestScript',
         properties: Script.build_property_hash(script_data)
       },
-      script_data[:lessons]
+      script_data[:stages]
     )
 
     refute script.script_announcements
@@ -1403,7 +1403,7 @@ class ScriptTest < ActiveSupport::TestCase
         name: 'curriculumTestScript',
         properties: Script.build_property_hash(script_data),
       },
-      script_data[:lessons],
+      script_data[:stages],
     )
     assert_equal CDO.curriculum_url('en-us', 'foo/1'), script.lessons.first.lesson_plan_html_url
     with_locale(:'it-IT') do
@@ -1495,7 +1495,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Ignore level names, since we are just testing whether the
     # variants / active / endvariants structure is correct.
     new_dsl_regex = <<-SCRIPT
-stage 'lesson1'
+stage 'stage1'
 variants
   level '[^']+'
   level '[^']+', active: false
