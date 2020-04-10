@@ -76,7 +76,6 @@ level 'CSPU5_U3L14 - moving memory challenge6_virtual', progression: 'Moving Mem
 level 'CSPU5_U3L14 - MC variable reassignment_2018_2019_virtual', progression: 'Check Your Understanding', assessment: true
 
 stage 'Building an App: Clicker Game', flex_category: 'csp5_1'
-level 'CSP U5L05 SFLP_virtual', named: true
 level 'CSPU5_U3 full clicker demo_virtual', progression: 'Clicker Game Demonstration'
 level 'CSPU5_U3L15 - practice with setText_virtual', progression: 'AppLab Practice'
 level 'CSPU5_U3L15 - DEMO up down count practice app_virtual', progression: 'AppLab Practice'
