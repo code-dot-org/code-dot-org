@@ -2,7 +2,6 @@
 import five from '@code-dot-org/johnny-five';
 import '../../../utils'; // For Function.prototype.inherits
 import {EXTERNAL_PINS} from './PlaygroundConstants';
-import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './MicroBitConstants';
 
 /**
  * Wrap Johnny-Five's Button component to add attributes and customize behavior.
@@ -26,10 +25,6 @@ export function MicroBitButton(board) {
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
   this.buttonEvents = new Array(6).fill(0);
   this.board = board;
-  this.pullup = MB_EXTERNAL_PINS.includes(this.board.pin);
-  if (this.pullup) {
-    this.board.mb.trackDigitalPin(this.board.pin, 1);
-  }
   this.board.mb.addFirmataEventListener((sourceID, eventID) => {
     if (this.board.pin === sourceID) {
       this.buttonEvents[eventID]++;
