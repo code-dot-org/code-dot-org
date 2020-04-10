@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
+import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
@@ -39,6 +40,12 @@ $(document).ready(() => {
       migrateMultiAuthMountPoint
     );
   }
+
+  new AddParentEmailController({
+    form: $('#add-parent-email-modal-form'),
+    link: $('#add-parent-email-link'),
+    displayedParentEmail: $('#displayed-parent-email')
+  });
 
   new ChangeEmailController({
     form: $('#change-email-modal-form'),

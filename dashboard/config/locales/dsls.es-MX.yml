@@ -4891,18 +4891,11 @@ es-MX:
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
-          correct: true
+        - correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
-          feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
-            el néctar de cada flor y la miel de cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
-          feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
-            tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
-          feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
-            cada flor y la miel de cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor

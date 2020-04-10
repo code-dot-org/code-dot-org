@@ -32,6 +32,7 @@ import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
+import DownloadParentLetters from './DownloadParentLetters';
 import Button from '../Button';
 
 const styles = {
@@ -597,6 +598,7 @@ class ManageStudentsTable extends Component {
               transferStatus={transferStatus}
             />
           )}
+          <DownloadParentLetters sectionId={this.props.sectionId} />
         </div>
         <Table.Provider
           columns={columns}
