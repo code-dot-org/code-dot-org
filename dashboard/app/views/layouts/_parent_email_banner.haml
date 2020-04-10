@@ -22,5 +22,4 @@
     ) do |f|
     = f.hidden_field :parent_email
     = f.hidden_field :parent_email_preference_opt_in
-
-
+    = f.hidden_field :parent_email_preference_source, value: EmailPreference::PARENT_EMAIL_BANNER
