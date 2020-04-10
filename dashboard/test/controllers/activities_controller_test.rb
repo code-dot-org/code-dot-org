@@ -1040,7 +1040,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2'; level 'Level 3'",
+      "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
     )
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lessons])
