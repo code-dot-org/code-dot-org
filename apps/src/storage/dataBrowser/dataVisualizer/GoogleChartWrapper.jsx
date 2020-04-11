@@ -26,11 +26,18 @@ class GoogleChartWrapper extends React.Component {
 
   componentDidMount() {
     this.updateChart();
+    window.addEventListener('resize', this.debouncedUpdate);
   }
 
   componentDidUpdate() {
     this.updateChart();
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.debouncedUpdate);
+  }
+
+  debouncedUpdate = _.debounce(() => this.updateChart(), 50);
 
   updateChart() {
     if (!this.chartArea) {
