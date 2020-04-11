@@ -111,21 +111,23 @@
   - elsif show_single_hero == "codebreak2020"
     %div{style: "margin-left: 50px;"}
       - guests = Homepage.get_code_break_guests
-      %div{style: "margin-left: 30px;"}
-        %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#00adbc; font-weight: 900"} Take a Code Break!
+      %div{style: "text-align: center;"}
+        %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#FFFFFF; font-weight: 900"} Take a Code Break!
         %img{src: "/images/fit-50/homepage/code_break_logo.png"}
-      %div{style: "margin-left: 30px; font-weight: 800; border-radius: 5px; width: 450px; padding: 10px;"}
-        %h3{style: "font-weight: 800;"} Every Wednesday at 10am PST
-        %h3{style: "font-weight: 800;"} This week featuring...
-        .headshots{style: "width: 350px;"}
-          .guest-1
-            %h3{style: "font-weight: 900;"} Mike Krieger
-            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px;"} Instagram Co-Founder
-          .guest-2
-            %h3{style: "font-weight: 900;"} Alice Keeler
-            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px;"} Author & Superstar Technology Educator
-        %div{style: "clear: both"}
-
+      %div{style: "font-weight: 800; text-align: center;"}
+        %h3{style: "font-weight: 800; color:#FFFFFF; float: left; margin-top: 50px;"} With this week's special guests:
+        .headshots{style: "width: 100%"}
+          .guest-1{style: "float:left; padding: 20px;"}
+            %img{src: "/images/fit-200/homepage/mike_krieger_code_break.png", style: "border-radius: 50%;"}
+            %h3{style: "font-weight: 900; color:#FFFFFF;"} Mike Krieger
+            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px; color:#FFFFFF;"} Instagram Co-Founder
+          .guest-2{style: "float:left; padding: 20px;"}
+            %img{src: "/images/fit-150/homepage/alice_keeler_code_break.png", style: "border-radius: 50%;"}
+            %h3{style: "font-weight: 900; color:#FFFFFF;"} Alice Keeler
+            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px; color:#FFFFFF;"} Author & Superstar Technology Educator
+        #actions
+          %h3{style: "font-weight: 800;color:#FFFFFF;"} Every Wednesday at 10am PST
+          = main_actions
 
       -# %span
       -#   This week's special guests:
@@ -141,8 +143,7 @@
 
 
 
-    #actions
-      = main_actions
+
 
   - elsif show_single_hero
     #actions

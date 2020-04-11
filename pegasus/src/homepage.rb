@@ -131,7 +131,7 @@ class Homepage
       [
         {
           text: "homepage_action_text_join_us",
-          type: "cta_button_solid_white",
+          type: "cta_button",
           url: "/break"
         },
         {
@@ -386,7 +386,7 @@ class Homepage
     ]
     hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
     hero_codebreak2020 =
-    [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/boy1_2x_eb.jpg"}]
+    [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/celebs_hoc2017_mobile_1x.jpg"}]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
