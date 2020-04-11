@@ -109,18 +109,35 @@
           &nbsp;
 
   - elsif show_single_hero == "codebreak2020"
-    - guests = Homepage.get_code_break_guests
-    %h2{style: "text-align: center"} Take a Code Break!
-    %img{src: "/images/homepage/code_break.jpg"}
-    %h3 Join us for your weekly dose of inspiration, community, and computer science.
-    %h3 Every Wendesday at 10am Pacific/ 1 pm Eastern
-    %span
-      This week's special guests:
-    %span= guests[0]
-    - if guests.length > 1
-      %span and
-      %span= guests[1]
+    %div{style: "margin-left: 50px;"}
+      - guests = Homepage.get_code_break_guests
+      %div{style: "margin-left: 30px;"}
+        %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#00adbc; font-weight: 900"} Take a Code Break!
+        %img{src: "/images/fit-50/homepage/code_break_logo.png"}
+      %div{style: "margin-left: 30px; font-weight: 800; border-radius: 5px; width: 450px; padding: 10px;"}
+        %h3{style: "font-weight: 800;"} Every Wednesday at 10am PST
+        %h3{style: "font-weight: 800;"} This week featuring...
+        .headshots{style: "width: 350px;"}
+          .guest-1
+            %h3{style: "font-weight: 900;"} Mike Krieger
+            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px;"} Instagram Co-Founder
+          .guest-2
+            %h3{style: "font-weight: 900;"} Alice Keeler
+            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px;"} Author & Superstar Technology Educator
+        %div{style: "clear: both"}
 
+
+      -# %span
+      -#   This week's special guests:
+      -# .guest_1.col-50
+      -#   %img{src: "/images/fit-350/homepage/mike_krieger_code_break.png"}
+      -#   %div= guests[0]
+      -#   %div Instagram co-founder
+      -# - if guests.length > 1
+      -#   .guest_2.col-50
+      -#     %img{src: "/images/fit-300/homepage/alice_keeler_code_break.png"}
+      -#     %div= guests[1]
+      -#     %div Author & Superstar Technology Educator
 
 
 

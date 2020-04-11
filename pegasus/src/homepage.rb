@@ -130,9 +130,9 @@ class Homepage
     if code_break_takeover
       [
         {
-          text: "homepage_action_text_learn",
-          type: "cta_button",
-          url: "/break",
+          text: "homepage_action_text_join_us",
+          type: "cta_button_solid_white",
+          url: "/break"
         },
         {
           text: "homepage_action_text_codevideo",
@@ -385,10 +385,8 @@ class Homepage
       {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
     ]
     hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
-    hero_codebreak2020 = [
-      {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
-      {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
-    ]
+    hero_codebreak2020 =
+    [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/boy1_2x_eb.jpg"}]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
