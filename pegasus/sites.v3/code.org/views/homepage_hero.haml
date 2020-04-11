@@ -108,6 +108,25 @@
         .blank{style: "height: 54px"}
           &nbsp;
 
+  - elsif show_single_hero == "codebreak2020"
+    - guests = Homepage.get_code_break_guests
+    %h2{style: "text-align: center"} Take a Code Break!
+    %img{src: "/images/homepage/code_break.jpg"}
+    %h3 Join us for your weekly dose of inspiration, community, and computer science.
+    %h3 Every Wendesday at 10am Pacific/ 1 pm Eastern
+    %span
+      This week's special guests:
+    %span= guests[0]
+    - if guests.length > 1
+      %span and
+      %span= guests[1]
+
+
+
+
+    #actions
+      = main_actions
+
   - elsif show_single_hero
     #actions
       = main_actions
