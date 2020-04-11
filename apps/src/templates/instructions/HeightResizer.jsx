@@ -70,8 +70,8 @@ class HeightResizer extends React.Component {
   componentWillUnmount() {
     this.resizerRef.removeEventListener('mousedown', this.onMouseDown);
     this.resizerRef.removeEventListener('mouseup', this.onMouseUp);
-    this.resizerRef.removeEventListener('mousemove', this.onMouseDown);
-    this.resizerRef.removeEventListener('touchstart', this.onMouseMove);
+    this.resizerRef.removeEventListener('mousemove', this.onMouseMove);
+    this.resizerRef.removeEventListener('touchstart', this.onMouseDown);
     this.resizerRef.removeEventListener('touchend', this.onMouseUp);
     this.resizerRef.removeEventListener('touchmove', this.onMouseMove);
   }
