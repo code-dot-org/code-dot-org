@@ -46,11 +46,43 @@ class HeightResizer extends React.Component {
     dragStart: 0
   };
 
+  componentDidMount() {
+    this.resizerRef.addEventListener('mousedown', this.onMouseDown, {
+      passive: false
+    });
+    this.resizerRef.addEventListener('mouseup', this.onMouseUp, {
+      passive: false
+    });
+    this.resizerRef.addEventListener('mousemove', this.onMouseMove, {
+      passive: false
+    });
+    this.resizerRef.addEventListener('touchstart', this.onMouseDown, {
+      passive: false
+    });
+    this.resizerRef.addEventListener('touchend', this.onMouseUp, {
+      passive: false
+    });
+    this.resizerRef.addEventListener('touchmove', this.onMouseMove, {
+      passive: false
+    });
+  }
+
+  componentWillUnmount() {
+    this.resizerRef.removeEventListener('mousedown', this.onMouseDown);
+    this.resizerRef.removeEventListener('mouseup', this.onMouseUp);
+    this.resizerRef.removeEventListener('mousemove', this.onMouseDown);
+    this.resizerRef.removeEventListener('touchstart', this.onMouseMove);
+    this.resizerRef.removeEventListener('touchend', this.onMouseUp);
+    this.resizerRef.removeEventListener('touchmove', this.onMouseMove);
+  }
+
   componentDidUpdate(_, state) {
     // Update listeners as dragging state changes
     if (this.state.dragging && !state.dragging) {
-      document.addEventListener('mousemove', this.onMouseMove);
-      document.addEventListener('mouseup', this.onMouseUp);
+      document.addEventListener('mousemove', this.onMouseMove, {
+        passive: false
+      });
+      document.addEventListener('mouseup', this.onMouseUp, {passive: false});
     } else if (!this.state.dragging && state.dragging) {
       document.removeEventListener('mousemove', this.onMouseMove);
       document.removeEventListener('mouseup', this.onMouseUp);
@@ -58,13 +90,14 @@ class HeightResizer extends React.Component {
   }
 
   onMouseDown = event => {
-    if (event.button !== 0) {
+    if (event.button && event.button !== 0) {
       return;
     }
     event.stopPropagation();
     event.preventDefault();
 
-    this.setState({dragging: true, dragStart: event.pageY});
+    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    this.setState({dragging: true, dragStart: pageY});
   };
 
   onMouseUp = event => {
@@ -82,7 +115,8 @@ class HeightResizer extends React.Component {
       return;
     }
 
-    const delta = event.pageY - this.state.dragStart;
+    const pageY = event.pageY || (event.touches && event.touches[0].pageY);
+    const delta = pageY - this.state.dragStart;
 
     // onResize can choose to limit how much we actually move, and will report
     // back the value
@@ -103,9 +137,7 @@ class HeightResizer extends React.Component {
       <div
         id="ui-test-resizer"
         style={mainStyle}
-        onMouseDown={this.onMouseDown}
-        onMouseUp={this.onMouseUp}
-        onMouseMove={this.onMouseMove}
+        ref={ref => (this.resizerRef = ref)}
       >
         <div style={styles.ellipsis} className="fa fa-ellipsis-h" />
       </div>
