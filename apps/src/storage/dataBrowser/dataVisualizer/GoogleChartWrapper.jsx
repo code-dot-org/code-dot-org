@@ -95,7 +95,11 @@ class GoogleChartWrapper extends React.Component {
 
   render() {
     return (
-      <div id={GOOGLE_CHART_AREA} ref={element => (this.chartArea = element)} />
+      <div
+        id={GOOGLE_CHART_AREA}
+        ref={element => (this.chartArea = element)}
+        style={{height: '100%'}}
+      />
     );
   }
 }
