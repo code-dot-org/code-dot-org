@@ -46,7 +46,8 @@
 
   .clear{style: "clear: both"}
 
-#hero{style: "position: relative"}
+- extra_style = show_single_hero == "codebreak2020" ? "margin-bottom: 1px" : ""
+#hero{style: "position: relative", style: extra_style}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -109,48 +110,40 @@
           &nbsp;
 
   - elsif show_single_hero == "codebreak2020"
-    %div{style: "text-align: center;"}
-      - guests = Homepage.get_code_break_guests
+    - guests = Homepage.get_code_break_guests
+    .top_center
       %div{style: "text-align: center;"}
-        %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#FFFFFF; font-weight: 900"} Take a Code Break!
-        %img{src: "/images/fit-50/homepage/code_break_logo.png"}
-      %div
-        %h3{style: "font-weight: 800; color:#FFFFFF;"}Join us for your weekly dose of inspiration, community and computer science.
-      %div{style: "font-weight: 800;"}
-        %h3{style: "font-weight: 800; color:#FFFFFF;"} With this week's special guests:
-      %div
-        .headshots
-          .guest-1.col-50
-            .div.col-50-right{style: "padding: 10px;"}
-              %img{src: "/images/fit-200/homepage/mike_krieger_code_break.png", style: "border-radius: 50%;"}
-              %h3{style: "font-weight: 900; color:#FFFFFF;"} Mike Krieger
-              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px; color:#FFFFFF;"} Instagram Co-Founder
-          .guest-2.col-50
-            .div.col-50{style: "float:left; padding: 10px"}
-              %img{src: "/images/fit-150/homepage/alice_keeler_code_break.png", style: "border-radius: 50%;"}
-              %h3{style: "font-weight: 900; color:#FFFFFF;"} Alice Keeler
-              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px; color:#FFFFFF;"} Author & Superstar Technology Educator
 
-      %div{style: "clear:both;"}
+    .left.col-40
+      %div{style: "text-align: center;"}
+        .desktop-feature{style: "height: 60px"}
+          &nbsp;
+        %div{style: "font-weight: 800;"}
+          -# %h3{style: "font-weight: 800; color:#FFFFFF;"} With this week's special guests:
+        .headshots{style: "text-align: center"}
+          .guest-1{style: "display: inline-block"}
+            %img{src: "/images/fill-200/homepage/mike_krieger_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px"}
+            -# %h3{style: "font-weight: 900; color:#FFFFFF;"} Mike Krieger
+            -# %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px; color:#FFFFFF;"} Instagram Co-Founder
+          &nbsp;
+          .guest-2{style: "display: inline-block"}
+            %img{src: "/images/fill-200/homepage/alice_keeler_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px"}
+            -# %h3{style: "font-weight: 900; color:#FFFFFF;"} Alice Keeler
+            -# %h3{style: "font-weight: 500; margin-top: 0px; font-size: 16px; color:#FFFFFF;"} Author & Superstar Technology Educator
+
+        %div{style: "clear:both;"}
+    .right.col-60.mobile-center
+      %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#FFFFFF; font-weight: 900"} Take a Code Break!
+      -# %img{src: "/images/fit-50/homepage/code_break_logo.png"}
+      %h3{style: "font-weight: 800; color:#FFFFFF;"}Join us for your weekly dose of inspiration, community and computer science.
+
       %h3{style: "font-weight: 800;color:#FFFFFF; width: 100%;"} Every Wednesday at 10am PST
-      #actions
-        = main_actions
-
-      -# %span
-      -#   This week's special guests:
-      -# .guest_1.col-50
-      -#   %img{src: "/images/fit-350/homepage/mike_krieger_code_break.png"}
-      -#   %div= guests[0]
-      -#   %div Instagram co-founder
-      -# - if guests.length > 1
-      -#   .guest_2.col-50
-      -#     %img{src: "/images/fit-300/homepage/alice_keeler_code_break.png"}
-      -#     %div= guests[1]
-      -#     %div Author & Superstar Technology Educator
-
-
-
-
+      .desktop-feature
+        #actions{style: "text-align: left; padding-left: 0px"}
+          = main_actions
+      .mobile-feature
+        #actions
+          = main_actions
 
   - elsif show_single_hero
     #actions
