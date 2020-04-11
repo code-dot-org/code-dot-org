@@ -1112,7 +1112,7 @@ class Script < ActiveRecord::Base
     end
 
     if !lessons_without_lesson_group.empty? && !lessons_with_lesson_group.empty?
-      raise "Expect if one lesson has a lesson group all lessons have lesson groups. #{lessons_without_lesson_group.join(', ')} does/do not have lesson groups."
+      raise "Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: #{lessons_without_lesson_group.join(', ')}."
     end
   end
 

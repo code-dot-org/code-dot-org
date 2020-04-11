@@ -1888,16 +1888,55 @@ endvariants
       ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
     assert_equal script.lesson_groups.count, 1
-    assert_equal script.stages[1].lesson_group.user_facing, false
+    assert_equal script.stages[0].lesson_group.user_facing, false
     assert_equal script.stages[0].lesson_group.key, ''
   end
+
+  # test 'raises error if a lesson group key is given without a display_name' do
+  #   l1 = create :level
+  #   dsl = <<-SCRIPT
+  #     lesson_group 'lg-1'
+  #     stage 'Lesson1'
+  #     level '#{l1.name}'
+  #
+  #   SCRIPT
+  #
+  #   raise = assert_raises do
+  #     Script.add_script(
+  #         {name: 'lessonGroupTestScript'},
+  #         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+  #     )
+  #   end
+  #   assert_equal 'Expect all lesson groups to have display names. The following lesson groups do not have display names: lg-1 ', raise.message
+  # end
+  #
+  # test 'raises error if lesson group key already exists and try to change the display name' do
+  #   l1 = create :level
+  #   create :lesson_group, key: 'lg-1'
+  #   dsl = <<-SCRIPT
+  #     lesson_group 'lg-1', display_name: 'new name'
+  #     stage 'Lesson1'
+  #     level '#{l1.name}'
+  #
+  #   SCRIPT
+  #
+  #   raise = assert_raises do
+  #     Script.add_script(
+  #         {name: 'lessonGroupTestScript'},
+  #         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+  #     )
+  #   end
+  #   assert_equal 'Expect all lesson groups to have display names. The following lesson groups do not have display names: lg-1 ', raise.message
+  # end
 
   test 'raises error if some lessons have lesson groups and some do not' do
     l1 = create :level
     l2 = create :level
     dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
+      stage 'Lesson1'
       level '#{l1.name}'
+
+      lesson_group 'lg-1', display_name: 'Lesson Group'
       stage 'Lesson2'
       level '#{l2.name}'
     SCRIPT
@@ -1908,7 +1947,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. Lesson2 does/do not have lesson groups.', raise.message
+    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: Lesson1.', raise.message
   end
 
   test 'raises error if two non-adjacent lessons have the same lesson group' do
@@ -1916,11 +1955,14 @@ endvariants
     l2 = create :level
     l3 = create :level
     dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson1'
       level '#{l1.name}'
-      stage 'Lesson2', lesson_group: 'Test Lesson Group 2'
+      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      stage 'Lesson2'
       level '#{l2.name}'
-      stage 'Lesson3', lesson_group: 'Test Lesson Group 1'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson3'
       level '#{l3.name}'
     SCRIPT
 
@@ -1938,11 +1980,15 @@ endvariants
     l2 = create :level
     l3 = create :level
     dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson1'
       level '#{l1.name}'
-      stage 'Lesson2', lesson_group: 'Test Lesson Group 1'
+
+      stage 'Lesson2'
       level '#{l2.name}'
-      stage 'Lesson3', lesson_group: 'Test Lesson Group 2'
+
+      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      stage 'Lesson3'
       level '#{l3.name}'
     SCRIPT
 
@@ -1961,51 +2007,55 @@ endvariants
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
-    refute script.stages[0].lesson_group
+    assert_equal '', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'Test Lesson Group', script.stages[0].lesson_group.key
+    assert_equal 'lg-1', script.stages[0].lesson_group.key
   end
 
   test 'can change the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group 1'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group 2'
+      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
-    assert_equal 'Test Lesson Group 1', script.stages[0].lesson_group.key
+    assert_equal 'lg-1', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'Test Lesson Group 2', script.stages[0].lesson_group.key
+    assert_equal 'lg-2', script.stages[0].lesson_group.key
   end
 
   test 'can remove the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      stage 'Lesson1', lesson_group: 'Test Lesson Group'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
@@ -2017,14 +2067,14 @@ endvariants
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'Test Lesson Group', script.stages[0].lesson_group.key
+    assert_equal 'lg-1', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lessonGroupTestScript'},
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    refute script.stages[0].lesson_group
+    assert_equal '', script.stages[0].lesson_group.key
   end
 
   private
