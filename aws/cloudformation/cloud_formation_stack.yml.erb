@@ -307,6 +307,7 @@ Resources:
                 Resource:
                   - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:*"
                   - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
+                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
               - Effect: Allow
                 Action:
                   - 'rds:DescribeDBInstances'
