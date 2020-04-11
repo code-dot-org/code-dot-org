@@ -920,7 +920,7 @@ class Script < ActiveRecord::Base
       named_level = nil
       bonus = nil
       stage_flex_category = nil
-      lesson_group_name = nil
+      lesson_group_key = nil
       stage_lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
@@ -936,7 +936,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         stage_flex_category = raw_level.delete(:stage_flex_category)
-        lesson_group_name = raw_level.delete(:lesson_group)
+        lesson_group_key = raw_level.delete(:lesson_group)
         stage_lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
@@ -1002,9 +1002,9 @@ class Script < ActiveRecord::Base
       if stage_name
         # check if that lesson_group exists for the script otherwise create a new lesson group
         lesson_group = LessonGroup.find_or_create_by(
-          key: lesson_group_name.presence || "",
+          key: lesson_group_key.presence || "",
           script: script,
-          user_facing: lesson_group_name.present?
+          user_facing: lesson_group_key.present?
         )
 
         # check if that stage exists for the script otherwise create a new stage

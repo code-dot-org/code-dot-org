@@ -84,8 +84,8 @@ class ScriptDSL < BaseDSL
   def lesson_group(key, properties = {})
     if key
       @lesson_groups << {
-        lesson_group: key,
-        lesson_group_display_name: properties[:display_name]
+        key: key,
+        display_name: properties[:display_name]
       }.compact
     end
     @lesson_group = key
