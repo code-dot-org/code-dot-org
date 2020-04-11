@@ -1,12 +1,15 @@
 class ContactRollupsV2
   def self.build_contact_rollups(log_collector)
-    ContactRollupsRaw.truncate_table
+    log_collector.time!('Truncate tables') do
+      ContactRollupsRaw.truncate_table
+      ContactRollupsProcessed.truncate_table
+    end
+
     log_collector.time!('Extracts data from dashboard email_preferences') do
       ContactRollupsRaw.extract_email_preferences
     end
 
     log_collector.time!('Processes all extracted data') do
-      ActiveRecord::Base.connection.truncate(ContactRollupsProcessed.table_name)
       ContactRollupsProcessed.import_from_raw_table
     end
 
