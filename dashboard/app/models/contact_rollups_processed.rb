@@ -112,4 +112,8 @@ class ContactRollupsProcessed < ApplicationRecord
     raise 'Missing data_updated_at value' unless max_data_updated_at
     {updated_at: max_data_updated_at}
   end
+
+  def self.truncate_table
+    ActiveRecord::Base.connection.truncate(table_name)
+  end
 end
