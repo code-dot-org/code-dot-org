@@ -105,6 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
+    code_break_takeover = DCDO.get("code_break", nil)["homepage_takeover"]
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -113,6 +114,11 @@ class Homepage
       download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
+    elsif code_break_takeover
+      youtube_id = "27ln76y27IQ"
+      download_path = ""
+      facebook = ""
+      twitter = ""
     else
       youtube_id = "nKIu9yen5nc"
       download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
@@ -121,7 +127,23 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if hoc_mode == "actual-hoc"
+    if code_break_takeover
+      [
+        {
+          text: "homepage_action_text_join_us",
+          type: "cta_button",
+          url: "/break"
+        },
+        {
+          text: "homepage_action_text_codevideo",
+          type: "video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
+        }
+      ]
+    elsif hoc_mode == "actual-hoc"
       [
         {
           text: "get_started",
@@ -351,7 +373,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    "changeworld"
+    DCDO.get("code_break", nil)["homepage_takeover"] ? "codebreak2020" : "changeworld"
   end
 
   def self.get_heroes_arranged(request)
@@ -363,7 +385,8 @@ class Homepage
       {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
     ]
     hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
-
+    hero_codebreak2020 =
+    [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/celebs_hoc2017_mobile_1x.jpg"}]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
@@ -378,6 +401,8 @@ class Homepage
       heroes_arranged = hero_dance2019
     elsif show_single_hero(request) == "oceans2019"
       heroes_arranged = hero_oceans2019
+    elsif show_single_hero(request) == "codebreak2020"
+      heroes_arranged = hero_codebreak2020
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
@@ -446,5 +471,10 @@ class Homepage
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
     DCDO.get("hoc2019_dance_stars", stars)
+  end
+
+  def self.get_code_break_guests
+    code_break = DCDO.get("code_break", nil)
+    [code_break["guest_name_1"], code_break["guest_name_2"]]
   end
 end
