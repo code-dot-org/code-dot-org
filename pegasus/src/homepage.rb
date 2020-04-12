@@ -475,6 +475,15 @@ class Homepage
 
   def self.get_code_break_guests
     code_break = DCDO.get("code_break", nil)
-    [code_break["guest_name_1"], code_break["guest_name_2"]]
+    [
+      {
+        name: code_break["guest_name_1"],
+        description: code_break["guest_name_1"]
+      },
+      {
+        name: code_break["guest_name_2"],
+        description: code_break["guest_name_2"]
+      }
+    ]
   end
 end
