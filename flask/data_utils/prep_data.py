@@ -146,18 +146,18 @@ if __name__ == "__main__":
             error_bad_lines=False,
             header=None,
         )
-        rows = data_df.values()
-        xmls = [row[6] for row in xmls if len(row) == 8]
+        rows = data_df.values
+        xmls = [row[6] for row in rows if len(row) == 8]
 
         with open(xml_out, 'wb') as fp:
             pickle.dump(xmls, fp)
 
     codes = []
-    pbar = tqdm(total(len(xmls)))
+    pbar = tqdm(total=len(xmls))
     for xml in xmls:
         ast = xmlToAst(xml)
         code = ' '.join(ast.toTrainableInput())
-        codes.append(code)
+        codes.append(code.strip())
         pbar.update()
     pbar.close()
 
