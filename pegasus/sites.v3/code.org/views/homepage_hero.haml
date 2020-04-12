@@ -114,35 +114,42 @@
     .top_center
       %div{style: "text-align: center;"}
 
-    .left.col-40
-      %div{style: "text-align: center;"}
-        .desktop-feature{style: "height: 60px"}
-          &nbsp;
-        %div{style: "font-weight: 800;"}
-        .headshots{style: "text-align: center; margin-top: -25px"}
-          .guest-1{style: "display: inline-block"}
-            %img{src: "/images/fill-200/homepage/mike_krieger_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px; border: 3px solid white"}
-            %h3{style: "font-weight: 900; color:#FFFFFF; margin-bottom: 6px"} Mike Krieger
-            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#FFFFFF;"} Instagram Co-Founder
-          &nbsp;
-          &nbsp;
-          .guest-2{style: "display: inline-block"}
-            %img{src: "/images/fill-200/homepage/alice_keeler_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px; border: 3px solid white"}
-            %h3{style: "font-weight: 900; color:#FFFFFF; margin-bottom: 6px"} Alice Keeler
-            %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#FFFFFF;"} Author &  Educator
+    .lefter.col-10
+      &nbsp;
 
-        %div{style: "clear:both;"}
-    .right.col-60.mobile-center{style: "margin-top: 14px"}
-      %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#FFFFFF; font-weight: 900"} Take a Code Break!
+    .right.col-50.mobile-center{style: "margin-top: 14px"}
+      %span{style: "vertical-align:middle; font-size: 40px; line-height: 50px; color:#FFFFFF; font-weight: 900; font-family: 'Gotham 5r', sans-serif"} Take a Code Break!
       %h3{style: "font-weight: 800; color:#FFFFFF;"}Your weekly dose of inspiration, community and computer science.
 
-      %h3{style: "font-weight: 800;color:#FFFFFF; width: 100%;"} Every Wednesday at 10am PST
+      %h3{style: "font-weight: 800;color:#FFFFFF; width: 100%; font-family: 'Gotham 5r', sans-serif"} Every Wednesday at 10am PST / 1pm EST
       .desktop-feature
         #actions{style: "text-align: left; padding-left: 0px"}
           = main_actions
       .mobile-feature
         #actions
           = main_actions
+
+      .clear{style: "clear: both"}
+
+    .left.col-40
+      %div{style: "text-align: center;"}
+        %div{style: "display: inline-block; background-color: rgba(0,0,0,0.2); border-radius: 10px; padding: 20px; margin-bottom: 20px"}
+          %div{style: "color: white; margin-bottom: 12px; font-size: 16px"}
+            This week's special guests
+          .headshots{style: "text-align: center"}
+            .guest-1{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/mike_krieger_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px; border: 3px solid white"}
+              %h3{style: "font-weight: 900; color:#FFFFFF; margin-top: 10px; margin-bottom: 6px"} Mike Krieger
+              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#FFFFFF;"} Instagram Co-Founder
+            &nbsp;
+            &nbsp;
+            .guest-2{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/alice_keeler_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px; border: 3px solid white"}
+              %h3{style: "font-weight: 900; color:#FFFFFF; margin-top: 10px; margin-bottom: 6px"} Alice Keeler
+              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#FFFFFF;"} Author &  Educator
+
+        %div{style: "clear:both;"}
+
 
   - elsif show_single_hero
     #actions
