@@ -386,7 +386,7 @@ class Homepage
     ]
     hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
     hero_codebreak2020 =
-    [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/celebs_hoc2017_mobile_1x.jpg"}]
+      [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/blank_paper.jpg"}]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
