@@ -145,7 +145,6 @@
     "load-grunt-tasks": "3.5.0",
     "loadable-components": "2.2.3",
     "lodash": "^4.17.5",
-    "marked": "^0.3.6",
     "messageformat": "0.2.2",
     "mocha": "^4.1.0",
     "mock-firmata": "0.2.0",
