@@ -445,6 +445,8 @@ es:
     update: "Actualizar cuenta de usuario"
     account_successfully_updated: "Cuenta actualizada exitosamente."
     update_email: "Actualizar"
+    parent_guardian_email_label: "Email del padre o guardián"
+    none: "Ninguno"
     encrypted: "encriptado"
   user_level:
     completed: 'Completada'
