@@ -4,6 +4,9 @@ import {Tab, Tabs} from 'react-bootstrap';
 import SectionResults from './section_results';
 import SurveyRollupTableFoorm from '../../components/survey_results/survey_rollup_table_foorm';
 
+const GENERAL = 'general';
+const FACILITATOR = 'facilitator';
+
 export default class Results extends React.Component {
   static propTypes = {
     questions: PropTypes.object.isRequired,
@@ -23,23 +26,23 @@ export default class Results extends React.Component {
             eventKey={i + 1}
             key={i}
             title={`${workshopTab} (${this.props.thisWorkshop[workshopTab][
-              'general'
+              GENERAL
             ]['response_count'] || 0})`}
           >
             <br />
             <h3>General Questions</h3>
             <SectionResults
-              section="general"
-              questions={this.props.questions['general']}
-              answers={this.props.thisWorkshop[workshopTab]['general']}
+              section={GENERAL}
+              questions={this.props.questions[GENERAL]}
+              answers={this.props.thisWorkshop[workshopTab][GENERAL]}
             />
-            {this.props.thisWorkshop[workshopTab]['facilitator'] && (
+            {this.props.thisWorkshop[workshopTab][FACILITATOR] && (
               <div>
                 <h3>Facilitator Specific Questions</h3>
                 <SectionResults
-                  section="facilitator"
-                  questions={this.props.questions['facilitator']}
-                  answers={this.props.thisWorkshop[workshopTab]['facilitator']}
+                  section={FACILITATOR}
+                  questions={this.props.questions[FACILITATOR]}
+                  answers={this.props.thisWorkshop[workshopTab][FACILITATOR]}
                 />
               </div>
             )}
