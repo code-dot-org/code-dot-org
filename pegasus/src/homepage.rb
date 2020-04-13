@@ -105,7 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
-    code_break_takeover = DCDO.get("promote_code_break", nil)
+    code_break_takeover = DCDO.get("promote_code_break", nil) && request.language == "en"
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -117,8 +117,8 @@ class Homepage
     elsif code_break_takeover
       youtube_id = "27ln76y27IQ"
       download_path = ""
-      facebook = ""
-      twitter = ""
+      facebook = "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/Code.org/posts/2799748100121475"
+      twitter = "Studying home alone? Take a #CodeBreak with me to learn computer science! Tune in Wednesday at 10:00am PT / 1:00pm ET. code.org/break"
     else
       youtube_id = "nKIu9yen5nc"
       download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"

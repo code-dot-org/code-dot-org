@@ -726,7 +726,7 @@ FactoryGirl.define do
   end
 
   factory :lesson_group do
-    sequence(:name) {|n| "Bogus Lesson Group #{n}"}
+    sequence(:key) {|n| "Bogus Lesson Group #{n}"}
     script
   end
 
