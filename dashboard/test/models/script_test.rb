@@ -689,7 +689,7 @@ class ScriptTest < ActiveSupport::TestCase
     summary = script.summarize
 
     assert_equal 1, summary[:stages].count
-    assert_nil summary[:peerReviewlesson]
+    assert_nil summary[:peerReviewStage]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
   end
