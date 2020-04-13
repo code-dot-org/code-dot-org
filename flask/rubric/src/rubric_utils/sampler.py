@@ -1,14 +1,16 @@
 import os
-import sys
-import random
-from os.path import dirname, basename, isfile
-import glob
-import inspect
 import re
+import sys
+import glob
 import copy
+import random
+import inspect
 import numpy as np
-from collections import deque, defaultdict
 from string import Formatter
+from collections import deque, defaultdict
+from os.path import dirname, basename, isfile
+
+import src.rubric_utils.generatorUtils as gu
 
 
 class Sampler:
@@ -43,7 +45,6 @@ class Sampler:
             'choices':choices
         }
         return sample
-
 
     ################################################
     # The rest of this class is private. Read only if
@@ -112,7 +113,7 @@ class Sampler:
 
         # TODO: make it so that any runtime registerChoices is not dynamic---throw error if. Like rubric pipeline
 
-    def _setResusableDecisionIds(self, nonterminals, reusableNonterminals):
+    def _setReusableDecisionIds(self, nonterminals, reusableNonterminals):
         registeredIds  = self._compileRegisteredIds(nonterminals, reusableNonterminals)
         for reusable in reusableNonterminals:
             validIds = registeredIds[reusable]
@@ -159,7 +160,9 @@ class Sampler:
         curr._incrementCount()
         curr.registerChoices()
         curr.updateRubric()
+        
         render = curr.render()
+        render = gu.fixWhitespace(render)
 
         to_generate = [t[1] for t in Formatter().parse(render) if t[1] is not None]
 

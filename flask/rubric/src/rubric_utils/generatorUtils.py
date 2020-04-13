@@ -21,6 +21,42 @@ def fillTemplate(template, templateVars):
     return result
 
 
+def fixWhitespace(program):
+    lines = program.split('\n')
+    result = ''
+
+    indent = 0 
+    for i in range(len(lines)):
+        line = lines[i]
+        if line == '' or line.isspace(): continue
+
+        stripped = line.strip()
+
+        # update the indent
+        if stripped[0] == '}':
+            indent -= 1
+
+        # make the new line
+        result += getIndent(indent)
+        result += stripped
+
+        # don't add whitespace to the last line
+        if i != len(lines) - 1: result += '\n'
+
+        # update the indent
+        if stripped[-1] == '{':
+            indent += 1
+
+    return result
+
+
+def getIndent(n):
+    space = ''
+    for i in range(n):
+        space += '  '
+    return space
+
+
 def calcGoodTuringP(countMap):
     if len(countMap) == 0: return 1.0
     n1 = 0

@@ -176,11 +176,11 @@ Program
     b) Tails: nothing
 
 = Postprocess 3: Stitch programs (1,2 3)
-    
+
     a) 1: do nothing
-    
+
     b) 2: sample new body and append
-    
+
     c) 3: sample 2 new bodies and append
 
 # NOTES and Thoughts
