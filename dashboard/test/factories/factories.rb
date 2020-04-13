@@ -730,7 +730,7 @@ FactoryGirl.define do
     script
   end
 
-  factory :lesson, class: 'Lesson' do
+  factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     script
 
