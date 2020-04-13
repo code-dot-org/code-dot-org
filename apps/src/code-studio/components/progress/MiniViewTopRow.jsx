@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '@cdo/apps/utils';
-import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const styles = {
   main: {
@@ -49,18 +49,9 @@ export default class MiniViewTopRow extends React.Component {
     const {scriptName, linesOfCodeText, selectedSectionId} = this.props;
 
     const sectionId = queryParams('section_id');
-    switch (true) {
-      case !!selectedSectionId:
-        updateQueryParam('section_id', selectedSectionId);
-        break;
-      case !!sectionId && sectionId !== 'undefined':
-        updateQueryParam('section_id', sectionId);
-        break;
-      default:
-        updateQueryParam('section_id', undefined);
-    }
-    const params = stringifyQueryParams(queryParams());
-
+    const params = selectedSectionId
+      ? stringifyQueryParams({section_id: selectedSectionId})
+      : stringifyQueryParams({section_id: sectionId});
     return (
       <div style={styles.main}>
         <Button
