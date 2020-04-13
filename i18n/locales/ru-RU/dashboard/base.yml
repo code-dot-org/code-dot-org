@@ -458,6 +458,8 @@ ru:
     auth_option_saved: "Вы успешно связали свой %{provider} аккаунт при помощи электронной почты %{email}."
     auth_option_saved_no_email: "Вы успешно связали ваш %{provider} аккаунт."
     update_email: "Обновить"
+    parent_guardian_email_label: "Электронная почта родителя/опекуна"
+    none: "Нет"
     encrypted: "зашифровано"
   user_level:
     completed: 'Завершено'

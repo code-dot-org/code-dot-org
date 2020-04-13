@@ -3415,6 +3415,8 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+            Variables:
+              name: переменные
         virtual-holding-place:
           stages:
             Velocity:
