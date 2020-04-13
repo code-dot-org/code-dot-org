@@ -52,7 +52,7 @@ export default class Results extends React.Component {
             title="Workshop Rollups"
           >
             <SurveyRollupTableFoorm
-              workshopRollups={this.props.workshopRollups}
+              workshopRollups={this.props.workshopRollups['general']}
               questions={this.props.questions}
               courseName={this.props.courseName}
             />
