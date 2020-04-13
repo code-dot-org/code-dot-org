@@ -6,6 +6,10 @@ require 'minitest/autorun'
 class WebPurifyTest < Minitest::Test
   include SetupTest
 
+  def setup
+    CDO.stubs(webpurify_key: 'mocksecret')
+  end
+
   # Do additional VCR configuration so as to prevent the CDO.webpurify_key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
   VCR.configure do |c|
