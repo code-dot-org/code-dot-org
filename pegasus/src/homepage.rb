@@ -127,7 +127,7 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if code_break_takeover
+    if code_break_takeover && request.language == "en"
       [
         {
           type: "code_break_learn_more"
