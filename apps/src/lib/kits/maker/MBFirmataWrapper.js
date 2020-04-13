@@ -19,4 +19,10 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   analogRead(pin, callback) {
     callback(this.analogChannel[pin]);
   }
+
+  reset() {
+    if (this.myPort) {
+      this.myPort.write([this.SYSTEM_RESET]);
+    }
+  }
 }
