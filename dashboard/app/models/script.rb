@@ -924,7 +924,8 @@ class Script < ActiveRecord::Base
       end
 
       existing_lesson_group = LessonGroup.find_by(
-        key: lesson_group[:key]
+        key: lesson_group[:key],
+        script: script
       )
 
       if existing_lesson_group && existing_lesson_group.localized_display_name != lesson_group[:display_name]
