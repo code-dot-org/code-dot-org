@@ -107,8 +107,8 @@ class LoopStrategy(Decision):
 
             bodyType = self.getChoice('loop_forwardBodyType')
             if bodyType == 'loop':
-                dropMove = bool(self.getChoice('loop_forwardBodyDropMove'))
-                dropNectar = bool(self.getChoice('loop_forwardBodyDropNectar'))
+                dropMove = eval(self.getChoice('loop_forwardBodyDropMove'))
+                dropNectar = eval(self.getChoice('loop_forwardBodyDropNectar'))
 
                 if dropMove:
                     self.turnOnRubric('error:forgot-move')
@@ -125,9 +125,9 @@ class LoopStrategy(Decision):
                 self.turnOnRubric('error:extra-statements-out-loop')
 
         elif loopStrategy == 'backward':
-            forgetNector = bool(self.getChoice('loop_backwardForgetNectar'))
-            if forgetNector:
-                self.turnOnRubric('error:forgot-nector')
+            forgetNectar = eval(self.getChoice('loop_backwardForgetNectar'))
+            if forgetNectar:
+                self.turnOnRubric('error:forgot-nectar')
             bodyType = self.getChoice('loop_backwardBodyType')
             if bodyType == 'none':
                 self.turnOnRubric('error:missing-statements')
@@ -154,7 +154,7 @@ class LoopStrategy(Decision):
             if firstMoveType == 'loop':
                 code.append(build_repeat(loopNum, build_move()))
             elif firstMoveType == 'manual':
-                code += ([build_move() * loopNum)
+                code.extend([build_move()] * loopNum)
             elif firstMoveType == 'none':
                 pass
             else:
@@ -167,18 +167,18 @@ class LoopStrategy(Decision):
             if bodyType == 'loop':
                 loopContent = []
                 
-                dropMove = bool(self.getChoice('loop_forwardBodyDropMove'))
-                dropNectar = bool(self.getChoice('loop_forwardBodyDropNectar'))
+                dropMove = eval(self.getChoice('loop_forwardBodyDropMove'))
+                dropNectar = eval(self.getChoice('loop_forwardBodyDropNectar'))
 
                 if dropMove and dropNectar:
-                    loopContent = build_repeat(loopNum, '')
+                    loopContent.append(build_repeat(loopNum, ''))
                 elif dropMove:
-                    loopContent = build_repeat(loopNum, build_nectar())
+                    loopContent.append(build_repeat(loopNum, build_nectar()))
                 elif dropNectar:
-                    loopContent = build_repeat(loopNum, build_move())
+                    loopContent.append(build_repeat(loopNum, build_move()))
                 else:
                     loopInternal = collapse_commands([build_move(), build_nectar()])
-                    loopContent = build_repeat(loopNum, loopInternal)
+                    loopContent.append(build_repeat(loopNum, loopInternal))
 
                 # possibility of trailing random commands inside loop
                 randomCode = self.getChoice('loop_randomCodeInLoop')
@@ -192,18 +192,18 @@ class LoopStrategy(Decision):
                     loopContent.append(build_move())
                     loopContent.append(build_nectar())
 
-                loopContent = collapse_commands(loopInternal)
+                loopContent = collapse_commands(loopContent)
                 code.append(build_repeat(loopNum, loopContent))
 
-            elif firstMoveType == 'manual':
+            elif bodyType == 'manual':
 
                 for i in range(loopNum):
                     code.append(build_move(forward=False))
-                    code.append(build_nectar)
+                    code.append(build_nectar())
 
-            elif firstMoveType == 'none':
+            elif bodyType == 'none':
                 pass
-            
+
             else:
                 raise Exception(f'Body type {bodyType} not supported.')
 
@@ -233,7 +233,7 @@ class LoopStrategy(Decision):
                 raise Exception(f'Move type {firstMoveType} not supported.')
             
             # Step 2: choose if remember nectar
-            forgetNector = bool(self.getChoice('loop_backwardForgetNectar'))
+            forgetNectar = eval(self.getChoice('loop_backwardForgetNectar'))
             if not forgetNectar:
                 code.append(build_nectar())
 
@@ -244,7 +244,7 @@ class LoopStrategy(Decision):
             
             elif bodyType == 'loop':
                 loopInternal = [
-                    build_move(forward=False)
+                    build_move(forward=False),
                     build_nectar()
                 ]
 
@@ -266,7 +266,7 @@ class LoopStrategy(Decision):
 
             elif bodyType == 'manual':
                 code.append(build_move(forward=False))
-                code.append(build_nectar)
+                code.append(build_nectar())
             else:
                 raise Exception(f'Body type {bodyType} not supported.')
 
@@ -288,4 +288,4 @@ class LoopStrategy(Decision):
         else:
             raise Exception(f'Loop strategy {loopStrategy} not supported.')
 
-        return code
+        return '\n'.join(code)

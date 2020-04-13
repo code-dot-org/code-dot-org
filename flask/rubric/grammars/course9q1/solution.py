@@ -11,14 +11,14 @@ class Solution(Decision):
         })
 
     def updateRubric(self):
-        if bool(self.getChoice('uselessLoop')):
+        if eval(self.getChoice('uselessLoop')):
             self.turnOnRubric('nit:extra-loop')
 
     def render(self):
         strategy = self.expand('Strategy')
 
-        if bool(self.getChoice('uselessLoop')):
-            code = [build_repeat(1, strategy)]
+        if eval(self.getChoice('uselessLoop')):
+            code = build_repeat(1, strategy)
         else:
             code = strategy
 

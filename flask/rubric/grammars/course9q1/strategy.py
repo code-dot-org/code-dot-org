@@ -21,5 +21,5 @@ class Strategy(Decision):
             code = self.expand('ManualStrategy')
         else: 
             raise Exception(f'Strategy {strategy} not supported.')
-
+        
         return code

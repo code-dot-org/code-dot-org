@@ -8,7 +8,7 @@ from src.codeorg_utils.utils import (
 
 class ManualStrategy(Decision):
 
-    def registerChoice(self):
+    def registerChoices(self):
         self.addChoice('manual_hasNectar', {
             'True': 0.5,
             'False': 0.5,
@@ -35,13 +35,13 @@ class ManualStrategy(Decision):
         })
 
     def updateRubric(self):
-        if not bool(self.getChoice('manual_hasNector')):
-            self.turnOnRubric('error:no-nectors')
+        if not eval(self.getChoice('manual_hasNectar')):
+            self.turnOnRubric('error:no-nectars')
 
-        if not bool(self.getChoice('manual_hasFirstMove')):
+        if not eval(self.getChoice('manual_hasFirstMove')):
             self.turnOnRubric('error:missing-first-move')
 
-        if not bool(self.getChoice('manual_hasLastNectar')):
+        if not eval(self.getChoice('manual_hasLastNectar')):
             self.turnOnRubric('error:missing-last-nectar')
 
         if self.getChoice('manual_extraCode') != 'none':
@@ -49,9 +49,9 @@ class ManualStrategy(Decision):
 
     def render(self):
 
-        if bool(self.getChoice('manual_hasNector')):
+        if eval(self.getChoice('manual_hasNectar')):
             code = []
-            if bool(self.getChoice('manual_hasFirstMove')):
+            if eval(self.getChoice('manual_hasFirstMove')):
                 code.append(build_move())
 
             sub_code = [
@@ -61,7 +61,7 @@ class ManualStrategy(Decision):
             ]
             code += sub_code
 
-            if bool(self.getChoice('manual_hasLastNectar')):
+            if eval(self.getChoice('manual_hasLastNectar')):
                 code.append(build_nectar())
 
         else:
@@ -70,7 +70,7 @@ class ManualStrategy(Decision):
             for i in range(numMoves):
                 code.append(build_move())
 
-        extraCode = self.getChoice('manual_extraCode'):
+        extraCode = self.getChoice('manual_extraCode')
 
         extra_code = []
         if extraCode == 'move':
@@ -83,7 +83,9 @@ class ManualStrategy(Decision):
         elif extraCode == 'emptyLoop':
             extra_code.append(build_repeat(1, ''))
 
-        code = code + extraCode
+        code = code + extra_code
         code = '\n'.join(code)
+
+        print(code)
 
         return code

@@ -173,7 +173,6 @@ if __name__ == "__main__":
                 pbar.update()
         pbar.close()
 
-        breakpoint()
         print('Casting to array.')
         codes = np.array(codes)
         print('Saving to numpy.')

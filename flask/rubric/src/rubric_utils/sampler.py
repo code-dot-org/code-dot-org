@@ -121,7 +121,7 @@ class Sampler:
 
     def _getNonTerminals(self, grammar_dir):
         nonterminals, reusableNonterminals = self._loadNonTerminals(grammar_dir)
-        self._setResusableDecisionIds(nonterminals, reusableNonterminals)   # modifies params in place
+        self._setReusableDecisionIds(nonterminals, reusableNonterminals)   # modifies params in place
         return nonterminals, reusableNonterminals
 
     def _loadNonTerminals(self, grammar_dir):
@@ -160,11 +160,12 @@ class Sampler:
         curr._incrementCount()
         curr.registerChoices()
         curr.updateRubric()
-        
-        render = curr.render()
-        render = gu.fixWhitespace(render)
 
-        to_generate = [t[1] for t in Formatter().parse(render) if t[1] is not None]
+        render = curr.render()
+        try:
+            to_generate = [t[1] for t in Formatter().parse(render) if t[1] is not None]
+        except:
+            breakpoint()
 
         formatter = dict()
         for format_key in to_generate:
