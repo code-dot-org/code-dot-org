@@ -2219,6 +2219,8 @@ pt:
           stages:
             While Loops:
               name: Laços enquanto
+            Variables:
+              name: Variáveis
         virtual-holding-place:
           stages:
             Velocity:
