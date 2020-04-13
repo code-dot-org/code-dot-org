@@ -7,7 +7,12 @@ import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailCo
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 
 describe('AddParentEmailController', () => {
-  let controller, form, link, onSuccessCallback;
+  let controller,
+    form,
+    parentEmailField,
+    parentOptInField,
+    link,
+    onSuccessCallback;
 
   const TEST_EMAIL = 'batman@bat.cave';
 
@@ -18,6 +23,10 @@ describe('AddParentEmailController', () => {
         <input type="hidden" id="add-parent-email-modal_user_parent_email_preference_opt_in"/>
       </form>
     `);
+    parentEmailField = form.find('#add-parent-email-modal_user_parent_email');
+    parentOptInField = form.find(
+      '#add-parent-email-modal_user_parent_email_preference_opt_in'
+    );
 
     link = $('<a/>');
 
@@ -27,6 +36,8 @@ describe('AddParentEmailController', () => {
   function newController() {
     return new AddParentEmailController({
       form,
+      formParentEmailField: parentEmailField,
+      formParentOptInField: parentOptInField,
       link,
       onSuccessCallback
     });

@@ -52,6 +52,10 @@ $(document).ready(() => {
   };
   new AddParentEmailController({
     form: $('#add-parent-email-modal-form'),
+    formParentEmailField: $('#add-parent-email-modal_user_parent_email'),
+    formParentOptInField: $(
+      '#add-parent-email-modal_user_parent_email_preference_opt_in'
+    ),
     link: $('#add-parent-email-link'),
     onSuccessCallback: updateDisplayedParentEmail
   });
