@@ -49,11 +49,11 @@ def isMove(token):
 
 
 def isMoveForward(token):
-    return token == 'moveForward()':
+    return token == 'moveForward()'
 
 
 def isMoveBackward(token):
-    return token == 'moveBackward()':
+    return token == 'moveBackward()'
 
 
 def isNectar(token):
@@ -92,7 +92,7 @@ def toCodeList(code):
     return codeTokens
 
 
-def formatOutputFromTokens(codeTokens):
+def formatOutputFromTokens(codeTokens, init_depth=0):
     """
     Convert our simplified code to output code.
     """
@@ -100,13 +100,13 @@ def formatOutputFromTokens(codeTokens):
 
     for i, (token, depth) in enumerate(codeTokens):
         if isMoveForward(token):
-            output = 'maze_move [ moveForward ]'
+            output = '\t'*init_depth + 'maze_move\n' + '\t'*init_depth + '\tmoveForward\n'
             codeOutputs.append(output)
         elif isMoveBackward(token):
-            output = 'maze_move [ moveBackward ]'
+            output = '\t'*init_depth + 'maze_move\n' + '\t'*init_depth + '\tmoveBackward\n'
             codeOutputs.append(output)
         elif isNectar(token):
-            output = 'maze_nectar'
+            output = '\t'*init_depth + 'maze_nectar\n'
             codeOutputs.append(output)
         elif isRepeat(token):
             ix = token.index('(')
@@ -124,8 +124,14 @@ def formatOutputFromTokens(codeTokens):
                         token3, depth3 = codeTokens[j+1]
                         if depth3 > depth: # we are exiting the loop
                             chosen_j = j
+            if i+2 == chosen_j:
+                output = '\t'*init_depth + f'controls_repeat\n' + '\t'*init_depth + '\t{numLoop}\n' + '\t'*init_depth + '\tDO\n'
+            else:
+                subOutput = formatOutputFromTokens(
+                    codeTokens[i+2:chosen_j],
+                    init_depth=init_depth+1,
+                )
+                output = '\t'*init_depth + f'controls_repeat\n' + '\t'*init_depth + f'\t{numLoop}\n' + '\t'*init_depth + '\tDO\n' + subOutput
+            codeOutputs.append(output)
 
-            subOutput = formatOutputFromTokens(codeTokens[i:chosen_j+1])
-            output = f'controls_repeat [ {numLoop}\nDO [ {subOutput} ] ]'
-
-    return ' '.join(codeOutputs)
+    return ''.join(codeOutputs)

@@ -25,7 +25,8 @@ class Start(Decision):
         code = self.expand('Root')
 
         codeTokens = toCodeList(code)
-        code = formatOutputFromTokens(codeTokens)
-        code = f'Program [ when_run\n{code} ]'
+        code = formatOutputFromTokens(codeTokens, init_depth=1)
+        code = f'Program\n\twhen_run\n{code}'.strip()
+        code = code.replace('\t', '  ')
 
         return code
