@@ -370,7 +370,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    DCDO.get("code_break", nil)["homepage_takeover"] ? "codebreak2020" : "changeworld"
+    DCDO.get("code_break", nil)["homepage_takeover"] && request.language == "en" ? "codebreak2020" : "changeworld"
   end
 
   def self.get_heroes_arranged(request)
