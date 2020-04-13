@@ -25,7 +25,10 @@ module Pd::Foorm
       return result_data unless rollup_configuration && rollup_configuration[ws_data.course.to_sym]
 
       questions_to_summarize = rollup_configuration[ws_data.course.to_sym]
-      rollup_question_details = Pd::Foorm::RollupHelper.get_question_details_for_rollup(parsed_forms, questions_to_summarize)
+      rollup_question_details = Pd::Foorm::RollupHelper.get_question_details_for_rollup(
+        parsed_forms,
+        questions_to_summarize
+      )
       rollup = Pd::Foorm::RollupCreator.calculate_averaged_rollup(summarized_answers, rollup_question_details)
       # get overall rollup
       overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details)
@@ -53,7 +56,11 @@ module Pd::Foorm
 
     def self.parse_and_summarize_forms(ws_submissions, form_submissions, forms)
       parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
-      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
+      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(
+        form_submissions,
+        parsed_forms,
+        ws_submissions
+      )
       [parsed_forms, summarized_answers]
     end
 
