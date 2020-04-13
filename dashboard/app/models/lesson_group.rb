@@ -17,4 +17,12 @@
 class LessonGroup < ApplicationRecord
   belongs_to :script
   has_many :stages
+
+  def localized_display_name
+    if key
+      I18n.t "flex_category.#{key}"
+    else
+      I18n.t "flex_category.content"
+    end
+  end
 end
