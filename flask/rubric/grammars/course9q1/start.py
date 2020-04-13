@@ -1,4 +1,8 @@
 from src.rubric_utils.decision import Decision
+from src.codeorg_utils.utils import (
+    formatOutputFromTokens, 
+    toCodeList,
+)
 
 
 class Start(Decision):
@@ -19,5 +23,9 @@ class Start(Decision):
         # codeInject = self.expand('Root')
         # code = code.format(codeInject=codeInject)
         code = self.expand('Root')
+
+        codeTokens = toCodeList(code)
+        code = formatOutputFromTokens(codeTokens)
+        code = f'Program [ when_run\n{code} ]'
 
         return code

@@ -6,6 +6,8 @@ from src.codeorg_utils.utils import (
     isMove,
     isNectar,
     isRepeat,
+    toCodeString,
+    toCodeList,
 )
 
 
@@ -83,34 +85,6 @@ class Root(Decision):
         code = toCodeString(codeTokens)
 
         return code
-
-
-def toCodeString(codeTokens):
-    return ' '.join([tok[0] for tok in codeTokens])
-
-
-def toCodeList(code):
-    """
-    It is not easy to dropout lines or blocks when
-    the code is in raw strings. Let us instead encode
-    them as a list of tokens with depths.
-    """
-    tokens = code.split()
-    depth = 0
-    codeTokens = []
-
-    for tok in tokens:
-        if tok == '[':
-            # -1 = meaningless depth
-            codeTokens.append((tok, -1))
-            depth += 1
-        elif tok == ']':
-            codeTokens.append((tok, -1))
-            depth -= 1
-        else:
-            codeTokens.append((tok, depth))
-
-    return codeTokens
 
 
 def dropLines(codeTokens, prob=0.1):
