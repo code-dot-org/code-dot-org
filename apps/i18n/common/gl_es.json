@@ -11,6 +11,8 @@
   "activity": "Actividade",
   "actions": "Accións",
   "add": "Engadir",
+  "addParentEmailModal_parentEmail_invalid": "O enderezo de e-mail indicado non é válido.",
+  "addParentEmailModal_save": "Actualizar",
   "addPartners": "Engadir compañeiros",
   "addPassword": "Engada unha contrasinal",
   "addPasswordHint": "Creando unha contrasinal no apartado de abaixo, podrás iniciar sesión con o teu nome ou correo electrónico e contrasinal. Tambén axudará a manter a tua conta máis segura porque despois nós te preguntaremos pola contrasinal antes de que ningunha actualización sea feita.",
