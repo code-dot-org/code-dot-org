@@ -1,14 +1,24 @@
 {
-  "CS Principles": [
-    {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
-    {"question_id": "overall_success", "header_text": "Overall Success"}
-  ],
-  "CS Discoveries": [
-    {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
-    {"question_id": "overall_success", "header_text": "Overall Success"}
-  ],
-  "CS Fundamentals": [
-    {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
-    {"question_id": "overall_success", "header_text": "Overall Success"}
-  ]
+  "CS Principles": {
+    "general": [
+      {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
+      {"question_id": "overall_success", "header_text": "Overall Success"}
+    ]
+  },
+  "CS Discoveries": {
+    "general": [
+      {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
+      {"question_id": "overall_success", "header_text": "Overall Success"}
+    ]
+  },
+  "CS Fundamentals": {
+    "general": [
+      {"question_id": "teacher_engagement", "header_text": "Teacher Engagement"},
+      {"question_id": "overall_success", "header_text": "Overall Success"}
+    ],
+    "facilitator": [
+      {"question_id":  "facilitator_effectiveness", "header_text":  "Facilitator Effectiveness"}
+    ]
+  }
+
 }

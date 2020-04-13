@@ -5,32 +5,7 @@ module Pd::Foorm
     extend Helper
 
     # Calculates report for a given workshop id.
-    # @return
-    #   {
-    #        course_name: 'CS Principles',
-    #        questions: <parsed form, see FoormParser>,
-    #        this_workshop: <summarized survey answers, see WorkshopSummarizer>,
-    #        workshop_rollups: {
-    #         questions: <question details, see RollupHelper.get_question_details_for_rollup>,
-    #         single_workshop: <rollup for workshop_id, see RollupCreator>,
-    #         overall: <rollup for all workshops in course_name, see RollupCreator>
-    #       }
-    #   }
-    # Path for calculating report is:
-    # SurveyReporter.get_raw_data_for_workshop
-    #   summary:
-    #   -> FoormParser.parse_forms
-    #   -> WorkshopSummarizer.summarize_answers_by_survey
-    #     rollups:
-    #     -> RollupHelper.get_question_details_for_rollup
-    #       single_workshop_rollup:
-    #       -> RollupCreator.calculate_averaged_rollup
-    #       course rollup:
-    #       -> get all workshop ids for course
-    #       -> SurveyReporter.get_raw_data_for_workshop(ids)
-    #       -> FoormParser.parse_forms
-    #       -> WorkshopSummarizer.summarize_answers_by_survey
-    #       -> RollupCreator.calculate_averaged_rollup
+    # @return workshop report in format specified in README
     def self.get_workshop_report(workshop_id)
       return unless workshop_id
 
@@ -52,23 +27,18 @@ module Pd::Foorm
       questions_to_summarize = rollup_configuration[ws_data.course.to_sym]
       rollup_question_details = Pd::Foorm::RollupHelper.get_question_details_for_rollup(parsed_forms, questions_to_summarize)
       rollup = Pd::Foorm::RollupCreator.calculate_averaged_rollup(summarized_answers, rollup_question_details)
-
-      result_data[:workshop_rollups] = {
-        questions: rollup_question_details
-      }
-
-      result_data[:workshop_rollups][:single_workshop] = {
-        averages: rollup[:averages],
-        response_count: rollup[:response_count],
-        workshop_id: ws_data.id
-      }
-
       # get overall rollup
       overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details)
-      result_data[:workshop_rollups][:overall] = {
-        averages: overall_rollup[:averages],
-        response_count: overall_rollup[:response_count]
-      }
+
+      result_data[:workshop_rollups] = {}
+
+      rollup_question_details.each do |key, questions|
+        result_data[:workshop_rollups][key] = {
+          questions: questions,
+          single_workshop: rollup[key],
+          overall: overall_rollup[key]
+        }
+      end
 
       result_data
     end
