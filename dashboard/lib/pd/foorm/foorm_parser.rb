@@ -28,7 +28,7 @@
 #       }
 #     },
 #     facilitator: {
-#       <form-name>.<form-version>: {...}
+#       <form-name>.<form-version>: {same format as general}
 #     }
 #   }
 module Pd::Foorm
