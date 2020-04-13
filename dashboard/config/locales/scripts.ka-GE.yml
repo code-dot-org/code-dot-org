@@ -6863,6 +6863,8 @@ ka:
               name: სექცია 5 დავალება 4
             Intro to App Lab:
               name: შესავალი აპლიკაციების ლაბორატორიაში
+            Variables:
+              name: ცვლადები
         virtual-holding-place:
           stages:
             Velocity:
