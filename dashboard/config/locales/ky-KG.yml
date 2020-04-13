@@ -91,6 +91,8 @@ ky:
   teacher:
     panel:
       section: Секция
+  user:
+    none: Жок
   home:
     trynow: Дагы кара
   video:
