@@ -1,6 +1,8 @@
 import os
 import sys
+import json
 import pickle
+import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
@@ -106,7 +108,7 @@ class Tree:
         return str(self) == str(other)
 
     def getRoot(self):
-        return f'{self.rootName}[{self.rootId}]'
+        return f'{self.rootName}'
 
     def toString(self, indent):
         s = ''
@@ -128,38 +130,56 @@ class Tree:
         return flat
 
 if __name__ == "__main__":
+    PRETTY = True
+
     data_file = os.path.join(
         DATA_DIR,
         'coursed_stage_9_2019.tsv',
     )
 
-    xml_out = os.path.join(DATA_DIR, 'xml.pickle')
-    ast_out = os.path.join(DATA_DIR, 'ast.pickle')
+    data_df = pd.read_csv(
+        data_file,
+        sep='\t',
+        error_bad_lines=False,
+        header=None,
+    )
+    level_ids = np.asarray(data_df[1])
+    xmls = np.asarray(data_df[6])
 
-    if os.path.isfile(xml_out):
-        with open(xml_out, 'rb') as fp:
-            xmls = pickle.load(fp)
-    else:
-        data_df = pd.read_csv(
-            data_file,
-            sep='\t',
-            error_bad_lines=False,
-            header=None,
-        )
-        rows = data_df.values
-        xmls = [row[6] for row in rows if len(row) == 8]
+    # 14771 = problem 1
+    for level in [14771]:
+        xmls_level = xmls[level_ids == level]
+        print(f'Processing level {level}: {len(xmls_level)} programs')
+        out = os.path.join(DATA_DIR, 'processed', 'xml', f'level{level}.npy')
+        np.save(out, xmls_level)
 
-        with open(xml_out, 'wb') as fp:
-            pickle.dump(xmls, fp)
+        codes = []
+        bad_count = 0
+        pbar = tqdm(total=len(xmls_level))
+        for xml in xmls_level:
+            # remove comments
+            xml = xml.replace('[COMMENT REMOVED]', '')
+            try:
+                ast = xmlToAst(xml)
+                if PRETTY:
+                    code = ast.toString(0)
+                else:
+                    code = ' '.join(ast.toTrainableInput())
+                codes.append(code.strip())
+                pbar.update()
+            except:
+                bad_count += 1
+                print(f'Bad count: {bad_count} | Can\'t parse: {xml}')
+                pbar.update()
+        pbar.close()
 
-    codes = []
-    pbar = tqdm(total=len(xmls))
-    for xml in xmls:
-        ast = xmlToAst(xml)
-        code = ' '.join(ast.toTrainableInput())
-        codes.append(code.strip())
-        pbar.update()
-    pbar.close()
-
-    with open(ast_out, 'wb') as fp:
-        pickle.dump(codes, fp)
+        breakpoint()
+        print('Casting to array.')
+        codes = np.array(codes)
+        print('Saving to numpy.')
+        if PRETTY:
+            out = os.path.join(DATA_DIR, 'processed', 'ast', f'pretty_level{level}.json')
+            json.dump(out, open(out, 'w'))
+        else:
+            out = os.path.join(DATA_DIR, 'processed', 'ast', f'level{level}.npy')
+            np.save(out, codes)
