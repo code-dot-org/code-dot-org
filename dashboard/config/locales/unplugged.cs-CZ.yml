@@ -95,7 +95,7 @@ cs:
           musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost),
           a studenti diskutují představu, že je trvalá, když věci se komplikují.
       GettingLoopy:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -134,7 +134,7 @@ cs:
           jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
           jedním způsobem.
       DigitalFootprint:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       ComputationalThinking:
@@ -269,7 +269,7 @@ cs:
           akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře
           vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
       courseB_unplugged_digitalFootprint:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       courseC_unplugged_buildingAFoundation:
@@ -283,7 +283,7 @@ cs:
           konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
           obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       courseC_unplugged_gettingLoopy:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -358,7 +358,7 @@ cs:
           znova ve větším programu. Tato lekce vám pomůže studentům intuitivně pochopit,
           proč kombinace kousky kódu do funkce je užitečnou praxí.  '
       courseB_unplugged_MRF_2018:
-        title: Mí robotičtí přátelé
+        title: Moji robotičtí přátelé
       PlantASeed_2018:
         title: 'Algoritmy ze života: Zasadit semínko'
         desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním
@@ -393,7 +393,7 @@ cs:
           vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a
           "Vytáhnu-li si černou kartu, ty dostaneš bod."
       DigitalFootprint_2018:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       BinaryImages_2018:
@@ -409,7 +409,7 @@ cs:
           konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
           obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       GettingLoopy_2018:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -426,7 +426,9 @@ cs:
           přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat
           na napsání programu postupně po jednom pokynu.
       courseB_unplugged_MRF_2019:
-        title: Mí robotičtí přátelé
+        title: Moji robotičtí přátelé
+      courseB_unplugged_loopyMRF_2019:
+        title: Moji zacyklení robotičtí přátelé (ml.)
       Conditionals_2019:
         title: Podmínky
         desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a
@@ -451,7 +453,7 @@ cs:
           jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace
           (např. obrázky a barvy).
       GettingLoopy_2019:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
           taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
           instruováni to opakovat.
@@ -490,7 +492,7 @@ cs:
       MoveItMoveIt_2019:
         title: Pohyb, pohyb
       DigitalFootprint_2019:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
           vytvoří digitální stopu nebo "stopu", která má své důsledky.
       courseE_simon_says_2019:
