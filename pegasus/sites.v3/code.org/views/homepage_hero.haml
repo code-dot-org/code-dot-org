@@ -118,7 +118,13 @@
           &nbsp;
 
   - elsif show_single_hero == "codebreak2020"
-    - guests = Homepage.get_code_break_guests
+    :css
+      @media screen and (max-width: 512px) {
+        #special-guest-stars {
+          padding-top: 60px;
+        }
+      }
+
     .top_center
       %div{style: "text-align: center;"}
 
@@ -143,18 +149,18 @@
       %div{style: "text-align: center;"}
         %div{style: "display: inline-block; border-radius: 10px; padding: 20px; margin-bottom: 20px; background-image: url(/images/fit-500/homepage/codebreak_blank_note.png); background-size: cover; background-position: 50% 0%;"}
           %div
-            %img{src: "images/homepage/codebreak_specialguests.png", style: "width: 300px; padding-bottom: 10px; padding-top: 60px; max-width: 100%"}
+            %img#special-guest-stars{src: "images/homepage/codebreak_specialguests.png", style: "width: 300px; padding-bottom: 10px; padding-top: 30px; max-width: 100%"}
           .headshots{style: "text-align: center"}
             .guest-1{style: "display: inline-block"}
               %img{src: "/images/fill-200/homepage/mike_krieger_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
               %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px"} Mike Krieger
-              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#191919;"} Instagram Co-Founder
+              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#191919;"} Instagram Co-founder
             &nbsp;
             &nbsp;
             .guest-2{style: "display: inline-block"}
               %img{src: "/images/fill-200/homepage/alice_keeler_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
               %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px"} Alice Keeler
-              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#191919;"} Author &  Educator
+              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#191919;"} Author & Educator
 
         %div{style: "clear:both;"}
 

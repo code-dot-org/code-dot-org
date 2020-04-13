@@ -105,7 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
-    code_break_takeover = DCDO.get("code_break", nil)["homepage_takeover"]
+    code_break_takeover = DCDO.get("promote_code_break", nil)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -370,7 +370,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    DCDO.get("code_break", nil)["homepage_takeover"] && request.language == "en" ? "codebreak2020" : "changeworld"
+    DCDO.get("promote_code_break", nil) && request.language == "en" ? "codebreak2020" : "changeworld"
   end
 
   def self.get_heroes_arranged(request)
@@ -468,19 +468,5 @@ class Homepage
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
     DCDO.get("hoc2019_dance_stars", stars)
-  end
-
-  def self.get_code_break_guests
-    code_break = DCDO.get("code_break", nil)
-    [
-      {
-        name: code_break["guest_name_1"],
-        description: code_break["guest_name_1"]
-      },
-      {
-        name: code_break["guest_name_2"],
-        description: code_break["guest_name_2"]
-      }
-    ]
   end
 end
