@@ -14,8 +14,8 @@ class ManualStrategy(Decision):
             'False': 0.5,
         })
         self.addChoice('manual_extraCode', {
-            'move': 0.075,
-            'nectar': 0.075,
+            'move': 0.1,
+            'nectar': 0.05,
             'moveNectar': 0.05,
             'emptyLoop': 0.4,
             'none': 0.4,
@@ -34,11 +34,24 @@ class ManualStrategy(Decision):
             '3': 0.2,
         })
 
+    def updateRubric(self):
+        if not bool(self.getChoice('manual_hasNector')):
+            self.turnOnRubric('error:no-nectors')
+
+        if not bool(self.getChoice('manual_hasFirstMove')):
+            self.turnOnRubric('error:missing-first-move')
+
+        if not bool(self.getChoice('manual_hasLastNectar')):
+            self.turnOnRubric('error:missing-last-nectar')
+
+        if self.getChoice('manual_extraCode') != 'none':
+            self.turnOnRubric('error:too-much-code')
+
     def render(self):
 
-        if self.getChoice('manual_hasNector'):
+        if bool(self.getChoice('manual_hasNector')):
             code = []
-            if self.getChoice('manual_hasFirstMove'):
+            if bool(self.getChoice('manual_hasFirstMove')):
                 code.append(build_move())
 
             sub_code = [
@@ -48,7 +61,7 @@ class ManualStrategy(Decision):
             ]
             code += sub_code
 
-            if self.getChoice('manual_hasLastNectar'):
+            if bool(self.getChoice('manual_hasLastNectar')):
                 code.append(build_nectar())
 
         else:
