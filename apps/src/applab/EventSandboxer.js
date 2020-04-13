@@ -99,55 +99,60 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     }
   });
 
-  // map touch events to mouse events
-  if (event.type && event.type.substring(0, 5) === 'touch') {
-    switch (event.type) {
-      case 'touchmove':
-        newEvent.type = 'mousemove';
-        break;
-      case 'touchstart':
-        newEvent.type = 'mousedown';
-        break;
-      case 'touchend':
-        newEvent.type = 'mouseup';
-        break;
-    }
-    event.clientX = event.changedTouches[0].clientX;
-    event.clientY = event.changedTouches[0].clientY;
-    event.pageX = event.changedTouches[0].pageX;
-    event.pageY = event.changedTouches[0].pageY;
-    event.x = event.changedTouches[0].clientX;
-    event.y = event.changedTouches[0].clientY;
+  // This "mouse" event will come either from a normal input, or from the first
+  // of multiple touches.
+  let mouseEvent;
+
+  const touchEvents = {
+    touchstart: 'mousedown',
+    touchmove: 'mousemove',
+    touchend: 'mouseup'
+  };
+
+  if (touchEvents[event.type]) {
+    newEvent.type = touchEvents[event.type];
+    mouseEvent = event.changedTouches[0];
+  } else {
+    mouseEvent = event;
   }
 
   // Convert x coordinates and then pass through to applabEvent:
   ['clientX', 'pageX', 'x'].forEach(function(prop) {
-    if (typeof event[prop] !== 'undefined') {
-      newEvent[prop] = (event[prop] - this.xOffset_) / this.xScale_;
+    if (typeof mouseEvent[prop] !== 'undefined') {
+      newEvent[prop] = (mouseEvent[prop] - this.xOffset_) / this.xScale_;
     }
   }, this);
   // Convert y coordinates and then pass through to applabEvent:
   ['clientY', 'pageY', 'y'].forEach(function(prop) {
-    if (typeof event[prop] !== 'undefined') {
-      newEvent[prop] = (event[prop] - this.yOffset_) / this.yScale_;
+    if (typeof mouseEvent[prop] !== 'undefined') {
+      newEvent[prop] = (mouseEvent[prop] - this.yOffset_) / this.yScale_;
     }
   }, this);
+
+  // Add values that can be missing when touch is used.
+  if (mouseEvent.x === undefined) {
+    newEvent.x = (mouseEvent.pageX - this.xOffset_) / this.xScale_;
+  }
+  if (mouseEvent.y === undefined) {
+    newEvent.y = (mouseEvent.pageY - this.yOffset_) / this.yScale_;
+  }
+
   // Set movementX and movementY, computing it from clientX and clientY if necessary.
   // The element must have an element id for this to work.
   if (
-    typeof event.movementX !== 'undefined' &&
-    typeof event.movementY !== 'undefined'
+    typeof mouseEvent.movementX !== 'undefined' &&
+    typeof mouseEvent.movementY !== 'undefined'
   ) {
     // The browser supports movementX and movementY natively.
-    newEvent.movementX = event.movementX;
-    newEvent.movementY = event.movementY;
-  } else if (event.type === 'mousemove') {
+    newEvent.movementX = mouseEvent.movementX;
+    newEvent.movementY = mouseEvent.movementY;
+  } else if (newEvent.type === 'mousemove') {
     var currentTargetId = event.currentTarget && event.currentTarget.id;
     var lastEvent = this.lastMouseMoveEventMap_[currentTargetId];
     if (currentTargetId && lastEvent) {
       // Compute movementX and movementY from clientX and clientY.
-      newEvent.movementX = event.clientX - lastEvent.clientX;
-      newEvent.movementY = event.clientY - lastEvent.clientY;
+      newEvent.movementX = mouseEvent.clientX - lastEvent.clientX;
+      newEvent.movementY = mouseEvent.clientY - lastEvent.clientY;
     } else {
       // There has been no mousemove event on this element since the most recent
       // mouseout event, or this element does not have an element id.
@@ -155,7 +160,7 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
       newEvent.movementY = 0;
     }
     if (currentTargetId) {
-      this.lastMouseMoveEventMap_[currentTargetId] = event;
+      this.lastMouseMoveEventMap_[currentTargetId] = mouseEvent;
     }
   }
   // Replace DOM elements with IDs and then add them to applabEvent:
