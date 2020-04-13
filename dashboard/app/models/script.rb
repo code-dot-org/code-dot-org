@@ -901,13 +901,13 @@ class Script < ActiveRecord::Base
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_script(options, raw_lessons, new_suffix: nil, editor_experiment: nil)
-    raw_script_levels = raw_lessons.map {|stage| stage[:scriptlevels]}.flatten
+    raw_script_levels = raw_lessons.map {|lesson| lesson[:scriptlevels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
     chapter = 0
-    stage_position = 0; script_level_position = Hash.new(0)
+    lesson_position = 0; script_level_position = Hash.new(0)
     script_lessons = []
-    script_levels_by_stage = {}
+    script_levels_by_lesson = {}
     levels_by_key = script.levels.index_by(&:key)
     lockable_count = 0
     non_lockable_count = 0
@@ -919,8 +919,8 @@ class Script < ActiveRecord::Base
       assessment = nil
       named_level = nil
       bonus = nil
-      stage_flex_category = nil
-      stage_lockable = nil
+      flex_category = nil
+      lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
         raw_level.symbolize_keys!
@@ -934,8 +934,8 @@ class Script < ActiveRecord::Base
         assessment = raw_level.delete(:assessment)
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
-        stage_flex_category = raw_level.delete(:stage_flex_category)
-        stage_lockable = !!raw_level.delete(:stage_lockable)
+        flex_category = raw_level.delete(:stage_flex_category)
+        lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
 
@@ -973,7 +973,7 @@ class Script < ActiveRecord::Base
         level
       end
 
-      stage_name = raw_script_level.delete(:stage)
+      lesson_name = raw_script_level.delete(:stage)
       properties = raw_script_level.delete(:properties) || {}
 
       if new_suffix && properties[:variants]
@@ -996,34 +996,34 @@ class Script < ActiveRecord::Base
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
-      # Set/create Stage containing custom ScriptLevel
-      if stage_name
-        stage = script.lessons.detect {|s| s.name == stage_name} ||
+      # Set/create Lesson containing custom ScriptLevel
+      if lesson_name
+        lesson = script.lessons.detect {|s| s.name == lesson_name} ||
           Lesson.find_or_create_by(
-            name: stage_name,
+            name: lesson_name,
             script: script,
           ) do |s|
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
-        stage.save! if stage.changed?
+        lesson.assign_attributes(flex_category: flex_category, lockable: lockable)
+        lesson.save! if lesson.changed?
 
-        script_level_attributes[:stage_id] = stage.id
-        script_level_attributes[:position] = (script_level_position[stage.id] += 1)
+        script_level_attributes[:stage_id] = lesson.id
+        script_level_attributes[:position] = (script_level_position[lesson.id] += 1)
         script_level.reload
         script_level.assign_attributes(script_level_attributes)
         script_level.save! if script_level.changed?
-        (script_levels_by_stage[stage.id] ||= []) << script_level
-        unless script_lessons.include?(stage)
-          if stage_lockable
-            stage.assign_attributes(relative_position: (lockable_count += 1))
+        (script_levels_by_lesson[lesson.id] ||= []) << script_level
+        unless script_lessons.include?(lesson)
+          if lockable
+            lesson.assign_attributes(relative_position: (lockable_count += 1))
           else
-            stage.assign_attributes(relative_position: (non_lockable_count += 1))
+            lesson.assign_attributes(relative_position: (non_lockable_count += 1))
           end
-          stage.assign_attributes(absolute_position: (stage_position += 1))
-          stage.save! if stage.changed?
-          script_lessons << stage
+          lesson.assign_attributes(absolute_position: (lesson_position += 1))
+          lesson.save! if lesson.changed?
+          script_lessons << lesson
         end
       end
       script_level.assign_attributes(script_level_attributes)
@@ -1031,31 +1031,31 @@ class Script < ActiveRecord::Base
       script_level
     end
 
-    script_lessons.each do |stage|
+    script_lessons.each do |lesson|
       # make sure we have an up to date view
-      stage.reload
-      stage.script_levels = script_levels_by_stage[stage.id]
+      lesson.reload
+      lesson.script_levels = script_levels_by_lesson[lesson.id]
 
-      # Go through all the script levels for this stage, except the last one,
+      # Go through all the script levels for this lesson, except the last one,
       # and raise an exception if any of them are a multi-page assessment.
       # (That's when the script level is marked assessment, and the level itself
       # has a pages property and more than one page in that array.)
-      # This is because only the final level in a stage can be a multi-page
+      # This is because only the final level in a lesson can be a multi-page
       # assessment.
-      stage.script_levels.each do |script_level|
+      lesson.script_levels.each do |script_level|
         if !script_level.end_of_stage? && script_level.long_assessment?
-          raise "Only the final level in a stage may be a multi-page assessment.  Script: #{script.name}"
+          raise "Only the final level in a lesson may be a multi-page assessment.  Script: #{script.name}"
         end
       end
 
-      if stage.lockable && !stage.script_levels.last.assessment?
+      if lesson.lockable && !lesson.script_levels.last.assessment?
         raise 'Expect lockable lessons to have an assessment as their last level'
       end
 
-      raw_stage = raw_lessons.find {|rs| rs[:stage].downcase == stage.name.downcase}
-      stage.stage_extras_disabled = raw_stage[:stage_extras_disabled]
-      stage.visible_after = raw_stage[:visible_after]
-      stage.save! if stage.changed?
+      raw_lesson = raw_lessons.find {|rs| rs[:stage].downcase == lesson.name.downcase}
+      lesson.stage_extras_disabled = raw_lesson[:stage_extras_disabled]
+      lesson.visible_after = raw_lesson[:visible_after]
+      lesson.save! if lesson.changed?
     end
 
     script.lessons = script_lessons
