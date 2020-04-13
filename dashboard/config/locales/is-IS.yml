@@ -527,6 +527,8 @@ is:
     update: Uppfæra aðgang
     account_successfully_updated: Uppfærsla aðgangs tókst.
     update_email: Uppfæra
+    parent_guardian_email_label: Netfang foreldris/forráðamanns
+    none: Ekkert
     encrypted: dulkóðað
   user_level:
     completed: Lokið
