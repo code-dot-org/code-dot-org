@@ -37,8 +37,9 @@
     %h1= title
   - long_instructions = level.get_property("long_instructions")
   - if long_instructions
+    %div.serverside-render= render(inline: long_instructions, type: :md)
     / Markdown will be rendered clientside by _free_response.js
-    .markdown-container{data: {markdown: long_instructions}}
+    .markdown-container{data: {markdown: long_instructions}, style: 'display: none'}
 
   - if level.allow_user_uploads?
     %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
