@@ -295,6 +295,7 @@ mi:
       mukua ina mukua tō ake pūkete.'
     delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
     update_email: Whakahou
+    none: Kore
   user_level:
     completed: Kua oti
     tried: Kua ngana
