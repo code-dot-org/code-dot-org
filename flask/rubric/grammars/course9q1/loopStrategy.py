@@ -171,14 +171,14 @@ class LoopStrategy(Decision):
                 dropNectar = eval(self.getChoice('loop_forwardBodyDropNectar'))
 
                 if dropMove and dropNectar:
-                    loopContent.append(build_repeat(loopNum, ''))
+                    pass
                 elif dropMove:
-                    loopContent.append(build_repeat(loopNum, build_nectar()))
+                    loopContent.append(build_nectar())
                 elif dropNectar:
-                    loopContent.append(build_repeat(loopNum, build_move()))
+                    loopContent.append(build_move())
                 else:
-                    loopInternal = collapse_commands([build_move(), build_nectar()])
-                    loopContent.append(build_repeat(loopNum, loopInternal))
+                    loopContent.append(build_move())
+                    loopContent.append(build_nectar())
 
                 # possibility of trailing random commands inside loop
                 randomCode = self.getChoice('loop_randomCodeInLoop')
@@ -288,4 +288,4 @@ class LoopStrategy(Decision):
         else:
             raise Exception(f'Loop strategy {loopStrategy} not supported.')
 
-        return '\n'.join(code)
+        return collapse_commands(code)

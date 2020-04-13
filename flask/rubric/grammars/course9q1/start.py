@@ -7,8 +7,9 @@ class Start(Decision):
     generate a single sample.
     """
     def render(self):
-        code = 'Program [ when_run [ {codeInject} ] ]'
-        codeInject = self.expand('Root')
-        code = code.format(codeInject=codeInject)
+        # code = 'Program [ when_run [ {codeInject} ] ]'
+        # codeInject = self.expand('Root')
+        # code = code.format(codeInject=codeInject)
+        code = self.expand('Root')
 
         return code

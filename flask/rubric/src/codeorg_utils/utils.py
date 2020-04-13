@@ -1,6 +1,6 @@
 def build_repeat(n, codeInject):
     if len(codeInject) == 0:
-        return 'Repeat({n}) []'.format(n=n)
+        return 'Repeat({n}) [ ]'.format(n=n)
     else:
         return 'Repeat({n}) [ {codeInject} ]'.format(n=n, codeInject=codeInject)
     # if len(codeInject) == 0:
@@ -37,4 +37,4 @@ def build_nectar():
 
 
 def collapse_commands(cmd_list):
-    return '\n'.join(cmd_list)
+    return ' '.join(cmd_list)

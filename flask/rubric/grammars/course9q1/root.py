@@ -82,16 +82,25 @@ class Root(Decision):
         return code
 
 
-def dropLines(code, prob=0.5):
-    return code
+def toCodeTree(code):
+    """
+    It is not easy to dropout lines or blocks when
+    the code is in raw strings. Let us instead encode
+    them as a list of tokens with depths.
+    """
 
 
-def dropBlock(code, prob=0.5):
-    return code
+
+def dropLines(codeTree, prob=0.5):
+    return codeTree
 
 
-def swapMoveNectar(code, prob=0.5):
-    return code
+def dropBlock(codeTree, prob=0.5):
+    return codeTree
+
+
+def swapMoveNectar(codeTree, prob=0.5):
+    return codeTree
 
 
 def flipCoin(prob):

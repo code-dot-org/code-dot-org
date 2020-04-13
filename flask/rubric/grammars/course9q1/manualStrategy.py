@@ -3,6 +3,7 @@ from src.codeorg_utils.utils import (
     build_move,
     build_nectar,
     build_repeat,
+    collapse_commands,
 )
 
 
@@ -84,8 +85,5 @@ class ManualStrategy(Decision):
             extra_code.append(build_repeat(1, ''))
 
         code = code + extra_code
-        code = '\n'.join(code)
 
-        print(code)
-
-        return code
+        return collapse_commands(code)
