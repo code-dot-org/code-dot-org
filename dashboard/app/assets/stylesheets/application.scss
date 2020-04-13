@@ -1775,6 +1775,9 @@ a.download-video {
         padding: 0 10px;
         font-size: 14px;
       }
+      .field_with_errors {
+        flex-basis: auto;
+      }
     }
 
     #email-preference-radio {
@@ -1830,6 +1833,10 @@ a.download-video {
         font-size: 14px;
         margin: 0;
       }
+    }
+
+    #gdpr-section {
+      flex-wrap: wrap;
     }
   }
 }
