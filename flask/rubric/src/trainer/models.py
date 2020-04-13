@@ -16,7 +16,9 @@ class FeedbackNN(nn.Module):
             rep_size = 128,
             embedding_dim = 300,
             hidden_dim = 256,
+            bidirectional = True,
             num_layers = 2,
+            num_highways = 2,
         ):
         super().__init__()
 
@@ -25,7 +27,9 @@ class FeedbackNN(nn.Module):
             out_dim = rep_size,
             embedding_dim = embedding_dim, 
             hidden_dim = hidden_dim, 
+            bidirectional = bidirectional,
             num_layers = num_layers,
+            num_highways = num_highways,
         )
         self.decoder = LabelPredictor(
             rep_size,
@@ -47,55 +51,64 @@ class FeedbackNN(nn.Module):
 class BlockyEncoder(nn.Module):
 
     def __init__(
-            self, 
-            vocab_size, 
-            embedding_dim = 300, 
-            hidden_dim = 256, 
+            self,
+            vocab_size,
+            embedding_dim = 300,
+            hidden_dim = 256,
+            bidirectional = True,
             num_layers = 2,
+            num_highways = 2,
         ):
         super(BlockyEncoder, self).__init__()
 
+        self.highway = Highway(embedding_dim, num_highways)
+
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
-        self.gru = nn.GRU(
+        self.gru = nn.LSTM(
             embedding_dim, 
             hidden_dim, 
             num_layers = num_layers, 
+            bidirectional = bidirectional,
             batch_first = True,
         )
-        self.linear_out = nn.Linear(hidden_dim * num_layers, hidden_dim)
+        layer_dim = num_layers * (2 if bidirectional else 1) * hidden_dim
+        self.linear_out = nn.Linear(layer_dim * 2, hidden_dim)
 
         self.embedding_dim = self.embedding.embedding_dim
         self.z_dim = z_dim
         self.hidden_dim = hidden_dim
         self.num_layers = num_layers
+        self.layer_dim = layer_dim
+
+    def ziphidden(self, hidden, cell):
+        batch_size = hidden.size(1)
+        # hidden : n_layers x batch_size x hid_dim
+        # cell   : n_layers x batch_size x hid_dim
+        # h      : n_layers x batch_size x hid_dim * 2
+        h = torch.cat((hidden, cell), dim=2)
+        h = torch.transpose(h, 0, 1).contiguous()
+        # h      : batch_size x n_layers * hid_dim * 2
+        h = h.view(batch_size, -1)
+        return h
 
     def forward(self, seq, length):
         # seq : batch_size x max_sent_len
         batch_size = seq.size(0)
 
-        if batch_size > 1:
-            # sort in decreasing order of length in order to pack
-            # sequence; if only 1 element in batch, nothing to do.
-            sorted_lengths, sorted_idx = torch.sort(length, descending=True)
-            seq = seq[sorted_idx]
-
         # embed_seq : batch_size x max_sent_len x embedding_dim
         embed_seq = self.embedding(seq)
+        embed_seq = self.highway(embed_seq)
 
         packed = rnn_utils.pack_padded_sequence(
             embed_seq,
-            sorted_lengths.data.tolist() if batch_size > 1 else length.data.tolist(),
+            length.data.tolist(),
             batch_first = True,
+            enforce_sorted = False,
         )
 
         # hidden : num_layers x batch_size x hidden_dim
-        _, hidden = self.gru(packed)
-        hidden = hidden.permute(1, 0, 2).contiguous()
-        hidden = hidden.view(batch_size, self.hidden_dim * self.num_layers)
-
-        if batch_size > 1:
-            _, reversed_idx = torch.sort(sorted_idx)
-            hidden = hidden[reversed_idx]
+        _, hidden_lstm = self.gru(packed)
+        hidden = self.ziphidden(*hidden_lstm)
 
         return self.linear_out(hidden)
 
@@ -121,3 +134,26 @@ class LabelPredictor(nn.Module):
     def forward(self, input):
         # we assume binary labels
         return torch.sigmoid(self.predictor(input))
+
+
+class Highway(nn.Module):
+
+    def __init__(self, emb_dim, n_highway):
+        super(Highway, self).__init__()
+        self.non_linear = nn.ModuleList([nn.Linear(emb_dim, emb_dim) for _ in range(n_highway)])
+        self.linear = nn.ModuleList([nn.Linear(emb_dim, emb_dim) for _ in range(n_highway)])
+        self.gate = nn.ModuleList([nn.Linear(emb_dim, emb_dim) for _ in range(n_highway)])
+        self.n_highway = n_highway
+
+    def forward(self, x):
+        for layer in range(self.n_highway):
+            # Compute percentage of non linear information to be allowed for each element in x
+            gate = torch.sigmoid(self.gate[layer](x))
+            # Compute non linear information
+            non_linear = F.relu(self.non_linear[layer](x))
+            # Compute linear information
+            linear = self.linear[layer](x)
+            #Combine non linear and linear information according to gate
+            x = gate*non_linear + (1-gate)*linear
+
+        return x
