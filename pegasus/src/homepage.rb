@@ -117,8 +117,8 @@ class Homepage
     elsif code_break_takeover
       youtube_id = "27ln76y27IQ"
       download_path = ""
-      facebook = ""
-      twitter = ""
+      facebook = "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/Code.org/posts/2799748100121475"
+      twitter = "Studying home alone? Take a #CodeBreak with me to learn computer science! Tune in Wednesday at 10:00am PT / 1:00pm ET. code.org/break"
     else
       youtube_id = "nKIu9yen5nc"
       download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
