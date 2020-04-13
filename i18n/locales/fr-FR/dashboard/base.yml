@@ -464,6 +464,8 @@ fr:
     auth_option_saved: "Vous avez réussi à lier votre %{provider} compte avec l'adresse électronique %{email}."
     auth_option_saved_no_email: "Vous avez réussi à lier votre %{provider} compte."
     update_email: "Mise à jour"
+    parent_guardian_email_label: "E-mail du parent/tuteur"
+    none: "Aucun"
     encrypted: "chiffré"
   user_level:
     completed: 'Terminé'
