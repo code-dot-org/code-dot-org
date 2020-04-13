@@ -63,7 +63,9 @@ $(document).ready(() => {
       .contents;
     // normalize the HTML, to prevent false positives
     const serverside = htmlNormalize.processSync(
-      $('.free-response > .serverside-render').html()
+      $(container)
+        .siblings('.serverside-render')
+        .html()
     ).contents;
 
     // ignore whitespace, again to prevent false positives
