@@ -5,7 +5,11 @@ $(document).ready(() => {
   const dismissButton = document.getElementById('not_now');
   const banner = document.getElementById('at-home-banner');
   new AddParentEmailController({
-    form: $('#add-parent-email-modal-form'),
+    form: $('#parent-email-banner-modal-form'),
+    formParentEmailField: $('#parent-email-banner-modal_user_parent_email'),
+    formParentOptInField: $(
+      '#parent-email-banner-modal_user_parent_email_preference_opt_in'
+    ),
     link: $('#link_your_email'),
     onSuccessCallback: () => {
       banner.style.display = 'none';
