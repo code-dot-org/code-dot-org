@@ -105,7 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
-    code_break_takeover = DCDO.get("promote_code_break", nil)
+    code_break_takeover = DCDO.get("promote_code_break", nil) && request.language == "en"
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -127,7 +127,7 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if code_break_takeover && request.language == "en"
+    if code_break_takeover
       [
         {
           type: "code_break_learn_more"
