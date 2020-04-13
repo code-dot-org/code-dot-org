@@ -101,15 +101,10 @@
             = ff.hidden_field :country
             = ff.hidden_field :full_address
 
-    .row
-      .span10.tos
-        = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
-        = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
-
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
       .row
-        .span6
+        .span12#gdpr-section
           = f.hidden_field :data_transfer_agreement_required, value: "1"
           .checkbox
             = f.label :data_transfer_agreement_accepted do
@@ -117,9 +112,8 @@
               %span
                 = t('signup_form.agree_us_website')
                 = t('signup_form.my_data_to_us')
-        .span2
           - if @user.errors[:data_transfer_agreement_accepted].present?
-            %span.error= t('signup_form.accept_terms')
+            %p.error= t('signup_form.accept_terms')
 
     .row#email-preference-radio{style: "display: none;"}
       .span10.signup-field-label
@@ -135,6 +129,11 @@
         .radio
           = f.radio_button :email_preference_opt_in, 'no'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
+
+    .row
+      .span10.tos
+        = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
+        = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
     %button.submit= t('signup_form.go_to_account')
 

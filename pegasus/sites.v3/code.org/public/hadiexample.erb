@@ -1,5 +1,7 @@
 <input type="file" id="input" >
+<p id = "urlpreview"></p>
 
+<img id = "thumbnail" src="" width = 100 height = 100>
 <div id="previewdiv" ></div>
 <script>
 
@@ -9,6 +11,7 @@ function showimage() {
     
     if (file.type.startsWith('image/')){ 
     
+      // Approach #1: the code below adds the image using the file object itself
       const img = document.createElement("img");
       img.classList.add("obj");
       img.file = file;
@@ -19,6 +22,11 @@ function showimage() {
       reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
       reader.readAsDataURL(file);
  
+      // Approach #2: the code below adds the image using the blob URL to the file object
+      const objectURL = window.URL.createObjectURL(file);
+      document.getElementById('urlpreview').innerHTML = objectURL;
+      document.getElementById('thumbnail').src = objectURL;
+
     }
 }
 

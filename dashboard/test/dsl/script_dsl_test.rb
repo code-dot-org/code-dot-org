@@ -605,20 +605,27 @@ level 'Level 3'
     assert_equal expected, script_text
   end
 
-  test 'Script DSL for stage with lesson group' do
+  test 'Script DSL for lesson with lesson group' do
     input_dsl = <<~DSL
-      stage 'Stage1', lesson_group: 'Lesson Group 1'
+      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      stage 'Lesson1'
       level 'Level 1'
       level 'Level 2'
     DSL
     expected = DEFAULT_PROPS.merge(
       {
+        lesson_groups: [
+          {
+            key: "lg-1",
+            display_name: "Lesson Group 1"
+          }
+        ],
         stages: [
           {
             stage: "Stage1",
             scriptlevels: [
-              {stage: "Stage1", levels: [{name: "Level 1", lesson_group: "Lesson Group 1"}]},
-              {stage: "Stage1", levels: [{name: "Level 2", lesson_group: "Lesson Group 1"}]},
+              {stage: "Lesson1", levels: [{name: "Level 1", lesson_group: "lg-1"}]},
+              {stage: "Lesson1", levels: [{name: "Level 2", lesson_group: "lg-1"}]},
             ]
           }
         ]
@@ -629,16 +636,18 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'serialize lesson_group for stage' do
+  test 'serialize lesson_group for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, name: 'Test Lesson Group', script: script
-    stage = create :stage, name: 'stage 1', script: script, lesson_group: lesson_group
-    script_level = create :script_level, levels: [level], stage: stage, script: script
+    lesson_group = create :lesson_group, key: 'lg-1', script: script
+    lesson = create :stage, name: 'lesson 1', script: script, lesson_group: lesson_group
+    script_level = create :script_level, levels: [level], stage: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      stage 'stage 1', lesson_group: 'Test Lesson Group'
+      lesson_group 'lg-1', display_name: 'lg-1'
+      stage 'lesson 1'
       level 'maze 1'
+
     SCRIPT
     assert_equal expected, script_text
   end
