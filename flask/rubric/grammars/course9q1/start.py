@@ -30,6 +30,20 @@ class Start(Decision):
         else:
             codeInject = self.expand('Solution')
 
+        '''
+        ======================
+        Post-processing steps:
+        ======================
+
+        1) drop random lines
+          a) drop single line OR
+          b) drop all lines after point
+
+        2) Swap Move/getNectar statements
+
+        3) Glue programs together!
+        '''
+
         code = code.format(codeInject=codeInject)
 
         return code

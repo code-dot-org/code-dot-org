@@ -18,7 +18,7 @@ class Solution(Decision):
         strategy = self.expand('Strategy')
 
         if bool(self.getChoice('uselessLoop')):
-            code = build_repeat(1, strategy)
+            code = [build_repeat(1, strategy)]
         else:
             code = strategy
 

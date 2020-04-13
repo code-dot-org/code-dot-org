@@ -28,3 +28,7 @@ def build_move(forward=True):
 
 def build_nectar():
     return 'maze_nectar'
+
+
+def collapse_commands(cmd_list):
+    return '\n'.join(cmd_list)
