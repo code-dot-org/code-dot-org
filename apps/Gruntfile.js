@@ -281,12 +281,6 @@ describe('entry tests', () => {
         },
         {
           expand: true,
-          cwd: 'lib/marked',
-          src: ['marked*.js'],
-          dest: 'build/minifiable-lib/marked/'
-        },
-        {
-          expand: true,
           cwd: 'lib/phaser',
           src: ['*.js'],
           dest: 'build/minifiable-lib/phaser/'
