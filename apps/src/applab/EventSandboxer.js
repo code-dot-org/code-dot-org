@@ -98,6 +98,28 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
       newEvent[prop] = event[prop];
     }
   });
+
+  // map touch events to mouse events
+  if (event.type && event.type.substring(0, 5) === 'touch') {
+    switch (event.type) {
+      case 'touchmove':
+        newEvent.type = 'mousemove';
+        break;
+      case 'touchstart':
+        newEvent.type = 'mousedown';
+        break;
+      case 'touchend':
+        newEvent.type = 'mouseup';
+        break;
+    }
+    event.clientX = event.changedTouches[0].clientX;
+    event.clientY = event.changedTouches[0].clientY;
+    event.pageX = event.changedTouches[0].pageX;
+    event.pageY = event.changedTouches[0].pageY;
+    event.x = event.changedTouches[0].clientX;
+    event.y = event.changedTouches[0].clientY;
+  }
+
   // Convert x coordinates and then pass through to applabEvent:
   ['clientX', 'pageX', 'x'].forEach(function(prop) {
     if (typeof event[prop] !== 'undefined') {
