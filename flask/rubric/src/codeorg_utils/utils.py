@@ -38,3 +38,19 @@ def build_nectar():
 
 def collapse_commands(cmd_list):
     return ' '.join(cmd_list)
+
+
+def isMove(token):
+    if token == 'moveForward()':
+        return True
+    elif token == 'moveBackward()':
+        return True
+    return False
+
+
+def isNectar(token):
+    return token == 'getNectar()'
+
+
+def isRepeat(token):
+    return 'Repeat' in token

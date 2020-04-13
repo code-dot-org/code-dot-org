@@ -148,4 +148,44 @@ class Decision:
         if not self.hasState(key):
             self.setState(key, 0)
         self.setState(className + '_count', self._getCount() + 1)
-    
+
+
+class ReusableDecision(Decision):
+
+    def __init__(self, engine):
+        super(ReusableDecision, self).__init__(engine)
+       
+    def addChoice(self, choice_name, values, is_prefix=False):
+        """
+         Primarily just uses super classes implementation. Key difference is that
+         it ensures choice_name is in the declared set of validIds for this class.
+        """
+
+        if choice_name not in self.validIds:
+            # check if a prefix of this choice_name is a validId.
+            # This is super not robust to catching errors but we need it for multiple
+            # RV choices in a reusable class. See Diameter
+            is_prefix_valid = is_prefix and any(choice_name.startswith(valId) for valId in self.validIds)
+            if not is_prefix_valid:
+                raise ValueError(f'Choice name {choice_name} not in validIds of reusable decision. Valid ids=[{self.validIds}]')
+
+        super(ReusableDecision, self).addChoice(choice_name, values)
+
+    def registerValidIds(self, validIds):
+        '''
+        Sets the validIds for this reusable decisions. The engine should
+        first get all preregestered ids from all classes and then set the
+        validIds relevant to this class. 
+        
+        This will be a set of ids (strings) that can be used as a param
+        to append to the name of this reusable component.
+        '''
+        self.validIds = validIds
+        if not isinstance(self.validIds, (set, list)) or len(self.validIds) < 1:
+            raise ValueError('Must set self.validIds to be a set/list containing at least one valid id.')        
+  
+    def _getValidIds(self):
+        return self.validIds
+
+    def getKey(self):
+        return self.params['id']
