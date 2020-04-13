@@ -886,10 +886,11 @@ sk-SK:
 
         Urob svoj obrázok ešte zaujímavejším - zmeň viacero nastavení pre postavy alebo doň pridaj tých postáv ešte viac!
       Course 4 Artist Binary 1: |-
-        Tu máme funkciu, ktorá vezme reťazec binárnych 1 a 0 a spracováva ich z ľava do prava, z hore dolu.
-        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol .
 
-        \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        \*\* Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       Course 4 Artist For Loops 1: Použite blok s opakovaním pre nakreslenie tohto
         trojuholníka, ktorý je 50 pixelov široký.
       Course 4 Artist For Loops 6a: Sprav tri malé zmeny v kóde z predošlého levelu,
@@ -1045,6 +1046,29 @@ sk-SK:
         myslíš, že sa stane, keď na neho klikneš?  "
       Dance Party Predict_2019: "**Skús predvídať:** Tu je postava, ktorá vyzerá ako
         modrý mimozemšťan!   \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance_2019_01: |-
+        Prenes blok <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> na pracovnú plochu a spoj ho vo vnútri bloku <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
+
+        Vyber si `mačku` alebo `leňochoda` na vytvorenie prvého tanečníka.
+
+        -   _Ak potrebuješ viac informácií alebo extra výzvy, môžeš klinúť na žiarovku naľavo._
+      Dance_2019_02: "Blok <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> spustí kód pri stlačení tlačidiel so šípkami.
+        \nPouži blok <xml><block type=\"Dancelab_doMoveEachLR\" block-text=\"do once\"><title
+        name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml>, aby mačka zatlieskala!\n\n_Uisti sa,
+        že stlačíš tlačidlo \"šípka hore\" alebo ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>), potom čo klikneš na tlačidlo Spustiť!_"
+      Dance_2019_03: Je čas na tanečný rozstrel! Naprogramuj každého tanečníka tak,
+        aby sa pohyboval po stlačení rôznych klávesov. Vyber si svoj obľúbený pohyb
+        pre každého tanečníka alebo ho nastav na "(Náhodné)“ pre niečo úplne nepredvídateľné!
+      Dance_2019_04: "Nechaj tanečníkov pohybovať sa v rytme hudby!\n\nPripoj blok
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> k bloku <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml>  z panela nástrojov. \n\nTvoj tanečník
+        by mal začať robiť nový pohyb po štvrtom takte.\n\n**Takty** sa používajú
+        na meranie času v hudbe. V tomto návode, sa jeden takt rovná štyrom úderom."
       Dance_2019_05: "_Teraz sme to roztočili!_ \n\nPridaj blok <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>
         na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
@@ -1361,6 +1385,31 @@ sk-SK:
         ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
         dostal ku ovci.
+      Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a
+        dĺžkou strán 150 pixelov.
+      Standalone_Artist_3: Dokážeš nakresliť tento šesťuholník so stranami 100 pixelov
+        a s otočeniami o 60 stupňov?
+      Standalone_Artist_4: Teraz sa môžeš hrať s novým blokom, cyklom. Pomôže ti zopakovať
+        sériu príkazov. Čo sa stane ak tieto príkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Koľko krát potrebuješ diamant zopakovať aby ti vznikla
+        kvetina?
+      Standalone_Artist_5.5: 'Všimni si, ako sa kód pre diamant použitím cyklu zjednodušil?
+        Ak celú radu zopakuješ 12 krát, vznikne ti kvetina. Nápoveda: Po slučke s
+        diamantom sa budeš musieť otočiť o 30 stupňov, aby si nekreslil/a stále po
+        tom istom.'
+      Standalone_Artist_6: 'Zopakuj kód pre šesťuholník 6 krát a vytvoríš kresbu.
+        Pod akým uhlom sa vždy otáčaš? Nápoveda: vydelte počet stupňov v kruhu počtom
+        opakovaní.'
+      Standalone_Artist_7: 'Funkcia je len ďalším nástrojom ako sa neopakovať. Táto
+        funkcia nakreslí kvetinu, takže ju môžeš použiť kedykoľvek, keď chceš nakresliť
+        kvetinu. Použi ju v kombinácii s novým blokom skoč a nakresli tieto kvetiny.
+        Nápoveda: Kvetiny sú od seba vzdialené 150 pixelov'
+      Standalone_Artist_8: Táto funkcia sa volá "Nakresli tvar" a naprogramovali sme
+        ju aby sme kreslili šesťuholník. Spusti kód nech vidíš čo vie a pohraj sa
+        s ňou aby si zistil/a viac. Vedel/a by si ju použiť tak, aby nakreslila rad
+        štvorcov, trojuholníkov alebo osemuholníkov?
+      Standalone_Artist_9: A teraz smelo do toho a nakresli obrázok aký len chceš!
+        Dokonca máš jednú nevyužitú funkciu, ktorá spraví čokoľvek si zmyslíš!
       Virtual Pet 1: |-
         Toto je žirafa Geraldine, tvoje nové domáce zvieratko .
 
@@ -1389,21 +1438,87 @@ sk-SK:
                 </block>
               </value>
             </block></xml>
+      Virtual Pet 3_2019: "Vytvor udalosti, vďaka ktorým sa bude tvoje zvieratko pohybovať
+        podľa príkazov!\n\nZačni s použitím <xml><block type=\"gamelab_keyPressed\"
+        block-text=\"the while up key pressed event block\"><title name=\"CONDITION\">\"while\"</title><title
+        name=\"KEY\">\"up\"</title></block></xml> spolu s <xml><block type=\"gamelab_moveInDirection\"
+        block-text=\"the move in direction action block\"><title name=\"DIRECTION\">\"North\"</title></block></xml>,
+        na to aby sa tvoje zbieratko hýbalo na sever **pokiaľ** je stlačená šípka
+        hore. \n\nZopakuj tento postup aj pre ďalšie tri smery (juh, západ, východ)
+        a tlačidlá šípok (dole, vľavo, vpravo)!"
       Virtual Pet 4: |-
         Nechceme čakať, aby sa žirafa vždy sama vyčistila.
 
         Pridaj správanie k tvojmu mydlu, aby bolo pretiahnuteľné, a potom ho pretiahni ponad žirafu, aby si ju vyčistil!
+      Virtual Pet 4_2019: "Vytvor dáke potulné jedlo!\n\n1.  Pridaj **dve** postavy.
+        \n2.  Jedna postava bude vyzerať ako jedlo, ktoré tvoje zvieratko **má rado**
+        \ a druhá ako niečo čo **nemá rado**.\n3.  Vytvor pre každú postavu jedla
+        správanie **potulovať sa** hneď ako sa objaví. "
       Virtual Pet 5: "Všetko toto hranie berie energiu!\n\nPridaj takú akciu ku každej
         udalosti, keď sa žirafa dotkne iného sprite, že sa žirafa zmenší o 5.  "
+      Virtual Pet 5_2019: |-
+        Pre **simuláciu** "jedenia" vo virtuálnom svete použi blok <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> s blokom <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml>!
+
+        1.  Vytvor udalosť, ktorá umožní tvojim postavám jedla skočiť kdekoľvek po tom, čo sa ich dotkne zvieratko..
+        2.  Zopakuj postup aj pre ďalšiu postavu jedla.
       Virtual Pet 6: "Vyrovnaná výživa je dôležitá! Musíme nakŕmiť žirafu, aby naspäť
         získala silu.\n\nPridaj na scénu jablko a nechaj ho vrátiť žirafu do pôvodnej
         veľkosti, keď sa dotknú.  "
+      Virtual Pet 6_2019: "Na to, aby jedenie jedla ovplyvnilo energiu tvojho zvieratka,
+        použi blok <xml><block type=\"variables_set\" block-text=\"the set variable
+        block\"><title name=\"VAR\">energy</title></block></xml> spolu s blokom <xml><block
+        type=\"math_change\" block-text=\"the change variable block\"><title name=\"VAR\">energy</title></block></xml>!
+        Čím viac bude mať energie, tým rýchlejšie sa bude pohybovať! \n\n1.  Na začiatku
+        programu nastav premennú `energia` na 5.\n2.  Ak zvieratko zje jedlo, ktoré
+        **má rado**, pridaj do `energie` 1.\n3.  Ak zvieratko zje jedlo, ktoré **nemá
+        rado**, nastav `energiu` späť na 5.\n4.  Zmeň udalosť pre každé tlačítko šípky
+        tak, aby zvieratko namiesto špecifických čísiel menilo `energiu` v pixeloch."
+      Virtual Pet 7_2019: "Skontrolovať hodnotu `energie` tvojho zvieratka môžeš cez
+        blok <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>.
+        Je to nový blok, ktorý sa nachádza v kategórii `World` ! \n\nVytvor udalosť,
+        ktorá pri kliknutí na postavu zvieratka umožní vytlačiť hodnotu `energie`. "
+      Virtual Pet 8_2019: "**Voľná hra:** Tvoje virtuálne zvieratko je _VIRTUÁLNE
+        ÚŽASNÉ!_ \n\nČo by si ešte mohol vymyslieť? Vyskúšaj tieto nápady:\n\n-   Zmeň
+        farbu pozadia alebo pridaj obrázok.\n-   Skús viac tlačiť. Napríklad vytlač
+        _\"Yum! Energia zvýšená!\"_ keď zvieratko zje niečo čo má rado, alebo _\"Fuj!
+        Energia zrušená!\"_ keď zje niečo čo nemá rado.\n-   Pridaj ďalšiu postavu,
+        ktorá bude s tvojím zvieratkom reagovať inak. Čo napríklad postava **hračka**?\n-
+        \  Pridaj ďalšiu premennú, ktorá ovplyvní zvieratko alebo priestor. Čo by
+        mohlo vytvoriť `šťastie` alebo `vek`?\n-   Skúšaj rôzne správania! Skús upraviť
+        správanie **potulovať sa** na pomalšie alebo naopak zrýchli postavy jedla
+        (tip: ich \"rýchlosť\" je momentálne 5...)."
       Virtual Pet Freeplay: "Voľná hra: Čo viac dokážeš spraviť so svojou žirafou?\n\n-
         \  Dokážeš pridať viac špeciálnych vecí pre tvôjho virtuálneho miláčika?\n-
         \  Dokážěs jej dať nejakých priateľov?  "
       'Widget: Text Compression': V texte hľadajte vzory (opakované slová alebo frázy).
         Zadajte vzory, ktoré vidíte, do slovníka vpravo. Pri zadávaní položiek do
         slovníka, symbol pre položku sa vloží do textu namiesto vzoru.
+      behaviors 1: |-
+        Odhadni, čo sa bude diať! Naštuduj si kód.
+
+        -   Postava sa bude točiť.
+        -   Postava sa zmenší.
+        -   Postava sa pohne.
+        -   Postava zmení farby.
+      behaviors 2: |-
+        Leť s raketou ku hviezdam!
+
+        -   Uprav správanie rakety tak, aby v zobrazenej ploche letela nahor.
+      behaviors 3: |-
+        Pomôž roveru predbehnúť robota!
+
+        -   Uprav správanie roveru tak, aby bol rýchlejší ako robot.
+      behaviors 3a: |-
+        Uprav správanie `točiť sa vpravo`.  Namiesto bloku pre kostými použi blok <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml>. V takom prípade bude fungovať pre všetky postavy bez ohľadu na ich kostými.
+
+        **Odstráň chybu:** Nechaj sa všetky hviezdy točiť tým istým smerom!
+      behaviors 4: Odhadni, čo sa bude diať! Ktorou cestou sa satelit vyberie k solárnemu
+        systému?
+      behaviors 5: |-
+        Napíš svoje vlastné správanie.
+
+        -   Napíš pre kozmonauta nové správanie tak, aby išiel k jednej zo štyroch kozmických lodí na zobrazenej ploche.
+      behaviors free play: "**Voľná hra.**Vytvor si svoju vlastnú scénu z vesmíru!"
       comment_intro_maze_2018: |-
         _"Hmm, čo robí tento program?"_
 
@@ -2871,6 +2986,45 @@ sk-SK:
         úsečky, aby vznikol kľukatý vzor\n-   Kam potrebuješ vložiť blok `opakuj`,
         aby sa to podarilo?\n-   Koľko krát potrebuješ zopakovať vzor z 2 krátkych
         úsečiek, aby ich bolo spolu 6?"
+      courseD_artist_binary1: "Pripravili sme ti mriežku zloženú z \"pixelov\". Môžeš
+        po nej chodiť a kresliť obrázky tak, že \"zapneš\" jednotlivé políčka. \n\nPomôž
+        umelcovi v prvom rade nakresliť vzor \"01010101\"."
+      courseD_artist_binary1_2018: "Pripravili sme ti mriežku zloženú z \"pixelov\".
+        Môžeš po nej chodiť a kresliť obrázky tak, že \"zapneš\" jednotlivé políčka.
+        \n\nPomôž umelcovi v prvom rade nakresliť vzor \"01010101\"."
+      courseD_artist_binary1_2019: "Pripravili sme ti mriežku zloženú z \"pixelov\".
+        Môžeš po nej chodiť a kresliť obrázky tak, že \"zapneš\" jednotlivé políčka.
+        \n\nPomôž umelcovi v prvom rade nakresliť vzor \"01010101\"."
+      courseD_artist_binary2: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
+      courseD_artist_binary2_2018: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
+      courseD_artist_binary2_2019: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       courseD_artist_binary_challenge1_2018: V tejto úlohe môžeš použiť každú binárnu
         hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
       courseD_artist_binary_challenge1_2019: V tejto úlohe môžeš použiť každú binárnu
@@ -3249,6 +3403,16 @@ sk-SK:
       courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Využi svoju tvorivú fantáziu a vyskúšaj rôzne tvary a uhly - uvidíme aké
         rôzne nové snehové vločky sa ti podarí nakresliť!"_  '
+      courseD_autorun_binary2_2019: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       courseD_bee_conditionals7_predict2_2018: "Niekedy sa pod oblakom skrýva kvet
         a niekedy plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
         medu z plástov. Zapamätaj si, že pod každým oblakom je vždy len _jeden_plást
