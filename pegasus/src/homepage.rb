@@ -130,13 +130,10 @@ class Homepage
     if code_break_takeover
       [
         {
-          text: "homepage_action_text_join_us",
-          type: "cta_button",
-          url: "/break"
+          type: "code_break_learn_more"
         },
         {
-          text: "homepage_action_text_codevideo",
-          type: "video",
+          type: "code_break_video",
           youtube_id: youtube_id,
           download_path: download_path,
           facebook: facebook,
@@ -358,7 +355,7 @@ class Homepage
   end
 
   def self.get_video(request)
-    video = get_actions(request).find {|a| a[:type] == "video"}
+    video = get_actions(request).find {|a| a[:type] == "video" || a[:type] == "code_break_video"}
 
     if video
       {

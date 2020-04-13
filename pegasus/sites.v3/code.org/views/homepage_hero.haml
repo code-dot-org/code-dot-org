@@ -43,6 +43,14 @@
           %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
             %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
             %span#playtext= I18n.t(entry[:text])
+      - elsif entry[:type] == "code_break_learn_more"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/learn_more_drawn_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_video"
+        %div
+          %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+            %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px; "}
 
   .clear{style: "clear: both"}
 
@@ -116,7 +124,7 @@
 
     .lefter.col-10.desktop-feature
       &nbsp;
-    -# %img{src: "images/homepage/take_a_codebreak_note.png", style: "width: 400px; max-width: 100%"}
+
     .right.col-50.mobile-center{style: "margin-top: 14px; padding-left: 5px; padding-right: 5px;"}
       %div
         %img{src: "images/homepage/codebreak_logo_hand.png", style: "width: 400px; max-width: 100%"}
@@ -129,7 +137,6 @@
       .mobile-feature
         #actions
           = main_actions
-
       .clear{style: "clear: both"}
 
     .left.col-40{style: "padding-left: 5px; padding-right: 5px"}
