@@ -163,6 +163,7 @@ ur:
       student: 'Talib-e-ilm'
   user:
     new_email_hint: '(اثبات کریں کہ آپ اس ای میل ایڈریس سے ای میلز موصول کر سکتے ہیں کریں.)'
+    none: "کوئی نہيں"
   home:
     student_reg_link: 'طالبعلم کا سائن اپ'
     teacher_reg_link: 'استاد کا سائن اپ'
