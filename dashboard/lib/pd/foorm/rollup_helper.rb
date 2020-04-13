@@ -36,7 +36,9 @@ module Pd::Foorm
         # for now we will skip questions that don't have the same type and choices/rows/columns
         # across all versions/forms.
         next unless validate_question(question, question_data, parsed_forms)
-        parsed_question_data = parsed_forms[question_data[:form_type]][question_data[:form_keys].first][question]
+        first_form_key = question_data[:form_keys].first
+        parsed_form = parsed_forms[question_data[:form_type]][first_form_key]
+        parsed_question_data = parsed_form[question]
 
         questions[question] = {
           title: parsed_question_data[:title],
@@ -64,7 +66,8 @@ module Pd::Foorm
       rows = nil
       columns = nil
       question_data[:form_keys].each do |form_key|
-        parsed_question = parsed_forms[question_data[:form_type]][form_key][question]
+        parsed_form = parsed_forms[question_data[:form_type]][form_key]
+        parsed_question = parsed_form[question]
         return false unless parsed_question && parsed_question[:type] = question_data[:type]
         case parsed_question[:type]
         when ANSWER_MATRIX

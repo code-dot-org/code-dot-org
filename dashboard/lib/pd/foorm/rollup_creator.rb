@@ -84,8 +84,9 @@ module Pd::Foorm
             included_form = true
             case question_data[:type]
             when ANSWER_MATRIX
+              intermediate_rollup_at_question = intermediate_rollup[:questions][question]
               question_summary.each do |sub_question, answers|
-                add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question][sub_question], answers)
+                add_summary_to_intermediate_rollup(intermediate_rollup_at_question[sub_question], answers)
               end
             when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
               add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question], question_summary)

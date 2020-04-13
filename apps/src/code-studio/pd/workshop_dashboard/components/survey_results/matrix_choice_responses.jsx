@@ -37,6 +37,7 @@ export default class MatrixChoiceResponses extends React.Component {
       <div>
         {_.compact(
           Object.keys(question['rows']).map(innerQuestionId => {
+            // innerAnswer is answer for innerQuestionId (question for this row)
             let innerAnswer = null;
             if (section === 'facilitator') {
               innerAnswer = this.getFacilitatorAnswers(innerQuestionId);
