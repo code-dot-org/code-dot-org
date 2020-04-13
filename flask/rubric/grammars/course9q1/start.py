@@ -7,13 +7,13 @@ class Start(Decision):
     generate a single sample.
     """
     def registerChoices(self):
-        self.addChoice('isEmpty', {
+        self.addChoice('start_isEmpty', {
             'True': 0.05,
             'False': 0.95,
         })
 
     def updateRubric(self):
-        if bool(self.getChoice('isEmpty')):
+        if bool(self.getChoice('start_isEmpty')):
             self.turnOnRubric('error:empty')
 
     def render(self):
@@ -25,7 +25,7 @@ class Start(Decision):
         }}
         """
 
-        if bool(self.getChoice('isEmpty')):
+        if bool(self.getChoice('start_isEmpty')):
             codeInject = ''
         else:
             codeInject = self.expand('Solution')
