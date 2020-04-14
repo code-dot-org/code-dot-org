@@ -171,34 +171,12 @@ class DeleteAccountsHelper
     @pegasus_db[:contacts].where(id: contact_ids).delete
   end
 
-  def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
-    # TODO: Make this an operation handled by the contact rollups task itself
-    #       instead of crossing the architectural boundary ourselves.
-    #       For now this is unsafe to run while contact rollups is itself running.
-    # Though we have the DB tables in all environments, we only sync data from the production
-    # environment with Pardot.
-    if CDO.rack_env? :production
-      pardot_ids = contact_rollups_recordset.
-        select(:pardot_id).
-        map {|contact_rollup| contact_rollup[:pardot_id]}
-      failed_ids = Pardot.delete_pardot_prospects(pardot_ids)
-      if failed_ids.any?
-        raise "Pardot.delete_pardot_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
-      end
-    end
-    contact_rollups_recordset.delete
-  end
-
-  # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
-  # contact_rollups pegasus table (master and reporting)
-  # @param [Integer] The user ID to purge from Pardot.
-  def remove_from_pardot_by_user_id(user_id)
-    @log.puts "Removing from Pardot"
-    remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id)
-  end
-
-  def remove_from_pardot_by_email(email)
-    remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(email: email)
+  # This does not actually delete records from Pardot,
+  # but sets a flag to remove records from Pardot next time
+  # the contact rollups process runs.
+  def stage_removal_from_pardot_by_email(email)
+    @log.puts "Staging for removal from Pardot"
+    ContactRollupsPardotMemory.find_or_create_by(email: email).update(delete_from_pardot: 1)
   end
 
   # Removes the StudioPerson record associated with the user IF it is not
@@ -324,7 +302,7 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
-    remove_from_pardot_by_user_id(user.id)
+    stage_removal_from_pardot_by_email(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
 
@@ -349,7 +327,7 @@ class DeleteAccountsHelper
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_poste_data(email)
-    remove_from_pardot_by_email(email)
+    stage_removal_from_pardot_by_email(email)
     clean_pegasus_forms_for_email(email)
   end
 
