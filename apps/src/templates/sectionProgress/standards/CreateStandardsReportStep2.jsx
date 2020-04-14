@@ -33,6 +33,12 @@ class CreateStandardsReportStep2 extends Component {
   };
 
   commentChanged = event => {
+    const cursorPosition = event.target.selectionStart;
+    const commentBox = event.target;
+    window.requestAnimationFrame(() => {
+      commentBox.selectionStart = cursorPosition;
+      commentBox.selectionEnd = cursorPosition;
+    });
     this.props.onCommentChange(event.target.value);
   };
 

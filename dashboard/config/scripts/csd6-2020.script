@@ -1,4 +1,3 @@
-tts true
 login_required true
 hideable_stages true
 student_detail_progress_view true
@@ -13,6 +12,7 @@ family_name 'csd6'
 version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
+tts true
 
 stage 'Innovations in Computing', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD_2020', named: true
@@ -23,7 +23,6 @@ level 'CSD U6L02 TFMD_2020', named: true
 level 'CSD U6 setProperty predict app_2020', progression: 'Setting Properties'
 level 'CSD U6 setProperty Text_2020', progression: 'Setting Properties'
 level 'CSD U6 setProperty xy_2020', progression: 'Setting Properties', assessment: true
-level 'CSD U6 setProperty Map_2020', named: true
 level 'CSD U6 setProperty xy click_2020', progression: 'Events and Properties'
 level 'CSD U6 setProperty xy random_2020', progression: 'Events and Properties'
 level 'CSD U6 setProperty hidden_2020', progression: 'Events and Properties'
@@ -37,7 +36,6 @@ level 'CSD U6 emotion machine 4_2020', progression: 'Building an App', assessmen
 stage 'The Circuit Playground', flex_category: 'csd6_1'
 level 'CSD U6L03 TFMD_2020', named: true
 level 'CSD U6 hardware software video_2020', named: true
-level 'CSD LEDs Map_2020', named: true
 level 'CSDU6 Circuit Playground Test_2020', progression: 'Using the LED'
 level 'CSD U6 test LED_2020', progression: 'Using the LED'
 level 'CSD U6 predict LED button_2020', progression: 'Using the LED'
@@ -60,15 +58,12 @@ level 'CSD U6L05 TFMD_2020', named: true
 level 'CSDU6 - button LED prediction_2020', progression: 'Board Events'
 level 'CSDU6 - LED buttonL_2020', progression: 'Board Events'
 level 'CSDU6 - LED toggle buttonL up_2020', progression: 'Board Events', assessment: true
-level 'CSD onBoardEvent Map_2020', named: true
 level 'CSDU6 - lightswitch toggleswitch_2020', progression: 'Using the Switch'
 level 'CSDU6 - toggle state LED prediction_2020', progression: 'Using the Switch'
 level 'CSDU6 - toggleswitch state setProp_2020', progression: 'Using the Switch'
-level 'CSD Board Buttons Map_2020', named: true
 level 'CSDU6 - buzzer intro_2020', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration_2020', progression: 'The Buzzer'
 level 'CSDU6 - buzzer duration buttons_2020', progression: 'The Buzzer'
-level 'CSD Buzzer Map_2020', named: true
 bonus 'CSDU6 - board event challenge_2020'
 
 stage 'Getting Properties', flex_category: 'csd6_1'
@@ -78,14 +73,12 @@ level 'CSD U6 getProperty input_2020', progression: 'Getting Properties'
 level 'CSD U6 getProperty dropdown_2020', progression: 'Getting Properties'
 level 'CSD U6 getProperty board predict_2020', progression: 'Getting Properties'
 level 'CSD U6 getProperty buzzer_2020', progression: 'Getting Properties', assessment: true
-level 'CSD U6 getProperty Map_2020', named: true
 level 'CSD U6 slider intro_2020', progression: 'Sliders'
 level 'CSD U6 frequency_2020', progression: 'Sliders'
 level 'CSD U6 interval_2020', progression: 'Sliders'
 level 'CSD U6 change_2020', progression: 'Change'
 level 'CSD U6 get toggle_2020', progression: 'Change'
 level 'CSD U6 getters debug_2020', progression: 'Change'
-level 'CSD U6 Event Types_2020', named: true
 level 'CSD U6 move motorcycle_2020', progression: 'Motorcycle'
 level 'CSD U6 design motorcycle_2020', progression: 'Motorcycle'
 bonus 'CSD U6 challenge motorcycle_2020'
@@ -96,13 +89,10 @@ level 'CSD U6 sensor experiment embedded_2020', named: true
 level 'CSD U6 analog sound_2020', progression: 'Reading Sensors'
 level 'CSD U6 analog light_2020', progression: 'Reading Sensors'
 level 'CSD U6 analog temp_2020', progression: 'Reading Sensors'
-level 'CSD Board Sensors Map_2020', named: true
 level 'CSD U6 analog predict_2020', progression: 'Sensor Events'
 level 'CSD U6 analog data_2020', progression: 'Sensor Events'
 level 'CSD U6 analog change_2020', progression: 'Sensor Events'
 level 'CSD U6 analog threshold_2020', progression: 'Sensor Events'
-level 'CSD Polling Events Map_2020', named: true
-level 'CSD Set Scale Map_2020', named: true
 level 'CSD U6 analog rbg 1_2020', progression: 'Sensors to Colors'
 level 'CSD U6 analog rbg 2_2020', progression: 'Sensors to Colors'
 level 'CSD U6 analog rgb 3_2020', progression: 'Sensors to Colors', assessment: true
@@ -144,14 +134,12 @@ level 'CSDU6 arrays select rainbow_2020', progression: 'Introduction to Arrays'
 level 'CSDU6 array select days_2020', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select random_2020', progression: 'Introduction to Arrays'
 level 'CSDU6 arrays select variable_2020', progression: 'Introduction to Arrays', assessment: true
-level 'CSD U6 arrays intro_2020', named: true
 level 'CSD U6 array multi_2018_2019_2020', named: true, assessment: true
 level 'CSD U6 colorLeds predict_2020', progression: 'Color LEDs'
 level 'CSD U6 colorLED on_2020', progression: 'Color LEDs'
 level 'CSD U6 LEDs color_2020', progression: 'Color LEDs'
 level 'CSD U6 colorLeds debug_2020', progression: 'Color LEDs'
 level 'CSD U6 colorLeds intensity_2020', progression: 'Color LEDs'
-level 'CSD colorLed Map_2020', named: true
 level 'CSD U6 colorLeds light pattern_2020', progression: 'Light Show'
 level 'CSD U6 light pattern off_2020', progression: 'Light Show', assessment: true
 bonus 'CSD U6 light pattern challenge_2020', progression: 'Challenge Levels'
@@ -162,11 +150,9 @@ level 'CSDU6 circuit playground piano_2020', progression: 'Playing Notes'
 level 'CSDU6 frequency modification_2020', progression: 'Playing Notes'
 level 'CSDU6 frequency creation_2020', progression: 'Playing Notes'
 level 'CSDU6 piano with notes_2020', progression: 'Playing Notes'
-level 'Making Music_2020', named: true
 level 'CSD U6 array piano_2020', progression: 'Musical Arrays'
 level 'CSD U6 random array notes_2020', progression: 'Musical Arrays'
 level 'CSDU6 making new arrays_2020', progression: 'Musical Arrays', assessment: true
-level 'CSD-Arrays_2020', named: true
 level 'CSDU6 play predict code_2020', progression: 'Making Songs'
 level 'CSDU6 play songs_2020', progression: 'Making Songs'
 level 'CSDU6 play null notes_2020', progression: 'Making Songs'
@@ -195,11 +181,8 @@ level 'CSD U6 Airplane predict_2020', progression: 'Orientation'
 level 'CSD U6 investigate orientation_2020', progression: 'Orientation'
 level 'CSD U6 directional leds pitch_2020', progression: 'Orientation'
 level 'CSD U6 directional LEDs roll_2020', progression: 'Orientation'
-level 'The Accelerometer_2020', named: true
 level 'CSD U6 stillness game predict code_2020', progression: 'Accelerometer Events'
 level 'CSD U6 Pedometer_2020', progression: 'Accelerometer Events'
-level 'Using Accelerometer Events_2020', named: true
-level 'Revisiting the Counter Pattern_2020', named: true
 level 'CSD U6 goalie_2020', progression: 'Accelerometer Events', assessment: true
 level 'CSD U6 Driver pt1_2020', progression: 'Accelerometer Events'
 level 'CSD U6 Driver pt 2_2020', progression: 'Accelerometer Events'
@@ -227,14 +210,12 @@ stage 'Circuits and Physical Prototypes', flex_category: 'csd6_2'
 level 'CSD U6L15 TFMD_2020', named: true
 level 'CSD U6 circuit logic video_2020', named: true
 level 'CSD U6 circuit predict_2020', progression: 'Simple Circuits'
-level 'CSD U6 circuit LED map_2020', progression: 'Simple Circuits'
 level 'CSD U6 circuit pinMode_2020', progression: 'Simple Circuits'
 level 'CSD U6 circuit createLed_2020', progression: 'Simple Circuits'
 level 'CSD U6 circuit multi led_2020', progression: 'Simple Circuits'
 level 'CSD U6 circuit smart bike blinkers_2020', progression: 'Smart Bike - Blinkers'
 level 'CSD U6 circuit smart bike blinker buttons_2020', progression: 'Smart Bike - Blinkers', assessment: true
 level 'CSD U6 circuit smart bike blinker build_2018_2019_2020', progression: 'Smart Bike - Blinkers'
-level 'CSD U6 circuit button map_2020', progression: 'Button Circuits'
 level 'CSD U6 circuit createButton_2020', progression: 'Button Circuits'
 level 'CSD U6 circuit smart bike buzzer_2020', progression: 'Finish the Prototype'
 level 'CSD U6 circuit smart bike light_2020', progression: 'Finish the Prototype'

@@ -3,7 +3,7 @@
 # Table name: lesson_groups
 #
 #  id          :integer          not null, primary key
-#  name        :string(255)
+#  key         :string(255)      not null
 #  script_id   :integer          not null
 #  user_facing :boolean          default(TRUE), not null
 #  created_at  :datetime         not null
@@ -17,4 +17,8 @@
 class LessonGroup < ApplicationRecord
   belongs_to :script
   has_many :stages
+
+  def localized_display_name
+    I18n.t "flex_category.#{key}"
+  end
 end

@@ -43,10 +43,19 @@
           %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
             %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
             %span#playtext= I18n.t(entry[:text])
+      - elsif entry[:type] == "code_break_learn_more"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/learn_more_drawn_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_video"
+        %div
+          %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+            %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px; "}
 
   .clear{style: "clear: both"}
 
-#hero{style: "position: relative"}
+- extra_style = show_single_hero == "codebreak2020" ? "margin-bottom: 1px" : ""
+#hero{style: "position: relative", style: extra_style}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -107,6 +116,53 @@
       - else
         .blank{style: "height: 54px"}
           &nbsp;
+
+  - elsif show_single_hero == "codebreak2020"
+    :css
+      @media screen and (max-width: 400px) {
+        #special-guest-stars {
+          padding-top: 60px !important;
+        }
+      }
+
+    .top_center
+      %div{style: "text-align: center;"}
+
+    .lefter.col-10.desktop-feature
+      &nbsp;
+
+    .right.col-50.mobile-center{style: "margin-top: 14px; padding-left: 5px; padding-right: 5px; text-align: center"}
+      %div
+        %img{src: "images/homepage/codebreak_logo_hand.png", style: "width: 400px; max-width: 100%"}
+      %h3{style: "font-weight: 800; color:#191919; font-size: 16px;"}Take a Code Break! Your weekly dose of inspiration, community, and computer science.
+
+      %h3{style: "font-weight: 800;color:#191919; width: 100%; font-family: 'Gotham 5r', sans-serif"} Every Wednesday at 10am PST / 1pm EST
+      .desktop-feature
+        #actions{style: "padding-left: 0px"}
+          = main_actions
+      .mobile-feature
+        #actions
+          = main_actions
+      .clear{style: "clear: both"}
+
+    .left.col-40{style: "padding-left: 5px; padding-right: 5px"}
+      %div{style: "text-align: center;"}
+        %div{style: "display: inline-block; border-radius: 10px; padding: 20px; margin-bottom: 40px; background-image: url(/images/fit-500/homepage/codebreak_blank_note.png); background-size: cover; background-position: 50% 0%; transform: rotate(5deg)"}
+          %div
+            %img#special-guest-stars{src: "images/homepage/codebreak_specialguests.png", style: "width: 300px; padding-bottom: 10px; padding-top: 30px; max-width: 100%"}
+          .headshots{style: "text-align: center"}
+            .guest-1{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/mike_krieger_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px"} Mike Krieger
+              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#191919;"} Instagram Co-founder
+            &nbsp;
+            &nbsp;
+            .guest-2{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/alice_keeler_code_break.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px"} Alice Keeler
+              %h3{style: "font-weight: 500; margin-top: 0px; font-size: 14px; color:#191919;"} Author & Educator
+
+        %div{style: "clear:both;"}
 
   - elsif show_single_hero
     #actions

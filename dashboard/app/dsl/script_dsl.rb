@@ -5,6 +5,7 @@ class ScriptDSL < BaseDSL
     @stage = nil
     @stage_flex_category = nil
     @lesson_group = nil
+    @lesson_groups = []
     @stage_lockable = false
     @stage_visible_after = nil
     @concepts = []
@@ -80,6 +81,16 @@ class ScriptDSL < BaseDSL
     @pilot_experiment = experiment
   end
 
+  def lesson_group(key, properties = {})
+    if key
+      @lesson_groups << {
+        key: key,
+        display_name: properties[:display_name]
+      }.compact
+    end
+    @lesson_group = key
+  end
+
   def stage(name, properties = {})
     if @stage
       @stages << {
@@ -91,7 +102,6 @@ class ScriptDSL < BaseDSL
     end
     @stage = name
     @stage_flex_category = properties[:flex_category]
-    @lesson_group = properties[:lesson_group]
     @stage_lockable = properties[:lockable]
     @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
@@ -144,7 +154,8 @@ class ScriptDSL < BaseDSL
       editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
-      tts: @tts
+      tts: @tts,
+      lesson_groups: @lesson_groups
     }
   end
 
@@ -325,47 +336,61 @@ class ScriptDSL < BaseDSL
     s << 'tts true' if script.tts
 
     s << '' unless s.empty?
-    s << serialize_stages(script)
+    s << serialize_lesson_groups(script)
     s.join("\n")
   end
 
-  def self.serialize_stages(script)
+  def self.serialize_lesson_groups(script)
     s = []
-    script.stages.each do |stage|
-      t = "stage '#{escape(stage.name)}'"
-      t += ', lockable: true' if stage.lockable
-      t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
-      t += ", lesson_group: '#{escape(stage.lesson_group.name)}'" if stage.lesson_group
-      t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
-      s << t
-      stage.script_levels.each do |sl|
-        type = 'level'
-        type = 'bonus' if sl.bonus
-
-        if sl.levels.count > 1
-          s << 'variants'
-          sl.levels.each do |level|
-            s.concat(
-              serialize_level(
-                level,
-                type,
-                sl.active?(level),
-                sl.progression,
-                sl.named_level?,
-                sl.challenge,
-                sl.assessment,
-                sl.experiments(level)
-              ).map {|l| l.indent(2)}
-            )
-          end
-          s << 'endvariants'
-        else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
-        end
+    script.lesson_groups.each do |lesson_group|
+      if lesson_group&.user_facing && lesson_group.stages.count > 0
+        t = "lesson_group '#{escape(lesson_group.key)}'"
+        t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
+        s << t
       end
-      s << 'no_extras' if stage.stage_extras_disabled
-      s << ''
+      lesson_group.stages.each do |stage|
+        s << serialize_stage(stage)
+      end
     end
+    s << ''
+    s.join("\n")
+  end
+
+  def self.serialize_stage(stage)
+    s = []
+
+    t = "stage '#{escape(stage.name)}'"
+    t += ', lockable: true' if stage.lockable
+    t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
+    t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
+    s << t
+    stage.script_levels.each do |sl|
+      type = 'level'
+      type = 'bonus' if sl.bonus
+
+      if sl.levels.count > 1
+        s << 'variants'
+        sl.levels.each do |level|
+          s.concat(
+            serialize_level(
+              level,
+              type,
+              sl.active?(level),
+              sl.progression,
+              sl.named_level?,
+              sl.challenge,
+              sl.assessment,
+              sl.experiments(level)
+            ).map {|l| l.indent(2)}
+          )
+        end
+        s << 'endvariants'
+      else
+        s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
+      end
+    end
+    s << 'no_extras' if stage.stage_extras_disabled
+    s << ''
     s.join("\n")
   end
 
