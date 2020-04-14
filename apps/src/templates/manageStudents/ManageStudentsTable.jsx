@@ -27,7 +27,7 @@ import {
   editAll,
   TransferStatus,
   TransferType,
-  ParentLetterEntryPoint
+  ParentLetterButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
@@ -601,7 +601,9 @@ class ManageStudentsTable extends Component {
           )}
           <DownloadParentLetter
             sectionId={this.props.sectionId}
-            buttonLocation={ParentLetterEntryPoint.ABOVE_TABLE}
+            buttonMetricsCategory={
+              ParentLetterButtonMetricsCategory.ABOVE_TABLE
+            }
           />
         </div>
         <Table.Provider

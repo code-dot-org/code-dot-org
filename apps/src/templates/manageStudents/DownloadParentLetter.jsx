@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {ParentLetterEntryPoint} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const styles = {
   button: {
@@ -15,7 +15,9 @@ const styles = {
 export default class DownloadParentLetter extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
-    buttonLocation: PropTypes.oneOf(Object.values(ParentLetterEntryPoint))
+    buttonMetricsCategory: PropTypes.oneOf(
+      Object.values(ParentLetterButtonMetricsCategory)
+    )
   };
 
   onDownloadParentLetter = () => {
@@ -28,7 +30,7 @@ export default class DownloadParentLetter extends Component {
         event: 'download-parent-letter-button',
         data_json: JSON.stringify({
           sectionId: this.props.sectionId,
-          entryPoint: this.props.buttonLocation
+          entryPoint: this.props.buttonMetricsCategory
         })
       },
       {includeUserId: true}

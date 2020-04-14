@@ -7,7 +7,7 @@ import googleSignInButton from '../../../static/teacherDashboard/googleSignInBut
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {ParentLetterEntryPoint} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import DownloadParentLetter from './DownloadParentLetter';
 
 const styles = {
@@ -103,7 +103,7 @@ class ManageStudentsLoginInfo extends Component {
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
           sectionId={this.props.sectionId}
-          buttonLocation={ParentLetterEntryPoint.BELOW_TABLE}
+          buttonMetricsCategory={ParentLetterButtonMetricsCategory.BELOW_TABLE}
         />
         <br />
         <SafeMarkdown
