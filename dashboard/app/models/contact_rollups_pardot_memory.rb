@@ -90,6 +90,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.query_updated_contacts
+    # Updated contacts are contacts that exist in both the production database and Pardot
+    # (have valid Pardot IDs). However, their content or Pardot ID mappings have changed since the
+    # last sync.
     <<-SQL.squish
       SELECT
         processed.email, processed.data,

@@ -29,7 +29,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     ContactRollupsPardotMemory.add_and_update_pardot_ids
 
-    assert_equal new_pardot_id, ContactRollupsPardotMemory.find_by(email: existing_record.email)&.pardot_id
+    assert_equal new_pardot_id,
+      ContactRollupsPardotMemory.find_by(email: existing_record.email).pardot_id
   end
 
   test 'query_new_contacts' do
@@ -67,7 +68,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     assert_equal 1, ContactRollupsPardotMemory.count
     record = ContactRollupsPardotMemory.find_by(email: contact.email)
-    assert_equal({'db_Opt_In' => 'Yes'}, record&.data_synced)
+    assert_equal({'db_Opt_In' => 'Yes'}, record.data_synced)
   end
 
   test 'query_updated_contacts' do
@@ -132,8 +133,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     ContactRollupsPardotMemory.update_pardot_prospects
 
     record = ContactRollupsPardotMemory.find_by(email: email)
-    assert_equal({'db_Opt_In' => 'Yes'}, record&.data_synced)
-    assert last_sync_time < record&.data_synced_at
+    assert_equal({'db_Opt_In' => 'Yes'}, record.data_synced)
+    assert last_sync_time < record.data_synced_at
   end
 
   test 'save_sync_results new prospect' do
@@ -149,7 +150,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       data_synced_at: submitted_time
     )
     expected_data_synced = submission.except(:email, :id).deep_stringify_keys
-    assert_equal expected_data_synced, record&.data_synced
+    assert_equal expected_data_synced, record.data_synced
   end
 
   test 'save_sync_results updated prospects' do
@@ -176,7 +177,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         data_synced_at: submitted_time
       )
       expected_data_synced = submission.except(:email, :id).deep_stringify_keys
-      assert_equal expected_data_synced, record&.data_synced
+      assert_equal expected_data_synced, record.data_synced
     end
   end
 

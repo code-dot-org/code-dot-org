@@ -103,10 +103,10 @@ class PardotV2
     delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
     return [], [] unless delta.present?
 
-    prospect_key = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
-    prospect = new_prospect_data.merge prospect_key
+    email_pardot_id = self.class.convert_to_pardot_prospect(email: email, pardot_id: pardot_id)
+    prospect = new_prospect_data.merge email_pardot_id
     @updated_prospects << prospect
-    prospect_delta = delta.merge prospect_key
+    prospect_delta = delta.merge email_pardot_id
     @updated_prospect_deltas << prospect_delta
 
     delta_submissions, errors = process_batch BATCH_UPDATE_URL, @updated_prospect_deltas, eager_submit
@@ -244,6 +244,14 @@ class PardotV2
   end
 
   # Calculates what needs to change to transform an old data to a new data.
+  # Example:
+  #   old_data = {key1: 1, key2: 2, key3: nil}
+  #   new_data = {key1: 1.1, k4: 4}
+  #   delta output = {key1: 1.1, key2: nil, key4: 4}
+  #   The output means to transform old_data into new_data, we have to reset value for key1,
+  #   unset key2 value (i.e. set it to nil), ignore key3 (because its old value was nil)
+  #   and set key4.
+  #
   # @param [Hash] old_data
   # @param [Hash] new_data
   # @return [Hash]
