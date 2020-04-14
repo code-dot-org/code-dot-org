@@ -17,7 +17,10 @@ from src.trainer.datasets import RubricDataset, TransferDataset
 
 
 def train_pipeline(model_class, train_data_path, test_data_path, config):
-    device = torch.device('cpu')  # no CUDA support for now
+    if config['cuda']:
+        device = torch.device('cuda')
+    else:
+        device = torch.device('cpu')  # no CUDA support for now
 
     # reproducibility
     torch.manual_seed(config['seed'])
@@ -74,8 +77,8 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
             loss_meter.update(loss.item(), batch_size)
 
             with torch.no_grad():
-                pred_npy = torch.round(label_out).detach().numpy()
-                label_npy = label.detach().numpy()
+                pred_npy = torch.round(label_out).cpu().detach().numpy()
+                label_npy = label.cpu().detach().numpy()
                 acc = np.mean(pred_npy == label_npy)
                 acc_meter.update(acc, batch_size)
 
@@ -119,8 +122,8 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
                     loss = F.binary_cross_entropy(label_out, label)
                     loss_meter.update(loss.item(), batch_size)
 
-                    pred_npy = torch.round(label_out).detach().numpy()
-                    label_npy = label.detach().numpy()
+                    pred_npy = torch.round(label_out).cpu().detach().numpy()
+                    label_npy = label.cpu().detach().numpy()
 
                     label_arr.append(label_npy)
                     pred_arr.append(pred_npy)
@@ -180,7 +183,10 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
 
 
 def transfer_pipeline(model_class, checkpoint_path, real_data_path):
-    device = torch.device('cpu')  # no CUDA support for now
+    if config['cuda']:
+        device = torch.device('cuda')
+    else:
+        device = torch.device('cpu')  # no CUDA support for now
 
     checkpoint = torch.load(checkpoint_path)
     config = checkpoint['config']
