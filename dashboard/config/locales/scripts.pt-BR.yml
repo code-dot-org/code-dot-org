@@ -21324,6 +21324,8 @@ pt-BR:
               name: CS Pesquisa de pós-curso sobre princípios
             Intro to App Lab:
               name: Introdução Laboratório de Aplicativos
+            Variables:
+              name: variáveis
         virtual-holding-place:
           stages:
             Velocity:

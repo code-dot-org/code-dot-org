@@ -2058,6 +2058,10 @@ th:
           stages:
             Debugging:
               name: การแก้ไขจุดบกพร่อง
+        csp5-virtual:
+          stages:
+            Variables:
+              name: ตัวแปร
         virtual-holding-place:
           stages:
             Functions:

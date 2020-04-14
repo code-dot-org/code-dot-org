@@ -1692,6 +1692,8 @@ kk:
           stages:
             While Loops:
               name: Шарт орындалғанша Циклдері
+            Variables:
+              name: Айнымалылар
         virtual-holding-place:
           stages:
             Functions:

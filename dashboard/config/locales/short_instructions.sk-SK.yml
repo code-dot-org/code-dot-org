@@ -419,8 +419,14 @@ sk-SK:
       CSD U5 black white images pixelation_2019: Dokončite tvar X písaním núl a jednotiek
       Course 4 Artist 1: 'Pomôžte mi nakresliť krabicu (každá čiara je 200 pixelov
         dlhá) '
+      Course 4 Artist Binary 1: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol. Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       Course 4 Artist Binary 3: Dokážes nakresliť tento obrazec len s použitím troch
         binárnych číslic (0 alebo 1)?
+      Course 4 Artist Binary 5: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
       Course 4 Artist Binary 6: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
       Course 4 Artist Binary 7: Dokončite túto kresbu.
@@ -531,7 +537,19 @@ sk-SK:
       Dance Party Freeplay_2019: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance_2019_01: 'Prenes blok <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        na pracovnú plochu a spoj ho vo vnútri bloku <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Sprav to tak, aby mačka zatancovala po stlačení klávesy.
+      Dance_2019_03: Je čas na tanečný rozstrel! Naprogramuj každého tanečníka tak,
+        aby sa pohyboval po stlačení rôznych klávesov. Vyber si svoj obľúbený pohyb
+        pre každého tanečníka alebo ho nastav na "(Náhodné)“ pre niečo úplne nepredvídateľné!
+      Dance_2019_04: Tvoj tanečník musí po štvrtom takte urobiť nový pohyb.
       Dance_2019_05: Teraz donúť tanečníka začať nový krok po 6 taktoch!
+      Dance_2019_06: Nastav okolo hlavného tanečníka v strede aj skupinu vedľajších
+        tanečníkov.
       Dance_2019_07: Zmeň veľkosť skupiny tanečníkov v pozadí.
       Dance_2019_09: Skúste byť kreatívni s týmito novými blokmi!
       Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
@@ -787,10 +805,31 @@ sk-SK:
       Standalone_Artist_1: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý
         štvorec použitím blokov "Otoč sa vpravo" a "Posuň sa dopredu". Každá strana
         má mať 100 pixelov.
+      Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a
+        dĺžkou strán 150 pixelov.
+      Standalone_Artist_3: Dokážeš nakresliť tento šesťuholník so stranami 100 pixelov
+        a s otočeniami o 60 stupňov?
+      Standalone_Artist_4: Teraz sa môžeš hrať s novým blokom, cyklom. Pomôže ti zopakovať
+        sériu príkazov. Čo sa stane ak tieto príkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Koľko krát potrebuješ diamant zopakovať aby ti vznikla
+        kvetina?
+      Standalone_Artist_5.5: 'Všimni si, ako sa kód pre diamant použitím cyklu zjednodušil?
+        Ak celú radu zopakuješ 12 krát, vznikne ti kvetina. Nápoveda: Po slučke s
+        diamantom sa budeš musieť otočiť o 30 stupňov, aby si nekreslil/a stále po
+        tom istom.'
+      Standalone_Artist_6: 'Zopakuj kód pre šesťuholník 6 krát a vytvoríš kresbu.
+        Pod akým uhlom sa vždy otáčaš? Nápoveda: vydelte počet stupňov v kruhu počtom
+        opakovaní.'
+      Standalone_Artist_7: 'Funkcia je len ďalším nástrojom ako sa neopakovať. Táto
+        funkcia nakreslí kvetinu, takže ju môžeš použiť kedykoľvek, keď chceš nakresliť
+        kvetinu. Použi ju v kombinácii s novým blokom skoč a nakresli tieto kvetiny.
+        Nápoveda: Kvetiny sú od seba vzdialené 150 pixelov'
       Standalone_Artist_8: Táto funkcia sa volá "Nakresli tvar" a naprogramovali sme
         ju aby sme kreslili šesťuholník. Spusti kód nech vidíš čo vie a pohraj sa
         s touto funkciou. Vedel by si ju použiť tak, aby nakreslila obraz štvorcov,
         trojuholníkov alebo osemuholníkov?
+      Standalone_Artist_9: A teraz smelo do toho a nakresli obrázok aký len chceš!
+        Dokonca máš jednú nevyužitú funkciu, ktorá spraví čokoľvek si zmyslíš!
       Underground Avoiding Lava: Láva sa ukrýva pod niektorými z týchto blokov, ktoré
         budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť
         príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil
@@ -828,10 +867,18 @@ sk-SK:
         sprite, že sa žirafa zmenší o 5.
       Virtual Pet 6: Pridaj jablko, ktoré vráti žirafu do pôvodnej veľkosti, keď sa
         dotknú.
+      Virtual Pet 8_2019: "**Voľná hra:** Čo by tak mohlo tvoje zvieratko ešte robiť?
+        Vyskúšaj hocičo ťa napadne!"
       Virtual Pet Freeplay: 'Voľná hra: Čo viac dokážeš spraviť so svojou žirafou? '
       'Widget: Text Compression': V texte hľadajte vzory (opakované slová alebo frázy).
         Zadajte vzory, ktoré vidíte, do slovníka vpravo. Pri zadávaní položiek do
         slovníka, symbol pre položku sa vloží do textu namiesto vzoru.
+      behaviors 1: Odhadni, čo sa bude diať!
+      behaviors 2: Leť s raketou ku hviezdam!
+      behaviors 3: Pomôž roveru predbehnúť robota!
+      behaviors 4: Odhadni, čo sa bude diať!
+      behaviors 5: Pohni kozmonauta diagonálne.
+      behaviors free play: 'Voľná hra: vytvor si svoju vlastnú scénu z vesmíru!'
       bounce_10_basketball: Teraz máme na ihrisku kôš! Použi bloky "pridaj bod" a
         "pridaj bod súperovi" pod blok "keď je lopta v bránke" a "keď lopta netrafí
         ruku". Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
@@ -1900,12 +1947,12 @@ sk-SK:
         binárne čísla na nakreslenie tohto vzoru.
       courseD_artist_binary2_2019: Spusti si tento kód, aby si videl, ako umelec používa
         binárne čísla na nakreslenie tohto vzoru.
-      courseD_artist_binary3: Ktorý z binárnych obrázkov nižšie by si mohol 8 krát
-        zopakovať nato, aby si nakreslil tento obrázok?
-      courseD_artist_binary3_2018: Ktorý z binárnych obrázkov nižšie by si mohol 8
-        krát zopakovať nato, aby si nakreslil tento obrázok?
-      courseD_artist_binary3_2019: Ktorý z binárnych obrázkov nižšie by si mohol 8
-        krát zopakovať nato, aby si nakreslil tento obrázok?
+      courseD_artist_binary3: Ktorá z ponúkaných binárnych postupností po 8 zopakovaniach
+        nakreslí tento obrázok?
+      courseD_artist_binary3_2018: Ktorá z ponúkaných binárnych postupností po 8 zopakovaniach
+        nakreslí tento obrázok?
+      courseD_artist_binary3_2019: Ktorá z ponúkaných binárnych postupností po 8 zopakovaniach
+        nakreslí tento obrázok?
       courseD_artist_binary4: Dokážes nakresliť tento obrazec len s použitím troch
         binárnych číslic (0 alebo 1)?
       courseD_artist_binary4_2018: Dokážes nakresliť tento obrazec len s použitím
@@ -1913,42 +1960,48 @@ sk-SK:
       courseD_artist_binary4_2019: Dokážes nakresliť tento obrazec len s použitím
         troch binárnych číslic (0 alebo 1)?
       courseD_artist_binary5: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
       courseD_artist_binary5_2018: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
       courseD_artist_binary5_2019: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
+      courseD_artist_binary6: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
+      courseD_artist_binary6_2018: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
+      courseD_artist_binary6_2019: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
       courseD_artist_binary7: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
       courseD_artist_binary7_2018: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
       courseD_artist_binary7_2019: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
-      courseD_artist_binary8: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_2018: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_predict1: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_predict1_2018: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_2018: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_2019: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_predict1: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_predict1_2018: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_predict1_2019: Dokonči kód tak, aby nakreslil celý vzor.
       courseD_artist_binaryFP: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+        Popusti uzdu svojej kreativite a pomocou bitov nakresli čo len chceš!
       courseD_artist_binaryFP8: "**Voľná hra:** Nakresli čo len chceš binárnymi číslami! "
       courseD_artist_binaryFP_2018: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+        Popusti uzdu svojej kreativite a pomocou bitov nakresli čo len chceš!
       courseD_artist_binaryFP_2019: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+        Popusti uzdu svojej kreativite a pomocou bitov nakresli čo len chceš!
       courseD_artist_binary_challenge1_2018: V tejto úlohe môžeš použiť každú binárnu
         hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
       courseD_artist_binary_challenge1_2019: V tejto úlohe môžeš použiť každú binárnu
@@ -2070,18 +2123,20 @@ sk-SK:
         vložený do štvorca.
       courseD_autorun_binary2_2019: Spusti si tento kód, aby si videl, ako umelec
         používa binárne čísla na nakreslenie tohto vzoru.
-      courseD_autorun_binary3_2019: Ktorý z binárnych obrázkov nižšie by si mohol
-        8 krát zopakovať nato, aby si nakreslil tento obrázok?
+      courseD_autorun_binary3_2019: Ktorá z ponúkaných binárnych postupností po 8
+        zopakovaniach nakreslí tento obrázok?
       courseD_autorun_binary4_2019: Dokážes nakresliť tento obrazec len s použitím
         troch binárnych číslic (0 alebo 1)?
       courseD_autorun_binary5_2019: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
+      courseD_autorun_binary6_2019: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
       courseD_autorun_binary7_2019: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
-      courseD_autorun_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_autorun_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_autorun_binary8_2019: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_autorun_binary8_predict1_2019: Dokonči kód tak, aby nakreslil celý vzor.
       courseD_bee_conditionals10: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals10_2019: Pozbieraj všetok nektár a vyrob všetok med.

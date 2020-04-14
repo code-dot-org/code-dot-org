@@ -14902,17 +14902,17 @@ fil:
                 ay mag-iisip sa kanilang karanasan sa gawain at gumawa ng koneksyon
                 sa mga tipo ng paglutas ng problema na gagawin nila sa natirang bahagi
                 ng kurso. '
-              description_teacher: Sa araling ito, ang mga estudyante ay magtatrabaho
+              description_teacher: 'Sa araling ito, ang mga estudyante ay magtatrabaho
                 sa loob ng mga grupo para makadisenyo ng aluminum foil na mga bangka
-                na susuporta sa maraming mga barya hangga't maaari. Ang mga grupo
+                na susuporta sa maraming mga barya hangga''t maaari. Ang mga grupo
                 ay mayroong dalawang pagkakataon para magawa ang kanilang mga bangka,
                 na may layunin na makakarga ng mas marami pang barya kaysa sa nagawa
                 nila sa unang pagkakataon. Ang istraktura ng gawain ay nagpapahiwatig
-                sa iba't ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
+                sa iba''t ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
                 ng mas detalyado sa sumusunod na mga aralin. Sa pagtatapos ng aralin,
                 ang mga estudyante ay mag-iisip sa kanilang mga karanasan sa gawain
                 at gagawa ng mga koneksyon sa mga uri ng paglutas ng problema na gagawin
-                nila sa natitirang bahagi ng kurso.
+                nila sa natitirang bahagi ng kurso. '
             The Problem Solving Process:
               name: Ang Proseso ng Pagtuklas ng Problema
               description_student: Ang araling ito ay nagpapakila sa pormal na proseso
@@ -17247,6 +17247,8 @@ fil:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
             Intro to App Lab:
               name: Panimula sa App Lab
+            Variables:
+              name: Mga variable
         virtual-holding-place:
           stages:
             Velocity:

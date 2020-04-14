@@ -1087,6 +1087,24 @@ pl-PL:
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\\\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\\\r\n\\\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseC_artist_loops5a: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loopsPrePre1a: Użyj bloku `jump to 200 over 200 down`aby artysta
         znalazł się w centrum obszaru gry, następnie narysuj linię o długości 50 pikseli
         za pomocą bloku `move forward 50 pixels`.

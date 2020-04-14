@@ -5613,6 +5613,8 @@ sk:
               name: Cykly "pokiaľ"
             Intro to App Lab:
               name: Úvod do App Labu
+            Variables:
+              name: Premenné
         virtual-holding-place:
           stages:
             Velocity:

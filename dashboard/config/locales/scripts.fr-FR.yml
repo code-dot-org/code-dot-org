@@ -13563,7 +13563,7 @@ fr:
             Songwriting:
               name: Écriture de chansons
         express-2019:
-          title: Cour rapide (2017)
+          title: Cour rapide (2019)
           description: Apprends les bases de l'informatique et de la sécurité sur
             internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -21345,7 +21345,7 @@ fr:
             AI for Oceans:
               name: IA pour les Océans
         express-2020:
-          title: Cour rapide (2017)
+          title: Cour rapide (2020)
           description: Apprends les bases de l'informatique et de la sécurité sur
             internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -22196,6 +22196,8 @@ fr:
               name: CS Principles Enquête Post Cours
             Intro to App Lab:
               name: Introduction au Labo des Applis
+            Variables:
+              name: variables
         virtual-holding-place:
           stages:
             Velocity:

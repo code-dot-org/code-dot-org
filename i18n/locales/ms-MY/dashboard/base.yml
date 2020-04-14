@@ -209,6 +209,7 @@ ms:
     new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
     current_password_hint: '(kami memerlukan kata laluan semasa anda untuk mengesahkan perubahan anda)'
     update_email: "Kemas kini"
+    none: "Tiada"
   user_level:
     completed: 'Lengkap'
     tried: 'Telah dicuba'

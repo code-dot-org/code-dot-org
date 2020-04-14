@@ -1099,6 +1099,8 @@ bn:
           stages:
             While Loops:
               name: হোয়াইল লুপ
+            Variables:
+              name: চলকগুলো
         virtual-holding-place:
           stages:
             Functions:

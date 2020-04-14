@@ -218,6 +218,13 @@ mi-NZ:
       course4_artist_fwp_challenge1: Whakamātauria tēnei papatono, ā, panonihia kia
         kitea ka aha. E mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia
         me tētahi mea rerekē noa atu)
+      courseC_artist_loopsPrePre1a_2019: "Kei te hē te wāhi tū a te rehetoi!  \n\nWhakamahia
+        te paraka <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump
+        to 200 over 200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
+        ki te whakaneke i te rehetoi ki waenga i te wāhi tākaro.\\\nKātahi, tuhia
+        he rārangi kia 50 pika te roa mā te paraka <xml><block type=\"draw_move_by_constant\"
+        block-text=\"move forward\"><title name=\"DIR\">moveForward</title><title
+        name=\"VALUE\">50</title></block></xml>."
       courseD_maze_nestedLoops4: "Aratakina au ki putiputirā mā ngā paraka rua rua
         noa iho. \\\r\n\\\r\nWhakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi
         atu kia heke iho mai te nui o te waehere e whakamahia ana."
