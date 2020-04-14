@@ -1914,7 +1914,7 @@ endvariants
   test 'raises error if a lesson group key is given without a display_name' do
     l1 = create :level
     dsl = <<-SCRIPT
-      lesson_group 'lg-1'
+      lesson_group 'content'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -1927,7 +1927,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: lg-1', raise.message
+    assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content', raise.message
   end
 
   test 'raises error if lesson group key already exists and try to change the display name' do
@@ -1958,7 +1958,7 @@ endvariants
       stage 'Lesson1'
       level '#{l1.name}'
 
-      lesson_group 'lg-1', display_name: 'Lesson Group'
+      lesson_group 'content', display_name: 'Content'
       stage 'Lesson2'
       level '#{l2.name}'
     SCRIPT
@@ -1978,13 +1978,13 @@ endvariants
     l2 = create :level
     l3 = create :level
     dsl = <<-SCRIPT
-      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      lesson_group 'content', display_name: 'Content'
       stage 'Lesson1'
       level '#{l1.name}'
-      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      lesson_group 'required', display_name: 'Overview'
       stage 'Lesson2'
       level '#{l2.name}'
-      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      lesson_group 'content', display_name: 'Content'
       stage 'Lesson3'
       level '#{l3.name}'
     SCRIPT
@@ -1996,7 +1996,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Only adjacent stages can have the same lesson group. Lesson Group: lg-1 is on two non-adjacent lessons.', raise.message
+    assert_equal 'Only adjacent stages can have the same lesson group. Lesson Group: content is on two non-adjacent lessons.', raise.message
   end
 
   test 'lessons with the same lesson group name are associated with the same lesson group' do
@@ -2004,14 +2004,14 @@ endvariants
     l2 = create :level
     l3 = create :level
     dsl = <<-SCRIPT
-      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      lesson_group 'required', display_name: 'Overview'
       stage 'Lesson1'
       level '#{l1.name}'
 
       stage 'Lesson2'
       level '#{l2.name}'
 
-      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      lesson_group 'content', display_name: 'Content'
       stage 'Lesson3'
       level '#{l3.name}'
     SCRIPT
@@ -2021,6 +2021,12 @@ endvariants
       ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
       ScriptDSL.parse(dsl, 'a filename')[0][:stages]
     )
+
+    assert_equal script.lesson_groups[0].key, 'required'
+    assert_equal script.lesson_groups[0].position, 1
+    assert_equal script.lesson_groups[1].key, 'content'
+    assert_equal script.lesson_groups[1].position, 2
+
     assert_equal script.stages[0].lesson_group.id, script.stages[1].lesson_group.id
     refute_equal script.stages[0].lesson_group.id, script.stages[2].lesson_group.id
   end
@@ -2032,7 +2038,7 @@ endvariants
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      lesson_group 'required', display_name: 'Overview'
       stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
@@ -2049,18 +2055,18 @@ endvariants
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'lg-1', script.stages[0].lesson_group.key
+    assert_equal 'required', script.stages[0].lesson_group.key
   end
 
   test 'can change the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      lesson_group 'required', display_name: 'Overview'
       stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson_group 'lg-2', display_name: 'Lesson Group 2'
+      lesson_group 'content', display_name: 'Content'
       stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
@@ -2069,7 +2075,7 @@ endvariants
       ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
-    assert_equal 'lg-1', script.stages[0].lesson_group.key
+    assert_equal 'required', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
@@ -2077,13 +2083,13 @@ endvariants
       ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'lg-2', script.stages[0].lesson_group.key
+    assert_equal 'content', script.stages[0].lesson_group.key
   end
 
   test 'can remove the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
-      lesson_group 'lg-1', display_name: 'Lesson Group 1'
+      lesson_group 'required', display_name: 'Overview'
       stage 'Lesson1'
       level '#{l.name}'
     SCRIPT
@@ -2097,7 +2103,7 @@ endvariants
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'lg-1', script.stages[0].lesson_group.key
+    assert_equal 'required', script.stages[0].lesson_group.key
 
     script = Script.add_script(
       {name: 'lesson-group-test-script'},
@@ -2106,6 +2112,50 @@ endvariants
     )
 
     assert_equal '', script.stages[0].lesson_group.key
+  end
+
+  test 'can change the order of lesson groups in a script' do
+    l1 = create :level
+    l2 = create :level
+    old_dsl = <<-SCRIPT
+      lesson_group 'required', display_name: 'Overview'
+      stage 'Lesson1'
+      level '#{l1.name}'
+
+      lesson_group 'content', display_name: 'Content'
+      stage 'Lesson2'
+      level '#{l2.name}'
+    SCRIPT
+    new_dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Content'
+      stage 'Lesson1'
+      level '#{l1.name}'
+
+      lesson_group 'required', display_name: 'Overview'
+      stage 'Lesson2'
+      level '#{l2.name}'
+    SCRIPT
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:lesson_groups],
+      ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
+    )
+
+    assert_equal 'required', script.lesson_groups[0].key
+    assert_equal 1, script.lesson_groups[0].position
+    assert_equal 'content', script.lesson_groups[1].key
+    assert_equal 2, script.lesson_groups[1].position
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups],
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:stages]
+    )
+
+    assert_equal 'content', script.lesson_groups[0].key
+    assert_equal 1, script.lesson_groups[0].position
+    assert_equal 'required', script.lesson_groups[1].key
+    assert_equal 2, script.lesson_groups[1].position
   end
 
   private
