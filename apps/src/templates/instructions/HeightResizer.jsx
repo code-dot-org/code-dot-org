@@ -47,24 +47,12 @@ class HeightResizer extends React.Component {
   };
 
   componentDidMount() {
-    this.resizerRef.addEventListener('mousedown', this.onMouseDown, {
-      passive: false
-    });
-    this.resizerRef.addEventListener('mouseup', this.onMouseUp, {
-      passive: false
-    });
-    this.resizerRef.addEventListener('mousemove', this.onMouseMove, {
-      passive: false
-    });
-    this.resizerRef.addEventListener('touchstart', this.onMouseDown, {
-      passive: false
-    });
-    this.resizerRef.addEventListener('touchend', this.onMouseUp, {
-      passive: false
-    });
-    this.resizerRef.addEventListener('touchmove', this.onMouseMove, {
-      passive: false
-    });
+    this.resizerRef.addEventListener('mousedown', this.onMouseDown);
+    this.resizerRef.addEventListener('mouseup', this.onMouseUp);
+    this.resizerRef.addEventListener('mousemove', this.onMouseMove);
+    this.resizerRef.addEventListener('touchstart', this.onMouseDown);
+    this.resizerRef.addEventListener('touchend', this.onMouseUp);
+    this.resizerRef.addEventListener('touchmove', this.onMouseMove);
   }
 
   componentWillUnmount() {
@@ -76,14 +64,14 @@ class HeightResizer extends React.Component {
     this.resizerRef.removeEventListener('touchmove', this.onMouseMove);
   }
 
-  componentDidUpdate(_, state) {
-    // Update listeners as dragging state changes
-    if (this.state.dragging && !state.dragging) {
-      document.addEventListener('mousemove', this.onMouseMove, {
-        passive: false
-      });
-      document.addEventListener('mouseup', this.onMouseUp, {passive: false});
-    } else if (!this.state.dragging && state.dragging) {
+  componentDidUpdate(_, prevState) {
+    // Update listeners as dragging state changes.
+    if (!prevState.dragging && this.state.dragging) {
+      // Add document listeners when drag starts.
+      document.addEventListener('mousemove', this.onMouseMove);
+      document.addEventListener('mouseup', this.onMouseUp);
+    } else if (prevState.dragging && !this.state.dragging) {
+      // Remove document listeners when drag ends.
       document.removeEventListener('mousemove', this.onMouseMove);
       document.removeEventListener('mouseup', this.onMouseUp);
     }
