@@ -53,6 +53,7 @@ class BlockyEncoder(nn.Module):
     def __init__(
             self,
             vocab_size,
+            out_dim = 128,
             embedding_dim = 300,
             hidden_dim = 256,
             bidirectional = True,
@@ -72,10 +73,10 @@ class BlockyEncoder(nn.Module):
             batch_first = True,
         )
         layer_dim = num_layers * (2 if bidirectional else 1) * hidden_dim
-        self.linear_out = nn.Linear(layer_dim * 2, hidden_dim)
+        self.linear_out = nn.Linear(layer_dim * 2, out_dim)
 
         self.embedding_dim = self.embedding.embedding_dim
-        self.z_dim = z_dim
+        self.out_dim = out_dim
         self.hidden_dim = hidden_dim
         self.num_layers = num_layers
         self.layer_dim = layer_dim

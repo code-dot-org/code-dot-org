@@ -10,8 +10,8 @@ from src import trainer
 
 
 if __name__ == "__main__":
-    train_data_path = os.path.join(DATA_DIR, 'train_data.pickle')
-    test_data_path = os.path.join(DATA_DIR, 'test_data.pickle')
+    train_data_path = os.path.join(DATA_DIR, 'course9q1/train_data.npz')
+    test_data_path = os.path.join(DATA_DIR, 'course9q1/test_data.npz')
 
     trainer.train_pipeline(
         FeedbackNN,

@@ -59,5 +59,5 @@ if __name__ == "__main__":
     train_path = os.path.join(DATA_DIR, 'course9q1/train_data.npz')
     test_path = os.path.join(DATA_DIR, 'course9q1/test_data.npz')
 
-    np.savez(train_path, train_data)
-    np.savez(test_path, test_data)
+    np.savez(train_path, **train_data)
+    np.savez(test_path, **test_data)

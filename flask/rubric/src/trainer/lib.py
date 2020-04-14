@@ -37,7 +37,6 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
     # "shuffle" means we randomly pick rows from the full set. We only do this in training
     # because it helps us not memorize the order of inputs.
     train_loader = data.DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True)
-    val_loader = data.DataLoader(val_dataset, batch_size=config['batch_size'], shuffle=False)
     test_loader = data.DataLoader(test_dataset, batch_size=config['batch_size'], shuffle=False)
 
     # this instantiates our model
@@ -54,7 +53,7 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
         acc_meter = AverageMeter()
 
         label_arr, pred_arr = [], []
-        pbar = tqdm(len(train_loader))
+        pbar = tqdm(total=len(train_loader))
 
         for batch_idx, (token_seq, token_len, label) in enumerate(train_loader):
             batch_size = len(token_seq)
@@ -67,7 +66,7 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
 
             optimizer.zero_grad()
             loss.backward()
-            torch.nn.utils.clip_grad_norm(
+            torch.nn.utils.clip_grad_norm_(
                 model.parameters(),
                 config['max_grad_norm'],
             )
