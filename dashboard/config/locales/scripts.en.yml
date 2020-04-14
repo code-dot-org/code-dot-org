@@ -16153,3 +16153,31 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Unit 5 Assessment 2
+            While Loops:
+              name: While Loops
+            Loops and Simulations:
+              name: Loops and Simulations
+            Introduction to Arrays:
+              name: Introduction to Arrays
+            'Building an App: Image Scroller':
+              name: 'Building an App: Image Scroller'
+            Unit 5 Assessment 3:
+              name: Unit 5 Assessment 3
+            Processing Arrays:
+              name: Processing Arrays
+            Functions with Return Values:
+              name: Functions with Return Values
+            'Building an App: Canvas Painter':
+              name: 'Building an App: Canvas Painter'
+            Unit 5 Assessment 4:
+              name: Unit 5 Assessment 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
+          title: Self Paced Introduction to App Lab
+          description_audience: ''
+          description_short: Learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
+          description: This unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This uni uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
