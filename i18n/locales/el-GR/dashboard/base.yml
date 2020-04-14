@@ -356,6 +356,8 @@ el:
     no_password_because_oauth: 'Δεν απαιτείται κωδικός διότι εισέρχεστε με εξωτερικό πάροχο.'
     no_password_because_sponsored: 'Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί τον κωδικό σας.'
     update_email: "Ενημέρωση"
+    parent_guardian_email_label: "Διεύθυνση ηλεκτρονικού ταχυδρομείου γονέα/κηδεμόνα"
+    none: "Κανένα"
   user_level:
     completed: 'Ολοκληρώθηκε'
     tried: 'Δοκιμάστηκε'

@@ -516,6 +516,9 @@ pl-PL:
           przekształcają dane wejściowe w wyjściowe. \n\n##Słowniczek\n\n* **Algorytm**
           - szczegółowa sekwencja instrukcji przetwarzania, które mogą być wykonywane
           przez komputer\n\n## Zasoby\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+        teacher_markdown: "* [Algorytm sortowania kart](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Przykład ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Podsumowanie
@@ -561,6 +564,9 @@ pl-PL:
           Słownictwo\n\n* **Zawartość witryny internetowej** - Surowy tekst, obrazy,
           oraz inne elementy zawarte w stronie internetowej \n\n## Materiały\n\n*
           [Zarys osobistej witryny internetowej - Poradnik](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Szkic osobistej strony](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Przykład ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         markdown: "#Podsumowanie\n\nTa lekcja wprowadza język HTML jako rozwiązanie
           problemu, jak zakomunikować komputerowi zawartości i strukturę witryny internetowej.
@@ -581,6 +587,21 @@ pl-PL:
           - `<!DOCTYPE>`\n* **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n*
           **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)**
           - `<head></head>`\n"
+      CSD U2 PSP Programming:
+        teacher_markdown: |-
+          # Przejrzyj proces rozwiązywania problemów
+
+          Przejrzyj cztery etapy procesu rozwiązywania problemów z całą klasą.
+      CSD U2 PSP Programming_2018:
+        teacher_markdown: |-
+          # Przejrzyj proces rozwiązywania problemów
+
+          Przejrzyj cztery etapy procesu rozwiązywania problemów z całą klasą.
+      CSD U2 PSP Programming_2018_2019:
+        teacher_markdown: |-
+          # Przejrzyj proces rozwiązywania problemów
+
+          Przejrzyj cztery etapy procesu rozwiązywania problemów z całą klasą.
       CSD U2 Top Websites:
         markdown: |
           # Ranking najczęściej odwiedzanych stron w Stanach Zjednoczonych
@@ -593,6 +614,18 @@ pl-PL:
           4. Amazon.com - sklep internetowy z ogromną gamą produktów
           4. Yahoo.com - wyszukiwarka stron internetowych, serwer poczty e-mail, źródło wiadomości
           5. Wikipedia.org - darmowa encyklopedia z hasłami generowanymi przez użytkowników
+      CSD U2 expand project:
+        teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
+          na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
+          przykładowe strony internetowe.
+      CSD U2 expand project_2018:
+        teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
+          na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
+          przykładowe strony internetowe.
+      CSD U2 expand project_2018_2019:
+        teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
+          na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
+          przykładowe strony internetowe.
       CSD U2 image debug match:
         answers:
         - {}
@@ -606,6 +639,10 @@ pl-PL:
         - {}
         - {}
         - {}
+        teacher_markdown: Chociaż ten poziom można wykorzystać do oceny zrozumienia
+          przez uczniów składni znacznika `<img>`, jego głównym celem jest uświadomienie
+          uczniom najczęstszych rodzajów błędów, jakie mogą napotkać podczas dodawania
+          grafiki do stron internetowych.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -681,6 +718,21 @@ pl-PL:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Szybkie sprawdzenie list
+      CSD U2 project guide:
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U2 project guide_2018:
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U2 project guide_2018_2019:
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -910,6 +962,11 @@ pl-PL:
         - correct: true
         questions:
         - {}
+      Choosing Good IDs:
+        teacher_markdown: |-
+          #### Rozwijanie dobrych nawyków programistycznych
+
+          Przestrzeganie jasnych i spójnych zwyczajów nazewnictwa jest ważnym nawykiem, ale korzyści rzadko są od razu oczywiste dla uczniów. W dłuższej perspektywie naprawdę opłaca się konsekwentnie nazywać ID, szczególnie dlatego, że okaże się pomocne, gdy przyjdzie czas na czytanie programów Twoich uczniów, ale uprości również proces łączenia ekranów uczniów w pełną aplikację zespołu.
       Dance_Party_extras_intro:
         markdown: |
           # Nie przestawaj tańczyć!
@@ -1383,6 +1440,10 @@ pl-PL:
           ## Zasoby
 
           * [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: |+
+          * [Proces rozwiązywania problemu](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Poradnik aktywności ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+
+
       Unit 1 Lesson 3 Overview:
         markdown: "#Podsumowanie\nNa tej lekcji zastosujesz proces rozwiązywania problemu
           do gamy problemów, aby poznać, jak każdy krok pomaga Ci rozwijać i ulepszać

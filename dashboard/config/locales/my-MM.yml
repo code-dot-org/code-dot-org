@@ -50,6 +50,8 @@ my:
   teacher:
     panel:
       answer_viewer: ဆရာအဖွဲ့
+  user:
+    none: ဘာမှမရှိ
   home:
     trynow: ဆက်သင်ယူရန်
   video:

@@ -6916,6 +6916,8 @@ zh-TW:
               name: 單元 5 評量 4
             Intro to App Lab:
               name: App Lab 入門
+            Variables:
+              name: 變數
         virtual-holding-place:
           stages:
             Velocity:

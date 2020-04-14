@@ -3,6 +3,7 @@ zh-TW:
   data:
     display_name:
       AB_Debug_Artist1: '創作者的編碼調適 #1 (AB)'
+      Alien Defender: 外星人入侵
       App Lab Intro 8 - Video Design Mode: 影片：設計模式
       App Lab Intro 8 - Video Getting Started: 影片：入門
       App Lab Intro 8 - Video Images and Sounds: 影片：圖像和聲音
@@ -384,6 +385,9 @@ zh-TW:
       'CSD: Sprites in Game Lab': 影片：角色的介紹
       'CSD: Sprites in Game Lab_2018': 影片：角色的介紹
       'CSD: Sprites in Game Lab_2019': 影片：角色的介紹
+      'Course E: Artist Project': 課程 E 小藝術家專案
+      'Course E: Artist Project_2018': 課程 E 小藝術家專案
+      'Course E: Artist Project_2019': 課程 E 小藝術家專案
       CourseEF_video_IntroSpriteLab: 這是 Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: 這是 Sprite Lab
       CourseEF_video_MakeSprite: 如何建立一個角色

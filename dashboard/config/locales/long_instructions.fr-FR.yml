@@ -249,6 +249,15 @@ fr-FR:
       4-5 Bee Conditionals 1: L'abeille ne peut pas savoir si c'est une fleur ou un
         gâteau de miel. Recueille le nectar seulement sur les fleurs, mais vérifie
         d'abord si c'est une fleur ou un gâteau de miel.
+      4-5 Bee Conditionals 2: |-
+        Plus de nuages!
+
+        Vérifie sous chaque nuage pour voir s'il cache une fleur avant de récupérer du nectare.
+
+        Souviens-toi : tous les nuages ne cachent pas la même chose !
+      4-5 Bee Conditionals 4: L'objet inconnu est soit une fleur, soit une ruche.
+        Utilise le bloc `Si/Sinon` pour récupérer le nectar si c'est une fleur, et
+        le bloc `Sinon` pour fabriquer du miel (parce que c'est une ruche).
       4-5 Bee Conditionals 5: Il pourrait y avoir une fleur ou un gâteau de miel sous
         ces nuages. Utilise le bloc « Si/Sinon » pour récupérer le nectar si c'est
         une fleur, et le bloc « Sinon » pour fabriquer du miel (parce que c'est un
@@ -290,9 +299,14 @@ fr-FR:
         peut parcourir n'importe quel chemin sinueux peu importe la longueur!"
       4-5 Maze Conditionals 2: Utilise le bloc « Répéter jusqu'à » pour amener le
         zombie au tournesol.
+      4-5 Maze Conditionals 3: Utilise le block `Si` pour me laisser décider quand
+        tourner.
       4-5 Maze Conditionals 4: OK, c'est la même chose que le puzzle précédent, mais
         tu dois te rappeler comment tu as utilisé le bloc «Si» et le bloc « Répéter
         » ensemble.
+      4-5 Maze Conditionals 5: "\"Moi vouloir tournesol !\" \n\nUtilise un bloc `Si`
+        pour amener le zombie vers le tournesol avec le plus petit nombre de blocs
+        possible."
       4-5 Maze Conditionals 6: Moi veux tournesol ! Utilise un bloc « Si » pour m'y
         amener avec le plus petit nombre de blocs possible.
       4-5 Maze Conditionals 7: OK, nous allons le refaire encore une fois pour nous
@@ -320,6 +334,8 @@ fr-FR:
         à vent.
       4-5 Nested Loops 6: Peux-tu dessiner un hexagone en bouclant le code du triangle
         ?
+      4-5 Nested Loops 8: "Boucle ce dessin 6 fois. \nDe combien dois-tu tourner chaque
+        fois que tu fais un tour de boucle ?"
       4-5 Nested Loops 9: Dessine les dents dans la bouche de l'alligator !
       4-5 Nested Loops Assessment 1: "**Évaluation :** Utilise une boucle imbriquée
         pour terminer le dessin."
@@ -330,6 +346,10 @@ fr-FR:
       4-5 While Loops 3: "Use as few blocks as possible to complete\nthis puzzle!
         \ \\\r\n\\\r\nMove me to the pile and remove all the dirt, then move\nto the
         hole and fill it completely."
+      4-5 While Loops 4: |-
+        Wow, regarde ça!
+
+        Je ne sais pas combien de pelletées de terre il faudra pour le remplir.  Peux-tu écrire un programme qui le remplira en utilisant le bloc `remplir`jusqu’à ce que le sol soit nivelé ?
       Alien Defender: "**Idée de projet:** Faire un jeu de type Defender dans Play
         Lab!"
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
@@ -1547,42 +1567,6 @@ fr-FR:
         to see the code\nthat is making the two different kinds of lists.\\\r\n* Make
         sure you and your\npartner agree on what the different tags do.\\\r\n* Fix
         the code so that the\nsecond item in each list displays correctly"
-      CSD U2 navigation: "# Create a Navigation Bar\\\r\n\n\\\r\nHere's\nyour project
-        from before.  You'll be linking the two pages by creating a\n**navigation
-        bar** at the top of the page.  Websites usually have the same\nnavigation
-        bar across all of their pages so you can get back and forth between\nthings
-        on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"\ntarget=\"_new\">this
-        page</a>\\\r\n\\\r\n\n# Do This\\\r\n\n-   In your home page (index.html),\n
-        \   add two hyperlinks at the top of the page, one to your lists page, and
-        one\n    to the home page.\\\r\n-   _Even though it might seem strange to
-        link a page\n    to itself, it's less confusing if the navigation bar is exactly
-        the same\n    on every page._\\\r\n-   Copy the code for the navigation bar,
-        then add it to\n    the top of your lists page.\\\r\n-   Test your links in
-        the preview area by clicking\n    on them.\\\r\n    \\\r"
-      CSD U2 navigation_2018: "# Create a Navigation Bar\\\r\n\n\\\r\nHere's\nyour
-        project from before.  You'll be linking the two pages by creating a\n**navigation
-        bar** at the top of the page.  Websites usually have the same\nnavigation
-        bar across all of their pages so you can get back and forth between\nthings
-        on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"\ntarget=\"_new\">this
-        page</a>\\\r\n\\\r\n\n# Do This\\\r\n\n-   In your home page (index.html),\n
-        \   add two hyperlinks at the top of the page, one to your lists page, and
-        one\n    to the home page.\\\r\n-   _Even though it might seem strange to
-        link a page\n    to itself, it's less confusing if the navigation bar is exactly
-        the same\n    on every page._\\\r\n-   Copy the code for the navigation bar,
-        then add it to\n    the top of your lists page.\\\r\n-   Test your links in
-        the preview area by clicking\n    on them.\\\r\n    \\\r"
-      CSD U2 navigation_2019: "# Create a Navigation Bar\\\r\n\n\\\r\nHere's\nyour
-        project from before.  You'll be linking the two pages by creating a\n**navigation
-        bar** at the top of the page.  Websites usually have the same\nnavigation
-        bar across all of their pages so you can get back and forth between\nthings
-        on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"\ntarget=\"_new\">this
-        page</a>\\\r\n\\\r\n\n# Do This\\\r\n\n-   In your home page (index.html),\n
-        \   add two hyperlinks at the top of the page, one to your lists page, and
-        one\n    to the home page.\\\r\n-   _Even though it might seem strange to
-        link a page\n    to itself, it's less confusing if the navigation bar is exactly
-        the same\n    on every page._\\\r\n-   Copy the code for the navigation bar,
-        then add it to\n    the top of your lists page.\\\r\n-   Test your links in
-        the preview area by clicking\n    on them.\\\r\n    \\\r"
       CSD U2 new page: "# Create a New Page for Your Website.\\\r\n\n\\\r\nHere's\nyour
         project from before.  You'll be adding another page.  Your new page\ncan be
         a top 10 list, a recipe, or anything you like.\\\r\n\\\r\n\n# Do This\\\r\n\n\\*\nAdd
@@ -6493,6 +6477,7 @@ fr-FR:
         le miel?
       course3_bee_functions_challenge1: Tu dois te débrouiller pour ce défi. Cela
         peut-être plus compliqué qu'il n'y parait!
+      course3_bee_functions_challenge2: Tu dois te débrouiller seul pour ce défi !
       course3_bee_functions_challenge3: Crée une nouvelle fonction pour collecter
         tout le nectar et le miel tant que le chemin continue. Utilise-la pour résoudre
         l'énigme !
@@ -6502,9 +6487,16 @@ fr-FR:
         should turn. _Turn right at the pumpkins._ Otherwise keep\ngoing forward,
         but remember to collect all of the lettuce or corn along the\nway. \\\r\n\\\r\n**Each
         hidden crop has only one corn or lettuce.**"
+      course3_farmer_condLoops_challenge2: "_\"C'est un labyrinthe végétal !\"_ \n\nTourne
+        à droite aux citrouilles, tourne à gauche aux laitues. Ramasse tout pour finir
+        le niveau."
       course3_farmer_until_challenge2: Utilise les blocs Si/Sinon pour suivre le chemin
         qui tourne. À chaque tournant, utilise la commande `supprimer 1` dans une
         boucle pour enlever les tas.
+      course3_maze_debugging_challenge1: _"Est-ce que je ne serais pas en train de
+        tourner en rond ?"_
+      course3_maze_debugging_challenge2: _"Si je tourne trop souvent, je vais m'étourdir!
+        Aide moi à atteindre le cochon avec seulement 4 commandes `tourner`."_
       course3_maze_until_challenge1: Aucun indice, simplement un défi. Amène le zombie
         jusqu’au tournesol.
       course3_playLab_challenge1: "\\*The **squirrels** are terrified\nto see that
@@ -7289,12 +7281,24 @@ fr-FR:
         * * *
 
         ![extensible](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
-      courseC_artist_loops5a: "What happens when you replace\none or both of the stickers
-        with a different creature?\\\r\n\\_\\_\\_\\\r\n![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)"
-      courseC_artist_loops5a_2018: "What happens when you replace\none or both of
-        the stickers with a different creature?\\\r\n\\_\\_\\_\\\r\n![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)"
-      courseC_artist_loops5a_2019: "What happens when you replace\none or both of
-        the stickers with a different creature?\\\r\n\\_\\_\\_\\\r\n![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)"
+      courseC_artist_loops5a: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b: "Que se passe-t-il lorsque tu `avances` puis `recules`
         de 100, 200 ou 400 pixels, quelque part à l'intérieur de la boucle ?\n\n-
         \  Essaie d'utiliser le bloc 'définir le modèle', avant de commencer ta boucle
@@ -7780,18 +7784,24 @@ fr-FR:
 
         Il y a un bloc de trop qui va faire pêter l'oiseau.
         Jette-lele en le décrochant des blocs gris et en le faisant glisser vers la boîte à outils.
-      courseC_maze_programming4: "_\"Trace the path and lead me to\nthe silly pig.\"_
-        \\\r\n\\\r\nAvoid TNT or feathers will fly!"
-      courseC_maze_programming4_2018: "_\"Trace the path and lead me to\nthe silly
-        pig.\"_ \\\r\n\\\r\nAvoid TNT or feathers will fly!"
-      courseC_maze_programming4_2019: "_\"Trace the path and lead me to\nthe silly
-        pig.\"_ \\\r\n\\\r\nAvoid TNT or feathers will fly!"
-      courseC_maze_programming5: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
-        the TNT."
-      courseC_maze_programming5_2018: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
-        the TNT."
-      courseC_maze_programming5_2019: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
-        the TNT."
+      courseC_maze_programming4: "_\"Trace le chemin et conduis-moi au cochon idiot.\"_
+        \n\nÉvite le TNT ou les plumes vont voler !"
+      courseC_maze_programming4_2018: "_\"Trace le chemin et conduis-moi au cochon
+        idiot.\"_ \n\nÉvite le TNT ou les plumes vont voler !"
+      courseC_maze_programming4_2019: "_\"Trace le chemin et conduis-moi au cochon
+        idiot.\"_ \n\nÉvite le TNT ou les plumes vont voler !"
+      courseC_maze_programming5: |-
+        _"Suivez ce chemin pour me mener au cochon !"_
+
+        Évites le TNT.
+      courseC_maze_programming5_2018: |-
+        _"Suivez ce chemin pour me mener au cochon !"_
+
+        Évites le TNT.
+      courseC_maze_programming5_2019: |-
+        _"Suivez ce chemin pour me mener au cochon !"_
+
+        Évites le TNT.
       courseC_maze_programming6: |-
         \_"Reste calme et aide moi a trouver ce vilain cochon. Autrement je pourrais m'énerver!" \_
 
@@ -7848,63 +7858,48 @@ fr-FR:
       courseC_maze_programming_challenge2_2019: Parfois il y a plus d'une manière
         de résoudre le même problème. Parfois il est plus rapide de faire marche arrière
         que d'aller tout droit!
-      courseC_starWars_loops10: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\\r\n\n_\"Go
-        BB-8!\"_\\\r\n\\\r\nYou are doing great! Keep it up!"
-      courseC_starWars_loops10_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\\r\n\n_\"Go
-        BB-8!\"_\\\r\n\\\r\nYou are doing great! Keep it up!"
-      courseC_starWars_loops10_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\\r\n\n_\"Go
-        BB-8!\"_\\\r\n\\\r\nYou are doing great! Keep it up!"
-      courseC_starWars_loops11: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        going, BB-8!\"_\\\r\n\\\r\nYou are almost there! This time, choose any\npath
-        you like!"
-      courseC_starWars_loops11_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        going, BB-8!\"_\\\r\n\\\r\nYou are almost there! This time, choose any\npath
-        you like!"
-      courseC_starWars_loops11_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        going, BB-8!\"_\\\r\n\\\r\nYou are almost there! This time, choose any\npath
-        you like!"
       courseC_starWars_loops5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
       courseC_starWars_loops5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
       courseC_starWars_loops5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Allez BB-8!"_'
-      courseC_starWars_loops6: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Can
-        you get it all?\"_\\\r\n\\\r\nLoops even work with more than one block\ninside!
-        \ Can you loop this sequence?"
-      courseC_starWars_loops6_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Can
-        you get it all?\"_\\\r\n\\\r\nLoops even work with more than one block\ninside!
-        \ Can you loop this sequence?"
-      courseC_starWars_loops6_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Can
-        you get it all?\"_\\\r\n\\\r\nLoops even work with more than one block\ninside!
-        \ Can you loop this sequence?"
-      courseC_starWars_loops7: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"You
-        can do it!\"_\\\r\n\\\r\nCan you try to get all the scrap metal using just\none
-        loop? Try programming it all out then finding the repeating code to put\nin
-        a loop."
-      courseC_starWars_loops7_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"You
-        can do it!\"_\\\r\n\\\r\nCan you try to get all the scrap metal using just\none
-        loop? Try programming it all out then finding the repeating code to put\nin
-        a loop."
-      courseC_starWars_loops7_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"You
-        can do it!\"_\\\r\n\\\r\nCan you try to get all the scrap metal using just\none
-        loop? Try programming it all out then finding the repeating code to put\nin
-        a loop."
-      courseC_starWars_loops8: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        it up, BB-8.\"_\\\r\n\\\r\n**Challenge:** Combine ideas from the last\nfew
-        puzzles to complete this level."
-      courseC_starWars_loops8_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        it up, BB-8.\"_\\\r\n\\\r\n**Challenge:** Combine ideas from the last\nfew
-        puzzles to complete this level."
-      courseC_starWars_loops8_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        it up, BB-8.\"_\\\r\n\\\r\n**Challenge:** Combine ideas from the last\nfew
-        puzzles to complete this level."
-      courseC_starWars_loops9: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        going!\"_\\\r\n\\\r\nUse what you have learned to pick up all of the scrap\nmetal!"
-      courseC_starWars_loops9_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        going!\"_\\\r\n\\\r\nUse what you have learned to pick up all of the scrap\nmetal!"
-      courseC_starWars_loops9_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\n_\"Keep
-        going!\"_\\\r\n\\\r\nUse what you have learned to pick up all of the scrap\nmetal!"
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Peux tu tout obtenir ?"_
+
+        Les boucles fonctionnent même avec plus d'un bloc à l'intérieur ! Peux tu boucler cette séquence ?
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Peux tu tout obtenir ?"_
+
+        Les boucles fonctionnent même avec plus d'un bloc à l'intérieur ! Peux tu boucler cette séquence ?
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Peux tu tout obtenir ?"_
+
+        Les boucles fonctionnent même avec plus d'un bloc à l'intérieur ! Peux tu boucler cette séquence ?
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tu peux le faire !"_
+
+        Peux tu essayer de récupérer toute la ferraille en utilisant une seule boucle? Essayez de tout programmer puis de trouver le code répétitif à mettre en boucle.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tu peux le faire !"_
+
+        Peux tu essayer de récupérer toute la ferraille en utilisant une seule boucle? Essayez de tout programmer puis de trouver le code répétitif à mettre en boucle.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Tu peux le faire !"_
+
+        Peux tu essayer de récupérer toute la ferraille en utilisant une seule boucle? Essayez de tout programmer puis de trouver le code répétitif à mettre en boucle.
+      courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
+
+        \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
+      courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
+
+        \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Continues comme ça, BB-8."_
+
+        \*\* Défi:\*\* Combines les idées des derniers énigmes pour terminer ce niveau.
       courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)\n_\"Let’s
         try something new. This time, skate in a zig-zag.\"_\\\r\n\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"\nwidth=\"200px\"
         style=\"float: left; margin: 0 15px 15px 0;\" />\\\r\nDraw a\nstair-step pattern
@@ -8907,18 +8902,23 @@ fr-FR:
       courseD_maze_ramp3_2019: "_\"This pig is ruffling my feathers.\"_\\\r\n\\\r\nThere\nis
         one extra block that is going to cause the bird to crash.  \\\r\nThrow it\naway
         by removing it from the other blocks and dragging it back to the toolbox."
-      courseD_maze_ramp4: "_\"Trace the path and lead me to\nthe silly pig.\"_ \\\r\n\\\r\nAvoid
-        TNT or feathers will fly!"
-      courseD_maze_ramp4_2018: "_\"Trace the path and lead me to\nthe silly pig.\"_
-        \\\r\n\\\r\nAvoid TNT or feathers will fly!"
-      courseD_maze_ramp4_2019: "_\"Trace the path and lead me to\nthe silly pig.\"_
-        \\\r\n\\\r\nAvoid TNT or feathers will fly!"
-      courseD_maze_ramp5: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
-        the TNT."
-      courseD_maze_ramp5_2018: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
-        the TNT."
-      courseD_maze_ramp5_2019: "_\"Follow this path to get me to\nthe pig!\"_\\\r\n\\\r\nAvoid
-        the TNT."
+      courseD_maze_ramp4: "_\"Trace le chemin et conduis-moi au cochon idiot.\"_ \n\nÉvite
+        le TNT ou les plumes vont voler !"
+      courseD_maze_ramp4_2018: "_\"Trace le chemin et conduis-moi au cochon idiot.\"_
+        \n\nÉvite le TNT ou les plumes vont voler !"
+      courseD_maze_ramp4_2019: _"Trace le chemin et conduis-moi au gland."_
+      courseD_maze_ramp5: |-
+        _"Suivez ce chemin pour me mener au cochon !"_
+
+        Évites le TNT.
+      courseD_maze_ramp5_2018: |-
+        _"Suivez ce chemin pour me mener au cochon !"_
+
+        Évites le TNT.
+      courseD_maze_ramp5_2019: |-
+        _"Suivez ce chemin pour me mener au cochon !"_
+
+        Évites le TNT.
       courseD_maze_ramp5a: Regarde bien la séquence et essaie de trouver comment atteindre
         ce cochon!
       courseD_maze_ramp5a_2018: Regarde bien la séquence et essaie de trouver comment

@@ -2043,6 +2043,8 @@ ko:
           stages:
             While Loops:
               name: "~인 동안 반복"
+            Variables:
+              name: 변수
         virtual-holding-place:
           stages:
             Velocity:

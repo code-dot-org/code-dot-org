@@ -4995,43 +4995,7 @@ ro:
         csd2-2020:
           description_audience: "[șir gol]"
           stages:
-            Exploring Web Pages:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Intellectual Property:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Images:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Project - Planning Layout and Style:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Project - Building a Webpage:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Purpose of a  Websites:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Team Problem Solving:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sources and Research:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            CSS Classes:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Planning a Multi-page Website:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Linking and Navigation:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Project - Website for a Purpose:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Peer Review and Final Touches:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Post-Project Test:
@@ -5142,21 +5106,10 @@ ro:
           description_short: Programare
           description_audience: "[șir gol]"
           stages:
-            Shapes and Parameters:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Variables:
               name: Variabile
-            Random Numbers:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprites and Animations:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Sprite Properties:
               name: Proprietăți spiriduș
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Text and Captioned Scenes:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -5592,6 +5545,8 @@ ro:
             CS Principles Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
         virtual-holding-place:
           stages:
             Velocity:

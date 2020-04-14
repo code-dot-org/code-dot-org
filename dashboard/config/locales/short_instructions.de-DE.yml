@@ -3135,6 +3135,10 @@ de-DE:
       courseD_scrat_ramp7: Hilf Scrat zur Eichel zu gelangen!
       courseE_aboutme_6: 'Weiter so! Versuche Deinem Poster mehr Funktionen hinzuzufügen,
         um es noch besser zu machen. '
+      courseE_artist_concept1: 'Erstelle dieses Bild neu. '
+      courseE_artist_concept1_2018: 'Erstelle dieses Bild neu. '
+      courseE_artist_concept4: Rekonstruiere diese Zeichnung.
+      courseE_artist_concept4_2018: Rekonstruiere diese Zeichnung.
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
         Hilf mir, die quadratischen Gläser zu zeichnen.  Hinweis: Die Brücke zwischen
         den Gläsern ist 25 Pixel kürzer als die Länge der Quadrate.'
@@ -3144,6 +3148,10 @@ de-DE:
         verschachtelte Schleife.
       courseE_bee_concept1_2018: Sammle den ganzen Nektar von allen Blumen. Benutze
         eine verschachtelte Schleife.
+      courseE_bee_concept2: 'Hilf der Biene bei der Herstellung des ganzen Honigs. '
+      courseE_bee_concept2_2018: 'Hilf der Biene bei der Herstellung des ganzen Honigs. '
+      courseE_bee_concept5: Hilf der Biene, den Nektar aus den Blumen zu sammeln?
+      courseE_bee_concept5_2018: Hilf der Biene, den Nektar aus den Blumen zu sammeln?
       courseE_bee_functions1: Sammle den ganzen Nektar von allen Blumen.
       courseE_bee_functions3: Funktionen sind Programm-Bausteine, die eine Aufgabe
         ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
@@ -3156,8 +3164,16 @@ de-DE:
       courseE_farmer_concept2_2018: Sammle alle Kürbisse ein.
       courseE_farmer_concept3: Fülle das Loch am Ende jedes dieser Wege.
       courseE_farmer_concept3_2018: Fülle das Loch am Ende jedes dieser Wege.
+      courseE_farmer_functions10b: Verwende deine neue Funktion zweimal, um dieses
+        Rätsel zu lösen.
       courseE_farmer_functions4b: Verwende deine neue Funktion, um dieses Rätsel zu
         lösen.
+      courseE_farmer_ramp11a: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp11a_2018: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp11a_2019: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp11b: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp11b_2018: Solange es einen Haufen gibt, entferne ihn.
+      courseE_farmer_ramp11b_2019: Solange es einen Haufen gibt, entferne ihn.
       courseE_video_createFunctions: Wir haben - noch - kein Video zur Erstellung
         von Funktionen. Dies ist ein Platzhalter.
       courseE_video_createFunctions2: Wir haben - noch - kein Video zur Erstellung
