@@ -35,7 +35,7 @@ class Script < ActiveRecord::Base
 
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, dependent: :destroy
+  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
   has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
   has_many :stages, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
@@ -913,23 +913,27 @@ class Script < ActiveRecord::Base
     lockable_count = 0
     non_lockable_count = 0
 
-    # This checks for 2 things:
+    # Finds or creates Lesson Groups with the correct position.
+    # In addition it check for 2 things:
     # 1. That all the lesson groups specified by the editor have a key and
     # display name.
     # 2. If the lesson group key is an existing key that the given display name
     # for that key matches the already saved display name
-    raw_lesson_groups&.each do |lesson_group|
-      if lesson_group[:display_name].blank?
-        raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{lesson_group[:key]}"
+    raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+      if raw_lesson_group[:display_name].blank?
+        raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
       end
 
-      existing_lesson_group = LessonGroup.find_by(
-        key: lesson_group[:key],
+      lesson_group = LessonGroup.find_or_create_by(
+        key: raw_lesson_group[:key],
         script: script
       )
 
-      if existing_lesson_group && existing_lesson_group.localized_display_name != lesson_group[:display_name]
-        raise "Expect key and display name to match. The Lesson Group with key: #{lesson_group[:key]} has display_name: #{existing_lesson_group&.localized_display_name}"
+      lesson_group.assign_attributes(position: index + 1)
+      lesson_group.save! if lesson_group.changed?
+
+      if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+        raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
       end
     end
 
