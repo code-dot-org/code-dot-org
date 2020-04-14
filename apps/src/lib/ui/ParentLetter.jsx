@@ -5,6 +5,8 @@ import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
 import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
+import i18n from '@cdo/locale';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
@@ -76,7 +78,7 @@ class ParentLetter extends React.Component {
             .filter(student => student.id.toString() === studentId)
             .shift()
         : null;
-    const studentName = student ? student.name : null;
+    const studentName = student ? student.name : '';
     const secretPicturePath = student ? student.secret_picture_path : null;
     const secretWords = student ? student.secret_words : null;
 
@@ -84,14 +86,13 @@ class ParentLetter extends React.Component {
       <div id="printArea">
         <Header logoUrl={logoUrl} />
         <article>
-          <p>Hello!</p>
-          <p>
-            In my class, your child {studentName} is learning computer science
-            on <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
-            learning computer science and basic coding to create interactive
-            animations, games, or apps. Your interest in what your child is
-            learning is critical, and Code.org makes it easy to stay involved.
-          </p>
+          <p>{i18n.parentLetterHello()}</p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterIntro({
+              homeLink: pegasus('/'),
+              studentName: studentName
+            })}
+          />
           <h1>
             Step 1 - Encourage your child, show interest in computer science
           </h1>
