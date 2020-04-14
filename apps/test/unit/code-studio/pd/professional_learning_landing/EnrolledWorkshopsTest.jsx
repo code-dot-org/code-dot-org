@@ -18,10 +18,11 @@ describe('EnrolledWorkshops', () => {
     serializedWorkshopFactory.build({state: 'Ended'})
   ];
 
-  // By default, use normal time
-  let clock = sinon.useFakeTimers(new Date());
+  let clock;
 
   beforeEach(() => {
+    // By default, use normal time
+    clock = sinon.useFakeTimers(new Date());
     sinon.stub(utils, 'windowOpen');
   });
 
