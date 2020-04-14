@@ -57,7 +57,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_profanity
-    WebPurify.stubs(:find_potential_profanity).returns('damn')
+    WebPurify.stubs(:find_potential_profanities).returns(['damn'])
 
     program = generate_program('My Profanity', 'damn')
     assert_equal(
