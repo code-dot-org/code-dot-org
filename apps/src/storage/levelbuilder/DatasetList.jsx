@@ -21,8 +21,8 @@ class DatasetList extends React.Component {
         <h1>Datasets</h1>
         <ul>
           {this.props.datasets.map(dataset => (
-            <li key={dataset}>
-              <a href={`/datasets/${dataset}`}>{dataset}</a>
+            <li key={decodeURIComponent(dataset)}>
+              <a href={`/datasets/${dataset}`}>{decodeURIComponent(dataset)}</a>
               {this.props.liveDatasets.includes(dataset) && (
                 <span> (Live) </span>
               )}
