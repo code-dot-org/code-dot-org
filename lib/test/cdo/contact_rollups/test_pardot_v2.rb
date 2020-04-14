@@ -307,4 +307,21 @@ class PardotV2Test < Minitest::Test
     cleaned_str = str.strip.gsub(/\s*\n\s*/, '')
     Nokogiri::XML cleaned_str
   end
+
+  def test_delete_in_non_production_fails
+    PardotV2.expects(:post_request_with_auth).never
+    CDO.stubs(:rack_env?).with(:production).returns(false)
+
+    assert_equal [1], PardotV2.delete_prospects([1])
+  end
+
+  def test_delete_with_too_many_records_fails
+    PardotV2.expects(:post_request_with_auth).never
+    CDO.stubs(:rack_env?).with(:production).returns(true)
+
+    too_big_batch_size = PardotV2::MAX_PROSPECT_DELETION_BATCH_SIZE + 1
+    too_big_batch = (1..too_big_batch_size).to_a
+
+    assert_equal too_big_batch, PardotV2.delete_prospects(too_big_batch)
+  end
 end
