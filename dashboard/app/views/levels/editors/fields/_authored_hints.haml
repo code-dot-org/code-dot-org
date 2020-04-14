@@ -42,24 +42,6 @@
 - content_for :body_scripts do
   :javascript
     $(document).ready(function () {
-      // A markdown parser that supports a subset of rules; specifically,
-      // those rules that we feel comfortable entrusting to translators
-      var limitedMarked = (function () {
-
-        var renderer = new marked.Renderer();
-        renderer.link = function (href, title, text) {
-          return text;
-        };
-
-        return function (input) {
-          return marked(input, {
-            renderer: renderer,
-            sanitize: true
-          });
-        };
-
-      })();
-
       levelbuilder.jsonEditor("#authored_hints", {
         json_textarea: '#level_authored_hints',
         add_button: '#add_authored_hint',
