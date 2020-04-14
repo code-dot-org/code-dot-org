@@ -188,8 +188,8 @@ class PardotV2
   def self.delete_prospects(prospect_ids)
     failed_prospect_ids = []
 
-    return failed_prospect_ids unless CDO.rack_env? :production
-    return failed_prospect_ids if prospect_ids.length > MAX_PROSPECT_DELETION_BATCH_SIZE
+    return prospect_ids unless CDO.rack_env? :production
+    return prospect_ids if prospect_ids.length > MAX_PROSPECT_DELETION_BATCH_SIZE
 
     prospect_ids.each do |prospect_id|
       url = "#{PROSPECT_DELETION_URL}/#{prospect_id}"
