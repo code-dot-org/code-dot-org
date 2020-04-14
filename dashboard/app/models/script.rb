@@ -914,11 +914,11 @@ class Script < ActiveRecord::Base
     non_lockable_count = 0
 
     # This checks for 2 things:
-    # 1. Check that all the lesson groups specified by the editor have a key and
+    # 1. That all the lesson groups specified by the editor have a key and
     # display name.
-    # 2. Check that if the lesson group key is an existing key that the display name
-    # for that key matches
-    raw_lesson_groups.each do |lesson_group|
+    # 2. If the lesson group key is an existing key that the given display name
+    # for that key matches the already saved display name
+    raw_lesson_groups&.each do |lesson_group|
       if lesson_group[:display_name].blank?
         raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{lesson_group[:key]}"
       end
