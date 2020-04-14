@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{tlačítko přihlášení}}
+{{ signup_button }}
 
 # Jak naplánovat vaši Hodinu kódu
 
