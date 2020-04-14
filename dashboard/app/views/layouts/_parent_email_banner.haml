@@ -1,9 +1,16 @@
--#
-  Only show cookie banner when in a GDPR country, or when we are in the test
-  environment and the show_cookie_banner_on_test URL parameter is specified,
-  presumably by a UI test.
+-# Only show when we're not showing the cookie banner,
+-# the current user is signed in, a student, doesn't have a parent email, and hasn't previously dismissed the banner
+-# and the page isn't an Applab or Gamelab level.
 
-- if !(request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)) && current_user && current_user.user_type == 'student' && current_user.parent_email.blank? && !current_user.parent_email_banner_dismissed
+:ruby
+  show_banner =
+    !(request.gdpr? || (rack_env == :test && request.params['show_cookie_banner_on_test'].present?)) &&
+    current_user && current_user.user_type == 'student' &&
+    current_user.parent_email.blank? &&
+    !current_user.parent_email_banner_dismissed &&
+    !(@level && (@level.game == Game.applab || @level.game == Game.gamelab))
+
+- if show_banner
   %script{src: webpack_asset_path("js/layouts/_parent_email_banner.js")}
 
   #at-home-banner
