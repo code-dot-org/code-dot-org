@@ -9,6 +9,7 @@ export default function ExternalButton(board) {
   if (this.pullup) {
     this.board.mb.trackDigitalPin(this.board.pin, 1);
   }
+  // Flag to only trigger event on first of type
   this.connect = false;
 
   this.board.mb.trackDigitalComponent(this.board.pin, (sourceID, eventID) => {
@@ -26,6 +27,7 @@ export default function ExternalButton(board) {
 
   // Add a read-only `isPressed` property
   Object.defineProperty(this, 'isPressed', {
+    // More 'down' events than 'up' indicates we are in a pressed state
     get: () => this.buttonEvents[1] > this.buttonEvents[2]
   });
 }
