@@ -33,7 +33,10 @@ export default class AddParentEmailController {
     this.formParentEmailField = formParentEmailField;
     this.formParentOptInField = formParentOptInField;
     this.onSuccessCallback = onSuccessCallback;
-    link.click(this.showAddParentEmailModal);
+    link.click(event => {
+      event.preventDefault();
+      this.showAddParentEmailModal();
+    });
   }
 
   showAddParentEmailModal = () => {

@@ -11,7 +11,7 @@ function showimage() {
     
     if (file.type.startsWith('image/')){ 
     
-      // the code below adds the image using the file object itself
+      // Approach #1: the code below adds the image using the file object itself
       const img = document.createElement("img");
       img.classList.add("obj");
       img.file = file;
@@ -22,7 +22,7 @@ function showimage() {
       reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
       reader.readAsDataURL(file);
  
-      // the code below adds the image using the URL to the file object
+      // Approach #2: the code below adds the image using the blob URL to the file object
       const objectURL = window.URL.createObjectURL(file);
       document.getElementById('urlpreview').innerHTML = objectURL;
       document.getElementById('thumbnail').src = objectURL;

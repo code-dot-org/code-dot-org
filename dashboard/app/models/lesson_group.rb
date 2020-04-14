@@ -3,11 +3,12 @@
 # Table name: lesson_groups
 #
 #  id          :integer          not null, primary key
-#  name        :string(255)
+#  key         :string(255)      not null
 #  script_id   :integer          not null
 #  user_facing :boolean          default(TRUE), not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  position    :integer
 #
 # Indexes
 #

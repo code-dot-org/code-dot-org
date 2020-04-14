@@ -101,11 +101,6 @@
             = ff.hidden_field :country
             = ff.hidden_field :full_address
 
-    .row
-      .span10.tos
-        = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
-        = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
-
     -# If GDPR applies, show an additional checkbox.
     - if request.gdpr? || request.params['force_in_eu']
       .row
@@ -134,6 +129,11 @@
         .radio
           = f.radio_button :email_preference_opt_in, 'no'
           = f.label :email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
+
+    .row
+      .span10.tos
+        = f.hidden_field :terms_of_service_version, value: User::TERMS_OF_SERVICE_VERSIONS.last
+        = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
     %button.submit= t('signup_form.go_to_account')
 

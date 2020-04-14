@@ -50,7 +50,7 @@ class LoginTypeParagraph extends Component {
               __useDeprecatedTag
               onClick={this.openDialog}
               text={getButtonText(section.loginType, section.studentCount)}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.gray}
             />
             <ChangeLoginTypeDialog
               isOpen={this.state.isDialogOpen}
