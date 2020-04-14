@@ -6,8 +6,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import $ from 'jquery';
 
-// For logging metrics on the multiple Download Parent Letter buttons
-export const ParentLetterEntryPoint = {
+export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
   BELOW_TABLE: 'below-table'
 };
