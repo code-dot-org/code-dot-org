@@ -98,7 +98,6 @@ def formatTokensFromOutput(output):
     """
     tokens = output.split('\n')
 
-    in_loop = False
     old_depth, depth = -1, -1
     new_tokens = []
     for token in tokens:
@@ -114,8 +113,6 @@ def formatTokensFromOutput(output):
             depth = token.count(' ') - 4
 
             if old_depth > depth:
-                assert in_loop
-                in_loop = False
                 new_tokens.append(('}', -1))
 
             new_tokens.append(('moveForward', depth))
@@ -125,8 +122,6 @@ def formatTokensFromOutput(output):
             depth = token.count(' ') - 4
 
             if old_depth > depth:
-                assert in_loop
-                in_loop = False
                 new_tokens.append(('}', -1))
 
             new_tokens.append(('moveBackward', depth))
@@ -136,14 +131,12 @@ def formatTokensFromOutput(output):
             depth = token.count(' ') - 2
 
             if old_depth > depth:
-                assert in_loop
-                in_loop = False
                 new_tokens.append(('}', -1))
 
             new_tokens.append(('getNectar', depth))
 
-        elif token.strip() == 'controls_repeat':
-            continue
+        elif token.strip() == 'DO':
+            new_tokens.append(('{', -1))
 
         elif token.strip().isnumeric():
             loop_num = int(token.strip())
@@ -154,9 +147,10 @@ def formatTokensFromOutput(output):
             new_tokens.append((str(loop_num), depth))
             new_tokens.append((')', -1))
 
-        elif token.strip() == 'DO':
-            in_loop = True
-            new_tokens.append(('{', -1))
+        elif token.strip() == 'controls_repeat':
+            old_depth = depth
+            depth = token.count(' ') - 2
+            new_tokens.append(('Repeat', depth))
 
     return new_tokens
 

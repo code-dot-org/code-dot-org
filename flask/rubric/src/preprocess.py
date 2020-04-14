@@ -1,6 +1,7 @@
 import os
 import jsonlines
 import numpy as np
+from tqdm import tqdm
 from src.config import DATA_DIR
 from src.trainer.utils import train_test_split
 from src.codeorg_utils.utils import (
@@ -27,7 +28,7 @@ if __name__ == "__main__":
             rubrics.append(row['rubric'].keys())
             all_rubrics.extend(row['rubric'].keys())
 
-    all_rubrics = list(set(rubrics))
+    all_rubrics = list(set(all_rubrics))
     num_labels = len(all_rubrics)
 
     num = len(programs)
@@ -55,8 +56,8 @@ if __name__ == "__main__":
     train_data = {'program': train_programs, 'label': train_labels}
     test_data = {'program': test_programs, 'label': test_labels}
 
-    train_path = os.path.join(DATA_DIR, 'train_data.npz')
-    test_path = os.path.join(DATA_DIR, 'test_data.npz')
+    train_path = os.path.join(DATA_DIR, 'course9q1/train_data.npz')
+    test_path = os.path.join(DATA_DIR, 'course9q1/test_data.npz')
 
     np.savez(train_path, train_data)
     np.savez(test_path, test_data)

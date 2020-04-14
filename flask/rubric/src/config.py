@@ -1,7 +1,7 @@
 import os
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
-CHECKPOINT_DIR = os.path.join(os.path.dirname(__file__), 'checkpoints')
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+CHECKPOINT_DIR = os.path.join(os.path.dirname(__file__), '..', 'checkpoints')
 
 TRAINING_PARAMS = {
     'batch_size': 256,

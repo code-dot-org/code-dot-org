@@ -42,7 +42,7 @@ class RubricDataset(Dataset):
 
         data = np.load(self.data_path)
         programs, labels = data['program'], data['label']
-        self.num_labels = labels.shape[]
+        self.num_labels = labels.shape[1]
 
         if self.vocab is None:
             self.vocab = self.create_vocab(programs)
