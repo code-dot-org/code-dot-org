@@ -2206,6 +2206,15 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '0', email_preference.form_kind
   end
 
+  test 'upgrade_to_teacher given valid params should delete parent_email field' do
+    parent_email = 'parent@email.com'
+    user = User.create(@good_data.merge(parent_email: parent_email))
+    assert_equal parent_email, user.parent_email
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    assert_nil user.parent_email
+  end
+
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
     assert_equal parent_email_params[:parent_email_preference_email], email_preference.email
     assert_equal parent_email_params[:parent_email_preference_opt_in].casecmp?('yes'), email_preference.opt_in

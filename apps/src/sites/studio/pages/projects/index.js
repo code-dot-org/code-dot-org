@@ -17,6 +17,7 @@ import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/delet
 
 $(document).ready(() => {
   const projectsData = getScriptData('projects');
+  const specialAnnouncement = projectsData.specialAnnouncement;
   registerReducers({
     projects,
     publishDialog: publishDialogReducer,
@@ -45,6 +46,7 @@ $(document).ready(() => {
         <ProjectHeader
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
+          specialAnnouncement={specialAnnouncement}
         />
         <ProjectsGallery
           limitedGallery={projectsData.limitedGallery}
