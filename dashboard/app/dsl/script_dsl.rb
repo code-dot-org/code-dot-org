@@ -344,7 +344,7 @@ class ScriptDSL < BaseDSL
     s = []
     script.lesson_groups.each do |lesson_group|
       t = "lesson_group '#{escape(lesson_group.key)}'"
-      t += ", display_name: '#{escape(lesson_group.key)}'"
+      t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
       s << t if lesson_group&.user_facing
       lesson_group.stages.each do |stage|
         s << serialize_stage(stage)

@@ -647,8 +647,8 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
   const allLevels = levelsByLesson(state);
 
   state.stages.forEach((lesson, index) => {
-    const group = lesson.lesson_group_name
-      ? lesson.lesson_group_name
+    const group = lesson.lesson_group_display_name
+      ? lesson.lesson_group_display_name
       : lesson.flex_category;
     const lessonAtIndex = lessonFromStageAtIndex(state, index);
     let lessonLevels = allLevels[index];
