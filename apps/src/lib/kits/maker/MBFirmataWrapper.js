@@ -34,8 +34,8 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     for (let i = 0; i < this.digitalCallbacks.length; i++) {
       let pin = this.digitalCallbacks[i].pin;
       let callback = this.digitalCallbacks[i].callback;
-      // We add one here to translate from the 0/1 of digital input to the
-      // first part of the 6-array input of button, see ExternalButton.js
+      // Translate 0/1 to 1/2 corresponding to ExternalButton.boardEvents[1/2]
+      // for 'down'/'up'
       callback(pin, this.digitalInput[pin] + 1);
     }
   }
