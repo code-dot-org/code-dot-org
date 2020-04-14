@@ -75,13 +75,13 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   def summarize_progress
     summary = []
 
-    lesson_groups_for_lesson = plc_course_unit.script.lesson_groups.uniq
+    lesson_groups_for_lesson = plc_course_unit.script.stages.map {|stage| stage.lesson_group ? stage.lesson_group.key : stage.flex_category}.uniq
 
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
       Plc::LearningModule::MODULE_TYPES.select {|type| lesson_groups_for_lesson.include?(type)}.each do |lesson_group|
-        module_group = lesson_group.key
-        group_name = module_group || I18n.t('flex_category.required')
+        module_group = lesson_group
+        group_name = I18n.t("flex_category.#{module_group}", default: I18n.t('flex_category.required'))
         summary << {
           category: group_name,
           status: module_assignment_for_type(module_group).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,
@@ -92,9 +92,9 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       # Otherwise, status is determined by the completion of stages
       lesson_groups_for_lesson.each do |lesson_group|
         summary << {
-          category: lesson_group.key || I18n.t("flex_category.content"),
+          category: I18n.t("flex_category.#{lesson_group || 'content'}"),
           status: Plc::EnrollmentModuleAssignment.stages_based_status(
-            plc_course_unit.script.stages.select {|stage| stage.lesson_group.key == lesson_group.key},
+            plc_course_unit.script.stages.select {|stage| stage.lesson_group == lesson_group || stage.flex_category == lesson_group},
             user,
             plc_course_unit.script
           ),
