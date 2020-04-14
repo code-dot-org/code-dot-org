@@ -684,6 +684,35 @@ level 'Level 3'
     assert_equal expected, script_text
   end
 
+  test 'serialize lesson groups in the correct order' do
+    script = create :script, hidden: true
+
+    level1 = create :maze, name: 'maze 1', level_num: 'custom'
+    level2 = create :maze, name: 'maze 2', level_num: 'custom'
+
+    # intentionally made in the opposite order of how we want them to show to test
+    lesson_group2 = create :lesson_group, key: 'practice', script: script, position: 2
+    lesson_group1 = create :lesson_group, key: 'required', script: script, position: 1
+
+    lesson1 = create :stage, name: 'lesson 1', script: script, lesson_group: lesson_group1
+    lesson2 = create :stage, name: 'lesson 2', script: script, lesson_group: lesson_group2
+
+    create :script_level, levels: [level1], stage: lesson1, script: script
+    script_level2 = create :script_level, levels: [level2], stage: lesson2, script: script
+    script_text = ScriptDSL.serialize_to_string(script_level2.script)
+    expected = <<~SCRIPT
+      lesson_group 'required', display_name: 'Overview'
+      stage 'lesson 1'
+      level 'maze 1'
+
+      lesson_group 'practice', display_name: 'Teaching Practices'
+      stage 'lesson 2'
+      level 'maze 2'
+
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
   test 'Script DSL with project_sharing' do
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
