@@ -1819,59 +1819,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Pardot
-  # pegasus.contact_rollups
+  # contact rollups
   #
 
-  test "Pardot: Calls delete_pardot_prospects" do
+  test "account deletion stages email for removal from pardot" do
     teacher = create :teacher
+    teacher_email = teacher.email
+    purge_user teacher
 
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
-      purge_user teacher
-    end
-  end
-
-  test "Pardot: Raises if Pardot reports issues deleting prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
-      assert_raises RuntimeError do
-        purge_user teacher
-      end
-    end
-  end
-
-  test "Pardot: Does not contact Pardot outside of production" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(false)
-
-    with_contact_rollup_for(teacher) do
-      Pardot.expects(:delete_pardot_prospects).never
-      purge_user teacher
-    end
-  end
-
-  test "contact_rollups: Deletes user records" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    with_contact_rollup_for(teacher_a) do |contact_rollups_id_a|
-      with_contact_rollup_for(teacher_b) do |contact_rollups_id_b|
-        refute_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-
-        purge_user teacher_a
-
-        assert_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-      end
-    end
+    assert_equal true, ContactRollupsPardotMemory.find_by(email: teacher_email).delete_from_pardot
   end
 
   #
