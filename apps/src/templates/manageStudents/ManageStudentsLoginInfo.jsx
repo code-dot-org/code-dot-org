@@ -106,12 +106,13 @@ class ManageStudentsLoginInfo extends Component {
           buttonMetricsCategory={ParentLetterButtonMetricsCategory.BELOW_TABLE}
         />
         <br />
-        <SafeMarkdown
-          id="uitest-privacy-link"
-          markdown={i18n.privacyLinkToPolicy({
-            privacyPolicyLink: pegasus('/privacy/student-privacy')
-          })}
-        />
+        <span id="uitest-privacy-link">
+          <SafeMarkdown
+            markdown={i18n.privacyLinkToPolicy({
+              privacyPolicyLink: pegasus('/privacy/student-privacy')
+            })}
+          />
+        </span>
       </div>
     );
   }
