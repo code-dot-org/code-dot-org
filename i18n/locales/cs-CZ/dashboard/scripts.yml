@@ -1000,6 +1000,8 @@ cs:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            'Loops: Getting Loopy':
+              name: 'Cykly: Bláznění s cykly'
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Binary Bracelets:
@@ -1212,6 +1214,8 @@ cs:
               name: Odstraňujeme chyby v bludišti
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            'Loops: Getting Loopy':
+              name: 'Cykly: Bláznění s cykly'
             Build a Flappy Game:
               name: Vytvoř hru Flappy Bird
             Loops with Rey and BB-8:
@@ -1961,6 +1965,8 @@ cs:
               name: Sbíráme poklady s Laurel
             Programming in Artist:
               name: Malujeme s pomocí kódu
+            'Loops: Getting Loopy':
+              name: 'Cykly: Bláznění s cykly'
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
             Loops in Artist:
@@ -2018,6 +2024,8 @@ cs:
               description_teacher: V těchto úlohách si studenti rozšíří porozumění algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel získat poklad na cestě.
             Programming in Artist:
               name: Malujeme s pomocí kódu
+            'Loops: Getting Loopy':
+              name: 'Cykly: Bláznění s cykly'
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
             Loops in Harvester:
