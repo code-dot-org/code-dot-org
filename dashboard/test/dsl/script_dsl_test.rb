@@ -667,6 +667,23 @@ level 'Level 3'
     assert_equal expected, script_text
   end
 
+  test 'serialize script with lesson groups that have no lessons in them' do
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    script = create :script, hidden: true
+    lesson_group = create :lesson_group, key: '', script: script, user_facing: false
+    create :lesson_group, key: 'required', script: script
+    create :lesson_group, key: 'practice', script: script
+    lesson = create :stage, name: 'lesson 1', script: script, lesson_group: lesson_group
+    script_level = create :script_level, levels: [level], stage: lesson, script: script
+    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    expected = <<~SCRIPT
+      stage 'lesson 1'
+      level 'maze 1'
+
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
   test 'Script DSL with project_sharing' do
     input_dsl = 'project_sharing true'
     expected = DEFAULT_PROPS.merge(
