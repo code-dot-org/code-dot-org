@@ -75,7 +75,9 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
     );
   }
 
+  // Calculate and assign any relevant values here, and then return it at the end.
   var newEvent = {};
+
   // Pass these properties through to applabEvent:
   [
     'altKey',
@@ -112,6 +114,16 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
   if (touchEvents[event.type]) {
     newEvent.type = touchEvents[event.type];
     mouseEvent = event.changedTouches[0];
+
+    // Calculate and assign values that can be missing when touch is used.
+    // We treat mouseEvent as read-only, so we will go ahead and write these
+    // to the desired destination: newEvent.
+    if (mouseEvent.x === undefined) {
+      newEvent.x = (mouseEvent.clientX - this.xOffset_) / this.xScale_;
+    }
+    if (mouseEvent.y === undefined) {
+      newEvent.y = (mouseEvent.clientY - this.yOffset_) / this.yScale_;
+    }
   } else {
     mouseEvent = event;
   }
@@ -128,14 +140,6 @@ EventSandboxer.prototype.sandboxEvent = function(event) {
       newEvent[prop] = (mouseEvent[prop] - this.yOffset_) / this.yScale_;
     }
   }, this);
-
-  // Add values that can be missing when touch is used.
-  if (mouseEvent.x === undefined) {
-    newEvent.x = (mouseEvent.pageX - this.xOffset_) / this.xScale_;
-  }
-  if (mouseEvent.y === undefined) {
-    newEvent.y = (mouseEvent.pageY - this.yOffset_) / this.yScale_;
-  }
 
   // Set movementX and movementY, computing it from clientX and clientY if necessary.
   // The element must have an element id for this to work.
