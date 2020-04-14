@@ -1475,8 +1475,8 @@ class Script < ActiveRecord::Base
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
-      pilot_experiment: script_data[:pilot_experiment],
-      editor_experiment: script_data[:editor_experiment],
+      pilot_experiment: script_data[:pilot_experiment] || false,
+      editor_experiment: script_data[:editor_experiment] || false,
       project_sharing: !!script_data[:project_sharing],
       curriculum_umbrella: script_data[:curriculum_umbrella],
       tts: !!script_data[:tts]
