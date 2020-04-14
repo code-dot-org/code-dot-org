@@ -343,9 +343,11 @@ class ScriptDSL < BaseDSL
   def self.serialize_lesson_groups(script)
     s = []
     script.lesson_groups.each do |lesson_group|
-      t = "lesson_group '#{escape(lesson_group.key)}'"
-      t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
-      s << t if lesson_group&.user_facing
+      if lesson_group&.user_facing && lesson_group&.stages.count > 0
+        t = "lesson_group '#{escape(lesson_group.key)}'"
+        t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
+        s << t
+      end
       lesson_group.stages.each do |stage|
         s << serialize_stage(stage)
       end

@@ -918,7 +918,7 @@ class Script < ActiveRecord::Base
     # display name.
     # 2. Check that if the lesson group key is an existing key that the display name
     # for that key matches
-    raw_lesson_groups.each do |lesson_group|
+    raw_lesson_groups&.each do |lesson_group|
       if lesson_group[:display_name].blank?
         raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{lesson_group[:key]}"
       end
