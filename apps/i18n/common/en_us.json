@@ -233,7 +233,7 @@
   "changeUserTypeModal_emailOptIn_description": "Can we email you about updates to our courses, local opportunities, or other computer science news?",
   "changeUserTypeModal_emailOptIn_isRequired": "This field is required.",
   "changeUserTypeModal_emailOptIn_privacyPolicy": "(See our privacy policy)",
-  "changeUserTypeModal_description_toTeacher": "You must provide the following information before we can convert your account into a teacher account.",
+  "changeUserTypeModal_description_toTeacher": "You must provide the following information before we can convert your account into a teacher account.  Once you convert to a teacher account, any parent/guardian email address currently linked to your account will be removed.",
   "changeUserTypeModal_save_teacher": "Update to teacher account",
   "changeUserTypeModal_title": "Update account type",
   "changeUserTypeModal_unexpectedError": "An unexpected error has occurred.  Please wait a moment and try again.",
