@@ -45,19 +45,19 @@
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/2": {
     "long_instructions": "# 5-Bit Number\n\nWhen you only had four bits, the highest number that you could make was fifteen.  Now you'll have a chance to work with more bits to make higher numbers.\n\nIn this activity, the dots are replaced with numbers, but you still add up everything that's showing to see what number the binary code stands for.  The left-most bit doesn't have a number yet, so you'll have to give it one.\n\n# Do This\n\n-   Click on the bits to turn them on and off, and see the different numbers you can make.\n-   With your partner, discuss the pattern in the numbers.  Decide what number you think should go in the left most box.\n-   Click \"Edit\" to change the value of the left most bit.\n-   Once you've decided on the value, try to make the following numbers: 16, 27, 31",
-    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
+    "teacher_markdown": "[][0]\n\nAnswers for this level can be found in the exemplar linked on [Level 1][1].\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/3": {
     "long_instructions": "# 6-Bit Number\n\nThis widget helps you to calculate 6-bit binary numbers.\n\n# Do This\n\n-   With your partner, answer the following questions:\n    1.  What's the biggest number you can make with this widget?\n    2.  The record for most skips by a dog and person in one minute is 59.  How would you encode 59 in binary?",
-    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
+    "teacher_markdown": "[][0]\n\nAnswers for this level can be found in the exemplar linked on [Level 1][1].\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/4": {
     "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to find the two world records encoded in the binary string below.\n\n[][0]\n\n1.  Most number of people lifted and thrown in two minutes. (4 bits)\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\n\n# Do This\n\n-   Decode the two numbers from the binary string.",
-    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
+    "teacher_markdown": "[][0]\n\nAnswers for this level can be found in the exemplar linked on [Level 1][1].\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/5": {
     "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers up to to eight bits. You can use it to find the values of the two world records below.\n\nDon't forget to make sure that the \"1\" bit is always the right most bit.  If you have extra bits on the left side of the widget, just keep them turned off.\n\n[][0]\n\n1.  Longest tail on a dog (in inches) (5 bits)\n2.  Most spoons balanced on someone's face (5 bits)\n\n# Do This\n\n-   Decode the two numbers from a the binary string.\n    -   _Hint: You'll need to read the numbers in order, with the first answer using the first five bits, and the second answer using the five bits after that._",
-    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
+    "teacher_markdown": "[][0]\n\nAnswers for this level can be found in the exemplar linked on [Level 1][1].\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/6": {
     "long_instructions": "# Decoding multiple numbers\n\nHere's a new bit string.  This time, you don't know the bit length of the two numbers.  Try to decode the numbers without knowing the bit length.\n\n[][0]\n\n1.  Largest wind chime, in feet (? bits)\n2.  Furthest arrow shot with someone's feet (in feet) (? bits)\n\n# Do This\n\n-   Try to decode the two numbers from the binary string.\n-   Discuss with your partner why you cannot know for sure whether your answer is correct.",
@@ -65,7 +65,7 @@
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/7": {
     "long_instructions": "# Bit Length\n\nIf you don't know how many bits long each number is, you won't be able to decode a string of numbers.\n\nFor example, the following binary string could be decoded many different ways.\n\n[][0]\n\nIf you split the string like this, the string reads 10, 84.\n\n[][1] [][2]\n\nIf you split it like this, the string reads 42, 20.\n\n[][3] [][4]\n\nTo solve this problem, people agree on a fixed length for every number.  The following string uses the same two numbers, but each number takes up exactly eight bits, no matter how many bits it actually needs.\n\n[][5]\n\n# Do This\n\n-   Use the binary widget to decode the string that uses eight bit numbers.\n-   Check you answer with a partner to see whether you got the same answer.",
-    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
+    "teacher_markdown": "[][0]\n\nAnswers for this level can be found in the exemplar linked on [Level 1][1].\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2019/stage/5/puzzle/8": {
     "display_name": "Binary and Data",
