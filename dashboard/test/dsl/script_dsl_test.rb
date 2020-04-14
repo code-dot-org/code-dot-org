@@ -179,7 +179,7 @@ endvariants
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
     level3 = create :maze, name: 'maze 3', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key:"", script: script, user_facing: false
+    lesson_group = create :lesson_group, key: "", script: script, user_facing: false
     lesson = create :stage, name: 'Lesson 1', script: script, lesson_group: lesson_group
     script_level = create(
       :script_level,
@@ -608,7 +608,7 @@ level 'Level 3'
   test 'serialize visible after for stage' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key:"", script: script, user_facing: false
+    lesson_group = create :lesson_group, key: "", script: script, user_facing: false
     lesson = create :stage, name: 'Lesson 1', script: script, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0800'
     script_level = create :script_level, levels: [level], stage: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
@@ -775,7 +775,7 @@ level 'Level 3'
   test 'serialize named_level' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key:"", script: script, user_facing: false
+    lesson_group = create :lesson_group, key: "", script: script, user_facing: false
     lesson = create :stage, name: 'Lesson 1', script: script, lesson_group: lesson_group
     script_level = create(
       :script_level,
@@ -818,7 +818,7 @@ level 'Level 3'
   test 'serialize assessment' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key:"", script: script, user_facing: false
+    lesson_group = create :lesson_group, key: "", script: script, user_facing: false
     lesson = create :stage, name: 'Lesson 1', script: script, lesson_group: lesson_group
     script_level = create(
       :script_level,
