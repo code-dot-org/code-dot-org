@@ -670,8 +670,8 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
   if (state.peerReviewLessonInfo) {
-    byGroup[state.peerReviewLessonInfo.lesson_group_name] = {
-      group: state.peerReviewLessonInfo.lesson_group_name,
+    byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
+      group: state.peerReviewLessonInfo.lesson_group_display_name,
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
