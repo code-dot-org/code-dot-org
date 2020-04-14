@@ -19,10 +19,6 @@ class LessonGroup < ApplicationRecord
   has_many :stages
 
   def localized_display_name
-    if key
-      I18n.t "flex_category.#{key}"
-    else
-      I18n.t "flex_category.content"
-    end
+    I18n.t "flex_category.#{key}"
   end
 end
