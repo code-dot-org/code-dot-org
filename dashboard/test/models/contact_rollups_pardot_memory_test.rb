@@ -231,4 +231,39 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       data_rejected_at: submitted_time
     )
   end
+
+  test 'delete_pardot_prospects deletes itself after deleting from Pardot' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+    PardotV2.stubs(:delete_prospects).returns([])
+    create :contact_rollups_pardot_memory, email: 'hard_delete@me.com', delete_from_pardot: true
+
+    ContactRollupsPardotMemory.delete_pardot_prospects
+
+    assert_nil ContactRollupsPardotMemory.find_by(email: 'hard_delete@me.com')
+  end
+
+  test 'delete_pardot_prospects does not delete itself if deletion from Pardot fails' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+    contact = create :contact_rollups_pardot_memory, email: 'hard_delete@me.com', delete_from_pardot: true
+    PardotV2.stubs(:delete_prospects).returns([contact.pardot_id])
+
+    ContactRollupsPardotMemory.delete_pardot_prospects
+
+    refute_nil ContactRollupsPardotMemory.find_by(email: 'hard_delete@me.com')
+  end
+
+  test 'delete_pardot_prospects only deletes appropriate contacts if deletion from Pardot is partially completed' do
+    assert_equal 0, ContactRollupsPardotMemory.count
+    contacts = create_list :contact_rollups_pardot_memory, 5, delete_from_pardot: true
+
+    # one contact was unable to be deleted
+    pardot_id_failed = [contacts.first.pardot_id]
+    pardot_ids_deleted = contacts.pluck(:pardot_id) - pardot_id_failed
+    PardotV2.stubs(:delete_prospects).returns(pardot_id_failed)
+
+    ContactRollupsPardotMemory.delete_pardot_prospects
+
+    refute_nil ContactRollupsPardotMemory.find_by(pardot_id: contacts.first.pardot_id)
+    assert_equal [], ContactRollupsPardotMemory.where(pardot_id: pardot_ids_deleted)
+  end
 end
