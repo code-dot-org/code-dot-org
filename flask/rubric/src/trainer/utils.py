@@ -12,65 +12,20 @@ from collections import defaultdict, OrderedDict
 
 import torch
 
-# TODO: change me to new problem.
-# map from integers to feedback labels
-IX_TO_LABEL = {
-    0: 'shapeLoop-none',
-    1: 'square-none',
-    2: 'side-none',
-    3: 'shapeLoopHeader-missingValue',
-    4: 'shapeLoopHeader-wrongOrder',
-    5: 'shapeLoopHeader-wrongDelta',
-    6: 'shapeLoopHeader-wrongEnd',
-    7: 'shapeLoopHeader-wrongStart',
-    8: 'square-armsLength',
-    9: 'square-unrolled',
-    10: 'square-wrongNumSides',
-    11: 'side-forgotLeft',
-    12: 'side-forgotMove',
-    13: 'side-wrongMoveLeftOrder',
-    14: 'side-armsLength',
-    15: 'turn-wrongAmount',
-    16: 'turn-rightLeftConfusion',
-    17: 'move-wrongAmount',
-}
-LABEL_TO_IX = dict([[v,k] for k,v in IX_TO_LABEL.items()])
-NUM_LABELS = len(IX_TO_LABEL)
-
 # these are "special" tokens used often to handle language
-# given a sentence like "A brown dog.", we add these tokens 
+# given a sentence like "A brown dog.", we add these tokens
 # to make it:
-# 
+#
 #       <sos> A brown dog . <pad> ... <pad> <eos>
-# 
-# where pad tokens are added to make ALL sentences in a 
+#
+# where pad tokens are added to make ALL sentences in a
 # minibatch to the same size!
 PAD_TOKEN = '<pad>'
 UNK_TOKEN = '<unk>'
 SOS_TOKEN = '<sos>'
 EOS_TOKEN = '<eos>'
 
-OPEN_BRACKET = '('
-END_BRACKET = ')'
-
 # --- utilities for processing labels ---
-
-def labels_to_numpy(labels, label_dim, label_to_ix_dict):
-    tensor_np = np.zeros(label_dim)
-    for label in labels:
-        if label in label_to_ix_dict:
-            tensor_np[label_to_ix_dict[label]] = 1
-    tensor_np = tensor_np.astype(np.int)
-    
-    return tensor_np
-
-
-def labels_to_tensor(labels, label_dim, label_to_ix_dict):
-    tensor_np = labels_to_numpy(labels, label_dim, label_to_ix_dict)
-    tensor = torch.from_numpy(tensor_np).long()
-    
-    return tensor
-
 
 def tensor_to_labels(tensor, label_dim, ix_to_label_dict):
     assert tensor.size(0) == label_dim
@@ -79,7 +34,7 @@ def tensor_to_labels(tensor, label_dim, ix_to_label_dict):
         if tensor[ix] >= 0.5:
             label = ix_to_label_dict[ix]
             labels.append(label)
-    
+
     return ','.join(labels)
 
 # --- miscellanous utilities ---
@@ -87,13 +42,13 @@ def tensor_to_labels(tensor, label_dim, ix_to_label_dict):
 def train_test_split(array_list, train_frac=0.8, val_frac=0.1, test_frac=0.1):
     r"""Split data into three subsets (train, validation, and test).
 
-    @param: array_list 
+    @param: array_list
             list of np.arrays/torch.Tensors
             we will split each entry accordingly
     @param train_frac: float [default: 0.8]
                        must be within (0.0, 1.0)
     @param val_frac: float [default: 0.8]
-                     must be within [0.0, 1.0)     
+                     must be within [0.0, 1.0)
     @param train_frac: float [default: 0.8]
                        must be within (0.0, 1.0)
     """

@@ -1,13 +1,13 @@
 from src.rubric_utils.decision import Decision
 from src.codeorg_utils.utils import (
-    formatOutputFromTokens, 
+    formatOutputFromTokens,
     toCodeList,
 )
 
 
 class Start(Decision):
     """
-    Start is a special decision which is invoked by the Sampler to 
+    Start is a special decision which is invoked by the Sampler to
     generate a single sample.
     """
 
@@ -19,11 +19,7 @@ class Start(Decision):
         })
 
     def render(self):
-        # code = 'Program [ when_run [ {codeInject} ] ]'
-        # codeInject = self.expand('Root')
-        # code = code.format(codeInject=codeInject)
         code = self.expand('Root')
-
         codeTokens = toCodeList(code)
         code = formatOutputFromTokens(codeTokens, init_depth=1)
         code = f'Program\n\twhen_run\n{code}'.strip()

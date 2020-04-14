@@ -32,30 +32,27 @@ class RubricDataset(Dataset):
                     minimum number of times for a token to
                     be included in the vocabulary.
     """
-    def __init__(self, data_path, label_dim, vocab=None, max_seq_len=50, min_occ=1):
+    def __init__(self, data_path, vocab=None, max_seq_len=50, min_occ=1):
         super(RubricDataset, self).__init__()
 
         self.vocab = vocab
         self.max_seq_len = max_seq_len
         self.min_occ = min_occ
-        self.label_dim = label_dim
         self.data_path = data_path
 
-        with open(self.data_path, 'rb') as fp:
-            data = pickle.load(fp)
-        
-        programs = data['program']
-        labels   = data['label']
-        
+        data = np.load(self.data_path)
+        programs, labels = data['program'], data['label']
+        self.num_labels = labels.shape[]
+
         if self.vocab is None:
             self.vocab = self.create_vocab(programs)
-        
+
         self.w2i, self.i2w = self.vocab['w2i'], self.vocab['i2w']
         self.vocab_size = len(self.w2i)
 
         token_seqs, token_lens = self.process_programs(programs)
         labels = self.process_labels(labels)
-        
+
         self.token_seqs = token_seqs
         self.token_lens = token_lens
         self.labels = labels
@@ -119,7 +116,8 @@ class RubricDataset(Dataset):
 
 class TransferDataset(RubricDataset):
     """Copy of RubricDataset but used only for validating on real student data"""
-    def __init__(self, data_path, label_dim, vocab, max_seq_len=50, min_occ=1):
+    def __init__(self, data_path, vocab, max_seq_len=50, min_occ=1):
         assert vocab is not None
-        super(TransferDataset, self).__init__(data_path, label_dim, vocab, 
-                                              max_seq_len=max_seq_len, min_occ=min_occ)
+        super(TransferDataset, self).__init__(
+            data_path, vocab, max_seq_len=max_seq_len, min_occ=min_occ)
+

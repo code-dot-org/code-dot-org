@@ -1,8 +1,8 @@
 def build_repeat(n, codeInject):
     if len(codeInject) == 0:
-        return 'Repeat({n}) [ ]'.format(n=n)
+        return 'Repeat ( {n} )  [ ]'.format(n=n)
     else:
-        return 'Repeat({n}) [ {codeInject} ]'.format(n=n, codeInject=codeInject)
+        return 'Repeat ( {n} ) [ {codeInject} ]'.format(n=n, codeInject=codeInject)
     # if len(codeInject) == 0:
     #     return '''
     #     controls_repeat {{
@@ -33,7 +33,7 @@ def build_move(forward=True):
 
 def build_nectar():
     # return 'maze_nectar'
-    return 'getNectar()'
+    return 'getNectar'
 
 
 def collapse_commands(cmd_list):
@@ -41,23 +41,23 @@ def collapse_commands(cmd_list):
 
 
 def isMove(token):
-    if token == 'moveForward()':
+    if token == 'moveForward':
         return True
-    elif token == 'moveBackward()':
+    elif token == 'moveBackward':
         return True
     return False
 
 
 def isMoveForward(token):
-    return token == 'moveForward()'
+    return token == 'moveForward'
 
 
 def isMoveBackward(token):
-    return token == 'moveBackward()'
+    return token == 'moveBackward'
 
 
 def isNectar(token):
-    return token == 'getNectar()'
+    return token == 'getNectar'
 
 
 def isRepeat(token):
@@ -90,6 +90,76 @@ def toCodeList(code):
             codeTokens.append((tok, depth))
 
     return codeTokens
+
+
+def formatTokensFromOutput(output):
+    """
+    inverse of formatOutputFromTokens
+    """
+    tokens = output.split('\n')
+
+    in_loop = False
+    old_depth, depth = -1, -1
+    new_tokens = []
+    for token in tokens:
+
+        if token.strip() in ['Program', 'when_run']:
+            continue
+
+        elif token.strip() == 'maze_move':
+            continue
+
+        elif token.strip() == 'moveForward':
+            old_depth = depth
+            depth = token.count(' ') - 4
+
+            if old_depth > depth:
+                assert in_loop
+                in_loop = False
+                new_tokens.append(('}', -1))
+
+            new_tokens.append(('moveForward', depth))
+
+        elif token.strip() == 'moveBackward':
+            old_depth = depth
+            depth = token.count(' ') - 4
+
+            if old_depth > depth:
+                assert in_loop
+                in_loop = False
+                new_tokens.append(('}', -1))
+
+            new_tokens.append(('moveBackward', depth))
+
+        elif token.strip() == 'maze_nectar':
+            old_depth = depth
+            depth = token.count(' ') - 2
+
+            if old_depth > depth:
+                assert in_loop
+                in_loop = False
+                new_tokens.append(('}', -1))
+
+            new_tokens.append(('getNectar', depth))
+
+        elif token.strip() == 'controls_repeat':
+            continue
+
+        elif token.strip().isnumeric():
+            loop_num = int(token.strip())
+            old_depth = depth
+            depth = token.count(' ') - 4
+
+            new_tokens.append(('(', -1))
+            new_tokens.append((str(loop_num), depth))
+            new_tokens.append((')', -1))
+
+        elif token.strip() == 'DO':
+            in_loop = True
+            new_tokens.append(('{', -1))
+
+    return new_tokens
+
 
 
 def formatOutputFromTokens(codeTokens, init_depth=0):
@@ -125,7 +195,7 @@ def formatOutputFromTokens(codeTokens, init_depth=0):
                         if depth3 > depth: # we are exiting the loop
                             chosen_j = j
             if i+2 == chosen_j:
-                output = '\t'*init_depth + f'controls_repeat\n' + '\t'*init_depth + '\t{numLoop}\n' + '\t'*init_depth + '\tDO\n'
+                output = '\t'*init_depth + f'controls_repeat\n' + '\t'*init_depth + f'\t{numLoop}\n' + '\t'*init_depth + '\tDO\n'
             else:
                 subOutput = formatOutputFromTokens(
                     codeTokens[i+2:chosen_j],
