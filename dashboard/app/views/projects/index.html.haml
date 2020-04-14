@@ -10,6 +10,8 @@
     projects_data[:canShare] = !current_user.sharing_disabled?
   end
 
+  projects_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/projects")
+
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/projects/index.js'), data: {projects: projects_data.to_json}}
 
