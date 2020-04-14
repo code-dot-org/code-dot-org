@@ -475,7 +475,7 @@ describe('progressReduxTest', () => {
     // Sample stage of peer review
     const peerReviewLessonInfo = {
       name: 'You must complete 2 reviews for this unit',
-      lesson_group_name: 'Peer Review',
+      lesson_group_display_name: 'Peer Review',
       levels: [
         {
           ids: [0],
@@ -994,7 +994,7 @@ describe('progressReduxTest', () => {
     // helper method that creates a fake lesson
     const fakeLesson = (categoryName, groupName, lessonName, lessonId) => ({
       flex_category: categoryName,
-      lesson_group_name: groupName,
+      lesson_group_display_name: groupName,
       name: lessonName,
       id: lessonId,
       levels: [
@@ -1166,7 +1166,7 @@ describe('progressReduxTest', () => {
       const state = {
         stages: [
           {
-            lesson_group_name: 'Lesson Group',
+            lesson_group_display_name: 'Lesson Group',
             levels: [bonusLevel],
             lessons: []
           }
@@ -1260,7 +1260,7 @@ describe('progressReduxTest', () => {
     it('extracts lesson data from our peerReviewLessonInfo', () => {
       const state = {
         peerReviewLessonInfo: {
-          lesson_group_name: 'Peer Review',
+          lesson_group_display_name: 'Peer Review',
           levels: [],
           lockable: false,
           name: 'You must complete 5 reviews for this unit'

@@ -7,8 +7,8 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     @course_unit = create(:plc_course_unit, plc_course: course)
 
-    @content_lesson_group = create(:lesson_group, name: Plc::LearningModule::CONTENT_MODULE)
-    @practice_lesson_group = create(:lesson_group, name: Plc::LearningModule::PRACTICE_MODULE)
+    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE)
+    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE)
 
     @stage_cliffs = create(:stage, name: 'Cliff stage', script: @course_unit.script, lesson_group: @content_lesson_group)
     @stage_ornithology = create(:stage, name: 'Ornithology stage', script: @course_unit.script, lesson_group: @content_lesson_group)

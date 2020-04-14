@@ -115,7 +115,7 @@ class Script < ActiveRecord::Base
         lm.update!(
           plc_course_unit_id: unit.id,
           name: stage.name,
-          module_type: stage.lesson_group&.name || Plc::LearningModule::REQUIRED_MODULE,
+          module_type: stage.lesson_group&.key || Plc::LearningModule::REQUIRED_MODULE,
         )
       end
     end
@@ -1350,7 +1350,7 @@ class Script < ActiveRecord::Base
 
       peer_review_lesson_info = {
         name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-        lesson_group_name: 'Peer Review',
+        lesson_group_display_name: 'Peer Review',
         levels: levels,
         lockable: false
       }

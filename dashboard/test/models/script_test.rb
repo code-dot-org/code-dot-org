@@ -714,7 +714,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     expected_peer_review_lesson = {
       name: "You must complete 1 reviews for this unit",
-      lesson_group_name: "Peer Review",
+      lesson_group_display_name: "Peer Review",
       levels: [{
         ids: [0],
         kind: LEVEL_KIND.peer_review,
