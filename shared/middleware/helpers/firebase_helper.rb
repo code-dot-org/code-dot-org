@@ -85,10 +85,11 @@ class FirebaseHelper
   end
 
   def get_shared_table(table_name)
-    columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    escaped_table_name = URI.escape(table_name)
+    columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
     columns = columns_response.body ? columns_response.body.map {|_, value| value['columnName']} : []
 
-    records_response = @firebase.get("/v3/channels/shared/storage/tables/#{table_name}/records")
+    records_response = @firebase.get("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
     records = records_response.body || []
 
     {columns: columns, records: records}
