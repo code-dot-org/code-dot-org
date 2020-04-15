@@ -23,17 +23,19 @@ require 'cdo/shared_constants'
 
 # Ordered partitioning of script levels within a script
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Game/Stage)
-class Stage < ActiveRecord::Base
+class Lesson < ActiveRecord::Base
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
-  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
-  belongs_to :script, inverse_of: :stages
+  has_many :script_levels, -> {order('position ASC')}, inverse_of: :lesson, foreign_key: 'stage_id'
+  has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
+  belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
-  has_and_belongs_to_many :standards
+  has_and_belongs_to_many :standards, foreign_key: 'stage_id'
+
+  self.table_name = 'stages'
 
   serialized_attrs %w(
     stage_extras_disabled
@@ -84,7 +86,7 @@ class Stage < ActiveRecord::Base
     # In the case of lockable stages, we don't want to include the Stage 1
     return localized_name if lockable
 
-    if script.stages.to_a.many?
+    if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
     else # script only has one stage/game, use the script name
       script.localized_title
@@ -92,7 +94,7 @@ class Stage < ActiveRecord::Base
   end
 
   def localized_name
-    if script.stages.many?
+    if script.lessons.many?
       I18n.t "data.script.name.#{script.name}.stages.#{name}.name"
     else
       I18n.t "data.script.name.#{script.name}.title"
@@ -138,7 +140,7 @@ class Stage < ActiveRecord::Base
       stage_data = {
         script_id: script.id,
         script_name: script.name,
-        script_stages: script.stages.to_a.size,
+        script_stages: script.lessons.to_a.size,
         id: id,
         position: absolute_position,
         relative_position: relative_position,
@@ -279,7 +281,7 @@ class Stage < ActiveRecord::Base
 
   def next_level_number_for_stage_extras(user)
     next_level = next_level_for_stage_extras(user)
-    next_level ? next_level.stage.relative_position : nil
+    next_level ? next_level.lesson.relative_position : nil
   end
 
   def published?(user)

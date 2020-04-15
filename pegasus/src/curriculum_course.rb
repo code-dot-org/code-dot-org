@@ -1,8 +1,7 @@
-Unit = Struct.new(:number, :title, :description)
-
-Lesson = Struct.new(:number, :url, :title, :description, :path)
-
 class CurriculumCourse
+  Lesson = Struct.new(:number, :url, :title, :description, :path)
+  Unit = Struct.new(:number, :title, :description)
+
   PRODUCTION_COURSES = %w(course1 course2 course3 course4 msm algebra misc unplugged science).freeze
   COURSES_WITHOUT_UNIT_NUMBERS = %w(course1 course2 course3 course4 msm algebra misc).freeze
   COURSES_WITH_PDF_GENERATION = %w(course1 course2 course3 course4 msm algebra misc csp).freeze

@@ -12,7 +12,7 @@
 #
 # Indexes
 #
-#  index_lesson_groups_on_script_id  (script_id)
+#  index_lesson_groups_on_script_id_and_key  (script_id,key) UNIQUE
 #
 
 class LessonGroup < ApplicationRecord
