@@ -7,8 +7,17 @@ import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections
 import {courses, topCourse} from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
-  let server;
+  const TEST_PROPS = {
+    announcements: [],
+    courses,
+    topCourse,
+    codeOrgUrlPrefix: 'http://localhost:3000',
+    joinedSections: [],
+    isEnglish: true,
+    showCensusBanner: false
+  };
 
+  let server;
   const successResponse = () => [
     200,
     {'Content-Type': 'application/json'},
@@ -115,5 +124,19 @@ describe('TeacherHomepage', () => {
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
+  });
+
+  it('shows the special announcement for English', () => {
+    const wrapper = shallow(
+      <TeacherHomepage {...TEST_PROPS} isEnglish={true} />
+    );
+    assert(wrapper.find('SpecialAnnouncement').exists());
+  });
+
+  it('does not show the special announcement for non-English', () => {
+    const wrapper = shallow(
+      <TeacherHomepage {...TEST_PROPS} isEnglish={false} />
+    );
+    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
   });
 });
