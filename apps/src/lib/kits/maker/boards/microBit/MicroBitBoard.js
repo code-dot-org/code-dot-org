@@ -6,7 +6,7 @@ import {
   cleanupMicroBitComponents,
   enableMicroBitComponents,
   componentConstructors
-} from '../../MicroBitComponents';
+} from './MicroBitComponents';
 import MBFirmataWrapper from '../../MBFirmataWrapper';
 import ExternalLed from '../../ExternalLed';
 import ExternalButton from '../../ExternalButton';

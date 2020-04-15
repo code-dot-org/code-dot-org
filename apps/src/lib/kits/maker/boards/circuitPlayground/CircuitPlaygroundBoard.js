@@ -12,7 +12,7 @@ import {
   cleanupCircuitPlaygroundComponents,
   enableCircuitPlaygroundComponents,
   componentConstructors
-} from '../../PlaygroundComponents';
+} from './PlaygroundComponents';
 import {
   SONG_CHARGE,
   SONG_LEVEL_COMPLETE,
