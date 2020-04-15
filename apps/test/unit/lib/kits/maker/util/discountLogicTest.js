@@ -34,8 +34,12 @@ describe('discountLogic.js', () => {
   });
 
   describe('inDiscountRedemptionWindow', () => {
-    // By default, use normal time
-    let clock = sinon.useFakeTimers(new Date());
+    let clock;
+
+    beforeEach(function() {
+      // By default, use normal time
+      clock = sinon.useFakeTimers(new Date());
+    });
 
     afterEach(function() {
       clock.restore();
