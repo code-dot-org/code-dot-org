@@ -10,6 +10,7 @@ const FACILITATOR = 'facilitator';
 export default class Results extends React.Component {
   static propTypes = {
     questions: PropTypes.object.isRequired,
+    facilitators: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
@@ -55,9 +56,25 @@ export default class Results extends React.Component {
             title="Workshop Rollups"
           >
             <SurveyRollupTableFoorm
-              workshopRollups={this.props.workshopRollups['general']}
+              workshopRollups={this.props.workshopRollups[GENERAL]}
               questions={this.props.questions}
               courseName={this.props.courseName}
+              isPerFacilitator={false}
+            />
+          </Tab>
+        )}
+        {this.props.workshopRollups && this.props.workshopRollups[FACILITATOR] && (
+          <Tab
+            eventKey={this.props.workshopTabs.length + 2}
+            key={this.props.workshopTabs.length + 1}
+            title="Facilitator Rollups"
+          >
+            <SurveyRollupTableFoorm
+              workshopRollups={this.props.workshopRollups[FACILITATOR]}
+              questions={this.props.questions}
+              courseName={this.props.courseName}
+              isPerFacilitator={true}
+              facilitators={this.props.facilitators}
             />
           </Tab>
         )}
