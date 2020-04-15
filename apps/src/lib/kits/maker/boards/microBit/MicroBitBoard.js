@@ -6,10 +6,10 @@ import {
   cleanupMicroBitComponents,
   enableMicroBitComponents,
   componentConstructors
-} from './MicroBitComponents';
-import MBFirmataWrapper from './MBFirmataWrapper';
-import ExternalLed from './ExternalLed';
-import ExternalButton from './ExternalButton';
+} from '../../MicroBitComponents';
+import MBFirmataWrapper from '../../MBFirmataWrapper';
+import ExternalLed from '../../ExternalLed';
+import ExternalButton from '../../ExternalButton';
 
 /**
  * Controller interface for BBC micro:bit board using

@@ -1,5 +1,5 @@
 import {expect} from '../../../../util/deprecatedChai';
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
