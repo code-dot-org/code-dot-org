@@ -25,6 +25,12 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
     callback(this.analogChannel[pin]);
   }
 
+  reset() {
+    if (this.myPort) {
+      this.myPort.write([this.SYSTEM_RESET]);
+    }
+  }
+
   trackDigitalComponent(pin, callback) {
     this.digitalCallbacks.push({pin, callback});
   }
