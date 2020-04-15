@@ -84,6 +84,7 @@ class XhrProxyController < ApplicationController
     spreadsheets.google.com
     stats.minecraftservers.org
     swapi.co
+    testing.lmao.cx
     theunitedstates.io
     transitchicago.com
     translate.yandex.net
