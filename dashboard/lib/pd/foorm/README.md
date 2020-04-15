@@ -22,6 +22,7 @@ which is a workshop for course y (ex. 'CS Principles'), is:
 ```
 {
   course_name: 'CS Principles',
+  facilitators: {34: 'facilitator1', 56: 'facilitator2'}
   questions: {
     general: {
        <form-name>.<form-version>: {
@@ -71,10 +72,10 @@ which is a workshop for course y (ex. 'CS Principles'), is:
          }
        },
        facilitator: {
-         response_count: {facilitator1: 2, facilitator2: 2},
+         response_count: {34: 2, 56: 2},
          question4-name: {
-            facilitator1: {answer1: 5, answer2: 3}, 
-            facilitator2: {answer1: 4, answer2: 5}
+            34: {answer1: 5, answer2: 3}, 
+            56: {answer1: 4, answer2: 5}
          }
        }
      }
@@ -104,6 +105,21 @@ which is a workshop for course y (ex. 'CS Principles'), is:
              }
            }
         },
+        overall_facilitator: {
+          56: {
+            response_count: 7,
+              averages: {
+                question_id_1: {
+                  average: 3.52,
+                  rows: {
+                    row_id_1: 3.1,
+                    row_id_2: 5.6
+                  }
+                },...
+              }
+            },..
+          }
+        },
         overall: {
           response_count: 5,
           averages: {
@@ -115,14 +131,13 @@ which is a workshop for course y (ex. 'CS Principles'), is:
               }
              },...
            }
-         }
         }
       }
     },
     facilitator: {
       questions: {..same as general questions..},
       single_workshop: {
-        facilitator_1: {
+        34: {
             response_count: 3,
             averages: {
               question_id_1: {
@@ -136,8 +151,8 @@ which is a workshop for course y (ex. 'CS Principles'), is:
           },..
         }
       },
-      overall: {
-         facilitator_1: {
+      overall_facilitator: {
+         56: {
             response_count: 7,
             averages: {
               question_id_1: {
@@ -149,6 +164,19 @@ which is a workshop for course y (ex. 'CS Principles'), is:
               },...
             }
           },..
+        }
+      },
+      overall: {
+        response_count: 5,
+        averages: {
+          question_id_1: {
+            average: 3.45,
+              rows: {
+                row_id_1: 2.5,
+                row_id_2: 5.6
+              }
+            },...
+          }
         }
       }
     }

@@ -11,18 +11,20 @@ module Pd::Foorm
     # @param question_details: output of RollupHelper.get_question_details_for_rollup
     # Calculate average responses for each question in question_details for the set of responses in summarized_answers
     # @return See get_averaged_rollup
-    def self.calculate_averaged_rollup(summarized_answers, question_details)
+    def self.calculate_averaged_rollup(summarized_answers, question_details, split_by_facilitator)
       rollup = {}
       question_details.each do |type, question_details_per_type|
-        intermediate_rollup = get_intermediate_rollup(summarized_answers, question_details_per_type, type)
-        rollup[type] = get_averaged_rollup(intermediate_rollup, question_details_per_type, type)
+        # only split by facilitator when form type is facilitator, as otherwise questions cannot be split by facilitator
+        should_split_by_facilitator = split_by_facilitator && type == :facilitator
+        intermediate_rollup = get_intermediate_rollup(summarized_answers, question_details_per_type, type, should_split_by_facilitator)
+        rollup[type] = get_averaged_rollup(intermediate_rollup, question_details_per_type, should_split_by_facilitator)
       end
       rollup
     end
 
-    def self.get_averaged_rollup(intermediate_rollup, question_details, form_type)
+    def self.get_averaged_rollup(intermediate_rollup, question_details, split_by_facilitator)
       rollup = {}
-      if form_type == :facilitator
+      if split_by_facilitator
         intermediate_rollup.each do |facilitator_id, facilitator_intermediate_rollup|
           rollup[facilitator_id] = get_averaged_rollup_helper(facilitator_intermediate_rollup, question_details)
         end
@@ -116,8 +118,8 @@ module Pd::Foorm
     #       },...
     #     }
     #   }
-    def self.get_intermediate_rollup(summarized_answers, question_details, form_type)
-      intermediate_rollup = form_type == :facilitator ? {} : set_up_intermediate_rollup(question_details)
+    def self.get_intermediate_rollup(summarized_answers, question_details, form_type, split_by_facilitator)
+      intermediate_rollup = split_by_facilitator ? {} : set_up_intermediate_rollup(question_details)
       summarized_answers.each_value do |summaries_by_form|
         included_form = false
         question_details.each do |question, question_data|
@@ -130,10 +132,12 @@ module Pd::Foorm
             if form_type == :facilitator
               question_summary.each do |facilitator_id, facilitator_question_summary|
                 included_form = true
-                unless intermediate_rollup[facilitator_id]
+                if split_by_facilitator && !intermediate_rollup[facilitator_id]
                   intermediate_rollup[facilitator_id] = set_up_intermediate_rollup(question_details)
                 end
-                intermediate_rollup_at_question = intermediate_rollup[facilitator_id][:questions][question]
+                intermediate_rollup_at_question = split_by_facilitator ?
+                                                    intermediate_rollup[facilitator_id][:questions][question] :
+                                                    intermediate_rollup[:questions][question]
                 add_question_data_to_rollup(intermediate_rollup_at_question, question_data, facilitator_question_summary)
               end
             else
@@ -142,10 +146,14 @@ module Pd::Foorm
           end
         end
         next unless included_form
-        if form_type == :facilitator
+        if split_by_facilitator
           intermediate_rollup.each do |facilitator_id, _|
             intermediate_rollup[facilitator_id][:response_count] +=
               summaries_by_form[:facilitator][:response_count][facilitator_id] || 0
+          end
+        elsif form_type == :facilitator
+          summaries_by_form[:facilitator][:response_count].each do |_, count|
+            intermediate_rollup[:response_count] += count
           end
         else
           intermediate_rollup[:response_count] += summaries_by_form[form_type][:response_count]

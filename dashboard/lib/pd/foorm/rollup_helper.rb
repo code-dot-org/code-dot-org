@@ -48,7 +48,8 @@ module Pd::Foorm
           # for now we will skip questions that don't have the same type and choices/rows/columns
           # across all versions/forms.
           next unless validate_question(question, question_data, parsed_forms, form_type)
-          parsed_form = parsed_forms[question_data[:form_type]][first_form_key]
+          first_form_key = question_data[:form_keys].first
+          parsed_form = parsed_forms[form_type][first_form_key]
           parsed_question_data = parsed_form[question]
 
           questions[form_type][question] = {
