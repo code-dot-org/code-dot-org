@@ -6,14 +6,14 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     @teacher = create :teacher
     @student = create :student
     @section = create :section, user: @teacher
-    @stage = create :stage
-    @stage_2 = create :stage
+    @lesson = create :lesson
+    @lesson_2 = create :lesson
     @script = create :script
   end
 
   test 'score_stage_for_section is forbidden if signed out' do
     post '/dashboardapi/v1/teacher_scores', params: {
-      section_id: @section.id, stage_scores: [{stage_id: @stage.id, score: 100}]
+      section_id: @section.id, stage_scores: [{stage_id: @lesson.id, score: 100}]
     }
     assert_response 302
   end
@@ -21,7 +21,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
   test 'score_stage_for_section is forbidden if student' do
     sign_in @student
     post '/dashboardapi/v1/teacher_scores', params: {
-      section_id: @section.id, stage_scores: [{stage_id: @stage.id, score: 100}]
+      section_id: @section.id, stage_scores: [{stage_id: @lesson.id, score: 100}]
     }
     assert_response :forbidden
   end
@@ -29,7 +29,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
   test 'score_stage_for_section is forbidden for teacher who does not own section' do
     sign_in @teacher
     section_2 = create :section
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section_2.id, stage_scores: [{stage_id: @stage.id, score: 100}]}
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section_2.id, stage_scores: [{stage_id: @lesson.id, score: 100}]}
     assert_response :forbidden
   end
 
@@ -47,7 +47,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
         create(:maze, name: 'test level 1')
       ]
     )
-    stage = script_level.stage
+    stage = script_level.lesson
 
     sign_in teacher
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}]}
@@ -69,8 +69,8 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
         create(:maze, name: 'test level 1')
       ]
     )
-    stage = script_level.stage
-    destroyed_stage = create :stage
+    stage = script_level.lesson
+    destroyed_stage = create :lesson
     destroyed_stage.destroy
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}, {stage_id: destroyed_stage.id, score: 0}]}
     refute TeacherScore.where(teacher_id: teacher.id).exists?
@@ -104,7 +104,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
       ]
     )
     level = script_level.levels[0]
-    stage = script_level.stage
+    stage = script_level.lesson
     score = 100
 
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: score}]}
@@ -132,7 +132,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
       ]
     )
     level = script_level.levels[0]
-    stage = script_level.stage
+    stage = script_level.lesson
     score = 100
 
     section.students.each do |student|

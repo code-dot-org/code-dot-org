@@ -176,7 +176,7 @@ endvariants
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
     level3 = create :maze, name: 'maze 3', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script
+    stage = create :lesson, name: 'stage 1', script: script
     script_level = create(
       :script_level,
       levels: [level, level2, level3],
@@ -186,7 +186,7 @@ endvariants
           'maze 3': {'active': false, 'experiments': ['testExperiment2', 'testExperiment3']},
         }
       },
-      stage: stage,
+      lesson: stage,
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
@@ -595,8 +595,8 @@ level 'Level 3'
   test 'serialize visible after for stage' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0800'
-    script_level = create :script_level, levels: [level], stage: stage, script: script
+    stage = create :lesson, name: 'stage 1', script: script, visible_after: '2020-04-01 08:00:00 -0800'
+    script_level = create :script_level, levels: [level], lesson: stage, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
       stage 'stage 1', visible_after: '2020-04-01 08:00:00 -0800'
@@ -710,12 +710,12 @@ level 'Level 3'
   test 'serialize named_level' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script
+    stage = create :lesson, name: 'stage 1', script: script
     script_level = create(
       :script_level,
       levels: [level],
       named_level: true,
-      stage: stage,
+      lesson: stage,
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
@@ -749,12 +749,12 @@ level 'Level 3'
   test 'serialize assessment' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    stage = create :stage, name: 'stage 1', script: script
+    stage = create :lesson, name: 'stage 1', script: script
     script_level = create(
       :script_level,
       levels: [level],
       assessment: true,
-      stage: stage,
+      lesson: stage,
       script: script
     )
     script_text = ScriptDSL.serialize_to_string(script_level.script)
