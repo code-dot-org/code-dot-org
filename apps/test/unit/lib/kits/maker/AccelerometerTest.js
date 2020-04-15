@@ -1,7 +1,7 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import Accelerometer from '@cdo/apps/lib/kits/maker/Accelerometer';
 import {MicrobitStubBoard} from './makeStubBoard';
-import {sensor_channels} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
+import {sensor_channels} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import sinon from 'sinon';
 
 describe('MicroBitAccelerometer', function() {

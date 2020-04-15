@@ -18,7 +18,7 @@ import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
   TOUCH_PINS
-} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.

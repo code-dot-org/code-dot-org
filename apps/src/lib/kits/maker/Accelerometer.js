@@ -1,5 +1,8 @@
 import {EventEmitter} from 'events';
-import {sensor_channels, roundToHundredth} from './MicroBitConstants';
+import {
+  sensor_channels,
+  roundToHundredth
+} from './boards/microBit/MicroBitConstants';
 
 // Transfer the acceleration units from milli-g to meters/second^2
 // Round to the nearest hundredth

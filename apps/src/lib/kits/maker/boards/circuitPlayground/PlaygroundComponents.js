@@ -8,7 +8,7 @@ import {
   TOUCH_PINS,
   CP_COMMAND,
   CP_ACCEL_STREAM_ON
-} from '../../PlaygroundConstants';
+} from './PlaygroundConstants';
 import LookbackLogger from '../../LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
