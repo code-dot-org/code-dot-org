@@ -502,6 +502,32 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal '2017', script.version_year
   end
 
+  test 'add lesson to script' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    level = create :level
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    assert_empty script.lessons
+
+    script_text = <<~SCRIPT_TEXT
+      stage 'stage 1'
+      level '#{level.name}'
+    SCRIPT_TEXT
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: script_text,
+    }
+    script.reload
+
+    assert_response :redirect
+    assert_equal level, script.lessons.first.script_levels.first.level
+  end
+
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
@@ -663,7 +689,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
-    assert response.body.include? 'The lesson Stage 1 will be visible after'
+    assert response.body.include? 'The lesson stage 1 will be visible after'
     Timecop.return
   end
 

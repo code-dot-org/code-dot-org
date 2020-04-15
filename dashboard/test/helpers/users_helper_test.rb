@@ -17,7 +17,7 @@ class UsersHelperTest < ActionView::TestCase
         lockableAuthorized: false,
         levels: {},
         # second stage because first is unplugged
-        current_stage: script.stages[1].id,
+        current_stage: script.lessons[1].id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -36,7 +36,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_stage: script.stages[1].id,
+        current_stage: script.lessons[1].id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -105,7 +105,7 @@ class UsersHelperTest < ActionView::TestCase
           "#{ul.level_id}_1" => {}
         },
         # second stage because first is unplugged
-        current_stage: script_level.stage.id,
+        current_stage: script_level.lesson.id,
         completed: false
       },
       summarize_user_progress(script, user)
@@ -135,7 +135,7 @@ class UsersHelperTest < ActionView::TestCase
           result: ActivityConstants::BEST_PASS_RESULT
         }
       },
-      current_stage: script_level.stage.id,
+      current_stage: script_level.lesson.id,
       completed: false
     }
     assert_equal expected_summary, summarize_user_progress(script, user)
@@ -152,10 +152,10 @@ class UsersHelperTest < ActionView::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :stage, name: 'Stage1', script: script, lockable: true
+    stage = create :lesson, name: 'Stage1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
 
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
@@ -259,10 +259,10 @@ class UsersHelperTest < ActionView::TestCase
     level.save!
 
     # create a stage that is NOT lockable
-    stage = create :stage, name: 'Stage1', script: script, lockable: false
+    stage = create :lesson, name: 'Stage1', script: script, lockable: false
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, stage: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?

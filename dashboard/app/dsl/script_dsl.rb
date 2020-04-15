@@ -348,8 +348,8 @@ class ScriptDSL < BaseDSL
         t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
         s << t
       end
-      lesson_group.stages.each do |stage|
-        s << serialize_stage(stage)
+      lesson_group.lessons.each do |lesson|
+        s << serialize_stage(lesson)
       end
     end
     s << ''
