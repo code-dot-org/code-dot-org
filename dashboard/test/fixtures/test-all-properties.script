@@ -1,7 +1,3 @@
-hidden false
-login_required true
-family_name 'csd1'
-
 hideable_stages true
 project_widget_visible true
 student_detail_progress_view true

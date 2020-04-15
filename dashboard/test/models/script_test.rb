@@ -230,15 +230,8 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([script_file_no_properties])
     script.reload
 
-    # The values below do not get reset to defaults. TODO: determine if this behavior should be changed.
-    expected_props = {
-      "is_stable" => true,
-      "peer_reviews_to_complete" => 1,
-      "curriculum_path" => "fake_curriculum_path",
-      "version_year" => "2020",
-      "curriculum_umbrella" => "CSF"
-    }
-    assert_equal expected_props, script.properties
+    # All properties should get reset to defaults.
+    assert_empty script.properties
   end
 
   test 'should not create two scripts with same name' do
