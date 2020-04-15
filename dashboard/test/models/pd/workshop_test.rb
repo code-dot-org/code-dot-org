@@ -976,7 +976,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       create(:script).tap do |script|
         create :course_script, course: course, script: script, position: (next_position += 1)
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :stage, script: script, name: lesson_name}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name}
       end
     end
 

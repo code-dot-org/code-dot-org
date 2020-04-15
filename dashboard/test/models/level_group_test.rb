@@ -15,8 +15,8 @@ class LevelGroupTest < ActiveSupport::TestCase
   end
 
   def get_evaluation_multi_dsl(id)
-    stage1 = create :stage
-    stage2 = create :stage
+    stage1 = create :lesson
+    stage2 = create :lesson
 
     "
     name 'evaluation_multi_#{id}'
@@ -419,7 +419,7 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: [
           {
             type: "text_match",
@@ -503,7 +503,7 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: []
       }
     }

@@ -22,7 +22,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     @plc_course_unit = create :plc_course_unit, plc_course: @plc_course
     @learning_module = create :plc_learning_module, plc_course_unit: @plc_course_unit
 
-    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
+    @script_level = create :script_level, levels: [@level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
     @script = @script_level.script
 
     @user = create :user
@@ -382,7 +382,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_1, level_2, level_3 = create_list(:free_response, 4, peer_reviewable: true)
 
     [level_1, level_2, level_3].each do |level|
-      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, stage: @learning_module.stage
+      script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson
       level_source = create :level_source, level: level
       track_progress(level_source.id, @user, script_level)
     end
