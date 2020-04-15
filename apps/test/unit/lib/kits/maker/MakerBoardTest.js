@@ -3,8 +3,8 @@ import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
-import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 
 /**

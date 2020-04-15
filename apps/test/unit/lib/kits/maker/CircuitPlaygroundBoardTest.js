@@ -6,7 +6,7 @@ import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard, {
   BOARD_TYPE
-} from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import {
   SONG_CHARGE,
   EXTERNAL_PINS
