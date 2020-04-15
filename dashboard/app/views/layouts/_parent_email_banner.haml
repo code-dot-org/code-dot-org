@@ -24,7 +24,7 @@
   = form_for(current_user,
       url: '/users/parent_email',
       remote: true,
-      html: { id: 'add-parent-email-modal-form' },
+      html: { id: 'parent-email-banner-modal-form' },
       namespace: 'parent-email-banner-modal',
     ) do |f|
     = f.hidden_field :parent_email
