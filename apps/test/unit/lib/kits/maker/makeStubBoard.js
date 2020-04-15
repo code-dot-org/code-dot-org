@@ -71,5 +71,11 @@ export class MicrobitStubBoard {
 
   stopStreamingAnalogChannel(channel) {}
 
+  setDigitalOutput(pin, value) {}
+
+  disconnect() {}
+
+  reset() {}
+
   trackDigitalComponent() {}
 }
