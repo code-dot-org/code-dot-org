@@ -8,19 +8,19 @@ import {
   TOUCH_PINS,
   CP_COMMAND,
   CP_ACCEL_STREAM_ON
-} from './PlaygroundConstants';
-import LookbackLogger from './LookbackLogger';
+} from '../../PlaygroundConstants';
+import LookbackLogger from '../../LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
-import {PlaygroundButton} from './Button';
-import PlaygroundThermometer from './Thermometer';
-import TouchSensor from './TouchSensor';
-import Piezo from './Piezo';
-import NeoPixel from './NeoPixel';
-import Led from './Led';
-import Switch from './Switch';
-import experiments from '../../../util/experiments';
+import {PlaygroundButton} from '../../Button';
+import PlaygroundThermometer from '../../Thermometer';
+import TouchSensor from '../../TouchSensor';
+import Piezo from '../../Piezo';
+import NeoPixel from '../../NeoPixel';
+import Led from '../../Led';
+import Switch from '../../Switch';
+import experiments from '../../../../../util/experiments';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently

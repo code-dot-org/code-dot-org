@@ -8,7 +8,7 @@ import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
   componentConstructors
-} from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
 import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
