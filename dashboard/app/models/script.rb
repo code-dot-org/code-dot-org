@@ -931,6 +931,9 @@ class Script < ActiveRecord::Base
       # 2. If the lesson group key is an existing key that the given display name
       # for that key matches the already saved display name
       raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+        if raw_lesson_group[:key].blank?
+          raise "Expect all levelbuilder created lesson groups to have key."
+        end
         if raw_lesson_group[:display_name].blank?
           raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
         end
