@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert} from 'chai';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import {courses, topCourse} from './homepagesTestData';
@@ -41,17 +41,17 @@ describe('TeacherHomepage', () => {
 
   it('references 2 ProtectedStatefulDivs', () => {
     const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
-    expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
+    assert.lengthOf(wrapper.find('ProtectedStatefulDiv'), 2);
   });
 
   it('renders a TeacherSections component', () => {
     const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
-    expect(wrapper).to.containMatchingElement(<TeacherSections />);
+    assert(wrapper.containsMatchingElement(<TeacherSections />));
   });
 
   it('renders a StudentSections component', () => {
     const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
-    expect(wrapper.find('StudentSections').exists()).to.be.true;
+    assert(wrapper.find('StudentSections').exists());
   });
 
   it('renders a RecentCourses component', () => {
@@ -68,7 +68,7 @@ describe('TeacherHomepage', () => {
 
   it('shows ProjectWidgetWithData component', () => {
     const wrapper = shallow(<TeacherHomepage {...TEST_PROPS} />);
-    expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
+    assert(wrapper.find('ProjectWidgetWithData').exists());
   });
 
   it('shows the special announcement for English', () => {

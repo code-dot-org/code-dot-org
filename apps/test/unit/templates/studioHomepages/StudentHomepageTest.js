@@ -1,5 +1,5 @@
 import React from 'react';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
@@ -27,7 +27,7 @@ describe('StudentHomepage', () => {
 
   it('references a ProtectedStatefulDiv for flashes', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
-    expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
+    assert(wrapper.find('ProtectedStatefulDiv').exists());
   });
 
   it('shows RecentCourses component', () => {
@@ -43,7 +43,7 @@ describe('StudentHomepage', () => {
 
   it('shows ProjectWidgetWithData component', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
-    expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
+    assert(wrapper.find('ProjectWidgetWithData').exists());
   });
 
   it('shows a StudentSections component', () => {
