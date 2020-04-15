@@ -60,6 +60,7 @@ export default class Results extends React.Component {
               questions={this.props.questions}
               courseName={this.props.courseName}
               isPerFacilitator={false}
+              facilitators={this.props.facilitators}
             />
           </Tab>
         )}
