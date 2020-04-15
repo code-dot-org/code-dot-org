@@ -57,6 +57,8 @@ export class MicrobitStubBoard {
     }
   }
 
+  trackDigitalPin() {}
+
   addFirmataEventListener(eventListenerFunction) {
     this.eventListeners.push(eventListenerFunction);
   }
@@ -68,4 +70,12 @@ export class MicrobitStubBoard {
   streamAnalogChannel(channel) {}
 
   stopStreamingAnalogChannel(channel) {}
+
+  setDigitalOutput(pin, value) {}
+
+  disconnect() {}
+
+  reset() {}
+
+  trackDigitalComponent() {}
 }

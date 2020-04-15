@@ -14,5 +14,5 @@
 
 class SectionHiddenStage < ApplicationRecord
   belongs_to :section
-  belongs_to :stage
+  belongs_to :lesson, foreign_key: 'stage_id'
 end
