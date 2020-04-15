@@ -104,8 +104,8 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly options converts 'impressive' => 'false' to 'impressive => false'" do
     @level = create :artist
-    @stage = create :stage
-    @script_level = create :script_level, levels: [@level], stage: @stage
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
     @level.impressive = "false"
     @level.free_play = "false"
 
@@ -131,8 +131,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "should select only callouts for current script level" do
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    @script_level = create(:script_level, script: script, levels: [@level], stage: stage)
+    stage = create(:lesson, script: script)
+    @script_level = create(:script_level, script: script, levels: [@level], lesson: stage)
 
     callout1 = create(:callout, script_level: @script_level)
     callout2 = create(:callout, script_level: @script_level)
@@ -148,8 +148,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "should localize callouts" do
     script = create(:script)
     @level = create(:level, :blockly, user_id: nil)
-    stage = create(:stage, script: script)
-    @script_level = create(:script_level, script: script, levels: [@level], stage: stage)
+    stage = create(:lesson, script: script)
+    @script_level = create(:script_level, script: script, levels: [@level], lesson: stage)
 
     create(:callout, script_level: @script_level, localization_key: 'run')
 
@@ -464,31 +464,31 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:stages]
     )
 
-    stage = script.stages[0]
+    stage = script.lessons[0]
     assert_equal 1, stage.absolute_position
     assert_equal 1, stage.relative_position
     assert_equal '/s/test_script/lockable/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/lockable/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.stages[1]
+    stage = script.lessons[1]
     assert_equal 2, stage.absolute_position
     assert_equal 1, stage.relative_position
     assert_equal '/s/test_script/stage/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/stage/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.stages[2]
+    stage = script.lessons[2]
     assert_equal 3, stage.absolute_position
     assert_equal 2, stage.relative_position
     assert_equal '/s/test_script/lockable/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/lockable/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.stages[3]
+    stage = script.lessons[3]
     assert_equal 4, stage.absolute_position
     assert_equal 3, stage.relative_position
     assert_equal '/s/test_script/lockable/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/lockable/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
-    stage = script.stages[4]
+    stage = script.lessons[4]
     assert_equal 5, stage.absolute_position
     assert_equal 2, stage.relative_position
     assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
@@ -513,7 +513,7 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:stages]
     )
 
-    bonus_script_level = script.stages.first.script_levels[1]
+    bonus_script_level = script.lessons.first.script_levels[1]
     uri = URI(build_script_level_path(bonus_script_level, {}))
     assert_equal '/s/test_bonus_level_links/stage/1/extras', uri.path
 
@@ -543,7 +543,7 @@ class LevelsHelperTest < ActionView::TestCase
       script_data[:stages]
     )
 
-    stage = script.stages[0]
+    stage = script.lessons[0]
 
     sl = stage.script_levels[2]
     uri = URI(build_script_level_path(sl, {}))
@@ -565,8 +565,8 @@ class LevelsHelperTest < ActionView::TestCase
 
     @script = create(:script)
     @level = create :multi
-    @stage = create :stage
-    @script_level = create :script_level, levels: [@level], stage: @stage
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
 
     @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
 
@@ -579,8 +579,8 @@ class LevelsHelperTest < ActionView::TestCase
 
     @script = create(:script)
     @level = create :multi
-    @stage = create :stage
-    @script_level = create :script_level, levels: [@level], stage: @stage
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
 
     @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
 
