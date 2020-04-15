@@ -317,7 +317,7 @@ class Homepage
           text: "homepage_slot_text_blurb_at_home",
           color1: "0, 173, 188",
           color2: "89, 202, 211",
-          url: "/athome",
+          url: CDO.studio_url("/courses"),
           image: "/images/mc/2016_homepage_hocblock.jpg"
         },
         {
