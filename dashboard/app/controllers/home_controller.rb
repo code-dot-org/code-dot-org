@@ -135,7 +135,7 @@ class HomeController < ApplicationController
     if script && script_level
       @homepage_data[:topCourse] = {
         assignableName: data_t_suffix('script.name', script[:name], 'title'),
-        lessonName: script_level.stage.localized_title,
+        lessonName: script_level.lesson.localized_title,
         linkToOverview: script_path(script),
         linkToLesson: script_next_path(script, 'next')
       }
