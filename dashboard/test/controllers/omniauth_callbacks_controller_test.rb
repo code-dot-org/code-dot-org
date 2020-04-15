@@ -1533,10 +1533,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     uid = 'google-takeover-id'
 
     # Make account invalid
+    # Although teacher accounts should have an email, there are some legacy
+    # teacher accounts which don't have an email recorded for them.
+    # Therefore, the lack of email will not fail validation.
     malformed_account.email = ''
     malformed_account.save(validate: false)
     malformed_account.reload
-    refute malformed_account.valid?
+    assert malformed_account.valid?
 
     Honeybadger.expects(:notify).never
 

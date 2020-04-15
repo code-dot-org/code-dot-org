@@ -157,7 +157,7 @@ module RegistrationsControllerTests
 
     test "does not send email when teacher destroyed if teacher has no email" do
       user = create :teacher, :without_email, password: 'apassword'
-      refute user.valid?
+      assert user.valid?
       sign_in user
 
       TeacherMailer.expects(:delete_teacher_email).never

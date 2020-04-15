@@ -679,10 +679,25 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot create teacher without email" do
+  test "creating a teacher given manual provider and no email should fail to create the user" do
     assert_does_not_create(User) do
       User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
+  end
+
+  test "creating a teacher given no email should fail" do
+    user = User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher',
+                       hashed_email: 'ebe8f16a62480d29a8af2ec3b5017af5'
+    )
+    assert_not_empty user.errors[:email]
+  end
+
+  test "updating a teacher given no email should succeed" do
+    # setup existing teacher which doesn't have an email
+    user = User.create(user_type: User::TYPE_TEACHER, name: 'No Email Teacher')
+    user.save(validate: false)
+    user.name = "No Email Teacher Name Updated"
+    user.save!
   end
 
   test "cannot make an account without email a teacher" do
