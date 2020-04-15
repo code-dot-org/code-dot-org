@@ -605,7 +605,7 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'serialize visible after for stage' do
+  test 'serialize visible after for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
     lesson_group = create :lesson_group, key: "", script: script, user_facing: false

@@ -1053,7 +1053,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:stages])
 
-    # Everything has Stage <number> when nothing is lockable
+    # Everything has Lesson <number> when nothing is lockable
     assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
     assert (/^Lesson 2:/.match(script.lessons[1].localized_title))
     assert (/^Lesson 3:/.match(script.lessons[2].localized_title))
@@ -1069,7 +1069,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:stages])
 
-    # When first stage is lockable, it has no stage number, and the next stage starts at 1
+    # When first lesson is lockable, it has no lesson number, and the next lesson starts at 1
     assert (/^Lesson/.match(script.lessons[0].localized_title).nil?)
     assert (/^Lesson 1:/.match(script.lessons[1].localized_title))
     assert (/^Lesson 2:/.match(script.lessons[2].localized_title))
@@ -1085,7 +1085,7 @@ class ScriptTest < ActiveSupport::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
     script = Script.add_script({name: 'test_script'}, script_data[:lesson_groups], script_data[:stages])
 
-    # When only second stage is lockable, we count non-lockable stages appropriately
+    # When only second lesson is lockable, we count non-lockable lessons appropriately
     assert (/^Lesson 1:/.match(script.lessons[0].localized_title))
     assert (/^Lesson/.match(script.lessons[1].localized_title).nil?)
     assert (/^Lesson 2:/.match(script.lessons[2].localized_title))
