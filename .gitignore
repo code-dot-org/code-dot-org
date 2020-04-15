@@ -69,4 +69,6 @@ npm-debug.log
 /tools/scripts/brokenLinkChecker/node_modules/
 
 flask/data_utils/data
+flask/rubric/checkpoints
+flask/rubric/data
 node_modules/
