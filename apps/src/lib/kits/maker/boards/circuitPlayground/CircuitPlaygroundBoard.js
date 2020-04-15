@@ -21,7 +21,7 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
-import Led from '../../Led';
+import Led from './Led';
 import {
   isNodeSerialAvailable,
   ADAFRUIT_VID,

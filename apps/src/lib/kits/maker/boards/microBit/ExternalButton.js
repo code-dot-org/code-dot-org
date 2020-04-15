@@ -1,4 +1,4 @@
-import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './boards/microBit/MicroBitConstants';
+import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './MicroBitConstants';
 import {EventEmitter} from 'events';
 
 export default function ExternalButton(board) {
