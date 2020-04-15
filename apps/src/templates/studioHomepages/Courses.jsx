@@ -42,22 +42,33 @@ class Courses extends Component {
   }
 
   getHeroStrings() {
-    const {isTeacher, studentsCount} = this.props;
+    const {isTeacher, isSignedOut, studentsCount} = this.props;
+
+    // Default to "Learn" view strings
+    let heroStrings = {
+      headingText: i18n.coursesLearnHeroHeading(),
+      subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
+      description: i18n.coursesLearnHeroDescription(),
+      buttonText: i18n.coursesLearnHeroButton()
+    };
+
+    // Apply overrides if this is the "Teach" view
     if (isTeacher) {
-      return {
+      heroStrings = {
         headingText: i18n.coursesTeachHeroHeading(),
         subHeadingText: i18n.coursesTeachHeroSubHeading(),
         description: i18n.coursesTeachHeroDescription(),
         buttonText: i18n.coursesTeachHeroButton()
       };
-    } else {
-      return {
-        headingText: i18n.coursesLearnHeroHeading(),
-        subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
-        description: i18n.coursesLearnHeroDescription(),
-        buttonText: i18n.coursesLearnHeroButton()
-      };
     }
+
+    // We show a short version of the banner when you're signed in,
+    // so don't include the description string.
+    if (!isSignedOut) {
+      delete heroStrings.description;
+    }
+
+    return heroStrings;
   }
 
   render() {
