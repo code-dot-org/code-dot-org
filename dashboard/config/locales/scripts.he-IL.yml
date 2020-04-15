@@ -2208,6 +2208,8 @@ he:
           stages:
             While Loops:
               name: לולאות "כל עוד"
+            Variables:
+              name: משתנים
         virtual-holding-place:
           stages:
             Functions:

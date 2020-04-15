@@ -369,6 +369,8 @@ ca:
       s''esborrarant els comptes dels seus alumnes.'
     delete_confirm: Esteu segur que voleu suprimir el vostre compte?
     update_email: Actualitza
+    parent_guardian_email_label: E-mail del pare/tutor
+    none: Cap
   user_level:
     completed: Completat
     tried: Provat

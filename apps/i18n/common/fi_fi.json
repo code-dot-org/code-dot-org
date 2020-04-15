@@ -11,6 +11,8 @@
   "activity": "Toiminta",
   "actions": "Toiminnot",
   "add": "Lisää",
+  "addParentEmailModal_parentEmail_label": "Huoltajan sähköpostiosoite",
+  "addParentEmailModal_save": "Päivitä",
   "addPassword": "Lisää salasana",
   "addRemoveCleverClassrooms": "Käy osoitteessa https://clever.com/ ja vahvista, että oppituntisi on yhdistetty Code.org.:iin.",
   "addRemoveGoogleClassrooms": "Käy osoitteessa https://classroom.google.com/ jotta voit lisätä tai poistaa luokkahuoneita.",

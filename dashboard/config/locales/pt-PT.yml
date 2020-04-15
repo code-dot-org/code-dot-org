@@ -475,6 +475,8 @@ pt:
     update: Atualizar conta
     account_successfully_updated: Conta atualizada com sucesso.
     update_email: Atualizar
+    parent_guardian_email_label: Email dos pais ou do encarregado de educação
+    none: Nenhum
     encrypted: encriptado
   user_level:
     completed: Concluído

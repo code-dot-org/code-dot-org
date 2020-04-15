@@ -206,6 +206,7 @@ ms:
     current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)"
     update_email: Kemas kini
+    none: Tiada
   user_level:
     completed: Lengkap
     tried: Telah dicuba

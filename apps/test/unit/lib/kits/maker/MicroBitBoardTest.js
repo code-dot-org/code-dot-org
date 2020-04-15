@@ -3,7 +3,10 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
+import _ from 'lodash';
+import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/ExternalLed';
+import ExternalButton from '@cdo/apps/lib/kits/maker/ExternalButton';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -138,6 +141,36 @@ describe('MicroBitBoard', () => {
         const pin = 13;
         const newLed = board.createLed(pin);
         expect(newLed).to.be.an.instanceOf(ExternalLed);
+      });
+    });
+  });
+
+  describe(`createButton(pin)`, () => {
+    it('makes a button controller', () => {
+      return board.connect().then(() => {
+        const pin = 13;
+        const newButton = board.createButton(pin);
+        expect(newButton).to.be.an.instanceOf(ExternalButton);
+      });
+    });
+
+    it('configures the controller as a pullup if passed an external pin', () => {
+      return board.connect().then(() => {
+        EXTERNAL_PINS.forEach(pin => {
+          const newButton = board.createButton(pin);
+          expect(newButton.pullup).to.be.true;
+        });
+      });
+    });
+
+    it('does not configure the controller as a pullup if passed a non-external pin', () => {
+      return board.connect().then(() => {
+        _.range(21)
+          .filter(pin => !EXTERNAL_PINS.includes(pin))
+          .forEach(pin => {
+            const newButton = board.createButton(pin);
+            expect(newButton.pullup).to.be.false;
+          });
       });
     });
   });

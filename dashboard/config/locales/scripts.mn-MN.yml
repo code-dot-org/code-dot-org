@@ -20370,6 +20370,8 @@ mn:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
             Intro to App Lab:
               name: Апп Лаб-н танилцуулга
+            Variables:
+              name: Хувьсагчууд
         virtual-holding-place:
           stages:
             Velocity:

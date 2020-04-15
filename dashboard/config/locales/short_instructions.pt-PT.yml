@@ -559,6 +559,9 @@ pt-PT:
       4-5 While Loops Assessment 1: |-
         Há um monte de buracos e
         montes. Ajude-me a preenchê-los e removê-los para tornar o solo plano.
+      AB_Debug_PlayLab3: Move o cavaleiro para cada uma das bandeiras. Se algo correr
+        mal, procura erros!
+      CDEF_debugging_flappy2: Por que é que este jogo não funciona?
       CSD U5 black white images pixelation 5: Desenha o que quiseres
       CSD U5 black white images pixelation 5_2018: Desenha o que quiseres
       CSD U5 black white images pixelation 5_2019: Desenha o que quiseres
@@ -810,6 +813,7 @@ pt-PT:
         veres os detalhes)
       Dance_Party_extras_visible_2019: Para onde é que eles foram? (Clica em "Mais"
         para veres os detalhes)
+      Frequency Analysis: Teste
       Function intro Ryan: Utiliza a função "construir ponte" duas vezes para criar
         um caminho até à tocha.
       Function intro Ryan_2019: Utiliza a função "construir ponte" duas vezes para
@@ -1259,6 +1263,7 @@ pt-PT:
       Underground Mining Coal_2019: Vais encontrar os recursos mais valiosos no subsolo,
         mas pode fazer escuro lá em baixo. Coloca pelo menos 2 tochas e escava pelo
         menos 2 carvões.
+      Vigenere: Teste
       'Widget: Text Compression': 'Procura padrões (palavras ou frases repetidas)
         no texto. Introduz os padrões que vês no dicionário à direita. À medida que
         escreves cada entrada no dicionário, o símbolo da entrada é inserido no texto

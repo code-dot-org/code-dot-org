@@ -3387,7 +3387,7 @@ de-DE:
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
-        - {}
+        - text: Die Biene wird nicht genug Honig produzieren.
         - {}
         - text: Ich weiß es nicht.
         questions:
@@ -3692,7 +3692,7 @@ de-DE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction2_2018:
         answers:
         - {}
@@ -3701,7 +3701,7 @@ de-DE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - {}
@@ -3710,7 +3710,7 @@ de-DE:
         - {}
         - {}
         questions:
-        - {}
+        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Übersicht

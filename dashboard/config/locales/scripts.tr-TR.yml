@@ -15853,6 +15853,8 @@ tr:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
             Intro to App Lab:
               name: Uygulama Labına Giriş
+            Variables:
+              name: Değişkenler
         virtual-holding-place:
           stages:
             Velocity:

@@ -1542,6 +1542,8 @@ ne:
           stages:
             While Loops:
               name: While Loops
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Functions:

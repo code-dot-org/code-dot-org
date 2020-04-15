@@ -582,6 +582,8 @@ tr-TR:
           ## Kaynaklar
 
           * [Web Sitesinin Amaçları - Etkinlik Rehberi](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Web Sitesinin Amaçları - Örnek](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: açıklama burada
         markdown: "# Genel Bakış\n\nBu ders web sitelerini kişisel ifade aracı olarak
@@ -593,10 +595,40 @@ tr-TR:
           bir web sitesi geliştirmek için bir kaynak oluşturur. \n## Kelime Haznesi\n\n*
           **Web Sitesi İçeriği** - Web sayfasında bulunan ham metin, resimler ve diğer
           öğeler\n\n\n## Kaynaklar\n\n* [Kişisel Web Sitesi Taslağı - Etkinlik Rehberi](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Kişisel Web Sitesi Taslağı](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Örnek ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders, bir web sitesinin hem içeriğinin hem de yapısının bilgisayara nasıl iletileceği sorununa, HTML'yi bir çözüm olarak tanıtır. Ders, bir web sayfasının yapısını etkili bir şekilde iletmenin zorluklarını gösteren kısa bağlantısız bir etkinlikle başlar. Sınıf, Web Laboratuvarı'ndaki bir HTML sayfasına bakar ve HTML etiketlerinin bu sorunu çözmeye nasıl yardım ettiğini tartışır, ardından ünitenin ilk web sayfalarını yazmak için HTML kullanır.
+          ## Kelime Haznesi
+
+          * **HTML** - Hiper Metin İşaretleme Dili, web sayfaları oluşturmak için kullanılan bir dildir
+          * **HTML Ögesi** - Bir web sitesinin başlangıç etiketiyle işaretlenmiş ve bazen bitiş etiketiyle kapatılmış bir parçası
+          * **HTML Etiketi** - Bir HTML ögesinin başlangıcını ve bitişini ve bu ögenin türünü gösteren özel karakterler kümesi
+          * **Web Sitesi İçeriği** - Bir web sayfasında bulunan ham metin, resimler ve diğer ögeler
+          * **Web Sitesi Yapısı** - Bir web sayfasındaki farklı içerik parçalarının amacı, bilgisayarın bu içeriği nasıl görüntülenmesi gerektiğini belirlemesine yardımcı olmak için kullanılır.
+
+          ## Tanıtılan Kod
+
+          * **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         content1: açıklama burada
+        markdown: "# Genel Bakış\n\nBu ders, bu sefer başlıklarla HTML etiketlerini
+          tanıtmaya devam eder. Sınıf sayfa ve bölüm başlığı yaratmak için başlık
+          etiketlerini kullanarak uygulama yapar ve farklı başlık ögelerinin varsayılan
+          olarak nasıl görüntüleneceğini öğrenir. Ardından, sınıf ünite boyunca oluşturulacak
+          kişisel web sayfalarında içeriğin nasıl düzenleneceğini planlar ve projenin
+          ilk sayfasına başlar.\n## Kelime Haznesi\n\n* **Başlık** - Bir belge veya
+          belgenin bir bölümü için başlık veya özet \n\n## Tanıtılan Kod\n\n*  **[Heading](//studio.code.org/docs/weblab/h/)**
+          - `<h1></h1>`[Heading]\n\n"
       CSD U2 L5 Overview:
         content1: açıklama burada
       CSD U2 L6 Overview:

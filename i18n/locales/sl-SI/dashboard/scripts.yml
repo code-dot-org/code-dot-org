@@ -1315,6 +1315,8 @@ sl:
           stages:
             While Loops:
               name: 'Zanka: dokler velja'
+            Variables:
+              name: Spremenljivke
         virtual-holding-place:
           stages:
             Functions:

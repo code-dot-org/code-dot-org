@@ -14,6 +14,8 @@
   "actions": "Veprime",
   "add": "Shto",
   "addNewSection": "Shto një seksion të ri.",
+  "addParentEmailModal_parentEmail_isRequired": "Është e nevojshme një adresë email-i.",
+  "addParentEmailModal_save": "Përditëso",
   "addPartners": "Shto partnerë",
   "addPassword": "Shto një fjalëkalim",
   "addPasswordHint": "Duke krijuar një fjalëkalim më poshtë , ju do të jeni të aftë të hyni (logoheni)  me  emrin e përdoruesit dhe fjalëkalimin. Kjo do të ndihmojë ta mbani llogarinë tuaj te mbrojtur sepse ju do duhet te vendosni fjalëkalimin tuaj përpara cdo përditësimi.",
