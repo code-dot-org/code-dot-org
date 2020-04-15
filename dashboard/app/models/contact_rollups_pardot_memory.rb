@@ -77,8 +77,9 @@ class ContactRollupsPardotMemory < ApplicationRecord
   end
 
   def self.query_new_contacts
-    # Finds contacts in contact_rollups_processed but are not in contact_rollups_pardot_memory.
-    # Contacts must not be previously rejected by Pardot as invalid emails.
+    # New contacts are the ones exist in the production database but not in Pardot
+    # (i.e., no valid Pardot IDs in contact_rollups_pardot_memory.)
+    # In addition, they must not be previously rejected by Pardot as invalid emails.
     <<-SQL.squish
       SELECT processed.email, processed.data
       FROM contact_rollups_processed AS processed
@@ -97,7 +98,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
       SELECT
         processed.email, processed.data,
         pardot.pardot_id, pardot.data_synced,
-        (pardot.pardot_id_updated_at > pardot.data_synced_at) AS pardot_id_changed
+        COALESCE(pardot.pardot_id_updated_at > pardot.data_synced_at, FALSE) AS pardot_id_changed
       FROM contact_rollups_processed AS processed
       INNER JOIN contact_rollups_pardot_memory AS pardot
         ON processed.email = pardot.email
@@ -119,7 +120,7 @@ class ContactRollupsPardotMemory < ApplicationRecord
   # @param [Time] submitted_time time when submissions were sent to Pardot
   def self.save_sync_results(submissions, errors, submitted_time)
     rejected_indexes = Set.new errors.pluck(:prospect_index)
-    successful_submissions = submissions.reject.with_index do |_, index|
+    accepted_submissions = submissions.reject.with_index do |_, index|
       rejected_indexes.include? index
     end
 
@@ -127,11 +128,11 @@ class ContactRollupsPardotMemory < ApplicationRecord
       submissions[item[:prospect_index]].merge(error_msg: item[:error_msg])
     end
 
-    save_successful_submissions successful_submissions, submitted_time
+    save_accepted_submissions accepted_submissions, submitted_time
     save_rejected_submissions rejected_submissions, submitted_time
   end
 
-  def self.save_successful_submissions(submissions, submitted_time)
+  def self.save_accepted_submissions(submissions, submitted_time)
     emails_and_data = submissions.map do |item|
       {
         email: item[:email],

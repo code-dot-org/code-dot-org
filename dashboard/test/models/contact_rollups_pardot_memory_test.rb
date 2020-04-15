@@ -54,7 +54,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       record['email']
     end
 
-    # Should find only 2 new contacts
+    # Should find only 2 new contacts that don't have valid Pardot IDs.
     assert_equal %w(alpha gamma), results
   end
 
@@ -77,16 +77,26 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     base_time = Time.now.utc - 2.days
     pardot_memory_records = [
-      {email: 'alpha', pardot_id: 1, data_synced_at: nil, data_synced: nil},
+      {
+        email: 'alpha',
+        pardot_id: 1,
+        pardot_id_updated_at: base_time,
+        data_synced_at: nil,
+        data_synced: nil
+      },
       {
         email: 'beta',
-        pardot_id: 2, pardot_id_updated_at: base_time - 2.days,
-        data_synced_at: base_time - 1.day, data_synced: {db_Opt_In: 'Yes'}
+        pardot_id: 2,
+        pardot_id_updated_at: base_time - 2.days,
+        data_synced_at: base_time - 1.day,
+        data_synced: {db_Opt_In: 'Yes'}
       },
       {
         email: 'gamma',
-        pardot_id: 3, pardot_id_updated_at: base_time + 2.days,
-        data_synced_at: base_time + 1.day, data_synced: {db_Opt_In: 'Yes'}
+        pardot_id: 3,
+        pardot_id_updated_at: base_time + 2.days,
+        data_synced_at: base_time + 1.day,
+        data_synced: {db_Opt_In: 'Yes'}
       },
       # dummy records
       {email: 'delta', pardot_id: nil},
@@ -115,7 +125,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     end
 
     expected_results = [
-      {'email' => 'alpha', 'pardot_id_changed' => nil},
+      {'email' => 'alpha', 'pardot_id_changed' => 0},
       {'email' => 'beta', 'pardot_id_changed' => 0},
       {'email' => 'gamma', 'pardot_id_changed' => 1}
     ]
