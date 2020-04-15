@@ -7,6 +7,15 @@ import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 
 describe('StudentHomepage', () => {
+  const TEST_PROPS = {
+    courses,
+    topCourse,
+    sections: joinedSections,
+    codeOrgUrlPrefix: 'http://localhost:3000',
+    studentId: 123,
+    isEnglish: true
+  };
+
   it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <StudentHomepage
@@ -15,6 +24,7 @@ describe('StudentHomepage', () => {
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         studentId={123}
+        isEnglish
       />
     );
     const headerBanner = wrapper.find(HeaderBanner);
@@ -32,6 +42,7 @@ describe('StudentHomepage', () => {
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         studentId={123}
+        isEnglish
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
@@ -46,6 +57,7 @@ describe('StudentHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
         studentId={123}
         hasFeedback={false}
+        isEnglish
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -65,6 +77,7 @@ describe('StudentHomepage', () => {
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
         studentId={123}
+        isEnglish
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
@@ -78,11 +91,26 @@ describe('StudentHomepage', () => {
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
         studentId={123}
+        isEnglish
       />
     );
     const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
       initialSections: joinedSections
     });
+  });
+
+  it('shows the special announcement for English', () => {
+    const wrapper = shallow(
+      <StudentHomepage {...TEST_PROPS} isEnglish={true} />
+    );
+    assert(wrapper.find('SpecialAnnouncement').exists());
+  });
+
+  it('does not show the special announcement for non-English', () => {
+    const wrapper = shallow(
+      <StudentHomepage {...TEST_PROPS} isEnglish={false} />
+    );
+    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
   });
 });
