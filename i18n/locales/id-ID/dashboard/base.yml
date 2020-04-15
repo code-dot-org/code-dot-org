@@ -447,6 +447,8 @@ id:
     update: "Perbarui Akun"
     account_successfully_updated: "Akun sukses diperbarui."
     update_email: "Update"
+    parent_guardian_email_label: "Email orang tua/wali"
+    none: "Tidak Ada"
     encrypted: "dienkripsi"
   user_level:
     completed: 'Selesai'

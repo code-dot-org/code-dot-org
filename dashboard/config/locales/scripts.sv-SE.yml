@@ -2213,6 +2213,8 @@ sv:
           stages:
             While Loops:
               name: "'Medan' loopar(slingor)"
+            Variables:
+              name: variabler
         virtual-holding-place:
           stages:
             Functions:

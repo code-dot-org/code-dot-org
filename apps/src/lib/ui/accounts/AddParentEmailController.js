@@ -27,7 +27,10 @@ export default class AddParentEmailController {
   constructor({form, link, displayedParentEmail}) {
     this.form = form;
     this.displayedParentEmail = displayedParentEmail;
-    link.click(this.showAddParentEmailModal);
+    link.click(event => {
+      event.preventDefault();
+      this.showAddParentEmailModal();
+    });
   }
 
   showAddParentEmailModal = () => {

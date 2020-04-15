@@ -3,7 +3,6 @@
  */
 import _ from 'lodash';
 import codemirror from 'codemirror';
-import renderer from '@cdo/apps/util/StylelessRenderer';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
@@ -33,7 +32,6 @@ window.levelbuilder.copyWorkspaceToClipboard = function() {
 
 // TODO: Remove when global `CodeMirror` is no longer required.
 window.CodeMirror = codemirror;
-window.renderer = renderer;
 
 // TODO: Extract .js from _authored_hints.haml and _instructions.haml, then remove this
 window.convertXmlToBlockly = convertXmlToBlockly;

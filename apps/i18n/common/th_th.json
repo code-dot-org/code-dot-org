@@ -4,6 +4,8 @@
   "activity": "กิจกรรม",
   "actions": "การดำเนินการ",
   "add": "เพิ่ม",
+  "addParentEmailModal_parentEmail_label": "ที่อยู่อีเมล์ของผู้ปกครอง/ผู้พิทักษ์",
+  "addParentEmailModal_save": "อัพเดท",
   "addPassword": "ช่วยบีบี-8 รวบรวมเศษซากโลหะเรืองแสงทั้งหมด",
   "addRemoveCleverClassrooms": "เข้าไปที่ https://clever.com/ และยืนยันว่าห้องเรียนของคุณได้เชื่อมต่ออยู่กับ Code.org",
   "addRemoveGoogleClassrooms": "เข้าไปที่ https://classroom.google.com/ เพื่อเพิ่มหรือลบห้องเรียน",

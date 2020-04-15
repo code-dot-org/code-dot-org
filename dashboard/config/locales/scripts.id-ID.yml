@@ -6305,6 +6305,8 @@ id:
               name: 'Membangun aplikasi: Kanvas pelukis'
             Unit 5 Assessment 4:
               name: Unit 5 penilaian 4
+            Variables:
+              name: variabel
         virtual-holding-place:
           stages:
             Velocity:

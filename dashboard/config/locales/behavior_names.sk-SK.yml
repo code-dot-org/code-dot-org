@@ -282,17 +282,25 @@ sk-SK:
         patrolling: hliadkovať
       Virtual Pet 3_2019:
         wandering: túlať sa
+        wandering2: potulovať sa2
         moving east: posúvať sa na východ
         spinning left: rýchlo sa otočiť vľavo
         spinning right: rýchlo sa otočiť vpravo
+        moving east2: posúvať sa na východ2
         shrinking: zmenšovať sa
+        spinning left2: rýchlo sa otočiť vľavo2
         growing: rásť
         moving south: posúvať sa na juh
         swimming left and right: plávať vľavo a vpravo
+        swimming left and right2: plávať vľavo a vpravo2
         moving north: posúvať sa na sever
         jittering: chvieť sa
         moving west: posúvať sa na západ
+        moving north2: posúvať sa na sever2
         patrolling: hliadkovať
+        jittering2: chvenie2
+        moving west2: posúvať sa na západ2
+        patrolling2: hliadkovať2
       Virtual Pet 4:
         shrinking: zmenšovať sa
         patrolling: hliadkovať

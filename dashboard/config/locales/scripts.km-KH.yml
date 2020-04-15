@@ -374,6 +374,10 @@ km:
               name: លក្ខខណ្ឌ
             Functions:
               name: អនុ​គមន៍
+        csp5-virtual:
+          stages:
+            Variables:
+              name: អ​ថេរ
         virtual-holding-place:
           stages:
             Functions:

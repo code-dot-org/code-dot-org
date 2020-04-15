@@ -328,7 +328,7 @@ class ScriptDSL < BaseDSL
 
   def self.serialize_stages(script)
     s = []
-    script.stages.each do |stage|
+    script.lessons.each do |stage|
       t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
       t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category

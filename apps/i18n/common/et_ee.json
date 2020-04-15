@@ -11,6 +11,8 @@
   "activity": "Tegevus",
   "actions": "Tegevused",
   "add": "Lisa",
+  "addParentEmailModal_parentEmail_label": "Lapsevanem/hooldaja e-posti aadress",
+  "addParentEmailModal_save": "Uuenda",
   "addPartners": "Lisa kaaslased",
   "addPassword": "Parooli lisamine",
   "addPasswordHint": "Luues allpool salasõna, saad sa oma kasutajanime või e-maili aadressi ning salasönaga sisse logida. See aitab hoida ka su konto turvalisemana, kuna palume enne muudatuste salvestamist salasõna sisestada.",

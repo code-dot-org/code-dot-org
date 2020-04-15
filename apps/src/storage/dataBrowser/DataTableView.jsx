@@ -26,19 +26,15 @@ const styles = {
   ],
   container: {
     flexDirection: 'column',
-    height: '100%',
+    height: '99%',
     minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '100%',
+    maxWidth: '99%',
     paddingLeft: experiments.isEnabled(experiments.APPLAB_DATASETS)
       ? '8px'
       : '0px'
   },
   table: {
     minWidth: MIN_TABLE_WIDTH
-  },
-  tableWrapper: {
-    flexGrow: 1,
-    overflow: 'scroll'
   },
   pagination: {
     float: 'right',
@@ -180,7 +176,11 @@ class DataTableView extends React.Component {
           readOnly={readOnly}
         />
         <div style={debugDataStyle}>{this.getTableJson()}</div>
-        {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
+        {!this.state.showDebugView && (
+          <div style={{overflow: 'auto'}}>
+            <DataTable readOnly={readOnly} />
+          </div>
+        )}
       </div>
     );
   }

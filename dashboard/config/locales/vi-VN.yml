@@ -490,6 +490,8 @@ vi:
     enter_parent_email: Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho
       việc khôi phục mật khẩu)
     update_email: Cập nhật
+    parent_guardian_email_label: Email của phụ huynh/người giám hộ
+    none: Không có
   user_level:
     completed: Đã hoàn thành
     tried: thử lại
