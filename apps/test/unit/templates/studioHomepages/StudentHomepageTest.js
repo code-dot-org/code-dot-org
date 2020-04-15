@@ -17,16 +17,7 @@ describe('StudentHomepage', () => {
   };
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
-    const wrapper = shallow(
-      <StudentHomepage
-        courses={[]}
-        topCourse={topCourse}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        studentId={123}
-        isEnglish
-      />
-    );
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const headerBanner = wrapper.find(HeaderBanner);
     assert.deepEqual(headerBanner.props(), {
       headingText: 'My Dashboard',
@@ -35,31 +26,12 @@ describe('StudentHomepage', () => {
   });
 
   it('references a ProtectedStatefulDiv for flashes', () => {
-    const wrapper = shallow(
-      <StudentHomepage
-        courses={[]}
-        topCourse={topCourse}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        studentId={123}
-        isEnglish
-      />
-    );
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
   });
 
   it('shows RecentCourses component', () => {
-    const wrapper = shallow(
-      <StudentHomepage
-        courses={courses}
-        topCourse={topCourse}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        studentId={123}
-        hasFeedback={false}
-        isEnglish
-      />
-    );
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       courses: courses,
@@ -70,30 +42,12 @@ describe('StudentHomepage', () => {
   });
 
   it('shows ProjectWidgetWithData component', () => {
-    const wrapper = shallow(
-      <StudentHomepage
-        courses={courses}
-        topCourse={topCourse}
-        sections={joinedSections}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        studentId={123}
-        isEnglish
-      />
-    );
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
   });
 
   it('shows a StudentSections component', () => {
-    const wrapper = shallow(
-      <StudentHomepage
-        courses={courses}
-        topCourse={topCourse}
-        sections={joinedSections}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        studentId={123}
-        isEnglish
-      />
-    );
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
       initialSections: joinedSections
