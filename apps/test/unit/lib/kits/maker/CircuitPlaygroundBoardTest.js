@@ -11,7 +11,7 @@ import {
   SONG_CHARGE,
   EXTERNAL_PINS
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-import Led from '@cdo/apps/lib/kits/maker/Led';
+import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';

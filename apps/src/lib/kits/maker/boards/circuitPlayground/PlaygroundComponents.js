@@ -15,11 +15,11 @@ import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
 import {PlaygroundButton} from '../../Button';
 import PlaygroundThermometer from '../../Thermometer';
-import TouchSensor from '../../TouchSensor';
-import Piezo from '../../Piezo';
-import NeoPixel from '../../NeoPixel';
-import Led from '../../Led';
-import Switch from '../../Switch';
+import TouchSensor from './TouchSensor';
+import Piezo from './Piezo';
+import NeoPixel from './NeoPixel';
+import Led from './Led';
+import Switch from './Switch';
 import experiments from '../../../../../util/experiments';
 
 /**

@@ -9,11 +9,11 @@ import {
   cleanupCircuitPlaygroundComponents,
   componentConstructors
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundComponents';
-import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
-import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
-import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
-import Led from '@cdo/apps/lib/kits/maker/Led';
-import Switch from '@cdo/apps/lib/kits/maker/Switch';
+import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
+import TouchSensor from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/TouchSensor';
+import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
+import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
+import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
