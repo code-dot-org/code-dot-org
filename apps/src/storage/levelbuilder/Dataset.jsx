@@ -87,12 +87,14 @@ class Dataset extends React.Component {
         {!this.props.isLive && (
           <div>
             <ConfirmDeleteButton
-              body={'confirm?'}
+              body={`Are you sure you want to delete ${
+                this.props.tableName
+              }? This action cannot be undone.`}
               buttonText="Delete table"
               containerStyle={{width: 125, marginLeft: 10}}
               buttonId="clearTableButton"
               onConfirmDelete={this.deleteTable}
-              title="Delete table"
+              title={`Delete ${this.props.tableName}`}
             />
             <ConfirmImportButton importCsv={this.importCsv} />
           </div>
