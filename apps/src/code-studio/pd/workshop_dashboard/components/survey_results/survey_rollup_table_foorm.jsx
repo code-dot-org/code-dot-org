@@ -32,53 +32,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
   //             id: <id>, isHeader: true/false}
   getTableRows() {
     const {workshopRollups} = this.props;
-    let rows = [
-      {
-        question: {
-          text: 'Total Responses',
-          type: 'overall'
-        },
-        thisWorkshop: workshopRollups.single_workshop.response_count,
-        overall: workshopRollups.overall.response_count,
-        id: 'total_responses'
-      }
-    ];
-    const overall = workshopRollups.overall;
-    const thisWorkshop = workshopRollups.single_workshop;
-    const questions = workshopRollups.questions;
-    if (overall && overall.averages) {
-      for (const questionId in overall.averages) {
-        const questionData = questions[questionId];
-        let overallQuestionAverages = overall.averages[questionId];
-        let thisWorkshopAverages = thisWorkshop.averages[questionId];
-        if (questionData.type === 'matrix') {
-          this.parseMatrixData(
-            rows,
-            questionData,
-            questionId,
-            thisWorkshopAverages,
-            overallQuestionAverages
-          );
-        } else if (
-          questionData.type === 'scale' ||
-          questionData.type === 'singleSelect' ||
-          questionData.type === 'multiSelect'
-        ) {
-          this.parseSelectData(
-            rows,
-            questionData,
-            questionId,
-            thisWorkshopAverages,
-            overallQuestionAverages
-          );
-        }
-      }
-    }
-    return rows;
-  }
-
-  getTableRowsFacilitator() {
-    const {workshopRollups} = this.props;
     let rows = [];
     let responseCounts = {
       question: {
@@ -88,9 +41,16 @@ export default class SurveyRollupTableFoorm extends React.Component {
       overall: workshopRollups.overall.response_count,
       id: 'total_responses'
     };
+    if (this.props.isPerFacilitator) {
+      for (const facilitator in this.props.facilitators) {
+        responseCounts[`thisWorkshop-${facilitator}`] =
+          workshopRollups.single_workshop[facilitator].response_count;
+      }
+    } else {
+      responseCounts.thisWorkshop =
+        workshopRollups.single_workshop.response_count;
+    }
     for (const facilitator in this.props.facilitators) {
-      responseCounts[`thisWorkshop-${facilitator}`] =
-        workshopRollups.single_workshop[facilitator].response_count;
       responseCounts[`facilitatorAverage-${facilitator}`] =
         workshopRollups.overall_facilitator[facilitator].response_count;
     }
@@ -104,22 +64,26 @@ export default class SurveyRollupTableFoorm extends React.Component {
       for (const questionId in overall.averages) {
         const questionData = questions[questionId];
         let overallQuestionAverages = overall.averages[questionId];
-        let thisWorkshopAverages = {};
+        let thisWorkshopAverages = this.props.isPerFacilitator
+          ? {}
+          : thisWorkshop.averages[questionId];
         let overallFacilitatorAverages = {};
-        if (thisWorkshop) {
+        if (this.props.isPerFacilitator && thisWorkshop) {
           for (const facilitator in thisWorkshop) {
             if (thisWorkshop[facilitator].averages[questionId]) {
               thisWorkshopAverages[facilitator] =
                 thisWorkshop[facilitator].averages[questionId];
             }
-            if (overallFacilitator[facilitator].averages[questionId]) {
-              overallFacilitatorAverages[facilitator] =
-                overallFacilitator[facilitator].averages[questionId];
-            }
+          }
+        }
+        for (const facilitator in overallFacilitator) {
+          if (overallFacilitator[facilitator].averages[questionId]) {
+            overallFacilitatorAverages[facilitator] =
+              overallFacilitator[facilitator].averages[questionId];
           }
         }
         if (questionData.type === 'matrix') {
-          this.parseMatrixDataFacilitator(
+          this.parseMatrixData(
             rows,
             questionData,
             questionId,
@@ -133,41 +97,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     return rows;
   }
 
-  // get column configuration information
   getTableColumns() {
-    return [
-      {
-        property: 'question',
-        cell: {
-          formatters: [question => question.text],
-          transforms: [
-            question => ({
-              style:
-                question.type === 'overall'
-                  ? {}
-                  : question.type === 'title'
-                  ? styles.title
-                  : styles.question
-            })
-          ]
-        }
-      },
-      {
-        property: 'thisWorkshop',
-        header: {
-          label: `Average for this workshop`
-        }
-      },
-      {
-        property: 'overall',
-        header: {
-          label: `Average across all ${this.props.courseName} workshops`
-        }
-      }
-    ];
-  }
-
-  getTableColumnsFacilitator() {
     let columns = [
       {
         property: 'question',
@@ -186,6 +116,25 @@ export default class SurveyRollupTableFoorm extends React.Component {
         }
       }
     ];
+    this.addThisWorkshopColumns(columns);
+    columns.push({
+      property: 'overall',
+      header: {
+        label: `Average across all ${this.props.courseName} workshops`
+      }
+    });
+    return columns;
+  }
+
+  addThisWorkshopColumns(columns) {
+    if (!this.props.isPerFacilitator) {
+      columns.push({
+        property: 'thisWorkshop',
+        header: {
+          label: `Average for this workshop`
+        }
+      });
+    }
     let columnLabels = [];
     for (const facilitator in this.props.facilitators) {
       columnLabels.push({
@@ -199,12 +148,14 @@ export default class SurveyRollupTableFoorm extends React.Component {
       });
     }
     for (const columnLabel of columnLabels) {
-      columns.push({
-        property: `thisWorkshop-${columnLabel.id}`,
-        header: {
-          label: columnLabel.thisWorkshopLabel
-        }
-      });
+      if (this.props.isPerFacilitator) {
+        columns.push({
+          property: `thisWorkshop-${columnLabel.id}`,
+          header: {
+            label: columnLabel.thisWorkshopLabel
+          }
+        });
+      }
       columns.push({
         property: `facilitatorAverage-${columnLabel.id}`,
         header: {
@@ -212,16 +163,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
         }
       });
     }
-    columns.push({
-      property: 'overall',
-      header: {
-        label: `Average across all ${this.props.courseName} workshops`
-      }
-    });
-    return columns;
   }
 
-  parseMatrixDataFacilitator(
+  parseMatrixData(
     rows,
     questionData,
     questionId,
@@ -240,12 +184,19 @@ export default class SurveyRollupTableFoorm extends React.Component {
       id: `${questionId}-category`,
       isHeader: true
     };
-    this.addFacilitatorAverageToRow(
-      thisWorkshopAverages,
-      overallData,
-      denominator,
-      'thisWorkshop'
-    );
+    if (this.props.isPerFacilitator) {
+      this.addFacilitatorAverageToRow(
+        thisWorkshopAverages,
+        overallData,
+        denominator,
+        'thisWorkshop'
+      );
+    } else if (thisWorkshopAverages) {
+      overallData['thisWorkshop'] = `${
+        thisWorkshopAverages.average
+      } / ${denominator}`;
+    }
+
     this.addFacilitatorAverageToRow(
       overallFacilitatorAverages,
       overallData,
@@ -271,13 +222,19 @@ export default class SurveyRollupTableFoorm extends React.Component {
         overall: `${overallQuestionAverages.rows[rowId]} / ${denominator}`,
         id: rowId
       };
-      this.addPerQuestionAverageToRow(
-        rowData,
-        rowId,
-        thisWorkshopAverages,
-        denominator,
-        'thisWorkshop'
-      );
+      if (this.props.isPerFacilitator) {
+        this.addPerQuestionAverageToRow(
+          rowData,
+          rowId,
+          thisWorkshopAverages,
+          denominator,
+          'thisWorkshop'
+        );
+      } else if (thisWorkshopAverages && thisWorkshopAverages.rows) {
+        rowData['thisWorkshop'] = `${
+          thisWorkshopAverages.rows[rowId]
+        } / ${denominator}`;
+      }
       this.addPerQuestionAverageToRow(
         rowData,
         rowId,
@@ -307,53 +264,6 @@ export default class SurveyRollupTableFoorm extends React.Component {
     }
   }
 
-  // parse row data for a set of matrix answers
-  parseMatrixData(
-    rows,
-    questionData,
-    questionId,
-    thisWorkshopAverages,
-    overallQuestionAverages
-  ) {
-    let denominator = questionData.column_count;
-    // add matrix category
-    rows.push({
-      question: {
-        text: questionData.header,
-        type: 'overall'
-      },
-      thisWorkshop: thisWorkshopAverages
-        ? `${thisWorkshopAverages.average} / ${denominator}`
-        : '',
-      overall: `${overallQuestionAverages.average} / ${denominator}`,
-      id: `${questionId}-category`,
-      isHeader: true
-    });
-    // add top level question
-    rows.push({
-      question: {
-        text: questionData.title,
-        type: 'title'
-      },
-      id: questionId
-    });
-    // add individual rows
-    let thisWorkshopRows = thisWorkshopAverages && thisWorkshopAverages.rows;
-    for (const rowId in overallQuestionAverages.rows) {
-      rows.push({
-        question: {
-          text: questionData.rows[rowId],
-          type: 'question'
-        },
-        thisWorkshop: thisWorkshopRows
-          ? `${thisWorkshopRows[rowId]} / ${denominator}`
-          : '',
-        overall: `${overallQuestionAverages.rows[rowId]} / ${denominator}`,
-        id: rowId
-      });
-    }
-  }
-
   // parse row data for a set of select answers
   parseSelectData(
     rows,
@@ -378,15 +288,8 @@ export default class SurveyRollupTableFoorm extends React.Component {
   }
 
   render() {
-    let rows = null;
-    let columns = null;
-    if (this.props.isPerFacilitator) {
-      rows = this.getTableRowsFacilitator();
-      columns = this.getTableColumnsFacilitator();
-    } else {
-      rows = this.getTableRows();
-      columns = this.getTableColumns();
-    }
+    const rows = this.getTableRows();
+    const columns = this.getTableColumns();
     return (
       <Table.Provider className="table table-bordered" columns={columns}>
         <Table.Header />

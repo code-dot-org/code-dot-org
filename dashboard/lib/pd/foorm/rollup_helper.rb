@@ -108,7 +108,7 @@ module Pd::Foorm
     # @param parsed_forms: output of FoormParser.parse_forms
     # @param [Array] questions_to_summarize: array of questions in the format
     #   [{question_id: <question_id>, header_text: <friendly text to show, ex 'Teacher Engagement'}]
-    # @form_type [String] either 'general' or 'facilitator', type of questions in questions_to_sumamrize
+    # @form_type [String] either 'general' or 'facilitator', type of questions in questions_to_summarize
     # @return
     #   {
     #     question_name: {
