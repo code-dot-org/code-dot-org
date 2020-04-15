@@ -3,7 +3,7 @@ import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailCo
 
 $(document).ready(() => {
   const dismissButton = document.getElementById('not_now');
-  const banner = document.getElementById('at-home-banner');
+  const banner = document.getElementById('parent-email-banner');
   new AddParentEmailController({
     form: $('#parent-email-banner-modal-form'),
     formParentEmailField: $('#parent-email-banner-modal_user_parent_email'),
