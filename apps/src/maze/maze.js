@@ -38,6 +38,7 @@ module.exports = class Maze {
       stepSpeed: 5
     };
 
+    this.shouldSpeedUpInfiniteLoops = true;
     this.stepSpeed = 100;
     this.animating_ = false;
 
@@ -414,7 +415,7 @@ module.exports = class Maze {
           // possible
           this.result = ResultType.TIMEOUT;
           this.executionInfo.queueAction('finish', null);
-          this.stepSpeed = 0;
+          this.stepSpeed = this.shouldSpeedUpInfiniteLoops ? 0 : 100;
           break;
         case true:
           this.result = ResultType.SUCCESS;
