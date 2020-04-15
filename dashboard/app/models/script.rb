@@ -913,27 +913,37 @@ class Script < ActiveRecord::Base
     lockable_count = 0
     non_lockable_count = 0
 
-    # Finds or creates Lesson Groups with the correct position.
-    # In addition it check for 2 things:
-    # 1. That all the lesson groups specified by the editor have a key and
-    # display name.
-    # 2. If the lesson group key is an existing key that the given display name
-    # for that key matches the already saved display name
-    raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-      if raw_lesson_group[:display_name].blank?
-        raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-      end
-
+    if raw_lesson_groups.empty?
       lesson_group = LessonGroup.find_or_create_by(
-        key: raw_lesson_group[:key],
-        script: script
+        key: '',
+        script: script,
+        user_facing: false,
+        position: 0
       )
+    else
+      # Finds or creates Lesson Groups with the correct position.
+      # In addition it check for 2 things:
+      # 1. That all the lesson groups specified by the editor have a key and
+      # display name.
+      # 2. If the lesson group key is an existing key that the given display name
+      # for that key matches the already saved display name
+      raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+        if raw_lesson_group[:display_name].blank?
+          raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
+        end
 
-      lesson_group.assign_attributes(position: index + 1)
-      lesson_group.save! if lesson_group.changed?
+        lesson_group = LessonGroup.find_or_create_by(
+          key: raw_lesson_group[:key],
+          script: script,
+          user_facing: true
+        )
 
-      if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-        raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
+        lesson_group.assign_attributes(position: index + 1)
+        lesson_group.save! if lesson_group.changed?
+
+        if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+          raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
+        end
       end
     end
 
@@ -1025,8 +1035,8 @@ class Script < ActiveRecord::Base
       end
       # Set/create Stage containing custom ScriptLevel
       if stage_name
-        # check if that lesson_group exists for the script otherwise create a new lesson group
-        lesson_group = LessonGroup.find_or_create_by(
+        # find the lesson group for this stage
+        lesson_group = LessonGroup.find_by!(
           key: lesson_group_key.presence || "",
           script: script,
           user_facing: lesson_group_key.present?
@@ -1036,18 +1046,12 @@ class Script < ActiveRecord::Base
         stage = script.stages.detect {|s| s.name == stage_name} ||
           Stage.find_or_create_by(
             name: stage_name,
-            script: script,
-            lesson_group: lesson_group
+            script: script
           ) do |s|
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        # Check if we need to update the lesson group for the stage
-        if stage.lesson_group_id != lesson_group&.id
-          stage.lesson_group = lesson_group
-        end
-
-        stage.assign_attributes(flex_category: stage_flex_category, lockable: stage_lockable)
+        stage.assign_attributes(lesson_group: lesson_group, flex_category: stage_flex_category, lockable: stage_lockable)
         stage.save! if stage.changed?
 
         script_level_attributes[:stage_id] = stage.id
@@ -1099,7 +1103,7 @@ class Script < ActiveRecord::Base
     end
 
     Script.prevent_lesson_group_mismatch(script_stages)
-    Script.prevent_duplicate_lesson_group(script_stages)
+    Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_stages)
 
     script.stages = script_stages
     script.reload.stages
@@ -1108,17 +1112,17 @@ class Script < ActiveRecord::Base
     script
   end
 
-  # Only adjacent lessons can have the same lesson group.
+  # Only consecutive lessons can have the same lesson group.
   # Raise an error if non adjacent lessons have the same lesson
   # group
-  def self.prevent_duplicate_lesson_group(script_lessons)
+  def self.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
     previous_lesson_groups = []
     current_lesson_group = nil
 
     script_lessons.each do |lesson|
       next if lesson.lesson_group.key == current_lesson_group
       if previous_lesson_groups.include?(lesson.lesson_group.key)
-        raise "Only adjacent stages can have the same lesson group. Lesson Group: #{lesson.lesson_group.key} is on two non-adjacent lessons."
+        raise "Only consecutive stages can have the same lesson group. Lesson Group: #{lesson.lesson_group.key} is on two non-consecutive lessons."
       end
       previous_lesson_groups.append(current_lesson_group)
       current_lesson_group = lesson.lesson_group.key

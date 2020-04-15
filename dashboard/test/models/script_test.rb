@@ -1973,7 +1973,7 @@ endvariants
     assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: Lesson1.', raise.message
   end
 
-  test 'raises error if two non-adjacent lessons have the same lesson group' do
+  test 'raises error if two non-consecutive lessons have the same lesson group' do
     l1 = create :level
     l2 = create :level
     l3 = create :level
@@ -1996,7 +1996,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Only adjacent stages can have the same lesson group. Lesson Group: content is on two non-adjacent lessons.', raise.message
+    assert_equal 'Only consecutive stages can have the same lesson group. Lesson Group: content is on two non-consecutive lessons.', raise.message
   end
 
   test 'lessons with the same lesson group name are associated with the same lesson group' do
