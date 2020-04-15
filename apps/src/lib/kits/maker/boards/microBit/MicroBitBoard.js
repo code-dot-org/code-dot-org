@@ -7,7 +7,7 @@ import {
   enableMicroBitComponents,
   componentConstructors
 } from './MicroBitComponents';
-import MBFirmataWrapper from '../../MBFirmataWrapper';
+import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 
