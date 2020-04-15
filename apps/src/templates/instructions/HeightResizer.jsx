@@ -32,10 +32,13 @@ const styles = {
 
 class HeightResizer extends React.Component {
   static propTypes = {
+    /**
+     * @returns {number} top - the top Y value of the element we are resizing
+     */
+    resizeItemTop: PropTypes.func.isRequired,
     position: PropTypes.number.isRequired,
     /**
-     * @param {number} delta - amount we're trying to resize by
-     * @returns {number} delta - amount we've actually resized
+     * @param {number} desiredHeight - the height we'd like to resize to
      */
     onResize: PropTypes.func.isRequired,
     style: PropTypes.object
@@ -104,12 +107,9 @@ class HeightResizer extends React.Component {
     }
 
     const pageY = event.pageY || (event.touches && event.touches[0].pageY);
-    const delta = pageY - this.state.dragStart;
+    const desiredHeight = pageY - this.props.resizeItemTop();
 
-    // onResize can choose to limit how much we actually move, and will report
-    // back the value
-    const actualDelta = this.props.onResize(delta);
-    this.setState({dragStart: this.state.dragStart + actualDelta});
+    this.props.onResize(desiredHeight);
   };
 
   render() {
