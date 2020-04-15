@@ -1543,6 +1543,8 @@ mi:
           stages:
             While Loops:
               name: Ngā Koromeke I Te
+            Variables:
+              name: Ngā Taurangi
         virtual-holding-place:
           stages:
             Functions:

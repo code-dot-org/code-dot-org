@@ -1892,6 +1892,8 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+            Variables:
+              name: variabla
         virtual-holding-place:
           stages:
             Functions:

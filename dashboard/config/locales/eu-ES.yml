@@ -261,6 +261,7 @@ eu:
       zure ikasleen kontuak ezabatuko.'
     delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
     update_email: Eguneratu
+    parent_guardian_email_label: Guraso/tutore emaila
   user_level:
     completed: Amaituta
     tried: Saiatua

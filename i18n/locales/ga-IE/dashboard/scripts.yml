@@ -2316,6 +2316,8 @@ ga:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
             Intro to App Lab:
               name: Buneolas ar an tSaotharlann Aipeanna
+            Variables:
+              name: Athróga
         virtual-holding-place:
           stages:
             Velocity:

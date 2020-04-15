@@ -765,10 +765,11 @@ sk-SK:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
@@ -942,6 +943,75 @@ sk-SK:
           # Zastav sa
 
           Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
+      Dance_Party_extras_intro:
+        markdown: |-
+          # Pokračuj v tancovaní!
+
+          V časti 2 si vytvoríte vlastný projekt. Nie sú tu žiadne úlohy - namiesto toho tu je veľa projektov, ktoré ukazujú rôzne spôsoby  ako vytvoriť zložitejšie tanečné párty.
+
+          Tieto úrovne môžete vykonávať _v akomkoľvek poradí_. Pohľadaj naokolo, ako si niečo vyriešil/a v predchádzajúcich úlohách, alebo skombinuj koncepty medzi projektmi. Vyskúšaj ich všetky, vyber si svoj obľúbený a pracuj na pridávaní do tohto projektu, aby si si ho vytvoril/a sám/a.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Pokračovať</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Vytvoriť formáciu
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Kam odišli?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Tanečné súbory
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Štvrťové noty
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Basy, stredy, výšky
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Zrýchli to, Spomaľ to
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |-
           # Dizajn, ktorý je dostupný
@@ -1147,6 +1217,11 @@ sk-SK:
         questions:
         - text: Ktoré slovo je vyhláskované?
         title: Vyber správnu odpoveď
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # Sila slov
+
+          Dnes sa naučíš, čo treba robiť, ak je niekto v online priestore nepríjemný.
       Prepare for your presentation:
         markdown: |-
           # Prezentácia projektov
@@ -1180,16 +1255,20 @@ sk-SK:
         - feedback: Nesprávne.
         - feedback: Nesprávne
         questions:
-        - {}
+        - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
+            Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 4 predict:
         answers:
-        - feedback: Nesprávne.
-        - correct: true
+        - text: Vľavo, a potom dole
+          feedback: Nesprávne.
+        - text: Diagonálne
+          correct: true
           feedback: Správne!
         - {}
-        - feedback: Nesprávne
+        - text: Dole, a potom vľavo
+          feedback: Nesprávne
         questions:
-        - {}
+        - text: Odhadni, čo sa bude diať. Ktorým smerom pôjde satelit ku galaxii?
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: Umelec nakreslí trojuholník s tromi rovnakými stranami.
@@ -1469,8 +1548,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -1483,8 +1561,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -1497,8 +1574,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1520,8 +1596,7 @@ sk-SK:
           <br/><br/>
 
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1543,8 +1618,7 @@ sk-SK:
           <br/><br/>
 
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -1566,8 +1640,7 @@ sk-SK:
           <br/><br/>
 
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu

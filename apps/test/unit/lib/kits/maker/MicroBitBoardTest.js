@@ -3,7 +3,10 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
+import _ from 'lodash';
+import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/ExternalLed';
+import ExternalButton from '@cdo/apps/lib/kits/maker/ExternalButton';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -142,6 +145,36 @@ describe('MicroBitBoard', () => {
     });
   });
 
+  describe(`createButton(pin)`, () => {
+    it('makes a button controller', () => {
+      return board.connect().then(() => {
+        const pin = 13;
+        const newButton = board.createButton(pin);
+        expect(newButton).to.be.an.instanceOf(ExternalButton);
+      });
+    });
+
+    it('configures the controller as a pullup if passed an external pin', () => {
+      return board.connect().then(() => {
+        EXTERNAL_PINS.forEach(pin => {
+          const newButton = board.createButton(pin);
+          expect(newButton.pullup).to.be.true;
+        });
+      });
+    });
+
+    it('does not configure the controller as a pullup if passed a non-external pin', () => {
+      return board.connect().then(() => {
+        _.range(21)
+          .filter(pin => !EXTERNAL_PINS.includes(pin))
+          .forEach(pin => {
+            const newButton = board.createButton(pin);
+            expect(newButton.pullup).to.be.false;
+          });
+      });
+    });
+  });
+
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
@@ -151,6 +184,43 @@ describe('MicroBitBoard', () => {
         );
         board.reset();
         expect(ledMatrixSpy).to.have.been.calledOnce;
+      });
+    });
+  });
+
+  describe(`destroy()`, () => {
+    it('sends the board reset signal', () => {
+      let resetSpy = sinon.spy(board.boardClient_, 'reset');
+      return board
+        .connect()
+        .then(() => board.destroy())
+        .then(() => {
+          expect(resetSpy).to.have.been.calledOnce;
+        });
+    });
+
+    it('turns off any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'off');
+        sinon.spy(led2, 'off');
+
+        expect(led1.off).not.to.have.been.called;
+        expect(led2.off).not.to.have.been.called;
+
+        return board.destroy().then(() => {
+          expect(led1.off).to.have.been.calledOnce;
+          expect(led2.off).to.have.been.calledOnce;
+        });
+      });
+    });
+
+    it('does not require special cleanup for created buttons', () => {
+      return board.connect().then(() => {
+        board.createButton(0);
+        board.createButton(1);
+        return board.destroy();
       });
     });
   });

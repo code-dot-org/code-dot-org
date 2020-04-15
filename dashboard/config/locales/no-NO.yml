@@ -489,6 +489,8 @@
     update: Oppdater konto
     account_successfully_updated: Kontoen er oppdatert.
     update_email: Oppdater
+    parent_guardian_email_label: Foreldre/foresatt epost
+    none: Ingen
     encrypted: kryptert
   user_level:
     completed: Fullført

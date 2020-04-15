@@ -163,8 +163,12 @@ ar-SA:
           منزلك. هل يمكنك الانتهاء من ذلك؟
       Overworld Move to Sheep:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
+        craft_drag_block_callout: اسحب المربع البرمجي "التحرك إلى الأمام" وإطباقه
+          إدناه بالمربع البرمجي الآخر
       Overworld Move to Sheep_2019:
         craft_run_button_callout: انقر فوق "تشغيل" لتجربة البرنامج الخاص بك
+        craft_drag_block_callout: اسحب المربع البرمجي "التحرك إلى الأمام" وإطباقه
+          إدناه بالمربع البرمجي الآخر
       Overworld Place Wall:
         craft_inside_repeat: كرر الإجراءات من خلال وضع الكتل هنا
       Overworld Place Wall_2019:
@@ -181,9 +185,27 @@ ar-SA:
         craft_what_is_iron: الحفر لاستخراج كتلة حديدية!
       Virtual Pet 2_2019:
         '': انقر هنا!
+      course3_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: استخدم هذا الأمر لجعل النحل يتحرك
+          للخلف.
       course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
+      courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseA_maze_ramp3a_2018:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
       courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: استخدم هذه البلوكة عندما يتامس البطريق مع
           التمساح!
@@ -246,12 +268,54 @@ ar-SA:
       courseC_maze_debugging9_2019:
         courseC_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
           الخاصة بك.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseC_maze_programming2:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
       courseC_maze_programming3:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
         courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
       courseC_maze_programming3_2018:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
         courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
       courseC_maze_programming3_2019:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
         courseC_maze_programming3_3: هذي البلوكات مقفلة ولا يمكن حذفها.
+      courseC_maze_programming4:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseC_maze_programming4_2018:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseC_maze_programming4_2019:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseC_maze_programming5:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseC_maze_programming5_2018:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseC_maze_programming5_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
       courseC_maze_programming7:
         courseC_maze_programming7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون
           صعباً ويحتاج العديد من المحاولات لحلها.
@@ -273,8 +337,100 @@ ar-SA:
       courseC_starWars_loops2_2019:
         courseC_starWars_loops2: ليس لديك إلا واحدة من هذه البلوكات التي يمكنك استخدامها
           في هذا اللغز.
+      courseD_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_callout1: استخدم هذا الأمر لجعل النحل يتحرك
+          للخلف.
+      courseD_bee_debugging_challenge1a:
+        courseD_bee_debugging_challenge1_callout1: استخدم هذا الأمر لجعل النحل يتحرك
+          للخلف.
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_maze_intro5a_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseD_maze_ramp3:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
       courseD_maze_ramp3_2019:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
         stone_block_2: القطع البرمجية الرمادية لا يمكن حذفها.
+      courseD_maze_ramp4:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_maze_ramp5:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp5_2018:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp5_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp5a:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp5a_2018:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp5a_2019:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_maze_ramp6:
+        courseD_maze_ramp6_1: أي كانت التعليمات البرمجية التي تضعها هنا ستؤدي إلى
+          التكرار عدد أكبر من المرات حسب ما تعطيها الأمر لفعل ذلك، ثم استمر في تشغيل
+          بقية البرنامج.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: بعد توصيل كل المربعات البرمجية، اضغط "تشغيل" لبدء
+          برنامجك.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_1: هذا هو مربع الأدوات. حيث ستجد كل المربعات البرمجية
+          الإضافية لإكمال الإلغاز الخاصة بك.
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_2: يمكنك سحب المربعات البرمجية الإضافية إلى مربع
+          الأدوات من أجل الحذف بعيداً.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_1: هذا هو حد المربع البرمجي الخاص بك. وهو يخبرك
+          بعدد المربعات البرمجية التي تركت لديك من أجل استخدامها.
+      courseD_scrat_ramp5:
+        '': لا يوجد لدى المربعات البرمجية هذه أعداد. يمكنك استخدامها عدد أكبر من المرات
+          كما تريد!
+      courseD_scrat_ramp6:
+        courseD_maze_ramp6_1: أي كانت التعليمات البرمجية التي تضعها هنا ستؤدي إلى
+          التكرار عدد أكبر من المرات حسب ما تعطيها الأمر لفعل ذلك، ثم استمر في تشغيل
+          بقية البرنامج.
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: أي كانت التعليمات البرمجية التي تضعها هنا ستؤدي إلى
+          التكرار عدد أكبر من المرات حسب ما تعطيها الأمر لفعل ذلك، ثم استمر في تشغيل
+          بقية البرنامج.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً
           ويحتاج العديد من المحاولات لحلها.
@@ -283,6 +439,60 @@ ar-SA:
       courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: هذه البلوكة تحرك اللاعب إلى أماكن اخرى
           في ساحة اللعب.
+      courseF_artist_for1:
+        courseF_artist_for1_1: مربع الأدوات في وضع "الفئة" يتيح توفير مساحة أكبر للتعليمات
+          البرمجية الخاصة بك. تكمن حلقات "لـ" هنا.
+      courseF_artist_for1_2018:
+        courseF_artist_for1_1: مربع الأدوات في وضع "الفئة" يتيح توفير مساحة أكبر للتعليمات
+          البرمجية الخاصة بك. تكمن حلقات "لـ" هنا.
+      courseF_artist_for1_2019:
+        courseF_artist_for1_1: مربع الأدوات في وضع "الفئة" يتيح توفير مساحة أكبر للتعليمات
+          البرمجية الخاصة بك. تكمن حلقات "لـ" هنا.
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: استخدم هذا لتعيين قيمة المتغير "الطول"
+      courseF_artist_variables6:
+        courseF_artist_variables6_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6_2018:
+        courseF_artist_variables6_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6_2019:
+        courseF_artist_variables6_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6a:
+        courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6a_2018:
+        courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: قد تكون المتغيرات مفيدة عندما يجب عليك تغيير
+          عدد كبير من النسخ الخاصة بهذا العدد.
+      courseF_bee_for4:
+        courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
+      courseF_bee_for4_2018:
+        courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
+      courseF_bee_for4_2019:
+        courseF_bee_for4_1: ستجد الحلقة "لـ" هنا!
+      courseF_bee_for9:
+        courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
+      courseF_bee_for9_2018:
+        courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
+      courseF_bee_for9_2019:
+        courseF_bee_for9_1: ستجد المربع البرمجي "رياضيات"  هنا.
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: تم تنظيم مربع الأدوات هذا في فئات لجعله أكثر
+          سهولة من حيث البحث عن المربعات البرمجية التي تحتاجها.
+      courseF_playlab_variables5c:
+        courseF_playlab_variables5c_1: ستجد المربع البرمجي للمتغير الخاص بك هنا.
+      courseF_playlab_variables6c:
+        courseF_playlab_variables5c_1: ستجد المربع البرمجي للمتغير الخاص بك هنا.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: ابحث عن المربع البرمجي "اسأل" هنا!
       express_maze_debugging9_2019:
         express_maze_debugging9_2019_1: اسحب البلوكات من صندوق الأدوات إلى مساحة العمل
           الخاصة بك.
@@ -319,3 +529,15 @@ ar-SA:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
       frozen square snowflake:
         replace_questions: إستخدم القائمة لتغيير العلامات "؟؟؟" بعدد
+      grade5_artist_variables_triangles1:
+        grade5_artist_variables_triangles1_1: قم بملاحظة أن المربعات البرمجية لديها
+          الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
+          للخارج والتحرك حولها!
+      grade5_artist_variables_triangles1_2018:
+        grade5_artist_variables_triangles1_1: قم بملاحظة أن المربعات البرمجية لديها
+          الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
+          للخارج والتحرك حولها!
+      grade5_artist_variables_triangles1_2019:
+        grade5_artist_variables_triangles1_1: قم بملاحظة أن المربعات البرمجية لديها
+          الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب المربعات البرمجية "رياضيات"
+          للخارج والتحرك حولها!

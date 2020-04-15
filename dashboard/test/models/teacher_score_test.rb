@@ -19,7 +19,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
         create(:unplugged, name: 'test level 1')
       ]
     )
-    @stage = @script_level.stage
+    @stage = @script_level.lesson
     @score = 100
     @score_2 = 0
     @level_1 = @script_level.levels[0]

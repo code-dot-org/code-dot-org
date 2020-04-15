@@ -423,6 +423,8 @@ he:
     update: "עדכן חשבון"
     account_successfully_updated: "חשבון עודכן בהצלחה."
     update_email: "עדכון"
+    parent_guardian_email_label: "דוא\"ל של הורה/אפוטרופוס"
+    none: "כלום"
     encrypted: "מוצפן"
   user_level:
     completed: 'הושלם'

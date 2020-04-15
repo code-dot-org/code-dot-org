@@ -8,7 +8,7 @@ nl:
            maten tussen {MOVE1} en {MOVE2}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -62,7 +62,7 @@ nl:
         text: "{GROUP} doe {MOVE} {DIR} voor altijd"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -128,7 +128,7 @@ nl:
         text: wissel {GROUP} {PROPERTY} met {VAL}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -152,7 +152,7 @@ nl:
         text: "{GROUP} doe {MOVE} {DIR} een keer"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -313,7 +313,7 @@ nl:
         text: spring {GROUP} naar {LOCATION}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -341,7 +341,7 @@ nl:
         text: "{GROUP} indelen als een {FORMAT}"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -579,7 +579,7 @@ nl:
         text: stel {GROUP} danssnelheid op {SPEED}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -653,7 +653,7 @@ nl:
         text: stel {GROUP} {PROPERTY} in op {VAL}
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -689,7 +689,7 @@ nl:
         text: maak {GROUP} {PROPERTY} willekeurig
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -716,7 +716,7 @@ nl:
         text: stel {THIS} tint op {VAL}
         options:
           THIS:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -733,7 +733,7 @@ nl:
         text: stel {THIS} tint op {VAL}
         options:
           THIS:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -758,7 +758,7 @@ nl:
         text: stel {THIS} zichtbaarheid in op {VISIBILITY}
         options:
           THIS:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -793,7 +793,7 @@ nl:
         text: "{GROUP} begin {PROPERTY} volgen {RANGE}"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -838,7 +838,7 @@ nl:
         text: "{GROUP} stopt met {PROPERTY} volgen {RANGE}"
         options:
           GROUP:
-            sprites: alles
+            sprites: alle
             '"ALIEN"': alle buitenaardse wezens
             '"BEAR"': alle beren
             '"CAT"': alle katten
@@ -1269,13 +1269,13 @@ nl:
         text: wijzig {SELECT} {COSTUME} in {COSTUME2}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupChangePropBy:
         text: verandering {PROPERTY} van {SELECT} {COSTUME} door {VAL}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
           PROPERTY:
             '"scale"': grootte
@@ -1300,7 +1300,7 @@ nl:
         text: "{SELECT} {COSTUME} verwijderen"
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupDisplace:
         text: alle {COSTUME} blok {COSTUME2}
@@ -1322,25 +1322,25 @@ nl:
         text: stop {SELECT} {COSTUME} gedragingen
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupRemoveTint:
         text: verwijder kleur van {SELECT} {COSTUME}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupSetProp:
         text: set {PROPERTY} van {SELECT} {COSTUME} tot {VAL}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
           PROPERTY:
             '"scale"': grootte
@@ -1352,7 +1352,7 @@ nl:
         text: kleur van {SELECT} {COSTUME} naar {COLOR}
         options:
           SELECT:
-            '"all"': alles
+            '"all"': alle
             '"this"': Dit
       Mikelab_groupWhenClickedOn:
         text: wanneer {COSTUME} klikte
