@@ -20,7 +20,7 @@ class Tree:
         return str(self) == str(other)
 
     def getRoot(self):
-        return f'{self.rootName}[{self.rootId}]'
+        return f'{self.rootName}'
 
     def toString(self, indent):
         s = ''

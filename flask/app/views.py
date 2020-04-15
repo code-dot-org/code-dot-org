@@ -7,6 +7,11 @@ from flask import (
     jsonify,
 )
 import json
+from app.infer import infer
+from rubric.src.codeorg_utils.utils import (
+    toCodeString,
+    formatTokensFromOutput,
+)
 
 
 @app.route('/')
@@ -21,9 +26,13 @@ def predict():
         data = json.loads(request.data)
         xml = data['code']
         ast = xmlToAst(xml)
-        print(ast)
+        code = ast.toString(0).strip()
+        tokens = formatTokensFromOutput(code)
+        program = toCodeString(tokens)
+        programTokens = program.split()
+        probs = infer(programTokens)
 
     response = {
-        'hint': ' '.join(ast.toTrainableInput()),
+        'hint': code,
     }
     return make_response(jsonify(response))

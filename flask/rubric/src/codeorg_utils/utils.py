@@ -98,6 +98,7 @@ def formatTokensFromOutput(output):
     """
     tokens = output.split('\n')
 
+    in_loop = 0
     old_depth, depth = -1, -1
     new_tokens = []
     for token in tokens:
@@ -114,6 +115,7 @@ def formatTokensFromOutput(output):
 
             if old_depth > depth:
                 new_tokens.append(('}', -1))
+                in_loop -= 1
 
             new_tokens.append(('moveForward', depth))
 
@@ -123,6 +125,7 @@ def formatTokensFromOutput(output):
 
             if old_depth > depth:
                 new_tokens.append(('}', -1))
+                in_loop -= 1
 
             new_tokens.append(('moveBackward', depth))
 
@@ -132,11 +135,13 @@ def formatTokensFromOutput(output):
 
             if old_depth > depth:
                 new_tokens.append(('}', -1))
+                in_loop -= 1
 
             new_tokens.append(('getNectar', depth))
 
         elif token.strip() == 'DO':
             new_tokens.append(('{', -1))
+            in_loop += 1
 
         elif token.strip().isnumeric():
             loop_num = int(token.strip())
@@ -151,6 +156,9 @@ def formatTokensFromOutput(output):
             old_depth = depth
             depth = token.count(' ') - 2
             new_tokens.append(('Repeat', depth))
+
+    for _ in range(in_loop):
+        new_tokens.append(('}', -1))
 
     return new_tokens
 
