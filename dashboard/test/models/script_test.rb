@@ -1996,7 +1996,28 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Only consecutive stages can have the same lesson group. Lesson Group: content is on two non-consecutive lessons.', raise.message
+    assert_equal 'Only consecutive stages can have the same lesson group. Lesson Group content is on two non-consecutive lessons.', raise.message
+  end
+
+  test 'raises error if trying to create a lesson group with no stages in it' do
+    l1 = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Content'
+      stage 'Lesson1'
+      level '#{l1.name}'
+
+      lesson_group 'required', display_name: 'Overview'
+
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lesson-group-test-script'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
+        ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      )
+    end
+    assert_equal 'Every lesson group should have at least one stage. Lesson Group required has no stages.', raise.message
   end
 
   test 'lessons with the same lesson group name are associated with the same lesson group' do
