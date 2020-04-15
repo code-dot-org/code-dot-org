@@ -7,9 +7,9 @@ import {
   enableMicroBitComponents,
   componentConstructors
 } from './MicroBitComponents';
-import {MicroBitButton} from './Button';
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
+import ExternalButton from './ExternalButton';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -101,7 +101,7 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   createButton(pin) {
-    const newButton = new MicroBitButton({mb: this.boardClient_, pin: pin});
+    const newButton = new ExternalButton({mb: this.boardClient_, pin});
     this.dynamicComponents_.push(newButton);
     return newButton;
   }
@@ -114,7 +114,7 @@ export default class MicroBitBoard extends EventEmitter {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof ExternalLed) {
         component.off();
-      } else if (component instanceof MicroBitButton) {
+      } else if (component instanceof ExternalButton) {
         // No special cleanup required for button
       } else {
         throw new Error('Added an unsupported component to dynamic components');

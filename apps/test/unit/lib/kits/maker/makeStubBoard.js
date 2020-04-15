@@ -57,6 +57,8 @@ export class MicrobitStubBoard {
     }
   }
 
+  trackDigitalPin() {}
+
   addFirmataEventListener(eventListenerFunction) {
     this.eventListeners.push(eventListenerFunction);
   }
@@ -74,4 +76,6 @@ export class MicrobitStubBoard {
   disconnect() {}
 
   reset() {}
+
+  trackDigitalComponent() {}
 }
