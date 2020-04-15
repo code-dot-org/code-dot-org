@@ -1135,6 +1135,8 @@ zh-CN:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 银河系
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 网格
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 公园风景
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 松树
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 科幻
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星球
@@ -1448,6 +1450,8 @@ zh-CN:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': 公园风景
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': 松树
       Mikelab_setProp:
         text: 设置 {PROPERTY} {SPRITE} 为 {VAL}
         options:

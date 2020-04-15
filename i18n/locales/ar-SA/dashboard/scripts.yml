@@ -1770,6 +1770,8 @@ ar:
           stages:
             While Loops:
               name: حلقات بينما
+            Variables:
+              name: المتغيرات
         virtual-holding-place:
           stages:
             Functions:

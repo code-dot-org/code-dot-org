@@ -1596,6 +1596,8 @@ hr:
           stages:
             While Loops:
               name: Petlje s uvjetom
+            Variables:
+              name: Varijable
         virtual-holding-place:
           stages:
             Functions:

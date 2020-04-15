@@ -3324,6 +3324,32 @@ sk-SK:
           -   Zabezpeč, aby sa na obrazovke objavil tanečník.
 
           _Táto úroveň končí po 4 taktoch._
+        challenges: "**Dobrovoľná výzva**\n\n-   Vyber si inú pesničku.\n-   Presuň
+          svojho tanečníka na novú pozíciu. \n-   Vytvor viac ako jedného tanečníka."
+      Dance_2019_02:
+        validation: |-
+          **Ako prejdem tento level?**
+
+          -   Tanečník musí predviest nejaký pohyb.
+          -   Musíš stlačiť tlačidlo so šípkou.
+
+          _Tento level skončí po 4 taktoch._
+        challenges: |-
+          **Doborovoľná výzva**
+
+          Použi viac ako jeden blok <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Ako prejdem tento level?**
+
+          -   Obaja tanečníci musia predviest nejaký pohyb.
+          -   Musíš stlačiť tlačidlo so šípkou.
+
+          _Tento level skončí po 6 taktoch._
+        challenges: |-
+          **Doborovoľná výzva**
+
+          -   Tanečník musí regovať po stlačení tlačidiel ľavej a pravej šipky.
       Dance_2019_04:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -3338,6 +3364,10 @@ sk-SK:
           -   Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
 
           _Úroveň končí po 11 taktoch._
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          -   Zmeň pozadie, vždy keď tanečníci zmenia tanečný pohyb.
       Dance_Party_01:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -3651,6 +3681,9 @@ sk-SK:
       Underground Iron_2019:
         mc_10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
+      behaviors 5:
+        behavior hint: Na vyriešenie tejto úlohy je treba upraviť správanie. Postava
+          kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne.
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Komentáre sú tiež užitočné, ak sa iní ľudia snažia
           prečítať tvoj kód.
@@ -8177,6 +8210,111 @@ sk-SK:
         '1': Ak vymieňaš tvary, nezabudni, že musíš vymeniť aj ich uhly!
       courseD_artist_5_2018_2019:
         '1': Ak vymieňaš tvary, nezabudni, že musíš vymeniť aj ich uhly!
+      courseD_artist_binary2:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_artist_binary2_2018:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_artist_binary2_2019:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_artist_binary3:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary3_2018:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary3_2019:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary4:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary4_2018:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary4_2019:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary5:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_artist_binary5_2018:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_artist_binary5_2019:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_artist_binary6:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_artist_binary6_2018:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_artist_binary6_2019:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_artist_binary7:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary7_2018:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary7_2019:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary8:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary8_2018:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary8_2019:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
       courseD_artist_binary_challenge2_2018:
         courseD_artist_binary_challenge2_a: V pôvodnom kóde je potrebné opraviť len
           pár riadkov.
@@ -8552,6 +8690,41 @@ sk-SK:
       courseD_artist_ramp12:
         courseD_artist_ramp12_c: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseD_autorun_binary2_2019:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_autorun_binary3_2019:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_autorun_binary4_2019:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_autorun_binary5_2019:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_autorun_binary6_2019:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_autorun_binary7_2019:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_autorun_binary8_2019:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
       courseD_bee_conditionals3:
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú

@@ -1716,6 +1716,8 @@ eu:
           stages:
             While Loops:
               name: '"Bitartean" begiztak'
+            Variables:
+              name: Aldagaiak
         virtual-holding-place:
           stages:
             Functions:

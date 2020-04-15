@@ -1275,6 +1275,21 @@ id-ID:
         content1: desekripsi di sini
       Terminology Recap:
         content1: desekripsi di sini
+        markdown: "# Berhenti Sebentar dan Mengulang\n\nPesan yang telah di-enkripsi
+          dengan **Caesar cipher** sebenarnya sangat mudah untuk dipecahkan menggunakan
+          komputer. Nah, sekarang karena kamu sudah tahu bagaimana caranya memecahkan
+          alphabetic shift cipher (lumayan gampang, kan?) mari kita coba memecahkan
+          hal yang lebih menantang.\n\n**Review istilah:**\n\n* **Encryption** - enkripsi
+          adalah proses mengamankan pesan rahasia sehingga hanya pihak yang dituju
+          yang bisa membaca isi pesan tersebut.\n* **Decryption** - dekripsi adalah
+          proses memecahkan enkripsi, mengubah pesan rahasia yang telah di-enkripsi
+          menjadi tulisan yang bisa dibaca oleh manusia\n* **Cipher** - istilah umum
+          untuk teknik (atau algortima) yang digunakan dalam proses enkripsi\n* **Caesar's
+          Cipher** - sebuah teknik enkripsi yang memindahkan alfabet sejumlah beberapa
+          karakter.\n* **Cracking encryption** - saat kamu sedang berusaha memecahkan
+          sebuah pesan rahasia *tanpa* mengetahui seluruh bagian dari cipher, kamu
+          sedang menge-**crack** sebuah enkripsi. \n\n\nKlik Lanjutkan untuk melihat
+          **Tantangan Selanjutnya**...\n\n \n"
       behaviors 1 predict:
         answers:
         - {}

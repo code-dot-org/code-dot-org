@@ -4431,7 +4431,7 @@ sk:
             Images:
               name: Obrázky
             'Websites for Expression ':
-              description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+              description_student: "Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. "
         csd4-2020:
           stages:
             Analysis of Design:
@@ -4811,6 +4811,8 @@ sk:
               name: Cykly "pokiaľ"
             Intro to App Lab:
               name: Úvod do App Labu
+            Variables:
+              name: Premenné
         virtual-holding-place:
           stages:
             Velocity:

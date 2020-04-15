@@ -6416,6 +6416,8 @@ it:
               name: Introduzione agli array
             Intro to App Lab:
               name: Introduzione a Sviluppo App
+            Variables:
+              name: Variabili
         virtual-holding-place:
           stages:
             Velocity:

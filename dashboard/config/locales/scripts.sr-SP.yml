@@ -1513,6 +1513,8 @@ sr:
           stages:
             While Loops:
               name: Понављања са условима
+            Variables:
+              name: Променљиве
         virtual-holding-place:
           stages:
             Velocity:
