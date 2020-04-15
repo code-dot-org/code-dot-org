@@ -1459,28 +1459,8 @@ class Script < ActiveRecord::Base
   end
 
   def self.build_property_hash(script_data)
-    {
-      hideable_stages: script_data[:hideable_stages] || false, # default false
-      professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
-      student_detail_progress_view: script_data[:student_detail_progress_view] || false,
-      project_widget_visible: script_data[:project_widget_visible] || false,
-      project_widget_types: script_data[:project_widget_types],
-      teacher_resources: script_data[:teacher_resources],
-      stage_extras_available: script_data[:stage_extras_available] || false,
-      has_verified_resources: !!script_data[:has_verified_resources],
-      has_lesson_plan: !!script_data[:has_lesson_plan],
-      curriculum_path: script_data[:curriculum_path],
-      script_announcements: script_data[:script_announcements] || false,
-      version_year: script_data[:version_year],
-      is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales],
-      pilot_experiment: script_data[:pilot_experiment] || false,
-      editor_experiment: script_data[:editor_experiment] || false,
-      project_sharing: !!script_data[:project_sharing],
-      curriculum_umbrella: script_data[:curriculum_umbrella],
-      tts: !!script_data[:tts]
-    }.compact
+    property_keys = Script.serialized_attrs.first.map(&:to_sym)
+    return script_data.select {|k, _| property_keys.include?(k)}
   end
 
   # A script is considered to have a matching course if there is exactly one
