@@ -1459,8 +1459,8 @@ class Script < ActiveRecord::Base
   end
 
   def self.build_property_hash(script_data)
-    property_keys = Script.serialized_attrs.first.map(&:to_sym)
-    return script_data.select {|k, _| property_keys.include?(k)}
+    property_keys = Script.serialized_attrs.first
+    return script_data.select {|k, _| property_keys.include?(k.to_s)}
   end
 
   # A script is considered to have a matching course if there is exactly one
