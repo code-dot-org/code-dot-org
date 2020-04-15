@@ -1111,12 +1111,21 @@ class Script < ActiveRecord::Base
 
     Script.prevent_lesson_group_mismatch(script_stages)
     Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_stages)
+    Script.prevent_lesson_group_with_no_stages(script)
 
     script.stages = script_stages
     script.reload.stages
     script.generate_plc_objects
 
     script
+  end
+
+  # All lesson groups should have stages in them
+  def self.prevent_lesson_group_with_no_stages(script)
+    script.lesson_groups.each do |lesson_group|
+      next if lesson_group.stages.count > 0
+      raise "Every lesson group should have at least one stage. Lesson Group #{lesson_group.key} has no stages."
+    end
   end
 
   # Only consecutive lessons can have the same lesson group.
@@ -1129,7 +1138,7 @@ class Script < ActiveRecord::Base
     script_lessons.each do |lesson|
       next if lesson.lesson_group.key == current_lesson_group
       if previous_lesson_groups.include?(lesson.lesson_group.key)
-        raise "Only consecutive stages can have the same lesson group. Lesson Group: #{lesson.lesson_group.key} is on two non-consecutive lessons."
+        raise "Only consecutive stages can have the same lesson group. Lesson Group #{lesson.lesson_group.key} is on two non-consecutive lessons."
       end
       previous_lesson_groups.append(current_lesson_group)
       current_lesson_group = lesson.lesson_group.key
