@@ -187,4 +187,41 @@ describe('MicroBitBoard', () => {
       });
     });
   });
+
+  describe(`destroy()`, () => {
+    it('sends the board reset signal', () => {
+      let resetSpy = sinon.spy(board.boardClient_, 'reset');
+      return board
+        .connect()
+        .then(() => board.destroy())
+        .then(() => {
+          expect(resetSpy).to.have.been.calledOnce;
+        });
+    });
+
+    it('turns off any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'off');
+        sinon.spy(led2, 'off');
+
+        expect(led1.off).not.to.have.been.called;
+        expect(led2.off).not.to.have.been.called;
+
+        return board.destroy().then(() => {
+          expect(led1.off).to.have.been.calledOnce;
+          expect(led2.off).to.have.been.calledOnce;
+        });
+      });
+    });
+
+    it('does not require special cleanup for created buttons', () => {
+      return board.connect().then(() => {
+        board.createButton(0);
+        board.createButton(1);
+        return board.destroy();
+      });
+    });
+  });
 });
