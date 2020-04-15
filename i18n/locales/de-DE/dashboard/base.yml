@@ -463,6 +463,8 @@ de:
     auth_option_saved: "Du hast erfolgreich deinen %{provider} Account mit deiner E-Mail %{email} verknüpft."
     auth_option_saved_no_email: "Du hast erfolgreich deinen %{provider} Account verbunden."
     update_email: "Aktualisieren"
+    parent_guardian_email_label: "Eltern / Erziehungsberechtigten E-Mail-Adresse"
+    none: "Keiner"
     encrypted: "verschlüsselt"
   user_level:
     completed: 'Abgeschlossen'

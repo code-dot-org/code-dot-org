@@ -5565,8 +5565,11 @@ de-DE:
         ausführen. Verwende die „hohle 5“- Funktion, um gleichzeitig 5 mal Nektar
         zu holen. Stelle sicher, dass eine Schleife verwendet wird, die eine optimale
         Blockzählung ermöglicht.
+      courseE_farmer_functions10b: Verwende deine neue Funktion zweimal, um dieses
+        Rätsel zu lösen.
       courseE_farmer_functions4b: Verwende deine neue Funktion, um dieses Rätsel zu
         lösen.
+      courseE_farmer_ramp12_forswap: Pflücke den ganzen Salat.
       courseF_artist_for1: |-
         **Freie Gestaltung:** Experimentiere mit der "Für"-Schleife und spiele mit der "Zähler"-Variablen.
 

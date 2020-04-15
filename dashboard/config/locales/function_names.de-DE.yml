@@ -35,6 +35,8 @@ de-DE:
         draw O: O zeichnen
         draw D: D zeichnen
         draw E: E zeichnen
+      2-3 Artist Functions 1:
+        draw ear stems: zeichne Ohrstäbchen
       2-3 Artist Functions 10:
         big gear: großes Zahnrad
         small gear: kleines Zahnrad
@@ -46,8 +48,10 @@ de-DE:
         draw a flower: zeichne eine Blume
       2-3 Artist Functions 2:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       2-3 Artist Functions 3:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       2-3 Artist Functions 4:
         draw a square: zeichne ein Quadrat
       2-3 Artist Functions 9:
@@ -87,6 +91,8 @@ de-DE:
         get 5 nectar: sammle 5 Nektar
       4-5 Bee Debugging 9:
         make all honey: stelle den gesamten Honig her
+      Alien Defender:
+        game has been won: Spiel wurde gewonnen
       Choose Your Own Adventure:
         witch ending: Hexen Ende
         story: geschichte
@@ -127,6 +133,7 @@ de-DE:
       Course 4 Artist Functions Inspiration:
         draw a square 20: ein Quadrat ziehen 20
       Course 4 Artist Functions challenge:
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw a square 20: ein Quadrat ziehen 20
       Course 4 Bee Params 1:
         get 3 nectar: sammle 3 Nektar
@@ -186,6 +193,7 @@ de-DE:
       Function intro Ryan_2019:
         build bridge: baue Brücke
       Geometric Sun:
+        draw a door: zeichne eine Tür
         draw grass: zeichne Gras
         draw windows: zeichne Fenster
         rectangle: Rechteck
@@ -196,6 +204,7 @@ de-DE:
         triangle: dreieck
         square: Quadrat
       Geometric Sun_2018:
+        draw a door: zeichne eine Tür
         draw grass: zeichne Gras
         draw windows: zeichne Fenster
         rectangle: Rechteck
@@ -239,12 +248,16 @@ de-DE:
         function 2: Funktion 2
       NEW Course 4 Artist Functions 11:
         draw a square 20: ein Quadrat ziehen 20
+        draw a line of squares: zeichne eine Linie aus Quadraten
       NEW Course 4 Artist Functions 12:
         draw a square 20: ein Quadrat ziehen 20
+        draw a line of squares: zeichne eine Linie aus Quadraten
       NEW Course 4 Artist Functions 13:
         draw a square 20: ein Quadrat ziehen 20
+        draw a line of squares: zeichne eine Linie aus Quadraten
       NEW Course 4 Artist Functions 14:
         empty function: leere Funktion
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw a square 20: ein Quadrat ziehen 20
       NEW Course 4 Artist Functions 3:
         draw a square: zeichne ein Quadrat
@@ -322,8 +335,10 @@ de-DE:
         jump: springen
       Robot Doodle:
         draw head: zeichne Kopf
+        draw eye: zeichne Auge
       Robot Doodle_2018:
         draw head: zeichne Kopf
+        draw eye: zeichne Auge
       Standalone_Artist_7:
         draw a flower: zeichne eine Blume
       Standalone_Artist_8:
@@ -342,6 +357,7 @@ de-DE:
         do something: Funktionsblock
       course3_bee_functions_challenge1:
         do something: Funktionsblock
+        get 3 nectar or honey: hole dreimal Nektar oder Honig
       course3_bee_functions_challenge2:
         do something: Funktionsblock
       course3_bee_functions_challenge3:
@@ -529,8 +545,10 @@ de-DE:
         draw a hexagon: zeichne ein Sechseck
       courseE_artist_concept4:
         draw a square: zeichne ein Quadrat
+        draw a line of squares: zeichne eine Linie aus Quadraten
       courseE_artist_concept4_2018:
         draw a square: zeichne ein Quadrat
+        draw a line of squares: zeichne eine Linie aus Quadraten
       courseE_artist_concept_challenge1:
         do something: Funktionsblock
       courseE_artist_concept_challenge1_2018:
@@ -539,18 +557,29 @@ de-DE:
         draw pinwheel: zeichne Windrad
       courseE_artist_concept_challenge2_2018:
         draw pinwheel: zeichne Windrad
+      courseE_artist_functions1:
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions10:
         do something: Funktionsblock
+        draw hexagon: zeichne Sechseck
+        draw line of hexagons: zeichne Linie aus Sechsecken
       courseE_artist_functions10_2018:
         do something: Funktionsblock
+        draw hexagon: zeichne Sechseck
+        draw line of hexagons: zeichne Linie aus Sechsecken
       courseE_artist_functions10_2019:
         do something: Funktionsblock
+        draw hexagon: zeichne Sechseck
+        draw line of hexagons: zeichne Linie aus Sechsecken
       courseE_artist_functions2:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions2_2018:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions2_2019:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions3_2018:
         draw a star: zeichne einen Stern
       courseE_artist_functions3_2019:
@@ -573,12 +602,15 @@ de-DE:
         draw a window: zeichne ein Fenster
       courseE_artist_functions8:
         do something: Funktionsblock
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions8_2018:
         do something: Funktionsblock
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions8_2019:
         do something: Funktionsblock
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions8a_2018:
         draw a square: zeichne ein Quadrat
@@ -587,15 +619,19 @@ de-DE:
         draw a square: zeichne ein Quadrat
         do something: Funktionsblock
       courseE_artist_functions8b_2018:
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
         do something: Funktionsblock
       courseE_artist_functions8b_2019:
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
         do something: Funktionsblock
       courseE_artist_functions8c_2018:
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
         do something: Funktionsblock
       courseE_artist_functions8c_2019:
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
         do something: Funktionsblock
       courseE_artist_functions9:
@@ -611,8 +647,14 @@ de-DE:
         draw triangle: zeichne Dreieck
         draw line of triangles: zeichne eine Reihe aus Dreiecken
       courseE_artist_functionsProj_2018:
+        draw hexagon: zeichne Sechseck
+        draw line of hexagons: zeichne Linie aus Sechsecken
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functionsProj_2019:
+        draw hexagon: zeichne Sechseck
+        draw line of hexagons: zeichne Linie aus Sechsecken
+        draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions_challenge1:
         my design: mein Design
@@ -634,15 +676,21 @@ de-DE:
         do something: Funktionsblock
       courseE_artist_functions_predict1:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions_predict1_2018:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions_predict1_2019:
         draw a square: zeichne ein Quadrat
+        draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions_predict2:
+        draw polygon: zeichne Vieleck
         do something: Funktionsblock
       courseE_artist_functions_predict2_2018:
+        draw polygon: zeichne Vieleck
         do something: Funktionsblock
       courseE_artist_functions_predict2_2019:
+        draw polygon: zeichne Vieleck
         do something: Funktionsblock
       courseE_bee_concept4:
         honey nectar: Honignektar
@@ -654,22 +702,38 @@ de-DE:
         get 5: erhalte 5
       courseE_bee_functions7:
         get 7 make 7: sammle 7 mache 7
+      courseE_bee_functions8:
+        collect all nectar: sammle allen Nektar
       courseE_bee_functions9:
         get all nectar: sammle den gesamten Nektar
       courseE_bee_functions_challenge1:
         do something: Funktionsblock
+        get 3 nectar or honey: hole dreimal Nektar oder Honig
       courseE_bee_functions_challenge2:
         do something: Funktionsblock
       courseE_farmer_concept1:
         do something: Funktionsblock
       courseE_farmer_concept2:
         do something: Funktionsblock
+        get pumpkin: hole Kürbis
+      courseE_farmer_concept2_2018:
+        get pumpkin: hole Kürbis
       courseE_farmer_concept3:
         do something: Funktionsblock
       courseE_farmer_functions10b:
         navigate: navigieren
       courseE_farmer_functions11_predict:
         find pumpkin: finde Kürbis
+      courseE_farmer_functions2ba:
+        corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions3c:
+        corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions4b:
+        corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions5c:
+        corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions6c:
+        corn and pumpkin: Mais und Kürbis
       courseE_farmer_functions8b:
         navigate: navigieren
       courseE_farmer_functions9b:

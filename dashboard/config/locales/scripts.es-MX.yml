@@ -21656,6 +21656,8 @@ es-MX:
               name: Encuesta de fin de curso de Principios de Ciencias de la Computación
             Intro to App Lab:
               name: Introducción al Laboratorio de aplicaciones
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Velocity:

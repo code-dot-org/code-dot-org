@@ -388,6 +388,10 @@ ta:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
+        csp5-virtual:
+          stages:
+            Variables:
+              name: மாறிலிகள்
         virtual-holding-place:
           stages:
             Functions:

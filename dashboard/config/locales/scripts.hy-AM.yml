@@ -1740,6 +1740,8 @@ hy:
           stages:
             While Loops:
               name: Մինչ Loops
+            Variables:
+              name: փոփոխականների
         virtual-holding-place:
           stages:
             Functions:

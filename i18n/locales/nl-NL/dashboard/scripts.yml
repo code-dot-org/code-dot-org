@@ -2506,6 +2506,8 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+            Variables:
+              name: Variabelen
         virtual-holding-place:
           stages:
             Velocity:

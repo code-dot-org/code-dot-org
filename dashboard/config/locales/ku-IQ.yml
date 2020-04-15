@@ -320,6 +320,8 @@ ku:
       remove: ئایا تۆ دڵنیایت لە لابردنی ئەم مامۆستایە؟
     panel:
       student: قوتابی
+  user:
+    parent_guardian_email_label: پۆستی ئەلیكترۆنی باوان/بەخێوکەر
   home:
     student_reg_link: قوتابی
     online: سەرهێڵ

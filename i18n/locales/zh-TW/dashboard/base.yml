@@ -465,6 +465,8 @@ zh-TW:
     auth_option_saved: "你已成功連結至%{provider}的帳戶，電子郵件地址是 %{email}。"
     auth_option_saved_no_email: "你已成功連結至%{provider}的帳戶。"
     update_email: "更新"
+    parent_guardian_email_label: "家長/監護人電子信箱"
+    none: "無"
     encrypted: "已加密"
   user_level:
     completed: '已完成'

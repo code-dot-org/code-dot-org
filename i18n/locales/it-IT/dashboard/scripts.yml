@@ -4602,7 +4602,7 @@ it:
         csd1-2020:
           stages:
             Intro to Problem Solving:
-              description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+              description_student: "La classe lavora in gruppi per progettare barche di \"carta stagnola\" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull'esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. "
             0:
         csd6-2020:
           stages:
@@ -5001,6 +5001,8 @@ it:
               name: Introduzione agli array
             Intro to App Lab:
               name: Introduzione a Sviluppo App
+            Variables:
+              name: Variabili
         virtual-holding-place:
           stages:
             Velocity:

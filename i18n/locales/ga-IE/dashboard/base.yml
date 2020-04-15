@@ -464,6 +464,8 @@ ga:
     auth_option_saved: "D'éirigh leat do chuntas %{provider} a nascadh leis an seoladh ríomhphoist %{email}."
     auth_option_saved_no_email: "D'éirigh leat do chuntas %{provider} a nascadh."
     update_email: "Nuashonraigh"
+    parent_guardian_email_label: "Seoladh ríomhphoist do thuismitheoir"
+    none: "Dada"
     encrypted: "criptithe"
   user_level:
     completed: 'Críochnaithe'

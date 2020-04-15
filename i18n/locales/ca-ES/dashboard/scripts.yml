@@ -1584,6 +1584,8 @@ ca:
           stages:
             While Loops:
               name: Bucles Mentres
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Functions:

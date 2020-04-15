@@ -495,6 +495,8 @@ uk:
     update: Оновити обліковий запис
     account_successfully_updated: Обліковий запис успішно оновлено.
     update_email: Оновити
+    parent_guardian_email_label: Електронна пошта батьків/опікуна
+    none: Немає
   user_level:
     completed: Завершено
     tried: Спробував

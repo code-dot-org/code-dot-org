@@ -1513,6 +1513,8 @@ lv:
           stages:
             While Loops:
               name: Nosacījuma cikli
+            Variables:
+              name: Mainīgie
         virtual-holding-place:
           stages:
             Velocity:
