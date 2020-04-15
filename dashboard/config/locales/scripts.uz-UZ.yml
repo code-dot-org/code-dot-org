@@ -469,6 +469,10 @@ uz:
               name: Funksiyalar
             Sprite Properties:
               name: Sprait hususiyatlari
+        csp5-virtual:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
         virtual-holding-place:
           stages:
             Functions:

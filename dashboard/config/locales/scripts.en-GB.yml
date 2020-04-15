@@ -135,3 +135,7 @@ en-GB:
           stages:
             Variables:
               name: Variables
+        csp5-virtual:
+          stages:
+            Variables:
+              name: Variables

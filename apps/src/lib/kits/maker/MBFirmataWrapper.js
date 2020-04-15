@@ -1,6 +1,11 @@
 import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
+  constructor(SerialPort) {
+    super(SerialPort);
+    this.digitalCallbacks = [];
+  }
+
   setPinMode(pin, mode) {
     // If setting a pin to input, start tracking it immediately
     if (mode === 0) {
@@ -18,5 +23,26 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
 
   analogRead(pin, callback) {
     callback(this.analogChannel[pin]);
+  }
+
+  reset() {
+    if (this.myPort) {
+      this.myPort.write([this.SYSTEM_RESET]);
+    }
+  }
+
+  trackDigitalComponent(pin, callback) {
+    this.digitalCallbacks.push({pin, callback});
+  }
+
+  receivedDigitalUpdate(chan, pinMask) {
+    super.receivedDigitalUpdate(chan, pinMask);
+    for (let i = 0; i < this.digitalCallbacks.length; i++) {
+      let pin = this.digitalCallbacks[i].pin;
+      let callback = this.digitalCallbacks[i].callback;
+      // Translate 0/1 to 1/2 corresponding to ExternalButton.boardEvents[1/2]
+      // for 'down'/'up'
+      callback(pin, this.digitalInput[pin] + 1);
+    }
   }
 }

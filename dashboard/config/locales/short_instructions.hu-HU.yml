@@ -642,10 +642,10 @@ hu-HU:
       K-1 Maze 10: 'Kerüljük el a TNT-t, hogy eljussak a malachoz! '
       K-1 Maze 11: "Tervezd meg az utat és juttass el a buta malachoz. \nKerüld el
         a dinamitot, különben repülünk! Tipp: délre van tőlem."
-      K-1 Maze 2: Mozgass Keletre, hogy elkapjam a malacot!
-      K-1 Maze 3: Mozgass Délre, hogy elkapjam a malacot!
-      K-1 Maze 4: Mozgass Északra, hogy elkapjam a malacot!
-      K-1 Maze 5: Mozgass Keletre, hogy elkapjam a malacot!
+      K-1 Maze 2: Mozgass keletre, hogy elkapjam a malacot!
+      K-1 Maze 3: Mozgass délre, hogy elkapjam a malacot!
+      K-1 Maze 4: Mozgass északra, hogy elkapjam a malacot!
+      K-1 Maze 5: Mozgass keletre, hogy elkapjam a malacot!
       K-1 Maze 6: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze 7: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze 8: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
@@ -1516,7 +1516,7 @@ hu-HU:
         Itt egy nagyobb felbontású vászon - 16 x 16 pixeles!
 
         Nézd meg, mi történik, amikor elkezdünk játszani a bitekkel!
-      k-1 maze 1: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
+      k-1 maze 1: El tudsz juttatni nyugatra, hogy elkapjam a malacot?
       ramp_artist_loops1: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops1_2018: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops1_2019: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.

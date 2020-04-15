@@ -1773,6 +1773,8 @@ da:
           stages:
             While Loops:
               name: Mens løkker
+            Variables:
+              name: Variabler
         virtual-holding-place:
           stages:
             Functions:

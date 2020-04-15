@@ -518,6 +518,8 @@ tr:
     update: Hesabı güncelle
     account_successfully_updated: Hesap başarıyla güncellendi.
     update_email: Güncelle
+    parent_guardian_email_label: Veli e-posta
+    none: Hiçbiri
     encrypted: sifrelenmis
   user_level:
     completed: Tamamlandı

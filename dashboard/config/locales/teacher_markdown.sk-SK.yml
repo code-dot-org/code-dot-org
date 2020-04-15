@@ -69,6 +69,66 @@ sk-SK:
         -   [Aplikácie a riešenie problémov](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Príklad hodnotenia spolužiakov ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
 
         [/KEY]
+      CSD U3 debug: Toto je vhodný nástroj na zistenie, či žiaci chápu podstatu rozmiestňovania
+        tvarov v Game Labe.
+      CSD U3 debug_2018: Toto je vhodný nástroj na zistenie, či žiaci chápu podstatu
+        rozmiestňovania tvarov v Game Labe.
+      CSD U3 debug_2019: Toto je vhodný nástroj na zistenie, či žiaci chápu podstatu
+        rozmiestňovania tvarov v Game Labe.
+      CSD U3 plotting shapes map: |-
+        # Zjednodušené tvary
+
+        Príkazy `rect` a `ecllipse`, s ktorými sa žiaci doteraz zoznámili, sú zjednodušenými formami príkazov, ktoré sa naučia neskôr. Zjednodušenie im umožňuje zamerať sa na umiestnenie tvarov v mriežke bez obáv z nastavenia ich rozmerov.
+      CSD U3 plotting shapes map_2018: |-
+        # Zjednodušené tvary
+
+        Príkazy `rect` a `ecllipse`, s ktorými sa žiaci doteraz zoznámili, sú zjednodušenými formami príkazov, ktoré sa naučia neskôr. Zjednodušenie im umožňuje zamerať sa na umiestnenie tvarov v mriežke bez obáv z nastavenia ich rozmerov.
+      CSD U3 plotting shapes map_2019: |-
+        # Zjednodušené tvary
+
+        Príkazy `rect` a `ecllipse`, s ktorými sa žiaci doteraz zoznámili, sú zjednodušenými formami príkazov, ktoré sa naučia neskôr. Zjednodušenie im umožňuje zamerať sa na umiestnenie tvarov v mriežke bez obáv z nastavenia ich rozmerov.
+      CSD U3 rect: "# Prehliadka Game Labu\n\nV závislosti od veku alebo pokročilosti
+        svojich žiakov môžete túto lekciu využiť na prezentáciu Game Labu pred celou
+        triedou. \nUistite sa, že žiaci vedia nájsť pokyny k lekcii, časť pre písanie
+        kódu, okno so zobrazením vytvoreného programu a prehľad blokov.\nJe to tiež
+        dobrá príležitosť ukázať im užitočné zdroje ako napíklad dokumentáciu alebo
+        tlačidlo, ktoré mení bloky na text."
+      CSD U3 rect_2018: "# Prehliadka Game Labu\n\nV závislosti od veku alebo pokročilosti
+        svojich žiakov môžete túto lekciu využiť na prezentáciu Game Labu pred celou
+        triedou. \nUistite sa, že žiaci vedia nájsť pokyny k lekcii, časť pre písanie
+        kódu, okno so zobrazením vytvoreného programu a prehľad blokov.\nJe to tiež
+        dobrá príležitosť ukázať im užitočné zdroje ako napíklad dokumentáciu alebo
+        tlačidlo, ktoré mení bloky na text."
+      CSD U3 rect_2019: "# Prehliadka Game Labu\n\nV závislosti od veku alebo pokročilosti
+        svojich žiakov môžete túto lekciu využiť na prezentáciu Game Labu pred celou
+        triedou. \nUistite sa, že žiaci vedia nájsť pokyny k lekcii, časť pre písanie
+        kódu, okno so zobrazením vytvoreného programu a prehľad blokov.\nJe to tiež
+        dobrá príležitosť ukázať im užitočné zdroje ako napíklad dokumentáciu alebo
+        tlačidlo, ktoré mení bloky na text."
+      CSD U3L01 TFMD_2018: |-
+        [key]
+
+        -   [Informatika v zábavnom priemysle](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Pracovný zošit - príklad ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+        [/key]
+      CSD U3L01 TFMD_2019: |-
+        [key]
+
+        -   [Informatika v zábavnom priemysle](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Pracovný zošit - príklad ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+        [/key]
+      CSD U3L02 TFMD_2018: |-
+        [key]
+
+        -   [Kreslenie tvarov](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Pracovný zošit - príklad ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+        [/key]
+      CSD U3L02 TFMD_2019: |-
+        [key]
+
+        -   [Kreslenie tvarov](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Pracovný zošit - príklad ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) \| [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+        [/key]
       Fish Tank 2-validated_2019: "Táto lekcia obsahuje **mini projekt** s názvom
         _Plávajúca ryba #1_. Postup v nej je trochu odlišný od predchádzajúcich úloh
         v kurze. Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými novými
@@ -92,6 +152,16 @@ sk-SK:
         nasledovných podmienok:\n\n-   Študent musí mať aspoň jednu aktívnu rybaciu
         postavu.\n-   Ryba sa musí hýbať vľavo a vpravo, čo sa dá docieliť zmenou
         správania na `plávať vľavo a vpravo`."
+      Virtual Pet 4_2019: "Táto lekcia obsahuje **mini projekt** s názvom \\*Virtuálne
+        zvieratko. Postup v nej je trochu odlišný od predchádzajúcich úloh v kurze.
+        Pred začatím kurzu by bolo dobre oboznámiť sa s niektorými novými vlastnosťami.
+        \n\n-   Kód, ktorý študenti vytvoria v jednej úrovni sa automaticky prenesie
+        do ostatných úrovní, čo im umožní zopakovať si nápady a učiť sa postupne.\n-
+        \  Tieto úrovne neobsahujú **kontrolu správnosti** a tak sú otvorené volnejšej
+        kreativite. Umožnite študentom nech sa sami rozhodujú, kedy je úloha ukončená.
+        Neexistuje len jedna správna odpoveď! \n-   Príklady riešení si môžete pozrieť
+        v panely pre učiteľov vpravo.\n\nŠtudentov kód bude overený na základe splnenia
+        nasledovných podmienok:\n\n-   Študent musí vytvoriť aspoň tri postavy."
       courseA_video_Stevie: "**DÔLEŽITÉ:**  Učiteľ prečíta tento príbeh nahlas a pracuje
         pri tom so žiakmi.  PDF nájdete tu <https://goo.gl/SZHo4z> .   \n\n* * *\n\nAk
         nemôžete príbeh triede prečítať, určite sa žiakov opýtajte na toto video!

@@ -2622,6 +2622,8 @@ nn:
           stages:
             While Loops:
               name: Medan-løkker
+            Variables:
+              name: Variablar
         virtual-holding-place:
           stages:
             Velocity:

@@ -478,6 +478,8 @@ pl:
       słowa
     enter_parent_email: Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)
     update_email: Uaktualnij
+    parent_guardian_email_label: Adres e-mail rodzica/opiekuna
+    none: Żaden
     encrypted: zaszyfrowane
   user_level:
     completed: Ukończono
