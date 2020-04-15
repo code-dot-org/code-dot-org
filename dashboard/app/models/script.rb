@@ -908,6 +908,7 @@ class Script < ActiveRecord::Base
     chapter = 0
     stage_position = 0; script_level_position = Hash.new(0)
     script_stages = []
+    script_lesson_groups = []
     script_levels_by_stage = {}
     levels_by_key = script.levels.index_by(&:key)
     lockable_count = 0
@@ -920,6 +921,8 @@ class Script < ActiveRecord::Base
         user_facing: false,
         position: 0
       )
+
+      script_lesson_groups << lesson_group
     else
       # Finds or creates Lesson Groups with the correct position.
       # In addition it check for 2 things:
@@ -944,8 +947,12 @@ class Script < ActiveRecord::Base
         if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
           raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
         end
+
+        script_lesson_groups << lesson_group
       end
     end
+
+    script.lesson_groups = script_lesson_groups
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|

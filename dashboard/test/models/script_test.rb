@@ -2112,6 +2112,7 @@ endvariants
     )
 
     assert_equal '', script.stages[0].lesson_group.key
+    assert_equal 1, script.lesson_groups.count
   end
 
   test 'can change the order of lesson groups in a script' do
