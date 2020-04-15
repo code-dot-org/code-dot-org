@@ -307,6 +307,7 @@ sl:
       računov vaših študentov.'
     delete_confirm: Ali ste prepričani, da želite izbrisati svoj račun?
     update_email: Posodobi
+    parent_guardian_email_label: Elektronska pošta staršev/skrbnikov
   user_level:
     completed: Zaključeno
     tried: Poskus

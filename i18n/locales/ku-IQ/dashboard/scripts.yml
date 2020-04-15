@@ -460,6 +460,10 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        csp5-virtual:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
         virtual-holding-place:
           stages:
             Functions:

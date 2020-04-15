@@ -11436,6 +11436,8 @@ de-DE:
           Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen
           was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht
           gelöst ist.
+      courseE_artist_functions4:
+        courseD_artist_functions4_a: Versuche es mit einer Funktion!
       courseE_artist_functions6:
         grade4_artist_functions_windows0_c: Hab keine Angst, einen Fehler zu machen!
           Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn
@@ -11476,10 +11478,13 @@ de-DE:
         courseE_farmer_functions4b_a: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung
           bist, dass du das Rätsel noch nicht gelöst hast.
+        courseE_farmer_functions4b_b: Denke daran, Dich nach jedem Pfad umzudrehen.
       courseE_farmer_functions5c:
         courseE_farmer_functions5c_b: Hab keine Angst, einen Fehler zu machen! Versuche
           weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung
           bist, dass du das Rätsel noch nicht gelöst hast.
+      courseE_farmer_functions8b:
+        courseE_farmer_functions8b_c: Wie oft muss die Funktion aufgerufen werden?
       courseF_artist_for1:
         courseF_artist_for1_a: "Kannst so etwas zeichnen? \n\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)"
       courseF_artist_for10:

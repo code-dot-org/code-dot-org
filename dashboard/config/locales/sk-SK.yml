@@ -531,6 +531,8 @@ sk:
       %{email}.
     auth_option_saved_no_email: Úspešne si si prepojil/a svoj %{provider} účet.
     update_email: Aktualizovať
+    parent_guardian_email_label: Email rodiča/zákonného zástupcu
+    none: Žiadne
     encrypted: šifrované
   user_level:
     completed: Dokončené

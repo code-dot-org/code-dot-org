@@ -2218,16 +2218,27 @@ it-IT:
 
         > ## Rifletti
         >
-        > Quali sono le tue prime impressioni sui "Fondamenti di informatica"?
+        > Quali sono le tue prime impressioni sul corso "Fondamenti di informatica"?
         >
-        > Se sai l'inglese, [Twitta i tuoi pensieri][0]  (in inglese) taggando @teachcode.
+        > Condividi i tuoi pensieri taggando Programma il Futuro sui social network:
         >
-        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
-        > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook][1] o [Instagram][2].
+        > -   su <a href="https://www.facebook.com/pg/programmailfuturo" target="blank">Facebook</a>: @programmailfuturo
+        > -   su \<a <https://twitter.com/ProgrammaFuturo>" target="blank">Twitter</a>: @ProgrammaFuturo
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect
+        >
+        > What are your first impressions of CS Fundamentals?
+        >
+        > [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
+        > Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2].
       OPD-K5 Closing: |-
-        > **Se ti è piaciuto il corso, iscriviti ad un seminario (solo per gli Stati Uniti):**
+        > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
         >
-        > [Iscriviti ora][0] per continuare a studiare l'informatica e la sua pedagogia. I seminari gratuiti sono un eccellente occasione per collaborare ed impegnarsi con altri insegnanti appassionati della tua zona.
+        > [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
       OPD-K5 EventsVid: |-
         Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in qui occorre  programmare con gli eventi.
 
@@ -2296,11 +2307,17 @@ it-IT:
 
         > ## Riflettiamo:
         >
-        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza?
+        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza? <a href="https://programmailfuturo.it/forum/corso-online-per-l-insegnamento">Condividi i tuoi pensieri nel forum di Programma il Futuro</a>.
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect:
         >
-        > [Twitta i tuoi pensieri][1] (in inglese) taggando @teachcode.
+        > How might you explicitly teach problem solving in your CS classroom?
         >
-        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Condividi su Twitter</h4></a>
+        > [Tweet your thoughts][1] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Share on Twitter</h4></a>
       OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
         di ripetizione (cicli) ed introduce il blocco "ripeti ... volte" nei corsi
         di "Fondamenti di informatica".
@@ -2816,6 +2833,9 @@ it-IT:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: 'Raccogli tutti e tre i diamanti! Muovi Laura
         su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2019: 'Raccogli tutti e tre i diamanti! Muovi Laura
+        su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"
+        block-text="get treasure"/></xml>. '
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti

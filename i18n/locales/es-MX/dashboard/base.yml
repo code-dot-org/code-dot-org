@@ -458,6 +458,8 @@ es-MX:
     auth_option_saved: "Has vinculado correctamente tu cuenta %{provider} con el correo electrónico %{email}."
     auth_option_saved_no_email: "Has vinculado correctamente tu cuenta %{provider}."
     update_email: "Actualizar"
+    parent_guardian_email_label: "Correo electrónico del padre o tutor"
+    none: "Ninguna"
     encrypted: "encriptado"
   user_level:
     completed: 'Completado'

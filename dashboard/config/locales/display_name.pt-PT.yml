@@ -2,6 +2,7 @@
 pt-PT:
   data:
     display_name:
+      AB_Debug_Artist1: 'Depuração do Artista #1 (AB)'
       CSD Problem Solving Process Video: Video:Processo de Resolução de Problemas
       CSD U1L02 TFMD_2018: Visão geral da aula
       CSD U1L02 TFMD_2019: Visão geral da aula
@@ -286,11 +287,11 @@ pt-PT:
       CSD U6L16 TFMD: Visão geral da aula
       CSD U6L16 TFMD_2018: Visão geral da aula
       CSD U6L16 TFMD_2019: Visão geral da aula
-      CSD What Makes a Computer a Computer Video: 'Vídeo: O que faz um computador,
+      CSD What Makes a Computer a Computer Video: 'Vídeo: O que faz de um computador
         um computador?'
-      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: O que faz um computador,
+      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: O que faz de um computador
         um computador?'
-      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz um computador,
+      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz de um computador
         um computador?'
       'CSD: For Loop_2018': Ciclos "for"
       Dance_Party_extras_alternate_2019: Para a frente e para trás

@@ -10,10 +10,24 @@ pt-PT:
         draw pupil: desenha a pupila
       2-3 Artist 3.4:
         draw a circle: desenhar um círculo
+        draw a car: desenhar um carro
       2-3 Artist 7:
         draw_rect: desenha_rect
       2-3 Artist Debugging 10:
         draw a circle: desenhar um círculo
+        draw a button: desenhar um botão
+      2-3 Artist Debugging 5:
+        draw left leg: desenhar a perna esquerda
+        draw right leg: desenhar a perna direita
+        draw body and arms: desenhar corpo e braços
+        draw a head: desenhar uma cabeça
+      2-3 Artist Debugging 6:
+        draw right leg: desenhar a perna direita
+        draw arms: desenhar braços
+        draw left leg: desenhar a perna esquerda
+      2-3 Artist Debugging 7:
+        draw O: desenhar O
+        draw D: desenhar D
       2-3 Artist Functions 11:
         draw a hexagon: desenhar um hexágono
       2-3 Artist Functions 11.5:
@@ -34,6 +48,10 @@ pt-PT:
         draw a tree: desenhar uma árvore
       4-5 Artist 7:
         draw a circle: desenhar um círculo
+        draw a car: desenhar um carro
+      4-5 Artist 8:
+        draw circle: desenhar círculo
+        draw goal: desenhar objectivo
       Course 4 Play Lab Params 1:
         jump: saltar
       Course 4 Play Lab Params 2:
@@ -62,6 +80,12 @@ pt-PT:
       Geometric Sun_2018:
         diamond: diamante
         draw a house: desenhar uma casa
+      K-1 Artist2 3:
+        draw roof: Desenhar Telhado
+      K-1 Artist2 4:
+        draw rectangle: Desenhar rectângulo
+      K-1 Artist2 5:
+        draw rectangle: Desenhar rectângulo
       NEW Course 4 Artist Functions 3:
         draw a square: desenhar um quadrado
       NEW Course 4 Artist Functions 4:

@@ -2103,6 +2103,8 @@ uk:
           stages:
             While Loops:
               name: Цикли "поки"
+            Variables:
+              name: змінні
         virtual-holding-place:
           stages:
             Velocity:

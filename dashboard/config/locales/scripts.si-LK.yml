@@ -1744,6 +1744,8 @@ si:
           stages:
             While Loops:
               name: නැවත සිදුවන ලුප
+            Variables:
+              name: විචල්‍යන්
         virtual-holding-place:
           stages:
             Functions:

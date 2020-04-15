@@ -6405,6 +6405,8 @@ vi:
               name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
             Intro to App Lab:
               name: Giới thiệu về AppLab
+            Variables:
+              name: Các biến
         virtual-holding-place:
           stages:
             Collision Detection:

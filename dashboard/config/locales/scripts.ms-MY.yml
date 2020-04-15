@@ -588,6 +588,10 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        csp5-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
         virtual-holding-place:
           stages:
             Functions:
