@@ -21,6 +21,7 @@ def predict():
         data = json.loads(request.data)
         xml = data['code']
         ast = xmlToAst(xml)
+        print(ast)
 
     response = {
         'hint': ' '.join(ast.toTrainableInput()),

@@ -162,8 +162,8 @@ def train_pipeline(model_class, train_data_path, test_data_path, config):
         track_train_f1[epoch - 1] = train_f1
         track_test_f1[epoch - 1] = test_f1
 
-        is_best = val_loss < best_loss
-        best_loss = min(val_loss, best_loss)
+        is_best = test_loss < best_loss
+        best_loss = min(test_loss, best_loss)
 
         save_checkpoint({
             'state_dict': model.state_dict(),
