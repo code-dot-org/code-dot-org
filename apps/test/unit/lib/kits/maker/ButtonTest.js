@@ -7,7 +7,7 @@ import {
   PlaygroundButton,
   MicroBitButton
 } from '@cdo/apps/lib/kits/maker/Button';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import sinon from 'sinon';
 
 describe('PlaygroundButton', function() {

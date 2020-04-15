@@ -4,7 +4,7 @@ import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import _ from 'lodash';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
+import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/ExternalButton';
 

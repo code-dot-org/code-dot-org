@@ -20,7 +20,7 @@ import {
   SONG_CONCLUSION,
   CP_COMMAND,
   J5_CONSTANTS
-} from '../../PlaygroundConstants';
+} from './PlaygroundConstants';
 import Led from '../../Led';
 import {
   isNodeSerialAvailable,
