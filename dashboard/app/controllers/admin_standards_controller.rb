@@ -14,7 +14,7 @@ class AdminStandardsController < ApplicationController
     script = Script.find_by_name(params["unit_name"])
 
     code_studio_stages = {}
-    script&.stages&.each do |stage|
+    script&.lessons&.each do |stage|
       code_studio_stages[stage.localized_name] = stage
     end
 

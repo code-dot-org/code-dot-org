@@ -1045,7 +1045,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     )
     script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:stages])
 
-    last_level_in_first_stage = script.stages.first.script_levels.last
+    last_level_in_first_stage = script.lessons.first.script_levels.last
     post :milestone,
       params: @milestone_params.merge(
         script_level_id: last_level_in_first_stage.id
@@ -1060,10 +1060,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone post respects level_id for active level' do
     script = create :script
-    stage = create :stage, script: script
+    stage = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, stage: stage, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    script_level = create :script_level, script: script, lesson: stage, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
 
     post :milestone,
       params: @milestone_params.merge(
@@ -1181,10 +1181,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :stage, name: 'Stage1', script: script, lockable: true
+    stage = create :lesson, name: 'Stage1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true, stage: stage
+    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: stage
 
     milestone_params = {
       user_id: student_1,
