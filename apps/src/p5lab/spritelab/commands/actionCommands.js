@@ -45,6 +45,23 @@ export const commands = {
     });
     return touching;
   },
+
+  isTouchingSprite(spriteArg, targetArg) {
+    if (!spriteArg || !targetArg) {
+      return false;
+    }
+    let sprites = coreLibrary.getSpriteArray(spriteArg);
+    let targets = coreLibrary.getSpriteArray(targetArg);
+    let touching = false;
+    sprites.forEach(sprite => {
+      targets.forEach(target => {
+        if (sprite.isTouching(target)) {
+          touching = true;
+        }
+      });
+    });
+    return touching;
+  },
   jumpTo(spriteArg, location) {
     if (!location) {
       return;
