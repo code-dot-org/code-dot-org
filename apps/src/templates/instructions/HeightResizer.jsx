@@ -8,8 +8,16 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
+import {getTouchEventName} from '../../dom';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
+
+const MOUSE_DOWN_EVENT_NAME = 'mousedown';
+const MOUSE_DOWN_TOUCH_EVENT_NAME = getTouchEventName(MOUSE_DOWN_EVENT_NAME);
+const MOUSE_UP_EVENT_NAME = 'mouseup';
+const MOUSE_UP_TOUCH_EVENT_NAME = getTouchEventName(MOUSE_UP_EVENT_NAME);
+const MOUSE_MOVE_EVENT_NAME = 'mousemove';
+const MOUSE_MOVE_TOUCH_EVENT_NAME = getTouchEventName(MOUSE_MOVE_EVENT_NAME);
 
 const styles = {
   main: {
@@ -50,33 +58,55 @@ class HeightResizer extends React.Component {
   };
 
   componentDidMount() {
-    this.resizerRef.addEventListener('mousedown', this.onMouseDown);
-    this.resizerRef.addEventListener('mouseup', this.onMouseUp);
-    this.resizerRef.addEventListener('mousemove', this.onMouseMove);
-    this.resizerRef.addEventListener('touchstart', this.onMouseDown);
-    this.resizerRef.addEventListener('touchend', this.onMouseUp);
-    this.resizerRef.addEventListener('touchmove', this.onMouseMove);
+    this.resizerRef.addEventListener(MOUSE_DOWN_EVENT_NAME, this.onMouseDown);
+    this.resizerRef.addEventListener(MOUSE_UP_EVENT_NAME, this.onMouseUp);
+    this.resizerRef.addEventListener(MOUSE_MOVE_EVENT_NAME, this.onMouseMove);
+    this.resizerRef.addEventListener(
+      MOUSE_DOWN_TOUCH_EVENT_NAME,
+      this.onMouseDown
+    );
+    this.resizerRef.addEventListener(MOUSE_UP_TOUCH_EVENT_NAME, this.onMouseUp);
+    this.resizerRef.addEventListener(
+      MOUSE_MOVE_TOUCH_EVENT_NAME,
+      this.onMouseMove
+    );
   }
 
   componentWillUnmount() {
-    this.resizerRef.removeEventListener('mousedown', this.onMouseDown);
-    this.resizerRef.removeEventListener('mouseup', this.onMouseUp);
-    this.resizerRef.removeEventListener('mousemove', this.onMouseMove);
-    this.resizerRef.removeEventListener('touchstart', this.onMouseDown);
-    this.resizerRef.removeEventListener('touchend', this.onMouseUp);
-    this.resizerRef.removeEventListener('touchmove', this.onMouseMove);
+    this.resizerRef.removeEventListener(
+      MOUSE_DOWN_EVENT_NAME,
+      this.onMouseDown
+    );
+    this.resizerRef.removeEventListener(MOUSE_UP_EVENT_NAME, this.onMouseUp);
+    this.resizerRef.removeEventListener(
+      MOUSE_MOVE_EVENT_NAME,
+      this.onMouseMove
+    );
+    this.resizerRef.removeEventListener(
+      MOUSE_DOWN_TOUCH_EVENT_NAME,
+      this.onMouseDown
+    );
+    this.resizerRef.removeEventListener(
+      MOUSE_UP_TOUCH_EVENT_NAME,
+      this.onMouseUp
+    );
+    this.resizerRef.removeEventListener(
+      MOUSE_MOVE_TOUCH_EVENT_NAME,
+      this.onMouseMove
+    );
   }
 
   componentDidUpdate(_, prevState) {
     // Update listeners as dragging state changes.
+    // These appear to be necessary for mouse, but not for touch.
     if (!prevState.dragging && this.state.dragging) {
       // Add document listeners when drag starts.
-      document.addEventListener('mousemove', this.onMouseMove);
-      document.addEventListener('mouseup', this.onMouseUp);
+      document.addEventListener(MOUSE_MOVE_EVENT_NAME, this.onMouseMove);
+      document.addEventListener(MOUSE_UP_EVENT_NAME, this.onMouseUp);
     } else if (prevState.dragging && !this.state.dragging) {
       // Remove document listeners when drag ends.
-      document.removeEventListener('mousemove', this.onMouseMove);
-      document.removeEventListener('mouseup', this.onMouseUp);
+      document.removeEventListener(MOUSE_MOVE_EVENT_NAME, this.onMouseMove);
+      document.removeEventListener(MOUSE_UP_EVENT_NAME, this.onMouseUp);
     }
   }
 
