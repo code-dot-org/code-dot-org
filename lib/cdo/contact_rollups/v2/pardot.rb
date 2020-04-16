@@ -22,17 +22,18 @@ class PardotV2
     @updated_prospect_deltas = []
   end
 
-  # Retrieves new email-id mappings from Pardot
-  # @param [Integer] last_id
-  # @return [Array] an array of hash {email, id}
+  # Retrieves new (email, Pardot ID) mappings from Pardot
+  #
+  # @yieldreturn [Array<Hash>] an array of hash {email, id}
+  # @raise [StandardError] if receives errors in Pardot response
+  #
+  # @param [Integer] last_id retrieves only Pardot ID greater than this value
+  # @return [Integer] number of results retrieved
   def self.retrieve_new_ids(last_id)
-    # Run repeated requests querying for prospects above our highest known
-    # Pardot ID. Up to 200 prospects will be returned at a time by Pardot, so
-    # query repeatedly if there are more than 200 to retrieve.
-    mappings = []
+    total_results_retrieved = 0
 
+    # Run repeated requests querying for prospects above our highest known Pardot ID.
     loop do
-      # Pardot request to return all prospects with ID greater than the last id.
       url = "#{PROSPECT_QUERY_URL}?id_greater_than=#{last_id}&fields=email,id&sort_by=id"
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
@@ -40,23 +41,26 @@ class PardotV2
       # Pardot returns the count total available prospects (not capped to 200),
       # although the data for a max of 200 are contained in the response.
       total_results = doc.xpath('/rsp/result/total_results').text.to_i
-      results_in_response = 0
 
-      # Process every prospect in the response.
+      results_in_response = 0
+      mappings = []
       doc.xpath('/rsp/result/prospect').each do |node|
         id = node.xpath("id").text.to_i
         email = node.xpath("email").text
-        results_in_response += 1
-        last_id = id
-
         mappings << {email: email, pardot_id: id}
+        last_id = id
+        results_in_response += 1
       end
 
-      # Stop if all the remaining results were in this response - we're done. Otherwise, keep repeating.
+      yield mappings if block_given?
+      log "Retrieved #{results_in_response}/#{total_results} new Pardot IDs. Last Pardot ID = #{last_id}."
+
+      # Stop if all the remaining results were in this response
+      total_results_retrieved += results_in_response
       break if results_in_response == total_results
     end
 
-    mappings
+    total_results_retrieved
   end
 
   # Compiles a batch of prospects and batch-create them in Pardot when batch size
