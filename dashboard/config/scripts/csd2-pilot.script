@@ -9,6 +9,7 @@ curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
 pilot_experiment 'csd-piloters'
 project_sharing true
 
+lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
 stage 'Exploring Web Pages', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_pilot', named: true
 level 'CSD Web Sample Pages', named: true
@@ -95,6 +96,7 @@ level 'CSD U2 publish video_pilot', named: true
 level 'CSD U2 project share_pilot', progression: 'Publishing Your Website', named: true
 level 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot', progression: 'Reflection', assessment: true
 
+lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
 stage 'Purpose of a  Websites', flex_category: 'csd2_2'
 level 'CSD U2L12 TFMD_pilot', named: true
 level 'CSD U2 Top Websites_2018_2019_pilot', named: true
@@ -142,6 +144,7 @@ level 'csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot', progression: 
 stage 'Post-Project Test', lockable: true, flex_category: 'csd2_2'
 level 'CSD Web Development Post-Project Test_pilot', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019_pilot'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot', assessment: true

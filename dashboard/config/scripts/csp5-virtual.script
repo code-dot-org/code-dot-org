@@ -3,6 +3,7 @@ hideable_stages true
 student_detail_progress_view true
 project_sharing true
 
+lesson_group 'csp5_1', display_name: 'Chapter 1: Event-Driven Programming'
 stage 'Intro to App Lab', flex_category: 'csp5_1'
 level 'CSPU5_HOC_virtual1', progression: 'Setting Properties'
 level 'CSPU5_HOC_virtual2', progression: 'Setting Properties'

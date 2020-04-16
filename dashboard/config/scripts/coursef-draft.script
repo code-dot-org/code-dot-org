@@ -1,6 +1,7 @@
 login_required true
 has_lesson_plan true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
 
@@ -27,30 +28,16 @@ stage 'The Power of Words'
 level 'coursef_powerofwords'
 
 stage 'Ice Age Play Lab'
-skin 'iceage'
-video_key_for_next_level 'iceage_intro'
 level 'iceage_hello1'
-skin 'iceage'
 level 'iceage_hello2'
-skin 'iceage'
 level 'iceage_move_to_flag'
-skin 'iceage'
 level 'iceage_move_to_actor'
-skin 'iceage'
-video_key_for_next_level 'iceage_repeat'
 level 'iceage_repeat'
-skin 'iceage'
-video_key_for_next_level 'iceage_events'
 level 'iceage_click_hello'
-skin 'iceage'
 level 'iceage_move_events'
-skin 'iceage'
 level 'iceage_sound_and_points'
-skin 'iceage'
 level 'iceage_warn_ice_age'
-skin 'iceage'
 level 'iceage_throw_hearts'
-skin 'iceage'
 level 'iceage_free_play'
 
 stage 'Envelope Variables'
@@ -165,6 +152,7 @@ level 'courseF_bee_fwp7', challenge: true
 level 'courseF_bee_fwp8'
 level 'courseF_bee_fwp9_predict1', assessment: true
 
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 level 'courseF_video_csMatters', named: true
 level 'InspirationalArtwork', named: true
