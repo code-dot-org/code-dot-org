@@ -13,6 +13,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
 import Snapshot from './Snapshot';
+import placeholderImage from './placeholder.png';
 
 const styles = {
   container: {
@@ -35,7 +36,11 @@ const styles = {
   },
   placeholderContainer: {
     position: 'relative',
-    textAlign: 'center'
+    height: '100%',
+    textAlign: 'center',
+    backgroundImage: `url('${placeholderImage}')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
   },
   placeholderText: {
     position: 'absolute',
@@ -66,8 +71,6 @@ class VisualizerModal extends React.Component {
     tableName: PropTypes.string.isRequired,
     tableRecords: PropTypes.array.isRequired
   };
-
-  placeholder = require('./placeholder.png');
 
   state = {...INITIAL_STATE};
 
@@ -331,7 +334,6 @@ class VisualizerModal extends React.Component {
                   <div style={styles.placeholderText}>
                     {msg.dataVisualizerPlaceholderText()}
                   </div>
-                  <img src={this.placeholder} />
                 </div>
               )}
             </div>
