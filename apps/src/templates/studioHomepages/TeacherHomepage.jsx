@@ -179,7 +179,7 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        <SpecialAnnouncement isTeacher={true} />
+        {isEnglish && <SpecialAnnouncement isTeacher={true} />}
         {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
         {specialAnnouncement && false && (
           <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
