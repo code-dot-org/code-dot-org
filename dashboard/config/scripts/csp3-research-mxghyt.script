@@ -7,6 +7,7 @@ has_lesson_plan true
 script_announcements [{"notice"=>"Check out the CSP mid-course survey", "details"=>"We recently added a mid-course survey to the end of Unit 3.  Please allow your students some time to complete it.", "link"=>"", "type"=>"success"}]
 curriculum_umbrella 'CSP'
 
+lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L01 Assessment1', progression: 'Check Your Understanding', assessment: true
@@ -125,6 +126,7 @@ level 'U3L08 - individualCode', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates', named: true
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
+lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 variants
   level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
@@ -132,5 +134,6 @@ variants
 endvariants
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'Please complete the CSP Mid-course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-post-survey-2017-levelgroup', assessment: true

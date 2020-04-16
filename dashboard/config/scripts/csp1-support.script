@@ -3,6 +3,7 @@ peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
 
+lesson_group 'required', display_name: 'Overview'
 stage 'Unit 1 Overview', flex_category: 'required'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 1', named: true
@@ -15,6 +16,7 @@ stage 'AP Preparation and Support', flex_category: 'required'
 level 'Unit 1 Vocab and Concept Review Activity', named: true
 level 'AP Test Prep Guidance', named: true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Lessons 2 - 3: Binary Messages', flex_category: 'content'
 level 'Lesson 1.2 Overview', named: true
 level 'Understanding Communication Protocols', named: true
@@ -66,6 +68,7 @@ level 'Lesson 1.13 Overview', named: true
 level 'The Internet: HTTP and HTML', named: true
 level 'Lessons 12 - 13: Teaching and Student Support Plan', named: true
 
+lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Group Work and Peer Learning in Unit 1', named: true
