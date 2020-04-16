@@ -1,7 +1,7 @@
 /** @file Tests for our johnny-five Led wrapper */
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/deprecatedChai';
 import sinon from 'sinon';
-import {MicrobitStubBoard} from './boards/makeStubBoard';
+import {MicrobitStubBoard} from '../makeStubBoard';
 import LedMatrix from '@cdo/apps/lib/kits/maker/boards/microBit/LedMatrix';
 
 describe('LedMatrix', function() {
