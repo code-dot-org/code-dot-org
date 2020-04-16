@@ -34,7 +34,13 @@ module Pd::Foorm
       rollup = Pd::Foorm::RollupCreator.calculate_averaged_rollup(summarized_answers, rollup_question_details, true)
       # get overall rollup
       overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details)
-      overall_rollup_per_facilitator = get_facilitator_rollup_for_course(facilitators, ws_data.course, rollup_question_details)
+      overall_rollup_per_facilitator = facilitators ?
+                                         get_facilitator_rollup_for_course(
+                                           facilitators,
+                                           ws_data.course,
+                                           rollup_question_details
+                                         ) :
+                                         {}
 
       result_data[:workshop_rollups] = {}
 
@@ -42,7 +48,7 @@ module Pd::Foorm
         result_data[:workshop_rollups][key] = {
           questions: questions,
           single_workshop: rollup[key],
-          overall_facilitator: overall_rollup_per_facilitator[key],
+          overall_facilitator: facilitators ? overall_rollup_per_facilitator[key] : {},
           overall: overall_rollup[key]
         }
       end
@@ -61,12 +67,14 @@ module Pd::Foorm
       facilitators.each_key do |facilitator_id|
         workshop_ids = Pd::Workshop.
           where(course: course_name).
-          where.not(started_at: nil, ended_at: nil).
+          # where.not(started_at: nil, ended_at: nil).
           left_outer_joins(:facilitators).where(users: {id: facilitator_id}).distinct.
           pluck(:id)
         facilitator_rollup = get_rollup_for_workshop_ids(workshop_ids, rollup_question_details, true, facilitator_id)
         rollups[:general][facilitator_id] = facilitator_rollup[:general]
-        rollups[:facilitator].deep_merge!(facilitator_rollup[:facilitator])
+        if facilitator_rollup[:facilitator]
+          rollups[:facilitator].deep_merge!(facilitator_rollup[:facilitator])
+        end
       end
       rollups
     end
@@ -112,6 +120,7 @@ module Pd::Foorm
       workshop = Pd::Workshop.find(workshop_id)
       facilitators = workshop.facilitators
       facilitators_formatted = {}
+      return nil unless facilitators
       facilitators.each do |facilitator|
         facilitators_formatted[facilitator.id] = facilitator.name
       end

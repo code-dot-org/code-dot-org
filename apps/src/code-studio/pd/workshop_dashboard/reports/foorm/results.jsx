@@ -36,6 +36,7 @@ export default class Results extends React.Component {
               section={GENERAL}
               questions={this.props.questions[GENERAL]}
               answers={this.props.thisWorkshop[workshopTab][GENERAL]}
+              facilitators={this.props.facilitators}
             />
             {this.props.thisWorkshop[workshopTab][FACILITATOR] && (
               <div>
@@ -44,6 +45,7 @@ export default class Results extends React.Component {
                   section={FACILITATOR}
                   questions={this.props.questions[FACILITATOR]}
                   answers={this.props.thisWorkshop[workshopTab][FACILITATOR]}
+                  facilitators={this.props.facilitators}
                 />
               </div>
             )}
