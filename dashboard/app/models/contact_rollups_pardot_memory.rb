@@ -24,15 +24,18 @@ require 'cdo/contact_rollups/v2/pardot'
 class ContactRollupsPardotMemory < ApplicationRecord
   self.table_name = 'contact_rollups_pardot_memory'
 
+  # Retrieves new email-Pardot ID mappings from Pardot and saves them to the database.
+  # @param [Integer, nil] last_id retrieves only Pardot ID greater than this value
   def self.add_and_update_pardot_ids(last_id = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
 
-    # TODO: save records in batch using activerecord_import upsert!
-    PardotV2.retrieve_new_ids(last_id).each do |mapping|
-      pardot_record = find_or_initialize_by(email: mapping[:email])
-      pardot_record.pardot_id = mapping[:pardot_id]
-      pardot_record.pardot_id_updated_at = Time.now.utc
-      pardot_record.save
+    PardotV2.retrieve_new_ids(last_id) do |mappings|
+      current_time = Time.now.utc
+      batch = mappings.map {|item| item.merge(pardot_id_updated_at: current_time)}
+
+      import! batch,
+        validate: false,
+        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at]
     end
   end
 
