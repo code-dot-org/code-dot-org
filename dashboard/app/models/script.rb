@@ -35,7 +35,7 @@ class Script < ActiveRecord::Base
 
   include Seeded
   has_many :levels, through: :script_levels
-  has_many :lesson_groups, dependent: :destroy
+  has_many :lesson_groups, -> {order('position ASC')}, dependent: :destroy
   has_many :script_levels, -> {order('chapter ASC')}, dependent: :destroy, inverse_of: :script # all script levels, even those w/ lessons, are ordered by chapter, see Script#add_script
   has_many :lessons, -> {order('absolute_position ASC')}, dependent: :destroy, inverse_of: :script, class_name: 'Lesson'
   has_many :users, through: :user_scripts
@@ -875,6 +875,7 @@ class Script < ActiveRecord::Base
         name = "#{base_name}-#{new_suffix}" if new_suffix
         script_data, i18n = ScriptDSL.parse_file(script, name)
 
+        lesson_groups = script_data[:lesson_groups]
         lessons = script_data[:stages]
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
@@ -887,12 +888,12 @@ class Script < ActiveRecord::Base
           new_name: script_data[:new_name],
           family_name: script_data[:family_name],
           properties: Script.build_property_hash(script_data).merge(new_properties)
-        }, lessons]
+        }, lesson_groups, lessons]
       end
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
-      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lessons|
-        add_script(options, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
+      added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_lesson_groups, raw_lessons|
+        add_script(options, raw_lesson_groups, raw_lessons, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       end
       [added_scripts, custom_i18n]
     end
@@ -900,17 +901,61 @@ class Script < ActiveRecord::Base
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_lessons, new_suffix: nil, editor_experiment: nil)
+  def self.add_script(options, raw_lesson_groups, raw_lessons, new_suffix: nil, editor_experiment: nil)
     raw_script_levels = raw_lessons.map {|lesson| lesson[:scriptlevels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
     chapter = 0
     lesson_position = 0; script_level_position = Hash.new(0)
     script_lessons = []
+    script_lesson_groups = []
     script_levels_by_lesson = {}
     levels_by_key = script.levels.index_by(&:key)
     lockable_count = 0
     non_lockable_count = 0
+
+    if raw_lesson_groups.empty?
+      lesson_group = LessonGroup.find_or_create_by(
+        key: '',
+        script: script,
+        user_facing: false,
+        position: 0
+      )
+
+      script_lesson_groups << lesson_group
+    else
+      # Finds or creates Lesson Groups with the correct position.
+      # In addition it check for 2 things:
+      # 1. That all the lesson groups specified by the editor have a key and
+      # display name.
+      # 2. If the lesson group key is an existing key that the given display name
+      # for that key matches the already saved display name
+      raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+        if raw_lesson_group[:key].blank?
+          raise "Expect all levelbuilder created lesson groups to have key."
+        end
+        if raw_lesson_group[:display_name].blank?
+          raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
+        end
+
+        lesson_group = LessonGroup.find_or_create_by(
+          key: raw_lesson_group[:key],
+          script: script,
+          user_facing: true
+        )
+
+        lesson_group.assign_attributes(position: index + 1)
+        lesson_group.save! if lesson_group.changed?
+
+        if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+          raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
+        end
+
+        script_lesson_groups << lesson_group
+      end
+    end
+
+    script.lesson_groups = script_lesson_groups
 
     # Overwrites current script levels
     script.script_levels = raw_script_levels.map do |raw_script_level|
@@ -920,6 +965,7 @@ class Script < ActiveRecord::Base
       named_level = nil
       bonus = nil
       flex_category = nil
+      lesson_group_key = nil
       lockable = nil
 
       levels = raw_script_level[:levels].map do |raw_level|
@@ -935,6 +981,7 @@ class Script < ActiveRecord::Base
         named_level = raw_level.delete(:named_level)
         bonus = raw_level.delete(:bonus)
         flex_category = raw_level.delete(:stage_flex_category)
+        lesson_group_key = raw_level.delete(:lesson_group)
         lockable = !!raw_level.delete(:stage_lockable)
 
         key = raw_level.delete(:name)
@@ -996,17 +1043,26 @@ class Script < ActiveRecord::Base
       end || ScriptLevel.create!(script_level_attributes) do |sl|
         sl.levels = levels
       end
+
       # Set/create Lesson containing custom ScriptLevel
       if lesson_name
+        # find the lesson group for this lesson
+        lesson_group = LessonGroup.find_by!(
+          key: lesson_group_key.presence || "",
+          script: script,
+          user_facing: lesson_group_key.present?
+        )
+
+        # check if that lesson exists for the script otherwise create a new lesson
         lesson = script.lessons.detect {|s| s.name == lesson_name} ||
           Lesson.find_or_create_by(
             name: lesson_name,
-            script: script,
+            script: script
           ) do |s|
             s.relative_position = 0 # will be updated below, but cant be null
           end
 
-        lesson.assign_attributes(flex_category: flex_category, lockable: lockable)
+        lesson.assign_attributes(lesson_group: lesson_group, flex_category: flex_category, lockable: lockable)
         lesson.save! if lesson.changed?
 
         script_level_attributes[:stage_id] = lesson.id
@@ -1058,11 +1114,56 @@ class Script < ActiveRecord::Base
       lesson.save! if lesson.changed?
     end
 
+    Script.prevent_lesson_group_mismatch(script_lessons)
+    Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
+    Script.prevent_lesson_group_with_no_lessons(script)
+
     script.lessons = script_lessons
     script.reload.lessons
     script.generate_plc_objects
 
     script
+  end
+
+  # All lesson groups should have lessons in them
+  def self.prevent_lesson_group_with_no_lessons(script)
+    script.lesson_groups.each do |lesson_group|
+      next if lesson_group.lessons.count > 0
+      raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons."
+    end
+  end
+
+  # Only consecutive lessons can have the same lesson group.
+  # Raise an error if non adjacent lessons have the same lesson
+  # group
+  def self.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
+    previous_lesson_groups = []
+    current_lesson_group = nil
+
+    script_lessons.each do |lesson|
+      next if lesson.lesson_group.key == current_lesson_group
+      if previous_lesson_groups.include?(lesson.lesson_group.key)
+        raise "Only consecutive lessons can have the same lesson group. Lesson Group #{lesson.lesson_group.key} is on two non-consecutive lessons."
+      end
+      previous_lesson_groups.append(current_lesson_group)
+      current_lesson_group = lesson.lesson_group.key
+    end
+  end
+
+  # We want a script to either have all of its lessons have lesson groups
+  # or none of the lessons have lesson groups. This method raises an error if
+  # we some lessons with lesson groups and not others
+  def self.prevent_lesson_group_mismatch(script_lessons)
+    lessons_without_lesson_group = []
+    lessons_with_lesson_group = []
+
+    script_lessons.each do |lesson|
+      lesson.lesson_group.key.blank? ? lessons_without_lesson_group.append(lesson.name) : lessons_with_lesson_group.append(lesson.name)
+    end
+
+    if !lessons_without_lesson_group.empty? && !lessons_with_lesson_group.empty?
+      raise "Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: #{lessons_without_lesson_group.join(', ')}."
+    end
   end
 
   # Clone this script, appending a dash and the suffix to the name of this
@@ -1158,6 +1259,7 @@ class Script < ActiveRecord::Base
             family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
             properties: Script.build_property_hash(general_params)
           },
+          script_data[:lesson_groups],
           script_data[:stages],
         )
         if Rails.application.config.levelbuilder_mode

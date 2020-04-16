@@ -103,22 +103,13 @@ level 'CSPU5_U3L16 - textInput getText write_virtual', progression: 'Strings in 
 level 'CSPU5_U3L16 - intro getText_virtual', progression: 'Strings in Apps'
 level 'CSPU5_U3 - User Input - Save getText To Variable_virtual', progression: 'Strings in Apps'
 level 'CSPU5_U3L16 - outputWithTextArea_virtual', progression: 'Strings in Apps'
-level 'CSPU5_U3L16 - toUpper_virtual', progression: 'Strings in Apps'
 level 'CSPU5_U3L16 Mad Lib Student Setup_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib setText_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib getText_virtual', progression: 'Mad Lib Game'
-level 'CSPU5_U3L16 Mad Lib toUpper_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L25 Free Response 3_virtual', progression: 'String and Substring Free Response', assessment: true
 
-stage '"If" Statements Unplugged', flex_category: 'csp5_1'
-level 'CSP U5L07 SFLP_virtual', named: true
-level 'Big Picture: If-statements_2018_2019_virtual', progression: 'Big Picture: if-statements'
-level 'Worked Example: If-statements and Robot_2018_2019_virtual', progression: 'Worked Example: if-statements and Robot'
-level 'CSP Algorithms Map_2018_2019_virtual', progression: 'Algorithms in Programming'
-
 stage 'Boolean Expressions and "If" Statements', flex_category: 'csp5_1'
-level 'CSP U5L08 SFLP_virtual', named: true
 level 'Introduction to Conditionals: Boolean Expressions_virtual', progression: 'Introduction to Conditionals: Boolean Expressions'
 level 'Boolean Expressions and Comparison Operators_2018_2019_virtual', progression: 'Boolean Expressions and Comparison Operators'
 level 'CSPU5_U3L18 comparison operators_virtual', progression: 'Comparison Operators Practice'

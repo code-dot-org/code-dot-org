@@ -84,11 +84,11 @@ If you are a participant in the **2019-20 CS Discoveries Professional Learning P
 - Be a participant in the 2019-20 Code.org Professional Learning Program for CS Discoveries (i.e. attended a 5-day summer workshop for CS Discoveries), OR be a participant in the 2019-20 Facilitator development program as a novice CS Discoveries facilitator.
 - Completed the first semester of the CS Discoveries course with at least one section of 10 or more students who have made measurable progress in Units 2 **and** 3 of CS Discoveries on Code.org. *Note: Content learned in Unit 3 is a prerequisite for Unit 6.*
 - Committed to attending Academic Year Workshop 4, covering Unit 6 (for in-person Professional Learning Program participants) or the last two professional learning modules (for virtual Professional Learning Program participants).
-- Will teach Unit 6 by the end of the 2020-21 school year. 
+- Will teach Unit 6 by the end of the **2020-21 school year**. 
 
-When the program launched in January 2020, we asked interested teachers to fill out a Unit 6 implementation plan in the semester they will be teaching Unit 6 and submit it to us at <a href="mailto:teacher@code.org">teacher@code.org</a>
+In January 2020, teachers in the 2019-20 CS Discoveries Professional Learning Program received an email from us with more information about how to fill out a Unit 6 implementation plan and request a subsidy for the Adafruit Circuit Playground classroom kit on our website, if they are unable to secure funding and are otherwise qualified. 
 
-**In January 2020, teachers in the 2019-20 CS Discoveries Professional Learning Program received an email** from us with more information about how to fill out a Unit 6 implementation plan and request a subsidy for the Adafruit Circuit Playground classroom kit on our website. If they are unable to secure funding and are otherwise qualified, teachers are able to .
+Teachers should fill out their implementation plan in the semester they are teaching Unit 6. Our team will accept and review implementation plans from 2019-20 CS Discoveries Professional Learning Program participants through April 2021.
 
 
 <!--
