@@ -48,7 +48,6 @@ class Courses extends Component {
     let heroStrings = {
       headingText: i18n.coursesLearnHeroHeading(),
       subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
-      description: i18n.coursesLearnHeroDescription(),
       buttonText: i18n.coursesLearnHeroButton()
     };
 
@@ -57,15 +56,16 @@ class Courses extends Component {
       heroStrings = {
         headingText: i18n.coursesTeachHeroHeading(),
         subHeadingText: i18n.coursesTeachHeroSubHeading(),
-        description: i18n.coursesTeachHeroDescription(),
         buttonText: i18n.coursesTeachHeroButton()
       };
     }
 
-    // We show a short version of the banner when you're signed in,
-    // so don't include the description string.
-    if (!isSignedOut) {
-      delete heroStrings.description;
+    // We show a long version of the banner when you're signed out,
+    // so add a description string.
+    if (isSignedOut) {
+      heroStrings.description = isTeacher
+        ? i18n.coursesTeachHeroDescription()
+        : i18n.coursesLearnHeroDescription();
     }
 
     return heroStrings;
