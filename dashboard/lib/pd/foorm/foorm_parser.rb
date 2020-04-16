@@ -1,28 +1,34 @@
-# Parses Foorm forms into a useful format for looking up questions by form name, form version
-# and question name
+# Parses Foorm forms into a useful format for looking up questions by type (general or facilitator),
+# form name, form version and question name. General questions are for the workshop overall, facilitator
+# questions are asked on a per-facilitator basis
 # @return
 #   {
-#     <form-name>.<form-version: {
-#       <question_name>: {
-#         title: "sample title",
-#         type: "text/singleSelect/multiSelect/matrix/scale",
-#         # for singleSelect/multiSelect/scale
-#         choices: {
-#           choice_1_name: "choice 1 value",
-#           ...
-#         },
-#         # if has other choice
-#         other_text: "Other choice text",
-#         # for matrix
-#         rows: {
-#           row_1_name: "row 1 value",
-#           ...
-#         },
-#         columns: {
-#           column_1_name: "column 1 value",
-#           ...
+#     general: {
+#       <form-name>.<form-version>: {
+#         <question_name>: {
+#           title: "sample title",
+#           type: "text/singleSelect/multiSelect/matrix/scale",
+#           # for singleSelect/multiSelect/scale
+#           choices: {
+#             choice_1_name: "choice 1 value",
+#             ...
+#           },
+#           # if has other choice
+#           other_text: "Other choice text",
+#           # for matrix
+#           rows: {
+#             row_1_name: "row 1 value",
+#             ...
+#           },
+#           columns: {
+#             column_1_name: "column 1 value",
+#             ...
+#           }
 #         }
 #       }
+#     },
+#     facilitator: {
+#       <form-name>.<form-version>: {same format as general}
 #     }
 #   }
 module Pd::Foorm
@@ -32,33 +38,49 @@ module Pd::Foorm
 
     # parse all forms in given list and return object in format above
     def self.parse_forms(forms)
-      parsed_forms = {}
+      parsed_forms = {general: {}, facilitator: {}}
       forms.each do |form|
-        parsed_form = {}
+        parsed_form = {general: {}, facilitator: {}}
         form_questions = JSON.parse(form.questions, symbolize_names: true)
         form_questions[:pages].each do |page|
           page[:elements].each do |question_data|
-            parsed_form.merge!(parse_element(question_data))
+            parsed_form.deep_merge!(parse_element(question_data, false))
           end
         end
-        parsed_forms[get_form_key(form.name, form.version)] = parsed_form
+        parsed_forms[:general][get_form_key(form.name, form.version)] = parsed_form[:general]
+        unless parsed_form[:facilitator].empty?
+          parsed_forms[:facilitator][get_form_key(form.name, form.version)] = parsed_form[:facilitator]
+        end
       end
       parsed_forms
     end
 
     # parse a form element
-    # @return hash of {question_name->question_data,...}
+    # @return hash of {general: {question_name->question_data,...}, facilitator: {...}}
     # Form element may be a panel which contains questions, therefore resulting hash
     # may contain one or more questions
-    def self.parse_element(question_data)
-      parsed_questions = {}
-      if question_data[:type] == 'panel'
-        question_data[:elements].each do |panel_question_data|
-          parsed_questions.merge!(parse_element(panel_question_data))
+    def self.parse_element(question_data, is_facilitator_question)
+      parsed_questions = {general: {}, facilitator: {}}
+      if PANEL_TYPES.include?(question_data[:type])
+        elements = question_data[:elements]
+        if question_data[:type] == TYPE_PANEL_DYNAMIC
+          elements = question_data[:templateElements]
+        end
+        if question_data[:name] == 'facilitators'
+          is_facilitator_question = true
+        end
+        elements.each do |panel_question_data|
+          parsed_questions.deep_merge!(parse_element(panel_question_data, is_facilitator_question))
         end
       else
         if QUESTION_TYPES.include?(question_data[:type])
-          parsed_questions[question_data[:name]] = parse_question(question_data)
+          if is_facilitator_question
+            parsed_questions[:facilitator] ||= {}
+            parsed_questions[:facilitator][question_data[:name]] = parse_question(question_data)
+          else
+            parsed_questions[:general] ||= {}
+            parsed_questions[:general][question_data[:name]] = parse_question(question_data)
+          end
         end
       end
       parsed_questions
