@@ -3345,7 +3345,7 @@ h2.danger {
   left: 0;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 10px 20px;
+  padding: 14px 20px;
   font-size: 16px;
   line-height: 20px;
   background-color: $purple;
@@ -3368,12 +3368,14 @@ h2.danger {
 
       p {
         font-size: 16px;
+        margin: auto;
       }
     }
 
     .buttons {
       box-sizing: border-box;
       text-align: center;
+      margin: auto;
 
       button {
         margin-bottom: 0;
@@ -3396,7 +3398,7 @@ h2.danger {
         display: inline-block;
         font-size: 14px;
         font-weight: normal;
-        height: 34px;
+        height: 35px;
         letter-spacing: normal;
         line-height: 20px;
         padding-bottom: 6px;
