@@ -1,6 +1,6 @@
 -# Only show when we're not showing the cookie banner,
 -# the current user is signed in, a student, doesn't have a parent email, and hasn't previously dismissed the banner
--# and the page isn't an Applab or Gamelab level.
+-# and the page isn't a level.
 
 :ruby
   show_banner =
@@ -8,7 +8,7 @@
     current_user && current_user.user_type == 'student' &&
     current_user.parent_email.blank? &&
     !current_user.parent_email_banner_dismissed &&
-    !(@level && (@level.game == Game.applab || @level.game == Game.gamelab))
+    !@level
 
 - if show_banner
   %script{src: webpack_asset_path("js/layouts/_parent_email_banner.js")}
