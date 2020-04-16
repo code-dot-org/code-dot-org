@@ -5,7 +5,7 @@ import Thermometer, {
   MicroBitThermometer
 } from '@cdo/apps/lib/kits/maker/Thermometer';
 import Playground from 'playground-io';
-import {MicrobitStubBoard} from './makeStubBoard';
+import {MicrobitStubBoard} from './boards/makeStubBoard';
 import {sensor_channels} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('Thermometer', function() {

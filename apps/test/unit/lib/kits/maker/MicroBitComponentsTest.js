@@ -5,7 +5,7 @@ import {
   cleanupMicroBitComponents,
   enableMicroBitComponents
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
-import {MicrobitStubBoard} from './makeStubBoard';
+import {MicrobitStubBoard} from './boards/makeStubBoard';
 import five from '@code-dot-org/johnny-five';
 import sinon from 'sinon';
 

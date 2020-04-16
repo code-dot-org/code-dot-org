@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import sinon from 'sinon';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/deprecatedChai';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';
@@ -12,14 +12,14 @@ import {
   EXTERNAL_PINS
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
-import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
+import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
   CIRCUIT_PLAYGROUND_PORTS,
   FLORA_PORTS
-} from './sampleSerialPorts';
+} from '../../sampleSerialPorts';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
