@@ -4,7 +4,7 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   J5_CONSTANTS,
   N_COLOR_LEDS
-} from './boards/circuitPlayground/PlaygroundConstants';
+} from './circuitPlayground/PlaygroundConstants';
 
 /**
  * Fake Maker Board for running Maker Toolkit apps without a board attached.
