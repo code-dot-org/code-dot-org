@@ -8,6 +8,7 @@ import {
   updateTableRecords
 } from '../redux/data';
 import {DataView} from '../constants';
+import ConfirmDeleteButton from '../dataBrowser/ConfirmDeleteButton';
 import ConfirmImportButton from '../dataBrowser/ConfirmImportButton';
 import DataTable from '../dataBrowser/DataTable';
 
@@ -58,6 +59,17 @@ class Dataset extends React.Component {
       .fail(() => this.setState({notice: 'Upload failed.', isError: true}));
   };
 
+  deleteTable = () => {
+    $.ajax({
+      url: `/datasets/${this.props.tableName}`,
+      method: 'DELETE'
+    })
+      .done(data => {
+        window.location.href = '/datasets';
+      })
+      .fail(() => this.setState({notice: 'Delete failed', isError: true}));
+  };
+
   render() {
     return (
       <div>
@@ -73,7 +85,19 @@ class Dataset extends React.Component {
           <a href="/datasets">Back to Index</a>
         </p>
         {!this.props.isLive && (
-          <ConfirmImportButton importCsv={this.importCsv} />
+          <div>
+            <ConfirmDeleteButton
+              body={`Are you sure you want to delete ${
+                this.props.tableName
+              }? This action cannot be undone.`}
+              buttonText="Delete table"
+              containerStyle={{width: 125, marginLeft: 10}}
+              buttonId="clearTableButton"
+              onConfirmDelete={this.deleteTable}
+              title={`Delete ${this.props.tableName}`}
+            />
+            <ConfirmImportButton importCsv={this.importCsv} />
+          </div>
         )}
         <DataTable readOnly rowsPerPage={10} />
       </div>
