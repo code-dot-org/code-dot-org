@@ -2004,6 +2004,8 @@ et:
           stages:
             While Loops:
               name: '„Kui“ tsüklid'
+            Variables:
+              name: Muutujad
         virtual-holding-place:
           stages:
             Velocity:

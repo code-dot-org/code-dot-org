@@ -2511,6 +2511,8 @@ bg:
           stages:
             While Loops:
               name: Докато цикли
+            Variables:
+              name: Променливи
         virtual-holding-place:
           stages:
             Velocity:

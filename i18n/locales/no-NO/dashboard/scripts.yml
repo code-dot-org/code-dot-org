@@ -1943,6 +1943,8 @@
           stages:
             While Loops:
               name: Gjenta-løkker
+            Variables:
+              name: Variabler
         virtual-holding-place:
           stages:
             Velocity:

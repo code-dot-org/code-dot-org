@@ -515,6 +515,8 @@ hi:
     update: खाता अद्यतन करें
     account_successfully_updated: खाता सफलतापूर्वक अद्यतन हो गया।
     update_email: अद्यतन करें
+    parent_guardian_email_label: अभिभावक ईमेल/
+    none: कोई नहीं
     encrypted: कूटलेखन किया
   user_level:
     completed: पूरा हो गया

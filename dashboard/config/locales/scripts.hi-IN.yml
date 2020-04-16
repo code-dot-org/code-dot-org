@@ -21133,6 +21133,8 @@ hi:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
             Intro to App Lab:
               name: ऐप लैब का परिचय
+            Variables:
+              name: चर
         virtual-holding-place:
           stages:
             Velocity:

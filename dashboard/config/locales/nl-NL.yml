@@ -15,6 +15,13 @@ nl:
         je stoppen met het samen programmeren en opnieuw proberen.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: is ongeldig. Let op dat elke link slechts eenmaal gebruikt
+                kan worden om uw wachtwoord te herstellen en dat enkel de meest recent
+                gestuurde link werkt.
       messages:
         blank: is vereist
         blank_plural: is vereist
@@ -49,6 +56,7 @@ nl:
         finish_sign_up_subheader_provider_markdown: Vul de volgende informatie in
           om het aanmaken van een Code.org-account met **%{provider}** voor **%{email}**
           te voltooien.
+        reset_password_token: De link die u heeft gevolgd om uw wachtwoord te herstellen
         error:
           future: kan niet in de toekomst
   beta: beta
@@ -69,6 +77,7 @@ nl:
     code:
       placeholder: Sectiecode (ABCDEF)
       instructions_short: Voer je code van 6 letters van de sectie in
+      submit: Inschrijven
   add_hint_form:
     placeholder: Voer hier uw hint
     submit: Hint toevoegen
@@ -390,6 +399,7 @@ nl:
       example: Voorbeeld uitkomst
       example_with_number: Voorbeeld uitkomst getal %{solution_number}
       submitted_on: Ingeleverd op %{date}
+      last_updated: 'Last geüpdatet:'
       unsubmit: Intrekken
       worked_with: Werkte samen met
       update_lock_settings: Update lock instellingen hier.
@@ -416,7 +426,11 @@ nl:
       naam!)
     create_personal_login_under_13_parent_email: E-mailadres van ouder/voogd
     enter_new_login_info: Voer je nieuwe aanmeldgegevens in
+    update: Account bijwerken
+    account_successfully_updated: Account succesvol bijgewerkt.
     update_email: Bijwerken
+    parent_guardian_email_label: E-mail van de ouder/voogd
+    none: Geen
   user_level:
     completed: Voltooid
     tried: Geprobeerd

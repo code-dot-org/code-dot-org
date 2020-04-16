@@ -1380,6 +1380,16 @@ es-ES:
         -   Añade otro grupo de bailarines
         -   Muestra y oculta bailarines utilizando las flechas del teclado
         -   Oculta a todos los bailarines y utiliza un efecto chulo de fondo
+      Escape Room Example: |-
+        # Sala de Escape
+
+        Hoy en el taller trbajaremos haciendo un app de sala de escape! Este nivel tiene una app de ejemplo que deberías ver para obtener lo que quieres crear.
+
+        # Haz esto
+
+        \-Click Run para comenzar la app
+
+        -   Intenta encontrar la clave para abrir la puerta
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\"
         en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde

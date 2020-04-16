@@ -462,6 +462,8 @@ mn:
     update: "Бүртгэлээ шинэчлэх"
     account_successfully_updated: "Бүртгэл амжилттай шинэчлэгдлээ."
     update_email: "Шинэчлэх"
+    parent_guardian_email_label: "Эцэг эх/асран хамгаалагчийн цахим шуудан"
+    none: "Байхгүй"
     encrypted: "шифрлэгдсэн"
   user_level:
     completed: 'Дууссан'
