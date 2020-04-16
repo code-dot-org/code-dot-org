@@ -56,7 +56,6 @@ export default class SectionResults extends React.Component {
     const {answers, questions} = this.props;
     return (
       <div>
-        <h3>General Questions</h3>
         {_.compact(
           Object.keys(answers).map(surveyId => {
             let surveyQuestions = questions[surveyId];
