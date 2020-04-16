@@ -6,7 +6,7 @@ import {
   enableMicroBitComponents
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
 import {MicrobitStubBoard} from '../makeStubBoard';
-import five from '@code-dot-org/johnny-five';
+import {EventEmitter} from 'events';
 import sinon from 'sinon';
 
 describe('MicroBit Components', () => {
@@ -42,8 +42,8 @@ describe('MicroBit Components', () => {
       );
     });
 
-    it('creates a five.Button', () => {
-      expect(buttonA).to.be.an.instanceOf(five.Button);
+    it('creates an EventEmitter', () => {
+      expect(buttonA).to.be.an.instanceOf(EventEmitter);
     });
 
     it('bound to the board controller', () => {
@@ -64,8 +64,8 @@ describe('MicroBit Components', () => {
       );
     });
 
-    it('creates a five.Button', () => {
-      expect(buttonB).to.be.an.instanceOf(five.Button);
+    it('creates an EventEmitter', () => {
+      expect(buttonB).to.be.an.instanceOf(EventEmitter);
     });
 
     it('bound to the board controller', () => {
