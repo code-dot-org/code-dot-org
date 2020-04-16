@@ -1,8 +1,8 @@
 class ContactRollupsV2
   def self.build_contact_rollups(log_collector)
-    log_collector.time!('Truncate tables') do
-      ContactRollupsRaw.truncate_table
-      ContactRollupsProcessed.truncate_table
+    log_collector.time!('Deletes intermediate content from previous runs') do
+      ContactRollupsRaw.delete_all
+      ContactRollupsProcessed.delete_all
     end
 
     log_collector.time!('Extracts data from dashboard email_preferences') do
