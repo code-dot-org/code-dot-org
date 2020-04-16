@@ -32,7 +32,8 @@ const styles = {
     float: 'left'
   },
   chartArea: {
-    flexGrow: 1
+    flexGrow: 1,
+    overflow: 'hidden'
   },
   placeholderContainer: {
     position: 'relative',
