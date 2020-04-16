@@ -19,12 +19,19 @@ const styles = {
     display: 'inline-block'
   },
   modalBody: {
-    overflow: 'auto',
-    maxHeight: '90%'
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%'
+  },
+  h2: {
+    margin: '0 0 10px 0'
   },
   input: {
     ...rowStyle.container,
     float: 'left'
+  },
+  chartArea: {
+    flexGrow: 1
   },
   placeholderContainer: {
     position: 'relative',
@@ -221,11 +228,9 @@ class VisualizerModal extends React.Component {
           fullWidth
           fullHeight
         >
-          <div
-            style={{display: 'flex', flexDirection: 'column', height: '100%'}}
-          >
+          <div style={styles.modalBody}>
             <div>
-              <h2 style={{margin: '0 0 10px 0'}}>
+              <h2 style={styles.h2}>
                 {' '}
                 {msg.exploreDataset({
                   datasetName: this.props.tableName
@@ -310,7 +315,7 @@ class VisualizerModal extends React.Component {
               )}
             </div>
 
-            <div style={{flexGrow: 1}}>
+            <div style={styles.chartArea}>
               {this.canDisplayChart() ? (
                 <DataVisualizer
                   records={filteredRecords}
