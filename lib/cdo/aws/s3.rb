@@ -84,9 +84,9 @@ module AWS
     # @param [String] key
     # @return [Boolean]
     def self.exists_in_bucket(bucket, key)
-      create_client.get_object(bucket: bucket, key: key)
+      create_client.head_object(bucket: bucket, key: key)
       return true
-    rescue Aws::S3::Errors::NoSuchKey
+    rescue Aws::S3::Errors::NotFound
       return false
     end
 
