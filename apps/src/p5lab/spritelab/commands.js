@@ -50,6 +50,10 @@ export const commands = {
     return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
 
+  isTouchingSprite(spriteArg, targetArg) {
+    return actionCommands.isTouchingSprite(spriteArg, targetArg);
+  },
+
   jumpTo(spriteArg, location) {
     actionCommands.jumpTo(spriteArg, location);
   },
