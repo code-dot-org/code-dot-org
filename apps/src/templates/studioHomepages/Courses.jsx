@@ -41,6 +41,36 @@ class Courses extends Component {
       .show();
   }
 
+  getHeroStrings() {
+    const {isTeacher, isSignedOut, studentsCount} = this.props;
+
+    // Default to "Learn" view strings
+    let heroStrings = {
+      headingText: i18n.coursesLearnHeroHeading(),
+      subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
+      buttonText: i18n.coursesLearnHeroButton()
+    };
+
+    // Apply overrides if this is the "Teach" view
+    if (isTeacher) {
+      heroStrings = {
+        headingText: i18n.coursesTeachHeroHeading(),
+        subHeadingText: i18n.coursesTeachHeroSubHeading(),
+        buttonText: i18n.coursesTeachHeroButton()
+      };
+    }
+
+    // We show a long version of the banner when you're signed out,
+    // so add a description string.
+    if (isSignedOut) {
+      heroStrings.description = isTeacher
+        ? i18n.coursesTeachHeroDescription()
+        : i18n.coursesLearnHeroDescription();
+    }
+
+    return heroStrings;
+  }
+
   render() {
     const {
       isEnglish,
@@ -49,23 +79,19 @@ class Courses extends Component {
       modernElementaryCoursesAvailable,
       specialAnnouncement
     } = this.props;
-    const headingText = isTeacher
-      ? i18n.coursesHeadingTeacher()
-      : i18n.coursesHeadingStudent();
-    const subHeadingText = i18n.coursesHeadingSubText({
-      linesCount: this.props.linesCount,
-      studentsCount: this.props.studentsCount
-    });
-    const headingDescription = isSignedOut
-      ? i18n.coursesHeadingDescription()
-      : null;
 
+    const {
+      headingText,
+      subHeadingText,
+      description,
+      buttonText
+    } = this.getHeroStrings();
     return (
       <div style={styles.content}>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}
-          description={headingDescription}
+          description={description}
           short={!isSignedOut}
         >
           {isSignedOut && (
@@ -73,7 +99,7 @@ class Courses extends Component {
               __useDeprecatedTag
               href="/users/sign_up"
               color={Button.ButtonColor.gray}
-              text={i18n.createAccount()}
+              text={buttonText}
             />
           )}
         </HeaderBanner>

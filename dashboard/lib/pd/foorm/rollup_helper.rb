@@ -36,12 +36,15 @@ module Pd::Foorm
         # for now we will skip questions that don't have the same type and choices/rows/columns
         # across all versions/forms.
         next unless validate_question(question, question_data, parsed_forms)
-        parsed_question_data = parsed_forms[question_data[:form_keys].first][question]
+        first_form_key = question_data[:form_keys].first
+        parsed_form = parsed_forms[question_data[:form_type]][first_form_key]
+        parsed_question_data = parsed_form[question]
 
         questions[question] = {
           title: parsed_question_data[:title],
           type: parsed_question_data[:type],
-          form_keys: question_data[:form_keys]
+          form_keys: question_data[:form_keys],
+          form_type: question_data[:form_type]
         }
         case parsed_question_data[:type]
         when ANSWER_MATRIX
@@ -63,8 +66,9 @@ module Pd::Foorm
       rows = nil
       columns = nil
       question_data[:form_keys].each do |form_key|
-        parsed_question = parsed_forms[form_key][question]
-        return false unless parsed_question[:type] = question_data[:type]
+        parsed_form = parsed_forms[question_data[:form_type]][form_key]
+        parsed_question = parsed_form[question]
+        return false unless parsed_question && parsed_question[:type] = question_data[:type]
         case parsed_question[:type]
         when ANSWER_MATRIX
           if rows.nil? && columns.nil?
@@ -94,23 +98,28 @@ module Pd::Foorm
     #     question_name: {
     #       type: 'matrix/singleSelect/...',
     #       form_keys = [form_key1, form_key2, ...],
-    #       header_text: <header_text>
+    #       header_text: <header_text>,
+    #       form_type = 'facilitator/general'
     #     }
     #   }
     def self.get_question_details(parsed_forms, questions_to_summarize)
       question_details = {}
-      parsed_forms.each do |form_key, parsed_form|
-        questions_to_summarize.each do |question|
-          question_id = question[:question_id]
-          next unless parsed_form[question_id]
-          question_details[question_id] ||= {
-            type: parsed_form[question_id][:type],
-            header_text: question[:header_text],
-            form_keys: []
-          }
-          question_details[question_id][:form_keys] << form_key
+      parsed_forms.each do |form_type, form_keys|
+        form_keys.each do |form_key, parsed_form|
+          questions_to_summarize.each do |question|
+            question_id = question[:question_id]
+            next unless parsed_form[question_id]
+            question_details[question_id] ||= {
+              type: parsed_form[question_id][:type],
+              header_text: question[:header_text],
+              form_keys: [],
+              form_type: form_type
+            }
+            question_details[question_id][:form_keys] << form_key
+          end
         end
       end
+
       question_details
     end
   end
