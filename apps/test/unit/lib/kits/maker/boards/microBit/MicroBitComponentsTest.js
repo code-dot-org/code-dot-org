@@ -1,11 +1,11 @@
 /** @file MicroBit Component setup tests */
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
-import {MicrobitStubBoard} from './boards/makeStubBoard';
+import {MicrobitStubBoard} from '../makeStubBoard';
 import five from '@code-dot-org/johnny-five';
 import sinon from 'sinon';
 
