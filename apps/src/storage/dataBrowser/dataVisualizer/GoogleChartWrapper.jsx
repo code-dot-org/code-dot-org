@@ -7,6 +7,7 @@ import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 class GoogleChartWrapper extends React.Component {
   static propTypes = {
+    style: PropTypes.object,
     records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     chartType: PropTypes.number.isRequired,
@@ -98,7 +99,7 @@ class GoogleChartWrapper extends React.Component {
       <div
         id={GOOGLE_CHART_AREA}
         ref={element => (this.chartArea = element)}
-        style={{height: '100%'}}
+        style={this.props.style}
       />
     );
   }
