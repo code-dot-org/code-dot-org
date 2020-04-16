@@ -25,7 +25,9 @@ class ContactRollupsProcessed < ApplicationRecord
     # Combines data and metadata for each record in contact_rollups_raw table into one JSON field.
     # The query result has the same number of rows as in contact_rollups_raw.
     select_query = <<-SQL.squish
-      SELECT email, JSON_OBJECT('sources', sources, 'data', data, 'data_updated_at', data_updated_at) AS data_and_metadata
+      SELECT
+        email,
+        JSON_OBJECT('sources', sources, 'data', data, 'data_updated_at', data_updated_at) AS data_and_metadata
       FROM contact_rollups_raw
     SQL
 
@@ -47,6 +49,7 @@ class ContactRollupsProcessed < ApplicationRecord
 
       processed_contact_data = {}
       processed_contact_data.merge!(extract_opt_in(contact_data) || {})
+      processed_contact_data.merge!(extract_updated_at(contact_data) || {})
 
       batch << {email: contact['email'], data: processed_contact_data}
       next if batch.size < batch_size
@@ -64,8 +67,7 @@ class ContactRollupsProcessed < ApplicationRecord
   # It will throw exception if cannot parse the entire input string.
   #
   # @param [String] str represents a JSON array. Each array item is a hash {sources:String, data:Hash, data_updated_at:DateTime}.
-  #
-  # @return [Hash] a hash {source_table => {contact_attribute => value}}
+  # @return [Hash] a hash with string keys {table_name => {field_name => value}}
   def self.parse_contact_data(str)
     parsed_items = JSON.parse(str)
 
@@ -74,7 +76,7 @@ class ContactRollupsProcessed < ApplicationRecord
         # In a valid item, only data value could be null
         sources = item['sources']
         data = item['data'] || {}
-        data_updated_at = Time.parse(item['data_updated_at'])
+        data_updated_at = Time.find_zone('UTC').parse(item['data_updated_at'])
 
         output[sources] = data.merge('data_updated_at' => data_updated_at)
       end
@@ -84,8 +86,7 @@ class ContactRollupsProcessed < ApplicationRecord
   # Extracts opt_in info from contact data.
   #
   # @param [Hash] contact_data compiled data from multiple source tables.
-  #   Input hash structure: {source_table => {contact_attribute => value}}
-  #
+  #   @see output of parse_contact_data method.
   # @return [Hash, nil] a hash containing opt_in key and value (could be nil)
   #   or nil if opt_in does not exist in the input.
   def self.extract_opt_in(contact_data)
@@ -93,5 +94,22 @@ class ContactRollupsProcessed < ApplicationRecord
     field = 'opt_in'
     return nil unless contact_data.key?(table) && contact_data[table].key?(field)
     {opt_in: contact_data.dig(table, field)}
+  end
+
+  # Extracts the latest data_updated_at value.
+  #
+  # @param [Hash] contact_data @see output of parse_contact_data method.
+  # @return [Hash] a hash containing updated_at key and non-nil value
+  #
+  # @raise [StandardError] if couldn't find non-nil data_updated_at value
+  def self.extract_updated_at(contact_data)
+    max_data_updated_at = contact_data.values.map do |item|
+      # There MUST be a non-nil data_updated_at value in each item.
+      # @see parse_contact_data method and ContactRollupsRaw schema.
+      item['data_updated_at']
+    end.max
+
+    raise 'Missing data_updated_at value' unless max_data_updated_at
+    {updated_at: max_data_updated_at}
   end
 end
