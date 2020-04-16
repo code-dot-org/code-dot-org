@@ -13,7 +13,7 @@ import LookbackLogger from '../../LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
-import {PlaygroundButton} from '../../Button';
+import PlaygroundButton from './Button';
 import PlaygroundThermometer from '../../Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';

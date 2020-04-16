@@ -1,7 +1,7 @@
 /**
  * Utilities for initializing MicroBit board components
  */
-import {MicroBitButton} from '../../Button';
+import MicroBitButton from './MicroBitButton';
 import LedMatrix from './LedMatrix';
 import Accelerometer from './Accelerometer';
 import {MicroBitThermometer} from '../../Thermometer';
