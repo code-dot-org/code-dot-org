@@ -84,6 +84,7 @@ class HeightResizer extends React.Component {
     if (event.button && event.button !== 0) {
       return;
     }
+
     event.stopPropagation();
     event.preventDefault();
 
