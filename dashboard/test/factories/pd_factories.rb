@@ -1596,6 +1596,66 @@ FactoryGirl.define do
       }'
   end
 
+  factory :csf_intro_post_workshop_submission_high, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :foorm_submission, factory: :csf_intro_post_foorm_submission_high
+    association :pd_workshop, factory: :csf_101_workshop
+    association :user, factory: :teacher
+  end
+
+  factory :csf_intro_post_foorm_submission_high, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    form_version 0
+    created_at "2020-03-30 21:58:28"
+    updated_at "2020-03-30 21:58:28"
+    answers '{
+      "overall_success": {
+        "more_prepared": "7",
+        "where_to_go":"7",
+        "suitable_my_level":"7",
+        "feel_community": "7",
+        "would_recommend":"7",
+        "best_pd":"7"
+      },
+      "teacher_engagement": {
+        "engaging": "7",
+        "active":"7",
+        "ideas":"7"
+      },
+      "supported": "lots",
+      "permission": "yes_name"
+    }'
+  end
+
+  factory :csf_intro_post_workshop_submission_low, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :foorm_submission, factory: :csf_intro_post_foorm_submission_low
+    association :pd_workshop, factory: :csf_101_workshop
+    association :user, factory: :teacher
+  end
+
+  factory :csf_intro_post_foorm_submission_low, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_csf_intro_post"
+    form_version 0
+    created_at "2020-03-30 21:58:28"
+    updated_at "2020-03-30 21:58:28"
+    answers '{
+      "overall_success": {
+        "more_prepared": "1",
+        "where_to_go":"1",
+        "suitable_my_level":"1",
+        "feel_community": "1",
+        "would_recommend":"1",
+        "best_pd":"1"
+      },
+      "teacher_engagement": {
+        "engaging": "1",
+        "active":"1",
+        "ideas":"1"
+      },
+      "supported": "lots",
+      "permission": "no"
+    }'
+  end
+
   factory :csf_intro_post_facilitator_workshop_submission_high, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :foorm_submission, factory: :csf_intro_post_facilitator_foorm_submission_high
     association :pd_workshop, factory: :csf_101_workshop

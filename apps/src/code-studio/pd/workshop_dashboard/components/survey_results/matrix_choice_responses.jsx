@@ -12,7 +12,8 @@ export default class MatrixChoiceResponses extends React.Component {
     answer: PropTypes.object.isRequired,
     question: PropTypes.object.isRequired,
     section: PropTypes.string.isRequired,
-    questionId: PropTypes.string.isRequired
+    questionId: PropTypes.string.isRequired,
+    facilitators: PropTypes.object
   };
 
   // facilitator responses are in form {facilitator1: {question1: <answer>,...}, facilitator2: {...}}
@@ -31,7 +32,7 @@ export default class MatrixChoiceResponses extends React.Component {
   }
 
   render() {
-    const {section, answer, question, questionId} = this.props;
+    const {section, answer, question, questionId, facilitators} = this.props;
 
     return (
       <div>
@@ -63,6 +64,7 @@ export default class MatrixChoiceResponses extends React.Component {
                 possibleAnswersMap={possibleAnswersMap}
                 key={`${questionId}-${innerQuestionId}`}
                 answerType={'singleSelect'}
+                facilitators={facilitators}
               />
             );
           })

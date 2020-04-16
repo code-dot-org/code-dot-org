@@ -88,7 +88,7 @@ module Pd::Foorm
         healthy_relationship: {"7": 1, "1": 1}
       }.with_indifferent_access
 
-      assert_equal expected_matrix_data, facilitator_answers[:facilitator_effectiveness][facilitator.name]
+      assert_equal expected_matrix_data, facilitator_answers[:facilitator_effectiveness][facilitator.id]
     end
 
     test 'summarizes facilitator results for multiple facilitators' do
@@ -126,8 +126,8 @@ module Pd::Foorm
       facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       assert_not_empty facilitator_answers
 
-      assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.name]
-      assert_equal expected_matrix_data_low, facilitator_answers[:facilitator_effectiveness][facilitator2.name]
+      assert_equal expected_matrix_data_high, facilitator_answers[:facilitator_effectiveness][facilitator1.id]
+      assert_equal expected_matrix_data_low, facilitator_answers[:facilitator_effectiveness][facilitator2.id]
     end
   end
 end
