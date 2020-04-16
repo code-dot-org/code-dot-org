@@ -75,21 +75,26 @@ module Pd::Foorm
       summarized_answers.each_value do |summaries_by_form|
         included_form = false
         question_details.each do |question, question_data|
+          form_type = question_data[:form_type]
           question_data[:form_keys].each do |form|
-            next unless summaries_by_form[form] && summaries_by_form[form][question]
+            next unless summaries_by_form[form_type] &&
+              summaries_by_form[form_type][form] &&
+              summaries_by_form[form_type][form][question]
+            question_summary = summaries_by_form[form_type][form][question]
             included_form = true
             case question_data[:type]
             when ANSWER_MATRIX
-              summaries_by_form[form][question].each do |sub_question, answers|
-                add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question][sub_question], answers)
+              intermediate_rollup_at_question = intermediate_rollup[:questions][question]
+              question_summary.each do |sub_question, answers|
+                add_summary_to_intermediate_rollup(intermediate_rollup_at_question[sub_question], answers)
               end
             when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
-              add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question], summaries_by_form[form][question])
+              add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question], question_summary)
             end
           end
         end
         if included_form
-          intermediate_rollup[:response_count] += summaries_by_form[:response_count]
+          intermediate_rollup[:response_count] += summaries_by_form[:general][:response_count]
         end
       end
       intermediate_rollup
