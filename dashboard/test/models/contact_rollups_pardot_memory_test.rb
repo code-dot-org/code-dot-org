@@ -2,7 +2,7 @@ require 'test_helper'
 require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
-  test 'add_and_update_pardot_ids inserts new mappings' do
+  test 'download_pardot_ids inserts new mappings' do
     assert_equal 0, ContactRollupsPardotMemory.count
 
     new_mappings = [
@@ -11,7 +11,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     ]
     PardotV2.stubs(:retrieve_prospects).once.yields(new_mappings)
 
-    ContactRollupsPardotMemory.add_and_update_pardot_ids
+    ContactRollupsPardotMemory.download_pardot_ids
 
     new_mappings.each do |mapping|
       refute_nil ContactRollupsPardotMemory.
@@ -21,7 +21,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     end
   end
 
-  test 'add_and_update_pardot_ids updates existing mappings' do
+  test 'download_pardot_ids updates existing mappings' do
     assert_equal 0, ContactRollupsPardotMemory.count
 
     email = 'test@domain.com'
@@ -35,7 +35,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       once.
       yields([{'id' => '2', 'email' => email}])
 
-    ContactRollupsPardotMemory.add_and_update_pardot_ids
+    ContactRollupsPardotMemory.download_pardot_ids
 
     refute_nil ContactRollupsPardotMemory.
       where(email: email, pardot_id: 2).
