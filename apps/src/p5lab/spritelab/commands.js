@@ -38,6 +38,9 @@ export const commands = {
   },
 
   // Action commands
+  bounceOff(spriteArg, targetArg) {
+    actionCommands.bounceOff(spriteArg, targetArg);
+  },
   changePropBy(spriteArg, prop, val) {
     actionCommands.changePropBy(spriteArg, prop, val);
   },
