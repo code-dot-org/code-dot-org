@@ -1491,10 +1491,8 @@ P5Lab.prototype.displayFeedback_ = function() {
     message: this.message,
     response: this.response,
     level: level,
-    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
-    // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing:
-      !level.disableSharing && level.freePlay /* || level.impressive */,
+    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
+    showingSharing: !level.disableSharing && level.freePlay,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()
