@@ -75,7 +75,7 @@ export default class LibraryPublisher extends React.Component {
     ),
     libraryDescription: this.props.libraryDetails.libraryDescription,
     selectedFunctions: this.props.libraryDetails.selectedFunctions,
-    profaneWords: []
+    profaneWords: null
   };
 
   setLibraryName = event => {
@@ -108,7 +108,7 @@ export default class LibraryPublisher extends React.Component {
       const profaneWords = await findProfanity(
         `${libraryName} ${libraryDescription}`
       );
-      if (profaneWords) {
+      if (profaneWords && profaneWords.length > 0) {
         this.setState({
           publishState: PublishState.PROFANE_INPUT,
           profaneWords
