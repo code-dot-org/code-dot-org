@@ -33,48 +33,73 @@ describe('Courses', () => {
   });
 
   describe('course ordering', () => {
-    it('English, student', () => {
-      const wrapper = mountCourses({isEnglish: true, isTeacher: false});
-      assertComponentsInOrder(wrapper, [
-        'SpecialAnnouncement',
-        'CourseBlocksStudentGradeBands',
-        'CourseBlocksHoc',
-        'LocalClassActionBlock'
-      ]);
+    describe('English', () => {
+      const isEnglish = true;
+
+      it('as student', () => {
+        const wrapper = mountCourses({isEnglish, isTeacher: false});
+        assertComponentsInOrder(wrapper, [
+          'SpecialAnnouncement',
+          'CourseBlocksStudentGradeBands',
+          'CourseBlocksHoc',
+          'LocalClassActionBlock'
+        ]);
+      });
+
+      it('as teacher', () => {
+        const wrapper = mountCourses({isEnglish, isTeacher: true});
+        assertComponentsInOrder(wrapper, [
+          'SpecialAnnouncement',
+          'CoursesTeacherEnglish',
+          'CourseBlocksTeacherGradeBands',
+          'CourseBlocksHoc',
+          'CourseBlocksTools',
+          'AdministratorResourcesActionBlock'
+        ]);
+      });
     });
 
-    it('English, teacher', () => {
-      const wrapper = mountCourses({isEnglish: true, isTeacher: true});
-      assertComponentsInOrder(wrapper, [
-        'SpecialAnnouncement',
-        'CoursesTeacherEnglish',
-        'CourseBlocksTeacherGradeBands',
-        'CourseBlocksHoc',
-        'CourseBlocksTools',
-        'AdministratorResourcesActionBlock'
-      ]);
-    });
+    describe('non-English', () => {
+      const isEnglish = false;
 
-    it('non-English, student', () => {
-      const wrapper = mountCourses({isEnglish: false, isTeacher: false});
-      assertComponentsInOrder(wrapper, [
-        'CourseBlocksCsf',
-        'CourseBlocksHoc',
-        'SpecialAnnouncement',
-        'CourseBlocksInternationalGradeBands',
-        'CourseBlocksTools'
-      ]);
-    });
+      // Student and teacher view should be the same for international
+      // users.  Run all tests for both cases to verify that this is true.
+      [false, true].forEach(isTeacher => {
+        describe(isTeacher ? 'as teacher' : 'as student', () => {
+          it('modern CSF', () => {
+            const wrapper = mountCourses({
+              isEnglish,
+              isTeacher,
+              modernElementaryCoursesAvailable: true
+            });
+            assertComponentsInOrder(wrapper, [
+              'CourseBlocksCsf',
+              'CourseBlocksCsfModern',
+              'CourseBlocksHoc',
+              'SpecialAnnouncement',
+              'CourseBlocksInternationalGradeBands',
+              'CourseBlocksTools'
+            ]);
+          });
 
-    it('non-English, teacher', () => {
-      const wrapper = mountCourses({isEnglish: false, isTeacher: true});
-      assertComponentsInOrder(wrapper, [
-        'CourseBlocksCsf',
-        'CourseBlocksHoc',
-        'SpecialAnnouncement',
-        'CourseBlocksInternationalGradeBands',
-        'CourseBlocksTools'
-      ]);
+          it('legacy CSF', () => {
+            const wrapper = mountCourses({
+              isEnglish,
+              isTeacher,
+              modernElementaryCoursesAvailable: false
+            });
+            assertComponentsInOrder(wrapper, [
+              'CourseBlocksCsf',
+              'CourseBlocksCsfLegacy',
+              'AcceleratedAndUnplugged',
+              'CourseBlocksHoc',
+              'SpecialAnnouncement',
+              'CourseBlocksInternationalGradeBands',
+              'CourseBlocksTools'
+            ]);
+          });
+        });
+      });
     });
   });
 });
