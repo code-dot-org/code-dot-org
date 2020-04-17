@@ -117,6 +117,24 @@ class CourseBlocksCsfModern extends Component {
 }
 
 class CourseBlocksCsfLegacy extends Component {
+  render() {
+    return (
+      <ContentContainer
+        heading={i18n.csf()}
+        description={i18n.csfDescription()}
+        link={'/home/#recent-courses'}
+        linkText={i18n.viewMyRecentCourses()}
+      >
+        <Courses1To4 />
+        <br />
+        <br />
+        <AcceleratedAndUnplugged />
+      </ContentContainer>
+    );
+  }
+}
+
+class Courses1To4 extends Component {
   componentDidMount() {
     $('#course1')
       .appendTo(ReactDOM.findDOMNode(this.refs.course1))
@@ -134,22 +152,12 @@ class CourseBlocksCsfLegacy extends Component {
 
   render() {
     return (
-      <ContentContainer
-        heading={i18n.csf()}
-        description={i18n.csfDescription()}
-        link={'/home/#recent-courses'}
-        linkText={i18n.viewMyRecentCourses()}
-      >
-        <div className="row">
-          <ProtectedStatefulDiv ref="course1" />
-          <ProtectedStatefulDiv ref="course2" />
-          <ProtectedStatefulDiv ref="course3" />
-          <ProtectedStatefulDiv ref="course4" />
-        </div>
-        <br />
-        <br />
-        <AcceleratedAndUnplugged />
-      </ContentContainer>
+      <div className="row">
+        <ProtectedStatefulDiv ref="course1" />
+        <ProtectedStatefulDiv ref="course2" />
+        <ProtectedStatefulDiv ref="course3" />
+        <ProtectedStatefulDiv ref="course4" />
+      </div>
     );
   }
 }
