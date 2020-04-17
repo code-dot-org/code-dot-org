@@ -1,7 +1,8 @@
 /** @file Wrapper around Johnny-Five Button component */
 import five from '@code-dot-org/johnny-five';
 import '../../../utils'; // For Function.prototype.inherits
-import {EXTERNAL_PINS} from './PlaygroundConstants';
+import {EXTERNAL_PINS} from './boards/circuitPlayground/PlaygroundConstants';
+import {EventEmitter} from 'events';
 
 /**
  * Wrap Johnny-Five's Button component to add attributes and customize behavior.
@@ -41,4 +42,4 @@ export function MicroBitButton(board) {
     get: () => this.buttonEvents[1] > this.buttonEvents[2]
   });
 }
-MicroBitButton.inherits(five.Button);
+MicroBitButton.inherits(EventEmitter);

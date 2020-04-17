@@ -15,7 +15,7 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
-import {BOARD_TYPE} from '../CircuitPlaygroundBoard';
+import {BOARD_TYPE} from '../boards/circuitPlayground/CircuitPlaygroundBoard';
 import experiments from '@cdo/apps/util/experiments';
 import _ from 'lodash';
 import yaml from 'js-yaml';

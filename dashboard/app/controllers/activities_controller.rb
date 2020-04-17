@@ -79,7 +79,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
+    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.lesson.lockable?
       user_level = UserLevel.find_by(
         user_id: current_user.id,
         level_id: @script_level.level.id,
@@ -90,7 +90,7 @@ class ActivitiesController < ApplicationController
       # so having no user_level is equivalent to bein glocked
       nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.stage) || user_level.try(:readonly_answers?)
+      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
         return head 403
       end
     end

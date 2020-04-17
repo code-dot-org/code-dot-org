@@ -20,7 +20,7 @@ Feature: Viewing and Printing Standards Progress
     When I sign in as "Teacher_Sally" and go home
     And I get hidden script access
     And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved with experiment "standardsReport"
+    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
