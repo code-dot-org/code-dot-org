@@ -28,12 +28,19 @@ class ContactRollupsPardotMemory < ApplicationRecord
 
   # Retrieves new email-Pardot ID mappings from Pardot and saves them to the database.
   # @param [Integer, nil] last_id retrieves only Pardot ID greater than this value
-  def self.add_and_update_pardot_ids(last_id = nil)
+  def self.add_and_update_pardot_ids(last_id = nil, limit = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
+    fields = %w(id email)
 
-    PardotV2.retrieve_new_ids(last_id) do |mappings|
+    PardotV2.retrieve_prospects(last_id, fields, limit) do |prospects|
       current_time = Time.now.utc
-      batch = mappings.map {|item| item.merge(pardot_id_updated_at: current_time)}
+      batch = prospects.map do |item|
+        {
+          pardot_id: item['id'].to_i,
+          email: item['email'],
+          pardot_id_updated_at: current_time
+        }
+      end
 
       import! batch,
         validate: false,
