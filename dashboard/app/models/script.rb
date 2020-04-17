@@ -1480,7 +1480,7 @@ class Script < ActiveRecord::Base
       project_sharing: !!script_data[:project_sharing],
       curriculum_umbrella: script_data[:curriculum_umbrella] || false,
       tts: !!script_data[:tts]
-    }.compact
+    }
   end
 
   # A script is considered to have a matching course if there is exactly one
