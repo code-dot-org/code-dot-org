@@ -204,7 +204,16 @@ export class CourseBlocksHoc extends Component {
   }
 
   render() {
-    return <CourseBlocks tiles={this.tiles()} />;
+    return (
+      <ContentContainer
+        heading={i18n.teacherCourseHoc()}
+        description={i18n.teacherCourseHocDescription()}
+        linkText={i18n.teacherCourseHocLinkText()}
+        link={pegasus('/hourofcode/overview')}
+      >
+        <CourseBlocks tiles={this.tiles()} />
+      </ContentContainer>
+    );
   }
 }
 
@@ -226,14 +235,7 @@ export class CourseBlocksIntl extends Component {
         <div>
           <ExpressCourses />
 
-          <ContentContainer
-            heading={i18n.teacherCourseHoc()}
-            description={i18n.teacherCourseHocDescription()}
-            linkText={i18n.teacherCourseHocLinkText()}
-            link={pegasus('/hourofcode/overview')}
-          >
-            <CourseBlocksHoc isInternational={true} />
-          </ContentContainer>
+          <CourseBlocksHoc isInternational />
 
           <SpecialAnnouncement isTeacher={this.props.isTeacher} />
 
@@ -253,14 +255,7 @@ export class CourseBlocksIntl extends Component {
             <AcceleratedAndUnplugged />
           </ContentContainer>
 
-          <ContentContainer
-            heading={i18n.teacherCourseHoc()}
-            description={i18n.teacherCourseHocDescription()}
-            linkText={i18n.teacherCourseHocLinkText()}
-            link={pegasus('/hourofcode/overview')}
-          >
-            <CourseBlocksHoc isInternational={true} />
-          </ContentContainer>
+          <CourseBlocksHoc isInternational />
 
           <SpecialAnnouncement isTeacher={this.props.isTeacher} />
 
