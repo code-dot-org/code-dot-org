@@ -73,8 +73,6 @@ describe('Courses', () => {
               modernElementaryCoursesAvailable: true
             });
             assertComponentsInOrder(wrapper, [
-              'CourseBlocksCsf',
-              'CourseBlocksCsfModern',
               'ExpressCourses',
               'CoursesAToF',
               'LegacyCSFNotification',
@@ -92,8 +90,6 @@ describe('Courses', () => {
               modernElementaryCoursesAvailable: false
             });
             assertComponentsInOrder(wrapper, [
-              'CourseBlocksCsf',
-              'CourseBlocksCsfLegacy',
               'Courses1To4',
               'AcceleratedAndUnplugged',
               'CourseBlocksHoc',
