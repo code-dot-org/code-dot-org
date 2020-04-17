@@ -86,7 +86,7 @@ module AWS
     def self.exists_in_bucket(bucket, key)
       create_client.head_object(bucket: bucket, key: key)
       return true
-    rescue Aws::S3::Errors::NotFound
+    rescue Aws::S3::Errors::NotFound, Aws::S3::Errors::Forbidden
       return false
     end
 
