@@ -38,7 +38,7 @@ module Pd::Foorm
     #       form_keys: [form ids where question appears]
     #     },...
     #   },
-    #   facilitator: {...}
+    #   facilitator: {..same as general..}
     # }
     def self.get_rollup_question_data(parsed_forms, question_details)
       questions = {}
@@ -114,8 +114,7 @@ module Pd::Foorm
     #     question_name: {
     #       type: 'matrix/singleSelect/...',
     #       form_keys = [form_key1, form_key2, ...],
-    #       header_text: <header_text>,
-    #       form_type = 'facilitator/general'
+    #       header_text: <header_text>
     #     }
     #   }
     def self.get_question_details(parsed_forms, questions_to_summarize, form_type)

@@ -10,7 +10,12 @@ module Pd::Foorm
     # @param summarized_answers: output of WorkshopSummarizer.summarize_answers_by_survey
     # @param question_details: output of RollupHelper.get_question_details_for_rollup
     # Calculate average responses for each question in question_details for the set of responses in summarized_answers
-    # @return See get_averaged_rollup
+    # @return {
+    #   general: {see get_averaged_rollup},
+    #  faciltator: {see get_averaged_rollup}
+    # }
+    # Will only have general/facilitator if question_details contains those keys. Other keys are supported but
+    # will not be split by facilitator
     def self.calculate_averaged_rollup(summarized_answers, question_details, split_by_facilitator)
       rollup = {}
       question_details.each do |type, question_details_per_type|
@@ -22,6 +27,14 @@ module Pd::Foorm
       rollup
     end
 
+    # Calculates average for each question in intermediate rollup, which is split by
+    # facilitator if split_by_facilitator is true.
+    # @return If split_by_facilitator = true:
+    # {
+    #   facilitator_id_1: {see get_averaged_rollup_helper},
+    #   facilitator_id_2: {see get_averaged_rollup_helper}
+    # }
+    # Otherwise: see output of get_averaged_rollup_helper
     def self.get_averaged_rollup(intermediate_rollup, question_details, split_by_facilitator)
       rollup = {}
       if split_by_facilitator
@@ -75,40 +88,22 @@ module Pd::Foorm
       return rollup
     end
 
-    def self.get_intermediate_rollup_facilitator(summarized_answers, facilitator_question_details)
-      intermediate_rollup = {}
-      form_type = :facilitator
-      summarized_answers.each_value do |summaries_by_form|
-        included_form = false
-        facilitator_question_details.each do |question, question_data|
-          question_data[:form_keys].each do |form|
-            next unless summaries_by_form[form_type] &&
-              summaries_by_form[form_type][form] &&
-              summaries_by_form[form_type][form][question]
-            facilitator_question_summary = summaries_by_form[form_type][form][question]
-            facilitator_question_summary.each do |facilitator_id, question_summary|
-              included_form = true
-              unless intermediate_rollup[facilitator_id]
-                intermediate_rollup[facilitator_id] = set_up_intermediate_rollup(facilitator_question_details)
-              end
-              intermediate_rollup_at_question = intermediate_rollup[facilitator_id][:questions][question]
-              add_question_data_to_rollup(intermediate_rollup_at_question, question_data, question_summary)
-            end
-          end
-        end
-        next unless included_form
-        intermediate_rollup.each do |facilitator_id, _|
-          intermediate_rollup[facilitator_id][:response_count] +=
-            summaries_by_form[:facilitator][:response_count][facilitator_id] || 0
-        end
-      end
-      intermediate_rollup
-    end
-
     # Creates an intermediate rollup, which is the
     # sum and count for each question in question_details from summarized_answers.
     # If there was no response for an answer it is not included.
     # @return
+    # if split_by_facilitator
+    # {
+    #   facilitator_id_1: {
+    #     response_count: 5,
+    #     questions: {
+    #       question_id_1: {
+    #         row_id_1: {sum: 4, count: 1}
+    #       }
+    #     }
+    #   }
+    # }
+    # otherwise
     #   {
     #     response_count: 5,
     #     questions: {
