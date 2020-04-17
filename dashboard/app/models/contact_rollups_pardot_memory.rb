@@ -26,9 +26,12 @@ require 'cdo/contact_rollups/v2/pardot'
 class ContactRollupsPardotMemory < ApplicationRecord
   self.table_name = 'contact_rollups_pardot_memory'
 
-  # Retrieves new email-Pardot ID mappings from Pardot and saves them to the database.
-  # @param [Integer, nil] last_id retrieves only Pardot ID greater than this value
-  def self.add_and_update_pardot_ids(last_id = nil, limit = nil)
+  # Downloads and saves new email-Pardot ID mappings from Pardot.
+  # *Warning:* This method overwrites existing data.
+  #
+  # @param [Integer] last_id retrieves only Pardot ID greater than this value
+  # @param [Integer] limit the maximum number of Pardot prospects to download
+  def self.download_pardot_ids(last_id = nil, limit = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
     fields = %w(id email)
 
@@ -36,8 +39,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
       current_time = Time.now.utc
       batch = prospects.map do |item|
         {
-          pardot_id: item['id'].to_i,
           email: item['email'],
+          pardot_id: item['id'].to_i,
           pardot_id_updated_at: current_time
         }
       end
