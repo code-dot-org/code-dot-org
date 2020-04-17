@@ -25,39 +25,49 @@ class PardotV2
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
   # @yieldreturn [Array<Hash>] an array of hash {email, id}
+  # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
   #
   # @param [Integer] last_id retrieves only Pardot ID greater than this value
+  # @param [Array<String>] a list of fields. Must have 'id' the list.
+  # @param [Integer] limit maximum number of prospects to retrieve
   # @return [Integer] number of results retrieved
-  def self.retrieve_new_ids(last_id)
+  def self.retrieve_prospects(last_id, fields, limit = nil)
+    raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
 
     # Run repeated requests querying for prospects above our highest known Pardot ID.
     loop do
-      url = "#{PROSPECT_QUERY_URL}?id_greater_than=#{last_id}&fields=email,id&sort_by=id"
+      url = "#{PROSPECT_QUERY_URL}?id_greater_than=#{last_id}&fields=#{fields.join(',')}&sort_by=id"
+      url += "&limit=#{limit}" if limit
       doc = post_with_auth_retry(url)
       raise_if_response_error(doc)
 
       # Pardot returns the count total available prospects (not capped to 200),
       # although the data for a max of 200 are contained in the response.
+      # @see http://developer.pardot.com/kb/api-version-4/prospects/#xml-response-format
       total_results = doc.xpath('/rsp/result/total_results').text.to_i
 
       results_in_response = 0
-      mappings = []
+      prospects = []
       doc.xpath('/rsp/result/prospect').each do |node|
-        id = node.xpath("id").text.to_i
-        email = node.xpath("email").text
-        mappings << {email: email, pardot_id: id}
-        last_id = id
+        prospect = {}
+        fields.each do |field|
+          value = node.xpath(field).text
+          prospect.merge!({field => value})
+        end
+        prospects << prospect
+
+        last_id = prospect['id']
         results_in_response += 1
       end
 
-      yield mappings if block_given?
+      yield prospects if block_given?
       log "Retrieved #{results_in_response}/#{total_results} new Pardot IDs. Last Pardot ID = #{last_id}."
 
       # Stop if all the remaining results were in this response
       total_results_retrieved += results_in_response
-      break if results_in_response == total_results
+      break if results_in_response == total_results || total_results_retrieved >= limit
     end
 
     total_results_retrieved
@@ -176,6 +186,7 @@ class PardotV2
 
       if prospect_info[:multi]
         # For multi data fields (multi-select, etc.), set key names as [field_name]_0, [field_name]_1, etc.
+        # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
         contact[key].split(',').each_with_index do |value, index|
           prospect["#{prospect_info[:field]}_#{index}"] = value
         end
