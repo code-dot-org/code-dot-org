@@ -234,46 +234,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_empty script.properties
   end
 
-  test 'all fields can be set and then removed on reseed' do
-    # First, seed using a .script file that sets something explicitly for all fields, i.e. everything that's not in
-    # the properties hash.
-    script_file_all_fields = File.join(self.class.fixture_path, 'test-all-fields.script')
-    scripts, _ = Script.setup([script_file_all_fields])
-    script = scripts.first
-
-    # Not testing new_name since it causes a new script to be created.
-    assert_equal false, script.hidden? # defaults to true, so we want to verify it was explicitly set to false
-    assert script.login_required?
-    assert_equal 'csd1', script.family_name
-
-    # Seed using an empty .script file with the same name. Verify that this sets all field values back to defaults.
-    script_file_no_fields = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-fields.script')
-    Script.setup([script_file_no_fields])
-    script.reload
-
-    assert script.hidden? # defaults to true
-    assert_equal false, script.login_required?
-    assert_nil script.family_name
-  end
-
-  test 'all properties can be set and then removed on reseed' do
-    # First, seed using a .script file that sets something explicitly for everything in the properties hash.
-    script_file_all_properties = File.join(self.class.fixture_path, 'test-all-properties.script')
-    scripts, _ = Script.setup([script_file_all_properties])
-    script = scripts.first
-
-    assert_equal 20, script.properties.keys.length
-    script.properties.values.each {|v| assert v}
-
-    # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
-    script_file_no_properties = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-properties.script')
-    Script.setup([script_file_no_properties])
-    script.reload
-
-    # All properties should get reset to defaults.
-    assert_empty script.properties
-  end
-
   test 'should not create two scripts with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
