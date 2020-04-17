@@ -5,8 +5,7 @@ import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroB
 import {sensor_channels} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 describe('MicroBitThermometer', function() {
-  let boardClient;
-  let thermometer;
+  let boardClient, thermometer;
 
   beforeEach(() => {
     boardClient = new MicrobitStubBoard();
