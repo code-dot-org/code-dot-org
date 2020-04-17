@@ -106,7 +106,7 @@ class Courses extends Component {
 
         <ProtectedStatefulDiv ref="flashes" />
 
-        <SpecialAnnouncement isTeacher={isTeacher} />
+        {isEnglish && <SpecialAnnouncement isTeacher={isTeacher} />}
 
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {isEnglish && isTeacher && (
@@ -128,6 +128,7 @@ class Courses extends Component {
         {!isEnglish && (
           <CourseBlocksAll
             isEnglish={false}
+            isTeacher={isTeacher}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
           />
         )}

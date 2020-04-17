@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import CourseBlocksTools from './CourseBlocksTools';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import CourseBlocksInternationalGradeBands from './CourseBlocksInternationalGradeBands';
 import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -206,6 +207,7 @@ export class CourseBlocksHoc extends Component {
 export class CourseBlocksAll extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired
   };
 
@@ -228,6 +230,10 @@ export class CourseBlocksAll extends Component {
         >
           <CourseBlocksHoc isInternational={!this.props.isEnglish} />
         </ContentContainer>
+
+        {!this.props.isEnglish && (
+          <SpecialAnnouncement isTeacher={this.props.isTeacher} />
+        )}
 
         {!this.props.isEnglish && <CourseBlocksInternationalGradeBands />}
 
