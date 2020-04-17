@@ -1461,6 +1461,8 @@ class Script < ActiveRecord::Base
 
   def self.build_property_hash(script_data)
     {
+      hideable_stages: script_data[:hideable_stages] || false, # default false
+      professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || false,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
