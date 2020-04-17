@@ -152,7 +152,6 @@ class RegistrationsController < Devise::RegistrationsController
           user[:parent_email_update_only] = '0'
           user[:parent_email_preference_opt_in_required] = '1'
           user[:parent_email_preference_request_ip] = request.ip
-          user[:parent_email_preference_source] = EmailPreference::PARENT_EMAIL_CHANGE
         end
       end.
       permit(

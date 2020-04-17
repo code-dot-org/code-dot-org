@@ -2,23 +2,23 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
   componentConstructors
-} from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
-import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
-import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
-import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
-import Led from '@cdo/apps/lib/kits/maker/Led';
-import Switch from '@cdo/apps/lib/kits/maker/Switch';
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundComponents';
+import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
+import TouchSensor from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/TouchSensor';
+import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
+import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
+import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
   TOUCH_PINS
-} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.

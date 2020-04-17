@@ -1,6 +1,6 @@
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../../util/reconfiguredChai';
 
 describe('FakeBoard', () => {
   itImplementsTheMakerBoardInterface(FakeBoard);

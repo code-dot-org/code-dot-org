@@ -171,7 +171,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     patch :set_parent_email, params: {
       user: {
         parent_email: 'parent@example.com',
-        parent_email_preference_opt_in: 'yes'
+        parent_email_preference_opt_in: 'yes',
+        parent_email_preference_source: 'PARENT_EMAIL_CHANGE'
       }
     }
     student.reload
