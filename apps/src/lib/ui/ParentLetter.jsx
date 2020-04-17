@@ -256,7 +256,7 @@ const SignInInstructions = ({
           <li>
             <p>
               {i18n.parentLetterSecretWords({
-                secretWords: secretWords ? secretWords : ''
+                secretWords: secretWords ? `(${secretWords})` : ''
               })}
             </p>
           </li>
