@@ -96,7 +96,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
-    script = Script.add_script(options, nil, parsed_script)
+    script = Script.add_script(options, [], parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
   end
@@ -285,26 +285,26 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
       {name: 'test script', hidden: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
@@ -1988,7 +1988,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: Lesson1.', raise.message
+    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. Lesson Lesson1 does not have a lesson group.', raise.message
   end
 
   test 'raises error if two non-consecutive lessons have the same lesson group' do
