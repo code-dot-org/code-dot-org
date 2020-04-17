@@ -59,7 +59,6 @@ import ChallengeDialog from './templates/ChallengeDialog';
  * @property {string} message
  * @property {Level} level
  * @property {boolean} showingSharing
- * @property {string} saveToGalleryUrl
  * @property {Object<string, string>} appStrings
  * @property {string} feedbackImage
  * @property {boolean} defaultToContinue
