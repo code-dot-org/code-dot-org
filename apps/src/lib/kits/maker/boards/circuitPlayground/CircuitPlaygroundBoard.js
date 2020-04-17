@@ -27,8 +27,8 @@ import {
   ADAFRUIT_VID,
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
   CIRCUIT_PLAYGROUND_PID
-} from './portScanning';
-import {PlaygroundButton} from './Button';
+} from '../../portScanning';
+import PlaygroundButton from './Button';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
