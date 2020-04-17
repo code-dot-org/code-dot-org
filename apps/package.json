@@ -244,6 +244,7 @@
     "react-portal": "^3.2.0",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "2.9.0",
+    "rehype-stringify": "^7.0.0",
     "rosie": "^2.0.1",
     "selectize": "^0.12.4",
     "snack-build": "0.0.1",

@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import color from '../../../util/color';
 import AddParentEmailModal from './AddParentEmailModal';
 
 /**
@@ -21,12 +20,19 @@ export default class AddParentEmailController {
   /**
    * @param {jQuery} form
    * @param {jQuery} link
-   * @param {jQuery} displayedParentEmail
-   * @param {function(parentEmail:string, parentEmailOptIn:string)} parentEmailChangedCallback
+   * @param {jQuery} onSuccess
    */
-  constructor({form, link, displayedParentEmail}) {
+  constructor({
+    form,
+    formParentEmailField,
+    formParentOptInField,
+    link,
+    onSuccessCallback
+  }) {
     this.form = form;
-    this.displayedParentEmail = displayedParentEmail;
+    this.formParentEmailField = formParentEmailField;
+    this.formParentOptInField = formParentOptInField;
+    this.onSuccessCallback = onSuccessCallback;
     link.click(event => {
       event.preventDefault();
       this.showAddParentEmailModal();
@@ -46,9 +52,7 @@ export default class AddParentEmailController {
       <AddParentEmailModal
         handleSubmit={handleSubmit}
         handleCancel={this.hideAddParentEmailModal}
-        currentParentEmail={this.form
-          .find('#add-parent-email-modal_user_parent_email')
-          .val()}
+        currentParentEmail={this.formParentEmailField.val()}
       />,
       this.mountPoint
     );
@@ -63,12 +67,10 @@ export default class AddParentEmailController {
   };
 
   onParentEmailChanged = parentEmail => {
-    this.displayedParentEmail.text(parentEmail);
+    if (this.onSuccessCallback) {
+      this.onSuccessCallback(parentEmail);
+    }
     this.hideAddParentEmailModal();
-    this.displayedParentEmail.effect('highlight', {
-      duration: 1500,
-      color: color.orange
-    });
   };
 
   submitParentEmailChange({parentEmail, parentEmailOptIn}) {
@@ -102,12 +104,8 @@ export default class AddParentEmailController {
       };
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
-      this.form
-        .find('#add-parent-email-modal_user_parent_email')
-        .val(parentEmail);
-      this.form
-        .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
-        .val(parentEmailOptIn);
+      this.formParentEmailField.val(parentEmail);
+      this.formParentOptInField.val(parentEmailOptIn);
       this.form.submit();
     });
   }

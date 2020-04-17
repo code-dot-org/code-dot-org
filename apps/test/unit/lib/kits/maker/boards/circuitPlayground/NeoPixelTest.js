@@ -1,8 +1,8 @@
 /** @file Tests for our johnny-five Led.RGB wrapper */
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import NeoPixel from '@cdo/apps/lib/kits/maker/NeoPixel';
+import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
 describe('NeoPixel', function() {
   beforeEach(() => {
