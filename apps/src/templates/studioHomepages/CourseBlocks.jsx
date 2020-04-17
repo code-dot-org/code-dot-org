@@ -130,12 +130,6 @@ class CourseBlocksCsfLegacy extends Component {
     $('#course4')
       .appendTo(ReactDOM.findDOMNode(this.refs.course4))
       .show();
-    $('#20-hour')
-      .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
-      .show();
-    $('#unplugged')
-      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
-      .show();
   }
 
   render() {
@@ -154,11 +148,28 @@ class CourseBlocksCsfLegacy extends Component {
         </div>
         <br />
         <br />
-        <div className="row">
-          <ProtectedStatefulDiv ref="twenty_hour" />
-          <ProtectedStatefulDiv ref="unplugged" />
-        </div>
+        <AcceleratedAndUnplugged />
       </ContentContainer>
+    );
+  }
+}
+
+class AcceleratedAndUnplugged extends Component {
+  componentDidMount() {
+    $('#20-hour')
+      .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
+      .show();
+    $('#unplugged')
+      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
+      .show();
+  }
+
+  render() {
+    return (
+      <div className="row">
+        <ProtectedStatefulDiv ref="twenty_hour" />
+        <ProtectedStatefulDiv ref="unplugged" />
+      </div>
     );
   }
 }
