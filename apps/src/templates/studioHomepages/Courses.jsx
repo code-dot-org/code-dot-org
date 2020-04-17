@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import {CourseBlocksAll} from './CourseBlocks';
+import {CourseBlocksIntl} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -126,7 +126,7 @@ class Courses extends Component {
 
         {/* Non-English */}
         {!isEnglish && (
-          <CourseBlocksAll
+          <CourseBlocksIntl
             isTeacher={isTeacher}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
           />
