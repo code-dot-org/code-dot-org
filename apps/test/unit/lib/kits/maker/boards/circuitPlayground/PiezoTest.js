@@ -1,8 +1,8 @@
 /** @file Tests for our johnny-five Piezo wrapper */
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
+import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
 
 describe('Piezo', function() {
   beforeEach(function() {
