@@ -30,32 +30,8 @@ class CourseBlocksCsfModern extends Component {
     return (
       <div>
         <ExpressCourses />
-
         <CoursesAToF />
-
-        <NotificationResponsive
-          type="bullhorn"
-          notice={i18n.courseBlocksLegacyNotificationHeading()}
-          details={i18n.courseBlocksLegacyNotificationBody()}
-          detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
-          detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
-          detailsLinkNewWindow={true}
-          dismissible={false}
-          buttons={[
-            {
-              text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
-              link: pegasus(
-                '/educate/curriculum/cs-fundamentals-international'
-              ),
-              newWindow: true
-            },
-            {
-              text: i18n.courseBlocksLegacyNotificationButtonCoursesAccelerated(),
-              link: '/s/20-hour',
-              newWindow: true
-            }
-          ]}
-        />
+        <LegacyCSFNotification />
       </div>
     );
   }
@@ -136,6 +112,30 @@ class CoursesAToF extends Component {
     );
   }
 }
+
+const LegacyCSFNotification = () => (
+  <NotificationResponsive
+    type="bullhorn"
+    notice={i18n.courseBlocksLegacyNotificationHeading()}
+    details={i18n.courseBlocksLegacyNotificationBody()}
+    detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
+    detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
+    detailsLinkNewWindow={true}
+    dismissible={false}
+    buttons={[
+      {
+        text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
+        link: pegasus('/educate/curriculum/cs-fundamentals-international'),
+        newWindow: true
+      },
+      {
+        text: i18n.courseBlocksLegacyNotificationButtonCoursesAccelerated(),
+        link: '/s/20-hour',
+        newWindow: true
+      }
+    ]}
+  />
+);
 
 class CourseBlocksCsfLegacy extends Component {
   render() {
