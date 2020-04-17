@@ -4913,6 +4913,10 @@ fr-FR:
           plus de pas en avant entre les virages.
         courseC_maze_debugging_challenge2_b: Si tu es bloqué, tu peux toujours recommencer
           ou enlever tout le code et trouver ton propre chemin !
+        courseC_maze_debugging_challenge2_c: |-
+          Il y a deux chemins différents que tu peux suivre, simplement en avançant et en tournant quatre fois. Si tu trouves un moyen pour utiliser une boucle `Répéter`, il y en a peut-être même plus !
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
           Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:
@@ -5620,27 +5624,27 @@ fr-FR:
         courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
           ?
         courseA_artist_loops8_c: |-
-          Que fait le code ?
-          Qu’est-il censé faire ?
-          Qu’est-ce que ça veut dire ?
+          Que fait le code ?\
+          Qu’est-il censé faire ?\
+          Qu’est-ce que ça veut dire ?\\
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Essaie d’exécuter le code pour voir ce qui a été
           écrit pour toi.
         courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
           ?
         courseA_artist_loops8_c: |-
-          Que fait le code ?
-          Qu’est-il censé faire ?
-          Qu’est-ce que ça veut dire ?
+          Que fait le code ?\
+          Qu’est-il censé faire ?\
+          Qu’est-ce que ça veut dire ?\\
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Essaie d’exécuter le code pour voir ce qui a été
           écrit pour toi.
         courseA_artist_loops8_b: Comment ferais-tu boucler le code qui t’a été donné
           ?
         courseA_artist_loops8_c: |-
-          Que fait le code ?
-          Qu’est-il censé faire ?
-          Qu’est-ce que ça veut dire ?
+          Que fait le code ?\
+          Qu’est-il censé faire ?\
+          Qu’est-ce que ça veut dire ?\\
       courseA_artist_loops9:
         courseA_artist_loops9_a: Ajoute un autre bloc au code qui t’a été donné pour
           dessiner le reste des escaliers.
@@ -5872,18 +5876,18 @@ fr-FR:
           Le programme de départ ne récupère pas les 2 dernières pierres précieuses. Essaie d’ajouter ce code tout à la fin :
 
           <xml><block type="maze_moveEast">
-          <next>
-          <block type="collector_collect_simplified">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="collector_collect"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
       courseA_collector_loops_challenge1_2018:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
@@ -5896,18 +5900,18 @@ fr-FR:
           Le programme de départ ne récupère pas les 2 dernières pierres précieuses. Essaie d’ajouter ce code tout à la fin :
 
           <xml><block type="maze_moveEast">
-          <next>
-          <block type="collector_collect_simplified">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="collector_collect"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
       courseA_collector_loops_challenge1_2019:
         courseA_collector_loops_challenge1_a: Essaie de changer les nombres dans chaque
           boucle si quelque chose ne va pas.
@@ -9811,24 +9815,24 @@ fr-FR:
         courseC_collector_prog1_b: La solution la plus simple serait d’avancer une
           fois puis de collecter le trésor.
       courseC_collector_prog2:
-        courseC_collector_prog2_a: Tu peux utiliser quatre blocs <xml><block type="maze_move"><title
-          name="DIR">moveForward</title></block></xml> ou utiliser le bloc <xml><block
+        courseC_collector_prog2_a: Tu peux utiliser quatre blocs  <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> ou utiliser le bloc  <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           pour raccourcir ton programme.
         courseC_collector_prog2_b: N'aie pas peur de faire une erreur ! Essaie d'ajouter
           des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si
           tu ne penses pas avoir encore résolu l’énigme.
       courseC_collector_prog2_2018:
-        courseC_collector_prog2_a: Tu peux utiliser quatre blocs <xml><block type="maze_move"><title
-          name="DIR">moveForward</title></block></xml> ou utiliser le bloc <xml><block
+        courseC_collector_prog2_a: Tu peux utiliser quatre blocs  <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> ou utiliser le bloc  <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           pour raccourcir ton programme.
         courseC_collector_prog2_b: N'aie pas peur de faire une erreur ! Essaie d'ajouter
           des blocs et d'exécuter ton code, pour voir ce qui va se passer, même si
           tu ne penses pas avoir encore résolu l’énigme.
       courseC_collector_prog2_2019:
-        courseC_collector_prog2_a: Tu peux utiliser quatre blocs <xml><block type="maze_move"><title
-          name="DIR">moveForward</title></block></xml> ou utiliser le bloc <xml><block
+        courseC_collector_prog2_a: Tu peux utiliser quatre blocs  <xml><block type="maze_move"><title
+          name="DIR">moveForward</title></block></xml> ou utiliser le bloc  <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           pour raccourcir ton programme.
         courseC_collector_prog2_b: N'aie pas peur de faire une erreur ! Essaie d'ajouter

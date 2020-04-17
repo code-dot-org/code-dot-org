@@ -129,11 +129,13 @@ tr-TR:
         title: Çoktan Seçmeli
       2-3 artist debug multi 1:
         answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
           correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - {}
       2-3 artist functions multi 1:
@@ -511,6 +513,55 @@ tr-TR:
         content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
           et. Sağdaki seçeneklerden birini seç.
         title: Hızlı Başlık Taraması
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste, bilgisayarlar tarafından kullanılan farklı tipteki girdi ve çıktı aygıtları ve gönderdikleri ve aldıkları bilgi türleri hakkında bilgi edineceksiniz.
+
+          ## Kelime Haznesi
+
+          * **Girdi** - Bilgisayara bilgi verilmesini sağlayan bir aygıt veya bileşen
+          * **Çıktı** - Bilgisayardan bilgi alan herhangi bir aygıt veya bileşen
+
+
+          ## Kaynaklar
+
+          * [Girdi ve Çıktı - Aktivite Rehberi](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: "# Overview\n\nBu derste, işlemenin insanlar ve bilgisayarlar tarafından
+          nasıl girdileri çıktılara dönüştürmek için kullanıldığını öğreneceksiniz.\n\n##
+          Kelime Hazinesi\n\n* **Algoritma** - Bilgisayarlar tarafından yürütülebilen
+          işlemler için belli talimatlar dizisi \n\n## Kaynaklar\n\n* [Kart Sıralama
+          Algoritması - Etkinlik Rehberi](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste bilgisayarların depoladığı bilgi türleri ve depolamanın bilgi işlemenin kritik bir parçası olduğu hakkında bilgi edineceksiniz.
+
+          ## Kaynaklar
+
+          * [Depolama ve İşleme - Etkinlik Rehberi](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste, uygulamaların sorunları çözmek için farklı türdeki bilgileri işleme yöntemlerini keşfedeceksiniz.
+
+          ## Kaynaklar
+
+          * [Uygulama Keşfi - Etkinlik Rehberi](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu proje için sizin tanımlayacağınız bir problemi çözen kendinize ait bir uygulama tasarlayacaksınız.
+          ## Kaynaklar
+
+          * [Uygulamalar ve Problem Çözümü - Proje Rehberi](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Uygulamalar ve Problem Çözümü - Eş Gözden Geçirme](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Uygulamalar ve Problem Çözümü - Değerlendirme Tablosu](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: açıklama burada
       CSD U2 Design Project_2018:
@@ -519,18 +570,84 @@ tr-TR:
         content1: açıklama burada
       CSD U2 L1 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders, bir web sitesinin hem kullanıcılar hem de oluşturucuları için sunabileceği amaçları kapsar. Bu ders, Amerika Birleşik Devletleri'nde en çok kullanılan web sitelerinin bir kısmını araştırıyor ve bu sitelerin her birinin kullanıcılar için nasıl yararlı olduğunu ve oluşturucularına nasıl hizmet edebileceğini tartışıyor.
+          ## Kelime Hazinesi
+
+          * **Web sitesi** - İnternet'e bağlı, Dünya Çapındaki Ağ'da bir veya daha fazla sayfayı tutan bir yer.
+
+
+          ## Kaynaklar
+
+          * [Web Sitesinin Amaçları - Etkinlik Rehberi](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Web Sitesinin Amaçları - Örnek](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: açıklama burada
+        markdown: "# Genel Bakış\n\nBu ders web sitelerini kişisel ifade aracı olarak
+          tanıtır. Bu ders öncelikle insanların ilgi alanlarını ve fikirlerini ifade
+          etmenin ve paylaşmanın farklı yollarını tartışır, ardından önceki bir dersten
+          öğrenciler tarafından yapılan birkaç örnek web sitesini gözden geçirir.
+          Son olarak, herkes dahil edilecek konular ve ilgi alanlarının bir listesini
+          beyin fırtınası yapar ve paylaşır, böylece ünitenin geri kalanında kişisel
+          bir web sitesi geliştirmek için bir kaynak oluşturur. \n## Kelime Haznesi\n\n*
+          **Web Sitesi İçeriği** - Web sayfasında bulunan ham metin, resimler ve diğer
+          öğeler\n\n\n## Kaynaklar\n\n* [Kişisel Web Sitesi Taslağı - Etkinlik Rehberi](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Kişisel Web Sitesi Taslağı](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Örnek ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders, bir web sitesinin hem içeriğinin hem de yapısının bilgisayara nasıl iletileceği sorununa, HTML'yi bir çözüm olarak tanıtır. Ders, bir web sayfasının yapısını etkili bir şekilde iletmenin zorluklarını gösteren kısa bağlantısız bir etkinlikle başlar. Sınıf, Web Laboratuvarı'ndaki bir HTML sayfasına bakar ve HTML etiketlerinin bu sorunu çözmeye nasıl yardım ettiğini tartışır, ardından ünitenin ilk web sayfalarını yazmak için HTML kullanır.
+          ## Kelime Haznesi
+
+          * **HTML** - Hiper Metin İşaretleme Dili, web sayfaları oluşturmak için kullanılan bir dildir
+          * **HTML Ögesi** - Bir web sitesinin başlangıç etiketiyle işaretlenmiş ve bazen bitiş etiketiyle kapatılmış bir parçası
+          * **HTML Etiketi** - Bir HTML ögesinin başlangıcını ve bitişini ve bu ögenin türünü gösteren özel karakterler kümesi
+          * **Web Sitesi İçeriği** - Bir web sayfasında bulunan ham metin, resimler ve diğer ögeler
+          * **Web Sitesi Yapısı** - Bir web sayfasındaki farklı içerik parçalarının amacı, bilgisayarın bu içeriği nasıl görüntülenmesi gerektiğini belirlemesine yardımcı olmak için kullanılır.
+
+          ## Tanıtılan Kod
+
+          * **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         content1: açıklama burada
+        markdown: "# Genel Bakış\n\nBu ders, bu sefer başlıklarla HTML etiketlerini
+          tanıtmaya devam eder. Sınıf sayfa ve bölüm başlığı yaratmak için başlık
+          etiketlerini kullanarak uygulama yapar ve farklı başlık ögelerinin varsayılan
+          olarak nasıl görüntüleneceğini öğrenir. Ardından, sınıf ünite boyunca oluşturulacak
+          kişisel web sayfalarında içeriğin nasıl düzenleneceğini planlar ve projenin
+          ilk sayfasına başlar.\n## Kelime Haznesi\n\n* **Başlık** - Bir belge veya
+          belgenin bir bölümü için başlık veya özet \n\n## Tanıtılan Kod\n\n*  **[Heading](//studio.code.org/docs/weblab/h/)**
+          - `<h1></h1>`[Heading]\n\n"
       CSD U2 L5 Overview:
         content1: açıklama burada
       CSD U2 L6 Overview:
         content1: açıklama burada
       CSD U2 Lesson 6 Overview:
         content1: açıklama burada
+      CSD U2 Top Websites:
+        markdown: |-
+          # ABD'deki En İyi Web Siteleri
+
+          Aşağıdakiler, Amerika Birleşik Devletleri'nde en sık ziyaret edilen websiteleridir. Her biri websitesinin temel işlevinin kısa bir açıklamasını içerir.
+
+
+          1. Google.com - Web siteleri, resimler, videolar ve diğer medyalar için arama motoru
+          2. Youtube.com - Değerlendirmeler ve yorumlar içeren kullanıcı gönderili video sitesi
+          3. Facebook.com - Kullanıcıların arkadaşlarıyla bilgi paylaşmasına olanak tanıyan sosyal medya topluluğu
+          4. Amazon.com - Her türlü ürün için çevrimiçi alışveriş sitesi
+          4. Yahoo.com - Bir arama motoru, e-posta sağlayıcısı ve haber kaynağı
+          5. Wikipedia.org - Kullanıcılar tarafından oluşturulan içeriğe sahip ücretsiz bir ansiklopedi
       CSD U2 expand project:
         content1: açıklama burada
       CSD U2 expand project_2018:
@@ -1280,6 +1397,24 @@ tr-TR:
 
           *[Problem Çözme Süreci - Aktivite Rehberi]
           (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |-
+          # Genel Bakış
+          Bu derste, her adımın sorunlara çözüm geliştirmenize nasıl yardımcı olduğunu keşfetmek için problem çözme sürecini çeşitli problemlere uygulayacaksınız.
+
+          ## Kaynaklar
+
+          * [Problemleri Çözmek - Etkinlik Rehberi]
+          (https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste, bilgisayarların belirli türdeki problemleri çözmeye nasıl yardımcı olduğunu ve her bilgisayarın temel özelliklerini öğrenmeye başlayacaksınız.
+
+          ## Kaynaklar
+
+          * [Bilgisayar Nedir - Etkinlik Rehberi](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         answers:
         - {}

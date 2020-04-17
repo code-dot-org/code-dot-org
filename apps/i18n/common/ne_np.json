@@ -9,6 +9,7 @@
   "abusiveUrl": "URL of the content being reported",
   "actions": "Actions",
   "add": "जोड्नुहोस्",
+  "addParentEmailModal_save": "Update",
   "addStudents": "Add Students",
   "addStudentsMultiple": "Add multiple students",
   "addStudentsMultipleInstructions": "Type or paste the names of your students, one per line:",

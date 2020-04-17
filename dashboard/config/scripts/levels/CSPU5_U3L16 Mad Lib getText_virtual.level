@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Before setting the text area with your Mad Libs outline, get the user's text and incorporate their responses. (Click to see full instructions) ",
-    "long_instructions": "# Make It Mad! Add the User's Text to Your Mad Libs Outline\r\n\r\nNow that you have your Mad Libs outline appearing in the text area, it's time to __incorporate the user's text__ to make your Mad Libs come alive.\r\n\r\n# Do This:\r\n\r\n- Did you pick good ID names for your text input elements? Update them now if you didn't!\r\n- When the __Next__ button is clicked, __get the user's text from the text inputs on Screen 1 and store each in a separate variable__.\r\n- Use string concatenation to __incorporate the user's text into your Mad Labs string__ before updating the text area on Screen 2. \r\n\r\n<details>\r\n\r\n<summary><strong>Hint</strong></summary>\r\n\r\nUse `getText` to get the text from each of the text inputs on Screen 1.\r\n\r\n</details>\r\n<details>\r\n<summary><strong>Should I make local or global variables?</strong></summary>\r\n\r\nRemember that the decision to create local variables or global variables is a question of _scope_. Where will you need to access these variables in your program? If you are only using the variables in the click callback function for the \"Next\" button, then they can be _local_ variables in that function. \r\n\r\n\r\n</details>",
+    "long_instructions": "# Make It Mad! Add the User's Text to Your Mad Libs Outline\r\n\r\nNow that you have your Mad Libs outline appearing in the text area, it's time to __incorporate the user's text__ to make your Mad Libs come alive.\r\n\r\n# Do This:\r\n\r\n- Did you pick good ID names for your text input elements? Update them now if you didn't!\r\n- When the __Next__ button is clicked, __get the user's text from the text inputs on Screen 1 and store each in a separate variable__.\r\n- Use string concatenation to __incorporate the user's text into your Mad Labs string__ before updating the text area on Screen 2. \r\n\r\n<details>\r\n\r\n<summary><strong>Hint</strong></summary>\r\n\r\nUse `getText` to get the text from each of the text inputs on Screen 1.\r\n\r\n</details>\r\n<details>\r\n<summary><strong>Where should I make my variables?</strong></summary>\r\n\r\nIf you are only using the variables in the `click` callback function for the \"Next\" button, then they can be created with `var` inside that function. Otherwise, create them at the beginning of your main program.\r\n\r\n\r\n</details>",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -49,11 +49,16 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-15 04:23:04 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-02-15 04:23:04 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-16 17:25:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

@@ -163,6 +163,7 @@ ur:
       student: 'Talib-e-ilm'
   user:
     new_email_hint: '(اثبات کریں کہ آپ اس ای میل ایڈریس سے ای میلز موصول کر سکتے ہیں کریں.)'
+    none: "کوئی نہيں"
   home:
     student_reg_link: 'طالبعلم کا سائن اپ'
     teacher_reg_link: 'استاد کا سائن اپ'
@@ -243,6 +244,8 @@ ur:
       subjects:
         cs: 'کمپیوٹر سائنس'
         math: 'ریاضی'
+        science: 'سائنس'
+        la: 'لسانی آرٹس'
       email_opt_in:
         opt_in_yes: 'جی'
         opt_in_no: 'نہيں'

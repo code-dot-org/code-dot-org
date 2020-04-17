@@ -18,21 +18,27 @@ class DatasetsController < ApplicationController
   # GET /datasets/:dataset_name/
   def show
     @table_name = params[:dataset_name]
-    @dataset = @firebase.get_shared_table URI.escape(params[:dataset_name])
+    @dataset = @firebase.get_shared_table params[:dataset_name]
     @live_datasets = LIVE_DATASETS
   end
 
   # POST /datasets/:dataset_name/
   def update
     records, columns = @firebase.csv_as_table(params[:csv_data])
-    @firebase.delete_shared_table URI.escape(params[:dataset_name])
-    response = @firebase.upload_shared_table(URI.escape(params[:dataset_name]), records, columns)
+    @firebase.delete_shared_table params[:dataset_name]
+    response = @firebase.upload_shared_table(params[:dataset_name], records, columns)
     data = {}
     if response.success?
       data[:records] = records
       data[:columns] = columns
     end
     render json: data, status: response.code
+  end
+
+  # DELETE /datasets/:dataset_name/
+  def destroy
+    response = @firebase.delete_shared_table params[:dataset_name]
+    render json: {}, status: response.code
   end
 
   # GET /datasets/manifest/edit

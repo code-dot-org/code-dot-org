@@ -161,6 +161,8 @@ bs:
       %{link} 
       Tutorijali su zabavni, vizualno privlačni, podučavaju osnovnim informatičkim pojmovima kroz zabavu i igru s puno uputstava. Nauči kodirati dok ti pomažu Bill Gates, Mark Zuckerberg Angry Birds i Plants vs. Zombies! :-) 
       %{name}
+  parent_mailer:
+    parent_email_added_subject: 'Dobrodošli na Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Dobrodošli na Code.org!'
   section:
@@ -294,6 +296,7 @@ bs:
     enter_new_login_info: 'Unesite svoje nove podatke za prijavu'
     enter_parent_email: "Unesi email adresu od svog roditelja ili staratelja (za obnovu lozinke)"
     update_email: "Osvježi"
+    none: "Nijedno"
   user_level:
     completed: 'Kompletirano'
     tried: 'Pokušano'

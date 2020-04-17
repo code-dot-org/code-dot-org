@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType} from '../../util/sharedConstants';
+import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
+import i18n from '@cdo/locale';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
 const COMMON_SENSE_ARTICLE_URL =
@@ -52,7 +54,8 @@ class ParentLetter extends React.Component {
         secret_words: PropTypes.string
       })
     ),
-    teacherName: PropTypes.string.isRequired
+    teacherName: PropTypes.string.isRequired,
+    logoUrl: PropTypes.string
   };
 
   static defaultProps = {
@@ -61,33 +64,12 @@ class ParentLetter extends React.Component {
 
   componentDidMount() {
     if (this.props.autoPrint) {
-      this.printParentLetter();
+      print();
     }
   }
 
-  printParentLetter = () => {
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
-
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
-    });
-
-    printWindow.document.write(
-      `<html><head><link rel="stylesheet" type="text/css" href="/shared/css/standards-report-print.css"></head>`
-    );
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-  };
-
   render() {
-    const {students, teacherName, section, studentId} = this.props;
+    const {logoUrl, students, teacherName, section, studentId} = this.props;
     const sectionCode = section.code;
     const loginType = section.loginType;
     const student =
@@ -96,36 +78,29 @@ class ParentLetter extends React.Component {
             .filter(student => student.id.toString() === studentId)
             .shift()
         : null;
-    const studentName = student ? student.name : null;
+    const studentName = student ? student.name : 'your student';
     const secretPicturePath = student ? student.secret_picture_path : null;
     const secretWords = student ? student.secret_words : null;
 
     return (
       <div id="printArea">
-        <Header />
+        <Header logoUrl={logoUrl} />
         <article>
-          <p>Hello!</p>
-          <p>
-            In my class, your child {studentName} is learning computer science
-            on <a href={pegasus('/')}>Code.org</a>, a fun, creative platform for
-            learning computer science and basic coding to create interactive
-            animations, games, or apps. Your interest in what your child is
-            learning is critical, and Code.org makes it easy to stay involved.
-          </p>
-          <h1>
-            Step 1 - Encourage your child, show interest in computer science
-          </h1>
-          <p>
-            One of the best ways is to ask your child to explain what they’re
-            learning and show you a project they are proud of (
-            <a href={ENGAGEMENT_URL}>see details</a>
-            ). Or watch one of{' '}
-            <a href={pegasus(`/educate/resources/inspire`)}>
-              these videos
-            </a>{' '}
-            together.
-          </p>
-          <h1>Step 2 - Get your child set up to use Code.org at home</h1>
+          <p>{i18n.parentLetterHello()}</p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterIntro({
+              homeLink: pegasus('/'),
+              studentName: studentName
+            })}
+          />
+          <h1>{i18n.parentLetterStep1()}</h1>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStep1Details({
+              engagementLink: ENGAGEMENT_URL,
+              videosLink: pegasus(`/educate/resources/videos`)
+            })}
+          />
+          <h1>{i18n.parentLetterStep2()}</h1>
           <SignInInstructions
             loginType={loginType}
             secretPicturePath={secretPicturePath}
@@ -133,54 +108,36 @@ class ParentLetter extends React.Component {
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <p>
-            At the top of their homepage, {studentName || 'your student'} can
-            continue the course they are doing with their classroom at school.
-            They can also create their own{' '}
-            <a href={studio('/projects/public')}>
-              games or artwork in the Project Gallery
-            </a>{' '}
-            or check out <a href={pegasus('/athome')}>code.org/athome</a> for
-            ideas for things to work on at home.
-          </p>
-          <h1>Step 3 - Connect your email to your student’s account</h1>
-          <p>
-            Keep up to date with what your student is working on and receive
-            updates from Code.org. Have your child sign in to Code.org and then
-            enter your email in Account Settings or{' '}
-            <a href={studio('/users/edit')}>click here</a>.
-          </p>
-          <h1>Join the weekly “Code Break” every Wednesday</h1>
-          <p>
-            The team at Code.org hosts a live interactive classroom for students
-            of all ages. Anybody can participate, and learn computer science in
-            a fun format starring very special guests.{' '}
-            <a href={pegasus('/break')}>More info</a>.
-          </p>
-          <h1>Why computer science</h1>
-          <p>
-            Computer science teaches students critical thinking, problem
-            solving, and digital citizenship, and benefits all students, no
-            matter what opportunities they pursue in the future. And learning to
-            make interactive animations, code-art, games, and apps on Code.org
-            encourages creativity and makes learning fun.
-          </p>
-          <h1>Code.org’s commitment to student privacy</h1>
-          <p>
-            Code.org assigns utmost importance to student safety and security.
-            Code.org has signed the{' '}
-            <a href={PRIVACY_PLEDGE_URL}>Student Privacy Pledge</a> and their{' '}
-            <a href={pegasus('/privacy')}>privacy practices</a> have received{' '}
-            <a href={COMMON_SENSE_ARTICLE_URL}>
-              one of the highest overall scores from Common Sense Media
-            </a>
-            . You can find further details by viewing Code.org’s{' '}
-            <a href={pegasus('/privacy/student-privacy')}>Privacy Policy</a>.
-          </p>
-          <p>
-            Please let me know if you have any questions and thank you for your
-            continued support of your child and of our classroom!
-          </p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStep2Details({
+              studentName: studentName,
+              projectsLink: studio('/projects/public'),
+              atHomeLink: pegasus('/athome')
+            })}
+          />
+          <h1>{i18n.parentLetterStep3()}</h1>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStep3Details({
+              accountEditLink: studio('/users/edit')
+            })}
+          />
+          <h1>{i18n.parentLetterCodeBreak()}</h1>
+          <SafeMarkdown
+            markdown={i18n.parentLetterCodeBreakDetails({
+              codebreakLink: pegasus('/break')
+            })}
+          />
+          <h1>{i18n.parentLetterWhy()}</h1>
+          <p>{i18n.parentLetterWhyDetails()}</p>
+          <h1>{i18n.parentLetterStudentPrivacy()}</h1>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStudentPrivacyDetails({
+              pledgeLink: PRIVACY_PLEDGE_URL,
+              commonSenseLink: COMMON_SENSE_ARTICLE_URL,
+              privacyPolicyLink: pegasus('/privacy/student-privacy')
+            })}
+          />
+          <p>{i18n.parentLetterClosing()}</p>
           <p>{teacherName}</p>
         </article>
       </div>
@@ -194,15 +151,22 @@ export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.sectionData.section.students,
-  teacherName: state.currentUser.userName
+  teacherName: state.currentUser.userName,
+  studentId: queryParams('studentId')
 }))(ParentLetter);
 
-const Header = () => {
+const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src="/shared/images/CodeLogo_White.png" style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} />
     </header>
   );
+};
+Header.propTypes = {
+  logoUrl: PropTypes.string.isRequired
+};
+Header.defaultProps = {
+  logoUrl: '/shared/images/CodeLogo_White.png'
 };
 
 const SignInInstructions = ({
@@ -218,13 +182,14 @@ const SignInInstructions = ({
       steps = (
         <ol>
           <li>
-            Have your students log in to their Clever account at{' '}
-            <a href="https://www.clever.com/">www.clever.com</a> (click "Sign in
-            as a student" at the top right)
+            <SafeMarkdown
+              markdown={i18n.parentLetterClever1({
+                cleverLink: 'https://www.clever.com'
+              })}
+            />
           </li>
           <li>
-            Click on the Code.org logo on the Clever dashboard. The logo looks
-            like this:
+            {i18n.parentLetterClever2()}
             <br />
             <img
               src="/shared/images/clever_code_org_logo.png"
@@ -239,8 +204,8 @@ const SignInInstructions = ({
       steps = (
         <ol>
           <GoToSignIn />
-          <li>Choose 'Sign in with Google'</li>
-          <li>Sign in via the Google sign-in dialog</li>
+          <li>{i18n.parentLetterGoogle1()}</li>
+          <li>{i18n.parentLetterGoogle2()}</li>
         </ol>
       );
       break;
@@ -253,7 +218,7 @@ const SignInInstructions = ({
             studentName={studentName}
           />
           <li>
-            Click on their picture password and then click 'Sign in'
+            {i18n.parentLetterPicturePassword()}
             {secretPicturePath && (
               <span>
                 <br />
@@ -265,10 +230,7 @@ const SignInInstructions = ({
             )}
           </li>
           {!secretPicturePath && (
-            <li>
-              If your student does not remember their picture password, please
-              email me and I will provide it
-            </li>
+            <li>{i18n.parentLetterForgotPicturePassword()}</li>
           )}
         </ol>
       );
@@ -282,15 +244,13 @@ const SignInInstructions = ({
             studentName={studentName}
           />
           <li>
-            Type in their secret words {secretWords && `(${secretWords})`} and
-            then click 'Sign in'
+            <p>
+              {i18n.parentLetterSecretWords({
+                secretWords: secretWords ? `(${secretWords})` : ''
+              })}
+            </p>
           </li>
-          {!secretWords && (
-            <li>
-              If your student does not remember their password, please email me
-              and I will provide it
-            </li>
-          )}
+          {!secretWords && <li>{i18n.parentLetterForgotPassword()}</li>}
         </ol>
       );
       break;
@@ -300,13 +260,8 @@ const SignInInstructions = ({
       steps = (
         <ol>
           <GoToSignIn />
-          <li>
-            Have them enter their email and password and then click 'Sign in'
-          </li>
-          <li>
-            If your student does not remember their password, they can reset it
-            from the sign in screen
-          </li>
+          <li>{i18n.parentLetterSignInEmail()}</li>
+          <li>{i18n.parentLetterForgotPasswordEmail()}</li>
         </ol>
       );
   }
@@ -314,10 +269,11 @@ const SignInInstructions = ({
   const loginTypeName = LOGIN_TYPE_NAMES[loginType];
   return (
     <div>
-      <p>
-        Our class uses <strong>{loginTypeName}</strong> to sign in. To have your
-        student sign in to Code.org at home, do the following:
-      </p>
+      <SafeMarkdown
+        markdown={i18n.parentLetterLoginType({
+          loginTypeName: loginTypeName
+        })}
+      />
       {steps}
     </div>
   );
@@ -332,7 +288,11 @@ SignInInstructions.propTypes = {
 
 const GoToSignIn = () => (
   <li>
-    Go to <a href={studio('/')}>{studio('/')}</a> and click 'Sign in'
+    <SafeMarkdown
+      markdown={i18n.parentLetterSignIn({
+        studioLink: studio('/')
+      })}
+    />
   </li>
 );
 
@@ -340,8 +300,11 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
-      Go to <a href={sectionUrl}>{sectionUrl}</a> and click on their name
-      {studentName && ` (${studentName})`}
+      <SafeMarkdown
+        markdown={i18n.parentLetterSectionSignIn({
+          sectionLink: sectionUrl
+        })}
+      />
     </li>
   );
 };
@@ -352,6 +315,6 @@ GoToSectionSignIn.propTypes = {
 
 const styles = {
   cleverCodeOrgLogo: {width: 60, margin: 10},
-  codeOrgLogo: {height: 30, margin: 15},
+  codeOrgLogo: {height: 42, margin: '4px 16px'},
   header: {backgroundColor: color.teal, marginBottom: 30}
 };

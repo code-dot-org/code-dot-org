@@ -1922,6 +1922,8 @@ ja:
           stages:
             While Loops:
               name: Whileループ
+            Variables:
+              name: 変数（へんすう）
         virtual-holding-place:
           stages:
             Velocity:

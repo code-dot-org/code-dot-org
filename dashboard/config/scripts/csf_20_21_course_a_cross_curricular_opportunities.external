@@ -8,6 +8,8 @@ markdown <<MARKDOWN
 
 ## Common Core English Language Arts Standards
 
+### new 
+
 <details><summary>
 
 **Language**
@@ -15,8 +17,6 @@ markdown <<MARKDOWN
 </summary>
 
 * **K.L.6** - Use words and phrases acquired through conversations, reading and being read to, and responding to texts.
-
-* **1.L.6** - Use words and phrases acquired through conversations, reading and being read to, and responding to texts, including using frequently occurring conjunctions to signal simple relationships (e.g., because).
 
 </details>
 
@@ -32,18 +32,6 @@ markdown <<MARKDOWN
 
 * **K.SL.5** - Add drawings or other visual displays to descriptions as desired to provide additional detail.
 
-* **1.SL.1** - Participate in collaborative conversations with diverse partners about grade 1 topics and texts with peers and adults in small and larger groups.
-
-* **1.SL.1.c** - Ask questions to clear up any confusion about the topics and texts under discussion.
-
-* **1.SL.2** - Ask and answer questions about key details in a text read aloud or information presented orally or through other media.
-
-* **1.SL.5** - Add drawings or other visual displays to descriptions when appropriate to clarify ideas, thoughts, and feelings.
-
-* **1.SL.1.a** - Follow agreed-upon rules for discussions (e.g., listening to others with care, speaking one at a time about the topics and texts under discussion).
-
-* **1.SL.1.b** - Build on others’ talk in conversations by responding to the comments of others through multiple exchanges.
-
 </details>
 
 ## Common Core Math Standards
@@ -54,89 +42,7 @@ markdown <<MARKDOWN
 
 </summary>
 
-* **K.G.1** - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
-
-</details>
-
-<details><summary>
-
-**Math Practices**
-
-</summary>
-
-* **MP.1** - Make sense of problems and persevere in solving them
-
-* **MP.2** - Reason abstractly and quantitatively
-
-* **MP.5** - Use appropriate tools strategically
-
-* **MP.6** - Attend to precision
-
-* **MP.7** - Look for and make use of structure
-
-* **MP.8** - Look for and express regularity in repeated reasoning
-
-* **MP.4** - Model with mathematics
-
-</details>
-
-<details><summary>
-
-**Measurement And Data**
-
-</summary>
-
-* **1.MD.2** - Express the length of an object as a whole number of length units, by laying multiple copies of a shorter object (the length unit) end to end; understand that the length measurement of an object is the number of same-size length units that span it with no
-
-</details>
-
-<details><summary>
-
-**Operations And Algebraic Thinking**
-
-</summary>
-
-* **1.OA.5** - Relate counting to addition and subtraction (e.g., by counting on 2 to add 2).
-
-* **1.OA.6** - Add and subtract within 20, demonstrating fluency for addition and subtraction within 10. Use strategies such as counting on; making ten (e.g., 8 + 6 = 8 + 2 + 4 = 10 + 4 = 14); decomposing a number leading to a ten (e.g., 13 – 4 = 13 – 3 – 1 = 10 – 1 = 9
-
-* **1.OA.1** - Use addition and subtraction within 20 to solve word problems involving situations of adding to, taking from, putting together, taking apart, and comparing, with unknowns in all positions, e.g., by using objects, drawings, and equations with a symbol for 
-
-</details>
-
-<details><summary>
-
-**Counting And Cardinality**
-
-</summary>
-
-* **K.CC.4** - Understand the relationship between numbers and quantities
-
-</details>
-
-## Next Generation Science Standards
-
-<details><summary>
-
-**Engineering Design**
-
-</summary>
-
-* **K-2-ETS1-1** - Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
-
-* **K-2-ETS1-2** - Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.
-
-* **K-2-ETS1-3** - Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.
-
-</details>
-
-<details><summary>
-
-**Energy**
-
-</summary>
-
-* **K-PS3-2** - Use tools and materials to design and build a structure that will reduce the warming effect of sunlight on an area.*[Clarification Statement: Examples of structures could include umbrellas, canopies, and tents that minimize the warming effect of the sun.
+* **K.G.A.1** - Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.
 
 </details>
 

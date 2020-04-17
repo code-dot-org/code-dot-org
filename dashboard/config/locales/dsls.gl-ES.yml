@@ -491,6 +491,9 @@ gl-ES:
 
           * [A finalidade dos sitios web - Guía de actividades] (en inglés)
           (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [A finalidade dos sitios web - Guía de ￼actividades￼]
+          (en inglés)(https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L2 Overview:
         markdown: "# Resumo\n\nEsta lección presenta os sitios web como un medio de
           expresión persoal. A clase primeiro discute os diferentes xeitos en que
@@ -501,6 +504,10 @@ gl-ES:
           * Contido da páxina web** - O texto sen procesar, imaxes e outros elementos
           incluídos nunha páxina web\n\n\n## Recursos\n\n* [Bosquexo da páxina web
           persoal - Guía de actividades] (en inglés)(https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
+        teacher_markdown: "* [Bosquexo da páxina web persoal - Guía de ￼actividades￼]
+          (en inglés)(https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
         markdown: |
           # Resumo
@@ -560,6 +567,29 @@ gl-ES:
           *  **[Unordered List](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
           *  **[List Item](//studio.code.org/docs/weblab/li/)** - `<li></li>`
           *  **[Ordered List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+      CSD U2 L7 Overview:
+        markdown: |-
+          # Resumo
+
+          Esta lección abarca como utilizar o contido creado por outros nun sitio web respectando os dereitos do creador orixinal dese contido. Despois de estudar primeiro as licenzas Creative Commons, a clase aprende como agregar imaxes ás páxinas web e dar a atribución adecuada ao facelo.
+
+          ## Vocabulario
+
+          * **Cita** - Unha cita ou referencia a un libro, artigo ou autor, especialmente nun traballo académico.
+          * **Copyright** - o dereito legal exclusivo, dado a un creador ou a un representante legal para imprimir, publicar, interpretar, filmar ou gravar material literario, artístico ou musical, e para autorizar a outros a facer o mesmo.
+          * ** Creative Commons** - Licencias de dereitos de autor públicas que permiten a libre distribución dun traballo que doutro xeito estaría protexido por dereitos de autor. Unha licencia CC utilízase cando un autor quere dar ás persoas o dereito de compartir, usar e construír sobre un traballo que ￼crearon￼.
+          * ** ￼Propiedade￼Intelectual** - Unha obra ou invento que é o resultado da creatividade, como un manuscrito ou un deseño, sobre o que se teñen dereitos e para o que se pode solicitar unha patente, un copyright, unha marca rexistrada, etc.
+
+          ￼##￼￼ Código presentado￼
+
+          *  **[Image](//studio.code.org/docs/weblab/img/)** - `<img />`
+
+          ##￼ ￼Recursos
+
+          * [Resumo dos Creative Commons](￼￼￼￼￼￼https://www.youtube.com/watch?v=HKfqoPYJdVc￼￼) – Vídeo
+          * [Licencia do teu traballo - Guía de ￼actividades￼ en inglés](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licencia do teu traballo - Guía de ￼actividades￼ en
+          inglés](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
       CSD U2 Top Websites:
         markdown: |-
           # Os mellores sitios web dos EE. UU.
@@ -588,43 +618,79 @@ gl-ES:
         - {}
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Compara a ￼lista￼ co código que a ￼fai￼.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Comprobación rápida das listas
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Compara a ￼lista￼ co código que a ￼fai￼.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Comprobación rápida das listas
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Compara a ￼lista￼ co código que a ￼fai￼.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Comprobación rápida das listas
       CSD U3 - conditionals - Matching:
         answers:
         - {}

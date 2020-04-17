@@ -2,13 +2,14 @@
 import _ from 'lodash';
 import {expect} from '../../../../util/deprecatedChai';
 import five from '@code-dot-org/johnny-five';
-import {makeStubBoard, MicrobitStubBoard} from './makeStubBoard';
+import {makeStubBoard, MicrobitStubBoard} from './boards/makeStubBoard';
 import {
   PlaygroundButton,
   MicroBitButton
 } from '@cdo/apps/lib/kits/maker/Button';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import sinon from 'sinon';
+import {EventEmitter} from 'events';
 
 describe('PlaygroundButton', function() {
   it('is a johnny-five Button component', function() {
@@ -63,12 +64,12 @@ describe('PlaygroundButton', function() {
 });
 
 describe('MicroBitButton', function() {
-  it('is a johnny-five Button component', function() {
+  it('is an event emitter component', function() {
     const button = new MicroBitButton({
       mb: new MicrobitStubBoard(),
       pin: 0
     });
-    expect(button).to.be.an.instanceOf(five.Button);
+    expect(button).to.be.an.instanceOf(EventEmitter);
   });
 
   describe('isPressed', () => {

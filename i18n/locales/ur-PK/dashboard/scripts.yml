@@ -358,6 +358,10 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+        csp5-virtual:
+          stages:
+            Variables:
+              name: متغیرات
         code-break:
           stages:
             Events:

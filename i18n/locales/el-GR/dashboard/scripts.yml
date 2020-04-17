@@ -1904,6 +1904,8 @@ el:
           stages:
             While Loops:
               name: Βρόχοι με «Όσο»
+            Variables:
+              name: Μεταβλητές
         virtual-holding-place:
           stages:
             Velocity:

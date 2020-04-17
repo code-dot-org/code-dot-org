@@ -265,6 +265,7 @@ lv:
     create_personal_login_under_13_username: Lietotājvārds (neizmanto savu īsto vārdu!)
     create_personal_login_under_13_parent_email: Vecāka/aizbildņa e-pasta adrese
     update_email: Atjaunināt
+    parent_guardian_email_label: Vecāka/aizbildņa e-pasts
   user_level:
     completed: Pabeigts
     tried: Mēģināts

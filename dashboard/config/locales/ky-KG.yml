@@ -52,6 +52,8 @@ ky:
     change_form:
       new_password: Жаңы сырсөз
       confirm_password: Жаңы сырсөздү тастыкта
+  parent_mailer:
+    parent_email_added_subject: Code.org сайтына кош келиңиз!
   teacher_mailer:
     new_teacher_subject: Code.org сайтына кош келиңиз!
   section:
@@ -89,6 +91,8 @@ ky:
   teacher:
     panel:
       section: Секция
+  user:
+    none: Жок
   home:
     trynow: Дагы кара
   video:

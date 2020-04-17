@@ -4216,6 +4216,9 @@ es-MX:
           ## Recursos
 
           * [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [El Proceso de Solventación del Problema](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Guia de la actividad ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Resumen
@@ -4891,18 +4894,11 @@ es-MX:
             detrás de cada nube.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
-          correct: true
+        - correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
-          feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
-            el néctar de cada flor y la miel de cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
-          feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
-            tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
-          feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
-            cada flor y la miel de cada panal.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué crees que sucederá si
             haces clic en "Ejecutar"? Recuerda que solo habrá *un* panal o *una* flor
@@ -5881,6 +5877,9 @@ es-MX:
           adelante durante el resto del curso. \n\n\n## Recursos\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: "* [Barcos de Aluminio - Ejemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)
+          - Guía de la actividad ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.

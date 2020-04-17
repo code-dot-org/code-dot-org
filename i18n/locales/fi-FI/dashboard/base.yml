@@ -237,6 +237,7 @@ fi:
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org kirjautumistiedot'
+    parent_email_added_subject: 'Tervetuloa Code.org:n!'
   teacher_mailer:
     new_teacher_subject: 'Tervetuloa Code.org:n!'
     delete_teacher_subject: 'Code.org ilmoitus: Tilisi on poistettu'
@@ -440,6 +441,8 @@ fi:
     update: "Päivitä tili"
     account_successfully_updated: "Käyttäjätili päivitettiin onnistuneesti."
     update_email: "Päivitä"
+    parent_guardian_email_label: "Huoltajan sähköpostiosoite"
+    none: "Ei mitään"
   user_level:
     completed: 'Valmis'
     tried: 'Kokeili'

@@ -209,6 +209,7 @@ ja:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org のログイン情報
+    parent_email_added_subject: Code.org へようこそ!
   teacher_mailer:
     new_teacher_subject: Code.org へようこそ!
   section:
@@ -415,6 +416,8 @@ ja:
     enter_parent_email: あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。
     update: アカウントを更新
     update_email: 更新
+    parent_guardian_email_label: 親/保護者Eメール
+    none: 設定なし
   user_level:
     completed: 完了
     tried: 試してみました

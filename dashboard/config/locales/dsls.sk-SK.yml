@@ -765,10 +765,11 @@ sk-SK:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
@@ -942,6 +943,85 @@ sk-SK:
           # Zastav sa
 
           Predtým, ako budeš pokračovať, pozri sa na Sprievodcu projektom. Počkaj tiež na inštrukcie od svojho učiteľa.
+      Dance_Party_extras_intro:
+        markdown: |-
+          # Pokračuj v tancovaní!
+
+          V časti 2 si vytvoríte vlastný projekt. Nie sú tu žiadne úlohy - namiesto toho tu je veľa projektov, ktoré ukazujú rôzne spôsoby  ako vytvoriť zložitejšie tanečné párty.
+
+          Tieto úrovne môžete vykonávať _v akomkoľvek poradí_. Pohľadaj naokolo, ako si niečo vyriešil/a v predchádzajúcich úlohách, alebo skombinuj koncepty medzi projektmi. Vyskúšaj ich všetky, vyber si svoj obľúbený a pracuj na pridávaní do tohto projektu, aby si si ho vytvoril/a sám/a.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Pokračovať</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Vytvoriť formáciu
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Kam odišli?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Tanečné súbory
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Štvrťové noty
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Basy, stredy, výšky
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Zrýchli to, Spomaľ to
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Dizajn, ktorý je dostupný
+
+          * Vo svete informatiky **dostupnosť** znamená tvorbu technológií pre ľudí so znevýhodnením.
+          * Znevýhodnenie môže byť fyzické, zrakové, sluchové a mnohé ďalšie.
+          * Existujú rôzne typy znevýhodnenia a všetky majú vplyv na to ako ľudia so znevýhodnením používajú technológie, napr. **smartfónové aplikácie**.
+          * Keď tvoríte aplikáciu, ktorá je dostupná pre ľudí so znevýhodnením, vlastne ju vylepšujete aj pre všetkých ostatných!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1137,6 +1217,11 @@ sk-SK:
         questions:
         - text: Ktoré slovo je vyhláskované?
         title: Vyber správnu odpoveď
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # Sila slov
+
+          Dnes sa naučíš, čo treba robiť, ak je niekto v online priestore nepríjemný.
       Prepare for your presentation:
         markdown: |-
           # Prezentácia projektov
@@ -1147,6 +1232,21 @@ sk-SK:
           # Prezentácia projektov
 
           Nastal čas prezentovať tvoj projekt. Viac informácií o prezentácii pred spolužiakmi dostaneš od učiteľa.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Súkromné a osobné údaje
+
+          Na tejto hodine sa naučíte, aký je rozdiel medzi tým čo je a nie je bezpečné zdielať na internete. Lekciu pripravili Common Sense Education.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      SimonSays-Unplugged:
+        markdown: |-
+          # Simon vraví
+
+          Zahraj si hru a porozmýšľaj aké príkazu sú potrebné na dosiahnutie správnych výsledkov.
+      Songwriting-Unplugged:
+        markdown: "# Písanie piesní\n\nNa príklade použitia refrénu v piesni sa študenti
+          naučia definovanie a vyvolanie funkcií. "
       behaviors 1 predict:
         answers:
         - feedback: Nesprávne.
@@ -1155,16 +1255,20 @@ sk-SK:
         - feedback: Nesprávne.
         - feedback: Nesprávne
         questions:
-        - {}
+        - text: Ak chceš vedieť ako funguje `tajomné správanie`, stlač tlačidlo "upraviť".
+            Naštuduj si kód a odhadni, čo sa bude diať.
       behaviors 4 predict:
         answers:
-        - feedback: Nesprávne.
-        - correct: true
+        - text: Vľavo, a potom dole
+          feedback: Nesprávne.
+        - text: Diagonálne
+          correct: true
           feedback: Správne!
         - {}
-        - feedback: Nesprávne
+        - text: Dole, a potom vľavo
+          feedback: Nesprávne
         questions:
-        - {}
+        - text: Odhadni, čo sa bude diať. Ktorým smerom pôjde satelit ku galaxii?
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: Umelec nakreslí trojuholník s tromi rovnakými stranami.
@@ -1444,8 +1548,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -1458,8 +1561,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -1472,8 +1574,7 @@ sk-SK:
           correct: true
           feedback: Správne!
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1495,8 +1596,7 @@ sk-SK:
           <br/><br/>
 
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1518,8 +1618,7 @@ sk-SK:
           <br/><br/>
 
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -1541,8 +1640,7 @@ sk-SK:
           <br/><br/>
 
         questions:
-        - text: Dobre sa pozri na tento kód. Ktorý z obrázkov tento program nakreslí,
-            keď stlačíš "Spustiť"?
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov nakreslí po stlačení "Spustiť"?
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu
@@ -1634,18 +1732,11 @@ sk-SK:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: Včela vezme nektár na každom kvete a vyrobí med na každom pláste.
-          correct: true
+        - correct: true
           feedback: Správne!
         - text: Včela sa pokúsi zobrať nektár z kvetu aj z plástu.
-          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
-            kvetu a vyrobiť med na každom pláste.
         - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
-          feedback: Nesprávne. Blok `ak na kvete` umožní včele zobrať nektár z každého
-            kvetu a vyrobiť med na každom pláste.
         - text: Neviem.
-          feedback: Blok `ak na kvete` umožní včele zobrať nektár z každého kvetu
-            a vyrobiť med na každom pláste.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -2046,6 +2137,22 @@ sk-SK:
         - {}
       courseE_project_exemplars_2019:
         content1: Strana učebnice s obodovaním testu
+        markdown: |-
+          # Príklady projektov
+
+          Práve sa ideš pustiť do svojho finálneho projektu. Predým ako začneš, prezri si niekoľko príkladov projektov.
+
+          ## Sprite Lab
+
+          | Tanec príšer (Sprite Lab) | Košíčková hra (Sprite Lab) |
+          |---|---|
+          | [![Monster Dance(Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Skús do tejto hry pridať text alebo skóre! | Skús do tejto hry pridať text alebo skóre! |
+
+          ## Umelec
+
+          | Postup (Artist) | Kvetiny s funkciami (Arist) |
+          |---|---|
       courseF_bee_variables_8a_2018:
         answers:
         - text: Včela nepozbiera žiadny nektár, pretoźe premenná sa nevolá "získaj".

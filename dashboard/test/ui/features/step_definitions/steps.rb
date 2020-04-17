@@ -871,6 +871,7 @@ Then(/^I set slider speed to medium/) do
 end
 
 Then(/^I slow down execution speed$/) do
+  @browser.execute_script("Maze.shouldSpeedUpInfiniteLoops = false;")
   @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 

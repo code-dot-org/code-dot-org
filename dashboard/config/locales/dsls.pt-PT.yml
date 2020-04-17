@@ -296,10 +296,10 @@ pt-PT:
         title: Escolha múltipla
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Cada um desses veículos foi decomposto em partes menores. Associe
           cada veículo com sua lista de partes correta.
         questions:
@@ -496,10 +496,12 @@ pt-PT:
         title: Jogo do labirinto
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Quais blocos resolvem o desafio?
         title: Labirinto - Pergunta de escolha múltipla
@@ -1128,19 +1130,23 @@ pt-PT:
         content1: descrição
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Quais blocos resolvem o desafio?
         title: Escolha múltipla
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Quais blocos formam o quadrado?
         title: Escolha múltipla
@@ -1159,20 +1165,23 @@ pt-PT:
         title: Associação
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Quanto néctar isso representa?
         title: Escolha múltipla
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
           correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Quanto néctar isso representa?
         title: Escolha múltipla
@@ -1212,9 +1221,11 @@ pt-PT:
         title: Escolha múltipla
       K-1 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Como simplificarias esta sequência sem usares ciclos?
         title: Escolha múltipla
@@ -1244,6 +1255,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Qual opção deve ser o bloco final?
         title: Escolha múltipla
@@ -1253,6 +1265,7 @@ pt-PT:
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Qual bloco repetir é o mesmo?
         title: Escolha múltipla
@@ -1262,6 +1275,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
           correct: true
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Escolha o bloco de repetição correto.
         title: Escolha múltipla
@@ -1285,6 +1299,7 @@ pt-PT:
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Qual resposta é a solução para este nível?
         title: Labirinto
@@ -1379,6 +1394,9 @@ pt-PT:
           ## Recursos
 
           * [O que é um Computador - Guia da Atividade](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 1 Lesson 6 Overview:
+        teacher_markdown: "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
+          - Soluções"
       behaviors 1 predict:
         answers:
         - {}
@@ -1549,6 +1567,20 @@ pt-PT:
         - text: C
         - text: D
           correct: true
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1558,6 +1590,20 @@ pt-PT:
         - text: C
         - text: D
           correct: true
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1567,6 +1613,20 @@ pt-PT:
         - text: C
         - text: D
           correct: true
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:

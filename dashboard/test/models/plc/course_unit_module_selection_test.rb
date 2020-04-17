@@ -7,21 +7,21 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
 
     @course_unit = create(:plc_course_unit, plc_course: course)
 
-    @stage_cliffs = create(:stage, name: 'Cliff stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_ornithology = create(:stage, name: 'Ornithology stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_ignorance = create(:stage, name: 'Ignorance stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
-    @stage_blue = create(:stage, name: 'Blue stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_cliffs = create(:lesson, name: 'Cliff stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_ornithology = create(:lesson, name: 'Ornithology stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_ignorance = create(:lesson, name: 'Ignorance stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
+    @stage_blue = create(:lesson, name: 'Blue stage', script: @course_unit.script, flex_category: Plc::LearningModule::CONTENT_MODULE)
 
-    @stage_honesty = create(:stage, name: 'Honesty stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
-    @stage_no_nickname = create(:stage, name: 'No nickname stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @stage_honesty = create(:lesson, name: 'Honesty stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
+    @stage_no_nickname = create(:lesson, name: 'No nickname stage', script: @course_unit.script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
 
-    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, stage: @stage_cliffs)
-    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, stage: @stage_ornithology)
-    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, stage: @stage_ignorance)
-    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, stage: @stage_blue)
+    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_cliffs)
+    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_ornithology)
+    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_ignorance)
+    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE, lesson: @stage_blue)
 
-    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, stage: @stage_honesty)
-    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, stage: @stage_no_nickname)
+    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, lesson: @stage_honesty)
+    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE, lesson: @stage_no_nickname)
 
     q1_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 1'

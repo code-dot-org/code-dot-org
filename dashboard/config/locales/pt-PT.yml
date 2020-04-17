@@ -275,6 +275,7 @@ pt:
       %{name}
   parent_mailer:
     student_associated_subject: Informações do início de sessão para a Code.org
+    parent_email_added_subject: Bem-vindo(a) à Code.org!
   teacher_mailer:
     new_teacher_subject: Bem-vindo(a) à Code.org!
     delete_teacher_subject: 'Notificação da Code.org: A tua conta foi apagada'
@@ -474,6 +475,9 @@ pt:
     update: Atualizar conta
     account_successfully_updated: Conta atualizada com sucesso.
     update_email: Atualizar
+    parent_guardian_email_label: Email dos pais ou do encarregado de educação
+    none: Nenhum
+    encrypted: encriptado
   user_level:
     completed: Concluído
     tried: Tentado

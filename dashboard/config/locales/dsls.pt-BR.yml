@@ -5557,6 +5557,8 @@ pt-BR:
           # Recursos
 
           * [Filtragem de pixels] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Guia de atividades ([PDF] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
+        teacher_markdown: "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
+          - Soluções"
       Unit 2 Lesson 10 Overview:
         markdown: |
           # Visão global
@@ -6214,18 +6216,11 @@ pt-BR:
             de mel ou *uma* flor atrás de cada nuvem.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: A abelha terá néctar em cada flor e mel em cada favo de mel.
-          correct: true
+        - correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
-          feedback: Incorreto. O bloco 'if na flor' permite que a abelha obtenha néctar
-            em cada flor e mel em cada favo de mel.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
-          feedback: Incorreto. Incorreto. O bloco 'se na flor' permite que a abelha
-            obtenha néctar em cada flor e mel em cada favo de mel..
         - text: Eu não sei.
-          feedback: O bloco 'se na flor' permite que a abelha obtenha néctar em cada
-            flor e mel em cada favo de mel.
         questions:
         - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
             depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo

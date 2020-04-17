@@ -242,6 +242,7 @@ pl:
       %{name}
   parent_mailer:
     student_associated_subject: Informacje logowania Code.org
+    parent_email_added_subject: Witaj na Code.org!
   teacher_mailer:
     new_teacher_subject: Witaj na Code.org!
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
@@ -477,6 +478,9 @@ pl:
       słowa
     enter_parent_email: Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)
     update_email: Uaktualnij
+    parent_guardian_email_label: Adres e-mail rodzica/opiekuna
+    none: Żaden
+    encrypted: zaszyfrowane
   user_level:
     completed: Ukończono
     tried: Próbowano

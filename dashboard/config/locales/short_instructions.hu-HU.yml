@@ -642,10 +642,10 @@ hu-HU:
       K-1 Maze 10: 'Kerüljük el a TNT-t, hogy eljussak a malachoz! '
       K-1 Maze 11: "Tervezd meg az utat és juttass el a buta malachoz. \nKerüld el
         a dinamitot, különben repülünk! Tipp: délre van tőlem."
-      K-1 Maze 2: Mozgass Keletre, hogy elkapjam a malacot!
-      K-1 Maze 3: Mozgass Délre, hogy elkapjam a malacot!
-      K-1 Maze 4: Mozgass Északra, hogy elkapjam a malacot!
-      K-1 Maze 5: Mozgass Keletre, hogy elkapjam a malacot!
+      K-1 Maze 2: Mozgass keletre, hogy elkapjam a malacot!
+      K-1 Maze 3: Mozgass délre, hogy elkapjam a malacot!
+      K-1 Maze 4: Mozgass északra, hogy elkapjam a malacot!
+      K-1 Maze 5: Mozgass keletre, hogy elkapjam a malacot!
       K-1 Maze 6: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze 7: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze 8: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
@@ -1172,20 +1172,14 @@ hu-HU:
         esemény blokkjához, ami már eleve ott van a munkaterületen.
       courseA_playLab_events3_2018: Csatolj egy "menj balra" blokkot az "amikor balra"
         esemény blokkjához, ami már eleve ott van a munkaterületen.
-      courseA_playLab_events3_2019: Csatolj egy "menj balra" blokkot az "amikor balra"
-        esemény blokkjához, ami már eleve ott van a munkaterületen.
       courseA_playLab_events4: Adj blokkokat a jobbra mozgáshoz.
       courseA_playLab_events5: Adj eseményeket, hogy Jorge a "fel" és a "le" gombok
         hatására felfelé, illetve lefelé mozduljon.
       courseA_playLab_events5_2018: Adj eseményeket, hogy Jorge a "fel" és a "le"
         gombok hatására felfelé, illetve lefelé mozduljon.
-      courseA_playLab_events5_2019: Adj eseményeket, hogy Jorge a "fel" és a "le"
-        gombok hatására felfelé, illetve lefelé mozduljon.
       courseA_playLab_events6: Tegyük érdekesebbé mindezt azzal, hogy megváltoztatod
         a hátteret és egy véletlen hangot lejátszol, amikor rákattintasz Jorgéra.
       courseA_playLab_events6_2018: Tegyük érdekesebbé mindezt azzal, hogy megváltoztatod
-        a hátteret és egy véletlen hangot lejátszol, amikor rákattintasz Jorgéra.
-      courseA_playLab_events6_2019: Tegyük érdekesebbé mindezt azzal, hogy megváltoztatod
         a hátteret és egy véletlen hangot lejátszol, amikor rákattintasz Jorgéra.
       courseA_playLab_events7: Adj hozzá a játékhoz, amit csak szeretnél. Meg tudod
         oldani, hogy a dinoszauruszt eltűnjön, amikor Jorge utoléri?
@@ -1522,7 +1516,7 @@ hu-HU:
         Itt egy nagyobb felbontású vászon - 16 x 16 pixeles!
 
         Nézd meg, mi történik, amikor elkezdünk játszani a bitekkel!
-      k-1 maze 1: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
+      k-1 maze 1: El tudsz juttatni nyugatra, hogy elkapjam a malacot?
       ramp_artist_loops1: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops1_2018: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
       ramp_artist_loops1_2019: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
