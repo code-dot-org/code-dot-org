@@ -96,7 +96,7 @@ class LibraryCreationDialog extends React.Component {
 
     try {
       const profaneWords = await findProfanity(libraryDetails.librarySource);
-      if (profaneWords) {
+      if (profaneWords && profaneWords.length > 0) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
           errorMessage: i18n.libraryCodeProfanity({
