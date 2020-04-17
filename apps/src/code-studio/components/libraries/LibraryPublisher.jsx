@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
+import {findProfanity} from './util';
 
 const styles = {
   alert: {
@@ -64,8 +65,7 @@ export default class LibraryPublisher extends React.Component {
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
     libraryClientApi: PropTypes.object.isRequired,
-    onShareTeacherLibrary: PropTypes.func,
-    findProfanity: PropTypes.func.isRequired
+    onShareTeacherLibrary: PropTypes.func
   };
 
   state = {
@@ -105,7 +105,7 @@ export default class LibraryPublisher extends React.Component {
 
     // Validate library name/description input for profanity before publishing.
     try {
-      const profaneWords = await this.props.findProfanity(
+      const profaneWords = await findProfanity(
         `${libraryName} ${libraryDescription}`
       );
       if (profaneWords) {
