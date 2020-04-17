@@ -302,8 +302,8 @@ class Homepage
                 url: "/yourschool"
               },
               {
-                text: "homepage_slot_text_link_shop",
-                url: "/shop"
+                text: "homepage_slot_text_link_donate",
+                url: "https://donate.code.org/give/172233/#!/donation/checkout"
               }
             ]
         }
