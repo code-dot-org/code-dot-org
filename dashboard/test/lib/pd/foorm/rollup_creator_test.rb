@@ -6,7 +6,7 @@ module Pd::Foorm
 
     test 'creates correct general rollup' do
       setup_csd_workshop
-      rollup = RollupCreator.calculate_averaged_rollup(@summarized_answers, @question_details, false)
+      rollup = RollupCreator.calculate_averaged_rollup(@summarized_answers, @question_details, false, {})
       expected_rollup = {
         general: {
           response_count: 2,
@@ -42,7 +42,7 @@ module Pd::Foorm
     test 'creates correct facilitator rollup' do
       setup_csf_workshop
       rollup = RollupCreator.
-        calculate_averaged_rollup(@summarized_answers, @question_details, true).
+        calculate_averaged_rollup(@summarized_answers, @question_details, true, @facilitators).
         with_indifferent_access
 
       assert_equal 4, rollup[:facilitator][@facilitator_id][:response_count]
@@ -56,7 +56,8 @@ module Pd::Foorm
         @summarized_answers,
         @question_details[:general],
         :general,
-        false
+        false,
+        @facilitators
       )
 
       expected_rollup = {
@@ -89,7 +90,8 @@ module Pd::Foorm
         @summarized_answers,
         @question_details[:facilitator],
         :facilitator,
-        true
+        true,
+        @facilitators
       ).with_indifferent_access
 
       assert_equal 4, intermediate_rollup[@facilitator_id][:response_count]
@@ -114,6 +116,7 @@ module Pd::Foorm
       questions_to_summarize = rollup_configuration['CS Fundamentals'.to_sym]
       workshop = create :csf_workshop
       @facilitator_id = workshop.facilitators.pluck(:id).first
+      @facilitators = {@facilitator_id => "name"}
       create :csf_intro_post_facilitator_workshop_submission_low,
         pd_workshop_id: workshop.id,
         facilitator_id: @facilitator_id

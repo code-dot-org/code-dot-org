@@ -16,12 +16,18 @@ module Pd::Foorm
     # }
     # Will only have general/facilitator if question_details contains those keys. Other keys are supported but
     # will not be split by facilitator
-    def self.calculate_averaged_rollup(summarized_answers, question_details, split_by_facilitator)
+    def self.calculate_averaged_rollup(summarized_answers, question_details, split_by_facilitator, facilitators)
       rollup = {}
       question_details.each do |type, question_details_per_type|
         # only split by facilitator when form type is facilitator, as otherwise questions cannot be split by facilitator
         should_split_by_facilitator = split_by_facilitator && type == :facilitator
-        intermediate_rollup = get_intermediate_rollup(summarized_answers, question_details_per_type, type, should_split_by_facilitator)
+        intermediate_rollup = get_intermediate_rollup(
+          summarized_answers,
+          question_details_per_type,
+          type,
+          should_split_by_facilitator,
+          facilitators
+        )
         rollup[type] = get_averaged_rollup(intermediate_rollup, question_details_per_type, should_split_by_facilitator)
       end
       rollup
@@ -113,8 +119,15 @@ module Pd::Foorm
     #       },...
     #     }
     #   }
-    def self.get_intermediate_rollup(summarized_answers, question_details, form_type, split_by_facilitator)
-      intermediate_rollup = split_by_facilitator ? {} : set_up_intermediate_rollup(question_details)
+    def self.get_intermediate_rollup(summarized_answers, question_details, form_type, split_by_facilitator, facilitators)
+      intermediate_rollup = {}
+      if split_by_facilitator
+        facilitators.each do |facilitator_id, _|
+          intermediate_rollup[facilitator_id] = set_up_intermediate_rollup(question_details)
+        end
+      else
+        intermediate_rollup = set_up_intermediate_rollup(question_details)
+      end
       summarized_answers.each_value do |summaries_by_form|
         included_form = false
         question_details.each do |question, question_data|
@@ -126,10 +139,8 @@ module Pd::Foorm
             included_form = true
             if form_type == :facilitator
               question_summary.each do |facilitator_id, facilitator_question_summary|
+                next if split_by_facilitator && !facilitators[facilitator_id]
                 included_form = true
-                if split_by_facilitator && !intermediate_rollup[facilitator_id]
-                  intermediate_rollup[facilitator_id] = set_up_intermediate_rollup(question_details)
-                end
                 intermediate_rollup_at_question = split_by_facilitator ?
                                                     intermediate_rollup[facilitator_id][:questions][question] :
                                                     intermediate_rollup[:questions][question]
