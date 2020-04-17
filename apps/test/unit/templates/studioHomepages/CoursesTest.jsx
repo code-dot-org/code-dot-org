@@ -58,9 +58,9 @@ describe('Courses', () => {
     it('non-English, student', () => {
       const wrapper = mountCourses({isEnglish: false, isTeacher: false});
       assertComponentsInOrder(wrapper, [
-        'SpecialAnnouncement',
         'CourseBlocksCsf',
         'CourseBlocksHoc',
+        'SpecialAnnouncement',
         'CourseBlocksInternationalGradeBands',
         'CourseBlocksTools'
       ]);
@@ -69,9 +69,9 @@ describe('Courses', () => {
     it('non-English, teacher', () => {
       const wrapper = mountCourses({isEnglish: false, isTeacher: true});
       assertComponentsInOrder(wrapper, [
-        'SpecialAnnouncement',
         'CourseBlocksCsf',
         'CourseBlocksHoc',
+        'SpecialAnnouncement',
         'CourseBlocksInternationalGradeBands',
         'CourseBlocksTools'
       ]);
