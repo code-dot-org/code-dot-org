@@ -43,6 +43,26 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       first
   end
 
+  test 'download_pardot_prospects' do
+    prospects = [
+      {'id' => '1', 'email' => 'alex@rollups.com', 'db_Opt_In' => 'Yes'},
+      {'id' => '2', 'email' => 'beta@rollups.com', 'db_City' => 'Seattle'},
+    ]
+    PardotV2.stubs(:retrieve_prospects).once.yields(prospects)
+
+    ContactRollupsPardotMemory.download_pardot_prospects
+
+    prospects.each do |prospect|
+      record = ContactRollupsPardotMemory.
+        find_by(email: prospect['email'], pardot_id: prospect['id'].to_i)
+
+      refute_nil record
+      refute_nil record.pardot_id_updated_at
+      refute_nil record.data_synced_at
+      assert_equal prospect.except('email', 'id'), record.data_synced
+    end
+  end
+
   test 'query_new_contacts' do
     assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
