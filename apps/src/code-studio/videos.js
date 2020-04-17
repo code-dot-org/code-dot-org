@@ -96,6 +96,7 @@ function createVideo(options) {
  * @param {boolean} [forceShowVideo=false]
  */
 videos.showVideoDialog = function(options, forceShowVideo) {
+  debugger;
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
@@ -224,18 +225,8 @@ videos.showVideoDialog = function(options, forceShowVideo) {
     'text-align': 'right'
   });
   nav.append(fallbackPlayerLinkDiv);
-
-  // // Resize modal to fit constraining dimension.
-  // let accurateInnerHeight = Math.min(window.innerHeight, window.outerHeight);
-  // let accurateInnerWidth = Math.min(window.innerWidth, window.outerWidth);
-  // let windowHeight = Math.min(accurateInnerHeight, accurateInnerWidth);
-  // let windowWidth = Math.max(accurateInnerHeight, accurateInnerWidth);
-
-  // var height = windowHeight * widthRatio,
-  //   width = windowWidth * heightRatio;
   function onResize() {
-    console.log("resize")
-    debugger;
+    console.log('resize')
     const dimensions = getVideoDimensions();
     $div.height(dimensions.containerHeight);
     $div.width(dimensions.videoWidth);
@@ -248,16 +239,13 @@ videos.showVideoDialog = function(options, forceShowVideo) {
       marginLeft: dimensions.videoWidth / -2 + 'px'
     });
 
-    $(video).height(dimensions.videoHeight);
-    notesDiv.height(dimensions.videoHeight);
-
-    // videoPlayer && videoPlayer.width(dimensions.videoWidth);
-    // videoPlayer && videoPlayer.height(dimensions.videoHeight);
+    let newVideoHeight = dimensions.containerHeight - $('.video-modal').find('.ui-tabs-nav').outerHeight();
+    $(video).height(newVideoHeight); //*/dimensions.videoHeight);
+    notesDiv.height(newVideoHeight); //*/dimensions.videoHeight);
   }
-
+debugger;
   window.addEventListener('resize', onResize);
-  // debugger;
-  onResize()
+  onResize();
 
   currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
@@ -303,6 +291,7 @@ function getVideoDimensions() {
   const widthRatio = 0.8;
   const heightRatio = 0.75;
   const aspectRatio = 16 / 9;
+  debugger;
   const maxHeight = $(window).height() * heightRatio,
     maxWidth = $(window).width() * widthRatio;
 
@@ -316,26 +305,6 @@ function getVideoDimensions() {
 
   dimensions.videoHeight = dimensions.containerHeight - navBarHeight;
   return dimensions;
-}
-
-{
-  // $div.height(divHeight);
-  // $div.width(divWidth)
-
-  // // Standard css hack to center a div within the viewport.
-  // $div.css({
-  //   top: '50%',
-  //   left: '50%',
-  //   marginTop: divHeight / -2 + 'px',
-  //   marginLeft: divWidth / -2 + 'px'
-  // });
-
-  // var videoHeight = $div.innerHeight() - nav.outerHeight();
-  // $(video).height(videoHeight);
-  // notesDiv.height(videoHeight);
-  // // debugger;
-  // videoPlayer && videoPlayer.width(divWidth);
-  // videoPlayer && videoPlayer.height(videoHeight);
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
