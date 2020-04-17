@@ -94,14 +94,12 @@ class ParentLetter extends React.Component {
             })}
           />
           <h1>{i18n.parentLetterStep1()}</h1>
-          <p>
-            <SafeMarkdown
-              markdown={i18n.parentLetterStep1Details({
-                engagementLink: ENGAGEMENT_URL,
-                videosLink: pegasus(`/educate/resources/videos`)
-              })}
-            />
-          </p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStep1Details({
+              engagementLink: ENGAGEMENT_URL,
+              videosLink: pegasus(`/educate/resources/videos`)
+            })}
+          />
           <h1>{i18n.parentLetterStep2()}</h1>
           <SignInInstructions
             loginType={loginType}
@@ -110,43 +108,35 @@ class ParentLetter extends React.Component {
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <p>
-            <SafeMarkdown
-              markdown={i18n.parentLetterStep2Details({
-                studentName: studentName,
-                projectsLink: studio('/projects/public'),
-                atHomeLink: pegasus('/athome')
-              })}
-            />
-          </p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStep2Details({
+              studentName: studentName,
+              projectsLink: studio('/projects/public'),
+              atHomeLink: pegasus('/athome')
+            })}
+          />
           <h1>{i18n.parentLetterStep3()}</h1>
-          <p>
-            <SafeMarkdown
-              markdown={i18n.parentLetterStep3Details({
-                accountEditLink: studio('/users/edit')
-              })}
-            />
-          </p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStep3Details({
+              accountEditLink: studio('/users/edit')
+            })}
+          />
           <h1>{i18n.parentLetterCodeBreak()}</h1>
-          <p>
-            <SafeMarkdown
-              markdown={i18n.parentLetterCodeBreakDetails({
-                codebreakLink: pegasus('/break')
-              })}
-            />
-          </p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterCodeBreakDetails({
+              codebreakLink: pegasus('/break')
+            })}
+          />
           <h1>{i18n.parentLetterWhy()}</h1>
           <p>{i18n.parentLetterWhyDetails()}</p>
           <h1>{i18n.parentLetterStudentPrivacy()}</h1>
-          <p>
-            <SafeMarkdown
-              markdown={i18n.parentLetterStudentPrivacyDetails({
-                pledgeLink: PRIVACY_PLEDGE_URL,
-                commonSenseLink: COMMON_SENSE_ARTICLE_URL,
-                privacyPolicyLink: pegasus('/privacy/student-privacy')
-              })}
-            />
-          </p>
+          <SafeMarkdown
+            markdown={i18n.parentLetterStudentPrivacyDetails({
+              pledgeLink: PRIVACY_PLEDGE_URL,
+              commonSenseLink: COMMON_SENSE_ARTICLE_URL,
+              privacyPolicyLink: pegasus('/privacy/student-privacy')
+            })}
+          />
           <p>{i18n.parentLetterClosing()}</p>
           <p>{teacherName}</p>
         </article>
@@ -279,13 +269,11 @@ const SignInInstructions = ({
   const loginTypeName = LOGIN_TYPE_NAMES[loginType];
   return (
     <div>
-      <p>
-        <SafeMarkdown
-          markdown={i18n.parentLetterLoginType({
-            loginTypeName: loginTypeName
-          })}
-        />
-      </p>
+      <SafeMarkdown
+        markdown={i18n.parentLetterLoginType({
+          loginTypeName: loginTypeName
+        })}
+      />
       {steps}
     </div>
   );
