@@ -45,26 +45,12 @@ class CourseBlocksCsfModern extends Component {
     $('#coursef')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
       .show();
-    $('#pre-express')
-      .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
-      .show();
-    $('#express')
-      .appendTo(ReactDOM.findDOMNode(this.refs.express))
-      .show();
   }
 
   render() {
     return (
       <div>
-        <ContentContainer
-          heading={i18n.courseBlocksCsfExpressHeading()}
-          description={i18n.courseBlocksCsfExpressDescription()}
-        >
-          <div className="row">
-            <ProtectedStatefulDiv ref="pre_express" />
-            <ProtectedStatefulDiv ref="express" />
-          </div>
-        </ContentContainer>
+        <ExpressCourses />
 
         <ContentContainer
           heading={i18n.courseBlocksCsfYoungHeading()}
@@ -112,6 +98,31 @@ class CourseBlocksCsfModern extends Component {
           ]}
         />
       </div>
+    );
+  }
+}
+
+class ExpressCourses extends Component {
+  componentDidMount() {
+    $('#pre-express')
+      .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
+      .show();
+    $('#express')
+      .appendTo(ReactDOM.findDOMNode(this.refs.express))
+      .show();
+  }
+
+  render() {
+    return (
+      <ContentContainer
+        heading={i18n.courseBlocksCsfExpressHeading()}
+        description={i18n.courseBlocksCsfExpressDescription()}
+      >
+        <div className="row">
+          <ProtectedStatefulDiv ref="pre_express" />
+          <ProtectedStatefulDiv ref="express" />
+        </div>
+      </ContentContainer>
     );
   }
 }
