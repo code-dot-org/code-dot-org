@@ -125,10 +125,8 @@ level 'U5 Check Password if-else string_virtual', progression: 'if-else Statemen
 level 'How Dropdown Menus Work_2018_2019_virtual', progression: 'Dropdown Menus'
 level 'U5 if-else dropdown movie checker_virtual', progression: 'Dropdown Menus'
 level 'U5 if-else dropdown guess dice_virtual', progression: 'Dropdown Menus'
-level 'U5 if-else weeekend challenge_virtual', progression: 'Dropdown Menus'
 
 stage '"if-else-if" and Conditional Logic', flex_category: 'csp5_1'
-level 'CSP U5L09 SFLP_virtual', named: true
 level 'Introduction to Conditionals: if-else-if Statements_virtual', progression: 'Introduction to Conditionals: if-else-if Statements'
 level 'How "if-else-if" Works_2018_2019_virtual', progression: 'How "if-else-if" Works'
 level 'U5 if-else-if movie example_virtual', progression: 'How "if-else-if" Works'
