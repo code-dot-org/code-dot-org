@@ -6,16 +6,16 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     assert_equal 0, ContactRollupsPardotMemory.count
 
     new_mappings = [
-      {email: "alex@rollups.com", pardot_id: 1},
-      {email: "becky@rollups.com", pardot_id: 2}
+      {'id' => '1', 'email' => 'alex@rollups.com'},
+      {'id' => '2', 'email' => 'becky@rollups.com'}
     ]
-    PardotV2.stubs(:retrieve_new_ids).once.yields(new_mappings)
+    PardotV2.stubs(:retrieve_prospects).once.yields(new_mappings)
 
     ContactRollupsPardotMemory.add_and_update_pardot_ids
 
     new_mappings.each do |mapping|
       refute_nil ContactRollupsPardotMemory.
-        where(email: mapping[:email], pardot_id: mapping[:pardot_id]).
+        where(email: mapping['email'], pardot_id: mapping['id'].to_i).
         where.not(pardot_id_updated_at: nil).
         first
     end
@@ -31,15 +31,14 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       pardot_id: 1,
       pardot_id_updated_at: base_time
 
-    new_pardot_id = 2
-    PardotV2.stubs(:retrieve_new_ids).
+    PardotV2.stubs(:retrieve_prospects).
       once.
-      yields([{email: email, pardot_id: new_pardot_id}])
+      yields([{'id' => '2', 'email' => email}])
 
     ContactRollupsPardotMemory.add_and_update_pardot_ids
 
     refute_nil ContactRollupsPardotMemory.
-      where(email: email, pardot_id: new_pardot_id).
+      where(email: email, pardot_id: 2).
       where("pardot_id_updated_at > ?", base_time).
       first
   end
@@ -55,7 +54,9 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
     processed_contact_records = [
-      {email: 'alpha'}, {email: 'beta'}, {email: 'gamma'}
+      {email: 'alpha'},
+      {email: 'beta'},
+      {email: 'gamma'}
     ]
     processed_contact_records.each {|record| create :contact_rollups_processed, record}
 
@@ -71,6 +72,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'create_new_pardot_prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
+    assert_equal 0, ContactRollupsProcessed.count
     contact = create :contact_rollups_processed, data: {'opt_in' => true}
 
     PardotV2.expects(:submit_batch_request).once.returns([])
