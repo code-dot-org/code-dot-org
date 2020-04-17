@@ -147,13 +147,27 @@ describe('LibraryPublisher', () => {
   });
 
   describe('validateAndPublish', () => {
-    let wrapper;
+    let wrapper, server;
     const description = 'description';
     const selectedFunctions = {foo: true};
 
     beforeEach(() => {
       wrapper = shallow(<LibraryPublisher {...DEFAULT_PROPS} />);
+      server = sinon.fakeServer.create();
+      server.autoRespond = true;
     });
+
+    afterEach(() => {
+      server.restore();
+    });
+
+    const stubFindProfanityRequest = (status, serverData) => {
+      server.respondWith('POST', `/profanity/find`, [
+        status,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(serverData)
+      ]);
+    };
 
     it('is disabled when no functions are checked', async () => {
       wrapper.setState({
@@ -192,10 +206,7 @@ describe('LibraryPublisher', () => {
     });
 
     it('does not call publish if profanity is found', async () => {
-      findProfanity = sinon.stub().resolves(['fart']);
-      wrapper = shallow(
-        <LibraryPublisher {...DEFAULT_PROPS} findProfanity={findProfanity} />
-      );
+      stubFindProfanityRequest(200, ['fart']);
       wrapper.setState({
         libraryDescription: description,
         selectedFunctions: selectedFunctions
@@ -209,10 +220,7 @@ describe('LibraryPublisher', () => {
     });
 
     it('calls publish if no profanity is found', async () => {
-      findProfanity = sinon.stub().resolves(null);
-      wrapper = shallow(
-        <LibraryPublisher {...DEFAULT_PROPS} findProfanity={findProfanity} />
-      );
+      stubFindProfanityRequest(200, null);
       wrapper.setState({
         libraryDescription: description,
         selectedFunctions: selectedFunctions
@@ -225,10 +233,7 @@ describe('LibraryPublisher', () => {
     });
 
     it('calls publish if request to find profanity fails', async () => {
-      findProfanity = sinon.stub().rejects();
-      wrapper = shallow(
-        <LibraryPublisher {...DEFAULT_PROPS} findProfanity={findProfanity} />
-      );
+      stubFindProfanityRequest(500, null);
       wrapper.setState({
         libraryDescription: description,
         selectedFunctions: selectedFunctions

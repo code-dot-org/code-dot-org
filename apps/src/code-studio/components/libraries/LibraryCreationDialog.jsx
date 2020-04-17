@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
@@ -14,6 +13,7 @@ import LibraryPublisher from './LibraryPublisher';
 import loadLibrary from './libraryLoader';
 import LibraryClientApi from './LibraryClientApi';
 import {getStore} from '@cdo/apps/redux';
+import {findProfanity} from './util';
 
 const styles = {
   libraryBoundary: {
@@ -95,9 +95,7 @@ class LibraryCreationDialog extends React.Component {
     };
 
     try {
-      const profaneWords = await this.findProfanity(
-        libraryDetails.librarySource
-      );
+      const profaneWords = await findProfanity(libraryDetails.librarySource);
       if (profaneWords) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
@@ -113,15 +111,6 @@ class LibraryCreationDialog extends React.Component {
       // Still show dialog content if request errors
       this.setState(defaultNewState);
     }
-  };
-
-  findProfanity = text => {
-    return $.ajax({
-      url: '/profanity/find',
-      method: 'POST',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({text})
-    });
   };
 
   handleClose = () => {
@@ -145,7 +134,6 @@ class LibraryCreationDialog extends React.Component {
         onShareTeacherLibrary={this.onShareTeacherLibrary()}
         libraryDetails={libraryDetails}
         libraryClientApi={libraryClientApi}
-        findProfanity={this.findProfanity}
       />
     );
   };
