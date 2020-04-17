@@ -11,32 +11,6 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-export class CourseBlocksCsf extends Component {
-  static propTypes = {
-    showModern: PropTypes.bool.isRequired
-  };
-
-  render() {
-    if (this.props.showModern) {
-      return <CourseBlocksCsfModern />;
-    } else {
-      return <CourseBlocksCsfLegacy />;
-    }
-  }
-}
-
-class CourseBlocksCsfModern extends Component {
-  render() {
-    return (
-      <div>
-        <ExpressCourses />
-        <CoursesAToF />
-        <LegacyCSFNotification />
-      </div>
-    );
-  }
-}
-
 class ExpressCourses extends Component {
   componentDidMount() {
     $('#pre-express')
@@ -57,6 +31,7 @@ class ExpressCourses extends Component {
           <ProtectedStatefulDiv ref="pre_express" />
           <ProtectedStatefulDiv ref="express" />
         </div>
+        <AcceleratedAndUnplugged />
       </ContentContainer>
     );
   }
@@ -244,7 +219,7 @@ export class CourseBlocksHoc extends Component {
   }
 }
 
-export class CourseBlocksAll extends Component {
+export class CourseBlocksIntl extends Component {
   static propTypes = {
     isTeacher: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired
@@ -257,25 +232,52 @@ export class CourseBlocksAll extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <CourseBlocksCsf showModern={this.props.showModernElementaryCourses} />
+    if (this.props.showModernElementaryCourses) {
+      return (
+        <div>
+          <ExpressCourses />
 
-        <ContentContainer
-          heading={i18n.teacherCourseHoc()}
-          description={i18n.teacherCourseHocDescription()}
-          linkText={i18n.teacherCourseHocLinkText()}
-          link={pegasus('/hourofcode/overview')}
-        >
-          <CourseBlocksHoc isInternational={true} />
-        </ContentContainer>
+          <ContentContainer
+            heading={i18n.teacherCourseHoc()}
+            description={i18n.teacherCourseHocDescription()}
+            linkText={i18n.teacherCourseHocLinkText()}
+            link={pegasus('/hourofcode/overview')}
+          >
+            <CourseBlocksHoc isInternational={true} />
+          </ContentContainer>
 
-        <SpecialAnnouncement isTeacher={this.props.isTeacher} />
+          <SpecialAnnouncement isTeacher={this.props.isTeacher} />
 
-        <CourseBlocksInternationalGradeBands />
+          <CoursesAToF />
 
-        <CourseBlocksTools isEnglish={false} />
-      </div>
-    );
+          <LegacyCSFNotification />
+
+          <CourseBlocksInternationalGradeBands />
+
+          <CourseBlocksTools isEnglish={false} />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <CourseBlocksCsfLegacy />
+
+          <ContentContainer
+            heading={i18n.teacherCourseHoc()}
+            description={i18n.teacherCourseHocDescription()}
+            linkText={i18n.teacherCourseHocLinkText()}
+            link={pegasus('/hourofcode/overview')}
+          >
+            <CourseBlocksHoc isInternational={true} />
+          </ContentContainer>
+
+          <SpecialAnnouncement isTeacher={this.props.isTeacher} />
+
+          <CourseBlocksInternationalGradeBands />
+
+          <CourseBlocksTools isEnglish={false} />
+        </div>
+      );
+    }
   }
 }

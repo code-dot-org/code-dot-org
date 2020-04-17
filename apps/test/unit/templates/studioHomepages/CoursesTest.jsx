@@ -74,10 +74,11 @@ describe('Courses', () => {
             });
             assertComponentsInOrder(wrapper, [
               'ExpressCourses',
-              'CoursesAToF',
-              'LegacyCSFNotification',
+              'AcceleratedAndUnplugged',
               'CourseBlocksHoc',
               'SpecialAnnouncement',
+              'CoursesAToF',
+              'LegacyCSFNotification',
               'CourseBlocksInternationalGradeBands',
               'CourseBlocksTools'
             ]);
