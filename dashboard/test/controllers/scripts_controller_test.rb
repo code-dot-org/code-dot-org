@@ -502,6 +502,73 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal '2017', script.version_year
   end
 
+  test 'set and unset all general_params' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    # Set most of the properties.
+    # omitted: professional_learning_course, script_announcements, resourceTypes, resourceLinks because
+    # using fake values doesn't seem to work for them.
+    general_params = {
+      hideable_stages: 'on',
+      project_widget_visible: 'on',
+      student_detail_progress_view: 'on',
+      stage_extras_available: 'on',
+      has_verified_resources: 'on',
+      has_lesson_plan: 'on',
+      #is_stable: 'on', TODO: uncomment once is_stable is added
+      tts: 'on',
+      project_sharing: 'on',
+      peer_reviews_to_complete: 1,
+      curriculum_path: 'fake_curriculum_path',
+      version_year: '2020',
+      pilot_experiment: 'fake-pilot-experiment',
+      editor_experiment: 'fake-editor-experiment',
+      curriculum_umbrella: 'CSF',
+      supported_locales: ['fake-locale'],
+      project_widget_types: ['gamelab', 'weblab'],
+    }
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+    }.merge(general_params)
+    assert_response :redirect
+    script.reload
+
+    general_params.each do |k, v|
+      if v == 'on'
+        assert_equal !!v, !!script.send(k), "Property didn't update: #{k}"
+      else
+        assert_equal v, script.send(k), "Property didn't update: #{k}"
+      end
+    end
+
+    # Unset the properties.
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_path: '',
+      version_year: '',
+      pilot_experiment: '',
+      editor_experiment: '',
+      curriculum_umbrella: '',
+      supported_locales: [],
+      project_widget_types: [],
+    }
+    assert_response :redirect
+    script.reload
+
+    # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
+    expected = {"peer_reviews_to_complete" => 0}
+    assert_equal expected, script.properties
+  end
+
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
