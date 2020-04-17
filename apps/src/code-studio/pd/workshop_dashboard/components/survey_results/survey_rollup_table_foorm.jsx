@@ -297,6 +297,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
       denominator,
       'facilitatorAverage'
     );
+    return overallData;
   }
 
   // Get row data for response counts
@@ -413,8 +414,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
     }
   }
 
-  // Add the number of responses per facilitator to the responseCounts
-  // array
+  // Add the number of responses per facilitator to the responseCounts array
   addPerFacilitatorResponseCounts(responseCounts, key, data) {
     for (const facilitator in this.props.facilitators) {
       responseCounts[`${key}-${facilitator}`] =
@@ -422,8 +422,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
     }
   }
 
-  // Add per facilitator averages to the given row, where the averages are an object
-  // in the format {facilitatorId-1: 5,...}.
+  // Add per facilitator averages for a single-select question
+  // to the given row, where the averages are an object
+  // in the format {facilitatorId-1: 5,...}
   addPerFacilitatorAverageForSelect(row, averages, denominator, key) {
     for (const facilitator in averages) {
       row[`${key}-${facilitator}`] = this.getFormattedRowData(

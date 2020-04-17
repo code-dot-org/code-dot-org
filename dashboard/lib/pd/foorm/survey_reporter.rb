@@ -62,12 +62,22 @@ module Pd::Foorm
       return get_rollup_for_workshop_ids(workshop_ids, rollup_question_details, false)
     end
 
+    # Given set of facilitators and a course name, return average responses for given
+    # questions across all workshops each facilitator has run.
+    # @param object {facilitator_id: facilitator_name,...} specifying facilitators to include
+    # @param String course_name course name to rollup, ex 'CS Principles'
+    # @param object rollup_question_details questions to include in rollup
+    # @return
+    # {
+    #   general: { see RollupCreator.calculate_averaged_rollup },
+    #   facilitator: { see RollupCreator.calculate_averaged_rollup }
+    # }
     def self.get_facilitator_rollup_for_course(facilitators, course_name, rollup_question_details)
       rollups = {general: {}, facilitator: {}}
       facilitators.each_key do |facilitator_id|
         workshop_ids = Pd::Workshop.
           where(course: course_name).
-          # where.not(started_at: nil, ended_at: nil).
+          where.not(started_at: nil, ended_at: nil).
           left_outer_joins(:facilitators).where(users: {id: facilitator_id}).distinct.
           pluck(:id)
         facilitator_rollup = get_rollup_for_workshop_ids(workshop_ids, rollup_question_details, true, facilitator_id)
@@ -79,6 +89,8 @@ module Pd::Foorm
       rollups
     end
 
+    # given a set of workshop_ids and questions to roll up, get rollup for that workshop.
+    # If split_by_facilitator is true, split questions by facilitator id.
     def self.get_rollup_for_workshop_ids(workshop_ids, rollup_question_details, split_by_facilitator, facilitator_id=nil)
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids, facilitator_id)
       _, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
@@ -116,6 +128,9 @@ module Pd::Foorm
       [ws_submissions, foorm_submissions, forms]
     end
 
+    # @param integer workshop_id: id for a workshop
+    # @return {facilitator_id: facilitator_name,...} object with data
+    # for each facilitator for the workshop specified
     def self.get_facilitators_for_workshop(workshop_id)
       workshop = Pd::Workshop.find(workshop_id)
       facilitators = workshop.facilitators
