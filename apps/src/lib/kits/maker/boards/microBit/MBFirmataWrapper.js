@@ -1,4 +1,4 @@
-import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
+import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(SerialPort) {
