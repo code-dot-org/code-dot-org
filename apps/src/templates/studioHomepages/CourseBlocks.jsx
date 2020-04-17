@@ -174,6 +174,7 @@ export class CourseBlocks extends Component {
         {this.props.tiles.map((tile, index) => (
           <ProtectedStatefulDiv
             className="tutorial-block"
+            key={tile}
             ref={el => {
               if (el) {
                 $(tile).appendTo(ReactDOM.findDOMNode(el));
