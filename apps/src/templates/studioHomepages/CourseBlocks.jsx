@@ -26,53 +26,12 @@ export class CourseBlocksCsf extends Component {
 }
 
 class CourseBlocksCsfModern extends Component {
-  componentDidMount() {
-    $('#coursea')
-      .appendTo(ReactDOM.findDOMNode(this.refs.coursea))
-      .show();
-    $('#courseb')
-      .appendTo(ReactDOM.findDOMNode(this.refs.courseb))
-      .show();
-    $('#coursec')
-      .appendTo(ReactDOM.findDOMNode(this.refs.coursec))
-      .show();
-    $('#coursed')
-      .appendTo(ReactDOM.findDOMNode(this.refs.coursed))
-      .show();
-    $('#coursee')
-      .appendTo(ReactDOM.findDOMNode(this.refs.coursee))
-      .show();
-    $('#coursef')
-      .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
-      .show();
-  }
-
   render() {
     return (
       <div>
         <ExpressCourses />
 
-        <ContentContainer
-          heading={i18n.courseBlocksCsfYoungHeading()}
-          description={i18n.courseBlocksCsfYoungDescription()}
-        >
-          <div className="row">
-            <ProtectedStatefulDiv ref="coursea" />
-            <ProtectedStatefulDiv ref="courseb" />
-          </div>
-        </ContentContainer>
-
-        <ContentContainer
-          heading={i18n.courseBlocksCsfOlderHeading()}
-          description={i18n.courseBlocksCsfOlderDescription()}
-        >
-          <div className="row">
-            <ProtectedStatefulDiv ref="coursec" />
-            <ProtectedStatefulDiv ref="coursed" />
-            <ProtectedStatefulDiv ref="coursee" />
-            <ProtectedStatefulDiv ref="coursef" />
-          </div>
-        </ContentContainer>
+        <CoursesAToF />
 
         <NotificationResponsive
           type="bullhorn"
@@ -123,6 +82,57 @@ class ExpressCourses extends Component {
           <ProtectedStatefulDiv ref="express" />
         </div>
       </ContentContainer>
+    );
+  }
+}
+
+class CoursesAToF extends Component {
+  componentDidMount() {
+    $('#coursea')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursea))
+      .show();
+    $('#courseb')
+      .appendTo(ReactDOM.findDOMNode(this.refs.courseb))
+      .show();
+    $('#coursec')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursec))
+      .show();
+    $('#coursed')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursed))
+      .show();
+    $('#coursee')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursee))
+      .show();
+    $('#coursef')
+      .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
+      .show();
+  }
+
+  render() {
+    return (
+      <div>
+        <ContentContainer
+          heading={i18n.courseBlocksCsfYoungHeading()}
+          description={i18n.courseBlocksCsfYoungDescription()}
+        >
+          <div className="row">
+            <ProtectedStatefulDiv ref="coursea" />
+            <ProtectedStatefulDiv ref="courseb" />
+          </div>
+        </ContentContainer>
+
+        <ContentContainer
+          heading={i18n.courseBlocksCsfOlderHeading()}
+          description={i18n.courseBlocksCsfOlderDescription()}
+        >
+          <div className="row">
+            <ProtectedStatefulDiv ref="coursec" />
+            <ProtectedStatefulDiv ref="coursed" />
+            <ProtectedStatefulDiv ref="coursee" />
+            <ProtectedStatefulDiv ref="coursef" />
+          </div>
+        </ContentContainer>
+      </div>
     );
   }
 }
