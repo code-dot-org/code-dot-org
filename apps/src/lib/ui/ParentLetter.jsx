@@ -78,7 +78,7 @@ class ParentLetter extends React.Component {
             .filter(student => student.id.toString() === studentId)
             .shift()
         : null;
-    const studentName = student ? student.name : '';
+    const studentName = student ? student.name : 'your student';
     const secretPicturePath = student ? student.secret_picture_path : null;
     const secretWords = student ? student.secret_words : null;
 
@@ -111,14 +111,13 @@ class ParentLetter extends React.Component {
             studentName={studentName}
           />
           <p>
-            At the top of their homepage, {studentName || 'your student'} can
-            continue the course they are doing with their classroom at school.
-            They can also create their own{' '}
-            <a href={studio('/projects/public')}>
-              games or artwork in the Project Gallery
-            </a>{' '}
-            or check out <a href={pegasus('/athome')}>code.org/athome</a> for
-            ideas for things to work on at home.
+            <SafeMarkdown
+              markdown={i18n.parentLetterStep2Details({
+                studentName: studentName,
+                projectsLink: studio('/projects/public'),
+                atHomeLink: pegasus('/athome')
+              })}
+            />
           </p>
           <h1>{i18n.parentLetterStep3()}</h1>
           <p>
@@ -255,8 +254,11 @@ const SignInInstructions = ({
             studentName={studentName}
           />
           <li>
-            Type in their secret words {secretWords && `(${secretWords})`} and
-            then click 'Sign in'
+            <p>
+              {i18n.parentLetterSecretWords({
+                secretWords: secretWords ? secretWords : ''
+              })}
+            </p>
           </li>
           {!secretWords && <li>{i18n.parentLetterForgotPassword()}</li>}
         </ol>
@@ -310,8 +312,11 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
   const sectionUrl = studio(`/sections/${sectionCode}`);
   return (
     <li>
-      Go to <a href={sectionUrl}>{sectionUrl}</a> and click on their name
-      {studentName && ` (${studentName})`}
+      <SafeMarkdown
+        markdown={i18n.parentLetterSectionSignIn({
+          sectionLink: sectionUrl
+        })}
+      />
     </li>
   );
 };
