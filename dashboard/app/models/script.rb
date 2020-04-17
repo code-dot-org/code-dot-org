@@ -1046,6 +1046,13 @@ class Script < ActiveRecord::Base
 
       # Set/create Lesson containing custom ScriptLevel
       if lesson_name
+        # We want a script to either have all of its lessons have lesson groups
+        # or none of the lessons have lesson groups. We know we have hit this case if
+        # there are lesson groups for a script but the lesson group key
+        # for this specific lesson is blank
+        if !lesson_group_key.present? && !raw_lesson_groups.empty?
+          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{lesson_name} does not have a lesson group."
+        end
         # find the lesson group for this lesson
         lesson_group = LessonGroup.find_by!(
           key: lesson_group_key.presence || "",
@@ -1114,7 +1121,6 @@ class Script < ActiveRecord::Base
       lesson.save! if lesson.changed?
     end
 
-    Script.prevent_lesson_group_mismatch(script_lessons)
     Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
     Script.prevent_lesson_group_with_no_lessons(script)
 
@@ -1147,22 +1153,6 @@ class Script < ActiveRecord::Base
       end
       previous_lesson_groups.append(current_lesson_group)
       current_lesson_group = lesson.lesson_group.key
-    end
-  end
-
-  # We want a script to either have all of its lessons have lesson groups
-  # or none of the lessons have lesson groups. This method raises an error if
-  # we some lessons with lesson groups and not others
-  def self.prevent_lesson_group_mismatch(script_lessons)
-    lessons_without_lesson_group = []
-    lessons_with_lesson_group = []
-
-    script_lessons.each do |lesson|
-      lesson.lesson_group.key.blank? ? lessons_without_lesson_group.append(lesson.name) : lessons_with_lesson_group.append(lesson.name)
-    end
-
-    if !lessons_without_lesson_group.empty? && !lessons_with_lesson_group.empty?
-      raise "Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: #{lessons_without_lesson_group.join(', ')}."
     end
   end
 
