@@ -112,24 +112,6 @@ const LegacyCSFNotification = () => (
   />
 );
 
-class CourseBlocksCsfLegacy extends Component {
-  render() {
-    return (
-      <ContentContainer
-        heading={i18n.csf()}
-        description={i18n.csfDescription()}
-        link={'/home/#recent-courses'}
-        linkText={i18n.viewMyRecentCourses()}
-      >
-        <Courses1To4 />
-        <br />
-        <br />
-        <AcceleratedAndUnplugged />
-      </ContentContainer>
-    );
-  }
-}
-
 class Courses1To4 extends Component {
   componentDidMount() {
     $('#course1')
@@ -148,12 +130,19 @@ class Courses1To4 extends Component {
 
   render() {
     return (
-      <div className="row">
-        <ProtectedStatefulDiv ref="course1" />
-        <ProtectedStatefulDiv ref="course2" />
-        <ProtectedStatefulDiv ref="course3" />
-        <ProtectedStatefulDiv ref="course4" />
-      </div>
+      <ContentContainer
+        heading={i18n.csf()}
+        description={i18n.csfDescription()}
+        link={'/home/#recent-courses'}
+        linkText={i18n.viewMyRecentCourses()}
+      >
+        <div className="row">
+          <ProtectedStatefulDiv ref="course1" />
+          <ProtectedStatefulDiv ref="course2" />
+          <ProtectedStatefulDiv ref="course3" />
+          <ProtectedStatefulDiv ref="course4" />
+        </div>
+      </ContentContainer>
     );
   }
 }
@@ -260,7 +249,9 @@ export class CourseBlocksIntl extends Component {
     } else {
       return (
         <div>
-          <CourseBlocksCsfLegacy />
+          <ContentContainer>
+            <AcceleratedAndUnplugged />
+          </ContentContainer>
 
           <ContentContainer
             heading={i18n.teacherCourseHoc()}
@@ -272,6 +263,8 @@ export class CourseBlocksIntl extends Component {
           </ContentContainer>
 
           <SpecialAnnouncement isTeacher={this.props.isTeacher} />
+
+          <Courses1To4 />
 
           <CourseBlocksInternationalGradeBands />
 

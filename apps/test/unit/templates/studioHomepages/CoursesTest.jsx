@@ -91,10 +91,10 @@ describe('Courses', () => {
               modernElementaryCoursesAvailable: false
             });
             assertComponentsInOrder(wrapper, [
-              'Courses1To4',
               'AcceleratedAndUnplugged',
               'CourseBlocksHoc',
               'SpecialAnnouncement',
+              'Courses1To4',
               'CourseBlocksInternationalGradeBands',
               'CourseBlocksTools'
             ]);
