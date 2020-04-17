@@ -75,6 +75,7 @@ describe('Courses', () => {
             assertComponentsInOrder(wrapper, [
               'CourseBlocksCsf',
               'CourseBlocksCsfModern',
+              'ExpressCourses',
               'CourseBlocksHoc',
               'SpecialAnnouncement',
               'CourseBlocksInternationalGradeBands',
