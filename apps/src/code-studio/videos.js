@@ -22,6 +22,7 @@ videos.createVideoWithFallback = function(
 ) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
+  debugger;
   if (fullWidth) {
     video.addClass('video-player-full-width');
     parentElement.addClass('video-content-full-width');
@@ -117,9 +118,6 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   options.inDialog = true;
 
   upgradeInsecureOptions(options);
-  var widthRatio = 0.8;
-  var heightRatio = 0.75;
-  var aspectRatio = 16 / 9;
 
   var body = $('<div/>');
   var content = $('#notes-content')
@@ -226,7 +224,6 @@ videos.showVideoDialog = function(options, forceShowVideo) {
     'text-align': 'right'
   });
   nav.append(fallbackPlayerLinkDiv);
-  debugger;
 
   // // Resize modal to fit constraining dimension.
   // let accurateInnerHeight = Math.min(window.innerHeight, window.outerHeight);
@@ -238,33 +235,29 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   //   width = windowWidth * heightRatio;
   function onResize() {
     console.log("resize")
-  var height = $(window).height() * heightRatio,
-    width = $(window).width() * widthRatio;
+    debugger;
+    const dimensions = getVideoDimensions();
+    $div.height(dimensions.containerHeight);
+    $div.width(dimensions.videoWidth);
 
-  if (height * aspectRatio < width) {
-    $div.height(height);
-    $div.width(height * aspectRatio);
-  } else {
-    $div.height(width / aspectRatio);
-    $div.width(width);
-  }
+    // Standard css hack to center a div within the viewport.
+    $div.css({
+      top: '50%',
+      left: '50%',
+      marginTop: dimensions.containerHeight / -2 + 'px',
+      marginLeft: dimensions.videoWidth / -2 + 'px'
+    });
 
-  // Standard css hack to center a div within the viewport.
-  $div.css({
-    top: '50%',
-    left: '50%',
-    marginTop: $div.height() / -2 + 'px',
-    marginLeft: $div.width() / -2 + 'px'
-  });
+    $(video).height(dimensions.videoHeight);
+    notesDiv.height(dimensions.videoHeight);
 
-  var divHeight = $div.innerHeight() - nav.outerHeight();
-  $(video).height(divHeight);
-  notesDiv.height(divHeight);
+    // videoPlayer && videoPlayer.width(dimensions.videoWidth);
+    // videoPlayer && videoPlayer.height(dimensions.videoHeight);
   }
 
   window.addEventListener('resize', onResize);
+  // debugger;
   onResize()
-
 
   currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
@@ -304,6 +297,46 @@ videos.showVideoDialog = function(options, forceShowVideo) {
     return shouldStillAdd;
   });
 };
+
+function getVideoDimensions() {
+  const navBarHeight = $('.video-modal').find('.ui-tabs-nav').outerHeight();
+  const widthRatio = 0.8;
+  const heightRatio = 0.75;
+  const aspectRatio = 16 / 9;
+  const maxHeight = $(window).height() * heightRatio,
+    maxWidth = $(window).width() * widthRatio;
+
+  let dimensions = {navBarHeight: navBarHeight};
+  dimensions.containerHeight = (maxWidth / aspectRatio) + navBarHeight;
+  dimensions.videoWidth = maxWidth;
+  if ((maxHeight - navBarHeight) * aspectRatio < maxWidth) {
+    dimensions.containerHeight = maxHeight;
+    dimensions.videoWidth = (maxHeight - navBarHeight) * aspectRatio;
+  }
+
+  dimensions.videoHeight = dimensions.containerHeight - navBarHeight;
+  return dimensions;
+}
+
+{
+  // $div.height(divHeight);
+  // $div.width(divWidth)
+
+  // // Standard css hack to center a div within the viewport.
+  // $div.css({
+  //   top: '50%',
+  //   left: '50%',
+  //   marginTop: divHeight / -2 + 'px',
+  //   marginLeft: divWidth / -2 + 'px'
+  // });
+
+  // var videoHeight = $div.innerHeight() - nav.outerHeight();
+  // $(video).height(videoHeight);
+  // notesDiv.height(videoHeight);
+  // // debugger;
+  // videoPlayer && videoPlayer.width(divWidth);
+  // videoPlayer && videoPlayer.height(videoHeight);
+}
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(
@@ -376,9 +409,11 @@ function youTubeAvailabilityEndpointURL(noCookie) {
   }
 }
 
+// var videoPlayer;
+
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
-  var fallbackPlayerID = 'fallbackPlayer' + Date.now();
+  var fallbackPlayerID = 'fallbackPlayer' //+ Date.now();
 
   // If we have want the video player to be at 100% width & 100% height, then
   // let's assume we are attaching to a container that is relative, and we want
@@ -395,7 +430,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     containerDivStyle = '';
     dimensions = 'width="' + playerWidth + '" height="' + playerHeight + '" ';
   }
-
+debugger;
   var playerCode =
     '<div style="' +
     containerDivStyle +
@@ -419,7 +454,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#videoTabContainer').empty();
   $('#videoTabContainer').append(playerCode);
 
-  var videoPlayer = videojs(
+  const videoPlayer = videojs(
     fallbackPlayerID,
     {nativeControlsForTouch: true},
     function() {
@@ -439,6 +474,16 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       });
     }
   );
+
+  function onResize() {
+    console.log('onResize2')
+    const dimensions = getVideoDimensions();
+    videoPlayer.width(dimensions.videoWidth);
+    videoPlayer.height(dimensions.videoHeight);
+  }
+
+  window.addEventListener('resize', onResize);
+  onResize();
 
   videoPlayer.on('ended', onVideoEnded);
 
