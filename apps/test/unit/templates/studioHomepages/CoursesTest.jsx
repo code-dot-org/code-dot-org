@@ -77,6 +77,7 @@ describe('Courses', () => {
               'CourseBlocksCsfModern',
               'ExpressCourses',
               'CoursesAToF',
+              'LegacyCSFNotification',
               'CourseBlocksHoc',
               'SpecialAnnouncement',
               'CourseBlocksInternationalGradeBands',
