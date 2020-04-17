@@ -17,13 +17,11 @@ describe('EligibilityChecklist', () => {
 
   let clock;
 
-  beforeEach(function() {
-    // By default, use normal time
-    clock = sinon.useFakeTimers(new Date());
-  });
-
   afterEach(function() {
-    clock.restore();
+    if (clock) {
+      clock.restore();
+      clock = undefined;
+    }
   });
 
   it('renders a div if we have no discountCode', () => {
