@@ -134,14 +134,11 @@ level 'U5 if-else-if quiz grade_virtual', progression: 'How "if-else-if" Works'
 level 'CSPU5_U3 - High Low - Else if_virtual', progression: 'How "if-else-if" Works'
 level 'CSPU5_U3 - High Low - Debug_virtual', progression: 'How "if-else-if" Works'
 level 'Introduction to Conditionals: Compound Boolean Expressions_virtual', progression: 'Introduction to Conditionals: Compound Boolean Expressions'
-level 'How the Boolean &&, || and ! Operators Work_2018_2019_virtual', progression: 'How the Boolean &&, || and ! Operators Work'
 level 'CSPU5_U3 - Conditionals - Simple OR_virtual', progression: 'How the Boolean &&, || and ! Operators Work'
 level 'CSPU5_U3 - Conditionals - Simple AND_virtual', progression: 'How the Boolean &&, || and ! Operators Work'
-level 'How Compound Boolean Expressions Work_2018_2019_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'U5 compound boolean museum example_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual', progression: 'How Compound Boolean Expressions Work'
-level 'U5-AP-Algorithm-Does-It-Count_virtual', progression: 'AP Practice Response - Score the Response', assessment: true
 
 stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
 level 'CSP U5L10 SFLP_virtual', named: true
