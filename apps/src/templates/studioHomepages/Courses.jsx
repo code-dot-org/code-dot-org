@@ -127,7 +127,6 @@ class Courses extends Component {
         {/* Non-English */}
         {!isEnglish && (
           <CourseBlocksAll
-            isEnglish={false}
             isTeacher={isTeacher}
             showModernElementaryCourses={modernElementaryCoursesAvailable}
           />

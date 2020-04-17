@@ -206,7 +206,6 @@ export class CourseBlocksHoc extends Component {
 
 export class CourseBlocksAll extends Component {
   static propTypes = {
-    isEnglish: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     showModernElementaryCourses: PropTypes.bool.isRequired
   };
@@ -228,16 +227,14 @@ export class CourseBlocksAll extends Component {
           linkText={i18n.teacherCourseHocLinkText()}
           link={pegasus('/hourofcode/overview')}
         >
-          <CourseBlocksHoc isInternational={!this.props.isEnglish} />
+          <CourseBlocksHoc isInternational={true} />
         </ContentContainer>
 
-        {!this.props.isEnglish && (
-          <SpecialAnnouncement isTeacher={this.props.isTeacher} />
-        )}
+        <SpecialAnnouncement isTeacher={this.props.isTeacher} />
 
-        {!this.props.isEnglish && <CourseBlocksInternationalGradeBands />}
+        <CourseBlocksInternationalGradeBands />
 
-        <CourseBlocksTools isEnglish={this.props.isEnglish} />
+        <CourseBlocksTools isEnglish={false} />
       </div>
     );
   }
