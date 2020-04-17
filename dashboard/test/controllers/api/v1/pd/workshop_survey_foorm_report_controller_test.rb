@@ -130,6 +130,44 @@ module Api::V1::Pd
       assert_equal 6, general_rollup[:overall_facilitator][facilitator_id.to_s.to_sym][:response_count]
     end
 
+    test 'calculates averages across multiple workshops correctly' do
+      csf_workshop_1 = create :csf_workshop,
+        started_at:  Time.now.utc - 1.day,
+        ended_at: Time.now.utc - 1.hour
+      csf_workshop_2 = create :csf_workshop,
+        started_at:  Time.now.utc - 1.day,
+        ended_at: Time.now.utc - 1.hour
+      create_surveys_for_csf_workshop(csf_workshop_1, csf_workshop_1.facilitators.pluck(:id).first, 3, 2)
+      create_surveys_for_csf_workshop(csf_workshop_1, csf_workshop_2.facilitators.pluck(:id).first, 5, 1)
+
+      get :generic_survey_report, params: {workshop_id: csf_workshop_1.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      overall_rollup_general = response[:workshop_rollups][:general][:overall]
+      assert_equal 11, overall_rollup_general[:response_count]
+      assert_equal 5.36, overall_rollup_general[:averages][:teacher_engagement][:rows][:engaging]
+      overall_rollup_facilitator = response[:workshop_rollups][:facilitator][:overall]
+      assert_equal 11, overall_rollup_facilitator[:response_count]
+      assert_equal 5.36, overall_rollup_facilitator[:averages][:facilitator_effectiveness][:rows][:demonstrated_knowledge]
+      overall_facilitator_rollup_facilitator = response[:workshop_rollups][:facilitator][:overall_facilitator]
+      csf_workshop_1_facilitator = csf_workshop_1.facilitators.pluck(:id).first.to_s.to_sym
+      assert_equal 5, overall_facilitator_rollup_facilitator[csf_workshop_1_facilitator][:response_count]
+    end
+
+    def create_surveys_for_csf_workshop(csf_workshop, facilitator_id, high_count, low_count)
+      create_list :csf_intro_post_facilitator_workshop_submission_low,
+        low_count,
+        pd_workshop_id: csf_workshop.id,
+        facilitator_id: facilitator_id
+      create_list :csf_intro_post_facilitator_workshop_submission_high,
+        high_count,
+        pd_workshop_id: csf_workshop.id,
+        facilitator_id: facilitator_id
+      create_list :csf_intro_post_workshop_submission_low, low_count, pd_workshop_id: csf_workshop.id
+      create_list :csf_intro_post_workshop_submission_high, high_count, pd_workshop_id: csf_workshop.id
+    end
+
     def create_survey_submission(survey_response)
       submission = Foorm::Submission.create(
         form_name: 'surveys/pd/workshop_daily_survey_day_0',
