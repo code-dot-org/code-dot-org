@@ -1913,7 +1913,7 @@ endvariants
   test 'raises error if a lesson group key is empty' do
     l1 = create :level
     dsl = <<-SCRIPT
-      lesson_group ''
+      lesson_group '', display_name: 'Display Name'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -1926,7 +1926,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect all levelbuilder created lesson groups to have key.', raise.message
+    assert_equal 'Validation failed: Key Expect all levelbuilder created lesson groups to have key.', raise.message
   end
 
   test 'raises error if a lesson group key is given without a display_name' do

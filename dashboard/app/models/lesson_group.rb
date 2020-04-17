@@ -19,6 +19,16 @@ class LessonGroup < ApplicationRecord
   belongs_to :script
   has_many :lessons
 
+  acts_as_list scope: :script, column: :position
+
+  validates_uniqueness_of :key, scope: :script_id
+
+  validates :key,
+    presence: {
+      message: 'Expect all levelbuilder created lesson groups to have key.'
+    },
+    if: proc {|a| a.user_facing}
+
   def localized_display_name
     I18n.t "flex_category.#{key}"
   end
