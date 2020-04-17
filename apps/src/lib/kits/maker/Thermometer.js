@@ -1,7 +1,10 @@
 /** @file wrap Playground.Thermometer to expose raw value */
 import Playground from 'playground-io';
 import {EventEmitter} from 'events';
-import {sensor_channels, roundToHundredth} from './MicroBitConstants';
+import {
+  sensor_channels,
+  roundToHundredth
+} from './boards/microBit/MicroBitConstants';
 
 // All we care about doing here is caching the temp sensor's raw input value
 // and then exposing it as a property on the Thermometer object.
