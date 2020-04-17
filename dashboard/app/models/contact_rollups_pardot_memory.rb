@@ -48,7 +48,12 @@ class ContactRollupsPardotMemory < ApplicationRecord
     end
   end
 
-  def self.seed_data_from_pardot(last_id = nil, limit = nil)
+  # Downloads and saves prospect data from Pardot.
+  # *Warning:* This method overwrites existing data.
+  #
+  # @param [Integer] last_id retrieves only Pardot ID greater than this value
+  # @param [Integer] limit the maximum number of Pardot prospects to download
+  def self.download_pardot_prospects(last_id = nil, limit = nil)
     last_id ||= ContactRollupsPardotMemory.maximum(:pardot_id) || 0
     fields = %w(
       id
@@ -68,7 +73,20 @@ class ContactRollupsPardotMemory < ApplicationRecord
     )
 
     PardotV2.retrieve_prospects(last_id, fields, limit) do |prospects|
-      prospects.each {|prospect| puts prospect}
+      current_time = Time.now.utc
+      batch = prospects.map do |item|
+        {
+          email: item['email'],
+          pardot_id: item['id'].to_i,
+          pardot_id_updated_at: current_time,
+          data_synced: item.except('email', 'id'),
+          data_synced_at: current_time
+        }
+      end
+
+      import! batch,
+        validate: false,
+        on_duplicate_key_update: [:pardot_id, :pardot_id_updated_at, :data_synced, :data_synced_at]
     end
   end
 
