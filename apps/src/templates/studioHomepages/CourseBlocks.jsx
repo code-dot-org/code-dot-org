@@ -230,42 +230,28 @@ export class CourseBlocksIntl extends Component {
   }
 
   render() {
-    if (this.props.showModernElementaryCourses) {
-      return (
-        <div>
-          <ExpressCourses />
+    const {isTeacher, showModernElementaryCourses: modernCsf} = this.props;
+    const AcceleratedCourses = () => (
+      <ContentContainer>
+        <AcceleratedAndUnplugged />
+      </ContentContainer>
+    );
+    return (
+      <div>
+        {modernCsf ? <ExpressCourses /> : <AcceleratedCourses />}
 
-          <CourseBlocksHoc isInternational />
+        <CourseBlocksHoc isInternational />
 
-          <SpecialAnnouncement isTeacher={this.props.isTeacher} />
+        <SpecialAnnouncement isTeacher={isTeacher} />
 
-          <CoursesAToF />
+        {modernCsf ? <CoursesAToF /> : <Courses1To4 />}
 
-          <LegacyCSFNotification />
+        {modernCsf && <LegacyCSFNotification />}
 
-          <CourseBlocksInternationalGradeBands />
+        <CourseBlocksInternationalGradeBands />
 
-          <CourseBlocksTools isEnglish={false} />
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <ContentContainer>
-            <AcceleratedAndUnplugged />
-          </ContentContainer>
-
-          <CourseBlocksHoc isInternational />
-
-          <SpecialAnnouncement isTeacher={this.props.isTeacher} />
-
-          <Courses1To4 />
-
-          <CourseBlocksInternationalGradeBands />
-
-          <CourseBlocksTools isEnglish={false} />
-        </div>
-      );
-    }
+        <CourseBlocksTools isEnglish={false} />
+      </div>
+    );
   }
 }
