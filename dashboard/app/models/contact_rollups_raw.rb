@@ -22,22 +22,31 @@ class ContactRollupsRaw < ApplicationRecord
     ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name}")
   end
 
-  def self.extract_email_preferences
-    EmailPreference.all.find_in_batches(batch_size: 1000) do |email_preference_batch|
-      raw_contacts = []
-      email_preference_batch.each do |email_preference|
-        raw_contact = {
-          email: email_preference.email,
-          sources: "dashboard.#{EmailPreference.table_name}",
-          data: {opt_in: email_preference.opt_in},
-          data_updated_at: email_preference.updated_at
-        }
-        raw_contacts << raw_contact
-      end
+  def self.extract_from_table(source_table, columns)
+    email_preferences_query = extract_from_table_query(source_table, columns)
+    ActiveRecord::Base.connection.execute(email_preferences_query)
+  end
 
-      # ben to do: handle if required fields are missing, or if there's a duplicate?
-      # currently will fail if any required fields are missing
-      import! raw_contacts
-    end
+  def self.extract_from_table_query(source_table, columns)
+    now = Time.now.utc
+
+    <<~SQL
+      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+      SELECT
+        email,
+        'dashboard.#{source_table}' as sources,
+        #{extract_columns_into_mysql_json(columns)} as data,
+        #{source_table}.updated_at as data_updated_at,
+        '#{now.strftime('%Y-%m-%d %H:%M:%S')}' as created_at,
+        '#{now.strftime('%Y-%m-%d %H:%M:%S')}' as updated_at
+      FROM #{source_table}
+    SQL
+  end
+
+  # params -- takes an array of column names
+  # returns -- a MySQL string that can be used in a SELECT statement to return a list of
+  def self.extract_columns_into_mysql_json(columns)
+    last = columns.pop
+    'JSON_OBJECT(' + columns.map {|column| "'#{column}', #{column}, "}.join + "'#{last}', #{last}" + ')'
   end
 end
