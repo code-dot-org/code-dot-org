@@ -86,7 +86,9 @@ class HeightResizer extends React.Component {
     }
 
     event.stopPropagation();
-    event.preventDefault();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
 
     const pageY = event.pageY || (event.touches && event.touches[0].pageY);
     this.setState({dragging: true, dragStart: pageY});
@@ -94,14 +96,18 @@ class HeightResizer extends React.Component {
 
   onMouseUp = event => {
     event.stopPropagation();
-    event.preventDefault();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
 
     this.setState({dragging: false});
   };
 
   onMouseMove = event => {
     event.stopPropagation();
-    event.preventDefault();
+    if (event.cancelable) {
+      event.preventDefault();
+    }
 
     if (!this.state.dragging) {
       return;
