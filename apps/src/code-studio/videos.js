@@ -10,6 +10,8 @@ var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 import i18n from '@cdo/locale';
 
+const TAB_NAV_ID = '.ui-tabs-nav';
+const MODAL_ID = '.video-modal';
 var videos = (module.exports = {});
 
 videos.createVideoWithFallback = function(
@@ -22,7 +24,6 @@ videos.createVideoWithFallback = function(
 ) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
-  debugger;
   if (fullWidth) {
     video.addClass('video-player-full-width');
     parentElement.addClass('video-content-full-width');
@@ -42,7 +43,7 @@ videos.createVideoWithFallback = function(
 };
 
 function onVideoEnded() {
-  $('.video-modal').trigger('ended');
+  $(MODAL_ID).trigger('ended');
 }
 
 var currentVideoOptions;
@@ -96,7 +97,6 @@ function createVideo(options) {
  * @param {boolean} [forceShowVideo=false]
  */
 videos.showVideoDialog = function(options, forceShowVideo) {
-  debugger;
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
@@ -152,7 +152,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   var $div = $(dialog.div);
   $div.addClass('video-modal');
 
-  $('.video-modal').on('remove', function() {
+  $(MODAL_ID).on('remove', function() {
     // Manually removing src to fix a continual playback bug in IE9
     // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
     video.removeAttr('src');
@@ -208,7 +208,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   if (document.dir === 'rtl') {
     download.css('float', 'right');
   }
-  var nav = $div.find('.ui-tabs-nav');
+  var nav = $div.find(TAB_NAV_ID);
   nav.append(download);
 
   // Even though some React code will mount to this div and clear its
@@ -226,24 +226,26 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   });
   nav.append(fallbackPlayerLinkDiv);
   function onResize() {
-    console.log('resize')
-    const dimensions = getVideoDimensions();
-    $div.height(dimensions.containerHeight);
-    $div.width(dimensions.videoWidth);
+    const containerDimensions = getVideoContainerDimensions();
+    $div.height(containerDimensions.containerHeight);
+    $div.width(containerDimensions.containerWidth);
 
     // Standard css hack to center a div within the viewport.
     $div.css({
       top: '50%',
       left: '50%',
-      marginTop: dimensions.containerHeight / -2 + 'px',
-      marginLeft: dimensions.videoWidth / -2 + 'px'
+      marginTop: containerDimensions.containerHeight / -2 + 'px',
+      marginLeft: containerDimensions.containerWidth / -2 + 'px'
     });
 
-    let newVideoHeight = dimensions.containerHeight - $('.video-modal').find('.ui-tabs-nav').outerHeight();
-    $(video).height(newVideoHeight); //*/dimensions.videoHeight);
-    notesDiv.height(newVideoHeight); //*/dimensions.videoHeight);
+    // The nav bar will have changed dimensions due to the resizing of the
+    // container. We re-calculate the available height for the video to account
+    // for this.
+    const availableHeight = getVideoHeight();
+    $(video).height(availableHeight);
+    notesDiv.height(availableHeight);
   }
-debugger;
+
   window.addEventListener('resize', onResize);
   onResize();
 
@@ -262,7 +264,7 @@ debugger;
 
   dialog.show();
 
-  var videoModal = $('.video-modal');
+  var videoModal = $(MODAL_ID);
 
   videoModal.on('ended', function() {
     dialog.hide();
@@ -280,31 +282,36 @@ debugger;
     shouldStillAdd = false;
   });
 
-  var divHeight = $div.innerHeight() - nav.outerHeight();
+  var divHeight = getVideoHeight();
   setupVideoFallback(options, $div.width(), divHeight, function() {
     return shouldStillAdd;
   });
 };
 
-function getVideoDimensions() {
-  const navBarHeight = $('.video-modal').find('.ui-tabs-nav').outerHeight();
+function getVideoContainerDimensions() {
+  const navBarHeight = $(MODAL_ID)
+    .find(TAB_NAV_ID)
+    .outerHeight();
   const widthRatio = 0.8;
   const heightRatio = 0.75;
   const aspectRatio = 16 / 9;
-  debugger;
   const maxHeight = $(window).height() * heightRatio,
     maxWidth = $(window).width() * widthRatio;
 
-  let dimensions = {navBarHeight: navBarHeight};
-  dimensions.containerHeight = (maxWidth / aspectRatio) + navBarHeight;
-  dimensions.videoWidth = maxWidth;
+  let dimensions = {};
+  dimensions.containerHeight = maxWidth / aspectRatio + navBarHeight;
+  dimensions.containerWidth = maxWidth;
   if ((maxHeight - navBarHeight) * aspectRatio < maxWidth) {
     dimensions.containerHeight = maxHeight;
-    dimensions.videoWidth = (maxHeight - navBarHeight) * aspectRatio;
+    dimensions.containerWidth = (maxHeight - navBarHeight) * aspectRatio;
   }
 
-  dimensions.videoHeight = dimensions.containerHeight - navBarHeight;
   return dimensions;
+}
+
+function getVideoHeight() {
+  const video = $(MODAL_ID);
+  return video.innerHeight() - video.find(TAB_NAV_ID).outerHeight();
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
@@ -382,7 +389,7 @@ function youTubeAvailabilityEndpointURL(noCookie) {
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
-  var fallbackPlayerID = 'fallbackPlayer' //+ Date.now();
+  var fallbackPlayerID = 'fallbackPlayer' + Date.now();
 
   // If we have want the video player to be at 100% width & 100% height, then
   // let's assume we are attaching to a container that is relative, and we want
@@ -399,7 +406,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     containerDivStyle = '';
     dimensions = 'width="' + playerWidth + '" height="' + playerHeight + '" ';
   }
-debugger;
+
   var playerCode =
     '<div style="' +
     containerDivStyle +
@@ -445,10 +452,8 @@ debugger;
   );
 
   function onResize() {
-    console.log('onResize2')
-    const dimensions = getVideoDimensions();
-    videoPlayer.width(dimensions.videoWidth);
-    videoPlayer.height(dimensions.videoHeight);
+    videoPlayer.width($(MODAL_ID).innerWidth());
+    videoPlayer.height(getVideoHeight());
   }
 
   window.addEventListener('resize', onResize);
