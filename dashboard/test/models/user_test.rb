@@ -679,10 +679,25 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot create teacher without email" do
-    assert_does_not_create(User) do
-      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
-    end
+  test "cannot create manual teacher without email" do
+    user = User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher',
+                 password: 'xxxxxxxx', provider: 'manual'
+    )
+    assert_not_nil user.errors[:email]
+  end
+
+  # FND-1130: This test will no longer be required
+  test "teacher with no email created after 2016-06-14 should be invalid" do
+    user = create :teacher, :without_email
+    assert user.invalid?
+    assert_not_empty user.errors[:email]
+  end
+
+  # FND-1130: This test will no longer be required
+  test "teacher with no email created before 2016-06-14 should be valid" do
+    user = create :teacher, :without_email, :before_email_validation
+    assert user.valid?
+    assert_empty user.errors[:email]
   end
 
   test "cannot make an account without email a teacher" do
