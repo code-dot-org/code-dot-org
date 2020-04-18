@@ -242,7 +242,7 @@ export class CourseBlocksIntl extends Component {
 
         <CourseBlocksHoc isInternational />
 
-        <SpecialAnnouncement isTeacher={isTeacher} />
+        <SpecialAnnouncement isEnglish={false} isTeacher={isTeacher} />
 
         {modernCsf ? <CoursesAToF /> : <Courses1To4 />}
 
