@@ -27,7 +27,7 @@ def get_top200_data(url)
   lines.shift # first line just contains a note
   lines.shift # second line is column names
   lines.each do |line|
-    next if find_profanity(line) # skip record if it contains profanity
+    next if has_profanity?(line) # skip record if it contains profanity
 
     record = OpenStruct.new
     record.id = id
@@ -54,7 +54,7 @@ def get_viral50_data(url)
   lines = csv.read
   lines.shift # first line is column names
   lines.each do |line|
-    next if find_profanity(line) # skip record if it contains profanity
+    next if has_profanity?(line) # skip record if it contains profanity
 
     record = OpenStruct.new
     record.id = id
@@ -69,9 +69,11 @@ def get_viral50_data(url)
   return records, columns
 end
 
-def find_profanity(line)
+def has_profanity?(line)
   profanity_check = "#{line[2]} - #{line[1]}" # check artist + track name for profanity
-  ProfanityFilter.find_potential_profanity(profanity_check, PROFANITY_LOCALE).present?
+  profanity = ProfanityFilter.find_potential_profanity(profanity_check, PROFANITY_LOCALE)
+
+  !(profanity || '').empty?
 end
 
 def main
