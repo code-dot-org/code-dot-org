@@ -914,44 +914,46 @@ class Script < ActiveRecord::Base
     lockable_count = 0
     non_lockable_count = 0
 
-    if raw_lesson_groups.empty?
-      lesson_group = LessonGroup.find_or_create_by(
-        key: '',
-        script: script,
-        user_facing: false,
-        position: 0
-      )
-
-      script_lesson_groups << lesson_group
-    else
-      # Finds or creates Lesson Groups with the correct position.
-      # In addition it check for 2 things:
-      # 1. That all the lesson groups specified by the editor have a key and
-      # display name.
-      # 2. If the lesson group key is an existing key that the given display name
-      # for that key matches the already saved display name
-      raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-        if raw_lesson_group[:key].blank?
-          raise "Expect all levelbuilder created lesson groups to have key."
-        end
-        if raw_lesson_group[:display_name].blank?
-          raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-        end
-
+    unless raw_script_levels.empty?
+      if raw_lesson_groups.empty?
         lesson_group = LessonGroup.find_or_create_by(
-          key: raw_lesson_group[:key],
+          key: '',
           script: script,
-          user_facing: true
+          user_facing: false,
+          position: 0
         )
 
-        lesson_group.assign_attributes(position: index + 1)
-        lesson_group.save! if lesson_group.changed?
-
-        if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-          raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-        end
-
         script_lesson_groups << lesson_group
+      else
+        # Finds or creates Lesson Groups with the correct position.
+        # In addition it check for 2 things:
+        # 1. That all the lesson groups specified by the editor have a key and
+        # display name.
+        # 2. If the lesson group key is an existing key that the given display name
+        # for that key matches the already saved display name
+        raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+          if raw_lesson_group[:key].blank?
+            raise "Expect all levelbuilder created lesson groups to have key."
+          end
+          if raw_lesson_group[:display_name].blank?
+            raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
+          end
+
+          lesson_group = LessonGroup.find_or_create_by(
+            key: raw_lesson_group[:key],
+            script: script,
+            user_facing: true
+          )
+
+          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.save! if lesson_group.changed?
+
+          if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+            raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
+          end
+
+          script_lesson_groups << lesson_group
+        end
       end
     end
 
