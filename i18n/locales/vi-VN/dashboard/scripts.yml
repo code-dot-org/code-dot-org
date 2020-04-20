@@ -5883,3 +5883,31 @@ vi:
               name: các bước lập trình
             Events:
               name: Các sự kiện
+        no-lg:
+          stages:
+            new stage:
+              name: giai đoạn mới
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Phần 5 Đánh giá 2
+            While Loops:
+              name: Vòng lặp "trong khi"
+            Loops and Simulations:
+              name: Vòng lặp và mô phỏng
+            Introduction to Arrays:
+              name: Giới thiệu Danh sách
+            'Building an App: Image Scroller':
+              name: 'Xây dựng một ứng dụng: Cuộn hình ảnh'
+            Unit 5 Assessment 3:
+              name: Phần 5 Đánh giá 3
+            Processing Arrays:
+              name: Mảng xử lý
+            Functions with Return Values:
+              name: Chức năng với các giá trị trả lại
+            'Building an App: Canvas Painter':
+              name: 'Xây dựng một ứng dụng: Hoạ sĩ Canvas'
+            Unit 5 Assessment 4:
+              name: Phần 5 Đánh giá 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Bài 5 đánh giá 5 - câu hỏi thực hành giả AP
