@@ -15923,8 +15923,8 @@ en:
             Purpose of a Websites:
               name: Purpose of a Websites
         csp5-virtual:
-          title: Self Paced Introduction to App Lab
-          description: This unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This uni uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          title: Event-Driven Programming App Lab
+          description: This self-paced unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           description_audience: ''
           stages:
@@ -16030,6 +16030,8 @@ en:
               name: Moving Memory Challenges
             If-Statements:
               name: If-Statements
+            Keep Going:
+              name: Keep Going
         virtual-holding-place:
           stages:
             Example Projects:
@@ -16090,6 +16092,8 @@ en:
               name: Episode 4 - Digital Information with Alice Keeler & Mike Krieger
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
               name: Episode 4 - Digital Information with Mike Krieger & Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Episode 5 - Simulations & Data with Bill Gates
           title: Code Break
           description_audience: ''
           description_short: ''
@@ -16110,6 +16114,8 @@ en:
               name: Episode 4 - Digital Information with Alice Keeler & Mike Krieger
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
               name: Episode 4 - Digital Information with Mike Krieger & Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Episode 5 - Simulations & Data with Bill Gates
           title: Code Break Staging
           description_audience: ''
           description_short: ''
@@ -16128,6 +16134,8 @@ en:
               name: Episode 4 - Digital Information with Alice Keeler & Mike Krieger
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
               name: Episode 4 - Digital Information with Mike Krieger & Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Episode 5 - Simulations & Data with Bill Gates
           title: Code Break Younger Staging
           description_audience: ''
           description_short: ''
@@ -16148,6 +16156,8 @@ en:
               name: Episode 4 - Digital Information with Alice Keeler & Mike Krieger
             Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
               name: Episode 4 - Digital Information with Mike Krieger & Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Episode 5 - Simulations & Data with Bill Gates
           title: Code Break for Younger Students
           description_audience: ''
           description_short: ''
