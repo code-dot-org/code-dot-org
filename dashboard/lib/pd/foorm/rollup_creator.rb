@@ -9,17 +9,24 @@ module Pd::Foorm
 
     # @param summarized_answers: output of WorkshopSummarizer.summarize_answers_by_survey
     # @param question_details: output of RollupHelper.get_question_details_for_rollup
-    # Calculate average responses for each question in question_details for the set of responses in summarized_answers
+    # Calculate average responses for each question in question_details
+    # for the set of responses in summarized_answers
     # @return {
     #   general: {see get_averaged_rollup},
     #   facilitator: {see get_averaged_rollup}
     # }
-    # Will only have general/facilitator if question_details contains those keys. Other keys are supported but
-    # will not be split by facilitator
-    def self.calculate_averaged_rollup(summarized_answers, question_details, split_by_facilitator, facilitators)
+    # Will only have general/facilitator if question_details contains those keys.
+    # Other keys are supported but will not be split by facilitator
+    def self.calculate_averaged_rollup(
+      summarized_answers,
+      question_details,
+      split_by_facilitator,
+      facilitators
+    )
       rollup = {}
       question_details.each do |type, question_details_per_type|
-        # only split by facilitator when form type is facilitator, as otherwise questions cannot be split by facilitator
+        # only split by facilitator when form type is facilitator,
+        # as otherwise questions cannot be split by facilitator
         should_split_by_facilitator = split_by_facilitator && type == :facilitator
         intermediate_rollup = get_intermediate_rollup(
           summarized_answers,
@@ -28,7 +35,11 @@ module Pd::Foorm
           should_split_by_facilitator,
           facilitators
         )
-        rollup[type] = get_averaged_rollup(intermediate_rollup, question_details_per_type, should_split_by_facilitator)
+        rollup[type] = get_averaged_rollup(
+          intermediate_rollup,
+          question_details_per_type,
+          should_split_by_facilitator
+        )
       end
       rollup
     end
@@ -45,7 +56,10 @@ module Pd::Foorm
       rollup = {}
       if split_by_facilitator
         intermediate_rollup.each do |facilitator_id, facilitator_intermediate_rollup|
-          rollup[facilitator_id] = get_averaged_rollup_helper(facilitator_intermediate_rollup, question_details)
+          rollup[facilitator_id] = get_averaged_rollup_helper(
+            facilitator_intermediate_rollup,
+            question_details
+          )
         end
       else
         rollup = get_averaged_rollup_helper(intermediate_rollup, question_details)
