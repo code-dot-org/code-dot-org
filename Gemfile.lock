@@ -524,7 +524,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    marked-rails (0.3.2.0)
     memoist (0.16.0)
     memory_profiler (0.9.10)
     metaclass (0.0.4)
@@ -958,7 +957,6 @@ DEPENDENCIES
   le (~> 2.2)
   lograge!
   loofah (~> 2.2.1)
-  marked-rails
   memory_profiler
   mini_magick (>= 4.9.4)
   minitest (~> 5.5)
