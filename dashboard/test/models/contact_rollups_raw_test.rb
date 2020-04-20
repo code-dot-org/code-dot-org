@@ -44,6 +44,23 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     assert_equal expected_sql, ContactRollupsRaw.extract_from_table_query('email_preferences', ['opt_in'], 'email')
   end
 
+  test 'extract_from_table_query works when called with multiple columns' do
+    expected_sql = <<~SQL
+      INSERT INTO #{ContactRollupsRaw.table_name} (email, sources, data, data_updated_at, created_at, updated_at)
+      SELECT
+        parent_email,
+        'dashboard.users' AS sources,
+        JSON_OBJECT('birthday', birthday, 'gender', gender) AS data,
+        users.updated_at AS data_updated_at,
+        NOW() AS created_at,
+        NOW() AS updated_at
+      FROM users
+      WHERE parent_email IS NOT NULL AND parent_email != ''
+    SQL
+
+    assert_equal expected_sql, ContactRollupsRaw.extract_from_table_query('users', ['birthday', 'gender'], 'parent_email')
+  end
+
   test 'extract_columns_into_mysql_json works when called with single column' do
     assert_equal "JSON_OBJECT('test', test)", ContactRollupsRaw.extract_columns_into_mysql_json(['test'])
   end
