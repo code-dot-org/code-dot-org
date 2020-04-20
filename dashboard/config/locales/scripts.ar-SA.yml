@@ -3,7 +3,7 @@ ar:
   data:
     script:
       category:
-        csf_category_name: أساسيات علوم الكمبيوتر
+        full_course_category_name: الدورات الكاملة
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
       name:
@@ -1818,3 +1818,7 @@ ar:
               name: الخوارزميات
             Events:
               name: الأحداث
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: حلقات بينما
