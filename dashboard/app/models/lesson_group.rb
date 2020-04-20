@@ -19,8 +19,6 @@ class LessonGroup < ApplicationRecord
   belongs_to :script
   has_many :lessons
 
-  acts_as_list scope: :script, column: :position
-
   validates_uniqueness_of :key, scope: :script_id
 
   validates :key,
