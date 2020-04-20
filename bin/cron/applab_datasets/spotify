@@ -7,11 +7,13 @@ require 'net/http'
 require 'csv'
 require 'ostruct'
 require_relative '../../../shared/middleware/helpers/firebase_helper'
+require 'cdo/profanity_filter'
 
 TOP_200_US_URL = 'https://spotifycharts.com/regional/us/daily/latest/download'
 TOP_200_WORLD_URL = 'https://spotifycharts.com/regional/global/daily/latest/download'
 VIRAL_50_US_URL = 'https://spotifycharts.com/viral/us/daily/latest/download'
 VIRAL_50_WORLD_URL = 'https://spotifycharts.com/viral/global/daily/latest/download'
+PROFANITY_LOCALE = 'en-US'
 
 def get_top200_data(url)
   records = {}
@@ -25,6 +27,8 @@ def get_top200_data(url)
   lines.shift # first line just contains a note
   lines.shift # second line is column names
   lines.each do |line|
+    next if find_profanity(line) # skip record if it contains profanity
+
     record = OpenStruct.new
     record.id = id
     record.Position = line[0].to_i
@@ -50,6 +54,8 @@ def get_viral50_data(url)
   lines = csv.read
   lines.shift # first line is column names
   lines.each do |line|
+    next if find_profanity(line) # skip record if it contains profanity
+
     record = OpenStruct.new
     record.id = id
     record.Position = line[0].to_i
@@ -61,6 +67,11 @@ def get_viral50_data(url)
     id += 1
   end
   return records, columns
+end
+
+def find_profanity(line)
+  profanity_check = "#{line[2]} - #{line[1]}" # check artist + track name for profanity
+  ProfanityFilter.find_potential_profanity(profanity_check, PROFANITY_LOCALE).present?
 end
 
 def main
