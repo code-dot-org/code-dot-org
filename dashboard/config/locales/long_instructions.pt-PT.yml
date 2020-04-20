@@ -989,10 +989,15 @@ pt-PT:
       courseD_maze_nestedLoops4: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2018: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2019: Leve-me até o girassol!
+      courseD_scrat_ramp4: Evita o gelo rachado e mantém o Scrat seguro!
+      courseD_scrat_ramp5: Evita o gelo rachado!
       courseE_bee_functions3: |-
         Funções são blocos de código que realizam
         uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
         de usar um laço para obter um contador de bloco ideal.
+      courseE_farmer_ramp12_forswap: Apanha toda a alface.
+      courseE_farmer_ramp12_forswap_2018: Apanha toda a alface.
+      courseE_farmer_ramp12_forswap_2019: Apanha toda a alface.
       frozen circle: |-
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?
