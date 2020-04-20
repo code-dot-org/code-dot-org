@@ -12,7 +12,7 @@ module Pd::Foorm
     # Calculate average responses for each question in question_details for the set of responses in summarized_answers
     # @return {
     #   general: {see get_averaged_rollup},
-    #  faciltator: {see get_averaged_rollup}
+    #   facilitator: {see get_averaged_rollup}
     # }
     # Will only have general/facilitator if question_details contains those keys. Other keys are supported but
     # will not be split by facilitator
@@ -96,7 +96,6 @@ module Pd::Foorm
 
     # Creates an intermediate rollup, which is the
     # sum and count for each question in question_details from summarized_answers.
-    # If there was no response for an answer it is not included.
     # @return
     # if split_by_facilitator
     # {

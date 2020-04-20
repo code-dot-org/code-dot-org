@@ -449,10 +449,8 @@ module Pd
 
     def render_csf_survey_foorm(survey_name, workshop)
       form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(survey_name)
-      facilitators = workshop.facilitators
-      facilitator_data = []
-      facilitators.each do |facilitator|
-        facilitator_data.push({facilitatorId: facilitator.id, facilitatorName: facilitator.name})
+      facilitator_data = workshop.facilitators.map do |facilitator|
+        {facilitatorId: facilitator.id, facilitatorName: facilitator.name}
       end
 
       @script_data = {

@@ -103,8 +103,8 @@ module Pd::Foorm
       rollup_configuration = JSON.parse(File.read('test/fixtures/rollup_config.json'), symbolize_names: true)
       questions_to_summarize = rollup_configuration['CS Discoveries'.to_sym]
       workshop = create :csd_summer_workshop
-      create :day_5_workshop_foorm_submission_low, pd_workshop_id: workshop.id
-      create :day_5_workshop_foorm_submission_high, pd_workshop_id: workshop.id
+      create :day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id
+      create :day_5_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id
       ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
@@ -117,15 +117,17 @@ module Pd::Foorm
       workshop = create :csf_workshop
       @facilitator_id = workshop.facilitators.pluck(:id).first
       @facilitators = {@facilitator_id => "name"}
-      create :csf_intro_post_facilitator_workshop_submission_low,
+      create :csf_intro_post_facilitator_workshop_submission,
+        :answers_low,
         pd_workshop_id: workshop.id,
         facilitator_id: @facilitator_id
-      create_list :csf_intro_post_facilitator_workshop_submission_high,
+      create_list :csf_intro_post_facilitator_workshop_submission,
         3,
+        :answers_high,
         pd_workshop_id: workshop.id,
         facilitator_id: @facilitator_id
-      create_list :csf_intro_post_workshop_submission_low, 2, pd_workshop_id: workshop.id
-      create_list :csf_intro_post_workshop_submission_high, 3, pd_workshop_id: workshop.id
+      create_list :csf_intro_post_workshop_submission, 2, :answers_low, pd_workshop_id: workshop.id
+      create_list :csf_intro_post_workshop_submission, 3, :answers_high, pd_workshop_id: workshop.id
       ws_submissions, foorm_submissions, forms = SurveyReporter.get_raw_data_for_workshop(workshop.id)
       parsed_forms = FoormParser.parse_forms(forms)
       @summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
