@@ -19,7 +19,8 @@ describe('HeightResizer', () => {
     // Simulate mouseDown
     const mouseDownEvent = mouseEvent({
       button: 0,
-      pageY: 20
+      pageY: 20,
+      cancelable: true
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
@@ -30,7 +31,8 @@ describe('HeightResizer', () => {
 
     // Simulate mouseMove
     const mouseMoveEvent = mouseEvent({
-      pageY: 30
+      pageY: 30,
+      cancelable: true
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
@@ -42,7 +44,8 @@ describe('HeightResizer', () => {
     // Simulate mouseUp
     const mouseUpEvent = mouseEvent({
       button: 0,
-      pageY: 40
+      pageY: 40,
+      cancelable: true
     });
     wrapper.instance().onMouseUp(mouseUpEvent);
 
@@ -65,7 +68,8 @@ describe('HeightResizer', () => {
     // Simulate mouseDown with non-primary mouse button
     const mouseDownEvent = mouseEvent({
       button: 1,
-      pageY: 20
+      pageY: 20,
+      cancelable: true
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
@@ -87,7 +91,8 @@ describe('HeightResizer', () => {
     sinon.spy(wrapper.instance(), 'setState');
 
     const mouseMoveEvent = mouseEvent({
-      pageY: 30
+      pageY: 30,
+      cancelable: true
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
