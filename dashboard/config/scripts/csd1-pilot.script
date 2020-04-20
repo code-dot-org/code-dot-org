@@ -25,6 +25,7 @@ level 'CSD U1L03 TFMD_pilot', named: true
 level 'csd digital unplugged PSP word search big', named: true
 level 'csd digital unplugged PSP seating big', named: true
 
+lesson_group 'csd1_2', display_name: 'Chapter 2: Computers and Problem Solving'
 stage 'What is a Computer?', flex_category: 'csd1_2'
 level 'CSD U1L04 TFMD_2020', named: true
 level 'CSD What Makes a Computer a Computer Video_2020', named: true
