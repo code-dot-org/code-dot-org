@@ -1,7 +1,7 @@
 {
   "abuseDetail": "Please provide details regarding the content you are reporting",
   "abuseFormDetail": "Please provide as much detail as possible regarding the content you are reporting.",
-  "abuseFormAcknowledge": "यो जानकारी पेश गरेर, तपाईं स्वीकार गर्नुहुन्छ कि यो [गोपनीयता नीति] ({गोपनीयता_url}) र [सेवा सर्तहरू] ({tos_url}) का सर्तहरू अनुसार व्यवहार गरीनेछ।",
+  "abuseFormAcknowledge": "यो जानकारी पेश गरेर, तपाईं स्वीकार गर्नुहुन्छ कि यो [गोपनीयता नीति] ({privacy_url}) र [सेवा सर्तहरू] ({tos_url}) का सर्तहरू अनुसार व्यवहार गरीनेछ।",
   "abuseType": "Please answer how this content violates the Terms of Service",
   "abuseTypeHarassment": "Threats, cyberbullying, harassement",
   "abuseTypeInfringement": "Copyright Infringement",
