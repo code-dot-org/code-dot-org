@@ -373,8 +373,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
 
   // format numerator and denominator into format for displaying in the table
   getFormattedRowData(numerator, denominator) {
-    if (numerator === null || numerator === '') {
-      return '-';
+    if (numerator === null || numerator === undefined || numerator === '') {
+      console.log('found empty numerator');
+      return '';
     }
     return `${numerator} / ${denominator}`;
   }
@@ -405,7 +406,7 @@ export default class SurveyRollupTableFoorm extends React.Component {
   // using the key ${key}-${facilitatorId}
   addPerQuestionAverageToRow(row, rowId, averages, denominator, key) {
     for (const facilitator in averages) {
-      if (averages[facilitator].rows[rowId]) {
+      if (averages[facilitator].rows && averages[facilitator].rows[rowId]) {
         row[`${key}-${facilitator}`] = this.getFormattedRowData(
           averages[facilitator].rows[rowId],
           denominator
@@ -417,8 +418,9 @@ export default class SurveyRollupTableFoorm extends React.Component {
   // Add the number of responses per facilitator to the responseCounts array
   addPerFacilitatorResponseCounts(responseCounts, key, data) {
     for (const facilitator in this.props.facilitators) {
-      responseCounts[`${key}-${facilitator}`] =
-        data[facilitator].response_count;
+      responseCounts[`${key}-${facilitator}`] = data[facilitator]
+        ? data[facilitator].response_count
+        : 0;
     }
   }
 

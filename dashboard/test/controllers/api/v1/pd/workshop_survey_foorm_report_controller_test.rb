@@ -9,8 +9,8 @@ module Api::V1::Pd
     end
 
     test 'get generic survey report correctly' do
-      create :day_5_workshop_foorm_submission_low, pd_workshop_id: @workshop.id
-      create_list :day_5_workshop_foorm_submission_high, 3, pd_workshop_id: @workshop.id
+      create :day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: @workshop.id
+      create_list :day_5_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: @workshop.id
 
       get :generic_survey_report, params: {workshop_id: @workshop.id}
       assert_response :success
@@ -58,8 +58,8 @@ module Api::V1::Pd
     end
 
     test 'rollup does not fail if there are no rollup responses' do
-      create :day_0_workshop_foorm_submission_low, pd_workshop_id: @workshop.id
-      create_list :day_0_workshop_foorm_submission_high, 5, pd_workshop_id: @workshop.id
+      create :day_0_workshop_foorm_submission, :answers_low, pd_workshop_id: @workshop.id
+      create_list :day_0_workshop_foorm_submission, 5, :answers_high, pd_workshop_id: @workshop.id
 
       get :generic_survey_report, params: {workshop_id: @workshop.id}
       assert_response :success
@@ -75,15 +75,7 @@ module Api::V1::Pd
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour
       facilitator_id = csf_workshop.facilitators.pluck(:id).first
-      create :csf_intro_post_facilitator_workshop_submission_low,
-        pd_workshop_id: csf_workshop.id,
-        facilitator_id: facilitator_id
-      create_list :csf_intro_post_facilitator_workshop_submission_high,
-        2,
-        pd_workshop_id: csf_workshop.id,
-        facilitator_id: facilitator_id
-      create_list :csf_intro_post_workshop_submission_low, 3, pd_workshop_id: csf_workshop.id
-      create_list :csf_intro_post_workshop_submission_high, 2, pd_workshop_id: csf_workshop.id
+      create_surveys_for_csf_workshop(csf_workshop, facilitator_id, 3, 2)
 
       get :generic_survey_report, params: {workshop_id: csf_workshop.id}
       assert_response :success
@@ -97,14 +89,14 @@ module Api::V1::Pd
       assert_not_empty response[:workshop_rollups]
       general_rollup = response[:workshop_rollups][:general]
       facilitator_rollup = response[:workshop_rollups][:facilitator]
-      assert_equal 3.4, general_rollup[:single_workshop][:averages][:teacher_engagement][:average]
+      assert_equal 4.6, general_rollup[:single_workshop][:averages][:teacher_engagement][:average]
 
       assert_equal 5, general_rollup[:overall_facilitator][facilitator_id.to_s.to_sym][:response_count]
-      assert_equal 3, facilitator_rollup[:overall_facilitator][facilitator_id.to_s.to_sym][:response_count]
+      assert_equal 5, facilitator_rollup[:overall_facilitator][facilitator_id.to_s.to_sym][:response_count]
 
       first_facilitator_rollup = facilitator_rollup[:single_workshop][facilitator_id.to_s.to_sym]
-      assert_equal 5, first_facilitator_rollup[:averages][:facilitator_effectiveness][:rows][:on_track]
-      assert_equal 5, first_facilitator_rollup[:averages][:facilitator_effectiveness][:average]
+      assert_equal 4.6, first_facilitator_rollup[:averages][:facilitator_effectiveness][:rows][:on_track]
+      assert_equal 4.6, first_facilitator_rollup[:averages][:facilitator_effectiveness][:average]
     end
 
     test 'if there are no facilitator surveys still create csf rollup' do
@@ -112,8 +104,8 @@ module Api::V1::Pd
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour
       facilitator_id = csf_workshop.facilitators.pluck(:id).first
-      create_list :csf_intro_post_workshop_submission_low, 1, pd_workshop_id: csf_workshop.id
-      create_list :csf_intro_post_workshop_submission_high, 5, pd_workshop_id: csf_workshop.id
+      create_list :csf_intro_post_workshop_submission, 1, :answers_low, pd_workshop_id: csf_workshop.id
+      create_list :csf_intro_post_workshop_submission, 5, :answers_high, pd_workshop_id: csf_workshop.id
 
       get :generic_survey_report, params: {workshop_id: csf_workshop.id}
       assert_response :success
@@ -156,16 +148,18 @@ module Api::V1::Pd
     end
 
     def create_surveys_for_csf_workshop(csf_workshop, facilitator_id, high_count, low_count)
-      create_list :csf_intro_post_facilitator_workshop_submission_low,
+      create_list :csf_intro_post_facilitator_workshop_submission,
         low_count,
+        :answers_low,
         pd_workshop_id: csf_workshop.id,
         facilitator_id: facilitator_id
-      create_list :csf_intro_post_facilitator_workshop_submission_high,
+      create_list :csf_intro_post_facilitator_workshop_submission,
         high_count,
+        :answers_high,
         pd_workshop_id: csf_workshop.id,
         facilitator_id: facilitator_id
-      create_list :csf_intro_post_workshop_submission_low, low_count, pd_workshop_id: csf_workshop.id
-      create_list :csf_intro_post_workshop_submission_high, high_count, pd_workshop_id: csf_workshop.id
+      create_list :csf_intro_post_workshop_submission, low_count, :answers_low, pd_workshop_id: csf_workshop.id
+      create_list :csf_intro_post_workshop_submission, high_count, :answers_high, pd_workshop_id: csf_workshop.id
     end
 
     def create_survey_submission(survey_response)
@@ -174,7 +168,7 @@ module Api::V1::Pd
         form_version: 0,
         answers: survey_response
       )
-      create :day_0_workshop_foorm_submission_low,
+      create :day_0_workshop_foorm_submission,
         pd_workshop_id: @workshop.id,
         foorm_submission_id: submission.id
     end

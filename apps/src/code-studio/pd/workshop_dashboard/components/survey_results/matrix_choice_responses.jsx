@@ -46,7 +46,7 @@ export default class MatrixChoiceResponses extends React.Component {
               innerAnswer = answer[innerQuestionId];
             }
 
-            if (!innerAnswer) {
+            if (!innerAnswer || _.isEmpty(innerAnswer)) {
               return null;
             }
             const numRespondents = answer.num_respondents;

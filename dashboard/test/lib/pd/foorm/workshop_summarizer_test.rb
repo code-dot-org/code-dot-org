@@ -11,12 +11,16 @@ module Pd::Foorm
 
     test 'summarizes survey results without error' do
       workshop = create :csp_summer_workshop
-      create :day_0_workshop_foorm_submission_low, pd_workshop_id: workshop.id
-      create :day_0_workshop_foorm_submission_high, pd_workshop_id: workshop.id
+      create :day_0_workshop_foorm_submission, :answers_low, pd_workshop_id: workshop.id
+      create :day_0_workshop_foorm_submission, :answers_high, pd_workshop_id: workshop.id
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
-      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, @parsed_forms, ws_submissions)
+      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
+        foorm_submissions,
+        @parsed_forms,
+        ws_submissions
+      )
 
       expected_result = {
         'Day 0': {
@@ -67,15 +71,25 @@ module Pd::Foorm
     test 'summarizes facilitator results' do
       workshop = create :csf_101_workshop
       facilitator = create :facilitator
-      create :csf_intro_post_facilitator_workshop_submission_high, pd_workshop_id: workshop.id, facilitator_id: facilitator.id
-      create :csf_intro_post_facilitator_workshop_submission_low, pd_workshop_id: workshop.id, facilitator_id: facilitator.id
+      create :csf_intro_post_facilitator_workshop_submission,
+        :answers_low,
+        pd_workshop_id: workshop.id,
+        facilitator_id: facilitator.id
+      create :csf_intro_post_facilitator_workshop_submission,
+        :answers_high,
+        pd_workshop_id: workshop.id,
+        facilitator_id: facilitator.id
 
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
       csf_form = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
       parsed_form = FoormParser.parse_forms([csf_form])
-      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_form, ws_submissions).with_indifferent_access
+      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
+        foorm_submissions,
+        parsed_form,
+        ws_submissions
+      ).with_indifferent_access
 
       facilitator_answers = summarized_answers[:Overall][:facilitator]['surveys/pd/workshop_csf_intro_post.0']
       assert_not_empty facilitator_answers
@@ -95,15 +109,26 @@ module Pd::Foorm
       workshop = create :csf_101_workshop
       facilitator1 = create :facilitator
       facilitator2 = create :facilitator
-      create :csf_intro_post_facilitator_workshop_submission_high, pd_workshop_id: workshop.id, facilitator_id: facilitator1.id
-      create_list :csf_intro_post_facilitator_workshop_submission_low, 3, pd_workshop_id: workshop.id, facilitator_id: facilitator2.id
+      create :csf_intro_post_facilitator_workshop_submission,
+        :answers_high,
+        pd_workshop_id: workshop.id,
+        facilitator_id: facilitator1.id
+      create_list :csf_intro_post_facilitator_workshop_submission,
+        3,
+        :answers_low,
+        pd_workshop_id: workshop.id,
+        facilitator_id: facilitator2.id
 
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop.id)
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = ::Foorm::Submission.find(submission_ids)
       csf_form = ::Foorm::Form.find_by_name('surveys/pd/workshop_csf_intro_post')
       parsed_form = FoormParser.parse_forms([csf_form])
-      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(foorm_submissions, parsed_form, ws_submissions).with_indifferent_access
+      summarized_answers = WorkshopSummarizer.summarize_answers_by_survey(
+        foorm_submissions,
+        parsed_form,
+        ws_submissions
+      ).with_indifferent_access
 
       expected_matrix_data_high = {
         demonstrated_knowledge: {"7": 1},

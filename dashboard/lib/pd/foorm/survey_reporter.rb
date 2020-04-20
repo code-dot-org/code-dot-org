@@ -98,7 +98,9 @@ module Pd::Foorm
           facilitator_id
         )
         rollups[:general][facilitator_id] = facilitator_rollup[:general]
-        rollups[:facilitator][facilitator_id] = facilitator_rollup[:facilitator][facilitator_id]
+        if facilitator_rollup[:facilitator]
+          rollups[:facilitator][facilitator_id] = facilitator_rollup[:facilitator][facilitator_id]
+        end
       end
       rollups
     end
