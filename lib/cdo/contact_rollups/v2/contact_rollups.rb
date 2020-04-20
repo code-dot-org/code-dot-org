@@ -1,5 +1,5 @@
 class ContactRollupsV2
-  def self.build_contact_rollups(log_collector)
+  def self.build_contact_rollups(log_collector, pardot_steps=false)
     log_collector.time!('Truncate tables') do
       ContactRollupsRaw.truncate_table
       ContactRollupsProcessed.truncate_table
@@ -18,14 +18,16 @@ class ContactRollupsV2
       ContactRollupsComparison.compile_processed_data
     end
 
-    log_collector.time!('Downloads new email-Pardot ID mappings') do
-      ContactRollupsPardotMemory.add_and_update_pardot_ids
-    end
-    log_collector.time!('Creates new Pardot prospects') do
-      ContactRollupsPardotMemory.create_new_pardot_prospects
-    end
-    log_collector.time!('Updates existing Pardot prospects') do
-      ContactRollupsPardotMemory.update_pardot_prospects
+    if pardot_steps
+      log_collector.time!('Downloads new email-Pardot ID mappings') do
+        ContactRollupsPardotMemory.add_and_update_pardot_ids
+      end
+      log_collector.time!('Creates new Pardot prospects') do
+        ContactRollupsPardotMemory.create_new_pardot_prospects
+      end
+      log_collector.time!('Updates existing Pardot prospects') do
+        ContactRollupsPardotMemory.update_pardot_prospects
+      end
     end
 
     log_collector.time!("Overwrites contact_rollups_final table") do
