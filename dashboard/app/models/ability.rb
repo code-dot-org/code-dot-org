@@ -66,9 +66,6 @@ class Ability
       can :manage, user
 
       can :create, Activity, user_id: user.id
-      can :save_to_gallery, UserLevel, user_id: user.id
-      can :create, GalleryActivity, user_id: user.id
-      can :destroy, GalleryActivity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
