@@ -1299,6 +1299,7 @@ class Script < ActiveRecord::Base
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: course.try(:id),
       hidden: hidden,
+      is_stable: is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_stages: hideable_stages?,
