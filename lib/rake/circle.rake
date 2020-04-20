@@ -29,7 +29,7 @@ SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 # Don't run any unit tests.
 SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
 
-# Run UI tests against Chrome
+# Don't run UI tests against Chrome
 SKIP_CHROME_TAG = 'skip chrome'.freeze
 
 # Run UI tests against Firefox
@@ -46,6 +46,9 @@ TEST_SAFARI_TAG = 'test safari'.freeze
 TEST_IPAD_TAG = 'test ipad'.freeze
 TEST_IPHONE_TAG = 'test iphone'.freeze
 TEST_IOS_TAG = 'test ios'.freeze
+
+# Run UI tests against all browsers
+TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
 
 # Overrides for whether to run Applitools eyes tests
 TEST_EYES = 'test eyes'.freeze
@@ -169,11 +172,11 @@ end
 def browsers_to_run
   browsers = []
   browsers << 'Chrome' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
-  browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
-  browsers << 'IE11' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
-  browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG)
-  browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
-  browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
+  browsers << 'Firefox' if CircleUtils.tagged?(TEST_FIREFOX_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'IE11' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'Safari' if CircleUtils.tagged?(TEST_SAFARI_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG) || CircleUtils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers
 end
 
