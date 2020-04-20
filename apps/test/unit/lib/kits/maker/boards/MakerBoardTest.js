@@ -5,7 +5,7 @@ import {expect} from '../../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
+import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
