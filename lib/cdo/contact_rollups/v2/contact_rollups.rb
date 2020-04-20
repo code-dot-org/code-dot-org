@@ -6,7 +6,7 @@ class ContactRollupsV2
     end
 
     log_collector.time!('Extracts data from dashboard email_preferences') do
-      ContactRollupsRaw.extract_from_table('email_preferences', ['opt_in'])
+      ContactRollupsRaw.extract_from_table('email_preferences', ['opt_in'], 'email')
     end
 
     log_collector.time!('Processes all extracted data') do
