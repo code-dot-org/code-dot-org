@@ -3,7 +3,6 @@ tr:
   data:
     script:
       category:
-        csf_category_name: Bilgisayar bilimleri temeller
         csf_international_category_name: CS (Computer Science-Bilgisayar Bilimleri)
           Uluslararası Temelleri
         csf2_draft_category_name: 'Geliştiriliyor: Kurslar A - F'
@@ -15881,3 +15880,31 @@ tr:
               name: Algoritmalar
             Events:
               name: Olaylar
+        no-lg:
+          stages:
+            new stage:
+              name: yeni kademe
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: 5. Ünite 2. Değerlendirme
+            While Loops:
+              name: While(...durumunda) Döngüleri
+            Loops and Simulations:
+              name: Döngüler ve simülasyonlar
+            Introduction to Arrays:
+              name: Dizilere Giriş
+            'Building an App: Image Scroller':
+              name: 'Bir Uygulama Oluşturma: Resim Kaydırma'
+            Unit 5 Assessment 3:
+              name: 5. Ünite 3. Değerlendirme
+            Processing Arrays:
+              name: Dizileri işleme
+            Functions with Return Values:
+              name: Fonksiyonlar ve dönüş değerleri
+            'Building an App: Canvas Painter':
+              name: 'Bir uygulama inşa etme: Kanvas ressamı'
+            Unit 5 Assessment 4:
+              name: 5. Ünite 4. Değerlendirme
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
