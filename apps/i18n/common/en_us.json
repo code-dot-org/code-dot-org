@@ -888,7 +888,7 @@
   "libraryCreatorError": "There was an error creating your library. Contact support@code.org to resolve the issue.",
   "libraryDescriptionPlaceholder": "Write a description of your library",
   "libraryExportDuplicationFunctionError": "This function cannot be exported because there are multiple functions with this name.",
-  "libraryExportId": "Your library/project ID is {channelId}",
+  "libraryExportId": "Your library/project ID is **{channelId}**",
   "libraryExportNoCommentError": "This function cannot be exported until you add a comment to it.",
   "libraryExportSubtitle": "Share functions in your project with others in your class or anyone with the project's ID. Others can import your functions into their projects by going to \"Manage Libraries\" in the gear icon at the top of the toolbox.",
   "libraryExportTitle": "Export Functions as a Library",
