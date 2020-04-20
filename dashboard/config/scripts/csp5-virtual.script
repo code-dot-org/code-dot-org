@@ -42,7 +42,7 @@ level 'Tips For Working on Your Own_2018_2019_virtual', progression: 'Making a M
 level 'Making a Multi Screen Chaser Game v.2_2018_2019_virtual', progression: 'Making a Multi-Screen Chaser Game v.2'
 level 'CSPU5 Add welcome screen to chaser game_virtual', progression: 'Making a Multi-Screen Chaser Game v.2'
 level 'CSPU5 Add full screen image to bg of chaser game_virtual', progression: 'Making a Multi-Screen Chaser Game v.2'
-level 'CSPU5 Add game over screen_virtual', progression: 'Project: Multi-Screen Chaser Game', assessment: true
+level 'CSPU5 Add game over screen_virtual', progression: 'Project: Multi-Screen Chaser Game'
 
 stage 'Variables', flex_category: 'csp5_1'
 level 'Introduction to Variables - Part 1_virtual', progression: 'Introduction to Variables - Part 1'
@@ -72,7 +72,7 @@ level 'CSPU5_U3L14 - moving memory challenge3_virtual', progression: 'Moving Mem
 level 'CSPU5_U3L14 - moving memory challenge4_virtual', progression: 'Moving Memory'
 level 'CSPU5_U3L14 - moving memory challenge5_virtual', progression: 'Moving Memory'
 level 'CSPU5_U3L14 - moving memory challenge6_virtual', progression: 'Moving Memory'
-level 'CSPU5_U3L14 - MC variable reassignment_2018_2019_virtual', progression: 'Check Your Understanding', assessment: true
+level 'CSPU5_U3L14 - MC variable reassignment_2018_2019_virtual', progression: 'Check Your Understanding'
 
 stage 'Building an App: Clicker Game', flex_category: 'csp5_1'
 level 'CSPU5_U3 full clicker demo_virtual', progression: 'Clicker Game Demonstration'
@@ -106,7 +106,6 @@ level 'CSPU5_U3L16 Mad Lib Student Setup_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib setText_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib getText_virtual', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input_virtual', progression: 'Mad Lib Game'
-level 'CSPU5_U3L25 Free Response 3_virtual', progression: 'String and Substring Free Response', assessment: true
 
 stage 'Boolean Expressions and "If" Statements', flex_category: 'csp5_1'
 level 'Introduction to Conditionals: Boolean Expressions_virtual', progression: 'Introduction to Conditionals: Boolean Expressions'
@@ -134,40 +133,32 @@ level 'U5 if-else-if quiz grade_virtual', progression: 'How "if-else-if" Works'
 level 'CSPU5_U3 - High Low - Else if_virtual', progression: 'How "if-else-if" Works'
 level 'CSPU5_U3 - High Low - Debug_virtual', progression: 'How "if-else-if" Works'
 level 'Introduction to Conditionals: Compound Boolean Expressions_virtual', progression: 'Introduction to Conditionals: Compound Boolean Expressions'
-level 'How the Boolean &&, || and ! Operators Work_2018_2019_virtual', progression: 'How the Boolean &&, || and ! Operators Work'
 level 'CSPU5_U3 - Conditionals - Simple OR_virtual', progression: 'How the Boolean &&, || and ! Operators Work'
 level 'CSPU5_U3 - Conditionals - Simple AND_virtual', progression: 'How the Boolean &&, || and ! Operators Work'
-level 'How Compound Boolean Expressions Work_2018_2019_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'U5 compound boolean museum example_virtual', progression: 'How Compound Boolean Expressions Work'
 level 'CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual', progression: 'How Compound Boolean Expressions Work'
-level 'U5-AP-Algorithm-Does-It-Count_virtual', progression: 'AP Practice Response - Score the Response', assessment: true
 
 stage 'Building an App: Color Sleuth', flex_category: 'csp5_1'
-level 'CSP U5L10 SFLP_virtual', named: true
-level 'Color Sleuth - Planning the App_2018_2019_virtual', progression: 'Color Sleuth - Planning the App'
-level 'How Set Property Works_2018_2019_virtual', progression: 'How Set Property Works'
+level 'CSPU5 Color Sleuth Demo_virtual', progression: 'Color Sleuth - Demo and Overview'
+level 'CSP5 virtual RGB intro_virtual', progression: 'RGB Colors'
+level 'How Set Property Works_2018_2019_virtual', progression: 'Specifying Colors'
 level 'U5 ColorSleuth part 1_virtual', progression: 'Using setProperty'
 level 'U5 ColorSleuth part 2 small color change_virtual', progression: 'Using setProperty'
-level 'How to pick a random button_2018_2019_virtual', progression: 'How to Pick a Random Button'
 level 'U5 ColorSleuth part 3 pick random button_virtual', progression: 'How to Pick a Random Button'
-level 'How to make a random color_2018_2019_virtual', progression: 'How to Make a Random Color'
 level 'U5 ColorSleuth part 4 make random RGB string_virtual', progression: 'How to Make a Random Color'
+level 'csp_applab_functions_virtual', progression: 'Functions in Your Color Sleuth App'
 level 'U5 ColorSleuth part 5 make setBoard function_virtual', progression: 'Functions in Your Color Sleuth App'
 level 'U5 ColorSleuth add global var correct plus console.log_virtual', progression: 'Functions in Your Color Sleuth App'
-level 'U5 color sleuth check correct_2018_2019_virtual', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect make global var_virtual', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect part1 link to event handlers_virtual', progression: 'Activating Buttons'
 level 'U5 ColorSleuth checkCorrect part2 add if statement to check co_virtual', progression: 'Activating Buttons'
-level 'Color Sleuth - How to switch player turns_2018_2019_virtual', progression: 'How to Switch Player Turns'
 level 'U5 ColorSleuth nextTurn pt1 add var and function and console.l_virtual', progression: 'How to Switch Player Turns'
 level 'U5 ColorSleuth nextTurn pt2 update UI to indicate turn_virtual', progression: 'How to Switch Player Turns'
-level 'Color Sleuth - Keeping score_2018_2019_virtual', progression: 'Updating the Score'
 level 'U5 ColorSleuth scoring pt1 vars function stub console_virtual', progression: 'Updating the Score'
 level 'U5 ColorSleuth scoring pt3 update UI for scoring_virtual', progression: 'Updating the Score'
-level 'Color Sleuth - How does it end?_2018_2019_virtual', progression: 'Color Sleuth - How Does It End?'
-level 'Project: Finish Color Sleuth_virtual', progression: 'Project: Color Sleuth', assessment: true
-level 'Color Sleuth - Epilogue_2018_2019_virtual', progression: 'Color Sleuth - Epilogue'
-level 'U5 AP Practice Create Abstraction Color Sleuth_virtual', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
-level 'CSP U5 AP Practice Choose the Algorithm_virtual', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
-level 'U5 AP Practice Create Algorithm Color Sleuth_virtual', progression: 'AP Practice Responses - Algorithms and Abstraction', assessment: true
+level 'Project: Finish Color Sleuth_virtual', progression: 'Project: Color Sleuth'
+
+stage 'Keep Going'
+level 'csp5 virtual outro'
+level 'csp5 virtual bubblechoice'
