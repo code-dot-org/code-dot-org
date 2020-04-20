@@ -288,11 +288,16 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   });
 };
 
+/**
+ * Gets the target dimensions of the video player container based on the
+ * available screen size.
+ */
 function getVideoContainerDimensions() {
   const navBarHeight = $(MODAL_ID)
     .find(TAB_NAV_ID)
     .outerHeight();
   const widthRatio = 0.8;
+  // Setting the height low to account for the URL bar on mobile devices
   const heightRatio = 0.75;
   const aspectRatio = 16 / 9;
   const maxHeight = $(window).height() * heightRatio,
@@ -309,9 +314,13 @@ function getVideoContainerDimensions() {
   return dimensions;
 }
 
+/**
+ * Gets the target height of the video player based on the container's
+ * dimensions.
+ */
 function getVideoHeight() {
-  const video = $(MODAL_ID);
-  return video.innerHeight() - video.find(TAB_NAV_ID).outerHeight();
+  const container = $(MODAL_ID);
+  return container.innerHeight() - container.find(TAB_NAV_ID).outerHeight();
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
@@ -385,8 +394,6 @@ function youTubeAvailabilityEndpointURL(noCookie) {
   }
 }
 
-// var videoPlayer;
-
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
@@ -452,10 +459,14 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   );
 
   function onResize() {
+    // Video modal will have already been resized from a previous resize event
+    // listener.
     videoPlayer.width($(MODAL_ID).innerWidth());
     videoPlayer.height(getVideoHeight());
   }
 
+  // A resize event listener has already been created. This is an additional one
+  // that is added only when the fallback player is created.
   window.addEventListener('resize', onResize);
   onResize();
 
