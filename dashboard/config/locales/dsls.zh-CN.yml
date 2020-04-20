@@ -3244,6 +3244,9 @@ zh-CN:
           **\"Camelcase（首字母大写）\"** -- `aCamelcaseNameMightLookLikeThis`\n* **Underscores（下划线隔开）**
           -- `Some_people_like_to_use_underscores_to_separate_words`\n* **dashes（连字符隔开）**
           -- `Others-like-to-use-hyphens-or-dashes`\n\n选择什么风格由自己决定。这是自己的风格。有助于保持一致。\n\n\n\n\n"
+        teacher_markdown: |-
+          #### 养成良好的编程习惯
+          遵循清晰且一致的命名规则是一个重要的习惯，但从学生的角度出发，这种习惯带来的好处很难立刻见到成效。长远的看，坚持好的命名规则确实是值得的，特别是当你需要阅读学生的程序时，与此同时，这也会极大简化将多个学生代码组合成一个完整团队应用程序的过程。
       ConditionalsWithCards-Unplugged:
         markdown: |
           # 纸牌和条件语句
