@@ -16,6 +16,7 @@ import LibraryClientApi from './LibraryClientApi';
 import {getStore} from '@cdo/apps/redux';
 import Button from '@cdo/apps/templates/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
   libraryBoundary: {
@@ -32,8 +33,7 @@ const styles = {
     lineHeight: 1.2
   },
   idInfo: {
-    marginBottom: 10,
-    fontFamily: "'Gotham 7r', sans-serif"
+    marginBottom: 10
   },
   copyBtn: {
     margin: '0 15px',
@@ -131,7 +131,7 @@ class LibraryCreationDialog extends React.Component {
       <div style={styles.info}>
         {libraryDetails && libraryDetails.alreadyPublished && (
           <div style={styles.idInfo}>
-            {i18n.libraryExportId({channelId})}
+            <InlineMarkdown markdown={i18n.libraryExportId({channelId})} />
             <Button
               text={this.state.copyButtonText}
               color={Button.ButtonColor.blue}
