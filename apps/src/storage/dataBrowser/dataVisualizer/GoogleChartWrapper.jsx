@@ -21,8 +21,13 @@ class GoogleChartWrapper extends React.Component {
 
   aggregateRecordsByColumn = (records, columnName) => {
     const counts = _.countBy(records, r => r[columnName]);
+    const isNumeric = this.props.numericColumns.includes(columnName);
 
-    return _.map(counts, (count, key) => ({[columnName]: key, count}));
+    const mapped = _.map(counts, (count, key) => ({
+      [columnName]: isNumeric ? parseFloat(key) : key,
+      count
+    }));
+    return _.sortBy(mapped, columnName);
   };
 
   componentDidMount() {
@@ -48,7 +53,13 @@ class GoogleChartWrapper extends React.Component {
     let chartData;
     let columns;
     let options = {
-      title: this.props.chartTitle || ''
+      title: this.props.chartTitle || '',
+      hAxis: {
+        format: '#.#' // Round values to 1 decimal place
+      },
+      vAxist: {
+        format: '#.#' // Round values to 1 decimal place
+      }
     };
 
     switch (this.props.chartType) {
