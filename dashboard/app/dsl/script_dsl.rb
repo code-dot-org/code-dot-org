@@ -279,12 +279,17 @@ class ScriptDSL < BaseDSL
 
   # @override
   def i18n_hash
-    i18n_strings = {}
+    i18n_stage_strings = {}
     @stages.each do |stage|
-      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
+      i18n_stage_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {@name => {'stages' => i18n_strings}}
+    i18n_lesson_group_strings = {}
+    @lesson_groups.each do |lesson_group|
+      i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+    end
+
+    {@name => {'stages' => i18n_stage_strings, 'lesson_groups' => i18n_lesson_group_strings}}
   end
 
   def self.parse_file(filename, name = nil)
