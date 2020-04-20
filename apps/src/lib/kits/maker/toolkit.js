@@ -5,7 +5,7 @@
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeBoard from './FakeBoard';
+import FakeBoard from './boards/FakeBoard';
 import * as commands from './commands';
 import * as dropletConfig from './dropletConfig';
 import MakerError, {
