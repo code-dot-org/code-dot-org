@@ -12,6 +12,7 @@ Scenario: My Projects
   And I wait until element "#uitest-personal-projects" contains text "You currently have no projects."
   Then I see no difference for "page load"
 
+  Then I scroll the "#uitest-view-full-list" element into view
   When I press "uitest-view-full-list"
   And I wait until element "a[href='/projects/gumball/new']" is visible
   Then I see no difference for "view full list of new project types"
