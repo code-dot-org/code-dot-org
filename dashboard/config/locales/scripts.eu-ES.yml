@@ -1728,3 +1728,7 @@ eu:
               name: Algoritmoak
             Events:
               name: Gertaerak
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '"Bitartean" begiztak'
