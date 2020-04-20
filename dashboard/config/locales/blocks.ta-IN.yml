@@ -139,7 +139,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_doMoveEachLR:
-        text: "{GROUP} do {MOVE} {DIR} once"
+        text: "{GROUP} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -284,7 +284,7 @@ ta:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": மேல்புறம்
@@ -358,6 +358,7 @@ ta:
             '"FROG"': தவளை
             '"MOOSE"': மூஸ்
             '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
             '"SHARK"': சுறாமீன்
             '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
@@ -385,6 +386,7 @@ ta:
             '"FROG"': தவளை
             '"MOOSE"': மூஸ்
             '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
             '"SHARK"': சுறாமீன்
             '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
@@ -916,7 +918,7 @@ ta:
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
       gamelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
