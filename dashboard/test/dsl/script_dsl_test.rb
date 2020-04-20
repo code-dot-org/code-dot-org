@@ -75,7 +75,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     i18n_expected = {'test' => {'stages' => {
       'Lesson1' => {'name' => 'Lesson1'},
       'Lesson2' => {'name' => 'Lesson2'}
-    }}}
+    }, "lesson_groups" => {}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
@@ -659,7 +659,7 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.#{script.name}.lesson_groups.#{lesson_group.key}.display_name'
       stage 'lesson 1'
       level 'maze 1'
 
@@ -701,11 +701,11 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.#{script.name}.lesson_groups.#{lesson_group1.key}.display_name'
       stage 'lesson 1'
       level 'maze 1'
 
-      lesson_group 'practice', display_name: 'Teaching Practices'
+      lesson_group 'practice', display_name: 'translation missing: en-US.data.script.name.#{script.name}.lesson_groups.#{lesson_group2.key}.display_name'
       stage 'lesson 2'
       level 'maze 2'
 
@@ -929,8 +929,9 @@ level 'Level 3'
     )
 
     i18n_expected = {'test' => {'stages' => {
-      "Bob's stage" => {'name' => "Bob's stage"},
-    }}}
+      "Bob's stage" => {'name' => "Bob's stage"}
+    },
+      "lesson_groups" => {}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
