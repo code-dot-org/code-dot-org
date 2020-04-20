@@ -28,6 +28,6 @@ class LessonGroup < ApplicationRecord
     if: proc {|a| a.user_facing}
 
   def localized_display_name
-    I18n.t "flex_category.#{key}"
+    I18n.t "data.script.name.#{script.name}.lesson_groups.#{key}.display_name"
   end
 end
