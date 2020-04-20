@@ -1788,3 +1788,7 @@ fa:
               name: الگوریتم ها
             Events:
               name: رویدادها
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: حلقه ها ی While
