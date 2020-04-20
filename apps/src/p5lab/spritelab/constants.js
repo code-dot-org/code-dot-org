@@ -1,19 +1,20 @@
 /** @file Sprite Lab constants */
 var utils = require('@cdo/apps/utils');
+var msg = require('@cdo/locale');
 
 module.exports.LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
 
 module.exports.CostumeCategories = {
-  category_animals: 'Animals',
-  category_generic_items: 'Generic items',
-  category_vehicles: 'Vehicles',
-  category_characters: 'Characters',
-  category_environment: 'Environment',
-  category_food: 'Food',
-  category_tools: 'Tools',
-  category_gameplay: 'Board games',
-  category_obstacles: 'Obstacles',
-  category_all: 'All'
+  category_animals: msg.costumeCategoryAnimals(),
+  category_generic_items: msg.costumeCategoryGenericItems(),
+  category_vehicles: msg.costumeCategoryVehicles(),
+  category_characters: msg.costumeCategoryCharacters(),
+  category_environment: msg.costumeCategoryEnvironment(),
+  category_food: msg.costumeCategoryFood(),
+  category_tools: msg.costumeCategoryTools(),
+  category_gameplay: msg.costumeCategoryGameplay(),
+  category_obstacles: msg.costumeCategoryObstacles(),
+  category_all: msg.costumeCategoryAll()
 };
 
 module.exports.SpritelabReservedWords = [
