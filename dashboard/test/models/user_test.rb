@@ -680,9 +680,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create manual teacher without email" do
-    user = User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher',
-                 password: 'xxxxxxxx', provider: 'manual'
-    )
+    user = assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher',
+                  password: 'xxxxxxxx', provider: 'manual'
+      )
+    end
     assert_not_nil user.errors[:email]
   end
 
