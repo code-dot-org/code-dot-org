@@ -21,6 +21,48 @@ A table is created using vertical bars to separate columns. Use the vertical bar
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 
+## Partials
+***
+
+If you create your markdown template with the extension `.partial` in addition to the `.md` extension, you can use the partials syntax to embed other templates. The partials syntax simply requires the name of the template to embed wrapped in curly braces like so:
+
+```
+{{ view_template_name }}
+```
+
+For example, I can include [the testimonials template](https://github.com/code-dot-org/code-dot-org/blob/79a7d591c6f8e06f2458da5abfc8ac635f29cfc0/pegasus/sites.v3/code.org/views/testimonials.haml) like so:
+
+### Code:
+
+```
+{{ testimonials }}
+```
+
+### Result:
+
+<!--
+  Note that I am using the ERB view syntax here rather than the actual partials
+  syntax. This is because the partials syntax is (currently) implemented
+  outside the context of markdown, so the code example above would actually end
+  up including the actual view in the code block, rather than the code example.
+-->
+
+<%= view :testimonials %>
+
+## Advanced Partials
+***
+
+If the view you want to include requires arguments, you can simply create an intermediary view. For example, to use the `about_people` view (which requires a `people` argument) you can create a view `about_team.erb`:
+
+```
+<%%= view :about_people, people: DB[:cdo_team] %>
+```
+
+And then simply include that new view as a partial:
+
+```
+{{ about_team }}
+```
 
 ## Videos
 ***
