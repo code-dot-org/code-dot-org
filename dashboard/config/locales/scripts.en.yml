@@ -16463,6 +16463,8 @@ en:
               name: If-Statements
             Keep Going:
               name: Keep Going
+            Keep Going!:
+              name: Keep Going!
           lesson_groups: {}
         virtual-holding-place:
           stages:
