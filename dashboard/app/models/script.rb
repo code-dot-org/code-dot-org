@@ -932,9 +932,6 @@ class Script < ActiveRecord::Base
         # 2. If the lesson group key is an existing key that the given display name
         # for that key matches the already saved display name
         raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-          if raw_lesson_group[:key].blank?
-            raise "Expect all levelbuilder created lesson groups to have key."
-          end
           if raw_lesson_group[:display_name].blank?
             raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
           end
@@ -1252,7 +1249,7 @@ class Script < ActiveRecord::Base
             properties: Script.build_property_hash(general_params)
           },
           script_data[:lesson_groups],
-          script_data[:stages],
+          script_data[:stages]
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
