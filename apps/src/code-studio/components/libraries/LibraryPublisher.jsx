@@ -11,15 +11,21 @@ const styles = {
   alert: {
     color: color.red,
     width: '90%',
-    paddingTop: 8
+    paddingTop: 8,
+    fontStyle: 'italic'
+  },
+  functionSelector: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '10px 10px 10px 0'
   },
   largerCheckbox: {
     width: 20,
-    height: 20,
-    marginLeft: 0,
-    marginRight: 10,
-    marginTop: 10,
-    marginBottom: 10
+    height: 20
+  },
+  functionLabel: {
+    margin: 0,
+    fontSize: 20
   },
   info: {
     fontSize: 12,
@@ -203,16 +209,20 @@ export default class LibraryPublisher extends React.Component {
       }
       return (
         <div key={functionName}>
-          <input
-            style={styles.largerCheckbox}
-            type="checkbox"
-            disabled={shouldDisable}
-            name={functionName}
-            checked={checked}
-            onChange={() => this.boxChecked(functionName)}
-          />
-          <span>{functionName}</span>
-          <br />
+          <div style={styles.functionSelector}>
+            <input
+              style={styles.largerCheckbox}
+              type="checkbox"
+              id={functionName}
+              disabled={shouldDisable}
+              name={functionName}
+              checked={checked}
+              onChange={() => this.boxChecked(functionName)}
+            />
+            <label htmlFor={functionName} style={styles.functionLabel}>
+              {functionName}
+            </label>
+          </div>
           {noComment && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
           )}
