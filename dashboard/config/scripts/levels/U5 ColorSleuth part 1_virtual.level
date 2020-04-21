@@ -51,13 +51,22 @@
         "message": "There should be at least 4 calls to setProperty - one for each of the 4 buttons to set the background color."
       }
     ],
-    "long_instructions": "# You try it -- use setProperty\r\n\r\nTime to get coding!  This is the starting point for a whole new project. \r\n\r\n* We've started you out with **all of the UI elements in place**.  You'll work with this design and layout for now.\r\n* We've also started you out with some code that sets the color of one of the buttons.\r\n* Use setProperty 3 more times to set the color of the other 3 buttons so all 4 are orange.\r\n    * We've chosen an orange color `rgb(230,155,0)` for now, but this will change later.\r\n\r\n",
+    "long_instructions": "# You try it -- use setProperty\r\n\r\nTime to get coding!  This is the starting point for a whole new project. \r\n\r\n* We've started you out with **all of the UI elements in place**.  You'll work with this design and layout for now.\r\n* We've also started you out with some code that sets the color of one of the buttons.\r\n\r\n## Do This:\r\n\r\n* Use setProperty 3 more times to set the color of the other 3 buttons so all 4 are orange.\r\n    * Use the variable `color` each time.\r\n    * We've chosen an orange color `rgb(230,155,0)` for now, but this will change later.\r\n\r\n",
     "parent_level_id": 17246,
     "name_suffix": "_virtual",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
     "preload_asset_list": null
   },
   "published": true,
-  "notes": "Add callout to setProperty\r\n\r\nAdd log conditions to make sure setProperty is called 4 times."
+  "notes": "Add callout to setProperty\r\n\r\nAdd log conditions to make sure setProperty is called 4 times.",
+  "audit_log": "[{\"changed_at\":\"2020-04-20 13:53:41 +0000\",\"changed\":[\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

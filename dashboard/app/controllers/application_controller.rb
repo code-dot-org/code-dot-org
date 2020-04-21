@@ -195,23 +195,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    # logged in users can:
-    if current_user
-      # save solved levels to a gallery (subject to
-      # additional logic in the blockly code because blockly owns
-      # which levels are worth saving)
-      if options[:level_source].try(:id) &&
-          options[:solved?] &&
-          options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(
-          gallery_activity: {
-            level_source_id: options[:level_source].try(:id),
-            user_level_id: options[:user_level] && options[:user_level].id
-          }
-        )
-      end
-    end
-
     response[:activity_id] = options[:activity] && options[:activity].id
 
     response

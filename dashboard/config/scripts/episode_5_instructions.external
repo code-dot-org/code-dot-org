@@ -8,21 +8,18 @@ markdown <<MARKDOWN
 
 ## Instructions
 
-### Unplugged Pixel Painter
-Create your own pixel art coloring pages using CS Unplugged's [Pixel Painter](https://csunplugged.org/en/resources/pixel-painter/). Fill in the 0's and 1's, then cut out the pages and rearrange to create an image. 
+### Sprite Lab Simulations
+Follow along with Sofia as she creates a simulation in Sprite Lab. Watch the first half of the Code Break episode and use this level to code along. 
 
-### Black & White Pixelation Widget
-Practice using 0's and 1's to create the Letter A or a smiley emoji. 
+![](https://images.code.org/396dc7d23692f4dca36091501f62ae1f-image-1587320897997.gif)
 
-![](https://images.code.org/268fc726bbcec14f1f6afc35de51f91e-image-1586542913086.png)
 
-### Color Pixelation Widget
-Use the Color Pixelation widget to represent color first using 3 bits, and then using 6 bits. 
+### App Lab Charts
+Practice building your own charts using sample data.
 
-![](https://images.code.org/9a932d7ec5daec3f2221a346b95e7ed2-image-1586544765356.gif)
+![](https://images.code.org/b6d01719972c92a45332f89f7a087e11-image-1587314114636.gif)
+
 
 ---
-Looking for more practice? Check out the [Pixelation Levels](https://studio.code.org/s/pixelation).
-
-
+Looking for more practice? Check out the [CSP Post-AP Unit: Data Tools](https://studio.code.org/s/csppostap-2019]
 MARKDOWN

@@ -639,7 +639,7 @@ pt-PT:
         - {}
         - {}
         - {}
-        - {}
+        - text: Há um espaço no nome do ficheiro
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1401,6 +1401,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - feedback: Incorreto
         questions:
@@ -1409,6 +1410,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - feedback: Incorreto
         questions:
@@ -1418,7 +1420,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1426,7 +1429,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1434,7 +1438,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1442,8 +1447,9 @@ pt-PT:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Certo!
         - text: '15'
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1451,8 +1457,9 @@ pt-PT:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Certo!
         - text: '15'
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1460,56 +1467,63 @@ pt-PT:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Certo!
         - text: '15'
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
         - correct: true
-        - {}
-        - {}
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
         - correct: true
-        - {}
-        - {}
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
-        - {}
-        - {}
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_starWars_predict1:
@@ -1517,6 +1531,7 @@ pt-PT:
         - {}
         - {}
         - correct: true
+          feedback: Certo!
         - text: Eu não sei
         questions:
         - {}
@@ -1525,6 +1540,7 @@ pt-PT:
         - {}
         - {}
         - correct: true
+          feedback: Certo!
         - text: Eu não sei
         questions:
         - {}
@@ -1533,6 +1549,7 @@ pt-PT:
         - {}
         - {}
         - correct: true
+          feedback: Certo!
         - text: Eu não sei
         questions:
         - {}
@@ -1540,24 +1557,27 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1567,6 +1587,7 @@ pt-PT:
         - text: C
         - text: D
           correct: true
+          feedback: Certo!
         markdown: |
           <table>
           <tr>
@@ -1590,6 +1611,7 @@ pt-PT:
         - text: C
         - text: D
           correct: true
+          feedback: Certo!
         markdown: |
           <table>
           <tr>
@@ -1613,6 +1635,7 @@ pt-PT:
         - text: C
         - text: D
           correct: true
+          feedback: Certo!
         markdown: |
           <table>
           <tr>
@@ -1633,75 +1656,84 @@ pt-PT:
         answers:
         - text: A
           correct: true
+          feedback: Certo!
         - text: B
         - text: C
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
+          feedback: Certo!
         - text: B
         - text: C
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
+          feedback: Certo!
         - text: B
         - text: C
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -1709,7 +1741,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -1717,7 +1750,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -1725,7 +1759,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -1733,8 +1768,9 @@ pt-PT:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Certo!
         - text: '12'
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
@@ -1742,8 +1778,9 @@ pt-PT:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Certo!
         - text: '12'
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
@@ -1751,8 +1788,9 @@ pt-PT:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Certo!
         - text: '12'
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
@@ -1760,7 +1798,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -1768,7 +1807,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1776,7 +1816,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -1784,39 +1825,44 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1824,7 +1870,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -1832,7 +1879,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -1840,63 +1888,71 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
+        - text: Nada. O Scrat não se vai mexer.
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -1904,7 +1960,7 @@ pt-PT:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1913,6 +1969,7 @@ pt-PT:
         - {}
         - {}
         - correct: true
+          feedback: Certo!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -1920,6 +1977,7 @@ pt-PT:
         - {}
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         questions:
         - {}
@@ -1928,6 +1986,7 @@ pt-PT:
         - {}
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         questions:
         - {}
@@ -1959,16 +2018,18 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1976,7 +2037,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -1984,7 +2046,8 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -1992,61 +2055,69 @@ pt-PT:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Certo!
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - {}
         questions:
@@ -2055,6 +2126,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - {}
         questions:
@@ -2063,6 +2135,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - {}
         questions:
@@ -2072,7 +2145,7 @@ pt-PT:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
@@ -2080,13 +2153,14 @@ pt-PT:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - {}
         questions:
@@ -2095,6 +2169,7 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - {}
         questions:
@@ -2103,10 +2178,15 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: 'Inquérito aos Estudantes do Fim do Curso de CS Discoveries '
+      csd-post-survey-levelgroup-2018:
+        title: 'Inquérito aos Estudantes do Fim do Curso de CS Discoveries '
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Visão Geral
@@ -2120,23 +2200,31 @@ pt-PT:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "# Comportando-se no Laboratório do Computador\n  \n<br/><br/>    \n
+          \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nIr para plano da lição\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>"

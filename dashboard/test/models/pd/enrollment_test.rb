@@ -140,6 +140,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
   end
 
+  test 'exit_survey_url falls back to last valid day' do
+    csd_workshop = create :workshop,
+      :ended,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: SUBJECT_CSD_WORKSHOP_4,
+      num_sessions: 2
+    csd_enrollment = create :pd_enrollment, workshop: csd_workshop
+
+    studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
+    assert_equal studio_url["/pd/workshop_survey/day/1?enrollmentCode=#{csd_enrollment.code}"],
+      csd_enrollment.exit_survey_url
+  end
+
   test 'should_send_exit_survey' do
     normal_workshop = create :workshop, :ended
     normal_enrollment = create :pd_enrollment, workshop: normal_workshop

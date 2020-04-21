@@ -1816,3 +1816,7 @@ lt:
               name: Algoritmai
             Events:
               name: Įvykiai
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '„Kol“ kartojimas'
