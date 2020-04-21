@@ -628,9 +628,12 @@ class ManageStudentsTable extends Component {
             />
           </div>
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
-            <div style={styles.sectionCodeBox}>
+            <div style={styles.sectionCodeBox} data-for="section-code" data-tip>
               <span>{i18n.sectionCodeWithColon()}</span>
               <span style={styles.sectionCode}>{this.props.sectionCode}</span>
+              <ReactTooltip id="section-code" role="tooltip" effect="solid">
+                <div>{i18n.copySectionCodeTooltip()}</div>
+              </ReactTooltip>
             </div>
           )}
         </div>
