@@ -37,6 +37,7 @@ class SectionLoginInfo extends React.Component {
   render() {
     const {studioUrlPrefix, section} = this.props;
     const singleStudentId = queryParams('studentId');
+    const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId
       ? this.props.students.filter(
           student => student.id.toString() === singleStudentId
@@ -52,7 +53,7 @@ class SectionLoginInfo extends React.Component {
             studioUrlPrefix={studioUrlPrefix}
             section={section}
             students={students}
-            singleStudent={!!singleStudentId}
+            autoPrint={autoPrint}
           />
         )}
         {section.loginType === SectionLoginType.email && (
@@ -208,11 +209,11 @@ class WordOrPictureLogins extends React.Component {
     studioUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
-    singleStudent: PropTypes.bool
+    autoPrint: PropTypes.bool
   };
 
   componentDidMount() {
-    if (this.props.singleStudent) {
+    if (this.props.autoPrint) {
       this.printLoginCards();
     }
   }
