@@ -6914,6 +6914,10 @@ zh-TW:
               name: 創建一個 App - 帆布畫家
             Unit 5 Assessment 4:
               name: 單元 5 評量 4
+            Intro to App Lab:
+              name: App Lab 入門
+            Variables:
+              name: 變數
         virtual-holding-place:
           stages:
             Velocity:

@@ -886,10 +886,11 @@ sk-SK:
 
         Urob svoj obrázok ešte zaujímavejším - zmeň viacero nastavení pre postavy alebo doň pridaj tých postáv ešte viac!
       Course 4 Artist Binary 1: |-
-        Tu máme funkciu, ktorá vezme reťazec binárnych 1 a 0 a spracováva ich z ľava do prava, z hore dolu.
-        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol .
 
-        \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        \*\* Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       Course 4 Artist For Loops 1: Použite blok s opakovaním pre nakreslenie tohto
         trojuholníka, ktorý je 50 pixelov široký.
       Course 4 Artist For Loops 6a: Sprav tri malé zmeny v kóde z predošlého levelu,
@@ -958,6 +959,33 @@ sk-SK:
         **S použitím šípiek donúť Robota tancovať špagát-tlesk-špagát-tlesk ako najrýchlejšie vieš!**
       CourseD_Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý
         môžeš zdieľať s kamarátmi.
+      CourseE_HOC 2018 Level_1: Na cestu potrebuješ zásoby. Zober **loď\* ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        z \*\*truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      CourseE_HOC 2018 Level_10: Niekde v pamiatke sa ukrýva **kalamár** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Dokážeš ho nájsť?
+      CourseE_HOC 2018 Level_11: Vybuduj stenu z **kryštálov** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        okolo čierneho betónu.  To ti umožní spustiť **potrubie** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        a dokončiť úlohu![0]
+      CourseE_HOC 2018 Level_2: S loďou to pôjde ľahšie ako plávať na otvorenom mori!
+        Choď na koniec doku a naloď sa.
+      CourseE_HOC 2018 Level_3: Chyť sa vesiel a namier loď cez otvorené more za **treskou**
+        ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Nakŕm  **delfína**  treskou ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Použi blok opakuj pokiaľ neplatí, aby si prešiel oceán rýchlejšie.
+      CourseE_HOC 2018 Level_5: Niekde sa tam ukrýva **ulita** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)!
+        Preskúmaj vrak lode, aby si sa dostal k  **truhlici** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      CourseE_HOC 2018 Level_6: Vyzerá to, že tam poriadne mrzne! Po ceste k podmorským
+        ruinám chyť **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      CourseE_HOC 2018 Level_7a: Objavil si podmorské ruiny. Prehľadaj kamene a nájdi
+        **truhlicu** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        v ktorej je **kryštálový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        poklad.
+      CourseE_HOC 2018 Level_8: Najprv ľadovce a teraz láva? Prejdi tento vulkanický
+        ostrov a nájdi v koralovom útese **tropickú rybku** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).
+      CourseE_HOC 2018 Level_9b: Dostal si sa k útesu. Teraz hľadaj **Perlu oceánu**
+        ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Pre nájdenie **truhlice s pokladom** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
+        použi modré a červené koraly.
       Dance Party 1-validated: "**Skús predvídať:** Tu je postavička s menom `alien1`!
         \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
       Dance Party 2: "Mimozemšťan bol hrdý na jeho tanečné schopnosti na Marse, ale
@@ -1016,6 +1044,31 @@ sk-SK:
         -   Prikáž mimozemšťanom robiť nový tanečný krok vždy keď sa navzájom dotknú
       Dance Party Predict: "**Skús predvídať:** Tu je sprite s menom `alien1`! \n\nČo
         myslíš, že sa stane, keď na neho klikneš?  "
+      Dance Party Predict_2019: "**Skús predvídať:** Tu je postava, ktorá vyzerá ako
+        modrý mimozemšťan!   \n\nČo myslíš, že sa stane, keď na neho klikneš?  "
+      Dance_2019_01: |-
+        Prenes blok <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> na pracovnú plochu a spoj ho vo vnútri bloku <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>.
+
+        Vyber si `mačku` alebo `leňochoda` na vytvorenie prvého tanečníka.
+
+        -   _Ak potrebuješ viac informácií alebo extra výzvy, môžeš klinúť na žiarovku naľavo._
+      Dance_2019_02: "Blok <xml><block type=\"Dancelab_whenKey\" block-text=\"when
+        up pressed\"></block></xml> spustí kód pri stlačení tlačidiel so šípkami.
+        \nPouži blok <xml><block type=\"Dancelab_doMoveEachLR\" block-text=\"do once\"><title
+        name=\"GROUP\">\"CAT\"</title><title name=\"MOVE\">MOVES.XClapSide</title><title
+        name=\"DIR\">-1</title></block></xml>, aby mačka zatlieskala!\n\n_Uisti sa,
+        že stlačíš tlačidlo \"šípka hore\" alebo ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45
+        PM.png>), potom čo klikneš na tlačidlo Spustiť!_"
+      Dance_2019_03: Je čas na tanečný rozstrel! Naprogramuj každého tanečníka tak,
+        aby sa pohyboval po stlačení rôznych klávesov. Vyber si svoj obľúbený pohyb
+        pre každého tanečníka alebo ho nastav na "(Náhodné)“ pre niečo úplne nepredvídateľné!
+      Dance_2019_04: "Nechaj tanečníkov pohybovať sa v rytme hudby!\n\nPripoj blok
+        <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> k bloku <xml><block type=\"Dancelab_changeMoveEachLR\"><title
+        name=\"GROUP\">\"SHARK\"</title><title name=\"MOVE\">MOVES.ThisOrThat</title><title
+        name=\"DIR\">-1</title></block></xml>  z panela nástrojov. \n\nTvoj tanečník
+        by mal začať robiť nový pohyb po štvrtom takte.\n\n**Takty** sa používajú
+        na meranie času v hudbe. V tomto návode, sa jeden takt rovná štyrom úderom."
       Dance_2019_05: "_Teraz sme to roztočili!_ \n\nPridaj blok <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takty\"</title></block></xml>
         na tvoju pracovnú plochu. Prikáž tanečníkovi spustiť nový krok po 6 taktoch."
@@ -1150,10 +1203,17 @@ sk-SK:
         Spravme akvárium!
 
         Zmeň Dustyho (kôpku trávy) na rybu.
+      Fish Tank 2-validated_2019: "Vytvor akvárium!  \n\nZmeň Pracháča (kôpku slamy)
+        na akúkoľvek rybu kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\"
+        block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nNezabudni
+        tiež zmeniť kostým v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the
+        add behavior block\"></block></xml>."
       Fish Tank 3-validated: |-
         Ryba začína byť roztržítá.
 
         Zmeň správanie ryby tak, že bude plávať okolo akvária.
+      Fish Tank 3-validated_2019: "Rybe sa začala točiť hlava! \n\nZmeň správanie
+        ryby tak, aby plávala vľavo a vpravo."
       Fish Tank 4-validated: |-
         Naše akvárium potrebuje vodu!
 
@@ -1164,7 +1224,15 @@ sk-SK:
               </block>
             </value>
           </block></xml>, aby si spravil modré pozadie.
+      Fish Tank 4-validated_2019: "Naše akvárium bude potrebovať vodu! \n\nPouži <xml><block
+        type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background
+        color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n
+        \       <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n
+        \ </block></xml> na nastavenie farby pozadia. Odporúčame modrú!"
       Fish Tank 5-validated: Naša ryba je trochu osamelá. Pridaj ďalší sprite do akvária.
+      Fish Tank 5-validated_2019: Ryba má dobrodružnú povahu a chcela by stretnúť
+        ďalšie morské živočíchy. Pridaj do akvária ďašiu postavu. Postava môže mať
+        hociaký kostým, okrem toho, ktorý už má ryba.
       Fish Tank 6-validated: "Čo chceš, aby robil nový kamarát tvojej ryby? \n\nPridaj
         mu správanie a sleduj ich!"
       Fish Tank 6-validated_2019: |-
@@ -1191,8 +1259,34 @@ sk-SK:
         id=\"callMe\"><mutation name=\"postav most\"/></block></xml> blok do pracovného
         priestoru, aby si opravil cestu a dostal hráča {currentPlayerName} k ruditovej
         fakli [redstone_torch]."
+      HOC 2018 Level_1: Na cestu potrebuješ zásoby. Zober **loď\* ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        z \*\*truhly** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
+      HOC 2018 Level_10: Niekde v pamiatke sa ukrýva **kalamár** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png).
+        Dokážeš ho nájsť?
+      HOC 2018 Level_11: Vybuduj stenu z **kryštálov** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        okolo čierneho betónu.  To ti umožní spustiť **potrubie** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        a dokončiť úlohu![0]
       HOC 2018 Level_12: Blahoželáme! Čaká ťa otvorený vodný svet. Vybudujte koralový
         útes! Sopka! Vrak lode! Je to len na tebe.
+      HOC 2018 Level_2: S loďou to pôjde ľahšie ako plávať na otvorenom mori! Choď
+        na koniec doku a naloď sa.
+      HOC 2018 Level_3: Chyť sa vesiel a namier loď cez otvorené more za **treskou**
+        ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Nakŕm  **delfína**  treskou ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Použi blok opakuj pokiaľ neplatí, aby si prešiel oceán rýchlejšie.
+      HOC 2018 Level_5: Niekde sa tam ukrýva **ulita** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)!
+        Preskúmaj vrak lode, aby si sa dostal k  **truhlici** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
+      HOC 2018 Level_6: Vyzerá to, že tam poriadne mrzne! Po ceste k podmorským ruinám
+        chyť **lososa** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
+      HOC 2018 Level_7a: Objavil si podmorské ruiny. Prehľadaj kamene a nájdi **truhlicu**
+        ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png),
+        v ktorej je **kryštálový** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        poklad.
+      HOC 2018 Level_8: Najprv ľadovce a teraz láva? Prejdi tento vulkanický ostrov
+        a nájdi v koralovom útese **tropickú rybku** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png).
+      HOC 2018 Level_9b: Dostal si sa k útesu. Teraz hľadaj **Perlu oceánu** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Pre nájdenie **truhlice s pokladom** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
+        použi modré a červené koraly.
       InspirationalArtwork: |-
         Doteraz si sa naučil všetko, čo potrebuješ vedieť, aby si vytvoril takýto vzor!
 
@@ -1291,6 +1385,31 @@ sk-SK:
         ku ovci.
       Overworld Move to Sheep_2019: Pohni sa ešte o jeden krok dopredu, aby si sa
         dostal ku ovci.
+      Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a
+        dĺžkou strán 150 pixelov.
+      Standalone_Artist_3: Dokážeš nakresliť tento šesťuholník so stranami 100 pixelov
+        a s otočeniami o 60 stupňov?
+      Standalone_Artist_4: Teraz sa môžeš hrať s novým blokom, cyklom. Pomôže ti zopakovať
+        sériu príkazov. Čo sa stane ak tieto príkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Koľko krát potrebuješ diamant zopakovať aby ti vznikla
+        kvetina?
+      Standalone_Artist_5.5: 'Všimni si, ako sa kód pre diamant použitím cyklu zjednodušil?
+        Ak celú radu zopakuješ 12 krát, vznikne ti kvetina. Nápoveda: Po slučke s
+        diamantom sa budeš musieť otočiť o 30 stupňov, aby si nekreslil/a stále po
+        tom istom.'
+      Standalone_Artist_6: 'Zopakuj kód pre šesťuholník 6 krát a vytvoríš kresbu.
+        Pod akým uhlom sa vždy otáčaš? Nápoveda: vydelte počet stupňov v kruhu počtom
+        opakovaní.'
+      Standalone_Artist_7: 'Funkcia je len ďalším nástrojom ako sa neopakovať. Táto
+        funkcia nakreslí kvetinu, takže ju môžeš použiť kedykoľvek, keď chceš nakresliť
+        kvetinu. Použi ju v kombinácii s novým blokom skoč a nakresli tieto kvetiny.
+        Nápoveda: Kvetiny sú od seba vzdialené 150 pixelov'
+      Standalone_Artist_8: Táto funkcia sa volá "Nakresli tvar" a naprogramovali sme
+        ju aby sme kreslili šesťuholník. Spusti kód nech vidíš čo vie a pohraj sa
+        s ňou aby si zistil/a viac. Vedel/a by si ju použiť tak, aby nakreslila rad
+        štvorcov, trojuholníkov alebo osemuholníkov?
+      Standalone_Artist_9: A teraz smelo do toho a nakresli obrázok aký len chceš!
+        Dokonca máš jednú nevyužitú funkciu, ktorá spraví čokoľvek si zmyslíš!
       Virtual Pet 1: |-
         Toto je žirafa Geraldine, tvoje nové domáce zvieratko .
 
@@ -1319,21 +1438,87 @@ sk-SK:
                 </block>
               </value>
             </block></xml>
+      Virtual Pet 3_2019: "Vytvor udalosti, vďaka ktorým sa bude tvoje zvieratko pohybovať
+        podľa príkazov!\n\nZačni s použitím <xml><block type=\"gamelab_keyPressed\"
+        block-text=\"the while up key pressed event block\"><title name=\"CONDITION\">\"while\"</title><title
+        name=\"KEY\">\"up\"</title></block></xml> spolu s <xml><block type=\"gamelab_moveInDirection\"
+        block-text=\"the move in direction action block\"><title name=\"DIRECTION\">\"North\"</title></block></xml>,
+        na to aby sa tvoje zbieratko hýbalo na sever **pokiaľ** je stlačená šípka
+        hore. \n\nZopakuj tento postup aj pre ďalšie tri smery (juh, západ, východ)
+        a tlačidlá šípok (dole, vľavo, vpravo)!"
       Virtual Pet 4: |-
         Nechceme čakať, aby sa žirafa vždy sama vyčistila.
 
         Pridaj správanie k tvojmu mydlu, aby bolo pretiahnuteľné, a potom ho pretiahni ponad žirafu, aby si ju vyčistil!
+      Virtual Pet 4_2019: "Vytvor dáke potulné jedlo!\n\n1.  Pridaj **dve** postavy.
+        \n2.  Jedna postava bude vyzerať ako jedlo, ktoré tvoje zvieratko **má rado**
+        \ a druhá ako niečo čo **nemá rado**.\n3.  Vytvor pre každú postavu jedla
+        správanie **potulovať sa** hneď ako sa objaví. "
       Virtual Pet 5: "Všetko toto hranie berie energiu!\n\nPridaj takú akciu ku každej
         udalosti, keď sa žirafa dotkne iného sprite, že sa žirafa zmenší o 5.  "
+      Virtual Pet 5_2019: |-
+        Pre **simuláciu** "jedenia" vo virtuálnom svete použi blok <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> s blokom <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml>!
+
+        1.  Vytvor udalosť, ktorá umožní tvojim postavám jedla skočiť kdekoľvek po tom, čo sa ich dotkne zvieratko..
+        2.  Zopakuj postup aj pre ďalšiu postavu jedla.
       Virtual Pet 6: "Vyrovnaná výživa je dôležitá! Musíme nakŕmiť žirafu, aby naspäť
         získala silu.\n\nPridaj na scénu jablko a nechaj ho vrátiť žirafu do pôvodnej
         veľkosti, keď sa dotknú.  "
+      Virtual Pet 6_2019: "Na to, aby jedenie jedla ovplyvnilo energiu tvojho zvieratka,
+        použi blok <xml><block type=\"variables_set\" block-text=\"the set variable
+        block\"><title name=\"VAR\">energy</title></block></xml> spolu s blokom <xml><block
+        type=\"math_change\" block-text=\"the change variable block\"><title name=\"VAR\">energy</title></block></xml>!
+        Čím viac bude mať energie, tým rýchlejšie sa bude pohybovať! \n\n1.  Na začiatku
+        programu nastav premennú `energia` na 5.\n2.  Ak zvieratko zje jedlo, ktoré
+        **má rado**, pridaj do `energie` 1.\n3.  Ak zvieratko zje jedlo, ktoré **nemá
+        rado**, nastav `energiu` späť na 5.\n4.  Zmeň udalosť pre každé tlačítko šípky
+        tak, aby zvieratko namiesto špecifických čísiel menilo `energiu` v pixeloch."
+      Virtual Pet 7_2019: "Skontrolovať hodnotu `energie` tvojho zvieratka môžeš cez
+        blok <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>.
+        Je to nový blok, ktorý sa nachádza v kategórii `World` ! \n\nVytvor udalosť,
+        ktorá pri kliknutí na postavu zvieratka umožní vytlačiť hodnotu `energie`. "
+      Virtual Pet 8_2019: "**Voľná hra:** Tvoje virtuálne zvieratko je _VIRTUÁLNE
+        ÚŽASNÉ!_ \n\nČo by si ešte mohol vymyslieť? Vyskúšaj tieto nápady:\n\n-   Zmeň
+        farbu pozadia alebo pridaj obrázok.\n-   Skús viac tlačiť. Napríklad vytlač
+        _\"Yum! Energia zvýšená!\"_ keď zvieratko zje niečo čo má rado, alebo _\"Fuj!
+        Energia zrušená!\"_ keď zje niečo čo nemá rado.\n-   Pridaj ďalšiu postavu,
+        ktorá bude s tvojím zvieratkom reagovať inak. Čo napríklad postava **hračka**?\n-
+        \  Pridaj ďalšiu premennú, ktorá ovplyvní zvieratko alebo priestor. Čo by
+        mohlo vytvoriť `šťastie` alebo `vek`?\n-   Skúšaj rôzne správania! Skús upraviť
+        správanie **potulovať sa** na pomalšie alebo naopak zrýchli postavy jedla
+        (tip: ich \"rýchlosť\" je momentálne 5...)."
       Virtual Pet Freeplay: "Voľná hra: Čo viac dokážeš spraviť so svojou žirafou?\n\n-
         \  Dokážeš pridať viac špeciálnych vecí pre tvôjho virtuálneho miláčika?\n-
         \  Dokážěs jej dať nejakých priateľov?  "
       'Widget: Text Compression': V texte hľadajte vzory (opakované slová alebo frázy).
         Zadajte vzory, ktoré vidíte, do slovníka vpravo. Pri zadávaní položiek do
         slovníka, symbol pre položku sa vloží do textu namiesto vzoru.
+      behaviors 1: |-
+        Odhadni, čo sa bude diať! Naštuduj si kód.
+
+        -   Postava sa bude točiť.
+        -   Postava sa zmenší.
+        -   Postava sa pohne.
+        -   Postava zmení farby.
+      behaviors 2: |-
+        Leť s raketou ku hviezdam!
+
+        -   Uprav správanie rakety tak, aby v zobrazenej ploche letela nahor.
+      behaviors 3: |-
+        Pomôž roveru predbehnúť robota!
+
+        -   Uprav správanie roveru tak, aby bol rýchlejší ako robot.
+      behaviors 3a: |-
+        Uprav správanie `točiť sa vpravo`.  Namiesto bloku pre kostými použi blok <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml>. V takom prípade bude fungovať pre všetky postavy bez ohľadu na ich kostými.
+
+        **Odstráň chybu:** Nechaj sa všetky hviezdy točiť tým istým smerom!
+      behaviors 4: Odhadni, čo sa bude diať! Ktorou cestou sa satelit vyberie k solárnemu
+        systému?
+      behaviors 5: |-
+        Napíš svoje vlastné správanie.
+
+        -   Napíš pre kozmonauta nové správanie tak, aby išiel k jednej zo štyroch kozmických lodí na zobrazenej ploche.
+      behaviors free play: "**Voľná hra.**Vytvor si svoju vlastnú scénu z vesmíru!"
       comment_intro_maze_2018: |-
         _"Hmm, čo robí tento program?"_
 
@@ -1501,8 +1686,6 @@ sk-SK:
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_playLab_events4_2018: Teraz pridaj ešte jeden blok s udalosťou, aby
-        sa Jorge posunul doprava po kliknutí na šípku vpravo.
-      courseA_playLab_events4_2019: Teraz pridaj ešte jeden blok s udalosťou, aby
         sa Jorge posunul doprava po kliknutí na šípku vpravo.
       courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
         Dokážeš aby dinosaurus zmizol potom, ako doňho Jorge narazí?
@@ -2729,13 +2912,13 @@ sk-SK:
       courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_“Ahoj,
         som Elza z Arendellu, pomôž mi nakresliť tvar.\"_\n\nNakresli šesťuholník
         so stranami dlhými 50 pixelov.  \n\n* * *\n\nAby si nakreslil šesťuholník,
-        potrebuješ: \n\n-   posunúť sa dopredu o **50** pixelov\n-   otočiť sa vpravo
-        o **60** stupňov\n-   zopakovať to **6** krát"
+        potrebuješ: \n\n-   posuň sa dopredu o **50** pixelov\n-   otoč sa vpravo
+        o **60** stupňov\n-   zopakuj **6** krát"
       courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_“Ahoj,
         som Elza z Arendellu, pomôž mi nakresliť tvar.\"_\n\nNakresli šesťuholník
         so stranami dlhými 50 pixelov.  \n\n* * *\n\nAby si nakreslil šesťuholník,
-        potrebuješ: \n\n-   posunúť sa dopredu o **50** pixelov\n-   otočiť sa vpravo
-        o **60** stupňov\n-   zopakovať to **6** krát"
+        potrebuješ: \n\n-   posuň sa dopredu o **50** pixelov\n-   otoč sa vpravo
+        o **60** stupňov\n-   zopakuj **6** krát"
       courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Dobrá
         práca!\"_\n\nZa šesťuholníkom sa otoč vpravo o **60** stupňov a nakresli úsečku
         dlhú **150** pixelov.   \n\nDokonči tak, že umiestniš Elzu do stredu herného
@@ -2803,6 +2986,45 @@ sk-SK:
         úsečky, aby vznikol kľukatý vzor\n-   Kam potrebuješ vložiť blok `opakuj`,
         aby sa to podarilo?\n-   Koľko krát potrebuješ zopakovať vzor z 2 krátkych
         úsečiek, aby ich bolo spolu 6?"
+      courseD_artist_binary1: "Pripravili sme ti mriežku zloženú z \"pixelov\". Môžeš
+        po nej chodiť a kresliť obrázky tak, že \"zapneš\" jednotlivé políčka. \n\nPomôž
+        umelcovi v prvom rade nakresliť vzor \"01010101\"."
+      courseD_artist_binary1_2018: "Pripravili sme ti mriežku zloženú z \"pixelov\".
+        Môžeš po nej chodiť a kresliť obrázky tak, že \"zapneš\" jednotlivé políčka.
+        \n\nPomôž umelcovi v prvom rade nakresliť vzor \"01010101\"."
+      courseD_artist_binary1_2019: "Pripravili sme ti mriežku zloženú z \"pixelov\".
+        Môžeš po nej chodiť a kresliť obrázky tak, že \"zapneš\" jednotlivé políčka.
+        \n\nPomôž umelcovi v prvom rade nakresliť vzor \"01010101\"."
+      courseD_artist_binary2: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
+      courseD_artist_binary2_2018: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
+      courseD_artist_binary2_2019: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       courseD_artist_binary_challenge1_2018: V tejto úlohe môžeš použiť každú binárnu
         hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
       courseD_artist_binary_challenge1_2019: V tejto úlohe môžeš použiť každú binárnu
@@ -2965,6 +3187,21 @@ sk-SK:
         -   Prvý vnorený cyklus by mal vykresliť osemuholník.
         -   Druhý vnorený cyklus by mal vykresliť šesťuholník.
         -   Tretí vnorený cyklus by mal vykresliť štvorec.
+      courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, som Elsa z Arendellu, pomôž mi nakresliť tvar.”_\n\nNakresli malý
+        tvar o šírke **20 a 50** pixelov.  Akýkoľvek tvar chceš.  \n\n<hr/>\n\nSkús
+        vytvoriť mnohouholník, ako jeden z týchto:\\\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\nAlebo aj abstraktný tvar, ako jeden z týchto:\\\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, som Elsa z Arendellu, pomôž mi nakresliť tvar.”_\n\nNakresli malý
+        tvar o šírke **20 a 50** pixelov.  Akýkoľvek tvar chceš.  \n\n<hr/>\n\nSkús
+        vytvoriť mnohouholník, ako jeden z týchto:\\\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\nAlebo aj abstraktný tvar, ako jeden z týchto:\\\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Ahoj, som Elsa z Arendellu, pomôž mi nakresliť tvar.”_\n\nNakresli malý
+        tvar o šírke **20 a 50** pixelov.  Akýkoľvek tvar chceš.  \n\n<hr/>\n\nSkús
+        vytvoriť mnohouholník, ako jeden z týchto:\\\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\nAlebo aj abstraktný tvar, ako jeden z týchto:\\\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
       courseD_artist_project1a: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Poďme teraz skúsiť niečo nové. Nastal čas korčuľovať sa cik-cak."_
 
@@ -3166,6 +3403,16 @@ sk-SK:
       courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Využi svoju tvorivú fantáziu a vyskúšaj rôzne tvary a uhly - uvidíme aké
         rôzne nové snehové vločky sa ti podarí nakresliť!"_  '
+      courseD_autorun_binary2_2019: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol.
+
+        * * *
+
+        Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        * * *
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       courseD_bee_conditionals7_predict2_2018: "Niekedy sa pod oblakom skrýva kvet
         a niekedy plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
         medu z plástov. Zapamätaj si, že pod každým oblakom je vždy len _jeden_plást
@@ -3512,6 +3759,7 @@ sk-SK:
         \n\nVyhni sa TNT, inak bude lietať perie!"
       courseD_maze_ramp4_2018: "_\"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.\"_
         \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseD_maze_ramp4_2019: '_"Sleduj cestu a doveď ma k žaluďu."_ '
       courseD_maze_ramp5: |-
         _"Nasleduj cestu a priveď ma k prasiatku"_
 
@@ -3629,6 +3877,43 @@ sk-SK:
 
         Vyhni sa TNT.
       courseD_scrat_ramp7: Pomôž Scratovi dostať sa k žaluďu!
+      courseE_aboutme_1: "![](https://images.code.org/93e1c04857ff781bb5c4cc76b15ed563-image-1557179820861.png)
+        _\"Ahojte! Volám sa Rikki a toto by som vám chcela o sebe povedať!\"_\n\n**Voľná
+        hra**: Rikki s pomocou Sprite Lab vytvorí _interaktívny plagát_ s osobnými
+        \ informáciami, ktorý bude zdielať na webe.   \n\nRikki ti povolila prístup
+        k jej plagátu, dokonca môžeš aj upravovať jej kód. \n\nSkús sa trochu pohrať
+        s jej plagátom a kódom, a potom stlač **Dokončiť**."
+      courseE_aboutme_2: "![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png)
+        _\"To som ja, Rikki! Pomôžem ti vytvoriť super plagát. Najprv stlač tlačidlo
+        Kostými!\"_\n\n1.  Stlač tlačidlo **Kostými** v ľavom hornom rohu (vedľa tlačidla
+        **Kód**). \n2.  Uprav prvý kostým, alebo pridaj iný, ktorý sa ti páči. \n3.
+        \ Zmeň kostým postavy podľa seba prostredníctvom kódu nižšie.\n4.  Stlač **Spustiť**
+        pre zobrazenie nového vzhľadu tvojej postavy!"
+      courseE_aboutme_3: "![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png)
+        _\"Napíš niečo o sebe, ale len ak si si istý, že je to bezpečné!\"_\n\nPouži
+        <xml><block type=\"gamelab_spriteClicked\" block-text=\"the when sprite clicked
+        event block\"></block></xml> a <xml><block type=\"gamelab_printText\" block-text=\"the
+        print text block\"></block></xml> (in the `World` blocks category) na zdieľanie
+        informácií o sebe, keď niekto klikne na tvoju postavu! \n\n**Vždy sa uisti,
+        že je bezpečné tieto informácie zdielať.**\n\n* * *\n\n#### Príklady informácií,
+        ktoré SÚ a NIE SÚ bezpečné na zdieľanie\n\n| SÚ bezpečné   | NIE SÚ bezpečné
+        \            |\n| ------------- | --------------------------- |\n| Meno          |
+        Meno a priezvisko           |\n| Obľúbené veci | Adresa                      |\n|
+        Osobné názory | Telefónne číslo alebo email |"
+      courseE_aboutme_4: |-
+        ![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png) _"Pridaj na plagát viac postáv! Nezabudni im dať kostými!"_
+
+        Pridaj **najmenej dve** ďalšie postavy na plagát. Každej postave daj iný kostým!
+      courseE_aboutme_5: |-
+        ![](https://images.code.org/0c3ec1da3493c3e10f5ec714ef1670e3-image-1557185359875.png) _"Zdieľaj viac informácií o sebe prostredníctvom svojej novej postavy!"_
+
+        Pridaj postavám možnosť po kliknutí na nich vypísať informácie. Uisti sa, že informácie ktoré zdielaš sú bezpečné!
+      courseE_aboutme_6: "![](https://images.code.org/4e9c4465463d0c061b2b47b23d5817ca-image-1557185863600.png)
+        _\"Wow! Tvoj plagát je takmer taký parádny ako môj! Takmer. \U0001F609\"_\n\nKoho
+        je tento svet?! Je tvoj! \n\nTak pokračuj! Tu je niekoľko nápadov ako ho ešte
+        vylepšiť:\n\n-   Pridaj pozadie! Vyber si pozadie, ktoré sa hodí k tvojmu
+        plagátu.\n-   Pridaj správanie! Pridel každej postave iné správanie po kliknutí
+        na ňu.\n-   Pridaj viac udalostí! Využi ďalšie bloky v kategórii blokov `Udalosti`."
       courseE_artist_functions2_2018: "Tu je funkcia `nakresli štvorec`. Použi ju
         na dokončenie tejto kresby. \n\n* * *\n\nŠtvorce sú od seba vzdialené 75 pixelov."
       courseE_artist_functions2_2019: "Tu je funkcia `nakresli štvorec`. Použi ju

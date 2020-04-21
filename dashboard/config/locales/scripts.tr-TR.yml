@@ -15851,6 +15851,10 @@ tr:
               name: 5. Ünite 4. Değerlendirme
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Birim 5 değerlendirme 5 - AP Sözdekod uygulaması soruları
+            Intro to App Lab:
+              name: Uygulama Labına Giriş
+            Variables:
+              name: Değişkenler
         virtual-holding-place:
           stages:
             Velocity:

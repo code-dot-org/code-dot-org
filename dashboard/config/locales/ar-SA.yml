@@ -46,6 +46,7 @@ ar:
           على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: املأ المعلومات التالية لإكمال
           إنشاء حساب على Code.org مع **%{provider}** لـ **%{email}**.
+        reset_password_token: رابط اعادة تعيين كلمة المرور الذي قمت بتتبعه
         error:
           future: لا يمكن أن يكون في المستقبل
   beta: تجريبي
@@ -64,7 +65,10 @@ ar:
   heading_x_of_y: "%{heading} (صفحة %{x} من %{y})"
   join_section:
     code:
+      title: انضم الى قسم في Code.org
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions: 'يرجى ادخال رمز ال٦ احرف الذي قام معلمك بمشاركته معك (مثال: "ABCDEF")
+        للانضمام الى قسمهم.'
       instructions_short: أدخل الحروف الست لشفرة القسم
       submit: انضم إلينا
   add_hint_form:
@@ -246,6 +250,7 @@ ar:
       ضد الزومبيز! :-)\n\n%{name}\n"
   parent_mailer:
     student_associated_subject: معلومات الدخول على Code.org
+    parent_email_added_subject: مرحبا بكم في Code.org!
   teacher_mailer:
     new_teacher_subject: مرحبا بكم في Code.org!
     delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
@@ -469,6 +474,9 @@ ar:
     update: تحديث الحساب
     account_successfully_updated: تم تحديث الحساب بنجاح.
     update_email: تحديث
+    parent_guardian_email_label: بريد الوالد/الوصي
+    none: لا شيء
+    encrypted: مشفر
   user_level:
     completed: أكمل
     tried: حاول
@@ -998,6 +1006,7 @@ ar:
     csf_internet: الإنترنت
     csd1_1: 'الفصل 1: عملية حل المشكل'
     csd1_2: 'الفصل 2: الحواسيب وحل المشكل'
+    csd1_3: دروس بديلة
     csd2_1: 'الفصل 1: محتوى الويب و HTML'
     csd2_2: 'الفصل 2: التصميم و CSS'
     csd3_1: 'الفصل 1: الصور والمتحركات'
@@ -1005,6 +1014,7 @@ ar:
     csd4_1: 'الفصل 1: التصميم المحوري للمستخدم'
     csd4_2: 'الفصل 2: نمذجة التطبيق'
     cspSurvey: استبيان
+    cspAssessment: تقييم الفصل
     csp2_1_2018: "(قديم) الوحدة 1: معلومات رقمية"
     csp_variables: المتغيرات
     csp_conditionals: الجمل الشرطية

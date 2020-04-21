@@ -4803,6 +4803,8 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Random Numbers:
+              name: Losowe liczby
             Sprite Properties:
               name: Właściwości duszka
         maddie-test:
@@ -4955,6 +4957,14 @@ pl:
               name: Obrazki
             CSS Classes:
               name: Klasy CSS
+            'Mini-Project: HTML Web Page':
+              name: 'Mini-Projekt: strona internetowa HTML'
+            'Mini-Project: Your Personal Style':
+              name: 'Mini-Projekt: Twój osobisty styl'
+            'Your Web Page - Define ':
+              name: 'Twoja strona internetowa - Zdefiniuj'
+            Your Web Page - Prepare:
+              name: Twoja strona internetowa - Przygotuj
         csd1-2020:
           stages:
             Intro to Problem Solving:
@@ -4972,6 +4982,55 @@ pl:
             Project - Propose an App:
               name: Projekt - Propozycja aplikacji
             0:
+              name: \"Alternatywna Lekcja 1:\" Wprowadzenie do rozwiązywania problemów - Stolik prasowy
+            'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
+              name: 'Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów - Spaghetti Most'
+            '"Alt Lesson 1:" Intro to Problem Solving - Newspaper Table':
+              name: '"Alt Lekcja 1:" Wprowadzenie do rozwiązywania problemów - Stolik prasowy'
+            " Newspaper Table (Alt Lesson 1: Intro to Problem Solving -)":
+              name: "Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów -)"
+            'Spaghetti Bridge - "Alt Lesson 1: Intro to Problem Solving "':
+              name: 'Spaghetti Most - "Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów "'
+            " Newspaper Table (Alternative Lesson 1: Intro to Problem Solving)":
+              name: "Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)"
+            'Spaghetti Bridge - (Alt Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most - (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            'Spaghetti Bridge (Alt Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            'Paper Tower (Lesson 1: Intro to Problem Solving)':
+              name: 'Papierowa Wieża (Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            " Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)":
+              name: "Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)"
+            'Spaghetti Bridge (Alt. Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            'Games Theme (Lesson 3: Exploring Problem Solving)':
+              name: 'Motywy gier (Lekcja 3: Uczenie się rozwiązywania problemów)'
+            'Exploring Problem Solving (Lesson 3: Exploring Problem Solving)':
+              name: 'Uczenie się rozwiązywania problemów (Lekcja 3: Uczenie się rozwiązywania problemów)'
+            'Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            'Spaghetti Bridge (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            'Games Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Motywy gier (Alternatywna Lekcja 3: Uczenie się rozwiązywania problemów)'
+            'Exploring Problem Solving (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Uczenie się rozwiązywania problemów (Alternatywna Lekcja 3: Uczenie się  rozwiązywania problemów)'
+            'Paper Tower (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Papierowa Wieża (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            'Animals Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Motywy zwierząt (Alternatywna Lekcja 3: Uczenie się rozwiązywania problemów)'
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna lekcja 1)
+            Spaghetti Bridge (Alternate Lesson 1):
+              name: Spaghetti Most (Alternatywna Lekcja 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna lekcja 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna lekcja 1)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna lekcja 3)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna lekcja 3)
         csd4-2020:
           stages:
             Analysis of Design:
@@ -5027,6 +5086,8 @@ pl:
               name: Rysowanie w laboratorium gier
             Variables:
               name: Zmienne
+            Random Numbers:
+              name: Losowe liczby
             Sprite Properties:
               name: Właściwości duszka
             Booleans Unplugged:
@@ -5055,6 +5116,12 @@ pl:
               name: Projekt - Zaprojektuj grę
             Text:
               name: Tekst
+            'Mini-Project: Captioned Scenes':
+              name: 'Mini-Projekt: Sceny z napisami'
+            'Mini-Project: Animation':
+              name: 'Mini-Projekt: Animacja'
+            Mouse Input:
+              name: Użycie myszy
         coursea-2020:
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
           description_audience: 'Wiek 4-7'
@@ -5067,6 +5134,8 @@ pl:
               name: Szczęśliwe Mapy (Happy Maps)
             'Loops: Happy Loops':
               name: 'Pętle: Szczęśliwe pętle'
+            Safety in My Online Neighborhood:
+              name: Bezpieczeństwo w moim otoczeniu online
         courseb-2020:
           description_audience: 'Wiek 5-8'
           stages:
@@ -5078,6 +5147,8 @@ pl:
               name: Programowanie w labiryncie
             'Loops: Getting Loopy':
               name: Poznając pętle
+            Digital Trails:
+              name: Cyfrowe szlaki
         coursec-2020:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
           description_audience: 'Wiek 6-10'
@@ -5096,6 +5167,10 @@ pl:
               name: Wielkie wydarzenie
             Build a Flappy Game:
               name: Budowanie gry Flappy Bird
+            Putting a STOP to Online Meanness:
+              name: Stawianie STOP świństwom online
+            Password Power-Up:
+              name: Włączenie na hasło
         coursed-2020:
           description_audience: 'Wiek 7-11'
           stages:
@@ -5121,6 +5196,8 @@ pl:
               name: Cyfrowe obywatelstwo
             Dance Party:
               name: Potańcówka
+            Be A Super Digital Citizen:
+              name: Bądź Super Cyfrowym Obywatelem
         coursee-2020:
           description_audience: 'Wiek 8-12'
           stages:
@@ -5276,6 +5353,8 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Random Numbers:
+              name: Losowe liczby
             Sprite Properties:
               name: Właściwości duszka
         jess-test-script:
@@ -5324,6 +5403,8 @@ pl:
               name: Przetwarzanie tablic
             Functions with Return Values:
               name: Funkcje zwracające wartości
+            Variables:
+              name: Zmienne
         virtual-holding-place:
           stages:
             Velocity:
@@ -5348,3 +5429,46 @@ pl:
               name: Algorytmy
             Events:
               name: Zdarzenia
+            'Episode 1: Algorithms with Hill Harper':
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            'Episode 2: Events with Ciara':
+              name: 'Odcinek 2: Zdarzenia z Ciarą'
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Placeholder:
+              name: Odcinek 2 - Symbol zastępczy
+            Episode 2 - Coming Soon!:
+              name: Odcinek 2 - Wkrótce!
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+        code-break-staging:
+          stages:
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+          title: Inscenizacja Code Break
+        code-break-younger-staging:
+          stages:
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+        code-break-younger:
+          stages:
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Coming Soon!:
+              name: Odcinek 2 - Wkrótce!
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+          title: Code Break dla młodszych uczniów
+          description: 'Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.'

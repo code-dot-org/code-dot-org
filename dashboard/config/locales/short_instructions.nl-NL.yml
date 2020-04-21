@@ -837,23 +837,23 @@ nl-NL:
       Infinity_catch: Kun je Elsa (acteur 2) laten inhalen door Anna met behulp van
         de pijltjestoetsen?
       Infinity_finale: Maak wat je maar wilt en deel het!
-      Infinity_move_collide: Hiro is 'acteur 1'.  Verplaats hem naar Baymax, en laat
+      Infinity_move_collide: Hiro is 'speler 1'.  Verplaats hem naar Baymax en laat
         een geluid afspelen wanneer ze elkaar aanraken.
-      Infinity_move_directions: Baymax is 'acteur 2'.  Voeg beweeg blokken toe en
-        verplaats vervolgens Baymax met behulp van de pijltjestoetsen. Zorg dat hij
-        de andere 2 karakters raakt.
-      Infinity_move_right: Hiro is 'acteur 1'. Gebruik het beweeg blok om Hiro te
-        verplaatsen naar rechts en Baymax aan te raken.
+      Infinity_move_directions: Baymax is 'speler 2'.  Voeg "beweeg" blokken toe en
+        verplaats daarna Baymax met behulp van de pijltjestoetsen. Zorg dat hij de
+        andere twee karakters raakt.
+      Infinity_move_right: Hiro is 'speler 1'. Gebruik het beweeg blok om Hiro naar
+        rechts te verplaatsen zodat hij Baymax aanraakt.
       Infinity_repeat: Gebruik een "blijven herhalen" blok om Anna 400 pixels omhoog
         en naar beneden te laten bewegen.
-      Infinity_say: Zorg dat Anna 'Hi there' kan zeggen door gebruik te maken van
-        het zeg blok.
-      Infinity_shoot: Baymax is 'acteur 2'. Zorg dat Baymax een raket gooit naar Hiro.
-      Infinity_shoot_directions: Hiro is 'acteur 3'. Zorg dat Hiro een voorwerp naar
-        ieder van de vier karakters gooit. Wacht één seconde tussen iedere worp.
-      Infinity_touch_score: Zorg dat Anna een punt scoort wanneer ze een sneeuwvlok
-        aanraakt. Klik vervolgens op 'uitvoeren' en bestuur haar om iedere sneeuwvlok
-        één keer aan te raken.
+      Infinity_say: Laat Anna 'Hoi' zeggen door gebruik te maken van het "zeg" blok.
+      Infinity_shoot: Baymax is 'speler 2'. Zorg dat Baymax een raket gooit naar Hiro.
+      Infinity_shoot_directions: Hiro is 'speler 3'. Laat Hiro een voorwerp naar ieder
+        van de vier karakters gooien. Wacht telkens één seconde voordat Hiro de volgende
+        worp maakt.
+      Infinity_touch_score: Laat Anna een punt scoren als ze een sneeuwvlok aanraakt.
+        Klik vervolgens op 'Start' en bestuur haar zodat ze iedere sneeuwvlok één
+        keer aanraakt.
       InspirationalArtwork: |-
         Als dit beeld jou inspireert, probeer dan iets gelijkaardigs te maken.
         Of maak iets volledig op jezelf.
@@ -1287,12 +1287,18 @@ nl-NL:
       bounce_1_basketball: Plak een blok aan het "als pijltje naar links" blok en
         druk op 'Uitvoeren'. Verplaats de hand met behulp van de pijl naar links om
         het doel te bereiken.
+      bounce_1_sports: Ren naar de vlag! Maak een blok vast aan het "als pijltje naar
+        links" block en druk op "Start" om te spelen. Gebruik de "pijltje naar links"
+        toets op het toetsenbord om de speler naar de vlag te bewegen.
       bounce_2: Plak een blok aan de "als pijltje naar rechts"  en "als pijltje naar
         links" blokken en druk op 'Uitvoeren'. Verplaats het batje om de doelen te
         bereiken.
       bounce_2_basketball: Plak een blok aan de "als pijltje naar rechts" en "als
         pijltje naar links" blokken en druk op 'Uitvoeren'. Verplaats de hand om de
         doelen te bereiken.
+      bounce_2_sports: Nu zijn er twee vlaggen! Maak blokken vast aan de "als pijltje
+        naar links" en "als pijltje naar rechts" blokken om je speler in twee richtingen
+        te laten bewegen.
       bounce_3: Probeer nu iets gelijks met "als pijltje naar boven" blok. Verplaats
         het badje met behulp van de pijl naar boven om het doel te bereiken.
       bounce_4: Dit keer moet je vier blokken toevoegen. Verplaats het batje naar
@@ -1303,6 +1309,8 @@ nl-NL:
       bounce_5_basketball: We gaan een bal naar da hand laten vliegen. Plak een blok
         aan het blok "als de bal de hand raakt" om ervoor te zorgen dat de bal het
         doel bereikt.
+      bounce_5_sports: De hockey puck vliegt naar de speler toe! Maak een blok vast
+        aan het "wanneer bal speler raakt" blok om de vlag te raken.
       bounce_6: Nu is het doel boven. Om deze puzzel op te lossen moet je blokken
         plakken aan het "Als de bal raakt" blok.
       bounce_6_basketball: De vlag staat nu bovenaan. Om deze puzzel op te lossen
@@ -1533,8 +1541,6 @@ nl-NL:
       courseA_playLab_events3: Verbind de `beweeg link` blok aan het `wanneer link`
         evenement dat zich reeds op je werkruimte bevindt.
       courseA_playLab_events3_2018: Verbind de `beweeg link` blok aan het `wanneer
-        link` evenement dat zich reeds op je werkruimte bevindt.
-      courseA_playLab_events3_2019: Verbind de `beweeg link` blok aan het `wanneer
         link` evenement dat zich reeds op je werkruimte bevindt.
       courseA_playlab_events_challenge1: '"Waar verstoppen mijn vrienden zich? Kan
         je code schrijven om m''n overblijvende vrienden tevoorschijn te toveren?"'
@@ -2351,7 +2357,7 @@ nl-NL:
       frozen diamond: Gebruik een lus om deze blokken om een parallellogram te maken.
         Dat is net een rechthoek, maar met andere hoeken. Deze heeft hoeken van 60
         en van 120 graden in plaats van allemaal hoeken van 90 graden.
-      frozen diamond mini snowflake: Wist je dat iedere sneeuwvolk een andere vorm
+      frozen diamond mini snowflake: Wist je dat iedere sneeuwvlok een andere vorm
         heeft? Laten we een nieuwe sneeuwvlok maken door nog een 'herhaal'-blok te
         gebruiken om 4 keer een parallellogram te tekenen, waarbij we 90 graden naar
         rechts draaien na ieder parallellogram.

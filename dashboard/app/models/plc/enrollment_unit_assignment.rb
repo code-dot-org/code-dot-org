@@ -69,13 +69,13 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
   end
 
   def focus_area_stage_ids
-    plc_module_assignments.map {|a| a.plc_learning_module.stage.id unless a.plc_learning_module.required?}.compact
+    plc_module_assignments.map {|a| a.plc_learning_module.lesson.id unless a.plc_learning_module.required?}.compact
   end
 
   def summarize_progress
     summary = []
 
-    categories_for_stage = plc_course_unit.script.stages.map(&:flex_category).uniq
+    categories_for_stage = plc_course_unit.script.lessons.map(&:flex_category).uniq
 
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
@@ -94,7 +94,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         summary << {
           category: I18n.t("flex_category.#{category || 'content'}"),
           status: Plc::EnrollmentModuleAssignment.stages_based_status(
-            plc_course_unit.script.stages.select {|stage| stage.flex_category == category},
+            plc_course_unit.script.lessons.select {|stage| stage.flex_category == category},
             user,
             plc_course_unit.script
           ),

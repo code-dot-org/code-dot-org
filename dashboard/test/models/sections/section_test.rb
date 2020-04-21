@@ -381,6 +381,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         stage_extras: false,
         pairing_allowed: true,
+        autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: course.id,
@@ -419,6 +420,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         stage_extras: false,
         pairing_allowed: true,
+        autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: nil,
@@ -460,6 +462,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         stage_extras: false,
         pairing_allowed: true,
+        autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: course.id,
@@ -495,6 +498,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         stage_extras: false,
         pairing_allowed: true,
+        autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: nil,
@@ -564,15 +568,15 @@ class SectionTest < ActiveSupport::TestCase
 
     def create_script_with_levels(name, level_type)
       script = Script.find_by_name(name) || create(:script, name: name)
-      stage = create :stage, script: script
+      stage = create :lesson, script: script
       # 5 non-programming levels
       5.times do
-        create :script_level, script: script, stage: stage, levels: [create(:unplugged)]
+        create :script_level, script: script, lesson: stage, levels: [create(:unplugged)]
       end
 
       # 5 programming levels
       5.times do
-        create :script_level, script: script, stage: stage, levels: [create(level_type)]
+        create :script_level, script: script, lesson: stage, levels: [create(level_type)]
       end
       script
     end

@@ -5088,7 +5088,7 @@ de:
             Intro to Problem Solving:
               name: Einführung in die Problemlösung
             The Problem Solving Process:
-              description_teacher: 'Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden.'
+              description_teacher: "Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden."
             Exploring Problem Solving:
               name: Problemlösung erforschen
             Input and Output:
@@ -5473,6 +5473,10 @@ de:
               name: Mit Arrays arbeiten
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
+            Intro to App Lab:
+              name: Einführung in AppLab
+            Variables:
+              name: Variablen
         virtual-holding-place:
           stages:
             Velocity:

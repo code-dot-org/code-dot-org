@@ -234,11 +234,14 @@ da:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login-oplysninger til Code.org'
+    parent_email_added_subject: 'Velkommen til Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
   section:
     your_section:
       one: 'Din afdeling:'
+      other: 'Dine sektioner'
+    code_with_teacher: '%{section_code} med %{teacher_name}'
     confirm:
       remove: 'Er du sikker på du vil forlade denne sektion?'
     default_name: 'Sektion uden titel'
@@ -343,6 +346,7 @@ da:
       iceage: 'Is-tid'
       infinity: 'Uendelig'
       makerlab: 'Skaber-toolkit'
+      minecraft_codebuilder: "Minecraft: Kode Forbindelse\n"
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       spritelab: 'SpriteLab'
@@ -399,10 +403,16 @@ da:
     delete_text_teacher_note: "Bemærk venligst: Sletning af din konto vil ikke slette dine studerendes konti."
     delete_confirm: 'Sikker på, at du vil slette din konto?'
     deleted_user: 'slettet bruger'
+    create_personal_login: "Lav et personligt kodeords-login\n"
     create_personal_login_under_13_parent_email: 'Forældres/værges e-mail adresse'
     create_personal_login_terms_markdown: "Ved å lage ei personleg pålogging godtar eg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Eg stadfester at eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester, sjølv utan ein lærar tilstade."
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
+    update: "Opdater Konto"
+    account_successfully_updated: "Konto opdateret"
+    auth_option_saved: "Du har linket din %{provider} konto med email %{email}.\n"
     update_email: "Opdater"
+    parent_guardian_email_label: "Forældres/værges e-mail adresse"
+    none: "Ingen"
   user_level:
     completed: 'Fuldført'
     tried: 'Forsøgt'

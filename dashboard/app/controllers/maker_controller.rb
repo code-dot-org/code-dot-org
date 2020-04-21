@@ -13,7 +13,7 @@ class MakerController < ApplicationController
     current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
     @csd_unit_6 = {
       assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
-      lessonName: current_level.stage.localized_title,
+      lessonName: current_level.lesson.localized_title,
       linkToOverview: script_path(csd_unit_6_script),
       linkToLesson: script_next_path(csd_unit_6_script, 'next')
     }

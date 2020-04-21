@@ -199,6 +199,7 @@ bg:
       %{name}
   parent_mailer:
     student_associated_subject: 'Информация за вход в Code.org'
+    parent_email_added_subject: 'Добре дошли в Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Добре дошли в Code.org!'
   section:
@@ -386,6 +387,7 @@ bg:
     create_personal_login_email_note: "Забележка: Имейл адресите не се съхраняват във форма, която да позволява да се свържете с ученици. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата <a href='%{privacy_policy_url}', target='_blank'> декларация за поверителност</a> за повече информация."
     create_personal_login_email_note_markdown: 'Забележка: Имейл адресите не се съхраняват във форма, която да позволява да се свържете с ученици. Курсистите не получават имейли от Code.org освен за възстановяване на парола. Вижте нашата [декларация за поверителност](%{privacy_policy_url}) за повече информация.'
     update_email: "Актуализиране"
+    none: "Без"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'

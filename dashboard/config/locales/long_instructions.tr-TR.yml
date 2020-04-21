@@ -1021,6 +1021,72 @@ tr-TR:
         ve yazı aşağıdaki resimde olduğu gibi doğru boyutu belirtir.\n\r\n\r\n<img
         src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\"
         style=\"width:100px\" style=\"float:left\">\r"
+      CSD U2 Heading Test: |-
+        # Başlıklar ve Paragraflar
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Paragraf ögesi nedir?</strong>
+        </summary>
+
+        Paragraflar, etiketleri açarak(`<p>`) ve ayrıca kapatarak(`</p>`) işaretlenir. HTML'deki paragraflar, bir kelimeden bir grup cümleye kadar herhangi uzunlukta bir metin olabilir. Web sayfanızdaki metninizin tamamı bir HTML ögesinde (başlıklar veya paragraflar)  bulunmalıdır. Paragraflar, bir grup cümleyi birleştirir ve bu metin grubu ile bir sonraki metin grubu arasına biraz boşluk bırakır.
+
+        </details>
+        <details>
+        <summary><strong>Birden çok paragrafı nasıl oluştururum?</strong>
+        </summary>
+
+        Paragraflar, etiketleri(`<p>`) açarak ve ayrıca (`</p>`) kapatarak işaretlenir. Birden fazla paragraf oluşturmak için birden fazla açma ve kapama `<p>` etiket seti isteyeceksiniz. Örneğin;
+
+        <pre>
+        &lt;p&gt;
+          Bu bir paragraf.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Bu başka bir paragraf.
+        &lt;/p&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary><strong>Başlıklar nelerdir?</strong>
+        </summary>
+
+        Başlıklar, bir web sayfası boyunca farklı boyutlarda bölüm başlıklarıdır. Başlıklar, web sayfanıza ayırarak yapı ekleyerek kullanıcının okumasını kolaylaştırır.
+
+        </details>
+        <details>
+        <summary><strong>Farklı boyutlu başlıkları nasıl oluşturabilirim?</strong>
+        </summary>
+
+        Başlıklar 6 farklı boyutta gelir. Şimdiye kadar, öncelikle en büyük olanı \<h1> kullandınız. HTML etiketindeki 1 sayısı bunun en büyük başlık olduğunu gösterir. En küçük başlık \<h6>.  Sayı büyüdükçe küçülen \<h2>, \<h3>, \<h4> ve \<h5> etiketlerini de deneyebilirsiniz.
+
+        </details>
+        <details>
+        <summary><strong>HTLM nedir?</strong>
+        </summary>
+
+        HTML, Hiper Metin İşaretleme Dili anlamına gelir. HTML bir web sayfasının içeriğine yapı eklemek için kullanılır. HTML, belirli yapıların nerede başlayıp nerede biteceğini belirtmek için etiketleri kullanır. Bu etiketler, içerik ve yapının ayırt edilebilmesi için İngilizce dilinde kullanılmayan bir grup karakterdir.
+
+        </details>
+        <details>
+        <summary><strong>HTML ögesi nedir?</strong>
+        </summary>
+
+        Bir HTML ögesi bir başlangıç etiketiyle işaretlenen ve bazen bir bitiş etiketiyle kapatılan, bir web sitesinin parçasıdır. Öge ayrıca etiketlerin içindeki içeriği de içerir. Örneğin;
+
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+
+        </details>
+        <details>
+        <summary><strong>HTML etiketi nedir?</strong>
+        </summary>
+
+        HTML etiketi, makineye bir HTML ögesinin başlangıç veya bitişinin nerede ve ne tür olduğunu söyleyen özel karakter kümesidir.
+
+        </details>
+        </div>
       CSD U2 Heading Test_2018: "# Başlıklar ve Paragraflar\\\r\n\n\\\r\n\n<div\nstyle=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px;
         font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**Bir paragraf öğesi
@@ -5825,13 +5891,9 @@ tr-TR:
         hareket ettir.
       courseA_playLab_events4_2018: Şimdi, sağ ok butonuna tıklandığında Jorge' u
         sağa hareket ettir.
-      courseA_playLab_events4_2019: Şimdi, sağ ok butonuna tıklandığında Jorge' u
-        sağa hareket ettir.
       courseA_playLab_events5: Yukarı ve aşağı ok tuşlarına basıldığında Jorge' u
         yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playLab_events5_2018: Yukarı ve aşağı ok tuşlarına basıldığında Jorge'
-        u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
-      courseA_playLab_events5_2019: Yukarı ve aşağı ok tuşlarına basıldığında Jorge'
         u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playlab_events_challenge1: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesin. Kim en hızlı koşar

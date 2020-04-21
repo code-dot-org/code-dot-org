@@ -239,6 +239,7 @@ fr:
       %{name}
   parent_mailer:
     student_associated_subject: 'Informations de connexion pour Code.org'
+    parent_email_added_subject: 'Bienvenue sur Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Bienvenue sur Code.org!'
     delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
@@ -463,6 +464,9 @@ fr:
     auth_option_saved: "Vous avez réussi à lier votre %{provider} compte avec l'adresse électronique %{email}."
     auth_option_saved_no_email: "Vous avez réussi à lier votre %{provider} compte."
     update_email: "Mise à jour"
+    parent_guardian_email_label: "E-mail du parent/tuteur"
+    none: "Aucun"
+    encrypted: "chiffré"
   user_level:
     completed: 'Terminé'
     tried: 'A essayé'
@@ -897,7 +901,7 @@ fr:
     csf_e_2: 'Contenu du cours E'
     csf_f_1: 'Progression jusqu''au cours F (facultatif)'
     csf_f_2: 'Contenu du cours F'
-    csf_digcit: 'डिजीटल नागरिकता'
+    csf_digcit: 'Citoyenneté numérique'
     csf_jigsaw: 'Puzzle'
     csf_sequencing: 'Séquençage'
     csf_loops: 'boucles'
@@ -911,11 +915,12 @@ fr:
     csf_functions: 'fonctions'
     csf_variables: 'variables'
     csf_for_loops: 'Boucles « Pour »'
-    csf_internet: 'इंटरनेट'
+    csf_internet: 'Internet'
     csf_impacts: 'Les Impacts de l''Informatique'
     csf_warmup: 'Échauffement'
     csd1_1: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
     csd1_2: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
+    csd1_3: 'Leçons alternatives'
     csd2_1: 'Chapitre 1 : Contenu Web et HTML'
     csd2_2: 'Chapitre 2 : Styles et CSS'
     csd3_1: 'Chapitre 1 : Images et Animations'
@@ -956,8 +961,11 @@ fr:
     csp_parameters_return_values: 'Paramètres et Valeurs de Retour'
     csp_unit1_2020: 'Unité 1: L’Information numérique'
     csp_unit2_2020: 'Unité 2: L''Internet'
+    csp_unit3_2020: 'Unité 3: Introduction à la conception d''applications'
     csp_unit6_2020: 'Unité 6 : Les Algorithmes'
+    csp_unit8_2020: 'Unité 8: Créer une préparation PT ( Tâche de performance )'
     csp_unit9_2020: 'Unité 9 : Les Données'
+    csp_unit10_2020: ' Unité 10: Cyber sécurité et impacts mondiaux'
     dlp: 'Sujets de Réflexion'
     time4cs_c1: 'Collection 1 : Les Everglades et ses Écosystèmes'
     time4cs_c2: 'Collection 2 : Les Chaînes Alimentaires (dans les Everglades)'
@@ -971,6 +979,9 @@ fr:
     k5_next_steps: 'Prochaines étapes'
     k5_basic_concepts: 'Concepts de Codage de Base et Pratiques D''enseignement'
     k5_diving_deeper: 'Immersion Totale : Cours E et F'
+    web_lab_projects: 'Projets de laboratoire réseau'
+    game_lab_projects: 'Projets de laboratoire de jeu'
+    app_lab_projects: 'Projets de laboratoire d''application'
   external_links:
     disclaimer: Clause de non-responsabilité
     leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas géré par Code.org.
@@ -1032,6 +1043,8 @@ fr:
   locked_stage: 'Les contenus ne sont pas visibles car cette étape est verrouillée pour l''instant. Ton professeur la déverrouillera lorsqu''il sera temps de travailler dessus ou pour consulter tes réponses.'
   hidden_stage: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle leçon tu dois suivre."
   hidden_script: "Ton professeur n'avait pas prévu que tu travailles ici. Demande lui quelle unité tu dois suivre."
+  no_course_access_student: "Vous n'avez pas accès à ce cours. S'il vous plaît informez votre professeur quel cours vous devriez suivre."
+  no_course_access_teacher: "Vous n'avez pas accès à ce cours. Si vous penser que vous devriez avoir accès à ce cours, s'il vous plaît écrivez à support@code.org afin que nous puissions arranger la situation."
   no_script_access_student: "Tu n’as pas accès à cette unité. Merci de demander à ton professeur quelle unité tu devrais suivre."
   no_script_access_teacher: "Tu n’as pas accès à cette unité. Si tu penses que tu devrais avoir accès à cette unité, merci d’écrire à support@code.org afin que nous puissions corriger la situation."
   return_unit_overview: 'Accéder à l’aperçu de l''unité'
@@ -1149,3 +1162,10 @@ fr:
   page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse web et réessayez, ou retournez à notre page d’accueil."
   page_not_found_button: "Retourner à la page d’accueil"
   copy: 'Copier'
+  maker:
+    google_oauth:
+      login_with_google: 'Connectez - vous à l''application Maker avec Google'
+      enter_code: 'Veuillez entrer le code fourni lors de votre connexion via Google sur votre navigateur par défaut.'
+      copy_code: 'Veuillez copier et coller ce code à l''intérieur de l''application Maker pour vous connecter à Code.org.'
+      error_token_expired: 'Le jeton est expiré. Veuillez vous reconnectez pour un nouveau jeton.'
+      error_no_code: 'Veuillez entrer votre code de connexion.'

@@ -349,6 +349,8 @@ sv:
     parent_email_label: "Förälder/vårdnadshavares emailadress (valfritt)"
     update: "Uppdatera konto"
     update_email: "Uppdatera"
+    parent_guardian_email_label: "Förälder/vårdnadshavares e-postadress"
+    none: "Ingen"
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'

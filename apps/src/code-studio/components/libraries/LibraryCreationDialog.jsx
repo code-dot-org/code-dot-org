@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
@@ -14,6 +15,9 @@ import loadLibrary from './libraryLoader';
 import LibraryClientApi from './LibraryClientApi';
 import {getStore} from '@cdo/apps/redux';
 import {findProfanity} from './util';
+import Button from '@cdo/apps/templates/Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
   libraryBoundary: {
@@ -28,8 +32,19 @@ const styles = {
     fontSize: 12,
     fontStyle: 'italic',
     lineHeight: 1.2
+  },
+  idInfo: {
+    marginBottom: 10
+  },
+  copyBtn: {
+    margin: '0 15px',
+    ':hover': {
+      cursor: 'copy'
+    }
   }
 };
+
+const DEFAULT_COPY_BUTTON_TEXT = i18n.copyId();
 
 /**
  * @readonly
@@ -70,7 +85,8 @@ class LibraryCreationDialog extends React.Component {
     libraryName: '',
     libraryDetails: {},
     libraryClientApi: new LibraryClientApi(this.props.channelId),
-    errorMessage: ''
+    errorMessage: '',
+    copyButtonText: DEFAULT_COPY_BUTTON_TEXT
   };
 
   componentDidUpdate(prevProps) {
@@ -116,6 +132,41 @@ class LibraryCreationDialog extends React.Component {
   handleClose = () => {
     this.setState({dialogState: DialogState.LOADING});
     this.props.onClose();
+  };
+
+  displayPublisherSubtitle = () => {
+    const {libraryDetails} = this.state;
+    const {channelId} = this.props;
+    const COPY_DELAY = 3000;
+    const onClickCopy = _.debounce(
+      () => {
+        copyToClipboard(channelId);
+        this.setState({copyButtonText: i18n.copied()});
+        window.setInterval(
+          () => this.setState({copyButtonText: DEFAULT_COPY_BUTTON_TEXT}),
+          COPY_DELAY
+        );
+      },
+      COPY_DELAY,
+      {leading: true}
+    );
+
+    return (
+      <div style={styles.info}>
+        {libraryDetails && libraryDetails.alreadyPublished && (
+          <div style={styles.idInfo}>
+            <InlineMarkdown markdown={i18n.libraryExportId({channelId})} />
+            <Button
+              text={this.state.copyButtonText}
+              color={Button.ButtonColor.blue}
+              style={styles.copyBtn}
+              onClick={onClickCopy}
+            />
+          </div>
+        )}
+        {i18n.libraryExportSubtitle()}
+      </div>
+    );
   };
 
   displayPublisherContent = () => {
@@ -173,7 +224,7 @@ class LibraryCreationDialog extends React.Component {
         bodyContent = <ErrorDisplay message={errorMessage} />;
         break;
       case DialogState.DONE_LOADING:
-        subtitleContent = i18n.libraryExportSubtitle();
+        subtitleContent = this.displayPublisherSubtitle();
         bodyContent = this.displayPublisherContent();
         break;
       case DialogState.SHARE_TEACHER_LIBRARIES:
@@ -203,9 +254,7 @@ class LibraryCreationDialog extends React.Component {
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
               <Heading1>{title}</Heading1>
-              {subtitleContent && (
-                <div style={styles.info}>{subtitleContent}</div>
-              )}
+              {subtitleContent}
               {bodyContent}
             </div>
           </PadAndCenter>

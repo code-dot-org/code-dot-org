@@ -4,7 +4,6 @@ require_dependency 'queries/script_activity'
 
 class HomeController < ApplicationController
   include UsersHelper
-  before_action :authenticate_user!, only: :gallery_activities
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -41,8 +40,6 @@ class HomeController < ApplicationController
     render text: 'healthy!'
   end
 
-  GALLERY_PER_PAGE = 5
-
   # Signed in student, with an assigned course/script: redirect to course overview page
   # Note: the student will be redirected to the course or script in which they
   # most recently made progress, which may not be an assigned course or script.
@@ -66,14 +63,6 @@ class HomeController < ApplicationController
     authenticate_user!
     init_homepage
     render 'home/index'
-  end
-
-  def gallery_activities
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-    end
-    render partial: 'home/gallery_content'
   end
 
   def certificate_link_test
@@ -135,7 +124,7 @@ class HomeController < ApplicationController
     if script && script_level
       @homepage_data[:topCourse] = {
         assignableName: data_t_suffix('script.name', script[:name], 'title'),
-        lessonName: script_level.stage.localized_title,
+        lessonName: script_level.lesson.localized_title,
         linkToOverview: script_path(script),
         linkToLesson: script_next_path(script, 'next')
       }

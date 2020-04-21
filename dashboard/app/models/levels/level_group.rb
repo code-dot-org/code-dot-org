@@ -240,7 +240,7 @@ class LevelGroup < DSLDefined
 
       # All the results for one LevelGroup for a group of students.
       surveys_by_level_group[level_group.id] = {
-        stage_name: script_level.stage.localized_title,
+        stage_name: script_level.lesson.localized_title,
         levelgroup_results: reportable_results
       }
     end

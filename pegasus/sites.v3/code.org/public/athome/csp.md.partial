@@ -1,3 +1,4 @@
+
 ---
 title: Guide for CS Principles teachers during school closures
 theme: responsive
@@ -14,49 +15,38 @@ social:
 ---
 # Guide for CS Principles teachers during school closures
 
-As more schools close in response to the COVID-19 pandemic, many Code.org classrooms are moving to using our CS Principles curriculum in a virtual setting. This page is where we will be sharing updates, resources, and guidance on how to continue to support your students in that context.
+With schools closed around the country and around the world, many Code.org classrooms are moving to using our CS Principles curriculum in a virtual setting. This page is where we will be sharing updates, resources, and guidance on how to continue to support your students in that context.
 
 If you are a teacher or parent interested in starting to teach a new course during a school closure, we do not recommend starting CS Principles virtually. Instead, choose from [our recommendations for learning at home](http://code.org/athome).
 
 The primary resources we’ve put together here include:
 
-* Recommendations for preparing your classroom for the Performance Tasks and AP Exam in a virtual setting
+* Recommendations for preparing your classroom for the Performance Tasks in a virtual setting
 * Recommendations for modifying our CS Principles curriculum to a virtual setting if you are still teaching units in the course
 * Recommendations for using Code.org tools virtually
 * Links to outside resources
 
 We know that teaching in a virtual setting is a new challenge for many. We also know that many of our students lack access to technology that would allow them to participate in virtual learning. We are working quickly to address this rapidly developing situation and will continue to update this page with resources and recommendations as we have them.
 
-## March 20th Update - College Board Cancels CS Principles Exam, Students to Still Submit PTs by May 26th
-
-On the morning of March 20th [the College Board announced](https://apcentral.collegeboard.org/about-ap/news-changes/coronavirus-update) that there will be no multiple-choice exam for CS Principles and that students will still be submitting their Create PT and Explore PT. The deadline for both tasks was extended to May 26th. More details are at the link above.
-
-Our team is staying in close communication with the College Board and exploring ways to support classrooms and students who still can complete the performance tasks from home. Our team knows that many districts will not allow you to assign additional work and that many students lack device or internet access that would allow them to complete the performance tasks at home. We will be working quickly to better understand  the needs of our students, develop resources, and share them here. The Performance Task Prep section below has the current set of resources we've made available.
-
 ## Share on the Forum
 
 You are highly encouraged to share any questions or insights on our [CS Principles Forum](http://forum.code.org/c/csp) where you'll find many other teachers working together to navigate the transition to virtual instruction.
 
-## College Board Announcements
+## College Board Announcements and AP Testing
 
-The College Board is updating [collegeboard.org/ap-covid19-updates](https://collegeboard.org/ap-covid19-updates) as they continue to announce their response to this rapidly changing situation. Please refer to this site for up-to-date information about impacts on exam dates and performance task submissions. 
+The College Board is updating [collegeboard.org/ap-covid19-updates](https://collegeboard.org/ap-covid19-updates) as they continue to announce their response to this rapidly changing situation. As of April 7th, when this page was last updated, these announcements included:
+
+* Students will still submit their Create PT (60% of score) and Explore PT (40% of score) but there will be no multiple choice exam
+* Both Performance Tasks will be due May 26th
+* Students lacking laptop access at home should visit [cb.org/tech](http://cb.org/tech) for information on how to access a laptop
+* The College Board is releasing video lessons explaining the task directions and showing how to complete the task.
  
 ## Performance Task Prep
 
-We know many classrooms just started or were beginning to start the Create Performance Task. Our team has created a [Virtual Create PT Survival Guide](https://docs.google.com/document/d/16QwbnPFJl8u0fcsnu9ws2nuwJRMMu9F3aVRzLUNgaTI/edit#) and [Virtual Explore PT Survival Guide](https://docs.google.com/document/d/1eZFFp_tzn_MBz0FJaYcwFOX2trb0yBDDmDNo0zujA-E/edit) that compiles all the resources normally found in our Create PT Prep and Explore PT Prep units into single documents that are easier to share and assign. Activities have also been modified to be better suited for a virtual and independent format.
+We know many classrooms just started or have not yet started Create Performance Task. Our team has created a number of resources to help classrooms now teaching CSP virtually:
 
-## Review and Exam Prep
-
-**Note: Per the College Board's March 20th announcement there will no longer be a multiple-choice exam for CS Principles. The resources below may still be useful for virtual learning or review and so we will not be removing them from this page for now**
-
-Schools are closing during weeks when many classrooms would be completing exam preparation. The following resources are useful for review and exam prep.
-
-* [Khan Academy's Computer Science Principles Review Course](https://www.khanacademy.org/computing/ap-computer-science-principles) is an excellent resource for students looking to review content they have learned this year. For more information check out these resources from Khan Academy:
-    * [Remote Learning Quickstart Guide](https://docs.google.com/presentation/d/19Lth2WB8GcklAdIZxqA0p3WVJz2I_qtrBwP8nevKynM/edit?usp=sharing)
-    * [Webinar - Getting Started with Remote Learning](https://www.youtube.com/watch?v=9xg0picYJ3o&feature=youtu.be)
-    * [AP CS Principles Course Video Tour](https://www.khanacademy.org/khan-for-educators/teacher-toolbox/getting-started-teacher-training-us/teaching-computer-programming/teaching-programming-in-the-classroom/v/khan-academy-ap-computer-science-principles-a-tour-for-teachers)
-* The College Board has three AP exams which you can assign to students to help prepare them for the exam. These can be found in AP Classroom and assigned to your students for review or test practice.
-* Unit 5 of our CS Principles curriculum includes 5 assessments, including AP Pseudocode Practice to prepare students for the exam. You'll need to [unlock assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) for students to use them.
+* [Virtual Create PT Survival Guide](https://docs.google.com/document/d/16QwbnPFJl8u0fcsnu9ws2nuwJRMMu9F3aVRzLUNgaTI/edit#) and [Virtual Explore PT Survival Guide](https://docs.google.com/document/d/1eZFFp_tzn_MBz0FJaYcwFOX2trb0yBDDmDNo0zujA-E/edit) that compile all the resources normally found in our Create PT Prep and Explore PT Prep units into single documents that are easier to share and assign. Activities have also been modified to be better suited for a virtual and independent format.
+* [Video Walkthrough: The Create PT in App Lab](https://www.youtube.com/watch?v=rNlNFYJ9Spc) showing the different steps involved in actually programming a Create PT in App Lab
  
 ## Virtualization Plan - Unit by Unit
 The recommendations below are for classrooms in which students will primarily be working independently and will have few opportunities to meet virtually with you or their classmates.
@@ -123,7 +113,4 @@ We know many of our CS Principles students lack access to the internet or a lapt
 * [Khan Academy's CS Principles course](https://www.khanacademy.org/computing/ap-computer-science-principles) can be used on a smartphone. It can also be downloaded to a phone through a partnership with Learning Equality. More information [here](https://khanacademy.zendesk.com/hc/en-us/articles/202487370-How-can-I-use-Khan-Academy-without-an-internet-connection-).
 * [Code.org's Video Library](https://code.org/educate/resources/videos) is viewable on a smartphone
 * [Abstracting CS](https://www.abstractingcs.com/bits-bytes-resources-page/) has created a fully unplugged activity packet for CS Principles students
-* The College Board has asked the community to help compile a list of resources, including [this list of non-programming resources](https://docs.google.com/spreadsheets/d/1WHtvxinAt_A-ld2FCopcrmZvFSqFG9sOiW6SvjOsRcE/edit?fbclid=IwAR2Li0vAIx_ziaqQP31TQMKTUYId-FIe_scORDcZxQEb26YL_RC10FJ0OAg#gid=0), some of which are also unplugged.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNTcyNjU0XX0=
--->
+* The College Board has asked the community to help compile a list of resources, including [this list of non-programming resources](https://docs.google.com/spreadsheets/d/1WHtvxinAt_A-ld2FCopcrmZvFSqFG9sOiW6SvjOsRcE/edit?fbclid=IwAR2Li0vAIx_ziaqQP31TQMKTUYId-FIe_scORDcZxQEb26YL_RC10FJ0OAg#gid=0), some of which are also unplugged

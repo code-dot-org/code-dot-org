@@ -5,6 +5,7 @@ Dashboard::Application.routes.draw do
   get "404", to: "application#render_404", via: :all
 
   # React-router will handle sub-routes on the client.
+  get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all
   get 'teacher_dashboard/sections/:section_id', to: 'teacher_dashboard#show'
 
@@ -27,12 +28,6 @@ Dashboard::Application.routes.draw do
 
   get "/congrats", to: "congrats#index"
 
-  resources :gallery_activities, path: '/gallery' do
-    collection do
-      get 'art', to: 'gallery_activities#index', app: Game::ARTIST
-      get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
-    end
-  end
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]
@@ -148,6 +143,7 @@ Dashboard::Application.routes.draw do
     patch '/users/upgrade', to: 'registrations#upgrade'
     patch '/users/set_age', to: 'registrations#set_age'
     patch '/users/email', to: 'registrations#set_email'
+    patch '/users/parent_email', to: 'registrations#set_parent_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
@@ -186,6 +182,8 @@ Dashboard::Application.routes.draw do
       get '/', to: redirect('/projects')
     end
   end
+
+  get "/gallery", to: redirect("/projects/public")
 
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
@@ -232,7 +230,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
+  resources :datasets, param: 'dataset_name', only: [:index, :show, :update, :destroy] do
     collection do
       get '/manifest/edit', to: 'datasets#edit_manifest'
       post '/manifest/update', to: 'datasets#update_manifest'
@@ -634,6 +632,7 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
       post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
+      post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}

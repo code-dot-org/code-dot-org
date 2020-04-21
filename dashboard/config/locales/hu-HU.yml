@@ -446,6 +446,9 @@ hu:
     update: Adatok frissítése
     account_successfully_updated: Az adatok frissítése sikeres volt.
     update_email: Frissítés
+    parent_guardian_email_label: Szülő/gondviselő e-mail
+    none: Egyik sem
+    encrypted: titkosítva
   user_level:
     completed: Befejezve
     tried: Próbáltam

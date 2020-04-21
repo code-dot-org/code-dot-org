@@ -19491,7 +19491,7 @@ es-MX:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
         csd3-2020:
-          title: CSD Unidad 3 - Animaciones y juegos ('19-'20)
+          title: CSD Unidad 3 - Animaciones y juegos
           description: " En la Unidad 3, desarrollarás tu experiencia de programación
             a medida que programes animaciones, arte interactivo y juegos en el Laboratorio
             de juegos. La unidad comienza con formas simples y, a partir de los mismos
@@ -21654,6 +21654,10 @@ es-MX:
                 en AP
             CS Principles Post Course survey:
               name: Encuesta de fin de curso de Principios de Ciencias de la Computación
+            Intro to App Lab:
+              name: Introducción al Laboratorio de aplicaciones
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Velocity:

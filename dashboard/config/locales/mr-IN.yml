@@ -28,6 +28,8 @@ mr:
   teacher:
     panel:
       student: विध्यार्थी
+  user:
+    none: कुठलेच नाही
   home:
     student_reg_link: विध्यार्थी
   user_type:

@@ -270,12 +270,13 @@ export function getPluggedLessonCompletionStatus(state, stage) {
   // A lesson is "in progress" for a student if they have completed at
   // least 20% of the levels in the lesson.
   const levelsPerLessonInProgressThreshold = 0.2;
+  const studentsPerSectionInProgressThreshold = 0.2;
   // A lesson is "completed" by a student if at least 60% of the levels are
   // completed.
   const levelsPerLessonCompletionThreshold = 0.6;
   // Lesson status for a section is determined by the completion status of
   // levels for 80% of students in the section.
-  const studentsPerSectionThreshold = 0.8;
+  const studentsPerSectionCompletionThreshold = 0.8;
 
   let completionByLesson = {};
 
@@ -321,10 +322,10 @@ export function getPluggedLessonCompletionStatus(state, stage) {
     });
     const completed =
       numStudentsCompletedLesson / numberStudentsInSection >=
-      studentsPerSectionThreshold;
+      studentsPerSectionCompletionThreshold;
     const inProgress =
       numStudentsInProgressLesson / numberStudentsInSection >=
-      studentsPerSectionThreshold;
+      studentsPerSectionInProgressThreshold;
     completionByLesson['completed'] = completed;
     completionByLesson['inProgress'] = inProgress;
     completionByLesson['numStudentsCompleted'] = numStudentsCompletedLesson;

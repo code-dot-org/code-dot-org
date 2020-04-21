@@ -212,6 +212,7 @@ ko:
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
+    parent_email_added_subject: 'Code.org에 오신것을 환영합니다!'
   teacher_mailer:
     new_teacher_subject: 'Code.org에 오신것을 환영합니다!'
   section:
@@ -403,6 +404,8 @@ ko:
     create_personal_login_terms: "Code.org 의 <a herf='%{terms_of_service_url}',target='_blank'>서비스 약관</a>을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
     create_personal_login_terms_markdown: "Code.org 의 [서비스 약관](<>)을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
     update_email: "업데이트"
+    parent_guardian_email_label: "부모/보호자 이메일"
+    none: "없음"
   user_level:
     completed: '완료'
     tried: '시도함'

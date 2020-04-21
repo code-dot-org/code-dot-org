@@ -1385,6 +1385,8 @@ sk:
               name: Funkcie
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
         grade2:
@@ -1808,6 +1810,8 @@ sk:
           stages:
             Introduction:
               name: Úvod
+            Sprites:
+              name: Postavy
         applab-1hour:
           stages:
             Digital Design:
@@ -1842,6 +1846,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -1868,6 +1874,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -2787,6 +2795,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -2797,6 +2807,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -3553,6 +3565,9 @@ sk:
               name: Cykly "for" s Umelcom
               description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením na vytvorenie vlastnej kresby.
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Pet Giraffe with Sprite Lab:
@@ -3643,6 +3658,7 @@ sk:
             Digital Citizenship:
               name: Digitálne občianstvo
               description_student: Niektoré informácie nie je vhodné zdieľať online. Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
+              description_teacher: "Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education pomôže študentom kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Žiaci sa naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.\n\nV rámci hodiny tiež prediskutujeme, ako sa správať zodpovedne a rešpektujúco v rámci offline aj online komunít - dôležitá vlastnosť dobrého digitálneho občana."
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             'Unplugged: Binary':
@@ -3706,6 +3722,9 @@ sk:
               name: Urči správny koncept
               description_student: "Vopred ti nič neprezradíme!\nV tejto lekcii využiješ všetko, čo si sa doteraz naučil."
               description_teacher: Táto lekcia spája koncepty z predchádzajúcich lekcií a dáva študentom príležitosť kriticky premýšľať o riešení každej úlohy bez toho, aby sme im povedali, ktorý koncept majú použiť. Študenti si precvičia základné algoritmy, hľadanie a odstraňovanie chýb, opakovacie cykly, podmienky, cykly "pokiaľ" a funkcie.
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Pet Giraffe with Sprite Lab:
@@ -3740,10 +3759,15 @@ sk:
               name: Vnorené cykly s Frozen
             End of Course Project:
               name: Záverečný projekt
+            About Me:
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete
+              description_teacher: "Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete.\\r"
             Digital Sharing:
               name: Digitálne zdieľanie
             Simon Says:
               name: Simon vraví
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
             Songwriting:
               name: Písanie pesničiek
         express-2019:
@@ -4095,6 +4119,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -4243,6 +4269,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -4403,7 +4431,7 @@ sk:
             Images:
               name: Obrázky
             'Websites for Expression ':
-              description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+              description_student: "Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. "
         csd4-2020:
           stages:
             Analysis of Design:
@@ -4581,6 +4609,7 @@ sk:
             Digital Citizenship:
               name: Digitálne občianstvo
               description_student: Niektoré informácie nie je vhodné zdieľať online. Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
+              description_teacher: "Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education pomôže študentom kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Žiaci sa naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.\n\nV rámci hodiny tiež prediskutujeme, ako sa správať zodpovedne a rešpektujúco v rámci offline aj online komunít - dôležitá vlastnosť dobrého digitálneho občana."
             Dance Party:
               name: Tanečná Párty
             End of Course Project:
@@ -4595,12 +4624,18 @@ sk:
               name: Podmienky s Farmárkou
             Simon Says:
               name: Simon vraví
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné.
               description_teacher: "Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. \n\nAko študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete."
+            About Me:
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete
+              description_teacher: "Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete.\\r"
             Nested Loops in Bee:
               name: Vnorené cykly v bludisku
             Nested Loops in Artist:
@@ -4633,6 +4668,9 @@ sk:
           stages:
             Functions in Minecraft:
               name: Funkcie v Minecrafte
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Nested Loops in the Maze:
@@ -4743,6 +4781,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -4769,6 +4809,10 @@ sk:
               name: Viacobrazovkové aplikácie
             While Loops:
               name: Cykly "pokiaľ"
+            Intro to App Lab:
+              name: Úvod do App Labu
+            Variables:
+              name: Premenné
         virtual-holding-place:
           stages:
             Velocity:

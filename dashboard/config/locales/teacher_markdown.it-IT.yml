@@ -1,1 +1,10 @@
---- {}
+---
+it-IT:
+  data:
+    teacher_markdown:
+      CSD Problem Solving Process Video: |-
+        ## Obiettivi della discussione
+
+        La prima domanda della discussione riguarda l'attività principale della lezione. Gli studenti dovrebbero lavorare in gruppo e pensare ai ragionamenti che hanno fatto per seguire i vari passi del processo. L'obiettivo della discussione è quello di rendere più concreti e familiari agli studenti i ragionamenti astratti, applicandoli ad un'attività condivisa.
+
+        La seconda domanda da agli studenti l'opportunità di applicare la loro comprensione del processo a problemi diversi e osservare come si modificano i vari passi del ragionamento in contesti differenti. L'obiettivo di questa discussione è quello assicurare che gli studenti abbiano una comprensione adeguata del processo per poterlo applicare ad una più ampia gamma di problemi. Infatti, questo processo sarà utilizzato in diversi contesti durante l'intero corso.

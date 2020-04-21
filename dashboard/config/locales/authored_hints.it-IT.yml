@@ -6123,6 +6123,8 @@ it-IT:
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: Prova ad usare un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>.
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'

@@ -224,6 +224,35 @@ gl-ES:
         isto:\n\n-   Revisa o contido coa túa parella e decide cal crees que debe
         ser a mellor estrutura.\n-   Usa as túas etiquetas de cabeceira e parágrafo
         para codificar a estrutura na páxina."
+      CSD U2 Image Tag 1: "<div style=\"float: right; height: 250px; width: 40%; overflow-y:
+        scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Como
+        podo engadir imaxes?</strong></summary>\n\n￼A etiqueta `￼￼<img>￼￼` permíteche
+        mostrar ￼￼imaxes￼￼ na túa páxina web. ￼￼<br><br>￼\n\nExemplo:\n\n<pre>&lt;img
+        src=\"dog.png\" alt=\"dog jumping\"/&gt;</pre><br><br>\n\n￼Para dicirlle ao
+        ￼￼navegador￼￼ que arquivo empregar, engádese información extra, chamada **atributo**,
+        á etiqueta \\\\￼￼<img>￼￼ dentro das parénteses. O atributo `src` significa
+        **f**on**t**e e da o nome da ￼￼imaxe￼￼. Os nomes dos arquivos de ￼￼imaxe￼￼
+        inclúen extensións que lle din ao ￼￼ordenador￼￼ con que tipo de ￼￼imaxe￼￼
+        están a traballar. As extensións comúns son . jpg, . jpeg, . png. ￼￼<br><br>￼\n\n￼Ademais
+        de ter o atributo src, ￼￼elementos￼￼ da imaxe tamén teñen o atributo `alt`
+        que describe a ￼￼imaxe￼￼. Isto é importante no caso de que a ￼￼imaxe￼￼ non
+        se cargue ou para as persoas que teñen problemas de visión. ￼￼<br><br>￼\n\nUnha
+        etiqueta `￼<img>￼` é un exemplo dunha **etiqueta de autopeche** porque empeza
+        e péchase nunha soa etiqueta. Para ￼marcar￼ isto poñemos a `/` que normalmente
+        vai na etiqueta de peche ao final da etiqueta da ￼imaxe￼.\n\n</details>\n<details>\n<summary><strong>Por
+        que unha etiqueta de imaxe non ten unha etiqueta de peche?</strong></summary>\n\nO
+        contido que se mostra na pantalla especifícase a través dos atributos das
+        etiquetas. O contido que se mostra na pantalla especifícase a través dos atributos
+        das etiquetas.\n\n</details>\n<details>\n<summary><strong>Que é un atributo?</strong></summary>\n\nOs
+        atributos son información extra incluída nunha etiqueta. Os atributos teñen
+        nomes e valores. O nome di que tipo de información está a proporcionarse e
+        logo o valor dá a información específica para esa etiqueta. \n\nPor exemplo,
+        as etiquetas \\\\￼<img>￼ teñen dous atributos, src e alt. src especifica o
+        nome do arquivo da ￼imaxe￼ e alt dille ao ￼navegador￼ en texto lexible o que
+        é a ￼imaxe￼.\n\n</details>\n</div>\n\n# Imaxes\n\nIniciouse una páxina web
+        de Can vs Gato para ti. A imaxe do can xa foi engadida á seguinte páxina web.
+        Emprega a etiqueta de imaxe para engadir a imaxe `cat.jpeg` à páxina debaixo
+        da cabeceira do gato."
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -335,6 +364,42 @@ gl-ES:
         -   Utiliza a ferramenta de inspección para ver o código que está a facer os dous tipos diferentes de listas.
         -   Asegúrate de que ti e a túa parella estades de acordo no que fan as diferentes etiquetas.
         -   Arrnanxa o código para que o segundo elemento de cada lista se mostre correctamente
+      CSD U2 new page: |-
+        # Crea unha nova páxina para o teu sitio web.
+
+        Aquí está o teu proxecto de antes. Engadirás outra páxina. A túa nova páxina porde ser unha ￼lista￼ dun top 10, unha receita ou calquera cousa que che guste.
+
+        # Fai isto
+
+        -   Engade un novo arquivo HTML pulsando \[]￼[0]￼. O novo arquivo aparecerá na ￼lista￼ de arquivos á ￼esquerda￼ do espazo de traballo.
+        -   ￼Renomea￼ o arquivo, xa sexa premendo o botón dereito e elixindo «￼Renomear￼», ou premendo cando xa estea resaltado. **￼Asegúrate￼ de que o nome sexa único, descritivo e que termine en ".html"**.
+        -   Emprega HTML para encher a túa nova páxina. Debería incluir:
+            -   a lista
+            -   unha cabeceira
+      CSD U2 new page_2018: |-
+        # Crea unha nova páxina para o teu sitio web.
+
+        Aquí está o teu proxecto de antes. Engadirás outra páxina. A túa nova páxina porde ser unha ￼lista￼ dun top 10, unha receita ou calquera cousa que che guste.
+
+        # Fai isto
+
+        -   Engade un novo arquivo HTML pulsando \[]￼[0]￼. O novo arquivo aparecerá na ￼lista￼ de arquivos á ￼esquerda￼ do espazo de traballo.
+        -   ￼Renomea￼ o arquivo, xa sexa premendo o botón dereito e elixindo «￼Renomear￼», ou premendo cando xa estea resaltado. **￼Asegúrate￼ de que o nome sexa único, descritivo e que termine en ".html"**.
+        -   Emprega HTML para encher a túa nova páxina. Debería incluir:
+            -   a lista
+            -   unha cabeceira
+      CSD U2 new page_2019: |-
+        # Crea unha nova páxina para o teu sitio web.
+
+        Aquí está o teu proxecto de antes. Engadirás outra páxina. A túa nova páxina porde ser unha ￼lista￼ dun top 10, unha receita ou calquera cousa que che guste.
+
+        # Fai isto
+
+        -   Engade un novo arquivo HTML pulsando \[]￼[0]￼. O novo arquivo aparecerá na ￼lista￼ de arquivos á ￼esquerda￼ do espazo de traballo.
+        -   ￼Renomea￼ o arquivo, xa sexa premendo o botón dereito e elixindo «￼Renomear￼», ou premendo cando xa estea resaltado. **￼Asegúrate￼ de que o nome sexa único, descritivo e que termine en ".html"**.
+        -   Emprega HTML para encher a túa nova páxina. Debería incluir:
+            -   a lista
+            -   unha cabeceira
       CSD U2 ordered list: "# Listas ordenadas\n\n<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\n<details>\n\n<summary><strong>What is an ordered list?</strong>\n</summary>\n\n
@@ -365,6 +430,59 @@ gl-ES:
         este contido nunha lista ordenada como a de abaixo.\n\n_Pista: non haberá
         NÚMEROS no teu código._ \n\n![](<https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03
         PM.png>)"
+      CSD U2 unordered list: |-
+        # Listas desordeandas
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Cales son os dous tipos de listas?</strong>
+        </summary>
+         Hai dous tipo de lista en HTML, listas ordenadas e listas desordenadas.
+        </details>
+        <details>
+        <summary><strong>Que é unha lista desordenada?</strong>
+        </summary>
+
+        Unha ￼lista￼ desordenada é só un ￼conxunto￼ de ￼elementos￼ sen orde con viñetas. ￼<br /><br />￼Un elemento da ￼lista￼ desordenada ten a etiqueta \\￼<ul>￼. É unha abreviatura de ￼<strong>￼L￼</strong>￼ista ￼<strong>￼d￼</strong>￼esordenada. Cada ￼elemento￼ da ￼lista￼ está ￼marcado￼ por un ￼elemento￼ da ￼lista￼ \\￼<li>￼. É unha abreviatura de ￼<strong>￼E￼</strong>￼lemento ￼<strong>￼da￼</strong>￼lista. O ￼elemento￼ da ￼lista￼ é un elemento fillo, o que significa que vai dentro dun elemento pai, a ￼lista￼ desordenada (\\￼<ul>￼).
+
+        </details>
+
+        <details>
+        <summary><strong>￼Como podo ￼￼facer￼￼ unha lista ￼￼desordenada￼￼?￼</strong>
+        </summary>
+
+        ￼Facer￼￼ unha lista ￼￼desordenada￼￼ ten dous pasos: ￼￼facer￼￼ a ￼￼lista￼￼ e engadir os ￼￼elementos￼￼ ￼￼da lista￼￼. Para ￼￼facer￼￼ unha lsita ￼￼desordenada￼￼, escribe as etiquetas ￼￼da lista￼￼ desordenada `￼￼<ul></ul>￼￼`. A continuación, agrega os ￼￼elementos￼￼ ￼￼da lista￼￼ **dentro** das etiquetas ￼￼da lista￼￼ desordenada. Para ￼￼facer￼￼ cada ￼￼elemento￼￼ ￼￼da lista￼￼, usa as ￼￼etiquetas￼￼ ￼￼dos elementos￼￼ da lista `￼￼<li></li>￼￼` e escribe o ￼￼elemento￼￼ ￼￼da lista￼￼ dentro das etiquetas.￼
+
+        Pode ser útil sangrar as túas etiquetas \\￼<li>￼ para que quede claro que contidos están na etiqueta \\￼<ul>￼.
+
+        </details>
+
+        <details>
+        <summary><strong>￼Ensíname o código de traballo.￼</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Exemplo</td>
+        <td>Resultado</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br>   &lt;li&gt;Vermello &lt;/li&gt; <br>   &lt;li&gt;Verde &lt;/li&gt; <br>   &lt;li&gt;Azul&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px">
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        Esta páxina debería ter unha ￼lista￼ desordenada, pero fáltanlle as etiquetas da ￼lista￼.
+
+        # Fai isto
+
+        -   Emprega as etiquetas`￼<ul>￼` e `￼<li>￼` para estruturar o contido nunha ￼lista￼ desordenada como a da foto de ￼abaixo￼.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD What Makes a Computer a Computer Video_2019: |-
         ## Preguntas para pensar
 

@@ -31,6 +31,8 @@ te:
       signin: 'సైన్ ఇన్'
       signup: 'ఒక అకౌంట్ సృష్టించండి'
       dance: 'డాన్స్ పార్టీ'
+  user:
+    none: "ఏదీ కాదు"
   footer:
     copyright: 'కాపీరైట్'
     more: 'ఎక్కువ'

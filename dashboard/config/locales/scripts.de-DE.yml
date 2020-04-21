@@ -5929,6 +5929,10 @@ de:
               name: Mit Arrays arbeiten
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
+            Intro to App Lab:
+              name: Einführung in AppLab
+            Variables:
+              name: Variablen
         virtual-holding-place:
           stages:
             Velocity:

@@ -2425,6 +2425,8 @@ bs:
           stages:
             While Loops:
               name: Dok petlje
+            Variables:
+              name: Varijable
         virtual-holding-place:
           stages:
             Velocity:
