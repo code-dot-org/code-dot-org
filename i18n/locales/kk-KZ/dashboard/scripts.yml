@@ -1704,3 +1704,7 @@ kk:
               name: Алгоритмдер
             Events:
               name: Шаралар
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Шарт орындалғанша Циклдері

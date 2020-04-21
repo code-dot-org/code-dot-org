@@ -3,7 +3,6 @@
   data:
     script:
       category:
-        csf_category_name: Grunnleggende informatikk
         csf_international_category_name: Grunnleggende informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
         csp_category_name: "'15-'16 Prinsipper i informatikk"
@@ -2004,3 +2003,7 @@
               name: Algoritmer
             Events:
               name: Hendelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Gjenta-løkker
