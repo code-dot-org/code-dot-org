@@ -44,9 +44,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
     assets.listStore.list.restore();
   });
 
-  window.marked = function(str) {
-    return str;
-  };
   window.trackEvent = () => {};
 }
 

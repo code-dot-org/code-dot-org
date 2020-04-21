@@ -35,6 +35,12 @@ class DatasetsController < ApplicationController
     render json: data, status: response.code
   end
 
+  # DELETE /datasets/:dataset_name/
+  def destroy
+    response = @firebase.delete_shared_table params[:dataset_name]
+    render json: {}, status: response.code
+  end
+
   # GET /datasets/manifest/edit
   def edit_manifest
     @dataset_library_manifest = @firebase.get_library_manifest

@@ -322,7 +322,7 @@ class ActiveSupport::TestCase
   #     freeze_time
   #     #...
   def self.freeze_time(time=nil)
-    time ||= Date.today + 9.hours
+    time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
     end

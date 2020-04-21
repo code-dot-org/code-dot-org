@@ -96,7 +96,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # Set different 'hidden' option from defaults in Script.setup
     options = {name: File.basename(@script_file, ".script"), hidden: false}
-    script = Script.add_script(options, nil, parsed_script)
+    script = Script.add_script(options, [], parsed_script)
     assert_equal script_id, script.script_levels[4].script_id
     assert_not_equal script_level_id, script.script_levels[4].id
   end
@@ -199,6 +199,46 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'stage1', second.name
   end
 
+  test 'all fields can be set and then removed on reseed' do
+    # First, seed using a .script file that sets something explicitly for all fields, i.e. everything that's not in
+    # the properties hash.
+    script_file_all_fields = File.join(self.class.fixture_path, 'test-all-fields.script')
+    scripts, _ = Script.setup([script_file_all_fields])
+    script = scripts.first
+
+    # Not testing new_name since it causes a new script to be created.
+    assert_equal false, script.hidden? # defaults to true, so we want to verify it was explicitly set to false
+    assert script.login_required?
+    assert_equal 'csd1', script.family_name
+
+    # Seed using an empty .script file with the same name. Verify that this sets all field values back to defaults.
+    script_file_no_fields = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-fields.script')
+    Script.setup([script_file_no_fields])
+    script.reload
+
+    assert script.hidden? # defaults to true
+    assert_equal false, script.login_required?
+    assert_nil script.family_name
+  end
+
+  test 'all properties can be set and then removed on reseed' do
+    # First, seed using a .script file that sets something explicitly for everything in the properties hash.
+    script_file_all_properties = File.join(self.class.fixture_path, 'test-all-properties.script')
+    scripts, _ = Script.setup([script_file_all_properties])
+    script = scripts.first
+
+    assert_equal 20, script.properties.keys.length
+    script.properties.values.each {|v| assert v}
+
+    # Seed using an empty .script file with the same name. Verify that this sets all properties values back to defaults.
+    script_file_no_properties = File.join(self.class.fixture_path, 'duplicate_scripts', 'test-all-properties.script')
+    Script.setup([script_file_no_properties])
+    script.reload
+
+    # All properties should get reset to defaults.
+    assert_empty script.properties
+  end
+
   test 'should not create two scripts with same name' do
     create(:script, name: 'script')
     raise = assert_raises ActiveRecord::RecordInvalid do
@@ -285,26 +325,26 @@ class ScriptTest < ActiveSupport::TestCase
   test 'allow applab and gamelab levels in hidden scripts' do
     Script.add_script(
       {name: 'test script', hidden: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
   test 'allow applab and gamelab levels in login_required scripts' do
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New App Lab Project'}]}]}] # From level.yml fixture
     )
     Script.add_script(
       {name: 'test script', hidden: false, login_required: true},
-      nil,
-      [{scriptlevels: [{levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
+      [],
+      [{stage: "Lesson1", scriptlevels: [{stage: "Lesson1", levels: [{name: 'New Game Lab Project'}]}]}] # From level.yml fixture
     )
   end
 
@@ -1913,7 +1953,7 @@ endvariants
   test 'raises error if a lesson group key is empty' do
     l1 = create :level
     dsl = <<-SCRIPT
-      lesson_group ''
+      lesson_group '', display_name: 'Display Name'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -1926,7 +1966,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect all levelbuilder created lesson groups to have key.', raise.message
+    assert_equal 'Validation failed: Key Expect all levelbuilder created lesson groups to have key.', raise.message
   end
 
   test 'raises error if a lesson group key is given without a display_name' do
@@ -1988,7 +2028,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: Lesson1.', raise.message
+    assert_equal 'Expect if one lesson has a lesson group all lessons have lesson groups. Lesson Lesson1 does not have a lesson group.', raise.message
   end
 
   test 'raises error if two non-consecutive lessons have the same lesson group' do

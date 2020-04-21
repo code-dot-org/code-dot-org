@@ -914,44 +914,48 @@ class Script < ActiveRecord::Base
     lockable_count = 0
     non_lockable_count = 0
 
-    if raw_lesson_groups.empty?
-      lesson_group = LessonGroup.find_or_create_by(
-        key: '',
-        script: script,
-        user_facing: false,
-        position: 0
-      )
-
-      script_lesson_groups << lesson_group
-    else
-      # Finds or creates Lesson Groups with the correct position.
-      # In addition it check for 2 things:
-      # 1. That all the lesson groups specified by the editor have a key and
-      # display name.
-      # 2. If the lesson group key is an existing key that the given display name
-      # for that key matches the already saved display name
-      raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
-        if raw_lesson_group[:key].blank?
-          raise "Expect all levelbuilder created lesson groups to have key."
-        end
-        if raw_lesson_group[:display_name].blank?
-          raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
-        end
-
+    unless raw_script_levels.empty?
+      if raw_lesson_groups.empty?
         lesson_group = LessonGroup.find_or_create_by(
-          key: raw_lesson_group[:key],
+          key: '',
           script: script,
-          user_facing: true
+          user_facing: false,
+          position: 0
         )
 
-        lesson_group.assign_attributes(position: index + 1)
-        lesson_group.save! if lesson_group.changed?
-
-        if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
-          raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
-        end
-
         script_lesson_groups << lesson_group
+      else
+        # Finds or creates Lesson Groups with the correct position.
+        # In addition it check for 2 things:
+        # 1. That all the lesson groups specified by the editor have a key and
+        # display name.
+        # 2. If the lesson group key is an existing key that the given display name
+        # for that key matches the already saved display name
+        raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+          if raw_lesson_group[:display_name].blank?
+            raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
+          end
+
+          new_lesson_group = false
+
+          lesson_group = LessonGroup.find_or_create_by(
+            key: raw_lesson_group[:key],
+            script: script,
+            user_facing: true
+          ) do
+            # if you got in here, this is a new lesson_group
+            new_lesson_group = true
+          end
+
+          lesson_group.assign_attributes(position: index + 1)
+          lesson_group.save! if lesson_group.changed?
+
+          if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+            raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
+          end
+
+          script_lesson_groups << lesson_group
+        end
       end
     end
 
@@ -1046,6 +1050,13 @@ class Script < ActiveRecord::Base
 
       # Set/create Lesson containing custom ScriptLevel
       if lesson_name
+        # We want a script to either have all of its lessons have lesson groups
+        # or none of the lessons have lesson groups. We know we have hit this case if
+        # there are lesson groups for a script but the lesson group key
+        # for this specific lesson is blank
+        if !lesson_group_key.present? && !raw_lesson_groups.empty?
+          raise "Expect if one lesson has a lesson group all lessons have lesson groups. Lesson #{lesson_name} does not have a lesson group."
+        end
         # find the lesson group for this lesson
         lesson_group = LessonGroup.find_by!(
           key: lesson_group_key.presence || "",
@@ -1114,7 +1125,6 @@ class Script < ActiveRecord::Base
       lesson.save! if lesson.changed?
     end
 
-    Script.prevent_lesson_group_mismatch(script_lessons)
     Script.prevent_non_consecutive_lessons_with_same_lesson_group(script_lessons)
     Script.prevent_lesson_group_with_no_lessons(script)
 
@@ -1147,22 +1157,6 @@ class Script < ActiveRecord::Base
       end
       previous_lesson_groups.append(current_lesson_group)
       current_lesson_group = lesson.lesson_group.key
-    end
-  end
-
-  # We want a script to either have all of its lessons have lesson groups
-  # or none of the lessons have lesson groups. This method raises an error if
-  # we some lessons with lesson groups and not others
-  def self.prevent_lesson_group_mismatch(script_lessons)
-    lessons_without_lesson_group = []
-    lessons_with_lesson_group = []
-
-    script_lessons.each do |lesson|
-      lesson.lesson_group.key.blank? ? lessons_without_lesson_group.append(lesson.name) : lessons_with_lesson_group.append(lesson.name)
-    end
-
-    if !lessons_without_lesson_group.empty? && !lessons_with_lesson_group.empty?
-      raise "Expect if one lesson has a lesson group all lessons have lesson groups. The following lessons do not have lesson groups: #{lessons_without_lesson_group.join(', ')}."
     end
   end
 
@@ -1260,7 +1254,7 @@ class Script < ActiveRecord::Base
             properties: Script.build_property_hash(general_params)
           },
           script_data[:lesson_groups],
-          script_data[:stages],
+          script_data[:stages]
         )
         if Rails.application.config.levelbuilder_mode
           Script.merge_and_write_i18n(i18n, script_name, metadata_i18n)
@@ -1565,25 +1559,25 @@ class Script < ActiveRecord::Base
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
-      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
+      peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || false,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
-      project_widget_types: script_data[:project_widget_types],
-      teacher_resources: script_data[:teacher_resources],
+      project_widget_types: script_data[:project_widget_types] || false,
+      teacher_resources: script_data[:teacher_resources] || false,
       stage_extras_available: script_data[:stage_extras_available] || false,
       has_verified_resources: !!script_data[:has_verified_resources],
       has_lesson_plan: !!script_data[:has_lesson_plan],
-      curriculum_path: script_data[:curriculum_path],
+      curriculum_path: script_data[:curriculum_path] || false,
       script_announcements: script_data[:script_announcements] || false,
-      version_year: script_data[:version_year],
-      is_stable: script_data[:is_stable],
-      supported_locales: script_data[:supported_locales],
-      pilot_experiment: script_data[:pilot_experiment],
-      editor_experiment: script_data[:editor_experiment],
+      version_year: script_data[:version_year] || false,
+      is_stable: !!script_data[:is_stable],
+      supported_locales: script_data[:supported_locales] || false,
+      pilot_experiment: script_data[:pilot_experiment] || false,
+      editor_experiment: script_data[:editor_experiment] || false,
       project_sharing: !!script_data[:project_sharing],
-      curriculum_umbrella: script_data[:curriculum_umbrella],
+      curriculum_umbrella: script_data[:curriculum_umbrella] || false,
       tts: !!script_data[:tts]
-    }.compact
+    }
   end
 
   # A script is considered to have a matching course if there is exactly one

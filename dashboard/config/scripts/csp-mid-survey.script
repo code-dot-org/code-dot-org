@@ -2,5 +2,6 @@ hidden false
 login_required true
 has_verified_resources true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CSP Mid-year survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-2017-levelgroup_2018', progression: 'CS Principles Mid-year Survey', assessment: true

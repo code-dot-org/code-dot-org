@@ -3,6 +3,7 @@ hideable_stages true
 pilot_experiment 'time4cs-experiment'
 editor_experiment 'broward'
 
+lesson_group 'time4cs_c1', display_name: 'Collection 1: The Everglades & its Ecosystems'
 stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
 level 'BrowardTestMarkdownLevel'
 level 'BrowardTestMarkdownLevel2'
@@ -17,6 +18,7 @@ level 'BrowardTestMarkdownLevel'
 stage 'Evaluating a Project in Sprite Lab', flex_category: 'time4cs_c1'
 level 'BrowardTestMarkdownLevel'
 
+lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
 stage 'Food Chains', flex_category: 'time4cs_c2'
 level 'BrowardTestMarkdownLevel'
 
@@ -29,6 +31,7 @@ level 'BrowardTestMarkdownLevel'
 stage 'Food Chain Game', flex_category: 'time4cs_c2'
 level 'BrowardTestMarkdownLevel'
 
+lesson_group 'time4cs_c3', display_name: 'Collection 3: Native Species (in the Everglades)'
 stage 'Invasive Species', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
@@ -50,6 +53,7 @@ level 'BrowardTestMarkdownLevel'
 stage 'Nested Loops with Frozen', flex_category: 'time4cs_c3'
 level 'BrowardTestMarkdownLevel'
 
+lesson_group 'time4cs_c4', display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
 stage 'Fishy Business', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
@@ -65,6 +69,7 @@ level 'BrowardTestMarkdownLevel'
 stage 'Functions with Artist', flex_category: 'time4cs_c4'
 level 'BrowardTestMarkdownLevel'
 
+lesson_group 'time4cs_c5', display_name: 'Collection 5: Citizens Take Action'
 stage 'Pythons impacting native populations', flex_category: 'time4cs_c5'
 level 'BrowardTestMarkdownLevel'
 
