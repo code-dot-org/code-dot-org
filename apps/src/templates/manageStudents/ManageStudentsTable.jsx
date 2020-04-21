@@ -9,6 +9,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
@@ -47,15 +48,25 @@ const styles = {
     width: '20%',
     float: 'left'
   },
-  buttonRow: {
-    display: 'flex'
+  button: {
+    float: 'left'
   },
   buttonWithMargin: {
-    marginRight: 5
+    marginRight: 5,
+    float: 'left'
   },
   verticalAlign: {
     display: 'flex',
     alignItems: 'center'
+  },
+  sectionCodeBox: {
+    float: 'right',
+    lineHeight: '30px'
+  },
+  sectionCode: {
+    marginLeft: 5,
+    color: color.teal,
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
@@ -586,7 +597,7 @@ class ManageStudentsTable extends Component {
         )}
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
-        <div style={styles.buttonRow}>
+        <div>
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.buttonWithMargin}>
@@ -594,22 +605,34 @@ class ManageStudentsTable extends Component {
             </div>
           )}
           {this.isMoveStudentsEnabled() && (
-            <MoveStudents
-              studentData={this.studentDataMinusBlanks()}
-              transferData={transferData}
-              transferStatus={transferStatus}
-            />
+            <div style={styles.button}>
+              <MoveStudents
+                studentData={this.studentDataMinusBlanks()}
+                transferData={transferData}
+                transferStatus={transferStatus}
+              />
+            </div>
           )}
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
-            <PrintLoginCards sectionId={this.props.sectionId} />
+            <div style={styles.button}>
+              <PrintLoginCards sectionId={this.props.sectionId} />
+            </div>
           )}
-          <DownloadParentLetter
-            sectionId={this.props.sectionId}
-            buttonMetricsCategory={
-              ParentLetterButtonMetricsCategory.ABOVE_TABLE
-            }
-          />
+          <div style={styles.button}>
+            <DownloadParentLetter
+              sectionId={this.props.sectionId}
+              buttonMetricsCategory={
+                ParentLetterButtonMetricsCategory.ABOVE_TABLE
+              }
+            />
+          </div>
+          {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
+            <div style={styles.sectionCodeBox}>
+              <span>{i18n.sectionCodeWithColon()}</span>
+              <span style={styles.sectionCode}>{this.props.sectionCode}</span>
+            </div>
+          )}
         </div>
         <Table.Provider
           columns={columns}

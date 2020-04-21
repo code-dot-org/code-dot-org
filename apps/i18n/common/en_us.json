@@ -1450,6 +1450,7 @@
   "section": "Section",
   "sectionWithColon": "Section:",
   "sectionCode": "Section Code",
+  "sectionCodeWithColon": "Section Code:",
   "sectionCodePlaceholder": "6-character code (ABCDEF)",
   "sectionName": "Section Name",
   "sectionSignInInfo": "Alternatively, share this section's sign in page with your students: ",
