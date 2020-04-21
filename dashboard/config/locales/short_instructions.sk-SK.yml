@@ -80,6 +80,7 @@ sk-SK:
         Uprav funkciu tak, aby Umelec nakreslil väčšie okuliare s rámami dlhými 115 pixelov na každej strane.
 
         Štvorce sú od seba vzdialené 45 pixelov.
+      2-3 Artist Functions 4: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
       2-3 Artist Functions 9: 'Voľná hra: Používame tu funkciu snehová vločka. Experimentuj
         s ňou a vytvor zimné scény! To to je voľná disciplína, takže žiadne hádanky
         tu neriešiš. Zabav sa!'
@@ -209,6 +210,7 @@ sk-SK:
       2-3 Maze 7: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
       2-3 Maze 8: Dostaň ma k tomu prasiatku!
       2-3 Maze 9: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
+      2-3 Maze Loops 1: Dostaneš ma k prasiatku s použitím 5 rovnakých druhov blokov?
       2-3 Maze Loops 17: Ukáž, čo si sa naučil a dostaň ma k slnečnici!
       2-3 Maze Loops 18: "Dostaň ma k slnečnici použitím čo najmenšieho možného počtu
         blokov!  \n\nSkús jeden cyklus \"opakuj\" vložiť do druhého cyklu \"opakuj\",
@@ -264,12 +266,15 @@ sk-SK:
         Všimnite si, že druhý rad je posunutý doprava.
       4-5 Artist Patterns Free Play: Voľná hra - vyskúšajte svoju ruku nakreslením
         vlastného vzoru!
-      4-5 Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod
-        oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor,
-        kvetinka môže meniť svoju polohu!
-      4-5 Bee Conditionals 2: "Viac oblakov!\n\nSkontrolujte pod každým oblakom, či
-        sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte
-        si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
+      4-5 Bee Conditionals 1: Tento oblak mi zacláňa vo výhľade! Skontrolujte, či
+        je pod oblakom kvet a pozbierajte nektár len ak tam kvet je. Pozor, kvet môže
+        meniť svoju polohu!
+      4-5 Bee Conditionals 2: |-
+        Viac oblakov!
+
+        Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
+
+        Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
       4-5 Bee Conditionals 3: Teraz chcem len vyrábať med. Pod niekotorými z týchto
         oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
       4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ!
@@ -551,6 +556,7 @@ sk-SK:
       Dance_2019_06: Nastav okolo hlavného tanečníka v strede aj skupinu vedľajších
         tanečníkov.
       Dance_2019_07: Zmeň veľkosť skupiny tanečníkov v pozadí.
+      Dance_2019_08: Skús zmeniť odtieň jedného z vašich tanečníkov (alebo celej skupiny)!
       Dance_2019_09: Skúste byť kreatívni s týmito novými blokmi!
       Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
@@ -954,6 +960,8 @@ sk-SK:
         jaskyne.
       courseA_collector_loops11_2019: Pomôž Laurel pozbierať všetky drahokamy z tejto
         jaskyne.
+      courseA_collector_loops2_2019: Pozbieraj všetky 3 drahokamy! Posuň Laurel ku
+        drahokamu a potom použi blok "zbieraj".
       courseA_harvester_loops1: Pomôž záhradníčke pozbierať všetku kukuricu!
       courseA_harvester_loops10: Pomôž záhradníčke pozbierať všetkých 5 klasov kukurice!
       courseA_harvester_loops10_2019: Pomôž záhradníčke pozbierať všetkých 5 klasov
@@ -1041,6 +1049,12 @@ sk-SK:
         TNT! '
       courseA_maze_seq10_2019: 'Výzva: Aby si dostal vtáka k prasiatku, musíš sa vyhnúť
         TNT! '
+      courseA_maze_seq11: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq11_2018: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq11_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseA_maze_seq12: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2018: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2019: 'Dostaň to prasiatko! '
@@ -1053,12 +1067,22 @@ sk-SK:
         k prasiatku?
       courseA_maze_seq5a_2019: Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a
         k prasiatku?
+      courseA_maze_seq6: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq6_2018: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
+      courseA_playLab_events1_2019: Toto je Play Lab. Presuň bloky do svojho pracovného
+        priestoru a uvidíš, čo sa stane!
+      courseA_playLab_events2_2019: Pes Jorge chce povedať "Ahoj". Môžeš mu s tým
+        pomôcť?
       courseA_playLab_events4_2018: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
         posunul doprava po kliknutí na tlačidlo `vpravo`.
       courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
@@ -1258,10 +1282,14 @@ sk-SK:
       courseB_maze_seq1_2019: |-
         Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.
         Na dokončenie levelu dostaň Scrata k žaluďu.
+      courseB_maze_seq2: _"Chyba! Oprav kód nech sa dostanem k prasiatku."_
+      courseB_maze_seq3: '"Oprav kód nech sa dostanem k prasiatku!"'
       courseB_maze_seq4_2018: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
       courseB_maze_seq4_2019: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
       courseB_maze_seq5_2018: Táto úloha je trochu náročná!
       courseB_maze_seq5_2019: Táto úloha je trochu náročná!
+      courseB_maze_seq6: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseB_maze_seq6_2018: Pohni sa jedným smerom, potom iným, aby sa Scrat dostal
         k žaluďu!
       courseB_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa Scrat dostal
@@ -2333,6 +2361,22 @@ sk-SK:
         potom zober tekvicu.'
       courseD_farmer_condLoops7_2019: 'Výzva: Pozbieraj všetku kukuricu a šalát a
         potom zober tekvicu.'
+      courseD_farmer_condLoops8: Pozbieraj všetku kukuricu a šalát a potom zober tekvicu.
+      courseD_farmer_condLoops8_2018: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops8_2019: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops9: Pozbieraj všetku kukuricu a šalát a potom zober tekvicu.
+      courseD_farmer_condLoops9_2018: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops9_2019: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops9_predict1: Pozbieraj všetku kukuricu a šalát a potom
+        zober tekvicu.
+      courseD_farmer_condLoops9_predict1_2018: Pozbieraj všetku kukuricu a šalát a
+        potom zober tekvicu.
+      courseD_farmer_condLoops9_predict1_2019: Pozbieraj všetku kukuricu a šalát a
+        potom zober tekvicu.
       courseD_farmer_condLoops_challenge1: Na dokončenie úlohy pozbieraj celú úrodu.
         Každá skrytá plodina má len jednu kukuricu alebo šalát.
       courseD_farmer_condLoops_challenge1_2018: Na dokončenie úlohy pozbieraj celú

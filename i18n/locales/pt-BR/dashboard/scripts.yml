@@ -7,7 +7,6 @@ pt-BR:
         csd_category_name: Descobertas da Ciência da Computação (2018-2019)
         csd_2018_category_name: Descobertas da Ciência da Computação (2018-2019)
         csd_2019_category_name: Descobertas da Ciência da Computação (2019-2020)
-        csf_category_name: Conceitos básicos da CC
         csf_2018_category_name: Fundamentos da Ciência da Computação (2018)
         csf_international_category_name: Fundamentos da Ciencia da Computação International
         csf2_draft_category_name: 'Em desenvolvimento: Cursos A - F'
@@ -13604,3 +13603,31 @@ pt-BR:
               name: Algoritmos
             Events:
               name: Eventos
+        no-lg:
+          stages:
+            new stage:
+              name: nova fase
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Unidade 5 Avaliação 2
+            While Loops:
+              name: Laços enquanto
+            Loops and Simulations:
+              name: Laços e Simulações
+            Introduction to Arrays:
+              name: Introdução a Arrays
+            'Building an App: Image Scroller':
+              name: 'Construindo um aplicativo: Rolagem de Imagem'
+            Unit 5 Assessment 3:
+              name: Unidade 5 Avaliação 3
+            Processing Arrays:
+              name: Processando Listas
+            Functions with Return Values:
+              name: Funções com Valores de Retorno
+            'Building an App: Canvas Painter':
+              name: 'Construindo um aplicativo: Pintor de Tela'
+            Unit 5 Assessment 4:
+              name: Unidade 5 Avaliação 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unidade 5 Avaliação 5 - Questões práticas sobre pseudocódigo AP

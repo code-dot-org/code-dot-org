@@ -2170,3 +2170,7 @@ sv:
               name: Algoritmer
             Events:
               name: Händelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '''Medan'' loopar(slingor)'

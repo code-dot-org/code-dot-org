@@ -282,8 +282,22 @@ is-IS:
       NEW Course 4 Bee For Loops 5:
         actions_category: Verkfærakassinn er með nýtt útlit! Kubbarnir "Aðgerðir"
           hafa nú bæst við.
+      New Artist Project:
+        New Artist Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum!
+          Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
+        New Artist Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið
+          þitt
+        sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig
+          inn til að vista verkefnið undir aðgangi þínum!
       New Frozen Project:
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Smelltu á flokkana til að sjá kubbana í verkfærakassanum!
+          Dragðu kubba inn á vinnusvæðið til að bæta þeim við forritið þitt
+        New Play Lab Project_callout2: Smelltu á "Keyra" til að vista og keyra forritið
+          þitt
+        sign_in_to_save_project: Viltu komast í verkefnið þitt seinna? Skráðu þig
+          inn til að vista verkefnið undir aðgangi þínum!
       Overworld Chop Trees:
         craft_callout_preplaced: Við höfum sett kubba hér til að koma þér af stað
       Overworld Chop Trees_2019:
