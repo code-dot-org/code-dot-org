@@ -993,6 +993,8 @@ en:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
+      gamelab_bounceOff:
+        text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
         text: change [SPRITE][0] [PROPERTY][1] by [VAL][2]
         options:
@@ -1042,6 +1044,8 @@ en:
         text: hide title screen
       gamelab_isTouchingEdges:
         text: "[SPRITE][0] is touching edges"
+      gamelab_isTouchingSprite:
+        text: "[SPRITE][0] is touching [TARGET][1]"
       gamelab_jumpTo:
         text: "[SPRITE][0] jump to [LOCATION][1]"
       gamelab_keyPressed:

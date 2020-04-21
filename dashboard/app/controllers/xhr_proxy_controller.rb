@@ -44,6 +44,7 @@ class XhrProxyController < ApplicationController
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
+    api.uclassify.com
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com

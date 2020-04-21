@@ -215,7 +215,6 @@ gem 'therubyracer', '~> 0.12.2', platforms: :ruby
 gem 'jwt' # single signon for zendesk
 
 gem 'codemirror-rails' # edit code in textarea
-gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 

@@ -26,15 +26,15 @@ import {
   saveAllStudents,
   editAll,
   TransferStatus,
-  TransferType
+  TransferType,
+  ParentLetterButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
-import DownloadParentLetters from './DownloadParentLetters';
+import DownloadParentLetter from './DownloadParentLetter';
 import Button from '../Button';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   headerName: {
@@ -599,12 +599,12 @@ class ManageStudentsTable extends Component {
               transferStatus={transferStatus}
             />
           )}
-          {experiments.isEnabled(experiments.PARENT_LETTER) && (
-            <DownloadParentLetters
-              numStudents={this.studentDataMinusBlanks().length}
-              sectionId={this.props.sectionId}
-            />
-          )}
+          <DownloadParentLetter
+            sectionId={this.props.sectionId}
+            buttonMetricsCategory={
+              ParentLetterButtonMetricsCategory.ABOVE_TABLE
+            }
+          />
         </div>
         <Table.Provider
           columns={columns}

@@ -358,7 +358,7 @@ describe('sectionStandardsProgressRedux', () => {
         )
       ).to.deep.equal({
         completed: false,
-        inProgress: false,
+        inProgress: true,
         numStudentsCompleted: 2
       });
     });

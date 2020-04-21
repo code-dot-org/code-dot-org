@@ -68,6 +68,15 @@ end
 def restore_redacted_files
   total_locales = Languages.get_locale.count
   original_files = Dir.glob("i18n/locales/original/**/*.*").to_a
+  if original_files.empty?
+    raise <<~ERR
+      No original files found from which to restore.
+
+      Originals are created by running the sync-in, but are not persisted in
+      git; this likely happened because a sync-out was attempted without a
+      corresponding sync-in.
+    ERR
+  end
   Languages.get_locale.each_with_index do |prop, locale_index|
     locale = prop[:locale_s]
     next if locale == 'en-US'

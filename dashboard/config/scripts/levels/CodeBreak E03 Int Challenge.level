@@ -193,7 +193,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Do This:** Update the Random Password Generator App. See the [previous level](studio.code.org/s/code-break-staging/stage/3/puzzle/4) for ideas! ",
+    "long_instructions": "**Do This:** Update the Random Password Generator App. \r\n\r\nHere are some modifications you could make. Choose the ones that interest you!\r\n* Go into Design Mode (the button on the top left) and change the User Interface. Update the colors, pick a different theme, and make the app look its best!\r\n* Using the math we discussed during the episode, display the number of possible passwords at the bottom of the screen. For example, if our list of passwords has three words, and the user sets the password to be two words long, the number of possibilities is 9.\r\n* Add a password \"strength meter\" that displays if the password is weak, medium, or strong. \r\n* Update the slider so the password can be more than five words long.",
     "mini_rubric": "false",
     "submittable": "false",
     "start_blocks": "var wordList = [\"math\",\"image\",\"shade\",\"spin\",\"write\",\"sleep\", \"short\",\"tried\",\"game\", \"clock\",\r\n  \"peace\",\"money\",\"apple\",\"carry\",\"ear\",\"table\",\"move\",\"close\",\"book\",\"source\",\r\n  \"jump\",\"over\",\"complex\",\"pure\",\"four\",\"mile\",\"most\",\"dream\",\"chat\",\"heart\",\r\n  \"human\",\"iron\",\"movie\",\"over\",\"house\",\"face\",\"near\",\"talk\",\"wild\",\"ago\",\r\n  \"grow\",\"out\",\"against\",\"more\",\"idea\",\"develop\",\"funny\",\"explore\",\"save\",\"cool\"\r\n];\r\n\r\nonEvent(\"clickButton\", \"click\", function( ) {\r\n  var wordNumber = getNumber(\"lengthSlider\");\r\n  var password = \"\";\r\n  for(var i=0; i<wordNumber; i++){\r\n    password = password + wordList[randomNumber(0, wordList.length-1)];\r\n  }\r\n  setText(\"passwordOutput\", password);\r\n});",
@@ -218,11 +218,14 @@
     "makerlab_enabled": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-04-05 22:32:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-04-05 22:32:50 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-08 02:47:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

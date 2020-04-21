@@ -222,14 +222,16 @@ class DataTable extends React.Component {
     return (
       <div>
         <DataEntryError isVisible={this.state.showError} />
-        <div style={styles.pagination}>
-          <PaginationWrapper
-            totalPages={numPages}
-            currentPage={this.state.currentPage + 1}
-            onChangePage={this.onChangePageNumber}
-            label={msg.paginationLabel()}
-          />
-        </div>
+        {numPages > 1 && (
+          <div style={styles.pagination}>
+            <PaginationWrapper
+              totalPages={numPages}
+              currentPage={this.state.currentPage + 1}
+              onChangePage={this.onChangePageNumber}
+              label={msg.paginationLabel()}
+            />
+          </div>
+        )}
         <table style={styles.table}>
           <tbody>
             <tr>
@@ -297,6 +299,16 @@ class DataTable extends React.Component {
             ))}
           </tbody>
         </table>
+        {numPages > 1 && (
+          <div style={styles.pagination}>
+            <PaginationWrapper
+              totalPages={numPages}
+              currentPage={this.state.currentPage + 1}
+              onChangePage={this.onChangePageNumber}
+              label={msg.paginationLabel()}
+            />
+          </div>
+        )}
       </div>
     );
   }

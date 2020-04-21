@@ -480,6 +480,11 @@ en:
     auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Update"
+    for_parents_and_guardians: "For Parents and Guardians"
+    link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects"
+    parent_guardian_email_label: "Parent/guardian email"
+    none: "None"
+    only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
     encrypted: "encrypted"
   user_level:
     completed: 'Completed'
@@ -1235,3 +1240,7 @@ en:
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
+  parent_email_banner:
+    text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
+    link_your_email: "Link your email"
+    not_now: "Not now"
