@@ -50,6 +50,7 @@ class AddMultipleStudents extends Component {
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.addStudentsMultiple()}
+          icon="plus"
         />
         <BaseDialog
           useUpdatedStyles
