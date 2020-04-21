@@ -20,8 +20,8 @@ module Pd::Foorm
     def self.calculate_averaged_rollup(
       summarized_answers,
       question_details,
-      split_by_facilitator,
-      facilitators
+      facilitators,
+      split_by_facilitator = false
     )
       rollup = {}
       question_details.each do |type, question_details_per_type|

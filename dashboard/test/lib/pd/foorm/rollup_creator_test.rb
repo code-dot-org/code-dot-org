@@ -6,7 +6,12 @@ module Pd::Foorm
 
     test 'creates correct general rollup' do
       setup_csd_workshop
-      rollup = RollupCreator.calculate_averaged_rollup(@summarized_answers, @question_details, false, {})
+      rollup = RollupCreator.calculate_averaged_rollup(
+        @summarized_answers,
+        @question_details,
+        {},
+        split_by_facilitator: false
+      )
       expected_rollup = {
         general: {
           response_count: 2,
@@ -42,12 +47,17 @@ module Pd::Foorm
     test 'creates correct facilitator rollup' do
       setup_csf_workshop
       rollup = RollupCreator.
-        calculate_averaged_rollup(@summarized_answers, @question_details, true, @facilitators).
-        with_indifferent_access
+        calculate_averaged_rollup(
+          @summarized_answers,
+          @question_details,
+          @facilitators,
+          split_by_facilitator: true
+        ).with_indifferent_access
 
-      assert_equal 4, rollup[:facilitator][@facilitator_id][:response_count]
+      rollup_at_facilitator = rollup[:facilitator][@facilitator_id]
+      assert_equal 4, rollup_at_facilitator[:response_count]
       assert_equal 5, rollup[:general][:response_count]
-      assert_equal 5.5, rollup[:facilitator][@facilitator_id][:averages][:facilitator_effectiveness][:rows][:productive_discussions]
+      assert_equal 5.5, rollup_at_facilitator[:averages][:facilitator_effectiveness][:rows][:productive_discussions]
     end
 
     test 'calculates general intermediate rollup correctly' do
@@ -94,9 +104,10 @@ module Pd::Foorm
         @facilitators
       ).with_indifferent_access
 
-      assert_equal 4, intermediate_rollup[@facilitator_id][:response_count]
+      intermediate_rollup_facilitator = intermediate_rollup[@facilitator_id]
+      assert_equal 4, intermediate_rollup_facilitator[:response_count]
       expected_data = {sum: 22, count: 4}.with_indifferent_access
-      assert_equal expected_data, intermediate_rollup[@facilitator_id][:questions][:facilitator_effectiveness][:productive_discussions]
+      assert_equal expected_data, intermediate_rollup_facilitator[:questions][:facilitator_effectiveness][:productive_discussions]
     end
 
     def setup_csd_workshop
