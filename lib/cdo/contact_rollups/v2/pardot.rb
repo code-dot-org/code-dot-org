@@ -24,14 +24,14 @@ class PardotV2
 
   # Retrieves new (email, Pardot ID) mappings from Pardot
   #
+  # @param [Integer] last_id retrieves only Pardot ID greater than this value
+  # @param [Array<String>] a list of fields. Must have 'id' the list. Field names must be url-safe.
+  # @param [Integer] limit maximum number of prospects to retrieve
+  # @return [Integer] number of results retrieved
+  #
   # @yieldreturn [Array<Hash>] an array of hash {email, id}
   # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
-  #
-  # @param [Integer] last_id retrieves only Pardot ID greater than this value
-  # @param [Array<String>] a list of fields. Must have 'id' the list.
-  # @param [Integer] limit maximum number of prospects to retrieve
-  # @return [Integer] number of results retrieved
   def self.retrieve_prospects(last_id, fields, limit = nil)
     raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
@@ -65,9 +65,10 @@ class PardotV2
       yield prospects if block_given?
       log "Retrieved #{results_in_response}/#{total_results} new Pardot IDs. Last Pardot ID = #{last_id}."
 
-      # Stop if all the remaining results were in this response
+      # Stop if all the remaining results were in this response or we reached the download limit.
       total_results_retrieved += results_in_response
-      break if results_in_response == total_results || total_results_retrieved >= limit
+      break if results_in_response == total_results ||
+        (limit && total_results_retrieved >= limit)
     end
 
     total_results_retrieved
