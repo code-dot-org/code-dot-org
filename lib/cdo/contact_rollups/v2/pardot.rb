@@ -29,7 +29,7 @@ class PardotV2
   # @param [Integer] limit maximum number of prospects to retrieve
   # @return [Integer] number of results retrieved
   #
-  # @yieldreturn [Array<Hash>] an array of hash {email, id}
+  # @yieldreturn [Array<Hash>] an array of hash of prospect data
   # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
   def self.retrieve_prospects(last_id, fields, limit = nil)

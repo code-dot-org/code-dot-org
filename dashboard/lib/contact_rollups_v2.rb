@@ -28,7 +28,7 @@ class ContactRollupsV2
       ContactRollupsPardotMemory.update_pardot_prospects
     end
     log_collector.time!('Downloads new email-Pardot ID mappings (again)') do
-      ContactRollupsPardotMemory.add_and_update_pardot_ids
+      ContactRollupsPardotMemory.download_pardot_ids
     end
 
     log_collector.time!("Overwrites contact_rollups_final table") do
