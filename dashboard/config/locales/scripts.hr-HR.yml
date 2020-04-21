@@ -1634,3 +1634,7 @@ hr:
               name: Algoritmi
             Events:
               name: Događaji
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Petlje s uvjetom

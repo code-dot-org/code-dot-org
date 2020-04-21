@@ -4,7 +4,6 @@ th:
   data:
     script:
       category:
-        csf_category_name: พื้นฐานด้านวิทยาการคอมพิวเตอร์
         hoc_category_name: ช่วงเวลาของ Code
         math_category_name: คำนวณ
       name:
