@@ -589,7 +589,7 @@ class ManageStudentsTable extends Component {
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.buttonWithMargin}>
-              <AddMultipleStudents />
+              <AddMultipleStudents sectionId={this.props.sectionId} />
             </div>
           )}
           {this.isMoveStudentsEnabled() && (
