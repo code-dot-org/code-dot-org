@@ -3,7 +3,6 @@ cs:
   data:
     script:
       category:
-        csf_category_name: Základy informatiky
         csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
         csp_category_name: Principy informatiky 2015-2016
         cspexams_category_name: Praktický test z principů informatiky
@@ -2756,3 +2755,7 @@ cs:
               name: Algoritmy
             Events:
               name: Události
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: While (pokud) cykly

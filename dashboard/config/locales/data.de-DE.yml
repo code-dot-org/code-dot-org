@@ -674,12 +674,15 @@ de:
         csd_external_netflix_data: Wie macht Netflix Serien- und Filmvorschläge?
         csd_external_waze_data: Warum sind So viele Nutzer von Waze besessen?
         csd_gamelab_animation_tab: Der Animations Tab
+        csd_gamelab_variables_1: Einführung in Variablen - Teil 1
         csd_gamelab_velocity: Geschwindigkeit
         csd_weblab_intro_1: Einführung in Web Lab - Teil 1
         csd_weblab_intro_2: Einführung in Web Lab - Teil 2
         csd_weblab_css_1: Einführung in CSS - Teil 1
         csd_weblab_css_2: Einführung in CSS - Teil 2
         csd_weblab_intro_3: Einführung in Web Lab - Teil 3
+        csp_applab_databases_1: Einführung in Datenbanken - Teil 1
+        csp_applab_databases_2: Einführung in Datenbanken - Teil 2
         csp_applab_functions: Einführung in Funktionen
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
@@ -741,10 +744,11 @@ de:
         applab_intro_designmode: App-Labor - Designmodus
         applab_intro_share: App-Labor - Teile deine App
         csd_applab_arrays: Einführung in Arrays
-        CSF_skinOverview_Harvester: Der Erntearbeiter
+        CSF_skinOverview_Harvester: Die Erntearbeiterin
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_harvester_skinOverview_K-1: Der Erntearbeiter
+        CSF_harvester_skinOverview_K-1: Die Erntearbeiterin
+        CSF_harvester_loops_K1: Schleifen mit der Erntearbeiterin
         CSF_scrat_loops_K1: Schleifen in Ice Age
         CSF_scrat_loops_CF: Schleifen in Ice Age
         CSF_if_allskins: Der Wenn-Block
@@ -767,6 +771,7 @@ de:
         hoc_dance_congrats: Tanzparty- Party los!
         c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu
           spielen
+        c_and_c_digital_sharing: Digitale Teilhabe
         teaching_csf_how_it_works: 'Informatik Grundlagen: Wie der Kurs funktioniert'
         elem_pd_2: Grundschul-Informatik - PD Video 2/2
         what_is_cs: Was ist Informatik?

@@ -4,7 +4,6 @@ hu:
   data:
     script:
       category:
-        csf_category_name: A számítógép-tudomány alapjai
         csf_2018_category_name: A számítógép-tudomány alapjai (2018)
         csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
         hoc_category_name: A kódolás órája
@@ -2253,3 +2252,7 @@ hu:
               name: algoritmusok
             Events:
               name: Események
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok

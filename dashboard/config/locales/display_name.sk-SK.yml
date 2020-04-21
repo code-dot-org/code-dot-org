@@ -3,6 +3,7 @@ sk-SK:
   data:
     display_name:
       AB_Debug_Artist1: 'Umelec Odstraňovanie chýb #1 (AB)'
+      App Lab Intro 8 - Video Design Mode: 'Video: Dizajnový režim'
       App Lab Intro 8 - Video Getting Started: 'Video: Začíname'
       App Lab Intro 8 - Video Images and Sounds: 'Video: Obrázky a Zvuky'
       App Lab Intro 8 - Video Make It Interactive: 'Video: Sprav to interaktívne'
@@ -10,7 +11,13 @@ sk-SK:
       AppLab Intro 7 - Change Screen Color: Zmeň Farbu Obrazovky
       AppLab Intro 7 - Change Text 2: Zmeň Text
       AppLab Intro 7 - Full Text: Dve Tlačítka
+      AppLab Intro 7 - onEvent intro: Sfunkčniť tlačidlá
       AppLab Intro 7 - onEvent twoButtons: Viac onEvent cvičení
+      AppLab Intro 7 - playSound: Použiť - prehrať zvuk
+      AppLab Intro 7 - thisOrThatAddButton: Toto alebo tamto
+      AppLab Intro 7 - thisOrThatAddScreen: Toto alebo tamto
+      AppLab Intro 7 - thisOrThatPersonalize: Toto alebo tamto
+      AppLab Intro 7 - thisOrThatSetScreen: Toto alebo tamto
       CDEF_video_SpritesInAction: Ako vytvoriť postavu
       CDEF_video_SpritesInAction_2019: Ako vytvoriť postavu
       CSD U2 Pair Programming Video: Programovanie v páre

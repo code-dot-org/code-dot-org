@@ -36,7 +36,8 @@ function createDropletConfig(functions, libraryName) {
     let individualConfig = {
       func: currentFunction.functionName,
       category: 'Functions',
-      comment: currentFunction.comment
+      comment: currentFunction.comment,
+      type: 'either'
     };
 
     if (currentFunction.parameters && currentFunction.parameters.length > 0) {

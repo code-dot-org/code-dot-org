@@ -42,6 +42,9 @@ zh-CN:
         wandering: 徘徊
       Virtual Pet 1_2019:
         wandering: 徘徊
+        mystery: '神秘
+
+'
       Virtual Pet 2:
         wandering: 徘徊
       Virtual Pet 2_2019:
@@ -49,6 +52,39 @@ zh-CN:
       Virtual Pet 3_2019:
         wandering: 徘徊
         wandering2: 徘徊2
+        moving east2: '向右移动2
+
+'
+        spinning left2: '向左旋转2
+
+'
+        spinning right2: '向右旋转2
+
+'
+        shrinking2: '缩小2
+
+'
+        growing2: '放大2
+
+'
+        moving south2: '向下移动2
+
+'
+        swimming left and right2: '左右游动2
+
+'
+        moving north2: '向上移动2
+
+'
+        jittering2: '抖动2
+
+'
+        moving west2: '向左移动2
+
+'
+        patrolling2: '巡逻2
+
+'
       Virtual Pet 4:
         wandering: 徘徊
       Virtual Pet 4_2019:
@@ -60,19 +96,59 @@ zh-CN:
       Virtual Pet Freeplay:
         wandering: 徘徊
       behaviors 1:
+        mystery behavior: '神秘行为
+
+'
         wandering: 徘徊
+        running east: '向右运行
+
+'
       behaviors 2:
+        flying: '快速移动
+
+'
         wandering: 徘徊
+        running east: '向右运行
+
+'
       behaviors 3:
+        zooming east: '向右缩放
+
+'
+        driving east: '向右推动
+
+'
         wandering: 徘徊
       behaviors 3a:
+        zooming east: '向右缩放
+
+'
+        driving east: '向右推动
+
+'
         wandering: 徘徊
       behaviors 4:
+        move south and west: '左右移动
+
+'
         wandering: 徘徊
+        running east: '向右运行
+
+'
       behaviors 6:
+        running east: '向右运行
+
+'
         wandering: 徘徊
       behaviors 7:
+        running east: '向右运行
+
+'
         wandering: 徘徊
+      behaviors free play:
+        spinning and growing: '旋转和放大
+
+'
       courseE_Dogger_2:
         wandering: 徘徊
       courseE_aboutme_1:

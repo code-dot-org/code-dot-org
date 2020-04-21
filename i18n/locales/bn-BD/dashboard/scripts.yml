@@ -1111,3 +1111,7 @@ bn:
               name: অ্যালগরিদম
             Events:
               name: ঘটনাবলী
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: হোয়াইল লুপ

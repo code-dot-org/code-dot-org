@@ -5,7 +5,6 @@ nn:
     script:
       category:
         csd_2018_category_name: Oppdagingar i informatikk (2018-19)
-        csf_category_name: Grunnleggande informatikk
         csf_2018_category_name: Grunnleggande informatikk (2018)
         csf_international_category_name: Grunnleggande informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
@@ -2585,3 +2584,7 @@ nn:
               name: Algoritmer
             Events:
               name: Hendingar
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Medan-løkker

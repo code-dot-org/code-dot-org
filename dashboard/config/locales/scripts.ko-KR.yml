@@ -3,7 +3,6 @@ ko:
   data:
     script:
       category:
-        csf_category_name: CS 기초
         csf2_draft_category_name: '개발중: 코스 A - F'
         csp_category_name: CS의 원리
         cspexams_category_name: 컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트
@@ -2059,3 +2058,7 @@ ko:
               name: 알고리즘
             Events:
               name: 이벤트
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: "~인 동안 반복"

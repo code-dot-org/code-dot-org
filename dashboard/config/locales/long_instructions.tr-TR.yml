@@ -1809,6 +1809,60 @@ tr-TR:
         \   AM.png>) butonuna tıklayın.\\\r\n-   Üretilen URL' yi kopyalayın, sayfanızı
         görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\\r\n
         \   \\\r"
+      CSD U2 unordered list: |-
+        # Sıralı Listeler
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>İki tür liste nedir?</strong>
+        </summary>
+         HTLM'de sıralı ve sırasız olmak üzere iki tür liste vardır.
+        </details>
+        <details>
+        <summary><strong>What is an unordered list?</strong>
+        </summary>
+
+        An unordered list is just a set of bulleted items.
+        <br /><br />An unordered list element has the tag \<ul> . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each item in the list is marked by a list item element \<li>. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the unordered list (\<ul>).
+
+        </details>
+
+        <details>
+        <summary><strong>How do I make an unordered list?</strong>
+        </summary>
+
+        Making an unordered list has two steps: making the list and adding the list items.  To make the unordered list, write the unordered list tags `<ul></ul>`.  Next, add your list items **inside** the unordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.
+
+        It can be helpful to indent your \<li> tags so it's clear they are contained in the \<ul> tag.
+
+        </details>
+
+        <details>
+        <summary><strong>Show me working code.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Example</td>
+        <td>Result</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt; <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        This page should have an unordered list, but it's missing the list tags.
+
+        # Do This
+
+        -   Use the `<ul>` and `<li>` tags to structure the content into an unordered list like the picture below.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD U2 upload images: "# Resimleri Yükle\\\r\n\n\\\r\nSonra, tüm resimleri projenize
         yüklemeniz gerekecek.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\*\nTüm resimleri bilgisayarına
         indir. Yardıma ihtiyacın varsa [Lesson 8 Level\n5](/s/csd2/stage/8/puzzle/5)

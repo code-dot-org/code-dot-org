@@ -2097,6 +2097,15 @@ zh-TW:
         - text: 我不知道。
         questions:
         - text: 看看下面的編碼。蜜蜂最後會收集到多少塊花蜜？
+      courseF_external_variableConstant:
+        markdown: |-
+          <h2>有關變數的更多資訊</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>你剛剛學習了一種將變數用作常量的好方法！
+          當將變數用作常量時，你將設定一個值，然後在程式中多次使用該*相同*的值，而無需在點擊「運行」後更改該值。</h3>
+          <br/><hr/>
+          <h3>在本系列的下一部分中，你將編寫帶有在程式內部變化的變數的代碼。</h3>
       courseF_multi_artist_for10_predict1:
         answers:
         - text: 小藝術家將繪製一行從遊戲區一側到另一側厚度增加的直線。
