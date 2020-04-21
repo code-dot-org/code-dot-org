@@ -4,7 +4,6 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const styles = {
   button: {
@@ -12,25 +11,23 @@ const styles = {
   }
 };
 
-export default class DownloadParentLetter extends Component {
+export default class PrintLoginCards extends Component {
   static propTypes = {
-    sectionId: PropTypes.number,
-    buttonMetricsCategory: PropTypes.oneOf(
-      Object.values(ParentLetterButtonMetricsCategory)
-    )
+    sectionId: PropTypes.number
   };
 
-  onDownloadParentLetter = () => {
-    const url = teacherDashboardUrl(this.props.sectionId, '/parent_letter');
+  onPrintLoginCards = () => {
+    const {sectionId} = this.props;
+    const url =
+      teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
     window.open(url, '_blank');
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
-        event: 'download-parent-letter-button',
+        event: 'print-login-cards-button-click',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId,
-          entryPoint: this.props.buttonMetricsCategory
+          sectionId: sectionId
         })
       },
       {includeUserId: true}
@@ -42,11 +39,11 @@ export default class DownloadParentLetter extends Component {
       <div style={styles.button}>
         <Button
           __useDeprecatedTag
-          onClick={this.onDownloadParentLetter}
+          onClick={this.onPrintLoginCards}
           target="_blank"
           color={Button.ButtonColor.gray}
-          text={i18n.downloadParentLetter()}
-          icon="file-text"
+          text={i18n.printLoginCards_button()}
+          icon="print"
         />
       </div>
     );

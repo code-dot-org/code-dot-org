@@ -34,6 +34,7 @@ import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
+import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
 
 const styles = {
@@ -598,6 +599,10 @@ class ManageStudentsTable extends Component {
               transferData={transferData}
               transferStatus={transferStatus}
             />
+          )}
+          {(loginType === SectionLoginType.word ||
+            loginType === SectionLoginType.picture) && (
+            <PrintLoginCards sectionId={this.props.sectionId} />
           )}
           <DownloadParentLetter
             sectionId={this.props.sectionId}
