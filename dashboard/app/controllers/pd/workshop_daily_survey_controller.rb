@@ -227,7 +227,7 @@ module Pd
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
       session = workshop.sessions.last
-      session_count = get_last_valid_day(workshop)
+      session_count = workshop.last_valid_day
       return render_404 unless session
 
       begin
@@ -494,14 +494,6 @@ module Pd
 
     def get_session_for_workshop_and_day(workshop, day)
       day > 0 ? workshop.sessions[day - 1] : nil
-    end
-
-    def get_last_valid_day(workshop)
-      last_day = workshop.sessions.size
-      unless VALID_DAYS[CATEGORY_MAP[workshop.subject]].include? last_day
-        last_day = VALID_DAYS[CATEGORY_MAP[workshop.subject]].last
-      end
-      last_day
     end
 
     def validate_new_general_parameters(workshop)
