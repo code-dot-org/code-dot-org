@@ -227,7 +227,7 @@ module Pd
       enrollment = Enrollment.find_by!(code: params[:enrollment_code])
       workshop = enrollment.workshop
       session = workshop.sessions.last
-      session_count = workshop.sessions.size
+      session_count = workshop.last_valid_day
       return render_404 unless session
 
       begin
