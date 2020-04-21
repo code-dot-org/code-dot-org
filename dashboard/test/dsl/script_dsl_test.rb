@@ -659,7 +659,7 @@ level 'Level 3'
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.#{script.name}.lesson_groups.#{lesson_group.key}.display_name'
+      lesson_group 'content', display_name: 'Content'
       stage 'lesson 1'
       level 'maze 1'
 
@@ -701,11 +701,11 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
-      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.#{script.name}.lesson_groups.#{lesson_group1.key}.display_name'
+      lesson_group 'content', display_name: 'Content'
       stage 'lesson 1'
       level 'maze 1'
 
-      lesson_group 'practice', display_name: 'translation missing: en-US.data.script.name.#{script.name}.lesson_groups.#{lesson_group2.key}.display_name'
+      lesson_group 'practice', display_name: 'Content'
       stage 'lesson 2'
       level 'maze 2'
 
