@@ -57,7 +57,7 @@ class GoogleChartWrapper extends React.Component {
       hAxis: {
         format: '#.#' // Round values to 1 decimal place
       },
-      vAxist: {
+      vAxis: {
         format: '#.#' // Round values to 1 decimal place
       }
     };
