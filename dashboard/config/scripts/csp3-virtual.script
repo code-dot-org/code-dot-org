@@ -5,6 +5,7 @@ student_detail_progress_view true
 has_verified_resources true
 project_sharing true
 
+lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
 stage 'Using Simple Commands', flex_category: 'csp3_1_2018'
 level 'csp_applab_turtle_virtual', named: true
 level 'U3L2 Using Simple Commands_virtual', progression: 'Using Simple Turtle Commands'

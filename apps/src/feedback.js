@@ -59,7 +59,6 @@ import ChallengeDialog from './templates/ChallengeDialog';
  * @property {string} message
  * @property {Level} level
  * @property {boolean} showingSharing
- * @property {string} saveToGalleryUrl
  * @property {Object<string, string>} appStrings
  * @property {string} feedbackImage
  * @property {boolean} defaultToContinue
@@ -500,19 +499,6 @@ FeedbackUtils.prototype.displayFeedback = function(
             }
           });
       });
-    });
-  }
-
-  const saveToLegacyGalleryButton = feedback.querySelector(
-    '#save-to-legacy-gallery-button'
-  );
-  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
-    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
-      $.post(options.saveToLegacyGalleryUrl, () =>
-        $('#save-to-legacy-gallery-button')
-          .prop('disabled', true)
-          .text('Saved!')
-      );
     });
   }
 

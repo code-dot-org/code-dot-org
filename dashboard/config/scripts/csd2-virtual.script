@@ -4,6 +4,7 @@ student_detail_progress_view true
 has_verified_resources true
 project_sharing true
 
+lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
 stage 'Exploring Web Pages', flex_category: 'csd2_1'
 level 'CSD Web Sample Pages_2020_virtual', named: true
 
@@ -70,6 +71,7 @@ level 'CSD U2 project review_virtual', progression: 'Website Project'
 level 'CSD U2 publish video_virtual', named: true
 level 'CSD U2 project share_virtual', progression: 'Publishing Your Website', named: true
 
+lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
 stage 'Purpose of a Websites', flex_category: 'csd2_2'
 level 'CSD U2 Top Websites_2018_2019_pilot_2020_virtual', named: true
 

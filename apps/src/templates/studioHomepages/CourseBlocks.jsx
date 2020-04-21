@@ -129,7 +129,7 @@ class CourseBlocksCsfLegacy extends Component {
     $('#course4')
       .appendTo(ReactDOM.findDOMNode(this.refs.course4))
       .show();
-    $('#twenty_hour')
+    $('#20-hour')
       .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
       .show();
     $('#unplugged')

@@ -14,6 +14,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
+lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 stage 'Innovations in Computing_', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD', named: true
 level 'CSDU6 Innovation', named: true
@@ -134,6 +135,7 @@ level 'CSD U6 game project functions call', progression: 'Functions'
 level 'CSD U6 game project finish', progression: 'Finishing Touches'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection', assessment: true
 
+lesson_group 'csd6_2', display_name: 'Chapter 2: Building Physical Prototypes'
 stage 'Arrays and Color LEDs__', flex_category: 'csd6_2'
 level 'CSD U6L10 TFMD', named: true
 level 'CSD U6 arrays intro', named: true
@@ -244,5 +246,6 @@ level 'CSDU6 - final project 4', progression: 'Finishing Touches'
 level 'CSDU6 - final project 6', progression: 'Finishing Touches'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch2', progression: 'Reflection', assessment: true
 
+lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true

@@ -8,7 +8,7 @@ import {
   COMPONENT_EVENTS,
   SONG_CHARGE,
   SONG_1D
-} from './PlaygroundConstants';
+} from './boards/circuitPlayground/PlaygroundConstants';
 
 export const MAKER_CATEGORY = 'Maker';
 const CIRCUIT_CATEGORY = 'Circuit';

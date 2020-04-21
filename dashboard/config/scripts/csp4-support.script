@@ -3,6 +3,7 @@ peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
 
+lesson_group 'required', display_name: 'Overview'
 stage 'Unit 4 Overview', flex_category: 'required'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 4', named: true
@@ -10,6 +11,7 @@ level 'Unit 4 Tool Talk', named: true
 level 'Unit 4: Practice PT highlights', named: true
 level 'Unit 4 Self-Assessment', named: true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Lessons 1 - 4: Data in the Real World', flex_category: 'content'
 level '4.1 - 4.4 Lesson Connections', named: true
 level 'What is "Big" Data?', named: true
@@ -36,6 +38,7 @@ level '4.8 - 4.9 Lesson Connections', named: true
 level 'A Closer Look at the Final Practice for the Explore PT', named: true
 level 'U4 L8 - 9: Teaching and Student Support Plan', named: true
 
+lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true
@@ -63,3 +66,4 @@ level 'What is the difference between formative and summative assessment?', name
 level 'Designing Assessment Questions', named: true
 level 'Classroom Assessment Techniques', named: true
 level 'Unit 4 Teaching Practice Plan: Assessing Student Learning', named: true
+
