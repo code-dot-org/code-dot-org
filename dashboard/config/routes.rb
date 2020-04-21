@@ -4,6 +4,8 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  get 'spriteCostumeLibrary.json', to: 'levels#spritelabCostumeLibrary'
+
   # React-router will handle sub-routes on the client.
   get 'teacher_dashboard/sections/:section_id/parent_letter', to: 'teacher_dashboard#parent_letter'
   get 'teacher_dashboard/sections/:section_id/*path', to: 'teacher_dashboard#show', via: :all

@@ -364,6 +364,13 @@ class LevelsController < ApplicationController
     render 'levels/show'
   end
 
+  def spritelabCostumeLibrary
+    puts 'hi'
+    render :file => '../spriteCostumeLibrary.json', 
+    :content_type => 'application/json',
+      :layout => false
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
