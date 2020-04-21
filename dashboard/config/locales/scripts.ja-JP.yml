@@ -6,7 +6,6 @@ ja:
         csd_category_name: コンピューターサイエンス 発展 ('18~'19)
         csd_2018_category_name: コンピューターサイエンス 発展 ('18~'19)
         csd_2019_category_name: コンピューターサイエンス 発展 ('19~'20)
-        csf_category_name: コンピューター・サイエンスの基礎
         csf_2018_category_name: コンピューターサイエンス 初歩 (2018)
         csf_international_category_name: コンピューターサイエンス 初歩 (多言語)
         csf2_draft_category_name: '開発中: コース A - F'
@@ -1936,3 +1935,7 @@ ja:
               name: アルゴリズム
             Events:
               name: イベント
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Whileループ

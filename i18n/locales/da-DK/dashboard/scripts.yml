@@ -1785,3 +1785,7 @@ da:
               name: Algoritmer
             Events:
               name: Hændelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Mens løkker

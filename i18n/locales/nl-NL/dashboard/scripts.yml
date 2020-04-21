@@ -4,7 +4,6 @@ nl:
   data:
     script:
       category:
-        csf_category_name: Basis
         csp_category_name: "CW Principes"
         cspexams_category_name: CW Principes Praktische Test
         csp17_category_name: CW Principes
@@ -2524,3 +2523,17 @@ nl:
               name: Algoritmen
             Events:
               name: Gebeurtenissen
+        no-lg:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken

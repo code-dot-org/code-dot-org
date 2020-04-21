@@ -62,6 +62,8 @@ de-DE:
         collect purple nectar: sammele violetten Nektar
       2-3 Bee Functions 2:
         get 5: erhalte 5
+      2-3 Bee Functions 4:
+        move and get nectar: bewege und hole Nektar
       2-3 Bee Functions 9:
         get 7 make 7: sammle 7 mache 7
       2-3 Bee Functions Assessment 1:
@@ -217,12 +219,12 @@ de-DE:
       Guess The Number:
         check guess: Vermutung prüfen
       InspirationalArtwork:
-        n-sided shape: n-seitige Form
+        n-sided shape: Form mit n Seiten
         draw a loop: eine Schleife zeichnen
         draw spiral circle: Spiralkreis zeichnen
       InspirationalArtwork_2018:
         draw a loop: eine Schleife zeichnen
-        n-sided shape: n-seitige Form
+        n-sided shape: Form mit n Seiten
         draw spiral circle: Spiralkreis zeichnen
       K-1 Artist2 3:
         draw roof: zeichne Dach
@@ -234,6 +236,20 @@ de-DE:
         clear path: Weg freimachen
       MC_HOC_2017_07_Cole_2019:
         clear path: Weg freimachen
+      MC_HOC_2017_10_RETRY:
+        fix long path: 'langen Pfad in Ordnung bringen
+
+'
+        fix short path: 'kurzen Pfad in Ordnung bringen
+
+'
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path: 'langen Pfad in Ordnung bringen
+
+'
+        fix short path: 'kurzen Pfad in Ordnung bringen
+
+'
       MC_HOC_2017_Ali:
         build short bridge: kleine Brücke bauen
         build long bridge: lange Brücke bauen
@@ -337,6 +353,7 @@ de-DE:
         draw head: zeichne Kopf
         draw eye: zeichne Auge
       Robot Doodle_2018:
+        25 pixel square: 25-Pixel-Quadrat
         draw head: zeichne Kopf
         draw eye: zeichne Auge
       Standalone_Artist_7:
@@ -360,6 +377,7 @@ de-DE:
         get 3 nectar or honey: hole dreimal Nektar oder Honig
       course3_bee_functions_challenge2:
         do something: Funktionsblock
+        move and collect: bewegen und sammeln
       course3_bee_functions_challenge3:
         check nectar or honey: Nektar oder Honig prüfen
         row of nectar: Reihe Nektar
@@ -405,11 +423,20 @@ de-DE:
       courseB_artist_loops_challenge2_2019:
         potential solution: mögliche Lösung
       courseC_artist_prog3:
+        draw flame: zeichne Flamme
         draw fire: zeichne Feuer
       courseC_artist_prog3_2018:
+        draw flame: zeichne Flamme
         draw fire: zeichne Feuer
       courseC_artist_prog3_2019:
+        draw flame: zeichne Flamme
         draw fire: zeichne Feuer
+      courseC_artist_prog4:
+        booster: Booster
+      courseC_artist_prog4_2018:
+        booster: Booster
+      courseC_artist_prog4_2019:
+        booster: Booster
       courseC_data wizard:
         do something: Funktionsblock
       courseD_artist_binary1:
@@ -606,10 +633,16 @@ de-DE:
         draw square: zeichne Quadrat
       courseE_artist_functions8_2018:
         do something: Funktionsblock
+        staggered squares: 'versetzte Quadrate
+
+'
         draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions8_2019:
         do something: Funktionsblock
+        staggered squares: 'versetzte Quadrate
+
+'
         draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions8a_2018:
@@ -630,10 +663,16 @@ de-DE:
         draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
         do something: Funktionsblock
+        staggered squares: 'versetzte Quadrate
+
+'
       courseE_artist_functions8c_2019:
         draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
         do something: Funktionsblock
+        staggered squares: 'versetzte Quadrate
+
+'
       courseE_artist_functions9:
         do something: Funktionsblock
         draw triangle: zeichne Dreieck
@@ -649,11 +688,17 @@ de-DE:
       courseE_artist_functionsProj_2018:
         draw hexagon: zeichne Sechseck
         draw line of hexagons: zeichne Linie aus Sechsecken
+        staggered squares: 'versetzte Quadrate
+
+'
         draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functionsProj_2019:
         draw hexagon: zeichne Sechseck
         draw line of hexagons: zeichne Linie aus Sechsecken
+        staggered squares: 'versetzte Quadrate
+
+'
         draw a line of squares: zeichne eine Linie aus Quadraten
         draw square: zeichne Quadrat
       courseE_artist_functions_challenge1:
@@ -684,22 +729,31 @@ de-DE:
         draw a square: zeichne ein Quadrat
         draw ear stems: zeichne Ohrstäbchen
       courseE_artist_functions_predict2:
+        draw line of polygons: zeichne Reihe aus Vielecken
         draw polygon: zeichne Vieleck
         do something: Funktionsblock
       courseE_artist_functions_predict2_2018:
+        draw line of polygons: zeichne Reihe aus Vielecken
         draw polygon: zeichne Vieleck
         do something: Funktionsblock
       courseE_artist_functions_predict2_2019:
+        draw line of polygons: zeichne Reihe aus Vielecken
         draw polygon: zeichne Vieleck
         do something: Funktionsblock
       courseE_bee_concept4:
         honey nectar: Honignektar
       courseE_bee_functions1:
         do something: Funktionsblock
+      courseE_bee_functions10:
+        move and make honey: bewege und mache Honig
+      courseE_bee_functions11_predict1:
+        move and make honey: bewege und mache Honig
       courseE_bee_functions2:
         get 2 nectar: sammle 2 Nektar
       courseE_bee_functions3:
         get 5: erhalte 5
+      courseE_bee_functions4:
+        move and get nectar: bewege und hole Nektar
       courseE_bee_functions7:
         get 7 make 7: sammle 7 mache 7
       courseE_bee_functions8:
@@ -711,6 +765,7 @@ de-DE:
         get 3 nectar or honey: hole dreimal Nektar oder Honig
       courseE_bee_functions_challenge2:
         do something: Funktionsblock
+        move and collect: bewegen und sammeln
       courseE_farmer_concept1:
         do something: Funktionsblock
       courseE_farmer_concept2:
@@ -720,22 +775,124 @@ de-DE:
         get pumpkin: hole Kürbis
       courseE_farmer_concept3:
         do something: Funktionsblock
+      courseE_farmer_functions10a1_2018:
+        pick along path: 'am Weg sammeln
+
+'
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
+        pumpkin square: Kürbis-Quadrat
+      courseE_farmer_functions10a1_2019:
+        pick along path: 'am Weg sammeln
+
+'
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
+        pumpkin square: Kürbis-Quadrat
       courseE_farmer_functions10b:
         navigate: navigieren
       courseE_farmer_functions11_predict:
+        check and pick: 'suchen und pflücken
+
+'
         find pumpkin: finde Kürbis
+        wander path: 'Weg entlanggehen
+
+'
+      courseE_farmer_functions11_predict_2018:
+        pick along path: 'am Weg sammeln
+
+'
+        pumpkin square: Kürbis-Quadrat
+        check square for corn: untersuche Quadrat nach Mais
+        get produce: 'Landwirtschaftliche Erzeugnisse holen
+
+'
+        get all pumpkins: hole alle Kürbisse
+      courseE_farmer_functions11_predict_2019:
+        pick along path: 'am Weg sammeln
+
+'
+        pumpkin square: Kürbis-Quadrat
+        check square for corn: untersuche Quadrat nach Mais
+        get produce: 'Landwirtschaftliche Erzeugnisse holen
+
+'
+        get all pumpkins: hole alle Kürbisse
+      courseE_farmer_functions13_2018:
+        pick along path: 'am Weg sammeln
+
+'
+        check for corn: 'Mais suchen
+
+'
+        corn rectangle: Mais-Rechteck
+        lettuce stairs: Salat-Treppe
+      courseE_farmer_functions13_2019:
+        pick along path: 'am Weg sammeln
+
+'
+        check for corn: 'Mais suchen
+
+'
+        corn rectangle: Mais-Rechteck
+        lettuce stairs: Salat-Treppe
+      courseE_farmer_functions1a_2018:
+        check square for corn: untersuche Quadrat nach Mais
+      courseE_farmer_functions1a_2019:
+        check square for corn: untersuche Quadrat nach Mais
+      courseE_farmer_functions2b_2018:
+        check square for corn: untersuche Quadrat nach Mais
+      courseE_farmer_functions2b_2019:
+        check square for corn: untersuche Quadrat nach Mais
       courseE_farmer_functions2ba:
         corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions2ba_2018:
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
+      courseE_farmer_functions2ba_2019:
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
       courseE_farmer_functions3c:
         corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions3c1_2018:
+        pick along path: 'am Weg sammeln
+
+'
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
+      courseE_farmer_functions3c1_2019:
+        pick along path: 'am Weg sammeln
+
+'
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
+      courseE_farmer_functions3c_2018:
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
+      courseE_farmer_functions3c_2019:
+        check square for corn: untersuche Quadrat nach Mais
+        get all pumpkins: hole alle Kürbisse
       courseE_farmer_functions4b:
         corn and pumpkin: Mais und Kürbis
       courseE_farmer_functions5c:
         corn and pumpkin: Mais und Kürbis
       courseE_farmer_functions6c:
         corn and pumpkin: Mais und Kürbis
+      courseE_farmer_functions7a1_2018:
+        garden square: Gartenplatz
+      courseE_farmer_functions7a1_2019:
+        garden square: Gartenplatz
+      courseE_farmer_functions8a1_2018:
+        garden square: Gartenplatz
+      courseE_farmer_functions8a1_2019:
+        garden square: Gartenplatz
       courseE_farmer_functions8b:
         navigate: navigieren
+      courseE_farmer_functions9a1_2018:
+        garden square: Gartenplatz
+      courseE_farmer_functions9a1_2019:
+        garden square: Gartenplatz
       courseE_farmer_functions9b:
         navigate: navigieren
       courseE_playLab_challenge1:

@@ -715,11 +715,13 @@ de:
     wrong_body: "Deine Antwort ist nicht richtig.  Versuche es noch einmal!"
     correct_title: "Richtig"
     correct_body: "Das ist die richtige Antwort."
+    toofew_title: "Zu wenige Antworten."
   multi-submittable:
     wrong_title: "Vielen Dank"
     wrong_body: "Vielen Dank für das Einsenden Ihrer Frage."
     correct_title: "Vielen Dank"
     correct_body: "Vielen Dank für das Einsenden Ihrer Frage."
+    toofew_title: "Zu wenige Antworten."
   level_group:
     wrong_title: "Vielen Dank"
     wrong_body: "Vielen Dank für das Einsenden Ihrer Fragen."
@@ -1141,3 +1143,5 @@ de:
       copy_code: 'Bitte kopieren Sie diesen Code und fügen Sie ihn in der Maker App ein um sich auf Code.org anzumelden'
       error_invalid_user: 'Ungültige Benutzer ID. Versuche dich später wieder einzuloggen.'
       error_no_code: 'Bitte geben Sie ihren Login Code ein'
+  parent_email_banner:
+    not_now: "Nicht jetzt"

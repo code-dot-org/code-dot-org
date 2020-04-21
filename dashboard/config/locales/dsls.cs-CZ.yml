@@ -1228,61 +1228,76 @@ cs-CZ:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Program neselže. Veverka se dostane k žaludu.
+        - text: Veverka půjde po svém posledním otočení špatným směrem.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
+            způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Program neselže. Veverka se dostane k žaludu.
+        - text: Veverka půjde po svém posledním otočení špatným směrem.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
+            způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Program neselže. Veverka se dostane k žaludu.
+        - text: Veverka půjde po svém posledním otočení špatným směrem.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
+            způsobí selhání tohoto programu?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - text: Pták se dostane k praseti.
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - text: Pták se dostane k praseti.
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - text: Pták se dostane k praseti.
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1822,7 +1837,7 @@ cs-CZ:
         - text: Pták se nebude vůbec hýbat.
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
-        - text: Pták se dostane k praseti.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
         - text: 'Pták se posune vpřed a narazí do TNT. '
@@ -1837,7 +1852,7 @@ cs-CZ:
         - text: Pták se nebude vůbec hýbat.
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
-        - text: Pták se dostane k praseti.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
         - text: 'Pták se posune vpřed a narazí do TNT. '
@@ -1852,7 +1867,7 @@ cs-CZ:
         - text: Pták se nebude vůbec hýbat.
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
-        - text: Pták se dostane k praseti.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
         - text: 'Pták se posune vpřed a narazí do TNT. '

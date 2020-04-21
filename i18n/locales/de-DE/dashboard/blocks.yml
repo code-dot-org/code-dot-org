@@ -30,6 +30,7 @@ de:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
           MOVE2:
             MOVES.Roll: Body Roll
@@ -42,6 +43,7 @@ de:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
       Dancelab_atTimestamp:
         text: nach {TIMESTAMP} {UNIT}
@@ -87,6 +89,7 @@ de:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -108,6 +111,7 @@ de:
             MOVES.Clown: Gangnam
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -187,6 +191,7 @@ de:
             MOVES.Kick: Stern
             MOVES.XArmsUp: Dehnen
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -218,6 +223,7 @@ de:
             MOVES.Kick: Stern
             MOVES.XArmsUp: Dehnen
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
           DIR:
             '1': "→"
@@ -282,6 +288,7 @@ de:
             MOVES.Roll: Body Roll
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
       Dancelab_ifTime:
         text: |-
@@ -1126,11 +1133,17 @@ de:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Stadt
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': Spielfeld
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': Wüste
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': schwimmendes Gras
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': Raster
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': Küche
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': Wohnzimmer
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Regenbogen
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': Science-Fiction
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': Fußballfeld
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': Sterne
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': Sonne und Regenbogen
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': Tennisplatz
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Unterwasser
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Winter
             undefined: leer
@@ -1374,6 +1387,7 @@ de:
             MOVES.Roll: Body Roll
             MOVES.Kick: Stern
             MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
       Mikelab_ifLabel:
         options:
@@ -1405,6 +1419,12 @@ de:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Stadt
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': schwimmendes Gras
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': Küche
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': Wohnzimmer
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': Fußballfeld
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': Sonne und Regenbogen
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': Tennisplatz
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1533,6 +1553,11 @@ de:
         options:
           OPTION:
             '"random"': zufällig
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
       binary_drawBin:
         text: zeichne Binärwert {BIN}
       binary_drawBinScreen:
