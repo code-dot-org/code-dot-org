@@ -484,30 +484,31 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
-      /**
-       * @function
-       * @name MakerBoard#createLed
-       * @param {number} pin
-       * @return {Led} a newly constructed Led component
-       */
-      describe(`createLed(pin)`, () => {
-        beforeEach(() => {
-          return board.connect();
-        });
-
-        it(`returns an Led component`, () => {
-          const led = board.createLed(10);
-          // FakeBoard doesn't provide an LED component, so check the basic LED
-          // shape instead.
-          expect(led.on).to.be.a('function');
-          expect(led.off).to.be.a('function');
-          expect(led.blink).to.be.a('function');
-          expect(led.toggle).to.be.a('function');
-          expect(led.pulse).to.be.a('function');
-        });
+    /**
+     * @function
+     * @name MakerBoard#createLed
+     * @param {number} pin
+     * @return {Led} a newly constructed Led component
+     */
+    describe(`createLed(pin)`, () => {
+      beforeEach(() => {
+        return board.connect();
       });
-    }
+
+      it(`returns an Led component`, () => {
+        const led = board.createLed(10);
+        // FakeBoard doesn't provide an LED component, so check the basic LED
+        // shape instead.
+        expect(led.on).to.be.a('function');
+        expect(led.off).to.be.a('function');
+        expect(led.toggle).to.be.a('function');
+
+        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
+          expect(led.blink).to.be.a('function');
+          expect(led.pulse).to.be.a('function');
+        }
+      });
+    });
 
     /**
      * @function
