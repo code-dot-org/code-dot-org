@@ -2025,7 +2025,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect key and display name to match. The Lesson Group with key: required has display_name: Overview', raise.message
+    assert_equal 'Expect key and display name to match. The Lesson Group with key: required has display_name: translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.required.display_name', raise.message
   end
 
   test 'raises error if some lessons have lesson groups and some do not' do
@@ -2055,13 +2055,13 @@ endvariants
     l2 = create :level
     l3 = create :level
     dsl = <<-SCRIPT
-      lesson_group 'content', display_name: 'Content'
+      lesson_group 'content', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.content.display_name'
       stage 'Lesson1'
       level '#{l1.name}'
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.required.display_name'
       stage 'Lesson2'
       level '#{l2.name}'
-      lesson_group 'content', display_name: 'Content'
+      lesson_group 'content', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.content.display_name'
       stage 'Lesson3'
       level '#{l3.name}'
     SCRIPT
@@ -2217,20 +2217,20 @@ endvariants
     l1 = create :level
     l2 = create :level
     old_dsl = <<-SCRIPT
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.required.display_name'
       stage 'Lesson1'
       level '#{l1.name}'
 
-      lesson_group 'content', display_name: 'Content'
+      lesson_group 'content', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.content.display_name'
       stage 'Lesson2'
       level '#{l2.name}'
     SCRIPT
     new_dsl = <<-SCRIPT
-      lesson_group 'content', display_name: 'Content'
+      lesson_group 'content', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.content.display_name'
       stage 'Lesson1'
       level '#{l1.name}'
 
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'required', display_name: 'translation missing: en-US.data.script.name.lesson-group-test-script.lesson_groups.required.display_name'
       stage 'Lesson2'
       level '#{l2.name}'
     SCRIPT
