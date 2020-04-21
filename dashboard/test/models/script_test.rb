@@ -1950,6 +1950,25 @@ endvariants
     assert_equal script.lessons[0].lesson_group.key, ''
   end
 
+  test 'raises error if a lesson group key is in the reserved plc keys and the display name does not match' do
+    l1 = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Not Content'
+      stage 'Lesson1'
+      level '#{l1.name}'
+
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lesson-group-test-script'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
+        ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      )
+    end
+    assert_equal "The key content is a reserved key. It must have the display name: Content.", raise.message
+  end
+
   test 'raises error if a lesson group key is empty' do
     l1 = create :level
     dsl = <<-SCRIPT
