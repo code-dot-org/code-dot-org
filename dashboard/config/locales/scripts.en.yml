@@ -16032,6 +16032,8 @@ en:
               name: If-Statements
             Keep Going:
               name: Keep Going
+            Keep Going!:
+              name: Keep Going!
         virtual-holding-place:
           stages:
             Example Projects:
