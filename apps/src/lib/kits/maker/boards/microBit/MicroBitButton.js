@@ -1,4 +1,5 @@
 import {EventEmitter} from 'events';
+import '../../../../../utils'; // For Function.prototype.inherits
 
 export default function MicroBitButton(board) {
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
