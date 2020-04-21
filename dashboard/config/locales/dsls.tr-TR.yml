@@ -93,14 +93,14 @@ tr-TR:
         title: Çoktan Seçmeli
       2-3 Maze Match 2:
         answers:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         content1: bloklar için bulmacaları eşleştir
         questions:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         title: Labirent eşleştirme
       2-3 Maze Multi 2:
         answers:
@@ -219,12 +219,12 @@ tr-TR:
         answers:
         - {}
         - {}
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
         content1: bloklar için bulmacaları eşleştir
         questions:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         title: Labirent eşleştirme
       2-3 maze multi 1:
         answers:
