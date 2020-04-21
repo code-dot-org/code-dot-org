@@ -1330,9 +1330,18 @@ zh-TW:
       courseC_PlayLab_events9: 你能添加一個積木讓企鵝（角色 1）碰到章魚（角色 3）時就得分嗎？開始遊戲並用箭頭移動企鵝來得分！
       courseC_PlayLab_events9_2018: 你能添加一個積木讓企鵝（角色 1）碰到章魚（角色 3）時就得分嗎？開始遊戲並用箭頭移動企鵝來得分！
       courseC_PlayLab_events9_2019: 你能添加一個積木讓企鵝（角色 1）碰到章魚（角色 3）時就得分嗎？開始遊戲並用箭頭移動企鵝來得分！
-      courseC_PlayLab_eventsA: 將積木添加到`運行時`事件中，用來更改背景場景和企鵝企鵝的速度。開始遊戲並用箭頭移動企鵝來得分。
-      courseC_PlayLab_eventsA_2018: 將積木添加到`運行時`事件中，用來更改背景場景和企鵝企鵝的速度。開始遊戲並用箭頭移動企鵝來得分。
-      courseC_PlayLab_eventsA_2019: 將積木添加到`運行時`事件中，用來更改背景場景和企鵝企鵝的速度。開始遊戲並用箭頭移動企鵝來得分。
+      courseC_PlayLab_eventsA: |-
+        將積木添加到`運行時`事件中，用來更改背景場景和企鵝企鵝的速度。
+
+        開始遊戲並用箭頭移動企鵝來得分。
+      courseC_PlayLab_eventsA_2018: |-
+        將積木添加到`運行時`事件中，用來更改背景場景和企鵝企鵝的速度。
+
+        開始遊戲並用箭頭移動企鵝來得分。
+      courseC_PlayLab_eventsA_2019: |-
+        將積木添加到`運行時`事件中，用來更改背景場景和企鵝企鵝的速度。
+
+        開始遊戲並用箭頭移動企鵝來得分。
       courseC_PlayLab_eventsFP: 創建自己的故事。完成後，點擊「完成」來與朋友分享。參考提示中故事的點子。
       courseC_PlayLab_eventsFP_2018: 創建自己的故事。完成後，點擊「完成」來與朋友分享。參考提示中故事的點子。
       courseC_PlayLab_eventsFP_2019: 創建自己的故事。完成後，點擊「完成」來與朋友分享。參考提示中故事的點子。
@@ -1642,9 +1651,18 @@ zh-TW:
       courseD_artist_binary4: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
       courseD_artist_binary4_2018: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
       courseD_artist_binary4_2019: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
-      courseD_artist_binary5: 下面的每個二進位字串代表此圖片的一行。你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
-      courseD_artist_binary5_2018: 下面的每個二進位字串代表此圖片的一行。你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
-      courseD_artist_binary5_2019: 下面的每個二進位字串代表此圖片的一行。你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
+      courseD_artist_binary5: |-
+        下面的每個二進位字串代表此圖片的一行。
+
+        你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
+      courseD_artist_binary5_2018: |-
+        下面的每個二進位字串代表此圖片的一行。
+
+        你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
+      courseD_artist_binary5_2019: |-
+        下面的每個二進位字串代表此圖片的一行。
+
+        你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
       courseD_artist_binary6: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
       courseD_artist_binary6_2018: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
       courseD_artist_binary6_2019: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
@@ -1657,28 +1675,49 @@ zh-TW:
       courseD_artist_binary8_predict1: 完成這個程式以畫出圖案。
       courseD_artist_binary8_predict1_2018: 完成這個程式以畫出圖案。
       courseD_artist_binary8_predict1_2019: 完成這個程式以畫出圖案。
-      courseD_artist_binaryFP: 這是可繪製的更高解析度的畫布 - 16 像素乘 16 像素！看看我們開始創意設計之後會發生什麼！
+      courseD_artist_binaryFP: |-
+        這是可繪製的更高解析度的畫布 - 16 像素乘 16 像素！
+
+        看看我們開始創意設計之後會發生什麼！
       courseD_artist_binaryFP8: "**自由發揮：**  用二進制畫出任何你喜歡的東西！ "
-      courseD_artist_binaryFP_2018: 這是可繪製的更高解析度的畫布 - 16 像素乘 16 像素！看看我們開始創意設計之後會發生什麼！
-      courseD_artist_binaryFP_2019: 這是可繪製的更高解析度的畫布 - 16 像素乘 16 像素！看看我們開始創意設計之後會發生什麼！
-      courseD_artist_nestedLoops1: 繪製一個三角形來開始此關。\\（每邊長 100 像素，每個外角都要旋轉 120 度。）
+      courseD_artist_binaryFP_2018: |-
+        這是可繪製的更高解析度的畫布 - 16 像素乘 16 像素！
+
+        看看我們開始創意設計之後會發生什麼！
+      courseD_artist_binaryFP_2019: |-
+        這是可繪製的更高解析度的畫布 - 16 像素乘 16 像素！
+
+        看看我們開始創意設計之後會發生什麼！
+      courseD_artist_nestedLoops1: |-
+        繪製一個三角形來開始此關。\
+        (每邊長 100 像素，每個外角都要旋轉 120 度。）
       courseD_artist_nestedLoops10: 正方形跟之前一樣，但是這次只畫七個，然後將它們放成一行。
       courseD_artist_nestedLoops10_2018: 正方形跟之前一樣，但是這次只畫七個，然後將它們放成一行。
       courseD_artist_nestedLoops10_2019: 正方形跟之前一樣，但是這次只畫七個，然後將它們放成一行。
-      courseD_artist_nestedLoops1_2018: 繪製一個三角形來開始此關。\\（每邊長 100 像素，每個外角都要旋轉 120 度。）
-      courseD_artist_nestedLoops1_2019: 繪製一個三角形來開始此關。\\（每邊長 100 像素，每個外角都要旋轉 120 度。）
+      courseD_artist_nestedLoops1_2018: |-
+        繪製一個三角形來開始此關。\
+        (每邊長 100 像素，每個外角都要旋轉 120 度。）
+      courseD_artist_nestedLoops1_2019: |-
+        繪製一個三角形來開始此關。\
+        (每邊長 100 像素，每個外角都要旋轉 120 度。）
       courseD_artist_nestedLoops1a: 現在循環畫出這個三角形 6 次。
       courseD_artist_nestedLoops1a_2018: 現在循環畫出這個三角形 6 次。
       courseD_artist_nestedLoops1a_2019: 現在循環畫出這個三角形 6 次。
       courseD_artist_nestedLoops2: 這次，用盡可能少的積木來完成關卡。
       courseD_artist_nestedLoops2_2018: 這次，用盡可能少的積木來完成關卡。
       courseD_artist_nestedLoops2_2019: 這次，用盡可能少的積木來完成關卡。
-      courseD_artist_nestedLoops3: 使用你的新技能可以快速繪製該建築物的最後一行窗戶。這些窗戶是 20 像素的正方形，兩個之間相隔
-        20 像素。
-      courseD_artist_nestedLoops3_2018: 使用你的新技能可以快速繪製該建築物的最後一行窗戶。這些窗戶是 20 像素的正方形，兩個之間相隔
-        20 像素。
-      courseD_artist_nestedLoops3_2019: 使用你的新技能可以快速繪製該建築物的最後一行窗戶。這些窗戶是 20 像素的正方形，兩個之間相隔
-        20 像素。
+      courseD_artist_nestedLoops3: |-
+        使用你的新技能可以快速繪製該建築物的最後一行窗戶。
+
+        這些窗戶是 20 像素的正方形，兩個之間相隔 20 像素。
+      courseD_artist_nestedLoops3_2018: |-
+        使用你的新技能可以快速繪製該建築物的最後一行窗戶。
+
+        這些窗戶是 20 像素的正方形，兩個之間相隔 20 像素。
+      courseD_artist_nestedLoops3_2019: |-
+        使用你的新技能可以快速繪製該建築物的最後一行窗戶。
+
+        這些窗戶是 20 像素的正方形，兩個之間相隔 20 像素。
       courseD_artist_nestedLoops4: 好極了！這些圓也是用同樣方式來完成。
       courseD_artist_nestedLoops4_2018: 好極了！這些圓也是用同樣方式來完成。
       courseD_artist_nestedLoops4_2019: 好極了！這些圓也是用同樣方式來完成。
@@ -1753,7 +1792,10 @@ zh-TW:
       courseD_autorun_binary2_2019: 運行以下代碼，查看小藝術家如何使用二進位來繪製此圖案。
       courseD_autorun_binary3_2019: 迴圈播放以下哪個二進位字串 8 次可以繪製處此圖像？
       courseD_autorun_binary4_2019: 你可以靠迴圈，只用 3 個二進制（0 或 1）來完成這個圖案嗎？
-      courseD_autorun_binary5_2019: 下面的每個二進位字串代表此圖片的一行。你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
+      courseD_autorun_binary5_2019: |-
+        下面的每個二進位字串代表此圖片的一行。
+
+        你能重新排列一下它們的位置，畫出一個笑臉而不是皺眉的臉嗎？
       courseD_autorun_binary6_2019: 用怎樣的六位數的二進制字符串，在重複 11 次後將能畫出這個圖案？
       courseD_autorun_binary7_2019: 能讓你重複畫出這個圖案的最短的二進制字符串是什麼？
       courseD_autorun_binary8_2019: 完成這個程式以畫出圖案。
@@ -1767,9 +1809,18 @@ zh-TW:
       courseD_bee_conditionals2: 在獲取花蜜之前，請檢查每朵雲的下面，看看有沒有藏著一朵花。
       courseD_bee_conditionals2_2018: 在獲取花蜜之前，請檢查每朵雲的下面，看看有沒有藏著一朵花。
       courseD_bee_conditionals2_2019: 在獲取花蜜之前，請檢查每朵雲的下面，看看有沒有藏著一朵花。
-      courseD_bee_conditionals3: 幫助蜜蜂收集所有的花蜜。你只能從花中收集花蜜，但是你可以檢查任何空格來查看是否有花。
-      courseD_bee_conditionals3_2018: 幫助蜜蜂收集所有的花蜜。你只能從花中收集花蜜，但是你可以檢查任何空格來查看是否有花。
-      courseD_bee_conditionals3_2019: 幫助蜜蜂收集所有的花蜜。你只能從花中收集花蜜，但是你可以檢查任何空格來查看是否有花。
+      courseD_bee_conditionals3: |-
+        幫助蜜蜂收集所有的花蜜。
+
+        你只能從花中收集花蜜，但是你可以檢查任何空格來查看是否有花。
+      courseD_bee_conditionals3_2018: |-
+        幫助蜜蜂收集所有的花蜜。
+
+        你只能從花中收集花蜜，但是你可以檢查任何空格來查看是否有花。
+      courseD_bee_conditionals3_2019: |-
+        幫助蜜蜂收集所有的花蜜。
+
+        你只能從花中收集花蜜，但是你可以檢查任何空格來查看是否有花。
       courseD_bee_conditionals4: 使用盡可能少的模塊採集所有花蜜。
       courseD_bee_conditionals4_2018: 使用盡可能少的模塊採集所有花蜜。
       courseD_bee_conditionals4_2019: 使用盡可能少的模塊採集所有花蜜。
@@ -2022,10 +2073,12 @@ zh-TW:
       courseD_playLab_cond4_2018: 添加一些代碼，讓忍者（角色 3）在遊戲開始時就開始追逐 Pegleg。如果忍者抓到他，則以遊戲失敗告終。
       courseD_playLab_cond5: 添加一個 `重複無限次` 迴圈，不斷的檢查得分是不是超過 5，如果超過就宣告勝利以結束這場遊戲。
       courseD_playLab_cond5_2018: 添加一個 `重複無限次` 迴圈，不斷的檢查得分是不是超過 5，如果超過就宣告勝利以結束這場遊戲。
-      courseD_playLab_cond6: 1.  在設定忍者（角色 3）追趕海盜之前，先調慢其速度。2. 如果海盜在向下大於 225 像素的位置，請將忍者設定為
-        **避開** 海盜。否則，設定忍者 **追趕** 海盜。
-      courseD_playLab_cond6_2018: 1.  在設定忍者（角色 3）追趕海盜之前，先調慢其速度。2. 如果海盜在向下大於 225 像素的位置，請將忍者設定為
-        **避開** 海盜。否則，設定忍者 **追趕** 海盜。
+      courseD_playLab_cond6: |-
+        1.  在設定忍者（角色 3）追趕海盜之前，先調慢其速度。
+        2.  如果海盜在向下大於 225 像素的位置，請將忍者設定為 **避開** 海盜。否則，設定忍者 **追趕** 海盜。
+      courseD_playLab_cond6_2018: |-
+        1.  在設定忍者（角色 3）追趕海盜之前，先調慢其速度。
+        2.  如果海盜在向下大於 225 像素的位置，請將忍者設定為 **避開** 海盜。否則，設定忍者 **追趕** 海盜。
       courseD_playLab_cond6a: 如果海盜（角色 1）在安全區內，則等待一秒鐘，然後如果他仍然停留在章魚線以下，就減去 1 分。
       courseD_playLab_cond6a_2018: 如果海盜（角色 1）在安全區內，則等待一秒鐘，然後如果他仍然停留在章魚線以下，就減去 1 分。
       courseD_playLab_condFP: 現在，建立起自己的遊戲來向朋友炫耀吧！

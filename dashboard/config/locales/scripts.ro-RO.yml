@@ -4,7 +4,6 @@ ro:
     script:
       category:
         csd_2018_category_name: Descoperiri Informatice ('18-'19)
-        csf_category_name: Fundamentele CS
         csf_2018_category_name: Fundamentele Informaticii (2018)
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
@@ -5576,3 +5575,19 @@ ro:
         code-break-younger:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
+        no-lg:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
+          description_audience: "[șir gol]"

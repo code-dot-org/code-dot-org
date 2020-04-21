@@ -6,7 +6,6 @@ es:
         csd_category_name: Descubrimientos CS ('17-'18)
         csd_2018_category_name: Descubrimientos de Informática ('18-'19)
         csd_2019_category_name: Descubrimientos CS ('19-'20)
-        csf_category_name: Fundamentos de CS
         csf_2018_category_name: Fundamentos de Informática (2018)
         csf_international_category_name: Fundamentos de Informática Internacional
         csf2_draft_category_name: 'En desarrollo: Cursos A - F'
@@ -5643,3 +5642,19 @@ es:
               name: Algoritmos
             Events:
               name: Eventos
+        no-lg:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Bucles Mientras
+            Loops and Simulations:
+              name: Bucles y Simulaciones
+            Introduction to Arrays:
+              name: Introducción a los Arrays
+            Processing Arrays:
+              name: Procesando Arrays
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno

@@ -5,7 +5,6 @@ ga:
     script:
       category:
         csd_category_name: Fionnachtana sa Ríomheolaíocht (2017-2018)
-        csf_category_name: Buntús na Ríomheolaíochta
         csf_international_category_name: 'Buntús na Ríomheolaíochta: Idirnáisiúnta'
         csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
         csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
@@ -2330,3 +2329,7 @@ ga:
               name: Algartaim
             Events:
               name: Teagmhais
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Lúba "Chomh fada is"
