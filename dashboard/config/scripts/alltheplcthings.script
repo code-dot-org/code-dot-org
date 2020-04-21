@@ -43,15 +43,15 @@ lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Group Work and Peer Learning', named: true
-level 'Collaborative Learning and Group Work: Description and Strategies', named: true
+level 'Collaborative Learning and Group Work: description and strategies', named: true
 level 'The Official Peer Instruction Blog', named: true
-level 'the Journal of Peer Learning', named: true
+level 'the Journal of Peer Learning ', named: true
 level 'Wednesday Report: Balancing Teachers and Tools in Unit 1', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true
 level 'Peer Review Level 2 - Wednesday Report', named: true
 
 stage 'Balancing Teachers and Tools', flex_category: 'practice'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
-level 'Overview: Balancing Teachers and Tools', named: true
+level  'Overview: Balancing Teachers and Tools', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true
 level 'Peer Review Level 2 - Wednesday Report', named: true
