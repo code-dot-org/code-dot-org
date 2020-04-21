@@ -34,8 +34,8 @@ module Pd::Foorm
       rollup = Pd::Foorm::RollupCreator.calculate_averaged_rollup(
         summarized_answers,
         rollup_question_details,
-        true,
-        facilitators
+        facilitators,
+        split_by_facilitator: true
       )
       # get overall rollup
       overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details, facilitators)
@@ -119,8 +119,8 @@ module Pd::Foorm
       return Pd::Foorm::RollupCreator.calculate_averaged_rollup(
         summarized_answers,
         rollup_question_details,
-        split_by_facilitator,
-        facilitators
+        facilitators,
+        split_by_facilitator
       )
     end
 

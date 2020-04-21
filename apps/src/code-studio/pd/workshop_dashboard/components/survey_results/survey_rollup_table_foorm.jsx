@@ -2,7 +2,7 @@
  * Shows rollup data from Foorm surveys. Shows average data for this workshop
  * and across all workshops for this course
  * The rollup table can either be per facilitator or not. This means the question(s) were asked on a
- * per-facilitator basis If it is per-facilitator, each question
+ * per-facilitator basis. If it is per-facilitator, each question
  * will have the following data points (keys used in table are in parentheses):
  *  -average for this workshop for each facilitator (thisWorkshop-{facilitatorId})
  *  -average for each facilitator across all of their workshops (facilitatorAverage-{facilitatorId})

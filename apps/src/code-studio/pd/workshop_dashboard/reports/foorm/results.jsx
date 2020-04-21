@@ -53,6 +53,7 @@ export default class Results extends React.Component {
         ))}
         {this.props.workshopRollups && (
           <Tab
+            /* Keys here are +1 to last survey summary tab keys */
             eventKey={this.props.workshopTabs.length + 1}
             key={this.props.workshopTabs.length}
             title="Workshop Rollups"
@@ -67,6 +68,7 @@ export default class Results extends React.Component {
           </Tab>
         )}
         {this.props.workshopRollups && this.props.workshopRollups[FACILITATOR] && (
+          /* Keys here are +1 to general rollup tab */
           <Tab
             eventKey={this.props.workshopTabs.length + 2}
             key={this.props.workshopTabs.length + 1}

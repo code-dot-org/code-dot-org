@@ -2,9 +2,11 @@
 
 The Foorm Survey Pipeline takes Foorm survey responses and summarizes them for visualization. The main entry point is
 SurveyReporter.get_workshop_report. SurveyReporter.get_workshop_report takes in a workshop id and returns a summary
-in the format described below. The path for calculating report from get_raw_data_for_workshop, given a workshop_id x,
+in the format described below. The path for calculating a report, given a workshop_id x,
 which is a workshop for course y (ex. 'CS Principles'), is:
-1. Summarize workshop x
+1. Get raw workshop data (SurveyReporter.get_raw_workshop_data). This gets the forms and responses for
+   workshop_id.
+1. Summarize workshop x using raw workshop data
    1. FoormParser.parse_forms
    1. WorkshopSummarizer.summarize_answers_by_survey
 1. Get rollup question details
