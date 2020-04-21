@@ -83,7 +83,7 @@ class ContactRollupsProcessed < ApplicationRecord
     end
   end
 
-  # Extracts a given field
+  # Extracts a given field from data compiled from multiple sources.
   #
   # @param [Hash] contact_data compiled data from multiple source tables.
   #   @see output of parse_contact_data method.
