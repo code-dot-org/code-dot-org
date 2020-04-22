@@ -10,13 +10,15 @@ module Cdo
     # @param source_cluster_id [String] DB cluster id of the cluster to clone.  Defaults to current environment's cluster.
     # @param clone_cluster_id [String] DB cluster id to assign to clone.  Defaults to source cluster id + "-clone"
     # @param instance_type [String] RDS DB Instance Type
+    # @param restore_to_time [DateTime] The date and time to restore the DB cluster to.  Defaults to latest restorable time for the cluster.
     # @param max_attempts [Integer] Number of times to check whether task has completed successfully before failing.
     # @param delay [Integer] Number of seconds to wait between checking task status.
     def self.clone_cluster(
       source_cluster_id: CDO.db_cluster_id,
       clone_cluster_id: "#{source_cluster_id}-clone",
       instance_type: 'db.r4.large',
-      max_attempts: 30,  # It takes ~15 minutes to clone the production cluster, so default to 30 minutes.
+      restore_to_time: nil,
+      max_attempts: 120,  # It takes ~15 minutes for restore_type `copy-on-write` and ~1 hour for `full-copy`
       delay: 60
     )
       clone_instance_id = clone_cluster_id + "-0"
@@ -34,13 +36,21 @@ module Cdo
         ).db_cluster_parameter_group
 
         rds_client.restore_db_cluster_to_point_in_time(
-          db_cluster_identifier: clone_cluster_id,
-          restore_type: 'copy-on-write',
-          source_db_cluster_identifier: source_cluster_id,
-          use_latest_restorable_time: true,
-          db_subnet_group_name: source_cluster.db_subnet_group,
-          vpc_security_group_ids: source_cluster.vpc_security_groups.map(&:vpc_security_group_id),
-          db_cluster_parameter_group_name: copy_source_cluster_parameter_group.db_cluster_parameter_group_name
+          {
+            db_cluster_identifier: clone_cluster_id,
+            source_db_cluster_identifier: source_cluster_id,
+            db_subnet_group_name: source_cluster.db_subnet_group,
+            vpc_security_group_ids: source_cluster.vpc_security_groups.map(&:vpc_security_group_id),
+            db_cluster_parameter_group_name: copy_source_cluster_parameter_group.db_cluster_parameter_group_name
+          }.tap do |options|
+            if restore_to_time
+              options[:restore_type] = 'full-copy' # Point In Time restore requires `full-copy`.
+              options[:restore_to_time] = restore_to_time
+            else
+              options[:restore_type] = 'copy-on-write'
+              options[:use_latest_restorable_time] = true
+            end
+          end
         )
         source_writer_instance_identifier = source_cluster.
           db_cluster_members.
@@ -71,10 +81,10 @@ module Cdo
           {db_instance_identifier: clone_instance_id},
           {max_attempts: max_attempts, delay: delay}
         )
+        CDO.log.info "Done creating database cluster - #{clone_cluster_id}"
       rescue Aws::Waiters::Errors::WaiterFailed => error
         CDO.log.info "Error waiting for cluster clone instance to become available. #{error.message}"
       end
-      CDO.log.info "Done creating database cluster - #{clone_cluster_id}"
     end
 
     def self.delete_cluster(cluster_id, max_attempts = 20, delay = 60)

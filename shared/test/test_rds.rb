@@ -8,6 +8,8 @@ class TestRDS < Minitest::Test
     @clone_cluster_id = 'cluster-clone'
     @cluster_to_delete_id = 'delete-me-cluster'
 
+    @source_cluster_earliest_restorable_time = Time.parse('2020-01-01T00:00:00.000Z')
+
     @source_cluster = {
       "db_clusters": [
         {
@@ -16,7 +18,7 @@ class TestRDS < Minitest::Test
           "db_cluster_parameter_group": "#{@source_cluster_id}-auroraclusterdbparameters-1a2b3c4d5e",
           "db_subnet_group": "vpc-dbsubnetgroup-9z8y7x6w",
           "status": "available",
-          "earliest_restorable_time": Time.parse('2020-01-01T00:00:00.000Z'),
+          "earliest_restorable_time": @source_cluster_earliest_restorable_time,
           "endpoint": "#{@source_cluster_id}.cluster-abcdefghijk.us-east-1.rds.amazonaws.com",
           "reader_endpoint": "#{@source_cluster_id}.cluster-ro-abcdefghijk.us-east-1.rds.amazonaws.com",
           "engine": "aurora-mysql",
@@ -205,6 +207,29 @@ class TestRDS < Minitest::Test
     Cdo::RDS.clone_cluster(
       source_cluster_id: @source_cluster_id,
       clone_cluster_id: @clone_cluster_id,
+      max_attempts: 1,
+      delay: 0
+    )
+  end
+
+  def test_clone_cluster_to_point_in_time
+    Aws.config[:rds] = {
+      stub_responses: {
+        describe_db_clusters: @source_cluster,
+        copy_db_cluster_parameter_group: @copy_cluster_parameter_group_response,
+        restore_db_cluster_to_point_in_time: @clone_cluster_response,
+        # The 1st stub returns @source_instance when `clone_cluster` is getting information about the instance to clone.
+        # The 2nd stub returns @create_instance_complete when the waiter checks to see if it has been provisioned.
+        describe_db_instances: [@source_instance, @create_instance_complete],
+        copy_db_parameter_group: @copy_instance_parameter_group_response,
+        create_db_instance: @create_instance_response
+      }
+    }
+
+    Cdo::RDS.clone_cluster(
+      source_cluster_id: @source_cluster_id,
+      clone_cluster_id: @clone_cluster_id,
+      restore_to_time: @source_cluster_earliest_restorable_time,
       max_attempts: 1,
       delay: 0
     )
