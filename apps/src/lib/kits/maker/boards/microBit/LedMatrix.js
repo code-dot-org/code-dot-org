@@ -32,7 +32,7 @@ export default class LedMatrix {
     this.matrix[x][y] > 0 ? this.off(x, y) : this.on(x, y, brightness);
   }
 
-  allOff() {
+  clear() {
     this.board.mb.displayClear();
   }
 }
