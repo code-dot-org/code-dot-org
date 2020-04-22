@@ -1,12 +1,13 @@
 login_required true
 hideable_stages true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-20/unit2/{LESSON}"], ["teacherForum", "https://forum.code.org/c/csd"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
+family_name 'csd2'
 version_year '2020'
 project_sharing true
+curriculum_umbrella 'CSD'
 tts true
 
 stage 'Exploring Web Pages', flex_category: 'csd2_1'
@@ -119,6 +120,7 @@ level 'CSD U2 Top Websites_2018_2019_pilot_2020', named: true
 stage 'Team Problem Solving', flex_category: 'csd2_2'
 level 'CSD U2L13 TFMD_2020', named: true
 level 'csd web teamwork video', progression: 'Video: Teamwork'
+level 'csd web disagreement video', progression: 'Video: Managing Disagreement'
 
 stage 'Sources and Research', flex_category: 'csd2_2'
 level 'CSD U2L14 TFMD_2020', named: true

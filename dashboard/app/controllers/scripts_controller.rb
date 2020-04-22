@@ -50,7 +50,7 @@ class ScriptsController < ApplicationController
     # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
     if current_user && current_user.levelbuilder?
       notice_text = ""
-      @script.stages.each do |stage|
+      @script.lessons.each do |stage|
         next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
 
         formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
@@ -135,13 +135,13 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    render 'levels/instructions', locals: {stages: script.stages}
+    render 'levels/instructions', locals: {stages: script.lessons}
   end
 
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_stages(@script)
+    @script_file = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake

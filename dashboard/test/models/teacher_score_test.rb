@@ -16,10 +16,10 @@ class TeacherScoreTest < ActiveSupport::TestCase
       :script_level,
       script: @script,
       levels: [
-        create(:maze, name: 'test level 1')
+        create(:unplugged, name: 'test level 1')
       ]
     )
-    @stage = @script_level.stage
+    @stage = @script_level.lesson
     @score = 100
     @score_2 = 0
     @level_1 = @script_level.levels[0]
@@ -106,18 +106,18 @@ class TeacherScoreTest < ActiveSupport::TestCase
       )
     end
 
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_section(@stage, @section.id), {@student_1.id => {@level_1.id => @score_2}})
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_students(@stage, @section.students.pluck(:id)), {@student_1.id => {@level_1.id => @score_2}})
   end
 
-  test 'get scores for stage for section' do
+  test 'get scores for stage for students' do
     TeacherScore.score_stage_for_section(
       @section.id, @stage.id, @score
     )
 
     assert_equal(
-      TeacherScore.get_level_scores_for_stage_for_section(
+      TeacherScore.get_level_scores_for_stage_for_students(
         @stage,
-        @section.id
+        @section.students.pluck(:id)
       ),
       {
         @student_1.id => {@level_1.id => @score},
@@ -131,11 +131,12 @@ class TeacherScoreTest < ActiveSupport::TestCase
     TeacherScore.score_stage_for_section(
       @section.id, @stage.id, @score
     )
-
+    page = 1
     assert_equal(
       TeacherScore.get_level_scores_for_script_for_section(
         @script.id,
-        @section.id
+        @section.id,
+        page
       ),
       {
         @script.id => {

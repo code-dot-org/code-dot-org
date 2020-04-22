@@ -15,7 +15,12 @@
   csedweek_banner_teachers_text: "Are you a CS teacher? See other CSEdWeek resources"
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
   try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
-  try_hoc_num_served_markdown: "# Try an\\n\\n## Hour of Code\\n\\n### %{num} served"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served
   anybody_can_learn: "Anybody can learn."
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
@@ -978,10 +983,18 @@
   coursed-2019_name: Course D (2019)
   coursee-2019_name: Course E (2019)
   coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Express Course (2019)
   pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
@@ -1695,3 +1708,8 @@
   hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
   hoc2019_mc_more_coding_resources: "More Coding Resources"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) from last year."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

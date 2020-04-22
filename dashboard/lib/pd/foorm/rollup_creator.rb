@@ -34,9 +34,7 @@ module Pd::Foorm
       rollup = {response_count: intermediate_rollup[:response_count], averages: {}}
       intermediate_rollup[:questions].each do |question, answers|
         case question_details[question][:type]
-        # TODO: add other answer types
         when ANSWER_MATRIX
-          rollup[:averages][question] = {}
           averages = {}
           overall_sum = 0
           overall_count = 0
@@ -46,8 +44,14 @@ module Pd::Foorm
             overall_sum += matrix_answer[:sum]
             overall_count += matrix_answer[:count]
           end
-          rollup[:averages][question][:average] = (overall_sum.to_f / overall_count).round(2)
-          rollup[:averages][question][:rows] = averages
+          # don't include rollup for questions with no answers
+          if overall_count > 0
+            rollup[:averages][question] = {}
+            rollup[:averages][question][:average] = (overall_sum.to_f / overall_count).round(2)
+            rollup[:averages][question][:rows] = averages
+          end
+        when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+          rollup[:averages][question] = (answers[:sum].to_f / answers[:count]).round(2)
         end
       end
       return rollup
@@ -71,20 +75,26 @@ module Pd::Foorm
       summarized_answers.each_value do |summaries_by_form|
         included_form = false
         question_details.each do |question, question_data|
+          form_type = question_data[:form_type]
           question_data[:form_keys].each do |form|
-            next unless summaries_by_form[form] && summaries_by_form[form][question]
+            next unless summaries_by_form[form_type] &&
+              summaries_by_form[form_type][form] &&
+              summaries_by_form[form_type][form][question]
+            question_summary = summaries_by_form[form_type][form][question]
             included_form = true
             case question_data[:type]
-            # TODO: add other answer types
             when ANSWER_MATRIX
-              summaries_by_form[form][question].each do |sub_question, answers|
-                add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question][sub_question], answers)
+              intermediate_rollup_at_question = intermediate_rollup[:questions][question]
+              question_summary.each do |sub_question, answers|
+                add_summary_to_intermediate_rollup(intermediate_rollup_at_question[sub_question], answers)
               end
+            when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+              add_summary_to_intermediate_rollup(intermediate_rollup[:questions][question], question_summary)
             end
           end
         end
         if included_form
-          intermediate_rollup[:response_count] += summaries_by_form[:response_count]
+          intermediate_rollup[:response_count] += summaries_by_form[:general][:response_count]
         end
       end
       intermediate_rollup
@@ -104,12 +114,13 @@ module Pd::Foorm
       intermediate_rollup = {questions: {}, response_count: 0}
       question_details.each do |question, question_data|
         case question_data[:type]
-        # TODO: add other answer types
         when ANSWER_MATRIX
           intermediate_rollup[:questions][question] = {}
           question_details[question][:rows].each_key do |row|
             intermediate_rollup[:questions][question][row] = {sum: 0, count: 0}
           end
+        when ANSWER_SINGLE_SELECT, ANSWER_MULTI_SELECT, ANSWER_RATING
+          intermediate_rollup[:questions][question] = {sum: 0, count: 0}
         end
       end
       intermediate_rollup

@@ -13,7 +13,7 @@ class Pd::RegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
     Pd::RegionalPartnerMiniContactMailer.receipt(form, nil)
   end
 
-  def contact_unmatched
+  def mini_contact_unmatched
     form = build_form_data(:pd_regional_partner_mini_contact)
     Pd::RegionalPartnerMiniContactMailer.unmatched(form, 'test+employee@code.org')
   end
@@ -22,11 +22,6 @@ class Pd::RegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
     rp_pm = create :regional_partner_program_manager
     form = build_form_data(:pd_regional_partner_mini_contact, regional_partner: rp_pm.regional_partner)
     Pd::RegionalPartnerMiniContactMailer.matched(form, rp_pm)
-  end
-
-  def mini_contact_unmatched
-    form = build_form_data(:pd_regional_partner_mini_contact)
-    Pd::RegionalPartnerMiniContactMailer.unmatched(form, 'test+employee@code.org')
   end
 
   private

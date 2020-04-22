@@ -121,11 +121,14 @@ export default class StageDescriptions extends React.Component {
     const {importedDescriptions} = this.state;
 
     // we want to make sure that we use the existing names, with the imported descriptions
-    return currentDescriptions.map((item, index) => ({
-      name: item.name,
-      descriptionStudent: importedDescriptions[index].descriptionStudent,
-      descriptionTeacher: importedDescriptions[index].descriptionTeacher
-    }));
+    return currentDescriptions.map((item, index) => {
+      const descriptions = importedDescriptions[index] || {};
+      return {
+        name: item.name,
+        descriptionStudent: descriptions.descriptionStudent,
+        descriptionTeacher: descriptions.descriptionTeacher
+      };
+    });
   };
 
   render() {
@@ -147,7 +150,7 @@ export default class StageDescriptions extends React.Component {
                 const currentStudent = stage.descriptionStudent;
                 const currentTeacher = stage.descriptionTeacher;
 
-                const importedStage = importedDescriptions[index];
+                const importedStage = importedDescriptions[index] || {};
                 const updatedStudent =
                   hasImported && importedStage.descriptionStudent;
                 const updatedTeacher =

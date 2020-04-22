@@ -868,8 +868,9 @@ cs-CZ:
     stupni nebo na střední škole můžete vidět jejich textové odpovědi výběrem daného
     kurzu z nabídky výše.
   dashboard_sections_new_section: Nová sekce
-  dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich
-    studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat
+  dashboard_sections_new_google_section: Importovat sekci z Google Classroom
+  dashboard_sections_jumbotron_instruction: Vytvořte nové sekce a přidejte do nich
+    žáky. Sekce pomáhají zorganizovat žáky do menších skupin a umožní vám sledovat
     jejich postup a spravovat jejich účty.
   dashboard_sections_table_section: Sekce
   dashboard_sections_table_secret: Způsob přihlášení
@@ -893,17 +894,15 @@ cs-CZ:
     obsahujícími informace o individuálních účtech, které si vaši studenti rozdělí.
   dashboard_sections_switch_section: 'Přepnout sekci:'
   dashboard_sections_close: Zavřít
-  dashboard_sections_move_students_desc: Vyberte, kteří studenti budou přesunuti do
-    nové sekce. Přesun studentů nevymaže jejich pokrok.
-  dashboard_sections_one_per_teacher: Studenti mohou být u každého učitele pouze v
-    jedné sekci. Vaši studenti budou přidáni do této nové sekce a tím opustí sekci
-    předchozí.
+  dashboard_sections_move_students_desc: Vyberte, kteří žáci budou přesunuti do nové
+    sekce. Přesun žáků nevymaže jejich pokrok.
+  dashboard_sections_one_per_teacher: Žáci mohou být u každého učitele pouze v jedné
+    sekci. Vaši žáci budou přidáni do této nové sekce a tím opustí předchozí sekci.
   dashboard_sections_move_to_section: 'Přesunout do sekce:'
   dashboard_sections_enter_code: 'Zadejte kód sekce:'
   dashboard_sections_code_placeholder: kód se skládá z 6 znaků (ABCDEF)
   dashboard_sections_other_section: Jiný učitel
-  dashboard_sections_both_sections: Chcete, aby tento student nebo studenti byli v
-    obou sekcích?
+  dashboard_sections_both_sections: Chcete, aby tito žáci byli v obou sekcích?
   dashboard_sections_yes_both: Ano, chci nakopírovat studenta nebo studenty tak, aby
     byli SOUČASNĚ v aktuální i v nové sekci
   dashboard_sections_no_move: Ne, chci studenta nebo studenty přesunout tak, aby byli
@@ -913,9 +912,9 @@ cs-CZ:
   dashboard_sections_assign_activity: Přiřadit kurz
   dashboard_error_none_selected: Nevybrali jste žádné studenty pro přesun. Vyberte
     prosím alespoň jednoho studenta.
-  dashboard_error_other_section: Jestliže přesouváte studenty mezi vašimi vlastními
-    sekcemi, vyberte sekci z nabídky. Volbu "Jiná sekce" označte pouze v případě přesunu
-    studentů do sekce jiného učitele.
+  dashboard_error_other_section: Jestliže žáky přesouváte mezi vašimi vlastními sekcemi,
+    vyberte novou sekci z nabídky. Volbu "Jiná sekce" vyberte pouze v případě přesunu
+    žáků do sekce jiného učitele.
   dashboard_students_add_multiple: 'Zadejte nebo vložte jména vašich studentů, jeden
     na řádek:'
   dashboard_students_new_section: Vytvořili jste novou sekci! Nyní přidejte své studenty
@@ -928,8 +927,8 @@ cs-CZ:
   dashboard_students_total_lines: Řádky kódu
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
-  dashboard_students_share_section_secondary: 'Nebo sdílejte přihlašovací stránku
-    této sekce se svými žáky:'
+  dashboard_students_share_section_secondary: 'Nebo se žáky sdílejte přihlašovací
+    stránku této sekce:'
   dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
   dashboard_students_secret_picture_title: Tajný obrázek
   dashboard_students_secret_picture: Tato část používá  <b>obrázek</b>jako svůj tajný
@@ -1117,7 +1116,7 @@ cs-CZ:
   khanpl_name: Úvod do JavaScriptu
   tynker_name: Vytvořte si vlastní hru
   scratch_name: Buďte kreativní s programováním
-  thinkersmith_name: Mí robotičtí přátelé
+  thinkersmith_name: Moji robotičtí přátelé
   condcards_name: Podmínky s kartami
   codehs_name: Naučte se programovat s psem Karlem
   codemonkey_name: CodeMonkey
@@ -1174,10 +1173,17 @@ cs-CZ:
   coursed-2019_name: Kurz D (2019)
   coursee-2019_name: Kurz E (2019)
   coursef-2019_name: Kurz F (2019)
+  coursea-2020_name: Kurz A (2019)
+  courseb-2020_name: Kurz B (2019)
+  coursec-2020_name: Kurz C (2019)
+  coursed-2020_name: Kurz D (2019)
+  coursee-2020_name: Kurz E (2019)
+  coursef-2020_name: Kurz F (2019)
   express-2018_name: Rychlý kurz (2018)
   pre-express-2018_name: Rychlý kurz pro předškoláky (2018)
   express-2019_name: Rychlý kurz (2019)
   pre-express-2019_name: Rychlý kurz pro předškoláky (2019)
+  express-2020_name: Rychlý kurz (2019)
   accelerated_name: Zrychlený kurz
   pre-express_name: Rychlý kurz pro předškoláky
   20-hour_name: Zrychlený kurz
@@ -1893,7 +1899,7 @@ cs-CZ:
   header_courses: Kurzy
   header_course_catalog: Katalog kurzů
   header_project_gallery: Projekty
-  header_sections: Oddíly
+  header_sections: Sekce
   header_professional_learning: Odborné vzdělání
   header_educate_overview: Pedagogův přehled
   header_educate_elementary: Základní škola
