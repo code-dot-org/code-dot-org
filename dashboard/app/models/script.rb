@@ -110,12 +110,12 @@ class Script < ActiveRecord::Base
       )
 
       lessons.reload
-      lessons.each do |stage|
-        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+      lessons.each do |lesson|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: lesson.id)
         lm.update!(
           plc_course_unit_id: unit.id,
-          name: stage.name,
-          module_type: stage.lesson_group&.key || stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
+          name: lesson.name,
+          module_type: lesson.lesson_group&.key || lesson.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
         )
       end
     end
