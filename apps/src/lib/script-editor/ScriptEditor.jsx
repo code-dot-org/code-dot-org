@@ -241,14 +241,18 @@ export default class ScriptEditor extends React.Component {
               onChange={e => this.setState({hidden: !e.target.checked})}
             />
             <label>
-              Stable
+              Can be recommended (aka stable)
               <input
                 name="is_stable"
                 type="checkbox"
                 defaultChecked={this.props.isStable}
                 style={styles.checkbox}
               />
-              <p>???</p>
+              <p>
+                If checked, this unit will be eligible to be the recommended
+                version of the unit. The most recent eligible version will be
+                the recommended version.
+              </p>
             </label>
             <PilotExperiment
               value={this.state.pilotExperiment}
