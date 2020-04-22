@@ -977,9 +977,10 @@ ga:
             '"y"': ionad y
             '"direction"': treo gluaiseachta
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} i dteagmháil le {SPRITE2}"
         options:
           CONDITION:
-            '"when"': nuair
+            '"when"': nuair atá
             '"while"': chomh fada is atá
       gamelab_clickedOn:
         text: nuair a chliceáiltear {SPRITE}
@@ -989,6 +990,8 @@ ga:
         text: "déan sprid nua \n darb ainm {NAME} \n le culaith {COSTUME} \n {LOCATION}"
       gamelab_destroy:
         text: bain {THIS}
+      gamelab_edgesDisplace:
+        text: cuir cosc ar {SPRITE} bogadh ar an imeall
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1005,12 +1008,15 @@ ga:
             '"this"': é seo
       gamelab_hideTitleScreen:
         text: cuir an scáileán teidil i bhfolach
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} ar imeall an scáileáin"
       gamelab_jumpTo:
         text: cuir {SPRITE} {LOCATION}
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} brúite"
         options:
           CONDITION:
-            '"when"': nuair
+            '"when"': nuair atá
             '"while"': chomh fada is atá
           KEY:
             '"up"': suas
@@ -1055,12 +1061,17 @@ ga:
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
       gamelab_mirrorSprite:
+        text: aghaidh {SPRITE} {DIRECTION}
         options:
           DIRECTION:
             '"right"': ar dheis
             '"left"': ar chlé
       gamelab_mouseLocation:
         text: suíomh na luiche
+      gamelab_moveForward:
+        text: bog {SPRITE} {DISTANCE} picteilín ar aghaidh
+      gamelab_patrollingUpDown:
+        text: patrólú suas anuas
       gamelab_printText:
         text: priontáil {TEXT}
       gamelab_randColor:
@@ -1120,10 +1131,13 @@ ga:
       gamelab_showTitleScreen:
         text: taispeáin scáileán an teidil {BREAK} teideal {TITLE} téacs {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} cliceáilte"
         options:
           CONDITION:
-            '"when"': nuair
+            '"when"': nuair atá
             '"while"': chomh fada is atá
+      gamelab_tumbling:
+        text: rothlam
       gamelab_turn:
         text: cas {SPRITE} {DIRECTION} {N} céim
         options:
@@ -1151,6 +1165,8 @@ ga:
         text: nuair a bhrúitear an tsaighead chlé
       gamelab_whenRightArrow:
         text: nuair a bhrúitear an tsaighead dheas
+      gamelab_whenTouching:
+        text: nuair a theagmhaíonn {SPRITE1} le {SPRITE2}
       gamelab_whenUpArrow:
         text: nuair a bhrúitear an tsaighead suas
       gamelab_whileDownArrow:
@@ -1257,6 +1273,8 @@ ga:
           SELECT:
             '"all"': uile
             '"this"': é seo
+      Mikelab_groupEdgesDisplace:
+        text: cuir cosc ar {COSTUME} bogadh ar an imeall
       Mikelab_groupGetProp:
         options:
           SELECT:
@@ -1301,6 +1319,8 @@ ga:
             '"this"': é seo
       Mikelab_groupWhenClickedOn:
         text: nuair a chliceáiltear {COSTUME}
+      Mikelab_groupWhenXTouchesY:
+        text: nuair a theagmhaíonn {COSTUME} le {COSTUME2}
       Mikelab_hideFish:
         text: bain {TRASH}
         options:
@@ -1388,10 +1408,10 @@ ga:
         text: nuair a bhrúitear {KEY}
         options:
           KEY:
-            '"up"': a bhrúitear an tsaighead suas
-            '"down"': a bhrúitear an tsaighead síos
-            '"left"': a bhrúitear an tsaighead chlé
-            '"right"': a bhrúitear an tsaighead dheas
+            '"up"': an tsaighead suas brúite
+            '"down"': an tsaighead síos brúite
+            '"left"': an tsaighead chlé brúite
+            '"right"': an tsaighead dheas brúite
             '"w"': I
             '"a"': A
             '"s"': D
@@ -1399,10 +1419,10 @@ ga:
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': a bhrúitear an tsaighead suas
-            '"down"': a bhrúitear an tsaighead síos
-            '"left"': a bhrúitear an tsaighead chlé
-            '"right"': a bhrúitear an tsaighead dheas
+            '"up"': an tsaighead suas brúite
+            '"down"': an tsaighead síos brúite
+            '"left"': an tsaighead chlé brúite
+            '"right"': an tsaighead dheas brúite
             '"w"': I
             '"a"': A
             '"s"': D
@@ -1416,10 +1436,10 @@ ga:
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': a bhrúitear an tsaighead suas
-            '"down"': a bhrúitear an tsaighead síos
-            '"left"': a bhrúitear an tsaighead chlé
-            '"right"': a bhrúitear an tsaighead dheas
+            '"up"': an tsaighead suas brúite
+            '"down"': an tsaighead síos brúite
+            '"left"': an tsaighead chlé brúite
+            '"right"': an tsaighead dheas brúite
       Mikelab_xLocationOf:
         text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
@@ -1444,6 +1464,8 @@ ga:
         options:
           PROPERTY:
             "'shapeColor'": dath
+      aalab_addBehaviorUntilBoolean:
+        text: tosaíonn sprid {SPRITE} {BEHAVIOR} go dtí {CONDITION}
       aalab_createNewSpriteAnonReturn2:
         text: sprid nua darb ainm {SPRITE_NAME} le culaith {ANIMATION_NAME} {LOCATION}
       aalab_goToScene:
@@ -1464,6 +1486,10 @@ ga:
         options:
           OPTION:
             '"random"': randamach
+            '"R2-D2 random"': R2-D2 randamach
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
       binary_drawPixelHere:
         options:
           VAL:
@@ -1493,12 +1519,18 @@ ga:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          má tá cosán {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": ar aghaidh
             "'right'": ar dheis
             "'left'": ar chlé
       craft_ifStandingOn:
+        text: |-
+          má tá tú ar {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": coiréal gorm
@@ -1508,6 +1540,9 @@ ga:
             "'planksOak'": plainc dharach
             "'seaLantern'": laindéar farraige
       craft_ifStandingOnLimit:
+        text: |-
+          má tá tú ar {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": gaineamh
@@ -1548,14 +1583,23 @@ ga:
         text: cuir priosmuiríneach
       craft_placeTorch:
         text: cuir tóirse
+      craft_repeatUntilConduit:
+        text: |-
+          go dtí go mbeidh an seoladán déanta
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          athdhéan go dtí an sprioc
+          {STATEMENT}
       craft_spawnEntity:
+        text: cruthaigh {ENTITY} nua
         options:
           ENTITY:
             '"cod"': trosc
             '"dolphin"': deilf
             '"salmon"': bradán
             '"seaTurtle"': turtar mara
-            '"squid"': scuid
+            '"squid"': máthair shúigh
             '"tropicalFish"': iasc trópaiceach
       craft_turn:
         text: cas {DIR}

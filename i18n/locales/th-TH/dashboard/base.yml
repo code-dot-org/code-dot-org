@@ -187,6 +187,7 @@ th:
       %{name}
   parent_mailer:
     student_associated_subject: 'ข้อมูลล็อกอินสำหรับ Code.org'
+    parent_email_added_subject: 'ยินดีต้อนรับสู่ Code.org!'
   teacher_mailer:
     new_teacher_subject: 'ยินดีต้อนรับสู่ Code.org!'
   section:
@@ -318,6 +319,8 @@ th:
     create_personal_login_under_13_username: "ชื่อผู้ใช้ (ห้ามใช้ชื่อจริง!)"
     create_personal_login_under_13_parent_email: 'ที่อยู่อีเมล์ของผู้ปกครอง/ผู้พิทักษ์'
     update_email: "อัพเดท"
+    parent_guardian_email_label: "อีเมล์ของผู้ปกครอง/ผู้พิทักษ์"
+    none: "ไม่มี"
   user_level:
     completed: 'เสร็จแล้ว'
   home:

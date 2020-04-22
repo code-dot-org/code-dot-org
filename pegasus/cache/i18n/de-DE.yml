@@ -29,6 +29,7 @@ de-DE:
   petition_sign_message: 'Tragen Sie sich in der Liste ein, wenn Sie auch dieser Meinung
     sind. Werden Sie einer von # Unterstützern.'
   petition_join_others: 'Tritt # anderen bei'
+  petition_join_others_num: Schließe dich %{num} anderen an
   name: Name
   email: E-Mail
   zipcode: Postleitzahl oder Land
@@ -1043,6 +1044,7 @@ de-DE:
   dashboard_question: Frage
   dashboard_response: Antwort
   dashboard_correctness: Korrektheit
+  dashboard_correctness_free_response: Freie Antwort
   dashboard_correctness_unsubmitted: Nicht eingereicht
   dashboard_correctness_correct: Richtig
   dashboard_correctness_incorrect: Falsch
@@ -1238,10 +1240,17 @@ de-DE:
   coursed-2019_name: Kurs D (2019)
   coursee-2019_name: Kurs E (2019)
   coursef-2019_name: Kurs F (2019)
+  coursea-2020_name: Kurs A (2019)
+  courseb-2020_name: Kurs B (2019)
+  coursec-2020_name: Kurs C (2019)
+  coursed-2020_name: Kurs D (2019)
+  coursee-2020_name: Kurs E (2019)
+  coursef-2020_name: Kurs F (2019)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
+  express-2020_name: Expresskurs (2019)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: Beschleunigter Kurs
@@ -1368,6 +1377,7 @@ de-DE:
   groklearning_platformtext: Moderne Web-Browser
   quorum_platformtext: Moderne Web-Browser. Unterstützt Bildschirmlesegeräte
   codespark_platformtext: iOS, Android (oder Internet-Browser)
+  kodable_platformtext: iPad
   tynkerapp_platformtext: iPad, Android Tablets
   robomindnl_platformtext: Moderne Web-Browser, Mobile Website
   flappy_platformtext: Moderne Browser, Smartphones, Tablets
@@ -1771,6 +1781,9 @@ de-DE:
   scratch_beyond_platformtext: Jeder Browser
   lightbot_beyond_platformtext: iOS, Android (oder Internet-Browser)
   codecademy_beyond_platformtext: Moderne Web-Browser, iOS- und Android-Apps
+  kodable_beyond_platformtext: iPad
+  scratchjr_beyond_platformtext: iPad
+  hopscotch_beyond_platformtext: iPad
   pocketcode_beyond_platformtext: Mobile App
   groklearning_beyond_platformtext: Moderne Web-Browser
   hacketyhack_beyond_platformtext: Desktop-Installation
@@ -1786,11 +1799,13 @@ de-DE:
   coursera_beyond_platformtext: Moderne Internet-Browser
   udacity_beyond_platformtext: Moderne Internet-Browser
   teachingtree_beyond_platformtext: Web-basiert
+  cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Desktop-Installation
   w3schools_beyond_platformtext: Moderne Web-Browser
   codeavengers_beyond_platformtext: Moderne Web-Browser
   mozilla_beyond_platformtext: Moderne Web-Browser
   codecombat_beyond_platformtext: Web-basiert (Firefox, Chrome, Safari, IE9+)
+  codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Roboterkauf
   finch_beyond_platformtext: Roboterkauf
   arduino_beyond_platformtext: Web-Browser, dann Erwerb eines Kits
@@ -2333,3 +2348,4 @@ de-DE:
     die Grundlagen der Programmierung und erkunden Sie die KI mit Ihren Schülern!'
   hoc2019_mc_mee_description2: Greifen Sie auf kostenlose Ressourcen zu, darunter
     einen Unterrichtsplan, Videos, einen Lehrplan für Informatik und Lehrerausbildungen.
+  homepage_slot_text_title_at_home: Zu Hause lernen

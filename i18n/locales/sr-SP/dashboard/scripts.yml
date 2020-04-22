@@ -1486,6 +1486,8 @@ sr:
           stages:
             While Loops:
               name: Понављања са условима
+            Variables:
+              name: Променљиве
         virtual-holding-place:
           stages:
             Velocity:
@@ -1498,3 +1500,7 @@ sr:
               name: Алгоритми
             Events:
               name: Догађаји
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Понављања са условима

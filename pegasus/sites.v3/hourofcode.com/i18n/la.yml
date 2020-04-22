@@ -181,7 +181,12 @@ la:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Conoce más
   cookie_banner_message: Al navegar en nuestro sitio o seleccionar la opción "Acepto",
     aceptas que se guarden las cookies en tu computadora o dispositivo.
   cookie_banner_more_information: Consulta la política de privacidad de Code.org.

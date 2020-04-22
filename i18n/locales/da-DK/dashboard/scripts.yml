@@ -1773,6 +1773,8 @@ da:
           stages:
             While Loops:
               name: Mens løkker
+            Variables:
+              name: Variabler
         virtual-holding-place:
           stages:
             Functions:
@@ -1783,3 +1785,7 @@ da:
               name: Algoritmer
             Events:
               name: Hændelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Mens løkker

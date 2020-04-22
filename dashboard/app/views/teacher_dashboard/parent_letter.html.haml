@@ -1,0 +1,38 @@
+%head
+  %title Parent Letter
+
+  %link{rel:'stylesheet', type:'text/css', href: asset_path('gotham-font.css')}
+  :css
+    body {
+      max-width: 8.5in;
+      font-family: "Gotham 4r", sans-serif;
+      font-size: 13px;
+      line-height: 18px;
+    }
+    h1 {
+      font-family: "Gotham 7r", sans-serif;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 10px 0 0 0;
+      color: #7665a0;
+    }
+
+  -# These files are all prerequisites for running a code studio webpack bundle
+  %script{src: webpack_asset_path('js/webpack-runtime.js')}
+  %script{src: webpack_asset_path('js/essential.js')}
+  %script{src: webpack_asset_path('js/vendors.js')}
+  = javascript_include_tag 'application'
+  %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+  %script{src: webpack_asset_path('js/code-studio-common.js')}
+
+  :ruby
+    script_data = {}
+    script_data[:studioOrigin] = CDO.studio_url('', CDO.default_scheme)
+    script_data[:pegasusOrigin] = CDO.code_org_url('', CDO.default_scheme)
+    script_data[:sections] = @sections
+    script_data[:section] = @section_summary
+    script_data[:userName] = @current_user.short_name
+    script_data[:localeCode] = request.locale
+    script_data[:logoUrl] = asset_path('logo.png')
+  %script{src: webpack_asset_path('js/teacher_dashboard/parent_letter.js'), data: {json: script_data.to_json}}

@@ -1732,6 +1732,8 @@ kk:
           stages:
             While Loops:
               name: Шарт орындалғанша Циклдері
+            Variables:
+              name: Айнымалылар
         virtual-holding-place:
           stages:
             Functions:
@@ -1742,3 +1744,7 @@ kk:
               name: Алгоритмдер
             Events:
               name: Шаралар
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Шарт орындалғанша Циклдері

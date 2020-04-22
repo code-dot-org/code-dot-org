@@ -285,6 +285,7 @@ pt-BR:
       %{name}
   parent_mailer:
     student_associated_subject: Informações de login para Code.org
+    parent_email_added_subject: Bem-vindo ao Code.org!
   teacher_mailer:
     new_teacher_subject: Bem-vindo ao Code.org!
     delete_teacher_subject: 'Notificação Code.org: Sua conta foi deletada'
@@ -542,6 +543,9 @@ pt-BR:
     auth_option_saved: Você vinculou sua conta %{provider} ao email %{email}.
     auth_option_saved_no_email: Você vinculou com êxito sua conta %{provider}.
     update_email: Atualizar
+    parent_guardian_email_label: E-mail dos responsáveis
+    none: Nenhum
+    encrypted: criptografado
   user_level:
     completed: Concluído
     tried: Provado

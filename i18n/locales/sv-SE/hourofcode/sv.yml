@@ -31,18 +31,13 @@ sv:
     att identifiera fiskar. #CSforGood'
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: Endast engelska | Ålder 11+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
+  oceans_landing_explanation: "</a>"
+  oceans_landing_explanation_markdown: 'Datavetenskap handlar om så mycket mer än
+    bara programmering! Lär dig om artificiell intelligens (AI), maskinlärning, dataset,
+    och partiskhet, samtidigt som du utforskar etiska utmaningar och hur AI kan användas
+    för att adressera globala problem. Ta del av Code.org''s första steg i en ny resa
+    att lära ut mer om AI. När du använder övningen AI för världshaven så tränar du
+    riktiga maskininlärnings-modeller. [Lär dig mer](#behind-the-scenes). '
   oceans_landing_teacher_resources: Resurser för lärare
   oceans_landing_teacher_resources_desc: Lektionsplaneringar och aktiviteter som hjälper
     dig att lära ut AI, maskininlärning, träningsdata och bias, samtidigt som du utforskar
@@ -51,21 +46,18 @@ sv:
   oceans_landing_cs_for_good: CS For Good
   oceans_landing_cs_for_good_desc: Resurser som hjälper elever att förstå rollen som
     datavetenskap kan ha i att skapa en mer jämlik värld.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_landing_videos: Lär dig mer om AI och maskininlärning.
+  oceans_behind_the_scenes: 'AI för världshaven: Bakom kulisserna'
+  oceans_behind_the_scenes_1: Nivåerna 2-4 använder en redan tränad modell från <a
+    href="https://www.tensorflow.org/" >TensorFlow</a><a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet</a>projektet.
+    En MobileNet-modell är ett<a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">faltningsbaserat
+    neuralt nätverk</a>som har tränats på ett <a href="http://www.image-net.org/">
+    ImageNet</a>, ett dataset på över 14 miljoner bilder som har taggats av en människa
+    med ord som "ballong" eller "jordgubbe". För att anpassa den här modellen med
+    den taggade datan som eleverna genererar i den här övningen så använder vi en
+    teknik som kallas <a href="https://en.wikipedia.org/wiki/Transfer_learning">TransferLearning</a>.
+    Varje bild i datasetet matas till MobileNet, som pixlar, för att få upp ett antal
+    taggar som har högst sannolikhet till att stämma med bilden.
   oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
     by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -174,7 +166,12 @@ sv:
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
   codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Läs mer
   cookie_banner_message: Genom att fortsätta på vår webbplats eller klicka "Jag godkänner"
     så godkänner du att vi lagrar cookies på din dator eller enhet.
   cookie_banner_more_information: Läs Code.org:s sekretesspolicy.

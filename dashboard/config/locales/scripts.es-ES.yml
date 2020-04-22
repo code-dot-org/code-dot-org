@@ -3,18 +3,21 @@ es:
   data:
     script:
       category:
+        csd_category_name: Descubrimientos CS ('17-'18)
         csd_2018_category_name: Descubrimientos de Informática ('18-'19)
-        csf_category_name: Fundamentos de CS
+        csd_2019_category_name: Descubrimientos CS ('19-'20)
         csf_2018_category_name: Fundamentos de Informática (2018)
         csf_international_category_name: Fundamentos de Informática Internacional
         csf2_draft_category_name: 'En desarrollo: Cursos A - F'
         csp_category_name: "'15-'16 Principios de CS"
         csp_2018_category_name: Principios de Informática ('18-'19)
+        csp_2019_category_name: Principios CS ('19-'20)
         cspexams_category_name: Prueba de práctica de principios de CS
         csp17_category_name: "'16-'17 Principios de CS"
         full_course_category_name: Cursos Completos
         hoc_category_name: Hora del Código
         math_category_name: Matemáticas
+        research_studies_category_name: Estudios de investigación
       name:
         course1:
           title: Curso 1
@@ -431,6 +434,8 @@ es:
               name: Guia de la pixelacion en color blanco y negro
             Color Pixelation Examples:
               name: Ejemplos de la pixelación con color
+            Color Pixelation Freeplay:
+              name: Pixelación con color gratuito
             Color Pixelation Tutorial:
               name: Tutorial de pixelación de color
         20-hour:
@@ -781,6 +786,8 @@ es:
               name: Aplicaciones multi-pantalla
             Practice PT - Design a Digital Scene:
               name: Práctica PT - Diseña una Escena Digital
+            'Practice PT: Create':
+              name: Practica PT:Crear
             Processing Arrays:
               name: Procesando Arrays
             The Need For Programming Languages:
@@ -943,16 +950,24 @@ es:
           description: Enseñar programación funcional a través de álgebra
           description_short: Enseñar programación funcional a través de álgebra
           stages:
+            Creating Breeds in Starlogo Nova:
+              name: Creando razas en Starlogo Nova
             Epidemic Model Extensions:
               name: Extensiones de modelos epidémicos
+            Review StarLogo Nova:
+              name: Revisar StarLogo Nova
             Revisiting Agent Movement:
               name: Revisión del movimiento del agente
+            Thinking Ahead to Implementation:
+              name: Pensar más allá de la implementación
             Welcome!:
               name: "¡Bienvenido!"
             Wrap-Up:
               name: Cierre
         sciencePD3:
           stages:
+            Decode and Share:
+              name: Decodifica y comparte
             Mystery Model:
               name: Modelo misterioso
             Welcome Back!:
@@ -1194,6 +1209,10 @@ es:
           description: Enseñar programación funcional a través de álgebra
           description_short: Enseñar programación funcional a través de álgebra
           stages:
+            Review StarLogo Nova:
+              name: Revisar StarLogo Nova
+            Thinking Ahead to Implementation:
+              name: Pensar más allá de la implementación
             Welcome!:
               name: "¡Bienvenido!"
             Wrap-Up:
@@ -1202,6 +1221,10 @@ es:
           description: Enseñar programación funcional a través de álgebra
           description_short: Enseñar programación funcional a través de álgebra
           stages:
+            Review StarLogo Nova:
+              name: Revisar StarLogo Nova
+            Thinking Ahead to Implementation:
+              name: Pensar más allá de la implementación
             Welcome!:
               name: "¡Bienvenido!"
             Wrap-Up:
@@ -1218,6 +1241,10 @@ es:
           description: Enseñar programación funcional a través de álgebra
           description_short: Enseñar programación funcional a través de álgebra
           stages:
+            Review StarLogo Nova:
+              name: Revisar StarLogo Nova
+            Thinking Ahead to Implementation:
+              name: Pensar más allá de la implementación
             Welcome!:
               name: "¡Bienvenido!"
             Wrap-Up:
@@ -1472,6 +1499,8 @@ es:
               name: Introducción a los Arrays
             Loops and Simulations:
               name: Bucles y Simulaciones
+            'Practice PT: Create':
+              name: Practica PT:Crear
             Processing Arrays:
               name: Procesando Arrays
             While Loops:
@@ -1758,6 +1787,8 @@ es:
               name: Bucles y Simulaciones
             Multi-screen Apps:
               name: Aplicaciones multi-pantalla
+            'Practice PT: Create':
+              name: Practica PT:Crear
             Processing Arrays:
               name: Procesando Arrays
             Understanding Program Flow and Logic:
@@ -2560,12 +2591,20 @@ es:
           stages:
             Welcome!:
               name: "¡Bienvenido!"
+            Review StarLogo Nova:
+              name: Revisar StarLogo Nova
+            Thinking Ahead to Implementation:
+              name: Pensar más allá de la implementación
             Wrap-Up:
               name: Cierre
         2016_sciencePD_phase2b:
           stages:
             Welcome!:
               name: "¡Bienvenido!"
+            Review StarLogo Nova:
+              name: Revisar StarLogo Nova
+            Thinking Ahead to Implementation:
+              name: Pensar más allá de la implementación
             Wrap-Up:
               name: Cierre
         sciencepd3-2016:
@@ -3802,6 +3841,8 @@ es:
               name: Procesando Arrays
             Functions with Return Values:
               name: Funciones con Valores de Retorno
+            'Practice PT: Create':
+              name: Practica PT:Crear
             Participate in a longitudinal study!:
               name: "¡Participe en un estudio longitudinal!"
         csppostap-2018:
@@ -5581,6 +5622,8 @@ es:
               name: Procesando Arrays
             Functions with Return Values:
               name: Funciones con Valores de Retorno
+            Variables:
+              name: variables
         virtual-holding-place:
           stages:
             Velocity:
@@ -5599,3 +5642,19 @@ es:
               name: Algoritmos
             Events:
               name: Eventos
+        no-lg:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Bucles Mientras
+            Loops and Simulations:
+              name: Bucles y Simulaciones
+            Introduction to Arrays:
+              name: Introducción a los Arrays
+            Processing Arrays:
+              name: Procesando Arrays
+            Functions with Return Values:
+              name: Funciones con Valores de Retorno

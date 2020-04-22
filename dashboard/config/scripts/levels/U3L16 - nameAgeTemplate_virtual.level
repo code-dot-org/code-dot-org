@@ -97,9 +97,27 @@
     "execute_palette_apis_only": "false",
     "parent_level_id": 17193,
     "name_suffix": "_virtual",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "start_blocks": "onEvent(\"submitBtn\", \"click\", function( ) {\r\n  \r\n});\r\n",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-15 17:45:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

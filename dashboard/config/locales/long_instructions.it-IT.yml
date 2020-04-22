@@ -908,6 +908,47 @@ it-IT:
         le intestazioni siano in ordine dal più grande al più piccolo, ed il testo
         dica la dimensione corretta come nell'immagine sotto.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Test_2019: "# Intestazioni e Paragrafi\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Cos'è un elemento Paragrafo?**]\n\nI
+        paragrafi sono racchiusi tra l'etichetta di inizio (opening tag) '<p>' e l'etichetta
+        di fine (closing tag) '</p>'. I paragrafi HTML possono avere una lunghezza
+        qualsiasi: da una sola parola fino a più frasi. Tutto il testo che compare
+        in una pagina Web deve essere contenuto in un elemento HTML (paragrafo o intestazione).
+        I paragrafi permettono di raggruppare le frasi contenute e inserire uno spazio
+        tra un gruppo e il successivo.\n\n:::\n\n::: details [**Come creare più paragrafi?**]\n\nI
+        singoli paragrafi sono sempre racchiusi tra l'etichetta di inizio (opening
+        tag) '<p>' e l'etichetta di fine (closing tag) '</p>'. Per creare più paragrafi
+        è sufficiente usare più volte le etichette di inizio e fine. Ad esempio:\n\n
+        \       <p>\n            Questo è un paragrafo.\n        </p>\n        <p>\n
+        \           Questo è un'altro paragrafo.\n        </p>\n\n:::\n\n::: details
+        [**Cosa sono le Intestazioni?**]\nLe intestazioni sono titoli di diversa dimensioni
+        all'interno della pagina Web. Le intestazioni creano una struttura nella pagina
+        Web e la suddividono in parti facilitandone la lettura.\n:::\n\n::: details
+        [**Come fare intestazioni di diversa dimensione?**]\nLe intestazioni hanno
+        6 possibili dimensioni. Finora avete usato la dimensione maggiore \\<h1>.
+        Il numero '1' nell'etichetta HTML indica l'intestazione più grande. L'intestazione
+        più piccola ha l'etichetta \\<h6>. Provate anche le dimensioni \\<h2>, \\<h3>,
+        \\<h4> e \\<h5> con dimensione via via decrescente. \n:::\n\n::: details [**Cos'è
+        HTML?**]\nHTML è la contrazione di Hypertext Markup Language (linguaggio a
+        marcatori per ipertesti). HTML è usato per dare una struttura al contenuto
+        delle pagine Web. HTML utilizza 'etichette' (tag) per definire dove iniziano
+        e finiscono le diverse strutture della pagina. Le etichette sono gruppi di
+        simboli e lettere che non costituiscono parole di senso compiuto nel normale
+        linguaggio così che si possono distinguere dal testo della pagina.\n:::\n\n:::
+        details [**Cos'è un elemento HTML?**]\nUn 'elemento' HTML è una porzione della
+        pagina Web che è contrassegnato da un'etichetta di inizio (opening tag) e
+        solitamente da un'etichetta di fine (closing tag). L'elemento HTML comprende,
+        oltre alle etichette, il testo racchiuso tra esse. Ad esempio: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n::: details [**Cos'è un'etichetta (tag) HTML?**]\n\nUn'etichetta
+        (tag) HTML è una speciale sequenza di caratteri (lettere, numeri, simboli)
+        che permette al computer di capire dove inizia e dove finisce un elemento
+        HTML e di che tipo di elemento si tratta.\n\n:::\n\n</div>\n\nL'autore di
+        questa pagina ha inserito molte frasi ma senza dare una struttura al testo.
+        Infatti, il testo viene rappresentato tutto unito. \n\nProcedi come segue:\n\n-
+        \  Osserva il testo con il tuo compagno/a e decidete quale dovrebbe essere
+        la migliore struttura della pagina.\n-   Usate le etichette di intestazione
+        e paragrafo per dire al computer come suddividere il testo nella pagina."
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -2218,52 +2259,70 @@ it-IT:
 
         > ## Rifletti
         >
-        > Quali sono le tue prime impressioni sui "Fondamenti di informatica"?
+        > Quali sono le tue prime impressioni sul corso "Fondamenti di informatica"?
         >
-        > Se sai l'inglese, [Twitta i tuoi pensieri][0] taggando @teachcode.
+        > Condividi i tuoi pensieri taggando Programma il Futuro sui social network:
         >
-        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
-        > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook][1] o [Instagram][2].
-      OPD-K5 Closing: |-
-        > **Se ti è piaciuto il corso, iscriviti ad un seminario:**
-        >
-        > [Iscriviti ora][0] per continuare a studiare l'informatica e la sua pedagogia. I seminari gratuiti sono un eccellente occasione  per collaborare ed impegnarsi con altri insegnanti appassionati della tua zona.
-      OPD-K5 EventsVid: |-
-        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché proverai alcuni esercizi in qui devi programmare gli eventi.
+        > -   su <a href="https://www.facebook.com/pg/programmailfuturo" target="blank">Facebook</a>: @programmailfuturo
+        > -   su \<a <https://twitter.com/ProgrammaFuturo>" target="blank">Twitter</a>: @ProgrammaFuturo
 
-        > Un evento è una istruzione che dice al computer di "ascoltare" se succede un determinata cosa, e di conseguenza eseguire un'azione. Per esempio, in alcune  pagine web,  passando il mouse sopra un menù a tendina, esso si apre. Il "mouse sopra " è un evento che attiva un'azione.
+        Oppure, se sai l'inglese...
+
+        > ## Reflect
+        >
+        > What are your first impressions of CS Fundamentals?
+        >
+        > [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
+        > Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2].
+      OPD-K5 Closing: |-
+        > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
+        >
+        > [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
+      OPD-K5 EventsVid: |-
+        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in qui occorre  programmare con gli eventi.
+
+        > Un "gestore di evento" è un insieme di istruzioni che dicono al computer di "ascoltare" se succede un determinata cosa, e "quando accade" eseguire un certo insieme di azioni. Per esempio, in alcune  pagine web, passando il mouse sopra ad un menù a tendina, questo si apre. In questo caso l'evento è "il passaggio del cursore del mouse in una certa zona dello schermo" e l'"azione" scatenata dall'evento è l'apertura del menù a tendina.
       OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
         che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
         ti verrà chiesto di scrivere un programma simile!
-      OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni dei piani di
-        sviluppo delle attività tradizionali. Tieni presente sono disponibili tutte
-        le pianificazioni per ogni lezione del corso \"Fondamenti di informatica\"
-        -- sia tradizionali che al computer. Puoi trovare la lista completa delle
-        strutture delle lezioni qui sotto:\n<br/>\n<br/> \n[Pianificazione delle lezioni
-        del corso A][0]<br/> \n[Pianificazione delle lezioni del corso B][1]<br/>\n[Pianificazione
-        delle lezioni del corso C][2]<br/> \n[Pianificazione delle lezioni del corso
-        D][3]<br/> \n[Pianificazione delle lezioni del corso E][4]<br/> \n[Pianificazione
-        delle lezioni del corso F][5]<br/> \n\nSentiti libero di adattare queste lezioni
-        o creare la tua specifica pianificazione della lezione che asseconda le tue
-        preferenze! Il video qui sotto spiega la struttura delle lezioni del corso
-        \"Fondamenti di informatica\" ed aggiunge anche suggerimenti se dovessi decidere
-        di creare una tua lezione."
+      OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni piani di lavoro
+        delle lezioni tradizionali. Tieni presente che sono disponibili i piani di
+        lavoro di ogni lezione del corso \"Fondamenti di informatica\" -- sia delle
+        lezioni tradizionali che di quelle tecnologiche. Ecco la lista completa (al
+        momento questi documenti sono disponibili solo in inglese):\n<br/>\n<br/>
+        \n[Piano di lavoro delle lezioni del corso A][0]<br/> \n[Piano di lavoro delle
+        lezioni del corso B][1]<br/>\n[Piano di lavoro delle lezioni del corso C][2]<br/>
+        \n[Piano di lavoro delle lezioni del corso D][3]<br/> \n[Piano di lavoro delle
+        lezioni del corso E][4]<br/> \n[Piano di lavoro delle lezioni del corso F][5]<br/>
+        \n\nSentiti comunque libero di adattare queste lezioni o di creare un tuo
+        personale piano di lavoro delle lezioni che assecondi le tue specifiche esigenze!
+        Il video qui sotto introduce il piano di lavoro delle lezioni del corso \"Fondamenti
+        di informatica\" ed aggiunge anche alcuni suggerimenti per creare eventualmente
+        una tua lezione."
       OPD-K5 Problem Solving: |-
         # Linee guida > Insegnare a risolvere i problemi
 
-        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Il metodo metacognitivo di risoluzione dei problemi implica di pensare sul ragionamento effettuato e di riflettere su come "tu" risolveresti il problema. Guarda il video sottostante per imparare come la "Ricetta per risolvere gli esercizi" di Code.org  può aiutare gli alunni ad affrontare con successo problemi difficili:
+        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Le strategie di "problem solving metacognitivo" portano a pensare al processo di ragionamento in quanto tale e a riflettere su "come" risolveresti il problema. Guarda il video a fondo pagina per scoprire come la "Ricetta di Code.org per risolvere gli esercizi" può aiutare gli alunni ad affrontare con successo problemi difficili:
 
-        [Questa scheda][0] illustra i vari passi della "ricetta per risolvere gli esercizi".
+        [Questa scheda](https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.pdf) illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi".
 
-        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
+        <img src="https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.png" width="650px" style="margin-right:45px; border-radius:10px;">
 
         > ## Riflettiamo:
         >
-        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza?
+        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza? <a href="https://programmailfuturo.it/forum/corso-online-per-l-insegnamento">Condividi i tuoi pensieri nel forum di Programma il Futuro</a>.
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect:
         >
-        > [Twitta i tuoi pensieri][1] taggando @teachcode.
+        > How might you explicitly teach problem solving in your CS classroom?
         >
-        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Condividi su Twitter</h4></a>
+        > [Tweet your thoughts][1] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Share on Twitter</h4></a>
       OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
         di ripetizione (cicli) ed introduce il blocco "ripeti ... volte" nei corsi
         di "Fondamenti di informatica".
@@ -2779,6 +2838,9 @@ it-IT:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: 'Raccogli tutti e tre i diamanti! Muovi Laura
         su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2019: 'Raccogli tutti e tre i diamanti! Muovi Laura
+        su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"
+        block-text="get treasure"/></xml>. '
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -3035,16 +3097,10 @@ it-IT:
         freccia a destra.
       courseA_playLab_events4_2018: Ora fai muovere il cane a destra quando si preme
         la freccia a destra.
-      courseA_playLab_events4_2019: Ora fai muovere il cane a destra quando si preme
-        la freccia a destra.
       courseA_playLab_events5: Aggiungi gli eventi per far muovere il cane su e giù
         quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018: Aggiungi gli eventi per far muovere il cane su
         e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su
-        e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events6_2019: Rendi questa scena più interessante, cambiando
-        lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events7_2018: _Tempo di giocare:_ aggiungi ciò che vuoi a questo
         gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte
         contro di lui? (Quando sei soddisfatto, premi "Termina" per completare il

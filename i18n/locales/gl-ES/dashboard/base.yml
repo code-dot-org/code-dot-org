@@ -218,6 +218,7 @@ gl:
       %{name}
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
+    parent_email_added_subject: '¡Benvida a Code.org!'
   teacher_mailer:
     new_teacher_subject: '¡Benvida a Code.org!'
   section:
@@ -388,6 +389,7 @@ gl:
     create_personal_login_terms: "Ao crear unha conta individual, acepto os <a href='%{terms_of_service_url}', target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos, declaro que teño autorización de meus pais ou responsables legais para usar os servizos de Code.org incluso sen a supervisión dun profesor."
     create_personal_login_terms_markdown: "Ao crear unha conta individual, acepto os [termos de serviço](%{terms_of_service_url}) do Code.org. Se son menor de 13 anos, declaro que teño autorización de meus pais ou responsables legais para usar os servizos de Code.org incluso sen a supervisión dun profesor."
     update_email: "Actualizar"
+    parent_guardian_email_label: "Enderezo de correo electrónico da persoa responsable"
   user_level:
     completed: 'Concluído'
     tried: 'Probado'

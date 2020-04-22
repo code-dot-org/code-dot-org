@@ -3,7 +3,6 @@ ka:
   data:
     script:
       category:
-        csf_category_name: CS საფუძვლები
         csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
         csf2_draft_category_name: 'დამუშავების პროცესში: კურსები A - F'
         csp_category_name: "'15-'16 CS საფუძვლები"
@@ -6861,6 +6860,10 @@ ka:
               name: მასივების დამუშავება
             Unit 5 Assessment 4:
               name: სექცია 5 დავალება 4
+            Intro to App Lab:
+              name: შესავალი აპლიკაციების ლაბორატორიაში
+            Variables:
+              name: ცვლადები
         virtual-holding-place:
           stages:
             Velocity:
@@ -6887,3 +6890,25 @@ ka:
               name: ალგორითმები
             Events:
               name: მოვლენები
+        no-lg:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: სექცია 5 დავალება 2
+            While Loops:
+              name: '"სანამ" ციკლები'
+            Loops and Simulations:
+              name: ციკლები და სიმულაციები
+            Introduction to Arrays:
+              name: შესავალი მასივებში
+            'Building an App: Image Scroller':
+              name: 'აპლიკაციის შექმნა: სურათების ცოცია ("სქროლერი")'
+            Unit 5 Assessment 3:
+              name: სექცია 5 დავალება 3
+            Processing Arrays:
+              name: მასივების დამუშავება
+            Unit 5 Assessment 4:
+              name: სექცია 5 დავალება 4

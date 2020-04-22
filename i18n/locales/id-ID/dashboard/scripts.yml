@@ -6,7 +6,6 @@ id:
       category:
         csd_2018_category_name: Penemuan CS('18-19')
         csd_2019_category_name: Penemuan CS('19-'20)
-        csf_category_name: Dasar dasar CS
         csf_2018_category_name: Dasar dasar CS (2018)
         csf_international_category_name: Dasar dasar internasional CS
         csf2_draft_category_name: 'Dalam pengembangan: Kursus A-F'
@@ -5195,7 +5194,7 @@ id:
               name: Tajuk
             Digital Footprint:
               name: Jejak Digital
-              description_student: Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online.
+              description_student: "Pelajaran kali ini mengulang  kembali ke pembuatan situs pribadi untuk membahas tentang informasi pribadi yang orang pilih untuk dibagikan secara digital. kelas dimulai dengan membahas jenis informasi apa yang bagus intuk dibagikan kepada orang lain. kemudian melihat beberapa contoh halaman media sosial untuk melihat jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk diikuti saat memasukkan informasi secara online."
             Intellectual Property:
               name: Hak milik intelektual
             'Websites for Expression ':
@@ -5211,11 +5210,11 @@ id:
             What is a Computer?:
               name: Apa itu komputer?
             Input and Output:
-              description_student: Dalam hal ini siswa kelas mempertimbangkan sejumlah perangkat komputasi untuk menentukan apa jenis masukan dan keluaran yang mereka gunakan. Kelompok-kelompok yang ditugaskan untuk sebuah perangkat komputasi dan didasarkan pada guru-disediakan definisi masukan dan keluaran, daftar masukan dan keluaran dari perangkat mereka. Untuk menyimpulkan pelajaran kelas meneliti umum kegiatan-kegiatan yang mereka lakukan pada perangkat komputasi dan pilih masukan dan keluaran yang digunakan untuk kegiatan itu dari grafik.
+              description_student: "Dalam hal ini siswa kelas mempertimbangkan sejumlah perangkat komputasi untuk menentukan apa jenis masukan dan keluaran yang mereka gunakan. Kelompok-kelompok yang ditugaskan untuk sebuah perangkat komputasi dan didasarkan pada guru-disediakan definisi masukan dan keluaran, daftar masukan dan keluaran dari perangkat mereka. Untuk menyimpulkan pelajaran kelas meneliti umum kegiatan-kegiatan yang mereka lakukan pada perangkat komputasi dan pilih masukan dan keluaran yang digunakan untuk kegiatan itu dari grafik."
             Processing:
               name: Sedang memproses
             Apps and Storage:
-              description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+              description_student: "Pelajaran ini mencakup masukan dan keluaran aspek komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps. Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta guru memimpin diskusi tentang dampak aplikasi di masyarakat. "
             0:
         csd4-2020:
           stages:
@@ -5265,11 +5264,12 @@ id:
               name: Pemrograman untuk Hiburan
             Drawing in Game Lab:
               name: Menggambar dalam lab permaianan
-              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya.
+              description_teacher: "Siswa diperkenalkan dengan permainan lab, lingkungan pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging, serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan mampu untuk gambar program seperti yang mereka buat dengan alat gambar pada pelajaran sebelumnya."
             Variables:
               name: variabel
-              description_student: Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali.
-              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
+              description_student: "Pelajaran ini memperkenalkan variabel sebagai cara untuk label nomor pada sebuah program atau menyimpan nilai secara acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan variabel untuk menyimpan nomor acak, yang memungkinkan program untuk menggunakan nomor acak beberapa kali."
+              description_teacher: |-
+                Dalam pelajaran ini siswa belajar bagaimana menggunakan variabel untuk label nomor dalam program mereka atau menyimpan nilai secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan yang memperkuat model variabel sebagai cara untuk label atau nama nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan nomor acak beberapa kali dalam program-program mereka.
             Booleans Unplugged:
               name: Booleans dicabut
               description_student: Pelajaran ini memperkenalkan nilai-nilai boolean dan logika, serta pernyataan bersyarat. Kelas dimulai dengan bermain game sederhana dari Berdiri, Duduk di mana boolean (benar/palsu) pernyataan yang menggambarkan sifat-sifat pribadi (rambut atau warna mata, jenis pakaian, usia, dll). Kelas, kemudian kelompok benda berdasarkan semakin kompleks pernyataan boolean, kemudian melihat bagaimana dapat bersyarat mempengaruhi aliran program.
@@ -5277,29 +5277,29 @@ id:
               name: Kondisi
             Project - Interactive Card:
               name: Proyek - kartu interaktif
-              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan semua teknik pemrograman yang telah mereka pelajari saat ini.
+              description_student: "Dalam hal ini kumulatif proyek untuk bab 1, rencana kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan semua teknik pemrograman yang telah mereka pelajari saat ini."
             Velocity:
               name: Percepatan
-              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan scroller.
-              description_teacher: Setelah melihat singkat tentang bagaimana mereka melawan menggunakan pola untuk memindahkan sprite dalam pelajaran sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat baru dengan cara yang berbeda, mereka membangun keterampilan yang mereka butuhkan untuk membuat dasar sisi permainan scroller.
+              description_student: "Setelah pengarahan singkat tentang bagaimana menggunakan pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan scroller."
+              description_teacher: "Setelah melihat singkat tentang bagaimana mereka melawan menggunakan pola untuk memindahkan sprite dalam pelajaran sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat baru dengan cara yang berbeda, mereka membangun keterampilan yang mereka butuhkan untuk membuat dasar sisi permainan scroller."
             Collision Detection:
               name: Deteksi tumbukan
-              description_student: Kelas belajar tentang deteksi tabrakan di komputer. Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk meningkatkan sisi scroller permainan yang mereka mulai di pelajaran yang lalu.
+              description_student: "Kelas belajar tentang deteksi tabrakan di komputer. Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk meningkatkan sisi scroller permainan yang mereka mulai di pelajaran yang lalu."
             Complex Sprite Movement:
-              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat sprite dengan melawan pola untuk membuat gerakan sprite yang lebih kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol satu sprite dan membangun sebuah permainan sederhana di mana karakter terbang di sekitar dan mengumpulkan koin. '
+              description_student: "Kelas belajar untuk menggabungkan kecepatan sifat sprite dengan melawan pola untuk membuat gerakan sprite yang lebih kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol satu sprite dan membangun sebuah permainan sederhana di mana karakter terbang di sekitar dan mengumpulkan koin. "
             Collisions:
               name: Tumbukan
             Functions:
               name: fungsi
             The Game Design Process:
               name: Proses perancangan permainan
-              description_student: Pelajaran ini memperkenalkan proses kelas yang akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan untuk membuat perbaikan permainan sendiri.
-              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan untuk membuat perbaikan untuk permainan buatan mereka sendiri.
+              description_student: "Pelajaran ini memperkenalkan proses kelas yang akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan untuk membuat perbaikan permainan sendiri."
+              description_teacher: "Pelajaran ini memperkenalkan siswa untuk proses yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan untuk membuat perbaikan untuk permainan buatan mereka sendiri."
             Using the Game Design Process:
               name: Proses menggunakan desain permainan
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
-              description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+              description_student: "Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai."
             Text:
               name: Teks
         coursea-2020:
@@ -5518,6 +5518,8 @@ id:
               name: 'Membangun aplikasi: Kanvas pelukis'
             Unit 5 Assessment 4:
               name: Unit 5 penilaian 4
+            Variables:
+              name: variabel
         virtual-holding-place:
           stages:
             Velocity:
@@ -5540,3 +5542,25 @@ id:
               name: Algoritma
             Events:
               name: kegiatan
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Unit 5 penilaian 2
+            While Loops:
+              name: Perulangan Selagi
+            Loops and Simulations:
+              name: Loop dan Simulasi
+            Introduction to Arrays:
+              name: Pengenalan untuk array
+            'Building an App: Image Scroller':
+              name: 'Membangun aplikasi: Gambar Scroller'
+            Unit 5 Assessment 3:
+              name: Unit 5 penilaian 3
+            Processing Arrays:
+              name: Pengolahan Array
+            Functions with Return Values:
+              name: Fungsi dengan nilai kembali
+            'Building an App: Canvas Painter':
+              name: 'Membangun aplikasi: Kanvas pelukis'
+            Unit 5 Assessment 4:
+              name: Unit 5 penilaian 4

@@ -6,7 +6,6 @@ sk:
         csd_category_name: Objavujeme informatiku ('17-'18)
         csd_2018_category_name: Objavujeme informatiku ('18-'19)
         csd_2019_category_name: Objavujeme informatiku ('19-'20)
-        csf_category_name: Základy Informatiky
         csf_2018_category_name: Základy Informatiky (2018)
         csf_international_category_name: Základy Informatiky (medzinárodná verzia)
         csf2_draft_category_name: 'Vo vývoji: Kurzy A - F'
@@ -338,7 +337,7 @@ sk:
           description_short: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
           stages:
             Infinity:
-              name: Infinity
+              name: nekonečne
         algebrademo:
           stages:
             Defining Simple Functions:
@@ -744,7 +743,7 @@ sk:
             Decode and Share:
               name: Dekóduj a zdieľaj
             Welcome Back!:
-              name: Vitajte späť!
+              name: Vitaj späť!
         cspunit2:
           stages:
             The Internet:
@@ -908,7 +907,7 @@ sk:
             Getting Started:
               name: Začíname
             Welcome to the Course!:
-              name: Vitajte v kurze!
+              name: Vitaj v kurze!
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -932,7 +931,7 @@ sk:
         sciencePD3_pre1:
           stages:
             Welcome Back!:
-              name: Vitajte späť!
+              name: Vitaj späť!
         ECSPD3-Unit2:
           stages:
             Close & Next Steps:
@@ -1420,6 +1419,8 @@ sk:
               name: Funkcie
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
         grade2:
@@ -1791,7 +1792,7 @@ sk:
         sciencepd3-2016:
           stages:
             Welcome Back!:
-              name: Vitajte späť!
+              name: Vitaj späť!
         csp3-support:
           stages:
             Unit 3 Overview:
@@ -1855,6 +1856,8 @@ sk:
           stages:
             Introduction:
               name: Úvod
+            Sprites:
+              name: Postavy
         applab-1hour:
           stages:
             Digital Design:
@@ -1889,6 +1892,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -1915,6 +1920,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -3057,6 +3064,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -3067,6 +3076,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -3355,6 +3366,8 @@ sk:
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
             "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
             aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky a vytvor vlastný obraz, príbeh,
+            alebo hru.
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3468,8 +3481,8 @@ sk:
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
             a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ
             a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte
-            používať funkcie.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať
+            funkcie.
           description_audience: Vek 8-12
           stages:
             'Programming: My Robotic Friends':
@@ -4027,6 +4040,9 @@ sk:
                 v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly
                 "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením
                 na vytvorenie vlastnej kresby.
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Pet Giraffe with Sprite Lab:
@@ -4127,6 +4143,8 @@ sk:
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
             "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
             aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4176,6 +4194,10 @@ sk:
               name: Digitálne občianstvo
               description_student: Niektoré informácie nie je vhodné zdieľať online.
                 Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
+              description_teacher: |-
+                Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education pomôže študentom kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Žiaci sa naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.
+
+                V rámci hodiny tiež prediskutujeme, ako sa správať zodpovedne a rešpektujúco v rámci offline aj online komunít - dôležitá vlastnosť dobrého digitálneho občana.
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             'Unplugged: Binary':
@@ -4197,8 +4219,8 @@ sk:
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
             a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ
             a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte
-            používať funkcie.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať
+            funkcie.
           description_audience: Vek 8-12
           stages:
             'Programming: My Robotic Friends':
@@ -4276,6 +4298,9 @@ sk:
                 bez toho, aby sme im povedali, ktorý koncept majú použiť. Študenti
                 si precvičia základné algoritmy, hľadanie a odstraňovanie chýb, opakovacie
                 cykly, podmienky, cykly "pokiaľ" a funkcie.
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Pet Giraffe with Sprite Lab:
@@ -4348,10 +4373,19 @@ sk:
               name: Vnorené cykly s Frozen
             End of Course Project:
               name: Záverečný projekt
+            About Me:
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v
+                SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
+                a osobných údajov na internete
+              description_teacher: "Prostredníctvom tvorby interaktívneho plagátu
+                v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
+                a osobných údajov na internete.\r"
             Digital Sharing:
               name: Digitálne zdieľanie
             Simon Says:
               name: Simon vraví
+            Swimming Fish with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
             Songwriting:
               name: Písanie pesničiek
         express-2019:
@@ -4760,6 +4794,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -4914,6 +4950,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -5254,6 +5292,8 @@ sk:
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
             "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
             aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5311,6 +5351,10 @@ sk:
               name: Digitálne občianstvo
               description_student: Niektoré informácie nie je vhodné zdieľať online.
                 Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
+              description_teacher: |-
+                Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education pomôže študentom kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Žiaci sa naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.
+
+                V rámci hodiny tiež prediskutujeme, ako sa správať zodpovedne a rešpektujúco v rámci offline aj online komunít - dôležitá vlastnosť dobrého digitálneho občana.
             Dance Party:
               name: Tanečná Párty
             End of Course Project:
@@ -5320,14 +5364,17 @@ sk:
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
             a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ
             a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte
-            používať funkcie.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať
+            funkcie.
           description_audience: Vek 8-12
           stages:
             Conditionals:
               name: Podmienky s Farmárkou
             Simon Says:
               name: Simon vraví
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Private and Personal Information:
@@ -5345,6 +5392,13 @@ sk:
                 ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať
                 medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je
                 a ktoré nie je bezpečné zdieľať na internete."
+            About Me:
+              description_student: Prostredníctvom tvorby interaktívneho plagátu v
+                SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
+                a osobných údajov na internete
+              description_teacher: "Prostredníctvom tvorby interaktívneho plagátu
+                v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných
+                a osobných údajov na internete.\r"
             Nested Loops in Bee:
               name: Vnorené cykly v bludisku
             Nested Loops in Artist:
@@ -5392,6 +5446,9 @@ sk:
           stages:
             Functions in Minecraft:
               name: Funkcie v Minecrafte
+            Learning Sprites with Sprite Lab:
+              name: Plávajúca ryba so Sprite Lab
+              description_student: Nauč sa ako tvoriť  a upravovať postavy.
             Events with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Nested Loops in the Maze:
@@ -5525,6 +5582,8 @@ sk:
           stages:
             Variables:
               name: Premenné
+            Sprites:
+              name: Postavy
             Conditionals:
               name: Podmienky
             Velocity:
@@ -5557,6 +5616,10 @@ sk:
               name: Viacobrazovkové aplikácie
             While Loops:
               name: Cykly "pokiaľ"
+            Intro to App Lab:
+              name: Úvod do App Labu
+            Variables:
+              name: Premenné
         virtual-holding-place:
           stages:
             Velocity:
@@ -5569,3 +5632,7 @@ sk:
               name: Algoritmy
             Events:
               name: Udalosti
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Cykly "pokiaľ"

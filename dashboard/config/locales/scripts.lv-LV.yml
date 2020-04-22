@@ -1513,6 +1513,8 @@ lv:
           stages:
             While Loops:
               name: Nosacījuma cikli
+            Variables:
+              name: Mainīgie
         virtual-holding-place:
           stages:
             Velocity:
@@ -1525,3 +1527,7 @@ lv:
               name: Algoritmi
             Events:
               name: Pasākumi
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli

@@ -208,6 +208,7 @@ ka:
       %{name}
   parent_mailer:
     student_associated_subject: 'ანგარიშში შესასვლელად საჭირო ინფორმაცია Code.org-ისთვის'
+    parent_email_added_subject: 'კეთილი იყოს თქვენი მობრძანება Code.org-ზე!'
   teacher_mailer:
     new_teacher_subject: 'კეთილი იყოს თქვენი მობრძანება Code.org-ზე!'
     delete_teacher_subject: 'Code.org შეტყობინება: თქვენი ანგარიში წაშლილია'
@@ -413,6 +414,8 @@ ka:
     update: "ანგარიშის განახლება"
     account_successfully_updated: "ანგარიში წარმატებით განახლდა."
     update_email: "განახლება"
+    parent_guardian_email_label: "მშობლის/მეურვის ელფოსტა"
+    none: "არცერთი"
   user_level:
     completed: 'დასრულებულია'
     tried: 'უკვე ნაცადია'

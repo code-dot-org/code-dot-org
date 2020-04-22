@@ -3,7 +3,6 @@ hu:
   data:
     script:
       category:
-        csf_category_name: A számítógép-tudomány alapjai
         csf_2018_category_name: A számítógép-tudomány alapjai (2018)
         csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
         hoc_category_name: A kódolás órája
@@ -2256,7 +2255,7 @@ hu:
                 A tanóra végén a csoportok reflektálnak a tevékenység során szerzett
                 tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási
                 helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
-              description_teacher: Ebben a leckében a tanulók csoportokban alufóliából
+              description_teacher: 'Ebben a leckében a tanulók csoportokban alufóliából
                 kis hajókat készítenek azokat úgy megtervezve, hogy minél több pénzérmét
                 elbírjanak. A csoportoknak két lehetősége lesz dolgozni a hajókon,
                 természetesen a céljuk az lesz, hogy a második körben több érmét bírjon
@@ -2265,7 +2264,7 @@ hu:
                 is megismerkednek a következő órán. A tanóra végén a csoportok reflektálnak
                 a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek
                 azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán
-                találkozni fognak.
+                találkozni fognak. '
             The Problem Solving Process:
               name: A probléma-megoldási folyamat
               description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot,
@@ -2413,6 +2412,8 @@ hu:
           stages:
             While Loops:
               name: Elől tesztelős ciklusok
+            Variables:
+              name: változók
         virtual-holding-place:
           stages:
             Functions:
@@ -2423,3 +2424,7 @@ hu:
               name: algoritmusok
             Events:
               name: Események
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok

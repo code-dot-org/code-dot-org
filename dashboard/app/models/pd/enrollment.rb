@@ -192,13 +192,26 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(email)
   end
 
+  # Pre-workshop survey URL (if any)
+  def pre_workshop_survey_url
+    # 5-day summer workshop
+    if workshop.local_summer?
+      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0, enrollmentCode: code)
+    elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
+      'https://studio.code.org/pd/workshop_survey/csf/pre201'
+    # academic year workshops for CSP and CSD
+    elsif workshop.pre_survey?
+      pd_new_pre_workshop_survey_url(enrollment_code: code)
+    end
+  end
+
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
     elsif workshop.summer?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
     elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
-      CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
+      CDO.studio_url "/pd/workshop_survey/day/#{workshop.last_valid_day}?enrollmentCode=#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
     else

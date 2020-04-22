@@ -1389,6 +1389,14 @@ is-IS:
         9, síðan 6 og svo 3 af blómasafa?
       NEW Course 4 Play Lab Params 11: 'Tími til að leika sér! Leiktu þér með alla
         kubbana í verkfærakassanum. '
+      New Artist Project: Teiknaðu eitthvað flott! Kóðinn þinn er vistaður sem verkefni,
+        sem þú getur haldið áfram með hvenær sem er.
+      New Basketball Project: Búðu til þinn eigin körfuboltaleik. Þú getur breytt
+        öllum reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að
+        vinir geti prófað leikinn í símunum sínum.
+      New Bounce Project: Búðu til þinn eigin Skopp leik. Þú getur breytt öllu myndefninu
+        og reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að vinir
+        geti prófað leikinn í símunum sínum.
       New Gumball Project: Búðu til hvað sem þú vilt og deildu því!
       New Ice Age Project: Búðu til hvað sem þú vilt og deildu því!
       New Infinity Project: Búðu til hvað sem þú vilt og deildu því!
@@ -2042,25 +2050,17 @@ is-IS:
         sem er nú þegar á vinnusvæðinu.
       courseA_playLab_events3_2018: Tengdu "færa vinstri" kubbinn við "þegar vinstri"
         atburðarkubbinn sem er nú þegar á vinnusvæðinu.
-      courseA_playLab_events3_2019: Tengdu "færa vinstri" kubbinn við "þegar vinstri"
-        atburðarkubbinn sem er nú þegar á vinnusvæðinu.
       courseA_playLab_events4: Bættu við kubbum til að færast til hægri þegar smellt
         er á `hægri` hnappinn.
       courseA_playLab_events4_2018: Bættu við öðrum atvikskubbi til að láta Jorge
-        fara til hægri þegar smellt er á `hægri` hnappinn.
-      courseA_playLab_events4_2019: Bættu við öðrum atvikskubbi til að láta Jorge
         fara til hægri þegar smellt er á `hægri` hnappinn.
       courseA_playLab_events5: Bættu við atburðum til að láta Jorge hreyfast upp og
         niður þegar ýtt er á `upp` og `niður` hnappana.
       courseA_playLab_events5_2018: Bættu við atburðum til að láta Jorge hreyfast
         upp og niður þegar ýtt er á `upp` og `niður` hnappana.
-      courseA_playLab_events5_2019: Bættu við atburðum til að láta Jorge hreyfast
-        upp og niður þegar ýtt er á `upp` og `niður` hnappana.
       courseA_playLab_events6: Gerðu þetta áhugaverðara með því að breyta bakgrunninum
         og spila eitthvert hljóð þegar smellt er á Jorge.
       courseA_playLab_events6_2018: Gerðu þetta áhugaverðara með því að breyta bakgrunninum
-        og spila eitthvert hljóð þegar smellt er á Jorge.
-      courseA_playLab_events6_2019: Gerðu þetta áhugaverðara með því að breyta bakgrunninum
         og spila eitthvert hljóð þegar smellt er á Jorge.
       courseA_playLab_events7: Bættu við leikinn eftir þínu höfði. Geturðu látið risaeðluna
         hverfa þegar Jorge rekst á hana?

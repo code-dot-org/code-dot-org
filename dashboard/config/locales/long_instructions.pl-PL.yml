@@ -1051,7 +1051,7 @@ pl-PL:
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops2_2019: |-
-        Pomóż Laurel dojść do skarbu, a potem użyj klacka <xml><block type="collector_collect" block-text="get treasure"/></xml> aby zebrać kryształ.
+        Pomóż Laurel dojść do skarbu, a potem użyj bloku <xml><block type="collector_collect" block-text="get treasure"/></xml>, aby zebrać kryształ.
 
         Zbierz wszystkie cztery kryształy, aby ukończyć ten poziom.
       courseB_collector_loops_challenge2a: |-
@@ -1087,6 +1087,24 @@ pl-PL:
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\\\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\\\r\n\\\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseC_artist_loops5a: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loopsPrePre1a: Użyj bloku `jump to 200 over 200 down`aby artysta
         znalazł się w centrum obszaru gry, następnie narysuj linię o długości 50 pikseli
         za pomocą bloku `move forward 50 pixels`.
@@ -1372,7 +1390,7 @@ pl-PL:
         \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       courseE_bee_functions3: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej
         łamigłówce.
-      courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę zagadkę.
+      courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę łamigłówkę.
       courseF_bee_for_challenge2: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_for_challenge2_2018: Rozwiąż tę łamigłówkę używając jak najmniejszej
@@ -1383,9 +1401,11 @@ pl-PL:
         innej funkcji? \\\r\n\\\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej
         funkcji `move and check,`aby pomóc pszczole skręcić, zebrać to co jest pod
         chmurą i zawrócić!"
-      courseF_bee_functions7: "Przebuduj funkcję z ostatniej zagadki, aby rozwiązać
-        ten labirynt.\\\r\n\\\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
-        \\\r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
+      courseF_bee_functions7: |-
+        Przebuduj funkcję z ostatniej łamigłówki, aby rozwiązać ten labirynt.
+
+        Skręć w lewo przy plastrze miodu i w prawo przy kwiatkach. \
+        **Uwaga** Niektóre zakręty są nieoznaczone!
       courseF_bee_functions_challenge2: Wykorzystaj wszystko czego się nauczyłeś,
         aby rozwiązać tę łamigłówkę!
       frozen circle: Okrąg ma specjalny kształt. Czy domyślisz się, jaką liczbą należy

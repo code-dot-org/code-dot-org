@@ -67,10 +67,12 @@ cs-CZ:
         title: Vícenásobná volba
       2-3 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Jak by si zjednodušil s cykly tuto posloupnost?
         title: Vícenásobná volba
@@ -1226,61 +1228,76 @@ cs-CZ:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Program neselže. Veverka se dostane k žaludu.
+        - text: Veverka půjde po svém posledním otočení špatným směrem.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
+            způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Program neselže. Veverka se dostane k žaludu.
+        - text: Veverka půjde po svém posledním otočení špatným směrem.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
+            způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Program neselže. Veverka se dostane k žaludu.
+        - text: Veverka půjde po svém posledním otočení špatným směrem.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
+            způsobí selhání tohoto programu?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - text: Pták se dostane k praseti.
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - text: Pták se dostane k praseti.
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - text: Pták se dostane k praseti.
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         - text: Nevím.
         questions:
-        - {}
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1532,8 +1549,7 @@ cs-CZ:
             plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
-          correct: true
+        - correct: true
           feedback: Správně!
         - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
         - text: Včela se pokusí získat med z květin i ze včelích pláství.
@@ -1821,7 +1837,7 @@ cs-CZ:
         - text: Pták se nebude vůbec hýbat.
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
-        - text: Pták se dostane k praseti.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
         - text: 'Pták se posune vpřed a narazí do TNT. '
@@ -1836,7 +1852,7 @@ cs-CZ:
         - text: Pták se nebude vůbec hýbat.
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
-        - text: Pták se dostane k praseti.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
         - text: 'Pták se posune vpřed a narazí do TNT. '
@@ -1851,7 +1867,7 @@ cs-CZ:
         - text: Pták se nebude vůbec hýbat.
           feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
-        - text: Pták se dostane k praseti.
+        - text: Ptáček se dostane k prasátku.
           correct: true
           feedback: Správně!
         - text: 'Pták se posune vpřed a narazí do TNT. '

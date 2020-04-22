@@ -287,16 +287,18 @@ ActiveRecord::Schema.define(version: 20200403191929) do
   end
 
   create_table "contact_rollups_pardot_memory", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "email",                null: false
+    t.string   "email",                  null: false
     t.integer  "pardot_id"
     t.datetime "pardot_id_updated_at"
     t.json     "data_synced"
     t.datetime "data_synced_at"
     t.datetime "data_rejected_at"
     t.string   "data_rejected_reason"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "marked_for_deletion_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.index ["email"], name: "index_contact_rollups_pardot_memory_on_email", unique: true, using: :btree
+    t.index ["marked_for_deletion_at"], name: "index_contact_rollups_pardot_memory_on_marked_for_deletion_at", using: :btree
     t.index ["pardot_id"], name: "index_contact_rollups_pardot_memory_on_pardot_id", unique: true, using: :btree
   end
 
@@ -507,6 +509,16 @@ ActiveRecord::Schema.define(version: 20200403191929) do
     t.datetime "updated_at",             null: false
     t.index ["school_code"], name: "index_ib_school_codes_on_school_code", unique: true, using: :btree
     t.index ["school_id"], name: "index_ib_school_codes_on_school_id", unique: true, using: :btree
+  end
+
+  create_table "lesson_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "key",                        null: false
+    t.integer  "script_id",                  null: false
+    t.boolean  "user_facing", default: true, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "position"
+    t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true, using: :btree
   end
 
   create_table "level_concept_difficulties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1382,6 +1394,7 @@ ActiveRecord::Schema.define(version: 20200403191929) do
     t.boolean  "pairing_allowed",   default: true,    null: false
     t.boolean  "sharing_disabled",  default: false,   null: false, comment: "Flag indicates the default sharing setting for a section and is used to determine students share setting when adding a new student to the section."
     t.boolean  "hidden",            default: false,   null: false
+    t.boolean  "autoplay_enabled",  default: false,   null: false
     t.index ["code"], name: "index_sections_on_code", unique: true, using: :btree
     t.index ["course_id"], name: "fk_rails_20b1e5de46", using: :btree
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
@@ -1424,6 +1437,7 @@ ActiveRecord::Schema.define(version: 20200403191929) do
     t.boolean  "lockable",                        default: false, null: false
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
+    t.integer  "lesson_group_id"
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
   end
 

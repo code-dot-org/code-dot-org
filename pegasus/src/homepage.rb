@@ -105,6 +105,7 @@ class Homepage
   end
 
   def self.get_actions(request)
+    code_break_takeover = DCDO.get("promote_code_break", nil) && request.language == "en"
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
@@ -113,6 +114,11 @@ class Homepage
       download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
+    elsif code_break_takeover
+      youtube_id = "27ln76y27IQ"
+      download_path = ""
+      facebook = "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/Code.org/posts/2799748100121475"
+      twitter = "Studying home alone? Take a #CodeBreak with me to learn computer science! Tune in Wednesday at 10:00am PT / 1:00pm ET. code.org/break"
     else
       youtube_id = "nKIu9yen5nc"
       download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
@@ -121,7 +127,20 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if hoc_mode == "actual-hoc"
+    if code_break_takeover
+      [
+        {
+          type: "code_break_learn_more"
+        },
+        {
+          type: "code_break_video",
+          youtube_id: youtube_id,
+          download_path: download_path,
+          facebook: facebook,
+          twitter: twitter
+        }
+      ]
+    elsif hoc_mode == "actual-hoc"
       [
         {
           text: "get_started",
@@ -185,6 +204,32 @@ class Homepage
   def self.get_blocks(request)
     if request.language == "en"
       [
+
+        {
+          id: "at-home-en",
+          type: "block",
+          title: "homepage_slot_text_title_at_home",
+          text: "homepage_slot_text_blurb_at_home",
+          color1: "0, 173, 188",
+          color2: "89, 202, 211",
+          url: "/athome",
+          image: "/images/mc/2016_homepage_hocblock.jpg",
+          links:
+            [
+              {
+                text: "homepage_slot_text_link_code_break",
+                url: "/break"
+              },
+              {
+                text: "homepage_slot_text_link_do_hoc",
+                url: "/hourofcode/overview"
+              },
+              {
+                text: "homepage_slot_text_link_express_course",
+                url: "/educate/curriculum/express-course"
+              }
+            ]
+        },
         {
           id: "students-en",
           type: "block",
@@ -238,32 +283,6 @@ class Homepage
         },
 
         {
-          id: "hoc-en",
-          type: "block",
-          title: "homepage_slot_text_title_hoc",
-          text: "homepage_slot_text_blurb_hoc",
-          color1: "0, 173, 188",
-          color2: "89, 202, 211",
-          url: "/hourofcode/overview",
-          image: "/images/mc/2016_homepage_hocblock.jpg",
-          links:
-            [
-              {
-                text: "homepage_slot_text_link_about_hoc",
-                url: "https://hourofcode.com/"
-              },
-              {
-                text: "homepage_slot_text_link_host",
-                url: "https://hourofcode.com/how-to"
-              },
-              {
-                text: "homepage_slot_text_link_hocserved",
-                url: "/leaderboards"
-              }
-            ]
-        },
-
-        {
           id: "advocate-en",
           type: "block",
           title: "homepage_slot_text_link_buy",
@@ -283,14 +302,24 @@ class Homepage
                 url: "/yourschool"
               },
               {
-                text: "homepage_slot_text_link_shop",
-                url: "/shop"
+                text: "homepage_slot_text_link_donate",
+                url: "https://donate.code.org/give/172233/#!/donation/checkout"
               }
             ]
         }
       ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
     else
       [
+        {
+          id: "at-home-nonen",
+          type: "blockshort",
+          title: "homepage_slot_text_title_at_home",
+          text: "homepage_slot_text_blurb_at_home",
+          color1: "0, 173, 188",
+          color2: "89, 202, 211",
+          url: CDO.studio_url("/courses"),
+          image: "/images/mc/2016_homepage_hocblock.jpg"
+        },
         {
           id: "students-nonen",
           type: "blockshort",
@@ -312,16 +341,6 @@ class Homepage
           image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {
-          id: "hoc-nonen",
-          type: "blockshort",
-          title: "homepage_slot_text_title_hoc",
-          text: "homepage_slot_text_blurb_hoc",
-          color1: "0, 173, 188",
-          color2: "89, 202, 211",
-          url: "/hourofcode/overview",
-          image: "/images/mc/2016_homepage_hocblock.jpg"
-        },
-        {
           id: 'dance-nonen',
           type: "blockshort",
           title: 'studiobar_dance_title',
@@ -336,7 +355,7 @@ class Homepage
   end
 
   def self.get_video(request)
-    video = get_actions(request).find {|a| a[:type] == "video"}
+    video = get_actions(request).find {|a| a[:type] == "video" || a[:type] == "code_break_video"}
 
     if video
       {
@@ -351,7 +370,7 @@ class Homepage
   end
 
   def self.show_single_hero(request)
-    "changeworld"
+    DCDO.get("promote_code_break", nil) && request.language == "en" ? "codebreak2020" : "changeworld"
   end
 
   def self.get_heroes_arranged(request)
@@ -363,7 +382,8 @@ class Homepage
       {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
     ]
     hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
-
+    hero_codebreak2020 =
+      [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/blank_paper.jpg"}]
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
@@ -378,6 +398,8 @@ class Homepage
       heroes_arranged = hero_dance2019
     elsif show_single_hero(request) == "oceans2019"
       heroes_arranged = hero_oceans2019
+    elsif show_single_hero(request) == "codebreak2020"
+      heroes_arranged = hero_codebreak2020
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,

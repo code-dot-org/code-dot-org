@@ -1708,3 +1708,8 @@
   hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
   hoc2019_mc_more_coding_resources: "More Coding Resources"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) from last year."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"

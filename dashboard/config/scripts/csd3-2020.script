@@ -7,8 +7,10 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
+family_name 'csd3'
 version_year '2020'
 project_sharing true
+curriculum_umbrella 'CSD'
 tts true
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
@@ -213,7 +215,7 @@ level 'CSD U3 collisions horse_2020', progression: 'Collision Detection', assess
 level 'CSD games istouching challenge choice', progression: 'Challenges: Collision Detection'
 
 stage 'Mini-Project: Side Scroller', flex_category: 'csd3_2'
-level 'CSD U3L19 TFMD_2020', named: true
+level 'CSD U3L20 TFMD', named: true
 level 'CSD games side scroller demo', progression: 'Intro to Side Scrollers'
 level 'CSD games sidescroll background', progression: 'Draw Your Background'
 level 'CSD U3 abstraction tumbleweed_2020', progression: 'Create Your Sprites'
@@ -245,7 +247,7 @@ level 'CSD games collisions assessment', progression: 'Collisions'
 level 'CSD games collisions challenge choice', progression: 'Challenge: Collisions'
 
 stage 'Mini-Project: Flyer Game', flex_category: 'csd3_2'
-level 'CSD U3L19 TFMD_2020', named: true
+level 'CSD U3L23 TFMD', named: true
 level 'CSD games flyer demo', progression: 'Intro to Flyer Game'
 level 'CSD U3 abstraction add coin_2020', progression: 'Make Your Sprites'
 level 'CSD U3 abstraction jumping_2020', progression: 'Player Controls'

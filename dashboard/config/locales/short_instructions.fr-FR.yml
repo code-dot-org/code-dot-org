@@ -314,6 +314,12 @@ fr-FR:
       4-5 Bee Conditionals 1: L'abeille ne peut pas savoir si c'est une fleur ou un
         gâteau de miel. Recueille le nectar seulement sur les fleurs, mais vérifie
         d'abord si c'est une fleur ou un gâteau de miel.
+      4-5 Bee Conditionals 2: |-
+        Plus de nuages!
+
+        Vérifie sous chaque nuage pour voir s'il cache une fleur avant de récupérer du nectare.
+
+        Souviens-toi : tous les nuages ne cachent pas la même chose !
       4-5 Bee Conditionals 3: Maintenant l'abeille veut juste fabriquer de miel. Fabrique
         du miel seulement dans les gâteaux de miel.
       4-5 Bee Conditionals 4: L'objet inconnu est soit une fleur, soit un gâteau de
@@ -392,9 +398,14 @@ fr-FR:
         peut parcourir n'importe quel chemin sinueux peu importe la longueur!"
       4-5 Maze Conditionals 2: Utilise le bloc « Répéter jusqu'à » pour amener le
         zombie au tournesol.
+      4-5 Maze Conditionals 3: Utilise le block `Si` pour me laisser décider quand
+        tourner.
       4-5 Maze Conditionals 4: OK, c'est la même chose que le puzzle précédent, mais
         tu dois te rappeler comment tu as utilisé le bloc «Si» et le bloc « Répéter
         » ensemble.
+      4-5 Maze Conditionals 5: "\"Moi vouloir tournesol !\" \n\nUtilise un bloc `Si`
+        pour amener le zombie vers le tournesol avec le plus petit nombre de blocs
+        possible."
       4-5 Maze Conditionals 6: Moi veux tournesol ! Utilise un bloc « Si » pour m'y
         amener avec le plus petit nombre de blocs possible.
       4-5 Maze Conditionals 7: OK, nous allons le refaire encore une fois pour nous
@@ -422,6 +433,8 @@ fr-FR:
         à vent.
       4-5 Nested Loops 6: Peux-tu dessiner un hexagone en bouclant le code du triangle
         ?
+      4-5 Nested Loops 8: "Boucle ce dessin 6 fois. \nDe combien dois-tu tourner chaque
+        fois que tu fais un tour de boucle ?"
       4-5 Nested Loops 9: Dessine les dents dans la bouche de l'alligator !
       4-5 Nested Loops Assessment 1: Utilise une boucle imbriquée pour terminer le
         dessin.
@@ -432,6 +445,10 @@ fr-FR:
       4-5 While Loops 3: "Use as few blocks as possible to complete\nthis puzzle!
         \ \\\r\n\\\r\nMove me to the pile and remove all the dirt, then move\nto the
         hole and fill it completely."
+      4-5 While Loops 4: |-
+        Wow, regarde ça!
+
+        Je ne sais pas combien de pelletées de terre il faudra pour le remplir.  Peux-tu écrire un programme qui le remplira en utilisant le bloc `remplir`jusqu’à ce que le sol soit nivelé ?
       4-5 While Loops 5: Wow, maintenant il y a deux trous profonds ! Peux-tu écrire
         un programme qui les remplira tous les deux jusqu’à ce que le sol soit nivelé
         ?
@@ -449,6 +466,7 @@ fr-FR:
       AB_Debug_PlayLab3: Déplace le chevalier vers chacun des drapeaux. Si quelque
         chose ne va pas, cherche les bugs !
       Alien Defender: 'Idée de projet: Faire un jeu de type Defender dans Play Lab!'
+      CDEF_debugging_flappy2: Pourquoi ce jeu ne fonctionne pas ?
       CSD U3 Boolean Modify: Modifier le code pour que toutes les commandes console.log
         affichent true
       CSD U3 Boolean Modify_2018: Modifier le code pour que toutes les commandes console.log
@@ -549,10 +567,8 @@ fr-FR:
 
         Regarde ce qui se passe lorsque nous commençons à faire preuve de créativité avec les bits ?
       Course 4 Artist Binary Free Play 2b: Clique ici pour avoir des conseils.
-      Course 4 Artist Binary pre1: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
+      Course 4 Artist Binary pre1: Peux-tu faire que l'artiste dessine « 01010101 »
+        en binaire dans la première ligne ?
       Course 4 Artist For Loops 1: 'Dessine ce triangle qui mesure 50 pixels de large.
         Indice: utilise un bloc «Répéter».'
       Course 4 Artist For Loops 11: 'Dans une étape précédent, souviens-toi que nous
@@ -1576,15 +1592,23 @@ fr-FR:
         le miel?
       course3_bee_functions_challenge1: Tu dois te débrouiller pour ce défi. Cela
         peut-être plus compliqué qu'il n'y parait!
+      course3_bee_functions_challenge2: Tu dois te débrouiller seul pour ce défi !
       course3_bee_functions_challenge3: Crée une nouvelle fonction pour collecter
         tout le nectar et le miel tant que le chemin continue. Utilise-la pour résoudre
         l'énigme !
       course3_bee_functions_challenge4: Sers-toi de tout ce que tu as appris pour
         résoudre cette énigme !
+      course3_farmer_condLoops_challenge1: Tourne à droite aux citrouilles. Ramasse
+        tout pour terminer le niveau. Chaque culture cachée n'a qu'un seul épi de
+        maïs ou qu'une seule laitue
       course3_farmer_condLoops_challenge2: Récolte tout pour terminer le niveau.
       course3_farmer_until_challenge2: Utilise les blocs Si/Sinon pour suivre le chemin
         qui tourne. À chaque tournant, utilise la commande `supprimer 1` dans une
         boucle pour enlever les tas.
+      course3_maze_debugging_challenge1: _"Est-ce que je ne serais pas en train de
+        tourner en rond ?"_
+      course3_maze_debugging_challenge2: _"Si je tourne trop souvent, je vais m'étourdir!
+        Aide moi à atteindre le gland avec seulement 4 commandes `tourner`."_
       course3_maze_until_challenge1: Aucun indice, simplement un défi. Amène le zombie
         jusqu’au tournesol.
       course3_playLab_challenge1: Il doit se produire quelque chose lorsque tu as
@@ -1821,21 +1845,15 @@ fr-FR:
         <-` qui est déjà dans l'espace de travail.
       courseA_playLab_events3_2018: Attache le bloc `déplacer <-` au bloc d'évènement
         `Quand <-` qui est déjà dans l'espace de travail.
-      courseA_playLab_events3_2019: Attache le bloc `déplacer <-` au bloc d'évènement
-        `Quand <-` qui est déjà dans l'espace de travail.
       courseA_playLab_events4: Ajoute les blocs pour bouger à droite lorsque le bouton
         `droite` est cliqué.
       courseA_playLab_events5: Ajoute des évènements pour que Jorge monte et descende
         lorsque les touches `monter` et `descendre` sont pressés.
       courseA_playLab_events5_2018: Ajoute des évènements pour que Jorge monte et
         descende lorsque les touches `monter` et `descendre` sont pressés.
-      courseA_playLab_events5_2019: Ajoute des évènements pour que Jorge monte et
-        descende lorsque les touches `monter` et `descendre` sont pressés.
       courseA_playLab_events6: Change le fond d'écran et joue un son aléatoire lorsque
         tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events6_2018: Change le fond d'écran et joue un son aléatoire
-        lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
-      courseA_playLab_events6_2019: Change le fond d'écran et joue un son aléatoire
         lorsque tu cliques sur Jorge pour que ce soit plus intéressant.
       courseA_playLab_events7: Ajoute ce que tu veux à ce jeu. Peux-tu faire disparaitre
         le dinosaure lorsque Jorge lui coure après?
@@ -2687,18 +2705,12 @@ fr-FR:
         la ferraille !
       courseD_artist_5_2018: Joue avec les flocons de neige!
       courseD_artist_5_2018_2019: Joue avec les flocons de neige!
-      courseD_artist_binary1: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
-      courseD_artist_binary1_2018: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
-      courseD_artist_binary1_2019: |-
-        Le binaire est une manière de représenter des informations à l'aide de seulement deux options.  Ici, nous allons utiliser les options « Éteint » (représentée par le numéro 0) et « Allumé » (représentée par le numéro 1).
-
-        Nous t’avons fourni une grille de « Pixels » que tu peux parcourir pour faire des dessins en tournant sur certains carrés seulement.  Peux-tu faire que l'artiste dessine « 01010101 » en binaire dans la première ligne ?
+      courseD_artist_binary1: Peux-tu faire que l'artiste dessine « 01010101 » en
+        binaire dans la première ligne ?
+      courseD_artist_binary1_2018: Peux-tu faire que l'artiste dessine « 01010101 »
+        en binaire dans la première ligne ?
+      courseD_artist_binary1_2019: Peux-tu faire que l'artiste dessine « 01010101 »
+        en binaire dans la première ligne ?
       courseD_artist_binary2: Démarre ce code pour voir comment l'artiste utilise
         les binaires pour dessiner les motifs.
       courseD_artist_binary2_2018: Démarre ce code pour voir comment l'artiste utilise

@@ -239,6 +239,7 @@ de:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login Informationen für Code.org'
+    parent_email_added_subject: 'Willkommen bei Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Willkommen bei Code.org!'
     delete_teacher_subject: 'Code.org Benachrichtigung: Dein Konto wurde gelöscht'
@@ -462,6 +463,9 @@ de:
     auth_option_saved: "Du hast erfolgreich deinen %{provider} Account mit deiner E-Mail %{email} verknüpft."
     auth_option_saved_no_email: "Du hast erfolgreich deinen %{provider} Account verbunden."
     update_email: "Aktualisieren"
+    parent_guardian_email_label: "Eltern / Erziehungsberechtigten E-Mail-Adresse"
+    none: "Keiner"
+    encrypted: "verschlüsselt"
   user_level:
     completed: 'Abgeschlossen'
     tried: 'Versucht'
@@ -711,11 +715,13 @@ de:
     wrong_body: "Deine Antwort ist nicht richtig.  Versuche es noch einmal!"
     correct_title: "Richtig"
     correct_body: "Das ist die richtige Antwort."
+    toofew_title: "Zu wenige Antworten."
   multi-submittable:
     wrong_title: "Vielen Dank"
     wrong_body: "Vielen Dank für das Einsenden Ihrer Frage."
     correct_title: "Vielen Dank"
     correct_body: "Vielen Dank für das Einsenden Ihrer Frage."
+    toofew_title: "Zu wenige Antworten."
   level_group:
     wrong_title: "Vielen Dank"
     wrong_body: "Vielen Dank für das Einsenden Ihrer Fragen."
@@ -1137,3 +1143,5 @@ de:
       copy_code: 'Bitte kopieren Sie diesen Code und fügen Sie ihn in der Maker App ein um sich auf Code.org anzumelden'
       error_invalid_user: 'Ungültige Benutzer ID. Versuche dich später wieder einzuloggen.'
       error_no_code: 'Bitte geben Sie ihren Login Code ein'
+  parent_email_banner:
+    not_now: "Nicht jetzt"

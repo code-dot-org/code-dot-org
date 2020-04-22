@@ -26,12 +26,15 @@ import {
   saveAllStudents,
   editAll,
   TransferStatus,
-  TransferType
+  TransferType,
+  ParentLetterButtonMetricsCategory
 } from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
+import DownloadParentLetter from './DownloadParentLetter';
+import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
 
 const styles = {
@@ -587,7 +590,7 @@ class ManageStudentsTable extends Component {
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.buttonWithMargin}>
-              <AddMultipleStudents />
+              <AddMultipleStudents sectionId={this.props.sectionId} />
             </div>
           )}
           {this.isMoveStudentsEnabled() && (
@@ -597,6 +600,16 @@ class ManageStudentsTable extends Component {
               transferStatus={transferStatus}
             />
           )}
+          {(loginType === SectionLoginType.word ||
+            loginType === SectionLoginType.picture) && (
+            <PrintLoginCards sectionId={this.props.sectionId} />
+          )}
+          <DownloadParentLetter
+            sectionId={this.props.sectionId}
+            buttonMetricsCategory={
+              ParentLetterButtonMetricsCategory.ABOVE_TABLE
+            }
+          />
         </div>
         <Table.Provider
           columns={columns}

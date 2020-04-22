@@ -3,7 +3,6 @@ uk:
   data:
     script:
       category:
-        csf_category_name: Основи інформатики
         csf2_draft_category_name: 'В розробці: курси А—Д'
         csp_category_name: "'15-'16 принципи інформатики"
         cspexams_category_name: Практичний тест з принципів інформатики
@@ -2149,6 +2148,8 @@ uk:
           stages:
             While Loops:
               name: Цикли "поки"
+            Variables:
+              name: змінні
         virtual-holding-place:
           stages:
             Velocity:
@@ -2161,3 +2162,7 @@ uk:
               name: Алгоритми
             Events:
               name: Події
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Цикли "поки"

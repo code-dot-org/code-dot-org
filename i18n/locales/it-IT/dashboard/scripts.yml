@@ -7,7 +7,6 @@ it:
         csd_category_name: Alla scoperta dell'informatica ('17-'18)
         csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
         csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
-        csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
@@ -4602,7 +4601,7 @@ it:
         csd1-2020:
           stages:
             Intro to Problem Solving:
-              description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+              description_student: "La classe lavora in gruppi per progettare barche di \"carta stagnola\" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull'esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. "
             0:
         csd6-2020:
           stages:
@@ -4999,6 +4998,10 @@ it:
               name: Cicli "mentre"
             Introduction to Arrays:
               name: Introduzione agli array
+            Intro to App Lab:
+              name: Introduzione a Sviluppo App
+            Variables:
+              name: Variabili
         virtual-holding-place:
           stages:
             Velocity:
@@ -5013,3 +5016,9 @@ it:
               name: Algoritmi
             Events:
               name: Eventi
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Cicli "mentre"
+            Introduction to Arrays:
+              name: Introduzione agli array

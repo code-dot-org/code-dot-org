@@ -1488,10 +1488,22 @@ fa:
           stages:
             Artist:
               name: هنرمند
+        dance:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         frozen-2018-test-b:
           stages:
             Artist:
               name: هنرمند
+        dance--draft:
+          stages:
+            Dance Party:
+              name: جشن و رقص
+        dance-draft:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1508,6 +1520,10 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+        dance-low:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1522,6 +1538,8 @@ fa:
               name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
+            Dance Party:
+              name: جشن و رقص
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1558,6 +1576,8 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+            Dance Party:
+              name: جشن و رقص
         andrea-test:
           stages:
             'null':
@@ -1659,6 +1679,10 @@ fa:
               name: مقدمه
             Nested Loops:
               name: حلقه های تو در تو
+        dance-2019:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -1742,6 +1766,8 @@ fa:
               name: دودویی هنرمند
             Digital Citizenship:
               name: شهروندی دیجیتالی
+            Dance Party:
+              name: جشن و رقص
         coursee-2020:
           stages:
             'Functions: Songwriting':
@@ -1756,6 +1782,10 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+        express-2020:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         pre-express-2020:
           stages:
             Spelling Bee:
@@ -1778,6 +1808,8 @@ fa:
           stages:
             While Loops:
               name: حلقه ها ی While
+            Variables:
+              name: متغیرها
         virtual-holding-place:
           stages:
             Functions:
@@ -1788,3 +1820,7 @@ fa:
               name: الگوریتم ها
             Events:
               name: رویدادها
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: حلقه ها ی While

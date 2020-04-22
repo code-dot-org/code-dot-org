@@ -33,6 +33,7 @@
 class Pd::Workshop < ActiveRecord::Base
   include Pd::WorkshopConstants
   include SerializedProperties
+  include Pd::WorkshopSurveyConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -692,7 +693,7 @@ class Pd::Workshop < ActiveRecord::Base
     return nil unless pre_survey?
     pre_survey_course.default_scripts.map do |script|
       unit_name = script.localized_title
-      stage_names = script.stages.where(lockable: false).pluck(:name)
+      stage_names = script.lessons.where(lockable: false).pluck(:name)
       lesson_names = stage_names.each_with_index.map do |stage_name, i|
         "Lesson #{i + 1}: #{stage_name}"
       end
@@ -729,5 +730,13 @@ class Pd::Workshop < ActiveRecord::Base
 
   def can_user_delete?(user)
     state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
+  end
+
+  def last_valid_day
+    last_day = sessions.size
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+      last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
+    end
+    last_day
   end
 end

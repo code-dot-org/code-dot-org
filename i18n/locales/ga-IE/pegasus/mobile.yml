@@ -12,8 +12,19 @@
   csedweek_dates: "3-9 Nollaig 2018"
   csedweek_banner_hoc: 'Tá <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">An Uair Chódála </a> ag teacht go luath. Glaotar ar gach múinteoir agus ar gach eagraí, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">d''uair chódála a phleanáil</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">An múinteoir ríomhaireachta tú? Féach ar acmhainní eile ó Sheachtain an Oideachais Ríomheolaíochta</a>'
+  csedweek_banner_teachers_text: "An múinteoir ríomheolaíochta thú? Féach ar acmhainní eile le haghaidh CSEdWeek"
   n_have_learned_an_hoc: "<h1>Bain triail as </h1><h2>An Uair Chódála</h2><h3># códálaí</h3>"
   try_hoc_num_served: "<h1>Bain triail as</h1><h2>An Uair Chódála</h2><h3>%{num} códálaí</h3>"
+  try_hoc_num_served_markdown: |-
+    # Bain triail as
+
+    ## An Uair Chódála
+
+    ###%{num} dalta sásta #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Is féidir le héinne foghlaim."
   learn_now: "Foghlaim Anois"
   petition_message: "Ba cheart go mbeadh an deis ag gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim"
@@ -148,6 +159,7 @@
   enter_valid_email: "Cuir seoladh ríomhphoist bailí isteach"
   get_a_certificate_message: "Seolfaimid teastas chugat, chomh maith le heolas faoi <a href='/learn/beyond'>Fhoghlaim thar an Uair Chódála</a>"
   get_a_certificate_message_after: "Cliceáil an teastas chun é a íoslódáil nó a phriontáil. Anois, lean ar aghaidh lenár <a href='http://studio.code.org'>gcúrsaí eile</a>, nó féach tuilleadh roghanna le <a href='/learn/beyond'>Foghlaim thar an Uair Chódála</a>."
+  get_a_certificate_message_after_markdown: "Cliceáil an teastas chun é a íoslódáil nó a phriontáil. Anois, lean ar aghaidh lenár [gcúrsaí eile](http://studio.code.org), nó féach tuilleadh roghanna le [Foghlaim thar an Uair Chódála](/learn/beyond)."
   thanks_for_submitting: "Go raibh maith agat!"
   if_you_enjoyed: "Má bhain tú taitneamh as, iarr ar chairde triail a bhaint as freisin! Ba mhaith linn an saol ar fad a mhúineadh."
   personalize_certificate: "Cuir d'ainm ar do theastas"
@@ -161,6 +173,7 @@
   enter_certificate_names: "Cuir isteach suas le 30 ainm, **ceann amháin ar gach líne**. Cruthófar leathanach inphriontáilte le teastais phearsantaithe %{script_name}."
   share_achievement: "Comhroinn a bhfuil déanta agat"
   beyond_hour_message: "Lean ort leis <a href='http://studio.code.org'>na cúrsaí eile atá againn</a>, nó <a href='/learn/beyond'>Foghlaim thar Uair an Chloig</a>."
+  beyond_hour_message_markdown: "Lean ar aghaidh lenár [gcúrsaí eile](http://studio.code.org), nó féach tuilleadh roghanna le [Foghlaim thar an Uair Chódála](/learn/beyond)."
   leaderboards_for_hoc: "An Uair Chódála: Barr an Tábla"
   support_url: "http://support.code.org/"
   country: "Tír"
@@ -235,6 +248,9 @@
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Múinteoir'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5ú bliain'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Frank Martinez, Múinteoir'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Múinteoir'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5ú bliain'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Múinteoir'
   studiobar_title: "Taiscéal an <a href='http://studio.code.org'>Stiúideo Códála</a>"
   studiobar_title_nolink: "Taiscéal an Stiúideo Códála"
   studiobar_elementary_title: "Bunchúrsaí"
@@ -415,7 +431,9 @@
   class_submission_level_vocational: "Gairmscoil"
   class_submission_languages_other: "Teanga(cha) eile"
   videos_more: "Tuilleadh <a href='%{inspiring_videos_playlist}'>físeán spreagúil</a> ina bhfuil daoine cáiliúla agus eiseamláirí do dhaoine óga"
+  videos_more_markdown: "[Tuilleadh físeán spreagúil](%{inspiring_videos_playlist}) ina bhfuil ceiliúráin agus daoine mór-le-rá"
   careers_page_more: "Tuilleadh <a href='%{careers_url}' target='_blank'>físeán spreagúil</a> ina bhfuil saineolaithe sna réimsí teicneolaíochta"
+  careers_page_more_markdown: "[Tuilleadh físeán spreagúil](%{careers_url}) ina bhfuil saineolaithe sna réimsí teicneolaíochta"
   playlab_choose_theme: "Roghnaigh téama don Spraotharlann"
   playlab_classic_title: "Clasaiceach"
   playlab_gumball_title: "Saol Iontach Gumball"
@@ -521,9 +539,13 @@
   volunteer_engineer_submission_subtitle_specific: "Tá %{num_teachers} múinteoir ag lorg cúnaimh ó shaorálaithe.<br>Tá %{num_volunteers} saorálaí tar éis clárú. Bí leo!"
   volunteer_engineer_submission_intro_background: "Is éard atá san Uair Chódála ná gluaiseacht dhomhanda le rún na milliúin dalta ar fud an domhain a spreagadh chun triail a bhaint as an ríomheolaíocht. Glac páirt le linn Seachtain na Ríomheolaíochta, 7-13 Mí na Nollag."
   volunteer_engineer_submission_intro_recruit: 'Ba bhreá le go leor múinteoirí dul i dteagmháil le saorálaí atá <span style="font-family: ''Gotham 7r'', sans-serif;">díograiseach i dtaobh na ríomheolaíochta</span> chun cabhrú sa seomra ranga, nó a bheadh in ann <span style="font-family: ''Gotham 7r'', sans-serif;">daltaí a spreagadh</span> faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Ba bhreá le go leor múinteoirí dul i dteagmháil le saorálaí atá **díograiseach i dtaobh na ríomheolaíochta** chun cabhrú sa seomra ranga, nó a bheadh in ann daltaí a **spreagadh** faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá)."
   volunteer_engineer_submission_intro_guide: "Faigh tuilleadh eolais faoi <a href=\"%{volunteer_guide}\">oibriú deonach anseo</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Gheobhaidh tú tuilleadh eolais faoi obair dheonach [anseo](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Líon isteach na réimsí seo a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Ní mór duit a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair faoi deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go poiblí d'aon duine ag féachaint ar <a href=\"/volunteer/local\">léarscáil na saorálaithe</a>. Tá na réimsí marcáilte le <span class=\"form-required-field\">*</span> riachtanach."
+  volunteer_engineer_submission_intro_signup_markdown: "Líon isteach na réimsí seo a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Ní mór duit a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair faoi deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go poiblí d'aon duine ag féachaint ar [léarscáil na saorálaithe](/volunteer/local). Tá na réimsí marcáilte le _*_ riachtanach."
   volunteer_engineer_submission_intro_links: "An múinteoir thú? An bhfuil tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an <a href=\"%{volunteer_local}\">léarscáil</a> atá againn."
+  volunteer_engineer_submission_intro_links_markdown: "An múinteoir thú? An bhfuil tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an [léarscáil](%{volunteer_local}) atá againn."
   volunteer_engineer_submission_update_information: "Nuashonraigh d'fhaisnéis phearsanta"
   volunteer_engineer_submission_header_shared: "Eolas comhroinnte le múinteoirí ar léarscáil na saorálaithe"
   volunteer_engineer_submission_field_name: "Ainm"
@@ -557,6 +579,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Deimhním go bhfuilim ar a laghad ocht mbliana déag d'aois."
   volunteer_engineer_submission_submit: "Seol"
   volunteer_engineer_submission_thankyou: "Go raibh maith agat! Tá tú cláraithe mar shaorálaí anois. Bainfidh múinteoirí úsáid as <a href=\"%{url}\">an léarscáil seo</a> chun teacht ar shaorálaithe cosúil leatsa. Tabhair 48 uair an chloig sula mbeidh d'fhaisnéis ar an léarscáil mar is ceart."
+  volunteer_engineer_submission_thankyou_markdown: "Go raibh maith agat! Tá tú cláraithe mar shaorálaí anois. Bainfidh múinteoirí úsáid as [an léarscáil seo](%{url}) chun teacht ar shaorálaithe cosúil leatsa. Tabhair 48 uair an chloig sula mbeidh d'fhaisnéis ar an léarscáil mar is ceart."
   volunteer_engineer_submission_commitment_uncertain: "Nílim cinnte"
   volunteer_engineer_submission_commitment_one_hr_per_week: "Uair amháin sa tseachtain"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 huaire an chloig sa tseachtain"
@@ -756,6 +779,7 @@
   dashboard_pre-express: 'Luaschúrsa do Réamhléitheoirí: '
   dashboard_express: 'Luaschúrsa: '
   dashboard_unplugged: "Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na ceachtanna \"díphlugáilte\" seo</a> i do sheomra ranga."
+  dashboard_unplugged_markdown: "Mura bhfuil ríomhairí agat, bain triail as [na ceachtanna díphlugáilte seo](%{unplugged_url}) i do sheomra ranga."
   dashboard_tools: 'Uirlisí: '
   dashboard_curriculum: "Curaclam"
   dashboard_curriculum_overview: "Foramharc ar an gCuraclam Bunscoile"
@@ -1500,6 +1524,7 @@
   hoc_overview_dance_2019_subtitle: "Códáil Cóisir Dhamhsa agus comhroinn le cairde í. Ceol le Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, agus 34 réalta eile!"
   hoc_overview_title: "Gníomhaíochtaí don Uair Chódála ó Code.org"
   hoc_overview_subtitle: "Is éard atá san <a href=\"https://hourofcode.com\">Uair Chódála</a> ná gluaiseacht dhomhanda a shroicheann na milliúin dalta i níos mó ná 180 tír. Is féidir le haon duine in aon áit ócáid don Uair Chódála a eagrú, nó triail a bhaint as aon cheann de na 500+ cúrsa teagaisc, ar fáil i níos mó ná 45 teanga."
+  hoc_overview_subtitle_markdown: "Is éard atá san [Uair Chódála](https://hourofcode.com) ná gluaiseacht dhomhanda a shroicheann na milliúin dalta i níos mó ná 180 tír. Is féidir le haon duine in aon áit ócáid don Uair Chódála a eagrú, nó triail a bhaint as aon cheann de na 500+ cúrsa teagaisc, ar fáil i níos mó ná 45 teanga."
   hoc_overview_partner_activities_title: "Tuilleadh gníomhaíochtaí ó pháirtnéirí"
   hoc_overview_partner_activities_body: "Tá níos mó ná 500 gníomhaíochtaí ríomheolaíochta ar shuíomh na hUaire Códála, do dhaoine ag gach leibhéal agus gach aois, forbartha ag Code.org agus ár gcomhpháirtithe."
   hoc_overview_partner_activities_link: "Féach ar na gníomhaíochtaí"
@@ -1600,6 +1625,7 @@
   hoc2018_dance_view_creativity_video_playlist: "Cad is Cruthaitheacht ann? Breathnaigh ar an tsraith iomlán (5 nóiméad)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "I gcomhar le"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Is éard atá in Amazon Future Engineer* ná clár cuimsitheach óige-go-gairm a bhfuil an sprioc aige gasúir bhochta agus gasúir faoi mhíbhuntáiste a spreagadh, a mhúineadh, agus a thraenáil chun gairmeacha sa ríomheolaíocht a chleachtadh. <a href='%{amazon_future_engineer_link}' target='_blank'>Tuilleadh eolais</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Is éard atá in Amazon Future Engineer* ná clár cuimsitheach óige-go-gairm a bhfuil an sprioc aige gasúir bhochta agus gasúir faoi mhíbhuntáiste a spreagadh, a mhúineadh, agus a thraenáil chun gairmeacha sa ríomheolaíocht a chleachtadh. [Tuilleadh eolais](%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Tuilleadh eolais faoi Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "Maidir le hAmazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Foghlaim faoi chlár ó naíscoil-go-hollscoil de chuid Amazon a chuireann acmhainní oideachasúla sa ríomheolaíocht ar fáil. Gheobhaidh tú tuilleadh eolais faoi champaí samhraidh, ranganna ríomheolaíochta ag an dara leibhéal, scoláireachtaí, agus intéirneachtaí."

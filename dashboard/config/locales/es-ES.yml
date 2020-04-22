@@ -277,6 +277,7 @@ es:
 '
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
+    parent_email_added_subject: "¡Bienvenido a Code.org!"
   teacher_mailer:
     new_teacher_subject: "¡Bienvenido a Code.org!"
     delete_teacher_subject: 'Aviso de Code.org: Su cuenta ha sido borrada'
@@ -527,6 +528,9 @@ es:
     update: Actualizar cuenta de usuario
     account_successfully_updated: Cuenta actualizada exitosamente.
     update_email: Actualizar
+    parent_guardian_email_label: Email del padre o guardián
+    none: Ninguno
+    encrypted: encriptado
   user_level:
     completed: Completada
     tried: Prueba

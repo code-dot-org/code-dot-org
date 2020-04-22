@@ -66,6 +66,8 @@ sk-SK:
           **360 / 12 = 30**
       2-3 Maze 6:
         2-3_Maze_6_a: Sú dve možnosti ako vyriešiť túto úlohu!
+      4-5 Nested Loops 12:
+        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
       4-5 While Loops 8:
         4-5_While_Loops_8_a: Každý predmet potrebuje vlastnú slučku "while".
       Course 4 Artist 12:
@@ -3324,6 +3326,32 @@ sk-SK:
           -   Zabezpeč, aby sa na obrazovke objavil tanečník.
 
           _Táto úroveň končí po 4 taktoch._
+        challenges: "**Dobrovoľná výzva**\n\n-   Vyber si inú pesničku.\n-   Presuň
+          svojho tanečníka na novú pozíciu. \n-   Vytvor viac ako jedného tanečníka."
+      Dance_2019_02:
+        validation: |-
+          **Ako prejdem tento level?**
+
+          -   Tanečník musí predviest nejaký pohyb.
+          -   Musíš stlačiť tlačidlo so šípkou.
+
+          _Tento level skončí po 4 taktoch._
+        challenges: |-
+          **Doborovoľná výzva**
+
+          Použi viac ako jeden blok <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
+      Dance_2019_03:
+        validation: |-
+          **Ako prejdem tento level?**
+
+          -   Obaja tanečníci musia predviest nejaký pohyb.
+          -   Musíš stlačiť tlačidlo so šípkou.
+
+          _Tento level skončí po 6 taktoch._
+        challenges: |-
+          **Doborovoľná výzva**
+
+          -   Tanečník musí regovať po stlačení tlačidiel ľavej a pravej šipky.
       Dance_2019_04:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -3338,6 +3366,60 @@ sk-SK:
           -   Po 6 taktoch musí tvoj tanečník robiť iný krok ako robil po 4 taktoch.
 
           _Úroveň končí po 11 taktoch._
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          -   Zmeň pozadie, vždy keď tanečníci zmenia tanečný pohyb.
+      Dance_2019_06:
+        validation: "**Ako prejdem tento level?**\n\n-   Vytvor jedného hlavného tanečníka
+          a skupinu vedľajších tanečníkov v rámvi prvých štyroch taktov. \n\n_Tento
+          level sa skončí po siedmich taktoch._"
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          -   Vytvor niekoľko skupín vedľajších tanečníkov.
+      Dance_2019_07:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Zmeň veľkosť aspoň jedného tanečníka.
+
+          _Tento level končí po 6 taktoch._
+        challenges: |-
+          **Dobrovoľná výzva**
+
+          -   Experimentuj a zmeň aj ďalšie vlastnosti ako napríklad šírka alebo otočenie.
+      Dance_2019_08:
+        validation: |-
+          **Ako prejdem túto úroveň?**
+
+          -   Zmeň odtieň aspoň jedného tanečníka.
+
+          _Tento level končí po 6 taktoch._
+        tint_hint: Všimli ste si, že sa vaši tanečníci nezmenia presne na tú farbu,
+          kotrú ste si vybrali? Je to tak preto, že **odtiene** kombinujú farbu, ktorú
+          si vyberiete, s farbami tanečníka.
+      Dance_2019_09:
+        validation: |-
+          **Ako prejdem tento level?**
+
+          -   Len stlač tlačidlo "Dokončiť"!
+        repeat_every_ideas: |-
+          **Potrebuješ inšpiráciu?**
+
+          -   Opakovane zmeň veľkosť tanečníka, aby narástol.
+          -   Opakovane meň otáčanie tanečníka, aby si ho roztočil/a.
+
+          _Taktiež môžeš použiť záporné čísla, aby si vytvoril/a opačný efekt!_
+        next_previous: |-
+          **Dobrovoľná výzva**
+
+          -   Tento nový blok udalostí môžeš tiež použiť na prechádzanie zoznamom tanečných pohybov, ak ho nastaveníš napr´klad na `(Náhodné)`, `(Ďalšie)`, alebo `(Predchádzajúce)`.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -3438,6 +3520,8 @@ sk-SK:
           -   Použi blok `keď hore stlačený` nato, aby Robot urobil tanečný krok, keď stlačíš šípku hore.
 
           _Táto úroveň končí po 7 taktoch._
+      Dance_Party_extras_alternate_2019:
+        alternate: Blok na striedanie je v kategórii "Tanečníci“.
       Function intro Ryan:
         Function_intro_Ryan_b: Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju
@@ -3608,6 +3692,9 @@ sk-SK:
           Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
 
           Koľko potrebuješ zakaždým pridať, aby si sa dostal k ďalšiemu množstvu nektárov?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Skús pomocou agenta vybudovať mosty, aby sa Alex alebo
+          Steve mohli prechádzať za okrajmi mapy.
       Overworld House Frame Chosen:
         mc_6_b: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
@@ -3648,6 +3735,9 @@ sk-SK:
       Underground Iron_2019:
         mc_10_c: Neboj sa spraviť chybu! Spusti kód, aby si uvidel, čo sa stane, aj
           keď si ešte nevyriešil celú úlohu.
+      behaviors 5:
+        behavior hint: Na vyriešenie tejto úlohy je treba upraviť správanie. Postava
+          kozmonauta sa musí pohnuť dvomi rôznymi smermi, aby išla diagonálne.
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Komentáre sú tiež užitočné, ak sa iní ľudia snažia
           prečítať tvoj kód.
@@ -4097,6 +4187,8 @@ sk-SK:
       courseA_collector_loops2_2019:
         courseA_collector_loops2_a: Musíš sa pohnúť predtým, ako dokážeš pozbierať
           nejaký drahokam.
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: Skús použiť blok "opakovať"!
       courseA_collector_loops4:
         courseA_collector_loops4_a: Aby si zmenil, ako ďaleko Laurel zájde, tak zmeň
           počet opakovaní daného cyklu.
@@ -5320,6 +5412,8 @@ sk-SK:
           a pripoj ich ku bloku <xml><block type="when_run"/></xml>, aby sa Scrat
           dostal k žaluďu.
       courseB_maze_seq4:
+        courseB_maze_seq4_a: Skús pridávať inštrukcie po jednej, až kým ma nedostaneš
+          k prasiatku.
         courseB_maze_seq4_b: Budeš chcieť použiť blok <xml><block type="maze_moveEast"/></xml>,
           aby si vyriešil túto úlohu.
       courseB_maze_seq4_2018:
@@ -8174,6 +8268,111 @@ sk-SK:
         '1': Ak vymieňaš tvary, nezabudni, že musíš vymeniť aj ich uhly!
       courseD_artist_5_2018_2019:
         '1': Ak vymieňaš tvary, nezabudni, že musíš vymeniť aj ich uhly!
+      courseD_artist_binary2:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_artist_binary2_2018:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_artist_binary2_2019:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_artist_binary3:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary3_2018:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary3_2019:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary4:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary4_2018:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary4_2019:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary5:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_artist_binary5_2018:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_artist_binary5_2019:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_artist_binary6:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_artist_binary6_2018:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_artist_binary6_2019:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_artist_binary7:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary7_2018:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary7_2019:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_artist_binary8:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary8_2018:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_artist_binary8_2019:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
       courseD_artist_binary_challenge2_2018:
         courseD_artist_binary_challenge2_a: V pôvodnom kóde je potrebné opraviť len
           pár riadkov.
@@ -8549,15 +8748,82 @@ sk-SK:
       courseD_artist_ramp12:
         courseD_artist_ramp12_c: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseD_autorun_binary2_2019:
+        courseD_artist_binary2_a: Klikni na `Spustiť` a sleduj, čo sa stane!
+      courseD_autorun_binary3_2019:
+        courseD_artist_binary3_a: 'Úlohu vyriešiš pomocou jednej z postupností nadefinovaných
+          v paneli nástrojov. '
+        courseD_artist_binary3_b: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_autorun_binary4_2019:
+        courseD_artist_binary4_a: Pozri sa na prvé tri štvorce v prvom rade. Myslíš,
+          že by sa ich opakovaním dal nakresliť celý vzor?
+        courseD_artist_binary4_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_autorun_binary5_2019:
+        courseD_artist_binary5_a: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary5_b: Stačí vymeniť 2 riadky.
+        courseD_artist_binary5_c: Ak sa ti stále nedarí, skús si jednotlivé riadky
+          nakresliť na papier a riešenie pohľadaj tam.
+      courseD_autorun_binary6_2019:
+        courseD_artist_binary6_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary6_b: Svoj kód môžeš vybudovať znak po znaku a priebežne
+          ho testovať!
+      courseD_autorun_binary7_2019:
+        courseD_artist_binary7_a: Začni vľavo hore a sleduj vzor. Ako ďaleko musíš
+          zájsť, aby sa ten vzor začal opakovať?
+        courseD_artist_binary7_b: Neboj sa chýb! Napíš kúsok kódu, spusti ho a sleduj,
+          čo sa stane. Pomôže ti to aj  vtedy, keď ešte nemáš hotové celé riešenie.
+      courseD_autorun_binary8_2019:
+        courseD_artist_binary8_a: Tá špirála ťa možno zmiatla. V tomto cvičení si
+          musíš oddeliť jednotlivé riadky a vzor kresliť riadok po riadku.
+        courseD_artist_binary8_b: Skús si najprv spustiť ponúkaný kód, nech vieš,
+          s čím pracuješ.
+        courseD_artist_binary8_c: Neboj sa spraviť chybu! Vyskúšaj jednotlivé možnosti
+          a svoj kód spusti aj keď ešte nevieš správnu odpoveď.
+      courseD_bee_conditionals2:
+        courseD_bee_conditionals2_a: Niekedy sa tam kvet bude nachádzať a niekedy
+          nie. Ak chceš, aby tvoj kód fungoval v oboch prípadoch, určite použi podmienku
+          `ak`.
+        courseD_bee_conditionals2_b: Môžeš použiť cyklus `opakuj`, alebo `pokiaľ tam
+          je cesta vpred`, aby si sa dostal cez toto bludisko.
+        courseD_bee_conditionals2_c: Nemusíš kontrolovať včelie plásty, pod oblakmi
+          budú len kvety, alebo nič.
+      courseD_bee_conditionals2_2018:
+        courseD_bee_conditionals2_a: Niekedy sa tam kvet bude nachádzať a niekedy
+          nie. Ak chceš, aby tvoj kód fungoval v oboch prípadoch, určite použi podmienku
+          `ak`.
+        courseD_bee_conditionals2_b: Môžeš použiť cyklus `opakuj`, alebo `pokiaľ tam
+          je cesta vpred`, aby si sa dostal cez toto bludisko.
+        courseD_bee_conditionals2_c: Nemusíš kontrolovať včelie plásty, pod oblakmi
+          budú len kvety, alebo nič.
+      courseD_bee_conditionals2_2019:
+        courseD_bee_conditionals2_a: Niekedy sa tam kvet bude nachádzať a niekedy
+          nie. Ak chceš, aby tvoj kód fungoval v oboch prípadoch, určite použi podmienku
+          `ak`.
+        courseD_bee_conditionals2_c: Nemusíš kontrolovať včelie plásty, pod oblakmi
+          budú len kvety, alebo nič.
       courseD_bee_conditionals3:
+        courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
+          miestečko a zisti, či sa tam nachádza kvet, alebo nič.
+        courseD_bee_conditionals3_b: Môžeš použiť cyklus `opakuj` alebo \`pokiaľ,
+          aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
       courseD_bee_conditionals3_2018:
+        courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
+          miestečko a zisti, či sa tam nachádza kvet, alebo nič.
+        courseD_bee_conditionals3_b: Môžeš použiť cyklus `opakuj` alebo \`pokiaľ,
+          aby sa včela pohybovala smerom vpred. Použi ktorýkoľvek chceš!
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
       courseD_bee_conditionals3_2019:
+        courseD_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
+          miestečko a zisti, či sa tam nachádza kvet, alebo nič.
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
@@ -9169,9 +9435,67 @@ sk-SK:
       courseD_collector_ramp8:
         courseD_collector_ramp8_b: Ak chceš zjednodušiť svoj kód, môžeš vložiť jeden
           cyklus `opakuj` do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseD_farmer_condLoops1:
+        courseD_farmer_condLoops1_a: Potrebuješ hľadať kukuricu 5-krát tak, že použiješ
+          cyklus opakovania.
+      courseD_farmer_condLoops1_2018:
+        courseD_farmer_condLoops1_a: Potrebuješ hľadať kukuricu 5-krát tak, že použiješ
+          cyklus opakovania.
+      courseD_farmer_condLoops1_2019:
+        courseD_farmer_condLoops1_a: Potrebuješ hľadať kukuricu 5-krát tak, že použiješ
+          cyklus opakovania.
+      courseD_farmer_condLoops2:
+        courseD_farmer_condLoops2_a: Najlepší spôsob je, keď vložíš jeden príkaz `ak`
+          do vnútra ďalšieho.
+      courseD_farmer_condLoops2_2018:
+        courseD_farmer_condLoops2_a: Najlepší spôsob je, keď vložíš jeden príkaz `ak`
+          do vnútra ďalšieho.
+      courseD_farmer_condLoops2_2019:
+        courseD_farmer_condLoops2_a: Najlepší spôsob je, keď vložíš jeden príkaz `ak`
+          do vnútra ďalšieho.
+      courseD_farmer_condLoops4:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          Nikto nevie koľko šalátových hlavčiek vyrastie z jedného výhonka.
+
+          Použi cyklus `pokiaľ tam je šalát` a zberaj, dokiaľ nebude všetko pozberané.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Cyklus `pokiaľ` zvládne aj
+          prázdne polia! Ak tam už nie je šalát, prestane zberať a umožní kódu posunúť
+          sa ďalej.
+      courseD_farmer_condLoops4_2018:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          Nikto nevie koľko šalátových hlavčiek vyrastie z jedného výhonka.
+
+          Použi cyklus `pokiaľ tam je šalát` a zberaj, dokiaľ nebude všetko pozberané.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Cyklus `pokiaľ` zvládne aj
+          prázdne polia! Ak tam už nie je šalát, prestane zberať a umožní kódu posunúť
+          sa ďalej.
+      courseD_farmer_condLoops4_2019:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          Nikto nevie koľko šalátových hlavčiek vyrastie z jedného výhonka.
+
+          Použi cyklus `pokiaľ tam je šalát` a zberaj, dokiaľ nebude všetko pozberané.
+        grade3_RunningFarm_4courseD_farmer_condLoops4_b: Cyklus `pokiaľ` zvládne aj
+          prázdne polia! Ak tam už nie je šalát, prestane zberať a umožní kódu posunúť
+          sa ďalej.
+      courseD_farmer_condLoops5:
+        courseD_farmer_condLoops5_a: Je tu nový cyklus `pokiaľ tam sú tekvice`. Dokážeš
+          ho použiť v tejto úlohe?
+        courseD_farmer_condLoops5_b: Na jednom miesto môže byť viac ako jedna kukurica,
+          alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!
+      courseD_farmer_condLoops5_2018:
+        courseD_farmer_condLoops5_a: Je tu nový cyklus `pokiaľ tam sú tekvice`. Dokážeš
+          ho použiť v tejto úlohe?
+        courseD_farmer_condLoops5_b: Na jednom miesto môže byť viac ako jedna kukurica,
+          alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!
+      courseD_farmer_condLoops5_2019:
+        courseD_farmer_condLoops5_a: Je tu nový cyklus `pokiaľ tam sú tekvice`. Dokážeš
+          ho použiť v tejto úlohe?
+        courseD_farmer_condLoops5_b: Na jednom miesto môže byť viac ako jedna kukurica,
+          alebo šalát. Použi cyklus `pokiaľ` a pozberaj všetky!
       courseD_farmer_condLoops6_2018:
         courseD_farmer_condLoops6_a: Posúvaj farmárku po každom kúsku šprály s použitím
-          cyklu `pokiaľ tam je cesta vpred` alebo bloku `ak tam je cesta vpred / inak`.
+          cyklu `pokiaľ tam je cesta vpred`, alebo bloku `ak tam je cesta vpred /
+          inak`.
         courseD_farmer_condLoops6_b: Počas zberu potrebuješ zbierať len kukuricu.
           Tekvicu stačí ak pozbieraš až na konci programu.
       courseD_farmer_condLoops6_2019:
@@ -11585,6 +11909,13 @@ sk-SK:
           **Riešenie:**
 
           ![Solution](https://images.code.org/1236e605d55d8cc9beafbca5425c8f75-image-1543523947735.png)
+      courseF_bee_conditionals2:
+        courseF_bee_conditionals2_a: Niekedy sa tam kvet bude nachádzať a niekedy
+          nie. Ak chceš, aby tvoj kód fungoval v oboch prípadoch, určite použi podmienku
+          `ak`.
+      courseF_bee_conditionals3:
+        courseF_bee_conditionals3_a: Použi podmienku `ak`, aby si skontroloval každé
+          miestečko a zisti, či sa tam nachádza kvet, alebo nič.
       courseF_bee_for1:
         courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
           `opakuj`, aby si povedal, koľko krát sa má opakovať.

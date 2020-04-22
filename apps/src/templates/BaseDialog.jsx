@@ -87,6 +87,10 @@ export default class BaseDialog extends React.Component {
         ...bodyStyle,
         height: '80%'
       };
+      modalBodyStyle = {
+        ...modalBodyStyle,
+        boxSizing: 'border-box'
+      };
     }
 
     let wrapperClassNames = '';

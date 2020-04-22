@@ -47,7 +47,7 @@ cs:
         title: Budování nadace
         desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost), a studenti diskutují představu, že je trvalá, když věci se komplikují.
       GettingLoopy:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou instruováni to opakovat.
       RelayProgramming:
         title: Relay programování
@@ -71,7 +71,7 @@ cs:
         title: Binární náramky
         desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než jedním způsobem.
       DigitalFootprint:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
       ComputationalThinking:
         title: Aritmetické Myšlení
@@ -156,7 +156,7 @@ cs:
         title: Velká událost
         desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
       courseB_unplugged_digitalFootprint:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
       courseC_unplugged_buildingAFoundation:
         title: Budování nadace
@@ -165,7 +165,7 @@ cs:
         title: 'Algoritmy ze života: Papírová letadla'
         desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě, konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       courseC_unplugged_gettingLoopy:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou instruováni to opakovat.
       courseC_unplugged_binaryBracelets:
         title: Binární náramky
@@ -209,7 +209,7 @@ cs:
         title: Psaní písniček s parametry
         desc: 'Jednou z nejkrásnějších konstrukcí ve světě informatiky je funkce.  Funkce (někdy volané procedury) jsou mini-programy, které můžete použít znova a znova ve větším programu. Tato lekce vám pomůže studentům intuitivně pochopit, proč kombinace kousky kódu do funkce je užitečnou praxí.  '
       courseB_unplugged_MRF_2018:
-        title: Mí robotičtí přátelé
+        title: Moji robotičtí přátelé
       PlantASeed_2018:
         title: 'Algoritmy ze života: Zasadit semínko'
         desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
@@ -235,7 +235,7 @@ cs:
         title: Podmínky
         desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a "Vytáhnu-li si černou kartu, ty dostaneš bod."
       DigitalFootprint_2018:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
       BinaryImages_2018:
         title: Binární obrázky
@@ -244,7 +244,7 @@ cs:
         title: 'Algoritmy ze života: Papírová letadla'
         desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě, konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
       GettingLoopy_2018:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou instruováni to opakovat.
       BinaryBracelets_2018:
         title: Binární náramky
@@ -255,7 +255,9 @@ cs:
         title: Štafetové programování
         desc: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu. 
       courseB_unplugged_MRF_2019:
-        title: Mí robotičtí přátelé
+        title: Moji robotičtí přátelé
+      courseB_unplugged_loopyMRF_2019:
+        title: Moji zacyklení robotičtí přátelé (ml.)
       Conditionals_2019:
         title: Podmínky
         desc: Aby se žáci naučili, co jsou podmíněné příkazy, hrají karetní hru a vytváří si pravidla jako "Když si vytáhnu červenou kartu, dostanu bod" a "Vytáhnu-li si černou kartu, ty dostaneš bod."
@@ -271,7 +273,7 @@ cs:
         title: Binární obrázky
         desc: Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky, naše předchozí kurzy učí studenty, že informace lze znázornit v různých binárních volbách.  V této lekci tento koncept posuneme jeden krok dále, jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace (např. obrázky a barvy).
       GettingLoopy_2019:
-        title: Bláznit
+        title: Bláznění s cykly
         desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou instruováni to opakovat.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Aktivita bez počítače
@@ -298,7 +300,7 @@ cs:
       MoveItMoveIt_2019:
         title: Pohyb, pohyb
       DigitalFootprint_2019:
-        title: Tvé digitální stopy
+        title: Tvá digitální stopa
         desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě vytvoří digitální stopu nebo "stopu", která má své důsledky.
       courseE_simon_says_2019:
         title: Kuba řekl

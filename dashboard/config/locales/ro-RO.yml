@@ -262,6 +262,7 @@ ro:
       %{name}
   parent_mailer:
     student_associated_subject: Informații de conectare la Code.org
+    parent_email_added_subject: Bine ați venit la Code.org!
   teacher_mailer:
     new_teacher_subject: Bine ați venit la Code.org!
     delete_teacher_subject: 'Notificare Code.org: Contul dvs. a fost șters'
@@ -510,6 +511,9 @@ ro:
     update: Actualizaţi contul
     account_successfully_updated: Contul a fost actualizat cu succes.
     update_email: Actualizează
+    parent_guardian_email_label: E-mail părinte/tutore
+    none: Nici unul
+    encrypted: criptat
   user_level:
     completed: Finalizat
     tried: Încercat

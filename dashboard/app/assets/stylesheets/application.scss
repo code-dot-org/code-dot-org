@@ -171,12 +171,6 @@ img.video_thumbnail {
 }
 
 .header-wrapper {
-  &.hide_on_mobile {
-    @media screen and (max-device-width: 500px) {
-      display: none;
-    }
-  }
-
   padding-top: 0;
   min-height: 60px;
   position: relative;
@@ -1131,9 +1125,6 @@ input.header_input {
   left: $codeApp-left-margin;
   right: 25px;
   bottom: 10px;
-  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
-    top: 10px;
-  }
 
   &.centered_embed {
     position: relative;
@@ -1608,12 +1599,19 @@ a.download-video {
     width: 800px;
   }
 
+  .signup-header {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+
   .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
 
-    #school-info-inputs {
-      width: 100%;
+    .section-container {
+      padding: 10px;
+      flex-grow: 1;
       background-color: $school-info-background;
       border: 1px solid $school-info-border-color;
 
@@ -1624,6 +1622,10 @@ a.download-video {
       hr {
         border: 1px solid $school-info-border-color;
       }
+    }
+
+    #school-info-inputs {
+      padding: 0;
     }
 
     .field-row {
@@ -1644,7 +1646,10 @@ a.download-video {
 
     .field_with_errors {
       display: flex;
-      flex-grow: 1;
+      flex-basis: 100%;
+      input, select {
+        border-color: $red;
+      }
     }
 
     .field_with_errors label {
@@ -1690,7 +1695,7 @@ a.download-video {
 
     .row {
       display: flex;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       [class*=span] {
         align-self: center;
@@ -1714,6 +1719,49 @@ a.download-video {
       }
     }
 
+    #parent-email-section {
+      background-color: $school-info-background;
+      border: 1px solid $school-info-border-color;
+      flex-wrap: wrap;
+    }
+
+    .signup-field-label {
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .padded-container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      .row {
+        flex-grow: 1;
+      }
+
+      .parent-email-field-input {
+        flex-grow: 1;
+      }
+    }
+
+    .parent-email-section-header {
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    .parent-email-field {
+      margin-top: 20px;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+
+    #teacher-name-label, #student-name-label {
+      display: flex;
+      flex-basis: 100%;
+    }
+
     .checkbox {
       display: flex;
       padding: 0;
@@ -1724,8 +1772,11 @@ a.download-video {
 
       p, span {
         margin: 0;
-        padding: 10px;
+        padding: 0 10px;
         font-size: 14px;
+      }
+      .field_with_errors {
+        flex-basis: auto;
       }
     }
 
@@ -1736,6 +1787,7 @@ a.download-video {
     }
 
     .radio {
+      padding: 0;
       display: flex;
       input[type=radio] {
         margin-left: 0;
@@ -1746,7 +1798,7 @@ a.download-video {
         margin-right: 5px;
       }
       .field_with_errors {
-        flex-grow: 0;
+        flex-basis: auto;
       }
     }
 
@@ -1774,6 +1826,17 @@ a.download-video {
     #forgot-password {
       align-self: center;
       font-style: italic;
+    }
+
+    .tos {
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+
+    #gdpr-section {
+      flex-wrap: wrap;
     }
   }
 }
@@ -1807,11 +1870,6 @@ a.download-video {
     width: 40%;
     border-color: $light_gray;
   }
-}
-
-.signup-header {
-  flex-grow: 1;
-  text-align: center;
 }
 
 // NEW STYLES FOR devise/shared/_new_links
@@ -3278,4 +3336,116 @@ h2.danger {
 
 .foorm-button-right {
   float: right;
+}
+
+#parent-email-banner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: $purple;
+  text-align: center;
+  color: $white;
+  border-top: 1px solid $white;
+
+  /* Make sure we're in front of the AnswerDash icon in the lower-right corner. */
+  z-index: 2000000200;
+
+  .banner-content {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .text {
+      box-sizing: border-box;
+      text-align: left;
+      padding-right: 20px;
+
+      p {
+        font-size: 16px;
+        margin: auto;
+      }
+    }
+
+    .buttons {
+      box-sizing: border-box;
+      text-align: center;
+      margin: auto;
+
+      button {
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-left: 10px;
+        align-items: flex-start;
+        background-image: none;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-right-style: solid;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-top-style: solid;
+        box-sizing: border-box;
+        color: $white;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: normal;
+        height: 35px;
+        letter-spacing: normal;
+        line-height: 20px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 6px;
+        text-align: center;
+        text-indent: 0;
+        text-transform: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        word-spacing: 0;
+      }
+
+      #link_your_email {
+        background-color: $orange;
+        border-color: $orange;
+        border-image-source: none !important;
+        font-family: 'Gotham 4r', sans-serif !important;
+        text-shadow: none !important;
+        border-width: 1px !important;
+      }
+
+      #not_now {
+        background-color: $light_purple;
+        border-color: $light_purple;
+        border-image-source: none !important;
+        font-family: 'Gotham 4r', sans-serif !important;
+        text-shadow: none !important;
+        border-width: 1px !important;
+      }
+    }
+  }
+
+  /* desktop */
+  @media screen and (min-width: 971px) {
+    .text {
+      float: left;
+      width: 70%;
+    }
+    .buttons {
+      float: right;
+    }
+  }
+
+  /* mobile */
+  @media screen and (min-width: 0px) and (max-width: 970px) {
+    display: none;
+  }
 }

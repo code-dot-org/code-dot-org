@@ -3,7 +3,6 @@ si:
   data:
     script:
       category:
-        csf_category_name: පරිගණක විද්‍යාවේ මූලිකාංග
         csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
         cspexams_category_name: පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය
         csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
@@ -1744,6 +1743,8 @@ si:
           stages:
             While Loops:
               name: නැවත සිදුවන ලුප
+            Variables:
+              name: විචල්‍යන්
         virtual-holding-place:
           stages:
             Functions:
@@ -1754,3 +1755,7 @@ si:
               name: ඇල්ගොරිතම්
             Events:
               name: වැඩසටහන්
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: නැවත සිදුවන ලුප

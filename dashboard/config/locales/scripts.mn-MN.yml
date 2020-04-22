@@ -6,7 +6,6 @@ mn:
         csd_category_name: КШУ-ны нээлтүүд ('17-'18)
         csd_2018_category_name: КШУ-ны нээлтүүд ('18-'19)
         csd_2019_category_name: КШУ-ны нээлтүүд ('19-'20)
-        csf_category_name: КШУ-ны үндсүүд
         csf_2018_category_name: КШУ-ны үндсүүд (2018)
         csf_international_category_name: КШУ-ны үндсүүд олон улсын
         csf2_draft_category_name: 'Хөгжүүлж буй: А-F хичээлүүд'
@@ -18320,7 +18319,7 @@ mn:
             CS Discoveries Post Course survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
         csd3-2020:
-          title: CSD Нэгж 3 - Анимейшн ба тоглоомууд (Туршилтын хувилбар)
+          title: CSD Нэгж 3 - Анимейшн ба тоглоомууд
           description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив
             урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх
             болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний
@@ -20368,6 +20367,10 @@ mn:
               name: Нэгж 5 Үнэлгээ 5 - AP хуурамч кодын практик асуултууд
             CS Principles Post Course survey:
               name: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+            Intro to App Lab:
+              name: Апп Лаб-н танилцуулга
+            Variables:
+              name: Хувьсагчууд
         virtual-holding-place:
           stages:
             Velocity:
@@ -20394,3 +20397,31 @@ mn:
               name: Алгоритм
             Events:
               name: Үйл явдлууд
+        no-lg:
+          stages:
+            new stage:
+              name: шинэ шат
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Нэгж 5 Үнэлгээ 2
+            While Loops:
+              name: Байхад гогцоо
+            Loops and Simulations:
+              name: Гогцоо ба симуляци
+            Introduction to Arrays:
+              name: Матрицын танилцуулга
+            'Building an App: Image Scroller':
+              name: 'Апп үүсгэх: Зураг гүйлгэгч'
+            Unit 5 Assessment 3:
+              name: Нэгж 5 Үнэлгээ 3
+            Processing Arrays:
+              name: Матрицыг боловсруулж байна
+            Functions with Return Values:
+              name: Буцаах утга бүхий функцүүд
+            'Building an App: Canvas Painter':
+              name: 'Апп бүтээх: Самбар будагч'
+            Unit 5 Assessment 4:
+              name: Нэгж 5 Үнэлгээ 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Нэгж 5 Үнэлгээ 5 - AP хуурамч кодын практик асуултууд

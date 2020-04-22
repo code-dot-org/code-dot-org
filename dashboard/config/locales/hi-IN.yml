@@ -259,6 +259,7 @@ hi:
 '
   parent_mailer:
     student_associated_subject: Code.org के लिए लॉगिन जानकारी
+    parent_email_added_subject: Code.org में आपका स्वागत है!
   teacher_mailer:
     new_teacher_subject: Code.org में आपका स्वागत है!
     delete_teacher_subject: 'Code.org सूचना: आपका खाता मिटा दिया गया है'
@@ -514,6 +515,9 @@ hi:
     update: खाता अद्यतन करें
     account_successfully_updated: खाता सफलतापूर्वक अद्यतन हो गया।
     update_email: अद्यतन करें
+    parent_guardian_email_label: अभिभावक ईमेल/
+    none: कोई नहीं
+    encrypted: कूटलेखन किया
   user_level:
     completed: पूरा हो गया
     tried: कोशिश की

@@ -6,7 +6,6 @@ is:
         csd_category_name: Uppgötvanir tölvunarfræði ('17-'18)
         csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
         csd_2019_category_name: Uppgötvanir tölvunarfræði ('19-'20)
-        csf_category_name: TF Grunnur
         csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
         csf_international_category_name: Grunnatriði TF - alþjóðlegt
         csf2_draft_category_name: 'Í þróun: Námskeið A-F'
@@ -6148,6 +6147,8 @@ is:
               name: Föll með skilagildum
             Unit 5 Assessment 4:
               name: 5. eining - Mat 4
+            Variables:
+              name: Breytur
         virtual-holding-place:
           stages:
             Velocity:
@@ -6172,3 +6173,25 @@ is:
               name: Algrím
             Events:
               name: Atvik
+        no-lg:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: 5. eining - Mat 2
+            While Loops:
+              name: Á meðan lykkjur
+            Loops and Simulations:
+              name: Lykkjur og hermilíkön
+            Introduction to Arrays:
+              name: Kynning á fylkjum
+            Unit 5 Assessment 3:
+              name: 5. eining - Mat 3
+            Processing Arrays:
+              name: Unnið með fylki
+            Functions with Return Values:
+              name: Föll með skilagildum
+            Unit 5 Assessment 4:
+              name: 5. eining - Mat 4

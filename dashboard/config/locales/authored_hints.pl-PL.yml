@@ -234,9 +234,9 @@ pl-PL:
           funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
           Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9:
-        2-3_Bee_Functions_8_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj budować
-          funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
-          Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
+        2-3_Bee_Functions_8_a: "Jeśli łamigłówka wydaje Ci się za trudna, spróbuj
+          budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
+          Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
         2-3_Bee_Functions_8_b: |-
           Pamiętaj, aby budować kodu wewnątrz zielonego bloku funkcji.
 
@@ -1235,6 +1235,7 @@ pl-PL:
         courseB_maze_seq_challenge2_b: Zmień bloki i wybierz środkową ścieżkę.
       course1_maze_seq_challenge2:
         courseB_maze_seq_challenge1_a: Najkrótsza ścieżka może tym razem nie działać.
+        courseB_maze_seq_challenge1_b: Staraj się poruszać na zachód, aby zacząć.
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: Zacznij od zrobienia zagnieżdżonej
           pętli aby stworzyć cztery ośmiokąty. Obróć się o 45 stopni aby zrobić ośmiokąt.
@@ -1337,15 +1338,13 @@ pl-PL:
         courseC_maze_programming_challenge2_b: Najkrótszym rozwiązaniem jest użycie
           5 bloków, ale wykorzystuje blok `repeat`!
       course3_bee_functions_challenge1:
-        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,
-          \ spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
-          ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz
-          cel!"
+        courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
+          spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
+          ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
       course3_bee_functions_challenge2:
-        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,
-          \ spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
-          ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz
-          cel!"
+        courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
+          spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
+          ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Przycisk `STEP` może być bardzo pomocny
           w tym wyzwaniu.
@@ -1524,9 +1523,9 @@ pl-PL:
         courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz
           coś tylko jeden raz.
       courseA_harvester_loops2_2019:
-        courseA_harvester_loops2_a: "Twój kod będzie miał **cztery** klocki `move
-          west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** <xml>\n`pick
-          corn`\n  <block type=\"harvester_corn\"/>\n</xml> klocki. "
+        courseA_harvester_loops2_a: "Twój kod będzie miał **cztery** bloki  \"przejdź
+          na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery**
+          bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
       courseA_harvester_loops3:
         courseA_harvester_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
           następnie umieść tam blok, który chcesz aby się powtarzał.
@@ -2513,23 +2512,21 @@ pl-PL:
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
           Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseE_bee_functions7:
-        courseE_bee_functions7_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj
+        courseE_bee_functions7_a: "Jeśli łamigłówka wydaje Ci się za trudna, spróbuj
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
-          Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
+          Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
         courseE_bee_functions7_b: |-
           Pamiętaj, aby budować kodu wewnątrz zielonego bloku funkcji.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       courseE_bee_functions_challenge1:
-        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,
-          \ spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
-          ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz
-          cel!"
+        courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
+          spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
+          ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
       courseE_bee_functions_challenge2:
-        courseE_bee_functions_challenge1_a: "Jeśli zadanie wydaje Ci sie za trudne,
-          \ spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
-          ich działanie. Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz
-          cel!"
+        courseE_bee_functions_challenge1_a: "Jeśli łamigłówka wydaje Ci się za trudna,
+          spróbuj budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj
+          ich działanie. Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
       courseF_artist_for4:
         courseF_artist_for4_a: |-
           **Jaka jest najmniejsza liczba, którą będziesz potrzebował?
@@ -2679,21 +2676,21 @@ pl-PL:
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
           Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel! \n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseF_bee_functions8a:
-        courseF_bee_functions8a_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj
+        courseF_bee_functions8a_a: "Jeśli łamigłówka wydaje Ci się za trudna, spróbuj
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
-          Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
+          Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
       courseF_bee_functionsPre7:
-        courseF_bee_functions7_a: "Jeśli zadanie wydaje Ci sie za trudne,  spróbuj
+        courseF_bee_functions7_a: "Jeśli łamigłówka wydaje Ci się za trudna, spróbuj
           budować funkcje po kawałku.  \n\nDodaj bloki, a następnie wypróbuj ich działanie.
-          Dodaj kolejne, a następnie spróbuj ponownie.  Wkrótce osiągniesz cel!"
+          Dodaj kolejne, t wypróbuj ponownie.  Wkrótce osiągniesz cel!"
       courseF_bee_fwp7:
-        courseF_bee_fwp7_b: Dodaj instrukcję `if` do swojej funkcji, aby pszczoła
-          sprawdzała zarówno plastry i kwiaty.
+        courseF_bee_fwp7_b: Dodaj instrukcję "jeśli" do swojej funkcji, aby pszczoła
+          sprawdzała zarówno plastry, jak i kwiaty.
       courseF_bee_fwp8:
-        courseF_bee_fwp8_a: Jak pętla `for` mogłaby pomóc w tej zagadce?
+        courseF_bee_fwp8_a: Jak pętla "dla" mogłaby pomóc w tej łamigłówce?
       courseF_bee_fwp_challenge1:
         courseF_bee_fwp_challenge1_b1: |-
-          Parametr `length` powinien być wykorzystany do ustawienia maksymalnej wartości w `for loop`.
+          Parametr "długość" powinien być wykorzystany do ustawienia maksymalnej wartości w pętli "dla".
 
           Nie zapomnij aby po zbiorach wrócić farmerem na główną ścieżkę!
       courseF_playlab_variables2b:

@@ -1021,6 +1021,72 @@ tr-TR:
         ve yazı aşağıdaki resimde olduğu gibi doğru boyutu belirtir.\n\r\n\r\n<img
         src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15\nPM.png\"
         style=\"width:100px\" style=\"float:left\">\r"
+      CSD U2 Heading Test: |-
+        # Başlıklar ve Paragraflar
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Paragraf ögesi nedir?</strong>
+        </summary>
+
+        Paragraflar, etiketleri açarak(`<p>`) ve ayrıca kapatarak(`</p>`) işaretlenir. HTML'deki paragraflar, bir kelimeden bir grup cümleye kadar herhangi uzunlukta bir metin olabilir. Web sayfanızdaki metninizin tamamı bir HTML ögesinde (başlıklar veya paragraflar)  bulunmalıdır. Paragraflar, bir grup cümleyi birleştirir ve bu metin grubu ile bir sonraki metin grubu arasına biraz boşluk bırakır.
+
+        </details>
+        <details>
+        <summary><strong>Birden çok paragrafı nasıl oluştururum?</strong>
+        </summary>
+
+        Paragraflar, etiketleri(`<p>`) açarak ve ayrıca (`</p>`) kapatarak işaretlenir. Birden fazla paragraf oluşturmak için birden fazla açma ve kapama `<p>` etiket seti isteyeceksiniz. Örneğin;
+
+        <pre>
+        &lt;p&gt;
+          Bu bir paragraf.
+        &lt;/p&gt;
+        &lt;p&gt;
+          Bu başka bir paragraf.
+        &lt;/p&gt;
+        </pre>
+
+        </details>
+        <details>
+        <summary><strong>Başlıklar nelerdir?</strong>
+        </summary>
+
+        Başlıklar, bir web sayfası boyunca farklı boyutlarda bölüm başlıklarıdır. Başlıklar, web sayfanıza ayırarak yapı ekleyerek kullanıcının okumasını kolaylaştırır.
+
+        </details>
+        <details>
+        <summary><strong>Farklı boyutlu başlıkları nasıl oluşturabilirim?</strong>
+        </summary>
+
+        Başlıklar 6 farklı boyutta gelir. Şimdiye kadar, öncelikle en büyük olanı \<h1> kullandınız. HTML etiketindeki 1 sayısı bunun en büyük başlık olduğunu gösterir. En küçük başlık \<h6>.  Sayı büyüdükçe küçülen \<h2>, \<h3>, \<h4> ve \<h5> etiketlerini de deneyebilirsiniz.
+
+        </details>
+        <details>
+        <summary><strong>HTLM nedir?</strong>
+        </summary>
+
+        HTML, Hiper Metin İşaretleme Dili anlamına gelir. HTML bir web sayfasının içeriğine yapı eklemek için kullanılır. HTML, belirli yapıların nerede başlayıp nerede biteceğini belirtmek için etiketleri kullanır. Bu etiketler, içerik ve yapının ayırt edilebilmesi için İngilizce dilinde kullanılmayan bir grup karakterdir.
+
+        </details>
+        <details>
+        <summary><strong>HTML ögesi nedir?</strong>
+        </summary>
+
+        Bir HTML ögesi bir başlangıç etiketiyle işaretlenen ve bazen bir bitiş etiketiyle kapatılan, bir web sitesinin parçasıdır. Öge ayrıca etiketlerin içindeki içeriği de içerir. Örneğin;
+
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="width:500px">
+
+        </details>
+        <details>
+        <summary><strong>HTML etiketi nedir?</strong>
+        </summary>
+
+        HTML etiketi, makineye bir HTML ögesinin başlangıç veya bitişinin nerede ve ne tür olduğunu söyleyen özel karakter kümesidir.
+
+        </details>
+        </div>
       CSD U2 Heading Test_2018: "# Başlıklar ve Paragraflar\\\r\n\n\\\r\n\n<div\nstyle=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left:\n20px;
         font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**Bir paragraf öğesi
@@ -1743,6 +1809,60 @@ tr-TR:
         \   AM.png>) butonuna tıklayın.\\\r\n-   Üretilen URL' yi kopyalayın, sayfanızı
         görmesini istediğiniz kişilere bağlantıyı e-posta olarak gönderin. .\\\r\n
         \   \\\r"
+      CSD U2 unordered list: |-
+        # Sıralı Listeler
+
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>İki tür liste nedir?</strong>
+        </summary>
+         HTLM'de sıralı ve sırasız olmak üzere iki tür liste vardır.
+        </details>
+        <details>
+        <summary><strong>What is an unordered list?</strong>
+        </summary>
+
+        An unordered list is just a set of bulleted items.
+        <br /><br />An unordered list element has the tag \<ul> . This is an abbreviation for <strong>U</strong>nordered <strong>L</strong>ist. Each item in the list is marked by a list item element \<li>. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the unordered list (\<ul>).
+
+        </details>
+
+        <details>
+        <summary><strong>How do I make an unordered list?</strong>
+        </summary>
+
+        Making an unordered list has two steps: making the list and adding the list items.  To make the unordered list, write the unordered list tags `<ul></ul>`.  Next, add your list items **inside** the unordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.
+
+        It can be helpful to indent your \<li> tags so it's clear they are contained in the \<ul> tag.
+
+        </details>
+
+        <details>
+        <summary><strong>Show me working code.</strong>
+        </summary>
+
+        <table border="1">
+        <tr>
+        <td>Example</td>
+        <td>Result</td>
+        </tr>
+        <tr>
+        <td><pre> &lt;ul&gt; <br>   &lt;li&gt;Red &lt;/li&gt; <br>   &lt;li&gt;Green &lt;/li&gt; <br>   &lt;li&gt;Blue&lt;/li&gt; <br> &lt;/ul&gt; </pre></td>
+        <td><img src="https://images.code.org/25d4dfc9b6c448d0da305df66aa1dfb7-image-1473444368948.05.32 PM.png" style="width:200px"></td>
+        </tr>
+        </table>
+
+        </details>
+        </div>
+
+        This page should have an unordered list, but it's missing the list tags.
+
+        # Do This
+
+        -   Use the `<ul>` and `<li>` tags to structure the content into an unordered list like the picture below.
+
+        ![](<https://images.code.org/64581a90765cd2d53b6c5235c48f2855-image-1493238358294.25.04 PM.png>)
       CSD U2 upload images: "# Resimleri Yükle\\\r\n\n\\\r\nSonra, tüm resimleri projenize
         yüklemeniz gerekecek.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n\\*\nTüm resimleri bilgisayarına
         indir. Yardıma ihtiyacın varsa [Lesson 8 Level\n5](/s/csd2/stage/8/puzzle/5)
@@ -5825,13 +5945,9 @@ tr-TR:
         hareket ettir.
       courseA_playLab_events4_2018: Şimdi, sağ ok butonuna tıklandığında Jorge' u
         sağa hareket ettir.
-      courseA_playLab_events4_2019: Şimdi, sağ ok butonuna tıklandığında Jorge' u
-        sağa hareket ettir.
       courseA_playLab_events5: Yukarı ve aşağı ok tuşlarına basıldığında Jorge' u
         yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playLab_events5_2018: Yukarı ve aşağı ok tuşlarına basıldığında Jorge'
-        u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
-      courseA_playLab_events5_2019: Yukarı ve aşağı ok tuşlarına basıldığında Jorge'
         u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playlab_events_challenge1: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesin. Kim en hızlı koşar

@@ -6,7 +6,6 @@ hi:
         csd_category_name: CS अन्वेषण ('17-'18)
         csd_2018_category_name: CS अन्वेषण ('18-'19)
         csd_2019_category_name: CS अन्वेषण ('19-'20)
-        csf_category_name: कंप्यूटर साइंस की बुनियादी बातें
         csf_2018_category_name: CS के मूल सिद्धांत (2018)
         csf_international_category_name: CS के मूल सिद्धांत अंतर्राष्ट्रीय
         csf2_draft_category_name: 'विकास अधीन: कोर्स A - F'
@@ -19009,7 +19008,7 @@ hi:
             CS Discoveries Post Course survey:
               name: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
         csd3-2020:
-          title: CSD इकाई 3 - ऐनिमेशन्स और गेम्स ('17-'18)
+          title: CSD इकाई 3 - ऐनिमेशन्स और गेम्स
           description: " इकाई 3 में, आप अपने कूटलेखन अनुभव पर निर्भर होंगे, जब आप
             गेम लैब में ऐनिमेशन्स, संवादात्मक कलाकृतियों और गेम्स को प्रोग्राम करेंगे।
             इकाई उन प्रोग्रामिंग अवधारणाओं और डिज़ाइन प्रक्रिया, जिसे कंप्यूटर वैज्ञानिक
@@ -21131,6 +21130,10 @@ hi:
               name: इकाई 5 मूल्यांकन 5 - AP स्यूडोकोड के अभ्यास संबंधी सवाल
             CS Principles Post Course survey:
               name: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण
+            Intro to App Lab:
+              name: ऐप लैब का परिचय
+            Variables:
+              name: चर
         virtual-holding-place:
           stages:
             Velocity:
@@ -21157,3 +21160,31 @@ hi:
               name: कलन विधियां
             Events:
               name: घटनाएँ
+        no-lg:
+          stages:
+            new stage:
+              name: नया चरण
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: इकाई 5 मूल्यांकन 2
+            While Loops:
+              name: व्हाइल लूप्स
+            Loops and Simulations:
+              name: लूप्स और अनुकरण
+            Introduction to Arrays:
+              name: श्रृंखला समूहों का परिचय
+            'Building an App: Image Scroller':
+              name: 'ऐप बनाना: इमेज स्क्रॉलर'
+            Unit 5 Assessment 3:
+              name: इकाई 5 मूल्यांकन 3
+            Processing Arrays:
+              name: श्रृंखला समूहों की प्रक्रिया करना
+            Functions with Return Values:
+              name: रिटर्न मूल्यों के साथ फंक्शन
+            'Building an App: Canvas Painter':
+              name: 'ऐप बनाना: कैनवास पेंटर'
+            Unit 5 Assessment 4:
+              name: इकाई 5 मूल्यांकन 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: इकाई 5 मूल्यांकन 5 - AP स्यूडोकोड के अभ्यास संबंधी सवाल

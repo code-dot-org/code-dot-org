@@ -2,6 +2,15 @@
 pt-PT:
   data:
     display_name:
+      AB_Debug_Artist1: 'Depuração do Artista #1 (AB)'
+      AppLab Intro 7 - Change Screen Color: Mudar a Cor do Ecrã
+      AppLab Intro 7 - Change Text 2: Mudar Texto
+      AppLab Intro 7 - Full Text: Dois Botões
+      AppLab Intro 7 - onEvent intro: Faz os Botões Funcionar
+      AppLab Intro 7 - thisOrThatAddButton: Isto ou Aquilo
+      AppLab Intro 7 - thisOrThatAddScreen: Isto ou Aquilo
+      AppLab Intro 7 - thisOrThatPersonalize: Isto ou Aquilo
+      AppLab Intro 7 - thisOrThatSetScreen: Isto ou Aquilo
       CSD Problem Solving Process Video: Video:Processo de Resolução de Problemas
       CSD U1L02 TFMD_2018: Visão geral da aula
       CSD U1L02 TFMD_2019: Visão geral da aula
@@ -38,6 +47,12 @@ pt-PT:
       CSD U2 Pair Programming Video: Programação em duplas
       CSD U2 Pair Programming Video_2018: Programação em duplas
       CSD U2 Pair Programming Video_2019: Programação em duplas
+      CSD U2 a tag map: Hiperligações
+      CSD U2 a tag map_2018: Hiperligações
+      CSD U2 a tag map_2019: Hiperligações
+      CSD U2 challenge: Desafio
+      CSD U2 challenge_2018: Desafio
+      CSD U2 challenge_2019: Desafio
       CSD U2 lists map: Listas em HTML
       CSD U2 lists map_2018: Listas em HTML
       CSD U2 lists map_2019: Listas em HTML
@@ -123,6 +138,9 @@ pt-PT:
       CSD U3 challenge face: 'Desafio: Cara'
       CSD U3 challenge face_2018: 'Desafio: Cara'
       CSD U3 challenge face_2019: 'Desafio: Cara'
+      CSD U3 naming map: Nomear Variáveis
+      CSD U3 naming map_2018: Nomear Variáveis
+      CSD U3 naming map_2019: Nomear Variáveis
       CSD U3 shape size map: Formas e Parâmetros
       CSD U3 shape size map_2018: Formas e Parâmetros
       CSD U3 shape size map_2019: Formas e Parâmetros
@@ -286,11 +304,11 @@ pt-PT:
       CSD U6L16 TFMD: Visão geral da aula
       CSD U6L16 TFMD_2018: Visão geral da aula
       CSD U6L16 TFMD_2019: Visão geral da aula
-      CSD What Makes a Computer a Computer Video: 'Vídeo: O que faz um computador,
+      CSD What Makes a Computer a Computer Video: 'Vídeo: O que faz de um computador
         um computador?'
-      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: O que faz um computador,
+      CSD What Makes a Computer a Computer Video_2018: 'Vídeo: O que faz de um computador
         um computador?'
-      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz um computador,
+      CSD What Makes a Computer a Computer Video_2019: 'Vídeo: O que faz de um computador
         um computador?'
       'CSD: For Loop_2018': Ciclos "for"
       Dance_Party_extras_alternate_2019: Para a frente e para trás
@@ -310,6 +328,20 @@ pt-PT:
       Intro to Web Lab - Part 1: 'Vídeo: Introdução ao Web Lab - Parte 1'
       Intro to Web Lab - Part 1_2018: 'Vídeo: Introdução ao Web Lab - Parte 1'
       Intro to Web Lab - Part 1_2019: 'Vídeo: Introdução ao Web Lab - Parte 1'
+      MC_HOC_2017_02_Cole: A Quinta
+      MC_HOC_2017_02_Cole_2019: A Quinta
+      MC_HOC_2017_03_Cole: O Bosque
+      MC_HOC_2017_03_Cole_2019: O Bosque
+      MC_HOC_2017_04POINT5_RYAN: O Deserto
+      MC_HOC_2017_04POINT5_RYAN_2019: O Deserto
+      MC_HOC_2017_04_Cole: O Pântano
+      MC_HOC_2017_04_Cole_2019: O Pântano
+      MC_HOC_2017_05_Cole: O Rio
+      MC_HOC_2017_05_Cole_2019: O Rio
+      MC_HOC_2017_06_Cole: Maré Alta
+      MC_HOC_2017_06_Cole_2019: Maré Alta
+      MC_HOC_2017_10_RETRY: A Caverna
+      MC_HOC_2017_10_RETRY_2019: A Caverna
       New Dance Lab Project: Novo Projecto da Festa da Dança
       OPD-K5 WhatIsCS: O que é a Ciência da Computação?
       Oceans_Video_Machine_Learning: 'Vídeo: Aprendizagem das Máquinas'

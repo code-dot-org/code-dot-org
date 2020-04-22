@@ -106,7 +106,7 @@ cs-CZ:
         pomocí co nejméně bloků!
       2-3 Maze 16: Uvnitř cyklu může být více bloků! Dokážeš vykonat tuto posloupnost
         bloků tak, aby se zombie dostal ke slunečnici?
-      2-3 Maze 2: Toto prasátko mne štve. Pomoz mi se dostat k němu!
+      2-3 Maze 2: To prasátko mě štve. Pomoz mi ho najít!
       2-3 Maze 3: Najdi cestu a doveď mne k tomu hloupému prasátku. Vyhni se TNT,
         nebo bude létat peří!
       2-3 Maze 4: Naveď mě k zelenému zlu! (Pozor na TNT)
@@ -859,7 +859,7 @@ cs-CZ:
         med.
       course2_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
         med.
-      course2_collector_loops_challenge2: Získejte všechen poklad!
+      course2_collector_loops_challenge2: Posbírej všechny drahokamy!
       course2_collector_prog_challenge2: Je tu 20 kusů pokladu. Sesbírej alespoň polovinu
         z nich, abys dokončil tuto výzvu!
       course2_harvester_loops_challenge1: Sesbírej všechnu kukuřici.
@@ -903,6 +903,12 @@ cs-CZ:
       courseA_maze_seq1_2019: Dostaň mne k prasátku!
       courseA_maze_seq2: Změň kód, abys mne dostal k prasátku!
       courseA_maze_seq5: Zkus toto sám ze začátku.
+      courseA_maze_seq_challenge2: Najdi cestu a přiveď mě k tomu pošetilému prasátku.
+        Vyhni se TNT, nebo bude létat peří!
+      courseA_maze_seq_challenge2_2018: Najdi cestu a přiveď mě k tomu pošetilému
+        prasátku. Vyhni se TNT, nebo bude létat peří!
+      courseA_maze_seq_challenge2_2019: Najdi cestu a přiveď mě k tomu pošetilému
+        prasátku. Vyhni se TNT, nebo bude létat peří!
       courseA_playLab_events1_2019: Tady si můžeš hrát podle libosti. Posunuj bloky
         na pracovní plochu a uvidíš, co se stane!
       courseA_playLab_events2_2019: Pes Jorge chce říct "Ahoj všichni". Můžeš mu pomoci?
@@ -957,14 +963,71 @@ cs-CZ:
         pole!
       courseC_harvester_loops_challenge2_2019: Sesbírej všechen salát. Ne stromy ani
         pole!
+      courseC_maze_debugging2: Použij své schopnosti ladění a dostaň veverku k žaludu.
+      courseC_maze_debugging2_2018: Použij své schopnosti ladění a dostaň veverku
+        k žaludu.
+      courseC_maze_debugging2_2019: Použij své schopnosti ladění a dostaň veverku
+        k žaludu.
+      courseC_maze_debugging4: Někdo má pomíchané směry! Pomůžeš?
+      courseC_maze_debugging4_2018: Někdo má pomíchané směry! Pomůžeš?
+      courseC_maze_debugging4_2019: Někdo má pomíchané směry! Pomůžeš?
+      courseC_maze_debugging5: Vylaď toto úroveň přeskupením a změnou bloků.
+      courseC_maze_debugging5_2018: Vylaď toto úroveň přeskupením a změnou bloků.
+      courseC_maze_debugging5_2019: Vylaď toto úroveň přeskupením a změnou bloků.
+      courseC_maze_debugging6: Zjisti, co je špatně, a dostaň veverku k žaludu.
+      courseC_maze_debugging6_2018: Zjisti, co je špatně, a dostaň veverku k žaludu.
+      courseC_maze_debugging6_2019: Zjisti, co je špatně, a dostaň veverku k žaludu.
+      courseC_maze_debugging7: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
+        přidáním a odstraněním bloků."
+      courseC_maze_debugging7_2018: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
+        přidáním a odstraněním bloků."
+      courseC_maze_debugging7_2019: "\\*\\* Výzva: \\*\\* Vylaď tuto úroveň přeskupením,
+        přidáním a odstraněním bloků."
+      courseC_maze_debugging9_2019: Program vytvoř pomocí bloků v panelu. Dostaň ptáčka
+        k prasátku.
       courseC_maze_loops_challenge1a: 'Scrat chce teď použít cykly k nalezení žaludu! '
       courseC_maze_loops_challenge1a_2018: 'Scrat chce teď použít cykly k nalezení
         žaludu! '
       courseC_maze_loops_challenge1a_2019: 'Scrat chce teď použít cykly k nalezení
         žaludu! '
+      courseC_maze_programming1: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
+      courseC_maze_programming1_2018: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
+      courseC_maze_programming1_2019: V této úloze spoj všechny bloky, klikni "Spustit"
+        a dívej se, co se stane!
+      courseC_maze_programming2: Přetáhni další blok `posuň se vpřed` z panelu bloků
+        a dokonči svůj kód.
+      courseC_maze_programming2_2018: Přetáhni další blok `posuň se vpřed` z panelu
+        bloků a dokonči svůj kód.
+      courseC_maze_programming2_2019: Přetáhni další blok `posuň se vpřed` z panelu
+        bloků a dokonči svůj kód.
+      courseC_maze_programming4: Vyhni se TNT, nebo bude létat peří!
+      courseC_maze_programming4_2018: Vyhni se TNT, nebo bude létat peří!
+      courseC_maze_programming4_2019: Vyhni se TNT, nebo bude létat peří!
       courseC_maze_programming5: Vyhni se TNT!
       courseC_maze_programming5_2018: Vyhni se TNT!
       courseC_maze_programming5_2019: Vyhni se TNT!
+      courseC_maze_programming6: '"Zachovej klid a pomoz mi najít to zlé prasátko.
+        Jinak bych se mohl rozzlobit!"'
+      courseC_maze_programming6_2018: '"Zachovej klid a pomoz mi najít to zlé prasátko.
+        Jinak bych se mohl rozzlobit!"'
+      courseC_maze_programming6_2019: '"Zachovej klid a pomoz mi najít to zlé prasátko.
+        Jinak bych se mohl rozzlobit!"'
+      courseC_maze_programming8: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_2018: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_2019: _"Zachovej klid a pomoz mi najít to zlé prasátko."_
+      courseC_maze_programming8_predict1: _"Zachovej klid a pomoz mi najít to zlé
+        prasátko."_
+      courseC_maze_programming8_predict1_2018: _"Zachovej klid a pomoz mi najít to
+        zlé prasátko."_
+      courseC_maze_programming8_predict1_2019: _"Zachovej klid a pomoz mi najít to
+        zlé prasátko."_
+      courseC_maze_programming9: _"Teď mi pomoz dostat se k prasátku jakýmkoliv způsobem!"_
+      courseC_maze_programming9_2018: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
+        způsobem!"_
+      courseC_maze_programming9_2019: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
+        způsobem!"_
       courseD_artist_1_2018: 'Nakresli šestiúhelník se stranami dlouhými **50** pixelů. '
       courseD_artist_1_2018_2019: 'Nakresli šestiúhelník se stranami dlouhými **50**
         pixelů. '
@@ -1314,6 +1377,8 @@ cs-CZ:
       courseD_maze_ramp2_2019: Přetáhni další blok `posuň se vpřed` z panelu bloků
         a připoj všechny bloky k bloku `při spuštění`, abys dokončil svůj kód.
       courseD_maze_ramp3_2019: Odstraň nadbytečný blok "posuň se vpřed".
+      courseD_maze_ramp4: Vyhni se TNT, nebo bude létat peří!
+      courseD_maze_ramp4_2018: Vyhni se TNT, nebo bude létat peří!
       courseD_maze_ramp5: Vyhni se TNT!
       courseD_maze_ramp5_2018: Vyhni se TNT!
       courseD_maze_ramp5_2019: Vyhni se TNT!
@@ -1321,6 +1386,8 @@ cs-CZ:
       courseD_maze_ramp5d: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2018: Dostaň ptáka k praseti.
       courseD_maze_ramp5d_2019: Dostaň ptáka k praseti.
+      courseD_maze_ramp6: '"Zachovej klid a pomoz mi najít to zlé prasátko. Jinak
+        bych se mohl rozzlobit!"'
       courseD_maze_ramp7: Dostaň mne k prasátku!
       courseD_maze_until1: Dostaň rozhněvaného ptáka k praseti.
       courseD_maze_until10: Pomož zombie dostat se ke slunečnici.
