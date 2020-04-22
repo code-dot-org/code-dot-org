@@ -654,7 +654,7 @@ level 'Level 3'
   test 'serialize lesson_group for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key: 'required', script: script
+    lesson_group = create :lesson_group, key: 'content', script: script
     lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
@@ -691,8 +691,8 @@ level 'Level 3'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
 
     # intentionally made in the opposite order of how we want them to show to test
-    lesson_group2 = create :lesson_group, key: 'practice', script: script, position: 2
-    lesson_group1 = create :lesson_group, key: 'required', script: script, position: 1
+    lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2
+    lesson_group1 = create :lesson_group, key: 'content', script: script, position: 1
 
     lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group1
     lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group2
@@ -705,7 +705,7 @@ level 'Level 3'
       stage 'lesson 1'
       level 'maze 1'
 
-      lesson_group 'practice', display_name: 'Content'
+      lesson_group 'content2', display_name: 'Content'
       stage 'lesson 2'
       level 'maze 2'
 
