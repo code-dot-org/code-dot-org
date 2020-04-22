@@ -1523,9 +1523,9 @@ pl-PL:
         courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz
           coś tylko jeden raz.
       courseA_harvester_loops2_2019:
-        courseA_harvester_loops2_a: "Twój kod będzie miał **cztery** klocki `move
-          west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery** <xml>\n`pick
-          corn`\n  <block type=\"harvester_corn\"/>\n</xml> klocki. "
+        courseA_harvester_loops2_a: "Twój kod będzie miał **cztery** bloki  \"przejdź
+          na zachód\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\ni **cztery**
+          bloki <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>. "
       courseA_harvester_loops3:
         courseA_harvester_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
           następnie umieść tam blok, który chcesz aby się powtarzał.

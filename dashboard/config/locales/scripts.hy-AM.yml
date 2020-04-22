@@ -3,7 +3,6 @@ hy:
   data:
     script:
       category:
-        csf_category_name: CS Fundamentals
         csp_category_name: CS Principles
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: "'16-'17 CS Principles"
@@ -1740,6 +1739,8 @@ hy:
           stages:
             While Loops:
               name: Մինչ Loops
+            Variables:
+              name: փոփոխականների
         virtual-holding-place:
           stages:
             Functions:
@@ -1750,3 +1751,7 @@ hy:
               name: ալգորիթմները
             Events:
               name: Իրադարձություններ
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Մինչ Loops

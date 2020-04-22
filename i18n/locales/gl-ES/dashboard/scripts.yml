@@ -1637,6 +1637,8 @@ gl:
           stages:
             While Loops:
               name: Bucles mentres
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Functions:
@@ -1647,3 +1649,7 @@ gl:
               name: Algoritmos
             Events:
               name: Eventos
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Bucles mentres

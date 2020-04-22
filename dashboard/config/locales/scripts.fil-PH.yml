@@ -3,7 +3,6 @@ fil:
   data:
     script:
       category:
-        csf_category_name: CS Fundamentals
         csf_international_category_name: Internasyonal na CS Fundamentals
         csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
         csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
@@ -14902,17 +14901,17 @@ fil:
                 ay mag-iisip sa kanilang karanasan sa gawain at gumawa ng koneksyon
                 sa mga tipo ng paglutas ng problema na gagawin nila sa natirang bahagi
                 ng kurso. '
-              description_teacher: Sa araling ito, ang mga estudyante ay magtatrabaho
+              description_teacher: 'Sa araling ito, ang mga estudyante ay magtatrabaho
                 sa loob ng mga grupo para makadisenyo ng aluminum foil na mga bangka
-                na susuporta sa maraming mga barya hangga't maaari. Ang mga grupo
+                na susuporta sa maraming mga barya hangga''t maaari. Ang mga grupo
                 ay mayroong dalawang pagkakataon para magawa ang kanilang mga bangka,
                 na may layunin na makakarga ng mas marami pang barya kaysa sa nagawa
                 nila sa unang pagkakataon. Ang istraktura ng gawain ay nagpapahiwatig
-                sa iba't ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
+                sa iba''t ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
                 ng mas detalyado sa sumusunod na mga aralin. Sa pagtatapos ng aralin,
                 ang mga estudyante ay mag-iisip sa kanilang mga karanasan sa gawain
                 at gagawa ng mga koneksyon sa mga uri ng paglutas ng problema na gagawin
-                nila sa natitirang bahagi ng kurso.
+                nila sa natitirang bahagi ng kurso. '
             The Problem Solving Process:
               name: Ang Proseso ng Pagtuklas ng Problema
               description_student: Ang araling ito ay nagpapakila sa pormal na proseso
@@ -17247,6 +17246,8 @@ fil:
               name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan
             Intro to App Lab:
               name: Panimula sa App Lab
+            Variables:
+              name: Mga variable
         virtual-holding-place:
           stages:
             Velocity:
@@ -17273,3 +17274,31 @@ fil:
               name: Mga algorithm
             Events:
               name: Mga event
+        no-lg:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Yunit 5 Pagtatasa 2
+            While Loops:
+              name: While Loops
+            Loops and Simulations:
+              name: Mga Loop at Mga Simulasyon
+            Introduction to Arrays:
+              name: Introduksyon sa mga Array
+            'Building an App: Image Scroller':
+              name: 'Pagbubuo ng App: Scroller ng Larawan'
+            Unit 5 Assessment 3:
+              name: Yunit 5 Pagtatasa 3
+            Processing Arrays:
+              name: Processing na mga Array
+            Functions with Return Values:
+              name: Mga Function na may Sinauling mga Halaga
+            'Building an App: Canvas Painter':
+              name: 'Pagbubuo ng App: Pintor sa Canvas'
+            Unit 5 Assessment 4:
+              name: Yunit 5 Pagtatasa 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan

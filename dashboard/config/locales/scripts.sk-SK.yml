@@ -6,7 +6,6 @@ sk:
         csd_category_name: Objavujeme informatiku ('17-'18)
         csd_2018_category_name: Objavujeme informatiku ('18-'19)
         csd_2019_category_name: Objavujeme informatiku ('19-'20)
-        csf_category_name: Základy Informatiky
         csf_2018_category_name: Základy Informatiky (2018)
         csf_international_category_name: Základy Informatiky (medzinárodná verzia)
         csf2_draft_category_name: 'Vo vývoji: Kurzy A - F'
@@ -338,7 +337,7 @@ sk:
           description_short: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
           stages:
             Infinity:
-              name: Infinity
+              name: nekonečne
         algebrademo:
           stages:
             Defining Simple Functions:
@@ -744,7 +743,7 @@ sk:
             Decode and Share:
               name: Dekóduj a zdieľaj
             Welcome Back!:
-              name: Vitajte späť!
+              name: Vitaj späť!
         cspunit2:
           stages:
             The Internet:
@@ -908,7 +907,7 @@ sk:
             Getting Started:
               name: Začíname
             Welcome to the Course!:
-              name: Vitajte v kurze!
+              name: Vitaj v kurze!
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -932,7 +931,7 @@ sk:
         sciencePD3_pre1:
           stages:
             Welcome Back!:
-              name: Vitajte späť!
+              name: Vitaj späť!
         ECSPD3-Unit2:
           stages:
             Close & Next Steps:
@@ -1793,7 +1792,7 @@ sk:
         sciencepd3-2016:
           stages:
             Welcome Back!:
-              name: Vitajte späť!
+              name: Vitaj späť!
         csp3-support:
           stages:
             Unit 3 Overview:
@@ -3367,6 +3366,8 @@ sk:
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
             "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
             aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky a vytvor vlastný obraz, príbeh,
+            alebo hru.
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3480,8 +3481,8 @@ sk:
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
             a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ
             a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte
-            používať funkcie.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať
+            funkcie.
           description_audience: Vek 8-12
           stages:
             'Programming: My Robotic Friends':
@@ -4142,6 +4143,8 @@ sk:
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
             "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
             aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4216,8 +4219,8 @@ sk:
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
             a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ
             a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte
-            používať funkcie.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať
+            funkcie.
           description_audience: Vek 8-12
           stages:
             'Programming: My Robotic Friends':
@@ -5289,6 +5292,8 @@ sk:
           description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou
             "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia
             aj s významom pojmu "digitálne občianstvo".
+          description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,
+            hru, či tanečnú party.
           description_audience: Vek 7-11
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5359,8 +5364,8 @@ sk:
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami
             a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ
             a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte
-            používať funkcie.
+          description_short: Zopakuj si koncepty z kurzov C a D a potom sa nauč používať
+            funkcie.
           description_audience: Vek 8-12
           stages:
             Conditionals:
@@ -5613,6 +5618,8 @@ sk:
               name: Cykly "pokiaľ"
             Intro to App Lab:
               name: Úvod do App Labu
+            Variables:
+              name: Premenné
         virtual-holding-place:
           stages:
             Velocity:
@@ -5625,3 +5632,7 @@ sk:
               name: Algoritmy
             Events:
               name: Udalosti
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Cykly "pokiaľ"

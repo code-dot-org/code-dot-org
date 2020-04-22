@@ -298,6 +298,7 @@ bs:
     enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
       lozinke)
     update_email: Osvježi
+    none: Nijedno
   user_level:
     completed: Kompletirano
     tried: Pokušano

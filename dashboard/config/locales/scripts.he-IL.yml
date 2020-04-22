@@ -2208,6 +2208,8 @@ he:
           stages:
             While Loops:
               name: לולאות "כל עוד"
+            Variables:
+              name: משתנים
         virtual-holding-place:
           stages:
             Functions:
@@ -2218,3 +2220,7 @@ he:
               name: אלגוריתמים
             Events:
               name: אירועים
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: לולאות "כל עוד"

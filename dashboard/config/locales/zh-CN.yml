@@ -463,6 +463,8 @@ zh-CN:
     auth_option_saved: 已成功连接 %{provider} 账号的邮件地址 %{email}。
     auth_option_saved_no_email: 已成功连接 %{provider} 账号 。
     update_email: 更新
+    parent_guardian_email_label: 父母/监护人电子邮箱
+    none: 没有
     encrypted: 已加密
   user_level:
     completed: 已完成

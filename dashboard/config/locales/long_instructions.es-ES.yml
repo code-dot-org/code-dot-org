@@ -483,6 +483,39 @@ es-ES:
         -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
         -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
         -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
+      CSD U2 HTML Debug Paragraphs: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Qué es un elemento párrafo?</strong>
+        </summary>
+        Los párrafos de apertura son marcados con una etiqueta de apertura (´<p>`) y cerrados (`</p>`). Los párrafos en HTML pueden ser de cualquier longitud de texto desde una palabra a un agrupamiento de sentencias. Los grupos de párrafos  Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.
+        </details>
+        <details>
+        <summary>
+        <strong>Por qué el HTML parece trabajar incluso cuando está roto?</strong>
+        </summary>
+        HTML es leido por los navegadores web para generar páginas web. Ya que con frecuencia la gente comete pequeños errores escribiendo sus páginas web, los navegadores son programados para hacer las mejores conjeturas de lo que intentaban hacer. Algunas veces los diferentes navegadores están programados incluso para diferentes suposiciones! El úncio camino para asegurarque tu código parezca lo que intentas es asegurarte siempre de usar las etiquetas correctamente.
+        </details>
+        <details>
+        <summary>
+        <strong>Por qué a veces el código se pone rosa?</strong>
+        </summary>
+
+        El laboratorio Web está programado para que automáticamente detecte algunos de los errores en el HTML. Cuando notifica un error, el código se vuelve rosa. Puede seleecionar el error, o informarte de que se encuentra en el algún lugar del código rosa. Necesitarás revisarlo con cuidado para encontrarlo.
+
+        </details>
+        </div>
+
+        # Debug: Fija las etiquetas que lo han roto
+
+        Esta página web simple tiene algunas cuestiones las cuales son para prevenir el contenido que está mostrándose correctamente. Identifica y fija las cuestiones. Esta práctica es llamada debugging tu código.
+
+        # Haz esto
+
+        -   Fija el código roto, de esta forma la página web correrá correctamente
+        -   Compara los problemas que tu has fijado con los de tu compañero
       CSD U2 HTML Debug Paragraphs_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -521,6 +554,39 @@ es-ES:
 
         -   Corrija el código roto para que la página web se muestre correctamente
         -   Compara los problemas que arreglaste con un vecino
+      CSD U2 Heading Demo: "# Headings\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Qué
+        son los headings?</strong></summary>\n\nLos headings son los diferentes tamaños
+        de las secciones de títulos que habrá en nuestra web. Los headings añaden
+        estructura a tu página web rompiéndola así para que al usuario le sea más
+        fácil su lectura.\n\n</details>\n<details>\n<summary><strong>Cómo hacer diferentes
+        tamaños de headings?</strong></summary>\n\nLos headings tienen 6 tamaños diferentes.
+        Así pues, principalmente usarás el más grande:\\<h1>. El número `1` en las
+        etiquetas HTML es el más grande de los hearings. El hearing más pequeño es
+        el \\<h6>.  Puedes también intentar el resto de etiquetas \\<h2>, \\<h3>,
+        \\<h4> y \\<h5>, las cuales encogerán cuanto sea más grande sea el número.\nHeadings
+        come in 6 different sizes. So far you have primarily used the biggest one:
+        \\<h1>. \n\n</h1>\n</details>\n<details>\n<summary><strong>Qué es HTML?</strong></summary>\n\nHTML
+        estándares del lenguaje de marcado de hipertexto( stands for Hypertext Markup
+        Language). HTML es usado para añadir estructura al contenido de una página
+        web. Las etiquetas HTML se usan para especificar donde ciertas estructuras
+        empiezan y acaban. Estas etiquetas son un conjunto de caracteres que no encuentras
+        en la lengua inglesa así que el contenido y la estructura pueden ser diferentes
+        \n\n</details>\n<details>\n<summary><strong>Qué es un elemento HTML??</strong></summary>\n\nUn
+        elemento HTML es una pieza de una página web y a veces cerrada con una etiqueta
+        de fin. El elemento también incluye el contenido dentro de las etiquetas.
+        Por ejemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n\n</details>\n<details>\n<summary><strong>Qué es una
+        HTML tag(etiqueta)?</strong></summary>\n\nUna etiqueta HTML son caracteres
+        especiales que le dicen a la máquina donde empiezan y el fin de un elemento
+        HTML y de qué tipo es éste.\n\n</details>\n</div>\n\nHasta aquí, hemos organizado
+        tu contenido en párrafos. Otra forma que permite al HTML organizar tu código
+        es con el uso de **headings**. Un heading es una pequeña pieza de texto que
+        se coloca en la parte superior del contenido, parece un título.\n\nHaz esto:\n\n-
+        \  Encuentra los headings en la siguiente página web y usa la herramienta
+        Inspector para ver el código que tiene.\n-   Asegúrate de que tú y tu compañero
+        estáis de a cuerdo en que etiquetas son.\n-   Cambia el código a \"dibujando\"
+        y \"2 años\" encuentra los headings en el resto de la página."
       CSD U2 Inspector Warm Up: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -1380,6 +1446,16 @@ es-ES:
         -   Añade otro grupo de bailarines
         -   Muestra y oculta bailarines utilizando las flechas del teclado
         -   Oculta a todos los bailarines y utiliza un efecto chulo de fondo
+      Escape Room Example: |-
+        # Sala de Escape
+
+        Hoy en el taller trbajaremos haciendo un app de sala de escape! Este nivel tiene una app de ejemplo que deberías ver para obtener lo que quieres crear.
+
+        # Haz esto
+
+        \-Click Run para comenzar la app
+
+        -   Intenta encontrar la clave para abrir la puerta
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\"
         en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde

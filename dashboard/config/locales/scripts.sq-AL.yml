@@ -1892,6 +1892,8 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+            Variables:
+              name: variabla
         virtual-holding-place:
           stages:
             Functions:
@@ -1902,3 +1904,7 @@ sq:
               name: Algoritmet
             Events:
               name: Ngjarje
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Përsëritjet Ndërsa

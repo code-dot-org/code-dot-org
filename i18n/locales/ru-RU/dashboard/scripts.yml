@@ -4,7 +4,6 @@ ru:
   data:
     script:
       category:
-        csf_category_name: Основы информатики
         csf_2018_category_name: Основы CS (2018)
         csf2_draft_category_name: 'В разработке: Курсы A - F'
         csp_category_name: "«15 - 16» Основы информатики"
@@ -3331,6 +3330,8 @@ ru:
               name: Обработка массивов
             Functions with Return Values:
               name: Функции с возвращаемыми значениями
+            Variables:
+              name: переменные
         virtual-holding-place:
           stages:
             Velocity:
@@ -3345,3 +3346,13 @@ ru:
               name: Алгоритмы
             Events:
               name: События
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Циклы «пока»
+            Introduction to Arrays:
+              name: Введение в массивы
+            Processing Arrays:
+              name: Обработка массивов
+            Functions with Return Values:
+              name: Функции с возвращаемыми значениями

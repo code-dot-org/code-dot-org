@@ -631,6 +631,10 @@ zh-CN:
           <hr>
 
           **现在试试吧！**
+        teacher_markdown: |-
+          ### 设计为先
+
+          有些学生可能迫不及待想体验“代码模式”，但是在本课程中，我们只需要模拟“用户界面”，使学生大致了解将要很快使用的代码。 在前几个级别中，学生可以使用“应用实验室”中的所有可用元素来构建自己的设计屏幕，而不必担心所创建的实际应用程序。
       CSD - Getters and Setters:
         markdown: |
           # 取值器 (getter) 和设置器 (setter)
@@ -3240,6 +3244,9 @@ zh-CN:
           **\"Camelcase（首字母大写）\"** -- `aCamelcaseNameMightLookLikeThis`\n* **Underscores（下划线隔开）**
           -- `Some_people_like_to_use_underscores_to_separate_words`\n* **dashes（连字符隔开）**
           -- `Others-like-to-use-hyphens-or-dashes`\n\n选择什么风格由自己决定。这是自己的风格。有助于保持一致。\n\n\n\n\n"
+        teacher_markdown: |-
+          #### 养成良好的编程习惯
+          遵循清晰且一致的命名规则是一个重要的习惯，但从学生的角度出发，这种习惯带来的好处很难立刻见到成效。长远的看，坚持好的命名规则确实是值得的，特别是当你需要阅读学生的程序时，与此同时，这也会极大简化将多个学生代码组合成一个完整团队应用程序的过程。
       ConditionalsWithCards-Unplugged:
         markdown: |
           # 纸牌和条件语句

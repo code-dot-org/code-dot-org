@@ -1595,6 +1595,8 @@ mi:
           stages:
             While Loops:
               name: Ngā Koromeke I Te
+            Variables:
+              name: Ngā Taurangi
         virtual-holding-place:
           stages:
             Functions:
@@ -1605,3 +1607,7 @@ mi:
               name: Ngā Hātepe
             Events:
               name: Ngā Takunetanga
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Ngā Koromeke I Te

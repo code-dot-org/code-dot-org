@@ -916,6 +916,10 @@ az:
               name: Şərti ifadələr
             Functions:
               name: funksiyalar
+        csp5-virtual:
+          stages:
+            Variables:
+              name: dəyişənlər
         virtual-holding-place:
           stages:
             Functions:

@@ -1681,6 +1681,8 @@ eu:
           stages:
             While Loops:
               name: '"Bitartean" begiztak'
+            Variables:
+              name: Aldagaiak
         virtual-holding-place:
           stages:
             Functions:
@@ -1691,3 +1693,7 @@ eu:
               name: Algoritmoak
             Events:
               name: Gertaerak
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '"Bitartean" begiztak'

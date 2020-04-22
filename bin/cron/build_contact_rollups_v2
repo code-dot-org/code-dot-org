@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative('../../dashboard/config/environment')
-require 'cdo/contact_rollups/v2/contact_rollups'
+require_relative '../../dashboard/config/environment'
+require_relative '../../dashboard/lib/contact_rollups_v2'
 require 'cdo/only_one'
 require 'cdo/log_collector'
 

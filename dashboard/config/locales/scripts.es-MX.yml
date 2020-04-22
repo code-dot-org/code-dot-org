@@ -6,7 +6,6 @@ es-MX:
         csd_category_name: Descubrimientos de Ciencias de la Computación ('17-'18)
         csd_2018_category_name: Descubrimientos de Ciencias de la Computación ('18-'19)
         csd_2019_category_name: Descubrimientos de Ciencias de la Computación ('19-'20)
-        csf_category_name: Fundamentos de Ciencias de la Computación
         csf_2018_category_name: Fundamentos de Ciencias de la Computación (2018)
         csf_international_category_name: Fundamentos de Ciencias de la Computación
           (internacional)
@@ -21656,6 +21655,8 @@ es-MX:
               name: Encuesta de fin de curso de Principios de Ciencias de la Computación
             Intro to App Lab:
               name: Introducción al Laboratorio de aplicaciones
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Velocity:
@@ -21682,3 +21683,32 @@ es-MX:
               name: Algoritmos
             Events:
               name: Eventos
+        no-lg:
+          stages:
+            new stage:
+              name: nueva etapa
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Evaluación 2 de la Unidad 5
+            While Loops:
+              name: Bucles `mientras`
+            Loops and Simulations:
+              name: Bucles y simulaciones
+            Introduction to Arrays:
+              name: Introducción a los arreglos
+            'Building an App: Image Scroller':
+              name: 'Crear una aplicación: desplazamiento de imagen'
+            Unit 5 Assessment 3:
+              name: Evaluación 3 de la Unidad 5
+            Processing Arrays:
+              name: Procesamiento de arreglos
+            Functions with Return Values:
+              name: Funciones con valores de retorno
+            'Building an App: Canvas Painter':
+              name: 'Crear una aplicación: pintor de lienzo'
+            Unit 5 Assessment 4:
+              name: Evaluación 4 de la Unidad 5
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Evaluación 5 de la Unidad 5 - Preguntas prácticas sobre pseudocódigo
+                en AP

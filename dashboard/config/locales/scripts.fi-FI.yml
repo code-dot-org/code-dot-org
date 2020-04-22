@@ -1911,6 +1911,8 @@ fi:
           stages:
             While Loops:
               name: Niin kauan kuin -silmukat
+            Variables:
+              name: Muuttujat
         virtual-holding-place:
           stages:
             Velocity:
@@ -1923,3 +1925,7 @@ fi:
               name: Algoritmit
             Events:
               name: Tapahtumat
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Niin kauan kuin -silmukat

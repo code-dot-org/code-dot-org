@@ -1,31 +1,31 @@
 ---
-title: Guide for CS Fundamentals teachers during school closures
+title: 先生向け/ 休校中のCSファンダメンタルガイド
 video_player: true
 theme: responsive
 ---
 
-# Guide for CS Fundamentals teachers during school closures
+# 先生向け/ 休校中のCSファンダメンタルガイド
 
-As more schools close in response to the COVID-19 pandemic, many Code.org classrooms are moving to using our CS Fundamentals courses in a virtual setting or giving their students activities to keep learning at home.
+コロナウィルス感染拡大の影響で多くの学校が臨時休校になる中、Code.orgの授業は、CSファンダメンタルのコースをバーチャルな環境で活用したり、自宅学習を促し始めたりしています。
 
-## Resources to keep learning
+## 学習をつづけるためのリソース
 
-Computer science is a great way to add some fun to extended time at home. However, the learning will take a different form when some kids are engaged regularly, some have only a little time, some have computers, and some don’t.
+コンピュータサイエンスは自宅での時間を少しでも楽しくするのに最適な方法です。 しかし、学習形態が少し変わり、定期的に時間を取れる子もいれば少ししか時間を割けない子もいますし、コンピュータがある子もそうでない子もいます。
 
-Rather than trying to teach a synchronous class remotely, many teachers will be giving elementary school students activities they can do to maintain their interest as well as providing structure during their time at home.
+遠隔では同時に授業を行おうとせずに、多くの先生が小学生向けのアクティビティをうながし、興味関心や自宅での時間の中でできるやりかたを維持できるようにしています。
 
-<strong>We are compiling a list of activities on [code.org/athome](https://code.org/athome)</strong> that are ideal to share with students or families interested in doing some computer science on their own. This list includes activities for students with no computers or internet access.
+<strong>アクティビティのリストを[code.org/athome]に掲載しています。(https://code.org/athome)</strong>  児童生徒やご家族に、自宅でコンピュータサイエンスを学習しようという気になってもらうためにシェアするのにぴったりです。 リストの中にはコンピュータやインターネットアクセスがない家庭のためのアクティビティもあります。
 
-## Teaching CS Fundamentals Remotely
+## CSファンダメンタルを遠隔でつかう
 
-If your school is asking you to continue to teach virtually and you’re part way through CS Fundamentals, we recommend you have students continue their existing courses at home, but skip the unplugged lessons.
+学校でバーチャルに授業を続ける体制になっている場合、CSファンダメンタルがすこしやりやすいかもしれません。現状のコースを家庭ですすめつつ、アンプラグドのレッスンをとばすようにおすすめします。
 
-We designed the lessons in CS Fundamentals for use in a classroom with an actively engaged teacher, but many lessons can adapt well to at-home learning. Learning with CS Fundamentals does require an internet-connected device with a modern browser, something we realize not all students can access right now.
+CSファンダメンタルのレッスンは教室で先生がいる上で実施されるものとしてデザインしていますが、多くのレッスンは自宅学習にも応用できます。 CSファンダメンタルはインターネット接続とモダンブラウザの使えるデバイスが必要で、すべての学生に使えるものとは限りません。
 
-You can track your [students’ progress](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress) to see where they are. You may be able to use resources like video conferencing or email to assist students and provide feedback.
+[生徒の記録](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress)をみて、生徒の学習状況を確認しましょう。 ビデオ通話やEメールを通じて生徒をサポートしたり、フィードバックを与えることもできるでしょう。
 
-## Where can I get help?
+## サポートを受ける場所
 
-You are highly encouraged to share any questions or insights on our [CS Fundamentals Forum](https://forum.code.org/t/supporting-cs-fundamentals-students-during-school-closures/32456) where you can connect with other teachers. You can also email us at [support@code.org](mailto:support@code.org). We are here to help!
+質問やお気づきの点は[CS Fundamentals Forum](https://forum.code.org/t/supporting-cs-fundamentals-students-during-school-closures/32456)でシェアしていただけますと幸いです。他の先生ともつながりましょう。 [support@code.org](mailto:support@code.org)にEメールをくださっても結構です。 お気軽にご質問ください！
 
-We also recommend you consider [CSTA's Resources to Support Teaching During COVID-19](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/) for an extensive set of options for continuing to teach computer science during school closures.
+[CSTA コロナウィルス感染拡大下での指導サポート用リソース](https://csteachers.org/page/csta-compiled-resources-to-support-teaching-during-covid-19/)も合わせてご確認いただきますと、臨時休校中にコンピュータサイエンスをご指導いただく際の参考になるかもしれません。

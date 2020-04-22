@@ -160,7 +160,7 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
-        stages: script.stages.each_with_object({}) do |stage, stage_hash|
+        stages: script.lessons.each_with_object({}) do |stage, stage_hash|
           stage_state = stage.lockable_state(section.students)
           stage_hash[stage.id] = stage_state unless stage_state.nil?
         end
@@ -177,7 +177,7 @@ class ApiController < ApplicationController
     script = load_script(section)
 
     # stage data
-    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:stage).map do |stage, levels|
+    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
       {
         length: levels.length,
         title: ActionController::Base.helpers.strip_tags(stage.localized_title)
@@ -388,7 +388,7 @@ class ApiController < ApplicationController
     response = user_summary(current_user)
 
     script = Script.get_from_cache(params[:script])
-    stage = script.stages[params[:stage_position].to_i - 1]
+    stage = script.lessons[params[:stage_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
@@ -451,7 +451,7 @@ class ApiController < ApplicationController
         next unless response
         {
           student: student_hash,
-          stage: level_hash[:script_level].stage.localized_title,
+          stage: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,

@@ -441,6 +441,8 @@ fi:
     update: "Päivitä tili"
     account_successfully_updated: "Käyttäjätili päivitettiin onnistuneesti."
     update_email: "Päivitä"
+    parent_guardian_email_label: "Huoltajan sähköpostiosoite"
+    none: "Ei mitään"
   user_level:
     completed: 'Valmis'
     tried: 'Kokeili'

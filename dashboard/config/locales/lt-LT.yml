@@ -318,6 +318,7 @@ lt:
       panaikintos.'
     delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
     update_email: Atnaujinti
+    none: Nė vienas
   user_level:
     completed: Baigta
     tried: Išbandyta

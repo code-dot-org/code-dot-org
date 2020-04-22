@@ -1315,6 +1315,8 @@ sl:
           stages:
             While Loops:
               name: 'Zanka: dokler velja'
+            Variables:
+              name: Spremenljivke
         virtual-holding-place:
           stages:
             Functions:
@@ -1325,3 +1327,7 @@ sl:
               name: Algoritmi
             Events:
               name: Dogodki
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'

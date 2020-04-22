@@ -1584,6 +1584,8 @@ ca:
           stages:
             While Loops:
               name: Bucles Mentres
+            Variables:
+              name: Variables
         virtual-holding-place:
           stages:
             Functions:
@@ -1594,3 +1596,7 @@ ca:
               name: Algorismes
             Events:
               name: Esdeveniments
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Bucles Mentres

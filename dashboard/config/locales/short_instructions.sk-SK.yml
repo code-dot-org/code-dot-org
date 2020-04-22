@@ -80,6 +80,7 @@ sk-SK:
         Uprav funkciu tak, aby Umelec nakreslil väčšie okuliare s rámami dlhými 115 pixelov na každej strane.
 
         Štvorce sú od seba vzdialené 45 pixelov.
+      2-3 Artist Functions 4: Teraz vlož funkciu do cyklu, aby si nakreslil tri štvorce.
       2-3 Artist Functions 9: 'Voľná hra: Používame tu funkciu snehová vločka. Experimentuj
         s ňou a vytvor zimné scény! To to je voľná disciplína, takže žiadne hádanky
         tu neriešiš. Zabav sa!'
@@ -209,6 +210,7 @@ sk-SK:
       2-3 Maze 7: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
       2-3 Maze 8: Dostaň ma k tomu prasiatku!
       2-3 Maze 9: Priveď ma k tomu zelenému zlu! (Pozor na TNT)
+      2-3 Maze Loops 1: Dostaneš ma k prasiatku s použitím 5 rovnakých druhov blokov?
       2-3 Maze Loops 17: Ukáž, čo si sa naučil a dostaň ma k slnečnici!
       2-3 Maze Loops 18: "Dostaň ma k slnečnici použitím čo najmenšieho možného počtu
         blokov!  \n\nSkús jeden cyklus \"opakuj\" vložiť do druhého cyklu \"opakuj\",
@@ -264,12 +266,15 @@ sk-SK:
         Všimnite si, že druhý rad je posunutý doprava.
       4-5 Artist Patterns Free Play: Voľná hra - vyskúšajte svoju ruku nakreslením
         vlastného vzoru!
-      4-5 Bee Conditionals 1: Tento oblak blokuje môj výhľad! Skontrolujte, či pod
-        oblakom nie je kvetinka a pozbierajte nektár iba ak tam kvetinka je. Pozor,
-        kvetinka môže meniť svoju polohu!
-      4-5 Bee Conditionals 2: "Viac oblakov!\n\nSkontrolujte pod každým oblakom, či
-        sa tam neschováva kvetinka predtým, ako pozbierate nektár.  \n\nZapamätajte
-        si: Nie pod všetkými oblakmi sa skrýva rovnaká vec!"
+      4-5 Bee Conditionals 1: Tento oblak mi zacláňa vo výhľade! Skontrolujte, či
+        je pod oblakom kvet a pozbierajte nektár len ak tam kvet je. Pozor, kvet môže
+        meniť svoju polohu!
+      4-5 Bee Conditionals 2: |-
+        Viac oblakov!
+
+        Skôr ako zoberieš nektár, skontroluj, či sa pod každým oblakom nachádza kvet. Ak je pod oblakom kvet, včela _ihneď_ pozbiera nektár.
+
+        Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
       4-5 Bee Conditionals 3: Teraz chcem len vyrábať med. Pod niekotorými z týchto
         oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
       4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ!
@@ -419,8 +424,14 @@ sk-SK:
       CSD U5 black white images pixelation_2019: Dokončite tvar X písaním núl a jednotiek
       Course 4 Artist 1: 'Pomôžte mi nakresliť krabicu (každá čiara je 200 pixelov
         dlhá) '
+      Course 4 Artist Binary 1: |-
+        Tu máme funkciu, ktorá vezme binárny reťazec zložený z 1 a 0 a spracuje ich zľava doprava a zhora smerom nadol. Pokiaľ Umelec natrafí na 1, štvorec vymaľuje. Pokiaľ natrafí na 0, tak štvorec nechá tak.
+
+        Spusti tento kód a sleduj, ako Umelec pomocou tejto funkcie nakreslí celý vzor.
       Course 4 Artist Binary 3: Dokážes nakresliť tento obrazec len s použitím troch
         binárnych číslic (0 alebo 1)?
+      Course 4 Artist Binary 5: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
       Course 4 Artist Binary 6: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
       Course 4 Artist Binary 7: Dokončite túto kresbu.
@@ -531,8 +542,21 @@ sk-SK:
       Dance Party Freeplay_2019: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance_2019_01: 'Prenes blok <xml><block type="Dancelab_makeAnonymousDanceSprite"
+        block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;,
+        &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>
+        na pracovnú plochu a spoj ho vo vnútri bloku <xml><block type="Dancelab_whenSetup2"
+        next_connection_disabled="true" block-text="setup"></block></xml>.'
+      Dance_2019_02: Sprav to tak, aby mačka zatancovala po stlačení klávesy.
+      Dance_2019_03: Je čas na tanečný rozstrel! Naprogramuj každého tanečníka tak,
+        aby sa pohyboval po stlačení rôznych klávesov. Vyber si svoj obľúbený pohyb
+        pre každého tanečníka alebo ho nastav na "(Náhodné)“ pre niečo úplne nepredvídateľné!
+      Dance_2019_04: Tvoj tanečník musí po štvrtom takte urobiť nový pohyb.
       Dance_2019_05: Teraz donúť tanečníka začať nový krok po 6 taktoch!
+      Dance_2019_06: Nastav okolo hlavného tanečníka v strede aj skupinu vedľajších
+        tanečníkov.
       Dance_2019_07: Zmeň veľkosť skupiny tanečníkov v pozadí.
+      Dance_2019_08: Skús zmeniť odtieň jedného z vašich tanečníkov (alebo celej skupiny)!
       Dance_2019_09: Skúste byť kreatívni s týmito novými blokmi!
       Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
@@ -787,10 +811,31 @@ sk-SK:
       Standalone_Artist_1: Vitaj v kurze Umelec! Najskôr si vyskúšajme jednoduchý
         štvorec použitím blokov "Otoč sa vpravo" a "Posuň sa dopredu". Každá strana
         má mať 100 pixelov.
+      Standalone_Artist_2: Nakresli tento diamant so 120 a 60 stupňovými uhlami a
+        dĺžkou strán 150 pixelov.
+      Standalone_Artist_3: Dokážeš nakresliť tento šesťuholník so stranami 100 pixelov
+        a s otočeniami o 60 stupňov?
+      Standalone_Artist_4: Teraz sa môžeš hrať s novým blokom, cyklom. Pomôže ti zopakovať
+        sériu príkazov. Čo sa stane ak tieto príkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Koľko krát potrebuješ diamant zopakovať aby ti vznikla
+        kvetina?
+      Standalone_Artist_5.5: 'Všimni si, ako sa kód pre diamant použitím cyklu zjednodušil?
+        Ak celú radu zopakuješ 12 krát, vznikne ti kvetina. Nápoveda: Po slučke s
+        diamantom sa budeš musieť otočiť o 30 stupňov, aby si nekreslil/a stále po
+        tom istom.'
+      Standalone_Artist_6: 'Zopakuj kód pre šesťuholník 6 krát a vytvoríš kresbu.
+        Pod akým uhlom sa vždy otáčaš? Nápoveda: vydelte počet stupňov v kruhu počtom
+        opakovaní.'
+      Standalone_Artist_7: 'Funkcia je len ďalším nástrojom ako sa neopakovať. Táto
+        funkcia nakreslí kvetinu, takže ju môžeš použiť kedykoľvek, keď chceš nakresliť
+        kvetinu. Použi ju v kombinácii s novým blokom skoč a nakresli tieto kvetiny.
+        Nápoveda: Kvetiny sú od seba vzdialené 150 pixelov'
       Standalone_Artist_8: Táto funkcia sa volá "Nakresli tvar" a naprogramovali sme
         ju aby sme kreslili šesťuholník. Spusti kód nech vidíš čo vie a pohraj sa
         s touto funkciou. Vedel by si ju použiť tak, aby nakreslila obraz štvorcov,
         trojuholníkov alebo osemuholníkov?
+      Standalone_Artist_9: A teraz smelo do toho a nakresli obrázok aký len chceš!
+        Dokonca máš jednú nevyužitú funkciu, ktorá spraví čokoľvek si zmyslíš!
       Underground Avoiding Lava: Láva sa ukrýva pod niektorými z týchto blokov, ktoré
         budeš potrebovať zakryť predtým, než sa posunieš vpred. K tomu môžeš použiť
         príkaz "ak". Pridaj príkaz "posuň sa dopredu" na správne miesto, aby si vyťažil
@@ -828,10 +873,18 @@ sk-SK:
         sprite, že sa žirafa zmenší o 5.
       Virtual Pet 6: Pridaj jablko, ktoré vráti žirafu do pôvodnej veľkosti, keď sa
         dotknú.
+      Virtual Pet 8_2019: "**Voľná hra:** Čo by tak mohlo tvoje zvieratko ešte robiť?
+        Vyskúšaj hocičo ťa napadne!"
       Virtual Pet Freeplay: 'Voľná hra: Čo viac dokážeš spraviť so svojou žirafou? '
       'Widget: Text Compression': V texte hľadajte vzory (opakované slová alebo frázy).
         Zadajte vzory, ktoré vidíte, do slovníka vpravo. Pri zadávaní položiek do
         slovníka, symbol pre položku sa vloží do textu namiesto vzoru.
+      behaviors 1: Odhadni, čo sa bude diať!
+      behaviors 2: Leť s raketou ku hviezdam!
+      behaviors 3: Pomôž roveru predbehnúť robota!
+      behaviors 4: Odhadni, čo sa bude diať!
+      behaviors 5: Pohni kozmonauta diagonálne.
+      behaviors free play: 'Voľná hra: vytvor si svoju vlastnú scénu z vesmíru!'
       bounce_10_basketball: Teraz máme na ihrisku kôš! Použi bloky "pridaj bod" a
         "pridaj bod súperovi" pod blok "keď je lopta v bránke" a "keď lopta netrafí
         ruku". Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
@@ -907,6 +960,8 @@ sk-SK:
         jaskyne.
       courseA_collector_loops11_2019: Pomôž Laurel pozbierať všetky drahokamy z tejto
         jaskyne.
+      courseA_collector_loops2_2019: Pozbieraj všetky 3 drahokamy! Posuň Laurel ku
+        drahokamu a potom použi blok "zbieraj".
       courseA_harvester_loops1: Pomôž záhradníčke pozbierať všetku kukuricu!
       courseA_harvester_loops10: Pomôž záhradníčke pozbierať všetkých 5 klasov kukurice!
       courseA_harvester_loops10_2019: Pomôž záhradníčke pozbierať všetkých 5 klasov
@@ -994,6 +1049,12 @@ sk-SK:
         TNT! '
       courseA_maze_seq10_2019: 'Výzva: Aby si dostal vtáka k prasiatku, musíš sa vyhnúť
         TNT! '
+      courseA_maze_seq11: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq11_2018: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq11_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseA_maze_seq12: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2018: 'Dostaň to prasiatko! '
       courseA_maze_seq12_2019: 'Dostaň to prasiatko! '
@@ -1006,12 +1067,22 @@ sk-SK:
         k prasiatku?
       courseA_maze_seq5a_2019: Čo môžeš pridať na koniec kódu, aby si vtáka dostal/a
         k prasiatku?
+      courseA_maze_seq6: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq6_2018: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
+      courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
+      courseA_playLab_events1_2019: Toto je Play Lab. Presuň bloky do svojho pracovného
+        priestoru a uvidíš, čo sa stane!
+      courseA_playLab_events2_2019: Pes Jorge chce povedať "Ahoj". Môžeš mu s tým
+        pomôcť?
       courseA_playLab_events4_2018: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
         posunul doprava po kliknutí na tlačidlo `vpravo`.
       courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
@@ -1211,10 +1282,14 @@ sk-SK:
       courseB_maze_seq1_2019: |-
         Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.
         Na dokončenie levelu dostaň Scrata k žaluďu.
+      courseB_maze_seq2: _"Chyba! Oprav kód nech sa dostanem k prasiatku."_
+      courseB_maze_seq3: '"Oprav kód nech sa dostanem k prasiatku!"'
       courseB_maze_seq4_2018: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
       courseB_maze_seq4_2019: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
       courseB_maze_seq5_2018: Táto úloha je trochu náročná!
       courseB_maze_seq5_2019: Táto úloha je trochu náročná!
+      courseB_maze_seq6: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
+        ku prasiatku!
       courseB_maze_seq6_2018: Pohni sa jedným smerom, potom iným, aby sa Scrat dostal
         k žaluďu!
       courseB_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa Scrat dostal
@@ -1900,12 +1975,12 @@ sk-SK:
         binárne čísla na nakreslenie tohto vzoru.
       courseD_artist_binary2_2019: Spusti si tento kód, aby si videl, ako umelec používa
         binárne čísla na nakreslenie tohto vzoru.
-      courseD_artist_binary3: Ktorý z binárnych obrázkov nižšie by si mohol 8 krát
-        zopakovať nato, aby si nakreslil tento obrázok?
-      courseD_artist_binary3_2018: Ktorý z binárnych obrázkov nižšie by si mohol 8
-        krát zopakovať nato, aby si nakreslil tento obrázok?
-      courseD_artist_binary3_2019: Ktorý z binárnych obrázkov nižšie by si mohol 8
-        krát zopakovať nato, aby si nakreslil tento obrázok?
+      courseD_artist_binary3: Ktorá z ponúkaných binárnych postupností po 8 zopakovaniach
+        nakreslí tento obrázok?
+      courseD_artist_binary3_2018: Ktorá z ponúkaných binárnych postupností po 8 zopakovaniach
+        nakreslí tento obrázok?
+      courseD_artist_binary3_2019: Ktorá z ponúkaných binárnych postupností po 8 zopakovaniach
+        nakreslí tento obrázok?
       courseD_artist_binary4: Dokážes nakresliť tento obrazec len s použitím troch
         binárnych číslic (0 alebo 1)?
       courseD_artist_binary4_2018: Dokážes nakresliť tento obrazec len s použitím
@@ -1913,42 +1988,48 @@ sk-SK:
       courseD_artist_binary4_2019: Dokážes nakresliť tento obrazec len s použitím
         troch binárnych číslic (0 alebo 1)?
       courseD_artist_binary5: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
       courseD_artist_binary5_2018: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
       courseD_artist_binary5_2019: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
+      courseD_artist_binary6: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
+      courseD_artist_binary6_2018: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
+      courseD_artist_binary6_2019: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
       courseD_artist_binary7: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
       courseD_artist_binary7_2018: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
       courseD_artist_binary7_2019: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
-      courseD_artist_binary8: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_2018: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_predict1: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_predict1_2018: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_artist_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_artist_binary8: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_2018: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_2019: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_predict1: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_predict1_2018: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_artist_binary8_predict1_2019: Dokonči kód tak, aby nakreslil celý vzor.
       courseD_artist_binaryFP: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+        Popusti uzdu svojej kreativite a pomocou bitov nakresli čo len chceš!
       courseD_artist_binaryFP8: "**Voľná hra:** Nakresli čo len chceš binárnymi číslami! "
       courseD_artist_binaryFP_2018: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+        Popusti uzdu svojej kreativite a pomocou bitov nakresli čo len chceš!
       courseD_artist_binaryFP_2019: |-
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
-        Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+        Popusti uzdu svojej kreativite a pomocou bitov nakresli čo len chceš!
       courseD_artist_binary_challenge1_2018: V tejto úlohe môžeš použiť každú binárnu
         hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
       courseD_artist_binary_challenge1_2019: V tejto úlohe môžeš použiť každú binárnu
@@ -2070,18 +2151,20 @@ sk-SK:
         vložený do štvorca.
       courseD_autorun_binary2_2019: Spusti si tento kód, aby si videl, ako umelec
         používa binárne čísla na nakreslenie tohto vzoru.
-      courseD_autorun_binary3_2019: Ktorý z binárnych obrázkov nižšie by si mohol
-        8 krát zopakovať nato, aby si nakreslil tento obrázok?
+      courseD_autorun_binary3_2019: Ktorá z ponúkaných binárnych postupností po 8
+        zopakovaniach nakreslí tento obrázok?
       courseD_autorun_binary4_2019: Dokážes nakresliť tento obrazec len s použitím
         troch binárnych číslic (0 alebo 1)?
       courseD_autorun_binary5_2019: |-
-        Každý binárny reťazec nižšie predstavuje jeden riadok tohto obrázku.
+        Každý z binárnych reťazcov v tomto kóde predstavuje jeden riadok nakresledného obrázku.
 
-        Vieš ich poprehadzovať tak, aby sa nakreslila usmiata tvár namiesto zamračenej?
+        Vieš ich poprehadzovať tak, aby sa tvár zo zamračenej zmenila na usmiatu?
+      courseD_autorun_binary6_2019: Aký 6-číselny reťazec (zopakovaný 11 krát) nakreslí
+        tento obrázok?
       courseD_autorun_binary7_2019: Aký je najkratší binárny reťazec, ktorého opakovaním
         nakreslíš tento obrazec?
-      courseD_autorun_binary8_2019: Pre vytvorenie tejto kresby dokonči kód.
-      courseD_autorun_binary8_predict1_2019: Pre vytvorenie tejto kresby dokonči kód.
+      courseD_autorun_binary8_2019: Dokonči kód tak, aby nakreslil celý vzor.
+      courseD_autorun_binary8_predict1_2019: Dokonči kód tak, aby nakreslil celý vzor.
       courseD_bee_conditionals10: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals10_2018: Pozbieraj všetok nektár a vyrob všetok med.
       courseD_bee_conditionals10_2019: Pozbieraj všetok nektár a vyrob všetok med.
@@ -2278,6 +2361,22 @@ sk-SK:
         potom zober tekvicu.'
       courseD_farmer_condLoops7_2019: 'Výzva: Pozbieraj všetku kukuricu a šalát a
         potom zober tekvicu.'
+      courseD_farmer_condLoops8: Pozbieraj všetku kukuricu a šalát a potom zober tekvicu.
+      courseD_farmer_condLoops8_2018: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops8_2019: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops9: Pozbieraj všetku kukuricu a šalát a potom zober tekvicu.
+      courseD_farmer_condLoops9_2018: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops9_2019: Pozbieraj všetku kukuricu a šalát a potom zober
+        tekvicu.
+      courseD_farmer_condLoops9_predict1: Pozbieraj všetku kukuricu a šalát a potom
+        zober tekvicu.
+      courseD_farmer_condLoops9_predict1_2018: Pozbieraj všetku kukuricu a šalát a
+        potom zober tekvicu.
+      courseD_farmer_condLoops9_predict1_2019: Pozbieraj všetku kukuricu a šalát a
+        potom zober tekvicu.
       courseD_farmer_condLoops_challenge1: Na dokončenie úlohy pozbieraj celú úrodu.
         Každá skrytá plodina má len jednu kukuricu alebo šalát.
       courseD_farmer_condLoops_challenge1_2018: Na dokončenie úlohy pozbieraj celú

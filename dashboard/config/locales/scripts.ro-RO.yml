@@ -4,7 +4,6 @@ ro:
     script:
       category:
         csd_2018_category_name: Descoperiri Informatice ('18-'19)
-        csf_category_name: Fundamentele CS
         csf_2018_category_name: Fundamentele Informaticii (2018)
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
@@ -4995,43 +4994,7 @@ ro:
         csd2-2020:
           description_audience: "[șir gol]"
           stages:
-            Exploring Web Pages:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Intellectual Property:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Images:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Project - Planning Layout and Style:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Project - Building a Webpage:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Purpose of a  Websites:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Team Problem Solving:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sources and Research:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            CSS Classes:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Planning a Multi-page Website:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Linking and Navigation:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Project - Website for a Purpose:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Peer Review and Final Touches:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
             Post-Project Test:
@@ -5142,21 +5105,10 @@ ro:
           description_short: Programare
           description_audience: "[șir gol]"
           stages:
-            Shapes and Parameters:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Variables:
               name: Variabile
-            Random Numbers:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
-            Sprites and Animations:
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Sprite Properties:
               name: Proprietăți spiriduș
-              description_student: "[șir gol]"
-              description_teacher: "[șir gol]"
             Text and Captioned Scenes:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -5592,6 +5544,8 @@ ro:
             CS Principles Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
         virtual-holding-place:
           stages:
             Velocity:
@@ -5621,3 +5575,19 @@ ro:
         code-break-younger:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
+        no-lg:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
+          description_audience: "[șir gol]"

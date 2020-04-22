@@ -2004,6 +2004,8 @@ et:
           stages:
             While Loops:
               name: '„Kui“ tsüklid'
+            Variables:
+              name: Muutujad
         virtual-holding-place:
           stages:
             Velocity:
@@ -2016,3 +2018,7 @@ et:
               name: Algoritmid
             Events:
               name: Sündmused
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '„Kui“ tsüklid'

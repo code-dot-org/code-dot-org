@@ -7,7 +7,6 @@ zh-TW:
         csd_category_name: 計算機科學探索（'17-'18）
         csd_2018_category_name: 計算機科學探索（'18-'19）
         csd_2019_category_name: 計算機科學探索（'19-'20）
-        csf_category_name: CS 基本原理
         csf_2018_category_name: 計算機科學基礎（2018）
         csf_international_category_name: 計算機科學基礎國際版
         csf2_draft_category_name: '開發中：課程 A - F'
@@ -6915,6 +6914,8 @@ zh-TW:
               name: 單元 5 評量 4
             Intro to App Lab:
               name: App Lab 入門
+            Variables:
+              name: 變數
         virtual-holding-place:
           stages:
             Velocity:
@@ -6939,3 +6940,27 @@ zh-TW:
               name: 演算法
             Events:
               name: 事件
+        no-lg:
+          stages:
+            new stage:
+              name: 新的階段
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: 單元 5 評量 2
+            While Loops:
+              name: 當…迴圈
+            Introduction to Arrays:
+              name: 陣列（Arrays）的介紹
+            'Building an App: Image Scroller':
+              name: '創建一個 APP：圖像播放器'
+            Unit 5 Assessment 3:
+              name: 單元 5 評量 3
+            Processing Arrays:
+              name: 處理陣列
+            Functions with Return Values:
+              name: 帶返回值的函式
+            'Building an App: Canvas Painter':
+              name: '創建一個 App - 帆布畫家'
+            Unit 5 Assessment 4:
+              name: 單元 5 評量 4

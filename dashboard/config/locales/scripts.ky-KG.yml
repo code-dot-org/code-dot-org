@@ -1490,6 +1490,10 @@ ky:
               name: Шартуулар
             Functions:
               name: Функциялар
+        csp5-virtual:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
         virtual-holding-place:
           stages:
             Functions:

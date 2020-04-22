@@ -1833,6 +1833,8 @@ lt:
           stages:
             While Loops:
               name: "„Kol“ kartojimas"
+            Variables:
+              name: Kintamieji
         virtual-holding-place:
           stages:
             Velocity:
@@ -1845,3 +1847,7 @@ lt:
               name: Algoritmai
             Events:
               name: Įvykiai
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: "„Kol“ kartojimas"
