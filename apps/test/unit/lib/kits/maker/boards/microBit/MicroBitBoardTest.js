@@ -180,7 +180,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         let ledMatrixSpy = sinon.spy(
           board.prewiredComponents_.ledMatrix,
-          'allOff'
+          'clear'
         );
         board.reset();
         expect(ledMatrixSpy).to.have.been.calledOnce;
