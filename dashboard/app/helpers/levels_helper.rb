@@ -4,6 +4,7 @@ require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
 require 'image_size'
+require 'cdo/firehose'
 
 module LevelsHelper
   include ApplicationHelper
@@ -794,6 +795,7 @@ module LevelsHelper
         FirehoseClient.instance.put_record(
           study: "redirect_under_13",
           event: "student_with_no_teacher_redirected",
+          user_id: current_user.id,
           data_json: {
             game: level.game.name
           }.to_json
