@@ -289,6 +289,7 @@ class Pd::Workshop < ActiveRecord::Base
   # 4. no location address at all? use TBA
   def friendly_location
     return 'Location TBA' if location_address_tba?
+    return 'Virtual Workshop' if location_address_virtual?
     return "#{location_city} #{location_state}" if processed_location
     location_address.presence || 'Location TBA'
   end
@@ -478,10 +479,14 @@ class Pd::Workshop < ActiveRecord::Base
     %w(tba tbd n/a).include?(location_address.try(:downcase))
   end
 
+  def location_address_virtual?
+    ['virtual', 'virtual workshop'].include? location_address.try(:downcase)
+  end
+
   def process_location
     result = nil
 
-    unless location_address.blank? || location_address_tba?
+    unless location_address.blank? || location_address_tba? || location_address_virtual?
       begin
         Geocoder.with_errors do
           # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
