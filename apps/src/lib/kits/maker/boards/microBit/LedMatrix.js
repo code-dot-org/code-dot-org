@@ -14,7 +14,7 @@ export default class LedMatrix {
     this.board.mb.scrollString(value);
   }
 
-  scrollInteger(value) {
+  scrollNumber(value) {
     this.board.mb.scrollInteger(value);
   }
 

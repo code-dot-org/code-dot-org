@@ -336,7 +336,7 @@ export function itImplementsTheMakerBoardInterface(
               'toggle',
               'clear',
               'scrollString',
-              'scrollInteger'
+              'scrollNumber'
             ].forEach(fnName => {
               it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
             });

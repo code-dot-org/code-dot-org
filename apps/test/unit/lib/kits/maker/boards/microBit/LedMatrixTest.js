@@ -72,18 +72,18 @@ describe('LedMatrix', function() {
     });
   });
 
-  describe('scrollString() and scrollInteger()', () => {
+  describe('scrollString() and scrollNumber()', () => {
     let led;
     let boardClient = new MicrobitStubBoard();
     let scrollStringSpy;
-    let scrollIntSpy;
+    let scrollNumSpy;
 
     before(() => {
       led = new LedMatrix({
         mb: boardClient
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
-      scrollIntSpy = sinon.spy(boardClient, 'scrollInteger');
+      scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');
     });
 
     it(`calls the parent scrollString`, () => {
@@ -92,10 +92,10 @@ describe('LedMatrix', function() {
       expect(scrollStringSpy).to.have.been.calledWith('Test');
     });
 
-    it(`calls the parent scrollInteger`, () => {
-      led.scrollInteger(1234);
-      expect(scrollIntSpy).to.have.been.calledOnce;
-      expect(scrollIntSpy).to.have.been.calledWith(1234);
+    it(`calls the parent scrollNumber`, () => {
+      led.scrollNumber(1234);
+      expect(scrollNumSpy).to.have.been.calledOnce;
+      expect(scrollNumSpy).to.have.been.calledWith(1234);
     });
   });
 });
