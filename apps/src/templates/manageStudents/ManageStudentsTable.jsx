@@ -549,8 +549,9 @@ class ManageStudentsTable extends Component {
   };
 
   copySectionCode = () => {
-    const {sectionCode} = this.props;
-    copyToClipboard(sectionCode);
+    const {sectionCode, studioUrlPrefix} = this.props;
+    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
+    copyToClipboard(joinLink);
     alert(i18n.copySectionCodeSuccess());
   };
 
