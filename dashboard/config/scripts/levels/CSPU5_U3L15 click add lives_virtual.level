@@ -137,7 +137,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Add lives to the clicker game that decrement by 1 when the background image is clicked (Click to see full instructions)",
-    "long_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and decrements by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, decrement the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
+    "long_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and goes down by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, reduce the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -171,9 +171,22 @@
     "parent_level_id": 17164,
     "name_suffix": "_virtual",
     "show_debug_watch": "true",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-21 21:02:58 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

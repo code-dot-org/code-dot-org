@@ -7,6 +7,7 @@ import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 class GoogleChartWrapper extends React.Component {
   static propTypes = {
+    style: PropTypes.object,
     records: PropTypes.array.isRequired,
     numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     chartType: PropTypes.number.isRequired,
@@ -26,11 +27,18 @@ class GoogleChartWrapper extends React.Component {
 
   componentDidMount() {
     this.updateChart();
+    window.addEventListener('resize', this.debouncedUpdate);
   }
 
   componentDidUpdate() {
     this.updateChart();
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.debouncedUpdate);
+  }
+
+  debouncedUpdate = _.debounce(() => this.updateChart(), 50);
 
   updateChart() {
     if (!this.chartArea) {
@@ -88,7 +96,11 @@ class GoogleChartWrapper extends React.Component {
 
   render() {
     return (
-      <div id={GOOGLE_CHART_AREA} ref={element => (this.chartArea = element)} />
+      <div
+        id={GOOGLE_CHART_AREA}
+        ref={element => (this.chartArea = element)}
+        style={this.props.style}
+      />
     );
   }
 }
