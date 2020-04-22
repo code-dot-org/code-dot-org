@@ -3,7 +3,6 @@ pt:
   data:
     script:
       category:
-        csf_category_name: Fundamentos
         csf2_draft_category_name: 'Em Desenvolvimento: Cursos A - F'
         hoc_category_name: Hora de Código
         math_category_name: Matemática
@@ -2308,3 +2307,11 @@ pt:
               name: Algoritmos
             Events:
               name: Eventos
+        no-lg:
+          stages:
+            new stage:
+              name: nova fase
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Laços enquanto

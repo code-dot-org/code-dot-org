@@ -5,7 +5,6 @@ id:
       category:
         csd_2018_category_name: Penemuan CS('18-19')
         csd_2019_category_name: Penemuan CS('19-'20)
-        csf_category_name: Dasar dasar CS
         csf_2018_category_name: Dasar dasar CS (2018)
         csf_international_category_name: Dasar dasar internasional CS
         csf2_draft_category_name: 'Dalam pengembangan: Kursus A-F'
@@ -6329,3 +6328,25 @@ id:
               name: Algoritma
             Events:
               name: kegiatan
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Unit 5 penilaian 2
+            While Loops:
+              name: Perulangan Selagi
+            Loops and Simulations:
+              name: Loop dan Simulasi
+            Introduction to Arrays:
+              name: Pengenalan untuk array
+            'Building an App: Image Scroller':
+              name: 'Membangun aplikasi: Gambar Scroller'
+            Unit 5 Assessment 3:
+              name: Unit 5 penilaian 3
+            Processing Arrays:
+              name: Pengolahan Array
+            Functions with Return Values:
+              name: Fungsi dengan nilai kembali
+            'Building an App: Canvas Painter':
+              name: 'Membangun aplikasi: Kanvas pelukis'
+            Unit 5 Assessment 4:
+              name: Unit 5 penilaian 4

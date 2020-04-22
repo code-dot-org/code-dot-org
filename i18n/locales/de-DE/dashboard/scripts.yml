@@ -7,7 +7,6 @@ de:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
-        csf_category_name: Einführung in Informatik und Programmieren
         csf_2018_category_name: Informatik Grundlagen (2018)
         csf_international_category_name: Informatik Grundlagen international
         csf2_draft_category_name: 'In der Entwicklung: Kurse A - F'
@@ -518,6 +517,8 @@ de:
             Text Compression:
               name: Text-Kompression
         algebraPD:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
           stages:
             Course Overview:
               name: Kursübersicht
@@ -567,6 +568,8 @@ de:
             Lesson 15:
               name: Lektion 15
         ECSPD:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
           stages:
             Impact of Computer Science:
               name: Auswirkungen der Informatik
@@ -575,13 +578,19 @@ de:
             What is ECS?:
               name: Was ist ECS?
         sciencePD:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Agentenbasierte Modellierung komplexer adaptiver Systeme
             Introduction to Complex Adaptive Systems:
               name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
+            Post-Survey:
+              name: Abschlussumfrage
             The Tutorial:
               name: Das Tutorial
             Using Computer Models in Science:
@@ -670,6 +679,9 @@ de:
             The Design Recipe:
               name: Das Design-Rezept
         ECSPD-NexTech:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
+          logo_image: nextech_logo.png
           stages:
             Impact of Computer Science:
               name: Auswirkungen der Informatik
@@ -678,6 +690,9 @@ de:
             What is ECS?:
               name: Was ist ECS?
         ECSPD-iZone:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
+          logo_image: izone_logo.png
           stages:
             Impact of Computer Science:
               name: Auswirkungen der Informatik
@@ -686,6 +701,9 @@ de:
             What is ECS?:
               name: Was ist ECS?
         algebraPD-NexTech:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
+          logo_image: nextech_logo.png
           stages:
             Course Overview:
               name: Kursübersicht
@@ -696,6 +714,9 @@ de:
             Why Computer Science belongs in Algebra:
               name: Warum Informatik zur Algebra gehört
         algebraPD-iZone:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
+          logo_image: izone_logo.png
           stages:
             Course Overview:
               name: Kursübersicht
@@ -706,13 +727,20 @@ de:
             Why Computer Science belongs in Algebra:
               name: Warum Informatik zur Algebra gehört
         sciencePD-NexTech:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
+          logo_image: nextech_logo.png
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Agentenbasierte Modellierung komplexer adaptiver Systeme
             Introduction to Complex Adaptive Systems:
               name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
+            Post-Survey:
+              name: Abschlussumfrage
             The Tutorial:
               name: Das Tutorial
             Using Computer Models in Science:
@@ -722,13 +750,20 @@ de:
             What to Expect:
               name: Was Sie erwartet
         sciencePD-iZone:
+          description: 'Phase 1: Online Einführung'
+          description_short: 'Phase 1: Online Einführung'
+          logo_image: izone_logo.png
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Agentenbasierte Modellierung komplexer adaptiver Systeme
             Introduction to Complex Adaptive Systems:
               name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
+            Post-Survey:
+              name: Abschlussumfrage
             The Tutorial:
               name: Das Tutorial
             Using Computer Models in Science:
@@ -766,6 +801,8 @@ de:
               name: Asymmetrische Schlüssel – Becher und Bohnen
             Cracking the Code:
               name: Den Code knacken
+            DNS in the Real World:
+              name: DNS in der realen Welt
             Encryption Algorithms:
               name: Schlüssel und Passwörter
             Routers and Redundancy:
@@ -1063,6 +1100,10 @@ de:
               name: Der große Event
         afterschool1:
           description_audience: Alter 7-13
+        vigenere:
+          stages:
+            Vigenere:
+              name: Vigenere
         algebraPD3a:
           stages:
             Lesson Prep:
@@ -1476,6 +1517,7 @@ de:
               name: 'Offline: Videospiele und Koordinatensysteme'
         algebraPD1:
           title: CS in Algebra Teil 1
+          description_short: 'Phase 1: Online Einführung'
           stages:
             Course Overview:
               name: Kursübersicht
@@ -1661,12 +1703,16 @@ de:
               name: Geschwindigkeit
         2016_sciencePD_phase1:
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Agentenbasierte Modellierung komplexer adaptiver Systeme
             Introduction to Complex Adaptive Systems:
               name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
+            Post-Survey:
+              name: Abschlussumfrage
             The Tutorial:
               name: Das Tutorial
             Using Computer Models in Science:
@@ -1683,6 +1729,7 @@ de:
         CSF_Secret_Sample:
           description_audience: 'Alter: 8-18'
         ECSPD1:
+          description_short: 'Phase 1: Online Einführung'
           stages:
             Welcome to Phase 1!:
               name: Willkommen bei Phase 1!
@@ -1701,13 +1748,18 @@ de:
             Why Computer Science belongs in Algebra:
               name: Warum Informatik zur Algebra gehört
         sciencePD1:
+          description_short: 'Phase 1: Online Einführung'
           stages:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Agentenbasierte Modellierung komplexer adaptiver Systeme
             Introduction to Complex Adaptive Systems:
               name: Einführung in komplexe adaptive Systeme
             Introduction to Computational Science:
               name: Einführung in die Informatik
             Introduction to StarLogo Nova:
               name: Einführung in StarLogo Nova
+            Post-Survey:
+              name: Abschlussumfrage
             The Tutorial:
               name: Das Tutorial
             Using Computer Models in Science:
@@ -1799,6 +1851,8 @@ de:
               name: Analyse der Planung
             Presenting Your Design:
               name: Präsentierung Deines Designs
+            Market Research:
+              name: Marktforschung
             App Presentation:
               name: App-Präsentation
         CSDU1-Draft:
@@ -1856,6 +1910,8 @@ de:
               name: Webseiten beschreiben
         CSDU5-Draft:
           description_short: Daten
+        CSF_Secret_Sample_Story:
+          description_audience: 'Alter: 8-18+'
         MikeTest:
           description_audience: Alter 8-98
           stages:
@@ -2349,8 +2405,18 @@ de:
               name: Analyse der Planung
             Presenting Your Design:
               name: Präsentierung Deines Designs
+            Market Research:
+              name: Marktforschung
+            Paper Prototypes:
+              name: Papier-Prototypen
+            Digital Design:
+              name: Digitaler Entwurf
             Event Driven Programming:
               name: Ereignisgesteuerte Programmierung
+            Basic App Functionality:
+              description_teacher: Zu diesem Zeitpunkt im Entwicklungsprozess sollte jeder Schülerinnen und Schüler über eine im wesentlichen digitale Version des Papierprototyps verfügen - statische Bildschirme, die durch Schaltflächen miteinander verbunden sind. Bei vielen Anwendungen ist dies alles, was man wirklich braucht, um mit Benutzern zu testen. In dieser Lektion haben die Schülerinnen und Schüler jedoch die Möglichkeit, einfache Möglichkeiten zu erkunden, wie sie ihren Anwendungen etwas mehr Funktionalität hinzufügen können, bevor sie in die Testphase eintreten. Die in dieser Lektion vorgestellten Programmierkonzepte sind **nicht notwendig**, um das Projekt erfolgreich abzuschließen, und können nach Ihrem Ermessen weggelassen werden.
+            Testing the App:
+              description_teacher: 'Am Ende der vorhergehenden Lektion sollte jedes Team mindestens einen funktionsfähigen Prototyp seiner Anwendung haben. Der Hauptzweck dieser Lektion besteht darin, dass das Team die App tatsächlich mit anderen Personen testet, vorzugsweise aus dem Zielpublikum, für das die App bestimmt ist, oder aus verschiedenen Teams in der Klasse, während Beobachter aus dem Team die Ergebnisse auf den Arbeitsblättern festhalten, die sie in der Planungsphase verwendet haben. Wie beim Testen der Papierprototypen werden die Teams mit der Planung für die spezifischen Szenarien beginnen, bevor sie die Tests durchführen und beobachten. '
             App Presentation:
               name: App-Präsentation
             User Interfaces:
@@ -2411,6 +2477,8 @@ de:
               name: Dein digitaler Fußabdruck
             Building a Foundation:
               name: Grundlagen aufbauen
+            Loops in Harvester:
+              name: Schleifen mit der Erntearbeiterin
         coursed-draft:
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
           stages:
@@ -2420,6 +2488,8 @@ de:
               name: Eingebettete Schleifen beim Künstler
             Conditionals with Cards:
               name: Bedingungen mit Karten
+            Conditionals & Loops in Farmer:
+              name: Bedingungen & Schleifen mit der Erntearbeiterin
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
             'Unplugged: Binary':
@@ -2437,6 +2507,10 @@ de:
           stages:
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+            Functions in Bee:
+              name: Funktionen mit der Biene
             More Programming with Scratch:
               name: Mehr Programmierung mit Scratch
             Internet:
@@ -2456,6 +2530,8 @@ de:
               name: Umschlag-Variablen
             For Loop Fun:
               name: '„Zähle mit“-Schleifenspaß'
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
             Introduction:
@@ -2549,6 +2625,8 @@ de:
               name: Zusammenfassung
         csf2harvey:
           stages:
+            Functions in Bee:
+              name: Funktionen mit der Biene
             Prepare your snowflake for 3D printing:
               name: Bereite Deine Schneeflocke für den 3D-Druck vor
             Binary:
@@ -2655,6 +2733,8 @@ de:
               name: Daten strukturieren
         applab-1hour:
           stages:
+            Digital Design:
+              name: Digitaler Entwurf
             Event Driven Programming:
               name: Ereignisgesteuerte Programmierung
             Extra:
@@ -2664,6 +2744,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Digital Design:
+              name: Digitaler Entwurf
             Event Driven Programming:
               name: Ereignisgesteuerte Programmierung
         coursed-ramp:
@@ -2909,6 +2991,8 @@ de:
           stages:
             B8 BB8:
               name: B8 BB8
+            Programming with BB-8:
+              name: Programmierung mit BB-8
             Ice Age Play Lab:
               name: Ice Age Spielelabor
             Bounce:
@@ -2937,6 +3021,8 @@ de:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Alltagsalgorithmen: Papierflieger'
+            Loops in Harvester:
+              name: Schleifen mit der Erntearbeiterin
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
             Loops with Rey and BB-8:
@@ -2953,10 +3039,13 @@ de:
               name: Verschachtelte Schleifen
             Nested Loops in Artist:
               name: Eingebettete Schleifen beim Künstler
+            While Loops in Farmer:
+              description_student: 'Schleifen sind in der Programmierung so nützlich. In dieser Lektion lernst du eine neue Art von Schleifen kennen: solange-Schleifen!'
             Conditionals in Bee:
               description_student: 'Nun, da du die Bedingungen verstanden hast, ist es an der Zeit, Bee so zu programmieren, dass die diese Bedingungen beim Sammeln von Honig und Nektar verwendet. '
               description_teacher: Bis zu diesem Zeitpunkt haben die Schülerinnen und Schüler Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Konditionalzeichen, was ihnen erlaubt, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.
             Conditionals & Loops in Farmer:
+              name: Bedingungen & Schleifen mit der Erntearbeiterin
               description_student: Es ist nicht immer klar, wann jede einzelne Bedingung anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu üben, was zu tun ist.
             Digital Citizenship:
               name: 'Digitale Staatsbürgerschaft: Digitale Staatsbürgerschaft praktizieren'
@@ -2978,10 +3067,18 @@ de:
               name: '„Zähle mit“-Schleifenspaß'
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             The Design Process:
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. In diesem Teil des Projekts lernen die Studenten den Designprozess kennen und wie sie ihn in ihren eigenen Projekten umsetzen können. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
+              description_student: Mach deine Hände bereit für jede Menge Programmierung! Es ist an der Zeit, mit dem Erstellen deines Projekts zu beginnen.
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Nun erhalten die Studenten ihren eigenen Raum, um ihr Projekt entweder mit Artist oder Play Lab zu erstellen. Dies wird wahrscheinlich die längste Phase des Projekts sein. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+              description_student: Spüre die Kraft, wenn duu in dieser Lektion dein eigenes Star Wars-Spiel entwickelst.
+            Functions in Bee:
+              name: Funktionen mit der Biene
             Present Your Project:
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Schließlich können die Studenten ihre fertigen Arbeiten ihren Kollegen präsentieren oder mit ihren Lieben mit einem speziellen Link teilen. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Building a Foundation:
@@ -2992,6 +3089,8 @@ de:
               name: Eingebettete Schleifen bei der Eiskönigin
             Nested Loops:
               name: Verschachtelte Schleifen
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
           title: Kurs E
           assignment_family_title: Kurs E
           description_audience: 'Alter: 8-12'
@@ -3004,6 +3103,8 @@ de:
               description_teacher: 'In dieser Lektion werden die Schüler mit Sequenzen, Schleifen und verschachtelten Schleifen vertraut gemacht, um sie auf kompliziertere Konzepte im späteren Teil des Kurses vorzubereiten. Diese "Ramp-Up"-Lektion gleicht das Spielfeld zwischen den Experten und den Anfängern in Ihrer Klasse aus. '
             Ice Age Play Lab:
               name: Ereigniss in Ice Age
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             The Design Process:
               description_teacher: Im Laufe von fünf Lektionen bauen die Studenten ein selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. In diesem Teil des Projekts lernen die Studenten den Designprozess kennen und wie sie ihn in ihren eigenen Projekten umsetzen können. Die Lektionsanleitung mit einem Überblick über alle fünf Phasen des Prozesses finden Sie zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
@@ -3013,6 +3114,8 @@ de:
               description_teacher: Im Laufe von fünf Lektionen bauen die Schüler ein selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Jetzt, wo die Projekte aufgebaut sind, haben die Schüler die Möglichkeit, Feedback von Gleichgesinnten zu erhalten und ihre Projekte zu überarbeiten. Die Lektionsanleitung mit einem Überblick über alle fünf Phasen des Prozesses finden Sie zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Present Your Project:
               description_teacher: Im Laufe von fünf Lektionen bauen die Schüler ein selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Schließlich können die Studenten ihre fertigen Arbeiten ihren Kollegen präsentieren oder mit ihren Lieben mit einem speziellen Link teilen. Die Lektionsanleitung mit einem Überblick über alle fünf Phasen des Prozesses finden Sie zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
+            Functions in Bee:
+              name: Funktionen mit der Biene
             Building a Foundation:
               name: Grundlagen aufbauen
             Debugging with Scrat:
@@ -3080,6 +3183,8 @@ de:
               name: Internet
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
             Conditionals with Cards:
@@ -3090,16 +3195,24 @@ de:
               name: '„Zähle mit“-Schleifenspaß'
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+            Functions in Bee:
+              name: Funktionen mit der Biene
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             Nested Loops Project in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
             'Common Sense Education: Digital Citizenship':
               name: 'Digitale Staatsbürgerschaft: Digitale Staatsbürgerschaft praktizieren'
+            Events in Star Wars:
+              name: Ereignisse mit Star Wars
             Events with Flappy:
               name: Ereignisse mit Flappy
             Building a Foundation:
               name: Grundlagen aufbauen
             Nested Loops:
               name: Verschachtelte Schleifen
+            Conditionals & Loops in Harvester:
+              name: Bedingungen & Schleifen mit der Erntearbeiterin
           title: Expresskurs
           assignment_family_title: Expresskurs (2018)
           description_audience: 'Alter: 9-18'
@@ -3109,6 +3222,8 @@ de:
               name: 'Fehlersuche: Ungeklärte Bugs'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+            'Programming: Star Wars':
+              name: 'Programmierung: Star Wars'
             Spelling Bee:
               name: Buchstabierwettbewerb
           description_audience: 'Alter: 4-8'
@@ -3153,6 +3268,12 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            Market Research:
+              name: Marktforschung
+            Paper Prototypes:
+              name: Papier-Prototypen
+            Digital Design:
+              name: Digitaler Entwurf
             Event Driven Programming:
               name: Ereignisgesteuerte Programmierung
             App Presentation:
@@ -3192,6 +3313,10 @@ de:
               name: Kurs E Einführung
             Conditionals:
               name: Bedingungen
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+            Functions in Bee:
+              name: Funktionen mit der Biene
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3229,8 +3354,14 @@ de:
           stages:
             Introduction:
               name: Einführung
+            Events in Star Wars:
+              name: Ereignisse mit Star Wars
             Events with Flappy:
               name: Ereignisse mit Flappy
+            Functions in Bee:
+              name: Funktionen mit der Biene
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             Building a Foundation:
               name: Grundlagen aufbauen
             Debugging with Scrat:
@@ -3253,6 +3384,10 @@ de:
               name: Kurs E Einführung
             Conditionals:
               name: Bedingungen
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+            Functions in Bee:
+              name: Funktionen mit der Biene
             Internet:
               name: Internet
             Crowdsourcing:
@@ -3275,6 +3410,10 @@ de:
               name: '„Zähle mit“-Schleifenspaß'
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+            Functions in Bee:
+              name: Funktionen mit der Biene
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
         csd5-old:
           stages:
             Patterns and Representation:
@@ -3297,6 +3436,12 @@ de:
           stages:
             Analysis of Design:
               name: Analyse der Planung
+            Market Research:
+              name: Marktforschung
+            Paper Prototypes:
+              name: Papier-Prototypen
+            Digital Design:
+              name: Digitaler Entwurf
             Event Driven Programming:
               name: Ereignisgesteuerte Programmierung
             App Presentation:
@@ -3325,10 +3470,14 @@ de:
               name: Persönliche Innovationen
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Web Development - Creating Webpages:
+              name: Webentwicklung - Erstellen von Webseiten
             User Interfaces:
               name: Benutzeroberflächen
             Intro to App Lab:
               name: Einführung in AppLab
+        allthesurveys:
+          title: Alle Umfragen
         hero:
           stages:
             Minecraft Hour of Code:
@@ -3378,10 +3527,16 @@ de:
               name: Einführung
             Conditionals:
               name: Bedingungen
+            Functions in Bee:
+              name: Funktionen mit der Biene
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
           title: Kurs E 2018 (Veraltet!)
         course-f-2018:
           stages:
@@ -3401,6 +3556,10 @@ de:
               name: '„Zähle mit“-Schleifenspaß'
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+            Functions in Bee:
+              name: Funktionen mit der Biene
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
           title: Kurs F 2018 (Veraltet!)
         csd6-old:
           stages:
@@ -3506,6 +3665,10 @@ de:
               name: Sicher unterwegs
             Loops in Collector:
               name: Schleifen mit Laurel
+            Programming in Harvester:
+              name: Programmieren mit der Erntearbeiterin
+            Loops in Harvester:
+              name: Schleifen mit der Erntearbeiterin
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie und das große Projekt
         express-2018:
@@ -3523,8 +3686,14 @@ de:
               name: Verschachtelte Schleifen
             'Events: The Big Event':
               name: Der große Event
+            Events in Star Wars:
+              name: Ereignisse mit Star Wars
             Events with Flappy:
               name: Ereignisse mit Flappy
+            Functions in Bee:
+              name: Funktionen mit der Biene
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             Debugging in Maze:
               name: Debuggen mit Scrat
             Programming in Collector:
@@ -3543,14 +3712,20 @@ de:
               name: Eingebettete Schleifen mit Anna und Elsa
             Conditionals with Cards:
               name: Bedingungen mit Karten
+            Conditionals & Loops in Harvester:
+              name: Ernten mit Bedingungen
             'Functions: Songwriting':
               name: Songschreiben
+            Functions in Harvester:
+              name: Funktionen mit dem Erntearbeiter
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
             Envelope Variables:
               name: Umschlag-Variablen
             For Loop Fun:
               name: '„Zähle mit“-Schleifenspaß'
+            Pet Giraffe with Sprite Lab:
+              name: Haustier Giraffe
             Binary Bracelets:
               name: Binäre Armbänder
             'Unplugged: Binary':
@@ -3615,6 +3790,8 @@ de:
               name: Künstler Binär
             Loops in Ice Age:
               name: Schleifen in Ice Age
+            Conditionals & Loops in Harvester:
+              name: Ernten mit Bedingungen
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
             Relay Programming:
@@ -3623,6 +3800,12 @@ de:
               name: Eingebettete Schleifen bei der Biene
             Nested Loops in Maze:
               name: Eingebettete Schleifen im Labyrinth
+        jr-test:
+          stages:
+            Fish Tank:
+              name: Fischbecken
+            Virtual Pet - Forever:
+              name: Virtuelles Haustier - für immer
         csp-exam:
           stages:
             Unit 1 - Assessment 1:
@@ -3671,6 +3854,8 @@ de:
               name: Schöne Schleifen
             Loops with Rey and BB-8:
               name: Schleifen mit Rey und BB-8
+            Loops in Harvester:
+              name: Ernten mit Schleifen
             'Events: The Big Event':
               name: Der große Event
             Build a Flappy Game:
@@ -3710,11 +3895,17 @@ de:
             Introduction:
               name: Einführung
               description_student: Diese schnelle Einführung gibt dir die Möglichkeit, die meisten der Fähigkeiten zu üben, die du zum Lösen der Rätsel in diesem Kurs benötigst.
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+              description_student: Spüre die Kraft, wenn duu in dieser Lektion dein eigenes Star Wars-Spiel entwickelst.
             'Functions: Songwriting':
               name: Songschreiben
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
             The Design Process:
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. In diesem Teil des Projekts lernen die Studenten den Designprozess kennen und wie sie ihn in ihren eigenen Projekten umsetzen können. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
+              description_student: Mach deine Hände bereit für jede Menge Programmierung! Es ist an der Zeit, mit dem Erstellen deines Projekts zu beginnen.
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Nun erhalten die Studenten ihren eigenen Raum, um ihr Projekt entweder mit Artist oder Play Lab zu erstellen. Dies wird wahrscheinlich die längste Phase des Projekts sein. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Schließlich können die Studenten ihre fertigen Arbeiten ihren Kollegen präsentieren oder mit ihren Lieben mit einem speziellen Link teilen. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
@@ -3726,6 +3917,10 @@ de:
               name: Bedingungen mit Karten
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+            Pet Giraffe with Sprite Lab:
+              name: Haustier Giraffe
+            Copyright and Creativity:
+              name: Digitale Teilhabe
         coursef-2018:
           title: Kurs F (2018)
           assignment_family_title: Kurs F
@@ -3757,6 +3952,10 @@ de:
               name: '„Zähle mit“-Schleifenspaß'
             Songwriting with Parameters:
               name: Songschreiben mit Parametern
+            Functions in Bee:
+              name: Funktionen mit der Biene
+            Functions with Parameters in Bee:
+              name: Funktionen mit Parametern
             The Design Process:
               description_teacher: Im Laufe von fünf Lektionen bauen die Studenten ein selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. In diesem Teil des Projekts lernen die Studenten den Designprozess kennen und wie sie ihn in ihren eigenen Projekten umsetzen können. Die Lektionsanleitung mit einem Überblick über alle fünf Phasen des Prozesses finden Sie zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Build Your Project:
@@ -3768,6 +3967,8 @@ de:
               description_teacher: Im Laufe von fünf Lektionen bauen die Schüler ein selbst entworfenes Projekt auf, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Schließlich können die Studenten ihre fertigen Arbeiten ihren Kollegen präsentieren oder mit ihren Lieben mit einem speziellen Link teilen. Die Lektionsanleitung mit einem Überblick über alle fünf Phasen des Prozesses finden Sie zu Beginn des Projektprozesses [hier] (https://curriculum.code.org/csf/coursef/15/).
             Conditionals with Cards:
               name: Bedingungen mit Karten
+            Pet Giraffe with Sprite Lab:
+              name: Haustier Giraffe
         csp1-2018:
           title: CSP Lektion 1 - Das Internet ('18-'19)
           stages:
@@ -3809,12 +4010,22 @@ de:
               name: Verarbeitung
             Storage:
               name: Speicher
+            Apps and Storage:
+              name: Anwendungen und Speicherung
         csd4-2018:
           stages:
             Analysis of Design:
               name: Analyse der Planung
             User Interfaces:
               name: Benutzeroberflächen
+            Market Research:
+              name: Marktforschung
+            Paper Prototypes:
+              name: Papier-Prototypen
+            Digital Design:
+              name: Digitaler Entwurf
+            Testing the App:
+              description_teacher: 'Am Ende der vorhergehenden Lektion sollte jedes Team mindestens einen funktionsfähigen Prototyp seiner Anwendung haben. Der Hauptzweck dieser Lektion besteht darin, dass das Team die App tatsächlich mit anderen Personen testet, vorzugsweise aus dem Zielpublikum, für das die App bestimmt ist, oder aus verschiedenen Teams in der Klasse, während Beobachter aus dem Team die Ergebnisse auf den Arbeitsblättern festhalten, die sie in der Planungsphase verwendet haben. Wie beim Testen der Papierprototypen werden die Teams mit der Planung für die spezifischen Szenarien beginnen, bevor sie die Tests durchführen und beobachten. '
         csd5-2018:
           stages:
             Patterns and Representation:
@@ -3876,6 +4087,12 @@ de:
               name: Lerneinheit 3 Kapitel 1 Herausforderung
             Creating Functions with Parameters:
               name: Funktionen mit Parametern erstellen
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
+        csp-explore-2018:
+          stages:
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
         csp4-2018:
           title: CSP Lektion 4 - Big Data und Privatspäre ('18-'19)
           stages:
@@ -3891,6 +4108,8 @@ de:
               name: Prüfe deine Voraussetzungen
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
         csp5-2018:
           title: CSP Lektion 5 - Apps erstellen ('18-'19)
           stages:
@@ -3914,6 +4133,8 @@ de:
               name: Mit Arrays arbeiten
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
         csppostap-2018:
           stages:
             Creating Javascript Objects:
@@ -4047,6 +4268,8 @@ de:
               name: 'Real-Life-Algorithmen: Pflanze Samen'
             Learn to Drag and Drop:
               name: Erlerne Drag und Drop
+            'Programming: Star Wars':
+              name: 'Programmierung: Star Wars'
             Loops in Collector:
               name: Schleifen mit Laurel
             Spelling Bee:
@@ -4065,6 +4288,10 @@ de:
               name: Schleifen mit Scrat
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie und das große Projekt
+        2018hoc-ab:
+          stages:
+            Labyrinth:
+              name: Labyrinth
         spritelab-simple:
           description_audience: Kurs E/F Schüler
         frozen-2018:
@@ -4092,6 +4319,10 @@ de:
           stages:
             Aquatic:
               name: Wassersport
+        sconyers:
+          stages:
+            Digital Design:
+              name: Digitaler Entwurf
         dance--draft:
           stages:
             Dance Party:
@@ -4103,8 +4334,18 @@ de:
               name: Tanzparty
         cspplayground:
           stages:
+            Student Survey:
+              name: Schüler-Umfrage
             Teacher Surveys:
               name: Lehrerumfragen
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
         dance-extras:
@@ -4146,6 +4387,8 @@ de:
               name: das Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Digitale Teilhabe
         dance-low:
           stages:
             Dance Party:
@@ -4171,12 +4414,15 @@ de:
               name: Eingebettete Schleifen beim Künstler
             Nested Loops in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            While Loops in Farmer:
+              description_student: 'Schleifen sind in der Programmierung so nützlich. In dieser Lektion lernst du eine neue Art von Schleifen kennen: solange-Schleifen!'
             Conditionals with Cards:
               name: Bedingungen mit Karten
             Conditionals in Bee:
               description_student: 'Nun, da du die Bedingungen verstanden hast, ist es an der Zeit, Bee so zu programmieren, dass die diese Bedingungen beim Sammeln von Honig und Nektar verwendet. '
               description_teacher: Bis zu diesem Zeitpunkt haben die Schülerinnen und Schüler Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Konditionalzeichen, was ihnen erlaubt, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.
             Conditionals & Loops in Harvester:
+              name: Ernten mit Bedingungen
               description_student: Es ist nicht immer klar, wann jede einzelne Bedingung anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu üben, was zu tun ist.
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
@@ -4185,6 +4431,9 @@ de:
               name: Binärbilder
             Artist Binary:
               name: Künstler Binär
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+              description_student: Spüre die Kraft, wenn duu in dieser Lektion dein eigenes Star Wars-Spiel entwickelst.
             Dance Party:
               name: Tanzparty
         coursee-2019:
@@ -4202,13 +4451,19 @@ de:
               name: Eingebettete Schleifen bei der Eiskönigin
             Conditionals with Cards:
               name: Bedingungen mit Karten
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+              description_student: Spüre die Kraft, wenn duu in dieser Lektion dein eigenes Star Wars-Spiel entwickelst.
             'Functions: Songwriting':
               name: Songschreiben
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
             Copyright and Creativity:
               name: Urheberrecht und Kreativität
             The Design Process:
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. In diesem Teil des Projekts lernen die Studenten den Designprozess kennen und wie sie ihn in ihren eigenen Projekten umsetzen können. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
+              description_student: Mach deine Hände bereit für jede Menge Programmierung! Es ist an der Zeit, mit dem Erstellen deines Projekts zu beginnen.
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Nun erhalten die Studenten ihren eigenen Raum, um ihr Projekt entweder mit Artist oder Play Lab zu erstellen. Dies wird wahrscheinlich die längste Phase des Projekts sein. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
             Present Your Project:
               description_teacher: Im Laufe von vier Lektionen werden die Studenten ein selbst entworfenes Projekt programmieren, wobei sie entweder Play Lab oder Artist als Programmierumgebung verwenden. Schließlich können die Studenten ihre fertigen Arbeiten ihren Kollegen präsentieren oder mit ihren Lieben mit einem speziellen Link teilen. Die Lektionsanleitung für alle vier Phasen des Prozesses finden Sie in der ersten Phase dieses Projektprozesses [hier](https://curriculum.code.org/csf/coursee/12/).
@@ -4220,6 +4475,8 @@ de:
               name: Eingebettete Schleifen im Labyrinth
             Nested Loops in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            Digital Sharing:
+              name: Digitale Teilhabe
             Simon Says:
               name: Simon sagt
             Songwriting:
@@ -4246,6 +4503,10 @@ de:
               name: Eingebettete Schleifen im Labyrinth
             Conditionals with Cards:
               name: Bedingungen mit Karten
+            Conditionals & Loops in Harvester:
+              name: Ernten mit Bedingungen
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
             Envelope Variables:
@@ -4276,6 +4537,8 @@ de:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
+            Apps and Storage:
+              name: Anwendungen und Speicherung
         andrea-test:
           stages:
             new stage:
@@ -4325,6 +4588,9 @@ de:
             Loops with Rey and BB-8:
               name: Schleifen mit Rey und BB-8
               description_student: 'Hilf BB-8 durch Labyrinthe mit Schleifen! '
+            Loops in Harvester:
+              name: Ernten mit Schleifen
+              description_student: Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!
             'Events: The Big Event':
               name: Der große Event
             Build a Flappy Game:
@@ -4333,6 +4599,8 @@ de:
               description_teacher: In dieser speziellen Phase können die Schülerinnen und Schüler ihr eigenes Flappy Bird-Spiel bauen, indem sie mit Hilfe von Eventhandlern Mausklicks und Objektkollisionen erkennen. Am Ende des Levels sind die Schüler in der Lage, ihr Spiel anzupassen, indem sie die Grafik oder die Regeln ändern.
             Binary Bracelets:
               name: Binäre Armbänder
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Mach deine Hände bereit für jede Menge Programmierung! Es ist an der Zeit, mit dem Erstellen deines Projekts zu beginnen.
             Powerful Passwords:
               name: Starke Passwörter
         gamelab:
@@ -4344,6 +4612,8 @@ de:
           stages:
             'Programming: Happy Maps':
               name: Glücklich Karten
+            Programming in Harvester:
+              name: Programmieren mit der Erntearbeiterin
             Going Places Safely:
               name: Sicher unterwegs
             Loops in Collector:
@@ -4381,8 +4651,14 @@ de:
               description_teacher: In dieser Lektion vertiefen die Schüler das Konzept der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen Schätze in offenen Höhlen. Ein neuer Block `sammle Schatz` wird eingeführt, um ihr auf ihrer Reise zu helfen.
             'Loops: Getting Loopy':
               name: Schöne Schleifen
+            Loops in Harvester:
+              name: Schleifen mit der Erntearbeiterin
+              description_student: Hilf der Erntearbeiterin, mit Hilfe von Schleifen noch mehr einzusammeln!
             Programming in Maze:
               name: Programmieren mit Angry Birds
+            Programming in Harvester:
+              name: Programmieren mit der Erntearbeiterin
+              description_student: Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten.
             Sequencing in Maze:
               description_student: Hilf Red, dem Angry Bird, den Weg zu dem bösen Schwein zu folgen.
         pre-express-2019:
@@ -4408,6 +4684,8 @@ de:
               name: Erlerne Drag und Drop
             Programming in Maze:
               name: Programmieren mit Angry Birds
+            Programming in Harvester:
+              name: Programmieren mit der Erntearbeiterin
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4463,6 +4741,14 @@ de:
               name: Analyse der Planung
             User Interfaces:
               name: Benutzeroberflächen
+            Market Research:
+              name: Marktforschung
+            Paper Prototypes:
+              name: Papier-Prototypen
+            Digital Design:
+              name: Digitaler Entwurf
+            Testing the App:
+              description_teacher: 'Am Ende der vorhergehenden Lektion sollte jedes Team mindestens einen funktionsfähigen Prototyp seiner Anwendung haben. Der Hauptzweck dieser Lektion besteht darin, dass das Team die App tatsächlich mit anderen Personen testet, vorzugsweise aus dem Zielpublikum, für das die App bestimmt ist, oder aus verschiedenen Teams in der Klasse, während Beobachter aus dem Team die Ergebnisse auf den Arbeitsblättern festhalten, die sie in der Planungsphase verwendet haben. Wie beim Testen der Papierprototypen werden die Teams mit der Planung für die spezifischen Szenarien beginnen, bevor sie die Tests durchführen und beobachten. '
         csd5-2019:
           stages:
             Patterns and Representation:
@@ -4487,10 +4773,22 @@ de:
               name: 'Projekt: Prototyp einer Innovation'
         csp4-pilot:
           stages:
+            Student Survey:
+              name: Schüler-Umfrage
             Surveys:
               name: Umfragen
+            Student Surveys:
+              name: Schüler-Umfragen
             Teacher Surveys:
               name: Lehrerumfragen
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
             Unit 4 STUDENT Survey:
@@ -4556,6 +4854,8 @@ de:
               name: Schleifen- und Zufallszahlen
             Unit 3 Chapter 1 Assessment:
               name: Lerneinheit 3 Kapitel 1 Herausforderung
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
         csp4-2019:
           title: CSP Lektion 4 - Big Data und Privatspäre ('19-'20)
           stages:
@@ -4569,6 +4869,8 @@ de:
               name: Einfache Verschlüsselung
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
         csp5-2019:
           title: CSP Lektion 5 - Apps erstellen ('19-'20)
           stages:
@@ -4592,6 +4894,12 @@ de:
               name: Mit Arrays arbeiten
             Functions with Return Values:
               name: Funktion mit Rückgabewerten
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
+        csp-explore-2019:
+          stages:
+            Mid-Year Survey:
+              name: Halbjahres-Umfrage
         csppostap-2019:
           stages:
             Good and Bad Data Visualizations:
@@ -4674,21 +4982,51 @@ de:
               name: Eingebettete Schleifen bei der Eiskönigin
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+            Invasive Species:
+              name: Invasive Arten
+            Functions in Harvester:
+              name: Programmieren mit dem Erntearbeiter
             Debate:
               name: Diskutiere
           description_audience: 4. Klasse
         csp1-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
           title: 'Lerneinheit 1: Bits & Bytes'
         csp2-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
           title: 'Lektion 2: Das Internet'
         csp3-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
             'Project: Designing an App pt. 1':
@@ -4708,16 +5046,42 @@ de:
           title: 'Lerneinheit 3: Einführung in die App-Entwicklung'
         csp4-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
           title: 'Lerneinheit 4: Variablen, Bedingungen und Funktionen'
         csp5-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
+            Student Survey (Libraries):
+              name: Schüler-Umfrage (Bibliotheken)
           title: 'Lerneinheit 5: Listen, Schleifen und Verfahren'
         csp6-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
           title: 'Lerneinheit 6: Algorithmen'
@@ -4725,22 +5089,56 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
             Libraries:
               name: Bibliotheken
+            Student Survey (Libraries):
+              name: Schüler-Umfrage (Bibliotheken)
           title: 'Lektion 7: Funktionen und Bibliotheken'
         csp8-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
         csp9-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
           title: 'Lektion 9: Daten'
         csp10-pilot-staging:
           stages:
+            Student Survey (Variables):
+              name: Schüler-Umfrage (Variablen)
+            Teacher Surveys (Variables):
+              name: Lehrer-Umfrage (Variablen)
+            Student Survey (Conditionals):
+              name: Schüler-Umfrage (Bedingungen)
+            Teacher Surveys (Conditionals):
+              name: Lehrer-Umfragen (Bedingungen)
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
           title: 'Einheit 10: Globale Auswirkungen'
@@ -4754,6 +5152,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Student Survey (Libraries):
+              name: Schüler-Umfrage (Bibliotheken)
             Semester Hackathon Part 1:
               name: Semester-Hackathon Teil 1
             Semester Hackathon Part 2:
@@ -4805,6 +5205,8 @@ de:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
+            Apps and Storage:
+              name: Anwendungen und Speicherung
         csd2-pilot:
           stages:
             Exploring Websites:
@@ -4829,6 +5231,10 @@ de:
               name: Bilder
             Exploring Web Pages:
               name: Erkunde Webseiten
+            CSS Classes:
+              name: CSS-Klassen
+            Sources and Research:
+              name: Quellen und Forschung
             Linking Pages:
               name: Verknüpfe Seiten
         csd3-pilot:
@@ -4904,6 +5310,8 @@ de:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
+            Apps and Storage:
+              name: Anwendungen und Speicherung
         csp2-pilot:
           stages:
             new stage:
@@ -4920,6 +5328,8 @@ de:
               name: Einheit 2 SCHÜLER Umfrage
             Unit 2 TEACHER Survey:
               name: Einheit 2 LEHRER Umfrage
+            DNS and HTTP:
+              name: DNS und HTTP
             The Need for Addressing:
               name: Die Notwendigkeit von Addressierung
         peru-2019:
@@ -4930,12 +5340,17 @@ de:
               name: Einführung
             Nested Loops:
               name: Verschachtelte Schleifen
+            Events in Star Wars:
+              name: Ereignisse mit Star Wars
             Nested Loops in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+        denny-science-8:
+          title: Kollisions-Detektor
         dance-2019:
           stages:
             Dance Party:
               name: Tanzparty
+          title: Tanzparty (2019)
           description: Codiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
         k5-onlinepd-2019:
           stages:
@@ -4977,6 +5392,8 @@ de:
               name: Variablen
             For Loops:
               name: '"Zähle mit"-Schleifen'
+            Who is this section for?:
+              name: Für wen ist dieser Abschnitt gedacht?
         dance-extras-2019:
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         csp10-pilot:
@@ -5021,12 +5438,18 @@ de:
               name: Eingebettete Schleifen beim Künstler
             Nested Loops in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
         time4cs-experiment-unit-2:
           stages:
+            Invasive Species:
+              name: Invasive Arten
             Nested Loops in Maze:
               name: Eingebettete Schleifen im Labyrinth
             Nested Loops with Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            Functions with Harvester:
+              name: Funktionen mit der Erntearbeiterin
         time4cs-control-unit-1:
           stages:
             Conditionals:
@@ -5063,10 +5486,18 @@ de:
               name: Einheit 5 SCHÜLER Umfrage
             Unit 5 TEACHER Survey:
               name: Einheit 5 LEHRER Umfrage
+        csd2-projects-temp:
+          stages:
+            HTML  Project:
+              name: HTML  Projekt
+            CSS Project:
+              name: CSS Projekt
         csp9-pilot:
           stages:
             new stage:
               name: neue Etappe
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing und maschinelles Lernen
         csd2-2020:
           stages:
             Exploring Web Pages:
@@ -5083,6 +5514,10 @@ de:
               name: Bilder
             Project - Building a Webpage:
               name: Projekt - Erstellung einer Webseite
+            Sources and Research:
+              name: Quellen und Forschung
+            CSS Classes:
+              name: CSS-Klassen
         csd1-2020:
           stages:
             Intro to Problem Solving:
@@ -5095,6 +5530,8 @@ de:
               name: Ein- und Ausgabe
             Processing:
               name: Verarbeitung
+            Apps and Storage:
+              name: Anwendungen und Speicherung
             0:
         csd4-2020:
           stages:
@@ -5102,6 +5539,14 @@ de:
               name: Analyse der Planung
             User Interfaces:
               name: Benutzeroberflächen
+            Market Research:
+              name: Marktforschung
+            Paper Prototypes:
+              name: Papier-Prototypen
+            Digital Design:
+              name: Digitaler Entwurf
+            Testing the App:
+              description_teacher: 'Am Ende der vorhergehenden Lektion sollte jedes Team mindestens einen funktionsfähigen Prototyp seiner Anwendung haben. Der Hauptzweck dieser Lektion besteht darin, dass das Team die App tatsächlich mit anderen Personen testet, vorzugsweise aus dem Zielpublikum, für das die App bestimmt ist, oder aus verschiedenen Teams in der Klasse, während Beobachter aus dem Team die Ergebnisse auf den Arbeitsblättern festhalten, die sie in der Planungsphase verwendet haben. Wie beim Testen der Papierprototypen werden die Teams mit der Planung für die spezifischen Szenarien beginnen, bevor sie die Tests durchführen und beobachten. '
         csd5-2020:
           stages:
             Patterns and Representation:
@@ -5187,8 +5632,14 @@ de:
               description_student: Hilf Red, dem Angry Bird, den Weg zu dem bösen Schwein zu folgen.
             Programming in Maze:
               name: Programmieren mit Angry Birds
+            Programming in Harvester:
+              name: Programmieren mit der Erntearbeiterin
+              description_student: Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten.
             'Loops: Getting Loopy':
               name: Schöne Schleifen
+            Loops in Harvester:
+              name: Schleifen mit der Erntearbeiterin
+              description_student: Hilf der Erntearbeiterin, mit Hilfe von Schleifen noch mehr einzusammeln!
             Loops in Collector:
               name: Schleifen mit Laurel
               description_student: Programmiere Laurel die Abenteurerin so, dass er in einer offenen Höhle Schätze sammelt.
@@ -5214,12 +5665,17 @@ de:
             Loops with Rey and BB-8:
               name: Schleifen mit Rey und BB-8
               description_student: 'Hilf BB-8 durch Labyrinthe mit Schleifen! '
+            Loops in Harvester:
+              name: Ernten mit Schleifen
+              description_student: Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!
             'Events: The Big Event':
               name: Der große Event
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
               description_student: Baue dein eigenes Flappy Bird-Spiel, wie immer du möchtest, und teile es dann mit deinen Freunden!
               description_teacher: In dieser speziellen Phase können die Schülerinnen und Schüler ihr eigenes Flappy Bird-Spiel bauen, indem sie mit Hilfe von Eventhandlern Mausklicks und Objektkollisionen erkennen. Am Ende des Levels sind die Schüler in der Lage, ihr Spiel anzupassen, indem sie die Grafik oder die Regeln ändern.
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Mach deine Hände bereit für jede Menge Programmierung! Es ist an der Zeit, mit dem Erstellen deines Projekts zu beginnen.
         coursed-2020:
           title: Kurs D (2019)
           description_audience: 'Alter: 7-11'
@@ -5231,6 +5687,9 @@ de:
               description_teacher: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.
             Debugging in Collector:
               name: Debuggen mit Laurel
+            Build a Star Wars Game:
+              name: Erstelle ein Star Wars Spiel
+              description_student: Spüre die Kraft, wenn duu in dieser Lektion dein eigenes Star Wars-Spiel entwickelst.
             Loops in Ice Age:
               name: Schleifen in Ice Age
               description_student: In dieser Lektion wirst du den Wiederholungsbaustein verwenden, um Scrat dabei zu helfen, die Eichel so effizient wie möglich zu erreichen.
@@ -5242,7 +5701,10 @@ de:
             Conditionals in Bee:
               description_student: 'Nun, da du die Bedingungen verstanden hast, ist es an der Zeit, Bee so zu programmieren, dass die diese Bedingungen beim Sammeln von Honig und Nektar verwendet. '
               description_teacher: Bis zu diesem Zeitpunkt haben die Schülerinnen und Schüler Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Konditionalzeichen, was ihnen erlaubt, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.
+            While Loops in Farmer:
+              description_student: 'Schleifen sind in der Programmierung so nützlich. In dieser Lektion lernst du eine neue Art von Schleifen kennen: solange-Schleifen!'
             Conditionals & Loops in Harvester:
+              name: Ernten mit Bedingungen
               description_student: Es ist nicht immer klar, wann jede einzelne Bedingung anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu üben, was zu tun ist.
             'Unplugged: Binary':
               name: Binärbilder
@@ -5260,12 +5722,18 @@ de:
           stages:
             Simon Says:
               name: Simon sagt
+            Learning Sprites with Sprite Lab:
+              description_student: Lerne, wie man Sprites erstellt und bearbeitet.
             Nested Loops in Bee:
               name: Eingebettete Schleifen im Labyrinth
             Nested Loops in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
             'Functions: Songwriting':
               name: Songschreiben
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
+            Digital Sharing:
+              name: Digitale Teilhabe
         coursef-2020:
           title: Kurs F (2019)
           description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
@@ -5282,6 +5750,8 @@ de:
               name: das Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Digital Sharing:
+              name: Digitale Teilhabe
             AI for Oceans:
               name: KI für Meere
         express-2020:
@@ -5296,6 +5766,10 @@ de:
               name: Eingebettete Schleifen bei der Biene
             Nested Loops in Frozen:
               name: Eingebettete Schleifen bei der Eiskönigin
+            Conditionals & Loops in Harvester:
+              name: Bedingungen & Schleifen mit der Erntearbeiterin
+            Functions in Harvester:
+              name: Funktionen mit der Erntearbeiterin
         pre-express-2020:
           description_audience: 'Alter: 4-8'
           stages:
@@ -5303,6 +5777,8 @@ de:
               name: Erlerne Drag und Drop
             Sequencing with Scrat:
               name: Sequenzen mit Scrat
+            Programming in Harvester:
+              name: Programmieren mit der Erntearbeiterin
             Spelling Bee:
               name: Buchstabierwettbewerb
             Loops in Ice Age:
@@ -5337,6 +5813,8 @@ de:
               name: Router und Redundanz
             Packets:
               name: Pakete
+            DNS and HTTP:
+              name: DNS und HTTP
         csp3-2020:
           stages:
             new stage:
@@ -5365,6 +5843,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing und maschinelles Lernen
         csp10-2020:
           stages:
             new stage:
@@ -5381,6 +5861,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Pre-work:
+              name: Vorarbeit
             Part 1:
               name: Teil 1
             Part 2:
@@ -5433,6 +5915,8 @@ de:
           stages:
             new stage:
               name: neue Etappe
+            Tools:
+              name: Werkzeuge
             Debugging:
               name: Debugging
         csd2-virtual:
@@ -5451,6 +5935,10 @@ de:
               name: Bilder
             Project - Building a Webpage:
               name: Projekt - Erstellung einer Webseite
+            Sources and Research:
+              name: Quellen und Forschung
+            CSS Classes:
+              name: CSS-Klassen
         csp5-virtual:
           stages:
             Multi-screen Apps:
@@ -5493,3 +5981,21 @@ de:
               name: Algorithmen
             Events:
               name: Ereignisse
+        no-lg:
+          stages:
+            new stage:
+              name: neue Etappe
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Lerneinheit 5 Herausforderung 2
+            While Loops:
+              name: Solange-Schleifen
+            Loops and Simulations:
+              name: Schleifen und Simulationen
+            Introduction to Arrays:
+              name: Einführung in Arrays
+            Processing Arrays:
+              name: Mit Arrays arbeiten
+            Functions with Return Values:
+              name: Funktion mit Rückgabewerten

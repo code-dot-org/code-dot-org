@@ -338,14 +338,14 @@ el-GR:
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
   studiobar_dance_title: Πάρτι Χορού
-  studiobar_dance_body: Δημιουργήστε και κοινοποιήστε τα δικά σας Dance Party
+  studiobar_dance_body: Δημιουργήστε και μοιραστείτε το δικό σας Πάρτι Χορού
   studiobar_hoc_title: Η Ώρα του Κώδικα
   studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
   studiobar_flappy_title: Flappy κώδικας
   studiobar_flappy_body: Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy
   studiobar_teacher_title: Φτιαγμένο για εκπαιδευτικούς
   studiobar_teacher_body: Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας
-  studiobar_frozen_title: Η Ώρα του Κώδικα
+  studiobar_frozen_title: Ώρα του Κώδικα
   studiobar_frozen_body: Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
     και την Έλσα
   studiobar_donate_title: Κάντε μια δωρεά
@@ -442,7 +442,7 @@ el-GR:
   homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
   homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
   homepage_slot_text_title_students: Μαθητές
-  homepage_slot_text_blurb_students: Διερευνήστε όλα τα σεμινάρια μας
+  homepage_slot_text_blurb_students: Εξερευνήστε όλα τα μαθήματα μας
   homepage_slot_text_blurb_students_courses: Εξερευνείστε τα μαθήματά μας
   homepage_slot_text_link_codestudio: Δοκιμάστε το Studio κώδικα
   homepage_slot_text_link_local: Βρείτε μια τάξη κοντά στον τόπο σας
@@ -1225,9 +1225,9 @@ el-GR:
   codesters_gradelevel: Ηλικίες 12-14
   texasinstruments_gradelevel: Ηλικίες 13-16
   teacherled_gradelevel: Ηλικίες 5+
-  course1_gradelevel: Ηλικίες 4+ (προ αναγνώστες)
+  course1_gradelevel: Ηλικίες 4-6
   course2_gradelevel: Ηλικίες 6+ (απαιτείται ανάγνωση)
-  course3_gradelevel: Ηλικίες 8+ (μετά το Μάθημα 2)
+  course3_gradelevel: Ηλικίες 8-18
   course4_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   coursea_gradelevel: Τάξεις Ε' Δημοτικού +
   coursec_gradelevel: Τάξεις Α' Γυμνασίου +
@@ -1361,8 +1361,8 @@ el-GR:
     πέτρα/ψαλίδι/χαρτί
   hourofcode_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και
     τα Θυμωμένα Πουλιά!
-  frozen_shortdescription: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα
-    και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
+  frozen_shortdescription: Ας χρησιμοποιήσουμε τον κώδικα για να πάμε μαζί με την
+    Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
   starwars_shortdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
     δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
   playlab_shortdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
@@ -1942,8 +1942,10 @@ el-GR:
   header_educate_elementary: Δημοτικό σχολείο
   header_educate_middle: Γυμνάσιο
   header_educate_high: Λύκειο
-  header_educate_hoc: Η Ώρα του Κώδικα
+  header_educate_hoc: Ώρα του Κώδικα
   header_educate_beyond: Πέρα από το Code.org
+  header_educate_inspire: Εμπνεύστε έναν Μαθητή
+  header_educate_community: Online Κοινότητα
   header_about_us: Σχετικά με εμάς
   header_about_donors: Δωρητές
   header_about_partners: Συνεργάτες
@@ -1956,7 +1958,7 @@ el-GR:
   header_about: Σχετικά
   header_teacher_community: Κοινότητα δασκάλων
   header_help_support: 'Βοήθεια και υποστήριξη '
-  header_report_bug: Αναφορά σφάλματος
+  header_report_bug: Αναφορά προβλήματος
   header_tutorials: Οδηγοί εκμάθησης
   header_documentation: Τεκμηρίωση
   user_header_label: Γεια σου %{username}
