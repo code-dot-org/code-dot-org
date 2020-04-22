@@ -83,7 +83,7 @@ Try a one-hour tutorial designed for all ages. There are hundreds of activities 
 <a id="express"></a>
 ## Learn the fundamentals with our self-paced courses
 ### **Express courses**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <i>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. To see what's available in your language, visit <a href="https://studio.code.org/courses">studio.code.org</a>.</i>
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">

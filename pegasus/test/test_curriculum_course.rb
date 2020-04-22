@@ -32,7 +32,7 @@ class CurriculumCourseTest < Minitest::Test
 
     it 'should get all lessons' do
       assert_equal(18, @course.get_lessons.count)
-      assert(@course.get_lessons.first.is_a?(Lesson))
+      assert(@course.get_lessons.first.is_a?(CurriculumCourse::Lesson))
     end
 
     describe 'with unit numbers' do
@@ -65,15 +65,15 @@ class CurriculumCourseTest < Minitest::Test
 
       it 'should get all lessons' do
         assert(!@course_with_units.get_lessons.empty?)
-        assert(@course_with_units.get_lessons.first.is_a?(Lesson))
+        assert(@course_with_units.get_lessons.first.is_a?(CurriculumCourse::Lesson))
       end
     end
   end
 
   describe 'various supporting structs' do
     it 'should get created with right types' do
-      assert Unit.new.is_a? Unit
-      assert Lesson.new.is_a? Lesson
+      assert CurriculumCourse::Unit.new.is_a? CurriculumCourse::Unit
+      assert CurriculumCourse::Lesson.new.is_a? CurriculumCourse::Lesson
     end
   end
 end

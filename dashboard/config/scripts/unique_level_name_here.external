@@ -1,6 +1,0 @@
-name 'unique level name here'
-title 'title'
-description 'description here'
-markdown <<MARKDOWN
-<iframe src="https://code-lossy-img-investigation.glitch.me/" style="border:1px #ffffff solid;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="1000px" width="1300px" allowfullscreen></iframe>
-MARKDOWN

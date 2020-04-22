@@ -279,12 +279,17 @@ class ScriptDSL < BaseDSL
 
   # @override
   def i18n_hash
-    i18n_strings = {}
+    i18n_stage_strings = {}
     @stages.each do |stage|
-      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
+      i18n_stage_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {@name => {'stages' => i18n_strings}}
+    i18n_lesson_group_strings = {}
+    @lesson_groups.each do |lesson_group|
+      i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+    end
+
+    {@name => {'stages' => i18n_stage_strings, 'lesson_groups' => i18n_lesson_group_strings}}
   end
 
   def self.parse_file(filename, name = nil)
@@ -343,13 +348,13 @@ class ScriptDSL < BaseDSL
   def self.serialize_lesson_groups(script)
     s = []
     script.lesson_groups.each do |lesson_group|
-      if lesson_group&.user_facing && lesson_group.stages.count > 0
+      if lesson_group&.user_facing && !lesson_group.lessons.empty?
         t = "lesson_group '#{escape(lesson_group.key)}'"
         t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
         s << t
       end
-      lesson_group.stages.each do |stage|
-        s << serialize_stage(stage)
+      lesson_group.lessons.each do |lesson|
+        s << serialize_stage(lesson)
       end
     end
     s << ''

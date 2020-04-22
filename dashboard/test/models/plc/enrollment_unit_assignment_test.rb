@@ -16,9 +16,9 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.name)
     @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.name)
 
-    @required_learning_module.stage.update(script: @script, lesson_group: @required_lesson_group)
-    @content_learning_module.stage.update(script: @script, lesson_group: @content_lesson_group)
-    @practice_learning_module.stage.update(script: @script, lesson_group: @practice_lesson_group)
+    @required_learning_module.lesson.update(script: @script, lesson_group: @required_lesson_group)
+    @content_learning_module.lesson.update(script: @script, lesson_group: @content_lesson_group)
+    @practice_learning_module.lesson.update(script: @script, lesson_group: @practice_lesson_group)
 
     Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
 
