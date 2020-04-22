@@ -33,6 +33,7 @@
 class Pd::Workshop < ActiveRecord::Base
   include Pd::WorkshopConstants
   include SerializedProperties
+  include Pd::WorkshopSurveyConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -729,5 +730,13 @@ class Pd::Workshop < ActiveRecord::Base
 
   def can_user_delete?(user)
     state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
+  end
+
+  def last_valid_day
+    last_day = sessions.size
+    unless VALID_DAYS[CATEGORY_MAP[subject]].include? last_day
+      last_day = VALID_DAYS[CATEGORY_MAP[subject]].last
+    end
+    last_day
   end
 end
