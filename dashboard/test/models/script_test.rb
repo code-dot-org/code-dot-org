@@ -1991,7 +1991,7 @@ endvariants
   test 'raises error if lesson group key already exists and try to change the display name' do
     l1 = create :level
     script = create :script, name: "lesson-group-test-script"
-    create :lesson_group, key: 'required', script: script
+    create :lesson_group, key: 'content', script: script
     dsl = <<-SCRIPT
       lesson_group 'content', display_name: 'not content'
       stage 'Lesson1'
@@ -2039,7 +2039,7 @@ endvariants
       lesson_group 'content', display_name: 'Content'
       stage 'Lesson1'
       level '#{l1.name}'
-      lesson_group 'required', display_name: 'Content'
+      lesson_group 'content2', display_name: 'Content'
       stage 'Lesson2'
       level '#{l2.name}'
       lesson_group 'content', display_name: 'Content'
@@ -2198,7 +2198,7 @@ endvariants
     l1 = create :level
     l2 = create :level
     old_dsl = <<-SCRIPT
-      lesson_group 'required', display_name: 'Content'
+      lesson_group 'content2', display_name: 'Content'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -2211,7 +2211,7 @@ endvariants
       stage 'Lesson1'
       level '#{l1.name}'
 
-      lesson_group 'required', display_name: 'Content'
+      lesson_group 'content2', display_name: 'Content'
       stage 'Lesson2'
       level '#{l2.name}'
     SCRIPT
@@ -2221,7 +2221,7 @@ endvariants
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'required', script.lesson_groups[0].key
+    assert_equal 'content2', script.lesson_groups[0].key
     assert_equal 1, script.lesson_groups[0].position
     assert_equal 'content', script.lesson_groups[1].key
     assert_equal 2, script.lesson_groups[1].position
@@ -2234,7 +2234,7 @@ endvariants
 
     assert_equal 'content', script.lesson_groups[0].key
     assert_equal 1, script.lesson_groups[0].position
-    assert_equal 'required', script.lesson_groups[1].key
+    assert_equal 'content2', script.lesson_groups[1].key
     assert_equal 2, script.lesson_groups[1].position
   end
 
