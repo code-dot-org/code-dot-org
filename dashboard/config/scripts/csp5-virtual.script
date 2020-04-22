@@ -81,12 +81,12 @@ level 'CSPU5_U3L15 - practice with setText_virtual', progression: 'AppLab Practi
 level 'CSPU5_U3L15 - DEMO up down count practice app_virtual', progression: 'AppLab Practice'
 level 'CSPU5_U3L15 - global var example count up_virtual', progression: 'AppLab Practice'
 level 'CSPU5_U3L15 - variable scoping problem debugging_virtual', progression: 'AppLab Practice'
-level 'Variable Scope: Local vs. Global_2018_2019_virtual', progression: 'Variable Scope: Local vs. Global'
+level 'Variable Scope: Local vs. Global_2018_2019_virtual', progression: 'Debugging Variables'
 level 'CSPU5_U3L15 - add code to make count down work_virtual', progression: 'Debugging Variables'
 level 'CSPU5_U3L15 - count upDown bug forget to set text_virtual', progression: 'Debugging Variables'
 level 'CSPU5_U3L15 - count upDown bug logic error wrong update_virtual', progression: 'Debugging Variables'
-level 'CSPU5_U3L15 - mini clicker update score_virtual', progression: 'Using Global Variables'
-level 'CSPU5_U3L15 click add lives_virtual', progression: 'Using Global Variables'
+level 'CSPU5_U3L15 - mini clicker update score_virtual', progression: 'Using Variables'
+level 'CSPU5_U3L15 click add lives_virtual', progression: 'Using Variables'
 
 stage 'If-Statements'
 level 'Simple Decisions with if-statements_2018_2019_virtual', progression: 'Simple Decisions with if-statements'
@@ -163,4 +163,4 @@ level 'Project: Finish Color Sleuth_virtual', progression: 'Project: Color Sleut
 
 stage 'Keep Going!'
 level 'csp5 virtual bubblechoice'
-level 'csp5 virtual outro'
+level 'csp5 virtual ending'
