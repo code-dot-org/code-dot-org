@@ -5,14 +5,24 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "title": "Reflection: Looping and Random Numbers",
-    "long_instructions": "When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  \n\nThere is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?\n\n\n",
-    "encrypted_solution": "gAdPm3QFXyYErYi4738hZNnDmQOENLPo/CDBioI10axTAvjNSVyvi7UH78M9\nLQk+Q5/H+De4HXAa5CaLEmzCENt2h6CoyCDjk80QtGG9/5C8uwLnam8mNaML\n9kBPwu6rt0Uv+RJyCviwy0cJnBarZMeS2U8R+fyE5KlyPiAvye34LTIEdnTX\nr/svJo5Zp9tQEZ0Iv0drHHhYSntL1v9W0AxjBYeI6oRseSpbgZ04tfvrq0qp\nqkJZ1iycY6p6JEnLMXJwQWxaFH5gPTdyWk6OsZ3/YviPQAGJRS4wAkbHmYkT\n3lxvki5CRrV/waVGPkDlg7k0iKCUAaaguzsQJc32iNdwPK5OJogYmXSgLy7s\n3ypO5Aqn9O+WoWvLYHDrwDh34ViHRzZchPSfVDARBtX2ANKMFHWfmKL9wZsW\n0CLq6xwtK4Zgh35rFSu5Q6RPwi8ymvrWWeQCo7PjCKnOgo7pMqKs8Lv8kz/l\nLmy52udyNVwmIzhMxL6BsGwPM+i9GxaL5v1bRyneE7fiQz0fA9qbuxSx6OKC\noh1hbQVUdTTMyjUzADQsWxE6Aha0Gf1DuwK8uU42mOdXJ3wODcTHzCfqAvmN\n/xZixB8WGjPaOaD1vG925w0K8wYQFZRvQoss1dwEM1LqISMmO9TOvQc66I2b\npTyuGM3SiZ3tFrDogVoQZ3oFUmnMjCaJHvmQsM7MpOCgm0k7If0WC6Dotylz\nxlmbdG0tSsr1AUwwdji0cvuHMPkFBqrGAGTO9gCzHFI3MUYuAG69wwFAHHiM\naqCXCcQCIFmjVpWS3en5iuMO03KljxNbFNsS2u4H2CVJQdNcjUV2sfWYq4TN\n6qkFOUMX+lzEfPrDJhzwvpLUcE8HLpCu9qxtvdkMFDYFYdPCJk67q+zll4MR\nFRomaohDPq+4HNn9MyhJtwLjPNu2IQyQQi2fytbNz3b9HlfXXba1rtJKVKrP\nRp8s0bcLVOrn5B65oMgwQOwWyyjLJrEc62+foNyL9/vB/JhhgGSwiCaWJlmj\nQHWSUA80OAMlauGXymTiNWtRCGANz9aXkx0iLgbRcNFKHKgYWBw8OKmBxHwO\nLLs/2vhOFlU6Q0F26+SYjiaHNilPo1w+zdJ54g2W5leThAvZgvsO4DtiZI6P\nkROoT7BpIPuq4eK4zAyzgeXwPHfZi9xrsSFI2FPIcXmOsb57VHRWGJ+1iEcQ\n1Z9WS5cOLebf8cXSbAdV2+91grR4JJcgx48VAVuHFO336pDNxIa0winLw0Y=\n",
+    "title": "Reflection: Looping and Functions",
+    "long_instructions": "When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.  \r\n\r\nThere is no hard-and-fast rule as to which is better, but what do you think?  What kinds of circumstances would lead you to writing a function versus using a loop?\r\n\r\n\r\n",
+    "encrypted_solution": "EHW3BYLvT0PA2bYzKKpwgFgXhekb5oEyEL6Wh6D1nKMSFtRhHQz4oOqB02W8\nmt+e8pK8NEN5xrKPRAzO4D89QThha18RaYsTaaZyxYXPbSzS9pujHz/h4rng\nhNLjoII7KJmdcTRkwSnRjuyjwaO5358wtoUlFWXvdE91pyUxZk8vasZnn9Ud\nDyHOnUuJtkQdN5EyIGZq/pafHNpT5q08u5F8oodPBRoo3FV2H8rkChO5FnT7\nXVHTIsLPzT4/uuqyirZ9NFUaGTebLiNyprwsM5VXofBfx66J5yU7l8c366Z/\ncUUHks5axYotu8PSZbfrwIPZk2kAYfQOcR9MYP6/fN9o/JxqPDmY0aeV/Ll1\nRLVRa42o4JdL4Juom/T7T5NxMaxKJISs9AtpWRD7RKqlAIpz07V5c9eB7Vkg\nZkhqq9rI9s1uRYozSXlDkhitBUOacfVmUPlRCJF3KeloaZEDLKaIaeUMh8dW\n7/vc95JC+ocrZvS2njCbCOoIOeqROI5/Y+ucOTgvigpWxftzmd7OcOGMTmA5\nGxqvsv04xjYEXnL36NWkbstbQQxlsUxBFPGK3f2a6EXVA6/rYbFjkcw54i5e\nKdGNwI6gX61eIji6b+XrKHL9bsakoUWe9ZSgDM+lAUtN3H1AbXhH5/MDEWvX\neChCQHSADBG2x2HdpJSaudqK9NHs97Tx5xwYeJ557gSDfoLnWj+CUJmljMVr\nQMPOKcRqUVeGa5SzUgZ7858wk1sMofABHtWbmSSISV45yFWGl9QFgW55t6a9\n6Thuq6gUn0nwj4FgQ9lpagz7HS3dwSuNlsmR5n/utG0I330TEb8jd45Yg7iL\n9uZmYjF5VSs/0pbjOuJZ94Djh8lXbnBKDfwof6Z5ZVqkNy4jvlitag6Eao9Z\nrDAT8xfvMrp2EzI4RNLAuz9AK7XAEk+mM1qVwUfj4daCXq+bNl+HJaryKk+N\nlHQH9t2OkmhrZWAdNlqGb/vZMfLEXG1hRgXuUfEW9WXCO2+StI83DIFQfjl9\niMUQOZViR/O6sO2Xg18/Gqt7jrCMl+UmNwuLoHI6DlaLjMZCez+42XuS4UOi\nxKrzmVcZOh1YQD7yP+xKnywRD0+SF+71Uw8jVxONM7IOFhEuS+Op0ZR+sCic\ngs5Nok7Kxhr5Nw+kAjJLAs0pYhNwBJleAg2YiN+mkZfin12y5WyU3UnLRKPX\n71cCiKaS1bZWlSHOKmzDkh/jIcOd7WsB2oHmx+yq0WwRKzVQfoaGY+8+KAcY\n6fCx7ADd1wUT5Qioh1d4\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 13191,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-22 02:04:20 +0000\",\"changed\":[\"notes\",\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

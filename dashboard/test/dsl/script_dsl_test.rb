@@ -75,7 +75,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     i18n_expected = {'test' => {'stages' => {
       'Lesson1' => {'name' => 'Lesson1'},
       'Lesson2' => {'name' => 'Lesson2'}
-    }}}
+    }, "lesson_groups" => {}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
@@ -654,12 +654,12 @@ level 'Level 3'
   test 'serialize lesson_group for lesson' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     script = create :script, hidden: true
-    lesson_group = create :lesson_group, key: 'required', script: script
+    lesson_group = create :lesson_group, key: 'content', script: script
     lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group
     script_level = create :script_level, levels: [level], lesson: lesson, script: script
     script_text = ScriptDSL.serialize_to_string(script_level.script)
     expected = <<~SCRIPT
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'content', display_name: 'Content'
       stage 'lesson 1'
       level 'maze 1'
 
@@ -691,8 +691,8 @@ level 'Level 3'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
 
     # intentionally made in the opposite order of how we want them to show to test
-    lesson_group2 = create :lesson_group, key: 'practice', script: script, position: 2
-    lesson_group1 = create :lesson_group, key: 'required', script: script, position: 1
+    lesson_group2 = create :lesson_group, key: 'content2', script: script, position: 2
+    lesson_group1 = create :lesson_group, key: 'content', script: script, position: 1
 
     lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group1
     lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group2
@@ -701,11 +701,11 @@ level 'Level 3'
     script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
     script_text = ScriptDSL.serialize_to_string(script_level2.script)
     expected = <<~SCRIPT
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'content', display_name: 'Content'
       stage 'lesson 1'
       level 'maze 1'
 
-      lesson_group 'practice', display_name: 'Teaching Practices'
+      lesson_group 'content2', display_name: 'Content'
       stage 'lesson 2'
       level 'maze 2'
 
@@ -929,8 +929,9 @@ level 'Level 3'
     )
 
     i18n_expected = {'test' => {'stages' => {
-      "Bob's stage" => {'name' => "Bob's stage"},
-    }}}
+      "Bob's stage" => {'name' => "Bob's stage"}
+    },
+      "lesson_groups" => {}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
