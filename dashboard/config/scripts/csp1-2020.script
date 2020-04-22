@@ -7,6 +7,7 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}'
 pilot_experiment 'csp-2020-access'
 curriculum_umbrella 'CSP'
 
+lesson_group 'csp_unit1_2020', display_name: 'Unit 1: Digital Information'
 stage 'Welcome to CSP', flex_category: 'csp_unit1_2020'
 level 'CSP U1L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'Computer Science is Changing Everything_2020', progression: 'Computer Science is Changing Everything'
