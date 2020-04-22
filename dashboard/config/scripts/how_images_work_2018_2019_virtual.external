@@ -1,4 +1,5 @@
 name 'How Images Work_2018_2019_virtual'
+editor_experiment ''
 title 'title'
 css 'unplugged'
 description 'description here'
@@ -21,7 +22,11 @@ Or click Choose... to use a Pre-Loaded Icon</p>
 
 <br><br>
 
-# Enter a URL of an image on the web
+<details><summary> [Expand to read]
+
+## More about using images from the web...
+
+</summary>
 
 <img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
 
@@ -36,8 +41,11 @@ If you're unsure, you can also choose an option like "Open Image in New Tab" whi
 * Make sure you get the path to an actual image file - something that ends with **.jpg**, **.gif** or **.png**.
 * A URL that starts like this: `https://www.google.com/search?q=cat&espv=2&biw=1497....`  is probably wrong.
 
+</details><details>
 
-# Upload your own images
+<summary> [Expand to read]
+
+## More about using your own images...</summary>
 
 If you have saved images on your computer you can upload them into app lab's **asset manager**.  Just **click Upload File** and follow the dialogs on screen.
 
@@ -47,14 +55,17 @@ Once you've uploaded the image then you need to **Choose** it to set the image t
 
 ![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
 
-# Use a Pre-Loaded Icon
+</details><details><summary> [Expand to read]
 
+## More about using pre-loaded icons...
+
+</summary>
 App Lab comes with a set of handy single color **icons** (black icon, white/transparent background) that you can use for buttons or graphics, whatever you like.  You can also change the color of the icon after you add it to the app.  
 
 The *trickiest* part is that you need to find and **click on the "Icons" tab** once the asset manager pops up.
 
 ![](https://images.code.org/c02f76e80b05c2dbdabca761635b2d21-image-1476897099806.gif)
-
+</details>
 
 ### Click Continue to try it!
 

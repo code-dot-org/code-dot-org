@@ -2,6 +2,6 @@ hidden false
 login_required true
 has_verified_resources true
 
-lesson_group 'csdSurvey', display_name: 'translation missing: en-US.flex_category.csdSurvey'
+lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 stage 'CSD post-course survey', flex_category: 'csdSurvey'
 level 'csd-post-survey-2017-levelgroup-2018-2nd-semester', progression: 'CS Discoveries Post-course Survey', assessment: true
