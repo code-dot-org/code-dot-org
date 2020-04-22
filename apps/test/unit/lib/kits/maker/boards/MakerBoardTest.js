@@ -334,7 +334,7 @@ export function itImplementsTheMakerBoardInterface(
               'on',
               'off',
               'toggle',
-              'allOff',
+              'clear',
               'scrollString',
               'scrollInteger'
             ].forEach(fnName => {
