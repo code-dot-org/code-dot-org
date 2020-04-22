@@ -6,12 +6,12 @@ module Pd::Foorm
 
     # Calculates report for a given workshop id.
     # @return workshop report in format specified in README
-    def self.get_workshop_report(workshop_id)
+    def self.get_workshop_report(workshop_id, facilitator_filter)
       return unless workshop_id
 
       # get workshop summary
-      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
-      facilitators = get_facilitators_for_workshop(workshop_id)
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id, facilitator_filter)
+      facilitators = get_facilitators_for_workshop(workshop_id, facilitator_filter)
       parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
 
       ws_data = Pd::Workshop.find(workshop_id)
@@ -158,10 +158,14 @@ module Pd::Foorm
     # @param integer workshop_id: id for a workshop
     # @return {facilitator_id: facilitator_name,...} object with data
     # for each facilitator for the workshop specified
-    def self.get_facilitators_for_workshop(workshop_id)
+    def self.get_facilitators_for_workshop(workshop_id, facilitator_filter)
+      facilitators_formatted = {}
+      if facilitator_filter
+        facilitators_formatted[facilitator_filter] = User.find(facilitator_filter).name
+        return facilitators_formatted
+      end
       workshop = Pd::Workshop.find(workshop_id)
       facilitators = workshop.facilitators
-      facilitators_formatted = {}
       return nil unless facilitators
       facilitators.each do |facilitator|
         facilitators_formatted[facilitator.id] = facilitator.name
