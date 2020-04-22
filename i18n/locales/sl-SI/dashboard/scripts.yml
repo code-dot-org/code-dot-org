@@ -1327,3 +1327,7 @@ sl:
               name: Algoritmi
             Events:
               name: Dogodki
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'

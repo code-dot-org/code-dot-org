@@ -4,7 +4,6 @@ pl:
   data:
     script:
       category:
-        csf_category_name: Podstawy Informatyki
         csf_international_category_name: Mędzynarodowe Podstawy Informatyki
         csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
         csp_category_name: "Podstawy Informatyki '15-'16"
@@ -5472,3 +5471,19 @@ pl:
               name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
           title: Code Break dla młodszych uczniów
           description: 'Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.'
+        no-lg:
+          stages:
+            new stage:
+              name: nowy etap
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Pętle Dopóki (While)
+            Loops and Simulations:
+              name: Pętle i symulacje
+            Introduction to Arrays:
+              name: Wprowadzenie do tablic
+            Processing Arrays:
+              name: Przetwarzanie tablic
+            Functions with Return Values:
+              name: Funkcje zwracające wartości

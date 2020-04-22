@@ -93,14 +93,14 @@ tr-TR:
         title: Çoktan Seçmeli
       2-3 Maze Match 2:
         answers:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         content1: bloklar için bulmacaları eşleştir
         questions:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         title: Labirent eşleştirme
       2-3 Maze Multi 2:
         answers:
@@ -219,12 +219,12 @@ tr-TR:
         answers:
         - {}
         - {}
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
         content1: bloklar için bulmacaları eşleştir
         questions:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         title: Labirent eşleştirme
       2-3 maze multi 1:
         answers:
@@ -631,8 +631,37 @@ tr-TR:
           - `<h1></h1>`[Heading]\n\n"
       CSD U2 L5 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders kişisel web sitesi oluşturmaktan; insanların dijital olarak paylaşmayı seçtiği kişisel bilgi hakkında konuşmaya bir adım geri adım atıyor. Sınıf, diğer insanlarla ne tür bilgilerin paylaşılmasının iyi olduğunu tartışarak başlar, ardından ne tür kişisel bilginin kasıtlı yada kasıtsız olarak paylaşılabileceğini görmek için birkaç örnek sosyal medya sayfasına bakar. Son olarak sınıf, çevrimiçi bilgi verirken izlenmesi gereken bir dizi yönerge öne sürer.
+          ## Kelime Haznesi
+
+          * **Dijital İz** - İnternetteki birden çok web sitesinde bir kişi hakkında toplanan bilgi.
+
+
+          ## Kaynaklar
+
+          * [Gizliliğiniz ne zaman önemli? - Etkinlik Rehberi](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Sosyal Detektif - Etkinlik Rehberi](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |+
+          * [Gizliliğiniz ne zaman önemli?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Etkinlik Rehberi Örneği ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Sosyal Detektif](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Etkinlik Rehberi ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
       CSD U2 L6 Overview:
         content1: açıklama burada
+        markdown: |+
+          # Genel Bakış
+
+          Bu derste sıralı ve sırasız listeler ve ilişkili HTML etiketleri &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; tanıtılır. Sınıf, etiketleri kullanarak pratik yapar, ardından yeni etiketleri içeren, yeni bir HTML sayfası eklemek için kişisel web sayfası projesine geri döner.
+
+          ## Tanıtılan Kod
+
+
+          *  **[Sırasız Liste](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          *  **[Liste Ögesi](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          *  **[Sıralı List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+
       CSD U2 Lesson 6 Overview:
         content1: açıklama burada
       CSD U2 Top Websites:

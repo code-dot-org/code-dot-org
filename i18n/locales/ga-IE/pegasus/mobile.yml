@@ -16,10 +16,10 @@
   n_have_learned_an_hoc: "<h1>Bain triail as </h1><h2>An Uair Chódála</h2><h3># códálaí</h3>"
   try_hoc_num_served: "<h1>Bain triail as</h1><h2>An Uair Chódála</h2><h3>%{num} códálaí</h3>"
   try_hoc_num_served_markdown: |-
-    # Bain triail as\
-    \
-    ## An Uair Chódála\
-    \
+    # Bain triail as
+
+    ## An Uair Chódála
+
     ###%{num} dalta sásta #Try an
 
 ## Hour of Code
