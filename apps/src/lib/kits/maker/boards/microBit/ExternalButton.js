@@ -1,5 +1,6 @@
 import {EXTERNAL_PINS as MB_EXTERNAL_PINS} from './MicroBitConstants';
 import {EventEmitter} from 'events';
+import '../../../../../utils'; // For Function.prototype.inherits
 
 export default function ExternalButton(board) {
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
