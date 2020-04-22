@@ -31,7 +31,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
     # Execute the pipeline
     log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(log_collector)
+    ContactRollupsV2.build_contact_rollups(log_collector, sync_with_pardot=true)
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
@@ -62,7 +62,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
     # Execute the pipeline
     log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(log_collector)
+    ContactRollupsV2.build_contact_rollups(log_collector, sync_with_pardot=true)
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
