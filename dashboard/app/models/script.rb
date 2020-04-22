@@ -936,16 +936,21 @@ class Script < ActiveRecord::Base
             raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
           end
 
+          new_lesson_group = false
+
           lesson_group = LessonGroup.find_or_create_by(
             key: raw_lesson_group[:key],
             script: script,
             user_facing: true
-          )
+          ) do
+            # if you got in here, this is a new lesson_group
+            new_lesson_group = true
+          end
 
           lesson_group.assign_attributes(position: index + 1)
           lesson_group.save! if lesson_group.changed?
 
-          if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+          if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
             raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
           end
 
