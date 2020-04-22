@@ -68,15 +68,12 @@
     "project_template_level_name": "AppLab Intro 6 - thisOrThatAddButton Template",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 10298,
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

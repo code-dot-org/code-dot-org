@@ -50,13 +50,10 @@
     "parent_level_id": 17254,
     "name_suffix": "_virtual",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "To Do:\r\n\r\nAdd log conditions.  Should be \r\n\r\n* 5x setProperty x 5 \r\n* 2x randomNumber\r\n* 1x setBoard\r\n* 1x console.log ?  ",

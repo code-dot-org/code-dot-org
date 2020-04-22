@@ -67,15 +67,12 @@
     "start_blocks": "setProperty(\"button1\", \"image\", \"https://code.org/images/app-lab/monkey.jpg\");\r\nsetProperty(\"button2\", \"image\", \"https://code.org/images/app-lab/tiger.jpg\");\r\nsetProperty(\"button3\", \"image\", \"https://code.org/images/app-lab/horse.jpg\");\r\nonEvent(\"button1\", \"click\", function() {\r\n  playSound(\"sound://category_animals/monkey.mp3\");\r\n});\r\nonEvent(\"button2\", \"click\", function() {\r\n  playSound(\"sound://category_animals/tiger.mp3\");\r\n});\r\nonEvent(\"button3\", \"click\", function() {\r\n  playSound(\"sound://category_animals/horse.mp3\");\r\n});",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 10296,
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
