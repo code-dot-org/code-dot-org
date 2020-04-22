@@ -72,10 +72,7 @@
     "expand_debugger": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

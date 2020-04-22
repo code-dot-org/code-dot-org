@@ -78,10 +78,7 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "start_blocks": "onEvent(\"click_button\", \"click\", function(){\r\nsetProperty(\"click_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mousedown_button\", \"mousedown\", function(){\r\nsetProperty(\"mousedown_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mouseup_button\", \"mouseup\", function(){\r\nsetProperty(\"mouseup_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mouseover_button\", \"mouseover\", function(){\r\nsetProperty(\"mouseover_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});\r\nonEvent(\"mousemove_button\", \"mousemove\", function(){\r\nsetProperty(\"mousemove_button\", \"background-color\", rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n});",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "removed template and turtle",
