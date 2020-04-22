@@ -319,6 +319,8 @@ export function itImplementsTheMakerBoardInterface(
 
               it('isPressed', () =>
                 expect(component.isPressed).to.be.a('boolean'));
+              it('holdtime', () =>
+                expect(component.holdtime).to.be.a('number'));
             });
           });
 
@@ -532,11 +534,7 @@ export function itImplementsTheMakerBoardInterface(
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-
-        // TODO - not yet implemented for microbit
-        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
-          expect(button).to.have.property('holdtime');
-        }
+        expect(button).to.have.property('holdtime');
       });
     });
   });
