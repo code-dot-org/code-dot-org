@@ -1368,7 +1368,7 @@ pl-PL:
         title: Test wielokrotnego wyboru
       MoveItMoveIt-Unplugged:
         markdown: |
-          # Pzenieś go, przenieś go
+          # Przesuń go, przesuń go
 
           Użyj mapy i wydawaj polecenia, aby osiągnąć cel.
       'Overview: Design Mode':

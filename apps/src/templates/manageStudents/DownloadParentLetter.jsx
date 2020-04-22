@@ -8,7 +8,7 @@ import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStude
 
 const styles = {
   button: {
-    marginLeft: 'auto'
+    marginLeft: 5
   }
 };
 

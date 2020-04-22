@@ -1527,3 +1527,7 @@ lv:
               name: Algoritmi
             Events:
               name: Pasākumi
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli

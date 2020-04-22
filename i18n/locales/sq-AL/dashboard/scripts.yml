@@ -1856,3 +1856,7 @@ sq:
               name: Algoritmet
             Events:
               name: Ngjarje
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Përsëritjet Ndërsa

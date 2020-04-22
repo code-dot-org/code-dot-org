@@ -37,9 +37,6 @@ module CourseBlockHelper
         body: I18n.t('upsell.unplugged_conditionals.body'),
         teacher_guide: CDO.code_org_url("/hourofcode/unplugged-conditionals-with-cards")
       },
-      'gallery' => {
-        url: '/gallery'
-      },
       Script::APPLAB_INTRO => {
         url: script_reset_url(Script::APPLAB_INTRO),
         title: I18n.t('upsell.applab.title'),

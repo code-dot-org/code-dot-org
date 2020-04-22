@@ -718,7 +718,7 @@ cs:
     correct_body: "To je správná odpověď."
   dialog:
     ok: "OK"
-    startover_title: "Jste si jisti, že chcete začít znovu?"
+    startover_title: "Určitě chceš začít znovu?"
     startover_body: "Toto znovu nastaví puzzle do původního stavu a odstraní všechny bloky, které jsi přidal nebo změnil."
     startover_ok: "Začít znovu"
     startover_cancel: "Zrušit"

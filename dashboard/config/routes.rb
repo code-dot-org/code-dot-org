@@ -28,12 +28,6 @@ Dashboard::Application.routes.draw do
 
   get "/congrats", to: "congrats#index"
 
-  resources :gallery_activities, path: '/gallery' do
-    collection do
-      get 'art', to: 'gallery_activities#index', app: Game::ARTIST
-      get 'apps', to: 'gallery_activities#index', app: Game::PLAYLAB
-    end
-  end
   resources :activity_hints, only: [:update]
 
   resources :hint_view_requests, only: [:create]
@@ -188,6 +182,8 @@ Dashboard::Application.routes.draw do
       get '/', to: redirect('/projects')
     end
   end
+
+  get "/gallery", to: redirect("/projects/public")
 
   get 'projects/featured', to: 'projects#featured'
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
@@ -636,6 +632,7 @@ Dashboard::Application.routes.draw do
       post 'users/:user_id/postpone_census_banner', to: 'users#postpone_census_banner'
       post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
       post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
+      post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
 
       get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}

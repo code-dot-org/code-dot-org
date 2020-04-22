@@ -132,7 +132,7 @@ ga:
     student_count: 'Tá %{count} dalta cláraithe cheana.'
     teacher_count: 'Tá %{count} múinteoir cláraithe cheana.'
     overview: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a> a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
-    overview_markdown: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat [na cúrsaí agus na dúshláin éagsúla](/) a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
+    overview_markdown: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn nó dul chun cinn do pháiste a leanúint. Is féidir leat [na cúrsaí agus na dúshláin éagsúla](/) a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tionscadal agus do dhul chun cinn a shábháil.'
     hoc_already_signed_up_heading: 'Tosú gan logáil isteach'
     hoc_already_signed_up_content: 'Chláraigh tú chun Uair Chódála a mhúineadh! Ní gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a> don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.'
     hoc_already_signed_up_content_post_hoc: 'Go raibh maith agat as Uair Chódála a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála. Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí a leanúint. Nó más fearr leat, is féidir <a href="%{studio_url}">na céimeanna agus na dúshláin éagsúla a bhrabhsáil</a> gan cuntas a chruthú.'
@@ -172,6 +172,9 @@ ga:
     email_preference_yes: "Tá"
     email_preference_no: "Níl"
     email_preference_required: "Caithfidh tú an cheist seo a fhreagairt."
+    parent_account_checkbox: "Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son mo pháiste"
+    parent_account_email_progress_permission: "An bhfuil cead againn ríomhphost a sheoladh chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa, agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})"
+    parent_account_email_label: "Seoladh R-Phoist Tuismitheora/Caomhnóra"
   school_info:
     title: 'Eolas faoin scoil (roghnach)'
     school_country: 'Tír na Scoile'
@@ -464,8 +467,11 @@ ga:
     auth_option_saved: "D'éirigh leat do chuntas %{provider} a nascadh leis an seoladh ríomhphoist %{email}."
     auth_option_saved_no_email: "D'éirigh leat do chuntas %{provider} a nascadh."
     update_email: "Nuashonraigh"
+    for_parents_and_guardians: "Do thuismitheoirí agus do chaomhnóirí"
+    link_a_parent_email: "Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste"
     parent_guardian_email_label: "Seoladh ríomhphoist do thuismitheoir"
     none: "Dada"
+    only_one_parent_email_supported_warning: "Aire: ní féidir linn glacadh le níos mó ná seoladh r-phoist amháin do thuismitheoir nó caomhnóir."
     encrypted: "criptithe"
   user_level:
     completed: 'Críochnaithe'
@@ -1159,3 +1165,7 @@ ga:
       error_wrong_provider: 'Soláthraí mícheart. Ní mór duit logáil isteach trí Google.'
       error_invalid_user: 'ID úsáideora neamhbhailí. Bain triail as logáil isteach arís.'
       error_no_code: 'Cuir isteach do chód logála isteach.'
+  parent_email_banner:
+    text: "**An tuismitheoir nó caomhnóir thú?** Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
+    link_your_email: "Ceangail do sheoladh r-phoist"
+    not_now: "Ná ceangail anois"
