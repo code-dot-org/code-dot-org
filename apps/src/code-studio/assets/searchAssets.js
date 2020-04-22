@@ -1,5 +1,16 @@
 import Immutable from 'immutable';
 
+function prefixMatch(alias, search) {
+  const words = alias.split(RegExp('-|_'));
+  var matchFound = false;
+  words.forEach(word => {
+    if (word.startsWith(search)) {
+      matchFound = true;
+    }
+  });
+  return matchFound;
+}
+
 /**
  * Given a search query, generate a results list of animationProps objects that
  * can be displayed and used to add an animation to the project.
@@ -23,14 +34,14 @@ export function searchAssets(
   // Example: searchQuery "bar"
   //   Will match: "barbell", "foo-bar", "foo_bar" or "foo bar"
   //   Will not match: "foobar", "ubar"
-  const searchRegExp = new RegExp('(?:\\b|_)' + searchQuery, 'i');
 
   // Generate the set of all results associated with all matched aliases
   let resultSet = Object.keys(assetLibrary.aliases)
-    .filter(alias => searchRegExp.test(alias))
+    .filter(alias => prefixMatch(alias, searchQuery))
     .reduce((resultSet, nextAlias) => {
       return resultSet.union(assetLibrary.aliases[nextAlias]);
     }, Immutable.Set());
+  console.log(resultSet);
 
   if (categoryQuery !== '' && categoryQuery !== 'category_all') {
     let categoryResultSet = Object.keys(assetLibrary.aliases)

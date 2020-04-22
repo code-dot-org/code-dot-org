@@ -104,6 +104,9 @@ class AnimationPickerBody extends React.Component {
     let libraryManifest = this.props.spriteLab
       ? spriteCostumeLibrary
       : animationLibrary;
+    if (!libraryManifest) {
+      return <div>Loading...</div>;
+    }
     let categories = this.props.spriteLab
       ? CostumeCategories
       : AnimationCategories;
