@@ -37,6 +37,7 @@ import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 const styles = {
   headerName: {
@@ -66,7 +67,8 @@ const styles = {
   sectionCode: {
     marginLeft: 5,
     color: color.teal,
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'copy'
   }
 };
 
@@ -546,6 +548,12 @@ class ManageStudentsTable extends Component {
     return dataColumns;
   };
 
+  copySectionCode = () => {
+    const {sectionCode} = this.props;
+    copyToClipboard(sectionCode);
+    alert(i18n.copySectionCodeSuccess());
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -571,7 +579,8 @@ class ManageStudentsTable extends Component {
       loginType,
       transferStatus,
       transferData,
-      sectionId
+      sectionId,
+      sectionCode
     } = this.props;
     return (
       <div>
@@ -628,9 +637,14 @@ class ManageStudentsTable extends Component {
             />
           </div>
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
-            <div style={styles.sectionCodeBox} data-for="section-code" data-tip>
+            <div
+              style={styles.sectionCodeBox}
+              data-for="section-code"
+              data-tip
+              onClick={this.copySectionCode}
+            >
               <span>{i18n.sectionCodeWithColon()}</span>
-              <span style={styles.sectionCode}>{this.props.sectionCode}</span>
+              <span style={styles.sectionCode}>{sectionCode}</span>
               <ReactTooltip id="section-code" role="tooltip" effect="solid">
                 <div>{i18n.copySectionCodeTooltip()}</div>
               </ReactTooltip>
