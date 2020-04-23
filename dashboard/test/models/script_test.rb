@@ -1950,6 +1950,25 @@ endvariants
     assert_equal script.lessons[0].lesson_group.key, ''
   end
 
+  test 'raises error if a lesson group key is in the reserved plc keys and the display name does not match' do
+    l1 = create :level
+    dsl = <<-SCRIPT
+      lesson_group 'content', display_name: 'Not Content'
+      stage 'Lesson1'
+      level '#{l1.name}'
+
+    SCRIPT
+
+    raise = assert_raises do
+      Script.add_script(
+        {name: 'lesson-group-test-script'},
+        ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups],
+        ScriptDSL.parse(dsl, 'a filename')[0][:stages]
+      )
+    end
+    assert_equal "The key content is a reserved key. It must have the display name: Content.", raise.message
+  end
+
   test 'raises error if a lesson group key is empty' do
     l1 = create :level
     dsl = <<-SCRIPT
@@ -1972,7 +1991,7 @@ endvariants
   test 'raises error if a lesson group key is given without a display_name' do
     l1 = create :level
     dsl = <<-SCRIPT
-      lesson_group 'content'
+      lesson_group 'content1'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -1985,15 +2004,15 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content', raise.message
+    assert_equal 'Expect all lesson groups to have display names. The following lesson group does not have a display name: content1', raise.message
   end
 
   test 'raises error if lesson group key already exists and try to change the display name' do
     l1 = create :level
     script = create :script, name: "lesson-group-test-script"
-    create :lesson_group, key: 'required', script: script
+    create :lesson_group, key: 'content1', script: script
     dsl = <<-SCRIPT
-      lesson_group 'required', display_name: 'not required'
+      lesson_group 'content1', display_name: 'not content'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -2006,7 +2025,7 @@ endvariants
         ScriptDSL.parse(dsl, 'a filename')[0][:stages]
       )
     end
-    assert_equal 'Expect key and display name to match. The Lesson Group with key: required has display_name: Overview', raise.message
+    assert_equal 'Expect key and display name to match. The Lesson Group with key: content1 has display_name: Content', raise.message
   end
 
   test 'raises error if some lessons have lesson groups and some do not' do
@@ -2039,7 +2058,7 @@ endvariants
       lesson_group 'content', display_name: 'Content'
       stage 'Lesson1'
       level '#{l1.name}'
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'content2', display_name: 'Content'
       stage 'Lesson2'
       level '#{l2.name}'
       lesson_group 'content', display_name: 'Content'
@@ -2198,7 +2217,7 @@ endvariants
     l1 = create :level
     l2 = create :level
     old_dsl = <<-SCRIPT
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'content2', display_name: 'Content'
       stage 'Lesson1'
       level '#{l1.name}'
 
@@ -2211,7 +2230,7 @@ endvariants
       stage 'Lesson1'
       level '#{l1.name}'
 
-      lesson_group 'required', display_name: 'Overview'
+      lesson_group 'content2', display_name: 'Content'
       stage 'Lesson2'
       level '#{l2.name}'
     SCRIPT
@@ -2221,7 +2240,7 @@ endvariants
       ScriptDSL.parse(old_dsl, 'a filename')[0][:stages]
     )
 
-    assert_equal 'required', script.lesson_groups[0].key
+    assert_equal 'content2', script.lesson_groups[0].key
     assert_equal 1, script.lesson_groups[0].position
     assert_equal 'content', script.lesson_groups[1].key
     assert_equal 2, script.lesson_groups[1].position
@@ -2234,7 +2253,7 @@ endvariants
 
     assert_equal 'content', script.lesson_groups[0].key
     assert_equal 1, script.lesson_groups[0].position
-    assert_equal 'required', script.lesson_groups[1].key
+    assert_equal 'content2', script.lesson_groups[1].key
     assert_equal 2, script.lesson_groups[1].position
   end
 

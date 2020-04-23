@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 require 'cdo/contact_rollups/v2/pardot'
 
 class PardotV2Test < Minitest::Test
-  def test_retrieve_new_ids_without_result
+  def test_retrieve_prospects_without_result
     pardot_response = Nokogiri::XML <<-XML
       <rsp stat="ok">
         <result>
@@ -13,15 +13,15 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
     yielded_result = nil
-    result = PardotV2.retrieve_new_ids(0) {|mappings| yielded_result = mappings}
+    result = PardotV2.retrieve_prospects(0, ['id']) {|mappings| yielded_result = mappings}
 
     assert_equal 0, result
     assert_equal [], yielded_result
   end
 
-  def test_retrieve_new_ids_with_result
-    pardot_id = 1
-    email = "alex@rollups.com"
+  def test_retrieve_prospects_with_result
+    pardot_id = '1'
+    email = 'alex@rollups.com'
     pardot_response = Nokogiri::XML <<-XML
       <rsp stat="ok">
         <result>
@@ -36,10 +36,10 @@ class PardotV2Test < Minitest::Test
     PardotV2.stubs(:post_with_auth_retry).once.returns(pardot_response)
 
     yielded_result = nil
-    result = PardotV2.retrieve_new_ids(0) {|mappings| yielded_result = mappings}
+    result = PardotV2.retrieve_prospects(0, %w(id email)) {|mappings| yielded_result = mappings}
 
     assert_equal 1, result
-    assert_equal [{email: email, pardot_id: pardot_id}], yielded_result
+    assert_equal [{'id' => pardot_id, 'email' => email}], yielded_result
   end
 
   def test_batch_create_prospects_single_contact
