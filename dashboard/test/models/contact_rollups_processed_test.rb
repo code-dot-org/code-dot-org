@@ -61,16 +61,16 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   end
 
   test 'extract_field' do
-    table_name = 'dashboard.email_preferences'
-    field_name = 'opt_in'
+    table = 'dashboard.email_preferences'
+    field = 'opt_in'
 
     test_cases = [
       {input: [{}, nil, nil], expected_output: nil},
-      {input: [{'dashboard.email_preferences' => {}}, table_name, field_name], expected_output: nil},
-      {input: [{'dashboard.another_table' => {opt_in: 1}}, table_name, field_name], expected_output: nil},
-      {input: [{'dashboard.email_preferences' => {'opt_in' => 0}}, table_name, field_name], expected_output: {opt_in: 0}},
-      {input: [{'dashboard.email_preferences' => {'opt_in' => 1}}, table_name, field_name], expected_output: {opt_in: 1}},
-      {input: [{'dashboard.email_preferences' => {'opt_in' => nil}}, table_name, field_name], expected_output: {opt_in: nil}}
+      {input: [{table => {}}, table, field], expected_output: nil},
+      {input: [{'dashboard.another_table' => {opt_in: 1}}, table, field], expected_output: nil},
+      {input: [{table => {'opt_in' => 0}}, table, field], expected_output: {opt_in: 0}},
+      {input: [{table => {'opt_in' => 1}}, table, field], expected_output: {opt_in: 1}},
+      {input: [{table => {'opt_in' => nil}}, table, field], expected_output: {opt_in: nil}}
     ]
 
     test_cases.each_with_index do |test, index|
