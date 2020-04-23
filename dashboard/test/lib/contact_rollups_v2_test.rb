@@ -31,7 +31,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
     # Execute the pipeline
     log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(log_collector, sync_with_pardot=true)
+    ContactRollupsV2.build_contact_rollups(log_collector, true)
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
@@ -40,7 +40,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
     contact_record = ContactRollupsFinal.find_by_email(email)
     refute_nil contact_record
-    assert_equal true, contact_record.data['opt_in']
+    assert_equal 1, contact_record.data['opt_in']
   end
 
   test 'Sync updated contact' do
@@ -62,7 +62,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
     # Execute the pipeline
     log_collector = LogCollector.new "Tests end-to-end pipeline"
-    ContactRollupsV2.build_contact_rollups(log_collector, sync_with_pardot=true)
+    ContactRollupsV2.build_contact_rollups(log_collector, true)
 
     # Verify results
     pardot_memory_record = ContactRollupsPardotMemory.find_by(email: email, pardot_id: pardot_id)
@@ -71,6 +71,6 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
 
     contact_record = ContactRollupsFinal.find_by_email(email)
     refute_nil contact_record
-    assert_equal false, contact_record.data['opt_in']
+    assert_equal 0, contact_record.data['opt_in']
   end
 end
