@@ -43,7 +43,7 @@ class PardotV2Test < Minitest::Test
   end
 
   def test_batch_create_prospects_single_contact
-    contact = {email: 'crv2_test@domain.com', data: {opt_in: true}}
+    contact = {email: 'crv2_test@domain.com', data: {opt_in: 1}}
 
     ok_response = Nokogiri.XML <<-XML
       <rsp stat="ok" version="1.0">
@@ -62,8 +62,8 @@ class PardotV2Test < Minitest::Test
 
   def test_batch_create_prospects_multiple_contacts
     contacts = [
-      {email: 'invalid_email', data: {opt_in: false}},
-      {email: 'crv2_test@domain.com', data: {opt_in: true}}
+      {email: 'invalid_email', data: {opt_in: 0}},
+      {email: 'crv2_test@domain.com', data: {opt_in: 1}}
     ]
 
     response_with_errors = Nokogiri.XML <<-XML
@@ -103,7 +103,7 @@ class PardotV2Test < Minitest::Test
       email: 'alpha@cdo.org',
       pardot_id: 1,
       old_prospect_data: {db_Opt_In: 'Yes'},
-      new_contact_data: {opt_in: false}
+      new_contact_data: {opt_in: 0}
     }
 
     ok_response = Nokogiri.XML <<-XML
@@ -132,13 +132,13 @@ class PardotV2Test < Minitest::Test
         email: 'alpha@cdo.org',
         pardot_id: 1,
         old_prospect_data: {db_Opt_In: 'Yes'},
-        new_contact_data: {opt_in: false}
+        new_contact_data: {opt_in: 0}
       },
       {
         email: 'beta@cdo.org',
         pardot_id: 2,
         old_prospect_data: nil,
-        new_contact_data: {opt_in: true}
+        new_contact_data: {opt_in: 1}
       }
     ]
 
@@ -175,7 +175,7 @@ class PardotV2Test < Minitest::Test
 
   def test_convert_to_pardot_prospect
     contacts = [
-      {email: 'test0@domain.com', pardot_id: 10, opt_in: true},
+      {email: 'test0@domain.com', pardot_id: 10, opt_in: 1},
       {email: 'test1@domain.com', pardot_id: nil, bad_key: true}
     ]
     expected_prospects = [
