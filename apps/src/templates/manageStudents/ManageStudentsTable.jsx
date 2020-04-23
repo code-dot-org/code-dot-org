@@ -157,7 +157,8 @@ class ManageStudentsTable extends Component {
         direction: 'asc',
         position: 0
       }
-    }
+    },
+    showCopiedMsg: false
   };
 
   renderTransferSuccessNotification = () => {
@@ -552,7 +553,11 @@ class ManageStudentsTable extends Component {
     const {sectionCode, studioUrlPrefix} = this.props;
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
-    alert(i18n.copySectionCodeSuccess());
+    this.setState({showCopiedMsg: true});
+    setTimeout(() => {
+      this.setState({showCopiedMsg: false});
+    }, 5000);
+    clearTimeout();
   };
 
   render() {
@@ -644,11 +649,18 @@ class ManageStudentsTable extends Component {
               data-tip
               onClick={this.copySectionCode}
             >
-              <span>{i18n.sectionCodeWithColon()}</span>
-              <span style={styles.sectionCode}>{sectionCode}</span>
-              <ReactTooltip id="section-code" role="tooltip" effect="solid">
-                <div>{i18n.copySectionCodeTooltip()}</div>
-              </ReactTooltip>
+              {!this.state.showCopiedMsg && (
+                <span>
+                  <span>{i18n.sectionCodeWithColon()}</span>
+                  <span style={styles.sectionCode}>{sectionCode}</span>
+                  <ReactTooltip id="section-code" role="tooltip" effect="solid">
+                    <div>{i18n.copySectionCodeTooltip()}</div>
+                  </ReactTooltip>
+                </span>
+              )}
+              {this.state.showCopiedMsg && (
+                <span>{i18n.copySectionCodeSuccess()}</span>
+              )}
             </div>
           )}
         </div>
