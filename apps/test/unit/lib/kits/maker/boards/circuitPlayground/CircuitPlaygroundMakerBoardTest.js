@@ -5,16 +5,27 @@ import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Pl
 export function testComponentsCircuitPlayground(board) {
   const CP_CONSTRUCTOR_COUNT = 13;
   const CP_COMPONENT_COUNT = 16;
+  const CP_COMPONENTS = [
+    'Led',
+    'Board',
+    'NeoPixel',
+    'PlaygroundButton',
+    'Switch',
+    'Piezo',
+    'Sensor',
+    'Thermometer',
+    'Pin',
+    'Accelerometer',
+    'Animation',
+    'Servo',
+    'TouchSensor'
+  ];
+
   /**
-   * Marshals the board component controllers and appropriate constants into the
-   * given JS Interpreter instance so they can be used by student code.
-   *
-   * @function
-   * @name MakerBoard#installOnInterpreter
-   * @param {codegen} codegen
-   * @param {JSInterpreter} jsInterpreter
+   * After installing on the interpreter, test that the components and
+   * component constructors are available from the interpreter
    */
-  describe('installOnInterpreter(codegen, jsInterpreter)', () => {
+  describe('Circuit Playground components accessible from interpreter', () => {
     let jsInterpreter;
 
     beforeEach(() => {
@@ -27,6 +38,35 @@ export function testComponentsCircuitPlayground(board) {
       };
 
       return board.connect();
+    });
+
+    describe('adds component constructors', () => {
+      beforeEach(() => {
+        board.installOnInterpreter(jsInterpreter);
+      });
+
+      it(`correct number of them`, () => {
+        expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
+          CP_CONSTRUCTOR_COUNT
+        );
+      });
+
+      CP_COMPONENTS.forEach(constructor => {
+        it(constructor, () => {
+          expect(jsInterpreter.globalProperties).to.have.ownProperty(
+            constructor
+          );
+          expect(jsInterpreter.globalProperties[constructor]).to.be.a(
+            'function'
+          );
+          const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
+            call => call[0].instance
+          );
+          expect(passedObjects).to.include(
+            jsInterpreter.globalProperties[constructor]
+          );
+        });
+      });
     });
 
     describe('adds components', () => {
@@ -162,6 +202,42 @@ export function testComponentsCircuitPlayground(board) {
 
         it('SERVO', () => {
           expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
+        });
+      });
+
+      describe('tempSensor', () => {
+        let component;
+
+        beforeEach(() => {
+          component = jsInterpreter.globalProperties.tempSensor;
+        });
+
+        it('F', () => {
+          expect(component).to.have.property('F');
+        });
+
+        it('C', () => {
+          expect(component).to.have.property('C');
+        });
+      });
+
+      describe('accelerometer', () => {
+        let component;
+
+        beforeEach(() => {
+          component = jsInterpreter.globalProperties.accelerometer;
+        });
+
+        it('start()', () => expect(component.start).to.be.a('function'));
+        it('getOrientation()', () =>
+          expect(component.getOrientation).to.be.a('function'));
+        it('getAcceleration()', () =>
+          expect(component.getAcceleration).to.be.a('function'));
+      });
+
+      describe('board', () => {
+        it('exists', () => {
+          expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
         });
       });
     });
