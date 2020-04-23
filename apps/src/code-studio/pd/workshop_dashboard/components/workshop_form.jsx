@@ -405,7 +405,7 @@ export class WorkshopForm extends React.Component {
           text: 'Yes, it is funded. Please pay the Facilitator directly.'
         }
       );
-    } else {
+    } else if (this.state.subject !== 'Workshop for Returning Teachers') {
       options.push({
         value: {funded: true, funding_type: null},
         text: 'Yes, it is funded.'
