@@ -3,9 +3,11 @@ hideable_stages true
 student_detail_progress_view true
 project_sharing true
 
+lesson_group 'csp5_1', display_name: 'Chapter 1: Event-Driven Programming'
 stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
 level 'CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual', assessment: true
 
+lesson_group 'csp5_2', display_name: 'Chapter 2: Programming with Data Structures'
 stage 'While Loops', flex_category: 'csp5_2'
 level 'CSP U5L11 SFLP_virtual', named: true
 level 'CSPU5_U3 - Loops - 1_virtual', progression: 'Loops'

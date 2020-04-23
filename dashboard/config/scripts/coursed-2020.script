@@ -8,6 +8,7 @@ family_name 'coursed'
 version_year '2020'
 curriculum_umbrella 'CSF'
 
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
 stage 'Algorithms: Graph Paper Programming', flex_category: 'csf_sequencing'
 level 'GraphPaperProgramming-Unplugged_2020'
 
@@ -37,6 +38,7 @@ level 'courseD_collector_debugging6a_2020', progression: 'Challenge', challenge:
 level 'courseD_collector_debugging8a_2020', progression: 'Practice'
 level 'courseD_collector_debugging9a_2020', progression: 'Practice'
 
+lesson_group 'csf_events', display_name: 'Events'
 stage 'Events in Bounce', flex_category: 'csf_events'
 level 'courseD_bounce_events1s_2020', progression: 'Practice'
 level 'courseD_bounce_events2s_2020', progression: 'Practice'
@@ -88,6 +90,7 @@ level 'CourseD_Dance_2020_10', progression: 'Free Play'
 bonus 'CourseD_Dance_2020_bonus1'
 bonus 'CourseD_Dance_2020_bonus3'
 
+lesson_group 'csf_loops', display_name: 'Loops'
 stage 'Loops in Ice Age', flex_category: 'csf_loops'
 level 'courseD_iceage_loops1_2020', progression: 'Practice'
 level 'courseD_iceage_loops2_2020', progression: 'Practice'
@@ -132,6 +135,7 @@ level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
 bonus 'courseD_harvester_nested_loops_challenge1_2020'
 bonus 'courseD_collector_nested_loops_challenge2_2020'
 
+lesson_group 'csf_conditionals', display_name: 'Conditionals'
 stage 'Conditionals with Cards', flex_category: 'csf_conditionals'
 level 'ConditionalsWithCards-Unplugged_2020'
 
@@ -196,6 +200,7 @@ level 'courseD_farmer_condLoops9_predict1_2020', progression: 'Prediction'
 bonus 'courseD_farmer_condLoops_challenge1_2020'
 bonus 'courseD_farmer_condLoops_challenge2_2020'
 
+lesson_group 'csf_binary', display_name: 'Binary'
 stage 'Unplugged: Binary', flex_category: 'csf_binary'
 level 'BinaryImages-Unplugged_2020'
 
@@ -214,8 +219,10 @@ level 'courseD_artist_binaryFP_2020', progression: 'Free Play'
 bonus 'courseD_artist_binary_challenge1_2020'
 bonus 'courseD_artist_binary_challenge2_2020'
 
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 stage 'Be A Super Digital Citizen', flex_category: 'csf_digcit'
 level 'csf_be_a_super_digital_citizen'
 
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseD_EOC_2020', progression: 'Create your project'
