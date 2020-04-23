@@ -20,7 +20,7 @@ class ContactRollupsV2
 
     if sync_with_pardot
       log_collector.time!('Downloads new email-Pardot ID mappings') do
-        ContactRollupsPardotMemory.add_and_update_pardot_ids
+        ContactRollupsPardotMemory.download_pardot_ids
       end
       log_collector.time!('Creates new Pardot prospects') do
         ContactRollupsPardotMemory.create_new_pardot_prospects
@@ -29,7 +29,7 @@ class ContactRollupsV2
         ContactRollupsPardotMemory.update_pardot_prospects
       end
       log_collector.time!('Downloads new email-Pardot ID mappings (again)') do
-        ContactRollupsPardotMemory.add_and_update_pardot_ids
+        ContactRollupsPardotMemory.download_pardot_ids
       end
     end
 
