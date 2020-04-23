@@ -17,16 +17,16 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     ContactRollupsFinal.delete_all
   end
 
-  test 'Sync new contact' do
+  test 'sync new contact' do
     # Create seed data in a source table
     email = 'test@domain.com'
     create :email_preference, email: email, opt_in: true
 
     # Stub out Pardot responses
     pardot_id = 1
-    PardotV2.stubs(:retrieve_new_ids).
+    PardotV2.stubs(:retrieve_prospects).
       yields([]).
-      then.yields([{email: email, pardot_id: pardot_id}])
+      then.yields([{'id' => pardot_id, 'email' => email}])
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
@@ -43,7 +43,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     assert_equal true, contact_record.data['opt_in']
   end
 
-  test 'Sync updated contact' do
+  test 'sync updated contact' do
     # Create seed data
     email = 'test@domain.com'
     base_time = Time.now.utc
@@ -57,7 +57,7 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
       data_synced_at: base_time - 1.day
 
     # Stub out Pardot responses
-    PardotV2.stubs(:retrieve_new_ids).twice.yields([])
+    PardotV2.stubs(:retrieve_prospects).twice.yields([])
     PardotV2.stubs(:submit_batch_request).once.returns([])
 
     # Execute the pipeline
