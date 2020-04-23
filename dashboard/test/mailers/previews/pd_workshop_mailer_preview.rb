@@ -42,6 +42,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_ADMIN
   end
 
+  def teacher_enrollment_receipt__csp_for_returning_teachers
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+  end
+
   def teacher_enrollment_receipt__formatted_notes
     notes = <<-NOTES.strip_heredoc
       This is a multi-line, formatted notes section, with preserved whitespace:
