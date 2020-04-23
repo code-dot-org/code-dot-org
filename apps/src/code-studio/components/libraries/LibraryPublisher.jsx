@@ -72,14 +72,27 @@ export default class LibraryPublisher extends React.Component {
     onShareTeacherLibrary: PropTypes.func
   };
 
-  state = {
-    publishState: PublishState.DEFAULT,
-    libraryName: libraryParser.suggestName(
-      this.props.libraryDetails.libraryName
-    ),
-    libraryDescription: this.props.libraryDetails.libraryDescription,
-    selectedFunctions: this.props.libraryDetails.selectedFunctions
-  };
+  constructor(props) {
+    super(props);
+
+    const initialSelectedFunctions = props.libraryDetails.selectedFunctions;
+    let validSelectedFunctions = {};
+    props.libraryDetails.sourceFunctionList.forEach(sourceFunction => {
+      if (
+        initialSelectedFunctions[sourceFunction.functionName] &&
+        this.isFunctionValid(sourceFunction)
+      ) {
+        validSelectedFunctions[sourceFunction.functionName] = true;
+      }
+    });
+
+    this.state = {
+      publishState: PublishState.DEFAULT,
+      libraryName: libraryParser.suggestName(props.libraryDetails.libraryName),
+      libraryDescription: props.libraryDetails.libraryDescription,
+      selectedFunctions: validSelectedFunctions
+    };
+  }
 
   setLibraryName = event => {
     const {libraryName} = this.state;
@@ -181,11 +194,33 @@ export default class LibraryPublisher extends React.Component {
     );
   };
 
-  boxChecked = name => {
-    this.setState(state => {
-      state.selectedFunctions[name] = !state.selectedFunctions[name];
-      return state;
-    }, this.resetErrorMessage);
+  hasComment = sourceFunction => {
+    return sourceFunction.comment.length > 0;
+  };
+
+  duplicateFunction = sourceFunction => {
+    const {sourceFunctionList} = this.props.libraryDetails;
+    const {functionName} = sourceFunction;
+    return (
+      sourceFunctionList.filter(source => source.functionName === functionName)
+        .length > 1
+    );
+  };
+
+  isFunctionValid = sourceFunction => {
+    return (
+      this.hasComment(sourceFunction) && !this.duplicateFunction(sourceFunction)
+    );
+  };
+
+  boxChecked = sourceFunction => {
+    if (this.isFunctionValid(sourceFunction)) {
+      const name = sourceFunction.functionName;
+      this.setState(state => {
+        state.selectedFunctions[name] = !state.selectedFunctions[name];
+        return state;
+      }, this.resetErrorMessage);
+    }
   };
 
   displayFunctions = () => {
@@ -193,20 +228,8 @@ export default class LibraryPublisher extends React.Component {
     const {sourceFunctionList} = this.props.libraryDetails;
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
-      const noComment = comment.length === 0;
-      const duplicateFunction =
-        sourceFunctionList.filter(
-          source => source.functionName === functionName
-        ).length > 1;
-      const shouldDisable = noComment || duplicateFunction;
-      let checked = selectedFunctions[functionName] || false;
-      if (shouldDisable && checked) {
-        checked = false;
-        this.setState(state => {
-          state.selectedFunctions[functionName] = false;
-          return state;
-        });
-      }
+      const checked = selectedFunctions[functionName] || false;
+
       return (
         <div key={functionName}>
           <div style={styles.functionSelector}>
@@ -214,19 +237,19 @@ export default class LibraryPublisher extends React.Component {
               style={styles.largerCheckbox}
               type="checkbox"
               id={functionName}
-              disabled={shouldDisable}
+              disabled={!this.isFunctionValid(sourceFunction)}
               name={functionName}
               checked={checked}
-              onChange={() => this.boxChecked(functionName)}
+              onChange={() => this.boxChecked(sourceFunction)}
             />
             <label htmlFor={functionName} style={styles.functionLabel}>
               {functionName}
             </label>
           </div>
-          {noComment && (
+          {!this.hasComment(sourceFunction) && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
           )}
-          {duplicateFunction && (
+          {this.duplicateFunction(sourceFunction) && (
             <p style={styles.alert}>
               {i18n.libraryExportDuplicationFunctionError()}
             </p>
@@ -285,7 +308,10 @@ export default class LibraryPublisher extends React.Component {
 
     let allSelected = true;
     sourceFunctionList.forEach(sourceFunction => {
-      if (!selectedFunctions[sourceFunction.functionName]) {
+      if (
+        this.isFunctionValid(sourceFunction) &&
+        !selectedFunctions[sourceFunction.functionName]
+      ) {
         allSelected = false;
       }
     });
@@ -299,10 +325,11 @@ export default class LibraryPublisher extends React.Component {
     } else {
       const {sourceFunctionList} = this.props.libraryDetails;
       let selectedFunctions = {};
-      sourceFunctionList.forEach(
-        sourceFunction =>
-          (selectedFunctions[sourceFunction.functionName] = true)
-      );
+      sourceFunctionList.forEach(sourceFunction => {
+        if (this.isFunctionValid(sourceFunction)) {
+          selectedFunctions[sourceFunction.functionName] = true;
+        }
+      });
       this.setState({selectedFunctions});
     }
   };
