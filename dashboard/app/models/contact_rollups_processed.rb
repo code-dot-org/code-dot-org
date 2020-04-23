@@ -48,7 +48,7 @@ class ContactRollupsProcessed < ApplicationRecord
       contact_data = parse_contact_data(contact['all_data_and_metadata'])
 
       processed_contact_data = {}
-      processed_contact_data.merge!(extract_opt_in(contact_data) || {})
+      processed_contact_data.merge!(extract_field(contact_data, 'dashboard.email_preferences', 'opt_in') || {})
       processed_contact_data.merge!(extract_updated_at(contact_data) || {})
 
       batch << {email: contact['email'], data: processed_contact_data}
@@ -83,17 +83,15 @@ class ContactRollupsProcessed < ApplicationRecord
     end
   end
 
-  # Extracts opt_in info from contact data.
+  # Extracts a given field from data compiled from multiple sources.
   #
   # @param [Hash] contact_data compiled data from multiple source tables.
   #   @see output of parse_contact_data method.
   # @return [Hash, nil] a hash containing opt_in key and value (could be nil)
   #   or nil if opt_in does not exist in the input.
-  def self.extract_opt_in(contact_data)
-    table = 'dashboard.email_preferences'
-    field = 'opt_in'
+  def self.extract_field(contact_data, table, field)
     return nil unless contact_data.key?(table) && contact_data[table].key?(field)
-    {opt_in: contact_data.dig(table, field)}
+    {field.to_sym => contact_data.dig(table, field)}
   end
 
   # Extracts the latest data_updated_at value.
