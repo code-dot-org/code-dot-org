@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -77,15 +76,25 @@ class ManageStudentsLoginInfo extends Component {
         )}
         {loginType === SectionLoginType.email && (
           <div>
-            <p>
-              {i18n.joinSectionAsk()}
-              <a
-                target="_blank"
-                href={`${studioUrlPrefix}/join/${sectionCode}`}
-              >
-                {`${studioUrlPrefix}/join/${sectionCode}`}
-              </a>
-            </p>
+            <SafeMarkdown
+              markdown={i18n.setUpClassStep1Email({
+                createAccountLink: `${studioUrlPrefix}/users/sign_up`
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClassStep2Email({
+                joinLink: `${studioUrlPrefix}/join/${sectionCode}`
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClassStep3({
+                parentLetterLink: teacherDashboardUrl(
+                  sectionId,
+                  '/parent_letter'
+                )
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClassStep4()}</p>
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
@@ -100,18 +109,18 @@ class ManageStudentsLoginInfo extends Component {
           </p>
         )}
         {loginType === SectionLoginType.clever && (
-          <p>
-            {i18n.loginInfo_signingInClever()}{' '}
-            {i18n.loginInfo_oauthSectionCodes({
-              provider: i18n.loginTypeClever()
-            })}
-          </p>
+          <div>
+            <SafeMarkdown
+              markdown={i18n.setUpClassStep1Clever({
+                cleverLink: 'TBD'
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClassStep2Clever()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassCleverFinished()}</p>
+          </div>
         )}
         <h2 style={styles.heading}>{i18n.loginType()}</h2>
-        <LoginTypeParagraph
-          sectionId={sectionId}
-          onLoginTypeChanged={() => window.location.reload()}
-        />
+
         <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
