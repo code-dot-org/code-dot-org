@@ -6,7 +6,6 @@ zh-CN:
         csd_category_name: 计算机科学发现 (' 17-' 18)
         csd_2018_category_name: 计算机科学发现 (' 18-' 19)
         csd_2019_category_name: 计算机科学发现 (' 19-' 20)
-        csf_category_name: 计算机科学基本原理
         csf_2018_category_name: 计算机科学基础课程（2018）
         csf_international_category_name: 计算机基础国际版
         csf2_draft_category_name: 开发中：课程 A - F
@@ -14447,3 +14446,31 @@ zh-CN:
               name: 算法
             Events:
               name: 事件
+        no-lg:
+          stages:
+            new stage:
+              name: 新的阶段
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: 第5单元评估2
+            While Loops:
+              name: 当循环
+            Loops and Simulations:
+              name: 循环和模拟
+            Introduction to Arrays:
+              name: 数组的简介
+            'Building an App: Image Scroller':
+              name: '构建应用程序: 图像滚动'
+            Unit 5 Assessment 3:
+              name: 第5单元评估3
+            Processing Arrays:
+              name: 处理数组
+            Functions with Return Values:
+              name: 函数和返回值
+            'Building an App: Canvas Painter':
+              name: '构建应用程序: 油画画家'
+            Unit 5 Assessment 4:
+              name: 第5单元评估4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: 第5单元评估 5 - AP 伪代码练习题

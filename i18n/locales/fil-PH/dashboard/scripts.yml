@@ -4,7 +4,6 @@ fil:
   data:
     script:
       category:
-        csf_category_name: CS Fundamentals
         csf_international_category_name: Internasyonal na CS Fundamentals
         csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
         csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
@@ -9670,3 +9669,31 @@ fil:
               name: Mga algorithm
             Events:
               name: Mga event
+        no-lg:
+          stages:
+            new stage:
+              name: bagong yugto
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Yunit 5 Pagtatasa 2
+            While Loops:
+              name: While Loops
+            Loops and Simulations:
+              name: Mga Loop at Mga Simulasyon
+            Introduction to Arrays:
+              name: Introduksyon sa mga Array
+            'Building an App: Image Scroller':
+              name: 'Pagbubuo ng App: Scroller ng Larawan'
+            Unit 5 Assessment 3:
+              name: Yunit 5 Pagtatasa 3
+            Processing Arrays:
+              name: Processing na mga Array
+            Functions with Return Values:
+              name: Mga Function na may Sinauling mga Halaga
+            'Building an App: Canvas Painter':
+              name: 'Pagbubuo ng App: Pintor sa Canvas'
+            Unit 5 Assessment 4:
+              name: Yunit 5 Pagtatasa 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Yunit 5 Pagtatasa 5 - AP Pseudocode na Pagsasanay na mga Katanungan

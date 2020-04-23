@@ -1051,7 +1051,7 @@ pl-PL:
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops2_2019: |-
-        Pomóż Laurel dojść do skarbu, a potem użyj klacka <xml><block type="collector_collect" block-text="get treasure"/></xml> aby zebrać kryształ.
+        Pomóż Laurel dojść do skarbu, a potem użyj bloku <xml><block type="collector_collect" block-text="get treasure"/></xml>, aby zebrać kryształ.
 
         Zbierz wszystkie cztery kryształy, aby ukończyć ten poziom.
       courseB_collector_loops_challenge2a: |-

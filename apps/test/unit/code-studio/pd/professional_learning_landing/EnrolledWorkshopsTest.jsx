@@ -21,14 +21,15 @@ describe('EnrolledWorkshops', () => {
   let clock;
 
   beforeEach(() => {
-    // By default, use normal time
-    clock = sinon.useFakeTimers(new Date());
     sinon.stub(utils, 'windowOpen');
   });
 
   afterEach(() => {
+    if (clock) {
+      clock.restore();
+      clock = undefined;
+    }
     utils.windowOpen.restore();
-    clock.restore();
   });
 
   it('Clicking cancel enrollment cancels the enrollment', () => {

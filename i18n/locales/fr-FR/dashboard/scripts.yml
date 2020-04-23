@@ -7,7 +7,6 @@ fr:
         csd_category_name: CS Discoveries (2017-2018)
         csd_2018_category_name: CS Discoveries (2018-2019)
         csd_2019_category_name: Discoveries de l'informatique (2019-2020)
-        csf_category_name: Fondamentaux d'Informatique
         csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
@@ -13399,3 +13398,31 @@ fr:
               name: Algorithmes
             Events:
               name: Événements
+        no-lg:
+          stages:
+            new stage:
+              name: nouvelle phase
+        csp5-virtual-part2:
+          stages:
+            Unit 5 Assessment 2:
+              name: Unité 5  Évaluation 2
+            While Loops:
+              name: Boucles « Tant que »
+            Loops and Simulations:
+              name: Boucles et simulations
+            Introduction to Arrays:
+              name: Introduction aux Tableaux
+            'Building an App: Image Scroller':
+              name: 'Construire une Application : Image Scroller'
+            Unit 5 Assessment 3:
+              name: Unité 5  Évaluation 3
+            Processing Arrays:
+              name: Traitement Des Tableaux
+            Functions with Return Values:
+              name: Fonctions avec des Valeurs de Retour
+            'Building an App: Canvas Painter':
+              name: 'Construire une Application : Canvas Painter'
+            Unit 5 Assessment 4:
+              name: Unité 5  Évaluation 4
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              name: Unité 5 Évaluation 5 - AP Pratique Pseudocode - Questions
