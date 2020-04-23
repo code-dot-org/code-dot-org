@@ -560,10 +560,19 @@ export class WorkshopForm extends React.Component {
       const options = Subjects[this.state.course]
         .filter(subject => {
           // Only a WorkshopAdmin should be shown a Virtual workshop.
-          return (
-            subject.indexOf('Virtual') === -1 ||
-            this.props.permission.has(WorkshopAdmin)
-          );
+          if (
+            subject.indexOf('Virtual') === -1 &&
+            !this.props.permission.has(WorkshopAdmin)
+          ) {
+            return false;
+          }
+
+          // Temporary: Don't show the new workshop type as an option while we're still building it.
+          if (subject === 'CS Principles Workshop for Returning Teachers') {
+            return false;
+          }
+
+          return true;
         })
         .map((subject, i) => {
           return (
