@@ -5,6 +5,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
     email_preference = create :email_preference
     ContactRollupsRaw.extract_from_table('email_preferences', ['opt_in'], 'email')
 
+    # Actual value stored in database is 1/0 instead of true/false
     expected_data = {opt_in: email_preference.opt_in ? 1 : 0}
     result = ContactRollupsRaw.find_by(
       email: email_preference.email,

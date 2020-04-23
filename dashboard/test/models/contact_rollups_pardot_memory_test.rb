@@ -71,7 +71,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'create_new_pardot_prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
-    contact = create :contact_rollups_processed, data: {'opt_in' => true}
+    contact = create :contact_rollups_processed, data: {'opt_in' => 1}
 
     PardotV2.expects(:submit_batch_request).once.returns([])
 
@@ -118,11 +118,11 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     # 3 cases that require updating contacts
     processed_contact_records = [
       # Case 1: data_synced_at is null
-      {email: 'alpha', data: {opt_in: false}, data_updated_at: base_time},
+      {email: 'alpha', data: {opt_in: 0}, data_updated_at: base_time},
       # Case 2: data_updated_at > data_synced_at
-      {email: 'beta', data: {opt_in: false}, data_updated_at: base_time},
+      {email: 'beta', data: {opt_in: 0}, data_updated_at: base_time},
       # Case 3: pardot_id_updated_at > data_synced_at
-      {email: 'gamma', data: {opt_in: true}, data_updated_at: base_time},
+      {email: 'gamma', data: {opt_in: 1}, data_updated_at: base_time},
       # dummy records
       {email: 'delta'},
       {email: 'zeta'},
@@ -147,7 +147,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     email = 'test@domain.com'
     last_sync_time = Time.now.utc - 7.days
     create :contact_rollups_pardot_memory, email: email, data_synced: {db_Opt_In: 'No'}, data_synced_at: last_sync_time
-    create :contact_rollups_processed, email: email, data: {'opt_in' => true}
+    create :contact_rollups_processed, email: email, data: {'opt_in' => 1}
 
     PardotV2.expects(:submit_batch_request).once.returns([])
 
