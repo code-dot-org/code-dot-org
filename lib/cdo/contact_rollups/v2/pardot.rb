@@ -45,6 +45,8 @@ class PardotV2
 
       # Pardot returns the count total available prospects (not capped to 200),
       # although the data for a max of 200 are contained in the response.
+      # The total prospects count changes in each loop iteration because the url we
+      # send to Pardot also changes.
       # @see http://developer.pardot.com/kb/api-version-4/prospects/#xml-response-format
       total_results = doc.xpath('/rsp/result/total_results').text.to_i
 
