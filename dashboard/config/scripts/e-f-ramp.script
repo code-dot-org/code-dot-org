@@ -1,5 +1,6 @@
 hideable_stages true
 
+lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF'
 
@@ -86,6 +87,7 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
+lesson_group 'csf_e_2', display_name: 'Course E Content'
 stage 'Algorithms: Dice Race', flex_category: 'csf_e_2'
 level 'DiceRace'
 
@@ -221,6 +223,7 @@ level 'courseE_playLab_scaffold5'
 level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
 
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 level 'courseF_video_csMatters', named: true
 level 'Geometric Sun', named: true
@@ -238,6 +241,7 @@ level 'Course E: Artist Project', named: true
 stage 'Present Your Project', flex_category: 'end_of_course_project'
 level 'Prepare for your presentation', named: true
 
+lesson_group 'extra_course_content', display_name: 'Extra Course Content'
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet'
 
