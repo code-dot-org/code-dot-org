@@ -12,7 +12,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp2_1', display_name: 'Chapter 1: Encoding and Compressing Complex Information'
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
 level 'v2 U2L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U1L12 Reflection Free Response', progression: 'Check Your Understanding', assessment: true
@@ -59,7 +58,6 @@ level 'v2 U2L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & R
 stage 'Unit 2 Chapter 1 Assessment', lockable: true, flex_category: 'csp2_1'
 level 'CSP Unit 2 Ch1 Cumulative Assessment MC', assessment: true
 
-lesson_group 'csp2_2', display_name: 'Chapter 2: Manipulating and Visualizing Data'
 stage 'Intro to Data', flex_category: 'csp2_2'
 level 'v2 U2L7 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'csp-pulse-check-survey-3-levelgroup-U2Ch2', progression: 'Quick Check-In', assessment: true
@@ -119,7 +117,6 @@ variants
 endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC', assessment: true
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'Post-Course Survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'

@@ -3,7 +3,6 @@ hideable_stages true
 student_detail_progress_view true
 has_verified_resources true
 
-lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 stage 'Analysis of Design', flex_category: 'csd4_1'
 level 'CSD U4L01 SFLP', named: true
 
@@ -26,7 +25,6 @@ stage 'Project - Paper Prototype', flex_category: 'csd4_1'
 level 'CSD U4L07 SFLP', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection', assessment: true
 
-lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
 stage 'Designing Apps for Good', flex_category: 'csd4_2'
 level 'CSD U4L08 SFLP', named: true
 

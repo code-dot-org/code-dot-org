@@ -1,11 +1,9 @@
 hideable_stages true
 
-lesson_group 'content', display_name: 'Content'
 stage 'Example Projects'
 level 'CSD U3 Entertainment Sample 1_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 2_virtual', progression: 'Sample Programs'
 
-lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
 stage 'Velocity', flex_category: 'csd3_2'
 level 'CSD: Sprite Velocity_virtual', named: true
 level 'CSD U3 abstraction velocityX_virtual', progression: 'Velocity'

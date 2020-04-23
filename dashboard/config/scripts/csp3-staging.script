@@ -4,7 +4,6 @@ student_detail_progress_view true
 has_verified_resources true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp3_1', display_name: 'Chapter 1: Programming Languages and Algorithms'
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'U3L01 Assessment1', progression: 'Check Your Understanding', assessment: true
@@ -119,7 +118,6 @@ level 'U3L08 - individualCode', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates', named: true
 level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene'
 
-lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 variants
   level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'

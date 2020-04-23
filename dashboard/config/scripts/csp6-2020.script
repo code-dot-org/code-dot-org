@@ -8,7 +8,6 @@ pilot_experiment 'csp-2020-access'
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_unit6_2020', display_name: 'Unit 6: Algorithms'
 stage 'Algorithms Solve Problems', flex_category: 'csp_unit6_2020'
 level 'CSP U6L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U6 L01 Algorithms vs Problems', progression: 'Check For Understanding', assessment: true
