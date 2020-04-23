@@ -2,11 +2,9 @@ professional_learning_course 'CS Discoveries Facilitator in Training 2018-2019'
 login_required true
 student_detail_progress_view true
 
-lesson_group 'required', display_name: 'Overview'
 stage 'Novice Reflection Overview', flex_category: 'required'
 level 'welcome-novice-18', named: true
 
-lesson_group 'content', display_name: 'Content'
 stage 'Day 1'
 level 'novice-monday-1'
 level 'novice-monday-2'

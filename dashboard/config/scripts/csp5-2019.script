@@ -13,7 +13,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp5_1', display_name: 'Chapter 1: Event-Driven Programming'
 stage 'Buttons and Events', flex_category: 'csp5_1'
 level 'CSP U5L01 SFLP_2019', named: true
 level 'Introduction to Design Mode_2019', progression: 'Intro to Design Mode in App Lab'
@@ -212,7 +211,6 @@ level 'U5 AP Practice Create Algorithm Color Sleuth_2019', progression: 'AP Prac
 stage 'Unit 5 Assessment 2', lockable: true, flex_category: 'csp5_1'
 level 'CSP Unit 5 Cumulative Assessment 2 MC_2018_2019', assessment: true
 
-lesson_group 'csp5_2', display_name: 'Chapter 2: Programming with Data Structures'
 stage 'While Loops', flex_category: 'csp5_2'
 level 'CSP U5L11 SFLP_2019', named: true
 level 'CSPU5_U3 - Loops - 1_2019', progression: 'Loops'
@@ -355,7 +353,6 @@ level 'CSP Unit 5 Cumulative Assessment 4 MC_2018_2019', assessment: true
 stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true, flex_category: 'csp5_2'
 level 'CSP Cumulative Assess A_2018_2019', assessment: true
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true

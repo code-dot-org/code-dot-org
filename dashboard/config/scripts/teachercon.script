@@ -1,12 +1,10 @@
 login_required true
 
-lesson_group 'required', display_name: 'Overview'
 stage 'Introduction to Teachercon', flex_category: 'required'
 level 'Welcome to TeacherCon!', named: true
 level 'TeacherCon Agenda', named: true
 level 'TeacherCon Self-Assessment', named: true
 
-lesson_group 'content', display_name: 'Content'
 stage 'Lesson 1,4', flex_category: 'content'
 level 'U1L4 Lesson Overview', named: true
 
@@ -31,7 +29,6 @@ level 'U2L3 Lesson Overview', named: true
 stage 'Lesson 2,10', flex_category: 'content'
 level 'U2L10 Lesson Overview', named: true
 
-lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Group Work and Peer Learning', named: true

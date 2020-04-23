@@ -2,13 +2,11 @@ professional_learning_course 'All The PLC Things'
 login_required 'true'
 peer_reviews_to_complete 5
 
-lesson_group 'required', display_name: 'Overview'
 stage 'Introduction to Teachercon', flex_category: 'required'
 level 'Welcome to TeacherCon!', named: true
 level 'TeacherCon Agenda', named: true
 level 'TeacherCon Self-Assessment', named: true
 
-lesson_group 'content', display_name: 'Content'
 stage 'Lesson 1,4', flex_category: 'content'
 level 'U1L4 Lesson Overview', named: true
 
@@ -33,13 +31,6 @@ level 'U2L3 Lesson Overview', named: true
 stage 'Lesson 2,10', flex_category: 'content'
 level 'U2L10 Lesson Overview', named: true
 
-stage 'Test stage with bubbles'
-level 'cspu5_assess1_eventprograms'
-level 'cspu5_assess1_elementid'
-level 'cspu5_assess1_debugging'
-level 'cspu5_assess1_codevalues'
-
-lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Exploring Practices and Strategies during TeacherCon', named: true
 level 'Overview: Group Work and Peer Learning', named: true
@@ -55,3 +46,9 @@ level 'Exploring Practices and Strategies during TeacherCon', named: true
 level  'Overview: Balancing Teachers and Tools', named: true
 level 'Peer Review Level 1 - Tuesday Report', named: true
 level 'Peer Review Level 2 - Wednesday Report', named: true
+
+stage 'Test stage with bubbles'
+level 'cspu5_assess1_eventprograms'
+level 'cspu5_assess1_elementid'
+level 'cspu5_assess1_debugging'
+level 'cspu5_assess1_codevalues'
