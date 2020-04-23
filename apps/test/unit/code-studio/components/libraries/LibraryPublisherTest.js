@@ -99,8 +99,8 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.first().prop('disabled')).to.be.false;
-      expect(checkboxes.last().prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('disabled')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.true;
     });
 
     it('disables checkbox for functions with duplicate names', () => {
@@ -115,8 +115,8 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(0).prop('disabled')).to.be.false;
-      expect(checkboxes.at(1).prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('disabled')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.true;
     });
 
     it('checks checkboxes of selected functions', () => {
@@ -134,12 +134,12 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(0).prop('disabled')).to.be.false;
       expect(checkboxes.at(1).prop('disabled')).to.be.false;
-      expect(checkboxes.at(2).prop('disabled')).to.be.true;
-      expect(checkboxes.at(0).prop('checked')).to.be.false;
-      expect(checkboxes.at(1).prop('checked')).to.be.true;
-      expect(checkboxes.at(2).prop('checked')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.false;
+      expect(checkboxes.at(3).prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('checked')).to.be.false;
+      expect(checkboxes.at(2).prop('checked')).to.be.true;
+      expect(checkboxes.at(3).prop('checked')).to.be.false;
     });
   });
 
