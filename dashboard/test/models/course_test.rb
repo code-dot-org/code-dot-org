@@ -483,7 +483,8 @@ class CourseTest < ActiveSupport::TestCase
     csp2 = create(:script, name: 'csp2')
     csp2_alt = create(:script, name: 'csp2-alt', hidden: true)
     csp3 = create(:script, name: 'csp3')
-    csd = create(:course, name: 'csd-2017', visible: true, is_stable: true)
+    # Should still be in valid_courses if visible and not stable
+    csd = create(:course, name: 'csd-2017', visible: true)
     create(:course, name: 'madeup')
 
     create(:course_script, position: 1, course: csp, script: csp1)
