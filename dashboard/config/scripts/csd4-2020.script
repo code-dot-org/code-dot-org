@@ -11,6 +11,7 @@ project_sharing true
 curriculum_umbrella 'CSD'
 tts true
 
+lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 stage 'Analysis of Design', flex_category: 'csd4_1'
 level 'CSD U4L01 autoSFLP_2020', named: true
 
@@ -33,6 +34,7 @@ stage 'Project - Paper Prototype', flex_category: 'csd4_1'
 level 'CSD U4L07 autoSFLP_2020', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019_2020', progression: 'Reflection', assessment: true
 
+lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
 stage 'Designing Apps for Good', flex_category: 'csd4_2'
 level 'CSD U4L08 autoSFLP_2020', named: true
 
@@ -86,9 +88,11 @@ stage 'Project - App Presentation', flex_category: 'csd4_2'
 level 'CSD U4L16 autoSFLP_2020', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019_2020', progression: 'Reflection', assessment: true
 
+lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
 stage 'Post-Project Test', lockable: true, flex_category: 'csd5_2'
 level 'CSD User Centered Design Post-Project Test_2020', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019_2020'
 level 'csd-post-survey-levelgroup_2019_2020', assessment: true
