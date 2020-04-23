@@ -926,26 +926,38 @@ class Script < ActiveRecord::Base
         script_lesson_groups << lesson_group
       else
         # Finds or creates Lesson Groups with the correct position.
-        # In addition it check for 2 things:
+        # In addition it check for 3 things:
         # 1. That all the lesson groups specified by the editor have a key and
         # display name.
         # 2. If the lesson group key is an existing key that the given display name
         # for that key matches the already saved display name
+        # 3. PLC courses use certain lesson group keys for module types. We reserve those
+        # keys so they can only map to the display_name for their PLC purpose
         raw_lesson_groups&.each_with_index do |raw_lesson_group, index|
+          Plc::LearningModule::RESERVED_LESSON_GROUPS_FOR_PLC.each do |reserved_lesson_group|
+            if reserved_lesson_group[:key] == raw_lesson_group[:key] && reserved_lesson_group[:display_name] != raw_lesson_group[:display_name]
+              raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
+            end
+          end
           if raw_lesson_group[:display_name].blank?
             raise "Expect all lesson groups to have display names. The following lesson group does not have a display name: #{raw_lesson_group[:key]}"
           end
+
+          new_lesson_group = false
 
           lesson_group = LessonGroup.find_or_create_by(
             key: raw_lesson_group[:key],
             script: script,
             user_facing: true
-          )
+          ) do
+            # if you got in here, this is a new lesson_group
+            new_lesson_group = true
+          end
 
           lesson_group.assign_attributes(position: index + 1)
           lesson_group.save! if lesson_group.changed?
 
-          if lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
+          if !new_lesson_group && lesson_group.localized_display_name != raw_lesson_group[:display_name]
             raise "Expect key and display name to match. The Lesson Group with key: #{raw_lesson_group[:key]} has display_name: #{lesson_group&.localized_display_name}"
           end
 
