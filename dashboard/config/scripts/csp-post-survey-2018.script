@@ -4,6 +4,5 @@ hideable_stages true
 has_verified_resources true
 has_lesson_plan true
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CSP post-course survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-levelgroup-2018', progression: 'CS Principles Post-course Survey', assessment: true

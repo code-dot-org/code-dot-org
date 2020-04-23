@@ -12,7 +12,6 @@ version_year '2019'
 is_stable true
 project_sharing true
 
-lesson_group 'csp_postap_1', display_name: 'Chapter 1: Manipulating and Visualizing Data'
 stage 'Intro to Data', flex_category: 'csp_postap_1'
 level 'CSP U2L07 SFLP_2019', named: true
 level 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018_2019', progression: 'Quick Check-In', assessment: true
@@ -55,7 +54,6 @@ level 'U2L14 Summary Tables MC_2018_2019', progression: 'Check Your Understandin
 stage 'Project - Tell a Data Story', flex_category: 'csp_postap_1'
 level 'CSP U2L15 SFLP_2019', named: true
 
-lesson_group 'csp_postap_2', display_name: 'Chapter 2: Apps and Databases'
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
 level 'U4L02 Student Lesson Introduction Video_2018_2019'
 level 'U4 - Objects - eventParameter_2019'
@@ -148,7 +146,6 @@ stage 'Final Project', flex_category: 'csp_postap_2'
 level 'U6 - Final Project - Student Introduction_2018_2019'
 level 'U6 - Final Project - Project Level_2019', assessment: true
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true

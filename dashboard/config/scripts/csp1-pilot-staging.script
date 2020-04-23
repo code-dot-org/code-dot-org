@@ -1,6 +1,5 @@
 project_sharing true
 
-lesson_group 'csp_variables', display_name: 'Variables'
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
 level 'U4 L01 Poetry App', progression: 'Sample Apps'
@@ -41,7 +40,6 @@ level 'Pilot Student Survey', progression: 'Student Survey (Variables)', assessm
 stage 'Teacher Surveys (Variables)', lockable: true, flex_category: 'csp_variables'
 level 'Pilot Teacher Surveys CSP2021', progression: 'Teacher Surveys (Variables)', assessment: true
 
-lesson_group 'csp_conditionals', display_name: 'Conditionals'
 stage 'Conditionals Explore', flex_category: 'csp_conditionals'
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
 level 'U4 L05 CYU Exit Ticket', progression: 'Check Your Understanding'
@@ -86,7 +84,6 @@ level 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditi
 stage 'Teacher Surveys (Conditionals)', lockable: true, flex_category: 'csp_conditionals'
 level 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)', assessment: true
 
-lesson_group 'csp_functions', display_name: 'Functions'
 stage 'Functions Explore / Investigate', flex_category: 'csp_functions'
 level 'U4 L09 Functions Song', progression: 'Explore Functions'
 level 'U4L09 Intro to Functions Video', progression: 'Declaring and Calling Functions'
@@ -115,7 +112,6 @@ level 'U4 L11 Functions Make 4.75', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 5', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 6', progression: 'Make the Quote Maker App'
 
-lesson_group 'csp_project', display_name: 'Project'
 stage 'Practice PT Part 1', flex_category: 'csp_project'
 level 'U4 L12 Practice PT 1', progression: 'Sample Apps'
 level 'U4 L12 Practice PT 2', progression: 'Sample Apps'

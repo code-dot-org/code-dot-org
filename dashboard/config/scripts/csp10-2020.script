@@ -8,7 +8,6 @@ pilot_experiment 'csp-2020-access'
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_unit10_2020', display_name: 'Unit 10: Cybersecurity and Global Impacts'
 stage 'Project - Innovation Simulation Part 1', flex_category: 'csp_unit10_2020'
 level 'CSP U10L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U10 L01 CFU innovations', progression: 'Check For Understanding', assessment: true

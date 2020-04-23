@@ -12,7 +12,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp2_1_2018', display_name: 'Unit 2: Digital Information'
 stage 'Bytes and File Sizes', flex_category: 'csp2_1_2018'
 level 'CSP U2L01 SFLP', named: true
 level 'U1L12 Reflection Free Response_2018', progression: 'Check Your Understanding', assessment: true
@@ -58,6 +57,5 @@ level 'U2L05 Lossy vs. Lossless FR 1_2018', progression: 'Check Your Understandi
 stage 'Rapid Research - Format Showdown', flex_category: 'csp2_1_2018'
 level 'CSP U2L06 SFLP', named: true
 
-lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 stage 'Unit 2 Assessment', lockable: true, flex_category: 'cspAssessment'
 level 'CSP Unit 2 Ch1 Cumulative Assessment MC_2018', assessment: true

@@ -12,7 +12,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_ap_3', display_name: 'Chapter 3: AP Create Performance Task'
 stage 'Create PT Prep - Reviewing the Task', flex_category: 'csp_ap_3'
 level 'CSP CreateL01 SFLP', named: true
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
@@ -24,6 +23,5 @@ stage 'Create PT - Complete the Task', flex_category: 'csp_ap_3'
 level 'CSP CreateL03 SFLP', named: true
 level 'Practice Create Performance Task_2018', progression: 'Create PT - Complete the Task'
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
