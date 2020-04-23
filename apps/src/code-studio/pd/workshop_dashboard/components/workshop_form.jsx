@@ -568,7 +568,7 @@ export class WorkshopForm extends React.Component {
           }
 
           // Temporary: Don't show the new workshop type as an option while we're still building it.
-          if (subject === 'CS Principles Workshop for Returning Teachers') {
+          if (subject === 'Workshop for Returning Teachers') {
             return false;
           }
 

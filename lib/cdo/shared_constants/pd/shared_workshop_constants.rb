@@ -69,7 +69,7 @@ module Pd
         SUBJECT_CSP_VIRTUAL_6 = SUBJECT_VIRTUAL_6,
         SUBJECT_CSP_VIRTUAL_7 = SUBJECT_VIRTUAL_7,
         SUBJECT_CSP_VIRTUAL_8 = SUBJECT_VIRTUAL_8,
-        SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'CS Principles Workshop for Returning Teachers'.freeze
+        SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
