@@ -6,7 +6,6 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-preview/unit4/{LESSON}
 pilot_experiment 'csp-preview'
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_variables', display_name: 'Variables'
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4L1 Preview SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U4 My Pet Rock Example App', progression: 'Sample Apps'
@@ -45,7 +44,6 @@ level 'U4 L04 Variables Make Project 2', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 3', progression: 'Make the Photo Liker App'
 level 'U4 L04 Variables Make Project 4', progression: 'Make the Photo Liker App', assessment: true
 
-lesson_group 'csp_conditionals', display_name: 'Conditionals'
 stage 'Conditionals Explore', flex_category: 'csp_conditionals'
 level 'CSP U4L5 Preview SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
@@ -85,7 +83,6 @@ level 'U4L08 Museum Ticket Generator 2', progression: 'Make the Museum Ticket Ge
 level 'U4L08 Museum Ticket Generator 4', progression: 'Make the Museum Ticket Generator App'
 level 'U4L08 Museum Ticket Generator 5', progression: 'Make the Museum Ticket Generator App', assessment: true
 
-lesson_group 'csp_functions', display_name: 'Functions'
 stage 'Functions Explore / Investigate', flex_category: 'csp_functions'
 level 'CSP U4L9 Preview SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L09 Functions Song', progression: 'Explore Functions'
@@ -119,7 +116,6 @@ level 'U4 L11 Functions Make 4.75', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 5', progression: 'Make the Quote Maker App'
 level 'U4 L11 Functions Make 6', progression: 'Make the Quote Maker App', assessment: true
 
-lesson_group 'csp_project', display_name: 'Project'
 stage 'Practice PT Part 1', flex_category: 'csp_project'
 level 'CSP U4L12 Preview SFLP 20-21', progression: 'Lesson Overview'
 level 'U4 L12 Practice PT 1', progression: 'Sample Apps'

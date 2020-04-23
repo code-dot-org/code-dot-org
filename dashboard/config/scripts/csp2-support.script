@@ -3,7 +3,6 @@ peer_reviews_to_complete 4
 login_required true
 student_detail_progress_view true
 
-lesson_group 'required', display_name: 'Overview'
 stage 'Unit 2 Overview', flex_category: 'required'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 2', named: true
@@ -16,7 +15,6 @@ stage 'AP Preparation and Support', flex_category: 'required'
 level 'Unit 2 Vocab and Concept Review Activity', named: true
 level 'AP Test Prep Guidance', named: true
 
-lesson_group 'content', display_name: 'Content'
 stage 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression', flex_category: 'content'
 level '2.1 and 2.2 Lesson Connections', named: true
 level 'Overview of File Sizes and Metrics', named: true
@@ -62,7 +60,6 @@ level 'Cleaning Data', named: true
 level 'Summary Tables 101', named: true
 level 'U2 L11 - 15: Teaching and Student Support Plan', named: true
 
-lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true

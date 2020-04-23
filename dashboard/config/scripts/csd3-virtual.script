@@ -6,7 +6,6 @@ project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
 project_sharing true
 
-lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
 stage 'Sample Programs', flex_category: 'csd3_1'
 level 'CSD U3 Entertainment Sample 4_virtual', progression: 'Sample Programs'
 level 'CSD U3 Entertainment Sample 3_virtual', progression: 'Sample Programs'

@@ -13,7 +13,6 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
-lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF_2018'
 
@@ -142,7 +141,6 @@ level 'MC_HOC_2017_10_RETRY'
 level 'MC_HOC_2017_Ali'
 level 'MC_HOC_2017_FP20x20'
 
-lesson_group 'csf_f_2', display_name: 'Course F Content'
 stage 'The Power of Words', flex_category: 'csf_f_2'
 level 'courseF_unplugged_powerOfWords_2018'
 
@@ -250,7 +248,6 @@ level 'Virtual Pet 5'
 level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
-lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 level 'courseF_video_csMatters_2018', named: true
 level 'InspirationalArtwork_2018', named: true

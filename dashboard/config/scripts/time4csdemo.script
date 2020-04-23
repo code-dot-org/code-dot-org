@@ -1,7 +1,6 @@
 stage_extras_available true
 has_lesson_plan true
 
-lesson_group 'ramp_up', display_name: 'Ramp-Up'
 stage 'Programming: My Robotic Friends', flex_category: 'ramp_up'
 level 'courseB_unplugged_MRF_2018'
 
@@ -97,7 +96,6 @@ level 'courseD_artist_project2a_2018'
 level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
-lesson_group 'csf_sprites', display_name: 'Sprites'
 stage 'Learning Sprites with Sprite Lab', flex_category: 'csf_sprites'
 level 'CourseEF_video_IntroSpriteLab'
 level 'Fish Tank 1-validated'
@@ -129,7 +127,6 @@ level 'Virtual Pet 5'
 level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
-lesson_group 'time4cs_c1', display_name: 'Collection 1: The Everglades & its Ecosystems'
 stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
 level 'timeforcs_demo_c1_1', named: true
 level 'timeforcs_demo_c1_2', named: true
@@ -156,7 +153,6 @@ level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_c2_1', progression: 'Rubric'
 
-lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
 stage 'Food Chains', flex_category: 'time4cs_c2'
 level 'timeforcs_demo_c2_1', named: true
 level 'timeforcs_demo_c2_2', named: true
@@ -185,7 +181,6 @@ level 'timeforcs_demo_sl_7', progression: 'Elaborate/Extend'
 level 'timeforcs_demo_sl_8', progression: 'Evaluate'
 level 'timeforcs_demo_sl_9', progression: 'Evaluate'
 
-lesson_group 'time4cs_c3', display_name: 'Collection 3: Native Species (in the Everglades)'
 stage 'Invasive Species', flex_category: 'time4cs_c3'
 level 'timeforcs_demo_c2_1', named: true
 level 'timeforcs_demo_c2_2', named: true
@@ -249,7 +244,6 @@ level 'timeforcs_demo_sl_7', progression: 'Elaborate/Extend'
 level 'timeforcs_demo_sl_8', progression: 'Evaluate'
 level 'timeforcs_demo_sl_9', progression: 'Evaluate'
 
-lesson_group 'time4cs_c4', display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
 stage 'Fishy Business', flex_category: 'time4cs_c4'
 level 'timeforcs_demo_c2_1', named: true
 level 'timeforcs_demo_c2_2', named: true
@@ -278,7 +272,6 @@ level 'timeforcs_demo_c2_3', named: true
 level 'timeforcs_demo_c2_4', named: true
 level 'timeforcs_demo_c2_5', named: true
 
-lesson_group 'time4cs_c5', display_name: 'Collection 5: Citizens Take Action'
 stage 'Current Solutions', flex_category: 'time4cs_c5'
 level 'timeforcs_demo_c2_1', named: true
 level 'timeforcs_demo_c2_2', named: true

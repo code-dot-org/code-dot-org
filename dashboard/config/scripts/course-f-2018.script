@@ -1,4 +1,3 @@
-lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
 stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
 level 'courseB_unplugged_MRF_2018'
 
@@ -86,7 +85,6 @@ level 'courseD_artist_project2a_2018'
 level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
-lesson_group 'csf_f_2', display_name: 'Course F Content'
 stage 'Algorithms: Tangrams', flex_category: 'csf_f_2'
 level 'TangramAlgorithms'
 
@@ -267,7 +265,6 @@ level 'courseF_bee_fwp9_predict1_2018', assessment: true
 bonus 'courseF_bee_fwp_challenge1_2018'
 bonus 'courseF_bee_fwp_challenge2_2018'
 
-lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 level 'courseF_video_csMatters_2018', named: true
 level 'InspirationalArtwork_2018', named: true

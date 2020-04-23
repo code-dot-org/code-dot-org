@@ -8,7 +8,6 @@ pilot_experiment 'csp-2020-access'
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_unit2_2020', display_name: 'Unit 2: The Internet'
 stage 'Welcome to the Internet', flex_category: 'csp_unit2_2020'
 level 'CSP U2L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U2L1 Internet Simulator: Sending Text', progression: 'Widget: Internet Simulator'

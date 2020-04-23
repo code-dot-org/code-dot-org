@@ -12,11 +12,9 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
 
-lesson_group 'csp1_1', display_name: 'Chapter 1: Representing and Transmitting Information'
 stage 'Personal Innovations', flex_category: 'csp1_1'
 level 'CSP U1L01 SFLP', named: true
 level 'Computer Science is Changing Everything_2018', progression: 'Computer Science is Changing Everything', named: true
@@ -70,7 +68,6 @@ level 'U1L11 Abstraction Reflection_2018', progression: 'Check Your Understandin
 stage 'Unit 1 Chapter 1 Assessment', lockable: true, flex_category: 'csp1_1'
 level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018', assessment: true
 
-lesson_group 'csp1_2', display_name: 'Chapter 2: Inventing the Internet'
 stage 'The Internet', flex_category: 'csp1_2'
 level 'CSP U1L08 SFLP', named: true
 level 'What is the Internet?_2018', progression: 'What is the Internet?', named: true
