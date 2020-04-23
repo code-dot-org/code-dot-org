@@ -279,6 +279,34 @@ export default class LibraryPublisher extends React.Component {
     );
   };
 
+  allFunctionsSelected = () => {
+    const {sourceFunctionList} = this.props.libraryDetails;
+    const {selectedFunctions} = this.state;
+
+    let allSelected = true;
+    sourceFunctionList.forEach(sourceFunction => {
+      if (!selectedFunctions[sourceFunction.functionName]) {
+        allSelected = false;
+      }
+    });
+
+    return allSelected;
+  };
+
+  toggleAllFunctionsSelected = () => {
+    if (this.allFunctionsSelected()) {
+      this.setState({selectedFunctions: {}});
+    } else {
+      const {sourceFunctionList} = this.props.libraryDetails;
+      let selectedFunctions = {};
+      sourceFunctionList.forEach(
+        sourceFunction =>
+          (selectedFunctions[sourceFunction.functionName] = true)
+      );
+      this.setState({selectedFunctions});
+    }
+  };
+
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
     const {onShareTeacherLibrary} = this.props;
@@ -290,6 +318,18 @@ export default class LibraryPublisher extends React.Component {
         <Heading2>{i18n.description()}</Heading2>
         {this.displayDescription()}
         <Heading2>{i18n.catProcedures()}</Heading2>
+        <div style={styles.functionSelector}>
+          <input
+            style={styles.largerCheckbox}
+            type="checkbox"
+            id="func-select-all"
+            checked={this.allFunctionsSelected()}
+            onChange={this.toggleAllFunctionsSelected}
+          />
+          <label htmlFor="func-select-all" style={styles.functionLabel}>
+            {i18n.selectAllFunctions()}
+          </label>
+        </div>
         {this.displayFunctions()}
         <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
