@@ -12,7 +12,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_ap_2', display_name: 'Chapter 2: AP Explore Performance Task'
 stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
 level 'CSP ExploreL01 SFLP', named: true
 level 'csp-pt-tech-setup-and-tools_2018', progression: 'Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos'
@@ -23,6 +22,5 @@ level 'CSP ExploreL02 SFLP_2018', named: true
 stage 'Explore PT - Complete the Task', flex_category: 'csp_ap_2'
 level 'CSP ExploreL03 SFLP', named: true
 
-lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true

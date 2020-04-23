@@ -13,7 +13,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
-lesson_group 'csd2_1', display_name: 'Chapter 1: Web Content and HTML'
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2 L1 Overview', named: true
 level 'CSD U2 Top Websites', named: true
@@ -93,7 +92,6 @@ level 'CSD U2 project review', progression: 'Website Project'
 level 'CSD U2 project share', progression: 'Website Project'
 level 'csd-pulse-check-survey-1-levelgroup U2Ch1', progression: 'Reflection', assessment: true
 
-lesson_group 'csd2_2', display_name: 'Chapter 2: Styling and CSS'
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
 level 'Unit 2 Lesson 7 Overview', named: true
 level 'CSD U2 CSS explore CSS', named: true
@@ -145,6 +143,5 @@ level 'Unit 2 Lesson 16 Overview', named: true
 level 'Final Personal Website', named: true
 level 'csd-pulse-check-survey-1-levelgroup U2Ch2', progression: 'Reflection', assessment: true
 
-lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true

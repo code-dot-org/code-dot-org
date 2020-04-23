@@ -10,7 +10,6 @@ version_year '2020'
 curriculum_umbrella 'CSF'
 tts true
 
-lesson_group 'ramp_up', display_name: 'Ramp-Up'
 stage 'Functions in Minecraft', flex_category: 'ramp_up'
 level 'MC_HOC_2017_01_RETRY_2020', progression: 'Practice'
 level 'MC_HOC_2017_02_Cole_2020', progression: 'Practice'
@@ -77,11 +76,9 @@ level 'courseD_bee_nestedLoops8_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_2020', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
 
-lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 stage 'The Power of Words', flex_category: 'csf_digcit'
 level 'PowerOfWords-Unplugged_2020'
 
-lesson_group 'csf_variables', display_name: 'Variables'
 stage 'Envelope Variables', flex_category: 'csf_variables'
 level 'EnvelopeVariables-Unplugged_2020'
 
@@ -114,7 +111,6 @@ level 'courseF_artist_variablesFP_2020', progression: 'Free Play'
 bonus 'courseF_artist_variables_challenge1_2020'
 bonus 'courseF_artist_variables_challenge2_2020'
 
-lesson_group 'csf_data', display_name: 'Data'
 stage 'Simulating Experiments', flex_category: 'csf_data'
 level 'simstarter_2020', progression: 'Run a simulation'
 level 'simconfig_2020', progression: 'Modify simulation variables'
@@ -132,7 +128,6 @@ level 'CourseF_Oceans_Long'
 stage 'Internet', flex_category: 'csf_data'
 level 'Internet-Unplugged_2020'
 
-lesson_group 'csf_for_loops', display_name: 'For Loops'
 stage 'For Loop Fun', flex_category: 'csf_for_loops'
 level 'ForLoopFun-Unplugged_2020'
 
@@ -168,7 +163,6 @@ level 'courseF_artist_for10_2020', progression: 'Free Play'
 bonus 'courseF_artist_for_challenge1_2020'
 bonus 'courseF_artist_for_challenge2_2020'
 
-lesson_group 'csf_sprites', display_name: 'Sprites'
 stage 'Editing Behaviors', flex_category: 'csf_sprites'
 level 'behaviors 1_2020', progression: 'Prediction'
 level 'behaviors 2_2020', progression: 'Practice'
@@ -190,7 +184,6 @@ level 'Virtual Pet 6_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 7_2020', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 8_2020', progression: 'Mini-Project: Virtual Pet'
 
-lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseF_project_exemplars_2019_2020', progression: 'Example projects'
 level 'courseF_EOC_2020', progression: 'Create your project'

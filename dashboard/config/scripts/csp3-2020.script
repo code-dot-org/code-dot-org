@@ -8,7 +8,6 @@ pilot_experiment 'csp-2020-access'
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_unit3_2020', display_name: 'Unit 3: Intro to App Design'
 stage 'Introduction to Apps', flex_category: 'csp_unit3_2020'
 level 'CSP U3L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 Water Conservation Sample App', progression: 'App Exploration'
