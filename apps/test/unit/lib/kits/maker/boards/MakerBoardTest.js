@@ -5,7 +5,7 @@ import {expect} from '../../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
+import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -319,6 +319,8 @@ export function itImplementsTheMakerBoardInterface(
 
               it('isPressed', () =>
                 expect(component.isPressed).to.be.a('boolean'));
+              it('holdtime', () =>
+                expect(component.holdtime).to.be.a('number'));
             });
           });
 
@@ -334,9 +336,9 @@ export function itImplementsTheMakerBoardInterface(
               'on',
               'off',
               'toggle',
-              'allOff',
+              'clear',
               'scrollString',
-              'scrollInteger'
+              'scrollNumber'
             ].forEach(fnName => {
               it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
             });
@@ -484,30 +486,31 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
-      /**
-       * @function
-       * @name MakerBoard#createLed
-       * @param {number} pin
-       * @return {Led} a newly constructed Led component
-       */
-      describe(`createLed(pin)`, () => {
-        beforeEach(() => {
-          return board.connect();
-        });
-
-        it(`returns an Led component`, () => {
-          const led = board.createLed(10);
-          // FakeBoard doesn't provide an LED component, so check the basic LED
-          // shape instead.
-          expect(led.on).to.be.a('function');
-          expect(led.off).to.be.a('function');
-          expect(led.blink).to.be.a('function');
-          expect(led.toggle).to.be.a('function');
-          expect(led.pulse).to.be.a('function');
-        });
+    /**
+     * @function
+     * @name MakerBoard#createLed
+     * @param {number} pin
+     * @return {Led} a newly constructed Led component
+     */
+    describe(`createLed(pin)`, () => {
+      beforeEach(() => {
+        return board.connect();
       });
-    }
+
+      it(`returns an Led component`, () => {
+        const led = board.createLed(10);
+        // FakeBoard doesn't provide an LED component, so check the basic LED
+        // shape instead.
+        expect(led.on).to.be.a('function');
+        expect(led.off).to.be.a('function');
+        expect(led.toggle).to.be.a('function');
+
+        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
+          expect(led.blink).to.be.a('function');
+          expect(led.pulse).to.be.a('function');
+        }
+      });
+    });
 
     /**
      * @function
@@ -531,11 +534,7 @@ export function itImplementsTheMakerBoardInterface(
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-
-        // TODO - not yet implemented for microbit
-        if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
-          expect(button).to.have.property('holdtime');
-        }
+        expect(button).to.have.property('holdtime');
       });
     });
   });

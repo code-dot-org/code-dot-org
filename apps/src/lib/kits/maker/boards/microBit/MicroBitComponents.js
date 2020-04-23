@@ -1,10 +1,10 @@
 /**
  * Utilities for initializing MicroBit board components
  */
-import {MicroBitButton} from '../../Button';
+import MicroBitButton from './MicroBitButton';
 import LedMatrix from './LedMatrix';
 import Accelerometer from './Accelerometer';
-import {MicroBitThermometer} from '../../Thermometer';
+import MicroBitThermometer from './MicroBitThermometer';
 
 /**
  * Initializes a set of components for the currently
@@ -35,7 +35,7 @@ export function createMicroBitComponents(board) {
  */
 export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
   if (components.ledMatrix) {
-    components.ledMatrix.allOff();
+    components.ledMatrix.clear();
   }
 
   if (components.tempSensor) {
