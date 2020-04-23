@@ -16355,7 +16355,7 @@ en:
           lesson_groups: {}
         csp5-virtual:
           title: Event-Driven Programming in App Lab
-          description: This self-paced unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          description: This self-paced module introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           description_audience: ''
           stages:
