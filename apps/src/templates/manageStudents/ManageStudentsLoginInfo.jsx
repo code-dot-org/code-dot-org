@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -14,6 +15,12 @@ const styles = {
   explanation: {
     clear: 'both',
     paddingTop: 20
+  },
+  heading: {
+    color: color.purple
+  },
+  listAlign: {
+    marginLeft: 10
   }
 };
 
@@ -32,34 +39,40 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div style={styles.explanation}>
-        <h2>{i18n.loginInformation()}</h2>
+        <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
         {(loginType === SectionLoginType.word ||
           loginType === SectionLoginType.picture) && (
           <div>
-            <p>{i18n.sectionCode() + ': ' + sectionCode}</p>
-            <p>
-              {i18n.joinSectionExplanation()}
-              <a target="_blank" href={`${studioUrlPrefix}/join`}>
-                {`${studioUrlPrefix}/join`}
-              </a>
-            </p>
-            <p>
-              {i18n.sectionSignInInfo()}
-              <a
-                target="_blank"
-                href={`${studioUrlPrefix}/sections/${sectionCode}`}
-              >
-                {`${studioUrlPrefix}/sections/${sectionCode}`}
-              </a>
-            </p>
-            <p>
-              <a
-                target="_blank"
-                href={teacherDashboardUrl(sectionId, '/login_info')}
-              >
-                {i18n.printLoginCardExplanation()}
-              </a>
-            </p>
+            <p style={styles.listAlign}>{i18n.setUpClassStep1WordPic()}</p>
+            {loginType === SectionLoginType.word && (
+              <SafeMarkdown
+                markdown={i18n.setUpClassStep2Word({
+                  printLoginCardLink: teacherDashboardUrl(
+                    sectionId,
+                    '/login_info'
+                  )
+                })}
+              />
+            )}
+            {loginType === SectionLoginType.picture && (
+              <SafeMarkdown
+                markdown={i18n.setUpClassStep2Pic({
+                  printLoginCardLink: teacherDashboardUrl(
+                    sectionId,
+                    '/login_info'
+                  )
+                })}
+              />
+            )}
+            <SafeMarkdown
+              markdown={i18n.setUpClassStep3({
+                parentLetterLink: teacherDashboardUrl(
+                  sectionId,
+                  '/parent_letter'
+                )
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClassStep4()}</p>
           </div>
         )}
         {loginType === SectionLoginType.email && (
@@ -94,12 +107,12 @@ class ManageStudentsLoginInfo extends Component {
             })}
           </p>
         )}
-        <h2>{i18n.loginType()}</h2>
+        <h2 style={styles.heading}>{i18n.loginType()}</h2>
         <LoginTypeParagraph
           sectionId={sectionId}
           onLoginTypeChanged={() => window.location.reload()}
         />
-        <h2>{i18n.privacyHeading()}</h2>
+        <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
         <DownloadParentLetter
           sectionId={this.props.sectionId}
