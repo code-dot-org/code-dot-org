@@ -13,7 +13,6 @@ is_stable true
 supported_locales ["it-IT", "sk-SK"]
 curriculum_umbrella 'CSF'
 
-lesson_group 'csf_e_1', display_name: 'Ramp Up to Course E (Optional)'
 stage 'Programming: My Robotic Friends', flex_category: 'csf_e_1'
 level 'courseB_unplugged_MRF_2018'
 
@@ -129,7 +128,6 @@ level 'courseE_farmer_ramp12f_2018', challenge: true
 level 'courseE_farmer_ramp12g_2018'
 level 'courseF_markdown_conditionals_end'
 
-lesson_group 'csf_e_2', display_name: 'Course E Content'
 stage 'Private and Personal Information', flex_category: 'csf_e_2'
 level 'courseE_unplugged_privateInformation_2018'
 
@@ -253,7 +251,6 @@ level 'Virtual Pet 5'
 level 'Virtual Pet 6'
 level 'Virtual Pet Freeplay'
 
-lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 level 'courseF_video_csMatters_2018', named: true
 level 'Geometric Sun_2018', named: true
@@ -271,7 +268,6 @@ level 'CourseE_Project_SpriteLab', named: true
 stage 'Present Your Project', flex_category: 'end_of_course_project'
 level 'Prepare for your presentation_2018', named: true
 
-lesson_group 'extra_course_content', display_name: 'Extra Course Content'
 stage 'Internet', flex_category: 'extra_course_content'
 level 'Internet_2018'
 

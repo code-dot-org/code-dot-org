@@ -5,7 +5,6 @@ stage_extras_available true
 project_widget_visible true
 project_widget_types ["applab", "gamelab", "weblab"]
 
-lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 stage 'Computing Innovations', flex_category: 'csd6_1'
 level 'CSD U6L01 TFMD', named: true
 level 'CSDU6 Innovation', named: true
@@ -128,7 +127,6 @@ level 'CSD U6 game project functions call', progression: 'Functions'
 level 'CSD U6 game project finish', progression: 'Finishing Touches'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection', assessment: true
 
-lesson_group 'csd6_2', display_name: 'Chapter 2: Building Physical Prototypes'
 stage 'Arrays', flex_category: 'csd6_2'
 level 'CSD U6L10 TFMD', named: true
 level 'CSD U6 arrays intro', named: true

@@ -12,7 +12,6 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
-lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
 stage 'Representation Matters', flex_category: 'csd5_1'
 level 'CSD-U5-SFLP Representation Matters', named: true
 
@@ -54,7 +53,6 @@ stage 'Project - Create a Representation', flex_category: 'csd5_1'
 level 'CSD-U5-SFLP Create a Representation', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch1', progression: 'Reflection', assessment: true
 
-lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 level 'CSD-U5-SFLP Problem Solving and Data', named: true
 
@@ -84,6 +82,5 @@ stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 level 'CSD-U5-SFLP Solve a Data Problem', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch2', progression: 'Reflection', assessment: true
 
-lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true

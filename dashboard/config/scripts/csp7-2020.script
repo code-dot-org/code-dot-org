@@ -8,7 +8,6 @@ pilot_experiment 'csp-2020-access'
 project_sharing true
 curriculum_umbrella 'CSP'
 
-lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
 stage 'Parameters and Return Explore', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7L1 CFU Return', progression: 'Check For Understanding', assessment: true
@@ -36,7 +35,6 @@ level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Param Return Make RPS App_2020', progression: 'Try the Rock Paper Scissors App'
 level 'U7 Param Return Make RPS App Project_2020', progression: 'Make the Rock Paper Scissors App', assessment: true
 
-lesson_group 'csp_libraries', display_name: 'Libraries'
 stage 'Libraries Explore', flex_category: 'csp_libraries'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: true
