@@ -195,7 +195,7 @@ export default class LibraryPublisher extends React.Component {
   };
 
   hasComment = sourceFunction => {
-    return sourceFunction.comment.length > 0;
+    return (sourceFunction.comment || '').length > 0;
   };
 
   duplicateFunction = sourceFunction => {
