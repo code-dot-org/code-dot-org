@@ -905,8 +905,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.process_location
     assert_nil @workshop.processed_location
 
-    # Don't bother looking up blank addresses or TBA/TBDs
-    ['', 'tba', 'TBA', 'tbd', 'N/A'].each do |address|
+    # Don't bother looking up blank addresses, TBA/TBDs, or virtual locations
+    ['', 'tba', 'TBA', 'tbd', 'N/A', 'virtual', 'Virtual workshop'].each do |address|
       Geocoder.expects(:search).never
       @workshop.location_address = address
       @workshop.process_location
@@ -1064,6 +1064,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
   end
 
+  test 'date_and_location_name with virtual location and sessions' do
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      location_address: 'virtual'
+    workshop.process_location
+
+    assert_equal 'March 30 - April 3, 2017, Virtual Workshop', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with virtual location but no sessions' do
+    workshop = build :workshop, num_sessions: 0, sessions_from: Date.new(2017, 3, 30),
+      location_address: 'virtual'
+    workshop.process_location
+
+    assert_equal 'Dates TBA, Virtual Workshop', workshop.date_and_location_name
+  end
+
   test 'friendly_location TBA' do
     workshop = build :workshop, location_address: 'tba'
     assert_equal 'Location TBA', workshop.friendly_location
@@ -1083,6 +1099,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
+  end
+
+  test 'friendly_location with virtual location' do
+    workshop = build :workshop, location_address: 'virtual', processed_location: nil
+    assert_equal 'Virtual Workshop', workshop.friendly_location
   end
 
   test 'workshops organized by a non program manager are not assigned regional partner' do
