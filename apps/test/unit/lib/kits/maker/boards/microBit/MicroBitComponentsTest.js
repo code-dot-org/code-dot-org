@@ -164,8 +164,8 @@ describe('MicroBit Components', () => {
       expect(components).to.haveOwnProperty('someOtherComponent');
     });
 
-    it('calls allOff for the ledMatrix', () => {
-      const stopSpy = sinon.spy(components.ledMatrix, 'allOff');
+    it('calls clear for the ledMatrix', () => {
+      const stopSpy = sinon.spy(components.ledMatrix, 'clear');
       cleanupMicroBitComponents(components, true /* shouldDestroyComponents */);
       expect(stopSpy).to.have.been.calledOnce;
     });
