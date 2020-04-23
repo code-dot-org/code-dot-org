@@ -5,6 +5,10 @@ module Pd::Foorm
     extend Helper
 
     # Calculates report for a given workshop id.
+    # @param [Integer] workshop_id
+    # @param [Integer] facilitator_filter. The user id
+    #   of the only facilitator we want to return data for.
+    #   If all facilitator data can be viewed, facilitator_filter is nil
     # @return workshop report in format specified in README
     def self.get_workshop_report(workshop_id, facilitator_filter)
       return unless workshop_id
