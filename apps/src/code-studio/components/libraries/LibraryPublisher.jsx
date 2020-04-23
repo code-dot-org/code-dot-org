@@ -214,13 +214,16 @@ export default class LibraryPublisher extends React.Component {
   };
 
   boxChecked = sourceFunction => {
-    if (this.isFunctionValid(sourceFunction)) {
-      const name = sourceFunction.functionName;
-      this.setState(state => {
-        state.selectedFunctions[name] = !state.selectedFunctions[name];
-        return state;
-      }, this.resetErrorMessage);
+    // No-op if function is invalid
+    if (!this.isFunctionValid(sourceFunction)) {
+      return;
     }
+
+    const name = sourceFunction.functionName;
+    this.setState(state => {
+      state.selectedFunctions[name] = !state.selectedFunctions[name];
+      return state;
+    }, this.resetErrorMessage);
   };
 
   displayFunctions = () => {
