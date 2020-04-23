@@ -309,8 +309,8 @@ export default class LibraryPublisher extends React.Component {
     let allSelected = true;
     sourceFunctionList.forEach(sourceFunction => {
       if (
-        this.isFunctionValid(sourceFunction) &&
-        !selectedFunctions[sourceFunction.functionName]
+        !selectedFunctions[sourceFunction.functionName] &&
+        this.isFunctionValid(sourceFunction)
       ) {
         allSelected = false;
       }
