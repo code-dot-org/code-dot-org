@@ -2327,23 +2327,33 @@ endvariants
   end
     
   test 'all_descendant_levels returns nested levels of all types' do
-    script = create :script
-    lesson = create :lesson, script: script
-    level1 = create :level
-
     # simple level
-    create :script_level, script: script, lesson: lesson, levels: [level1]
+    level1 = create :level, name: 'level1'
 
     # level swapping
-    swap1 = create :level
-    swap2 = create :level
-    create :script_level, script: script, lesson: lesson, levels: [swap1, swap2]
+    swap1 = create :level, name: 'swap1'
+    swap2 = create :level, name: 'swap2'
 
     # lesson extras
-    extra1 = create :level
-    extra2 = create :level
-    create :script_level, script: script, lesson: lesson, levels: [extra1], bonus: true
-    create :script_level, script: script, lesson: lesson, levels: [extra2], bonus: true
+    extra1 = create :level, name: 'extra1'
+    extra2 = create :level, name: 'extra2'
+
+    dsl = <<~SCRIPT
+      stage 'lesson1'
+      level '#{level1.name}'
+      variants
+        level '#{swap1.name}', active: false
+        level '#{swap2.name}'
+      endvariants
+      bonus '#{extra1.name}'
+      bonus '#{extra2.name}'
+    SCRIPT
+    script_data = ScriptDSL.parse(dsl, 'a filename')[0]
+    script = Script.add_script(
+      {name: 'all-levels-script'},
+      script_data[:lesson_groups],
+      script_data[:stages]
+    )
 
     levels = [level1, swap1, swap2, extra1, extra2]
 
