@@ -14,6 +14,7 @@ import LibraryPublisher from './LibraryPublisher';
 import loadLibrary from './libraryLoader';
 import LibraryClientApi from './LibraryClientApi';
 import {getStore} from '@cdo/apps/redux';
+import {findProfanity} from './util';
 import Button from '@cdo/apps/templates/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
@@ -55,6 +56,7 @@ export const DialogState = {
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
   SHARE_TEACHER_LIBRARIES: 'share_teacher_libraries',
+  CODE_PROFANITY: 'code_profanity',
   ERROR: 'error'
 };
 
@@ -67,6 +69,7 @@ export const DialogState = {
  * PUBLISHED: The user has successfully published the library
  * UNPUBLISHED: The user has successfully unpublished the library
  * ERROR: There was an error loading the library
+ * CODE_PROFANITY: There is profanity in the library code
  */
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -97,12 +100,33 @@ class LibraryCreationDialog extends React.Component {
       this.state.libraryClientApi,
       error =>
         this.setState({dialogState: DialogState.ERROR, errorMessage: error}),
-      libraryDetails =>
-        this.setState({
-          dialogState: DialogState.DONE_LOADING,
-          libraryDetails: libraryDetails
-        })
+      this.onLibraryLoaded
     );
+  };
+
+  onLibraryLoaded = async libraryDetails => {
+    const defaultNewState = {
+      dialogState: DialogState.DONE_LOADING,
+      libraryDetails
+    };
+
+    try {
+      const profaneWords = await findProfanity(libraryDetails.librarySource);
+      if (profaneWords && profaneWords.length > 0) {
+        this.setState({
+          dialogState: DialogState.CODE_PROFANITY,
+          errorMessage: i18n.libraryCodeProfanity({
+            profanityCount: profaneWords.length,
+            profaneWords: profaneWords.join(', ')
+          })
+        });
+      } else {
+        this.setState(defaultNewState);
+      }
+    } catch {
+      // Still show dialog content if request errors
+      this.setState(defaultNewState);
+    }
   };
 
   handleClose = () => {
@@ -205,6 +229,9 @@ class LibraryCreationDialog extends React.Component {
         break;
       case DialogState.SHARE_TEACHER_LIBRARIES:
         bodyContent = <ShareTeacherLibraries onCancel={onClose} />;
+        break;
+      case DialogState.CODE_PROFANITY:
+        bodyContent = <ErrorDisplay message={errorMessage} />;
         break;
       default:
         // If we get to this state, we've shipped a bug.
