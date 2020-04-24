@@ -58,7 +58,6 @@ export default class Results extends React.Component {
           >
             <SurveyRollupTableFoorm
               workshopRollups={this.props.workshopRollups[GENERAL]}
-              questions={this.props.questions}
               courseName={this.props.courseName}
               isPerFacilitator={false}
               facilitators={this.props.facilitators}
@@ -74,7 +73,6 @@ export default class Results extends React.Component {
           >
             <SurveyRollupTableFoorm
               workshopRollups={this.props.workshopRollups[FACILITATOR]}
-              questions={this.props.questions}
               courseName={this.props.courseName}
               isPerFacilitator={true}
               facilitators={this.props.facilitators}
