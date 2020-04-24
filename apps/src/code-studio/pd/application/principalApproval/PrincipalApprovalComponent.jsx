@@ -314,7 +314,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           to the number of units they intend to teach, which include:
         </p>
         <ul>
-          <li>One five-day, in-person summer workshop in 2020</li>
+          <li>One summer workshop in 2020</li>
           <li>
             Up to four one-day, in-person local workshops during the {YEAR}{' '}
             school year (typically held on Saturdays)
