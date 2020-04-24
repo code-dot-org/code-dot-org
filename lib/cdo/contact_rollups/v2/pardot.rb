@@ -177,7 +177,7 @@ class PardotV2
 
   # Converts contact keys and values to Pardot prospect keys and values.
   # @example
-  #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: true}
+  #   input contact = {email: 'test@domain.com', pardot_id: 10, opt_in: 1}
   #   output prospect = {email: 'test@domain.com', id: 10, db_Opt_In: 'Yes'}
   # @param [Hash] contact
   # @return [Hash]
@@ -201,7 +201,7 @@ class PardotV2
     # Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
     # @see https://pi.pardot.com/prospectFieldCustom/read/id/9514
     if contact.key?(:opt_in)
-      prospect[:db_Opt_In] = contact[:opt_in] == true ? 'Yes' : 'No'
+      prospect[:db_Opt_In] = contact[:opt_in] == 1 ? 'Yes' : 'No'
     end
 
     prospect

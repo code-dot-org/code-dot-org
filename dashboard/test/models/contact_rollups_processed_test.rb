@@ -54,24 +54,27 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     create :contact_rollups_raw
 
     # Each extraction function will be called once per unique email address
-    ContactRollupsProcessed.expects(:extract_opt_in).once
+    ContactRollupsProcessed.expects(:extract_field).once
     ContactRollupsProcessed.expects(:extract_updated_at).once
 
     ContactRollupsProcessed.import_from_raw_table
   end
 
-  test 'extract_opt_in' do
+  test 'extract_field' do
+    table = 'dashboard.email_preferences'
+    field = 'opt_in'
+
     test_cases = [
-      {input: {}, expected_output: nil},
-      {input: {'dashboard.email_preferences' => {}}, expected_output: nil},
-      {input: {'dashboard.another_table' => {opt_in: 1}}, expected_output: nil},
-      {input: {'dashboard.email_preferences' => {'opt_in' => 0}}, expected_output: {opt_in: 0}},
-      {input: {'dashboard.email_preferences' => {'opt_in' => 1}}, expected_output: {opt_in: 1}},
-      {input: {'dashboard.email_preferences' => {'opt_in' => nil}}, expected_output: {opt_in: nil}}
+      {input: [{}, nil, nil], expected_output: nil},
+      {input: [{table => {}}, table, field], expected_output: nil},
+      {input: [{'dashboard.another_table' => {opt_in: 1}}, table, field], expected_output: nil},
+      {input: [{table => {'opt_in' => 0}}, table, field], expected_output: {opt_in: 0}},
+      {input: [{table => {'opt_in' => 1}}, table, field], expected_output: {opt_in: 1}},
+      {input: [{table => {'opt_in' => nil}}, table, field], expected_output: {opt_in: nil}}
     ]
 
     test_cases.each_with_index do |test, index|
-      output = ContactRollupsProcessed.extract_opt_in test[:input]
+      output = ContactRollupsProcessed.extract_field(*test[:input])
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
   end

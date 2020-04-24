@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressGroup from './ProgressGroup';
+import LessonGroup from './LessonGroup';
 import {
   fakeLesson,
   fakeLevels,
@@ -40,12 +40,12 @@ const levelsByLesson = [
 ];
 
 export default storybook => {
-  storybook.storiesOf('Progress/ProgressGroup', module).addStoryTable([
+  storybook.storiesOf('Progress/LessonGroup', module).addStoryTable([
     {
-      name: 'ProgressGroup with detail view',
+      name: 'LessonGroup with detail view',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-          <ProgressGroup
+          <LessonGroup
             groupName="My Group"
             isPlc={false}
             isSummaryView={false}
@@ -57,10 +57,10 @@ export default storybook => {
     },
 
     {
-      name: 'ProgressGroup with summary view',
+      name: 'LessonGroup with summary view',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-          <ProgressGroup
+          <LessonGroup
             groupName="My Group"
             isPlc={false}
             isSummaryView={true}
@@ -72,10 +72,10 @@ export default storybook => {
     },
 
     {
-      name: 'ProgressGroup in PLC',
+      name: 'LessonGroup in PLC',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-          <ProgressGroup
+          <LessonGroup
             groupName="My Group"
             isPlc={true}
             isSummaryView={false}
