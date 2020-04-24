@@ -270,7 +270,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
             , including:
           </p>
           <ul>
-            <li>One five-day, in-person summer workshop in 2020</li>
+            <li>One summer workshop in 2020</li>
             <li>
               Up to four one-day, in-person local workshops during the 2020-21
               school year (typically held on Saturdays)
