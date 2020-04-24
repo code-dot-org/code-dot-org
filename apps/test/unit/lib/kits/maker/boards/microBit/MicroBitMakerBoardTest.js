@@ -1,7 +1,10 @@
 import sinon from 'sinon';
 import {expect} from '../../../../../../util/deprecatedChai';
 
-export function testComponentsMicroBit(board) {
+export function itMakesMBComponentsAvailableFromInterpreter(
+  BoardClient,
+  boardSpecificSetup
+) {
   const MB_CONSTRUCTOR_COUNT = 4;
   const MB_COMPONENT_COUNT = 6;
   const MB_COMPONENTS = [
@@ -17,8 +20,14 @@ export function testComponentsMicroBit(board) {
    */
   describe('Micro Bit components accessible from interpreter', () => {
     let jsInterpreter;
+    let board;
 
     beforeEach(() => {
+      board = new BoardClient();
+      if (boardSpecificSetup) {
+        boardSpecificSetup(board);
+      }
+
       jsInterpreter = {
         globalProperties: {},
         createGlobalProperty: function(key, value) {
@@ -96,33 +105,11 @@ export function testComponentsMicroBit(board) {
           'on',
           'off',
           'toggle',
-          'allOff',
+          'clear',
           'scrollString',
-          'scrollInteger'
+          'scrollNumber'
         ].forEach(fnName => {
           it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-        });
-      });
-
-      describe('Constants', () => {
-        it('INPUT', () => {
-          expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
-        });
-
-        it('OUTPUT', () => {
-          expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
-        });
-
-        it('ANALOG', () => {
-          expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
-        });
-
-        it('PWM', () => {
-          expect(jsInterpreter.globalProperties.PWM).to.equal(3);
-        });
-
-        it('SERVO', () => {
-          expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
         });
       });
 
