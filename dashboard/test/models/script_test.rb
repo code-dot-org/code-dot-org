@@ -2334,18 +2334,25 @@ endvariants
     # simple level
     create :script_level, script: script, lesson: lesson, levels: [level1]
 
-    # level-swapping
-    level2 = create :level
-    level3 = create :level
-    create :script_level, script: script, lesson: lesson, levels: [level2, level3]
+    # level swapping
+    swap1 = create :level
+    swap2 = create :level
+    create :script_level, script: script, lesson: lesson, levels: [swap1, swap2]
 
-    assert_equal [level1, level2, level3], script.levels
-    assert_equal [level1, level2, level3], script.all_descendant_levels
+    # lesson extras
+    extra1 = create :level
+    extra2 = create :level
+    create :script_level, script: script, lesson: lesson, levels: [extra1], bonus: true
+    create :script_level, script: script, lesson: lesson, levels: [extra2], bonus: true
+
+    levels = [level1, swap1, swap2, extra1, extra2]
+
+    assert_equal levels, script.levels
+    assert_equal levels, script.all_descendant_levels
 
     # TODO: make sure recognize the following nested level types
     # levels within level groups
     # levels within bubble choice levels
-    # lesson extras
     # contained levels
     # project template levels
   end
