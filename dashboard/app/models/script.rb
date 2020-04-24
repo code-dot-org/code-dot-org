@@ -115,7 +115,7 @@ class Script < ActiveRecord::Base
         lm.update!(
           plc_course_unit_id: unit.id,
           name: lesson.name,
-          module_type: lesson.lesson_group&.key || lesson.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
+          module_type: lesson.lesson_group&.key || Plc::LearningModule::REQUIRED_MODULE,
         )
       end
     end
