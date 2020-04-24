@@ -6,7 +6,7 @@ style_min: true
 
 <!--- If you update the resources here, don't forget to also update /educate/curriculum/elementary-school, /educate/curriculum/middle-school, and /educate/curriculum/high-school -->
 
-<img src="/images/avatars/csta.png" style="float:right; width:20%; margin-left:25px">
+<img src="/images/avatars/computer_science_teachers_association.png" style="float:right; width:20%; margin-left:25px">
 <h1 style="margin-top:25px">3rd Party Educator Resources</h1>
 <div>
 <p><strong>As of April 2020, Code.org has transitioned to displaying 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA).</strong></p> 
@@ -15,14 +15,6 @@ style_min: true
 &nbsp;</p>
 </div>
 <div style="padding:20px;background:#d3d3d3"><iframe allowtransparency="true" height="1350px" src="https://view-awesome-table.com/-M54VxHPb9772DWSoQj3/view" style="border:none;" width="100%"></iframe></div>
-
-## Funding for computer science programs
-
-U.S. Federal law recently recognized [computer science as part of the "well rounded education subjects"](http://blog.code.org/post/134932134563/sweeping-us-education-law-adds-computer-science), and explicitly [names computer science as an important STEM field](http://blog.code.org/post/130358071518/computer-science-is-finally-included-in-stem).
-
-Your school or district may be able to use Title I or Title II funds, and other department grant programs to apply towards offering CS courses. [More info](http://innovation.ed.gov/2015/12/07/a-new-chapter-for-computer-science-education/).
-
-The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
 <a id="more"></a>
 ## More resources &mdash; for classrooms, afterschool clubs or learning online
