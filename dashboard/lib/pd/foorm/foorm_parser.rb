@@ -143,7 +143,7 @@ module Pd::Foorm
     end
 
     def self.fill_question_placeholders(question)
-      question.sub!("{panel.facilitatorName}", "my facilitator")
+      question && question.sub!("{panel.facilitatorName}", "my facilitator")
       question
     end
   end
