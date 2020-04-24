@@ -34,7 +34,7 @@ export default class HideToolbarHelper extends React.Component {
     this.wasToolbarShowing = false;
 
     // ...but only track it once.
-    this.trackedToolbarHide = false;
+    this.didTrackToolbarHide = false;
   }
 
   updateLayout = () => {
@@ -52,11 +52,11 @@ export default class HideToolbarHelper extends React.Component {
     if (
       this.wasToolbarShowing &&
       !isToolbarShowing &&
-      !this.trackedToolbarHide
+      !this.didTrackToolbarHide
     ) {
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
 
-      this.trackedToolbarHide = true;
+      this.didTrackToolbarHide = true;
     }
     this.wasToolbarShowing = isToolbarShowing;
 
