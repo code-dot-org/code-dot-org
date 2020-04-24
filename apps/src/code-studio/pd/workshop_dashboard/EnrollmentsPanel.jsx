@@ -179,6 +179,18 @@ export default class EnrollmentsPanel extends React.Component {
     });
   };
 
+  getViewSurveyUrl = (workshopId, course, subject) => {
+    if (
+      !['CS Discoveries', 'CS Principles', 'CS Fundamentals'].includes(course)
+    ) {
+      return null;
+    }
+
+    return course === 'CS Fundamentals' && subject === 'Intro'
+      ? `/pd/workshop_dashboard/survey_results/${workshopId}`
+      : `/pd/workshop_dashboard/daily_survey_results/${workshopId}`;
+  };
+
   render() {
     const {
       workshopId,
@@ -254,24 +266,39 @@ export default class EnrollmentsPanel extends React.Component {
       const firstSessionDate = moment
         .utc(workshop.sessions[0].start)
         .format('MMMM Do');
+
+      let viewSurveyUrl = this.getViewSurveyUrl(
+        workshopId,
+        workshop.course,
+        workshop.subject
+      );
+
       contents = (
-        <WorkshopEnrollment
-          workshopId={workshopId}
-          workshopCourse={workshop.course}
-          workshopSubject={workshop.subject}
-          workshopDate={firstSessionDate}
-          numSessions={workshop.sessions.length}
-          enrollments={enrollments}
-          onDelete={this.handleDeleteEnrollment}
-          onClickSelect={this.handleClickSelect}
-          accountRequiredForAttendance={
-            workshop['account_required_for_attendance?']
-          }
-          scholarshipWorkshop={workshop['scholarship_workshop?']}
-          activeTab={this.state.enrollmentActiveTab}
-          onTabSelect={this.handleEnrollmentActiveTabSelect}
-          selectedEnrollments={this.state.selectedEnrollments}
-        />
+        <div>
+          <WorkshopEnrollment
+            workshopId={workshopId}
+            workshopCourse={workshop.course}
+            workshopSubject={workshop.subject}
+            workshopDate={firstSessionDate}
+            numSessions={workshop.sessions.length}
+            enrollments={enrollments}
+            onDelete={this.handleDeleteEnrollment}
+            onClickSelect={this.handleClickSelect}
+            accountRequiredForAttendance={
+              workshop['account_required_for_attendance?']
+            }
+            scholarshipWorkshop={workshop['scholarship_workshop?']}
+            activeTab={this.state.enrollmentActiveTab}
+            onTabSelect={this.handleEnrollmentActiveTabSelect}
+            selectedEnrollments={this.state.selectedEnrollments}
+          />
+
+          {['In Progress', 'Ended'].includes(workshop.state) && viewSurveyUrl && (
+            <Button bsSize="xsmall" href={viewSurveyUrl} target="_blank">
+              View Survey Results
+            </Button>
+          )}
+        </div>
       );
     }
 
