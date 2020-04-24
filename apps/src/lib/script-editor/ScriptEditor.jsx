@@ -45,6 +45,7 @@ export default class ScriptEditor extends React.Component {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
+    isStable: PropTypes.bool,
     loginRequired: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
@@ -239,6 +240,20 @@ export default class ScriptEditor extends React.Component {
               disabled={!!this.state.pilotExperiment}
               onChange={e => this.setState({hidden: !e.target.checked})}
             />
+            <label>
+              Can be recommended (aka stable)
+              <input
+                name="is_stable"
+                type="checkbox"
+                defaultChecked={this.props.isStable}
+                style={styles.checkbox}
+              />
+              <p>
+                If checked, this unit will be eligible to be the recommended
+                version of the unit. The most recent eligible version will be
+                the recommended version.
+              </p>
+            </label>
             <PilotExperiment
               value={this.state.pilotExperiment}
               onChange={e => this.setState({pilotExperiment: e.target.value})}
