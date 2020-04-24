@@ -7,6 +7,7 @@ import _ from 'lodash';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
+import {itMakesMBComponentsAvailableFromInterpreter} from './MicroBitMakerBoardTest';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -31,6 +32,15 @@ describe('MicroBitBoard', () => {
 
       sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
       sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
+    });
+
+    // Board-specific tests
+    // Test that the appropriate components are available on each board
+    itMakesMBComponentsAvailableFromInterpreter(MicroBitBoard, board => {
+      sinon.stub(board.boardClient_, 'connect').callsFake(() => {
+        board.boardClient_.myPort = {write: () => {}};
+        sinon.stub(board.boardClient_.myPort, 'write');
+      });
     });
   });
 
