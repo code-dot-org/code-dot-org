@@ -141,7 +141,7 @@ class ScriptsController < ApplicationController
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_stages(@script)
+    @script_file = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
@@ -190,6 +190,7 @@ class ScriptsController < ApplicationController
       :has_verified_resources,
       :has_lesson_plan,
       :tts,
+      :is_stable,
       :script_announcements,
       :pilot_experiment,
       :editor_experiment,

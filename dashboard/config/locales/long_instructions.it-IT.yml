@@ -908,6 +908,47 @@ it-IT:
         le intestazioni siano in ordine dal più grande al più piccolo, ed il testo
         dica la dimensione corretta come nell'immagine sotto.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Test_2019: "# Intestazioni e Paragrafi\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Cos'è un elemento Paragrafo?**]\n\nI
+        paragrafi sono racchiusi tra l'etichetta di inizio (opening tag) '<p>' e l'etichetta
+        di fine (closing tag) '</p>'. I paragrafi HTML possono avere una lunghezza
+        qualsiasi: da una sola parola fino a più frasi. Tutto il testo che compare
+        in una pagina Web deve essere contenuto in un elemento HTML (paragrafo o intestazione).
+        I paragrafi permettono di raggruppare le frasi contenute e inserire uno spazio
+        tra un gruppo e il successivo.\n\n:::\n\n::: details [**Come creare più paragrafi?**]\n\nI
+        singoli paragrafi sono sempre racchiusi tra l'etichetta di inizio (opening
+        tag) '<p>' e l'etichetta di fine (closing tag) '</p>'. Per creare più paragrafi
+        è sufficiente usare più volte le etichette di inizio e fine. Ad esempio:\n\n
+        \       <p>\n            Questo è un paragrafo.\n        </p>\n        <p>\n
+        \           Questo è un'altro paragrafo.\n        </p>\n\n:::\n\n::: details
+        [**Cosa sono le Intestazioni?**]\nLe intestazioni sono titoli di diversa dimensioni
+        all'interno della pagina Web. Le intestazioni creano una struttura nella pagina
+        Web e la suddividono in parti facilitandone la lettura.\n:::\n\n::: details
+        [**Come fare intestazioni di diversa dimensione?**]\nLe intestazioni hanno
+        6 possibili dimensioni. Finora avete usato la dimensione maggiore \\<h1>.
+        Il numero '1' nell'etichetta HTML indica l'intestazione più grande. L'intestazione
+        più piccola ha l'etichetta \\<h6>. Provate anche le dimensioni \\<h2>, \\<h3>,
+        \\<h4> e \\<h5> con dimensione via via decrescente. \n:::\n\n::: details [**Cos'è
+        HTML?**]\nHTML è la contrazione di Hypertext Markup Language (linguaggio a
+        marcatori per ipertesti). HTML è usato per dare una struttura al contenuto
+        delle pagine Web. HTML utilizza 'etichette' (tag) per definire dove iniziano
+        e finiscono le diverse strutture della pagina. Le etichette sono gruppi di
+        simboli e lettere che non costituiscono parole di senso compiuto nel normale
+        linguaggio così che si possono distinguere dal testo della pagina.\n:::\n\n:::
+        details [**Cos'è un elemento HTML?**]\nUn 'elemento' HTML è una porzione della
+        pagina Web che è contrassegnato da un'etichetta di inizio (opening tag) e
+        solitamente da un'etichetta di fine (closing tag). L'elemento HTML comprende,
+        oltre alle etichette, il testo racchiuso tra esse. Ad esempio: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n::: details [**Cos'è un'etichetta (tag) HTML?**]\n\nUn'etichetta
+        (tag) HTML è una speciale sequenza di caratteri (lettere, numeri, simboli)
+        che permette al computer di capire dove inizia e dove finisce un elemento
+        HTML e di che tipo di elemento si tratta.\n\n:::\n\n</div>\n\nL'autore di
+        questa pagina ha inserito molte frasi ma senza dare una struttura al testo.
+        Infatti, il testo viene rappresentato tutto unito. \n\nProcedi come segue:\n\n-
+        \  Osserva il testo con il tuo compagno/a e decidete quale dovrebbe essere
+        la migliore struttura della pagina.\n-   Usate le etichette di intestazione
+        e paragrafo per dire al computer come suddividere il testo nella pagina."
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -2265,45 +2306,9 @@ it-IT:
 
         Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Le strategie di "problem solving metacognitivo" portano a pensare al processo di ragionamento in quanto tale e a riflettere su "come" risolveresti il problema. Guarda il video a fondo pagina per scoprire come la "Ricetta di Code.org per risolvere gli esercizi" può aiutare gli alunni ad affrontare con successo problemi difficili:
 
-        [Questa scheda (in inglese)][0] illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi" (sotto all'immagine trovi la traduzione in italiano).
+        [Questa scheda](https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.pdf) illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi".
 
-        <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
-
-        **La ricetta di Code.org per risolvere gli esercizi**<br>
-        Metodologia a 4 passaggi basata sul Polya's Four Step Problem Solving Process.<br>
-        Questi suggerimenti posso aiutare a sbloccarsi nella risoluzione degli esercizi di Code.org.<br>
-        <br>
-        **PASSO 1 - Capisci l'esercizio**<br>
-        – Cosa ti chiede di fare l'esercizio?<br>
-        – Riesci ad esprimere il problema con parole tue?<br>
-        – Ti viene dato del codice già pronto?<br>
-           – Cosa fa?<br>
-           – Perché pensi che sia lì?<br>
-        – Qual è l'obiettivo dell'esercizio?<br>
-        – Hai già risolto altri esercizi simili a questo?<br>
-        <br>
-        **PASSO 2 - Fai un piano** (scegli una o più di queste tecniche)<br>
-        – Scrivi un algoritmo.<br>
-        – Fai delle prove e controlla man mano se vai nella direzione corretta.<br>
-        – Fai un disegno di cosa vuoi fare.<br>
-        – Prova a lavorare all'indietro.<br>
-        – Risolvi il problema un pezzettino alla volta.<br>
-        – Confrontalo con un esercizio che hai già risolto.<br>
-        <br>
-        **PASSO 3 - Esegui e perfeziona il piano**<br>
-        – Hai risolto l'esercizio?<br>
-        – In caso negativo, cerca e correggi un errore alla volta.<br>
-        – Azzera il tuo piano dopo ogni cambiamento.<br>
-        – Se cominci a sentirti perso, fai un respiro profondo o allontanati dal PC per un minuto. Quando tornerai, potresti capire la causa dei tuoi problemi!<br>
-        – Fai domande. Magari uno dei tuoi compagni può aiutarti a capire dove il tuo piano va storto.<br>
-        <br>
-        \*\*PASSO 4 - Controlla il risultato del tuo lavoro<br>
-        – La tua risposta risolve l'esercizio?<br>
-        – Hai raggiunto tutti gli obiettivi dell'esercizio?<br>
-        – Ora che hai trovato una soluzione, pensi ce ne possa essere una migliore?<br>
-        – Se cambi un po' questa soluzione, potrebbe funzionare per altri esercizi?<br>
-        – Potresti spiegare la soluzione per aiutare qualcun altro a risolvere questo esercizio?<br>
-        <br>
+        <img src="https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.png" width="650px" style="margin-right:45px; border-radius:10px;">
 
         > ## Riflettiamo:
         >

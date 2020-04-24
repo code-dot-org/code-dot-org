@@ -1,3 +1,4 @@
+lesson_group 'required', display_name: 'Overview'
 stage 'Unit 5 Overview', flex_category: 'required'
 level 'What\'s inside and how is it organized?', named: true
 level 'Introduction to Unit 5', named: true
@@ -5,6 +6,7 @@ level 'Unit 5 Teaching Philosophy and Commentary', named: true
 level 'Unit 5 Concepts and AP Assessments', named: true
 level 'Practice Performance Task in Unit 5', named: true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Event Driven Programming', flex_category: 'content'
 level '5.1 - 5.3 Lesson Connections', named: true
 level 'Design Mode Overview', named: true
@@ -40,6 +42,7 @@ level 'Functions that Return Values', named: true
 level 'Project Breakdown: Building a Canvas Painter', named: true
 level 'U5 L15 - 17: Teaching and Student Support Plan', named: true
 
+lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'Group Work and Peer Learning', flex_category: 'practice'
 level 'Overview: Group Work and Peer Learning', named: true
 level 'Collaborative Learning and Group Work: Description and Strategies', named: true

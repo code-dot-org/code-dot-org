@@ -4110,7 +4110,9 @@ zh-TW:
                     </block></xml>
         courseB_collector_loops_challenge2_c: 嘗試使用「repeat」模塊來收集最後一堆寶藏！
         courseB_collector_loops_challenge2_d: |-
-          試試這個方法：<xml>
+          試試這個方法：
+
+          <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
                 <block type="controls_repeat_simplified_dropdown">
@@ -4157,68 +4159,58 @@ zh-TW:
         courseB_maze_seq_challenge1_a: 這次最短的路徑不管用囉！
         courseB_maze_seq_challenge1_b: 試試先向西邊移動。
       course1_playlab_events_challenge1:
-        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
           \ </block></xml>"
       course1_playlab_events_challenge2:
-        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
-          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: |-
-          你可以讓機器人發出嗶嗶聲.
-          <xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">得分</title>
-                    </block>
-                  </next>
-
-            </block></xml>
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">咆哮!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: 首先創建一個嵌套循環來創建四個八邊形。轉動45度生成八邊形。跳起來，然後每一個都轉90度。
         courseD_artist_nestedLoops_challenge1_b: 添加代碼，在嵌套循環中繪製一個三角形。用120度的角度來改變你的三角形。
@@ -4253,10 +4245,14 @@ zh-TW:
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: 解決此關的一種方法看起來像鋸齒形。另一種方式看起來像螺旋形！對於這樣的關卡，有很多不同的解決方案。繼續思考！
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
-        courseC_harvester_loops_challenge2_c: 這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52
-          PM copy.png>)
-        courseC_harvester_loops_challenge2_d: 只需 18 個積木就可以編出這個螺旋圖案！![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52
-          PM.png>)
+        courseC_harvester_loops_challenge2_c: |-
+          這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          只需 18 個積木就可以編出這個螺旋圖案！
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _如果你把我倒過來，要格外小心我的方向是否是正確的！_
         courseC_maze_programming_challenge2_b: 最短的解決方案只使用5個程式積木，但它使用的是“重複”程式積木！
@@ -4267,7 +4263,11 @@ zh-TW:
               <title name="XPOS">350</title>
               <title name="YPOS">200</title>
             </block>
-            </xml>這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+            </xml>
+
+          這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！
+
+          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_a: 為什麼前半部分程式能運行？想一想為什麼蜜蜂需要向後移動。蜜蜂每次移動到一朵花時收集了多少花蜜？
         courseD_bee_debugging_challenge1_b: 在回來的路上，讓蜜蜂遵循同樣的模式。蜜蜂每次移動至蜂巢時需要製作多少蜂蜜？
@@ -4471,8 +4471,23 @@ zh-TW:
         courseC_maze_debugging_challenge2_a: 有個解法，就是在每次轉向時添加更多的移動積木。
         courseC_maze_debugging_challenge2_b: 如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！
       course3_playLab_challenge1:
-        courseE_playLab_challenge1_a: 當玩家贏得遊戲時，你可以執行以下操作：-   使恐龍消失。-   讓松鼠停下來。-   讓松鼠和騎士高興。-   設定新的背景。-   讓騎士感謝玩家的幫助。-   讓所有角色都消失，並顯示「你贏了！」消息。
-        courseE_playLab_challenge1_b: 當玩家輸掉遊戲時，你可以採取以下操作：-   使騎士消失。-   使松鼠感到難過。-   讓恐龍說些什麼。-   設定新的背景。-   使所有角色消失，並顯示「遊戲結束」消息。
+        courseE_playLab_challenge1_a: |-
+          當玩家贏得遊戲時，你可以執行以下操作：
+
+          -   使恐龍消失。
+          -   讓松鼠停下來。
+          -   讓松鼠和騎士高興。
+          -   設定新的背景。
+          -   讓騎士感謝玩家的幫助。
+          -   讓所有角色都消失，並顯示「你贏了！」消息。
+        courseE_playLab_challenge1_b: |-
+          當玩家輸掉遊戲時，你可以採取以下操作：
+
+          -   使騎士消失。
+          -   使松鼠感到難過。
+          -   讓恐龍說些什麼。
+          -   設定新的背景。
+          -   使所有角色消失，並顯示「遊戲結束」消息。
       course4_artist_concept_challenge2:
         courseE_artist_concept_challenge2_a: 定義了一個函式之後，就可以一次又一次地呼叫它 - 隨時隨地！
         courseE_artist_concept_challenge2_b: |-
@@ -4486,7 +4501,11 @@ zh-TW:
               <title name="XPOS">350</title>
               <title name="YPOS">200</title>
             </block>
-            </xml>這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+            </xml>
+
+          這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！
+
+          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       course4_artist_variables_challenge1:
         courseF_artist_variables_challenge1_a: 每條垂線條的長度均為「10」。每條水平線的長度應為「length」。
         courseF_artist_variables_challenge1_b: 您將希望在迴圈內將「length」的值增加10 **兩次**。
@@ -4896,34 +4915,43 @@ zh-TW:
           ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
       courseA_artist_loops4:
         courseA_artist_loops4_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
-        courseA_artist_loops4_b: 因為你只能用一個 <xml><block type="simple_move_right"/></xml>程式積木，所以試試將它放在
-          <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>迴圈裡。
+        courseA_artist_loops4_b: |-
+          因為你只能用一個 <xml><block type="simple_move_right"/></xml>
+
+          程式積木，所以試試將它放在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> 迴圈裡。
       courseA_artist_loops4_2018:
         courseA_artist_loops4_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
-        courseA_artist_loops4_b: 因為你只能用一個 <xml><block type="simple_move_right"/></xml>程式積木，所以試試將它放在
-          <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>迴圈裡。
+        courseA_artist_loops4_b: |-
+          因為你只能用一個 <xml><block type="simple_move_right"/></xml>
+
+          程式積木，所以試試將它放在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> 迴圈裡。
       courseA_artist_loops4_2019:
         courseA_artist_loops4_a: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
-        courseA_artist_loops4_b: 因為你只能用一個 <xml><block type="simple_move_right"/></xml>程式積木，所以試試將它放在
-          <block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block>迴圈裡。
+        courseA_artist_loops4_b: |-
+          因為你只能用一個 <xml><block type="simple_move_right"/></xml>
+
+          程式積木，所以試試將它放在 <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> 迴圈裡。
       courseA_artist_loops5:
-        courseA_artist_loops5_a: 試著用你學到的重複積木來完成這個關卡！
+        courseA_artist_loops5_a: 試著用你學到的 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 來完成這個關卡！
         courseA_artist_loops5_b: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
-        courseA_artist_loops5_c: "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>程式積木，所以試試將它放在
-          \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\"
-          config=\"3-10\">???</title></block></xml>迴圈裡。"
+        courseA_artist_loops5_c: "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>
+          程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
       courseA_artist_loops5_2018:
-        courseA_artist_loops5_a: 試著用你學到的重複積木來完成這個關卡！
+        courseA_artist_loops5_a: 試著用你學到的 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 來完成這個關卡！
         courseA_artist_loops5_b: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
-        courseA_artist_loops5_c: "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>程式積木，所以試試將它放在
-          \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\"
-          config=\"3-10\">???</title></block></xml>迴圈裡。"
+        courseA_artist_loops5_c: "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>
+          程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
       courseA_artist_loops5_2019:
-        courseA_artist_loops5_a: 試著用你學到的重複積木來完成這個關卡！
+        courseA_artist_loops5_a: 試著用你學到的 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 來完成這個關卡！
         courseA_artist_loops5_b: 如果你想要重複程式 4 次以上，你可以修改積木上的數字。
-        courseA_artist_loops5_c: "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>程式積木，所以試試將它放在
-          \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\"
-          config=\"3-10\">???</title></block></xml>迴圈裡。"
+        courseA_artist_loops5_c: "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>
+          程式積木，所以試試將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
       courseA_artist_loops6:
         courseA_artist_loops6_a: 不清楚怎樣造出一座山？嘗試不同的積木，看看每個積木都有什麼作用。
         courseA_artist_loops6_b: 你將會需要兩個不同方向的程式積木來過這一關。
@@ -4936,11 +4964,8 @@ zh-TW:
       courseA_artist_loops7:
         courseA_artist_loops7_a: 不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。
         courseA_artist_loops7_b: 首先為一個波浪編寫代碼，然後重複繪製另外兩個波浪。
-        courseA_artist_loops7_c: |-
-          記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat">
-
-          <title name="TIMES">???</title>
-          </block></xml>迴圈裡。
+        courseA_artist_loops7_c: 記得你可以放多於一塊程式積木在 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 迴圈裡。
       courseA_artist_loops7_2018:
         courseA_artist_loops7_a: 不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫代碼，並尋找規律。
         courseA_artist_loops7_b: 首先為一個波浪編寫代碼，然後重複繪製另外兩個波浪。
@@ -4980,8 +5005,8 @@ zh-TW:
           這告訴你什麼？\\
       courseA_artist_loops9:
         courseA_artist_loops9_a: 在你得到的代碼中添加另一個積木來繪製其餘的樓梯。
-        courseA_artist_loops9_b: "你應該把程式積木放在 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>迴圈裡。"
+        courseA_artist_loops9_b: "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。"
         courseA_artist_loops9_c: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
       courseA_artist_loops9_2018:
         courseA_artist_loops9_a: 在你得到的代碼中添加另一個積木來繪製其餘的樓梯。
@@ -4990,8 +5015,8 @@ zh-TW:
         courseA_artist_loops9_c: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
       courseA_artist_loops9_2019:
         courseA_artist_loops9_a: 在你得到的代碼中添加另一個積木來繪製其餘的樓梯。
-        courseA_artist_loops9_b: "你應該把程式積木放在 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>迴圈裡。"
+        courseA_artist_loops9_b: "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。"
         courseA_artist_loops9_c: 如果你不知道把迴圈放在哪裡，試試一步一步地寫你的程式碼並留意重複出現的模式。
       courseA_artist_loops_challenge2a:
         courseA_artist_loops_challenge2_a: 像這樣的程式積木：<xml>  <block type="simple_move_up_left"/></xml>
@@ -5009,38 +5034,56 @@ zh-TW:
         courseA_artist_loops_challenge2_b: 當你完成一個帳篷時，向上`跳躍`兩次可以到下一個！
         courseA_artist_loops_challenge2_c: 你的所有積木都必須位於迴圈內才能通過此關。
       courseA_collector_loops1:
-        courseA_collector_loops1_a: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops1_a: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: 向東移動兩次來得到寶物會是一個簡單的解決之道。
       courseA_collector_loops1_2018:
-        courseA_collector_loops1_a: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops1_a: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: 向東移動兩次來得到寶物會是一個簡單的解決之道。
       courseA_collector_loops1_2019:
-        courseA_collector_loops1_a: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops1_a: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: 向東移動兩次來得到寶物會是一個簡單的解決之道。
       courseA_collector_loops2:
         courseA_collector_loops2_a: 在你可以搜集寶物之前，你得要移動
-        courseA_collector_loops2_b: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops2_b: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018:
         courseA_collector_loops2_a: 在你可以搜集寶物之前，你得要移動
-        courseA_collector_loops2_b: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops2_b: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2019:
         courseA_collector_loops2_a: 在你可以搜集寶物之前，你得要移動
-        courseA_collector_loops2_b: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops2_b: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3:
-        courseA_collector_loops3_a: "試試用一個 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">???</title></block></xml>迴圈來完成！"
-        courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
+        courseA_collector_loops3_a: '試試用一個 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 迴圈來完成！                  '
+        courseA_collector_loops3_b: 記得在一個  <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops3_2018:
-        courseA_collector_loops3_a: "試試用一個 \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">???</title></block></xml>迴圈來完成！"
-        courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
+        courseA_collector_loops3_a: '試試用一個 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 迴圈來完成！                  '
+        courseA_collector_loops3_b: 記得在一個  <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops3_2019:
         courseA_collector_loops3_a: "試著使用一個 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
           name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 迴圈!"
-        courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
+        courseA_collector_loops3_b: 記得在一個  <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> 迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops4:
         courseA_collector_loops4_a: 要更改 Laurel 的運行距離，請更改迴圈運行的次數。
         courseA_collector_loops4_b: 不要忘了 Laurel 完成 <xml><block type="controls_repeat_simplified_dropdown"><title
@@ -5186,7 +5229,10 @@ zh-TW:
         courseA_collector_loops_challenge2kp_b: 試試用這條路解決問題。
         courseA_collector_loops_challenge2kp_a: 你能用迴圈過關嗎？
       courseA_collector_preLoops7:
-        courseA_collector_loops2_b: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+        courseA_collector_loops2_b: |-
+          當你已經到達寶物的地點，記得用這個積木來取得它。
+
+          <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "你的程式碼將會有 **四個** `往西移動`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n程式積木和
           **四個** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> 程式積木. "
@@ -5443,21 +5489,13 @@ zh-TW:
       courseA_maze_seq13:
         courseA_maze_seq13_a: 如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。
         courseA_maze_seq13_b: 不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。
-        courseA_maze_seq13_c: |-
-          這些 <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml>
-
-           程式積木將會幫助移動更靠近豬，
+        courseA_maze_seq13_c: 這些 <xml><block type="maze_moveNorth"/></xml> <xml><block
+          type="maze_moveEast"/></xml> 程式積木將會幫助移動更靠近豬，
       courseA_maze_seq13_2018:
         courseA_maze_seq13_a: 如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。
         courseA_maze_seq13_b: 不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。
-        courseA_maze_seq13_c: |-
-          這些 <xml><block type="maze_moveNorth"/></xml>
-
-          <xml><block type="maze_moveEast"/></xml>
-
-           程式積木將會幫助移動更靠近豬，
+        courseA_maze_seq13_c: 這些 <xml><block type="maze_moveNorth"/></xml> <xml><block
+          type="maze_moveEast"/></xml> 程式積木將會幫助移動更靠近豬，
       courseA_maze_seq13_2019:
         courseA_maze_seq13_a: 如果不清楚所需的路徑，請用手指畫出從鳥到豬的路徑。
         courseA_maze_seq13_b: 不要害怕犯錯！嘗試添加積木並運行代碼來查看會發生什麼。
@@ -5799,23 +5837,23 @@ zh-TW:
               <title name="SPRITE2">0</title>
             </block></xml>
       courseA_playlab_events_challenge1:
-        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
           \ </block></xml>"
         courseA_playlab_events_challenge1_e: "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml>
@@ -5824,23 +5862,23 @@ zh-TW:
           \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
           \ </block></xml>"
       courseA_playlab_events_challenge1_2018:
-        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
           \ </block></xml>"
         courseA_playlab_events_challenge1_e: "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml>
@@ -5849,23 +5887,23 @@ zh-TW:
           \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
           \ </block></xml>"
       courseA_playlab_events_challenge1_2019:
-        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_a: "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+        courseA_playlab_events_challenge1_b: "當你點擊企鵝時做鬼表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"可見的\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n<xml> \n\n
-          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+        courseA_playlab_events_challenge1_c: "當你點擊Boo時，讓Jayden成為“模糊怪物秀”！\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n
           \ </block></xml>"
-        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n<xml> \n\n
+        courseA_playlab_events_challenge1_d: "當你點擊怪物時，讓 Spiff 的機器人表演！\n\n<xml> \n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n
-          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"可見的\"</title>\n
+          \   <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n
           \       <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n
           \ </block></xml>"
         courseA_playlab_events_challenge1_e: "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml>
@@ -5874,134 +5912,104 @@ zh-TW:
           \       <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n
           \ </block></xml>"
       courseA_playlab_events_challenge2:
-        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
-          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: |-
-          你可以讓機器人發出嗶嗶聲.
-          <xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">得分</title>
-                    </block>
-                  </next>
-
-            </block></xml>
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">咆哮!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseA_playlab_events_challenge2_2018:
-        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
-          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: |-
-          你可以讓機器人發出嗶嗶聲.
-          <xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">得分</title>
-                    </block>
-                  </next>
-
-            </block></xml>
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">咆哮!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseA_playlab_events_challenge2_2019:
-        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n
-          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">小鳥叫聲</title>\n
-          \         </block>\n    </next>\n\n  </block></xml>"
-        courseA_playlab_events_challenge2_b: |-
-          你可以讓機器人發出嗶嗶聲.
-          <xml>
-            <block type="studio_whenSpriteClicked">
-              <title name="SPRITE">6</title>
-              <next>
-
-                    <block type="studio_playSound">
-                      <title name="SOUND">得分</title>
-                    </block>
-                  </next>
-
-            </block></xml>
+        courseA_playlab_events_challenge2_a: "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_c: |-
           你可以製造一個憤怒的怪物咆哮。
 
           <xml>  <block type="studio_whenSpriteClicked">
-
-          <title name="SPRITE">5</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">2</title>
-          <next>
-          <block type="studio_saySprite">
-          <title name="SPRITE">5</title>
-          <title name="TEXT">咆哮!</title>
-          <next>
-          <block type="studio_setSpriteEmotion">
-          <title name="SPRITE">5</title>
-          <title name="VALUE">0</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block></xml>
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseB_Scrat_ramp2_2018:
         '1': |-
           你的程式看起來要像這樣：
@@ -6692,7 +6700,9 @@ zh-TW:
                     </block></xml>
         courseB_collector_loops_challenge2_c: 嘗試使用「repeat」模塊來收集最後一堆寶藏！
         courseB_collector_loops_challenge2_d: |-
-          試試這個方法：<xml>
+          試試這個方法：
+
+          <xml>
             <block type="when_run" deletable="false" movable="false">
               <next>
                 <block type="controls_repeat_simplified_dropdown">
@@ -7391,13 +7401,22 @@ zh-TW:
           改變動物的表情！
       courseB_starWars_prog1:
         courseB_starWars_prog1_a: 嘗試一次添加一個模塊，然後點擊「運行」看看發生什麼。
-        courseB_starWars_prog1_b: 您需要向東移動來通過本關。您需要移動多遠呢？<xml><block type="studio_moveEast"/></xml>
+        courseB_starWars_prog1_b: |-
+          您需要向東移動來通過本關。您需要移動多遠呢？
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog1_2018:
         courseB_starWars_prog1_a: 嘗試一次添加一個模塊，然後點擊「運行」看看發生什麼。
-        courseB_starWars_prog1_b: 您需要向東移動來通過本關。您需要移動多遠呢？<xml><block type="studio_moveEast"/></xml>
+        courseB_starWars_prog1_b: |-
+          您需要向東移動來通過本關。您需要移動多遠呢？
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog1_2019:
         courseB_starWars_prog1_a: 嘗試一次添加一個模塊，然後點擊「運行」看看發生什麼。
-        courseB_starWars_prog1_b: 您需要向東移動來通過本關。您需要移動多遠呢？<xml><block type="studio_moveEast"/></xml>
+        courseB_starWars_prog1_b: |-
+          您需要向東移動來通過本關。您需要移動多遠呢？
+
+          <xml><block type="studio_moveEast"/></xml>
       courseB_starWars_prog2:
         courseB_starWars_prog2_a: 將這個問題分成兩部分。收集一堆廢金屬，然後想辦法收集另一堆廢金屬。
       courseB_starWars_prog2_2019:
@@ -7553,7 +7572,9 @@ zh-TW:
         courseE_playLab_scaffold4_a: 使用`得分`增加一份，用`減分`減去一分。
       courseC_PlayLab_events1:
         courseC_PlayLab_events1_a: |-
-          將這個積木連接到`運行時`積木：<xml>
+          將這個積木連接到`運行時`積木：
+
+          <xml>
             <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
               <title name="VALUE">Hi there.</title>
@@ -7561,7 +7582,9 @@ zh-TW:
           </xml>
       courseC_PlayLab_events1_2018:
         courseC_PlayLab_events1_a: |-
-          將這個積木連接到`運行時`積木：<xml>
+          將這個積木連接到`運行時`積木：
+
+          <xml>
             <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
               <title name="VALUE">Hi there.</title>
@@ -7569,7 +7592,9 @@ zh-TW:
           </xml>
       courseC_PlayLab_events1_2019:
         courseC_PlayLab_events1_a: |-
-          將這個積木連接到`運行時`積木：<xml>
+          將這個積木連接到`運行時`積木：
+
+          <xml>
             <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
               <title name="VALUE">Hi there.</title>
@@ -7577,7 +7602,9 @@ zh-TW:
           </xml>
       courseC_PlayLab_events2:
         courseC_PlayLab_events2_a: |-
-          將這兩個積木連接到`運行時`積木：<xml>
+          將這兩個積木連接到`運行時`積木：
+
+          <xml>
             <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
               <title name="VALUE">Hi there.</title>
@@ -7586,7 +7613,9 @@ zh-TW:
         courseC_PlayLab_events2_b: 使用第二個`角色__說`積木的下拉式功能表可以更改哪個角色說話。
       courseC_PlayLab_events2_2018:
         courseC_PlayLab_events2_a: |-
-          將這兩個積木連接到`運行時`積木：<xml>
+          將這兩個積木連接到`運行時`積木：
+
+          <xml>
             <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
               <title name="VALUE">Hi there.</title>
@@ -7595,7 +7624,9 @@ zh-TW:
         courseC_PlayLab_events2_b: 使用第二個`角色__說`積木的下拉式功能表可以更改哪個角色說話。
       courseC_PlayLab_events2_2019:
         courseC_PlayLab_events2_a: |-
-          將這兩個積木連接到`運行時`積木：<xml>
+          將這兩個積木連接到`運行時`積木：
+
+          <xml>
             <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
               <title name="VALUE">Hi there.</title>
@@ -7606,7 +7637,9 @@ zh-TW:
         courseC_PlayLab_events3_a: 你只需將小狗向右移動約 25 個像素即可解決此關卡。
         courseC_PlayLab_events3_b: 工具箱中是不是有一個積木看起來可以移動角色？
         courseC_PlayLab_events3_c: |-
-          將這個積木連接到`運行時`積木：<xml>
+          將這個積木連接到`運行時`積木：
+
+          <xml>
           <block type="studio_moveDistance">
               <title name="SPRITE">0</title>
               <title name="DIR">2</title>
@@ -7617,7 +7650,9 @@ zh-TW:
         courseC_PlayLab_events3_a: 你只需將小狗向右移動約 25 個像素即可解決此關卡。
         courseC_PlayLab_events3_b: 工具箱中是不是有一個積木看起來可以移動角色？
         courseC_PlayLab_events3_c: |-
-          將這個積木連接到`運行時`積木：<xml>
+          將這個積木連接到`運行時`積木：
+
+          <xml>
           <block type="studio_moveDistance">
               <title name="SPRITE">0</title>
               <title name="DIR">2</title>
@@ -7628,7 +7663,9 @@ zh-TW:
         courseC_PlayLab_events3_a: 你只需將小狗向右移動約 25 個像素即可解決此關卡。
         courseC_PlayLab_events3_b: 工具箱中是不是有一個積木看起來可以移動角色？
         courseC_PlayLab_events3_c: |-
-          將這個積木連接到`運行時`積木：<xml>
+          將這個積木連接到`運行時`積木：
+
+          <xml>
           <block type="studio_moveDistance">
               <title name="SPRITE">0</title>
               <title name="DIR">2</title>
@@ -7708,12 +7745,32 @@ zh-TW:
         courseC_PlayLab_eventsA_a: 使用`設定背景`積木和`設定角色速度為____`積木來通過這個關卡。
         courseC_PlayLab_eventsA_b: 你需要專門將`運行時`事件積木拖到工作區中才能完成此關卡。
       courseC_PlayLab_eventsFP:
-        idea1: _需要點子嗎？_**誰在那裡？** 令角色和隨機圖像一起出現，這樣就沒人知道接下來要出現的是誰。![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: _需要點子嗎？_**進行冒險** - 更改背景，然後讓角色談論他們現在的位置。![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea1: |-
+          _需要點子嗎？_
+
+          **誰在那裡？** 令角色和隨機圖像一起出現，這樣就沒人知道接下來要出現的是誰。
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _需要點子嗎？_
+
+          **進行冒險** - 更改背景，然後讓角色談論他們現在的位置。
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: _需要點子嗎？_**彈珠** - 使用方向鍵來移動一個角色（使用`當按向上鍵時`、`當按向下鍵時`積木），然後在他跟畫面上的其他角色碰撞時播放隨機聲音。
       courseC_PlayLab_eventsFP_2018:
-        idea1: _需要點子嗎？_**誰在那裡？** 令角色和隨機圖像一起出現，這樣就沒人知道接下來要出現的是誰。![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: _需要點子嗎？_**進行冒險** - 更改背景，然後讓角色談論他們現在的位置。![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
+        idea1: |-
+          _需要點子嗎？_
+
+          **誰在那裡？** 令角色和隨機圖像一起出現，這樣就沒人知道接下來要出現的是誰。
+
+          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
+        idea2: |-
+          _需要點子嗎？_
+
+          **進行冒險** - 更改背景，然後讓角色談論他們現在的位置。
+
+          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: _需要點子嗎？_**彈珠** - 使用方向鍵來移動一個角色（使用`當按向上鍵時`、`當按向下鍵時`積木），然後在他跟畫面上的其他角色碰撞時播放隨機聲音。
       courseC_PlayLab_eventsFP_2019:
         idea3: _需要點子嗎？_**彈珠** - 使用方向鍵來移動一個角色（使用`當按向上鍵時`、`當按向下鍵時`積木），然後在他跟畫面上的其他角色碰撞時播放隨機聲音。
@@ -7721,7 +7778,9 @@ zh-TW:
         courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
         courseC_PlayLab_events_challenge_b: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
         courseC_PlayLab_events_challenge_c: |-
-          你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！<xml>  <block type="studio_setSpriteSpeed">
+          你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！
+
+          <xml>  <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
               <title name="VALUE">Studio.SpriteSpeed.FAST</title>
             </block></xml>
@@ -7729,7 +7788,9 @@ zh-TW:
         courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
         courseC_PlayLab_events_challenge_b: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
         courseC_PlayLab_events_challenge_c: |-
-          你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！<xml>  <block type="studio_setSpriteSpeed">
+          你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！
+
+          <xml>  <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
               <title name="VALUE">Studio.SpriteSpeed.FAST</title>
             </block></xml>
@@ -7737,34 +7798,48 @@ zh-TW:
         courseC_PlayLab_events_challenge_a: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
         courseC_PlayLab_events_challenge_b: 試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。
         courseC_PlayLab_events_challenge_c: |-
-          你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！<xml>  <block type="studio_setSpriteSpeed">
+          你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！
+
+          <xml>  <block type="studio_setSpriteSpeed">
               <title name="SPRITE">0</title>
               <title name="VALUE">Studio.SpriteSpeed.FAST</title>
             </block></xml>
       courseC_artist_loop1:
         courseC_artist_loop1_a: 你無需對迴圈進行任何更改，只需在其上方放置一個積木即可。
         courseC_artist_loop1_b: |-
-          這是你用來設定規律的積木：<xml>
+          這是你用來設定規律的積木：
+
+          <xml>
           <block type="draw_line_style_pattern">
               <title name="VALUE">DEFAULT</title>
             </block>
-          </xml>你可以選擇你喜歡的任何規律！
+          </xml>
+
+          你可以選擇你喜歡的任何規律！
       courseC_artist_loop1_2018:
         courseC_artist_loop1_a: 你無需對迴圈進行任何更改，只需在其上方放置一個積木即可。
         courseC_artist_loop1_b: |-
-          這是你用來設定規律的積木：<xml>
+          這是你用來設定規律的積木：
+
+          <xml>
           <block type="draw_line_style_pattern">
               <title name="VALUE">DEFAULT</title>
             </block>
-          </xml>你可以選擇你喜歡的任何規律！
+          </xml>
+
+          你可以選擇你喜歡的任何規律！
       courseC_artist_loop1_2019:
         courseC_artist_loop1_a: 你無需對迴圈進行任何更改，只需在其上方放置一個積木即可。
         courseC_artist_loop1_b: |-
-          這是你用來設定規律的積木：<xml>
+          這是你用來設定規律的積木：
+
+          <xml>
           <block type="draw_line_style_pattern">
               <title name="VALUE">DEFAULT</title>
             </block>
-          </xml>你可以選擇你喜歡的任何規律！
+          </xml>
+
+          你可以選擇你喜歡的任何規律！
       courseC_artist_loops1a:
         courseC_artist_loops1a_a: |-
           這是您將需要的第一個模塊：
@@ -7929,8 +8004,10 @@ zh-TW:
         courseC_artist_loopsPre1a_b: 你的`重複`迴圈裡應包含 3 個積木：`跳到 200 然後向下 200`、`移動-向前 50
           像素`，以及`轉向-右邊 60 度`。
       courseC_artist_loopsPrePre1a:
-        courseC_artist_loopsPrePre1a_a: 你需要的第一個積木是：![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14
-          AM.png>)
+        courseC_artist_loopsPrePre1a_a: |-
+          你需要的第一個積木是：
+
+          ![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)
         courseC_artist_loopsPrePre1a_b: |-
           要向前移動 50 像素，請使用這個積木：
 
@@ -8165,28 +8242,46 @@ zh-TW:
         courseC_collector_prog4_b: 不要害怕犯錯！嘗試添加模塊並運行程式看看會發生什麼，即使您還沒有通關。
         courseC_collector_prog4_c: 試試用這個路徑。
       courseC_collector_prog5:
-        courseC_collector_prog5_a: "「第一步有用嗎？第二步有用嗎？哪裡出問題了？」"
+        courseC_collector_prog5_a: |-
+          「第一步有用嗎？
+          第二步有用嗎？
+          哪裡出問題了？」
         courseC_collector_prog5_b: 如果你修復了一個錯誤，但程式仍然無法運行，請按上述步驟來找到更多錯誤。
         courseC_collector_prog5_c: 如果卡住了，請嘗試在紙上寫下步驟。
         courseC_collector_prog5_d: 照著這個路徑就能得到寶藏。
       courseC_collector_prog5_2018:
-        courseC_collector_prog5_a: "「第一步有用嗎？第二步有用嗎？哪裡出問題了？」"
+        courseC_collector_prog5_a: |-
+          「第一步有用嗎？
+          第二步有用嗎？
+          哪裡出問題了？」
         courseC_collector_prog5_b: 如果你修復了一個錯誤，但程式仍然無法運行，請按上述步驟來找到更多錯誤。
         courseC_collector_prog5_c: 如果卡住了，請嘗試在紙上寫下步驟。
         courseC_collector_prog5_d: 照著這個路徑就能得到寶藏。
       courseC_collector_prog5_2019:
-        courseC_collector_prog5_a: "「第一步有用嗎？第二步有用嗎？哪裡出問題了？」"
+        courseC_collector_prog5_a: |-
+          「第一步有用嗎？
+          第二步有用嗎？
+          哪裡出問題了？」
         courseC_collector_prog5_b: 如果你修復了一個錯誤，但程式仍然無法運行，請按上述步驟來找到更多錯誤。
         courseC_collector_prog5_c: 如果卡住了，請嘗試在紙上寫下步驟。
         courseC_collector_prog5_d: 照著這個路徑就能得到寶藏。
       courseC_collector_prog6:
-        courseC_collector_prog6_a: 你能找到問題出在哪裡嗎？請嘗試使用「分步」按鈕逐行運行代碼來查找錯誤。
+        courseC_collector_prog6_a: |-
+          你能找到問題出在哪裡嗎？
+
+          請嘗試使用「分步」按鈕逐行運行代碼來查找錯誤。
         courseC_collector_prog6_b: 卡關？試試用這個路徑收集寶藏。
       courseC_collector_prog6_2018:
-        courseC_collector_prog6_a: 你能找到問題出在哪裡嗎？請嘗試使用「分步」按鈕逐行運行代碼來查找錯誤。
+        courseC_collector_prog6_a: |-
+          你能找到問題出在哪裡嗎？
+
+          請嘗試使用「分步」按鈕逐行運行代碼來查找錯誤。
         courseC_collector_prog6_b: 卡關？試試用這個路徑收集寶藏。
       courseC_collector_prog6_2019:
-        courseC_collector_prog6_a: 你能找到問題出在哪裡嗎？請嘗試使用「分步」按鈕逐行運行代碼來查找錯誤。
+        courseC_collector_prog6_a: |-
+          你能找到問題出在哪裡嗎？
+
+          請嘗試使用「分步」按鈕逐行運行代碼來查找錯誤。
         courseC_collector_prog6_b: 卡關？試試用這個路徑收集寶藏。
       courseC_collector_prog7:
         courseC_collector_prog7_a: 工作區中已經有很多很棒的代碼。要通過此關卡，無需移除任何一個積木。
@@ -8425,24 +8520,36 @@ zh-TW:
       courseC_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: 解決此關的一種方法看起來像鋸齒形。另一種方式看起來像螺旋形！對於這樣的關卡，有很多不同的解決方案。繼續思考！
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
-        courseC_harvester_loops_challenge2_c: 這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52
-          PM copy.png>)
-        courseC_harvester_loops_challenge2_d: 只需 18 個積木就可以編出這個螺旋圖案！![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52
-          PM.png>)
+        courseC_harvester_loops_challenge2_c: |-
+          這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          只需 18 個積木就可以編出這個螺旋圖案！
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_harvester_loops_challenge2_2018:
         courseC_harvester_loops_challenge2_a: 解決此關的一種方法看起來像鋸齒形。另一種方式看起來像螺旋形！對於這樣的關卡，有很多不同的解決方案。繼續思考！
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
-        courseC_harvester_loops_challenge2_c: 這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52
-          PM copy.png>)
-        courseC_harvester_loops_challenge2_d: 只需 18 個積木就可以編出這個螺旋圖案！![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52
-          PM.png>)
+        courseC_harvester_loops_challenge2_c: |-
+          這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          只需 18 個積木就可以編出這個螺旋圖案！
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_harvester_loops_challenge2_2019:
         courseC_harvester_loops_challenge2_a: 解決此關的一種方法看起來像鋸齒形。另一種方式看起來像螺旋形！對於這樣的關卡，有很多不同的解決方案。繼續思考！
         courseC_harvester_loops_challenge2_b: 你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。
-        courseC_harvester_loops_challenge2_c: 這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52
-          PM copy.png>)
-        courseC_harvester_loops_challenge2_d: 只需 18 個積木就可以編出這個螺旋圖案！![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52
-          PM.png>)
+        courseC_harvester_loops_challenge2_c: |-
+          這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！
+
+          ![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)
+        courseC_harvester_loops_challenge2_d: |-
+          只需 18 個積木就可以編出這個螺旋圖案！
+
+          ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       courseC_maze_debugging1:
         courseC_maze_debugging1_a: |-
           -   第一步之後一切正常嗎？
@@ -8655,22 +8762,64 @@ zh-TW:
         courseC_maze_programming2_b: 請檢查這些積木是不是黏在一起，確定好後再點擊「運行」一次。
       courseC_maze_programming3:
         courseC_maze_programming3_a: 嘗試先運行代碼來查看錯誤地方。
-        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。將要移除的積木拖回工具箱。最後，將其他積木放回它們原本的位置。"
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。
+
+          將要移除的積木拖回工具箱。
+
+          最後，將其他積木放回它們原本的位置。
       courseC_maze_programming3_2018:
         courseC_maze_programming3_a: 嘗試先運行代碼來查看錯誤地方。
-        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。將要移除的積木拖回工具箱。最後，將其他積木放回它們原本的位置。"
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。
+
+          將要移除的積木拖回工具箱。
+
+          最後，將其他積木放回它們原本的位置。
       courseC_maze_programming3_2019:
         courseC_maze_programming3_a: 嘗試先運行代碼來查看錯誤地方。
-        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。將要移除的積木拖回工具箱。最後，將其他積木放回它們原本的位置。"
+        courseC_maze_programming3_b: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。
+
+          將要移除的積木拖回工具箱。
+
+          最後，將其他積木放回它們原本的位置。
       courseC_maze_programming4:
         courseC_maze_programming4_a: 請記住，當你轉彎時，你是從小鳥的角度轉彎的。如果你向右轉，那小鳥將指向下方。
-        courseC_maze_programming4_b: 要沿著這條路徑走：-   前進-   轉到一個方向-   前進-   轉到另一個方向-   前進
+        courseC_maze_programming4_b: |-
+          要沿著這條路徑走：
+
+          -   前進
+          -   轉到一個方向
+          -   前進
+          -   轉到另一個方向
+          -   前進
       courseC_maze_programming4_2018:
         courseC_maze_programming4_a: 請記住，當你轉彎時，你是從小鳥的角度轉彎的。如果你向右轉，那小鳥將指向下方。
-        courseC_maze_programming4_b: 要沿著這條路徑走：-   前進-   轉到一個方向-   前進-   轉到另一個方向-   前進
+        courseC_maze_programming4_b: |-
+          要沿著這條路徑走：
+
+          -   前進
+          -   轉到一個方向
+          -   前進
+          -   轉到另一個方向
+          -   前進
       courseC_maze_programming4_2019:
         courseC_maze_programming4_a: 請記住，當你轉彎時，你是從小鳥的角度轉彎的。如果你向右轉，那小鳥將指向下方。
-        courseC_maze_programming4_b: 要沿著這條路徑走：-   前進-   轉到一個方向-   前進-   轉到另一個方向-   前進
+        courseC_maze_programming4_b: |-
+          要沿著這條路徑走：
+
+          -   前進
+          -   轉到一個方向
+          -   前進
+          -   轉到另一個方向
+          -   前進
       courseC_maze_programming5:
         courseC_maze_programming5_a: 嘗試使用「步驟」鍵逐行運行您的程式。您能想出接下來您需要做什麼嗎？
         courseC_maze_programming5_b: 小鳥需要轉一圈才能完成這個關卡。你能想出來怎麼辦嗎？
@@ -8724,31 +8873,43 @@ zh-TW:
         courseC_maze_programming_challenge1_a: 找到這隻豬有很多方法。用手指找出路徑，然後編寫程式！
       courseC_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: "\\_「如果你要讓我後退，請格外小心，務必讓我轉到正確的方向！」"
-        courseC_maze_programming_challenge2_b: 最短的解決方案僅使用了 5 個積木，但用了下面這個積木：<xml><block
-          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        courseC_maze_programming_challenge2_b: |-
+          最短的解決方案僅使用了 5 個積木，但用了下面這個積木：
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018:
         courseC_maze_programming_challenge2_a: "\\_「如果你要讓我後退，請格外小心，務必讓我轉到正確的方向！」"
-        courseC_maze_programming_challenge2_b: 最短的解決方案僅使用了 5 個積木，但用了下面這個積木：<xml><block
-          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        courseC_maze_programming_challenge2_b: |-
+          最短的解決方案僅使用了 5 個積木，但用了下面這個積木：
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2019:
         courseC_maze_programming_challenge2_a: "\\_「如果你要讓我後退，請格外小心，務必讓我轉到正確的方向！」"
-        courseC_maze_programming_challenge2_b: 最短的解決方案僅使用了 5 個積木，但用了下面這個積木：<xml><block
-          type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        courseC_maze_programming_challenge2_b: |-
+          最短的解決方案僅使用了 5 個積木，但用了下面這個積木：
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_starWars_loops1:
         courseC_starWars_loops1_a: 當 BB-8 滾過廢金屬時，他會自動將其撿起。
         courseC_starWars_loops1_b: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
         courseC_starWars_loops1_c: 你將需要`移動-向前`五次來通過這個關卡。
       courseC_starWars_loops10:
         courseC_starWars_loops10_a: 這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。
-        courseC_starWars_loops10_b: 如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\\這叫做**巢狀迴圈**。
+        courseC_starWars_loops10_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
         courseC_starWars_loops10_c: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
       courseC_starWars_loops10_2018:
         courseC_starWars_loops10_a: 這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。
-        courseC_starWars_loops10_b: 如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\\這叫做**巢狀迴圈**。
+        courseC_starWars_loops10_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
         courseC_starWars_loops10_c: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
       courseC_starWars_loops10_2019:
         courseC_starWars_loops10_a: 這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。
-        courseC_starWars_loops10_b: 如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\\這叫做**巢狀迴圈**。
+        courseC_starWars_loops10_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
         courseC_starWars_loops10_c: 不要害怕犯錯！運行程式看看會發生什麼，即使您還沒有通過本關。
       courseC_starWars_loops1_2018:
         courseC_starWars_loops1_a: 當 BB-8 滾過廢金屬時，他會自動將其撿起。
@@ -8781,13 +8942,19 @@ zh-TW:
         courseC_starWars_loops5_a: 最好的解決方案是先轉彎，再往前移動一次，再轉彎，然後重複。
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: 嘗試將所有移動記錄到紙上，然後尋找規律。
-        courseC_starWars_loops6_b: 如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\\這叫做**巢狀迴圈**。
+        courseC_starWars_loops6_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: 嘗試將所有移動記錄到紙上，然後尋找規律。
-        courseC_starWars_loops6_b: 如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\\這叫做**巢狀迴圈**。
+        courseC_starWars_loops6_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: 嘗試將所有移動記錄到紙上，然後尋找規律。
-        courseC_starWars_loops6_b: 如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\\這叫做**巢狀迴圈**。
+        courseC_starWars_loops6_b: |-
+          如果要使用更少的代碼，可以將一個`重複`迴圈放在另一個迴圈中！\
+          這叫做**巢狀迴圈**。
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: 這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？
         courseC_starWars_loops7_b: 如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。
@@ -8803,24 +8970,42 @@ zh-TW:
       courseC_starWars_loops8:
         course_starWars_loops8_a: 嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！
         course_starWars_loops8_b: 將此問題的前半部分視為階梯問題。你之前是如何解決的？
-        course_starWars_loops8_c: 看一下這條路徑。![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+        course_starWars_loops8_c: |-
+          看一下這條路徑。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2018:
         course_starWars_loops8_a: 嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！
         course_starWars_loops8_b: 將此問題的前半部分視為階梯問題。你之前是如何解決的？
-        course_starWars_loops8_c: 看一下這條路徑。![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+        course_starWars_loops8_c: |-
+          看一下這條路徑。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops8_2019:
         course_starWars_loops8_a: 嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！
         course_starWars_loops8_b: 將此問題的前半部分視為階梯問題。你之前是如何解決的？
-        course_starWars_loops8_c: 看一下這條路徑。![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+        course_starWars_loops8_c: |-
+          看一下這條路徑。
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
       courseC_starWars_loops9:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
-        course_starWars_loops9_c: 你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+        course_starWars_loops9_c: |-
+          你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2018:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
-        course_starWars_loops9_c: 你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+        course_starWars_loops9_c: |-
+          你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseC_starWars_loops9_2019:
         course_starWars_loops9_b: 記得在一個重複迴圈裡你可以用多於一塊程式積木。
-        course_starWars_loops9_c: 你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+        course_starWars_loops9_c: |-
+          你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。
+
+          ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
       courseD_artist_1_2018:
         courseD_artist_project1_a: 使用「turn」模塊上的下拉菜單，選擇您所需要的角度！
         courseD_artist_project1_b: 記住，「move forward」可以畫線，而「jump forward」（向前跳）不可以。
@@ -8931,14 +9116,20 @@ zh-TW:
         courseD_artist_nestedLoops1_b: 你可以使用內含兩個積木的`重複`迴圈來繪製此三角形。你需要哪些積木？
         courseD_artist_nestedLoops1_c: 嘗試在紙上寫下步驟並尋找可以透過迴圈簡化的規律。
       courseD_artist_nestedLoops1a:
-        courseD_artist_nestedLoops1a_a: 你總共需要畫出 6 個三角形。完成每個三角形後，旋轉 60 度並移動到下一個三角形的位置再開始。![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
+        courseD_artist_nestedLoops1a_a: |-
+          你總共需要畫出 6 個三角形。完成每個三角形後，旋轉 60 度並移動到下一個三角形的位置再開始。
+
+          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
         courseD_artist_nestedLoops1a_b: 如果使用迴圈繪製三角形，則小藝術家每次開始時的位置都應該相同。這樣一來 60 度轉彎會變得容易得多。
         courseD_artist_nestedLoops1a_c: 如果需要顏色，請在代碼中使用`設定顏色`積木。你不必跟範本圖像中的顏色一樣。
       courseD_artist_nestedLoops1a_2018:
         courseD_artist_nestedLoops1a_b: 如果使用迴圈繪製三角形，則小藝術家每次開始時的位置都應該相同。這樣一來 60 度轉彎會變得容易得多。
         courseD_artist_nestedLoops1a_c: 如果需要顏色，請在代碼中使用`設定顏色`積木。你不必跟範本圖像中的顏色一樣。
       courseD_artist_nestedLoops1a_2019:
-        courseD_artist_nestedLoops1a_a: 你總共需要畫出 6 個三角形。完成每個三角形後，旋轉 60 度並移動到下一個三角形的位置再開始。![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
+        courseD_artist_nestedLoops1a_a: |-
+          你總共需要畫出 6 個三角形。完成每個三角形後，旋轉 60 度並移動到下一個三角形的位置再開始。
+
+          ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
         courseD_artist_nestedLoops1a_b: 如果使用迴圈繪製三角形，則小藝術家每次開始時的位置都應該相同。這樣一來 60 度轉彎會變得容易得多。
         courseD_artist_nestedLoops1a_c: 如果需要顏色，請在代碼中使用`設定顏色`積木。你不必跟範本圖像中的顏色一樣。
       courseD_artist_nestedLoops2:
@@ -8976,112 +9167,124 @@ zh-TW:
           個像素。
       courseD_artist_nestedLoops4:
         courseD_artist_nestedLoops4_d: 要正確解決此關，你需要在轉彎**之前**先移動，否則你的圓圈每次都會偏離一點點！
-        courseD_artist_nestedLoops4_a: 畫一個圓圈：-   重複 360 次    -   向前移動 1 個像素    -   向左轉
-          1 度
+        courseD_artist_nestedLoops4_a: "畫一個圓圈：\n\n-   重複 360 次    \n-   向前移動 1 個像素
+          \   \n-   向左轉 1 度"
         courseD_artist_nestedLoops4_b: 不要忘記在圓圈之間向前跳 50 個像素。
         courseD_artist_nestedLoops4_c: 用一個巢狀迴圈畫出圓形 4  次。
       courseD_artist_nestedLoops4_2018:
         courseD_artist_nestedLoops4_d: 要正確解決此關，你需要在轉彎**之前**先移動，否則你的圓圈每次都會偏離一點點！
-        courseD_artist_nestedLoops4_a: 畫一個圓圈：-   重複 360 次    -   向前移動 1 個像素    -   向左轉
-          1 度
+        courseD_artist_nestedLoops4_a: "畫一個圓圈：\n\n-   重複 360 次    \n-   向前移動 1 個像素
+          \   \n-   向左轉 1 度"
         courseD_artist_nestedLoops4_b: 不要忘記在圓圈之間向前跳 50 個像素。
         courseD_artist_nestedLoops4_c: 用一個巢狀迴圈畫出圓形 4  次。
       courseD_artist_nestedLoops4_2019:
         courseD_artist_nestedLoops4_d: 要正確解決此關，你需要在轉彎**之前**先移動，否則你的圓圈每次都會偏離一點點！
-        courseD_artist_nestedLoops4_a: 畫一個圓圈：-   重複 360 次    -   向前移動 1 個像素    -   向左轉
-          1 度
+        courseD_artist_nestedLoops4_a: "畫一個圓圈：\n\n-   重複 360 次    \n-   向前移動 1 個像素
+          \   \n-   向左轉 1 度"
         courseD_artist_nestedLoops4_b: 不要忘記在圓圈之間向前跳 50 個像素。
         courseD_artist_nestedLoops4_c: 用一個巢狀迴圈畫出圓形 4  次。
       courseD_artist_nestedLoops5:
-        courseD_artist_nestedLoops5_a: 要輕鬆做到這一點：-   重複 4 次    -   畫一個圓    -   向前跳
-          50 個像素    -   向右轉 90 度
+        courseD_artist_nestedLoops5_a: "要輕鬆做到這一點：\n\n-   重複 4 次    \n-   畫一個圓    \n-
+          \  向前跳 50 個像素    \n-   向右轉 90 度"
         courseD_artist_nestedLoops5_b: 要畫出一個圓圈，你需要設定一個重複迴圈並重複 360 次。在迴圈中，每次向前移動 1
           個像素並旋轉 1 度。
       courseD_artist_nestedLoops5_2018:
-        courseD_artist_nestedLoops5_a: 要輕鬆做到這一點：-   重複 4 次    -   畫一個圓    -   向前跳
-          50 個像素    -   向右轉 90 度
+        courseD_artist_nestedLoops5_a: "要輕鬆做到這一點：\n\n-   重複 4 次    \n-   畫一個圓    \n-
+          \  向前跳 50 個像素    \n-   向右轉 90 度"
         courseD_artist_nestedLoops5_b: 要畫出一個圓圈，你需要設定一個重複迴圈並重複 360 次。在迴圈中，每次向前移動 1
           個像素並旋轉 1 度。
       courseD_artist_nestedLoops5_2019:
-        courseD_artist_nestedLoops5_a: 要輕鬆做到這一點：-   重複 4 次    -   畫一個圓    -   向前跳
-          50 個像素    -   向右轉 90 度
+        courseD_artist_nestedLoops5_a: "要輕鬆做到這一點：\n\n-   重複 4 次    \n-   畫一個圓    \n-
+          \  向前跳 50 個像素    \n-   向右轉 90 度"
         courseD_artist_nestedLoops5_b: 要畫出一個圓圈，你需要設定一個重複迴圈並重複 360 次。在迴圈中，每次向前移動 1
           個像素並旋轉 1 度。
       courseD_artist_nestedLoops7:
         courseD_artist_nestedLoops7_a: 你需要在這裡使用巢狀迴圈。首先，使用迴圈繪製一個正方形。如果內部迴圈用來繪製一個正方形，外部迴圈要做什麼？
-        courseD_artist_nestedLoops7_b: 使用巢狀迴圈，內部迴圈是正方形的代碼。-   重複 6 次    -   畫出正方形    -   向前跳躍
-          **50 像素**    -   轉向 **60 度**
+        courseD_artist_nestedLoops7_b: "使用巢狀迴圈，內部迴圈是正方形的代碼。\n\n-   重複 6 次    \n-   畫出正方形
+          \   \n-   向前跳躍 **50 像素**    \n-   轉向 **60 度**"
       courseD_artist_nestedLoops7_2018:
         courseD_artist_nestedLoops7_a: 你需要在這裡使用巢狀迴圈。首先，使用迴圈繪製一個正方形。如果內部迴圈用來繪製一個正方形，外部迴圈要做什麼？
-        courseD_artist_nestedLoops7_b: 使用巢狀迴圈，內部迴圈是正方形的代碼。-   重複 6 次    -   畫出正方形    -   向前跳躍
-          **50 像素**    -   轉向 **60 度**
+        courseD_artist_nestedLoops7_b: "使用巢狀迴圈，內部迴圈是正方形的代碼。\n\n-   重複 6 次    \n-   畫出正方形
+          \   \n-   向前跳躍 **50 像素**    \n-   轉向 **60 度**"
       courseD_artist_nestedLoops7_2019:
         courseD_artist_nestedLoops7_a: 你需要在這裡使用巢狀迴圈。首先，使用迴圈繪製一個正方形。如果內部迴圈用來繪製一個正方形，外部迴圈要做什麼？
-        courseD_artist_nestedLoops7_b: 使用巢狀迴圈，內部迴圈是正方形的代碼。-   重複 6 次    -   畫出正方形    -   向前跳躍
-          **50 像素**    -   轉向 **60 度**
+        courseD_artist_nestedLoops7_b: "使用巢狀迴圈，內部迴圈是正方形的代碼。\n\n-   重複 6 次    \n-   畫出正方形
+          \   \n-   向前跳躍 **50 像素**    \n-   轉向 **60 度**"
       courseD_artist_nestedLoops8:
         courseD_artist_nestedLoops8_a: 要在圖形中包含 8 個六邊形，必須在它們之間旋轉 **45 度**。為什麼？因為 360
           度（整圈）除以 8（六邊形的數量）是 45 度。
         courseD_artist_nestedLoops8_b: 如果遇到困難，請先回顧上一個關卡，然後再改變其中的不同內容。
-        courseD_artist_nestedLoops8_c: 使用巢狀迴圈：-   重複 8 次    -   繪製六邊形    -   向前跳 50
-          個像素    -   向右轉 45 度
+        courseD_artist_nestedLoops8_c: "使用巢狀迴圈：\n\n-   重複 8 次    \n-   繪製六邊形    \n-
+          \  向前跳 50 個像素    \n-   向右轉 45 度"
       courseD_artist_nestedLoops8_2018:
         courseD_artist_nestedLoops8_a: 要在圖形中包含 8 個六邊形，必須在它們之間旋轉 **45 度**。為什麼？因為 360
           度（整圈）除以 8（六邊形的數量）是 45 度。
         courseD_artist_nestedLoops8_b: 如果遇到困難，請先回顧上一個關卡，然後再改變其中的不同內容。
-        courseD_artist_nestedLoops8_c: 使用巢狀迴圈：-   重複 8 次    -   繪製六邊形    -   向前跳 50
-          個像素    -   向右轉 45 度
+        courseD_artist_nestedLoops8_c: "使用巢狀迴圈：\n\n-   重複 8 次    \n-   繪製六邊形    \n-
+          \  向前跳 50 個像素    \n-   向右轉 45 度"
       courseD_artist_nestedLoops8_2019:
         courseD_artist_nestedLoops8_a: 要在圖形中包含 8 個六邊形，必須在它們之間旋轉 **45 度**。為什麼？因為 360
           度（整圈）除以 8（六邊形的數量）是 45 度。
         courseD_artist_nestedLoops8_b: 如果遇到困難，請先回顧上一個關卡，然後再改變其中的不同內容。
-        courseD_artist_nestedLoops8_c: 使用巢狀迴圈：-   重複 8 次    -   繪製六邊形    -   向前跳 50
-          個像素    -   向右轉 45 度
+        courseD_artist_nestedLoops8_c: "使用巢狀迴圈：\n\n-   重複 8 次    \n-   繪製六邊形    \n-
+          \  向前跳 50 個像素    \n-   向右轉 45 度"
       courseD_artist_nestedLoops9:
         courseD_artist_nestedLoops9_a: 首先用跟之前一樣的巢狀迴圈，但是這次畫出正方形。
         courseD_artist_nestedLoops9_b: 在第一組的末尾添加第二組巢狀迴圈，但是這次畫出的是三角形。
-        courseD_artist_nestedLoops9_c: 使用兩個巢狀迴圈：-   重複 8 次    -   畫一個正方形    -   向前跳
-          50 個像素    -   向右轉 45 度-   重複 8 次    -   畫一個三角形    -   向前跳 50 個像素    -   向右轉
-          45 度
+        courseD_artist_nestedLoops9_c: "使用兩個巢狀迴圈：\n\n-   重複 8 次    \n-   畫一個正方形    \n-
+          \  向前跳 50 個像素    \n-   向右轉 45 度\n-   重複 8 次    \n-   畫一個三角形    \n-   向前跳
+          50 個像素    \n-   向右轉 45 度"
       courseD_artist_nestedLoops9_2018:
         courseD_artist_nestedLoops9_a: 首先用跟之前一樣的巢狀迴圈，但是這次畫出正方形。
         courseD_artist_nestedLoops9_b: 在第一組的末尾添加第二組巢狀迴圈，但是這次畫出的是三角形。
-        courseD_artist_nestedLoops9_c: 使用兩個巢狀迴圈：-   重複 8 次    -   畫一個正方形    -   向前跳
-          50 個像素    -   向右轉 45 度-   重複 8 次    -   畫一個三角形    -   向前跳 50 個像素    -   向右轉
-          45 度
+        courseD_artist_nestedLoops9_c: "使用兩個巢狀迴圈：\n\n-   重複 8 次    \n-   畫一個正方形    \n-
+          \  向前跳 50 個像素    \n-   向右轉 45 度\n-   重複 8 次    \n-   畫一個三角形    \n-   向前跳
+          50 個像素    \n-   向右轉 45 度"
       courseD_artist_nestedLoops9_2019:
         courseD_artist_nestedLoops9_a: 首先用跟之前一樣的巢狀迴圈，但是這次畫出正方形。
         courseD_artist_nestedLoops9_b: 在第一組的末尾添加第二組巢狀迴圈，但是這次畫出的是三角形。
-        courseD_artist_nestedLoops9_c: 使用兩個巢狀迴圈：-   重複 8 次    -   畫一個正方形    -   向前跳
-          50 個像素    -   向右轉 45 度-   重複 8 次    -   畫一個三角形    -   向前跳 50 個像素    -   向右轉
-          45 度
+        courseD_artist_nestedLoops9_c: "使用兩個巢狀迴圈：\n\n-   重複 8 次    \n-   畫一個正方形    \n-
+          \  向前跳 50 個像素    \n-   向右轉 45 度\n-   重複 8 次    \n-   畫一個三角形    \n-   向前跳
+          50 個像素    \n-   向右轉 45 度"
       courseD_artist_nestedLoopsFP:
-        courseD_artist_nestedLoopsFP_a: <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png"
-          width="200px"/>這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將六邊形（邊長 50 像素）重複 15 次。
-        courseD_artist_nestedLoopsFP_b: '<img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png"
-          width="200px"/>This image was made using similar code to other levels you''ve
-          done before, but with circles (repeat 360 times: move forward 1, turn 1
-          degree).'
-        courseD_artist_nestedLoopsFP_c: <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png"
-          width="200px"/>這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將五邊形（邊長 50 像素）重複 15 次。
+        courseD_artist_nestedLoopsFP_a: |-
+          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
+
+          這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將六邊形（邊長 50 像素）重複 15 次。
+        courseD_artist_nestedLoopsFP_b: |-
+          <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
+
+          這個圖形是用你之前通過的關卡類似的代碼畫出來的，但畫的是圓圈（重複 360 次：前進 1 像素，旋轉 1 度）
+        courseD_artist_nestedLoopsFP_c: |-
+          <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
+
+          這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將五邊形（邊長 50 像素）重複 15 次。
       courseD_artist_nestedLoopsFP_2018:
-        courseD_artist_nestedLoopsFP_a: <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png"
-          width="200px"/>這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將六邊形（邊長 50 像素）重複 15 次。
-        courseD_artist_nestedLoopsFP_b: '<img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png"
-          width="200px"/>This image was made using similar code to other levels you''ve
-          done before, but with circles (repeat 360 times: move forward 1, turn 1
-          degree).'
-        courseD_artist_nestedLoopsFP_c: <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png"
-          width="200px"/>這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將五邊形（邊長 50 像素）重複 15 次。
+        courseD_artist_nestedLoopsFP_a: |-
+          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
+
+          這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將六邊形（邊長 50 像素）重複 15 次。
+        courseD_artist_nestedLoopsFP_b: |-
+          <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
+
+          這個圖形是用你之前通過的關卡類似的代碼畫出來的，但畫的是圓圈（重複 360 次：前進 1 像素，旋轉 1 度）
+        courseD_artist_nestedLoopsFP_c: |-
+          <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
+
+          這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將五邊形（邊長 50 像素）重複 15 次。
       courseD_artist_nestedLoopsFP_2019:
-        courseD_artist_nestedLoopsFP_a: <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png"
-          width="200px"/>這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將六邊形（邊長 50 像素）重複 15 次。
-        courseD_artist_nestedLoopsFP_b: '<img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png"
-          width="200px"/>This image was made using similar code to other levels you''ve
-          done before, but with circles (repeat 360 times: move forward 1, turn 1
-          degree).'
-        courseD_artist_nestedLoopsFP_c: <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png"
-          width="200px"/>這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將五邊形（邊長 50 像素）重複 15 次。
+        courseD_artist_nestedLoopsFP_a: |-
+          <img src="https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png" width="200px"/>
+
+          這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將六邊形（邊長 50 像素）重複 15 次。
+        courseD_artist_nestedLoopsFP_b: |-
+          <img src="https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png" width="200px"/>
+
+          這個圖形是用你之前通過的關卡類似的代碼畫出來的，但畫的是圓圈（重複 360 次：前進 1 像素，旋轉 1 度）
+        courseD_artist_nestedLoopsFP_c: |-
+          <img src="https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png" width="200px"/>
+
+          這個圖形是用單個巢狀迴圈實現的，迴圈每次旋轉 48 度將五邊形（邊長 50 像素）重複 15 次。
       courseD_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_a: 首先將顏色更改為藍色，然後畫出一個邊長為 50 像素、每次向左轉
           45 度的八邊形。
@@ -9370,23 +9573,41 @@ zh-TW:
         courseD_bee_conditionals6_c: 有沒有可以用來簡化代碼的迴圈？
       courseD_bee_conditionals7:
         courseD_bee_conditionals7_hintVid1: 不知道怎麼開始？看看這個影片！
-        courseD_bee_conditionals7_a: "**記住：**這個關卡在每次運行時都會有變化。你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。"
+        courseD_bee_conditionals7_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。
         courseD_bee_conditionals7_b: 如果雲下沒有花，那肯定是有蜂窩，這樣就不必考慮沒有東西的情況了。
         courseD_bee_conditionals7_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals7_2018:
         courseD_bee_conditionals7_hintVid1: 不知道怎麼開始？看看這個影片！
-        courseD_bee_conditionals7_a: "**記住：**這個關卡在每次運行時都會有變化。你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。"
+        courseD_bee_conditionals7_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。
         courseD_bee_conditionals7_b: 如果雲下沒有花，那肯定是有蜂窩，這樣就不必考慮沒有東西的情況了。
         courseD_bee_conditionals7_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals7_2019:
-        courseD_bee_conditionals7_a: "**記住：**這個關卡在每次運行時都會有變化。你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。"
+        courseD_bee_conditionals7_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。
         courseD_bee_conditionals7_b: 如果雲下沒有花，那肯定是有蜂窩，這樣就不必考慮沒有東西的情況了。
       courseD_bee_conditionals7_predict2:
-        courseD_bee_conditionals7_a: "**記住：**這個關卡在每次運行時都會有變化。你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。"
+        courseD_bee_conditionals7_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。
       courseD_bee_conditionals7_predict2_2018:
-        courseD_bee_conditionals7_a: "**記住：**這個關卡在每次運行時都會有變化。你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。"
+        courseD_bee_conditionals7_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。
       courseD_bee_conditionals7_predict2_2019:
-        courseD_bee_conditionals7_a: "**記住：**這個關卡在每次運行時都會有變化。你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。"
+        courseD_bee_conditionals7_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果…否則`）來完成這個挑戰。
       courseD_bee_conditionals8:
         courseD_bee_conditionals8_hintVid1: 不知道怎麼開始？看看這個影片！
         courseD_bee_conditionals8_a: |-
@@ -9398,7 +9619,10 @@ zh-TW:
 
           只要在路徑的最後查找花蜜與蜂蜜。
         courseD_bee_conditionals8_c: 如何確保每條路徑都走到底，無論路徑多長？
-        courseD_bee_conditionals8_d: 即使眼前有雲，也不必先拜訪它。嘗試從正方形右下角的雲開始。![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_d: |-
+          即使眼前有雲，也不必先拜訪它。嘗試從正方形右下角的雲開始。
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals8_2018:
         courseD_bee_conditionals8_hintVid1: 不知道怎麼開始？看看這個影片！
@@ -9411,7 +9635,10 @@ zh-TW:
 
           只要在路徑的最後查找花蜜與蜂蜜。
         courseD_bee_conditionals8_c: 如何確保每條路徑都走到底，無論路徑多長？
-        courseD_bee_conditionals8_d: 即使眼前有雲，也不必先拜訪它。嘗試從正方形右下角的雲開始。![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
+        courseD_bee_conditionals8_d: |-
+          即使眼前有雲，也不必先拜訪它。嘗試從正方形右下角的雲開始。
+
+          ![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)
         courseD_bee_conditionals8_hintVid2: 觀看影片以幫你完成關卡。
       courseD_bee_conditionals8_2019:
         courseD_bee_conditionals8_a: |-
@@ -9433,7 +9660,9 @@ zh-TW:
         courseD_bee_conditionals_challenge1_b: 在這個關卡中，每個空格可能有一朵花、一個蜂窩，或者什麼都沒有。這意味著你可以在每個正方形上重複執行`如果/否則`條件判斷。
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge1_b: |-
-          就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：<xml>  <block type="bee_whileNectarAmount">
+          就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：
+
+          <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
               <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
@@ -9442,7 +9671,9 @@ zh-TW:
             </block></xml>
       courseD_bee_conditionals_challenge2_2018:
         courseD_bee_conditionals_challenge1_b: |-
-          就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：<xml>  <block type="bee_whileNectarAmount">
+          就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：
+
+          <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
               <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
@@ -9451,7 +9682,9 @@ zh-TW:
             </block></xml>
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge1_b: |-
-          就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：<xml>  <block type="bee_whileNectarAmount">
+          就像`如果在花上`積木一樣，`重複 判斷 花蜜>0`中的代碼只有當蜜蜂在花朵上時才運行。不同之處在於，內部代碼將一遍又一遍地運行，直到沒有剩餘的花蜜為止。嘗試以下規律：
+
+          <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
               <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
@@ -9467,7 +9700,9 @@ zh-TW:
         courseD_bee_debugging_challenge1_a: 為什麼前半部分程式能運行？想一想為什麼蜜蜂需要向後移動。蜜蜂每次移動到一朵花時收集了多少花蜜？
         courseD_bee_debugging_challenge1_b: 要通過這個關卡，讓蜜蜂遵循與釀造蜂蜜時一樣的規律來移動。
         courseD_bee_debugging_challenge1_c: |-
-          蜜蜂到達最下面一行後，讓它重複以下命令：<xml><block type="controls_repeat">
+          蜜蜂到達最下面一行後，讓它重複以下命令：
+
+          <xml><block type="controls_repeat">
                               <title name="TIMES">2</title>
                               <statement name="DO">
                                 <block type="maze_move">
@@ -9553,24 +9788,49 @@ zh-TW:
                   -   向前移動
               -   右轉
       courseD_collector_debugging1:
-        courseD_collector_debugging1_a: 使用「分步」按鈕來看看第一步是否正確。第二步對不對？哪裡出錯了？
+        courseD_collector_debugging1_a: |-
+          使用「分步」按鈕來看看第一步是否正確。
+
+          第二步對不對？
+
+          哪裡出錯了？
         courseD_collector_debugging1_b: 你有沒有發現什麼可以用`重複`迴圈來簡單實現的規律？
         courseD_collector_debugging1_c: 移動到寶藏之後記得要用`收集`積木來獲取。
       courseD_collector_debugging10_predict1:
         courseD_collector_debugging9_a: 有幾種方法可以解決此問題...但是它們都需要轉向！
         courseD_collector_debugging9_b: 找出解決關卡的方法，然後逐步進行操作，讓代碼按照你的想法來運作。
       courseD_collector_debugging1a_2018:
-        courseD_collector_debugging1_a: 使用「分步」按鈕來看看第一步是否正確。第二步對不對？哪裡出錯了？
+        courseD_collector_debugging1_a: |-
+          使用「分步」按鈕來看看第一步是否正確。
+
+          第二步對不對？
+
+          哪裡出錯了？
         courseD_collector_debugging1_c: 移動到寶藏之後記得要用`收集`積木來獲取。
       courseD_collector_debugging1a_2019:
-        courseD_collector_debugging1_a: 使用「分步」按鈕來看看第一步是否正確。第二步對不對？哪裡出錯了？
+        courseD_collector_debugging1_a: |-
+          使用「分步」按鈕來看看第一步是否正確。
+
+          第二步對不對？
+
+          哪裡出錯了？
         courseD_collector_debugging1_c: 移動到寶藏之後記得要用`收集`積木來獲取。
       courseD_collector_debugging2:
-        courseD_collector_debugging2_a: 使用「分步」按鈕來看看第一步是否正確。第二步對不對？哪裡出錯了？
+        courseD_collector_debugging2_a: |-
+          使用「分步」按鈕來看看第一步是否正確。
+
+          第二步對不對？
+
+          哪裡出錯了？
         courseD_collector_debugging2_b: 你有沒有發現什麼可以用`重複`迴圈來簡單實現的規律？
         courseD_collector_debugging2_c: 嘗試按這個規律收集一邊的寶藏。你可以重複這個操作來收集其他兩邊的寶藏嗎？
       courseD_collector_debugging2a_2018:
-        courseD_collector_debugging2a_a: 使用「分步」按鈕來看看第一步是否正確。第二步對不對？哪裡出錯了？
+        courseD_collector_debugging2a_a: |-
+          使用「分步」按鈕來看看第一步是否正確。
+
+          第二步對不對？
+
+          哪裡出錯了？
         courseD_collector_debugging2a_c: |-
           發生了什麼？
 
@@ -9578,7 +9838,12 @@ zh-TW:
 
           這告訴你什麼？
       courseD_collector_debugging2a_2019:
-        courseD_collector_debugging2a_a: 使用「分步」按鈕來看看第一步是否正確。第二步對不對？哪裡出錯了？
+        courseD_collector_debugging2a_a: |-
+          使用「分步」按鈕來看看第一步是否正確。
+
+          第二步對不對？
+
+          哪裡出錯了？
         courseD_collector_debugging2a_c: |-
           發生了什麼？
 
@@ -9593,14 +9858,29 @@ zh-TW:
       courseD_collector_debugging3a_2019:
         courseD_collector_debugging3_a: Laurel 有沒有在什麼地方做了沒有意義的事情？更改這些積木會發生什麼？
       courseD_collector_debugging4:
-        courseD_collector_debugging4_a: 嘗試連續幾次使用調試過程。是什麼導致了第一個問題？解決了這個問題以後，又出了什麼問題？
+        courseD_collector_debugging4_a: |-
+          嘗試連續幾次使用調試過程。
+
+          是什麼導致了第一個問題？
+
+          解決了這個問題以後，又出了什麼問題？
         courseD_collector_debugging4_b: 如果你在弄清楚如何畫出階梯圖形時遇到困難，請嘗試用手指追蹤並大聲說出指令。不要忘記指出轉彎的方向！！
         courseD_collector_debugging4_c: 這個迴圈裡少用了 1 個積木，你知道是哪個嗎？
       courseD_collector_debugging4a_2018:
-        courseD_collector_debugging4_a: 嘗試連續幾次使用調試過程。是什麼導致了第一個問題？解決了這個問題以後，又出了什麼問題？
+        courseD_collector_debugging4_a: |-
+          嘗試連續幾次使用調試過程。
+
+          是什麼導致了第一個問題？
+
+          解決了這個問題以後，又出了什麼問題？
         courseD_collector_debugging4_b: 如果你在弄清楚如何畫出階梯圖形時遇到困難，請嘗試用手指追蹤並大聲說出指令。不要忘記指出轉彎的方向！！
       courseD_collector_debugging4a_2019:
-        courseD_collector_debugging4_a: 嘗試連續幾次使用調試過程。是什麼導致了第一個問題？解決了這個問題以後，又出了什麼問題？
+        courseD_collector_debugging4_a: |-
+          嘗試連續幾次使用調試過程。
+
+          是什麼導致了第一個問題？
+
+          解決了這個問題以後，又出了什麼問題？
         courseD_collector_debugging4_b: 如果你在弄清楚如何畫出階梯圖形時遇到困難，請嘗試用手指追蹤並大聲說出指令。不要忘記指出轉彎的方向！！
       courseD_collector_debugging5:
         courseD_collector_debugging5_a: |-
@@ -9629,12 +9909,27 @@ zh-TW:
           這告訴你什麼？
         courseD_collector_debugging5a_b: 一旦收集到了第一行寶藏之後，代碼中還剩下什麼？
       courseD_collector_debugging6:
-        courseD_collector_debugging6_a: 嘗試使用「分步」按鈕運行代碼。第一步是否一切順利？第二步怎麼樣？哪裡出錯了？
+        courseD_collector_debugging6_a: |-
+          嘗試使用「分步」按鈕運行代碼。第一步是否一切順利？
+
+          第二步怎麼樣？
+
+          哪裡出錯了？
         courseD_collector_debugging6_b: 看來所有正確的步驟都在這裡，你只需要執行這些步驟更多次就行。如何多次重複執行`收集`操作？
       courseD_collector_debugging6a_2018:
-        courseD_collector_debugging6_a: 嘗試使用「分步」按鈕運行代碼。第一步是否一切順利？第二步怎麼樣？哪裡出錯了？
+        courseD_collector_debugging6_a: |-
+          嘗試使用「分步」按鈕運行代碼。第一步是否一切順利？
+
+          第二步怎麼樣？
+
+          哪裡出錯了？
       courseD_collector_debugging6a_2019:
-        courseD_collector_debugging6_a: 嘗試使用「分步」按鈕運行代碼。第一步是否一切順利？第二步怎麼樣？哪裡出錯了？
+        courseD_collector_debugging6_a: |-
+          嘗試使用「分步」按鈕運行代碼。第一步是否一切順利？
+
+          第二步怎麼樣？
+
+          哪裡出錯了？
       courseD_collector_debugging8:
         courseD_collector_debugging8_a: 你發現了可以透過迴圈簡化的規律嗎？
         courseD_collector_debugging8_b: 試試用巢狀迴圈來讓程式更精簡。
@@ -10496,9 +10791,11 @@ zh-TW:
         courseD_playLab_cond3_a: 你將需要在`永久重複`迴圈中添加兩個積木。一個會為龍（角色 2）選擇隨機的情緒，另一個會等待 1
           秒，然後再次開始迴圈。
       courseD_playLab_cond3a:
-        courseD_playLab_cond3_c: "-   `如果`龍高興    -   `得分`    -   `得分`-   `否則` `得分`"
+        courseD_playLab_cond3_c: "-   `如果`龍高興   \n\n-   `得分`    \n\n-   `得分`\n\n-
+          \  `否則` `得分`"
       courseD_playLab_cond3a_2018:
-        courseD_playLab_cond3_c: "-   `如果`龍高興    -   `得分`    -   `得分`-   `否則` `得分`"
+        courseD_playLab_cond3_c: "-   `如果`龍高興   \n\n-   `得分`    \n\n-   `得分`\n\n-
+          \  `否則` `得分`"
       courseD_playLab_cond4:
         courseD_playLab_cond4_a: 你需要使用`運行時`事件來讓忍者追趕海盜。
         courseD_playLab_cond4_b: 有一個叫做`設定每個蒙面忍者都來追趕角色`的特殊積木，它將使忍者一直追踪海盜的足跡！
@@ -10576,14 +10873,18 @@ zh-TW:
         courseE_artist_concept_challenge1_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
         courseE_artist_concept_challenge1_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120
           度**。 '
-        courseE_artist_concept_challenge1_c: 這是你重複畫出完整形狀的圖形：![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43
-          PM.png>)
+        courseE_artist_concept_challenge1_c: |-
+          這是你重複畫出完整形狀的圖形：
+
+          ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
       courseE_artist_concept_challenge1_2018:
         courseE_artist_concept_challenge1_a: '這個半六邊形有一個**30 像素的邊**還有需要轉向**60 度**。  '
         courseE_artist_concept_challenge1_b: '這個 2/3 的三角形有一個**80 像素的邊**還有需要轉向**120
           度**。 '
-        courseE_artist_concept_challenge1_c: 這是你重複畫出完整形狀的圖形：![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43
-          PM.png>)
+        courseE_artist_concept_challenge1_c: |-
+          這是你重複畫出完整形狀的圖形：
+
+          ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
       courseE_artist_concept_challenge2:
         courseE_artist_concept_challenge2_a: 定義了一個函式之後，就可以一次又一次地呼叫它 - 隨時隨地！
         courseE_artist_concept_challenge2_b: |-
@@ -10603,19 +10904,30 @@ zh-TW:
       courseE_artist_functions10:
         courseD_artist_functions10_b: 這張圖很像上一張圖，但是`畫線’`函式現在繪製了不同的形狀。
         courseD_artist_functions10_a: 為避免使用多個`移動-向前`積木，請創建一個`繪製六邊形`函式並多次呼叫。
-        courseD_artist_functions10_c: 你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+        courseD_artist_functions10_c: |-
+          你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？
+
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2018:
         courseD_artist_functions10_b: 這張圖很像上一張圖，但是`畫線’`函式現在繪製了不同的形狀。
         courseD_artist_functions10_a: 為避免使用多個`移動-向前`積木，請創建一個`繪製六邊形`函式並多次呼叫。
-        courseD_artist_functions10_c: 你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+        courseD_artist_functions10_c: |-
+          你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？
+
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions10_2019:
         courseD_artist_functions10_b: 這張圖很像上一張圖，但是`畫線’`函式現在繪製了不同的形狀。
         courseD_artist_functions10_a: 為避免使用多個`移動-向前`積木，請創建一個`繪製六邊形`函式並多次呼叫。
-        courseD_artist_functions10_c: 你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
+        courseD_artist_functions10_c: |-
+          你看到該圖在哪裡可以使用`一行六邊形`的函式嗎？
+
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions2:
         courseD_artist_functions2_b: 編寫的函式不應包含整個程式，而是包含繪製邊長 100 個像素的正方形部分。
-        courseD_artist_functions2_c: 在`運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。否則，你的函式中的代碼將無法運行。<xml><block
-          type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
+        courseD_artist_functions2_c: |-
+          在`運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。否則，你的函式中的代碼將無法運行。
+
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
         courseD_artist_functions2_a: |-
           你的程式應該要：
 
@@ -10637,7 +10949,10 @@ zh-TW:
           -   向前移動 100 + 75 像素
           -   使用函式
       courseE_artist_functions3:
-        courseD_artist_functions3_a: 要通過這個關卡，你只需要添加一個迴圈，即可重複初始代碼 8 次。如果你不記得初始代碼是什麼，請點擊工作區右上角的「重新開始」。
+        courseD_artist_functions3_a: |-
+          要通過這個關卡，你只需要添加一個迴圈，即可重複初始代碼 8 次。
+
+          如果你不記得初始代碼是什麼，請點擊工作區右上角的「重新開始」。
         courseD_artist_functions3_b: 你的迴圈中應包含所有 3 個初始代碼積木。
       courseE_artist_functions4:
         courseD_artist_functions4_a: 試著使用函式！
@@ -10667,53 +10982,92 @@ zh-TW:
         courseD_artist_functions7_a: 嘗試先創建函式，然後一次添加一個窗戶。
       courseE_artist_functions8:
         courseD_artist_functions8_f: 你只需要一個`移動-向前`積木，但是你需要相當多的`跳躍-向前`和/或`跳躍-向後`積木！
-        courseD_artist_functions8_a: 首先為創建一個正方形函式，然後嘗試創建一行正方形的函式。你將如何使用`繪製一行正方形`函式來畫出此圖像？
-        courseD_artist_functions8_d: 要畫出一行正方形，-   重複 3 次    -   畫一個邊長為 **50 像素** 的正方形    -   向前跳
-          **100 像素**
-        courseD_artist_functions8_b: 將這張圖片中的每一行都看成是一行 3 個正方形。那麼一共有幾行正方形，而你要從哪裡開始繪製？![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10
-          Hint Drawing.png>)
+        courseD_artist_functions8_a: |-
+          首先為創建一個正方形函式，然後嘗試創建一行正方形的函式。
+
+          你將如何使用`繪製一行正方形`函式來畫出此圖像？
+        courseD_artist_functions8_d: "要畫出一行正方形，\n\n-   重複 3 次    \n-   畫一個邊長為 **50
+          像素** 的正方形    \n-   向前跳 **100 像素**"
+        courseD_artist_functions8_b: |-
+          將這張圖片中的每一行都看成是一行 3 個正方形。那麼一共有幾行正方形，而你要從哪裡開始繪製？
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_c: 在每行正方形的末尾，小藝術家需要向下向後跳動才能繪製下一行正方形。
         courseD_artist_functions8_g: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseE_artist_functions8_2018:
         courseD_artist_functions8_f: 你只需要一個`移動-向前`積木，但是你需要相當多的`跳躍-向前`和/或`跳躍-向後`積木！
-        courseD_artist_functions8_a: 首先為創建一個正方形函式，然後嘗試創建一行正方形的函式。你將如何使用`繪製一行正方形`函式來畫出此圖像？
-        courseD_artist_functions8_d: 要畫出一行正方形，-   重複 3 次    -   畫一個邊長為 **50 像素** 的正方形    -   向前跳
-          **100 像素**
-        courseD_artist_functions8_b: 將這張圖片中的每一行都看成是一行 3 個正方形。那麼一共有幾行正方形，而你要從哪裡開始繪製？![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10
-          Hint Drawing.png>)
+        courseD_artist_functions8_a: |-
+          首先為創建一個正方形函式，然後嘗試創建一行正方形的函式。
+
+          你將如何使用`繪製一行正方形`函式來畫出此圖像？
+        courseD_artist_functions8_d: "要畫出一行正方形，\n\n-   重複 3 次    \n-   畫一個邊長為 **50
+          像素** 的正方形    \n-   向前跳 **100 像素**"
+        courseD_artist_functions8_b: |-
+          將這張圖片中的每一行都看成是一行 3 個正方形。那麼一共有幾行正方形，而你要從哪裡開始繪製？
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_g: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_f: 你只需要一個`移動-向前`積木，但是你需要相當多的`跳躍-向前`和/或`跳躍-向後`積木！
-        courseD_artist_functions8_a: 首先為創建一個正方形函式，然後嘗試創建一行正方形的函式。你將如何使用`繪製一行正方形`函式來畫出此圖像？
-        courseD_artist_functions8_d: 要畫出一行正方形，-   重複 3 次    -   畫一個邊長為 **50 像素** 的正方形    -   向前跳
-          **100 像素**
-        courseD_artist_functions8_b: 將這張圖片中的每一行都看成是一行 3 個正方形。那麼一共有幾行正方形，而你要從哪裡開始繪製？![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10
-          Hint Drawing.png>)
+        courseD_artist_functions8_a: |-
+          首先為創建一個正方形函式，然後嘗試創建一行正方形的函式。
+
+          你將如何使用`繪製一行正方形`函式來畫出此圖像？
+        courseD_artist_functions8_d: "要畫出一行正方形，\n\n-   重複 3 次    \n-   畫一個邊長為 **50
+          像素** 的正方形    \n-   向前跳 **100 像素**"
+        courseD_artist_functions8_b: |-
+          將這張圖片中的每一行都看成是一行 3 個正方形。那麼一共有幾行正方形，而你要從哪裡開始繪製？
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
         courseD_artist_functions8_g: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       courseE_artist_functions9:
-        courseD_artist_functions9_e: 你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_a: 這個關卡可以分為三部分：-   使用`繪製三角形`函式-   使用`繪製一行三角形`函式-   使用`繪製一行三角形`函式四次來完成繪圖
+        courseD_artist_functions9_e: |-
+          你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？
+
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          這個關卡可以分為三部分：
+
+          -   使用`繪製三角形`函式
+          -   使用`繪製一行三角形`函式
+          -   使用`繪製一行三角形`函式四次來完成繪圖
         courseD_artist_functions9_b: 繪製一行三角形 4 次，然後在繪製下一行三角形之前旋轉 60 度或 120 度來完成繪圖。
-        courseD_artist_functions9_c: 繪製一行三角形：-   重複 4 次    -   繪製三角形    -   向前跳 50
-          個像素
-        courseD_artist_functions9_d: 繪製菱形：-   重複 2 次    -   繪製一行三角形    -   旋轉 60 度    -   繪製一行三角形    -   旋轉
-          120 度
+        courseD_artist_functions9_c: "繪製一行三角形：\n\n-   重複 4 次   \n-   繪製三角形    \n-
+          \  向前跳 50 個像素"
+        courseD_artist_functions9_d: "繪製菱形：\n\n-   重複 2 次    \n-   繪製一行三角形    \n-
+          \  旋轉 60 度    \n-   繪製一行三角形    \n-   旋轉 120 度"
       courseE_artist_functions9_2018:
-        courseD_artist_functions9_e: 你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_a: 這個關卡可以分為三部分：-   使用`繪製三角形`函式-   使用`繪製一行三角形`函式-   使用`繪製一行三角形`函式四次來完成繪圖
+        courseD_artist_functions9_e: |-
+          你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？
+
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          這個關卡可以分為三部分：
+
+          -   使用`繪製三角形`函式
+          -   使用`繪製一行三角形`函式
+          -   使用`繪製一行三角形`函式四次來完成繪圖
         courseD_artist_functions9_b: 繪製一行三角形 4 次，然後在繪製下一行三角形之前旋轉 60 度或 120 度來完成繪圖。
-        courseD_artist_functions9_c: 繪製一行三角形：-   重複 4 次    -   繪製三角形    -   向前跳 50
-          個像素
-        courseD_artist_functions9_d: 繪製菱形：-   重複 2 次    -   繪製一行三角形    -   旋轉 60 度    -   繪製一行三角形    -   旋轉
-          120 度
+        courseD_artist_functions9_c: "繪製一行三角形：\n\n-   重複 4 次   \n-   繪製三角形    \n-
+          \  向前跳 50 個像素"
+        courseD_artist_functions9_d: "繪製菱形：\n\n-   重複 2 次    \n-   繪製一行三角形    \n-
+          \  旋轉 60 度    \n-   繪製一行三角形    \n-   旋轉 120 度"
       courseE_artist_functions9_2019:
-        courseD_artist_functions9_e: 你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
-        courseD_artist_functions9_a: 這個關卡可以分為三部分：-   使用`繪製三角形`函式-   使用`繪製一行三角形`函式-   使用`繪製一行三角形`函式四次來完成繪圖
+        courseD_artist_functions9_e: |-
+          你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？
+
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          這個關卡可以分為三部分：
+
+          -   使用`繪製三角形`函式
+          -   使用`繪製一行三角形`函式
+          -   使用`繪製一行三角形`函式四次來完成繪圖
         courseD_artist_functions9_b: 繪製一行三角形 4 次，然後在繪製下一行三角形之前旋轉 60 度或 120 度來完成繪圖。
-        courseD_artist_functions9_c: 繪製一行三角形：-   重複 4 次    -   繪製三角形    -   向前跳 50
-          個像素
-        courseD_artist_functions9_d: 繪製菱形：-   重複 2 次    -   繪製一行三角形    -   旋轉 60 度    -   繪製一行三角形    -   旋轉
-          120 度
+        courseD_artist_functions9_c: "繪製一行三角形：\n\n-   重複 4 次   \n-   繪製三角形    \n-
+          \  向前跳 50 個像素"
+        courseD_artist_functions9_d: "繪製菱形：\n\n-   重複 2 次    \n-   繪製一行三角形    \n-
+          \  旋轉 60 度    \n-   繪製一行三角形    \n-   旋轉 120 度"
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_a: 如果再次呼叫該函式，則可以在最後一個拐角實現相同的設計。
         courseE_artist_functions_challenge1_b: 你也可以根據需要跳到其他位置或更改整個設計！
@@ -10730,7 +11084,11 @@ zh-TW:
               <title name="XPOS">350</title>
               <title name="YPOS">200</title>
             </block>
-            </xml>這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+            </xml>
+
+          這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！
+
+          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_functions_challenge2_2018:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -10738,7 +11096,11 @@ zh-TW:
               <title name="XPOS">350</title>
               <title name="YPOS">200</title>
             </block>
-            </xml>這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+            </xml>
+
+          這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！
+
+          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_functions_challenge2_2019:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -10746,7 +11108,11 @@ zh-TW:
               <title name="XPOS">350</title>
               <title name="YPOS">200</title>
             </block>
-            </xml>這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+            </xml>
+
+          這個`跳到`積木可讓你隨時將殭屍小藝術家移動到網格上的任何像素。它的工作原理是將殭屍小藝術家向右和向下移動多個像素。這個積木總是從左上角開始計算，這也就意味著在運行該命令_之前_，殭屍小藝術家所在的位置是沒有關係的！
+
+          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_ramp8:
         courseE_artist_ramp8_a: 若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。
         courseE_artist_ramp8_b: 若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。
@@ -10794,11 +11160,17 @@ zh-TW:
         courseE_bee_concept4_c: 如果你在一朵花上，你必須採集多少遍花蜜？對於所有花朵來說，這個數字都相同嗎？
       courseE_bee_concept5:
         courseE_bee_concept5_a: 花沿著矩形路徑排布。你可以使用`重複 判斷 有沒有路`來沿著這個矩形走，即使每邊的正方形數量不同也沒關係。
-        courseE_bee_concept5_c: 這是蜜蜂可能移動的矩形路徑的圖片。![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_c: |-
+          這是蜜蜂可能移動的矩形路徑的圖片。
+
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
         courseE_bee_concept5_b: 即使你已經知道那裡沒有花朵，也可以使用`如果`積木來檢查每一個正方形上面有沒有花。
       courseE_bee_concept5_2018:
         courseE_bee_concept5_a: 花沿著矩形路徑排布。你可以使用`重複 判斷 有沒有路`來沿著這個矩形走，即使每邊的正方形數量不同也沒關係。
-        courseE_bee_concept5_c: 這是蜜蜂可能移動的矩形路徑的圖片。![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_c: |-
+          這是蜜蜂可能移動的矩形路徑的圖片。
+
+          ![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
         courseE_bee_concept5_b: 即使你已經知道那裡沒有花朵，也可以使用`如果`積木來檢查每一個正方形上面有沒有花。
       courseE_bee_functions1:
         courseE_bee_functions1_a: 請記住，左右轉向是從蜜蜂的角度來看的。
@@ -10825,7 +11197,14 @@ zh-TW:
       courseE_bee_functions5:
         courseE_bee_functions5_a: 編輯函式，以便無需更改主程式即可解決關卡。
         courseE_bee_functions5_c: 可以將`移動-向前`積木更改為`移動-向後`積木。使用此方法，而不要在路徑的盡頭掉頭！
-        courseE_bee_functions5_b: 你的函式應使蜜蜂：-   轉向-   移動-向前-   採集所有花蜜-   移動-向後-   回到蜜蜂開始的方向
+        courseE_bee_functions5_b: |-
+          你的函式應使蜜蜂：
+
+          -   轉向
+          -   移動-向前
+          -   採集所有花蜜
+          -   移動-向後
+          -   回到蜜蜂開始的方向
       courseE_bee_functions6:
         courseE_bee_functions6_a: |-
           如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。
@@ -10972,8 +11351,23 @@ zh-TW:
       courseE_farmer_ramp12g_2019:
         courseE_farmer_ramp12G_b: 使用`如果/否則`積木來指示農民需要向右轉還是向左轉。
       courseE_playLab_challenge1:
-        courseE_playLab_challenge1_a: 當玩家贏得遊戲時，你可以執行以下操作：-   使恐龍消失。-   讓松鼠停下來。-   讓松鼠和騎士高興。-   設定新的背景。-   讓騎士感謝玩家的幫助。-   讓所有角色都消失，並顯示「你贏了！」消息。
-        courseE_playLab_challenge1_b: 當玩家輸掉遊戲時，你可以採取以下操作：-   使騎士消失。-   使松鼠感到難過。-   讓恐龍說些什麼。-   設定新的背景。-   使所有角色消失，並顯示「遊戲結束」消息。
+        courseE_playLab_challenge1_a: |-
+          當玩家贏得遊戲時，你可以執行以下操作：
+
+          -   使恐龍消失。
+          -   讓松鼠停下來。
+          -   讓松鼠和騎士高興。
+          -   設定新的背景。
+          -   讓騎士感謝玩家的幫助。
+          -   讓所有角色都消失，並顯示「你贏了！」消息。
+        courseE_playLab_challenge1_b: |-
+          當玩家輸掉遊戲時，你可以採取以下操作：
+
+          -   使騎士消失。
+          -   使松鼠感到難過。
+          -   讓恐龍說些什麼。
+          -   設定新的背景。
+          -   使所有角色消失，並顯示「遊戲結束」消息。
       courseE_playLab_scaffold1:
         courseE_playLab_scaffold1_a: 可用`設定角色 1 為 ??? image`積木將角色添加到舞臺。
         courseE_playLab_scaffold1_b: 將`設定角色`積木放在`運行時`下，使你的角色出現在程式的開頭。

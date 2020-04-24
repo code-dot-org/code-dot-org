@@ -2,28 +2,28 @@ require 'test_helper'
 require 'cdo/contact_rollups/v2/pardot'
 
 class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
-  test 'add_and_update_pardot_ids inserts new mappings' do
+  setup do
     assert_equal 0, ContactRollupsPardotMemory.count
+  end
 
+  test 'download_pardot_ids inserts new mappings' do
     new_mappings = [
-      {email: "alex@rollups.com", pardot_id: 1},
-      {email: "becky@rollups.com", pardot_id: 2}
+      {'id' => '1', 'email' => 'alex@rollups.com'},
+      {'id' => '2', 'email' => 'becky@rollups.com'}
     ]
-    PardotV2.stubs(:retrieve_new_ids).once.yields(new_mappings)
+    PardotV2.stubs(:retrieve_prospects).once.yields(new_mappings)
 
-    ContactRollupsPardotMemory.add_and_update_pardot_ids
+    ContactRollupsPardotMemory.download_pardot_ids
 
     new_mappings.each do |mapping|
       refute_nil ContactRollupsPardotMemory.
-        where(email: mapping[:email], pardot_id: mapping[:pardot_id]).
+        where(email: mapping['email'], pardot_id: mapping['id'].to_i).
         where.not(pardot_id_updated_at: nil).
         first
     end
   end
 
-  test 'add_and_update_pardot_ids updates existing mappings' do
-    assert_equal 0, ContactRollupsPardotMemory.count
-
+  test 'download_pardot_ids updates existing mappings' do
     email = 'test@domain.com'
     base_time = Time.now.utc - 1.day
     create :contact_rollups_pardot_memory,
@@ -31,21 +31,39 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       pardot_id: 1,
       pardot_id_updated_at: base_time
 
-    new_pardot_id = 2
-    PardotV2.stubs(:retrieve_new_ids).
+    PardotV2.stubs(:retrieve_prospects).
       once.
-      yields([{email: email, pardot_id: new_pardot_id}])
+      yields([{'id' => '2', 'email' => email}])
 
-    ContactRollupsPardotMemory.add_and_update_pardot_ids
+    ContactRollupsPardotMemory.download_pardot_ids
 
     refute_nil ContactRollupsPardotMemory.
-      where(email: email, pardot_id: new_pardot_id).
+      where(email: email, pardot_id: 2).
       where("pardot_id_updated_at > ?", base_time).
       first
   end
 
+  test 'download_pardot_prospects' do
+    prospects = [
+      {'id' => '1', 'email' => 'alex@rollups.com', 'db_Opt_In' => 'Yes'},
+      {'id' => '2', 'email' => 'beta@rollups.com', 'db_City' => 'Seattle'},
+    ]
+    PardotV2.stubs(:retrieve_prospects).once.yields(prospects)
+
+    ContactRollupsPardotMemory.download_pardot_prospects
+
+    prospects.each do |prospect|
+      record = ContactRollupsPardotMemory.
+        find_by(email: prospect['email'], pardot_id: prospect['id'].to_i)
+
+      refute_nil record
+      refute_nil record.pardot_id_updated_at
+      refute_nil record.data_synced_at
+      assert_equal prospect.except('email', 'id'), record.data_synced
+    end
+  end
+
   test 'query_new_contacts' do
-    assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
 
     pardot_memory_records = [
@@ -55,7 +73,9 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     pardot_memory_records.each {|record| create :contact_rollups_pardot_memory, record}
 
     processed_contact_records = [
-      {email: 'alpha'}, {email: 'beta'}, {email: 'gamma'}
+      {email: 'alpha'},
+      {email: 'beta'},
+      {email: 'gamma'}
     ]
     processed_contact_records.each {|record| create :contact_rollups_processed, record}
 
@@ -71,7 +91,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
   test 'create_new_pardot_prospects' do
     assert_equal 0, ContactRollupsPardotMemory.count
-    contact = create :contact_rollups_processed, data: {'opt_in' => true}
+    contact = create :contact_rollups_processed, data: {'opt_in' => 1}
 
     PardotV2.expects(:submit_batch_request).once.returns([])
 
@@ -83,7 +103,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   end
 
   test 'query_updated_contacts' do
-    assert_equal 0, ContactRollupsPardotMemory.count
     assert_equal 0, ContactRollupsProcessed.count
 
     base_time = Time.now.utc - 2.days
@@ -118,11 +137,11 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     # 3 cases that require updating contacts
     processed_contact_records = [
       # Case 1: data_synced_at is null
-      {email: 'alpha', data: {opt_in: false}, data_updated_at: base_time},
+      {email: 'alpha', data: {opt_in: 0}, data_updated_at: base_time},
       # Case 2: data_updated_at > data_synced_at
-      {email: 'beta', data: {opt_in: false}, data_updated_at: base_time},
+      {email: 'beta', data: {opt_in: 0}, data_updated_at: base_time},
       # Case 3: pardot_id_updated_at > data_synced_at
-      {email: 'gamma', data: {opt_in: true}, data_updated_at: base_time},
+      {email: 'gamma', data: {opt_in: 1}, data_updated_at: base_time},
       # dummy records
       {email: 'delta'},
       {email: 'zeta'},
@@ -147,7 +166,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     email = 'test@domain.com'
     last_sync_time = Time.now.utc - 7.days
     create :contact_rollups_pardot_memory, email: email, data_synced: {db_Opt_In: 'No'}, data_synced_at: last_sync_time
-    create :contact_rollups_processed, email: email, data: {'opt_in' => true}
+    create :contact_rollups_processed, email: email, data: {'opt_in' => 1}
 
     PardotV2.expects(:submit_batch_request).once.returns([])
 
@@ -159,8 +178,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   end
 
   test 'save_sync_results new prospect' do
-    assert_equal 0, ContactRollupsPardotMemory.count
-
     submission = {email: 'valid@domain.com', db_Opt_In: 'Yes'}
     submitted_time = Time.now.utc
 
@@ -175,7 +192,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   end
 
   test 'save_sync_results updated prospects' do
-    assert_equal 0, ContactRollupsPardotMemory.count
     pardot_memory_records = [
       {email: 'alpha', pardot_id: 1, data_synced: nil},
       {email: 'beta', pardot_id: 2, data_synced: {db_Opt_In: 'No'}},
@@ -203,8 +219,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
   end
 
   test 'save_sync_results rejected contact' do
-    assert_equal 0, ContactRollupsPardotMemory.count
-
     submission = {email: 'invalid_email', id: nil, db_Opt_In: 'No'}
     errors = [{prospect_index: 0, error_msg: PardotHelpers::ERROR_INVALID_EMAIL}]
     submitted_time = Time.now.utc
