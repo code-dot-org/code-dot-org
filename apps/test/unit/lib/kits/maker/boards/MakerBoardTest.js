@@ -2,11 +2,8 @@
 import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import {expect} from '../../../../../util/deprecatedChai';
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
-import {testComponentsMicroBit} from './microBit/MicroBitMakerBoardTest';
-import {testComponentsCircuitPlayground} from './circuitPlayground/CircuitPlaygroundMakerBoardTest';
 
 /**
  * Interface that our board controllers must implement to be usable with
@@ -96,14 +93,6 @@ export function itImplementsTheMakerBoardInterface(
         const retVal = board.installOnInterpreter(jsInterpreter);
         expect(retVal).to.be.undefined;
       });
-
-      // Board-specific tests
-      // Test that the appropriate components are available on each board
-      if (BoardClass === CircuitPlaygroundBoard || BoardClass === FakeBoard) {
-        testComponentsCircuitPlayground(board);
-      } else if (BoardClass === MicroBitBoard) {
-        testComponentsMicroBit(board);
-      }
     });
 
     /**

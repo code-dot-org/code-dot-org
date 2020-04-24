@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import {expect} from '../../../../../../util/deprecatedChai';
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
-export function testComponentsCircuitPlayground(board) {
+export function itMakesComponentsAvailableFromInterpreter(BoardClient) {
   const CP_CONSTRUCTOR_COUNT = 13;
   const CP_COMPONENT_COUNT = 16;
   const CP_COMPONENTS = [
@@ -27,6 +27,7 @@ export function testComponentsCircuitPlayground(board) {
    */
   describe('Circuit Playground components accessible from interpreter', () => {
     let jsInterpreter;
+    let board = new BoardClient();
 
     beforeEach(() => {
       jsInterpreter = {
