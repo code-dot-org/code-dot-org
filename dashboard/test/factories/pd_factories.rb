@@ -1687,7 +1687,5 @@ FactoryGirl.define do
 
   trait :foorm_submission_metadata do
     form_version 0
-    created_at "2020-03-30 21:58:28"
-    updated_at "2020-03-30 21:58:28"
   end
 end
