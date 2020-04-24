@@ -56,6 +56,8 @@ module ShareFiltering
   end
 
   def self.find_failure(text, locale)
+    return nil unless Gatekeeper.allows('webpurify', default: true)
+
     email = RegexpUtils.find_potential_email(text)
     return ShareFailure.new(FailureType::EMAIL, email) if email
 
