@@ -3,14 +3,6 @@ import {expect} from 'chai';
 import MatrixChoiceResponses from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/matrix_choice_responses';
 import mount from 'enzyme/build/mount';
 
-/**   static propTypes = {
-    answer: PropTypes.object.isRequired,
-    question: PropTypes.object.isRequired,
-    section: PropTypes.string.isRequired,
-    questionId: PropTypes.string.isRequired,
-    facilitators: PropTypes.object
-  };*/
-
 describe('Matrix Choice Responses', () => {
   const sampleMatrixAnswers = {
     best_pd: {7: 2},
@@ -62,5 +54,55 @@ describe('Matrix Choice Responses', () => {
     expect(choiceResponses.last().props().question).to.equal(
       'sample -> I feel more prepared to teach the material covered in this workshop than before I came.'
     );
+  });
+
+  it('pulls out facilittator data correctly', () => {
+    const facilitatorMatrixData = {
+      '1': {
+        best_pd: {7: 2},
+        feel_community: {2: 1, 7: 1},
+        more_prepared: {4: 1, 5: 1}
+      },
+      '2': {
+        best_pd: {6: 1},
+        feel_community: {1: 1, 2: 1, 3: 1},
+        more_prepared: {6: 1, 7: 1},
+        suitable_my_level: {5: 2}
+      }
+    };
+
+    const matrixChoiceResponses = mount(
+      <MatrixChoiceResponses
+        answer={facilitatorMatrixData}
+        question={sampleQuestion}
+        section="facilitator"
+        questionId="overall_success"
+        facilitators={sampleFacilitators}
+      />
+    );
+
+    const choiceResponses = matrixChoiceResponses.find('ChoiceResponses');
+    expect(choiceResponses).to.have.length(4);
+
+    const expectedPdAnswers = {
+      '1': {7: 2},
+      '2': {6: 1}
+    };
+    expect(
+      choiceResponses
+        .first()
+        .props()
+        .answers.toString()
+    ).to.equal(expectedPdAnswers.toString());
+
+    const expectedSuitableAnswers = {
+      '2': {5: 2}
+    };
+    expect(
+      choiceResponses
+        .last()
+        .props()
+        .answers.toString()
+    ).to.equal(expectedSuitableAnswers.toString());
   });
 });
