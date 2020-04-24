@@ -1008,7 +1008,7 @@ describe('progressReduxTest', () => {
 
     it('returns lesson group', () => {
       const state = {
-        stages: [fakeLesson('Flex Category', 'Lesson Group', 'lesson1', 1)],
+        stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
         levelProgress: {},
         focusAreaStageIds: []
       };
@@ -1021,9 +1021,9 @@ describe('progressReduxTest', () => {
     it('returns a single group if all lessons have the same lesson group', () => {
       const state = {
         stages: [
-          fakeLesson(null, 'Lesson Group', 'lesson1', 1),
-          fakeLesson(null, 'Lesson Group', 'lesson2', 2),
-          fakeLesson(null, 'Lesson Group', 'lesson3', 3)
+          fakeLesson('Lesson Group', 'lesson1', 1),
+          fakeLesson('Lesson Group', 'lesson2', 2),
+          fakeLesson('Lesson Group', 'lesson3', 3)
         ],
         levelProgress: {},
         focusAreaStageIds: []
