@@ -30,11 +30,16 @@ export default class HideToolbarHelper extends React.Component {
     super(props);
 
     // Track whether we knew the toolbar was shown last update, so that
-    // if it disappears, we can track the event in analytics...
+    // if it disappears, we can track the event in analytics, and also write
+    // the cookie so that it isn't shown again...
     this.wasToolbarShowing = false;
 
-    // ...but only track it once.
+    // ...but only do these things once.
     this.didTrackToolbarHide = false;
+
+    if (window.location.search.indexOf('force_show_toolbar_helper') !== -1) {
+      cookies.remove(HideToolbarHelperCookieName, {path: '/'});
+    }
   }
 
   updateLayout = () => {
@@ -48,16 +53,21 @@ export default class HideToolbarHelper extends React.Component {
     // the same as document.body.offsetHeight in both cases.)
     const isToolbarShowing = window.innerHeight < document.body.offsetHeight;
 
-    // Let's track the disapearance of the toolbar, just once.
     if (
       this.wasToolbarShowing &&
       !isToolbarShowing &&
       !this.didTrackToolbarHide
     ) {
+      // Let's track the disapearance of the toolbar.
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
+
+      // And also set the cookie so the this use doesn't see the helper again
+      // for a year.
+      this.setHideHelperCookie();
 
       this.didTrackToolbarHide = true;
     }
+
     this.wasToolbarShowing = isToolbarShowing;
 
     const showHelper =
@@ -88,7 +98,7 @@ export default class HideToolbarHelper extends React.Component {
   }
 
   onClick = () => {
-    cookies.set(HideToolbarHelperCookieName, 'true', {expires: 365, path: '/'});
+    this.setHideHelperCookie();
     this.updateLayout();
 
     // Let's track the click-to-dismiss event.
@@ -99,11 +109,12 @@ export default class HideToolbarHelper extends React.Component {
     );
   };
 
-  render() {
-    const forceShowHelper =
-      window.location.search.indexOf('force_show_toolbar_helper') !== -1;
+  setHideHelperCookie() {
+    cookies.set(HideToolbarHelperCookieName, 'true', {expires: 365, path: '/'});
+  }
 
-    if (this.state.showHelper || forceShowHelper) {
+  render() {
+    if (this.state.showHelper) {
       return (
         <div className="hide_toolbar_helper" onClick={this.onClick}>
           <SafeMarkdown markdown={msg.hideToolbarHelper()} />
