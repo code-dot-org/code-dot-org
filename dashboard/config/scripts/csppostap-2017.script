@@ -12,6 +12,7 @@ version_year '2017'
 is_stable true
 project_sharing true
 
+lesson_group 'content', display_name: 'Content'
 stage 'Creating Javascript Objects'
 level 'U4L02 Student Lesson Introduction Video'
 level 'U4 - Objects - eventParameter'
@@ -104,6 +105,7 @@ stage 'Final Project'
 level 'U6 - Final Project - Student Introduction'
 level 'U6 - Final Project - Project Level'
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'Post-Course Survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles post-course survey'
 level 'Click Here!', progression: 'Participate in a longitudinal study!'

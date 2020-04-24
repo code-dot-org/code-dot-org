@@ -22,7 +22,7 @@ With schools closed and tens of millions of students at home, join Code.org each
 <h2>Let us support you</h2>
 When you <a href="#signup">sign up</a>, you'll receive: 
 <ul>
-<li>A <a href="http://code.org/codebreaknow">weekly interactive classroom</a> featuring our founder <a href="/about/leadership/hadi_partovi">Hadi Partovi</a> and special guests. Every Wednesday at 10am PT / 1pm ET - <a href="https://www.addevent.com/event/mt4771257">add to calendar</a>.</li>
+<li>A <a href="http://code.org/codebreaknow">weekly interactive classroom</a> featuring our founder <a href="/about/leadership/hadi_partovi">Hadi Partovi</a> and special guests. Every Wednesday at 10am PT / 1pm ET - <a href="https://www.addevent.com/event/hj4771258">add to calendar</a>.</li>
 <li>A <a href="#activities">new activity</a> or challenge every week.</li>
 <li>Options for beginners, experienced students, and even students without computers.</li>
 </ul>
@@ -31,12 +31,12 @@ When you <a href="#signup">sign up</a>, you'll receive:
 <p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
 <h2>Fun and foundational</h2>
 <p>Computer science is <i>super fun</i> because it is creative and playful. Whether it’s solving a puzzle, coding art, or designing an app, students prefer learning by exploring rather than memorizing. Students even rank CS their <a href="https://code.org/promote">favorite subject</a> after art, music, and dance.</p>
-<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity. Plus, <a href="https://medium.com/@codeorg/study-computer-science-students-much-more-likely-to-enroll-in-college-faca65b1476d">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</font></b>.</p>
+<p>Computer science is <a href="/promote">foundational</a> to all fields of study, but since many schools don’t offer it yet, this could be a unique chance to support your child in a fun new learning opportunity. Plus, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</font></b>.</p>
 </div>
 
 <div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
-<img src="/images/marketing/Bill-callout4.jpg" style="max-width:100%">
-<p style="margin: 10px 18px 0 8px;">Join us on Wednesday, April 22nd for a special episode with philanthropist and Microsoft co-founder, Bill Gates.</p>
+<img src="/images/marketing/episode6-callout.jpg" style="max-width:100%">
+<p style="margin: 10px 18px 0 8px;">Join us as we welcome actor, producer, and writer, Keegan-Michael Key, as well as inventor and “Father of the Internet”, Vint Cerf.</p>
 <a id="signup"></a>
 <div style="padding:8px 18px 0 8px;">
 <a href="https://code.org/codebreaknow"><button style="background-color: #ffa400;border-color: #e7e8ea;color: #FFFFFF;font-size: 16px;">Tune In</button></a>
@@ -48,9 +48,9 @@ When you <a href="#signup">sign up</a>, you'll receive:
 <div style="clear: both;margin-bottom:30px;"></div>
 <div class="col-33" style="padding:0 25px 25px 0;"><a href="https://code.org/about/leadership/hadi_partovi"><img src="/images/marketing/hadi_partovi_small.jpg" class="responsive" max-width="100%"></a></div>
 <div class="col-66">
-<p><a href="http://code.org/codebreaknow">Tune in</a> with students across the globe to join our founder <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, special guests, and Code.org's best teachers to learn different computer science concepts in a live interactive classroom. To get the classroom projects each week, <a href="#signup">sign up</a> above and <a href="https://www.addevent.com/event/mt4771257">add Code Break to your calendar.</a></p>
+<p><a href="http://code.org/codebreaknow">Tune in</a> with students across the globe to join our founder <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a>, special guests, and Code.org's best teachers to learn different computer science concepts in a live interactive classroom. To get the classroom projects each week, <a href="#signup">sign up</a> above and <a href="https://www.addevent.com/event/hj4771258">add Code Break to your calendar.</a></p>
 
-<a title="Add to Calendar" class="addeventatc" data-id="mt4771257" href="https://www.addevent.com/event/mt4771257" target="_blank" rel="nofollow">Add to Calendar</a>
+<a title="Add to Calendar" class="addeventatc" data-id="hj4771258" href="https://www.addevent.com/event/hj4771258" target="_blank" rel="nofollow">Add to Calendar</a>
 
 <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script> 
 <p style="margin-top: 15px;">All ages welcome, via phone or computer. To participate in the episode, make sure to <a href="https://zoom.us/download">download Zoom</a> beforehand. Or, you can simply tune in on YouTube to <a href="https://www.youtube.com/user/CodeOrg/live">watch the show live</a>. You can also find more resources for at home learning <a href="https://code.org/athome">here</a>.</p>
@@ -145,5 +145,29 @@ When you <a href="#signup">sign up</a>, you'll receive:
 </div>
 
 </div>
+
+<div style="clear: both;"></div>
+
+<a id="episode5"></a>
+<div style="clear: both;"></div>
+<h2>Episode 5 - Simulations & Data with Bill Gates</h2>
+<div class="col-33" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Watch the 4/22 episode</h4>
+<a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">View on Facebook</a></i></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Weekly Activity - Simulations & Data</h4>
+
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
+<a href="https://studio.code.org/s/code-break-younger/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
+<a href="https://studio.code.org/s/code-break/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+</div>
+
+</div>
+
 
 <div style="clear: both;"></div>

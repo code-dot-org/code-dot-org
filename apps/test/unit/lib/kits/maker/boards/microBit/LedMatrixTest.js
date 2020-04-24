@@ -31,8 +31,8 @@ describe('LedMatrix', function() {
       expect(displaySpy).to.have.been.calledWith(1, 2, 0);
     });
 
-    it(`allOff() calls the parent implementation`, () => {
-      led.allOff();
+    it(`clear() calls the parent implementation`, () => {
+      led.clear();
       expect(displayClearSpy).to.have.been.calledOnce;
     });
   });
@@ -50,21 +50,21 @@ describe('LedMatrix', function() {
     });
 
     it(`if LED is off, toggle triggers the parent on`, () => {
-      led.allOff();
+      led.clear();
       led.toggle(1, 2, 155);
       expect(displaySpy).to.have.been.calledOnce;
       expect(displaySpy).to.have.been.calledWith(1, 2, 155);
     });
 
     it(`if LED is on, toggle triggers the parent off`, () => {
-      led.allOff();
+      led.clear();
       led.on(2, 3, 175);
       led.toggle(2, 3, 175);
       expect(displaySpy).to.have.been.calledWith(2, 3, 0);
     });
 
     it(`if toggle is triggered twice on the same LED, on and off are called`, () => {
-      led.allOff();
+      led.clear();
       led.toggle(1, 0, 200);
       expect(displaySpy).to.have.been.calledWith(1, 0, 200);
       led.toggle(1, 0, 200);
@@ -72,18 +72,18 @@ describe('LedMatrix', function() {
     });
   });
 
-  describe('scrollString() and scrollInteger()', () => {
+  describe('scrollString() and scrollNumber()', () => {
     let led;
     let boardClient = new MicrobitStubBoard();
     let scrollStringSpy;
-    let scrollIntSpy;
+    let scrollNumSpy;
 
     before(() => {
       led = new LedMatrix({
         mb: boardClient
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
-      scrollIntSpy = sinon.spy(boardClient, 'scrollInteger');
+      scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');
     });
 
     it(`calls the parent scrollString`, () => {
@@ -92,10 +92,10 @@ describe('LedMatrix', function() {
       expect(scrollStringSpy).to.have.been.calledWith('Test');
     });
 
-    it(`calls the parent scrollInteger`, () => {
-      led.scrollInteger(1234);
-      expect(scrollIntSpy).to.have.been.calledOnce;
-      expect(scrollIntSpy).to.have.been.calledWith(1234);
+    it(`calls the parent scrollNumber`, () => {
+      led.scrollNumber(1234);
+      expect(scrollNumSpy).to.have.been.calledOnce;
+      expect(scrollNumSpy).to.have.been.calledWith(1234);
     });
   });
 });

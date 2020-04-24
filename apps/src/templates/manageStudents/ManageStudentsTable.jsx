@@ -9,6 +9,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
@@ -34,7 +35,9 @@ import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
+import PrintLoginCards from './PrintLoginCards';
 import Button from '../Button';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 const styles = {
   headerName: {
@@ -46,15 +49,26 @@ const styles = {
     width: '20%',
     float: 'left'
   },
-  buttonRow: {
-    display: 'flex'
+  button: {
+    float: 'left'
   },
   buttonWithMargin: {
-    marginRight: 5
+    marginRight: 5,
+    float: 'left'
   },
   verticalAlign: {
     display: 'flex',
     alignItems: 'center'
+  },
+  sectionCodeBox: {
+    float: 'right',
+    lineHeight: '30px'
+  },
+  sectionCode: {
+    marginLeft: 5,
+    color: color.teal,
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'copy'
   }
 };
 
@@ -143,7 +157,8 @@ class ManageStudentsTable extends Component {
         direction: 'asc',
         position: 0
       }
-    }
+    },
+    showCopiedMsg: false
   };
 
   renderTransferSuccessNotification = () => {
@@ -534,6 +549,17 @@ class ManageStudentsTable extends Component {
     return dataColumns;
   };
 
+  copySectionCode = () => {
+    const {sectionCode, studioUrlPrefix} = this.props;
+    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
+    copyToClipboard(joinLink);
+    this.setState({showCopiedMsg: true});
+    setTimeout(() => {
+      this.setState({showCopiedMsg: false});
+    }, 5000);
+    clearTimeout();
+  };
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -559,7 +585,8 @@ class ManageStudentsTable extends Component {
       loginType,
       transferStatus,
       transferData,
-      sectionId
+      sectionId,
+      sectionCode
     } = this.props;
     return (
       <div>
@@ -585,26 +612,57 @@ class ManageStudentsTable extends Component {
         )}
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
-        <div style={styles.buttonRow}>
+        <div>
           {(loginType === SectionLoginType.word ||
             loginType === SectionLoginType.picture) && (
             <div style={styles.buttonWithMargin}>
-              <AddMultipleStudents />
+              <AddMultipleStudents sectionId={this.props.sectionId} />
             </div>
           )}
           {this.isMoveStudentsEnabled() && (
-            <MoveStudents
-              studentData={this.studentDataMinusBlanks()}
-              transferData={transferData}
-              transferStatus={transferStatus}
-            />
+            <div style={styles.button}>
+              <MoveStudents
+                studentData={this.studentDataMinusBlanks()}
+                transferData={transferData}
+                transferStatus={transferStatus}
+              />
+            </div>
           )}
-          <DownloadParentLetter
-            sectionId={this.props.sectionId}
-            buttonMetricsCategory={
-              ParentLetterButtonMetricsCategory.ABOVE_TABLE
-            }
-          />
+          {(loginType === SectionLoginType.word ||
+            loginType === SectionLoginType.picture) && (
+            <div style={styles.button}>
+              <PrintLoginCards sectionId={this.props.sectionId} />
+            </div>
+          )}
+          <div style={styles.button}>
+            <DownloadParentLetter
+              sectionId={this.props.sectionId}
+              buttonMetricsCategory={
+                ParentLetterButtonMetricsCategory.ABOVE_TABLE
+              }
+            />
+          </div>
+          {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
+            <div
+              style={styles.sectionCodeBox}
+              data-for="section-code"
+              data-tip
+              onClick={this.copySectionCode}
+            >
+              {!this.state.showCopiedMsg && (
+                <span>
+                  <span>{i18n.sectionCodeWithColon()}</span>
+                  <span style={styles.sectionCode}>{sectionCode}</span>
+                  <ReactTooltip id="section-code" role="tooltip" effect="solid">
+                    <div>{i18n.copySectionCodeTooltip()}</div>
+                  </ReactTooltip>
+                </span>
+              )}
+              {this.state.showCopiedMsg && (
+                <span>{i18n.copySectionCodeSuccess()}</span>
+              )}
+            </div>
+          )}
         </div>
         <Table.Provider
           columns={columns}
