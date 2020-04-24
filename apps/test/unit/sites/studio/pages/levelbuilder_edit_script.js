@@ -23,7 +23,7 @@ describe('the level builder page init script', () => {
       locales: [['English', 'en-US'], ['French', 'fr-FR']],
       script_families: ['coursea', 'csd1'],
       version_year_options: ['2017', '2018'],
-      flex_category_map: {}
+      lesson_group_map: {}
     });
   });
 

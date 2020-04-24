@@ -40,7 +40,7 @@ export default function initPage(scriptEditorData) {
         }))
     }));
   const locales = scriptEditorData.locales;
-  const flexCategoryMap = scriptEditorData.flex_category_map;
+  const flexCategoryMap = scriptEditorData.lesson_group_map;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
