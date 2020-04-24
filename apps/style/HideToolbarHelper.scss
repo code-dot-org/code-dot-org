@@ -4,11 +4,11 @@
   position: fixed;
   top: 22px;
   left: 6%;
-  background-color: white;
-  color: black;
-  z-index: 2;
+  background-color: $white;
+  color: $black;
+  z-index: 1040;
   padding: 20px 40px 20px 20px;
-  max-width: 30%;
+  max-width: 40%;
   border-radius: 5px;
   background: #fff;
   border: 1px solid #000;
@@ -19,6 +19,7 @@
   }
 
   p {
+    font-size: 16px;
     margin-bottom: 0px;
   }
 }
