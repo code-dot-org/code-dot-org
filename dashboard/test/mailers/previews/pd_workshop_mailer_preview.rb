@@ -135,6 +135,16 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_COUNSELOR
   end
 
+  def teacher_enrollment_reminder__csp_for_returning_teachers_10_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      options: {days_before: 10}
+  end
+
+  def teacher_enrollment_reminder__csp_for_returning_teachers_3_day
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      options: {days_before: 3}
+  end
+
   def teacher_follow_up__csf_intro_with_rp
     facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
     facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
