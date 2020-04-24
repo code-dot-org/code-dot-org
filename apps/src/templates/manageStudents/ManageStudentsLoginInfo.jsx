@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -42,10 +41,16 @@ class ManageStudentsLoginInfo extends Component {
         {(loginType === SectionLoginType.word ||
           loginType === SectionLoginType.picture) && (
           <div>
-            <p style={styles.listAlign}>{i18n.setUpClassStep1WordPic()}</p>
+            {loginType === SectionLoginType.word && (
+              <p>{i18n.setUpClassWordIntro()}</p>
+            )}
+            {loginType === SectionLoginType.picture && (
+              <p>{i18n.setUpClassPicIntro()}</p>
+            )}
+            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
             {loginType === SectionLoginType.word && (
               <SafeMarkdown
-                markdown={i18n.setUpClassStep2Word({
+                markdown={i18n.setUpClassWord2({
                   printLoginCardLink: teacherDashboardUrl(
                     sectionId,
                     '/login_info'
@@ -55,7 +60,7 @@ class ManageStudentsLoginInfo extends Component {
             )}
             {loginType === SectionLoginType.picture && (
               <SafeMarkdown
-                markdown={i18n.setUpClassStep2Pic({
+                markdown={i18n.setUpClassPic2({
                   printLoginCardLink: teacherDashboardUrl(
                     sectionId,
                     '/login_info'
@@ -64,59 +69,54 @@ class ManageStudentsLoginInfo extends Component {
               />
             )}
             <SafeMarkdown
-              markdown={i18n.setUpClassStep3({
+              markdown={i18n.setUpClass3({
                 parentLetterLink: teacherDashboardUrl(
                   sectionId,
                   '/parent_letter'
                 )
               })}
             />
-            <p style={styles.listAlign}>{i18n.setUpClassStep4()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
           </div>
         )}
         {loginType === SectionLoginType.email && (
           <div>
+            <p>{i18n.setUpClassEmailIntro()}</p>
             <SafeMarkdown
-              markdown={i18n.setUpClassStep1Email({
+              markdown={i18n.setUpClassEmail1({
                 createAccountLink: `${studioUrlPrefix}/users/sign_up`
               })}
             />
             <SafeMarkdown
-              markdown={i18n.setUpClassStep2Email({
+              markdown={i18n.setUpClassEmail2({
                 joinLink: `${studioUrlPrefix}/join/${sectionCode}`
               })}
             />
             <SafeMarkdown
-              markdown={i18n.setUpClassStep3({
+              markdown={i18n.setUpClass3({
                 parentLetterLink: teacherDashboardUrl(
                   sectionId,
                   '/parent_letter'
                 )
               })}
             />
-            <p style={styles.listAlign}>{i18n.setUpClassStep4()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
-          <p>
-            {`${i18n.loginInfo_signingInDescription()} ${i18n.loginInfo_signingInGoogle()}`}
-            <br />
-            <img src={googleSignInButton} style={{maxWidth: '35%'}} />
-            <br />
-            {i18n.loginInfo_oauthSectionCodes({
-              provider: i18n.loginTypeGoogleClassroom()
-            })}
-          </p>
+          <div>
+            <p>{i18n.setUpClassGoogleIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassGoogle1()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassGoogle2()}</p>
+            <p>{i18n.setUpClassGoogleFinished()}</p>
+          </div>
         )}
         {loginType === SectionLoginType.clever && (
           <div>
-            <SafeMarkdown
-              markdown={i18n.setUpClassStep1Clever({
-                cleverLink: 'TBD'
-              })}
-            />
-            <p style={styles.listAlign}>{i18n.setUpClassStep2Clever()}</p>
-            <p style={styles.listAlign}>{i18n.setUpClassCleverFinished()}</p>
+            <p>{i18n.setUpClassCleverIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassClever1()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassClever2()}</p>
+            <p>{i18n.setUpClassCleverFinished()}</p>
           </div>
         )}
         <h2 style={styles.heading}>{i18n.loginType()}</h2>
