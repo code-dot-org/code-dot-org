@@ -519,7 +519,7 @@ class ScriptsControllerTest < ActionController::TestCase
       stage_extras_available: 'on',
       has_verified_resources: 'on',
       has_lesson_plan: 'on',
-      #is_stable: 'on', TODO: uncomment once is_stable is added
+      is_stable: 'on',
       tts: 'on',
       project_sharing: 'on',
       peer_reviews_to_complete: 1,
