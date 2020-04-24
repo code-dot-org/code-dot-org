@@ -16,6 +16,7 @@ describe('LibraryPublisher', () => {
     onPublishSuccess,
     onUnpublishSuccess,
     unpublishProjectLibrary,
+    findProfanity,
     defaultSelectedFunctions,
     sourceFunctionList,
     DEFAULT_PROPS;
@@ -58,13 +59,15 @@ describe('LibraryPublisher', () => {
     onPublishSuccess = sinon.stub();
     onUnpublishSuccess = sinon.stub();
     unpublishProjectLibrary = sinon.stub();
+    findProfanity = sinon.stub().resolves(null);
 
     DEFAULT_PROPS = {
       onPublishSuccess,
       onUnpublishSuccess,
       libraryDetails,
       libraryClientApi,
-      unpublishProjectLibrary
+      unpublishProjectLibrary,
+      findProfanity
     };
   });
 
@@ -143,44 +146,54 @@ describe('LibraryPublisher', () => {
     });
   });
 
-  describe('publish', () => {
-    let wrapper;
+  describe('validateAndPublish', () => {
+    let wrapper, server;
     const description = 'description';
     const selectedFunctions = {foo: true};
 
     beforeEach(() => {
       wrapper = shallow(<LibraryPublisher {...DEFAULT_PROPS} />);
+      server = sinon.fakeServer.create();
+      server.autoRespond = true;
     });
 
-    it('is disabled when no functions are checked', () => {
+    afterEach(() => {
+      server.restore();
+    });
+
+    const stubFindProfanityRequest = (status, serverData) => {
+      server.respondWith('POST', `/profanity/find`, [
+        status,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(serverData)
+      ]);
+    };
+
+    it('is disabled when no functions are checked', async () => {
       wrapper.setState({
         libraryDescription: description
       });
 
-      wrapper.instance().publish();
-      wrapper.update();
+      await wrapper.instance().validateAndPublish();
 
       expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
     });
 
-    it('is disabled when description is unset', () => {
+    it('is disabled when description is unset', async () => {
       wrapper.setState({
         selectedFunctions: selectedFunctions
       });
 
-      wrapper.instance().publish();
-      wrapper.update();
+      await wrapper.instance().validateAndPublish();
 
       expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
     });
 
-    it('is enabled once description and functions are set', () => {
-      wrapper.instance().publish();
-      wrapper.update();
+    it('is enabled once description and functions are set', async () => {
+      await wrapper.instance().validateAndPublish();
       expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
 
       wrapper.instance().resetErrorMessage();
-      wrapper.update();
       expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
 
       wrapper.setState({
@@ -188,13 +201,52 @@ describe('LibraryPublisher', () => {
         libraryDescription: description
       });
       wrapper.instance().resetErrorMessage();
-      wrapper.update();
 
       expect(wrapper.state().publishState).to.equal(PublishState.DEFAULT);
     });
 
+    it('does not call publish if profanity is found', async () => {
+      stubFindProfanityRequest(200, ['fart']);
+      wrapper.setState({
+        libraryDescription: description,
+        selectedFunctions: selectedFunctions
+      });
+      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+
+      await wrapper.instance().validateAndPublish();
+
+      expect(wrapper.state().publishState).to.equal(PublishState.PROFANE_INPUT);
+      expect(publishSpy.callCount).to.equal(0);
+    });
+
+    it('calls publish if no profanity is found', async () => {
+      stubFindProfanityRequest(200, null);
+      wrapper.setState({
+        libraryDescription: description,
+        selectedFunctions: selectedFunctions
+      });
+      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+
+      await wrapper.instance().validateAndPublish();
+
+      expect(publishSpy.callCount).to.equal(1);
+    });
+
+    it('calls publish if request to find profanity fails', async () => {
+      stubFindProfanityRequest(500, null);
+      wrapper.setState({
+        libraryDescription: description,
+        selectedFunctions: selectedFunctions
+      });
+      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+
+      await wrapper.instance().validateAndPublish();
+
+      expect(publishSpy.callCount).to.equal(1);
+    });
+
     describe('with valid input', () => {
-      it('sets error state when publish fails', () => {
+      it('sets error state when publish fails', async () => {
         publishSpy.callsArg(1);
         sinon.stub(console, 'warn');
         wrapper.setState({
@@ -202,8 +254,7 @@ describe('LibraryPublisher', () => {
           selectedFunctions: selectedFunctions
         });
 
-        wrapper.instance().publish();
-        wrapper.update();
+        await wrapper.instance().validateAndPublish();
 
         expect(wrapper.state().publishState).to.equal(
           PublishState.ERROR_PUBLISH
@@ -212,47 +263,48 @@ describe('LibraryPublisher', () => {
         console.warn.restore();
       });
 
-      it('calls onPublishSuccess when it succeeds', () => {
+      it('calls onPublishSuccess when it succeeds', async () => {
         publishSpy.callsArg(2);
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions
         });
 
-        wrapper.instance().publish();
-        wrapper.update();
+        await wrapper.instance().validateAndPublish();
 
         expect(onPublishSuccess.called).to.be.true;
       });
+
+      it('publishes only the selected functions and description', async () => {
+        let libraryJsonSpy = sinon.stub(libraryParser, 'createLibraryJson');
+        let description = 'description';
+        let selectedFunctions = {bar: true};
+        let newFunction = {functionName: 'bar', comment: 'comment'};
+        libraryDetails.sourceFunctionList.push(newFunction);
+        let wrapper = shallow(
+          <LibraryPublisher
+            {...DEFAULT_PROPS}
+            libraryDetails={libraryDetails}
+          />
+        );
+
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(libraryJsonSpy).to.have.been.calledWith(
+          librarySource,
+          [newFunction],
+          libraryName,
+          description
+        );
+
+        libraryParser.createLibraryJson.restore();
+      });
     });
-  });
-
-  it('publishes only the selected functions and description', () => {
-    let libraryJsonSpy = sinon.stub(libraryParser, 'createLibraryJson');
-    let description = 'description';
-    let selectedFunctions = {bar: true};
-    let newFunction = {functionName: 'bar', comment: 'comment'};
-    libraryDetails.sourceFunctionList.push(newFunction);
-    let wrapper = shallow(
-      <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
-    );
-
-    wrapper.setState({
-      libraryDescription: description,
-      selectedFunctions: selectedFunctions
-    });
-
-    wrapper.instance().publish();
-    wrapper.update();
-
-    expect(libraryJsonSpy).to.have.been.calledWith(
-      librarySource,
-      [newFunction],
-      libraryName,
-      description
-    );
-
-    libraryParser.createLibraryJson.restore();
   });
 
   describe('unpublish', () => {
@@ -279,7 +331,6 @@ describe('LibraryPublisher', () => {
       sinon.stub(console, 'warn');
       deleteSpy.callsArg(1);
       wrapper.instance().unpublish();
-      wrapper.update();
       expect(wrapper.state().publishState).to.equal(
         PublishState.ERROR_UNPUBLISH
       );

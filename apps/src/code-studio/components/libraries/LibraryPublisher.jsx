@@ -6,6 +6,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
+import {findProfanity} from './util';
 
 const styles = {
   alert: {
@@ -50,6 +51,7 @@ export const PublishState = {
   DEFAULT: 'default',
   ERROR_PUBLISH: 'error_publish',
   INVALID_INPUT: 'invalid_input',
+  PROFANE_INPUT: 'profane_input',
   ERROR_UNPUBLISH: 'error_unpublish'
 };
 
@@ -72,7 +74,8 @@ export default class LibraryPublisher extends React.Component {
       this.props.libraryDetails.libraryName
     ),
     libraryDescription: this.props.libraryDetails.libraryDescription,
-    selectedFunctions: this.props.libraryDetails.selectedFunctions
+    selectedFunctions: this.props.libraryDetails.selectedFunctions,
+    profaneWords: null
   };
 
   setLibraryName = event => {
@@ -84,22 +87,49 @@ export default class LibraryPublisher extends React.Component {
     this.setState({libraryName: sanitizedName});
   };
 
-  publish = () => {
-    const {libraryDescription, libraryName, selectedFunctions} = this.state;
-    const {librarySource, sourceFunctionList} = this.props.libraryDetails;
-    const {libraryClientApi, onPublishSuccess} = this.props;
-    const functionsToPublish = sourceFunctionList.filter(sourceFunction => {
+  getFunctionsToPublish = () => {
+    const {selectedFunctions} = this.state;
+    const {sourceFunctionList} = this.props.libraryDetails;
+    return (sourceFunctionList || []).filter(sourceFunction => {
       return selectedFunctions[sourceFunction.functionName];
     });
+  };
 
-    if (!(libraryDescription && functionsToPublish.length > 0)) {
+  validateAndPublish = async () => {
+    const {libraryDescription, libraryName} = this.state;
+
+    if (!(libraryDescription && this.getFunctionsToPublish().length > 0)) {
       this.setState({publishState: PublishState.INVALID_INPUT});
       return;
     }
 
+    // Validate library name/description input for profanity before publishing.
+    try {
+      const profaneWords = await findProfanity(
+        `${libraryName} ${libraryDescription}`
+      );
+      if (profaneWords && profaneWords.length > 0) {
+        this.setState({
+          publishState: PublishState.PROFANE_INPUT,
+          profaneWords
+        });
+      } else {
+        this.publish();
+      }
+    } catch {
+      // Still publish if request errors
+      this.publish();
+    }
+  };
+
+  publish = () => {
+    const {libraryDescription, libraryName} = this.state;
+    const {librarySource} = this.props.libraryDetails;
+    const {libraryClientApi, onPublishSuccess} = this.props;
+
     const libraryJson = libraryParser.createLibraryJson(
       librarySource,
-      functionsToPublish,
+      this.getFunctionsToPublish(),
       libraryName,
       libraryDescription
     );
@@ -228,11 +258,17 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
-    const {publishState} = this.state;
+    const {publishState, profaneWords} = this.state;
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
         errorMessage = i18n.libraryPublishInvalid();
+        break;
+      case PublishState.PROFANE_INPUT:
+        errorMessage = i18n.libraryDetailsProfanity({
+          profanityCount: profaneWords.length,
+          profaneWords: profaneWords.join(', ')
+        });
         break;
       case PublishState.ERROR_PUBLISH:
         errorMessage = i18n.libraryPublishFail();
@@ -286,7 +322,7 @@ export default class LibraryPublisher extends React.Component {
           <Button
             __useDeprecatedTag
             style={{marginTop: 20}}
-            onClick={this.publish}
+            onClick={this.validateAndPublish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
           {onShareTeacherLibrary && (
