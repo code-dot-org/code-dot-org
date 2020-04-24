@@ -147,6 +147,7 @@ class Lesson < ActiveRecord::Base
         name: localized_name,
         title: localized_title,
         flex_category: localized_category,
+        lesson_group_display_name: lesson_group&.localized_display_name,
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
