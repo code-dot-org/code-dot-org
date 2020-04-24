@@ -9,6 +9,7 @@ import videojs from 'video.js';
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 import i18n from '@cdo/locale';
+import _ from 'lodash';
 
 const TAB_NAV_ID = '.ui-tabs-nav';
 const MODAL_ID = '.video-modal';
@@ -247,10 +248,12 @@ videos.showVideoDialog = function(options, forceShowVideo) {
     notesDiv.height(availableHeight);
   }
 
+  let onResizeListener = _.throttle(onResize, 200);
+
   // a scroll listener is required for iOS due to its viewport management - it
   // scrolls the page down to show the url & nav bar but doesn't resize the page
-  window.addEventListener('scroll', onResize);
-  window.addEventListener('resize', onResize);
+  window.addEventListener('scroll', onResizeListener);
+  window.addEventListener('resize', onResizeListener);
   onResize();
 
   currentVideoOptions = options;
@@ -283,8 +286,8 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;
   videoModal.one('hidden.bs.modal', function() {
-    window.removeEventListener('resize', onResize);
-    window.removeEventListener('scroll', onResize);
+    window.removeEventListener('resize', onResizeListener);
+    window.removeEventListener('scroll', onResizeListener);
     shouldStillAdd = false;
   });
 
@@ -461,14 +464,15 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       function onResize() {
         videoPlayer.dimensions($(MODAL_ID).innerWidth(), getVideoHeight());
       }
-      window.addEventListener('resize', onResize);
-      window.addEventListener('scroll', onResize);
+      let onResizeListener = _.throttle(onResize, 200);
+      window.addEventListener('resize', onResizeListener);
+      window.addEventListener('scroll', onResizeListener);
       onResize();
 
       // Properly dispose of video.js player instance when hidden.
       $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
-        window.removeEventListener('resize', onResize);
-        window.removeEventListener('scroll', onResize);
+        window.removeEventListener('resize', onResizeListener);
+        window.removeEventListener('scroll', onResizeListener);
         videoPlayer.dispose();
       });
     }
