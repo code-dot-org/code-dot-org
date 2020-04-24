@@ -13,15 +13,6 @@ import {expect} from 'chai';
 import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
 import {mount} from 'enzyme';
 
-/**  static propTypes = {
-    questions: PropTypes.object.isRequired,
-    facilitators: PropTypes.object.isRequired,
-    thisWorkshop: PropTypes.object.isRequired,
-    workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
-    courseName: PropTypes.string,
-    workshopRollups: PropTypes.object
-  };
- */
 describe('Foorm Daily Survey Results', () => {
   beforeEach(() => {
     stubRedux();
@@ -188,8 +179,7 @@ describe('Foorm Daily Survey Results', () => {
                   },
                   q4_facilitator: {
                     '1': {
-                      row1: {column1: 1, column2: 2, column3: 1},
-                      row2: {column1: 2, column2: 1, column3: 1}
+                      row1: {column1: 1, column2: 2, column3: 1}
                     }
                   }
                 }
@@ -309,34 +299,43 @@ describe('Foorm Daily Survey Results', () => {
       </Provider>
     );
     expect(results.find('Tab')).to.have.length(3);
-    // let firstTab = results.find('Tab').first();
-    // let secondTab = results.find('Tab').at(1);
 
-    // expect(firstTab.find('ChoiceResponses')).to.have.length(3);
-    // expect(firstTab.find('TextResponses')).to.have.length(2);
+    let firstTab = results.find('Tab').first();
+    let workshopRollupTab = results.find('Tab').at(1);
+    let facilitatorRollupTab = results.find('Tab').at(2);
 
-    // expect(secondTab.find('ChoiceResponses')).to.have.length(2);
-    // expect(secondTab.find('TextResponses')).to.have.length(3);
+    let sectionResults = firstTab.find('SectionResults');
+    expect(sectionResults).to.have.length(2);
+    let generalSectionResults = sectionResults.first();
+    expect(
+      generalSectionResults.find('SingleQuestionChoiceResponses')
+    ).to.have.length(2);
+    expect(generalSectionResults.find('TextResponses')).to.have.length(1);
 
-    // expect(firstTab.find('h3').map(x => x.text())).to.deep.equal([
-    //   'General Questions'
-    // ]);
-    // expect(secondTab.find('h3').map(x => x.text())).to.deep.equal([
-    //   'General Questions',
-    //   'Facilitator Specific Questions'
-    // ]);
+    let generalMatrixResponses = generalSectionResults.find(
+      'MatrixChoiceResponses'
+    );
+    expect(generalMatrixResponses).to.have.length(1);
+    expect(
+      generalMatrixResponses.first().find('ChoiceResponses')
+    ).to.have.length(2);
 
-    // expect(
-    //   results
-    //     .find('Tab')
-    //     .at(2)
-    //     .find('SurveyRollupTable')
-    // ).to.have.length(1);
-    // expect(
-    //   results
-    //     .find('Tab')
-    //     .at(3)
-    //     .find('SurveyRollupTable')
-    // ).to.have.length(1);
+    let facilitatorSectionResults = sectionResults.last();
+    expect(
+      facilitatorSectionResults.find('SingleQuestionChoiceResponses')
+    ).to.have.length(2);
+    expect(facilitatorSectionResults.find('TextResponses')).to.have.length(1);
+    let facilitatorMatrixResponses = facilitatorSectionResults.find(
+      'MatrixChoiceResponses'
+    );
+    expect(facilitatorMatrixResponses).to.have.length(1);
+    expect(
+      facilitatorMatrixResponses.first().find('ChoiceResponses')
+    ).to.have.length(1);
+
+    expect(workshopRollupTab.find('SurveyRollupTableFoorm')).to.have.length(1);
+    expect(facilitatorRollupTab.find('SurveyRollupTableFoorm')).to.have.length(
+      1
+    );
   });
 });
