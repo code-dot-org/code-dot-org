@@ -2325,6 +2325,30 @@ endvariants
     end
     assert_equal 'Lessons must have at least one level in them.  Lesson: Lesson1.', raise.message
   end
+    
+  test 'all_descendant_levels returns nested levels of all types' do
+    script = create :script
+    lesson = create :lesson, script: script
+    level1 = create :level
+
+    # simple level
+    create :script_level, script: script, lesson: lesson, levels: [level1]
+
+    # level-swapping
+    level2 = create :level
+    level3 = create :level
+    create :script_level, script: script, lesson: lesson, levels: [level2, level3]
+
+    assert_equal [level1, level2, level3], script.levels
+    assert_equal [level1, level2, level3], script.all_descendant_levels
+
+    # TODO: make sure recognize the following nested level types
+    # levels within level groups
+    # levels within bubble choice levels
+    # lesson extras
+    # contained levels
+    # project template levels
+  end
 
   private
 
