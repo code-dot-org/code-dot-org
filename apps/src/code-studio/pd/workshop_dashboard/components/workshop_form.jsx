@@ -40,7 +40,8 @@ import {
 } from '../permission';
 import {
   Courses,
-  Subjects
+  Subjects,
+  SubjectNames
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
@@ -560,7 +561,7 @@ export class WorkshopForm extends React.Component {
       const options = Subjects[this.state.course]
         .filter(subject => {
           // Temporary: Don't show the new workshop type as an option while we're still building it.
-          if (subject === 'Workshop for Returning Teachers') {
+          if (subject === SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS) {
             return false;
           }
 

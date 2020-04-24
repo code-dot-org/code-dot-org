@@ -170,7 +170,7 @@ describe('Enroll Form', () => {
         <EnrollForm
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
-          workshop_subject="Workshop for Returning Teachers"
+          workshop_subject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
           first_name={props.first_name}
           email={props.email}
           previous_courses={props.previous_courses}

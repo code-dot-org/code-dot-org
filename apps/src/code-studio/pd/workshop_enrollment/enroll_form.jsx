@@ -22,7 +22,6 @@ const INTRO = SubjectNames.SUBJECT_CSF_101;
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 
 const CSP = 'CS Principles';
-const RETURNING_TEACHERS = 'Workshop for Returning Teachers';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -657,7 +656,8 @@ export default class EnrollForm extends React.Component {
         )}
 
         {this.props.workshop_course === CSP &&
-          this.props.workshop_subject === RETURNING_TEACHERS && (
+          this.props.workshop_subject ===
+            SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
             <div>
               <FieldGroup
                 id="years_teaching"
@@ -768,7 +768,8 @@ export default class EnrollForm extends React.Component {
 
     if (
       this.props.workshop_course === CSP &&
-      this.props.workshop_subject === RETURNING_TEACHERS
+      this.props.workshop_subject ===
+        SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS
     ) {
       requiredFields.push(
         'years_teaching',
