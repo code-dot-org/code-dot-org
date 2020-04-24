@@ -9,10 +9,9 @@ style_min: true
 <img src="/images/avatars/computer_science_teachers_association.png" style="float:right; width:20%; margin-left:25px">
 <h1 style="margin-top:25px">3rd Party Educator Resources</h1>
 <div>
-<p><strong>As of April 2020, Code.org has transitioned to displaying 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA).</strong></p> 
+<p>Below are 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA). Use the filters and search below to discover quality professional development (PD) opportunities and associated curricula for K-12 CS teachers. Click a card to view more details.</p> 
 <p>To learn more about the review process and committee, visit the CSTA's <a href="https://csteachers.org/page/quality-pd-review-process/" target="_blank">Quality PD Review Process page</a>.</p>
-<p>Use the filters and search below to discover quality professional development (PD)&nbsp;opportunities and associated curricula for K-12 CS teachers. Click a card to view more details. To view other opportunities for classrooms, afterschool clubs, and learning online, take a look at <a href="#more">More Resources</a> below (note: these are not vetted by the CSTA's committee).</p>
-&nbsp;</p>
+<p>If you’d like to explore additional opportunities for classrooms, afterschool clubs, and learning online, take a look at <a href="#more">More Resources</a> below the table of CSTA-recommended programs.</p>
 </div>
 <div style="padding:20px;background:#d3d3d3"><iframe allowtransparency="true" height="1350px" src="https://view-awesome-table.com/-M54VxHPb9772DWSoQj3/view" style="border:none;" width="100%"></iframe></div>
 
