@@ -26,6 +26,7 @@ import reducer, {
   getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 // This is some sample stage data taken a course. I truncated to the first two
 // stages, and also truncated the second stage to the first 3 levels
@@ -1087,6 +1088,70 @@ describe('progressReduxTest', () => {
       assert.equal(groups[0].levels.length, 1);
       assert.equal(groups[0].levels[0].length, 1);
       assert.equal(groups[0].levels[0][0]['bonus'], true);
+    });
+
+    it('returns lesson group if experiment is enabled', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
+      const state = {
+        stages: [fakeLesson('Flex Category', 'Lesson Group', 'lesson1', 1)],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Lesson Group');
+      experiments.isEnabled.restore();
+    });
+
+    it('returns a single group if all lessons have the same lesson group', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
+      const state = {
+        stages: [
+          fakeLesson(null, 'Lesson Group', 'lesson1', 1),
+          fakeLesson(null, 'Lesson Group', 'lesson2', 2),
+          fakeLesson(null, 'Lesson Group', 'lesson3', 3)
+        ],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Lesson Group');
+      experiments.isEnabled.restore();
+    });
+
+    it('includes bonus levels in groups if includeBonusLevels is true', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
+      const bonusLevel = {
+        ids: [2106],
+        title: 1,
+        bonus: true
+      };
+      const state = {
+        stages: [
+          {
+            lesson_group_display_name: 'Lesson Group',
+            levels: [bonusLevel],
+            lessons: []
+          }
+        ],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      let groups = groupedLessons(state, false);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].levels.length, 1);
+      assert.equal(groups[0].levels[0].length, 0);
+
+      groups = groupedLessons(state, true);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].levels.length, 1);
+      assert.equal(groups[0].levels[0].length, 1);
+      assert.equal(groups[0].levels[0][0]['bonus'], true);
+      experiments.isEnabled.restore();
     });
   });
 
