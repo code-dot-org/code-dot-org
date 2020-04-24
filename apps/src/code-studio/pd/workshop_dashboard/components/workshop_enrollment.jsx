@@ -30,8 +30,9 @@ export default class WorkshopEnrollment extends React.Component {
   static defaultProps = {activeTab: 0};
 
   shouldShowPreSurveys() {
-    return ['CS Discoveries', 'CS Principles'].includes(
-      this.props.workshopCourse
+    return (
+      ['CS Discoveries', 'CS Principles'].includes(this.props.workshopCourse) &&
+      this.props.workshopSubject !== 'Workshop for Returning Teachers'
     );
   }
 
