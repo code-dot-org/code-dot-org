@@ -992,7 +992,7 @@ describe('progressReduxTest', () => {
     // helper method that creates a fake lesson
     const fakeLesson = (categoryName, groupName, lessonName, lessonId) => ({
       flex_category: categoryName,
-      lesson_group_name: groupName,
+      lesson_group_display_name: groupName,
       name: lessonName,
       id: lessonId,
       levels: [
