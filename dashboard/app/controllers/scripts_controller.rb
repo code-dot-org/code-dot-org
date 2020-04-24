@@ -116,7 +116,7 @@ class ScriptsController < ApplicationController
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
-      flex_category_map: I18n.t('flex_category'),
+      lesson_group_map: @script.lesson_groups.map(&:localized_display_name),
       is_levelbuilder: current_user.levelbuilder?
     }
   end
