@@ -10,6 +10,7 @@ version_year '2020'
 project_sharing true
 curriculum_umbrella 'CSD'
 
+lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
 stage 'Representation Matters', flex_category: 'csd5_1'
 level 'CSD U5L01 autoSFLP_2020', named: true
 
@@ -51,6 +52,7 @@ stage 'Project - Create a Representation', flex_category: 'csd5_1'
 level 'CSD U5L08 autoSFLP_2020', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019_2020', progression: 'Reflection', assessment: true
 
+lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
 stage 'Problem Solving and Data', flex_category: 'csd5_2'
 level 'CSD U5L09 autoSFLP_2020', named: true
 
@@ -84,6 +86,7 @@ level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019_2020', progression: '
 stage 'Post-Project Test', lockable: true, flex_category: 'csd5_2'
 level 'CSD U5 test_2020', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019_2020'
 level 'csd-post-survey-levelgroup_2019_2020', assessment: true

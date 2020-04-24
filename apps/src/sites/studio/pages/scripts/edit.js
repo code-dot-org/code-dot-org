@@ -60,6 +60,7 @@ export default function initPage(scriptEditorData) {
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         hidden={valueOr(scriptData.hidden, true)}
+        isStable={scriptData.is_stable}
         loginRequired={scriptData.loginRequired}
         hideableStages={scriptData.hideable_stages}
         studentDetailProgressView={scriptData.student_detail_progress_view}

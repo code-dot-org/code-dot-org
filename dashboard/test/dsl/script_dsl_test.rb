@@ -935,4 +935,31 @@ level 'Level 3'
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
+
+  test 'serialize lessons in lesson groups in the correct order' do
+    script = create :script, hidden: true
+
+    level1 = create :maze, name: 'maze 1', level_num: 'custom'
+    level2 = create :maze, name: 'maze 2', level_num: 'custom'
+
+    lesson_group = create :lesson_group, key: 'content1', script: script, position: 1
+
+    # intentionally made in the opposite order of how we want them to show to test
+    lesson2 = create :lesson, name: 'lesson 2', script: script, lesson_group: lesson_group, absolute_position: 2
+    lesson1 = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group, absolute_position: 1
+
+    create :script_level, levels: [level1], lesson: lesson1, script: script
+    script_level2 = create :script_level, levels: [level2], lesson: lesson2, script: script
+    script_text = ScriptDSL.serialize_to_string(script_level2.script)
+    expected = <<~SCRIPT
+      lesson_group 'content1', display_name: 'Content'
+      stage 'lesson 1'
+      level 'maze 1'
+
+      stage 'lesson 2'
+      level 'maze 2'
+
+    SCRIPT
+    assert_equal expected, script_text
+  end
 end
