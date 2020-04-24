@@ -10,6 +10,7 @@ import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -47,7 +48,7 @@ const initialState = {
   // a mapping of level id to result
   levelProgress: {},
   focusAreaStageIds: [],
-  peerReviewStage: null,
+  peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   postMilestoneDisabled: false,
@@ -76,7 +77,7 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
-      peerReviewStage: action.peerReviewStage,
+      peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
@@ -117,9 +118,9 @@ export default function reducer(state = initialState, action) {
   if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
     return {
       ...state,
-      peerReviewStage: {
-        ...state.peerReviewStage,
-        levels: state.peerReviewStage.levels.map((level, index) => ({
+      peerReviewLessonInfo: {
+        ...state.peerReviewLessonInfo,
+        levels: state.peerReviewLessonInfo.levels.map((level, index) => ({
           ...level,
           ...action.peerReviewsPerformed[index]
         }))
@@ -365,7 +366,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -379,7 +380,7 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviewStage,
+  peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
@@ -445,8 +446,7 @@ export const queryUserProgress = userId => (dispatch, getState) => {
 export const hasLockableStages = state =>
   state.stages.some(stage => stage.lockable);
 
-export const hasGroups = state =>
-  Object.keys(categorizedLessons(state)).length > 1;
+export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
@@ -473,11 +473,11 @@ export const lessons = state =>
   state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
 
 /**
- * Extract lesson from our peerReviewStage if we have one. We want this to end up
+ * Extract lesson from our peerReviewLessonInfo if we have one. We want this to end up
  * having the same fields as our non-peer review stages.
  */
 const peerReviewLesson = state => ({
-  ...lessonFromStage(state.peerReviewStage),
+  ...lessonFromStage(state.peerReviewLessonInfo),
   // add some fields that are missing for this stage but required for lessonType
   id: PEER_REVIEW_ID,
   lockable: false,
@@ -485,11 +485,11 @@ const peerReviewLesson = state => ({
 });
 
 /**
- * Extract levels from our peerReviewStage, making sure the levels have the same
+ * Extract levels from our peerReviewLessonInfo, making sure the levels have the same
  * set of fields as our non-peer review levels.
  */
 const peerReviewLevels = state =>
-  state.peerReviewStage.levels.map((level, index) => ({
+  state.peerReviewLessonInfo.levels.map((level, index) => ({
     // These aren't true levels (i.e. we won't have an entry in levelProgress),
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
@@ -636,48 +636,50 @@ export function statusForLevel(level, levelProgress) {
 }
 
 /**
- * Groups lessons (aka stages) according to category.
+ * Groups lessons according to LessonGroup.
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
  * {Object[]} Object.stageLevels
  */
-export const categorizedLessons = (state, includeBonusLevels = false) => {
-  let byCategory = {};
+export const groupedLessons = (state, includeBonusLevels = false) => {
+  let byGroup = {};
 
   const allLevels = levelsByLesson(state);
 
-  state.stages.forEach((stage, index) => {
-    const category = stage.flex_category;
-    const lesson = lessonFromStageAtIndex(state, index);
-    let stageLevels = allLevels[index];
+  state.stages.forEach((lesson, index) => {
+    const group = experiments.isEnabled(experiments.LESSON_GROUP)
+      ? lesson.lesson_group_display_name
+      : lesson.flex_category;
+    const lessonAtIndex = lessonFromStageAtIndex(state, index);
+    let lessonLevels = allLevels[index];
     if (!includeBonusLevels) {
-      stageLevels = stageLevels.filter(level => !level.bonus);
+      lessonLevels = lessonLevels.filter(level => !level.bonus);
     }
 
-    byCategory[category] = byCategory[category] || {
-      category,
+    byGroup[group] = byGroup[group] || {
+      group,
       lessons: [],
       levels: []
     };
 
-    byCategory[category].lessons.push(lesson);
-    byCategory[category].levels.push(stageLevels);
+    byGroup[group].lessons.push(lessonAtIndex);
+    byGroup[group].levels.push(lessonLevels);
   });
 
-  // Peer reviews get their own category, but these levels/lessson are stored
+  // Peer reviews get their own group, but these levels/lesson are stored
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
-  if (state.peerReviewStage) {
-    byCategory['Peer Review'] = {
-      category: 'Peer Review',
+  if (state.peerReviewLessonInfo) {
+    byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
+      group: state.peerReviewLessonInfo.lesson_group_display_name,
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
   }
 
   // We want to return an array of categories
-  return _.values(byCategory);
+  return _.values(byGroup);
 };
 
 /**

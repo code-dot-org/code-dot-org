@@ -110,12 +110,12 @@ class Script < ActiveRecord::Base
       )
 
       lessons.reload
-      lessons.each do |stage|
-        lm = Plc::LearningModule.find_or_initialize_by(stage_id: stage.id)
+      lessons.each do |lesson|
+        lm = Plc::LearningModule.find_or_initialize_by(stage_id: lesson.id)
         lm.update!(
           plc_course_unit_id: unit.id,
-          name: stage.name,
-          module_type: stage.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
+          name: lesson.name,
+          module_type: lesson.lesson_group&.key || lesson.flex_category.try(:downcase) || Plc::LearningModule::REQUIRED_MODULE,
         )
       end
     end
@@ -1378,9 +1378,9 @@ class Script < ActiveRecord::Base
         }
       end
 
-      peer_review_stage = {
+      peer_review_lesson_info = {
         name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-        flex_category: 'Peer Review',
+        lesson_group_display_name: 'Peer Review',
         levels: levels,
         lockable: false
       }
@@ -1410,7 +1410,7 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
-      peerReviewStage: peer_review_stage,
+      peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
