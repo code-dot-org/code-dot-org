@@ -10,9 +10,9 @@ import {
   moveLevelToStage,
   addLevel,
   setStageLockable,
-  setFlexCategory
+  setLessonGroup
 } from './editorRedux';
-import FlexCategorySelector from './FlexCategorySelector';
+import LessonGroupSelector from './LessonGroupSelector';
 import color from '../../util/color';
 import RemoveLevelDialog from './RemoveLevelDialog';
 
@@ -66,7 +66,7 @@ export class UnconnectedStageCard extends Component {
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired,
     stageMetrics: PropTypes.object.isRequired,
-    setFlexCategory: PropTypes.func.isRequired,
+    setLessonGroup: PropTypes.func.isRequired,
     setTargetStage: PropTypes.func.isRequired,
     targetStagePos: PropTypes.number
   };
@@ -83,7 +83,7 @@ export class UnconnectedStageCard extends Component {
     initialClientY: null,
     newPosition: null,
     startingPositions: null,
-    editingFlexCategory: false,
+    editingLessonGroup: false,
     levelPosToRemove: null
   };
 
@@ -193,21 +193,21 @@ export class UnconnectedStageCard extends Component {
     this.setState({levelPosToRemove: null});
   };
 
-  handleEditFlexCategory = () => {
+  handleEditLessonGroup = () => {
     this.setState({
-      editingFlexCategory: true
+      editingLessonGroup: true
     });
   };
 
-  handleSetFlexCategory = newFlexCategory => {
-    this.setState({editingFlexCategory: false});
-    if (this.props.stage.flex_category !== newFlexCategory) {
-      this.props.setFlexCategory(this.props.stage.position, newFlexCategory);
+  handleSetLessonGroup = newLessonGroup => {
+    this.setState({editingLessonGroup: false});
+    if (this.props.stage.flex_category !== newLessonGroup) {
+      this.props.setLessonGroup(this.props.stage.position, newLessonGroup);
     }
   };
 
-  hideFlexCategorySelector = () => {
-    this.setState({editingFlexCategory: false});
+  hideLessonGroupSelector = () => {
+    this.setState({editingLessonGroup: false});
   };
 
   toggleLockable = () => {
@@ -270,7 +270,7 @@ export class UnconnectedStageCard extends Component {
           />
         ))}
         <div style={styles.bottomControls}>
-          {!this.state.editingFlexCategory && (
+          {!this.state.editingLessonGroup && (
             <span>
               <button
                 onMouseDown={this.handleAddLevel}
@@ -282,7 +282,7 @@ export class UnconnectedStageCard extends Component {
                 Add Level
               </button>
               <button
-                onMouseDown={this.handleEditFlexCategory}
+                onMouseDown={this.handleEditLessonGroup}
                 className="btn"
                 style={styles.addLevel}
                 type="button"
@@ -292,12 +292,12 @@ export class UnconnectedStageCard extends Component {
               </button>
             </span>
           )}
-          {this.state.editingFlexCategory && (
-            <FlexCategorySelector
+          {this.state.editingLessonGroup && (
+            <LessonGroupSelector
               labelText="Flex Category"
               confirmButtonText="Save"
-              onConfirm={this.handleSetFlexCategory}
-              onCancel={this.hideFlexCategorySelector}
+              onConfirm={this.handleSetLessonGroup}
+              onCancel={this.hideLessonGroupSelector}
             />
           )}
         </div>
@@ -320,6 +320,6 @@ export default connect(
     moveLevelToStage,
     addLevel,
     setStageLockable,
-    setFlexCategory
+    setLessonGroup
   }
 )(UnconnectedStageCard);

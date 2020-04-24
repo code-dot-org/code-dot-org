@@ -10,7 +10,7 @@ describe('StageCard', () => {
     moveLevelToStage,
     addLevel,
     setStageLockable,
-    setFlexCategory,
+    setLessonGroup,
     setTargetStage,
     defaultProps;
 
@@ -19,7 +19,7 @@ describe('StageCard', () => {
     moveLevelToStage = sinon.spy();
     addLevel = sinon.spy();
     setStageLockable = sinon.spy();
-    setFlexCategory = sinon.spy();
+    setLessonGroup = sinon.spy();
     setTargetStage = sinon.spy();
     defaultProps = {
       reorderLevel,
@@ -33,7 +33,7 @@ describe('StageCard', () => {
         lockable: false
       },
       stageMetrics: {},
-      setFlexCategory,
+      setLessonGroup,
       setTargetStage,
       targetStagePos: null
     };

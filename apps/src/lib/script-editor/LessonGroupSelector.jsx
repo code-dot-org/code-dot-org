@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 const styles = {
-  flexCategoryLabel: {
+  lessonGroupLabel: {
     fontSize: 14,
     verticalAlign: 'baseline',
     marginRight: 5
   },
-  flexCategorySelect: {
+  lessonGroupSelect: {
     verticalAlign: 'baseline',
     width: 550,
     margin: '0 5px 0 0'
   },
-  flexCategoryButton: {
+  lessonGroupButton: {
     verticalAlign: 'baseline',
     margin: '0 5px 0 0'
   }
 };
 
-class FlexCategorySelector extends Component {
+class LessonGroupSelector extends Component {
   static propTypes = {
     labelText: PropTypes.string.isRequired,
     confirmButtonText: PropTypes.string.isRequired,
@@ -27,50 +27,50 @@ class FlexCategorySelector extends Component {
     onCancel: PropTypes.func.isRequired,
 
     // from redux
-    flexCategoryMap: PropTypes.object.isRequired
+    lessonGroupMap: PropTypes.object.isRequired
   };
 
   state = {
-    newFlexCategory: ''
+    newLessonGroup: ''
   };
 
   handleCancel = () => {
-    this.setState({newFlexCategory: ''});
+    this.setState({newLessonGroup: ''});
     this.props.onCancel();
   };
 
-  flexCategorySelected = newFlexCategory => {
-    this.setState({newFlexCategory});
+  lessonGroupSelected = newLessonGroup => {
+    this.setState({newLessonGroup});
   };
 
   handleConfirm = () => {
-    const {newFlexCategory} = this.state;
-    this.setState({newFlexCategory: ''});
-    this.props.onConfirm(newFlexCategory);
+    const {newLessonGroup} = this.state;
+    this.setState({newLessonGroup: ''});
+    this.props.onConfirm(newLessonGroup);
   };
 
   render() {
-    const {flexCategoryMap} = this.props;
+    const {lessonGroupMap} = this.props;
     return (
       <div>
-        <span style={styles.flexCategoryLabel}>{this.props.labelText}:</span>
+        <span style={styles.lessonGroupLabel}>{this.props.labelText}:</span>
         &nbsp;
         <select
-          style={styles.flexCategorySelect}
-          onChange={e => this.flexCategorySelected(e.target.value)}
-          value={this.state.newFlexCategory}
+          style={styles.lessonGroupSelect}
+          onChange={e => this.lessonGroupSelected(e.target.value)}
+          value={this.state.newLessonGroup}
         >
           <option value="">(none): "Content"</option>
-          {Object.keys(flexCategoryMap).map(flexCategory => (
-            <option key={flexCategory} value={flexCategory}>
-              {flexCategory}: "{flexCategoryMap[flexCategory]}"
+          {Object.keys(lessonGroupMap).map(lessonGroup => (
+            <option key={lessonGroup} value={lessonGroup}>
+              {lessonGroup}: "{lessonGroupMap[lessonGroup]}"
             </option>
           ))}
         </select>
         <button
           onMouseDown={this.handleConfirm}
           className="btn btn-primary"
-          style={styles.flexCategoryButton}
+          style={styles.lessonGroupButton}
           type="button"
         >
           {this.props.confirmButtonText}
@@ -78,7 +78,7 @@ class FlexCategorySelector extends Component {
         <button
           onMouseDown={this.handleCancel}
           className="btn"
-          style={styles.flexCategoryButton}
+          style={styles.lessonGroupButton}
           type="button"
         >
           Cancel
@@ -89,5 +89,5 @@ class FlexCategorySelector extends Component {
 }
 
 export default connect(state => ({
-  flexCategoryMap: state.flexCategoryMap
-}))(FlexCategorySelector);
+  lessonGroupMap: state.lessonGroupMap
+}))(LessonGroupSelector);

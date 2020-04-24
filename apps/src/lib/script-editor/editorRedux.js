@@ -18,13 +18,13 @@ const MOVE_STAGE = 'scriptEditor/MOVE_STAGE';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_STAGE = 'scriptEditor/REMOVE_STAGE';
 const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
-const SET_FLEX_CATEGORY = 'scriptEditor/SET_FLEX_CATEGORY';
+const SET_LESSON_GROUP = 'scriptEditor/SET_LESSON_GROUP';
 
-export const init = (stages, levelKeyList, flexCategoryMap) => ({
+export const init = (stages, levelKeyList, lessonGroupMap) => ({
   type: INIT,
   stages,
   levelKeyList,
-  flexCategoryMap
+  lessonGroupMap
 });
 
 export const addGroup = (stageName, groupName) => ({
@@ -133,10 +133,10 @@ export const setStageLockable = (stage, lockable) => ({
   lockable
 });
 
-export const setFlexCategory = (stage, flexCategory) => ({
-  type: SET_FLEX_CATEGORY,
+export const setLessonGroup = (stage, lessonGroup) => ({
+  type: SET_LESSON_GROUP,
   stage,
-  flexCategory
+  lessonGroup
 });
 
 function updateStagePositions(stages) {
@@ -184,7 +184,7 @@ function stages(state = [], action) {
     }
     case ADD_GROUP: {
       newState.push({
-        flex_category: action.groupName,
+        lesson_group: action.groupName,
         name: action.stageName,
         levels: []
       });
@@ -192,11 +192,11 @@ function stages(state = [], action) {
       break;
     }
     case ADD_STAGE: {
-      const groupName = newState[action.position - 1].flex_category;
+      const groupName = newState[action.position - 1].lesson_group;
       newState.splice(action.position, 0, {
         id: state.newStageId,
         name: action.stageName,
-        flex_category: groupName,
+        lesson_group: groupName,
         levels: []
       });
       updateStagePositions(newState);
@@ -235,8 +235,8 @@ function stages(state = [], action) {
       break;
     }
     case REMOVE_GROUP: {
-      const groupName = newState[action.position - 1].flex_category;
-      newState = newState.filter(stage => stage.flex_category !== groupName);
+      const groupName = newState[action.position - 1].lesson_group;
+      newState = newState.filter(stage => stage.lesson_group !== groupName);
       updateStagePositions(newState);
       break;
     }
@@ -269,14 +269,14 @@ function stages(state = [], action) {
         break;
       }
       const index = action.position - 1;
-      const groupName = newState[index].flex_category;
-      let categories = newState.map(s => s.flex_category);
+      const groupName = newState[index].lesson_group;
+      let categories = newState.map(s => s.lesson_group);
       let start = categories.indexOf(groupName);
       let count = categories.filter(c => c === groupName).length;
       const swap = newState.splice(start, count);
-      categories = newState.map(s => s.flex_category);
+      categories = newState.map(s => s.lesson_group);
       const swappedGroupName =
-        newState[action.direction === 'up' ? index - 1 : index].flex_category;
+        newState[action.direction === 'up' ? index - 1 : index].lesson_group;
       start = categories.indexOf(swappedGroupName);
       count = categories.filter(c => c === swappedGroupName).length;
       newState.splice(
@@ -290,7 +290,7 @@ function stages(state = [], action) {
     case MOVE_STAGE: {
       const index = action.position - 1;
       const swap = action.direction === 'up' ? index - 1 : index + 1;
-      if (newState[index].flex_category === newState[swap].flex_category) {
+      if (newState[index].lesson_group === newState[swap].lesson_group) {
         const temp = newState[index];
         newState[index] = newState[swap];
         newState[swap] = temp;
@@ -298,7 +298,7 @@ function stages(state = [], action) {
       } else {
         // Move the stage into the adjacent group, without changing its
         // position relative to other stages.
-        newState[index].flex_category = newState[swap].flex_category;
+        newState[index].lesson_group = newState[swap].lesson_group;
       }
       break;
     }
@@ -306,16 +306,16 @@ function stages(state = [], action) {
       newState[action.stage - 1].lockable = action.lockable;
       break;
     }
-    case SET_FLEX_CATEGORY: {
+    case SET_LESSON_GROUP: {
       // Remove the stage from the array and update its flex category.
       const index = action.stage - 1;
       const [curStage] = newState.splice(index, 1);
-      curStage.flex_category = action.flexCategory;
+      curStage.lesson_group = action.lessonGroup;
 
-      // Insert the stage after the last stage with the same flex_category,
+      // Insert the stage after the last stage with the same lesson_group,
       // or at the end of the list if none matches.
-      const categories = newState.map(stage => stage.flex_category);
-      const lastIndex = categories.lastIndexOf(action.flexCategory);
+      const categories = newState.map(stage => stage.lesson_group);
+      const lastIndex = categories.lastIndexOf(action.lessonGroup);
       const targetIndex = lastIndex > 0 ? lastIndex + 1 : newState.length;
       newState.splice(targetIndex, 0, curStage);
 
@@ -355,10 +355,10 @@ function levelNameToIdMap(state = {}, action) {
   return state;
 }
 
-function flexCategoryMap(state = {}, action) {
+function lessonGroupMap(state = {}, action) {
   switch (action.type) {
     case INIT:
-      return action.flexCategoryMap;
+      return action.lessonGroupMap;
   }
   return state;
 }
@@ -367,5 +367,5 @@ export default {
   stages,
   levelKeyList,
   levelNameToIdMap,
-  flexCategoryMap
+  lessonGroupMap
 };

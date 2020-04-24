@@ -40,7 +40,6 @@ const stageData = [
     position: 1,
     name: 'Computational Thinking',
     title: 'Stage 1: Computational Thinking',
-    flex_category: null,
     lesson_group: null,
     lockable: false,
     levels: [
@@ -97,7 +96,6 @@ const stageData = [
     position: 2,
     name: 'Maze',
     title: 'Stage 2: Maze',
-    flex_category: null,
     lesson_group: null,
     lockable: false,
     levels: [
@@ -993,8 +991,7 @@ describe('progressReduxTest', () => {
 
   describe('groupedLessons', () => {
     // helper method that creates a fake lesson
-    const fakeLesson = (categoryName, groupName, lessonName, lessonId) => ({
-      flex_category: categoryName,
+    const fakeLesson = (groupName, lessonName, lessonId) => ({
       lesson_group_display_name: groupName,
       name: lessonName,
       id: lessonId,
@@ -1008,94 +1005,10 @@ describe('progressReduxTest', () => {
       ]
     });
 
-    it('returns a single category if all lessons have the same category', () => {
-      const state = {
-        stages: [
-          fakeLesson('Content', null, 'lesson1', 1),
-          fakeLesson('Content', null, 'lesson2', 2),
-          fakeLesson('Content', null, 'lesson3', 3)
-        ],
-        levelProgress: {},
-        focusAreaStageIds: []
-      };
-
-      const groups = groupedLessons(state);
-      assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Content');
-    });
-
-    it('groups non-adjacent lessons by category', () => {
-      const state = {
-        stages: [
-          fakeLesson('cat1', null, 'lesson1', 1),
-          fakeLesson('cat2', null, 'lesson2', 2),
-          fakeLesson('cat1', null, 'lesson3', 3)
-        ],
-        levelProgress: {},
-        focusAreaStageIds: []
-      };
-
-      const groups = groupedLessons(state);
-      assert.equal(groups.length, 2);
-      assert.equal(groups[0].group, 'cat1');
-      assert.equal(groups[1].group, 'cat2');
-      assert.equal(groups[0].levels.length, 2);
-      assert.equal(groups[1].levels.length, 1);
-      assert.deepEqual(groups[0].lessons, [
-        {
-          name: 'lesson1',
-          id: 1,
-          isFocusArea: false
-        },
-        {
-          name: 'lesson3',
-          id: 3,
-          isFocusArea: false
-        }
-      ]);
-      assert.deepEqual(groups[1].lessons, [
-        {
-          name: 'lesson2',
-          id: 2,
-          isFocusArea: false
-        }
-      ]);
-    });
-
-    it('includes bonus levels if includeBonusLevels is true', () => {
-      const bonusLevel = {
-        ids: [2106],
-        title: 1,
-        bonus: true
-      };
-      const state = {
-        stages: [
-          {
-            flex_category: 'Content',
-            levels: [bonusLevel],
-            lessons: []
-          }
-        ],
-        levelProgress: {},
-        focusAreaStageIds: []
-      };
-
-      let groups = groupedLessons(state, false);
-      assert.equal(groups.length, 1);
-      assert.equal(groups[0].levels.length, 1);
-      assert.equal(groups[0].levels[0].length, 0);
-
-      groups = groupedLessons(state, true);
-      assert.equal(groups.length, 1);
-      assert.equal(groups[0].levels.length, 1);
-      assert.equal(groups[0].levels[0].length, 1);
-      assert.equal(groups[0].levels[0][0]['bonus'], true);
-    });
-
     it('returns lesson group if experiment is enabled', () => {
       sinon.stub(experiments, 'isEnabled').returns(true);
       const state = {
-        stages: [fakeLesson('Flex Category', 'Lesson Group', 'lesson1', 1)],
+        stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
         levelProgress: {},
         focusAreaStageIds: []
       };
@@ -1110,9 +1023,9 @@ describe('progressReduxTest', () => {
       sinon.stub(experiments, 'isEnabled').returns(true);
       const state = {
         stages: [
-          fakeLesson(null, 'Lesson Group', 'lesson1', 1),
-          fakeLesson(null, 'Lesson Group', 'lesson2', 2),
-          fakeLesson(null, 'Lesson Group', 'lesson3', 3)
+          fakeLesson('Lesson Group', 'lesson1', 1),
+          fakeLesson('Lesson Group', 'lesson2', 2),
+          fakeLesson('Lesson Group', 'lesson3', 3)
         ],
         levelProgress: {},
         focusAreaStageIds: []

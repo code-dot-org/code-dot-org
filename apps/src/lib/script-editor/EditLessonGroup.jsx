@@ -8,7 +8,7 @@ import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import {NEW_LEVEL_ID, addStage, addGroup} from './editorRedux';
-import FlexCategorySelector from './FlexCategorySelector';
+import LessonGroupSelector from './LessonGroupSelector';
 
 const styles = {
   groupHeader: {
@@ -42,7 +42,7 @@ const styles = {
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
   },
-  flexCategorySelector: {
+  LessonGroupSelector: {
     height: 30,
     marginBottom: 30
   }
@@ -51,37 +51,37 @@ const styles = {
 // Replace ' with \'
 const escape = str => str.replace(/'/, "\\'");
 
-class FlexGroup extends Component {
+class EditLessonGroup extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,
     stages: PropTypes.array.isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    flexCategoryMap: PropTypes.object.isRequired
+    lessonGroupMap: PropTypes.object.isRequired
   };
 
   state = {
-    addingFlexCategory: false,
+    addingLessonGroup: false,
     // Which stage a level is currently being dragged to.
     targetStagePos: null
   };
 
-  handleAddFlexCategory = () => {
+  handleAddLessonGroup = () => {
     this.setState({
-      addingFlexCategory: true
+      addingLessonGroup: true
     });
   };
 
-  createFlexCategory = newFlexCategory => {
-    this.hideFlexCategorySelector();
+  createLessonGroup = newLessonGroup => {
+    this.hideLessonGroupSelector();
     const newStageName = prompt('Enter new stage name');
     if (newStageName) {
-      this.props.addGroup(newStageName, newFlexCategory);
+      this.props.addGroup(newStageName, newLessonGroup);
     }
   };
 
-  hideFlexCategorySelector = () => {
-    this.setState({addingFlexCategory: false});
+  hideLessonGroupSelector = () => {
+    this.setState({addingLessonGroup: false});
   };
 
   handleAddStage = position => {
@@ -106,9 +106,6 @@ class FlexGroup extends Component {
       let t = `stage '${escape(stage.name)}'`;
       if (stage.lockable) {
         t += ', lockable: true';
-      }
-      if (stage.flex_category) {
-        t += `, flex_category: '${escape(stage.flex_category)}'`;
       }
       s.push(t);
       stage.levels.forEach(level => {
@@ -176,10 +173,10 @@ class FlexGroup extends Component {
   render() {
     const groups = _.groupBy(
       this.props.stages,
-      stage => stage.flex_category || ''
+      stage => stage.lesson_group || ''
     );
     let afterStage = 1;
-    const {flexCategoryMap} = this.props;
+    const {lessonGroupMap} = this.props;
 
     return (
       <div>
@@ -187,7 +184,7 @@ class FlexGroup extends Component {
           <div key={group}>
             <div style={styles.groupHeader}>
               Flex Category: {group || '(none)'}: "
-              {flexCategoryMap[group] || 'Content'}"
+              {lessonGroupMap[group] || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
@@ -229,9 +226,9 @@ class FlexGroup extends Component {
             </div>
           </div>
         ))}
-        {!this.state.addingFlexCategory && (
+        {!this.state.addingLessonGroup && (
           <button
-            onMouseDown={this.handleAddFlexCategory}
+            onMouseDown={this.handleAddLessonGroup}
             className="btn"
             style={styles.addGroup}
             type="button"
@@ -240,13 +237,13 @@ class FlexGroup extends Component {
             Add Flex Category
           </button>
         )}
-        {this.state.addingFlexCategory && (
-          <div style={styles.flexCategorySelector}>
-            <FlexCategorySelector
+        {this.state.addingLessonGroup && (
+          <div style={styles.LessonGroupSelector}>
+            <LessonGroupSelector
               labelText="New Flex Category"
               confirmButtonText="Create"
-              onConfirm={this.createFlexCategory}
-              onCancel={this.hideFlexCategorySelector}
+              onConfirm={this.createLessonGroup}
+              onCancel={this.hideLessonGroupSelector}
             />
           </div>
         )}
@@ -264,7 +261,7 @@ export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
     stages: state.stages,
-    flexCategoryMap: state.flexCategoryMap
+    lessonGroupMap: state.lessonGroupMap
   }),
   dispatch => ({
     addGroup(stageName, groupName) {
@@ -274,4 +271,4 @@ export default connect(
       dispatch(addStage(position, stageName));
     }
   })
-)(FlexGroup);
+)(EditLessonGroup);
