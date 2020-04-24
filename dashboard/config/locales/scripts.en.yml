@@ -2295,7 +2295,13 @@ en:
               name: CSP Student Post-Course Survey
             Post-Course Survey:
               name: Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp1_1:
+              display_name: 'Chapter 1: Representing and Transmitting Information'
+            csp1_2:
+              display_name: 'Chapter 2: Inventing the Internet'
         csp2-2017:
           title: CSP Unit 2 - Digital Information ('17-'18)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -2346,7 +2352,13 @@ en:
               name: Practice PT - Encode an Experience
             Post-Course Survey:
               name: Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp2_1:
+              display_name: 'Chapter 1: Encoding and Compressing Complex Information'
+            csp2_2:
+              display_name: 'Chapter 2: Manipulating and Visualizing Data'
+            cspSurvey:
+              display_name: Survey
         csp3-2017:
           title: CSP Unit 3 - Intro to Programming ('17-'18)
           description: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.\r\n\r\nThis unit was last updated October 30th, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2393,7 +2405,13 @@ en:
               name: Please complete the CSP Mid-course survey!
             Post-Course Survey:
               name: Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1:
+              display_name: 'Chapter 1: Programming Languages and Algorithms'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csp4-2017:
           title: CSP Unit 4 - Big Data and Privacy ('17-'18)
           description: "The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
@@ -2438,7 +2456,13 @@ en:
               name: Post-Course Survey
             Student Post-Course Survey:
               name: Student Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp4_1:
+              display_name: 'Chapter 1: The World of Big Data and Encryption'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csp5-2017:
           title: CSP Unit 5 - Building Apps ('17-'18)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -2551,7 +2575,13 @@ en:
               name: Boolean Expressions and "if" Statements
             Post-Course Survey:
               name: Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp5_1:
+              display_name: 'Chapter 1: Event-Driven Programming'
+            csp5_2:
+              display_name: 'Chapter 2: Programming with Data Structures'
+            cspSurvey:
+              display_name: Survey
         csp6:
           title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
@@ -2799,7 +2829,13 @@ en:
               name: Supporting Peer Learning
             'Tool Talk: Intro to Netsim':
               name: 'Tool Talk: Intro to Netsim'
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         test-teaching-ap-cs-unit-1:
           title: Test CPS PD
           description_audience: ''
@@ -2820,7 +2856,13 @@ en:
               name: test Unit 1 practice module Foxtrot
             test Unit 1 required reading:
               name: test Unit 1 required reading
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         allthehiddenthings:
           title: All the Hidden Things!
           description: Unreleased level types for UI testing as admin
@@ -3103,7 +3145,13 @@ en:
               name: 'Lesson 2.3: Black and White Pixelation'
             Measuring Student Learning:
               name: Measuring Student Learning
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         kinderTest:
           title: ''
           description_audience: ''
@@ -3460,7 +3508,13 @@ en:
               name: Lesson 2,3
             Test stage with bubbles:
               name: Test stage with bubbles
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         csd3-2017:
           title: CSD Unit 3 - Animations and Games ('17-'18)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -3590,7 +3644,15 @@ en:
               name: CS Discoveries End of Semester Survey
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
+            csd_survey:
+              display_name: Post-Course Survey
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -3778,7 +3840,13 @@ en:
               name: CS Discoveries Pre-survey
             CS Discoveries Rapid Survey:
               name: CS Discoveries Rapid Survey
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
         csp-online-test:
           title: test space for csp online support
           description_short: This is a sample course for testing csp online pd
@@ -3857,7 +3925,13 @@ en:
               name: Processing Arrays and Functions with Return Values
             Unit 5 Overview:
               name: Unit 5 Overview
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         csp1-support:
           title: Unit 1 Online Professional Learning Course
           description_short: Teacher Professional Learning Course for CSP Unit 1
@@ -3888,7 +3962,13 @@ en:
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         basketball:
           title: Choose your team and make a basketball game
           description_audience: ''
@@ -4036,7 +4116,13 @@ en:
               description_teacher: In this lesson, students continue to use HTML to structure text on web pages, this time with headings.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  Students then start to decide how they will organize their content on their own personal web pages.  In the last level, students begin the project that they will continue to work on throughout the unit.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chapter 1: Web Content and HTML'
+            csd2_2:
+              display_name: 'Chapter 2: Styling and CSS'
+            csd_survey:
+              display_name: Post-Course Survey
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -4065,7 +4151,13 @@ en:
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         csd4-2017:
           title: CSD Unit 4 - The Design Process ('17-'18)
           description_audience: ''
@@ -4170,7 +4262,13 @@ en:
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
+            csd_survey:
+              display_name: Post-Course Survey
         minecraft:
           title: Minecraft Hour of Code Designer
           description_audience: ''
@@ -4411,7 +4509,13 @@ en:
               name: Conditionals
             'Algorithms: Dice Race':
               name: 'Algorithms: Dice Race'
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            end_of_course_project:
+              display_name: End of Course Project
+            extra_course_content:
+              display_name: Extra Course Content
         coursef-draft:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
@@ -4462,7 +4566,11 @@ en:
               name: Conditionals and Functions in Bee
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            end_of_course_project:
+              display_name: End of Course Project
         classic-hoc-impact-study:
           title: Hour of Code with Survey
           description_audience: ''
@@ -4576,7 +4684,13 @@ en:
               name: Measuring Student Learning
             AP Preparation and Support:
               name: AP Preparation and Support
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         csdgraveyard:
           title: ''
           description_audience: ''
@@ -4618,7 +4732,13 @@ en:
               name: Measuring Student Learning
             Unit 4 Overview:
               name: Unit 4 Overview
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         sciencepd4:
           title: 'CS in Science: Part 4'
           description_audience: ''
@@ -4681,7 +4801,11 @@ en:
               name: Binary
             Snowflakes:
               name: Snowflakes
-          lesson_groups: {}
+          lesson_groups:
+            end_of_course_project:
+              display_name: End of Course Project
+            content:
+              display_name: Content
         sciencepd5:
           title: 'CS in Science: Part 5'
           description_audience: ''
@@ -4725,7 +4849,13 @@ en:
               name: Discovery Learning
             Measuring Student Learning:
               name: Measuring Student Learning
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
         csp6-support:
           stage: {}
           title: AP Preparation and Resources for Teachers
@@ -4760,7 +4890,11 @@ en:
               name: Final Project
             Post-Course Survey:
               name: Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            cspSurvey:
+              display_name: Survey
         unit6-csd-draft:
           title: ''
           description_audience: ''
@@ -4858,7 +4992,11 @@ en:
               name: Accelerometer
             Functions with Parameters:
               name: Functions with Parameters
-          lesson_groups: {}
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
         workshop-gamelab:
           title: Game Lab Workshop
           description_audience: Teachers attending an in-person Game Lab Workshop
@@ -4920,7 +5058,11 @@ en:
               name: Encryption
             Structuring Data:
               name: Structuring Data
-          lesson_groups: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
@@ -5184,7 +5326,13 @@ en:
               description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            csd_survey:
+              display_name: Post-Course Survey
         csd3-draft:
           title: 'CSD Unit 3 - Programming: Animations and Games'
           description_audience: ''
@@ -5321,7 +5469,13 @@ en:
               description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
             CSD Post-Course Survey:
               name: CSD Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            csd_survey:
+              display_name: Post-Course Survey
         csd3-old:
           title: CSD Unit 3 (DEPRECATED)
           description_audience: ''
@@ -5580,7 +5734,9 @@ en:
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
           description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
         public-key-cryptography:
           stages:
             Public Key Crypto Widgets:
@@ -6011,7 +6167,15 @@ en:
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-          lesson_groups: {}
+          lesson_groups:
+            csf_e_1:
+              display_name: Ramp Up to Course E (Optional)
+            csf_e_2:
+              display_name: Course E Content
+            end_of_course_project:
+              display_name: End of Course Project
+            extra_course_content:
+              display_name: Extra Course Content
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
@@ -6121,7 +6285,13 @@ en:
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
-          lesson_groups: {}
+          lesson_groups:
+            csf_f_1:
+              display_name: Ramp Up to Course F (Optional)
+            csf_f_2:
+              display_name: Course F Content
+            end_of_course_project:
+              display_name: End of Course Project
         csdnovice:
           stages:
             Tuesday:
@@ -6195,7 +6365,13 @@ en:
           description_audience: ''
           description_short: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
           description: Lessons guide students to prepare for and complete the AP exam and Performance Tasks.
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Chapter 1: AP Tech Setup'
+            csp_ap_3:
+              display_name: 'Chapter 3: AP Create Performance Task'
+            csp_ap_2:
+              display_name: 'Chapter 2: AP Explore Performance Task'
         cspnovice:
           stages:
             Welcome:
@@ -6212,7 +6388,11 @@ en:
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         novice-view:
           stages:
             CSP Tuesday:
@@ -6244,7 +6424,11 @@ en:
           description_audience: CS Principles Facilitators in Training
           description_short: 'Deeper Learning materials for CSP facilitators in training '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 1 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp2-dlp:
           stages:
             Deeper Learning Overview:
@@ -6257,7 +6441,11 @@ en:
           description_audience: CS Principles Facilitators in Training
           description_short: 'Unit 2 Deeper Learning materials for CSP facilitators in training '
           description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp3-dlp:
           stages:
             Deeper Learning Overview:
@@ -6268,7 +6456,11 @@ en:
           description_audience: CS Principles Facilitators in Training
           description_short: 'Unit 3 Deeper Learning materials for CSP facilitators in training '
           description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp4-dlp:
           stages:
             Deeper Learning Overview:
@@ -6279,7 +6471,11 @@ en:
           description_audience: CS Principles Facilitators in Training
           description_short: 'Deeper Learning materials for CSP facilitators in training '
           description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp5-dlp:
           stages:
             Deeper Learning Overview:
@@ -6290,7 +6486,11 @@ en:
           description_audience: CS Principles Facilitators in Training
           description_short: 'Deeper Learning materials for CSP facilitators in training '
           description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd1-dlp:
           stages:
             Deeper Learning Overview:
@@ -6301,7 +6501,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd6-dlp:
           stages:
             Deeper Learning Overview:
@@ -6312,7 +6516,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: This is Unit 6 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 6 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd5-dlp:
           stages:
             Deeper Learning Overview:
@@ -6323,7 +6531,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: This is Unit 5 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 5 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd4-dlp:
           stages:
             Deeper Learning Overview:
@@ -6334,7 +6546,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: This is Unit 4 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 4 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd3-dlp:
           stages:
             Deeper Learning Overview:
@@ -6345,7 +6561,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: This is Unit 3 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 3 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd2-dlp:
           stages:
             Deeper Learning Overview:
@@ -6356,7 +6576,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: This is Unit 2 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         allthettsthings:
           stages:
             TTS:
@@ -6469,7 +6693,11 @@ en:
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            end_of_course_project:
+              display_name: End of Course Project
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -6577,7 +6805,13 @@ en:
           description_audience: ''
           description_short: Learn the basics of programming in JavaScript through a top-down design approach using classic turtle drawing.
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1:
+              display_name: 'Chapter 1: Programming Languages and Algorithms'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csd4-draft:
           stages:
             Analysis of Design:
@@ -6620,7 +6854,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
         craft17:
           stages:
             craft17 stage:
@@ -6721,7 +6959,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_e_1:
+              display_name: Ramp Up to Course E (Optional)
+            csf_e_2:
+              display_name: Course E Content
+            end_of_course_project:
+              display_name: End of Course Project
+            extra_course_content:
+              display_name: Extra Course Content
         new-d:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -6781,7 +7027,9 @@ en:
           description_audience: ''
           description_short: Alternate version of CSP Unit 3 for subgoal labels experiment group A.
           description: This unit introduces the foundational concepts of computer programming, for students in Subgoals Group A.
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1:
+              display_name: 'Chapter 1: Programming Languages and Algorithms'
         new-express:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -6866,7 +7114,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            end_of_course_project:
+              display_name: End of Course Project
         new-stages-sept-2017:
           stages:
             Loops in Artist:
@@ -6938,7 +7190,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_e_1:
+              display_name: Ramp Up to Course E (Optional)
+            csf_e_2:
+              display_name: Course E Content
+            end_of_course_project:
+              display_name: End of Course Project
+            extra_course_content:
+              display_name: Extra Course Content
         new-f:
           stages:
             'Programming: My Robotic Friends':
@@ -7003,7 +7263,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_f_1:
+              display_name: Ramp Up to Course F (Optional)
+            csf_f_2:
+              display_name: Course F Content
+            end_of_course_project:
+              display_name: End of Course Project
         csd5-old:
           stages:
             Representation Matters:
@@ -7038,7 +7304,11 @@ en:
           description_audience: ''
           description_short: Learn how people use computers to solve data problems.
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of the your choosing.
-          lesson_groups: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
@@ -7134,7 +7404,11 @@ en:
           description_audience: ''
           description_short: 2016/17 Beta version of CSD Unit 4
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -7163,7 +7437,11 @@ en:
           description_audience: ''
           description_short: Temporary staging ground for Oct. changes to csp3
           description: "This is a replica of live levels in /s/csp3 with new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1:
+              display_name: 'Chapter 1: Programming Languages and Algorithms'
+            cspAssessment:
+              display_name: Chapter Assessment
         pwc:
           stages:
             new stage:
@@ -7315,7 +7593,11 @@ en:
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Explore Performance Tasks.
           description: "These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated November, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Chapter 2: AP Explore Performance Task'
+            cspSurvey:
+              display_name: Survey
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7332,7 +7614,11 @@ en:
           description_audience: ''
           description_short: Lessons and resources to help students prepare for and complete the AP Create Performance Tasks.
           description: "These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each \"lesson\" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.\r\n\r\nThis unit was last updated December, 2017. Read more about curriculum updates at forum.code.org/c/csp/updates."
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Chapter 3: AP Create Performance Task'
+            cspSurvey:
+              display_name: Survey
         csp3-reovery:
           stages:
             Under the sea recovery:
@@ -7454,7 +7740,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_e_1:
+              display_name: Ramp Up to Course E (Optional)
+            csf_e_2:
+              display_name: Course E Content
+            end_of_course_project:
+              display_name: End of Course Project
+            extra_course_content:
+              display_name: Extra Course Content
         course-f-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -7519,7 +7813,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_f_1:
+              display_name: Ramp Up to Course F (Optional)
+            csf_f_2:
+              display_name: Course F Content
+            end_of_course_project:
+              display_name: End of Course Project
         csd6-old:
           stages:
             Computing Innovations:
@@ -7556,7 +7856,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
@@ -7629,7 +7933,13 @@ en:
           description_audience: ''
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
         textbook:
           stages:
             Test Map Level:
@@ -7755,7 +8065,13 @@ en:
               description_teacher: ''
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
         csd2-2018:
           title: CSD Unit 2 - Web Development ('18-'19)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
@@ -7820,7 +8136,13 @@ en:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chapter 1: Web Content and HTML'
+            csd2_2:
+              display_name: 'Chapter 2: Styling and CSS'
+            cspSurvey:
+              display_name: Survey
         coursea-2018:
           title: Course A (2018)
           assignment_family_title: Course A
@@ -8554,7 +8876,13 @@ en:
               name: 'Project: Prototype an Innovation'
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            cspSurvey:
+              display_name: Survey
         coursee-2018:
           title: Course E (2018)
           assignment_family_title: Course E
@@ -8683,7 +9011,15 @@ en:
               name: Pet Giraffe
             Copyright and Creativity:
               name: Digital Sharing
-          lesson_groups: {}
+          lesson_groups:
+            csf_e_1:
+              display_name: Ramp Up to Course E (Optional)
+            csf_e_2:
+              display_name: Course E Content
+            end_of_course_project:
+              display_name: End of Course Project
+            extra_course_content:
+              display_name: Extra Course Content
         coursef-2018:
           title: Course F (2018)
           assignment_family_title: Course F
@@ -8827,7 +9163,13 @@ en:
               name: Functions with Minecraft
             Conditionals in Farmer:
               name: Conditionals with the Farmer
-          lesson_groups: {}
+          lesson_groups:
+            csf_f_1:
+              display_name: Ramp Up to Course F (Optional)
+            csf_f_2:
+              display_name: Course F Content
+            end_of_course_project:
+              display_name: End of Course Project
         csp1-2018:
           title: CSP Unit 1 - The Internet ('18-'19)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -8904,7 +9246,13 @@ en:
               description_teacher: ''
             Sending Text:
               name: Sending Text
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp1_1:
+              display_name: 'Chapter 1: Representing and Transmitting Information'
+            csp1_2:
+              display_name: 'Chapter 2: Inventing the Internet'
         csd1-2018:
           title: CSD Unit 1 - Problem Solving ('18-'19)
           description: " \r\nUnit 1 is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -8955,7 +9303,13 @@ en:
               name: Apps and Storage
               description_student: 'This lesson covers the input and output aspects of computers in a context that is relevant and familiar to students: apps. The class evaluates various web applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the outputs they provide to users. The class concludes with observations of these apps as well as a teacher led discussion about the impact of apps on society. '
               description_teacher: 'This lesson reviews the input, output, storage, and processing aspects of a computer in a context that is relevant and familiar to students: apps. In pairs, students evaluate smartphone applications to analyze the specific problems that they were designed to solve, the inputs that they need to work, and the processing that turns those inputs into the desired output, and what information they would want to store for later. The class concludes with a discussion that connects the lesson to apps students are more familiar with. '
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
         csd4-2018:
           title: CSD Unit 4 - The Design Process ('18-'19)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -9028,7 +9382,13 @@ en:
               description_teacher: At this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
+            cspSurvey:
+              display_name: Survey
         csd5-2018:
           title: CSD Unit 5 - Data and Society ('18-'19)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -9097,7 +9457,13 @@ en:
               description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
         csp2-2018:
           title: CSP Unit 2 - Digital Information ('18-'19)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -9180,7 +9546,11 @@ en:
               name: Lossy vs Lossless Compression
             Unit 2 Assessment:
               name: Unit 2 Assessment
-          lesson_groups: {}
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+            cspAssessment:
+              display_name: Chapter Assessment
         csp3-2018:
           title: CSP Unit 3 - Intro to Programming ('18-'19)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9241,7 +9611,13 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Intro to Programming'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -9264,7 +9640,11 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Chapter 2: AP Explore Performance Task'
+            cspSurvey:
+              display_name: Survey
         csp-create-2018:
           title: Create - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -9285,7 +9665,11 @@ en:
               description_teacher: ''
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Chapter 3: AP Create Performance Task'
+            cspSurvey:
+              display_name: Survey
         csp4-2018:
           title: CSP Unit 4 - Big Data and Privacy ('18-'19)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -9346,7 +9730,13 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big Data and Privacy'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csp5-2018:
           title: CSP Unit 5 - Building Apps ('18-'19)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -9453,7 +9843,13 @@ en:
               name: Mid-Year Survey
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp5_1:
+              display_name: 'Chapter 1: Event-Driven Programming'
+            csp5_2:
+              display_name: 'Chapter 2: Programming with Data Structures'
+            cspSurvey:
+              display_name: Survey
         csppostap-2018:
           title: Post AP - Data Tools ('18-'19)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
@@ -9520,7 +9916,13 @@ en:
               name: Chapter 1 Assessment
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
-          lesson_groups: {}
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Chapter 1: Manipulating and Visualizing Data'
+            csp_postap_2:
+              display_name: 'Chapter 2: Apps and Databases'
+            cspSurvey:
+              display_name: Survey
         spritelab:
           stages:
             'Fish Tank: Creating Sprites':
@@ -9550,7 +9952,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9561,7 +9967,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 2 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9572,7 +9982,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9585,7 +9999,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9596,7 +10014,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9609,7 +10031,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Discoveries facilitators in training '
           description: 'This is Unit 6 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 6 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9620,7 +10046,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 1 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp2-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9631,7 +10061,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 2 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9642,7 +10076,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 3 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9655,7 +10093,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 4 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9666,7 +10108,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of Unit 5 of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9681,7 +10127,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is the Explore AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Explore AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9692,7 +10142,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Deeper Learning materials for CS Principles facilitators in training '
           description: 'This is the Create AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Create AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd-post-survey:
           stages:
             CSD post-course survey:
@@ -9701,7 +10155,9 @@ en:
           description_audience: CSD Students
           description_short: CSD Student Post-Course Survey
           description: Welcome to the Code.org CS Discoveries Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
-          lesson_groups: {}
+          lesson_groups:
+            csd_survey:
+              display_name: Post-Course Survey
         csd-novice-18:
           stages:
             Novice Reflections Overview:
@@ -9734,7 +10190,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Discoveries facilitators in training '
           description: This is the set of novice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -9761,7 +10221,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Discoveries facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Discoveries facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp-novice-18:
           stages:
             Novice Reflection Overview:
@@ -9788,7 +10252,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Novice reflection materials for CS Principles facilitators in training '
           description: This is the set of novice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csp-apprentice-18:
           stages:
             Novice Reflection Overview:
@@ -9815,7 +10283,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2018-2019
           description_short: 'Apprentice reflection materials for CS Principles facilitators in training '
           description: This is the set of apprentice reflections for Code.org CS Principles facilitators in training during their 5-day summer workshop. Here you will find reflection prompts for each day of your in-person 5-day summer workshop. This questions will be the foundation of work we do at the Facilitator Training Weekend.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         pre-express-2018:
           title: Pre-reader Express (2018)
           assignment_family_title: Pre-reader Express
@@ -9939,7 +10411,11 @@ en:
           description_audience: Facilitators in Training
           description_short: FIT Training Course
           description: To be used to demonstrate how the PLC courses work.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         spritelab-simple:
           title: Introduction to Sprite Lab (EE)
           description: This is a pilot course for Code.org's new Sprite Lab tool for Courses E and F
@@ -10124,7 +10600,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         dance-extras:
           stages:
             Dance Party - Go Further:
@@ -10306,7 +10790,23 @@ en:
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
               description_teacher: By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.
-          lesson_groups: {}
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_variables:
+              display_name: Variables
+            csf_data:
+              display_name: Data
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            end_of_course_project:
+              display_name: End of Course Project
         dance-low:
           stages:
             Dance Party:
@@ -10406,7 +10906,21 @@ en:
               name: Dance Party
               description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
               description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
+            end_of_course_project:
+              display_name: End of Course Project
         coursee-2019:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -10577,7 +11091,21 @@ en:
               name: Designing for Accessibility
             Songwriting:
               name: Songwriting
-          lesson_groups: {}
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            end_of_course_project:
+              display_name: End of Course Project
         express-2019:
           title: Express Course (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -10782,7 +11310,23 @@ en:
               name: 'Conditionals in Minecraft: Voyage Aquatic'
             Concept Practice with Minecraft:
               name: Concept Practice with Minecraft
-          lesson_groups: {}
+          lesson_groups:
+            csf_warmup:
+              display_name: Warm-Up
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Sprites
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -10827,7 +11371,13 @@ en:
               description_teacher: To conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.
             Post-Project Test:
               name: Post-Project Test
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
         andrea-test:
           stages:
             new stage:
@@ -10870,7 +11420,11 @@ en:
           description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
           description: longer description on my attempt to create a course....   stilling wondering where overview, content came from....
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dance-extras-gallery:
           stages:
             Dance Party - Go Further:
@@ -10974,7 +11528,21 @@ en:
               name: Picturing Data
               description_student: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
               description_teacher: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: End of Course Project
         csp-mid-survey:
           stages:
             CSP Mid-year survey:
@@ -10983,7 +11551,9 @@ en:
           description_audience: CSP Students
           description_short: CSP Student Mid-year Survey
           description: Welcome to the Code.org CS Principles Mid-Year Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
         gamelab:
           stages:
             Start and End Screens:
@@ -11065,7 +11635,15 @@ en:
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
         courseb-2019:
           title: Course B (2019)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -11148,7 +11726,17 @@ en:
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_events:
+              display_name: Events
         pre-express-2019:
           title: Pre-reader Express (2019)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -11231,7 +11819,13 @@ en:
               name: A Royal Battle with Events
             Ocean Scene with Loops:
               name: Ocean Scene with Loops
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -11319,7 +11913,13 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chapter 1: Web Content and HTML'
+            csd2_2:
+              display_name: 'Chapter 2: Styling and CSS'
+            cspSurvey:
+              display_name: Survey
         csd3-2019:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -11427,7 +12027,13 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
         csd4-2019:
           title: CSD Unit 4 - The Design Process ('19-'20)
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -11502,7 +12108,15 @@ en:
               name: CS Discoveries Post Course survey
             Post-Project Test:
               name: Post-Project Test
-          lesson_groups: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
         csd5-2019:
           title: CSD Unit 5 - Data and Society ('19-'20)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -11573,7 +12187,13 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
         csd6-2019:
           title: CSD Unit 6 - Physical Computing ('19-'20)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -11648,7 +12268,13 @@ en:
               name: Post-Project Test
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            cspSurvey:
+              display_name: Survey
         csp4-pilot:
           stages:
             Variables Explore:
@@ -11729,7 +12355,19 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
+            required:
+              display_name: Overview
+            optional_stages:
+              display_name: Optional Stages
         csp1-2019:
           title: CSP Unit 1 - The Internet ('19-'20)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
@@ -11804,7 +12442,13 @@ en:
               name: Unit 1 Chapter 2 Assessment
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp1_1:
+              display_name: 'Chapter 1: Representing and Transmitting Information'
+            csp1_2:
+              display_name: 'Chapter 2: Inventing the Internet'
         csp2-2019:
           title: CSP Unit 2 - Digital Information ('19-'20)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -11841,7 +12485,13 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csp3-2019:
           title: CSP Unit 3 - Intro to Programming ('19-'20)
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -11898,7 +12548,13 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Intro to Programming'
+            cspAssessment:
+              display_name: Chapter Assessment
+            cspSurvey:
+              display_name: Survey
         csp4-2019:
           title: CSP Unit 4 - Big Data and Privacy ('19-'20)
           description: The data-rich world we live in introduces many complex questions related to public policy, law, ethics and societal impact. The goals of this unit are to develop a well-rounded and balanced view about data in the world, including the positive and negative effects of it, and to understand the basics of how and why modern encryption works.
@@ -11957,7 +12613,15 @@ en:
               name: 'Optional: Data Questions'
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp4_1_2018:
+              display_name: 'Unit 4: Big Data and Privacy'
+            cspAssessment:
+              display_name: Chapter Assessment
+            optional:
+              display_name: Optional
+            cspSurvey:
+              display_name: Survey
         csp5-2019:
           title: CSP Unit 5 - Building Apps ('19-'20)
           description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -12058,7 +12722,13 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp5_1:
+              display_name: 'Chapter 1: Event-Driven Programming'
+            csp5_2:
+              display_name: 'Chapter 2: Programming with Data Structures'
+            cspSurvey:
+              display_name: Survey
         csp-explore-2019:
           title: Explore - AP Performance Task Prep ('19-'20)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -12083,7 +12753,11 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_2:
+              display_name: 'Chapter 2: AP Explore Performance Task'
+            cspSurvey:
+              display_name: Survey
         csp-create-2019:
           title: Create - AP Performance Task Prep ('19-'20)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Create Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the first item in the first lesson is not related to the Create PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -12104,7 +12778,11 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp_ap_3:
+              display_name: 'Chapter 3: AP Create Performance Task'
+            cspSurvey:
+              display_name: Survey
         csppostap-2019:
           title: Post AP - Data Tools ('19-'20)
           description: "In the first chapter of this unit students develop skills interpreting visual data and using spreadsheet and visualization tools to create their own digital artifacts.  Through an ongoing project  - the “class data tracker” - students learn how to collect and clean data, and to use a few common tools for computing aggregations and creating visualizations. \r\n\r\nThe second chapter explores the importance of data within apps. App Lab has a number of tools that allow you to collect and use data in your apps. The second chapter provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project."
@@ -12181,7 +12859,13 @@ en:
               description_teacher: ''
             CS Principles Post Course survey:
               name: CS Principles Post Course survey
-          lesson_groups: {}
+          lesson_groups:
+            csp_postap_1:
+              display_name: 'Chapter 1: Manipulating and Visualizing Data'
+            csp_postap_2:
+              display_name: 'Chapter 2: Apps and Databases'
+            cspSurvey:
+              display_name: Survey
         csp1-pilot:
           stages:
             new stage:
@@ -12270,7 +12954,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            required:
+              display_name: Overview
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -12391,7 +13079,21 @@ en:
           description_audience: 4th grade
           description_short: This module focuses on the 4th grade's science and social study standards. In science, they view life standards that encompass habitats, ecosystems, native species, and invasive species. In social studies, students contemplate the branches of Florida's government and how everyday citizens can impact local and state policies.
           description: This module focuses on the 4th grade's science and social study standards. In science, they view life standards that encompass habitats, ecosystems, native species, and invasive species. In social studies, students contemplate the branches of Florida's government and how everyday citizens can impact local and state policies.
-          lesson_groups: {}
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_sprites:
+              display_name: Sprites
+            time4cs_c1:
+              display_name: 'Collection 1: The Everglades & its Ecosystems'
+            time4cs_c2:
+              display_name: 'Collection 2: Food Chains (in the Everglades)'
+            time4cs_c3:
+              display_name: 'Collection 3: Native Species (in the Everglades)'
+            time4cs_c4:
+              display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
+            time4cs_c5:
+              display_name: 'Collection 5: Citizens Take Action'
         csp1-pilot-staging:
           stages:
             Variables Explore:
@@ -12436,7 +13138,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp2-pilot-staging:
           stages:
             Variables Explore:
@@ -12481,7 +13191,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp3-pilot-staging:
           stages:
             Variables Explore:
@@ -12603,7 +13321,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp5-pilot-staging:
           stages:
             Variables Explore:
@@ -12694,7 +13420,17 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            csp_traversals:
+              display_name: Traversals
+            csp_project:
+              display_name: Project
+            csp_libraries:
+              display_name: Libraries
         csp6-pilot-staging:
           stages:
             Variables Explore:
@@ -12739,7 +13475,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp7-pilot-staging:
           stages:
             new stage:
@@ -12812,7 +13556,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
         csp8-pilot-staging:
           stages:
             Variables Explore:
@@ -12857,7 +13605,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp9-pilot-staging:
           stages:
             Variables Explore:
@@ -12902,7 +13658,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp10-pilot-staging:
           stages:
             Variables Explore:
@@ -12947,7 +13711,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         pluralsight:
           stages:
             Pluralsight LevelGroup:
@@ -12977,7 +13749,9 @@ en:
           description_audience: CSD Students
           description_short: CSD Student Post-Course Survey 2018
           description: "The CS Discoveries Post-Course Survey is an important tool we use to get feedback from you and make improvements to the course. \r\n The survey is private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration."
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
         csp-post-survey-2018:
           stages:
             CSP post-course survey:
@@ -12986,7 +13760,9 @@ en:
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
           description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
         csp5-pilot:
           stages:
             new stage:
@@ -13085,7 +13861,19 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            csp_traversals:
+              display_name: Traversals
+            csp_project:
+              display_name: Project
+            required:
+              display_name: Overview
+            optional_stages:
+              display_name: Optional Stages
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -13104,7 +13892,11 @@ en:
           description_audience: 6 - 12 Novice Facilitators in Training
           description_short: 'Novice reflection materials for 2019 facilitators in training '
           description: This is the set of novice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop.
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd-test-saving-state:
           stages:
             csd digital unplugged WIAC L1:
@@ -13140,7 +13932,11 @@ en:
           description_audience: 6 - 12 Apprentice Facilitators in Training
           description_short: 'Apprentice reflection materials for 2019 facilitators in training '
           description: This is the set of apprentice reflections for Code.org facilitators in training during their 5-day summer workshop. Here, you will find reflection prompts for each day of your in-person 5-day summer workshop. These questions will be the foundation of work we do at the Facilitator Training Workshop
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd-sample-online:
           stages:
             What is a Computer? - sample progression:
@@ -13198,7 +13994,13 @@ en:
               name: Post-Project Test
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
         csd2-pilot:
           title: CSD Unit 2 - Web Development (Pilot Version)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging and commenting.  By the end of the unit, you’ll have a personal website that you can publish to the Internet."
@@ -13301,7 +14103,13 @@ en:
               name: Peer Review and Final Touches
             Project - Website for a Purpose:
               name: Project - Website for a Purpose
-          lesson_groups: {}
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chapter 1: Web Content and HTML'
+            csd2_2:
+              display_name: 'Chapter 2: Styling and CSS'
+            cspSurvey:
+              display_name: Survey
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games (Pilot Version)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -13421,7 +14229,13 @@ en:
               name: Text and Captioned Scenes
             Sprite Properties:
               name: Sprite Properties
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -13487,7 +14301,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -13506,7 +14324,13 @@ en:
           description_audience: Tuổi 5-10
           description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
           description: 'Khoa Học Máy Tính (Computer Science) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
         dlp19-csd-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -13519,7 +14343,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: Background information and practice prompt for FiT workshop
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csp-mod-fit:
           stages:
             Deeper Learning Overview:
@@ -13532,7 +14360,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         pl-csd-bugs:
           stages:
             CSD Workshop 1 Bugs:
@@ -13560,7 +14392,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: Academic Year Workshop 1
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csd-mod-w2:
           stages:
             new stage:
@@ -13577,7 +14413,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csd-mod-w3:
           stages:
             CS Discoveries Deeper Learning Module 3:
@@ -13592,7 +14432,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csd-mod-w4:
           stages:
             CS Discoveries Deeper Learning Module 4:
@@ -13607,7 +14451,11 @@ en:
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csp-mod-w1:
           stages:
             CS Principles Deeper Learning Module 1:
@@ -13622,7 +14470,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csp-mod-w2:
           stages:
             CS Principles Deeper Learning Module 2:
@@ -13637,7 +14489,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csp-mod-w3:
           stages:
             CS Principles Deeper Learning Module 3:
@@ -13652,7 +14508,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         dlp19-csp-mod-w4:
           stages:
             CS Principles Deeper Learning Module 4:
@@ -13667,7 +14527,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            required:
+              display_name: Overview
+            content:
+              display_name: Content
         csd-pilot:
           stages:
             Pilot Information:
@@ -13753,7 +14617,9 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
         csp2-pilot:
           stages:
             new stage:
@@ -13798,7 +14664,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
         denny-science:
           stages:
             Earthquake Detector:
@@ -13863,7 +14733,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
         denny-science-8:
           title: Collision Detector
           description: ''
@@ -13999,7 +14873,15 @@ en:
               name: Reviewing your reflections
             End of Course projects:
               name: End of Course projects
-          lesson_groups: {}
+          lesson_groups:
+            k5_getting_started:
+              display_name: Getting Started
+            k5_basic_concepts:
+              display_name: Basic Coding Concepts and Teaching Practices
+            k5_diving_deeper:
+              display_name: 'Diving Deeper: Courses E and F'
+            k5_next_steps:
+              display_name: Next Steps
         dance-extras-2019:
           title: Keep On Dancing (2019)
           description: Go beyond the first hour with extended project ideas.
@@ -14100,7 +14982,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
@@ -14161,7 +15051,17 @@ en:
           description_audience: ''
           description_short: ''
           description: Description for the unit goes here
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_conditionals:
+              display_name: Conditionals
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            end_of_course_project:
+              display_name: End of Course Project
         time4cs-experiment-unit-2:
           stages:
             Introduction to the Problem:
@@ -14220,7 +15120,17 @@ en:
           description_audience: ''
           description_short: "[Add description]"
           description: "[Add description]"
-          lesson_groups: {}
+          lesson_groups:
+            time4cs_c1:
+              display_name: 'Collection 1: The Everglades & its Ecosystems'
+            time4cs_c2:
+              display_name: 'Collection 2: Food Chains (in the Everglades)'
+            time4cs_c3:
+              display_name: 'Collection 3: Native Species (in the Everglades)'
+            time4cs_c4:
+              display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
+            time4cs_c5:
+              display_name: 'Collection 5: Citizens Take Action'
         time4cs-control-unit-1:
           title: Time4CS Control Unit 1
           description: ''
@@ -14275,7 +15185,23 @@ en:
               name: Conditionals Review
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_events:
+              display_name: Events
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_impacts:
+              display_name: Impacts of Computing
+            ramp_up:
+              display_name: Ramp-Up
         time4cs-experiment-unit-1:
           title: Time4CS Experiment Unit 1
           description: ''
@@ -14330,7 +15256,23 @@ en:
               name: Conditionals Review
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_events:
+              display_name: Events
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_impacts:
+              display_name: Impacts of Computing
+            ramp_up:
+              display_name: Ramp-Up
         csp7-pilot:
           stages:
             Parameters and Returns Explore:
@@ -14391,7 +15333,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
+            required:
+              display_name: Overview
+            optional_stages:
+              display_name: Optional Stages
         csp8-pilot:
           stages:
             new stage:
@@ -14443,7 +15393,15 @@ en:
           description_audience: ''
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
-          lesson_groups: {}
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
         csp5-2020:
           stages:
             Lists Explore:
@@ -14490,7 +15448,15 @@ en:
           description_audience: ''
           description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
-          lesson_groups: {}
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            csp_traversals:
+              display_name: Traversals
+            csp_project:
+              display_name: Project
         csp7-2020:
           stages:
             Parameters and Return Explore:
@@ -14527,7 +15493,11 @@ en:
           description_audience: ''
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
-          lesson_groups: {}
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
         csd2-projects-temp:
           stages:
             HTML  Project:
@@ -14676,7 +15646,13 @@ en:
               name: Your Web Page - Prepare
               description_student: "**Question of the Day: What do we need to do to prepare to build our web pages?**\r\n\r\nIn this lesson, the class engages in the \"prepare\" stage of the problem solving process, deciding what elements and style their web pages will have.  They review the different HTML, CSS, and digital citizenship guidelines, then design and plan their pages, downloading and documenting the images they will need. Afterwards, they reflect on how their plan will ensure that the website does what it is designed to do."
               description_teacher: "**Question of the Day: What do we need to do to prepare to build our web pages?**\r\n\r\nIn this lesson, students engage in the \"prepare\" stage of the problem solving process, deciding what elements and style their web page will have.  They begin by reviewing the different HTML, CSS, and digital citizenship guidelines they will need in building their web pages.  They then describe and sketch their pages, listing the tags and styles they will use to get the layout and design that they decided on.  Then then move online to find and download the images they will need for their pages.  Afterwards, they reflect on how their plan will ensure that the website does what it is designed to do."
-          lesson_groups: {}
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chapter 1: Web Content and HTML'
+            csd2_2:
+              display_name: 'Chapter 2: Styling and CSS'
+            cspSurvey:
+              display_name: Survey
         csd1-2020:
           title: CSD Unit 1 - Problem Solving and Computing
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
@@ -14797,7 +15773,15 @@ en:
               name: Exploring Problem Solving - Animals Theme (Alternate Lesson 3)
               description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson the class applies the problem solving process to three different problems: a maze, a logic puzzle, and planning field day activity. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems."
               description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a maze, organizing a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day."
-          lesson_groups: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+            csd1_3:
+              display_name: Alternate Lessons
         csd4-2020:
           title: CSD Unit 4 - The Design Process
           description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
@@ -14876,7 +15860,15 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
         csd5-2020:
           title: CSD Unit 5 - Data and Society ('20-'21)
           description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
@@ -14951,7 +15943,13 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
         csd6-2020:
           title: CSD Unit 6 - Physical Computing ('20-'21)
           description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
@@ -15030,7 +16028,13 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csd6_1:
+              display_name: 'Chapter 1: Programming with Hardware'
+            csd6_2:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            cspSurvey:
+              display_name: Survey
         csd3-2020:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -15182,7 +16186,13 @@ en:
               name: 'Mini-Project: Flyer Game'
               description_student: "**Question of the Day:  How can the new types collisions and modeling movement be used to create a game?**\r\n\r\nThe class uses what it has learned about simulating gravity and the different types of collisions  to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer they would like, then use a structured process to program the game in Code Studio."
               description_teacher: "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games.  After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio."
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
         moneppo-1:
           stages: {}
           lesson_groups: {}
@@ -15242,7 +16252,15 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             Safety in My Online Neighborhood:
               name: Safety in My Online Neighborhood
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
         courseb-2020:
           title: Course B (2020)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -15299,7 +16317,17 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             Digital Trails:
               name: Digital Trails
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_events:
+              display_name: Events
         coursec-2020:
           title: Course C (2020)
           description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
@@ -15382,7 +16410,21 @@ en:
               name: Putting a STOP to Online Meanness
             Password Power-Up:
               name: Password Power-Up
-          lesson_groups: {}
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_binary:
+              display_name: Binary
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: End of Course Project
         coursed-2020:
           title: Course D (2020)
           description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
@@ -15467,7 +16509,21 @@ en:
               name: End of Course Project
             Be A Super Digital Citizen:
               name: Be A Super Digital Citizen
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
+            end_of_course_project:
+              display_name: End of Course Project
         coursee-2020:
           title: Course E (2020)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -15550,7 +16606,21 @@ en:
               name: Digital Sharing
             Designing for Accessibility:
               name: Designing for Accessibility
-          lesson_groups: {}
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_nested_loops:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            csf_impacts:
+              display_name: Impacts of Computing
+            end_of_course_project:
+              display_name: End of Course Project
         coursef-2020:
           title: Course F (2020)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -15639,7 +16709,21 @@ en:
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
             AI for Oceans:
               name: AI for Oceans
-          lesson_groups: {}
+          lesson_groups:
+            ramp_up:
+              display_name: Ramp-Up
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_variables:
+              display_name: Variables
+            csf_data:
+              display_name: Data
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: End of Course Project
         express-2020:
           title: Express Course (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -15758,7 +16842,23 @@ en:
               name: Build A Project
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_warmup:
+              display_name: Warm-Up
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+            csf_sprites:
+              display_name: Sprites
         pre-express-2020:
           title: Pre-reader Express (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -15813,7 +16913,13 @@ en:
               name: Make a Game in Play Lab
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
         csp1-2020:
           stages:
             new stage:
@@ -15850,7 +16956,9 @@ en:
           description_audience: ''
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
-          lesson_groups: {}
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
         csp2-2020:
           stages:
             new stage:
@@ -15877,7 +16985,9 @@ en:
           description_audience: ''
           description_short: Build the internet from the ground up using the Internet Simulator.
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
-          lesson_groups: {}
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: The Internet'
         csp3-2020:
           stages:
             new stage:
@@ -15908,7 +17018,9 @@ en:
           description_audience: ''
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
-          lesson_groups: {}
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Intro to App Design'
         csp6-2020:
           stages:
             new stage:
@@ -15929,7 +17041,9 @@ en:
           description_audience: ''
           description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
-          lesson_groups: {}
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algorithms'
         csp8-2020:
           stages:
             new stage:
@@ -15971,7 +17085,9 @@ en:
           description_audience: ''
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
-          lesson_groups: {}
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
         csp10-2020:
           stages:
             new stage:
@@ -16014,7 +17130,9 @@ en:
           description_audience: ''
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
-          lesson_groups: {}
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unit 10: Cybersecurity and Global Impacts'
         csp-march-virtual:
           stages:
             Kick-off:
@@ -16104,7 +17222,9 @@ en:
               description_teacher: ''
             Make your own Digital Scene:
               name: Make your own Digital Scene
-          lesson_groups: {}
+          lesson_groups:
+            csp3_1_2018:
+              display_name: 'Unit 3: Intro to Programming'
         csd3-virtual:
           title: Self Paced Introduction to Game Lab
           description: You’ll program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
@@ -16234,7 +17354,9 @@ en:
               description_teacher: ''
             Sample Programs:
               name: Sample Programs
-          lesson_groups: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
         jess-test-script:
           stages:
             Our First Stage:
@@ -16352,7 +17474,11 @@ en:
               description_teacher: ''
             Purpose of a Websites:
               name: Purpose of a Websites
-          lesson_groups: {}
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chapter 1: Web Content and HTML'
+            csd2_2:
+              display_name: 'Chapter 2: Styling and CSS'
         csp5-virtual:
           title: Event-Driven Programming in App Lab
           description: This self-paced module introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
@@ -16490,7 +17616,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
-          lesson_groups: {}
+          lesson_groups:
+            content:
+              display_name: Content
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
         code-break:
           stages:
             new stage:
@@ -16653,4 +17783,8 @@ en:
           description_audience: ''
           description_short: Learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           description: This unit introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This uni uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
-          lesson_groups: {}
+          lesson_groups:
+            csp5_1:
+              display_name: 'Chapter 1: Event-Driven Programming'
+            csp5_2:
+              display_name: 'Chapter 2: Programming with Data Structures'

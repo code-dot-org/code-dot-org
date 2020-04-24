@@ -13,6 +13,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
 
+lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
 stage 'The Need For Programming Languages', flex_category: 'csp3_1_2018'
 level 'CSP U3L01 SFLP_2019', named: true
 level 'U3L01 Assessment1_2019', progression: 'Check Your Understanding', assessment: true
@@ -127,9 +128,11 @@ level 'U3L08 - individualCode_2019', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates_2018_2019', progression: 'How to Share Code with Teammates'
 level 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene', assessment: true
 
+lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true

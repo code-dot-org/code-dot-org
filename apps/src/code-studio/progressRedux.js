@@ -10,6 +10,7 @@ import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -445,8 +446,7 @@ export const queryUserProgress = userId => (dispatch, getState) => {
 export const hasLockableStages = state =>
   state.stages.some(stage => stage.lockable);
 
-export const hasGroups = state =>
-  Object.keys(categorizedLessons(state)).length > 1;
+export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
 /**
  * Extract the relevant portions of a particular lesson/stage from the store.
@@ -636,48 +636,50 @@ export function statusForLevel(level, levelProgress) {
 }
 
 /**
- * Groups lessons (aka stages) according to category.
+ * Groups lessons according to LessonGroup.
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
  * {Object[]} Object.stageLevels
  */
-export const categorizedLessons = (state, includeBonusLevels = false) => {
-  let byCategory = {};
+export const groupedLessons = (state, includeBonusLevels = false) => {
+  let byGroup = {};
 
   const allLevels = levelsByLesson(state);
 
-  state.stages.forEach((stage, index) => {
-    const category = stage.flex_category;
-    const lesson = lessonFromStageAtIndex(state, index);
-    let stageLevels = allLevels[index];
+  state.stages.forEach((lesson, index) => {
+    const group = experiments.isEnabled(experiments.LESSON_GROUP)
+      ? lesson.lesson_group_display_name
+      : lesson.flex_category;
+    const lessonAtIndex = lessonFromStageAtIndex(state, index);
+    let lessonLevels = allLevels[index];
     if (!includeBonusLevels) {
-      stageLevels = stageLevels.filter(level => !level.bonus);
+      lessonLevels = lessonLevels.filter(level => !level.bonus);
     }
 
-    byCategory[category] = byCategory[category] || {
-      category,
+    byGroup[group] = byGroup[group] || {
+      group,
       lessons: [],
       levels: []
     };
 
-    byCategory[category].lessons.push(lesson);
-    byCategory[category].levels.push(stageLevels);
+    byGroup[group].lessons.push(lessonAtIndex);
+    byGroup[group].levels.push(lessonLevels);
   });
 
-  // Peer reviews get their own category, but these levels/lessson are stored
+  // Peer reviews get their own group, but these levels/lessson are stored
   // separately from our other levels/lessons in redux (since they're slightly
   // different)
   if (state.peerReviewStage) {
-    byCategory['Peer Review'] = {
-      category: 'Peer Review',
+    byGroup['Peer Review'] = {
+      group: 'Peer Review',
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
   }
 
   // We want to return an array of categories
-  return _.values(byCategory);
+  return _.values(byGroup);
 };
 
 /**
