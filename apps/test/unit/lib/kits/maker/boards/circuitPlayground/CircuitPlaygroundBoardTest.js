@@ -20,6 +20,7 @@ import {
   CIRCUIT_PLAYGROUND_PORTS,
   FLORA_PORTS
 } from '../../sampleSerialPorts';
+import {itMakesComponentsAvailableFromInterpreter} from './CircuitPlaygroundMakerBoardTest';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -80,6 +81,10 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
+
+  // Board-specific tests
+  // Test that the appropriate components are available on each board
+  itMakesComponentsAvailableFromInterpreter(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
     // TODO (bbuchanan): Remove when maker-captouch is on by default.
