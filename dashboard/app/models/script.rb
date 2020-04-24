@@ -1593,6 +1593,7 @@ class Script < ActiveRecord::Base
 
   def all_descendant_levels
     contained_levels = levels.map(&:contained_levels).flatten
-    levels + contained_levels
+    template_levels = levels.map(&:project_template_level).compact
+    levels + contained_levels + template_levels
   end
 end
