@@ -26,8 +26,9 @@ def get_top200_data(url)
   lines = csv.read
   lines.shift # first line just contains a note
   lines.shift # second line is column names
+  regex = generate_profanity_regex(lines)
   lines.each do |line|
-    next if has_profanity?(line) # skip record if it contains profanity
+    next if regex&.match?(profanity_check(line)) # skip record if it contains profanity
 
     record = OpenStruct.new
     record.id = id
@@ -53,8 +54,9 @@ def get_viral50_data(url)
   csv = CSV.new(response.body)
   lines = csv.read
   lines.shift # first line is column names
+  regex = generate_profanity_regex(lines)
   lines.each do |line|
-    next if has_profanity?(line) # skip record if it contains profanity
+    next if regex&.match?(profanity_check(line)) # skip record if it contains profanity
 
     record = OpenStruct.new
     record.id = id
@@ -69,11 +71,17 @@ def get_viral50_data(url)
   return records, columns
 end
 
-def has_profanity?(line)
-  profanity_check = "#{line[2]} - #{line[1]}" # check artist + track name for profanity
-  profanity = ProfanityFilter.find_potential_profanity(profanity_check, PROFANITY_LOCALE)
+# Only check artist and song names for profanity
+def profanity_check(line)
+  "#{line[2]} - #{line[1]} "
+end
 
-  !(profanity || '').empty?
+# Generates a case-insensitive regex of profanities in the entire dataset
+# to match each line against.
+def generate_profanity_regex(lines)
+  profanity_check = lines.reduce('') {|acc, line| acc + profanity_check(line)}
+  profanities = ProfanityFilter.find_potential_profanities(profanity_check, PROFANITY_LOCALE) || []
+  profanities.empty? ? nil : /(#{profanities.join("|")})/i
 end
 
 def main
