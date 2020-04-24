@@ -525,7 +525,10 @@ export default class ScriptEditor extends React.Component {
               name="script_text"
               rows={textAreaRows}
               style={styles.input}
-              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              defaultValue={
+                this.props.stageLevelData ||
+                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new stage'\n"
+              }
               ref={textArea => (this.scriptTextArea = textArea)}
             />
           </div>
