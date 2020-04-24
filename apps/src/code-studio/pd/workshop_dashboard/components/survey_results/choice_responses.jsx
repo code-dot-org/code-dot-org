@@ -111,7 +111,7 @@ export default class ChoiceResponses extends React.Component {
         <td />
         {facilitatorNames.map((name, i) => (
           <td colSpan={2} style={{paddingLeft: '20px'}} key={i}>
-            {facilitators && facilitators[name] || name}
+            {(facilitators && facilitators[name]) || name}
           </td>
         ))}
         {showTotalCount && (
