@@ -26,7 +26,6 @@ import reducer, {
   getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 // This is some sample stage data taken a course. I truncated to the first two
 // stages, and also truncated the second stage to the first 3 levels
@@ -1005,8 +1004,7 @@ describe('progressReduxTest', () => {
       ]
     });
 
-    it('returns lesson group if experiment is enabled', () => {
-      sinon.stub(experiments, 'isEnabled').returns(true);
+    it('returns lesson group', () => {
       const state = {
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
         levelProgress: {},
@@ -1016,11 +1014,9 @@ describe('progressReduxTest', () => {
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
       assert.equal(groups[0].group, 'Lesson Group');
-      experiments.isEnabled.restore();
     });
 
     it('returns a single group if all lessons have the same lesson group', () => {
-      sinon.stub(experiments, 'isEnabled').returns(true);
       const state = {
         stages: [
           fakeLesson('Lesson Group', 'lesson1', 1),
@@ -1034,11 +1030,9 @@ describe('progressReduxTest', () => {
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
       assert.equal(groups[0].group, 'Lesson Group');
-      experiments.isEnabled.restore();
     });
 
     it('includes bonus levels in groups if includeBonusLevels is true', () => {
-      sinon.stub(experiments, 'isEnabled').returns(true);
       const bonusLevel = {
         ids: [2106],
         title: 1,
@@ -1066,7 +1060,6 @@ describe('progressReduxTest', () => {
       assert.equal(groups[0].levels.length, 1);
       assert.equal(groups[0].levels[0].length, 1);
       assert.equal(groups[0].levels[0][0]['bonus'], true);
-      experiments.isEnabled.restore();
     });
   });
 
