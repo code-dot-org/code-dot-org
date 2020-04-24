@@ -104,4 +104,61 @@ describe('Workshop Enrollment School Info', () => {
         .filterWhere(col => col.text().includes('Scholarship Teacher?'))
     ).to.have.length(0);
   });
+
+  it('shows questions for CSP returning teachers', () => {
+    let workshopEnrollmentSchoolInfo = shallow(
+      <WorkshopEnrollmentSchoolInfo
+        enrollments={[]}
+        accountRequiredForAttendance={true}
+        scholarshipWorkshop={false}
+        onDelete={() => {}}
+        onClickSelect={() => {}}
+        workshopCourse="CS Principles"
+        workshopSubject="Workshop for Returning Teachers"
+        numSessions={5}
+        permissionList={new Permission(['ProgramManager'])}
+      />,
+      {context}
+    );
+
+    ['Years Teaching CS', 'Taught AP Before?', 'Planning to teach AP?'].forEach(
+      question => {
+        expect(
+          workshopEnrollmentSchoolInfo
+            .find('th')
+            .filterWhere(col => col.text().includes(question))
+        ).to.have.length(1);
+      }
+    );
+  });
+
+  it('does not show questions for CSP returning teachers in other CSP workshops', () => {
+    let workshopEnrollmentSchoolInfo = shallow(
+      <WorkshopEnrollmentSchoolInfo
+        enrollments={[]}
+        accountRequiredForAttendance={true}
+        scholarshipWorkshop={false}
+        onDelete={() => {}}
+        onClickSelect={() => {}}
+        workshopCourse="CS Principles"
+        workshopSubject="5-day Summer"
+        numSessions={5}
+        permissionList={new Permission(['ProgramManager'])}
+      />,
+      {context}
+    );
+
+    [
+      'Years Teaching',
+      'Years Teaching CS',
+      'Taught AP Before?',
+      'Planning to teach AP?'
+    ].forEach(question => {
+      expect(
+        workshopEnrollmentSchoolInfo
+          .find('th')
+          .filterWhere(col => col.text().includes(question))
+      ).to.have.length(0);
+    });
+  });
 });
