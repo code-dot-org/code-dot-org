@@ -3,6 +3,7 @@ import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 describe('Workshop Enrollment School Info', () => {
   const fakeRouter = {
@@ -114,7 +115,7 @@ describe('Workshop Enrollment School Info', () => {
         onDelete={() => {}}
         onClickSelect={() => {}}
         workshopCourse="CS Principles"
-        workshopSubject="Workshop for Returning Teachers"
+        workshopSubject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
         numSessions={5}
         permissionList={new Permission(['ProgramManager'])}
       />,
