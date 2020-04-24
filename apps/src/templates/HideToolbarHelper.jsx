@@ -16,7 +16,7 @@ const styles = {
 
 // Note that additional styling can be found in apps/style/HideToolbarHelper.scss.
 
-const HidetoolbarHelperCookieName = 'hide_toolbar_helper';
+const HideToolbarHelperCookieName = 'hide_toolbar_helper';
 
 /**
  * An overlay with instrutions on hiding the toolbar for iPhone with iOS 13.
@@ -39,7 +39,7 @@ export default class HideToolbarHelper extends React.Component {
 
   updateLayout = () => {
     const isiOS13 = navigator.userAgent.indexOf('iPhone OS 13') !== -1;
-    const isHideCookieSet = cookies.get(HidetoolbarHelperCookieName);
+    const isHideCookieSet = cookies.get(HideToolbarHelperCookieName);
     const isLandscape = window.orientation !== 0;
 
     // window.innerHeight is smaller than document.body.offsetHeight when
@@ -88,7 +88,7 @@ export default class HideToolbarHelper extends React.Component {
   }
 
   onClick = () => {
-    cookies.set(HidetoolbarHelperCookieName, 'true', {expires: 365, path: '/'});
+    cookies.set(HideToolbarHelperCookieName, 'true', {expires: 365, path: '/'});
     this.updateLayout();
 
     // Let's track the click-to-dismiss event.
