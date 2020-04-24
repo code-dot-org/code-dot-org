@@ -2338,6 +2338,10 @@ endvariants
     extra1 = create :level, name: 'extra1'
     extra2 = create :level, name: 'extra2'
 
+    # contained levels
+    containee = create :multi, name: 'containee'
+    container = create :applab, name: 'container', contained_level_names: [containee.name]
+
     dsl = <<~SCRIPT
       stage 'lesson1'
       level '#{level1.name}'
@@ -2345,6 +2349,7 @@ endvariants
         level '#{swap1.name}', active: false
         level '#{swap2.name}'
       endvariants
+      level '#{container.name}'
       bonus '#{extra1.name}'
       bonus '#{extra2.name}'
     SCRIPT
@@ -2355,15 +2360,15 @@ endvariants
       script_data[:stages]
     )
 
-    levels = [level1, swap1, swap2, extra1, extra2]
+    levels = [level1, swap1, swap2, container, extra1, extra2]
+    nested_levels = [containee]
 
     assert_equal levels, script.levels
-    assert_equal levels, script.all_descendant_levels
+    assert_equal levels + nested_levels, script.all_descendant_levels
 
     # TODO: make sure recognize the following nested level types
     # levels within level groups
     # levels within bubble choice levels
-    # contained levels
     # project template levels
   end
 
