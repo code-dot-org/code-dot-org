@@ -38,36 +38,18 @@ class ManageStudentsLoginInfo extends Component {
     return (
       <div style={styles.explanation}>
         <h2 style={styles.heading}>{i18n.setUpClass()}</h2>
-        {(loginType === SectionLoginType.word ||
-          loginType === SectionLoginType.picture) && (
+        {loginType === SectionLoginType.word && (
           <div>
-            {loginType === SectionLoginType.word && (
-              <p>{i18n.setUpClassWordIntro()}</p>
-            )}
-            {loginType === SectionLoginType.picture && (
-              <p>{i18n.setUpClassPicIntro()}</p>
-            )}
+            <p>{i18n.setUpClassWordIntro()}</p>
             <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
-            {loginType === SectionLoginType.word && (
-              <SafeMarkdown
-                markdown={i18n.setUpClassWord2({
-                  printLoginCardLink: teacherDashboardUrl(
-                    sectionId,
-                    '/login_info'
-                  )
-                })}
-              />
-            )}
-            {loginType === SectionLoginType.picture && (
-              <SafeMarkdown
-                markdown={i18n.setUpClassPic2({
-                  printLoginCardLink: teacherDashboardUrl(
-                    sectionId,
-                    '/login_info'
-                  )
-                })}
-              />
-            )}
+            <SafeMarkdown
+              markdown={i18n.setUpClassWord2({
+                printLoginCardLink: teacherDashboardUrl(
+                  sectionId,
+                  '/login_info'
+                )
+              })}
+            />
             <SafeMarkdown
               markdown={i18n.setUpClass3({
                 parentLetterLink: teacherDashboardUrl(
@@ -77,6 +59,33 @@ class ManageStudentsLoginInfo extends Component {
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <h2 style={styles.heading}>{i18n.signingInWord()}</h2>
+            <p>{i18n.signingInWordIntro()}</p>
+          </div>
+        )}
+        {loginType === SectionLoginType.picture && (
+          <div>
+            <p>{i18n.setUpClassPicIntro()}</p>
+            <p style={styles.listAlign}>{i18n.setUpClassWordPic1()}</p>
+            <SafeMarkdown
+              markdown={i18n.setUpClassPic2({
+                printLoginCardLink: teacherDashboardUrl(
+                  sectionId,
+                  '/login_info'
+                )
+              })}
+            />
+            <SafeMarkdown
+              markdown={i18n.setUpClass3({
+                parentLetterLink: teacherDashboardUrl(
+                  sectionId,
+                  '/parent_letter'
+                )
+              })}
+            />
+            <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <h2 style={styles.heading}>{i18n.signingInPic()}</h2>
+            <p>{i18n.signingInPicIntro()}</p>
           </div>
         )}
         {loginType === SectionLoginType.email && (
@@ -101,6 +110,8 @@ class ManageStudentsLoginInfo extends Component {
               })}
             />
             <p style={styles.listAlign}>{i18n.setUpClass4()}</p>
+            <h2 style={styles.heading}>{i18n.signingInEmail()}</h2>
+            <p>{i18n.signingInEmailIntro()}</p>
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
@@ -109,6 +120,8 @@ class ManageStudentsLoginInfo extends Component {
             <p style={styles.listAlign}>{i18n.setUpClassGoogle1()}</p>
             <p style={styles.listAlign}>{i18n.setUpClassGoogle2()}</p>
             <p>{i18n.setUpClassGoogleFinished()}</p>
+            <h2 style={styles.heading}>{i18n.signingInGoogle()}</h2>
+            <p>{i18n.signingInGoogleIntro()}</p>
           </div>
         )}
         {loginType === SectionLoginType.clever && (
@@ -117,9 +130,10 @@ class ManageStudentsLoginInfo extends Component {
             <p style={styles.listAlign}>{i18n.setUpClassClever1()}</p>
             <p style={styles.listAlign}>{i18n.setUpClassClever2()}</p>
             <p>{i18n.setUpClassCleverFinished()}</p>
+            <h2 style={styles.heading}>{i18n.signingInClever()}</h2>
+            <p>{i18n.signingInCleverIntro()}</p>
           </div>
         )}
-        <h2 style={styles.heading}>{i18n.loginType()}</h2>
 
         <h2 style={styles.heading}>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
