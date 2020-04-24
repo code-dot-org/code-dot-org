@@ -316,8 +316,8 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
         <ul>
           <li>One summer workshop in 2020</li>
           <li>
-            Up to four one-day, in-person local workshops during the {YEAR}{' '}
-            school year (typically held on Saturdays)
+            Up to four one-day workshops during the {YEAR} school year
+            (typically held on Saturdays)
           </li>
         </ul>
         {this.radioButtonsWithAdditionalTextFieldsFor(
