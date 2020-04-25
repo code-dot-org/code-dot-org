@@ -18,5 +18,5 @@
       do not have one available, one will be provided for you at the workshop.
   - if @workshop.csf? && @is_enrollment_receipt
     %li Your curiosity and readiness to learn!
-  - unless @workshop.summer? || @workshop.fit_weekend? || @workshop.csf?
+  - unless @workshop.summer? || @workshop.fit_weekend? || @workshop.csf? || (@workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS)
     %li Code.org Curriculum Guide.
