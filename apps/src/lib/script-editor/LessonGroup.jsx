@@ -95,35 +95,50 @@ class LessonGroup extends Component {
     this.setState({targetLessonPos});
   };
 
+  serializeLessonGroups = lessons => {
+    let s = [];
+    console.log(
+      _.groupBy(lessons, lesson => lesson.lesson_group_display_name || '')
+    );
+    /*
+    lessonGroups.forEach(lessonGroup => {
+      if (lessonGroup.user_facing && !lessonGroup.lessons) {
+        let t = `lesson_group '#{escape(lessonGroup.key)}'`;
+        t += ', display_name: \'#{escape(lesson_group.localized_display_name)}\'';
+        s.push(t);
+      } */
+    lessons.forEach(lesson => {
+      s = s.concat(this.serializeLesson(lesson));
+    });
+    /* }); */
+    s.push('');
+    return s.join('\n');
+  };
+
   /**
    * Generate the ScriptDSL format.
-   * @param lessons
+   * @param lesson
    * @return {string}
    */
-  serializeLessons = lessons => {
+  serializeLesson = lesson => {
     let s = [];
-    lessons.forEach(lesson => {
-      let t = `stage '${escape(lesson.name)}'`;
-      if (lesson.lockable) {
-        t += ', lockable: true';
+    let t = `stage '${escape(lesson.name)}'`;
+    if (lesson.lockable) {
+      t += ', lockable: true';
+    }
+    s.push(t);
+    lesson.levels.forEach(level => {
+      if (level.ids.length > 1) {
+        s.push('variants');
+        level.ids.forEach(id => {
+          s = s.concat(this.serializeLevel(id, level, level.activeId === id));
+        });
+        s.push('endvariants');
+      } else {
+        s = s.concat(this.serializeLevel(level.ids[0], level));
       }
-      if (lesson.flex_category) {
-        t += `, flex_category: '${escape(lesson.flex_category)}'`;
-      }
-      s.push(t);
-      lesson.levels.forEach(level => {
-        if (level.ids.length > 1) {
-          s.push('variants');
-          level.ids.forEach(id => {
-            s = s.concat(this.serializeLevel(id, level, level.activeId === id));
-          });
-          s.push('endvariants');
-        } else {
-          s = s.concat(this.serializeLevel(level.ids[0], level));
-        }
-      });
-      s.push('');
     });
+    s.push('');
     return s.join('\n');
   };
 
@@ -176,7 +191,7 @@ class LessonGroup extends Component {
   render() {
     const groups = _.groupBy(
       this.props.lessons,
-      lesson => lesson.flex_category || ''
+      lesson => lesson.lesson_group_display_name || ''
     );
     let afterLesson = 1;
     const {lessonGroupMap} = this.props;
@@ -253,7 +268,7 @@ class LessonGroup extends Component {
         <input
           type="hidden"
           name="script_text"
-          value={this.serializeLessons(this.props.lessons)}
+          value={this.serializeLessonGroups(this.props.lessons)}
         />
       </div>
     );

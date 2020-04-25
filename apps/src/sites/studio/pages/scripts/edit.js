@@ -11,6 +11,7 @@ import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
+  console.log(scriptEditorData);
   const scriptData = scriptEditorData.script;
   const lessonLevelData = scriptEditorData.lessonLevelData;
   const lessons = (scriptData.stages || [])
@@ -18,7 +19,7 @@ export default function initPage(scriptEditorData) {
     .map(lesson => ({
       position: lesson.position,
       relativePosition: lesson.relative_position,
-      flex_category: lesson.flex_category,
+      lesson_group_display_name: lesson.lesson_group_display_name,
       lockable: lesson.lockable,
       name: lesson.name,
       // Only include the first level of an assessment (uid ending with "_0").
