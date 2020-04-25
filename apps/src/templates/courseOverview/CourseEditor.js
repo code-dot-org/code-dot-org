@@ -4,7 +4,10 @@ import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
-import {PilotExperiment, VisibleInTeacherDashboard} from '../../lib/script-editor/ScriptEditor.jsx';
+import {
+  PilotExperiment,
+  VisibleInTeacherDashboard
+} from '../../lib/script-editor/ScriptEditor.jsx';
 
 const styles = {
   input: {
@@ -48,7 +51,7 @@ export default class CourseEditor extends Component {
 
     this.state = {
       visible: this.props.visible,
-      pilotExperiment: this.props.pilotExperiment,
+      pilotExperiment: this.props.pilotExperiment
     };
   }
 
@@ -124,9 +127,9 @@ export default class CourseEditor extends Component {
             style={styles.checkbox}
           />
           <p>
-            If checked, this unit will be eligible to be the recommended
-            version of the unit. The most recent eligible version will be
-            the recommended version.
+            If checked, this unit will be eligible to be the recommended version
+            of the unit. The most recent eligible version will be the
+            recommended version.
           </p>
         </label>
         <PilotExperiment

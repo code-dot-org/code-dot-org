@@ -573,7 +573,7 @@ VisibleInTeacherDashboard.propTypes = {
   onChange: PropTypes.func.isRequired
 };
 VisibleInTeacherDashboard.defaultProps = {
-  paramName: "visible_to_teachers"
+  paramName: 'visible_to_teachers'
 };
 
 export const PilotExperiment = props => (
