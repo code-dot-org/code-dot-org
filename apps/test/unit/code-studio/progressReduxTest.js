@@ -39,8 +39,7 @@ const stageData = [
     position: 1,
     name: 'Computational Thinking',
     title: 'Stage 1: Computational Thinking',
-    flex_category: null,
-    lesson_group: null,
+    lesson_group_display_name: null,
     lockable: false,
     levels: [
       {
@@ -96,8 +95,7 @@ const stageData = [
     position: 2,
     name: 'Maze',
     title: 'Stage 2: Maze',
-    flex_category: null,
-    lesson_group: null,
+    lesson_group_display_name: null,
     lockable: false,
     levels: [
       {
