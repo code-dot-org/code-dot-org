@@ -1410,6 +1410,7 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       csf: csf?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
+      peerReviewStage: peer_review_lesson_info, #TODO(dmcavoy) REMOVE AFTER A COUPLE DAYS April 2020
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
