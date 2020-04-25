@@ -308,6 +308,8 @@ class ManageStudentsTable extends Component {
               <ManageStudentsActionsHeaderCell
                 editAll={this.props.editAll}
                 isShareColumnVisible={this.props.showSharingColumn}
+                loginType={this.props.loginType}
+                sectionId={this.props.sectionId}
               />
             </div>
           </span>
