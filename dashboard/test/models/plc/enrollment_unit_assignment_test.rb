@@ -12,9 +12,9 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE)
     @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE)
 
-    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @required_lesson_group.name)
-    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.name)
-    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.name)
+    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @required_lesson_group.key)
+    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.key)
+    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.key)
 
     @required_learning_module.lesson.update(script: @script, lesson_group: @required_lesson_group)
     @content_learning_module.lesson.update(script: @script, lesson_group: @content_lesson_group)
