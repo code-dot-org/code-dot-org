@@ -10,9 +10,9 @@ class MakerControllerTest < ActionController::TestCase
     @school = create :school
     @school_maker_high_needs = create :school, :is_maker_high_needs_school
 
-    @csd_2017 = ensure_course Script::CSD_2017, '2017'
-    @csd_2018 = ensure_course Script::CSD_2018, '2018'
-    @csd_2019 = ensure_course Script::CSD_2019, '2019'
+    @csd_2017 = ensure_course 'csd-2017', '2017'
+    @csd_2018 = ensure_course 'csd-2018', '2018'
+    @csd_2019 = ensure_course 'csd-2019', '2019'
     @csd_2020_unstable = ensure_course 'csd-2020-unstable', '2020'
     @csd6_2017 = ensure_script Script::CSD6_NAME, '2017'
     @csd6_2018 = ensure_script Script::CSD6_2018_NAME, '2018'
