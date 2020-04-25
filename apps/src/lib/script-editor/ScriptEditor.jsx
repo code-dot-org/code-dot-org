@@ -546,11 +546,11 @@ export default class ScriptEditor extends React.Component {
   }
 }
 
-const VisibleInTeacherDashboard = props => (
+export const VisibleInTeacherDashboard = props => (
   <label style={props.disabled ? {opacity: 0.5} : {}}>
     Visible in Teacher Dashboard
     <input
-      name="visible_to_teachers"
+      name={props.paramName}
       type="checkbox"
       disabled={props.disabled}
       checked={props.checked && !props.disabled}
@@ -567,12 +567,16 @@ const VisibleInTeacherDashboard = props => (
   </label>
 );
 VisibleInTeacherDashboard.propTypes = {
+  paramName: PropTypes.string,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };
+VisibleInTeacherDashboard.defaultProps = {
+  paramName: "visible_to_teachers"
+};
 
-const PilotExperiment = props => (
+export const PilotExperiment = props => (
   <label>
     Pilot Experiment. If specified, this script will only be accessible to
     levelbuilders, or to classrooms whose teacher has this user experiment
