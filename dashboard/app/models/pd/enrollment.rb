@@ -208,6 +208,9 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
+    elsif workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+      # TODO: This is a temporary, fake URL. Wire up a real one!
+      CDO.studio_url '/pd/workshop_survey/post'
     elsif workshop.summer?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
     elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
