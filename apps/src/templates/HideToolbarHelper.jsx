@@ -42,16 +42,32 @@ export default class HideToolbarHelper extends React.Component {
     }
   }
 
+  isiOS13() {
+    return navigator.userAgent.indexOf('iPhone OS 13') !== -1;
+  }
+
+  isHideCookieSet() {
+    return cookies.get(HideToolbarHelperCookieName);
+  }
+
+  isLandscape() {
+    return window.orientation !== 0;
+  }
+
+  isToolbarShowing() {
+    return window.innerHeight < document.body.offsetHeight;
+  }
+
   updateLayout = () => {
-    const isiOS13 = navigator.userAgent.indexOf('iPhone OS 13') !== -1;
-    const isHideCookieSet = cookies.get(HideToolbarHelperCookieName);
-    const isLandscape = window.orientation !== 0;
+    const isiOS13 = this.isiOS13();
+    const isHideCookieSet = this.isHideCookieSet();
+    const isLandscape = this.isLandscape();
 
     // window.innerHeight is smaller than document.body.offsetHeight when
     // the iOS 13 Safari toolbar is showing.  It becomes equal when the toolbar
     // is hidden.  (Interestingly, document.documentElement.clientHeight is
     // the same as document.body.offsetHeight in both cases.)
-    const isToolbarShowing = window.innerHeight < document.body.offsetHeight;
+    const isToolbarShowing = this.isToolbarShowing();
 
     if (
       this.wasToolbarShowing &&
@@ -61,7 +77,7 @@ export default class HideToolbarHelper extends React.Component {
       // Let's track the disapearance of the toolbar.
       trackEvent('Research', 'HideToolbarHelper', 'hid-' + window.innerHeight);
 
-      // And also set the cookie so the this use doesn't see the helper again
+      // And also set the cookie so this user doesn't see the helper again
       // for a year.
       this.setHideHelperCookie();
 
