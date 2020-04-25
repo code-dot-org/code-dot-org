@@ -8,7 +8,7 @@ import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import LessonCard from './LessonCard';
 import {NEW_LEVEL_ID, addLesson, addGroup} from './editorRedux';
-import FlexCategorySelector from './FlexCategorySelector';
+import LessonGroupSelector from './LessonGroupSelector';
 
 const styles = {
   groupHeader: {
@@ -42,7 +42,7 @@ const styles = {
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
   },
-  flexCategorySelector: {
+  lessonGroupSelector: {
     height: 30,
     marginBottom: 30
   }
@@ -51,37 +51,37 @@ const styles = {
 // Replace ' with \'
 const escape = str => str.replace(/'/, "\\'");
 
-class FlexGroup extends Component {
+class LessonGroup extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addLesson: PropTypes.func.isRequired,
     lessons: PropTypes.array.isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    flexCategoryMap: PropTypes.object.isRequired
+    lessonGroupMap: PropTypes.object.isRequired
   };
 
   state = {
-    addingFlexCategory: false,
+    addingLessonGroup: false,
     // Which lesson a level is currently being dragged to.
     targetLessonPos: null
   };
 
-  handleAddFlexCategory = () => {
+  handleAddLessonGroup = () => {
     this.setState({
-      addingFlexCategory: true
+      addingLessonGroup: true
     });
   };
 
-  createFlexCategory = newFlexCategory => {
-    this.hideFlexCategorySelector();
+  createLessonGroup = newLessonGroup => {
+    this.hideLessonGroupSelector();
     const newLessonName = prompt('Enter new lesson name');
     if (newLessonName) {
-      this.props.addGroup(newLessonName, newFlexCategory);
+      this.props.addGroup(newLessonName, newLessonGroup);
     }
   };
 
-  hideFlexCategorySelector = () => {
-    this.setState({addingFlexCategory: false});
+  hideLessonGroupSelector = () => {
+    this.setState({addingLessonGroup: false});
   };
 
   handleAddLesson = position => {
@@ -179,15 +179,15 @@ class FlexGroup extends Component {
       lesson => lesson.flex_category || ''
     );
     let afterLesson = 1;
-    const {flexCategoryMap} = this.props;
+    const {lessonGroupMap} = this.props;
 
     return (
       <div>
         {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Flex Category: {group || '(none)'}: "
-              {flexCategoryMap[group] || 'Content'}"
+              Lesson Group: {group || '(none)'}: "
+              {lessonGroupMap[group] || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterLesson}
@@ -229,24 +229,24 @@ class FlexGroup extends Component {
             </div>
           </div>
         ))}
-        {!this.state.addingFlexCategory && (
+        {!this.state.addingLessonGroup && (
           <button
-            onMouseDown={this.handleAddFlexCategory}
+            onMouseDown={this.handleAddLessonGroup}
             className="btn"
             style={styles.addGroup}
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Flex Category
+            Add Lesson Group
           </button>
         )}
-        {this.state.addingFlexCategory && (
-          <div style={styles.flexCategorySelector}>
-            <FlexCategorySelector
-              labelText="New Flex Category"
+        {this.state.addingLessonGroup && (
+          <div style={styles.lessonGroupSelector}>
+            <LessonGroupSelector
+              labelText="New Lesson Group"
               confirmButtonText="Create"
-              onConfirm={this.createFlexCategory}
-              onCancel={this.hideFlexCategorySelector}
+              onConfirm={this.createLessonGroup}
+              onCancel={this.hideLessonGroupSelector}
             />
           </div>
         )}
@@ -264,7 +264,7 @@ export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
     lessons: state.lessons,
-    flexCategoryMap: state.flexCategoryMap
+    lessonGroupMap: state.lessonGroupMap
   }),
   dispatch => ({
     addGroup(lessonName, groupName) {
@@ -274,4 +274,4 @@ export default connect(
       dispatch(addLesson(position, lessonName));
     }
   })
-)(FlexGroup);
+)(LessonGroup);
