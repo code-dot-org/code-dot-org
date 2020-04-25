@@ -21,6 +21,7 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
+import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 
 const style = {
   root: {
@@ -61,6 +62,7 @@ class EditSectionForm extends Component {
     initialScriptId: PropTypes.number,
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
+    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
@@ -129,6 +131,7 @@ class EditSectionForm extends Component {
       localeEnglishName,
       isNewSection
     } = this.props;
+    const validLoginTypes = ['email', 'word', 'picture', 'dinosaur'];
 
     if (!section) {
       return null;
@@ -146,6 +149,12 @@ class EditSectionForm extends Component {
             value={section.grade || ''}
             onChange={grade => editSectionProperties({grade})}
             validGrades={validGrades}
+            disabled={isSaveInProgress}
+          />
+          <LoginTypeField
+            value={section.loginType}
+            onChange={loginType => editSectionProperties({loginType})}
+            validLoginTypes={validLoginTypes}
             disabled={isSaveInProgress}
           />
           <AssignmentField
@@ -249,6 +258,29 @@ const GradeField = ({value, onChange, validGrades, disabled}) => {
 GradeField.propTypes = {
   ...FieldProps,
   validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
+  return (
+    <div>
+      <FieldName>{i18n.loginType()}</FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+        disabled={disabled}
+      >
+        {validLoginTypes.map((loginType, index) => (
+          <option key={index} value={loginType}>
+            {loginType}
+          </option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+LoginTypeField.propTypes = {
+  ...FieldProps,
+  validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 const AssignmentField = ({
@@ -366,6 +398,7 @@ let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
   initialScriptId: state.teacherSections.initialScriptId,
   validGrades: state.teacherSections.validGrades,
+  validLoginTypes: state.teacherSections.validLoginTypes,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   sections: state.teacherSections.sections,
