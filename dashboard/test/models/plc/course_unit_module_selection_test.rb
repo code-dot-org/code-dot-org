@@ -18,13 +18,13 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     @lesson_honesty = create(:lesson, name: 'Honesty lesson', script: @course_unit.script, lesson_group: @practice_lesson_group)
     @lesson_no_nickname = create(:lesson, name: 'No nickname lesson', script: @course_unit.script, lesson_group: @practice_lesson_group)
 
-    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: @lesson_cliffs.lesson_group.name, lesson: @lesson_cliffs)
-    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: @lesson_ornithology.lesson_group.name, lesson: @lesson_ornithology)
-    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: @lesson_ignorance.lesson_group.name, lesson: @lesson_ignorance)
-    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: @lesson_blue.lesson_group.name, lesson: @lesson_blue)
+    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: @lesson_cliffs.lesson_group.key, lesson: @lesson_cliffs)
+    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: @lesson_ornithology.lesson_group.key, lesson: @lesson_ornithology)
+    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: @lesson_ignorance.lesson_group.key, lesson: @lesson_ignorance)
+    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: @lesson_blue.lesson_group.key, lesson: @lesson_blue)
 
-    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: @lesson_honesty.lesson_group.name, lesson: @lesson_honesty)
-    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: @lesson_no_nickname.lesson_group.name, lesson: @lesson_no_nickname)
+    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: @lesson_honesty.lesson_group.key, lesson: @lesson_honesty)
+    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: @lesson_no_nickname.lesson_group.key, lesson: @lesson_no_nickname)
 
     q1_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 1'
