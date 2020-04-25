@@ -10,7 +10,7 @@ describe('LessonCard', () => {
     moveLevelToLesson,
     addLevel,
     setLessonLockable,
-    setFlexCategory,
+    setLessonGroup,
     setTargetLesson,
     defaultProps;
 
@@ -19,7 +19,7 @@ describe('LessonCard', () => {
     moveLevelToLesson = sinon.spy();
     addLevel = sinon.spy();
     setLessonLockable = sinon.spy();
-    setFlexCategory = sinon.spy();
+    setLessonGroup = sinon.spy();
     setTargetLesson = sinon.spy();
     defaultProps = {
       reorderLevel,
@@ -33,7 +33,7 @@ describe('LessonCard', () => {
         lockable: false
       },
       lessonMetrics: {},
-      setFlexCategory,
+      setLessonGroup,
       setTargetLesson,
       targetLessonPos: null
     };

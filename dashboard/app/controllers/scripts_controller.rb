@@ -112,11 +112,11 @@ class ScriptsController < ApplicationController
       beta: beta,
       betaWarning: beta_warning,
       levelKeyList: beta && Level.key_list,
-      stageLevelData: @script_file,
+      lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
-      lesson_group_map: @script.lesson_groups.map(&:localized_display_name),
+      lesson_group_map: @script.lesson_groups.map {|lg| [lg.key, lg.localized_display_name]}.to_h,
       is_levelbuilder: current_user.levelbuilder?
     }
   end

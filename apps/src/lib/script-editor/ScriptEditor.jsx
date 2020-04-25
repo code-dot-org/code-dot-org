@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FlexGroup from './FlexGroup';
+import LessonGroup from './LessonGroup';
 import LessonDescriptions from './LessonDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
@@ -506,7 +506,7 @@ export default class ScriptEditor extends React.Component {
         </div>
         <h2>Lessons and Levels</h2>
         {this.props.beta ? (
-          <FlexGroup />
+          <LessonGroup />
         ) : (
           <div>
             {betaWarning || (

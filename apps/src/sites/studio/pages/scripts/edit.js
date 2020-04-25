@@ -12,7 +12,7 @@ import {valueOr} from '@cdo/apps/utils';
 
 export default function initPage(scriptEditorData) {
   const scriptData = scriptEditorData.script;
-  const lessonLevelData = scriptEditorData.stageLevelData;
+  const lessonLevelData = scriptEditorData.lessonLevelData;
   const lessons = (scriptData.stages || [])
     .filter(lesson => lesson.id)
     .map(lesson => ({
@@ -40,11 +40,11 @@ export default function initPage(scriptEditorData) {
         }))
     }));
   const locales = scriptEditorData.locales;
-  const flexCategoryMap = scriptEditorData.lesson_group_map;
+  const lessonGroupMap = scriptEditorData.lesson_group_map;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(lessons, scriptEditorData.levelKeyList, flexCategoryMap));
+  store.dispatch(init(lessons, scriptEditorData.levelKeyList, lessonGroupMap));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
