@@ -12,12 +12,13 @@ import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
-import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
-const MAX_SEARCH_RESULTS = 27;
+const MAX_SEARCH_RESULTS = 40;
+const MAX_HEIGHT = 420;
+
 const animationPickerStyles = {
   allAnimations: {
     color: color.purple,
@@ -52,26 +53,80 @@ class AnimationPickerBody extends React.Component {
     spriteLab: PropTypes.bool
   };
 
-  state = {
-    searchQuery: '',
-    categoryQuery: '',
-    currentPage: 0
+  constructor(props) {
+    super(props);
+
+    const initialState = {
+      searchQuery: '',
+      categoryQuery: '',
+      currentPage: 0,
+      libraryManifest: props.spriteLab ? spriteCostumeLibrary : animationLibrary
+    };
+    const results = this.searchAssets(initialState.currentPage, initialState);
+    this.state = {
+      ...initialState,
+      results
+    };
+  }
+
+  searchAssets = (page, config = {}) => {
+    let {searchQuery, categoryQuery, libraryManifest} = config;
+
+    // Set defaults if any config values are undefined.
+    if (searchQuery === undefined) {
+      searchQuery = this.state.searchQuery;
+    }
+    if (categoryQuery === undefined) {
+      categoryQuery = this.state.categoryQuery;
+    }
+    if (libraryManifest === undefined) {
+      libraryManifest = this.state.libraryManifest;
+    }
+
+    const {results} = searchAssets(
+      searchQuery,
+      categoryQuery,
+      libraryManifest,
+      page,
+      MAX_SEARCH_RESULTS
+    );
+    return results;
   };
 
-  onSearchQueryChange = value => {
-    this.setState({searchQuery: value, currentPage: 0});
+  handleScroll = event => {
+    const scrollWindow = event.target;
+    if (
+      scrollWindow.scrollTop + MAX_HEIGHT >=
+      scrollWindow.scrollHeight * 0.9
+    ) {
+      const nextPage = this.state.currentPage + 1;
+      this.setState({
+        results: [...this.state.results, ...this.searchAssets(nextPage)],
+        currentPage: nextPage
+      });
+    }
+  };
+
+  onSearchQueryChange = searchQuery => {
+    const currentPage = 0;
+    const results = this.searchAssets(currentPage, {searchQuery});
+    this.setState({searchQuery, currentPage, results});
   };
 
   onCategoryChange = event => {
-    this.setState({categoryQuery: event.target.className, currentPage: 0});
+    const categoryQuery = event.target.className;
+    const currentPage = 0;
+    const results = this.searchAssets(currentPage, {categoryQuery});
+    this.setState({categoryQuery, currentPage, results});
   };
 
   onClearCategories = () => {
-    this.setState({categoryQuery: '', searchQuery: '', currentPage: 0});
-  };
-
-  onChangePageNumber = number => {
-    this.setState({currentPage: number - 1});
+    this.setState({
+      categoryQuery: '',
+      searchQuery: '',
+      currentPage: 0,
+      results: []
+    });
   };
 
   animationCategoriesRendering() {
@@ -101,19 +156,9 @@ class AnimationPickerBody extends React.Component {
   }
 
   render() {
-    let libraryManifest = this.props.spriteLab
-      ? spriteCostumeLibrary
-      : animationLibrary;
     let categories = this.props.spriteLab
       ? CostumeCategories
       : AnimationCategories;
-    let {results, pageCount} = searchAssets(
-      this.state.searchQuery,
-      this.state.categoryQuery,
-      libraryManifest,
-      this.state.currentPage,
-      MAX_SEARCH_RESULTS
-    );
 
     // Hide the upload option for students in spritelab
     let hideUploadOption = this.props.spriteLab;
@@ -141,29 +186,23 @@ class AnimationPickerBody extends React.Component {
                 <span>{categories[this.state.categoryQuery]}</span>
               </div>
             )}
-            {(this.state.searchQuery !== '' ||
-              this.state.categoryQuery !== '') && (
-              <div style={animationPickerStyles.pagination}>
-                <PaginationWrapper
-                  totalPages={pageCount}
-                  currentPage={this.state.currentPage + 1}
-                  onChangePage={this.onChangePageNumber}
-                />
-              </div>
-            )}
           </div>
         )}
-        <ScrollableList style={{maxHeight: 420}}>
+        <ScrollableList
+          style={{maxHeight: MAX_HEIGHT}}
+          onScroll={this.handleScroll}
+        >
           {' '}
           {/* TODO: Is this maxHeight appropriate? */}
-          {pageCount === 0 && (
-            <div style={animationPickerStyles.emptyResults}>
-              Sorry, no results found.
-            </div>
-          )}
+          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+            this.state.results.length === 0 && (
+              <div style={animationPickerStyles.emptyResults}>
+                Sorry, no results found.
+              </div>
+            )}
           {((this.state.searchQuery === '' &&
             this.state.categoryQuery === '') ||
-            pageCount === 0) && (
+            this.state.results.length === 0) && (
             <div>
               <AnimationPickerListItem
                 label={msg.animationPicker_drawYourOwn()}
@@ -183,7 +222,7 @@ class AnimationPickerBody extends React.Component {
             this.state.categoryQuery === '' &&
             this.animationCategoriesRendering()}
           {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            this.animationItemsRendering(results)}
+            this.animationItemsRendering(this.state.results || [])}
         </ScrollableList>
       </div>
     );
