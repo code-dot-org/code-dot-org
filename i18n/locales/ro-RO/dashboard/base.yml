@@ -162,6 +162,7 @@ ro:
     email_preference_yes: "Da"
     email_preference_no: "Nu"
     email_preference_required: "Trebuie să specificaţi un email preferat."
+    parent_account_email_label: "E-mail părinte/tutore"
   school_info:
     title: 'Informații școală (opțional)'
     school_country: 'Țara școlii'
@@ -885,6 +886,7 @@ ro:
     csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
     csd5_2: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
     csd6_1: 'Capitolul 1: Programare cu hardware'
+    csd_survey: 'Chestionar după curs'
     cspSurvey: 'Sondaj'
     cspAssessment: 'Evaluare capitol'
     csp2_1_2018: 'Unitatea 2: Informaţii digitale'
