@@ -708,4 +708,6 @@ Dashboard::Application.routes.draw do
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
 
   post '/profanity/find', to: 'profanity#find'
+
+  get '/help', to: redirect("https://support.code.org/hc/en-us")
 end
