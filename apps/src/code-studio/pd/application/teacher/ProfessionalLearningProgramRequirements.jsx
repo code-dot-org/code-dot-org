@@ -270,10 +270,10 @@ export default class SummerWorkshop extends LabeledFormComponent {
             , including:
           </p>
           <ul>
-            <li>One five-day, in-person summer workshop in 2020</li>
+            <li>One summer workshop in 2020</li>
             <li>
-              Up to four one-day, in-person local workshops during the 2020-21
-              school year (typically held on Saturdays)
+              Up to four one-day workshops during the 2020-21 school year
+              (typically held on Saturdays)
             </li>
           </ul>
           {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
@@ -290,7 +290,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
           throughout the academic year, hosted via a video conference tool.{' '}
           <strong>Please note</strong> that this option is only available for
           the academic year - all participants in the Professional Learning
-          Program must attend an in-person five-day summer workshop.
+          Program must attend a summer workshop.
           {this.radioButtonsFor('interestedInOnlineProgram')}
           {this.props.data.regionalPartnerId && (
             <div>

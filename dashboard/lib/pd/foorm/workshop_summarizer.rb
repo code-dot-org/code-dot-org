@@ -51,15 +51,14 @@ module Pd::Foorm
             parsed_forms[:general][form_key]
           )
         else
-          facilitator_name = User.find(ws_submission.facilitator_id).name
           workshop_summary[survey_key][:facilitator] ||= {response_count: {}}
-          workshop_summary[survey_key][:facilitator][:response_count][facilitator_name] ||= 0
-          workshop_summary[survey_key][:facilitator][:response_count][facilitator_name] += 1
+          workshop_summary[survey_key][:facilitator][:response_count][ws_submission.facilitator_id] ||= 0
+          workshop_summary[survey_key][:facilitator][:response_count][ws_submission.facilitator_id] += 1
           workshop_summary[survey_key][:facilitator][form_key] ||= {}
           workshop_summary[survey_key][:facilitator][form_key] = add_facilitator_submission_to_summary(
             submission,
             workshop_summary[survey_key][:facilitator][form_key],
-            facilitator_name,
+            ws_submission.facilitator_id,
             parsed_forms[:facilitator][form_key]
           )
         end
@@ -78,7 +77,7 @@ module Pd::Foorm
     def self.add_facilitator_submission_to_summary(
       submission,
       current_workshop_summary,
-      facilitator_name,
+      facilitator_id,
       form_questions
     )
       answers = JSON.parse(submission.answers)
@@ -86,8 +85,8 @@ module Pd::Foorm
         next unless form_questions[name]
 
         current_workshop_summary[name] ||= {}
-        current_workshop_summary[name][facilitator_name] = add_question_to_summary(
-          current_workshop_summary[name][facilitator_name],
+        current_workshop_summary[name][facilitator_id] = add_question_to_summary(
+          current_workshop_summary[name][facilitator_id],
           answer,
           answers,
           form_questions[name][:type]
