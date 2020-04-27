@@ -8,21 +8,19 @@ title: إرشادات النشاط
   }
 </style>
 
-{{ signup_button }}
-
 # دليل الدرس ل (Hour of Code™) وأسبوع تدريس علوم الكمبيوتر
+
+Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
 تستضيف Code.org أنشطة متنوعة ل (Hour of Code™)، وفيديوهات على Code.org، ساعة البرمجة، وواقع أسبوع تدريس علوم الكمبيوتر. اللائحة الحالية هي على [hourofcode.com/learn]({{ urls/learn }}).
 
-تريد تقديم لعبتك الموجهة الخاصة بك، أو الدرس الذي يقدمه المدرس، أو نشاطا يشرح مبادئ علوم الكمبيوتر؟ انضم إلى هذه الحركة العالمية وساعد المشاركين حول العالم وابدأ مع ساعة البرمجة أو تقدم مع دروس متعددة، طول اليوم، أو أنشطة طول الأسبوع.
+تريد تقديم لعبتك الموجهة الخاصة بك، أو الدرس الذي يقدمه المدرس، أو نشاطا يشرح مبادئ علوم الكمبيوتر؟ انضم إلى هذه الحركة العالمية وساعد المشاركين حول العالم وابدأ مع ساعة البرمجة أو تقدم مع دروس متعددة، طول اليوم، أو أنشطة طول الأسبوع. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
-**بعد قراءة الإرشادات، يمكنك إرسال نشاطك في [صفحتنا لتسجيل أنشطة (Hour of Code™)](http://bit.ly/29zt9ki). يمكنك تقديم نشاطك في أي وقت، لكن آخر أجل لإدماجه في السنة هو 1 أكتوبر. مثلا، أي نشاط تم التوصل إليهبعد 1 أكتوبر، {{ campaign_date/year }} لن يتم إدراجه لساعة برمجة {{ campaign_date/year }}.)إذا كان لديك أسئلة حول إلرسال نشاطك، المرجو الاطلاع على support@code.org.</p> 
+A few tips:
 
-بعض التوجيهات:
+1. **أرسل أكثر من نشاط**: إذا كنت قد أعددت أنشطة لمستويات متعددة، لأعمار مختلفة، أو لأصناف أخر، سنعر أنشطتك منفردة ليتمكن المدرس من العثور على شيء جيد لفصله الدراسي. لذلك إذا قمت بإنشاء صفحة أعطيتنا عنوانها الالكتروني، فلا تفعلذلك مجددا. أرسل كل دورة أو نشاط بشكل فردي. نظرا للعدد الكبير من الأنشطة المتوصل بها في هذه السنة، سيكون لدينا الوقت لمراجعة 5 أنشطة لكل شريك.
 
-1. **أرسل أكثر من نشاط**: إذا كنت قد أعددت أنشطة لمستويات متعددة، لأعمار مختلفة، أو لأصناف أخر، سنعر أنشطتك منفردة ليتمكن المدرس من العثور على شيء جيد لفصله الدراسي. لذلك إذا قمت بإنشاء صفحة أعطيتنا عنوانها الالكتروني، فلا تفعلذلك مجددا. أرسل كل دورة أو نشاط بشكل فردي. نظرا للعدد الكبير من الأنشطة المتوصل بها في هذه السنة، سيكون لدينا الوقت لمراجعة 5 أنشطة لكل شريك. بعد ذلك سنبذل قصارى جهدنا لمراجعة عدد أكبر قبل بداية ساعة البرمجة.
-
-2. **دروس أكثر للمبتدئين**: بالإضافة إلى دروس المدرسين والمتعلمين الذين يتعلمونعلوم الكمبيوتر للمرة الأولى، سنعرض التجارب التعليمية لفصل علوم الكمبيوتر الذكي الذي يريد أن يتعلم أكثر! ساعدنا لنقدم دروسا لأقسام تعلمت الأساسيات. يمكن أن يكون عمر هؤلاء المتعملنن من 9 إلى 99.
+2. **دروس أكثر للمبتدئين**: بالإضافة إلى دروس المدرسين والمتعلمين الذين يتعلمونعلوم الكمبيوتر للمرة الأولى، سنعرض التجارب التعليمية لفصل علوم الكمبيوتر الذكي الذي يريد أن يتعلم أكثر! ساعدنا لنقدم دروسا لأقسام تعلمت الأساسيات.
 
 3. **مجالات المواضيع**: لديك فكرة رائعة تدمج علوم الكمبيوتر في الرياضيات؟ السجل؟ فنون اللغة؟ علوم؟ فن؟ أو موضوع آخر؟ تلقينا العديد من الطلبات من المدرسين الذين يريدون ربط ساعة البرمجة نجال مواضعيهم (خاصة مع معايير (ISTE) المطَوَّرة للمتعلمين متضمنة "المصمم المبدع" و"المفكر المعلومياتي"). يمكن للمدرسين الانتقاء حسب نوع الفصل الدراسي (المستوى أو مجال الموضوع)، لذلك نحتاج مساعدتك لملء الفجوات لمنح الفصل الأنشطة أو تخطيط الدرس لربط علوم الكمبيوتر بمجال الموضوع الرئيسي لمختلف الفصول الدراسية. نواصل أيضا ليكون لدينا صنف "علوم الكمبيوتر" للمدرسين الذين يبحثون عن أنشطة علوم الكمبيوتر الشاملة.
 
@@ -43,34 +41,34 @@ title: إرشادات النشاط
 
 ## ماذا تقدم
 
-**لغز ذاتي التوجيه أو لعبة ([مثال](https://code.org/mc))**
+**Self-guided puzzle or game ([example](https://code.org/dance))**
 
-هذه الأنشطة مصمم للمتعلمين للتوجه الذاتي إلى الدورة. لا تتطلب العدد من التعليمات من المدرس أو الإعداد القبلي للمدرس.
+These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
 
-**درس ميسر من ظرف المدرس([مثال](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA)، [هيكل](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-الآن وقد جرب عشرات الآلاف من المدرسين ساعة البرمجةساعة البرمجة، العديد من الفصول جاهظة لمظيد من الأنشطة الإبداعية لتدريس أساسيات علوم الكمبيوتر. لمساعدة المدرسين الأكثر تقدما لإيجاد الإلهام، نجمع ونرتب الدروس وتخطيط الأنشطة التي يسيرها المدرسون لساعة برمجة قدماء المحاربين.
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
 
-أحد أنواع الأنشطة اللتي سنقدمها للمدرسين ذوي التجربة هو إنشاء مشروع "الصندوق المفتوح". الأنشطة التي تشجع الطلاب على بناء تطبيقهم الخاصة، لعبة، موقع أو مشروع آخر. إذا كانت سهلة، مزيد من أنشطة مفتوحة ستعرض جيدا الطبيعة الإبداعية لعلوم الكمبيوتر.
+الآن وقد جرب عشرات الآلاف من المدرسين ساعة البرمجةساعة البرمجة، العديد من الفصول جاهظة لمظيد من الأنشطة الإبداعية لتدريس أساسيات علوم الكمبيوتر. لمساعدة المدرسين الأكثر تقدما لإيجاد الإلهام، نجمع ونرتب الدروس وتخطيط الأنشطة التي يسيرها المدرسون لساعة برمجة قدماء المحاربين. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+
+Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
 
 يمكن لبعض لمدرسين أن يفضلوا استضافة أنشطة ساعة البرمجة التي تتبع شكل الدرس التقليدي أكثر من ألغاز موجهة/لعبة مجربة.
 
-يمكنك البدء مع هذا [النموذج](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA)لتخطيط الدرس.
+**Activities for teachers in other subjects/fields**
 
-**أنشطة المدرس في مواضيع/مجالات**
+We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
 
-نقدم أيضا خطط درس مصممة لمواضع من مجالات مختلفة. مثلا، تخطيط درس ساعة واحدة لتدريس البرمجة في فصل الهندسة. أو تمرين لعبة الكلمات (mad-lib) لفصل الانجليزية. أو نشاط لإنشاء مسابفة إبداعية لفصل التاريخ. هذا يمكن أن يجذب مدرسين من مجالات أخرى لتسيير نشاط ساعة البرمجة الذي فريد لمجالهم، من خلال تبيان كيف تؤثر وتغني علوم الكمبيوتر مواضيع مجالات مختلفة.
-
-أمثلة:
+Examples:
 
 - صور المرآة (نشاط لمدرس الفن)
 - نشاط (arduino) (اللوحة الأم الالكترونية) لمدرس الفيزياء
 - نشاط تاريخ التكنولوجيا لمدرس التاريخ
 - وشاهد [هذه اللائحة](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) للمزيد من الأفكار من المدرسين (أو أضف فكرتك إلى اللائحة لإلهام الآخرين)
 
-**للطلاب ذوي احتياجات خاصة**
+**For students with special needs**
 
-إذا أنشأت نشاطا أو دورة مصممة للطلاب ذوي احتياجات ختصة، المرجو الإشارة إليها في الوصف. علة وجه الخصوص، هناك خيارات قليلة لضعاف البصر. إذا كان نشاطك مصمما لهذه الفئة، المرجو إخبارنا بذلك.
+If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
 
 [**عودة إلى أعلى**](#top)
 
@@ -78,17 +76,19 @@ title: إرشادات النشاط
 
 ## مبادئ توجيهية عامة لإنشاء نشاط لساعة البرمجة
 
-الهجف من ساعة البرمجة هو إعطاء المبتدئين رؤية حول علوم الكمبيوتر أو البرمجة. يجب أن تكون النغمة هكذا:
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
 
 - كل شخص يمكنه تعلم علوم الكمبيوتر - بغض النظر عن العم، الجنس أو العرق. 
 - علوم الكمبيوتر مرتبطة بمجموعة متنوعة من المجالات والاهتمامات. ينبغي على الجميع أن يتعلم!
 - شجع الطلاب على إنشاء أشياء فريدة يمكن مشاركتها مع الآباء/الأصدقاء على الإنترنت. 
 
-يجب أن تدرس الأنشطة مفهوما من مفاهيم علوم الكمبيوتر كالحلقات، الشرطيات، التفير، أو كيف يعمل الأنترنت. يمكن لنشاط أن يدرس كيفية ارتباط علوم الكمبيوتر بمهن العالم الواقعي، أحداثه، أو التاريخ. كمثال، تدريس تصميم (UX) (تجربة المستعمل) لجعل التطبيق ذو معنى وأهمية لمستخدميه. لا ننصح بالأنشطة التي تركز على تركيب الكود أكثر من المفاهيم في البرمجة. كمثال، سندرج لائحة -دون تفاصيل- الأنشطة التي تدرس HTML. نفس الشيء، لا ننصح دروس الكتل البرمجية التي تركز على إعداد/تغيير خيارات الترتيب أكثر من تعلم كيفية نمذجة خوارزمية أو عملية.
+الهجف من ساعة البرمجة هو إعطاء المبتدئين رؤية حول علوم الكمبيوتر أو البرمجة. يجب أن تكون النغمة هكذا: For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+
+يجب أن تدرس الأنشطة مفهوما من مفاهيم علوم الكمبيوتر كالحلقات، الشرطيات، التفير، أو كيف يعمل الأنترنت. يمكن لنشاط أن يدرس كيفية ارتباط علوم الكمبيوتر بمهن العالم الواقعي، أحداثه، أو التاريخ. كمثال، تدريس تصميم (UX) (تجربة المستعمل) لجعل التطبيق ذو معنى وأهمية لمستخدميه. لا ننصح بالأنشطة التي تركز على تركيب الكود أكثر من المفاهيم في البرمجة.
 
 *المتطلبات التقنية* بسبب اختلاف الإعدادات التكنولوجية للمؤسسات والأقسام الدراسية، أفضل الأنشطة هي التي تعتمد على الويب أو الهواتف الذكية، أو حتى المستقلة التي تدرس مفاهيم علوم الكمبيوتر بدون استعمال الحاسوب (انظر <http://csunplugged.com/>). تجارب الأنشطة التي تتطلب تثبيت تطبيق، تطبيق الحاسوب، أو عدة للألعاب مقبولة لكنها غير مثالية. لن نعرض الأنشطة التي تتطلب تسجيل دخول أو دفعا ماليا. (أنشطة الروبوتيات يمكن أن تتطلب شراء روبوتات.)
 
-*صيغة يقودها المتعلمون (قيادة ذاتية):* ساعة البرمجة الأصلية تم بناؤها أساسا على نجاح الدروس والدورات الموجهة، والميسرة من قبل المدرس. هناك خيارات كثيرة، لكن إذا أردت إنشاء خيار جديد، فهذا النشاط يجب أن يصمم ليكون ممتعا لطالب يعمل لمفرده، أو لفثل مدرسه له إعداد أو معارف علوم الكمبيوتر قليلة. يجب أن يوفروا توجيهات للطلاب بدلا من تحد مفتوح لمدة ساعة طويلة. مثاليا، التوجيهات والدورات تكون في منصة البرمجة، لتجنب الانتقال من صفحة منصة البرمجة إلى صفحة الدورة التعليمية.
+To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
 [**عودة إلى أعلى**](#top)
 
@@ -202,30 +202,53 @@ title: إرشادات النشاط
 
 [**عودة إلى أعلى**](#top)
 
-<a id="design"></a>
+<a id="earlyreview"></a>
 
 ## افتراحات لتصميم ساعة دورات موجهة ذاتيا
 
-يمكن إدماج [علامة ساعة البرمجة](https://hourofcode.com/us/promote/resources#logo) في دورتك، لكنه غير مطلوب. إذا كنت تستعمل علامة ساعة البرمجة، انظر دليل استعمالها أسفله. <u>لا يمكن استعمال اسم وعلامة Code.org تحت أية ظروف.</u> كل منها لها حقوق محفوظة، ولا يمكن إدماجها مع طرف ثالث دون إذن صريح كتابي.
+Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
 
-**تأكد من كون الطالب المتوسط سينهي العمل خلال ساعة بشكل مريح.** يمكن إضافة نشاط في النهاية للطلاب الذين ينتقلون بسرعة في الدرس. تذكر أن جل الأطفال سيكونون مبتدئين في علوم الكمبيوتر والبرمجة.
+Reviewers will focus on providing the following:
+
+* ما هي المنصة أو محرك البحص الذي تعمل عليه الدورة جيدا؟
+* Critical feedback - What could be improved?
+* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
+* Does this activity encourage students to create something unique?
 
 **ضَمِّن ملاحظات المدرس.** يجب أن تكون معظم الأنشطة موجهة للطالب، لكن إذا النشاط مبسطا أو مسيرا من طرف المدرس، فالمرجو تضمين توجيهات بسيطة وواضحة للمدرس كملاحظات للمدرس في عنوان الكتروني مستقل يقدم مع أنشطتك. ليس الطلاب هم من تنقصهم التجربة لوحدهم، لكن أيضا بعض المدرسين. ضَمِّن المعلومة مثل:
 
-- ما هي المنصة أو محرك البحص الذي تعمل عليه الدورة جيدا؟
-- هل يشتغل على الهاتف الذكي؟ اللوحات الالكترونية؟
-- هل تنصح بالبرمجة الثنائية؟ 
-- اعتبارات للاستعمال في قسم؟ مثلا إذا كان هناك فيديوهات، انصح المدرسين بعرضها في مسلاط لكل الفصل لمشاهتها جماعيا
+**The early review is not an opportunity to collect feedback on an unfinished activity. Any activity a reviewer deems too incomplete to assess will not be reviewed.**
 
-**ضَمِّن التعليقات في نهاية النشاط.**(مثلا "أنهيت 10 مستويات وتعلم الحلقات! عمل رائع
+**شجع الطلاب على النشر في مواقع التواصل (إذا أمكن) عند الانتهاء.** مثلا "شاركت في ساعة البرمجة مع ________ هل قمت بذلك أيضا؟ #HourOfCode” أو "قمت ب #HourOfCode كجزء من #CSEdWeek.
 
-**شجع الطلاب على النشر في مواقع التواصل (إذا أمكن) عند الانتهاء.** مثلا "شاركت في ساعة البرمجة مع ________ هل قمت بذلك أيضا؟ #HourOfCode” أو "قمت ب #HourOfCode كجزء من #CSEdWeek. هل فعلت ذلك؟ @Scratch.” استعمل الهاشتاك **#HourOfCode** (بالحروف الكبيرة H, O, C)
+Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
 
-**أنشئ نشاطك بالاسبانية أو بلغات أخرى إلى جانب الانجليزية.**
+[**عودة إلى أعلى**](#top)
 
-**اشرح النشاط أو اربطه بسياق اجتماعي دال.** أصبحت برمجة الكمبيوتر قوة خارقة عندما يشاهد الطلاب كيف يمكن للعالم أن يتغير نحو الأفضل!
+<a id="design"></a>
 
-**تأكد من إمكانية استعمال الدورة في نموذج [البرمجة الثنائية](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). هذا مفيد خاصة لساعة البرمجة لأن العديد من الفصول الدراسية لا تتوفر على حاسوب لكل طالب.</p> 
+## المبادئ التوجيهية للعلامة التجارية
+
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+
+**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+
+العديد من دوراتنا استعملت علامة "ساعة البرمجة" على مواقعها الالكترونية. لا نريد منع هذا الاستعمال، لكن نريد أن يتم هذا الاستعمال في حدوده: Include info such as:
+
+- What platforms and browsers does the tutorial work best on?
+- Does it work on smartphones? Tablets?
+- استضف حدثا محليا، أو أطلب من موظفيك استضافته في المدارس المحلية أو الجماعات المحلية. 
+- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+
+**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+
+**Create your activity in Spanish or in other languages besides English.**
+
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**عودة إلى أعلى**](#top)
 
@@ -233,7 +256,7 @@ title: إرشادات النشاط
 
 ## المبادئ التوجيهية للعلامة التجارية
 
-العديد من دوراتنا استعملت علامة "ساعة البرمجة" على مواقعها الالكترونية. لا نريد منع هذا الاستعمال، لكن نريد أن يتم هذا الاستعمال في حدوده:
+Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
 
 1. كل إشارة إلى "ساعة البرمجية" يجب أن تستعمل دون الإيحاء إلى أنها اسم علامتك التجارية، لكن أن توحي إلى ساعة البرمجة كحركة مجتمعية. مثال جيد:" شارك في "Hour of Code™" على "ACMECorp.com". مثال سيء: "جرب ساعة البرمجة المقدمة من شركة "ACME Corp".
 2. استعمل العلامة "TM" في الأماكن التي تضع فيها "ساعة البرمجة"، في كل من موقعك الالكتروني أو توصيفات تطبيقك.
@@ -244,17 +267,17 @@ title: إرشادات النشاط
 
 <a id="pixel"></a>
 
-## عداد الزوار
+## عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة البرمجة
 
-من أجل تتبع المشاركة نطلب من كل شريك البرامج التعليمية تضمين برنامج تتبع زوار المواقع (1-pixel image) في صفحتهم الأولى لدورات ساعة البرمجة الخاصة بهم. يجن أن يكون برنامج (1-pixel image) في صفحة البدائة فقط. لا تضعها في أي مكان آخر من صفحات دوراتك.
+المرجو الترويج لنشاطك على شبكتك! قم بتوجيههم إلى صفحة ساعة البرمجة الخاصة بك. مستعملو انشطتك سيتفاعلون معها بإيجابية اكثر عند تلقي رسائلك حول الانشطة المقدمة.
 
-هذا سيمكننا من عد مستعملي دورتك لساعة البرمجة. سيقودنا إلى عد دقيق لمستعملي دورتك.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-إذا تمت الموافقة على برنامجك التعليمي وتم إدراجه في اللائحة النهائية، فستمنحك Code.org برنامج تتبع وحيد خاص بك لتضمينه في دورتك. انظر المثال أسفله.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-ملاحظة: هذا غير مهم للتطبيقات التي يمكن تثبيتها (اليوس، الأندرويد، تطبيقات التي تثبت على الحاسوب)
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-مثال متابعة البيكسيلات لتطبيق (AppInventor):
+Example tracking pixels for AppInventor:
 
 IMG SRC = <http://code.org/api/hour/begin_appinventor.png>   
 
@@ -263,14 +286,14 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 <a id="promote"></a>
 
-## عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة البرمجة
+## Promoting your activities, CSEdWeek, and Hour of Code
 
-المرجو الترويج لنشاطك على شبكتك! قم بتوجيههم إلى صفحة ساعة البرمجة الخاصة بك. مستعملو انشطتك سيتفاعلون معها بإيجابية اكثر عند تلقي رسائلك حول الانشطة المقدمة. استخدم حملة ساعة البرمجة الدولية لأسبوع تعليم علوم الحاسوب كذريعة لتشجيع المستعملين على دعوة الآخرين للانضمام، وتساعدنا على الوصول إلى 100 مليون مشترك.
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
-- أعد ساعة البرمجة وأسبوع تدريس علوم الكمبيوتر على موقعك. مثال: <http://www.tynker.com/hour-of-code>
-- قم بدعاية لساعة البرمجة باستخدام الشبكات الاجتماعية، وسائل الإعلام التقليدية، البريد الالكتروني، إلخ، باستخدام الهاشتاك **#HourOfCode** (مع حروف H، O، C)
-- استضف حدثا محليا، أو أطلب من موظفيك استضافته في المدارس المحلية أو الجماعات المحلية.
-- راجع قائمة الموارد للحصول على مزيد من المعلومات (قريبا).
+- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
+- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
+- Host a local event or ask your employees to host an event at local schools or community groups.
+- See our [resource kit](https://hourofcode.com/us/promote) for further information.
 
 [**عودة إلى أعلى**](#top)
 

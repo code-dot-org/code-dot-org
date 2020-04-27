@@ -1588,10 +1588,37 @@ de-DE:
           />\n"
       CSD U6 LED create intro:
         content1: hier die Beschreibung
+        markdown: |-
+          # LED-Anwendungen
+
+          Im letzten Level hast du eine App erstellt, um die LED mit verschiedenen Tasten auf dem Bildschirm zu steuern.   In den nächsten beiden Levels siehst du einige weitere Beispiele für Apps und du hast dann die Möglichkeit, eine eigene zu erstellen.
+
+          Während du dir die Beispiele ansiehst, überlege, welcher Code für die Anwendung, die du und dein Partner erstellen möchtest, nützlich sein könnte.
+
+
+          Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
       CSD U6 LED create intro_2018:
         content1: hier die Beschreibung
+        markdown: |-
+          # LED-Anwendungen
+
+          Im letzten Level hast du eine App erstellt, um die LED mit verschiedenen Tasten auf dem Bildschirm zu steuern.   In den nächsten beiden Levels siehst du einige weitere Beispiele für Apps und du hast dann die Möglichkeit, eine eigene zu erstellen.
+
+          Während du dir die Beispiele ansiehst, überlege, welcher Code für die Anwendung, die du und dein Partner erstellen möchtest, nützlich sein könnte.
+
+
+          Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
       CSD U6 LED create intro_2018_2019:
         content1: hier die Beschreibung
+        markdown: |-
+          # LED-Anwendungen
+
+          Im letzten Level hast du eine App erstellt, um die LED mit verschiedenen Tasten auf dem Bildschirm zu steuern.   In den nächsten beiden Levels siehst du einige weitere Beispiele für Apps und du hast dann die Möglichkeit, eine eigene zu erstellen.
+
+          Während du dir die Beispiele ansiehst, überlege, welcher Code für die Anwendung, die du und dein Partner erstellen möchtest, nützlich sein könnte.
+
+
+          Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
       CSD U6 array multi:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -1686,6 +1713,7 @@ de-DE:
           correct: true
         questions:
         - {}
+        title: Mache eine Vorhersage
       CSD U6 setProperty predict multi_2018:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -1699,6 +1727,7 @@ de-DE:
           correct: true
         questions:
         - {}
+        title: Mache eine Vorhersage
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -1712,6 +1741,7 @@ de-DE:
           correct: true
         questions:
         - {}
+        title: Mache eine Vorhersage
       CSD U6 tugowar stop:
         markdown: |
           # Stopp
@@ -3570,32 +3600,59 @@ de-DE:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
+        - text: Der Vogel wird sich überhaupt nicht bewegen.
+          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
+            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
+            er so lange, bis er das Schwein erreicht!
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
         - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
+          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
+            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
+            er so lange, bis er das Schwein erreicht!
         - text: Ich weiß es nicht.
+          feedback: Der Code veranlasst den Vogel, sich vorwärts zu bewegen, solange
+            es einen Weg gibt, und dann nach links abzubiegen.  Das macht er so lange,
+            bis er das Schwein erreicht!
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
+        - text: Der Vogel wird sich überhaupt nicht bewegen.
+          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
+            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
+            er so lange, bis er das Schwein erreicht!
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
         - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
+          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
+            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
+            er so lange, bis er das Schwein erreicht!
         - text: Ich weiß es nicht.
+          feedback: Der Code veranlasst den Vogel, sich vorwärts zu bewegen, solange
+            es einen Weg gibt, und dann nach links abzubiegen.  Das macht er so lange,
+            bis er das Schwein erreicht!
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
+        - text: Der Vogel wird sich überhaupt nicht bewegen.
+          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
+            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
+            er so lange, bis er das Schwein erreicht!
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
         - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
+          feedback: Falsch. Der Code veranlasst den Vogel, sich vorwärts zu bewegen,
+            solange es einen Weg gibt, und sich dann nach links zu wenden.  Das macht
+            er so lange, bis er das Schwein erreicht!
         - text: Ich weiß es nicht.
+          feedback: Der Code veranlasst den Vogel, sich vorwärts zu bewegen, solange
+            es einen Weg gibt, und dann nach links abzubiegen.  Das macht er so lange,
+            bis er das Schwein erreicht!
         questions:
         - {}
       courseD_multi_scrat_predict1:

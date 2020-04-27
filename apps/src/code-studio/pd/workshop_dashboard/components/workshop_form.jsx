@@ -40,8 +40,7 @@ import {
 } from '../permission';
 import {
   Courses,
-  Subjects,
-  SubjectNames
+  Subjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
@@ -560,11 +559,6 @@ export class WorkshopForm extends React.Component {
     if (this.shouldRenderSubject()) {
       const options = Subjects[this.state.course]
         .filter(subject => {
-          // Temporary: Don't show the new workshop type as an option while we're still building it.
-          if (subject === SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS) {
-            return false;
-          }
-
           // Only a WorkshopAdmin should be shown a Virtual workshop.
           return (
             subject.indexOf('Virtual') === -1 ||
