@@ -647,7 +647,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
   const allLevels = levelsByLesson(state);
 
   state.stages.forEach((lesson, index) => {
-    const group = lesson.flex_category; // Will be updated to lesson group in next pr
+    const group = lesson.lesson_group_display_name;
     const lessonAtIndex = lessonFromStageAtIndex(state, index);
     let lessonLevels = allLevels[index];
     if (!includeBonusLevels) {

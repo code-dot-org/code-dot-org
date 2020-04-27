@@ -39,7 +39,7 @@ const stageData = [
     position: 1,
     name: 'Computational Thinking',
     title: 'Stage 1: Computational Thinking',
-    flex_category: null,
+    lesson_group_display_name: null,
     lockable: false,
     levels: [
       {
@@ -95,7 +95,7 @@ const stageData = [
     position: 2,
     name: 'Maze',
     title: 'Stage 2: Maze',
-    flex_category: null,
+    lesson_group_display_name: null,
     lockable: false,
     levels: [
       {
@@ -990,8 +990,7 @@ describe('progressReduxTest', () => {
 
   describe('groupedLessons', () => {
     // helper method that creates a fake lesson
-    const fakeLesson = (categoryName, groupName, lessonName, lessonId) => ({
-      flex_category: categoryName,
+    const fakeLesson = (groupName, lessonName, lessonId) => ({
       lesson_group_display_name: groupName,
       name: lessonName,
       id: lessonId,
@@ -1005,12 +1004,24 @@ describe('progressReduxTest', () => {
       ]
     });
 
-    it('returns a single category if all lessons have the same category', () => {
+    it('returns lesson group', () => {
+      const state = {
+        stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
+        levelProgress: {},
+        focusAreaStageIds: []
+      };
+
+      const groups = groupedLessons(state);
+      assert.equal(groups.length, 1);
+      assert.equal(groups[0].group, 'Lesson Group');
+    });
+
+    it('returns a single group if all lessons have the same lesson group', () => {
       const state = {
         stages: [
-          fakeLesson('Content', null, 'lesson1', 1),
-          fakeLesson('Content', null, 'lesson2', 2),
-          fakeLesson('Content', null, 'lesson3', 3)
+          fakeLesson('Lesson Group', 'lesson1', 1),
+          fakeLesson('Lesson Group', 'lesson2', 2),
+          fakeLesson('Lesson Group', 'lesson3', 3)
         ],
         levelProgress: {},
         focusAreaStageIds: []
@@ -1018,48 +1029,10 @@ describe('progressReduxTest', () => {
 
       const groups = groupedLessons(state);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].group, 'Content');
+      assert.equal(groups[0].group, 'Lesson Group');
     });
 
-    it('groups non-adjacent lessons by category', () => {
-      const state = {
-        stages: [
-          fakeLesson('cat1', null, 'lesson1', 1),
-          fakeLesson('cat2', null, 'lesson2', 2),
-          fakeLesson('cat1', null, 'lesson3', 3)
-        ],
-        levelProgress: {},
-        focusAreaStageIds: []
-      };
-
-      const groups = groupedLessons(state);
-      assert.equal(groups.length, 2);
-      assert.equal(groups[0].group, 'cat1');
-      assert.equal(groups[1].group, 'cat2');
-      assert.equal(groups[0].levels.length, 2);
-      assert.equal(groups[1].levels.length, 1);
-      assert.deepEqual(groups[0].lessons, [
-        {
-          name: 'lesson1',
-          id: 1,
-          isFocusArea: false
-        },
-        {
-          name: 'lesson3',
-          id: 3,
-          isFocusArea: false
-        }
-      ]);
-      assert.deepEqual(groups[1].lessons, [
-        {
-          name: 'lesson2',
-          id: 2,
-          isFocusArea: false
-        }
-      ]);
-    });
-
-    it('includes bonus levels if includeBonusLevels is true', () => {
+    it('includes bonus levels in groups if includeBonusLevels is true', () => {
       const bonusLevel = {
         ids: [2106],
         title: 1,
@@ -1068,7 +1041,7 @@ describe('progressReduxTest', () => {
       const state = {
         stages: [
           {
-            flex_category: 'Content',
+            lesson_group_display_name: 'Lesson Group',
             levels: [bonusLevel],
             lessons: []
           }
