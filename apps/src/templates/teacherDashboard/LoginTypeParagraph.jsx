@@ -47,9 +47,10 @@ class LoginTypeParagraph extends Component {
         {!isOauthType(section.loginType) && (
           <div>
             <Button
+              __useDeprecatedTag
               onClick={this.openDialog}
               text={getButtonText(section.loginType, section.studentCount)}
-              color={Button.ButtonColor.white}
+              color={Button.ButtonColor.gray}
             />
             <ChangeLoginTypeDialog
               isOpen={this.state.isDialogOpen}

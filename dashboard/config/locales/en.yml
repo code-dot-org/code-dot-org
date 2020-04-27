@@ -143,7 +143,7 @@ en:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    overview_markdown: 'Sign up for an account to track your progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
+    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
     hoc_already_signed_up_heading: 'Get started without logging in'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
@@ -183,6 +183,9 @@ en:
     email_preference_yes: "Yes"
     email_preference_no: "No"
     email_preference_required: "You must specify an email preference."
+    parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
+    parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
+    parent_account_email_label: "Parent/Guardian Email"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -250,6 +253,7 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+    parent_email_added_subject: 'Welcome to Code.org!'  
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
@@ -476,6 +480,12 @@ en:
     auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."
     update_email: "Update"
+    for_parents_and_guardians: "For Parents and Guardians"
+    link_a_parent_email: "Link a parent/guardian email address to this account to stay updated on your child’s progress and projects"
+    parent_guardian_email_label: "Parent/guardian email"
+    none: "None"
+    only_one_parent_email_supported_warning: "Note: we are only able to support one parent/guardian email address per student account at this time."
+    encrypted: "encrypted"
   user_level:
     completed: 'Completed'
     tried: 'Tried'
@@ -578,6 +588,7 @@ en:
     download: 'Download Video'
     show_notes: 'Show Notes'
     show_video: 'Show Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
@@ -940,6 +951,7 @@ en:
     csf_warmup: 'Warm-Up'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd1_3: 'Alternate Lessons'
     csd2_1: 'Chapter 1: Web Content and HTML'
     csd2_2: 'Chapter 2: Styling and CSS'
     csd3_1: 'Chapter 1: Images and Animations'
@@ -978,6 +990,13 @@ en:
     csp_traversals: 'Traversals'
     csp_libraries: 'Libraries'
     csp_parameters_return_values: 'Parameters and Return Values'
+    csp_unit1_2020: 'Unit 1: Digital Information'
+    csp_unit2_2020: 'Unit 2: The Internet'
+    csp_unit3_2020: 'Unit 3: Intro to App Design'
+    csp_unit6_2020: 'Unit 6: Algorithms'
+    csp_unit8_2020: 'Unit 8: Create PT Prep'
+    csp_unit9_2020: 'Unit 9: Data'
+    csp_unit10_2020: 'Unit 10: Cybersecurity and Global Impacts'
     dlp: 'Reflection Prompts'
     time4cs_c1: 'Collection 1: The Everglades & its Ecosystems'
     time4cs_c2: 'Collection 2: Food Chains (in the Everglades)'
@@ -991,6 +1010,9 @@ en:
     k5_next_steps: 'Next Steps'
     k5_basic_concepts: 'Basic Coding Concepts and Teaching Practices'
     k5_diving_deeper: 'Diving Deeper: Courses E and F'
+    web_lab_projects: 'Web Lab Projects'
+    game_lab_projects: 'Game Lab Projects'
+    app_lab_projects: 'App Lab Projects'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -1061,6 +1083,8 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
   no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
   no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
@@ -1206,3 +1230,17 @@ en:
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
+  copy: 'Copy'
+  maker:
+    google_oauth:
+      login_with_google: 'Login to the Maker App with Google'
+      enter_code: 'Please enter the code provided when you logged in via Google on your default browser.'
+      copy_code: 'Please copy and paste this code into the Maker App to login to Code.org.'
+      error_token_expired: 'Token has expired. Please log in again for a new token.'
+      error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
+      error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
+  parent_email_banner:
+    text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
+    link_your_email: "Link your email"
+    not_now: "Not now"

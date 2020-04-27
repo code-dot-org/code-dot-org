@@ -172,6 +172,10 @@ ta:
           stages:
             Lists:
               name: பட்டியல்கள்
+        coursef-draft:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
         csd6-draft:
           stages:
             Lists:
@@ -202,6 +206,22 @@ ta:
               name: செயல்பாடுகள்
             'null':
               name: வெறுமை
+        coursee-2017:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
+        express-2017:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
+        new-f:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
+        course-f-2018:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
         csd6-old:
           stages:
             Lists:
@@ -244,26 +264,52 @@ ta:
               name: பாடல் எழுதுதல்
             Internet:
               name: இணையம்
+        coursef-2018:
+          stages:
+            Songwriting with Parameters:
+              name: பாடல் எழுதுதல்
         csp1-2018:
           stages:
             The Internet:
               name: இணையம்
+        dance:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
+        dance--draft:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
+        dance-draft:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
         coursef-2019:
           stages:
             The Artist:
               name: கலைஞர்
             Internet:
               name: இணையம்
+        dance-low:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            Dance Party:
+              name: நடன விருந்து
         coursee-2019:
           stages:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
             Songwriting:
               name: பாடல் எழுதுதல்
+        express-2019:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
         andrea-test:
           stages:
             'null':
@@ -296,6 +342,10 @@ ta:
               name: மாறிலிகள்
             Functions:
               name: செயல்பாடுகள்
+        dance-2019:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -306,3 +356,49 @@ ta:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
+        csd3-2020:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Functions:
+              name: செயல்பாடுகள்
+            Text:
+              name: உரை
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: வரைதாள் செய்நிரல்
+            Dance Party:
+              name: நடன விருந்து
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: பாடல் எழுதுதல்
+        coursef-2020:
+          stages:
+            Internet:
+              name: இணையம்
+        express-2020:
+          stages:
+            Dance Party:
+              name: நடன விருந்து
+        csd3-virtual:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Functions:
+              name: செயல்பாடுகள்
+        csp5-virtual:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: செயல்பாடுகள்
+        code-break:
+          stages:
+            Algorithms:
+              name: வழிமுறைகள்
+            Events:
+              name: நிகழ்வுகள்

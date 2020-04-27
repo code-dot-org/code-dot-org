@@ -3,7 +3,7 @@ ar:
   data:
     script:
       category:
-        csf_category_name: أساسيات علوم الكمبيوتر
+        full_course_category_name: الدورات الكاملة
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
       name:
@@ -135,7 +135,7 @@ ar:
             Digital Citizenship:
               name: المواطنة الرقمية
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
             Functional Suncatchers:
               name: وظيفية Suncatchers
             Internet:
@@ -260,7 +260,7 @@ ar:
             'Bee: Nested Loops':
               name: 'النحلة : الحلقات المتداخلة'
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
             'Maze: Sequence':
               name: 'المتاهة : التسلسل'
         usability:
@@ -806,7 +806,7 @@ ar:
             Bounce:
               name: الارتداد
             'Farmer: While Loops':
-              name: 'المزارع : حلقات بينما'
+              name: 'المُزارع : حلقات طالما'
         csd3-2017:
           description_short: البرمجة
           stages:
@@ -1707,3 +1707,118 @@ ar:
           stages:
             Conditionals:
               name: الجمل الشرطية
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: الدوال والمعاملات
+        csd3-2020:
+          description_short: البرمجة
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال
+            Text:
+              name: النص
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: الذهاب للأماكن بأمان
+            'Programming: Happy Maps':
+              name: الخرائط السعيدة
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: البصمة الرقمية الخاصة بك
+            Move It, Move It:
+              name: حركها , حركها
+            'Loops: Getting Loopy':
+              name: القبض على المعتوهون
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: أساور الثنائية
+            'Events: The Big Event':
+              name: الحدث الكبير
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: برمجة ورقة الرسم البياني
+            Relay Programming:
+              name: برمجة السباق
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+            Conditionals with Cards:
+              name: الشرطية مع بطاقات
+            'Unplugged: Binary':
+              name: صور ثنائية
+            Artist Binary:
+              name: ثنائي الفنان
+            Digital Citizenship:
+              name: المواطنة الرقمية
+            Dance Party:
+              name: حفلة الرقص
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: تأليف الأغاني
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: المتغيرات المغلف
+            For Loop Fun:
+              name: حلقة فور، مرح
+            Internet:
+              name: الانترنت
+            Crowdsourcing:
+              name: حشد المصادر
+        express-2020:
+          stages:
+            Dance Party:
+              name: حفلة الرقص
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: مسابقة التهجئة
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: أرقام ثنائية
+        csp3-virtual:
+          description_short: البرمجة
+          stages:
+            Creating Functions:
+              name: إضافة الدوال
+        csd3-virtual:
+          description_short: البرمجة
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: حلقات بينما
+            Variables:
+              name: المتغيرات
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: دوال
+        code-break:
+          stages:
+            Algorithms:
+              name: الخوارزميات
+            Events:
+              name: الأحداث
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: حلقات بينما

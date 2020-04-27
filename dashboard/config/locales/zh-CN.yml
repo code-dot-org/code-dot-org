@@ -97,11 +97,11 @@ zh-CN:
     sign_out_of_markdown: "#### 当前使用了 %{provider} 登录，[单击这里](%{url}) 来注销 %{provider}。"
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
-    google_oauth2: 谷歌
+    google_oauth2: 谷歌账号
     twitter: Twitter
     facebook: Facebook
-    windowslive: 微软
-    microsoft_v2_auth: 微软
+    windowslive: 微软账号
+    microsoft_v2_auth: 微软账号
     clever: Clever
     powerschool: Powerschool
     forgot_password: 忘记了您的密码吗？
@@ -149,7 +149,6 @@ zh-CN:
     valid_password: 有效的密码 ！
     invalid_password: 密码必须至少为 6 个字符
     mismatch_password: 您输入的两个密码不匹配
-    under_13_consent: 如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。
     student_consent: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
     agree_us_website: 我同意使用美国的网站。
     my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
@@ -235,6 +234,7 @@ zh-CN:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org 的登录信息
+    parent_email_added_subject: 欢迎来到 Code.org ！
   teacher_mailer:
     new_teacher_subject: 欢迎来到 Code.org ！
     delete_teacher_subject: Code.org 通知：你的帐户已被删除
@@ -264,7 +264,7 @@ zh-CN:
       no_teacher: 找不到用户名 %{teacher_email_or_code}。请让该用户先注册，再次尝试添加。
       section_not_found: 找不到代码 '%{section_code}' 节.
       blank_code: 请输入一节代码
-      cant_join_own_section: 对不起，你不能加入你自己的部分.
+      cant_join_own_section: 对不起，不能加入自己的小组。
       provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
     mail:
       student_disassociated:
@@ -463,6 +463,9 @@ zh-CN:
     auth_option_saved: 已成功连接 %{provider} 账号的邮件地址 %{email}。
     auth_option_saved_no_email: 已成功连接 %{provider} 账号 。
     update_email: 更新
+    parent_guardian_email_label: 父母/监护人电子邮箱
+    none: 没有
+    encrypted: 已加密
   user_level:
     completed: 已完成
     tried: 试过了
@@ -505,16 +508,15 @@ zh-CN:
     no_primary_course: 试试代码工作室的课程
     choose_next_course: 从下面代码工作室的课程中选一个体验
     print_certificate: 打印证书
-  certificate:
-    sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   move_students:
-    new_section_dne: 抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。
-    section_code_cant_be_current_section: 当前章节不能与新建单元相同。
+    new_section_dne: 抱歉，小组 %{new_section_code} 不存在。请输入不同的小组代码。
+    section_code_cant_be_current_section: 当前小组不能与新建小组相同。
     current_section_dne: 抱歉，小组%{current_section_code} 不存在。请输入一个不同的小组代码。
     student_ids_not_entered: 请提供 student_ids。
     student_not_found: 无法找到这一个或多个学生。
-    all_students_must_be_in_current_section: 所有的学生都必须注册到您的章节中。
-    already_enrolled_in_new_section: 您无法移动这些学生，因为他们已经在这个新的小组里了。
+    all_students_must_be_in_current_section: 所有的学生都必须注册到小组中。
+    already_enrolled_in_new_section: 无法移动这些学生，因为他们已经在这个新的小组里了。
     third_party_login: 不能将从第三方工具同步的学生移动到另一个小组。
   share:
     title: 在代码工作室学习
@@ -580,6 +582,7 @@ zh-CN:
     download: 下载视频
     show_notes: 显示备注
     show_video: 显示视频
+    label: 视频
   compatibility:
     upgrade:
       unsupported_message: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
@@ -973,6 +976,13 @@ zh-CN:
     csp_traversals: 遍历
     csp_libraries: 库
     csp_parameters_return_values: 参数和返回值
+    csp_unit1_2020: 单元 1︰ 数字信息
+    csp_unit2_2020: 单元 2︰ 互联网
+    csp_unit3_2020: 第3单元：应用设计简介
+    csp_unit6_2020: '单元 6: 算法'
+    csp_unit8_2020: '单元 8: 创建 PT准备'
+    csp_unit9_2020: '单元 9: 数据'
+    csp_unit10_2020: 第10单元：网络安全和全球影响
     dlp: 反思提示
     time4cs_c1: 集合 1：湿地及其生态系统
     time4cs_c2: 集合 2：湿地里的食物链
@@ -1049,6 +1059,8 @@ zh-CN:
   locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。
   hidden_stage: 你的老师没有预料到你来到这里。请询问你的老师你应该上什么课。
   hidden_script: 你的老师不期待你来这里。请询问你的老师应该上哪个单元。
+  no_course_access_student: 无权访问此课程。请问问老师，应该上什么课程。
+  no_course_access_teacher: 不能访问此课程。如果确定应该能访问次课程，请写信给 support@code.org，以便能修复此情况。
   no_script_access_student: 无权访问此单元。请询问教师，应该访问什么单元。
   no_script_access_teacher: 你不能进入这个单元。如果你认为可以访问这个单元，请写信给 support@code.org，以便我们可以解决这种情况。
   return_unit_overview: 转到单元概述
@@ -1168,3 +1180,8 @@ zh-CN:
   page_not_found_header: 404：找不到页面
   page_not_found_description: 您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。
   page_not_found_button: 返回主页
+  copy: 复制
+  maker:
+    google_oauth:
+      login_with_google: 登录到Google的制作者应用
+      error_no_code: 请输入您的登录代码。

@@ -96,6 +96,14 @@ mi-NZ:
         do something: mahia atu
       NEW Course 4 Play Lab Params 11:
         jump: peke
+      New Artist Project:
+        draw a star: tāngia he whetū
+        draw a circle: tāngia he porohita
+        draw a triangle: tāngia he tapatoru
+        draw a house: tāngia he whare
+        draw a square: tāngia he tapawhā
+      New Play Lab Project:
+        jump: peke
       Standalone_Artist_7:
         draw a flower: tāngia he putiputi
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ mi-NZ:
       courseE_artist_functions7:
         draw a house: tāngia he whare
       courseE_artist_functions7_2018:
-        draw a house: tāngia he whare
-      courseE_artist_functions7_2019:
         draw a house: tāngia he whare
       courseE_artist_functions8:
         do something: mahia atu

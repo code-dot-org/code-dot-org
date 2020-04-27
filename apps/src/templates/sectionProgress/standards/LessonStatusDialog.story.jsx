@@ -1,10 +1,11 @@
 import React from 'react';
-import {UnconnectedLessonStatusDialog as LessonStatusDialog} from './LessonStatusDialog';
+import LessonStatusDialog from './LessonStatusDialog';
 import {action} from '@storybook/addon-actions';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 
 export default storybook => {
@@ -12,7 +13,8 @@ export default storybook => {
     combineReducers({
       sectionStandardsProgress,
       sectionProgress,
-      scriptSelection
+      scriptSelection,
+      sectionData
     })
   );
 

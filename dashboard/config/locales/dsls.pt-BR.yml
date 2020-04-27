@@ -378,7 +378,9 @@ pt-BR:
         title: Múltipla Escolha
       4-5 Songwriting Multi 1:
         answers:
-        - text: Lou, Lou, skip to my Lou,
+        - text: |2-
+
+            Lou, Lou, pule para o meu Lou.
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
           correct: true
@@ -1589,26 +1591,6 @@ pt-BR:
           ## Exemplos
 
           [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
-      CSD U3 Collision Detection:
-        markdown: |
-          # Visão global
-
-          A turma aprende sobre a detecção de colisão no computador. Os pares exploram como um computador pode usar propriedades de localização e tamanho de sprites e matemática para detectar se dois sprites estão se tocando. Em seguida, a classe usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por último, eles usam suas novas habilidades para melhorar o jogo de sidescroller que eles começaram na última lição.
-
-          ## Vocabulário
-
-          * ** Abstração ** - Retirar diferenças específicas para fazer com que uma solução funcione para vários problemas.
-          * ** Depuração ** - Localizando e corrigindo problemas em seu algoritmo ou programa.
-          * ** Declaração If  ** - A estrutura de programação comum que implementa "instruções condicionais".
-
-          ## Código introduzido
-
-          * [sprite.debug] (// docs.code.org/gamelab/debug/)
-          * [sprite.isTouching ()] (// docs.code.org/gamelab/isTouching/)
-
-          ## Recursos
-
-          * [Detecção de colisão - Guia de atividades] (https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
       CSD U3 Collisions SFLP:
         markdown: |+
           # Visão global
@@ -1638,13 +1620,6 @@ pt-BR:
 
           * [Guia do Projeto - Jogo Defensor - Guia do Projeto] (https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
-        markdown: |+
-          # Iniciando sua pesquisa
-
-          Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
-
-
-      CSD U3 Entertainment_2018:
         markdown: |+
           # Iniciando sua pesquisa
 
@@ -1795,6 +1770,16 @@ pt-BR:
         - text: É verdade apenas uma vez quando a tecla é liberada.
         - text: É verdade enquanto a tecla é pressionada ou segurada.
         title: 'Combinando: Respondendo a teclas pressionadas'
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          # Visão geral
+
+          Solicita-se à classe que considere os "problemas" do tédio e da auto-expressão, e que reflita sobre como eles abordam esses problemas em suas próprias vidas. A partir daí, eles irão explorar como a Ciência da Computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a auto-expressão.
+
+
+          ## Recursos
+
+          * [CS in Entertainment - Guia de atividades] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
       CSD U3 Lesson Overview 10:
         markdown: |
           # Visão global
@@ -1872,13 +1857,20 @@ pt-BR:
           * [Cartão interativo - Rubrica] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
           * [Cartão Interativo - Revisão por Pares] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
       CSD U3 Lesson Overview 2:
-        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
-          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
-          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
-          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
-          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
-          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
-          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+        markdown: |+
+          Visão geral
+
+          Esta lição explora os desafios de comunicar como desenhar com formas e usar uma ferramenta que introduz como esse problema é abordado no Game Lab. A classe usa uma ferramenta de Game Lab para colocar interativamente formas na grade de 400 por 400 do Game Lab. Os parceiros então se revezam, instruindo um ao outro como desenhar uma imagem oculta usando essa ferramenta, respondendo por muitos dos desafios da programação no Game Lab.
+
+
+          ## Recursos
+
+          * [Formas de desenho - Guia de atividades] (https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+
+
+
+
+
       CSD U3 Lesson Overview 3:
         markdown: |+
           # Visão global
@@ -2080,10 +2072,11 @@ pt-BR:
         - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -2147,13 +2140,6 @@ pt-BR:
 
 
           ### Que informações você precisa para ajudá-lo a decodificá-lo?
-
-      CSD U3 complex sprite movement SFLP:
-        markdown: |+
-          # Visão global
-
-          A classe aprende a combinar as propriedades de velocidade dos sprites com o padrão de contador para criar movimentos de sprites mais complexos, como simular gravidade, fazer um sprite saltar e permitir que um sprite flutue para a esquerda ou para a direita. Nos níveis finais, a classe combina esses movimentos para animar e controlar um único sprite e construir um jogo simples no qual um personagem voa e coleta moedas.
-
 
       CSD U3 drawSprites placement match:
         answers:
@@ -5443,66 +5429,6 @@ pt-BR:
           # Simão Diz
 
           Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo.
-      Social Sleuth:
-        markdown: |+
-          # Investigação Social
-
-          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
-
-          ## Perfis
-
-          Clique na foto de cada perfil para abrir-lo.
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
-      Social Sleuth_2018:
-        markdown: |+
-          # Investigação Social
-
-          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
-
-          ## Perfis
-
-          Clique na foto de cada perfil para abrir-lo.
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
       Social Sleuth_2018_2019:
         markdown: |+
           # Investigação Social
@@ -5631,6 +5557,8 @@ pt-BR:
           # Recursos
 
           * [Filtragem de pixels] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Guia de atividades ([PDF] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
+        teacher_markdown: "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
+          - Soluções"
       Unit 2 Lesson 10 Overview:
         markdown: |
           # Visão global
@@ -6288,18 +6216,11 @@ pt-BR:
             de mel ou *uma* flor atrás de cada nuvem.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: A abelha terá néctar em cada flor e mel em cada favo de mel.
-          correct: true
+        - correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
-          feedback: Incorreto. O bloco 'if na flor' permite que a abelha obtenha néctar
-            em cada flor e mel em cada favo de mel.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
-          feedback: Incorreto. Incorreto. O bloco 'se na flor' permite que a abelha
-            obtenha néctar em cada flor e mel em cada favo de mel..
         - text: Eu não sei.
-          feedback: O bloco 'se na flor' permite que a abelha obtenha néctar em cada
-            flor e mel em cada favo de mel.
         questions:
         - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
             depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo
@@ -6778,7 +6699,7 @@ pt-BR:
         - text: O harvester vai pegar todas as abóboras.
           feedback: Incorreto. A colheitadeira não chama a função "verificar e coletar"
             até que a mesma chegue no milho.
-        - text: O colheitadora irá pegar a alface.
+        - text: A colheitadora irá pegar a alface.
           feedback: Incorreta. A colheitadeira só faz uma volta e termina no milho.
         - text: O colheitadora irá pegar o milho.
           correct: true
@@ -6789,32 +6710,32 @@ pt-BR:
         answers:
         - text: O colheitadora irá pegar duas abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         - text: O harvester vai pegar todas as abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
-        - text: O colheitadora irá pegar a alface.
+            vira-se e volte até coletar a alface.
+        - text: A colheitadora irá pegar a alface.
           correct: true
           feedback: Correto!
         - text: O colheitadora irá pegar o milho.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         questions:
         - text: Veja as funções definidas abaixo. O que a colheitadeira escolherá?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: O colheitadora irá pegar duas abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         - text: O harvester vai pegar todas as abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
-        - text: O colheitadora irá pegar a alface.
+            vira-se e volte até coletar a alface.
+        - text: A colheitadora irá pegar a alface.
           correct: true
           feedback: Correto!
         - text: O colheitadora irá pegar o milho.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         questions:
         - text: Veja as funções definidas abaixo. O que a colheitadeira escolherá?
       courseE_prediction_artistFunction1:
@@ -7539,9 +7460,7 @@ pt-BR:
         questions:
         - text: O que acontecerá quando você pressionar o botão "Executar"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: |2-
-
-          Pesquisa aos estudantes ao final do curso do CS Discoveries
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: "# CS Descobertas de Pesquisa pós-curso \n\n** A sua entrada e feedback
           é importante para nós! ** Usamos para:\n\n* entender sua experiência\n*
@@ -7551,9 +7470,7 @@ pt-BR:
           Clique aqui para completar o CS descobertas Pesquisa pós-curso</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       csd-post-survey-levelgroup-2018:
-        title: |2-
-
-          Pesquisa aos estudantes ao final do curso do CS Discoveries
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-pre-survey-2017-levelgroup:
         markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
           de folha de alumínio que suportarão tantos centavos quanto for possível.
@@ -7562,8 +7479,134 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
         title: Pesquisa rápida de Descobertas de CC!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.

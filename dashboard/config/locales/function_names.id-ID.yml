@@ -166,6 +166,14 @@ id-ID:
         do something: buat sesuatu
       NEW Course 4 Play Lab Params 11:
         jump: lompat
+      New Artist Project:
+        draw a star: menggambar bintang
+        draw a circle: Gambar sebuah lingkaran
+        draw a triangle: menggambar sebuah segitiga
+        draw a house: gambar sebuah rumah
+        draw a square: menggambar sebuah persegi empat
+      New Play Lab Project:
+        jump: lompat
       Robot Doodle:
         draw head: gambar kepala
       Robot Doodle_2018:
@@ -228,8 +236,6 @@ id-ID:
       courseE_artist_functions7:
         draw a house: gambar sebuah rumah
       courseE_artist_functions7_2018:
-        draw a house: gambar sebuah rumah
-      courseE_artist_functions7_2019:
         draw a house: gambar sebuah rumah
       courseE_artist_functions8:
         do something: buat sesuatu

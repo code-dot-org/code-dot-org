@@ -170,7 +170,7 @@ vi-VN:
       Dance_Party_02: |-
         Hãy làm con nai sừng tấm này nhảy múa nào!
 
-        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
+        Kéo khối <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> vào không gian làm việc. Kết nối nó với bên dưới khối <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Vũ công của bạn sẽ bắt đầu động tác mới sau nhịp thứ tư.
 
         **Nhịp** được sử dụng để tính thời gian trong âm nhạc. Trong hướng dẫn này, một nhịp dài bốn phách.
       Dance_Party_03: |-
@@ -415,6 +415,8 @@ vi-VN:
         Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       MC_HOC_2017_FP20x20_2019: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
         tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
+      New Minecraft Hero Project: "**Chơi tự do:** Bây giờ bạn có thể thỏa sức sáng
+        tạo! Hãy lập trình cho Đặc vụ để giúp bạn khám phá thế giới."
       Overworld Move to Sheep: Hãy thêm một lệnh "move forward" thứ hai để đi đến
         con cừu.
       Overworld Move to Sheep_2019: Hãy thêm một lệnh "move forward" thứ hai để đi
@@ -650,16 +652,10 @@ vi-VN:
         Đưa chú chó Jorge đến cây cờ để hoàn thành câu đố này!
       courseA_playLab_events4_2018: Thêm một khối để giúp Jorge di chuyển sang phải
         khi ấn phím mũi tên phải.
-      courseA_playLab_events4_2019: Thêm một khối để giúp Jorge di chuyển sang phải
-        khi ấn phím mũi tên phải.
       courseA_playLab_events5: Thêm các khối sự kiện để giúp Jorge di chuyển lên hoặc
         xuống khi ấn phím mũi tên lên hoặc xuống.
       courseA_playLab_events5_2018: Thêm các khối sự kiện để giúp Jorge di chuyển
         lên hoặc xuống khi ấn phím mũi tên lên hoặc xuống.
-      courseA_playLab_events5_2019: Thêm các khối sự kiện để giúp Jorge di chuyển
-        lên hoặc xuống khi ấn phím mũi tên lên hoặc xuống.
-      courseA_playLab_events6_2019: Hãy làm cho trò chơi thú vị hơn bằng cách thay
-        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
       courseA_playLab_events7_2018: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
         trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
         nó không?

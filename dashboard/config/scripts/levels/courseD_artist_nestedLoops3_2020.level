@@ -1,0 +1,258 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:54:22.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "x": "250",
+    "y": "50",
+    "start_direction": "180",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "ideal": "6",
+    "slider_speed": ".8",
+    "free_play": "false",
+    "short_instructions": "Use your new skills to quickly draw the last row of windows for this building.\r\n\r\nThe windows are 20 pixel squares, each 20 pixels apart.",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "examples_required": "false",
+    "never_autoplay_video": "true",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \\n\\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?\",\"hint_id\":\"courseD_artist_nestedLoops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d97da238c0d2bdc20faf8d2579f4799a/courseD_artist_nestedLoops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use a nested loop to solve this puzzle quickly. \",\"hint_id\":\"courseD_artist_nestedLoops3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c7f241064a8aee8ab2c21461d87098e7/courseD_artist_nestedLoops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by using a `repeat` loop to make one square.  Next, repeat that square 8 times, jumping 40 pixels in between. \",\"hint_id\":\"courseD_artist_nestedLoops3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fcfbc15744dd83737330c06afc669d6a/courseD_artist_nestedLoops3.mp3\"}]",
+    "instructions_important": "false",
+    "discard_background": "false",
+    "video_key": "C3_artist_nested_loops",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "parent_level_id": 15089,
+    "name_suffix": "_2020",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-31 23:49:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="comment">
+          <title name="TEXT"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnLeft</title>
+                          <title name="VALUE" config="45,60,90,120,180">90</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">40</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnRight</title>
+              <title name="VALUE">90</title>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">120</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">3</title>
+                          <statement name="DO">
+                            <block type="controls_repeat">
+                              <title name="TIMES">8</title>
+                              <statement name="DO">
+                                <block type="controls_repeat">
+                                  <title name="TIMES">4</title>
+                                  <statement name="DO">
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">20</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="jump_by_constant">
+                                      <title name="DIR">jumpForward</title>
+                                      <title name="VALUE">40</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpBackward</title>
+                                  <title name="VALUE">320</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnLeft</title>
+                                      <title name="VALUE">90</title>
+                                      <next>
+                                        <block type="jump_by_constant">
+                                          <title name="DIR">jumpForward</title>
+                                          <title name="VALUE">40</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE">90</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpBackward</title>
+                              <title name="VALUE">20</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
+                                  <next>
+                                    <block type="jump_by_constant">
+                                      <title name="DIR">jumpForward</title>
+                                      <title name="VALUE">40</title>
+                                      <next>
+                                        <block type="controls_repeat">
+                                          <title name="TIMES">2</title>
+                                          <statement name="DO">
+                                            <block type="draw_turn_by_constant">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE">90</title>
+                                              <next>
+                                                <block type="draw_move_by_constant">
+                                                  <title name="DIR">moveForward</title>
+                                                  <title name="VALUE">360</title>
+                                                  <next>
+                                                    <block type="draw_turn_by_constant">
+                                                      <title name="DIR">turnRight</title>
+                                                      <title name="VALUE">90</title>
+                                                      <next>
+                                                        <block type="draw_move_by_constant">
+                                                          <title name="DIR">moveForward</title>
+                                                          <title name="VALUE">180</title>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

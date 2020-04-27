@@ -172,8 +172,15 @@ sk-SK:
         dance_callout_11_b: Nový blok!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Tu hľadaj blok "všetky kačice"
+      Dance_2019_01:
+        dance_callout_01: Tu si vyberieš typ tanečníka.
+      Dance_2019_02:
+        dance_callout_11_a: Pridaj tento blok do svojho programu.
+        arrow_buttons: Ovládaj tanečníka pomocou tlačidiel so šípkami.
       Dance_2019_04:
         dance_callout_02: Pridaj tento blok do svojho programu!
+      Dance_2019_05:
+        dance_callout_05: Pridaj do svojho programu novú udalosť.
       Dance_2019_06:
         dance_party_11_5_groups: Nový blok!
       Dance_2019_07:
@@ -194,6 +201,9 @@ sk-SK:
         dance_callout_11_b: Nový blok!
       Dance_Party_11_5:
         dance_party_11_5_groups: Tu hľadaj blok "všetky kačice"
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi
+          o tom ako tvoj kód funguje.
       Function intro Ryan:
         Function_intro_Ryan_1: Tento krátky pokyn hovorí počítaču, aby v pracovnom
           priestore spustil VEĽKÝ blok kódu s rovnakým názvom.
@@ -269,6 +279,25 @@ sk-SK:
       NEW Course 4 Bee For Loops 5:
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz
           tu.
+      New Artist Project:
+        New Artist Project_callout1: Po kliknutí na kategórie uvidíš jednotlivé bloky
+          v tvojom paneli nástrojov. Ak chceš blok použiť vo svojom programe, presuň
+          ho na pracovnú plochu
+        New Artist Project_callout2: Kliknite na "Spustiť" pre uloženie a spustenie
+          vášho programu
+        sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti?
+          Prihláste sa pre uloženie projektu do vášho konta!
+      New Frozen Project:
+        snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
+          snehových vločiek!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Kliknite na kategórie, aby ste videli bloky
+          vo Vašich nástrojoch! Presuňte bloky do pracovného priestoru pre ich pridanie
+          do vášho programu
+        New Play Lab Project_callout2: Kliknite na "Spustiť" pre uloženie a spustenie
+          vášho programu
+        sign_in_to_save_project: Chcete mať váš projekt k dispozícií aj v budúcnosti?
+          Prihláste sa pre uloženie projektu do vášho konta!
       Overworld Chop Trees:
         craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
       Overworld Chop Trees_2019:
@@ -307,6 +336,8 @@ sk-SK:
         craft_what_is_iron: Vyťaž toto železo!
       Underground Iron_2019:
         craft_what_is_iron: Vyťaž toto železo!
+      Virtual Pet 2_2019:
+        '': Klikni sem!
       behaviors 1:
         behaviors_edit: Klikni tu a uvidíš ako toto správanie prebieha.
       behaviors 3a:
@@ -742,6 +773,8 @@ sk-SK:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Toto je Vaše prvé cvičenie s výzvou! Tieto sú náročné
           a možno ich vyriešite až na niekoľkatý pokus.
+      courseE_aboutme_2:
+        '': Klikni sem!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Začnime použitím tohto bloku pre vytvorenie prvého
           štvorca.

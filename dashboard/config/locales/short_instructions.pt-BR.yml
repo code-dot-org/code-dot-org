@@ -311,7 +311,7 @@ pt-BR:
       2-3 Maze 9: Leve-me até a maldade verde! (Cuidado com a dinamite)
       2-3 Maze Loops 1: Você consegue me levar ao porco usando 5 blocos do mesmo tipo?
       2-3 Maze Loops 17: Use o que você aprendeu para me levar até o girassol!
-      2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos\npossível!
+      2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos possível!
         \n\nUse um laço \"repita\" dentro de outro para diminuir a quantidade de código
         que você precisa."
       2-3 Maze Loops 19: "Vamos subir o nível! \nUse laços para me levar até o girassol
@@ -798,11 +798,11 @@ pt-BR:
         que tem 50 pixels de largura.
       Course 4 Artist For Loops 11: 'Você se lembra de quando usamos uma variável
         para controlar o número de lados de uma forma em uma fase anterior? Faremos
-        a mesma coisa com a variável "contador" agora. Esse padrão começa com um triângulo
+        a mesma coisa com a variável "counter" agora. Esse padrão começa com um triângulo
         e adiciona um lado de cada vez até que seja desenhado um decágono (10 lados).
         Cada lado deve ter 100 pixels de comprimento. '
       Course 4 Artist For Loops 11a: |-
-        Vamos juntar tudo! Usando seu conhecimento sobre laços `for` e a variável `contador`, crie este desenho em que cada forma possui dois lados a mais do que a última. Tenha certeza que cada lado seja 10 vezes do que o número de lados do polígono.
+        Vamos juntar tudo! Usando seu conhecimento sobre laços `for` e a variável `counter`, crie este desenho em que cada forma possui dois lados a mais do que a última. Tenha certeza que cada lado seja 10 vezes do que o número de lados do polígono.
 
         Apenas uma pequena parte do código foi fornecida para você.
       Course 4 Artist For Loops 14: Se você girar um pouco a mais ou a menos do que
@@ -1227,8 +1227,8 @@ pt-BR:
       Fish Tank 5-validated_2019: O peixe é aventureiro e quer conhecer novas criaturas
         do mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
         desde que seja diferente da que você usou para o peixe!
-      Fish Tank 6-validated: Adicione um comportamento o novo amigo do peixe.
-      Fish Tank 6-validated_2019: Adicione um comportamento o novo amigo do peixe.
+      Fish Tank 6-validated: Adicione um comportamento ao novo amigo do peixe.
+      Fish Tank 6-validated_2019: Adicione um comportamento ao novo amigo do peixe.
       Fish Tank 7-validated: Use alguns novos blocos da caixa de ferramentas para
         tornar seu aquário especial!
       Fish Tank 7-validated_2019: Use alguns novos blocos da caixa de ferramentas
@@ -1451,27 +1451,27 @@ pt-BR:
       MC HOC 2016 Village Test: |-
         Ah não! Os zumbis trancaram você do lado de dentro!
         Programe o Golem de Ferro para acabar com eles!
-      MC_HOC_2017_01_RETRY: 'Leve o Agent para a placa de pressão, em seguida pressione
+      MC_HOC_2017_01_RETRY: 'Leve o Agente para a placa de pressão, em seguida pressione
         "Executar" e use as teclas de seta para mover o jogador para fora da casa
         para coletar o baú. '
-      MC_HOC_2017_01_RETRY_2019: 'Leve o Agent para a placa de pressão, em seguida
+      MC_HOC_2017_01_RETRY_2019: 'Leve o Agente para a placa de pressão, em seguida
         pressione "Executar" e use as teclas de seta para mover o jogador para fora
         da casa para coletar o baú. '
-      MC_HOC_2017_02_Cole: 'Mova o Agent para a placa de pressão para que o jogador
+      MC_HOC_2017_02_Cole: 'Mova o Agente para a placa de pressão para que o jogador
         {currentPlayerName} consiga pegar o mapa. '
-      MC_HOC_2017_02_Cole_2019: 'Mova o Agent para a placa de pressão para que o jogador
-        {currentPlayerName} consiga pegar o mapa. '
-      MC_HOC_2017_03_Cole: 'Use o código do Agent para abrir o portão. '
-      MC_HOC_2017_03_Cole_2019: 'Use o código do Agent para abrir o portão. '
-      MC_HOC_2017_04POINT5_RYAN: Leve o Agent para a placa de pressão.
-      MC_HOC_2017_04POINT5_RYAN_2019: Leve o Agent para a placa de pressão.
-      MC_HOC_2017_04_Cole: Leve o Agent para a placa de pressão.
-      MC_HOC_2017_04_Cole_2019: Leve o Agent para a placa de pressão.
+      MC_HOC_2017_02_Cole_2019: 'Mova o Agente para a placa de pressão para que o
+        jogador {currentPlayerName} consiga pegar o mapa. '
+      MC_HOC_2017_03_Cole: 'Use o código do Agente para abrir o portão. '
+      MC_HOC_2017_03_Cole_2019: 'Use o código do Agente para abrir o portão. '
+      MC_HOC_2017_04POINT5_RYAN: Leve o Agente para a placa de pressão.
+      MC_HOC_2017_04POINT5_RYAN_2019: Leve o Agente para a placa de pressão.
+      MC_HOC_2017_04_Cole: Leve o Agente para a placa de pressão.
+      MC_HOC_2017_04_Cole_2019: Leve o Agente para a placa de pressão.
       MC_HOC_2017_05_Cole: Leve o jogador até a pá.
       MC_HOC_2017_05_Cole_2019: Leve o jogador até a pá.
-      MC_HOC_2017_06_Cole: Corrija esse código para que o Agent consiga construir
+      MC_HOC_2017_06_Cole: Corrija esse código para que o Agente consiga construir
         uma ponte para cruzar esse rio.
-      MC_HOC_2017_06_Cole_2019: Corrija esse código para que o Agent consiga construir
+      MC_HOC_2017_06_Cole_2019: Corrija esse código para que o Agente consiga construir
         uma ponte para cruzar esse rio.
       MC_HOC_2017_07_Cole: Destrua o gelo e leve o jogador {currentPlayerName} para
         o Carrinho de Minas.
@@ -1585,7 +1585,7 @@ pt-BR:
         feito e então clique em "Executar" para ver como ele funciona. '
       NEW Course 4 Bee For Loops 4: 'Substitua o ??? no "laço de repetição" pela maior
         quantidade de néctar que a abelha tem que coletar. '
-      NEW Course 4 Bee For Loops 4 4: Agora precisamos nos mover à frente `contador`
+      NEW Course 4 Bee For Loops 4 4: Agora precisamos nos mover à frente `counter`
         vezes, e depois obter o néctar `contador` vezes. Você consegue usar dois laços
         `repita` para resolver este desafio?
       NEW Course 4 Bee For Loops 5: Você também pode usar um "laço de repetição" para
@@ -1595,7 +1595,7 @@ pt-BR:
         O último número em seu laço de repetição é chamado de "incremento". A cada execução do laço de repetição, a variável contador é alterada de acordo com o incremento. Tente coletar essas flores usando
         um incremento de 2.
       NEW Course 4 Bee For Loops 7: |-
-        Agora, vamos combinar a variável "contador" com um bloco matemático! Como você pode usar a variável "contador" para navegar por esse jardim com o menor número de blocos possível? O que você precisa fazer para coletar 3, 6, 9, 12 ou 15 néctares dessa vez? O segredo está na variável "contador"!
+        Agora, vamos combinar a variável "counter" com um bloco matemático! Como você pode usar a variável "contador" para navegar por esse jardim com o menor número de blocos possível? O que você precisa fazer para coletar 3, 6, 9, 12 ou 15 néctares dessa vez? O segredo está na variável "contador"!
 
         Lembre-se: se seu laço de repetição estiver contando de forma crescente, o incremento é adicionado
         à variável "contador" a cada repetição.
@@ -1649,6 +1649,22 @@ pt-BR:
         caracteres de texto para enviar e receber informações baseadas em texto. Com
         um protocolo baseado em texto, você pode representar e comunicar com facilidade
         todos os tipos de informações. '
+      New Artist Project: Desenhe algo incrível! O seu código é salvo como um projeto
+        que pode ser retomado a qualquer momento.
+      New Basketball Project: 'Cria o teu próprio jogo de Basquetebol. Podes mudar
+        todas as regras. Quando tiveres terminado, clica em Partilhar para os teus
+        amigos experimentarem o jogo nos seus telemóveis. '
+      New Bounce Project: Crie seu próprio jogo de Pingue-pongue. Você pode mudar
+        o visual e todas as regras. Quando terminar, clique em Compartilhar para que
+        seus amigos possam jogar seu jogo em seus celulares.
+      New Gumball Project: Crie o que quiser e compartilhe!
+      New Ice Age Project: Crie o que quiser e compartilhe!
+      New Infinity Project: Crie o que quiser e compartilhe!
+      New Minecraft Hero Project: "**Jogo Livre:**  É hora de explorar sozinho!"
+      New Sports Project: 'Crie seu próprio jogo! Aqui, você está no comando: você
+        pode mudar todas as regras, misturar e combinar esportes, e criar o que quiser!
+        Quando terminar, clique em Concluir para deixar seus amigos experimentarem
+        seu jogo em seus smartphones.'
       Overworld Avoid Monsters: Não é uma boa ideia topar com um Creeper. Passe com
         cuidado pelos Creepers e chegue na sua casa em segurança.
       Overworld Avoid Monsters_2019: Não é uma boa ideia topar com um Creeper. Passe
@@ -1722,9 +1738,9 @@ pt-BR:
         por pixel você expressar 512 cores diferentes. Clique para ver a próxima imagem
         que é ainda mais sofisticada, mas mais fácil de entender.
       Robot Doodle: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
-        real. Isto necessita persistência e planegamento!'
+        real. Isto necessita persistência e planejamento!'
       Robot Doodle_2018: 'Ideia de Projeto: Criar uma imagem de algo familiar do mundo
-        real. Isto necessita persistência e planegamento!'
+        real. Isto necessita persistência e planejamento!'
       Standalone_Artist_1: |-
         Bem-vindo ao Artista! Primeiro, vamos tentar
         fazer um quadrado simples usando os blocos "vire à direita" e "avance".
@@ -1953,7 +1969,7 @@ pt-BR:
       course3_artist_functions_challenge1: A partir do momento que você definir uma
         função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
         código para ver como funciona, então mude-o para fazer o seu próprio desenho
-        impresionante!
+        impressionante!
       course3_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
       course3_bee_debugging_challenge1: Veja como a abelha pega o nectar. Você consegue
@@ -2314,25 +2330,17 @@ pt-BR:
         evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events3_2018: Conecte o bloco `mover para a esquerda` ao bloco
         de evento`quando esquerda` que já está na área de trabalho.
-      courseA_playLab_events3_2019: Conecte o bloco `mover para a esquerda` ao bloco
-        de evento`quando esquerda` que já está na área de trabalho.
       courseA_playLab_events4: Adicione blocos para mover para a direita quando o
         botão `direito` é clicado.
       courseA_playLab_events4_2018: Adicione outro bloco de evento para fazer Jorge
-        mover para a direita quando o botão `direito` é clicado.
-      courseA_playLab_events4_2019: Adicione outro bloco de evento para fazer Jorge
         mover para a direita quando o botão `direito` é clicado.
       courseA_playLab_events5: Adicione eventos para que o Jorge suba e desça quando
         os botões `para cima` e`para baixo` forem pressionados.
       courseA_playLab_events5_2018: Adicione eventos para que o Jorge suba e desça
         quando os botões `para cima` e`para baixo` forem pressionados.
-      courseA_playLab_events5_2019: Adicione eventos para que o Jorge suba e desça
-        quando os botões `para cima` e`para baixo` forem pressionados.
       courseA_playLab_events6: Torne isso mais interessante alterando o fundo e tocando
         um som aleatório quando Jorge for clicado.
       courseA_playLab_events6_2018: Torne isso mais interessante alterando o fundo
-        e tocando um som aleatório quando Jorge for clicado.
-      courseA_playLab_events6_2019: Torne isso mais interessante alterando o fundo
         e tocando um som aleatório quando Jorge for clicado.
       courseA_playLab_events7: Adicione o que quiser a este jogo. Você pode fazer
         o dinossauro desaparecer quando Jorge se depara com ele?
@@ -4191,15 +4199,15 @@ pt-BR:
       courseE_artist_functions_challenge1: A partir do momento que você definir uma
         função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
         código para ver como funciona, então mude-o para fazer o seu próprio desenho
-        impresionante!
+        impressionante!
       courseE_artist_functions_challenge1_2018: A partir do momento que você definir
         uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
         esse código para ver como funciona, então mude-o para fazer o seu próprio
-        desenho impresionante!
+        desenho impressionante!
       courseE_artist_functions_challenge1_2019: A partir do momento que você definir
         uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
         esse código para ver como funciona, então mude-o para fazer o seu próprio
-        desenho impresionante!
+        desenho impressionante!
       courseE_artist_functions_challenge2: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2018: Tente esse código para ver como funciona,
@@ -4236,11 +4244,11 @@ pt-BR:
         coleta néctar, e então retorna a abelha para onde ela começou. \\\r\n\\\r\nUse\na
         função para coletar todo o néctar."
       courseE_bee_functions5: Agora escreva uma função para coletar nectar das flores.
-      courseE_bee_functions6: Crie uma função o chame-a para coletar o nectar de cada
+      courseE_bee_functions6: Crie uma função e chame-a para coletar o néctar de cada
         flor e faça mel em cada colmeia.
-      courseE_bee_functions7: Criei sua própria função que vai por uma caminho, colete
-        nectar, faça mel, e então retorne a abelha para o caminho de cima. Colete
-        todo o nectar e faça todo o mel!
+      courseE_bee_functions7: Criei sua própria função que vai por um caminho, colete
+        néctar, faça mel, e então retorne a abelha para o caminho de cima. Colete
+        todo o néctar e faça todo o mel!
       courseE_bee_functions8: Crie uma função que colete todo o nectar de cada flor.
       courseE_bee_functions9: Crie uma função para coletar todo o nectar de cada flor.
       courseE_bee_functions_challenge1: Você está por conta própria nesse desafio.

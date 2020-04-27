@@ -35,10 +35,7 @@ require 'gctools/oobgc'
 out_of_band {GC::OOB.run}
 
 # Log thread backtraces and GC stats from all worker processes every second when enabled.
-require 'dynamic_config/gatekeeper'
-require 'puma/plugin/log_app_stats'
-LogAppStats.stats_proc = -> {Gatekeeper.allows('logAppStatsDashboard')}
-plugin :log_app_stats
-worker_check_interval 1
-thread_backtraces
-gc_stats
+plugin :log_stats
+LogStats.threshold = -> {DCDO.get('logStatsDashboard', nil)}
+filter_gems = %w(puma sinatra actionview activesupport honeybadger newrelic rack)
+LogStats.backtrace_filter = ->(bt) {CDO.filter_backtrace(bt, filter_gems: filter_gems)}

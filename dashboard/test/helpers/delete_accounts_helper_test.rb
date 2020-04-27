@@ -959,6 +959,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_regional_partner_mini_contacts
+  #
+
+  test "clears form_data from pd_regional_partner_mini_contacts" do
+    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
+
+    teacher = create :teacher
+    mini_contact = create :pd_regional_partner_mini_contact, user: teacher
+    refute_equal '{}', mini_contact.form_data
+
+    purge_user mini_contact.user
+
+    mini_contact.reload
+    assert_equal '{}', mini_contact.form_data
+  end
+
+  #
   # Table: dashboard.pd_regional_partner_program_registrations
   #
 

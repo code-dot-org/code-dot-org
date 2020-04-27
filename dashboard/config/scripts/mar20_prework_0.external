@@ -1,0 +1,19 @@
+name 'Mar20 Prework_0'
+editor_experiment ''
+title 'Prework'
+description 'Prework for the CS Principles March 2020 event'
+
+markdown <<MARKDOWN
+# Saturday Session Resources
+####These are the resources that participants reviewed for the Saturday sessions and recordings from the Saturday session.  
+
++ Prework instructions in the <a href="https://forum.code.org/t/about-the-2020-march-training-category/32439" target = "_blank"> Forum </a>
+
++ EIPM: A Short Introduction [ <a href = "https://forum.code.org/uploads/short-url/AnVLufGRy5hmv7mChhqpWve6STQ.pdf" target = "_blank" >link </a>]
++ What's New in CS Principles 20-21 [ <a href = "https://forum.code.org/uploads/short-url/3RPurggWewRdKk33nbklKVHWtiJ.pdf" target = "_blank"> link </a>] 
++ EIPM Video Series [ <a href = "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3" target = "_blank">link </a>]
++ Ballroom session recording [ <a href = "https://drive.google.com/open?id=16wXOVnn2Xycq6T2oDGwERjU_NCbJZHF7" target="_blank" > link </a> ]
++ Digital Digest [ <a href = "https://bit.ly/csp-digital-digest" target = "_blank">link </a> ]
++ CS Principles 2020-21 curriculum [<a href="https://studio.code.org/courses/csp-2020" target = "_blank">link</a>]
+
+MARKDOWN

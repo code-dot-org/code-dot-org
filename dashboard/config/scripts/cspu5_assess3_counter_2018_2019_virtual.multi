@@ -1,0 +1,31 @@
+name 'cspu5_assess3_counter_2018_2019_virtual'
+wrong '0'
+wrong '1'
+wrong '2'
+right '3'
+wrong '4'
+
+markdown <<MARKDOWN
+The _counter_ variable in the code below increments by 1 each time through the loop.  What will the value of _counter_ be after the following loop executes?
+
+    var counter = 0;
+    var n = 6;
+    while(n > 0){
+        n = n - 2;
+        counter = counter + 1;
+    }
+    console.log(counter)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 11,12**
+
+Going through the code line by line:
+
+* The var _counter_ is set to 0
+* The var _n_ is set to the value of 6
+* The while loop will run as long as _n_ is greater than 0
+* Inside the loop, _n_ is decreased by 2 and _counter_ is increased by 1 each time
+* _n_ will equal 0 after it has looped 3 times and exit the loop
+* Therefore, when _counter_ is displayed, 3 is printed to the console
+MARKDOWN

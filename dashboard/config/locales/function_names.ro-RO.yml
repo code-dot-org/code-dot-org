@@ -260,6 +260,16 @@ ro-RO:
       NEW Course 4 Play Lab Params 11:
         jump: sari
         patrol: patrulează
+      New Artist Project:
+        draw a star: desenează o stea
+        draw a circle: desenează un cerc
+        draw a triangle: desenează un triunghi
+        draw a shape: desenează o formă
+        draw a house: desenează o casă
+        draw a square: desenează un pătrat
+      New Play Lab Project:
+        jump: sari
+        patrol: patrulează
       Robot Doodle:
         draw head: desenează cap
       Robot Doodle_2018:
@@ -411,8 +421,6 @@ ro-RO:
       courseE_artist_functions7:
         draw a house: desenează o casă
       courseE_artist_functions7_2018:
-        draw a house: desenează o casă
-      courseE_artist_functions7_2019:
         draw a house: desenează o casă
       courseE_artist_functions8:
         do something: facă ceva

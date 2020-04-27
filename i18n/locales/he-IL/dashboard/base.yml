@@ -62,6 +62,8 @@ he:
   join_section:
     code:
       placeholder: "קוד קבוצה (ABCDEF)"
+      instructions_short: "הזן את קוד הקבוצה שלך באורך 6 תווים"
+      submit: 'הצטרף'
   add_hint_form:
     placeholder: 'הכניסו בבקשה את הרמז שלכם כאן'
     submit: 'הוסף רמז'
@@ -135,7 +137,6 @@ he:
     valid_password: "סיסמה תקינה!"
     invalid_password: "הסיסמא חייבת להכיל לפחות 6 תווים"
     mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
-    under_13_consent: "אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים לי להשתמש בשירותי Code.org."
     student_consent: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
     agree_us_website: "אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית."
     my_data_to_us: "יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית."
@@ -219,6 +220,7 @@ he:
       %{name}
   parent_mailer:
     student_associated_subject: 'פרטי החיבור עבור Code.org'
+    parent_email_added_subject: 'ברוך הבא לCode.org!'
   teacher_mailer:
     new_teacher_subject: 'ברוך הבא לCode.org!'
     delete_teacher_subject: 'הודעת Code.org: החשבון שלך נמחק'
@@ -421,6 +423,9 @@ he:
     update: "עדכן חשבון"
     account_successfully_updated: "חשבון עודכן בהצלחה."
     update_email: "עדכון"
+    parent_guardian_email_label: "דוא\"ל של הורה/אפוטרופוס"
+    none: "כלום"
+    encrypted: "מוצפן"
   user_level:
     completed: 'הושלם'
     tried: 'נוסה'
@@ -515,6 +520,7 @@ he:
     download: 'הורד סרטון'
     show_notes: 'הצג הערות'
     show_video: 'הצג סרטון'
+    label: 'סרטון'
   compatibility:
     upgrade:
       unsupported_message: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
@@ -992,3 +998,4 @@ he:
     privacy_policy: 'מדיניות פרטיות'
     logout: 'התנתק'
     yes: 'כן'
+  copy: 'העתק'

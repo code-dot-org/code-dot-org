@@ -144,6 +144,14 @@ sl-SI:
         do something: naredi nekaj
       NEW Course 4 Play Lab Params 11:
         jump: skoči
+      New Artist Project:
+        draw a star: nariši zvezdo
+        draw a circle: nariši krog
+        draw a triangle: nariši trikotnik
+        draw a house: nariši hišo
+        draw a square: nariši kvadrat
+      New Play Lab Project:
+        jump: skoči
       Standalone_Artist_7:
         draw a flower: nariši rožo
       course3_artist_functions_challenge1:
@@ -200,8 +208,6 @@ sl-SI:
       courseE_artist_functions7:
         draw a house: nariši hišo
       courseE_artist_functions7_2018:
-        draw a house: nariši hišo
-      courseE_artist_functions7_2019:
         draw a house: nariši hišo
       courseE_artist_functions8:
         do something: naredi nekaj

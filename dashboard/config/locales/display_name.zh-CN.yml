@@ -2,6 +2,7 @@
 zh-CN:
   data:
     display_name:
+      AB_Debug_Artist1: '小艺术家 调试 #1 (AB)'
       Alien Defender: 外星人辩护人
       App Lab Intro 8 - Video Design Mode: 视频：设计模式
       App Lab Intro 8 - Video Getting Started: 视频：开始
@@ -636,6 +637,7 @@ zh-CN:
       CSDU4 Project Import: 应用程序项目：屏幕导入
       CSDU4 Project Import_2018: 应用程序项目：屏幕导入
       CSDU4 Project Import_2019: 应用程序项目：屏幕导入
+      CSDU6 - UI and Inputs - getNumber: getNumber
       CSDU6 - board event challenge_2018: 音效主板
       CSDU6 - board event challenge_2019: 音效主板
       CSDU6 buzzer 2d arrays_2018: 二维数组
@@ -702,20 +704,29 @@ zh-CN:
       MC_HOC_2017_05_Cole_2019: 这条河
       MC_HOC_2017_06_Cole: 高潮流
       MC_HOC_2017_06_Cole_2019: 高潮流
+      MC_HOC_2017_07_Cole: 通过雪山
+      MC_HOC_2017_07_Cole_2019: 通过雪山
       MC_HOC_2017_10_RETRY: 洞穴
       MC_HOC_2017_10_RETRY_2019: 洞穴
+      MC_HOC_2017_Ali: 空中堡垒
+      MC_HOC_2017_Ali_2019: 空中堡垒
       MC_HOC_2017_FP20x20: 自由游戏
       MC_HOC_2017_FP20x20_2019: 自由游戏
       Making Music_2018: 制作音乐
       Making Music_2019: 制作音乐
+      New Dance Lab Project: 新的舞蹈派对项目
+      New Minecraft Hero Project: 自由游戏
       OPD-K5 WhatIsCS: 什么是计算机科学？
       Oceans_Video_Machine_Learning: 视频：机器学习
       Oceans_Video_Societal_Implications: 视频：社会影响
       Oceans_Video_Training_Data: 视频：训练数据
       Revisiting the Counter Pattern_2018: 回顾计数模式
       Revisiting the Counter Pattern_2019: 回顾计数模式
+      Robot Doodle_2018: 机器人涂鸦
       The Accelerometer_2018: 加速传感器
       The Accelerometer_2019: 加速传感器
+      Using Accelerometer Events_2018: 使用加速传感器事件
+      Using Accelerometer Events_2019: 使用加速传感器事件
       'Video: Intro to CSS Part 2_2018': '视频: CSS 简介第2部分'
       'Video: Intro to CSS Part 2_2019': '视频: CSS 简介第2部分'
       'Video: Intro to CSS_2018': 视频：CSS简介
@@ -724,9 +735,11 @@ zh-CN:
       courseA_video_Stevie_2018: 斯蒂夫和大项目
       courseB_video_Unspotted: 没有斑点的Bug
       courseB_video_Unspotted_2018: 没有斑点的Bug
+      courseE_Dogger_2: 小狗示例
       courseF_artist_for1: For 循环自由游戏 (开始)
       courseF_artist_for1_2018: For 循环自由游戏 (开始)
       courseF_artist_for1_2019: For 循环自由游戏 (开始)
+      courseF_project_1: 精灵图实验室示例项目
       courseF_video_csMatters: 结课项目
       courseF_video_csMatters_2018: 视频：CS 事项
       csd U3 conditional statements video: '视频: "If/else" 声明'

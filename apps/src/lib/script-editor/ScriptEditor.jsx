@@ -45,6 +45,7 @@ export default class ScriptEditor extends React.Component {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
+    isStable: PropTypes.bool,
     loginRequired: PropTypes.bool,
     hideableStages: PropTypes.bool,
     studentDetailProgressView: PropTypes.bool,
@@ -70,7 +71,8 @@ export default class ScriptEditor extends React.Component {
     versionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    isLevelbuilder: PropTypes.bool
+    isLevelbuilder: PropTypes.bool,
+    tts: PropTypes.bool
   };
 
   constructor(props) {
@@ -238,6 +240,20 @@ export default class ScriptEditor extends React.Component {
               disabled={!!this.state.pilotExperiment}
               onChange={e => this.setState({hidden: !e.target.checked})}
             />
+            <label>
+              Can be recommended (aka stable)
+              <input
+                name="is_stable"
+                type="checkbox"
+                defaultChecked={this.props.isStable}
+                style={styles.checkbox}
+              />
+              <p>
+                If checked, this unit will be eligible to be the recommended
+                version of the unit. The most recent eligible version will be
+                the recommended version.
+              </p>
+            </label>
             <PilotExperiment
               value={this.state.pilotExperiment}
               onChange={e => this.setState({pilotExperiment: e.target.value})}
@@ -333,6 +349,16 @@ export default class ScriptEditor extends React.Component {
             Check if this course has lesson plans (on Curriculum Builder or in
             PDF form) that we should provide links to.
           </p>
+        </label>
+        <label>
+          Text-to-Speech
+          <input
+            name="tts"
+            type="checkbox"
+            defaultChecked={this.props.tts}
+            style={styles.checkbox}
+          />
+          <p>Check to enable text-to-speech for this course.</p>
         </label>
         {this.props.isLevelbuilder && (
           <label>
@@ -499,7 +525,10 @@ export default class ScriptEditor extends React.Component {
               name="script_text"
               rows={textAreaRows}
               style={styles.input}
-              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              defaultValue={
+                this.props.stageLevelData ||
+                "lesson_group 'lesson group', display_name: 'display name'\nstage 'new stage'\n"
+              }
               ref={textArea => (this.scriptTextArea = textArea)}
             />
           </div>

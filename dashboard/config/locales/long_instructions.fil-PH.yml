@@ -119,7 +119,7 @@ fil-PH:
       CourseD_Dance_Party_02: |-
         "Gawin natin itong moose dancing!
 
-        Hilahin ang <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
+        Hilahin ang <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
 
         Ang mga**measure** ay ginagamit para bilangin ang oras sa musika. Sa tutorialna ito, ang isang measure ay apat na beat o kupas ang haba.".
       CourseD_Dance_Party_03: |-
@@ -150,7 +150,7 @@ fil-PH:
         "Ngayon, alam na natin kung paano pangasiwaan ang mga property ng isang dancer, Pwede rin tayong gumawa ng kaparehong mga property na awtomatikong tutugon sa musika gamit ang block na ito:
         <xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -240,7 +240,7 @@ fil-PH:
       Dance_Party_02: |-
         Gawin natin itong moose dancing!
 
-        Hilahin ang <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
+        Hilahin ang <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> block sa workspace. Ikonekta ito sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> block. Dapat mag-umpisa ang iyong dancer ng bagong galaw matapos ang ikaapat na measure.
 
         Ang mga**measure** ay ginagamit para bilangin ang oras sa musika. Sa tutorialna ito, ang isang measure ay apat na beat o kupas ang haba.
       Dance_Party_03: "_Ngayon naggo-groove tayo!_ \n\nMagdagdag ng <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -271,7 +271,7 @@ fil-PH:
         "Ngayon, alam na natin kung paano pangasiwaan ang mga property ng isang dancer, Pwede rin tayong gumawa ng kaparehong mga property na awtomatikong tutugon sa musika gamit ang block na ito:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -461,9 +461,6 @@ fil-PH:
       courseA_maze_seq8_2019: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseA_maze_seq_challenge2_2019: Sundan ang landas para gabayan ang ibon papunta
         sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
-      courseA_playLab_events6_2019: Gawin itong mas kawili-wili sa pamamagitan nang
-        pagpalit ng background at pagpapatunog na random na tunog kapag si Jorge ay
-        na-click.
       courseB_artist_loops1_2019: Ito ay isang bagong tipo ng palaisipan na tinatawag
         na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
       courseB_artist_loops2_2019: Ang Artist ay sinusubukang gumuhit ng linya mga

@@ -21,6 +21,9 @@
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
   .field
+    = f.label :goal_override, 'Goal Override Object (Legacy Levels)'
+    = f.text_area :goal_override, placeholder: '{"goalAnimation": "animatedGoal"}'
+  .field
     = f.label :open_function_definition, 'Auto-open function definition'
     = f.text_field :open_function_definition, placeholder: 'name of function to open'
   .field.aligned-input-group

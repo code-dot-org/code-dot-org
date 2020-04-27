@@ -118,7 +118,7 @@ const APP_OPTIONS_WHITELIST = {
     callback: true,
     sublevelCallback: true
   },
-  sendToPhone: true,
+  isUS: true,
   send_to_phone_url: true,
   copyrightStrings: {
     thank_you: true,

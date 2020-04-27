@@ -186,6 +186,17 @@ th-TH:
         do something: ทำบางสิ่ง
       NEW Course 4 Play Lab Params 11:
         jump: กระโดดออกไปที่
+      New Artist Project:
+        draw a star: วาดรูปดวงดาว
+        draw a circle: วาดวงกลม
+        draw a triangle: วาดสามเหลี่ยม
+        draw a house: วาดรูปบ้าน
+        draw a square: วาดสี่เหลี่ยมจตุรัส
+      New Minecraft Hero Project:
+        function 1: ฟังก์ชั่น 1
+        function 2: ฟังก์ชั่น 2
+      New Play Lab Project:
+        jump: กระโดดออกไปที่
       Standalone_Artist_7:
         draw a flower: วาดดอกไม้
       course3_artist_functions_challenge1:
@@ -252,8 +263,6 @@ th-TH:
       courseE_artist_functions7:
         draw a house: วาดรูปบ้าน
       courseE_artist_functions7_2018:
-        draw a house: วาดรูปบ้าน
-      courseE_artist_functions7_2019:
         draw a house: วาดรูปบ้าน
       courseE_artist_functions8:
         do something: ทำบางสิ่ง

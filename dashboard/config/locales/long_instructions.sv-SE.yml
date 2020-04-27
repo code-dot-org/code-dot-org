@@ -177,7 +177,7 @@ sv-SE:
       Dance_Party_02: |-
         Låt oss få denna älg att dansa!
 
-        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
+        Dra ut <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> blocket till arbetsytan. Koppla samman det undertill med <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> blocket. Din dansare bör starta en ny rörelse efter den fjärde åtgärden.
 
         **Åtgärder** används för att mäta tid i musik. I denna handledning är en åtgärd fyra takter lång.
       Dance_Party_03: "\"_Nu svänger det!_ \n\nLägg till ett <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -442,6 +442,8 @@ sv-SE:
         kod för att utforska världen."
       MC_HOC_2017_FP20x20_2019: "**Spela fritt:** Nu är det upp till dig! Använd agentens
         kod för att utforska världen."
+      New Minecraft Hero Project: "**Spela fritt:** Nu är det upp till dig! Använd
+        agentens kod för att utforska världen."
       Overworld Move to Sheep: Lägg till ett till "gå framåt"-kommando för att komma
         till fåret.
       Overworld Move to Sheep_2019: Lägg till ett till "gå framåt"-kommando för att

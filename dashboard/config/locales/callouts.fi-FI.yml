@@ -46,7 +46,7 @@ fi-FI:
         repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
           lohkojen ympärille
       Course 4 Artist For Loops 4:
-        place_counter_variable: Raahaa laskurimuuttujasi tähän lohkoon
+        place_counter_variable: Vedä laskurimuuttujasi tähän lohkoon
       Course 4 Artist Vars 1:
         repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
           lohkojen ympärille
@@ -164,6 +164,8 @@ fi-FI:
       NEW Course 4 Bee For Loops 5:
         actions_category: Työkaluilla on uusi ulkoasu! "Toiminnot" -lohkot löytyvät
           nyt täältä.
+      New Frozen Project:
+        snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
       Overworld Chop Trees:
         craft_callout_preplaced: Olemme koonneet sinulle muutamia palikoita
       Overworld Chop Trees_2019:

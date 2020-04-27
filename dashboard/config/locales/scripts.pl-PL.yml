@@ -3,7 +3,6 @@ pl:
   data:
     script:
       category:
-        csf_category_name: Podstawy Informatyki
         csf_international_category_name: Mędzynarodowe Podstawy Informatyki
         csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
         csp_category_name: Podstawy Informatyki '15-'16
@@ -4866,6 +4865,8 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Random Numbers:
+              name: Losowe liczby
             Sprite Properties:
               name: Właściwości duszka
         maddie-test:
@@ -5001,3 +5002,582 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+        csd2-2020:
+          stages:
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
+            CSS Classes:
+              name: Klasy CSS
+            'Mini-Project: HTML Web Page':
+              name: 'Mini-Projekt: strona internetowa HTML'
+            'Mini-Project: Your Personal Style':
+              name: 'Mini-Projekt: Twój osobisty styl'
+            'Your Web Page - Define ':
+              name: Twoja strona internetowa - Zdefiniuj
+            Your Web Page - Prepare:
+              name: Twoja strona internetowa - Przygotuj
+        csd1-2020:
+          stages:
+            Intro to Problem Solving:
+              name: Wstęp do rozwiązywania problemów
+            The Problem Solving Process:
+              name: Proces Rozwiązywania Problemów
+            Exploring Problem Solving:
+              name: Odkrywanie rozwiązywania problemów
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji
+            0:
+              name: \"Alternatywna Lekcja 1:\" Wprowadzenie do rozwiązywania problemów
+                - Stolik prasowy
+            'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
+              name: 'Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów
+                - Spaghetti Most'
+            '"Alt Lesson 1:" Intro to Problem Solving - Newspaper Table':
+              name: '"Alt Lekcja 1:" Wprowadzenie do rozwiązywania problemów - Stolik
+                prasowy'
+            " Newspaper Table (Alt Lesson 1: Intro to Problem Solving -)":
+              name: 'Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów -)'
+            'Spaghetti Bridge - "Alt Lesson 1: Intro to Problem Solving "':
+              name: 'Spaghetti Most - "Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów "'
+            " Newspaper Table (Alternative Lesson 1: Intro to Problem Solving)":
+              name: 'Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Spaghetti Bridge - (Alt Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most - (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Spaghetti Bridge (Alt Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Paper Tower (Lesson 1: Intro to Problem Solving)':
+              name: 'Papierowa Wieża (Lekcja 1: Wprowadzenie do rozwiązywania problemów)'
+            " Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)":
+              name: 'Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Spaghetti Bridge (Alt. Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Games Theme (Lesson 3: Exploring Problem Solving)':
+              name: 'Motywy gier (Lekcja 3: Uczenie się rozwiązywania problemów)'
+            'Exploring Problem Solving (Lesson 3: Exploring Problem Solving)':
+              name: 'Uczenie się rozwiązywania problemów (Lekcja 3: Uczenie się rozwiązywania
+                problemów)'
+            'Newspaper Table (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Stolik prasowy (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Spaghetti Bridge (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Spaghetti Most (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Games Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Motywy gier (Alternatywna Lekcja 3: Uczenie się rozwiązywania
+                problemów)'
+            'Exploring Problem Solving (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Uczenie się rozwiązywania problemów (Alternatywna Lekcja 3: Uczenie
+                się  rozwiązywania problemów)'
+            'Paper Tower (Alternate Lesson 1: Intro to Problem Solving)':
+              name: 'Papierowa Wieża (Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania
+                problemów)'
+            'Animals Theme (Alternate Lesson 3: Exploring Problem Solving)':
+              name: 'Motywy zwierząt (Alternatywna Lekcja 3: Uczenie się rozwiązywania
+                problemów)'
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna
+                lekcja 1)
+            Spaghetti Bridge (Alternate Lesson 1):
+              name: Spaghetti Most (Alternatywna Lekcja 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna
+                lekcja 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna
+                lekcja 1)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna
+                lekcja 3)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna
+                lekcja 3)
+        csd4-2020:
+          stages:
+            Analysis of Design:
+              name: Analiza projektu
+            Understanding Your User:
+              name: Zrozumienie twojego użytkownika
+            User Interfaces:
+              name: Interfejsy użytkownika
+            Identifying User Needs:
+              name: Identyfikowanie potrzeb użytkownika
+            Designing Apps for Good:
+              name: Projektowanie aplikacji na dobre
+            Market Research:
+              name: Badania rynku
+            Prototype Testing:
+              name: Testowanie prototypu
+            Linking Screens:
+              name: Łączenie ekranów
+            Testing the App:
+              name: Testowanie aplikacji
+            Improving and Iterating:
+              name: Polepszanie i iterowanie
+            Project - App Presentation:
+              name: Projekt - Prezentacja aplikacji
+        csd5-2020:
+          stages:
+            Representing Numbers:
+              name: Reprezentacja liczb
+        csd6-2020:
+          stages:
+            Getting Properties:
+              name: Właściwości getterów
+            Analog Input:
+              name: Wejście analogowe
+            The Program Design Process:
+              name: Proces projektowania programu
+            'Project: Make a Game':
+              name: 'Projekt: Stwórz grę'
+            Making Music:
+              name: Tworzenie muzyki
+            Arrays and For Loops:
+              name: Tablice i pętle for
+            Accelerometer:
+              name: Akcelerometr
+            Functions with Parameters:
+              name: Funkcje z parametrami
+        csd3-2020:
+          description_short: Programowanie
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Variables:
+              name: Zmienne
+            Random Numbers:
+              name: Losowe liczby
+            Sprite Properties:
+              name: Właściwości duszka
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+            Text:
+              name: Tekst
+            'Mini-Project: Captioned Scenes':
+              name: 'Mini-Projekt: Sceny z napisami'
+            'Mini-Project: Animation':
+              name: 'Mini-Projekt: Animacja'
+            Mouse Input:
+              name: Użycie myszy
+        coursea-2020:
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          description_audience: Wiek 4-7
+          stages:
+            Going Places Safely:
+              name: Bezpiecznie dotrzeć na miejsce
+            Learn to Drag and Drop:
+              name: Nauka metody "przeciągnij i upuść"
+            'Programming: Happy Maps':
+              name: Szczęśliwe Mapy (Happy Maps)
+            'Loops: Happy Loops':
+              name: 'Pętle: Szczęśliwe pętle'
+            Safety in My Online Neighborhood:
+              name: Bezpieczeństwo w moim otoczeniu online
+        courseb-2020:
+          description_audience: Wiek 5-8
+          stages:
+            Your Digital Footprint:
+              name: Twój cyfrowy ślad
+            Move It, Move It:
+              name: Przenieść go, przenieść go
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            'Loops: Getting Loopy':
+              name: Poznając pętle
+            Digital Trails:
+              name: Cyfrowe szlaki
+        coursec-2020:
+          description_short: Poznaj podstawy informatyki i twórz własne artystyczne
+            dzieła, opowiadania i gry.
+          description_audience: Wiek 6-10
+          stages:
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Debugging in Maze:
+              name: Debugowanie labiryntu
+            Binary Bracelets:
+              name: Binarne bransoletki
+            Loops with Rey and BB-8:
+              name: Pętle z Rey i BB-8
+            Looking Ahead:
+              name: Patrząc w przyszłość
+            'Events: The Big Event':
+              name: Wielkie wydarzenie
+            Build a Flappy Game:
+              name: Budowanie gry Flappy Bird
+            Putting a STOP to Online Meanness:
+              name: Stawianie STOP świństwom online
+            Password Power-Up:
+              name: Włączenie na hasło
+        coursed-2020:
+          description_audience: Wiek 7-11
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programowanie na papierze milimetrowym
+            Introduction to Online Puzzles:
+              name: Wprowadzenie do puzzli online
+            Relay Programming:
+              name: Sztafeta programowania
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w labiryncie
+            Conditionals with Cards:
+              name: Warunkowe z kartami
+            Conditionals in Bee:
+              name: Wyrażenie warunkowe w pszczole
+            'Unplugged: Binary':
+              name: Binarne obrazy (Binary Images)
+            Artist Binary:
+              name: 'Artysta: Binarny'
+            Digital Citizenship:
+              name: Cyfrowe obywatelstwo
+            Dance Party:
+              name: Potańcówka
+            Be A Super Digital Citizen:
+              name: Bądź Super Cyfrowym Obywatelem
+        coursee-2020:
+          description_audience: Wiek 8-12
+          stages:
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w labiryncie
+            'Functions: Songwriting':
+              name: Pisanie piosenek
+        coursef-2020:
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz
+            własne dzieło sztuki, historyjkę lub grę.
+          description_audience: Wiek 9-13
+          stages:
+            Nested Loops in the Maze:
+              name: Zagnieżdżone pętle w labiryncie
+            Envelope Variables:
+              name: Zmienne w kopertach
+            For Loop Fun:
+              name: Zabawa z pętlą "dla"
+            For Loops in Bee:
+              name: Pętle for w pszczole
+            For Loops in Artist:
+              name: Pętle for w artyście
+            Internet:
+              name: Internet
+            The Power of Words:
+              name: Moc Słów
+            Crowdsourcing:
+              name: Praca w grupie (Crowdsourcing)
+        express-2020:
+          description_audience: W wieku 9-18
+          stages:
+            Dance Party:
+              name: Potańcówka
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Debugging in Maze:
+              name: Debugowanie labiryntu
+            Loops with Rey and BB-8:
+              name: Pętle z Rey i BB-8
+            Nested Loops in Bee:
+              name: Zagnieżdżone pętle w pszczole
+            Conditionals in Bee:
+              name: Wyrażenie warunkowe w pszczole
+            For Loops in Bee:
+              name: Pętle for w pszczole
+            For Loops in Artist:
+              name: Pętle for w artyście
+        pre-express-2020:
+          description_audience: W wieku 4-8
+          stages:
+            Learn to Drag and Drop:
+              name: Nauka metody "przeciągnij i upuść"
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Spelling Bee:
+              name: Literująca Pszczółka
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
+        csp1-2020:
+          stages:
+            new stage:
+              name: nowy etap
+            Binary Numbers:
+              name: Liczby binarne
+            Intellectual Property:
+              name: Własność intelektualna
+        csp2-2020:
+          stages:
+            new stage:
+              name: nowy etap
+            The Need for Addressing:
+              name: Potrzeba adresowania
+            Routers and Redundancy:
+              name: Routery i nadmiarowość
+        csp3-2020:
+          stages:
+            new stage:
+              name: nowy etap
+            Debugging:
+              name: Debugowanie
+        csp6-2020:
+          stages:
+            new stage:
+              name: nowy etap
+        csp8-2020:
+          stages:
+            new stage:
+              name: nowy etap
+        csp9-2020:
+          stages:
+            new stage:
+              name: nowy etap
+        csp10-2020:
+          stages:
+            new stage:
+              name: nowy etap
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nowy etap
+        csp3-virtual:
+          description_short: Programowanie
+          stages:
+            The Need For Programming Languages:
+              name: Potrzeba języków programowania
+            The Need for Algorithms:
+              name: Potrzeba algorytmów
+            Creativity in Algorithms:
+              name: Kreatywność w algorytmach
+            Using Simple Commands:
+              name: Używanie prostych komend
+            Creating Functions:
+              name: Tworzenie Funkcji
+            APIs and Function Parameters:
+              name: API i parametry funkcji
+            Creating functions with Parameters:
+              name: Tworzenie funkcji z parametrami
+            Looping and Random Numbers:
+              name: Zapętlanie i losowe liczby
+            Unit 3 Chapter 1 Assessment:
+              name: Oszacowanie Jednostki 3 rozdziału 1
+        csd3-virtual:
+          description_short: Programowanie
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Shapes and Randomization:
+              name: Kształty oraz losowość
+            Variables:
+              name: Zmienne
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+            Random Numbers:
+              name: Losowe liczby
+            Sprite Properties:
+              name: Właściwości duszka
+        jess-test-script:
+          stages:
+            new stage:
+              name: nowy etap
+            Debugging:
+              name: Debugowanie
+        csd2-virtual:
+          stages:
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
+            CSS Classes:
+              name: Klasy CSS
+        csp5-virtual:
+          stages:
+            Buttons and Events:
+              name: Przyciski i wydarzenia
+            Multi-screen Apps:
+              name: Aplikacje wieloekranowe
+            Controlling Memory with Variables:
+              name: Kontrolowanie pamięci ze zmiennymi
+            User Input and Strings:
+              name: Wprowadzanie danych użytkownika oraz łańcuchy
+            Boolean Expressions and "If" Statements:
+              name: Wyrażenie boolowskie i instrukcje "if"
+            '"if-else-if" and Conditional Logic':
+              name: '"if-else-if" oraz logika warunkowa'
+            While Loops:
+              name: Pętle Dopóki (While)
+            Loops and Simulations:
+              name: Pętle i symulacje
+            Introduction to Arrays:
+              name: Wprowadzenie do tablic
+            Processing Arrays:
+              name: Przetwarzanie tablic
+            Functions with Return Values:
+              name: Funkcje zwracające wartości
+            Variables:
+              name: Zmienne
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+        code-break:
+          stages:
+            new stage:
+              name: nowy etap
+            Algorithms:
+              name: Algorytmy
+            Events:
+              name: Zdarzenia
+            'Episode 1: Algorithms with Hill Harper':
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            'Episode 2: Events with Ciara':
+              name: 'Odcinek 2: Zdarzenia z Ciarą'
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Placeholder:
+              name: Odcinek 2 - Symbol zastępczy
+            Episode 2 - Coming Soon!:
+              name: Odcinek 2 - Wkrótce!
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+        code-break-staging:
+          stages:
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+          title: Inscenizacja Code Break
+        code-break-younger-staging:
+          stages:
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+        code-break-younger:
+          stages:
+            Episode 1 - Algorithms with Hill Harper:
+              name: 'Odcinek 1: Algorytmy z Hill Harper'
+            Episode 2 - Coming Soon!:
+              name: Odcinek 2 - Wkrótce!
+            Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
+            Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
+              name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+          title: Code Break dla młodszych uczniów
+          description: Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu,
+            Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo,
+            w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest
+            zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych
+            umiejętnościach, nawet tych bez komputerów.
+        no-lg:
+          stages:
+            new stage:
+              name: nowy etap
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Pętle Dopóki (While)
+            Loops and Simulations:
+              name: Pętle i symulacje
+            Introduction to Arrays:
+              name: Wprowadzenie do tablic
+            Processing Arrays:
+              name: Przetwarzanie tablic
+            Functions with Return Values:
+              name: Funkcje zwracające wartości

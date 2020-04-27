@@ -1644,6 +1644,17 @@ it-IT:
       NEW Course 4 Play Lab Params 11: 'Tempo di giocare: divertiti a creare il gioco
         che preferisci. Ecco <a href="http://programmailfuturo.it/come/lezioni-tecnologiche/corso-4/lezione-15">alcune
         idee</a>. Puoi usare tutti i blocchi che trovi nella cassetta degli attrezzi.'
+      New Gumball Project: Crea il tuo gioco con i personaggi di Disney Infinity e
+        condividilo!
+      New Ice Age Project: Crea il tuo gioco con i personaggi di Disney Infinity e
+        condividilo!
+      New Infinity Project: Crea il tuo gioco con i personaggi di Disney Infinity
+        e condividilo!
+      New Minecraft Hero Project: "**Tempo di giocare:**  è ora di andare ad esplorare
+        da solo!"
+      New Sports Project: 'Ora comandi tu. Puoi modificare tutte le regole, combinando
+        i diversi sport: sii creativo! Quando hai finito, clicca su `Termina` per
+        consentire agli amici di provare il tuo gioco sui loro telefoni.'
       Overworld Avoid Monsters: Incontrare un Creeper non è salutare. Muoviti con
         attenzione tra i Creeper e mettiti al sicuro a casa tua.
       Overworld Avoid Monsters_2019: Incontrare un Creeper non è salutare. Muoviti
@@ -2080,6 +2091,8 @@ it-IT:
       courseA_collector_loops2: Raccogli tutti e tre i diamanti per completare l'esercizio.
       courseA_collector_loops2_2018: Raccogli tutti e tre i diamanti per completare
         l'esercizio.
+      courseA_collector_loops2_2019: Raccogli tutti e tre i diamanti! Muovi Laura
+        su ogni diamante e usa il blocco "Prendi".
       courseA_collector_loops4: Correggi il percorso di Laura per raccogliere tutti
         i diamanti.
       courseA_collector_loops4_2018: Correggi il percorso di Laura per raccogliere
@@ -2302,26 +2315,17 @@ it-IT:
       courseA_playLab_events3_2018: Aggancia il blocco `sposta il cane a sinistra`
         al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
         già nell'area di lavoro.
-      courseA_playLab_events3_2019: Aggancia il blocco `sposta il cane a sinistra`
-        al blocco verde dell'evento `quando si preme la freccia sinistra` che si trova
-        già nell'area di lavoro.
       courseA_playLab_events4: Ora fai muovere il cane a destra quando si preme la
         freccia a destra.
       courseA_playLab_events4_2018: Aggiungi un altro blocco evento per far muovere
-        il cane a destra quando si preme la freccia a destra.
-      courseA_playLab_events4_2019: Aggiungi un altro blocco evento per far muovere
         il cane a destra quando si preme la freccia a destra.
       courseA_playLab_events5: Aggiungi gli eventi per far muovere il cane su e giù
         quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018: Aggiungi gli eventi per far muovere il cane su
         e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su
-        e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events6: Rendi questa scena più interessante, cambiando lo sfondo
         e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events6_2018: Rendi questa scena più interessante, cambiando
-        lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
-      courseA_playLab_events6_2019: Rendi questa scena più interessante, cambiando
         lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events7: Aggiungi ciò che vuoi a questo gioco. Riesci a fare
         in modo che il dinosauro scompaia quando il cane sbatte contro di lui? (Quando
@@ -4810,6 +4814,8 @@ it-IT:
         due blocchi e clicca su "▶ Esegui"!
       coursea_maze_ramp1_2019: Per risolvere questo esercizio, aggancia insieme i
         due blocchi e clicca su "▶ Esegui"!
+      express_maze_debugging9_2019: Usa i blocchi nella cassetta degli attrezzi per
+        creare il tuo programma. Fai arrivare Scrat alla ghianda.
       flappy_1: Attacca un blocco al blocco "quando si clicca" e premi "Esegui". Clicca
         o tocca lo schermo per spostare Flappy verso il bersaglio.
       flappy_11: Crea la tua versione del gioco Flappy. È possibile modificare tutte

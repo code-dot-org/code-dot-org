@@ -257,6 +257,19 @@ ka-GE:
         draw a polygon: მრავალკუთხედის დახატვა
       NEW Course 4 Play Lab Params 11:
         jump: ახტომა
+      New Artist Project:
+        draw a star: ვარსკვლავის დახატვა
+        draw a circle: წრის დახატვა
+        draw a pinwheel: ბზრიალას დახატვა
+        draw a triangle: სამკუთხედის დახატვა
+        draw a shape: ფორმის დახატვა
+        draw a house: სახლის დახატვა
+        draw a square: კვადრატის დახატვა
+      New Minecraft Hero Project:
+        function 1: ფუნქცია 1
+        function 2: ფუნქცია 2
+      New Play Lab Project:
+        jump: ახტომა
       Robot Doodle:
         draw head: თავის დახატვა
         draw eye: თვალის დახატვა
@@ -471,7 +484,6 @@ ka-GE:
         draw a house: სახლის დახატვა
       courseE_artist_functions7_2019:
         draw a window: ფანჯრის დახატვა
-        draw a house: სახლის დახატვა
       courseE_artist_functions8:
         do something: გააკეთეთ რამე
         draw a line of squares: კვადრატების ხაზის დახატვა

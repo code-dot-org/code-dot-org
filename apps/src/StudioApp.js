@@ -77,7 +77,7 @@ var copyrightStrings;
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 900;
+var MIN_WIDTH = 1200;
 var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
@@ -182,7 +182,7 @@ class StudioApp extends EventEmitter {
     this.onContinue = undefined;
     this.onResetPressed = undefined;
     this.backToPreviousLevel = undefined;
-    this.sendToPhone = undefined;
+    this.isUS = undefined;
     this.enableShowBlockCount = true;
 
     this.disableSocialShare = false;
@@ -973,9 +973,13 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {boolean} options.noOverlap if true, will not start playing if the sound is already playing
  * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
+  if (options && options.noOverlap && Sounds.getSingleton().isPlaying(name)) {
+    return;
+  }
   options = options || {};
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
@@ -1588,7 +1592,7 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
-  options.sendToPhone = this.sendToPhone;
+  options.isUS = this.isUS;
   options.channelId = project.getCurrentId();
 
   try {
@@ -1821,7 +1825,9 @@ StudioApp.prototype.setIdealBlockNumber_ = function() {
 StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
   var deviceWidth;
   var desiredWidth;
-  var minWidth;
+  var width;
+  var scale;
+
   if (this.share && dom.isMobile()) {
     var mobileNoPaddingShareWidth =
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
@@ -1830,23 +1836,30 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
     if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = mobileNoPaddingShareWidth;
+    var minWidth = mobileNoPaddingShareWidth;
+    width = Math.max(minWidth, desiredWidth);
+    scale = deviceWidth / width;
   } else {
-    // assume we are in landscape mode, so width is the longer of the two
-    deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
-    minWidth = MIN_WIDTH;
-  }
-  var width = Math.max(minWidth, desiredWidth);
-  var scale = deviceWidth / width;
+    // We want the longer edge, the width in landscape, to get MIN_WIDTH.
+    let screenWidth = Math.max(screen.width, screen.height);
 
+    width = MIN_WIDTH;
+    scale = screenWidth / width;
+  }
+
+  // Setting `minimum-scale=scale` means that we are unable to shrink the
+  // entire playspace area down to fit on a portrait iPhone, even though
+  // it's technically not visible because of the RotateContainer on top.
+  // But setting `maximum-scale=scale` was preventing an Android from starting
+  // in the desired zoom level in landscape, so we removed that but left
+  // `minimum-scale=scale`.
   var content = [
     'width=' + width,
     'minimal-ui',
     'initial-scale=' + scale,
-    'maximum-scale=' + scale,
     'minimum-scale=' + scale,
     'target-densityDpi=device-dpi',
-    'user-scalable=no'
+    'viewport-fit=cover'
   ];
   viewport.setAttribute('content', content.join(', '));
 };
@@ -1887,7 +1900,7 @@ StudioApp.prototype.setConfigValues_ = function(config) {
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
-  this.sendToPhone = config.sendToPhone;
+  this.isUS = config.isUS;
   this.noPadding = config.noPadding;
 
   // contract editor requires more vertical space. set height to 1250 unless
@@ -2171,10 +2184,13 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
     return;
   }
 
-  config.level.libraryCode = '';
+  config.level.projectLibraries = [];
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += createLibraryClosure(library);
+    config.level.projectLibraries.push({
+      name: library.name,
+      code: createLibraryClosure(library)
+    });
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',
@@ -3228,7 +3244,7 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 StudioApp.prototype.isNotStartedLevel = function(config) {
   const progress = getStore().getState().progress;
 
-  if (config.hasContainedLevels) {
+  if (config.hasContainedLevels || config.level.isProjectLevel) {
     return false;
   } else if (
     ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(

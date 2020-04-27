@@ -30,8 +30,16 @@ describe('TopCourse', () => {
           <div>{i18n.topCourseExplanation()}</div>
         </div>
         <div>
-          <Button href={topCourse.linkToOverview} text="View course" />
-          <Button href={topCourse.linkToLesson} text="Continue lesson" />
+          <Button
+            __useDeprecatedTag
+            href={topCourse.linkToOverview}
+            text="View course"
+          />
+          <Button
+            __useDeprecatedTag
+            href={topCourse.linkToLesson}
+            text="Continue lesson"
+          />
         </div>
       </div>
     );

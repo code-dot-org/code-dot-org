@@ -1079,6 +1079,8 @@ sk:
             '"left"': vľavo
       gamelab_mouseLocation:
         text: poloha myši
+      gamelab_moveBackward:
+        text: pohni {SPRITE} {DISTANCE} pixelov dopredu
       gamelab_moveForward:
         text: pohni {SPRITE} {DISTANCE} pixelov dopredu
       gamelab_moveInDirection:
@@ -1169,6 +1171,8 @@ sk:
           DIRECTION:
             '"right"': vpravo
             '"left"': vľavo
+      gamelab_updateTitleWithColor:
+        text: zobraz titulnú obrazovku {BREAK} názov {TITLE} farba {COLOR}
       gamelab_whenDownArrow:
         text: pri stlačení šípky dole
       gamelab_whenKey:
@@ -1542,6 +1546,14 @@ sk:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: pohni {SPRITE} {DISTANCE} pixelov {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Sever
+            '"East"': Východ
+            '"South"': Juh
+            '"West"': Západ
       aalab_prompt:
         text: položiť otázku {MESSAGE}
       aalab_scene:
@@ -1553,12 +1565,10 @@ sk:
             '3': '3'
       aalab_setupStory:
         text: nastav príbeh
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': ukáž
-            '"hide"': skry
+            '"random"': náhodný
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:

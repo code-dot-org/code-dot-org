@@ -46,6 +46,7 @@ ar:
           على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: املأ المعلومات التالية لإكمال
           إنشاء حساب على Code.org مع **%{provider}** لـ **%{email}**.
+        reset_password_token: رابط اعادة تعيين كلمة المرور الذي قمت بتتبعه
         error:
           future: لا يمكن أن يكون في المستقبل
   beta: تجريبي
@@ -64,7 +65,12 @@ ar:
   heading_x_of_y: "%{heading} (صفحة %{x} من %{y})"
   join_section:
     code:
+      title: انضم الى قسم في Code.org
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions: 'يرجى ادخال رمز ال٦ احرف الذي قام معلمك بمشاركته معك (مثال: "ABCDEF")
+        للانضمام الى قسمهم.'
+      instructions_short: أدخل الحروف الست لشفرة القسم
+      submit: انضم إلينا
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
     submit: إضافة تلميح
@@ -116,6 +122,9 @@ ar:
       الرجاء المحاولة لاحقاً.
     already_in_use: حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر.
     already_linked: حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر.
+    existing_account:
+      account_exists: أخبار جيدة! لديك سلفاٌ حساب على المنصة يستخدم الايميل %{email}
+      sign_in: لطفاً قم بتسجيل الدخول و سنقوم بربط حسابك على %{provider}
   signup_form:
     email_signup: قم بالتسجيل باستخدام بريدك الإلكتروني
     student_count: عدد الطلاب المسجلين حالياً هو %{count}.
@@ -158,8 +167,6 @@ ar:
     valid_password: كلمة المرور متاحة!
     invalid_password: كلمة المرور يجب ان تكون على الاقل 6 احرف
     mismatch_password: كلمة المرور التي ادخلتها غير متطابقة
-    under_13_consent: إذا كان عمري أقل من 13 عامًا، أؤكد أنني قد حصلت على إذن من والدي
-      أو الوصي القانوني باستخدام خدمات Code.org.
     student_consent: أؤكد على أنني حصلت على أذن من والدي أو الوصي لاستعمال خدمات Code.org.
     agree_us_website: أوافق على استخدام موقع على شبكة الإنترنت مقره في الولايات المتحدة.
     my_data_to_us: قد تُرسَل بيانات عن استخدامي لهذا الموقع إلى الولايات المتحدة وتُخزّن
@@ -178,6 +185,7 @@ ar:
     email_preference_yes: نعم
     email_preference_no: لا
     email_preference_required: عليكم تحديد البريد الالكتروني المفضل.
+    parent_account_email_label: بريد الوالد/ الوصي الالكتروني
   school_info:
     title: معلومات المؤسسة (اختياري)
     school_country: بلد المؤسسة
@@ -243,6 +251,7 @@ ar:
       ضد الزومبيز! :-)\n\n%{name}\n"
   parent_mailer:
     student_associated_subject: معلومات الدخول على Code.org
+    parent_email_added_subject: مرحبا بكم في Code.org!
   teacher_mailer:
     new_teacher_subject: مرحبا بكم في Code.org!
     delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
@@ -316,6 +325,7 @@ ar:
       help_support: مساعدة ودعم
       report_bug: أبلغ عن وجود خلل
       teacher_community: مجتمع المدرسين
+      professional_learning: Professional learning
       documentation: الوثائق
       tutorials: الدروس
       educate_overview: لمحة عن المعلم
@@ -465,6 +475,10 @@ ar:
     update: تحديث الحساب
     account_successfully_updated: تم تحديث الحساب بنجاح.
     update_email: تحديث
+    for_parents_and_guardians: للاهل والأوصياء
+    parent_guardian_email_label: بريد الوالد/الوصي
+    none: لا شيء
+    encrypted: مشفر
   user_level:
     completed: أكمل
     tried: حاول
@@ -843,6 +857,8 @@ ar:
       و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
     accept_label_markdown: أوافق على [شروط الخدمة](%{tos_url}) و [سياسة الخصوصية](%{privacy_url})
       المحدثة
+    accept_tos: بتسجيل الدخول إلى موقع Code.org، أنت توافق على [شروط الخدمة] (%{tos_url})،
+      و[سياسة الخصوصية](%{privacy_url}).
     accept: اوافق
     print: طباعة
     reminder_desc: قمنا بتحديث <a href="%{tos_url}" target="_blank">شروط استعمال خدمتنا</a>
@@ -992,20 +1008,31 @@ ar:
     csf_internet: الإنترنت
     csd1_1: 'الفصل 1: عملية حل المشكل'
     csd1_2: 'الفصل 2: الحواسيب وحل المشكل'
+    csd1_3: دروس بديلة
     csd2_1: 'الفصل 1: محتوى الويب و HTML'
     csd2_2: 'الفصل 2: التصميم و CSS'
     csd3_1: 'الفصل 1: الصور والمتحركات'
     csd3_2: 'الفصل 2: إنشاء الألعاب'
     csd4_1: 'الفصل 1: التصميم المحوري للمستخدم'
     csd4_2: 'الفصل 2: نمذجة التطبيق'
+    cspSurvey: استبيان
+    cspAssessment: تقييم الفصل
+    csp2_1_2018: "(قديم) الوحدة 1: معلومات رقمية"
     csp_variables: المتغيرات
     csp_conditionals: الجمل الشرطية
     csp_functions: دوال
     csp_project: مشروع
     csp_lists: القوائم
     csp_loops: الحلقات
+    csp_traversals: الاجتيازات
     csp_libraries: المكتبات
     csp_parameters_return_values: إعداد وإرجاع القيم
+    csp_unit1_2020: "(قديم) الوحدة 1: معلومات رقمية"
+    web_lab_projects: مشاريع مختبر الشبكة
+    game_lab_projects: مشاريع مختبر الالعاب
+    app_lab_projects: مشاريع مختبر التطبيقات
+  external_links:
+    disclaimer: إخلاء مسؤولية
   hoc_download:
     title: ساعة تحميل التعليمات البرمجية
     capsule_title: هل لديك إنترنت؟
@@ -1020,6 +1047,8 @@ ar:
       <a href="%{url}"> هنا</a>.'
     minecraft_name: ساعة البرمجة ماين كرافت
     starwars_javascript_name: 'حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)'
+    download_in_Albanian: تحميل بالألبانية
+    download_in_Arabic: تحميل بالعربية
     download_in_Azerbaijani: 'تحميل بالأذربيجاني:'
     download_in_Basque: 'تحميل بالإسبانية:'
     download_in_Bosnian: 'تحميل بالبوسنية:'
@@ -1076,9 +1105,17 @@ ar:
   view_teacher_guide: عرض دليل المعلم
   pd:
     form_labels:
+      first_name: الاسم الأول
+      first_name_preferred: الاسم الأول المفضل
+      last_name: الاسم الأخير
       email: البريد الإلكتروني
+      email_alternate: البريد الالكتروني البديل
+      gender: الهوية الجنسية
       school_name: اسم المؤسسة
       school_country: بلد المؤسسة
+      workshop_organizer: منظم ورشة العمل
+      workshop_facilitator: ميسر ورشة العمل
+      workshop_course: 'دورة ورشة العمل '
     form_entries:
       gender:
         male: ذكر
@@ -1151,9 +1188,17 @@ ar:
         مع شريكنا الدولي ببلدك لمساعدتك بدعم أنشطتك أو على سفرك كمدرس علوم الكمبيوتر.
     logged_out:
       heading: شكرا على اهتمامك ببرنامج التعلم المهني!
+  courses_category: الدورات الكاملة
   cookie_banner:
+    message: من خلال الاستمرار في تصفح موقعنا أو النقر فوق "أوافق"، فإنك توافق على
+      تخزين ملفات تعريف الارتباط على جهاز الكمبيوتر الخاص بك أو جهازك.
     accept: أوافق
   gdpr_dialog:
+    heading: هل توافق على استخدام موقع مقره في الولايات المتحدة؟
     message: قد تُرسل بيانات عن استخدامك لهذا الموقع إلى الولايات المتحدة وتُخزّن
       أو تُعالج فيها.
+    link_intro: للتفاصيل، شاهد
+    privacy_policy: سياسة الخصوصية
+    logout: تسجيل الخروج
     true: نعم
+  copy: نسخ

@@ -4,7 +4,10 @@ class ScriptDSL < BaseDSL
     @id = nil
     @stage = nil
     @stage_flex_category = nil
+    @lesson_group = nil
+    @lesson_groups = []
     @stage_lockable = false
+    @stage_visible_after = nil
     @concepts = []
     @skin = nil
     @current_scriptlevel = nil
@@ -33,6 +36,7 @@ class ScriptDSL < BaseDSL
     @editor_experiment = nil
     @project_sharing = nil
     @curriculum_umbrella = nil
+    @tts = false
   end
 
   integer :id
@@ -49,6 +53,7 @@ class ScriptDSL < BaseDSL
   boolean :has_lesson_plan
   boolean :is_stable
   boolean :project_sharing
+  boolean :tts
 
   string :wrapup_video
   string :script_announcements
@@ -76,10 +81,21 @@ class ScriptDSL < BaseDSL
     @pilot_experiment = experiment
   end
 
+  def lesson_group(key, properties = {})
+    if key
+      @lesson_groups << {
+        key: key,
+        display_name: properties[:display_name]
+      }.compact
+    end
+    @lesson_group = key
+  end
+
   def stage(name, properties = {})
     if @stage
       @stages << {
         stage: @stage,
+        visible_after: @stage_visible_after,
         scriptlevels: @scriptlevels,
         stage_extras_disabled: @stage_extras_disabled,
       }.compact
@@ -87,10 +103,26 @@ class ScriptDSL < BaseDSL
     @stage = name
     @stage_flex_category = properties[:flex_category]
     @stage_lockable = properties[:lockable]
+    @stage_visible_after = determine_visible_after_time(properties[:visible_after])
     @scriptlevels = []
     @concepts = []
     @skin = nil
     @stage_extras_disabled = nil
+  end
+
+  # If visible_after value is blank default to next wednesday at 8am PDT
+  # Otherwise use the supplied time
+  def determine_visible_after_time(visible_after_value)
+    if visible_after_value == ''
+      current_time = Time.now
+      raw_diff_to_wed = 3 - current_time.wday
+      # Make sure it is the next wednesday not the one that just passed
+      diff_to_next_wed = raw_diff_to_wed % 7
+      next_wednesday = current_time + diff_to_next_wed.day
+      visible_after_value = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
+    end
+
+    visible_after_value
   end
 
   def parse_output
@@ -121,7 +153,9 @@ class ScriptDSL < BaseDSL
       pilot_experiment: @pilot_experiment,
       editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
-      curriculum_umbrella: @curriculum_umbrella
+      curriculum_umbrella: @curriculum_umbrella,
+      tts: @tts,
+      lesson_groups: @lesson_groups
     }
   end
 
@@ -176,6 +210,7 @@ class ScriptDSL < BaseDSL
     level = {
       name: name,
       stage_flex_category: @stage_flex_category,
+      lesson_group: @lesson_group,
       stage_lockable: @stage_lockable,
       skin: @skin,
       concepts: @concepts.join(','),
@@ -244,12 +279,17 @@ class ScriptDSL < BaseDSL
 
   # @override
   def i18n_hash
-    i18n_strings = {}
+    i18n_stage_strings = {}
     @stages.each do |stage|
-      i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
+      i18n_stage_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {@name => {'stages' => i18n_strings}}
+    i18n_lesson_group_strings = {}
+    @lesson_groups.each do |lesson_group|
+      i18n_lesson_group_strings[lesson_group[:key]] = {'display_name' => lesson_group[:display_name]}
+    end
+
+    {@name => {'stages' => i18n_stage_strings, 'lesson_groups' => i18n_lesson_group_strings}}
   end
 
   def self.parse_file(filename, name = nil)
@@ -298,47 +338,64 @@ class ScriptDSL < BaseDSL
     s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
+    s << 'tts true' if script.tts
 
     s << '' unless s.empty?
-    s << serialize_stages(script)
+    s << serialize_lesson_groups(script)
     s.join("\n")
   end
 
-  def self.serialize_stages(script)
+  def self.serialize_lesson_groups(script)
     s = []
-    script.stages.each do |stage|
-      t = "stage '#{escape(stage.name)}'"
-      t += ', lockable: true' if stage.lockable
-      t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
-      s << t
-      stage.script_levels.each do |sl|
-        type = 'level'
-        type = 'bonus' if sl.bonus
-
-        if sl.levels.count > 1
-          s << 'variants'
-          sl.levels.each do |level|
-            s.concat(
-              serialize_level(
-                level,
-                type,
-                sl.active?(level),
-                sl.progression,
-                sl.named_level?,
-                sl.challenge,
-                sl.assessment,
-                sl.experiments(level)
-              ).map {|l| l.indent(2)}
-            )
-          end
-          s << 'endvariants'
-        else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
-        end
+    script.lesson_groups.each do |lesson_group|
+      if lesson_group&.user_facing && !lesson_group.lessons.empty?
+        t = "lesson_group '#{escape(lesson_group.key)}'"
+        t += ", display_name: '#{escape(lesson_group.localized_display_name)}'"
+        s << t
       end
-      s << 'no_extras' if stage.stage_extras_disabled
-      s << ''
+      lesson_group.lessons.each do |lesson|
+        s << serialize_stage(lesson)
+      end
     end
+    s << ''
+    s.join("\n")
+  end
+
+  def self.serialize_stage(stage)
+    s = []
+
+    t = "stage '#{escape(stage.name)}'"
+    t += ', lockable: true' if stage.lockable
+    t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
+    t += ", visible_after: '#{escape(stage.visible_after)}'" if stage.visible_after
+    s << t
+    stage.script_levels.each do |sl|
+      type = 'level'
+      type = 'bonus' if sl.bonus
+
+      if sl.levels.count > 1
+        s << 'variants'
+        sl.levels.each do |level|
+          s.concat(
+            serialize_level(
+              level,
+              type,
+              sl.active?(level),
+              sl.progression,
+              sl.named_level?,
+              sl.challenge,
+              sl.assessment,
+              sl.experiments(level)
+            ).map {|l| l.indent(2)}
+          )
+        end
+        s << 'endvariants'
+      else
+        s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
+      end
+    end
+    s << 'no_extras' if stage.stage_extras_disabled
+    s << ''
     s.join("\n")
   end
 

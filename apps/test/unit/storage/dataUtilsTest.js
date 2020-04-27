@@ -9,6 +9,7 @@ import {
   isBoolean,
   toBoolean
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('isBlank', () => {
   it('counts null, undefined, and empty string as blank', () => {
@@ -202,6 +203,34 @@ describe('castValue', () => {
     expect(castValue('"foo')).to.equal('"foo');
     expect(castValue('""foo""')).to.equal('""foo""');
   });
+
+  describe('with applabDatasets experiment enabled', () => {
+    beforeEach(() => {
+      experiments.setEnabled(experiments.APPLAB_DATASETS, true);
+    });
+    afterEach(() => {
+      experiments.setEnabled(experiments.APPLAB_DATASETS, false);
+    });
+    it('does not allow objects or arrays', () => {
+      expect(() => castValue('[1, 2, 3]')).to.throw(
+        /Invalid entry type: object/
+      );
+      expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).to.throw(
+        /Invalid entry type: object/
+      );
+    });
+
+    it('converts "undefined" to undefined', () => {
+      expect(castValue('undefined')).to.equal(undefined);
+    });
+
+    it('only allows unquoted strings if allowUnquotedStrings is true', () => {
+      expect(castValue('abc', /* allowUnquotedStrings */ true)).to.equal('abc');
+      expect(() => castValue('abc', /* allowUnquotedStrings */ false)).to.throw(
+        /JSON Parse error/
+      );
+    });
+  });
 });
 
 describe('editableValue', () => {
@@ -220,6 +249,18 @@ describe('editableValue', () => {
   it('stringifies objects and arrays', () => {
     expect(editableValue({a: 1})).to.equal('{"a":1}');
     expect(editableValue([1, 2])).to.equal('[1,2]');
+  });
+
+  describe('with applabDatasets experiment enabled', () => {
+    beforeEach(() => {
+      experiments.setEnabled(experiments.APPLAB_DATASETS, true);
+    });
+    afterEach(() => {
+      experiments.setEnabled(experiments.APPLAB_DATASETS, false);
+    });
+    it('shows undefined', () => {
+      expect(editableValue(undefined)).to.equal('undefined');
+    });
   });
 });
 

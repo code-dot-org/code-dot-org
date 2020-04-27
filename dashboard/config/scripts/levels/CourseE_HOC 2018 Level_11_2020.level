@@ -1,0 +1,103 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2020-02-25T15:54:12.000Z",
+  "level_num": "custom",
+  "user_id": 837,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"gravel\",\"gravel\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"gravel\",\"gravel\",\"gravel\",\"sand\",\"seaLantern\",\"darkPrismarine\",\"darkPrismarine\",\"darkPrismarine\",\"seaLantern\",\"sand\",\"gravel\",\"magmaDeep\",\"gravel\",\"sand\",\"darkPrismarine\",\"blackConcrete\",\"blackConcrete\",\"blackConcrete\",\"darkPrismarine\",\"sand\",\"magmaDeep\",\"gravel\",\"gravel\",\"sand\",\"darkPrismarine\",\"blackConcrete\",\"blackConcrete\",\"blackConcrete\",\"darkPrismarine\",\"sand\",\"gravel\",\"gravel\",\"gravel\",\"sand\",\"darkPrismarine\",\"blackConcrete\",\"blackConcrete\",\"blackConcrete\",\"darkPrismarine\",\"sand\",\"gravel\",\"gravel\",\"gravel\",\"sand\",\"seaLantern\",\"darkPrismarine\",\"darkPrismarine\",\"darkPrismarine\",\"seaLantern\",\"sand\",\"magmaBlock\",\"gravel\",\"gravel\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"sand\",\"gravel\",\"magmaDeep\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"magmaBlock\",\"magmaDeep\",\"gravel\",\"magmaBlock\",\"magmaDeep\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"magmaBlock\",\"gravel\",\"gravel\",\"magmaBlock\",\"gravel\",\"magmaBlock\",\"gravel\",\"gravel\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"kelp\",\"seaGrass\",\"\",\"\",\"\",\"\",\"seaGrass\",\"\",\"\",\"\",\"seaGrass\",\"\",\"\",\"\",\"\",\"\",\"kelp\",\"\",\"\",\"\",\"kelp\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"seaGrass\",\"\",\"\",\"\",\"\",\"seaGrass\",\"kelp\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"gravel\",\"gravel\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"gravel\",\"gravel\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"gravel\",\"bubbleColumn\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"bubbleColumn\",\"gravel\",\"\",\"\",\"\",\"\",\"conduit\",\"\",\"\",\"\",\"\",\"\",\"gravel\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"gravel\",\"gravel\",\"gravel\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"bubbleColumn\",\"gravel\",\"gravel\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"gravel\",\"bubbleColumn\",\"gravel\",\"\",\"\",\"\",\"\",\"\",\"\",\"bubbleColumn\",\"bubbleColumn\",\"gravel\",\"bubbleColumn\",\"bubbleColumn\",\"gravel\",\"\",\"\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"gravel\",\"bubbleColumn\",\"gravel\",\"gravel\",\"bubbleColumn\",\"gravel\",\"bubbleColumn\",\"gravel\",\"gravel\"]",
+    "player_start_position": "[3, 5]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "player_start_direction": "0",
+    "is_daytime": "false",
+    "is_event_level": "false",
+    "use_player": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // the map has the given block layout.\r\n      // \"\" means ignore, \"empty\" means nothing there, \"any\" means something there\r\n      return verificationAPI.solutionMapMatchesResultMap(\r\n            [\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"prismarine\", \"prismarine\", \"prismarine\", \"prismarine\", \"prismarine\", \"\", \"\",\r\n              \"\", \"\", \"\", \"prismarine\", \"\", \"\", \"\", \"prismarine\", \"\", \"\",\r\n              \"\", \"\", \"\", \"prismarine\", \"\", \"\", \"\", \"prismarine\", \"\", \"\",\r\n              \"\", \"\", \"\", \"prismarine\", \"\", \"\", \"\", \"prismarine\", \"\", \"\",\r\n              \"\", \"\", \"\", \"prismarine\", \"prismarine\", \"prismarine\", \"prismarine\", \"prismarine\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\",\r\n              \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\", \"\"\r\n            ]);\r\n}",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return false;\r\n}",
+    "level_verification_timeout": "30000",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "agent_start_direction": "0",
+    "use_score": "false",
+    "is_agent_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "parent_level_id": 17688,
+    "is_aquatic_level": "true",
+    "tts_short_instructions_override": "Build a conduit with Prismarine inside the Ocean Monument.\r\n",
+    "tts_long_instructions_override": "This Ocean Monument needs a conduit, are you up to the challenge? Build one using prismarine along the path.\r\n",
+    "boat": "false",
+    "short_instructions": "Build a conduit with Prismarine inside the Ocean Monument.\r\n",
+    "long_instructions": "Build a wall of **prismarine** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) around the black concrete. This will activate the **conduit** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) and complete your challenge!",
+    "ocean": "cold",
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-31 15:54:15 +0000\",\"changed\":[\"notes\",\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"player_start_direction\",\"is_daytime\",\"is_event_level\",\"use_player\",\"verification_function\",\"timeout_verification_function\",\"failure_check_function\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 15:57:38 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 15:57:58 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 15:58:59 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:00:47 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:04:51 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:14:10 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:19:26 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:21:24 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:37:02 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:41:03 +0000\",\"changed\":[\"ground_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:47:31 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:48:06 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:53:51 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:58:27 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 16:59:12 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 17:00:21 +0000\",\"changed\":[\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 17:00:56 +0000\",\"changed\":[\"name\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 17:09:52 +0000\",\"changed\":[\"ground_decoration_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 17:12:37 +0000\",\"changed\":[\"ground_decoration_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 17:19:53 +0000\",\"changed\":[\"ground_plane\",\"ground_decoration_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 17:24:41 +0000\",\"changed\":[\"ground_plane\",\"action_plane\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-08-31 18:59:06 +0000\",\"changed\":[\"player_start_position\",\"contained_level_names\"],\"changed_by_id\":837,\"changed_by_email\":\"v-jogoye@microsoft.com\"},{\"changed_at\":\"2018-09-12 03:36:20 +0000\",\"changed\":[\"is_event_level\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-12 07:28:18 +0000\",\"changed\":[\"player_start_position\",\"player_start_direction\",\"is_daytime\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-12 07:31:27 +0000\",\"changed\":[\"player_start_position\",\"contained_level_names\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-12 07:34:44 +0000\",\"changed\":[],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-12 08:20:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-20 23:57:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-09-26 17:12:41 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-09-27 00:19:27 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-03 20:10:45 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 00:36:59 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 00:38:15 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 00:46:13 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 21:42:20 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 21:45:44 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 21:49:34 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 21:50:32 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-05 21:51:02 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-07 21:24:54 +0000\",\"changed\":[\"toolbox_blocks\",\"verification_function\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-08 20:42:45 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-09 22:00:49 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-10 01:51:12 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"ground_decoration_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-10 01:51:43 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-10 01:52:20 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_decoration_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-10 01:53:22 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-10 01:54:28 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_decoration_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-16 15:44:14 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-16 15:46:22 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-16 23:29:39 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-10-16 23:41:56 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-10-17 02:42:39 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-17 02:56:22 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-17 02:57:29 +0000\",\"changed\":[\"toolbox_blocks\",\"action_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-17 03:03:03 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":843,\"changed_by_email\":\"nealm@microsoft.com\"},{\"changed_at\":\"2018-10-18 18:58:50 +0000\",\"changed\":[\"toolbox_blocks\",\"ground_plane\",\"action_plane\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":825,\"changed_by_email\":\"cophill@microsoft.com\"},{\"changed_at\":\"2018-10-24 21:40:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2019-09-10 18:03:40 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_placePrismarine"/>
+        <block type="craft_ifStandingOnLimit">
+          <title name="TYPE">'sand'</title>
+        </block>
+        <block type="craft_repeatUntilConduit"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="craft_repeatUntilConduit">
+              <statement name="STATEMENT">
+                <block type="craft_placePrismarine">
+                  <next>
+                    <block type="craft_moveForward">
+                      <next>
+                        <block type="craft_ifStandingOnLimit">
+                          <title name="TYPE">'seaLantern'</title>
+                          <statement name="STATEMENT">
+                            <block type="craft_turn">
+                              <title name="DIR">right</title>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Craft>

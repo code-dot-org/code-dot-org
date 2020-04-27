@@ -2,7 +2,7 @@
 title: Sådan afholder man Hour of Code - Virksomheder
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Sådan får du arrangeret, at Hour of Code kommer til din virksomhed
 
@@ -95,4 +95,4 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 
-{{ signup_button }}
+{{ tilmeld_knap }}

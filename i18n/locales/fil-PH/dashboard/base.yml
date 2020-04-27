@@ -58,6 +58,7 @@ fil:
   join_section:
     code:
       placeholder: "Section Code (ABCDEF)"
+      instructions_short: "Ilagay ang iyong 6 na letra na section code"
   add_hint_form:
     placeholder: 'Maaaring ilagay ang iyong hint dito'
     submit: 'Magdagdag ng hint'
@@ -199,6 +200,7 @@ fil:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login na impormasyon para sa Code.org'
+    parent_email_added_subject: 'Maligayang pagdating sa Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Maligayang pagdating sa Code.org!'
   section:
@@ -397,6 +399,8 @@ fil:
     confirm_secret_words: 'Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay ng iyong kasalukuyang mga secret na mga pulong'
     enter_parent_email: "Ilagay ang iyong mga magulang, o tagapangalaga na email address (para sa password recovery)"
     update_email: "I-update"
+    parent_guardian_email_label: "Email Magulang/Tagapangalaga"
+    none: "Wala"
   user_level:
     completed: 'Nakompleto'
     tried: 'Sinubukan'
@@ -494,6 +498,7 @@ fil:
     download: 'I-download ang video'
     show_notes: 'Ipakita ang mga Notes'
     show_video: 'Ipakita ang Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
@@ -702,6 +707,7 @@ fil:
     privacy_notice: "Pahayag sa Privacy"
     accept_label: 'Ako ay sumang-ayon sa updated na <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at sa <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
     accept_label_markdown: Ako ay sumang-ayon sa updated na [mga Palatuntunan](%{tos_url}) at sa [Privacy Policy](%{privacy_url})
+    accept_tos: Sa pag-sign up sa Code.org, pumapayag ka sa aming [Mga Alituntunin sa Serbisyo](%{tos_url}) at [Patakaran sa Pagkapribado](%{privacy_url}).
     accept: "Tanggapin"
     print: "I-print"
     reminder_desc: 'Nag-update kami sa aming <a href="%{tos_url}" target="_blank">mga Palatuntunan</a> at <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Pakibasa ng mabuti ang mga ito bago mo tanggapin. Tandaan na ang aming mga kagamitan na nagtuturo ng Javascript ay maaaring hindi magagamit ng iyong mga estudyante bago mo hayagang tanggapin ang mga binagong pamantayan.'
@@ -846,12 +852,14 @@ fil:
     csp_ap_1: 'Kabanata 1: AP Tech na Setup'
     csp_ap_2: 'Kabanata 2: AP Explore na Performance Task'
     csp_ap_3: 'Kabanata 3: AP Maglikha ng Performance Task'
+    csp_postap_1: 'Kabanata 2: Pagmanipula at Pagpapakita ng Datos'
     csp2_1_2018: 'Yunit 2: Digital na Impormasyon'
     csp_variables: 'Mga variable'
     csp_conditionals: 'Mga conditional'
     csp_functions: 'Mga function'
     csp_lists: 'Mga listahan'
     csp_loops: 'Mga loop'
+    csp_unit1_2020: '(luma) Yunit 1: Digital na Impormasyon'
     dlp: 'Pagmunimuni na mga Prompt'
     k5_getting_started: 'Pagsisimula'
     k5_next_steps: 'Mga susunod na Hakbang'
@@ -949,3 +957,4 @@ fil:
     accept: 'Ako ay sumasang-ayon'
   gdpr_dialog:
     yes: 'Oo'
+  copy: 'Kopyahin'

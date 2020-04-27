@@ -20,6 +20,7 @@ import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import QRCode from 'qrcode.react';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -122,6 +123,20 @@ const styles = {
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
     WebkitTransform: 'translate(-50%,-50%)'
+  },
+  sendToPhoneContainer: {
+    width: '100%',
+    marginTop: 15
+  },
+  sendToPhoneLeft: {
+    float: 'left',
+    width: '70%',
+    paddingRight: 20,
+    boxSizing: 'border-box'
+  },
+  sendToPhoneRight: {
+    float: 'right',
+    width: '30%'
   }
 };
 
@@ -451,12 +466,25 @@ class ShareAllowedDialog extends React.Component {
                   )}
                 </div>
                 {this.state.showSendToPhone && (
-                  <SendToPhone
-                    channelId={this.props.channelId}
-                    appType={this.props.appType}
-                    isLegacyShare={false}
-                    styles={{label: {marginTop: 15, marginBottom: 0}}}
-                  />
+                  <div>
+                    <div style={styles.sendToPhoneContainer}>
+                      <div style={styles.sendToPhoneLeft}>
+                        <SendToPhone
+                          channelId={this.props.channelId}
+                          appType={this.props.appType}
+                          isLegacyShare={false}
+                        />
+                      </div>
+                      <div style={styles.sendToPhoneRight}>
+                        <label>{i18n.scanQRCode()}</label>
+                        <QRCode
+                          value={this.props.shareUrl + '?qr=true'}
+                          size={90}
+                        />
+                      </div>
+                    </div>
+                    <div style={{clear: 'both'}} />
+                  </div>
                 )}
                 {canPublish && !isPublished && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>

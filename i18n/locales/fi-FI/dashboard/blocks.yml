@@ -1072,6 +1072,8 @@ fi:
             '"left"': vasemmalle
       gamelab_mouseLocation:
         text: hiiren sijainti
+      gamelab_moveBackward:
+        text: siirry {SPRITE} {DISTANCE} kuvapistettä taaksepäin
       gamelab_moveForward:
         text: siirry {SPRITE} {DISTANCE} kuvapistettä eteenpäin
       gamelab_moveInDirection:
@@ -1148,13 +1150,13 @@ fi:
         text: vaihtaa väriä {THIS} {COLOR}
       gamelab_setupSim:
         text: |-
-          Määritä simulointi
-          {SPRITE1N}{SPRITE1COSTUME}Nopeus{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Nopeus{SPRITE2SPEED}
-          Kerääminen
+          määritä simulointi käyttäen
+          {SPRITE1N}{SPRITE1COSTUME}nopeudella{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}nopeudella{SPRITE2SPEED}
+          keräten
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: näytä otsikon näyttö {BREAK} otsikko {TITLE} teksti {SUBTITLE}
+        text: näytä otsikkosivu {BREAK} otsikko {TITLE} teksti {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} napsautettu"
         options:
@@ -1167,6 +1169,8 @@ fi:
           DIRECTION:
             '"right"': oikealle
             '"left"': vasemmalle
+      gamelab_updateTitleWithColor:
+        text: näytä otsikkosivu {BREAK} otsikko {TITLE} väri {COLOR}
       gamelab_whenDownArrow:
         text: kun nuolta painetaan
       gamelab_whenKey:
@@ -1519,7 +1523,7 @@ fi:
       Vector_setColor:
         text: aseta väri {COLOR}
       Vector_setSize:
-        text: asettaa leveys {WIDTH} korkeus {HEIGHT}
+        text: aseta leveys {WIDTH} korkeus {HEIGHT}
       Vector_teleportTo:
         text: aseta asema {POSITION}
       Vector_vectorNorth:
@@ -1542,6 +1546,14 @@ fi:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: siirry {SPRITE} {DISTANCE} kuvapistettä {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Pohjoinen
+            '"East"': Itä
+            '"South"': Etelä
+            '"West"': Länsi
       aalab_prompt:
         text: kysyä kysymys {MESSAGE}
       aalab_scene:
@@ -1553,12 +1565,10 @@ fi:
             '3': '3'
       aalab_setupStory:
         text: setup tarina
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': näytä
-            '"hide"': piilota
+            '"random"': satunnainen
       binary_drawBin:
         text: piirtää binääri {BIN}
       binary_drawBinScreen:

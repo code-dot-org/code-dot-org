@@ -12,13 +12,26 @@
   csedweek_dates: "2018年12月3-9日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">编程一小时</a>即将来临。邀请所有的老师和组织领导们<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
+  csedweek_banner_teachers_text: "你是电脑科学课的老师吗？看其他的电脑科学教育周的资料吧"
   n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
+  try_hoc_num_served: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有 %{num} 次参与</h3>"
+  try_hoc_num_served_markdown: |-
+    # 尝试\
+    \
+    ##《编程一小时》\
+    \
+    ###%{num}参与 #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "任何人都可以学习。"
   learn_now: "现在开始学习"
   petition_message: "任何学校的任何学生都应有机会学习计算机科学"
   petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
-  petition_sign_message_support: '如果支持我们，签名并像其他 #人一样加入邮件列表。'
+  petition_sign_message_num: "如果同意，签名并像其他 %{num} 人一样加入邮件列表。"
   petition_join_others: '加入另外 # 人'
+  petition_join_others_num: "与 %{num} 人一样加入"
   name: "姓名"
   email: "电子邮件"
   zipcode: "邮政编码或国家"
@@ -43,6 +56,7 @@
   hoc2014_support: "支持它 &#x25BE;"
   hoc2014_whatishoc: "什么是编程一小时？"
   csedweek_map_header: "#CSEdWeek/ 编程一小时是一个世界性的活动"
+  csedweek_map_header_num: "全世界已有 %{num} 次计算机科学教育周 / 《编程一小时》活动"
   csedweek_map_signup: "登记参加活动"
   csedweek_map_search_placeholder: "搜索编程一小时的活动"
   csedweek_map_search_search: "搜索"
@@ -150,6 +164,7 @@
   personalize_certificate: "个性化你的证书"
   print_batch_certificates: "批量打印证书"
   print_certificates: "打印证书"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   print_ice_art_from_frozen: "打印来自冰雪奇缘的冰雪艺术家"
   want_a_blank_certificate_template: "需要空白证书模板来填写学生的名字？"
   landscape_recommended_certificates: "打印证书时，推荐选择 **风景**。"
@@ -315,6 +330,7 @@
   homepage_action_text_signpetition: "在请愿书上签名"
   homepage_action_text_wincelebritychat: "赢得与名人聊天的机会"
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
+  homepage_signpetition_dropdown_text: "我同意"
   homepage_diversity_pledge: "承诺多样性"
   homepage_banner_text_prizes: '12月7号到13号，编程一小时即将再次到来 '
   homepage_banner_link_prizes: '加入史上最大的学习盛会 '
@@ -683,7 +699,7 @@
   dashboard_sections_print_secrets: "然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。"
   dashboard_sections_switch_section: '切换学习小组'
   dashboard_sections_close: "关闭"
-  dashboard_sections_move_students_desc: "选择学生转到新的章节。转移的学生不会清除他们的进展。"
+  dashboard_sections_move_students_desc: "选择学生转到新的小组。转移的学生不会清除他们的进展。"
   dashboard_sections_one_per_teacher: "对每一位老师来说，学生仅能在一个学习小组中。你的学生想加入一个新的学习小组，他就要离开原来的小组。"
   dashboard_sections_move_to_section: '移动到此节︰'
   dashboard_sections_enter_code: '输入此节代码︰'
@@ -691,7 +707,7 @@
   dashboard_sections_other_section: "其他老师"
   dashboard_sections_both_sections: "你想要学生两个部分都参加吗？"
   dashboard_sections_yes_both: "是的，我想要复制学生到本小组和新小组中"
-  dashboard_sections_no_move: "不，我想移动学生到新章节中。"
+  dashboard_sections_no_move: "不，我想移动学生到新小组中。"
   dashboard_sections_move_students: "转移学生"
   dashboard_sections_assign_hoc_script_desc: "参与编程一小时？"
   dashboard_sections_assign_hoc_script_msg: "请注意，在12月3日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。但课程中其它部分还可以使用。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a href='%{certificate_url}'>打印</a>这些证书。）在本周之外的其它时间里，学生进度和报告会正常保存。"
@@ -936,10 +952,17 @@
   coursed-2019_name: 课程 D (2019)
   coursee-2019_name: 课程 E (2019)
   coursef-2019_name: 课程 F （2019）
+  coursea-2020_name: 课程 A (2019)
+  courseb-2020_name: 课程 B (2019)
+  coursec-2020_name: 课程 C (2019)
+  coursed-2020_name: 课程 D (2019)
+  coursee-2020_name: 课程 E (2019)
+  coursef-2020_name: 课程 F （2019）
   express-2018_name: 速学课程 （2018）
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
   pre-express-2019_name: 学前儿童的速学课程（2019）
+  express-2020_name: 速学课程 (2019)
   csd2_name: '单元 2：网页开发'
   csd3_name: '单元 3：动画和游戏'
   accelerated_name: "加速课程"

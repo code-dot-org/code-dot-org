@@ -1291,7 +1291,9 @@ mi:
         dance:
           stages:
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
+          description_short: Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith
+            Urban, Ciara me etahi atu!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1301,11 +1303,13 @@ mi:
         dance--draft:
           stages:
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
         dance-draft:
           stages:
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
+        dance-extras:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1323,7 +1327,7 @@ mi:
         dance-low:
           stages:
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1337,7 +1341,7 @@ mi:
             Artist Binary:
               name: Rehetoi Tāhūrua
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1371,11 +1375,14 @@ mi:
             Crowdsourcing:
               name: Te Mahi ā-Ohu
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
         andrea-test:
           stages:
             'null':
               name: korenga
+        dance-extras-gallery:
+          title: Me Kanikani Tonu
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1469,7 +1476,7 @@ mi:
         dance-2019:
           stages:
             Dance Party:
-              name: Te Paati Kanikani
+              name: Te Pāti Kanikani
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -1484,6 +1491,8 @@ mi:
               name: Ngā Taurangi
             For Loops:
               name: Mō Ngā Koromeke
+        dance-extras-2019:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -1500,3 +1509,105 @@ mi:
           stages:
             Conditionals:
               name: Ngā Here
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Ngā Taumahi Whai Tawhā
+        csd3-2020:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+            Text:
+              name: Kuputuhi
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Te Karore Haumaru
+            'Programming: Happy Maps':
+              name: Ngā Mahere Harikoa
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tō Tapuwae Matihiko
+            Move It, Move It:
+              name: E Neke, E Neke
+            'Loops: Getting Loopy':
+              name: Kia Koromeke
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Kōmore Ā-Rua
+            'Events: The Big Event':
+              name: Te Takahanga Nui
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Papatono Pepa Kauwhata
+            Relay Programming:
+              name: Papatonotanga ā-Tānga
+            'Unplugged: Binary':
+              name: Ngā Atahanga Tāhūrua
+            Artist Binary:
+              name: Rehetoi Tāhūrua
+            Digital Citizenship:
+              name: Te Kirirarautanga Matihiko
+            Dance Party:
+              name: Te Pāti Kanikani
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Te Tito Waiata
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Ngā Taurangi Kōpaki
+            For Loop Fun:
+              name: Kia Ngahau te Mahi Koromeke
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
+        express-2020:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Ohu Takikupu
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Te Waihanga Taumahi
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Ngā Koromeke I Te
+            Variables:
+              name: Ngā Taurangi
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Ngā Taumahi
+        code-break:
+          stages:
+            Algorithms:
+              name: Ngā Hātepe
+            Events:
+              name: Ngā Takunetanga
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Ngā Koromeke I Te

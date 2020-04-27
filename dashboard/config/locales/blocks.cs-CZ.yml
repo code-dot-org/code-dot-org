@@ -226,7 +226,7 @@ cs:
       Dancelab_everyMeasuresRange:
         text: 'opakovat každých {N} taktů po {START} '
       Dancelab_everySeconds:
-        text: 'opakovat každých {N} {UNIT} '
+        text: 'opakovat každé {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
@@ -917,7 +917,7 @@ cs:
             '"left"': vlevo
             '"down"': dolů
             '"right"': vpravo
-            '"space"': vesmír
+            '"space"': mezerník
             '"enter"': enter
             '"a"': a
             '"b"': b
@@ -1077,6 +1077,8 @@ cs:
             '"left"': vlevo
       gamelab_mouseLocation:
         text: umístění myši
+      gamelab_moveBackward:
+        text: pouň {SPRITE} {DISTANCE} pixelů zpátky
       gamelab_moveForward:
         text: posunout {SPRITE} {DISTANCE} pixelů dopředu
       gamelab_moveInDirection:
@@ -1173,6 +1175,8 @@ cs:
           DIRECTION:
             '"right"': vpravo
             '"left"': vlevo
+      gamelab_updateTitleWithColor:
+        text: ukaž titulní obrazovku {BREAK} nadpis {TITLE} barva {COLOR}
       gamelab_whenDownArrow:
         text: když stisknete šipku dolů
       gamelab_whenKey:
@@ -1549,6 +1553,14 @@ cs:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: přesunout {SPRITE} {DISTANCE} pixelů {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Severní
+            '"East"': Na východ
+            '"South"': Jižní
+            '"West"': Na západ
       aalab_prompt:
         text: ptát {MESSAGE}
       aalab_scene:
@@ -1560,12 +1572,10 @@ cs:
             '3': '3'
       aalab_setupStory:
         text: příběh o nastavení
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': zobrazit
-            '"hide"': skrýt
+            '"random"': náhodně
       binary_drawBin:
         text: nakreslit binární {BIN}
       binary_drawBinScreen:

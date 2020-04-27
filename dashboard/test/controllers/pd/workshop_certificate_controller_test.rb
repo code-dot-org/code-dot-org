@@ -129,6 +129,9 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     # :trim is called in order to make sure excess empty space is removed around
     # the text.
     mock_text_image.expects(:trim!).returns(mock_text_image)
+    # :columns is the width of the image in pixels. This is checked to see if the
+    # text needs to be resized.
+    mock_text_image.expects(:columns).returns(325)
     # :read with a "pango:..." string is what generates an image with the given
     # text in it.
     Magick::Image.expects(:read).with("pango:#{string}").returns([mock_text_image])

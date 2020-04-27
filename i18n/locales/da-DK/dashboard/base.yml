@@ -154,7 +154,6 @@ da:
     valid_password: "Gyldig adgangskode!"
     invalid_password: "Adgangskoden skal være på mindst 6 tegn"
     mismatch_password: "De to adgangskoder du har indtastet stemmer ikke overens"
-    under_13_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
     student_consent: "Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres eller værges tilladelse til at benytte tjenesterne fra Code.org."
     agree_us_website: "Jeg accepterer at bruge en hjemmeside baseret i USA."
     my_data_to_us: "Data fra min brug af dette websted kan sendes til og gemmes eller behandles i USA."
@@ -235,11 +234,14 @@ da:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login-oplysninger til Code.org'
+    parent_email_added_subject: 'Velkommen til Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
   section:
     your_section:
       one: 'Din afdeling:'
+      other: 'Dine sektioner'
+    code_with_teacher: '%{section_code} med %{teacher_name}'
     confirm:
       remove: 'Er du sikker på du vil forlade denne sektion?'
     default_name: 'Sektion uden titel'
@@ -284,11 +286,13 @@ da:
     header:
       finished_hoc: "Jeg har afsluttet min Hour of Code"
       sign_in_to_save: 'Log ind for at gemme fremskridt'
+      my_dashboard: "Hjem"
       course_catalog: "Kursuskatalog"
       project_gallery: "Projekter"
       sections: "Sektioner"
       report_bug: "Rapporter fejl"
       teacher_community: "Lærer-fælleskab"
+      professional_learning: "Professional learning"
       educate_overview: "Oversigt for undervisere"
       educate_elementary: "Grundskole"
       educate_middle: "Grundskole (mellemtrin/udskoling)"
@@ -342,6 +346,7 @@ da:
       iceage: 'Is-tid'
       infinity: 'Uendelig'
       makerlab: 'Skaber-toolkit'
+      minecraft_codebuilder: "Minecraft: Kode Forbindelse\n"
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       spritelab: 'SpriteLab'
@@ -398,10 +403,16 @@ da:
     delete_text_teacher_note: "Bemærk venligst: Sletning af din konto vil ikke slette dine studerendes konti."
     delete_confirm: 'Sikker på, at du vil slette din konto?'
     deleted_user: 'slettet bruger'
+    create_personal_login: "Lav et personligt kodeords-login\n"
     create_personal_login_under_13_parent_email: 'Forældres/værges e-mail adresse'
     create_personal_login_terms_markdown: "Ved å lage ei personleg pålogging godtar eg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Eg stadfester at eg har løyve frå foreldre eller førsette til å bruke Code.org sine tenester, sjølv utan ein lærar tilstade."
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
+    update: "Opdater Konto"
+    account_successfully_updated: "Konto opdateret"
+    auth_option_saved: "Du har linket din %{provider} konto med email %{email}.\n"
     update_email: "Opdater"
+    parent_guardian_email_label: "Forældres/værges e-mail adresse"
+    none: "Ingen"
   user_level:
     completed: 'Fuldført'
     tried: 'Forsøgt'
@@ -639,10 +650,12 @@ da:
     age: Din alder
     header: Opdater konto oplysninger
   terms_interstitial:
+    intro_desc: "Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil _ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio_. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost."
     intro_desc_markdown: "Vi har oppdatert våre vilkår for teneste og personvern, som du kan sjå nedanfor. Endringane gjeld frå 24 august 2016. Den største endringa: Vi vil _ikkje lenger lagre epost-adressene til elevane sine kontoar på Code Studio_. Dette er viktig for oss, og vi håpar det set ein ny standard for personvern for elevar innan opplæringsteknologi. Vi har sendt deg ei oppsummering av øvrige endringar via epost."
     tos: "Termer"
     privacy: "Privatlivspolitik"
     accept_label_markdown: Eg godtar [tenestevilkåra](%{tos_url}) og[retningslinjer for personvern](%{privacy_url}).
+    accept_tos: Ved at tilmelde dig Code.org, accepterer du vores [Servicevilkår](%{tos_url}) og [Privatlivspolitik](%{privacy_url}).
     print: "Udskriv"
     reminder_desc_markdown: Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.
   school_info_interstitial:
@@ -728,6 +741,7 @@ da:
     csp_lists: 'Lister'
     csp_loops: 'Løkker'
   hoc_download:
+    minecraft_name: 'Minecraft Hour of Code'
     download_in_Swedish: 'Download på svensk:'
     download_in_Turkish: 'Download på tyrkisk:'
     download_in_Ukrainian: 'Download på ukrainsk:'
@@ -772,6 +786,7 @@ da:
         la: 'Sprog kunst'
       resources:
         bootstrap: 'Bootstrap'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
       robotics:
         kodable: 'Kodable'
@@ -781,8 +796,10 @@ da:
   cookie_banner:
     accept: 'Jeg er enig'
   gdpr_dialog:
+    heading: 'Accepterer du at bruge en hjemmeside baseret i USA?'
     message: 'Data fra din brug af dette websted kan sendes til og gemmes eller behandles i USA.'
     link_intro: 'For nærmere oplysninger se vores'
     privacy_policy: 'Privatlivspolitik'
     logout: 'Log af'
     yes: 'Ja'
+  copy: 'Kopier'

@@ -1,0 +1,39 @@
+name 'cspu5_assess1_swap_2018_2019_virtual'
+wrong '`to = from;`  
+`from = to;`'
+wrong '`from = var temp;`  
+`to = temp;`  
+`from = to;`'
+wrong '`var temp = from;`  
+`from = to;`  
+`to = from;`'
+right '`var temp = from;`  
+`from = to;`  
+`to = temp;`'
+wrong '`var temp = to;`  
+`from = to;`  
+`to = temp;`'
+
+markdown <<MARKDOWN
+Jose is writing a reply function for a text messaging app.  He’d like to swap the sender and receiver so that the value currently in variable _From_ ends up as the value in _To_ and _To_ ends up in _From_
+
+![](https://images.code.org/3a5878de3ddd4853326e3e964119f290-image-1475371792982.png)
+
+Which of the following code segments will correctly swap the values as described?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+General idea: a temporary variable must be made to contain one of the existing information before switching the variable information. Switching `to = from` and then `from = to` is incorrect because both variables would then have the value`from`.
+
+* A `temp` variable is created and points to one value, `from`
+* Since `from` value is stored within `temp`, it is safe to write `from = to`
+* `to` needs to point to the value of `from` BUT cannot be `to = from` because at this point, `from` stores the value of `to`
+* Therefore, `to = temp` because `temp` holds the original value of `from`
+
+Note:
+
+* It may be helpful to draw out boxes containing "Bruce Wayne" and "James Bond", and change the arrows "from", "to", and "temp" to visualize the problem.
+* Optional: For further understanding, read up on the term "reference semantics"
+MARKDOWN

@@ -131,7 +131,6 @@ ko:
     valid_password: "사용 가능한 비밀번호!"
     invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
     mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
-    under_13_consent: "본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
     agree_us_website: "본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다."
     my_data_to_us: "본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다."
     additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
@@ -213,6 +212,7 @@ ko:
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
+    parent_email_added_subject: 'Code.org에 오신것을 환영합니다!'
   teacher_mailer:
     new_teacher_subject: 'Code.org에 오신것을 환영합니다!'
   section:
@@ -404,6 +404,8 @@ ko:
     create_personal_login_terms: "Code.org 의 <a herf='%{terms_of_service_url}',target='_blank'>서비스 약관</a>을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
     create_personal_login_terms_markdown: "Code.org 의 [서비스 약관](<>)을 준수할 것에 동의합니다. 13세 미만의 경우, 부모님 또는 보호자의 허락을 얻어 Code.org 사이트의 서비스를 사용하는 것임을 확인합니다."
     update_email: "업데이트"
+    parent_guardian_email_label: "부모/보호자 이메일"
+    none: "없음"
   user_level:
     completed: '완료'
     tried: '시도함'
@@ -696,6 +698,7 @@ ko:
     privacy_notice: "개인정보 보호정책"
     accept_label: '업데이트 된 <a href="%{tos_url}" target="_blank">서비스 약관</a> 과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>에 동의합니다.'
     accept_label_markdown: 업데이트 된 [서비스 약관](%{tos_url}) 과 [개인정보 보호정책](%{privacy_url})에 동의합니다.
+    accept_tos: Code.org에 가입하시면 [이용 약관](%{tos_url}) 및 [개인정보 보호정책](%{privacy_url})에 동의하는 것으로 간주됩니다.
     accept: "수락"
     print: "인쇄"
     reminder_desc: '<a href="%{tos_url}" target="_blank">서비스 약관</a>과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>을 업데이트 하였습니다. 수락하기 전에 다시한번 확인해 주시기 바랍니다. 업데이트 된 약관을 명시적으로 수락하기 전에는 JavaScript 교육 도구를 학생들에게 제공하지 못할수도 있습니다.'
@@ -828,6 +831,8 @@ ko:
     csp_functions: '함수'
     csp_lists: '리스트'
     csp_loops: '반복'
+    csp_unit1_2020: 'CS 원리 1단원'
+    csp_unit2_2020: 'CS 원리 2단원'
   external_links:
     disclaimer: 경고
     leaving_domain: 여러분은 이제 이 도메인을 떠나 Code.org가 운영하지 않는 다른 사이트로 이동합니다.
@@ -924,3 +929,4 @@ ko:
     message: '귀하의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다.'
     yes: '예'
   page_not_found_title: "페이지를 찾을 수 없습니다."
+  copy: '복사'

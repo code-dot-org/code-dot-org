@@ -261,6 +261,7 @@ eu:
       zure ikasleen kontuak ezabatuko.'
     delete_confirm: Ziur zaude zure kontua ezabatu nahi duzula?
     update_email: Eguneratu
+    parent_guardian_email_label: Guraso/tutore emaila
   user_level:
     completed: Amaituta
     tried: Saiatua
@@ -624,6 +625,8 @@ eu:
     csp_functions: Funtzioak
     csp_lists: Zerrendak
     csp_loops: Itzuliak
+  hoc_download:
+    minecraft_name: Minecraft Kode Ordua
   pd:
     form_labels:
       email: E-posta
@@ -649,3 +652,4 @@ eu:
     accept: Ados
   gdpr_dialog:
     true: Bai
+  copy: Kopiatu

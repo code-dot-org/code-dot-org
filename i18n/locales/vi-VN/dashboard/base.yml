@@ -64,6 +64,7 @@ vi:
   join_section:
     code:
       placeholder: "Phần mã (ABCDEF)"
+      instructions_short: "Nhập mã 6 chữ cái của bạn"
   add_hint_form:
     placeholder: 'Vui lòng nhập gợi ý của bạn ở đây'
     submit: 'Thêm gợi ý'
@@ -139,7 +140,6 @@ vi:
     valid_password: "Mật khẩu hợp lệ!"
     invalid_password: "Mật khẩu phải có ít nhất 6 ký tự"
     mismatch_password: "Hai mật khẩu bạn nhập không khớp"
-    under_13_consent: "Nếu dưới 13 tuổi, tôi xác nhận rằng tôi đã được cha mẹ hoặc người giám hộ hợp pháp cho phép sử dụng các dịch vụ trên Code.org."
     student_consent: "Tôi xác nhận rằng tôi có bố mẹ hoặc người giám hộ hợp pháp cho phép sử dụng dịch vụ Code.org."
     agree_us_website: "Tôi đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ."
     my_data_to_us: "Dữ liệu từ việc tôi sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ."
@@ -222,6 +222,7 @@ vi:
       %{name}
   parent_mailer:
     student_associated_subject: 'Thông tin đăng nhập vào Code.org'
+    parent_email_added_subject: 'Chào mừng tới Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Chào mừng tới Code.org!'
     delete_teacher_subject: 'Code.org thông báo: tài khoản của bạn đã bị xóa'
@@ -281,7 +282,7 @@ vi:
         personal_login_created_username: 'Bạn đã tạo tài khoản thành công. Bạn có thể đăng nhập với tên (%{username}) và mật khẩu đã thiết lập'
   nav:
     header:
-      finished_hoc: "Tôi đã hoàn thành giờ mã của tôi"
+      finished_hoc: "Tôi đã hoàn thành!"
       sign_in_to_save: 'Đăng nhập để lưu lại những tiến bộ của bạn'
       my_dashboard: "Bảng điều khiển của tôi"
       course_catalog: "Danh mục khóa học"
@@ -353,6 +354,7 @@ vi:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
       playlab_k1: 'Kho trò chơi (dành cho trẻ chưa biết đọc)'
+      scratch: 'Scratch'
       starwars: 'Cuộc Chiến Giữa Các Vì Sao'
       weblab: 'Kho Web'
     popup:
@@ -397,6 +399,7 @@ vi:
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
     email_confirm_wrong_email: '(Địa chỉ email sai?)'
     email_resend_confirm: 'Gửi lại hướng dẫn xác nhận'
+    new_email_hint: '(Hãy chắc chắc bạn có thể nhận được email bằng địa chỉ này.)'
     new_password_hint: "(để trống nếu bạn không muốn thay đổi nó)"
     current_password_hint: '(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)'
     delete: 'Xóa tài khoản của bạn'
@@ -419,6 +422,8 @@ vi:
     confirm_secret_words: 'Xác minh đó là bạn bằng cách nhập những từ ngữ bí mật của mình'
     enter_parent_email: "Nhập địa chỉ email của bố mẹ hoặc người giám hộ (dành cho việc khôi phục mật khẩu)"
     update_email: "Cập nhật"
+    parent_guardian_email_label: "Email của phụ huynh/người giám hộ"
+    none: "Không có"
   user_level:
     completed: 'Đã hoàn thành'
     tried: 'thử lại'
@@ -510,6 +515,7 @@ vi:
     download: 'Tải video xuống'
     show_notes: 'Hiện ghi chú'
     show_video: 'Hiển thị Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Trình duyệt của bạn không được hỗ trợ. Hãy nâng cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang nhưng mong đợi chức năng bị hỏng."
@@ -715,6 +721,7 @@ vi:
     privacy_notice: "Thông tin bảo mật"
     accept_label: 'Tôi đồng ý với cập nhật <a href="%{tos_url}" target="_blank">Điều khoản dịch vụ</a>và <a href="%{privacy_url}" target="_blank">Chính sách bảo mật</a>'
     accept_label_markdown: Tôi đồng ý với cập nhật [Điều khoản dịch vụ](%{tos_url})và [Chính sách bảo mật](%{privacy_url})
+    accept_tos: Bằng việc đăng ký trên Code.org, bạn đồng ý với [Điều khoản Dịch vụ](%{tos_url}) và [Chính sách Bảo mật](%{privacy_url} của chúng tôi).
     accept: "Đồng ý"
     print: "In"
     review_terms: "Xem những điều khoản mới"
@@ -833,6 +840,7 @@ vi:
   hoc_download:
     title: 'Tải giờ của mã'
     instructions_headline: 'Không có Internet?'
+    minecraft_name: 'Minecraft Hour of Code'
     download_in_Albanian: 'Tải xuống bằng Tiếng Albania:'
     download_in_Arabic: 'Tải xuống bằng tiếng Ả Rập:'
     download_in_Azerbaijani: 'Tải về tại Azerbaijan:'
@@ -896,11 +904,18 @@ vi:
         math: 'thuật toán'
         science: 'Khoa học'
         la: 'Nghệ thuật ngôn ngữ'
+      resources:
+        khan: 'Học viện Khan'
+        scratch: 'Scratch'
+      robotics:
+        grok: 'Tìm hiểu Grok'
       email_opt_in:
         opt_in_yes: 'Đồng ý'
         opt_in_no: 'Không'
   cookie_banner:
     accept: 'Tôi đồng ý'
   gdpr_dialog:
+    heading: 'Bạn có đồng ý với việc sử dụng trang web đặt tại Hoa Kỳ không?'
     message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
     yes: 'Đồng ý'
+  copy: 'Sao chép'

@@ -106,6 +106,7 @@ describe('ConfirmRemoveStudentDialog', () => {
             <div>
               <p>{i18n.removeStudentBody2()}</p>
               <Button
+                __useDeprecatedTag
                 text={i18n.removeStudentSendHomeInstructions()}
                 target="_blank"
                 href={ADD_A_PERSONAL_LOGIN_HELP_URL}

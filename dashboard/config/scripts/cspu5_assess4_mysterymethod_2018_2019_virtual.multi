@@ -1,0 +1,35 @@
+name 'cspu5_assess4_mysteryMethod_2018_2019_virtual'
+wrong 'Mystery displays the number at index n.'
+wrong 'Mystery displays the index of the first occurrence of the value n in the list.'
+wrong 'Mystery displays the index of the last occurrence of the value n in the list.'
+right 'Mystery displays the index of every occurrence of the value n in the list.'
+wrong 'Mystery displays true if n is in the list.'
+
+
+markdown <<MARKDOWN
+Choose the best description of what the _mystery_ procedure below does.  The procedure accepts two parameters: a _list_ of a values and a number _n_.
+
+    PROCEDURE mystery (list, n)
+    {
+       i = 1
+       REPEAT LENGTH(list) TIMES
+       {
+          IF ( list[i] = n )
+          {
+             DISPLAY (i)
+          }
+          i = i+1
+       }
+    }
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the code line by line:
+
+* i is set to 1
+* The code inside the loop will run to the end of the list (the length of the list)
+* Inside the loop, if the data at index i equals n, the i (index) is displayed
+* i is incremented by one until it equals the length
+
+In summary, this code goes through the entire list and if the value equals n at that index, it displays it.
+MARKDOWN

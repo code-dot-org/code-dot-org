@@ -1,0 +1,16 @@
+name 'courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020'
+question 'Take a good look at the code below. Which drawing will this program make when you click "Run"?'
+right 'A', feedback: 'Correct!'
+wrong 'B', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
+wrong 'C', feedback: 'Incorrect.  The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
+wrong 'I don\'t know.', feedback: 'The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle.'
+
+
+markdown <<MARKDOWN
+<table>
+<tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+</table>
+
+<br/><br/>
+
+MARKDOWN

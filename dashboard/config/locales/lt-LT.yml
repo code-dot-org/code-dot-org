@@ -318,6 +318,7 @@ lt:
       panaikintos.'
     delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
     update_email: Atnaujinti
+    none: Nė vienas
   user_level:
     completed: Baigta
     tried: Išbandyta
@@ -738,8 +739,11 @@ lt:
     starwars_javascript_name: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript
       kalba)'
     download_message: Parsisiųsti %{app_name} naudojimui neprisijungus (136MB)
+    download_in_English: 'Parsisiųsti anglų kalba:'
+    download_in_Spanish: 'Parsisiųsti ispanų kalba:'
     windows: Windows (64-bitų)
     mac: Mac OS X
+  return_unit_overview: Eiti į skyriaus apžvalgą
   return_course_overview: Eiti į skyriaus apžvalgą
   pd:
     form_labels:
@@ -755,6 +759,8 @@ lt:
         math: Matematika
         science: Gamtos mokslai
         la: Literatūra
+      resources:
+        khan: Khan Akademija
       email_opt_in:
         opt_in_yes: Taip
         opt_in_no: Ne
@@ -762,3 +768,4 @@ lt:
     accept: Sutinku
   gdpr_dialog:
     true: Taip
+  copy: Kopijuoti

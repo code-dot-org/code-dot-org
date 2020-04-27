@@ -258,6 +258,7 @@ lv:
     email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
     email_confirm_wrong_email: '(Nepareiza e-pasta adrese?)'
     email_resend_confirm: 'Atkārtoti nosūtīt apstiprinājumu instrukcijas'
+    new_email_hint: '(Pārliecinies, ka vari saņemt vēstuli uz šo e-pasta adresi.)'
     new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
     current_password_hint: '(nepieciešama jūsu pašreizējā parole, lai apstiprinātu izmaiņas)'
     delete: 'Izdzēst jūsu kontu'
@@ -268,6 +269,7 @@ lv:
     create_personal_login_under_13_username: "Lietotājvārds (neizmanto savu īsto vārdu!)"
     create_personal_login_under_13_parent_email: 'Vecāka/aizbildņa e-pasta adrese'
     update_email: "Atjaunināt"
+    parent_guardian_email_label: "Vecāka/aizbildņa e-pasts"
   user_level:
     completed: 'Pabeigts'
     tried: 'Mēģināts'
@@ -326,6 +328,7 @@ lv:
     translate: 'Palīdzi mums tulkot savā valodā'
     support: 'Atbalsts'
     support_url: 'http://support.Code.org/'
+    tos_short: 'Nosacījumi'
     tos: 'Nosacījumi'
     privacy: 'Privātuma politika'
     secure: 'Droša versija'
@@ -343,6 +346,7 @@ lv:
     notes_coming_soon: 'Piezīmes šim video, drīzumā.'
     autoplay_option: 'Automātiski atskaņot videoklipu'
     download: 'Lejupielādēt videoklipu'
+    label: 'Video'
   compatibility:
     upgrade:
       link: "Uzzini vairāk"
@@ -550,3 +554,4 @@ lv:
     accept: 'es piekrītu'
   gdpr_dialog:
     yes: 'Jā'
+  copy: 'Kopija'

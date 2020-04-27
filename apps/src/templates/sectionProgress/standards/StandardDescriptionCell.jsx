@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {LessonIcons} from './standardsConstants';
 
 const styles = {
   main: {
@@ -17,8 +19,17 @@ const styles = {
     display: 'flex',
     flexDirection: 'row'
   },
+  lessonBoxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  lessonBox: {
+    marginBottom: 10
+  },
   lessonsAreaTitle: {
-    marginRight: 10
+    marginRight: 10,
+    width: '30%'
   },
   tooltip: {
     textAlign: 'center'
@@ -38,8 +49,13 @@ class StandardDescriptionCell extends Component {
   getLessonBoxes = () => {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
+        const icon = lesson.unplugged
+          ? LessonIcons.UNPLUGGED
+          : LessonIcons.PLUGGED;
+        const percentComplete =
+          (lesson.numStudentsCompleted / lesson.numStudents).toFixed(2) * 100;
         return (
-          <span key={lesson.name}>
+          <span key={lesson.name} style={styles.lessonBox}>
             {!this.props.isViewingReport && (
               <ReactTooltip
                 id={lesson.name}
@@ -50,14 +66,12 @@ class StandardDescriptionCell extends Component {
                 place="top"
               >
                 <div style={styles.tooltip}>
-                  <div style={styles.tooltipLessonName}>{lesson.name}</div>
-                  <div>
-                    {lesson.completed ? i18n.completed() : i18n.notCompleted()}
+                  <div style={styles.tooltipLessonName}>
+                    {lesson.name} <FontAwesome icon={icon} />
                   </div>
                   <div>
-                    {i18n.completedStudentCount({
-                      numStudentsCompleted: lesson.numStudentsCompleted,
-                      numStudents: lesson.numStudents
+                    {i18n.completedStudentPercent({
+                      percentComplete: percentComplete
                     })}
                   </div>
                 </div>
@@ -66,6 +80,7 @@ class StandardDescriptionCell extends Component {
             <ProgressBoxForLessonNumber
               key={lesson.lessonNumber}
               completed={lesson.completed}
+              inProgress={lesson.inProgress}
               lessonNumber={lesson.lessonNumber}
               tooltipId={lesson.name}
               linkToLessonPlan={lesson.url}
@@ -94,7 +109,7 @@ class StandardDescriptionCell extends Component {
           <span style={styles.lessonsAreaTitle}>
             {i18n.availableLessons({numLessons: this.getNumberLessons()})}
           </span>
-          {this.getLessonBoxes()}
+          <div style={styles.lessonBoxes}>{this.getLessonBoxes()}</div>
         </div>
       </div>
     );

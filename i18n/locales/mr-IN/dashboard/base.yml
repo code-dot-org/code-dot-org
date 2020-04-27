@@ -21,6 +21,8 @@ mr:
     submit: 'साइन इन करा'
   signinsection:
     login: 'साइन इन करा'
+  crud:
+    edit: 'संपादन करा'
   nav:
     header:
       finished_hoc: "माझं झालंय!"
@@ -37,6 +39,10 @@ mr:
   teacher:
     panel:
       student: 'विध्यार्थी'
+  user:
+    none: "कुठलेच नाही"
+  home:
+    student_reg_link: 'विध्यार्थी'
   user_type:
     student: 'विध्यार्थी'
   footer:
@@ -66,6 +72,7 @@ mr:
   terms_interstitial:
     tos: "सेवेच्या अटी"
     privacy: "गोपनीयता धोरण"
+    accept_tos: "Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता\nधोरण](%{privacy_url}) साठी संमती देता."
     print: "प्रिंट"
   project:
     projects: "प्रकल्प"

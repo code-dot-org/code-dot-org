@@ -28,13 +28,19 @@ ko:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -57,6 +63,19 @@ ko:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -64,6 +83,13 @@ ko:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -140,6 +166,16 @@ ko:
   hoc2018_tutorial_mchoc_description: 코드 블록을 사용해 알렉스나 스티브가 마인크래프트 세계에서 모험을 펼치게 하세요.
   codeorg_homepage_hoc2019_dance_heading: 새 <span class="highlight-word">Dance&nbsp;Party</span>
     를 해보세요!
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -376,6 +412,9 @@ ko:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: 그래서 매년 12월 여러분의 학급은 전 세계 수백만 명의 학생들과 아워 오브 코드를 함께하며
     컴퓨터 공학 교육 주간을 기념할 수 있습니다. 연례 행사 참가 신청은 10월에 시작합니다.
   signup_header: "%{campaign_date} 동안 Hour of code를 운영하시고, 이곳에서 등록하세요."
@@ -466,6 +505,7 @@ ko:
   map_legend_cs_tech_jam: 특별 이벤트
   map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
     page.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Hour of Code 가 여기 있습니다.
   meta_tag_og_description: Hour of Code 는 180개 이상의 나라에서 30개 이상의 언어로, 4세부터 104세까지 수천만
     명의 학생들과 함께하려는 전세계적 운동입니다.
@@ -482,38 +522,74 @@ ko:
   hoc_faq_what_is_hoc_a: Hour of Code 는 1시간짜리 컴퓨터과학(정보과학) 소개 과정으로, 어려울 것 같은 코드에 대해
     쉽게 이해하고, 설명하고, 누구나 기초/개념/원리들을 배울 수 있다는 것을 보여주도록 설계되었습니다. <a href='%{codeorg_url}'>튜토리얼들을
     확인해 보세요.</a>.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: 튜토리얼들 해보기
   hoc_faq_when_is_hoc_q: Hour of Code 행사일?
   hoc_faq_when_is_hoc_a: 누구나 Hour of Code 행사를 주최하고 운영할 수 있습니다. <a href='http://csedweek.org'>컴퓨터과학
     교육 주간</a> %{campaign_date} 기간 동안에 한 시간짜리의 Hour of Code 를 전세계 수천만 학생들이 함께 경험하는
     것을 목표로 하는 기초적인 운동입니다. 이 운동은 단지 <i>1시간 짜리 운동?</i> 이 아닙니다. 이 기간 동안에 언제라도 할 수 있습니다.(뿐만
     아니라 기간 이전 이후라도 계속 가능합니다.)
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: 왜 하필이면 컴퓨터과학(정보과학) 인가요?
   hoc_faq_why_cs_a: "<i>모든</i> 학생은 컴퓨터과학(정보과학) 을 배울 기회를 얻을 수 있도록 해야합니다. 컴퓨터과학(정보과학)
     을 통해 현실에서의 문제 해결 능력, 논리와 창의성을 키워줍니다. 쉽게 시작하게 됨으로서 학생들은 21세기의 생활과 진로탐색에 있어서 새로운
     경험들과 성공들을 경험하게 됩니다. <a href='%{codeorg_url}'>%{partner_url}</a> 에서 여러 가지 통계들을
     살펴보세요."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hour of Code 에 어떻게 참여할 수 있나요?
   hoc_faq_how_participate_a: "<a href='/how-to'>계획 시작하기</a> 를 통해 How-to 가이드를 살펴보세요.
     여러분의 학교나 커뮤니티에서 Hour of Code 이벤트 행사를 조직하고 운영할 수 있습니다. &mdash; 특별활동 모임이나, 비영리 직업
     모임. 아니면 %{campaign_date} 에 직접 도전해 볼 수도 있습니다."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hour of Code 주관/후원은 누가하나요?
   hoc_faq_behind_hoc_a: Hour of Code는 미국의 비영리 단체 코드인 501c3에 따르는 <a href='http://code.org'>Code.org</a>에
     의해 조직되고 운영됩니다. Code.org는 인종, 나이, 성별과 상관없이 보다 많은 학교들에서 컴퓨터과학(정보과학)을 가르칠 수 있도록 하는
     확산 운동을 추진하고 있습니다. <a href='%{codeorg_url}/about/partners'> 수많은 협력 및 후원자들</a> 은
     Hour of Code 를 지원하기 위해 함께 협력하고 있습니다. &mdash; Microsoft, Apple, Amazon, 미국 소년 소녀
     학생 동아리들, 미국 대학입시협의회 등.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: 저는 코딩을 전혀 모릅니다. 그래도 이벤트를 운영할 수 있을까요?
   hoc_faq_host_a: 물론 가능합니다. Hour of Code 활동은 자기주도적 학습입니다. 여러분들은 단지 <a href='%{codeorg_url}/learn'>
     현재 튜토리얼을 해보고</a>, 자기가 원하는 튜토리얼을 선택하고, 시간을 잡아서 직접 해보면 됩니다. &mdash; 나머지 필요한 사항들은
     저희가 모두 지원합니다. 모든 연령대에 대해서, 유치원부터 그 이상의 모든 수준을 위한 것들이 모두 준비되어있습니다. <a href='/how-to'>How
     to 가이드</a>를 읽고 이벤트 행사 운영을 계획해 보세요.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: 우리 학생들을 위해서 어떤 장비들을 준비해야 하나요?
   hoc_faq_devices_a: Code.org 의 튜토리얼들은 모든 장비와 웹브라우져에서 동작합니다. Code.org 튜토리얼에 대한 더 자세한
     정보는 <a href='%{codeorg_url}/educate/it'>여기</a>에서 살펴볼 수 있습니다. 장비나 환경이 필요한 비-Code.org
     튜토리얼들은 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 에서 찾아볼 수 있으며, 필요한
     장비나 환경이 작성되어있습니다. 여러분의 학교에서 여러 가지 튜토리얼들을 해 볼 여건이 되지 않는다면, 여기서 제공하고 있는 언플러그드 활동들도
     있습니다.
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: 참여하는 모든 사람들을 위해 컴퓨터들을 각각 준비해야 하나요?
   hoc_faq_need_computers_a: 아니요. 컴퓨터가 없이도 스마트폰, 태블릿PC 등 등에서도 모두 튜토리얼을 해 볼 수 있습니다.
     언제 어디서든지, 가지고 있는 것 만으로도 이벤트가 가능합니다. <p><i>몇 개의 선택사항이 있습니다.:</i> <br> <ul> <li><b>두명이
@@ -522,40 +598,83 @@ ko:
     같이 협력하도록 해보세요. <li><b>프로젝트 화면 사용하기</b> 인터넷에 연결된 컴퓨터와 프로젝터와 스크린이 있다면, Hour of Code
     를 모두 함께 해볼 수 있습니다. 화면을 보면서 함께 퍼즐과 문제를 해결할 수 있습니다.<li><b>언플로그드 활동 하기</b> 컴퓨터가 전혀
     없이도 할 수 있는 많은 언플러그드 활동이 있습니다.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: 저는 <country>에 살고 있습니다. 어떻게하면 저도 국제적으로 함께 참여할 수 있을까요?
   hoc_faq_international_a: 세계 어디서나 누구든지 Hour of Code 이벤트 행사를 조직할 수 있습니다. 작년에도 전 세계
     학생들이 Hour of Code 에 함께 참여했습니다. 더 많은 정보는 <a href='/promote'>여기</a> 에서 확인해 보세요.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Hour of Code 튜토리얼을 어떻게 만들 수 있나요?
   hoc_faq_tutorial_a: 튜토리얼을 만드는 것에 관심이 있으시다면, <a href='/tutorial-guidelines'>가이드라인과
     방법</a>을 살펴보세요. 다양한 방법과 형태로 함께하고 싶습니다. 하지만 무엇보다도 가장 중요한 목표는 컴퓨터과학(정보과학) 을 모르는 학생들과
     선생님들에게 가장 효과적으로 경험을 제공하는데 있습니다.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: 학생들이 자신들의 계정을 사용해서 로그인 할 필요가 있나요?
   hoc_faq_account_a: 아니요. 반드시 Hour of Code에 가입하거나 로그인 할 필요는 없습니다. 하지만 <a href='%{codeorg_url}/learn/beyond'>
     이후의 학습 코스들</a>에서는 학생들의 진도를 기록/저장하기 위해 계정을 만들어야 합니다. 하지만, Hour of Code를 가입할 때,
     Code Studio 계정도 같이 생기는 것은 아닙니다. 학생들을 가입시키고 싶으시면, <a href='https://youtu.be/_smelV_KISE'>안내서</a>
     를 찾아보세요.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: 고등학생들에게는 어떤 활동들이 적당할까요?
   hoc_faq_high_school_a: 스타워즈와 마인크래프트은 초등학생 이상의 학생들에게 매우 적합합니다. 특히, 자바스크립트 버전의 스타워즈와
     프리 플레이는 더욱 더 그렇습니다. 아니면, 다음 링크를 통해 처음 배우는 사람들을 위한 튜토리얼 중 하나를 먼저 해보기를 추천합니다. <a
     href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 앵그리버드나 안나와 엘사와 함께 하는 튜토리얼들이
     있습니다. 고등학생들은 초급 튜토리얼들은 30분 정도면 해낼 수 있기 때문에, 칸 아카데미(Khan Academy) 나 CodHS과 같은 자바스크립트
     튜토리얼도 시도해 볼 수 있습니다.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Hour of Code 행사로 스크래치(Scratch)를 해보고 있습니다. 학생들이 노트북보다 아이패드를 사용하는
     것이 좋을까요?
   hoc_faq_scratch_a: 스크래치는 태블릿에서 실행되지 않습니다. 학생들이 어리다면, 스크래치주니어(ScratchJR) 아이패드 앱(읽기를
     잘 못하는 사람들을 위한)을 사용해 보세요. <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     에 있는 튜토리얼을 살펴보시면, 아이패드에서도 동작하는 튜토리얼들을 - Code.org, Tynker, Lightbot, CodeSpark에서
     찾아보실 수 있습니다.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hour of Code 행사들은 어떻게 카운트 하나요?
   hoc_faq_map_q: 왜 내가 지도에 나타나지 않나요?
   hoc_faq_map_a: Hour of Code 지도에서 보이지 않고 있습니다. 수 만 명의 분들이 행사를 운영하고 계시기 때문에, 지도에 보이는
     데이터는 많은 이벤트에 대해서 한 점으로 집계해서 보여주기 때문입니다. 지도 위의 수를 클릭하면 주별로 운영 중인 모든 이벤트 리스트로 연결될
     것이고, 거기서 여러분의 이벤트를 찾을 수 있을 것입니다. 추가적으로, 수 만 명의 Hour of Code 행사 참여자들과 이벤트는 보통 48시간
     이후 업데이트 됩니다. 몇 일 후에는 모두 업데이트 됩니다.
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Hour of Code 트래커는 정확한 카운트 도구가 아닙니다. 어떤 학생이 Hour of Code에 참가한
     것을 추적하기 위해서 어떤 학생의 ID를 완벽하게 카운팅하거나 하지 않습니다. 특별히 학생들이 로그인하거나 등록하는 것을 요구하지도 않기 때문입니다.
     그렇기 때문에 참가자수는 많이 계산되거나나 덜 계산되기도 합니다. 자세한 내용은 <a href='%{codeorg_url}/loc'>여기</a>를
     읽어 보시기 바랍니다.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: 1시간 동안에 얼마나 배울 수 있나요?
   hoc_faq_one_hour_a: Hour of Code 의 목표는 모든 사람들을 1시간 이내에 컴퓨터과학 전문가로 만드는 것이 아닙니다. 1시간은
     컴퓨터과학에 대해서 재미있게 창의적으로 배울 수 있는 충분한 시간이며, 어떤 사전 지식이나 학습이 없더라도 모든 연령대의 사람들과 학생들에게도
@@ -568,21 +687,40 @@ ko:
     공부하고, 자료 제작에 참여하고, 이후의 고급 과정들을 만들어 제공하고 싶어하게 되었습니다. 이러한 변화와 노력들은 학교의 교장/교감/교육청에도
     영향을 주게 되었으며, 학생들이 배우기를 원하고 선생님들도 충분히 가르칠 수 있다는 것을 깨닫게 해주고 있습니다. <br/><br/> 무엇보다도,
     1시간 과정에 참여하는 모든 사람들이 배우는 것은 바로, 우리 모두가 할 수 있다는 것입니다.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: 더 궁금하신 것이 있으신가요?
   hoc_faq_more_questions_a: " <a href='http://support.code.org'>support forum</a>을
     통해 찾아보세요."
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: 1시간 짜리 Hour of Code 를 마치면, 그 다음에는 무엇을 어떻게 배워야 하나요?
   hoc_faq_keep_learning_a: 누구나 언제나 Hour of Code 를 운영하실 수 있습니다. 튜토리얼들은 연중 내내 제공됩니다.
     모든 튜토리얼과 교육과정들은 본 사이트에서 계속 운영될 것입니다. 다음 <a href='/promote'>각종 자료,</a>를 통해 여러분의
     Hour of Code 행사를 성공적으로 운영하는데 도움이 되는 how-to 가이드와 여러 자료들을 살펴보세요.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: 학생들 인증서를 어디서 출력할 수 있나요?
   hoc_faq_certificates_a: "<a href='%{codeorg_url}/certificates'>인증서 페이지</a> 에서 전체
     학급에 대한 인증서를 출력할 수 있습니다. 마인크래프트 튜토리얼에 대한 특별 인증서는 <a href='%{codeorg_url}/certificates?course=mc'>여기서
     출력 </a>할 수 있습니다."
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Hour of Code 로고나 명칭을 사용함에 있어 제한사항이 있나요?
   hoc_faq_logo_a: Hour of Code는 등록된 상표입니다. 우리는 이 상표의 활용을 금지하길 원하지는 않지만, 활용시 반드시 몇
     가지 제한점을 준수하길 원합니다. 다음의 <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>활용상
     안내사항</a>을 확인해 주십시오.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Hour of Code 2013 부터의 통계들
   stats_growth: 가장 빠르게 1천5백만 사용자에 도달하였습니다.
   stats_i18n: 학생들은 40개 언어로 공부하고 있습니다.
@@ -598,6 +736,8 @@ ko:
     of high school courses, university courses, and the workforce.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"매일 매일 똑같이 놀라운 결과들을 경험하였습니다. &mdash; 100% 학생들이 열광했고요" - Nina Nichols
     Peery 선생님'
   stats_student: '"이건 <b>평생 처음</b> 경험하는 기회였습니다." -  Mariana Alzate 초등5학년'
@@ -715,8 +855,11 @@ ko:
   learn_banner_blurb: 45개 이상의 언어로 작성된, 모든 연령대를 위한 한 시간 분량의 자습서를 사용해보세요.  코딩의 시간을 시작하여
     180개 이상의 국가에 사는 학생과 선생님 수백만 명과 함께하세요.
   learn_banner_beyond: 더 배우고 싶으세요? <a id='learn_banner_beyond'>한 시간 이상 이용해 보세요</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: '교사: <a id=''teacher_banner_host''>한 시간 호스팅을 하거나</a> 혹은 <a
     id=''teacher_banner_howto''>사용 안내서를 읽어보세요</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: 로보틱스
   learn_robotics_banner_blurb: 로봇이 있으세요? 로봇을 아래 활동에 활용하여 모든 연령대 학생들에게 직접 체험할 수 있는
     코딩의 시간을 만들어 주세요!

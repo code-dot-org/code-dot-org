@@ -94,6 +94,14 @@ ca-ES:
         do something: fes alguna cosa
       NEW Course 4 Play Lab Params 11:
         jump: salt
+      New Artist Project:
+        draw a star: dibuixa una estrella
+        draw a circle: dibuixa un cercle
+        draw a triangle: dibuixa un triangle
+        draw a house: dibuixa una casa
+        draw a square: dibuixa un quadrat
+      New Play Lab Project:
+        jump: salt
       Standalone_Artist_7:
         draw a flower: dibuixa una flor
       course3_artist_functions_challenge1:
@@ -150,8 +158,6 @@ ca-ES:
       courseE_artist_functions7:
         draw a house: dibuixa una casa
       courseE_artist_functions7_2018:
-        draw a house: dibuixa una casa
-      courseE_artist_functions7_2019:
         draw a house: dibuixa una casa
       courseE_artist_functions8:
         do something: fes alguna cosa

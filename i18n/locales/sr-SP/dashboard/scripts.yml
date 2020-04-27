@@ -111,6 +111,8 @@ sr:
               name: 'Пчела: Функције'
             'Bee: Nested Loops':
               name: 'Пчела: Угњеждене петље'
+            Bounce:
+              name: одбиј се
             Computational Thinking:
               name: Компјутерско Размишљање
             Crowdsourcing:
@@ -333,6 +335,9 @@ sr:
           title: Догађаји
           description: Догађаји
           description_short: Догађаји
+          stages:
+            Bounce:
+              name: одбиј се
         flappy:
           description_short: Направи своју Флапи игру за мање од 10 минута!
         jigsaw:
@@ -440,6 +445,8 @@ sr:
               name: Уметник
             Bee:
               name: Пчела
+            Bounce:
+              name: одбиј се
             Flappy:
               name: Флапи
             Jigsaw:
@@ -753,6 +760,8 @@ sr:
               name: 'Уметник: Угњеждене петље'
             Bee Debugging:
               name: Пчела Исправљање грешака
+            Bounce:
+              name: одбиј се
             'Farmer: While Loops':
               name: 'Фармер: Условне петље'
         csd3-2017:
@@ -800,6 +809,10 @@ sr:
               name: Контролна табла за наставнике
             Welcome!:
               name: Welcome!
+        basketball:
+          stages:
+            Bounce:
+              name: одбиј се
         fesbinary:
           stages:
             Binary Bracelets:
@@ -953,6 +966,8 @@ sr:
           stages:
             Ice Age Play Lab:
               name: Ледено доба - Играоница
+            Bounce:
+              name: одбиј се
         coursea-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1125,6 +1140,8 @@ sr:
               name: 'Прави алгоритми: Засади семе'
             Your Digital Footprint:
               name: Твој дигитални траг
+            Move It, Move It:
+              name: Помери га, помери
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1197,6 +1214,8 @@ sr:
               name: 'Прави алгоритми: Засади семе'
             Spelling Bee:
               name: Пчелица словарица
+            Move It, Move It:
+              name: Помери га, помери
             Your Digital Footprint:
               name: Твој дигитални траг
         frozen-2018:
@@ -1283,12 +1302,16 @@ sr:
               name: Сигурна путања
         courseb-2019:
           stages:
+            Move It, Move It:
+              name: Помери га, помери
             Your Digital Footprint:
               name: Твој дигитални траг
             'Loops: Getting Loopy':
               name: Запетљанције
         pre-express-2019:
           stages:
+            Move It, Move It:
+              name: Помери га, помери
             Your Digital Footprint:
               name: Твој дигитални траг
             Spelling Bee:
@@ -1385,3 +1408,99 @@ sr:
           stages:
             Conditionals:
               name: Кондиционали
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Функције са параметрима
+        csd3-2020:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+            Text:
+              name: текст
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Сигурна путања
+            'Programming: Happy Maps':
+              name: Веселе мапе
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Твој дигитални траг
+            Move It, Move It:
+              name: Помери га, помери
+            'Loops: Getting Loopy':
+              name: Запетљанције
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Бинарне наруквице
+            'Events: The Big Event':
+              name: Велики догађај
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Графиконско - Папирно Програмирање
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Услови са картама
+            'Unplugged: Binary':
+              name: Binarne slike
+            Artist Binary:
+              name: Уметник Бинарно
+            Digital Citizenship:
+              name: Дигитално држављанство
+        coursef-2020:
+          stages:
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Пчелица словарица
+        csp3-virtual:
+          description_short: Programming
+        csd3-virtual:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Понављања са условима
+            Variables:
+              name: Променљиве
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Догађаји
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Понављања са условима

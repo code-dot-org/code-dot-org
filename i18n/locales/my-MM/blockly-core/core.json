@@ -49,7 +49,7 @@
     "CONTROLS_IF_ELSE_TOOLTIP": "If block သို့ final, catch-all အခြေအနေ ပေါင်းထည့်ပါ",
     "CONTROLS_IF_HELPURL": "",
     "CONTROLS_IF_IF_TOOLTIP": "If block ကိုreconfigure ပြန်ဖြစ်ရန် Add သို့မဟုတ် remove တစ်ခုခုလုပ်ပါ။sections ကိုreoder ပြန်လုပ်ပါ။",
-    "CONTROLS_IF_MSG_ELSE": "",
+    "CONTROLS_IF_MSG_ELSE": "သို့မဟုတ်",
     "CONTROLS_IF_MSG_ELSEIF": "if အပြင်",
     "CONTROLS_IF_MSG_IF": "if",
     "CONTROLS_IF_TOOLTIP_1": "တန်ဖိုးတစ်ခုtrueဖြစ်လျှင်statementအချို့ပြုလုပ်ပါ",

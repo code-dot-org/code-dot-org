@@ -902,3 +902,55 @@ az:
           stages:
             Conditionals:
               name: Şərti ifadələr
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Parametrli funksiyalar
+        csd3-2020:
+          stages:
+            Variables:
+              name: dəyişənlər
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+            Text:
+              name: mətn
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: Şən xəritələr
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimetrlik kağızda proqramlaşdırma
+            Relay Programming:
+              name: Estafet proqramlaşdırması
+            'Unplugged: Binary':
+              name: İkilik təsvirlər
+        coursef-2020:
+          stages:
+            Internet:
+              name: İnternet
+        csd3-virtual:
+          stages:
+            Variables:
+              name: dəyişənlər
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar
+        csp5-virtual:
+          stages:
+            Variables:
+              name: dəyişənlər
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funksiyalar
+        code-break:
+          stages:
+            Algorithms:
+              name: Alqoritmlər
+            Events:
+              name: Hadisələr

@@ -7,12 +7,12 @@ hu-HU:
       2-3 Artist 12:
         details: részletek
         draw eyebrow: rajzolj szemöldököt
-        draw pupil: rajzolj tanulót
+        draw pupil: rajzolj pupillát
       2-3 Artist 3.4:
         draw a circle: kör rajzolása
         draw a car: rajzolj autót
       2-3 Artist 7:
-        draw_rect: rajzolj_téglalap
+        draw_rect: rajzolj_téglalapot
       2-3 Artist Debugging 10:
         draw square: rajzolj négyzetet
         jump to controller top left: ugorj a szabályozóra bal fent
@@ -21,17 +21,17 @@ hu-HU:
         draw a button: rajzolj gombot
         draw cord: húzz zsinórt
       2-3 Artist Debugging 5:
-        draw left leg: rajzolj bal lábat
-        draw right leg: rajzolj jobb lábat
+        draw left leg: rajzold meg a bal lábat
+        draw right leg: rajzold meg a jobb lábat
         draw body and arms: rajzolj testet és karokat
         draw a head: rajzolj egy fejet
       2-3 Artist Debugging 6:
-        draw right leg: rajzolj jobb lábat
+        draw right leg: rajzold meg a jobb lábat
         draw sitting stick figure: rajzolj ülő pálcikaembert
         draw head: rajzolj fejet
         draw arms: rajzolj karokat
         jump to neck: ugorj a nyakhoz
-        draw left leg: rajzolj bal lábat
+        draw left leg: rajzold meg a bal lábat
       2-3 Artist Debugging 7:
         draw O: rajzolj O-t
         draw D: rajzolj D-t
@@ -338,6 +338,20 @@ hu-HU:
       NEW Course 4 Play Lab Params 11:
         jump: Ugorj
         patrol: járőr
+      New Artist Project:
+        draw a star: rajzolj egy csillagot
+        draw a circle: kör rajzolása
+        draw a pinwheel: rajzolj szélkereket
+        draw a triangle: Rajzolj egy háromszöget
+        draw a shape: rajzolj síkidomot
+        draw a house: rajzoljon egy házat
+        draw a square: rajzoljon egy négyzetet
+      New Minecraft Hero Project:
+        function 1: függvény 1
+        function 2: függvény 2
+      New Play Lab Project:
+        jump: Ugorj
+        patrol: járőr
       Robot Doodle:
         25 pixel square: 25 képpontos négyzet
         draw head: rajzolj fejet
@@ -601,7 +615,6 @@ hu-HU:
         draw a house: rajzoljon egy házat
       courseE_artist_functions7_2019:
         draw a window: rajzolj ablakot
-        draw a house: rajzoljon egy házat
       courseE_artist_functions8:
         do something: csinálj valamit
         draw a line of squares: rajzolj egy sor négyzetet

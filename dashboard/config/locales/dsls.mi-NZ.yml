@@ -6,7 +6,7 @@ mi-NZ:
         answers:
         - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapatoru ki runga ake
             i te tapawhā<br/>Hoatu i tētahi tapatoru ki raro iho i te tapawhā
-        - {}
+        - correct: true
         - text: Me tīmata me tētahi tapawhā<br/>Hoatu i tētahi tapawhā whakarara ki
             runga ake i te tapawhā<br/>Hoatu i tētahi tapatoru ki te taha matau o
             te tapawhā whakarara
@@ -19,7 +19,7 @@ mi-NZ:
       2-3 Algorithms Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         content1: Me tīmata me tētahi tapatoru<br/>Hoatu i tētahi tapawhā ki raro
@@ -57,7 +57,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: E ai ki ngā ture o te kēmu, kua tika te tapeke piro o tēhea huinga
@@ -65,7 +65,7 @@ mi-NZ:
         title: Kōwhiringa Maha
       2-3 Getting Loopy Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -86,7 +86,7 @@ mi-NZ:
       2-3 Graph Paper Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Nā tēhea papatono tēnei atahanga i hanga?
@@ -105,7 +105,7 @@ mi-NZ:
       2-3 Maze Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -115,7 +115,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
         title: Kōwhiringa Maha
@@ -123,21 +123,21 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Ko tēhea takiruatanga papatono-atahanga kāore ōna hapa?
         title: Kōwhiringa Maha
       2-3 artist debug multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       2-3 artist functions multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -160,7 +160,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Ko tēhea āhua ka hangaia e tēnei koromeke?
@@ -170,7 +170,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Ko tēhea āhua ka hangaia e tēnei papatono?
         title: Ngā Koromeke Rehetoi Kōwhiringa Maha
@@ -191,21 +191,21 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Ko tēhea te whakaritenga pono o raro iho nei?
       2-3 bee conditionals multi 3:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - text: Kōwhiria ngā paraka whai take.
       2-3 bee loops multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -226,7 +226,7 @@ mi-NZ:
       2-3 maze multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -253,6 +253,7 @@ mi-NZ:
         - text: Te tunu pihikete
         - text: Te hoko kai i tētahi rārangi hoko
         - text: Panana
+          correct: true
         questions:
         - text: Ka uaua rawa atu te whakaahua i te hātepe mō tēhea o ēnei tūemi?
         title: Kōwhiringa Maha
@@ -274,6 +275,7 @@ mi-NZ:
         answers:
         - text: He _____ _____ _____Seattle.
         - text: He taone _____ a_____.
+          correct: true
         - text: He _____ _____ a_____.
         - text: He taone _____ a Eugene.
         questions:
@@ -283,13 +285,14 @@ mi-NZ:
       4-5 Crowdsourcing Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Ko tēhea o ēnei pikitia te whakaahuatanga pai o te mahi ā-ohu?
         title: Kōwhiringa Maha
       4-5 Crowdsourcing Multi 2:
         answers:
         - text: Te whakanahanaha i tō rūma
+          correct: true
         - text: Te kai i tō wainene
         - text: Te paraehe i ō makawe
         - text: Te horoi i tō kanohi
@@ -300,6 +303,7 @@ mi-NZ:
         answers:
         - text: Tō huritau
         - text: Tō tino kai
+          correct: true
         - text: Tō wāhinoho
         - text: Te nama kāri tāwere a tō matua
         questions:
@@ -311,7 +315,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Ka haria koe ki tēhea wāhitau IP mā te DNS i a koe ka ngana ki te
             takiuru ki code.org?
@@ -319,7 +323,7 @@ mi-NZ:
       4-5 Internet Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -329,7 +333,7 @@ mi-NZ:
       4-5 Songwriting Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -352,7 +356,7 @@ mi-NZ:
       4-5 Suncatchers Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Ko ēhea o ngā papatono kei raro iho nei<em>kāore e</em>hanga i te
@@ -361,7 +365,7 @@ mi-NZ:
       4-5 artist loops multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -370,7 +374,7 @@ mi-NZ:
       4-5 artist multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -380,7 +384,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: He hangarite tēhea tānga?
@@ -389,7 +393,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Kōwhiria ngā paraka whai take.
@@ -397,7 +401,7 @@ mi-NZ:
       4-5 bee debug multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -405,7 +409,7 @@ mi-NZ:
         title: Patuiro Pī Kōwhiringa Maha
       4-5 bee loops multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -414,7 +418,7 @@ mi-NZ:
         title: Ngā Koromeke Pī Kōwhiringa Maha
       4-5 maze conditionals multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -434,7 +438,7 @@ mi-NZ:
         title: Whakataurite Rīrapa
       4-5 maze multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -444,19 +448,19 @@ mi-NZ:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 image debug match:
@@ -552,7 +556,7 @@ mi-NZ:
         - {}
       CSD U3 Boolean MC:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -561,7 +565,7 @@ mi-NZ:
         title: taitara
       CSD U3 Boolean MC_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -570,7 +574,7 @@ mi-NZ:
         title: taitara
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -581,19 +585,19 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         answers:
@@ -626,7 +630,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -634,7 +638,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -642,7 +646,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -650,13 +654,13 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -664,7 +668,7 @@ mi-NZ:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -697,7 +701,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 array multi_2018:
@@ -705,7 +709,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 array multi_2018_2019:
@@ -713,7 +717,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi:
@@ -721,7 +725,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
@@ -729,7 +733,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
@@ -737,13 +741,13 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       K-1 Artist 1 Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -751,7 +755,7 @@ mi-NZ:
         title: Kōwhiringa Maha
       K-1 Artist 1 Multi 2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -774,7 +778,7 @@ mi-NZ:
       K-1 Bee 1 Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -785,7 +789,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: E hia katoa ngā waireka kei tēnei?
         title: Kōwhiringa Maha
@@ -817,14 +821,14 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Kei tēhea kararehe te tapuwae matihiko nā reira ka <strong>mōrearea</strong>tana
             noho?
         title: Kōwhiringa Maha
       K-1 Getting Loopy Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -833,7 +837,7 @@ mi-NZ:
       K-1 Happy Maps Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -841,7 +845,7 @@ mi-NZ:
         title: Kōwhiringa Maha
       K-1 Keep it Private Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -849,7 +853,7 @@ mi-NZ:
         title: Kōwhiringa Maha
       K-1 Maze Debugging Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -858,7 +862,7 @@ mi-NZ:
         title: Kōwhiringa Maha
       K-1 Maze Loops Multi 1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -868,7 +872,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: Tīpakohia te paraka tōai tika.
         title: Kōwhiringa Maha
@@ -889,7 +893,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Mā tēhea whakautu e tutuki ai tēnei taumata?
@@ -897,7 +901,7 @@ mi-NZ:
       K-1 Move It Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -907,14 +911,14 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - text: E tika ana kia noho ko tēhea hipanga i te tīmatanga o tēnei hātepe?
         title: Kōwhiringa Maha
       K-1 Plant a Seed Multi 2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: E tika ana kia whakakīia te āputa me tēhea hipanga i tēnei hātepe?
@@ -922,7 +926,7 @@ mi-NZ:
       K-1 Word Search Multi 1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Mā ēhea paraka te kupu "MOVE" e tātaki?
@@ -930,7 +934,7 @@ mi-NZ:
       K-1 Word Search Multi 3:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - text: Ka tātakina tēhea kupu?
@@ -938,7 +942,7 @@ mi-NZ:
       behaviors 1 predict:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -946,7 +950,7 @@ mi-NZ:
       behaviors 4 predict:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -955,7 +959,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -963,7 +967,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -971,38 +975,41 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1010,7 +1017,7 @@ mi-NZ:
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1018,7 +1025,7 @@ mi-NZ:
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1026,7 +1033,7 @@ mi-NZ:
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1034,7 +1041,7 @@ mi-NZ:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1042,7 +1049,7 @@ mi-NZ:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1051,7 +1058,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1059,7 +1066,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1067,14 +1074,14 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1082,7 +1089,7 @@ mi-NZ:
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1090,7 +1097,7 @@ mi-NZ:
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1100,7 +1107,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1108,7 +1115,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1116,12 +1123,12 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1129,7 +1136,7 @@ mi-NZ:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1137,7 +1144,7 @@ mi-NZ:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1146,7 +1153,7 @@ mi-NZ:
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1154,7 +1161,7 @@ mi-NZ:
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1162,14 +1169,14 @@ mi-NZ:
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1177,7 +1184,7 @@ mi-NZ:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1185,7 +1192,7 @@ mi-NZ:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1195,7 +1202,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1203,7 +1210,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1211,31 +1218,34 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
         questions:
         - {}
@@ -1243,7 +1253,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1251,7 +1261,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1259,7 +1269,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1267,14 +1277,14 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1282,7 +1292,7 @@ mi-NZ:
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1290,7 +1300,7 @@ mi-NZ:
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1298,7 +1308,7 @@ mi-NZ:
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1307,7 +1317,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1315,7 +1325,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1323,13 +1333,13 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1337,7 +1347,7 @@ mi-NZ:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1345,7 +1355,7 @@ mi-NZ:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1354,7 +1364,7 @@ mi-NZ:
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1362,7 +1372,7 @@ mi-NZ:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1370,7 +1380,7 @@ mi-NZ:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1378,14 +1388,14 @@ mi-NZ:
       courseD_multi_scrat_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1396,14 +1406,14 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1411,7 +1421,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1420,7 +1430,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_2018:
@@ -1428,7 +1438,7 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
@@ -1436,13 +1446,13 @@ mi-NZ:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
         questions:
         - {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1450,7 +1460,7 @@ mi-NZ:
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1459,7 +1469,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1467,7 +1477,7 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1475,13 +1485,13 @@ mi-NZ:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1489,7 +1499,7 @@ mi-NZ:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1497,7 +1507,7 @@ mi-NZ:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1505,7 +1515,7 @@ mi-NZ:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1514,14 +1524,14 @@ mi-NZ:
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1530,7 +1540,7 @@ mi-NZ:
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1538,7 +1548,7 @@ mi-NZ:
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1546,7 +1556,7 @@ mi-NZ:
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1554,14 +1564,14 @@ mi-NZ:
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1570,7 +1580,7 @@ mi-NZ:
       coursee_prediction_artistfunction2:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1578,7 +1588,7 @@ mi-NZ:
       coursee_prediction_artistfunction2_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1586,7 +1596,7 @@ mi-NZ:
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1594,7 +1604,7 @@ mi-NZ:
       grade2_multi_collector_A_predict1:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1602,7 +1612,7 @@ mi-NZ:
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:
@@ -1610,7 +1620,7 @@ mi-NZ:
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
         questions:

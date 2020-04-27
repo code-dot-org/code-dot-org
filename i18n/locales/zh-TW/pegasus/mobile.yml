@@ -12,12 +12,12 @@
   csedweek_dates: "2018 年 12 月 3-9 日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">一小時玩程式</a>活動即將開始。所有的教師以及召集人，趕快<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">開始計畫您的活動吧！</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
+  csedweek_banner_teachers_text: "您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源"
   n_have_learned_an_hoc: "<h1>立刻嘗試</h1><h3> # 人已體驗的</h3><h2>一小時玩程式活動</h2>"
   anybody_can_learn: "任何人都可以學習。"
   learn_now: "現在就開始學習"
   petition_message: "每個在學校的學生都應該有機會學習計算機科學"
   petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
-  petition_sign_message_support: '如果您支持我們的理想，請在此簽署您的名字。目前已有 # 人簽署。'
   petition_join_others: '目前已有 # 人簽署。'
   name: "名稱"
   email: "電子郵件"
@@ -301,6 +301,7 @@
   homepage_action_text_signpetition: "在意願書上簽名"
   homepage_action_text_wincelebritychat: "贏得與名人聊天的機會"
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
+  homepage_signpetition_dropdown_text: "我同意"
   homepage_diversity_pledge: "承諾多樣性"
   homepage_banner_text_prizes: '一小時玩程式（Hour of Code）又來囉，就在 12 月的 7 - 13 日。 '
   homepage_banner_link_prizes: '參加史上最大的學習盛會。 '
@@ -925,10 +926,17 @@
   coursed-2019_name: 課程 D（2019）
   coursee-2019_name: 課程 E（2019）
   coursef-2019_name: 課程 F（2019）
+  coursea-2020_name: 課程 A（2019）
+  courseb-2020_name: 課程 B（2019）
+  coursec-2020_name: 課程 C（2019）
+  coursed-2020_name: 課程 D（2019）
+  coursee-2020_name: 課程 E（2019）
+  coursef-2020_name: 課程 F（2019）
   express-2018_name: 速學課程（2018）
   pre-express-2018_name: 學前兒童的速學課程（2018）
   express-2019_name: 速學課程（2019）
   pre-express-2019_name: 學前兒童的速學課程（2019）
+  express-2020_name: 速學課程（2019）
   csd2_name: '單元 2：Web 開發'
   csd3_name: '單元 3：動畫與遊戲'
   accelerated_name: "速成課程"
@@ -1520,7 +1528,7 @@
   hoc2018_mc_start: "開始"
   hoc2018_mc_no_internet: "沒有網路嗎？"
   hoc2018_mc_download_adventurer: "下載離線版的 Minecraft 探險家。"
-  hoc2018_mc_educators: "教師專用"
+  hoc2018_mc_educators: "致教師"
   hoc2018_mc_educators_box1_title: "在 Minecraft 裡寫程式"
   hoc2018_mc_educators_box1_desc: 'Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。'
   hoc2018_mc_educators_box1_button: "這就啟動"

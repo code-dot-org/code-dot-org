@@ -1,4 +1,5 @@
 name 'CSD U2 L2 Overview_2018'
+editor_experiment ''
 display_name 'Lesson Overview'
 title 'title'
 description 'description here'
@@ -17,5 +18,5 @@ This lesson introduces websites as a means of personal expression.  The class fi
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-* [Personal Website Sketch] (https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))
+* [Personal Website Sketch](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))
 MARKDOWN

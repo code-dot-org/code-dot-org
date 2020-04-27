@@ -173,6 +173,7 @@ si:
     type:
       word: 'රහස් පදය'
       email: 'විද්‍යුත් තැපැල'
+      clever: 'දක්ෂ ගිණුම'
   follower:
     invite_sent: 'ආරාධනාව යවන ලදී'
     added_teacher: '%{name} ඔබේ ගුරුවරයා ලෙස එක් කරන ලදි'
@@ -292,6 +293,7 @@ si:
     delete_text_teacher_note: "සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ."
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
     update_email: "යාවත්කාලීන කරන්න"
+    parent_guardian_email_label: "මාපිය/භාරකරු e-තැපෑල"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -676,11 +678,13 @@ si:
     csf_for_loops: 'ලූපයන් සඳහා'
     csf_internet: 'අන්තර්ජාලය'
     csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
+    csp4_1_2018: 'ඒකකය 4: විශාල දත්ත සහ රහස්‍යතාවය'
     csp_variables: 'විචල්‍යන්'
     csp_conditionals: 'කන්ඩිෂනලස්'
     csp_functions: 'ශ්‍රිතයන්'
     csp_lists: 'ලැයිස්තු'
     csp_loops: 'ලූපයන්'
+    csp_unit1_2020: 'ඒකක 1: ඩිජිටල් තොරතුරු'
     k5_next_steps: 'ඉදිරි පියවර'
   external_links:
     disclaimer: වියාචනය
@@ -696,10 +700,13 @@ si:
     starwars_blocks_name: 'Star Wars: කේතය සමඟින් මන්දාකිණියක් තැනීම (කොටස්)'
     starwars_javascript_name: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
     download_message: 'අන්තර්ජාලය නැතිව භාවිත කිරීමට %{app_name} ඇප් එක බාගත කරන්න (136MB)'
+    download_in_English: 'ඉංග්රීසි බසින් බාගන්න:'
+    download_in_Spanish: 'ස්පාඤ්ඤ බසින් බාගන්න:'
     windows: 'ජනේලය'
     mac: 'මැක් OS X'
   locked_stage: 'මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි වැඩ කිරමට පටන්ගත් විට හෝ ඔබගේ පිළිතුරු සමාලෝචනය කිරීමට අවශ්‍ය වූ අවස්ථාවේදී ඔබගේ ගුරුවරයාට එය අගුල් ඇරිය හැක.'
   hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
+  return_unit_overview: 'ඒකක දළ විශ්ලේෂණයට යන්න'
   return_course_overview: 'ඒකක දළ විශ්ලේෂණයට යන්න'
   pd:
     form_labels:
@@ -715,6 +722,7 @@ si:
         science: 'විද්‍යාව'
         la: 'භාෂා අධ්‍යනය'
       resources:
+        khan: 'ඛාන් ඇකඩමිය'
         kodable: 'කෝඩබල්'
         lightbot: 'Lightbot'
       robotics:
@@ -728,3 +736,4 @@ si:
     accept: 'මම එකඟයි'
   gdpr_dialog:
     yes: 'ඔව්'
+  copy: 'පිටපත් කරන්න'

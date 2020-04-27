@@ -55,6 +55,7 @@ km:
   join_section:
     code:
       placeholder: "ផ្នែកនៃការសរសេរកូដ (ABCDEF)"
+      instructions_short: "សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។"
   add_hint_form:
     placeholder: 'សូមវាយបញ្ចូលនូវតម្រុយនៃកូដរបស់អ្នក។'
     submit: 'ដាក់តម្រុយសម្រាបសម្កាល់'
@@ -191,6 +192,7 @@ km:
       %{name}
   parent_mailer:
     student_associated_subject: 'ព័ត៌មាននៃការចូលទៅកាន់គណនីសម្រាប់ Code.org'
+    parent_email_added_subject: 'សូមស្វាគមន៏មកកាន់Code.org!'
   teacher_mailer:
     new_teacher_subject: 'សូមស្វាគមន៏មកកាន់Code.org!'
   section:
@@ -355,6 +357,9 @@ km:
     enter_new_login_info: 'សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក'
     confirm_secret_words: 'ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់'
     update_email: "កែលម្អរ"
+    parent_guardian_email_label: "អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ"
+    none: "គ្មាន"
+    encrypted: "បានអុីនគ្រីប"
   user_level:
     completed: 'បាន​បញ្ចប់'
     tried: 'បាន​ព្យាយាម'
@@ -373,6 +378,7 @@ km:
     see_details: មើលសេចក្តីលម្អិត
     view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
     trynow: 'រៀនបន្ថែមទៀត'
+    try_beta_courses: 'ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥ ។'
   share:
     title: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
     description: "រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម កម្មវិធីនិងគូររូបផ្សេងៗជាមួយការសរសេរកូដ។"
@@ -404,6 +410,7 @@ km:
     notes: 'គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។'
     autoplay_option: 'ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ'
     download: 'ទាញយក​វីដេអូ'
+    label: 'វីដេអូ'
   compatibility:
     upgrade:
       link: "សិក្សាបន្ថែម"
@@ -494,6 +501,8 @@ km:
     csp_functions: 'អនុ​គមន៍'
     csp_lists: 'បញ្ជី'
     csp_loops: 'រង្វិល​ជុំ'
+  hoc_download:
+    minecraft_name: 'Minecraft Hour of Code'
   pd:
     form_labels:
       email: 'អ៊ីមែល'
@@ -517,3 +526,4 @@ km:
     accept: 'ខ្ញុំ​យល់​ព្រម'
   gdpr_dialog:
     yes: 'យល់ព្រម'
+  copy: 'ចម្លង'

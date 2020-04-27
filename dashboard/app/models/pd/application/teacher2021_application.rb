@@ -704,6 +704,8 @@ module Pd::Application
           if school_stats
             if [:title_i_status, :students_total, :urm_percent].include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
+            elsif k == :rural_status
+              row.push(school_stats.rural_school?)
             else
               row.push(school_stats.percent_of_students(school_stats[k]) || "")
             end

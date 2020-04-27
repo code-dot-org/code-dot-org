@@ -908,6 +908,47 @@ it-IT:
         le intestazioni siano in ordine dal più grande al più piccolo, ed il testo
         dica la dimensione corretta come nell'immagine sotto.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
         PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Heading Test_2019: "# Intestazioni e Paragrafi\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n\n::: details [**Cos'è un elemento Paragrafo?**]\n\nI
+        paragrafi sono racchiusi tra l'etichetta di inizio (opening tag) '<p>' e l'etichetta
+        di fine (closing tag) '</p>'. I paragrafi HTML possono avere una lunghezza
+        qualsiasi: da una sola parola fino a più frasi. Tutto il testo che compare
+        in una pagina Web deve essere contenuto in un elemento HTML (paragrafo o intestazione).
+        I paragrafi permettono di raggruppare le frasi contenute e inserire uno spazio
+        tra un gruppo e il successivo.\n\n:::\n\n::: details [**Come creare più paragrafi?**]\n\nI
+        singoli paragrafi sono sempre racchiusi tra l'etichetta di inizio (opening
+        tag) '<p>' e l'etichetta di fine (closing tag) '</p>'. Per creare più paragrafi
+        è sufficiente usare più volte le etichette di inizio e fine. Ad esempio:\n\n
+        \       <p>\n            Questo è un paragrafo.\n        </p>\n        <p>\n
+        \           Questo è un'altro paragrafo.\n        </p>\n\n:::\n\n::: details
+        [**Cosa sono le Intestazioni?**]\nLe intestazioni sono titoli di diversa dimensioni
+        all'interno della pagina Web. Le intestazioni creano una struttura nella pagina
+        Web e la suddividono in parti facilitandone la lettura.\n:::\n\n::: details
+        [**Come fare intestazioni di diversa dimensione?**]\nLe intestazioni hanno
+        6 possibili dimensioni. Finora avete usato la dimensione maggiore \\<h1>.
+        Il numero '1' nell'etichetta HTML indica l'intestazione più grande. L'intestazione
+        più piccola ha l'etichetta \\<h6>. Provate anche le dimensioni \\<h2>, \\<h3>,
+        \\<h4> e \\<h5> con dimensione via via decrescente. \n:::\n\n::: details [**Cos'è
+        HTML?**]\nHTML è la contrazione di Hypertext Markup Language (linguaggio a
+        marcatori per ipertesti). HTML è usato per dare una struttura al contenuto
+        delle pagine Web. HTML utilizza 'etichette' (tag) per definire dove iniziano
+        e finiscono le diverse strutture della pagina. Le etichette sono gruppi di
+        simboli e lettere che non costituiscono parole di senso compiuto nel normale
+        linguaggio così che si possono distinguere dal testo della pagina.\n:::\n\n:::
+        details [**Cos'è un elemento HTML?**]\nUn 'elemento' HTML è una porzione della
+        pagina Web che è contrassegnato da un'etichetta di inizio (opening tag) e
+        solitamente da un'etichetta di fine (closing tag). L'elemento HTML comprende,
+        oltre alle etichette, il testo racchiuso tra esse. Ad esempio: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n:::\n\n::: details [**Cos'è un'etichetta (tag) HTML?**]\n\nUn'etichetta
+        (tag) HTML è una speciale sequenza di caratteri (lettere, numeri, simboli)
+        che permette al computer di capire dove inizia e dove finisce un elemento
+        HTML e di che tipo di elemento si tratta.\n\n:::\n\n</div>\n\nL'autore di
+        questa pagina ha inserito molte frasi ma senza dare una struttura al testo.
+        Infatti, il testo viene rappresentato tutto unito. \n\nProcedi come segue:\n\n-
+        \  Osserva il testo con il tuo compagno/a e decidete quale dovrebbe essere
+        la migliore struttura della pagina.\n-   Usate le etichette di intestazione
+        e paragrafo per dire al computer come suddividere il testo nella pagina."
       CSD U2 Inspector Warm Up: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -2207,6 +2248,99 @@ it-IT:
       NEW Course 4 Bee For Loops 8: Questo codice è da completare! Quale deve essere
         il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi
         di nettare?
+      New Minecraft Hero Project: "**Tempo di giocare:** ora tocca a te! Programma
+        l'Agente per farti aiutare ad esplorare questo mondo."
+      OPD-K5 CS Video: |-
+        ## Per cominciare - Perché Fondamenti di informatica?
+
+        Completerai questo corso gratuito in autoapprendimento utilizzando la stessa piattaforma che potrai usare in classe con i tuoi alunni.
+
+        Iniziamo mettendo a fuoco cosa sono i "Fondamenti di informatica" e come sono stati appresi da altri insegnanti e alunni in tutto il mondo. Nel prossimo livello vedremo come interagire con la piattaforma di studio che userai durante tutto il corso.
+
+        > ## Rifletti
+        >
+        > Quali sono le tue prime impressioni sul corso "Fondamenti di informatica"?
+        >
+        > Condividi i tuoi pensieri taggando Programma il Futuro sui social network:
+        >
+        > -   su <a href="https://www.facebook.com/pg/programmailfuturo" target="blank">Facebook</a>: @programmailfuturo
+        > -   su \<a <https://twitter.com/ProgrammaFuturo>" target="blank">Twitter</a>: @ProgrammaFuturo
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect
+        >
+        > What are your first impressions of CS Fundamentals?
+        >
+        > [Tweet your thoughts][0] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
+        > Don't have a Twitter account? You can also find us on [Facebook][1] or [Instagram][2].
+      OPD-K5 Closing: |-
+        > **If you enjoyed this course, sign up for an in-person workshop (solo per gli Stati Uniti)**
+        >
+        > [Sign up now][0] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area.
+      OPD-K5 EventsVid: |-
+        Guarda questo video che definisce gli "eventi" e mostra come funzionano nei corsi di  "Fondamenti di informatica". Dopodiché farai pratica con alcuni esercizi in qui occorre  programmare con gli eventi.
+
+        > Un "gestore di evento" è un insieme di istruzioni che dicono al computer di "ascoltare" se succede un determinata cosa, e "quando accade" eseguire un certo insieme di azioni. Per esempio, in alcune  pagine web, passando il mouse sopra ad un menù a tendina, questo si apre. In questo caso l'evento è "il passaggio del cursore del mouse in una certa zona dello schermo" e l'"azione" scatenata dall'evento è l'apertura del menù a tendina.
+      OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
+        che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
+        ti verrà chiesto di scrivere un programma simile!
+      OPD-K5 LessonPlanning: "Finora ti sono stati presentati alcuni piani di lavoro
+        delle lezioni tradizionali. Tieni presente che sono disponibili i piani di
+        lavoro di ogni lezione del corso \"Fondamenti di informatica\" -- sia delle
+        lezioni tradizionali che di quelle tecnologiche. Ecco la lista completa (al
+        momento questi documenti sono disponibili solo in inglese):\n<br/>\n<br/>
+        \n[Piano di lavoro delle lezioni del corso A][0]<br/> \n[Piano di lavoro delle
+        lezioni del corso B][1]<br/>\n[Piano di lavoro delle lezioni del corso C][2]<br/>
+        \n[Piano di lavoro delle lezioni del corso D][3]<br/> \n[Piano di lavoro delle
+        lezioni del corso E][4]<br/> \n[Piano di lavoro delle lezioni del corso F][5]<br/>
+        \n\nSentiti comunque libero di adattare queste lezioni o di creare un tuo
+        personale piano di lavoro delle lezioni che assecondi le tue specifiche esigenze!
+        Il video qui sotto introduce il piano di lavoro delle lezioni del corso \"Fondamenti
+        di informatica\" ed aggiunge anche alcuni suggerimenti per creare eventualmente
+        una tua lezione."
+      OPD-K5 Problem Solving: |-
+        # Linee guida > Insegnare a risolvere i problemi
+
+        Insegnare le strategie di risoluzione dei problemi prima, durante e dopo la programmazione è estremamente importante per aiutare gli alunni nel processo di apprendimento. Le strategie di "problem solving metacognitivo" portano a pensare al processo di ragionamento in quanto tale e a riflettere su "come" risolveresti il problema. Guarda il video a fondo pagina per scoprire come la "Ricetta di Code.org per risolvere gli esercizi" può aiutare gli alunni ad affrontare con successo problemi difficili:
+
+        [Questa scheda](https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.pdf) illustra i vari passi della "Ricetta di Code.org per risolvere gli esercizi".
+
+        <img src="https://programmailfuturo.it/media/docs/PuzzleSolvingStudent-IT.png" width="650px" style="margin-right:45px; border-radius:10px;">
+
+        > ## Riflettiamo:
+        >
+        > Come potresti insegnare a risolvere i problemi nella tua classe di informatica con chiarezza? <a href="https://programmailfuturo.it/forum/corso-online-per-l-insegnamento">Condividi i tuoi pensieri nel forum di Programma il Futuro</a>.
+
+        Oppure, se sai l'inglese...
+
+        > ## Reflect:
+        >
+        > How might you explicitly teach problem solving in your CS classroom?
+        >
+        > [Tweet your thoughts][1] and be sure to tag @teachcode in your tweet so we can respond.
+        >
+        > <a href="http://ctt.ec/ic2bx" target="blank"><h4><i class="fa fa-external-link-square" ></i> Share on Twitter</h4></a>
+      OPD-K5 RepeatBlock: Guarda il seguente video che spiega come funzionano le istruzioni
+        di ripetizione (cicli) ed introduce il blocco "ripeti ... volte" nei corsi
+        di "Fondamenti di informatica".
+      OPD-K5 Unplugged Video: |-
+        ## Uno sguardo avanti > "Senza computer"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Nell'insegnamento dell'informatica potresti pensare che sia fondamentale basarsi sulla miglior tecnologia disponibile -- computer nuovi, connessione internet veloce e le applicazioni più moderne. Ma in Code.org abbiamo scoperto che alcune delle lezioni di informatica di maggior successo sono in realtà di tipologia tradizionale, con pochissima tecnologia o del tutto prive. In queste lezioni gli studenti imparano i principi fondamentali dell'informatica senza l'uso di computer.
+
+        Ecco perché in tutti i nostri corsi di Fondamenti di informatica si sfruttano attività tradizionali per presentare i principi fondamentali dell'informatica con attività concrete, prima che gli studenti scrivano programmi al computer che sfruttano quegli  stessi concetti. Un esempio potrebbe essere un ballo con movimenti ripetitivi per far comprendere agli alunni come i cicli ripetono le istruzioni all'interno di un programma. In questo modo, quando gli studenti scriveranno programmi con i cicli, l'attività tradizionale avrà creato un'associazione preliminare con un'attività a loro familiare che potranno correlare con questo nuovo concetto.
+
+        Guarda il video sottostante per comprendere i benefici dell'uso delle lezioni tradizionali nell'insegnamento dell'informatica.
+
+        **Mentre percorrerai le lezioni da 4 a 8**, avrai l'occasione di conoscere alcune delle nostre attività tradizionali per ognuno dei concetti chiave trattati in questo corso.
+      OPD-K5 WhatIsCS: Ti sei mai chiesto "Cos'è esattamente l'informatica?" oppure
+        "Perché alcuni programmi informatici sono scritti con delle parole ed altri
+        usando delle immagini?" Guarda questo video, è un'ottima introduzione all'informatica.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
       Overworld Chop Tree_2019: 'Il legno è una risorsa molto importante: serve per
@@ -2704,6 +2838,9 @@ it-IT:
           <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: 'Raccogli tutti e tre i diamanti! Muovi Laura
         su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
+      courseA_collector_loops2_2019: 'Raccogli tutti e tre i diamanti! Muovi Laura
+        su ogni diamante e poi usa questo blocco: <xml><block type="collector_collect"
+        block-text="get treasure"/></xml>. '
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -2960,16 +3097,10 @@ it-IT:
         freccia a destra.
       courseA_playLab_events4_2018: Ora fai muovere il cane a destra quando si preme
         la freccia a destra.
-      courseA_playLab_events4_2019: Ora fai muovere il cane a destra quando si preme
-        la freccia a destra.
       courseA_playLab_events5: Aggiungi gli eventi per far muovere il cane su e giù
         quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2018: Aggiungi gli eventi per far muovere il cane su
         e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su
-        e giù quando si premono le frecce in su e in giù.
-      courseA_playLab_events6_2019: Rendi questa scena più interessante, cambiando
-        lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events7_2018: _Tempo di giocare:_ aggiungi ciò che vuoi a questo
         gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte
         contro di lui? (Quando sei soddisfatto, premi "Termina" per completare il
@@ -3490,15 +3621,15 @@ it-IT:
       courseC_PlayLab_events_challenge1: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2018: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_PlayLab_events_challenge1_2019: |-
         Usa un nuovo blocco per fare in modo che il pinguino ritorni automaticamente all'inizio quando sbatte contro il dinosauro e quando segna un punto. Questo renderà il tuo gioco più sfidante e divertente!
 
-        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il dinosauro nella posizione `nel mezzo a sinistra` per completare questa sfida.
+        Gioca e muovi il pinguino con le frecce fino a che non segni almeno 5 punti. Il codice deve fare in modo di spostare il pinguino nella posizione `nel mezzo a sinistra` per completare questa sfida.
       courseC_artist_loop1: |-
         Fantastico!
 

@@ -26,7 +26,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
-  before_save :fix_examples
+  before_save :fix_examples, :update_goal_override
 
   serialized_attrs %w(
     level_url
@@ -74,11 +74,11 @@ class Blockly < Level
     encrypted_examples
     disable_if_else_editing
     show_type_hints
-    thumbnail_url
     include_shared_functions
     preload_asset_list
     skip_autosave
     skip_run_save
+    goal_override
   )
 
   before_save :update_ideal_level_source
@@ -360,6 +360,8 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
+        level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
         level_prop['name'] = name
       end
 
@@ -609,5 +611,11 @@ class Blockly < Level
       level_object[:config]["args"] = arguments
     end
     level_objects_copy
+  end
+
+  def update_goal_override
+    if goal_override&.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
   end
 end

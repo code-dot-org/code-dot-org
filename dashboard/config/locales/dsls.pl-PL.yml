@@ -85,9 +85,11 @@ pl-PL:
         title: Dopasowanie
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Za pomocą którego programu został utworzony ten obrazek?
         title: Test wielokrotnego wyboru
@@ -498,34 +500,37 @@ pl-PL:
         markdown: |
           #Podsumowanie
 
-          Na tej lekcji poznasz różne typy urządzeń wejściowych i wyjściowych używanych przez komputer oraz rodzaje informacji które są przez nie wysyłane i odbierane.
+          Na tej lekcji poznasz różne typy urządzeń wejściowych i wyjściowych używanych przez komputer oraz rodzaje informacji, które są przez nie wysyłane i odbierane.
 
           ##Słowniczek
 
-          * **Wejście** - urządzenie lub komponent które dostarcza informacje do komputera
-          * **Wyjście** - urządzenie lub komponent które otrzymuje informacje z komputera
+          * **Wejście** - urządzenie lub fragment urządzenia, które służy do przekazywania informacje do komputera
+          * **Wyjście** - urządzenie lub fragment urządzenia, które służy do otrzymywania informacji z komputera
 
 
           ## Zasoby
 
           * [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
       CSD U1 Lesson 6 Overview:
-        markdown: "#Podsumowanie\n\nNa tej lekcji dowiesz się jak ludzie i komputery
+        markdown: "#Podsumowanie\n\nNa tej lekcji dowiesz się, jak ludzie i komputery
           przekształcają dane wejściowe w wyjściowe. \n\n##Słowniczek\n\n* **Algorytm**
-          - szczegółowa sekwencja instrukcji przetwarzania, wykonywana przez komputer\n\n##
-          Zasoby\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+          - szczegółowa sekwencja instrukcji przetwarzania, które mogą być wykonywane
+          przez komputer\n\n## Zasoby\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+        teacher_markdown: "* [Algorytm sortowania kart](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Przykład ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Podsumowanie
 
-          Na tej lekcji poznasz sposoby przechowywania informacji przez komputer, oraz dowiesz się dlaczego pamięć jest krytyczną częścią przetwarzania informacji.
+          Na tej lekcji poznasz różne rodzaje informacji przechowywane przez komputer, oraz dowiesz się, dlaczego pamięć jest krytyczną częścią przetwarzania informacji.
 
           ## Zasoby
 
           * [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
       CSD U1 Lesson 8 Overview:
-        markdown: "# Podsumowanie\n\nNa tej lekcji dowiesz się jak aplikacje przetwarzają
-          różne rodzaje informacji w celu rozwiązania problemu. \n\n## Zasoby\n\n*
+        markdown: "# Podsumowanie\n\nNa tej lekcji poznasz różne sposoby przetwarzania
+          informacji przez aplikacje, w celu rozwiązania problemu. \n\n## Zasoby\n\n*
           [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n"
       CSD U1 Lesson 9 Overview:
         markdown: |
@@ -538,6 +543,65 @@ pl-PL:
           * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+      CSD U2 L1 Overview:
+        markdown: |
+          # Podsumowanie
+          Ta lekcja obejmuje cele, które może spełniać witryna internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada garść najczęściej używanych witryn w Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna dla użytkowników i jak może służyć również jej twórcom.
+          ## Słownictwo
+
+          * ** Strona internetowa** - miejsce połączone z Internetem, która utrzymuje jedną lub więcej stron w sieci WWW.
+          ## Źródła
+
+          * [Przeznaczenie stron internetowych - Poradnik](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+      CSD U2 L2 Overview:
+        markdown: "#Podsumowanie\n\nTa lekcja wprowadza strony internetowe jako środek
+          osobistej ekspresji. Na początku klasa omawia różne sposoby wypowiadania
+          się przez ludzi oraz dzielenia  się swoimi zainteresowaniami i pomysłami,
+          później ogląda kilka przykładowych stron internetowych wykonanych przez
+          uczniów z poprzedniego kursu. Na końcu, każdy zastanawia się i wymienia
+          listę tematów i zainteresowań do uwzględnienia na osobistej stronie internetowej,
+          tworząc materiały do jej rozbudowywania w pozostałej części tego modułu.\n##
+          Słownictwo\n\n* **Zawartość witryny internetowej** - Surowy tekst, obrazy,
+          oraz inne elementy zawarte w stronie internetowej \n\n## Materiały\n\n*
+          [Zarys osobistej witryny internetowej - Poradnik](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Szkic osobistej strony](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Przykład ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
+      CSD U2 L3 Overview:
+        markdown: "#Podsumowanie\n\nTa lekcja wprowadza język HTML jako rozwiązanie
+          problemu, jak zakomunikować komputerowi zawartości i strukturę witryny internetowej.
+          Lekcja zaczyna się krótkim ćwiczeniem poza komputerem demonstrującym wyzwania
+          efektywnego komunikowania komputerowi struktury strony internetowej. Klasa
+          patrzy na stronę HTML w Web Lab i omawia, jak tagi języka HTML pomagają
+          rozwiązać problem, później używają HTML, aby napisać pierwsze strony internetowe
+          w tym module. \n## Słownictwo\n\n* **HTML** - Hypertext Markup Language,
+          język używany do tworzenia stron internetowych\n* **Element HTML** - część
+          strony internetowej, oznaczona znacznikiem otwierającym a czasami zamknięta
+          znacznikiem zamykającym \n* **Znacznik HTML** - Specjalny zestaw znaków
+          określających początek i koniec elementu HTML oraz jego atrybut \n* **Zawartość
+          strony internetowej** - Surowy tekst, obrazy, oraz inne elementy zawarte
+          na stronie internetowej\n* **Struktura strony** - Przeznaczenie różnych
+          części treści strony internetowej, pomaga komputerowi określić, jak zawartość
+          powinna być wyświetlana\n\n## Wprowadzony kod\n\n* **[HTML](//studio.code.org/docs/weblab/html/)**
+          - `<html></html>`\n* **[Doctype](//studio.code.org/docs/weblab/doctype/)**
+          - `<!DOCTYPE>`\n* **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n*
+          **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)**
+          - `<head></head>`\n"
+      CSD U2 PSP Programming:
+        teacher_markdown: |-
+          # Przejrzyj proces rozwiązywania problemów
+
+          Przejrzyj cztery etapy procesu rozwiązywania problemów z całą klasą.
+      CSD U2 PSP Programming_2018:
+        teacher_markdown: |-
+          # Przejrzyj proces rozwiązywania problemów
+
+          Przejrzyj cztery etapy procesu rozwiązywania problemów z całą klasą.
+      CSD U2 PSP Programming_2018_2019:
+        teacher_markdown: |-
+          # Przejrzyj proces rozwiązywania problemów
+
+          Przejrzyj cztery etapy procesu rozwiązywania problemów z całą klasą.
       CSD U2 Top Websites:
         markdown: |
           # Ranking najczęściej odwiedzanych stron w Stanach Zjednoczonych
@@ -545,11 +609,23 @@ pl-PL:
           Poniżej wymieniono najczęściej odwiedzane strony internetowe w Stanach Zjednoczonych. Do każdej dołączono krótki opis ich podstawowych funkcji.
 
           1. Google.com - wyszukiwarka stron internetowych, obrazów, plików wideo i innych mediów
-          2. Youtube.com - strona z materiałami wideo przesyłanymi przez użytkowników. Zawiera oceny i komentarze.
-          3. Facebook.com - medium społecznościowe, które pozwala na dzielenie się informacjami ze znajomymi
+          2. Youtube.com - strona z materiałami wideo przesyłanymi przez użytkowników; zawiera oceny i komentarze.
+          3. Facebook.com - medium społecznościowe, które służy do dzielenia się informacjami ze znajomymi
           4. Amazon.com - sklep internetowy z ogromną gamą produktów
-          4. Yahoo.com - wyszukiwarka stron internetowych, serwer poczty email, źródło informacji
-          5. Wikipedia.org - darmowa encyklopedia z treściami generowanymi przez użytkowników
+          4. Yahoo.com - wyszukiwarka stron internetowych, serwer poczty e-mail, źródło wiadomości
+          5. Wikipedia.org - darmowa encyklopedia z hasłami generowanymi przez użytkowników
+      CSD U2 expand project:
+        teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
+          na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
+          przykładowe strony internetowe.
+      CSD U2 expand project_2018:
+        teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
+          na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
+          przykładowe strony internetowe.
+      CSD U2 expand project_2018_2019:
+        teacher_markdown: Instrukcje rozbudowy stron internetowych uczniów można wyświetlić
+          na tablicy, abyś mógł przejrzeć je z cała klasą. Kliknij, aby pokazać uczniom
+          przykładowe strony internetowe.
       CSD U2 image debug match:
         answers:
         - {}
@@ -563,6 +639,10 @@ pl-PL:
         - {}
         - {}
         - {}
+        teacher_markdown: Chociaż ten poziom można wykorzystać do oceny zrozumienia
+          przez uczniów składni znacznika `<img>`, jego głównym celem jest uświadomienie
+          uczniom najczęstszych rodzajów błędów, jakie mogą napotkać podczas dodawania
+          grafiki do stron internetowych.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -638,6 +718,21 @@ pl-PL:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Szybkie sprawdzenie list
+      CSD U2 project guide:
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U2 project guide_2018:
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U2 project guide_2018_2019:
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -867,6 +962,11 @@ pl-PL:
         - correct: true
         questions:
         - {}
+      Choosing Good IDs:
+        teacher_markdown: |-
+          #### Rozwijanie dobrych nawyków programistycznych
+
+          Przestrzeganie jasnych i spójnych zwyczajów nazewnictwa jest ważnym nawykiem, ale korzyści rzadko są od razu oczywiste dla uczniów. W dłuższej perspektywie naprawdę opłaca się konsekwentnie nazywać ID, szczególnie dlatego, że okaże się pomocne, gdy przyjdzie czas na czytanie programów Twoich uczniów, ale uprości również proces łączenia ekranów uczniów w pełną aplikację zespołu.
       Dance_Party_extras_intro:
         markdown: |
           # Nie przestawaj tańczyć!
@@ -1268,44 +1368,117 @@ pl-PL:
         title: Test wielokrotnego wyboru
       MoveItMoveIt-Unplugged:
         markdown: |
-          # Pzenieś go, przenieś go
+          # Przesuń go, przesuń go
 
           Użyj mapy i wydawaj polecenia, aby osiągnąć cel.
+      'Overview: Design Mode':
+        markdown: "# Witamy w  Trybie Projektowania  w Labolatorium Aplikacji\nLaboratorium
+          Aplikacji \" Tryb Projektowania\" pozwala ci przeciągnąć i upuścić elementy
+          Interfejsu Użytkownika do aplikacji. \n\n### Słownictwo\n* **Interfejs Użytkownika
+          (UI)** - Jak osoba (użytkownik) wchodzi w interakcje z komputerem lub aplikacją.
+          \n* **Elementy Interfejsu Użytkownika**  lub obiekty jak przyciski, obrazy,
+          ramki z tekstem, rozwijalne menu, ekrany i tak dalej. \n\n## Przykład\n\n<div
+          style=\"column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after: always;
+          -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>\nZobaczysz
+          nowy zestaw przełączników powyżej obszaru aplikacji, który pozwoli Ci cofać
+          i przechodzić pomiędzy \"Trybem Projektowania\" a \"Trybem Kodowania\".</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>Dodawanie
+          elementu jest tak łatwe jak  przeciąganie i upuszczanie go do aplikacji
+          gdziekolwiek chcesz. Kiedy element jest w ekranie aplikacji, możesz zmienić
+          jego pozycję, rozmiar oraz zmienić mnóstwo jego innych właściwości</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">3.</span>Zakładka<em>Właściwości</em>
+          pokazuje ci wszystko co możesz zmieniać w stylu i wyglądzie elementów Interfejsu
+          Użytkowniaka. </p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\"><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">4.</span> <strong>ID</strong> elementu
+          jest ważne ponieważ pokazuje jak odnosisz się do elementu w kodzie. Omówimy
+          ID elementu później.</p>\n</div>\n\n![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)\n\n\n<div
+          style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 66%; float: right\">\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">5.</span>Możesz
+          zmienić tekst, który użytkownik widzi na dole,jak \n tylkoci się podoba.
+          </p>\n\n<p style=\"break-after: always; -moz-column-break-after: always;
+          -webkit-column-break-after: always;\"><span style=\"font-weight: bold; color:
+          #00adbc; font-size: 200%;\">6.</span><strong>Note:</strong> Zjedź na dół
+          żeby zobaczyć inne właściwości dla elementu Interfejsu Użytkownika, gdyż
+          mogą się \"ukrywać\" poniżej. </p>\n</div>\n\n<div style=\"clear: both\"></div>\n<hr>\n\n**Teraz
+          ty spróbuj!**"
+      'Overview: Images':
+        markdown: "## Wpisz adres URL obrazu z sieci\n\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nJest kilka sposobów żeby zdobyć
+          adres URL obrazu. \n\nPowszechną techniką ( pokazaną po prawej) jest znalezienie
+          obrazu na stronie internetowej jaki lubisz i kliknięcie prawym przyciskiem
+          myszy ( lub ctrl+ kliknięcie) i wybranie opcji, która jest napisana w stylu
+          \" Kopiuj Adres Obrazu\", następnie możesz wkleić obraz do ramki tekstowej
+          w Laboratorium Aplikacji. \n\nJeśli jesteś niepewny, możesz także wybrać
+          taką opcję jak\" Otwórz Obraz w Nowej Zakładce\", która izoluje sama obraz
+          i adres URL pokaże się na pasku adresu, który możesz skopiować i wkleić
+          od Laboratorium Aplikacji. \n\n**Powszechny błąd**: Używanie adresu URL
+          \ *wyszukiwarki obrazów*  a nie samego adresu URL obrazu.\n*Upewnij się,
+          że kopiujesz ścieżkę rzeczywistego pliku obrazu- czyli coś co kończy się
+          **.jpg**, **.gif**, **.png**. \n* Adres URL, który wygląda jak ten:`https://www.google.com/search?q=cat&espv=2&biw=1497....`
+          jest prawdopodobnie zły.\n\n##Wczytywanie własnych obrazów\nJeśli masz zapisane
+          obrazy na swoim komputerze, to możesz je wrzucić do ** zarządcy aktywów**
+          w laboratorium aplikacji. Wystarczy **kliknij wczytanie pliku** i podążać
+          za dialogami na ekranie.\n\nDla obrazów plik musi mieć format: **.jpg**,
+          **png**, lub **.gif**\n\nKiedy wczytasz plik powinieneś  wybrać go** Wybierz**
+          żeby ustawić obraz dla danego pliku. Jeśli dodasz wiele obrazów, zobaczysz
+          je wszystkie wymienione za każdym razem kiedy będziesz wczytywać plik, a
+          możesz użyć *jakikolwiek*plik, który już wczytywałeś. \n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Żeby spróbować kliknij Kontynuuj!\n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Podsumowanie
 
-          Na tej lekcji nauczysz się formalnych procesów rozwiązywania problemu które pomogą ci ustrukturyzować podejście do szerokiej gamy problemów.
+          Na tej lekcji poznasz formalny proces rozwiązywania problemu, który pomoże Ci uporządkować Twoje podejście do szerokiej gamy problemów.
 
           ## Zasoby
 
           * [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: |+
+          * [Proces rozwiązywania problemu](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Poradnik aktywności ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+
+
       Unit 1 Lesson 3 Overview:
-        markdown: "#Podsumowanie\nNa tej lekcji poznasz proces rozwiązywania gamy
-          problemów, aby dowiedzieć się jak każdy krok pomże ci rozwijać i ulepszać
-          rozwiązywanie problemów. \n\n##Zasoby\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
+        markdown: "#Podsumowanie\nNa tej lekcji zastosujesz proces rozwiązywania problemu
+          do gamy problemów, aby poznać, jak każdy krok pomaga Ci rozwijać i ulepszać
+          rozwiązania problemów. \n\n##Zasoby\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
       Unit 1 Lesson 4 Overview:
         markdown: |
           #Podsumowanie
-          Na tej lekcji zaczniesz rozważania, jak komputery pomagają niektóre problemy oraz poznasz kluczowe funkcjonalności każdego komputera.
+          Na tej lekcji zaczniesz zastanawiać się, jak komputery pomagają w rozwiązywaniu niektórych problemów oraz poznasz kluczowe właściwości każdego komputera.
 
           ##Zasoby
 
           * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Nieprawidłowe
+        - text: Duszek się zakręci.
+        - text: Duszek się skurczy.
+          correct: true
+          feedback: Poprawnie!
+        - text: Duszek się poruszy.
+        - text: 'Duszek zmieni kolory.
+
+'
+          feedback: Nieprawidłowe
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - feedback: Nieprawidłowe
+        - text: W lewo, a potem w dół
+        - text: Diagonalnie
+          correct: true
+          feedback: Poprawnie!
+        - text: Zig zag
+          feedback: Niepoprawnie
+        - text: W dół, a potem w lewo
+          feedback: Nieprawidłowe
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
@@ -1313,7 +1486,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1321,7 +1495,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1329,7 +1504,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1337,8 +1513,9 @@ pl-PL:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Poprawnie!
         - text: '15'
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1346,8 +1523,9 @@ pl-PL:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Poprawnie!
         - text: '15'
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1355,63 +1533,83 @@ pl-PL:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Poprawnie!
         - text: '15'
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Nie wiem.
+          feedback: Ten kod idealnie przeniesie ptaka na świnkę.
         questions:
-        - {}
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Nie wiem.
+          feedback: Ten kod idealnie przeniesie ptaka na świnkę.
         questions:
-        - {}
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ptak znajdzie się o krok od świnki.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
+        - text: Ptak wpadnie na TNT.
+          feedback: Niepoprawnie. Ten kod idealnie przeniesie ptaka na świnkę.
+        - text: Nie wiem.
+          feedback: Ten kod idealnie przeniesie ptaka na świnkę.
         questions:
-        - {}
+        - text: Przeczytaj uważnie poniższy kod. Co się stanie, gdy klikniesz „Uruchom”?
       courseC_multi_starWars_predict1:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - text: Nie wiem
         questions:
         - {}
@@ -1420,6 +1618,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - text: Nie wiem
         questions:
         - {}
@@ -1428,6 +1627,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - text: Nie wiem
         questions:
         - {}
@@ -1435,24 +1635,27 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1462,6 +1665,7 @@ pl-PL:
         - text: B
         - text: R
           correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1471,6 +1675,7 @@ pl-PL:
         - text: B
         - text: R
           correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1480,81 +1685,91 @@ pl-PL:
         - text: B
         - text: R
           correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
+          feedback: Poprawnie!
         - text: B
         - text: B
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
+          feedback: Poprawnie!
         - text: B
         - text: B
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
+          feedback: Poprawnie!
         - text: B
         - text: B
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -1563,7 +1778,8 @@ pl-PL:
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -1572,7 +1788,8 @@ pl-PL:
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -1581,7 +1798,8 @@ pl-PL:
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -1589,8 +1807,9 @@ pl-PL:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Poprawnie!
         - text: '12'
-        - {}
+        - text: Nie wiem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
             klikniesz "Uruchom"?
@@ -1599,8 +1818,9 @@ pl-PL:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Poprawnie!
         - text: '12'
-        - {}
+        - text: Nie wiem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
             klikniesz "Uruchom"?
@@ -1609,8 +1829,9 @@ pl-PL:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Poprawnie!
         - text: '12'
-        - {}
+        - text: Nie wiem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
             klikniesz "Uruchom"?
@@ -1619,7 +1840,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -1627,7 +1849,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1635,7 +1858,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -1643,39 +1867,44 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1683,7 +1912,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -1691,7 +1921,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -1699,63 +1930,74 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: Ptak dotrze do świnki.
+          correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -1763,7 +2005,7 @@ pl-PL:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1772,6 +2014,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -1779,6 +2022,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         questions:
         - {}
@@ -1787,6 +2031,7 @@ pl-PL:
         - {}
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         questions:
         - {}
@@ -1819,8 +2064,9 @@ pl-PL:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
+          feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1828,8 +2074,9 @@ pl-PL:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
+          feedback: Poprawnie!
         - text: Pszczółka zbierze cały nektar.
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1837,7 +2084,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -1845,7 +2093,8 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -1853,55 +2102,62 @@ pl-PL:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Poprawnie!
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
@@ -1910,6 +2166,7 @@ pl-PL:
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
+          feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
         questions:
@@ -1920,6 +2177,7 @@ pl-PL:
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
+          feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
         questions:
@@ -1930,6 +2188,7 @@ pl-PL:
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
+          feedback: Poprawnie!
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
         questions:
@@ -1939,7 +2198,7 @@ pl-PL:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
@@ -1947,13 +2206,14 @@ pl-PL:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
         questions:
@@ -1962,6 +2222,7 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
         questions:
@@ -1970,39 +2231,43 @@ pl-PL:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
         - {}
         questions:
         - {}
       csd-pre-survey-2017-levelgroup:
         markdown: "#Podsumowanie\nKlasa pracuje w grupach, projektując łódki z folii
-          aluminiowej, która pomieszczą jak najwięcej groszówek. Na koniec lekcji
-          grupy zastanowią się jakie doświadczenia wyniosły z ćwiczenia i powiążą
-          je z problemami które będą rozwiązywać w dalszej części kursu.  \n\n## Zasoby\n\n*
-          [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          aluminiowej, które pomieszczą jak najwięcej groszówek. Na koniec lekcji
+          grupy zastanowią się, jakie doświadczenia wyniosły z ćwiczenia i powiążą
+          je z problemami, które będą rozwiązywać w dalszej części kursu.  \n\n##
+          Zasoby\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Poprawnie!
         - {}
-        - {}
+        - text: Nie wiem.
         questions:
         - {}

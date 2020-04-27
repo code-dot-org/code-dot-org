@@ -211,9 +211,13 @@ mi:
     access_denied: Kāore i a koe te mana uru ki tēnei %{model}.
   nav:
     header:
-      finished_hoc: Kua oti i au taku Hour of Code
+      finished_hoc: Kua oti i ahau!
       sign_in_to_save: Takiuru atu ki te tiaki i aku mahi
+      course_catalog: Whārangi Akoranga
       project_gallery: Ngā Tūmahi
+      help_support: Māngai tautoko
+      report_bug: Pūrongo mai to raru
+      about: Whakamārama
     user:
       district_dashboard: Paemana ā-Rohe
       label: Tēnā koe %{username}
@@ -231,7 +235,7 @@ mi:
       artist: Rehetoi
       bounce: Tupana
       calc: Calc
-      dance: Te Paati Kanikani
+      dance: Te Pāti Kanikani
       eval: Eval
       flappy: Flappy
       frozen: Frozen
@@ -291,6 +295,7 @@ mi:
       mukua ina mukua tō ake pūkete.'
     delete_confirm: Āe rānei e hiahia ana koe ki te muku i tō pūkete?
     update_email: Whakahou
+    none: Kore
   user_level:
     completed: Kua oti
     tried: Kua ngana
@@ -398,8 +403,9 @@ mi:
     trademark: He moko te &copy; Code. org, %{current_year}. Code. org&reg; te tohu
       CODE me Hour of Code&reg; o Code.org.
     copyright: Manatārua
+    more: Nui ake
     feedback: Tuku urupare
-    translate: Āwhinatia mātou ki te whakamāori ki tō reo
+    translate: Āwhinatia mātou ki te whakamāori to mātou rauemi
     support: Tautoko
     tos_short: Ngā Ture
     tos: Ngā Ture Ratonga
@@ -476,9 +482,9 @@ mi:
       audience: Pakeke 13+
       cta: Ako me pēhea
     dance:
-      title: Te Paati Kanikani
+      title: Te Pāti Kanikani
     dance-2019:
-      title: Te Paati Kanikani
+      title: Te Pāti Kanikani
     hoc:
       title: Rīrapa Tauhira
       body: Whakamātauria ngā mahi waiwai o te pūtaiao rorohiko. He miriona tāngata
@@ -566,6 +572,7 @@ mi:
     report_bug: Pūrongotia tētahi Iro
     support: Tono Āwhina
     help_resources: Te Āwhina me ngā Rauemi
+    help_support: Māngai tautoko
   free_response:
     placeholder: Whakaurua tō whakautu i konei
   multi:
@@ -880,6 +887,7 @@ mi:
     ki te tirohia anō rānei o whakautu.
   hidden_stage: Kāore tō pouako i whakaaro ka eke koe ki konei. Tēnā uia tō pouako
     kia mōhio ai koe ko tēhea te akoranga e tika ana mōu i tēnei wā.
+  return_unit_overview: Haere ki te tirohanga whānui o te kōwae ako
   return_course_overview: Haere ki te tirohanga whānui o te kōwae ako
   view_teacher_guide: Tirohia te aratohu kaiako
   pd:
@@ -900,3 +908,4 @@ mi:
         opt_in_no: Kāore
   gdpr_dialog:
     true: Āe
+  copy: Tārua

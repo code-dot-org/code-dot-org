@@ -495,6 +495,25 @@ pt-BR:
       NEW Course 4 Bee For Loops 5:
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
           "Ação" estão aqui agora.
+      New Artist Project:
+        New Artist Project_callout1: 'Clique nas categorias para ver os blocos e a
+          sua caixa de ferramentas! Arraste os blocos para o espaço de trabalho e
+          adiciona-os ao seu programa. '
+        New Artist Project_callout2: Clique em "Executar" para salvar e executar seu
+          programa
+        sign_in_to_save_project: Deseja acessar seu projeto depois? Faça Login para
+          salvar esse projeto em sua conta!
+      New Frozen Project:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Clique nas categorias para ver os blocos em
+          sua caixa de ferramentas! Arraste os blocos para a área de trabalho para
+          adicionar eles ao seu programa
+        New Play Lab Project_callout2: Clique em "Executar" para salvar e executar
+          seu programa
+        sign_in_to_save_project: Deseja acessar seu projeto depois? Faça Login para
+          salvar esse projeto em sua conta!
       Overworld Chop Trees:
         craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
       Overworld Chop Trees_2019:

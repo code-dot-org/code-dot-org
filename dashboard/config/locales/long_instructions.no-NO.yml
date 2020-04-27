@@ -226,7 +226,7 @@ no-NO:
       Dance_Party_02: |-
         La oss få disse elgene til å danse!
 
-        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
+        Dra ut<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>-blokken til arbeidsområdet. Koble den til under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>-blokken. Danseren din vil nå starte et nytt dansetrinn etter den fjerde takten.
 
         **Takter** brukes for å regne tiden i musikk. I denne veiledningen er en takt fire slag lang.
       Dance_Party_03: "_Nå svinger det!_ \n\nLegg til en <xml><block type=\"Dancelab_atTimestamp\"><title
@@ -256,7 +256,7 @@ no-NO:
         Nå vet vi hvordan man endrer en dansers egenskaper. Vi kan også få de samme egenskapene til å tilsvare musikken automatisk ved å bruke denne blokken:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -466,6 +466,8 @@ no-NO:
         kode for å hjelpe deg med å utforske denne verdenen."
       MC_HOC_2017_FP20x20_2019: "**Fritt spill:** Nå er det opp til deg! Bruk agentens
         kode for å hjelpe deg med å utforske denne verdenen."
+      New Minecraft Hero Project: "**Fritt spill:** Nå er det opp til deg! Bruk agentens
+        kode for å hjelpe deg med å utforske denne verdenen."
       Overworld Move to Sheep: Legg til enda en "gå fremover"-kommando for å nå fram
         til sauen.
       Overworld Move to Sheep_2019: Legg til enda en "gå fremover"-kommando for å
@@ -518,6 +520,16 @@ no-NO:
         bort den slemme grisen!"_
       courseA_maze_seq1_2019: _"Prøv deg fram med disse blokkene og prøv å få meg
         bort den slemme grisen!"_
+      courseC_artist_loopsPrePre1a_2019: |-
+        Kunstneren er på feil sted!
+
+        Bruk <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml>-blokken for å få kunstneren til midten av området.
+        Deretter tegn en 50 piksler lang linje med <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>-blokken.
+      courseD_artist_5_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        \\_\"Prøv å endre formen eller lengden på linjene for å lage den din egen!\"\n\n<br/>
+        \ \n\n**Inspirasjon:** Du kan ende tegningen din sånn du vil, men her er et
+        forslag:\n\n-   Prøv å endre typen former i midten av snøflaket med den på
+        enden av hver linje!"
       courseD_bee_nestedLoops8: Samle inn all nektaren fra hver blomst og lag honning
         i alle bikubene. Bruk løkke i løkke.
       courseD_bee_nestedLoops8_2018: Samle inn all nektaren fra hver blomst og lag

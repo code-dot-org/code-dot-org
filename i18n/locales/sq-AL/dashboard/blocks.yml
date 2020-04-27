@@ -2,17 +2,27 @@
 sq:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: Asnjë
+          MOVE2:
+            MOVES.Rest: Asnjë
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekondat
       Dancelab_changeMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: Asnjë
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Asnjë
           DIR:
             '1': "→"
             "-1": "←"
@@ -28,11 +38,15 @@ sq:
             '"height"': gjatësia
       Dancelab_doMoveEachLR:
         options:
+          MOVE:
+            MOVES.Rest: Asnjë
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
+          MOVE:
+            MOVES.Rest: Asnjë
           DIR:
             '1': "→"
             "-1": "←"
@@ -49,6 +63,10 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Asnjë
       Dancelab_ifTime:
         options:
           UNIT:
@@ -123,6 +141,14 @@ sq:
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Asnjë
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': Asnjë
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -139,6 +165,14 @@ sq:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Asnjë
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Asnjë
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -301,6 +335,10 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Asnjë
       Mikelab_randomColor:
         text: ngjyrë e rastësishme
       Mikelab_repeatUntilComplete:
@@ -366,11 +404,10 @@ sq:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': trego
-            '"hide"': fsheh
+            '"random"': zakonshëm
       binary_move:
         options:
           DIR:

@@ -1,4 +1,5 @@
 name 'csp-pt-tech-setup-and-tools_2018_2019'
+editor_experiment ''
 markdown <<MARKDOWN
 # Tech Setup and Tools for the AP Performance Tasks
 
@@ -167,6 +168,5 @@ teacher_markdown <<MARKDOWN
 
 * Here is the [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
 * You will need to follow these instructions to setup your class and to approve students
-
 * The Video screen capture requires using 3rd party software. We recommend investigating options that will work for your school's software requirements. 
 MARKDOWN

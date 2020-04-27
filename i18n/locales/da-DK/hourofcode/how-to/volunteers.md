@@ -2,7 +2,7 @@
 title: Vejledning til Hour of Code frivillige
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How-to Guide for frivillige
 
@@ -243,5 +243,5 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
         </p>
         <p>
-          {{ signup_button }}
+          {{ tilmeld_knap }}
         </p>

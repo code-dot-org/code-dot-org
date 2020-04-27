@@ -186,7 +186,7 @@ ga-IE:
           arís eile
       Course 4 Play Lab Params 2:
         Course_4 _Play_Lab_Params_2_1: Cliceáil "eagar" chun an fheidhm seo a athrú
-          sa chaoi go n-úsáideann sé paraiméadar height.
+          sa chaoi go n-úsáideann sé paraiméadar "airde".
       Course 4 Play Lab Params 3:
         edit_function: Cliceáil anseo le d'fheidhm a chur in eagar.
       Course 4 Play Lab Params 6:
@@ -198,10 +198,10 @@ ga-IE:
           anois! Cliceáil lipéad chun na píosaí laistigh de a fheiceáil.
       Course 4 Playlab For Loops 4b:
         Course_4_Playlab_For_Loops_4b_1: Tabhair faoi deara go bhfuil ainm difriúil
-          ar an athróg "áiritheoir" do gach carachtar. Déantar é seo chun go mbeidh
-          gach lúb "do gach" i gceannas ar a háiritheoir féin.
+          ar an athróg `áiritheoir` do gach carachtar. Déantar é seo chun go mbeidh
+          gach lúb `do gach` i gceannas ar a háiritheoir féin.
         Course_4_Playlab_For_Loops_4b_2: Sa dúshlán seo, níl cead agat ach an "incrimint"
-          sna lúba "do gach" a athrú.
+          sna lúba `do gach` a athrú.
       Course 4 SCV 6:
         Course_4_SCV_6: Leis an mbloc seo, is féidir leat beagnach aon dath a thaitníonn
           leat a roghnú! Bain triail as uimhreacha éagsúla le féachaint cad a tharlóidh!
@@ -218,8 +218,15 @@ ga-IE:
         dance_callout_11_b: Bloc nua!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Gheobhaidh tú na blocanna "gach lacha" anseo
+      Dance_2019_01:
+        dance_callout_01: Roghnaigh cineál an damhsóra anseo.
+      Dance_2019_02:
+        dance_callout_11_a: Cuir an bloc seo le do chlár.
+        arrow_buttons: Úsáid na saigheada chun an damhsóir a rialú.
       Dance_2019_04:
         dance_callout_02: Cuir an bloc seo le do chlár!
+      Dance_2019_05:
+        dance_callout_05: Cuir teagmhas nua le do chlár.
       Dance_2019_06:
         dance_party_11_5_groups: Bloc nua!
       Dance_2019_07:
@@ -323,6 +330,25 @@ ga-IE:
       NEW Course 4 Bee For Loops 5:
         actions_category: Tá cuma nua ar an mbosca uirlisí! Gheobhaidh tú na blocanna
           "Gníomhartha" anseo anois.
+      New Artist Project:
+        New Artist Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Artist Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thionscadal ar ball?
+          Logáil isteach chun an cód seo a shábháil i do chuntas!
+      New Frozen Project:
+        snowflake_dropdown: Úsáid an roghchlár anuas seo chun calóga sneachta éagsúla
+          a chruthú!
+      New Play Lab Project:
+        New Play Lab Project_callout1: Cliceáil na catagóirí chun na blocanna sa mbosca
+          uirlisí a fheiceáil! Tarraing blocanna go dtí an spás oibre chun iad a chur
+          leis an gclár
+        New Play Lab Project_callout2: Cliceáil "Rith" chun do chód a shábháil agus
+          a rith
+        sign_in_to_save_project: Ar mhaith leat teacht ar do thionscadal ar ball?
+          Logáil isteach chun an cód seo a shábháil i do chuntas!
       Overworld Chop Trees:
         craft_callout_preplaced: Tús maith leath na hoibre! Chuireamar cúpla bloc
           sa chlár cheana
@@ -365,6 +391,8 @@ ga-IE:
         craft_what_is_iron: Tochail an t-iarann seo!
       Underground Iron_2019:
         craft_what_is_iron: Tochail an t-iarann seo!
+      Virtual Pet 2_2019:
+        '': Cliceáil anseo!
       behaviors 1:
         behaviors_edit: Cliceáil anseo le féachaint conas a oibríonn sé seo.
       behaviors 4:
@@ -827,6 +855,8 @@ ga-IE:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
           deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
+      courseE_aboutme_2:
+        '': Cliceáil anseo!
       courseE_artist_functions1:
         courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
           an chéad chearnóg a chruthú.

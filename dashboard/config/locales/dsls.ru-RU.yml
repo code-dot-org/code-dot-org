@@ -129,11 +129,13 @@ ru-RU:
         title: Вопрос с несколькими вариантами ответа
       2-3 artist debug multi 1:
         answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
           correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - text: Что тебе нужно исправить чтобы сделать круг завершённым?
         title: 'Художник: Отладка и Множественный выбор 1'
@@ -179,10 +181,10 @@ ru-RU:
         title: Художник. Циклы. Выбор ответа
       2-3 artist match 1:
         answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Сопоставь фигуру и блоки, которые её рисуют.
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
@@ -1624,6 +1626,9 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - feedback: Неправильно
         questions:
@@ -1632,6 +1637,9 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - feedback: Неправильно
         questions:
@@ -1641,7 +1649,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1649,7 +1662,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1657,7 +1675,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1665,8 +1688,13 @@ ru-RU:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: 'Верно
+
+'
         - text: '15'
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1674,8 +1702,13 @@ ru-RU:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: 'Верно
+
+'
         - text: '15'
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1683,63 +1716,161 @@ ru-RU:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: 'Верно
+
+'
         - text: '15'
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
-        - {}
+        - text: 'Программа будет работать без сбоев. Скрат доберется до желудя.
+
+'
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
-        - {}
+        - text: 'Посмотри внимательно на приведенный ниже код. Из-за какой ошибки
+            произойдет первый сбой этой программы?
+
+'
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
-        - {}
+        - text: 'Программа будет работать без сбоев. Скрат доберется до желудя.
+
+'
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
-        - {}
+        - text: 'Посмотри внимательно на приведенный ниже код. Из-за какой ошибки
+            произойдет первый сбой этой программы?
+
+'
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
-        - {}
+        - text: 'Программа будет работать без сбоев. Скрат доберется до желудя.
+
+'
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
-        - {}
+        - text: 'Посмотри внимательно на приведенный ниже код. Из-за какой ошибки
+            произойдет первый сбой этой программы?
+
+'
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: В итоге птичка не дойдет до свинки на один шаг.
+          feedback: 'Неверно. Этот код подведет птичку точно к свинке.
+
+'
+        - text: 'Птичка доберется до свинки.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
+        - text: 'Птичка наткнется на взрывчатку.
+
+'
+          feedback: 'Неверно. Этот код подведет птичку точно к свинке.
+
+'
+        - text: 'Не знаю.
+
+'
+          feedback: 'Этот код подведет птичку точно к свинке.
+
+'
         questions:
-        - {}
+        - text: "Изучи приведенный ниже код очень внимательно. Что произойдет, когда
+            ты нажмешь на \"\"Выполнить\"\"? \n"
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: В итоге птичка не дойдет до свинки на один шаг.
+          feedback: 'Неверно. Этот код подведет птичку точно к свинке.
+
+'
+        - text: 'Птичка доберется до свинки.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
+        - text: 'Птичка наткнется на взрывчатку.
+
+'
+          feedback: 'Неверно. Этот код подведет птичку точно к свинке.
+
+'
+        - text: 'Не знаю.
+
+'
+          feedback: 'Этот код подведет птичку точно к свинке.
+
+'
         questions:
-        - {}
+        - text: "Изучи приведенный ниже код очень внимательно. Что произойдет, когда
+            ты нажмешь на \"\"Выполнить\"\"? \n"
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: В итоге птичка не дойдет до свинки на один шаг.
+          feedback: 'Неверно. Этот код подведет птичку точно к свинке.
+
+'
+        - text: 'Птичка доберется до свинки.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
+        - text: 'Птичка наткнется на взрывчатку.
+
+'
+          feedback: 'Неверно. Этот код подведет птичку точно к свинке.
+
+'
+        - text: 'Не знаю.
+
+'
+          feedback: 'Этот код подведет птичку точно к свинке.
+
+'
         questions:
-        - {}
+        - text: "Изучи приведенный ниже код очень внимательно. Что произойдет, когда
+            ты нажмешь на \"\"Выполнить\"\"? \n"
       courseC_multi_starWars_predict1:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - text: Я не знаю
         questions:
         - {}
@@ -1748,6 +1879,9 @@ ru-RU:
         - {}
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - text: Я не знаю
         questions:
         - {}
@@ -1756,6 +1890,9 @@ ru-RU:
         - {}
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - text: Я не знаю
         questions:
         - {}
@@ -1763,24 +1900,39 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1790,6 +1942,9 @@ ru-RU:
         - text: В
         - text: Г
           correct: true
+          feedback: 'Верно
+
+'
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1799,6 +1954,9 @@ ru-RU:
         - text: В
         - text: Г
           correct: true
+          feedback: 'Верно
+
+'
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1808,81 +1966,129 @@ ru-RU:
         - text: В
         - text: Г
           correct: true
+          feedback: 'Верно
+
+'
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: А
           correct: true
+          feedback: 'Верно
+
+'
         - text: Б
         - text: В
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: А
           correct: true
+          feedback: 'Верно
+
+'
         - text: Б
         - text: В
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: А
           correct: true
+          feedback: 'Верно
+
+'
         - text: Б
         - text: В
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -1890,7 +2096,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -1898,7 +2109,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -1906,7 +2122,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -1914,8 +2135,13 @@ ru-RU:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: 'Верно
+
+'
         - text: '12'
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
@@ -1923,8 +2149,13 @@ ru-RU:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: 'Верно
+
+'
         - text: '12'
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
@@ -1932,8 +2163,13 @@ ru-RU:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: 'Верно
+
+'
         - text: '12'
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
@@ -1941,7 +2177,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -1949,7 +2190,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1957,7 +2203,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -1965,39 +2216,64 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -2005,7 +2281,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -2013,7 +2294,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -2021,71 +2307,128 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: 'Птичка доберется до свинки.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: 'Птичка доберется до свинки.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: 'Птичка доберется до свинки.
+
+'
+          correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ничего. Скрат не сдвинется с места.
+        - text: Добираясь до желудя, Скрат трижды переместится вперед, повернет, а
+            затем переместится вперед еще трижды!
+          correct: true
+          feedback: 'Верно
+
+'
+        - text: Скрат переместится вперед, а затем повернется и упадет.
+        - text: 'Не знаю.
+
+'
+          feedback: Вставив блок «двигаться вперед» в блок «повторить», ты заставишь
+            Скрата трижды переместиться вперед. Затем он повернет и переместится вперед
+            еще трижды, пока не доберется до желудя!
         questions:
-        - {}
+        - text: В этом коде используется новый блок. Как ты думаешь, что произойдет,
+            когда ты нажмешь «Выполнить»?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -2094,6 +2437,9 @@ ru-RU:
         - {}
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -2101,6 +2447,9 @@ ru-RU:
         - {}
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         questions:
         - {}
@@ -2109,6 +2458,9 @@ ru-RU:
         - {}
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         questions:
         - {}
@@ -2140,16 +2492,26 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -2157,7 +2519,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -2165,7 +2532,12 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -2173,61 +2545,99 @@ ru-RU:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: 'Верно
+
+'
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
         questions:
@@ -2236,6 +2646,9 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
         questions:
@@ -2244,6 +2657,9 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
         questions:
@@ -2253,7 +2669,9 @@ ru-RU:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
@@ -2261,13 +2679,18 @@ ru-RU:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
         questions:
@@ -2276,6 +2699,9 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
         questions:
@@ -2284,6 +2710,9 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
         - {}
         questions:
@@ -2300,23 +2729,43 @@ ru-RU:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: 'Верно
+
+'
         - {}
-        - {}
+        - text: 'Не знаю.
+
+'
         questions:
         - {}
+      gradek1_activity_beNice:
+        markdown: "# Правила поведения в компьютерной лаборатории\n  \n<br/><br/>
+          \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nПерейти к плану урока\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Продолжить</a>\n"

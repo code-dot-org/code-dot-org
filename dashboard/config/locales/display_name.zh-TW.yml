@@ -3,11 +3,12 @@ zh-TW:
   data:
     display_name:
       AB_Debug_Artist1: '創作者的編碼調適 #1 (AB)'
+      Alien Defender: 外星人入侵
       App Lab Intro 8 - Video Design Mode: 影片：設計模式
-      App Lab Intro 8 - Video Getting Started: 視頻：入門
+      App Lab Intro 8 - Video Getting Started: 影片：入門
       App Lab Intro 8 - Video Images and Sounds: 影片：圖像和聲音
-      App Lab Intro 8 - Video Make It Interactive: 影片：加上互動性
-      App Lab Intro 8 - Video Share Your App: 影片：與大家共享你所製作的應用
+      App Lab Intro 8 - Video Make It Interactive: 影片：讓它有互動性
+      App Lab Intro 8 - Video Share Your App: 影片：分享你的程式
       AppLab Intro 7 - Change Screen Color: 更改顯示幕顏色
       AppLab Intro 7 - Change Text 2: 修改文字
       AppLab Intro 7 - Full Text: 兩個按鈕
@@ -80,6 +81,9 @@ zh-TW:
       CSD U3 - Booleans Video: 影片：布林值
       CSD U3 - Booleans Video_2018: 影片：布林值
       CSD U3 - Booleans Video_2019: 影片：布林值
+      CSD U3 - Conditionals Video: 影片：條件判斷
+      CSD U3 - Conditionals Video_2018: 影片：條件判斷
+      CSD U3 - Conditionals Video_2019: 影片：如果/否則 陳述式
       CSD U3 Animation Edit Map: 圖像的編輯
       CSD U3 Animation Edit Map_2018: 圖像的編輯
       CSD U3 Animation Edit Map_2019: 圖像的編輯
@@ -89,6 +93,7 @@ zh-TW:
       CSD U3 Drawing Squares to Corners: 網格的用法
       CSD U3 Drawing Squares to Corners_2018: 網格的用法
       CSD U3 Drawing Squares to Corners_2019: 網格的用法
+      CSD U3 Functions Call Function_2019: 影片：呼叫和定義函式
       CSD U3 L11 Freeplay: 自由發揮
       CSD U3 L11 Freeplay_2018: 自由發揮
       CSD U3 L11 Freeplay_2019: 自由發揮
@@ -155,6 +160,7 @@ zh-TW:
       CSD U3 collisions predict set velocity code: 角色的互動
       CSD U3 collisions predict set velocity code_2018: 角色的互動
       CSD U3 collisions predict set velocity code_2019: 角色的互動
+      CSD U3 function video: 影片：函式
       CSD U3 istouching map: 碰撞檢測
       CSD U3 istouching map_2018: 碰撞檢測
       CSD U3 istouching map_2019: 碰撞檢測
@@ -289,15 +295,16 @@ zh-TW:
       CSD U6 arrays intro: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2018: 陣列（Arrays）的介紹
       CSD U6 arrays intro_2019: 陣列
+      CSD U6 arrays video: 影片：陣列的介紹
       CSD U6 circuit button map: 按鈕電路
       CSD U6 circuit button map_2018: 按鈕電路
       CSD U6 circuit button map_2019: 按鈕電路
       CSD U6 emoji race demo: 範例程式
       CSD U6 emoji race demo_2018: 範例程式
       CSD U6 emoji race demo_2019: 範例程式
-      CSD U6 for loop map: 計數迴圈（For Loops）
-      CSD U6 for loop map_2018: 計數迴圈（For Loops）
-      CSD U6 for loop map_2019: 計數迴圈（For Loops）
+      CSD U6 for loop map: 計次迴圈（For Loops）
+      CSD U6 for loop map_2018: 計次迴圈（For Loops）
+      CSD U6 for loop map_2019: 計次迴圈（For Loops）
       CSD U6 functions paramters video: 函式帶參數
       CSD U6 functions paramters video_2018: 函式帶參數
       CSD U6 functions paramters video_2019: 函式帶參數
@@ -358,19 +365,29 @@ zh-TW:
       'CSD: Animating Sprite Movement': 影片：角色動作
       'CSD: Animating Sprite Movement_2018': 影片：角色動作
       'CSD: Animating Sprite Movement_2019': 影片：角色動作
+      'CSD: Animation Tab': 影片：動畫頁籤
+      'CSD: Animation Tab_2018': 影片：動畫頁籤
+      'CSD: Animation Tab_2019': 影片：動畫頁籤
       'CSD: Drawing in Game Lab 1': 影片：用 Game Lab 繪圖 - 第 1 部分
       'CSD: Drawing in Game Lab 1_2018': 影片：用 Game Lab 繪圖 - 第 1 部分
       'CSD: Drawing in Game Lab 1_2019': 影片：用 Game Lab 繪圖 - 第 1 部分
       'CSD: Drawing in Game Lab 2': 影片：用 Game Lab 繪圖 - 第 2 部分
       'CSD: Drawing in Game Lab 2_2018': 影片：用 Game Lab 繪圖 - 第 2 部分
       'CSD: Drawing in Game Lab 2_2019': 影片：用 Game Lab 繪圖 - 第 2 部分
-      'CSD: For Loop_2018': 計數迴圈（For Loops）
+      'CSD: For Loop_2018': 計次迴圈（For Loops）
+      'CSD: For Loop_2019': 影片：計次迴圈
+      'CSD: Introduction to the Draw Loop': 影片：圖形迴圈的介紹
+      'CSD: Introduction to the Draw Loop_2018': 影片：圖形迴圈的介紹
+      'CSD: Introduction to the Draw Loop_2019': 影片：圖形迴圈的介紹
       'CSD: Sprite Velocity': 影片：速度
       'CSD: Sprite Velocity_2018': 影片：速度
       'CSD: Sprite Velocity_2019': 影片：速度
       'CSD: Sprites in Game Lab': 影片：角色的介紹
       'CSD: Sprites in Game Lab_2018': 影片：角色的介紹
       'CSD: Sprites in Game Lab_2019': 影片：角色的介紹
+      'Course E: Artist Project': 課程 E 小藝術家專案
+      'Course E: Artist Project_2018': 課程 E 小藝術家專案
+      'Course E: Artist Project_2019': 課程 E 小藝術家專案
       CourseEF_video_IntroSpriteLab: 這是 Sprite Lab
       CourseEF_video_IntroSpriteLab_2019: 這是 Sprite Lab
       CourseEF_video_MakeSprite: 如何建立一個角色
@@ -389,14 +406,25 @@ zh-TW:
       Dance_Party_extras_speed_2019: 加速、減速
       Dance_Party_extras_visible: 他們要去哪？
       Dance_Party_extras_visible_2019: 他們要去哪？
+      Intro to Web Lab - Part 1: 影片：Web Lab 介紹 - 第 1 部分
+      Intro to Web Lab - Part 1_2018: 影片：Web Lab 介紹 - 第 1 部分
+      Intro to Web Lab - Part 1_2019: 影片：Web Lab 介紹 - 第 1 部分
+      Intro to Web Lab - Part 2: 影片：Web Lab 介紹 - 第 2 部分
+      Intro to Web Lab - Part 2_2018: 影片：Web Lab 介紹 - 第 2 部分
+      Intro to Web Lab - Part 2_2019: 影片：Web Lab 介紹 - 第 2 部分
       MC_HOC_2017_04POINT5_RYAN: 沙漠
       MC_HOC_2017_04POINT5_RYAN_2019: 沙漠
       MC_HOC_2017_FP20x20: 自由發揮
       MC_HOC_2017_FP20x20_2019: 自由發揮
+      New Minecraft Hero Project: 自由發揮
       OPD-K5 WhatIsCS: 計算機科學是什麼？
       Oceans_Video_Machine_Learning: 影片：機器學習
-      Oceans_Video_Societal_Implications: 影片：社會含義
-      Oceans_Video_Training_Data: 影片：訓練數據
+      Oceans_Video_Societal_Implications: 影片：社會影響
+      Oceans_Video_Training_Data: 影片：訓練的數據
+      'Video: Intro to CSS Part 2_2018': 影片：CSS 介紹 - 第 2 部分
+      'Video: Intro to CSS Part 2_2019': 影片：CSS 介紹 - 第 2 部分
+      'Video: Intro to CSS_2018': 影片：CSS 介紹
+      'Video: Intro to CSS_2019': 影片：CSS 介紹
       courseA_video_Stevie: Stevie 和 Big Project
       courseA_video_Stevie_2018: Stevie 和 Big Project
       courseB_video_Unspotted: 沒被發現的蟲蟲
@@ -404,6 +432,10 @@ zh-TW:
       courseF_artist_for1: 計次迴圈自由發揮（初級）
       courseF_artist_for1_2018: 計次迴圈自由發揮（初級）
       courseF_artist_for1_2019: 計次迴圈自由發揮（初級）
+      courseF_video_csMatters: 課程項目結束
+      courseF_video_csMatters_2018: 影片：計算機科學很重要
+      csd U3 conditional statements video: 影片：如果/否則 陳述式
+      csd U3 conditional statements video_2019: 影片：條件陳述式
       csd-pre-survey-2017-levelgroup_2018: 教學內容概覽
       csd-pre-survey-levelgroup_2019: 教學內容概覽
       scrat_loops_C-F_video: 冰河歷險紀中的迴圈影片

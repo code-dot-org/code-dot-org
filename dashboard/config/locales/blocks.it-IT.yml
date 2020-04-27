@@ -1129,7 +1129,7 @@ it:
       gamelab_setBackground:
         text: imposta il colore dello sfondo {COLOR}
       gamelab_setBackgroundImage:
-        text: imposta il colore dello sfondo {IMG}
+        text: imposta lo sfondo {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta
@@ -1511,6 +1511,14 @@ it:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: sposta {SPRITE} di {DISTANCE} pixel verso {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Ovest
       aalab_prompt:
         text: chiedi domanda {MESSAGE}
       aalab_scene:
@@ -1519,11 +1527,10 @@ it:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mostra
-            '"hide"': nascondi
+            '"random"': a caso
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:

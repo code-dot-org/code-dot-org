@@ -4,7 +4,6 @@ ro:
     script:
       category:
         csd_2018_category_name: Descoperiri Informatice ('18-'19)
-        csf_category_name: Fundamentele CS
         csf_2018_category_name: Fundamentele Informaticii (2018)
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
@@ -4777,7 +4776,6 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         csp6-pilot:
-          title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
@@ -4980,3 +4978,616 @@ ro:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"
+        csp4-2020:
+          description_audience: "[șir gol]"
+        csp5-2020:
+          description_audience: "[șir gol]"
+        csp7-2020:
+          description_audience: "[șir gol]"
+        csd2-projects-temp:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+        csp9-pilot:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd2-2020:
+          description_audience: "[șir gol]"
+          stages:
+            Project - Planning Layout and Style:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd1-2020:
+          description_audience: "[șir gol]"
+          stages:
+            CS Discoveries Pre-survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd4-2020:
+          description_audience: "[șir gol]"
+          stages:
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd5-2020:
+          description_audience: "[șir gol]"
+          stages:
+            Representing Images:
+              description_teacher: În această lecţie elevii învață cum calculatoarele
+                reprezintă imagini. Pentru a începe lecţia, ei consideră provocarea
+                transformării complexității viziunii într-un model binar. Printr-o
+                serie de imagini care arată cum se face această transformare, eleviilor
+                li se prezintă conceptul de împărțire a imaginilor în pătrate sau
+                "pixeli" care pot fi apoi pornite sau oprite în mod individual pentru
+                a realiza întreaga imagine. Elevii parcurg apoi un set scurt de provocări
+                folosind widget-ul de pixelare pentru a desena imagini alb-negru.
+                Puzzle-uri sunt concepute pentru a apela unele din provocările reprezentării
+                imaginilor în acest fel. În încheiere, elevii fac conexiuni între
+                sistemul de reprezentare a imaginilor și sistemul de reprezentare
+                a textului pe care l-au învățat în lecția anterioară.
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd6-2020:
+          description_audience: "[șir gol]"
+          stages:
+            Innovations in Computing:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Designing Screens with Code:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Circuit Playground:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Input Unplugged:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Board Events:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Getting Properties:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Analog Input:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Program Design Process:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Project: Make a Game':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Arrays and Color LEDs:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Making Music:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Arrays and For Loops:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Accelerometer:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions with Parameters:
+              name: Funcții cu Parametrii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Circuits and Physical Prototypes:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Project: Prototype an Innovation':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd3-2020:
+          description_short: Programare
+          description_audience: "[șir gol]"
+          stages:
+            Variables:
+              name: Variabile
+            Sprite Properties:
+              name: Proprietăți spiriduș
+            Text and Captioned Scenes:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Text:
+              name: Text
+        coursea-2020:
+          description_short: O introducere în informatică pentru preșcolari.
+          stages:
+            Going Places Safely:
+              name: Mergând în locuri în siguranţă
+            'Programming: Happy Maps':
+              name: Hărţi Fericite
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Amprenta ta Digitală
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+            'Loops: Getting Loopy':
+              name: Transformând în Buclă
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Brăţări Binare
+            'Events: The Big Event':
+              name: Marele eveniment
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programare pe Hârtie Milimetrică
+            Relay Programming:
+              name: Programare de releu
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+            'Unplugged: Binary':
+              name: Imagini binare
+            Artist Binary:
+              name: Binar cu artist
+            Digital Citizenship:
+              name: Cetățenia Digitală
+            Dance Party:
+              name: Petrecere dansantă
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Compunând Cântece
+        coursef-2020:
+          description_short: Învățați toate conceptele din fundamentele informaticii
+            şi creați propria dvs. artă, poveste sau joc.
+          stages:
+            Envelope Variables:
+              name: Variabile de tip plic
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+            Internet:
+              name: Internetul
+            Crowdsourcing:
+              name: Obţinând Informaţii/Critici
+        express-2020:
+          stages:
+            Dance Party:
+              name: Petrecere dansantă
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Debugging in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Collector:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops with Rey and BB-8:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Nested Loops in Frozen:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Concept Practice with Minecraft ':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            While Loops in Farmer:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Conditionals in Minecraft: Voyage Aquatic':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Until Loops in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals & Loops in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Minecraft:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables as Constant in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables that Change in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables that Change in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops in Bee:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Learning Sprites with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Alien Dance Party with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Editing Behaviors:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Virtual Pet with Sprite Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Build A Project:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        pre-express-2020:
+          stages:
+            Learn to Drag and Drop:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sequencing with Scrat:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Maze:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming with Rey and BB-8:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Programming in Harvester:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Spelling Bee:
+              name: Albina de Ortografie
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Collector:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Ocean Scene with Loops:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops in Artist:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Tell a Story in Play Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Make a Game in Play Lab:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Numerele binare
+          description_audience: "[șir gol]"
+        csp2-2020:
+          stages:
+            The Need for Addressing:
+              name: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
+          description_audience: "[șir gol]"
+        csp3-2020:
+          description_audience: "[șir gol]"
+        csp6-2020:
+          description_audience: "[șir gol]"
+        csp8-2020:
+          description_audience: "[șir gol]"
+        csp9-2020:
+          description_audience: "[șir gol]"
+        csp10-2020:
+          description_audience: "[șir gol]"
+        csp-march-virtual:
+          description_short: "[șir gol]"
+        csp3-virtual:
+          description_short: Invata bazele programarii JavaScript printr-un design
+            usor folosind desenul.
+          description_audience: "[șir gol]"
+          stages:
+            The Need For Programming Languages:
+              name: Nevoia de limbaje de programare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            The Need for Algorithms:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creativity in Algorithms:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Using Simple Commands:
+              name: Folosirea comenzilor simle
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creating Functions:
+              name: Crearea de funcții
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions and Top-Down Design:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            APIs and Function Parameters:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Creating functions with Parameters:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Looping and Random Numbers:
+              name: Utilizarea buclelor și numerelor aleatoare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Practice PT - Design a Digital Scene:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 3 Chapter 1 Assessment:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Principles Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csd3-virtual:
+          description_short: Programare
+          description_audience: "[șir gol]"
+          stages:
+            Shapes and Randomization:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Shapes and Parameters:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Random Numbers:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprites and Animations:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Properties:
+              name: Proprietăți spiriduș
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Text and Captioned Scenes:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        jess-test-script:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd2-virtual:
+          description_audience: "[șir gol]"
+          stages:
+            Exploring Web Pages:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Intellectual Property:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Images:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Project - Planning Layout and Style:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Project - Building a Webpage:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Purpose of a  Websites:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Team Problem Solving:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sources and Research:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CSS Classes:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Planning a Multi-page Website:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Linking and Navigation:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Project - Website for a Purpose:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Peer Review and Final Touches:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+        csp5-virtual:
+          description_audience: "[șir gol]"
+          stages:
+            Buttons and Events:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Multi-screen Apps:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Multi-Screen App':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Controlling Memory with Variables:
+              name: Controlarea memoriei cu variabile
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Clicker Game':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 1:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            User Input and Strings:
+              name: Date introduse de utilizator şi șiruri de caractere
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            '"If" Statements Unplugged':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Boolean Expressions and "If" Statements:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            '"if-else-if" and Conditional Logic':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Color Sleuth':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 2:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            While Loops:
+              name: Repetiții While
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops and Simulations:
+              name: Bucle și simulări
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Introduction to Arrays:
+              name: Introducere în matrice
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Image Scroller':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 3:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Processing Arrays:
+              name: Matrice de prelucrare
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions with Return Values:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            'Building an App: Canvas Painter':
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 4:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Principles Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables:
+              name: Variabile
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Evenimente
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+        code-break-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        code-break-younger-staging:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        code-break-younger:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+        no-lg:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Repetiții While
+            Loops and Simulations:
+              name: Bucle și simulări
+            Introduction to Arrays:
+              name: Introducere în matrice
+            Processing Arrays:
+              name: Matrice de prelucrare
+          description_audience: "[șir gol]"

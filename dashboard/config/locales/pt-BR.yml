@@ -190,8 +190,6 @@ pt-BR:
     valid_password: Senha válida!
     invalid_password: A senha deve ter pelo menos 6 caracteres
     mismatch_password: As duas senhas que você digitou são diferentes
-    under_13_consent: Caso eu tenha menos de 13 anos de idade, confirmo que tenho
-      autorização dos meus pais ou do meu tutor legal para usar os serviços do Code.org.
     student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
       para usar os serviços do Code.org.
     agree_us_website: Concordo em usar um site situado nos Estados Unidos.
@@ -287,6 +285,7 @@ pt-BR:
       %{name}
   parent_mailer:
     student_associated_subject: Informações de login para Code.org
+    parent_email_added_subject: Bem-vindo ao Code.org!
   teacher_mailer:
     new_teacher_subject: Bem-vindo ao Code.org!
     delete_teacher_subject: 'Notificação Code.org: Sua conta foi deletada'
@@ -544,6 +543,9 @@ pt-BR:
     auth_option_saved: Você vinculou sua conta %{provider} ao email %{email}.
     auth_option_saved_no_email: Você vinculou com êxito sua conta %{provider}.
     update_email: Atualizar
+    parent_guardian_email_label: E-mail dos responsáveis
+    none: Nenhum
+    encrypted: criptografado
   user_level:
     completed: Concluído
     tried: Provado
@@ -596,8 +598,7 @@ pt-BR:
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
-  certificate:
-    sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
@@ -689,6 +690,7 @@ pt-BR:
     download: Baixar Vídeo
     show_notes: Mostrar as notas
     show_video: Mostrar o vídeo
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Seu navegador não é compatível. Atualize seu navegador
@@ -882,11 +884,13 @@ pt-BR:
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+    toofew_title: Poucas respostas.
   multi-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar uma resposta.
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta.
+    toofew_title: Poucas respostas.
   level_group:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar respostas.
@@ -1185,6 +1189,13 @@ pt-BR:
     csp_traversals: Traversais
     csp_libraries: Bibliotecas
     csp_parameters_return_values: Parâmetros e valores de retorno
+    csp_unit1_2020: 'Unidade 1: Informação digital'
+    csp_unit2_2020: 'Unidade 2: A internet'
+    csp_unit3_2020: 'Unidade 3: Introdução ao design de aplicativos'
+    csp_unit6_2020: 'Unidade 6: Algoritmos'
+    csp_unit8_2020: 'Unidade 8: Preparação para o Create PT'
+    csp_unit9_2020: 'Unidade 9: Dados'
+    csp_unit10_2020: 'Unidade 10: Segurança cibernética e impactos globais'
     dlp: Prompts de reflexão
     time4cs_c1: Everglades e seus ecossistemas
     time4cs_c2: Cadeias de comida em Everglades
@@ -1275,6 +1286,11 @@ pt-BR:
     você deveria estar.
   hidden_script: Seu professor não esperava que estivesse aqui. Por favor, pergunte
     ao seu professor qual unidade você deveria estar.
+  no_course_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
+    ao seu professor em qual unidade você deveria estar.
+  no_course_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
+    deve ter acesso a esta unidade, por favor, escreva para support@code.org para
+    que possamos corrigir a situação.
   no_script_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
     ao seu professor em qual unidade você deveria estar.
   no_script_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
@@ -1432,3 +1448,17 @@ pt-BR:
     Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa
     página inicial.
   page_not_found_button: Volte para a página inicial
+  copy: Copiar
+  maker:
+    google_oauth:
+      login_with_google: Login no aplicativo Maker com o Google
+      enter_code: Digite o código fornecido quando você fez login pelo Google no seu
+        navegador padrão.
+      copy_code: Copie e cole esse código no aplicativo Maker para fazer login no
+        Code.org.
+      error_token_expired: O token expirou. Faça login novamente para receber um novo
+        token.
+      error_wrong_provider: Provedor incorreto. Confirme se você está fazendo login
+        com o Google.
+      error_invalid_user: Identificação de usuário inválida. Tente fazer login novamente.
+      error_no_code: Digite seu código de login.

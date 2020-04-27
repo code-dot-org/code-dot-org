@@ -152,6 +152,7 @@ const LimitedChangeView = ({description, children, onCancel, disabled}) => (
     <div>{description}</div>
     <DialogFooter>
       <Button
+        __useDeprecatedTag
         onClick={onCancel}
         color={Button.ButtonColor.gray}
         size={Button.ButtonSize.large}
@@ -177,6 +178,7 @@ const buttonPropTypes = {
 
 const UsePictureLoginButton = ({changeLoginType, disabled}) => (
   <Button
+    __useDeprecatedTag
     onClick={() => changeLoginType(SectionLoginType.picture)}
     size={Button.ButtonSize.large}
     text={i18n.loginTypePictureButton()}
@@ -186,6 +188,7 @@ const UsePictureLoginButton = ({changeLoginType, disabled}) => (
 UsePictureLoginButton.propTypes = buttonPropTypes;
 const UseWordLoginButton = ({changeLoginType, style, disabled}) => (
   <Button
+    __useDeprecatedTag
     onClick={() => changeLoginType(SectionLoginType.word)}
     size={Button.ButtonSize.large}
     text={i18n.loginTypeWordButton()}

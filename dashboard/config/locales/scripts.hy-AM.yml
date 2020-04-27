@@ -3,7 +3,6 @@ hy:
   data:
     script:
       category:
-        csf_category_name: CS Fundamentals
         csp_category_name: CS Principles
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: "'16-'17 CS Principles"
@@ -1655,3 +1654,104 @@ hy:
           stages:
             Conditionals:
               name: conditionals
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Գործառույթները պարամետրերով
+        csd3-2020:
+          description_short: Programming
+          stages:
+            Variables:
+              name: փոփոխականների
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+            Text:
+              name: տեքստ
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Going Places Safely
+            'Programming: Happy Maps':
+              name: Ուրախ Քարտեզներ
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Your Digital Footprint
+            Move It, Move It:
+              name: Տեղափոխել այն, տեղափոխել այն
+            'Loops: Getting Loopy':
+              name: Getting Loopy
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binary Bracelets
+            'Events: The Big Event':
+              name: The Big Event
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Գրաֆիկի Թուղթ Ծրագրավորում
+            Relay Programming:
+              name: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+            'Unplugged: Binary':
+              name: Binary Images
+            Artist Binary:
+              name: Artist Binary
+            Digital Citizenship:
+              name: Digital Citizenship
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: songwriting
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelope Variables
+            For Loop Fun:
+              name: For Loop Fun
+            Internet:
+              name: Համացանց
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spelling Bee
+        csp3-virtual:
+          description_short: Programming
+          stages:
+            Creating Functions:
+              name: Ստեղծվում գործառույթները
+        csd3-virtual:
+          description_short: Programming
+          stages:
+            Variables:
+              name: փոփոխականների
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Մինչ Loops
+            Variables:
+              name: փոփոխականների
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: գործառույթները
+        code-break:
+          stages:
+            Algorithms:
+              name: ալգորիթմները
+            Events:
+              name: Իրադարձություններ
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Մինչ Loops

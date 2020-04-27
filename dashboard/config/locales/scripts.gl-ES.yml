@@ -1602,3 +1602,101 @@ gl:
           stages:
             Conditionals:
               name: Condicionais
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funcións con parámetros
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Text:
+              name: Texto
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Ir a Sitios en modo Seguro
+            'Programming: Happy Maps':
+              name: Mapas Felices
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: A túa pegada dixital
+            Move It, Move It:
+              name: Creando camiños
+            'Loops: Getting Loopy':
+              name: Bucleándose
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Pulseiras Binarias
+            'Events: The Big Event':
+              name: O Gran Evento
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
+            Relay Programming:
+              name: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            'Unplugged: Binary':
+              name: Imaxes binárias
+            Artist Binary:
+              name: Artista binario
+            Digital Citizenship:
+              name: Cidadanía dixital
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Composición
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Variábeis de sobre
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+            Internet:
+              name: A Internet
+            Crowdsourcing:
+              name: Colaboración Aberta
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Abella que Soletrea
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Creando funcións
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Bucles mentres
+            Variables:
+              name: Variables
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funcións
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmos
+            Events:
+              name: Eventos
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Bucles mentres

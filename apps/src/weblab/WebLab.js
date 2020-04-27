@@ -379,7 +379,12 @@ WebLab.prototype.renameProjectFile = function(filename, newFilename, callback) {
 };
 
 // Called by Bramble when a file has been changed or created
-WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
+WebLab.prototype.changeProjectFile = function(
+  filename,
+  fileData,
+  callback,
+  skipPreWriteHook
+) {
   filesApi.putFile(
     filename,
     fileData,
@@ -389,7 +394,8 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
     xhr => {
       console.warn(`WebLab: error file ${filename} not renamed`);
       callback(new Error(xhr.status));
-    }
+    },
+    skipPreWriteHook
   );
 };
 
@@ -400,6 +406,10 @@ WebLab.prototype.changeProjectFile = function(filename, fileData, callback) {
  */
 WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
+  filesApi.registerErrorAction(() => {
+    dashboard.assets.hideAssetManager();
+    getStore().dispatch(actions.changeShowError(true));
+  });
 };
 
 // Called by Bramble when project has changed

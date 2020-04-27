@@ -22,7 +22,20 @@ class UserTest < ActiveSupport::TestCase
       user_type: User::TYPE_STUDENT,
       age: 8
     }
-
+    @good_data_google_classroom_import = {
+      name: 'tester',
+      user_type: User::TYPE_STUDENT,
+      age: 8,
+      provider: AuthenticationOption::GOOGLE,
+      uid: '110879982140384463192',
+    }
+    @good_parent_email_params = {
+      parent_email_preference_email: 'parent@email.com',
+      parent_email_preference_opt_in_required: '1',
+      parent_email_preference_opt_in: 'yes',
+      parent_email_preference_request_ip: '127.0.0.1',
+      parent_email_preference_source: EmailPreference::ACCOUNT_SIGN_UP
+    }
     @admin = create :admin
     @user = create :user
     @teacher = create :teacher
@@ -366,6 +379,20 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ['Email has already been taken'], user.errors.full_messages
   end
 
+  test 'cannot create user when a user with the same credentials exists' do
+    User.create(@good_data_google_classroom_import)
+    duplicate_user = User.create(@good_data_google_classroom_import)
+    assert_not_empty(duplicate_user.errors)
+    assert(duplicate_user.errors[:uid])
+  end
+
+  test 'cannot create user when an non-migrated user with the same credentials exists' do
+    User.create(@good_data_google_classroom_import).demigrate_from_multi_auth
+    duplicate_user = User.create(@good_data_google_classroom_import)
+    assert_not_empty(duplicate_user.errors)
+    assert(duplicate_user.errors[:uid])
+  end
+
   #
   # Email uniqueness validation tests
   #
@@ -652,10 +679,27 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test "cannot create teacher without email" do
-    assert_does_not_create(User) do
-      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+  test "cannot create manual teacher without email" do
+    user = assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher',
+                  password: 'xxxxxxxx', provider: 'manual'
+      )
     end
+    assert_not_nil user.errors[:email]
+  end
+
+  # FND-1130: This test will no longer be required
+  test "teacher with no email created after 2016-06-14 should be invalid" do
+    user = create :teacher, :without_email
+    assert user.invalid?
+    assert_not_empty user.errors[:email]
+  end
+
+  # FND-1130: This test will no longer be required
+  test "teacher with no email created before 2016-06-14 should be valid" do
+    user = create :teacher, :without_email, :before_email_validation
+    assert user.valid?
+    assert_empty user.errors[:email]
   end
 
   test "cannot make an account without email a teacher" do
@@ -2179,6 +2223,118 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '0', email_preference.form_kind
   end
 
+  test 'upgrade_to_teacher given valid params should delete parent_email field' do
+    parent_email = 'parent@email.com'
+    user = User.create(@good_data.merge(parent_email: parent_email))
+    assert_equal parent_email, user.parent_email
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+    user.reload
+    assert_nil user.parent_email
+  end
+
+  def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
+    assert_equal parent_email_params[:parent_email_preference_email], email_preference.email
+    assert_equal parent_email_params[:parent_email_preference_opt_in].casecmp?('yes'), email_preference.opt_in
+    assert_equal parent_email_params[:parent_email_preference_request_ip], email_preference.ip_address
+    assert_equal parent_email_params[:parent_email_preference_source], email_preference.source
+  end
+
+  test 'creating a student with parent email should create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_not_nil email_preference
+    assert_parent_email_params_equals_email_preference parent_email_params, email_preference
+  end
+
+  test 'creating a student with parent email and opt-out should create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: 'no'})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_not_nil email_preference
+    assert_parent_email_params_equals_email_preference parent_email_params, email_preference
+  end
+
+  test 'updating a student with parent email should create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params
+    user = User.create(@good_data)
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    # There should be no email preference because no parent_email was defined.
+    assert_nil email_preference
+    user.update!(parent_email_params)
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    # There should now be an email preference because the user was updated with a parent_email.
+    assert_not_nil email_preference
+    assert_parent_email_params_equals_email_preference parent_email_params, email_preference
+  end
+
+  test 'creating a student with parent email opt in and a nil email address should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_email: nil})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and an empty string email address should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_email: ''})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and a blank string email address should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_email: '    '})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and a nil source should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_source: nil})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email opt in and a nil request_ip should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_request_ip: nil})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with no parent email preference should not create an email preference for the parent' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in_required: '0'})
+    User.create(@good_data.merge(parent_email_params))
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
+  test 'creating a student with parent email preference and no parent_email should return an error' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_email: nil})
+    user = User.create(@good_data.merge(parent_email_params))
+    assert user.errors[:parent_email_preference_email].length == 1
+  end
+
+  test 'creating a student with parent email preference and no opt-in should return an error' do
+    parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: nil})
+    user = User.create(@good_data.merge(parent_email_params))
+    assert user.errors[:parent_email_preference_opt_in].length == 1
+  end
+
+  test 'creating a teacher with parent email preference should not create a parent email preference' do
+    # This tests when someone starts filling out the parent email preference form on the student UI but then switches
+    # to a Teacher form and submits that.
+    parent_email_params = @good_parent_email_params.merge({user_type: 'teacher'})
+    user = User.create(@good_data.merge(parent_email_params))
+    assert user.errors[:parent_email_preference_opt_in].empty?
+    # parent_email shouldn't be set for a teacher.
+    assert_nil user.parent_email
+    # no parent email_preference should be created for teachers.
+    email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
+    assert_nil email_preference
+  end
+
   test 'google_classroom_student? is true if user belongs to a google classroom section as a student' do
     section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
     user = create(:follower, section: section).student_user
@@ -3415,28 +3571,28 @@ class UserTest < ActiveSupport::TestCase
       @teacher = create :teacher
 
       @script = create(:script, hideable_stages: true)
-      @stage1 = create(:stage, script: @script, absolute_position: 1, relative_position: '1')
-      @stage2 = create(:stage, script: @script, absolute_position: 2, relative_position: '2')
-      @stage3 = create(:stage, script: @script, absolute_position: 3, relative_position: '3')
+      @stage1 = create(:lesson, script: @script, absolute_position: 1, relative_position: '1')
+      @stage2 = create(:lesson, script: @script, absolute_position: 2, relative_position: '2')
+      @stage3 = create(:lesson, script: @script, absolute_position: 3, relative_position: '3')
       @custom_s1_l1 = create(
         :script_level,
         script: @script,
-        stage: @stage1,
+        lesson: @stage1,
         position: 1
       )
       @custom_s2_l1 = create(
         :script_level,
         script: @script,
-        stage: @stage2,
+        lesson: @stage2,
         position: 1
       )
       @custom_s2_l2 = create(
         :script_level,
         script: @script,
-        stage: @stage2,
+        lesson: @stage2,
         position: 2
       )
-      create(:script_level, script: @script, stage: @stage3, position: 1)
+      create(:script_level, script: @script, lesson: @stage3, position: 1)
 
       # explicitly disable LB mode so that we don't create a .course file
       Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -3487,7 +3643,7 @@ class UserTest < ActiveSupport::TestCase
       twenty_hour = Script.twenty_hour_script
 
       # User completed the second stage
-      twenty_hour.stages[1].script_levels.each do |sl|
+      twenty_hour.lessons[1].script_levels.each do |sl|
         UserLevel.create(
           user: student,
           level: sl.level,
@@ -3504,7 +3660,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       # Find the seventh stage, since the 5th is hidden and 6th is unplugged
-      next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 7}
+      next_visible_stage = twenty_hour.lessons.find {|stage| stage.relative_position == 7}
 
       assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
@@ -3529,7 +3685,7 @@ class UserTest < ActiveSupport::TestCase
       )
 
       # Find the second stage, since the 1st is hidden
-      next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 2}
+      next_visible_stage = twenty_hour.lessons.find {|stage| stage.relative_position == 2}
 
       assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
@@ -3732,16 +3888,16 @@ class UserTest < ActiveSupport::TestCase
   test 'generate_progress_from_storage_id' do
     # construct our fake applab-intro script
     script = create :script
-    stage = create :stage, script: script
+    stage = create :lesson, script: script
     regular_level = create :level
-    create :script_level, script: script, stage: stage, levels: [regular_level]
+    create :script_level, script: script, lesson: stage, levels: [regular_level]
 
     # two different levels, backed by the same template level
     template_level = create :level
     template_backed_level1 = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, stage: stage, levels: [template_backed_level1]
+    create :script_level, script: script, lesson: stage, levels: [template_backed_level1]
     template_backed_level2 = create :level, project_template_level_name: template_level.name
-    create :script_level, script: script, stage: stage, levels: [template_backed_level2]
+    create :script_level, script: script, lesson: stage, levels: [template_backed_level2]
 
     # Whether we have a channel for a regular level in the script, or a template
     # level, we generate a UserScript

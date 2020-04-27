@@ -278,6 +278,9 @@ es-ES:
       NEW Course 4 Bee For Loops 5:
         actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Ahora están
           aquí los bloques de "Acciones".
+      New Frozen Project:
+        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
+          de nieve!"
       Overworld Chop Trees:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
       Overworld Chop Trees_2019:

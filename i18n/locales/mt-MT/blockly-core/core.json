@@ -49,7 +49,7 @@
     "CONTROLS_IF_ELSE_TOOLTIP": "Żid kondizzjoni finali li taqbad kollox  fil-blokka 'if'.",
     "CONTROLS_IF_HELPURL": "",
     "CONTROLS_IF_IF_TOOLTIP": "Żid, neħħi, jew irriordina is-sezzjonijiet mill-ġdid, biex tbiddel dil-blokka 'if'.",
-    "CONTROLS_IF_MSG_ELSE": "",
+    "CONTROLS_IF_MSG_ELSE": "jew",
     "CONTROLS_IF_MSG_ELSEIF": "jew inkella (else if)",
     "CONTROLS_IF_MSG_IF": "jekk (if)",
     "CONTROLS_IF_TOOLTIP_1": "Jekk il-valur huwa veru/minnu (true), mela ghamel xi stqarrijiet/blokki.",

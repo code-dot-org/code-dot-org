@@ -980,11 +980,10 @@ ca:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': Mostra
-            '"hide"': amaga
+            '"random"': atzar
       binary_move:
         options:
           DIR:

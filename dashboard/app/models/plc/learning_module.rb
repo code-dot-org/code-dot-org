@@ -25,16 +25,23 @@ class Plc::LearningModule < ActiveRecord::Base
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,
-    PRACTICE_MODULE = 'practice'.freeze
+    PRACTICE_MODULE = 'practice'.freeze,
+    REVIEW_MODULE = 'peer'.freeze
+  ].freeze
+
+  RESERVED_LESSON_GROUPS_FOR_PLC = [
+    {key: REQUIRED_MODULE, display_name: 'Overview'},
+    {key: CONTENT_MODULE, display_name: 'Content'},
+    {key: PRACTICE_MODULE, display_name: 'Teaching Practices'},
+    {key: REVIEW_MODULE, display_name: 'Peer Review'},
   ].freeze
 
   NONREQUIRED_MODULE_TYPES = (MODULE_TYPES - [REQUIRED_MODULE]).freeze
 
   attr_readonly :plc_course_unit_id
 
-  belongs_to :stage
+  belongs_to :lesson, foreign_key: 'stage_id'
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_unit_id'
-  has_and_belongs_to_many :plc_tasks, class_name: '::Plc::Task', foreign_key: 'plc_learning_module_id', association_foreign_key: 'plc_task_id'
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_learning_module_id', dependent: :destroy
 
   validates_presence_of :plc_course_unit_id

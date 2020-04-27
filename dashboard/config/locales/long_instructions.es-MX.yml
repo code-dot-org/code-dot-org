@@ -16514,7 +16514,7 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
@@ -17196,6 +17196,8 @@ es-MX:
         Ahora que has transmitido información representada como números decimales, puedes asignar esos números a caracteres de texto para enviar información basada en texto de un lado a otro. Con un protocolo basado en texto, puedes representar y comunicar fácilmente todo tipo de información.
 
         Tu profesor entregará instrucciones más específicas para esta actividad.
+      New Minecraft Hero Project: "**Improvisación:** ¡Ahora es cosa tuya! Usa el
+        código del Agent para ayudarte a explorar este mundo."
       OPD-K5 CS Video: |-
         ## Primeros pasos: ¿Por qué los fundamentos de la informática (CS)?
 
@@ -17207,10 +17209,10 @@ es-MX:
         >
         > ¿Cuáles son tus primeras impresiones de los Fundamentos de Ciencias de la Computación?
         >
-        > [Tuitea tus pensamientos](https://twitter.com/teachcode) y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+        > [Tuitea tus pensamientos][0] y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartir en Twitter >></button></a><br><br>
-        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+        > ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook][1] o [Instagram][2].
       OPD-K5 Closing: |-
         > \*\* Si disfrutaste este curso, inscríbete en un taller en persona:\*\*
         >
@@ -17220,8 +17222,8 @@ es-MX:
 
         > Un evento es una línea de código que le dice a tu computadora que "escuche" que algo suceda y luego tome una acción. Por ejemplo, en las páginas web, a menudo puedes mostrar un menú desplegable cuando pasas el mouse sobre la barra de navegación. El "desplazamiento del mouse" es un "evento" que desencadena una acción.
       OPD-K5 FirstProgram: Mira el siguiente video, que explica el primer programa
-        que los estudiantes más jóvenes escribirán en [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045).
-        ¡En la página siguiente podrás escribir un programa similar!
+        que los estudiantes más jóvenes escribirán en [Course A][0]. ¡En la página
+        siguiente podrás escribir un programa similar!
       OPD-K5 LessonPlanning: "Hasta ahora, te hemos presentado algunos de nuestros
         planes de lecciones desconectados. Sin embargo, hay planes de lecciones para
         cada lección de Fundamentos de las Ciencias de la Computación, tanto conectados
@@ -18378,6 +18380,29 @@ es-MX:
         Empieza por usar <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> con <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> para hacer tu mascota mover hacia el norte **mientras** la tecla de flecha hacia arriba.
 
         ¡Repite lo de arriba por las otras tres direcciones (Sur, Oeste, Este) y las teclas de flecha hacia arriba (abajo, izquierda, derecha)!
+      Virtual Pet 4_2019: "1.  Añade **dos** sprites a tu mundo. \n2.  Haz un sprite
+        aparecer como lo que a tu mascota le gusta comer, y lo otro como lo que no
+        le gusta comer.\n3.  Haz cada sprite de comida empezar el comportamiento de
+        **errar** inmediatamente después de que aparezca."
+      Virtual Pet 5_2019: |-
+        ¡Usa <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> con <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> para **estimular** a "comer" en tu mundo virtual!
+
+        1.  Crea un evento que hace uno de tus sprites de comida saltar a una ubicación al azar cuando tu mascota lo toque.
+        2.  Repite lo de arriba para el otro sprite de comida.
+      Virtual Pet 6_2019: "¡Usa <xml><block type=\"variables_set\" block-text=\"the
+        set variable block\"><title name=\"VAR\">energy</title></block></xml> con
+        <xml><block type=\"math_change\" block-text=\"the change variable block\"><title
+        name=\"VAR\">energy</title></block></xml> para hacer que comer comida afecte
+        la energía de tu mascota! ¡Cuanta más energía lo tenga, más rápido se mueve!
+        \n\n1.  Asigna la variable 'energía' a 5 cuando el programa empiece.\n2.  Cuando
+        tu mascota coma la comida que le **gusta**, añade 1 a 'energía.\n3.  Cuando
+        tu mascota coma la comida que **no le gusta**, establece 'energía' a 5\n4.
+        \ Cambia cada evento de tecla de fecha  para que tu mascota ahora se mueva
+        'energía' píxeles en lugar de un número específico."
+      Virtual Pet 7_2019: "¡Puedes chequear el valor de la 'energía' de tu mascota
+        con <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>,
+        un bloque nuevo encontrado en la categorîa 'Mundo'! \n\nCrea un evento que
+        hace el valor de 'energía' imprimido cuando el sprite de mascota esté pinchado. "
       'Widget: Text Compression': Busca patrones (palabras o frases repetidas) en
         el texto. Ingresa los patrones que ves en el diccionario de la derecha. A
         medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
@@ -19033,16 +19058,10 @@ es-MX:
         la derecha si haces clic en el botón de flecha derecha.
       courseA_playLab_events4_2018: Ahora, agrega otro bloque de evento para que Jorge
         se mueva a la derecha si haces clic en el botón de flecha derecha.
-      courseA_playLab_events4_2019: Ahora, agrega otro bloque de evento para que Jorge
-        se mueva a la derecha si haces clic en el botón de flecha derecha.
       courseA_playLab_events5: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
       courseA_playLab_events5_2018: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
-      courseA_playLab_events5_2019: Agrega eventos para que Jorge se mueva hacia arriba
-        y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
-      courseA_playLab_events6_2019: "¡Hazlo aún más interesante! Cambia el fondo y
-        reproduce un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7_2018: _Juego libre:_ Agrega todo lo que quieras a este
         juego. ¿Puedes hacer que el dinosaurio desaparezca cuando Jorge se encuentra
         con él?

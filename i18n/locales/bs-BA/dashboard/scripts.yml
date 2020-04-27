@@ -1303,6 +1303,8 @@ bs:
               name: Napravite Vaš projekat
             Presentation Your Project:
               name: Predstavite Vaš projekat
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Introduction:
               name: Uvod
             Ice Age Play Lab:
@@ -1495,6 +1497,8 @@ bs:
           stages:
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1524,6 +1528,8 @@ bs:
               name: Digitalno Državljanstvo
             Conditionals with Cards:
               name: Uvjeti s Kartama
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1616,6 +1622,8 @@ bs:
               name: Izrada Temelja
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1660,6 +1668,8 @@ bs:
               name: Uvod
             Ice Age Play Lab:
               name: Ledeno doba Play Lab
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -1826,6 +1836,8 @@ bs:
               name: Ledeno doba Play Lab
               description_student: Zamisli svoju omiljenu video igru. Jesi li se ikad pitao kako je napravljena? U ovim slagalicama ti ćeš razviti vlastitu video igru sa prijateljima iz Ledenog Doba!
               description_teacher: U ovoj lekciji, učenici su vođeni kroz priču sa likove iz Ledenog Doba. Učenici će raditi sa događajima i petljama da učine da se likovi kreću po ekranu, i dobiti će šansi da naprave vlastitu igru ili priču nakon razina na kojima su vođeni.
+            Songwriting with Parameters:
+              name: Pisanje pjesama
             Build Your Project:
               name: Napravite Vaš projekat
             Present Your Project:
@@ -2190,3 +2202,138 @@ bs:
           stages:
             Conditionals:
               name: Uvjeti
+        csd2-2020:
+          stages:
+            Images:
+              name: Slike
+        csd5-2020:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
+        csd6-2020:
+          stages:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+        csd3-2020:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+            Text:
+              name: Tekst
+        coursea-2020:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Going Places Safely:
+              name: Sigurna Putovanja
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+            'Programming: Happy Maps':
+              name: Vesele Mape
+              description_teacher: 'Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.'
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+        courseb-2020:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Your Digital Footprint:
+              name: Digitalni otisak stopala
+            Move It, Move It:
+              name: Pomakni, Pomakni
+            Sequencing in Maze:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
+            'Loops: Getting Loopy':
+              name: Zapetljavanje
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki Događaj
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Papirno Programiranje Grafikona
+            Relay Programming:
+              name: Prijenos programiranja
+            Conditionals with Cards:
+              name: Uvjeti s Kartama
+            Artist Binary:
+              name: Umjetnik Binarno
+            Digital Citizenship:
+              name: Digitalno Državljanstvo
+            Dance Party:
+              name: Plesna zabava
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Pisanje pjesama
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Dance Party:
+              name: Plesna zabava
+        pre-express-2020:
+          description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          stages:
+            Spelling Bee:
+              name: Spelovanje
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binarni Brojevi
+        csp3-virtual:
+          stages:
+            The Need for Algorithms:
+              name: Potreba za algoritmima
+            Creativity in Algorithms:
+              name: Kreativnost u algoritmima
+            Creating Functions:
+              name: Kreiranje Funkcija
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        csd2-virtual:
+          stages:
+            Images:
+              name: Slike
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Dok petlje
+            Variables:
+              name: Varijable
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Događaji
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Dok petlje

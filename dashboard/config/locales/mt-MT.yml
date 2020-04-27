@@ -3,6 +3,8 @@ mt:
   errors:
     messages:
       not_saved: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
+      too_young: Dan il-kontenut għandu restrizzjonijiet ta' bl-età fil-post u m'huwiex
+        disponibbli għall-istudenti żgħar
   activerecord:
     errors:
       messages:
@@ -381,6 +383,7 @@ mt:
   race_interstitial:
     decline: Agħlaq
   progress:
+    completed_perfect: Komplut, perfett
     assessment: evalwazzjoni
   studio:
     all_courses: Il-korsijiet kollha

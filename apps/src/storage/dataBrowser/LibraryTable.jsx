@@ -7,6 +7,7 @@ import color from '../../util/color';
 import {showPreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
 import experiments from '../../util/experiments';
+import moment from 'moment/moment';
 
 const styles = {
   tableName: {
@@ -26,7 +27,7 @@ const styles = {
     fontSize: '14px',
     padding: '1px 7px 2px',
     height: '30px',
-    width: '95px',
+    width: '90px',
     margin: 10,
     marginLeft: 0
   },
@@ -38,7 +39,7 @@ const styles = {
     color: color.white,
     padding: '1px 7px 2px',
     height: '30px',
-    width: '95px',
+    width: '90px',
     margin: 10,
     marginRight: 0
   },
@@ -48,12 +49,8 @@ const styles = {
   lastUpdated: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: '12px',
-    color: color.light_gray
-  },
-  lastUpdatedTime: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: '12px',
-    color: color.light_gray
+    color: color.light_gray,
+    display: 'inline-block'
   }
 };
 
@@ -64,6 +61,7 @@ class LibraryTable extends React.Component {
 
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
+    locale: PropTypes.string,
     onShowPreview: PropTypes.func.isRequired
   };
 
@@ -90,6 +88,10 @@ class LibraryTable extends React.Component {
       return null;
     }
 
+    if (this.props.locale) {
+      moment.locale(this.props.locale);
+    }
+
     return (
       <div>
         <a style={styles.tableName} onClick={this.toggleCollapsed}>
@@ -98,11 +100,24 @@ class LibraryTable extends React.Component {
         </a>
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
-            {/* TODO: Add last updated time */}
             <div style={styles.tableDescription}>
-              {datasetInfo.description}
+              {datasetInfo.lastUpdated && (
+                <span style={styles.lastUpdated}>
+                  {msg.lastUpdated({
+                    time: moment(datasetInfo.lastUpdated).fromNow()
+                  })}
+                </span>
+              )}
+              <span style={{display: 'block'}}>{datasetInfo.description} </span>
+
+              {datasetInfo.docUrl && (
+                <span style={{display: 'block'}}>
+                  <a href={datasetInfo.docUrl}>{msg.moreInfo()}</a>
+                </span>
+              )}
+
               {datasetInfo.sourceUrl && (
-                <span style={{display: 'inline-block'}}>
+                <span style={{display: 'block'}}>
                   {msg.dataSource() + ': '}
                   <a href={datasetInfo.sourceUrl}>
                     {datasetInfo.sourceText || datasetInfo.sourceUrl}
@@ -135,7 +150,8 @@ class LibraryTable extends React.Component {
 
 export default connect(
   state => ({
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
+    locale: state.pageConstants && state.pageConstants.locale
   }),
   dispatch => ({
     onShowPreview(tableName) {

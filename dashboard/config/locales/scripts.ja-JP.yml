@@ -6,7 +6,6 @@ ja:
         csd_category_name: コンピューターサイエンス 発展 ('18~'19)
         csd_2018_category_name: コンピューターサイエンス 発展 ('18~'19)
         csd_2019_category_name: コンピューターサイエンス 発展 ('19~'20)
-        csf_category_name: コンピューター・サイエンスの基礎
         csf_2018_category_name: コンピューターサイエンス 初歩 (2018)
         csf_international_category_name: コンピューターサイエンス 初歩 (多言語)
         csf2_draft_category_name: '開発中: コース A - F'
@@ -1796,3 +1795,147 @@ ja:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: パラメーター付き関数
+        csd3-2020:
+          stages:
+            Variables:
+              name: 変数（へんすう）
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう)
+            Text:
+              name: テキスト
+        coursea-2020:
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: 4-7 才
+          stages:
+            Going Places Safely:
+              name: 安全な道を通って行く
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+            'Programming: Happy Maps':
+              name: ハッピーマップ
+            'Loops: Happy Loops':
+              name: くりかえし：ハッピー ループ
+            Loops in Collector:
+              name: くりかえし あつめる
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+        courseb-2020:
+          description_audience: 5-8 才
+          stages:
+            Your Digital Footprint:
+              name: あなたのデジタルフットプリント
+            Move It, Move It:
+              name: 動かせ！動かせ！
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Loops in Collector:
+              name: くりかえし あつめる
+            Loops in Artist:
+              name: アーティストくりかえし
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+        coursec-2020:
+          stages:
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Binary Bracelets:
+              name: バイナリブレスレット
+            Sticker Art with Loops:
+              name: アーティストくりかえし
+            Events in Play Lab:
+              name: プレイ ラボのイベント
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: グラフ用紙のプログラミング
+            Relay Programming:
+              name: プログラミングをリレーする
+            Loops in Artist:
+              name: アーティストくりかえし
+            Conditionals with Cards:
+              name: カードと条件
+            'Unplugged: Binary':
+              name: バイナリ画像
+            Artist Binary:
+              name: アーティスト：バイナリ
+            Dance Party:
+              name: ダンスパーティー
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: 作詞作曲
+        coursef-2020:
+          description_short: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
+          stages:
+            Internet:
+              name: インターネット
+            Crowdsourcing:
+              name: クラウドソーシング
+        express-2020:
+          stages:
+            Dance Party:
+              name: ダンスパーティー
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Loops in Artist:
+              name: アーティストくりかえし
+        pre-express-2020:
+          stages:
+            Learn to Drag and Drop:
+              name: ドラッグ＆ドロップ
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Spelling Bee:
+              name: つづりみつばち
+            Loops in Collector:
+              name: くりかえし あつめる
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
+            Loops in Artist:
+              name: アーティストくりかえし
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: 関数の作成
+        csd3-virtual:
+          stages:
+            Variables:
+              name: 変数（へんすう）
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう)
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Whileループ
+            Variables:
+              name: 変数（へんすう）
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう)
+        code-break:
+          stages:
+            Algorithms:
+              name: アルゴリズム
+            Events:
+              name: イベント
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Whileループ

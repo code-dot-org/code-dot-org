@@ -12,12 +12,12 @@
   csedweek_dates: "2014. december 8-14"
   csedweek_banner_hoc: 'Hamarosan itt a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kódolás Órája</a>. Kérünk minden tanárt és szervezőt, hogy tervezze meg a <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">saját Kódolás Órája programját</a>!'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat is!</a>'
+  csedweek_banner_teachers_text: "Számítástechnika tanár vagy? Nézz meg más CSEdWeek anyagokat is!"
   n_have_learned_an_hoc: "<h1>Próbálj ki egy</h1><h2>Kódolás óráját</h2><h3># ember már kipróbálta</h3>"
   anybody_can_learn: "Mindenki tanulhat."
   learn_now: "Tanulj most"
   petition_message: "Minden diáknak, minden iskolában meg kellene adni a lehetőséget, hogy számítástechnikát tanuljon"
   petition_sign_message: 'Ha elfogadod, írd be a nevedet. Csatlakozz # másokhoz.'
-  petition_sign_message_support: 'Ha támogatsz, írd alá. Csatlakozz egy # fős csapathoz.'
   petition_join_others: '# ember vár, hogy csatlakozz'
   name: "Név"
   email: "Email"
@@ -256,6 +256,7 @@
   homepage_action_text_learn: "Kezdj tanulni"
   homepage_action_text_signpetition: "Írd alá a petíciót"
   homepage_signpetition_dropdown: "Írd alá a petíciót &#x25BE;"
+  homepage_signpetition_dropdown_text: "Egyetértek"
   homepage_diversity_pledge: "Csatlakozz a diverzitási peticióhoz"
   homepage_banner_text_prizes: 'Újra közeledik a Kódolás órája, december 7-13. '
   homepage_banner_link_prizes: 'Csatlakozz a történelem legnagyobb tanulási eseményéhez!'

@@ -854,26 +854,29 @@ fr-FR:
         content1: description ici
       CSD U6 setProperty predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       Dance_Party_extras_intro:
@@ -950,11 +953,11 @@ fr-FR:
           </div>
       Dance_Party_extras_intro_2019:
         markdown: |
-          # Continue de danser!
+          # Continuer de danser !
 
           Pour la partie 2, tu vas créer ton propre projet. Il n’ya pas de casse-tête ici, mais plutôt un ensemble de projets montrant différentes manières de créer des soirées dansantes plus complexes.
 
-          Tu peux faire ces niveaux _ dans n'importe quel ordre_. Va voir ce qui a été fait dans un niveau précédent, ou combine des concepts entre les projets. Essaie-les tous, choisis ton préféré et passe ton temps à l'ajouter à ce projet pour le personnaliser.
+          Tu peux faire ces niveaux _dans n'importe quel ordre_. Va voir ce qui a été fait dans un niveau précédent, ou combine des concepts entre les projets. Essaie-les tous, choisis ton préféré et passe ton temps à l'ajouter à ce projet pour le personnaliser.
 
           <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuer</a>
 
@@ -1386,6 +1389,11 @@ fr-FR:
           ### Clic sur continuer pour essayer !
 
 
+      'Overview: onEvent':
+        markdown: Vous devrez plonger dans le mode Code pour qu’il réponde réellement
+          aux utilisateurs. App Lab attend pour répondre à certains **événements**
+          qui se produisent dans un programme. Le bloc onEvent spécifie l’élément
+          de l’interface utilisateur sur lequel attendre un événement.
       PowerfulPasswords-Unplugged:
         markdown: |
           # Mot de passe puissant
@@ -1528,7 +1536,7 @@ fr-FR:
             4 fois égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliquer sur "Démarrer"?
+            fermier ramassera après avoir cliqué sur "Démarrer" ?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
@@ -1545,7 +1553,7 @@ fr-FR:
             4 fois égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliquer sur "Démarrer"?
+            fermier ramassera après avoir cliqué sur "Démarrer" ?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
@@ -1562,7 +1570,7 @@ fr-FR:
             4 fois égal 12!
         questions:
         - text: Regarde attentivement le code ci-dessous. Combien de citrouilles le
-            fermier ramassera après avoir cliquer sur "Démarrer"?
+            fermier ramassera après avoir cliqué sur "Démarrer" ?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Le programme n'a pas échoué. Scrat va atteindre le gland.
@@ -1571,8 +1579,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
-          feedback: Incorrect. Il fait trop de pas après avoir tourner du mauvais
-            côté.
+          feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
             après son dernier virage. '
@@ -1587,8 +1594,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
-          feedback: Incorrect. Il fait trop de pas après avoir tourner du mauvais
-            côté.
+          feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
             après son dernier virage. '
@@ -1603,8 +1609,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: Scrat n'a pas fait assez de pas et s'est arrêté juste avant le gland.
-          feedback: Incorrect. Il fait trop de pas après avoir tourner du mauvais
-            côté.
+          feedback: Incorrect. Il fait trop de pas après avoir tourné du mauvais côté.
         - text: Je ne sais pas.
           feedback: 'La première erreur, c''est que Scrat a pris le mauvais chemin
             après son dernier virage. '
@@ -1614,12 +1619,12 @@ fr-FR:
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
-          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
         - text: L'oiseau va foncer dans la TNT.
-          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
@@ -1628,12 +1633,12 @@ fr-FR:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
-          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
         - text: L'oiseau va foncer dans la TNT.
-          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
@@ -1642,12 +1647,12 @@ fr-FR:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: L'oiseau sera trop court d'une étape pour arriver au cochon.
-          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
         - text: L'oiseau va foncer dans la TNT.
-          feedback: Incorrecte. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
+          feedback: Incorrect. Ce code amène parfaitemement l'oiseau jusqu'au cochon.
         - text: Je ne sais pas.
           feedback: Ce code amène parfaitement l'oiseau jusqu'au cochon.
         questions:
@@ -1759,7 +1764,7 @@ fr-FR:
           feedback: Correct!
         questions:
         - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
-            appuyer sur "Démarrer"?
+            appuyé sur "Démarrer"?
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -1773,7 +1778,7 @@ fr-FR:
           feedback: Correct!
         questions:
         - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
-            appuyer sur "Démarrer"?
+            appuyé sur "Démarrer"?
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -1787,7 +1792,7 @@ fr-FR:
           feedback: Correct!
         questions:
         - text: Regarde de près le code suivant. Quelle image créera-t-il après avoir
-            appuyer sur "Démarrer"?
+            appuyé sur "Démarrer"?
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1841,8 +1846,8 @@ fr-FR:
             lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
-            peu importe ce qui se passe. '
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
             seulement de ramasser le nectar si une fleur est sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
@@ -1860,11 +1865,12 @@ fr-FR:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
             n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qui se passera après avoir appuyer sur "Démarrer"?
+            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
+            ?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
-            peu importe ce qui se passe. '
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
             seulement de ramasser le nectar si une fleur est sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
@@ -1882,11 +1888,12 @@ fr-FR:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
             n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qui se passera après avoir appuyer sur "Démarrer"?
+            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
+            ?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
-            peu importe ce qui se passe. '
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
             seulement de ramasser le nectar si une fleur est sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
@@ -1904,7 +1911,8 @@ fr-FR:
         - text: Le nuage bloque la vue. Il pourrait y avoir une fleur sous le nuage.
             S'il y a une fleur, l'abeille devra y ramasser le nectar une fois. S'il
             n'y a pas de fleur, l'abeille ne fera rien. Regarde bien le code suivant.
-            Qu'est ce que tu penses qui se passera après avoir appuyer sur "Démarrer"?
+            Qu'est ce que tu penses qu’il se passera après avoir appuyé sur "Démarrer"
+            ?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
@@ -1912,8 +1920,8 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
-          feedback: Incorrect. Le bloc `Si `a la fleur` laisse l' abeille ramasser
-            le nectar sur chaque fleur et le miel à chaque nid d'abeilles.
+          feedback: Incorrect. Le bloc `Si à la fleur` laisse l’abeille ramasser le
+            nectar sur chaque fleur et le miel à chaque nid d'abeilles.
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
           feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
@@ -1923,8 +1931,9 @@ fr-FR:
             chaque fleur et le miel à chaque nid d'abeilles.
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
-            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
-            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+            après avoir cliqué sur "Démarrer" ? Souviens toi : il y aura toujours
+            seulement pour une abeille *un* nid d''abeilles ou *une* fleur derrière
+            chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
@@ -1932,8 +1941,8 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
-          feedback: Incorrect. Le bloc `Si `a la fleur` laisse l' abeille ramasser
-            le nectar sur chaque fleur et le miel à chaque nid d'abeilles.
+          feedback: Incorrect. Le bloc `Si à la fleur` laisse l’abeille ramasser le
+            nectar sur chaque fleur et le miel à chaque nid d'abeilles.
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
           feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
@@ -1943,24 +1952,17 @@ fr-FR:
             chaque fleur et le miel à chaque nid d'abeilles.
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
-            après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
-            pour une abeille *un* nid d''abeilles ou *une* fleur derrière chaque nuage.'
+            après avoir cliqué sur "Démarrer" ? Souviens toi : il y aura toujours
+            seulement pour une abeille *un* nid d''abeilles ou *une* fleur derrière
+            chaque nuage.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: L'abeille ramassera le nectar de chaque fleur et le miel de chaque
-            nid d'abeilles.
-          correct: true
+        - correct: true
           feedback: Correct!
         - text: L'abeille essaiera de ramasser le nectar des fleurs et des nids d'abeilles.
-          feedback: Incorrect. Le bloc `Si `a la fleur` laisse l' abeille ramasser
-            le nectar sur chaque fleur et le miel à chaque nid d'abeilles.
         - text: L'abeille essaiera d'obtenir du miel depuis les fleurs et les nids
             d'abeilles.
-          feedback: Incorrect. Le bloc `Si à la fleur` laisse l'abeille ramasser le
-            nectar à chaque fleur et le miel à chaque nid d'abeilles..
         - text: Je ne sais pas.
-          feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
-            chaque fleur et le miel à chaque nid d'abeilles.
         questions:
         - text: 'Regarde attentivement le code suivant. Que penses-tu qu''il se passera
             après avoir cliquer sur "Démarrer"? Souviens toi: il y aura toujours seulement
@@ -2080,26 +2082,26 @@ fr-FR:
         answers:
         - text: Laurel tournera dans la mauvaise direction en faisant un carré.
           feedback: Incorrect. C'était partiellement correct, mais la boucle ne tourne
-            pas assez longtemps pour pouvoir ramasser tous les diamants.
+            pas assez longtemps pour pouvoir ramasser tous les trésors.
         - text: 'La boucle ne tourne pas assez longtemps pour Laurel pour ramasser
-            tous les diamants. '
+            tous les trésors. '
           feedback: Incorrect. C'était partiellement correct, mais l'abeille tourne
             aussi du mauvais côté lorsqu'elle essaie de faire un carré.
         - text: Laurel tourne dans le mauvais sens *et* la boucle ne tourne pas assez
-            longtemps pour que Laurel ramasse tous les diamants.
+            longtemps pour que Laurel ramasse tous les trésors.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Laurel tourne dans le mauvais sens *et* la boucle ne tourne pas
-            assez longtemps pour que Laurel ramasse tous les diamants.
+            assez longtemps pour que Laurel ramasse tous les trésors.
         questions:
         - text: 'Regarde attentivement le code ci-dessous. Pourquoi Laurel ne ramassera
-            pas tous les diamants lorsque tu appuieras sur "Démarrer"? Attention:
-            Cette une question délicate, fais attention d''avoir bien lu toutes les
-            options avant de répondre!'
+            pas tous les trésors lorsque tu appuieras sur "Démarrer"? Attention :
+            C’est une question délicate, fais attention d''avoir bien lu toutes les
+            options avant de répondre !'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - text: Le cuilleur ramassera toute les plantes.
+        - text: Le ceuilleur  ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code pour ramasser la citrouille.
         - text: Le cueilleur ne ramassera aucune des plantes avec le chemin qu'il
             prend.
@@ -2111,14 +2113,14 @@ fr-FR:
           feedback: Correct!
         - text: Je ne sais pas.
           feedback: Le code verra le cueilleur répéter le modèle des marches d'escalier
-            et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
+            et ramasser autant de salades et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
         questions:
         - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - text: Le cuilleur ramassera toute les plantes.
+        - text: Le ceuilleur  ramassera toutes les plantes.
         - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
@@ -2129,11 +2131,11 @@ fr-FR:
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+            sur "Démarrer" ?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - text: Le cuilleur ramassera toute les plantes.
+        - text: Le ceuilleur  ramassera toutes les plantes.
         - feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
@@ -2144,15 +2146,15 @@ fr-FR:
             et ramasser autant de laitues et plantes qu'il croise. Il ne ramassera
             pas la citrouille.
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+            sur "Démarrer" ?
       courseD_multi_farmer_ramp13:
         answers:
         - text: Le fermier marchera jusq'au bout du chemin et recoltera la citrouille.
           feedback: Incorrect. Le bloc `Récolte citrouille` est à l'intérieur de la
             boucle, donc le fermieressaiera de ramasser la citrouille à chaque étape,
             au lieu de le faire seulement à la fin.
-        - text: Le fermier essaiera de ramasser les citrouille à chaque pas, mais
+        - text: Le fermier essaiera de ramasser les citrouilles à chaque pas, mais
             ne parviendra jamais jusqu'à la citrouille.
           correct: true
           feedback: Correct!
@@ -2164,6 +2166,10 @@ fr-FR:
           feedback: Le bloc `Récolte citrouille` est à l'intérieur de la boucle, donc
             le fermieressaiera de ramasser la citrouille à chaque étape, au lieu de
             le faire seulement à la fin.
+        markdown: |+
+          Voici un nouveau type de puzzle qui utilise des blocs similaires à ce que tu as déjà vu. Essaie de dire ce qu’il va se passer quand tu exécuteras le code ci-dessous.
+
+
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -2183,7 +2189,7 @@ fr-FR:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - text: Rien. Ce code ne laissera que le sol du niveau.
+        - text: Rien. Ce code ne laissera qu’un terrain plat.
           feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
         - text: Ce code laissera le tas intact.
           correct: true
@@ -2198,7 +2204,7 @@ fr-FR:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - text: Rien. Ce code ne laissera que le sol du niveau.
+        - text: Rien. Ce code ne laissera qu’un terrain plat.
           feedback: Incorrect Il n'y a pas de code pour enlever la saleté d'un tas.
         - text: Ce code laissera le tas intact.
           correct: true
@@ -2216,7 +2222,7 @@ fr-FR:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas sera terminé
-        - text: Le ferier n'arrêtera jamais d'enlever la saleté.
+        - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas sera terminé
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
@@ -2234,7 +2240,7 @@ fr-FR:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas sera terminé
-        - text: Le ferier n'arrêtera jamais d'enlever la saleté.
+        - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas sera terminé
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
@@ -2245,14 +2251,14 @@ fr-FR:
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
             dès que le tas sera terminé
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: Rien ne se passera.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas sera terminé
-        - text: Le ferier n'arrêtera jamais d'enlever la saleté.
+        - text: Le fermier n'arrêtera jamais d'enlever la saleté.
           feedback: Incorrect. Le fermier enlèvera la saleté tant qu'il y aura un
             tas, puis s'arrêtera dès que le tas sera terminé
         - text: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
@@ -2263,7 +2269,7 @@ fr-FR:
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
             dès que le tas sera terminé
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
             sur "Démarrer"?
       courseD_multi_maze_until10_predict2:
         answers:
@@ -2272,7 +2278,8 @@ fr-FR:
           feedback: Correct!
         - text: Le zombie va arriver jusqu'au tournesol.
           feedback: Incorrect. Dans ce code, il cherche à tourner à droite *avant*
-            de regarder s'il peut passer tout droit. C'est à cause de ça que le puzzle  échoue.
+            de regarder s'il peut passer tout droit. C'est à cause de ça que le puzzle
+            échoue.
         - text: Le zombie va tourner à droite sur le premier chemin et partir en tournant
             sans jamais s'arrêter de tourner.
           feedback: Incorrect. Le zombie cherche seulement à tourner à droite ou un
@@ -2280,7 +2287,7 @@ fr-FR:
             bloquer immédiatement.
         - text: Je ne sais pas.
           feedback: Dans ce code, il cherche à tourner à droite *avant* de regarder
-            s'il peut passer tout droit. C'est à cause de ça que le puzzle  échoue.
+            s'il peut passer tout droit. C'est à cause de ça que le puzzle échoue.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -2310,15 +2317,15 @@ fr-FR:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
-            le cochon!
+            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
         - text: L'oiseau avance et percute la TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
-            le cochon!
+            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
             à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
@@ -2329,15 +2336,15 @@ fr-FR:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
-            le cochon!
+            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
         - text: L'oiseau avance et percute la TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
-            le cochon!
+            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
             à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
@@ -2348,15 +2355,15 @@ fr-FR:
         answers:
         - text: L'oiseau ne bougera pas du tout.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin,
-            puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
-            le cochon!
+            puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
         - text: L'oiseau va aller jusqu'au cochon.
           correct: true
           feedback: Correct!
         - text: L'oiseau avance et percute la TNT.
           feedback: Incorrect. Le code fait avancer l'oiseau tant qu'il y a un chemin
-            sûr, puis tourner à gauche. Il continue de faire ça jusq'à ce qu'il rencontre
-            le cochon!
+            sûr, puis tourner à gauche. Il continue de faire ça jusqu'à ce qu'il rencontre
+            le cochon !
         - text: Je ne sais pas.
           feedback: Le code fait avancer l'oiseau tant qu'il y a un chemin, puis tourner
             à gauche. Il continue de faire ça jusq'à ce qu'il rencontre le cochon!.
@@ -2368,31 +2375,31 @@ fr-FR:
         - text: Rien. Scrat ne bougera pas du tout.
           feedback: Incorrect. Mettre le bloc `avancer` dans le bloc `répéter` va
             faire avancer Scrat 3 fois.
-        - text: Scrat avancera 3 fois, puis avancera 3 fois encore pour le faire arriver
-            au gland !
+        - text: Scrat avancera 3 fois, tournera, puis avancera 3 fois encore pour
+            atteindre le gland !
           correct: true
           feedback: Correct!
         - text: Scrat avancera, puis tournera et tombera.
           feedback: Incorrect. Mettre le bloc `avancer` dans le bloc `répéter` va
             faire avancer Scrat 3 fois.
         - text: Je ne sais pas.
-          feedback: L' ajout du bloc `Avancer` à l'intérieur du bloc `répéter` fera
-            avancer Scrat 3 fois. Il tournera puis avancera encore 3 fois pour arriver
-            au gland !
+          feedback: L'ajout du bloc `Avancer` à l'intérieur du bloc `répéter` fera
+            avancer Scrat 3 fois. Il tournera puis avancera encore 3 fois pour atteindre
+            le gland !
         questions:
         - text: Ce code utilise un nouveau bloc. Que penses-tu qu'il se passera lorsque
             tu appuieras sur "Exécuter" ?
       courseE_multi_bee_functions_predict1:
         answers:
-        - text: Le même programme fonctionnera pour résoudre ce puzzle, aussi.
+        - text: Ce même programme fonctionnera pour résoudre ce puzzle, aussi.
           correct: true
           feedback: Correct! Cela ne change rien qu'il y ait une dose de miel différente.
             La fonction est programmé pour en tenir compte.
         - text: L'abeille n'a pas fait assez de miel.
-          feedback: Incorrect. La fonction est programmé pour tenir compte de n'importe
+          feedback: Incorrect. La fonction est programmée pour tenir compte de n'importe
             quelle dose de miel supérieur à 0.
         - text: L'abeille essaiera de faire trop de miel.
-          feedback: Incorrect. La fonction est programmé pour tenir compte de n'importe
+          feedback: Incorrect. La fonction est programmée pour tenir compte de n'importe
             quelle dose de miel supérieur à 0.
         - text: Je ne sais pas.
           feedback: Le programme fonctionnera pour résoudre le puzzle, aussi. C'est
@@ -2415,7 +2422,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         questions:
-        - text: Regarde les fonctions définis ci-dessous. Qu'est ce que la fermière
+        - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
             va ramasser ?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
@@ -2426,7 +2433,7 @@ fr-FR:
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
         questions:
-        - text: Regarde les fonctions définis ci-dessous. Qu'est ce que la fermière
+        - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
             va ramasser ?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
@@ -2437,18 +2444,18 @@ fr-FR:
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
         questions:
-        - text: Regarde les fonctions définis ci-dessous. Qu'est ce que la fermière
+        - text: Regarde les fonctions définies ci-dessous. Qu'est ce que la fermière
             va ramasser ?
       courseE_prediction_artistFunction1:
         answers:
-        - text: Rien. La fonction n'est appelé dans le programme.
+        - text: Rien. La fonction n'est appelée dans le programme.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
         - text: L'artiste dessinera un carré simple.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
-        - text: L' artiste dessinera 2 carrés avec un petit écart entre les 2.
+        - text: L’artiste dessinera 2 carrés avec un petit écart entre les 2.
           correct: true
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
@@ -2456,14 +2463,14 @@ fr-FR:
         - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - text: Rien. La fonction n'est appelé dans le programme.
+        - text: Rien. La fonction n'est appelée dans le programme.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
         - text: L'artiste dessinera un carré simple.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
-        - text: L' artiste dessinera 2 carrés avec un petit écart entre les 2.
+        - text: L’artiste dessinera 2 carrés avec un petit écart entre les 2.
           correct: true
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
@@ -2471,14 +2478,14 @@ fr-FR:
         - text: Que va-t-il se passer lorsque vous appuyez sur "démarrer?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - text: Rien. La fonction n'est appelé dans le programme.
+        - text: Rien. La fonction n'est appelée dans le programme.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
         - text: L'artiste dessinera un carré simple.
           feedback: Incorrecy, la fonction est appelée 2 fois dans le progamme.
         - text: L'artiste dessinera 2 carrés qui se chevauchent.
           feedback: Incorrect. La longueur de chaque côté du carré fait seulement
             100 pixels, mais l'artiste saute de 175 pixels entre les fonctions.
-        - text: L' artiste dessinera 2 carrés avec un petit écart entre les 2.
+        - text: L’artiste dessinera 2 carrés avec un petit écart entre les 2.
           correct: true
           feedback: Correct! La fonction est appelée 2 fois dans le programme avec
             un saut entre les 2.
@@ -2502,6 +2509,14 @@ fr-FR:
         - text: Je ne sais pas.
         questions:
         - {}
+      courseF_external_variableConstant:
+        markdown: "<h2>More on Variables</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just
+          learned one great way to use a variable...as a constant!  \nWhen you use
+          a variable as a constant, you are setting a value one time, then using that
+          *same* value multiple times in your program without changing it after you
+          click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you
+          will write code with variables that *do* change inside the program.</h3>\n\n"
       courseF_multi_artist_for10_predict1:
         answers:
         - text: L'artiste dessinera un trait droit dont l'épaisseur augmente d'un
@@ -2576,6 +2591,10 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Le programme utilise des paramètres pour pour permettre à une
             seule fonction de créer 2 boites de tailles différentes.
+        markdown: |+
+          We have added parameters to the 'draw a square' function.  Click the blue "edit" button to see the entire function definition.
+
+
         questions:
         - text: Que se passera-t-il si tu exécutes ce programme?
       courseF_multi_artist_variables3a_predict1:
@@ -2631,8 +2650,8 @@ fr-FR:
             lorsque tu cliqueras sur "Démarrer"?
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - text: 'L''abeille bougera jusqu''au nuage et essaiera de ramasser le nectar,
-            peu importe ce qui se passe. '
+        - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
+            ce qu’il se passe. '
           feedback: Incorrect. Le bloc `Si à la fleur` assure que l'abeille essaiera
             seulement de ramasser le nectar si une fleur est sous le nuage.
         - text: L'abeille bougera vers le nuage et essaiera seulement de ramasser
@@ -2646,6 +2665,9 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` assure que l'abeille essaiera de ramasser
             le nectar si une fleur est sous le nuage.
+        markdown: "The cloud is blocking the view. There could be a flower under this
+          cloud. If there is a flower, the bee will need to collect nectar **once**.
+          \n"
         questions:
         - text: S'il n'y a pas de fleurs, l'abeille devait ne rien faire. Regarde
             bien le code ci-dessous. Que penses-tu qu'il se passera après avoir cliquer
@@ -2667,6 +2689,9 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: Le bloc `Si à la fleur` laisse l'abeille ramasser le nectar à
             chaque fleur, sinon il fait du miel.
+        markdown: "Sometimes a cloud covers a flower, sometimes it covers a honeycomb!
+          Either way, there will only ever be **one** flower or **one** honeycomb
+          under each cloud. \n"
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -2739,6 +2764,10 @@ fr-FR:
           feedback: Cliquer pour regarder à l'intérieur de la fonction montre qu'elle
             est faite pour ramasser autant de nectar ou de miel en le passant via
             un paramètre.
+        markdown: |+
+          Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue "edit" button on the function to see what is inside before answering the question below.
+
+
         questions:
         - text: Que va-t-il se passer lorsque tu appuyes sur "démarrer?
       courseF_multi_playlab_variables4c_predictive1:
@@ -2755,103 +2784,114 @@ fr-FR:
         - text: Je ne sais pas.
           feedback: 'Incorrect. Note que le bloc `aggréger` insère le nom fourni (Ali)
             dans la réponse du pirate. '
+        markdown: "**This puzzle uses a new block called the `ask` block.**\n\nThe
+          `ask` block stops the program and prompts the user to enter some text. \n\nWhatever
+          text the user enters is then saved to the variable shown at the end of the
+          `ask` block.  In this case, it's the variable `name`.\n"
         questions:
         - text: Que se passerai-t-il si l'utilisateur entrer le nom "Ali" à l'invite?
       coursee_prediction_artistfunction2:
         answers:
-        - text: L' artiste résoudra ce problème correctement.
+        - text: L’artiste résoudra ce problème correctement.
           feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
             une ligne de polygones`.
-        - text: L' artiste dessinera 4 carrés dans une fenêtre.
+        - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
-        - text: L' artiste dessinera seulement 1 ligne de carrés.
+        - text: L’artiste dessinera seulement 1 ligne de carrés.
           feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
-        - text: L' artiste dessinera 4 carrés les uns sur les autres.
+        - text: L’artiste dessinera 4 carrés les uns sur les autres.
           feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
             "dessiner polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - text: L' artiste résoudra ce problème correctement.
+        - text: L’artiste résoudra ce problème correctement.
           feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
             une ligne de polygones`.
-        - text: L' artiste dessinera 4 carrés dans une fenêtre.
+        - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
-        - text: L' artiste dessinera seulement 1 ligne de carrés.
+        - text: L’artiste dessinera seulement 1 ligne de carrés.
           feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
-        - text: L' artiste dessinera 4 carrés les uns sur les autres.
+        - text: L’artiste dessinera 4 carrés les uns sur les autres.
           feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
             "dessiner polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - text: L' artiste résoudra ce problème correctement.
+        - text: L’artiste résoudra ce problème correctement.
           feedback: Incorrect. La boucle utilise `dessine polygone` au lieu de `dessine
             une ligne de polygones`.
-        - text: L' artiste dessinera 4 carrés dans une fenêtre.
+        - text: L’artiste dessinera 4 carrés dans une fenêtre.
           correct: true
           feedback: Correct!
-        - text: L' artiste dessinera seulement 1 ligne de carrés.
+        - text: L’artiste dessinera seulement 1 ligne de carrés.
           feedback: Incorrect. Le programme n'appelle pas "dessine ligne de polygones".
-        - text: L' artiste dessinera 4 carrés les uns sur les autres.
+        - text: L’artiste dessinera 4 carrés les uns sur les autres.
           feedback: Incorrect. La boucle tourne à 90 degrés entre chaque appel pour
             "dessiner polygone".
         questions:
         - text: Que va-t-il se passer lorsque tu appuies sur "démarrer?
       grade2_multi_collector_A_predict1:
         answers:
-        - text: Laurel ramassera 4 diamants avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
-            provoque une erreur.
+        - text: Laurel ramassera 4 trésortrésors avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
+            cela provoque une erreur.
           correct: true
           feedback: Correct!
         - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela a provoquer une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
-            a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
+            et cela a provoqué une erreur.
         questions:
         - text: Regarde attentivement le code ci-dessous. Si le code devaient aller
-            jusqu`à la fin (en ignorant les erreurs). combien de diamants Laurel aurait
-            elle ramassée?
+            jusqu`à la fin (en ignorant les erreurs). combien de trésortrésors Laurel
+            aurait elle ramassée?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - text: Laurel ramassera 4 diamants avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
-            provoque une erreur.
+        - text: Laurel ramassera 4 trésortrésors avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
+            cela provoque une erreur.
           correct: true
           feedback: Correct!
         - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela a provoquer une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
-            a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
+            et cela a provoqué une erreur.
         questions:
-        - {}
+        - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
+            le programme sera lancé?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - text: Laurel ramassera 4 diamants avec ce code.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela a provoquer une erreur.
-        - text: Laurel essaiera de ramasser des diamants où il n'y en a pas et cela
-            provoque une erreur.
+        - text: Laurel ramassera 4 trésortrésors avec ce code.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
+        - text: Laurel essaiera de ramasser des trésortrésors où il n'y en a pas et
+            cela provoque une erreur.
           correct: true
           feedback: Correct!
         - text: Laurel ramassera tous les trésors.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela a provoquer une erreur.
+          feedback: Incorrect. Laurel essaie de ramasser des trésortrésors où il n'y
+            en a pas et cela a provoquer une erreur.
         - text: Je ne sais pas.
-          feedback: Laurel essaie de ramasser des diamants où il n'y en a pas et cela
-            a provoqué une erreur.
+          feedback: Laurel essaie de ramasser des trésortrésors où il n'y en a pas
+            et cela a provoqué une erreur.
         questions:
-        - {}
+        - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
+            le programme sera lancé?
+      gradek1_activity_beNice:
+        markdown: "# Se comporter dans le Labo Informatique \n \n<br/> <br/>  \n  \n<a
+          href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target= \"_new\">\n <button>\nAller au plan de la leçon\n</button> \n</a>\n\n<br/>
+          <br/>\n<a class = \"btn btn-large btn-primary next-stage submitButton\">Continue</a>"

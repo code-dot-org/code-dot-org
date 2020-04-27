@@ -57,6 +57,7 @@ ka:
   join_section:
     code:
       placeholder: სექციის კოდი (ABCDEF)
+      instructions_short: შეიყვანეთ თქვენი 6-ასოიანი განყოფილების კოდი
   add_hint_form:
     placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
     submit: მინიშნების დამატება
@@ -148,8 +149,6 @@ ka:
     valid_password: პაროლი დასაშვებია!
     invalid_password: პაროლი მინიმუმ 6 ნიშნისგან უნდა შედგებოდეს
     mismatch_password: თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა
-    under_13_consent: თუ 13 წელზე უმცროსი ვარ, ვადასტურებ, რომ მაქვს Code.org-ის სერვისების
-      გამოყენებაზე ჩემი მშობლის ან კანონიერი მეურვის თანხმობა.
     agree_us_website: თანახმა ვარ, გამოვიყენო ვებსაიტი, რომელიც მდებარეობს ამერიკის
       შეერთებულ შტატებში.
     my_data_to_us: ჩემ მიერ ამ საიტის გამოყენებით შეგროვებული მონაცემები შესაძლოა,
@@ -236,6 +235,7 @@ ka:
       %{name}
   parent_mailer:
     student_associated_subject: ანგარიშში შესასვლელად საჭირო ინფორმაცია Code.org-ისთვის
+    parent_email_added_subject: კეთილი იყოს თქვენი მობრძანება Code.org-ზე!
   teacher_mailer:
     new_teacher_subject: კეთილი იყოს თქვენი მობრძანება Code.org-ზე!
     delete_teacher_subject: 'Code.org შეტყობინება: თქვენი ანგარიში წაშლილია'
@@ -470,6 +470,8 @@ ka:
     update: ანგარიშის განახლება
     account_successfully_updated: ანგარიში წარმატებით განახლდა.
     update_email: განახლება
+    parent_guardian_email_label: მშობლის/მეურვის ელფოსტა
+    none: არცერთი
   user_level:
     completed: დასრულებულია
     tried: უკვე ნაცადია
@@ -604,6 +606,7 @@ ka:
     download: ვიდეოს გადმოწერა
     show_notes: ჩანიშვნების ჩვენება
     show_video: ვიდეოს ჩვენება
+    label: ვიდეო
   compatibility:
     upgrade:
       unsupported_message: თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ
@@ -1065,6 +1068,7 @@ ka:
     csp_functions: ფუნქციები
     csp_lists: სიები
     csp_loops: ციკლები
+    csp_unit1_2020: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
     dlp: კითხვები განვლილი მასალიდან
     k5_getting_started: დაწყება
     k5_next_steps: მომდევნო ნაბიჯები
@@ -1224,6 +1228,9 @@ ka:
   cookie_banner:
     accept: ვეთანხმები
   gdpr_dialog:
+    message: ჩემ მიერ ამ საიტის გამოყენებით შეგროვებული მონაცემები შესაძლოა, გაიგზავნოს
+      და შენახულ ან დამუშავებულ იქნას ამერიკის შეერთებულ შტატებში.
     privacy_policy: კონფიდენციალურობის დებულება
     logout: გასვლა
     true: დიახ
+  copy: კოპირება

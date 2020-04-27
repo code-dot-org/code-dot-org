@@ -94,6 +94,14 @@ si-LK:
         do something: යමක් කරන්න
       NEW Course 4 Play Lab Params 11:
         jump: පනින්න
+      New Artist Project:
+        draw a star: තරුවක් අඳින්න
+        draw a circle: රවුමක් අඳින්න
+        draw a triangle: ත්‍රිකොණයක් අඳින්න
+        draw a house: ගෙයක් අඳින්න
+        draw a square: සමචතුරස්‍රයක් අඳින්න
+      New Play Lab Project:
+        jump: පනින්න
       Standalone_Artist_7:
         draw a flower: මලක් අඳින්න
       course3_artist_functions_challenge1:
@@ -150,8 +158,6 @@ si-LK:
       courseE_artist_functions7:
         draw a house: ගෙයක් අඳින්න
       courseE_artist_functions7_2018:
-        draw a house: ගෙයක් අඳින්න
-      courseE_artist_functions7_2019:
         draw a house: ගෙයක් අඳින්න
       courseE_artist_functions8:
         do something: යමක් කරන්න

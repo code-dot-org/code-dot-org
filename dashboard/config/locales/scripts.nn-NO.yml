@@ -4,7 +4,6 @@ nn:
     script:
       category:
         csd_2018_category_name: Oppdagingar i informatikk (2018-19)
-        csf_category_name: Grunnleggande informatikk
         csf_2018_category_name: Grunnleggande informatikk (2018)
         csf_international_category_name: Grunnleggande informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
@@ -2257,7 +2256,7 @@ nn:
             'Unplugged: Binary':
               name: Binære bilete
             Artist Binary:
-              name: 'Kunstnar: binær'
+              name: 'Kunstnar: Binærbilete'
             Dance Party:
               name: Dansefest
         coursee-2019:
@@ -2512,3 +2511,131 @@ nn:
           stages:
             Conditionals:
               name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funksjonar med parameter
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+            Text:
+              name: Tekst
+        coursea-2020:
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan
+            lese.
+          stages:
+            Going Places Safely:
+              name: Går stader trygt
+            'Programming: Happy Maps':
+              name: Glade Kart
+            Events in Play Lab:
+              name: Hendingar i Spellab
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Dine digitale fotspor
+            Move It, Move It:
+              name: Flytt den, flytt den
+            'Loops: Getting Loopy':
+              name: Me blir sløyfete
+            Events in Play Lab:
+              name: Hendingar i Spellab
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binær armbånd
+            'Events: The Big Event':
+              name: Den store hendinga
+            Events in Play Lab:
+              name: Hendingar i Spellab
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              name: Programmeringsstafett
+            Conditionals with Cards:
+              name: Vilkår med kort
+            'Unplugged: Binary':
+              name: Binære bilete
+            Artist Binary:
+              name: 'Kunstnar: Binærbilete'
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Dance Party:
+              name: Dansefest
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Låtskriving
+        coursef-2020:
+          description_short: Lær alle konspta i grunnleggande informatikk og skap
+            din eigen kunst, historie eller spel.
+          stages:
+            Envelope Variables:
+              name: Konvolutt-variablar
+            For Loop Fun:
+              name: Morro med for-løkker
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansefest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stavekonkurranse
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binære tal
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Lag Funksjonar
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Medan-løkker
+            Variables:
+              name: Variablar
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hendingar
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Medan-løkker

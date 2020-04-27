@@ -6,10 +6,12 @@ import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
@@ -23,7 +25,6 @@ const getManageStudentsUrl = sectionId => {
 class SectionLoginInfo extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
 
     // Provided by redux.
     section: PropTypes.shape({
@@ -34,7 +35,14 @@ class SectionLoginInfo extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, section} = this.props;
+    const singleStudentId = queryParams('studentId');
+    const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
+    const students = singleStudentId
+      ? this.props.students.filter(
+          student => student.id.toString() === singleStudentId
+        )
+      : this.props.students;
 
     return (
       <div>
@@ -43,15 +51,14 @@ class SectionLoginInfo extends React.Component {
         ) && (
           <WordOrPictureLogins
             studioUrlPrefix={studioUrlPrefix}
-            pegasusUrlPrefix={pegasusUrlPrefix}
             section={section}
             students={students}
+            autoPrint={autoPrint}
           />
         )}
         {section.loginType === SectionLoginType.email && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            pegasusUrlPrefix={pegasusUrlPrefix}
             sectionCode={section.code}
             sectionId={section.id}
           />
@@ -128,18 +135,12 @@ class OAuthLogins extends React.Component {
 class EmailLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     sectionCode: PropTypes.string.isRequired,
     sectionId: PropTypes.number.isRequired
   };
 
   render() {
-    const {
-      studioUrlPrefix,
-      pegasusUrlPrefix,
-      sectionCode,
-      sectionId
-    } = this.props;
+    const {studioUrlPrefix, sectionCode, sectionId} = this.props;
 
     return (
       <div>
@@ -156,7 +157,7 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep2()}</li>
           <li>
             {i18n.loginInfo_joinStep3({
-              url: `${pegasusUrlPrefix}/join`,
+              url: `${studioUrlPrefix}/join`,
               code: sectionCode
             })}
           </li>
@@ -206,10 +207,16 @@ const styles = {
 class WordOrPictureLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
-    students: PropTypes.array.isRequired
+    students: PropTypes.array.isRequired,
+    autoPrint: PropTypes.bool
   };
+
+  componentDidMount() {
+    if (this.props.autoPrint) {
+      this.printLoginCards();
+    }
+  }
 
   printLoginCards = () => {
     const printArea = document.getElementById('printArea').outerHTML;
@@ -236,7 +243,7 @@ class WordOrPictureLogins extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section, students} = this.props;
+    const {studioUrlPrefix, section, students} = this.props;
     const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
@@ -245,7 +252,7 @@ class WordOrPictureLogins extends React.Component {
         <p>{i18n.loginInfo_signinSteps()}</p>
         <ol>
           <li>
-            {i18n.loginInfo_signinStep1({joinUrl: `${pegasusUrlPrefix}/join`})}
+            {i18n.loginInfo_signinStep1({joinUrl: `${studioUrlPrefix}/join`})}
           </li>
           <li>{i18n.loginInfo_signinStep2({code: section.code})}</li>
           <li>{i18n.loginInfo_signinStep3()}</li>
@@ -277,19 +284,21 @@ class WordOrPictureLogins extends React.Component {
         {students.length >= 1 && (
           <span>
             <Button
+              __useDeprecatedTag
               text={i18n.printLoginCards_button()}
-              color="orange"
+              color={Button.ButtonColor.orange}
               onClick={this.printLoginCards}
+              icon="print"
+              iconClassName="fa"
             />
             <br />
             <div id="printArea" style={styles.container}>
               {students.map(student => (
                 <LoginCard
                   key={student.id}
-                  studioUrlPrefix={studioUrlPrefix}
-                  pegasusUrlPrefix={pegasusUrlPrefix}
                   section={section}
                   student={student}
+                  studioUrlPrefix={studioUrlPrefix}
                 />
               ))}
             </div>
@@ -305,51 +314,57 @@ class WordOrPictureLogins extends React.Component {
  */
 class LoginCard extends React.Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string.isRequired,
-    pegasusUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
-    student: PropTypes.object.isRequired
+    student: PropTypes.object.isRequired,
+    studioUrlPrefix: PropTypes.string.isRequired
   };
 
   render() {
-    const {studioUrlPrefix, pegasusUrlPrefix, section, student} = this.props;
+    const {studioUrlPrefix, section, student} = this.props;
 
     return (
       <div style={styles.card}>
-        <p style={styles.text}>
-          {i18n.loginCard_instructions({
-            url: `${pegasusUrlPrefix}/join`,
-            code: section.code
+        <SafeMarkdown
+          style={styles.text}
+          markdown={i18n.loginCardSectionName({
+            sectionName: section.name
           })}
-        </p>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_directUrl()}</span>
-          {` ${studioUrlPrefix}/sections/${section.code}`}
-        </p>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_sectionName()}</span>
-          {` ${section.name}`}
-        </p>
-        <p style={styles.text}>
-          <span style={styles.bold}>{i18n.loginCard_name()}</span>
-          {` ${student.name}`}
-        </p>
+        />
+        <SafeMarkdown
+          style={styles.text}
+          markdown={i18n.loginCardForPrint1({
+            directLink: `${studioUrlPrefix}/sections/${section.code}`,
+            joinLink: `${studioUrlPrefix}/join`,
+            sectionCode: section.code
+          })}
+        />
+        <SafeMarkdown
+          style={styles.text}
+          markdown={i18n.loginCardForPrint2({
+            studentName: student.name
+          })}
+        />
+        {section.loginType === SectionLoginType.word && (
+          <SafeMarkdown
+            style={styles.text}
+            markdown={i18n.loginCardForPrint3Word({
+              secretWords: student.secret_words
+            })}
+          />
+        )}
         {section.loginType === SectionLoginType.picture && (
-          <p style={styles.text}>
-            <span style={styles.bold}>{i18n.loginCard_secretPicture()}</span>
+          <span>
+            {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={`${pegasusUrlPrefix}/images/${student.secret_picture_path}`}
+              src={pegasus(`/images/${student.secret_picture_path}`)}
               style={styles.img}
             />
-          </p>
+            <br />
+            <br />
+          </span>
         )}
-        {section.loginType === SectionLoginType.word && (
-          <p style={styles.text}>
-            <span style={styles.bold}>{i18n.loginCard_secretWords()}</span>
-            <span>{` ${student.secret_words}`}</span>
-          </p>
-        )}
+        <div>{i18n.loginCardForPrint4()}</div>
       </div>
     );
   }

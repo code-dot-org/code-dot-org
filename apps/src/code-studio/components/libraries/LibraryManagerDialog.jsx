@@ -1,8 +1,11 @@
 /*globals dashboard*/
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Radium from 'radium';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
@@ -19,20 +22,19 @@ const styles = {
   linkBox: {
     cursor: 'auto',
     height: '32px',
-    margin: DEFAULT_MARGIN,
-    marginRight: 0,
-    flex: 1
+    marginBottom: 0,
+    flex: 1,
+    maxWidth: 400
   },
   header: {
     textAlign: 'left',
-    fontSize: 'x-large',
-    color: color.purple,
-    margin: DEFAULT_MARGIN,
-    marginTop: 30
+    fontSize: 24,
+    marginTop: 20
   },
   libraryList: {
     maxHeight: '140px',
-    overflowY: 'auto'
+    overflowY: 'auto',
+    borderBottom: `2px solid ${color.purple}`
   },
   message: {
     color: color.dark_charcoal,
@@ -43,10 +45,18 @@ const styles = {
     whiteSpace: 'pre-wrap'
   },
   inputParent: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'baseline'
   },
   add: {
-    margin: DEFAULT_MARGIN
+    margin: DEFAULT_MARGIN,
+    color: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
+    ':disabled': {
+      color: color.light_gray,
+      borderColor: color.light_gray,
+      backgroundColor: color.lightest_gray
+    }
   },
   hidden: {
     visibility: 'hidden'
@@ -58,10 +68,40 @@ const styles = {
     minHeight: 30,
     whiteSpace: 'pre-wrap',
     lineHeight: 1
+  },
+  updateButtons: {
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };
 
-export default class LibraryManagerDialog extends React.Component {
+// Map userName from class libraries to project libraries so the author is displayed in the UI.
+// We only want users to see the author name for libraries from their classmates.
+export const mapUserNameToProjectLibraries = (
+  projectLibraries,
+  classLibraries
+) => {
+  if (classLibraries.length === 0) {
+    return projectLibraries;
+  }
+
+  projectLibraries.forEach(projectLibrary => {
+    const classLibrary = classLibraries.find(
+      library => library.channel === projectLibrary.channelId
+    );
+    projectLibrary.userName = classLibrary && classLibrary.userName;
+  });
+
+  return projectLibraries;
+};
+
+const DisplayLibraryMode = {
+  NONE: 'none',
+  VIEW: 'view',
+  UPDATE: 'update'
+};
+
+export class LibraryManagerDialog extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired
@@ -69,13 +109,14 @@ export default class LibraryManagerDialog extends React.Component {
 
   state = {
     importLibraryId: '',
-    libraries: [],
+    projectLibraries: [],
     classLibraries: [],
     cachedClassLibraries: [],
-    viewingLibrary: {},
-    isViewingCode: false,
+    displayLibrary: null,
+    displayLibraryMode: DisplayLibraryMode.NONE,
     isLoading: false,
-    error: null
+    error: null,
+    updatedLibraryChannels: []
   };
 
   componentDidUpdate(prevProps) {
@@ -85,16 +126,40 @@ export default class LibraryManagerDialog extends React.Component {
   }
 
   onOpen = () => {
+    let projectLibraries = dashboard.project.getProjectLibraries() || [];
+    this.setState({projectLibraries});
+
     let libraryClient = new LibraryClientApi();
-    this.setState({libraries: dashboard.project.getProjectLibraries() || []});
     libraryClient.getClassLibraries(
-      libraries => {
-        this.setState({classLibraries: libraries});
+      classLibraries => {
+        projectLibraries = mapUserNameToProjectLibraries(
+          projectLibraries,
+          classLibraries
+        );
+        this.setState({classLibraries, projectLibraries});
       },
       error => {
         console.log('error: ' + error);
       }
     );
+
+    this.fetchUpdates(projectLibraries);
+  };
+
+  fetchUpdates = libraries => {
+    if (libraries.length === 0) {
+      return;
+    }
+
+    const libraryQuery = libraries.map(library => ({
+      channel_id: library.channelId,
+      version: library.versionId
+    }));
+
+    $.ajax({
+      method: 'GET',
+      url: `/libraries/get_updates?libraries=${JSON.stringify(libraryQuery)}`
+    }).done(updatedLibraryChannels => this.setState({updatedLibraryChannels}));
   };
 
   setLibraryToImport = event => {
@@ -102,30 +167,54 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   addLibraryToProject = libraryJson => {
-    dashboard.project.setProjectLibraries([
-      ...this.state.libraries,
-      libraryJson
-    ]);
+    const {projectLibraries} = this.state;
+    if (!libraryJson) {
+      return;
+    }
+
+    dashboard.project.setProjectLibraries([...projectLibraries, libraryJson]);
+    this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
+  };
+
+  updateLibraryInProject = libraryJson => {
+    if (!libraryJson) {
+      return;
+    }
+
+    const {projectLibraries} = this.state;
+    let libraries = [...projectLibraries];
+    const libraryIndex = libraries.findIndex(
+      library => library.channelId === libraryJson.channelId
+    );
+    libraries[libraryIndex] = libraryJson;
+    dashboard.project.setProjectLibraries(libraries);
     this.setState({libraries: dashboard.project.getProjectLibraries()});
   };
 
-  onImportFailed = error => {
-    this.setState({
-      error: i18n.libraryImportError(),
-      isLoading: false
-    });
+  addLibraryById = (libraryJson, error) => {
+    if (error) {
+      this.setState({
+        error: i18n.libraryImportError(),
+        isLoading: false
+      });
+    } else if (libraryJson) {
+      this.addLibraryToProject(libraryJson);
+    }
   };
 
   fetchLatestLibrary = (channelId, callback) => {
-    let {cachedClassLibraries} = this.state;
-    let cachedLibrary = cachedClassLibraries.find(
+    const {cachedClassLibraries} = this.state;
+    const cachedLibrary = cachedClassLibraries.find(
       library => library.channelId === channelId
     );
     if (cachedLibrary) {
-      callback(cachedLibrary);
+      callback(cachedLibrary, null);
       return;
     }
+
     let libraryClient = new LibraryClientApi(channelId);
+    const errorCallback = err => callback(null, err);
+
     libraryClient.fetchLatestVersionId(
       versionId =>
         // TODO: Check for naming collisions between libraries.
@@ -141,39 +230,46 @@ export default class LibraryManagerDialog extends React.Component {
               cachedClassLibraries: [...cachedClassLibraries, updatedjson],
               isLoading: false
             });
-            callback(updatedjson);
+            callback(updatedjson, null);
           },
-          this.onImportFailed
+          errorCallback
         ),
-      this.onImportFailed
+      errorCallback
     );
   };
 
   removeLibrary = libraryName => {
+    const {projectLibraries} = this.state;
     dashboard.project.setProjectLibraries(
-      this.state.libraries.filter(library => {
+      projectLibraries.filter(library => {
         return library.name !== libraryName;
       })
     );
-    this.setState({libraries: dashboard.project.getProjectLibraries()});
+    this.setState({projectLibraries: dashboard.project.getProjectLibraries()});
   };
 
   displayProjectLibraries = () => {
-    let {libraries} = this.state;
-    if (!Array.isArray(libraries) || !libraries.length) {
-      return (
-        <div style={styles.message}>
-          You have no libraries in your project. Try adding one from your class
-          list or from an ID.
-        </div>
-      );
+    const {projectLibraries, updatedLibraryChannels} = this.state;
+    if (!Array.isArray(projectLibraries) || !projectLibraries.length) {
+      return <div style={styles.message}>{i18n.noLibrariesInProject()}</div>;
     }
-    return libraries.map(library => {
+
+    const onUpdate = channelId => {
+      this.fetchLatestLibrary(channelId, lib =>
+        this.viewCode(lib, DisplayLibraryMode.UPDATE)
+      );
+    };
+
+    return projectLibraries.map(library => {
       return (
         <LibraryListItem
           key={library.name}
           library={library}
-          onRefresh={undefined}
+          onUpdate={
+            updatedLibraryChannels.includes(library.channelId)
+              ? onUpdate
+              : undefined
+          }
           onRemove={this.removeLibrary}
           onViewCode={() => this.viewCode(library)}
         />
@@ -182,14 +278,9 @@ export default class LibraryManagerDialog extends React.Component {
   };
 
   displayClassLibraries = () => {
-    let {classLibraries} = this.state;
+    const {classLibraries} = this.state;
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
-      return (
-        <div style={styles.message}>
-          No one in your class has published a library. Try adding one from an
-          ID.
-        </div>
-      );
+      return <div style={styles.message}>{i18n.noLibrariesInClass()}</div>;
     }
     return classLibraries.map(library => {
       return (
@@ -207,8 +298,15 @@ export default class LibraryManagerDialog extends React.Component {
     });
   };
 
-  viewCode = library => {
-    this.setState({viewingLibrary: library, isViewingCode: true});
+  viewCode = (library, mode) => {
+    if (!library) {
+      return;
+    }
+
+    this.setState({
+      displayLibrary: library,
+      displayLibraryMode: mode || DisplayLibraryMode.VIEW
+    });
   };
 
   closeLibraryManager = () => {
@@ -216,22 +314,78 @@ export default class LibraryManagerDialog extends React.Component {
     this.props.onClose();
   };
 
+  renderDisplayLibrary = () => {
+    const {displayLibrary, displayLibraryMode} = this.state;
+    if (!displayLibrary) {
+      return null;
+    }
+
+    const onClose = () =>
+      this.setState({
+        displayLibrary: null,
+        displayLibraryMode: DisplayLibraryMode.NONE
+      });
+
+    switch (displayLibraryMode) {
+      case DisplayLibraryMode.VIEW:
+        return (
+          <LibraryViewCode
+            title={displayLibrary.name}
+            description={displayLibrary.description}
+            onClose={onClose}
+            sourceCode={displayLibrary.source}
+          />
+        );
+      case DisplayLibraryMode.UPDATE:
+        return (
+          <LibraryViewCode
+            title={i18n.updateLibraryConfirmation({
+              libraryName: displayLibrary.name
+            })}
+            description={displayLibrary.description}
+            onClose={onClose}
+            sourceCode={displayLibrary.source}
+            buttons={
+              <div style={styles.updateButtons}>
+                <Button
+                  text={i18n.cancel()}
+                  color={Button.ButtonColor.gray}
+                  onClick={onClose}
+                />
+                <Button
+                  text={i18n.update()}
+                  onClick={() => this.updateLibraryInProject(displayLibrary)}
+                />
+              </div>
+            }
+          />
+        );
+      default:
+        return null;
+    }
+  };
+
   render() {
-    let {isOpen} = this.props;
-    let {isViewingCode, importLibraryId, viewingLibrary} = this.state;
+    const {isOpen} = this.props;
+    const {importLibraryId, displayLibrary, isLoading, error} = this.state;
+
+    if (!isOpen) {
+      return null;
+    }
+
     return (
       <div>
         <BaseDialog
-          isOpen={isOpen}
+          isOpen
           handleClose={this.closeLibraryManager}
-          style={{...styles.dialog, ...(isViewingCode ? styles.hidden : {})}}
+          style={{...styles.dialog, ...(displayLibrary ? styles.hidden : {})}}
           useUpdatedStyles
         >
-          <div style={styles.header}>{i18n.libraryManage()}</div>
+          <h1 style={styles.header}>{i18n.libraryManage()}</h1>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <div style={styles.header}>{i18n.libraryClassImport()}</div>
+          <h1 style={styles.header}>{i18n.libraryClassImport()}</h1>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <div style={styles.header}>{i18n.libraryIdImport()}</div>
+          <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
           <div style={styles.inputParent}>
             <input
               style={styles.linkBox}
@@ -243,27 +397,21 @@ export default class LibraryManagerDialog extends React.Component {
               style={styles.add}
               onClick={() => {
                 this.setState({isLoading: true});
-                this.fetchLatestLibrary(
-                  importLibraryId,
-                  this.addLibraryToProject
-                );
+                this.fetchLatestLibrary(importLibraryId, this.addLibraryById);
               }}
               type="button"
+              disabled={!importLibraryId}
             >
-              {this.state.isLoading && (
-                <FontAwesome icon="spinner" className="fa-spin" />
-              )}
-              {!this.state.isLoading && i18n.add()}
+              {isLoading && <FontAwesome icon="spinner" className="fa-spin" />}
+              {!isLoading && i18n.add()}
             </button>
           </div>
-          <div style={styles.error}>{this.state.error}</div>
+          <div style={styles.error}>{error}</div>
         </BaseDialog>
-        <LibraryViewCode
-          isOpen={isViewingCode}
-          onClose={() => this.setState({isViewingCode: false})}
-          library={viewingLibrary}
-        />
+        {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );
   }
 }
+
+export default Radium(LibraryManagerDialog);

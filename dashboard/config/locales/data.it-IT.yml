@@ -833,7 +833,7 @@ it:
         c_and_c_digital_sharing: Condivisione digitale
         teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
         elem_pd_2: Informatica per Scuole Elementari - PD video 2/2
-        what_is_cs: Cos'é l'informatica?
+        what_is_cs: Cos'è l'informatica?
         repeat_block: Uso del blocco Ripeti
         lesson_planning: Pianificazione Lezione
         opd_closing: 'Insegnare i Fondamenti di CS: Chiusura & Passi Successivi'
@@ -860,14 +860,22 @@ it:
         csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
         CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere
           i problemi (Problem Solving)
+        how-to-k5-workshops: 'Code.org - Fondamenti di informatica: provato dai bambini,
+          approvato dagli insegnanti'
+        why-should-teach-unplugged-activities: FAQ - Perché proporre lezioni tradizionali
+          (unplugged)?
         oceans_machine_learning: Cos'è l'Apprendimento Automatico (Machine Learning)
         oceans_training_data: Dati di apprendimento e distorsioni
         oceans_societal_implications: Ripercussioni sociali
-        hoc_dance_congrats_2019: Ballando col codice 2019 - Parte la festa!
-        hoc_dance_warmup_2019: Ballando col codice 2019 - Riscaldamento
-        hoc_dance_events_2019: Ballando col codice 2019 - Eventi
-        hoc_dance_measures_2019: Ballando col codice 2019 - Battute
-        hoc_dance_properties_2019: Ballando col codice 2019 - Proprietà
+        hoc_dance_congrats_2019: Dance Party - Via al party!
+        hoc_dance_warmup_2019: Dance Party - Warm up
+        hoc_dance_events_2019: Dance Party - Eventi
+        hoc_dance_measures_2019: Ballando col codice - Battute
+        hoc_dance_properties_2019: Dance Party - Proprietà
+        csf_my_online_neighborhood_2020: Il mio quartiere digitale
+        csf_follow_the_digital_trail: Segui le tue tracce digitali
+        csf_private_and_personal_information: Cittadinanza digitale - Dati personali
+          e altri dati
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

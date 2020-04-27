@@ -2,7 +2,7 @@
 title: Hour of Code begivenhed - vejledning
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -62,4 +62,4 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 | 10:40-11:00 | Eleverne viser en unplugged aktivitet og hvordan man kan undervise i programmering uden brug af computere.                                               |
 | 11:00-11:05 | Læreren der står for arrangementet, kommer med nogle afsluttende bemærkninger.                                                                           |
 
-{{ signup_button }}
+{{ tilmeld_knap }}

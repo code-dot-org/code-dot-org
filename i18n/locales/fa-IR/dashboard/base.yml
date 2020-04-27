@@ -171,6 +171,8 @@ fa:
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
 
 
+  parent_mailer:
+    parent_email_added_subject: 'به Code.org خوش آمدید!'
   teacher_mailer:
     new_teacher_subject: 'به Code.org خوش آمدید!'
   section:
@@ -241,13 +243,16 @@ fa:
       logout: 'خروج'
       signin: 'ورود'
       already_registered: 'قبلا ثبت نام کرده اید؟?'
+      pair_programming: 'برنامه نویسی دونفره'
       team: 'تیم'
+      driver: 'راننده'
       navigator: 'شریک'
       create: 'ایجاد'
       algebra_game: 'جبر'
       applab: 'آزمایشگاه نرم افزار'
       artist: 'هنرمند'
       bounce: 'پریدن'
+      dance: 'جشن و رقص'
       flappy: 'فلاپی'
       frozen: 'منجمد'
       gamelab: 'کارگاه بازی سازی'
@@ -295,6 +300,7 @@ fa:
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
     email_confirm_wrong_email: '(آدرس ایمیل اشتباه است؟)'
     email_resend_confirm: 'ارسال مجدد دستورالعمل‌های تأیید'
+    new_email_hint: '(مطمئن شوید که شما می توانید از طریق این آدرس ایمیل، ایمیل دریافت کنید.)'
     new_password_hint: "(اگر نمی خواهید تغییر بدهید خالی بگذارید)"
     current_password_hint: '(کلمه عبور برای ذخیره تغییرات لازم است)'
     delete: 'حسابت راحذف کن'
@@ -302,6 +308,7 @@ fa:
     delete_text_teacher_note: "لطفا توجه داشته باشید: حذف کردن حساب شما حساب های دانش آموزهایتان را حدف نخواهدکرد."
     delete_confirm: 'آیا مطمئنید که میخواهید حسابتان را حذف کنید؟'
     update_email: "بروزرسانی"
+    none: "هیچکدام"
   user_level:
     completed: 'انجام شد'
     tried: 'سعی شد'
@@ -390,6 +397,7 @@ fa:
     notes_coming_soon: 'یادداشت ها برای این ویدیو به زودی.'
     autoplay_option: 'پخش خودکار فیلم ها'
     download: 'دانلود ویدیو'
+    label: 'ویدیو'
   compatibility:
     upgrade:
       link: "بیشتر بیاموزید"
@@ -430,6 +438,10 @@ fa:
       body_short: "یک نرم افزار طاحی کن، با بلوک ها یا جاوا اسکریپت کدنویسی کن تا کار کند، بعد ظرف چند ثانیه نرم افزار خود را به اشتراک بگذار."
       audience: 'سنین سیزده به بالا'
       cta: 'یادبگیر چگونه'
+    dance:
+      title: 'جشن و رقص'
+    dance-2019:
+      title: 'جشن و رقص'
     hoc:
       title: 'هزارتوی کلاسیک'
       body: 'مفاهیم اساسی علم کامپیوتر را امتحان کنید. میلیون‌ها نفر آن را امتحان کرده‌اند.'
@@ -677,3 +689,4 @@ fa:
     accept: 'موافقم'
   gdpr_dialog:
     yes: 'بله'
+  copy: 'رونوشت‌'

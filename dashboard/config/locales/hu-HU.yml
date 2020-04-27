@@ -10,9 +10,9 @@ hu:
         frissített Általános Szerződési Feltételeket, hogy hozzáférjen ehhez a tartalomhoz.
         A tanár ezt megteheti, ha bejelentkezik a Kód Stúdióba, ha rákattint a Kódex
         stúdió kezdőlapjának tetején található "Felülvizsgálat frissítések" gombra.
-      pair_programmer: Jelenleg páros programozást végzel olyan diákkal, aki nem fér
-        hozzá ehhez a tartalomhoz. A tartalom eléréséhez állítsd le a programozást,
-        és próbáld újra.
+      pair_programmer: Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez
+        a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros
+        programozást, és próbáld újra.
   activerecord:
     errors:
       messages:
@@ -23,7 +23,7 @@ hu:
     attributes:
       user:
         name: Megjelenítendő név
-        name_example: Megjelenítendő név (pl. hideg, Coder vagy Jane S.)
+        name_example: Megjelenítendő név (pl. Menő Kódoló)
         email: Email
         parent_email: Szülő/gondviselő e-mail
         personal_email: Személyes elektronikus levél cím <a href="%{url}">(kattintson
@@ -37,8 +37,8 @@ hu:
         locale: Nyelv
         age: Kor
         gender: Nem
-        edit_header: Felhasználói Adatok Szerkesztése
-        finish_sign_up_header: A profil létrehozásának befejezése
+        edit_header: Felhasználói adatok szerkesztése
+        finish_sign_up_header: A profilod létrehozásának befejezése
         finish_sign_up_subheader: Töltsd ki az alábbi adatokat <strong>%{email}</strong>
           Code.org fiókod létrehozásához.
         finish_sign_up_subheader_markdown: Töltsd ki az alábbi adatokat **%{email}**
@@ -65,7 +65,10 @@ hu:
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   join_section:
     code:
+      title: Csatlakozz egy csoporthoz a Code.org-on
       placeholder: Szakasz kód (ABCDEF)
+      instructions_short: Add meg a 6 karakteres szakasz kódod
+      submit: Csatlakozás
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
     submit: Írja le a véleményét
@@ -76,8 +79,8 @@ hu:
   trophies: trófeák
   courses: tanfolyamok
   courses_page:
-    title_student: Tanulj a Kód Stúdióban
-    title_teacher: Taníts Számítástechnikát
+    title_student: 'Tanulj a számítástechnikát '
+    title_teacher: Taníts számítástechnikát
   unplugged_activity: Offline tevékenység
   of: "/"
   more: TÖBB
@@ -92,11 +95,12 @@ hu:
   prize: díj
   more_info: További információk
   auth:
-    continue_with: 'Bejelentkezés ezzel: %{provider}'
+    continue_with: 'Folytatás ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: Bejelentkezve!
-    already_signedup: Már regisztrált?
-    notyet_signedup: Még nem csatlakozott?
+    signed_out_markdown: "### Kijelentkeztél innen: [Code.org](%{url})."
+    already_signedup: Már regisztráltál?
+    notyet_signedup: Még nem csatlakoztál?
     google_oauth2: Google fiók
     twitter: Twitter
     facebook: Facebook
@@ -166,8 +170,6 @@ hu:
     valid_password: Érvényes jelszó!
     invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
     mismatch_password: A megadott két jelszó nem egyezik
-    under_13_consent: Ha 13 éves kor alatti vagyok, megerősítem, hogy a szülőm vagy
-      törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait.
     student_consent: Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt
       adott, hogy használjam Code.org szolgáltatásait.
     agree_us_website: Elfogadom, hogy egy Egyesült Államokban létrejött weboldalt
@@ -181,17 +183,21 @@ hu:
     user_type_student: Diák
     field_is_required: szükséges
     accept_terms: El kell fogadnia, hogy létre hozzon egy fiókot
+    error: Hiba történt
     email_preference_question: Küldhetünk neked email üzeneteket az új tanfolyamjainkról,
       helyi lehetőségekről, és egyéb informatikai hírekről? (kb. havonta egyszer)
     email_preference_privacy: "(Tekintsd át az adatvédelmi irányelveinket)"
     email_preference_yes: Igen
     email_preference_no: Nem
+    email_preference_required: Meg kell adnia egy e-mail címet.
   school_info:
     title: Az iskolai információ (opcionális)
     school_country: Iskola országa
     select_school_type: Iskola típusa
     private: Magán
     public: Nyilvános
+    homeschool: Bázisiskola
+    after_school: Iskola után
     other: Egyéb
     state: Állam
     district: Kerület
@@ -200,7 +206,7 @@ hu:
     school: Iskola
     other_school_not_listed: Más, fel nem sorolt iskola
     school_name: Iskola neve
-    school_zip: Iskola irányítószám
+    school_zip: Iskola irányítószáma
     school_address: Iskola címe
     school_organization_name: Iskola vagy szervezet neve
     school_organization_zip: Iskola/szervezet irányítószáma
@@ -218,7 +224,7 @@ hu:
   signinsection:
     welcome: 'Üdvözlünk itt: %{section_name}'
     name: Válaszd ki a neved
-    picture: Keress egy titkos képet
+    picture: Keresd meg a titkos képed
     words: Írd be a titkos szavaidat
     login: Bejelentkezés
     invalid_login: Érvénytelen bejelentkezés, kérjük próbáld meg újra
@@ -341,6 +347,7 @@ hu:
       signin: Bejelentkezés
       signup: Regisztrálj
       already_registered: Már regisztráltál?
+      pair_programming: Páros programozás
       team: Csapat
       driver: Vezető
       navigator: Navigátor
@@ -439,6 +446,9 @@ hu:
     update: Adatok frissítése
     account_successfully_updated: Az adatok frissítése sikeres volt.
     update_email: Frissítés
+    parent_guardian_email_label: Szülő/gondviselő e-mail
+    none: Egyik sem
+    encrypted: titkosítva
   user_level:
     completed: Befejezve
     tried: Próbáltam
@@ -558,6 +568,7 @@ hu:
     notes_coming_soon: Ehhez a videóhoz hamarosan lesznek jegyzetek.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
+    label: Videó
   compatibility:
     upgrade:
       link: Tudj meg többet
@@ -754,6 +765,8 @@ hu:
       irányelveket</a>
     accept_label_markdown: Elfogadom a frissített [Felhasználási feltételeket](%{tos_url})
       és az [Adatvédelmi irányelveket](%{privacy_url})
+    accept_tos: A Code.org weboldalra történő feliratkozással elfogadod az [Általános
+      Szerződési Feltételeinket](%{tos_url}) és az [Adatvédelmi irányelveinket](%{privacy_url}).
     print: Nyomtatás
   school_info_interstitial:
     save: Mentés
@@ -868,12 +881,14 @@ hu:
     csp5_2: '2. fejezet: Programozás adatszerkezetekkel'
     cspSurvey: Kérdőív
     cspAssessment: Fejezet végi értékelés
+    csp_postap_1: '2. fejezet: Adatok manipulálása és megjelenítése'
     csp2_1_2018: '2. fejezet: Digitális információ'
     csp_variables: változók
     csp_conditionals: Feltételek
     csp_functions: funkciók
     csp_lists: Listák
     csp_loops: hurkok
+    csp_unit1_2020: '2. fejezet: Digitális információ'
     k5_getting_started: Első lépések
   external_links:
     disclaimer: Felelősséget kizáró nyilatkozat
@@ -883,6 +898,9 @@ hu:
     minecraft_name: Minecraft Kódolás Órája
     starwars_blocks_name: 'Star Wars: Egy galaxis építése kóddal (Blocks)'
     starwars_javascript_name: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
+    download_in_English: 'Letöltés angolul:'
+    download_in_Spanish: 'Letöltés spanyolul:'
+    windows: Windows
     mac: Mac OS X
   view_teacher_guide: Oktatói útmutató megtekintése
   pd:
@@ -904,6 +922,7 @@ hu:
         science: Tudományok
         la: Nyelvek
       resources:
+        khan: Khan Akadémia
         kodable: Kodable
       robotics:
         kodable: Kodable
@@ -915,4 +934,8 @@ hu:
   cookie_banner:
     accept: Egyetértek
   gdpr_dialog:
+    heading: Elfogadod, hogy egy Egyesült Államokban létrejött weboldalt használj?
+    message: A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen
+      az Egyesült Államokban történik.
     true: Igen
+  copy: Másol

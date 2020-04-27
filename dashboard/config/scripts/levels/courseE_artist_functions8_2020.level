@@ -1,0 +1,200 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:54:34.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist_zombie",
+    "x": "30",
+    "y": "100",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "short_instructions": "Use everything you've learned so far to recreate this design.",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "true",
+    "never_autoplay_video": "false",
+    "permitted_errors": "0",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!\",\"hint_id\":\"courseD_artist_functions8_f\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/878512f3e3426dfaada668826a48804c/courseE_artist_functions8_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by making a function for a square, then try making a function for a line of squares.\\n\\nHow would you use the `draw a line of squares` function to make this image?\",\"hint_id\":\"courseD_artist_functions8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/44e6bca43b33b3ae7f7e251d5e32f430/courseE_artist_functions8_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"To make a line of squares,\\n  - repeat 3 times\\n    - draw a square with a side length of **50 pixels**\\n    - jump forward **100 pixels**\",\"hint_id\":\"courseD_artist_functions8_d\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67ef0a6a9ed88ff1327d21e154dd251f/courseE_artist_functions8_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Think of each row in this picture as a line of 3 squares. How many lines of squares are there and where do you start drawing each of them?\\n\\n![](https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png)\",\"hint_id\":\"courseD_artist_functions8_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1b7e666398656659cd060424dae397fe/courseE_artist_functions8_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"At the end of each set of staggered squares, the artist will need to jump down and backward before he draws the next set of staggered squares.\",\"hint_id\":\"courseD_artist_functions8_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c3d6f59504b132cd16429724d875290/courseE_artist_functions8_2018.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)\",\"hint_id\":\"courseD_artist_functions8_g\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseE_artist_functions8_2018.mp3\"}]",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "callout_json": "[]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2020",
+    "top_level_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/02806220211cb4ccc7821f2fb04ae1eb=levelbuilder/37114.png",
+    "show_type_hints": "false",
+    "parent_level_id": 15219,
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-26 00:48:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:13:58 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:15:41 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:16:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:26:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="draw_move_by_constant" limit="1">
+            <title name="DIR">moveForward</title>
+            <title name="VALUE">100</title>
+          </block>
+          <block type="jump_by_constant">
+            <title name="DIR">jumpForward</title>
+            <title name="VALUE">100</title>
+          </block>
+          <block type="draw_turn_by_constant">
+            <title name="DIR">turnRight</title>
+            <title name="VALUE">90</title>
+          </block>
+          <block type="draw_turn_by_constant">
+            <title name="DIR">turnLeft</title>
+            <title name="VALUE">90</title>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat">
+            <title name="TIMES">4</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_defnoreturn">
+            <mutation/>
+            <title name="NAME">do something</title>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="staggered squares"/>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">100</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE">90</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">staggered squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a line of squares"/>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">180</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a line of squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw square"/>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">100</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw square</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

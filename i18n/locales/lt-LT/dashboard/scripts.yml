@@ -1716,3 +1716,107 @@ lt:
           stages:
             Conditionals:
               name: Sąlyginiai sakiniai
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Komandos su parametrais
+        csd3-2020:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+            Text:
+              name: Tekstas
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Saugus naršymas internete
+            'Programming: Happy Maps':
+              name: Laimingieji žemėlapiai
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Virtualūs pirštų antspaudai
+            Move It, Move It:
+              name: Judėk, judėk
+            'Loops: Getting Loopy':
+              name: Kartojimo supratimas
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Dvejetainės apyrankės
+            'Events: The Big Event':
+              name: Didelis įvykis
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programavimas ant languoto popieriaus
+            Relay Programming:
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            'Unplugged: Binary':
+              name: Dvejetainiai vaizdai
+            Artist Binary:
+              name: 'Meninkas: dvejetainis'
+            Digital Citizenship:
+              name: Virtuali pilietybė
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Dainų rašymas
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Rašanti bitė
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Dvejetainiai skaičiai
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Komandų kūrimas
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '„Kol“ kartojimas'
+            Variables:
+              name: Kintamieji
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmai
+            Events:
+              name: Įvykiai
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '„Kol“ kartojimas'

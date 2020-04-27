@@ -65,6 +65,7 @@
   join_section:
     code:
       placeholder: Seksjonskode (ABCDEF)
+      instructions_short: Angi din seksjons kode (6 tegn)
       submit: Bli med
   add_hint_form:
     placeholder: Skriv inn et hint her
@@ -156,8 +157,6 @@
     valid_password: Gyldig passord!
     invalid_password: Passordet må bestå av minimum seks tegn
     mismatch_password: De to passordene du skrev inn samsvarer ikke
-    under_13_consent: Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine
-      foreldre eller verge til å bruke tjenestene til Code.org.
     student_consent: Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse
       til å bruke tjenestene fra Code.org.
     agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
@@ -247,6 +246,7 @@
       %{name}
   parent_mailer:
     student_associated_subject: Logg inn informasjon for Code.org
+    parent_email_added_subject: Velkommen til Code.org!
   teacher_mailer:
     new_teacher_subject: Velkommen til Code.org!
     delete_teacher_subject: 'Code.org melding: Din konto er slettet'
@@ -443,6 +443,7 @@
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
     email_confirm_wrong_email: "(Feil e-postadresse?)"
     email_resend_confirm: Send bekreftelse på nytt
+    new_email_hint: "(Kontroller at du kan motta e-post til denne e-postadressen)"
     new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
     current_password_hint: "(vi trenger ditt gjeldende passord for å bekrefte dine
       endringer)"
@@ -488,6 +489,9 @@
     update: Oppdater konto
     account_successfully_updated: Kontoen er oppdatert.
     update_email: Oppdater
+    parent_guardian_email_label: Foreldre/foresatt epost
+    none: Ingen
+    encrypted: kryptert
   user_level:
     completed: Fullført
     tried: Forsøkt
@@ -620,6 +624,7 @@
     download: Last ned video
     show_notes: Vis notat
     show_video: Vis video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Nettleseren din støttes ikke. Vennligst oppdater til <a
@@ -1066,12 +1071,14 @@
     csp_ap_1: 'Kapittel 1: AP Tech-oppsett'
     csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
     csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
+    csp_postap_1: 'Kapittel 2: Manipulere og visualisere data'
     csp2_1_2018: 'Enhet 2: Digital informasjon'
     csp_variables: Variabler
     csp_conditionals: Betingelser
     csp_functions: Funksjoner
     csp_lists: Lister
     csp_loops: Løkker
+    csp_unit1_2020: "(gammel) Enhet 1: Digital informasjon"
     dlp: Spørsmål til refleksjon
     k5_next_steps: De Neste Trinnene
   external_links:
@@ -1198,10 +1205,12 @@
         art: Kunst
         other: 'Annet:'
       resources:
+        khan: Khan akademiet
         kodable: Kodbart
         scratch: Scratch
         other: 'Annet:'
       robotics:
+        grok: Grok-læring
         kodable: Kodbart
         microbit: Microbit
         raspberry: Raspberry Pi
@@ -1215,7 +1224,14 @@
   cookie_banner:
     accept: Jeg samtykker
   gdpr_dialog:
+    heading: Aksepterer du å bruke et nettsted som er basert i USA?
     message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
       behandles i USA.
     logout: Logg ut
     true: Ja
+  page_not_found_title: Side Ikke Funnet
+  page_not_found_header: '404: Side Ikke Funnet'
+  page_not_found_description: Siden du leter etter finnes ikke på denne adressen.
+    Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden.
+  page_not_found_button: Returner hjem
+  copy: Kopier

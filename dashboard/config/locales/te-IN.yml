@@ -20,6 +20,8 @@ te:
       signin: సైన్ ఇన్
       signup: ఒక అకౌంట్ సృష్టించండి
       dance: డాన్స్ పార్టీ
+  user:
+    none: ఏదీ కాదు
   footer:
     copyright: కాపీరైట్
     more: ఎక్కువ
@@ -47,6 +49,8 @@ te:
   terms_interstitial:
     tos: సర్వీసు నిబంధనలు
     privacy: గోప్యతా పాలసీ
+    accept_tos: Code.org కు సైన్ అప్ చేయడం ద్వారా, మీరు మా [సేవా నిబంధనలు](%{tos_url})
+      మరియు [గోప్యతా విధానం](%{privacy_url}) అంగీకరిస్తున్నారు.
     print: ప్రింట్
   project:
     projects: ప్రాజెక్టులు

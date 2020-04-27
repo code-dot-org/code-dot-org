@@ -10,6 +10,7 @@
   "danceFeedbackNeedDifferentDance": "Du må bruke en annen dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Kontroller at du bruker blokken `hver 2 takt`",
   "danceFeedbackNeedMakeANewDancer": "Bruk blokken `lag ny` for å legge til en ny danser.",
+  "danceFeedbackKeyEvent": "Pass på at du fester kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>-blocken og hold inne knappen mens dansen din kjører.",
   "danceFeedbackDidntPress": "Hold piltasten imens dansen kjører.",
   "danceFeedbackPressedKey": "Du trykket inn tasten, men din danser reagerte ikke.",
   "danceFeedbackNeedTwoDancers": "Du må lage to dansere.",

@@ -554,6 +554,8 @@ hr:
     csp_functions: 'Funkcije'
     csp_lists: 'Liste'
     csp_loops: 'Petlje'
+  hoc_download:
+    minecraft_name: 'Minecraft Sat Kodiranja'
   pd:
     form_labels:
       email: 'E-mail'
@@ -577,3 +579,4 @@ hr:
     accept: 'Slažem se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

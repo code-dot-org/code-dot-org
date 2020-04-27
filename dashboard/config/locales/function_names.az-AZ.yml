@@ -190,6 +190,16 @@ az-AZ:
       NEW Course 4 Play Lab Params 11:
         jump: atıl
         patrol: patrul
+      New Artist Project:
+        draw a star: bir ulduz çək
+        draw a circle: çevrə çək
+        draw a triangle: üçbucaq çək
+        draw a shape: bir forma çək
+        draw a house: ev çək
+        draw a square: kvadrat çək
+      New Play Lab Project:
+        jump: atıl
+        patrol: patrul
       Robot Doodle:
         draw head: baş çək
         draw eye: göz çək
@@ -346,8 +356,6 @@ az-AZ:
       courseE_artist_functions7:
         draw a house: ev çək
       courseE_artist_functions7_2018:
-        draw a house: ev çək
-      courseE_artist_functions7_2019:
         draw a house: ev çək
       courseE_artist_functions8:
         do something: bir şey etmək

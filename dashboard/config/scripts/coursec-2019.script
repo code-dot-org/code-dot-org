@@ -1,3 +1,4 @@
+tts true
 hidden false
 hideable_stages true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursec/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursec/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursec/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
@@ -12,12 +13,14 @@ version_year '2019'
 is_stable true
 curriculum_umbrella 'CSF'
 
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 stage 'Screen Out the Mean', flex_category: 'csf_digcit'
 level 'ScreenOutTheMean-Unplugged'
 
 stage 'Powerful Passwords', flex_category: 'csf_digcit'
 level 'PowerfulPasswords-Unplugged'
 
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
 stage 'Programming: My Robotic Friends', flex_category: 'csf_sequencing'
 level 'MyRoboticFriends-Unplugged'
 
@@ -81,9 +84,11 @@ level 'courseC_artist_prog6_predict1_2019', progression: 'Predict'
 bonus 'courseC_artist_prog_challenge1_2019'
 bonus 'courseC_artist_prog_challenge2a_2019'
 
+lesson_group 'csf_binary', display_name: 'Binary'
 stage 'Binary Bracelets', flex_category: 'csf_binary'
 level 'BinaryBracelets-Unplugged'
 
+lesson_group 'csf_loops', display_name: 'Loops'
 stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_loops'
 level 'MyLoopyRoboticFriends-Unplugged'
 
@@ -149,6 +154,7 @@ level 'courseC_artist_loops6a_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops7a_2019', progression: 'Mini-project: Sticker Design'
 level 'courseC_artist_loops8a_2019', progression: 'Free Play'
 
+lesson_group 'csf_events', display_name: 'Events'
 stage 'Events: The Big Event', flex_category: 'csf_events'
 level 'BigEvent-Unplugged'
 
@@ -180,10 +186,12 @@ level 'courseC_PlayLab_eventsA_2019', progression: 'Mini-project: Chase Game'
 level 'courseC_PlayLab_eventsFP_2019', progression: 'Free Play'
 bonus 'courseC_PlayLab_events_challenge1_2019'
 
+lesson_group 'csf_data', display_name: 'Data'
 stage 'Picturing Data', flex_category: 'csf_data'
 level 'PicturingData-Unplugged'
 level 'courseC_data wizard'
 
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'End of Course Project: Create a Play Lab Game', flex_category: 'end_of_course_project'
 level 'Begin planning your project_2018_2019', progression: 'Project'
 level 'courseC19_playLab_EOC1', progression: 'Project'

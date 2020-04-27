@@ -4,28 +4,43 @@ pt-PT:
     callouts:
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Altera o número aqui
+      CSD U3 Variables Predict Where XY:
+        grid: Clica aqui para mostrar a grelha.
+      CSD U3 Variables Predict Where XY_2018:
+        grid: Clica aqui para mostrar a grelha.
+      CSD U3 Variables Predict Where XY_2019:
+        grid: Clica aqui para mostrar a grelha.
       CSD U3 Variables Predict Where X_2018:
         CSD_U3_variables: Altera o número aqui
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Altera o número aqui
       CSD U3 debug:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 debug_2018:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 debug_2019:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 ellipse:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 ellipse_2018:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 ellipse_2019:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 fill:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 fill_2018:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 rect:
         CSD_U3_rect_c1: Aqui estão o código
         CSD_U3_rect_c2: Aqui está o botão "Executar".
@@ -35,10 +50,13 @@ pt-PT:
         CSD_U3_rect_c1: Aqui estão o código
       CSD U3 sequence:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 sequence_2018:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       CSD U3 sequence_2019:
         CSD_U3_rect_c1: Aqui estão o código
+        CSD_U3_rect_c2: Arrasta este bloco até à área de código.
       Course 4 Artist 4:
         repeat_full_circle: Insira o número de vezes que o zumbi deve se mover para
           fazer um círculo completo
@@ -132,6 +150,25 @@ pt-PT:
       NEW Course 4 Bee For Loops 5:
         actions_category: A caixa de ferramentas tem um novo visual! Os blocos de
           "Ação" estão aqui agora.
+      New Artist Project:
+        New Artist Project_callout1: 'Clica nas categorias para ver os blocos e a
+          tua caixa de ferramentas! Arrasta os blocos para o espaço de trabalho e
+          adiciona-os ao teu programa. '
+        New Artist Project_callout2: Clica em "Correr" para guardares e correres o
+          teu programa
+        sign_in_to_save_project: Queres aceder ao teu projecto mais tarde? Inicia
+          sessão para gravares este projecto na tua conta.
+      New Frozen Project:
+        snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de
+          neve!
+      New Play Lab Project:
+        New Play Lab Project_callout1: 'Clica nas categorias para ver os blocos e
+          a tua caixa de ferramentas! Arrasta os blocos para o espaço de trabalho
+          e adiciona-os ao teu programa. '
+        New Play Lab Project_callout2: Clica em "Correr" para guardares e correres
+          o teu programa
+        sign_in_to_save_project: Queres aceder ao teu projecto mais tarde? Inicia
+          sessão para gravares este projecto na tua conta.
       Overworld Chop Trees:
         craft_callout_preplaced: Colocámos alguns blocos aqui para poderes começar
       Overworld Chop Trees_2019:
@@ -160,6 +197,18 @@ pt-PT:
         craft_what_is_iron: Escava este ferro!
       Underground Iron_2019:
         craft_what_is_iron: Escava este ferro!
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: Carrega na lâmpada quando precisares de uma pista!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: Carrega na lâmpada quando precisares de uma pista!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Carrega na lâmpada quando precisares de uma pista!
+      courseB_maze_seq1:
+        courseB_maze_seq1: Carrega na lâmpada quando precisares de uma pista!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: Carrega na lâmpada quando precisares de uma pista!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: Carrega na lâmpada quando precisares de uma pista!
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Use o bloco "crie um círculo"
           e mude o tamanho.

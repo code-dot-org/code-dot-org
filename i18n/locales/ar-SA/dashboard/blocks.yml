@@ -1205,9 +1205,9 @@ ar:
       gamelab_whenUpArrow:
         text: عند الضغط على السهم لأعلى
       gamelab_whileDownArrow:
-        text: بينما ضغط السهم لأسفل
+        text: طالما السهم لأسفل مضغوط
       gamelab_whileKey:
-        text: بينما تم الضغط على {KEY}
+        text: طالما تم الضغط على {KEY}
         options:
           KEY:
             '"up"': الأعلى
@@ -1220,13 +1220,13 @@ ar:
             '"s"': s
             '"d"': d
       gamelab_whileLeftArrow:
-        text: بينما ضغط السهم الأيسر
+        text: طالما السهم لليسار مضغوط
       gamelab_whileRightArrow:
-        text: بينما تم الضغط على السهم الأيمن
+        text: طالما السهم لليمين مضغوط
       gamelab_whileTouching:
-        text: بينما {SPRITE1} هو لمس {SPRITE2}
+        text: طالما {SPRITE1} يلمس {SPRITE2}
       gamelab_whileUpArrow:
-        text: بينما ضغط السهم لأعلى
+        text: طالما السهم لأعلى مضغوط
       gamelab_xLocationOf:
         text: x إحداثيات {SPRITE}
       gamelab_yLocationOf:
@@ -1373,7 +1373,7 @@ ar:
         text: أثناء النقر على {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          بينما{COSTUME} هو لمس {COSTUME2}
+          طالما {COSTUME} يلمس {COSTUME2}
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} حاليا {BEHAVIOR}"
@@ -1559,6 +1559,14 @@ ar:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: نقل {SPRITE} {DISTANCE} العنصورات {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': شرق
+            '"South"': جنوب
+            '"West"': غرب
       aalab_prompt:
         text: طرح السؤال {MESSAGE}
       aalab_scene:
@@ -1570,12 +1578,10 @@ ar:
             '3': '3'
       aalab_setupStory:
         text: قصة الإعداد
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': إظهار
-            '"hide"': إخفاء
+            '"random"': عشوائي
       binary_drawBin:
         text: رسم ثنائي {BIN}
       binary_drawBinScreen:

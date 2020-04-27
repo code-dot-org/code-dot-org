@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-16T21:57:05.000Z",
+  "level_num": "custom",
+  "user_id": 838,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Unit 5 Guided Exploration: Part 1\r\n\r\n## **Task 3:**\r\n\r\n* ### Using the U5L10 slides, do **U5L10 - Levels 6 - 7** on CodeStudio (~15 mins)\r\n\r\n* ### Use the response box below to document your answer to the following:\r\n     > In levels 6 and 7, students are introduced to “patterns” that are frequently used to traverse lists.\r\n     How do you see the “patterns” being utilized by students and teachers?\r\n \r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21778
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-03-07 03:59:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:00:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:01:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:02:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:03:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:04:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:04:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:07:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-07 04:08:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:43:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:44:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:44:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:45:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:55:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:56:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 21:58:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-16 22:57:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-17 18:32:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-17 18:33:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2020-03-17 18:35:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

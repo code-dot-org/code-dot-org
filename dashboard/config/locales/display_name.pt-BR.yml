@@ -668,9 +668,9 @@ pt-BR:
       CSS U2 Body Map: O elemento do corpo
       CSS U2 Body Map_2018: O elemento do corpo
       CSS U2 Body Map_2019: O elemento do corpo
-      'Course E: Artist Project': Curso E Projeto Artístico
-      'Course E: Artist Project_2018': Curso E Projeto Artístico
-      'Course E: Artist Project_2019': Curso E Projeto Artístico
+      'Course E: Artist Project': Curso e Projeto Artístico
+      'Course E: Artist Project_2018': Curso e Projeto Artístico
+      'Course E: Artist Project_2019': Curso e Projeto Artístico
       'Course F: Artist Project - Revise_2018': Revisar Projeto Artista
       'Course F: Artist Project_2018': Curso F Projeto Artista
       'Course F: Artist Project_2019': Curso F Projeto Artista
@@ -678,8 +678,8 @@ pt-BR:
       CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprites
       CourseEF_video_MakeSprite: Como fazer um Sprite
       CourseEF_video_MakeSprite_2019: Como fazer um Sprite
-      CourseE_Project_SpriteLab: Projeto de Laboratório de Sprite do Curso E
-      CourseE_Project_SpriteLab_2019: Projeto de Laboratório de Sprite do Curso E
+      CourseE_Project_SpriteLab: 'Curso e Projeto de Laboratório de Sprite '
+      CourseE_Project_SpriteLab_2019: 'Curso e Projeto de Laboratório de Sprite '
       CourseE_hoops: 'Coelho '
       CourseF_Project_Revise_SpriteLab: Revisar o Projeto de Laboratório de Sprite
       CourseF_Project_SpriteLab: Projeto de Laboratório de Sprite do Curso F
@@ -735,6 +735,8 @@ pt-BR:
       MC_HOC_2017_FP20x20_2019: Jogo livre
       Making Music_2018: Fazendo Música
       Making Music_2019: Fazendo Música
+      New Dance Lab Project: Novo Projeto da Festa Dançante
+      New Minecraft Hero Project: Jogo livre
       OPD-K5 WhatIsCS: O que é ciência da computação?
       Oceans_Video_Machine_Learning: 'Vídeo: Aprendizagem de Máquina'
       Oceans_Video_Societal_Implications: 'Vídeo: Impactos na Sociedade'
@@ -760,7 +762,7 @@ pt-BR:
       courseF_artist_for1_2019: Atividade livre de laços para (Iniciando)
       courseF_project_1: Projeto de Exemplo do Laboratório de Sprite
       courseF_video_csMatters: Projetos de conclusão de curso
-      courseF_video_csMatters_2018: 'Vídeo: Ciência da Computação Importa'
+      courseF_video_csMatters_2018: 'Vídeo: Importância da Ciência da Computação'
       csd U3 conditional statements video: 'Vídeo: Declarações Condicionais'
       csd U3 conditional statements video_2019: 'Vídeo: Declarações Condicionais'
       csd u5 recommender sample: Aplicativo exemplo

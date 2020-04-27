@@ -51,6 +51,7 @@ ja:
   join_section:
     code:
       placeholder: セクション ・ コード (ABCDEF)
+      instructions_short: 6 文字のセクションコードを入力してください
       submit: 参加
   add_hint_form:
     placeholder: ここにあなたのヒントを入力してください
@@ -127,7 +128,6 @@ ja:
     valid_password: 有効なパスワード ！
     invalid_password: パスワードを%d文字以上で入力
     mismatch_password: 入力した 2 つのパスワードが一致しません
-    under_13_consent: 13歳未満の場合、Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
     agree_us_website: 米国に拠点を置くウェブサイトを使用することに同意します。
     my_data_to_us: 当サイトの利用に関する私の情報は、米国に送信され、米国にて保管または処理される場合があります。
     additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
@@ -209,6 +209,7 @@ ja:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org のログイン情報
+    parent_email_added_subject: Code.org へようこそ!
   teacher_mailer:
     new_teacher_subject: Code.org へようこそ!
   section:
@@ -385,6 +386,7 @@ ja:
     email_confirm_needed_required: あなたのメール アドレス %{email} はまだ確認されていません。
     email_confirm_wrong_email: メールアドレスをご確認ください
     email_resend_confirm: 確認手順の再送信
+    new_email_hint: "(このメールアドレスでメールを受信できることを確認して下さい。）"
     new_password_hint: "（変更したくない場合は空白のままにしてください）"
     current_password_hint: "(変更を確認するためにあなたの現在のパスワードが必要です)"
     delete: アカウントを削除
@@ -414,6 +416,8 @@ ja:
     enter_parent_email: あなたの親または保護者の電子メール アドレス(パスワード回復のため) を入力してください。
     update: アカウントを更新
     update_email: 更新
+    parent_guardian_email_label: 親/保護者Eメール
+    none: 設定なし
   user_level:
     completed: 完了
     tried: 試してみました
@@ -532,6 +536,7 @@ ja:
     download: ビデオのダウンロード
     show_notes: コードの表示
     show_video: 写真・動画
+    label: ビデオ
   compatibility:
     upgrade:
       unsupported_message: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
@@ -892,6 +897,7 @@ ja:
     csp_functions: '関数(かんすう) '
     csp_lists: リスト
     csp_loops: くりかえし
+    csp_unit1_2020: "(old) Unit 1: デジタル情報"
   external_links:
     disclaimer: 免責事項
     leaving_domain: このドメインから離れ、Code.org が運営していないサイトに移動します。
@@ -990,7 +996,9 @@ ja:
   cookie_banner:
     accept: 賛成する
   gdpr_dialog:
+    heading: 米国に拠点を置くウェブサイトを使用することに同意しますか？
     message: 当サイトの利用に関するあなたの情報は、米国に送信され、米国にて保管または処理される場合があります。
     privacy_policy: プライバシーポリシー
     logout: ログアウト
     true: はい
+  copy: コピー

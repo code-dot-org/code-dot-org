@@ -267,6 +267,16 @@ pl-PL:
         \\\r \\\r. Doprowadź mnie do sterty śmieci i usuń je, a następnie przejdź
         do otworu i wypełnij go całkowicie."
       Alien Defender: "**Idea projektu**: Stwórz grę obronną w Play Lab!"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Cel:** Powiększ tekst i pokoloruj go na niebiesko.
+
+        **Jak:** Potrzebujesz dwie linijki kodu. Dla  "label1"  ustaw `"font-size"` na `80` i `"text-color"` na `"blue"`.
+
+        **Utknąłeś Kliknij tutaj:**![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
       CSD Problem Solving Process Video: |-
         ## Pytania do przemyślenia
 
@@ -336,6 +346,22 @@ pl-PL:
         style=\"width:500px\">\n:::\n\n::: details [**Czym jest tag HTML?**]\n\nTag
         HTML to specjalny zestaw znaków które mówią maszynie gdzie znajduje się początek
         lub koniec elementu HTML oraz jaki jest to typ elementu.\n\n:::"
+      CSD U2 Inspector Warm Up: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary><strong>Jak
+        używać Narzędzia Inspektor?</strong>\n\n</summary>\n\nNarzędzie Inspektor
+        jest świetnym sposobem, aby dowiedzieć się więcej o nieznanym kodzie w Web
+        Lab.  Aby włączyć Narzędzie Inspektor, naciśnij <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        PM.png\" style=\"width:100px\">. Dowiesz się, że Narzędzie Inspektor jest
+        włączone, ponieważ przycisk zmieni swój kolor na biały i oznajmi \"Inspektor:On\".
+        Kiedy włączysz Narzędzie Inspektor, będziesz mógł najechać kursorem na cokolwiek
+        w obszarze podglądu a Web Lab podświetli fragment kodu, który powoduje pojawienie
+        się tej części strony. \n\n</details>\n</div>\n\n# Eksploruj HTML\n\nTo jest
+        strona internetowa napisana w HTML, w języku stron internetowych. Poznasz
+        więcej jak działa, ale najpierw zbadaj tę stronę za pomocą Narzędzia Inspektora.
+        \n\n# Wykonaj To\n\n-   Kliknij na Wskazówkę  \"How do I use the Inspector
+        Tool?\" po prawej stronie, aby dowiedzieć się, jak używać tego narzędzia.
+        \n-   Wykonuj polecenia na stronie internetowej, aby ją poznać i porozmawiaj
+        z partnerem, jak ona działa."
       CSD U2 Inspector Warm Up_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -362,6 +388,13 @@ pl-PL:
 
         -   Jak myślisz, dlaczego profesjonalni programiści używają programowania w parach.?
         -   W jaki sposób programowanie w parach może pomóc w jeszcze lepszym programowaniu?
+      CSD U2 challenge: "# Wyzwanie\n\nSkontaktuj się z nauczycielem zanim przystąpisz
+        do tego wyzwania.\n\nTa strona jest tylko częściowo ukończona i ma pewne błędy.
+        Na szczęście są pewne komentarze, które powinny Ci pomóc z jej dokończeniem,
+        według intencji autora. \n\n# Zrób to\n\n-   Spójrz na kod i ze swoim partnerem
+        i omów, jak powinna wyglądać ta strona. \n-   Pracujcie razem, aby ukończyć
+        tę stronę, zwracając uwagę na formatowanie. \n-   Porównajcie się z inną parą,
+        aby zobaczyć, czy wasze strony są takie same."
       CSD U3 Entertainment Sample 3: "# Animowany Komiks\\\r\n\n\\\r \nŁączenie obrazów,
         tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
         komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
@@ -412,6 +445,39 @@ pl-PL:
 
         -   Czym różniły się komputery od maszyn, które pojawiły się przed nimi?
         -   Pomyśl o czymś, co robisz na komputerze. Jakiego rodzaju dane, wyniki, pamięć i przetwarzanie mają miejsce?
+      CSDU2 - Type Anything: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Witamy w Web Lab!
+
+        Platforma, na której jesteś, nazywa się Web Lab. Ekran Web Lab składa się z trzech głównych części.
+
+        # Wykonaj To
+
+        -   Spróbuj napisać coś w obszarze roboczym.
+        -   Naciśnij <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px">, aby zobaczyć efekt w obszarze podglądu!
+      CSDU2 - Type Anything_2018: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Witamy w Web Lab!
+
+        Platforma, na której jesteś, nazywa się Web Lab. Ekran Web Lab składa się z trzech głównych części.
+
+        # Wykonaj To
+
+        -   Spróbuj napisać coś w obszarze roboczym.
+        -   Naciśnij <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px">, aby zobaczyć efekt w obszarze podglądu!
+      CSDU2 - Type Anything_2019: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Witamy w Web Lab!
+
+        Platforma, na której jesteś, nazywa się Web Lab. Ekran Web Lab składa się z trzech głównych części.
+
+        # Wykonaj To
+
+        -   Spróbuj napisać coś w obszarze roboczym.
+        -   Naciśnij <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px">, aby zobaczyć efekt w obszarze podglądu!
       Course 4 Artist For Loops 6a: Zrób trzy niewielkie zmiany w kodzie z poprzedniego
         poziomu, aby to otrzymać!
       CourseD_Dance_Party_01: |-
@@ -576,7 +642,7 @@ pl-PL:
       Dance_Party_02: |-
         Stwórzmy taniec łosia!
 
-        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
+        Przeciągnij do obszaru roboczego blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Umieść go pod blokiem \<<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Twój tancerz powinien rozpocząć nowy ruch po czwartym takcie.
 
         **Takty** służą w muzyce do odmierzania czasu. W tym samouczku takt składa się z 4 uderzeń.
       Dance_Party_03: |-
@@ -607,7 +673,7 @@ pl-PL:
         Teraz wiemy, jak zmieniać właściwości tancerza. Stosując poniższy blok możemy także sprawić, że te same właściwości będą automatycznie reagować na muzykę:
         <xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -736,6 +802,11 @@ pl-PL:
         -   Dodaj kolejną grupę tancerzy
         -   Pokaż i ukryj tancerzy przy użyciu klawiszy strzałek
         -   Ukryj wszystkich tancerzy i przełącz na ekscytujący efekt tła
+      Escape Room Example: "# Escape room\n\nW dzisiejszym warsztacie będziesz pracować
+        nad aplikacją Escape room'u! Ten poziom ma przykładową aplikację, z którą
+        powinieneś się pobawić żeby poczuć to co będziesz tworzył. \n\n# Zrób to\n\n-
+        \  Kliknij Uruchom żeby włączyć aplikacje \n-   Spróbuj znaleźć klucz, który
+        otworzy drzwi. "
       Function intro Ryan: "W Twoim polu roboczym znajduje się funkcja o nazwie \"build
         bridget\".  Zawiera ona cały kod potrzebny do przekroczenia rzeki! \\\r\n
         \\\r\nUmieść zielony bloczek dwukrotnie w polu roboczym, aby naprawić ścieżkę,
@@ -853,18 +924,51 @@ pl-PL:
         tego świata.'
       MC_HOC_2017_FP20x20_2019: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie
         eksplorację tego świata.'
-      Overworld Move to Sheep: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
+      New Minecraft Hero Project: 'Czas na zabawę: Użyj kodu Agenta, aby ułatwić sobie
+        eksplorację tego świata.'
+      Overworld Move to Sheep: Dodaj drugie polecenie "przejdź do przodu", aby dotrzeć
         do owcy.
-      Overworld Move to Sheep_2019: Dodaj drugie polecenie "idź do przodu", aby dotrzeć
-        do owcy.
+      Overworld Move to Sheep_2019: Dodaj drugie polecenie "przejdź do przodu", aby
+        dotrzeć do owcy.
       Overworld Shear Sheep: Czas strzyżenia owiec! Użyj polecenia `shear`, aby zebrać
         wełnę z obu owiec.
       Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
         zebrać wełnę z obu owiec.
+      Standalone_Artist_2: Narysuj ten diament z kątami 120 i 60 stopni i długościami
+        boków na 150 pikseli.
+      Standalone_Artist_3: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
+        i obrotami 60 stopni?
+      Standalone_Artist_4: Teraz masz do dyspozycji nowy blok, pętlę. Będzie on powtarzał
+        zestaw poleceń. Co się stanie, jeśli wykonasz te polecenia w pętli 6 razy?
+      Standalone_Artist_5: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
+      Standalone_Artist_5.5: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując
+        pętlę. Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat.
+        Wskazówka: Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować
+        cały czas tego samego diamentu.'
+      Standalone_Artist_6: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór.
+        O ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić
+        liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
+      Standalone_Artist_7: 'Funkcja jest kolejnym narzędziem programowania, które
+        pomaga unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej
+        za każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku,
+        by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
+      Standalone_Artist_8: Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy,
+        by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie eksperymentuj
+        z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować, by rysowała
+        wzory złożone z kwadratów, trójkątów lub ośmiokątów?
+      Standalone_Artist_9: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet
+        pustą funkcję, którą możesz wykorzystać, by robiła, co chcesz!
       'Widget: Text Compression': Poszukaj wzorców (powtarzające się słowa lub frazy)
         w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas
         ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast
         wzorca.
+      behaviors 1: |-
+        Czy mógłbyś przewidzieć! Przestudiuj kod.
+
+        -   Duszek się zakręci.
+        -   Duszek się skurczy.
+        -   Duszek się poruszy.
+        -   Duszek zmieni kolory.
       course1_maze_debugging_challenge2: Debuguj ten poziom. Te bloki są poprawne,
         ale w złej kolejności!
       course2_artist_prog_challenge1: Narysuj pokoje dla każdego ze zwierząt. Jest
@@ -890,7 +994,7 @@ pl-PL:
       course2_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       course3_bee_functions_challenge4: Wykorzystaj wszystko czego się nauczyłeś,
-        aby rozwiązać tą zagadkę!
+        aby rozwiązać tę łamigłówkę!
       course3_maze_debugging_challenge1: _"Czy ja tylko chodzę dookoła w kółko?"_
       course3_maze_debugging_challenge2: _"Jeśli będę skręcać zbyt często, może mi
         się zakręcić w głowie! Pomóż mi dotrzeć do świnki, używając tylko czterech
@@ -920,17 +1024,17 @@ pl-PL:
         tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseA_playlab_events_challenge1_2018: "_\"Gdzie ukrywają się moi przyjaciele?
         W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseA_playlab_events_challenge1_2019: "_\"Gdzie ukrywają się moi przyjaciele?
         W tej grze klikając na mnie pokaże się mój przyjaciel kot Olive!\"_\\\r\n\\\r\nKlikając
         na Olivie pojawi się Robin! Czy możesz napisać kod aby pokazać również resztę
         postaci?\\\r\n\\\r\nW tej zagadce, koniecznie używaj podpowiedzi! Podpowiedzi
-        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>\nPM.png>)"
+        pomogą Ci zrobić ten projekt krok po kroku!\\\r\n\\\r\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19\nPM.png>)"
       courseB_artist_loops6: Za krzakami jest piękna winorośl pełna kwiatów. Czy możesz
         wspiąć się na winorośl i zobaczyć dokąd zmierza?
       courseB_artist_loops6_2018: Za krzakami jest piękna winorośl pełna kwiatów.
@@ -947,7 +1051,7 @@ pl-PL:
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_collector_loops2_2019: |-
-        Pomóż Laurel dojść do skarbu, a potem użyj klacka <xml><block type="collector_collect" block-text="get treasure"/></xml> aby zebrać kryształ.
+        Pomóż Laurel dojść do skarbu, a potem użyj bloku <xml><block type="collector_collect" block-text="get treasure"/></xml>, aby zebrać kryształ.
 
         Zbierz wszystkie cztery kryształy, aby ukończyć ten poziom.
       courseB_collector_loops_challenge2a: |-
@@ -983,6 +1087,24 @@ pl-PL:
         na nie znikły! Pobaw się teraz z psem, potem pomóż innym zwierzętom dołączyć
         do gry/\\\r\nMożesz również dodać dźwięk oraz punktację aby stworzyć grę Animal
         Tag!\\\r\n\\\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
+      courseC_artist_loops5a: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        Co się stanie, gdy zastąpisz jedną lub obie naklejki innym stworzeniem?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loopsPrePre1a: Użyj bloku `jump to 200 over 200 down`aby artysta
         znalazł się w centrum obszaru gry, następnie narysuj linię o długości 50 pikseli
         za pomocą bloku `move forward 50 pixels`.
@@ -1046,6 +1168,97 @@ pl-PL:
         i pól!
       courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
+      courseC_maze_programming1: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming1_2019: W przypadku tej łamigłówki, przeciągnij wszystkie
+        bloki razem i kliknij Uruchom, aby zobaczyć, jak to działa!
+      courseC_maze_programming2: Przeciągnij z przybornika dodatkowy blok  <xml><block
+        type="maze_moveForward"/></xml>, aby ukończyć swój program.
+      courseC_maze_programming2_2018: Przeciągnij z przybornika dodatkowy blok  <xml><block
+        type="maze_moveForward"/></xml>, aby ukończyć swój program.
+      courseC_maze_programming2_2019: Przeciągnij z przybornika dodatkowy blok  <xml><block
+        type="maze_moveForward" block-text="move forward"/></xml>, aby ukończyć swój
+        program.
+      courseC_maze_programming3: |-
+        \_ „Ta świnka stawia moje pióra”. \_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, odłączając go od szarych bloków i przeciągając go z powrotem do przybornika.
+      courseC_maze_programming3_2018: |-
+        \_ „Ta świnka stawia moje pióra”. \_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, odłączając go od szarych bloków i przeciągając go z powrotem do przybornika.
+      courseC_maze_programming3_2019: |-
+        \_ „Ta świnka stawia moje pióra”. \_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, odłączając go od szarych bloków i przeciągając go z powrotem do przybornika.
+      courseC_maze_programming4: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseC_maze_programming4_2018: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseC_maze_programming4_2019: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseC_maze_programming5: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseC_maze_programming5_2018: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseC_maze_programming5_2019: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseC_maze_programming6: |-
+        _"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!"_
+
+        Doprowadź ptaka do świnki unikając TNT.
+      courseC_maze_programming6_2018: |-
+        _"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!"_
+
+        Doprowadź ptaka do świnki unikając TNT.
+      courseC_maze_programming6_2019: |-
+        _"Zachowaj spokój i pomóż mi znaleźć tę złą świnkę. W przeciwnym razie mogę się rozgniewać!"_
+
+        Doprowadź ptaka do świnki unikając TNT.
+      courseC_maze_programming7: |-
+        \_ „Czas się zdenerwować!”\_
+
+        **Wyzwanie:** Ten kod zawiera wiele błędów. Musisz usunąć niektóre bloki i dodać inne.
+      courseC_maze_programming7_2018: |-
+        \_ „Czas się zdenerwować!”\_
+
+        **Wyzwanie:** Ten kod zawiera wiele błędów. Musisz usunąć niektóre bloki i dodać inne.
+      courseC_maze_programming7_2019: |-
+        \_ „Czas się zdenerwować!”\_
+
+        **Wyzwanie:** Ten kod zawiera wiele błędów. Musisz usunąć niektóre bloki i dodać inne.
+      courseC_maze_programming8: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_2018: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_2019: _„Zachowaj spokój i pomóż mi znaleźć złą świnkę."_
+      courseC_maze_programming8_predict1: _„Zachowaj spokój i pomóż mi znaleźć złą
+        świnkę."_
+      courseC_maze_programming8_predict1_2018: _„Zachowaj spokój i pomóż mi znaleźć
+        złą świnkę."_
+      courseC_maze_programming8_predict1_2019: _„Zachowaj spokój i pomóż mi znaleźć
+        złą świnkę."_
+      courseC_maze_programming9: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
+      courseC_maze_programming9_2018: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
+      courseC_maze_programming9_2019: _„Teraz pomóż mi zakraść się na świnkę, w jakikolwiek
+        sposób chcesz!”_
       courseC_maze_programming_challenge2: Czasami jest więcej sposobów na rozwiązanie
         tego samego problemu. Czasami szybciej jest się cofnąć niż iść na przód!
       courseC_maze_programming_challenge2_2018: Czasami jest więcej sposobów na rozwiązanie
@@ -1121,13 +1334,63 @@ pl-PL:
       courseD_maze_nestedLoops4_2019: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
+      courseD_maze_ramp1: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp1_2018: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp1_2019: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
+      courseD_maze_ramp3: |-
+        _„Ta świnka powoduje stawanie moich piór."_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, usuwając go spośród innych bloków i przeciągając go z powrotem do przybornika.
+      courseD_maze_ramp3_2018: |-
+        _„Ta świnka powoduje stawanie moich piór."_
+
+        Jest jeden dodatkowy blok, który spowoduje wypadek ptaka.\
+        Wyrzuć go, usuwając go spośród innych bloków i przeciągając go z powrotem do przybornika.
+      courseD_maze_ramp4: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseD_maze_ramp4_2018: |-
+        _„Śledź ścieżkę i poprowadź mnie do tej głupiej świnki.”_
+
+        Unikaj TNT lub pióra będą latać
+      courseD_maze_ramp5: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseD_maze_ramp5_2018: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseD_maze_ramp5_2019: |-
+        _„Podążaj tą ścieżką, aby doprowadzić mnie do świnki!”_
+
+        Unikaj TNT.
+      courseD_maze_ramp5a: Zwróć uwagę na tę sekwencję i sprawdź, czy możesz dojść
+        do tej świnki!
+      courseD_maze_ramp5a_2018: Zwróć uwagę na tę sekwencję i sprawdź, czy możesz
+        dojść do tej świnki!
+      courseD_maze_ramp5b: "\\*\\* Wyzwanie: \\*\\* Poruszaj się w tym labiryncie,
+        aby pomóc ptakowi znaleźć świnkę!"
+      courseD_maze_ramp5b_2018: "\\*\\* Wyzwanie: \\*\\* Poruszaj się w tym labiryncie,
+        aby pomóc ptakowi znaleźć świnkę!"
+      courseD_maze_ramp5b_2019: "\\*\\* Wyzwanie: \\*\\* Poruszaj się w tym labiryncie,
+        aby pomóc ptakowi znaleźć świnkę!"
+      courseD_maze_ramp5c: Doprowadź ptaka do świnki.
+      courseD_maze_ramp5c_2018: Doprowadź ptaka do świnki.
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
+      courseD_scrat_ramp1: W przypadku tej łamigłówki, przeciągnij wszystkie bloki
+        razem i kliknij "Uruchom", aby zobaczyć, jak to działa!
       courseE_bee_functions2: "Funkcje są blokami kodu, które wykonują określone zadanie.
         \\\r\\\r\nUżyj funkcji `get 2 nectar`, aby zebrać nektar z każdego kwiatka."
       courseE_bee_functions3: Zbuduj funkcję "get 5" (pobierz 5), aby użyć jej w tej
         łamigłówce.
-      courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę zagadkę.
+      courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę łamigłówkę.
       courseF_bee_for_challenge2: Rozwiąż tę łamigłówkę używając jak najmniejszej
         liczby bloków.
       courseF_bee_for_challenge2_2018: Rozwiąż tę łamigłówkę używając jak najmniejszej
@@ -1138,11 +1401,13 @@ pl-PL:
         innej funkcji? \\\r\n\\\r\nUżyj funkcji `check nectar or honey` wewnątrz nowej
         funkcji `move and check,`aby pomóc pszczole skręcić, zebrać to co jest pod
         chmurą i zawrócić!"
-      courseF_bee_functions7: "Przebuduj funkcję z ostatniej zagadki, aby rozwiązać
-        ten labirynt.\\\r\n\\\r\nSkręć w lewo przy plastrze miodu i w prawo przy kwiatkach.
-        \\\r\n**Uwaga** Niektóre zakręty nie są nieoznaczone!"
+      courseF_bee_functions7: |-
+        Przebuduj funkcję z ostatniej łamigłówki, aby rozwiązać ten labirynt.
+
+        Skręć w lewo przy plastrze miodu i w prawo przy kwiatkach. \
+        **Uwaga** Niektóre zakręty są nieoznaczone!
       courseF_bee_functions_challenge2: Wykorzystaj wszystko czego się nauczyłeś,
-        aby rozwiązać tą zagadkę!
+        aby rozwiązać tę łamigłówkę!
       frozen circle: Okrąg ma specjalny kształt. Czy domyślisz się, jaką liczbą należy
         zastąpić znak zapytania w bloku "powtórz"?
       frozen circle function: Użyj nowego bloku "utwórz okrąg", aby narysować 10 nakładających

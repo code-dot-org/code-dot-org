@@ -86,6 +86,7 @@ class ShowSecret extends Component {
       <div>
         {!this.state.isShowing && (
           <Button
+            __useDeprecatedTag
             onClick={this.show}
             color={Button.ButtonColor.white}
             text={i18n.showSecret()}
@@ -104,6 +105,7 @@ class ShowSecret extends Component {
             )}
             <span data-for={tooltipId} data-tip>
               <Button
+                __useDeprecatedTag
                 onClick={this.reset}
                 color={Button.ButtonColor.blue}
                 text={i18n.reset()}
@@ -118,6 +120,7 @@ class ShowSecret extends Component {
               )}
             </span>
             <Button
+              __useDeprecatedTag
               onClick={this.hide}
               color={Button.ButtonColor.white}
               text={i18n.hideSecret()}

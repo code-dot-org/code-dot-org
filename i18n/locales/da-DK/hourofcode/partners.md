@@ -38,4 +38,4 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 {{ partners/additional_partners }}
 
-{{ signup_button }}
+{{ tilmeld_knap }}

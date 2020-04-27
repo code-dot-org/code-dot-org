@@ -2,7 +2,7 @@
 title: How-to guide for forældre
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How to do an Hour of Code with your child
 
@@ -74,4 +74,4 @@ The Hour of Code is just the first step in a journey to learn more about how tec
 - Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
 - Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-{{ signup_button }}
+{{ tilmeld_knap }}

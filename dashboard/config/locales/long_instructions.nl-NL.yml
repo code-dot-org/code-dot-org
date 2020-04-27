@@ -295,6 +295,115 @@ nl-NL:
       4-5 While Loops 4: 'Wow, ik heb een heel diep gat gevonden! Ik weet niet hoeveel
         scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven dat het
         gat vult tot boven vult? Hint: probeer dit keer een zolang-lus.'
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**Doel:** Maak het scherm groen.
+        \n\n**Hoe:** Sleep een `setProperty()` blok naar de werkplaats. \nGebruik
+        de menu's (pijltjes) om de achtergrondkleur (`\"background-color\"`) \nvan
+        het scherm naar groen (`\"green\"`) te zetten. Druk dan op \"Start\".\n\n**Vast?
+        Klik hier:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)blok"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Doel:** Mak de tekst groter en blauw.
+
+        **Hoe:**  Je hebt twee regels code nodig. Geef `"label1"` een lettergrootte (`"font-size"`) van `80` en de tekst-kleur (`"text-color"`) blauw (`"blue"`).
+
+        **Vast? Klik hier:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Doel:** Maak de knoppen rood
+        (`\"red\"`) en blauw (`\"blue\"`). Verander daarna de tekst in het grote oranje
+        veld.\n\n**Hoe:** \n\n-   Je kan 'zweven' boven elementen om hun `\"id\"`
+        te zien.\n-   Zet de achtergrondkleur (`\"background-color\"`) van de knoppen
+        naar rood (`\"red\"`) en blauw (`\"blue\"`).\n-   Verander de tekst (`\"text\"`)
+        eigenschap van het oranje tekst veld naar wat je maar wilt, zoals bijvoorbeeld
+        `\"Welkom bij mijn app!\"`.\n\n**Vast? Klik hier:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Doel:** Het scherm start blauw. Voeg code toe zodat het scherm groen wordt wanneer je op de "maak groen" ("Green-ify") knop drukt.
+
+        **Hoe:** Voeg code toe binnen het "bij gebeurtenis" blok (`onEvent()`) die de achtergrondkleur (`"background-color"`) van het scherm in groen (`"green"`) verandert.
+
+        **Vast? Klik hier:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Doel:** Maak de zaklamp app af. De "Aan" knop maakt het scherm al wit. Probeer de app maar eens. Schrijf code zodat de "Uit" knop het scherm weer zwart maakt.
+
+        **Hoe:** Voeg code toe binnen het lege "bij gebeurtenis" blok (`onEvent()`) zodat het scherm de achtergrondkleur (`"background-color"`) zwart (`"black"`)  en de tekst kleur (`"text-color"`) wit krijgt.
+
+        **Vast? Klik hier:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Doel:** Deze geluiden app
+        is bijna af! Start hem maar eens om te zien hoe hij werkt. Voeg daarna een
+        plaatje, tekst en geluid toe aan de laatste knop.\n\n**Hoe:** \n\n-   Voeg
+        een \"bij gebeurtenis\" blok (`onEvent()`) aan het programma toe. Zet dan
+        het `\"id\"` veld naar `\"button4\"`. Sleep een \"speel geluid\" blok (`playSound()`
+        ) in het `onEvent()` blok en kies een geluid uit de bibliotheek. \n-   Voeg
+        een \"zet eigenschap\" blok (`setProperty()`) - niet in het `onEvent()` blok
+        - om het plaatje op de knop te veranderen, via de eigenschap `\"image\"`.
+        Kies een plaatje door middel van het derde \"dropdown\" menu.\n-   Verander
+        nog een eigenschap (`setProperty()`): verander de tekst van de knop (`\"text\"`).\n\n**Vast?
+        Klik hier:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Doel:** Voeg een tweede knop aan het scherm toe met de tekst "Right!" met een `"id"` gelijk aan `"rightButton"`.
+
+        **Hoe:** In Ontwerp Mode sleep een nieuwe knop naar je app. Geef hem een goede plek en grootte. Verander daarna de volgende waarden van de knop: `"id"`, `"text"`, `"background color"`, en`"font size"`.
+
+        **Vast? Klik hier:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Doel:** Maak een nieuw scherm met de naam `"rightScreen"`. Voeg een tekst label toe met de tekst "Je ging naar rechts!".
+
+        **Hoe:** Sleep een nieuw scherm object naar de Ontwerp Mode . Verander de `"id"` naar `"rightScreen"`. Sleep daarna een tekst label naar het scherm verander de tekst daarvan naar "Je ging naar rechts!".
+
+        **Vast? Klik hier:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png\" style=\"float:right;height:200px\"></a>\n\n**Doel:** Bouw je eigen
+        app door het uitbreiden van dit project. \"Deel het\" daarna met iemand!\n\n**Hoe:**
+        Deslis eerst wat voor type app je wil maken. Daarna ga je deze bouwen door
+        het toevoegen van schermen, knoppen, tekst, geluid en gebruikers interacties
+        aan je app. Er zijn nog meer blokken in de gereedschapskist waarmee je ook
+        kunt experimenteren. Wanneer je klaar bent, druk op \"Delen\" om het naar
+        jezelf of een vriend te sturen! \n\n<details>\n\n<summary><b>Kies je eigen
+        avontuur ideeën</b></summary>\n\nProbeer <a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\">Voorbeeld van Kies je eigen avontuur app</a> om te zien
+        hoe zo'n app kan werken. Hier zijn nog wat ideeën voor jouw eigen verhaal.\n\n<li>Maak
+        een avontuur over je favoriete karakter, echt of verzonnen.</li>\n<li>Maak
+        en avontuur dat het verhaal van je favoriete boek of film vertelt. Of maak
+        een avontuur over je favoriete eigen verzinsel.</li>\n<li>Maak een avontuur
+        met veel verassende gebeurtenissen of met een moeilijke morele keuze.</li>\n<br>\n</details>\n\n<details><summary><b>Wenskaart
+        ideeën</b></summary>\n\nProbeer <a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\">Voorbeeld Wenskaart app</a> om te zien hoe een Wenskaart
+        app kan werken. Hier zijn wat ideeën voor jouw eigen wenskaart.\n\n<li>Denk
+        aan een verjaardag, vakantie, of andere speciale dag die eraan komt. Maak
+        een kaart om deze te vieren!</li>\n<li>Maak een \"bedankt\" kaartje voor iemand
+        die je waardeert.</li>\n<li>Maak een uitnodiging.</li>\n<br>\n</details>\n\n<details><summary><b>Persoonlijkheids
+        Quiz Ideeën</b></summary>\n\nProbeer <a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\">Example Personality Quiz App</a> om te zien hoe een persoonlijkheidsquiz
+        kan werken. Hier zijn wat ideeën voor je eigen quiz.\n\n<li>Maak een quiz
+        die bepaalt waar je leuk zult vinden. Bijvoorbeeld eten, een team, een boek
+        of een plek..</li>\n<li>Maak een quiz die de \"toekomst voospeld\" op basis
+        van antwoorden van de gebruiker.</li>\n<li>Maak een quiz die helpt bij het
+        maken van een moeilijke keuze.</li>\n\n</details>"
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Doel:** Het scherm verandert naar `"rightScreen"` als de gebruiker op de `"rightButton"` klikt.
+
+        **Hoe:** Voeg, in Codeer Mode, een nieuwe "bij gebeurtenis" (`onEvent()`) toe aan je programma, voor je "Rechts!" knop. Voeg daarin een "zet scherm" (`setScreen()`) blok toe dat schakelt naar `"rightScreen"`.
+
+        **Stuck? Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -481,15 +590,15 @@ nl-NL:
       CourseE_HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open
         water! Ga naar het einde van de steiger en klim aan boord.
       CourseE_HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee
-        om de \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        om de \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[]
+      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[]
         (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       CourseE_HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       CourseE_HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het
         zandsteen voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -732,14 +841,14 @@ nl-NL:
       HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open water! Ga
         naar het einde van de steiger en klim aan boord.
       HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee om de
-        \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
+      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het zandsteen
         voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -761,6 +870,10 @@ nl-NL:
       K-1 Maze Loops 2: Gebruik het herhaal blok om me naar het varken te brengen!
       K-1 Maze Loops Assessment 1: 'Test: Gebruik lussen om me naar het varken te
         brengen!'
+      MC HOC 2016 SCORE LEVEL: Bij sommige spellen kan je een score bijhouden. Speel
+        tikkertje met de ijzeren golems en gebruik het 'voeg  punt toe aan je score'
+        blok zodat je een punt krijgt als je de golem aanraakt. Bij 5 punten heb je
+        gewonnen!
       MC_HOC_2017_01_RETRY: "{currentPlayerName} is gevangen in het huis, maar de
         agent is er om te helpen!   \\\r\n \\\r\n   \\\r\nMaak een 'naar voren'-blok
         vast aan het 'wanneer uitgevoerd'-blok in de werkruimte om de agent naar de
@@ -886,14 +999,16 @@ nl-NL:
       NEW Course 4 Bee For Loops 7: Krijg je lussen onder de knie? Deze opdracht lijkt
         op de vorige, maar je moet 3, 6, 9, 12, 15 nectar pakken. Je krijgt vast wat
         code, behalve voor de getallen in de lussen. Laten we nectar verzamelen!
+      New Minecraft Hero Project: "**Vrij spel:** Het is nu aan jou! Gebruik de code
+        van de agent om de wereld te verkennen."
       Overworld House Frame Chosen: Bouw de rest van je huis met welk materiaal je
         zelf wilt. Het commando "herhalen" komt hier handig van pas.
       Overworld House Frame Chosen_2019: Bouw de rest van je huis met welk materiaal
         je zelf wilt. Het commando "herhalen" komt hier handig van pas.
-      Overworld Move to Sheep: Voeg een tweede "beweeg vooruit"-commando toe om de
-        schapen te bereiken.
-      Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
-        om de schapen te bereiken.
+      Overworld Move to Sheep: Voeg een tweede "beweeg vooruit"-blok toe om het schaap
+        te bereiken.
+      Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-blok toe om het
+        schaap te bereiken.
       Overworld Place Wall: Elk huis begint met een muur. Bouw het eerste deel van
         je huis door de opdrachten "plaats" en "beweeg vooruit" in de herhalingsloop
         te plaatsen.
@@ -1199,7 +1314,7 @@ nl-NL:
       frozen diamond: Gebruik een lus om deze blokken om een parallellogram te maken.
         Dat is net een rechthoek, maar met andere hoeken. Deze heeft hoeken van 60
         en van 120 graden in plaats van allemaal hoeken van 90 graden.
-      frozen diamond mini snowflake: Wist je dat iedere sneeuwvolk een andere vorm
+      frozen diamond mini snowflake: Wist je dat iedere sneeuwvlok een andere vorm
         heeft? Laten we een nieuwe sneeuwvlok maken door nog een 'herhaal'-blok te
         gebruiken om 4 keer een parallellogram te tekenen, waarbij we 90 graden naar
         rechts draaien na ieder parallellogram.

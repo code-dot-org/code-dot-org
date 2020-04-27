@@ -4,6 +4,7 @@ stage_extras_available true
 project_widget_visible true
 project_widget_types ["applab"]
 
+lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 stage 'Computing Innovations', flex_category: 'csd6_1'
 level 'CSDU6 Innovation', named: true
 
@@ -127,6 +128,7 @@ level 'CSDU6 - ch 1 project output', progression: 'Project Work'
 level 'CSDU6 - ch 1 project finish', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U6Ch1', progression: 'Reflection', assessment: true
 
+lesson_group 'csd6_2', display_name: 'Chapter 2: Building Physical Prototypes'
 stage 'Physical Input', flex_category: 'csd6_2'
 level 'CSD onBoardEvent Map', named: true
 level 'CSDU6 - button screen buttonL', progression: 'Board Events'

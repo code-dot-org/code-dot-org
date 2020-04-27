@@ -1595,3 +1595,105 @@ eu:
           stages:
             Conditionals:
               name: Baldintzak
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Parametrodun funtzioak
+        csd3-2020:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Text:
+              name: Testua
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Joan segurtasunez
+            'Programming: Happy Maps':
+              name: Mapa Zoriontsuak
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Zure aztarna digitala
+            Move It, Move It:
+              name: Mugi ezazu, mugi ezazu!
+            'Loops: Getting Loopy':
+              name: Iteratzen
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Eskumuturreko bitarrak
+            'Events: The Big Event':
+              name: Gertaera Handia
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Paper grafiko programazioa
+            Relay Programming:
+              name: Txandaka programatzen
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+            'Unplugged: Binary':
+              name: Irudi bitarrak
+            Artist Binary:
+              name: Artista bitarra
+            Digital Citizenship:
+              name: Hiritartasun digitala
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Musika idazten
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Gutun-azaleko aldagarriak
+            For Loop Fun:
+              name: Begizta jostarirako
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Letraz-letra
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funtzioak sortzen
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '"Bitartean" begiztak'
+            Variables:
+              name: Aldagaiak
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funtzioak
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmoak
+            Events:
+              name: Gertaerak
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '"Bitartean" begiztak'

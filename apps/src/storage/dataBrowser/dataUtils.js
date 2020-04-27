@@ -1,3 +1,4 @@
+import experiments from '@cdo/apps/util/experiments';
 /** @file Utility functions for the data browser. */
 
 /**
@@ -74,17 +75,45 @@ export function toBoolean(val) {
 
 /**
  * Convert a string to a boolean or number if possible.
- * @param val
+ * @param inputString
  * @returns {string|number|boolean}
  */
-export function castValue(val) {
-  try {
-    return JSON.parse(val);
-  } catch (e) {
-    if (e instanceof SyntaxError) {
-      return val;
+export function castValue(inputString, allowUnquotedStrings) {
+  if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+    // 1. Remove leading and trailing whitespace
+    inputString = inputString.trim();
+    // 2. Check for '', undefined, and null
+    if (inputString === '') {
+      // This happens when the text area is blank, so interpret as undefined.
+      return undefined;
     }
-    throw new Error(`Unexpected error parsing JSON: ${e}`);
+    if (inputString === 'undefined') {
+      return undefined;
+    } else if (inputString === 'null') {
+      return null;
+    }
+    // 3. Attempt to parse as number, string, or boolean
+    try {
+      const parsed = JSON.parse(inputString);
+      if (typeof parsed === 'object') {
+        throw new Error('Invalid entry type: object');
+      }
+      return parsed;
+    } catch (e) {
+      if (e instanceof SyntaxError && allowUnquotedStrings) {
+        return inputString;
+      }
+      throw e;
+    }
+  } else {
+    try {
+      return JSON.parse(inputString);
+    } catch (e) {
+      if (e instanceof SyntaxError) {
+        return inputString;
+      }
+      throw new Error(`Unexpected error parsing JSON: ${e}`);
+    }
   }
 }
 
@@ -94,21 +123,28 @@ export function castValue(val) {
  * @returns {string}
  */
 export function editableValue(val) {
-  if (val === null || val === undefined) {
-    return '';
-  }
-  if (typeof val === 'string') {
-    try {
-      JSON.parse(val);
-    } catch (e) {
-      // The value is a string which is not parseable as JSON (e.g. 'foo' but not 'true'
-      // or '1'). Therefore, it is safe to return it without stringifying it, and
-      // calling castValue on the result will return the original input.
-      return val;
+  if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+    if (val === undefined) {
+      return 'undefined';
     }
-  }
+    return JSON.stringify(val);
+  } else {
+    if (val === null || val === undefined) {
+      return '';
+    }
+    if (typeof val === 'string') {
+      try {
+        JSON.parse(val);
+      } catch (e) {
+        // The value is a string which is not parseable as JSON (e.g. 'foo' but not 'true'
+        // or '1'). Therefore, it is safe to return it without stringifying it, and
+        // calling castValue on the result will return the original input.
+        return val;
+      }
+    }
 
-  return JSON.stringify(val);
+    return JSON.stringify(val);
+  }
 }
 
 /**

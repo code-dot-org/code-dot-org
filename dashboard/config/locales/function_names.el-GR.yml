@@ -277,6 +277,19 @@ el-GR:
         draw a polygon: σχεδίασε ένα πολύγωνο
       NEW Course 4 Play Lab Params 11:
         jump: πήδα
+      New Artist Project:
+        draw a star: σχεδίασε ένα αστέρι
+        draw a circle: Σχεδίασε ένα κύκλο
+        draw a pinwheel: σχεδίασε ένα χάρτινο παιχνίδι μύλο
+        draw a triangle: σχεδίασε ένα τρίγωνο
+        draw a shape: σχεδίασε ένα σχήμα
+        draw a house: σχεδίασε ένα σπίτι
+        draw a square: σχεδίασε ένα τετράγωνο
+      New Minecraft Hero Project:
+        function 1: συνάρτηση 1
+        function 2: συνάρτηση 2
+      New Play Lab Project:
+        jump: πήδα
       Robot Doodle:
         draw head: σχεδίασε κεφάλι
       Robot Doodle_2018:
@@ -428,8 +441,6 @@ el-GR:
       courseE_artist_functions7:
         draw a house: σχεδίασε ένα σπίτι
       courseE_artist_functions7_2018:
-        draw a house: σχεδίασε ένα σπίτι
-      courseE_artist_functions7_2019:
         draw a house: σχεδίασε ένα σπίτι
       courseE_artist_functions8:
         do something: κάνε κάτι

@@ -119,7 +119,6 @@ sv:
     valid_password: "Giltigt lösenord!"
     invalid_password: "Lösenordet måste vara minst 6 tecken långt"
     mismatch_password: "De två lösenord du skrev matchar inte varandra"
-    under_13_consent: "Om jag är under 13 år bekräftar jag härmed att jag har min förälders eller målsmans tillåtelse att använda tjänsterna på Code.org."
     agree_us_website: "Jag samtycker till att använda en webbplats baserad i USA."
     my_data_to_us: "När jag använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA."
     additional_information: "Vi behöver  ytterligare information att fortsätta registrera dig."
@@ -273,6 +272,7 @@ sv:
       signin: 'Logga in'
       signup: 'Skapa ett konto'
       already_registered: 'Redan registrerad?'
+      pair_programming: 'Par- programmering'
       team: 'Team'
       driver: 'Förare'
       navigator: 'Navigator'
@@ -349,6 +349,8 @@ sv:
     parent_email_label: "Förälder/vårdnadshavares emailadress (valfritt)"
     update: "Uppdatera konto"
     update_email: "Uppdatera"
+    parent_guardian_email_label: "Förälder/vårdnadshavares e-postadress"
+    none: "Ingen"
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'
@@ -445,6 +447,7 @@ sv:
     autoplay_option: 'spela upp automatiskt'
     download: 'Ladda ner video'
     show_video: 'Visa video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Din webbläsare stöds inte. Uppgradera din webbläsare till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar fullt ut."
@@ -636,6 +639,7 @@ sv:
     privacy_notice: "Sekretessmeddelande"
     accept_label: "Jag samtycker till att de uppdaterade <a href=\"%{tos_url}\" target=\"_blank\"> Användarvillkoren\n</a> och <a href=\"%{privacy_url}\" target=\"_blank\"> Sekretesspolicy</a>"
     accept_label_markdown: Jag samtycker till att de uppdaterade [Användarvillkoren](%{tos_url}) och [Sekretesspolicy](%{privacy_url})
+    accept_tos: Genom att registrera dig på Code.org godkänner du våra [Servicevillkor](%{tos_url}) och vår [Integritetspolicy](%{privacy_url}).
     accept: "Godkänn"
     print: "Skriv ut"
     reminder_desc: 'Vi har uppdaterat våra <a href="%{tos_url}" target="_blank"> Användarvillkor</a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>. Vänligen läs igenom dessa noggrant innan du accepterar dem. Observera att våra verktyg för undervisning i JavaScript kan vara otillgängliga för era elever innan ni uttryckligen accepterar de uppdaterade villkoren.'
@@ -760,6 +764,7 @@ sv:
   hoc_download:
     capsule_title: 'Har du Internet?'
     instructions_headline: 'Inget Internet?'
+    minecraft_name: 'Minecraft-kodtimmen'
     starwars_blocks_name: 'Star Wars: Bygga en Galax Med Kod (Block)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
     download_message: 'Hämta %{app_name} för offlineanvändning (136MB)'
@@ -848,7 +853,9 @@ sv:
   cookie_banner:
     accept: 'Jag håller med'
   gdpr_dialog:
+    heading: 'Samtycker du till att använda en webbplats baserad i USA?'
     message: 'När du använder denna webbplats kan information om detta skickas till och lagras eller bearbetas i USA.'
     privacy_policy: 'sekretesspolicy'
     logout: 'Logga ut'
     yes: 'Ja'
+  copy: 'Kopiera'

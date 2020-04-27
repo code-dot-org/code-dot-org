@@ -1,0 +1,12 @@
+name 'courseF_multi_artist_for10_predict1_2018_2019_2020'
+question 'What will happen when you click "Run"?'
+wrong 'The artist will draw a straight line that increases in thickness from one side of the play space to the other.', feedback: 'Incorrect. The artist turns between iterations of the `for` loop.'
+wrong 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thinner. ', feedback: 'Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.'
+right 'The artist will draw a spiral and each time through the `for` loop, the line gets longer and thicker.', feedback: 'Correct!'
+wrong 'I don\'t know.', feedback: 'Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker.'
+
+markdown <<MARKDOWN
+We used the counter from our `for` loop to change the width of the brush on this drawing.  
+
+
+MARKDOWN

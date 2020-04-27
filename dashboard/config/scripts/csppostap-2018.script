@@ -1,3 +1,4 @@
+tts true
 hidden false
 login_required true
 hideable_stages true
@@ -11,6 +12,7 @@ version_year '2018'
 is_stable true
 project_sharing true
 
+lesson_group 'csp_postap_1', display_name: 'Chapter 1: Manipulating and Visualizing Data'
 stage 'Intro to Data', flex_category: 'csp_postap_1'
 level 'CSP U2L07 SFLP', named: true
 level 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018', progression: 'Quick Check-In', assessment: true
@@ -60,6 +62,7 @@ variants
 endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC_2018', assessment: true
 
+lesson_group 'csp_postap_2', display_name: 'Chapter 2: Apps and Databases'
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
 level 'U4L02 Student Lesson Introduction Video_2018'
 level 'U4 - Objects - eventParameter_2018'
@@ -152,5 +155,6 @@ stage 'Final Project', flex_category: 'csp_postap_2'
 level 'U6 - Final Project - Student Introduction_2018'
 level 'U6 - Final Project - Project Level_2018'
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true

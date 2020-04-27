@@ -8,7 +8,7 @@ title: Internationale partnere
   }
 </style>
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Internationale partnere
 
@@ -179,4 +179,4 @@ compatsch@bcs.uk                                       |
 nhile@microsoft.com                                        |
 
 
-{{ signup_button }}
+{{ tilmeld_knap }}

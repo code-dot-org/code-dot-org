@@ -6,7 +6,7 @@ pt-BR:
         2-3_Artist_1_new_a: Se você usar o bloco para me fazer `avançar por 100 pixels`,
           eu desenharei uma linha automaticamente.
         2-3_Artist_1_new_b: Você está tendo problemas para virar a esquina? Use o
-          bloco `virar à direita 90 graus`.
+          bloco `turn right 90 degrees`.
       2-3 Artist 11:
         2-3_Artist_11_a: 'Está tendo problemas com os ângulos? Você precisa percorrer
           360 graus em 8 rodadas. Quanto é 360/8? '
@@ -232,16 +232,17 @@ pt-BR:
       2-3 Bee Functions 8:
         2-3_Bee_Functions_8_a: |-
           Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
-          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
-          Em breve, você terá sua função!
-           ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
+
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente. Em breve, você terá sua função!
+
+          ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
       2-3 Bee Functions 9:
         2-3_Bee_Functions_8_a: |-
           Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
           Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
           Em breve, você terá sua função!
         2-3_Bee_Functions_8_b: "Lembre-se de construir o seu código dentro do bloco
-          de função verde. \n! [a] \\(<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)"
+          de função verde. \n\n! [a] \\(<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)"
       2-3 Bee Loops 2:
         2-3_Bee_Loops_2_a: Ao terminar, você deve ter cinco blocos dentro do seu loop.
       2-3 Bee Loops 3:
@@ -312,16 +313,18 @@ pt-BR:
         4-5_Artist_11_a: Dentro de seu loop, certifique-se que o artista salta para
           trás e para cima depois que desenha cada linha.
       4-5 Artist 3:
-        4-5_Artist_3_a: 'Se o canteiro de flores retangular tem um perímetro de 600
+        4-5_Artist_3_a: "Se o canteiro de flores retangular tem um perímetro de 600
           pixels e dois dos lados tem 200 pixels, aqui é a foma de descobrir o tamanho
-          dos lados curtos: \*\* 600 - 200 - 200 = 200 \*\* Isso significa que ambos
-          os lados curtos somam 200 pixels. \*\* Quanto é 200 / 2? \*\*'
+          dos lados curtos: \n\n\\*\\* 600 - 200 - 200 = 200 \\*\\*\n\nIsso significa
+          que ambos os lados curtos somam 200 pixels.\n\n \\*\\* Quanto é 200 / 2?
+          \\*\\*"
         4-5_Artist_3_b: Se você ainda não sabe onde o loop "repeat" se encaixa, tente
           fazer a programação completa e depois procure por um padrão que se repete.
       4-5 Artist 4:
-        4-5_Artist_4_a: Há 360 graus em um círculo! Isso é o número de vezes que você
-          precisa repetir esse código (virando 1 grau por vez) antes que o círculo
-          esteja completo!
+        4-5_Artist_4_a: |-
+          Há 360 graus em um círculo!
+
+           Isso é o número de vezes que você precisa repetir esse código (virando 1 grau por vez) antes que o círculo esteja completo!
       4-5 Artist 5:
         4-5_Artist_5_a: |-
           Tentativa e erro é um ótimo método, mas você também pode resolver o problema dividindo o ângulo de 90 graus em três.
@@ -330,13 +333,14 @@ pt-BR:
       4-5 Artist 7:
         4-5_Artist_7_a: 'Qual ângulo é o menor?  Em qual ângulo o artista está? '
       4-5 Artist 8:
-        4-5_Artist_8_a: 'Os lados mais longos possuem 240 pixels cada.  Isso significa
-          que os 2 lados curtos devem totalizar: **800 - 240 - 240 = 320** Quanto
-          é **320/2**? '
+        4-5_Artist_8_a: "Os lados mais longos possuem 240 pixels cada.  Isso significa
+          que os 2 lados curtos devem totalizar: \n\n**800 - 240 - 240 = 320** \n\nQuanto
+          é **320/2**? "
         4-5_Artist_8_b: |-
           Esta imagem pode ser feita de 2 maneiras!
 
           -   Desenhe dois retângulos que possuem **120** de extensão e **160** de altura, com um lado sobreposto
+
           -   Desenhe um retângulo com **240** de extensão e **160** de altura, e em seguida adicione uma linha no meio.
       4-5 Artist 9:
         4-5_Artist_9_a: 'Quando um triângulo é um equilátero, todos os lados e todos
@@ -386,7 +390,7 @@ pt-BR:
           retângulo onde a abelha precisa avançar e, em seguida, virar à esquerda
           várias vezes para completar o caminho.
       4-5 Maze 10:
-        4-5_Maze_10_a: "Se não consegue ver como usar repetições para resolver o quebra-cabeça
+        4-5_Maze_10_a: "Se não consegue ver como usar laços para resolver o quebra-cabeça
           de uma vez, tente resolvê-lo do jeito longo primeiro e, em seguida, procure
           um padrão. \n\nO que você deveria colocar dentro de um 'Repetir' para tornar
           o código mais curto?"
@@ -403,7 +407,7 @@ pt-BR:
           Esse é o caminho mais curto que você consegue achar?
       4-5 Maze 7:
         4-5_Maze_7_a: "\\*\\* Quer fazer o seu código o mais curto possivel? \\*\\*
-          procure padrões em seus blocos. Você vê algo que se repete? Tente colocar
+          \n\nProcure padrões em seus blocos. Você vê algo que se repete? Tente colocar
           uma repetição em torno dele!"
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
@@ -540,7 +544,7 @@ pt-BR:
       Course 4 Artist For Loops inspire:
         Course_4_Artist_For_Loops_inspire_a: A base deste código é a mesma que a solução
           para o desafio do quebra-cabeça anterior... com algumas mudanças.
-        Course_4_Artist_For_Loops_inspire_b: Tente um laço `para` que vá de 3 a 10
+        Course_4_Artist_For_Loops_inspire_b: Tente um laço `for` que vá de 3 a 10
           com o incremento de 1.
         Course_4_Artist_For_Loops_inspire_c: Existem duas iterações do mesmo laço
           de repetição dentro do laço `para`, mas a segunda repetição vai na direção
@@ -893,8 +897,8 @@ pt-BR:
         Course_4_Play_Lab_Params_2_a: Você precisará clicar em "editar" na função
           de pulo e atualizá-la para que ela use o parâmetro `altura`.
       Course 4 Play Lab Vars 2:
-        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `velocidade_do_cachorro`
-          como sendo maior do que o de `velocidade_do_gato`.
+        Course_4_Play_Lab_Vars_2_a: Certifique-se de defininir o número para `dog_speed`
+          como sendo maior do que o de `cat_speed`.
       Course 4 Play Labs For Loops 2:
         Course_4_Play_Labs_For_Loops_2_a: O que você adicionaria no seu laço `for`
           toda vez para ele ignorar os números pares?
@@ -2548,69 +2552,69 @@ pt-BR:
         MC_HOC_2017_01_RETRY_b: Não esqueça de clicar em "Executar" para executar
           o código para o Agent.
         MC_HOC_2017_01_RETRY_c: Depois que o Agent executar todo o código, você poderá
-          se mover com o jogador com as teclas de seta!
+          mover o jogador com as teclas de seta!
       MC_HOC_2017_01_RETRY_2019:
         MC_HOC_2017_01_RETRY_a: Arraste um bloco 'mover para a frente' da caixa de
           ferramentas para a área de trabalho e fixe-o abaixo do bloco 'ao rodar'.
         MC_HOC_2017_01_RETRY_b: Não esqueça de clicar em "Executar" para executar
           o código para o Agent.
         MC_HOC_2017_01_RETRY_c: Depois que o Agent executar todo o código, você poderá
-          se mover com o jogador com as teclas de seta!
+          mover o jogador com as teclas de seta!
       MC_HOC_2017_02_Cole:
-        MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
+        MC_HOC_2017_02_Cole_a: Ande com o Agente dois espaços para a frente e permaneça
           sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
-        MC_HOC_2017_02_Cole_b: "Pressione \"Executar\"! \nVocê pode executar seu código,
-          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+        MC_HOC_2017_02_Cole_b: "Pressione \"Executar\"! \n\nVocê pode executar seu
+          código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
           até descobrir o que está acontecendo de errado."
-        MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de
+        MC_HOC_2017_02_Cole_c: Depois que o Agente abrir a porta, use as teclas de
           seta para mover o jogador pelo mapa!
         MC_HOC_2017_02_Cole_d: Certifique-se que o agente está seguindo o caminho
           descrito no mapa!
       MC_HOC_2017_02_Cole_2019:
-        MC_HOC_2017_02_Cole_a: Ande com o Agent dois espaços para a frente e permaneça
+        MC_HOC_2017_02_Cole_a: Ande com o Agente dois espaços para a frente e permaneça
           sobre a placa de pressão. Isso abrirá a porta para o seu jogador.
-        MC_HOC_2017_02_Cole_b: "Pressione \"Executar\"! \nVocê pode executar seu código,
-          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+        MC_HOC_2017_02_Cole_b: "Pressione \"Executar\"! \n\nVocê pode executar seu
+          código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
           até descobrir o que está acontecendo de errado."
-        MC_HOC_2017_02_Cole_c: Depois que o Agent abrir a porta, use as teclas de
+        MC_HOC_2017_02_Cole_c: Depois que o Agente abrir a porta, use as teclas de
           seta para mover o jogador pelo mapa!
         MC_HOC_2017_02_Cole_d: Certifique-se que o agente está seguindo o caminho
           descrito no mapa!
       MC_HOC_2017_03_Cole:
-        MC_HOC_2017_03_Cole_a: Quando o Agent chegar à placa de pressão, você pode
+        MC_HOC_2017_03_Cole_a: Quando o Agente chegar à placa de pressão, você pode
           usar as setas do teclado para levar o jogador até a bússola!
         MC_HOC_2017_03_Cole_b: Parece que o código é um pouco longo? Tente usar um
-          ciclo 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
+          laço 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
       MC_HOC_2017_03_Cole_2019:
-        MC_HOC_2017_03_Cole_a: Quando o Agent chegar à placa de pressão, você pode
+        MC_HOC_2017_03_Cole_a: Quando o Agente chegar à placa de pressão, você pode
           usar as setas do teclado para levar o jogador até a bússola!
         MC_HOC_2017_03_Cole_b: Parece que o código é um pouco longo? Tente usar um
-          ciclo 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
+          laço 'Repetir' e ver se você consegue descobrir como deixá-lo mais curto!
       MC_HOC_2017_04POINT5_RYAN:
         MC_HOC_2017_04POINT5_RYAN_b: 'Use o bloco ''virar à direita'' para mudar a
-          direção do Agent '
-        MC_HOC_2017_04POINT5_RYAN_a: O Agent só precisa chegar até a primeira placa
+          direção do Agente '
+        MC_HOC_2017_04POINT5_RYAN_a: O Agente só precisa chegar até a primeira placa
           de pressão para passar o Alex ou o Steve pelo machado.
       MC_HOC_2017_04POINT5_RYAN_2019:
         MC_HOC_2017_04POINT5_RYAN_b: 'Use o bloco ''virar à direita'' para mudar a
-          direção do Agent '
-        MC_HOC_2017_04POINT5_RYAN_a: O Agent só precisa chegar até a primeira placa
+          direção do Agente '
+        MC_HOC_2017_04POINT5_RYAN_a: O Agente só precisa chegar até a primeira placa
           de pressão para passar o Alex ou o Steve pelo machado.
       MC_HOC_2017_04_Cole:
-        MC_HOC_2017_04_Cole_a: O Agent precisa 'mover-se para frente' 7 vezes. Como
+        MC_HOC_2017_04_Cole_a: O Agente precisa 'mover-se para frente' 7 vezes. Como
           é possível usar o ciclo 'Repetir' para que isso aconteça?
-        MC_HOC_2017_04_Cole_c: "Pressione \"Executar\"! \nVocê pode executar seu código,
-          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+        MC_HOC_2017_04_Cole_c: "Pressione \"Executar\"! \n\nVocê pode executar seu
+          código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
           até descobrir o que está acontecendo de errado."
-        MC_HOC_2017_04_Cole_b: Quando o Agent chegar à placa de pressão, ele abrirá
+        MC_HOC_2017_04_Cole_b: Quando o Agente chegar à placa de pressão, ele abrirá
           a porta para o jogador.
       MC_HOC_2017_04_Cole_2019:
-        MC_HOC_2017_04_Cole_a: O Agent precisa 'mover-se para frente' 7 vezes. Como
+        MC_HOC_2017_04_Cole_a: O Agente precisa 'mover-se para frente' 7 vezes. Como
           é possível usar o ciclo 'Repetir' para que isso aconteça?
-        MC_HOC_2017_04_Cole_c: "Pressione \"Executar\"! \nVocê pode executar seu código,
-          mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
+        MC_HOC_2017_04_Cole_c: "Pressione \"Executar\"! \n\nVocê pode executar seu
+          código, mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
           até descobrir o que está acontecendo de errado."
-        MC_HOC_2017_04_Cole_b: Quando o Agent chegar à placa de pressão, ele abrirá
+        MC_HOC_2017_04_Cole_b: Quando o Agente chegar à placa de pressão, ele abrirá
           a porta para o jogador.
       MC_HOC_2017_05_Cole:
         MC_HOC_2017_05_Cole_a: Você sabia que você pode colocar mais de um código
@@ -2636,7 +2640,7 @@ pt-BR:
           o outro lado! '
       MC_HOC_2017_07_Cole:
         MC_HOC_2017_07_Cole_c: Tudo o que você precisa que o agente faça é limpar
-          o caminho para o Minecart.
+          o caminho para o carrinho de minas.
         MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função
           'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco
           'abrir caminho' da caixa de ferramentas.
@@ -2644,7 +2648,7 @@ pt-BR:
           da caixa de ferramentas para ajudá-lo a resolver este enigma.
       MC_HOC_2017_07_Cole_2019:
         MC_HOC_2017_07_Cole_c: Tudo o que você precisa que o agente faça é limpar
-          o caminho para o Minecart.
+          o caminho para o carrinho de minas.
         MC_HOC_2017_07_Cole_a: Para resolver este enigma, descubra o que a função
           'abrir caminho' faz e use-a quantas vezes precisar usando o pequeno bloco
           'abrir caminho' da caixa de ferramentas.
@@ -2659,7 +2663,7 @@ pt-BR:
           a linha pontilhada!
         MC_HOC_2017_10_Cole_a: Use as funções para resolver este enigma com mais facilidade!
       MC_HOC_2017_Ali:
-        MC_HOC_2017_08_RY_a: "Pressione \"Executar\"! \nVocê pode executar seu código,
+        MC_HOC_2017_08_RY_a: "Pressione \"Executar\"! \n\nVocê pode executar seu código,
           mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
           até descobrir o que está acontecendo de errado."
         MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
@@ -2667,7 +2671,7 @@ pt-BR:
         MC_HOC_2017_08_RY_c: Tente seguir a linha pontilhada para um simples caminho
           através da lava.
       MC_HOC_2017_Ali_2019:
-        MC_HOC_2017_08_RY_a: "Pressione \"Executar\"! \nVocê pode executar seu código,
+        MC_HOC_2017_08_RY_a: "Pressione \"Executar\"! \n\nVocê pode executar seu código,
           mesmo se ele não estiver certo. Execute e redefina seu código repetidamente,
           até descobrir o que está acontecendo de errado."
         MC_HOC_2017_08_RY_b: Há MUITAS maneiras de resolver esse enigma. Tente algumas
@@ -2675,11 +2679,11 @@ pt-BR:
         MC_HOC_2017_08_RY_c: Tente seguir a linha pontilhada para um simples caminho
           através da lava.
       MC_HOC_2017_FP20x20:
-        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
-          para que Alex ou Steve possa andar além dos limites do mapa.
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o agente crie algumas faixas de
+          carrinhos de minas para que você possa explorar o mundo!
       MC_HOC_2017_FP20x20_2019:
-        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agent construa algumas pontes
-          para que Alex ou Steve possa andar além dos limites do mapa.
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o agente crie algumas faixas de
+          carrinhos de minas para que você possa explorar o mundo!
       NEW Course 4 Artist Functions 13:
         NEW_Course_4_Artist_Functions_13_a: Tente editar a função 'desenhar uma linha
           de quadrados' para que você não precise chamá-la duas vezes.
@@ -2838,6 +2842,9 @@ pt-BR:
         NEW_Course_4_Bee_For_Loops_8_a: Se seu laço está fazendo contagem progressiva,
           o incremento é adicionado na sua variável contadora a cada repetição. Qual
           deve ser seu incremento para obter o número depois dele?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Tente fazer com que o Agente construa algumas pontes
+          para que Alex ou Steve possam andar além dos limites do mapa.
       Overworld Avoid Monsters:
         mc_8_a: Você pode escolher entre alguns caminhos. Qual o mais curto?
         mc_8_b: Use laços `repita` para simplificar seu código.
@@ -3512,7 +3519,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -7592,11 +7599,8 @@ pt-BR:
           de eventos `quando correr` para o espaço de trabalho para resolver esse
           quebra-cabeça.
       courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: Use o bloco 'definir fundo' e o bloco 'definir
-          o ator à velocidade \_\_\_' para resolver este enigma.
-        courseC_PlayLab_eventsA_b: Você precisará arrastar especificamente um bloco
-          de eventos `quando correr` para o espaço de trabalho para resolver esse
-          quebra-cabeça.
+        courseC_PlayLab_eventsA_a: Use as setas do teclado para mover o pinguim. Você
+          não precisa escrever nenhum código para concluir este nível.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _Precisa de uma idéia?_
@@ -12099,7 +12103,7 @@ pt-BR:
           laço `repetir para sempre` que verifica a posição do pirata (mas não dentro
           da instrução `se`) para evitar que os pontos sejam removidos muito rapidamente.
       courseD_scrat_ramp1:
-        courseC_maze_programming1_a: Se Scrat não estiver chegando na nós, certifique-se
+        courseC_maze_programming1_a: Se o Scrat não estiver chegando na nós, certifique-se
           de que todos os três blocos tenham sido juntados, e então clique "Rodar"
           novamente.
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
@@ -12277,8 +12281,8 @@ pt-BR:
           Certifique-se de usar o bloco verde `desenhar um quadrado` para "chamar" sua função. Caso contrário, o código na sua função não será executado.
 
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
-        courseD_artist_functions2_a: "Seu programa deve: \n\\-Usar função\n\n-   Mover
-          para frente 100 + 75 pixels\n-   Usar função"
+        courseD_artist_functions2_a: "Seu programa deve: \n\n-   Usar sua função\n-
+          \  Mover para frente 100 + 75 pixels\n-   Usar sua função novamente"
       courseE_artist_functions2_2019:
         courseD_artist_functions2_b: A função não deve conter todo o seu programa,
           apenas a parte que desenha um quadrado com 100 lados de pixels.
@@ -12286,8 +12290,8 @@ pt-BR:
           Certifique-se de usar o bloco verde `desenhar um quadrado` para "chamar" sua função. Caso contrário, o código na sua função não será executado.
 
           <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
-        courseD_artist_functions2_a: "Seu programa deve: \n\\-Usar função\n\n-   Mover
-          para frente 100 + 75 pixels\n-   Usar função"
+        courseD_artist_functions2_a: "Seu programa deve: \n\n-   Usar sua função\n-
+          \  Mover para frente 100 + 75 pixels\n-   Usar sua função novamente"
       courseE_artist_functions3:
         courseD_artist_functions3_a: |-
           Para resolver este enigma, você precisa adicionar um laço que repita o código inicial oito vezes.
@@ -12420,7 +12424,7 @@ pt-BR:
         courseD_artist_functions8_a: Comece fazendo uma função para um quadrado e
           tente fazer uma função para uma linha de quadrados.
         courseD_artist_functions8_d: |-
-          Para fazer uma linha de quadrados,
+          Para fazer uma linha de quadrados:
 
           -   repetir 3 vezes
           -   desenhe um quadrado
@@ -12431,7 +12435,7 @@ pt-BR:
         courseD_artist_functions8_a: Comece fazendo uma função para um quadrado e
           tente fazer uma função para uma linha de quadrados.
         courseD_artist_functions8_d: |-
-          Para fazer uma linha de quadrados,
+          Para fazer uma linha de quadrados:
 
           -   repetir 3 vezes
           -   desenhe um quadrado
@@ -12735,25 +12739,26 @@ pt-BR:
           Sua função deve fazer a abelha:
 
           -   virar
-          -   Siga em frente
+          -   Seguir em frente
           -   coletar todo o néctar
           -   mover para trás
           -   volte para a direção que a abelha começou
       courseE_bee_functions6:
         courseE_bee_functions6_a: |-
           Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
-          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
-          Em breve, você terá sua função!
-           ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
-        courseE_bee_functions6_b: Isso pode ajudar neste caso a se mover dentro da
-          função, mas nem todos os seus blocos `mover` precisam estar lá.
+
+          Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente. Em breve, você terá sua função!
+
+          ! [a] \(<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)
+        courseE_bee_functions6_b: Nesse caso, pode ser útil mover-se para dentro da
+          função, mas nem todos os seus blocos \`move ' precisam estar lá.
       courseE_bee_functions7:
         courseE_bee_functions7_a: |-
           Se o quebra-cabeça parece desafiador, tente construir sua função aos poucos.
           Adicione alguns blocos e os experimente. Adicione mais alguns e experimente novamente.\
           Em breve, você terá sua função!
         courseE_bee_functions7_b: "Lembre-se de construir o seu código dentro do bloco
-          de função verde. \n! [a] \\(<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)"
+          de função verde. \n\n! [a] \\(<https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif>)"
         courseE_bee_functions7_c: Esta função deve virar a abelha para guiá-lo pelo
           caminho, coletar o néctar, fazer o mel, então virar a abelha e traga-a de
           volta.
@@ -12967,16 +12972,16 @@ pt-BR:
         courseE_farmer_functions9a1_2018b: Use os mesmos passos do desafio anterior
           para resolver a primeira metade deste desafio.
         courseE_farmer_functions9a1_2018c: Você precisará `virar` algumas vezes e
-          `avançar` para chegar à última colheita de letalidade antes de você poder
-          ligar sua função novamente.
+          `avançar` para chegar à última colheita de alface antes de você poder ligar
+          sua função novamente.
       courseE_farmer_functions9a1_2019:
         courseE_farmer_functions9a1_2018a: Você usará a mesma função que você fez
           no último par de desafios.
         courseE_farmer_functions9a1_2018b: Use os mesmos passos do desafio anterior
           para resolver a primeira metade deste desafio.
         courseE_farmer_functions9a1_2018c: Você precisará `virar` algumas vezes e
-          `avançar` para chegar à última colheita de letalidade antes de você poder
-          ligar sua função novamente.
+          `avançar` para chegar à última colheita de alface antes de você poder ligar
+          sua função novamente.
       courseE_farmer_functions9b:
         courseE_farmer_functions9b_a: Você pode usar instruções aninhadas `se` e `se/senão`
           para se mover pelo caminho?
@@ -13010,13 +13015,13 @@ pt-BR:
           um laço `repetir` para tornar seu código mais curto.
       courseE_farmer_ramp12_forswap:
         courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
-          para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
+          para dizer ao agricultor quantas vezes avançar e obter a alface.
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
-          para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
+          para dizer ao agricultor quantas vezes avançar e obter a alface.
       courseE_farmer_ramp12_forswap_2019:
         courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
-          para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
+          para dizer ao agricultor quantas vezes avançar e obter a alface.
       courseE_farmer_ramp12c:
         courseE_farmer_ramp12b_b: Você ainda precisará usar um laço `até` primeiro,
           então use um laço `enquanto` até você pegar o alface.

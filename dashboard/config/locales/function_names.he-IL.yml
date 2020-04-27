@@ -20,6 +20,7 @@ he-IL:
         draw a circle: צייר מעגל
         draw a button: צייר כפתור
         draw cord: צייר מיתר
+        draw R pad: ציירו את הלחצנים
       2-3 Artist Debugging 5:
         draw left leg: צייר רגל שמאל
         draw right leg: צייר רגל ימין
@@ -27,6 +28,7 @@ he-IL:
         draw a head: צייר ראש
       2-3 Artist Debugging 6:
         draw right leg: צייר רגל ימין
+        draw sitting stick figure: ציירו דמות דקיקה יושבת
         draw head: צייר ראש
         draw arms: צייר זרועות
         jump to neck: קפוץ לצוואר
@@ -337,6 +339,20 @@ he-IL:
       NEW Course 4 Play Lab Params 11:
         jump: קפוץ
         patrol: סייר
+      New Artist Project:
+        draw a star: צייר כוכב
+        draw a circle: צייר מעגל
+        draw a pinwheel: צייר גלגל רוח
+        draw a triangle: צייר משולש
+        draw a shape: צייר צורה
+        draw a house: צייר בית
+        draw a square: צייר ריבוע
+      New Minecraft Hero Project:
+        function 1: פונקציה 1
+        function 2: פונקציה 2
+      New Play Lab Project:
+        jump: קפוץ
+        patrol: סייר
       Robot Doodle:
         25 pixel square: ריבוע בגודל 25 פיקסלים
         draw head: צייר ראש
@@ -568,7 +584,6 @@ he-IL:
         draw a house: צייר בית
       courseE_artist_functions7_2019:
         draw a window: צייר חלון
-        draw a house: צייר בית
       courseE_artist_functions8:
         do something: עשה משהו
         draw a line of squares: צייר קו של מרובעים

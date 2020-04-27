@@ -8,6 +8,11 @@ en-GB:
         Unplug2: Computational Thinking
         Unplug7: Song Writing
         MazeEC: The Maze
+    level:
+      instructions:
+        maze_2_4: |-
+          Keep calm and help me find the bad pig. Otherwise
+          I might get angry!
     video:
       name:
         Unplug2: Computational Thinking

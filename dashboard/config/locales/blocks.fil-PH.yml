@@ -901,6 +901,7 @@ fil:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -946,6 +947,7 @@ fil:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -1060,6 +1062,7 @@ fil:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'Lokasyon x: {X} y {Y}'
@@ -1550,6 +1553,14 @@ fil:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: ilipat {SPRITE} {DISTANCE} pixels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': Silangan
+            '"South"': South
+            '"West"': West
       aalab_prompt:
         text: magtanong {MESSAGE}
       aalab_scene:
@@ -1561,12 +1572,10 @@ fil:
             '3': '3'
       aalab_setupStory:
         text: kuwento ng set-ap
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': ipakita
-            '"hide"': itago
+            '"random"': nang hindi pinipili
       binary_drawBin:
         text: Gumuhit ng binary {BIN}
       binary_drawBinScreen:

@@ -87,14 +87,6 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/wjordan/i18n.git
-  revision: f366d62ad73bd0fee939ed9aa38ab88c9f94a8df
-  branch: cdo
-  specs:
-    i18n (1.0.1)
-      concurrent-ruby (~> 1.0)
-
-GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -166,7 +158,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/puma.git
-  revision: c0f187bc4eba3b1391b9e7c4c4ce39e3cc03fbac
+  revision: 29a576120b30c34db7706c062ddf9a046723789f
   branch: debugging
   specs:
     puma (3.12.0)
@@ -296,6 +288,9 @@ GEM
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
+    aws-sdk-databasemigrationservice (1.23.0)
+      aws-sdk-core (~> 3, >= 3.53.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-dynamodb (1.9.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
@@ -402,6 +397,9 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
+    dotiw (4.0.1)
+      actionpack (>= 4)
+      i18n
     erubis (2.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
@@ -486,6 +484,8 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
+    i18n (1.6.0)
+      concurrent-ruby (~> 1.0)
     image_size (1.5.0)
     in_threads (1.4.0)
     jbuilder (2.5.0)
@@ -524,7 +524,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    marked-rails (0.3.2.0)
     memoist (0.16.0)
     memory_profiler (0.9.10)
     metaclass (0.0.4)
@@ -895,6 +894,7 @@ DEPENDENCIES
   aws-sdk-cloudwatch (~> 1)
   aws-sdk-cloudwatchlogs (~> 1)
   aws-sdk-core (~> 3)
+  aws-sdk-databasemigrationservice (~> 1)
   aws-sdk-dynamodb (~> 1)
   aws-sdk-ec2 (~> 1)
   aws-sdk-firehose (~> 1.6)
@@ -921,6 +921,7 @@ DEPENDENCIES
   dalli-elasticache
   devise (~> 4.4.0)
   devise_invitable (~> 1.6.0)
+  dotiw
   execjs
   eyes_selenium
   factory_girl_rails
@@ -942,7 +943,6 @@ DEPENDENCIES
   highline (~> 1.6.21)
   honeybadger
   httparty
-  i18n!
   image_optim!
   image_optim_pack (~> 0.5.0)!
   image_optim_rails!
@@ -957,7 +957,6 @@ DEPENDENCIES
   le (~> 2.2)
   lograge!
   loofah (~> 2.2.1)
-  marked-rails
   memory_profiler
   mini_magick (>= 4.9.4)
   minitest (~> 5.5)

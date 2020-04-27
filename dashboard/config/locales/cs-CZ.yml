@@ -58,21 +58,24 @@ cs:
   previous_page: Předchozí stránka
   next_page: Další strana
   next_resource: Další zdroj
-  cancel: Storno
+  cancel: Zrušit
   okay: Dobře
   or: nebo
   heading_x_of_y: "%{heading} (stránky %{x} %{y})"
   join_section:
     code:
+      title: Přidej se k sekci na Code.org
       placeholder: Kód sekce (ABCDEF)
-      instructions_short: Zadejte svůj 6-místný kód
+      instructions: 'Pro připojení k sekci tvého učitele zadej její 6-místný kód (příklad:
+        "ABCDEF")'
+      instructions_short: Zadej 6-místný kód sekce
       submit: Připojit se
   add_hint_form:
     placeholder: Zadej zde svůj tip
     submit: Přidat tip
   appname: Code.org
   stage: Úroveň
-  stage_number: Fáze %{number}
+  stage_number: Lekce %{number}
   puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
@@ -165,8 +168,6 @@ cs:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovat nejméně 6 znaků
     mismatch_password: Zadaná dvě hesla se neshodují
-    under_13_consent: Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého
-      rodiče nebo zákonného zástupce k používání služeb Code.org.
     student_consent: Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno
       používat Code.org.
     agree_us_website: Souhlasím s používáním webových stránek provozovaných ve Spojených
@@ -222,11 +223,13 @@ cs:
   signinsection:
     welcome: Vítejte v %{section_name}
     name: Vyber si své jméno
-    picture: Najít nyní utajený obrázek
-    words: Nyní zadejte utajená slova
+    picture: Nyní vyhledej svůj tajný obrázek
+    words: Nyní zadej své tajná slova
     login: Přihlásit
-    invalid_login: Neplatné přihlašovací jméno, zkuste to prosím znovu
-    pair_programming: Mám partnera u počítače
+    invalid_login: Neplatné přihlašovací jméno, zkus znovu
+    pair_programming: Mám u počítače partnera
+    student_privacy_markdown: 'Další informace o tom, proč se nezobrazuje tvé celé
+      jméno najdeš tady: [here](%{student_privacy_blog}).'
   password:
     reset_form:
       title: Zapomněl jsi heslo?
@@ -256,13 +259,14 @@ cs:
       %{name}
   parent_mailer:
     student_associated_subject: Přihlašovací údaje na Code.org
+    parent_email_added_subject: Vítejte na Code.org!
   teacher_mailer:
     new_teacher_subject: Vítejte na Code.org!
     delete_teacher_subject: 'Oznámení od Code.org: Váš účet byl odstraněn'
   section:
     your_section:
-      one: 'Vaše sekce:'
-      other: 'Vaše sekce:'
+      one: 'Tvá sekce:'
+      other: 'Tvé sekce:'
     code_with_teacher: "%{section_code} s učitelem %{teacher_name}"
     confirm:
       remove: Jste si jisti, že chcete opustit tuto sekci?
@@ -277,19 +281,19 @@ cs:
   follower:
     invite_sent: Pozvánka odeslána
     added_teacher: "%{name} přidán jako tvůj učitel"
-    registered: Zaregistroval ses k %{section_name}.
+    registered: Připojili jste se do sekce %{section_name}.
     error:
       signed_in: Dříve než budeš pokračovat se, prosím, odhlas
       username_not_found: Uživatelské jméno %{username} nebylo nalezeno
       username_in_use: "%{username} je již obsazeno, vyber si jiný, prosím"
-      no_teacher: Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím
-        Požádejte je, prosím, aby se zde přihlásili a poté zkuste je znovu přidat
-      section_not_found: Nelze nalézt sekci s kódem "%{section_code}".
-      blank_code: Zadej prosím kód sekce
-      cant_join_own_section: Lituji, ale nemůžete se připojit s vlastní sekcí.
-      provider_managed_section: Tento oddíl je spravován jiným poskytovatelem a nelze
-        se k němu připojit. Požádejte Vašeho učitele, aby Vás prostřednictvím %{provider}
-        přidal a provedl opětovnou synchronizaci své sekce.
+      no_teacher: Nebyl nalezený nikdo přihlášený jako '%{teacher_email_or_code}'.
+        Požádejte je prosím, aby se zde přihlásili a poté je zkuste znovu přidat
+      section_not_found: Sekce s kódem "%{section_code}" nebyla nalezena.
+      blank_code: Zadej, prosím, kód sekce
+      cant_join_own_section: Je nám líto, ale ke své vlastní sekci se nemůžete připojit.
+      provider_managed_section: Tuto sekci spravuje jiný poskytovatel a nelze se k
+        ní připojit. Požádej svého učitele, aby tě prostřednictvím %{provider} přidal
+        a pak sekci zosynchronizoval.
     mail:
       student_disassociated:
         subject: 'Code.org upozornění: %{student_name} už není vašim studentem.'
@@ -305,7 +309,7 @@ cs:
     submit: Odeslat
     destroy: Zrušit
     back: Zpět
-    confirm: Jsi si jistý?
+    confirm: Určitě?
     created: "%{model} byl úspěšně vytvořen."
     updated: "%{model} byl úspěšně aktualizován."
     destroyed: "%{model} byl/a úspěšně odstraněn/a."
@@ -327,7 +331,7 @@ cs:
       my_dashboard: Můj přehled
       course_catalog: Katalog kurzů
       project_gallery: Projekty
-      sections: Oddíly
+      sections: Sekce
       help_support: Pomoc a podpora
       report_bug: Nahlásit chybu
       teacher_community: Komunita učitelů
@@ -341,7 +345,7 @@ cs:
       educate_hoc: Hodina kódu
       educate_partner: Navažte s námi partnerství
       educate_beyond: Nad rámec Code.org
-      educate_inspire: Inspirovat studenta
+      educate_inspire: Inspirujte studenta
       educate_community: Online komunita
       educate_tools: Nástroje a videa
       about_us: O nás
@@ -364,6 +368,7 @@ cs:
       district_dashboard: Okresní řídicí panel
       label: Ahoj %{username}
       stats: Code studio
+      my_projects: Moje projekty
       settings: Můj účet
       logout: Odhlásit se
       signin: Přihlásit se
@@ -380,11 +385,11 @@ cs:
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
       bounce: Odraz
-      dance: Dance Party
+      dance: Taneční večírek
       flappy: Flappy
       frozen: Frozen
       gamelab_jr: Game Lab (beta)
-      gumball: Žvýkačku
+      gumball: Gumball
       iceage: Doba ledová
       infinity: Nekonečno
       minecraft_adventurer: Minecraft Adventurer
@@ -393,10 +398,13 @@ cs:
       minecraft_hero: Minecraft Hero
       playlab: Play Lab
       playlab_k1: Play Lab (předškolák)
+      scratch: Scratch
+      sports: Sporty
       starwars: Hvězdné války
       starwarsblocks: Hvězdné války (kostky)
       starwarsblocks_hour: Hvězdné války (kostky)
       weblab: Web Lab
+      view_all: Ukázat všechny projekty...
     popup:
       progress_for_user: Pokrok užívatele %{name}
       progress: Tvůj pokrok
@@ -420,7 +428,7 @@ cs:
     students:
       dashboard: Přejít na přehled učitele
     user_not_found: Učitel nebyl nalezen.
-    student_teacher_disassociated: Odebrali jste %{teacher_name} jako svého učitele.
+    student_teacher_disassociated: Opustili jste sekci %{section_code} učitele %{teacher_name}.
     panel:
       answer_viewer: Učitelský panel
       student: Student
@@ -446,9 +454,9 @@ cs:
     current_password_hint: "(potřebujeme tvé aktuální heslo pro potvrzení změn)"
     delete: Vymazat účet
     delete_text: Klepnutím na následující tlačítko se vymaže váš účet.
-    delete_text_teacher_managed_note: Nemáte oprávnění smazat tento účet, protože
-      je spravován vaším učitelem, který Vás bude muset nejprve odstranit ze svých
-      oddílů, než budete moci smazat svůj účet.
+    delete_text_teacher_managed_note: Nemáš oprávnění smazat tento účet, protože je
+      spravován tvým učitelem. Před smazáním svého účtu musíš požádat sve učitele,
+      aby tě nejprve odstranili ze svých sekcí.
     delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské
       účty.'
     delete_confirm: Jste si jisti, že chcete vymazat tento účet?
@@ -490,6 +498,9 @@ cs:
     update: Aktualizovat účet
     account_successfully_updated: Účet úspěšně aktualizován.
     update_email: Aktualizovat
+    parent_guardian_email_label: E-mail rodiče/zákonného zástupce
+    none: Žádný
+    encrypted: šifrováno
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno
@@ -531,7 +542,7 @@ cs:
     20hour_overview: Tento 20-ti hodinový kurz představuje základní koncepty informatiky
       a programování. Kurz je navrhnut pro děti od 1. po 7. třídu, ale jistě bude
       bavit žáky jakéhokoliv věku.
-    test_videos_help: Vyzkoušejte náš nový video přehrávač ve vaší škole
+    test_videos_help: Vyzkoušejte náš nový video přehrávač ve své škole
     try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
     use_as_teacher: Použijte jako učitel tento web
     your_gallery: Galerie
@@ -539,18 +550,18 @@ cs:
     choose_next_course: Zkuste kurz Code Studio výběrem níže
     print_certificate: Vytisknout certifikát
   move_students:
-    new_section_dne: Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte
+    new_section_dne: Je nám líto, ale sekce %{new_section_code} neexistuje. Zadej
       jiný kód sekce.
-    section_code_cant_be_current_section: Aktuální sekce nemůže být stejná jako nová
-      sekce.
-    current_section_dne: Omlouvám se, ale sekce %{current_section_code} neexistuje.
-      Zadejte jiný sekční kód.
+    section_code_cant_be_current_section: Aktuální sekce nemůže být shodná s novou
+      sekcí.
+    current_section_dne: Je nám líto, ale sekce %{current_section_code} neexistuje.
+      Zadej jiný kód sekce.
     student_ids_not_entered: Zadejte prosím student_ids.
     student_not_found: Nelze nalézt jednoho nebo více studentů.
-    all_students_must_be_in_current_section: Všichni studenti musí být zapsáni v tvoji
-      v sekci.
-    already_enrolled_in_new_section: Tyto studenty nelze přesunout, protože tento
-      učitel je již má v další části.
+    all_students_must_be_in_current_section: Všichni žáci musí být zapsáni ve vaší
+      sekci.
+    already_enrolled_in_new_section: Tyto žáky nelze přesunout, protože se již nacházejí
+      v nové sekci.
   share:
     title: Code studio
     description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění
@@ -572,14 +583,14 @@ cs:
       tento kurz.
     help_from_html_old: Inženýři od Google, Microsoft, Facebook a Twitter pomohli
       vytvořit tyto materiály.
-    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
-      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
-      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
-      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
-      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
-      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
-      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
-      and &copy; 2015 Cartoon Network.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Všechna práva
+      vyhrazena.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Všechna práva vyhrazena.<br />Frozen&#8482; &copy; %{current_year} Disney. Všechna
+      práva vyhrazena.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Všechna práva vyhrazena.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Všechna práva vyhrazena.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Všechna práva vyhrazena.<br />The
+      Amazing World of Gumball je značka a &copy; %{current_year} Cartoon Network.
     art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
       Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
       Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
@@ -596,7 +607,7 @@ cs:
     copyright: Autorská práva
     more: Více
     feedback: Poskytnout zpětnou vazbu
-    translate: Pomozte nám v překladu do vašehojazyka
+    translate: Pomozte nám v překladu do vašeho jazyka
     support: Nápověda a Komunita
     support_url: http://support.code.org
     tos_short: Podmínky
@@ -609,9 +620,10 @@ cs:
     how_it_works: Jak to funguje
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
   reference_area:
-    title: Potřebujete pomoc?
-    subtitle: Podívej se na tyto videa a tipy
+    title: Potřebuješ pomoc?
+    subtitle: Podívej se na tato videa a tipy
     teacher: Zobraz řešení
+    teacher_no_solution: Skrýt řešení
     auth_error: Nemáš oprávnění zobrazovat řešení.
     submit: Aktualizovat umístění umělce
     direction: Počáteční směr (ve stupních)
@@ -621,6 +633,8 @@ cs:
     notes_coming_soon: Poznámky pro toto video přijdou brzy.
     autoplay_option: Automatické přehrávání videí
     download: Stáhnout Video
+    show_notes: Zobrazit poznámky
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Váš prohlížeč není podporován. Nainstalujte a použijte
@@ -671,16 +685,16 @@ cs:
       audience: Věk 13 +
       cta: Jak na to
     dance:
-      title: Dance Party
+      title: Taneční večírek
     dance-2019:
-      title: Dance Party
+      title: Taneční večírek
     hoc:
       title: Klasické bludiště
-      body: Zkuste základy informatiky. Miliony lidí to už zkusili.
+      body: Vyzkoušejte si základy informatiky. Miliony lidí to už zkusily.
     flappy:
-      title: Tenký kód
-      body: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušej náš výukový
-        kurz tenkého kódu!
+      title: Flappy
+      body: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušejte náš návod
+        na hru Flappy Bird!
     20-hour:
       title: Zrychlený kurz
       body: Tento 20-ti hodinový kurz pokrývá základní koncepty informatiky a programování
@@ -688,7 +702,7 @@ cs:
         máš zájem o detailnejší kurz, vyzkoušej kurzy 2-4!
       body_short: Naučit se základní informatiku ve zrychlené verzi kurzy 2-4.
     hoc2014:
-      try_new_tutorial: Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi
+      try_new_tutorial: Vyzkoušejte náš nový kurz Hodina kódu v beta verzi
       try_frozen: Umělec s Annou a Elsa, od zmrazené
     gallery:
       title: Galerie
@@ -726,6 +740,13 @@ cs:
       title: Minecraft
       body: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft
         s kódem.
+    sports:
+      title: Sporty
+      body: Vytvoř basketbalovou hru, nebo ji propojte s jinými sporty.
+    text-compression:
+      title: Komprese textu
+      body: V této lekce studenti využijí pomůcku pro kompresi textu, aby stěstnali
+        text pomocí nahrazení vzorů za symboly.
     unplugged:
       title: Lekce bez počítače
       audience: Od 4 let
@@ -771,7 +792,7 @@ cs:
     placeholder: Zadejte svou odpověď zde
   multi:
     wrong_title: Nesprávná odpověď
-    wrong_body: Odpověď, kterou jste zadali, není správné.  Opakujte akci!
+    wrong_body: Odpověď, kterou jsi vybral(a), není správná. Zkus to znovu!
     correct_title: Správně
     correct_body: To je správná odpověď.
   multi-submittable:
@@ -803,7 +824,7 @@ cs:
       jistý?
   match:
     wrong_title: Nesprávné řešení
-    wrong_body: Řešení, které jste zadali, není správné.  Opakujte akci!
+    wrong_body: Řešení, které jsi zadal(a), není správné.  Zkus to znovu.
     correct_title: Správně
     correct_body: To je správná odpověď.
   contract_match:
@@ -824,11 +845,11 @@ cs:
     correct_body: To je správná odpověď.
   dialog:
     ok: OK
-    startover_title: Jste si jisti, že chcete začít znovu?
+    startover_title: Určitě chceš začít znovu?
     startover_body: Toto znovu nastaví puzzle do původního stavu a odstraní všechny
       bloky, které jsi přidal nebo změnil.
     startover_ok: Začít znovu
-    startover_cancel: Storno
+    startover_cancel: Zrušit
   time:
     hour: 1 hodina
     day: den
@@ -861,6 +882,8 @@ cs:
       osobních údajů</a>
     accept_label_markdown: Souhlasím s aktualizací [Podmínek poskytování služeb](%{tos_url})
       and [Ochranou osobních údajů](%{privacy_url})
+    accept_tos: Registrací na Code.org vyjadřujete souhlas s našimi [Podmínkami poskytování
+      služeb](%{tos_url}) a [Zásadami ochrany osobních údajů](%{privacy_url}).
     accept: Přijmout
     print: Tisk
     reminder_desc: Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní
@@ -983,14 +1006,16 @@ cs:
     main_course: Hlavní kurs
     csf_digcit: Digitální občanství
     csf_jigsaw: Skládačka
+    csf_sequencing: Sekvence
     csf_loops: Cykly
     csf_events: Události
+    csf_online_safety: Online bezpečnost
     csf_binary: Binární
     csf_conditionals: Podmínky
     csf_nested_loops: Vnořené cykly
     csf_functions: Funkce
     csf_variables: Proměnné
-    csf_for_loops: For cykly
+    csf_for_loops: Cykly "For"
     csf_internet: Internet
     csd1_1: 'Kapitola 1: Proces řešení problémů'
     csd1_2: 'Kapitola 2: Počítače a řešení problémů'
@@ -1007,13 +1032,15 @@ cs:
     csp2_1: 'Kapitola 1: Kódování a komprese komplexních informací'
     csp2_2: 'Kapitola 2: Práce s daty a jejich zobrazení'
     csp3_1: 'Kapitola 1: Programovací jazyky a algoritmy'
-    csp2_1_2018: '2. lekce: Digitální informace'
-    csp3_1_2018: 'Jednotka 3: Úvod do programování'
+    csp_postap_1: 'Kapitola 2: Práce s daty a jejich zobrazení'
+    csp2_1_2018: 'Kapitola 2: Digitální informace'
+    csp3_1_2018: 'Kapitola 3: Úvod do programování'
     csp_variables: Proměnné
     csp_conditionals: Podmínky
     csp_functions: Funkce
     csp_lists: Seznamy
     csp_loops: Cykly
+    csp_unit1_2020: 'Kapitola 1: Digitální informace'
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností
@@ -1088,12 +1115,14 @@ cs:
     anebo až bude procházet tvoje odpovědi.
   hidden_stage: Tvůj učitel nepředpokládal, že bude zrovna tady. Prosím zeptej se
     ho, na které lekci máš pracovat.
-  return_unit_overview: Přejít na přehled jednotky
+  return_unit_overview: Přejít na přehled kapitoly
   return_course_overview: Přejít na přehled
-  view_all_units: Zobrazit všechny jednotky
+  view_all_units: Zobrazit všechny kapitoly
   view_teacher_guide: Zobrazit příručku učitele
   pd:
     form_labels:
+      first_name: Křestní jméno
+      last_name: Příjmení
       email: E-mail
       school_name: Název školy
       school_country: Země školy
@@ -1102,21 +1131,65 @@ cs:
         male: Muž
         female: Žena
         none: Raději bych neodpovídal/a
+      school_country:
+        canada: Kanada
+        chile: Chile
+        israel: Izrael
+        malaysia: Malajsie
+        mexico: Mexiko
+        thailand: Thajsko
+      ages:
+        ages_under_6: "< 6 let"
+        ages_7_8: 7-8 let
+        ages_9_10: 9-10 let
+        ages_11_12: 11-12 let
+        ages_13_14: 13-14 let
+        ages_15_16: 15-16 let
+        ages_17_18: 17-18 let
+        ages_19_over: Více než 19 let
       subjects:
         cs: Informatika
         math: Matematické
         science: Věda
         la: Jazyky
+        efl: Angličtina jako cizí jazyk
+        music: Hudba
+        art: Umění
+        other: 'Ostatní:'
       resources:
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Ostatní:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        other: 'Ostatní:'
       workshop_course:
         csp: Principy informatiky 2016-2017
       email_opt_in:
         opt_in_yes: Ano
         opt_in_no: Ne
   cookie_banner:
+    message: Pokud budete pokračovat v prohlížení naší stránky nebo kliknete na "Souhlasím",
+      souhlasíte s uložením cookies na svém počítači nebo přístroji.
+    more_information: Zobrazte si zásady ochrany soukromí pro Code.org.
     accept: Souhlasím
   gdpr_dialog:
+    heading: Souhlasíte s používáním webových stránek provozovaných ve Spojených státech?
+    message: Informace ohledně Vašeho používání těchto stránek mohou být posílány
+      do Spojených států a tamtéž i uchovávány.
+    privacy_policy: zásady ochrany osobních údajů
     true: Ano
+  page_not_found_title: Stránka nebyla nalezena
+  page_not_found_header: 404 - Stránka nebyla nalezena
+  page_not_found_button: Zpět domů
+  copy: Kopírovat

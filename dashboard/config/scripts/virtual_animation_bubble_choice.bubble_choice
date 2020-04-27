@@ -1,0 +1,10 @@
+name 'virtual-animation-bubble-choice'
+editor_experiment ''
+display_name 'Movement Challenges'
+description 'Try some of these challenges to get more practice with animation, the draw loop, and movement!'
+
+sublevels
+
+level 'CSD sprite movement challenge_virtual'
+level 'CSD U3 Movement Fish challenge_virtual'
+level 'CSD U3 L9 Freeplay_virtual'

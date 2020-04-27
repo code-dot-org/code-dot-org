@@ -22,6 +22,8 @@ ga-IE:
         draw a square: tarraing cearnóg
       2-3 Artist Functions 9:
         draw a snowflake: tarraing calóg shneachta
+      2-3 Bee Functions 4:
+        move and get nectar: téigh agus bailigh neachtar
       4-5 Artist 3:
         draw a flower: tarraing bláth
       4-5 Artist 6:
@@ -35,7 +37,16 @@ ga-IE:
       Course 4 Play Lab Params 3:
         jump: léim
       Course 4 Play Lab Params 4:
+        patrol: patrólú
         do something: rud éigin a dhéanamh
+      Course 4 Play Lab Params 5:
+        patrol: patrólú
+      Course 4 Play Lab Params 6:
+        patrol: patrólú
+      Course 4 Play Lab Params 7:
+        patrol: patrólú
+      Course 4 Play Lab Params 8:
+        patrol: patrólú
       Course 4 Play Lab Vars 1:
         set score: socraigh an scór
       Course 4 Play Lab Vars 2:
@@ -50,12 +61,38 @@ ga-IE:
         do something: rud éigin a dhéanamh
       Find the Wizard:
         do something: rud éigin a dhéanamh
+      Function intro Ryan:
+        build bridge: tóg droichead
+      Function intro Ryan_2019:
+        build bridge: tóg droichead
       Geometric Sun:
-        diamond: diamant
+        diamond: ar chruth diamaint
         draw a house: tarraing teach
       Geometric Sun_2018:
-        diamond: diamant
+        diamond: ar chruth diamaint
         draw a house: tarraing teach
+      MC_HOC_2017_07_Cole:
+        clear path: glan cosán
+      MC_HOC_2017_07_Cole_2019:
+        clear path: glan cosán
+      MC_HOC_2017_10_RETRY:
+        fix long path: deisigh cosán fada
+        fix short path: deisigh cosán gearr
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path: deisigh cosán fada
+        fix short path: deisigh cosán gearr
+      MC_HOC_2017_Ali:
+        build short bridge: tóg droichead gearr
+        build long bridge: tóg droichead fada
+      MC_HOC_2017_Ali_2019:
+        build short bridge: tóg droichead gearr
+        build long bridge: tóg droichead fada
+      MC_HOC_2017_FP20x20:
+        function 1: feidhm 1
+        function 2: feidhm 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1: feidhm 1
+        function 2: feidhm 2
       NEW Course 4 Artist Functions 3:
         draw a square: tarraing cearnóg
       NEW Course 4 Artist Functions 4:
@@ -96,8 +133,23 @@ ga-IE:
         do something: rud éigin a dhéanamh
       NEW Course 4 Play Lab Params 11:
         jump: léim
+        patrol: patrólú
+      New Artist Project:
+        draw a star: tarraing réalta
+        draw a circle: tarraing ciorcal
+        draw a triangle: tarraing triantán
+        draw a house: tarraing teach
+        draw a square: tarraing cearnóg
+      New Minecraft Hero Project:
+        function 1: feidhm 1
+        function 2: feidhm 2
+      New Play Lab Project:
+        jump: léim
+        patrol: patrólú
       Standalone_Artist_7:
         draw a flower: tarraing bláth
+      Standalone_Artist_9:
+        my function: m'fheidhm
       course3_artist_functions_challenge1:
         do something: rud éigin a dhéanamh
       course3_artist_functions_challenge2:
@@ -110,6 +162,8 @@ ga-IE:
         do something: rud éigin a dhéanamh
       course4_artist_fwp_challenge1:
         do something: rud éigin a dhéanamh
+      course4_bee_for_challenge1:
+        move and get nectar with counter: téigh agus bailigh neachtar le háiritheoir
       courseC_data wizard:
         do something: rud éigin a dhéanamh
       courseE_artist_concept1:
@@ -152,8 +206,6 @@ ga-IE:
       courseE_artist_functions7:
         draw a house: tarraing teach
       courseE_artist_functions7_2018:
-        draw a house: tarraing teach
-      courseE_artist_functions7_2019:
         draw a house: tarraing teach
       courseE_artist_functions8:
         do something: rud éigin a dhéanamh
@@ -207,6 +259,8 @@ ga-IE:
         do something: rud éigin a dhéanamh
       courseE_bee_functions1:
         do something: rud éigin a dhéanamh
+      courseE_bee_functions4:
+        move and get nectar: téigh agus bailigh neachtar
       courseE_bee_functions_challenge1:
         do something: rud éigin a dhéanamh
       courseE_bee_functions_challenge2:
@@ -245,6 +299,12 @@ ga-IE:
         do something: rud éigin a dhéanamh
       courseF_artist_fwp_challenge2:
         do something: rud éigin a dhéanamh
+      courseF_bee_for_challenge1:
+        move and get nectar with counter: téigh agus bailigh neachtar le háiritheoir
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter: téigh agus bailigh neachtar le háiritheoir
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter: téigh agus bailigh neachtar le háiritheoir
       courseF_bee_functions8a:
         do something: rud éigin a dhéanamh
       courseF_bee_variables_7_2018:

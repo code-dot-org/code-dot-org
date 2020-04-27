@@ -64,6 +64,9 @@ fa-IR:
       NEW Course 4 Bee For Loops 5:
         actions_category: جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا
           اینجا هستند.
+      New Frozen Project:
+        snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده
+          کنید!
       Overworld Move to Sheep:
         craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
       Overworld Move to Sheep_2019:

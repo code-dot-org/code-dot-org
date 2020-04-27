@@ -12,12 +12,12 @@
   csedweek_dates: "3.-9. decembra 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hodina kódu</a> sa blíži. Vyzývame všetkých učiteľov a organizátorov, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> naplánujte si svoju Hodinu Kódu</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Učíte informatiku? Pozrite sa aj na naše ďalšie materiály </a>'
+  csedweek_banner_teachers_text: "Učíte informatiku? Pozrite sa aj na naše ďalšie materiály "
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
   anybody_can_learn: "Každý sa môže naučiť."
   learn_now: "Nauč sa teraz"
   petition_message: "Aby každý študent na každej škole dostal možnosť študovať informatiku"
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu spolu s # ďalšími.'
-  petition_sign_message_support: 'Ak nás podporuješ, zapíš sa a pridaj sa k nášmu mailing listu spolu s # ďalšími.'
   petition_join_others: 'Pridaj sa k # iným'
   name: "Meno"
   email: "E-mail"
@@ -319,6 +319,7 @@
   homepage_action_text_signpetition: "Podpíš petíciu"
   homepage_action_text_wincelebritychat: "Vyhraj rozhovor s celebritou"
   homepage_signpetition_dropdown: "Súhlasím &#x25BE;"
+  homepage_signpetition_dropdown_text: "Súhlasím"
   homepage_diversity_pledge: "Podpor diverzitu"
   homepage_banner_text_prizes: 'Hodina Kódu prichádza znovu 7 - 13 decembra. '
   homepage_banner_link_prizes: 'Pripojte sa k najväčšej vzdelávacej aktivite v histórii. '
@@ -937,11 +938,21 @@
   coursed-2019_name: Kurz D (2019)
   coursee-2019_name: Kurz E (2019)
   coursef-2019_name: Kurz F (2019)
+  coursea-2020_name: Kurz A (2019)
+  courseb-2020_name: Kurz B (2019)
+  coursec-2020_name: Kurz C (2019)
+  coursed-2020_name: Kurz D (2019)
+  coursee-2020_name: Kurz E (2019)
+  coursef-2020_name: Kurz F (2019)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  express-2020_name: Zrýchlený kurz (2019)
+  csd2_name: 'Lekcia 2: Vývoj webových stránok'
+  csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: "Zrýchlený kurz"
   express_name: "Zrýchlený kurz"
+  pre-express_name: Zrýchlený kurz pre predškolákov
   20-hour_name: Zrýchlený kurz
   algebra_name: "Informatika v algebre - celý kurz"
   AlgebraA_name: "Informatika v algebre - Kurz A"
@@ -1409,7 +1420,7 @@
   sign_in_overview: 'Vaši študenti sa môžu prihlásiť do účtov Code.org pomocou nasledujúcich krokov:'
   sign_in_instruct_website: "Choďte na %{code_org_url}."
   sign_in_instruct_code: 'Vložte kód triedy: %{section_code}.'
-  sign_in_instruct_name: "Vyberte svoje meno."
+  sign_in_instruct_name: "Vyber svoje meno."
   sign_in_instruct_secret: "Vyberte správny prístupový %{secret}."
   sign_in_instruct_button: "Kliknite na tlačidlo \"Prihlásiť\"."
   sign_in_overview_cards: "Študenti nájdu všetky tieto informácie, vrátane prístupového %{secret}, na prihlasovacích kartičkách."

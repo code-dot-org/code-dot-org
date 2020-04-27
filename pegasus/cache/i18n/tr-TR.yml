@@ -20,14 +20,14 @@ tr-TR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
     bakın</a>'
+  csedweek_banner_teachers_text: Bilgisayar öğretmeni misiniz? Diğer CSEdWeek kaynaklara
+    bakın
   n_have_learned_an_hoc: "<h1>Deneyin</h1><h2>Kod Saati</h2><h3># kez</h3>"
   anybody_can_learn: Herkes öğrenebilir.
   learn_now: Şimdi Öğren
   petition_message: Her okuldaki her öğrencinin bilgisayar bilimlerini öğrenmek için
     fırsatı olmalıdır
   petition_sign_message: 'Kabul ederseniz , adınızı girin ve diğerlerine # katılın.'
-  petition_sign_message_support: 'Bize destek olmak isterseniz kullanıcı adınızı girerek
-    # ile bize katılabilirsiniz.'
   petition_join_others: "# kişinin arasına katılın"
   name: İsim
   email: e-posta
@@ -406,6 +406,7 @@ tr-TR:
   homepage_action_text_signpetition: Üye dilekçesi
   homepage_action_text_wincelebritychat: Ünlü ile sohbet kazan
   homepage_signpetition_dropdown: Bizim üye dilekçemiz  &#x25BE;
+  homepage_signpetition_dropdown_text: Kabul ediyorum
   homepage_diversity_pledge: 'Çeşitlilik oluştur ! '
   homepage_banner_text_prizes: "`Kod Saati` 7-13 Aralıkta tekrar gerçekleşecek."
   homepage_banner_link_prizes: 'Tarihteki en büyük eğitim etkinliğine katılın. '
@@ -1949,14 +1950,20 @@ tr-TR:
   header_help_support: 'Yardım ve Destek '
   header_report_bug: Hata bildir
   header_tutorials: Eğitmler
+  game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
+  game_lab_tutorials: Oyun Laboratuvar Eğitimi
+  sprite_lab_documentation: Peri Laboratuvar Belgelendirmesi
+  sprite_lab_tutorials: Peri Laboratuvar Eğitimi
   header_documentation: Belgeler
   user_header_label: Merhaba %{username}
   user_header_team: Takım
+  user_header_my_projects: Projelerim
   user_header_settings: Hesap Ayarları
   user_header_logout: Çıkış Yap
   user_header_signin: Giriş Yap
   user_header_create: 'Oluştur '
   user_header_applab: Uygulama Laboratuvarı
+  user_header_artist: 'Sanatçı '
   user_header_gamelab: Oyun Laboratuvarı
   user_header_playlab: Oyun Laboratuvarı
   user_header_dance: Dans Partisi
@@ -2051,7 +2058,14 @@ tr-TR:
   hoc2018_mc_start: Başlayın
   hoc2018_mc_no_internet: İnternetin yok mu?
   hoc2018_mc_download_adventurer: Minecraft Maceracı'nın çevrimdışı versiyonunu indir.
+  hoc2018_mc_educators: Eğitimciler İçin
+  hoc2018_mc_educators_box1_title: Minecraft ile Kodla
+  hoc2018_mc_educators_box1_button: Kullanmaya başla
+  hoc2018_mc_educators_box2_title: Kolaylaştırıcı Rehberini İndir
   hoc2018_mc_educators_box2_button: İndir
+  hoc2018_mc_educators_box3_button: Bir dükkan bul
+  hoc2018_mc_educators_box4_title: Daha fazla bilgisayar bilimi kaynağına eriş
+  hoc2018_mc_educators_box4_button: Kaynakları keşfet
   hoc2018_mc_watch_videos: Başlamadan önce ilham veren bu videolardan birini izle
   hoc2018_mc_videos_more: Ünlülerin ve rol modellerinin bulunduğu ilham verici daha
     başka <a href='%{inspiring_videos_playlist}'>videolar</a>
@@ -2069,6 +2083,7 @@ tr-TR:
   hoc2018_mc_video_title_anybody_can_learn: Herkes Öğrenebilir
   hoc2018_mc_homepage_hoc_coming: Kodlama Saati geliyor...
   hoc2018_mc_homepage_what_create: Ne tasarlayacaksın?
+  hoc2018_mc_homepage_watch_video: Videomuzu izle
   hoc2018_mc_homepage_join_us: Bize katılın
   hoc2018_mc_homepage_try_it: Deneyin
   hoc2018_mc_back: Minecraft, Kod Saati için yeni bir etkinlikle geri döndü!
@@ -2081,6 +2096,8 @@ tr-TR:
   hoc2018_mc_short_description_shorter: Minecraft, Kodlama Saati için yepyeni bir
     etkinlikle geri döndü!
   hoc2018_dance_party_main_heading: Dans Partisi
+  hoc2018_dance_party_landing_title: Dans et
+  hoc2018_dance_party_subheading: Dans Kutlamasını çevirmede yardım et
   hoc2018_dance_create_your_own_dance_title: Kendi Dans Partini Yarat
   hoc2018_dance_party_box_title: Dans Partisi
   hoc2018_dance_party_box_description: Arkadaşlarınla paylaşmak için bir Dans Partisi
@@ -2098,8 +2115,26 @@ tr-TR:
   hoc2018_dance_teacher_resources_tile2_description: Bilgisayar gerektirmez!  Hep
     birlikte bir dans partisi koreografisi yapmak için kodlama kavramlarını öğrenin.
   hoc2018_dance_teacher_resources_tile2_button: Bilgisayarsız Etkinlik
+  hoc2018_dance_videos_section_heading: İlham Alın
+  hoc2018_dance_video_title_what_is_creativity: Yaratıcılık nedir?
+  hoc2018_dance_view_creativity_video_playlist: Yaratıcılık nedir? Bütün Seriyi Görüntüle
+    (5 dk)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "### ortaklığıyla"
   hoc2018_dance_amazon_about_future_engineer_button: Daha fazlasını öğren
+  hoc2018_dance_amazon_try_coding_this_summer_button: Bir kampa katıl
+  hoc2018_dance_amazon_scholarship_programs_title: Burs programları
   hoc2018_dance_amazon_scholarship_programs_button: Şimdi uygula
+  hoc2018_dance_amazon_k8_programs_title: K-8 programları
+  hoc2018_dance_amazon_funding_title: CS derecen için fon al
   hoc2018_dance_measure: Ölçü
   hoc2018_dance_measure_colon: 'Ölçü:'
+  hoc2018_dance_video1: Dans Kutlaması - Tanıtım
+  hoc2018_dance_video2: Dans Kutlaması - Etkinlikler
+  hoc2018_dance_video3: Dans Kutlaması - Özellikler
+  hoc2018_dance_video4: Dans Kutlaması - Tebrikler
   page_not_found_title: Sayfa Bulunamadı
+  page_not_found_header: '404: Sayfa Bulunamadı'
+  page_not_found_description: Aradığınız sayfa bu adreste bulunmuyor. Web adresini
+    kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün.
+  page_not_found_button: Anasayfaya Dön
+  hoc2018_mc_with_microsoft: "### ortaklığıyla"

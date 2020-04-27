@@ -1,0 +1,32 @@
+name 'Making a Multi Screen Chaser Game v.2_2018_2019_virtual'
+editor_experiment ''
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Guided Example: Making a Multi-screen Chaser Game
+
+In the last lesson you made a simple chaser game.  Now let's make **version 2**.   
+
+Here is the plan for what we're about to make:
+
+![](https://images.code.org/23b8a7b6a7af3b31b20ee83b84104b00-image-1477323346756.png)
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Welcome Screen with button to start. Clicking on button takes you to game play screen.</p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Improve Chaser game so that you can lose by clicking on the background. Clicking on the target (banana) makes it jump around just like before. But clicking on the background (a large image) sends you to another screen.</p>
+
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Game Over Screen. Add a button inviting person to play again. Clicking it sends them back to the welcome screen.
+</p>
+
+</div>
+<br><br>
+We're going to make these 3 additions to the game one at a time, over the next 3 levels.  We'll add the welcome screen first.  Click Continue to try it.
+
+MARKDOWN

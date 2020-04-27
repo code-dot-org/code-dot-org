@@ -25,51 +25,78 @@ vi:
     học máy tính là kiến thức nền tảng mà mọi học sinh cần học hỏi.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  oceans_landing_title: Trí Tuệ Nhân Tạo cho Đại Dương
+  oceans_landing_description: Cùng học về Trí Tuệ Nhân Tạo và cách sử dụng nó cho
+    những điều tốt.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
+  oceans_landing_specs: Tiếng Việt | Học sinh lớp 3 trở lên
+  oceans_landing_explanation: Khoa học máy tính bao gồm rất nhiều lĩnh vực và không
+    chỉ có lập trình. Hãy cùng học về Trí Tuệ Nhân Tạo (AI), Học Máy (Machine Learning),
+    dữ liệu, định kiến, và cách sử dụng AI cho những điều tốt và xử lý các vấn đề
+    toàn cầu. Hãy cùng Code.org bước những bước đầu tiên trên con đường học về AI
+    nhé. Khi học bài học này, các bạn đang dạy một mô hình học máy thật sự. <a href='#behind-the-scenes'>Tìm
+    hiểu thêm chúng tôi đã làm thế nào</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
+  oceans_landing_teacher_resources: Tài liệu cho giáo viên
+  oceans_landing_teacher_resources_desc: Các hoạt động để dạy về trí tuệ nhân tạo
+    (AI), học máy (machine learning), dữ liệu, định kiến, và các vấn đề đạo đức trong
+    sử dụng trí tuệ nhân tạo.
+  oceans_landing_resource_button: Xem các tài nguyên
+  oceans_landing_cs_for_good: Khoa học máy tính vì điều tốt
+  oceans_landing_cs_for_good_desc: Các tài liệu giúp học sinh hiểu về vai trò của
+    khoa học máy tính trong việc tạo ra một thế giới công bằng hơn.
   oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes: 'Trí tuệ nhân tạo cho đại dương: Hậu trường'
+  oceans_behind_the_scenes_1: Bài 2-4 sử dụng mô hình đã được dạy trước bởi <a href="https://www.tensorflow.org/">TensorFlow</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet</a>.
+    Một mô hình MobileNet là một <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">mạng
+    nơron nhân tạo</a> đã được dạy bằng <a href="http://www.image-net.org/">ImageNet</a>.
+    ImageNet là tập hợp dữ liệu có trên 14 triệu hình ảnh đã được gắn nhãn bằng tay
+    với các từ như “bóng bay” hay “quả dâu tây”. Để có thể dùng lại mô hình này với
+    các dữ liệu học sinh tạo ra trong bài học này, chúng tôi sử dụng kỹ thuật gọi
+    là <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer Learning</a>.
+    Mỗi hình ảnh trong tập dữ liệu đào tạo (của học sinh) được đưa vào MobileNet để
+    được gắn nhãn. Sau đó, các hình ảnh mới cũng được đưa vào MobileNet để gắn nhãn.
+    Chúng tôi so sánh nhãn của các hình ảnh mới với nhãn của các hình ảnh trong tập
+    dữ liệu đào tạo để phân loại chúng thành “cá” hoặc “không phải cá”.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: 'Bài 6-8 sử dụng <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). Chúng tôi nhìn vào các bộ phận của một chú cá (như mắt, mồm,
+    thân) để thu thập tất cả các thông tin chi tiết về những bộ phận này (số răng,
+    hình dáng của thân) vào một vector. Chúng tôi sử dụng những vector này để dạy
+    một mô hình SVM. Dựa trên dữ liệu đào tạo, SVM tách các chú cá thành hai nhóm
+    tương ứng với từ mà học sinh đã chọn (ví dụ như cá “màu xanh da trời” hay “không
+    phải màu xanh da trời”). '
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: Trí Tuệ Nhân Tạo cho Đại Dương
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
@@ -145,6 +172,16 @@ vi:
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Hãy thử khám phá <span class="highlight-word">Bữa
     Tiệc&nbsp;Khiêu Vũ!</span> mới
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Tìm hiểu thêm
   cookie_banner_message: Để tiếp tục xem trên trang của chúng tôi hoặc nhấn "Tôi đồng
     ý", bạn đã chấp nhận để chúng tôi lưu trữ cookie trên máy tính của bạn hay các
     thiết bị khác.
@@ -397,6 +434,9 @@ vi:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Và mỗi năm vào tháng 12, lớp của bạn có thể tham gia
     cùng hàng triệu học sinh trên toàn thế giới kỷ niệm Tuần lễ Giáo dục về Khoa học
     Máy tính với Giờ Lập Trình. Chúng tôi sẽ mở đợt đăng ký tham gia lễ kỷ niệm hàng
@@ -499,6 +539,7 @@ vi:
   map_warning: Bản đồ Giờ của Lập trình chỉ hiển thị 200.000 sự kiện đăng ký đầu tiên.
     Tất cả các sự kiện đã đăng ký với địa chỉ hợp lệ có thể được xem trên <a href='%{events_url}'>
     trang sự kiện.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_og_description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu
     học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi
@@ -517,6 +558,13 @@ vi:
   hoc_faq_what_is_hoc_a: Hour of Cpde là một giờ giới thiệu về khoa học máy tính,
     được thiết kế để mã rõ ràng và hiển thị mà bất cứ ai có thể học những điều cơ
     bản. <a href='http://code.org/learn'> kiểm tra các hướng dẫn.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Hãy thử các hướng dẫn
   hoc_faq_when_is_hoc_q: Khi là giờ mã?
   hoc_faq_when_is_hoc_a: Giờ của Lập trình tổ chức sự kiện <a href='%{csedweek_url}'>
@@ -525,18 +573,32 @@ vi:
     này vào bất cứ thời gian nào. Sự kiện này được tổ chức nhằm kỷ niệm ngày sinh
     của người đã đặt nền móng cho máy tính <a href='%{grace_hopper}'> Grace Murray
     Hopper</a> (9 tháng 12 năm 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Tại sao lại là khoa học máy tính?
   hoc_faq_why_cs_a: "<i>Mỗi</i> học sinh nên có cơ hội để tìm hiểu khoa học máy tính.
     Nó giúp nuôi dưỡng giải quyết vấn đề kỹ năng, logic và sáng tạo. Bằng cách bắt
     đầu sớm, học sinh/ sinh viên sẽ có một nền tảng cho sự thành công trong bất kỳ
     con đường sự nghiệp thế kỷ 21. Xem thêm thống kê trên <a href='http://code.org'>
     Code.org</a>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Làm thế nào để tham gia vào Hour of Code?
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'> Bắt đầu lập kế hoạch
     ở đây </a> bằng cách xem hướng dẫn của chúng tôi. Bạn có thể tổ chức một sự kiện
     Hour of Code tại trường học hoặc tại nơi bạn sinh sống &mdash; giống như một câu
     lạc bộ ngoại khóa, chương trình phi lợi nhuận hay tổ chức nó ở nơi làm việc. Hoặc,
     bạn cũng có thể tự trải niệm vào %{campaign_date} khi sự kiện bắt đầu."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Những ai đã làm nên Hour of Code?
   hoc_faq_behind_hoc_a: Giờ mã được tổ chức bởi <a href='http://code.org'> Code.org</a>,
     một khu vực 501 c 3 phi lợi nhuận chuyên dụng để mở rộng sự tham gia trong khoa
@@ -545,6 +607,11 @@ vi:
     liên minh chưa từng có của các đối tác</a> đã đến với nhau để hỗ trợ giờ mã, quá
     &mdash; bao gồm Microsoft, Apple, Amazon, chàng trai và cô gái câu lạc bộ của
     Mỹ và hội đồng quản trị trường cao đẳng.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể
     đến tham dự sự kiện?
   hoc_faq_host_a: Tất nhiên. Các hoạt động Hour of Code đều có hướng dẫn tự động trên
@@ -554,12 +621,22 @@ vi:
     nhiều lựa chọn cho các lứa tuổi và các mức độ người học khác nhau. Băt đầu lên
     kế hoạch cho việc học của bạn bằng việc đọc <a href='/resources/how-to'>Hướng
     dẫn</a> của chúng tôi.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Tôi nên sử dụng những thiết bị nào cho học sinh của tôi?
   hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
     see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
     Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
     activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Tôi có cần máy tính cho mọi người tham gia?
   hoc_faq_need_computers_a: Không. Chúng tôi đã hướng dẫn giờ mã làm việc trên máy
     tính, điện thoại thông minh, viên nén, và một số đó có yêu cầu máy tính không
@@ -572,22 +649,42 @@ vi:
     có thể làm một giờ mã với nhau. Xem video phần với nhau và đưa sang giải những
     câu đố hoặc trả lời câu hỏi. <li><b>Đi chưa cắm phít được.</b> Chúng tôi cung
     cấp hướng dẫn yêu cầu máy tính không có ở tất cả. </ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Tôi đang ở <country>. Làm thế nào tôi có thể tham gia các
     sự kiện quốc tế?
   hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
     the world. Last year, students worldwide joined together for the Hour of Code.
     Find out more <a href='/promote'>here</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Làm thế nào tôi có thể làm một hướng dẫn về Hour of Code?
   hoc_faq_tutorial_a: Nếu bạn đang quan tâm đến việc trở thành một đối tác hướng dẫn,
     <a href='/tutorial-guidelines'> xem hướng dẫn và hướng dẫn của chúng tôi</a>.
     Chúng tôi muốn lưu trữ một loạt các lựa chọn hấp dẫn, nhưng mục tiêu chính là
     để tối ưu hóa kinh nghiệm cho học sinh/ sinh viên và giáo viên những người mới
     tìm hiểu về khoa học máy tính.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Học sinh có cần phải đăng nhập để sử dụng tài khoản?
   hoc_faq_account_a: Không. Hoàn toàn không có đăng ký hoặc đăng nhập là cần thiết
     cho sinh viên để thử "Hour of Code". Hầu hết <a href='http://code.org/learn/beyond'>
     các khóa học tiếp theo</a> yêu cầu tạo tài khoản để lưu quá trình học tập của
     học sinh.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Hoạt động nào mà tôi nên áp dụng với học sinh trung học?
   hoc_faq_high_school_a: Với mọi lứa tuổi, chúng tôi khuyên bạn nên thử một trong
     các bản hướng dẫn cho người mới bắt đầu trên <a href='http://code.org/learn'>
@@ -595,6 +692,13 @@ vi:
     với Anna và Elsa. Một học sinh trung học có thể hoàn thành một trong những hưỡng
     dẫn trong 30 phút và có thể thử một hướng dẫn nâng cao hơn trong JavaScript, chẳng
     hạn như Khan Academy hoặc CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Tôi đang làm những bước đầu tiên cho chương trình "Hour of Code",
     nhưng điều gì sẽ xảy ra nếu học sinh của tôi dùng nhiều iPad chứ không phải là
     máy tính xách tay?
@@ -603,6 +707,10 @@ vi:
     đầu tham gia). Nếu bạn nhìn vào các hướng dẫn trên <a href='http://code.org/learn'>
     Code.org/learn</a>, bạn có thể tìm thấy các hướng dẫn để làm việc trên iPad -
     từ Code.org, Tynker, Lightbot, hoặc CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Làm thế nào bạn đếm" Hours of Code" ?
   hoc_faq_map_q: Why don't I see my dot on the map?
   hoc_faq_map_a: We're so sorry you aren't seeing your event on the Hour of Code map.
@@ -612,12 +720,24 @@ vi:
     and can find your event listed there. Additionally, given the thousands of people
     signing up for the Hour of Code, the map and event list usually takes 48 hours
     to update. Check back in a few days!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Bộ theo dõi "Hour of Code"  không phải là một thước đo chính
     xác của việc sử dụng. Chúng tôi không đếm xem có bao nhiêu cá nhân sinh viên xuất
     sắc khi tham gia Giờ Lập Trình, vì chúng tôi không yêu cầu các sinh viên đăng
     nhập hoặc đăng ký. Sau cùng, chúng tôi tính số lượng người tham gia nhiều nhất
     và ít nhất cùng một thời điểm. Xem chi tiết <a href='http://code.org/loc'> tại
     đây</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: How much can one learn in an hour?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
@@ -637,25 +757,44 @@ vi:
     that computer science is something their students want and their teachers are
     capable of. <br/><br/> Above all, what all participants can learn in an hour is
     that we can do this.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Còn thêm bất cứ câu hỏi nào ko?
   hoc_faq_more_questions_a: Hãy cố gắng tìm một câu trả lời trong chúng tôi <a href='http://support.code.org'>  diễn
     đàn hỗ trợ</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
     stay up year-round. You can expect all our tutorials and curriculum to be available
     on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
     event how-to guides and other resources to help make your Hour of Code event a
     success.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Where can I print certificates for my students?
   hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
     page</a> where you can print certificates for your entire class ahead of time.
     You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
     certificates</a> for students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
     name?
   hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
     but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
     guidelines for usage</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Số liệu thống kê từ năm 2013
   stats_growth: Nó đã nhanh chóng đạt tới 15 triệu người sử dụng.
   stats_i18n: Students are learning in over 45 languages
@@ -671,6 +810,8 @@ vi:
     of high school courses, university courses, and the workforce.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Mỗi một ngày mang lại kết quả tương tự &mdash; 100% tham gia."-Nina
     Nichols Peery, giáo viên'
   stats_student: '"Tôi biết đây là một <b>cơ hội tốt trong đời</b> dành cho bạn "-Mariana
@@ -796,8 +937,11 @@ vi:
     quốc gia bắt đầu với Hour of Code.
   learn_banner_beyond: Bạn có muốn tiếp tục học tập không?  <a id='learn_banner_beyond'>Tiến
     xa hơn</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: Robotics and Circuits
   learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
     the activities below and make a tangible Hour of Code for students of any age!
@@ -8298,7 +8442,7 @@ vi:
   tutorial_modtraits_name: Character Traits with GoPiGo
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: Trí Tuệ Nhân Tạo cho Đại Dương
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while

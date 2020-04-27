@@ -49,7 +49,7 @@
     "CONTROLS_IF_ELSE_TOOLTIP": "وەرگرتنی ھەموو ئەگەرەکان، لە کۆتایی زیاد بکە بۆ بلۆکی \"ئەگەر\".",
     "CONTROLS_IF_HELPURL": "",
     "CONTROLS_IF_IF_TOOLTIP": "بەشەکان زیادبکە، بسڕەوە، یان دووبارە ڕیزبکە بۆ دووبارە ڕێکخستنەوەی بلۆکی \"ئەگەر\".",
-    "CONTROLS_IF_MSG_ELSE": "",
+    "CONTROLS_IF_MSG_ELSE": "یان",
     "CONTROLS_IF_MSG_ELSEIF": "ئەگەر نا",
     "CONTROLS_IF_MSG_IF": "ئەگەر",
     "CONTROLS_IF_TOOLTIP_1": "ئەگەر بەهایەک ڕاست بوو، ئەوا هەندێک فرمان جێبەجێ بکە.",

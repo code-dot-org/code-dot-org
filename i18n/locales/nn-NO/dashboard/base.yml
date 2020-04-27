@@ -155,7 +155,6 @@ nn:
     valid_password: "Gyldig passord!"
     invalid_password: "Passordet må ha minst seks teikn"
     mismatch_password: "Dei to passorda du skreiv inn er ikkje like"
-    under_13_consent: "Dersom eg er under 13 år, stadfestar eg at eg har løyve frå foreldra mine eller verge til å bruke tjenestene til Code.org."
     student_consent: "Eg stadfestar at eg har løyve frå foreldre eller føresatte til å nytte tenestene frå Code.org."
     agree_us_website: "Eg godtar å bruke ein nettstad som er basert i USA."
     my_data_to_us: "Mine data fra bruken av denne nettstaden kan sendast til, lagrast eller bli handtert i USA."
@@ -240,6 +239,7 @@ nn:
       %{name}
   parent_mailer:
     student_associated_subject: 'Påloggingsinformasjon for Code.org'
+    parent_email_added_subject: 'Velkommen til Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
     delete_teacher_subject: 'Code.org-melding: Kontoen din er sletta'
@@ -461,6 +461,9 @@ nn:
     update: "Oppdater konto"
     account_successfully_updated: "Kontoen er oppdatert."
     update_email: "Oppdater"
+    parent_guardian_email_label: "Epost til foreldre/føresette"
+    none: "Ingen"
+    encrypted: "kryptert"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -562,6 +565,7 @@ nn:
     download: 'Last ned video'
     show_notes: 'Vis notat'
     show_video: 'Vis video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Nettleseran din blir ikkje støtta. Ver vennleg å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje vil virke slik det er meint."
@@ -941,6 +945,7 @@ nn:
     csp_traversals: 'Traversaler'
     csp_libraries: 'Bibliotek'
     csp_parameters_return_values: 'Parameter og returverdiar'
+    csp_unit1_2020: '(gammel) Eining 1: Digital informasjon'
     dlp: 'Spørsmål til refleksjon'
     time4cs_c1: 'Samling 1: Everglades og økosystemet'
     time4cs_c2: 'Samling 2: Matkjeder (i Everglades)'
@@ -1130,3 +1135,4 @@ nn:
   page_not_found_header: '404: Finn ikkje sida'
   page_not_found_description: "Sida du leiter etter finst ikkje på denne adressa. Sjekk nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår."
   page_not_found_button: "Gå heim"
+  copy: 'Kopier'

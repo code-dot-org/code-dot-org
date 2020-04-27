@@ -107,18 +107,22 @@ ta:
       signin: உள்நுழை
       signup: ஒரு அக்கவுண்டை உருவாக்குங்கள்
       create: உருவாக்கு
+      dance: நடன விருந்து
       infinity: முடிவிலி
     popup:
       close: மூடு
+      prizes_link: மேலதிக தகவல்
   teacher:
     panel:
       student: மாணவர்
   user:
     update_email: புதுப்பிக்கவும்
+    none: எதுவுமில்லை
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
   home:
+    student_reg_link: மாணவர்
     classroom: உங்கள் வகுப்பறை
     trynow: இப்பொழுது முயற்சிக்கவும்
   user_type:
@@ -135,7 +139,14 @@ ta:
     subtitle: இந்த வீடியோக்கள் மற்றும் உதவிக்குறிப்புகளை பார்க்கவும்
   video:
     tab: வீடியோ.
+    notes: வீடியோ இல்லையா? குறிப்புகளைக் காட்டு.
+  upsell:
+    dance:
+      title: நடன விருந்து
+    dance-2019:
+      title: நடன விருந்து
   gallery:
+    header_artist: கலைஞர்
     report_abuse: தவறான பயன்பாட்டை தெரிவிக்கவும்
   landing:
     help_support: உதவி மற்றும் ஆதரவு
@@ -147,6 +158,9 @@ ta:
   terms_interstitial:
     tos: சேவையின் விதிமுறைகள்
     privacy: தனியுரிமை கொள்கை
+    accept_tos: Code.org -க்காக பதிவுசெய்து கொள்வதன் மூலம், நீங்கள் எங்களின் [சேவை
+      விதிமுறைகள்](%{tos_url}) மற்றும் [தனியுரிமை கொள்கை](%{privacy_url}) ஆகியவற்றை
+      ஏற்றுக்கொள்கிறீர்கள்.
     print: அச்சிடு
   race_interstitial:
     races:
@@ -185,3 +199,4 @@ ta:
     accept: நான் ஒப்புக்கொள்கிறேன்
   gdpr_dialog:
     true: ஆம்
+  copy: நகலெடு

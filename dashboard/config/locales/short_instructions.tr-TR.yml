@@ -1166,6 +1166,13 @@ tr-TR:
         değişkeni kaç olmalıdır?
       NEW Course 4 Play Lab Params 11: 'Bu eğlence zamanı, araç kutundaki bütün bloklarla
         eğlen. '
+      New Gumball Project: Kendi zevkinize göre bir şey yarat ve paylaş!
+      New Ice Age Project: Kendi zevkinize göre bir şey yarat ve paylaş!
+      New Infinity Project: Kendi zevkinize göre bir şey yarat ve paylaş!
+      New Minecraft Hero Project: "**Serbest Oyun:**  Kendi başına keşfetme zamanı!"
+      New Sports Project: Kendi oyununu yarat! Burada sen ne dersen o olur bütün kuralları
+        değiştirebilirsin, yaratıcı ol! Tamamladığında arkadaşlarının telefonlarında
+        oyunu denemeleri için Bitir düğmesine bas.
       Overworld Avoid Monsters: Bir Creeper'a rastlamak hiç iyiye işaret değildir.
         Creeper'ları dikkatlice geçin ve güvenli evinize ulaşın.
       Overworld Avoid Monsters_2019: Bir Creeper'a rastlamak hiç iyiye işaret değildir.
@@ -1590,8 +1597,6 @@ tr-TR:
         Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
       courseA_playLab_events3: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu bağla."
       courseA_playLab_events3_2018: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu
-        bağla."
-      courseA_playLab_events3_2019: "'Sola döndüğü zaman' bloğuna 'sola taşı' bloğunu
         bağla."
       courseA_playlab_events_challenge1: Büyük hayvan yarışı Zamanı! ▼ bastığınızda
         aşağı ilerlesib. Kim en hızlı koşar?

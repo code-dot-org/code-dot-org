@@ -155,7 +155,6 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: "La contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas ingresadas no coinciden"
-    under_13_consent: "Si soy menor de 13 años de edad, confirmo que tengo autorización de mi padres o de mi tutor legal para utilizar los servicios de Code.org."
     student_consent: "Confirmo que tengo la autorización de mis padres o tutores legales para utilizar los servicios de Code.org."
     agree_us_website: "Acepto usar un sitio web con sede en Estados Unidos."
     my_data_to_us: "Acepto que se envíen y almacenen datos de mi utilización de este sitio web en Estados Unidos."
@@ -234,6 +233,7 @@ es-MX:
       Haz clic en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "maestro"): %{link} Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia similar a un juego, simple y guiada. ¡Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombies! :-) %{name}
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
+    parent_email_added_subject: '¡Bienvenido a Code.org!'
   teacher_mailer:
     new_teacher_subject: '¡Bienvenido a Code.org!'
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
@@ -455,7 +455,12 @@ es-MX:
     enter_parent_email: "Ingresa la dirección de correo electrónico de tu padre, madre o tutor (para recuperar la contraseña)"
     update: "Actualizar la cuenta"
     account_successfully_updated: "La cuenta se actualizó correctamente."
+    auth_option_saved: "Has vinculado correctamente tu cuenta %{provider} con el correo electrónico %{email}."
+    auth_option_saved_no_email: "Has vinculado correctamente tu cuenta %{provider}."
     update_email: "Actualizar"
+    parent_guardian_email_label: "Correo electrónico del padre o tutor"
+    none: "Ninguna"
+    encrypted: "encriptado"
   user_level:
     completed: 'Completado'
     tried: 'Intentado'
@@ -495,6 +500,7 @@ es-MX:
     no_primary_course: "Prueba un curso de Code Studio"
     choose_next_course: "Prueba un curso de Código Studio eligiendo uno a continuación"
     print_certificate: "Imprimir Certificado"
+  certificate_sponsor_message: "%{sponsor_name} tuve el generoso gesto de patrocinar tu aprendizaje."
   move_students:
     new_section_dne: "Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa un código de sección diferente."
     section_code_cant_be_current_section: "La sección actual no puede ser igual a la nueva sección."
@@ -557,6 +563,7 @@ es-MX:
     download: 'Descargar el video'
     show_notes: 'Mostrar notas'
     show_video: 'Mostrar el video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Tu navegador no es compatible. Por favor, actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."
@@ -772,6 +779,7 @@ es-MX:
     privacy_notice: "Aviso de privacidad"
     accept_label: 'Acepto los <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>.'
     accept_label_markdown: Acepto los [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}).
+    accept_tos: Al registrarse a Code.org, usted acepta los [Términos de Servicio](%{tos_url}) y nuestra [Póliza de Privacidad](%{privacy_url}).
     accept: "Acepto"
     print: "Imprimir"
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">términos de servicio</a> y la <a href="%{privacy_url}" target="_blank">política de privacidad</a>. Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.'
@@ -903,6 +911,7 @@ es-MX:
     csf_warmup: 'Actividad previa'
     csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
     csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
+    csd1_3: 'Lecciones alternativas'
     csd2_1: 'Capítulo 1: Contenido web y HTML'
     csd2_2: 'Capítulo 2: Estilos y CCS'
     csd3_1: 'Capítulo 1: Imágenes y animaciones'
@@ -941,6 +950,13 @@ es-MX:
     csp_traversals: 'Recorridos'
     csp_libraries: 'Bibliotecas'
     csp_parameters_return_values: 'Parámetros y valores de retorno'
+    csp_unit1_2020: 'Tema 1: Información digital'
+    csp_unit2_2020: 'Unidad 2: Internet'
+    csp_unit3_2020: 'Unidad 3: Introducción al diseño de aplicaciones'
+    csp_unit6_2020: 'Unidad 6: Algoritmos'
+    csp_unit8_2020: 'Unidad 8: Preparación de PT de creación'
+    csp_unit9_2020: 'Unidad 9: Datos'
+    csp_unit10_2020: 'Unidad 10: Ciberseguridad e impactos globales'
     dlp: 'Preguntas para reflexionar'
     time4cs_c1: 'Colección 1: Everglades y sus ecosistemas'
     time4cs_c2: 'Colección 2: Cadenas de comida (en Everglades)'
@@ -954,6 +970,9 @@ es-MX:
     k5_next_steps: 'Próximos pasos'
     k5_basic_concepts: 'Conceptos básicos de programación y prácticas de enseñanza'
     k5_diving_deeper: 'Profundizar: cursos E y F'
+    web_lab_projects: 'Proyectos de Laboratorio Web'
+    game_lab_projects: 'Proyectos de Laboratorio de juegos'
+    app_lab_projects: 'Proyecto de Laboratorio de aplicaciones'
   external_links:
     disclaimer: Descargo de responsabilidad
     leaving_domain: Estás saliendo de este dominio hacia una página que no es operada por Code.org.
@@ -1015,6 +1034,8 @@ es-MX:
   locked_stage: 'No puedes ver los contenidos de esta etapa porque se encuentra bloqueada. Tu docente puede desbloquear esta etapa cuando sea el momento de trabajar en ella o para revisar tus respuestas.'
   hidden_stage: "Tu docente no esperaba que estuvieras aquí. Por favor, pregúntale a qué lección deberías estar asignado."
   hidden_script: "Tu docente no esperaba que estuvieras aquí. Por favor, pregúntale a qué unidad deberías estar asignado."
+  no_course_access_student: "No tienes acceso a este curso. Por favor, pregunta a tu profesor a qué curso deberías estar asignado."
+  no_course_access_teacher: "No tienes acceso a este curso. Si crees que deberías tener acceso a este curso, escribe a support@code.org para que podamos solucionar la situación."
   no_script_access_student: "No tienes acceso a esta unidad. Por favor, pregunta a tu docente a qué unidad deberías estar asignado."
   no_script_access_teacher: "No tienes acceso a esta unidad. Si crees que debes tenerlo, por favor escribe a support@code.org para que podamos solucionar el problema."
   return_unit_overview: 'Ir al resumen de la unidad'
@@ -1132,3 +1153,13 @@ es-MX:
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
+  copy: 'Copiar'
+  maker:
+    google_oauth:
+      login_with_google: 'Inicia sesión en la aplicación Maker con Google'
+      enter_code: 'Ingresa el código provisto cuando iniciaste sesión a través de Google en tu navegador predeterminado.'
+      copy_code: 'Copia y pega este código en la aplicación Maker para iniciar sesión en Code.org.'
+      error_token_expired: 'El token ha expirado. Inicia sesión nuevamente para obtener un nuevo token.'
+      error_wrong_provider: 'Proveedor incorrecto. Asegúrate de iniciar sesión con Google.'
+      error_invalid_user: 'ID de usuario inválida. Intenta iniciar sesión de nuevo.'
+      error_no_code: 'Por favor, ingresa tu código de inicio de sesión.'

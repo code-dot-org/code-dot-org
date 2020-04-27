@@ -79,6 +79,8 @@ ur:
     valid_password: تصدیق شدہ پاس ورڈ!
     invalid_password: پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے
     mismatch_password: داخل کے گئے دونوں پاس ورڈزمختلف ہیں
+    my_data_to_us: اس ویب سائٹ کے آپ کے استعمال سے کوائف ہو کو بھیجا اور ذخیرہ کرنا
+      یا ریاست ہائے متحدہ امریکہ میں عملدرآمد کیا ۔
     additional_information: ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے.
     user_type_student: Talib-e-ilm
     field_is_required: مطلوب ہے
@@ -115,6 +117,7 @@ ur:
     error:
       access_denied: آپ اس شخص کے اعداد و شمار نہیں دیکھ سکتے
   crud:
+    edit: تدوین کریں
     submit: جمع کرائیں
   nav:
     header:
@@ -144,9 +147,21 @@ ur:
       minecraft_hero: Minecraft ہیرو
       playlab_k1: لیب کھیلیں (پری ریڈر)
       weblab: ویب لیب
+    popup:
+      prizes_link: مزید معلومات
   teacher:
     panel:
       student: Talib-e-ilm
+  user:
+    new_email_hint: "(اثبات کریں کہ آپ اس ای میل ایڈریس سے ای میلز موصول کر سکتے ہیں
+      کریں.)"
+    none: کوئی نہيں
+  home:
+    student_reg_link: طالبعلم کا سائن اپ
+    teacher_reg_link: استاد کا سائن اپ
+    online: آن لائن
+    trynow: مزید سیکھے
+    try_beta_courses: نیا! ہمارے بیٹا کورس برائے K-5 طلبہ کا جائژہ لیں.
   user_type:
     student: Talib-e-ilm
   footer:
@@ -161,6 +176,7 @@ ur:
     subtitle: یہ ویڈیوز اور اشارے دیکھیں
   video:
     tab: ویڈیو.
+    label: ویڈیو
   compatibility:
     upgrade:
       link: مزید سیکھے
@@ -187,6 +203,10 @@ ur:
   terms_interstitial:
     tos: سروس کی شرائط
     privacy: رازداری کی پالیسی
+    accept_tos: |-
+      Code.org میں سائن اپ کرنے سے، آپ ہماری [سروس کی
+      شرائط](%{tos_url}) اور [پرائیویسی پالیسی](%{privacy_url})
+      سے اتفاق کرتے ہیں۔.
     print: پرنٹ کریں
   race_interstitial:
     races:
@@ -210,6 +230,8 @@ ur:
     csp_conditionals: شرائط
     csp_lists: فہرستیں
     csp_loops: لوپس
+  hoc_download:
+    minecraft_name: Minecraft کوڈ کی گھڑی
   pd:
     form_labels:
       email: Email
@@ -217,10 +239,17 @@ ur:
       subjects:
         cs: کمپیوٹر سائنس
         math: ریاضی
+        science: سائنس
+        la: لسانی آرٹس
       email_opt_in:
         opt_in_yes: جی
         opt_in_no: نہيں
   cookie_banner:
     accept: ma manta ho
   gdpr_dialog:
+    heading: اگر آپ ریاست ہائے متحدہ امریکہ میں قائم ایک ویب سائٹ کا استعمال کرتے
+      ہوئے اتفاق کرتے ہیں؟
+    message: اس ویب سائٹ کے آپ کے استعمال سے کوائف ہو کو بھیجا اور ذخیرہ کرنا یا ریاست
+      ہائے متحدہ امریکہ میں عملدرآمد کیا ۔
     true: جی
+  copy: کاپی

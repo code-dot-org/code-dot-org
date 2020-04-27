@@ -245,7 +245,10 @@ nn-NO:
         ti å fylle holet til det er heilt jamnt?  "
       4-5 While Loops 8: " Det er eit verkeleg djupt hol og ein verkeleg stor haug
         med jord. Kor mange spadetak må ein ta for å gjere bakken heilt flat?"
+      AB_Debug_PlayLab3: Flytt ridderen til hver av flaggene. Om noe går galt, se
+        etter feil!
       Alien Defender: 'Idé: lag eit forsvarsspel i spel-lab!'
+      CDEF_debugging_flappy2: Hvorfor funker ikke dette spillet?
       CSD U3 L5 Freeplay: "Endre verdien til petalSize fleire gonger. \nKorleis endrar
         det teikninga di?"
       CSD U3 L5 Freeplay_2018: "Endre verdien til petalSize fleire gonger. \nKorleis
@@ -786,6 +789,14 @@ nn-NO:
         din flere ganger før du skjønner alle stegene.'
       NEW Course 4 Bee For Loops 8: Du kan dette! Kva må auka vere for å samle 3,
         6, 9, 12, 15 nektar?
+      New Gumball Project: Lag det du har lyst til og del med andre!
+      New Ice Age Project: Lag det du har lyst til og del med andre!
+      New Infinity Project: Lag det du har lyst til og del med andre!
+      New Minecraft Hero Project: "**Frileik:** Utforsk på eiga hand!"
+      New Sports Project: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle
+        reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig,
+        trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det på
+        sine telefonar!'
       Overworld Avoid Monsters: Å springe inn i ein kjøttetande plante er ein dårleg
         ide. Gå forsiktig forbi planten for å komme sikkert heim.
       Overworld Avoid Monsters_2019: Å springe inn i ein kjøttetande plante er ein
@@ -1165,8 +1176,6 @@ nn-NO:
       courseA_playLab_events3: Sett sammen "flytt venstre"-blokka med "når venstre"-blokka
         som allereie er i arbeidsområdet.
       courseA_playLab_events3_2018: Sett sammen "flytt venstre"-blokka med "når venstre"-blokka
-        som allereie er i arbeidsområdet.
-      courseA_playLab_events3_2019: Sett sammen "flytt venstre"-blokka med "når venstre"-blokka
         som allereie er i arbeidsområdet.
       courseA_playlab_events_challenge1: '"Kor har venene mine gøymd seg? Kan du skrive
         koden slik at venene mine kjem fram?"'
@@ -1916,6 +1925,8 @@ nn-NO:
       courseF_bee_functions4: Funksjonen "flytt og hent nektar" snur bia, samlar inn
         nektar og returnerer til der den starta. Bruk denne funksjonen til å samle
         inn all nektaren.
+      express_maze_debugging9_2019: Bruk blokkene i verktøykassen til å bygge et program.
+        Få ekornet til nøtta.
       flappy_1: Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller
         trykk på skjermen for å flyge Flakse til målet.
       flappy_11: Lag ditt eige Flakse-spel! Du kan endre alle bilda og alle reglane,

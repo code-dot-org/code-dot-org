@@ -23,6 +23,8 @@ uz:
               name: Katakchali varaqda dasturlash
             'Maze: Sequence':
               name: 'Labirint: Ketma-ketlik'
+            Relay programming:
+              name: Estafetali dasturlash
         course3:
           stages:
             Bounce:
@@ -193,6 +195,8 @@ uz:
               name: Shart buyruqlari
             Functions:
               name: Funksiyalar
+            Functions with Parameters:
+              name: Funksiyalar (parameterlari bilan)
             Loops:
               name: Sikllar
             Variables:
@@ -213,6 +217,8 @@ uz:
           stages:
             Lists:
               name: Ro‘yxatlar
+            Functions with Parameters:
+              name: Funksiyalar (parameterlari bilan)
         coursee-ramp:
           stages:
             Conditionals:
@@ -221,6 +227,10 @@ uz:
           stages:
             Lists:
               name: Ro‘yxatlar
+            Functions with Parameters:
+              name: Funksiyalar (parameterlari bilan)
+            Functions with Parameters_:
+              name: Funksiyalar (parameterlari bilan)
         csd3-draft:
           stages:
             Variables:
@@ -317,6 +327,10 @@ uz:
               name: Katakchali varaqda dasturlash
             Relay Programming:
               name: Estafetali dasturlash
+        csd6-2018:
+          stages:
+            Functions with Parameters:
+              name: Funksiyalar (parameterlari bilan)
         coursee-2018:
           stages:
             Internet:
@@ -367,6 +381,10 @@ uz:
               name: Shart buyruqlari
             Functions:
               name: Funksiyalar
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funksiyalar (parameterlari bilan)
         csp1-2019:
           stages:
             The Internet:
@@ -411,3 +429,55 @@ uz:
           stages:
             Conditionals:
               name: Shart buyruqlari
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funksiyalar (parameterlari bilan)
+        csd3-2020:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Text:
+              name: Matn
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Katakchali varaqda dasturlash
+            Relay Programming:
+              name: Estafetali dasturlash
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internet
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Bilimdon Ari
+        csd3-virtual:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+        csp5-virtual:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funksiyalar
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmlar

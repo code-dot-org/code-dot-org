@@ -50,6 +50,11 @@ tr:
           bilgileri doldurun <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: "**%{email}** İçin hesap oluşturmayı tamamlamak
           için sıradaki bilgileri doldurunuz."
+        finish_sign_up_subheader_provider: "<strong>%{email}</strong> <strong>%{provider}</strong>
+          hesabı ile Code.org hesabı oluşturmayı tamamlamak için bilgileri doldurun."
+        finish_sign_up_subheader_provider_markdown: "**%{provider}** ile **%{email}**
+          için Code.org hesabı oluşturmayı tamamlamak için bilgileri doldurun."
+        reset_password_token: Takip ettiğiniz şifre sıfırlama bağlantısı
         error:
           future: gelecekte olması mümkün değil
   beta: beta
@@ -116,13 +121,24 @@ tr:
     clever: Akıllı Hesap
     powerschool: Güç okulu
     forgot_password: Şifrenizi mi unuttunuz?
+    migration_success: Başarılı! Yeni hesap deneyimimizi güncellediniz.
+    demigration_success: Yeni hesap deneyimi artık hesabınızda devre dışı.
     need_confirmation: Onay talimatlarını almadınız mı?
     need_unlock: Kilit açma talimatlarını almadınız mı?
     not_linked: Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı
       yazarak oturum açmanız gerekecek.
     use_clever: Üzgünüz, Code.org %{provider} ile bağlı değildir. Lütfen akıllı portalınız
       üzerinden oturum açın.
+    unable_to_connect_provider: Code.org hesabınız %{provider} hesabınıza bağlanamadı.
+      Lütfen tekrar deneyin.
+    already_in_use: "%{provider} hesabınız başka bir Code.org hesabına bağlı."
+    already_linked: "%{provider} hesabınız Code.org hesabınıza zaten bağlı."
+    existing_account:
+      account_exists: Haberler iyi! %{email} mail adresiyle bir Code.org hesabınız
+        zaten var.
+      sign_in: "%{provider} hesabınızla oturum açtığınızda hesaplarınız bağlanacak."
   signup_form:
+    email_signup: E-posta adresiniz ile kayıt olun
     student_count: "%{count}öğrenci çoktan kaydoldu."
     teacher_count: "%{count}öğretmen çoktan kaydoldu."
     overview: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın.
@@ -168,16 +184,19 @@ tr:
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
-    under_13_consent: Eğer 13 yaşından küçüksem, Code.org hizmetlerini kullanmam için
-      ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum.
     student_consent: Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal
       vasimin izni olduğunu onaylıyorum.
     agree_us_website: Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı
       kabul ediyorum.
     my_data_to_us: Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne
       gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
+    student_terms_markdown: Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza
+      izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında
+      asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik
+      politikamıza](http://code.org/privacy) bakınız.
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
       duymaktayız.
+    user_type_button: Hesap türünü güncelle
     user_type_label: Hesap Türü
     user_type_teacher: Öğretmen
     user_type_student: öğrenci
@@ -254,8 +273,10 @@ tr:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
+    parent_email_added_subject: Code.org'a Hoşgeldiniz!
   teacher_mailer:
     new_teacher_subject: Code.org'a Hoşgeldiniz!
+    delete_teacher_subject: Code.org hesabınız silindi
   section:
     your_section:
       one: 'Bölüm:'
@@ -263,6 +284,7 @@ tr:
     code_with_teacher: "%{teacher_name} ile %{section_code}"
     confirm:
       remove: Bu bölümü bırakmak istediğinden emin misin?
+    default_name: Başlıksız Bölüm
     remove: "(bölümü kaldır)"
     type:
       picture: Görsel Şifre
@@ -329,6 +351,10 @@ tr:
       professional_learning: Profesyonel öğrenme
       documentation: Belgeler
       tutorials: Eğitmler
+      game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
+      game_lab_tutorials: Oyun Laboratuvar Eğitimi
+      sprite_lab_documentation: Peri Laboratuvar Belgelendirmesi
+      sprite_lab_tutorials: Peri Laboratuvar Eğitimi
       educate_overview: Eğitimci genel bakış
       educate_elementary: İlköğretim Okulu
       educate_middle: Ortaokul
@@ -359,11 +385,13 @@ tr:
       district_dashboard: Kontrol Paneli Bölgesi
       label: Merhaba %{username}
       stats: Kod Stüdyosu
+      my_projects: Projelerim
       settings: Hesap Ayarları
       logout: Çıkış Yap
       signin: Giriş Yap
       signup: Hesap oluştur
       already_registered: Zaten hesabınız var mı?
+      pair_programming: Eşli Programlama
       team: Takım
       driver: Giriş yapılmış
       navigator: Takım Arkadaşı
@@ -490,6 +518,9 @@ tr:
     update: Hesabı güncelle
     account_successfully_updated: Hesap başarıyla güncellendi.
     update_email: Güncelle
+    parent_guardian_email_label: Veli e-posta
+    none: Hiçbiri
+    encrypted: sifrelenmis
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -623,6 +654,7 @@ tr:
     download: Videoyu indir
     show_notes: Notları göster
     show_video: Videoyu görüntüle
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}',
@@ -898,6 +930,8 @@ tr:
       kabul ediyorum
     accept_label_markdown: Güncellenme Zamanı [Hizmet şartları](%{tos_url}) ve [Gizlilik
       politikasını](%{privacy_url}) kabul ediyorum
+    accept_tos: Code.org'a kaydolarak [Hizmet Şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url})
+      şartlarını kabul etmiş olursunuz.
     accept: Kabul et
     print: Yazdır
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve
@@ -1086,6 +1120,8 @@ tr:
     csp_lists: Listeler
     csp_loops: Döngüler
     csp_libraries: Kütüphaneler
+    csp_unit1_2020: 'Ünite 1: Sayısal bilgi'
+    csp_unit2_2020: 'Ünite 2: Internet'
     dlp: Yansıma İstemleri
     k5_getting_started: İlk adım
     k5_next_steps: Sonraki Adımlar
@@ -1205,3 +1241,8 @@ tr:
       gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.
     true: Evet
   page_not_found_title: Sayfa Bulunamadı
+  page_not_found_header: '404: Sayfa Bulunamadı'
+  page_not_found_description: Aradığınız sayfa bu adreste bulunmuyor. Web adresini
+    kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün.
+  page_not_found_button: Anasayfaya Dön
+  copy: Kopyala

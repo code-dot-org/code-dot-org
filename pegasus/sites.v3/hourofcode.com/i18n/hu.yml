@@ -29,7 +29,7 @@ hu:
   oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
     hogyan ismerjen fel halakat.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: A számtástechnika sokkal több, mint csak kódolás! Tanulj
     többet a mesterséges intelligenciáról (MI), a gépi tanulásról, más ehhez kapcsolódó
     foglamakról, az ezzel járó etikai problémákról és arról, hogy az MI hogyan oldhatja
@@ -37,6 +37,12 @@ hu:
     sokkal többet taníthatsz majd a mesterséges intelligenciáról! Amikor az 'MI az
     óceánokért' tevékenységet használod, egy valódi gépi tanulási modellt tanítasz.
     <a href='#behind-the-scenes'>Tudj meg többet</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Oktatói segédanyagok
   oceans_landing_teacher_resources_desc: Óratervek és gyakorlatok az MI, gépi tanulás,
     az ehhez kapcsolódó fogalmak és etikai problémák megtanításához.
@@ -59,6 +65,19 @@ hu:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -66,6 +85,13 @@ hu:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Tanulj többet a mesterséges intelligenciáról, a gépi
     tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
@@ -142,6 +168,16 @@ hu:
   hoc2018_tutorial_mchoc_description: A Minecraft egy vadonatúj programmal tér vissza
     a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
   codeorg_homepage_hoc2019_dance_heading: Próbáld ki az új <span class="highlight-word">Táncos&nbsp;bulit!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Tudj meg többet
   cookie_banner_message: Az oldal további használatával, valamint az egyetértek gombra
     kattintással elfogadod a Cookie-k számítógépen történő tárolását.
   cookie_banner_more_information: Itt találod a Code.org adatvédelmi elveit.
@@ -389,6 +425,9 @@ hu:
     A Kódolás Órája egész évben elérhető. <a href='%{hoc_activities_url}'>Próbálj
     ki egy feladatot</a> vagy olvasd el az <a href='%{howto_guide_url}'>Útmutatót</a>
     és tervezz egy eseményt az osztályodnak.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: Az osztályod minden év decemberében világszerte több
     millió tanulóhoz csatlakozhat, akik a Kódolás órájával ünneplik a számítástechnika
     oktatásának hetét. Az évente tartott rendezvényre októberben kezdődik a regisztráció.
@@ -486,6 +525,7 @@ hu:
   map_warning: A Kódolás Órájának térképe csak az első 200000 regisztrált eseményt
     mutatja. Minden regisztrált esemény megtekinthető<a href='%{events_url}'> az események
     oldalon.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Hamarosan itt Kódolás Órája
   meta_tag_og_description: A Kódolás Órája egy globális mozgalom, ami különböző életkorú
     tanulók tízmillióit éri el 180+ országban, és több mint 45 nyelven.
@@ -502,6 +542,13 @@ hu:
   hoc_faq_what_is_hoc_a: A Kódolás Órája egy egy órás bevezetés a számítástudomány
     alapjaiba, célja, hogy eloszlassa a kód homályát, és megmutassa, hogy bárki megtanulhatja
     az alapokat.  <a href='http://code.org/learn'>Próbáld ki az oktatóanyagokat</a>.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Próbáld ki az oktatóanyagokat
   hoc_faq_when_is_hoc_q: Mikor lesz a Kódolás Órája?
   hoc_faq_when_is_hoc_a: A Kódolás Órája minden évben megrendezésre kerül az <a href='%{csedweek_url}'>
@@ -510,17 +557,31 @@ hu:
     Órája esemény megszervezésére. Az Informatikaoktatás hetét <a href='%{grace_hopper}'>Admiral
     Grace Murray Hopper</a> születésnapja alkalmával (1906. december 9-én) rendezik
     meg.
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Miért számítástechnika?
   hoc_faq_why_cs_a: "<i>Minden</i> diáknak meg kellene kapnia a lehetőséget, hogy
     számítástechnikát tanuljon. Segít a problémamegoldó képesség, a logika és a kreativitás
     fejlesztésében. A korai kezdéssel a diákok olyan tudáshoz jutnak, ami bármilyen
     21. századi karrierpályán biztosítja a siker alapjait. További statisztikák a
     <a href='http://code.org'>Code.org</a> oldalon."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Hogyan vehetek részt a Kódolás Órája eseményen?
   hoc_faq_how_participate_a: "<a href='/how-to'>Kezdd a tervezést itt </a>, tekintsd
     át az Útmutatónkat. Szervezhetsz Kódolás Órája eseményt az iskoládban vagy a közösségben
     &mdash; szakkör formájában, non-profit eseményként vagy a munkahelyen. Vagy csak
     próbáld ki egyedül, amikor %{campaign_date} eljön."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Ki áll a Kódolás Órája mögött?
   hoc_faq_behind_hoc_a: A Kódolás Órája szervezője a <a href='http://code.org'>Code.org</a>,
     egy nyilvános (501c3) non-profit szervezet. A Code.org célja, hogy a számítástechnikát
@@ -529,6 +590,11 @@ hu:
     támogatására egy <a href='http://code.org/about/partners'>példanélküli együttműködés</a>
     alakult ki olyan résztvevőkkel, mint a Microsoft, az Apple, az Amazon, a Boys
     and Girls Clubs of America és a College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Nem tudok semmit a kódolásról. Így is szervezhetek eseményt?
   hoc_faq_host_a: Természetesen. A Kódolás Órájának tevékenységeit te szervezed. Annyit
     kell tenned, hogy <a href='%{codeorg_url}/learn'>kipróbálod online bemutatóinkat</a>,
@@ -536,6 +602,11 @@ hu:
     mi gondoskodunk. Lehetőséget biztosítunk minden korosztálynak és tapasztalatszintnek,
     óvodától kezdve. Kezd el megtervezni a saját eseményedet azzal, hogy elolvasod
     az <a href='/how-to'>útmutatónkat</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Milyen eszközöket kellene használni a diákjaimnak?
   hoc_faq_devices_a: 'A Code.org útmutatók minden eszközön és böngészővel működnek.
     További információkat az útmutatók technikai követelményeiről <a href=''%{codeorg_url}/educate/it''>itt</a>
@@ -543,6 +614,11 @@ hu:
     találsz bővebb információt: <a href=''%{codeorg_url}/learn''>%{partner_url}/learn</a>.
     Amennyiben az iskolád nem tudja használni ezeket, a következő, <a href=''%{unplugged_url}''>számítógépet
     nem igénylő feladatokat</a> is ajánljuk!'
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Minden résztvevőnek szüksége lesz számítógépre?
   hoc_faq_need_computers_a: Nem. Az oktatóanyagok között van olyan, ami számítógépen,
     telefonon vagy táblagépen működik, de akad olyan is, amihez egyáltalán nincs szükség
@@ -555,32 +631,63 @@ hu:
     Nézzétek megy együtt a videókat és felváltva próbálják meg a gyerekek megoldani
     a problémákat vagy megválaszolni a kérdéseket.<li><b>Tedd el a gépet</b> Olyan
     anyagokat is kínálunk, amelyekhez egyáltalán nincs szükség számítógépre.</ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Magyaroszágon lakom. Hogyan vehetek részt nemzetközileg?
   hoc_faq_international_a: Bárki, bárhol a világon szervezhet Kódolás Órája eseményt.
     Tavaly a diákok a világ minden pontjáról csatlakoztak a Kódolás Órája eseményhez.
     Tudj meg többet erről <a href='promote'>itt</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Hogyan készítsek Kódolás Órája oktatóanyagot?
   hoc_faq_tutorial_a: Ha szeretnél partner lenni az oktatóanyagok kialakításában,
     akkor <a href='target-tutorial-guidelines'>nézd meg az útmutatóinkat</a>. Szeretnénk
     egy sor vonzó lehetőséget kínálni, de az elsődleges cél, hogy a számítástechnikával
     most ismerkedő diákok és tanárok számára optimalizáljuk a rendszert.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Be kell jelentkezniük a diákoknak egy fiókkal?
   hoc_faq_account_a: Nem. Semmiféle feliratkozás vagy bejelentkezés nem szükséges
     a Kódolás órájának kipróbálásához. A <a href='http://code.org/learn/beyond'>kiegészítő
     tanfolyamok</a> használatához azonban szükgéses a fiók létrehozása a tanuló előrehaladásának
     elmentéséhez.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Mely gyakorlatokat mutassam meg középiskolás diákoknak?
   hoc_faq_high_school_a: Kezdésképp minden korosztálynak a <a href='http://code.org/learn'>Code.org/tanulás</a>
     oldalon található bevezető oktatóanyagokat ajánljuk, mint például az Angry Birds
     vagy az Anna és Elsa. Egy középiskolás diák ezek egyikével 30 perc alatt végez,
     ezek után továbbléphet a bonyolultabb JavaScript tanfolyamokra, mint a Khan Academy
     vagy a CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: A Scratchet használom a Kódolás óráján, de mi van, ha a diákjaimnak
     iPadjük van, és nem laptopjuk?
   hoc_faq_scratch_a: A Scratch nem fut tableteken. Ha a diákjaid fiatalok, használhatják
     a ScratchJR iPad appot (kezdőknek). Ha elnézel a <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     oldalra, találsz olyan oktatóanyagokat is, melyek műküdnek iPad-en is a Code.org,
     Tynker, Lightbot, vagy CodeSpark felületeken.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Hogyan számoljuk a Kódolt Órákat?
   hoc_faq_map_q: Miért nem látom a jelölésemet a térképen?
   hoc_faq_map_a: Sajnáljuk hogy nem látható az eseményed a Kódolás Órája térképen.
@@ -589,10 +696,22 @@ hu:
     eseményének listájához, ott megtalálod magad. Továbbá mivel több ezren jelentkeznek
     a Kódolás Órájára, a térkép eseménylistáját 48 óránként frissítjük. Nézz vissza
     később!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: A Kódolt Órák száma nem egy egzakt szám. Nem számoljuk a különböző
     diákazonosítókat, mikor a résztvevőket mérjük, hiszen nincs szükség regisztrációra
     a részvételhez. Ennek eredményeképp egyszerre becsüljük alul és felül a résztvevők
     számát. Kattints <a href='%{codeorg_url}/loc'>ide</a>, ha többet szeretnél tudni.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Mennyit lehet megtanulni egy óra alatt?
   hoc_faq_one_hour_a: A Kódolás Órájának nem célja, hogy egy óra alatt szakértőket
     képezzen. Egy óra csupán arra elég, hogy megmutassuk, a számítástechinka szórakoztató
@@ -610,25 +729,44 @@ hu:
     egy olyan téma, amelyet a diákjaik tanulni szeretnének, és a tanárok képesek is
     ezt tanítani. <br/><br/> Mindenekfelett, a legfontosabb amit minden résztvevő
     megtanul egy óra alatt az, hogy képesek vagyunk erre.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: További kérdéseid vannak?
   hoc_faq_more_questions_a: Nézz körül a <a href='http://support.code.org'>fórumban</a>,
     hátha megtalálod a kérdéseire a válaszokat.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Hogyan tanuljak tovább a Kódolás Órája után?
   hoc_faq_keep_learning_a: Bárki, bármikor tarthat Kódolás Óráját. A segédanyagok
     elérhetőek egész évben. Biztos lehetsz benne, hogy az összes segédanyagunk és
     anyagunk örökké elérhető lesz. Menj a <a href='/promote'>források</a> oldalra
     további anyagokárt, melyek segítenek abban, hogy sikeres legyen az általad szervezett
     Kódolás Órája is.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Hol tudom kinyomtatni a tanúsítványokat a tanítványaimnak?
   hoc_faq_certificates_a: Menj a <a href='%{codeorg_url}/certificates'>tanúsítványok
     fülre</a>, ahol az egész osztályod számára ki tudod ezeket nyomtatni. Itt tudod
     kinyomtatni a <a href='%{codeorg_url}/certificates?course=mc'>speciális tanúsítványokat</a>
     is azoknak a diákoknak, akik a Minecraft oktatóanyagokat csinálják.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Van bármi feltétele annak, hogy a Kódolás Órája logóját vagy nevét
     használjam?
   hoc_faq_logo_a: A Kódolás Órája szabadalom alatt áll. Nem akarjuk megakadályozni
     a használatát, azonban szeretnénk, ha csak bizonyos keretek között lenne használva.
     Lesd meg az <a href='%{logo_url}'>ezzel kapcsolatos irányelveinket</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: A 2013-as Kódolás Órája statisztikája
   stats_growth: 15 millió felhasználó elérése a legrövidebb idő alatt.
   stats_i18n: A tanulók több, mint 45 különböző nyelven tanulnak
@@ -644,6 +782,8 @@ hu:
   stats_females: A nők aránya mindössze 20-25% a számítástechnikai gimnáziumi és egyetemi
     képzésekben és a munkaerőpiacon.
   stats_females_more: A Kódolás Órája során a <b>résztvevők 50%-a</b> nő!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: "„Minden egyes napo ugyanazzal az eredménnyel&mdash; 100%-os elkötelezettség.”
     - Nina Nichols Peery, tanár"
   stats_student: "„Tudtam, hogy ez egy <b>egyszeri</b> lehetőség.” - Mariana Alzate,
@@ -767,8 +907,11 @@ hu:
     tanárához, és kezdd el a Kódolás Óráját!
   learn_banner_beyond: Szeretnél tovább tanulni?  <a id='learn_banner_beyond'>A Kódolás
     Óráján túl</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Tanárok: <a id=''teacher_banner_host''>Tarts egy órát</a>
     vagy <a id=''teacher_banner_howto''>olvasd el az útmutatót</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: Robotika
   learn_robotics_banner_blurb: Vannak robotjaid? Használd őket az alábbi tevékenységekhez
     és készíts egy jobb Kódolás Órája programot bármely korosztálynak!
@@ -1406,8 +1549,8 @@ hu:
     megoldja a puzzlet!
   tutorial_hoc_shortdescription: Az új code.org/hoc helyőrzője
   tutorial_code_shortdescription: Tanulj kódolni Mark Zuckerberggel és az Angry Birdsszel!
-  tutorial_tinspire_shortdescription: Get students started coding on their TI-Nspire
-    CX handhelds in just 10 minutes at a time.
+  tutorial_tinspire_shortdescription: A tanulók kezdjenek el programozni alkalmanként
+    csak 10 perc ráforditással TI-Nspire CX kézi számítógépükön.
   tutorial_itchbounceball_shortdescription: Használd a Scratch-et, hogy elkészítsd
     a saját pattogó labdádat
   tutorial_vidclim_shortdescription: Kombináld a számítástechinkát a környezetvédelemmel
@@ -1504,7 +1647,7 @@ hu:
     a játékos irányíthat! Tartsd a levegőben a biciklit, hogy kikerüld az akadályokat!
   tutorial_kanopong_shortdescription: Változtasd meg a játékot. Szegd meg a szabályokat.
     Nyerj a kóddal.
-  tutorial_tynkerright_shortdescription: Program a quiz about the Bill of Rights!
+  tutorial_tynkerright_shortdescription: Programozz egy kvízt a Jogok Nyilatkozatáról!
   tutorial_touchdevelop_shortdescription: 'Oldj meg rejtvényeket, készíts játékokat,
     és tanulj kódolni - mindezt a telefonodon. '
   tutorial_tynkercc_shortdescription: Építsd fel és edzd hadsereged harcra!

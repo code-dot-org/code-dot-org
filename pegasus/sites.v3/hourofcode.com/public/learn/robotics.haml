@@ -95,11 +95,11 @@ social:
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorials_contents.to_json},
+      tutorials: #{raw tutorials_contents.to_json},
       locale: "#{locale_code}",
       robotics: true,
       backButton: true,
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });

@@ -139,7 +139,7 @@ ta:
             '"x"': கிடைமட்ட அமைவிடம்
             '"y"': செங்குத்து அமைவிடம்
       Dancelab_doMoveEachLR:
-        text: "{GROUP} do {MOVE} {DIR} once"
+        text: "{GROUP} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -213,6 +213,7 @@ ta:
             '1': "→"
             "-1": "←"
       Dancelab_everySeconds:
+        text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
         options:
           UNIT:
             '"measures"': அளவீடுகள்
@@ -283,13 +284,18 @@ ta:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": மேல்புறம்
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_jumpToEach:
         options:
@@ -310,8 +316,14 @@ ta:
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_layoutSprites:
+        text: "{FORMAT} ஆக {GROUP}-ஐ தளவமைக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -340,16 +352,25 @@ ta:
           COSTUME:
             '"ALIEN"': வேற்றுகிரகத்துவாசி
             '"BEAR"': கரடி
+            '"CAT"': பூனை
             '"DOG"': நாய்
+            '"DUCK"': வாத்து
             '"FROG"': தவளை
             '"MOOSE"': மூஸ்
             '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
             '"SHARK"': சுறாமீன்
+            '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
             "{x: 200, y: 100}": மேல்புறம்
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSprite:
         text: |-
@@ -359,16 +380,25 @@ ta:
           COSTUME:
             '"ALIEN"': வேற்றுகிரகத்துவாசி
             '"BEAR"': கரடி
+            '"CAT"': பூனை
             '"DOG"': நாய்
+            '"DUCK"': வாத்து
             '"FROG"': தவளை
             '"MOOSE"': மூஸ்
             '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
             '"SHARK"': சுறாமீன்
+            '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
             "{x: 200, y: 100}": மேல்புறம்
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
@@ -474,22 +504,29 @@ ta:
             '"none"': எதுவுமில்லை
             '"rand"': "(ரான்டம்)"
             '"circles"': வட்டங்கள்
+            '"quads"': கோணங்கள்
             '"color_cycle"': வண்ணங்கள்
             '"diamonds"': டயமன்ட்ஸ்
             '"disco_ball"': டிஸ்கோ பால்
             '"fireworks"': ஃபயர்ஒர்க்ஸ்
+            '"flowers"': மலர்கள்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
             '"swirl"': ஹிப்னோ
             '"kaleidoscope"': கெலைடோஸ்கோப்
             '"lasers"': லேசர் டான்ஸ் தளம்
             '"splatter"': பெயின்ட் ஸ்பலாட்டர்
             '"rainbow"': வானவில்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"ripples"': சிற்றலைகள்
             '"snowflakes"': பனி
             '"text"': பாடல் பெயர்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
             '"galaxy"': ஸ்பேஸ்
             '"sparkles"': ஜொலிப்புகள்
             '"spiral"': ஸ்பைரல்
             '"disco"': சதுரங்கள்
             '"stars"': நட்சத்திரங்கள்
+            '"music_wave"': அலைகள்
           PALETTE:
             '"rave"': கருப்பு வெள்ளை
             '"cool"': கூல்
@@ -510,8 +547,7 @@ ta:
             '0.5': வேகக் குறைவு
             '0.25': வேகம் மிகக்குறைவு
       Dancelab_setDanceSpeedEach:
-        text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்முன்னணி எஃபெக்டை அமைக்கவும்
-          {GROUP}"
+        text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்
@@ -780,6 +816,13 @@ ta:
       Dancelab_translateStrings:
         options:
           STRING:
+            '"music_wave"': அலைகள்
+            '"ripples"': சிற்றலைகள்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"quads"': கோணங்கள்
+            '"flowers"': மலர்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
             '"hearts_colorful"': இதயங்கள்
             '"s"': s
             '"t"': t
@@ -875,7 +918,7 @@ ta:
             '"direction"': நகர்வு திசை
             '"tint"': டின்ட்
       gamelab_jumpTo:
-        text: "{SPRITE} jump to {LOCATION}"
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -992,6 +1035,11 @@ ta:
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -1011,6 +1059,11 @@ ta:
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_groupGetProp:
         options:
           PROPERTY:
@@ -1064,6 +1117,11 @@ ta:
             "{x: 200, y: 300}": கீழ்புறம்
             "{x: 100, y: 200}": இடது
             "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_whenKeyPressed:
         text: "{KEY} அழுத்தப்படுகையில்"
         options:
@@ -1085,6 +1143,8 @@ ta:
         text: இடதுபுறம் திரும்பவும்
       RyanLab_turnRight:
         text: வலதுபுறம் திரும்பவும்
+      Vector_positionCenter:
+        text: மையம்
       aalab_goToScene:
         options:
           SCENE:
@@ -1097,6 +1157,10 @@ ta:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       binary_move:
         options:
           DIR:

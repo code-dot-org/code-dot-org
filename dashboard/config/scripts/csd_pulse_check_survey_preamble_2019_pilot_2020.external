@@ -1,0 +1,8 @@
+name 'csd-pulse-check-survey-preamble_2019_pilot_2020'
+markdown <<MARKDOWN
+### Please take a moment to respond to these **five quick questions**.
+
+<small>
+<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.
+</small>
+MARKDOWN

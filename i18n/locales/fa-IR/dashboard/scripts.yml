@@ -1456,10 +1456,22 @@ fa:
           stages:
             Artist:
               name: هنرمند
+        dance:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         frozen-2018-test-b:
           stages:
             Artist:
               name: هنرمند
+        dance--draft:
+          stages:
+            Dance Party:
+              name: جشن و رقص
+        dance-draft:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1476,6 +1488,10 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+        dance-low:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1490,6 +1506,8 @@ fa:
               name: تصاویر دوتایی
             Artist Binary:
               name: دودویی هنرمند
+            Dance Party:
+              name: جشن و رقص
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1526,6 +1544,8 @@ fa:
               name: اینترنت
             Crowdsourcing:
               name: کمک گیری جمعی
+            Dance Party:
+              name: جشن و رقص
         andrea-test:
           stages:
             'null':
@@ -1627,6 +1647,10 @@ fa:
               name: مقدمه
             Nested Loops:
               name: حلقه های تو در تو
+        dance-2019:
+          stages:
+            Dance Party:
+              name: جشن و رقص
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
@@ -1661,3 +1685,110 @@ fa:
           stages:
             Conditionals:
               name: شرطی ها
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: معادله با پارامترها
+        csd3-2020:
+          description_short: "برنامه نویسی"
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+            Text:
+              name: متن
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: با خیال راحت سفرکردن
+            'Programming: Happy Maps':
+              name: نقشه های شاد
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: ردپای دیجیتالی شما
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: دستبند دودویی
+            'Events: The Big Event':
+              name: رویداد بزرگ
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+            'Unplugged: Binary':
+              name: تصاویر دوتایی
+            Artist Binary:
+              name: دودویی هنرمند
+            Digital Citizenship:
+              name: شهروندی دیجیتالی
+            Dance Party:
+              name: جشن و رقص
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: ترانه سرایی
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: متغیرهای پاکت
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+            Internet:
+              name: اینترنت
+            Crowdsourcing:
+              name: کمک گیری جمعی
+        express-2020:
+          stages:
+            Dance Party:
+              name: جشن و رقص
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: زنبور عسل هجی کن
+        csp3-virtual:
+          description_short: برنامه نویسی
+          stages:
+            Creating Functions:
+              name: ساختن تابع ها
+        csd3-virtual:
+          description_short: "برنامه نویسی"
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: حلقه ها ی While
+            Variables:
+              name: متغیرها
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: توابع
+        code-break:
+          stages:
+            Algorithms:
+              name: الگوریتم ها
+            Events:
+              name: رویدادها
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: حلقه ها ی While

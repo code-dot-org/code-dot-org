@@ -1045,7 +1045,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
-    libraryCode: this.level.libraryCode,
+    projectLibraries: this.level.projectLibraries,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,
@@ -1491,15 +1491,8 @@ P5Lab.prototype.displayFeedback_ = function() {
     message: this.message,
     response: this.response,
     level: level,
-    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png"),
-    // add 'impressive':true to non-freeplay levels that we deem are relatively impressive (see #66990480)
-    showingSharing:
-      !level.disableSharing && level.freePlay /* || level.impressive */,
-    // impressive levels are already saved
-    // alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToLegacyGalleryUrl:
-      level.freePlay && this.response && this.response.save_to_gallery_url,
+    // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
+    showingSharing: !level.disableSharing && level.freePlay,
     appStrings: {
       reinfFeedbackMsg: msg.reinfFeedbackMsg(),
       sharingText: msg.shareGame()

@@ -1,0 +1,60 @@
+name 'How onEvent Works_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Event-driven programming
+
+App Lab apps work by adding code to respond to certain **events** that occur in a program.  It's App Lab's way of saying "Hey! something just happened!". Your code can then respond to each of these events.
+
+Collectively, the coding tasks involved in making your app respond to events by triggering functions are called **Event Handling**.  
+
+In App Lab all event handling starts by adding a special block of code called `onEvent`.  Here is how to do it:
+
+<br><br>
+
+<div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Switch into Code Mode</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Drag an <code>onEvent</code> block from the toolbox into the workspace.</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Use the pulldown menu to select the <em>ID</em> of the UI element you want to setup to respond to some event. The IDs of all UI elements added in design mode will be listed here.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+Use the pulldown menu to select the <em>type</em> of event you want to respond to. (Just use "click" for now).</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+Add code inside the function that you want to run <em>when</em> the user triggers the event.  The function will run once every time the user triggers the specific event.</p>
+
+</div>
+
+![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+
+### A small example - move turtle forward on "click"
+
+It's important to understand in Event-Driven programming that:
+
+* **Users trigger events** - Events occur when users click a button, tap the screen, move the mouse, type a key on the keyboard, etc.
+* **Events trigger code** - When an event occurs or "fires" it can be used to trigger a particular javascript function.
+
+App Lab's `onEvent` block is a type of event-handling function called an **Event Listener**. It wraps up all the setup that you need to do for event handling into one command with several parts. Here is an example with everything labeled:
+
+<img src="https://images.code.org/a4cf535f00b0b77737d5259386b4442d-image-1476884080311.png" style="display: block; margin: auto">
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Code to execute when callback function is triggered when the user clicks <em>button1</em>.  In this case, simply move the turtle forward 25 pixels. Event handling code will typically be more than one line. This is just a simple example to start.</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Notice that this function, unlike others we’ve seen, does not have a name. It is also called a <em>callback function</em> which is an odd term. A callback function is only different from a normal function in that you don't call it directly from your code. Instead a callback function is <strong>called by the system</strong> at the time the specified event occurs. Callback functions are a common pattern in a lot of event-driven programming.</p>
+</div>
+
+
+### You'll try this next!
+
+MARKDOWN

@@ -1542,6 +1542,14 @@ sv:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Flytta {SPRITE} {DISTANCE} Pixlar {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norr
+            '"East"': Österut
+            '"South"': Söder
+            '"West"': Väst
       aalab_prompt:
         text: fråga {MESSAGE}
       aalab_scene:
@@ -1553,12 +1561,10 @@ sv:
             '3': '3'
       aalab_setupStory:
         text: installationsberättelse
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': visa
-            '"hide"': göm
+            '"random"': slumpad
       binary_drawBin:
         text: rita binär {BIN}
       binary_drawBinScreen:

@@ -1411,3 +1411,107 @@ lv:
           stages:
             Conditionals:
               name: Sazarojumi
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
+        csd3-2020:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+            Text:
+              name: Teksts
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
+            'Programming: Happy Maps':
+              name: Laimīgās kartes
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            Move It, Move It:
+              name: Ej, ej
+            'Loops: Getting Loopy':
+              name: Kļūst ciklisks
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binārās aproces
+            'Events: The Big Event':
+              name: Lielais notikums
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Rūtiņpapīra programmēšana
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            'Unplugged: Binary':
+              name: Binārie Attēli
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Digital Citizenship:
+              name: Digitālā pilsonība
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Dziesmu rakstīšana
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Burtošanas bite
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Funkciju veidošana
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli
+            Variables:
+              name: Mainīgie
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Pasākumi
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli

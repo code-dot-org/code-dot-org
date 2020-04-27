@@ -489,7 +489,7 @@ hu:
       Dancelab_onPointerUp:
         text: mutató felfelé mozgatásakor
       Dancelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
@@ -1102,9 +1102,9 @@ hu:
       gamelab_printText:
         text: nyomtatás {TEXT}
       gamelab_randColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomLocation:
         text: véletlen hely
       gamelab_removeAllBehaviors:
@@ -1418,7 +1418,7 @@ hu:
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       Mikelab_repeatUntilComplete:
@@ -1547,6 +1547,14 @@ hu:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} lépj {DISTANCE} képpontot {DIRECTION}"
+        options:
+          DIRECTION:
+            '"North"': Észak
+            '"East"': Kelet
+            '"South"': Dél
+            '"West"': Nyugat
       aalab_prompt:
         text: kérdezd {MESSAGE}
       aalab_scene:
@@ -1558,12 +1566,10 @@ hu:
             '3': '3'
       aalab_setupStory:
         text: beállítási történet
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mutasd
-            '"hide"': elrejt
+            '"random"': véletlen
       binary_drawBin:
         text: bináris {BIN} rajzolása
       binary_drawBinScreen:

@@ -2,19 +2,29 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
-import experiments from '../../util/experiments';
+import experiments from '@cdo/apps/util/experiments';
+import Button from '@cdo/apps/templates/Button';
 import LibraryCategory from '../dataBrowser/LibraryCategory';
 
 const styles = {
-  warning: {
-    color: '#9F6000',
-    backgroundColor: color.lighter_yellow,
-    padding: 10,
-    fontSize: 14
-  },
   error: {
     color: color.red,
     backgroundColor: color.lightest_red,
+    padding: 10,
+    fontSize: 14
+  },
+  submit: {
+    marginTop: 15
+  },
+  success: {
+    color: color.realgreen,
+    backgroundColor: color.lighter_green,
+    padding: 10,
+    fontSize: 14
+  },
+  warning: {
+    color: '#9F6000',
+    backgroundColor: color.lighter_yellow,
     padding: 10,
     fontSize: 14
   }
@@ -27,7 +37,27 @@ class ManifestEditor extends React.Component {
   };
 
   state = {
-    showUnpublishedTables: false
+    showUnpublishedTables: false,
+    notice: null,
+    isError: false
+  };
+
+  displayNotice = (notice, isError) => {
+    this.setState({notice, isError}, () =>
+      setTimeout(() => this.setState({notice: null, isError: false}), 5000)
+    );
+    window.scrollTo(0, 0);
+  };
+
+  handleSubmit = event => {
+    $.ajax({
+      url: '/datasets/manifest/update',
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({manifest: this.refs.content.value})
+    })
+      .done(() => this.displayNotice('Manifest Saved', false))
+      .fail(err => this.displayNotice(`Error: ${err.statusText}`, true));
   };
 
   componentDidMount() {
@@ -48,6 +78,11 @@ class ManifestEditor extends React.Component {
     );
     return (
       <div>
+        {this.state.notice && (
+          <p style={this.state.isError ? styles.error : styles.success}>
+            {this.state.notice}
+          </p>
+        )}
         <h1>Edit Dataset Manifest </h1>
         <h2>Library Preview</h2>
         {this.state.showUnpublishedTables && (
@@ -86,6 +121,15 @@ class ManifestEditor extends React.Component {
           value={JSON.stringify(this.props.libraryManifest, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
+        />
+        <Button
+          __useDeprecatedTag
+          text="Submit"
+          onClick={this.handleSubmit}
+          disabled={!isValidJson}
+          color={Button.ButtonColor.blue}
+          size={Button.ButtonSize.large}
+          style={styles.submit}
         />
       </div>
     );

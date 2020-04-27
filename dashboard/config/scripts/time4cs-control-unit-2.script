@@ -3,12 +3,15 @@ hideable_stages true
 stage_extras_available true
 editor_experiment 'broward'
 
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 stage 'Crowdsourcing', flex_category: 'csf_digcit'
 level 'Crowdsourcing-Unplugged'
 
+lesson_group 'csf_conditionals', display_name: 'Conditionals'
 stage 'Conditionals with Cards', flex_category: 'csf_conditionals'
 level 'ConditionalsWithCards-Unplugged'
 
+lesson_group 'csf_nested_loops', display_name: 'Nested Loops'
 stage 'Nested Loops in Bee', flex_category: 'csf_nested_loops'
 level 'courseD_bee_nestedLoops1a_2019', progression: 'Practice'
 level 'courseD_bee_nestedLoops1_2019', progression: 'Practice'
@@ -54,6 +57,7 @@ level 'courseD_artist_project2a_2019', progression: 'Mini-Project: Snowflake #2'
 level 'courseD_artist_project3a_2019', progression: 'Mini-Project: Snowflake #2'
 level 'courseD_artist_project4a_2019', progression: 'Mini-Project: Snowflake #2'
 
+lesson_group 'csf_functions', display_name: 'Functions'
 stage 'Functions: Songwriting', flex_category: 'csf_functions'
 level 'Songwriting-Unplugged'
 
@@ -104,6 +108,7 @@ level 'courseE_artist_functionsProj_2019', progression: 'Practice'
 bonus 'courseE_artist_functions_challenge1_2019'
 bonus 'courseE_artist_functions_challenge2_2019'
 
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 stage 'End of Course Project', flex_category: 'end_of_course_project'
 level 'courseE_project_exemplars_2019', progression: 'Example Projects'
 level 'CourseE_Project_SpriteLab_2019', progression: 'Sprite Lab Project'

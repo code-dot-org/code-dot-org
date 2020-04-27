@@ -454,8 +454,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.reload.destroy!
 
     assert workshop.reload.deleted?
-    refute Pd::Workshop.exists? workshop.attributes
-    assert Pd::Workshop.with_deleted.exists? workshop.attributes
+    refute Pd::Workshop.exists? id: workshop.id
+    assert Pd::Workshop.with_deleted.exists? id: workshop.id
 
     # Make sure dependent sessions and enrollments are also soft-deleted.
     assert session.reload.deleted?
@@ -905,8 +905,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.process_location
     assert_nil @workshop.processed_location
 
-    # Don't bother looking up blank addresses or TBA/TBDs
-    ['', 'tba', 'TBA', 'tbd', 'N/A'].each do |address|
+    # Don't bother looking up blank addresses, TBA/TBDs, or virtual locations
+    ['', 'tba', 'TBA', 'tbd', 'N/A', 'virtual', 'Virtual workshop'].each do |address|
       Geocoder.expects(:search).never
       @workshop.location_address = address
       @workshop.process_location
@@ -976,7 +976,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       create(:script).tap do |script|
         create :course_script, course: course, script: script, position: (next_position += 1)
         I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :stage, script: script, name: lesson_name}
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name}
       end
     end
 
@@ -1064,6 +1064,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
   end
 
+  test 'date_and_location_name with virtual location and sessions' do
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      location_address: 'virtual'
+    workshop.process_location
+
+    assert_equal 'March 30 - April 3, 2017, Virtual Workshop', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with virtual location but no sessions' do
+    workshop = build :workshop, num_sessions: 0, sessions_from: Date.new(2017, 3, 30),
+      location_address: 'virtual'
+    workshop.process_location
+
+    assert_equal 'Dates TBA, Virtual Workshop', workshop.date_and_location_name
+  end
+
   test 'friendly_location TBA' do
     workshop = build :workshop, location_address: 'tba'
     assert_equal 'Location TBA', workshop.friendly_location
@@ -1083,6 +1099,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
+  end
+
+  test 'friendly_location with virtual location' do
+    workshop = build :workshop, location_address: 'virtual', processed_location: nil
+    assert_equal 'Virtual Workshop', workshop.friendly_location
   end
 
   test 'workshops organized by a non program manager are not assigned regional partner' do

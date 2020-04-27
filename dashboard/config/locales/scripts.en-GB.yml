@@ -125,3 +125,17 @@ en-GB:
               name: Loops
             Variables:
               name: Variables
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variables
+            Text:
+              name: Text
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variables
+        csp5-virtual:
+          stages:
+            Variables:
+              name: Variables

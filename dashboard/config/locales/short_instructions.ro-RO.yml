@@ -551,6 +551,33 @@ ro-RO:
       AB_Debug_PlayLab3: Mută cavalerul la fiecare dintre steaguri. Dacă ceva nu merge
         bine, caută greşelile!
       CDEF_debugging_flappy2: Funcţionează acest joc?
+      CSD U5 black white images pixelation: Completează imaginea în forma literei
+        X tastând numai caracterele 0 sau 1
+      CSD U5 black white images pixelation 2: Desenează o față zâmbitoare (apasă aici
+        pentru a vedea imaginea)
+      CSD U5 black white images pixelation 2_2018: Desenează o față zâmbitoare (apasă
+        aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 2_2019: Desenează o față zâmbitoare (apasă
+        aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 3: Ajustează cursoarele de lungime și lățime
+        pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)
+      CSD U5 black white images pixelation 3_2018: Ajustează cursoarele de lungime
+        și lățime pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)
+      CSD U5 black white images pixelation 3_2019: Ajustează cursoarele de lungime
+        și lățime pentru a găsi imaginea (apasă aici pentru a vedea mai multe detalii)
+      CSD U5 black white images pixelation 4: Adaugă sprâncene feței zâmbitoare (apasă
+        aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 4_2018: Adaugă sprâncene feței zâmbitoare
+        (apasă aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 4_2019: Adaugă sprâncene feței zâmbitoare
+        (apasă aici pentru a vedea imaginea)
+      CSD U5 black white images pixelation 5: Acum, desenează ce vrei tu
+      CSD U5 black white images pixelation 5_2018: Acum, desenează ce vrei tu
+      CSD U5 black white images pixelation 5_2019: Acum, desenează ce vrei tu
+      CSD U5 black white images pixelation_2018: Completează imaginea în forma literei
+        X tastând numai caracterele 0 sau 1
+      CSD U5 black white images pixelation_2019: Completează imaginea în forma literei
+        X tastând numai caracterele 0 sau 1
       Course 4 Artist 1: 'Ajută-mă să desenez o cutie. (Fiecare linie are lungimea
         de 200 pixeli) '
       Course 4 Artist 10: |-
@@ -1267,6 +1294,12 @@ ro-RO:
         3 ori nectar?
       NEW Course 4 Play Lab Params 11: 'Este timpul să te joci liberi! Distrează-te
         cu toate blocurile din bara de instrumente. '
+      New Gumball Project: Creează orice vrei tu şi distribuie-l/-o!
+      New Ice Age Project: Creează orice vrei tu şi distribuie-l/-o!
+      New Infinity Project: Creează orice vrei tu şi distribuie-l/-o!
+      New Sports Project: Crează propriul tău joc. Poți modifica toate imaginile şi
+        regulile, mixeaza sporturi, fii creativ. Când ai terminat, apasă Distribuie
+        pentru a permite prietenilor tăi să încerce jocul pe telefoanele lor.
       Overworld Avoid Monsters: |-
         Intalnirea unui Vierme nu este o idee buna.
         Mergeti cu atentie pe langa ei si ajungeti in siguranta in casa.

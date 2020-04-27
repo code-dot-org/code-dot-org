@@ -50,6 +50,7 @@ module Cdo
     # Asynchronously fetch keys in parallel.
     # @return [Concurrent::Promises::Future<Hash>] All keys and their resolved values
     def get_multi(*keys)
+      return Concurrent::Promises.fulfilled_future({}, @pool) if keys.empty?
       client.then do
         promises = keys.map {|key| get(key).then {|value| [key, value]}}
         Concurrent::Promises.zip_futures_on(@pool, *promises).

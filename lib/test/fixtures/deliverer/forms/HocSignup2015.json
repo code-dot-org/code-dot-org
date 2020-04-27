@@ -1,0 +1,18 @@
+{
+  "data": {
+    "name_s": "Fake Name",
+    "email_s": "name.fake@fabricated.edu",
+    "event_type_s": "out_of_school",
+    "hoc_company_s": null,
+    "hoc_country_s": "us",
+    "event_location_s": "",
+    "organization_name_s": "Imaginary Education Org",
+    "send_posters_flag_b": "",
+    "entire_school_flag_b": "",
+    "special_event_flag_b": "1",
+    "match_volunteer_flag_b": "",
+    "send_posters_address_s": "",
+    "special_event_details_s": ""
+  },
+  "processed_data": {}
+}

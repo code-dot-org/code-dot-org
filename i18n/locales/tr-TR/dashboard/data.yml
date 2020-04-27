@@ -462,6 +462,8 @@ tr:
         CSF_bb8_loops_C-F: BB-8 ile Döngüler
         CSF_loops_AB: Döngüler
         hoc_dance_warmup: Dans Partisi - Isınma
+        hoc_dance_events: Dans Kutlaması - Etkinlikler
+        hoc_dance_properties: Dans Kutlaması - Özellikler
         hoc_dance_congrats: Dans Partisi - Parti Başlıyor!
         c_and_c_digital_sharing: Dijital Paylaşım
         csd_pair_programming: Eşli Programlama
@@ -474,6 +476,8 @@ tr:
         hoc_dance_events_2019: Dans Partisi 2019 - Etkinlikler
         hoc_dance_measures_2019: Dans Partisi 2019 - Ölçütler
         hoc_dance_properties_2019: Dans Partisi 2019 - Özellikler
+        csf_private_and_personal_information: Özel ve Kişisel Bilgiler
+        csd_what_computers_are: Bilgisayar nedir?
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

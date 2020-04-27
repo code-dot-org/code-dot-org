@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/express-2018/stage/1/puzzle/1": {
+    "title": "Graph Paper Programming"
+  },
   "https://studio.code.org/s/express-2018/stage/2/puzzle/2": {
     "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
@@ -140,6 +143,9 @@
       "courseC_maze_programming_challenge2_a": "_\"If you send me backwards, be extra careful that I turn the correct way!\"_",
       "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n[blockly block][0]"
     }
+  },
+  "https://studio.code.org/s/express-2018/stage/3/puzzle/1": {
+    "title": "Relay Programming"
   },
   "https://studio.code.org/s/express-2018/stage/4/puzzle/2": {
     "short_instructions": "Fix the code to help get Scrat get to the acorn.",
@@ -504,6 +510,9 @@
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
   },
+  "https://studio.code.org/s/express-2018/stage/7/puzzle/1": {
+    "title": "Getting Loopy"
+  },
   "https://studio.code.org/s/express-2018/stage/8/puzzle/2": {
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "long_instructions": "[][0] _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: [][1]",
@@ -761,6 +770,9 @@
   "https://studio.code.org/s/express-2018/stage/9/puzzle/12": {
     "short_instructions": "Now try something on your own!",
     "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]"
+  },
+  "https://studio.code.org/s/express-2018/stage/10/puzzle/1": {
+    "title": "Digital Sharing"
   },
   "https://studio.code.org/s/express-2018/stage/11/puzzle/1": {
     "short_instructions": "Add a second `move forward` block to reach the sheep.",
@@ -1381,6 +1393,9 @@
       }
     ]
   },
+  "https://studio.code.org/s/express-2018/stage/16/puzzle/1": {
+    "title": "Conditionals"
+  },
   "https://studio.code.org/s/express-2018/stage/17/puzzle/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
@@ -1684,6 +1699,9 @@
     "authored_hints": {
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
+  },
+  "https://studio.code.org/s/express-2018/stage/19/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.SongwritingParameters_2018.title"
   },
   "https://studio.code.org/s/express-2018/stage/20/puzzle/1": {
     "display_name": "Homestead",
@@ -2261,6 +2279,9 @@
       "do something": "do something"
     }
   },
+  "https://studio.code.org/s/express-2018/stage/23/puzzle/1": {
+    "title": "Unplugged Activity"
+  },
   "https://studio.code.org/s/express-2018/stage/24/puzzle/1": {
     "short_instructions": "Collect all of the nectar from each flower.",
     "long_instructions": "_\"Can you BEE-lieve all of these flowers?\"_\n\nCollect all of the nectar from each flower. ",
@@ -2378,6 +2399,9 @@
       "draw pinwheel": "draw pinwheel"
     }
   },
+  "https://studio.code.org/s/express-2018/stage/25/puzzle/1": {
+    "title": "The Big Event"
+  },
   "https://studio.code.org/s/express-2018/stage/26/puzzle/2": {
     "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
     "long_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n* * *\n\nClick or tap on the play space to move Flappy to the target.",
@@ -2445,6 +2469,12 @@
   "https://studio.code.org/s/express-2018/stage/26/puzzle/11": {
     "short_instructions": "Create your own Flappy game! ",
     "long_instructions": "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
+  },
+  "https://studio.code.org/s/express-2018/stage/27/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+  },
+  "https://studio.code.org/s/express-2018/stage/28/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title"
   },
   "https://studio.code.org/s/express-2018/stage/29/puzzle/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
@@ -2721,6 +2751,9 @@
       "courseF_artist_variables_challenge2_c": "Using one variable for `sides` and one for `length` makes the code cleaner because you can loop the same code multiple times, instead of creating a new copy for each set of numbers.",
       "courseF_artist_variables_challenge2_d": "**Solution:**\n\n[Solution][0]"
     }
+  },
+  "https://studio.code.org/s/express-2018/stage/32/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.ForLoopFun_2018.title"
   },
   "https://studio.code.org/s/express-2018/stage/33/puzzle/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
@@ -3070,7 +3103,21 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/2": {
     "short_instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  "
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/3": {
     "short_instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",
@@ -3086,7 +3133,20 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/6": {
     "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
-    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked."
+    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked.",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/7": {
     "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
@@ -3094,7 +3154,20 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/8": {
     "short_instructions": "Now create your own alien disco!",
-    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other"
+    "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create two bell sprites, and make the aliens do a different dance move for each\n-   Make the aliens do a new dance move whenever they touch each other",
+    "behavior_names": {
+      "jittering": "jittering",
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/1": {
     "short_instructions": "What do you think will happen if you press \"Run\" and then click on her?",
@@ -3108,7 +3181,21 @@
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/2": {
     "short_instructions": "Create an **event** so that when Geraldine touches the puddle, her color changes to brown.",
-    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown."
+    "long_instructions": "There's a mud puddle over in the corner.  \n\nCreate an **event** so that when Geraldine touches the puddle, her color changes to brown.",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right",
+      "spinning left": "spinning left",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/3": {
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
@@ -3116,19 +3203,67 @@
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/4": {
     "short_instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
-    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!"
+    "long_instructions": "We don't want to wait for the giraffe to clean itself every time.  \n\nAdd a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/5": {
     "short_instructions": "Add actions to each event so that when the giraffe collides with each sprite, it shrinks by 5.",
-    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  "
+    "long_instructions": "All of this play takes energy!  \n\nAdd actions to each event so the giraffe gets a little smaller (shrinks by 5) each time it collides with another sprite.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/6": {
     "short_instructions": "Add an apple that returns the giraffe back to regular size when they touch.",
-    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  "
+    "long_instructions": "A balanced diet is important! We have to feed the giraffe to get its strength back.  \n\nAdd an apple to the scene and have it return the giraffe back to regular size when the two sprites touch.  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/7": {
     "short_instructions": "Freeplay: What more can you make your giraffe do? ",
-    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  "
+    "long_instructions": "Freeplay: What more can you make your giraffe do? \n\n-   Can you add more special items for your virtual pet?  \n-   Can you give her some friends?  ",
+    "behavior_names": {
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/38/puzzle/1": {
     "display_name": "Video: CS Matters"
@@ -3147,7 +3282,24 @@
     }
   },
   "https://studio.code.org/s/express-2018/stage/38/puzzle/3": {
-    "display_name": "Sprite Lab Example Project"
+    "display_name": "Sprite Lab Example Project",
+    "behavior_names": {
+      "flying south and loop": "flying south and loop",
+      "drive south and loop": "drive south and loop",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "being hungry": "being hungry",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "swimming left and right": "swimming left and right"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/39/puzzle/1": {
     "dsls": {
@@ -3159,7 +3311,21 @@
     "display_name": "Course F Artist Project"
   },
   "https://studio.code.org/s/express-2018/stage/40/puzzle/2": {
-    "display_name": "Course F Sprite Lab Project"
+    "display_name": "Course F Sprite Lab Project",
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    }
   },
   "https://studio.code.org/s/express-2018/stage/41/puzzle/1": {
     "display_name": "Revise Artist Project"
@@ -3171,6 +3337,12 @@
     "dsls": {
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
+  },
+  "https://studio.code.org/s/express-2018/stage/43/puzzle/1": {
+    "title": "Binary Bracelets"
+  },
+  "https://studio.code.org/s/express-2018/stage/44/puzzle/1": {
+    "title": "Binary Images"
   },
   "https://studio.code.org/s/express-2018/stage/45/puzzle/1": {
     "dsls": {
@@ -3335,5 +3507,11 @@
       "draw": "draw",
       "draw bit": "draw bit"
     }
+  },
+  "https://studio.code.org/s/express-2018/stage/46/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.Internet_2018.title"
+  },
+  "https://studio.code.org/s/express-2018/stage/47/puzzle/1": {
+    "title": "translation missing: en-US.data.unplugged.Crowdsourcing_2018.title"
   }
 }

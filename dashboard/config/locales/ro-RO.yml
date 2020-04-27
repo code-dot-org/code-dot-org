@@ -16,6 +16,12 @@ ro:
         pereche si incepe din nou.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: e invalid. Fiecare link poate fi folosit o singură dată pentru
+                resetarea parolei, și numai linkul trimis cel mai recent va funcționa.
       messages:
         blank: este necesar
         blank_plural: sunt necesare
@@ -48,6 +54,7 @@ ro:
           a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Completează următoarele informații
           pentru a finaliza crearea unui cont Code.org cu **%{provider}** pentru**%{email}**.
+        reset_password_token: Linkul pentru resetarea parolei pe care l-ai folosit
         error:
           future: nu poate fi în viitor
   beta: beta
@@ -67,6 +74,7 @@ ro:
   join_section:
     code:
       placeholder: Secțiune Cod (ABCDEF)
+      instructions_short: Introdu codul clasei tale din 6 litere
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
     submit: Adaugă sugestie
@@ -166,8 +174,6 @@ ro:
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
-    under_13_consent: Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui
-      sau tutorelui meu legal de a utiliza serviciile Code.org.
     student_consent: Confirm că am permisiunea părintelui sau tutorelui meu legal
       de a utiliza serviciile Code.org.
     agree_us_website: Sunt de acord să folosesc un site web din Statele Unite.
@@ -256,6 +262,7 @@ ro:
       %{name}
   parent_mailer:
     student_associated_subject: Informații de conectare la Code.org
+    parent_email_added_subject: Bine ați venit la Code.org!
   teacher_mailer:
     new_teacher_subject: Bine ați venit la Code.org!
     delete_teacher_subject: 'Notificare Code.org: Contul dvs. a fost șters'
@@ -504,6 +511,9 @@ ro:
     update: Actualizaţi contul
     account_successfully_updated: Contul a fost actualizat cu succes.
     update_email: Actualizează
+    parent_guardian_email_label: E-mail părinte/tutore
+    none: Nici unul
+    encrypted: criptat
   user_level:
     completed: Finalizat
     tried: Încercat
@@ -645,6 +655,7 @@ ro:
     download: Descarcă Video
     show_notes: Arată note
     show_video: Arată video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade
@@ -923,6 +934,8 @@ ro:
       Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>
     accept_label_markdown: Sunt de acord sa actualizez [Termenii](%{tos_url}) şi [Politica
       de confidenţialitate](%{privacy_url})
+    accept_tos: Prin înregistrarea pe Code.org, îți exprimi acordul față de [Condițiile
+      serviciului](%{tos_url}) și [Politica privind confidențialitatea](%{privacy_url}).
     accept: Accept
     print: Tipărire
     reminder_desc: Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a>
@@ -1105,6 +1118,7 @@ ro:
     csp_functions: Funcţii
     csp_lists: Liste
     csp_loops: Bucle
+    csp_unit1_2020: "(vechi) Unitatea 1: Informaţii digitale"
     k5_next_steps: Pașii următori
   external_links:
     disclaimer: Act de renuntare
@@ -1181,6 +1195,7 @@ ro:
     timpul să lucrezi la el sau de a revizui raspunsurile.
   hidden_stage: Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce
     lecție ar trebui să urmezi.
+  return_unit_overview: Mergi la unitatea de ansamblu
   return_course_overview: Mergi la unitatea de ansamblu
   pd:
     form_labels:
@@ -1224,6 +1239,7 @@ ro:
         scratch: Scratch
         tynker: Tynker
       robotics:
+        grok: Grok Learning
         kodable: Kodable
         ozobot: Ozobot
         sphero: Sphero
@@ -1269,3 +1285,4 @@ ro:
     privacy_policy: politică de confidențialitate
     logout: Deconectare
     true: Da
+  copy: Copiază

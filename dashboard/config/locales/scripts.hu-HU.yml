@@ -3,7 +3,6 @@ hu:
   data:
     script:
       category:
-        csf_category_name: A számítógép-tudomány alapjai
         csf_2018_category_name: A számítógép-tudomány alapjai (2018)
         csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
         hoc_category_name: A kódolás órája
@@ -461,6 +460,8 @@ hu:
               name: Húrok és Képek
         CSPPD:
           stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
             What is CSP?:
               name: Mi a CSP?
         CSPLessonSamples:
@@ -469,6 +470,18 @@ hu:
               name: Lecke 14
             Lesson 15:
               name: Lecke 15
+        ECSPD:
+          stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
+        sciencePD:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
+        rbo-reference:
+          stages:
+            reference:
+              name: hivatkozás
         cspunit3:
           description_short: Programozás
           stages:
@@ -488,6 +501,14 @@ hu:
               name: Tanári nyitólap
             The Design Recipe:
               name: A dizájn receptje
+        ECSPD-NexTech:
+          stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
+        ECSPD-iZone:
+          stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
         algebraPD-NexTech:
           stages:
             Evaluation Blocks:
@@ -500,6 +521,14 @@ hu:
               name: Értékelési blokk
             Teacher Dashboard:
               name: Tanári nyitólap
+        sciencePD-NexTech:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
+        sciencePD-iZone:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
         sciencePD2:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -713,14 +742,20 @@ hu:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ECSPD3-Unit3:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ECSPD3-Unit4:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ECSPD3-Unit5:
           stages:
             Getting Started:
@@ -897,6 +932,10 @@ hu:
               name: Sprite mozgatási módszerek
             Functions:
               name: funkciók
+        2016_sciencePD_phase1:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
         TEMP CSD Unit 3:
           description_short: Programozás
         CSF_Secret_Sample:
@@ -907,6 +946,10 @@ hu:
               name: Értékelési blokk
             Teacher Dashboard:
               name: Tanári nyitólap
+        sciencePD1:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
         MikeTest:
           stages:
             Artist Functions:
@@ -987,14 +1030,20 @@ hu:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ecs-unit3:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ecs-unit4:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ecs-unit5:
           stages:
             Getting Started:
@@ -1378,6 +1427,10 @@ hu:
               name: Jégkorszak játéklabor
         artist-and-bb8:
           stages:
+            Programming with BB-8:
+              name: Programozás BB-8 segítségével
+            Loops with BB-8:
+              name: Ciklusok BB-8-tel
             Ice Age Play Lab:
               name: Jégkorszak játéklabor
             Bounce:
@@ -1390,10 +1443,14 @@ hu:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Valós algoritmusok: Ültess el egy magot!'
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
         coursed-2017:
           stages:
             Nested Loops:
@@ -1623,6 +1680,8 @@ hu:
               name: A nagy esemény
             'Loops: Getting Loopy':
               name: Ciklikusság
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
             Conditionals with Cards:
               name: Feltételek kártyákkal
             'Functions: Songwriting':
@@ -1651,6 +1710,8 @@ hu:
               name: 'Valós algoritmusok: Ültess el egy magot!'
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
             Move It, Move It:
               name: Mozgás, mozgás
         coursed-2018:
@@ -1683,6 +1744,8 @@ hu:
               name: Alapozás
             'Loops: Getting Loopy':
               name: Ciklikusság
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
             'Events: The Big Event':
               name: A nagy esemény
             Binary Bracelets:
@@ -1792,6 +1855,8 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
         frozen-2018:
           stages:
             Artist:
@@ -1887,6 +1952,8 @@ hu:
           stages:
             Relay Programming:
               name: Váltó programozás
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
             Conditionals with Cards:
               name: Feltételek kártyákkal
             Envelope Variables:
@@ -1950,6 +2017,13 @@ hu:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
             Binary Bracelets:
@@ -1960,12 +2034,20 @@ hu:
               name: Vidám térképek
             Going Places Safely:
               name: Biztonságos utazás
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
         courseb-2019:
           stages:
             Move It, Move It:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
             'Loops: Getting Loopy':
               name: Ciklikusság
         pre-express-2019:
@@ -1974,6 +2056,8 @@ hu:
               name: Mozgás, mozgás
             Your Digital Footprint:
               name: A digitális lábnyomod
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
             Spelling Bee:
               name: Betüző méh
         removed19:
@@ -2036,6 +2120,8 @@ hu:
           stages:
             Graph Paper Programming:
               name: Grafikus programozás
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
         csd-test-saving-state:
           stages:
             What is a Computer?:
@@ -2095,6 +2181,10 @@ hu:
               name: Véletlen számok
             Sprite Properties:
               name: Sprite tulajdonságok
+        csl-vn:
+          stages:
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -2150,3 +2240,191 @@ hu:
           stages:
             Conditionals:
               name: Feltételek
+        csd2-2020:
+          stages:
+            CSS Classes:
+              name: CSS osztályok
+        csd1-2020:
+          description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
+            számítógépek a problémák megoldásában."
+          stages:
+            Intro to Problem Solving:
+              name: Bevezetés a problémamegoldásba
+              description_student: 'A tanulók csoportokban dolgoznak, és alufóliából
+                készült hajókat terveznek úgy, hogy azok minél több pénzérmét elbírjanak.
+                A tanóra végén a csoportok reflektálnak a tevékenység során szerzett
+                tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási
+                helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
+              description_teacher: 'Ebben a leckében a tanulók csoportokban alufóliából
+                kis hajókat készítenek azokat úgy megtervezve, hogy minél több pénzérmét
+                elbírjanak. A csoportoknak két lehetősége lesz dolgozni a hajókon,
+                természetesen a céljuk az lesz, hogy a második körben több érmét bírjon
+                el a hajójuk, mint az első körben. A tevékenység felépítése előrevetíti
+                azokat a problémamegoldási lépéseket, amelyekkel a tanulók részletesebben
+                is megismerkednek a következő órán. A tanóra végén a csoportok reflektálnak
+                a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek
+                azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán
+                találkozni fognak. '
+            The Problem Solving Process:
+              name: A probléma-megoldási folyamat
+              description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot,
+                amit az osztály a tanév során használni fog: Meghatározás - Felkészülés
+                - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja
+                az előző órai alufólia-csónak tervezési problémával, majd egy olyan
+                problémával, aminek a megoldásában ők is jók, majd egy olyan problémával,
+                amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály
+                a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat,
+                és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során
+                referenciaként használ.'
+            What is a Computer?:
+              name: Mi az a számítógép?
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Paraméteres függvények
+        csd3-2020:
+          description_short: Programozás
+          stages:
+            Variables:
+              name: változók
+            Random Numbers:
+              name: Véletlen számok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Text:
+              name: szöveg
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Biztonságos utazás
+            'Programming: Happy Maps':
+              name: Vidám térképek
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: A digitális lábnyomod
+            Move It, Move It:
+              name: Mozgás, mozgás
+            'Loops: Getting Loopy':
+              name: Ciklikusság
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Bináris karkötők
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
+            'Events: The Big Event':
+              name: A nagy esemény
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
+            Relay Programming:
+              name: Váltó programozás
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+            'Unplugged: Binary':
+              name: Bináris képek
+            Artist Binary:
+              name: 'Művész: a kettes számrendszer'
+            Digital Citizenship:
+              name: Digitális állampolgárság
+            Dance Party:
+              name: Táncos buli
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Boríték változók
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+            Internet:
+              name: Az internet
+            Crowdsourcing:
+              name: Csoportos megoldás
+        express-2020:
+          stages:
+            Dance Party:
+              name: Táncos buli
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+        pre-express-2020:
+          stages:
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+            Spelling Bee:
+              name: Betüző méh
+        csp1-2020:
+          stages:
+            Representing Information:
+              name: Az információ ábrázolása
+        csp3-virtual:
+          description_short: Programozás
+          stages:
+            The Need for Algorithms:
+              name: Algoritmusokra szükség van
+            Creativity in Algorithms:
+              name: Kreativitás az algoritmusokban
+            Creating Functions:
+              name: Függvények létrehozása
+            Creating functions with Parameters:
+              name: Paraméteres függvények készítése
+            Unit 3 Chapter 1 Assessment:
+              name: 3. lecke 1. fejezet végi értékelés
+        csd3-virtual:
+          description_short: Programozás
+          stages:
+            Variables:
+              name: változók
+            Sprites:
+              name: Sprite-ok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
+            Random Numbers:
+              name: Véletlen számok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: CSS osztályok
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok
+            Variables:
+              name: változók
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funkciók
+        code-break:
+          stages:
+            Algorithms:
+              name: algoritmusok
+            Events:
+              name: Események
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Elől tesztelős ciklusok

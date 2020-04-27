@@ -62,6 +62,10 @@ bg:
   okay: Добре
   or: или
   heading_x_of_y: "%{heading} (page %{x} на %{y})"
+  join_section:
+    code:
+      placeholder: Код (ABCDEF)
+      submit: Присъединете се
   appname: Code.org
   stage: Етап
   stage_number: Урок %{number}
@@ -149,6 +153,8 @@ bg:
     valid_password: Валидна парола!
     invalid_password: Паролата трябва да бъде поне 6 символа
     mismatch_password: Двете пароли, които въведохте не съвпадат
+    my_data_to_us: Данни от използването на този сайт може да се изпращат и съхраняват
+      или да са обект на обработка в Съединените щати.
     additional_information: Ние изискваме  допълнителна информация за да продължим  вписването
       ви.
     user_type_label: Тип акаунт
@@ -221,6 +227,7 @@ bg:
       Марк Зукерберг, Angry Birds, и Plants vs. Zombies! :-) \n%{name}\n"
   parent_mailer:
     student_associated_subject: Информация за вход в Code.org
+    parent_email_added_subject: Добре дошли в Code.org!
   teacher_mailer:
     new_teacher_subject: Добре дошли в Code.org!
   section:
@@ -326,6 +333,7 @@ bg:
       signin: Вход
       signup: Създаване на акаунт
       already_registered: Вече сте регистриран?
+      pair_programming: Програмиране по двойки
       team: Екип
       driver: Шофьор
       navigator: Навигатор
@@ -394,6 +402,7 @@ bg:
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
     email_confirm_wrong_email: "(Грешен имейл адрес?)"
     email_resend_confirm: Повторно изпращане на инструкции
+    new_email_hint: "(Уверете се, можете да получавате имейли на този имейл адрес.)"
     new_password_hint: "(Оставете празно, ако не искате да го промените)"
     current_password_hint: "(нуждаем се от вашата текуща парола, за да потвърдим вашите
       промени)"
@@ -436,6 +445,7 @@ bg:
       имейли от Code.org освен за възстановяване на парола. Вижте нашата [декларация
       за поверителност](%{privacy_policy_url}) за повече информация.'
     update_email: Актуализиране
+    none: Без
   user_level:
     completed: Завършено
     tried: Опитах
@@ -565,6 +575,7 @@ bg:
     notes_coming_soon: Бележки за този клип очаквайте скоро.
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
+    label: Видео
   compatibility:
     upgrade:
       unsupported_message: Вашият браузър не се поддържа. Моля, надстройте браузъра
@@ -961,6 +972,7 @@ bg:
     csp_functions: Функции
     csp_lists: Списъци
     csp_loops: Повторения
+    csp_unit1_2020: 'Урок 1: Цифрова информация'
     k5_next_steps: Следващи стъпки
   external_links:
     disclaimer: Отказ от отговорност
@@ -1036,6 +1048,7 @@ bg:
     или за да прегледате вашите отговори.
   hidden_stage: Вашият учител не е позволил достъпа до този етап. Моля, попитайте
     учителя кой урок трябва започнете.
+  return_unit_overview: Прегледайте тази част
   return_course_overview: Прегледайте тази част
   pd:
     form_labels:
@@ -1052,7 +1065,9 @@ bg:
         math: Математика
         science: Наука
         la: Език, изкуства
+        music: Музика
       resources:
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
       robotics:
@@ -1065,6 +1080,8 @@ bg:
   cookie_banner:
     accept: Приемам
   gdpr_dialog:
+    heading: Съгласни ли сте да използвате сайт със седалище в Съединените щати?
     message: Данни от използването на този сайт може да се изпращат и съхраняват или
       да са обект на обработка в Съединените щати.
     true: Да
+  copy: Копиране

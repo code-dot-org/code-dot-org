@@ -3,7 +3,6 @@
   data:
     script:
       category:
-        csf_category_name: Grunnleggende informatikk
         csf_international_category_name: Grunnleggende informatikk internasjonalt
         csf2_draft_category_name: 'Under utvikling: Kurs A - F'
         csp_category_name: "'15-'16 Prinsipper i informatikk"
@@ -1887,3 +1886,124 @@
           stages:
             Conditionals:
               name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funksjoner med parametre
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+            Text:
+              name: tekst
+        coursea-2020:
+          description_short: En introduksjon til datavitenskap for førskolebarn.
+          stages:
+            Going Places Safely:
+              name: Trygg reise
+            'Programming: Happy Maps':
+              name: Glade Kart
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Dine digitale fotavtrykk
+            Move It, Move It:
+              name: Flytt den, flytt den
+            'Loops: Getting Loopy':
+              name: Gå i spinn
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binær armbånd
+            'Events: The Big Event':
+              name: Den store begivenheten
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Millimeterpapirprogrammering
+            Relay Programming:
+              name: Relé programmering
+            Conditionals with Cards:
+              name: Betingelser med kort
+            'Unplugged: Binary':
+              name: Binære Bilder
+            Artist Binary:
+              name: Kunstner Binær
+            Digital Citizenship:
+              name: Digitalt statsborgerskap
+            Dance Party:
+              name: Dansefest
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Låtskriving
+        coursef-2020:
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag
+            din egen kunst, historier og spill.
+          stages:
+            Envelope Variables:
+              name: Konvolutt variabler
+            For Loop Fun:
+              name: Morro med for løkker
+            Internet:
+              name: Internett
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansefest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stavekonkurranse
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binære Tall
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Lage Funksjoner
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+            Sprite Properties:
+              name: Figuregenskaper
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Gjenta-løkker
+            Variables:
+              name: Variabler
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hendelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Gjenta-løkker

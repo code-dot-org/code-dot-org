@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Recreate the game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)",
+    "long_instructions": "# Add a Background Image\r\n\r\n<img src=\"https://images.code.org/9898664ee57768dd6e332bfab804c2a6-image-1477324830263.png\" style=\"float: right\">\r\n\r\nThe game is playable, but nothing bad happens if the player misses the target. Next, we'll add a separate image element for the background. If a player clicks the background image, we can assume they \"missed\" the target.\r\n\r\n**Do this:** Change your app so that if the player misses the target, a message displays in the console that they missed it.\r\n\r\n**How?**\r\n\r\n* In Design Mode, add a **new image** to the game and stretch it to fill the whole screen.\r\n    * Use these settings for your background image:\r\n    \r\n    ![expandable](https://images.code.org/5c0963edeb6876252ab9c959538bd0eb-image-1585944264523.00.06 PM.png)\r\n* Add an **onEvent block** for the full screen image with a simple console.log message.\r\n\r\n* Test your game. Try your game and make sure that with each click one of two things is happening:\r\n  * When the target is clicked, it jumps to a new location (and optionally print a message to the console).\r\n  * When the background image is clicked it should display a message to the console.\r\n  \r\n*(See example console output at right).*\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "CSPU5_clickerGame_v1_template_virtual",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "ACkRTDFTSHSoTlmhLpQqrIKH1PBApOFKPYyOWytXkOd2MhISlsygAFNcLX6g\n9bK+\n",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "randomNumber_min_max": null,
+      "setPosition": null,
+      "setWidth": null,
+      "hideElement": null,
+      "showElement": null,
+      "setSize": null,
+      "console.log": null
+    },
+    "teacher_markdown": "### Teaching Tip\r\n\r\nThis may be a confusing step for students for two reasons:\r\n\r\n1) We want the background image to be it's own UI element *rather* than just giving the screen a background image.  -- we're doing this so that we can detect the difference between clicking on the target image, and the background.  (The event listener for the screen triggers on every click, no matter what).\r\n\r\n2) We're making the app respond to a click but *not changing anything about the screen* yet.  We're *only* printing a message to the console.  That's okay, here. We're doing this in small steps.\r\n\r\n  * The reason is that this is a good strategy for programming with UI elements. Using console.log is a simple half-step we can verify that we've properly set up the event handler to respond to the event we want.  Console.log WILL print something if the event fires.  If console.log doesn't print, then we know the event was never triggered and we can check: do we have the ID right? the event type? etc.\r\n  * Sometimes you can be too eager and add more code to the event handler, say to change the screen, and if it doesn't work you don't know what happened - did the event not fire? Or did is the code to set the screen wrong?\r\n",
+    "parent_level_id": 17117,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-04-03 20:09:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:12:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:27:13 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-21 20:45:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 17:02:53 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

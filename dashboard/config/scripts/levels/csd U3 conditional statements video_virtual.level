@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T17:04:36.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "video_key": "csd_gamelab_conditional_statements",
+    "instructions_important": "false",
+    "display_name": "Video: Conditional Statements",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16083,
+    "name_suffix": "_virtual",
+    "encrypted": "false",
+    "long_instructions": "## Question to Consider\r\n\r\n* When would you want to use an if statement?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations.  Encourage students to think of particular situations in which this would be the case.  For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level.  Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-06-07 22:15:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-11 02:39:33 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 17:18:49 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:36:35 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:57:59 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 23:58:28 +0000\",\"changed\":[\"encrypted_teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -2050,3 +2050,127 @@ sv:
           stages:
             Conditionals:
               name: Villkor
+        csd2-2020:
+          stages:
+            Images:
+              name: Bilder
+        csd5-2020:
+          stages:
+            Representing Images:
+              name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funktioner med parametrar
+        csd3-2020:
+          stages:
+            Variables:
+              name: variabler
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+            Text:
+              name: text
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Trygg resa
+            'Programming: Happy Maps':
+              name: Glada kartor
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Ditt digitala fotavtryck
+            Move It, Move It:
+              name: Flytta det, flytta den
+            'Loops: Getting Loopy':
+              name: Att bli snurrig
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binära armband
+            'Events: The Big Event':
+              name: Den stora händelsen
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Kalkyleringsprogrammering
+            Relay Programming:
+              name: Stafettprogrammering
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            'Unplugged: Binary':
+              name: Binära bilder
+            Artist Binary:
+              name: Artist binär
+            Digital Citizenship:
+              name: Digitalt medborgarskap
+            Dance Party:
+              name: Dansparty
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Låtskrivande
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelope variabler
+            For Loop Fun:
+              name: '''För'' loop skoj'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansparty
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stavnings-bi
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Binära tal
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Skapa funktioner
+        csd3-virtual:
+          stages:
+            Variables:
+              name: variabler
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner
+        csd2-virtual:
+          stages:
+            Images:
+              name: Bilder
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: '''Medan'' loopar(slingor)'
+            Variables:
+              name: variabler
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: funktioner
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Händelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: '''Medan'' loopar(slingor)'

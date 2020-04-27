@@ -4,26 +4,35 @@ hu-HU:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzetre<br/>Rakj
-            egy háromszöget a négyzet alá
-        - correct: true
+        - text: |-
+            Kezdj egy négyzettel
+            Rakj egy háromszöget a négyzetre
+            Rakj egy háromszöget a négyzet alá
+        - text: |-
+            Kezdj egy négyzettel
+            Rakj egy háromszöget a négyzet jobb oldalára
+            Rakj egy paralelogrammát a négyzet alá
+            Rakj egy háromszöget a paralelogramma jobb oldalára
+          correct: true
         - text: Kezdj egy négyzettel<br/>Rakj egy paralelogrammát a négyzet fölé<br/>Rakj
             egy háromszöget a paralelogramma jobb oldalára
-        - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzet alá<br/>Rakj
-            egy paralelogrammát a háromszög jobb oldalára
+        - text: "Kezdj egy négyzettel \nRakj egy háromszöget a négyzet alá \nRakj
+            egy paralelogrammát a háromszög jobb oldalára"
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Válaszd ki az adott képnek megfelelő algoritmust.
         title: Feleletválasztós
       2-3 Algorithms Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        content1: Kezdj egy háromszöggel<br/>Rakj egy négyzetet a háromszög alá<br/>Rakj
-          egy másik háromszöget a négyzet alá
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        content1: "Kezdj egy háromszöggel \nRakj egy négyzetet a háromszög alá \nRakj
+          egy másik háromszöget a négyzet alá"
         questions:
-        - text: Melyik kép <em>nem</em> követi ezt az algoritmust?
+        - text: Melyik kép _nem_ követi ezt az algoritmust?
         title: Feleletválasztós
       2-3 Big Event Match 1:
         answers:
@@ -62,67 +71,76 @@ hu-HU:
         title: Feleletválasztós
       2-3 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Hogyan egyszerűsítenéd ezeket a sorozatokat ciklusokkal?
         title: Feleletválasztós
       2-3 Graph Paper Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Párosítsd a rácsozatot a programmal.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: Megfelelő
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Melyik program készíti ezt a képet?
         title: Feleletválasztós
       2-3 Maze Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        content1: Illeszd a darabokat a blokkokhoz
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
+        content1: Illeszd a blokkokhoz a feladványokat
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: Labirintus párosítás
       2-3 Maze Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
-        title: Labirintus, többszörös választás
+        - text: Melyik az a kódsor, ami elvezet a malacig?
+        title: Labirintus - válaszd ki
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: Melyik program az, amelyik **nem ezt a mintát készíti el**?
         title: Feleletválasztós
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
-        - text: Melyik kép-program páros nem tartalmaz hibákat?
+        - text: Melyik párosítás a helyes?
         title: Feleletválasztós
       2-3 artist debug multi 1:
         answers:
@@ -143,47 +161,54 @@ hu-HU:
         title: Művészek Függvények Több választási lehetőség
       2-3 artist loops match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Párosítsd a ciklust az alakzattal!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: Művész ciklusok - 1. feleletválasztás
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Milyen alakzatot készít ez a ciklus?
-        title: Művész. Ciklusok. Feleltválasztás
+        title: Művész - ciklusok. Feleltválasztás
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Milyen alakzatot készít ez a program?
-        title: Művész. Ciklusok. Feleltválasztás
+        title: Művész - ciklusok. Feleltválasztás
       2-3 artist match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Párosítsd az alakzatokat az azokat befejező blokkokkal!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        title: 'Művész: párosítás'
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        title: Művész - feleletválasztás
       2-3 bee conditionals multi 1:
         answers:
         - {}
@@ -202,30 +227,34 @@ hu-HU:
         - text: Válaszd ki a legmegfelelőbb blokkokat!
       2-3 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Melyik blokkok gyűjtik össze az összes nektárt?
-        title: Méh. Ciklusok. Feleltválasztás Egy
+        title: 'Méh - ciklusok: válaszd ki a helyes megoldást'
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        content1: Illeszd a darabokat a blokkokhoz
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        content1: Illeszd a blokkokhoz a feladványokat
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: Labirintus, párosítás
       2-3 maze multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Melyik sorozat a helyes megoldás?
         title: Labirintus, többszörös választás
@@ -368,7 +397,7 @@ hu-HU:
         - {}
         questions:
         - text: Melyik blokkok fogják elkészíteni a mintát?
-        title: Művész. Ciklusok. Feleltválasztás
+        title: Művész - ciklusok. Feleltválasztás
       4-5 artist multi 1:
         answers:
         - {}
@@ -428,7 +457,7 @@ hu-HU:
         - {}
         - {}
         - {}
-        content1: Illeszd a darabokat a blokkokhoz
+        content1: Illeszd a blokkokhoz a feladványokat
         questions:
         - {}
         - {}
@@ -442,7 +471,7 @@ hu-HU:
         - {}
         questions:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
-        title: Labirintus, többszörös választás
+        title: Labirintus - válaszd ki
       Begin planning your project:
         content1: a leírás itt található
       Begin planning your project_2018:
@@ -1324,50 +1353,83 @@ hu-HU:
         - {}
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
         - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
         - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
         - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
         questions:
         - {}
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1661,12 +1723,17 @@ hu-HU:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Semmi. A motkány egyáltalán nem mozdul.
+        - text: A motkány előrelép hármat, fordul, aztán ismét előre lép hármat, és
+            már ott is van a makknál!
+          correct: true
+        - text: A motkány előre fog lépni, aztán elfordul és jön a bumm.
+        - feedback: A "lépj előre" blokk az "ismételd" blokkon belül azt jelenti,
+            hogy a motkány hármat kép előre. Aztán fordul, és újabb három lépést tesz
+            előre, így ér a makkhoz!
         questions:
-        - {}
+        - text: Ez a kód egy új blokkot használ. Mit gondolsz, mi történik, amikor
+            a "Futtatás" gombra kattintasz?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true

@@ -1682,3 +1682,110 @@ da:
           stages:
             Conditionals:
               name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funktioner med parametre
+        csd3-2020:
+          description_short: "Programmering"
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+            Text:
+              name: Tekst
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Gå til sikre steder
+            'Programming: Happy Maps':
+              name: Glade Kort
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Dit digitale fodspor
+            Move It, Move It:
+              name: Flyt det, flyt det
+            'Loops: Getting Loopy':
+              name: Blive Svimmel
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binære armbånd
+            'Events: The Big Event':
+              name: Den store begivenhed
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              name: Stafet-programmering
+            Conditionals with Cards:
+              name: Betingelser med kortspil
+            'Unplugged: Binary':
+              name: Binære billeder
+            Artist Binary:
+              name: Kunstner binære
+            Digital Citizenship:
+              name: Digital statsborgerskab
+            Dance Party:
+              name: Dance Party
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Sangskrivning
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Omslut variabler
+            For Loop Fun:
+              name: For loop sjov
+            Internet:
+              name: Internettet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dance Party
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stave-bien
+        csp3-virtual:
+          description_short: Programmering
+          stages:
+            Creating Functions:
+              name: Oprettelse af funktioner
+        csd3-virtual:
+          description_short: "Programmering"
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Mens løkker
+            Variables:
+              name: Variabler
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funktioner
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmer
+            Events:
+              name: Hændelser
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Mens løkker

@@ -265,6 +265,9 @@ fil-PH:
       NEW Course 4 Bee For Loops 5:
         actions_category: Ang tool box ay nagkaroon ng bagong itsura. Ang "Aksyon"
           na mga bloke ay nandito na ngayon.
+      New Frozen Project:
+        snowflake_dropdown: Gamitin ang drop-down na ito para makalikha na iba't ibang
+          mga snowflakes!
       Overworld Chop Trees:
         craft_callout_preplaced: Naglagay tayo ng ilang mga bloke dito para makapagsimula
           ka

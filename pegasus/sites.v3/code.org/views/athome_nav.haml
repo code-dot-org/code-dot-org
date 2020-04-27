@@ -1,0 +1,11 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{ 'Learning at home'=>'/athome2', 'Code Break'=>'/break2','Short tutorials'=>'/athome2#hoc', 'Project ideas'=>'/athome2#labs', 'Express courses'=>'/athome2#express','Phone-friendly options'=>'/athome2#mobile','Unplugged activities'=>'/athome2#unplugged','Educational videos'=>'/athome2#videos', 'Support for teachers'=>'/athome2#teacher-support', 'FAQs'=>'/faq'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr
+
+-# Changes here should match Athome navigation links in mobile_header_responsive.

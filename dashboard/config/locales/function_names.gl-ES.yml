@@ -92,6 +92,14 @@ gl-ES:
         do something: facer algo
       NEW Course 4 Play Lab Params 11:
         jump: saltar
+      New Artist Project:
+        draw a star: debuxar unha estrela
+        draw a circle: debuxar un círculo
+        draw a triangle: debuxar un triángulo
+        draw a house: debuxar unha casa
+        draw a square: debuxar un cadrado
+      New Play Lab Project:
+        jump: saltar
       Standalone_Artist_7:
         draw a flower: debuxar unha flor
       course3_artist_functions_challenge1:
@@ -148,8 +156,6 @@ gl-ES:
       courseE_artist_functions7:
         draw a house: debuxar unha casa
       courseE_artist_functions7_2018:
-        draw a house: debuxar unha casa
-      courseE_artist_functions7_2019:
         draw a house: debuxar unha casa
       courseE_artist_functions8:
         do something: facer algo

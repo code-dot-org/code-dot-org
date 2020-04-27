@@ -1,0 +1,32 @@
+name 'Commute Assess - func 3a - block_2018_2019_virtual'
+
+wrong '`in func1`  
+`in func2`'
+wrong '`func1`  
+`func2`'
+right '`in func1`  
+`in func2`  
+`in func1`'
+wrong '`DISPLAY in func1`  
+`DISPLAY in func2`'
+wrong 'Nothing is printed'
+wrong 'This script would cause an error'
+
+markdown <<MARKDOWN
+The next two questions refer to the three procedure definitions shown here on the right.
+
+<div style="float: left; margin: 20px; width: 300px;">
+
+<p>
+What will be displayed when this code is run?
+</p>
+
+<img src="https://images.code.org/5bf8551015d3b8603268388356418885-image-1482860564538.png" style="width: 70px">
+
+</div>
+
+<div style="width: 300px; float: left; border-left: solid 1px #00adbc; padding-left: 10px; margin-left: 25px">
+<img src="https://images.code.org/ea42034dd0c4e1eb7d610e20ef6fa70a-image-1482959065229.png" style="width: 245px;">
+</div>
+
+MARKDOWN

@@ -1,7 +1,6 @@
 :ruby
   teacher_dashboard_data = {}
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
-  teacher_dashboard_data[:pegasusUrlPrefix] = CDO.code_org_url('', CDO.default_scheme)
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section_summary
   teacher_dashboard_data[:validScripts] = Script.valid_scripts(current_user).map(&:assignable_info)
@@ -11,6 +10,7 @@
   teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false
   teacher_dashboard_data[:userName] = @current_user.short_name
   teacher_dashboard_data[:validGrades] = @valid_grades
+  teacher_dashboard_data[:localeCode] = request.locale
 
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 

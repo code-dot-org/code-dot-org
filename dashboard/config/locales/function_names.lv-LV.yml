@@ -290,6 +290,20 @@ lv-LV:
       NEW Course 4 Play Lab Params 11:
         jump: lēkt
         patrol: apstaigāt
+      New Artist Project:
+        draw a star: zīmet zvaigzni
+        draw a circle: zīmēt apli
+        draw a pinwheel: uzzīmēt vējdzirnavas
+        draw a triangle: zīmēt trīsstūri
+        draw a shape: uzzīmēt formu
+        draw a house: zīmēt māju
+        draw a square: zīmēt kvadrātu
+      New Minecraft Hero Project:
+        function 1: funkcija 1
+        function 2: funkcija 2
+      New Play Lab Project:
+        jump: lēkt
+        patrol: apstaigāt
       Robot Doodle:
         draw head: uzzīmējiet galvu
       Robot Doodle_2018:
@@ -441,8 +455,6 @@ lv-LV:
       courseE_artist_functions7:
         draw a house: zīmēt māju
       courseE_artist_functions7_2018:
-        draw a house: zīmēt māju
-      courseE_artist_functions7_2019:
         draw a house: zīmēt māju
       courseE_artist_functions8:
         do something: kaut ko

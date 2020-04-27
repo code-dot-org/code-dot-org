@@ -373,8 +373,8 @@ es-MX:
         Course_4_Artist_12_b: 'La forma de la unidad es casi la misma que en el último
           acertijo, excepto que el medio hexágono es un poco más grande. '
         Course_4_Artist_12_c: "1.  Las primeras tres líneas tienen 60 píxeles de largo
-          y necesitas girar 60 grados.\n     2) Las siguientes dos líneas tienen 80
-          píxeles de largo y necesitas girar 120 grados "
+          y necesitas girar 60 grados.\n     2\\) Las siguientes dos líneas tienen
+          80 píxeles de largo y necesitas girar 120 grados "
         Course_4_Artist_12_d: |-
           **Solución:**
 
@@ -4398,6 +4398,9 @@ es-MX:
         NEW_Course_4_Bee_For_Loops_8_a: |-
           Si tu loop cuenta hacia arriba, el incremento es añadido a tu variable de contador cada vez.
           ¿Qué necesitas agregar a cada número para obtener el número que sigue?
+      New Minecraft Hero Project:
+        MC_HOC_2017_13_Cole_a: Haz que el Agente construya algunos puentes para que
+          Alex o Steve puedan caminar más allá de los límites del mapa.
       Overworld Avoid Monsters:
         mc_8_a: Hay pocos caminos que puedes tomar. ¿Cuál es el más corto?
         mc_8_b: Use los loops "repetir" para simplificar su código.
@@ -5089,23 +5092,12 @@ es-MX:
             </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: |-
-          A continuación, recoge las gemas restantes en esta fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Agrega estos bloques a tu programa.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
+          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -9387,12 +9379,6 @@ es-MX:
         courseC_PlayLab_eventsA_b: Tendrás que arrastrar específicamente un bloque
           de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
           rompecabezas.
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: Usa el bloque \` establecer fondo ' y el bloque
-          ' establecer agente a una velocidad de**\_** ' para resolver este desafío.
-        courseC_PlayLab_eventsA_b: Tendrás que arrastrar específicamente un bloque
-          de eventos `cuando se ejecuta` al espacio de trabajo para resolver este
-          rompecabezas.
       courseC_PlayLab_eventsFP:
         idea1: "_¿Necesitas una idea?_\n\n**¿Quién está allí?** Haz que los personajes
           aparezcan con imágenes aleatorias, para que nadie sepa quién sigue. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)"
@@ -12062,7 +12048,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12073,7 +12059,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12084,7 +12070,7 @@ es-MX:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12456,24 +12442,13 @@ es-MX:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          A continuación, recoge las gemas restantes en esta fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Agrega estos bloques a tu programa.
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "A continuación, recoge las gemas
+          restantes en esta fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAgrega estos bloques a tu programa.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Finalmente, recoge el tesoro restante.
           Agrega estos bloques a tu programa.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n

@@ -96,6 +96,14 @@ sv-SE:
         do something: gör någonting
       NEW Course 4 Play Lab Params 11:
         jump: hoppa
+      New Artist Project:
+        draw a star: rita en stjärna
+        draw a circle: rita en circel
+        draw a triangle: rita en triangel
+        draw a house: rita ett hus
+        draw a square: rita en kvadrat
+      New Play Lab Project:
+        jump: hoppa
       Standalone_Artist_7:
         draw a flower: rita en blomma
       Standalone_Artist_8:
@@ -156,8 +164,6 @@ sv-SE:
       courseE_artist_functions7:
         draw a house: rita ett hus
       courseE_artist_functions7_2018:
-        draw a house: rita ett hus
-      courseE_artist_functions7_2019:
         draw a house: rita ett hus
       courseE_artist_functions8:
         do something: gör någonting

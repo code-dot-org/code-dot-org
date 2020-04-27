@@ -63,6 +63,7 @@ it:
   previous_page: Pagina precedente
   next_page: Pagina successiva
   next_resource: Risorsa successiva
+  done_with_module: Lezione completata
   cancel: "Annulla"
   okay: "Ok!"
   or: "o"
@@ -155,7 +156,6 @@ it:
     valid_password: "Password valida!"
     invalid_password: "La password deve essere lunga almeno 6 caratteri"
     mismatch_password: "Le due password che hai inserito non corrispondono"
-    under_13_consent: "Se ho meno di 13 anni, confermo di avere l’autorizzazione dei miei genitori o del mio tutore legale all’utilizzo dei servizi di Code.org."
     student_consent: "Confermo che i miei genitori o chi ne fa le veci mi hanno dato il permesso di utilizzare i servizi di Code.org."
     agree_us_website: "Accetto di utilizzare un sito Web con sede negli Stati Uniti."
     my_data_to_us: "I dati relativi al mio utilizzo di questo sito Web possono essere inviati e archiviati o elaborati negli Stati Uniti."
@@ -240,6 +240,7 @@ it:
       %{name}
   parent_mailer:
     student_associated_subject: 'Informazioni di accesso per Code.org'
+    parent_email_added_subject: 'Benvenuto su Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Benvenuto su Code.org!'
     delete_teacher_subject: 'Notifica di Code.org: il tuo account è stato eliminato'
@@ -458,6 +459,9 @@ it:
     update: "Aggiorna Account"
     account_successfully_updated: "Account aggiornato con successo."
     update_email: "Aggiorna"
+    parent_guardian_email_label: "E-mail del genitore/tutore"
+    none: "Nessuno"
+    encrypted: "crittografato"
   user_level:
     completed: 'Completato'
     tried: 'Provato'
@@ -559,6 +563,7 @@ it:
     download: 'Scarica il video'
     show_notes: 'Mostra le spiegazioni'
     show_video: 'Mostra il video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Il tuo browser non è supportato. Si prega di aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'> uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina, ma aspettati qualche malfunzionamento."
@@ -942,6 +947,8 @@ it:
     csp_traversals: 'Traversali'
     csp_libraries: 'Librerie'
     csp_parameters_return_values: 'Parametri e Valori di Ritorno'
+    csp_unit1_2020: 'Princìpi dell''Informatica - Unità 1'
+    csp_unit2_2020: 'Princìpi dell''Informatica - Unità 2'
     dlp: 'Punti di riflessione'
     time4cs_c1: 'Everglades ed i Suoi Ecosistemi'
     time4cs_c2: 'Catene Alimentari negli Everglades'
@@ -1011,6 +1018,8 @@ it:
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
   hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
+  no_course_access_student: "Non hai accesso a questo corso. Per favore chiedi al tuo insegnante in quale corso dovresti essere."
+  no_course_access_teacher: "Non hai accesso a questo corso. Se credi che dovresti avere accesso a questo corso, sei pregato di scrivere a support@code.org così che possiamo correggere la situazione."
   no_script_access_student: "Non hai accesso a questa unità. Perfavore chiedi al tuo insegnante in quale unità dovresti essere."
   no_script_access_teacher: "Non hai accesso a questa unità. Se credi che dovresti avere accesso a questa unità, sei pregato di scrivere a support@code.org così che possiamo correggere la situazione."
   return_unit_overview: 'Vai alla panoramica della lezione'
@@ -1127,3 +1136,4 @@ it:
   page_not_found_header: '404 Pagina non trovata'
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
+  copy: 'Copia'

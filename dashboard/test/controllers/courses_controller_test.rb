@@ -9,6 +9,11 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_course = create :course, pilot_experiment: 'my-experiment'
+    @pilot_section = create :section, user: @pilot_teacher, course: @pilot_course
+    @pilot_student = create(:follower, section: @pilot_section).student_user
+
     Script.stubs(:should_cache?).returns true
     Script.clear_cache
 
@@ -131,6 +136,44 @@ class CoursesControllerTest < ActionController::TestCase
     get :show, params: {course_name: 'csp-2017'}
 
     assert_response :ok
+  end
+
+  no_access_msg = "You don&#39;t have access to this course."
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'signed out user cannot view pilot script'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{course_name: @pilot_course.name}}, name: 'student cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'teacher without pilot access cannot view pilot course'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{course_name: @pilot_course.name, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
+                              params: -> {{course_name: @pilot_course.name}}, name: 'pilot student can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {{course_name: @pilot_course.name}}, name: 'levelbuilder can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
   end
 
   # Tests for create

@@ -18,11 +18,15 @@ export default class PrintReportButton extends Component {
     return (
       <div>
         <Button
+          __useDeprecatedTag
           onClick={this.props.onClick}
           color={Button.ButtonColor.orange}
           text={i18n.printReport()}
+          icon="print"
+          iconClassName="fa"
           size={'narrow'}
           style={styles.button}
+          id="uitest-standards-print-button"
         />
       </div>
     );

@@ -1550,6 +1550,14 @@ ru:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: Переместить {SPRITE} {DISTANCE} Пикселей {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Север
+            '"East"': Восток
+            '"South"': Юг
+            '"West"': Запад
       aalab_prompt:
         text: задавать вопрос {MESSAGE}
       aalab_scene:
@@ -1561,12 +1569,10 @@ ru:
             '3': '3'
       aalab_setupStory:
         text: История установки
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': показать
-            '"hide"': скрыть
+            '"random"': случайный
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:

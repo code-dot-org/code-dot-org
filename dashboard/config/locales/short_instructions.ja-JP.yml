@@ -760,6 +760,11 @@ ja-JP:
         「length」に入れた数が、その後のプログラムで、どこでも使えることが分ったかな？
       NEW Course 4 Bee For Loops 1: "「くりかえし」を使って、すべての花からミツを集めましょう。"
       NEW Course 4 Bee For Loops 8: 3、6、9、12、15の花のミツをとるためには、いくつずつ `counter` を ふやせば良いでしょう？「???」に正しい数をいれて、すべての花のミツを集めてください。
+      New Gumball Project: すきなものをつくってきょうゆうしましょう！
+      New Ice Age Project: すきなものをつくってきょうゆうしましょう！
+      New Infinity Project: すきなものをつくってきょうゆうしましょう！
+      New Minecraft Hero Project: "**自由にプレイ:**  自分の好きなようにプログラミングしてみましょう!"
+      New Sports Project: 君の ゲームを作ろう。あなたが全部きめてください。ルールは自由に変更できるし、スポーツをミックスしたり、自由にやろう！完了したら、「完了」ボタンをクリックして、友だちが君のゲームをスマホで試せるようにしよう。
       Overworld Avoid Monsters: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
       Overworld Avoid Monsters_2019: Creeperに出くわすとやっかいです。慎重にやり過ごし、安全な家に戻りましょう。
       Overworld Chop Tree: 木はいろいろな物の材料になります。木を切り倒すには、近づいて“ブロックを破壊”コマンドを使います。
@@ -1113,16 +1118,12 @@ ja-JP:
       courseA_playLab_events2_2019: いぬのジョージは "Hi there." と いおうとしています。てつだうことが できますか？
       courseA_playLab_events3: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
       courseA_playLab_events3_2018: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
-      courseA_playLab_events3_2019: 左やじるしキーが おされたとき、左にうごくようにしてみよう。
       courseA_playLab_events4: 右やじるしキーがおされたとき、右にうごくようにしよう。
       courseA_playLab_events4_2018: "`→`ボタンが おされた とき、ジョージが みぎに うごくようにしよう。"
-      courseA_playLab_events4_2019: "`→`ボタンが おされた とき、ジョージが みぎに うごくようにしよう。"
       courseA_playLab_events5: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
       courseA_playLab_events5_2018: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
-      courseA_playLab_events5_2019: 上やじるしキーと下やじるしキーで犬を上下にうごかしてみよう。
       courseA_playLab_events6: はいけいをかえてみよう、犬が クリックされたとき ランダムに おとが なるようにしてみよう。
       courseA_playLab_events6_2018: はいけいをかえてみよう、犬が クリックされたとき ランダムに おとが なるようにしてみよう。
-      courseA_playLab_events6_2019: はいけいをかえてみよう、犬が クリックされたとき ランダムに おとが なるようにしてみよう。
       courseA_playLab_events7: 犬が、きょうりゅうに ぶつかったら きょうりゅうが きえる ゲームを つくってみよう。
       courseA_playLab_events7_2018: _フリープレイ_ このゲームを かいぞう してみよう。
       courseA_playLab_events7_2019: _フリープレイ_ このゲームを かいぞう してみよう。

@@ -971,7 +971,7 @@ es:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: aalab crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
+        text: crea un nuevo gráfico {ANIMATION_NAME} en {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} encara {DIRECTION}"
         options:
@@ -1387,13 +1387,21 @@ es:
       aalab_addBehaviorForDuration:
         text: gráfico aalab {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
       aalab_addBehaviorUntilBoolean:
-        text: gráfico aalab {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
+        text: gráfico {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
       aalab_goToScene:
         options:
           SCENE:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: mover {SPRITE} {DISTANCE} píxeles {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norte
+            '"East"': Este
+            '"South"': Sur
+            '"West"': Oeste
       aalab_prompt:
         text: preguntar {MESSAGE}
       aalab_scene:
@@ -1402,11 +1410,10 @@ es:
             '1': '1'
             '2': '2'
             '3': '3'
-      aalab_showHideSprite:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': mostrar
-            '"hide"': ocultar
+            '"random"': aleatorio
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:

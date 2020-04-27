@@ -3,7 +3,6 @@ uk:
   data:
     script:
       category:
-        csf_category_name: Основи інформатики
         csf2_draft_category_name: 'В розробці: курси А—Д'
         csp_category_name: "'15-'16 принципи інформатики"
         cspexams_category_name: Практичний тест з принципів інформатики
@@ -2030,3 +2029,140 @@ uk:
           stages:
             Conditionals:
               name: Умови
+        csd2-2020:
+          stages:
+            CSS Classes:
+              name: Класи CSS
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Функції з параметрами
+        csd3-2020:
+          description_short: Програмування
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+            Text:
+              name: Текст
+        coursea-2020:
+          description_audience: 'Вік: 4-7'
+          stages:
+            Going Places Safely:
+              name: Безпечне добирання
+            'Programming: Happy Maps':
+              name: Щасливі карти
+        courseb-2020:
+          description_audience: 'Вік: 5-8'
+          stages:
+            Your Digital Footprint:
+              name: Твій цифровий слід
+            Move It, Move It:
+              name: Рухайся, рухайся
+            'Loops: Getting Loopy':
+              name: Економія на повторах
+        coursec-2020:
+          description_audience: 'Вік: 6-10'
+          stages:
+            Binary Bracelets:
+              name: Двійкові браслети
+            'Events: The Big Event':
+              name: Велика подія
+        coursed-2020:
+          description_audience: 'Вік: 7-11'
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Програмування по клітинках
+            Relay Programming:
+              name: Естафетне програмування
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            'Unplugged: Binary':
+              name: Двійкові зображення
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Digital Citizenship:
+              name: Цифрове громадянство
+            Dance Party:
+              name: Танцювальна вечірка
+        coursee-2020:
+          description_audience: 'Вік: 8-12'
+          stages:
+            'Functions: Songwriting':
+              name: Написання пісень
+        coursef-2020:
+          description_audience: 'Вік: 9-13'
+          stages:
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
+        express-2020:
+          description_audience: 'Вік: 9-18'
+          stages:
+            Dance Party:
+              name: Танцювальна вечірка
+        pre-express-2020:
+          description_audience: 'Вік: 4-8'
+          stages:
+            Spelling Bee:
+              name: Грамотна Бджілка
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+        csp1-2020:
+          stages:
+            Binary Numbers:
+              name: Двійкові Числа
+        csp3-virtual:
+          description_short: Програмування
+          stages:
+            Creating Functions:
+              name: Створення функцій
+        csd3-virtual:
+          description_short: Програмування
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        csd2-virtual:
+          stages:
+            CSS Classes:
+              name: Класи CSS
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: Цикли "поки"
+            Variables:
+              name: змінні
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції
+        code-break:
+          stages:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Події
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Цикли "поки"

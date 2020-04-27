@@ -354,6 +354,20 @@ es-MX:
       NEW Course 4 Play Lab Params 11:
         jump: salta
         patrol: patrullar
+      New Artist Project:
+        draw a star: dibujar una estrella
+        draw a circle: dibujar un círculo
+        draw a pinwheel: dibujar un molinete
+        draw a triangle: dibujar un triángulo
+        draw a shape: dibujar una forma
+        draw a house: dibujar una casa
+        draw a square: Dibuje un cuadrado
+      New Minecraft Hero Project:
+        function 1: función 1
+        function 2: función 2
+      New Play Lab Project:
+        jump: salta
+        patrol: patrullar
       Robot Doodle:
         25 pixel square: cuadrado de 25 pixeles
         draw head: dibujar cabeza
@@ -634,7 +648,6 @@ es-MX:
         draw a house: dibujar una casa
       courseE_artist_functions7_2019:
         draw a window: dibujar una ventana
-        draw a house: dibujar una casa
       courseE_artist_functions8:
         do something: hacer algo
         draw a line of squares: dibujar una hilera de cuadrados

@@ -3,7 +3,6 @@ ko:
   data:
     script:
       category:
-        csf_category_name: CS 기초
         csf2_draft_category_name: '개발중: 코스 A - F'
         csp_category_name: CS의 원리
         cspexams_category_name: 컴퓨터과학(정보과학) 기초/개념/원리 연습 테스트
@@ -1934,3 +1933,132 @@ ko:
           stages:
             Conditionals:
               name: 조건
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: 함수(값 전달)
+        csd3-2020:
+          description_short: 프로그래밍
+          stages:
+            Variables:
+              name: 변수
+            Sprite Properties:
+              name: 스프라이트 속성
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+            Text:
+              name: 문장
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: 안전하게 자리잡기
+            'Programming: Happy Maps':
+              name: 즐거운 맵
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: 디지털 개인정보 흔적
+            Move It, Move It:
+              name: 빨리 빨리 움직이자!
+            'Loops: Getting Loopy':
+              name: 반복시키기
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: 2진 팔찌
+            'Events: The Big Event':
+              name: 큰 이벤트
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 모눈 종이 프로그래밍
+            Relay Programming:
+              name: 릴레이 프로그래밍
+            Conditionals with Cards:
+              name: 조건선택 카드
+            'Unplugged: Binary':
+              name: 2진 이미지
+            Artist Binary:
+              name: 화가 2진
+            Digital Citizenship:
+              name: 디지털 시민의식
+            Dance Party:
+              name: 댄스 파티
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: 노래 만들기
+              description_teacher: 컴퓨터과학(정보과학) 세상에서 가장 많은 구조들 중 하나는 함수입니다. 함수(부프로그램,
+                매서드, 프로시저 등)는 큰 프로그램을 만들 수 있도록 그 안에 매우 많이 사용될 수 있는 작은 프로그램이라고도 할 수
+                있습니다. 이번 내용에서는 예시를 통해 학생들이 여러 개의 코드들을 함께 묶어 함수로 사용하는 이유를 직관적으로 이해할
+                수 있도록 합니다.
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: 변수들 함께 묶기
+            For Loop Fun:
+              name: 재미있는 반복
+            Internet:
+              name: 인터넷
+            Crowdsourcing:
+              name: 클라우드소싱
+        express-2020:
+          stages:
+            Dance Party:
+              name: 댄스 파티
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: 말하는 꿀벌
+        csp3-virtual:
+          description_short: 프로그래밍
+          stages:
+            Creating Functions:
+              name: 함수 만들기
+            Creating functions with Parameters:
+              name: 매개변수가 있는 함수 만들기
+        csd3-virtual:
+          description_short: 프로그래밍
+          stages:
+            Variables:
+              name: 변수
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+            Sprite Properties:
+              name: 스프라이트 속성
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: "~인 동안 반복"
+            Variables:
+              name: 변수
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수
+        code-break:
+          stages:
+            Algorithms:
+              name: 알고리즘
+            Events:
+              name: 이벤트
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: "~인 동안 반복"

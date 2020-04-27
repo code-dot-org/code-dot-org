@@ -1,0 +1,18 @@
+name 'CSD U2 Test code styles_pilot_2020'
+title 'Question 6'
+type 'multi2'
+question 'The web developer wants to make the “My Page” text larger.  Which TWO of the following would work? (Choose TWO)'
+wrong 'Use &lt;h6&gt; instead of &lt;h3&gt;'
+right 'Use &lt;h1&gt; instead of &lt;h3&gt;'
+wrong 'Put the “My Page” text inside the <head> tags.'
+right 'Use CSS to set the font-size property of the h3 tag'
+wrong 'Put the code `style=“larger”` inside the h3 tag.'
+
+
+markdown <<MARKDOWN
+Questions 5 and 6 deal with the following web page:
+
+![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+MARKDOWN

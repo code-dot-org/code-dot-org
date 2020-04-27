@@ -553,6 +553,9 @@ es-MX:
         hoc_dance_events_2019: 'Fiesta de baile 2019: Eventos'
         hoc_dance_measures_2019: 'Fiesta de baile 2019: Medidas'
         hoc_dance_properties_2019: 'Fiesta de baile 2019: Propiedades'
+        csf_my_online_neighborhood_2020: Mi barrio en línea
+        csf_private_and_personal_information: Información privada y personal
+        csd_what_computers_are: '¿Qué es una computadora?'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

@@ -355,6 +355,20 @@ is-IS:
       NEW Course 4 Play Lab Params 11:
         jump: hoppa
         patrol: rása
+      New Artist Project:
+        draw a star: teikna stjörnu
+        draw a circle: teikna hring
+        draw a pinwheel: teikna rellu
+        draw a triangle: teikna þríhyrning
+        draw a shape: teikna form
+        draw a house: teikna hús
+        draw a square: teikna ferning
+      New Minecraft Hero Project:
+        function 1: fall 1
+        function 2: fall 2
+      New Play Lab Project:
+        jump: hoppa
+        patrol: rása
       Robot Doodle:
         25 pixel square: 25 díla ferningur
         draw head: teikna höfuð
@@ -635,7 +649,6 @@ is-IS:
         draw a house: teikna hús
       courseE_artist_functions7_2019:
         draw a window: teikna glugga
-        draw a house: teikna hús
       courseE_artist_functions8:
         do something: gera eitthvað
         draw a line of squares: teikna röð ferninga

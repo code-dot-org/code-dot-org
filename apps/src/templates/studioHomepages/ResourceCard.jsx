@@ -135,6 +135,7 @@ class ResourceCard extends Component {
         <div style={descriptionStyles}>{descriptionContent}</div>
         <br />
         <Button
+          __useDeprecatedTag
           id={linkId}
           className={linkClass}
           href={link}

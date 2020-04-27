@@ -690,7 +690,7 @@ ja:
             '"y"': 垂直方向の位置
             '"tint"': 色合い
       Dancelab_setPropRandomEach:
-        text: "[GROUP] [0] [PROPERTY] [1] をランダム化します"
+        text: "{GROUP} {PROPERTY} をランダム化します"
         options:
           GROUP:
             sprites: すべて
@@ -1551,6 +1551,14 @@ ja:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 移動 {SPRITE} {DISTANCE} ピクセル {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北だ
+            '"East"': 東だ
+            '"South"': 南だ
+            '"West"': 西だ
       aalab_prompt:
         text: 質問する {MESSAGE}
       aalab_scene:
@@ -1562,12 +1570,10 @@ ja:
             '3': '3'
       aalab_setupStory:
         text: セットアップストーリー
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 表示(ひょうじ)する
-            '"hide"': かくす
+            '"random"': ランダム に
       binary_drawBin:
         text: バイナリを描画する {BIN}
       binary_drawBinScreen:

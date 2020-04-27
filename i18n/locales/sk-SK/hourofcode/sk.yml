@@ -28,13 +28,19 @@ sk:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
@@ -57,6 +63,19 @@ sk:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -64,6 +83,13 @@ sk:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -140,6 +166,16 @@ sk:
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: Support for parents and teachers facing school
+    closures.
+  codeorg_homepage_special2020_body2: See our suggested learning resources.
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Viac info
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
@@ -384,6 +420,9 @@ sk:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
@@ -481,6 +520,7 @@ sk:
   map_warning: Hour of Code mapa zobrazuje len prvých 200000 zaevidovaných udalostí.
     Všetky zaevidované udalosti spolu s platnou adresou si môžete prezrieť tu <a href='%{events_url}'>the
     events page.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Každé dieťa si zaslúži príležitosť
   meta_tag_og_description: Hodina kódu je globálne hnutie, ktoré má dosah až na desiatky
     miliónov študentov vo viac ako 180 krajinách a je vo viac ako 45 jazykoch. Pre
@@ -503,6 +543,13 @@ sk:
     spoločenských oblastí. Pozrite sa na <a href='%{tutorials}'> návody a aktivity</a>.
     Táto kampaň je podporovaná viac ako <a href='%{partners}'> 400 partnermi</a> a
     200.000 pedagógmi po celom svete.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Vyskúšajte si návody
   hoc_faq_when_is_hoc_q: Kedy začína Hodina kódu?
   hoc_faq_when_is_hoc_a: Aktivita Hodina kódu sa koná každý rok počas <a href='%{csedweek_url}'>týždňa
@@ -510,16 +557,30 @@ sk:
     %{campaign_date_full}, ale aktivity Hodiny kódu môžete využívať po celý rok. Tento
     týždeň sa koná každoročne počas výročia narodenín pioniera výpočtovej techniky
     <a href='%{grace_hopper}'> admirála Grace Murray Hoppera</a> (9. december 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: Prečo informatika?
   hoc_faq_why_cs_a: "<i>Každý</i> študent by mal mať možnosť učiť sa informatiku.
     Rozvíja to zručnosti ako logika, tvorivosť, či riešenie problémových úloh. Ak
     začnú skoro, študenti získajú základy pre úspech v akejkoľvek profesnej dráhe
     21. storočia. Viac v štatistikách <a href='%{stats_url}'>tua>."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: Ako sa môžem zúčastniť Hodiny kódu?
   hoc_faq_how_participate_a: "<a href='/how-to'> Začnite plánovať</a> už dnes a pozrite
     si náš návod ako na to. V škole alebo vo svojej komunite môžete usporiadať podujatie
     Hodina kódu &mdash; alebo aj počas mimoškolských aktivít, neziskovách alebo v
     práci. Alebo jednoducho skúste sami keď bude %{campaign_date}."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Kto je zodpovedný za Hodinu kódu?
   hoc_faq_behind_hoc_a: Udalosť Hodina kódu organizuje <a href='http://code.org'>Code.org</a>,
     verejná nezisková organizácia /Us § 501 c3/, ktorá sa venuje zvyšovaniu podielu
@@ -527,6 +588,11 @@ sk:
     menšín. Je k dispozícii vo viacerých školách. <a href='%{codeorg_url}/about/partners'>Bezprecedentná
     koalícia partnerov</a> sa tiež spojila k podpore akcie Hodina kódu &mdash; vrátane
     Microsoftu, Applu, Amazonu, Boys and Girls Clubs of America a College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: Neviem nič o programovaní. Môžem napriek tomu organizovať akciu?
   hoc_faq_host_a: Samozrejme, aktiity Hodiny kódu sú riadené samostatne. Jediné, čo
     je potrebné urobiť, je <a href='%{codeorg_url}/learn'>vyskúšať si naše súčasné
@@ -534,6 +600,11 @@ sk:
     my sa postaráme o zvyšok. Zároveň poskytujeme možnosti pre každú vekovú skupinu
     a skupinu s rôznymi úrovňami zručností. Naplánujte svoju udalosť prečítaním si
     nášho <a href='/how-to'>návodu ako na to</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: Aké zariadenia by mali moji študenti používať?
   hoc_faq_devices_a: Návody Code.org fungujú na všetkých zariadeniach a prehliadačoch.
     Viac informácií o technických požiadavkach pre návody Code.org môžete nájsť <a
@@ -541,6 +612,11 @@ sk:
     môžete nájsť <a href='%{codeorg_url}/learn'>%{partner_url}v popise každého špecifického
     návodu</a>. Nezabudnite aj na <a href='%{unplugged_url}'>unplugged aktivity</a>v
     prípade, že vaša škola si nemôže prispôsobiť návody!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Potrebujem počítač pre každého účastníka?
   hoc_faq_need_computers_a: Nie. Máme výukové programy aktivity Hodina kódu, ktoré
     fungujú na počítačoch, smartfónoch, tabletoch a niektoré nevyžadujú počítač vôbec!
@@ -553,33 +629,64 @@ sk:
     Hodina kódu. Sledujte spoločne video, striedajte sa v riešení úloh alebo odpovedí
     na otázky. <li><b>Bez pripojenia.</b> Ponúkame aj <a href='%{unplugged_url}'>kurzy,
     ktoré nevyžadujú počítač.</a></ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Som na/v <country>. Ako sa môžem zúčastniť medzinárodne?
   hoc_faq_international_a: Každý človek, hocikde na svete môže zogranizovať Hodinu
     kódu. Minulý rok sa študenti z celého sveta spojili a zúčastnili sa akcie Hodina
     kódu. Viac informácií nájdete <a href='/promote'>tu</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: Ako môžem vytvoriť výukový tutoriál pre akciu Hodina kódu?
   hoc_faq_tutorial_a: Ak máte záujem sa stať partnerom pre návody, <a href='/tutorial-guidelines'>
     pozrite si naše usmernenia a pokyny</a>. Radi uvítame ďalšie možnosti zapojenia,
     ale hlavným cieľom je optimalizovať skúsenosti pre študentov a učiteľov, ktorí
     sú nemajú s informatikou skúsenosti.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Budú študenti potrebovať konto pre prihlásenie?
   hoc_faq_account_a: Nie. Pre študentov, ktorí chcú vyskúšať Hodinu kódu, registrovanie
     nie je potrebné. Ak sa študent rozhodne <a href='%{codeorg_url}/learn/beyond'>pokračovať
     v kurzoch</a>, je potrebné vytvoriť účet, aby bolo možné uchovať jeho výsledky.
     Taktiež prihlásenie sa na Hodinu kódu nevytvára automaticky účet Code Studio.
     Ak chcete vytvoriť účty pre študentov, postupujte podľa týchto <a href='https://youtu.be/_smelV_KISE'>inštrukcií</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Aké aktivity by som mal/a robiť so študentmi strednej školy?
   hoc_faq_high_school_a: Všetkým vekovým kategóriám odporúčame vyskúšať jeden zo začiatočníckych
     kurzov v časti<a href='%{codeorg_url}/learn'>%{partner_url}/učiť sa</a>. Napríklad
     kurz s Angry Birds alebo s Annou a Elsou. Študent strednej školy by mal byť schopný
     dokončiť jeden z nich za 30 minút a potom môže vyskúšať pokročilejšie kurzy v
     JavaScripte, Khan Academy nebo CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: Používám Scratch na Hodine kódu, ale čo ak moji študenti majú
     iPady a nie notebooky?
   hoc_faq_scratch_a: Scratch na tabletoch nefunguje. Ak sú vaši študenti mladí, môžu
     používať aplikáciu pre iPad ScratchJR. Ak sa pozriete na návody v časti<a href='%{codeorg_url}/learn'>%{partner_url}učiť
     sa</a>, nájdete tam ďalšie návody, ktoré fungujú na tabletoch - od Code.org, Tynker,
     Lightbot nebo CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: Ako budete počítať Hodiny kódu?
   hoc_faq_map_q: Prečo nevidím moju bodku na mape?
   hoc_faq_map_a: Je nám ľúto, že nevidíte svoju udalosť na mape udalosti Hodina kódu.
@@ -588,10 +695,22 @@ sk:
     mapu, budete presmerovaní na zoznam všetkých udalostí zoradených podľa štátov
     a tam môžete nájsť svoju udalosť. Tento zoznam sa vzhľadom na množstvo registrácií
     aktualizuje každých 48 hodín. Vráťte sa o pár dní neskôr!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: Tracker Hodiny kódu nie je presný nástroj na meranie používania
     stránky. Nepočítame jedinečné ID kódy študentov, aby sme zistili množstvo zapojených
     účastníkov v Hodine kódu, pretože nepožadujeme od študentov registráciu či prihlásenie.
     Detaly si môžete prečítať <a href='%{codeorg_url}/loc'>tu</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Čo všetko sa účastník môže naučiť za jednu hodinu?
   hoc_faq_one_hour_a: Cieľom Hodiny kódu nie je z jednotlivca vytvoriť expert programátora
     za hodinu. Jedna hodina je čas, za ktorý sa môžete naučiť, že informatika je o
@@ -608,24 +727,43 @@ sk:
     aj pre školských správcov, ktorí zisťujú, že informatika je niečo, o čo študenti
     majú záujem a učitelia sú schopní ju vyučovať. <br/><br/> Dodatočne, nad všetkým
     vládne myšlienka, že každý účastník sa za hodinu naučí, že sa to dá.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Máte ešte ďalšie otázky?
   hoc_faq_more_questions_a: Skúste nájsť odpoveď na našom <a href='http://support.code.org'>fóre
     pre podporu</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Môžem pokračovať aj po udalosti Hodina kódu?
   hoc_faq_keep_learning_a: Hodinu kódu si môže zorganizovať hocikto a kedykoľvek.
     Návody sú k dispozícii počas celého roka. Navštívte prosím <a href='/promote'>naše
     materiály</a> a v ako na to návodoch môžete nájsť ďalšie materiály, pomocou ktorých
     sa vaša udalosť Hodina kódu stane úspešnou.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Kde môžem nájsť certifikáty na tlač pre mojich študentov?
   hoc_faq_certificates_a: Choďte na stránku <a href='%{codeorg_url}/certificates'>certifikáty</a>
     a tam môžete nájsť certifikáty, ktoré si môžete prispôsobiť pre celú triedu. Zároveň
     si môžeze vytlačiť aj <a href='%{codeorg_url}/certificates?course=mc'>špeciálne
     certifikáty</a> pre študentov, ktorí absolvovali návod s názvom Minecraft.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Aké sú pravidlá používania loga a názvu Hodiny kódu?
   hoc_faq_logo_a: Hodina kódu nesie na sebe ochrannú známku. Nechceme brániť jej používaniu,
     avšak chceme zabezpečiť jej používanie vrámci pravidiel. Prosím pozrite si <a
     href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>tieto
     pravidlá použitia</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Štatistiky Hodiny kódu od roku 2013
   stats_growth: Najrýchlejší v dosiahnutí 15 miliónov používateľov.
   stats_i18n: Študenti sa učia vo viac než 45 jazykoch
@@ -640,6 +778,8 @@ sk:
   stats_females: Podiel žien v informatike je len 20% na stredoškolských, vysokoškolských
     smeroch a pracovnej sfére.
   stats_females_more: Počas Hour of Code tvoria ženy <b>50% všetkých účastníkov</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"Každý jeden deň poskytol rovnaký výsledok&mdash; zapojenie na 100%."
     - Nina Nichols Peery, pedagóg'
   stats_student: '"Vedela som, že je to šanca <b>raz za život</b>." Mariana Alzate,
@@ -760,8 +900,11 @@ sk:
     krajinách začínajúcich s Hodinou kódu.
   learn_banner_beyond: Chcete sa naučiť viac?  <a id='learn_banner_beyond'>Preskúmajte
     ďalšie možnosti</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Učitelia: <a id=''teacher_banner_host''> Hosťujte hodinu</a>
     alebo <a id=''teacher_banner_howto''> prečítajte si návod "Ako na to?"</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: ROBOTIKA
   learn_robotics_banner_blurb: Máte roboty? Využite ich v aktivitách nižšie a vytvorte
     pre študentov akéhokoľve veku Hodinu kódu s hmatateľným výsledkom!

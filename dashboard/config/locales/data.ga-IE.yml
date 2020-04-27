@@ -19,7 +19,7 @@ ga:
         Farmer2: An Feirmeoir 2
         Unplug8: Teibíocht
         Artist4: An tEalaíontóir 4
-        Unplug9: Códáil sealaíochta
+        Unplug9: Códáil Sealaíochta
         Farmer3: An Feirmeoir 3
         Unplug10: An tIdirlíon
         Artist5: An tEalaíontóir 5
@@ -39,6 +39,7 @@ ga:
         Custom: Ealaíontóir
         CustomStudio: Spraotharlann
         Gamelab: An tSaotharlann Cluichíochta
+        Spritelab: Saotharlann na Sprideanna
     trophy:
       name:
         Bronze: Cré-umha
@@ -597,7 +598,7 @@ ga:
         C2_graph_paper: Ríomhchlárú ar Ghrafpháipéar
         C2_conditionals_with_cards: Coinníollacha
         C2_binary_bracelets: Bráisléid Dhénártha
-        C2_relay_programming: Códáil sealaíochta
+        C2_relay_programming: Códáil Sealaíochta
         C2_paper_airplanes: Eitleáin Pháipéir
         C2_digital_footprint: Do Lorg Digiteach
         C2_digital_footprint_v2: Do Lorg Digiteach
@@ -612,7 +613,7 @@ ga:
         C3_bee_nested_loops: Lúba Neadaithe
         C3_bee_debugging: 'Beach: Dífhabhtú'
         C3_bounce: Preabadh
-        C3_playlab_create_game: 'Súgradh is Dáiríre: Cruthaigh Cluiche'
+        C3_playlab_create_game: 'Spraotharlann: Cruthaigh Cluiche'
         C3_computational_thinking: Smaointeoireacht Ríomhaireachtúil
         C3_dice_race: Rás Díslí
         C3_internet: An tIdirlíon
@@ -623,7 +624,7 @@ ga:
         C4_loops_zombie: Lúba
         C4_bee_conditional: 'Beach: Coinníollacha'
         C4_variables_artist: Athróga - Ealaíontóir
-        C4_variables_playlab: Athróga - Súgradh is Dáiríre
+        C4_variables_playlab: Athróga - Spraotharlann
         C4_for_loops: Lúba "Do Gach"
         C4_for_loops_bee: Lúba "Do Gach"
         C4_for_loops_no_bee: Lúba "Do Gach"
@@ -655,13 +656,13 @@ ga:
         frozen_intro: An Uair Chódála - Réamhrá
         frozen_loops: Buneolas ar Lúba
         frozen_functions: Buneolas ar Fheidhmeanna
-        playlab_intro: Buneolas Súgradh is Dáiríre
-        playlab_events: 'Súgradh is Dáiríre: Teagmhais'
-        playlab_repeat_forever: 'Súgradh is Dáiríre: Athdhéan go deo'
+        playlab_intro: Buneolas ar an Spraotharlann
+        playlab_events: 'Spraotharlann: Teagmhais'
+        playlab_repeat_forever: 'Spraotharlann: Athdhéan go deo'
         tutorial_puzzle_challenge: Dúshlán an Chúrsa
-        infinity_playlab_intro: Súgradh is Dáiríre - Réamhrá
-        infinity_playlab_events: Súgradh is Dáiríre - Teagmhais
-        infinity_playlab_repeat_forever: Súgradh is Dáiríre - Athdhéan go deo
+        infinity_playlab_intro: Spraotharlann - Réamhrá
+        infinity_playlab_events: Spraotharlann - Teagmhais
+        infinity_playlab_repeat_forever: Spraotharlann - Athdhéan go deo
         csd_concept_how_computers_work: 'An chaoi a n-oibríonn ríomhairí: Brollach'
         csd_concept_computer: 'An chaoi a n-oibríonn ríomhairí: Cad is ríomhaire ann,
           i ndáiríre?'
@@ -687,9 +688,12 @@ ga:
         csd_weblab_css_1: Buntús CSS - Cuid a haon
         csd_weblab_css_2: Buntús CSS - Cuid a dó
         csd_weblab_intro_3: Eolas bunúsach ar Shaotharlann an Ghréasáin - Cuid a trí
+        csp_applab_design: Buneolas ar an Mód Deartha
         csp_applab_functions: Buneolas ar Fheidhmeanna
         csp_applab_functions_parameters: Feidhmeanna a ghlacann le Paraiméadair
         csp_applab_loops: Lúba
+        csp_concept_encryption: 'An tIdirlíon: Criptiú agus Eochracha Poiblí'
+        csp_cs_is_changing_everything: Tá an Ríomheolaíocht ag athrú an domhain
         starwars_intro: 'Star Wars: Tóg do Réaltra Féin le Cód - Réamhrá'
         starwars_typing: 'Star Wars: Tóg do Réaltra Féin le Cód - JavaScript'
         starwars_events: 'Star Wars: Tóg do Réaltra Féin le Cód - Teagmhais'
@@ -711,12 +715,12 @@ ga:
         mc_2016_intro: Uair Chódála Minecraft - Réamhrá
         mc_2016_loops: Uair Chódála Minecraft - Lúba
         mc_2016_events: Uair Chódála Minecraft - Teagmhais
-        mc_2016_spawn: Uair Chódála Minecraft - Sceitheadh
+        mc_2016_spawn: Uair Chódála Minecraft - Cruthú
         mc_2016_congrats: Uair Chódála Minecraft - Comhghairdeas
         applab_hoc_welcome: Uair Chódála sa tSaotharlann Aipeanna - Fáilte
         applab_hoc_setproperty: Uair Chódála sa tSaotharlann Aipeanna - setProperty
         applab_hoc_onevent: Uair Chódála sa tSaotharlann Aipeanna - onEvent
-        applab_hoc_designmode: Uair Chódála sa tSaotharlann Aipeanna - Mód Deartha
+        applab_hoc_designmode: Uair Chódála sa tSaotharlann Aipeanna - An Mód Deartha
         applab_hoc_share: Uair Chódála sa tSaotharlann Aipeanna - Comhroinnt
         mc_2017_agent_intro: Uair Chódála Minecraft - An Gníomhaire
         mc_2017_repeat: Uair Chódála Minecraft - Lúba Athdhéanta
@@ -749,9 +753,82 @@ ga:
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_harvester_skinOverview_K-1: An Buainteoir
+        CSF_scrat_loops_K1: Lúba in Ice Age
+        CSF_scrat_loops_CF: Lúba in Ice Age
+        CSF_if_allskins: An Bloc "Má"
+        CSF_ifelse_allskins: Ag úsáid blocanna "má/i ngach cás eile"
+        CSF_ifelseifelse_allskins: Ag úsáid blocanna ""má/nó má/i ngach cás eile"
         CSF_loops_AB: Lúba
+        csd_gamelab_booleans: Sloinn Boole
+        csd_gamelab_conditional_statements: Ráitis Choinníollacha
+        csd_gamelab_if_else: Ráitis "má/i ngach cás eile"
+        CSF_SpriteLabIntro_CDEF: Seo é Saotharlann na Sprideanna
+        CSF_Spritelab_MakeSprite_CDEF: Conas a chruthaítear Sprid i Saotharlann na
+          Sprideanna
+        CDEF_Video_SpritesInAction: Sprideanna ar Obair
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprideanna ar Obair
+        CSF_StarWars_ProjectIntro: 'Tionscadal Star Wars: Réamheolas'
+        mc_2018_intro: 'Minecraft: Turas Uisceach: Réamheolas'
+        MC_2018_loops: 'Minecraft: Turas Uisceach: Athdhéan go dtí'
+        mc_2018_conditionals: 'Minecraft: Turas Uisceach: Coinníollacha'
+        mc_2018_closing: 'Minecraft: Turas Uisceach: Comhghairdeas'
+        hoc_dance_warmup: Cóisir Dhamhsa - Téamh Suas
+        hoc_dance_events: Cóisir Dhamhsa - Teagmhais
+        hoc_dance_properties: Cóisir Dhamhsa - Airíonna
+        hoc_dance_congrats: Cóisir Dhamhsa - Tosaímis an chóisir seo!
+        c_and_c_great_to_create: Bí Cruthaitheach; Bí Cothrom.
+        teaching_csf_how_it_works: 'Ag múineadh Bhuntús na Ríomheolaíochta: Conas
+          a oibríonn an cúrsa'
+        elem_pd_2: Ríomheolaíocht sa Bhunscoil - físeán PD 2/2
+        what_is_cs: Cad is ríomheolaíocht ann?
+        repeat_block: Ag úsáid an bhloic Athdhéan
+        lesson_planning: Ceachtanna a Phleanáil
+        opd_closing: 'Ag múineadh Bhuntús na Ríomheolaíochta: Críoch agus Céimeanna
+          Eile'
+        why_unplugged_lessons: Ag éirí "díphlugáilte"
+        writing_first_program: Do chéad ríomhchlár
+        conditionals_with_cards: Ceacht Díphlugáilte - Coinníollacha le Cártaí
+        songwriting_with_functions: Ceacht Díphlugáilte - Cumadh Amhrán le Feidhmeanna
+        what_is_an_event: Cad is teagmhas ann?
+        teaching_cs_pair_programming: 'Ag múineadh Bhuntús na Ríomheolaíochta: Códáil
+          Bheirte'
+        teaching_problem_solving: 'Ag múineadh Bhuntús na Ríomheolaíochta: Réiteach
+          Fadhbanna'
+        csd_applab_designmode: 'Fionnachtana sa Ríomheolaíocht: An tSaotharlann Aipeanna
+          - An Mód Deartha'
         csd_pair_programming: Códáil Bheirte
+        csd_gamelab_functions: Feidhmeanna a Shainmhíniú agus a Úsáid
         csd_applab_parameters: Feidhmeanna a ghlacann le Paraiméadair
+        csd_applab_loops: Lúba sa tSaotharlann Aipeanna
+        CSF_Going_Places_Safely: Mo Chomharsanacht Ar Líne
+        CSF_SpriteLab_Intro_v2: Fáilte go dtí Saotharlann na Sprideanna
+        CSF_Spritelab_MakeSprite_v2: Conas a Chruthaítear Sprid
+        CSF_SpriteLab_SpritesInAction_v2: Sprideanna ar Obair
+        csd_applab_designmode_short: An tSaotharlann Aipeanna - An Mód Deartha
+        csp-pd-welcome: Fáilte go dtí an Teaghlach!
+        CSF-Teaching-Problem-Solving: Réiteach Fadhbanna a Mhúineadh
+        u5-traversals-get-list-explanation: "[levelbuilder] Code.org - Físeán Píolótach
+          - Bloc sonraí"
+        u7-libraries-explanation: 'An tSaotharlann Aipeanna: Déan Blocanna de do chuid
+          féin - Conas a úsáidtear Leabharlanna'
+        how-to-k5-workshops: 'Buntús na Ríomheolaíochta le Code.org: Tástáilte ag
+          Gasúir, Dearfa ag Múinteoirí'
+        why-should-teach-unplugged-activities: 'Ceisteanna Coitianta: Cén fáth a mhúinfinn
+          gníomhaíochtaí "díphlugáilte"?'
+        cs-principles-intro-to-objects: 'Foras Feasa ar an Ríomheolaíocht: Buneolas
+          ar Réada'
+        oceans_machine_learning: Meaisínfhoghlaim
+        oceans_training_data: Sonraí Traenála
+        oceans_societal_implications: Impleachtaí Sóisialta
+        hoc_dance_congrats_2019: Cóisir Dhamhsa - Tosaímis an chóisir seo!
+        hoc_dance_warmup_2019: Cóisir Dhamhsa - Téamh Suas
+        hoc_dance_events_2019: Cóisir Dhamhsa - Teagmhais
+        hoc_dance_measures_2019: Cóisir Dhamhsa - Tomhais
+        hoc_dance_properties_2019: Cóisir Dhamhsa - Airíonna
+        csd_what_computers_do: Céard a dhéanann ríomhairí?
+        csf_my_online_neighborhood_2020: Mo Chomharsanacht Ar Líne
+        csf_follow_the_digital_trail: Lean an Lorg Digiteach
+        codebreak_e01: 'Códbhriseadh 1.0: Algartaim le Hill Harper'
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile

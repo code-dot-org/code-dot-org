@@ -1377,6 +1377,7 @@ ro:
       2:
         text: "Bună! Numele meu este Miral Kotb şi sunt dansator, dezvoltator de software\nşi creator al iLuminate."
       3:
+        text: "Aşadar, ştiinţa calculatoarelor se relaţionează cu creativitatea în foarte multe moduri. Vreau să spun, că odată ce poţi scrie software poţi pune idei în orice. Eu o fac prin costume cu lumini. Sunt atâtea lucruri pe care le poţi face odată ce ai uneltele de scris software, iar posibilităţile sunt fără sfârşit."
       4:
         text: "În următoarea oră, vei începe ştiinţa calculatoarelor prin programarea petrecerii tale cu dans! Noi am adunat pentru tine câteva melodii de top şi o echipă de mari dansatori să te joci cu ei."
       5:
@@ -1384,6 +1385,7 @@ ro:
       6:
         text: "Vei vedea că ecranul tău este împărţit în trei părţi principale. În partea stângă este zona de dans. Aici vor apărea dansatorii tăi."
       7:
+        text: "Această zonă din mijloc este bara cu unelte. Blocuri noi de cod vor fi disponibile în \nacest spaţiu odată cu trecerea ta prin lecţii."
       8:
         text: "Spaţiul din dreapta este zona de lucru. Poţi trage blocuri din bara cu unelte în\nzona de lucru pentru a-ţi construi programul."
       9:
@@ -1394,11 +1396,13 @@ ro:
       12:
         text: "Deasupra scenei este un meniu pentru alegerea cântecului. Sunt multe cântece din care poţi alege, deci distrează-te căutându-ţi cântecul favorit. Sub scenă se află butonul de execuţie (Run). Când apeşi butonul Execută (Run), vei vedea că dansatorii, din programul tău, vor apare pe scenă şi muzica va porni."
       13:
+        text: "Încearcă şi tu! Dacă te simţi blocat, este în regulă! Doar ridică-te şi mişcă-te, şi înainte să\nîţi dai seama, ţi-ai făcut propria petrecere cu dans. Deci, ce vei crea?"
     hoc_dance_events_2019:
       1:
         text: "Ora de cod | Petrecere cu dans: Evenimente"
       2:
       3:
+        text: "Pentru a face diverse mişcări de dans care să aibă loc la momentul potrivit din muzică, poţi folosi ceva numit evenimente (events). Un eveniment îi spune programului tău să urmărească ceva care o să se întâmple, după care să reacţioneze în modul potrivit."
       4:
         text: "Cateva exeple de evenimente sunt de ascultare pentru un clic de mouse, un buton segeata sau un robinet pe ecran."
       5:
@@ -1434,7 +1438,9 @@ ro:
       7:
       8:
       9:
+        text: "Utilizând un bloc \"setează\", poţi schimba dansatorului următoarele: dimensiunea, rotaţia, poziţia şi culoarea. Jucându-te cu aceste proprietăţi poţi face orice tip de modificări pe care\nsă le legi la diverse părţi din cântec."
       10:
+        text: "Adu-ţi aminte, poţi seta proprietăţile unui dansator care există deja. Asigură-te că blocul \"setează\" urmează după blocul \"crează un nou dansator\". Simte-te liber să experimentezi, fi creativ şi distrează-te."
     hoc_dance_congrats_2019:
       1:
         text: "Ora de cod | Petrecere cu dans: Petrecerea continuă!"

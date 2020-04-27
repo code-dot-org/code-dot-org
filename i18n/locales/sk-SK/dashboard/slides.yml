@@ -295,6 +295,10 @@ sk:
       2:
       3:
       4:
+    C2_bee_loops:
+      1:
+        text: "Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát. Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane."
+      2:
     C2_relay_programming:
       1:
         text: "Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom a o hľadaní a opravovaní chýb, ktoré sa stávajú, keď pracujete v tíme a naozaj rýchlo. Využijeme programovanie na štvorčekový papier, aby sme nasimulovali skutočné programovanie a štafetové preteky, aby sme cítili aj časový tlak."
@@ -397,9 +401,11 @@ sk:
       5:
         text: "Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je príkaz, ktorému BB-8 rozumie."
       6:
+        text: "Biela oblasť vpravo sa nazýva pracovný priestor, na tomto mieste budeme vytvárať náš program."
       7:
       8:
       9:
+        text: "Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
       10:
     starwars_blocks_events:
       1:
@@ -992,6 +998,7 @@ sk:
       2:
         text: "Ahoj! Volám sa Miral Kotb a som tanečníčka, softvérová vývojárka a zakladateľka iLuminate."
       3:
+        text: "Takže, informatika súvisí s kreativitou vo veľa smeroch. Nemerateľne veľa, naozaj. Mám na mysli to, že ak máš raz schopnosť písať softvér, môžeš vložiť myšlienky do čohokoľvek. Ja to robím so sveteľným oblekmi. Je toho tak veľa, čo môžeš vytvoriť akonáhle máš nástroje na písanie softvéru a tvoje možnosti sú neobmedzené."
       4:
         text: "Behom nadchádzajúcej hodiny začneš s informatikou programovaním svojej vlastnej tanečnej párty! Dali sme dokopy viacero hitov a tím výborných tanečníkov s ktorými sa môžeš hrať."
       5:
@@ -999,6 +1006,7 @@ sk:
       6:
         text: "Uvidíš, že obrazovku máš rozdelenú na tri hlavné časti. Na ľavej strane je hracia plocha. Tu sa objavia tvoji tanečníci."
       7:
+        text: "Stredná časť sú tvoje nástroje. V tejto časti sa ti postupne, ako budeš prechádzať cez jednotlivé úrovne sprístupnia nové bloky kódu."
       8:
         text: "Priestor vpravo je pracovná plocha. Bloky z ponuky nástrojov môžeš presunút na pracovnú plochu, čím vytvoríš svoj program."
       9:
@@ -1009,11 +1017,13 @@ sk:
       12:
         text: "Nad hernou plochou je menu pre výber hudby. Sú tu tony pesničiek z ktorých môžeš vyberať. Zabav sa pri hľadaní svojich obľúbených. Pod hracou plochou je tlačíidlo na spustenie programu. Keď ho stlačíš, tanečníci z tvojho programu sa objavia na hracej ploche a začne hrať hudba."
       13:
+        text: "Skús to samostatne! Ak sa zasekneš, je to ok! Vstaň a začni sa hýbať a skôr ako sa nazdáš, budeš mať vytvorenú svojú vlastnú tanečnú párty. Takže, čo vytvoríš ty?"
     hoc_dance_events_2019:
       1:
         text: "Hodina Kódu | Tanečná Párty: Udalosti"
       2:
       3:
+        text: "Aby sa rôzne tanečné kroky spúšťali v správny čas s hudbou, môžeš použiť niečo, čo sa volá Udalosti. Udalosť povie tvojmu programu, aby sledoval či sa niečo stane a potom na to reagoval správnym spôsobom."
       4:
         text: "Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie tlačidla šípky, alebo na dotyk na dotykovú obrazovku."
       5:
@@ -1049,7 +1059,9 @@ sk:
       7:
       8:
       9:
+        text: "Použitím bloku nastav, môžeš tiež zmeniť tanečníkove rozmery, otočenie, pozíciu a sfarbenie. Hraním sa s týmito parametrami môžeš vytvoriť celú plejádu zmien a naviazať ich na rôzne časti pesničky."
       10:
+        text: "Pamätaj, že môžeš nastaviť vlastnosti tanečníka, iba ak už existuje. Uisti sa, že blok 'nastav' nasleduje až po bloku 'vytvor'. Neváhaj experimentovať, buď kreatívny a zabav sa."
     hoc_dance_congrats_2019:
       1:
         text: "Hodina Kódu | Tanečná Párty: Párty pokračuje!"

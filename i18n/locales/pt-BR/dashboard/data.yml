@@ -537,6 +537,26 @@ pt-BR:
         CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
         csd_debugging: Analisando
+        csd_applab_designmode_short: Modo de design do laboratório de aplicativos
+        csp-pd-welcome: Bem-vindo à familia!
+        CSF-Teaching-Problem-Solving: Resolução de problemas de ensino no CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Vídeo piloto - Bloco de dados
+        u7-libraries-explanation: 'App Lab: Crie seus próprios blocos - Como usar bibliotecas'
+        how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor aprovado'
+        why-should-teach-unplugged-activities: 'FAQ: Por que devo ensinar atividades "desplugadas"?'
+        cs-principles-intro-to-objects: 'Princípios de CS: Introdução aos Objetos'
+        oceans_machine_learning: Máquina de aprendizado
+        oceans_training_data: Dados de treinamento
+        oceans_societal_implications: 'Vídeo: Impactos na Sociedade'
+        hoc_dance_congrats_2019: Dance Party 2019 - Festejar!
+        hoc_dance_warmup_2019: Dance Party 2019 - Aquecimento
+        hoc_dance_events_2019: Dance Party 2019 - Eventos
+        hoc_dance_measures_2019: Dance Party 2019 - Compassos
+        hoc_dance_properties_2019: Dance Party 2019 - Propriedades
+        csd_what_computers_do: O que os computadores fazem?
+        csf_my_online_neighborhood_2020: Minha Vizinhança Online
+        csf_private_and_personal_information: Informações Privadas e Pessoais
+        csd_what_computers_are: O que é um computador?
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

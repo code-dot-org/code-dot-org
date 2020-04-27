@@ -279,7 +279,7 @@ pt-BR:
         desta vez
       2-3 Maze 15: Neste desafio, dois laços `repita` ajudarão você a pegar o porco
         com o menor número possível de blocos!
-      2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos\npossível!
+      2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos possível!
         \n\nUse um laço \"repita\" dentro de outro para diminuir a quantidade de código
         que você precisa."
       2-3 Maze Loops 19: "Vamos subir o nível! \n\nUse laços para me levar até o girassol
@@ -6943,7 +6943,7 @@ pt-BR:
       CSD U3 - Conditionals Video_2019: |-
         ## Perguntas para Consideração
 
-        -   Qual é um exemplo de quando você precisaria de uma declaração "if/else"?
+        -   Dê é um exemplo de quando você precisaria de uma declaração "if/else"?
       CSD U3 - Simple Counter Predict: |-
         # O Padrão de Contador
 
@@ -11627,21 +11627,54 @@ pt-BR:
         _Verifique com seu professor antes de iniciar qualquer um dos desafios._
 
         Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
-      CSD U3 collisions bounciness: Até o momento. "bounceOff" tem feito sprites irem
-        para longe de outros objetos assim que batem neles. No mundo real, praticamente
-        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
-        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
-        bate em algo
-      CSD U3 collisions bounciness_2018: Até o momento. "bounceOff" tem feito sprites
-        irem para longe de outros objetos assim que batem neles. No mundo real, praticamente
-        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
-        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
-        bate em algo
-      CSD U3 collisions bounciness_2019: Até o momento. "bounceOff" tem feito sprites
-        irem para longe de outros objetos assim que batem neles. No mundo real, praticamente
-        tudo fica um pouco mais lento quando quica em algo. Você pode usar o bloco
-        "elasticidade" para dizer o quanto um sprite acelera ou desacelera quando
-        bate em algo
+      CSD U3 collisions bounciness: |-
+        Bounciness
+
+        Até agora, o `bounceOff` fez os sprites se afastarem de outros objetos tão rapidamente quanto eles saltaram neles. No mundo real, quase tudo diminui um pouco quando ricocheteia em outra coisa. Você pode usar o bloco de `` bounciness '' para dizer ao seu sprite o quanto diminuir ou acelerar quando ele salta sobre outra coisa.
+
+        # Faça isso
+
+        -   Leia o código abaixo e pressione "Executar" para ver o comportamento da bola de basquete e bilhar.
+        -   Use um bloco de `bounciness` para definir a bounciness da sua bola de futebol.
+        -   Execute o código novamente para ver como os sprites saltam do chão.
+
+        [//]: # "https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png"
+
+        [//]: # "https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png"
+
+        [//]: # "https://images.code.org/0e4e9c26bed0d31d14f6b3f8f8bb4c27-image-1475786966986.png"
+      CSD U3 collisions bounciness_2018: |-
+        Bounciness
+
+        Até agora, o `bounceOff` fez os sprites se afastarem de outros objetos tão rapidamente quanto eles saltaram neles. No mundo real, quase tudo diminui um pouco quando ricocheteia em outra coisa. Você pode usar o bloco de `` bounciness '' para dizer ao seu sprite o quanto diminuir ou acelerar quando ele salta sobre outra coisa.
+
+        # Faça isso
+
+        -   Leia o código abaixo e pressione "Executar" para ver o comportamento da bola de basquete e bilhar.
+        -   Use um bloco de `bounciness` para definir a bounciness da sua bola de futebol.
+        -   Execute o código novamente para ver como os sprites saltam do chão.
+
+        [//]: # "https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png"
+
+        [//]: # "https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png"
+
+        [//]: # "https://images.code.org/0e4e9c26bed0d31d14f6b3f8f8bb4c27-image-1475786966986.png"
+      CSD U3 collisions bounciness_2019: |-
+        Bounciness
+
+        Até agora, o `bounceOff` fez os sprites se afastarem de outros objetos tão rapidamente quanto eles saltaram neles. No mundo real, quase tudo diminui um pouco quando ricocheteia em outra coisa. Você pode usar o bloco de `` bounciness '' para dizer ao seu sprite o quanto diminuir ou acelerar quando ele salta sobre outra coisa.
+
+        # Faça isso
+
+        -   Leia o código abaixo e pressione "Executar" para ver o comportamento da bola de basquete e bilhar.
+        -   Use um bloco de `bounciness` para definir a bounciness da sua bola de futebol.
+        -   Execute o código novamente para ver como os sprites saltam do chão.
+
+        [//]: # "https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png"
+
+        [//]: # "https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png"
+
+        [//]: # "https://images.code.org/0e4e9c26bed0d31d14f6b3f8f8bb4c27-image-1475786966986.png"
       CSD U3 collisions build isTouching: |-
         # Balão
 
@@ -12195,14 +12228,18 @@ pt-BR:
         -   Adicione código que evite a moeda de se mover para trás de um obstáculo. Não tenha medo de testar ideias para saber como funcionam.
         -   Converse com seu vizinho: Qual interação você usou? Existe alguma outra interação que faça o mesmo?
       CSD U3 collisions flyman make it your own: |-
-        # Jogo de voo - Faça o seu
+        Flyer Game - Faça o seu próprio
 
-        Hora de fazer o seu próprio jogo usando interações sprite. Algumas ideias são apresentadas abaixo ou você pode escolher adicionar as suas próprias funcionalidades. Tenha a certeza de estar pronto para compartilhar suas ideias com seus colegas de classe.
+        Hora de criar esse jogo usando o que você aprendeu sobre interações com sprites.
 
-        -   Crie sprites "borda" para evitar que seu personagem caia para fora.
-        -   Adicione uma plataforma ao jogo para seu personagem navegar.
-        -   Adicione outros obstáculos no seu jogo.
-        -   Crie outra ideia própria.
+        # Faça isso
+
+        Adicione pelo menos mais um aspecto ao seu jogo que use interações de sprite. Existem algumas idéias abaixo ou você pode optar por adicionar seus próprios recursos. Verifique se você está pronto para compartilhar suas idéias com seus colegas de classe.
+
+        -   Crie sprites de "borda" para impedir que seu personagem salte.
+        -   Adicione plataformas ao jogo para o seu personagem navegar.
+        -   Adicione outro obstáculo ao seu jogo.
+        -   Crie outra ideia sua.
       CSD U3 collisions flyman make it your own_2018: |-
         # Jogo do aviador - Faça o seu próprio
 
@@ -14111,8 +14148,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -14121,8 +14158,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -14131,8 +14168,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -19746,9 +19783,9 @@ pt-BR:
         a mesma coisa agora com a variável `contador`. \n\nEsse padrão começa com
         um triângulo e adiciona um lado de cada vez até que seja desenhado um decágono
         (10 lados). Cada lado deve ter 100 pixels de comprimento. \n\nComo você irá
-        usar a variável `contador` do laço `for` para recriar este desenho?"
+        usar a variável `counter` do laço `for` para recriar este desenho?"
       Course 4 Artist For Loops 11a: "Vamos juntar tudo! \n\nUsando seu conhecimento
-        sobre laços `for` e a variável `contador`, crie este desenho em que cada forma
+        sobre laços `for` e a variável `counter`, crie este desenho em que cada forma
         possui dois lados a mais do que a anterior. Tenha certeza que cada lado seja
         10 vezes maior do que o número de lados do polígono.\n\nApenas uma pequena
         parte do código foi fornecida para você."
@@ -19756,7 +19793,7 @@ pt-BR:
         você normalmente faria com uma forma, isto cria um efeito legal. \n\nTente
         usar um pouco do código do último nível, mas girando 89 graus para criar esta
         espiral quadrada retorcida."
-      Course 4 Artist For Loops 15: "**Tempo Livre:** Tente criar alguns desenhos
+      Course 4 Artist For Loops 15: "**Atividade Livre:** Tente criar alguns desenhos
         próprios usando `laços for`. Foram criadas algumas variáveis úteis para você."
       Course 4 Artist For Loops 2: |-
         Eu coloquei o código para desenhar um triângulo dentro de um laço `for` que conta de 50 a 100, de 10 em 10.
@@ -19958,7 +19995,7 @@ pt-BR:
         Você não precisa mudar nada neste nível.
 
         **Orientações:** Use as setas à esquerda e à direita para se mover, e seta para cima para pular. Veja se você consegue coletar todas as bandeiras.
-      Course 4 Play Lab Vars 4: 'Agora estamos usando uma variável denominada `altura`
+      Course 4 Play Lab Vars 4: 'Agora estamos usando uma variável denominada `height`
         para controlar o quão alto o cão consegue pular. Atualize a variável `altura`
         para que o cão possa saltar alto o suficiente para alcançar as bandeiras. '
       Course 4 Play Lab Vars 6: |-
@@ -20848,48 +20885,44 @@ pt-BR:
         Jogue pega-pega com esses gigantes de metal e use <xml> <block type=\"craft_addScore\">
         \   <title name=\"SCORE\">1</title>  </block></xml> bloco para te dar um ponto
         cada vez que você encostar neles.  \n\n  Faça 5 pontos para ganhar!"
-      MC_HOC_2017_01_RETRY: "{currentPlayerName} está preso dentro da casa, mas o
-        Agent está aqui para ajudar!  \\\r\n \\\r\n   \\\r\nFixe um bloco 'mover para
-        a frente' no bloco 'ao rodar' na área de trabalho para levar o Agent até a
-        placa de pressão [PressurePlate_Up], então pressione \"Executar\" e use as
-        teclas de seta para mover o jogador {currentPlayerName} para fora da casa
-        para coletar o **baú** [chest].  "
-      MC_HOC_2017_01_RETRY_2019: "{currentPlayerName} está preso dentro da casa, mas
-        o Agent está aqui para ajudar!  \\\r\n \\\r\n   \\\r\nFixe um bloco 'mover
-        para a frente' no bloco 'ao rodar' na área de trabalho para levar o Agent
-        até a placa de pressão [PressurePlate_Up], então pressione \"Executar\" e
-        use as teclas de seta para mover o jogador {currentPlayerName} para fora da
-        casa para coletar o **baú** [chest].  "
+      MC_HOC_2017_01_RETRY: |-
+        A porta está trancada, mas o agente está aqui para ajudar!
+
+        Encaixe um bloco `avançar 'na parte inferior do bloco` quando executar\` na área de trabalho para levar o Agente ao placa de pressão [PressurePlate_Up], depois pressione "Executar" e use as teclas de seta para sair da casa para coletar o **baú** [chest].
+      MC_HOC_2017_01_RETRY_2019: |-
+        A porta está trancada, mas o agente está aqui para ajudar!
+
+        Encaixe um bloco `avançar 'na parte inferior do bloco` quando executar\` na área de trabalho para levar o Agente ao placa de pressão [PressurePlate_Up], depois pressione "Executar" e use as teclas de seta para sair da casa para coletar o **baú** [chest].
       MC_HOC_2017_02_Cole: "{currentPlayerName} entrou em uma aventura! Para ajudar,
         pegue o **mapa** [map_empty] atrás da porta trancada à direita. \\\r\n \\\r\nFixe
-        o código na área de trabalho para mover o Agent até a placa de pressão [PressurePlate_Up]
+        o código na área de trabalho para mover o Agente até a placa de pressão [PressurePlate_Up]
         para que o jogador {currentPlayerName} consiga passar. "
       MC_HOC_2017_02_Cole_2019: "{currentPlayerName} entrou em uma aventura! Para
         ajudar, pegue o **mapa** [map_empty] atrás da porta trancada à direita. \\\r\n
-        \\\r\nFixe o código na área de trabalho para mover o Agent até a placa de
+        \\\r\nFixe o código na área de trabalho para mover o Agente até a placa de
         pressão [PressurePlate_Up] para que o jogador {currentPlayerName} consiga
         passar. "
       MC_HOC_2017_03_Cole: "{currentPlayerName} continua na aventura e precisa da
         **bússola** [compass] para se preparar para a viagem. \\\r\n   \\\r\nUse o
-        código do Agent para abrir o portão. "
+        código do Agente para abrir o portão. "
       MC_HOC_2017_03_Cole_2019: "{currentPlayerName} continua na aventura e precisa
         da **bússola** [compass] para se preparar para a viagem. \\\r\n   \\\r\nUse
-        o código do Agent para abrir o portão. "
+        o código do Agente para abrir o portão. "
       MC_HOC_2017_04POINT5_RYAN: "Você conseguiu chegar até o outro lado! \\\r\n\\\r\nAgora,
         leve o jogador {currentPlayerName} em segurança pelo labirinto para coletar
         o **machado** [diamond_axe]\\\r"
       MC_HOC_2017_04POINT5_RYAN_2019: "Você conseguiu chegar até o outro lado! \\\r\n\\\r\nAgora,
         leve o jogador {currentPlayerName} em segurança pelo labirinto para coletar
         o **machado** [diamond_axe]\\\r"
-      MC_HOC_2017_04_Cole: "O Agent pode mover-se pela água! \\\r\n \\\r\nUse um ciclo
-        'repetir' para resolver este enigma e ajudar {currentPlayerName} a chegar
+      MC_HOC_2017_04_Cole: "O Agente pode mover-se pela água! \\\r\n \\\r\nUse um
+        laço 'repetir' para resolver este enigma e ajudar {currentPlayerName} a chegar
         até o **balde** [bucket_empty] atrás da porta. "
-      MC_HOC_2017_04_Cole_2019: "O Agent pode mover-se pela água! \\\r\n \\\r\nUse
-        um ciclo 'repetir' para resolver este enigma e ajudar {currentPlayerName}
-        a chegar até o **balde** [bucket_empty] atrás da porta. "
-      MC_HOC_2017_05_Cole: "Ah não, a ponte está interditada! \\\r\n\\\r\nUse o código
-        do Agent para reconstruir a ponte usando o bloco 'colocar' para que {currentPlayerName}
-        consiga pegar a **pá** [diamond_shovel]."
+      MC_HOC_2017_04_Cole_2019: "O Agente pode mover-se pela água! \\\r\n \\\r\nUse
+        um laço 'repetir' para resolver este enigma e ajudar {currentPlayerName} a
+        chegar até o **balde** [bucket_empty] atrás da porta. "
+      MC_HOC_2017_05_Cole: "Ah não, a ponte está interditada! \\\r\n\\\r\n\nCodifique
+        o agente para reconstruir a ponte usando o bloco [blockly] [0] para que {currentPlayerName}
+        possa chegar à \\*\\* pá \\*\\* [diamond_shovel]."
       MC_HOC_2017_05_Cole_2019: "Ah não, a ponte está interditada! \\\r\n\\\r\nUse
         o código do Agent para reconstruir a ponte usando o bloco 'colocar' para que
         {currentPlayerName} consiga pegar a **pá** [diamond_shovel]."
@@ -20919,10 +20952,10 @@ pt-BR:
       MC_HOC_2017_Ali_2019: 'Olhe as funções abaixo. Como pode você usá-las para evitar
         o Ghasts e ajudar {currentPlayerName} a chegar em segurança até o **Livro
         Encantado** [book_enchanted]?  '
-      MC_HOC_2017_FP20x20: "**Jogo Livre:** Agora é com você! Use o código do Agent
+      MC_HOC_2017_FP20x20: "**Jogo Livre:** Agora é com você! Use o código do Agente
         para ajudá-lo a explorar este mundo."
       MC_HOC_2017_FP20x20_2019: "**Jogo Livre:** Agora é com você! Use o código do
-        Agent para ajudá-lo a explorar este mundo."
+        Agente para ajudá-lo a explorar este mundo."
       Making Music: |-
         Hoje você aprenderá a usar e criar \*\* funções \*\*.
 
@@ -21098,7 +21131,7 @@ pt-BR:
 
         Experimente coletando estas flores usando um incremento de 2.
       NEW Course 4 Bee For Loops 7: |-
-        Agora, vamos combinar a variável `contador` com um bloco matemático! Como você pode usar a variável `contador` para navegar este jardim com o menor número possível de blocos?
+        Agora, vamos combinar a variável `counter` com um bloco matemático! Como você pode usar a variável `counter` para navegar este jardim com o menor número possível de blocos?
 
         O que você precisa fazer para coletar 3, 6, 9, 12, 15 néctares desta vez? O segredo está na variável `contador`!
 
@@ -21185,6 +21218,8 @@ pt-BR:
         Agora que você transmitiu informações representadas como números decimais, é possível mapear esses números para caracteres de texto para enviar e receber informações baseadas em texto. Com um protocolo baseado em texto, você pode representar e comunicar com facilidade todos os tipos de informações.
 
         Seu professor fornecerá instruções mais específicas para esta atividade.
+      New Minecraft Hero Project: "**Jogo Livre:** Agora é com você! Use o código
+        do Agente para ajudá-lo a explorar este mundo."
       OPD-K5 CS Video: |-
         ## Vamos Começar: Por que Fundamentos de Ciências da Computação (CC)?
 
@@ -21196,31 +21231,31 @@ pt-BR:
         >
         > Quais são suas primeiras impressões de Fundamentos de CC?
         >
-        > [Envie suas impressões pelo Tweeter](https://twitter.com/teachcode) e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
+        > [Envie suas impressões pelo Tweeter][0] e não se esqueça de usar a tag @teachcode na sua mensagem para que possamos responder.
         >
         > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Compartilhe no Tweeter >></button></a><br><br>
-        > Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook](https://www.facebook.com/Code.org/) ou no [Instagram](https://www.instagram.com/codeorg/).
+        > Não possui uma conta no Twitter? Você também pode nos encontrar no [Facebook][1] ou no [Instagram][2].
       OPD-K5 Closing: |-
         > \*\*Se você gostou deste curso, inscreva-se para um workshop presencial: \*\*
         >
-        > [Inscreva-se agora](http://code.org/professional-development-workshops) para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
+        > [Inscreva-se agora][0] para continuar aprendendo ciência da computação e sua pedagogia. As oficinas presenciais gratuitas são um local valioso para colaborar e interagir com outros educadores apaixonados em sua área.
       OPD-K5 EventsVid: |-
         Assista este vídeo que define "eventos" e mostra como eles funcionam em Fundamentos de CC. Em seguida, você irá tentar alguns quebra-cabeças que requerem que você codifique eventos.
 
         > Um evento é uma linha de código que diz ao seu computador para "escutar" alguma coisa acontecer, e em seguida tomar uma ação. Por exemplo, em páginas web você geralmente pode exibir um menu suspenso ao passar sobre a barra de navegação com seu mouse. A "rolagem do mouse" é um "evento" que dispara uma ação.
       OPD-K5 FirstProgram: Assista o vídeo abaixo, que explica o primeiro programa
-        que os estudantes irão escrever no [Curso A](https://studio.code.org/s/coursea-2018?section_id=2042045).
-        Na próxima página, você mesmo irá escrever um programa parecido!
+        que os estudantes irão escrever no [Curso A][0]. Na próxima página, você mesmo
+        irá escrever um programa parecido!
       OPD-K5 LessonPlanning: |-
         Até agora, você foi apresentado a alguns de nossos planos de aulas desplugados. No entanto, existem planos de aula para cada uma das lições em Fundamentos de CC - tanto conectadas quanto on-line. Você pode encontrar a lista completa de planos de aula para cada curso abaixo:
         <br/>
         <br/>
-        [Planos de aula do curso A](https://curriculum.code.org/csf-18/coursea/)<br/>
-        [Planos de aula do curso B](https://curriculum.code.org/csf-18/courseb/)<br/>
-        [Planos de aula do curso C](https://curriculum.code.org/csf-18/coursec/)<br/>
-        [Planos de aula do curso D](https://curriculum.code.org/csf-18/coursed/)<br/>
-        [Planos de aula do curso E](https://curriculum.code.org/csf-18/coursee/)<br/>
-        [Planos de aula do curso F](https://curriculum.code.org/csf-18/coursef/)<br/>
+        [Planos de aula do curso A][0]<br/>
+        [Planos de aula do curso B][1]<br/>
+        [Planos de aula do curso C][2]<br/>
+        [Planos de aula do curso D][3]<br/>
+        [Planos de aula do curso E][4]<br/>
+        [Planos de aula do curso F][5]<br/>
 
         No entanto, você pode querer adaptar essas lições ou criar as suas próprias! O vídeo abaixo explica a estrutura das lições de Fundamentos de CC, mas também fornece dicas, caso você queira desenvolver suas próprias lições.
       OPD-K5 Problem Solving: |-
@@ -21231,7 +21266,7 @@ pt-BR:
         <iframe width="640" height="390" src="https://www.youtube.com/embed/XN0G6bSbQ2M" frameborder="0" allowfullscreen></iframe>
         [Não consegue ver o vídeo? Clique aqui][0]
 
-        [Esta planilha](https://twitter.com/teachcode) detalha os passos da Receita para Resolver Quebra-Cabeças.
+        [Esta planilha][1] detalha os passos da Receita para Resolver Quebra-Cabeças.
 
         <img src="https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png" width="650px" style="margin-right:45px; border-radius:10px;">
 
@@ -22483,9 +22518,10 @@ pt-BR:
 
         1.  Crie um evento que faz uma de suas figuras de alimento pular para um lugar aleatório quando seu pet encosta nele.
         2.  Repita o procedimento acima para a outra figura de alimento.
-      Virtual Pet 6: "Uma dieta balanceada é importante! Temos que alimentar as girafas
-        para que elas recuperem sua força.\n\nAdicione uma maçã na cena e faça a girafa
-        voltar ao tamanho normal quanto encostar nela.  "
+      Virtual Pet 6: |-
+        Uma dieta balanceada é importante! Temos que alimentar as girafas para que elas recuperem sua força.
+
+        Adicione uma maçã na cena e faça a girafa voltar ao tamanho normal quando dois sprites se tocarem
       Virtual Pet 6_2019: |-
         Use <xml><block type="variables_set" block-text="bloco de definição de variável"><title name="VAR">energia</title></block></xml> junto com <xml><block type="math_change" block-text="bloco para alteração de variável"><title name="VAR">energia</title></block></xml> para fazer com que comer alimentos afete a energia do teu pet! Quanto mais energia ele tiver, mais rápido ele se move!
 
@@ -22550,7 +22586,7 @@ pt-BR:
       behaviors free play: "**Livre**: Crie seu próprio cenário espacial!"
       comment_intro_maze_2018: "_\"Estou confuso. Ajude-me a lembrar como resolver
         esse labirinto\"_  \n\n* * *\n\nPara completar esse quebra-cabeça, resolva
-        o labirinto e uso o novo <xml><block type=\"comment\">\n    <title name=\"TEXT\">
+        o labirinto e use o novo <xml><block type=\"comment\">\n    <title name=\"TEXT\">
         </title>\n  </block></xml> para deixar lembretes. Eles podem te ajudar a lembrar
         o que você estava fazendo e o por quê.\n\nComentários são usados somente por
         **você**, eles não afetam a área do jogo."
@@ -22625,7 +22661,7 @@ pt-BR:
       course3_artist_functions_challenge1: A partir do momento que você definir uma
         função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
         código para ver como funciona, então mude-o para fazer o seu próprio desenho
-        impresionante!
+        impressionante!
       course3_artist_functions_challenge2: |-
         Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
 
@@ -22670,7 +22706,7 @@ pt-BR:
         para ver como funciona. \n\nAlguma coisa deveria acontecer quando você consegue
         pontos o suficiente ou quando você perder todos os pontos. Adicione um código
         para as funções de `ganhar jogo` e `perder jogo` para fazer o jogo funcionar
-        da forma como devia. \nClique nos dicas para ideias!"
+        da forma como devia. \nClique nas dicas para ideias!"
       course4_artist_binary_challenge1: Você só pode usar cada valor binário (0 ou
         1) uma vez cada neste quebra-cabeça. Tente usar repetições aninhadas para
         completar este desenho.
@@ -22691,7 +22727,7 @@ pt-BR:
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
         ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e
         substitua-o por algo totalmente diferente)
-      course4_artist_variables_challenge1: Voce consegue criar uma variável `comprimento`
+      course4_artist_variables_challenge1: Você consegue criar uma variável `comprimento`
         e usá-la para criar este padrão?
       course4_bee_for_challenge1: Use este laço for para coletar todo o néctar. Existem
         algumas ações que você vai `repetir 'contador' vezes`.
@@ -23182,16 +23218,10 @@ pt-BR:
         para a direita quando a seta para direita for clicada.
       courseA_playLab_events4_2018: Agora, adicione um outro bloco de evento para
         fazer Jorge mover-se para a direita quando a seta para direita for clicada.
-      courseA_playLab_events4_2019: Agora, adicione um outro bloco de evento para
-        fazer Jorge mover-se para a direita quando a seta para direita for clicada.
       courseA_playLab_events5: Adcione eventos para fazer com que Jorge mova-se para
         cima e para baixo quando a seta para cima e para baixo forem pressionadas.
       courseA_playLab_events5_2018: Adcione eventos para fazer com que Jorge mova-se
         para cima e para baixo quando a seta para cima e para baixo forem pressionadas.
-      courseA_playLab_events5_2019: Adcione eventos para fazer com que Jorge mova-se
-        para cima e para baixo quando a seta para cima e para baixo forem pressionadas.
-      courseA_playLab_events6_2019: Torne isso mais interessante alterando o fundo
-        e tocando um som aleatório quando Jorge for clicado.
       courseA_playLab_events7_2018: _Jogo Livre:_ Adicione qualquer coisa nesse jogo.
         Você consegue fazer o dinossauro desaparecer  quando Jorge correr em direção
         a ele?
@@ -25946,10 +25976,10 @@ pt-BR:
 
         Faça os seus outros sprites mostrarem informações quando são clicados. Tenha certeza de que o que você está compartilhando é SEGURO!
       courseE_aboutme_6: "![](https://images.code.org/4e9c4465463d0c061b2b47b23d5817ca-image-1557185863600.png)
-        _\"Wow! Seu poster é quase tão legal quanto o meu! Quase. \U0001F609\"_\n\nDe
-        quem é esse mundo?! É seu! \n\nEntão, continue! Aqui tem algumas ideias para
-        fazer o seu poster ficar ainda melhor:\n\n-   Adicione um plano de fundo!
-        Escolha um plano de fundo que combine com o seu poster.\n-   Adicione comportamentos!
+        _\"Wow! Seu poster é quase tão legal quanto o meu! Quase. \"_\n\nDe quem é
+        esse mundo?! É seu! \n\nEntão, continue! Aqui tem algumas ideias para fazer
+        o seu poster ficar ainda melhor:\n\n-   Adicione um plano de fundo! Escolha
+        um plano de fundo que combine com o seu poster.\n-   Adicione comportamentos!
         Faça cada um dos seus sprites reagir de maneira diferente quando são clicados.\n-
         \  Adicione mais eventos! Use os outros blocos na categoria `Eventos`."
       courseE_artist_concept1: "Refaça essa imagem. \n\n-   Os hexágonos possuem lados
@@ -26156,15 +26186,15 @@ pt-BR:
       courseE_artist_functions_challenge1: A partir do momento que você definir uma
         função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
         código para ver como funciona, então mude-o para fazer o seu próprio desenho
-        impresionante!
+        impressionante!
       courseE_artist_functions_challenge1_2018: A partir do momento que você definir
         uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
         esse código para ver como funciona, então mude-o para fazer o seu próprio
-        desenho impresionante!
+        desenho impressionante!
       courseE_artist_functions_challenge1_2019: A partir do momento que você definir
         uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
         esse código para ver como funciona, então mude-o para fazer o seu próprio
-        desenho impresionante!
+        desenho impressionante!
       courseE_artist_functions_challenge2: |-
         Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
 
@@ -26241,9 +26271,9 @@ pt-BR:
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa.
         \\\r\n\\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
-      courseE_bee_functions4: "A função `ande e pegue nectar` vira a abelha, coleta
-        o nectar, e daí retorna a abelha para o ponto de partida. \n\nUtilize a função
-        `anda e pegue nectar` par coletar todo o nectar."
+      courseE_bee_functions4: "A função `andar e pegar néctar` vira a abelha, coleta
+        o néctar, e daí retorna a abelha para o ponto de partida. \n\nUtilize a função
+        `andar e pegue néctar` par coletar todo o néctar."
       courseE_bee_functions8: "**Desafio:** Essas flores podem ter quantidades diferentes
         de nectar cada vez qye você roda o quebra-cabeça. \n\nCria uma função que
         colete todo o nectar de cada flor."
@@ -26352,11 +26382,11 @@ pt-BR:
         de adicionar um simples bloco de **chamada à função** para usar a função no
         programa que você fez."
       courseE_farmer_functions3c1_2018: |-
-        Você notou que havia um monte de código repetido no último quebra-cabeça? Podemos economizar espaço chamando o código `escolher ao longo do caminho` e usando uma nova função para chamar as outras funções!
+        Você notou que havia um monte de códigos repetidos no último quebra-cabeça? Podemos economizar espaço chamando o código `escolher ao longo do caminho` e usando uma nova função para chamar as outras funções!
 
         Use `escolher ao longo do caminho` para resolver este quebra-cabeça novamente usando menos blocos.
       courseE_farmer_functions3c1_2019: |-
-        Você notou que havia um monte de código repetido no último quebra-cabeça? Podemos economizar espaço chamando o código `escolher ao longo do caminho` e usando uma nova função para chamar as outras funções!
+        Você notou que havia um monte de códigos repetidos no último quebra-cabeça? Podemos economizar espaço chamando o código `escolher ao longo do caminho` e usando uma nova função para chamar as outras funções!
 
         Use `escolher ao longo do caminho` para resolver este quebra-cabeça novamente usando menos blocos.
       courseE_farmer_functions3c_2018: Ótimo! Tente agora em um caminho mais longo.
@@ -26428,33 +26458,33 @@ pt-BR:
         Use \`enquanto houver alface dentro de uma repetição para obter tudo!
       courseE_farmer_ramp12b_2019: Agora a colheitadeira precisa pegar toda a alface.
         Use \`enquanto houver alface dentro de uma repetição para obter tudo!
-      courseE_farmer_ramp12c: "Meu deus! Olhe todas essas mudas. Algumas irão virar
-        milho, e outras alface.\n\nVá até o final de cada caminho para colher alface
-        enquanto existir alface, e colha milho enquanto existir milho. "
-      courseE_farmer_ramp12c_2018: "Meu deus! Olhe todas essas mudas. Algumas irão
-        virar milho, e outras alface.\n\nVá até o final de cada caminho para colher
-        alface enquanto existir alface, e colha milho enquanto existir milho. "
-      courseE_farmer_ramp12c_2019: "Meu deus! Olhe todas essas mudas. Algumas irão
-        virar milho, e outras alface.\n\nVá até o final de cada caminho para colher
-        alface enquanto existir alface, e colha milho enquanto existir milho. "
-      courseE_farmer_ramp12d: "As mesmas técnicas funcionam com nectar e com mel!
-        \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
-        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
-      courseE_farmer_ramp12d_2018: "As mesmas técnicas funcionam com nectar e com
-        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
-        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
-      courseE_farmer_ramp12d_2019: "As mesmas técnicas funcionam com nectar e com
-        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
-        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
-      courseE_farmer_ramp12e: "As mesmas técnicas funcionam com nectar e com mel!
-        \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
-        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
-      courseE_farmer_ramp12e_2018: "As mesmas técnicas funcionam com nectar e com
-        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
-        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
-      courseE_farmer_ramp12e_2019: "As mesmas técnicas funcionam com nectar e com
-        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
-        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12c: "A alface está agora apenas no final do caminho.\nPercorra
+        o caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue para
+        pegá-lo \\*\\* enquanto \\*\\* ainda resta algum.  "
+      courseE_farmer_ramp12c_2018: "A alface está agora apenas no final do caminho.\nPercorra
+        o caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue para
+        pegá-lo \\*\\* enquanto \\*\\* ainda resta algum.  "
+      courseE_farmer_ramp12c_2019: "A alface está agora apenas no final do caminho.\nPercorra
+        o caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue para
+        pegá-lo \\*\\* enquanto \\*\\* ainda resta algum.  "
+      courseE_farmer_ramp12d: "A alface está espalhada por todo o jardim.\n\nPercorra
+        cada caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue a
+        buscá-la \\*\\* enquanto \\*\\* ainda resta alguma.  "
+      courseE_farmer_ramp12d_2018: "A alface está espalhada por todo o jardim.\n\nPercorra
+        cada caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue a
+        buscá-la \\*\\* enquanto \\*\\* ainda resta alguma.  "
+      courseE_farmer_ramp12d_2019: "A alface está espalhada por todo o jardim.\n\nPercorra
+        cada caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue a
+        buscá-la \\*\\* enquanto \\*\\* ainda resta alguma.  "
+      courseE_farmer_ramp12e: "A alface está espalhada por todo o jardim.\n\nPercorra
+        cada caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue a
+        buscá-la \\*\\* enquanto \\*\\* ainda resta alguma.  "
+      courseE_farmer_ramp12e_2018: "A alface está espalhada por todo o jardim.\n\nPercorra
+        cada caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue a
+        buscá-la \\*\\* enquanto \\*\\* ainda resta alguma.  "
+      courseE_farmer_ramp12e_2019: "A alface está espalhada por todo o jardim.\n\nPercorra
+        cada caminho \\*\\* até \\*\\* chegar a uma cabeça de alface e continue a
+        buscá-la \\*\\* enquanto \\*\\* ainda resta alguma.  "
       courseE_farmer_ramp12f: "\\*\\* Desafio \\*\\*: A única maneira de obter todos
         os cultivos é seguir em frente até chegar à alface, depois virar à esquerda
         \\*\\* se \\*\\* houver um caminho à esquerda. Caso contrário, vire à direita."
@@ -26478,7 +26508,7 @@ pt-BR:
         para ver como funciona. \n\nAlguma coisa deveria acontecer quando você consegue
         pontos o suficiente ou quando você perder todos os pontos. Adicione um código
         para as funções de `ganhar jogo` e `perder jogo` para fazer o jogo funcionar
-        da forma como devia. \nClique nos dicas para ideias!"
+        da forma como devia. \nClique nas dicas para ideias!"
       courseE_playLab_scaffold1: |-
         É incrível o quanto você aprendeu! Vamos fazer um jogo passo a passo.
 

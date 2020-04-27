@@ -140,7 +140,6 @@ ku:
     valid_password: "تێپەڕووشە دروستە!"
     invalid_password: "تێپەڕووشە پێویستە لانی کەم 6 پیت بێت"
     mismatch_password: "ئەم دوو تێپەڕووشەی كە داخڵت كردوون یەك نین"
-    under_13_consent: "ئەگەر من لە 13 ساڵ بچووكترم، ئەوا دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم."
     student_consent: "دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم."
     agree_us_website: "من ڕازیم ماڵپەڕێك بەكاربهێنم كە دامەرزراوە لە ویلایەتە یەكگرتووەكانی ئەمریكا."
     my_data_to_us: "زانیاری بەكارهێنانم لەم ماڵپەڕە لەوانەیە بنێررێ، هەڵبگیرێ یان شیبكرێتەوە لە ویلایەتە یەكگرتووەكانی ئەمریكا."
@@ -222,6 +221,7 @@ ku:
       %{name}
   parent_mailer:
     student_associated_subject: 'زانیاری چوونەژوورەوە بۆ (Code.org)'
+    parent_email_added_subject: 'بەخێربێیت بۆ Code.org!'
   teacher_mailer:
     new_teacher_subject: 'بەخێربێیت بۆ Code.org!'
     delete_teacher_subject: 'ئاگاداری لە Code.org: هەژمارەكەت سڕاوەتەوە'
@@ -246,6 +246,7 @@ ku:
       username_not_found: 'ناوی بەكارهێنەر %{username} نەدۆزرایەوە'
       username_in_use: '%{username} بۆ كەسێكی تر بەكارهاتووە، تكایە دانەیێكی تر هەڵبژێرە'
   crud:
+    edit: 'دەستکاری'
     submit: 'بنێرە'
     confirm: 'ئایا تۆ دڵنیایت؟'
   nav:
@@ -265,6 +266,7 @@ ku:
     popup:
       close: 'داخستن'
       puzzle_map: 'قۆناغەکان'
+      prizes_link: 'زانیاری زیاتر'
   teacher:
     title:
       one: 'مامۆستاکەت:'
@@ -274,7 +276,10 @@ ku:
       remove: 'ئایا تۆ دڵنیایت لە لابردنی ئەم مامۆستایە؟'
     panel:
       student: 'قوتابی'
+  user:
+    parent_guardian_email_label: "پۆستی ئەلیكترۆنی باوان/بەخێوکەر"
   home:
+    student_reg_link: 'قوتابی'
     online: سەرهێڵ
     trynow: 'زیاتر فێرببە'
   gender:
@@ -286,6 +291,7 @@ ku:
   footer:
     support: 'یارمەتی و کۆمەڵگا'
     support_url: 'http://support.code.org'
+    tos_short: 'بڕگەکان'
     tos: 'بڕگەکان'
   reference_area:
     title: 'یارمەتیت پێویستە؟'
@@ -344,3 +350,5 @@ ku:
         math: 'بیرکاری'
   cookie_banner:
     accept: 'من ڕازیم'
+  gdpr_dialog:
+    message: 'زانیاری بەكارهێنانم لەم ماڵپەڕە لەوانەیە بنێررێ، هەڵبگیرێ یان شیبكرێتەوە لە ویلایەتە یەكگرتووەكانی ئەمریكا.'

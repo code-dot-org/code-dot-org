@@ -321,6 +321,8 @@ sl:
               name: Hour of Code 2013
         cspunit3:
           stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
             While Loops:
               name: 'Zanka: dokler velja'
         sciencePD2:
@@ -431,6 +433,10 @@ sl:
           stages:
             The Internet:
               name: Internet
+        csp3-2017:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         csp5-2017:
           stages:
             While Loops:
@@ -791,6 +797,10 @@ sl:
           stages:
             Thanks:
               name: Hvala
+        csp3-research-mxghyt:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -847,6 +857,10 @@ sl:
               name: Zabava s "for" zankami
             Songwriting with Parameters:
               name: Pisanje pesmi s parametri
+        csp3-staging:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         hero:
           stages:
             Minecraft Hour of Code:
@@ -1013,6 +1027,10 @@ sl:
           stages:
             The Internet:
               name: Internet
+        csp3-2018:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         csp5-2018:
           stages:
             While Loops:
@@ -1151,6 +1169,10 @@ sl:
           stages:
             The Internet:
               name: Internet
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
         csp5-2019:
           stages:
             While Loops:
@@ -1217,3 +1239,95 @@ sl:
           stages:
             Conditionals:
               name: Pogoji
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funkcije s parametri
+        csd3-2020:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+            Text:
+              name: Besedilo
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Kako varno potovati
+            'Programming: Happy Maps':
+              name: Veseli zemljevidi
+        courseb-2020:
+          stages:
+            Move It, Move It:
+              name: Premakni se, premakni
+        coursec-2020:
+          stages:
+            'Events: The Big Event':
+              name: Veliki dogodek
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Obarvajmo kvadratke
+            Relay Programming:
+              name: Relejsko programiranje
+            Conditionals with Cards:
+              name: Pogojniki s kartami
+            'Unplugged: Binary':
+              name: Binarne slike
+            Artist Binary:
+              name: Umetnik Binarno
+            Digital Citizenship:
+              name: Digitalno državljanstvo
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Napiši pesem
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Spremeljivke v ovojnicah
+            For Loop Fun:
+              name: Zabava s "for" zankami
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Čebelica črkuje besede
+        csp3-virtual:
+          stages:
+            Creating Functions:
+              name: Ustvarjanje funkcij
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije
+        csp5-virtual:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'
+            Variables:
+              name: Spremenljivke
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Funkcije
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritmi
+            Events:
+              name: Dogodki
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: 'Zanka: dokler velja'

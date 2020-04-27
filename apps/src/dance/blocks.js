@@ -96,9 +96,9 @@ export default {
 
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
-        FUNCTION_HEADER: 'Behavior',
-        FUNCTION_NAME_LABEL: 'Name your behavior:',
-        FUNCTION_DESCRIPTION_LABEL: 'What is your behavior supposed to do?'
+        FUNCTION_HEADER: i18n.behaviorEditorHeader(),
+        FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
+        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription()
       },
       'behavior_definition',
       {

@@ -11,9 +11,16 @@
     padding: 10px;
   }
 
-  .markdown.teacher {
+  .field.teacher-only-markdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  #level_teacher_markdown_textarea_preview {
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
+    padding: 10px;
   }
 
 - if @level.filename
@@ -35,4 +42,13 @@
     %textarea#level_markdown_textarea
     #level_markdown_textarea_preview
 
-  = render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+// Don't not use the _teacher_only_markdown.haml partial for DSL levels because they need
+// extra functionality (initializeEmbeddedMarkdownEditor) to save the markdown content into the level file
+%legend.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
+  Teacher Only Markdown
+
+#teacher_only_markdown.in.collapse
+  .field.teacher-only-markdown
+
+    %textarea#level_teacher_markdown_textarea
+    #level_teacher_markdown_textarea_preview

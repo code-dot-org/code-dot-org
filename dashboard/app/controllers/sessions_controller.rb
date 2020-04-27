@@ -7,6 +7,10 @@ class SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     session[:user_return_to] ||= params[:user_return_to]
+    if params[:maker]
+      redirect_to user_google_oauth2_omniauth_authorize_path
+      return
+    end
     @already_hoc_registered = params[:already_hoc_registered]
     @hide_sign_in_option = true
     @is_english = request.language == 'en'

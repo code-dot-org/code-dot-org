@@ -47,6 +47,7 @@ export default class StandardsLegend extends Component {
             </tr>
             <tr>
               <th style={styles.th}>{i18n.notStarted()}</th>
+              <th style={styles.th}>{i18n.inProgress()}</th>
               <th style={styles.th}>{i18n.completed()}</th>
             </tr>
           </thead>
@@ -56,6 +57,7 @@ export default class StandardsLegend extends Component {
                 <div style={styles.completedBoxes}>
                   <ProgressBoxForLessonNumber
                     completed={false}
+                    inProgress={false}
                     lessonNumber={10}
                   />
                 </div>
@@ -63,7 +65,17 @@ export default class StandardsLegend extends Component {
               <td style={styles.td}>
                 <div style={styles.completedBoxes}>
                   <ProgressBoxForLessonNumber
+                    completed={false}
+                    inProgress={true}
+                    lessonNumber={2}
+                  />
+                </div>
+              </td>
+              <td style={styles.td}>
+                <div style={styles.completedBoxes}>
+                  <ProgressBoxForLessonNumber
                     completed={true}
+                    inProgress={false}
                     lessonNumber={8}
                   />
                 </div>

@@ -1816,6 +1816,10 @@ no-NO:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS Funns Slutt på Kursets Elevundersøkelse
+      csd-post-survey-levelgroup-2018:
+        title: CS Funns Slutt på Kursets Elevundersøkelse
       grade2_multi_collector_A_predict1:
         answers:
         - {}

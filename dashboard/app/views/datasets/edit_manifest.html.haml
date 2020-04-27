@@ -1,0 +1,8 @@
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+
+.manifest_editor
+
+%script{src: webpack_asset_path('js/datasets/edit_manifest.js'),
+        data: {libraryManifest: @dataset_library_manifest.to_json}}

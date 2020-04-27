@@ -64,6 +64,8 @@ pl:
   join_section:
     code:
       placeholder: Kod sekcji (ABCDEF)
+      instructions_short: Wprowadź swój 6-literowy kod sekcji
+      submit: Dołącz
   add_hint_form:
     placeholder: Wprowadź tutaj swoją wskazówkę
     submit: Dodaj wskazówkę
@@ -152,8 +154,6 @@ pl:
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
-    under_13_consent: Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub
-      opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services.
     student_consent: Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego
       rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie
       Code.org.
@@ -242,6 +242,7 @@ pl:
       %{name}
   parent_mailer:
     student_associated_subject: Informacje logowania Code.org
+    parent_email_added_subject: Witaj na Code.org!
   teacher_mailer:
     new_teacher_subject: Witaj na Code.org!
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
@@ -351,6 +352,7 @@ pl:
       district_dashboard: Panel dzielnicy/okręgu
       label: Witaj %{username}
       stats: Studio Kodowania (Code Studio)
+      my_projects: Moje projekty
       settings: Moje konto
       logout: Wyloguj się
       signin: Zaloguj się
@@ -382,6 +384,7 @@ pl:
       minecraft_hero: Bohater Minecraftu
       playlab: Play Lab
       playlab_k1: Play Lab (niewymagana biegłość w czytaniu)
+      scratch: Scratch
       sports: Zawody
       spritelab: Sprite Lab
       starwars: Gwiezdne Wojny
@@ -431,6 +434,7 @@ pl:
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
     email_confirm_wrong_email: "(Zły adres e-mail?)"
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
+    new_email_hint: "(Upewnij się że otrzymujesz pocztę na ten adres e-mail.)"
     new_password_hint: "(zostaw puste, jeśli nie chcesz tego zmienić)"
     current_password_hint: "(potrzebujemy Twojego aktualnego hasła, aby potwierdzić
       Twoje zmiany)"
@@ -474,6 +478,9 @@ pl:
       słowa
     enter_parent_email: Wprowadź adres rodzica lub opiekunka (do odzyskiwania hasła)
     update_email: Uaktualnij
+    parent_guardian_email_label: Adres e-mail rodzica/opiekuna
+    none: Żaden
+    encrypted: zaszyfrowane
   user_level:
     completed: Ukończono
     tried: Próbowano
@@ -608,6 +615,7 @@ pl:
     download: Pobierz wideo
     show_notes: Pokaż Notatki
     show_video: Pokaż Wideo
+    label: Wideo
   compatibility:
     upgrade:
       unsupported_message: Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić
@@ -885,6 +893,8 @@ pl:
       użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>
     accept_label_markdown: Akceptuję zaktualizowane [Warunki użytkowania](%{tos_url})
       i [Politykę prywatności](%{privacy_url})
+    accept_tos: Rejestrując się na Code.org, akceptujesz nasze [Terms of Service](%{tos_url})
+      oraz [Privacy Policy](%{privacy_url}).
     accept: Zaakceptuj
     print: Drukuj
     reminder_desc: Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki
@@ -1067,12 +1077,14 @@ pl:
     csp_ap_1: 'Rozdział 1: AP Konfiguracja Techniczna'
     csp_ap_2: 'Rozdział 2: AP Zbadaj Wydajność'
     csp_ap_3: 'Rozdział 3: AP Utwórz Zadanie Wydajnościowe'
+    csp_postap_1: 'Rozdział 2: Manipulowanie i Wizualizacja Danych'
     csp2_1_2018: 'Unit 2: Cyfrowe informacje'
     csp_variables: Zmienne
     csp_conditionals: Zdania z warunkami
     csp_functions: Funkcje
     csp_lists: Listy
     csp_loops: Pętle
+    csp_unit1_2020: "(stary) Unit 1: Informacje cyfrowe"
     dlp: Wskazówki
     k5_getting_started: Pierwsze kroki
     k5_next_steps: Następne Kroki
@@ -1174,10 +1186,14 @@ pl:
         math: Matematyka
         science: Przyroda/Nauka
         la: Sztuki języków
+        music: Muzyka
       resources:
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        scratch: Scratch
       robotics:
+        grok: Nauka Grok
         kodable: Kodable
       workshop_course:
         csd: Odkrycia CS
@@ -1189,9 +1205,12 @@ pl:
   cookie_banner:
     accept: Zgadzam się
   gdpr_dialog:
+    heading: Czy zgadzasz się na korzystanie ze strony, której siedziba znajduje się
+      w Stanach Zjednoczonych?
     message: Dane gromadzone podczas korzystania przez Ciebie z tej witryny mogą być
       wysyłane i przechowywane lub przetwarzane w Stanach Zjednoczonych.
     true: Tak
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: Powrót do strony domowej
+  copy: Kopia/Kopiuj

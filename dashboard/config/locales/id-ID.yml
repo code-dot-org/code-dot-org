@@ -15,6 +15,13 @@ id:
         Untuk mengakses layanan ini, hentikan program yang terpasang dan coba lagi.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: tidak valid. Perhatikan bahwa setiap tautan hanya dapat digunakan
+                satu kali untuk mereset kata sandi Anda, dan hanya tautan yang paling
+                baru terkirim akan berfungsi.
       messages:
         blank: diperlukan
         blank_plural: diperlukan
@@ -47,6 +54,7 @@ id:
           membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Mengisi informasi berikut untuk
           menyelesaikan membuat akun Code.org dengan **%{provider}** untuk **%{email}**.
+        reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         error:
           future: tidak mungkin di masa depan
   beta: Percobaan
@@ -65,7 +73,9 @@ id:
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   join_section:
     code:
+      title: Bergabunglah dengan bagian di Code.org
       placeholder: Kode Bagian (ABCDEF)
+      instructions_short: Masukkan 6 huruf bagian kode anda
       submit: Bergabung
   add_hint_form:
     placeholder: Masukkan pentunjuk anda disini
@@ -167,8 +177,6 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    under_13_consent: Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa
-      saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org.
     student_consent: Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali
       hukum izin untuk menggunakan layanan Code.org.
     agree_us_website: Saya setuju untuk menggunakan sebuah situs web yang berbasis
@@ -256,6 +264,7 @@ id:
       %{name}
   parent_mailer:
     student_associated_subject: Masukkan code informasi Code.org
+    parent_email_added_subject: Selamat datang di Code.org!
   teacher_mailer:
     new_teacher_subject: Selamat datang di Code.org!
     delete_teacher_subject: 'Code.org pemberitahuan: Akun anda telah dihapus'
@@ -513,6 +522,9 @@ id:
     update: Perbarui Akun
     account_successfully_updated: Akun sukses diperbarui.
     update_email: Update
+    parent_guardian_email_label: Email orang tua/wali
+    none: Tidak Ada
+    encrypted: dienkripsi
   user_level:
     completed: Selesai
     tried: Telah mencoba
@@ -653,6 +665,7 @@ id:
     download: Ungah Video
     show_notes: Tampilkan Catatan
     show_video: Tampilkan Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Peramban kamu tidak didukung. Harap tingkatkan Peramban
@@ -932,6 +945,8 @@ id:
       Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>
     accept_label_markdown: Saya menyetujui [Syarat dan Ketentuan](%{tos_url}) dan
       [Kebijakan Pribadi](%{privacy_url})
+    accept_tos: Dengan mendaftar di Code.org, Anda setuju dengan [Ketentuan Layanan](%{tos_url})
+      dan [Kebijakan Privasi](%{privacy_url}) kami.
     accept: Terima
     print: Cetak
     reminder_desc: Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Syarat
@@ -1131,6 +1146,7 @@ id:
     csp_traversals: Melintang
     csp_libraries: Perpustakaan
     csp_parameters_return_values: Parameter dan Nilai Balik
+    csp_unit1_2020: "(Lama) Unit 1: Informasi Digital"
     dlp: Anjuran Refleksi
     time4cs_c1: Everglades dan Ekosistemnya
     time4cs_c2: Tantai Makanan di Everglades
@@ -1278,9 +1294,11 @@ id:
         music: Musik
         art: Seni
       resources:
+        khan: Akademi khan
         kodable: Kodable
         lightbot: Lightbot
       robotics:
+        grok: Mempelajari Grok
         kodable: Kodable
       workshop_course:
         csd: Penemuan CS
@@ -1292,9 +1310,14 @@ id:
   cookie_banner:
     accept: Saya setuju
   gdpr_dialog:
+    heading: Apakah Anda setuju untuk menggunakan sebuah situs web yang berbasis di
+      Amerika Serikat?
+    message: Data dari penggunaan Anda atas situs ini dapat dikirimkan ke dan disimpan
+      atau diproses di Amerika Serikat.
     true: Ya
   page_not_found_title: Halaman tidak ditemukan
   page_not_found_header: '404: halaman tidak ditemukan'
   page_not_found_description: Halaman yang anda cari tidak ada di alamat ini. Periksa
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
+  copy: Salin

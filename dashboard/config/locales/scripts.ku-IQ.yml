@@ -203,6 +203,8 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+            Functions with Parameters:
+              name: فەرمانی بە پێوەر
             Loops:
               name: گرێکان
             Variables:
@@ -223,6 +225,8 @@ ku:
           stages:
             Lists:
               name: لیستەکان
+            Functions with Parameters:
+              name: فەرمانی بە پێوەر
         coursee-ramp:
           stages:
             Conditionals:
@@ -231,6 +235,10 @@ ku:
           stages:
             Lists:
               name: لیستەکان
+            Functions with Parameters:
+              name: فەرمانی بە پێوەر
+            Functions with Parameters_:
+              name: فەرمانی بە پێوەر
         csd3-draft:
           stages:
             Variables:
@@ -319,6 +327,10 @@ ku:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
             Relay Programming:
               name: بەرنامەڕێژی بە پێشبڕکێ
+        csd6-2018:
+          stages:
+            Functions with Parameters:
+              name: فەرمانی بە پێوەر
         coursee-2018:
           stages:
             Internet:
@@ -365,6 +377,10 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: فەرمانی بە پێوەر
         csp1-2019:
           stages:
             The Internet:
@@ -407,3 +423,51 @@ ku:
           stages:
             Conditionals:
               name: مەرجیەکان
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: فەرمانی بە پێوەر
+        csd3-2020:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+            Text:
+              name: دەق
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: نەخشەی دڵخۆش
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: بەرنامەڕێژی پەڕەی هێڵکاری
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
+        coursef-2020:
+          stages:
+            Internet:
+              name: ئینتەرنێت
+        csd3-virtual:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+        csp5-virtual:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: فرمانەکان
+        code-break:
+          stages:
+            Algorithms:
+              name: خوارزمیەکان

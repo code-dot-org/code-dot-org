@@ -96,6 +96,14 @@ ne-NP:
         do something: do something
       NEW Course 4 Play Lab Params 11:
         jump: jump
+      New Artist Project:
+        draw a star: draw a star
+        draw a circle: draw a circle
+        draw a triangle: draw a triangle
+        draw a house: draw a house
+        draw a square: draw a square
+      New Play Lab Project:
+        jump: jump
       Standalone_Artist_7:
         draw a flower: draw a flower
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ ne-NP:
       courseE_artist_functions7:
         draw a house: draw a house
       courseE_artist_functions7_2018:
-        draw a house: draw a house
-      courseE_artist_functions7_2019:
         draw a house: draw a house
       courseE_artist_functions8:
         do something: do something

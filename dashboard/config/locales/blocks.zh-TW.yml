@@ -990,7 +990,7 @@ zh-TW:
         options:
           CONDITION:
             '"when"': 當
-            '"while"': 每當
+            '"while"': 重複 判斷
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
@@ -1034,7 +1034,7 @@ zh-TW:
         options:
           CONDITION:
             '"when"': 當
-            '"while"': 每當
+            '"while"': 重複 判斷
           KEY:
             '"up"': 向上
             '"down"': 向下
@@ -1191,7 +1191,7 @@ zh-TW:
         options:
           CONDITION:
             '"when"': 當
-            '"while"': 每當
+            '"while"': 重複 判斷
       gamelab_turn:
         text: 角色 {SPRITE} 轉向 {DIRECTION} {N} 度
         options:
@@ -1625,6 +1625,14 @@ zh-TW:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: 角色 {SPRITE} {DIRECTION} 移動 {DISTANCE} 像素
+        options:
+          DIRECTION:
+            '"North"': 北
+            '"East"': 東
+            '"South"': 南
+            '"West"': 西
       aalab_prompt:
         text: 提問 {MESSAGE}
       aalab_scene:
@@ -1636,12 +1644,10 @@ zh-TW:
             '3': '3'
       aalab_setupStory:
         text: 設定故事
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': 顯示
-            '"hide"': 不可見
+            '"random"': 隨機
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:

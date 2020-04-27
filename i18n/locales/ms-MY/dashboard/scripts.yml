@@ -31,6 +31,8 @@ ms:
               name: Pengaturcaraan kertas graf
             'Maze: Sequence':
               name: 'SImpang Siur: Turutan'
+            Relay programming:
+              name: Pengaturcaraan penyampai
         course3:
           title: Kursus 3
           stages:
@@ -253,6 +255,8 @@ ms:
               name: Acara-acara
             Functions:
               name: Fungsi
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
             Loops:
               name: Gelung
             Variables:
@@ -279,6 +283,8 @@ ms:
           stages:
             Lists:
               name: Senarai
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
         coursee-ramp:
           stages:
             Conditionals:
@@ -287,6 +293,10 @@ ms:
           stages:
             Lists:
               name: Senarai
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
+            Functions with Parameters_:
+              name: Fungsi-fungsi dengan parameter
         csd3-draft:
           stages:
             Variables:
@@ -389,6 +399,10 @@ ms:
               name: Pengaturcaraan kertas graf
             Relay Programming:
               name: Pengaturcaraan penyampai
+        csd6-2018:
+          stages:
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
         coursee-2018:
           stages:
             Internet:
@@ -471,6 +485,10 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
         csp1-2019:
           stages:
             Sending Numbers:
@@ -521,3 +539,63 @@ ms:
           stages:
             Conditionals:
               name: Bersyarat
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Fungsi-fungsi dengan parameter
+        csd3-2020:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+            Text:
+              name: teks
+        coursea-2020:
+          stages:
+            'Programming: Happy Maps':
+              name: Peta-peta Gembira
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Pengaturcaraan kertas graf
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+            Dance Party:
+              name: Majlis Tari-Menari
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internet
+        express-2020:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Lebah Ejaan
+        csd3-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi
+        csp5-virtual:
+          stages:
+            Variables:
+              name: Pembolehubah
+        virtual-holding-place:
+          stages:
+            Functions:
+              name: Fungsi
+        code-break:
+          stages:
+            Algorithms:
+              name: Algoritma
+            Events:
+              name: Acara-acara

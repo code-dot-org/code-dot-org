@@ -46,6 +46,8 @@ sl-SI:
       NEW Course 4 Bee For Loops 5:
         actions_category: 'V galeriji pripomočkov je nekaj novega! Dodali smo bloke
           za "dejanja" (ang.: "Actions").'
+      New Frozen Project:
+        snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
       Overworld Move to Sheep:
         craft_run_button_callout: Klikni "Zaženi" in preizkusi
       Overworld Move to Sheep_2019:

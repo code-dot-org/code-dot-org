@@ -515,6 +515,7 @@ bs:
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Varijable u Kovertama
         C4_unplugged_forloops: Od-Do-Za Petlje
+        C4_unplugged_parameters: Pisanje pjesama
         C4_unplugged_binary: Binarno
         CSF_my_robotic_friends: Moji Prijatelji Roboti
         CSF_Power_of_Words: Snaga riječi
@@ -548,8 +549,11 @@ bs:
         CSF_loops_AB: Petlje
         hoc_dance_events: Plesna zabava - Događaji
         hoc_dance_properties: Plesna zabava - Osobenosti
+        writing_first_program: Pisanje tvog prvog kompjuterskog programa!
         csd_pair_programming: Programiranje u Paru
         csd_applab_parameters: Funkcije sa Parametrima
+        hoc_dance_events_2019: Plesna zabava - Događaji
+        hoc_dance_properties_2019: Plesna zabava - Osobenosti
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod nekok drugog bloka

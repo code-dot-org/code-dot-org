@@ -182,6 +182,15 @@ lt:
           sveikatos ir medicinos problemas. Susipažinkime su „if else“ (jeigu tada)
           blokeliu. Jis atrodo taip, kaip ir „if“ (jeigu) blokelis, tačiau papildomai
           gale turi dalį, kuri pasako, kas įvyks priešingu atveju.
+      2:
+        text: Jeigu įdėsi  „judėk į priekį“ į pirmą vietą, o  „pasisuk į kairę“ prie
+          „kito atvejo“, tai zombis rinksis vieną iš dviejų dalykų. Kai kelias bus
+          priekyje, zombis žengs į priekį; KITU ATVEJU (jei kelio priekyje nebus)
+          zombis pasisuks į kairę.
+      3:
+        text: Panašiai kaip ir su „jei“ blokeliu, aplink šį blokelį galima apgaubti
+          blokelį „kartok, kol“, kad zombis vis judėdamas tikrintų, kur yra kelias
+          ir kur reikia pasisukti.
       4:
         text: Nagi, pajudink tuos zombius!
     if_else_scrat:

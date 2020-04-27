@@ -1,26 +1,26 @@
 ---
 ne:
   site_name: HOUR of CODE
-  hour_of_code: Hour of Code
+  hour_of_code: 'घण्टा  सुत्र को '
   language: नेपाली
-  front_title: Join the largest learning event in history, %{campaign_date}
+  front_title: "%{campaign_date}, ईतिहासको सब भन्दा ठूलो शिक्षण घटनामा सहभागी हुनुहोस्"
   coming_soon: छिटै आउँदैछ
   campaign_date_start_short: मङ्सिर २१
   campaign_date_start_long: मङ्सिर २१
   campaign_date_short: मङ्सिर २१-२८
-  campaign_date_full: December 4-10
-  campaign_date_year: '2017'
-  campaign_date_full_year: December 4-10, 2017
-  hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
-  hoc2019_header_line2_mobile: Change the world.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
+  campaign_date_full: 'डिसेम्बर ४ - १० '
+  campaign_date_year: "२०१७ \n"
+  campaign_date_full_year: "डिसेम्बर ४ - १०, २०१७ \n"
+  hoc2019_header: कम्प्यूटर विज्ञान सिक्नुहोस्। विश्व परिवर्तन गर्नुहोस्।
+  hoc2019_header_line1_mobile: कम्प्यूटर विज्ञान सिक्नुहोस्।
+  hoc2019_header_line2_mobile: विश्व परिवर्तन गर्नुहोस्।
+  social_hoc2019_every_sudent: 'प्रत्येक विद्यार्थीमा संसार परिवर्तन गर्ने सम्भावना
+    हुन्छ। तिनीहरूलाई सुरू गर्न मद्दत गर्नुहोस्। #CSforGood'
+  social_hoc2019_learn_computer_science: 'कम्प्यूटर विज्ञान सिक्नुहोस्। विश्व परिवर्तन
+    गर्नुहोस्। # CSforGood #HourOfCode'
+  social_hoc_is_coming: एक घण्टा कोडको समय आउँदैछ!
+  social_hoc2019_hoc_is_about_csforgood: "# HourOfCode # CSforGood को बारेमा हो। कम्प्यूटर
+    विज्ञान सिक्नुहोस्। विश्व परिवर्तन गर्नुहोस्।"
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
@@ -28,18 +28,24 @@ ne:
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: English only | Grades 3+
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
   oceans_landing_explanation: Computer science is about so much more than coding!
     Learn about artificial intelligence (AI), machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Enjoy Code.org's first step in a new journey to teach more about AI. When you
     use the AI for Oceans activity you are training real machine learning models.
     <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_teacher_resources: Teacher Resources
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
+  oceans_landing_teacher_resources: शिक्षक संसाधन
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
+  oceans_landing_resource_button: स्रोतहरू हेर्नुहोस्
+  oceans_landing_cs_for_good: " राम्रो को लागी  कम्प्यूटर विज्ञान"
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
   oceans_landing_videos: Videos about AI and Machine Learning
@@ -57,6 +63,19 @@ ne:
     to those from the training dataset. We classify the new image with the same label
     (such as "fish" or "not fish") as the images from the training set with the most
     similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
   oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
     body) and assemble all of the metadata for the components (such as number of teeth,
@@ -64,6 +83,13 @@ ne:
     the SVM. Based on the training data, the SVM separates the "space" of all possible
     fish into two parts, which correspond to the classes we are trying to learn (such
     as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
   social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
@@ -73,25 +99,25 @@ ne:
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_what_is_ai: कृत्रिम बुद्धिमत्ता के हो?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_what_is_ml: मेशिन लर्निंग भनेको के हो?
+  ai_video_title_ml_big_small_prickly: 'मेशिन लर्निंग:  ठूला, साना र घोच्ने  समस्याहरू
+    समाधान गर्दै'
+  ai_video_title_ethics_of_ai: कृत्रिम बुद्धिमत्ताको नैतिकता
+  ai_video_title_ml_human_bias: मेशिन लर्निंग र मानव पूर्वाग्रह
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
+  activity: गतिविधि
+  name: नाम
+  description: वर्णन
+  audience: दर्शक
+  ai_resource_header: 'सिकाउनुहोस् र सिक्नुहोस एआईको बारेमा '
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
     computer science curriculum, and teacher trainings. (Requires Minecraft: Education
     Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids: बच्चाहरूको लागि मेशिन लर्निंग
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
   ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
@@ -100,24 +126,24 @@ ne:
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
   ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
     Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai: एआई को तत्वहरु
   ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
     and the University of Helsinki.
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_hs: उच्च माध्यमिक विद्यालय
   ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai: एआई हेर्दै
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
     of languages.
-  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw: द्रुत गतिमा चित्र कोर्नुहोस!
   ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
-  ai_activity_teachable: Teachable Machine
+  ai_activity_teachable: सिकाउन योग्य मेशीन
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
-  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments: गुगलको साथ एआई परीक्षण
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
@@ -126,68 +152,81 @@ ne:
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
-  codeorg_homepage_hoc2018_header_line2_mobile: What will you create?
+  codeorg_homepage_hoc2018_header_line1: एक घण्टा कोडको समय आउँदैछ ...
+  codeorg_homepage_hoc2018_header_line2_desktop: तपाईं के  <span class="hoc2018-highlight-word">सिर्जना
+    गर्नुहुन्छ?</span>
+  codeorg_homepage_hoc2018_header_line2_mobile: तपाईं के सिर्जना गर्नुहुन्छ?
   codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
     Start with an Hour of Code and your own brand of creativity, whatever it may be.
-  codeorg_homepage_hoc2018_musician_before: Featuring
-  codeorg_homepage_hoc2018_musician_after: and more!
-  codeorg_homepage_hoc2018_video: Watch our video
+  codeorg_homepage_hoc2018_musician_before: फिचर गर्दै
+  codeorg_homepage_hoc2018_musician_after: र अधिक!
+  codeorg_homepage_hoc2018_video: हाम्रो भिडियो हेर्नुहोस्
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
-  hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
+  hourofcode_homepage_hoc2018_header_line2: उमेर ४  देखि १०4 सम्म।
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_special2020_body1: स्कूल बन्द हुने क्रममा अभिभावक र शिक्षकहरूको
+    लागि समर्थन।
+  codeorg_homepage_special2020_body2: हाम्रो सुझाव दिईएको स्रोतहरू हेर्नुहोस्।
+  codeorg_homepage_special2020_body: School closed? Learn at home. Take a Code Break,
+    or see resources for students, parents, and teachers.
+  codeorg_homepage_special2020_link_text: सुरू गर्नुहोस्
+  codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
+    community, and computer science.
+  codeorg_homepage_code_break_link_text: Learn more
   cookie_banner_message: By continuing to browse our site or clicking "I agree," you
     agree to the storing of cookies on your computer or device.
   cookie_banner_more_information: See Code.org's Privacy Policy.
-  cookie_banner_accept: I agree
-  front_header_banner: Join the largest learning event in history, %{campaign_date}
+  cookie_banner_accept: म सहमत छु
+  front_header_banner: "%{campaign_date}, ईतिहासको सब भन्दा ठूलो शिक्षण घटनामा सहभागी
+    हुनुहोस्"
   front_intro_default: The Hour of Code is a global movement reaching tens of millions
     of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event.
     One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages
     4 to 104.</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: १८०+ देशहरूमा एक वैश्विक आन्दोलन।
   front_watch_video: नयाँ भिडियो हेर्नुहोस्
   front_watch_regular_video: 'यो चल दृश्य हार्नुहोस् '
-  front_volunteers: Technical volunteers wanted
-  front_start_learning: Start learning
-  gdpr_dialog_heading: Do you agree to using a web site based in the United States?
-  gdpr_dialog_message: Data from your use of this site may be sent to and stored or
-    processed in the United States.
-  gdpr_dialog_link_intro: For details see our
-  gdpr_dialog_privacy_policy: privacy policy
-  gdpr_dialog_logout: Logout
-  gdpr_dialog_yes: 'Yes'
+  front_volunteers: 'प्राविधिक स्वयंसेवकहरू चाहिएको छ। '
+  front_start_learning: सिक्न सुरु गर्नुहोस्
+  gdpr_dialog_heading: के तपाइँ संयुक्त राज्य अमेरिकामा आधारित एक वेब साइट प्रयोग
+    गर्न सहमत हुनुहुन्छ?
+  gdpr_dialog_message: तपाईंको यस साइटको प्रयोगबाट डाटा संयुक्त राज्य अमेरिकामा पठाइन्छ
+    र भण्डारण गर्न सकिन्छ।
+  gdpr_dialog_link_intro: विवरणका लागि हाम्रो हेर्नुहोस्
+  gdpr_dialog_privacy_policy: गोपनीयता नीति
+  gdpr_dialog_logout: लगआउट
+  gdpr_dialog_yes: हो
   header_menu_resources: स्रोतहरू
   header_menu_faq: लगातर सोधिने प्रश्नहरू
   header_menu_how_to: 'कसरि '
-  header_menu_promote: Promote
-  header_menu_activities: Activities
-  not_found_title: Page Not Found
-  not_found_desc: The requested page was not found
-  not_found_instructions: Check the web address and resubmit or choose a link from
-    the list below.
-  company_4-H: 4-H Youth Development
+  header_menu_promote: प्रचार गर्नुहोस्
+  header_menu_activities: गतिविधिहरू
+  not_found_title: पृष्ठ फेला परेन
+  not_found_desc: अनुरोधित पृष्ठ फेला परेन
+  not_found_instructions: वेब ठेगाना जाँच गर्नुहोस् र पुनः सबमिट गर्नुहोस् वा तलको
+    सूचीबाट लिंक छनौट गर्नुहोस्।
+  company_4-H: 4-H युवा विकास
   company_asa: Afterschool Alliance
   company_asos: ASOS
-  company_bgca: Boys and Girls Club of America
-  company_bsusa: Boy Scouts of America
-  company_cgcs: Council of the Great City Schools
-  company_gsusa: Girl Scouts of America
-  company_khanacademy: Khan Academy
+  company_bgca: अमेरिकाको केटाहरू र केटीहरूको क्लब
+  company_bsusa: अमेरिकाको केटा स्काउटहरु
+  company_cgcs: महान शहर स्कूलहरूको काउन्सिल
+  company_gsusa: अमेरिकाको केटी   स्काउटहरु
+  company_khanacademy: खान एकेडेमी
   company_kipp: KIPP
-  company_mesa: Mathematics Engineering Science Achievement
+  company_mesa: गणित ईन्जिनियरिंग विज्ञान उपलब्धि
   company_napcs: National Alliance of Public Charter Schools
   company_ngcp: National Girls Collaborative Project
   company_teachforall: Teach for All
-  company_teachforamerica: Teach for America
+  company_teachforamerica: अमेरिकाको लागि पढाउनुहोस्
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: स्कूल पछिका  गतिविधि
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -384,6 +423,9 @@ ne:
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
     an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
     an event for your class.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: And every year in December, your class can join millions
     of students around the world celebrating Computer Science Education Week with
     the Hour of Code. We'll open registration for the annual celebration in October.
@@ -413,7 +455,7 @@ ne:
   signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
     local opportunities, or other computer science news?
   signup_email_preference_privacy: "(See our privacy policy)"
-  signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes: हो
   signup_email_preference_no: 'No'
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: We will put your school name and city on the map
@@ -464,7 +506,7 @@ ne:
     Write code to journey through Minecraft biomes.
   social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
     explore and build underwater worlds with code.
-  social_hoc2018_what_create: What will you create?
+  social_hoc2018_what_create: तपाईं के सिर्जना गर्नुहुन्छ?
   social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
@@ -482,6 +524,7 @@ ne:
   map_legend_cs_tech_jam: Special Event
   map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
     page.</a>
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Hour of Code आउँदैछ
   meta_tag_og_description: Hour of Code 180 देहरूको 30 भन्दा धेरै भाषाहरूमा विद्यार्थीहरूको
     लाखौँ मानिसमा पहुँच भइरहेको एक विश्वव्यापी आन्दोलन हो।4 देखि 104 उमेर।
@@ -503,6 +546,13 @@ ne:
     activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
     and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
     partners</a> and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Try the tutorials
   hoc_faq_when_is_hoc_q: Hour of Code कहाँ हुन्छ?
   hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
@@ -511,16 +561,30 @@ ne:
     Computer Science Education Week is held annually in recognition of the birthday
     of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
     (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
   hoc_faq_why_cs_q: किन कम्प्युटर विज्ञान?
   hoc_faq_why_cs_a: "<i>हरेक</i> विद्यार्थीले कम्प्युटर विज्ञान सिक्ने अवसर पाउनु
     पर्छ। यसले समस्या-समाधान गर्ने क्षमता, तर्क र सिर्जना गर्न मदत गर्छ। छिटो सुरु
     गरि, विद्यार्थीहरूले कुनै पनि 21 औँ सताब्दीको कैरियरको बाटोमा सफलता पाउन एक आधार
     हुनेछ। अतिरिक्त आँकडाहरूलाई <a href='http://code.org'> Code.org</a> मा हेर्नुहोस्।"
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
   hoc_faq_how_participate_q: मैले कसरी Hour of Code मा सहभागी हुने?
   hoc_faq_how_participate_a: "<a href='/how-to'>Start planning here</a> by reviewing
     our how-to guide. You can organize an Hour of Code event at your school or in
     your community &mdash; like in an extracurricular club, non-profit or at work.
     Or, just try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: Hour of Code पछि को हुन्छ?
   hoc_faq_behind_hoc_a: Hour of Code लाई <a href='http://code.org'> Code.org</a>द्वारा,
     यसलाई धेरै विद्यालयहरूमा उपलब्ध गराई कम्प्युटर विज्ञानमा सहभागितकाो वृद्धि गर्न
@@ -529,6 +593,11 @@ ne:
     सहभागीहरूको अभूतपूर्व गठबन्धनले</a> Hour of Code, &mdash लाई पनि; माइक्रोसफ्टको
     समावेश गरि, एपल, अमेजन, अमेरिका र कलेजको समितिका केटा र केटीका क्लबहरूलाई समर्थन
     गर्न सँगै आउँछ।
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
   hoc_faq_host_q: मलाई कोडिङको बारेमा केहि पनि थाहा छैन। के मैले अझै घटनालाई होस्ट
     गर्न सक्छु?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
@@ -536,12 +605,22 @@ ne:
     tutorial you want, and pick an hour &mdash; we take care of the rest. We also
     have options for every age and experience-level, from kindergarten and up. Start
     planning your event by reading our <a href='/how-to'>how to guide</a>.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
   hoc_faq_devices_q: What devices should I use for my students?
   hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
     see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
     Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
     activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: प्रत्येक सहभागीको लागि मलाई कम्प्युटरहरूको आवश्तकता पर्दछ?
   hoc_faq_need_computers_a: होइन। हामीसँग Hour of Code को पीसी, स्मार्टफोन, ट्याबलेटहरूमा
     काम गर्ने, र सबैमा कम्प्युटरको आवश्यकता नपर्ने अभ्यासहरू छन्! जहाँ तपाइँले आफुले
@@ -555,21 +634,41 @@ ne:
     Hour of Code लाई सँगै गर्न सक्छ। भिडियोको केहि भागसँगै हेर्नुहोस् र पहेलिँयाहरूको
     समाधान गर्न जानुहोस् वा प्रश्नहरूको जवाफ दिनुहोस्। <li><b>प्लग नगरिएकोमा जानुहोस्।</b>
     हामीले कम्प्युटरको आवश्यकता नपर्ने अभ्यासहरू प्रदान गर्छौँ। </ul>
+  hoc_faq_need_computers_a_markdown: |-
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+
+    _Here are a few options:_
+
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: I am in <country>. How do I participate internationally?
   hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
     the world. Last year, students worldwide joined together for the Hour of Code.
     Find out more <a href='/promote'>here</a>.
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: मैले कसरी Hour of Code को अभ्यास बनाउन सक्छु?
   hoc_faq_tutorial_a: यदि तपाइँले अभ्यासमा सहभागी हुने इच्छा राख्नुहुन्छ भने, <a href='targetHOC'>
     हाम्रो मार्गदर्शन र निर्देशनहरू हेर्नुहोस्</a>। हामी आबद्ध हुने विविध विकल्पहरूलाई
     होस्ट गर्न चाहन्छौँ, तर प्राथमिक लक्ष्य विद्यार्थी र शिक्षकहरूको लागि जो कम्प्युटर
     विज्ञानको लागि नयाँ छ उनिहरूको लागि अनुभव अनुकूलन गर्ने हो।
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
   hoc_faq_account_q: Do students need to log on using an account?
   hoc_faq_account_a: No. Absolutely no signup or login is required for students to
     try the Hour of Code. Most of the <a href='%{codeorg_url}/learn/beyond'>follow-on
     courses</a> require account creation to save student progress. Also, signing up
     for the Hour of Code does NOT automatically create a Code Studio account. If you
     do want to create accounts for your students, please follow these <a href='https://youtu.be/_smelV_KISE'>instructions</a>.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Which activity should I do with high school students?
   hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
     schoolers, especially the Star Wars JavaScript version and the free play level
@@ -578,11 +677,22 @@ ne:
     tutorial with Angry Birds or with Anna and Elsa. A high school student should
     be able to finish one of these in 30 minutes and can then try a more advanced
     tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: I am doing Scratch for Hour of Code, but what if my students
     have iPads rather than laptops?
   hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
     can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
     on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
     tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: How do you count Hours of Code?
   hoc_faq_map_q: Why don't I see my dot on the map?
@@ -593,11 +703,23 @@ ne:
     and can find your event listed there. Additionally, given the thousands of people
     signing up for the Hour of Code, the map and event list usually takes 48 hours
     to update. Check back in a few days!
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
   hoc_faq_count_hoc_a: The Hour of Code tracker isn't an exact measurement of usage.
     We do not count unique student IDs perfectly when tracking participation in the
     Hour of Code, especially because we don't require students to log in or register.
     As a result, we both over-count and under-count participants at the same time.
     Read all the details <a href='%{codeorg_url}/loc'>here</a>.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: How much can one learn in an hour?
   hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
     an expert computer scientist in one hour. One hour is only enough to learn that
@@ -617,25 +739,44 @@ ne:
     that computer science is something their students want and their teachers are
     capable of. <br/><br/> Above all, what all participants can learn in an hour is
     that we can do this.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: Still have more questions?
   hoc_faq_more_questions_a: Try finding an answer in our <a href='http://support.code.org'>support
     forum</a>.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
   hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
     stay up year-round. You can expect all our tutorials and curriculum to be available
     on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
     event how-to guides and other resources to help make your Hour of Code event a
     success.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: Where can I print certificates for my students?
   hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
     page</a> where you can print certificates for your entire class ahead of time.
     You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
     certificates</a> for students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
     name?
   hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
     but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
     guidelines for usage</a>.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: 2013 Hour of Code को स्थितिहरू
   stats_growth: यो 15 मिलियन प्रयोगकर्ताहरूमा पुग्ने सबै भन्दा छिटो तरिका थियो।
   stats_i18n: Students are learning in over 45 languages
@@ -651,6 +792,8 @@ ne:
     of high school courses, university courses, and the workforce.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
+  stats_females_more_markdown: During the Hour of Code, female students make up **50%
+    of all participants**!
   stats_nina: '"हरेक दिन उस्तै नतिजाहरू पाइयो &mdash; 100% नियुक्ति।"-नीना निकोल्स
     प्री, शिक्षक'
   stats_student: '"मलाई <b>जीवन-बरि-पक पटक</b> को अवसर थियो भनि थाहा थियो।" -मारिआना
@@ -675,11 +818,11 @@ ne:
   resources_country_resources: Country Specific Resources
   resources_stickers: Stickers
   resources_how_to_guides: How-to guides
-  resources_promote: Promote
+  resources_promote: प्रचार गर्नुहोस्
   resources_nav_tutorials: Try the tutorials
   resources_nav_promote: Spread the word
   resources_nav_spread_word: How to get involved
-  resources_banner_promote_text: Promote
+  resources_banner_promote_text: प्रचार गर्नुहोस्
   resources_banner_promote_button: Encourage others to sign up with brochures, inspirational
     posters and social media banners.
   resources_banner_howto_text: How-to
@@ -773,8 +916,11 @@ ne:
     of Code.
   learn_banner_beyond: Want to keep learning?  <a id='learn_banner_beyond'>Go beyond
     an hour</a>
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: Robotics and Circuits
   learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
     the activities below and make a tangible Hour of Code for students of any age!

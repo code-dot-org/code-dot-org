@@ -424,17 +424,37 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> answers -> 0 -> text"
+        - text: "https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> answers -> 1 -> text"
+        - text: "https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> उत्तर -> 2 -> टेक्स्ट"
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: |-
+          अपने बग के विवरण के साथ HTML के त्रुटियुक्त कोड का मिलान करें।
+
+          https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> content1
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            `src` विशेषता (एट्रिब्युट) को गलत तरीके से लिखा गया है।
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 0 -> text
+        - text: |-
+            `src` और` alt` विशेषताएँ (एट्रिब्युटस) स्विच की गयी हैं
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 1 -> text
+        - text: "फ़ाइल एक्सटेंशन (.jpg) छवि पते (इमेज एड्रेस) से गायब है\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4
+            -> dsls -> questions -> 2 -> text"
+        - text: छवि पता (इमेज एड्रेस) एक `src` विशेषता (एट्रिब्युट) के रूप में नहीं
+            दिया गया है
+        - text: फ़ाइल के नाम में एक रिक्त स्थान (स्पेस ) है
       CSD U2 lists match:
         answers:
         - {}
@@ -637,10 +657,11 @@ hi-IN:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 combining rep:
@@ -1613,18 +1634,11 @@ hi-IN:
             के लिए केवल *एक* मधु का छत्ता या *एक* फूल होगा।'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - text: मधुमक्खी प्रत्येक फूल पर मधुरस और प्रत्येक मधु के छत्ते पर शहद लेगी।
-          correct: true
+        - correct: true
           feedback: सही!
         - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से मधुरस लेने का प्रयास करेगी।
-          feedback: गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस और
-            प्रत्येक मधु के छत्ते पर शहद लेने देता है।
         - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से शहद लेने का प्रयास करेगी।
-          feedback: गलत। गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस
-            और प्रत्येक मधु के छत्ते पर शहद लेने देता है।
         - text: मुझे पता नहीं
-          feedback: "`यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस और प्रत्येक
-            मधु के छत्ते पर शहद लेने देता है।"
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -2013,15 +2027,23 @@ hi-IN:
             क्लिक करते हैं तो क्या होगा?
       courseD_multi_scrat_predict1:
         answers:
-        - feedback: गलत।  आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने
+        - text: कुछ नहीं। स्क्रैट बिल्कुल भी मूव नहीं करेगा।
+          feedback: गलत।  आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने
             से यह स्क्रैट को तीन बार आगे की ओर मूव करने के लिए सक्रिय करेगा।
-        - correct: true
+        - text: स्क्रैट तीन बार आगे की ओर मूव करेगा, मुड़ेगा, फिर शाहबलूत के पास जाने
+            के लिए तीन और बार आगे की और मूव करेगा!
+          correct: true
           feedback: सही!
-        - feedback: गलत।  आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने
+        - text: स्क्रैट आगे की ओर मूव करेगा, फिर मुड़ेगा और गिर जाएगा।
+          feedback: गलत।  आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने
             से यह स्क्रैट को तीन बार आगे की ओर मूव करने के लिए सक्रिय करेगा।
         - text: मुझे पता नहीं
+          feedback: "'आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने से
+            यह स्क्रैट को तीन बार आगे की ओर मूव करने के लिए सक्रिय करेगा। फिर वह मुड़ता
+            है और शाहबलूत के पास जाने के लिए तीन बार दुबारा आगे की ओर मूव करता है!"
         questions:
-        - {}
+        - text: यह कोड नए ब्लॉक का उपयोग करता है। आपके विचार में जब आप "चलाएं” को
+            दबाते हैं तो क्या होगा?
       courseE_multi_bee_functions_predict1:
         answers:
         - text: वही प्रोग्राम इस पहेली को हल करने के लिए भी काम करेगा।

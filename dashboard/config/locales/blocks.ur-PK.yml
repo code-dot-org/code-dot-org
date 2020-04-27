@@ -1485,6 +1485,14 @@ ur:
             '1': '1'
             '2': '2'
             '3': '3'
+      aalab_moveInDirection:
+        text: بڑھائیں {SPRITE} {DISTANCE} پکسلز {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': شمال
+            '"East"': مشرق
+            '"South"': جنوب
+            '"West"': مغرب
       aalab_prompt:
         text: سوال پوچھیں {MESSAGE}
       aalab_scene:
@@ -1496,8 +1504,10 @@ ur:
             '3': '3'
       aalab_setupStory:
         text: سیٹ اپ کہانی
-      aalab_showHideSprite:
-        text: "{OPTION}{SPRITE}"
+      aalab_starwars_playSound:
+        options:
+          OPTION:
+            '"random"': بےترتیب
       binary_drawBin:
         text: بائنری ڈراؤ {BIN}
       binary_drawBinScreen:

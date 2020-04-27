@@ -58,6 +58,8 @@ ne-NP:
       NEW Course 4 Bee For Loops 5:
         actions_category: The tool box got a new look! The "Actions" blocks are in
           here now.
+      New Frozen Project:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
       Overworld Chop Trees:
         craft_callout_preplaced: We've put some blocks here to get you started
       Overworld Chop Trees_2019:

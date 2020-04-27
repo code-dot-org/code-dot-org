@@ -53,7 +53,7 @@ de-DE:
         content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Nutze den Schlüssel, um jedem Code einen Buchstaben zuzuweisen
         questions:
-        - text: "<strong>N</strong>"
+        - text: "**N**"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
@@ -276,10 +276,10 @@ de-DE:
         content1: Weise die Schritte des Würfel-Rennspiels der Ordnung zu, in der
           sie im Algorithmus erscheinen sollte.
         questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
+        - text: "**1)**"
+        - text: "**2)**"
+        - text: "**3)**"
+        - text: "**4)**"
         title: Passend
       4-5 Algorithms Multi 1:
         answers:
@@ -392,8 +392,8 @@ de-DE:
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        - text: "**STERN**"
+        - text: "**RAMPE**"
         content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
           vorhandenen Fähigkeitsgruppen.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -546,7 +546,7 @@ de-DE:
         markdown: |
           # Binäre Bilder
 
-          Erfahre ein Bild mit nur zwei einfachen Werten darstellen zu können.
+          Lerne, wie man ein Bild mit nur zwei einfachen Werten darstellen kann.
       Building a UI with Design Mode:
         markdown: |
           # Willkommen im App Lab Design Mode
@@ -590,10 +590,17 @@ de-DE:
           **Jetzt bist du an der Reihe!**
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Schaue dir den Code unten an und sage voraus, wie die Überschriften
+          angezeigt werden. Wähle eine der Optionen auf der rechten Seite.
         markdown: |
           <pre>
           &lt;h3&gt; Eier &lt;/h3&gt;
@@ -602,10 +609,17 @@ de-DE:
           </pre>
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Schaue dir den Code unten an und sage voraus, wie die Überschriften
+          angezeigt werden. Wähle eine der Optionen auf der rechten Seite.
         markdown: |
           <pre>
           &lt;h3&gt; Eier &lt;/h3&gt;
@@ -614,10 +628,17 @@ de-DE:
           </pre>
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Schaue dir den Code unten an und sage voraus, wie die Überschriften
+          angezeigt werden. Wähle eine der Optionen auf der rechten Seite.
         markdown: |
           <pre>
           &lt;h3&gt; Eier &lt;/h3&gt;
@@ -628,22 +649,22 @@ de-DE:
         markdown: |
           # Übersicht
 
-          In dieser Lektion lernen Sie die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
+          In dieser Lektion lernst du die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
 
           ## Vokabular
 
-          * **Eingabe** - Eine Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
+          * **Eingabe** - Ein Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
           * **Ausgabe** - Ein Gerät oder eine Komponente, die Informationen von einem Computer empfängt.
 
 
-          ## Resourcen
+          ## Ressourcen
 
           * [Eingabe und Ausgabe - Aktivitätsleitfaden](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Übersicht
 
-          In dieser Lektion lernen Sie, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
+          In dieser Lektion lernst du, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
 
           ## Vokabuar
 
@@ -674,13 +695,13 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Für dieses Projekt entwerfen Sie Ihre eigene App, die ein Problem löst, das Sie definieren können.
+          Für dieses Projekt entwirfst du Deine eigene App, die ein Problem löst, das du definieren kannst.
 
-          ## Resourcen
+          ## Ressourcen
 
           * [Apps und Problemlösungen - Projektleitfaden](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
-          * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
-          * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+          * [Apps und Problemlösungen - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Apps und Problemlösungen - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: hier die Beschreibung
       CSD U2 Design Project_2018:
@@ -794,49 +815,79 @@ de-DE:
         - text: Im Dateinamen ist ein Leerzeichen vorhanden
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         markdown: " *Hinweis: Einige der HTML-Listen sind fehlerhaft, Du musst also
           darüber nachdenken, welche Stellen im Code die Fehler verursachen.*\n\n"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         markdown: " *Hinweis: Einige der HTML-Listen sind fehlerhaft, Du musst also
           darüber nachdenken, welche Stellen im Code die Fehler verursachen.*\n\n"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         markdown: " *Hinweis: Einige der HTML-Listen sind fehlerhaft, Du musst also
           darüber nachdenken, welche Stellen im Code die Fehler verursachen.*\n\n"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
       CSD U2 project guide:
         content1: hier die Beschreibung
       CSD U2 project guide_2018:
@@ -849,7 +900,7 @@ de-DE:
         - {}
         - {}
         - {}
-        - {}
+        - text: dog.x == cat.x
         questions:
         - {}
         - {}
@@ -862,7 +913,7 @@ de-DE:
         - {}
         - {}
         - {}
-        - {}
+        - text: dog.x == cat.x
         questions:
         - {}
         - {}
@@ -875,7 +926,7 @@ de-DE:
         - {}
         - {}
         - {}
-        - {}
+        - text: dog.x == cat.x
         questions:
         - {}
         - {}
@@ -900,7 +951,7 @@ de-DE:
       CSD U3 Boolean MC:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -909,7 +960,7 @@ de-DE:
       CSD U3 Boolean MC_2018:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -918,7 +969,7 @@ de-DE:
       CSD U3 Boolean MC_2018_2019:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -930,22 +981,49 @@ de-DE:
         content1: hier die Beschreibung
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
         - correct: true
-        - {}
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
         - correct: true
-        - {}
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
         - correct: true
-        - {}
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1014,10 +1092,8 @@ de-DE:
         - {}
       CSD U3 Sprites intro predict multi:
         answers:
-        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
-            style="width: 150px; border: 1px solid">'
+        - text: "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
           correct: true
@@ -1027,10 +1103,11 @@ de-DE:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -1526,6 +1603,8 @@ de-DE:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
         questions:
         - {}
       CSD U6 array multi_2018:
@@ -1539,6 +1618,8 @@ de-DE:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
         questions:
         - {}
       CSD U6 array multi_2018_2019:
@@ -1552,6 +1633,8 @@ de-DE:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
         questions:
         - {}
       CSD U6 circuit smart bike blinker build:
@@ -2223,10 +2306,10 @@ de-DE:
           Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       New Challenge Introduction:
         content1: hier die Beschreibung
-        markdown: "### Neue Herausforderung: Knacken Sie eine zufällige Substitutions-Verschlüsslung...mit
+        markdown: "### Neue Herausforderung: Knacke eine zufällige Substitutions-Verschlüsselung...mit
           einem neuen Widget.\n\nWas wäre, wenn wir, anstatt das ganze Alphabet zu
           verschieben, jeden Buchstaben des Alphabets auf einen anderen Buchstaben
-          des Alphabets abgebildet hätten? Dies wird als **zufällige Substitutions-Verschlüsslung**
+          des Alphabets abgebildet hätten? Dies wird als **zufällige Substitutions-Verschlüsselung**
           bezeichnet.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNun,
           anstatt dass die geheime Nachricht mit einer einfachen alphabetischen Verschiebung
           kodiert wird, wirst du Nachrichten sehen, die mit **zufälliger Substitutions-Verschlüsselung**
@@ -2236,15 +2319,15 @@ de-DE:
           viele verschiedene Dinge zeigt.\n\nAber was es tut bleibt ein Rätsel!  \n\n####
           Deine Aufgabe:\n\n * Finde heraus, was in dieser neuen Version des Tools
           vor sich geht.\n * Welche Informationen werden Dir präsentiert?\n * Finde
-          heraus, was das Tool dir erlaubt.\n * Wie immer: Man kann es nicht brechen.
+          heraus, was das Tool Dir erlaubt.\n * Wie immer: Man kann es nicht brechen.
           \ Also einfach herumklicken und ausprobieren.\n * Wenn du es herausfindest,
           kannst du möglicherweise eine Nachricht knacken, die mit zufälliger Substitutions-Verschlüsselung
-          kodiert wurde.\n \n### Hinweis\n\n* Wussten Sie, dass **E** der gebräuchlichste
-          Brief im Englischen ist?\n\n### Rekapitulieren und diskutieren\n Nachdem
-          du einige Zeit damit gespielt hast, solltest du dich mit jemandem - Partner,
-          Kleingruppe, ganze Klasse - treffen, um zu besprechen, was du gefunden hast,
-          und dich vergewissern, dass du weißt, was los ist und wie du das Tool benutzen
-          kannst.\n\n\n"
+          kodiert wurde.\n \n### Hinweis\n\n* Wusstest Du, dass **E** der gebräuchlichste
+          Buchstabe im Englischen ist?\n\n### Rekapitulieren und diskutieren\n Nachdem
+          Du einige Zeit damit gespielt hast, solltest Du Dich mit jemandem - Partner,
+          Kleingruppe, ganze Klasse - treffen, um zu besprechen, was Du herausgefunden
+          hast, und Dich vergewissern, dass Du weißt, was los ist und wie Du das Tool
+          benutzen kannst.\n\n\n"
       OPD-K5 Celebrate:
         markdown: |
           # Weitere Schritte > Feiern!
@@ -2278,7 +2361,7 @@ de-DE:
           Gemeinschaft von Pädagogen in den USA, die sich dafür einsetzt, ihren Schülern
           den Informatikunterricht zu vermitteln und gleichzeitig die allgemeine Öffentlichkeit
           für das Thema zu sensibilisieren. Sie ist Gastgeberin einer jährlichen Konferenz
-          und hat auch Sektionen, die lokale Treffen abhalten.\n"
+          und hat auch Untergruppen, die lokale Treffen abhalten.\n"
       OPD-K5 Stage3aGo:
         content1: hier die Beschreibung
       'Overview: Design Mode':
@@ -2488,16 +2571,16 @@ de-DE:
           vorkommen.\n* Tatsächlich ist die Verteilung der Buchstaben für fast alle
           Muster des englischen Textes ungefähr gleich. \n\n\nDie Version des Widgets
           auf der vorherigen Seite soll Dir helfen, **eine Substitutions-Verschlüsselung
-          durch Frequenzanalyse zu knacken**.\n\nIndem du die Häufigkeit der Buchstaben
+          durch Frequenzanalyse zu knacken**.\n\nIndem Du die Häufigkeit der Buchstaben
           in der verschlüsselten Nachricht im Vergleich zur Häufigkeit der Buchstaben
-          in einem typischen Stück englischer Prosa analysierst, kannst du beginnen,
-          dich darauf zu beschränken, was einige der Buchstabenzuordnungen sein könnten.
+          in einem typischen Stück englischer Prosa analysierst, kannst Du beginnen,
+          Dich darauf zu beschränken, was einige der Buchstabenzuordnungen sein könnten.
           \n\nDas Tool zeigt Dir, wie sich die Häufigkeit der Buchstaben im verschlüsselten
           Text (orange) mit der Häufigkeit aus dem typischen Englisch (blau) vergleicht.\n\n###
           Tipp: Wo soll man anfangen?\n\n1. Finde die kurzen Wörter und \"knacke\"
-          diese zuerst.  Wie viele Wörter mit einem Buchstaben kennst du? (\"a\").
-          \ Ein sehr häufiges Wort mit 3 Buchstaben ist \"the\".\n2. Sobald du das
-          getan hast, hast du Substitionen für einige der häufigsten Buchstaben.  Du
+          diese zuerst.  Wie viele Wörter mit einem Buchstaben kennst Du? (\"a\").
+          \ Ein sehr häufiges Wort mit 3 Buchstaben ist \"the\".\n2. Sobald Du das
+          getan hast, hast Du Substitionen für einige der häufigsten Buchstaben.  Du
           solltest in der Lage sein deine Intuition zu nutzen, um mit diesen Teilunterstützungen
           andere Wörter zu erraten.\n3. Nachdem man nur eine Handvoll hart umkämpfter
           Buchstaben gefunden hat, wird der Rest einfach.\n4. Der Vergleich der Häufigkeiten
@@ -2523,10 +2606,10 @@ de-DE:
           die eine Verschlüsselung durchführt.\n* **Caesar's Cipher** (hier auch Caesar
           Verschlüsselung genannt) - eine Verschlüsselungstechnik, die das Alphabet
           um eine bestimmte Anzahl von Zeichen verschiebt.\n* **Knacken der Verschlüsselung**
-          - Wenn Sie versuchen, eine geheime Nachricht zu entschlüsseln, *ohne* alle
+          - Wenn Du versuchst, eine geheime Nachricht zu entschlüsseln, *ohne* alle
           Besonderheiten der Verschlüsselung zu kennen, versuchen Sie, die Verschlüsselung
-          zu **knacken** (englisch: to crack).\n\n\nKlicken Sie auf Weiter, um die
-          **Nächste Herausforderung** zu sehen...\n\n \n"
+          zu **knacken** (englisch: to crack).\n\n\nKlicke auf Weiter, um die **Nächste
+          Herausforderung** zu sehen...\n\n \n"
       TheRightAppMarkdownLevel_2019:
         markdown: "# Die richtige App\n\n* Jeder benutzt heutzutage Computer, insbesondere
           Smartphones. \n* Smartphone-Apps helfen Menschen, Dinge zu tun, wie mit
@@ -2546,7 +2629,7 @@ de-DE:
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Übersicht
-          In dieser Lektion wenden Sie den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Ihnen hilft, Problemlösungen zu entwickeln und zu verbessern.
+          In dieser Lektion wendest du den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Dir hilft, Problemlösungen zu entwickeln und zu verbessern.
 
           ## Resourcen
           * [Problemlösung - Aktivitätsleitfaden](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
@@ -2644,33 +2727,54 @@ de-DE:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
+            Schleifen.  4 mal 3 ist 12!
         - text: '12'
           correct: true
           feedback: Richtig!
         - text: '15'
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
+            Schleifen.  4 mal 3 ist 12!
         - text: Ich weiß es nicht.
+          feedback: Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3 Schleifen.  4
+            mal 3 ist 12!
         questions:
-        - {}
+        - text: Schau dir den untenstehenden Code genau an. Wie viele Kürbisse wird
+            die Erntearbeiterin sammeln, nachdem du auf "Ausführen" geklickt hast?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
+            Schleifen.  4 mal 3 ist 12!
         - text: '12'
           correct: true
           feedback: Richtig!
         - text: '15'
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
+            Schleifen.  4 mal 3 ist 12!
         - text: Ich weiß es nicht.
+          feedback: Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3 Schleifen.  4
+            mal 3 ist 12!
         questions:
-        - {}
+        - text: Schau dir den untenstehenden Code genau an. Wie viele Kürbisse wird
+            die Erntearbeiterin sammeln, nachdem du auf "Ausführen" geklickt hast?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
+            Schleifen.  4 mal 3 ist 12!
         - text: '12'
           correct: true
           feedback: Richtig!
         - text: '15'
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3
+            Schleifen.  4 mal 3 ist 12!
         - text: Ich weiß es nicht.
+          feedback: Die Erntearbeiterin sammelt 4 Kürbisse in jeder von 3 Schleifen.  4
+            mal 3 ist 12!
         questions:
-        - {}
+        - text: Schau dir den untenstehenden Code genau an. Wie viele Kürbisse wird
+            die Erntearbeiterin sammeln, nachdem du auf "Ausführen" geklickt hast?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Das Programm funktioniert. Scrat wird zur Eichel gelangen.
@@ -3042,55 +3146,81 @@ de-DE:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - {}
+        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
+            egal was passiert. '
         - correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
+            passiert. '
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
+            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
+            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
+            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - {}
+        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
+            egal was passiert. '
         - correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
+            passiert. '
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
+            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
+            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
+            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - {}
+        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
+            egal was passiert. '
         - correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
+            passiert. '
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der Wolke
+            sein. Wenn dort eine Blume ist, wird die Biene einmal Nektar holen müssen.
+            Wenn dort keine Blume ist, sollte die Biene nichts tun. Schau dir den
+            unteren Code gut an. Was wird passieren, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
           feedback: Richtig!
         - {}
-        - {}
+        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
+            zu gewinnen.
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: 'Betrachte den nachfolgenden Code genau. Was wird deiner Meinung nach
+            geschehen, nachdem du auf "Ausführen" geklickt hast? Denke daran: es gibt
+            immer nur *eine* Wabe oder *eine* Blume hinter jeder Wolke.
+
+'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
           feedback: Richtig!
         - {}
-        - {}
+        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
+            zu gewinnen.
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: 'Betrachte den nachfolgenden Code genau. Was wird deiner Meinung nach
+            geschehen, nachdem du auf "Ausführen" geklickt hast? Denke daran: es gibt
+            immer nur *eine* Wabe oder *eine* Blume hinter jeder Wolke.
+
+'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
           feedback: Richtig!
         - {}
-        - {}
+        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
+            zu gewinnen.
         - text: Ich weiß es nicht.
         questions:
         - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
@@ -3098,31 +3228,43 @@ de-DE:
             Wolke wird es immer nur *eine* Wabe oder *eine* Blume geben.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar bekommen.
+        - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
+        - text: Die Biene wird den ganzen Nektar bekommen.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Die Biene wiederholt die Schleife der Vorwärtsbewegung und des
+            Nektarsammelns und kann so das Rätsel lösen.
         questions:
-        - {}
+        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar bekommen.
+        - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
+        - text: Die Biene wird den ganzen Nektar bekommen.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Die Biene wiederholt die Schleife der Vorwärtsbewegung und des
+            Nektarsammelns und kann so das Rätsel lösen.
         questions:
-        - {}
+        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar bekommen.
+        - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
+        - text: Die Biene wird den ganzen Nektar bekommen.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Die Biene wiederholt die Schleife der Vorwärtsbewegung und des
+            Nektarsammelns und kann so das Rätsel lösen.
         questions:
-        - {}
+        - text: Schau dir den die eingebetteten Schleifen unten genau an. Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -3132,7 +3274,8 @@ de-DE:
         - text: '12'
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Schau Dir den untenstehenden Code genau an. Wie viel Honig wird die
+            Biene machen, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
@@ -3142,7 +3285,8 @@ de-DE:
         - text: '12'
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Schau Dir den untenstehenden Code genau an. Wie viel Honig wird die
+            Biene machen, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
@@ -3152,7 +3296,8 @@ de-DE:
         - text: '12'
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: Schau Dir den untenstehenden Code genau an. Wie viel Honig wird die
+            Biene machen, wenn du auf "Ausführen" klickst?
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
@@ -3164,11 +3309,21 @@ de-DE:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
+          feedback: Falsch. Es gibt hier keinen Code zum Sammeln des Kürbisses.
+        - text: Die Erntearbeiterin wird auf dem von ihr eingeschlagenen Weg keine
+            Feldfrüchte ernten.
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+        - text: Die Erntearbeiterin wird alle Feldfrüchte mit Ausnahme des Kürbisses
+            ernten.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Code veranlasst die Erntearbeiterin, wiederholt, ein Treppenstufenmuster
+            zu erstellen und jeden Maiskolben oder Salat zu pflücken an dem sie vorbeikommt.
+            Der Kürbis wird dabei nicht gepflückt.
         markdown: |
           Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
           <br/>
@@ -3176,18 +3331,19 @@ de-DE:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
+        - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
+          feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
         - text: Der Erntemaschine wird keine Pflanze auf dem aktuellen Weg ernten.
-          feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
-            zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
-            Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
-            zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
-            Der Kürbis wird nicht gpflückt.
+          feedback: Der Code veranlasst die Erntearbeiterin, wiederholt, ein Treppenstufenmuster
+            zu erstellen und jeden Maiskolben oder Salat zu pflücken an dem sie vorbeikommt.
+            Der Kürbis wird dabei nicht gepflückt.
         markdown: |
           Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
           <br/>
@@ -3195,18 +3351,19 @@ de-DE:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
+        - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
+          feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
         - text: Der Erntemaschine wird keine Pflanze auf dem aktuellen Weg ernten.
-          feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
-            zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
-            Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
-          feedback: Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
-            zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
-            Der Kürbis wird nicht gpflückt.
+          feedback: Der Code veranlasst die Erntearbeiterin, wiederholt, ein Treppenstufenmuster
+            zu erstellen und jeden Maiskolben oder Salat zu pflücken an dem sie vorbeikommt.
+            Der Kürbis wird dabei nicht gepflückt.
         markdown: |
           Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
           <br/>
@@ -3220,67 +3377,154 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - correct: true
+        - text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
+        - text: 'Dieser Code lässt den Haufen völlig unberührt.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Dieser Code lässt die Löcher völlig unberührt.
+
+'
+          feedback: 'Falsch. Die `während-Schleife kann jede Schleifengröße verarbeiten,
+            aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
         - text: Ich weiß es nicht.
+          feedback: 'Die `während-Schleife kann jede Schleifengröße verarbeiten, aber
+            es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
         questions:
-        - {}
+        - text: 'Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieses
+            Rätsels übrig bleiben?
+
+'
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
+        - text: 'Dieser Code lässt den Haufen völlig unberührt.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Dieser Code lässt die Löcher völlig unberührt.
+
+'
+          feedback: 'Falsch. Die `während-Schleife kann jede Schleifengröße verarbeiten,
+            aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
         - text: Ich weiß es nicht.
+          feedback: 'Die `während-Schleife kann jede Schleifengröße verarbeiten, aber
+            es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
         questions:
-        - {}
+        - text: 'Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieses
+            Rätsels übrig bleiben?
+
+'
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
+        - text: 'Dieser Code lässt den Haufen völlig unberührt.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Dieser Code lässt die Löcher völlig unberührt.
+
+'
+          feedback: 'Falsch. Die `während-Schleife kann jede Schleifengröße verarbeiten,
+            aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
         - text: Ich weiß es nicht.
+          feedback: 'Die `während-Schleife kann jede Schleifengröße verarbeiten, aber
+            es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
         questions:
-        - {}
+        - text: 'Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieses
+            Rätsels übrig bleiben?
+
+'
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nichts wird passieren.
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist.
+            Er stoppt, wenn der Haufen weg ist
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nichts wird passieren.
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist.
+            Er stoppt, wenn der Haufen weg ist
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Nichts wird passieren.
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist.
+            Er stoppt, wenn der Haufen weg ist
         questions:
-        - {}
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Zombie wird es bis zur Sonnenblume schaffen.
+        - text: 'Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+            im Kreis herumlaufen.
+
+'
         - text: Ich weiß es nicht.
         questions:
         - {}
@@ -3290,9 +3534,14 @@ de-DE:
             und her gehen.
           correct: true
           feedback: Richtig!
-        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+        - text: Der Zombie wird es bis zur Sonnenblume schaffen.
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
-        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+        - text: 'Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+            im Kreis herumlaufen.
+
+'
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
         - text: Ich weiß es nicht.
           feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
@@ -3305,9 +3554,14 @@ de-DE:
             und her gehen.
           correct: true
           feedback: Richtig!
-        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+        - text: Der Zombie wird es bis zur Sonnenblume schaffen.
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
-        - feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+        - text: 'Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+            im Kreis herumlaufen.
+
+'
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
             immer hin und her gehen.
         - text: Ich weiß es nicht.
           feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
@@ -3320,7 +3574,7 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - {}
+        - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
         - text: Ich weiß es nicht.
         questions:
         - {}
@@ -3330,7 +3584,7 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - {}
+        - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
         - text: Ich weiß es nicht.
         questions:
         - {}
@@ -3340,79 +3594,173 @@ de-DE:
         - text: Der Vogel wird bis zum Schwein kommen.
           correct: true
           feedback: Richtig!
-        - {}
+        - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
         - text: Ich weiß es nicht.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Nichts. Scrat wird sich überhaupt nicht bewegen.
+        - text: Scrat wird sich dreimal vorwärts bewegen, sich drehen, sich dann noch
+            dreimal vorwärts bewegen und es bis zur Eichel schaffen!
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Scrat wird sich vorwärts bewegen, sich dann umdrehen und abstürzen.
         - text: Ich weiß es nicht.
+          feedback: Wenn du den "Vorwärts"-Block innerhalb des "Wiederholen"-Blocks
+            platzierst, bewegt sich Scrat dreimal vorwärts. Dann dreht er sich um
+            und bewegt sich noch drei weitere Male vorwärts und erreicht die Eichel!
         questions:
-        - {}
+        - text: Dieser Code verwendet einen neuen Block. Was passiert deiner Meinung
+            nach, wenn du auf "Ausführen" drückst?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
-        - {}
-        - {}
+        - text: Die Biene wird nicht genug Honig produzieren.
+        - text: Die Biene wird versuchen, zu viel Honig zu machen.
         - text: Ich weiß es nicht.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Die Erntearbeiterin wird zwei Kürbisse ernten.
+          feedback: Falsch.  Die Erntearbeiterin ruft erst dann "prüfen und ernten"
+            auf, wenn sie zum Mais kommt.
+        - text: Die Erntearbeiterin wird alle Kürbisse ernten.
+          feedback: Falsch.  Die Erntemaschine ruft erst dann "prüfen und ernten"
+            auf, wenn sie zum Mais kommt.
+        - text: Die Erntearbeiterin wird den Salat ernten.
+          feedback: Falsch. Die Erntearbeiterin macht nur eine Umdrehung und endet
+            beim Mais.
+        - text: Die Erntearbeiterin wird den Mais ernten.
+          correct: true
           feedback: Richtig!
         questions:
-        - {}
+        - text: Schaue dir die unten definierten Funktionen an. Was wird die Erntearbeiterin
+            ernten?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Die Erntearbeiterin wird zwei Kürbisse ernten.
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        - text: Die Erntearbeiterin wird alle Kürbisse ernten.
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        - text: Die Erntearbeiterin wird den Salat ernten.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Die Erntearbeiterin wird den Mais ernten.
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
         questions:
-        - {}
+        - text: Schaue dir die unten definierten Funktionen an. Was wird die Erntearbeiterin
+            ernten?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Die Erntearbeiterin wird zwei Kürbisse ernten.
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        - text: Die Erntearbeiterin wird alle Kürbisse ernten.
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        - text: Die Erntearbeiterin wird den Salat ernten.
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: Die Erntearbeiterin wird den Mais ernten.
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
         questions:
-        - {}
+        - text: Schaue dir die unten definierten Funktionen an. Was wird die Erntearbeiterin
+            ernten?
       courseE_prediction_artistFunction1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
+
+'
+          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+
+'
+        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
+
+'
+          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+
+'
+        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+
+'
+          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
+            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
+
+'
+        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
+
+'
+          correct: true
+          feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
+            einem Sprung dazwischen.
         questions:
-        - {}
+        - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
+
+'
+          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+
+'
+        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
+
+'
+          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+
+'
+        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+
+'
+          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
+            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
+
+'
+        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
+
+'
+          correct: true
+          feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
+            einem Sprung dazwischen.
         questions:
-        - {}
+        - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 'Nichts. Die Funktion wird im Programm nicht aufgerufen.
+
+'
+          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+
+'
+        - text: 'Der Künstler wird ein einzelnes Quadrat zeichnen.
+
+'
+          feedback: 'Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+
+'
+        - text: 'Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+
+'
+          feedback: 'Falsch. Die Länge jeder Seite des Quadrats beträgt nur 100 Pixel,
+            aber der Künstler springt zwischen den Funktionen um 175 Pixel.
+
+'
+        - text: 'Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
+
+'
+          correct: true
+          feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
+            einem Sprung dazwischen.
         questions:
-        - {}
+        - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_project_exemplars_2019:
+        content1: Test Markdown Lehrbuchseite
         markdown: |+
           # Projektbeispiele
 
@@ -3446,6 +3794,9 @@ de-DE:
         questions:
         - text: Sieh Dir den Code unten an.  Wie viele Einheiten Nektar wird die Biene
             am Ende sammeln?
+        title: 'Bienen-Variablen Multi
+
+'
       courseF_bee_variables_8a_2018_2019:
         answers:
         - feedback: Falsch.  Der Name Ihrer Variable hat keinen Einfluss auf ihren
@@ -3460,7 +3811,43 @@ de-DE:
         questions:
         - text: Sieh Dir den Code unten an.  Wie viele Einheiten Nektar wird die Biene
             am Ende sammeln?
+        title: 'Bienen-Variablen Multi
+
+'
+      courseF_external_variableConstant_2018:
+        markdown: '<h2>Mehr zu Variablen</h2> <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"
+          style="padding-left: 30px; Breite:300px; float:right;"/ <h3>Du hast gerade
+          eine großartige Methode kennengelernt, eine Variable... als Konstante zu
+          verwenden! Wenn du eine Variable als Konstante verwendest, bestimmst du
+          einen Wert einmal und verwendest dann diesen *gleichen* Wert mehrmals in
+          deinem Programm, ohne ihn zu ändern, nachdem du auf "Ausführen" geklickt
+          hast. </h3> <br/><hr/> <h3>Im nächsten Teil der Serie wirst du Code mit
+          Variablen schreiben, die sich innerhalb des Programms *verändern*.</h3>
+
+'
+      courseF_external_variableConstant_2018_2019:
+        markdown: '<h2>Mehr zu Variablen</h2> <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png"
+          style="padding-left: 30px; Breite:300px; float:right;"/ <h3>Du hast gerade
+          eine großartige Methode kennengelernt, eine Variable... als Konstante zu
+          verwenden! Wenn du eine Variable als Konstante verwendest, bestimmst du
+          einen Wert einmal und verwendest dann diesen *gleichen* Wert mehrmals in
+          deinem Programm, ohne ihn zu ändern, nachdem du auf "Ausführen" geklickt
+          hast. </h3> <br/><hr/> <h3>Im nächsten Teil der Serie wirst du Code mit
+          Variablen schreiben, die sich innerhalb des Programms *verändern*.</h3>
+
+'
+      courseF_markdown_algorithms_end:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_algorithms_intro:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_conditionals_end:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_conditionals_intro:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_debugging_end:
+        content1: Test Markdown Lehrbuchseite
       courseF_markdown_debugging_intro:
+        content1: Test Markdown Lehrbuchseite
         markdown: "# In dieser Lektion...\n\n### Woran denkst du, wenn du an Bugs
           (Käfer) denkst? \n\n### Wenn die meisten Leute an Käfer denken, denken sie
           an gruselige, krabbelnde Dinge. In der Informatik sind Käfer (bzw. Bugs)
@@ -3468,35 +3855,168 @@ de-DE:
           in dieser Lektion wurden bereits für dich gelöst! Aber nicht so schnell
           - sie scheinen noch nicht zu funktionieren. Stecken Bugs hinter all dem?
           \n\n---\n\n## Bausteine kennenlernen\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
+      courseF_markdown_forloops_end:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "# **Du hast gerade \"für Schleifen\" gelernt!** \n\n### **`Für
+          Schleifen` sind Schleifen, bei denen du die Start-, Stopp- und Schrittwerte
+          bestimmst.** \n\n### Diese neue Art der `Wiederholen`-Schleife` ermöglicht
+          dir mehr Kontrolle darüber, wann die Schleife beginnt, wann sie endet und
+          um wie viel sich die Schleife jedes Mal, wenn sie läuft, erhöhen soll. \n\n###
+          Mehr Kontrolle bedeutet, dass du Rätsel viel schneller lösen kannst!\n\n
+          --- \n\n### **Vokabeln, die man kennen muss** \n\n### **Für Schleife** -
+          Für-Schleifen sind Schleifen, die einen vorgegebenen Anfang, ein vorgegebenes
+          Ende und eine vorgegebene Steigerung (Schrittintervall) haben\n"
+      courseF_markdown_forloops_end_2019:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "# **Du hast gerade \"für Schleifen\" gelernt!** \n\n### **`Für
+          Schleifen` sind Schleifen, bei denen du die Start-, Stopp- und Schrittwerte
+          bestimmst.** \n\n### Diese neue Art der `Wiederholen`-Schleife` ermöglicht
+          dir mehr Kontrolle darüber, wann die Schleife beginnt, wann sie endet und
+          um wie viel sich die Schleife jedes Mal, wenn sie läuft, erhöhen soll. \n\n###
+          Mehr Kontrolle bedeutet, dass du Rätsel viel schneller lösen kannst!\n\n
+          --- \n\n### **Vokabeln, die man kennen muss** \n\n### **Für Schleife** -
+          Für-Schleifen sind Schleifen, die einen vorgegebenen Anfang, ein vorgegebenes
+          Ende und eine vorgegebene Steigerung (Schrittintervall) haben\n"
+      courseF_markdown_forloops_intro:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "**In dieser Lektion...**\n\n ### Heute lernst du eine neue Art
+          der \"Wiederholen`-Schleife\" kennen. Hier siehst du eine Vorschau auf den
+          Block, den du verwenden wirst: \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+          \n\n### *Glücklicherweise macht diese neue Schleife das Lösen von solchen
+          Rätseln ganz einfach! \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+      courseF_markdown_forloops_intro_2019:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "**In dieser Lektion...**\n\n ### Heute lernst du eine neue Art
+          der \"Wiederholen`-Schleife\" kennen. Hier siehst du eine Vorschau auf den
+          Block, den du verwenden wirst: \n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+          \n\n### *Glücklicherweise macht diese neue Schleife das Lösen von solchen
+          Rätseln ganz einfach! \n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n"
+      courseF_markdown_loops_end:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_loops_intro:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_nestedloops_end:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_nestedloops_intro:
+        content1: Test Markdown Lehrbuchseite
+      courseF_markdown_variables_end:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "# **Du hast gerade gelernt, was \"Variablen\" sind!** \n\n### Damit
+          man eine Variable verwenden kann, muss sie einen Namen und einen Wert haben.
+          Der Name ändert sich nicht, der Wert kann sich jedoch ändern. Auf diese
+          Weise kannst du den Namen der Variable als Platzhalter verwenden, wo immer
+          du sie im Programm brauchst!\n\n\n --- \n\n\n### **Vokabeln, die man kennen
+          muss** \n\n### **Variable** - Ein Platzhalter für eine Information, die
+          sich ändern kann\n"
+      courseF_markdown_variables_end_2019:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "# **Du hast gerade gelernt, was \"Variablen\" sind!** \n\n### Damit
+          man eine Variable verwenden kann, muss sie einen Namen und einen Wert haben.
+          Der Name ändert sich nicht, der Wert kann sich jedoch ändern. Auf diese
+          Weise kannst du den Namen der Variable als Platzhalter verwenden, wo immer
+          du sie im Programm brauchst!\n\n\n --- \n\n\n### **Vokabeln, die man kennen
+          muss** \n\n### **Variable** - Ein Platzhalter für eine Information, die
+          sich ändern kann\n"
+      courseF_markdown_variables_intro:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "**In dieser Lektion...** \n\n### *Variablen* sind Platzhalter für
+          Informationen, die sich ändern können. Mit einem Platzhalter ist es möglich,
+          ein Programm zu schreiben, auch wenn du ihre Werte erst später kennst! \n\n\n---
+          \n\n\n## **Blöcke, die man kennen sollte** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+          \n"
+      courseF_markdown_variables_intro_2019:
+        content1: Test Markdown Lehrbuchseite
+        markdown: "**In dieser Lektion...** \n\n### *Variablen* sind Platzhalter für
+          Informationen, die sich ändern können. Mit einem Platzhalter ist es möglich,
+          ein Programm zu schreiben, auch wenn du ihre Werte erst später kennst! \n\n\n---
+          \n\n\n## **Blöcke, die man kennen sollte** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+          \n"
       courseF_multi_artist_for10_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: 'Der Künstler zeichnet eine gerade Linie, die von einer Seite des
+            Spielraums zur anderen immer dicker wird.
+
+'
+          feedback: 'Falsch. Der Künstler wechselt zwischen Wiederholungen der "Für"-Schleife.
+
+'
+        - text: "Der Künstler wird eine Spirale zeichnen, und jedes Mal, wenn er durch
+            die `Für-Schleife` durchläuft, wird die Linie länger und dünner. \n"
+          feedback: 'Falsch. Jedes Mal, wenn der Künstler die `Für-Schleife`durchläuft,
+            zieht er Künstler eine längere, aber auch dickere Linie.
+
+'
+        - text: 'Der Künstler wird eine Spirale zeichnen, und jedes Mal, wenn er die
+            `Für-Schleife`durchläuft, wird die Linie länger und dicker.
+
+'
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: 'Falsch. Jedes Mal, wenn der Künstler die `Für-Schleife`durchläuft,
+            zieht er Künstler eine längere, aber auch dickere Linie.
+
+'
         markdown: "Wir haben den Zähler aus unserer `for`-Schleife benutzt, um die
           Breite des Pinsels auf dieser Zeichnung zu verändern.  \n\n\n"
         questions:
         - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseF_multi_artist_for10_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: 'Der Künstler zeichnet eine gerade Linie, die von einer Seite des
+            Spielraums zur anderen immer dicker wird.
+
+'
+          feedback: 'Falsch. Der Künstler wechselt zwischen Wiederholungen der "Für"-Schleife.
+
+'
+        - text: "Der Künstler wird eine Spirale zeichnen, und jedes Mal, wenn er durch
+            die `Für-Schleife` durchläuft, wird die Linie länger und dünner. \n"
+          feedback: 'Falsch. Jedes Mal, wenn der Künstler die `Für-Schleife`durchläuft,
+            zieht er Künstler eine längere, aber auch dickere Linie.
+
+'
+        - text: 'Der Künstler wird eine Spirale zeichnen, und jedes Mal, wenn er die
+            `Für-Schleife`durchläuft, wird die Linie länger und dicker.
+
+'
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: 'Falsch. Jedes Mal, wenn der Künstler die `Für-Schleife`durchläuft,
+            zieht er Künstler eine längere, aber auch dickere Linie.
+
+'
         markdown: "Wir haben den Zähler aus unserer `for`-Schleife benutzt, um die
           Breite des Pinsels auf dieser Zeichnung zu verändern.  \n\n\n"
         questions:
         - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: 'Der Künstler zeichnet eine gerade Linie, die von einer Seite des
+            Spielraums zur anderen immer dicker wird.
+
+'
+          feedback: 'Falsch. Der Künstler wechselt zwischen Wiederholungen der "Für"-Schleife.
+
+'
+        - text: "Der Künstler wird eine Spirale zeichnen, und jedes Mal, wenn er durch
+            die `Für-Schleife` durchläuft, wird die Linie länger und dünner. \n"
+          feedback: 'Falsch. Jedes Mal, wenn der Künstler die `Für-Schleife`durchläuft,
+            zieht er Künstler eine längere, aber auch dickere Linie.
+
+'
+        - text: 'Der Künstler wird eine Spirale zeichnen, und jedes Mal, wenn er die
+            `Für-Schleife`durchläuft, wird die Linie länger und dicker.
+
+'
+          correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
+          feedback: 'Falsch. Jedes Mal, wenn der Künstler die `Für-Schleife`durchläuft,
+            zieht er Künstler eine längere, aber auch dickere Linie.
+
+'
         markdown: "Wir haben den Zähler aus unserer `for`-Schleife benutzt, um die
           Breite des Pinsels auf dieser Zeichnung zu verändern.  \n\n\n"
         questions:
@@ -3519,38 +4039,78 @@ de-DE:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - correct: true
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `Wiederholen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
         - text: Ich weiß es nicht.
+          feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
+            bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
+            langen Seiten zeichnet.
+
+'
         questions:
-        - {}
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - correct: true
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `Wiederholen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
         - text: Ich weiß es nicht.
+          feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
+            bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
+            langen Seiten zeichnet.
+
+'
         questions:
-        - {}
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - correct: true
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `Wiederholen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
         - text: Ich weiß es nicht.
+          feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
+            bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
+            langen Seiten zeichnet.
+
+'
         questions:
-        - {}
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - {}
+        - text: 'Die Biene wird zur Wolke gehen und versuchen, Nektar zu bekommen,
+            egal was passiert. '
         - correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Die Biene wird sich zur Wolke bewegen und dann nichts tun, egal was
+            passiert. '
         - text: Ich weiß es nicht.
+        markdown: 'Die Wolke versperrt die Sicht. Dort könnte eine Blume unter der
+          Wolke sein. Wenn dort eine Blume ist, wird die Biene den Nektar **einmal**
+          holen.
+
+'
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
@@ -3558,37 +4118,101 @@ de-DE:
         - correct: true
           feedback: Richtig!
         - {}
-        - {}
+        - text: Die Biene wird versuchen, Honig sowohl aus Blüten als auch aus Waben
+            zu gewinnen.
         - text: Ich weiß es nicht.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: 'Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        - text: "Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. \n"
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: 'Die Biene wird sich vorwärts bewegen und von jeder Blüte eine Einheit
+            Nektar sammeln. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        - text: 'Die Biene wird sich vorwärts bewegen und versuchen, mehr Nektar zu
+            sammeln, als in den Blüten ist. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
+          viel einfacher! \n"
         questions:
-        - {}
+        - text: 'Lese den nachfolgenden Code. Was passiert, wenn du auf "Ausführen"
+            klickst?
+
+'
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: 'Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        - text: "Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. \n"
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Die Biene wird sich vorwärts bewegen und von jeder Blüte eine Einheit
+            Nektar sammeln. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
         - text: 'Ich weiß es nicht. '
+        markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
+          viel einfacher! \n"
         questions:
-        - {}
+        - text: 'Lese den nachfolgenden Code. Was passiert, wenn du auf "Ausführen"
+            klickst?
+
+'
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: 'Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        - text: "Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. \n"
+          correct: true
           feedback: Richtig!
-        - {}
+        - text: 'Die Biene wird sich vorwärts bewegen und von jeder Blüte eine Einheit
+            Nektar sammeln. '
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
         - text: 'Ich weiß es nicht. '
+        markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
+          viel einfacher! \n"
         questions:
-        - {}
+        - text: 'Lese den nachfolgenden Code. Was passiert, wenn du auf "Ausführen"
+            klickst?
+
+'
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: Die Biene wird keinen Nektar oder Honig sammeln.
@@ -3623,6 +4247,7 @@ de-DE:
         questions:
         - {}
       courseF_project_exemplars_2019:
+        content1: Test Markdown Lehrbuchseite
         markdown: |+
           # Projektbeispiele
 
@@ -3644,41 +4269,170 @@ de-DE:
 
       coursee_prediction_artistfunction2:
         answers:
-        - {}
-        - correct: true
+        - text: 'Der Künstler wird das Rätsel richtig lösen.
+
+'
+          feedback: 'Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "Linie aus Polygonen zeichnen".
+
+'
+        - text: 'Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: 'Der Künstler wird nur eine Linie von Quadraten zeichnen.
+
+'
+          feedback: 'Falsch. Das Programm ruft nicht "Linie aus Polygonen zeichnen"
+            auf.
+
+'
+        - text: 'Der Künstler wird vier Quadrate übereinander zeichnen.
+
+'
+          feedback: 'Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+            zeichnen" um 90 Grad.
+
+'
         questions:
-        - {}
+        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: 'Der Künstler wird das Rätsel richtig lösen.
+
+'
+          feedback: 'Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "Linie aus Polygonen zeichnen".
+
+'
+        - text: 'Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: 'Der Künstler wird nur eine Linie von Quadraten zeichnen.
+
+'
+          feedback: 'Falsch. Das Programm ruft nicht "Linie aus Polygonen zeichnen"
+            auf.
+
+'
+        - text: 'Der Künstler wird vier Quadrate übereinander zeichnen.
+
+'
+          feedback: 'Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+            zeichnen" um 90 Grad.
+
+'
         questions:
-        - {}
+        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: 'Der Künstler wird das Rätsel richtig lösen.
+
+'
+          feedback: 'Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "Linie aus Polygonen zeichnen".
+
+'
+        - text: 'Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
+
+'
+          correct: true
           feedback: Richtig!
-        - {}
-        - {}
+        - text: 'Der Künstler wird nur eine Linie von Quadraten zeichnen.
+
+'
+          feedback: 'Falsch. Das Programm ruft nicht "Linie aus Polygonen zeichnen"
+            auf.
+
+'
+        - text: 'Der Künstler wird vier Quadrate übereinander zeichnen.
+
+'
+          feedback: 'Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+            zeichnen" um 90 Grad.
+
+'
         questions:
-        - {}
+        - text: Was passiert, wenn Du die Schaltfläche "Ausführen" drückst?
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Übersicht
 
-          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Pennys wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Cent-Stücke wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
 
 
-          ## Resourcen
+          ## Ressourcen
 
-          * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
       grade2_multi_collector_A_predict1:
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.
@@ -3734,3 +4488,7 @@ de-DE:
         questions:
         - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
             wenn das Programm läuft?
+      gradek1_activity_beNice:
+        markdown: "# Verhalten im Computerlabor\n \n<br/><br/>  \n  \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nZum Unterrichtsplan\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Weiter</a>"

@@ -1,0 +1,61 @@
+name 'How If Statements Work pt 1_2018_2019_virtual'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Understanding Program Flow
+Programs are said to have a "flow of execution". You start by executing some line of code and then the next and so on.
+
+<img src="https://images.code.org/9475539704f7fc8d13092a5706fb3bba-image-1479311514103.png" style="float: right">
+
+A flow chart is a common visual that's used to represent the various paths of execution that your program might take.  Many people use them to help plan.  
+
+<span style="color: #00adbc; font-size: 150%">1.</span>
+This flow chart depicts a program executing one line after another until it gets to a point where it needs to make a decision.
+
+<span style="color: #00adbc; font-size: 150%">2.</span>
+In order to determine which path to take you state some **condition**. It should be a **Boolean expression** - something that evaluates to **true** or **false**.  Here we have a simple **comparsion** of two values: the person's age and the number 18.
+
+<span style="color: #00adbc; font-size: 150%">3.</span> The program does one thing if the condition is true, and something else if the condition is false.
+
+<span style="color: #00adbc; font-size: 150%">4.</span> The program can continue a single thread of execution after the condition as well.
+
+
+## How If-statements work
+
+<img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+`if` statements are the lines of code you need to change the flow while you're program is running. You can write code that *makes a decision that determines which lines of code should be run next.*
+
+At the right is a diagram showing the elements of a basic `if` statement in JavaScript.
+
+There are two basic parts to an if-statement.
+
+1. A condition to be evaluated (A Boolean expression that evaluates to **true** or **false**)
+2. Code that should run *if* the expression was true - enclosed in curly braces
+
+## A worked example
+<img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+Program executes line by line as you would expect. It displays a message, then prompts the user to enter a number.  Whatever the user types will be stored in the variable <code>age</code> and then proceeds to the next line...
+</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+When the <code>if</code> statement is encountered the <em>first</em> thing it does is evaluate the condition in the parentheses. It checks to see if, at this point in the program, the value in a variable <code>age</code> is greater than or equal to 18.  If it is then we say the expression "<strong>returns true</strong>".  Otherwise it returns false.
+</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+These console.log statements will <em>only</em> execute if the expression was true. The curly braces surround all of the code that should be executed if, and only if, the expression was true.  Otherwise, the entire section of code encapsulated in the if statement is <em>skipped</em>.
+</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+Execution picks up here, on the first line after the closing curly brace of the if-statement.  This line will <em>always</em> execute, but notice that if the user entered an age less than 18, the entire if statement would be skipped, and it would just say "Thanks for verifying".  (We'll fix this awkwardness soon).
+
+</p>
+
+<div style="clear: both">&nbsp;</div>
+
+
+MARKDOWN

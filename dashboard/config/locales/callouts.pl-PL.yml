@@ -229,8 +229,8 @@ pl-PL:
       Infinity_repeat:
         Infinity_repeat_callout: Umieść tutaj wewnątrz bloki przesunięcia
       InspirationalArtwork:
-        InspirationalArtwork_1: Spróbuj użyć nowego bloku `comment` pod tą etykietą,
-          aby zostawić sobie notatki wewnątrz twojego programu!
+        InspirationalArtwork_1: Spróbuj użyć nowego bloku "komentarz" pod tą etykietą,
+          aby zostawić sobie notatki wewnątrz Twojego programu!
       InspirationalArtwork_2018:
         InspirationalArtwork_1: Spróbuj użyć nowego bloku `comment` pod tą etykietą,
           aby zostawić sobie notatki wewnątrz twojego programu!
@@ -285,6 +285,8 @@ pl-PL:
       NEW Course 4 Bee For Loops 5:
         actions_category: Przybornik ma nowy wygląd! Pojawiły się bloki "Actions"
           (Akcje).
+      New Frozen Project:
+        snowflake_dropdown: Użyj tej listy rozwijanej, aby utworzyć różne płatki śniegu!
       Overworld Chop Trees:
         craft_callout_preplaced: Ułożyliśmy już kilka bloków na dobry początek
       Overworld Chop Trees_2019:
@@ -308,11 +310,11 @@ pl-PL:
       Overworld Place Wall_2019:
         craft_inside_repeat: Powtarzaj działania, umieszczając tu bloki
       Robot Doodle:
-        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą
-          etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
+        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku "komentarz" pod
+          tą etykietą, aby zostawić sobie notatki wewnątrz Twojego programu!
       Robot Doodle_2018:
-        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku `comment` pod tą
-          etykietą, aby zostawić sobie notatki wewnątrz twojego programu!
+        4-5_Artist_Patterns_Free_Play_2: Spróbuj użyć nowego bloku "komentarz" pod
+          tą etykietą, aby zostawić sobie notatki wewnątrz Twojego programu!
       Underground Avoiding Lava:
         craft_callout_moveforward: Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać
           polecenie, aby przejść dalej?
@@ -323,6 +325,10 @@ pl-PL:
         craft_what_is_iron: Wydobądź to żelazo!
       Underground Iron_2019:
         craft_what_is_iron: Wydobądź to żelazo!
+      behaviors 1:
+        behaviors_edit: Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie.
+      behaviors 4:
+        behaviors_edit: Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Użyj tej pętli, aby zebrać cały nektar
           (lub miód) z jednego kwiatka (lub plastra).
@@ -338,7 +344,7 @@ pl-PL:
           projekt, zmień go tak, jak chcesz!
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Wykorzystaj to polecenie do przesunięcia
-          pszczoły do tyłu.
+          pszczółki do tyłu.
       course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_1: Jaki kod powinieneś wstawić do tej funkcji?
         courseF_bee_functions_challenge1_2: Funkcja "sprawdź nektar lub miód" może
@@ -501,16 +507,28 @@ pl-PL:
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Te bloki są zablokowane i nie mogą być usunięte!
       courseC_maze_programming3:
-        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+        courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming3_2018:
-        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+        courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming3_2019:
-        courseC_maze_programming3_3: Te bloki są kamienne i nie mogą być wyrzucone.
+        courseC_maze_programming3_3: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7:
+        courseC_maze_programming7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą
+          być trudne i wymagać kilku prób.
+
+'
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7_2018:
+        courseC_maze_programming7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą
+          być trudne i wymagać kilku prób.
+
+'
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseC_maze_programming7_2019:
+        courseC_maze_programming7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą
+          być trudne i wymagać kilku prób.
+
+'
         courseC_maze_programming7_2: Te bloki są z kamienia i nie mogą być wyrzucone.
       courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: Nie musisz używać kolorów by poprawnie rozwiązać
@@ -546,10 +564,10 @@ pl-PL:
           (lub miód) z jednego kwiatka (lub plastra).
       courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Wykorzystaj to polecenie do przesunięcia
-          pszczoły do tyłu.
+          pszczółki do tyłu.
       courseD_bee_debugging_challenge1a:
         courseD_bee_debugging_challenge1_callout1: Wykorzystaj to polecenie do przesunięcia
-          pszczoły do tyłu.
+          pszczółki do tyłu.
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'Użyj tego bloku, aby wziąć jeden kawałek skarbu.  '
       courseD_maze_ramp3:
@@ -567,6 +585,11 @@ pl-PL:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_1: 'To Twoja pierwsza trudniejsza łamigłówka! Mogą być
+          trudne i wymagać kilku prób.
+
+'
       courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Przedłuż działanie programu
           dodając więcej kodu na dole.
@@ -632,7 +655,7 @@ pl-PL:
         courseF_bee_functions_challenge1_2: Funkcja "sprawdź nektar lub miód" może
           zostać tu wykorzystana, jeśli ją zmienisz tak, by robiła miód wiele razy.
       courseF_bee_fwp2:
-        courseF_bee_fwp2_a: Tutaj mieszka blok, który woła twoją funkcję.
+        courseF_bee_fwp2_a: Tutaj znajduje się blok, który woła twoją funkcję.
       courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Ta funkcja dobrze sobie poradzi z kukurydzą,
           ale co z innymi warzywami?

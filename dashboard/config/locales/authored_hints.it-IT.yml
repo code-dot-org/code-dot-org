@@ -4530,12 +4530,12 @@ it-IT:
           scuro a fianco dell'acqua.
         mc_7_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
       Overworld Powered Minecart:
-        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
-          nel punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
+          punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Powered Minecart_2019:
-        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
-          nel punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
+          punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Shear Sheep:
         mc_3_a: Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te.
@@ -4915,7 +4915,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -5164,24 +5164,14 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Aggiungi questi blocchi al tuo programma:
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
+          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
+          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -6133,6 +6123,8 @@ it-IT:
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: Prova ad usare un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>.
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
@@ -9550,11 +9542,6 @@ it-IT:
           uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
         courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
           tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: Per risolvere questo esercizio, usa i blocchi `imposta
-          uno sfondo ...` e `imposta il personaggio ... a una velocità ...`.
-        courseC_PlayLab_eventsA_b: Per risolvere questo esercizio, dovrai trascinare
-          tu nell'area di lavoro il blocco evento `quando si clicca su "Esegui"`.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _Serve un idea?_
@@ -12396,7 +12383,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12407,7 +12394,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12418,7 +12405,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12874,24 +12861,14 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: |-
-          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
-
-          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
-          Aggiungi questi blocchi al tuo programma:
-
-          <xml><block type="maze_move">
-                              <title name="DIR">moveBackward</title>
-                            </block>
-          <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-
-                  </statement>
-                </block>
-
-          </xml>
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
+          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
+          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -14853,6 +14830,7 @@ it-IT:
         courseE_bee_concept3a_c: Ci sono quattro tratti rettilinei di percorso, quindi
           il ciclo `ripeti ... volte` più esterno deve essere ripetuto quattro volte.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
         courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.

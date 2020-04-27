@@ -483,6 +483,39 @@ es-ES:
         -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
         -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
         -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
+      CSD U2 HTML Debug Paragraphs: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Qué es un elemento párrafo?</strong>
+        </summary>
+        Los párrafos de apertura son marcados con una etiqueta de apertura (´<p>`) y cerrados (`</p>`). Los párrafos en HTML pueden ser de cualquier longitud de texto desde una palabra a un agrupamiento de sentencias. Los grupos de párrafos  Paragraphs group together sets of sentences and put some space between that group of text and the next group of text.
+        </details>
+        <details>
+        <summary>
+        <strong>Por qué el HTML parece trabajar incluso cuando está roto?</strong>
+        </summary>
+        HTML es leido por los navegadores web para generar páginas web. Ya que con frecuencia la gente comete pequeños errores escribiendo sus páginas web, los navegadores son programados para hacer las mejores conjeturas de lo que intentaban hacer. Algunas veces los diferentes navegadores están programados incluso para diferentes suposiciones! El úncio camino para asegurarque tu código parezca lo que intentas es asegurarte siempre de usar las etiquetas correctamente.
+        </details>
+        <details>
+        <summary>
+        <strong>Por qué a veces el código se pone rosa?</strong>
+        </summary>
+
+        El laboratorio Web está programado para que automáticamente detecte algunos de los errores en el HTML. Cuando notifica un error, el código se vuelve rosa. Puede seleecionar el error, o informarte de que se encuentra en el algún lugar del código rosa. Necesitarás revisarlo con cuidado para encontrarlo.
+
+        </details>
+        </div>
+
+        # Debug: Fija las etiquetas que lo han roto
+
+        Esta página web simple tiene algunas cuestiones las cuales son para prevenir el contenido que está mostrándose correctamente. Identifica y fija las cuestiones. Esta práctica es llamada debugging tu código.
+
+        # Haz esto
+
+        -   Fija el código roto, de esta forma la página web correrá correctamente
+        -   Compara los problemas que tu has fijado con los de tu compañero
       CSD U2 HTML Debug Paragraphs_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -521,6 +554,39 @@ es-ES:
 
         -   Corrija el código roto para que la página web se muestre correctamente
         -   Compara los problemas que arreglaste con un vecino
+      CSD U2 Heading Demo: "# Headings\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Qué
+        son los headings?</strong></summary>\n\nLos headings son los diferentes tamaños
+        de las secciones de títulos que habrá en nuestra web. Los headings añaden
+        estructura a tu página web rompiéndola así para que al usuario le sea más
+        fácil su lectura.\n\n</details>\n<details>\n<summary><strong>Cómo hacer diferentes
+        tamaños de headings?</strong></summary>\n\nLos headings tienen 6 tamaños diferentes.
+        Así pues, principalmente usarás el más grande:\\<h1>. El número `1` en las
+        etiquetas HTML es el más grande de los hearings. El hearing más pequeño es
+        el \\<h6>.  Puedes también intentar el resto de etiquetas \\<h2>, \\<h3>,
+        \\<h4> y \\<h5>, las cuales encogerán cuanto sea más grande sea el número.\nHeadings
+        come in 6 different sizes. So far you have primarily used the biggest one:
+        \\<h1>. \n\n</h1>\n</details>\n<details>\n<summary><strong>Qué es HTML?</strong></summary>\n\nHTML
+        estándares del lenguaje de marcado de hipertexto( stands for Hypertext Markup
+        Language). HTML es usado para añadir estructura al contenido de una página
+        web. Las etiquetas HTML se usan para especificar donde ciertas estructuras
+        empiezan y acaban. Estas etiquetas son un conjunto de caracteres que no encuentras
+        en la lengua inglesa así que el contenido y la estructura pueden ser diferentes
+        \n\n</details>\n<details>\n<summary><strong>Qué es un elemento HTML??</strong></summary>\n\nUn
+        elemento HTML es una pieza de una página web y a veces cerrada con una etiqueta
+        de fin. El elemento también incluye el contenido dentro de las etiquetas.
+        Por ejemplo:\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n\n</details>\n<details>\n<summary><strong>Qué es una
+        HTML tag(etiqueta)?</strong></summary>\n\nUna etiqueta HTML son caracteres
+        especiales que le dicen a la máquina donde empiezan y el fin de un elemento
+        HTML y de qué tipo es éste.\n\n</details>\n</div>\n\nHasta aquí, hemos organizado
+        tu contenido en párrafos. Otra forma que permite al HTML organizar tu código
+        es con el uso de **headings**. Un heading es una pequeña pieza de texto que
+        se coloca en la parte superior del contenido, parece un título.\n\nHaz esto:\n\n-
+        \  Encuentra los headings en la siguiente página web y usa la herramienta
+        Inspector para ver el código que tiene.\n-   Asegúrate de que tú y tu compañero
+        estáis de a cuerdo en que etiquetas son.\n-   Cambia el código a \"dibujando\"
+        y \"2 años\" encuentra los headings en el resto de la página."
       CSD U2 Inspector Warm Up: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -1380,6 +1446,16 @@ es-ES:
         -   Añade otro grupo de bailarines
         -   Muestra y oculta bailarines utilizando las flechas del teclado
         -   Oculta a todos los bailarines y utiliza un efecto chulo de fondo
+      Escape Room Example: |-
+        # Sala de Escape
+
+        Hoy en el taller trbajaremos haciendo un app de sala de escape! Este nivel tiene una app de ejemplo que deberías ver para obtener lo que quieres crear.
+
+        # Haz esto
+
+        \-Click Run para comenzar la app
+
+        -   Intenta encontrar la clave para abrir la puerta
       Function intro Ryan: "Cuentas con una **función** llamada \"construir puente\"
         en tu espacio de trabajo. ¡Todo el código que necesitas para cruzar el río
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde
@@ -1390,6 +1466,41 @@ es-ES:
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde
         a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
         alcance la antorcha de redstone [redstone_torch]."
+      Gamelab StartScreen Intro: |-
+        # Empezar y Terminar Pantalla
+
+        Este seminario te enseñará cómo hacer pantallas de empiezo y fin en Game Lab, además de reiniciar el juego desde la pantalla final.
+
+        Presiona correr para jugar el juego a la izquierda. Sigue las instrucciones en la pantalla de empiezo para jugar. Una vez que el juego esté terminado, Sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la siguiente burbuja, verás el código para el juego y vas a empezar a añadir tu propio pantallas de empiezo y pantallas finales.
+
+        ## Pantalla de Empiezo
+
+        La pantalla de empiezo es la pantalla introductoria que aparece antes de que el jugador empiece a jugar. Generalmente hay un título del juego y algunas instrucciones básicas de cómo jugar. También puede que incluya el constructor del juego.
+
+        ## Pantalla Final
+
+        La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
+      Gamelab StartScreen State: |-
+        # El variable del estado del juego
+
+        Nuestra muestra tuvo cuatro argumentos (o **estados**) de que tenemos que hacer un seguimiento para exponer la pantalla correcta: "empezando", "jugando", "ganado", "perdido". La primera etapa para añadir una pantalla de empiezo o fin al juego es crear un variable para registrar los cambios en el estado del juego.
+
+        ## Haz Esto
+
+        -   Declara un variable llamado `estadodeljuego` en el inicio del programa. (un buen lugar para hacerlo estaría cerca de dónde `marcador` y `vidas` son declarados.)
+        -   Asigna el valor inicial de tu `estadodeljuego` a "empezando"
+
+        (Porque no estás usando ya este variable, verás un triángulo de advertencia junto a la línea donde está declarado. También no afecta cómo corre el programa.)
+      Gamelab StartScreen base code: |-
+        # Código del Juego
+
+        Este es el código para el juego sin las pantallas de empiezo y fin. La función 'gameStatus' (llamada en línea 43 y definida en línea 208) chequea si el usuario ha ganado o perdido, pero sólo añade un mensaje de texto a la pantalla. El juego también continúa aún después de que el juego esté terminado.
+
+        ## Haz Esto
+
+        Lee el código, en particular el código antes del loop de dibujar (línea 1-24), dentro del loop de dibujar (línea 27-43), y dentro de la función de 'gameStatus'(línea 209-224). Está bien si no entiendes todo en el juego, pero deberías ver el código antes del loop de dibujar pone los sprites, y el código dentro del loop de dibujar controla el juego.
       HOC 2018 Level_1: Necesitarás suministros para el viaje. Consigue un **barco**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -1554,6 +1665,8 @@ es-ES:
       NEW Course 4 Bee For Loops 6: El último número en tu bucle for se llama el "incremento",
         y cada vez que el bucle se ejecuta la variable contador cambia al incrementarse.
         Trata de recoger estas flores con un incremento de 2.
+      New Minecraft Hero Project: "**Juego libre:** ¡Te toca! Utiliza el código del
+        Agent para ayudarte a explorar este mundo."
       Overworld House Frame Chosen: Construye el resto de tu casa con cualquier material
         que te guste. El comando "repetir" va a resultar util.
       Overworld House Frame Chosen_2019: Construye el resto de tu casa con cualquier
@@ -1623,6 +1736,29 @@ es-ES:
         Empieza por usar <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> con <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> para hacer tu mascota mover hacia el norte **mientras** la tecla de flecha hacia arriba.
 
         ¡Repite lo de arriba por las otras tres direcciones (Sur, Oeste, Este) y las teclas de flecha hacia arriba (abajo, izquierda, derecha)!
+      Virtual Pet 4_2019: "1.  Añade **dos** sprites a tu mundo. \n2.  Haz un sprite
+        aparecer como lo que a tu mascota le gusta comer, y lo otro como lo que no
+        le gusta comer.\n3.  Haz cada sprite de comida empezar el comportamiento de
+        **errar** inmediatamente después de que aparezca."
+      Virtual Pet 5_2019: |-
+        ¡Usa <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> con <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> para **estimular** a "comer" en tu mundo virtual!
+
+        1.  Crea un evento que hace uno de tus sprites de comida saltar a una ubicación al azar cuando tu mascota lo toque.
+        2.  Repite lo de arriba para el otro sprite de comida.
+      Virtual Pet 6_2019: "¡Usa <xml><block type=\"variables_set\" block-text=\"the
+        set variable block\"><title name=\"VAR\">energy</title></block></xml> con
+        <xml><block type=\"math_change\" block-text=\"the change variable block\"><title
+        name=\"VAR\">energy</title></block></xml> para hacer que comer comida afecte
+        la energía de tu mascota! ¡Cuanta más energía lo tenga, más rápido se mueve!
+        \n\n1.  Asigna la variable 'energía' a 5 cuando el programa empiece.\n2.  Cuando
+        tu mascota coma la comida que le **gusta**, añade 1 a 'energía.\n3.  Cuando
+        tu mascota coma la comida que **no le gusta**, establece 'energía' a 5\n4.
+        \ Cambia cada evento de tecla de fecha  para que tu mascota ahora se mueva
+        'energía' píxeles en lugar de un número específico."
+      Virtual Pet 7_2019: "¡Puedes chequear el valor de la 'energía' de tu mascota
+        con <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>,
+        un bloque nuevo encontrado en la categorîa 'Mundo'! \n\nCrea un evento que
+        hace el valor de 'energía' imprimido cuando el sprite de mascota esté pinchado. "
       behaviors 1: |-
         ¡Haz una predicción! Estudia el código.
 

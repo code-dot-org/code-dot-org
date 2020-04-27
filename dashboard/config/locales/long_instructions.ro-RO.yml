@@ -467,8 +467,80 @@ ro-RO:
       CSD Problem Solving Process Video: |-
         ## Întrebări de luat în considerare
 
-        -   Cum ați urmat procesul de rezolvare a problemelor în ultima lecție?
-        -   Cum ai putea folosi acest proces pe o problemă din viața ta de zi cu zi?
+        -   Cum ai urmat procesul de rezolvare a problemelor la ultima lecție?
+        -   Cum ai putea folosi acest proces într-o problemă din viața ta de zi cu zi?
+      CSD U5 black white images pixelation: |-
+        # Aplicație practică
+
+        Completează imaginea în forma literei "X" tastând numai caracterele 0 sau 1. Dacă vrei să ștergi caractere nedorite, utilizează opțiunea "Readable Format" ("format lizibil").
+      CSD U5 black white images pixelation 2: |-
+        # Aplicație practică
+
+        Folosește widget-ul de pixelare pentru a desena o față zâmbitoare
+
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)
+      CSD U5 black white images pixelation 2_2018: |-
+        # Aplicație practică
+
+        Folosește widget-ul de pixelare pentru a desena o față zâmbitoare
+
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)
+      CSD U5 black white images pixelation 2_2019: |-
+        # Aplicație practică
+
+        Folosește widget-ul de pixelare pentru a desena o față zâmbitoare
+
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)
+      CSD U5 black white images pixelation 3: |-
+        # Aplicație practică
+
+        Cursoarele de lungime și lățime sunt setate incorect, astfel încât imaginea nu e vizibilă. Ajustează-le până găsești imaginea.
+
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)
+      CSD U5 black white images pixelation 3_2018: |-
+        # Aplicație practică
+
+        Cursoarele de lungime și lățime sunt setate incorect, astfel încât imaginea nu e vizibilă. Ajustează-le până găsești imaginea.
+
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)
+      CSD U5 black white images pixelation 3_2019: |-
+        # Aplicație practică
+
+        Cursoarele de lungime și lățime sunt setate incorect, astfel încât imaginea nu e vizibilă. Ajustează-le până găsești imaginea.
+
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)
+      CSD U5 black white images pixelation 4: "# Aplicație practică\n\nAdaugă sprâncene
+        acestei fețe zâmbitoare. Nu uita să folosești opțiunea \"Readable Format\"
+        (format lizibil) dacă te-ai blocat. \n\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        PM.png>)"
+      CSD U5 black white images pixelation 4_2018: "# Aplicație practică\n\nAdaugă
+        sprâncene acestei fețe zâmbitoare. Nu uita să folosești opțiunea \"Readable
+        Format\" (format lizibil) dacă te-ai blocat. \n\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        PM.png>)"
+      CSD U5 black white images pixelation 4_2019: "# Aplicație practică\n\nAdaugă
+        sprâncene acestei fețe zâmbitoare. Nu uita să folosești opțiunea \"Readable
+        Format\" (format lizibil) dacă te-ai blocat. \n\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        PM.png>)"
+      CSD U5 black white images pixelation 5: |-
+        # Aplicație practică
+
+        Acum e rândul tău. Desenează ce vrei tu in widget-ul de pixelare. Daca vrei, poți schimba lungimea și lățimea imaginii.
+      CSD U5 black white images pixelation 5_2018: |-
+        # Aplicație practică
+
+        Acum e rândul tău. Desenează ce vrei tu in widget-ul de pixelare. Daca vrei, poți schimba lungimea și lățimea imaginii.
+      CSD U5 black white images pixelation 5_2019: |-
+        # Aplicație practică
+
+        Acum e rândul tău. Desenează ce vrei tu in widget-ul de pixelare. Daca vrei, poți schimba lungimea și lățimea imaginii.
+      CSD U5 black white images pixelation_2018: |-
+        # Aplicație practică
+
+        Completează imaginea în forma literei "X" tastând numai caracterele 0 sau 1. Dacă vrei să ștergi caractere nedorite, utilizează opțiunea "Readable Format" ("format lizibil").
+      CSD U5 black white images pixelation_2019: |-
+        # Aplicație practică
+
+        Completează imaginea în forma literei "X" tastând numai caracterele 0 sau 1. Dacă vrei să ștergi caractere nedorite, utilizează opțiunea "Readable Format" ("format lizibil").
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -476,7 +548,7 @@ ro-RO:
         ## Întrebări la care să te gândești
 
         -   Ce a făcut computerele diferite de mașinile care erau înaintea lor?
-        -   Gândește-te la ceva ce faci pe computer. Ce fel de intrare, ieșire, stocare și procesare se întâmplă?
+        -   Gândește-te la ceva ce faci pe computer. Ce tip de intrare, ieșire, stocare și procesare se întâmplă?
       Course 4 Artist 1: "Ajută-mă să desenez o cutie. \\\n(Fiecare linie are lungimea
         de 200 pixeli) \n\n<br/><br/>"
       Course 4 Artist 10: "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\"
@@ -1006,7 +1078,7 @@ ro-RO:
       Dance_Party_02: |-
         Hai să facem acest elan să danseze!
 
-        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
+        Trage blocul <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> în spaţiul de lucru. Conectează-l sub blocul <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dansatorul tău ar trebui să facă o nouă mişcare după 4 măsuri.
 
         **Măsurile** sunt utilizate pentru a măsura timpul în muzică. În acest tutorial, o măsură are lungimea a 4 bătăi.
       Dance_Party_03: |-

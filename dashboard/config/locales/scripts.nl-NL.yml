@@ -3,7 +3,6 @@ nl:
   data:
     script:
       category:
-        csf_category_name: Basis
         csp_category_name: CW Principes
         cspexams_category_name: CW Principes Praktische Test
         csp17_category_name: CW Principes
@@ -957,7 +956,7 @@ nl:
             Hour of Code 2015:
               name: Uur van Code 2015
         mc:
-          title: Minecraft Uur Code
+          title: Minecraft programmeer uur
           description: Gebruik blokken code om Steve of Alex mee te nemen op avontuur
             door deze Minecraft-wereld
           description_short: Ontdek een Minecraft-wereld met code
@@ -1738,7 +1737,7 @@ nl:
         hero:
           stages:
             Minecraft Hour of Code:
-              name: Minecraft Uur Code
+              name: Minecraft programmeer uur
           description: Minecraft is terug bij Hour of Code met een gloednieuwe activiteit!
             Gebruik code om door Minecraft te reizen.
         csp-explore-2017:
@@ -1942,7 +1941,7 @@ nl:
             Conditionals with Cards:
               name: Statements met Kaarten
             Minecraft Hour of Code:
-              name: Minecraft Uur Code
+              name: Minecraft programmeer uur
         coursef-2018:
           stages:
             'Programming: My Robotic Friends':
@@ -2406,3 +2405,208 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Functies met Parameters
+        csd3-2020:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+            Text:
+              name: Tekst
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Veilig Reizen
+            'Programming: Happy Maps':
+              name: Vrolijke Routes
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+            Move It, Move It:
+              name: verplaats het, verplaats het
+            'Loops: Getting Loopy':
+              name: Rondjes lopen
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binaire armbanden
+            'Events: The Big Event':
+              name: De grote gebeurtenis
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programmeren op Ruitjespapier
+            Relay Programming:
+              name: Estafette Programmeren
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            'Unplugged: Binary':
+              name: Binaire afbeeldingen
+            Artist Binary:
+              name: Kunstenaar Binary
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            Dance Party:
+              name: Dansfeest
+        coursee-2020:
+          stages:
+            'Functions: Songwriting':
+              name: Songwriting
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Internet:
+              name: Het Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spellingswedstrijd
+        csp1-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Binary Numbers:
+              name: Binaire getallen
+        csp2-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            The Need for Addressing:
+              name: De Nood aan Adressering
+        csp3-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+            The Need for Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Debugging:
+              name: Foutopsporing
+        csp6-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp8-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp9-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp10-2020:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp-march-virtual:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp3-virtual:
+          description_short: Programmeren
+          stages:
+            The Need For Programming Languages:
+              name: De Nood Aan Programmeertalen
+            Using Simple Commands:
+              name: Simpele Commando's Gebruiken
+            Creating Functions:
+              name: Maken van functies
+            Functions and Top-Down Design:
+              name: Functies en Top-Down Designs
+            APIs and Function Parameters:
+              name: API's en Functieparameters
+        csd3-virtual:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        jess-test-script:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Debugging:
+              name: Foutopsporing
+        csp5-virtual:
+          stages:
+            User Input and Strings:
+              name: Gebruikersinvoer en Strings
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken
+            Variables:
+              name: Variabelen
+        virtual-holding-place:
+          stages:
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies
+        code-break:
+          stages:
+            new stage:
+              name: nieuw niveau
+            Algorithms:
+              name: Algoritmen
+            Events:
+              name: Gebeurtenissen
+        no-lg:
+          stages:
+            new stage:
+              name: nieuw niveau
+        csp5-virtual-part2:
+          stages:
+            While Loops:
+              name: Zolang-lussen
+            Loops and Simulations:
+              name: Lussen en Simulaties
+            Introduction to Arrays:
+              name: Inleiding tot Arrays
+            Processing Arrays:
+              name: Arrays Verwerken

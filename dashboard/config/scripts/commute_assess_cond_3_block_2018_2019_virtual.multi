@@ -1,0 +1,20 @@
+name 'Commute Assess - cond 3 - block_2018_2019_virtual'
+question 'What will be displayed after running this code?'
+right '`Under 40`'
+wrong '`And under 21`'
+wrong '`And contains a 3`'
+wrong '`Under 40`  
+`And contains a 3`'
+wrong '`Under 40`  
+`And under 21`  
+`And contains a 3`'
+wrong 'Nothing will be displayed'
+
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/196329d47bb22e1ba6bacc53a0f0e4ca-image-1482957953096.png" style="width: 250px">
+
+<!-- BLOCK ![](https://images.code.org/8f3a25ec210ce1e486a64600434b46c0-image-1482507544205.png)
+-->
+
+MARKDOWN

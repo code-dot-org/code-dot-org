@@ -71,6 +71,9 @@ pl-PL:
         get nectar or make honey: zbierz nektar lub zrób miód
       4-5 Bee Debugging 8:
         get 5 nectar: zbierz 5 nektarów
+      Choose Your Own Adventure:
+        story: opowieść
+        starting path: początkowa droga
       Course 4 Bee Params 1:
         get 3 nectar: zbierz 3 nektary
       Course 4 Bee Params 2:
@@ -153,8 +156,18 @@ pl-PL:
         do something: wykonaj coś
       NEW Course 4 Play Lab Params 11:
         jump: skocz
+      New Artist Project:
+        draw a star: narysuj gwiazdę
+        draw a circle: narysuj okrąg
+        draw a triangle: narysuj trójkąt
+        draw a house: narysuj dom
+        draw a square: narysuj kwadrat
+      New Play Lab Project:
+        jump: skocz
       Standalone_Artist_7:
         draw a flower: narysuj kwiatka
+      Standalone_Artist_9:
+        my function: moja funkcja
       course3_artist_functions_challenge1:
         do something: wykonaj coś
       course3_artist_functions_challenge2:
@@ -213,8 +226,6 @@ pl-PL:
       courseE_artist_functions7:
         draw a house: narysuj dom
       courseE_artist_functions7_2018:
-        draw a house: narysuj dom
-      courseE_artist_functions7_2019:
         draw a house: narysuj dom
       courseE_artist_functions8:
         do something: wykonaj coś

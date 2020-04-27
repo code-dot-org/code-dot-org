@@ -1,0 +1,29 @@
+name 'U5 assess compound boolean conditions_2018_2019_virtual'
+type 'multi2'
+wrong '(temperature > 0) && (temperature < 32)'
+wrong '(temperature == 0) || (temperature < 32)'
+wrong '(temperature != 0) && (temperature < 32)'
+right '(temperature == 0) || (temperature > 32)'
+right '(temperature < 0) || (temperature > 32)'
+
+markdown <<MARKDOWN
+Assume that a variable temperature is assigned like this:
+
+    var temperature = 30;
+    
+Choose the two (2) Boolean expressions that evaluate to **FALSE**.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 9**
+
+The variable temperature is set to 30.
+
+The last two are false.
+
+* (temperature > 0) && (temperature < 32) --> True - 30 is between 0 and 32
+* (temperature == 0) || (temperature < 32) --> True - it is the case that 30 is equal to 0 OR 30 is less than 32.
+* (temperature != 0) && (temperature < 32)--> True - 30 does not equal 0, and is less than 32.
+* (temperature == 0) || (temperature > 32) --> **False** - 30 does not equal 0 nor is it greater than 32.
+* (temperature < 0) || (temperature > 32) --> **False** - 30 is not less than 0 nor is it greater than 32.
+MARKDOWN

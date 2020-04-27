@@ -15,25 +15,25 @@ fr:
           futures.
       Unplug2:
         title: Algorithmique
-        desc: Munis uniquement de papiers et de feutres, les élèves apprendront les
-          quatre étapes de la pensée computationnelle. Après une brève introduction,
-          les élèves seront divisés en groupes où ils devront créer des indications
-          pour que les autres élèves dessinent un monstre précis (à partir d'un catalogue
-          de monstres présélectionnés). La tâche dans son ensemble doit être décomposée,
-          puis les équipes vont analyser tous les monstres du catalogue de modèles,
-          résumer les différents détails des monstres, puis utiliser ces informations
-          afin de créer un algorithme (instructions) pour qu’une autre équipe dessine
-          un certain monstre. Les équipes échangeront alors les algorithmes et dessineront
-          le monstre sur la base de ce qu’indique cet algorithme. Est-ce que le dessin
-          répond aux attentes de l’équipe d’origine?
+        desc: Seulement munis de papier et de feutres, les étudiants vont apprendre
+          les quatre étapes de la pensée computationnelle. Après une brève introduction,
+          ils seront séparées en groupes pour créer des instructions à partir desquelles
+          d'autres étudiants devront dessiner un monstre précis (extrait d'un catalogue
+          de monstres pré-établis). L'intégralité de cette tâche doit être décomposée,
+          puis les équipes étudieront les monstres du catalogue pour trouver un schéma,
+          s'écarter des détails des différents monstres, puis utiliser ces informations
+          pour créer un algorithme (des instructions) pour qu'une autre équipe dessine
+          un monstre choisi. Les groupes échangeront alors leurs algorithmes entre
+          eux et dessineront le monstre sur les indications de l'algorithme. Le dessin
+          représente-t-il ce que la première équipe avait prévu ?
       Unplug3:
         title: Programmation sur papier quadrillé
-        desc: En programmant les dessins des autres groupes, les élèves commenceront
-          à comprendre ce qu’est vraiment la programmation. La classe débutera avec
-          l’échange d’instructions entre les élèves qui devront colorier des carrés
-          sur du papier millimétré afin de reproduire une image existante.  S’il y
-          a assez de temps, la leçon peut se conclure par la création d’images personnalisés
-          par les élèves.
+        desc: En se programmant les uns les autres pour créer des images, les étudiants
+          commenceront à comprendre ce qu'est réellement la programmation. Au début
+          du cours, les élèves devront échanger des instructions pour colorier chaque
+          carré d'une feuille de papier quadrillé, afin de reproduire une image existante.
+          Si il reste du temps à la fin du cours, les élèves pourront alors inventer
+          leurs propres images.
       Unplug4:
         title: Algorithmes
         desc: Cette leçon traite des algorithmes.  Le premier exercice se fait à l'aide
@@ -128,7 +128,7 @@ fr:
           à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
           je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
       BigEvent:
-        title: Le Grand Événement
+        title: Le Grand Evénement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
           appuiera sur des boutons à distance et les élèves réagiront en fonction
@@ -149,7 +149,7 @@ fr:
           Cette leçon se concentre également sur l'informatique en général et la façon
           dont les algorithmes jouent un rôle essentiel.
       BinaryBracelets:
-        title: Bracelets binaires
+        title: Les bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -175,9 +175,9 @@ fr:
           avoir à la réécrire complètement).
       DiceRace:
         title: 'Les algorithmes du monde réel: La course de dés'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront
-          l'algorithme pour un jeu de course de dés.
+        desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
+          dans nos vies quotidiennes. Dans ce cadre, les élèves vont identifier et
+          écrire l'algorithme d'un jeu de courses de dés.
       Internet:
         title: Internet
         desc: Les élèves envoient des messages représentant diverses méthodes de transmission
@@ -313,7 +313,7 @@ fr:
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
           présentent comment rester en sécurité en naviguant sur Internet.
       courseABC_unplugged_bigEvent:
-        title: Le Grand Événement
+        title: Le Grand Evénement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
           appuiera sur des boutons à distance et les élèves réagiront en fonction
@@ -341,7 +341,7 @@ fr:
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       courseC_unplugged_binaryBracelets:
-        title: Bracelets binaires
+        title: Les bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -372,9 +372,9 @@ fr:
           les images et les couleurs) également en binaire.
       courseE_unplugged_diceRace:
         title: 'Les algorithmes du monde réel : La course de dés'
-        desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
-          dans notre vie quotidienne. Dans ce cadre, les élèves identifieront et écriront
-          l'algorithme pour un jeu de course de dés.
+        desc: Cette leçon fait appel à la manière dont on utilise les algorithmes
+          dans nos vies quotidiennes. Dans ce cadre, les élèves vont identifier et
+          écrire l'algorithme d'un jeu de courses de dés.
       courseE_unplugged_songwritingParameters:
         title: La composition de chansons avec des paramètres
         desc: Les élèves utilisent le concept de refrain dans une chanson pour apprendre
@@ -422,42 +422,42 @@ fr:
           très utile.
       swipeRightPassThrough:
         title: Séance scénarios de recrutement
-        desc: "# Séance scénarios de recrutement\r\n\r\n## Swipe Right for CS\r\nPour
-          cette session, nous utiliserons un outil appelé « Swipe Right for CS »,
-          développé par nos partenaires au MIT. Dans « Swipe Right for CS », vous
-          allez lire certains profils d'élèves et prendre en compte des énoncés spécifiques
-          que vous pourriez utiliser pour le ou la convaincre de s'inscrire à votre
-          cours Principes de l'informatique. \r\n\r\n### Comment ça marche\r\nLorsque
-          vous jouez au jeu « Swipe Right for CS », vous verrez une série de citations
-          que vous pourriez dire à chaque élève. Vous balayerez directement à droite
-          les citations que vous jugeriez efficaces pour convaincre les élèves de
-          s’inscrire au cours et balayez à gauche les déclarations que vous jugez
-          non efficaces. Pendant la session, nous discuterons en groupe de vos réflexions
-          sur les types d'énoncés les plus efficaces pour convaincre un étudiant de
-          s'inscrire à votre cours, et vous aurez l'occasion de savoir dans quelle
-          direction les autres personnes de votre atelier ont balayé pour chacun des
-          arguments. \r\n\r\n\r\nLorsque vous cliquez sur « Continuer » ci-dessous,
-          nous vous renvoyons au jeu et transmettons l'adresse e-mail à laquelle vous
-          êtes connecté sur Code.org."
+        desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
+          \r\nPour cette session, nous utiliserons un outil appelé « Swipe Right for
+          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
+          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
+          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
+          à votre cours de CS Principes. \r \n\r \n### Comment ça marche \r\nLorsque
+          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
+          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
+          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
+          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
+          en groupe de vos réflexions sur les types de déclarations les plus efficaces
+          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
+          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.
+          \r \n\r \n\r\nLorsque vous cliquerez sur continuer, ci-dessous, nous vous
+          enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
+          vous êtes connecté."
       swipeRightPassThrough-test123:
         title: Séance scénarios de recrutement
-        desc: "# Séance scénarios de recrutement\r\n\r\n## Swipe Right for CS\r\nPour
-          cette session, nous utiliserons un outil appelé « Swipe Right for CS »,
-          développé par nos partenaires au MIT. Dans « Swipe Right for CS », vous
-          allez lire certains profils d'élèves et prendre en compte des énoncés spécifiques
-          que vous pourriez utiliser pour le ou la convaincre de s'inscrire à votre
-          cours Principes de l'informatique. \r\n\r\n### Comment ça marche\r\nLorsque
-          vous jouez au jeu « Swipe Right for CS », vous verrez une série de citations
-          que vous pourriez dire à chaque élève. Vous balayerez directement à droite
-          les citations que vous jugeriez efficaces pour convaincre les élèves de
-          s’inscrire au cours et balayez à gauche les déclarations que vous jugez
-          non efficaces. Pendant la session, nous discuterons en groupe de vos réflexions
-          sur les types d'énoncés les plus efficaces pour convaincre un étudiant de
-          s'inscrire à votre cours, et vous aurez l'occasion de savoir dans quelle
-          direction les autres personnes de votre atelier ont balayé pour chacun des
-          arguments. \r\n\r\n\r\nLorsque vous cliquez sur « Continuer » ci-dessous,
-          nous vous renvoyons au jeu et transmettons l'adresse e-mail à laquelle vous
-          êtes connecté sur Code.org."
+        desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
+          \r\nPour cette session, nous utiliserons un outil appelé « Swipe Right for
+          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
+          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
+          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
+          à votre cours de CS Principes. \r \n\r \n### Comment ça marche \r\nLorsque
+          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
+          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
+          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
+          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
+          en groupe de vos réflexions sur les types de déclarations les plus efficaces
+          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
+          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.
+          \r \n\r \n\r\nLorsque vous cliquerez sur continuer, ci-dessous, nous vous
+          enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
+          vous êtes connecté."
       brad-repro-bug-000:
         title: Brad reproduction de bug 000
         desc: "# Brad reproduction de bug 000\r\n## Tentative de recréer un bug rapporté
@@ -483,10 +483,10 @@ fr:
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
           présentent comment rester en sécurité en naviguant sur Internet.
       courseA_unplugged_loops_2018:
-        title: Boucles débranchées
+        title: Les Boucles Débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       BigEvent_2018:
-        title: Le Grand Événement
+        title: Le Grand Evénement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
           appuiera sur des boutons à distance et les élèves réagiront en fonction
@@ -533,7 +533,7 @@ fr:
           répétées) par le biais d’une activité de danse. Les élèves apprendront une
           chorégraphie simple, puis devront la répéter.
       BinaryBracelets_2018:
-        title: Bracelets binaires
+        title: Les bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -607,7 +607,9 @@ fr:
           les images et les couleurs) également en binaire.
       courseE_unplugged_privateInformation_2019:
         title: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
-        desc: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.desc'
+        desc: Développée par Common Sense Éducation, cette leçon traite de la différence
+          entre les informations qui peuvent être partagées, en toute sécurité, en
+          ligne, et les informations qui ne le sont pas
       SongwritingParameters_2019:
         title: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.title'
         desc: 'traduction manquante : en-US.data.unplugged.SongwritingParameters_2018.desc'
@@ -635,13 +637,13 @@ fr:
         desc: Aujourd'hui, vous apprendrez quoi faire si quelqu'un devient méchant
           en ligne.
       BigEvent_2019:
-        title: Le Grand Événement
+        title: Le Grand Evénement
         desc: Les élèves découvrent le concept de la programmation d’«événements»,
           qui sont des actions qu’un ordinateur surveille en permanence. L'enseignant
           appuiera sur des boutons à distance et les élèves réagiront en fonction
           du bouton choisi.
       BinaryBracelets_2019:
-        title: Bracelets binaires
+        title: Les bracelets binaires
         desc: Les élèves créent des bracelets comme des représentations binaires de
           la première lettre de leur nom. Les élèves apprennent que les données peuvent
           être représentées et stockées de plus d’une façon.
@@ -651,6 +653,24 @@ fr:
           dans notre vie quotidienne, plus précisément en faisant des avions en papier.
           Cette leçon se concentre également sur l'informatique en général et la façon
           dont les algorithmes jouent un rôle essentiel.
+      test-uid-passthrough:
+        desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
+          \r\nPour cette session, nous utiliserons un outil appelé « Swipe Right for
+          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
+          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
+          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
+          à votre cours de CS Principes. \r \n\r \n## Comment ça marche \r\nLorsque
+          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
+          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
+          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
+          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
+          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
+          en groupe de vos réflexions sur les types de déclarations les plus efficaces
+          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
+          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.\r\n<br><br><br><br>\r\n\r\n<span
+          style=\"display:none\">submitButton next-stage</span>\r\n\r \n<a class=\"btn
+          btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid
+          = < user_id/>\"> Cliquez ici pour jouer à Swipe Right for CS !< /a> \r \n\r"
       PlantASeed_2019:
         title: 'Algorithmes du monde réel: Planter une graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
@@ -666,7 +686,7 @@ fr:
         desc: L'Internet est un lieu puissant, mais parfois dangereux. Les enseignants
           présentent comment rester en sécurité en naviguant sur Internet.
       courseA_unplugged_loops_2019:
-        title: Boucles débranchées
+        title: Les Boucles Débranchées
         desc: Dans cette leçon, tu découvriras les boucles!
       MoveItMoveIt_2019:
         title: Bouge, Bouge
@@ -682,10 +702,41 @@ fr:
           processus créatif de partage et d'inspiration. Parallèlement à cela vient
           la promotion de l'expression créative et le besoin d'être juste avec le
           travail créatif.
+      GraphingData_2019:
+        title: Représenter les Données
+        desc: Dans cette leçon, les élèves collecteront des données à partir d’un
+          projet du Labo du Jeu ou d’un scénario réel, et les utiliseront pour faire
+          des prédictions.
+      courseE_unplugged_accessAbility_2019:
+        title: 'Capacité d''Accès
+
+'
+        desc: Découvre l’accessibilité et la valeur de l’empathie, grâce à un remue-méninges
+          et à la conception de solutions accessibles pour les applications hypothétiques
+      courseE_simon_says_2019:
+        title: Jacques a dit
+        desc: "Jouez à un jeu et réfléchissez aux commandes nécessaires pour obtenir
+          le bon résultat.\r \n\\ r\n![image de test] (https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Mots de Passe Fort
+        desc: Explore pourquoi les gens utilisent des mots de passe, apprennent les
+          avantages de l’utilisation des mots de passe, et découvrent des stratégies
+          pour créer et garder des mots de passe forts et sécurisés
       timeforcs_demo_crowdsourcing:
         title: Financement participatif
+        desc: '_Note de Josh : Contrairement à la première leçon, j’ai formaté celle-ci,
+          simplement, comme une leçon débranchée typique._'
       timeforcs_demo_conditionals:
         title: Instructions conditionnelles
         desc: Pour mieux comprendre les instructions conditionnelles, les élèves jouent
           à un jeu de cartes et créent des règles comme «Si je tire une carte rouge,
           je gagne un point», ou «Si je tire une carte noire, tu gagnes un point».
+      TheRightApp_2019:
+        title: La Bonne Application
+        desc: "* Tout le monde utilise des ordinateurs ces jours-ci, en particulier
+          des smartphones. \r\n* Les applications smartphone, ou « applications »,
+          aident les gens à faire des choses comme parler à des amis, écouter de la
+          musique, faire des achats, ou tout simplement explorer le Web.\r \n* Il
+          est important, pour les programmeurs, de comprendre les besoins des autres
+          et de concevoir des applications enles gardant à l'esprit !\r \n\\ r\n!
+          [] (https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

@@ -17,6 +17,7 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
+import SpecialAnnouncement from './SpecialAnnouncement';
 
 const styles = {
   clear: {
@@ -36,7 +37,6 @@ export default class TeacherHomepage extends Component {
     canViewAdvancedTools: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
-    locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
     donorBannerName: PropTypes.string,
     donorTeacherBannerOptions: donorTeacherBannerOptionsShape,
@@ -168,7 +168,6 @@ export default class TeacherHomepage extends Component {
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      locale,
       specialAnnouncement
     } = this.props;
 
@@ -180,7 +179,9 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {specialAnnouncement && (
+        {isEnglish && <SpecialAnnouncement isTeacher={true} />}
+        {/* Hide the SpecialAnnouncementActionBlock for now in favor of SpecialAnnouncement since SpecialAnnouncementActionBlock is not translatable */}
+        {specialAnnouncement && false && (
           <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
@@ -236,7 +237,7 @@ export default class TeacherHomepage extends Component {
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
+        <TeacherSections queryStringOpen={queryStringOpen} />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}

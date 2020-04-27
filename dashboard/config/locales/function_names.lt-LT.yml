@@ -96,6 +96,14 @@ lt-LT:
         do something: daryk kažką
       NEW Course 4 Play Lab Params 11:
         jump: šok
+      New Artist Project:
+        draw a star: nupiešk žvaigždę
+        draw a circle: nubrėžk apskritimą
+        draw a triangle: nubrėžk trikampį
+        draw a house: namas
+        draw a square: nubrėžk kvadratą
+      New Play Lab Project:
+        jump: šok
       Standalone_Artist_7:
         draw a flower: nupiešk gėlę
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ lt-LT:
       courseE_artist_functions7:
         draw a house: namas
       courseE_artist_functions7_2018:
-        draw a house: namas
-      courseE_artist_functions7_2019:
         draw a house: namas
       courseE_artist_functions8:
         do something: daryk kažką

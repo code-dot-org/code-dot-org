@@ -364,6 +364,11 @@ pt-PT:
         Mova-me para o monte e remova toda a
         terra, então mova-me para o buraco e preencha-o completamente. Dica: use o menor número de
         blocos possível.
+      CSD Problem Solving Process Video: |-
+        ## Questões a considerar
+
+        -   Qual o nível de acompanhamento do processo de resolução de problemas na última lição?
+        -   Como poderia utilizar este processo num problema do seu dia-a-dia?
       Course 4 Artist 13: |-
         Ainda jogando?  Temos aqui uma tela em branco
         na qual você pode projetar o que quiser!
@@ -534,7 +539,7 @@ pt-PT:
       Dance_Party_02: |-
         Vamos pôr este alce a dançar!
 
-        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
+        Arrasta o bloco <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> para a área de trabalho e conecta-lo por debaixo do bloco <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. O teu dançarino deverá iniciar um novo movimento após o quarto compasso.
 
         Os **Compassos** são usados para contar o tempo na música. Neste tutorial, um compasso tem quatro batidas.
       Dance_Party_03: "_Agora já estamos a curtir!_ \n\nAdiciona um bloco <xml><block
@@ -836,6 +841,8 @@ pt-PT:
         chamado de "incremento" e a cada execução do laço a variável contador
         é alterada de acordo com o incremento. Tente coletar essas flores usando um incremento
         de 2.
+      New Minecraft Hero Project: "**Jogo livre:** Agora tudo depende de ti! Utiliza
+        o código do Agent para te ajudar a explorar este mundo."
       Overworld House Frame Chosen: Construa o resto da casa de qualquer material
         que goste. O comando "repetir" vai dar jeito.
       Overworld House Frame Chosen_2019: Construa o resto da casa de qualquer material
@@ -891,6 +898,10 @@ pt-PT:
       Underground If Statements_2019: Agora as coisas começam a ficar difíceis. Escava
         3 redstone, mas não caias na lava. Utiliza um comando "se" para colocares
         empedrado sobre qualquer lava que destapares.
+      'Widget: Text Compression': 'Procura padrões (palavras ou frases repetidas)
+        no texto. Introduz os padrões que vês no dicionário à direita. À medida que
+        escreves cada entrada no dicionário, o símbolo da entrada é inserido no texto
+        no lugar do padrão. '
       course2_artist_prog_challenge1: Desenha quartos para cada um dos animais. Há
         várias maneiras possíveis de resolver este enigma, por isso diverte-te!
       course2_artist_prog_challenge2: _Ajuda-me a pintar as linhas amarelas nesta
@@ -905,8 +916,58 @@ pt-PT:
         para ver o que acontece. Podes descobrir como funciona? (Ou apagá-lo e substituí-lo
         por algo totalmente diferente)
       courseA_maze_seq1: \-"Use os blocos e tente me levar até o porquinho!"-
+      courseA_maze_seq12: |-
+        Consegue esse porco!
+
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+      courseA_maze_seq13_2019: Consegue esse porco de qualquer maneira!
       courseA_maze_seq1_2018: \-"Use os blocos e tente me levar até o porquinho!"-
       courseA_maze_seq1_2019: \-"Use os blocos e tente me levar até o porquinho!"-
+      courseA_maze_seq3: |-
+        _"Altera o código para me levares até ao porco!"_
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq4: "_\"Algo não está totalmente certo.\"_ \n\nREMOVE um bloco
+        para fazer chegar o pássaro ao porco!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseB_collector_loops_challenge2a: "_\"Vamos conseguir este tesouro!\"_ \n\nAjuda
+        a Laurel a conseguir pelo menos **5** peças do tesouro para acabar este puzzle."
+      courseB_collector_loops_challenge2a_2018: "_\"Vamos conseguir este tesouro!\"_
+        \n\nAjuda a Laurel a conseguir pelo menos **5** peças do tesouro para acabar
+        este puzzle."
+      courseB_collector_loops_challenge2a_2019: "_\"Vamos conseguir este tesouro!\"_
+        \n\nAjuda a Laurel a conseguir pelo menos **5** peças do tesouro para acabar
+        este puzzle."
+      courseB_maze_seq3: _"Altera o código para me levares até ao porco!"_
+      courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continua!"_'
+      courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continua!"_'
+      courseB_starWars_prog11_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continua!"_'
+      courseB_starWars_prog2: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue todo o metal."_'
+      courseB_starWars_prog2_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue todo o metal."_'
+      courseB_starWars_prog2_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Consegue todo o metal."_'
+      courseB_starWars_prog3: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continua, BB-8!"_'
+      courseB_starWars_prog3_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continua, BB-8!"_'
+      courseB_starWars_prog3_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Continua, BB-8!"_'
+      courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tu consegues!"_'
+      courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tu consegues!"_'
+      courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tu consegues!"_'
+      courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tu consegues!"_'
+      courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tu consegues!"_'
+      courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Tu consegues!"_'
       courseD_artist_nestedLoops1a: |-
         Agora, repita o triângulo 6 vezes. Depois
         de cada triângulo, você precisa virar 60 graus antes de desenhar o próximo.
@@ -928,10 +989,15 @@ pt-PT:
       courseD_maze_nestedLoops4: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2018: Leve-me até o girassol!
       courseD_maze_nestedLoops4_2019: Leve-me até o girassol!
+      courseD_scrat_ramp4: Evita o gelo rachado e mantém o Scrat seguro!
+      courseD_scrat_ramp5: Evita o gelo rachado!
       courseE_bee_functions3: |-
         Funções são blocos de código que realizam
         uma tarefa. Use a função "obtenha 5" para coletar 5 néctares de uma vez. Lembre-se também
         de usar um laço para obter um contador de bloco ideal.
+      courseE_farmer_ramp12_forswap: Apanha toda a alface.
+      courseE_farmer_ramp12_forswap_2018: Apanha toda a alface.
+      courseE_farmer_ramp12_forswap_2019: Apanha toda a alface.
       frozen circle: |-
         Um círculo é uma forma especial. Você pode descobrir
         que número usar para substituir os pontos de interrogação para desenhar um círculo?

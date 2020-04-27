@@ -206,6 +206,7 @@ ms:
     current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)"
     update_email: Kemas kini
+    none: Tiada
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -256,6 +257,7 @@ ms:
     feedback: Sediakan maklum balas
     translate: Sukarela menterjemah kandungan kami
     support: Bantuan dan Komuniti
+    tos_short: Terma
     tos: Terma Perkhidmatan
     privacy: Dasar Privasi
     secure: Versi Dilindungi
@@ -318,6 +320,7 @@ ms:
       melihat program dimainkan.
     want_to_make_your_own: Ingin buat anda punya sendiri?
     more: Lagi &rarr;
+    header_artist: artis
     report_abuse: Lapor Salah Guna
   landing:
     help_support: Bantuan dan sokongan
@@ -344,6 +347,8 @@ ms:
   terms_interstitial:
     tos: Terma Perkhidmatan
     privacy: Dasar Privasi
+    accept_tos: Dengan mendaftar masuk Code.org, anda bersetuju dengan [Terma Perkhidmatan](%{tos_url})
+      dan [Dasar Privasi](%{privacy_url})kami.
     print: Cetak
   school_info_interstitial:
     save: Simpan
@@ -389,3 +394,4 @@ ms:
     accept: saya setuju
   gdpr_dialog:
     true: Ya
+  copy: Salin

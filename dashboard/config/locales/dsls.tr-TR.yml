@@ -93,14 +93,14 @@ tr-TR:
         title: Çoktan Seçmeli
       2-3 Maze Match 2:
         answers:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         content1: bloklar için bulmacaları eşleştir
         questions:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         title: Labirent eşleştirme
       2-3 Maze Multi 2:
         answers:
@@ -129,11 +129,13 @@ tr-TR:
         title: Çoktan Seçmeli
       2-3 artist debug multi 1:
         answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
           correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - {}
       2-3 artist functions multi 1:
@@ -217,12 +219,12 @@ tr-TR:
         answers:
         - {}
         - {}
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
         content1: bloklar için bulmacaları eşleştir
         questions:
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
-        - text: "/kodbütünü_varlığı/2-3_resimler/bulmaca/2-3_bulmaca_eşleştirme_2_q3.png"
+        - {}
+        - {}
+        - {}
         title: Labirent eşleştirme
       2-3 maze multi 1:
         answers:
@@ -471,22 +473,95 @@ tr-TR:
         content1: açıklama burada
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste, bilgisayarlar tarafından kullanılan farklı tipteki girdi ve çıktı aygıtları ve gönderdikleri ve aldıkları bilgi türleri hakkında bilgi edineceksiniz.
+
+          ## Kelime Haznesi
+
+          * **Girdi** - Bilgisayara bilgi verilmesini sağlayan bir aygıt veya bileşen
+          * **Çıktı** - Bilgisayardan bilgi alan herhangi bir aygıt veya bileşen
+
+
+          ## Kaynaklar
+
+          * [Girdi ve Çıktı - Aktivite Rehberi](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: "# Overview\n\nBu derste, işlemenin insanlar ve bilgisayarlar tarafından
+          nasıl girdileri çıktılara dönüştürmek için kullanıldığını öğreneceksiniz.\n\n##
+          Kelime Hazinesi\n\n* **Algoritma** - Bilgisayarlar tarafından yürütülebilen
+          işlemler için belli talimatlar dizisi \n\n## Kaynaklar\n\n* [Kart Sıralama
+          Algoritması - Etkinlik Rehberi](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste bilgisayarların depoladığı bilgi türleri ve depolamanın bilgi işlemenin kritik bir parçası olduğu hakkında bilgi edineceksiniz.
+
+          ## Kaynaklar
+
+          * [Depolama ve İşleme - Etkinlik Rehberi](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste, uygulamaların sorunları çözmek için farklı türdeki bilgileri işleme yöntemlerini keşfedeceksiniz.
+
+          ## Kaynaklar
+
+          * [Uygulama Keşfi - Etkinlik Rehberi](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu proje için sizin tanımlayacağınız bir problemi çözen kendinize ait bir uygulama tasarlayacaksınız.
+          ## Kaynaklar
+
+          * [Uygulamalar ve Problem Çözümü - Proje Rehberi](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Uygulamalar ve Problem Çözümü - Eş Gözden Geçirme](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Uygulamalar ve Problem Çözümü - Değerlendirme Tablosu](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: açıklama burada
       CSD U2 Design Project_2018:
@@ -495,18 +570,113 @@ tr-TR:
         content1: açıklama burada
       CSD U2 L1 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders, bir web sitesinin hem kullanıcılar hem de oluşturucuları için sunabileceği amaçları kapsar. Bu ders, Amerika Birleşik Devletleri'nde en çok kullanılan web sitelerinin bir kısmını araştırıyor ve bu sitelerin her birinin kullanıcılar için nasıl yararlı olduğunu ve oluşturucularına nasıl hizmet edebileceğini tartışıyor.
+          ## Kelime Hazinesi
+
+          * **Web sitesi** - İnternet'e bağlı, Dünya Çapındaki Ağ'da bir veya daha fazla sayfayı tutan bir yer.
+
+
+          ## Kaynaklar
+
+          * [Web Sitesinin Amaçları - Etkinlik Rehberi](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Web Sitesinin Amaçları - Örnek](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: açıklama burada
+        markdown: "# Genel Bakış\n\nBu ders web sitelerini kişisel ifade aracı olarak
+          tanıtır. Bu ders öncelikle insanların ilgi alanlarını ve fikirlerini ifade
+          etmenin ve paylaşmanın farklı yollarını tartışır, ardından önceki bir dersten
+          öğrenciler tarafından yapılan birkaç örnek web sitesini gözden geçirir.
+          Son olarak, herkes dahil edilecek konular ve ilgi alanlarının bir listesini
+          beyin fırtınası yapar ve paylaşır, böylece ünitenin geri kalanında kişisel
+          bir web sitesi geliştirmek için bir kaynak oluşturur. \n## Kelime Haznesi\n\n*
+          **Web Sitesi İçeriği** - Web sayfasında bulunan ham metin, resimler ve diğer
+          öğeler\n\n\n## Kaynaklar\n\n* [Kişisel Web Sitesi Taslağı - Etkinlik Rehberi](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Kişisel Web Sitesi Taslağı](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Örnek ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders, bir web sitesinin hem içeriğinin hem de yapısının bilgisayara nasıl iletileceği sorununa, HTML'yi bir çözüm olarak tanıtır. Ders, bir web sayfasının yapısını etkili bir şekilde iletmenin zorluklarını gösteren kısa bağlantısız bir etkinlikle başlar. Sınıf, Web Laboratuvarı'ndaki bir HTML sayfasına bakar ve HTML etiketlerinin bu sorunu çözmeye nasıl yardım ettiğini tartışır, ardından ünitenin ilk web sayfalarını yazmak için HTML kullanır.
+          ## Kelime Haznesi
+
+          * **HTML** - Hiper Metin İşaretleme Dili, web sayfaları oluşturmak için kullanılan bir dildir
+          * **HTML Ögesi** - Bir web sitesinin başlangıç etiketiyle işaretlenmiş ve bazen bitiş etiketiyle kapatılmış bir parçası
+          * **HTML Etiketi** - Bir HTML ögesinin başlangıcını ve bitişini ve bu ögenin türünü gösteren özel karakterler kümesi
+          * **Web Sitesi İçeriği** - Bir web sayfasında bulunan ham metin, resimler ve diğer ögeler
+          * **Web Sitesi Yapısı** - Bir web sayfasındaki farklı içerik parçalarının amacı, bilgisayarın bu içeriği nasıl görüntülenmesi gerektiğini belirlemesine yardımcı olmak için kullanılır.
+
+          ## Tanıtılan Kod
+
+          * **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         content1: açıklama burada
+        markdown: "# Genel Bakış\n\nBu ders, bu sefer başlıklarla HTML etiketlerini
+          tanıtmaya devam eder. Sınıf sayfa ve bölüm başlığı yaratmak için başlık
+          etiketlerini kullanarak uygulama yapar ve farklı başlık ögelerinin varsayılan
+          olarak nasıl görüntüleneceğini öğrenir. Ardından, sınıf ünite boyunca oluşturulacak
+          kişisel web sayfalarında içeriğin nasıl düzenleneceğini planlar ve projenin
+          ilk sayfasına başlar.\n## Kelime Haznesi\n\n* **Başlık** - Bir belge veya
+          belgenin bir bölümü için başlık veya özet \n\n## Tanıtılan Kod\n\n*  **[Heading](//studio.code.org/docs/weblab/h/)**
+          - `<h1></h1>`[Heading]\n\n"
       CSD U2 L5 Overview:
         content1: açıklama burada
+        markdown: |
+          # Genel Bakış
+
+          Bu ders kişisel web sitesi oluşturmaktan; insanların dijital olarak paylaşmayı seçtiği kişisel bilgi hakkında konuşmaya bir adım geri adım atıyor. Sınıf, diğer insanlarla ne tür bilgilerin paylaşılmasının iyi olduğunu tartışarak başlar, ardından ne tür kişisel bilginin kasıtlı yada kasıtsız olarak paylaşılabileceğini görmek için birkaç örnek sosyal medya sayfasına bakar. Son olarak sınıf, çevrimiçi bilgi verirken izlenmesi gereken bir dizi yönerge öne sürer.
+          ## Kelime Haznesi
+
+          * **Dijital İz** - İnternetteki birden çok web sitesinde bir kişi hakkında toplanan bilgi.
+
+
+          ## Kaynaklar
+
+          * [Gizliliğiniz ne zaman önemli? - Etkinlik Rehberi](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Sosyal Detektif - Etkinlik Rehberi](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |+
+          * [Gizliliğiniz ne zaman önemli?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Etkinlik Rehberi Örneği ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Sosyal Detektif](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Etkinlik Rehberi ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
       CSD U2 L6 Overview:
         content1: açıklama burada
+        markdown: |+
+          # Genel Bakış
+
+          Bu derste sıralı ve sırasız listeler ve ilişkili HTML etiketleri &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; tanıtılır. Sınıf, etiketleri kullanarak pratik yapar, ardından yeni etiketleri içeren, yeni bir HTML sayfası eklemek için kişisel web sayfası projesine geri döner.
+
+          ## Tanıtılan Kod
+
+
+          *  **[Sırasız Liste](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          *  **[Liste Ögesi](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          *  **[Sıralı List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+
       CSD U2 Lesson 6 Overview:
         content1: açıklama burada
+      CSD U2 Top Websites:
+        markdown: |-
+          # ABD'deki En İyi Web Siteleri
+
+          Aşağıdakiler, Amerika Birleşik Devletleri'nde en sık ziyaret edilen websiteleridir. Her biri websitesinin temel işlevinin kısa bir açıklamasını içerir.
+
+
+          1. Google.com - Web siteleri, resimler, videolar ve diğer medyalar için arama motoru
+          2. Youtube.com - Değerlendirmeler ve yorumlar içeren kullanıcı gönderili video sitesi
+          3. Facebook.com - Kullanıcıların arkadaşlarıyla bilgi paylaşmasına olanak tanıyan sosyal medya topluluğu
+          4. Amazon.com - Her türlü ürün için çevrimiçi alışveriş sitesi
+          4. Yahoo.com - Bir arama motoru, e-posta sağlayıcısı ve haber kaynağı
+          5. Wikipedia.org - Kullanıcılar tarafından oluşturulan içeriğe sahip ücretsiz bir ansiklopedi
       CSD U2 expand project:
         content1: açıklama burada
       CSD U2 expand project_2018:
@@ -528,43 +698,85 @@ tr-TR:
         - {}
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: 'https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+
+'
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Listeyi, onu oluşturan kod ile eşleştir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Hızlı Liste Taraması
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: 'https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+
+'
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Listeyi, onu oluşturan kod ile eşleştir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Hızlı Liste Taraması
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: 'https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+
+'
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Listeyi, onu oluşturan kod ile eşleştir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Hızlı Liste Taraması
       CSD U2 project guide:
         content1: açıklama burada
       CSD U2 project guide_2018:
@@ -688,36 +900,40 @@ tr-TR:
         - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
+        - text: "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)"
+          correct: true
+        - text: "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)"
         questions:
-        - {}
+        - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 Sprites intro predict multi_2018:
         answers:
         - correct: true
@@ -725,7 +941,7 @@ tr-TR:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
         - correct: true
@@ -733,20 +949,13 @@ tr-TR:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çalıştırınca `Hareketlim` hareketlisi nerede olacak?
       CSD U3 combining rep:
         content1: açıklama burada
       CSD U3 combining rep_2018:
         content1: açıklama burada
       CSD U3 combining rep_2018_2019:
         content1: açıklama burada
-      CSD U3 complex sprite movement SFLP:
-        markdown: 'Sınıf, yer çekimi simülasyonu, bir nesnenin zıplaması, sağa veya
-          sola süzülmek gibi, nesnelerin, daha karmaşık hareketlerini oluşturmak için
-          sayaç desenini kullanarak sürat özelliklerini birleştirmeyi öğrenir. Son
-          seviyelerde sınıf, bu hareketleri bir nesneyi hareket ettirmek ve kontrol
-          etmek için kullanır. Kontrol ettikleri nesneyi uçurarak etraftaki altınları
-          topladıkları basit bir oyun oluştururlar. '
       CSD U3 drawSprites placement match:
         answers:
         - {}
@@ -1088,12 +1297,12 @@ tr-TR:
         title: Çoktan Seçmeli
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
-        - {}
-        - {}
-        content1: Hangi ok Flurb'u hazineye ulaştırır
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Hangi ok Flurb' u hazineye ulaştırır?
         title: Çoktan Seçmeli
@@ -1206,6 +1415,35 @@ tr-TR:
         content1: açıklama burada
       Terminology Recap:
         content1: açıklama burada
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          # Genel bakış
+
+          Bu derste, çeşitli sorunlara yaklaşımınızı yapılandırmanıza yardımcı olacak resmi bir problem çözme süreci öğreneceksiniz.
+
+
+          ## Kaynakça
+
+          *[Problem Çözme Süreci - Aktivite Rehberi]
+          (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |-
+          # Genel Bakış
+          Bu derste, her adımın sorunlara çözüm geliştirmenize nasıl yardımcı olduğunu keşfetmek için problem çözme sürecini çeşitli problemlere uygulayacaksınız.
+
+          ## Kaynaklar
+
+          * [Problemleri Çözmek - Etkinlik Rehberi]
+          (https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Genel Bakış
+
+          Bu derste, bilgisayarların belirli türdeki problemleri çözmeye nasıl yardımcı olduğunu ve her bilgisayarın temel özelliklerini öğrenmeye başlayacaksınız.
+
+          ## Kaynaklar
+
+          * [Bilgisayar Nedir - Etkinlik Rehberi](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         answers:
         - {}
@@ -1874,6 +2112,22 @@ tr-TR:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
+      csd-post-survey-levelgroup-2018:
+        title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
+      csd-pre-survey-2017-levelgroup:
+        markdown: |-
+          # Genel bakış
+
+          Sınıf, mümkün olduğunca fazla bozuk parayı destekleyecek alüminyum folyo tekneler tasarlamak için gruplar halinde çalışır. Dersin sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtırlar ve dersin geri kalanında yapacakları problem çözme türleriyle bağlantı kurarlar.
+
+
+          ## Kaynakça
+
+          *[Alüminyum botlar](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Aktivite rehberi ([MS Word] olarak kopyala)
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Belgesi]
+          (https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         answers:
         - {}

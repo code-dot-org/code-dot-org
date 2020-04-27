@@ -65,6 +65,7 @@ sl:
   trophies: "Trofeje"
   courses: 'Predavanja'
   courses_page:
+    title_student: "Spoznaj Računalništvo"
     title_teacher: "Poučuj s studio Code"
   unplugged_activity: 'Dejavnost brez prijave'
   of: "od"
@@ -310,6 +311,7 @@ sl:
     delete_text_teacher_note: "Prosimo pomnite: brisanje vašega računa ne bo izbrisalo računov vaših študentov."
     delete_confirm: 'Ali ste prepričani, da želite izbrisati svoj račun?'
     update_email: "Posodobi"
+    parent_guardian_email_label: "Elektronska pošta staršev/skrbnikov"
   user_level:
     completed: 'Zaključeno'
     tried: 'Poskus'
@@ -489,6 +491,7 @@ sl:
     caption_time_ago: "pred %{time_ago}"
     header: "Galerija"
     header_playlab: "Zgodbe in igre"
+    header_artist: "Umetnik"
     report_abuse: "Prijavi zlorabo"
   landing:
     report_bug: "Sporoči napako"
@@ -658,3 +661,4 @@ sl:
     accept: 'Strinjam se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

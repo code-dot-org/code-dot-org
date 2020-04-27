@@ -54,6 +54,7 @@ export default class SeeMoreCourses extends Component {
         )}
         {!this.state.open && (
           <Button
+            __useDeprecatedTag
             onClick={this.showMoreCourses.bind(this)}
             color={Button.ButtonColor.gray}
             icon="caret-down"

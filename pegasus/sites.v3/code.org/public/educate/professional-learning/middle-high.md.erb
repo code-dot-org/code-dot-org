@@ -12,6 +12,12 @@ theme: responsive
   }
 </style>
 
+<div class="breakoutquote" style="line-height:27px">
+
+<p>In response to the COVID-19 pandemic, program dates and schedules may change in your region. Check your Regional Partner's <a href="/educate/professional-learning/program-information">program page</a> regularly for updates.</p>
+
+</div>
+
 # Professional Learning for Middle and High School
 <%= view :professional_learning_apply_banner, :link_suffix => "program-information" %>
 <br/>
@@ -41,7 +47,7 @@ The majority of our workshop attendees rank it the **best professional developme
 
 **Over a third of schools** use Code.org's curriculum, including the largest school districts in the U.S., such as LAUSD, Broward, and Dallas ISD. And, over a quarter of our teachers come from rural schools.
 
-**Proven results** - peer reviewed research shows that school participation in the Code.org program causes an estimated 5x increase in students that take and pass the AP Computer Science Principles exam.
+**Proven results** - peer reviewed research shows that school participation in the Code.org program causes an [estimated 5x increase](https://medium.com/@codeorg/research-shows-5x-computer-science-participation-at-schools-in-code-org-program-f99ca6ff3207) in students that take and pass the AP Computer Science Principles exam.
 
 **Every Student Succeeds Act**. The Code.org program meets the six key criteria for professional development outlined in the Every Student Succeeds Act (ESSA). Learn more in our [Program Brochure](/files/programs/codeorg-program-brochure.pdf).
 
@@ -83,16 +89,14 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl-options.pdf", target=_"blank">Find the right course for your classroom.</a>
 
 ## Program commitments and schedule
-The Code.org Professional Learning Program has both in-person and online supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles. Professional learning workshops will be hosted by our [Regional Partners](/educate/professional-learning/about-partners) beginning in the summer of 2019.
-<%=
+The Code.org Professional Learning Program has supports designed to prepare teachers before and during their first year teaching CS Discoveries or CS Principles. Professional learning workshops will be hosted by our [Regional Partners](/educate/professional-learning/about-partners) beginning in the summer of 2020.
+<%
 link = "/educate/professional-learning/program-information"
 link += "?nominated=true" if params[:nominated]
-"<a class='linktag' id='pl-apps-open-link' href='#{link}'>**Applications are now open!**</a>"
 %>
+<a class="linktag" id="pl-apps-open-link" href="<%= link %>">**Applications are now open!**</a>
 
-
-
-<img src="/images/professional-learning/pl_timeline.png" width="100%"/>
+Please check your Regional Partner's <a href="/educate/professional-learning/program-information">program page</a> for commitments and schedule.
 
 <br/>
 
@@ -129,7 +133,7 @@ Participants will engage with the curriculum both as instructors and as learners
   <summary>**One cohesive set of resources**</summary>
   <p>
   <br/>
-​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. In-person workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
+​Our professional learning and curriculum flow seamlessly together, empowering teachers to deliver the course with confidence. Immersive workshops combine with online tools to provide participants with a broad selection of resources to help them plan ahead for implementing the course in their classrooms, while also collaborating with other educators.
 </p>
 </details>
 
@@ -182,8 +186,8 @@ And be sure to check out our <a href="https://docs.google.com/document/d/e/2PACX
 <%=
 link = "/educate/professional-learning/program-information"
 link += "?nominated=true" if params[:nominated]
-"<a class='linktag' id='pl-get-started-link' href='#{link}'><button>Get started!</button></a>"
 %>
+<a class="linktag" id="pl-get-started-link" href="<%= link %>"><button>Get started!</button></a>
 
 <!--
 

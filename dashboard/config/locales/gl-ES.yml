@@ -66,6 +66,7 @@ gl:
   join_section:
     code:
       placeholder: Código da sección (ABCDEF)
+      instructions_short: Introduce o teu código de sección de 6 letras
   add_hint_form:
     placeholder: Por favor, dixite a súa pista aquí
     submit: Agregar pista
@@ -147,8 +148,6 @@ gl:
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
-    under_13_consent: De ter menos de 13 anos, confirmo que teño autorización de meus
-      pais ou titores legais para empregar os servizos de Code.org.
     student_consent: Confirmo que teño autorización de meus pais ou titores legais
       para empregrar os servizos de Code.org.
     agree_us_website: Estou de acordo en usar un sitio web localizado nos Estados
@@ -237,6 +236,7 @@ gl:
       %{name}
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
+    parent_email_added_subject: "¡Benvida a Code.org!"
   teacher_mailer:
     new_teacher_subject: "¡Benvida a Code.org!"
   section:
@@ -252,6 +252,7 @@ gl:
       picture: Contrasinal de imaxe
       word: Palabras secretas
       email: E-mail
+      clever: Conta intelixente
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi agregado como o teu profesor"
@@ -421,6 +422,7 @@ gl:
       anos, declaro que teño autorización de meus pais ou responsables legais para
       usar os servizos de Code.org incluso sen a supervisión dun profesor.
     update_email: Actualizar
+    parent_guardian_email_label: Enderezo de correo electrónico da persoa responsable
   user_level:
     completed: Concluído
     tried: Probado
@@ -545,6 +547,7 @@ gl:
     download: Baixar Vídeo
     show_notes: Amosar notas
     show_video: Amosar video
+    label: Vídeo
   compatibility:
     upgrade:
       link: Aprender máis
@@ -794,6 +797,8 @@ gl:
     csp_functions: Funcións
     csp_lists: Listas
     csp_loops: Bucles
+  hoc_download:
+    minecraft_name: Hora do Código Minecraft
   pd:
     form_labels:
       email: E-mail
@@ -820,3 +825,4 @@ gl:
     accept: Acepto
   gdpr_dialog:
     true: Si
+  copy: Copiar

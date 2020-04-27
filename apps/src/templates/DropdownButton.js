@@ -112,6 +112,7 @@ class DropdownButton extends Component {
     return (
       <div style={styles.main}>
         <Button
+          __useDeprecatedTag
           text={text}
           size={size}
           onClick={this.toggleDropdown}

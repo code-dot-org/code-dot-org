@@ -92,6 +92,14 @@ ky-KG:
         do something: бирдеме кылуу
       NEW Course 4 Play Lab Params 11:
         jump: секир
+      New Artist Project:
+        draw a star: жылдыз тарткыла
+        draw a circle: тегерек тарткыла
+        draw a triangle: үч бурчтук тарткыла
+        draw a house: саат тарткыла
+        draw a square: чарчы тарткыла
+      New Play Lab Project:
+        jump: секир
       Standalone_Artist_7:
         draw a flower: гүл тарткыла
       course3_artist_functions_challenge1:
@@ -148,8 +156,6 @@ ky-KG:
       courseE_artist_functions7:
         draw a house: саат тарткыла
       courseE_artist_functions7_2018:
-        draw a house: саат тарткыла
-      courseE_artist_functions7_2019:
         draw a house: саат тарткыла
       courseE_artist_functions8:
         do something: бирдеме кылуу

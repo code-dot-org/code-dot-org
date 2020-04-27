@@ -29,6 +29,7 @@ import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
+import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -40,6 +41,7 @@ const studentScriptIds = scriptData.studentScriptIds;
 const validCourses = scriptData.validCourses;
 const currentUserId = scriptData.currentUserId;
 const hasSeenStandardsReportInfo = scriptData.hasSeenStandardsReportInfo;
+const localeCode = scriptData.localeCode;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -53,7 +55,8 @@ $(document).ready(function() {
     textResponses,
     sectionAssessments,
     currentUser,
-    sectionStandardsProgress
+    sectionStandardsProgress,
+    locales
   });
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
@@ -69,6 +72,7 @@ $(document).ready(function() {
   store.dispatch(setLoginType(section.login_type));
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
+  store.dispatch(setLocaleCode(localeCode));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));
@@ -87,7 +91,6 @@ $(document).ready(function() {
             <TeacherDashboard
               {...props}
               studioUrlPrefix={scriptData.studioUrlPrefix}
-              pegasusUrlPrefix={scriptData.pegasusUrlPrefix}
               sectionId={section.id}
               sectionName={section.name}
               studentCount={section.students.length}
