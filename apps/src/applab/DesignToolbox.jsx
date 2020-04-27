@@ -11,7 +11,7 @@ export default class DesignToolbox extends React.Component {
     handleDragStart: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
     handleChange: PropTypes.func.isRequired,
-    themeValue: PropTypes.string.isRequired
+    element: PropTypes.instanceOf(HTMLElement)
   };
 
   render() {
@@ -35,7 +35,11 @@ export default class DesignToolbox extends React.Component {
       <div id="design-toolbox" style={toolboxStyle}>
         <ThemePropertyRow
           containerStyle={themeStyle}
-          initialValue={this.props.themeValue}
+          initialValue={
+            (this.props.element &&
+              this.props.element.getAttribute('data-theme')) ||
+            ThemePropertyRow.defaultProps.initialValue
+          }
           handleChange={this.props.handleChange.bind(this, 'theme')}
           desc={'Theme'}
         />
