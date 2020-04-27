@@ -44,7 +44,7 @@ stage 'The Internet with Keegan-Michael Key & Vint Cerf'
 level 'CodeBreak Episode 6 Placeholder', progression: 'Code Break: Episode 6'
 level 'Episode 6 Instructions', progression: 'Practice'
 level 'CodeBreak e05 Practice Web lab', progression: 'Practice'
-level 'Episode 5 Challenge Instructions', progression: 'Challenges'
+level 'Episode 6 Challenge Instructions', progression: 'Challenges'
 level 'CodeBreak E05 Challenges', progression: 'Challenges'
 level 'Episode 5 Share', progression: 'Share Your Work!'
 
