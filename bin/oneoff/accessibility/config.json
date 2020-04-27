@@ -1,7 +1,4 @@
 {
-  "default": {
-    "standard": "WCAG2A"
-  },
   "urls": [
     "https://studio.code.org/",
     "https://code.org"

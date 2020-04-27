@@ -8,7 +8,7 @@ CONFIG_PATH = "./config.json"
 
 def main
   puts "Scanning for Accessibility Errors and Warnings"
-  puts "Using WCAG2A standard using PA11Y tool {http://pa11y.org}"
+  puts "Using WCAG2AA standard using PA11Y tool {http://pa11y.org}"
   puts "JSON output in pa11y_log.json"
 
   # call pa11y
