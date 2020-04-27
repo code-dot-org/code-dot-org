@@ -289,11 +289,15 @@ function resizeVideoPlayer() {
   const maxHeight = window.innerHeight * screenRatio;
   const maxWidth = window.innerWidth * screenRatio;
 
-  let containerHeight = maxWidth / aspectRatio + navBarHeight;
-  let containerWidth = maxWidth;
+  // Find whether width or height is the limiting factor when the aspect ratio
+  // is 9/16. Then set the dimensions to the largest possible values.
+  let containerHeight, containerWidth;
   if ((maxHeight - navBarHeight) * aspectRatio < maxWidth) {
     containerHeight = maxHeight;
     containerWidth = (maxHeight - navBarHeight) * aspectRatio;
+  } else {
+    containerHeight = maxWidth / aspectRatio + navBarHeight;
+    containerWidth = maxWidth;
   }
 
   // Set the dimensions of the video modal
