@@ -16,6 +16,8 @@ const defaultProps = {
   title: 'Computer Science Principles 2017',
   familyName: 'CSP',
   versionYear: '2017',
+  visible: false,
+  isStable: false,
   descriptionShort: 'Desc here',
   descriptionStudent: 'Desc here',
   descriptionTeacher: 'Desc here',
