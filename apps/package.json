@@ -233,6 +233,7 @@
     "memoize-one": "^5.1.1",
     "node-sass": "^4.13.0",
     "object-fit-images": "^3.2.3",
+    "pa11y-ci": "^2.3.0",
     "prop-types": "^15.6.2",
     "qrcode.react": "^0.8.0",
     "query-string": "4.1.0",
