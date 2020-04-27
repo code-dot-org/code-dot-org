@@ -12,4 +12,11 @@ export default class ThemePropertyRow extends EnumPropertyRow {
     initialValue: themeOptions[DEFAULT_THEME_INDEX],
     options: themeOptions
   };
+
+  componentWillReceiveProps(nextProps) {
+    const {initialValue} = nextProps;
+    if (this.props.initialValue !== initialValue) {
+      this.setState({selectedValue: initialValue});
+    }
+  }
 }

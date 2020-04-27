@@ -2,13 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import DesignToolboxElement from './DesignToolboxElement';
 import applabMsg from '@cdo/applab/locale';
+import ThemePropertyRow from './designElements/ThemePropertyRow';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
 export default class DesignToolbox extends React.Component {
   static propTypes = {
     handleDragStart: PropTypes.func.isRequired,
-    isToolboxVisible: PropTypes.bool.isRequired
+    isToolboxVisible: PropTypes.bool.isRequired,
+    handleChange: PropTypes.func.isRequired,
+    themeValue: PropTypes.string.isRequired
   };
 
   render() {
@@ -24,9 +27,18 @@ export default class DesignToolbox extends React.Component {
       padding: 10,
       paddingRight: 0 // setting this to 0 allows 2 columns with the potential scrollbar on Windows
     };
-
+    const themeStyle = {
+      paddingLeft: 0,
+      marginBottom: 10
+    };
     return (
       <div id="design-toolbox" style={toolboxStyle}>
+        <ThemePropertyRow
+          containerStyle={themeStyle}
+          initialValue={this.props.themeValue}
+          handleChange={this.props.handleChange.bind(this, 'theme')}
+          desc={'Theme'}
+        />
         <p>{applabMsg.designToolboxDescription()}</p>
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'button.png'}
