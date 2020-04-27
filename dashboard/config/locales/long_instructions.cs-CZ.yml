@@ -781,25 +781,193 @@ cs-CZ:
         se tam Scrat mohl dostat?
       courseB_iceage_loops9_2019: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
         aby se tam Scrat mohl dostat?
+      courseB_starWars_prog1: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nA dej pozor na překážky. Šrot vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog10: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog10_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog10_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog1_2018: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nA dej pozor na překážky. Šrot vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog1_2019: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nA dej pozor na překážky. Šrot vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog5: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog5_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog5_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Dokážeš posbírat všechny kusy?"_'
+      courseB_starWars_prog6: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog6_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Posbírej všechen šrot.
+      courseB_starWars_prog8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Posbírej všechen šrot.
+      courseB_starWars_prog8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Posbírej všechen šrot.
+      courseB_starWars_prog9: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog9_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
+      courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"To zvládneš!"_'
       courseC_artist_loopsPrePre1a_2019: "Umělec je na špatném místě! \n\nVyužij blok
         <xml><block type=\"jump_to_xy\" id=\"callMe\" block-text=\"jump to 200 over
         200 down\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>,
         abys dostal umělce do středu herní plochy.\\\nPak nakresli čáru dlouhou 50
         pixelů s blokem <xml><block type=\"draw_move_by_constant\" block-text=\"move
         forward\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
+      courseC_collector_prog1: |-
+        **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
+
+        Přetáhni bloky do pracovního prostoru a pokus se přijít na to, jak získat poklad. Získej alespoň jednu položku a projdeš touto úrovní.
+      courseC_collector_prog1_2018: |-
+        **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
+
+        Přetáhni bloky do pracovního prostoru a pokus se přijít na to, jak získat poklad. Získej alespoň jednu položku a projdeš touto úrovní.
+      courseC_collector_prog1_2019: |-
+        **Hra zdarma:** Toto je Laurel Dobrodružka! Pohybuj s ní a posbírej tolik pokladu, kolik je možné. Použij  blok `sbírat` k vyzvednutí pokladu!
+
+        Přetáhni bloky do pracovního prostoru a pokus se přijít na to, jak získat poklad. Získej alespoň jednu položku a projdeš touto úrovní.
+      courseC_collector_prog3: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které potřebuješ,
+        již jsou v pracovním prostoru, ale nejsou připojeny.\\\nUspořádej tyto bloky,
+        posbírej poklad a vyřeš úkol."
+      courseC_collector_prog3_2018: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.\\\nUspořádej
+        tyto bloky, posbírej poklad a vyřeš úkol."
+      courseC_collector_prog3_2019: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.\\\nUspořádej
+        tyto bloky, posbírej poklad a vyřeš úkol."
+      courseC_collector_prog4: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které potřebuješ,
+        již jsou v pracovním prostoru, ale nejsou připojeny.  \n\nUspořádej tyto bloky,
+        posbírej všechen poklad a vyřeš úkol."
+      courseC_collector_prog4_2018: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.  \n\nUspořádej
+        tyto bloky, posbírej všechen poklad a vyřeš úkol."
+      courseC_collector_prog4_2019: "_\"Posloupnost je důležitá!\"_ \n\nBloky, které
+        potřebuješ, již jsou v pracovním prostoru, ale nejsou připojeny.  \n\nUspořádej
+        tyto bloky, posbírej všechen poklad a vyřeš úkol."
+      courseC_collector_prog5: |-
+        _"Pomoz mi posbírat každý kousek pokladu!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Zvládneš je opravit?
+      courseC_collector_prog5_2018: |-
+        _"Pomoz mi posbírat každý kousek pokladu!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Zvládneš je opravit?
+      courseC_collector_prog5_2019: |-
+        _"Pomoz mi posbírat každý kousek pokladu!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Zvládneš je opravit?
+      courseC_collector_prog6: |-
+        _"Pomoz mi posbírat všechen poklad!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Uspořádej je a posbírej všechen poklad.
+      courseC_collector_prog6_2018: |-
+        _"Pomoz mi posbírat všechen poklad!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Uspořádej je a posbírej všechen poklad.
+      courseC_collector_prog6_2019: |-
+        _"Pomoz mi posbírat všechen poklad!"_
+
+        Tyto bloky jsou v nesprávném pořadí. Uspořádej je a posbírej všechen poklad.
+      courseC_collector_prog7: |-
+        \*\* Výzva: \*\* \_ „Co se tady děje?“ \_
+
+        I když je dáme do správného pořadí, budou stále nějaké chybět.\
+        Pomocí bloků z panelu posbírejte všechen poklad.
+      courseC_collector_prog7_2018: |-
+        \*\* Výzva: \*\* \_ „Co se tady děje?“ \_
+
+        I když je dáme do správného pořadí, budou stále nějaké chybět.\
+        Pomocí bloků z panelu posbírejte všechen poklad.
+      courseC_collector_prog7_2019: |-
+        \*\* Výzva: \*\* \_ „Co se tady děje?“ \_
+
+        I když je dáme do správného pořadí, budou stále nějaké chybět.\
+        Pomocí bloků z panelu posbírejte všechen poklad.
+      courseC_collector_prog8: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2018: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2019: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
+      courseC_harvester_loops1: "Cykly se dají použít také na jiné akce než jen pohyb.
+        \ \n\nPoužij cyklus na sklizení dýní."
+      courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops1_2018: "Cykly se dají použít také na jiné akce než jen
+        pohyb.  \n\nPoužij cyklus na sklizení dýní."
+      courseC_harvester_loops1_2019: "Cykly se dají použít také na jiné akce než jen
+        pohyb.  \n\nPoužij cyklus na sklizení dýní."
+      courseC_harvester_loops2: Zkus použít dva odlišné cykly, jeden na pohyb dopředu
+        a jeden na sklízení.
+      courseC_harvester_loops2_2018: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
+      courseC_harvester_loops2_2019: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
+      courseC_harvester_loops3: Posbírej všechny dýně.
+      courseC_harvester_loops3_2018: Posbírej všechny dýně.
+      courseC_harvester_loops3_2019: Posbírej všechny dýně.
+      courseC_harvester_loops4: "Tady nám roste ještě navíc kukuřice.\n\nSkliď dýně
+        i kukuřici. "
+      courseC_harvester_loops4_2018: "Tady nám roste ještě navíc kukuřice.\n\nSkliď
+        dýně i kukuřici. "
+      courseC_harvester_loops4_2019: "Tady nám roste ještě navíc kukuřice.\n\nSkliď
+        dýně i kukuřici. "
+      courseC_harvester_loops5: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops8: |-
+        **Výzva**Posbírej všechny kukuřice a dýně.
+
+        K řešení výzvy můžeš použít jaké řešení budeš chtít, ale nebude to jednoduché!
+      courseC_harvester_loops8_2018: |-
+        **Výzva**Posbírej všechny kukuřice a dýně.
+
+        K řešení výzvy můžeš použít jaké řešení budeš chtít, ale nebude to jednoduché!
+      courseC_harvester_loops8_2019: |-
+        **Výzva**Posbírej všechny kukuřice a dýně.
+
+        K řešení výzvy můžeš použít jaké řešení budeš chtít, ale nebude to jednoduché!
+      courseC_harvester_loops9: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2019: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops_challenge2: Sesbírej všechen salát. Ne stromy ani pole!
       courseC_harvester_loops_challenge2_2018: Sesbírej všechen salát. Ne stromy ani
         pole!
       courseC_harvester_loops_challenge2_2019: Sesbírej všechen salát. Ne stromy ani
         pole!
       courseC_maze_debugging1: |-
-        Tento kód není zcela zprávný!\
+        Tento kód není zcela správný!\
         Oprav ho a pomoz veverce dostat se k žaludu.
       courseC_maze_debugging1_2018: |-
-        Tento kód není zcela zprávný!\
+        Tento kód není zcela správný!\
         Oprav ho a pomoz veverce dostat se k žaludu.
       courseC_maze_debugging1_2019: |-
-        Tento kód není zcela zprávný!\
+        Tento kód není zcela správný!\
         Oprav ho a pomoz veverce dostat se k žaludu.
       courseC_maze_debugging3: "Něco není úplně správně. \n\nOdstraň bloky a dostaň
         veverku k žaludu! "
@@ -884,6 +1052,111 @@ cs-CZ:
         způsobem!"_
       courseC_maze_programming9_2019: _"Teď mi pomoz dostat se k prasátku jakýmkoliv
         způsobem!"_
+      courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nK sebrání šrotu použij pět stejných bloků. Šrot
+        vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops10: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Běž BB-8!"_
+
+        Vidíš jak ti to jde! Jen tak dál!
+      courseC_starWars_loops10_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Běž BB-8!"_
+
+        Vidíš jak ti to jde! Jen tak dál!
+      courseC_starWars_loops10_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+         _"Běž BB-8!"_
+
+        Vidíš jak ti to jde! Jen tak dál!
+      courseC_starWars_loops11: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8!"_
+
+        Už je to skoro hotové! Teď si můžeš vybrat jakou cestu chceš!
+      courseC_starWars_loops11_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8!"_
+
+        Už je to skoro hotové! Teď si můžeš vybrat jakou cestu chceš!
+      courseC_starWars_loops11_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8!"_
+
+        Už je to skoro hotové! Teď si můžeš vybrat jakou cestu chceš!
+      courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nK sebrání šrotu použij pět stejných bloků. Šrot
+        vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Přines šrot, BB-8!\"_ \n\nK sebrání šrotu použij pět stejných bloků. Šrot
+        vypadá takto: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops2: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops2_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops2_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Běž BB-8!\"_\n\nZkus posbírat všechen šrot pomocí cyklu, který bude mít
+        v sobě jen jeden další blok.  "
+      courseC_starWars_loops4: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops4_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops4_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        V této úloze, použijeme dva krát `opakuj` cyklus a BB-8 tak bude moci posbírat všechen šrot s nejmenším možným počtem bloků!
+      courseC_starWars_loops6: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops6_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops6_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Dokážeš posbírat všechny kusy?"_
+
+        V cyklu můžeš použít více bloků!  Můžeš zopakovat celou posloupnost bloků?
+      courseC_starWars_loops7: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops7_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops7_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"To zvládneš!"_
+
+        Zkusíš posbírat všechen šrot pomocí jednoho cyklu? Můžeš to prvně naprogramovat celé, potom najít opakující se kód a dej ho do cyklu.
+      courseC_starWars_loops8: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops8_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops8_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál, BB-8."_
+
+        **Výzva:** Na vyřešení úlohy zkombinuj všechny nápady z předchozích levelů.
+      courseC_starWars_loops9: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál!"_
+
+        Použij, co ses zatím naučil(a) a posbírej všechen šrot!
+      courseC_starWars_loops9_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál!"_
+
+        Použij, co ses zatím naučil(a) a posbírej všechen šrot!
+      courseC_starWars_loops9_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Jen tak dál!"_
+
+        Použij, co ses zatím naučil(a) a posbírej všechen šrot!
       courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Ahoj, já jsem Elsa z Arendellu, pomož mi namalovat tvar.”_\n\nNamaluj šestiúhelník
         se stranami dlouhými 50 pixelů.  \n\n* * *\n\nAbys namaloval(a) šestiúhelník,
@@ -1701,6 +1974,15 @@ cs-CZ:
       frozen square snowflake: Dokážeš vytvořit sněhovou vločku tak, že použiješ blok
         "opakuj" pro nakreslení čtverce 10 krát, a blok "otočit" k otočení o 36 stupňů
         mezi všemi čtverci?
+      grade2_collector_10: "Máš skoro hotovo!  \n\nPosbírej co možná nejvíce kousků
+        pokladu a dokonči tuto fázi!"
+      grade2_collector_10_2018: "Máš skoro hotovo!  \n\nPosbírej co možná nejvíce
+        kousků pokladu a dokonči tuto fázi!"
+      grade2_collector_10_2019: "Máš skoro hotovo!  \n\nPosbírej co možná nejvíce
+        kousků pokladu a dokonči tuto fázi!"
+      grade2_collector_A: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2018: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2019: Pomoz Laurel posbírat všechen poklad.
       ramp_artist_loops1: "To je ale krásný den!  \n\nPomoz malíři zakrýt jeho květiny
         dřív, než přijde zima, tak, že se posuneš vpřed o 60 pixelů."
       ramp_artist_loops1_2018: "To je ale krásný den!  \n\nPomoz malíři zakrýt jeho
