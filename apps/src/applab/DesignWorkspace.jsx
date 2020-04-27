@@ -25,8 +25,7 @@ class DesignWorkspace extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    showMakerToggle: PropTypes.bool,
-    currentTheme: PropTypes.string.isRequired
+    showMakerToggle: PropTypes.bool
   };
 
   state = {isToolboxVisible: true};
@@ -65,7 +64,6 @@ class DesignWorkspace extends React.Component {
           onRestoreThemeDefaults={this.props.onRestoreThemeDefaults}
           onInsertEvent={this.props.onInsertEvent}
           screenIds={this.props.screenIds}
-          currentTheme={this.props.currentTheme}
         />
       </div>
     );
