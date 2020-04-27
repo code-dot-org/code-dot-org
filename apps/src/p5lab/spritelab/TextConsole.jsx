@@ -2,8 +2,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Transition} from 'react-transition-group';
+import color from '@cdo/apps/util/color';
 
-const lineHeight = 18;
+const lineHeight = 20;
+const topMargin = 5;
 const maxHeight = lineHeight * 6;
 
 export const styles = {
@@ -12,11 +14,11 @@ export const styles = {
   },
   console: {
     display: '',
-    background: 'rgba(200,200,200,0.5)',
     position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
+    marginTop: topMargin,
     lineHeight: lineHeight,
     transitionProperty: 'max-height',
     transitionDuration: '1000ms'
@@ -27,6 +29,7 @@ export const styles = {
     top: 0,
     minWidth: lineHeight,
     margin: 0,
+    marginTop: topMargin,
     border: 0,
     padding: 0,
     fontSize: 'inherit',
@@ -35,8 +38,11 @@ export const styles = {
     fontFamily: 'monospace'
   },
   text: {
-    fontSize: 15,
-    margin: 0
+    fontSize: 17,
+    paddingLeft: 5,
+    background: color.lightest_gray,
+    borderRadius: 4,
+    marginBottom: 3
   }
 };
 
@@ -51,11 +57,11 @@ export const transitionStyles = {
   },
   exiting: {
     overflow: 'auto',
-    maxHeight: lineHeight
+    maxHeight: lineHeight + topMargin
   },
   exited: {
     overflow: 'hidden',
-    maxHeight: lineHeight,
+    maxHeight: lineHeight + topMargin,
     whiteSpace: 'nowrap'
   }
 };
