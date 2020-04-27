@@ -1,0 +1,33 @@
+name 'Episode 6 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+### Protocols
+
+In this week's Code Break, Sofia sent messages using light bulb. Come up with your own system for sending messages using the [Protocols - Challenge guide](https://docs.google.com/document/d/1ClQkjvpyuRccPDidCp1FGtjPMyD-uOLr6xIQkyf3ggw/edit?usp=sharing).
+
+### Build a Website
+
+After watching the videos introducing Web Lab in the practice level, try your hand at building your own website! On the next level, there are two different set-ups: choose the right one for you.
+
+**Beginner Set-Up:** Basic HTML page with no CSS. Focus on using tags correctly.
+
+Samples
+
+* Get To Know Me, Barry Beaver!
+	* [Website](https://codeprojects.org/1LMLpo40j6Izag4beOy-H1BHy5P65hMnSiKs0TMExCI/index.html)
+    * [Code](https://studio.code.org/projects/weblab/1LMLpo40j6Izag4beOy-H1BHy5P65hMnSiKs0TMExCI/view)
+* My Cute Animal Fan Page!
+	* [Website](https://codeprojects.org/NPSmsaKa-sfg7XEDSU7zoSmNAVbfl-FrmImf_4d6aiM/index.html)
+    * [Code](https://studio.code.org/projects/weblab/NPSmsaKa-sfg7XEDSU7zoSmNAVbfl-FrmImf_4d6aiM/view)
+    
+![](https://images.code.org/41df67237c45eae71ab158f3a633edb9-image-1587998091524.png) ![](https://images.code.org/c05dc17d58accf8e6ffc19c02509fc9a-image-1587998328591.png)
+
+**Intermediate Set-Up:** HTML page and CSS page set up for you! Try your hand at building a simple page and adding style like color and font-size. 
+MARKDOWN
