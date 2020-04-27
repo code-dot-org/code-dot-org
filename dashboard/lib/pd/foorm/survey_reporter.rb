@@ -2,45 +2,23 @@
 module Pd::Foorm
   class SurveyReporter
     include Constants
+    include Pd::WorkshopConstants
     extend Helper
 
     # Calculates report for a given workshop id.
-    # @return
-    #   {
-    #        course_name: 'CS Principles',
-    #        questions: <parsed form, see FoormParser>,
-    #        this_workshop: <summarized survey answers, see WorkshopSummarizer>,
-    #        workshop_rollups: {
-    #         questions: <question details, see RollupHelper.get_question_details_for_rollup>,
-    #         single_workshop: <rollup for workshop_id, see RollupCreator>,
-    #         overall: <rollup for all workshops in course_name, see RollupCreator>
-    #       }
-    #   }
-    # Path for calculating report is:
-    # SurveyReporter.get_raw_data_for_workshop
-    #   summary:
-    #   -> FoormParser.parse_forms
-    #   -> WorkshopSummarizer.summarize_answers_by_survey
-    #     rollups:
-    #     -> RollupHelper.get_question_details_for_rollup
-    #       single_workshop_rollup:
-    #       -> RollupCreator.calculate_averaged_rollup
-    #       course rollup:
-    #       -> get all workshop ids for course
-    #       -> SurveyReporter.get_raw_data_for_workshop(ids)
-    #       -> FoormParser.parse_forms
-    #       -> WorkshopSummarizer.summarize_answers_by_survey
-    #       -> RollupCreator.calculate_averaged_rollup
+    # @return workshop report in format specified in README
     def self.get_workshop_report(workshop_id)
       return unless workshop_id
 
       # get workshop summary
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
+      facilitators = get_formatted_facilitators_for_workshop(workshop_id)
       parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
 
       ws_data = Pd::Workshop.find(workshop_id)
       result_data = {
         course_name: ws_data.course,
+        facilitators: facilitators,
         questions: parsed_forms,
         this_workshop: summarized_answers
       }
@@ -54,34 +32,97 @@ module Pd::Foorm
         parsed_forms,
         questions_to_summarize
       )
-      rollup = Pd::Foorm::RollupCreator.calculate_averaged_rollup(summarized_answers, rollup_question_details)
-
-      result_data[:workshop_rollups] = {
-        questions: rollup_question_details
-      }
-
-      result_data[:workshop_rollups][:single_workshop] = {
-        averages: rollup[:averages],
-        response_count: rollup[:response_count],
-        workshop_id: ws_data.id
-      }
-
+      rollup = Pd::Foorm::RollupCreator.calculate_averaged_rollup(
+        summarized_answers,
+        rollup_question_details,
+        facilitators,
+        split_by_facilitator: true
+      )
       # get overall rollup
-      overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details)
-      result_data[:workshop_rollups][:overall] = {
-        averages: overall_rollup[:averages],
-        response_count: overall_rollup[:response_count]
-      }
+      overall_rollup = get_rollup_for_course(ws_data.course, rollup_question_details, facilitators)
+      overall_rollup_per_facilitator = facilitators ?
+                                         get_facilitator_rollup_for_course(
+                                           facilitators,
+                                           ws_data.course,
+                                           rollup_question_details
+                                         ) :
+                                         {}
+
+      result_data[:workshop_rollups] = {}
+
+      rollup_question_details.each do |key, questions|
+        result_data[:workshop_rollups][key] = {
+          questions: questions,
+          single_workshop: rollup[key],
+          overall_facilitator: facilitators ? overall_rollup_per_facilitator[key] : {},
+          overall: overall_rollup[key]
+        }
+      end
 
       result_data
     end
 
     # Get rollup for all survey results for the given course
-    def self.get_rollup_for_course(course_name, rollup_question_details)
+    def self.get_rollup_for_course(course_name, rollup_question_details, facilitators)
       workshop_ids = Pd::Workshop.where(course: course_name).where.not(started_at: nil, ended_at: nil).pluck(:id)
-      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids)
+      return get_rollup_for_workshop_ids(
+        workshop_ids,
+        rollup_question_details,
+        false,
+        facilitators
+      )
+    end
+
+    # Given set of facilitators and a course name, return average responses for given
+    # questions across all workshops each facilitator has run.
+    # @param object {facilitator_id: facilitator_name,...} specifying facilitators to include
+    # @param String course_name course name to rollup, ex 'CS Principles'
+    # @param object rollup_question_details questions to include in rollup
+    # @return
+    # {
+    #   general: { see RollupCreator.calculate_averaged_rollup },
+    #   facilitator: { see RollupCreator.calculate_averaged_rollup }
+    # }
+    def self.get_facilitator_rollup_for_course(facilitators, course_name, rollup_question_details)
+      rollups = {general: {}, facilitator: {}}
+      facilitators.each_key do |facilitator_id|
+        workshop_ids = Pd::Workshop.
+          where(course: course_name).
+          in_state(STATE_ENDED).
+          facilitated_by(User.find(facilitator_id)).
+          pluck(:id)
+        facilitator_rollup = get_rollup_for_workshop_ids(
+          workshop_ids,
+          rollup_question_details,
+          true,
+          facilitators,
+          facilitator_id
+        )
+        rollups[:general][facilitator_id] = facilitator_rollup[:general]
+        if facilitator_rollup[:facilitator]
+          rollups[:facilitator][facilitator_id] = facilitator_rollup[:facilitator][facilitator_id]
+        end
+      end
+      rollups
+    end
+
+    # given a set of workshop_ids and questions to roll up, get rollup for that workshop.
+    # If split_by_facilitator is true, split questions by facilitator id.
+    def self.get_rollup_for_workshop_ids(
+      workshop_ids,
+      rollup_question_details,
+      split_by_facilitator,
+      facilitators,
+      facilitator_id=nil
+    )
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids, facilitator_id)
       _, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
-      return Pd::Foorm::RollupCreator.calculate_averaged_rollup(summarized_answers, rollup_question_details)
+      return Pd::Foorm::RollupCreator.calculate_averaged_rollup(
+        summarized_answers,
+        rollup_question_details,
+        facilitators,
+        split_by_facilitator
+      )
     end
 
     def self.parse_and_summarize_forms(ws_submissions, form_submissions, forms)
@@ -94,17 +135,15 @@ module Pd::Foorm
       [parsed_forms, summarized_answers]
     end
 
-    # TODO: once we store facilitator data
-    # def self.get_rollup_for_facilitator(workshop_id, facilitator_id)
-    # end
-
     # Gets the raw data needed for summarizing workshop survey results.
     # @param workshop id, the workshop to get data from
-    # @return array of [WorkshopSurveyFoormSubmissions, FoormSubmissions and FoormForms]
+    # @return array of [WorkshopSurveyFoormSubmissions, FoormSubmissions, FoormForms]
     #   for the given workshop id.
-    def self.get_raw_data_for_workshop(workshop_id)
+    def self.get_raw_data_for_workshop(workshop_id, facilitator_id=nil)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.where(pd_workshop_id: workshop_id)
-
+      if facilitator_id
+        ws_submissions = ws_submissions.where(facilitator_id: facilitator_id).or(ws_submissions.where(facilitator_id: nil))
+      end
       submission_ids = ws_submissions.pluck(:foorm_submission_id)
       foorm_submissions = submission_ids.empty? ? [] : ::Foorm::Submission.find(submission_ids)
       form_names_versions = foorm_submissions.pluck(:form_name, :form_version).uniq
@@ -115,6 +154,20 @@ module Pd::Foorm
       end
 
       [ws_submissions, foorm_submissions, forms]
+    end
+
+    # @param integer workshop_id: id for a workshop
+    # @return {facilitator_id: facilitator_name,...} object with data
+    # for each facilitator for the workshop specified
+    def self.get_formatted_facilitators_for_workshop(workshop_id)
+      workshop = Pd::Workshop.find(workshop_id)
+      facilitators = workshop.facilitators
+      facilitators_formatted = {}
+      return nil unless facilitators
+      facilitators.each do |facilitator|
+        facilitators_formatted[facilitator.id] = facilitator.name
+      end
+      facilitators_formatted
     end
   end
 end
