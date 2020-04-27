@@ -662,7 +662,7 @@ export default class EnrollForm extends React.Component {
               <FieldGroup
                 id="years_teaching"
                 label="Years Teaching (overall)"
-                type="text"
+                type="number"
                 required={true}
                 onChange={this.handleChange}
                 validationState={
@@ -675,7 +675,7 @@ export default class EnrollForm extends React.Component {
               <FieldGroup
                 id="years_teaching_cs"
                 label="Years Teaching Computer Science"
-                type="text"
+                type="number"
                 required={true}
                 onChange={this.handleChange}
                 validationState={
