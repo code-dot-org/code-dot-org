@@ -45,5 +45,14 @@ export const tableLayoutStyles = {
 // Settings for WrappedSortable
 export const sortableOptions = {
   // Dim inactive sorting icons in the column headers
-  default: {color: 'rgba(0, 0, 0, 0.2 )'}
+  default: {color: 'rgba(0, 0, 0, 0.2 )'},
+
+  // Disable wrapping on the sorting icon to ensure that the header will never
+  // wrap such that the sorting icon is on a row all on its own.
+  //
+  // Note that we could apply this style to the whole header cell, but that
+  // would prevent any wrapping from happening at all; because we want to allow
+  // for the possibility of long header names that _should_ wrap, this provides
+  // a nice compromise.
+  container: {whiteSpace: 'nowrap'}
 };
