@@ -127,8 +127,8 @@ export default class CourseEditor extends Component {
             style={styles.checkbox}
           />
           <p>
-            If checked, this unit will be eligible to be the recommended version
-            of the unit. The most recent eligible version will be the
+            If checked, this course will be eligible to be the recommended
+            version of the course. The most recent eligible version will be the
             recommended version.
           </p>
         </label>
