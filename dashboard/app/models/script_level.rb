@@ -290,13 +290,13 @@ class ScriptLevel < ActiveRecord::Base
       position: position,
       kind: kind,
       icon: level.icon,
-      is_concept_level: level.concept_level?,
+      is_concept_level: level.concept_level? || nil,
       title: level_display_text,
       url: build_script_level_url(self),
-      freePlay: level.try(:free_play) == "true",
-      bonus: bonus,
-      display_as_unplugged: display_as_unplugged
-    }
+      freePlay: level.try(:free_play) == "true" || nil,
+      bonus: bonus || nil,
+      display_as_unplugged: display_as_unplugged || nil
+    }.compact
 
     summary[:progression] = progression if progression
 

@@ -175,9 +175,9 @@ export const processedLevel = level => {
     progression: level.progression,
     kind: level.kind,
     icon: level.icon,
-    isUnplugged: level.display_as_unplugged,
+    isUnplugged: !!level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
-    isConceptLevel: level.is_concept_level,
-    bonus: level.bonus
+    isConceptLevel: !!level.is_concept_level,
+    bonus: !!level.bonus
   };
 };
