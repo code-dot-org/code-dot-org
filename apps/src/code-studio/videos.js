@@ -467,7 +467,15 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       });
 
       function resizeFallbackPlayer() {
-        videoPlayer.dimensions($(MODAL_CLASS).innerWidth(), getVideoHeight());
+        const width = $(MODAL_CLASS).innerWidth();
+        const height = getVideoHeight();
+
+        // Embedded videos don't need to be resized and don't have a container
+        // modal. Only resize if we are able to find the width and height of
+        // the container.
+        if (width && height) {
+          videoPlayer.dimensions(width, height);
+        }
       }
 
       // A scroll listener is required for iOS due to its viewport management -
