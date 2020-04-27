@@ -1,0 +1,99 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "slider_speed": "1",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "ycSLscXm7m+Cr1w5GAATKTAvGoH3gl4Z5EVTZdkrXoyB1PXN5RpNl+lChTq7\nXnQU\n",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625); display: block;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgba(253, 224, 12, 0.431373);\"><button id=\"greenBtn\" style=\"padding: 0px; margin: 0px; height: 140px; width: 95px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 60px; top: 100px;\">Green Button Behind</button><button id=\"purpleBtn\" style=\"padding: 0px; margin: 0px; height: 95px; width: 145px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgba(67, 26, 188, 0.741176); position: absolute; left: 115px; top: 200px;\">Purple Button in Front</button></div></div>",
+    "start_blocks": "onEvent(\"greenBtn\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"purpleBtn\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"screen1\", \"click\", function() {\r\n  \r\n});",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "palette_category_at_start": "variables",
+    "log_conditions": [
+      {
+        "entries": [
+          "console.log"
+        ],
+        "matchType": "exact",
+        "minTimes": 7,
+        "message": "The task asked you to add console.log statements to each event handler, and then click on at least 4 different locations to test it out.  We do not see enough messages in the debugger console for this to be true."
+      }
+    ],
+    "show_debug_watch": "true",
+    "parent_level_id": 17110,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "short_instructions": "Recreate the \"Chaser Game\" from the last lesson using Design Mode. (Click to see full instructions.)",
+    "long_instructions": "# Use console.log to Test Overlapping Objects and the Screen\r\n\r\n**Do This:**\r\n<img src=\"https://images.code.org/4100fcc7062f97ce8440003b3a17cd25-image-1477363054051.png\" style=\"float: right\">\r\n\r\n* **Add `console.log` statements to each of the 3 event handlers.**  Be descriptive with what you put inside the console.log statements. For example, \"clicked green\", \"clicked purple\", and \"clicked screen\" are all descriptive statements.\r\n\r\n* **Run** the program and try clicking where the diagram (at right) shows.\r\n  * Click on each button\r\n  * Click where the buttons overlap\r\n  * Click on the screen (i.e. the background)\r\n\r\n* **Investigate until you can answer these questions:**\r\n  1. When you click on a location where two objects are overlapping, which event(s) fire(s)?\r\n  2. When you click on an non-overlapping part of some object what gets triggered?\r\n  3. When does a \"click\" on the \"screen\" get triggered?\r\n\r\n<div markdown=\"1\">\r\n<details>\r\n\r\n<summary>Check your answers: [click here]</summary>\r\n<ol>\r\n  <li>\r\n    When you click on a location where two objects are overlapping, which event(s) fire(s)?\r\n    <ul>\r\n    <li>\r\n    <em>The event-handler for object that is on top gets triggered.  The object that is underneath is blocked from being clicked in the overlapping portion</em>\r\n    </li>\r\n    </ul>\r\n  </li>\r\n    <li>\r\n    When you click on an non-overlapping part of some object what gets triggered?\r\n    <ul>\r\n    <li>\r\n    <em>The event-handler for the object gets triggered as you might expect</em>\r\n    </li>\r\n    </ul>\r\n  </li>\r\n  <li>\r\n    When does a \"click\" on the \"screen\" get triggered?\r\n    <ul>\r\n    <li>\r\n    <em>Always. Events that occur on the screen cannot be blocked by other objects.  If you set up an event listener for the screen it will capture EVERY event of that type, no matter what other UI elements are on the screen.  This behavior of the screen is done on purpose and is useful for certain kinds of things.</em>\r\n    </li>\r\n    </ul>\r\n  </li>\r\n</ol>\r\n</details>\r\n</div>",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-10 23:03:50 +0000\",\"changed\":[\"instructions\",\"markdown_instructions\",\"encrypted_examples\",\"code_functions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2018-12-10 23:06:00 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"log_conditions\",\"contained_level_names\",\"preload_asset_list\",\"long_instructions\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-15 03:44:59 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"log_conditions\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-03 17:55:20 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:39 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"log_conditions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 16:44:56 +0000\",\"changed\":[\"encrypted_examples\",\"code_functions\",\"log_conditions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

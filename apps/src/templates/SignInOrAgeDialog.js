@@ -131,6 +131,7 @@ class SignInOrAgeDialog extends Component {
             ref={element => (this.ageDropdown = element)}
           />
           <Button
+            __useDeprecatedTag
             id="uitest-submit-age"
             onClick={this.onClickAgeOk}
             text={i18n.ok()}
@@ -150,6 +151,7 @@ class SignInOrAgeDialog extends Component {
             </div>
             <div style={styles.tooYoungButton}>
               <Button
+                __useDeprecatedTag
                 href={pegasus('/hourofcode/overview')}
                 text="See all tutorials"
                 color={Button.ButtonColor.orange}
@@ -169,6 +171,7 @@ class SignInOrAgeDialog extends Component {
               {i18n.signinForProgress()}
               <div style={styles.button}>
                 <Button
+                  __useDeprecatedTag
                   href={`/users/sign_in?user_return_to=${location.pathname}`}
                   text={i18n.signinCodeOrg()}
                   color={Button.ButtonColor.gray}

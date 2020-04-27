@@ -1,3 +1,4 @@
+tts true
 hidden false
 login_required true
 hideable_stages true
@@ -12,6 +13,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
+lesson_group 'csd4_1', display_name: 'Chapter 1: User Centered Design'
 stage 'Analysis of Design', flex_category: 'csd4_1'
 level 'CSD U4L01 SFLP', named: true
 
@@ -34,6 +36,7 @@ stage 'Project - Paper Prototype', flex_category: 'csd4_1'
 level 'CSD U4L07 SFLP', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch1', progression: 'Reflection', assessment: true
 
+lesson_group 'csd4_2', display_name: 'Chapter 2: App Prototyping'
 stage 'Designing Apps for Good', flex_category: 'csd4_2'
 level 'CSD U4L08 SFLP', named: true
 
@@ -93,5 +96,6 @@ stage 'Project - App Presentation', flex_category: 'csd4_2'
 level 'CSD U4L17 SFLP', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2', progression: 'Reflection', assessment: true
 
+lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 stage 'CSD Post-Course Survey', lockable: true, flex_category: 'csd_survey'
 level 'csd-post-survey-2018-markdown-with-link-to-survey', assessment: true

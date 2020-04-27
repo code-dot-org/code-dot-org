@@ -28,9 +28,9 @@ Founder, Code.org<br />
 
 <hr/>
 <small>
-You're receiving this email because you pledged to expand computer science offerings at your school when you provided information to Code.org about your school on HourOfCode.com.  Code.org is a 501c3 non-profit. Our address is [1501 4th Avenue, Suite 900, Seattle, WA 98101](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= unsubscribe_link %>).
+You're receiving this email because you pledged to expand computer science offerings at your school when you provided information to Code.org about your school on HourOfCode.com.  Code.org is a 501c3 non-profit. Our address is [1501 4th Avenue, Suite 900, Seattle, WA 98101](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)
 
  

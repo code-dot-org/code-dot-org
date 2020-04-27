@@ -74,6 +74,7 @@ class Level < ActiveRecord::Base
     editor_experiment
     teacher_markdown
     bubble_choice_description
+    thumbnail_url
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -154,6 +155,12 @@ class Level < ActiveRecord::Base
     !unplugged?
   end
 
+  # This does not include DSL levels which also use teacher markdown
+  # but access it in a different way
+  def include_teacher_only_markdown_editor?
+    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
+  end
+
   def enable_scrolling?
     is_a?(Blockly)
   end
@@ -232,7 +239,8 @@ class Level < ActiveRecord::Base
       end
     rescue Encryption::KeyMissingError
       # developers and adhoc environments must be able to seed levels without properties_encryption_key
-      raise unless rack_env?(:development) || rack_env?(:adhoc)
+      non_ci_test = rack_env == :test && !CDO.ci && !CDO.chef_managed
+      raise unless rack_env?(:development) || rack_env?(:adhoc) || non_ci_test
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash

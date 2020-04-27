@@ -10,8 +10,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   setup_all do
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
-    @stage = create(:stage)
-    @stage2 = create(:stage)
+    @stage = create(:lesson)
+    @stage2 = create(:lesson)
   end
 
   test "setup should work" do
@@ -40,22 +40,22 @@ class ScriptLevelTest < ActiveSupport::TestCase
     # default script
     sl = Script.twenty_hour_script.script_levels[1]
     assert_equal 1, sl.position
-    assert_equal 20, sl.stage_total
+    assert_equal 20, sl.lesson_total
 
     # new script
     sl = create(:script_level)
-    sl2 = create(:script_level, stage: sl.stage, script: sl.script)
+    sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     assert_equal 1, sl.position
-    assert_equal 2, sl.stage_total
+    assert_equal 2, sl.lesson_total
 
     assert_equal 2, sl2.position
-    assert_equal 2, sl2.stage_total
+    assert_equal 2, sl2.lesson_total
   end
 
   test 'summarize with default route' do
     sl = create(:script_level)
-    sl2 = create(:script_level, stage: sl.stage, script: sl.script)
+    sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     summary = sl.summarize
     assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
@@ -190,8 +190,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'teacher panel summarize for stage extra' do
     student = create :student
     script = create :script
-    stage1 = create :stage
-    script_level = create :script_level, stage: stage1, script: script, bonus: true
+    stage1 = create :lesson
+    script_level = create :script_level, lesson: stage1, script: script, bonus: true
 
     summary = ScriptLevel.summarize_as_bonus_for_teacher_panel(script, script_level.id, student)
     assert_equal true, summary[:bonus]
@@ -216,30 +216,30 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level when next level is unplugged skips the level' do
     script = create(:script, name: 's1')
-    stage = create(:stage, script: script, absolute_position: 1)
-    script_level_first = create(:script_level, script: script, stage: stage, position: 1)
-    create(:script_level, levels: [create(:unplugged)], script: script, stage: stage, position: 2)
-    script_level_after = create(:script_level, script: script, stage: stage, position: 3)
+    stage = create(:lesson, script: script, absolute_position: 1)
+    script_level_first = create(:script_level, script: script, lesson: stage, position: 1)
+    create(:script_level, levels: [create(:unplugged)], script: script, lesson: stage, position: 2)
+    script_level_after = create(:script_level, script: script, lesson: stage, position: 3)
 
     assert_equal script_level_after, script_level_first.next_progression_level
   end
 
   test 'calling next_level when next level is unplugged skips the entire unplugged stage' do
     script = create(:script, name: 's1')
-    first_stage = create(:stage, script: script, absolute_position: 1)
-    script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
+    first_stage = create(:lesson, script: script, absolute_position: 1)
+    script_level_first = create(:script_level, script: script, lesson: first_stage, position: 1, chapter: 1)
 
-    unplugged_stage = create(:stage, script: script, absolute_position: 2)
-    create(:script_level, levels: [create(:unplugged)], script: script, stage: unplugged_stage, position: 1, chapter: 2)
-    create(:script_level, levels: [create(:match)], script: script, stage: unplugged_stage, position: 2, chapter: 3)
-    create(:script_level, levels: [create(:match)], script: script, stage: unplugged_stage, position: 3, chapter: 4)
+    unplugged_stage = create(:lesson, script: script, absolute_position: 2)
+    create(:script_level, levels: [create(:unplugged)], script: script, lesson: unplugged_stage, position: 1, chapter: 2)
+    create(:script_level, levels: [create(:match)], script: script, lesson: unplugged_stage, position: 2, chapter: 3)
+    create(:script_level, levels: [create(:match)], script: script, lesson: unplugged_stage, position: 3, chapter: 4)
 
-    plugged_stage = create(:stage, script: script, absolute_position: 3)
-    script_level_after = create(:script_level, script: script, stage: plugged_stage, position: 1, chapter: 5)
+    plugged_stage = create(:lesson, script: script, absolute_position: 3)
+    script_level_after = create(:script_level, script: script, lesson: plugged_stage, position: 1, chapter: 5)
 
     # make sure everything is in the order we want it to be
     script.reload
-    assert_equal [first_stage, unplugged_stage, plugged_stage], script.stages
+    assert_equal [first_stage, unplugged_stage, plugged_stage], script.lessons
     assert_equal script_level_first, script.script_levels.first
     assert_equal script_level_after, script.script_levels.last
 
@@ -248,19 +248,19 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level on an unplugged level works' do
     script = create(:script, name: 's1')
-    stage = create(:stage, script: script, absolute_position: 1)
-    script_level_unplugged = create(:script_level, levels: [create(:unplugged)], script: script, stage: stage, position: 1, chapter: 1)
-    script_level_after = create(:script_level, script: script, stage: stage, position: 2, chapter: 2)
+    stage = create(:lesson, script: script, absolute_position: 1)
+    script_level_unplugged = create(:script_level, levels: [create(:unplugged)], script: script, lesson: stage, position: 1, chapter: 1)
+    script_level_after = create(:script_level, script: script, lesson: stage, position: 2, chapter: 2)
 
     assert_equal script_level_after, script_level_unplugged.next_level
   end
 
   test 'calling next_progression_level when next level is spelling_bee skips the level in non-english' do
     script = create(:script, name: 's1')
-    stage = create(:stage, script: script, absolute_position: 1)
-    first = create(:script_level, script: script, stage: stage, position: 1)
-    second = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: stage, position: 2)
-    third = create(:script_level, script: script, stage: stage, position: 3)
+    stage = create(:lesson, script: script, absolute_position: 1)
+    first = create(:script_level, script: script, lesson: stage, position: 1)
+    second = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, lesson: stage, position: 2)
+    third = create(:script_level, script: script, lesson: stage, position: 3)
 
     I18n.locale = 'non-default-locale'
     assert_equal third, first.next_progression_level
@@ -271,9 +271,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_level on an spelling_bee level works in any locale' do
     script = create(:script, name: 's1')
-    stage = create(:stage, script: script, absolute_position: 1)
-    first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: stage, position: 1, chapter: 1)
-    second = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: stage, position: 2, chapter: 2)
+    stage = create(:lesson, script: script, absolute_position: 1)
+    first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, lesson: stage, position: 1, chapter: 1)
+    second = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, lesson: stage, position: 2, chapter: 2)
 
     I18n.locale = 'non-default-locale'
     assert_equal second, first.next_level
@@ -284,20 +284,20 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_progression_level when next level is spelling_bee skips the entire spelling_bee stage in non-english' do
     script = create(:script, name: 's1')
-    first_stage = create(:stage, script: script, absolute_position: 1)
-    script_level_first = create(:script_level, script: script, stage: first_stage, position: 1, chapter: 1)
+    first_stage = create(:lesson, script: script, absolute_position: 1)
+    script_level_first = create(:script_level, script: script, lesson: first_stage, position: 1, chapter: 1)
 
-    spelling_bee_stage = create(:stage, script: script, absolute_position: 2)
-    spelling_bee_first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, stage: spelling_bee_stage, position: 1, chapter: 2)
-    create(:script_level, levels: [create(:match)], script: script, stage: spelling_bee_stage, position: 2, chapter: 3)
-    create(:script_level, levels: [create(:match)], script: script, stage: spelling_bee_stage, position: 3, chapter: 4)
+    spelling_bee_stage = create(:lesson, script: script, absolute_position: 2)
+    spelling_bee_first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, lesson: spelling_bee_stage, position: 1, chapter: 2)
+    create(:script_level, levels: [create(:match)], script: script, lesson: spelling_bee_stage, position: 2, chapter: 3)
+    create(:script_level, levels: [create(:match)], script: script, lesson: spelling_bee_stage, position: 3, chapter: 4)
 
-    non_spelling_bee_stage = create(:stage, script: script, absolute_position: 3)
-    non_spelling_bee_first = create(:script_level, script: script, stage: non_spelling_bee_stage, position: 1, chapter: 5)
+    non_spelling_bee_stage = create(:lesson, script: script, absolute_position: 3)
+    non_spelling_bee_first = create(:script_level, script: script, lesson: non_spelling_bee_stage, position: 1, chapter: 5)
 
     # make sure everything is in the order we want it to be
     script.reload
-    assert_equal [first_stage, spelling_bee_stage, non_spelling_bee_stage], script.stages
+    assert_equal [first_stage, spelling_bee_stage, non_spelling_bee_stage], script.lessons
     assert_equal script_level_first, script.script_levels.first
     assert_equal non_spelling_bee_first, script.script_levels.last
 
@@ -310,14 +310,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_progression_level when next level is hidden skips to next unhidden level' do
     script = create(:script, name: 's1')
-    stage1 = create(:stage, script: script, absolute_position: 1)
-    stage2 = create(:stage, script: script, absolute_position: 2)
-    stage3 = create(:stage, script: script, absolute_position: 3)
+    stage1 = create(:lesson, script: script, absolute_position: 1)
+    stage2 = create(:lesson, script: script, absolute_position: 2)
+    stage3 = create(:lesson, script: script, absolute_position: 3)
 
-    script_level_current = create(:script_level, script: script, stage: stage1, position: 1, chapter: 1)
-    script_level_hidden1 = create(:script_level, script: script, stage: stage2, position: 1, chapter: 2)
-    script_level_hidden2 = create(:script_level, script: script, stage: stage2, position: 2, chapter: 3)
-    script_level_unhidden = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
+    script_level_current = create(:script_level, script: script, lesson: stage1, position: 1, chapter: 1)
+    script_level_hidden1 = create(:script_level, script: script, lesson: stage2, position: 1, chapter: 2)
+    script_level_hidden2 = create(:script_level, script: script, lesson: stage2, position: 2, chapter: 3)
+    script_level_unhidden = create(:script_level, script: script, lesson: stage3, position: 1, chapter: 4)
 
     student = create :student
     student.stubs(:script_level_hidden?).with(script_level_current).returns(false)
@@ -330,14 +330,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'calling next_progression_level when next level is locked skips to next unlocked level' do
     script = create(:script, name: 's1')
-    stage1 = create(:stage, script: script, absolute_position: 1)
-    stage2 = create(:stage, script: script, absolute_position: 2, lockable: true)
-    stage3 = create(:stage, script: script, absolute_position: 3)
+    stage1 = create(:lesson, script: script, absolute_position: 1)
+    stage2 = create(:lesson, script: script, absolute_position: 2, lockable: true)
+    stage3 = create(:lesson, script: script, absolute_position: 3)
 
-    script_level_current = create(:script_level, script: script, stage: stage1, position: 1, chapter: 1)
-    create(:script_level, script: script, stage: stage2, position: 1, chapter: 2)
-    create(:script_level, script: script, stage: stage2, position: 2, chapter: 3)
-    script_level_unlocked = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
+    script_level_current = create(:script_level, script: script, lesson: stage1, position: 1, chapter: 1)
+    create(:script_level, script: script, lesson: stage2, position: 1, chapter: 2)
+    create(:script_level, script: script, lesson: stage2, position: 2, chapter: 3)
+    script_level_unlocked = create(:script_level, script: script, lesson: stage3, position: 1, chapter: 4)
 
     student = create :student
 
@@ -354,8 +354,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ]
 
     script_levels = levels.map.with_index(1) do |level, pos|
-      stage = create(:stage, script: script, absolute_position: pos)
-      create(:script_level, script: script, stage: stage, position: pos, chapter: pos, levels: [level])
+      stage = create(:lesson, script: script, absolute_position: pos)
+      create(:script_level, script: script, lesson: stage, position: pos, chapter: pos, levels: [level])
     end
 
     student = create :student
@@ -373,8 +373,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ]
 
     script_levels = levels.map.with_index(1) do |level, pos|
-      stage = create(:stage, script: script, absolute_position: pos)
-      create(:script_level, script: script, stage: stage, position: pos, chapter: pos, levels: [level])
+      stage = create(:lesson, script: script, absolute_position: pos)
+      create(:script_level, script: script, lesson: stage, position: pos, chapter: pos, levels: [level])
     end
 
     student = create :student
@@ -392,8 +392,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ]
 
     script_levels = levels.map.with_index(1) do |level, pos|
-      stage = create(:stage, script: script, absolute_position: pos)
-      create(:script_level, script: script, stage: stage, position: pos, chapter: pos, levels: [level])
+      stage = create(:lesson, script: script, absolute_position: pos)
+      create(:script_level, script: script, lesson: stage, position: pos, chapter: pos, levels: [level])
     end
 
     student = create :student
@@ -419,12 +419,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'end of stage' do
     script = Script.find_by_name('course1')
 
-    assert script.stages[0].script_levels.last.end_of_stage?
-    assert script.stages[1].script_levels.last.end_of_stage?
-    assert script.stages[2].script_levels.last.end_of_stage?
-    assert script.stages[3].script_levels.last.end_of_stage?
-    refute script.stages[3].script_levels.first.end_of_stage?
-    refute script.stages[3].script_levels[1].end_of_stage?
+    assert script.lessons[0].script_levels.last.end_of_stage?
+    assert script.lessons[1].script_levels.last.end_of_stage?
+    assert script.lessons[2].script_levels.last.end_of_stage?
+    assert script.lessons[3].script_levels.last.end_of_stage?
+    refute script.lessons[3].script_levels.first.end_of_stage?
+    refute script.lessons[3].script_levels[1].end_of_stage?
   end
 
   test 'cached_find' do
@@ -459,9 +459,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'redirects back to correct stage extras from bonus level' do
     script = create :script
-    stage1 = create :stage
-    stage2 = create :stage
-    script_level = create :script_level, stage: stage1, script: script, bonus: true
+    stage1 = create :lesson
+    stage2 = create :lesson
+    script_level = create :script_level, lesson: stage1, script: script, bonus: true
 
     assert_equal script_stage_extras_path(script.name, stage2.absolute_position),
       script_level.next_level_or_redirect_path_for_user(@user, stage2)
@@ -573,24 +573,24 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'bonus levels do not appear in the normal progression' do
     script_level = create :script_level, bonus: true
-    assert_empty script_level.stage.summarize[:levels]
+    assert_empty script_level.lesson.summarize[:levels]
   end
 
   test 'hidden_for_section returns true if stage is hidden' do
     script = create :script
-    stage = create :stage, script: script
-    script_level = create :script_level, script: script, stage: stage
+    stage = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: stage
     section = create :section
 
-    create :section_hidden_stage, stage: stage, section: section
+    create :section_hidden_stage, lesson: stage, section: section
 
     assert_equal true, script_level.hidden_for_section?(section.id)
   end
 
   test 'hidden_for_section returns true if script is hidden' do
     script = create :script
-    stage = create :stage, script: script
-    script_level = create :script_level, script: script, stage: stage
+    stage = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: stage
     section = create :section
 
     create :section_hidden_script, script: script, section: section
@@ -600,11 +600,61 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'hidden_for_section returns false if no hidden stage/script' do
     script = create :script
-    stage = create :stage, script: script
-    script_level = create :script_level, script: script, stage: stage
+    stage = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: stage
     section = create :section
 
     assert_equal false, script_level.hidden_for_section?(section.id)
+  end
+
+  class ValidProgressionLevelTests < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @levelbuilder = create :levelbuilder
+
+      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+      level = create :maze, name: 'visible after level', level_num: 'custom'
+      script_with_visible_after_stages = create :script
+
+      stage_future_visible_after = create :lesson, name: 'stage future', script: script_with_visible_after_stages, visible_after: '2020-04-01 08:00:00 -0700'
+      @script_level_future_visible_after = create :script_level, levels: [level], lesson: stage_future_visible_after, script: script_with_visible_after_stages
+
+      stage_past_visible_after = create :lesson, name: 'stage past', script: script_with_visible_after_stages, visible_after: '2020-03-01 08:00:00 -0700'
+      @script_level_past_visible_after = create :script_level, levels: [level], lesson: stage_past_visible_after, script: script_with_visible_after_stages
+
+      stage_no_visible_after = create :lesson, name: 'stage no', script: script_with_visible_after_stages
+      @script_level_no_visible_after = create :script_level, levels: [level], lesson: stage_no_visible_after, script: script_with_visible_after_stages
+    end
+
+    teardown do
+      Timecop.return
+    end
+
+    test 'valid_progression_level returns true for levelbuilder' do
+      assert @script_level_future_visible_after.valid_progression_level?(@levelbuilder)
+      assert @script_level_past_visible_after.valid_progression_level?(@levelbuilder)
+      assert @script_level_no_visible_after.valid_progression_level?(@levelbuilder)
+    end
+
+    test 'valid_progression_level returns true for script level in stage with past visible after date' do
+      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
+      assert @script_level_past_visible_after.valid_progression_level?(@student)
+      assert @script_level_past_visible_after.valid_progression_level?(nil)
+    end
+
+    test 'valid_progression_level returns true for script level in stage with no visible after date' do
+      assert @script_level_past_visible_after.valid_progression_level?(@teacher)
+      assert @script_level_past_visible_after.valid_progression_level?(@student)
+      assert @script_level_past_visible_after.valid_progression_level?(nil)
+    end
+
+    test 'valid_progression_level returns false for script level in stage with future visible after date' do
+      refute @script_level_future_visible_after.valid_progression_level?(@teacher)
+      refute @script_level_future_visible_after.valid_progression_level?(@student)
+      refute @script_level_future_visible_after.valid_progression_level?(nil)
+    end
   end
 
   private
@@ -613,16 +663,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script
     @plc_script.update(professional_learning_course: 'My course name')
-    @stage = create(:stage)
+    @stage = create(:lesson)
     @level1 = create(:maze)
     evaluation_multi = create(:evaluation_multi, name: 'Evaluation Multi')
     @evaluation_level = create(:level_group, name: 'Evaluation Quiz')
     @evaluation_level.properties['title'] = @evaluation_level.name
     @evaluation_level.properties['pages'] = [{'levels' => [evaluation_multi.name]}]
     @level2 = create(:maze)
-    @script_level1 = create(:script_level, script: @plc_script, stage: @stage, position: 1, levels: [@level1])
-    @evaluation_script_level = create(:script_level, script: @plc_script, stage: @stage, position: 2, levels: [@evaluation_level])
-    @script_level2 = create(:script_level, script: @plc_script, stage: @stage, position: 3, levels: [@level2])
+    @script_level1 = create(:script_level, script: @plc_script, lesson: @stage, position: 1, levels: [@level1])
+    @evaluation_script_level = create(:script_level, script: @plc_script, lesson: @stage, position: 2, levels: [@evaluation_level])
+    @script_level2 = create(:script_level, script: @plc_script, lesson: @stage, position: 3, levels: [@level2])
     @user = create :teacher
     user_course_enrollment = create(:plc_user_course_enrollment, plc_course: @plc_course_unit.plc_course, user: @user)
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)

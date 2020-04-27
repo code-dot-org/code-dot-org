@@ -5,6 +5,7 @@ import _ from 'lodash';
 import AddKeyRow from './AddKeyRow';
 import {DataView} from '../constants';
 import EditKeyRow from './EditKeyRow';
+import DataEntryError from './DataEntryError';
 import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
@@ -30,12 +31,7 @@ class KVPairs extends React.Component {
   static propTypes = {
     // from redux state
     view: PropTypes.oneOf(Object.keys(DataView)),
-    // "if all of the keys are integers, and more than half of the keys between 0 and
-    // the maximum key in the object have non-empty values, then Firebase will render
-    // it as an array."
-    // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
-    keyValueData: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired,
+    keyValueData: PropTypes.object.isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
@@ -43,8 +39,12 @@ class KVPairs extends React.Component {
   };
 
   state = {
-    showDebugView: false
+    showDebugView: false,
+    showError: false
   };
+
+  showError = () => this.setState({showError: true});
+  hideError = () => this.setState({showError: false});
 
   toggleDebugView = () => {
     const showDebugView = !this.state.showDebugView;
@@ -83,13 +83,19 @@ class KVPairs extends React.Component {
             <th style={dataStyles.headerCell}>Actions</th>
           </tr>
 
-          <AddKeyRow onShowWarning={this.props.onShowWarning} />
+          <AddKeyRow
+            onShowWarning={this.props.onShowWarning}
+            showError={this.showError}
+            hideError={this.hideError}
+          />
 
           {Object.keys(this.props.keyValueData).map(key => (
             <EditKeyRow
               key={key}
               keyName={key}
               value={JSON.parse(this.props.keyValueData[key])}
+              showError={this.showError}
+              hideError={this.hideError}
             />
           ))}
         </tbody>
@@ -97,7 +103,12 @@ class KVPairs extends React.Component {
     );
 
     if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-      return kvTable;
+      return (
+        <div>
+          <DataEntryError isVisible={this.state.showError} />
+          {kvTable}
+        </div>
+      );
     }
     return (
       <div id="dataProperties" style={containerStyle}>

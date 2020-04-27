@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Table} from 'react-bootstrap';
+import {Button, Table} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
@@ -13,6 +13,7 @@ import {
   SubjectNames,
   CourseKeyMap
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {CSD, CSP} from '../../application/ApplicationConstants';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
@@ -141,6 +142,16 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
+  getApplicationURL(application_id, course) {
+    if (!application_id || ![CSD, CSP].includes(course)) {
+      return null;
+    }
+
+    // Note: These paths are defined in ApplicationDashboard component
+    let path = course === CSD ? 'csd_teachers' : 'csp_teachers';
+    return `/pd/application_dashboard/${path}/${application_id}`;
+  }
+
   renderSelectCell(enrollment) {
     const checkBoxClass =
       this.props.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
@@ -179,6 +190,11 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         );
       }
 
+      let application_url = this.getApplicationURL(
+        enrollment.application_id,
+        this.props.workshopCourse
+      );
+
       return (
         <tr key={i}>
           {deleteCell}
@@ -187,7 +203,16 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           <td>{i + 1}</td>
           <td>{enrollment.first_name}</td>
           <td>{enrollment.last_name}</td>
-          <td>{enrollment.email}</td>
+          <td>
+            {enrollment.email}
+            {application_url && (
+              <p>
+                <Button bsSize="xsmall" href={application_url} target="_blank">
+                  View Application
+                </Button>
+              </p>
+            )}
+          </td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
           {this.props.workshopCourse === CSF && (
@@ -224,6 +249,26 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             this.props.workshopSubject === DEEP_DIVE && (
               <td>{enrollment.csf_has_physical_curriculum_guide}</td>
             )}
+          {this.props.workshopCourse === CSP &&
+            this.props.workshopSubject ===
+              SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+              <td>{enrollment.years_teaching}</td>
+            )}
+          {this.props.workshopCourse === CSP &&
+            this.props.workshopSubject ===
+              SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+              <td>{enrollment.years_teaching_cs}</td>
+            )}
+          {this.props.workshopCourse === CSP &&
+            this.props.workshopSubject ===
+              SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+              <td>{enrollment.taught_ap_before}</td>
+            )}
+          {this.props.workshopCourse === CSP &&
+            this.props.workshopSubject ===
+              SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+              <td>{enrollment.planning_to_teach_ap}</td>
+            )}
           {this.props.workshopSubject === LOCAL_SUMMER && (
             <td>
               {enrollment.attendances} / {this.props.numSessions}
@@ -238,6 +283,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           {this.props.scholarshipWorkshop &&
             !this.state.pendingScholarshipUpdates.includes(enrollment.id) &&
             this.scholarshipInfo(enrollment)}
+          <td>{enrollment.enrolled_date}</td>
         </tr>
       );
     });
@@ -299,12 +345,33 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
               this.props.workshopSubject === DEEP_DIVE && (
                 <th style={styles.th}>Has Physical Copy of Curriculum?</th>
               )}
+            {this.props.workshopCourse === CSP &&
+              this.props.workshopSubject ===
+                SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+                <th style={styles.th}>Years Teaching</th>
+              )}
+            {this.props.workshopCourse === CSP &&
+              this.props.workshopSubject ===
+                SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+                <th style={styles.th}>Years Teaching CS</th>
+              )}
+            {this.props.workshopCourse === CSP &&
+              this.props.workshopSubject ===
+                SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+                <th style={styles.th}>Taught AP Before?</th>
+              )}
+            {this.props.workshopCourse === CSP &&
+              this.props.workshopSubject ===
+                SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS && (
+                <th style={styles.th}>Planning to teach AP?</th>
+              )}
             {this.props.workshopSubject === LOCAL_SUMMER && (
               <th style={styles.th}>Total Attendance</th>
             )}
             {this.props.scholarshipWorkshop && (
               <th style={styles.th}>Scholarship Teacher?</th>
             )}
+            <th style={styles.th}>Enrolled date</th>
           </tr>
         </thead>
         <tbody>{enrollmentRows}</tbody>

@@ -151,11 +151,13 @@ export default class EligibilityConfirmDialog extends Component {
         {this.state.error && <div style={styles.error}>{this.state.error}</div>}
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.props.onCancel}
             color={Button.ButtonColor.gray}
           />
           <Button
+            __useDeprecatedTag
             text={i18n.getCode()}
             onClick={this.handleSubmit}
             disabled={!this.state.validInput || this.state.submitting}

@@ -48,11 +48,13 @@ class ControlProjectSharingDialog extends Component {
           </div>
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.props.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.projectSharingDialogButton()}
               onClick={this.handleShowSharingClick}
               color={Button.ButtonColor.orange}

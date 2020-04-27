@@ -63,15 +63,11 @@ export default class StandardsReportCurrentCourseInfo extends Component {
             </a>
           </h3>
           <p>{this.props.scriptDescription} </p>
-          <ul>
-            <li>
-              <SafeMarkdown
-                markdown={i18n.mapsToCSTAStandards({
-                  cstaLink: cstaStandardsURL
-                })}
-              />
-            </li>
-          </ul>
+          <SafeMarkdown
+            markdown={i18n.mapsToCSTAStandards({
+              cstaLink: cstaStandardsURL
+            })}
+          />
         </div>
         <div style={styles.classProgress}>
           <h3>{i18n.classProgress()}</h3>
@@ -80,7 +76,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
             <span>{this.props.numLessonsCompleted}</span>
           </div>
           <div style={styles.statsRow}>
-            <span>{i18n.lessonsAvailableWithColon()}</span>
+            <span>{i18n.lessonsAvailableWithColon() + '*'}</span>
             <span>{this.props.numLessonsInUnit}</span>
           </div>
           <div style={styles.statsRow}>

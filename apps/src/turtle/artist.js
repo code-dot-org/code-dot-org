@@ -1340,8 +1340,7 @@ Artist.prototype.displayFeedback_ = function() {
   // many projects. Instead store them as /c/ links, which are much more
   // space-efficient since they store only one copy of identical projects made
   // by different users.
-  const saveToProjectGallery =
-    !level.impressive && PUBLISHABLE_SKINS.includes(this.skin.id);
+  const saveToProjectGallery = PUBLISHABLE_SKINS.includes(this.skin.id);
   const isSignedIn =
     getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
@@ -1356,10 +1355,7 @@ Artist.prototype.displayFeedback_ = function() {
       !level.disableSharing && (level.freePlay || level.impressive),
     // impressive levels are already saved
     alreadySaved: level.impressive,
-    // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-    saveToLegacyGalleryUrl:
-      level.freePlay && this.response && this.response.save_to_gallery_url,
-    // save to the project gallery instead of the legacy gallery
+    // save to the project gallery
     saveToProjectGallery: saveToProjectGallery,
     disableSaveToGallery: !isSignedIn,
     appStrings: {
@@ -1539,8 +1535,7 @@ Artist.prototype.report = function(enableOnComplete = true) {
     level: this.level.id,
     result: this.levelComplete,
     testResult: this.testResults,
-    program: encodeURIComponent(this.getUserCode()),
-    save_to_gallery: !!this.level.impressive
+    program: encodeURIComponent(this.getUserCode())
   };
 
   if (enableOnComplete) {

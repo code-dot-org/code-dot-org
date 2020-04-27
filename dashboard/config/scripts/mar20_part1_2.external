@@ -1,0 +1,14 @@
+name 'Mar20 Part1_2'
+editor_experiment ''
+title 'Overview of the AP Changes and the Curriculum'
+description 'description here'
+
+markdown <<MARKDOWN
+#Get familiar with the Traversals EIPM
+
+### **In order to get access to the new data library you'll need for this activity, please do the following:**
++ Turn on the "data" tab by going to **U5L10 - Level 2** in the 2020-21 curriculum [<a href="https://studio.code.org/courses/csp-2020" target="_blank">  link </a> ]
++ On the top of the page in the directions, there will be a link that says "click here to reload the page" - click on that link.
+
+![](https://images.code.org/cdf95f370fdc0f01eae2ee6004dbf2c9-image-1584552460724.PNG)
+MARKDOWN

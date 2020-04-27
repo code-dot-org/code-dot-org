@@ -1,0 +1,16 @@
+name 'CSD Web Development Post-Project Test_pilot_2020_virtual'
+title 'Web Development Post-Project Test'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'CSD U2 Test HTML Usage_pilot_2020_virtual'
+level 'CSD U2 Test ContentStructureStyle_pilot_2020_virtual'
+level 'CSD U2 Test Classes_pilot_2020_virtual'
+level 'CSD U2 Test Debug_pilot_2020_virtual'
+level 'CSD U2 Test code stylesheet_pilot_2020_virtual'
+level 'CSD U2 Test code styles_pilot_2020_virtual'
+level 'CSD U2 Test Copyright_pilot_2020_virtual'
+level 'CSD U2 Test Bug FR_virtual'
+level 'CSD U2 Test Copyright FR_virtual'
+level 'CSD U2 Test DigCit FR_virtual'

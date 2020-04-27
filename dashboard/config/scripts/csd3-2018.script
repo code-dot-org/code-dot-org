@@ -1,3 +1,4 @@
+tts true
 hidden false
 login_required true
 hideable_stages true
@@ -15,6 +16,7 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
+lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_2018', named: true
 level 'CSD U3 Entertainment_2018', named: true
@@ -192,6 +194,7 @@ level 'CSD U3 Interactive Card Other Conditionals_2018', progression: 'Project W
 level 'CSD U3 Interactive Card Final_2018', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018', progression: 'Reflection', assessment: true
 
+lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
 stage 'Velocity', flex_category: 'csd3_2'
 level 'CSD U3L15 TFMD_2018', named: true
 level 'CSD: Sprite Velocity_2018', named: true
@@ -330,6 +333,7 @@ level 'CSD U3 game interactions_2018', progression: 'Project - Sprites and Inter
 level 'CSD U3 finishing touches_2018', named: true
 level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018', progression: 'Reflection', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries End of Semester Survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-2017-levelgroup_2018', assessment: true
 

@@ -79,6 +79,10 @@ class Pd::Enrollment < ActiveRecord::Base
     replace_existing
     csf_intro_intent
     csf_intro_other_factors
+    years_teaching
+    years_teaching_cs
+    taught_ap_before
+    planning_to_teach_ap
   )
 
   def set_default_scholarship_info
@@ -192,13 +196,29 @@ class Pd::Enrollment < ActiveRecord::Base
     user || User.find_by_email_or_hashed_email(email)
   end
 
+  # Pre-workshop survey URL (if any)
+  def pre_workshop_survey_url
+    # 5-day summer workshop
+    if workshop.local_summer?
+      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0, enrollmentCode: code)
+    elsif workshop.subject == Pd::Workshop::SUBJECT_CSF_201
+      'https://studio.code.org/pd/workshop_survey/csf/pre201'
+    # academic year workshops for CSP and CSD
+    elsif workshop.pre_survey?
+      pd_new_pre_workshop_survey_url(enrollment_code: code)
+    end
+  end
+
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
+    elsif workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+      # TODO: This is a temporary, fake URL. Wire up a real one!
+      CDO.studio_url '/pd/workshop_survey/post'
     elsif workshop.summer?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
     elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
-      CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
+      CDO.studio_url "/pd/workshop_survey/day/#{workshop.last_valid_day}?enrollmentCode=#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
     else
@@ -300,6 +320,22 @@ class Pd::Enrollment < ActiveRecord::Base
     workshop.local_summer? &&
       workshop.school_year == APPLICATION_CURRENT_YEAR &&
       FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
+  end
+
+  def application_id
+    find_application_id(user_id, pd_workshop_id)
+  end
+
+  # Finds the application an user used for a workshop.
+  # Assumes that at most one application like that exists.
+  # @param [Integer] user_id
+  # @param [Integer] workshop_id
+  # @return [Integer, nil] application id or nil if cannot find any application
+  def find_application_id(user_id, workshop_id)
+    Pd::Application::ApplicationBase.where(user_id: user_id).each do |application|
+      return application.id if application.try(:pd_workshop_id) == workshop_id
+    end
+    nil
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.

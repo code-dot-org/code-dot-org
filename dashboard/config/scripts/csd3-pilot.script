@@ -1,3 +1,4 @@
+tts true
 login_required true
 hideable_stages true
 student_detail_progress_view true
@@ -10,6 +11,7 @@ project_widget_types ["gamelab", "weblab"]
 pilot_experiment 'csd-piloters'
 project_sharing true
 
+lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3L01 TFMD_pilot', named: true
 level 'CSD U3 Entertainment_2018_2019_pilot', named: true
@@ -191,6 +193,7 @@ level 'CSD U3 Interactive Card Other Conditionals_pilot', progression: 'Project 
 level 'CSD U3 Interactive Card Final_pilot', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot', progression: 'Reflection', assessment: true
 
+lesson_group 'csd3_2', display_name: 'Chapter 2: Building Games'
 stage 'Velocity', flex_category: 'csd3_2'
 level 'CSD U3L18 TFMD_pilot', named: true
 level 'CSD: Sprite Velocity_pilot', named: true
@@ -329,6 +332,7 @@ level 'csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot', progression: 
 stage 'Post-Project Test', lockable: true, flex_category: 'csd3_2'
 level 'CSD Interactive Animations and Games Post-Project Test_pilot', assessment: true
 
+lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019_pilot'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot', assessment: true

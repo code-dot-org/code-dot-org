@@ -31,7 +31,7 @@ FactoryGirl.define do
 
   factory :section_hidden_stage do
     section
-    stage
+    lesson
   end
 
   factory :section_hidden_script do
@@ -176,6 +176,20 @@ FactoryGirl.define do
       trait :without_email do
         after(:create) do |user|
           user.update_primary_contact_info new_email: '', new_hashed_email: ''
+          user.save validate: false
+        end
+      end
+
+      # We added validation to user accounts and some time which required
+      # teacher accounts to have emails. However, there were already existing
+      # teacher accounts which didn't have an email. Some of these have not yet
+      # been updated, so we need to make sure our system can handle them
+      # gracefully.
+      # FND-1130: This trait will no longer be required
+      trait :before_email_validation do
+        after(:create) do |user|
+          # Account created one day before the requirements were added.
+          user.created_at = User::DATE_TEACHER_EMAIL_REQUIREMENT_ADDED - 1
           user.save validate: false
         end
       end
@@ -676,8 +690,8 @@ FactoryGirl.define do
       assessment true
     end
 
-    stage do |script_level|
-      create(:stage, script: script_level.script)
+    lesson do |script_level|
+      create(:lesson, script: script_level.script)
     end
 
     trait :with_autoplay_video do
@@ -703,7 +717,7 @@ FactoryGirl.define do
     end
 
     position do |script_level|
-      (script_level.stage.script_levels.maximum(:position) || 0) + 1 if script_level.stage
+      (script_level.lesson.script_levels.maximum(:position) || 0) + 1 if script_level.lesson
     end
 
     properties do |script_level|
@@ -725,18 +739,23 @@ FactoryGirl.define do
     end
   end
 
-  factory :stage do
-    sequence(:name) {|n| "Bogus Stage #{n}"}
+  factory :lesson_group do
+    sequence(:key) {|n| "Bogus Lesson Group #{n}"}
+    script
+  end
+
+  factory :lesson do
+    sequence(:name) {|n| "Bogus Lesson #{n}"}
     script
 
-    absolute_position do |stage|
-      (stage.script.stages.maximum(:absolute_position) || 0) + 1
+    absolute_position do |lesson|
+      (lesson.script.lessons.maximum(:absolute_position) || 0) + 1
     end
 
     # relative_position is actually the same as absolute_position in our factory
     # (i.e. it doesnt try to count lockable/non-lockable)
-    relative_position do |stage|
-      ((stage.script.stages.maximum(:absolute_position) || 0) + 1).to_s
+    relative_position do |lesson|
+      ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
   end
 
@@ -1112,6 +1131,20 @@ FactoryGirl.define do
     group 1
   end
 
+  factory :regional_partner_with_mappings, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    group 1
+    mappings do
+      [
+        create(
+          :pd_regional_partner_mapping,
+          zip_code: 98143,
+          state: nil
+        )
+      ]
+    end
+  end
+
   factory :regional_partner_with_summer_workshops, parent: :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     contact_name "Contact Name"
@@ -1213,10 +1246,48 @@ FactoryGirl.define do
     association :script_level
   end
 
+  factory :teacher_score do
+    association :user_level
+    association :teacher
+  end
+
   factory :validated_user_level do
     time_spent 10
     user_level_id 1
   end
 
   factory :donor_school
+
+  factory :contact_rollups_raw do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:sources) {|n| "dashboard.table_#{n}"}
+    data {{opt_in: true}}
+    data_updated_at {Time.now.utc}
+  end
+
+  factory :contact_rollups_processed do
+    transient do
+      data_updated_at {Time.now.utc}
+    end
+
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'opt_in' => true}}
+
+    after(:build) do |contact, evaluator|
+      contact.data[:updated_at] = evaluator.data_updated_at
+    end
+  end
+
+  factory :contact_rollups_final do
+    sequence(:email) {|n| "contact_#{n}@example.domain"}
+    data {{'opt_in' => true}}
+  end
+
+  factory :contact_rollups_pardot_memory do
+    sequence (:email) {|n| "contact_#{n}@example.domain"}
+    sequence(:pardot_id) {|n| n}
+    pardot_id_updated_at {Time.now.utc - 1.hour}
+    data_synced {{db_Opt_In: 'No'}}
+    data_synced_at {Time.now.utc}
+  end
 end

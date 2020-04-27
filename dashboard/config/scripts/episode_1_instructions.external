@@ -1,0 +1,18 @@
+name 'Episode 1 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+On the next level, choose a practice puzzle. If you are new to coding, we recommend the Beginner Practice. If you have some programming experience, you should choose the Intermediate Practice, although it's useful to start with the Beginner Practice as a refresher!
+
+![](https://images.code.org/f7afea61149f75ca1842ac50d7d16ff2-image-1585323941575.png) ![](https://images.code.org/5cd0513cea54405f0e19b8390e9d94f1-image-1585323945173.png)
+
+## Unplugged Practice
+You can also practice creating algorithms offline, using [My Robotic Friends](https://csedweek.org/unplugged/thinkersmith). Ask your parents to help you print the instructions.
+
+MARKDOWN

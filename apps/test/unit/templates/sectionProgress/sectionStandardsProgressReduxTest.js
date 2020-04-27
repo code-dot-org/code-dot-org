@@ -1,154 +1,44 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import sectionStandardsProgress, {
   setTeacherCommentForReport,
   getUnpluggedLessonsForScript,
   getNumberLessonsInScript,
-  lessonsByStandard
+  lessonsByStandard,
+  getNumberLessonsCompleted,
+  getPluggedLessonCompletionStatus,
+  getUnpluggedLessonCompletionStatus,
+  getLessonSelectionStatus
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-
-// Construct state
-const fakeState = {
-  sectionProgress: {
-    scriptDataByScript: {
-      92: {
-        csf: true,
-        hasStandards: true,
-        id: 92,
-        path: '//localhost-studio.code.org:3000/s/coursea-2019',
-        title: 'Course A (2019)',
-        stages: [
-          {
-            script_id: 92,
-            script_name: 'coursea-2019',
-            script_stages: 12,
-            id: 662,
-            position: 1,
-            relative_position: 1,
-            name: 'Going Places Safely',
-            title: 'Lesson 1: Going Places Safely',
-            flex_category: 'Digital Citizenship',
-            lockable: false,
-            levels: [],
-            description_student:
-              'Learn the rules to safely visit places online.',
-            description_teacher:
-              'In collaboration with Common Sense Media, this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.',
-            unplugged: true,
-            lesson_plan_html_url:
-              'https://curriculum.code.org/csf-19/coursea/1',
-            lesson_plan_pdf_url:
-              '//localhost.code.org:3000/curriculum/coursea-2019/1/Teacher.pdf',
-            stage_extras_level_url:
-              'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
-          },
-          {
-            script_id: 92,
-            script_name: 'coursea-2019',
-            script_stages: 12,
-            id: 663,
-            position: 2,
-            relative_position: 2,
-            name: 'Learn to Drag and Drop',
-            title: 'Lesson 2: Learn to Drag and Drop',
-            flex_category: 'Sequencing',
-            lockable: false,
-            levels: [],
-            description_student: 'Click and drag to finish the puzzles.',
-            description_teacher:
-              'This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.',
-            unplugged: false,
-            lesson_plan_html_url:
-              'https://curriculum.code.org/csf-19/coursea/2',
-            lesson_plan_pdf_url:
-              '//localhost.code.org:3000/curriculum/coursea-2019/2/Teacher.pdf',
-            stage_extras_level_url:
-              'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
-          },
-          {
-            script_id: 92,
-            script_name: 'coursea-2019',
-            script_stages: 12,
-            id: 664,
-            position: 3,
-            relative_position: 3,
-            name: 'Happy Maps',
-            title: 'Lesson 3: Happy Maps',
-            flex_category: 'Sequencing',
-            lockable: false,
-            levels: [],
-            description_student:
-              'Write instructions to get the Flurb to the fruit.',
-            description_teacher:
-              'This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.',
-            unplugged: true,
-            lesson_plan_html_url:
-              'https://curriculum.code.org/csf-19/coursea/3',
-            lesson_plan_pdf_url:
-              '//localhost.code.org:3000/curriculum/coursea-2019/3/Teacher.pdf',
-            stage_extras_level_url:
-              'http://localhost-studio.code.org:3000/s/coursea-2019/stage/3/extras'
-          }
-        ]
-      }
-    }
-  },
-  scriptSelection: {
-    scriptId: 92
-  },
-  sectionStandardsProgress: {
-    standardsData: [
-      {
-        id: 16,
-        organization: 'CSTA',
-        organization_id: '1A-IC-17',
-        description: 'Work respectfully and responsibly with others online.',
-        concept: 'Impacts of Computing',
-        lesson_ids: [662, 663]
-      },
-      {
-        id: 17,
-        organization: 'CSTA',
-        organization_id: '1A-IC-18',
-        description: '"Keep login information private',
-        concept: 'Impacts of Computing',
-        lesson_ids: [662, 663]
-      },
-      {
-        id: 4,
-        organization: 'CSTA',
-        organization_id: '1A-AP-11',
-        description:
-          'Decompose (break down) the steps needed to solve a problem into a precise sequence of instructions.',
-        concept: 'Algorithms & Programming',
-        lesson_ids: [663, 664, 665, 666, 667, 669, 670, 671, 672, 673]
-      }
-    ]
-  },
-  teacherSections: {
-    selectedSectionId: 1,
-    sections: {
-      1: {
-        id: 1,
-        name: 'Picture Section',
-        createdAt: '2019-10-25T14:24:28.000Z',
-        loginType: 'picture',
-        grade: '9',
-        providerManaged: false,
-        stageExtras: true,
-        pairingAllowed: true,
-        sharingDisabled: false,
-        studentCount: 9,
-        code: 'HQGBNJ',
-        courseId: null,
-        scriptId: 92,
-        hidden: false
-      }
-    }
-  }
-};
+import {
+  stageId,
+  scriptId,
+  pluggedStage,
+  stateForTeacherMarkedAndProgress,
+  stateForTeacherMarkedIncompletedLesson,
+  stateForTeacherMarkedCompletedLesson,
+  stateForCompletedLesson,
+  stateForPartiallyCompletedLesson,
+  fakeState
+} from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
+
+  describe('getLessonSelectionStatus', () => {
+    it('returns true if lesson is in selected list', () => {
+      expect(
+        getLessonSelectionStatus(stateForTeacherMarkedCompletedLesson, stageId)
+      ).to.equal(true);
+    });
+    it('returns false if lesson is not in selected', () => {
+      expect(
+        getLessonSelectionStatus(
+          stateForTeacherMarkedIncompletedLesson,
+          stageId
+        )
+      ).to.equal(false);
+    });
+  });
 
   describe('setTeacherCommentForReport', () => {
     it('can set the teacher comment', () => {
@@ -170,52 +60,214 @@ describe('sectionStandardsProgressRedux', () => {
   });
 
   describe('lessonsByStandard', () => {
-    it('gets the correct lessons by standard', () => {
+    it('gets the correct lessons and completion by standard, no progress, no scores', () => {
       assert.deepEqual(lessonsByStandard(fakeState), {
         4: [
           {
+            completed: false,
+            inProgress: false,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
-            numStudents: 9,
+            numStudents: 4,
+            numStudentsCompleted: 0,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           },
           {
+            completed: false,
+            inProgress: false,
             lessonNumber: 3,
             name: 'Happy Maps',
-            numStudents: 9,
+            numStudents: 4,
+            numStudentsCompleted: 0,
             unplugged: true,
             url: 'https://curriculum.code.org/csf-19/coursea/3'
           }
         ],
         16: [
           {
+            completed: false,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
-            numStudents: 9,
+            numStudents: 4,
+            numStudentsCompleted: 0,
             unplugged: true,
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
           {
+            completed: false,
+            inProgress: false,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
-            numStudents: 9,
+            numStudents: 4,
+            numStudentsCompleted: 0,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           }
         ],
         17: [
           {
+            completed: false,
+            inProgress: false,
             lessonNumber: 1,
             name: 'Going Places Safely',
-            numStudents: 9,
+            numStudents: 4,
+            numStudentsCompleted: 0,
             unplugged: true,
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
           {
+            completed: false,
+            inProgress: false,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
-            numStudents: 9,
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ]
+      });
+    });
+
+    // Plugged lessons calculate completion based on progress.
+    // Unplugged lessons calculate completion based on teacher score.
+    it('gets the correct lessons and completion by standard, completed lesson based only on progress', () => {
+      assert.deepEqual(lessonsByStandard(stateForCompletedLesson), {
+        4: [
+          {
+            completed: true,
+            inProgress: true,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 4,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          },
+          {
+            completed: false,
+            inProgress: false,
+            lessonNumber: 3,
+            name: 'Happy Maps',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/3'
+          }
+        ],
+        16: [
+          {
+            completed: false,
+            inProgress: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: true,
+            inProgress: true,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 4,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ],
+        17: [
+          {
+            completed: false,
+            inProgress: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: true,
+            inProgress: true,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 4,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ]
+      });
+    });
+
+    it('gets the correct lessons and completion by standard, plugged lesson completion based on progress, unplugged based on teacher score', () => {
+      assert.deepEqual(lessonsByStandard(stateForTeacherMarkedAndProgress), {
+        4: [
+          {
+            completed: true,
+            inProgress: true,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 4,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          },
+          {
+            completed: false,
+            inProgress: false,
+            lessonNumber: 3,
+            name: 'Happy Maps',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/3'
+          }
+        ],
+        16: [
+          {
+            completed: true,
+            inProgress: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 1,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: true,
+            inProgress: true,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 4,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ],
+        17: [
+          {
+            completed: true,
+            inProgress: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 1,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: true,
+            inProgress: true,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           }
@@ -231,15 +283,110 @@ describe('sectionStandardsProgressRedux', () => {
           id: 662,
           name: 'Going Places Safely',
           number: 1,
-          url: 'https://curriculum.code.org/csf-19/coursea/1'
+          url: 'https://curriculum.code.org/csf-19/coursea/1',
+          completed: false,
+          inProgress: false
         },
         {
           id: 664,
           name: 'Happy Maps',
           number: 3,
-          url: 'https://curriculum.code.org/csf-19/coursea/3'
+          url: 'https://curriculum.code.org/csf-19/coursea/3',
+          completed: false,
+          inProgress: false
         }
       ]);
+    });
+  });
+
+  describe('getUnPluggedLessonCompletionStatus', () => {
+    it('incomplete when no teacher scores for stage', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(fakeState, scriptId, stageId)
+      ).to.deep.equal({
+        completed: false,
+        inProgress: false,
+        numStudentsCompleted: 0
+      });
+    });
+
+    it('incomplete when teacher scores stage as incomplete', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(
+          stateForTeacherMarkedIncompletedLesson,
+          scriptId,
+          stageId
+        )
+      ).to.deep.equal({
+        completed: false,
+        inProgress: false,
+        numStudentsCompleted: 0
+      });
+    });
+
+    it('complete when teacher scores stage as complete', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(
+          stateForTeacherMarkedCompletedLesson,
+          scriptId,
+          stageId
+        )
+      ).to.deep.equal({
+        completed: true,
+        inProgress: false,
+        numStudentsCompleted: 1
+      });
+    });
+  });
+
+  describe('getPluggedLessonCompletionStatus', () => {
+    it('accurately calculates no progress', () => {
+      expect(
+        getPluggedLessonCompletionStatus(fakeState, pluggedStage)
+      ).to.deep.equal({
+        completed: false,
+        inProgress: false,
+        numStudentsCompleted: 0
+      });
+    });
+
+    it('accurately calculates partial progress', () => {
+      expect(
+        getPluggedLessonCompletionStatus(
+          stateForPartiallyCompletedLesson,
+          pluggedStage
+        )
+      ).to.deep.equal({
+        completed: false,
+        inProgress: true,
+        numStudentsCompleted: 2
+      });
+    });
+
+    it('accurately calculates > 80% of students completed > 60% of levels', () => {
+      expect(
+        getPluggedLessonCompletionStatus(stateForCompletedLesson, pluggedStage)
+      ).to.deep.equal({
+        completed: true,
+        inProgress: true,
+        numStudentsCompleted: 4
+      });
+    });
+  });
+
+  describe('getNumberLessonsCompleted', () => {
+    it('accurately calculates number of lessons completed when there is no student progress', () => {
+      expect(getNumberLessonsCompleted(fakeState)).to.equal(0);
+    });
+
+    it('accurately calculates the number of lessons completed when there is student progress', () => {
+      expect(getNumberLessonsCompleted(stateForCompletedLesson)).to.equal(1);
+    });
+
+    it('accurately calculates the number of lessons completed when there is student progress and teacher marked', () => {
+      expect(
+        getNumberLessonsCompleted(stateForTeacherMarkedAndProgress)
+      ).to.equal(2);
     });
   });
 });

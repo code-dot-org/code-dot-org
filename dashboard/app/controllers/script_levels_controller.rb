@@ -106,6 +106,10 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # If the stage is not released yet (visible_after is in the future) then don't
+    # let a user go to the script_level page in that stage
+    return head(:forbidden) unless @script_level.lesson.published?(current_user)
+
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
@@ -164,7 +168,7 @@ class ScriptLevelsController < ApplicationController
 
     if stage_id
       # TODO(asher): change this to use a cache
-      stage = Stage.find(stage_id)
+      stage = Lesson.find(stage_id)
       return head :forbidden unless stage.try(:script).try(:hideable_stages)
       section.toggle_hidden_stage(stage, should_hide)
     else
@@ -368,7 +372,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_section
-    if params[:section_id]
+    if params[:section_id] && params[:section_id] != "undefined"
       section = Section.find(params[:section_id])
 
       # TODO: This should use cancan/authorize.
@@ -426,7 +430,7 @@ class ScriptLevelsController < ApplicationController
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
     @game = @level.game
-    @stage ||= @script_level.stage
+    @stage ||= @script_level.lesson
 
     load_level_source
 

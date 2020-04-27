@@ -23,6 +23,18 @@ CROWDIN_PROJECTS = {
 }
 
 class I18nScriptUtils
+  # Because we log many of the i18n operations to slack, we often want to
+  # explicitly force stdout to operate syncronously, rather than buffering
+  # output and dumping a whole lot of output into slack all at once.
+  #
+  # See the sync_up and sync_down methods in particular for usage.
+  def self.with_syncronous_stdout
+    old_sync = $stdout.sync
+    $stdout.sync = true
+    yield
+    $stdout.sync = old_sync
+  end
+
   # Output the given data to YAML that will be consumed by Crowdin. Includes a
   # couple changes to the default `data.to_yaml` serialization:
   #
@@ -121,15 +133,21 @@ class I18nScriptUtils
 
       hash[new_url] =
         if matches.nil?
-          STDERR.puts "could not find level for url: #{new_url}"
-          nil
+          project_url_regex = %r{https://studio.code.org/p/(?<project_name>[A-Za-z0-9\s\-_]+)}
+          project_matches = new_url.match(project_url_regex)
+          if project_matches.nil?
+            STDERR.puts "could not find level for url: #{new_url}"
+            nil
+          else
+            Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[project_matches[:project_name]]['name'])
+          end
         elsif matches[:level_info].starts_with?("extras")
           level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
           level_name = matches[:level_info].match(level_info_regex)[:level_name]
           Level.find_by_name(CGI.unescape(level_name))
         else
           script = Script.find_by_name(matches[:script_name])
-          stage = script.stages.find_by_relative_position(matches[:stage_pos])
+          stage = script.lessons.find_by_relative_position(matches[:stage_pos])
           level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
           level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
           stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
@@ -137,5 +155,24 @@ class I18nScriptUtils
     end
 
     @levels_by_url[url]
+  end
+
+  def self.write_markdown_with_header(markdown, header, path)
+    open(path, 'w') do |f|
+      unless header.empty?
+        f.write(I18nScriptUtils.to_crowdin_yaml(header))
+        f.write("---\n\n")
+      end
+      f.write(markdown)
+    end
+  end
+
+  # Reduce the header metadata we include in markdown files down to just the
+  # subset of content we want to allow translators to translate.
+  #
+  # Right now, this is just page titles but it could be expanded to include
+  # any English content (description, social share stuff, etc).
+  def self.sanitize_header!(header)
+    header.slice!("title")
   end
 end

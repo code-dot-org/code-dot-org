@@ -9,10 +9,12 @@ Sign up below to receive monthly email updates on Code.org’s Computer Science 
 
 ## Sign-up information
 
-<iframe src="http://go.pardot.com/l/153401/2018-10-02/lzp5jd" width="100%" height="250" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+<iframe src="http://go.pardot.com/l/153401/2018-10-02/lzp5jd" width="100%" height="400" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
 ## Previous updates
 
 ### 2019-20
+-  <a href="http://go.pardot.com/webmail/153401/628137285/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">April 2020</a>
+-  <a href="http://go.pardot.com/webmail/153401/615126098/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">March 2020</a>
 -  <a href="http://go.pardot.com/webmail/153401/608857087/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">February 2020</a>
 - <a href="http://go.pardot.com/webmail/153401/605565417/b2abf252e01787a883a80bbd697bf9568ed1d9c516830e8c6ef655638b459a63", target=_"blank">January 2020</a>
 - <a href="http://go.pardot.com/webmail/153401/596490977/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">December 2019</a>

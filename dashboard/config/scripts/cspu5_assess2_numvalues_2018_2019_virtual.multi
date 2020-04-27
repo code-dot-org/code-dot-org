@@ -1,0 +1,37 @@
+name 'cspu5_assess2_numValues_2018_2019_virtual'
+wrong 'The code will display the middle of all three values'
+wrong 'The code will display the smallest of the three values'
+right 'The code will display the largest of the three values'
+wrong 'The code will always display the value stored in variable `a`'
+wrong 'The code will not display anything due to an error'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/dcb91471aad876e5ed307b66648c2f1e-image-1475996573144.png" style="width:700px;">
+
+Consider the code segment below given in pseudo code (see reference above).  Assuming that variables a, b and c *already have numeric values assigned to them*, what is the expected output of this code segment?
+
+    val <- a
+    IF(b >= a AND b >= c){
+    	val <- b;
+    }
+    ELSE 
+    {
+      IF (c >= a AND c >= b)
+        {	
+        val <- c;
+        }
+    }
+    DISPLAY (val);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 8, 9** - compound conditionals and else-if
+
+Going through this code line by line:
+
+* Set `val` to `a` -- assume it's the largest
+* If `b` is bigger than both `a` and `c` -- then b is the largest
+* Else if `c` is bigger than both `a` and `b` -- then c is the largest
+
+Display `val` which should be the largest of the 3.
+MARKDOWN

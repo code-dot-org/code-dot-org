@@ -1,0 +1,6 @@
+name 'courseD_multi_bee_conditionals1_predict1_2018_2019_2020'
+question 'The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click "Run"?'
+wrong 'The bee will move to the cloud and try to get nectar, no matter what. ', feedback: 'Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.'
+right 'The bee will move to the cloud and only try to get nectar if there is a flower underneath.', feedback: 'Correct!'
+wrong 'The bee will move to the cloud and then do nothing, no matter what. ', feedback: 'Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.'
+wrong 'I don\'t know.', feedback: 'The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.'

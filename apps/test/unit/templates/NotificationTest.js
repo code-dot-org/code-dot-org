@@ -89,6 +89,7 @@ describe('Notification', () => {
             </div>
             <div>
               <Button
+                __useDeprecatedTag
                 href={announcement.link}
                 text={announcement.buttonText}
                 target="_blank"
@@ -267,6 +268,7 @@ describe('Notification', () => {
             </div>
             <div>
               <Button
+                __useDeprecatedTag
                 href={findCourse.link}
                 text={findCourse.buttonText}
                 target="_blank"

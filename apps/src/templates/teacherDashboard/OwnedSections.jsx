@@ -21,6 +21,7 @@ import EditSectionDialog from './EditSectionDialog';
 import SetUpSections from '../studioHomepages/SetUpSections';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
+import {recordImpression} from './impressionHelpers';
 
 const styles = {
   button: {
@@ -43,7 +44,6 @@ const styles = {
 class OwnedSections extends React.Component {
   static propTypes = {
     queryStringOpen: PropTypes.string,
-    locale: PropTypes.string,
 
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -61,6 +61,11 @@ class OwnedSections extends React.Component {
   constructor(props) {
     super(props);
     this.onEditSection = this.onEditSection.bind(this);
+    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
+      recordImpression('owned_sections_table_with_dashboard_header_buttons');
+    } else {
+      recordImpression('owned_sections_table_without_dashboard_header_buttons');
+    }
   }
 
   componentDidMount() {
@@ -96,12 +101,7 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {
-      sectionIds,
-      hiddenSectionIds,
-      asyncLoadComplete,
-      locale
-    } = this.props;
+    const {sectionIds, hiddenSectionIds, asyncLoadComplete} = this.props;
     const {viewHidden} = this.state;
 
     if (!asyncLoadComplete) {
@@ -125,6 +125,7 @@ class OwnedSections extends React.Component {
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
+                  __useDeprecatedTag
                   className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
                   icon={viewHidden ? 'caret-up' : 'caret-down'}
@@ -151,8 +152,8 @@ class OwnedSections extends React.Component {
           </div>
         )}
         <RosterDialog />
-        <AddSectionDialog locale={locale} />
-        <EditSectionDialog locale={locale} />
+        <AddSectionDialog />
+        <EditSectionDialog />
       </div>
     );
   }

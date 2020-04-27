@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-03-17T16:55:56.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Free Response: Interpreting Instructions",
+    "long_instructions": "Consider the algorithm you designed for today’s activity. Identify two instances where there may be multiple ways to interpret your instructions and suggest improvements that could be made to improve their clarity.\n\n",
+    "encrypted_solution": "bZlejAUW6rrLPa7KBM5NOQ52jXrkLsxoP2xFUVAz/+/AVqVbTgSi/8rFo6ut\nzNAJ8smo7ez9iauPw4F5cK4ImrLtZAH4Ct1eSqdbEyYQ3kTVXdjN6VPhUahc\nQbUojVDUW2GUZvgJcOHPGpAoIJEpbIWVfih7TMa6YrGjidL1Xza6pvNlW0PA\naFM/R+dcer6qfm/EBGIrwDZDTrNAnh4KoAkm/9nqLEmGPfnXgPeaPsukvk5A\nvC2ft8Yz+hCTokcFreVxkimwe79GYV+fDDAKnE1zJHlVGatB8R/7uugT+DBD\nAZIHsWpGcbxTeSZ+SxiMFFdAM9E4Wd180Vvm5cKrQy29UNBQZWrBW5ODSHwd\naf35WTAlKAFdbuFsWbHAUxYB/5kI/VjNQ1gpn0TTEe4qxkKBzJXjd78FlSG0\nuPhEXCM=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16871,
+    "name_suffix": "_virtual"
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

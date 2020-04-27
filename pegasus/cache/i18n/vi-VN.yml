@@ -21,6 +21,8 @@ vi-VN:
     none; font-weight: 400"><a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bạn là giáo viên Tin Học? Xem thêm thư viện tuần giáo
     dục Tin Học.</a>'
+  csedweek_banner_teachers_text: Bạn là giáo viên Tin Học? Xem thêm thư viện tuần
+    giáo dục Tin Học.
   n_have_learned_an_hoc: "<h1>Hãy thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>"
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
@@ -28,8 +30,6 @@ vi-VN:
     khoa học máy tính
   petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
     khác.'
-  petition_sign_message_support: 'Nếu bạn hỗ trợ chúng tôi, hãy ký tên.  Tham gia
-    cùng # những người khác.'
   petition_join_others: 'Tham gia cùng # những người khác'
   name: Tên
   email: Thư điện tử
@@ -68,7 +68,7 @@ vi-VN:
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Đăng ký
   cded_try_it: Hãy thử nó
-  try_now: Thử ngay bây giờ
+  try_now: Thử ngay
   california_heading: Yêu cầu trường học của bạn giảng dạy khoa học máy tính
   california_text: Bất kỳ giáo viên có thể cung cấp các <a href='http://studio.code.org/'>khóa
     học miễn phí</a>.  Bất kỳ trường tiểu học có thể <a href='http://code.org/educate/k5'>dạy
@@ -354,6 +354,7 @@ vi-VN:
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
+  homepage_signpetition_dropdown_text: Tôi đồng ý
   homepage_banner_text_prizes: The Hour of Code sắp diễn ra một lần nữa từ ngày
     7 đến ngày 13 tháng mười hai
   homepage_banner_link_prizes: 'Tham gia sự kiện học lập trình lớn nhất trong lịch
@@ -481,6 +482,7 @@ vi-VN:
   minecraft_og_agent: Minecaft là nền tảng của Giờ lập trình, và bạn chính là anh
     hùng! Hãy viết các câu lệnh để lập trình hành trình trong thế giới Minecraft.
   sports_watch_video: Xem video
+  video_title_cs_is_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
   video_title_inspire_girl: Truyền cảm hứng cho một cô gái
   video_5min: 5 phút
   help_translate: Giúp chúng tôi dịch.
@@ -1134,3 +1136,7 @@ vi-VN:
   hoc2018_dance_amazon_scholarship_programs_button: Đăng ký ngay
   hoc2018_dance_measure: Nhịp
   hoc2018_dance_measure_colon: 'Nhịp:'
+  hoc2018_mc_with_microsoft: Hợp tác cùng
+  hoc2018_mc_thank_microsoft: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng
+    tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ
+    năng cần thiết để thành công trong thế kỷ 21.

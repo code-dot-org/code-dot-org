@@ -1,4 +1,5 @@
 name 'csp_unit_assessment_overview_exam_prep'
+editor_experiment ''
 title 'title'
 description 'description here'
 markdown <<MARKDOWN
@@ -76,8 +77,8 @@ Please see our running **[F.A.Q. document here](https://docs.google.com/document
 4. Click **Assessments/Surveys**
 5. From the course selector dropdown, **select the unit that this assessment appeared in (e.g. Unit 1: The Internet)**
 6. For all students who have *submitted* their assessment, you will see two tables:
-  * The first table is a summary view summarizing the percentage correct from all the students who submitted, including the timestamp they submitted on
-  * The second table is a comprehensive list of each answer to each question submitted by each student
+   * The first table is a summary view summarizing the percentage correct from all the students who submitted, including the timestamp they submitted on
+   * The second table is a comprehensive list of each answer to each question submitted by each student
 
     Above both of these tables is a **Download (or export) as csv** button - allowing you to process answers in a spreadsheet (recommended).
 

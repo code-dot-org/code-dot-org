@@ -40,12 +40,14 @@ class DeleteProjectDialog extends Component {
         <div style={{marginBottom: 10}}>{i18n.deleteProjectConfirm()}</div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
           />
           <Button
+            __useDeprecatedTag
             text={i18n.delete()}
             onClick={this.delete}
             color={Button.ButtonColor.orange}

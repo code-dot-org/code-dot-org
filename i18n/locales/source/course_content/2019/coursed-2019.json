@@ -608,24 +608,24 @@
         "dsls": {
           "answers": [
             {
-              "text": "The bee will get nectar at each flower and honey at each honeycomb.",
+              "text": "The bee will get nectar at each flower and make honey at each honeycomb.",
               "correct": true,
               "feedback": "Correct!"
             },
             {
               "text": "The bee will try to get nectar from both flowers and honeycomb.",
               "correct": false,
-              "feedback": "Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb."
+              "feedback": "Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb."
             },
             {
               "text": "The bee will try to get honey from both flowers and honeycomb.",
               "correct": false,
-              "feedback": "Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.."
+              "feedback": "Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb.."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb."
+              "feedback": "The `if at flower` block lets the bee get nectar at each flower and make honey at each honeycomb."
             }
           ],
           "questions": [
@@ -1341,7 +1341,7 @@
     "short_instructions": "Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key. Do the drop-clap as fast as you can!",
     "long_instructions": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
     "authored_hints": {
-      "validation": "**How do I pass this level?**\n\n-   Use the `when left arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
+      "validation": "**How do I pass this level?**\n\n-   Use the `when arrow arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
     }
   },
   "https://studio.code.org/s/coursed-2019/stage/18/puzzle/12": {

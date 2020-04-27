@@ -1,0 +1,11 @@
+name 'BinaryBracelets-Unplugged_2020'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Binary Bracelets
+
+Create a bracelet that represents your name in a system that computers understand!
+
+![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+MARKDOWN

@@ -95,11 +95,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @organizer = @workshop.organizer
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
-    @pre_survey_url = @workshop.local_summer? ?
-      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0,
-        enrollmentCode: @enrollment.code
-      ) :
-      pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
+    @pre_workshop_survey_url = enrollment.pre_workshop_survey_url
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
     return if @workshop.suppress_reminders?
@@ -206,7 +202,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: content_type,
       from: from_survey,
-      subject: 'How was your Code.org workshop?',
+      subject: "Help us improve Code.org #{@workshop.course} workshops!",
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
@@ -274,9 +270,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
       if @is_first_pre_survey_email
-        "Your upcoming #{workshop.course} workshop and next steps"
-      else
+        # This is always sent once, usually 10-days before, but can be closer
+        # if they sign up less than 10 days before.
         "See you soon for your upcoming #{workshop.course} workshop!"
+      else
+        # This is sent for the first enrollment, and also for the 3-day reminder.
+        "You’re enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
       'Your upcoming Code.org workshop and next steps'

@@ -57,7 +57,7 @@
  * @property {boolean} hasVerticalScrollbars
  * @property {boolean} showExampleTestButtons
  * @property {ReportOptions} report
- * @property {boolean} sendToPhone
+ * @property {boolean} isUS
  * @property {string} send_to_phone_url
  * @property {CopyrightStrings} copyrightStrings
  * @property {string} teacherMarkdown
@@ -211,7 +211,6 @@
  * @augments MilestoneResponse
  * @property {?} timestamp
  * @property {{message: ?, type: ?, contents: ?}} share_failure
- * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
  * @property {string} level_source
  * @property {string} level_source_id
  * @property {string} level_source_image_url

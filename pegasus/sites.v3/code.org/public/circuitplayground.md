@@ -42,7 +42,7 @@ One of our primary goals in integrating the Circuit Playground into CS Discoveri
 
 **App Lab** is a web-based programming environment for building apps using Javascript with either blocks or text. App Lab features prominently in both CS Principles and CS Discoveries
 
-The **Circuit Playground** is an series of circuit boards produced by Adafruit with a variety of sensors and ouputs built in. There are two variants of the Circuit Playground, both compatible with CS Discoveries:
+The **Circuit Playground** is a series of circuit boards produced by Adafruit with a variety of sensors and ouputs built in. There are two variants of the Circuit Playground, both compatible with CS Discoveries:
 
 * The Circuit Playground Classic - the first version of this board which can be programmed with either Maker Toolkit or the Arduino IDE
 * The Circuit Playground Express - the newer version of this board which can be programmed with the Maker Toolkit, Microsoft Makecode, Scratch 3.0, Circuit Python, and more .
@@ -78,17 +78,17 @@ However, we understand that the expense of the classroom kit can be a barrier to
 
 ### <a name="subsidy"></a> Circuit Playground classroom kit subsidy program
 
-**Available starting January 2020**
-
-If you are participating in the 2019-20 CS Discoveries Professional Learning Program, implementing the full-year version of the course, and are not able to secure funding for the classroom kit locally, we may be able to fully subsidize a single classroom kit for you. To qualify for a fully subsidized kit, you must meet **all** of the following requirements:
+If you are a participant in the **2019-20 CS Discoveries Professional Learning Program**, are implementing the full-year version of the course, and are not able to secure funding for the classroom kit locally, we may be able to fully subsidize a single classroom kit for you. To qualify for a fully subsidized kit, you must meet **all** of the following requirements:
 
 - Teach at a school with 50% or greater free/reduced price meals, according to data from the <a href="https://nces.ed.gov/", target=_"blank">National Center for Education Statistics</a>.
 - Be a participant in the 2019-20 Code.org Professional Learning Program for CS Discoveries (i.e. attended a 5-day summer workshop for CS Discoveries), OR be a participant in the 2019-20 Facilitator development program as a novice CS Discoveries facilitator.
 - Completed the first semester of the CS Discoveries course with at least one section of 10 or more students who have made measurable progress in Units 2 **and** 3 of CS Discoveries on Code.org. *Note: Content learned in Unit 3 is a prerequisite for Unit 6.*
 - Committed to attending Academic Year Workshop 4, covering Unit 6 (for in-person Professional Learning Program participants) or the last two professional learning modules (for virtual Professional Learning Program participants).
-- Will teach Unit 6 by the end of the 2020-21 school year. When the program launches in January 2020, we will ask interested teachers to fill out a Unit 6 implementation plan template in the semester they will be teaching Unit 6 and submit it to us at <a href="mailto:teacher@code.org">teacher@code.org</a>
+- Will teach Unit 6 by the end of the **2020-21 school year**. 
 
-**By the end of January 2020,** teachers in the 2019-20 CS Discoveries Professional Learning Program will receive an email from us with more information about how to request a subsidy for the Adafruit Circuit Playground classroom kit on our website if they are unable to secure funding and are otherwise qualified.
+In January 2020, teachers in the 2019-20 CS Discoveries Professional Learning Program received an email from us with more information about how to fill out a Unit 6 implementation plan and request a subsidy for the Adafruit Circuit Playground classroom kit on our website, if they are unable to secure funding and are otherwise qualified. 
+
+Teachers should fill out their implementation plan in the semester they are teaching Unit 6. Our team will accept and review implementation plans from 2019-20 CS Discoveries Professional Learning Program participants through April 2021.
 
 
 <!--

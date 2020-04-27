@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-03-17T21:25:19.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "video_key": "csp_applab_conditionals_2C",
+    "long_instructions": "### Points to pay attention to:\r\n\r\n* An if-else-if statement lets you check more than one condition at a time.\r\n* The **order of conditions matters**. Since conditions are checked sequentially from top to bottom, the code that gets executed will be the *first* statement to evaluate to true.\r\n\r\n",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17228,
+    "name_suffix": "_virtual"
+  },
+  "published": true,
+  "notes": "NOTE: waiting for a cut of the video that runs 2:20 to the end.  Once we have that cut, replace it here, and remove special student facing instructions."
+}]]></config>
+</StandaloneVideo>

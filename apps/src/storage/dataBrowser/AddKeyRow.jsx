@@ -4,6 +4,7 @@ import PendingButton from '../../templates/PendingButton';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
+import experiments from '@cdo/apps/util/experiments';
 import {castValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
 import {WarningType} from '../constants';
@@ -16,10 +17,14 @@ const INITIAL_STATE = {
 
 class AddKeyRow extends React.Component {
   static propTypes = {
-    onShowWarning: PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
+
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
 
   handleKeyChange = event => {
     this.setState({key: event.target.value});
@@ -31,23 +36,37 @@ class AddKeyRow extends React.Component {
 
   handleAdd = () => {
     if (this.state.key) {
-      this.setState({isAdding: true});
-      FirebaseStorage.setKeyValue(
-        this.state.key,
-        castValue(this.state.value),
-        () => this.setState(INITIAL_STATE),
-        err => {
-          if (
-            err.type === WarningType.KEY_INVALID ||
-            err.type === WarningType.KEY_RENAMED
-          ) {
-            this.props.onShowWarning(err.msg);
-          } else {
-            console.warn(err.msg ? err.msg : err);
+      if (this.inExperiment) {
+        this.props.hideError();
+      }
+      try {
+        this.setState({isAdding: true});
+        const value = castValue(
+          this.state.value,
+          /* allowUnquotedStrings */ false
+        );
+        FirebaseStorage.setKeyValue(
+          this.state.key,
+          value,
+          () => this.setState(INITIAL_STATE),
+          err => {
+            if (
+              err.type === WarningType.KEY_INVALID ||
+              err.type === WarningType.KEY_RENAMED
+            ) {
+              this.props.onShowWarning(err.msg);
+            } else {
+              console.warn(err.msg ? err.msg : err);
+            }
+            this.setState(INITIAL_STATE);
           }
-          this.setState(INITIAL_STATE);
+        );
+      } catch (e) {
+        if (this.inExperiment) {
+          this.setState({isAdding: false});
+          this.props.showError();
         }
-      );
+      }
     }
   };
 

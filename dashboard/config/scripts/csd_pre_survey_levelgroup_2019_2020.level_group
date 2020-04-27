@@ -1,0 +1,47 @@
+name 'csd-pre-survey-levelgroup_2019_2020'
+title 'CS Discoveries Student Pre-Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pre-survey-2017 preamble 1_2018_2020'
+level 'csp-pre-survey-2017-q3_2018_2020'
+level 'csp-pre-survey-2017-q4_2018_2020'
+level 'csp-pre-survey-2017-q9_2018_2020'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general_2018_2020'
+level 'csp-pre-survey-2017-q10_2018_2020'
+level 'csp-pre-survey-2017-q11_2018_2020'
+level 'csp-pre-survey-2017-q16_2018_2020'
+level 'csp-pre-survey-2017-q12_2018_2020'
+level 'csp-pre-survey-2017-q13_2018_2020'
+level 'csp-pre-survey-2017-q17_2018_2020'
+level 'csp-pre-survey-2017-q18_2018_2020'
+level 'naturally-better-at-cs_2020'
+level 'csp-post-survey-2017-q33_2018_2020'
+level 'same-ability_2020'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class_2018_2020'
+level 'csp-pre-survey-2017-q19_2018_2020'
+level 'csp-pre-survey-2017-q20_2018_2020'
+level 'csp-pre-survey-2017-q22_2018_2020'
+level 'will-be-myself-in-cs_2020'
+level 'worried-less-capable_2020'
+level 'reasons-took-course_2020'
+level 'csp-post-survey-who-encouraged-csp_2020'
+
+page
+text 'csp-pre-survey-2017 preamble 4 the future_2018_2020'
+level 'csp-pre-survey-2017-q36-b_2018_2020'
+level 'csp-post-survey-2017-q36-a_2018_2020'
+level 'csp-pre-survey-2017-q29_2018_2020'
+level 'csp-pre-survey-2017-q30_2018_2020'
+level 'csp-pre-survey-2017-q31_2018_2020'
+
+page
+text 'csp-pre-survey-2017 preamble 5 demographics_2018_2020'
+level 'taken-other-cs_2020'
+level 'taken-other-code-org_2020'
+level 'outside-school-cs_2020'

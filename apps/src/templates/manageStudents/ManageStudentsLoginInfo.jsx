@@ -5,7 +5,10 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import Button from '../../templates/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import DownloadParentLetter from './DownloadParentLetter';
 
 const styles = {
   explanation: {
@@ -21,18 +24,11 @@ class ManageStudentsLoginInfo extends Component {
     loginType: PropTypes.string,
     // The prefix for the code studio url in the current environment,
     // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string,
-    pegasusUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string
   };
 
   render() {
-    const {
-      loginType,
-      sectionId,
-      sectionCode,
-      studioUrlPrefix,
-      pegasusUrlPrefix
-    } = this.props;
+    const {loginType, sectionId, sectionCode, studioUrlPrefix} = this.props;
 
     return (
       <div style={styles.explanation}>
@@ -105,13 +101,18 @@ class ManageStudentsLoginInfo extends Component {
         />
         <h2>{i18n.privacyHeading()}</h2>
         <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
-        <Button
-          color="white"
-          id="uitest-privacy-link"
-          target="_blank"
-          href={`${pegasusUrlPrefix}/privacy/student-privacy`}
-          text={i18n.privacyButton()}
+        <DownloadParentLetter
+          sectionId={this.props.sectionId}
+          buttonMetricsCategory={ParentLetterButtonMetricsCategory.BELOW_TABLE}
         />
+        <br />
+        <span id="uitest-privacy-link">
+          <SafeMarkdown
+            markdown={i18n.privacyLinkToPolicy({
+              privacyPolicyLink: pegasus('/privacy/student-privacy')
+            })}
+          />
+        </span>
       </div>
     );
   }

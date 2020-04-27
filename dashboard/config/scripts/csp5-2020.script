@@ -5,8 +5,11 @@ has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit5/{LESSON}'
 project_widget_types ["basketball"]
-editor_experiment 'csp-piloters'
+pilot_experiment 'csp-2020-access'
+project_sharing true
+curriculum_umbrella 'CSP'
 
+lesson_group 'csp_lists', display_name: 'Lists'
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'CSP U5L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 L01 Introduction to Lists', progression: 'Introduction to Lists'
@@ -44,6 +47,7 @@ level 'CSP U5L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Lists Make Project Sample App 2020', progression: 'Try the Reminders App'
 level 'U5 Lists Make Project 2020', progression: 'Make the Reminders App', assessment: true
 
+lesson_group 'csp_loops', display_name: 'Loops'
 stage 'Loops Explore', flex_category: 'csp_loops'
 level 'CSP U5L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'csp_applab_loops_2018', progression: 'Introduction to Loops'
@@ -74,6 +78,7 @@ level 'CSP U5L8 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Loops Make Wallpaper App Example 2020', progression: 'Try the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App 2020', progression: 'Make the Lock Screen Maker', assessment: true
 
+lesson_group 'csp_traversals', display_name: 'Traversals'
 stage 'Traversals Explore', flex_category: 'csp_traversals'
 level 'CSP U5L9 SFLP 20-21', progression: 'Lesson Overview'
 level 'Processing Lists with Loops_2018', progression: 'Introduction to Traversal'
@@ -81,7 +86,7 @@ level 'U5 L09 Traversals Exit Ticket', progression: 'Check For Understanding', a
 
 stage 'Traversals Investigate', flex_category: 'csp_traversals'
 level 'CSP U5L10 SFLP 20-21', progression: 'Lesson Overview'
-level 'Full Year Pilot Experiments Dashboard', progression: 'Turn on Data Library'
+level 'Full Year Pilot Experiments Dashboard_2020', progression: 'Turn on Data Library'
 level 'U5 Traversals Investigate Mile Tracker Modify', progression: 'Mile Tracker Investigation'
 level 'CSP U5L10 Traversals Investigate', progression: 'Intro to Datasets'
 level 'U5 Traversals Investigate Dog Finder Modify', progression: 'Dog Finder Investigation'
@@ -105,6 +110,7 @@ level 'CSP U5L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Traversals Make Project Sample App 2020', progression: 'Try the Random Forecaster App'
 level 'U5 Traversals Make Project 2020', progression: 'Make the Random Forecaster App', assessment: true
 
+lesson_group 'csp_project', display_name: 'Project'
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
 level 'CSP U5L13 SFLP 20-21', progression: 'Lesson Overview'
 

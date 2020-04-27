@@ -18,7 +18,8 @@ import {
   getCurrentScriptData,
   setLessonOfInterest,
   scriptDataPropType,
-  setCurrentView
+  setCurrentView,
+  tooltipIdForStudent
 } from './sectionProgressRedux';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -28,9 +29,8 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import firehoseClient from '../../lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import moment from 'moment';
 
 const styles = {
   heading: {
@@ -57,6 +57,10 @@ const styles = {
   },
   hide: {
     display: 'none'
+  },
+  studentTooltip: {
+    display: 'flex',
+    textAlign: 'center'
   }
 };
 
@@ -80,29 +84,17 @@ class SectionProgress extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     showStandardsIntroDialog: PropTypes.bool,
-    getStandardsCoveredForScript: PropTypes.func.isRequired
+    studentTimestamps: PropTypes.object,
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId);
-    this.props.getStandardsCoveredForScript(this.props.scriptId);
-  }
-
-  componentDidUpdate() {
-    // Check if we are on a script that does NOT have standards associations and
-    // currentView is Standards. If so re-set currentView to Summary since
-    // Standards doesn't apply.
-    const hasStandards =
-      this.props.scriptData && this.props.scriptData.hasStandards;
-    if (this.props.currentView === ViewType.STANDARDS && !hasStandards) {
-      this.props.setCurrentView(ViewType.SUMMARY);
-    }
+    this.props.loadScript(this.props.scriptId, this.props.section.id);
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId);
-    this.props.getStandardsCoveredForScript(scriptId);
+    this.props.loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -137,8 +129,10 @@ class SectionProgress extends Component {
     );
   };
 
+  // ReactTooltip must be rendered outside of the grid, otherwise the css
+  // position property of the grid elements will mess up the tooltip position.
   renderTooltips() {
-    return this.props.scriptData.stages.map(stage => (
+    const lessonTooltips = this.props.scriptData.stages.map(stage => (
       <ReactTooltip
         id={tooltipIdForLessonNumber(stage.position)}
         key={tooltipIdForLessonNumber(stage.position)}
@@ -152,7 +146,35 @@ class SectionProgress extends Component {
         {stage.name}
       </ReactTooltip>
     ));
+
+    const studentTimestamps = this.props.studentTimestamps || {};
+    const studentTooltips = Object.keys(studentTimestamps).map(studentId => (
+      <ReactTooltip
+        id={tooltipIdForStudent(studentId)}
+        key={tooltipIdForStudent(studentId)}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        <span style={styles.studentTooltip}>
+          {i18n.lastProgress()}
+          <br />
+          {this.tooltipTextForStudent(studentId)}
+        </span>
+      </ReactTooltip>
+    ));
+
+    return lessonTooltips.concat(studentTooltips);
   }
+
+  tooltipTextForStudent = studentId => {
+    const {localeCode} = this.props;
+    if (localeCode) {
+      moment.locale(localeCode);
+    }
+    const timestamp = this.props.studentTimestamps[studentId];
+    return timestamp ? moment(timestamp).calendar() : i18n.none();
+  };
 
   navigateToScript = () => {
     firehoseClient.putRecord(
@@ -215,7 +237,8 @@ class SectionProgress extends Component {
           )}
         </div>
 
-        <ProgressViewHeader />
+        {levelDataInitialized && <ProgressViewHeader />}
+
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
             <FontAwesome
@@ -235,7 +258,7 @@ class SectionProgress extends Component {
             </div>
           )}
           {levelDataInitialized && this.renderTooltips()}
-          {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
+          {levelDataInitialized && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
                 showStandardsIntroDialog={
@@ -261,11 +284,16 @@ export default connect(
     scriptData: getCurrentScriptData(state),
     studentLevelProgress: getCurrentProgress(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
-    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
+    showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
+    studentTimestamps:
+      state.sectionProgress.studentTimestampsByScript[
+        state.scriptSelection.scriptId
+      ],
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
+    loadScript(scriptId, sectionId) {
+      dispatch(loadScript(scriptId, sectionId));
     },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
@@ -275,9 +303,6 @@ export default connect(
     },
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
-    },
-    getStandardsCoveredForScript(scriptId) {
-      dispatch(getStandardsCoveredForScript(scriptId));
     }
   })
 )(SectionProgress);

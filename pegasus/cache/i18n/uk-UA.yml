@@ -19,14 +19,14 @@ uk-UA:
     text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
+  csedweek_banner_teachers_text: Ви вчитель інформатики? Перегляньте інші ресурси
+    з предмету
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
     # інших.'
-  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
-    Приєднайтесь до # інших.'
   petition_join_others: 'Приєднатися до # інших'
   name: Ім’я
   email: Електронна пошта
@@ -404,6 +404,7 @@ uk-UA:
   homepage_action_text_signpetition: Підписати петицію
   homepage_action_text_wincelebritychat: Виграй чат зі знаменітостю
   homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
+  homepage_signpetition_dropdown_text: Погоджуюся
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
   homepage_banner_text_prizes: 'Година коду наближається знову, 7-13 грудня. '
   homepage_banner_link_prizes: 'Приєднуйтесь до найбільшої освітньої події в історії. '

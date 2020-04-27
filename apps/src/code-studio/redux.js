@@ -11,6 +11,7 @@ import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
+import projects from '../templates/projects/projectsRedux';
 import verifiedTeacher from './verifiedTeacherRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 
@@ -26,6 +27,7 @@ registerReducers({
   isRtl,
   responsive,
   publishDialog,
+  projects,
   verifiedTeacher,
   currentUser
 });

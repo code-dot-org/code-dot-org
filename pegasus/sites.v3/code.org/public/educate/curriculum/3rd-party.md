@@ -73,7 +73,6 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 | [Code.org](/educate) | Year-long CS Discoveries intro course that consists of six modular units, FREE. Year-long AP Computer Science Principles course, FREE. | In-person and online workshops available to partner districts |
 | [CodeCombat](https://codecombat.com/) | 11 game-based courses teaching Python and JavaScript. Includes 5 game and web development courses. College Board endorsed provider of curriculum and PD for AP CS Principles. First course and teacher resources are free. School site licenses start at $2500 | Free onboarding call, $500/online PD |
 | [CodeHS](https://codehs.com) | 6th-12th grade CS pathway. All curriculum is FREE! High school courses include introductory courses in JavaScript, Python, and Web Design, AP CSP, AP CS A, Cybersecurity, and Mobile Apps. Pro plans for schools start at $2400. For a full course list, visit [https://codehs.com/course/catalog](https://codehs.com/course/catalog). | Online PD courses are available for $1750. In-person PD workshops are available for schools and districts. Free summer workshops in select cities. For more information, visit [https://codehs.com/pd](https://codehs.com/pd). |
-| [CompuScholar](https://www.compuscholar.com/schools) | Full-year or single-semester courses for middle and high school students, with subjects like Java, C#, Python, HTML/CSS, Unity Video Game Design, Digital Literacy and AP CS A. Turn-key teaching system includes full solutions and teacher support. Flexible licensing options (per-student, site license, etc.). | FREE onboarding, FREE monthly webinars, FREE dedicated CSR for 1:1 support, FREE opportunities to take CompuScholar courses for personal growth |
 | [CS50](https://ap.cs50.school/) | Our curriculum includes 7 core units and 2 additional units that go beyond the scope of AP CSP. The curriculum includes all that teachers might need in order to teach CS50 in their own classrooms, including assignments, notes, slides, software, videos, and more. CS50 is free and open source. | 3 day in-person workshop, $1200/teacher + travel, tuition waivers available |
 | [Edhesive](https://edhesive.com/) | 3 full-year, blended courses: Intro to CS, AP CS Principles, AP CSA - Java; Intro CS also available as half-year course. Programming languages include Python, Scratch, Processing and Java. AP CSP is College Board-endorsed curriculum, and both AP CSP and AP CSA prepare students for the AP Exams. | 40-hour, self-paced online course; in-person PD available - please inquire. $1000 for full online PD course. |
 | [Exploring Computer Science](http://www.exploringcs.org/)| Year-long introductory high school course aimed at broadening participation in CS. 6 units, 6 weeks each | Week-long summer institute and quarterly one-day academic year workshops |
@@ -109,6 +108,12 @@ The National Science Foundation (NSF) has several existing funding opportunities
 
 ### [Codecademy](https://www.codecademy.com/learn)
 Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages
+
+### [CompuScholar](https://www.compuscholar.com/schools)
+CompuScholar’s online, turn-key teaching system for Java, C#, Python, HTML and Unity Game Design includes complete student and teacher material, aligned to state and national standards.  All teachers get free professional development and technical support.
+
+### [Create & Learn](https://www.create-learn.us/)
+Create & Learn offers live online classes on a wide range of computer science topics such as coding (Scratch, Python, etc.), AI, and Data Science. Our curriculum places a strong focus on understanding the real world applications and problem solving, as well as developing students’ creativity and critical thinking skills.
 
 ### [CS Unplugged](http://csunplugged.org/)
 Fun classroom exercises to teach computer science principles, no computers needed!

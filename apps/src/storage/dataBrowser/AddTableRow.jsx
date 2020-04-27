@@ -1,5 +1,6 @@
 import FirebaseStorage from '../firebaseStorage';
 import PendingButton from '../../templates/PendingButton';
+import experiments from '@cdo/apps/util/experiments';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
@@ -16,10 +17,14 @@ const INITIAL_STATE = {
 class AddTableRow extends React.Component {
   static propTypes = {
     columnNames: PropTypes.array.isRequired,
-    tableName: PropTypes.string.isRequired
+    tableName: PropTypes.string.isRequired,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
+
+  inExperiment = experiments.isEnabled(experiments.APPLAB_DATASETS);
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
@@ -29,13 +34,26 @@ class AddTableRow extends React.Component {
   }
 
   handleAdd = () => {
-    this.setState({isAdding: true});
-    FirebaseStorage.createRecord(
-      this.props.tableName,
-      _.mapValues(this.state.newInput, castValue),
-      () => this.setState(INITIAL_STATE),
-      msg => console.warn(msg)
-    );
+    try {
+      if (this.inExperiment) {
+        this.props.hideError();
+      }
+      const record = _.mapValues(this.state.newInput, inputString =>
+        castValue(inputString, /* allowUnquotedStrings */ false)
+      );
+      this.setState({isAdding: true});
+      FirebaseStorage.createRecord(
+        this.props.tableName,
+        record,
+        () => this.setState(INITIAL_STATE),
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      if (this.inExperiment) {
+        this.setState({isSaving: false});
+        this.props.showError();
+      }
+    }
   };
 
   handleKeyUp = event => {

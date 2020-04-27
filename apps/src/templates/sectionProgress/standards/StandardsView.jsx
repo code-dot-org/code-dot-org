@@ -50,7 +50,7 @@ class StandardsView extends Component {
           <h3>{i18n.standardsGetInvolved()}</h3>
           <SafeMarkdown
             markdown={i18n.standardsGetInvolvedDetails({
-              adminLink: pegasus('/administrator'),
+              adminLink: pegasus('/administrators'),
               parentLink: pegasus('/help'),
               teacherLink: '/courses'
             })}

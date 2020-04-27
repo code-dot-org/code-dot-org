@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#import-standards').click(function(e) {
     var script = $('#select option:selected').val();
     var url =
-      'http://www.codecurricula.com/metadata/' + script + '/standards.json';
+      'https://curriculum.code.org/metadata/' + script + '/standards.json';
     $.ajax({
       url: url,
       type: 'get'
@@ -14,7 +14,8 @@ $(document).ready(function() {
           contentType: 'application/json',
           data: JSON.stringify(data)
         }).done(function(data) {
-          $('#alert-message').text(data.message);
+          $('#alert-message').append('<div id=alert-details/>');
+          $('#alert-details').text(data.message);
         });
       })
       .fail(function() {

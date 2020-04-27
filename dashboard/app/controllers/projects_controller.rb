@@ -18,22 +18,28 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :login_required Whether you must be logged in to
   #   access this project type. Default: false.
   # @option {String|nil} :default_image_url If present, set this as the
+  # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
   # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
     artist: {
-      name: 'New Artist Project'
+      name: 'New Artist Project',
+      i18n: true
     },
     artist_k1: {
-      name: 'New K1 Artist Project'
+      name: 'New K1 Artist Project',
+      i18n: true
     },
     frozen: {
-      name: 'New Frozen Project'
+      name: 'New Frozen Project',
+      i18n: true
     },
     playlab: {
-      name: 'New Play Lab Project'
+      name: 'New Play Lab Project',
+      i18n: true
     },
     playlab_k1: {
-      name: 'New K1 Play Lab Project'
+      name: 'New K1 Play Lab Project',
+      i18n: true
     },
     starwars: {
       name: 'New Star Wars Project'
@@ -42,16 +48,20 @@ class ProjectsController < ApplicationController
       name: 'New Star Wars Blocks Project'
     },
     starwarsblocks: {
-      name: 'New Star Wars Expanded Blocks Project'
+      name: 'New Star Wars Expanded Blocks Project',
+      i18n: true
     },
     iceage: {
-      name: 'New Ice Age Project'
+      name: 'New Ice Age Project',
+      i18n: true
     },
     infinity: {
-      name: 'New Infinity Project'
+      name: 'New Infinity Project',
+      i18n: true
     },
     gumball: {
-      name: 'New Gumball Project'
+      name: 'New Gumball Project',
+      i18n: true
     },
     flappy: {
       name: 'New Flappy Project',
@@ -68,16 +78,20 @@ class ProjectsController < ApplicationController
       name: 'New Minecraft Code Connection Project'
     },
     minecraft_adventurer: {
-      name: 'New Minecraft Adventurer Project'
+      name: 'New Minecraft Adventurer Project',
+      i18n: true
     },
     minecraft_designer: {
-      name: 'New Minecraft Designer Project'
+      name: 'New Minecraft Designer Project',
+      i18n: true
     },
     minecraft_hero: {
-      name: 'New Minecraft Hero Project'
+      name: 'New Minecraft Hero Project',
+      i18n: true
     },
     minecraft_aquatic: {
-      name: 'New Minecraft Aquatic Project'
+      name: 'New Minecraft Aquatic Project',
+      i18n: true
     },
     applab: {
       name: 'New App Lab Project',
@@ -93,10 +107,12 @@ class ProjectsController < ApplicationController
     },
     spritelab: {
       name: 'New Sprite Lab Project',
+      i18n: true
     },
     dance: {
       name: 'New Dance Lab Project',
       default_image_url: '/blockly/media/dance/placeholder.png',
+      i18n: true
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -108,12 +124,15 @@ class ProjectsController < ApplicationController
     },
     bounce: {
       name: 'New Bounce Project',
+      i18n: true
     },
     sports: {
       name: 'New Sports Project',
+      i18n: true
     },
     basketball: {
       name: 'New Basketball Project',
+      i18n: true
     },
     algebra_game: {
       name: 'New Algebra Project'
@@ -128,19 +147,16 @@ class ProjectsController < ApplicationController
 
   @@project_level_cache = {}
 
-  # GET /projects
+  # GET /projects/:tab_name
+  # Where a valid :tab_name is (nil|public|libraries)
   def index
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
+    unless params[:tab_name] == 'public'
+      return redirect_to '/projects/public' unless current_user
+      return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
 
-    redirect_to projects_public_path unless current_user
-  end
-
-  # GET /projects/public
-  def public
-    render template: 'projects/index', locals: {is_public: current_user&.present?, limited_gallery: limited_gallery?}
+    @limited_gallery = limited_gallery?
+    @current_tab = params[:tab_name]
   end
 
   def project_and_featured_project_fields
@@ -201,7 +217,7 @@ class ProjectsController < ApplicationController
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
-      redirect_to projects_public_path, flash: {alert: 'Only project validators can feature projects.'}
+      redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
     end
   end
 
@@ -308,7 +324,7 @@ class ProjectsController < ApplicationController
     )
 
     if params[:key] == 'artist'
-      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+      @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
     if params[:key] == 'dance'

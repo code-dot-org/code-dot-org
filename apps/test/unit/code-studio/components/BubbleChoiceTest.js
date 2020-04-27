@@ -10,13 +10,21 @@ const fakeSublevels = [
     id: 1,
     display_name: 'Choice 1',
     thumbnail_url: 'some-fake.url/kittens.png',
-    url: '/s/script/stage/1/puzzle/2/sublevel/1'
+    url: '/s/script/stage/1/puzzle/2/sublevel/1',
+    description: 'Sublevel 1 is lots of fun',
+    position: 1,
+    letter: 'a',
+    status: 'perfect'
   },
   {
     id: 2,
     display_name: 'Choice 2',
     thumbnail_url: null,
-    url: '/s/script/stage/1/puzzle/2/sublevel/2'
+    url: '/s/script/stage/1/puzzle/2/sublevel/2',
+    description: 'Sublevel 2 has cool stuff to do',
+    position: 2,
+    letter: 'b',
+    status: 'not_tried'
   }
 ];
 
@@ -27,7 +35,10 @@ const DEFAULT_PROPS = {
     sublevels: fakeSublevels,
     previous_level_url: '/s/script/stage/1/puzzle/1',
     next_level_url: '/s/script/stage/1/puzzle/3',
-    script_url: '/s/script'
+    script_url: '/s/script',
+    name: 'Bubble Choice',
+    type: 'BubbleChoice',
+    teacher_markdown: 'Students should work on which ever bubble they like'
   }
 };
 
@@ -51,6 +62,14 @@ describe('BubbleChoice', () => {
         .getDOMNode()
         .src.includes(fakeSublevels[0].thumbnail_url)
     );
+  });
+
+  it('renders progress bubbles for sublevels', () => {
+    const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
+    const bubbles = wrapper.find('ProgressBubble');
+    assert.equal(2, bubbles.length);
+    assert.equal('perfect', bubbles.at(0).props().level.status);
+    assert.equal('not_tried', bubbles.at(1).props().level.status);
   });
 
   it('renders a placeholder div if sublevel thumbnail is not present', () => {

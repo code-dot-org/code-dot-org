@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -25,26 +27,32 @@ const styles = {
   placeholderThumbnail: {
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: color.lighter_gray
+    backgroundColor: color.lighter_gray,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  thumbnailOverlay: {
-    position: 'absolute',
-    width: THUMBNAIL_IMAGE_SIZE,
-    height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: 'rgba(0, 255, 0, 0.3)'
-  },
-  check: {
-    fontSize: THUMBNAIL_IMAGE_SIZE,
+  icon: {
+    fontSize: THUMBNAIL_IMAGE_SIZE - 50,
     color: color.white,
     opacity: 0.8
   },
   column: {
-    marginLeft: MARGIN * 2
+    marginLeft: MARGIN * 2,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start'
+  },
+  bubbleAndTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   title: {
     fontSize: 20,
     fontFamily: '"Gotham 5r"',
-    color: color.teal
+    color: color.teal,
+    marginLeft: 10
   },
   description: {
     marginTop: MARGIN
@@ -75,6 +83,8 @@ export default class BubbleChoice extends React.Component {
           description: PropTypes.string,
           thumbnail_url: PropTypes.string,
           url: PropTypes.string.isRequired,
+          position: PropTypes.number,
+          letter: PropTypes.string,
           perfect: PropTypes.bool
         })
       )
@@ -129,24 +139,29 @@ export default class BubbleChoice extends React.Component {
             style={styles.row}
             className="uitest-bubble-choice"
           >
-            {sublevel.perfect && (
-              <div style={styles.thumbnailOverlay}>
-                <FontAwesome icon="check" style={styles.check} />
-              </div>
-            )}
             {/* Render a square-shaped placeholder if we don't have a thumbnail. */}
             {sublevel.thumbnail_url ? (
               <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
             ) : (
-              <div
-                style={styles.placeholderThumbnail}
-                className="placeholder"
-              />
+              <div style={styles.placeholderThumbnail} className="placeholder">
+                <FontAwesome
+                  icon={getIconForLevel(sublevel)}
+                  style={styles.icon}
+                  key={sublevel.id}
+                />
+              </div>
             )}
             <div style={styles.column}>
-              <a href={sublevel.url + location.search} style={styles.title}>
-                {sublevel.display_name}
-              </a>
+              <div style={styles.bubbleAndTitle}>
+                <ProgressBubble
+                  level={sublevel}
+                  disabled={false}
+                  hideToolTips={true}
+                />
+                <a href={sublevel.url + location.search} style={styles.title}>
+                  {sublevel.display_name}
+                </a>
+              </div>
               {sublevel.description && (
                 <div style={styles.description}>{sublevel.description}</div>
               )}

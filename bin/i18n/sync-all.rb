@@ -180,6 +180,13 @@ class I18nSync
       "hoc i18n sync"
     )
 
+    I18nScriptUtils.git_add_and_commit(
+      [
+        "i18n/locales/source/markdown/",
+      ],
+      "pegasus markdown i18n sync"
+    )
+
     `git push origin #{IN_UP_BRANCH}`
     in_up_pr = GitHub.create_pull_request(
       base: 'staging',

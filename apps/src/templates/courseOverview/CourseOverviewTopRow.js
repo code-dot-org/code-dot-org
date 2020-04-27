@@ -27,6 +27,7 @@ export default class CourseOverviewTopRow extends Component {
       <div style={styles.main}>
         {resources.map(({type, link}) => (
           <Button
+            __useDeprecatedTag
             key={type}
             style={{marginRight: 10}}
             text={stringForType[type]}

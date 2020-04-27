@@ -10,10 +10,10 @@
 -if items.count > 0
   -if shuffle
     -items = items.to_a.shuffle.to_h
-  %h3{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+  %h3{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}!=heading
 
   -unless subheading.nil_or_empty?
-    %p=subheading
+    %p!=subheading
 
   .learnpage{:style=>'position:relative'}
 
@@ -31,14 +31,14 @@
             .slide.clear{:style=>styling}
               .slide-img<
                 %a{:href=>url, :target=>'_blank'}<
-                  %img{:src=>tutorial[:image].sub("/images/", "https://code.org/images/fit-520/").sub(".png", ".jpg")}
+                  %img{:src=>tutorial[:image].sub("/images/", CDO.code_org_url("/images/fit-520/")).sub(".png", ".jpg")}
               .slide-text
                 %a{:href=>url, :target=>'_blank'}<
                   -unless international_layout
                     %h2= tutorial[:name]
                 %h3= tutorial[:orgname]
                 -unless international_layout
-                  %p.slide-longdescription= tutorial[:longdescription]
+                  %p.slide-longdescription!= tutorial[:longdescription]
                   %p.slide-shortdescription= tutorial[:shortdescription]
                   .slide-tags= tags
                   .slide-participants-count<

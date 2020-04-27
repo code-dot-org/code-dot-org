@@ -24,10 +24,11 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
 experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
 experiments.STUDENT_LIBRARIES = 'student-libraries';
-experiments.STANDARDS_REPORT = 'standardsReport';
 experiments.BETT_DEMO = 'bett-demo';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
+experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
+  'teacher-dashboard-section-buttons-alternate-text';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

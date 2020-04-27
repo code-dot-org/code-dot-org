@@ -44,12 +44,24 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
   end
 
   test 'cannot create CSF scholarship info with CSP-specific scholarship status' do
-    csf_scholarship_info = build :pd_scholarship_info, course: COURSE_KEY_MAP[COURSE_CSF], scholarship_status: Pd::ScholarshipInfo::YES_EIR
+    csf_scholarship_info = build :pd_scholarship_info, course: COURSE_KEY_MAP[COURSE_CSF], scholarship_status: Pd::ScholarshipInfoConstants::YES_EIR
     assert_not_nil csf_scholarship_info.errors[:scholarship_status]
   end
 
   test 'can create CSP scholarship info with CSP-specific scholarship status' do
-    csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfo::YES_EIR
+    csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfoConstants::YES_EIR
     assert csp_scholarship_info.valid?
+  end
+
+  # Test confirms that we can get a friendly scholarship status (without error)
+  test 'can get friendly scholarship name with CSP-specific scholarship status' do
+    csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfoConstants::YES_EIR
+    csp_scholarship_info.friendly_status_name
+  end
+
+  # Test confirms that we can get a friendly scholarship status (without error)
+  test 'can get friendly scholarship name with non-course specific scholarship status' do
+    csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfoConstants::NO
+    csp_scholarship_info.friendly_status_name
   end
 end

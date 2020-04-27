@@ -27,7 +27,6 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {loadScript} from '../sectionProgressRedux';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
@@ -54,6 +53,9 @@ const styles = {
   },
   table: {
     width: '100%'
+  },
+  currentCourse: {
+    marginBottom: 0
   }
 };
 
@@ -72,7 +74,6 @@ class StandardsReport extends Component {
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number,
-    getStandardsCoveredForScript: PropTypes.func.isRequired,
     setTeacherCommentForReport: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     lessonsByStandard: PropTypes.object
@@ -85,8 +86,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    this.props.loadScript(scriptIdFromTD);
-    this.props.getStandardsCoveredForScript(scriptIdFromTD);
+    this.props.loadScript(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -144,7 +144,9 @@ class StandardsReport extends Component {
                 teacherName={this.props.teacherName}
               />
               <div style={styles.reportContent}>
-                <h2 style={styles.headerColor}>{i18n.currentCourse()}</h2>
+                <h2 style={{...styles.headerColor, ...styles.currentCourse}}>
+                  {i18n.currentCourse()}
+                </h2>
                 <StandardsReportCurrentCourseInfo
                   section={this.props.section}
                   scriptFriendlyName={this.props.scriptFriendlyName}
@@ -161,14 +163,6 @@ class StandardsReport extends Component {
                   </div>
                 )}
                 <h2 style={styles.headerColor}>
-                  {i18n.CSTAStandardsPracticed()}
-                </h2>
-                <StandardsProgressTable
-                  style={styles.table}
-                  isViewingReport={true}
-                />
-                <StandardsLegendForPrint />
-                <h2 style={styles.headerColor}>
                   {i18n.standardsHowToForPrint()}
                 </h2>
                 <SafeMarkdown
@@ -180,11 +174,19 @@ class StandardsReport extends Component {
                   })}
                 />
                 <h2 style={styles.headerColor}>
+                  {i18n.CSTAStandardsPracticed()}
+                </h2>
+                <StandardsProgressTable
+                  style={styles.table}
+                  isViewingReport={true}
+                />
+                <StandardsLegendForPrint />
+                <h2 style={styles.headerColor}>
                   {i18n.standardsGetInvolved()}
                 </h2>
                 <SafeMarkdown
                   markdown={i18n.standardsGetInvolvedDetailsForPrint({
-                    adminLink: pegasus('/administrator'),
+                    adminLink: pegasus('/administrators'),
                     parentLink: pegasus('/help'),
                     teacherLink: '/courses'
                   })}
@@ -222,11 +224,8 @@ export default connect(
     lessonsByStandard: lessonsByStandard(state)
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
-    },
-    getStandardsCoveredForScript(scriptId) {
-      dispatch(getStandardsCoveredForScript(scriptId));
+    loadScript(scriptId, sectionId) {
+      dispatch(loadScript(scriptId, sectionId));
     },
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));

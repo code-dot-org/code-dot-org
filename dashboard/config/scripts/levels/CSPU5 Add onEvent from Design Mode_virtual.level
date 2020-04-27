@@ -1,0 +1,91 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:57.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "showElement": null,
+      "hideElement": null,
+      "deleteElement": null,
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "rekFzZUJd6xk+soKqRLxkkGXuqBxi0o1wHmJkDYN354EDO2i915c95r96j1r\ne3cr\n",
+    "embed": "false",
+    "short_instructions": "Add an event handler for the button using the \"Insert and show\" link in the Design Mode Events tab. (Click to see full instructions).",
+    "long_instructions": "# Add onEvent from Design Mode!\r\n<img src=\"https://images.code.org/9ff41c3ea30ece355e91eaca5cdc1e36-image-1444417748945.gif\"  style=\"width: 250px; float: right\">\r\n\r\nDesign Mode has a shortcut for you to add `onEvent` to your code for specific UI Element.  It's quite handy.\r\n\r\n**You try it:** Add an event handler to a button from Design Mode\r\n\r\n**Design Mode**\r\n  * A Red button has already been added to the app.\r\n  * In Design Mode click on the button to select it\r\n  * Click the **EVENTS tab** and then click the link that says **Insert and Show Code**\r\n  * You may change the ID if you like\r\n\r\nThis will insert an `onEvent` block with the ID and \"click\" filled in already.\r\n\r\nIt also inserts a line of code with a command we haven't seen yet: `console.log`.\r\n\r\n**Run. Test. Debug**\r\n* Run the program and click on the button to see what happens\r\n  * **Hint:** look at the **Debug Console** area below the coding workspace.\r\n* If nothing happens, retrace your steps and try again.\r\n\r\nOnce you see a message displayed in the Debug Console click finish to move on.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "instructions_important": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.839063);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 45px; width: 155px; font-size: 25px; color: rgb(255, 255, 255); background-color: rgb(188, 26, 26); position: absolute; left: 80px; top: 150px;\">Click me!</button><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 220px; height: 35px; position: absolute; left: 60px; top: 240px;\" id=\"label1\">Add an event handler through design mode for this button</label></div></div>",
+    "log_conditions": [
+      {
+        "entries": [
+          "onEvent"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Does your code have an event handler for the button? There should be an onEvent block that runs when the button is clicked."
+      },
+      {
+        "entries": [
+          "console.log"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "Do you have a console.log message that displays when the button is clicked?"
+      },
+      {
+        "entries": [
+          "onEvent",
+          "console.log"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "When the program runs and the button is clicked, it should trigger an event handler that immediately displays a message with console.log. Is that happening?"
+      }
+    ],
+    "parent_level_id": 17105,
+    "name_suffix": "_virtual",
+    "show_debug_watch": "true",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

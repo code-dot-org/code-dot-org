@@ -40,7 +40,8 @@ import {
 } from '../permission';
 import {
   Courses,
-  Subjects
+  Subjects,
+  SubjectNames
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
@@ -50,8 +51,7 @@ const styles = {
     border: 'none'
   },
   noFeeContainer: {
-    paddingTop: 7,
-    paddingBottom: 12
+    paddingBottom: 7
   },
   yesFeeRadio: {
     width: '100%'
@@ -406,7 +406,7 @@ export class WorkshopForm extends React.Component {
           text: 'Yes, it is funded. Please pay the Facilitator directly.'
         }
       );
-    } else {
+    } else if (this.state.subject !== 'Workshop for Returning Teachers') {
       options.push({
         value: {funded: true, funding_type: null},
         text: 'Yes, it is funded.'
@@ -454,6 +454,7 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
+    const showFeeInput = isCsf;
     const showMapChoice = isCsf;
 
     return (
@@ -462,6 +463,7 @@ export class WorkshopForm extends React.Component {
           Workshop Type Options&nbsp;
           {isCsf && <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>}
         </ControlLabel>
+        <div style={{height: 7}}>&nbsp;</div>
         {this.state.showTypeOptionsHelpDisplay && isCsf && (
           <FormGroup>
             <p>
@@ -478,7 +480,14 @@ export class WorkshopForm extends React.Component {
         )}
         <Row>
           <Col smOffset={1}>
+            <Row>
+              {showFeeInput && (
+                <Col sm={6}>{this.renderFeeInput(validation)}</Col>
+              )}
+            </Row>
             {showMapChoice && this.renderOnMapRadios(validation)}
+            {/* A small gap to resemble the gap below the fee input. */}
+            {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
             {this.renderFundedSelect(validation)}
           </Col>
         </Row>
@@ -551,6 +560,11 @@ export class WorkshopForm extends React.Component {
     if (this.shouldRenderSubject()) {
       const options = Subjects[this.state.course]
         .filter(subject => {
+          // Temporary: Don't show the new workshop type as an option while we're still building it.
+          if (subject === SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS) {
+            return false;
+          }
+
           // Only a WorkshopAdmin should be shown a Virtual workshop.
           return (
             subject.indexOf('Virtual') === -1 ||
@@ -594,7 +608,7 @@ export class WorkshopForm extends React.Component {
 
     return (
       <FormGroup validationState={validation.style.fee}>
-        <ControlLabel>Fee</ControlLabel>
+        <ControlLabel>Fee information for participants</ControlLabel>
 
         <div style={styles.noFeeContainer}>
           <Radio
@@ -943,7 +957,6 @@ export class WorkshopForm extends React.Component {
 
   renderForm() {
     const validation = this.validate(this.state.shouldValidate);
-    const showFeeInput = this.state.course === 'CS Fundamentals';
 
     return (
       <Grid>
@@ -998,7 +1011,7 @@ export class WorkshopForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col sm={1}>
+            <Col sm={2}>
               <FormGroup validationState={validation.style.capacity}>
                 <ControlLabel>Capacity</ControlLabel>
                 <FormControl
@@ -1016,9 +1029,6 @@ export class WorkshopForm extends React.Component {
             </Col>
             <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
             <Col sm={3}>{this.renderSubjectSelect(validation)}</Col>
-            {showFeeInput && (
-              <Col sm={4}>{this.renderFeeInput(validation)}</Col>
-            )}
           </Row>
           <Row>
             <Col sm={10}>

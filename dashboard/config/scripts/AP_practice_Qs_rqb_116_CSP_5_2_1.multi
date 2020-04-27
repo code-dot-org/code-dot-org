@@ -1,4 +1,5 @@
 name 'AP_practice_Qs_rqb_116_CSP_5_2_1'
+editor_experiment ''
 wrong 'Algorithms'
 right 'Abstraction'
 wrong 'Iteration'
@@ -6,23 +7,24 @@ wrong 'Scalability'
 markdown <<MARKDOWN
 In order to manage complexity, programmers often create a function or procedure which combines several programming statements.  This is an example of what programming concept?
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **5.2.1** and Essential Knowledge statements: **5.2.1E**
-<hr>
- (A) This choice is NOT correct.
+
+---
+(A) This choice is NOT correct.
 While the code in the procedure/function can be properly referred to as an algorithm, the process of "hiding" the algorithm inside a procedure/function is abstraction.
 
-<hr>
- (B) This IS the correct answer.  
+---
+(B) This IS the correct answer.  
 Abstraction not only manages complexity, it facilitates more rapid code editing, and compartmentalization.
 
-<hr>
- (C) This choice is NOT correct.
+---
+(C) This choice is NOT correct.
 Iteration is sequential repetition.
 While procedures/functions may be repeated, they themselves are not iterative. 
 
-<hr>
- (D) This choice is NOT correct.
+---
+(D) This choice is NOT correct.
 Scalability refers to the ease with which a process or system can sustain substantial growth
-
 MARKDOWN

@@ -1,0 +1,84 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:52.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Improve the button by choosing a descriptive and meaningful ID. (Click to see full instructions)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "long_instructions": "# Descriptive IDs\r\n\r\n**You try it** - give your buttons **descriptive and meaningful IDs** rather than the default `button1`, `button2` and so forth.\r\n\r\nAfter you change the ID in Design Mode remember to:\r\n\r\n* **Change the event handler code** so that it correctly references the new IDs of the buttons\r\n* **Run - Test - Debug** the program to make sure it works, and debug any problems.\r\n\r\n<details>\r\n\r\n<summary>\r\n<strong>Reminder:</strong> Rules About IDs [click to expand]\r\n</summary>\r\n\r\nIn making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...\r\n\r\n<li> are case sensitive</li>\r\n<li> cannot contain spaces.\r\n<li>  *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.\r\n<li>  can contain hyphens (\"-\"), underscores (\"_\"), colons (\":\"), or periods (\".\").\r\n\r\n\r\n</details>\r\n",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": [
+
+    ],
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "parent_level_id": 17082,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "preload_asset_list": null,
+    "widget_mode": "false",
+    "libraries_enabled": "false"
+  },
+  "published": true,
+  "notes": "Removed turtle",
+  "audit_log": "[{\"changed_at\":\"2018-09-19 20:09:28 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 03:47:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-30 17:35:57 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2020-04-01 19:43:02 +0000\",\"changed\":[\"notes\",\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-01 19:45:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

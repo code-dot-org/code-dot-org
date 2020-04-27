@@ -1,0 +1,82 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:18.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "assign_x": null,
+      "console.log": null,
+      "declareAssign_x_promptNum": null,
+      "ifBlock": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# You try it\r\n\r\nLet's modify the driving age example to add an `else` clause.\r\n\r\n* **Add an `else`** to the if-statement.\r\n* **Add a console.log** message inside the else clause that says something like \"sorry you can't drive yet\".\r\n\r\nYou can add an else-statement by clicking on the `+` attached to the if statement.  We've provided some starting code.\r\n\r\n**BONUS** - if they are not old enough to drive you could do the math and tell them how many years they have to wait.",
+    "start_blocks": "console.log(\"Driver Verification\");\r\nvar age = promptNum(\"Please Enter Your Age\");\r\nif(age >= 16){\r\n  console.log(\"It looks like you're old enough to drive!\");\r\n}\r\nconsole.log(\"Thanks for verifying.\");\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "short_instructions": "Use console.log to print out the different boolean expressions below to see what information they return. (Click to see full instructions)",
+    "lock_zero_param_functions": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "log_conditions": [
+      {
+        "entries": [
+          "promptNum"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You need to prompt the user to enter a number."
+      }
+    ],
+    "palette_category_at_start": "control",
+    "teacher_markdown": "Note this level cannot be validated.",
+    "encrypted_examples": "Mp3ww1bSikfU1abE3WWGeHLyor3WEIWBJbmdadigKMXghHKQtbRz0yqFPSWI\nza8c\n",
+    "parent_level_id": 17221,
+    "name_suffix": "_virtual",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-07 17:16:37 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"log_conditions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

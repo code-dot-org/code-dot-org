@@ -72,11 +72,9 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner_wa.mappings.find_or_create_by!(state: "WA")
 
     regional_partner_wa_98104 = create :regional_partner, name: "partner_WA_98104"
-    regional_partner_wa_98104.mappings.find_or_create_by!(state: "WA")
     regional_partner_wa_98104.mappings.find_or_create_by!(zip_code: "98104")
 
     regional_partner_wa_98105 = create :regional_partner, name: "partner_WA_98105"
-    regional_partner_wa_98105.mappings.find_or_create_by!(state: "WA")
     regional_partner_wa_98105.mappings.find_or_create_by!(zip_code: "98105")
 
     regional_partner_ny = create :regional_partner, name: "partner_NY"
@@ -92,13 +90,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     regional_partner_70808 = create :regional_partner, name: "partner_70808"
     regional_partner_70808.mappings.find_or_create_by!(zip_code: "70808")
-
-    regional_partner_fl_32313 = create :regional_partner, name: "partner_FL_32313"
-    regional_partner_fl_32313.mappings.find_or_create_by!(state: "FL")
-    regional_partner_fl_32313.mappings.find_or_create_by!(zip_code: "32313")
-
-    regional_partner_32313 = create :regional_partner, name: "partner_32313"
-    regional_partner_32313.mappings.find_or_create_by!(zip_code: "32313")
 
     create :regional_partner, name: "partner_nomappings"
 
@@ -131,12 +122,8 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     # state=WA/zip=98104 [state matches many, zip matches one]
     assert_equal regional_partner_wa_98104, RegionalPartner.find_by_region("98104", "WA")
 
-    # state=WA [state matches many, indeterminate result]
-    assert_includes [regional_partner_wa, regional_partner_wa_98104, regional_partner_wa_98105],
-      RegionalPartner.find_by_region(nil, "WA")
-
-    # zip=32313 [zip matches many, indeterminate result]
-    assert_includes [regional_partner_fl_32313, regional_partner_32313], RegionalPartner.find_by_region("32313", nil)
+    # state=WA [state matches partner that covers whole state, not specific zips in state]
+    assert_equal regional_partner_wa, RegionalPartner.find_by_region(nil, "WA")
   end
 
   # TODO: remove this test when workshop_organizer is deprecated

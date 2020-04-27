@@ -209,7 +209,7 @@ describe('Applab Exporter,', function() {
         callback: null,
         sublevelCallback: null
       },
-      sendToPhone: true,
+      isUS: true,
       send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
       copyrightStrings: {
         thank_you:

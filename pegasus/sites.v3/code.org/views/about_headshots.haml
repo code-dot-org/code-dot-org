@@ -16,7 +16,7 @@
           %h3{:style=>'min-height: 20px;'}
             = person[:name_s]
         -unless person[:title_s].nil_or_empty?
-          %p{:style=>'min-height: 40px;'}= person[:title_s]
-        %p{:style=>'font-size: 13px;  margin-bottom: 50px;'}= person[:description_t]
+          %p{:style=>'min-height: 40px;'}!= person[:title_s]
+        %p{:style=>'font-size: 13px;  margin-bottom: 50px;'}!= person[:description_t]
 
   %br{:style=>'clear: both;'}

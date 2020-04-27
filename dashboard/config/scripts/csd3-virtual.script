@@ -1,0 +1,155 @@
+login_required true
+hideable_stages true
+student_detail_progress_view true
+has_verified_resources true
+project_widget_visible true
+project_widget_types ["gamelab", "weblab"]
+project_sharing true
+
+lesson_group 'csd3_1', display_name: 'Chapter 1: Images and Animations'
+stage 'Sample Programs', flex_category: 'csd3_1'
+level 'CSD U3 Entertainment Sample 4_virtual', progression: 'Sample Programs'
+level 'CSD U3 Entertainment Sample 3_virtual', progression: 'Sample Programs'
+
+stage 'Drawing in Game Lab', flex_category: 'csd3_1'
+level 'CSD U3 rect_virtual', named: true
+level 'CSD: Drawing in Game Lab 1_virtual', named: true
+level 'CSD U3 Drawing Squares to Corners_virtual', named: true
+level 'CSD: Drawing in Game Lab 2_virtual', named: true
+level 'CSD U3 fill_virtual', progression: 'Drawing'
+level 'CSD U3 sequence_virtual', progression: 'Drawing'
+level 'CSD U3 ellipse_virtual', progression: 'Drawing'
+level 'CSD U3 ellipse2_virtual', progression: 'Drawing'
+level 'CSD U3 debug_virtual', progression: 'Drawing', assessment: true
+level 'CSD U3 drawing practice choice_2020_virtual', progression: 'Drawing'
+level 'CSD U3 drawing challenges_2020_virtual', named: true
+
+stage 'Shapes and Parameters', flex_category: 'csd3_1'
+level 'CSD U3 Random Taller Rectangle_virtual', progression: 'New Shapes'
+level 'CSD U3 Random Ellipse Behind_2018_virtual', progression: 'More Parameters'
+level 'CSD U3 Random background_virtual', progression: 'More Parameters'
+level 'CSD U3 Random background2_virtual', progression: 'More Parameters'
+level 'CSD U3 Random Debug Grass_virtual', progression: 'More Parameters'
+level 'CSD Games parameters practice_2020_virtual', progression: 'More Parameters'
+level 'CSD U3 Random Debug Cloud_2018_virtual', progression: 'More Parameters', assessment: true
+level 'CSD Games Parameters challenge_2020_virtual', named: true
+level 'CSD U3 parameters shape scene_virtual', named: true
+
+stage 'Variables', flex_category: 'csd3_1'
+level 'CSD U3 Variables Predict Where X_virtual', progression: 'Code Prediction'
+level 'Introduction to Variables - Part 1_virtual', named: true
+level 'CSD U3 Variables Predict Where XY_virtual', progression: 'Variables'
+level 'CSD U3 Variables naming rules v2_2018_virtual', progression: 'Variables'
+level 'CSD U3 Variables Draw Poppy_virtual', progression: 'Variables'
+level 'CSD Games variables practice_2020_virtual', progression: 'Variables'
+level 'CSD U3 Variables assessment_virtual', progression: 'Variables', assessment: true
+level 'CSD Games variables challenge_2020_virtual', named: true
+
+stage 'Random Numbers', flex_category: 'csd3_1'
+level 'CSD U3 Random random ellipse_2018_virtual', progression: 'Exploring Random Numbers'
+level 'CSD U3 Random random ellipse2_2018_virtual', progression: 'Using Random Numbers'
+level 'CSD U3 Variables random with assignment_virtual', progression: 'Using Random Numbers'
+level 'CSD U3 Variables random reassign_virtual', progression: 'Using Random Numbers'
+level 'CSD games random practice_2020_virtual', progression: 'Using Random Numbers'
+level 'CSD U3 Random rainbow snake_2018_virtual', progression: 'Using Random Numbers', assessment: true
+level 'CSD games random challenge_2020_virtual', named: true
+
+stage 'Sprites and Animations', flex_category: 'csd3_1'
+level 'CSD U3 Sprites Exploration_virtual', named: true
+level 'CSD: Sprites in Game Lab_virtual', named: true
+level 'CSD U3 Sprites intro sprites_virtual', progression: 'Intro to Sprites'
+level 'CSD U3 Sprites intro debug_virtual', progression: 'Intro to Sprites'
+level 'CSD U3 Sprites anitab 1_virtual', progression: 'Intro to Sprites'
+level 'CSD: Animation Tab_virtual', named: true
+level 'CSD U3 Sprites sequencing_virtual', progression: 'Adding Images'
+level 'CSD Games Sprites practice_2020_virtual', progression: 'Adding Images'
+level 'CSD U3 drawSprites placement match_2019_pilot_2020_virtual', progression: 'Adding Images', assessment: true
+level 'CSD U3 Sprites assessment_virtual', progression: 'Adding Images', assessment: true
+level 'CSD Games Sprites Challenges_2020_virtual', named: true
+
+stage 'Sprite Properties', flex_category: 'csd3_1'
+level 'CSD Games properties predict_virtual', named: true
+level 'CSD Games properties xy_virtual', progression: 'Sprite Properties'
+level 'CSD Games properties new_virtual', progression: 'Sprite Properties'
+level 'CSD Games properties assessment_virtual', progression: 'Sprite Properties', assessment: true
+level 'CSD Games Properties challenge_2020_virtual', named: true
+
+stage 'Text and Captioned Scenes', flex_category: 'csd3_1'
+level 'CSD U3 Scene Example_2018_virtual', named: true
+level 'CSD U3 Sprites text_virtual', progression: 'Making Scenes'
+level 'CSD U3 Sprites text debug_2018_virtual', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene drawing_virtual', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene sprites_virtual', progression: 'Making Scenes', assessment: true
+level 'CSD U3 Sprites scene text_virtual', progression: 'Making Scenes'
+level 'CSD U3 Sprites scene challenge_virtual', progression: 'Challenge'
+
+stage 'The Draw Loop', flex_category: 'csd3_1'
+level 'CSD: Introduction to the Draw Loop_virtual', named: true
+level 'CSD U3 Draw Loop Plugged predict 1_virtual', progression: 'Shapes and the Draw Loop'
+level 'CSD U3 Draw Loop Plugged orange and green_virtual', progression: 'Shapes and the Draw Loop'
+level 'CSD U3 Draw Loop Plugged predict 2_virtual', progression: 'Shapes and the Draw Loop'
+level 'CSD U3 dancing alien_virtual', progression: 'Sprites and the Draw Loop'
+level 'CSD U3 Draw Loop Plugged wiggle sprite x_virtual', progression: 'Sprites and the Draw Loop'
+level 'CSD U3 Draw Loop Plugged wiggle sprite y_virtual', progression: 'Sprites and the Draw Loop'
+level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_virtual', progression: 'Sprites and the Draw Loop'
+level 'CSD U3 Draw Loop Plugged update your scene_virtual', progression: 'Animate Your Scene', assessment: true
+level 'CSD U3 L7 Freeplay_virtual', progression: 'Challenge'
+
+stage 'Sprite Movement', flex_category: 'csd3_1'
+level 'CSD: Animating Sprite Movement_virtual', named: true
+level 'CSD U3 - Simple Counter Predict_virtual', progression: 'Movement with the Counter Pattern'
+level 'CSD U3 Sprite Movement Right_virtual', progression: 'Movement with the Counter Pattern'
+level 'CSD U3 Sprite Movement Left_virtual', progression: 'Movement with the Counter Pattern'
+level 'CSD U3 Sprite Movement Predict_virtual', progression: 'Movement with the Counter Pattern', assessment: true
+level 'CSD U3 Diagonal Movement_virtual', progression: 'Movement with the Counter Pattern'
+level 'CSD U3 Watcher Predict_virtual', progression: 'Animating Sprites'
+level 'CSD U3 Watcher Debug_virtual', progression: 'Animating Sprites'
+level 'CSD U3 Movement Fish_virtual', progression: 'Animating Sprites'
+level 'CSD U3 Movement Gears_virtual', progression: 'Animating Sprites'
+level 'CSD U3 Movement Your Own 1_virtual', progression: 'Create Your Own Animation'
+level 'CSD U3 Movement Your Own 2_virtual', progression: 'Create Your Own Animation', assessment: true
+level 'virtual-animation-bubble-choice', progression: 'Movement Challenges'
+
+stage 'Conditionals', flex_category: 'csd3_1'
+level 'CSD U3 Boolean Predict_virtual', progression: 'Make a Prediction'
+level 'CSD U3 - Booleans Video_virtual', named: true
+level 'CSD U3 Boolean Modify_virtual', progression: 'Boolean Comparison'
+level 'CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual', progression: 'Boolean Comparison'
+level 'CSD U3 - conditionals - transition_virtual', progression: 'Boolean Comparison'
+level 'CSD U3 Conditionals Apple_2018_virtual', progression: 'Boolean Comparison'
+level 'csd U3 conditional statements video_virtual', named: true
+level 'CSD U3 - conditionals - first conditional_virtual', progression: 'Basic Conditionals'
+level 'CSD U3 Conditionals Apple 2_2018_virtual', progression: 'Basic Conditionals', assessment: true
+level 'virtual_conditional_bubble_choice', progression: 'Conditionals Challenges'
+
+stage 'Keyboard Input', flex_category: 'csd3_1'
+level 'CSD U3 Keypress Boolean_2018_virtual', progression: 'Keyboard Input'
+level 'CSD U3 keydown conditional_2018_virtual', progression: 'Keyboard Input'
+level 'CSD U3 UP_ARROW_2018_virtual', progression: 'Keyboard Input'
+level 'CSD U3 Input Fish_virtual', progression: 'Keyboard Input'
+level 'CSD U3 Input Gears_virtual', progression: 'Keyboard Input'
+level 'CSD U3 Direction Arrows_2018_virtual', progression: 'Keyboard Input', assessment: true
+level 'CSD U3 Direction Animations_2018_virtual', progression: 'Keyboard Input'
+level 'virtual_user-input_bubble_choice', progression: 'Keyboard Input Challenges'
+
+stage 'Other Forms of Input', flex_category: 'csd3_1'
+level 'CSD U3 if else predict_virtual', named: true
+level 'CSD U3 - Conditionals Video_virtual', named: true
+level 'CSD U3 If Else_virtual', progression: 'Input with If-Else'
+level 'CSD U3 Else_virtual', progression: 'Input with If-Else', assessment: true
+level 'CSD U3 Mouse Input Bee 1_virtual', progression: 'More Input'
+level 'CSD U3 Mouse Input Bee 2_virtual', progression: 'More Input'
+level 'CSD U3 Keypress Watchers_virtual', progression: 'More Input'
+level 'CSD U3 Keypress Matching_2018_2019_pilot_2020_virtual', progression: 'More Input'
+level 'CSD U3 - complex - mouse down_virtual', progression: 'More Input'
+level 'CSD U3 - complex - key up and down_virtual', progression: 'More Input'
+level 'CSD U3 - complex - mouse move_virtual', progression: 'More Input'
+level 'virtual_more_input_bubble_choice', progression: 'Input Challenges'
+
+stage 'Project - Interactive Card', flex_category: 'csd3_1'
+level 'CSD U3 Interactive Card Exemplar_virtual', named: true
+level 'CSD U3 Card Examples_2018_2019_pilot_2020_virtual', named: true
+level 'CSD U3 Interactive Card Background_virtual', progression: 'Project Work'
+level 'CSD U3 Interactive Card Sprites_virtual', progression: 'Project Work'
+level 'CSD U3 Interactive Card User Input_virtual', progression: 'Project Work'
+level 'CSD U3 Interactive Card Final_virtual', progression: 'Project Work'

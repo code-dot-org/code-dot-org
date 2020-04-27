@@ -16,14 +16,14 @@ lt-LT:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ar Jūs informatikos mokytojas(-a)? Peržiūrėkite kitus
     CSEdWeek išteklius</a>'
+  csedweek_banner_teachers_text: Ar Jūs informatikos mokytojas(-a)? Peržiūrėkite kitus
+    CSEdWeek išteklius
   n_have_learned_an_hoc: "<h1>Išmėginkite</h1><h2>„Programavimo valandą“</h2><h3>#
     served</h3>"
   anybody_can_learn: Išmokti gali kiekvienas.
   learn_now: Išmokite dabar
   petition_message: Kiekvienas mokinys turėtų turėti galimybę mokytis programavimo
   petition_sign_message: 'Jei sutinkate, parašykite savo vardą. Prijunkite # kitus.'
-  petition_sign_message_support: 'Jei sutinkate ir norite mus paremti, pasirašykite
-    savo vardą. Prisijunkite # prie kitų.'
   petition_join_others: 'Prisijungti # prie kitų'
   name: Vardas
   email: El. pašto adresas
@@ -230,6 +230,7 @@ lt-LT:
   homepage_action_text_learn: Pradėti mokytis
   homepage_action_text_signpetition: Pasirašyti peticiją
   homepage_signpetition_dropdown: Aš sutinku &#x25BE;
+  homepage_signpetition_dropdown_text: Sutinku
   homepage_banner_text_main: Code.org ir College Board susijungė tam, kad pagerintų
     informatikos kokybę ir įvairovę.
   homepage_banner_text_link: Sužinok daugiau

@@ -19,12 +19,18 @@ ar-SA:
     قم بتخطيط "ساعة البرمجة" </a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى CSEdWeek</a>'
+  csedweek_banner_teachers_text: " هل أنت مدرس علوم الحاسوب؟ انظر موارد أخرى"
   n_have_learned_an_hoc: "<h1>جرّب</h1><h2>ساعة من البرمجة</h2><h3># تم حلّها</h3>"
+  try_hoc_num_served_markdown: |-
+    # حاول\
+    \
+    ## ساعة البرمجة\
+    \
+    ### %{num}خدم #Try an
   anybody_can_learn: بإمكان أي شخص أن يتعلم.
   learn_now: تعلم الآن
   petition_message: كل طالب في كل مدرسة يجب أن يحصل على الفرصة لتعلم علوم الحاسوب
   petition_sign_message: 'اذا كنت توافق , وقع بأستخدام اسمك . شارك # مع الاخرين.'
-  petition_sign_message_support: اذا اردت مساعدتنا , سجل أسمك. انضم مع الاخرين.
   petition_join_others: انضم الى اﻷخرين
   name: الاسم
   email: البريد الإلكتروني
@@ -373,6 +379,7 @@ ar-SA:
   homepage_action_text_signpetition: وقّع على العريضة
   homepage_action_text_wincelebritychat: اربح دردشة مع أحد المشاهير
   homepage_signpetition_dropdown: أوافق &#x25BE;
+  homepage_signpetition_dropdown_text: أوافق
   homepage_diversity_pledge: التعهد بالتنوع
   homepage_banner_text_prizes: 'فعالية "ساعة برمجة" قادمة من جديد. 07 - 13 ديسمبر. '
   homepage_banner_link_prizes: 'انظم لأضخم حدث تعليمي في التاريخ '
@@ -1685,6 +1692,7 @@ ar-SA:
   header_course_catalog: فهرس الدورة
   header_project_gallery: المشاريع
   header_sections: الأقسام
+  header_professional_learning: Professional learning
   header_educate_overview: لمحة عن المعلم
   header_educate_elementary: المدرسة الابتدائية
   header_educate_middle: المرحلة المتوسطة

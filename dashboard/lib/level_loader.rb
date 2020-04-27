@@ -43,6 +43,11 @@ class LevelLoader
           compact.
           select(&:changed?)
 
+      if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
+        puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"
+        changed_levels.reject!(&:encrypted?)
+      end
+
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
       changed_lcds = changed_levels.map(&:level_concept_difficulty).compact

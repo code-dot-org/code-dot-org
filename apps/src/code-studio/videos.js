@@ -206,6 +206,9 @@ videos.showVideoDialog = function(options, forceShowVideo) {
       trackEvent('downloadvideo', 'startdownloadvideo', options.key);
       return true;
     });
+  if (document.dir === 'rtl') {
+    download.css('float', 'right');
+  }
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
@@ -225,8 +228,13 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   nav.append(fallbackPlayerLinkDiv);
 
   // Resize modal to fit constraining dimension.
-  var height = $(window).height() * widthRatio,
-    width = $(window).width() * heightRatio;
+  let accurateInnerHeight = Math.min(window.innerHeight, window.outerHeight);
+  let accurateInnerWidth = Math.min(window.innerWidth, window.outerWidth);
+  let windowHeight = Math.min(accurateInnerHeight, accurateInnerWidth);
+  let windowWidth = Math.max(accurateInnerHeight, accurateInnerWidth);
+
+  var height = windowHeight * widthRatio,
+    width = windowWidth * heightRatio;
 
   if (height * aspectRatio < width) {
     $div.height(height);

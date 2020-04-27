@@ -87,6 +87,7 @@ export default class PersonalLoginDialog extends React.Component {
             {i18n.personalLoginDialog_body5()}
           </p>
           <Button
+            __useDeprecatedTag
             text={i18n.removeStudentSendHomeInstructions()}
             target="_blank"
             href={ADD_A_PERSONAL_LOGIN_HELP_URL}

@@ -41,7 +41,6 @@ class ScriptOverview extends React.Component {
     showRedirectWarning: PropTypes.bool,
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     courseName: PropTypes.string,
-    locale: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
 
@@ -100,7 +99,6 @@ class ScriptOverview extends React.Component {
       hiddenStageState,
       selectedSectionId,
       courseName,
-      locale,
       showAssignButton,
       userId,
       assignedSectionId
@@ -141,7 +139,6 @@ class ScriptOverview extends React.Component {
               showHiddenUnitWarning={isHiddenUnit}
               versions={versions}
               courseName={courseName}
-              locale={locale}
               userId={userId}
             />
             <ScriptOverviewTopRow

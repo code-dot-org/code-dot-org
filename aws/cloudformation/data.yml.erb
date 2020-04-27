@@ -2,6 +2,8 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
+require 'cdo/redshift'
+self.tags.push key: 'environment', value: rack_env
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -21,8 +23,9 @@ Parameters:
     NoEcho: true
   RDSHost:
     Type: String
-  AuroraReaderHost:
+  AuroraClone:
     Type: String
+    Default: <%= RedshiftImport::CLONE_CLUSTER_ID %>
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -81,13 +84,13 @@ Resources:
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
-  AuroraReaderEndpoint:
+  AuroraCloneEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
-      EndpointIdentifier: !Sub "AuroraReaderEndpoint-${AWS::StackName}"
+      EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
-      ServerName: !Ref AuroraReaderHost
+      ServerName: !Ref AuroraClone
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
@@ -121,14 +124,14 @@ Resources:
          # Default value: 1000 KB (1 MB)
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
-  DMS<%=task_name.underscore.camelize%>FullLoad:
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
+  DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>-full-load-no-cdc
-      SourceEndpointArn: !Ref AuroraReaderEndpoint
+      ReplicationTaskIdentifier: <%= task_name %>-task
+      SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
@@ -136,8 +139,8 @@ Resources:
           <%= table_mappings.to_json %>
       Tags:
         -
-          Key: environment
-          Value: <%=rack_env.to_s%>
+          Key: schedule
+          Value: <%=schedule%>
 <% end -%>
   DMSS3Role:
     Type: AWS::IAM::Role
@@ -306,25 +309,6 @@ Resources:
     Properties:
       AliasName: !Sub "alias/snapshot-${AWS::StackName}"
       TargetKeyId: !Ref DBSnapshotKey
-  # The production reporting Aurora cluster replicates via MySQL binlog from the production Aurora cluster.
-  ReportingBinLogReplicaLagAlarm:
-    Type: AWS::CloudWatch::Alarm
-    Properties:
-      AlarmName: !Sub "${AWS::StackName}-ReportingBinLogReplicaLag"
-      AlarmDescription: Alarms when the Aurora Reporting Cluster binlog replica lag exceeds 900 seconds for 12 datapoints.
-      AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
-      Dimensions:
-        - Name: DBClusterIdentifier
-          Value: !Ref ReportingCluster
-      MetricName: AuroraBinlogReplicaLag
-      Namespace: AWS/RDS
-      Statistic: Average
-      ComparisonOperator: GreaterThanThreshold
-      Threshold: 600
-      Period: 3600 # 1 hour
-      EvaluationPeriods: 12
-      TreatMissingData: breaching
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database

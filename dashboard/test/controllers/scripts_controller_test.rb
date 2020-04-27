@@ -194,11 +194,34 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  test "should not get edit if not levelbuilder mode" do
+  test "should not get edit on production" do
+    CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
     get :edit, params: {id: 'course1'}
+    assert_response :forbidden
+  end
 
+  test "should get edit on levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
+    assert_response :ok
+  end
+
+  test "should get edit on test" do
+    CDO.stubs(:rack_env).returns(:test)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
+    assert_response :ok
+  end
+
+  test "should not get edit on staging" do
+    CDO.stubs(:rack_env).returns(:staging)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+    get :edit, params: {id: 'course1'}
     assert_response :forbidden
   end
 
@@ -289,12 +312,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/flappy"
   end
 
-  test "edit forbidden if not on levelbuilder" do
-    sign_in @levelbuilder
-    get :edit, params: {id: 'course1'}
-    assert_response :forbidden
-  end
-
   test 'create' do
     expected_contents = ''
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
@@ -327,6 +344,77 @@ class ScriptsControllerTest < ActionController::TestCase
         delete :destroy, params: {id: evil_script.id}
       end
     end
+  end
+
+  test "cannot update on production" do
+    CDO.stubs(:rack_env).returns(:production)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :forbidden
+    script.reload
+    assert script.hidden
+  end
+
+  test "can update on levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :redirect
+    script.reload
+    refute script.hidden
+  end
+
+  test "can update on test without modifying filesystem" do
+    CDO.stubs(:rack_env).returns(:test)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :redirect
+    script.reload
+    refute script.hidden
+  end
+
+  test "cannot update on staging" do
+    CDO.stubs(:rack_env).returns(:staging)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    sign_in @levelbuilder
+
+    script = create :script, hidden: true
+    File.stubs(:write).raises('must not modify filesystem')
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      visible_to_teachers: true
+    }
+    assert_response :forbidden
+    script.reload
+    assert script.hidden
   end
 
   test 'updates teacher resources' do
@@ -412,6 +500,99 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'CSF', script.curriculum_umbrella
     assert_equal 'my-fam', script.family_name
     assert_equal '2017', script.version_year
+  end
+
+  test 'set and unset all general_params' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    # Set most of the properties.
+    # omitted: professional_learning_course, script_announcements, resourceTypes, resourceLinks because
+    # using fake values doesn't seem to work for them.
+    general_params = {
+      hideable_stages: 'on',
+      project_widget_visible: 'on',
+      student_detail_progress_view: 'on',
+      stage_extras_available: 'on',
+      has_verified_resources: 'on',
+      has_lesson_plan: 'on',
+      is_stable: 'on',
+      tts: 'on',
+      project_sharing: 'on',
+      peer_reviews_to_complete: 1,
+      curriculum_path: 'fake_curriculum_path',
+      version_year: '2020',
+      pilot_experiment: 'fake-pilot-experiment',
+      editor_experiment: 'fake-editor-experiment',
+      curriculum_umbrella: 'CSF',
+      supported_locales: ['fake-locale'],
+      project_widget_types: ['gamelab', 'weblab'],
+    }
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+    }.merge(general_params)
+    assert_response :redirect
+    script.reload
+
+    general_params.each do |k, v|
+      if v == 'on'
+        assert_equal !!v, !!script.send(k), "Property didn't update: #{k}"
+      else
+        assert_equal v, script.send(k), "Property didn't update: #{k}"
+      end
+    end
+
+    # Unset the properties.
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      curriculum_path: '',
+      version_year: '',
+      pilot_experiment: '',
+      editor_experiment: '',
+      curriculum_umbrella: '',
+      supported_locales: [],
+      project_widget_types: [],
+    }
+    assert_response :redirect
+    script.reload
+
+    # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
+    expected = {"peer_reviews_to_complete" => 0}
+    assert_equal expected, script.properties
+  end
+
+  test 'add lesson to script' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    level = create :level
+    script = create :script
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    assert_empty script.lessons
+
+    script_text = <<~SCRIPT_TEXT
+      stage 'stage 1'
+      level '#{level.name}'
+    SCRIPT_TEXT
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: script_text,
+    }
+    script.reload
+
+    assert_response :redirect
+    assert_equal level, script.lessons.first.script_levels.first.level
   end
 
   no_access_msg = "You don&#39;t have access to this unit."
@@ -541,5 +722,69 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_select "script[data-levelbuildereditscript]" do |elements|
       assert elements.first['data-levelbuildereditscript'].match?(/"beta":false/)
     end
+  end
+
+  test "levelbuilder does not see visible after warning if stage does not have visible_after property" do
+    sign_in @levelbuilder
+
+    get :show, params: {id: 'course1'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+  end
+
+  test "levelbuilder does not see visible after warning if stage has visible_after property that is in the past" do
+    Timecop.freeze(Time.new(2020, 4, 2))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "levelbuilder sees visible after warning if stage has visible_after property that is in the future" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in @levelbuilder
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    assert response.body.include? 'The lesson stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "student does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:student)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
+  end
+
+  test "teacher does not see visible after warning if stage has visible_after property" do
+    Timecop.freeze(Time.new(2020, 3, 27))
+    sign_in create(:teacher)
+
+    create(:level, name: "Level 1")
+    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([script_file])
+
+    get :show, params: {id: 'test-fixture-visible-after'}
+    assert_response :success
+    refute response.body.include? 'The lesson Stage 1 will be visible after'
+    Timecop.return
   end
 end

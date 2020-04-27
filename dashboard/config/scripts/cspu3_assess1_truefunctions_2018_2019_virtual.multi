@@ -1,0 +1,22 @@
+name 'cspu3_assess1_truefunctions_2018_2019_virtual'
+wrong 'A function can change names over the course of a program.'
+wrong 'Code can be added or removed dynamically from a function while the program is running.'
+wrong 'Functions can be called using different names depending on where in the program they are called.'
+wrong 'Two functions can be given identical names as long as their code is identical.'
+right 'Two functions in a single program can have different names but contain identical code.'
+
+markdown <<MARKDOWN
+Which one of the following statements about functions is TRUE
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The incorrect answers:
+
+* When a program is running, the function names cannot be changing and code cannot be dynamically changed. Once a program is running, the program has to finish running or the user manually stops the program in order to edit the lines.
+* Once a function is named, it must be called using the given name. If a function is called using a different name that does not exist, an error will occur.
+* Functions should never have identical names.
+
+The correct answer:
+
+* Multiple functions can contain identical code as long as the names are different. Functions have to be named differently in order for the program to know which function to correctly run, it does not matter if the same lines of code are in multiple functions.
+MARKDOWN

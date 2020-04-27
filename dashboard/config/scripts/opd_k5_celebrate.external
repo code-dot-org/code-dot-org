@@ -1,23 +1,18 @@
 name 'OPD-K5 Celebrate'
-encrypted 'cqTQA88VfO/vvr0a4n2K4qpG0/wNR9ciNeOrBwKq3mFoWVOxX86NbBfkFn6h
-V1boAjRoL4tBu+ih2C0PZk3pA9UyYJQbHiTMJpnY/eSHs20PUwjCtrQKVoIu
-J6ytnB7UMWfzRiz6PMLzjw3NGJzb14lrCOaYe/rFBoo0ZNe+InHB1G+eTUGn
-+J3WQyNODy+y5qS+dfiRMS8pDqOcMg0pumxxgQaLzIm+3z+kpO2F7Cbd5vrr
-YnlqZdhmrsQ8BAMTFnY0Qms0mn2KCquGxmJxYIB+fBexXqma9VWRPvwfHHiy
-/Q7hPmLliGmAVbEVKJ+sdeagwsMnKgr50BvbfqwFVS6kZwC/Pa0HmbagQ5Yb
-OvoBO0timbYizZvdH86PanWuRU9BItthTjLm/Y/r37NtGgnrwn3dncKjeNbU
-b/N44u+B9kcflAI/GyBtSO4YNzEknNBn8E204JHe3PuizaTfiwkVfkiUlgwC
-mLvSvb9pnbYGX4qtZOf8LzI+5oPRqJ+X+u63ipHoSX76nE/BfOxutw1NPa2M
-cVY5dhfN9E1gBk1rQN0vuaNeKTSudSoV4RcTnhrRqIWnSg5tFQQjwMjD45Nt
-DXFhxq67lyfdZHW49z01dDNiM02o9+IrGDSpRh2jnnbSMfH5ByaNdVN5QS4Z
-3koyNlb477AFSUsm7aTxaYNp/nMnCr8FcXnparL/W9KXipAxsheNX1fcoSPI
-bLyiUbcrwzMC47Ldhf492pG9+4q6EPilE3nhl6AlRizFa7QpZ1NK6bwLlgGR
-lJ6Tczl7FghnTR0rPbkb7ENGdQdD6FyiPf4+8d5QIenLpSCx9WEqVQWiMKJk
-R0euMNMoDcdT4BAUGB0xey/XhgN7YitxxSRmpo5Y+lkB7KLg1TABKUKUN9J3
-9PIzGJ1Osiy7HpCeWX0LZy1w1ZH+uSq5k7Wp4E3U/l+hasH6g5yCT4iWI/Bd
-d3ICEyNOrCGsSp/SxhfIUG6GvfX501v4jY36EDrRDRh8MSWegzV8X9slQEaq
-OG1shGO4oONpF0RUbKpxPXFFnZz8gKA1KHSBzWbRtFsxzihWbGIP4O0Aq5Ie
-sA+AXWLckHWokaepXpevk6zGNqs2MLy9HXtzZbzuwJc5nY/1Po8Oxn3vEYQi
-3r0PR19k1A+3Pw7qmkUIl5Gw3r1oDLoz6+n8kYgNwvFmfaPxEH1zJwMs6x4s
-MjPg3AIPBPh/oIvv496qAvZQyYqgpZEgt5TQ2gPjZxX3J5pt2IN5eDZSiKs=
-'
+editor_experiment ''
+css 'k5pd'
+skip_dialog true
+markdown <<MARKDOWN
+# Next Steps > Celebrate!
+
+Congratulations on completing this professional development online course. Provided you have completed all levels in this training, you can download and print a certificate of accomplishment now by completing the following steps:
+
+1. Visit [this link](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+2. Enter your name into the input field/box.
+3. Click Print Certificates.
+4. Right click on the image of the certificate and choose "Save Image As..." so you can download to your computer.
+
+And don't forget... you can return to this online course anytime to review your learning, access links or resources, or just refresh your memory!
+
+Thank you for your participation! We can't wait to hear how you implement computer science and Code Studio in your classroom!
+MARKDOWN

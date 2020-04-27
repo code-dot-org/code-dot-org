@@ -45,6 +45,10 @@ apt_package 'enscript'
 # Provides a Dashboard database fixture for Pegasus tests.
 apt_package 'libsqlite3-dev'
 
+# Used to sync content between our Code.org shared Dropbox folder
+# and our git repository.
+apt_package 'unison' if node.chef_environment == 'staging'
+
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
   autoconf
@@ -86,8 +90,8 @@ include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 
-include_recipe 'cdo-cloudwatch-extra-metrics'
-include_recipe 'cdo-cloudwatch-logger' if node[:ec2]
+include_recipe 'cdo-cloudwatch-agent'
+include_recipe 'cdo-syslog'
 
 include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
@@ -134,3 +138,5 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 include_recipe 'cdo-apps::resolved'
 
 include_recipe 'cdo-apps::rbspy'
+
+include_recipe 'cdo-apps::syslog_permissions'

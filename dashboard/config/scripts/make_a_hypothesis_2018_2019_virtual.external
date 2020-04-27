@@ -1,0 +1,30 @@
+name 'Make a Hypothesis_2018_2019_virtual'
+css 'unplugged'
+markdown <<MARKDOWN
+# Make a Hypothesis
+
+Over the next several exercises we are going to be **building a program that simulates flipping coins** in order to find out how many flips it takes to get **10,000 heads in total** and how many flips it takes **to get a streak of 12 heads in a row**. If you're following along on the worksheet, you might have already tried these experiments at a smaller scale, flipping a coin until you got 5 total heads and a streak of 3 heads in a row. Doing this smaller scale activity may have given you some intuition for what the outcome of the larger experiment will be, but before running an experiment it's usually a good idea to develop a hypothesis. 
+
+**What will be the maximum and minimum number of flips it will take to get 10,000 heads?** When trying to get 5 heads some groups may have taken exactly 5 flips while others took 15 or more (3 times the number of heads you were looking for!).  Do you think this wide range of values will persist when looking for 10,000 heads?
+
+**What will be the maximum and minimum number of flips it will take to get a streak of 12 heads?** Again think about the patterns you've observed. If you need 4 times as many heads in a row will it take 4 times as long? Try to justify the values you choose.
+
+<br>
+
+#### Write down your predictions on the worksheet so you can reference them later. 
+It's not important whether you're right (you'll have the answer soon enough anyway!) but it will let you reflect on your thinking. In fact, you might even get some new ideas you'd like to investigate as a result!
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Pause Point - Make a Hypothesis
+
+* Use this level to describe the fact that students will be making a simulation of flipping coins.
+* Ask them to make a prediction for the outcomes of the experiments they will run. 
+
+Make sure students make this prediction before moving on.
+
+* **Students should record their predictions in the space provided on their worksheets.**
+MARKDOWN

@@ -86,7 +86,7 @@ module UsersHelper
       end
     end
 
-    user_data[:current_stage] = user.next_unpassed_progression_level(script).stage.id unless exclude_level_progress || script.script_levels.empty?
+    user_data[:current_stage] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
 
     user_data.compact
   end
@@ -161,7 +161,7 @@ module UsersHelper
   #   A collection of UserLevel ids where the user was pairing.
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
-  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:)
+  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
     levels = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
@@ -176,7 +176,7 @@ module UsersHelper
         submitted = !!ul.try(:submitted) &&
           !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
         readonly_answers = !!ul.try(:readonly_answers)
-        locked = ul.try(:locked?, sl.stage) || sl.stage.lockable? && !ul
+        locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
 
         if completion_status == LEVEL_STATUS.not_tried
           # for now, we don't allow authorized teachers to be "locked"
@@ -195,6 +195,7 @@ module UsersHelper
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
           locked: locked ? true : nil,
+          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil
         }.compact
 
         # Just in case this level has multiple pages, in which case we add an additional

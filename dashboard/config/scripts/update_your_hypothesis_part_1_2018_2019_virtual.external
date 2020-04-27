@@ -1,0 +1,16 @@
+name 'Update your Hypothesis - Part 1_2018_2019_virtual'
+css 'unplugged'
+markdown <<MARKDOWN
+# Updating Your Hypotheses
+
+If everything has gone well **you should already be able to make a determination about your first hypothesis**. 
+
+* How close were your guesses on the **high and low bounds for the number of flips to get 10,000 heads?**
+* Were you at all surprised by this result? If they were different from what you predicted why might this be the case?
+
+<br>
+
+Take some time to write out your thoughts and whether your understanding of this system has changed. **Update either of your hypotheses to reflect what you observed in this first experiment**.
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

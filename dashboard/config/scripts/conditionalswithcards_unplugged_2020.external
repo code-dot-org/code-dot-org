@@ -1,0 +1,10 @@
+name 'ConditionalsWithCards-Unplugged_2020'
+video_key 'C2_conditionals_with_cards'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Conditionals With Cards
+
+Play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
+MARKDOWN

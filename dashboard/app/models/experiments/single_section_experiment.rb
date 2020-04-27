@@ -19,10 +19,12 @@
 #
 # Indexes
 #
+#  index_experiments_on_end_at                (end_at)
 #  index_experiments_on_max_user_id           (max_user_id)
 #  index_experiments_on_min_user_id           (min_user_id)
 #  index_experiments_on_overflow_max_user_id  (overflow_max_user_id)
 #  index_experiments_on_section_id            (section_id)
+#  index_experiments_on_start_at              (start_at)
 #
 
 class SingleSectionExperiment < Experiment

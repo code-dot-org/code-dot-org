@@ -6,6 +6,7 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit7/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
+lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
 stage 'Parameters and Return Explore', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L1 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7L1 CFU Return', progression: 'Check For Understanding', assessment: true
@@ -30,13 +31,10 @@ level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Pract
 
 stage 'Parameters and Return Make', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
-level 'U7 Param Return Make RPS App 1', progression: 'Try the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App', assessment: true
+level 'U7 Param Return Make RPS App_2020', progression: 'Try the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App Project_2020', progression: 'Make the Rock Paper Scissors App', assessment: true
 
+lesson_group 'csp_libraries', display_name: 'Libraries'
 stage 'Libraries Explore', flex_category: 'csp_libraries'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: true
@@ -73,8 +71,18 @@ stage 'Lesson 11: Assessment Day', lockable: true
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 7 AP-Style Assessment _2020', progression: 'Unit 7 Exam', assessment: true
 
+lesson_group 'required', display_name: 'Overview'
 stage 'Unit 7 STUDENT Survey', lockable: true, flex_category: 'required'
 level 'CSP U7 20-21 Student Pilot Survey', progression: 'Unit 7 STUDENT Survey', assessment: true
 
 stage 'Unit 7 TEACHER Survey', lockable: true, flex_category: 'required'
 level 'CSP U7 20-21 Teacher Pilot Survey', progression: 'Unit 7 TEACHER Survey', assessment: true
+
+lesson_group 'optional_stages', display_name: 'Optional Stages'
+stage '[OLD] Parameters and Return Make', flex_category: 'optional_stages'
+level 'U7 Param Return Make RPS App 1', progression: 'Try the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App', assessment: true
