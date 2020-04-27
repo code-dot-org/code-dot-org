@@ -79,6 +79,10 @@ class Pd::Enrollment < ActiveRecord::Base
     replace_existing
     csf_intro_intent
     csf_intro_other_factors
+    years_teaching
+    years_teaching_cs
+    taught_ap_before
+    planning_to_teach_ap
   )
 
   def set_default_scholarship_info
