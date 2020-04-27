@@ -148,7 +148,7 @@ level 'CSD U2 nav bar_2020', progression: 'Links and Navigation'
 level 'CSD U2 adding pages_2020', progression: 'Adding Pages', assessment: true
 level 'CSD U2 naming pages_2020', progression: 'Adding Pages'
 level 'CSD web create pages project', progression: 'Your Team Project'
-level 'CSD U2 external links_2020', progression: 'Challenge: External Links'
+level 'CSD U2 links challenge', progression: 'Links Challenges'
 
 stage 'Project - Website for a Purpose', flex_category: 'csd2_2'
 level 'CSD U2L18 TFMD_2020', named: true
@@ -171,3 +171,4 @@ lesson_group 'cspSurvey', display_name: 'Survey'
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019_pilot_2020'
 level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2020', assessment: true
+
