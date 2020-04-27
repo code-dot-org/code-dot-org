@@ -9,11 +9,7 @@ import videojs from 'video.js';
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 import i18n from '@cdo/locale';
-import _ from 'lodash';
 
-const TAB_NAV_CLASS = '.ui-tabs-nav';
-const MODAL_CLASS_NAME = 'video-modal';
-const MODAL_CLASS = '.' + MODAL_CLASS_NAME;
 var videos = (module.exports = {});
 
 videos.createVideoWithFallback = function(
@@ -45,7 +41,7 @@ videos.createVideoWithFallback = function(
 };
 
 function onVideoEnded() {
-  $(MODAL_CLASS).trigger('ended');
+  $('.video-modal').trigger('ended');
 }
 
 var currentVideoOptions;
@@ -121,6 +117,9 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   options.inDialog = true;
 
   upgradeInsecureOptions(options);
+  var widthRatio = 0.8;
+  var heightRatio = 0.8;
+  var aspectRatio = 16 / 9;
 
   var body = $('<div/>');
   var content = $('#notes-content')
@@ -152,9 +151,9 @@ videos.showVideoDialog = function(options, forceShowVideo) {
 
   var dialog = new Dialog({body: body, redirect: options.redirect});
   var $div = $(dialog.div);
-  $div.addClass(MODAL_CLASS_NAME);
+  $div.addClass('video-modal');
 
-  $(MODAL_CLASS).on('remove', function() {
+  $('.video-modal').on('remove', function() {
     // Manually removing src to fix a continual playback bug in IE9
     // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
     video.removeAttr('src');
@@ -210,7 +209,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   if (document.dir === 'rtl') {
     download.css('float', 'right');
   }
-  var nav = $div.find(TAB_NAV_CLASS);
+  var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
   // Even though some React code will mount to this div and clear its
@@ -228,13 +227,35 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   });
   nav.append(fallbackPlayerLinkDiv);
 
-  let resizeVideoPlayerListener = _.throttle(resizeVideoPlayer, 200);
+  // Resize modal to fit constraining dimension.
+  let accurateInnerHeight = Math.min(window.innerHeight, window.outerHeight);
+  let accurateInnerWidth = Math.min(window.innerWidth, window.outerWidth);
+  let windowHeight = Math.min(accurateInnerHeight, accurateInnerWidth);
+  let windowWidth = Math.max(accurateInnerHeight, accurateInnerWidth);
 
-  // A scroll listener is required for iOS due to its viewport management - it
-  // scrolls the page down to show the url & nav bar but doesn't resize the page
-  window.addEventListener('scroll', resizeVideoPlayerListener);
-  window.addEventListener('resize', resizeVideoPlayerListener);
-  resizeVideoPlayer();
+  var height = windowHeight * widthRatio,
+    width = windowWidth * heightRatio;
+
+  if (height * aspectRatio < width) {
+    $div.height(height);
+    $div.width(height * aspectRatio);
+  } else {
+    $div.height(width / aspectRatio);
+    $div.width(width);
+  }
+
+  // Standard css hack to center a div within the viewport.
+  $div.css({
+    top: '50%',
+    left: '50%',
+    marginTop: $div.height() / -2 + 'px',
+    marginLeft: $div.width() / -2 + 'px'
+  });
+
+  var divHeight = $div.innerHeight() - nav.outerHeight();
+  $(video).height(divHeight);
+
+  notesDiv.height(divHeight);
 
   currentVideoOptions = options;
   if (window.YT && window.YT.loaded) {
@@ -251,7 +272,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
 
   dialog.show();
 
-  var videoModal = $(MODAL_CLASS);
+  var videoModal = $('.video-modal');
 
   videoModal.on('ended', function() {
     dialog.hide();
@@ -266,75 +287,13 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   // Don't add fallback player if a video modal has closed
   var shouldStillAdd = true;
   videoModal.one('hidden.bs.modal', function() {
-    window.removeEventListener('resize', resizeVideoPlayerListener);
-    window.removeEventListener('scroll', resizeVideoPlayerListener);
     shouldStillAdd = false;
   });
 
-  var divHeight = getVideoHeight();
   setupVideoFallback(options, $div.width(), divHeight, function() {
     return shouldStillAdd;
   });
 };
-
-/**
- * Sets the video player container to 80% of the width or height of the screen
- * at a 9/16 ratio.
- */
-function resizeVideoPlayer() {
-  let $div = $(MODAL_CLASS);
-  const navBarHeight = $div.find(TAB_NAV_CLASS).outerHeight();
-  const screenRatio = 0.8;
-  const aspectRatio = 16 / 9;
-  const maxHeight = window.innerHeight * screenRatio;
-  const maxWidth = window.innerWidth * screenRatio;
-
-  // Find whether width or height is the limiting factor when the aspect ratio
-  // is 9/16. Then set the dimensions to the largest possible values.
-  let containerHeight, containerWidth;
-  if ((maxHeight - navBarHeight) * aspectRatio < maxWidth) {
-    containerHeight = maxHeight;
-    containerWidth = (maxHeight - navBarHeight) * aspectRatio;
-  } else {
-    containerHeight = maxWidth / aspectRatio + navBarHeight;
-    containerWidth = maxWidth;
-  }
-
-  // Set the dimensions of the video modal
-  $div.height(containerHeight);
-  $div.width(containerWidth);
-
-  // The video modal should centered within the inner height of the window
-  // (i.e. window height minus browser chrome)
-  const top = (window.innerHeight - containerHeight) / 2;
-
-  // Standard css hack to center a div within the viewport.
-  $div.css({
-    position: 'fixed',
-    top: top,
-    left: '50%',
-    marginLeft: containerWidth / -2 + 'px'
-  });
-
-  // The nav bar will have changed dimensions due to the resizing of the
-  // container. We re-calculate the available height for the video to account
-  // for this.
-  const availableHeight = getVideoHeight();
-  $('.video-player').height(availableHeight);
-  $('#notes-outer').height(availableHeight);
-}
-
-/**
- * Gets the target height of the video player based on the container's
- * dimensions.
- */
-function getVideoHeight() {
-  const container = $(MODAL_CLASS);
-
-  // Here we get the remaining height of the video's container that isn't taken
-  // up by the video navigation options.
-  return container.innerHeight() - container.find(TAB_NAV_CLASS).outerHeight();
-}
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(
@@ -409,8 +368,6 @@ function youTubeAvailabilityEndpointURL(noCookie) {
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
-  // Append `?force_youtube_fallback=1` to a url in order to use the fallback
-  // player
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
 
   // If we have want the video player to be at 100% width & 100% height, then
@@ -452,7 +409,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#videoTabContainer').empty();
   $('#videoTabContainer').append(playerCode);
 
-  const videoPlayer = videojs(
+  var videoPlayer = videojs(
     fallbackPlayerID,
     {nativeControlsForTouch: true},
     function() {
@@ -466,28 +423,15 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
         }
       });
 
-      function resizeFallbackPlayer() {
-        videoPlayer.dimensions($(MODAL_CLASS).innerWidth(), getVideoHeight());
-      }
-
-      // A scroll listener is required for iOS due to its viewport management -
-      // it scrolls the page down to show the url & nav bar but doesn't resize
-      // the page
-      let resizeFallbackPlayerListener = _.throttle(resizeFallbackPlayer, 200);
-      window.addEventListener('resize', resizeFallbackPlayerListener);
-      window.addEventListener('scroll', resizeFallbackPlayerListener);
-      resizeFallbackPlayer();
-
       // Properly dispose of video.js player instance when hidden.
       $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
-        window.removeEventListener('resize', resizeFallbackPlayerListener);
-        window.removeEventListener('scroll', resizeFallbackPlayerListener);
         videoPlayer.dispose();
       });
     }
   );
 
   videoPlayer.on('ended', onVideoEnded);
+
   showFallbackPlayerCaptionLink(videoInfo.inDialog);
 }
 
