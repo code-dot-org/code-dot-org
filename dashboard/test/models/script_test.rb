@@ -2346,6 +2346,12 @@ endvariants
     template_level = create :applab, name: 'template'
     template_backed_level = create :applab, name: 'template_backed', project_template_level_name: template_level.name
 
+    # level groups
+    level_group = create :level_group, :with_sublevels, name: 'level group'
+    assert_equal 2, level_group.pages.length
+    level_group_sublevels = level_group.pages.map(&:levels).flatten
+    assert_equal 3, level_group_sublevels.length
+
     dsl = <<~SCRIPT
       stage 'lesson1'
       level '#{level1.name}'
@@ -2355,6 +2361,7 @@ endvariants
       endvariants
       level '#{container.name}'
       level '#{template_backed_level.name}'
+      level '#{level_group.name}'
       bonus '#{extra1.name}'
       bonus '#{extra2.name}'
     SCRIPT
@@ -2365,14 +2372,13 @@ endvariants
       script_data[:stages]
     )
 
-    levels = [level1, swap1, swap2, container,  template_backed_level, extra1, extra2]
-    nested_levels = [containee, template_level]
+    levels = [level1, swap1, swap2, container,  template_backed_level, level_group, extra1, extra2]
+    nested_levels = [containee, template_level, level_group_sublevels].flatten
 
     assert_equal levels, script.levels
     assert_equal levels + nested_levels, script.all_descendant_levels
 
     # TODO: make sure recognize the following nested level types
-    # levels within level groups
     # levels within bubble choice levels
   end
 
