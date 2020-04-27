@@ -163,6 +163,48 @@ describe('Enroll Form', () => {
     });
   });
 
+  describe('CSP Returning Teachers Form', () => {
+    let enrollForm;
+    before(() => {
+      enrollForm = shallow(
+        <EnrollForm
+          workshop_id={props.workshop_id}
+          workshop_course="CS Principles"
+          workshop_subject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
+          first_name={props.first_name}
+          email={props.email}
+          previous_courses={props.previous_courses}
+          onSubmissionComplete={props.onSubmissionComplete}
+          collect_demographics={false}
+        />
+      );
+    });
+
+    ['years_teaching', 'years_teaching_cs'].forEach(question => {
+      it('displays questions specific to this workshop type', () => {
+        assert(enrollForm.exists('#' + question));
+      });
+    });
+
+    ['taught_ap_before', 'planning_to_teach_ap'].forEach(question => {
+      it('displays questions specific to this workshop type', () => {
+        assert(enrollForm.exists({groupName: question}));
+      });
+    });
+
+    ['role', 'previous_courses', 'replace_existing'].forEach(question => {
+      it('displays questions not relevant for this workshop type', () => {
+        refute(enrollForm.exists('#' + question));
+      });
+    });
+
+    ['csf_intro_intent', 'csf_intro_other_factors'].forEach(question => {
+      it('displays questions not relevant for this workshop type', () => {
+        refute(enrollForm.exists({groupName: question}));
+      });
+    });
+  });
+
   describe('Enroll Form', () => {
     let enrollForm;
     beforeEach(() => {
