@@ -4,17 +4,17 @@ exports.load = function(assetUrl, id) {
   var skin = skinBase.load(assetUrl, id);
 
   skin.linePatterns = {
-    arrowMenu: assetUrl('media/common_images/arrow-menuicon.png'),
-    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
-    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
-    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
-    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
-    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
+    patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'), // default first, then alphabetical
     arrowLine: assetUrl('media/common_images/arrow.png'),
+    arrowMenu: assetUrl('media/common_images/arrow-menuicon.png'),
     rainbowLine: assetUrl('media/common_images/rainbow.png'),
+    rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
     ropeLine: assetUrl('media/common_images/rope.png'),
+    ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
-    swirlyLine: assetUrl('media/common_images/swirlyline.png')
+    squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
+    swirlyLine: assetUrl('media/common_images/swirlyline.png'),
+    swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png')
   };
 
   var CONFIGS = {
