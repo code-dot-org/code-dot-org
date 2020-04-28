@@ -26,7 +26,7 @@ const LESSON_EXTRAS_DEFAULT_PROPS = {
     description: 'Sublevel 1 is lots of fun',
     thumbnail_url: 'some-fake.url/kittens.png',
     url:
-      '"http://studio.code.org:3000/s/coursef-2019/stage/4/extras?level_name=courseC_artist_prog_challenge1_2019"',
+      'http://studio.code.org:3000/s/coursef-2019/stage/4/extras?level_name=courseC_artist_prog_challenge1_2019',
     perfect: false
   }
 };
