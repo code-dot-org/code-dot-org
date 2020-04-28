@@ -36,11 +36,10 @@ const styles = {
 class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     stageExtrasUrl: PropTypes.string.isRequired,
-    onStageExtras: PropTypes.bool,
     perfect: PropTypes.bool
   };
   render() {
-    const {stageExtrasUrl, onStageExtras, perfect} = this.props;
+    const {stageExtrasUrl, perfect} = this.props;
 
     const tooltipId = _.uniqueId();
     return (
@@ -59,7 +58,7 @@ class LessonExtrasProgressBubble extends Component {
               style={{
                 ...styles.checkFlagNormal,
                 ...styles.hoverOverlay,
-                ...((perfect || onStageExtras) && styles.perfect)
+                ...(perfect && styles.perfect)
               }}
             />
           </span>

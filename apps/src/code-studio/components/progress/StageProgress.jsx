@@ -98,7 +98,7 @@ class StageProgress extends Component {
         {stageExtrasUrl && !stageTrophyEnabled && (
           <LessonExtrasProgressBubble
             stageExtrasUrl={stageExtrasUrl}
-            onStageExtras={onStageExtras}
+            perfect={onStageExtras}
           />
         )}
         {stageTrophyEnabled && (
