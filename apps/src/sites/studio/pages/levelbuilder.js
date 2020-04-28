@@ -4,7 +4,7 @@
 import _ from 'lodash';
 import codemirror from 'codemirror';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+import {convertXmlToBlockly} from '@cdo/apps/util/blocklyUtils';
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {

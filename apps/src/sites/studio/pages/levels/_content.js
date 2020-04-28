@@ -3,7 +3,7 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import React from 'react';
 import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+import {convertXmlToBlockly} from '@cdo/apps/util/blocklyUtils';
 import commonBlocks from '@cdo/apps/blocksCommon';
 
 $(document).ready(() => {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubble from './ChatBubble';
-import {convertXmlToBlockly} from './utils';
+import {convertXmlToBlockly} from '@cdo/apps/util/blocklyUtils';
 import SafeMarkdown from '../SafeMarkdown';
 
 class InlineFeedback extends Component {

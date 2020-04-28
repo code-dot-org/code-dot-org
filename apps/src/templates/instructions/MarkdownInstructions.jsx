@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {ImagePreview} from './AniGifPreview';
 import {connect} from 'react-redux';
-import {convertXmlToBlockly} from './utils';
+import {convertXmlToBlockly} from '@cdo/apps/util/blocklyUtils';
 import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 
 import SafeMarkdown from '../SafeMarkdown';
