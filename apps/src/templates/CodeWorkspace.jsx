@@ -207,8 +207,8 @@ class CodeWorkspace extends React.Component {
               )}
               <span id="workspace-header-span">
                 {props.readonlyWorkspace
-                  ? i18n.readonlyWorkspaceHeader()
-                  : i18n.workspaceHeaderShort()}
+                  ? i18n.viewOnlyWorkspaceHeader()
+                  : i18n.workspaceHeaderTitle()}
               </span>
               <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
                 <span>: </span>
