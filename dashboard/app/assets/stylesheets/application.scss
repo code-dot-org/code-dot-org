@@ -138,38 +138,6 @@ img.video_thumbnail {
   margin-bottom: 30px;
 }
 
-.report_cell {
-  text-align: center;
-  color: $white;
-  border: 1px solid $black;
-}
-
-.report_row {
-  height: 26px;
-  border-top: 1px solid $black;
-}
-
-.report_key {
-  height: 16px;
-  border-radius: 5px;
-  display: block;
-  float: left;
-  clear: left;
-  width: 23px;
-  border: 1px solid $light_gray;
-  margin: 5px;
-  vertical-align: middle;
-}
-
-.report_key_cell {
-  padding: 3px;
-  visibility: middle;
-}
-
-.report_tall_row {
-  height: 35px;
-}
-
 .header-wrapper {
   padding-top: 0;
   min-height: 60px;
@@ -2703,16 +2671,6 @@ $modal-no-icon-gap: 22px;
   border: 1px solid $orange;
   color: $white;
   min-width: 100px;
-}
-
-.lightbulb-button {
-  background-color: $white;
-  font-family: $gotham-bold;
-  border: 1px solid $charcoal;
-  color: $charcoal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 20px;
 }
 
 #again-button, #cancel-button {
