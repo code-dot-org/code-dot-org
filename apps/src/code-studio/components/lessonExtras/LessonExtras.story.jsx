@@ -1,5 +1,5 @@
 import React from 'react';
-import StageExtras from './StageExtras';
+import LessonExtras from './LessonExtras';
 import progress, {mergeProgress} from '@cdo/apps/code-studio/progressRedux';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
@@ -23,11 +23,11 @@ function configureStore() {
 
 export default storybook => {
   const store = configureStore();
-  storybook.storiesOf('StageExtras', module).add(
+  storybook.storiesOf('LessonExtras', module).add(
     'default',
-    withInfo('This is the StageExtras component.')(() => (
+    withInfo('This is the LessonExtras component.')(() => (
       <Provider store={store}>
-        <StageExtras
+        <LessonExtras
           stageNumber={1}
           nextLevelPath="#"
           bonusLevels={[

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../util/color';
-import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
 import {
   levelsForLessonId,
@@ -96,7 +96,7 @@ class StageProgress extends Component {
           </div>
         ))}
         {stageExtrasUrl && !stageTrophyEnabled && (
-          <StageExtrasProgressBubble
+          <LessonExtrasProgressBubble
             stageExtrasUrl={stageExtrasUrl}
             onStageExtras={onStageExtras}
           />
