@@ -20,13 +20,14 @@ class DesignWorkspace extends React.Component {
     onInsertEvent: PropTypes.func.isRequired,
     isDimmed: PropTypes.bool.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    currentTheme: PropTypes.string.isRequired,
+    handleScreenChange: PropTypes.func.isRequired,
 
     // provided by redux
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    showMakerToggle: PropTypes.bool,
-    currentTheme: PropTypes.string.isRequired
+    showMakerToggle: PropTypes.bool
   };
 
   state = {isToolboxVisible: true};
@@ -66,6 +67,7 @@ class DesignWorkspace extends React.Component {
           onInsertEvent={this.props.onInsertEvent}
           screenIds={this.props.screenIds}
           currentTheme={this.props.currentTheme}
+          handleScreenChange={this.props.handleScreenChange}
         />
       </div>
     );

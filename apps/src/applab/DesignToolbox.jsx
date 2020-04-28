@@ -10,7 +10,7 @@ export default class DesignToolbox extends React.Component {
   static propTypes = {
     handleDragStart: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
-    handleChange: PropTypes.func.isRequired,
+    handleScreenChange: PropTypes.func.isRequired,
     themeValue: PropTypes.string.isRequired
   };
 
@@ -36,7 +36,7 @@ export default class DesignToolbox extends React.Component {
         <ThemePropertyRow
           containerStyle={themeStyle}
           initialValue={this.props.themeValue}
-          handleChange={this.props.handleChange.bind(this, 'theme')}
+          handleChange={this.props.handleScreenChange.bind(this, 'theme')}
           desc={'Theme'}
         />
         <p>{applabMsg.designToolboxDescription()}</p>
