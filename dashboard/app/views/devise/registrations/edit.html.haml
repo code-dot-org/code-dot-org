@@ -103,7 +103,7 @@
   %div#add-parent-email
     %hr
     %h2= t('user.for_parents_and_guardians')
-    %p= "#{t('user.link_a_parent_email')}:"
+    %p= "#{t('user.link_a_parent_email')}"
     %p
       %b= "#{t('user.parent_guardian_email_label')}:"
       %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
