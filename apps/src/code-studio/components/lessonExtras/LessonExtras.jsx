@@ -27,6 +27,11 @@ const styles = {
     fontStyle: 'normal',
     paddingTop: 10,
     paddingBottom: 20
+  },
+  cards: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between'
   }
 };
 
@@ -76,7 +81,7 @@ export default class LessonExtras extends React.Component {
 
         <div style={styles.subHeader}>{i18n.extrasTryAChallenge()}</div>
         {bonusLevels && Object.keys(bonusLevels).length > 0 ? (
-          <div>
+          <div style={styles.cards}>
             {bonusLevels[0].levels.map(sublevel => (
               <SublevelCard
                 isLessonExtra={true}

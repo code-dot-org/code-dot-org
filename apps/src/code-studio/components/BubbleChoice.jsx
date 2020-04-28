@@ -21,6 +21,10 @@ const styles = {
   btnOrange: {
     backgroundColor: color.orange,
     borderColor: color.orange
+  },
+  cards: {
+    display: 'flex',
+    flexWrap: 'wrap'
   }
 };
 
@@ -89,9 +93,11 @@ export default class BubbleChoice extends React.Component {
         <SafeMarkdown markdown={level.description} />
         {this.renderButtons()}
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
-        {level.sublevels.map(sublevel => (
-          <SublevelCard isLessonExtra={false} sublevel={sublevel} />
-        ))}
+        <div style={styles.cards}>
+          {level.sublevels.map(sublevel => (
+            <SublevelCard isLessonExtra={false} sublevel={sublevel} />
+          ))}
+        </div>
         {this.renderButtons()}
       </div>
     );
