@@ -12,13 +12,15 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}game_lab_documentation"),
         url: "https://studio.code.org/docs/gamelab/",
-        id: "gamelab-docs"
+        id: "gamelab-docs",
+        target: "_blank"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}game_lab_tutorials"),
         url: CDO.code_org_url('/educate/gamelab'),
-        id: "gamelab-tutorials"
+        id: "gamelab-tutorials",
+        target: "_blank"
       }
     end
 
@@ -26,13 +28,15 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}app_lab_documentation"),
         url: "https://studio.code.org/docs/applab/",
-        id: "applab-docs"
+        id: "applab-docs",
+        target: "_blank"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}app_lab_tutorials"),
         url: CDO.code_org_url('/educate/applab'),
-        id: "applab-tutorials"
+        id: "applab-tutorials",
+        target: "_blank"
       }
     end
 
@@ -40,13 +44,15 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}sprite_lab_documentation"),
         url: "https://studio.code.org/docs/spritelab/",
-        id: "spritelab-docs"
+        id: "spritelab-docs",
+        target: "_blank"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}sprite_lab_tutorials"),
         url: CDO.code_org_url('/educate/spritelab'),
-        id: "spritelab-tutorials"
+        id: "spritelab-tutorials",
+        target: "_blank"
       }
     end
 
