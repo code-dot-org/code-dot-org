@@ -1683,7 +1683,8 @@ designMode.renderDesignWorkspace = function(element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
-    screenIds: designMode.getAllScreenIds()
+    screenIds: designMode.getAllScreenIds(),
+    currentTheme: designMode.getCurrentTheme(element)
   };
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -1815,4 +1816,12 @@ designMode.addKeyboardHandlers = function() {
 
 designMode.resetIds = function() {
   elementLibrary.resetIds();
+};
+
+designMode.getCurrentTheme = function(element) {
+  if (element) {
+    return element.getAttribute('data-theme');
+  } else {
+    return elementLibrary.getCurrentTheme(designMode.activeScreen());
+  }
 };
