@@ -553,6 +553,7 @@
   "downloadReplayVideoButtonDownload": "Animation",
   "downloadReplayVideoButtonError": "Sorry, we were unable to download your animation. Please try re-running your project and trying again.",
   "dragBlocksToMatch": "Drag the blocks to match",
+  "draw": "Draw",
   "dropletBlock_addOperator_description": "Add two numbers",
   "dropletBlock_addOperator_signatureOverride": "Add operator",
   "dropletBlock_andOperator_description": "Returns true only when both expressions are true and false otherwise",
