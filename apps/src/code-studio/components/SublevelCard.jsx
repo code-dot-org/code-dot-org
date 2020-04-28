@@ -138,12 +138,21 @@ export default class SublevelCard extends React.Component {
         <div style={styles.column}>
           <div style={styles.bubbleAndTitle}>
             {this.renderBubble()}
-            <a href={sublevel.url + location.search} style={styles.title}>
+            <a
+              href={sublevel.url + location.search}
+              style={styles.title}
+              className="sublevel-card-title-uitest"
+            >
               {sublevel.display_name}
             </a>
           </div>
           {sublevel.description && (
-            <div style={styles.description}>{sublevel.description}</div>
+            <div
+              style={styles.description}
+              className="sublevel-card-description-uitest"
+            >
+              {sublevel.description}
+            </div>
           )}
         </div>
       </div>
