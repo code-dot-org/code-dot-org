@@ -285,7 +285,8 @@ class ScriptLevel < ActiveRecord::Base
       level.properties["display_as_unplugged"] == "true"
 
     summary = {
-      ids: ids,
+      # omit ids if they can be inferred from the activeId
+      ids: ids.length > 1 ? ids : nil,
       activeId: oldest_active_level.id,
       position: position,
       kind: kind,
@@ -312,6 +313,7 @@ class ScriptLevel < ActiveRecord::Base
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
       summary[:assessment] = !!assessment
       summary[:challenge] = !!challenge
+      summary[:ids] = level_ids
     end
 
     if include_prev_next
