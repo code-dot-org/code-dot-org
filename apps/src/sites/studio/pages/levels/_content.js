@@ -3,7 +3,6 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import React from 'react';
 import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {convertXmlToBlockly} from '@cdo/apps/util/blocklyUtils';
 import commonBlocks from '@cdo/apps/blocksCommon';
 
 $(document).ready(() => {
@@ -34,8 +33,11 @@ $(document).ready(() => {
       container,
       function() {
         // After the Markdown is rendered, render any Blockly blocks defined in
-        // <xml> blocks.
-        convertXmlToBlockly(container);
+        // <xml> blocks. Use lazy loading, to keep the enormous Blockly module
+        // from getting pulled into this entry point.
+        import('@cdo/apps/util/blocklyUtils').then(({convertXmlToBlockly}) => {
+          convertXmlToBlockly(container);
+        });
       }
     );
   });
