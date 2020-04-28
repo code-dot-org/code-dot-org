@@ -147,10 +147,42 @@ exports.load = function(assetUrl, id) {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
         [skin.linePatterns.arrowMenu, 'arrowLine'],
+        [skin.linePatterns.bambooMenu, 'bambooLine'],
+        [skin.linePatterns.brickMenu, 'brickLine'],
+        [skin.linePatterns.cactusMenu, 'cactusLine'],
+        [skin.linePatterns.candyMenu, 'candyLine'],
+        [skin.linePatterns.candycaneMenu, 'candycaneLine'],
+        [skin.linePatterns.candycaneGreenMenu, 'candycaneGreenLine'],
+        [skin.linePatterns.candycaneRedGreenMenu, 'candycaneRedGreenLine'],
+        [skin.linePatterns.dashMenu, 'dashLine'],
+        [skin.linePatterns.dashBlueMenu, 'dashBlueLine'],
+        [skin.linePatterns.diamondMenu, 'diamondLine'],
+        [skin.linePatterns.dotMenu, 'dotLine'],
+        [skin.linePatterns.dotBlueMenu, 'dotBlueLine'],
+        [skin.linePatterns.dotYellowMenu, 'dotYellowLine'],
+        [skin.linePatterns.flowerPinkMenu, 'flowerPinkLine'],
+        [skin.linePatterns.flowerPurpleMenu, 'flowerPurpleLine'],
+        [skin.linePatterns.flowerRedMenu, 'flowerRedLine'],
+        [skin.linePatterns.flowerYellowMenu, 'flowerYellowLine'],
+        [skin.linePatterns.heartMenu, 'heartLine'],
+        [skin.linePatterns.heartPinkMenu, 'heartPinkLine'],
+        [skin.linePatterns.lightningMenu, 'lightningLine'],
+        [skin.linePatterns.pawprintMenu, 'pawprintLine'],
+        [skin.linePatterns.pawprint2Menu, 'pawprint2Line'],
+        [skin.linePatterns.pawprintPurpleMenu, 'pawprintPurpleLine'],
         [skin.linePatterns.rainbowMenu, 'rainbowLine'],
         [skin.linePatterns.ropeMenu, 'ropeLine'],
+        [skin.linePatterns.smileyMenu, 'smileyLine'],
+        [skin.linePatterns.smokeMenu, 'smokeLine'],
+        [skin.linePatterns.smoke2Menu, 'smoke2Line'],
+        [skin.linePatterns.spikyMenu, 'spikyLine'],
         [skin.linePatterns.squigglyMenu, 'squigglyLine'],
-        [skin.linePatterns.swirlyMenu, 'swirlyLine']
+        [skin.linePatterns.swirlyMenu, 'swirlyLine'],
+        [skin.linePatterns.swirly2Menu, 'swirly2Line'],
+        [skin.linePatterns.tiretrackMenu, 'tiretrackLine'],
+        [skin.linePatterns.tiretrack2Menu, 'tiretrack2Line'],
+        [skin.linePatterns.waterMenu, 'waterLine'],
+        [skin.linePatterns.water2Menu, 'water2Line']
       ]
     }
   };
