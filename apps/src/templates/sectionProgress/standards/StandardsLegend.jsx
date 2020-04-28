@@ -37,7 +37,7 @@ const styles = {
 export default class StandardsLegend extends Component {
   render() {
     return (
-      <div style={{marginTop: 60}}>
+      <div style={{marginTop: 20}}>
         <table>
           <thead>
             <tr>
