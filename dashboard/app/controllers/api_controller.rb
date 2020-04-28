@@ -324,31 +324,6 @@ class ApiController < ApplicationController
     [progress_by_user, timestamp_by_user]
   end
 
-  use_database_pool student_progress: :persistent
-
-  def student_progress
-    student = load_student(params.require(:student_id))
-    section = load_section
-    # @script is used by user_states
-    @script = load_script(section)
-
-    progress_html = render_to_string(partial: 'shared/user_stats', locals: {user: student})
-
-    data = {
-      student: {
-        id: student.id,
-        name: student.name,
-      },
-      script: {
-        id: @script.id,
-        name: @script.localized_title
-      },
-      progressHtml: progress_html
-    }
-
-    render json: data
-  end
-
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
