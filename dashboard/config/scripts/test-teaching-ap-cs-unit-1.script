@@ -1,8 +1,10 @@
+lesson_group 'required', display_name: 'Overview'
 stage 'test Unit 1 required reading', flex_category: 'required'
 level 'CSPPD Welcome Video'
 level 'PDECS tour'
 level 'PDECS commitment'
 
+lesson_group 'content', display_name: 'Content'
 stage 'test Unit 1 content module Alpha', flex_category: 'content'
 level 'CSPPD2 chunk 1'
 level 'CSPPD2 chunk 1 lessons'
@@ -18,6 +20,7 @@ level 'CSPPD2 chunk 3'
 level 'CSPPD2 chunk 3 lessons'
 level 'CSPPD2 share protocol'
 
+lesson_group 'practice', display_name: 'Teaching Practices'
 stage 'test Unit 1 practice module Delta', flex_category: 'practice'
 level 'CSPPD2 chunk 4'
 level 'CSPPD2 chunk 4 lessons'

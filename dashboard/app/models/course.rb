@@ -43,6 +43,7 @@ class Course < ApplicationRecord
     family_name
     version_year
     is_stable
+    visible
     pilot_experiment
   )
 
@@ -206,6 +207,8 @@ class Course < ApplicationRecord
     info[:is_stable] = stable?
     info[:pilot_experiment] = pilot_experiment
     info[:category] = I18n.t('courses_category')
+    # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
+    info[:category_priority] = -1
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
       default_course_scripts.map(&:script_id)
@@ -252,14 +255,10 @@ class Course < ApplicationRecord
   # Get the set of valid courses for the dropdown in our sections table, using
   # any alternate scripts based on any experiments the user belongs to.
   def self.valid_courses_without_cache(user: nil)
-    course_infos = Course.
-      where(name: ScriptConstants::CATEGORIES[:full_course]).
+    course_infos = Course.all.
+      select {|course| course.visible? && course.stable?}.
       map {|course| course.assignable_info(user)}
 
-    # Only return stable course versions.
-    # * Currently, all course versions are stable.
-    # * In the future, stability will be set as a property by the levelbuilder.
-    #
     # Group courses by family when showing multiple versions of each course.
     course_infos.sort_by {|info| [info[:assignment_family_name], info[:version_year]]}
   end
