@@ -3,8 +3,8 @@ require_relative '../../../deployment'
 require 'cdo/only_one'
 require 'json'
 
-PALLY_PATH = "../../../apps/node_modules/pa11y-ci/bin/pa11y-ci.js"
-CONFIG_PATH = "./config.json"
+PALLY_PATH = File.expand_path("../../../../apps/node_modules/pa11y-ci/bin/pa11y-ci.js", __FILE__)
+CONFIG_PATH = File.expand_path("../config.json", __FILE__)
 
 def main
   puts "Scanning for Accessibility Errors and Warnings"
@@ -21,7 +21,7 @@ def main
   puts "Found #{file_hash['errors']} errors across #{file_hash['total']} urls"
 
   # Get urls we ran this on
-  urls = File.read('config.json')
+  urls = File.read(CONFIG_PATH)
   urls_hash = JSON.parse(urls)['urls']
 
   # For each url, find the most frequent errors
