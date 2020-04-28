@@ -15,15 +15,19 @@ const styles = {
     marginBottom: MARGIN,
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
+    borderRadius: 2,
+    width: 450,
+    marginRight: 10
   },
   thumbnail: {
+    minWidth: THUMBNAIL_IMAGE_SIZE,
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
     border: '1px solid rgb(187, 187, 187)',
     borderRadius: 2
   },
   placeholderThumbnail: {
+    minWidth: THUMBNAIL_IMAGE_SIZE,
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
     backgroundColor: color.lighter_gray,
@@ -38,28 +42,35 @@ const styles = {
     color: color.white,
     opacity: 0.8
   },
-  flagIcon: {
-    fontSize: THUMBNAIL_IMAGE_SIZE - 120,
-    height: THUMBNAIL_IMAGE_SIZE - 120,
-    width: THUMBNAIL_IMAGE_SIZE - 120
+  flagBubble: {
+    fontSize: 30,
+    height: 30,
+    width: 30
   },
   column: {
+    width: 280,
     marginLeft: MARGIN * 2,
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    margin: 10
   },
   bubbleAndTitle: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 10
+    alignItems: 'flex-start'
   },
   title: {
+    minHeight: 30,
     fontSize: 20,
     fontFamily: '"Gotham 5r"',
     color: color.teal,
-    marginLeft: 10
+    marginLeft: 10,
+    overflowWrap: 'break-word',
+    wordWrap: 'break-word',
+    hyphens: 'auto',
+    display: 'flex',
+    alignItems: 'center'
   },
   description: {
     marginTop: MARGIN
@@ -89,7 +100,7 @@ export default class SublevelCard extends React.Component {
 
     if (isLessonExtra) {
       return (
-        <div style={styles.flagIcon}>
+        <div style={styles.flagBubble}>
           <LessonExtrasProgressBubble
             stageExtrasUrl={sublevel.url}
             perfect={sublevel.perfect}
