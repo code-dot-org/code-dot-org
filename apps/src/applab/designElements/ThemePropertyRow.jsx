@@ -13,6 +13,7 @@ export default class ThemePropertyRow extends EnumPropertyRow {
     options: themeOptions
   };
 
+  // Need to reset theme value if screen switches
   componentWillReceiveProps(nextProps) {
     const {initialValue} = nextProps;
     if (this.props.initialValue !== initialValue) {
