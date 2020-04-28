@@ -41,7 +41,9 @@ def main
 
     puts ""
     puts "Most Common Errors for #{url}:"
-    puts error_results
+    error_results.each do |error, count|
+      puts "  #{error} - #{count}"
+    end
   end
 end
 
