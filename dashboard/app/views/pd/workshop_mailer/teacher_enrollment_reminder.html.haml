@@ -48,8 +48,8 @@
   %p
     - if @workshop.course == Pd::Workshop::COURSE_CSF
       This is a great step towards bringing computer science to your classroom!
-    - else
-    We’re excited to continue to work together to bring computer science to your classroom.
+    - unless @workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+      We’re excited to continue to work together to bring computer science to your classroom.
     If you have any questions, reach out to your workshop organizer directly:
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."

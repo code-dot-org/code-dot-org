@@ -674,6 +674,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def pre_survey?
+    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
     PRE_SURVEY_BY_COURSE.key? course
   end
 
