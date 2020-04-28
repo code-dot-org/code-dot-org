@@ -19,7 +19,6 @@
       - else
         %div{class: entry[:class]}
           .item
-            = puts "entry ID: #{entry[:id]} target: #{entry[:target] ? entry[:target] : '_self'}"
             - target = entry[:target] ? entry[:target] : "_self"
             %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
 
