@@ -95,7 +95,11 @@ export default class BubbleChoice extends React.Component {
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
         <div style={styles.cards}>
           {level.sublevels.map(sublevel => (
-            <SublevelCard isLessonExtra={false} sublevel={sublevel} />
+            <SublevelCard
+              isLessonExtra={false}
+              sublevel={sublevel}
+              key={sublevel.id}
+            />
           ))}
         </div>
         {this.renderButtons()}
