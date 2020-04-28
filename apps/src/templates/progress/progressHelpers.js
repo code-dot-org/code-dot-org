@@ -173,7 +173,7 @@ export const processedLevel = level => {
     url: level.url,
     name: level.name,
     progression: level.progression,
-    kind: level.kind,
+    kind: level.kind || LevelKind.puzzle,
     icon: level.icon,
     isUnplugged: !!level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,

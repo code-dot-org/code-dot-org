@@ -269,7 +269,7 @@ class ScriptLevel < ActiveRecord::Base
       elsif assessment
         LEVEL_KIND.assessment
       else
-        LEVEL_KIND.puzzle
+        nil
       end
 
     ids = level_ids
