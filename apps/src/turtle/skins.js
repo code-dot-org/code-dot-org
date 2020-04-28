@@ -4,11 +4,13 @@ exports.load = function(assetUrl, id) {
   var skin = skinBase.load(assetUrl, id);
 
   skin.linePatterns = {
+    arrowMenu: assetUrl('media/common_images/arrow-menuicon.png'),
     rainbowMenu: assetUrl('media/common_images/rainbow-menuicon.png'),
     ropeMenu: assetUrl('media/common_images/rope-menuicon.png'),
     squigglyMenu: assetUrl('media/common_images/squiggly-menuicon.png'),
     swirlyMenu: assetUrl('media/common_images/swirlyline-menuicon.png'),
     patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'),
+    arrowLine: assetUrl('media/common_images/arrow.png'),
     rainbowLine: assetUrl('media/common_images/rainbow.png'),
     ropeLine: assetUrl('media/common_images/rope.png'),
     squigglyLine: assetUrl('media/common_images/squiggly.png'),
@@ -68,6 +70,7 @@ exports.load = function(assetUrl, id) {
     artist: {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
+        [skin.linePatterns.arrowMenu, 'arrowLine'],
         [skin.linePatterns.rainbowMenu, 'rainbowLine'],
         [skin.linePatterns.ropeMenu, 'ropeLine'],
         [skin.linePatterns.squigglyMenu, 'squigglyLine'],
