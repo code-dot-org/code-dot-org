@@ -167,10 +167,27 @@ class AcceleratedAndUnplugged extends Component {
   }
 }
 
+const ViewMoreTile = () => (
+  <div className="tutorial-block">
+    <div className="courseblock-span3 courseblock-tall">
+      <a href={pegasus('/hourofcode/overview')}>
+        <img src="/shared/images/more_arrow.png" width="100%" height="120px" />
+        <div className="course-container">
+          <h3 className="heading">{i18n.viewMore()}</h3>
+          <div className="text smalltext">
+            {i18n.teacherCourseHocLinkText()}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+);
+
 export class CourseBlocks extends Component {
   static propTypes = {
     // Array of jQuery selectors to course blocks.
-    tiles: PropTypes.arrayOf(PropTypes.string).isRequired
+    tiles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    showViewMoreTile: PropTypes.bool
   };
 
   render() {
@@ -187,6 +204,8 @@ export class CourseBlocks extends Component {
             }}
           />
         ))}
+
+        {this.props.showViewMoreTile && <ViewMoreTile />}
       </div>
     );
   }
@@ -199,8 +218,8 @@ export class CourseBlocksHoc extends Component {
 
   tiles() {
     return this.props.isInternational
-      ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
-      : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
+      ? ['#dance-2019', '#aquatic', '#frozen']
+      : ['#dance-2019', '#aquatic', '#oceans'];
   }
 
   render() {
@@ -211,7 +230,7 @@ export class CourseBlocksHoc extends Component {
         linkText={i18n.teacherCourseHocLinkText()}
         link={pegasus('/hourofcode/overview')}
       >
-        <CourseBlocks tiles={this.tiles()} />
+        <CourseBlocks tiles={this.tiles()} showViewMoreTile />
       </ContentContainer>
     );
   }

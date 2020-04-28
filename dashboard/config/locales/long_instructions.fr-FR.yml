@@ -5677,6 +5677,10 @@ fr-FR:
         niveau contient un exemple d'application avec lequel vous devriez jouer pour
         avoir une idée de ce que vous allez créer. # Faites ceci - Cliquez sur Exécuter
         pour lancer l'application - Essayez de trouver la clé qui ouvrira la porte."
+      Fish Tank 7-validated: Мы добавили в набор инструментов много новых блоков.
+        Поиграй с ними, чтобы сделать свой аквариум особенным!
+      Fish Tank 7-validated_2019: Мы добавили в набор инструментов много новых блоков.
+        Поиграй с ними, чтобы сделать свой аквариум особенным!
       Function intro Ryan: "Une **fonction** nommée « construire un pont » se trouve
         dans votre espace de travail.  Tout le code nécessaire pour traverser la rivière
         est inclus ! \\\r\n \\\r\nPlacez deux fois le petit bloc vert dans votre espace
@@ -7320,20 +7324,30 @@ fr-FR:
         you want! What does it look like now?\\\r\n\n-   Change the pattern\n    on
         your brush for more variety!\\\r\n    \\\r\n    \\_\\_\\_\\\r\n    \\\r\n
         \   ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)"
-      courseC_artist_loops7a: "Try changing the `repeat` loop\nto run a different
-        number of times.  How far do you have to turn to go around\nin a full circle?\\\r\n\n-
-        \  Try changing how many times you spin\\\r\n    -   Try a 60\n        degree
-        turn for 6 times around\\\r\n    -   Try a 20 degree turn for 18 times around\\\r\n
-        \       \\_\\_\\_\\\r\n        This\n        image uses a pirate, a ninja,
-        and a giraffe. They loop 18 times with a 20\n        degree turn.\\\r\n        \\\r\n
-        \       ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
-      courseC_artist_loops7a_2018: "Try changing the `repeat` loop\nto run a different
-        number of times.  How far do you have to turn to go around\nin a full circle?\\\r\n\n-
-        \  Try changing how many times you spin\\\r\n    -   Try a 60\n        degree
-        turn for 6 times around\\\r\n    -   Try a 20 degree turn for 18 times around\\\r\n
-        \       \\_\\_\\_\\\r\n        This\n        image uses a pirate, a ninja,
-        and a giraffe. They loop 18 times with a 20\n        degree turn.\\\r\n        \\\r\n
-        \       ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
+      courseC_artist_loops7a: Попробуй изменить цикл "повторить", чтобы он выполнялся
+        другое количество раз. Насколько градусов нужно повернуть, чтобы совершить
+        полный поворот? - Попробуй изменить количество поворотов - Попробуй сделать
+        6 полных поворотов, поворачиваясь каждый раз на 60 градусов - Попробуй сделать
+        18 полных поворотов, поворачиваясь каждый раз на 20 градусов \* \* \* В этом
+        изображении использованы пират, ниндзя и жираф. Они поворачиваются 18 раз
+        на 20 градусов. ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2018: Попробуй изменить цикл "повторить", чтобы он выполнялся
+        другое количество раз. Насколько градусов нужно повернуть, чтобы совершить
+        полный поворот? - Попробуй изменить количество поворотов - Попробуй сделать
+        6 полных поворотов, поворачиваясь каждый раз на 60 градусов - Попробуй сделать
+        18 полных поворотов, поворачиваясь каждый раз на 20 градусов \* \* \* В этом
+        изображении использованы пират, ниндзя и жираф. Они поворачиваются 18 раз
+        на 20 градусов. ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2019: Попробуй изменить цикл "повторить", чтобы он выполнялся
+        другое количество раз. Насколько градусов нужно повернуть, чтобы совершить
+        полный поворот? - Попробуй изменить количество поворотов - Попробуй сделать
+        6 полных поворотов, поворачиваясь каждый раз на 60 градусов - Попробуй сделать
+        18 полных поворотов, поворачиваясь каждый раз на 20 градусов \* \* \* В первом
+        изображении использованы пират, ниндзя и жираф. Они поворачиваются 18 раз
+        на 20 градусов. ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+        ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
+        ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
+        ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
       courseC_artist_loops8a: |-
         Maintenant, crée quelque chose, par toi-même. Que se passe-t-il lorsque tu fais deux cercles distincts avec des autocollants différents ?
 
@@ -9924,6 +9938,8 @@ fr-FR:
         for` compte jusqu'à différentes valeurs maximales en utilisant le paramètre
         `longueur`. Rends ton programme aussi court que possible à l'aide d'une seconde
         `boucle`for\\`, en dehors de la fonction. \n\nBonne chance!   "
+      courseF_bee_variables_4_2019: '"Не будем останавливаться на достигнутом!" Измени
+        этот код так, чтобы он подошел для этой головоломки.'
       courseF_playlab_variables1a: "Les variables peuvent être utilisées pour stocker
         le texte que tu souhaites utiliser ultérieurement. \n\nFais crier \"But !\",
         par Kiki, le joueur de football, en attribuant ce texte à la variable `crier`."
