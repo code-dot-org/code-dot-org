@@ -8,6 +8,15 @@ import GoogleChartWrapper from '@cdo/apps/storage/dataBrowser/dataVisualizer/Goo
 
 describe('GoogleChartWrapper', () => {
   describe('updateChart', () => {
+    const chartOptions = {
+      title: 'Title',
+      hAxis: {
+        format: '#.#'
+      },
+      vAxis: {
+        format: '#.#'
+      }
+    };
     let spy;
     beforeEach(() => {
       GoogleChart.lib = {};
@@ -34,16 +43,16 @@ describe('GoogleChartWrapper', () => {
       );
 
       const expectedChartData = [
-        {category1: 'red', count: 2},
         {category1: 'blue', count: 1},
-        {category1: 'green', count: 1}
+        {category1: 'green', count: 1},
+        {category1: 'red', count: 2}
       ];
 
       expect(spy).to.have.been.calledOnce;
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category1', 'count'],
-        {title: 'Title'}
+        chartOptions
       ]);
     });
 
@@ -69,7 +78,7 @@ describe('GoogleChartWrapper', () => {
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category2'],
-        {histogram: {bucketSize: '2'}, title: 'Title'}
+        {...chartOptions, histogram: {bucketSize: '2'}}
       ]);
     });
 
@@ -94,7 +103,7 @@ describe('GoogleChartWrapper', () => {
       expect(spy.getCalls()[0].args).to.deep.equal([
         expectedChartData,
         ['category2', 'category3'],
-        {title: 'Title'}
+        chartOptions
       ]);
     });
   });
