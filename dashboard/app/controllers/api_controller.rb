@@ -472,12 +472,6 @@ class ApiController < ApplicationController
 
   private
 
-  def load_student(student_id)
-    student = User.find(student_id)
-    authorize! :read, student
-    student
-  end
-
   def load_section
     section = Section.find(params[:section_id])
     authorize! :read, section
