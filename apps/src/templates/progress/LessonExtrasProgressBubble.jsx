@@ -18,7 +18,7 @@ const styles = {
   checkFlagNormal: {
     color: color.lighter_gray
   },
-  focused: {
+  perfect: {
     color: color.level_perfect
   },
   hoverOverlay: {
@@ -33,13 +33,14 @@ const styles = {
   }
 };
 
-class StageExtrasProgressBubble extends Component {
+class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     stageExtrasUrl: PropTypes.string.isRequired,
-    onStageExtras: PropTypes.bool.isRequired
+    onStageExtras: PropTypes.bool,
+    perfect: PropTypes.bool
   };
   render() {
-    const {stageExtrasUrl, onStageExtras} = this.props;
+    const {stageExtrasUrl, onStageExtras, perfect} = this.props;
 
     const tooltipId = _.uniqueId();
     return (
@@ -58,7 +59,7 @@ class StageExtrasProgressBubble extends Component {
               style={{
                 ...styles.checkFlagNormal,
                 ...styles.hoverOverlay,
-                ...(onStageExtras && styles.focused)
+                ...((perfect || onStageExtras) && styles.perfect)
               }}
             />
           </span>
@@ -76,4 +77,4 @@ class StageExtrasProgressBubble extends Component {
   }
 }
 
-export default Radium(StageExtrasProgressBubble);
+export default Radium(LessonExtrasProgressBubble);

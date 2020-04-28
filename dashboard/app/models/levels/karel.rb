@@ -66,12 +66,6 @@ class Karel < Maze
     {'serialized_maze' => maze_json}
   end
 
-  def summarize_as_bonus
-    summary = super
-    summary[:flower_type] = flower_type if flower_type
-    summary
-  end
-
   def toolbox(type)
     '<category name="Category">
       <block type="procedures_defnoreturn"><title name="NAME">CATEGORY=Category</title></block>

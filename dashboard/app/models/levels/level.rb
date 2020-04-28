@@ -313,12 +313,6 @@ class Level < ActiveRecord::Base
     end
   end
 
-  # Overriden in subclasses, provides a summary for rendering thumbnails on the
-  # stage extras page
-  def summarize_as_bonus
-    {}
-  end
-
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
     'Applab', # freeplay
     'Bounce', # no ideal solution

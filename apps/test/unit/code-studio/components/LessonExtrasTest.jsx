@@ -1,8 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import StageExtras from '@cdo/apps/code-studio/components/stageExtras/StageExtras';
-import {bonusLevels} from './stageExtraTestHelpers';
+import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
+import {bonusLevels} from './lessonExtrasTestHelpers';
 
 const DEFAULT_PROPS = {
   stageNumber: 1,
@@ -16,23 +16,23 @@ const DEFAULT_PROPS = {
   showStageExtrasWarning: true
 };
 
-describe('StageExtras', () => {
+describe('LessonExtras', () => {
   it('does not show stage extras warning if showStageExtrasWarning is false', () => {
     const wrapper = shallow(
-      <StageExtras {...DEFAULT_PROPS} showStageExtrasWarning={false} />
+      <LessonExtras {...DEFAULT_PROPS} showStageExtrasWarning={false} />
     );
-    expect(wrapper.find('StageExtrasNotification')).to.have.lengthOf(0);
+    expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
   });
 
   it('does not show stage extras warning if sectionId is not provided', () => {
     const wrapper = shallow(
-      <StageExtras {...DEFAULT_PROPS} sectionId={null} />
+      <LessonExtras {...DEFAULT_PROPS} sectionId={null} />
     );
-    expect(wrapper.find('StageExtrasNotification')).to.have.lengthOf(0);
+    expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
   });
 
   it('show stage extra warning if showStageExtrasWarning and have sectionId', () => {
-    const wrapper = shallow(<StageExtras {...DEFAULT_PROPS} />);
-    expect(wrapper.find('StageExtrasNotification')).to.have.lengthOf(1);
+    const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
+    expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(1);
   });
 });
