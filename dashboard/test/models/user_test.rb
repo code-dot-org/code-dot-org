@@ -729,39 +729,6 @@ class UserTest < ActiveSupport::TestCase
     refute follower.student_user.reload.admin?
   end
 
-  test "gallery" do
-    user = create(:user)
-    assert_equal [], user.gallery_activities
-
-    assert_does_not_create(GalleryActivity) do
-      create(:user_level, user: user)
-    end
-
-    ga2 = nil
-    assert_creates(GalleryActivity) do
-      user_level2 = create(:user_level, user: user)
-      ga2 = GalleryActivity.create!(
-        user: user,
-        user_level: user_level2
-      )
-    end
-
-    assert_does_not_create(GalleryActivity) do
-      create(:user_level, user: user)
-    end
-
-    ga4 = nil
-    assert_creates(GalleryActivity) do
-      user_level4 = create(:user_level, user: user)
-      ga4 = GalleryActivity.create!(
-        user: user,
-        user_level: user_level4
-      )
-    end
-
-    assert_equal [ga4, ga2], user.reload.gallery_activities
-  end
-
   test "short name" do
     assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
     assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
