@@ -514,7 +514,6 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
-    blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
@@ -716,6 +715,8 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
+    blockly: './src/sites/studio/pages/blockly.js',
+
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
