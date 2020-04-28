@@ -934,6 +934,9 @@ cs-CZ:
         se tam Scrat mohl dostat?
       courseB_iceage_loops9_2019: Žalud je pěkně daleko! Můžeš použít nějaké cykly,
         aby se tam Scrat mohl dostat?
+      courseB_starWars_prog1: '[][0] _"Přines ten šrot, BB-8!"_ '
+      courseB_starWars_prog1_2018: '[][0] _"Přines ten šrot, BB-8!"_ '
+      courseB_starWars_prog1_2019: '[][0] _"Přines ten šrot, BB-8!"_ '
       courseC_PlayLab_events3: Můžete napsat program, aby se Jorge (pes) posunul směrem
         k Olivii (kočka)?
       courseC_PlayLab_events3_2018: Můžete napsat program, aby se Jorge (pes) posunul
@@ -946,6 +949,18 @@ cs-CZ:
         Tip: všechny tři strany jsou stejně dlouhé.'
       courseC_artist_prog5_2019: 'Tenhle domek potřebuje střechu! Nakresli trojúhelník.
         Tip: všechny tři strany jsou stejně dlouhé.'
+      courseC_collector_prog2: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
+        `sbírej`.
+      courseC_collector_prog2_2018: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
+        `sbírej`.
+      courseC_collector_prog2_2019: Přesuň Laurel k pokladu a poté jej vyzvedni pomocí
+        `sbírej`.
+      courseC_collector_prog8: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2018: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog8_2019: _"Jen tak dál! Pomoz mi posbírat všechen poklad."_
+      courseC_collector_prog9: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2018: _"Pojďme posbírat všechen poklad!"_
+      courseC_collector_prog9_2019: _"Pojďme posbírat všechen poklad!"_
       courseC_collector_prog_challenge1: Podívejte se pozorně! Můžete získat všech
         **10** kousků pokladu?
       courseC_collector_prog_challenge1_2018: Podívejte se pozorně! Můžete získat
@@ -955,6 +970,39 @@ cs-CZ:
       courseC_flappy_events10: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events10_2018: 'Vytvoř svou vlastní hru Flappy Bird! '
       courseC_flappy_events10_2019: 'Vytvoř svou vlastní hru Flappy Bird! '
+      courseC_harvester_loops10: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops10_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops11_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops2: Zkus použít dva odlišné cykly, jeden na pohyb dopředu
+        a jeden na sklízení.
+      courseC_harvester_loops2_2018: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
+      courseC_harvester_loops2_2019: Zkus použít dva odlišné cykly, jeden na pohyb
+        dopředu a jeden na sklízení.
+      courseC_harvester_loops3: Posbírej všechny dýně.
+      courseC_harvester_loops3_2018: Posbírej všechny dýně.
+      courseC_harvester_loops3_2019: Posbírej všechny dýně.
+      courseC_harvester_loops4: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops4_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops4_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops5_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops6_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops7_2019: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops8: "**Výzva**Posbírej všechny kukuřice a dýně."
+      courseC_harvester_loops8_2018: "**Výzva**Posbírej všechny kukuřice a dýně."
+      courseC_harvester_loops8_2019: "**Výzva**Posbírej všechny kukuřice a dýně."
+      courseC_harvester_loops9: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2018: Posbírej všechny kukuřice a dýně.
+      courseC_harvester_loops9_2019: Posbírej všechny kukuřice a dýně.
       courseC_harvester_loops_challenge1a: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a_2018: Sesbírej všechnu kukuřici.
       courseC_harvester_loops_challenge1a_2019: Sesbírej všechnu kukuřici.
@@ -1263,6 +1311,9 @@ cs-CZ:
         tak, abys získal alespoň **6** pokladů! '
       courseD_collector_nested_loops_challenge2a: Pomoz Laurel sesbírat aspoň dvě
         hromádky s pokladem.
+      courseD_collector_ramp10: Pomoz Laurel posbírat všechen poklad.
+      courseD_collector_ramp8: Pomoz Laurel posbírat všechen poklad.
+      courseD_collector_ramp9: Pomoz Laurel posbírat všechen poklad.
       courseD_farmer_condLoops7: 'Výzva: Sesbírej všechnu kukuřici a salát, pak vezmi
         dýni.'
       courseD_farmer_condLoops7_2018: 'Výzva: Sesbírej všechnu kukuřici a salát, pak
@@ -1442,6 +1493,8 @@ cs-CZ:
         k získání ideálního počtu bloků.
       courseE_bee_functions4: Funkce "posunout a dostat nektar" otočí včelu, sbírá
         nektar a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar.
+      courseE_farmer_concept2: Posbírej všechny dýně.
+      courseE_farmer_concept2_2018: Posbírej všechny dýně.
       courseE_farmer_concept3: 'Zasyp díry na konci každé z cest. '
       courseE_farmer_concept3_2018: 'Zasyp díry na konci každé z cest. '
       courseF_artist_for7: Udělej tři malé změny do kódu z poslední úrovni, abys to
@@ -1561,6 +1614,15 @@ cs-CZ:
       frozen square snowflake: Dokážeš vytvořit sněhovou vločku tak, že použiješ blok
         "opakuj" pro nakreslení čtverce 10 krát, a blok "otočit" k otočení o 36 stupňů
         mezi všemi čtverci?
+      grade2_collector_10: Máš skoro hotovo! Posbírej co nejvíce kousků pokladu a
+        dokonči tuto fázi!
+      grade2_collector_10_2018: Máš skoro hotovo! Posbírej co nejvíce kousků pokladu
+        a dokonči tuto fázi!
+      grade2_collector_10_2019: Máš skoro hotovo! Posbírej co nejvíce kousků pokladu
+        a dokonči tuto fázi!
+      grade2_collector_A: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2018: Pomoz Laurel posbírat všechen poklad.
+      grade2_collector_A_2019: Pomoz Laurel posbírat všechen poklad.
       grade5_artist_binary11: 'Pohraj si: Zde je prázdné plátno pro tebe, na které
         můžeš  čerpat.  Pobav se!'
       grade5_artist_binary4: Můžeš nakreslit tento vzor opakováním binárního řetězce

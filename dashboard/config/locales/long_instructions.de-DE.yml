@@ -901,6 +901,33 @@ de-DE:
 
         -   Warum glauben Sie, dass professionelle Programmierer die Paarprogrammierung verwenden?
         -   Was glauben Sie, wie die Paarprogrammierung Ihnen helfen wird, besser zu programmieren?
+      CSD U2 add content: |-
+        # HTML hinzufügen
+
+        Als Nächstes solltest du den HTML-Code zu deinen Seiten hinzufügen.
+
+        # Mache Folgendes
+
+        -   Füge für jede der neuen Seiten, die du erstellt hast, HTML hinzu, um die Seite zu erstellen, die du in deinem Projektleitfaden skizziert hast.
+        -   Du kannst auch mehr HTML zu den Seiten hinzufügen, die du bereits erstellt hast.
+      CSD U2 add content_2018: |-
+        # HTML hinzufügen
+
+        Als Nächstes solltest du den HTML-Code zu deinen Seiten hinzufügen.
+
+        # Mache Folgendes
+
+        -   Füge für jede der neuen Seiten, die du erstellt hast, HTML hinzu, um die Seite zu erstellen, die du in deinem Projektleitfaden skizziert hast.
+        -   Du kannst auch mehr HTML zu den Seiten hinzufügen, die du bereits erstellt hast.
+      CSD U2 add content_2019: |-
+        # HTML hinzufügen
+
+        Als Nächstes solltest du den HTML-Code zu deinen Seiten hinzufügen.
+
+        # Mache Folgendes
+
+        -   Füge für jede der neuen Seiten, die du erstellt hast, HTML hinzu, um die Seite zu erstellen, die du in deinem Projektleitfaden skizziert hast.
+        -   Du kannst auch mehr HTML zu den Seiten hinzufügen, die du bereits erstellt hast.
       CSD U2 add style_2019: |-
         # Probier es aus!
 
@@ -3308,6 +3335,9 @@ de-DE:
         mir helfen, mich zurechtzufinden?"\_'
       course2_maze_programming_challenge2: Manchmal gibt es mehr als eine Lösung für
         ein Problem. Manchmal ist es schneller, rückwärts zu gehen, als vorwärts!
+      course3_bee_debugging_challenge1: Beobachte, wie sich die Biene den Nektar holt.
+        Kannst du die gleiche Art Muster verwenden, um der Biene bei der Herstellung
+        des gesamten Honigs zu helfen?
       course3_bee_functions_challenge2: Für diese Herausforderung bist du auf dich
         allein gestellt!
       course3_bee_functions_challenge3: Erstelle eine neue Funktion, um den gesamten
@@ -3315,6 +3345,8 @@ de-DE:
         um das Rätsel abzuschließen!
       course3_bee_functions_challenge4: Wende alles an, was du gelernt hast, um dieses
         Rätsel abzuschließen!
+      course3_collector_debugging_challenge2: Bist du ein Spezialist für verschachtelte
+        Schleifen? Nutze das bisher Gelernte, um dir den ganzen Schatz zu holen!
       course3_farmer_condLoops_challenge1: "Die Kürbisse markieren die Stelle, an
         der du dich drehen solltest. Andernfalls fahre weiter vorwärts, aber denke
         daran, den gesamten Salat oder Mais auf dem Weg zu sammeln. \n\n**Jede versteckte
@@ -4663,6 +4695,15 @@ de-DE:
       courseC_flappy_events1_2019: "Hänge den `normal flattern`-Baustein an das Ereignis
         `beim Klicken` an und drücke dann \"Ausführen\".  \n\n* * *\n\nKlicke oder
         tippe auf die Abspielfläche, um Flappy zum Ziel zu bewegen."
+      courseC_flappy_events3: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen Sie
+        den `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden` an.
+        \n\n* * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
+      courseC_flappy_events3_2018: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen
+        Sie den `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden`
+        an. \n\n* * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
+      courseC_flappy_events3_2019: "Jetzt haben wir den Boden hinzugefügt.\n\nBringen
+        Sie den `Spielende` Baustein an das Ereignis `Bei Aufprall auf dem Boden`
+        an. \n\n* * *\n\nSpiele das Spiel und stürze den Vogel in den Boden, um fortzufahren."
       courseC_flappy_events6: "Klicke auf den Abwärtspfeil innerhalb des Bausteins
         \"schlage normal mit den Flügeln\", um eine andere Schlagkraft auszuwählen.
         \ \n\nSchau, ob du immer noch einen Punkt erzielen kannst, nachdem du Flappy
@@ -5416,10 +5457,38 @@ de-DE:
         * * *
 
         Lasse den Ball so lange prallen, bis er das Ziel erreicht hat.
+      courseD_collector_debugging10_predict1: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
       courseD_collector_debugging6a_2018: 'Herausforderung: Verwende den Code im Arbeitsbereich,
         um mindestens **6** Schätze zu erreichen!'
       courseD_collector_debugging6a_2019: 'Herausforderung: Verwende den Code im Arbeitsbereich,
         um mindestens **6** Schätze zu erreichen!'
+      courseD_collector_debugging8: |-
+        _"So viele Schätze!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging8a_2018: |-
+        _"So viele Schätze!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging8a_2019: |-
+        _"So viele Schätze!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging9: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging9a_2018: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
+      courseD_collector_debugging9a_2019: |-
+        _"Es ist die Schatzinsel!"_
+
+        Hilf Laurel, den Code zu reparieren, um den ganzen Schatz zu bekommen.
       courseD_collector_nested_loops_challenge2: |-
         _“Lass uns auf die Schatzsuche gehen - mit Schleifen!“_
 

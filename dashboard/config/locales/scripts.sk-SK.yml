@@ -1970,6 +1970,9 @@ sk:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Hľadanie a odstraňovanie chýb: Príbeh o chrobákoch'
+              description_teacher: 'Táto lekcia prevedie študentov procesom debuggovania
+                (odstraňovania chýb). Študenti sa naučia heslo: "Čo sa stalo? Čo sa
+                malo stať? Čo mi to napovedalo?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Vytrvalosť: Stevie a jej veľký projekt'
             'Real-life Algorithms: Plant a Seed':
@@ -2006,6 +2009,10 @@ sk:
                 silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné,
                 žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu
                 cestu ku vyriešeniu problému.
+            Loops in Collector:
+              description_teacher: Staviame na koncepte opakujúcich sa inštrukcií  z
+                časti "Veselé cykly", táto lekcia študentom umožní používať cykly
+                na zbieranie pokladov na Code.org efektívnejšie.
             Loops in Artist:
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
                 začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
@@ -2266,6 +2273,14 @@ sk:
               name: Zreviduj svoj projekt
             Conditionals:
               name: Podmienky s farmárkou
+              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
+                a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
+                kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
+                nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale
+                vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval
+                .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak,
+                že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak
+                sa spustí niečo iné.
             Private and Personal Information:
               name: 'Digitálne občianstvo: Súkromné a osobné údaje'
               description_student: Na internete zažijeme veľa zábavy, ale je tiež
@@ -3111,6 +3126,9 @@ sk:
           stages:
             'Debugging: Unspotted Bugs':
               name: Príbeh o hľadaní chrobákov a chýb
+              description_teacher: 'Táto lekcia prevedie študentov procesom debuggovania
+                (odstraňovania chýb). Študenti sa naučia heslo: "Čo sa stalo? Čo sa
+                malo stať? Čo mi to napovedalo?"'
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie a jej veľký projekt
             'Real-life Algorithms: Plant a Seed':
@@ -3150,6 +3168,9 @@ sk:
                 cestu ku vyriešeniu problému.
             Loops in Collector:
               name: Cykly s Laurel
+              description_teacher: Staviame na koncepte opakujúcich sa inštrukcií  z
+                časti "Veselé cykly", táto lekcia študentom umožní používať cykly
+                na zbieranie pokladov na Code.org efektívnejšie.
             Loops in Artist:
               name: Na mori s cyklami
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
@@ -3514,6 +3535,14 @@ sk:
                 a Umelec.
             Conditionals:
               name: Podmienky s Farmárkou
+              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
+                a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
+                kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
+                nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale
+                vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval
+                .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak,
+                že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak
+                sa spustí niečo iné.
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež
@@ -4241,6 +4270,14 @@ sk:
               name: Podmienky s kartami
             Conditionals:
               name: Podmienky s Farmárkou
+              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
+                a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
+                kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
+                nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale
+                vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval
+                .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak,
+                že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak
+                sa spustí niečo iné.
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež
@@ -5370,6 +5407,14 @@ sk:
           stages:
             Conditionals:
               name: Podmienky s Farmárkou
+              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
+                a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
+                kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
+                nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale
+                vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval
+                .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak,
+                že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak
+                sa spustí niečo iné.
             Simon Says:
               name: Simon vraví
             Learning Sprites with Sprite Lab:

@@ -277,14 +277,14 @@ sk-SK:
         Pamätaj: Nie pod všetkými oblakmi sa skrýva tá istá vec!
       4-5 Bee Conditionals 3: Teraz chcem len vyrábať med. Pod niekotorými z týchto
         oblakov sa môžu schovávať plásty. Skontroluj všetky oblaky!
-      4-5 Bee Conditionals 4: Niekedy oblak zakrýva kvetinku a niekedy zakrýva úľ!
-        Použite bloky if/else pre pozbieranie nektáru, ak tam je kvetinka alebo pre
-        spravenie medu, ak tam je úľ.
+      4-5 Bee Conditionals 4: Niekedy sa pod oblakom skrýva kvet a niekedy včelí plást!
+        Použi blok ak/inak a pozberaj všetok nektár ak tam je kvet, inak vyrob med
+        (lebo je to plást).
       4-5 Bee Conditionals 5: |-
-        Pod každým z týchto oblakov je buď kvetina, alebo úľ!
+        Pod každým z oblakov bude buď kvet alebo včelí plást!
 
-        Použite blok "if/else" pre pozbieranie nektáru, ak tam je kvetina.
-        V opačnom prípade vyrob med (keďže tam bude úľ).
+        Použi blok `ak/inak`a pozberaj nektár ak tam je kvet.
+        V opačnom prípade, vyrob med (lebo je to plást).
       4-5 Bee Conditionals 6: "Nie som si istý, koľko nektáru má táto kvetina, ale
         viem, že to budú 1, 2 alebo 3 nektáre. \n\nSkombinuj podmieňovacie bloky (\"if\"
         a/alebo \"if/else\") pre získanie práve toľko nektáru, koľko ho je na kvetine.
@@ -951,10 +951,40 @@ sk-SK:
         nástrojov."'
       courseA_artist_loops1: Toto je nový typ úlohy nazývaný "Umelec". V tomto leveli
         sa trochu pohraj a nakresli niečo zábavné.
+      courseA_artist_loops11: Pomôž mi postaviť schody, aby som mohol sledovať ako
+        loď odpláva.
+      courseA_artist_loops11_2018: Pomôž mi postaviť schody, aby som mohol sledovať
+        ako loď odpláva.
+      courseA_artist_loops11_2019: Pomôž mi postaviť schody, aby som mohol sledovať
+        ako loď odpláva.
       courseA_artist_loops1_2018: Toto je nový typ úlohy nazývaný "Umelec". V tomto
         leveli sa trochu pohraj a nakresli niečo zábavné.
       courseA_artist_loops1_2019: Toto je nový typ úlohy nazývaný "Umelec". V tomto
         leveli sa trochu pohraj a nakresli niečo zábavné.
+      courseA_artist_loops2: Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.
+      courseA_artist_loops2_2018: Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.
+      courseA_artist_loops2_2019: Pomôž umelcovi nakresliť túto čiaru 2 krát dopredu.
+      courseA_artist_loops5: Nakresli čiaru, ktorá bude zložená zo siedmich ťahov.
+        Toto bude náš horizont.
+      courseA_artist_loops5_2018: Nakresli čiaru, ktorá bude zložená zo siedmich ťahov.
+        Toto bude náš horizont.
+      courseA_artist_loops5_2019: Nakresli čiaru, ktorá bude zložená zo siedmich ťahov.
+        Toto bude náš horizont.
+      courseA_artist_loops6: Poďme do pozadia vložiť pekný kopec!
+      courseA_artist_loops6_2018: Poďme do pozadia vložiť pekný kopec!
+      courseA_artist_loops6_2019: Poďme do pozadia vložiť pekný kopec!
+      courseA_artist_loops7: Použi cyklus `opakovať` na pridanie vĺn na vodu.
+      courseA_artist_loops7_2018: Použi cyklus `opakovať` na pridanie vĺn na vodu.
+      courseA_artist_loops7_2019: Použi cyklus `opakovať` na pridanie vĺn na vodu.
+      courseA_artist_loops8: Potrebujeme rebrík do loďe.
+      courseA_artist_loops8_2018: Potrebujeme rebrík do loďe.
+      courseA_artist_loops8_2019: Potrebujeme rebrík do loďe.
+      courseA_collector_loops10: Pomôž Laurel pozbierať všetky drahokamy na tejto
+        ceste.
+      courseA_collector_loops10_2018: Pomôž Laurel pozbierať všetky drahokamy na tejto
+        ceste.
+      courseA_collector_loops10_2019: Pomôž Laurel pozbierať všetky drahokamy na tejto
+        ceste.
       courseA_collector_loops11: Pomôž Laurel pozbierať všetky drahokamy z tejto jaskyne.
       courseA_collector_loops11_2018: Pomôž Laurel pozbierať všetky drahokamy z tejto
         jaskyne.
@@ -962,6 +992,35 @@ sk-SK:
         jaskyne.
       courseA_collector_loops2_2019: Pozbieraj všetky 3 drahokamy! Posuň Laurel ku
         drahokamu a potom použi blok "zbieraj".
+      courseA_collector_loops4: Oprav Laurelinu cestu, aby pozbierala všetky drahokamy.
+      courseA_collector_loops4_2018: Oprav Laurelinu cestu, aby pozbierala všetky
+        drahokamy.
+      courseA_collector_loops4_2019: Oprav Laurelinu cestu, aby pozbierala všetky
+        drahokamy.
+      courseA_collector_loops5: Použi, čo si sa naučil/a a dostaň všetky drahokamy.
+      courseA_collector_loops5_2018: Použi, čo si sa naučil/a a dostaň všetky drahokamy.
+      courseA_collector_loops5_2019: Použi, čo si sa naučil/a a dostaň všetky drahokamy.
+      courseA_collector_loops6: Pridaj k tomuto kódu bloky, aby si dostal/a všetky
+        drahokamy.
+      courseA_collector_loops6_2018: Pridaj k tomuto kódu bloky, aby si dostal/a všetky
+        drahokamy.
+      courseA_collector_loops6_2019: Pridaj k tomuto kódu bloky, aby si dostal/a všetky
+        drahokamy.
+      courseA_collector_loops7: Čo je potrebné pridať ku kódu, aby si dostal/a všetky
+        drahokamy?
+      courseA_collector_loops7_2018: Čo je potrebné pridať ku kódu, aby si dostal/a
+        všetky drahokamy?
+      courseA_collector_loops7_2019: Čo je potrebné pridať ku kódu, aby si dostal/a
+        všetky drahokamy?
+      courseA_collector_loops8: Napíš kód na pozbieranie všetkých týchto drahokamov.
+      courseA_collector_loops8_2018: Napíš kód na pozbieranie všetkých týchto drahokamov.
+      courseA_collector_loops8_2019: Napíš kód na pozbieranie všetkých týchto drahokamov.
+      courseA_collector_loops9: "**Výzva:** Drahokamy sú na týchto schodoch až po
+        samý vrch! Napíš kód, ktorý pomôže Laurel všetky pozbierať."
+      courseA_collector_loops9_2018: "**Výzva:** Drahokamy sú na týchto schodoch až
+        po samý vrch! Napíš kód, ktorý pomôže Laurel všetky pozbierať."
+      courseA_collector_loops9_2019: "**Výzva:** Drahokamy sú na týchto schodoch až
+        po samý vrch! Napíš kód, ktorý pomôže Laurel všetky pozbierať."
       courseA_harvester_loops1: Pomôž záhradníčke pozbierať všetku kukuricu!
       courseA_harvester_loops10: Pomôž záhradníčke pozbierať všetkých 5 klasov kukurice!
       courseA_harvester_loops10_2019: Pomôž záhradníčke pozbierať všetkých 5 klasov
@@ -1073,18 +1132,35 @@ sk-SK:
         ku prasiatku!
       courseA_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa vtáčik dostal
         ku prasiatku!
+      courseA_maze_seq8: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
+      courseA_maze_seq8_2018: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
+      courseA_maze_seq8_2019: Vyrieš túto úlohu a dostaň vtáčika ku prasaťu!
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
+      courseA_playLab_events1: Toto je Play Lab. Presuň bloky do svojho pracovného
+        priestoru a uvidíš, čo sa stane!
+      courseA_playLab_events1_2018: Toto je Play Lab. Presuň bloky do svojho pracovného
+        priestoru a uvidíš, čo sa stane!
       courseA_playLab_events1_2019: Toto je Play Lab. Presuň bloky do svojho pracovného
         priestoru a uvidíš, čo sa stane!
+      courseA_playLab_events2: Pes Jorge chce povedať "Ahoj". Môžeš mu s tým pomôcť?
+      courseA_playLab_events2_2018: Pes Jorge chce povedať "Ahoj". Môžeš mu s tým
+        pomôcť?
       courseA_playLab_events2_2019: Pes Jorge chce povedať "Ahoj". Môžeš mu s tým
         pomôcť?
       courseA_playLab_events4_2018: Pridaj ešte jeden blok s udalosťou, aby sa Jorge
         posunul doprava po kliknutí na tlačidlo `vpravo`.
+      courseA_playLab_events6: Sprav to ešte zaujímavejšie, zmeň aj pozadie a prehraj
+        náhodný zvuk po kliknutí na Jorgeho.
+      courseA_playLab_events6_2018: Sprav to ešte zaujímavejšie, zmeň aj pozadie a
+        prehraj náhodný zvuk po kliknutí na Jorgeho.
+      courseA_playLab_events6_2019: Sprav to ešte zaujímavejšie, zmeň aj pozadie a
+        prehraj náhodný zvuk po kliknutí na Jorgeho. Keď bude tvoj kód hotový, klikni
+        na Jorgeho aby si to vyskúšal/a!
       courseA_playLab_events7_2018: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
       courseA_playLab_events7_2019: _Voľná hra:_ Pridaj do tejto hry čo len chceš.
       courseB_Scrat_ramp1_2018: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
@@ -2401,12 +2477,12 @@ sk-SK:
         jej odstránenie.
       courseD_farmer_while1_2019: Presuň sa na kopu hliny a použi blok "odstráň" na
         jej odstránenie.
-      courseD_farmer_while2: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím
-        bloku "naplň".
-      courseD_farmer_while2_2018: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím
-        bloku "naplň".
-      courseD_farmer_while2_2019: Presuň sa k diere a naplň ju 6 lopatami hliny, použitím
-        bloku "naplň".
+      courseD_farmer_while2: Presuň sa k diere a pomocou bloku "vyplň" ju naplň ju
+        6 lopatami hliny.
+      courseD_farmer_while2_2018: Presuň sa k diere a pomocou bloku "vyplň" ju naplň
+        ju 6 lopatami hliny.
+      courseD_farmer_while2_2019: Presuň sa k diere a pomocou bloku "vyplň" ju naplň
+        ju 6 lopatami hliny.
       courseD_farmer_while3: Na vyriešenie tejto úlohy použi čo najmenej blokov.
       courseD_farmer_while3_2018: Na vyriešenie tejto úlohy použi čo najmenej blokov.
       courseD_farmer_while3_2019: Na vyriešenie tejto úlohy použi čo najmenej blokov.
@@ -2548,6 +2624,12 @@ sk-SK:
       courseD_maze_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak
         sa môžem rozhnevať!"'
       courseD_maze_until1: Dostaň nahnevaného vtáka k prasiatku.
+      courseD_maze_until10: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_predict2: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_predict2_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until10_predict2_2019: Pomôž zombiemu dostať sa k slnečnici.
       courseD_maze_until1_2018: Dostaň nahnevaného vtáka k prasiatku.
       courseD_maze_until1_2019: Dostaň nahnevaného vtáka k prasiatku.
       courseD_maze_until3: Dostaň vtáka k prasiatku.
@@ -2558,6 +2640,25 @@ sk-SK:
         blokov?
       courseD_maze_until4_2019: Vieš dostať zombíka k slnečnici použitím dostupných
         blokov?
+      courseD_maze_until5: Použi blok `ak` a pomôž zombiemu rozhodnúť sa, kedy sa
+        má otočiť, aby získal slnečnicu.
+      courseD_maze_until5_2018: Použi blok `ak` a pomôž zombiemu rozhodnúť sa, kedy
+        sa má otočiť, aby získal slnečnicu.
+      courseD_maze_until5_2019: Použi blok `ak` a pomôž zombiemu rozhodnúť sa, kedy
+        sa má otočiť, aby získal slnečnicu.
+      courseD_maze_until6: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until6_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until6_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until7: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until7_2018: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until7_2019: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until8: Pomôž zombiemu dostať sa k slnečnici.
+      courseD_maze_until9: "**Výzva:** Vyhni sa chomperom a pomôž zombiemu dostať
+        sa k slnečnici."
+      courseD_maze_until9_2018: "**Výzva:** Vyhni sa chomperom a pomôž zombiemu dostať
+        sa k slnečnici."
+      courseD_maze_until9_2019: "**Výzva:** Vyhni sa chomperom a pomôž zombiemu dostať
+        sa k slnečnici."
       courseD_playLab_cond1: Na vyriešenie tejto úlohy dostaň Peglega k vlajkám.
       courseD_playLab_cond1_2018: Na vyriešenie tejto úlohy dostaň Peglega k vlajkám.
       courseD_playLab_cond2: 'Daj Peglegovi bod vždy keď sa dostane k drakovi. '
