@@ -22,19 +22,19 @@ describe('AgeDialog', () => {
     restoreOnWindow('sessionStorage');
   });
 
-  it('renders null if signed in', () => {
+  it('renders null if user is signed in', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} signedIn={true} />);
     assert.equal(wrapper.children().length, 0);
   });
 
-  it('renders null if seen before', () => {
+  it('renders null if dialog was seen before', () => {
     let getItem = sinon.stub(window.sessionStorage, 'getItem').returns('true');
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
     getItem.restore();
   });
 
-  it('renders a dialog otherwise', () => {
+  it('renders a dialog if neither signed in nor seen before', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.name(), 'BaseDialog');
   });
