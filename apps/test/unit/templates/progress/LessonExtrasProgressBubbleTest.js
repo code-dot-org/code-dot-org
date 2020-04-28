@@ -8,7 +8,8 @@ import color from '@cdo/apps/util/color';
 
 const defaultProps = {
   stageExtrasUrl: '/extras',
-  onStageExtras: false
+  onStageExtras: false,
+  perfect: false
 };
 
 describe('LessonExtrasProgressBubble', () => {
@@ -46,9 +47,9 @@ describe('LessonExtrasProgressBubble', () => {
     );
   });
 
-  it('has a green flag icon when on stage extras', () => {
+  it('has a green flag icon when level result is perfect (or on stage extras level)', () => {
     const wrapper = shallow(
-      <LessonExtrasProgressBubble {...defaultProps} onStageExtras={true} />
+      <LessonExtrasProgressBubble {...defaultProps} perfect={true} />
     );
     assert.equal(
       wrapper
