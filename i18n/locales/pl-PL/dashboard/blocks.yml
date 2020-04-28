@@ -985,6 +985,8 @@ pl:
         text: sprite {SPRITE} rozpoczyna się {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      gamelab_bounceOff:
+        text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -1034,6 +1036,8 @@ pl:
         text: ukryj ekran tytułowy
       gamelab_isTouchingEdges:
         text: "{SPRITE} dotyka krawędzi"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} dotyka {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} skocz do {LOCATION}"
       gamelab_keyPressed:

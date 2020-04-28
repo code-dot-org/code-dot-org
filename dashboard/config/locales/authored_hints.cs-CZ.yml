@@ -907,6 +907,12 @@ cs-CZ:
         courseA_collector_preLoops6_a: K vyřešení této úlohy budeš potřebovat využít
           dva ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
           bloky.
+      courseA_harvester_loops6:
+        courseA_harvester_loops6_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+      courseA_harvester_loops6_2019:
+        courseA_harvester_loops6_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
       courseA_harvester_seq2:
         courseA_harvester_seq2_b: Zkus sepsat kroky na papír, aby jsi našel řešení!
       courseA_harvester_seq2_2019:
@@ -1007,57 +1013,258 @@ cs-CZ:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
       courseC_collector_loops_challenge2_2019:
         courseC_maze_loops_challenge2_b: Použij cykly, aby ti nedošly bloky `opakuj`!
+      courseC_collector_prog1:
+        courseC_collector_prog1_a: Když stojíš na poli s pokladem, použij blok <xml><block
+          type="collector_collect"/></xml> a vyzvedni jej.
+        courseC_collector_prog1_b: Nejjednodušším řešením by bylo jednou se posunout
+          vpřed a poté sbírat poklad.
+      courseC_collector_prog1_2018:
+        courseC_collector_prog1_a: Když stojíš na poli s pokladem, použij blok <xml><block
+          type="collector_collect"/></xml> a vyzvedni jej.
+        courseC_collector_prog1_b: Nejjednodušším řešením by bylo jednou se posunout
+          vpřed a poté sbírat poklad.
+      courseC_collector_prog1_2019:
+        courseC_collector_prog1_a: Když stojíš na poli s pokladem, použij blok <xml><block
+          type="collector_collect"/></xml> a vyzvedni jej.
+        courseC_collector_prog1_b: Nejjednodušším řešením by bylo jednou se posunout
+          vpřed a poté sbírat poklad.
       courseC_collector_prog2:
+        courseC_collector_prog2_a: Můžeš použít čtyři bloky nebo pomocí bloku zkrátit
+          program.
         courseC_collector_prog2_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: Můžeš použít čtyři bloky nebo pomocí bloku zkrátit
+          program.
         courseC_collector_prog2_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: Můžeš použít čtyři bloky nebo pomocí bloku zkrátit
+          program.
         courseC_collector_prog2_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_collector_prog3:
+        courseC_collector_prog3_a: Program spoustí pouze ty bloky, které jsou spojeny
+          s blokem <xml><block type="when_run"/></xml>.
+        courseC_collector_prog3_b: Zkus pomocí tlačítka „Krok“ spustit kód po jednom
+          řádku. Vidíš, kde se kód pokazí?
         courseC_collector_prog3_c: Pokud máš problém vyřešit tento úkol, zkus si zapsat
           své tahy na papír.
       courseC_collector_prog3_2018:
+        courseC_collector_prog3_a: Program spoustí pouze ty bloky, které jsou spojeny
+          s blokem <xml><block type="when_run"/></xml>.
+        courseC_collector_prog3_b: Zkus pomocí tlačítka „Krok“ spustit kód po jednom
+          řádku. Vidíš, kde se kód pokazí?
         courseC_collector_prog3_c: Pokud máš problém vyřešit tento úkol, zkus si zapsat
           své tahy na papír.
       courseC_collector_prog3_2019:
+        courseC_collector_prog3_a: Program spoustí pouze ty bloky, které jsou spojeny
+          s blokem <xml><block type="when_run"/></xml>.
+        courseC_collector_prog3_b: Zkus pomocí tlačítka „Krok“ spustit kód po jednom
+          řádku. Vidíš, kde se kód pokazí?
         courseC_collector_prog3_c: Pokud máš problém vyřešit tento úkol, zkus si zapsat
           své tahy na papír.
       courseC_collector_prog4:
+        courseC_collector_prog4_a: Pokud si nevíš rady, zkus si tyto kroky napsat
+          na papír.
         courseC_collector_prog4_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_collector_prog4_c: Zkus pro cestu tuto možnost.
       courseC_collector_prog4_2018:
+        courseC_collector_prog4_a: Pokud si nevíš rady, zkus si tyto kroky napsat
+          na papír.
         courseC_collector_prog4_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_collector_prog4_c: Zkus pro cestu tuto možnost.
       courseC_collector_prog4_2019:
+        courseC_collector_prog4_a: Pokud si nevíš rady, zkus si tyto kroky napsat
+          na papír.
         courseC_collector_prog4_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_collector_prog4_c: Zkus pro cestu tuto možnost.
+      courseC_collector_prog5:
+        courseC_collector_prog5_a: "\"Funguje to v prvním kroku?\nFunguje to ve druhém
+          kroku? \nKde se to pokazí?“"
+        courseC_collector_prog5_b: Pokud jsi opravil jednu chybu a program stále nefunguje,
+          vyhledej pomocí výše uvedených kroků další chyby.
+        courseC_collector_prog5_c: Pokud si nevíš rady, zkus si tyto kroky napsat
+          na papír.
+        courseC_collector_prog5_d: Sleduj cestu a sbírej poklad.
+      courseC_collector_prog5_2018:
+        courseC_collector_prog5_a: "\"Funguje to v prvním kroku?\nFunguje to ve druhém
+          kroku? \nKde se to pokazí?“"
+        courseC_collector_prog5_b: Pokud jsi opravil jednu chybu a program stále nefunguje,
+          vyhledej pomocí výše uvedených kroků další chyby.
+        courseC_collector_prog5_c: Pokud si nevíš rady, zkus si tyto kroky napsat
+          na papír.
+        courseC_collector_prog5_d: Sleduj cestu a sbírej poklad.
+      courseC_collector_prog5_2019:
+        courseC_collector_prog5_a: "\"Funguje to v prvním kroku?\nFunguje to ve druhém
+          kroku? \nKde se to pokazí?“"
+        courseC_collector_prog5_b: Pokud jsi opravil jednu chybu a program stále nefunguje,
+          vyhledej pomocí výše uvedených kroků další chyby.
+        courseC_collector_prog5_c: Pokud si nevíš rady, zkus si tyto kroky napsat
+          na papír.
+        courseC_collector_prog5_d: Sleduj cestu a sbírej poklad.
       courseC_collector_prog6:
-        courseC_collector_prog6_a: "Dokážeš přijít na to, co je špatně? \n\nPro nalezení
-          chyb zkus použít tlačítko Krok, abys spouštěl(a) kód řádek po řádku."
+        courseC_collector_prog6_a: "Přijdeš na to, co je špatně?  \n\nPro nalezení
+          chyb zkus použít tlačítko \"Krok\" a spouštěj kód řádek po řádku."
+        courseC_collector_prog6_b: Nevíš si rady? Zkus tuto cestu a sbírej poklad.
       courseC_collector_prog6_2018:
-        courseC_collector_prog6_a: "Dokážeš přijít na to, co je špatně? \n\nPro nalezení
-          chyb zkus použít tlačítko Krok, abys spouštěl(a) kód řádek po řádku."
+        courseC_collector_prog6_a: "Přijdeš na to, co je špatně?  \n\nPro nalezení
+          chyb zkus použít tlačítko \"Krok\" a spouštěj kód řádek po řádku."
+        courseC_collector_prog6_b: Nevíš si rady? Zkus tuto cestu a sbírej poklad.
       courseC_collector_prog6_2019:
-        courseC_collector_prog6_a: "Dokážeš přijít na to, co je špatně? \n\nPro nalezení
-          chyb zkus použít tlačítko Krok, abys spouštěl(a) kód řádek po řádku."
+        courseC_collector_prog6_a: "Přijdeš na to, co je špatně?  \n\nPro nalezení
+          chyb zkus použít tlačítko \"Krok\" a spouštěj kód řádek po řádku."
+        courseC_collector_prog6_b: Nevíš si rady? Zkus tuto cestu a sbírej poklad.
+      courseC_collector_prog7:
+        courseC_collector_prog7_a: 'V pracovním prostoru je již spousta skvělých kódů.
+          K vyřešení této úlohy nemusíš nic z toho mazat.  '
+        courseC_collector_prog7_b: Nevidíš blok, který potřebuješ k tomu, aby se dobrodruh
+          posunul správným směrem? Vyndej jeden blok z panelu.
+        courseC_collector_prog7_c: Máš problém najít cestu a posbírat všechen poklad?
+          Zkus tuto cestu!
+      courseC_collector_prog7_2018:
+        courseC_collector_prog7_a: 'V pracovním prostoru je již spousta skvělých kódů.
+          K vyřešení této úlohy nemusíš nic z toho mazat.  '
+        courseC_collector_prog7_b: Nevidíš blok, který potřebuješ k tomu, aby se dobrodruh
+          posunul správným směrem? Vyndej jeden blok z panelu.
+        courseC_collector_prog7_c: Máš problém najít cestu a posbírat všechen poklad?
+          Zkus tuto cestu!
+      courseC_collector_prog7_2019:
+        courseC_collector_prog7_a: 'V pracovním prostoru je již spousta skvělých kódů.
+          K vyřešení této úlohy nemusíš nic z toho mazat.  '
+        courseC_collector_prog7_b: Nevidíš blok, který potřebuješ k tomu, aby se dobrodruh
+          posunul správným směrem? Vyndej jeden blok z panelu.
+        courseC_collector_prog7_c: Máš problém najít cestu a posbírat všechen poklad?
+          Zkus tuto cestu!
       courseC_flappy_events1:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2018:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_harvester_loops1:
+        courseC_harvester_loops1_a: Až se dostaneš k dýním, použij <xml><block type="harvester_pumpkin"/></xml>
+          na sklizení.
+        courseC_harvester_loops1_b: Když použiješ cyklus na <xml><block type="harvester_pumpkin"/></xml>
+          můžeš sklidit víc než jednu dýní z políčka.
+      courseC_harvester_loops1_2018:
+        courseC_harvester_loops1_a: Až se dostaneš k dýním, použij <xml><block type="harvester_pumpkin"/></xml>
+          na sklizení.
+        courseC_harvester_loops1_b: Když použiješ cyklus na <xml><block type="harvester_pumpkin"/></xml>
+          můžeš sklidit víc než jednu dýní z políčka.
+      courseC_harvester_loops1_2019:
+        courseC_harvester_loops1_a: Až se dostaneš k dýním, použij <xml><block type="harvester_pumpkin"/></xml>
+          na sklizení.
+        courseC_harvester_loops1_b: Když použiješ cyklus na <xml><block type="harvester_pumpkin"/></xml>
+          můžeš sklidit víc než jednu dýní z políčka.
+      courseC_harvester_loops2:
+        courseC_harvester_loops2_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+        courseC_harvester_loops2_b: Budeš potřebovat dva `opakuj` cykly za sebou.
+        courseC_harvester_loops2_c: V prvním cyklu bude příkaz `posuň v před` a v
+          druhém cyklu bude `vyber dýni`.
+      courseC_harvester_loops2_2018:
+        courseC_harvester_loops2_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+        courseC_harvester_loops2_b: Budeš potřebovat dva `opakuj` cykly za sebou.
+        courseC_harvester_loops2_c: V prvním cyklu bude příkaz `posuň v před` a v
+          druhém cyklu bude `vyber dýni`.
+      courseC_harvester_loops2_2019:
+        courseC_harvester_loops2_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+        courseC_harvester_loops2_b: Budeš potřebovat dva `opakuj` cykly za sebou.
+        courseC_harvester_loops2_c: V prvním cyklu bude příkaz `posuň v před` a v
+          druhém cyklu bude `vyber dýni`.
       courseC_harvester_loops3:
         courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_harvester_loops3_b: Na první dýně můžeš použít stejný kód jako v předchozí
+          úloze. Na kterou stranu se potom musíš otočit?
+        courseC_harvester_loops3_c: Pokud chceš kód ještě více zjednodušit můžeš dát
+          cyklus do cyklu. Říká se tomu **vnořený cyklus**.
       courseC_harvester_loops3_2018:
         courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_harvester_loops3_b: Na první dýně můžeš použít stejný kód jako v předchozí
+          úloze. Na kterou stranu se potom musíš otočit?
+        courseC_harvester_loops3_c: Pokud chceš kód ještě více zjednodušit můžeš dát
+          cyklus do cyklu. Říká se tomu **vnořený cyklus**.
       courseC_harvester_loops3_2019:
         courseC_harvester_loops3_a: Neboj se dělat chyby! Zkus používat bloky a spouštět
           kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
+        courseC_harvester_loops3_b: Na první dýně můžeš použít stejný kód jako v předchozí
+          úloze. Na kterou stranu se potom musíš otočit?
+        courseC_harvester_loops3_c: Pokud chceš kód ještě více zjednodušit můžeš dát
+          cyklus do cyklu. Říká se tomu **vnořený cyklus**.
+      courseC_harvester_loops4:
+        courseC_harvester_loops4_a: Použij nový blok `vyber kukuřici`.
+        courseC_harvester_loops4_b: Můžeš použít vícero cyklů. Zvlášť na sběr kukuřice
+          a zvlášť na dýně.
+        courseC_harvester_loops4_c: Pokud chceš kód ještě více zjednodušit můžeš dát
+          cyklus do cyklu. Říká se tomu **vnořený cyklus**.
+      courseC_harvester_loops4_2018:
+        courseC_harvester_loops4_a: Použij nový blok `vyber kukuřici`.
+        courseC_harvester_loops4_b: Můžeš použít vícero cyklů. Zvlášť na sběr kukuřice
+          a zvlášť na dýně.
+        courseC_harvester_loops4_c: Pokud chceš kód ještě více zjednodušit můžeš dát
+          cyklus do cyklu. Říká se tomu **vnořený cyklus**.
+      courseC_harvester_loops4_2019:
+        courseC_harvester_loops4_a: Použij nový blok `vyber kukuřici`.
+        courseC_harvester_loops4_b: Můžeš použít vícero cyklů. Zvlášť na sběr kukuřice
+          a zvlášť na dýně.
+        courseC_harvester_loops4_c: Pokud chceš kód ještě více zjednodušit můžeš dát
+          cyklus do cyklu. Říká se tomu **vnořený cyklus**.
+      courseC_harvester_loops5:
+        courseC_harvester_loops5_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+        courseC_harvester_loops5_b: Nevypadá to podobně jako schody z jiných úloh?
+          Řešení bude podobné, jen nezapomeň přidat bloky na sběr plodin.
+      courseC_harvester_loops5_2018:
+        courseC_harvester_loops5_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+        courseC_harvester_loops5_b: Nevypadá to podobně jako schody z jiných úloh?
+          Řešení bude podobné, jen nezapomeň přidat bloky na sběr plodin.
+      courseC_harvester_loops5_2019:
+        courseC_harvester_loops5_a: Pokud se zasekneš, napiš si všechny kroky na papír
+          a potom uvidíš, které se opakují.
+        courseC_harvester_loops5_b: Nevypadá to podobně jako schody z jiných úloh?
+          Řešení bude podobné, jen nezapomeň přidat bloky na sběr plodin.
+      courseC_harvester_loops6:
+        courseC_harvester_loops6_a: Pamatuj, že můžeš dát víc bloků do jednoho cyklu.
+        courseC_harvester_loops6_b: Nezapomeň se otočit na konci řádky.
+      courseC_harvester_loops6_2018:
+        courseC_harvester_loops6_a: Pamatuj, že můžeš dát víc bloků do jednoho cyklu.
+        courseC_harvester_loops6_b: Nezapomeň se otočit na konci řádky.
+      courseC_harvester_loops6_2019:
+        courseC_harvester_loops6_a: Pamatuj, že můžeš dát víc bloků do jednoho cyklu.
+        courseC_harvester_loops6_b: Nezapomeň se otočit na konci řádky.
+      courseC_harvester_loops7:
+        courseC_harvester_loops7_a: 'Jsou tu dvě řešení. Buď můžeš prvně posbírat
+          kukuřici nebo dýně. '
+        courseC_harvester_loops7_b: K vyřešení úlohy bude potřeba použít více cyklů
+          `opakuj`.
+      courseC_harvester_loops7_2018:
+        courseC_harvester_loops7_a: 'Jsou tu dvě řešení. Buď můžeš prvně posbírat
+          kukuřici nebo dýně. '
+        courseC_harvester_loops7_b: K vyřešení úlohy bude potřeba použít více cyklů
+          `opakuj`.
+      courseC_harvester_loops7_2019:
+        courseC_harvester_loops7_a: 'Jsou tu dvě řešení. Buď můžeš prvně posbírat
+          kukuřici nebo dýně. '
+        courseC_harvester_loops7_b: K vyřešení úlohy bude potřeba použít více cyklů
+          `opakuj`.
+      courseC_harvester_loops8:
+        courseC_harvester_loops8_a: Nevypadá to podobně jako schody z jiných úloh?
+          Řešení bude podobné, jen nezapomeň přidat bloky na sběr plodin.
+      courseC_harvester_loops8_2018:
+        courseC_harvester_loops8_a: Nevypadá to podobně jako schody z jiných úloh?
+          Řešení bude podobné, jen nezapomeň přidat bloky na sběr plodin.
+      courseC_harvester_loops8_2019:
+        courseC_harvester_loops8_a: Nevypadá to podobně jako schody z jiných úloh?
+          Řešení bude podobné, jen nezapomeň přidat bloky na sběr plodin.
       courseC_maze_debugging1:
         courseC_maze_debugging1_a: |-
           -   Funguje všechno po prvním kroku?
@@ -1384,32 +1591,134 @@ cs-CZ:
         courseC_maze_programming8_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
       courseC_starWars_loops1:
+        courseC_starWars_loops1_a: Když se BB-8 překutálí přes šrot, automaticky ho
+          sebere.
         courseC_starWars_loops1_b: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+        courseC_starWars_loops1_c: Bude třeba použít `posuň se vpřed` pětkrát za sebou
+          k vyřešení úlohy.
       courseC_starWars_loops10:
+        courseC_starWars_loops10_a: To vypadá jako jen jako větší schody. Zkus použít,
+          co jsem už naučil(a) z předchozích úloh.
+        courseC_starWars_loops10_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
         courseC_starWars_loops10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
       courseC_starWars_loops10_2018:
+        courseC_starWars_loops10_a: To vypadá jako jen jako větší schody. Zkus použít,
+          co jsem už naučil(a) z předchozích úloh.
+        courseC_starWars_loops10_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
         courseC_starWars_loops10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
       courseC_starWars_loops10_2019:
+        courseC_starWars_loops10_a: To vypadá jako jen jako větší schody. Zkus použít,
+          co jsem už naučil(a) z předchozích úloh.
+        courseC_starWars_loops10_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
         courseC_starWars_loops10_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
       courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_a: Když se BB-8 překutálí přes šrot, automaticky ho
+          sebere.
         courseC_starWars_loops1_b: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+        courseC_starWars_loops1_c: Bude třeba použít `posuň se vpřed` pětkrát za sebou
+          k vyřešení úlohy.
       courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_a: Když se BB-8 překutálí přes šrot, automaticky ho
+          sebere.
         courseC_starWars_loops1_b: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+        courseC_starWars_loops1_c: Bude třeba použít `posuň se vpřed` pětkrát za sebou
+          k vyřešení úlohy.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: Nejlepší je použít jeden `posuň se vpřed`, potom
+          `otoč se` a potom cyklus.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: Nejlepší je použít jeden `posuň se vpřed`, potom
+          `otoč se` a potom cyklus.
+      courseC_starWars_loops6:
+        courseC_starWars_loops6_a: 'Zkus napsat všechny kroky na na papír a najdi
+          skupinu, která se opakuje. '
+        courseC_starWars_loops6_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
+      courseC_starWars_loops6_2018:
+        courseC_starWars_loops6_a: 'Zkus napsat všechny kroky na na papír a najdi
+          skupinu, která se opakuje. '
+        courseC_starWars_loops6_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
+      courseC_starWars_loops6_2019:
+        courseC_starWars_loops6_a: 'Zkus napsat všechny kroky na na papír a najdi
+          skupinu, která se opakuje. '
+        courseC_starWars_loops6_b: |-
+          Když chceš použít méně kódu, můžeš přidat ještě jeden cyklus `opakuj` uvnitř jeného cyklu!\
+          Říká se tomu **vnořený cyklus**.
       courseC_starWars_loops7:
+        courseC_starWars_loops7_a: Není to tak těžké, jak to vypadá. Začni jedním
+          schodem. Pokryje to všechny kusy šrotu?
+        courseC_starWars_loops7_b: Pokud to to nejde, napiš si všechny kroky na papír
+          a zkus najít opakující se úsek kódu.
         courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
       courseC_starWars_loops7_2018:
+        courseC_starWars_loops7_a: Není to tak těžké, jak to vypadá. Začni jedním
+          schodem. Pokryje to všechny kusy šrotu?
+        courseC_starWars_loops7_b: Pokud to to nejde, napiš si všechny kroky na papír
+          a zkus najít opakující se úsek kódu.
         courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
       courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_a: Není to tak těžké, jak to vypadá. Začni jedním
+          schodem. Pokryje to všechny kusy šrotu?
+        courseC_starWars_loops7_b: Pokud to to nejde, napiš si všechny kroky na papír
+          a zkus najít opakující se úsek kódu.
         courseC_starWars_loops7_c: Neboj se dělat chyby! Spusť kód, abys viděl(a),
           co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).
+      courseC_starWars_loops8:
+        course_starWars_loops8_a: Tahle úloha je lepší řešit po částech. Máš čas.
+          Nemusíš to vyřešit na první pokus.
+        course_starWars_loops8_b: První část jsou podobné schody jako v předchozím
+          problému. Jak se to řešilo před tím?
+        course_starWars_loops8_c: |-
+          Podívej se na plánek.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2018:
+        course_starWars_loops8_a: Tahle úloha je lepší řešit po částech. Máš čas.
+          Nemusíš to vyřešit na první pokus.
+        course_starWars_loops8_b: První část jsou podobné schody jako v předchozím
+          problému. Jak se to řešilo před tím?
+        course_starWars_loops8_c: |-
+          Podívej se na plánek.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops8_2019:
+        course_starWars_loops8_a: Tahle úloha je lepší řešit po částech. Máš čas.
+          Nemusíš to vyřešit na první pokus.
+        course_starWars_loops8_b: První část jsou podobné schody jako v předchozím
+          problému. Jak se to řešilo před tím?
+        course_starWars_loops8_c: |-
+          Podívej se na plánek.
+
+          ![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)
+      courseC_starWars_loops9:
+        course_starWars_loops9_b: Můžeš do bloku "opakovat" dát i více než jeden příkaz.
+        course_starWars_loops9_c: 'Tahle úloha jde vyřešit bez zatáčení doleva. Stačí
+          jen zatáčet doprava. '
+      courseC_starWars_loops9_2018:
+        course_starWars_loops9_b: Můžeš do bloku "opakovat" dát i více než jeden příkaz.
+        course_starWars_loops9_c: 'Tahle úloha jde vyřešit bez zatáčení doleva. Stačí
+          jen zatáčet doprava. '
+      courseC_starWars_loops9_2019:
+        course_starWars_loops9_b: Můžeš do bloku "opakovat" dát i více než jeden příkaz.
+        course_starWars_loops9_c: 'Tahle úloha jde vyřešit bez zatáčení doleva. Stačí
+          jen zatáčet doprava. '
       courseD_artist_5_2018:
         '1': Jestli měníš tvary, nezapomeň, že budeš muset změnit také jejich úhly!
       courseD_artist_5_2018_2019:
@@ -2117,6 +2426,15 @@ cs-CZ:
       courseD_maze_ramp7:
         courseD_maze_ramp7_b: Nezapomeň použít tlačítko „Krok“, ať můžeš procházet
           blok po bloku a hledat chyby.
+      courseD_maze_until3:
+        courseD_maze_until3_b: Pokud si nevíš rady, zkus si kroky napsat na papír
+          a hledat místa, kde se opakují.
+      courseD_maze_until3_2018:
+        courseD_maze_until3_b: Pokud si nevíš rady, zkus si kroky napsat na papír
+          a hledat místa, kde se opakují.
+      courseD_maze_until3_2019:
+        courseD_maze_until3_b: Pokud si nevíš rady, zkus si kroky napsat na papír
+          a hledat místa, kde se opakují.
       courseD_scrat_ramp1:
         courseC_maze_programming1_b: Neboj se dělat chyby! Zkus přidávat bloky a spouštět
           kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.
