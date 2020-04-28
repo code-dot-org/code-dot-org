@@ -1,7 +1,7 @@
-/** @file Tests for convertXmlToBlockly utility */
+/** @file Tests for blockly utilities */
 import {expect} from '../../util/deprecatedChai';
 
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+import {convertXmlToBlockly} from '@cdo/apps//util/blocklyUtils';
 
 describe('convertXmlToBlockly', function() {
   it("does nothing if there's no xml", function() {
