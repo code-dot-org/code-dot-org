@@ -285,9 +285,12 @@ export function processedStages(stages, isPlc) {
     return {
       ..._.omit(stage, 'hidden'),
       stageNumber,
+      // reconstruct redundant level fields which were omitted from the network
+      // response for compactness.
       levels: stage.levels.map(level => ({
         ...level,
-        ids: level.ids || [level.activeId]
+        ids: level.ids || [level.activeId],
+        title: level.title || level.position
       }))
     };
   });

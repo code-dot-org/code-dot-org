@@ -292,7 +292,8 @@ class ScriptLevel < ActiveRecord::Base
       kind: kind,
       icon: level.icon,
       is_concept_level: level.concept_level? || nil,
-      title: level_display_text,
+      # omit title if it can be inferred from the position
+      title: level_display_text.to_s == position.to_s ? nil : level_display_text,
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true" || nil,
       bonus: bonus || nil,
