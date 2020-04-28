@@ -202,9 +202,18 @@ fr-FR:
         New Artist Project_callout1: Cliques sur les catégories pour voir les blocs
           dans ta boîte à outils! Fais glisser les blocs vers l'espace de travail
           et ajoutes-les à ton programme.
+        New Artist Project_callout2: Clique sur "Démarrer" pour sauvegarder et Démarrer
+          ton programme
+        sign_in_to_save_project: Vous souhaitez accéder à votre projet plus tard ?
+          Connectez-vous pour enregistrer ce projet sur votre compte !
       New Frozen Project:
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
+      New Play Lab Project:
+        New Play Lab Project_callout2: Clique sur "Démarrer" pour sauvegarder et Démarrer
+          ton programme
+        sign_in_to_save_project: Vous souhaitez accéder à votre projet plus tard ?
+          Connectez-vous pour enregistrer ce projet sur votre compte !
       Overworld Chop Trees:
         craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
       Overworld Chop Trees_2019:

@@ -1205,7 +1205,8 @@ cs-CZ:
         - text: '15'
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
+            klikneš na "Spustit"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
@@ -1215,7 +1216,8 @@ cs-CZ:
         - text: '15'
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
+            klikneš na "Spustit"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
@@ -1225,7 +1227,8 @@ cs-CZ:
         - text: '15'
         - text: Nevím.
         questions:
-        - {}
+        - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
+            klikneš na "Spustit"?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: Program neselže. Veverka se dostane k žaludu.
@@ -1300,58 +1303,79 @@ cs-CZ:
             na "Spustit"?
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 se nepohne.
+        - text: BB-8 se pohne o jedno políčko.
+        - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
+          correct: true
           feedback: Správně!
         - text: Nevím
         questions:
-        - {}
+        - text: Co se stane, když klikneš spustit?
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 se nepohne.
+        - text: BB-8 se pohne o jedno políčko.
+        - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
+          correct: true
           feedback: Správně!
         - text: Nevím
         questions:
-        - {}
+        - text: Co se stane, když klikneš spustit?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 se nepohne.
+        - text: BB-8 se pohne o jedno políčko.
+        - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
+          correct: true
           feedback: Správně!
         - text: Nevím
         questions:
-        - {}
+        - text: Co se stane, když klikneš spustit?
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 se v prvním cyklu dokutálí moc daleko.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+        - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
+          correct: true
           feedback: Správně!
-        - {}
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
         - text: Nevím.
+          feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
+            se posunout o tři.
         questions:
-        - {}
+        - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 se v prvním cyklu dokutálí moc daleko.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+        - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
+          correct: true
           feedback: Správně!
-        - {}
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
         - text: Nevím.
+          feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
+            se posunout o tři.
         questions:
-        - {}
+        - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: BB-8 se v prvním cyklu dokutálí moc daleko.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+        - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
+          correct: true
           feedback: Správně!
-        - {}
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
         - text: Nevím.
+          feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
+            se posunout o tři.
         questions:
-        - {}
+        - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
       courseD_external_binary1:
         markdown: "<h1>Kresleme pomocí binárního kódu</h1>\n \n<h3>Binární kód je
           způsob, jak vyjádřit nějakou informaci pomocí dvou možností. V tomto případě
@@ -2122,28 +2146,51 @@ cs-CZ:
         - {}
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel pomocí tohoto kódu posbírá 4 kousky pokladu.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+        - text: Laurel se pokusí posbírat poklad tam, kde není, a to způsobí chybu.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Laurel posbírá všechen poklad.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
         - text: Nevím.
+          feedback: Laurel se snaží sbírat poklad tam, kde žádný není, a to způsobí
+            chybu.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel pomocí tohoto kódu posbírá 4 kousky pokladu.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+        - text: Laurel se pokusí posbírat poklad tam, kde není, a to způsobí chybu.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Laurel posbírá všechen poklad.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
         - text: Nevím.
+          feedback: Laurel se snaží sbírat poklad tam, kde žádný není, a to způsobí
+            chybu.
         questions:
-        - {}
+        - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
+            spustí?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
+        - text: Laurel pomocí tohoto kódu posbírá 4 kousky pokladu.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+        - text: Laurel se pokusí posbírat poklad tam, kde není, a to způsobí chybu.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Laurel posbírá všechen poklad.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
         - text: Nevím.
+          feedback: Laurel se snaží sbírat poklad tam, kde žádný není, a to způsobí
+            chybu.
         questions:
-        - {}
+        - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
+            spustí?

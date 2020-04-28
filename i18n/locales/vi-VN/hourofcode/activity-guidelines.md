@@ -8,21 +8,19 @@ title: Activity Guidelines
   }
 </style>
 
-{{ signup_button }}
-
 # Bài học hướng dẫn về "Giờ Lập Trình" và Tuần Giáo Dục Khoa học Máy tính
+
+Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
 Code.org là trang chủ nơi tập trung rất nhiều những hoạt động, bài học và video của Giờ Lập Trình trên (các) trang web Code.org, Hour of Code, và CSEdWeek. Bạn có thể vào xem tất cả hoạt động đang diễn ra ở [hourofcode.com/learn]({{ urls/learn }}).
 
-Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần.
+Bạn muốn gửi những trò chơi tự hướng dẫn của mình, bài học được giáo viên hướng dẫn, hay hoạt động giải thích nguyên tác cơ bản của khoa học máy tính? Hãy tham gia vào hoạt động toàn cầu này và giúp những người tham gia khắp thế giới bắt đầu với một giờ học mã hóa hay xa hơn nữa là những hoạt động với đa dạng bài học, kéo dài một ngày hay một tuần. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.</strong> If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
-** Sau khi đọc hướng dẫn, bạn có thể xem lại hoạt động của mình qua Hồ sơ hoạt động trên trang [Hour of Code ](http://bit.ly/29zt9ki). Ban có thể gửi một hoạt động bất cứ lúc nào, nhưng hãy nhớ hạn chót tổng kết trong bất cứ năm dương lịch nào là mùng 1 tháng 10. (Ví dụ, bất kỳ những hoạt động nào được nhận sau mùng 1 tháng 10, {{campaign_date/year}} sẽ không có trong danh sách {{ campaign_date/year}}'s Hour of Code.)** Nếu bạn còn bất kỳ câu hỏi nào về việc thưc hiện các hoạt động của mình, hãy liên lạc với chúng tôi ở support@code.org.
+A few tips:
 
-Một vài mẹo nhỏ:
+1. ** Gửi đi nhiều hơn một hoạt động**: Nếu bạn đang xây dựng các hoạt động cho nhiều mức độ khác nhau, độ tuổi khác nhau, hoặc nhiều thể loại khác, chúng tôi sẽ tạo danh sách các hoạt động ấy thành từng phần riêng để mỗi giáo viên có thể tìm được thứ mình cần cho lớp học của họ. Do vậy nếu bạn đã xây dựng trước một trang đích và đã gửi cho chúng tôi môt liên kết mạng đơn để quảng cáo, đừng làm như vậy nữa. Gửi đi mỗi hướng dẫn hay hoạt động cá nhân. Gửi số lượng bài nộp chúng tôi đã xem vài năm gần đây, chúng tôi sẽ dành thời gian để xem lại 5 hoạt động của mỗi thành viên.
 
-1. ** Gửi đi nhiều hơn một hoạt động**: Nếu bạn đang xây dựng các hoạt động cho nhiều mức độ khác nhau, độ tuổi khác nhau, hoặc nhiều thể loại khác, chúng tôi sẽ tạo danh sách các hoạt động ấy thành từng phần riêng để mỗi giáo viên có thể tìm được thứ mình cần cho lớp học của họ. Do vậy nếu bạn đã xây dựng trước một trang đích và đã gửi cho chúng tôi môt liên kết mạng đơn để quảng cáo, đừng làm như vậy nữa. Gửi đi mỗi hướng dẫn hay hoạt động cá nhân. Gửi số lượng bài nộp chúng tôi đã xem vài năm gần đây, chúng tôi sẽ dành thời gian để xem lại 5 hoạt động của mỗi thành viên. Sau đó, chúng tôi sẽ cố gắng xem lại nhiều nhất có thể trước khi Hour of Code bắt đầu.
-
-2. **Về những bài học cho người mới bắt đầu**: ngoài những bài giảng cho giáo viên và học sinh lần đầu học về khoa học máy tính, chúng tôi sẽ làm danh sách những trải nghiệm về việc học khoa học máy tính- lớp học mở rộng cho những ai muốn tìm hiểu nhiều hơn nữa! Hãy giúp chúng tôi bằng việc gửi những bài học cho các lớp học đã hiểu về những điều cơ bản. Những người tham gia học có thể là bất kỳ ai trong độ tuổi từ 9 đến 99.
+2. **Về những bài học cho người mới bắt đầu**: ngoài những bài giảng cho giáo viên và học sinh lần đầu học về khoa học máy tính, chúng tôi sẽ làm danh sách những trải nghiệm về việc học khoa học máy tính- lớp học mở rộng cho những ai muốn tìm hiểu nhiều hơn nữa! Hãy giúp chúng tôi bằng việc gửi những bài học cho các lớp học đã hiểu về những điều cơ bản.
 
 3. **Các môn học**: Bạn có ý tưởng giảng dạy nào về việc kết hợp Khoa học Máy tính vào môn Toán không? Lịch sử? Nghệ thuật ngôn ngữ? Khoa học? Mỹ thuật? Hay bất kỳ môn học nào khác? Chúng tôi nhận được nhiều yêu cầu từ giáo viên những người muốn kết nối Giờ học mã vào tiết giảng dạy của họ (đặc biệt với việc nâng cấp trình độ ISTE cho học sinh bao gồm "nhà thiết kế sáng tạo" và " những người biết tính toán"). Giáo viên có thể phân loại lớp học của họ theo nhiều cách( khối lớp hoặc môn học) vậy nên chúng tôi cần sự giúp đỡ của bạn để xây dựng các hoạt động hay lên kế hoạch giảng dạy liên quan đến CS cho lớp học mà phù hợp với mỗi môn học cho mỗi khối lớp riêng. Chúng tôi cũng tiếp tục thêm "Khoa học Máy tính" vao danh muc cho những giáo viên muốn tìm hiểu thêm về hoạt động CS chung.
 
@@ -43,15 +41,15 @@ Một vài mẹo nhỏ:
 
 ## Gửi cái gì
 
-**Trò chơi hay câu đố tự hướng dẫn ([ví dụ](https://code.org/mc))**
+**Self-guided puzzle or game ([example](https://code.org/dance))**
 
-Những hoạt đông này được thiết kế để học sinh có thể tự làm theo hướng dẫn. Họ không yêu cầu nhiều hướng dẫn từ một giáo viên hay giáo án của giáo viên.
+These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
 
-**Giáo viên tạo điều kiện giảng dạy ([ví dụ](https://csedweek.org/csteacher/computerhistory.pdf),[bản mẫu](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Hiện nay có hàng nghìn nhà giáo dục đang thử nghiệm với Giờ học mã, nhiều lớp học đã sẵn sàng cho các hoạt động sáng tạo dạy về khoa học máy tính cơ bản. Để giúp cho những giáo viên tiên tiến tìm thấy động lực, chúng tôi đã thu thập và chọn ra những bài giảng do giáo viên giảng dạy và những kế hoach hoạt động cho các cựu chiến binh của Giờ học mã.
+Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
 
-Một thể loại hoạt động mà chúng tôi sẽ làm cho những giáo viên có kinh nghệm là dự án sáng tạo " mở hộp cát". Những hoạt động này khuyến khích các bạn học sinh tự xây dựng nên phần mềm, trò chơi, trang web hay những dự án khác của riêng mình. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Hiện nay có hàng nghìn nhà giáo dục đang thử nghiệm với Giờ học mã, nhiều lớp học đã sẵn sàng cho các hoạt động sáng tạo dạy về khoa học máy tính cơ bản. Để giúp cho những giáo viên tiên tiến tìm thấy động lực, chúng tôi đã thu thập và chọn ra những bài giảng do giáo viên giảng dạy và những kế hoach hoạt động cho các cựu chiến binh của Giờ học mã. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
 
 Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
 
@@ -89,6 +87,8 @@ The activities should teach a computer science concept such as loops, conditiona
 *Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
 
 *Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+
+To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
 [**Back to the top**](#top)
 
@@ -202,9 +202,32 @@ Teachers and students will be able to search through and filter our list of acti
 
 [**Back to the top**](#top)
 
+<a id="earlyreview"></a>
+
+## Guidelines for submitting for an early qualitative review (NEW)
+
+Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
+
+Reviewers will focus on providing the following:
+
+* Positive feedback - What's working well?
+* Critical feedback - What could be improved?
+* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
+* Does this activity encourage students to create something unique?
+
+Please note: These are the general guidelines for providing feedback. The early review of your activity may include feedback across all of these categories, or it may only include feedback in one or two. There is also **no guarantee that we will catch all bugs or issues in an activity**.
+
+**The early review is not an opportunity to collect feedback on an unfinished activity. Any activity a reviewer deems too incomplete to assess will not be reviewed.**
+
+All activities submitted for early review will receive feedback by September 1st. We will also provide a link to a form you can use to explain specific changes made to an activity in response to feedback.
+
+Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
+
+[**Back to the top**](#top)
+
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Nguyên tắc nhãn hiệu
 
 You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
@@ -265,12 +288,12 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 ## Promoting your activities, CSEdWeek, and Hour of Code
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach 100 million total participants.
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
 - Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
 - Host a local event or ask your employees to host an event at local schools or community groups.
-- See our resource kit for further information (coming soon).
+- See our [resource kit](https://hourofcode.com/us/promote) for further information.
 
 [**Back to the top**](#top)
 
