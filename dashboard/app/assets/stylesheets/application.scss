@@ -2209,6 +2209,11 @@ a.download-video {
   border: 1px solid $lighter_gray;
 }
 
+.curriculum-reference #iframe-loading.loading {
+  height: 200px;
+  background: image-url("spinner-big.gif") no-repeat center center;
+}
+
 .external, .free-response, .curriculum-reference {
   max-width: 970px;
   margin: auto;
