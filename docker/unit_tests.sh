@@ -11,6 +11,7 @@ mispipe "echo 'Starting timestamp'" ts
 export CI=true
 export RAILS_ENV=test
 export RACK_ENV=test
+export USE_PEGASUS_UNITTEST_DB=1
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 

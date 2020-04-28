@@ -104,7 +104,7 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
-        ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+        ENV['USE_PEGASUS_UNITTEST_DB'] = '1' if ENV['CI']
         ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
@@ -269,7 +269,7 @@ namespace :test do
         ],
         ignore: ['dashboard/test/ui/**/*']
       ) do
-        TestRunUtils.run_dashboard_tests
+        Rake::Task['test:dashboard_ci'].execute
       end
     end
 
@@ -305,13 +305,13 @@ namespace :test do
       end
     end
 
-    all_tasks = [:apps,
-                 # currently disabled because these tests take too long to run on circle
+    all_tasks = [:dashboard,
+                 # currently disabled because these tests take too long to run on Drone
                  # :interpreter,
-                 :dashboard,
                  :pegasus,
                  :shared,
-                 :lib]
+                 :lib,
+                 :apps]
 
     task all_but_apps: all_tasks.reject {|t| t == :apps}
 
