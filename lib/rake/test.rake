@@ -130,13 +130,16 @@ namespace :test do
         require 'zlib'
         require 'stringio'
 
-        seed_data = begin
-          response = s3_client.get_object(bucket: bucket_name, key: s3_key)
-          Zlib::GzipReader.new(response.body).read
-        rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
-          CDO.log.info "Seed data not found on S3 at #{s3_key}"
-          nil
-        end
+        #seed_data = begin
+        #  response = s3_client.get_object(bucket: bucket_name, key: s3_key)
+        #  Zlib::GzipReader.new(response.body).read
+        #rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
+        #  CDO.log.info "Seed data not found on S3 at #{s3_key}"
+        #  nil
+        #end
+
+        # TODO: allow drone to access seed data?
+        seed_data = nil
 
         seed_file = Tempfile.new(['db_seed', '.sql'])
         auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
@@ -157,13 +160,14 @@ namespace :test do
           `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
           gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
-          s3_client.put_object(
-            bucket: bucket_name,
-            key: s3_key,
-            body: gzip_data,
-            acl: 'public-read'
-          )
-          CDO.log.info "Uploaded seed data to #{s3_key}"
+          # TODO: allow drone to access seed data?
+          #s3_client.put_object(
+          #  bucket: bucket_name,
+          #  key: s3_key,
+          #  body: gzip_data,
+          #  acl: 'public-read'
+          #)
+          #CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
         cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
@@ -172,8 +176,8 @@ namespace :test do
         else
           seed_2_file = Tempfile.new(['db_seed', '.sql'])
           File.write(seed_2_file, cloned_data)
-          puts "Diff:\n"
-          puts `diff #{seed_file.path} #{seed_2_file.path}`
+          puts "Seed data differs:\n"
+          #puts `diff #{seed_file.path} #{seed_2_file.path}`
 
           # Clone single DB across all databases
           require 'parallel_tests'
