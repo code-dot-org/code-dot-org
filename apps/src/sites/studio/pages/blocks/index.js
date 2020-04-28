@@ -5,7 +5,7 @@ import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
-import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
+import {shrinkBlockSpaceContainer} from '@cdo/apps/util/blocklyUtils';
 import animationListModule, {
   setInitialAnimationList
 } from '@cdo/apps/p5lab/animationListModule';

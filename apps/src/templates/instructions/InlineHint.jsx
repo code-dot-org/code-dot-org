@@ -6,7 +6,7 @@ import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {connect} from 'react-redux';
-import {convertXmlToBlockly} from './utils';
+import {convertXmlToBlockly} from '../../util/blocklyUtils';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
 import SafeMarkdown from '../SafeMarkdown';
