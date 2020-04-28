@@ -31,6 +31,7 @@ export default class DesignToolbox extends React.Component {
       paddingLeft: 0,
       marginBottom: 10
     };
+
     return (
       <div id="design-toolbox" style={toolboxStyle}>
         <ThemePropertyRow
