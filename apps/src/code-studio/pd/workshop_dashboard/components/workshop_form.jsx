@@ -405,7 +405,7 @@ export class WorkshopForm extends React.Component {
           text: 'Yes, it is funded. Please pay the Facilitator directly.'
         }
       );
-    } else {
+    } else if (this.state.subject !== 'Workshop for Returning Teachers') {
       options.push({
         value: {funded: true, funding_type: null},
         text: 'Yes, it is funded.'
@@ -559,11 +559,6 @@ export class WorkshopForm extends React.Component {
     if (this.shouldRenderSubject()) {
       const options = Subjects[this.state.course]
         .filter(subject => {
-          // Temporary: Don't show the new workshop type as an option while we're still building it.
-          if (subject === 'Workshop for Returning Teachers') {
-            return false;
-          }
-
           // Only a WorkshopAdmin should be shown a Virtual workshop.
           return (
             subject.indexOf('Virtual') === -1 ||
