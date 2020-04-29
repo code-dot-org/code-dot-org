@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-class StageExtrasProgressBubble extends Component {
+class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     stageExtrasUrl: PropTypes.string.isRequired,
     onStageExtras: PropTypes.bool.isRequired
@@ -76,4 +76,4 @@ class StageExtrasProgressBubble extends Component {
   }
 }
 
-export default Radium(StageExtrasProgressBubble);
+export default Radium(LessonExtrasProgressBubble);
