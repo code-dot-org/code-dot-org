@@ -124,17 +124,19 @@ export default class SublevelCard extends React.Component {
         className="uitest-bubble-choice"
       >
         {/* Render a square-shaped placeholder if we don't have a thumbnail. */}
-        {sublevel.thumbnail_url ? (
-          <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
-        ) : (
-          <div style={styles.placeholderThumbnail} className="placeholder">
-            <FontAwesome
-              icon={getIconForLevel(sublevel)}
-              style={styles.icon}
-              key={sublevel.id}
-            />
-          </div>
-        )}
+        <a href={sublevel.url + location.search}>
+          {sublevel.thumbnail_url ? (
+            <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
+          ) : (
+            <div style={styles.placeholderThumbnail} className="placeholder">
+              <FontAwesome
+                icon={getIconForLevel(sublevel)}
+                style={styles.icon}
+                key={sublevel.id}
+              />
+            </div>
+          )}
+        </a>
         <div style={styles.column}>
           <div style={styles.bubbleAndTitle}>
             {this.renderBubble()}
