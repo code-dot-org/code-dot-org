@@ -306,7 +306,7 @@ nl-NL:
         <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
         </div>
 
-        **Doel:** Mak de tekst groter en blauw.
+        **Doel:** Maak de tekst groter en blauw.
 
         **Hoe:**  Je hebt twee regels code nodig. Geef `"label1"` een lettergrootte (`"font-size"`) van `80` en de tekst-kleur (`"text-color"`) blauw (`"blue"`).
 
@@ -1001,6 +1001,12 @@ nl-NL:
         code, behalve voor de getallen in de lussen. Laten we nectar verzamelen!
       New Minecraft Hero Project: "**Vrij spel:** Het is nu aan jou! Gebruik de code
         van de agent om de wereld te verkennen."
+      Overworld Chop Tree: Hout is een erg belangrijke grondstof. Veel dingen worden
+        er van gemaakt. Loop naar de boom en gebruik het `vernietig blok` commando
+        om de boom om te hakken.
+      Overworld Chop Tree_2019: Hout is een erg belangrijke grondstof. Veel dingen
+        worden er van gemaakt. Loop naar de boom en gebruik het `vernietig blok` commando
+        om de boom om te hakken.
       Overworld House Frame Chosen: Bouw de rest van je huis met welk materiaal je
         zelf wilt. Het commando "herhalen" komt hier handig van pas.
       Overworld House Frame Chosen_2019: Bouw de rest van je huis met welk materiaal

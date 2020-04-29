@@ -371,15 +371,6 @@ class RegionalPartnerSearch extends Component {
             <div style={styles.clear} />
 
             <div style={styles.action}>
-              {appState !== WorkshopApplicationStates.now_closed && (
-                <div>
-                  The Professional Learning Program is a yearlong commitment,
-                  consisting of a five-day in-person summer workshop, plus
-                  follow up academic year workshops hosted in-person or
-                  virtually.
-                </div>
-              )}
-
               {appState === WorkshopApplicationStates.now_closed && (
                 <h3>Applications are now closed.</h3>
               )}
