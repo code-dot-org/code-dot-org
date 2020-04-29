@@ -19,7 +19,7 @@ const DEFAULT_PROPS = {
 describe('LessonExtras', () => {
   it('does not show stage extras warning if showLessonExtrasWarning is false', () => {
     const wrapper = shallow(
-      <LessonExtras {...DEFAULT_PROPS} showLesonExtrasWarning={false} />
+      <LessonExtras {...DEFAULT_PROPS} showLessonExtrasWarning={false} />
     );
     expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
   });
