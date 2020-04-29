@@ -15,9 +15,6 @@ import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 const styles = {
   headerContainer: {
     // With our new bubble we don't want any padding above/below
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
     paddingLeft: 5,
     paddingRight: 5,
     backgroundColor: color.lightest_gray,
@@ -25,7 +22,14 @@ const styles = {
     borderRadius: 5,
     height: 40,
     marginLeft: 4,
-    marginRight: 4
+    marginRight: 4,
+    overflow: 'hidden'
+  },
+  innerContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 33
   },
   spacer: {
     marginRight: 'auto'
@@ -69,6 +73,25 @@ class StageProgress extends Component {
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
 
+    // which dot is current level?
+    var currentLevelIndex = 0;
+    for (const [i, l] of levels.entries()) {
+      if (l.isCurrentLevel) {
+        currentLevelIndex = i;
+        break;
+      }
+    }
+
+    var offsetX = 0;
+
+    var currentLevelX = currentLevelIndex * 17;
+    var currentInnerContainerWidth = 0.6 * (window.innerWidth - 260); //this.innerContainerRef.offsetWidth;
+
+    // do we need to pull our dots to the left to see the current level?
+    if (currentLevelX > currentInnerContainerWidth - 6 * 17) {
+      offsetX = currentLevelX - currentInnerContainerWidth + 6 * 17;
+    }
+
     return (
       <div
         className="react_stage"
@@ -77,35 +100,40 @@ class StageProgress extends Component {
           ...(stageTrophyEnabled && styles.stageTrophyContainer)
         }}
       >
-        {stageTrophyEnabled && <div style={styles.spacer} />}
-        {levels.map((level, index) => (
-          <div
-            key={index}
-            style={{
-              ...(level.isUnplugged &&
-                level.isCurrentLevel &&
-                styles.pillContainer)
-            }}
-          >
-            <ProgressBubble
-              level={level}
-              disabled={false}
-              smallBubble={!level.isCurrentLevel}
-              stageTrophyEnabled={stageTrophyEnabled}
+        <div
+          style={{...styles.innerContainer, marginLeft: -offsetX}}
+          ref={ref => (this.innerContainerRef = ref)}
+        >
+          {stageTrophyEnabled && <div style={styles.spacer} />}
+          {levels.map((level, index) => (
+            <div
+              key={index}
+              style={{
+                ...(level.isUnplugged &&
+                  level.isCurrentLevel &&
+                  styles.pillContainer)
+              }}
+            >
+              <ProgressBubble
+                level={level}
+                disabled={false}
+                smallBubble={!level.isCurrentLevel}
+                stageTrophyEnabled={stageTrophyEnabled}
+              />
+            </div>
+          ))}
+          {stageExtrasUrl && !stageTrophyEnabled && (
+            <StageExtrasProgressBubble
+              stageExtrasUrl={stageExtrasUrl}
+              onStageExtras={onStageExtras}
             />
-          </div>
-        ))}
-        {stageExtrasUrl && !stageTrophyEnabled && (
-          <StageExtrasProgressBubble
-            stageExtrasUrl={stageExtrasUrl}
-            onStageExtras={onStageExtras}
-          />
-        )}
-        {stageTrophyEnabled && (
-          <StageTrophyProgressBubble
-            percentPerfect={getPercentPerfect(levels)}
-          />
-        )}
+          )}
+          {stageTrophyEnabled && (
+            <StageTrophyProgressBubble
+              percentPerfect={getPercentPerfect(levels)}
+            />
+          )}
+        </div>
       </div>
     );
   }
