@@ -72,7 +72,8 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       soundPlayer: sounds,
       disableAudioRecording: options.disableAudioRecording,
       elementId: options.elementId,
-      libraryOnly: options.libraryOnly
+      libraryOnly: options.libraryOnly,
+      currentValue: options.currentValue
     }),
     codeDiv
   );

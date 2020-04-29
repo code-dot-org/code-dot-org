@@ -67,7 +67,8 @@ export default class ImagePickerPropertyRow extends React.Component {
     // are intertwined with `StudioApp` which is why we have this direct call.
     dashboard.assets.showAssetManager(this.changeImage, 'image', null, {
       showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
-      elementId: this.props.elementId
+      elementId: this.props.elementId,
+      currentValue: this.state.value
     });
   };
 
