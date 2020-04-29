@@ -1,37 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+import msg from '@cdo/locale';
+import color from '../../../util/color';
+import BonusLevels from './BonusLevels';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import {stageOfBonusLevels} from './shapes';
 import LessonExtrasNotification from './LessonExtrasNotification';
-import Button from '@cdo/apps/templates/Button';
-import SublevelCard from '../SublevelCard';
 
 const styles = {
-  header: {
-    fontSize: 24
-  },
-  headerAndButton: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  button: {
-    margin: '10px 0px'
-  },
-  subHeader: {
+  h2: {
     fontSize: 24,
-    color: 'rgb(91, 103, 112)',
-    fontFamily: 'Gotham 4r',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    paddingTop: 10,
-    paddingBottom: 20
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between'
+    fontFamily: '"Gotham 4r"',
+    color: color.charcoal
   }
 };
 
@@ -44,6 +24,7 @@ export default class LessonExtras extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     bonusLevels: PropTypes.arrayOf(PropTypes.shape(stageOfBonusLevels)),
     sectionId: PropTypes.number,
+    userId: PropTypes.number,
     showStageExtrasWarning: PropTypes.bool
   };
 
@@ -54,44 +35,40 @@ export default class LessonExtras extends React.Component {
       nextLevelPath,
       bonusLevels,
       sectionId,
+      userId,
       showProjectWidget,
       projectTypes,
       showStageExtrasWarning
     } = this.props;
     const nextMessage = /stage/.test(nextLevelPath)
-      ? i18n.extrasNextLesson({number: nextStageNumber})
-      : i18n.extrasNextFinish();
+      ? msg.extrasNextLesson({number: nextStageNumber})
+      : msg.extrasNextFinish();
 
     return (
       <div>
         {showStageExtrasWarning && sectionId && <LessonExtrasNotification />}
-        <div style={styles.headerAndButton}>
-          <h1 style={styles.header}>
-            {i18n.extrasStageNumberCompleted({number: stageNumber})}
-          </h1>
-          <Button
-            __useDeprecatedTag
-            href={nextLevelPath}
-            text={nextMessage}
-            size={Button.ButtonSize.large}
-            color={Button.ButtonColor.orange}
-            style={styles.button}
-          />
-        </div>
 
-        <div style={styles.subHeader}>{i18n.extrasTryAChallenge()}</div>
+        <h1>{msg.extrasStageNumberCompleted({number: stageNumber})}</h1>
+
+        <h2 style={styles.h2}>{msg.continue()}</h2>
+        <a href={nextLevelPath}>
+          <button
+            type="button"
+            className="btn btn-large btn-primary"
+            style={{marginBottom: 20}}
+          >
+            {nextMessage}
+          </button>
+        </a>
+
         {bonusLevels && Object.keys(bonusLevels).length > 0 ? (
-          <div style={styles.cards}>
-            {bonusLevels[0].levels.map(sublevel => (
-              <SublevelCard
-                isLessonExtra={true}
-                sublevel={sublevel}
-                key={sublevel.id}
-              />
-            ))}
-          </div>
+          <BonusLevels
+            bonusLevels={bonusLevels}
+            sectionId={sectionId}
+            userId={userId}
+          />
         ) : (
-          <p>{i18n.extrasNoBonusLevels()}</p>
+          <p>{msg.extrasNoBonusLevels()}</p>
         )}
 
         {showProjectWidget && (
