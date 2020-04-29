@@ -161,9 +161,11 @@ module Pd::Foorm
     end
 
     # @param integer workshop_id: id for a workshop
+    # @param integer facilitator_filter: If specified, only get facilitator data for the facilitator
+    #   with this id
     # @return {facilitator_id: facilitator_name,...} object with data
     # for each facilitator for the workshop specified
-    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_filter)
+    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_filter=nil)
       facilitators_formatted = {}
       if facilitator_filter
         facilitators_formatted[facilitator_filter] = User.find(facilitator_filter).name
