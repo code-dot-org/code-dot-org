@@ -23,25 +23,10 @@ describe('The ShowCodeToggle component', () => {
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
     sinon.stub(project, 'getCurrentId').returns('some-project-id');
-  });
-  afterEach(() => {
-    server.restore();
-    $.post.restore();
-    $.getJSON.restore();
-    project.getCurrentId.restore();
-  });
-
-  beforeEach(stubStudioApp);
-  afterEach(restoreStudioApp);
-  beforeEach(() => sinon.stub(LegacyDialog.prototype, 'show'));
-  afterEach(() => LegacyDialog.prototype.show.restore());
-  beforeEach(() => {
+    stubStudioApp();
+    sinon.stub(LegacyDialog.prototype, 'show');
     stubRedux();
     registerReducers(commonReducers);
-  });
-  afterEach(restoreRedux);
-
-  beforeEach(() => {
     editor = {
       session: {
         currentlyUsingBlocks: true
@@ -57,9 +42,6 @@ describe('The ShowCodeToggle component', () => {
     sinon.stub(studioApp(), 'handleEditCode_').callsFake(function() {
       this.editor = editor;
     });
-  });
-
-  beforeEach(() => {
     config = {
       enableShowCode: true,
       containerId: 'foo',
@@ -73,6 +55,18 @@ describe('The ShowCodeToggle component', () => {
       },
       skin: {}
     };
+
+    afterEach(() => {
+      server.restore();
+      $.post.restore();
+      $.getJSON.restore();
+      project.getCurrentId.restore();
+      restoreStudioApp();
+      LegacyDialog.prototype.show.restore();
+      restoreRedux();
+      document.body.removeChild(codeWorkspaceDiv);
+      document.body.removeChild(containerDiv);
+    });
 
     codeWorkspaceDiv = document.createElement('div');
     codeWorkspaceDiv.id = 'codeWorkspace';
@@ -90,16 +84,9 @@ describe('The ShowCodeToggle component', () => {
 
     studioApp().configure(config);
     studioApp().init(config);
+    sinon.stub(studioApp(), 'onDropletToggle');
+    sinon.stub(studioApp(), 'showGeneratedCode');
   });
-
-  afterEach(() => {
-    document.body.removeChild(codeWorkspaceDiv);
-    document.body.removeChild(containerDiv);
-  });
-
-  beforeEach(() => sinon.stub(studioApp(), 'onDropletToggle'));
-
-  beforeEach(() => sinon.stub(studioApp(), 'showGeneratedCode'));
 
   describe('when the studioApp editor has currentlyUsingBlocks=false', () => {
     beforeEach(() => {
