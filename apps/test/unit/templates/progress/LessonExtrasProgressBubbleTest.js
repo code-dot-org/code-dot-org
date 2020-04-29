@@ -7,8 +7,8 @@ import * as utils from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 
 const defaultProps = {
-  stageExtrasUrl: '/extras',
-  onStageExtras: false
+  lessonExtrasUrl: '/extras',
+  onLessonExtras: false
 };
 
 describe('LessonExtrasProgressBubble', () => {
@@ -46,9 +46,9 @@ describe('LessonExtrasProgressBubble', () => {
     );
   });
 
-  it('has a green flag icon when on stage extras', () => {
+  it('has a green flag icon when on lesson extras', () => {
     const wrapper = shallow(
-      <LessonExtrasProgressBubble {...defaultProps} onStageExtras={true} />
+      <LessonExtrasProgressBubble {...defaultProps} onLessonExtras={true} />
     );
     assert.equal(
       wrapper
