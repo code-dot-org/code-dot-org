@@ -65,7 +65,12 @@ class AgeDialog extends Component {
 
   static propTypes = {
     signedIn: PropTypes.bool.isRequired,
-    turnOffFilter: PropTypes.func.isRequired
+    turnOffFilter: PropTypes.func.isRequired,
+    sessionStorage: PropTypes.object.isRequired
+  };
+
+  static defaultProps = {
+    sessionStorage: window.sessionStorage
   };
 
   setManualFilter = () => {
@@ -73,7 +78,7 @@ class AgeDialog extends Component {
   };
 
   setSessionStorage = over13 => {
-    sessionStorage.setItem(AGE_DIALOG_SESSION_KEY, over13);
+    this.props.sessionStorage.setItem(AGE_DIALOG_SESSION_KEY, over13);
     this.setState({open: false});
   };
 
@@ -106,7 +111,7 @@ class AgeDialog extends Component {
 
     // Don't show dialog unless script requires 13+, we're not signed in, and
     // we haven't already given this dialog our age or we do not require sign-in
-    if (signedIn || sessionStorage.getItem(AGE_DIALOG_SESSION_KEY)) {
+    if (signedIn || this.props.sessionStorage.getItem(AGE_DIALOG_SESSION_KEY)) {
       return null;
     }
 
