@@ -6,7 +6,7 @@ import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtra
 import StageTrophyProgressBubble from '@cdo/apps/templates/progress/StageTrophyProgressBubble';
 import {
   levelsForLessonId,
-  stageExtrasUrl,
+  lessonExtrasUrl,
   getPercentPerfect
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
@@ -52,13 +52,13 @@ class StageProgress extends Component {
   static propTypes = {
     // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,
-    stageExtrasUrl: PropTypes.string,
-    onStageExtras: PropTypes.bool,
+    lessonExtrasUrl: PropTypes.string,
+    onLessonExtras: PropTypes.bool,
     stageTrophyEnabled: PropTypes.bool
   };
 
   render() {
-    const {stageExtrasUrl, onStageExtras, stageTrophyEnabled} = this.props;
+    const {lessonExtrasUrl, onLessonExtras, stageTrophyEnabled} = this.props;
     let levels = this.props.levels;
 
     // Only puzzle levels (non-concept levels) should count towards mastery.
@@ -95,10 +95,10 @@ class StageProgress extends Component {
             />
           </div>
         ))}
-        {stageExtrasUrl && !stageTrophyEnabled && (
+        {lessonExtrasUrl && !stageTrophyEnabled && (
           <LessonExtrasProgressBubble
-            stageExtrasUrl={stageExtrasUrl}
-            perfect={onStageExtras}
+            lessonExtrasUrl={lessonExtrasUrl}
+            perfect={onLessonExtras}
           />
         )}
         {stageTrophyEnabled && (
@@ -115,6 +115,9 @@ export const UnconnectedStageProgress = StageProgress;
 
 export default connect(state => ({
   levels: levelsForLessonId(state.progress, state.progress.currentStageId),
-  stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
-  onStageExtras: state.progress.currentLevelId === 'stage_extras'
+  lessonExtrasUrl: lessonExtrasUrl(
+    state.progress,
+    state.progress.currentStageId
+  ),
+  onLessonExtras: state.progress.currentLevelId === 'stage_extras'
 }))(StageProgress);

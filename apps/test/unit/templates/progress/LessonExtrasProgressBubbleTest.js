@@ -7,7 +7,7 @@ import * as utils from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 
 const defaultProps = {
-  stageExtrasUrl: '/extras',
+  lessonExtrasUrl: '/extras',
   perfect: false
 };
 

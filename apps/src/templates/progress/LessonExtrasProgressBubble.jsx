@@ -35,16 +35,17 @@ const styles = {
 
 class LessonExtrasProgressBubble extends Component {
   static propTypes = {
-    stageExtrasUrl: PropTypes.string.isRequired,
+    lessonExtrasUrl: PropTypes.string.isRequired,
     perfect: PropTypes.bool
   };
+
   render() {
-    const {stageExtrasUrl, perfect} = this.props;
+    const {lessonExtrasUrl, perfect} = this.props;
 
     const tooltipId = _.uniqueId();
     return (
       <a
-        href={stageExtrasUrl + currentLocation().search}
+        href={lessonExtrasUrl + currentLocation().search}
         style={styles.main}
         data-tip
         data-for={tooltipId}
