@@ -25,6 +25,7 @@ export default connect(
   class DebugButtons extends React.Component {
     static propTypes = {
       style: PropTypes.object,
+      userInteracted: PropTypes.bool,
 
       // from redux
       stepIn: PropTypes.func.isRequired,
@@ -37,23 +38,40 @@ export default connect(
     };
 
     // Wrap button actions to add tracking of presses to investigate student use
+    // userInteracted tracks if the user has open/adjusted the debug console
     togglePause() {
-      trackEvent('debug_commands', 'debug_button_press', 'toggle_pause');
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
       this.props.togglePause();
     }
 
     stepIn() {
-      trackEvent('debug_commands', 'debug_button_press', 'step_in');
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
       this.props.stepIn();
     }
 
     stepOut() {
-      trackEvent('debug_commands', 'debug_button_press', 'step_out');
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
       this.props.stepOut();
     }
 
     stepOver() {
-      trackEvent('debug_commands', 'debug_button_press', 'step_over');
+      trackEvent(
+        'debug_commands',
+        'debug_button_press',
+        this.props.userInteracted
+      );
       this.props.stepOver();
     }
 
