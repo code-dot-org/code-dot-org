@@ -782,6 +782,8 @@ en:
     open_response_body: "Thanks for your response!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+  lesson_extras:
+    bonus_level: "Bonus Level"
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"

@@ -365,7 +365,7 @@ class ScriptLevel < ActiveRecord::Base
     {
       id: id,
       description: level.try(:bubble_choice_description),
-      display_name: level.display_name || 'Bonus Level',
+      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
       perfect: UserLevel.find_by(level: level, user_id: user_id)&.perfect?
