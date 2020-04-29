@@ -102,7 +102,7 @@ export default class SublevelCard extends React.Component {
       return (
         <div style={styles.flagBubble}>
           <LessonExtrasProgressBubble
-            stageExtrasUrl={sublevel.url}
+            lessonExtrasUrl={sublevel.url}
             perfect={sublevel.perfect}
           />
         </div>
