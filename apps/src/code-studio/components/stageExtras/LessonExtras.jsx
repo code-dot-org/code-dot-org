@@ -5,7 +5,7 @@ import color from '../../../util/color';
 import BonusLevels from './BonusLevels';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import {stageOfBonusLevels} from './shapes';
-import StageExtrasNotification from './StageExtrasNotification';
+import LessonExtrasNotification from './LessonExtrasNotification';
 
 const styles = {
   h2: {
@@ -15,7 +15,7 @@ const styles = {
   }
 };
 
-export default class StageExtras extends React.Component {
+export default class LessonExtras extends React.Component {
   static propTypes = {
     stageNumber: PropTypes.number.isRequired,
     nextStageNumber: PropTypes.number,
@@ -46,7 +46,7 @@ export default class StageExtras extends React.Component {
 
     return (
       <div>
-        {showStageExtrasWarning && sectionId && <StageExtrasNotification />}
+        {showStageExtrasWarning && sectionId && <LessonExtrasNotification />}
 
         <h1>{msg.extrasStageNumberCompleted({number: stageNumber})}</h1>
 
