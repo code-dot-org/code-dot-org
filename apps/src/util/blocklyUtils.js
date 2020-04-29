@@ -1,5 +1,3 @@
-import Blockly from '@code-dot-org/blockly';
-
 /**
  * Shrink the DOM element containing the given blockSpace to the minimum size
  * required to contain the block space
@@ -122,4 +120,27 @@ export function convertXmlToBlockly(xmlContainer) {
 
     shrinkBlockSpaceContainer(blockSpace, withPadding);
   });
+}
+
+/**
+ * Wrap a couple of our Blockly number validators to allow for ???.  This is
+ * done so that level builders can specify required blocks with wildcard fields.
+ */
+export function wrapNumberValidatorsForLevelBuilder() {
+  var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
+  var numVal = Blockly.FieldTextInput.numberValidator;
+
+  Blockly.FieldTextInput.nonnegativeIntegerValidator = function(text) {
+    if (text === '???') {
+      return text;
+    }
+    return nonNeg(text);
+  };
+
+  Blockly.FieldTextInput.numberValidator = function(text) {
+    if (text === '???') {
+      return text;
+    }
+    return numVal(text);
+  };
 }

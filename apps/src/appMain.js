@@ -1,5 +1,8 @@
 import {getStore, registerReducers} from './redux';
-import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
+import {
+  wrapNumberValidatorsForLevelBuilder,
+  valueOr
+} from './util/blocklyUtils';
 import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
 import {singleton as studioApp} from './StudioApp';
 import {generateAuthoredHints} from './authoredHintUtils';

@@ -141,29 +141,6 @@ Function.prototype.inherits = function(parent) {
 };
 
 /**
- * Wrap a couple of our Blockly number validators to allow for ???.  This is
- * done so that level builders can specify required blocks with wildcard fields.
- */
-export function wrapNumberValidatorsForLevelBuilder() {
-  var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
-  var numVal = Blockly.FieldTextInput.numberValidator;
-
-  Blockly.FieldTextInput.nonnegativeIntegerValidator = function(text) {
-    if (text === '???') {
-      return text;
-    }
-    return nonNeg(text);
-  };
-
-  Blockly.FieldTextInput.numberValidator = function(text) {
-    if (text === '???') {
-      return text;
-    }
-    return numVal(text);
-  };
-}
-
-/**
  * Return a random value from an array
  */
 export function randomValue(values) {
