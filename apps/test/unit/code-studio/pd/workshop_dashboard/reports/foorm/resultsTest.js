@@ -298,13 +298,16 @@ describe('Foorm Daily Survey Results', () => {
         />
       </Provider>
     );
+    // should have 3 tabs--Day 0 summary, workshop rollups and
+    // facilitator rollups
     expect(results.find('Tab')).to.have.length(3);
 
-    let firstTab = results.find('Tab').first();
+    let summaryTab = results.find('Tab').first();
     let workshopRollupTab = results.find('Tab').at(1);
     let facilitatorRollupTab = results.find('Tab').at(2);
 
-    let sectionResults = firstTab.find('SectionResults');
+    // Check for expected # of question summaries per type
+    let sectionResults = summaryTab.find('SectionResults');
     expect(sectionResults).to.have.length(2);
     let generalSectionResults = sectionResults.first();
     expect(
@@ -333,6 +336,7 @@ describe('Foorm Daily Survey Results', () => {
       facilitatorMatrixResponses.first().find('ChoiceResponses')
     ).to.have.length(1);
 
+    // Check that rollup tabs each have a rollup table
     expect(workshopRollupTab.find('SurveyRollupTableFoorm')).to.have.length(1);
     expect(facilitatorRollupTab.find('SurveyRollupTableFoorm')).to.have.length(
       1

@@ -49,6 +49,7 @@ describe('Matrix Choice Responses', () => {
       />
     );
 
+    // there are 4 questions but only 3 have responses
     const choiceResponses = matrixChoiceResponses.find('ChoiceResponses');
     expect(choiceResponses).to.have.length(3);
     expect(choiceResponses.last().props().question).to.equal(
@@ -56,7 +57,7 @@ describe('Matrix Choice Responses', () => {
     );
   });
 
-  it('pulls out facilittator data correctly', () => {
+  it('pulls out facilitator data correctly', () => {
     const facilitatorMatrixData = {
       '1': {
         best_pd: {7: 2},
@@ -81,6 +82,7 @@ describe('Matrix Choice Responses', () => {
       />
     );
 
+    // there are 4 questions with responses across both facilitators
     const choiceResponses = matrixChoiceResponses.find('ChoiceResponses');
     expect(choiceResponses).to.have.length(4);
 
@@ -95,6 +97,7 @@ describe('Matrix Choice Responses', () => {
         .answers.toString()
     ).to.equal(expectedPdAnswers.toString());
 
+    // suitable_my_level only had a response for facilitator 2
     const expectedSuitableAnswers = {
       '2': {5: 2}
     };
