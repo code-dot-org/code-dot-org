@@ -550,3 +550,19 @@ div#visualizationResizeBar {
   width: calc(100% - 12px);
   bottom: 0;
 }
+
+// Theme dropdown needs to use classes for styling
+.theme-dropdown {
+  .Select-value {
+    .theme-dropdown-label {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+  .Select-menu, .Select-menu-outer {
+    height: 516px;
+    max-height: 516px;
+  }
+}
