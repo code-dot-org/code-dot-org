@@ -5,7 +5,6 @@ import CommandHistory from './CommandHistory';
 import JSInterpreter from '../jsinterpreter/JSInterpreter';
 import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import runState from '@cdo/apps/redux/runState';
-import trackEvent from '../../../util/trackEvent';
 
 const WATCH_TIMER_PERIOD = 250;
 const INITIALIZE = 'jsdebugger/INITIALIZE';
@@ -167,7 +166,6 @@ export function close() {
 
 export function togglePause() {
   return (dispatch, getState) => {
-    trackEvent('debug_commands', 'debug_button_press');
     const jsInterpreter = getJSInterpreter(getState());
     if (!jsInterpreter) {
       return;
@@ -178,7 +176,6 @@ export function togglePause() {
 
 export function stepIn() {
   return (dispatch, getState) => {
-    trackEvent('debug_commands', 'debug_button_press');
     let jsInterpreter = getJSInterpreter(getState());
     if (!jsInterpreter) {
       const runApp = getRunApp(getState());
@@ -199,7 +196,6 @@ export function stepIn() {
 
 export function stepOver() {
   return (dispatch, getState) => {
-    trackEvent('debug_commands', 'debug_button_press');
     let jsInterpreter = getJSInterpreter(getState());
     if (jsInterpreter) {
       jsInterpreter.handleStepOver();
@@ -211,7 +207,6 @@ export function stepOver() {
 
 export function stepOut() {
   return (dispatch, getState) => {
-    trackEvent('debug_commands', 'debug_button_press');
     let jsInterpreter = getJSInterpreter(getState());
     if (jsInterpreter) {
       jsInterpreter.handleStepOut();
