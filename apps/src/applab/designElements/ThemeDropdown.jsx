@@ -44,8 +44,8 @@ export default class ThemeDropdown extends React.Component {
         paddingLeft: 4
       },
       icon: {
-        padding: 0,
-        align: 'left'
+        marginTop: 4,
+        marginBottom: 4
       },
       dropdownLabel: {
         display: 'flex',
