@@ -13,7 +13,7 @@ describe('SignInOrAgeDialog', () => {
   const defaultProps = {
     age13Required: true,
     signedIn: false,
-    sessionStorage: new FakeStorage()
+    storage: new FakeStorage()
   };
 
   before(() => {
@@ -41,7 +41,7 @@ describe('SignInOrAgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    let getItem = sinon.stub(defaultProps.sessionStorage, 'getItem');
+    let getItem = sinon.stub(defaultProps.storage, 'getItem');
     getItem.withArgs('anon_over13').returns('true');
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
@@ -91,7 +91,7 @@ describe('SignInOrAgeDialog', () => {
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      const setItemSpy = sinon.spy(defaultProps.sessionStorage, 'setItem');
+      const setItemSpy = sinon.spy(defaultProps.storage, 'setItem');
       // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
       // does not work in unit tests
       sinon.stub(cookies, 'get').returns('something');

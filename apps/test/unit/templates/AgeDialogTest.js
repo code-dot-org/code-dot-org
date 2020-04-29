@@ -9,7 +9,7 @@ describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
     turnOffFilter: () => {},
-    sessionStorage: new FakeStorage()
+    storage: new FakeStorage()
   };
 
   it('renders null if user is signed in', () => {
@@ -18,7 +18,7 @@ describe('AgeDialog', () => {
   });
 
   it('renders null if dialog was seen before', () => {
-    let getItem = sinon.stub(defaultProps.sessionStorage, 'getItem');
+    let getItem = sinon.stub(defaultProps.storage, 'getItem');
     getItem.withArgs('ad_anon_over13').returns('true');
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
