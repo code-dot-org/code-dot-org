@@ -4,14 +4,6 @@ import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/
 import mount from 'enzyme/build/mount';
 
 describe('Survey Rollup Table Foorm', () => {
-  /**
-
-    workshopRollups: PropTypes.object.isRequired,
-    courseName: PropTypes.string.isRequired,
-    isPerFacilitator: PropTypes.bool.isRequired,
-    facilitators: PropTypes.object
-  };*/
-
   const sampleRollupAverages1 = {
     response_count: 13,
     averages: {
@@ -83,13 +75,20 @@ describe('Survey Rollup Table Foorm', () => {
       />
     );
 
+    // check headers are generated correctly
     const headerCells = rollupTable.find('HeaderRow').find('th');
     expect(headerCells.at(1).text()).to.equal('Average for this workshop');
     expect(headerCells.at(2).text()).to.equal(
       "Average across all of Facilitator 1's CS Fundamentals workshops"
     );
+    // 5 expected columns: Question, Average for this workshop,
+    // Average for facilitator 1, Average for facilitator 1,
+    // Average for this course
     expect(headerCells).to.have.length(5);
 
+    // 6 rows are total response count, average for the matrix,
+    // question header and averages for the 3 sub-questions
+    // with answers
     const bodyRows = rollupTable.find('BodyRow');
     expect(bodyRows).to.have.length(6);
 
