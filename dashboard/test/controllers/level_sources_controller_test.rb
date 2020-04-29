@@ -73,26 +73,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert @level_source.reload.hidden?
   end
 
-  test "update deletes gallery activities" do
-    sign_in @admin
-
-    create :gallery_activity,
-      user_level: create(:user_level, level: @level_source.level),
-      level_source: @level_source
-    create :gallery_activity,
-      user_level: create(:user_level, level: @level_source.level),
-      level_source: @level_source
-    create :gallery_activity,
-      user_level: create(:user_level, level: @level_source.level)
-
-    assert_difference('GalleryActivity.count', -2) do # delete two matching above
-      patch :update, params: {level_source: {hidden: true}, id: @level_source}
-    end
-
-    assert_redirected_to @level_source
-    assert @level_source.reload.hidden?
-  end
-
   test "should not update if we do not have block share permission" do
     sign_in create(:user)
     patch :update, params: {level_source: {hidden: true}, id: @level_source}
