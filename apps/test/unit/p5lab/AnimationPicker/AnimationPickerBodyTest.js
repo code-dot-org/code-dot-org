@@ -67,7 +67,7 @@ describe('AnimationPickerBody', function() {
       const mockEvent = {
         target: {
           scrollTop: 0,
-          scrollHeight: 500
+          scrollHeight: 600
         }
       };
       const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
