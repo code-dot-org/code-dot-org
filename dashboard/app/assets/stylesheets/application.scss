@@ -243,7 +243,10 @@ img.video_thumbnail {
 
   .header_text {
     font-size: 16px;
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   @media screen and (min-width: 971px) {
@@ -863,8 +866,6 @@ $default-modal-width: 640px;
 }
 
 .header_left {
-  position: absolute;
-  left: 25px;
   z-index: 2;
   .header_button, .header_input, .header_text {
     margin-left: 10px;
@@ -975,9 +976,9 @@ $default-modal-width: 640px;
 }
 
 .header_middle {
-  position: absolute;
-  left: 0;
-  right: 0;
+  display: flex;
+  float: left;
+  width: calc(100% - 260px);
   .header_button {
     margin-top: 3px;
   }
@@ -996,15 +997,21 @@ $default-modal-width: 640px;
   font-size: 150%;
   cursor: default;
   white-space: nowrap;
+  width: 100%;
 
   .progress_container {
     display: inline-block;
+    overflow: hidden;
+    min-width: 60%;
   }
 }
 
+.script_name_container {
+  overflow: hidden;
+}
+
 .header_right {
-  position: absolute;
-  right: 16px;
+  float: left;
 }
 
 input.header_input {
@@ -1070,6 +1077,14 @@ input.header_input {
 .header_finished_link {
   display: inline-block;
   font-size: 16px;
+  overflow: hidden;
+
+  a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .header_finished_link:hover {
