@@ -1,7 +1,9 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 import {shallow} from 'enzyme';
+import sinon from 'sinon';
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 describe('AgeDialog', () => {
   const defaultProps = {
@@ -9,20 +11,31 @@ describe('AgeDialog', () => {
     turnOffFilter: () => {}
   };
 
-  afterEach(() => sessionStorage.clear());
+  before(() => {
+    replaceOnWindow('sessionStorage', {
+      getItem: () => {},
+      setItem: () => {}
+    });
+  });
 
-  it('renders null if signed in', () => {
+  after(() => {
+    restoreOnWindow('sessionStorage');
+  });
+
+  it('renders null if user is signed in', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} signedIn={true} />);
     assert.equal(wrapper.children().length, 0);
   });
 
-  it('renders null if seen before', () => {
-    sessionStorage.setItem('ad_anon_over13', true);
+  it('renders null if dialog was seen before', () => {
+    let getItem = sinon.stub(window.sessionStorage, 'getItem');
+    getItem.withArgs('ad_anon_over13').returns('true');
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
+    getItem.restore();
   });
 
-  it('renders a dialog otherwise', () => {
+  it('renders a dialog if neither signed in nor seen before', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.name(), 'BaseDialog');
   });
