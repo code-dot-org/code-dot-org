@@ -12,15 +12,13 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}game_lab_documentation"),
         url: "https://studio.code.org/docs/gamelab/",
-        id: "gamelab-docs",
-        target: "_blank"
+        id: "gamelab-docs"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}game_lab_tutorials"),
         url: CDO.code_org_url('/educate/gamelab'),
-        id: "gamelab-tutorials",
-        target: "_blank"
+        id: "gamelab-tutorials"
       }
     end
 
@@ -28,15 +26,13 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}app_lab_documentation"),
         url: "https://studio.code.org/docs/applab/",
-        id: "applab-docs",
-        target: "_blank"
+        id: "applab-docs"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}app_lab_tutorials"),
         url: CDO.code_org_url('/educate/applab'),
-        id: "applab-tutorials",
-        target: "_blank"
+        id: "applab-tutorials"
       }
     end
 
@@ -44,15 +40,13 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}sprite_lab_documentation"),
         url: "https://studio.code.org/docs/spritelab/",
-        id: "spritelab-docs",
-        target: "_blank"
+        id: "spritelab-docs"
       }
 
       entries << {
         title: I18n.t("#{loc_prefix}sprite_lab_tutorials"),
         url: CDO.code_org_url('/educate/spritelab'),
         id: "spritelab-tutorials",
-        target: "_blank"
       }
     end
 
@@ -63,32 +57,33 @@ class HelpHeader
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),
         url: report_url,
-        id: "report-bug",
-        target: "_blank"
+        id: "report-bug"
       }
     else
       entries << {
         title: I18n.t("#{loc_prefix}report_bug"),
         url: "https://support.code.org/hc/en-us/requests/new",
-        id: "report-bug",
-        target: "_blank"
+        id: "report-bug"
       }
     end
 
     entries << {
       title: I18n.t("#{loc_prefix}help_support"),
       url: "https://support.code.org",
-      id: "support",
-      target: "_blank"
+      id: "support"
     }
 
     if options[:user_type] == "teacher"
       entries << {
         title: I18n.t("#{loc_prefix}teacher_community"),
         url: "http://forum.code.org/",
-        target: "_blank",
         id: "teacher-community"
       }
+    end
+
+    entries.each do |entry|
+      entry[:target] = "_blank"
+      entry[:rel] = "noopener noreferrer nofollow"
     end
 
     entries

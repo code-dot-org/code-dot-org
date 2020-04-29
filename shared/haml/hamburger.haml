@@ -20,7 +20,7 @@
         %div{class: entry[:class]}
           .item
             - target = entry[:target] ? entry[:target] : "_self"
-            %a{id: entry[:id], href: entry[:url], target: target}= entry[:title]
+            %a{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel]}= entry[:title]
 
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}
