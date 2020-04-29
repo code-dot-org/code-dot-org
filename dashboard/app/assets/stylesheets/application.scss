@@ -1435,35 +1435,6 @@ a.download-video {
   }
 }
 
-.gallery {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 890px;
-
-  .pagination {
-    float: left;
-    font-size: 30px;
-    line-height: 154px;
-    margin: 10px 5px;
-    width: 25px;
-    text-align: center;
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  .gallery_activity {
-    margin: 10px 5px;
-    box-sizing: border-box;
-    height: 154px;
-    width: 154px;
-    img {
-      border: 2px solid $lighter_gray;
-      background-color: $white;
-    }
-  }
-}
-
 .course_progress {
   margin: 10px 0;
 }
