@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import LessonExtras from '@cdo/apps/code-studio/components/stageExtras/LessonExtras';
+import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 import {bonusLevels} from './lessonExtrasTestHelpers';
 
 const DEFAULT_PROPS = {
