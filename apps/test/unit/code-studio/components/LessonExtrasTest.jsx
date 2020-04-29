@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LessonExtras from '@cdo/apps/code-studio/components/stageExtras/LessonExtras';
-import {bonusLevels} from './stageExtraTestHelpers';
+import {bonusLevels} from './lessonExtrasTestHelpers';
 
 const DEFAULT_PROPS = {
   stageNumber: 1,
