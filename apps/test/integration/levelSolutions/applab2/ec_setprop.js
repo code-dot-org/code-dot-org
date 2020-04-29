@@ -153,18 +153,33 @@ module.exports = {
       runBeforeClick: function(assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function() {
-          // the single quote is escaped additionally in CSS strings.
+          // the single quote is escaped additionally in CSS strings when
+          // running tests on PhantomJS. Chrome and Firefox do not seem to do this.
+          // We check for both, below, while we are supporting tests in both browsers.
           const cssEscapedImageSuffix = "/%C3%B1%23%3F(%20%22\\'.jpg";
           const escapedImageSuffix = "/%C3%B1%23%3F(%20%22'.jpg";
 
           const imageSrc = $('#image1').attr('src');
+          assert(imageSrc.includes(escapedImageSuffix), 'image src');
           expect(imageSrc).to.contain(escapedImageSuffix, 'image src');
 
           const buttonImage = $('#button1')[0].style.backgroundImage;
-          expect(buttonImage).to.contain(cssEscapedImageSuffix, 'button image');
+          assert(
+            // Chrome or Firefox
+            buttonImage.includes(escapedImageSuffix) ||
+              // Phantom
+              buttonImage.includes(cssEscapedImageSuffix),
+            'button image'
+          );
 
           const screenImage = $('#screen1')[0].style.backgroundImage;
-          expect(screenImage).to.contain(cssEscapedImageSuffix, 'screen image');
+          assert(
+            // Chrome or Firefox
+            screenImage.includes(escapedImageSuffix) ||
+              //Phantom
+              screenImage.includes(cssEscapedImageSuffix),
+            'screen image'
+          );
 
           Applab.onPuzzleComplete();
         });
