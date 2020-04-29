@@ -4,6 +4,7 @@ pl:
   data:
     script:
       category:
+        csf_2019_category_name: Podstawy informatyki 2019)
         csf_international_category_name: Mędzynarodowe Podstawy Informatyki
         csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
         csp_category_name: "Podstawy Informatyki '15-'16"
@@ -5404,6 +5405,12 @@ pl:
               name: Funkcje zwracające wartości
             Variables:
               name: Zmienne
+            If-Statements:
+              name: Instrukcje-if
+            Keep Going:
+              name: Tak trzymaj
+            Keep Going!:
+              name: Tak trzymaj!
         virtual-holding-place:
           stages:
             Velocity:
@@ -5442,6 +5449,10 @@ pl:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
         code-break-staging:
           stages:
             Episode 2 - Building Things with Mark Cuban & Lyndsey Scott:
@@ -5450,6 +5461,10 @@ pl:
               name: 'Odcinek 1: Algorytmy z Hill Harper'
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
           title: Inscenizacja Code Break
         code-break-younger-staging:
           stages:
@@ -5459,6 +5474,10 @@ pl:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
         code-break-younger:
           stages:
             Episode 1 - Algorithms with Hill Harper:
@@ -5469,6 +5488,10 @@ pl:
               name: Odcinek 2 - Budowanie z Markiem Cubanem i Lyndsey Scott
             Episode 2 - Prototypes with Mark Cuban & Lyndsey Scott:
               name: Odcinek 2 - Prototypy z Markiem Cubanem i Lyndsey Scott
+            Episode 4 - Digital Information with Mike Krieger & Alice Keeler:
+              name: Odcinek 4 - Cyfrowe informacje z Mikiem Kriegerem i Alice Keeler
+            Episode 5 - Simulations & Data with Bill Gates:
+              name: Odcinek 5 - Symulacje & dane z Billem Gatesem
           title: Code Break dla młodszych uczniów
           description: 'Z zamkniętymi szkołami i dziesiątkami milionów uczniów w domu, Code.org wprowadza Code Break - cotygodniową interaktywną klasę na żywo, w której nasz zespół będzie uczył Twoje dzieci w domu, gdy szkoła jest zamknięta, oraz cotygodniowe wyzwanie, aby zaangażować uczniów o różnych umiejętnościach, nawet tych bez komputerów.'
         no-lg:

@@ -35,7 +35,7 @@ export function createMicroBitComponents(board) {
  */
 export function cleanupMicroBitComponents(components, shouldDestroyComponents) {
   if (components.ledMatrix) {
-    components.ledMatrix.allOff();
+    components.ledMatrix.clear();
   }
 
   if (components.tempSensor) {

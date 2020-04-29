@@ -2,6 +2,7 @@
 module Pd::Foorm
   class SurveyReporter
     include Constants
+    include Pd::WorkshopConstants
     extend Helper
 
     # Calculates report for a given workshop id.
@@ -11,7 +12,7 @@ module Pd::Foorm
 
       # get workshop summary
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
-      facilitators = get_facilitators_for_workshop(workshop_id)
+      facilitators = get_formatted_facilitators_for_workshop(workshop_id)
       parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
 
       ws_data = Pd::Workshop.find(workshop_id)
@@ -87,8 +88,8 @@ module Pd::Foorm
       facilitators.each_key do |facilitator_id|
         workshop_ids = Pd::Workshop.
           where(course: course_name).
-          where.not(started_at: nil, ended_at: nil).
-          left_outer_joins(:facilitators).where(users: {id: facilitator_id}).distinct.
+          in_state(STATE_ENDED).
+          facilitated_by(User.find(facilitator_id)).
           pluck(:id)
         facilitator_rollup = get_rollup_for_workshop_ids(
           workshop_ids,
@@ -158,7 +159,7 @@ module Pd::Foorm
     # @param integer workshop_id: id for a workshop
     # @return {facilitator_id: facilitator_name,...} object with data
     # for each facilitator for the workshop specified
-    def self.get_facilitators_for_workshop(workshop_id)
+    def self.get_formatted_facilitators_for_workshop(workshop_id)
       workshop = Pd::Workshop.find(workshop_id)
       facilitators = workshop.facilitators
       facilitators_formatted = {}

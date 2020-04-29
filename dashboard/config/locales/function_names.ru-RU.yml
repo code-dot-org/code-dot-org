@@ -204,6 +204,28 @@ ru-RU:
         draw rectangle: нарисовать прямоугольник
       K-1 Artist2 5:
         draw rectangle: нарисовать прямоугольник
+      MC_HOC_2017_07_Cole:
+        clear path: 'очистить путь
+
+'
+      MC_HOC_2017_07_Cole_2019:
+        clear path: 'очистить путь
+
+'
+      MC_HOC_2017_10_RETRY:
+        fix long path: 'исправить длинный путь
+
+'
+        fix short path: 'исправить короткий путь
+
+'
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path: 'исправить длинный путь
+
+'
+        fix short path: 'исправить короткий путь
+
+'
       MC_HOC_2017_Ali:
         build short bridge: построить короткий мост
         build long bridge: построить длинный мост
@@ -362,11 +384,26 @@ ru-RU:
       courseB_artist_loops_challenge2_2019:
         potential solution: возможное решение
       courseC_artist_prog3:
+        draw flame: 'нарисовать пламя
+
+'
         draw fire: нарисовать огонь
       courseC_artist_prog3_2018:
+        draw flame: 'нарисовать пламя
+
+'
         draw fire: нарисовать огонь
       courseC_artist_prog3_2019:
+        draw flame: 'нарисовать пламя
+
+'
         draw fire: нарисовать огонь
+      courseC_artist_prog4:
+        booster: ускоритель
+      courseC_artist_prog4_2018:
+        booster: ускоритель
+      courseC_artist_prog4_2019:
+        booster: ускоритель
       courseC_data wizard:
         do something: выполнить что-то
       courseD_artist_binary1:
@@ -508,9 +545,15 @@ ru-RU:
         draw square: нарисовать квадрат
       courseE_artist_functions8_2018:
         do something: выполнить что-то
+        staggered squares: 'квадраты в шахматном порядке
+
+'
         draw square: нарисовать квадрат
       courseE_artist_functions8_2019:
         do something: выполнить что-то
+        staggered squares: 'квадраты в шахматном порядке
+
+'
         draw square: нарисовать квадрат
       courseE_artist_functions8a_2018:
         draw a square: нарисовать квадрат
@@ -527,9 +570,15 @@ ru-RU:
       courseE_artist_functions8c_2018:
         draw square: нарисовать квадрат
         do something: выполнить что-то
+        staggered squares: 'квадраты в шахматном порядке
+
+'
       courseE_artist_functions8c_2019:
         draw square: нарисовать квадрат
         do something: выполнить что-то
+        staggered squares: 'квадраты в шахматном порядке
+
+'
       courseE_artist_functions9:
         do something: выполнить что-то
         draw triangle: нарисовать треугольник
@@ -541,9 +590,15 @@ ru-RU:
         draw triangle: нарисовать треугольник
       courseE_artist_functionsProj_2018:
         draw hexagon: нарисовать шестиугольник
+        staggered squares: 'квадраты в шахматном порядке
+
+'
         draw square: нарисовать квадрат
       courseE_artist_functionsProj_2019:
         draw hexagon: нарисовать шестиугольник
+        staggered squares: 'квадраты в шахматном порядке
+
+'
         draw square: нарисовать квадрат
       courseE_artist_functions_challenge1:
         do something: выполнить что-то
@@ -564,12 +619,21 @@ ru-RU:
       courseE_artist_functions_predict1_2019:
         draw a square: нарисовать квадрат
       courseE_artist_functions_predict2:
+        draw line of polygons: 'нарисовать ряд многоугольников
+
+'
         draw polygon: нарисовать многоугольник
         do something: выполнить что-то
       courseE_artist_functions_predict2_2018:
+        draw line of polygons: 'нарисовать ряд многоугольников
+
+'
         draw polygon: нарисовать многоугольник
         do something: выполнить что-то
       courseE_artist_functions_predict2_2019:
+        draw line of polygons: 'нарисовать ряд многоугольников
+
+'
         draw polygon: нарисовать многоугольник
         do something: выполнить что-то
       courseE_bee_functions1:
@@ -596,18 +660,196 @@ ru-RU:
         do something: выполнить что-то
       courseE_farmer_concept3:
         do something: выполнить что-то
+      courseE_farmer_functions10a1_2018:
+        pick along path: 'собирать вдоль пути
+
+'
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+        pumpkin square: 'тыквенный прямоугольник
+
+'
+      courseE_farmer_functions10a1_2019:
+        pick along path: 'собирать вдоль пути
+
+'
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+        pumpkin square: 'тыквенный прямоугольник
+
+'
       courseE_farmer_functions11_predict:
+        check and pick: 'проверить и собрать
+
+'
         find pumpkin: найти тыкву
+        wander path: 'прогулочная дорожка
+
+'
+      courseE_farmer_functions11_predict_2018:
+        pick along path: 'собирать вдоль пути
+
+'
+        pumpkin square: 'тыквенный прямоугольник
+
+'
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get produce: 'собирать овощи
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+      courseE_farmer_functions11_predict_2019:
+        pick along path: 'собирать вдоль пути
+
+'
+        pumpkin square: 'тыквенный прямоугольник
+
+'
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get produce: 'собирать овощи
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+      courseE_farmer_functions13_2018:
+        pick along path: 'собирать вдоль пути
+
+'
+        check for corn: 'проверить на наличие кукурузы
+
+'
+        corn rectangle: 'кукурузный прямоугольник
+
+'
+        lettuce stairs: 'салатная лестница
+
+'
+      courseE_farmer_functions13_2019:
+        pick along path: 'собирать вдоль пути
+
+'
+        check for corn: 'проверить на наличие кукурузы
+
+'
+        corn rectangle: 'кукурузный прямоугольник
+
+'
+        lettuce stairs: 'салатная лестница
+
+'
+      courseE_farmer_functions1a_2018:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+      courseE_farmer_functions1a_2019:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+      courseE_farmer_functions2b_2018:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+      courseE_farmer_functions2b_2019:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
       courseE_farmer_functions2ba:
         corn and pumpkin: кукуруза и тыква
+      courseE_farmer_functions2ba_2018:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+      courseE_farmer_functions2ba_2019:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
       courseE_farmer_functions3c:
         corn and pumpkin: кукуруза и тыква
+      courseE_farmer_functions3c1_2018:
+        pick along path: 'собирать вдоль пути
+
+'
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+      courseE_farmer_functions3c1_2019:
+        pick along path: 'собирать вдоль пути
+
+'
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+      courseE_farmer_functions3c_2018:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
+      courseE_farmer_functions3c_2019:
+        check square for corn: 'проверить квадратик на наличие кукурузы
+
+'
+        get all pumpkins: 'собрать все тыквы
+
+'
       courseE_farmer_functions4b:
         corn and pumpkin: кукуруза и тыква
       courseE_farmer_functions5c:
         corn and pumpkin: кукуруза и тыква
       courseE_farmer_functions6c:
         corn and pumpkin: кукуруза и тыква
+      courseE_farmer_functions7a1_2018:
+        garden square: 'огородный квадрат
+
+'
+      courseE_farmer_functions7a1_2019:
+        garden square: 'огородный квадрат
+
+'
+      courseE_farmer_functions8a1_2018:
+        garden square: 'огородный квадрат
+
+'
+      courseE_farmer_functions8a1_2019:
+        garden square: 'огородный квадрат
+
+'
+      courseE_farmer_functions9a1_2018:
+        garden square: 'огородный квадрат
+
+'
+      courseE_farmer_functions9a1_2019:
+        garden square: 'огородный квадрат
+
+'
       courseE_playLab_challenge1:
         win game: выиграть игру
         lose game: проиграть игру
@@ -725,13 +967,67 @@ ru-RU:
         pick row: собрать ряд
       courseF_bee_fwp_challenge2:
         pick row: собрать ряд
+      courseF_bee_variables_1_2018:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_1_2019:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_2_2018:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_2_2019:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_3_2018:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_3_2019:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_4_2018:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_4_2019:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_5_2018:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_5_2019:
+        collect row: 'собирать с ряда
+
+'
+      courseF_bee_variables_6_2018:
+        collect stairs: 'собирать с лестницы
+
+'
+      courseF_bee_variables_6_2019:
+        collect stairs: 'собирать с лестницы
+
+'
       courseF_bee_variables_7_2018:
         collect: собрать
       courseF_bee_variables_7_2019:
         collect: собрать
       courseF_bee_variables_8_2018:
+        move and increment: 'движение и прирост
+
+'
         collect: собрать
       courseF_bee_variables_8_2019:
+        move and increment: 'движение и прирост
+
+'
         collect: собрать
       grade5_artist_binary11:
         draw: нарисовать

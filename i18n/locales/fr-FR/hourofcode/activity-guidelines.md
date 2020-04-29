@@ -8,23 +8,21 @@ title: Tutoriel
   }
 </style>
 
-{{ signup_button }}
-
-# Lesson guidelines for the Hour of Code™ and Computer Science Education Week
+# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
 
 Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided game, teacher-led lesson, or activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day long, or week long activities.
+Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/L1hjArNnGSMJPzyE8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
 A few tips:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review up to 5 activities per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics. These learners could be any age from 9 to 99.
+2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science in Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area (particularly with the upgraded ISTE standards for students including “innovative designer” and “computational thinker”). Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
 
 <a id="top"></a>
 
@@ -43,11 +41,11 @@ A few tips:
 
 ## What to Submit
 
-**Self-guided puzzle or game ([example](https://code.org/mc))**
+**Self-guided puzzle or game ([example](https://code.org/dance))**
 
 These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
 
-**Teacher Facilitated lesson ([example](https://csedweek.org/csteacher/computerhistory.pdf), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
 
@@ -89,6 +87,8 @@ The activities should teach a computer science concept such as loops, conditiona
 *Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
 
 *Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+
+To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
 [**Back to the top**](#top)
 
@@ -202,6 +202,29 @@ Teachers and students will be able to search through and filter our list of acti
 
 [**Back to the top**](#top)
 
+<a id="earlyreview"></a>
+
+## Guidelines for submitting for an early qualitative review (NEW)
+
+Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
+
+Reviewers will focus on providing the following:
+
+* Positive feedback - What's working well?
+* Critical feedback - What could be improved?
+* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
+* Does this activity encourage students to create something unique?
+
+Please note: These are the general guidelines for providing feedback. The early review of your activity may include feedback across all of these categories, or it may only include feedback in one or two. There is also **no guarantee that we will catch all bugs or issues in an activity**.
+
+**The early review is not an opportunity to collect feedback on an unfinished activity. Any activity a reviewer deems too incomplete to assess will not be reviewed.**
+
+All activities submitted for early review will receive feedback by September 1st. We will also provide a link to a form you can use to explain specific changes made to an activity in response to feedback.
+
+Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
+
+[**Back to the top**](#top)
+
 <a id="design"></a>
 
 ## Suggestions for designing one hour self guided tutorials
@@ -265,12 +288,12 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 ## Promoting your activities, CSEdWeek, and Hour of Code
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach 100 million total participants.
+Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
 - Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
 - Host a local event or ask your employees to host an event at local schools or community groups.
-- See our resource kit for further information (coming soon).
+- See our [resource kit](https://hourofcode.com/us/promote) for further information.
 
 [**Back to the top**](#top)
 
