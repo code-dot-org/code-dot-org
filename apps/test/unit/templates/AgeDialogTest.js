@@ -1,4 +1,4 @@
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from '@cdo/apps/templates/AgeDialog';
 import {shallow} from 'enzyme';
@@ -28,7 +28,8 @@ describe('AgeDialog', () => {
   });
 
   it('renders null if dialog was seen before', () => {
-    let getItem = sinon.stub(window.sessionStorage, 'getItem').returns('true');
+    let getItem = sinon.stub(window.sessionStorage, 'getItem');
+    getItem.withArgs('ad_anon_over13').returns('true');
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
     getItem.restore();

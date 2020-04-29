@@ -107,7 +107,8 @@ describe('SignInOrAgeDialog', () => {
         .find('Button')
         .at(1)
         .simulate('click');
-      assert.equal(setItemSpy.callCount, 1);
+      assert(setItemSpy.calledOnce);
+      assert(setItemSpy.calledWith('anon_over13', true));
       assert(utils.reload.called);
       assert(
         cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
