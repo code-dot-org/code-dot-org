@@ -1,4 +1,4 @@
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from 'chai';
 import React from 'react';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
 import {shallow} from 'enzyme';
@@ -44,7 +44,8 @@ describe('SignInOrAgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    let getItem = sinon.stub(window.sessionStorage, 'getItem').returns('true');
+    let getItem = sinon.stub(window.sessionStorage, 'getItem');
+    getItem.withArgs('anon_over13').returns('true');
     const wrapper = shallow(<SignInOrAgeDialog {...defaultProps} />);
     assert.equal(wrapper.children().length, 0);
     getItem.restore();
