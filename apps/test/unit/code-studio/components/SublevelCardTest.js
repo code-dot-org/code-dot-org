@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
     url: '/s/script/stage/1/puzzle/2/sublevel/1',
     position: 1,
     letter: 'a',
-    perfect: false,
+    perfect: true,
     status: 'perfect'
   }
 };
@@ -39,7 +39,7 @@ const sublevel_no_thumbnail = {
   url: '/s/script/stage/1/puzzle/2/sublevel/1',
   position: 1,
   letter: 'a',
-  perfect: false,
+  perfect: true,
   status: 'perfect'
 };
 
