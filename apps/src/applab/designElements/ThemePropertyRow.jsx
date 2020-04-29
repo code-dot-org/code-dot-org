@@ -12,4 +12,12 @@ export default class ThemePropertyRow extends EnumPropertyRow {
     initialValue: themeOptions[DEFAULT_THEME_INDEX],
     options: themeOptions
   };
+
+  // Need to reset theme value if screen switches
+  componentWillReceiveProps(nextProps) {
+    const {initialValue} = nextProps;
+    if (this.props.initialValue !== initialValue) {
+      this.setState({selectedValue: initialValue});
+    }
+  }
 }
