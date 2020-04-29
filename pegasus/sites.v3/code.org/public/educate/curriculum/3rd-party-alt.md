@@ -6,23 +6,14 @@ style_min: true
 
 <!--- If you update the resources here, don't forget to also update /educate/curriculum/elementary-school, /educate/curriculum/middle-school, and /educate/curriculum/high-school -->
 
-<img src="/images/avatars/csta.png" style="float:right; width:20%; margin-left:25px">
+<img src="/images/avatars/computer_science_teachers_association.png" style="float:right; width:20%; margin-left:25px">
 <h1 style="margin-top:25px">3rd Party Educator Resources</h1>
 <div>
-<p><strong>As of April 2020, Code.org has transitioned to displaying 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA).</strong></p> 
+<p>Below are 3rd party curriculum and professional development opportunities recommended by an independent committee of experts convened by the Computer Science Teachers Association (CSTA). Use the filters and search below to discover quality professional development (PD) opportunities and associated curricula for K-12 CS teachers. Click a card to view more details.</p> 
 <p>To learn more about the review process and committee, visit the CSTA's <a href="https://csteachers.org/page/quality-pd-review-process/" target="_blank">Quality PD Review Process page</a>.</p>
-<p>Use the filters and search below to discover quality professional development (PD)&nbsp;opportunities and associated curricula for K-12 CS teachers. Click a card to view more details. To view other opportunities for classrooms, afterschool clubs, and learning online, take a look at <a href="#more">More Resources</a> below (note: these are not vetted by the CSTA's committee).</p>
-&nbsp;</p>
+<p>If you’d like to explore additional opportunities for classrooms, afterschool clubs, and learning online, take a look at <a href="#more">More Resources</a> below the table of CSTA-recommended programs.</p>
 </div>
 <div style="padding:20px;background:#d3d3d3"><iframe allowtransparency="true" height="1350px" src="https://view-awesome-table.com/-M54VxHPb9772DWSoQj3/view" style="border:none;" width="100%"></iframe></div>
-
-## Funding for computer science programs
-
-U.S. Federal law recently recognized [computer science as part of the "well rounded education subjects"](http://blog.code.org/post/134932134563/sweeping-us-education-law-adds-computer-science), and explicitly [names computer science as an important STEM field](http://blog.code.org/post/130358071518/computer-science-is-finally-included-in-stem).
-
-Your school or district may be able to use Title I or Title II funds, and other department grant programs to apply towards offering CS courses. [More info](http://innovation.ed.gov/2015/12/07/a-new-chapter-for-computer-science-education/).
-
-The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
 <a id="more"></a>
 ## More resources &mdash; for classrooms, afterschool clubs or learning online

@@ -572,7 +572,7 @@ class JsDebugger extends React.Component {
               />
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
-                  ? 'Show Watch'
+                  ? i18n.debugShowWatchHeader()
                   : i18n.debugWatchHeader()}
               </span>
             </PaneSection>
